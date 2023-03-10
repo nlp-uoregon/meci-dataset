@@ -3,7 +3,7 @@
 
 ## Intro
 
-This is the official repo for paper [MECI: A Multilingual Dataset for Event Causality Identification](https://aclanthology.org/2022.coling-1.206.pdf), publised at COLING 2022.
+This is the official repo for paper [MECI: A Multilingual Dataset for Event Causality Identification](https://aclanthology.org/2022.coling-1.206.pdf), published at COLING 2022.
 
 ## Papers that use this dataset
 

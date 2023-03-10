@@ -1,0 +1,159 @@
+Text	شہ مات شطرنج نامی کھیل میں مخالف بادشاہ کو اپنے کسی مہرے کی یوں شہ دینا کہ وہ اس شہ سے کسی صورت نہ نکل سکے شہ مات یعنی بادشاہ کو مات کرنا کہلاتا ہے جس کے ساتھ ہی فوری طور پر کھیل خود بخود شہ مات کرنے والے کی جیت پر ختم ہو جاتا ہے ۔	1 . اگر بادشاہ کو شہ سے نکالنا ممکن نہ ہو تو شہ مات ہو جاتی ہے اور شہ مات کرنے والا جیت جاتا ہے ۔	اور فوری طور پر کھیل خود بخود ختم ہو جاتا ہے ۔	1 . کسی کھلاڑی کا وقت ختم ہو جائے تو مخالف کھلاڑی جیت جاتا ہے ۔	( لیکن اگر مخالف کھلاڑی کے پاس شہ مات کرنے کے لیے مہرے نہ ہوں تو کھیل برابر ہو جاتا ہے ۔
+Event	T0	مات	EVENT	3
+Event	T1	کھیل	EVENT	18
+Event	T2	دینا	EVENT	67
+Event	T3	نکل	EVENT	99
+Event	T4	مات	EVENT	110
+Event	T5	کہلاتا	EVENT	138
+Event	T6	کھیل	EVENT	174
+Event	T7	مات	EVENT	191
+Event	T8	جیت	EVENT	208
+Event	T9	ختم	EVENT	215
+Event	T10	مات	EVENT	280
+Event	T11	جیت	EVENT	316
+Event	T12	ختم	EVENT	360
+Event	T13	ختم	EVENT	399
+Event	T14	جیت	EVENT	427
+Event	T15	کرنے	EVENT	479
+Event	T16	کھیل	EVENT	506
+Event	T17	برابر	EVENT	511
+Event	T18	مات	EVENT	129
+Event	T19	نکالنا	EVENT	256
+Event	T20	مات	EVENT	302
+Relation	T13	T14	CauseEffect	true	ختم	جیت
+Relation	T14	T13	EffectCause	true	جیت	ختم
+Relation	T3	T9	CauseEffect	true	نکل	ختم
+Relation	T9	T3	EffectCause	true	ختم	نکل
+Relation	T10	T11	CauseEffect	true	مات	جیت
+Relation	T11	T10	EffectCause	true	جیت	مات
+Relation	T20	T11	CauseEffect	true	مات	جیت
+Relation	T11	T20	EffectCause	true	جیت	مات
+Relation	T11	T12	CauseEffect	true	جیت	ختم
+Relation	T12	T11	EffectCause	true	ختم	جیت
+Relation	T0	T11	NoRel	true	مات	جیت
+Relation	T0	T13	NoRel	true	مات	ختم
+Relation	T0	T15	NoRel	true	مات	کرنے
+Relation	T0	T18	NoRel	true	مات	مات
+Relation	T0	T20	NoRel	true	مات	مات
+Relation	T1	T10	NoRel	true	کھیل	مات
+Relation	T1	T13	NoRel	true	کھیل	ختم
+Relation	T1	T16	NoRel	true	کھیل	کھیل
+Relation	T1	T2	NoRel	true	کھیل	دینا
+Relation	T1	T20	NoRel	true	کھیل	مات
+Relation	T1	T4	NoRel	true	کھیل	مات
+Relation	T1	T8	NoRel	true	کھیل	جیت
+Relation	T1	T9	NoRel	true	کھیل	ختم
+Relation	T10	T0	NoRel	true	مات	مات
+Relation	T10	T16	NoRel	true	مات	کھیل
+Relation	T10	T17	NoRel	true	مات	برابر
+Relation	T10	T19	NoRel	true	مات	نکالنا
+Relation	T10	T3	NoRel	true	مات	نکل
+Relation	T10	T7	NoRel	true	مات	مات
+Relation	T11	T14	NoRel	true	جیت	جیت
+Relation	T11	T15	NoRel	true	جیت	کرنے
+Relation	T11	T17	NoRel	true	جیت	برابر
+Relation	T11	T19	NoRel	true	جیت	نکالنا
+Relation	T11	T8	NoRel	true	جیت	جیت
+Relation	T12	T19	NoRel	true	ختم	نکالنا
+Relation	T12	T5	NoRel	true	ختم	کہلاتا
+Relation	T12	T8	NoRel	true	ختم	جیت
+Relation	T13	T0	NoRel	true	ختم	مات
+Relation	T13	T1	NoRel	true	ختم	کھیل
+Relation	T13	T10	NoRel	true	ختم	مات
+Relation	T13	T12	NoRel	true	ختم	ختم
+Relation	T13	T18	NoRel	true	ختم	مات
+Relation	T13	T19	NoRel	true	ختم	نکالنا
+Relation	T13	T4	NoRel	true	ختم	مات
+Relation	T13	T5	NoRel	true	ختم	کہلاتا
+Relation	T13	T9	NoRel	true	ختم	ختم
+Relation	T14	T0	NoRel	true	جیت	مات
+Relation	T14	T10	NoRel	true	جیت	مات
+Relation	T14	T12	NoRel	true	جیت	ختم
+Relation	T14	T15	NoRel	true	جیت	کرنے
+Relation	T14	T16	NoRel	true	جیت	کھیل
+Relation	T14	T2	NoRel	true	جیت	دینا
+Relation	T14	T20	NoRel	true	جیت	مات
+Relation	T14	T5	NoRel	true	جیت	کہلاتا
+Relation	T14	T6	NoRel	true	جیت	کھیل
+Relation	T15	T11	NoRel	true	کرنے	جیت
+Relation	T15	T12	NoRel	true	کرنے	ختم
+Relation	T15	T13	NoRel	true	کرنے	ختم
+Relation	T15	T4	NoRel	true	کرنے	مات
+Relation	T16	T11	NoRel	true	کھیل	جیت
+Relation	T16	T15	NoRel	true	کھیل	کرنے
+Relation	T16	T17	NoRel	true	کھیل	برابر
+Relation	T16	T3	NoRel	true	کھیل	نکل
+Relation	T16	T7	NoRel	true	کھیل	مات
+Relation	T16	T9	NoRel	true	کھیل	ختم
+Relation	T17	T1	NoRel	true	برابر	کھیل
+Relation	T17	T10	NoRel	true	برابر	مات
+Relation	T17	T11	NoRel	true	برابر	جیت
+Relation	T17	T14	NoRel	true	برابر	جیت
+Relation	T17	T16	NoRel	true	برابر	کھیل
+Relation	T17	T19	NoRel	true	برابر	نکالنا
+Relation	T17	T20	NoRel	true	برابر	مات
+Relation	T17	T3	NoRel	true	برابر	نکل
+Relation	T17	T4	NoRel	true	برابر	مات
+Relation	T18	T17	NoRel	true	مات	برابر
+Relation	T18	T19	NoRel	true	مات	نکالنا
+Relation	T18	T4	NoRel	true	مات	مات
+Relation	T18	T5	NoRel	true	مات	کہلاتا
+Relation	T18	T6	NoRel	true	مات	کھیل
+Relation	T19	T10	NoRel	true	نکالنا	مات
+Relation	T19	T12	NoRel	true	نکالنا	ختم
+Relation	T19	T13	NoRel	true	نکالنا	ختم
+Relation	T19	T15	NoRel	true	نکالنا	کرنے
+Relation	T19	T16	NoRel	true	نکالنا	کھیل
+Relation	T19	T17	NoRel	true	نکالنا	برابر
+Relation	T19	T20	NoRel	true	نکالنا	مات
+Relation	T19	T5	NoRel	true	نکالنا	کہلاتا
+Relation	T19	T7	NoRel	true	نکالنا	مات
+Relation	T19	T8	NoRel	true	نکالنا	جیت
+Relation	T19	T9	NoRel	true	نکالنا	ختم
+Relation	T2	T0	NoRel	true	دینا	مات
+Relation	T2	T11	NoRel	true	دینا	جیت
+Relation	T2	T16	NoRel	true	دینا	کھیل
+Relation	T2	T19	NoRel	true	دینا	نکالنا
+Relation	T2	T5	NoRel	true	دینا	کہلاتا
+Relation	T2	T7	NoRel	true	دینا	مات
+Relation	T2	T8	NoRel	true	دینا	جیت
+Relation	T2	T9	NoRel	true	دینا	ختم
+Relation	T20	T12	NoRel	true	مات	ختم
+Relation	T20	T14	NoRel	true	مات	جیت
+Relation	T20	T17	NoRel	true	مات	برابر
+Relation	T3	T13	NoRel	true	نکل	ختم
+Relation	T3	T14	NoRel	true	نکل	جیت
+Relation	T3	T15	NoRel	true	نکل	کرنے
+Relation	T3	T16	NoRel	true	نکل	کھیل
+Relation	T3	T8	NoRel	true	نکل	جیت
+Relation	T4	T10	NoRel	true	مات	مات
+Relation	T4	T11	NoRel	true	مات	جیت
+Relation	T4	T3	NoRel	true	مات	نکل
+Relation	T4	T6	NoRel	true	مات	کھیل
+Relation	T5	T11	NoRel	true	کہلاتا	جیت
+Relation	T5	T15	NoRel	true	کہلاتا	کرنے
+Relation	T5	T16	NoRel	true	کہلاتا	کھیل
+Relation	T5	T18	NoRel	true	کہلاتا	مات
+Relation	T5	T2	NoRel	true	کہلاتا	دینا
+Relation	T5	T9	NoRel	true	کہلاتا	ختم
+Relation	T6	T10	NoRel	true	کھیل	مات
+Relation	T6	T17	NoRel	true	کھیل	برابر
+Relation	T6	T2	NoRel	true	کھیل	دینا
+Relation	T6	T3	NoRel	true	کھیل	نکل
+Relation	T6	T9	NoRel	true	کھیل	ختم
+Relation	T7	T1	NoRel	true	مات	کھیل
+Relation	T7	T11	NoRel	true	مات	جیت
+Relation	T7	T13	NoRel	true	مات	ختم
+Relation	T7	T17	NoRel	true	مات	برابر
+Relation	T7	T18	NoRel	true	مات	مات
+Relation	T7	T19	NoRel	true	مات	نکالنا
+Relation	T7	T6	NoRel	true	مات	کھیل
+Relation	T8	T0	NoRel	true	جیت	مات
+Relation	T8	T12	NoRel	true	جیت	ختم
+Relation	T8	T19	NoRel	true	جیت	نکالنا
+Relation	T8	T2	NoRel	true	جیت	دینا
+Relation	T8	T7	NoRel	true	جیت	مات
+Relation	T9	T10	NoRel	true	ختم	مات
+Relation	T9	T15	NoRel	true	ختم	کرنے
+Relation	T9	T18	NoRel	true	ختم	مات
+Relation	T9	T5	NoRel	true	ختم	کہلاتا

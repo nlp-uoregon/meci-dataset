@@ -1,0 +1,22 @@
+Text	Mürettebat Alma Ata - Balkaş - Karağandı - Kostanay - Çelyabinsk - Kazan - Moskova güzergahında uçuş yapmak için Alma - Ata Havalimanı'ndan 03.20'de ( MSK ) kalkış yaptı .	Uçakta 14 yolcu , 4 mürettebat ve 978 kg yük vardı .	Mürettebat uçuşun birinci bacağını tamamlayarak 05.28'de Balkaş Havalimanı'na iniş yaptı .	Burada üç yolcu indi .	Karağandı Havalimanı'ndaki olumsuz hava koşulları nedeniyle uçuş ertelendi .
+Event	T1	tamamlayarak	EVENT	260
+Event	T3	ertelendi	EVENT	404
+Event	T4	uçuş	EVENT	96
+Event	T5	kalkış	EVENT	157
+Event	T6	uçuşun	EVENT	236
+Event	T7	iniş	EVENT	303
+Relation	T5	T4	CauseEffect	true	kalkış	uçuş
+Relation	T4	T5	EffectCause	true	uçuş	kalkış
+Relation	T5	T6	CauseEffect	true	kalkış	uçuşun
+Relation	T6	T5	EffectCause	true	uçuşun	kalkış
+Relation	T1	T4	NoRel	true	tamamlayarak	uçuş
+Relation	T1	T6	NoRel	true	tamamlayarak	uçuşun
+Relation	T1	T7	NoRel	true	tamamlayarak	iniş
+Relation	T3	T7	NoRel	true	ertelendi	iniş
+Relation	T4	T6	NoRel	true	uçuş	uçuşun
+Relation	T5	T3	NoRel	true	kalkış	ertelendi
+Relation	T5	T7	NoRel	true	kalkış	iniş
+Relation	T6	T3	NoRel	true	uçuşun	ertelendi
+Relation	T6	T7	NoRel	true	uçuşun	iniş
+Relation	T7	T3	NoRel	true	iniş	ertelendi
+Relation	T7	T4	NoRel	true	iniş	uçuş

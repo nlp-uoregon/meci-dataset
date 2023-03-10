@@ -1,0 +1,118 @@
+Text	El VUELO 202 DE AIRBLUE fue un vuelo regular de pasajeros de la compañía pakistaní Airblue operado por un Airbus A321-231 que se estrelló el 28 de julio de 2010 cerca de Islamabad , Pakistán , después de que la tripulación del avión perdiera el contacto con los controladores del tráfico aéreo cuando intentaban aterrizar bajo niebla densa y lluvia monzónica .	Los 146 pasajeros y 6 tripulantes fallecieron .	El avión se estrelló en las colinas de Margalla , y poco tiempo después de que se confirmara el accidente , se enviaron tropas y helicópteros al lugar del accidente .	En el momento en el que sucedió , era el desastre aéreo con más muertes sufrido en Pakistán , y también el primer accidente mortal de un avión Airbus A321 .	El avión siniestrado era un Airbus A321-231 de fabricación europea , registrado con matrícula AP-BJB , con número de serie 1218 , y que había sido construido en el año 2000 .
+Event	T0	operado	EVENT	91
+Event	T1	estrelló	EVENT	129
+Event	T2	perdiera	EVENT	233
+Event	T3	contacto	EVENT	245
+Event	T4	lluvia	EVENT	342
+Event	T5	fallecieron	EVENT	395
+Event	T6	estrelló	EVENT	421
+Event	T7	confirmara	EVENT	491
+Event	T8	accidente	EVENT	505
+Event	T9	enviaron	EVENT	520
+Event	T10	accidente	EVENT	564
+Event	T11	sucedió	EVENT	600
+Event	T12	desastre	EVENT	617
+Event	T13	sufrido	EVENT	648
+Event	T14	mortal	EVENT	700
+Event	T15	siniestrado	EVENT	742
+Event	T16	registrado	EVENT	802
+Event	T17	construido	EVENT	880
+Relation	T2	T1	CauseEffect	true	perdiera	estrelló
+Relation	T1	T2	EffectCause	true	estrelló	perdiera
+Relation	T8	T5	CauseEffect	true	accidente	fallecieron
+Relation	T5	T8	EffectCause	true	fallecieron	accidente
+Relation	T0	T1	NoRel	true	operado	estrelló
+Relation	T0	T11	NoRel	true	operado	sucedió
+Relation	T0	T12	NoRel	true	operado	desastre
+Relation	T0	T14	NoRel	true	operado	mortal
+Relation	T0	T16	NoRel	true	operado	registrado
+Relation	T0	T17	NoRel	true	operado	construido
+Relation	T0	T3	NoRel	true	operado	contacto
+Relation	T0	T8	NoRel	true	operado	accidente
+Relation	T0	T9	NoRel	true	operado	enviaron
+Relation	T1	T13	NoRel	true	estrelló	sufrido
+Relation	T1	T6	NoRel	true	estrelló	estrelló
+Relation	T10	T14	NoRel	true	accidente	mortal
+Relation	T10	T17	NoRel	true	accidente	construido
+Relation	T10	T6	NoRel	true	accidente	estrelló
+Relation	T11	T10	NoRel	true	sucedió	accidente
+Relation	T11	T13	NoRel	true	sucedió	sufrido
+Relation	T11	T17	NoRel	true	sucedió	construido
+Relation	T11	T2	NoRel	true	sucedió	perdiera
+Relation	T11	T5	NoRel	true	sucedió	fallecieron
+Relation	T12	T14	NoRel	true	desastre	mortal
+Relation	T12	T15	NoRel	true	desastre	siniestrado
+Relation	T12	T17	NoRel	true	desastre	construido
+Relation	T12	T2	NoRel	true	desastre	perdiera
+Relation	T12	T7	NoRel	true	desastre	confirmara
+Relation	T12	T8	NoRel	true	desastre	accidente
+Relation	T12	T9	NoRel	true	desastre	enviaron
+Relation	T13	T11	NoRel	true	sufrido	sucedió
+Relation	T13	T12	NoRel	true	sufrido	desastre
+Relation	T13	T15	NoRel	true	sufrido	siniestrado
+Relation	T13	T4	NoRel	true	sufrido	lluvia
+Relation	T13	T5	NoRel	true	sufrido	fallecieron
+Relation	T14	T1	NoRel	true	mortal	estrelló
+Relation	T14	T11	NoRel	true	mortal	sucedió
+Relation	T14	T12	NoRel	true	mortal	desastre
+Relation	T14	T16	NoRel	true	mortal	registrado
+Relation	T14	T4	NoRel	true	mortal	lluvia
+Relation	T14	T5	NoRel	true	mortal	fallecieron
+Relation	T14	T7	NoRel	true	mortal	confirmara
+Relation	T14	T8	NoRel	true	mortal	accidente
+Relation	T15	T13	NoRel	true	siniestrado	sufrido
+Relation	T15	T14	NoRel	true	siniestrado	mortal
+Relation	T15	T16	NoRel	true	siniestrado	registrado
+Relation	T15	T9	NoRel	true	siniestrado	enviaron
+Relation	T16	T14	NoRel	true	registrado	mortal
+Relation	T16	T17	NoRel	true	registrado	construido
+Relation	T16	T3	NoRel	true	registrado	contacto
+Relation	T16	T8	NoRel	true	registrado	accidente
+Relation	T16	T9	NoRel	true	registrado	enviaron
+Relation	T17	T0	NoRel	true	construido	operado
+Relation	T17	T1	NoRel	true	construido	estrelló
+Relation	T17	T13	NoRel	true	construido	sufrido
+Relation	T17	T9	NoRel	true	construido	enviaron
+Relation	T2	T15	NoRel	true	perdiera	siniestrado
+Relation	T2	T16	NoRel	true	perdiera	registrado
+Relation	T2	T3	NoRel	true	perdiera	contacto
+Relation	T2	T4	NoRel	true	perdiera	lluvia
+Relation	T2	T7	NoRel	true	perdiera	confirmara
+Relation	T2	T9	NoRel	true	perdiera	enviaron
+Relation	T3	T11	NoRel	true	contacto	sucedió
+Relation	T3	T16	NoRel	true	contacto	registrado
+Relation	T3	T17	NoRel	true	contacto	construido
+Relation	T3	T9	NoRel	true	contacto	enviaron
+Relation	T4	T0	NoRel	true	lluvia	operado
+Relation	T4	T11	NoRel	true	lluvia	sucedió
+Relation	T4	T15	NoRel	true	lluvia	siniestrado
+Relation	T4	T17	NoRel	true	lluvia	construido
+Relation	T4	T2	NoRel	true	lluvia	perdiera
+Relation	T4	T5	NoRel	true	lluvia	fallecieron
+Relation	T4	T8	NoRel	true	lluvia	accidente
+Relation	T5	T12	NoRel	true	fallecieron	desastre
+Relation	T5	T16	NoRel	true	fallecieron	registrado
+Relation	T5	T2	NoRel	true	fallecieron	perdiera
+Relation	T5	T6	NoRel	true	fallecieron	estrelló
+Relation	T6	T0	NoRel	true	estrelló	operado
+Relation	T6	T16	NoRel	true	estrelló	registrado
+Relation	T6	T2	NoRel	true	estrelló	perdiera
+Relation	T6	T5	NoRel	true	estrelló	fallecieron
+Relation	T6	T9	NoRel	true	estrelló	enviaron
+Relation	T7	T0	NoRel	true	confirmara	operado
+Relation	T7	T12	NoRel	true	confirmara	desastre
+Relation	T7	T13	NoRel	true	confirmara	sufrido
+Relation	T7	T14	NoRel	true	confirmara	mortal
+Relation	T7	T17	NoRel	true	confirmara	construido
+Relation	T7	T5	NoRel	true	confirmara	fallecieron
+Relation	T7	T6	NoRel	true	confirmara	estrelló
+Relation	T8	T0	NoRel	true	accidente	operado
+Relation	T8	T1	NoRel	true	accidente	estrelló
+Relation	T8	T16	NoRel	true	accidente	registrado
+Relation	T8	T3	NoRel	true	accidente	contacto
+Relation	T8	T6	NoRel	true	accidente	estrelló
+Relation	T8	T9	NoRel	true	accidente	enviaron
+Relation	T9	T1	NoRel	true	enviaron	estrelló
+Relation	T9	T17	NoRel	true	enviaron	construido
+Relation	T9	T2	NoRel	true	enviaron	perdiera
+Relation	T9	T5	NoRel	true	enviaron	fallecieron

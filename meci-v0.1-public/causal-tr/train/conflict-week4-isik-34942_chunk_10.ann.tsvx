@@ -1,0 +1,40 @@
+Text	Haçlılar bu sırada Bizans gemileriyle Yalova’ya oradan da İznik önlerine gelerek şehri kuşattılar .	I. Kılıç Arslan durumun önemini geç de olsa anladı ve derhal İznik yakınına döndüyse de şehir kuşatılmıştı ve büyük Haçlı ordusuyla baş edemeyeceğine karar vererek geri çekildi .	Beş hafta kuşatmaya dayanan İznik 17 Haziran 1097’de Bizans’a teslim edildi .	I. Kılıç Arslan'da 1097 yılında başkent'i İznik'den Konya'ya taşımak zorunda kaldı .	Anadolu içlerine çekilen Kılıç Arslan Dânişmend Gazi ve Kayseri emiri Hasan ile ittifak yaptı .
+Event	T0	kuşattılar	EVENT	87
+Event	T1	döndüyse	EVENT	176
+Event	T2	kuşatılmıştı	EVENT	194
+Event	T4	çekildi	EVENT	269
+Event	T5	kuşatmaya	EVENT	289
+Event	T6	edildi	EVENT	348
+Event	T8	çekilen	EVENT	459
+Event	T9	yaptı	EVENT	530
+Event	T3	anladı	EVENT	144
+Event	T10	kaldı	EVENT	434
+Relation	T2	T4	CauseEffect	true	kuşatılmıştı	çekildi
+Relation	T4	T2	EffectCause	true	çekildi	kuşatılmıştı
+Relation	T3	T1	CauseEffect	true	anladı	döndüyse
+Relation	T1	T3	EffectCause	true	döndüyse	anladı
+Relation	T4	T6	CauseEffect	true	çekildi	edildi
+Relation	T6	T4	EffectCause	true	edildi	çekildi
+Relation	T6	T10	CauseEffect	true	edildi	kaldı
+Relation	T10	T6	EffectCause	true	kaldı	edildi
+Relation	T0	T3	NoRel	true	kuşattılar	anladı
+Relation	T0	T4	NoRel	true	kuşattılar	çekildi
+Relation	T0	T6	NoRel	true	kuşattılar	edildi
+Relation	T1	T5	NoRel	true	döndüyse	kuşatmaya
+Relation	T10	T3	NoRel	true	kaldı	anladı
+Relation	T2	T10	NoRel	true	kuşatılmıştı	kaldı
+Relation	T2	T6	NoRel	true	kuşatılmıştı	edildi
+Relation	T2	T8	NoRel	true	kuşatılmıştı	çekilen
+Relation	T3	T0	NoRel	true	anladı	kuşattılar
+Relation	T3	T8	NoRel	true	anladı	çekilen
+Relation	T4	T0	NoRel	true	çekildi	kuşattılar
+Relation	T4	T5	NoRel	true	çekildi	kuşatmaya
+Relation	T5	T10	NoRel	true	kuşatmaya	kaldı
+Relation	T5	T3	NoRel	true	kuşatmaya	anladı
+Relation	T5	T9	NoRel	true	kuşatmaya	yaptı
+Relation	T6	T1	NoRel	true	edildi	döndüyse
+Relation	T6	T9	NoRel	true	edildi	yaptı
+Relation	T8	T10	NoRel	true	çekilen	kaldı
+Relation	T8	T2	NoRel	true	çekilen	kuşatılmıştı
+Relation	T8	T9	NoRel	true	çekilen	yaptı
+Relation	T9	T8	NoRel	true	yaptı	çekilen

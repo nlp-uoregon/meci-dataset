@@ -1,0 +1,39 @@
+Text	El maquinista no se mostró dispuesto a detener el tren inmediatamente en ese momento y quiso investigar el incidente más a fondo .	Dittmann no pudo encontrar un freno de emergencia en el pasillo y no se había dado cuenta de que había una manija de freno de emergencia en su propio compartimiento .	El choque ocurrió justo cuando Dittmann estaba a punto de mostrarle el pinchazo al apoyabrazos .	Cuando el tren pasó por el primero de los dos puntos , el neumático incrustado chocó contra el carril guía de los puntos , tirando de los amarres del ferrocarril .	Este carril guía también penetró el piso del vehículo , quedando incrustado en el vehículo y levantando el bogie del eje de los carriles .
+Event	T0	detener	EVENT	39
+Event	T1	investigar	EVENT	93
+Event	T2	incidente	EVENT	107
+Event	T3	encontrar	EVENT	148
+Event	T5	pasó	EVENT	410
+Event	T6	chocó	EVENT	474
+Event	T7	tirando	EVENT	518
+Event	T8	penetró	EVENT	584
+Event	T9	levantando	EVENT	652
+Event	T10	choque	EVENT	301
+Relation	T6	T7	CauseEffect	true	chocó	tirando
+Relation	T7	T6	EffectCause	true	tirando	chocó
+Relation	T0	T3	NoRel	true	detener	encontrar
+Relation	T0	T7	NoRel	true	detener	tirando
+Relation	T0	T8	NoRel	true	detener	penetró
+Relation	T1	T5	NoRel	true	investigar	pasó
+Relation	T10	T2	NoRel	true	choque	incidente
+Relation	T10	T3	NoRel	true	choque	encontrar
+Relation	T10	T5	NoRel	true	choque	pasó
+Relation	T10	T6	NoRel	true	choque	chocó
+Relation	T2	T5	NoRel	true	incidente	pasó
+Relation	T2	T7	NoRel	true	incidente	tirando
+Relation	T3	T1	NoRel	true	encontrar	investigar
+Relation	T3	T9	NoRel	true	encontrar	levantando
+Relation	T5	T10	NoRel	true	pasó	choque
+Relation	T5	T3	NoRel	true	pasó	encontrar
+Relation	T6	T10	NoRel	true	chocó	choque
+Relation	T6	T3	NoRel	true	chocó	encontrar
+Relation	T7	T10	NoRel	true	tirando	choque
+Relation	T7	T8	NoRel	true	tirando	penetró
+Relation	T7	T9	NoRel	true	tirando	levantando
+Relation	T8	T1	NoRel	true	penetró	investigar
+Relation	T8	T10	NoRel	true	penetró	choque
+Relation	T8	T7	NoRel	true	penetró	tirando
+Relation	T9	T10	NoRel	true	levantando	choque
+Relation	T9	T2	NoRel	true	levantando	incidente
+Relation	T9	T5	NoRel	true	levantando	pasó
+Relation	T9	T8	NoRel	true	levantando	penetró

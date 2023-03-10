@@ -1,0 +1,72 @@
+Text	Klokken 9:59 kollapsede sydtårnet som følge af , at tårnets stålsøjler havde mistet deres styrke pga. ildebranden .	Det nordlige tårn kollapsede klokken 10:28 efter at have brændt i 102 minutter .	Klokken 5:21 pm kollapsede bygning 7 , hvilket er blevet begrundet med ukontrollerede brande inde i bygningen .	World Trade Center tårn 3 ( kendt som Hotel Marriott ) blev ødelagt under sammenbruddet af de to tvillingetårne .	De tre resterende bygninger i WTC Plaza havde lidt stor skade efter tårnenes sammenstyrtning og de blev bagefter revet ned .
+Event	T0	kollapsede	EVENT	13
+Event	T1	mistet	EVENT	77
+Event	T2	ildebranden	EVENT	102
+Event	T3	kollapsede	EVENT	134
+Event	T4	brændt	EVENT	173
+Event	T5	kollapsede	EVENT	213
+Event	T6	begrundet	EVENT	254
+Event	T7	brande	EVENT	283
+Event	T8	ødelagt	EVENT	369
+Event	T9	sammenbruddet	EVENT	383
+Event	T10	skade	EVENT	479
+Event	T11	sammenstyrtning	EVENT	500
+Event	T12	revet ned	EVENT	536
+Relation	T10	T12	CauseEffect	true	skade	revet ned
+Relation	T12	T10	EffectCause	true	revet ned	skade
+Relation	T11	T10	CauseEffect	true	sammenstyrtning	skade
+Relation	T10	T11	EffectCause	true	skade	sammenstyrtning
+Relation	T9	T8	CauseEffect	true	sammenbruddet	ødelagt
+Relation	T8	T9	EffectCause	true	ødelagt	sammenbruddet
+Relation	T7	T5	CauseEffect	true	brande	kollapsede
+Relation	T5	T7	EffectCause	true	kollapsede	brande
+Relation	T1	T0	CauseEffect	true	mistet	kollapsede
+Relation	T0	T1	EffectCause	true	kollapsede	mistet
+Relation	T2	T0	CauseEffect	true	ildebranden	kollapsede
+Relation	T0	T2	EffectCause	true	kollapsede	ildebranden
+Relation	T2	T1	CauseEffect	true	ildebranden	mistet
+Relation	T1	T2	EffectCause	true	mistet	ildebranden
+Relation	T0	T10	NoRel	true	kollapsede	skade
+Relation	T0	T12	NoRel	true	kollapsede	revet ned
+Relation	T0	T5	NoRel	true	kollapsede	kollapsede
+Relation	T0	T8	NoRel	true	kollapsede	ødelagt
+Relation	T0	T9	NoRel	true	kollapsede	sammenbruddet
+Relation	T1	T11	NoRel	true	mistet	sammenstyrtning
+Relation	T1	T4	NoRel	true	mistet	brændt
+Relation	T1	T6	NoRel	true	mistet	begrundet
+Relation	T1	T7	NoRel	true	mistet	brande
+Relation	T1	T8	NoRel	true	mistet	ødelagt
+Relation	T1	T9	NoRel	true	mistet	sammenbruddet
+Relation	T10	T2	NoRel	true	skade	ildebranden
+Relation	T10	T4	NoRel	true	skade	brændt
+Relation	T10	T7	NoRel	true	skade	brande
+Relation	T10	T9	NoRel	true	skade	sammenbruddet
+Relation	T11	T0	NoRel	true	sammenstyrtning	kollapsede
+Relation	T11	T4	NoRel	true	sammenstyrtning	brændt
+Relation	T12	T0	NoRel	true	revet ned	kollapsede
+Relation	T12	T1	NoRel	true	revet ned	mistet
+Relation	T12	T2	NoRel	true	revet ned	ildebranden
+Relation	T2	T9	NoRel	true	ildebranden	sammenbruddet
+Relation	T3	T2	NoRel	true	kollapsede	ildebranden
+Relation	T3	T8	NoRel	true	kollapsede	ødelagt
+Relation	T4	T0	NoRel	true	brændt	kollapsede
+Relation	T4	T2	NoRel	true	brændt	ildebranden
+Relation	T4	T9	NoRel	true	brændt	sammenbruddet
+Relation	T5	T10	NoRel	true	kollapsede	skade
+Relation	T5	T12	NoRel	true	kollapsede	revet ned
+Relation	T5	T3	NoRel	true	kollapsede	kollapsede
+Relation	T5	T8	NoRel	true	kollapsede	ødelagt
+Relation	T6	T12	NoRel	true	begrundet	revet ned
+Relation	T6	T2	NoRel	true	begrundet	ildebranden
+Relation	T7	T1	NoRel	true	brande	mistet
+Relation	T7	T12	NoRel	true	brande	revet ned
+Relation	T7	T2	NoRel	true	brande	ildebranden
+Relation	T7	T3	NoRel	true	brande	kollapsede
+Relation	T7	T8	NoRel	true	brande	ødelagt
+Relation	T8	T12	NoRel	true	ødelagt	revet ned
+Relation	T8	T2	NoRel	true	ødelagt	ildebranden
+Relation	T8	T4	NoRel	true	ødelagt	brændt
+Relation	T8	T6	NoRel	true	ødelagt	begrundet
+Relation	T9	T1	NoRel	true	sammenbruddet	mistet
+Relation	T9	T11	NoRel	true	sammenbruddet	sammenstyrtning
+Relation	T9	T6	NoRel	true	sammenbruddet	begrundet

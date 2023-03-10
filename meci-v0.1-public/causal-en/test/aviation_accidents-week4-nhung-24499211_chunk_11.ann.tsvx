@@ -1,0 +1,66 @@
+Text	This was quickly fixed , but press reporters insisting on last - minute interviews further delayed take - off and the _ Aotearoa _ did not become airborne until 02:44 ( 05:14 New Zealand time ) , immediately turning on course for New Zealand .	The take - off on the Tasman flight was only the aircraft 's fifth since being reassembled after delivery .	Thirty - two minutes later , at 05:46 NZ time , the officer of the watch on the trans - Tasman steamer _ Maunganui _ , 12 miles east of Sydney Heads , heard " the soft regular whirr " of an aircraft engine passing overhead , although he did not see the aircraft itself .	The timing and the position of the steamer indicated an aircraft ground speed of 90 mph / 145 km / h , about right for the intended flight .	For simplicity , Moncrieff and Hood had planned to fly a rhumb line course , intending to make landfall at Farewell Spit at the western entrance to Cook Strait .
+Event	T0	fixed	EVENT	17
+Event	T1	airborne	EVENT	146
+Event	T2	flight	EVENT	273
+Event	T3	reassembled	EVENT	323
+Event	T4	delivery	EVENT	341
+Event	T5	heard	EVENT	503
+Event	T6	whirr	EVENT	528
+Event	T7	passing	EVENT	558
+Event	T8	see	EVENT	597
+Event	T9	timing	EVENT	627
+Event	T10	indicated	EVENT	666
+Event	T11	flight	EVENT	755
+Event	T12	planned	EVENT	804
+Event	T13	fly	EVENT	815
+Event	T14	intending	EVENT	841
+Event	T15	landfall	EVENT	859
+Event	T16	insisting	EVENT	45
+Event	T17	delayed	EVENT	91
+Event	T18	turning	EVENT	208
+Event	T19	position	EVENT	642
+Relation	T6	T5	CauseEffect	true	whirr	heard
+Relation	T5	T6	EffectCause	true	heard	whirr
+Relation	T19	T10	CauseEffect	true	position	indicated
+Relation	T10	T19	EffectCause	true	indicated	position
+Relation	T9	T10	CauseEffect	true	timing	indicated
+Relation	T10	T9	EffectCause	true	indicated	timing
+Relation	T0	T8	NoRel	true	fixed	see
+Relation	T1	T11	NoRel	true	airborne	flight
+Relation	T1	T3	NoRel	true	airborne	reassembled
+Relation	T1	T8	NoRel	true	airborne	see
+Relation	T10	T1	NoRel	true	indicated	airborne
+Relation	T10	T15	NoRel	true	indicated	landfall
+Relation	T10	T7	NoRel	true	indicated	passing
+Relation	T11	T2	NoRel	true	flight	flight
+Relation	T11	T8	NoRel	true	flight	see
+Relation	T13	T1	NoRel	true	fly	airborne
+Relation	T13	T15	NoRel	true	fly	landfall
+Relation	T13	T18	NoRel	true	fly	turning
+Relation	T14	T12	NoRel	true	intending	planned
+Relation	T15	T10	NoRel	true	landfall	indicated
+Relation	T15	T14	NoRel	true	landfall	intending
+Relation	T15	T18	NoRel	true	landfall	turning
+Relation	T16	T0	NoRel	true	insisting	fixed
+Relation	T16	T4	NoRel	true	insisting	delivery
+Relation	T16	T6	NoRel	true	insisting	whirr
+Relation	T17	T1	NoRel	true	delayed	airborne
+Relation	T17	T12	NoRel	true	delayed	planned
+Relation	T17	T7	NoRel	true	delayed	passing
+Relation	T2	T15	NoRel	true	flight	landfall
+Relation	T2	T17	NoRel	true	flight	delayed
+Relation	T2	T7	NoRel	true	flight	passing
+Relation	T3	T18	NoRel	true	reassembled	turning
+Relation	T4	T1	NoRel	true	delivery	airborne
+Relation	T4	T3	NoRel	true	delivery	reassembled
+Relation	T5	T19	NoRel	true	heard	position
+Relation	T5	T9	NoRel	true	heard	timing
+Relation	T6	T12	NoRel	true	whirr	planned
+Relation	T6	T17	NoRel	true	whirr	delayed
+Relation	T6	T8	NoRel	true	whirr	see
+Relation	T6	T9	NoRel	true	whirr	timing
+Relation	T8	T14	NoRel	true	see	intending
+Relation	T8	T15	NoRel	true	see	landfall
+Relation	T8	T18	NoRel	true	see	turning
+Relation	T8	T3	NoRel	true	see	reassembled
+Relation	T9	T18	NoRel	true	timing	turning

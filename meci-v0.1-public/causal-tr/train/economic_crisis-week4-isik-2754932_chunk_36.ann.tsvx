@@ -1,0 +1,90 @@
+Text	Hitler'in seçim kazanımları karşısında küçülen KPD , yasal araçlardan uzaklaştı ve giderek şiddete yöneldi .	Silezya'da sonuçlanan bir çatışma , ordunun sevk edilmesiyle sonuçlandı ve her girişim Almanya'yı potansiyel bir iç savaşa sürükledi .	Bu sırada her iki taraf da bir rekabeti ateşlemek umuduyla birbirlerinin kalelerine yürüdü .	Saldırılar , SA lideri Axel Schaffeld'in 1 Ağustos'ta suikasta kurban gitmesiyle devam etti ve ateşli bir boyuta ulaştı .	Nazi Partisi artık Reichstag'ın en büyük partisi olduğu için , Reichstag Başkanını seçme hakkına sahipti ve göreve kendi adamı Hermann Göring'i seçti .
+Event	T0	uzaklaştı	EVENT	70
+Event	T1	yöneldi	EVENT	99
+Event	T3	çatışma	EVENT	135
+Event	T5	sonuçlandı	EVENT	170
+Event	T6	girişim	EVENT	188
+Event	T7	sürükledi	EVENT	232
+Event	T9	yürüdü	EVENT	328
+Event	T10	Saldırılar	EVENT	337
+Event	T11	etti	EVENT	424
+Event	T12	ulaştı	EVENT	450
+Event	T14	seçti	EVENT	603
+Event	T15	kazanımları	EVENT	16
+Event	T16	küçülen	EVENT	39
+Event	T2	sahipti	EVENT	556
+Event	T4	partisi	EVENT	500
+Relation	T15	T16	CauseEffect	true	kazanımları	küçülen
+Relation	T16	T15	EffectCause	true	küçülen	kazanımları
+Relation	T16	T0	CauseEffect	true	küçülen	uzaklaştı
+Relation	T0	T16	EffectCause	true	uzaklaştı	küçülen
+Relation	T0	T1	CauseEffect	true	uzaklaştı	yöneldi
+Relation	T1	T0	EffectCause	true	yöneldi	uzaklaştı
+Relation	T3	T5	CauseEffect	true	çatışma	sonuçlandı
+Relation	T5	T3	EffectCause	true	sonuçlandı	çatışma
+Relation	T5	T7	CauseEffect	true	sonuçlandı	sürükledi
+Relation	T7	T5	EffectCause	true	sürükledi	sonuçlandı
+Relation	T7	T9	CauseEffect	true	sürükledi	yürüdü
+Relation	T9	T7	EffectCause	true	yürüdü	sürükledi
+Relation	T10	T11	CauseEffect	true	Saldırılar	etti
+Relation	T11	T10	EffectCause	true	etti	Saldırılar
+Relation	T4	T14	CauseEffect	true	partisi	seçti
+Relation	T14	T4	EffectCause	true	seçti	partisi
+Relation	T0	T10	NoRel	true	uzaklaştı	Saldırılar
+Relation	T0	T12	NoRel	true	uzaklaştı	ulaştı
+Relation	T0	T2	NoRel	true	uzaklaştı	sahipti
+Relation	T0	T3	NoRel	true	uzaklaştı	çatışma
+Relation	T0	T4	NoRel	true	uzaklaştı	partisi
+Relation	T0	T9	NoRel	true	uzaklaştı	yürüdü
+Relation	T1	T10	NoRel	true	yöneldi	Saldırılar
+Relation	T1	T3	NoRel	true	yöneldi	çatışma
+Relation	T10	T15	NoRel	true	Saldırılar	kazanımları
+Relation	T10	T16	NoRel	true	Saldırılar	küçülen
+Relation	T10	T3	NoRel	true	Saldırılar	çatışma
+Relation	T10	T5	NoRel	true	Saldırılar	sonuçlandı
+Relation	T11	T0	NoRel	true	etti	uzaklaştı
+Relation	T11	T16	NoRel	true	etti	küçülen
+Relation	T11	T4	NoRel	true	etti	partisi
+Relation	T11	T5	NoRel	true	etti	sonuçlandı
+Relation	T12	T1	NoRel	true	ulaştı	yöneldi
+Relation	T12	T10	NoRel	true	ulaştı	Saldırılar
+Relation	T12	T11	NoRel	true	ulaştı	etti
+Relation	T12	T4	NoRel	true	ulaştı	partisi
+Relation	T12	T6	NoRel	true	ulaştı	girişim
+Relation	T12	T9	NoRel	true	ulaştı	yürüdü
+Relation	T14	T1	NoRel	true	seçti	yöneldi
+Relation	T14	T11	NoRel	true	seçti	etti
+Relation	T14	T5	NoRel	true	seçti	sonuçlandı
+Relation	T15	T3	NoRel	true	kazanımları	çatışma
+Relation	T15	T4	NoRel	true	kazanımları	partisi
+Relation	T15	T6	NoRel	true	kazanımları	girişim
+Relation	T15	T7	NoRel	true	kazanımları	sürükledi
+Relation	T16	T1	NoRel	true	küçülen	yöneldi
+Relation	T16	T14	NoRel	true	küçülen	seçti
+Relation	T16	T2	NoRel	true	küçülen	sahipti
+Relation	T16	T4	NoRel	true	küçülen	partisi
+Relation	T2	T12	NoRel	true	sahipti	ulaştı
+Relation	T2	T3	NoRel	true	sahipti	çatışma
+Relation	T2	T6	NoRel	true	sahipti	girişim
+Relation	T3	T12	NoRel	true	çatışma	ulaştı
+Relation	T4	T15	NoRel	true	partisi	kazanımları
+Relation	T4	T5	NoRel	true	partisi	sonuçlandı
+Relation	T5	T1	NoRel	true	sonuçlandı	yöneldi
+Relation	T5	T12	NoRel	true	sonuçlandı	ulaştı
+Relation	T5	T16	NoRel	true	sonuçlandı	küçülen
+Relation	T5	T2	NoRel	true	sonuçlandı	sahipti
+Relation	T5	T6	NoRel	true	sonuçlandı	girişim
+Relation	T6	T0	NoRel	true	girişim	uzaklaştı
+Relation	T6	T1	NoRel	true	girişim	yöneldi
+Relation	T6	T11	NoRel	true	girişim	etti
+Relation	T6	T3	NoRel	true	girişim	çatışma
+Relation	T6	T5	NoRel	true	girişim	sonuçlandı
+Relation	T6	T9	NoRel	true	girişim	yürüdü
+Relation	T7	T10	NoRel	true	sürükledi	Saldırılar
+Relation	T7	T12	NoRel	true	sürükledi	ulaştı
+Relation	T7	T16	NoRel	true	sürükledi	küçülen
+Relation	T7	T2	NoRel	true	sürükledi	sahipti
+Relation	T7	T6	NoRel	true	sürükledi	girişim
+Relation	T9	T12	NoRel	true	yürüdü	ulaştı
+Relation	T9	T15	NoRel	true	yürüdü	kazanımları
+Relation	T9	T4	NoRel	true	yürüdü	partisi

@@ -1,0 +1,98 @@
+Text	El ACCIDENTE FERROVIARIO EN KATANGA DE 2014 hace referencia al descarrilamiento de un tren de mercancías cerca del puente Katongola ( República Democrática del Congo ) el 22 de abril de 2014 .	El tren transportaba a cientos de pasajeros en el momento del accidente y dejó al menos 74 muertos y 163 heridos .	El sistema de ferrocarril de la República Democrática del Congo está mal mantenido y ha caído en un total estado de deterioro después de años de conflicto en el país .	Gran parte de la red ferroviaria fue construida durante el período colonial y recibió algunas mejoras desde el fin de la administración belga en 1960 hasta un reciente programa financiado por el Banco Mundial .	Los empleados de la empresa operadora del sistema , _ Société nationale des chemins de fer du Congo _ , a menudo venden billetes ilegales a los pasajeros para aumentar sus ingresos .
+Event	T0	referencia	EVENT	49
+Event	T1	descarrilamiento	EVENT	63
+Event	T2	transportaba	EVENT	201
+Event	T3	accidente	EVENT	255
+Event	T4	dejó	EVENT	267
+Event	T5	muertos	EVENT	284
+Event	T6	heridos	EVENT	298
+Event	T7	caído	EVENT	396
+Event	T8	deterioro	EVENT	424
+Event	T9	conflicto	EVENT	453
+Event	T10	construida	EVENT	513
+Event	T11	recibió	EVENT	554
+Event	T12	mejoras	EVENT	570
+Event	T13	fin	EVENT	587
+Event	T14	financiado	EVENT	653
+Event	T15	venden	EVENT	800
+Relation	T3	T5	CauseEffect	true	accidente	muertos
+Relation	T5	T3	EffectCause	true	muertos	accidente
+Relation	T3	T6	CauseEffect	true	accidente	heridos
+Relation	T6	T3	EffectCause	true	heridos	accidente
+Relation	T0	T1	NoRel	true	referencia	descarrilamiento
+Relation	T0	T10	NoRel	true	referencia	construida
+Relation	T0	T11	NoRel	true	referencia	recibió
+Relation	T0	T12	NoRel	true	referencia	mejoras
+Relation	T0	T2	NoRel	true	referencia	transportaba
+Relation	T0	T5	NoRel	true	referencia	muertos
+Relation	T0	T7	NoRel	true	referencia	caído
+Relation	T0	T8	NoRel	true	referencia	deterioro
+Relation	T1	T0	NoRel	true	descarrilamiento	referencia
+Relation	T1	T13	NoRel	true	descarrilamiento	fin
+Relation	T1	T14	NoRel	true	descarrilamiento	financiado
+Relation	T1	T2	NoRel	true	descarrilamiento	transportaba
+Relation	T1	T8	NoRel	true	descarrilamiento	deterioro
+Relation	T10	T12	NoRel	true	construida	mejoras
+Relation	T10	T14	NoRel	true	construida	financiado
+Relation	T10	T15	NoRel	true	construida	venden
+Relation	T10	T2	NoRel	true	construida	transportaba
+Relation	T10	T6	NoRel	true	construida	heridos
+Relation	T10	T8	NoRel	true	construida	deterioro
+Relation	T11	T1	NoRel	true	recibió	descarrilamiento
+Relation	T11	T10	NoRel	true	recibió	construida
+Relation	T11	T12	NoRel	true	recibió	mejoras
+Relation	T11	T15	NoRel	true	recibió	venden
+Relation	T11	T3	NoRel	true	recibió	accidente
+Relation	T11	T9	NoRel	true	recibió	conflicto
+Relation	T12	T1	NoRel	true	mejoras	descarrilamiento
+Relation	T12	T14	NoRel	true	mejoras	financiado
+Relation	T12	T4	NoRel	true	mejoras	dejó
+Relation	T12	T7	NoRel	true	mejoras	caído
+Relation	T13	T1	NoRel	true	fin	descarrilamiento
+Relation	T13	T10	NoRel	true	fin	construida
+Relation	T13	T12	NoRel	true	fin	mejoras
+Relation	T13	T14	NoRel	true	fin	financiado
+Relation	T13	T5	NoRel	true	fin	muertos
+Relation	T14	T0	NoRel	true	financiado	referencia
+Relation	T14	T11	NoRel	true	financiado	recibió
+Relation	T14	T12	NoRel	true	financiado	mejoras
+Relation	T14	T13	NoRel	true	financiado	fin
+Relation	T14	T5	NoRel	true	financiado	muertos
+Relation	T14	T6	NoRel	true	financiado	heridos
+Relation	T14	T8	NoRel	true	financiado	deterioro
+Relation	T14	T9	NoRel	true	financiado	conflicto
+Relation	T15	T11	NoRel	true	venden	recibió
+Relation	T15	T3	NoRel	true	venden	accidente
+Relation	T15	T4	NoRel	true	venden	dejó
+Relation	T2	T1	NoRel	true	transportaba	descarrilamiento
+Relation	T2	T13	NoRel	true	transportaba	fin
+Relation	T2	T14	NoRel	true	transportaba	financiado
+Relation	T2	T6	NoRel	true	transportaba	heridos
+Relation	T2	T9	NoRel	true	transportaba	conflicto
+Relation	T3	T11	NoRel	true	accidente	recibió
+Relation	T4	T12	NoRel	true	dejó	mejoras
+Relation	T4	T13	NoRel	true	dejó	fin
+Relation	T4	T14	NoRel	true	dejó	financiado
+Relation	T4	T15	NoRel	true	dejó	venden
+Relation	T5	T0	NoRel	true	muertos	referencia
+Relation	T5	T11	NoRel	true	muertos	recibió
+Relation	T5	T7	NoRel	true	muertos	caído
+Relation	T5	T8	NoRel	true	muertos	deterioro
+Relation	T6	T0	NoRel	true	heridos	referencia
+Relation	T6	T13	NoRel	true	heridos	fin
+Relation	T6	T14	NoRel	true	heridos	financiado
+Relation	T6	T8	NoRel	true	heridos	deterioro
+Relation	T7	T11	NoRel	true	caído	recibió
+Relation	T7	T14	NoRel	true	caído	financiado
+Relation	T7	T4	NoRel	true	caído	dejó
+Relation	T7	T5	NoRel	true	caído	muertos
+Relation	T8	T0	NoRel	true	deterioro	referencia
+Relation	T8	T11	NoRel	true	deterioro	recibió
+Relation	T8	T12	NoRel	true	deterioro	mejoras
+Relation	T8	T14	NoRel	true	deterioro	financiado
+Relation	T8	T4	NoRel	true	deterioro	dejó
+Relation	T8	T6	NoRel	true	deterioro	heridos
+Relation	T9	T1	NoRel	true	conflicto	descarrilamiento
+Relation	T9	T10	NoRel	true	conflicto	construida
+Relation	T9	T12	NoRel	true	conflicto	mejoras
+Relation	T9	T2	NoRel	true	conflicto	transportaba

@@ -1,0 +1,39 @@
+Text	- 17 DE SEPTIEMBRE : el tren correo de la línea del Duero descarrila en las cercanías de la estación de Vila Meã , resultando heridos leves el maquinista y el fogonero de la locomotora que encabezaba la composición .	- 11 DE OCTUBRE en el kilómetro 11 de la línea del Miño , entre las estaciones de São Romão y Ermesinde , se produce el descarrilamiento de un tren de viajeros formado por la unión en la estación de Nine de dos composiciones procedentes de Braga y Caminha y destino a Oporto .	Resultan seis muertos y seis heridos .	- 1879 - 17 DE ABRIL : se produce el descarrilamiento de un tren de viajeros en la línea de Estremoz , sin víctimas .	- 3 DE NOVIEMBRE : descarrilamiento de un tren de viajeros de la línea del Norte en la estación de Ovar .
+Event	T0	descarrila	EVENT	58
+Event	T1	composición	EVENT	203
+Event	T2	produce	EVENT	326
+Event	T3	descarrilamiento	EVENT	337
+Event	T4	muertos	EVENT	508
+Event	T5	heridos	EVENT	523
+Event	T6	produce	EVENT	559
+Event	T7	descarrilamiento	EVENT	570
+Event	T8	víctimas	EVENT	640
+Event	T9	descarrilamiento	EVENT	670
+Relation	T3	T4	CauseEffect	true	descarrilamiento	muertos
+Relation	T4	T3	EffectCause	true	muertos	descarrilamiento
+Relation	T3	T5	CauseEffect	true	descarrilamiento	heridos
+Relation	T5	T3	EffectCause	true	heridos	descarrilamiento
+Relation	T0	T1	NoRel	true	descarrila	composición
+Relation	T0	T2	NoRel	true	descarrila	produce
+Relation	T0	T3	NoRel	true	descarrila	descarrilamiento
+Relation	T0	T5	NoRel	true	descarrila	heridos
+Relation	T0	T6	NoRel	true	descarrila	produce
+Relation	T1	T3	NoRel	true	composición	descarrilamiento
+Relation	T1	T5	NoRel	true	composición	heridos
+Relation	T1	T6	NoRel	true	composición	produce
+Relation	T2	T1	NoRel	true	produce	composición
+Relation	T2	T4	NoRel	true	produce	muertos
+Relation	T3	T0	NoRel	true	descarrilamiento	descarrila
+Relation	T3	T1	NoRel	true	descarrilamiento	composición
+Relation	T3	T6	NoRel	true	descarrilamiento	produce
+Relation	T3	T9	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T4	T2	NoRel	true	muertos	produce
+Relation	T4	T6	NoRel	true	muertos	produce
+Relation	T4	T9	NoRel	true	muertos	descarrilamiento
+Relation	T5	T0	NoRel	true	heridos	descarrila
+Relation	T5	T1	NoRel	true	heridos	composición
+Relation	T6	T2	NoRel	true	produce	produce
+Relation	T7	T9	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T8	T0	NoRel	true	víctimas	descarrila
+Relation	T8	T1	NoRel	true	víctimas	composición
+Relation	T8	T4	NoRel	true	víctimas	muertos

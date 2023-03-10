@@ -1,0 +1,28 @@
+Text	Her ne zaman havi hat üzerindeki güç kesildiğinde , makinistten işletme kuralına göre hızı bir düşük hıza indirmesi ve dikkatli bir şekilde tren çalıştığı sürece devam etmesi istenir .	Mamafih , o Wavre tarafından yapılamadı .	Sinyalci onun için problem hakkında Brüksel’deki bir kontrolör ile temasa geçti .	- 08: 46 — Brüksel kontrolörleri , trenin makinisti ile temas kurmaya çalışıyordu .	Fakat ona ulaşabilmek olanaksızdı .
+Event	T0	kesildiğinde	EVENT	37
+Event	T1	indirmesi	EVENT	106
+Event	T2	çalıştığı	EVENT	145
+Event	T3	geçti	EVENT	301
+Event	T4	çalışıyordu	EVENT	379
+Event	T5	istenir	EVENT	175
+Event	T6	yapılamadı	EVENT	214
+Event	T7	kurmaya	EVENT	371
+Relation	T6	T3	CauseEffect	true	yapılamadı	geçti
+Relation	T3	T6	EffectCause	true	geçti	yapılamadı
+Relation	T0	T1	NoRel	true	kesildiğinde	indirmesi
+Relation	T0	T3	NoRel	true	kesildiğinde	geçti
+Relation	T0	T4	NoRel	true	kesildiğinde	çalışıyordu
+Relation	T0	T5	NoRel	true	kesildiğinde	istenir
+Relation	T0	T6	NoRel	true	kesildiğinde	yapılamadı
+Relation	T2	T0	NoRel	true	çalıştığı	kesildiğinde
+Relation	T4	T1	NoRel	true	çalışıyordu	indirmesi
+Relation	T4	T5	NoRel	true	çalışıyordu	istenir
+Relation	T4	T6	NoRel	true	çalışıyordu	yapılamadı
+Relation	T5	T1	NoRel	true	istenir	indirmesi
+Relation	T5	T7	NoRel	true	istenir	kurmaya
+Relation	T6	T0	NoRel	true	yapılamadı	kesildiğinde
+Relation	T6	T1	NoRel	true	yapılamadı	indirmesi
+Relation	T6	T2	NoRel	true	yapılamadı	çalıştığı
+Relation	T6	T5	NoRel	true	yapılamadı	istenir
+Relation	T7	T0	NoRel	true	kurmaya	kesildiğinde
+Relation	T7	T4	NoRel	true	kurmaya	çalışıyordu

@@ -1,0 +1,50 @@
+Text	یہ تائپے سونگشان ایئرپورٹ سے مقامی تائیوانی وقت کے مطابق صبح 10: 52 پر روانہ ہوا -	جہاز نیچے آنے سے پہلے 1050 فٹ کی بلندی تک پہنچا تھا -	جہاز کے ایئرٹریفک کنٹرول سے آخری رابطے میں پائلٹ کے یہ الفاظ تھے ، 10: 54 am پر جہاز تائپے کے نانگانگ ضلع اور نیو تائپے کے شیژی ضلع کے سرحدی علاقے پر کیلنگ دریا میں گر گیا -	یہ مناظر ساتھ ہی واقع ہواڈونگ پل پر چلتی کئی گاڑیوں کے ڈیش بورڈ کیمرے میں عکسبند ہو گئے -	جن کے مطابق جہاز پہلے عمارتوں سے بچتا ہوا آیا پھر یہ تقریبا 90 ڈگری کے زاویے پر گھوم گیا جس سے اس کا بایاں پر نیچے کی جانب ہو گیا جو بتدریج نیچے آتے ہوئے پل پر ایک چلتی ہوئی ٹیکسی سے ٹکرایا پھر پل کے کنارے موجود حفاظتی کنارے سے ٹکرایا جہاز کا بایاں پر مکمل تباہ ہو گیا تھا -
+Event	T0	ہوا	EVENT	77
+Event	T1	آنے	EVENT	93
+Event	T2	پہنچا	EVENT	125
+Event	T3	رابطے	EVENT	170
+Event	T4	گیا	EVENT	305
+Event	T5	چلتی	EVENT	347
+Event	T6	بچتا	EVENT	434
+Event	T7	گیا	EVENT	527
+Event	T8	ٹکرایا	EVENT	584
+Event	T9	ٹکرایا	EVENT	629
+Event	T10	تباہ	EVENT	658
+Relation	T9	T10	CauseEffect	true	ٹکرایا	تباہ
+Relation	T10	T9	EffectCause	true	تباہ	ٹکرایا
+Relation	T0	T1	NoRel	true	ہوا	آنے
+Relation	T0	T4	NoRel	true	ہوا	گیا
+Relation	T0	T5	NoRel	true	ہوا	چلتی
+Relation	T0	T6	NoRel	true	ہوا	بچتا
+Relation	T0	T9	NoRel	true	ہوا	ٹکرایا
+Relation	T1	T4	NoRel	true	آنے	گیا
+Relation	T1	T6	NoRel	true	آنے	بچتا
+Relation	T1	T7	NoRel	true	آنے	گیا
+Relation	T1	T8	NoRel	true	آنے	ٹکرایا
+Relation	T10	T6	NoRel	true	تباہ	بچتا
+Relation	T10	T7	NoRel	true	تباہ	گیا
+Relation	T10	T8	NoRel	true	تباہ	ٹکرایا
+Relation	T2	T10	NoRel	true	پہنچا	تباہ
+Relation	T2	T3	NoRel	true	پہنچا	رابطے
+Relation	T2	T7	NoRel	true	پہنچا	گیا
+Relation	T3	T1	NoRel	true	رابطے	آنے
+Relation	T3	T10	NoRel	true	رابطے	تباہ
+Relation	T3	T5	NoRel	true	رابطے	چلتی
+Relation	T3	T6	NoRel	true	رابطے	بچتا
+Relation	T4	T0	NoRel	true	گیا	ہوا
+Relation	T4	T5	NoRel	true	گیا	چلتی
+Relation	T4	T6	NoRel	true	گیا	بچتا
+Relation	T4	T7	NoRel	true	گیا	گیا
+Relation	T5	T1	NoRel	true	چلتی	آنے
+Relation	T5	T9	NoRel	true	چلتی	ٹکرایا
+Relation	T6	T2	NoRel	true	بچتا	پہنچا
+Relation	T6	T7	NoRel	true	بچتا	گیا
+Relation	T6	T8	NoRel	true	بچتا	ٹکرایا
+Relation	T6	T9	NoRel	true	بچتا	ٹکرایا
+Relation	T7	T5	NoRel	true	گیا	چلتی
+Relation	T7	T8	NoRel	true	گیا	ٹکرایا
+Relation	T8	T0	NoRel	true	ٹکرایا	ہوا
+Relation	T8	T4	NoRel	true	ٹکرایا	گیا
+Relation	T9	T5	NoRel	true	ٹکرایا	چلتی
+Relation	T9	T6	NoRel	true	ٹکرایا	بچتا
+Relation	T9	T7	NoRel	true	ٹکرایا	گیا

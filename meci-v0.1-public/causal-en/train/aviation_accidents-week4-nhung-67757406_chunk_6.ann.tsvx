@@ -1,0 +1,68 @@
+Text	The captain , in the middle of a radio exchange , ceased his transmission and immediately took control of the aircraft , where he began to make pitch - up inputs on the flight controls .	During this time , the co-pilot declared a mayday , and the air traffic controller offered all options to the crew for an approach or diversion .	Although the aircraft began to climb , the captain felt that his increasing efforts on the flight controls did not seem to have the desired effect .	The co-pilot also applied nose - up inputs , but also perceived that the aircraft was not responding as expected .	The primary flight display ( PFD ) displayed pitch and roll mistrim warnings .
+Event	T0	exchange	EVENT	39
+Event	T1	ceased	EVENT	50
+Event	T2	transmission	EVENT	61
+Event	T3	began	EVENT	130
+Event	T4	inputs	EVENT	155
+Event	T5	declared	EVENT	219
+Event	T6	offered	EVENT	270
+Event	T7	approach	EVENT	309
+Event	T8	diversion	EVENT	321
+Event	T9	began	EVENT	355
+Event	T10	climb	EVENT	364
+Event	T11	felt	EVENT	384
+Event	T12	efforts	EVENT	409
+Event	T13	applied	EVENT	500
+Event	T14	perceived	EVENT	536
+Event	T15	responding	EVENT	572
+Event	T16	display	EVENT	616
+Event	T17	pitch	EVENT	642
+Event	T18	control	EVENT	95
+Event	T19	warnings	EVENT	665
+Relation	T6	T7	CauseEffect	true	offered	approach
+Relation	T7	T6	EffectCause	true	approach	offered
+Relation	T6	T8	CauseEffect	true	offered	diversion
+Relation	T8	T6	EffectCause	true	diversion	offered
+Relation	T0	T10	NoRel	true	exchange	climb
+Relation	T0	T6	NoRel	true	exchange	offered
+Relation	T1	T15	NoRel	true	ceased	responding
+Relation	T10	T15	NoRel	true	climb	responding
+Relation	T10	T19	NoRel	true	climb	warnings
+Relation	T10	T4	NoRel	true	climb	inputs
+Relation	T11	T12	NoRel	true	felt	efforts
+Relation	T11	T17	NoRel	true	felt	pitch
+Relation	T11	T19	NoRel	true	felt	warnings
+Relation	T12	T19	NoRel	true	efforts	warnings
+Relation	T12	T6	NoRel	true	efforts	offered
+Relation	T12	T7	NoRel	true	efforts	approach
+Relation	T12	T8	NoRel	true	efforts	diversion
+Relation	T13	T19	NoRel	true	applied	warnings
+Relation	T14	T1	NoRel	true	perceived	ceased
+Relation	T14	T16	NoRel	true	perceived	display
+Relation	T14	T5	NoRel	true	perceived	declared
+Relation	T15	T0	NoRel	true	responding	exchange
+Relation	T15	T19	NoRel	true	responding	warnings
+Relation	T15	T8	NoRel	true	responding	diversion
+Relation	T16	T12	NoRel	true	display	efforts
+Relation	T16	T4	NoRel	true	display	inputs
+Relation	T17	T11	NoRel	true	pitch	felt
+Relation	T17	T16	NoRel	true	pitch	display
+Relation	T18	T3	NoRel	true	control	began
+Relation	T19	T15	NoRel	true	warnings	responding
+Relation	T2	T1	NoRel	true	transmission	ceased
+Relation	T2	T13	NoRel	true	transmission	applied
+Relation	T2	T17	NoRel	true	transmission	pitch
+Relation	T2	T8	NoRel	true	transmission	diversion
+Relation	T3	T19	NoRel	true	began	warnings
+Relation	T4	T18	NoRel	true	inputs	control
+Relation	T4	T3	NoRel	true	inputs	began
+Relation	T5	T10	NoRel	true	declared	climb
+Relation	T5	T14	NoRel	true	declared	perceived
+Relation	T5	T15	NoRel	true	declared	responding
+Relation	T5	T16	NoRel	true	declared	display
+Relation	T5	T8	NoRel	true	declared	diversion
+Relation	T7	T11	NoRel	true	approach	felt
+Relation	T7	T12	NoRel	true	approach	efforts
+Relation	T7	T15	NoRel	true	approach	responding
+Relation	T8	T15	NoRel	true	diversion	responding
+Relation	T8	T4	NoRel	true	diversion	inputs

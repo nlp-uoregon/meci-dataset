@@ -1,0 +1,121 @@
+Text	119 pasajeros y tripulaciones murieron debido a una alta ingesta de monóxido de carbono , lo que indica que sobrevivieron al impacto inicial pero posteriormente murieron en el incendio .	Se encontró a una asistente de vuelo con un total de 85% de concentración de carboxihemoglobina dentro de su sangre , junto con sus colegas .	Una pasajera murió debido a un trauma severo , combinado con quemaduras en su cuerpo .	Las 78 personas restantes ( 75 pasajeros y 3 auxiliares de vuelo ) sobrevivieron al accidente .	Casi 60 personas fueron trasladadas a un hospital , algunas con heridas críticas , pero otras lograron escapar con pocas heridas y 15 pudieron continuar su viaje .
+Event	T0	ingesta	EVENT	57
+Event	T1	indica	EVENT	97
+Event	T2	sobrevivieron	EVENT	108
+Event	T3	impacto	EVENT	125
+Event	T4	murieron	EVENT	161
+Event	T5	incendio	EVENT	176
+Event	T6	encontró	EVENT	190
+Event	T7	combinado	EVENT	376
+Event	T8	quemaduras	EVENT	390
+Event	T9	accidente	EVENT	500
+Event	T10	trasladadas	EVENT	536
+Event	T11	críticas	EVENT	584
+Event	T12	escapar	EVENT	615
+Event	T13	heridas	EVENT	633
+Event	T14	continuar	EVENT	655
+Event	T15	viaje	EVENT	668
+Event	T16	murieron	EVENT	30
+Relation	T0	T16	CauseEffect	true	ingesta	murieron
+Relation	T16	T0	EffectCause	true	murieron	ingesta
+Relation	T5	T0	CauseEffect	true	incendio	ingesta
+Relation	T0	T5	EffectCause	true	ingesta	incendio
+Relation	T0	T3	NoRel	true	ingesta	impacto
+Relation	T0	T4	NoRel	true	ingesta	murieron
+Relation	T0	T7	NoRel	true	ingesta	combinado
+Relation	T0	T8	NoRel	true	ingesta	quemaduras
+Relation	T1	T0	NoRel	true	indica	ingesta
+Relation	T1	T13	NoRel	true	indica	heridas
+Relation	T1	T14	NoRel	true	indica	continuar
+Relation	T1	T16	NoRel	true	indica	murieron
+Relation	T1	T3	NoRel	true	indica	impacto
+Relation	T1	T5	NoRel	true	indica	incendio
+Relation	T10	T0	NoRel	true	trasladadas	ingesta
+Relation	T10	T1	NoRel	true	trasladadas	indica
+Relation	T10	T12	NoRel	true	trasladadas	escapar
+Relation	T10	T14	NoRel	true	trasladadas	continuar
+Relation	T10	T2	NoRel	true	trasladadas	sobrevivieron
+Relation	T11	T1	NoRel	true	críticas	indica
+Relation	T11	T13	NoRel	true	críticas	heridas
+Relation	T11	T14	NoRel	true	críticas	continuar
+Relation	T11	T16	NoRel	true	críticas	murieron
+Relation	T11	T4	NoRel	true	críticas	murieron
+Relation	T11	T6	NoRel	true	críticas	encontró
+Relation	T11	T7	NoRel	true	críticas	combinado
+Relation	T11	T9	NoRel	true	críticas	accidente
+Relation	T12	T10	NoRel	true	escapar	trasladadas
+Relation	T12	T13	NoRel	true	escapar	heridas
+Relation	T12	T16	NoRel	true	escapar	murieron
+Relation	T12	T7	NoRel	true	escapar	combinado
+Relation	T12	T9	NoRel	true	escapar	accidente
+Relation	T13	T0	NoRel	true	heridas	ingesta
+Relation	T13	T1	NoRel	true	heridas	indica
+Relation	T13	T11	NoRel	true	heridas	críticas
+Relation	T13	T16	NoRel	true	heridas	murieron
+Relation	T13	T2	NoRel	true	heridas	sobrevivieron
+Relation	T13	T7	NoRel	true	heridas	combinado
+Relation	T14	T0	NoRel	true	continuar	ingesta
+Relation	T14	T1	NoRel	true	continuar	indica
+Relation	T14	T10	NoRel	true	continuar	trasladadas
+Relation	T14	T11	NoRel	true	continuar	críticas
+Relation	T14	T15	NoRel	true	continuar	viaje
+Relation	T14	T8	NoRel	true	continuar	quemaduras
+Relation	T15	T10	NoRel	true	viaje	trasladadas
+Relation	T15	T16	NoRel	true	viaje	murieron
+Relation	T15	T6	NoRel	true	viaje	encontró
+Relation	T15	T7	NoRel	true	viaje	combinado
+Relation	T15	T8	NoRel	true	viaje	quemaduras
+Relation	T15	T9	NoRel	true	viaje	accidente
+Relation	T16	T1	NoRel	true	murieron	indica
+Relation	T16	T4	NoRel	true	murieron	murieron
+Relation	T16	T6	NoRel	true	murieron	encontró
+Relation	T16	T8	NoRel	true	murieron	quemaduras
+Relation	T2	T1	NoRel	true	sobrevivieron	indica
+Relation	T2	T14	NoRel	true	sobrevivieron	continuar
+Relation	T2	T16	NoRel	true	sobrevivieron	murieron
+Relation	T2	T4	NoRel	true	sobrevivieron	murieron
+Relation	T3	T1	NoRel	true	impacto	indica
+Relation	T3	T13	NoRel	true	impacto	heridas
+Relation	T3	T16	NoRel	true	impacto	murieron
+Relation	T3	T4	NoRel	true	impacto	murieron
+Relation	T3	T5	NoRel	true	impacto	incendio
+Relation	T3	T6	NoRel	true	impacto	encontró
+Relation	T3	T8	NoRel	true	impacto	quemaduras
+Relation	T4	T11	NoRel	true	murieron	críticas
+Relation	T4	T13	NoRel	true	murieron	heridas
+Relation	T4	T14	NoRel	true	murieron	continuar
+Relation	T4	T15	NoRel	true	murieron	viaje
+Relation	T4	T3	NoRel	true	murieron	impacto
+Relation	T5	T10	NoRel	true	incendio	trasladadas
+Relation	T5	T11	NoRel	true	incendio	críticas
+Relation	T5	T15	NoRel	true	incendio	viaje
+Relation	T5	T3	NoRel	true	incendio	impacto
+Relation	T5	T8	NoRel	true	incendio	quemaduras
+Relation	T6	T10	NoRel	true	encontró	trasladadas
+Relation	T6	T11	NoRel	true	encontró	críticas
+Relation	T6	T13	NoRel	true	encontró	heridas
+Relation	T6	T2	NoRel	true	encontró	sobrevivieron
+Relation	T6	T4	NoRel	true	encontró	murieron
+Relation	T6	T7	NoRel	true	encontró	combinado
+Relation	T6	T8	NoRel	true	encontró	quemaduras
+Relation	T6	T9	NoRel	true	encontró	accidente
+Relation	T7	T1	NoRel	true	combinado	indica
+Relation	T7	T15	NoRel	true	combinado	viaje
+Relation	T7	T16	NoRel	true	combinado	murieron
+Relation	T7	T4	NoRel	true	combinado	murieron
+Relation	T7	T5	NoRel	true	combinado	incendio
+Relation	T8	T0	NoRel	true	quemaduras	ingesta
+Relation	T8	T12	NoRel	true	quemaduras	escapar
+Relation	T8	T14	NoRel	true	quemaduras	continuar
+Relation	T8	T16	NoRel	true	quemaduras	murieron
+Relation	T8	T2	NoRel	true	quemaduras	sobrevivieron
+Relation	T9	T1	NoRel	true	accidente	indica
+Relation	T9	T10	NoRel	true	accidente	trasladadas
+Relation	T9	T11	NoRel	true	accidente	críticas
+Relation	T9	T12	NoRel	true	accidente	escapar
+Relation	T9	T13	NoRel	true	accidente	heridas
+Relation	T9	T14	NoRel	true	accidente	continuar
+Relation	T9	T3	NoRel	true	accidente	impacto
+Relation	T9	T4	NoRel	true	accidente	murieron
+Relation	T9	T5	NoRel	true	accidente	incendio
+Relation	T9	T6	NoRel	true	accidente	encontró

@@ -1,0 +1,36 @@
+Text	Al lugar acudieron también , bomberos , militares , mineros locales y periodistas , que colaboraron en la identificación de restos de la aeronave y la búsqueda de sobrevivientes .	Como resultado del incidente , Lufthansa , Air France , Air Algérie , Turkish Airlines , Transaero , British Airways , Emirates , KLM , Jet Airways , Air India , Alitalia , Virgin Atlantic , Delta Airlines , UTair , Aeroflot y Vietnam Airlines suspendieron temporalmente sus vuelos sobre el espacio aéreo ucraniano y con destino a aeropuertos ucranianos .	Algunas aerolíneas también anunciaron modificaciones de rutas .	Eurocontrol anunció que cerró el espacio aéreo ucraniano para la aviación civil , diciendo que « todos los planes de vuelo que incluyan las rutas sobre Ucrania serán rechazadas , debido al cierre , hasta nuevo aviso » .	Los organismos de aviación de Estados Unidos , de China , de Rusia y del Reino Unido prohibieron oficialmente a sus aerolíneas sobrevolar el espacio aéreo del este de Ucrania .
+Event	T0	colaboraron	EVENT	88
+Event	T13	prohibieron	EVENT	905
+Event	T2	búsqueda	EVENT	151
+Event	T3	incidente	EVENT	199
+Event	T4	suspendieron	EVENT	424
+Event	T6	modificaciones	EVENT	574
+Event	T7	anunció	EVENT	612
+Event	T8	cerró	EVENT	624
+Relation	T3	T4	CauseEffect	true	incidente	suspendieron
+Relation	T4	T3	EffectCause	true	suspendieron	incidente
+Relation	T3	T13	CauseEffect	true	incidente	prohibieron
+Relation	T13	T3	EffectCause	true	prohibieron	incidente
+Relation	T0	T13	NoRel	true	colaboraron	prohibieron
+Relation	T13	T7	NoRel	true	prohibieron	anunció
+Relation	T13	T8	NoRel	true	prohibieron	cerró
+Relation	T2	T3	NoRel	true	búsqueda	incidente
+Relation	T2	T4	NoRel	true	búsqueda	suspendieron
+Relation	T2	T6	NoRel	true	búsqueda	modificaciones
+Relation	T2	T7	NoRel	true	búsqueda	anunció
+Relation	T2	T8	NoRel	true	búsqueda	cerró
+Relation	T3	T2	NoRel	true	incidente	búsqueda
+Relation	T4	T13	NoRel	true	suspendieron	prohibieron
+Relation	T4	T2	NoRel	true	suspendieron	búsqueda
+Relation	T4	T6	NoRel	true	suspendieron	modificaciones
+Relation	T4	T7	NoRel	true	suspendieron	anunció
+Relation	T6	T7	NoRel	true	modificaciones	anunció
+Relation	T6	T8	NoRel	true	modificaciones	cerró
+Relation	T7	T0	NoRel	true	anunció	colaboraron
+Relation	T7	T13	NoRel	true	anunció	prohibieron
+Relation	T7	T3	NoRel	true	anunció	incidente
+Relation	T7	T4	NoRel	true	anunció	suspendieron
+Relation	T7	T8	NoRel	true	anunció	cerró
+Relation	T8	T13	NoRel	true	cerró	prohibieron
+Relation	T8	T3	NoRel	true	cerró	incidente
+Relation	T8	T7	NoRel	true	cerró	anunció

@@ -1,0 +1,69 @@
+Text	Como el resto de parámetros del motor permanecían normales , tanto los tripulantes como el control de mantenimiento se mostraron nuevamente de acuerdo en que era seguro continuar volando a Hong Kong .	Tras otras dos horas el avión se encontraba en descenso a Hong Kong cuando , a las 05:19 UTC , a unas 203 kilómetros al sureste del aeropuerto Chek Lap Kok de Hong Kong , el ECAM del avión mostró los mensajes " ENG 1 CTL SYS FAULT " y " ENG 2 STALL " en un breve periodo de tiempo .	El segundo mensaje significaba que el compresor de un motor había fallado , un problema en el motor potencialmente grave .	La tripulación efectuó las acciones del ECAM necesarias moviendo la palanca de gases del motor número dos a la posición de ralentí ( o mínimo empuje ) .	La tripulación aumentó los gases en el motor número uno hasta Máximo Empuje Continuo ( MCT ) para compensar el escaso empuje del motor número dos .
+Event	T0	mostraron	EVENT	119
+Event	T1	acuerdo	EVENT	143
+Event	T2	volando	EVENT	179
+Event	T3	descenso	EVENT	248
+Event	T4	mostró	EVENT	390
+Event	T5	mensajes	EVENT	401
+Event	T6	fallado	EVENT	550
+Event	T7	efectuó	EVENT	622
+Event	T8	acciones	EVENT	634
+Event	T9	moviendo	EVENT	663
+Event	T10	empuje	EVENT	749
+Event	T11	aumentó	EVENT	775
+Event	T12	gases	EVENT	787
+Event	T13	compensar	EVENT	858
+Relation	T11	T13	CauseEffect	true	aumentó	compensar
+Relation	T13	T11	EffectCause	true	compensar	aumentó
+Relation	T0	T2	NoRel	true	mostraron	volando
+Relation	T1	T4	NoRel	true	acuerdo	mostró
+Relation	T1	T6	NoRel	true	acuerdo	fallado
+Relation	T1	T8	NoRel	true	acuerdo	acciones
+Relation	T1	T9	NoRel	true	acuerdo	moviendo
+Relation	T10	T2	NoRel	true	empuje	volando
+Relation	T10	T3	NoRel	true	empuje	descenso
+Relation	T10	T4	NoRel	true	empuje	mostró
+Relation	T10	T8	NoRel	true	empuje	acciones
+Relation	T10	T9	NoRel	true	empuje	moviendo
+Relation	T11	T0	NoRel	true	aumentó	mostraron
+Relation	T11	T12	NoRel	true	aumentó	gases
+Relation	T11	T2	NoRel	true	aumentó	volando
+Relation	T12	T0	NoRel	true	gases	mostraron
+Relation	T12	T11	NoRel	true	gases	aumentó
+Relation	T12	T7	NoRel	true	gases	efectuó
+Relation	T13	T12	NoRel	true	compensar	gases
+Relation	T13	T2	NoRel	true	compensar	volando
+Relation	T13	T3	NoRel	true	compensar	descenso
+Relation	T13	T5	NoRel	true	compensar	mensajes
+Relation	T2	T10	NoRel	true	volando	empuje
+Relation	T2	T12	NoRel	true	volando	gases
+Relation	T2	T13	NoRel	true	volando	compensar
+Relation	T2	T5	NoRel	true	volando	mensajes
+Relation	T3	T2	NoRel	true	descenso	volando
+Relation	T3	T4	NoRel	true	descenso	mostró
+Relation	T4	T1	NoRel	true	mostró	acuerdo
+Relation	T4	T12	NoRel	true	mostró	gases
+Relation	T4	T13	NoRel	true	mostró	compensar
+Relation	T4	T5	NoRel	true	mostró	mensajes
+Relation	T4	T7	NoRel	true	mostró	efectuó
+Relation	T4	T8	NoRel	true	mostró	acciones
+Relation	T4	T9	NoRel	true	mostró	moviendo
+Relation	T5	T11	NoRel	true	mensajes	aumentó
+Relation	T5	T12	NoRel	true	mensajes	gases
+Relation	T5	T8	NoRel	true	mensajes	acciones
+Relation	T6	T11	NoRel	true	fallado	aumentó
+Relation	T7	T1	NoRel	true	efectuó	acuerdo
+Relation	T7	T10	NoRel	true	efectuó	empuje
+Relation	T7	T3	NoRel	true	efectuó	descenso
+Relation	T7	T8	NoRel	true	efectuó	acciones
+Relation	T7	T9	NoRel	true	efectuó	moviendo
+Relation	T8	T0	NoRel	true	acciones	mostraron
+Relation	T8	T11	NoRel	true	acciones	aumentó
+Relation	T8	T2	NoRel	true	acciones	volando
+Relation	T8	T3	NoRel	true	acciones	descenso
+Relation	T8	T4	NoRel	true	acciones	mostró
+Relation	T8	T7	NoRel	true	acciones	efectuó
+Relation	T9	T0	NoRel	true	moviendo	mostraron
+Relation	T9	T11	NoRel	true	moviendo	aumentó
+Relation	T9	T3	NoRel	true	moviendo	descenso
+Relation	T9	T7	NoRel	true	moviendo	efectuó

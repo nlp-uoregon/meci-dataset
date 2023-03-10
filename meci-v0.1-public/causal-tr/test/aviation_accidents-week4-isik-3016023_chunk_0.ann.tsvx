@@ -1,0 +1,25 @@
+Text	15 Mayıs 1970'te Aeroflot tarafından işletilen bir Antonov An - 10 uçağı , Kişinev Havalimanı'ndan bir eğitim uçuşu gerçekleştirmek için kalktı .	İlk tırmanış esnasında düştü .	Uçakta bulunan 11 kişinin tamamı öldü .	Kazaya karışan uçak , Aeroflot'un Ulyanovsk Sivil Havacılık Enstitüsü filosuna ait CCCP - 11149 kuyruk numaralı bir Antonov An - 10A idi ( fabrika numarası 9400802 , seri numarası 08-02 ) .	16 Ocak 1959'da Voronej uçak fabrikasından çıktı .
+Event	T0	gerçekleştirmek	EVENT	116
+Event	T1	kalktı	EVENT	137
+Event	T2	düştü	EVENT	169
+Event	T3	öldü	EVENT	210
+Event	T5	çıktı	EVENT	450
+Event	T6	tırmanış	EVENT	150
+Event	T4	Kazaya	EVENT	217
+Relation	T2	T3	CauseEffect	true	düştü	öldü
+Relation	T3	T2	EffectCause	true	öldü	düştü
+Relation	T4	T3	CauseEffect	true	Kazaya	öldü
+Relation	T3	T4	EffectCause	true	öldü	Kazaya
+Relation	T0	T1	NoRel	true	gerçekleştirmek	kalktı
+Relation	T0	T2	NoRel	true	gerçekleştirmek	düştü
+Relation	T0	T6	NoRel	true	gerçekleştirmek	tırmanış
+Relation	T1	T2	NoRel	true	kalktı	düştü
+Relation	T3	T5	NoRel	true	öldü	çıktı
+Relation	T4	T0	NoRel	true	Kazaya	gerçekleştirmek
+Relation	T4	T1	NoRel	true	Kazaya	kalktı
+Relation	T4	T5	NoRel	true	Kazaya	çıktı
+Relation	T4	T6	NoRel	true	Kazaya	tırmanış
+Relation	T5	T0	NoRel	true	çıktı	gerçekleştirmek
+Relation	T5	T1	NoRel	true	çıktı	kalktı
+Relation	T6	T3	NoRel	true	tırmanış	öldü
+Relation	T6	T4	NoRel	true	tırmanış	Kazaya

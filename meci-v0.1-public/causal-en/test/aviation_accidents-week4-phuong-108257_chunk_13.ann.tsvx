@@ -1,0 +1,114 @@
+Text	If , however , the plane was more than from the flight - planned course line when the pilot turned the autopilot mode selector from HEADING to INS , the plane would continue to track the heading selected in HEADING mode as long as the actual position of the plane was more than from the programmed INS course line .	The autopilot computer software commanded the INS mode to remain in the " armed " condition until the plane had moved to a position less than from the desired course line .	Once that happened , the INS mode would change from " armed " to " capture " and the plane would track the flight - planned course from then on .	The HEADING mode of the autopilot would normally be engaged sometime after take off to comply with vectors from ATC , and then after receiving appropriate ATC clearance , to guide the plane to intercept the desired INS course line .	The Anchorage VOR beacon was not operational because of maintenance .
+Event	T1	turned	EVENT	92
+Event	T2	selector	EVENT	118
+Event	T3	track	EVENT	177
+Event	T4	selected	EVENT	195
+Event	T6	commanded	EVENT	348
+Event	T7	happened	EVENT	499
+Event	T8	change	EVENT	529
+Event	T9	track	EVENT	586
+Event	T11	engaged	EVENT	687
+Event	T12	receiving	EVENT	768
+Event	T13	clearance	EVENT	794
+Event	T14	guide	EVENT	809
+Event	T15	intercept	EVENT	828
+Event	T16	desired	EVENT	842
+Event	T17	maintenance	EVENT	924
+Event	T18	more than	EVENT	29
+Event	T19	more than	EVENT	268
+Event	T20	flight - planned course line	EVENT	48
+Event	T5	programmed INS course line	EVENT	287
+Event	T21	remain	EVENT	374
+Event	T22	" armed " condition	EVENT	388
+Event	T23	moved	EVENT	428
+Event	T24	desired course line	EVENT	467
+Event	T25	armed	EVENT	543
+Event	T26	capture	EVENT	556
+Event	T10	flight - planned course	EVENT	596
+Event	T27	take off	EVENT	710
+Event	T28	comply	EVENT	722
+Event	T29	not operational	EVENT	897
+Relation	T18	T3	CauseEffect	true	more than	track
+Relation	T3	T18	EffectCause	true	track	more than
+Relation	T19	T3	CauseEffect	true	more than	track
+Relation	T3	T19	EffectCause	true	track	more than
+Relation	T7	T8	CauseEffect	true	happened	change
+Relation	T8	T7	EffectCause	true	change	happened
+Relation	T7	T9	CauseEffect	true	happened	track
+Relation	T9	T7	EffectCause	true	track	happened
+Relation	T27	T11	CauseEffect	true	take off	engaged
+Relation	T11	T27	EffectCause	true	engaged	take off
+Relation	T28	T11	CauseEffect	true	comply	engaged
+Relation	T11	T28	EffectCause	true	engaged	comply
+Relation	T11	T12	CauseEffect	true	engaged	receiving
+Relation	T12	T11	EffectCause	true	receiving	engaged
+Relation	T17	T29	CauseEffect	true	maintenance	not operational
+Relation	T29	T17	EffectCause	true	not operational	maintenance
+Relation	T1	T16	NoRel	true	turned	desired
+Relation	T1	T25	NoRel	true	turned	armed
+Relation	T1	T3	NoRel	true	turned	track
+Relation	T10	T23	NoRel	true	flight - planned course	moved
+Relation	T10	T6	NoRel	true	flight - planned course	commanded
+Relation	T11	T1	NoRel	true	engaged	turned
+Relation	T11	T18	NoRel	true	engaged	more than
+Relation	T11	T20	NoRel	true	engaged	flight - planned course line
+Relation	T11	T24	NoRel	true	engaged	desired course line
+Relation	T11	T29	NoRel	true	engaged	not operational
+Relation	T11	T8	NoRel	true	engaged	change
+Relation	T12	T1	NoRel	true	receiving	turned
+Relation	T12	T13	NoRel	true	receiving	clearance
+Relation	T12	T27	NoRel	true	receiving	take off
+Relation	T12	T29	NoRel	true	receiving	not operational
+Relation	T13	T8	NoRel	true	clearance	change
+Relation	T14	T19	NoRel	true	guide	more than
+Relation	T14	T27	NoRel	true	guide	take off
+Relation	T14	T3	NoRel	true	guide	track
+Relation	T15	T20	NoRel	true	intercept	flight - planned course line
+Relation	T16	T10	NoRel	true	desired	flight - planned course
+Relation	T16	T29	NoRel	true	desired	not operational
+Relation	T16	T3	NoRel	true	desired	track
+Relation	T17	T18	NoRel	true	maintenance	more than
+Relation	T17	T26	NoRel	true	maintenance	capture
+Relation	T17	T4	NoRel	true	maintenance	selected
+Relation	T18	T5	NoRel	true	more than	programmed INS course line
+Relation	T18	T7	NoRel	true	more than	happened
+Relation	T2	T13	NoRel	true	selector	clearance
+Relation	T2	T14	NoRel	true	selector	guide
+Relation	T2	T23	NoRel	true	selector	moved
+Relation	T2	T4	NoRel	true	selector	selected
+Relation	T20	T2	NoRel	true	flight - planned course line	selector
+Relation	T20	T25	NoRel	true	flight - planned course line	armed
+Relation	T20	T27	NoRel	true	flight - planned course line	take off
+Relation	T20	T7	NoRel	true	flight - planned course line	happened
+Relation	T21	T17	NoRel	true	remain	maintenance
+Relation	T21	T2	NoRel	true	remain	selector
+Relation	T21	T25	NoRel	true	remain	armed
+Relation	T22	T23	NoRel	true	" armed " condition	moved
+Relation	T22	T5	NoRel	true	" armed " condition	programmed INS course line
+Relation	T23	T11	NoRel	true	moved	engaged
+Relation	T23	T13	NoRel	true	moved	clearance
+Relation	T23	T7	NoRel	true	moved	happened
+Relation	T25	T5	NoRel	true	armed	programmed INS course line
+Relation	T26	T10	NoRel	true	capture	flight - planned course
+Relation	T26	T13	NoRel	true	capture	clearance
+Relation	T26	T15	NoRel	true	capture	intercept
+Relation	T26	T18	NoRel	true	capture	more than
+Relation	T26	T22	NoRel	true	capture	" armed " condition
+Relation	T26	T28	NoRel	true	capture	comply
+Relation	T27	T24	NoRel	true	take off	desired course line
+Relation	T28	T10	NoRel	true	comply	flight - planned course
+Relation	T28	T23	NoRel	true	comply	moved
+Relation	T28	T26	NoRel	true	comply	capture
+Relation	T28	T7	NoRel	true	comply	happened
+Relation	T29	T12	NoRel	true	not operational	receiving
+Relation	T29	T8	NoRel	true	not operational	change
+Relation	T3	T22	NoRel	true	track	" armed " condition
+Relation	T4	T22	NoRel	true	selected	" armed " condition
+Relation	T5	T11	NoRel	true	programmed INS course line	engaged
+Relation	T6	T27	NoRel	true	commanded	take off
+Relation	T6	T28	NoRel	true	commanded	comply
+Relation	T6	T9	NoRel	true	commanded	track
+Relation	T8	T25	NoRel	true	change	armed
+Relation	T8	T3	NoRel	true	change	track
+Relation	T9	T12	NoRel	true	track	receiving
+Relation	T9	T5	NoRel	true	track	programmed INS course line

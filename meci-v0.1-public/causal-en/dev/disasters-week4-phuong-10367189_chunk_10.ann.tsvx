@@ -1,0 +1,90 @@
+Text	The victims ' bodies were taken to the nearby town of Slatina for forensic examination on 17 December .	Mackley contacted Croatian authorities and obtained permission to document the autopsies of the victims , but was denied access by authorities in Slatina .	Mackley telephoned Croatian Defence Minister Gojko Šušak asking him to intervene on his behalf , but the local police allegedly disobeyed Šušak .	The special police was deployed to Slatina to enforce Šušak 's order to cooperate , almost causing an armed clash over the issue .	To settle matters , a team was sent to Slatina by Zagreb University 's Institute for Forensic Medicine to perform autopsies , retrieve bodies and perform the rest of the procedures in Zagreb .
+Event	T0	examination	EVENT	75
+Event	T1	contacted	EVENT	112
+Event	T2	autopsies	EVENT	183
+Event	T3	access	EVENT	225
+Event	T4	telephoned	EVENT	268
+Event	T5	asking	EVENT	317
+Event	T6	intervene	EVENT	331
+Event	T7	disobeyed	EVENT	388
+Event	T8	deployed	EVENT	429
+Event	T9	enforce	EVENT	452
+Event	T10	order	EVENT	469
+Event	T11	cooperate	EVENT	478
+Event	T12	causing	EVENT	497
+Event	T13	clash	EVENT	514
+Event	T14	sent	EVENT	568
+Event	T15	autopsies	EVENT	651
+Event	T16	retrieve	EVENT	663
+Event	T17	perform	EVENT	683
+Event	T18	procedures	EVENT	707
+Event	T19	taken to	EVENT	26
+Event	T20	permission	EVENT	156
+Event	T21	denied	EVENT	218
+Relation	T0	T19	CauseEffect	true	examination	taken to
+Relation	T19	T0	EffectCause	true	taken to	examination
+Relation	T5	T7	CauseEffect	true	asking	disobeyed
+Relation	T7	T5	EffectCause	true	disobeyed	asking
+Relation	T1	T20	CauseEffect	true	contacted	permission
+Relation	T20	T1	EffectCause	true	permission	contacted
+Relation	T4	T5	CauseEffect	true	telephoned	asking
+Relation	T5	T4	EffectCause	true	asking	telephoned
+Relation	T9	T8	CauseEffect	true	enforce	deployed
+Relation	T8	T9	EffectCause	true	deployed	enforce
+Relation	T8	T13	CauseEffect	true	deployed	clash
+Relation	T13	T8	EffectCause	true	clash	deployed
+Relation	T15	T14	CauseEffect	true	autopsies	sent
+Relation	T14	T15	EffectCause	true	sent	autopsies
+Relation	T16	T14	CauseEffect	true	retrieve	sent
+Relation	T14	T16	EffectCause	true	sent	retrieve
+Relation	T17	T14	CauseEffect	true	perform	sent
+Relation	T14	T17	EffectCause	true	sent	perform
+Relation	T0	T10	NoRel	true	examination	order
+Relation	T0	T13	NoRel	true	examination	clash
+Relation	T1	T12	NoRel	true	contacted	causing
+Relation	T1	T13	NoRel	true	contacted	clash
+Relation	T10	T8	NoRel	true	order	deployed
+Relation	T11	T13	NoRel	true	cooperate	clash
+Relation	T11	T2	NoRel	true	cooperate	autopsies
+Relation	T11	T5	NoRel	true	cooperate	asking
+Relation	T11	T9	NoRel	true	cooperate	enforce
+Relation	T12	T16	NoRel	true	causing	retrieve
+Relation	T12	T17	NoRel	true	causing	perform
+Relation	T12	T19	NoRel	true	causing	taken to
+Relation	T12	T21	NoRel	true	causing	denied
+Relation	T12	T6	NoRel	true	causing	intervene
+Relation	T13	T1	NoRel	true	clash	contacted
+Relation	T13	T15	NoRel	true	clash	autopsies
+Relation	T13	T16	NoRel	true	clash	retrieve
+Relation	T14	T18	NoRel	true	sent	procedures
+Relation	T14	T2	NoRel	true	sent	autopsies
+Relation	T14	T20	NoRel	true	sent	permission
+Relation	T14	T4	NoRel	true	sent	telephoned
+Relation	T15	T18	NoRel	true	autopsies	procedures
+Relation	T15	T4	NoRel	true	autopsies	telephoned
+Relation	T16	T20	NoRel	true	retrieve	permission
+Relation	T16	T8	NoRel	true	retrieve	deployed
+Relation	T16	T9	NoRel	true	retrieve	enforce
+Relation	T17	T11	NoRel	true	perform	cooperate
+Relation	T17	T16	NoRel	true	perform	retrieve
+Relation	T17	T2	NoRel	true	perform	autopsies
+Relation	T17	T21	NoRel	true	perform	denied
+Relation	T17	T8	NoRel	true	perform	deployed
+Relation	T18	T17	NoRel	true	procedures	perform
+Relation	T18	T21	NoRel	true	procedures	denied
+Relation	T18	T7	NoRel	true	procedures	disobeyed
+Relation	T19	T15	NoRel	true	taken to	autopsies
+Relation	T19	T9	NoRel	true	taken to	enforce
+Relation	T2	T4	NoRel	true	autopsies	telephoned
+Relation	T20	T16	NoRel	true	permission	retrieve
+Relation	T21	T1	NoRel	true	denied	contacted
+Relation	T21	T14	NoRel	true	denied	sent
+Relation	T21	T8	NoRel	true	denied	deployed
+Relation	T3	T0	NoRel	true	access	examination
+Relation	T3	T15	NoRel	true	access	autopsies
+Relation	T4	T15	NoRel	true	telephoned	autopsies
+Relation	T6	T1	NoRel	true	intervene	contacted
+Relation	T7	T1	NoRel	true	disobeyed	contacted
+Relation	T7	T11	NoRel	true	disobeyed	cooperate
+Relation	T7	T14	NoRel	true	disobeyed	sent
+Relation	T7	T18	NoRel	true	disobeyed	procedures

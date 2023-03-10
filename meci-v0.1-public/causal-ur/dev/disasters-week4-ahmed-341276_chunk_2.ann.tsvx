@@ -1,0 +1,17 @@
+Text	شہر صوبہ تعداد اموات --------------_------_-------------	کراچی سندھ 1٫040 حیدر آباد سندھ 34 نوشہرو فیروز سندھ 3 بدین سندھ 5 ٹھٹہ سندھ 5 تھرپارکر سندھ 4 کل 1٫200	صرف کراچی میں ، 830 افراد نابیدگی ( پانی کی کمی ) اور شدید گرمی کی آفت سے مرے ہیں ۔	سندھ صوبے میں کل مرنے والوں کی تعداد 830 تا 1،213 ہے ۔	اب تک ، عباسی شہید ہسپتال میں 119 ، جناح ہسپتال ، کراچی میں 279 اور سول ہسپتال میں 98 لاشیں لائی گئی ہیں جبکہ متعدد مرنے والوں کو نجی اسپتالوں میں منتقل کر دیا گیا ہے ۔
+Event	T0	مرے	EVENT	235
+Event	T1	مرنے	EVENT	262
+Event	T2	مرنے	EVENT	416
+Event	T3	منتقل	EVENT	447
+Event	T4	آفت	EVENT	228
+Relation	T4	T0	CauseEffect	true	آفت	مرے
+Relation	T0	T4	EffectCause	true	مرے	آفت
+Relation	T0	T1	NoRel	true	مرے	مرنے
+Relation	T0	T3	NoRel	true	مرے	منتقل
+Relation	T1	T0	NoRel	true	مرنے	مرے
+Relation	T1	T3	NoRel	true	مرنے	منتقل
+Relation	T2	T3	NoRel	true	مرنے	منتقل
+Relation	T3	T0	NoRel	true	منتقل	مرے
+Relation	T3	T1	NoRel	true	منتقل	مرنے
+Relation	T4	T2	NoRel	true	آفت	مرنے
+Relation	T4	T3	NoRel	true	آفت	منتقل

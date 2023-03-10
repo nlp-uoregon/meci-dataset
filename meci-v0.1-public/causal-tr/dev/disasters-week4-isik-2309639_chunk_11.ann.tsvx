@@ -1,0 +1,101 @@
+Text	Zollinger'e göre Sumbawa adasında açlıktan 38 bin kişi ölürken Lombok adasında ise hastalık ve açlık nedeniyle 10 bin ölüm gerçekleşmiştir .	Petroeschevsky ( 1949 ) , Sumbawa'da yaklaşık 48 bin kişinin öldüğünü ve Lombok'da 44 bin kişinin öldüğünü tahmin etmiştir .	Stothers ( 1984 ) gibi birkaç yazar Petroeschevsky'nin rakamlarını kullanarak toplam ölü sayısını 88 bin göstermektedir .	Bununla birlikte , Tanguy ve diğerleri ( 1998 ) , Petroeschevsky'nin rakamlarının asılsız olduğunu ve izlenemez referanslara dayandığını iddia etmiştir .	Tanguy belirttiği sayıları , fırtınadan sonra Sumbawa'da birkaç ay geçiren Zollinger'e ve Thomas Raffles'ın notlarına göre revize etti .
+Event	T0	ölürken	EVENT	55
+Event	T1	hastalık	EVENT	83
+Event	T2	gerçekleşmiştir	EVENT	123
+Event	T3	öldüğünü	EVENT	202
+Event	T4	göstermektedir	EVENT	371
+Event	T5	etmiştir	EVENT	531
+Event	T6	belirttiği	EVENT	549
+Event	T7	fırtınadan	EVENT	571
+Event	T8	etti	EVENT	672
+Event	T9	açlıktan	EVENT	34
+Event	T10	açlık	EVENT	95
+Event	T11	ölüm	EVENT	118
+Event	T12	öldüğünü	EVENT	239
+Event	T13	ölü	EVENT	351
+Event	T14	kullanarak	EVENT	333
+Event	T15	geçiren	EVENT	609
+Relation	T9	T0	CauseEffect	true	açlıktan	ölürken
+Relation	T0	T9	EffectCause	true	ölürken	açlıktan
+Relation	T1	T11	CauseEffect	true	hastalık	ölüm
+Relation	T11	T1	EffectCause	true	ölüm	hastalık
+Relation	T10	T11	CauseEffect	true	açlık	ölüm
+Relation	T11	T10	EffectCause	true	ölüm	açlık
+Relation	T14	T4	CauseEffect	true	kullanarak	göstermektedir
+Relation	T4	T14	EffectCause	true	göstermektedir	kullanarak
+Relation	T0	T12	NoRel	true	ölürken	öldüğünü
+Relation	T0	T4	NoRel	true	ölürken	göstermektedir
+Relation	T0	T5	NoRel	true	ölürken	etmiştir
+Relation	T0	T7	NoRel	true	ölürken	fırtınadan
+Relation	T1	T10	NoRel	true	hastalık	açlık
+Relation	T1	T3	NoRel	true	hastalık	öldüğünü
+Relation	T1	T5	NoRel	true	hastalık	etmiştir
+Relation	T10	T0	NoRel	true	açlık	ölürken
+Relation	T10	T14	NoRel	true	açlık	kullanarak
+Relation	T10	T15	NoRel	true	açlık	geçiren
+Relation	T10	T3	NoRel	true	açlık	öldüğünü
+Relation	T10	T4	NoRel	true	açlık	göstermektedir
+Relation	T10	T5	NoRel	true	açlık	etmiştir
+Relation	T10	T8	NoRel	true	açlık	etti
+Relation	T11	T13	NoRel	true	ölüm	ölü
+Relation	T11	T3	NoRel	true	ölüm	öldüğünü
+Relation	T11	T5	NoRel	true	ölüm	etmiştir
+Relation	T12	T10	NoRel	true	öldüğünü	açlık
+Relation	T12	T13	NoRel	true	öldüğünü	ölü
+Relation	T12	T14	NoRel	true	öldüğünü	kullanarak
+Relation	T12	T4	NoRel	true	öldüğünü	göstermektedir
+Relation	T12	T5	NoRel	true	öldüğünü	etmiştir
+Relation	T12	T6	NoRel	true	öldüğünü	belirttiği
+Relation	T12	T9	NoRel	true	öldüğünü	açlıktan
+Relation	T13	T12	NoRel	true	ölü	öldüğünü
+Relation	T13	T14	NoRel	true	ölü	kullanarak
+Relation	T13	T15	NoRel	true	ölü	geçiren
+Relation	T13	T3	NoRel	true	ölü	öldüğünü
+Relation	T13	T4	NoRel	true	ölü	göstermektedir
+Relation	T13	T7	NoRel	true	ölü	fırtınadan
+Relation	T13	T8	NoRel	true	ölü	etti
+Relation	T14	T1	NoRel	true	kullanarak	hastalık
+Relation	T14	T15	NoRel	true	kullanarak	geçiren
+Relation	T14	T7	NoRel	true	kullanarak	fırtınadan
+Relation	T14	T8	NoRel	true	kullanarak	etti
+Relation	T14	T9	NoRel	true	kullanarak	açlıktan
+Relation	T15	T10	NoRel	true	geçiren	açlık
+Relation	T15	T14	NoRel	true	geçiren	kullanarak
+Relation	T15	T4	NoRel	true	geçiren	göstermektedir
+Relation	T15	T7	NoRel	true	geçiren	fırtınadan
+Relation	T2	T11	NoRel	true	gerçekleşmiştir	ölüm
+Relation	T2	T12	NoRel	true	gerçekleşmiştir	öldüğünü
+Relation	T2	T13	NoRel	true	gerçekleşmiştir	ölü
+Relation	T2	T4	NoRel	true	gerçekleşmiştir	göstermektedir
+Relation	T3	T6	NoRel	true	öldüğünü	belirttiği
+Relation	T3	T8	NoRel	true	öldüğünü	etti
+Relation	T3	T9	NoRel	true	öldüğünü	açlıktan
+Relation	T4	T0	NoRel	true	göstermektedir	ölürken
+Relation	T4	T7	NoRel	true	göstermektedir	fırtınadan
+Relation	T4	T8	NoRel	true	göstermektedir	etti
+Relation	T5	T0	NoRel	true	etmiştir	ölürken
+Relation	T5	T2	NoRel	true	etmiştir	gerçekleşmiştir
+Relation	T5	T4	NoRel	true	etmiştir	göstermektedir
+Relation	T5	T8	NoRel	true	etmiştir	etti
+Relation	T6	T1	NoRel	true	belirttiği	hastalık
+Relation	T6	T3	NoRel	true	belirttiği	öldüğünü
+Relation	T6	T4	NoRel	true	belirttiği	göstermektedir
+Relation	T6	T7	NoRel	true	belirttiği	fırtınadan
+Relation	T6	T8	NoRel	true	belirttiği	etti
+Relation	T6	T9	NoRel	true	belirttiği	açlıktan
+Relation	T7	T10	NoRel	true	fırtınadan	açlık
+Relation	T7	T11	NoRel	true	fırtınadan	ölüm
+Relation	T7	T13	NoRel	true	fırtınadan	ölü
+Relation	T7	T3	NoRel	true	fırtınadan	öldüğünü
+Relation	T7	T5	NoRel	true	fırtınadan	etmiştir
+Relation	T7	T8	NoRel	true	fırtınadan	etti
+Relation	T7	T9	NoRel	true	fırtınadan	açlıktan
+Relation	T8	T12	NoRel	true	etti	öldüğünü
+Relation	T8	T14	NoRel	true	etti	kullanarak
+Relation	T9	T1	NoRel	true	açlıktan	hastalık
+Relation	T9	T11	NoRel	true	açlıktan	ölüm
+Relation	T9	T13	NoRel	true	açlıktan	ölü
+Relation	T9	T14	NoRel	true	açlıktan	kullanarak
+Relation	T9	T2	NoRel	true	açlıktan	gerçekleşmiştir
+Relation	T9	T4	NoRel	true	açlıktan	göstermektedir
+Relation	T9	T8	NoRel	true	açlıktan	etti

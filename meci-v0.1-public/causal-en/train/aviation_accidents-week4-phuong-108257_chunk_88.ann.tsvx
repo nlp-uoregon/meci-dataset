@@ -1,0 +1,87 @@
+Text	These multi-track communications from various command posts telecommunicating at the same minute and seconds as other command posts were communicating provide a " composite " picture of what was taking place .	The data from the CVR and the FDR revealed that the recordings broke off after the first minute and 44 seconds of KAL 007 's post missile detonation 12 minute flight .	The remaining minutes of flight would be supplied by the Russia 1992 submission to ICAO of the real - time Soviet military communication of the shootdown and aftermath .	The fact that both recorder tapes stopped exactly at the same time 1 minute and 44 seconds after missile detonation ( 18:38:02 UTC ) without the tape portions for the more than 10 minutes of KAL 007 's post detonation flight before it descended below radar tracking ( 18:38 UTC ) finds no explanation in the ICAO analysis :	" It could not be established why both flight recorders simultaneously ceased to operate 104 seconds after the attack .
+Event	T0	communications	EVENT	18
+Event	T1	telecommunicating	EVENT	60
+Event	T2	provide	EVENT	151
+Event	T3	revealed	EVENT	244
+Event	T4	detonation	EVENT	348
+Event	T5	flight	EVENT	369
+Event	T6	flight	EVENT	403
+Event	T7	supplied	EVENT	419
+Event	T8	submission	EVENT	447
+Event	T9	communication	EVENT	501
+Event	T10	shootdown	EVENT	522
+Event	T11	stopped	EVENT	582
+Event	T12	detonation	EVENT	653
+Event	T13	flight	EVENT	766
+Event	T14	descended	EVENT	783
+Event	T15	tracking	EVENT	805
+Event	T16	finds	EVENT	828
+Event	T17	analysis	EVENT	861
+Event	T18	established	EVENT	890
+Event	T19	ceased	EVENT	943
+Event	T20	operate	EVENT	953
+Event	T21	attack	EVENT	983
+Event	T22	data	EVENT	214
+Relation	T0	T2	CauseEffect	true	communications	provide
+Relation	T2	T0	EffectCause	true	provide	communications
+Relation	T8	T7	CauseEffect	true	submission	supplied
+Relation	T7	T8	EffectCause	true	supplied	submission
+Relation	T22	T3	CauseEffect	true	data	revealed
+Relation	T3	T22	EffectCause	true	revealed	data
+Relation	T1	T6	NoRel	true	telecommunicating	flight
+Relation	T10	T0	NoRel	true	shootdown	communications
+Relation	T10	T12	NoRel	true	shootdown	detonation
+Relation	T10	T13	NoRel	true	shootdown	flight
+Relation	T12	T13	NoRel	true	detonation	flight
+Relation	T12	T21	NoRel	true	detonation	attack
+Relation	T13	T10	NoRel	true	flight	shootdown
+Relation	T13	T12	NoRel	true	flight	detonation
+Relation	T13	T3	NoRel	true	flight	revealed
+Relation	T13	T7	NoRel	true	flight	supplied
+Relation	T13	T8	NoRel	true	flight	submission
+Relation	T14	T16	NoRel	true	descended	finds
+Relation	T14	T21	NoRel	true	descended	attack
+Relation	T14	T22	NoRel	true	descended	data
+Relation	T16	T19	NoRel	true	finds	ceased
+Relation	T17	T10	NoRel	true	analysis	shootdown
+Relation	T17	T5	NoRel	true	analysis	flight
+Relation	T18	T13	NoRel	true	established	flight
+Relation	T19	T1	NoRel	true	ceased	telecommunicating
+Relation	T19	T22	NoRel	true	ceased	data
+Relation	T19	T3	NoRel	true	ceased	revealed
+Relation	T19	T6	NoRel	true	ceased	flight
+Relation	T19	T7	NoRel	true	ceased	supplied
+Relation	T19	T8	NoRel	true	ceased	submission
+Relation	T2	T1	NoRel	true	provide	telecommunicating
+Relation	T2	T10	NoRel	true	provide	shootdown
+Relation	T20	T3	NoRel	true	operate	revealed
+Relation	T20	T7	NoRel	true	operate	supplied
+Relation	T21	T13	NoRel	true	attack	flight
+Relation	T21	T17	NoRel	true	attack	analysis
+Relation	T21	T7	NoRel	true	attack	supplied
+Relation	T22	T11	NoRel	true	data	stopped
+Relation	T22	T12	NoRel	true	data	detonation
+Relation	T22	T17	NoRel	true	data	analysis
+Relation	T22	T18	NoRel	true	data	established
+Relation	T22	T4	NoRel	true	data	detonation
+Relation	T3	T15	NoRel	true	revealed	tracking
+Relation	T3	T16	NoRel	true	revealed	finds
+Relation	T4	T1	NoRel	true	detonation	telecommunicating
+Relation	T4	T12	NoRel	true	detonation	detonation
+Relation	T4	T14	NoRel	true	detonation	descended
+Relation	T5	T4	NoRel	true	flight	detonation
+Relation	T6	T10	NoRel	true	flight	shootdown
+Relation	T6	T11	NoRel	true	flight	stopped
+Relation	T6	T14	NoRel	true	flight	descended
+Relation	T6	T20	NoRel	true	flight	operate
+Relation	T6	T4	NoRel	true	flight	detonation
+Relation	T6	T5	NoRel	true	flight	flight
+Relation	T7	T1	NoRel	true	supplied	telecommunicating
+Relation	T7	T11	NoRel	true	supplied	stopped
+Relation	T7	T15	NoRel	true	supplied	tracking
+Relation	T8	T12	NoRel	true	submission	detonation
+Relation	T8	T17	NoRel	true	submission	analysis
+Relation	T8	T2	NoRel	true	submission	provide
+Relation	T8	T4	NoRel	true	submission	detonation
+Relation	T8	T9	NoRel	true	submission	communication
+Relation	T9	T1	NoRel	true	communication	telecommunicating

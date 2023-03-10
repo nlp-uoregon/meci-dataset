@@ -1,0 +1,33 @@
+Text	Mürettebat ; yerel saatle 11.42'de Trabzon üzerinden irtifada geçtiğini bildirdi , ardından Trabzon'dan gelen bir hava raporunu aldıklarını teyit etti .	Bu teyit mesajı uçakla kurulan son iletişimdi .	Bu andan sonra ne olduğu kesin olarak bilinmemektedir .	Uçak düşürülmeden yaklaşık 32 dakika önce Sovyet radar tesisleri tarafından tespit edildi .	Radar , uçağı Türkiye - Sovyet sınırı boyunca güneydoğuya doğru uçarken izledi .
+Event	T0	bildirdi	EVENT	72
+Event	T1	etti	EVENT	146
+Event	T2	mesajı	EVENT	162
+Event	T3	iletişimdi	EVENT	188
+Event	T4	düşürülmeden	EVENT	262
+Event	T5	edildi	EVENT	340
+Event	T6	izledi	EVENT	421
+Event	T7	raporunu	EVENT	119
+Relation	T5	T6	CauseEffect	true	edildi	izledi
+Relation	T6	T5	EffectCause	true	izledi	edildi
+Relation	T0	T3	NoRel	true	bildirdi	iletişimdi
+Relation	T0	T6	NoRel	true	bildirdi	izledi
+Relation	T0	T7	NoRel	true	bildirdi	raporunu
+Relation	T1	T0	NoRel	true	etti	bildirdi
+Relation	T1	T2	NoRel	true	etti	mesajı
+Relation	T1	T3	NoRel	true	etti	iletişimdi
+Relation	T1	T5	NoRel	true	etti	edildi
+Relation	T1	T6	NoRel	true	etti	izledi
+Relation	T2	T0	NoRel	true	mesajı	bildirdi
+Relation	T2	T4	NoRel	true	mesajı	düşürülmeden
+Relation	T2	T7	NoRel	true	mesajı	raporunu
+Relation	T3	T2	NoRel	true	iletişimdi	mesajı
+Relation	T4	T1	NoRel	true	düşürülmeden	etti
+Relation	T4	T3	NoRel	true	düşürülmeden	iletişimdi
+Relation	T4	T6	NoRel	true	düşürülmeden	izledi
+Relation	T5	T0	NoRel	true	edildi	bildirdi
+Relation	T5	T2	NoRel	true	edildi	mesajı
+Relation	T6	T1	NoRel	true	izledi	etti
+Relation	T6	T4	NoRel	true	izledi	düşürülmeden
+Relation	T6	T7	NoRel	true	izledi	raporunu
+Relation	T7	T3	NoRel	true	raporunu	iletişimdi
+Relation	T7	T6	NoRel	true	raporunu	izledi

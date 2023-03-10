@@ -1,0 +1,46 @@
+Text	Fakat 1924 yılının Mart ayında kendisinin de ilkokul öğretmeni olan _ Walther Kadow _ örgütün bütün gizli sırlarını açıklamıştı ve öldürülmesi gerekiyordu .	Bormann ve adamları gereken infazı gerçekleştirdi .	Olayın farkına varan polis tarafından tutuklandı ve bir yıl hapis cezası verildi .	Hapishaneden çıktıktan sonra NSDAP'ye katıldı ve üç yıl içerisinde önce Türingiya bölgesi basın müdürü , daha sonra da idari menajer oldu .	1928 ve 1930 yılları arasında SA yüksek komuta merkezinde görev aldı .
+Event	T0	açıklamıştı	EVENT	116
+Event	T1	öldürülmesi	EVENT	131
+Event	T3	Olayın	EVENT	209
+Event	T4	tutuklandı	EVENT	247
+Event	T5	verildi	EVENT	282
+Event	T6	katıldı	EVENT	330
+Event	T2	infazı	EVENT	185
+Event	T8	gerekiyordu	EVENT	143
+Event	T9	oldu	EVENT	425
+Event	T7	görev aldı	EVENT	490
+Relation	T0	T1	CauseEffect	true	açıklamıştı	öldürülmesi
+Relation	T1	T0	EffectCause	true	öldürülmesi	açıklamıştı
+Relation	T0	T8	CauseEffect	true	açıklamıştı	gerekiyordu
+Relation	T8	T0	EffectCause	true	gerekiyordu	açıklamıştı
+Relation	T8	T2	CauseEffect	true	gerekiyordu	infazı
+Relation	T2	T8	EffectCause	true	infazı	gerekiyordu
+Relation	T3	T4	CauseEffect	true	Olayın	tutuklandı
+Relation	T4	T3	EffectCause	true	tutuklandı	Olayın
+Relation	T4	T5	CauseEffect	true	tutuklandı	verildi
+Relation	T5	T4	EffectCause	true	verildi	tutuklandı
+Relation	T1	T3	NoRel	true	öldürülmesi	Olayın
+Relation	T1	T4	NoRel	true	öldürülmesi	tutuklandı
+Relation	T1	T5	NoRel	true	öldürülmesi	verildi
+Relation	T1	T9	NoRel	true	öldürülmesi	oldu
+Relation	T2	T0	NoRel	true	infazı	açıklamıştı
+Relation	T2	T3	NoRel	true	infazı	Olayın
+Relation	T2	T7	NoRel	true	infazı	görev aldı
+Relation	T3	T9	NoRel	true	Olayın	oldu
+Relation	T4	T0	NoRel	true	tutuklandı	açıklamıştı
+Relation	T5	T1	NoRel	true	verildi	öldürülmesi
+Relation	T5	T6	NoRel	true	verildi	katıldı
+Relation	T5	T7	NoRel	true	verildi	görev aldı
+Relation	T5	T8	NoRel	true	verildi	gerekiyordu
+Relation	T5	T9	NoRel	true	verildi	oldu
+Relation	T6	T5	NoRel	true	katıldı	verildi
+Relation	T7	T0	NoRel	true	görev aldı	açıklamıştı
+Relation	T7	T1	NoRel	true	görev aldı	öldürülmesi
+Relation	T7	T3	NoRel	true	görev aldı	Olayın
+Relation	T7	T6	NoRel	true	görev aldı	katıldı
+Relation	T8	T3	NoRel	true	gerekiyordu	Olayın
+Relation	T8	T4	NoRel	true	gerekiyordu	tutuklandı
+Relation	T8	T7	NoRel	true	gerekiyordu	görev aldı
+Relation	T9	T3	NoRel	true	oldu	Olayın
+Relation	T9	T5	NoRel	true	oldu	verildi
+Relation	T9	T8	NoRel	true	oldu	gerekiyordu

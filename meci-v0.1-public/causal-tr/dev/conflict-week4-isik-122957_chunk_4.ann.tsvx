@@ -1,0 +1,29 @@
+Text	Başkent Washington’daki bir basın açıklamasında geçmişini değerlendiren Örümcek Adam , basın mensuplarının karşısında maskesini çıkarır ve gizli kimliğini açıklar .	X - Men savaşta tarafsız kalacaklarını ilan ederler .	Emma Frost ile görüşen Iron Man , Frost’tan olumlu bir yanıt alamaz fakat Frost , yasanın X - Men’a uygulanmaması koşuluyla Kaptan Amerika’nın da yanına katılmayacaklarını söyler .	Ancak Demir Adam , Bishop’tan bağlılık yemini alır .	Olaylar Thor’un Demir Adam’ın yanında yer alıp Kaptan Amerika’ya saldırmasıyla bir savaşa dönüşür .
+Event	T0	çıkarır	EVENT	128
+Event	T1	açıklar	EVENT	155
+Event	T2	söyler	EVENT	391
+Event	T3	alır	EVENT	446
+Event	T4	saldırmasıyla	EVENT	518
+Event	T5	dönüşür	EVENT	543
+Event	T6	açıklamasında	EVENT	34
+Relation	T0	T1	CauseEffect	true	çıkarır	açıklar
+Relation	T1	T0	EffectCause	true	açıklar	çıkarır
+Relation	T4	T5	CauseEffect	true	saldırmasıyla	dönüşür
+Relation	T5	T4	EffectCause	true	dönüşür	saldırmasıyla
+Relation	T0	T4	NoRel	true	çıkarır	saldırmasıyla
+Relation	T1	T4	NoRel	true	açıklar	saldırmasıyla
+Relation	T1	T6	NoRel	true	açıklar	açıklamasında
+Relation	T2	T4	NoRel	true	söyler	saldırmasıyla
+Relation	T2	T5	NoRel	true	söyler	dönüşür
+Relation	T2	T6	NoRel	true	söyler	açıklamasında
+Relation	T3	T2	NoRel	true	alır	söyler
+Relation	T3	T4	NoRel	true	alır	saldırmasıyla
+Relation	T3	T5	NoRel	true	alır	dönüşür
+Relation	T4	T0	NoRel	true	saldırmasıyla	çıkarır
+Relation	T4	T3	NoRel	true	saldırmasıyla	alır
+Relation	T5	T0	NoRel	true	dönüşür	çıkarır
+Relation	T5	T1	NoRel	true	dönüşür	açıklar
+Relation	T5	T2	NoRel	true	dönüşür	söyler
+Relation	T5	T6	NoRel	true	dönüşür	açıklamasında
+Relation	T6	T1	NoRel	true	açıklamasında	açıklar
+Relation	T6	T3	NoRel	true	açıklamasında	alır

@@ -1,0 +1,37 @@
+Text	[ WB1401 warning receiver ]	It was the responsibility of the United Kingdom Warning and Monitoring Organisation ( UKWMO ) at the United Kingdom Regional Air Operations Centre ( UK RAOC ) located at RAF Booker to alert the nation to an imminent air attack .	Once an alert was initiated the national and local television and radio networks would break into transmissions and broadcast a warning ( the warning message would originate from an emergency studio in BBC Broadcasting House in London ) .	Simultaneously the national air raid siren system would be brought into service .	A system , which used the same frequency on normal telephone lines as the peacetime speaking clock , was employed for this whereby a key switch activation alerted 250 national Carrier Control Points or CCPs present in police stations across the country .
+Event	T0	warning	EVENT	9
+Event	T1	alert	EVENT	212
+Event	T2	attack	EVENT	248
+Event	T3	alert	EVENT	265
+Event	T4	initiated	EVENT	275
+Event	T5	transmissions	EVENT	355
+Event	T6	broadcast	EVENT	373
+Event	T7	warning	EVENT	385
+Event	T8	message	EVENT	407
+Event	T9	originate	EVENT	421
+Event	T10	used	EVENT	595
+Event	T11	speaking	EVENT	662
+Event	T12	employed	EVENT	683
+Event	T13	alerted	EVENT	733
+Event	T14	present	EVENT	785
+Relation	T2	T1	CauseEffect	true	attack	alert
+Relation	T1	T2	EffectCause	true	alert	attack
+Relation	T4	T5	CauseEffect	true	initiated	transmissions
+Relation	T5	T4	EffectCause	true	transmissions	initiated
+Relation	T4	T6	CauseEffect	true	initiated	broadcast
+Relation	T6	T4	EffectCause	true	broadcast	initiated
+Relation	T0	T12	NoRel	true	warning	employed
+Relation	T0	T3	NoRel	true	warning	alert
+Relation	T10	T11	NoRel	true	used	speaking
+Relation	T10	T12	NoRel	true	used	employed
+Relation	T10	T6	NoRel	true	used	broadcast
+Relation	T14	T6	NoRel	true	present	broadcast
+Relation	T4	T0	NoRel	true	initiated	warning
+Relation	T4	T10	NoRel	true	initiated	used
+Relation	T5	T2	NoRel	true	transmissions	attack
+Relation	T5	T9	NoRel	true	transmissions	originate
+Relation	T6	T0	NoRel	true	broadcast	warning
+Relation	T7	T3	NoRel	true	warning	alert
+Relation	T7	T6	NoRel	true	warning	broadcast
+Relation	T9	T12	NoRel	true	originate	employed
+Relation	T9	T2	NoRel	true	originate	attack

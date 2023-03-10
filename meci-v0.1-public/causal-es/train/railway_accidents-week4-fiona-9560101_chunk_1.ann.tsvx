@@ -1,0 +1,96 @@
+Text	El caudal del río estaba muy crecido respecto a su modesto curso en circunstancias normales debido a las lluvias caídas en los días anteriores .	El desastre se cobró 59 fallecidos , 54 de ellos soldados del regimiento de infantería « Castilla » y 3 soldados del regimiento de infantería « Granada » , así como dos civiles .	Hubo 56 heridos , que fueron trasladados al hospital de Almadén ( los críticos ) y a Almadenejos .	El informe del incidente fue conjuntamente redactado por ingenieros empleados por el Estado y por MZA .	Los peritos determinaron que uno de las tres pilares del puente había sido cortado , incitando a la prensa contemporánea a hablar de un presunto sabotaje premeditado .
+Event	T0	caudal	EVENT	3
+Event	T1	crecido	EVENT	29
+Event	T2	caídas	EVENT	113
+Event	T3	desastre	EVENT	148
+Event	T4	cobró	EVENT	160
+Event	T5	fallecidos	EVENT	169
+Event	T6	heridos	EVENT	332
+Event	T7	trasladados	EVENT	353
+Event	T8	informe	EVENT	426
+Event	T9	incidente	EVENT	438
+Event	T10	redactado	EVENT	466
+Event	T11	determinaron	EVENT	539
+Event	T12	cortado	EVENT	602
+Event	T13	incitando	EVENT	612
+Event	T14	hablar	EVENT	650
+Event	T15	premeditado	EVENT	681
+Relation	T2	T1	CauseEffect	true	caídas	crecido
+Relation	T1	T2	EffectCause	true	crecido	caídas
+Relation	T3	T5	CauseEffect	true	desastre	fallecidos
+Relation	T5	T3	EffectCause	true	fallecidos	desastre
+Relation	T0	T12	NoRel	true	caudal	cortado
+Relation	T0	T13	NoRel	true	caudal	incitando
+Relation	T0	T14	NoRel	true	caudal	hablar
+Relation	T0	T15	NoRel	true	caudal	premeditado
+Relation	T0	T4	NoRel	true	caudal	cobró
+Relation	T0	T9	NoRel	true	caudal	incidente
+Relation	T1	T0	NoRel	true	crecido	caudal
+Relation	T1	T10	NoRel	true	crecido	redactado
+Relation	T1	T11	NoRel	true	crecido	determinaron
+Relation	T1	T13	NoRel	true	crecido	incitando
+Relation	T1	T8	NoRel	true	crecido	informe
+Relation	T10	T0	NoRel	true	redactado	caudal
+Relation	T10	T11	NoRel	true	redactado	determinaron
+Relation	T10	T12	NoRel	true	redactado	cortado
+Relation	T10	T5	NoRel	true	redactado	fallecidos
+Relation	T10	T8	NoRel	true	redactado	informe
+Relation	T11	T13	NoRel	true	determinaron	incitando
+Relation	T11	T15	NoRel	true	determinaron	premeditado
+Relation	T11	T3	NoRel	true	determinaron	desastre
+Relation	T11	T5	NoRel	true	determinaron	fallecidos
+Relation	T12	T1	NoRel	true	cortado	crecido
+Relation	T12	T14	NoRel	true	cortado	hablar
+Relation	T12	T2	NoRel	true	cortado	caídas
+Relation	T12	T5	NoRel	true	cortado	fallecidos
+Relation	T12	T8	NoRel	true	cortado	informe
+Relation	T13	T12	NoRel	true	incitando	cortado
+Relation	T13	T15	NoRel	true	incitando	premeditado
+Relation	T13	T2	NoRel	true	incitando	caídas
+Relation	T13	T4	NoRel	true	incitando	cobró
+Relation	T13	T9	NoRel	true	incitando	incidente
+Relation	T14	T0	NoRel	true	hablar	caudal
+Relation	T14	T1	NoRel	true	hablar	crecido
+Relation	T14	T11	NoRel	true	hablar	determinaron
+Relation	T14	T12	NoRel	true	hablar	cortado
+Relation	T14	T15	NoRel	true	hablar	premeditado
+Relation	T14	T2	NoRel	true	hablar	caídas
+Relation	T14	T8	NoRel	true	hablar	informe
+Relation	T15	T2	NoRel	true	premeditado	caídas
+Relation	T15	T7	NoRel	true	premeditado	trasladados
+Relation	T2	T0	NoRel	true	caídas	caudal
+Relation	T2	T14	NoRel	true	caídas	hablar
+Relation	T2	T4	NoRel	true	caídas	cobró
+Relation	T2	T5	NoRel	true	caídas	fallecidos
+Relation	T2	T7	NoRel	true	caídas	trasladados
+Relation	T3	T11	NoRel	true	desastre	determinaron
+Relation	T3	T12	NoRel	true	desastre	cortado
+Relation	T3	T14	NoRel	true	desastre	hablar
+Relation	T3	T15	NoRel	true	desastre	premeditado
+Relation	T3	T4	NoRel	true	desastre	cobró
+Relation	T4	T1	NoRel	true	cobró	crecido
+Relation	T4	T10	NoRel	true	cobró	redactado
+Relation	T4	T11	NoRel	true	cobró	determinaron
+Relation	T4	T13	NoRel	true	cobró	incitando
+Relation	T4	T15	NoRel	true	cobró	premeditado
+Relation	T4	T2	NoRel	true	cobró	caídas
+Relation	T4	T3	NoRel	true	cobró	desastre
+Relation	T4	T6	NoRel	true	cobró	heridos
+Relation	T5	T14	NoRel	true	fallecidos	hablar
+Relation	T5	T15	NoRel	true	fallecidos	premeditado
+Relation	T5	T4	NoRel	true	fallecidos	cobró
+Relation	T5	T6	NoRel	true	fallecidos	heridos
+Relation	T5	T8	NoRel	true	fallecidos	informe
+Relation	T6	T11	NoRel	true	heridos	determinaron
+Relation	T6	T14	NoRel	true	heridos	hablar
+Relation	T6	T3	NoRel	true	heridos	desastre
+Relation	T6	T8	NoRel	true	heridos	informe
+Relation	T7	T11	NoRel	true	trasladados	determinaron
+Relation	T7	T15	NoRel	true	trasladados	premeditado
+Relation	T7	T4	NoRel	true	trasladados	cobró
+Relation	T7	T6	NoRel	true	trasladados	heridos
+Relation	T7	T9	NoRel	true	trasladados	incidente
+Relation	T8	T10	NoRel	true	informe	redactado
+Relation	T8	T13	NoRel	true	informe	incitando
+Relation	T9	T10	NoRel	true	incidente	redactado
+Relation	T9	T7	NoRel	true	incidente	trasladados

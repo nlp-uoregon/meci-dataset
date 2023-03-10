@@ -1,0 +1,87 @@
+Text	- Falta de confianza en el Radar Meteorológico de la Aeronave ( el PF había tomado varias notas en el RTV sobre su operatividad ) .	- De acuerdo a los diferentes análisis , se pudo determinar que el sistema eléctrico de 115 Voltios AC no estaba energizado , por lo que se presume que el checklist no se realizó correctamente en diferentes procedimientos , lo que llevó a evitar elementos de control para el funcionamiento de la navegación .	instrumentos .	( El control de encendido de los inversores está marcado con un asterisco en las listas de verificación de la aeronave , lo que determina que el elemento debe realizarse con la ayuda del NFP ) .	- El PF había realizado sus últimos cinco vuelos en otra aeronave , en la que aunque es el mismo modelo que el accidente , los inversores no energizan los Instrumentos de Navegación .
+Event	T0	tomado	EVENT	76
+Event	T1	análisis	EVENT	162
+Event	T2	determinar	EVENT	181
+Event	T4	checklist	EVENT	287
+Event	T6	llevó	EVENT	363
+Event	T7	control	EVENT	391
+Event	T8	navegación	EVENT	428
+Event	T9	control	EVENT	461
+Event	T10	encendido	EVENT	472
+Event	T11	marcado	EVENT	505
+Event	T12	verificación	EVENT	547
+Event	T13	determina	EVENT	584
+Event	T14	realizado	EVENT	665
+Event	T15	vuelos	EVENT	693
+Event	T16	accidente	EVENT	762
+Event	T17	energizan	EVENT	792
+Relation	T0	T12	NoRel	true	tomado	verificación
+Relation	T0	T13	NoRel	true	tomado	determina
+Relation	T0	T2	NoRel	true	tomado	determinar
+Relation	T0	T6	NoRel	true	tomado	llevó
+Relation	T0	T8	NoRel	true	tomado	navegación
+Relation	T0	T9	NoRel	true	tomado	control
+Relation	T1	T13	NoRel	true	análisis	determina
+Relation	T1	T17	NoRel	true	análisis	energizan
+Relation	T1	T4	NoRel	true	análisis	checklist
+Relation	T1	T8	NoRel	true	análisis	navegación
+Relation	T1	T9	NoRel	true	análisis	control
+Relation	T10	T1	NoRel	true	encendido	análisis
+Relation	T10	T12	NoRel	true	encendido	verificación
+Relation	T10	T15	NoRel	true	encendido	vuelos
+Relation	T10	T17	NoRel	true	encendido	energizan
+Relation	T11	T0	NoRel	true	marcado	tomado
+Relation	T11	T1	NoRel	true	marcado	análisis
+Relation	T11	T13	NoRel	true	marcado	determina
+Relation	T11	T17	NoRel	true	marcado	energizan
+Relation	T11	T2	NoRel	true	marcado	determinar
+Relation	T11	T7	NoRel	true	marcado	control
+Relation	T11	T9	NoRel	true	marcado	control
+Relation	T12	T1	NoRel	true	verificación	análisis
+Relation	T12	T13	NoRel	true	verificación	determina
+Relation	T12	T14	NoRel	true	verificación	realizado
+Relation	T12	T6	NoRel	true	verificación	llevó
+Relation	T12	T8	NoRel	true	verificación	navegación
+Relation	T13	T0	NoRel	true	determina	tomado
+Relation	T13	T15	NoRel	true	determina	vuelos
+Relation	T13	T17	NoRel	true	determina	energizan
+Relation	T13	T2	NoRel	true	determina	determinar
+Relation	T13	T9	NoRel	true	determina	control
+Relation	T14	T11	NoRel	true	realizado	marcado
+Relation	T14	T16	NoRel	true	realizado	accidente
+Relation	T14	T4	NoRel	true	realizado	checklist
+Relation	T14	T7	NoRel	true	realizado	control
+Relation	T15	T0	NoRel	true	vuelos	tomado
+Relation	T15	T16	NoRel	true	vuelos	accidente
+Relation	T16	T0	NoRel	true	accidente	tomado
+Relation	T16	T6	NoRel	true	accidente	llevó
+Relation	T16	T7	NoRel	true	accidente	control
+Relation	T17	T11	NoRel	true	energizan	marcado
+Relation	T17	T15	NoRel	true	energizan	vuelos
+Relation	T17	T2	NoRel	true	energizan	determinar
+Relation	T17	T4	NoRel	true	energizan	checklist
+Relation	T2	T13	NoRel	true	determinar	determina
+Relation	T2	T16	NoRel	true	determinar	accidente
+Relation	T2	T8	NoRel	true	determinar	navegación
+Relation	T2	T9	NoRel	true	determinar	control
+Relation	T4	T2	NoRel	true	checklist	determinar
+Relation	T6	T10	NoRel	true	llevó	encendido
+Relation	T6	T11	NoRel	true	llevó	marcado
+Relation	T6	T12	NoRel	true	llevó	verificación
+Relation	T6	T13	NoRel	true	llevó	determina
+Relation	T6	T2	NoRel	true	llevó	determinar
+Relation	T6	T8	NoRel	true	llevó	navegación
+Relation	T6	T9	NoRel	true	llevó	control
+Relation	T7	T0	NoRel	true	control	tomado
+Relation	T7	T13	NoRel	true	control	determina
+Relation	T7	T17	NoRel	true	control	energizan
+Relation	T7	T4	NoRel	true	control	checklist
+Relation	T7	T8	NoRel	true	control	navegación
+Relation	T8	T2	NoRel	true	navegación	determinar
+Relation	T8	T4	NoRel	true	navegación	checklist
+Relation	T9	T1	NoRel	true	control	análisis
+Relation	T9	T13	NoRel	true	control	determina
+Relation	T9	T14	NoRel	true	control	realizado
+Relation	T9	T15	NoRel	true	control	vuelos
+Relation	T9	T16	NoRel	true	control	accidente
+Relation	T9	T2	NoRel	true	control	determinar

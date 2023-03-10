@@ -1,0 +1,158 @@
+Text	Modern technologies have reduced the incidence of these failures considerably , both by design ( specially the elimination of plain bearings ) and intervention ( non-destructive testing in service ) .	If a vertical , lateral , or crosslevel irregularity is cyclic and takes place at a wavelength corresponding to the natural frequency of certain vehicles traversing the route section , there is a risk of resonant harmonic oscillation in the vehicles , leading to extreme improper movement and possibly derailment .	This is most hazardous when a cyclic roll is set up by crosslevel variations , but vertical cyclical errors also can result in vehicles lifting off the track ; this is especially the case when the vehicles are in the tare ( empty ) condition , and if the suspension is not designed to have appropriate characteristics .	The last condition applies if the suspension springing has a stiffness optimised for the loaded condition , or for a compromise loading condition , so that it is too stiff in the tare situation .	The vehicle wheelsets become momentarily unloaded vertically so that the guidance required from the flanges or wheel tread contact is inadequate .
+Event	T0	reduced	EVENT	25
+Event	T1	incidence	EVENT	37
+Event	T2	failures	EVENT	56
+Event	T3	elimination	EVENT	111
+Event	T4	intervention	EVENT	147
+Event	T5	testing	EVENT	178
+Event	T6	irregularity	EVENT	241
+Event	T7	traversing	EVENT	355
+Event	T8	risk	EVENT	397
+Event	T9	oscillation	EVENT	423
+Event	T11	derailment	EVENT	503
+Event	T12	roll	EVENT	553
+Event	T15	result	EVENT	633
+Event	T16	suspension	EVENT	771
+Event	T17	designed	EVENT	789
+Event	T18	applies	EVENT	855
+Event	T19	springing	EVENT	881
+Event	T20	optimised	EVENT	907
+Event	T21	become	EVENT	1054
+Event	T22	unloaded	EVENT	1073
+Event	T23	contact	EVENT	1155
+Event	T24	technologies	EVENT	7
+Event	T25	design	EVENT	88
+Event	T26	cyclic	EVENT	257
+Event	T27	takes place	EVENT	268
+Event	T10	improper movement	EVENT	472
+Event	T28	hazardous	EVENT	529
+Event	T13	crosslevel variations	EVENT	571
+Event	T14	vertical cyclical errors	EVENT	599
+Event	T29	lifting off	EVENT	652
+Event	T30	tare ( empty ) condition	EVENT	733
+Event	T31	too stiff	EVENT	998
+Event	T32	inadequate	EVENT	1166
+Relation	T24	T0	CauseEffect	true	technologies	reduced
+Relation	T0	T24	EffectCause	true	reduced	technologies
+Relation	T26	T9	CauseEffect	true	cyclic	oscillation
+Relation	T9	T26	EffectCause	true	oscillation	cyclic
+Relation	T27	T9	CauseEffect	true	takes place	oscillation
+Relation	T9	T27	EffectCause	true	oscillation	takes place
+Relation	T9	T10	CauseEffect	true	oscillation	improper movement
+Relation	T10	T9	EffectCause	true	improper movement	oscillation
+Relation	T10	T11	CauseEffect	true	improper movement	derailment
+Relation	T11	T10	EffectCause	true	derailment	improper movement
+Relation	T13	T28	CauseEffect	true	crosslevel variations	hazardous
+Relation	T28	T13	EffectCause	true	hazardous	crosslevel variations
+Relation	T14	T29	CauseEffect	true	vertical cyclical errors	lifting off
+Relation	T29	T14	EffectCause	true	lifting off	vertical cyclical errors
+Relation	T30	T29	CauseEffect	true	tare ( empty ) condition	lifting off
+Relation	T29	T30	EffectCause	true	lifting off	tare ( empty ) condition
+Relation	T16	T29	CauseEffect	true	suspension	lifting off
+Relation	T29	T16	EffectCause	true	lifting off	suspension
+Relation	T20	T31	CauseEffect	true	optimised	too stiff
+Relation	T31	T20	EffectCause	true	too stiff	optimised
+Relation	T22	T32	CauseEffect	true	unloaded	inadequate
+Relation	T32	T22	EffectCause	true	inadequate	unloaded
+Relation	T0	T1	NoRel	true	reduced	incidence
+Relation	T0	T16	NoRel	true	reduced	suspension
+Relation	T0	T5	NoRel	true	reduced	testing
+Relation	T1	T21	NoRel	true	incidence	become
+Relation	T1	T23	NoRel	true	incidence	contact
+Relation	T1	T25	NoRel	true	incidence	design
+Relation	T10	T23	NoRel	true	improper movement	contact
+Relation	T11	T14	NoRel	true	derailment	vertical cyclical errors
+Relation	T11	T25	NoRel	true	derailment	design
+Relation	T11	T26	NoRel	true	derailment	cyclic
+Relation	T11	T5	NoRel	true	derailment	testing
+Relation	T12	T16	NoRel	true	roll	suspension
+Relation	T12	T4	NoRel	true	roll	intervention
+Relation	T13	T18	NoRel	true	crosslevel variations	applies
+Relation	T13	T23	NoRel	true	crosslevel variations	contact
+Relation	T13	T24	NoRel	true	crosslevel variations	technologies
+Relation	T13	T26	NoRel	true	crosslevel variations	cyclic
+Relation	T13	T27	NoRel	true	crosslevel variations	takes place
+Relation	T13	T4	NoRel	true	crosslevel variations	intervention
+Relation	T13	T8	NoRel	true	crosslevel variations	risk
+Relation	T14	T22	NoRel	true	vertical cyclical errors	unloaded
+Relation	T15	T10	NoRel	true	result	improper movement
+Relation	T16	T5	NoRel	true	suspension	testing
+Relation	T16	T7	NoRel	true	suspension	traversing
+Relation	T17	T13	NoRel	true	designed	crosslevel variations
+Relation	T17	T29	NoRel	true	designed	lifting off
+Relation	T17	T31	NoRel	true	designed	too stiff
+Relation	T18	T19	NoRel	true	applies	springing
+Relation	T18	T2	NoRel	true	applies	failures
+Relation	T18	T23	NoRel	true	applies	contact
+Relation	T18	T3	NoRel	true	applies	elimination
+Relation	T18	T31	NoRel	true	applies	too stiff
+Relation	T18	T6	NoRel	true	applies	irregularity
+Relation	T19	T0	NoRel	true	springing	reduced
+Relation	T19	T17	NoRel	true	springing	designed
+Relation	T19	T29	NoRel	true	springing	lifting off
+Relation	T2	T1	NoRel	true	failures	incidence
+Relation	T2	T27	NoRel	true	failures	takes place
+Relation	T2	T28	NoRel	true	failures	hazardous
+Relation	T20	T5	NoRel	true	optimised	testing
+Relation	T20	T8	NoRel	true	optimised	risk
+Relation	T21	T1	NoRel	true	become	incidence
+Relation	T21	T28	NoRel	true	become	hazardous
+Relation	T21	T3	NoRel	true	become	elimination
+Relation	T21	T32	NoRel	true	become	inadequate
+Relation	T22	T5	NoRel	true	unloaded	testing
+Relation	T22	T7	NoRel	true	unloaded	traversing
+Relation	T23	T0	NoRel	true	contact	reduced
+Relation	T23	T11	NoRel	true	contact	derailment
+Relation	T23	T15	NoRel	true	contact	result
+Relation	T23	T24	NoRel	true	contact	technologies
+Relation	T23	T26	NoRel	true	contact	cyclic
+Relation	T23	T28	NoRel	true	contact	hazardous
+Relation	T24	T16	NoRel	true	technologies	suspension
+Relation	T24	T26	NoRel	true	technologies	cyclic
+Relation	T24	T6	NoRel	true	technologies	irregularity
+Relation	T25	T14	NoRel	true	design	vertical cyclical errors
+Relation	T25	T17	NoRel	true	design	designed
+Relation	T25	T24	NoRel	true	design	technologies
+Relation	T26	T22	NoRel	true	cyclic	unloaded
+Relation	T26	T29	NoRel	true	cyclic	lifting off
+Relation	T27	T14	NoRel	true	takes place	vertical cyclical errors
+Relation	T27	T16	NoRel	true	takes place	suspension
+Relation	T27	T23	NoRel	true	takes place	contact
+Relation	T27	T25	NoRel	true	takes place	design
+Relation	T27	T26	NoRel	true	takes place	cyclic
+Relation	T27	T31	NoRel	true	takes place	too stiff
+Relation	T28	T10	NoRel	true	hazardous	improper movement
+Relation	T28	T14	NoRel	true	hazardous	vertical cyclical errors
+Relation	T28	T24	NoRel	true	hazardous	technologies
+Relation	T28	T27	NoRel	true	hazardous	takes place
+Relation	T28	T6	NoRel	true	hazardous	irregularity
+Relation	T29	T0	NoRel	true	lifting off	reduced
+Relation	T29	T6	NoRel	true	lifting off	irregularity
+Relation	T29	T7	NoRel	true	lifting off	traversing
+Relation	T3	T1	NoRel	true	elimination	incidence
+Relation	T3	T21	NoRel	true	elimination	become
+Relation	T3	T23	NoRel	true	elimination	contact
+Relation	T30	T20	NoRel	true	tare ( empty ) condition	optimised
+Relation	T30	T22	NoRel	true	tare ( empty ) condition	unloaded
+Relation	T30	T26	NoRel	true	tare ( empty ) condition	cyclic
+Relation	T30	T9	NoRel	true	tare ( empty ) condition	oscillation
+Relation	T31	T0	NoRel	true	too stiff	reduced
+Relation	T31	T24	NoRel	true	too stiff	technologies
+Relation	T31	T27	NoRel	true	too stiff	takes place
+Relation	T31	T3	NoRel	true	too stiff	elimination
+Relation	T31	T4	NoRel	true	too stiff	intervention
+Relation	T31	T7	NoRel	true	too stiff	traversing
+Relation	T32	T13	NoRel	true	inadequate	crosslevel variations
+Relation	T32	T15	NoRel	true	inadequate	result
+Relation	T32	T16	NoRel	true	inadequate	suspension
+Relation	T4	T14	NoRel	true	intervention	vertical cyclical errors
+Relation	T5	T11	NoRel	true	testing	derailment
+Relation	T5	T7	NoRel	true	testing	traversing
+Relation	T5	T9	NoRel	true	testing	oscillation
+Relation	T6	T11	NoRel	true	irregularity	derailment
+Relation	T6	T12	NoRel	true	irregularity	roll
+Relation	T8	T19	NoRel	true	risk	springing
+Relation	T8	T24	NoRel	true	risk	technologies
+Relation	T8	T25	NoRel	true	risk	design
+Relation	T9	T23	NoRel	true	oscillation	contact
+Relation	T9	T25	NoRel	true	oscillation	design

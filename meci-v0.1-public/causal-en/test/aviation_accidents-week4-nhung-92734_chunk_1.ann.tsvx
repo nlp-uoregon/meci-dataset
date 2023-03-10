@@ -1,0 +1,82 @@
+Text	Patches of thick fog were drifting across the airfield ; hence visibility was greatly reduced for pilots and the control tower .	The collision occurred when the KLM airliner initiated its take off run while the Pan Am airliner , shrouded in fog , was still on the runway and about to turn off onto the taxiway .	The impact and resulting fire killed everyone on board KLM 4805 and most of the occupants of Pan Am 1736 , with only 61 survivors in the front section of the aircraft .	The subsequent investigation by Spanish authorities concluded that the primary cause of the accident was the KLM captain 's decision to take off in the mistaken belief that a take off clearance from air traffic control ( ATC ) had been issued .	Dutch investigators placed a greater emphasis on a mutual misunderstanding in radio communications between the KLM crew and ATC , but ultimately KLM admitted that their crew was responsible for the accident and the airline agreed to financially compensate the relatives of all of the victims .
+Event	T0	fog	EVENT	17
+Event	T1	drifting	EVENT	26
+Event	T2	reduced	EVENT	86
+Event	T3	occurred	EVENT	143
+Event	T4	shrouded	EVENT	229
+Event	T5	fog	EVENT	241
+Event	T6	impact	EVENT	316
+Event	T7	killed	EVENT	342
+Event	T8	investigation	EVENT	496
+Event	T9	concluded	EVENT	533
+Event	T10	accident	EVENT	573
+Event	T11	decision	EVENT	605
+Event	T12	belief	EVENT	642
+Event	T13	issued	EVENT	717
+Event	T14	placed	EVENT	746
+Event	T15	misunderstanding	EVENT	784
+Event	T16	communications	EVENT	810
+Event	T17	admitted	EVENT	875
+Event	T18	accident	EVENT	924
+Event	T19	agreed	EVENT	949
+Event	T20	compensate	EVENT	971
+Event	T21	collision	EVENT	133
+Event	T22	initiated	EVENT	174
+Event	T23	turn off	EVENT	284
+Event	T24	fire	EVENT	337
+Relation	T0	T2	CauseEffect	true	fog	reduced
+Relation	T2	T0	EffectCause	true	reduced	fog
+Relation	T6	T7	CauseEffect	true	impact	killed
+Relation	T7	T6	EffectCause	true	killed	impact
+Relation	T24	T7	CauseEffect	true	fire	killed
+Relation	T7	T24	EffectCause	true	killed	fire
+Relation	T11	T10	CauseEffect	true	decision	accident
+Relation	T10	T11	EffectCause	true	accident	decision
+Relation	T12	T11	CauseEffect	true	belief	decision
+Relation	T11	T12	EffectCause	true	decision	belief
+Relation	T18	T20	CauseEffect	true	accident	compensate
+Relation	T20	T18	EffectCause	true	compensate	accident
+Relation	T0	T15	NoRel	true	fog	misunderstanding
+Relation	T0	T23	NoRel	true	fog	turn off
+Relation	T0	T4	NoRel	true	fog	shrouded
+Relation	T1	T13	NoRel	true	drifting	issued
+Relation	T1	T22	NoRel	true	drifting	initiated
+Relation	T1	T4	NoRel	true	drifting	shrouded
+Relation	T10	T12	NoRel	true	accident	belief
+Relation	T10	T21	NoRel	true	accident	collision
+Relation	T11	T1	NoRel	true	decision	drifting
+Relation	T11	T6	NoRel	true	decision	impact
+Relation	T12	T4	NoRel	true	belief	shrouded
+Relation	T13	T15	NoRel	true	issued	misunderstanding
+Relation	T13	T7	NoRel	true	issued	killed
+Relation	T13	T8	NoRel	true	issued	investigation
+Relation	T13	T9	NoRel	true	issued	concluded
+Relation	T15	T17	NoRel	true	misunderstanding	admitted
+Relation	T15	T22	NoRel	true	misunderstanding	initiated
+Relation	T16	T10	NoRel	true	communications	accident
+Relation	T16	T13	NoRel	true	communications	issued
+Relation	T16	T14	NoRel	true	communications	placed
+Relation	T16	T19	NoRel	true	communications	agreed
+Relation	T16	T21	NoRel	true	communications	collision
+Relation	T17	T2	NoRel	true	admitted	reduced
+Relation	T19	T2	NoRel	true	agreed	reduced
+Relation	T2	T14	NoRel	true	reduced	placed
+Relation	T2	T23	NoRel	true	reduced	turn off
+Relation	T2	T24	NoRel	true	reduced	fire
+Relation	T2	T9	NoRel	true	reduced	concluded
+Relation	T20	T0	NoRel	true	compensate	fog
+Relation	T20	T11	NoRel	true	compensate	decision
+Relation	T21	T10	NoRel	true	collision	accident
+Relation	T22	T21	NoRel	true	initiated	collision
+Relation	T22	T24	NoRel	true	initiated	fire
+Relation	T22	T8	NoRel	true	initiated	investigation
+Relation	T24	T15	NoRel	true	fire	misunderstanding
+Relation	T4	T10	NoRel	true	shrouded	accident
+Relation	T4	T3	NoRel	true	shrouded	occurred
+Relation	T6	T11	NoRel	true	impact	decision
+Relation	T8	T7	NoRel	true	investigation	killed
+Relation	T8	T9	NoRel	true	investigation	concluded
+Relation	T9	T14	NoRel	true	concluded	placed
+Relation	T9	T22	NoRel	true	concluded	initiated
+Relation	T9	T4	NoRel	true	concluded	shrouded
+Relation	T9	T8	NoRel	true	concluded	investigation

@@ -1,0 +1,17 @@
+Text	14 مارچ 2020 تک سپین میں متاثرین کی تعداد 6391 اور مرنے والوں کی تعداد 196 رہی ، صرف ایک دن میں 122 لوگ ہلاک ہوئے ۔	اب تک 517 لوگ صحتیاب ہو چکے ہیں ۔	-	15 مارچ 2020 کو ملک میں اٹلی کی طرز پر لاک ڈاؤن ( تالہ بندی ) کر دیا گیا ۔	صرف ایک دن میں 1500 نئے کیس سامنے آئے ۔
+Event	T0	مرنے	EVENT	51
+Event	T3	متاثرین	EVENT	25
+Event	T4	ہلاک	EVENT	104
+Event	T1	صحتیاب	EVENT	130
+Event	T6	لاک ڈاؤن	EVENT	191
+Event	T2	کیس	EVENT	251
+Relation	T3	T6	CauseEffect	true	متاثرین	لاک ڈاؤن
+Relation	T6	T3	EffectCause	true	لاک ڈاؤن	متاثرین
+Relation	T0	T2	NoRel	true	مرنے	کیس
+Relation	T2	T1	NoRel	true	کیس	صحتیاب
+Relation	T2	T4	NoRel	true	کیس	ہلاک
+Relation	T3	T1	NoRel	true	متاثرین	صحتیاب
+Relation	T4	T2	NoRel	true	ہلاک	کیس
+Relation	T6	T0	NoRel	true	لاک ڈاؤن	مرنے
+Relation	T6	T1	NoRel	true	لاک ڈاؤن	صحتیاب
+Relation	T6	T2	NoRel	true	لاک ڈاؤن	کیس

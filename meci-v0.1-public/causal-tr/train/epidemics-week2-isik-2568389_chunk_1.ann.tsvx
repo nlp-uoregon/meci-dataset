@@ -1,0 +1,32 @@
+Text	- Bahreyn altı vakayı daha doğrulayarak toplam sayısını 47'ye çıkardı .	- Kanada , Ontario'da dört yeni vakayı onaylayarak toplam sayısını 24'e çıkardı .	Dört hastanın da İran ve Mısır'a seyahat geçmişi olduğu açıklandı .	- Çin 573 yeni vakayı doğruladı ; 570'si Hubei eyaletindeydi ve toplam sayı 79.824'e ulaştı .	Ölümler 35 artarak toplam 2.870'e yükseldi .
+Event	T0	çıkardı	EVENT	62
+Event	T1	onaylayarak	EVENT	111
+Event	T10	artarak	EVENT	327
+Event	T2	çıkardı	EVENT	144
+Event	T3	açıklandı	EVENT	210
+Event	T4	doğruladı	EVENT	244
+Event	T5	ulaştı	EVENT	307
+Event	T6	yükseldi	EVENT	350
+Event	T7	doğrulayarak	EVENT	27
+Relation	T7	T0	CauseEffect	true	doğrulayarak	çıkardı
+Relation	T0	T7	EffectCause	true	çıkardı	doğrulayarak
+Relation	T1	T2	CauseEffect	true	onaylayarak	çıkardı
+Relation	T2	T1	EffectCause	true	çıkardı	onaylayarak
+Relation	T4	T5	CauseEffect	true	doğruladı	ulaştı
+Relation	T5	T4	EffectCause	true	ulaştı	doğruladı
+Relation	T10	T6	CauseEffect	true	artarak	yükseldi
+Relation	T6	T10	EffectCause	true	yükseldi	artarak
+Relation	T1	T10	NoRel	true	onaylayarak	artarak
+Relation	T10	T0	NoRel	true	artarak	çıkardı
+Relation	T10	T3	NoRel	true	artarak	açıklandı
+Relation	T2	T10	NoRel	true	çıkardı	artarak
+Relation	T2	T3	NoRel	true	çıkardı	açıklandı
+Relation	T3	T4	NoRel	true	açıklandı	doğruladı
+Relation	T4	T10	NoRel	true	doğruladı	artarak
+Relation	T4	T6	NoRel	true	doğruladı	yükseldi
+Relation	T5	T1	NoRel	true	ulaştı	onaylayarak
+Relation	T5	T3	NoRel	true	ulaştı	açıklandı
+Relation	T5	T6	NoRel	true	ulaştı	yükseldi
+Relation	T6	T7	NoRel	true	yükseldi	doğrulayarak
+Relation	T7	T2	NoRel	true	doğrulayarak	çıkardı
+Relation	T7	T4	NoRel	true	doğrulayarak	doğruladı

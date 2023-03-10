@@ -1,0 +1,36 @@
+Text	1899 yılında Altay'ın Köktogay bölgesinde Öngdirkara mevkiinde doğmuştur .	Altay Kazaklarından orta hâlli bir çiftçi olan İslâm Bey'in oğludur .	Göçebe Kazak hayatını yaşayarak büyüdü .	10 yaşından önce iyi bir binici ve usta bir avcı olan Osman Batur , savaş sanatının inceliklerini 12 yaşında hizmetine girdiği Kazak Türklerinden olan Böke Batur'dan öğrenmiştir .	Böke Batur'un Çinlilere yenilmesi akabinde Böke Batur'un Tibet üzerinden Türkiye'ye ulaşmaya çalışırken yakalanıp başının kesilmesinden sonra doğduğu yerde 40 yaşına kadar çiftçilikle uğraştı .
+Event	T0	doğmuştur	EVENT	63
+Event	T1	büyüdü	EVENT	177
+Event	T2	girdiği	EVENT	305
+Event	T3	öğrenmiştir	EVENT	352
+Event	T4	yenilmesi	EVENT	390
+Event	T5	yakalanıp	EVENT	470
+Event	T6	kesilmesinden	EVENT	488
+Event	T7	uğraştı	EVENT	550
+Relation	T2	T3	CauseEffect	true	girdiği	öğrenmiştir
+Relation	T3	T2	EffectCause	true	öğrenmiştir	girdiği
+Relation	T4	T5	CauseEffect	true	yenilmesi	yakalanıp
+Relation	T5	T4	EffectCause	true	yakalanıp	yenilmesi
+Relation	T5	T6	CauseEffect	true	yakalanıp	kesilmesinden
+Relation	T6	T5	EffectCause	true	kesilmesinden	yakalanıp
+Relation	T0	T4	NoRel	true	doğmuştur	yenilmesi
+Relation	T0	T5	NoRel	true	doğmuştur	yakalanıp
+Relation	T0	T6	NoRel	true	doğmuştur	kesilmesinden
+Relation	T0	T7	NoRel	true	doğmuştur	uğraştı
+Relation	T1	T4	NoRel	true	büyüdü	yenilmesi
+Relation	T2	T0	NoRel	true	girdiği	doğmuştur
+Relation	T2	T1	NoRel	true	girdiği	büyüdü
+Relation	T2	T6	NoRel	true	girdiği	kesilmesinden
+Relation	T2	T7	NoRel	true	girdiği	uğraştı
+Relation	T3	T1	NoRel	true	öğrenmiştir	büyüdü
+Relation	T3	T6	NoRel	true	öğrenmiştir	kesilmesinden
+Relation	T5	T0	NoRel	true	yakalanıp	doğmuştur
+Relation	T5	T1	NoRel	true	yakalanıp	büyüdü
+Relation	T5	T7	NoRel	true	yakalanıp	uğraştı
+Relation	T6	T1	NoRel	true	kesilmesinden	büyüdü
+Relation	T6	T2	NoRel	true	kesilmesinden	girdiği
+Relation	T6	T3	NoRel	true	kesilmesinden	öğrenmiştir
+Relation	T7	T1	NoRel	true	uğraştı	büyüdü
+Relation	T7	T2	NoRel	true	uğraştı	girdiği
+Relation	T7	T4	NoRel	true	uğraştı	yenilmesi
+Relation	T7	T5	NoRel	true	uğraştı	yakalanıp

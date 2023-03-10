@@ -1,0 +1,61 @@
+Text	Los aviones pueden continuar aterrizando , mientras los despegues están determinados por la cola en punto de espera ) .	Se notificó que la visibilidad en el momento del accidente era muy mala .	Había relámpagos , fuertes vientos racheados y granizo a la vez , y la lluvia comenzó a caer justo en el momento en que el avión estaba aterrizando .	Después de dos horas los vientos habían pasado de 5 a 30 km/h ( 3 a 20 mph ) y la temperatura cayó de 30 a 23 ° C ( 86 a 74 ° F ) .	Un aviso de tormentas peligrosas estaba en vigor desde las 11:30 a.m .
+Event	T1	despegues	EVENT	56
+Event	T4	notificó	EVENT	123
+Event	T5	accidente	EVENT	169
+Event	T6	relámpagos	EVENT	200
+Event	T8	comenzó	EVENT	272
+Event	T9	caer	EVENT	282
+Event	T10	aterrizando	EVENT	330
+Event	T11	vientos	EVENT	369
+Event	T12	pasado	EVENT	384
+Event	T13	cayó	EVENT	438
+Event	T14	aviso	EVENT	479
+Event	T2	vientos	EVENT	221
+Relation	T1	T11	NoRel	true	despegues	vientos
+Relation	T1	T12	NoRel	true	despegues	pasado
+Relation	T1	T14	NoRel	true	despegues	aviso
+Relation	T1	T6	NoRel	true	despegues	relámpagos
+Relation	T1	T8	NoRel	true	despegues	comenzó
+Relation	T1	T9	NoRel	true	despegues	caer
+Relation	T10	T12	NoRel	true	aterrizando	pasado
+Relation	T10	T4	NoRel	true	aterrizando	notificó
+Relation	T10	T6	NoRel	true	aterrizando	relámpagos
+Relation	T10	T8	NoRel	true	aterrizando	comenzó
+Relation	T10	T9	NoRel	true	aterrizando	caer
+Relation	T11	T1	NoRel	true	vientos	despegues
+Relation	T11	T9	NoRel	true	vientos	caer
+Relation	T12	T1	NoRel	true	pasado	despegues
+Relation	T12	T2	NoRel	true	pasado	vientos
+Relation	T12	T9	NoRel	true	pasado	caer
+Relation	T13	T12	NoRel	true	cayó	pasado
+Relation	T13	T14	NoRel	true	cayó	aviso
+Relation	T13	T8	NoRel	true	cayó	comenzó
+Relation	T14	T10	NoRel	true	aviso	aterrizando
+Relation	T14	T13	NoRel	true	aviso	cayó
+Relation	T14	T4	NoRel	true	aviso	notificó
+Relation	T14	T5	NoRel	true	aviso	accidente
+Relation	T14	T6	NoRel	true	aviso	relámpagos
+Relation	T14	T8	NoRel	true	aviso	comenzó
+Relation	T14	T9	NoRel	true	aviso	caer
+Relation	T2	T10	NoRel	true	vientos	aterrizando
+Relation	T2	T12	NoRel	true	vientos	pasado
+Relation	T2	T14	NoRel	true	vientos	aviso
+Relation	T2	T6	NoRel	true	vientos	relámpagos
+Relation	T2	T9	NoRel	true	vientos	caer
+Relation	T4	T11	NoRel	true	notificó	vientos
+Relation	T4	T12	NoRel	true	notificó	pasado
+Relation	T4	T13	NoRel	true	notificó	cayó
+Relation	T5	T6	NoRel	true	accidente	relámpagos
+Relation	T5	T8	NoRel	true	accidente	comenzó
+Relation	T6	T10	NoRel	true	relámpagos	aterrizando
+Relation	T6	T13	NoRel	true	relámpagos	cayó
+Relation	T6	T14	NoRel	true	relámpagos	aviso
+Relation	T6	T4	NoRel	true	relámpagos	notificó
+Relation	T6	T5	NoRel	true	relámpagos	accidente
+Relation	T8	T4	NoRel	true	comenzó	notificó
+Relation	T8	T5	NoRel	true	comenzó	accidente
+Relation	T8	T9	NoRel	true	comenzó	caer
+Relation	T9	T10	NoRel	true	caer	aterrizando
+Relation	T9	T11	NoRel	true	caer	vientos
+Relation	T9	T5	NoRel	true	caer	accidente
+Relation	T9	T6	NoRel	true	caer	relámpagos

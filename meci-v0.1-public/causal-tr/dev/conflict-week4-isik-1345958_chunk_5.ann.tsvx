@@ -1,0 +1,149 @@
+Text	_ Sith'in İntikamı '' olayları sırasında geçen ikinci hikayede , Ahsoha Anakin'le yeniden bir araya gelip Rex'in komuta ettiği ordu ile Mandolaria da bulunan eski Sith lordu Maul'u yakalamaya gitmesini anlatır .	Maul'la yüzleştiğinde Maul kendisine Darth Sidious'un Anakin's kendisinin yeni çırağı yapmak niyetinde olduğunu ve bunu önlemek için güçlerini birleştirme teklifinde bulunuyor ancak Ahsoka ona inanmıyor ve dövüşmeye başlıyorlar .	Ahsoka , Maul'u yener ve yakalar , ama onu Coruscant'a götürmeye hazırlanırken , Emir 66 verilir ve Rex de dahil olmak üzere klon askerlerinin ona sırtını döndüğünü görür .	Kaçar ve Rex'in çipini çıkarmayı başarır ve aynı zamanda Maul'u dikkat dağıtmak için serbest bırakır .	Uzay gemisi ile küçük bir aya çarptıklarında , Ahsoka ve Rex hayatta kalır ve yollarını ayırmadan önce eski ışın kılıcıyla birlikte tüm ölen klon askerlerini gömerler .
+Event	T0	İntikamı	EVENT	10
+Event	T1	olayları	EVENT	22
+Event	T2	geçen	EVENT	41
+Event	T3	anlatır	EVENT	202
+Event	T4	yüzleştiğinde	EVENT	220
+Event	T5	yener	EVENT	458
+Event	T6	yakalar	EVENT	467
+Event	T7	verilir	EVENT	531
+Event	T8	görür	EVENT	607
+Event	T9	Kaçar	EVENT	615
+Event	T10	başarır	EVENT	648
+Event	T11	bırakır	EVENT	708
+Event	T12	çarptıklarında	EVENT	748
+Event	T13	kalır	EVENT	787
+Event	T14	ölen	EVENT	854
+Event	T15	ettiği	EVENT	120
+Event	T16	başlıyorlar	EVENT	428
+Event	T17	gömerler	EVENT	876
+Relation	T16	T5	CauseEffect	true	başlıyorlar	yener
+Relation	T5	T16	EffectCause	true	yener	başlıyorlar
+Relation	T5	T6	CauseEffect	true	yener	yakalar
+Relation	T6	T5	EffectCause	true	yakalar	yener
+Relation	T7	T8	CauseEffect	true	verilir	görür
+Relation	T8	T7	EffectCause	true	görür	verilir
+Relation	T8	T9	CauseEffect	true	görür	Kaçar
+Relation	T9	T8	EffectCause	true	Kaçar	görür
+Relation	T14	T17	CauseEffect	true	ölen	gömerler
+Relation	T17	T14	EffectCause	true	gömerler	ölen
+Relation	T12	T14	CauseEffect	true	çarptıklarında	ölen
+Relation	T14	T12	EffectCause	true	ölen	çarptıklarında
+Relation	T0	T14	NoRel	true	İntikamı	ölen
+Relation	T0	T16	NoRel	true	İntikamı	başlıyorlar
+Relation	T0	T17	NoRel	true	İntikamı	gömerler
+Relation	T0	T3	NoRel	true	İntikamı	anlatır
+Relation	T0	T6	NoRel	true	İntikamı	yakalar
+Relation	T0	T9	NoRel	true	İntikamı	Kaçar
+Relation	T1	T11	NoRel	true	olayları	bırakır
+Relation	T1	T12	NoRel	true	olayları	çarptıklarında
+Relation	T1	T13	NoRel	true	olayları	kalır
+Relation	T1	T17	NoRel	true	olayları	gömerler
+Relation	T1	T3	NoRel	true	olayları	anlatır
+Relation	T1	T5	NoRel	true	olayları	yener
+Relation	T1	T8	NoRel	true	olayları	görür
+Relation	T10	T0	NoRel	true	başarır	İntikamı
+Relation	T10	T11	NoRel	true	başarır	bırakır
+Relation	T10	T12	NoRel	true	başarır	çarptıklarında
+Relation	T10	T13	NoRel	true	başarır	kalır
+Relation	T10	T14	NoRel	true	başarır	ölen
+Relation	T10	T7	NoRel	true	başarır	verilir
+Relation	T10	T8	NoRel	true	başarır	görür
+Relation	T11	T1	NoRel	true	bırakır	olayları
+Relation	T11	T3	NoRel	true	bırakır	anlatır
+Relation	T11	T4	NoRel	true	bırakır	yüzleştiğinde
+Relation	T11	T6	NoRel	true	bırakır	yakalar
+Relation	T12	T13	NoRel	true	çarptıklarında	kalır
+Relation	T12	T15	NoRel	true	çarptıklarında	ettiği
+Relation	T12	T4	NoRel	true	çarptıklarında	yüzleştiğinde
+Relation	T12	T7	NoRel	true	çarptıklarında	verilir
+Relation	T12	T8	NoRel	true	çarptıklarında	görür
+Relation	T13	T0	NoRel	true	kalır	İntikamı
+Relation	T13	T10	NoRel	true	kalır	başarır
+Relation	T13	T11	NoRel	true	kalır	bırakır
+Relation	T13	T14	NoRel	true	kalır	ölen
+Relation	T13	T2	NoRel	true	kalır	geçen
+Relation	T13	T6	NoRel	true	kalır	yakalar
+Relation	T13	T7	NoRel	true	kalır	verilir
+Relation	T13	T8	NoRel	true	kalır	görür
+Relation	T14	T0	NoRel	true	ölen	İntikamı
+Relation	T14	T13	NoRel	true	ölen	kalır
+Relation	T14	T16	NoRel	true	ölen	başlıyorlar
+Relation	T14	T4	NoRel	true	ölen	yüzleştiğinde
+Relation	T14	T7	NoRel	true	ölen	verilir
+Relation	T14	T8	NoRel	true	ölen	görür
+Relation	T15	T1	NoRel	true	ettiği	olayları
+Relation	T15	T11	NoRel	true	ettiği	bırakır
+Relation	T15	T13	NoRel	true	ettiği	kalır
+Relation	T15	T17	NoRel	true	ettiği	gömerler
+Relation	T15	T3	NoRel	true	ettiği	anlatır
+Relation	T15	T5	NoRel	true	ettiği	yener
+Relation	T15	T7	NoRel	true	ettiği	verilir
+Relation	T15	T8	NoRel	true	ettiği	görür
+Relation	T16	T10	NoRel	true	başlıyorlar	başarır
+Relation	T16	T17	NoRel	true	başlıyorlar	gömerler
+Relation	T16	T3	NoRel	true	başlıyorlar	anlatır
+Relation	T16	T7	NoRel	true	başlıyorlar	verilir
+Relation	T16	T8	NoRel	true	başlıyorlar	görür
+Relation	T17	T1	NoRel	true	gömerler	olayları
+Relation	T17	T10	NoRel	true	gömerler	başarır
+Relation	T17	T11	NoRel	true	gömerler	bırakır
+Relation	T17	T16	NoRel	true	gömerler	başlıyorlar
+Relation	T17	T2	NoRel	true	gömerler	geçen
+Relation	T17	T3	NoRel	true	gömerler	anlatır
+Relation	T2	T0	NoRel	true	geçen	İntikamı
+Relation	T2	T1	NoRel	true	geçen	olayları
+Relation	T2	T10	NoRel	true	geçen	başarır
+Relation	T2	T15	NoRel	true	geçen	ettiği
+Relation	T2	T16	NoRel	true	geçen	başlıyorlar
+Relation	T2	T5	NoRel	true	geçen	yener
+Relation	T2	T9	NoRel	true	geçen	Kaçar
+Relation	T3	T1	NoRel	true	anlatır	olayları
+Relation	T3	T14	NoRel	true	anlatır	ölen
+Relation	T3	T15	NoRel	true	anlatır	ettiği
+Relation	T3	T16	NoRel	true	anlatır	başlıyorlar
+Relation	T3	T2	NoRel	true	anlatır	geçen
+Relation	T3	T4	NoRel	true	anlatır	yüzleştiğinde
+Relation	T4	T13	NoRel	true	yüzleştiğinde	kalır
+Relation	T4	T14	NoRel	true	yüzleştiğinde	ölen
+Relation	T4	T3	NoRel	true	yüzleştiğinde	anlatır
+Relation	T4	T5	NoRel	true	yüzleştiğinde	yener
+Relation	T4	T6	NoRel	true	yüzleştiğinde	yakalar
+Relation	T4	T9	NoRel	true	yüzleştiğinde	Kaçar
+Relation	T5	T10	NoRel	true	yener	başarır
+Relation	T5	T11	NoRel	true	yener	bırakır
+Relation	T5	T17	NoRel	true	yener	gömerler
+Relation	T5	T2	NoRel	true	yener	geçen
+Relation	T5	T3	NoRel	true	yener	anlatır
+Relation	T5	T9	NoRel	true	yener	Kaçar
+Relation	T6	T0	NoRel	true	yakalar	İntikamı
+Relation	T6	T1	NoRel	true	yakalar	olayları
+Relation	T6	T10	NoRel	true	yakalar	başarır
+Relation	T6	T11	NoRel	true	yakalar	bırakır
+Relation	T6	T12	NoRel	true	yakalar	çarptıklarında
+Relation	T6	T15	NoRel	true	yakalar	ettiği
+Relation	T6	T17	NoRel	true	yakalar	gömerler
+Relation	T6	T2	NoRel	true	yakalar	geçen
+Relation	T6	T3	NoRel	true	yakalar	anlatır
+Relation	T6	T8	NoRel	true	yakalar	görür
+Relation	T7	T10	NoRel	true	verilir	başarır
+Relation	T7	T13	NoRel	true	verilir	kalır
+Relation	T7	T14	NoRel	true	verilir	ölen
+Relation	T7	T17	NoRel	true	verilir	gömerler
+Relation	T7	T3	NoRel	true	verilir	anlatır
+Relation	T7	T4	NoRel	true	verilir	yüzleştiğinde
+Relation	T7	T5	NoRel	true	verilir	yener
+Relation	T7	T6	NoRel	true	verilir	yakalar
+Relation	T7	T9	NoRel	true	verilir	Kaçar
+Relation	T8	T12	NoRel	true	görür	çarptıklarında
+Relation	T8	T2	NoRel	true	görür	geçen
+Relation	T8	T3	NoRel	true	görür	anlatır
+Relation	T8	T5	NoRel	true	görür	yener
+Relation	T8	T6	NoRel	true	görür	yakalar
+Relation	T9	T11	NoRel	true	Kaçar	bırakır
+Relation	T9	T13	NoRel	true	Kaçar	kalır
+Relation	T9	T14	NoRel	true	Kaçar	ölen
+Relation	T9	T16	NoRel	true	Kaçar	başlıyorlar
+Relation	T9	T3	NoRel	true	Kaçar	anlatır
+Relation	T9	T5	NoRel	true	Kaçar	yener
+Relation	T9	T6	NoRel	true	Kaçar	yakalar

@@ -1,0 +1,30 @@
+Text	Auschwitz - Birkenau Eyalet Müzesi'nin müdürü Piotr Cywiński'nin tahminine göre 70 , 000 SS üyesi toplama kamplarındaki suçlara bulaştı , ancak bunların sadece 1.650 ila 1.700'ü savaştan sonra yargılandı .	Nürnberg Uluslararası Askerî Ceza Mahkemesi , 1946'da SS'i bir suç örgütü ilan etti .	küçükresim | 316x316px | Adolf Eichmann'ın 1950'de Arjantin'e girmek için kullandığı " Ricardo Klement " adına Kıızlhaç pasaportu Savaştan sonra birçok eski Nazi , Güney Amerika'ya , özellikle Juan Perón yönetimi tarafından hoşnutlukla karşılandıkları Arjantin'e kaçtı .	1950'lerde eski Dachau mahkûmu Lothar Hermann , Buenos Aires'te yaşayan Ricardo Klement'in aslında , 1948'de Nazi sempatizanı Avusturyalı din adamı piskopoz Alois Hudal tarafından yönetilen bir organizasyon aracılığıyla Arjantin'e giriş için sahte kimlik ve iniş izni almış olan Adolf Eichmann olduğunu ortaya çıkardı .	Eichmann , 11 Mayıs 1960'ta İsrail'in ulusal istihbarat teşkilatı Mossad tarafından Buenos Aires'te yakalandı .
+Event	T0	bulaştı	EVENT	128
+Event	T1	yargılandı	EVENT	193
+Event	T3	etti	EVENT	285
+Event	T5	kaçtı	EVENT	555
+Event	T8	almış	EVENT	831
+Event	T9	çıkardı	EVENT	873
+Event	T10	yakalandı	EVENT	983
+Relation	T5	T10	CauseEffect	true	kaçtı	yakalandı
+Relation	T10	T5	EffectCause	true	yakalandı	kaçtı
+Relation	T9	T10	CauseEffect	true	çıkardı	yakalandı
+Relation	T10	T9	EffectCause	true	yakalandı	çıkardı
+Relation	T3	T5	CauseEffect	true	etti	kaçtı
+Relation	T5	T3	EffectCause	true	kaçtı	etti
+Relation	T0	T3	CauseEffect	true	bulaştı	etti
+Relation	T3	T0	EffectCause	true	etti	bulaştı
+Relation	T0	T1	NoRel	true	bulaştı	yargılandı
+Relation	T0	T10	NoRel	true	bulaştı	yakalandı
+Relation	T0	T8	NoRel	true	bulaştı	almış
+Relation	T0	T9	NoRel	true	bulaştı	çıkardı
+Relation	T1	T0	NoRel	true	yargılandı	bulaştı
+Relation	T1	T10	NoRel	true	yargılandı	yakalandı
+Relation	T1	T3	NoRel	true	yargılandı	etti
+Relation	T3	T1	NoRel	true	etti	yargılandı
+Relation	T5	T0	NoRel	true	kaçtı	bulaştı
+Relation	T5	T8	NoRel	true	kaçtı	almış
+Relation	T8	T3	NoRel	true	almış	etti
+Relation	T8	T9	NoRel	true	almış	çıkardı
+Relation	T9	T1	NoRel	true	çıkardı	yargılandı
+Relation	T9	T8	NoRel	true	çıkardı	almış

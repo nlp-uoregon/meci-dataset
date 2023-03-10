@@ -1,0 +1,65 @@
+Text	1980 AZOR ADALARI DEPREMI , 1 Ocak 1980 günü Azor Adaları'nı vuran bir depremdi .	Deprem sonucu 61 kişi öldü , 400'den fazla kişi yaralandı ve Terceira ile São Jorge adalarında ciddi hasar meydana geldi .	Richter ölçeğine göre 7.2 büyüklüğünde olan depremde Pico ve Faial adalarında da hasar meydana geldi .	Deprem , Azor Adaları'nda meydana gelen diğer depremlerde olduğu gibi bir doğrultu atımlı fayda meydana gelmişti .	Deprem nedeniyle dönemin Portekiz başkanı António Ramalho Eanes üç günlük ulusal yas ilan etti .
+Event	T1	vuran	EVENT	61
+Event	T2	depremdi	EVENT	71
+Event	T3	öldü	EVENT	104
+Event	T4	yaralandı	EVENT	130
+Event	T5	geldi	EVENT	197
+Event	T6	depremde	EVENT	249
+Event	T7	geldi	EVENT	300
+Event	T8	Deprem	EVENT	308
+Event	T9	meydana	EVENT	334
+Event	T10	gelmişti	EVENT	412
+Event	T11	Deprem	EVENT	423
+Event	T12	etti	EVENT	513
+Event	T13	1980 AZOR ADALARI DEPREMI	EVENT	0
+Relation	T1	T2	NoRel	true	vuran	depremdi
+Relation	T1	T5	NoRel	true	vuran	geldi
+Relation	T1	T6	NoRel	true	vuran	depremde
+Relation	T10	T1	NoRel	true	gelmişti	vuran
+Relation	T10	T11	NoRel	true	gelmişti	Deprem
+Relation	T10	T13	NoRel	true	gelmişti	1980 AZOR ADALARI DEPREMI
+Relation	T11	T1	NoRel	true	Deprem	vuran
+Relation	T11	T12	NoRel	true	Deprem	etti
+Relation	T11	T2	NoRel	true	Deprem	depremdi
+Relation	T11	T4	NoRel	true	Deprem	yaralandı
+Relation	T11	T5	NoRel	true	Deprem	geldi
+Relation	T11	T8	NoRel	true	Deprem	Deprem
+Relation	T11	T9	NoRel	true	Deprem	meydana
+Relation	T12	T11	NoRel	true	etti	Deprem
+Relation	T12	T2	NoRel	true	etti	depremdi
+Relation	T12	T3	NoRel	true	etti	öldü
+Relation	T12	T4	NoRel	true	etti	yaralandı
+Relation	T12	T9	NoRel	true	etti	meydana
+Relation	T13	T10	NoRel	true	1980 AZOR ADALARI DEPREMI	gelmişti
+Relation	T13	T11	NoRel	true	1980 AZOR ADALARI DEPREMI	Deprem
+Relation	T13	T2	NoRel	true	1980 AZOR ADALARI DEPREMI	depremdi
+Relation	T13	T8	NoRel	true	1980 AZOR ADALARI DEPREMI	Deprem
+Relation	T2	T11	NoRel	true	depremdi	Deprem
+Relation	T2	T9	NoRel	true	depremdi	meydana
+Relation	T3	T1	NoRel	true	öldü	vuran
+Relation	T3	T10	NoRel	true	öldü	gelmişti
+Relation	T3	T12	NoRel	true	öldü	etti
+Relation	T3	T13	NoRel	true	öldü	1980 AZOR ADALARI DEPREMI
+Relation	T3	T6	NoRel	true	öldü	depremde
+Relation	T3	T7	NoRel	true	öldü	geldi
+Relation	T4	T11	NoRel	true	yaralandı	Deprem
+Relation	T4	T2	NoRel	true	yaralandı	depremdi
+Relation	T4	T5	NoRel	true	yaralandı	geldi
+Relation	T4	T6	NoRel	true	yaralandı	depremde
+Relation	T5	T6	NoRel	true	geldi	depremde
+Relation	T5	T8	NoRel	true	geldi	Deprem
+Relation	T6	T10	NoRel	true	depremde	gelmişti
+Relation	T6	T12	NoRel	true	depremde	etti
+Relation	T6	T8	NoRel	true	depremde	Deprem
+Relation	T7	T10	NoRel	true	geldi	gelmişti
+Relation	T7	T13	NoRel	true	geldi	1980 AZOR ADALARI DEPREMI
+Relation	T7	T2	NoRel	true	geldi	depremdi
+Relation	T7	T3	NoRel	true	geldi	öldü
+Relation	T7	T4	NoRel	true	geldi	yaralandı
+Relation	T8	T2	NoRel	true	Deprem	depremdi
+Relation	T8	T3	NoRel	true	Deprem	öldü
+Relation	T8	T4	NoRel	true	Deprem	yaralandı
+Relation	T8	T9	NoRel	true	Deprem	meydana
+Relation	T9	T11	NoRel	true	meydana	Deprem
+Relation	T9	T3	NoRel	true	meydana	öldü
+Relation	T9	T7	NoRel	true	meydana	geldi

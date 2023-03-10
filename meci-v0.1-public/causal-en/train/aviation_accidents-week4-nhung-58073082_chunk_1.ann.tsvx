@@ -1,0 +1,95 @@
+Text	The final STSB report on the accident , released on 28 January 2021 , indicated that the accident was caused by the two highly experienced pilots flying recklessly , disregarding regulations , who failed to anticipate expected turbulence and who failed to control the aircraft and prevent it from stalling and spinning into the ground .	The report also found that the aircraft was not airworthy at the time of flight , in that the engines were not producing their minimum rated power and that the company had a deficient safety culture of rule breaking .	The aircraft was flying from Locarno Airport to Dübendorf Air Base , on the return leg of a two - day trip .	The weather was unseasonably warm with choppy winds .	At 16:56 local time on 4 August ( 14:56 UTC ) , the Junkers crashed into Piz Segnas mountain , at an elevation of .
+Event	T0	report	EVENT	15
+Event	T1	accident	EVENT	29
+Event	T2	released	EVENT	40
+Event	T3	indicated	EVENT	70
+Event	T4	accident	EVENT	89
+Event	T5	caused	EVENT	102
+Event	T6	flying	EVENT	146
+Event	T7	disregarding	EVENT	166
+Event	T8	failed	EVENT	197
+Event	T9	turbulence	EVENT	227
+Event	T10	failed	EVENT	246
+Event	T11	control	EVENT	256
+Event	T12	stalling	EVENT	297
+Event	T13	found	EVENT	353
+Event	T14	flight	EVENT	410
+Event	T15	producing	EVENT	448
+Event	T16	breaking	EVENT	544
+Event	T17	flying	EVENT	572
+Event	T18	trip	EVENT	657
+Event	T19	winds	EVENT	710
+Event	T20	prevent	EVENT	281
+Event	T21	spinning	EVENT	310
+Event	T22	crashed	EVENT	778
+Relation	T6	T4	CauseEffect	true	flying	accident
+Relation	T4	T6	EffectCause	true	accident	flying
+Relation	T8	T4	CauseEffect	true	failed	accident
+Relation	T4	T8	EffectCause	true	accident	failed
+Relation	T10	T4	CauseEffect	true	failed	accident
+Relation	T4	T10	EffectCause	true	accident	failed
+Relation	T0	T17	NoRel	true	report	flying
+Relation	T0	T21	NoRel	true	report	spinning
+Relation	T1	T0	NoRel	true	accident	report
+Relation	T1	T15	NoRel	true	accident	producing
+Relation	T1	T3	NoRel	true	accident	indicated
+Relation	T10	T15	NoRel	true	failed	producing
+Relation	T10	T8	NoRel	true	failed	failed
+Relation	T11	T15	NoRel	true	control	producing
+Relation	T11	T16	NoRel	true	control	breaking
+Relation	T11	T6	NoRel	true	control	flying
+Relation	T12	T18	NoRel	true	stalling	trip
+Relation	T12	T8	NoRel	true	stalling	failed
+Relation	T13	T21	NoRel	true	found	spinning
+Relation	T13	T8	NoRel	true	found	failed
+Relation	T15	T17	NoRel	true	producing	flying
+Relation	T15	T2	NoRel	true	producing	released
+Relation	T15	T3	NoRel	true	producing	indicated
+Relation	T15	T9	NoRel	true	producing	turbulence
+Relation	T16	T1	NoRel	true	breaking	accident
+Relation	T16	T15	NoRel	true	breaking	producing
+Relation	T16	T19	NoRel	true	breaking	winds
+Relation	T17	T10	NoRel	true	flying	failed
+Relation	T17	T18	NoRel	true	flying	trip
+Relation	T17	T20	NoRel	true	flying	prevent
+Relation	T17	T4	NoRel	true	flying	accident
+Relation	T17	T7	NoRel	true	flying	disregarding
+Relation	T18	T10	NoRel	true	trip	failed
+Relation	T18	T16	NoRel	true	trip	breaking
+Relation	T18	T2	NoRel	true	trip	released
+Relation	T18	T21	NoRel	true	trip	spinning
+Relation	T18	T6	NoRel	true	trip	flying
+Relation	T19	T10	NoRel	true	winds	failed
+Relation	T19	T13	NoRel	true	winds	found
+Relation	T19	T15	NoRel	true	winds	producing
+Relation	T19	T16	NoRel	true	winds	breaking
+Relation	T19	T4	NoRel	true	winds	accident
+Relation	T2	T13	NoRel	true	released	found
+Relation	T2	T15	NoRel	true	released	producing
+Relation	T2	T22	NoRel	true	released	crashed
+Relation	T2	T4	NoRel	true	released	accident
+Relation	T20	T22	NoRel	true	prevent	crashed
+Relation	T21	T1	NoRel	true	spinning	accident
+Relation	T21	T13	NoRel	true	spinning	found
+Relation	T21	T16	NoRel	true	spinning	breaking
+Relation	T21	T17	NoRel	true	spinning	flying
+Relation	T22	T4	NoRel	true	crashed	accident
+Relation	T4	T21	NoRel	true	accident	spinning
+Relation	T4	T7	NoRel	true	accident	disregarding
+Relation	T5	T12	NoRel	true	caused	stalling
+Relation	T5	T15	NoRel	true	caused	producing
+Relation	T5	T17	NoRel	true	caused	flying
+Relation	T6	T11	NoRel	true	flying	control
+Relation	T6	T12	NoRel	true	flying	stalling
+Relation	T6	T18	NoRel	true	flying	trip
+Relation	T6	T21	NoRel	true	flying	spinning
+Relation	T6	T5	NoRel	true	flying	caused
+Relation	T7	T20	NoRel	true	disregarding	prevent
+Relation	T7	T5	NoRel	true	disregarding	caused
+Relation	T7	T6	NoRel	true	disregarding	flying
+Relation	T8	T0	NoRel	true	failed	report
+Relation	T8	T10	NoRel	true	failed	failed
+Relation	T8	T3	NoRel	true	failed	indicated
+Relation	T8	T5	NoRel	true	failed	caused
+Relation	T8	T9	NoRel	true	failed	turbulence
+Relation	T9	T19	NoRel	true	turbulence	winds

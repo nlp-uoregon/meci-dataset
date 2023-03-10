@@ -1,0 +1,65 @@
+Text	Obrenovac'te yer alan ve ülkenin % 50'sinin elektriğini sağlayan Nikola Tesla Elektrik Santrali kum torbaları ve oluşturulan setler ile sel sularından korundu .	Birkaç küçük nehrin yer aldığı ve dağlar arasında bir vadide kurulan Maçva İlçesi'nin Krupanj kasabasında sel ve toprak kaymaları nedeniyle 500 hâne ciddi hasar gördü ve 20 tanesi oturulamaz hâle geldi .	Valjevo şehrine bağlı Rebelj köyü , heyelanlar nedeniyle haritadan silindi .	Hırvatistan , Sırbistan ve Bosna - Hersek'e göre sellerden daha az ölçüde etkilendi .	En ciddi hasar güney Slavonya bölgesinde meydana geldi .
+Event	T0	korundu	EVENT	151
+Event	T1	sel	EVENT	267
+Event	T2	kaymaları	EVENT	281
+Event	T3	gördü	EVENT	322
+Event	T4	geldi	EVENT	357
+Event	T5	heyelanlar	EVENT	401
+Event	T6	silindi	EVENT	432
+Event	T7	etkilendi	EVENT	516
+Event	T8	hasar	EVENT	537
+Event	T9	geldi	EVENT	577
+Event	T10	setler	EVENT	125
+Event	T11	sellerden	EVENT	491
+Relation	T10	T0	CauseEffect	true	setler	korundu
+Relation	T0	T10	EffectCause	true	korundu	setler
+Relation	T1	T3	CauseEffect	true	sel	gördü
+Relation	T3	T1	EffectCause	true	gördü	sel
+Relation	T1	T2	CauseEffect	true	sel	kaymaları
+Relation	T2	T1	EffectCause	true	kaymaları	sel
+Relation	T2	T3	CauseEffect	true	kaymaları	gördü
+Relation	T3	T2	EffectCause	true	gördü	kaymaları
+Relation	T3	T4	CauseEffect	true	gördü	geldi
+Relation	T4	T3	EffectCause	true	geldi	gördü
+Relation	T5	T6	CauseEffect	true	heyelanlar	silindi
+Relation	T6	T5	EffectCause	true	silindi	heyelanlar
+Relation	T0	T3	NoRel	true	korundu	gördü
+Relation	T0	T4	NoRel	true	korundu	geldi
+Relation	T0	T5	NoRel	true	korundu	heyelanlar
+Relation	T0	T9	NoRel	true	korundu	geldi
+Relation	T1	T6	NoRel	true	sel	silindi
+Relation	T10	T11	NoRel	true	setler	sellerden
+Relation	T10	T4	NoRel	true	setler	geldi
+Relation	T10	T5	NoRel	true	setler	heyelanlar
+Relation	T10	T7	NoRel	true	setler	etkilendi
+Relation	T11	T10	NoRel	true	sellerden	setler
+Relation	T11	T3	NoRel	true	sellerden	gördü
+Relation	T11	T4	NoRel	true	sellerden	geldi
+Relation	T11	T5	NoRel	true	sellerden	heyelanlar
+Relation	T11	T8	NoRel	true	sellerden	hasar
+Relation	T11	T9	NoRel	true	sellerden	geldi
+Relation	T2	T10	NoRel	true	kaymaları	setler
+Relation	T2	T6	NoRel	true	kaymaları	silindi
+Relation	T3	T7	NoRel	true	gördü	etkilendi
+Relation	T3	T9	NoRel	true	gördü	geldi
+Relation	T4	T1	NoRel	true	geldi	sel
+Relation	T4	T11	NoRel	true	geldi	sellerden
+Relation	T4	T6	NoRel	true	geldi	silindi
+Relation	T4	T8	NoRel	true	geldi	hasar
+Relation	T5	T8	NoRel	true	heyelanlar	hasar
+Relation	T6	T7	NoRel	true	silindi	etkilendi
+Relation	T6	T9	NoRel	true	silindi	geldi
+Relation	T7	T1	NoRel	true	etkilendi	sel
+Relation	T7	T11	NoRel	true	etkilendi	sellerden
+Relation	T7	T3	NoRel	true	etkilendi	gördü
+Relation	T7	T5	NoRel	true	etkilendi	heyelanlar
+Relation	T7	T9	NoRel	true	etkilendi	geldi
+Relation	T8	T11	NoRel	true	hasar	sellerden
+Relation	T8	T3	NoRel	true	hasar	gördü
+Relation	T8	T5	NoRel	true	hasar	heyelanlar
+Relation	T8	T7	NoRel	true	hasar	etkilendi
+Relation	T9	T0	NoRel	true	geldi	korundu
+Relation	T9	T10	NoRel	true	geldi	setler
+Relation	T9	T3	NoRel	true	geldi	gördü
+Relation	T9	T6	NoRel	true	geldi	silindi
+Relation	T9	T8	NoRel	true	geldi	hasar

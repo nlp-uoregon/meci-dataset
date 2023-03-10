@@ -1,0 +1,62 @@
+Text	Kuvvetli yer hareketi depremin dış merkezinden 360 km ( 220 mil ) uzaktaki Las Vegas'ta da hissedilmiştir .	Rinaldi istasyonunda kaydedilen 183 cm / s'lik ( 6.59 km / saat veya 4.09 mil / saat ) değer o zamana kadar kaydedilmiş en hızlı pik yer hızı ( PGV ) değeridir .	Depremde 57 kişi hayatını kaybetmiş , 8700'den fazla kişi yaralanmıştır .	Tahminlere göre 20 milyar $'lık hasara neden olan deprem bu nedenle ABD tarihinde en fazla zarara neden olan doğal afetlerden biri olmuştur .	Deprem Los Angeles şehir merkezinin 31 km ( 20 mil ) kuzeybatısındaki San Fernando Vadisi'nde , Northridge bölgesinin yakınlarında meydana gelmiştir .
+Event	T1	hissedilmiştir	EVENT	91
+Event	T2	kaydedilen	EVENT	129
+Event	T3	kaydedilmiş	EVENT	216
+Event	T4	Depremde	EVENT	270
+Event	T5	kaybetmiş	EVENT	296
+Event	T6	yaralanmıştır	EVENT	328
+Event	T7	deprem	EVENT	394
+Event	T9	Deprem	EVENT	486
+Event	T10	gelmiştir	EVENT	625
+Event	T11	hareketi	EVENT	13
+Event	T12	olan	EVENT	389
+Event	T8	olmuştur	EVENT	475
+Relation	T11	T1	CauseEffect	true	hareketi	hissedilmiştir
+Relation	T1	T11	EffectCause	true	hissedilmiştir	hareketi
+Relation	T12	T8	CauseEffect	true	olan	olmuştur
+Relation	T8	T12	EffectCause	true	olmuştur	olan
+Relation	T1	T12	NoRel	true	hissedilmiştir	olan
+Relation	T1	T3	NoRel	true	hissedilmiştir	kaydedilmiş
+Relation	T1	T5	NoRel	true	hissedilmiştir	kaybetmiş
+Relation	T1	T6	NoRel	true	hissedilmiştir	yaralanmıştır
+Relation	T10	T6	NoRel	true	gelmiştir	yaralanmıştır
+Relation	T10	T8	NoRel	true	gelmiştir	olmuştur
+Relation	T11	T2	NoRel	true	hareketi	kaydedilen
+Relation	T11	T4	NoRel	true	hareketi	Depremde
+Relation	T11	T6	NoRel	true	hareketi	yaralanmıştır
+Relation	T12	T10	NoRel	true	olan	gelmiştir
+Relation	T12	T5	NoRel	true	olan	kaybetmiş
+Relation	T2	T11	NoRel	true	kaydedilen	hareketi
+Relation	T2	T7	NoRel	true	kaydedilen	deprem
+Relation	T2	T8	NoRel	true	kaydedilen	olmuştur
+Relation	T2	T9	NoRel	true	kaydedilen	Deprem
+Relation	T3	T1	NoRel	true	kaydedilmiş	hissedilmiştir
+Relation	T3	T10	NoRel	true	kaydedilmiş	gelmiştir
+Relation	T3	T11	NoRel	true	kaydedilmiş	hareketi
+Relation	T3	T2	NoRel	true	kaydedilmiş	kaydedilen
+Relation	T3	T4	NoRel	true	kaydedilmiş	Depremde
+Relation	T3	T5	NoRel	true	kaydedilmiş	kaybetmiş
+Relation	T3	T8	NoRel	true	kaydedilmiş	olmuştur
+Relation	T4	T2	NoRel	true	Depremde	kaydedilen
+Relation	T4	T5	NoRel	true	Depremde	kaybetmiş
+Relation	T4	T7	NoRel	true	Depremde	deprem
+Relation	T4	T8	NoRel	true	Depremde	olmuştur
+Relation	T5	T1	NoRel	true	kaybetmiş	hissedilmiştir
+Relation	T5	T2	NoRel	true	kaybetmiş	kaydedilen
+Relation	T5	T4	NoRel	true	kaybetmiş	Depremde
+Relation	T5	T9	NoRel	true	kaybetmiş	Deprem
+Relation	T6	T1	NoRel	true	yaralanmıştır	hissedilmiştir
+Relation	T6	T10	NoRel	true	yaralanmıştır	gelmiştir
+Relation	T6	T8	NoRel	true	yaralanmıştır	olmuştur
+Relation	T7	T2	NoRel	true	deprem	kaydedilen
+Relation	T7	T6	NoRel	true	deprem	yaralanmıştır
+Relation	T7	T9	NoRel	true	deprem	Deprem
+Relation	T8	T2	NoRel	true	olmuştur	kaydedilen
+Relation	T8	T5	NoRel	true	olmuştur	kaybetmiş
+Relation	T8	T9	NoRel	true	olmuştur	Deprem
+Relation	T9	T10	NoRel	true	Deprem	gelmiştir
+Relation	T9	T12	NoRel	true	Deprem	olan
+Relation	T9	T2	NoRel	true	Deprem	kaydedilen
+Relation	T9	T4	NoRel	true	Deprem	Depremde
+Relation	T9	T5	NoRel	true	Deprem	kaybetmiş
+Relation	T9	T6	NoRel	true	Deprem	yaralanmıştır

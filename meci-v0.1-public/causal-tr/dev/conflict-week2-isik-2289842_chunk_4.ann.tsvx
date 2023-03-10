@@ -1,0 +1,38 @@
+Text	602'deki son isyan , Mauricius'un Balkanlar'daki birliklerini kış boyunca sahada kalmasını emretmesinden kaynaklanıyordu .	Ordu , Trak Centurio olan Phocas'ı imparator ilan etti .	Mauricius , Hipodrom'un iki büyük savaş arabası takımı taraftarını destekleyen Maviler ve Yeşiller'i silahlandırarak Konstantinopolis'u savunmaya çalıştı ancak etkisiz kaldılar .	Mauricius kaçtı ancak kısa sürede Phocas askerleri tarafından yakalandı ve öldürüldü .	küçükresim | sol | 350px | 600 yılında Bizans ve Sasani İmparatorlukları Bizans Mezopotamya valisi Narses , Mauricius'un öldürülmesiyle birlikte , Phocas'a isyan etti ve eyaletin önemli bir şehri olan Edessa'yı ele geçirdi .
+Event	T0	isyan	EVENT	13
+Event	T1	ilan etti	EVENT	168
+Event	T10	emretmesinden	EVENT	91
+Event	T2	silahlandırarak	EVENT	281
+Event	T4	kaçtı	EVENT	369
+Event	T5	yakalandı	EVENT	421
+Event	T6	öldürüldü	EVENT	434
+Event	T7	öldürülmesiyle	EVENT	567
+Relation	T10	T0	CauseEffect	true	emretmesinden	isyan
+Relation	T0	T10	EffectCause	true	isyan	emretmesinden
+Relation	T4	T5	CauseEffect	true	kaçtı	yakalandı
+Relation	T5	T4	EffectCause	true	yakalandı	kaçtı
+Relation	T0	T7	CauseEffect	true	isyan	öldürülmesiyle
+Relation	T7	T0	EffectCause	true	öldürülmesiyle	isyan
+Relation	T0	T5	NoRel	true	isyan	yakalandı
+Relation	T0	T6	NoRel	true	isyan	öldürüldü
+Relation	T1	T4	NoRel	true	ilan etti	kaçtı
+Relation	T1	T6	NoRel	true	ilan etti	öldürüldü
+Relation	T1	T7	NoRel	true	ilan etti	öldürülmesiyle
+Relation	T10	T1	NoRel	true	emretmesinden	ilan etti
+Relation	T2	T0	NoRel	true	silahlandırarak	isyan
+Relation	T2	T1	NoRel	true	silahlandırarak	ilan etti
+Relation	T2	T4	NoRel	true	silahlandırarak	kaçtı
+Relation	T2	T5	NoRel	true	silahlandırarak	yakalandı
+Relation	T4	T10	NoRel	true	kaçtı	emretmesinden
+Relation	T4	T2	NoRel	true	kaçtı	silahlandırarak
+Relation	T5	T0	NoRel	true	yakalandı	isyan
+Relation	T5	T10	NoRel	true	yakalandı	emretmesinden
+Relation	T5	T2	NoRel	true	yakalandı	silahlandırarak
+Relation	T5	T6	NoRel	true	yakalandı	öldürüldü
+Relation	T5	T7	NoRel	true	yakalandı	öldürülmesiyle
+Relation	T6	T4	NoRel	true	öldürüldü	kaçtı
+Relation	T6	T5	NoRel	true	öldürüldü	yakalandı
+Relation	T6	T7	NoRel	true	öldürüldü	öldürülmesiyle
+Relation	T7	T2	NoRel	true	öldürülmesiyle	silahlandırarak
+Relation	T7	T4	NoRel	true	öldürülmesiyle	kaçtı
+Relation	T7	T5	NoRel	true	öldürülmesiyle	yakalandı

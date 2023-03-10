@@ -1,0 +1,17 @@
+Text	اس جہاز میں CFM56 -5B4 /_P انجن چل رہے تھے ، جو حال ہی میں فروری اور مئی 2019 میں انسٹال ہوئے تھے ۔	لینڈنگ گیئر اکتوبر 2014 میں انسٹال کیا گیا تھا ۔	پاکستان انٹرنیشنل ایئرلائن کی پرواز 8303 لاہور علامہ اقبال بین الاقوامی ہوائی اڈے سے 13 : 10 PST پر جناح بین الاقوامی ہوائی اڈا کراچی کے لیے روانہ ہوئی ۔	مبینہ طور پر دونوں انجنوں کی ناکامی کی وجہ سے طیارہ جناح بین الاقوامی ہوائی اڈا کراچی کے قریب رہائشی علاقے پر گر کر تباہ ہوا ۔	شہریت مسافر عملہ کل ----------_-------_-------_--------
+Event	T0	چل	EVENT	32
+Event	T1	گیئر	EVENT	107
+Event	T2	ہوئی	EVENT	296
+Event	T3	ناکامی	EVENT	332
+Event	T4	گر	EVENT	413
+Event	T5	ہوا	EVENT	424
+Relation	T4	T5	CauseEffect	true	گر	ہوا
+Relation	T5	T4	EffectCause	true	ہوا	گر
+Relation	T1	T0	NoRel	true	گیئر	چل
+Relation	T1	T5	NoRel	true	گیئر	ہوا
+Relation	T2	T0	NoRel	true	ہوئی	چل
+Relation	T2	T3	NoRel	true	ہوئی	ناکامی
+Relation	T2	T4	NoRel	true	ہوئی	گر
+Relation	T3	T0	NoRel	true	ناکامی	چل
+Relation	T3	T4	NoRel	true	ناکامی	گر
+Relation	T4	T2	NoRel	true	گر	ہوئی

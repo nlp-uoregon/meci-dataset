@@ -1,0 +1,94 @@
+Text	- February 20 : A Douglas C - 47A ( registration YU - ACB ) operated by JAT Yugoslav Airlines crashed near Belgrade while on a training flight , killing all five crew on board .	- March 8 : Fairways Flight 43 ( a Douglas DC - 3A , registration PI - C948 ) struck Mount Tangcong Vaca en route to Naga from Manila , killing ten of 12 on board .	- March 11 : A Douglas C - 47- DL ( registration HK - 153 ) operated by Avianca crashed on takeoff from Bucaramanga , Colombia ; there were no casualties , but the aircraft was written off .	- March 16 : A Douglas C - 47A ( registration CF - PQG ) operated by the Canada Department of Transport crashed at Blanc Sablon Airport after a loss of control on takeoff ; all nine on board survived , but the aircraft was written off .	- March 18 : A Douglas DC - 3C ( registration N4997E ) operated by Miami Aviation was being ferried from Miami to Manila when it crashed off Clarenville , Newfoundland , Canada after an undetermined emergency , killing both pilots .
+Event	T0	operated	EVENT	60
+Event	T1	crashed	EVENT	94
+Event	T2	flight	EVENT	136
+Event	T3	killing	EVENT	145
+Event	T4	registration	EVENT	231
+Event	T5	struck	EVENT	256
+Event	T6	killing	EVENT	314
+Event	T7	operated	EVENT	403
+Event	T8	takeoff	EVENT	434
+Event	T9	casualties	EVENT	486
+Event	T10	registration	EVENT	567
+Event	T11	operated	EVENT	591
+Event	T12	crashed	EVENT	638
+Event	T13	takeoff	EVENT	697
+Event	T14	survived	EVENT	725
+Event	T15	registration	EVENT	804
+Event	T16	operated	EVENT	826
+Event	T17	ferried	EVENT	863
+Event	T18	emergency	EVENT	970
+Event	T19	killing	EVENT	982
+Event	T20	crashed	EVENT	423
+Event	T21	written off	EVENT	520
+Event	T22	loss	EVENT	678
+Event	T23	written off	EVENT	757
+Event	T24	crashed	EVENT	900
+Relation	T1	T3	CauseEffect	true	crashed	killing
+Relation	T3	T1	EffectCause	true	killing	crashed
+Relation	T5	T6	CauseEffect	true	struck	killing
+Relation	T6	T5	EffectCause	true	killing	struck
+Relation	T20	T9	CauseEffect	true	crashed	casualties
+Relation	T9	T20	EffectCause	true	casualties	crashed
+Relation	T20	T21	CauseEffect	true	crashed	written off
+Relation	T21	T20	EffectCause	true	written off	crashed
+Relation	T22	T12	CauseEffect	true	loss	crashed
+Relation	T12	T22	EffectCause	true	crashed	loss
+Relation	T12	T14	CauseEffect	true	crashed	survived
+Relation	T14	T12	EffectCause	true	survived	crashed
+Relation	T12	T23	CauseEffect	true	crashed	written off
+Relation	T23	T12	EffectCause	true	written off	crashed
+Relation	T24	T19	CauseEffect	true	crashed	killing
+Relation	T19	T24	EffectCause	true	killing	crashed
+Relation	T0	T1	NoRel	true	operated	crashed
+Relation	T0	T16	NoRel	true	operated	operated
+Relation	T0	T23	NoRel	true	operated	written off
+Relation	T0	T3	NoRel	true	operated	killing
+Relation	T1	T13	NoRel	true	crashed	takeoff
+Relation	T10	T20	NoRel	true	registration	crashed
+Relation	T10	T23	NoRel	true	registration	written off
+Relation	T10	T8	NoRel	true	registration	takeoff
+Relation	T11	T0	NoRel	true	operated	operated
+Relation	T11	T15	NoRel	true	operated	registration
+Relation	T11	T5	NoRel	true	operated	struck
+Relation	T12	T11	NoRel	true	crashed	operated
+Relation	T12	T18	NoRel	true	crashed	emergency
+Relation	T12	T21	NoRel	true	crashed	written off
+Relation	T13	T16	NoRel	true	takeoff	operated
+Relation	T13	T20	NoRel	true	takeoff	crashed
+Relation	T13	T7	NoRel	true	takeoff	operated
+Relation	T14	T21	NoRel	true	survived	written off
+Relation	T15	T14	NoRel	true	registration	survived
+Relation	T15	T16	NoRel	true	registration	operated
+Relation	T15	T19	NoRel	true	registration	killing
+Relation	T17	T0	NoRel	true	ferried	operated
+Relation	T17	T19	NoRel	true	ferried	killing
+Relation	T17	T3	NoRel	true	ferried	killing
+Relation	T19	T6	NoRel	true	killing	killing
+Relation	T20	T18	NoRel	true	crashed	emergency
+Relation	T20	T22	NoRel	true	crashed	loss
+Relation	T21	T16	NoRel	true	written off	operated
+Relation	T21	T23	NoRel	true	written off	written off
+Relation	T21	T7	NoRel	true	written off	operated
+Relation	T22	T0	NoRel	true	loss	operated
+Relation	T22	T21	NoRel	true	loss	written off
+Relation	T23	T14	NoRel	true	written off	survived
+Relation	T23	T16	NoRel	true	written off	operated
+Relation	T23	T18	NoRel	true	written off	emergency
+Relation	T24	T23	NoRel	true	crashed	written off
+Relation	T24	T7	NoRel	true	crashed	operated
+Relation	T3	T22	NoRel	true	killing	loss
+Relation	T4	T13	NoRel	true	registration	takeoff
+Relation	T5	T2	NoRel	true	struck	flight
+Relation	T5	T23	NoRel	true	struck	written off
+Relation	T6	T1	NoRel	true	killing	crashed
+Relation	T6	T14	NoRel	true	killing	survived
+Relation	T6	T15	NoRel	true	killing	registration
+Relation	T7	T24	NoRel	true	operated	crashed
+Relation	T8	T1	NoRel	true	takeoff	crashed
+Relation	T8	T11	NoRel	true	takeoff	operated
+Relation	T8	T16	NoRel	true	takeoff	operated
+Relation	T8	T17	NoRel	true	takeoff	ferried
+Relation	T8	T24	NoRel	true	takeoff	crashed
+Relation	T9	T12	NoRel	true	casualties	crashed
+Relation	T9	T2	NoRel	true	casualties	flight

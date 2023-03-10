@@ -1,0 +1,48 @@
+Text	Bazı kişiler enkazı yağmaladıkları gerekçesiyle tutuklandı .	Bağımsız Devletler Topluluğu , Rusya devlet başkanı , Türkiye başbakanı , İran Dış İşleri Bakanı , ABD başkanı , Beyaz Rusya devlet başkanı ve Papa Franciscus başsağlığı diledi .	Cumhurbaşkanı Atambayev 17 Ocak Salı günü Kırgızistan'da ulusal yas ilan etti .	Ayrıca Çin'e yapacağı ziyareti iptal ederek Bişkek'e geri döndü .	Kırgızistan otoriteleri mürettebatın inişi durdurup pas geçmek yerine inmek için kararlı bir girişimde bulunduklarını belirttiler .
+Event	T0	tutuklandı	EVENT	48
+Event	T1	diledi	EVENT	231
+Event	T2	etti	EVENT	313
+Event	T3	döndü	EVENT	378
+Event	T4	geçmek	EVENT	442
+Event	T5	inmek	EVENT	456
+Event	T6	yağmaladıkları	EVENT	20
+Event	T7	enkazı	EVENT	13
+Event	T8	iptal	EVENT	351
+Event	T9	belirttiler	EVENT	504
+Relation	T6	T0	CauseEffect	true	yağmaladıkları	tutuklandı
+Relation	T0	T6	EffectCause	true	tutuklandı	yağmaladıkları
+Relation	T8	T3	CauseEffect	true	iptal	döndü
+Relation	T3	T8	EffectCause	true	döndü	iptal
+Relation	T0	T2	NoRel	true	tutuklandı	etti
+Relation	T0	T3	NoRel	true	tutuklandı	döndü
+Relation	T0	T8	NoRel	true	tutuklandı	iptal
+Relation	T0	T9	NoRel	true	tutuklandı	belirttiler
+Relation	T1	T9	NoRel	true	diledi	belirttiler
+Relation	T2	T1	NoRel	true	etti	diledi
+Relation	T2	T6	NoRel	true	etti	yağmaladıkları
+Relation	T2	T7	NoRel	true	etti	enkazı
+Relation	T2	T8	NoRel	true	etti	iptal
+Relation	T2	T9	NoRel	true	etti	belirttiler
+Relation	T3	T0	NoRel	true	döndü	tutuklandı
+Relation	T4	T0	NoRel	true	geçmek	tutuklandı
+Relation	T4	T3	NoRel	true	geçmek	döndü
+Relation	T4	T5	NoRel	true	geçmek	inmek
+Relation	T4	T7	NoRel	true	geçmek	enkazı
+Relation	T4	T8	NoRel	true	geçmek	iptal
+Relation	T5	T1	NoRel	true	inmek	diledi
+Relation	T5	T7	NoRel	true	inmek	enkazı
+Relation	T5	T9	NoRel	true	inmek	belirttiler
+Relation	T6	T1	NoRel	true	yağmaladıkları	diledi
+Relation	T6	T2	NoRel	true	yağmaladıkları	etti
+Relation	T6	T3	NoRel	true	yağmaladıkları	döndü
+Relation	T7	T0	NoRel	true	enkazı	tutuklandı
+Relation	T7	T2	NoRel	true	enkazı	etti
+Relation	T7	T3	NoRel	true	enkazı	döndü
+Relation	T7	T4	NoRel	true	enkazı	geçmek
+Relation	T7	T6	NoRel	true	enkazı	yağmaladıkları
+Relation	T7	T9	NoRel	true	enkazı	belirttiler
+Relation	T8	T6	NoRel	true	iptal	yağmaladıkları
+Relation	T9	T0	NoRel	true	belirttiler	tutuklandı
+Relation	T9	T1	NoRel	true	belirttiler	diledi
+Relation	T9	T4	NoRel	true	belirttiler	geçmek
+Relation	T9	T7	NoRel	true	belirttiler	enkazı

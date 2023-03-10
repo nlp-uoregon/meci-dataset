@@ -1,0 +1,187 @@
+Text	I_lighed med Ramlyng havde personen været på skiferie i Norditalien men var kommet hjem allerede den 15. februar .	Først den 27. februar havde personen henvendt sig til egen læge , der henviste til undersøgelse på Rigshospitalet , hvor den positive test for SARS-CoV-2 blev udført .	Den fjerde rapport om et dansk tilfælde gjaldt en person , der havde haft kontakt til patienten fra den anden rapport .	Der var tale om en medarbejder på Aarhus Universitetshospital som øjensynligt var smittet i forbindelse med en konference i München .	Medarbejderen havde været i tæt kontakt med en italiener på konferencen , og da medarbejderen fik oplysninger om , at italieneren var testet positiv for SARS-CoV-2 , satte medarbejderen sig selv i karantæne .
+Event	T0	kommet	EVENT	76
+Event	T1	henvendt	EVENT	152
+Event	T2	henviste	EVENT	185
+Event	T3	undersøgelse	EVENT	198
+Event	T4	test	EVENT	249
+Event	T5	udført	EVENT	274
+Event	T6	gjaldt	EVENT	323
+Event	T7	kontakt	EVENT	357
+Event	T8	tale	EVENT	411
+Event	T9	smittet	EVENT	485
+Event	T10	konference	EVENT	514
+Event	T11	kontakt	EVENT	569
+Event	T12	satte	EVENT	703
+Event	T13	karantæne	EVENT	734
+Event	T14	skiferie	EVENT	45
+Event	T15	SARS-CoV-2	EVENT	258
+Event	T16	tilfælde	EVENT	314
+Event	T17	fjerde rapport	EVENT	287
+Event	T18	anden rapport	EVENT	387
+Event	T19	oplysninger	EVENT	635
+Event	T20	positiv	EVENT	678
+Event	T21	SARS-CoV-2	EVENT	690
+Relation	T7	T17	CauseEffect	true	kontakt	fjerde rapport
+Relation	T17	T7	EffectCause	true	fjerde rapport	kontakt
+Relation	T10	T9	CauseEffect	true	konference	smittet
+Relation	T9	T10	EffectCause	true	smittet	konference
+Relation	T19	T13	CauseEffect	true	oplysninger	karantæne
+Relation	T13	T19	EffectCause	true	karantæne	oplysninger
+Relation	T11	T9	CauseEffect	true	kontakt	smittet
+Relation	T9	T11	EffectCause	true	smittet	kontakt
+Relation	T0	T1	NoRel	true	kommet	henvendt
+Relation	T0	T18	NoRel	true	kommet	anden rapport
+Relation	T0	T20	NoRel	true	kommet	positiv
+Relation	T0	T21	NoRel	true	kommet	SARS-CoV-2
+Relation	T0	T4	NoRel	true	kommet	test
+Relation	T0	T7	NoRel	true	kommet	kontakt
+Relation	T1	T11	NoRel	true	henvendt	kontakt
+Relation	T1	T16	NoRel	true	henvendt	tilfælde
+Relation	T1	T18	NoRel	true	henvendt	anden rapport
+Relation	T1	T19	NoRel	true	henvendt	oplysninger
+Relation	T1	T2	NoRel	true	henvendt	henviste
+Relation	T1	T7	NoRel	true	henvendt	kontakt
+Relation	T1	T8	NoRel	true	henvendt	tale
+Relation	T1	T9	NoRel	true	henvendt	smittet
+Relation	T10	T14	NoRel	true	konference	skiferie
+Relation	T10	T17	NoRel	true	konference	fjerde rapport
+Relation	T10	T19	NoRel	true	konference	oplysninger
+Relation	T10	T2	NoRel	true	konference	henviste
+Relation	T10	T20	NoRel	true	konference	positiv
+Relation	T10	T4	NoRel	true	konference	test
+Relation	T10	T7	NoRel	true	konference	kontakt
+Relation	T10	T8	NoRel	true	konference	tale
+Relation	T11	T1	NoRel	true	kontakt	henvendt
+Relation	T11	T14	NoRel	true	kontakt	skiferie
+Relation	T11	T15	NoRel	true	kontakt	SARS-CoV-2
+Relation	T11	T16	NoRel	true	kontakt	tilfælde
+Relation	T11	T21	NoRel	true	kontakt	SARS-CoV-2
+Relation	T11	T6	NoRel	true	kontakt	gjaldt
+Relation	T12	T0	NoRel	true	satte	kommet
+Relation	T12	T17	NoRel	true	satte	fjerde rapport
+Relation	T12	T2	NoRel	true	satte	henviste
+Relation	T12	T20	NoRel	true	satte	positiv
+Relation	T12	T6	NoRel	true	satte	gjaldt
+Relation	T12	T7	NoRel	true	satte	kontakt
+Relation	T12	T9	NoRel	true	satte	smittet
+Relation	T13	T12	NoRel	true	karantæne	satte
+Relation	T13	T15	NoRel	true	karantæne	SARS-CoV-2
+Relation	T13	T17	NoRel	true	karantæne	fjerde rapport
+Relation	T13	T18	NoRel	true	karantæne	anden rapport
+Relation	T13	T2	NoRel	true	karantæne	henviste
+Relation	T13	T21	NoRel	true	karantæne	SARS-CoV-2
+Relation	T13	T4	NoRel	true	karantæne	test
+Relation	T13	T5	NoRel	true	karantæne	udført
+Relation	T13	T9	NoRel	true	karantæne	smittet
+Relation	T14	T1	NoRel	true	skiferie	henvendt
+Relation	T14	T11	NoRel	true	skiferie	kontakt
+Relation	T14	T12	NoRel	true	skiferie	satte
+Relation	T14	T13	NoRel	true	skiferie	karantæne
+Relation	T14	T18	NoRel	true	skiferie	anden rapport
+Relation	T14	T4	NoRel	true	skiferie	test
+Relation	T14	T7	NoRel	true	skiferie	kontakt
+Relation	T14	T8	NoRel	true	skiferie	tale
+Relation	T14	T9	NoRel	true	skiferie	smittet
+Relation	T15	T11	NoRel	true	SARS-CoV-2	kontakt
+Relation	T15	T12	NoRel	true	SARS-CoV-2	satte
+Relation	T15	T14	NoRel	true	SARS-CoV-2	skiferie
+Relation	T15	T20	NoRel	true	SARS-CoV-2	positiv
+Relation	T16	T1	NoRel	true	tilfælde	henvendt
+Relation	T16	T11	NoRel	true	tilfælde	kontakt
+Relation	T16	T17	NoRel	true	tilfælde	fjerde rapport
+Relation	T16	T4	NoRel	true	tilfælde	test
+Relation	T16	T5	NoRel	true	tilfælde	udført
+Relation	T16	T6	NoRel	true	tilfælde	gjaldt
+Relation	T16	T8	NoRel	true	tilfælde	tale
+Relation	T16	T9	NoRel	true	tilfælde	smittet
+Relation	T17	T11	NoRel	true	fjerde rapport	kontakt
+Relation	T17	T13	NoRel	true	fjerde rapport	karantæne
+Relation	T17	T16	NoRel	true	fjerde rapport	tilfælde
+Relation	T17	T18	NoRel	true	fjerde rapport	anden rapport
+Relation	T17	T19	NoRel	true	fjerde rapport	oplysninger
+Relation	T17	T3	NoRel	true	fjerde rapport	undersøgelse
+Relation	T17	T5	NoRel	true	fjerde rapport	udført
+Relation	T17	T8	NoRel	true	fjerde rapport	tale
+Relation	T18	T11	NoRel	true	anden rapport	kontakt
+Relation	T18	T13	NoRel	true	anden rapport	karantæne
+Relation	T18	T14	NoRel	true	anden rapport	skiferie
+Relation	T18	T15	NoRel	true	anden rapport	SARS-CoV-2
+Relation	T18	T17	NoRel	true	anden rapport	fjerde rapport
+Relation	T18	T2	NoRel	true	anden rapport	henviste
+Relation	T18	T6	NoRel	true	anden rapport	gjaldt
+Relation	T19	T11	NoRel	true	oplysninger	kontakt
+Relation	T19	T15	NoRel	true	oplysninger	SARS-CoV-2
+Relation	T19	T18	NoRel	true	oplysninger	anden rapport
+Relation	T19	T2	NoRel	true	oplysninger	henviste
+Relation	T19	T20	NoRel	true	oplysninger	positiv
+Relation	T19	T7	NoRel	true	oplysninger	kontakt
+Relation	T2	T1	NoRel	true	henviste	henvendt
+Relation	T2	T11	NoRel	true	henviste	kontakt
+Relation	T2	T13	NoRel	true	henviste	karantæne
+Relation	T2	T17	NoRel	true	henviste	fjerde rapport
+Relation	T2	T20	NoRel	true	henviste	positiv
+Relation	T20	T10	NoRel	true	positiv	konference
+Relation	T20	T12	NoRel	true	positiv	satte
+Relation	T20	T13	NoRel	true	positiv	karantæne
+Relation	T20	T21	NoRel	true	positiv	SARS-CoV-2
+Relation	T20	T4	NoRel	true	positiv	test
+Relation	T20	T6	NoRel	true	positiv	gjaldt
+Relation	T20	T8	NoRel	true	positiv	tale
+Relation	T21	T1	NoRel	true	SARS-CoV-2	henvendt
+Relation	T21	T10	NoRel	true	SARS-CoV-2	konference
+Relation	T21	T13	NoRel	true	SARS-CoV-2	karantæne
+Relation	T21	T14	NoRel	true	SARS-CoV-2	skiferie
+Relation	T21	T15	NoRel	true	SARS-CoV-2	SARS-CoV-2
+Relation	T21	T17	NoRel	true	SARS-CoV-2	fjerde rapport
+Relation	T21	T18	NoRel	true	SARS-CoV-2	anden rapport
+Relation	T21	T20	NoRel	true	SARS-CoV-2	positiv
+Relation	T21	T4	NoRel	true	SARS-CoV-2	test
+Relation	T21	T5	NoRel	true	SARS-CoV-2	udført
+Relation	T21	T7	NoRel	true	SARS-CoV-2	kontakt
+Relation	T3	T14	NoRel	true	undersøgelse	skiferie
+Relation	T3	T15	NoRel	true	undersøgelse	SARS-CoV-2
+Relation	T3	T17	NoRel	true	undersøgelse	fjerde rapport
+Relation	T3	T18	NoRel	true	undersøgelse	anden rapport
+Relation	T3	T5	NoRel	true	undersøgelse	udført
+Relation	T3	T6	NoRel	true	undersøgelse	gjaldt
+Relation	T3	T7	NoRel	true	undersøgelse	kontakt
+Relation	T4	T0	NoRel	true	test	kommet
+Relation	T4	T15	NoRel	true	test	SARS-CoV-2
+Relation	T4	T2	NoRel	true	test	henviste
+Relation	T4	T21	NoRel	true	test	SARS-CoV-2
+Relation	T4	T9	NoRel	true	test	smittet
+Relation	T5	T1	NoRel	true	udført	henvendt
+Relation	T5	T10	NoRel	true	udført	konference
+Relation	T5	T12	NoRel	true	udført	satte
+Relation	T5	T18	NoRel	true	udført	anden rapport
+Relation	T5	T19	NoRel	true	udført	oplysninger
+Relation	T5	T20	NoRel	true	udført	positiv
+Relation	T5	T4	NoRel	true	udført	test
+Relation	T5	T6	NoRel	true	udført	gjaldt
+Relation	T5	T7	NoRel	true	udført	kontakt
+Relation	T6	T12	NoRel	true	gjaldt	satte
+Relation	T6	T14	NoRel	true	gjaldt	skiferie
+Relation	T6	T17	NoRel	true	gjaldt	fjerde rapport
+Relation	T6	T18	NoRel	true	gjaldt	anden rapport
+Relation	T6	T19	NoRel	true	gjaldt	oplysninger
+Relation	T6	T21	NoRel	true	gjaldt	SARS-CoV-2
+Relation	T6	T7	NoRel	true	gjaldt	kontakt
+Relation	T6	T8	NoRel	true	gjaldt	tale
+Relation	T7	T0	NoRel	true	kontakt	kommet
+Relation	T7	T1	NoRel	true	kontakt	henvendt
+Relation	T7	T19	NoRel	true	kontakt	oplysninger
+Relation	T7	T2	NoRel	true	kontakt	henviste
+Relation	T7	T3	NoRel	true	kontakt	undersøgelse
+Relation	T7	T8	NoRel	true	kontakt	tale
+Relation	T8	T0	NoRel	true	tale	kommet
+Relation	T8	T10	NoRel	true	tale	konference
+Relation	T8	T11	NoRel	true	tale	kontakt
+Relation	T8	T13	NoRel	true	tale	karantæne
+Relation	T8	T15	NoRel	true	tale	SARS-CoV-2
+Relation	T8	T17	NoRel	true	tale	fjerde rapport
+Relation	T9	T12	NoRel	true	smittet	satte
+Relation	T9	T13	NoRel	true	smittet	karantæne
+Relation	T9	T21	NoRel	true	smittet	SARS-CoV-2
+Relation	T9	T3	NoRel	true	smittet	undersøgelse
+Relation	T9	T6	NoRel	true	smittet	gjaldt
+Relation	T9	T8	NoRel	true	smittet	tale

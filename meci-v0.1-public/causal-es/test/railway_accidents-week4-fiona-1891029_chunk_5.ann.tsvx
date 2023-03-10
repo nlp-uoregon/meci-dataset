@@ -1,0 +1,72 @@
+Text	El evento fue operacionalmente identificado como el " Incidente de Chatsworth " y fue reclasificado como un " incidente de gran número de fallecidos .	" Todas los seis helicópteros del Departamento de Bomberos de Los Ángeles fueron llamadas , al igual que otros seis helicópteros del Departamento de Bomberos del Condado de Los Ángeles y Departamento del Sheriff del Condado de Los Ángeles .	Los helicópteros fueron solicitados en virtud de un arreglo de ayuda mutua .	[ Bomberos y trabajadores tratando de encontrar víctimas y heridos después de que el tren de cercanías Metrolink y el tren de mercancías Union Pacific chocaran .	] Veinte y cuatro cuerpos fueron recuperados en el lugar de la escena , y una víctima que había sido rescatada viva murió poco después cerca del hospital .
+Event	T0	evento	EVENT	3
+Event	T1	identificado	EVENT	31
+Event	T2	Incidente	EVENT	54
+Event	T3	reclasificado	EVENT	86
+Event	T4	incidente	EVENT	110
+Event	T5	fallecidos	EVENT	138
+Event	T6	llamadas	EVENT	232
+Event	T7	solicitados	EVENT	416
+Event	T8	arreglo	EVENT	444
+Event	T9	tratando	EVENT	495
+Event	T10	heridos	EVENT	528
+Event	T11	chocaran	EVENT	620
+Event	T12	recuperados	EVENT	664
+Event	T13	murió	EVENT	747
+Relation	T11	T12	CauseEffect	true	chocaran	recuperados
+Relation	T12	T11	EffectCause	true	recuperados	chocaran
+Relation	T0	T1	NoRel	true	evento	identificado
+Relation	T0	T13	NoRel	true	evento	murió
+Relation	T0	T2	NoRel	true	evento	Incidente
+Relation	T1	T10	NoRel	true	identificado	heridos
+Relation	T1	T11	NoRel	true	identificado	chocaran
+Relation	T1	T13	NoRel	true	identificado	murió
+Relation	T10	T0	NoRel	true	heridos	evento
+Relation	T10	T1	NoRel	true	heridos	identificado
+Relation	T10	T2	NoRel	true	heridos	Incidente
+Relation	T10	T9	NoRel	true	heridos	tratando
+Relation	T11	T10	NoRel	true	chocaran	heridos
+Relation	T11	T4	NoRel	true	chocaran	incidente
+Relation	T11	T5	NoRel	true	chocaran	fallecidos
+Relation	T11	T7	NoRel	true	chocaran	solicitados
+Relation	T12	T0	NoRel	true	recuperados	evento
+Relation	T12	T7	NoRel	true	recuperados	solicitados
+Relation	T13	T1	NoRel	true	murió	identificado
+Relation	T13	T11	NoRel	true	murió	chocaran
+Relation	T13	T2	NoRel	true	murió	Incidente
+Relation	T13	T4	NoRel	true	murió	incidente
+Relation	T13	T6	NoRel	true	murió	llamadas
+Relation	T3	T5	NoRel	true	reclasificado	fallecidos
+Relation	T3	T6	NoRel	true	reclasificado	llamadas
+Relation	T3	T9	NoRel	true	reclasificado	tratando
+Relation	T4	T1	NoRel	true	incidente	identificado
+Relation	T4	T10	NoRel	true	incidente	heridos
+Relation	T4	T11	NoRel	true	incidente	chocaran
+Relation	T4	T12	NoRel	true	incidente	recuperados
+Relation	T4	T13	NoRel	true	incidente	murió
+Relation	T4	T6	NoRel	true	incidente	llamadas
+Relation	T4	T7	NoRel	true	incidente	solicitados
+Relation	T4	T8	NoRel	true	incidente	arreglo
+Relation	T5	T11	NoRel	true	fallecidos	chocaran
+Relation	T5	T13	NoRel	true	fallecidos	murió
+Relation	T5	T2	NoRel	true	fallecidos	Incidente
+Relation	T6	T1	NoRel	true	llamadas	identificado
+Relation	T6	T13	NoRel	true	llamadas	murió
+Relation	T6	T2	NoRel	true	llamadas	Incidente
+Relation	T6	T9	NoRel	true	llamadas	tratando
+Relation	T7	T10	NoRel	true	solicitados	heridos
+Relation	T7	T11	NoRel	true	solicitados	chocaran
+Relation	T7	T12	NoRel	true	solicitados	recuperados
+Relation	T7	T3	NoRel	true	solicitados	reclasificado
+Relation	T7	T6	NoRel	true	solicitados	llamadas
+Relation	T7	T8	NoRel	true	solicitados	arreglo
+Relation	T8	T10	NoRel	true	arreglo	heridos
+Relation	T8	T4	NoRel	true	arreglo	incidente
+Relation	T8	T7	NoRel	true	arreglo	solicitados
+Relation	T8	T9	NoRel	true	arreglo	tratando
+Relation	T9	T0	NoRel	true	tratando	evento
+Relation	T9	T1	NoRel	true	tratando	identificado
+Relation	T9	T10	NoRel	true	tratando	heridos
+Relation	T9	T11	NoRel	true	tratando	chocaran
+Relation	T9	T2	NoRel	true	tratando	Incidente
+Relation	T9	T4	NoRel	true	tratando	incidente

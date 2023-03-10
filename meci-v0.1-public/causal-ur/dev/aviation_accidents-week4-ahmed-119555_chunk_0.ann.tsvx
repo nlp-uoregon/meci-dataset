@@ -1,0 +1,52 @@
+Text	11 فروری 2014 کو الجزائری ائیر فورس کا ایک لوک ہیڈ سی-130 ہرکولیس جہاز حادثے میں تباہ ہو گیا ۔	حادثہ جبل فرطاس میں پیش آیا ۔	جائے حادثہ عین کرشہ ، صوبہ ام البواقی کے قریب ہے ۔	اس حادثے میں قریبا_ً 77 افراد مارے گئے اور 1 کے زندہ بچ جانے کی اطلاع ہے ۔	جہاز لوک ہیڈ سی -130 ہرکولس طرز کا تھا ، جو ریاستہائے متحدہ میں تیار کیا جاتا ہے ۔
+Event	T0	حادثے	EVENT	71
+Event	T2	حادثہ	EVENT	95
+Event	T4	حادثہ	EVENT	130
+Event	T5	حادثے	EVENT	179
+Event	T8	اطلاع	EVENT	240
+Event	T1	تباہ	EVENT	81
+Event	T3	پیش	EVENT	115
+Event	T9	مارے	EVENT	206
+Event	T6	بچ	EVENT	229
+Event	T7	تیار	EVENT	315
+Relation	T0	T1	CauseEffect	true	حادثے	تباہ
+Relation	T1	T0	EffectCause	true	تباہ	حادثے
+Relation	T1	T9	CauseEffect	true	تباہ	مارے
+Relation	T9	T1	EffectCause	true	مارے	تباہ
+Relation	T2	T1	CauseEffect	true	حادثہ	تباہ
+Relation	T1	T2	EffectCause	true	تباہ	حادثہ
+Relation	T4	T1	CauseEffect	true	حادثہ	تباہ
+Relation	T1	T4	EffectCause	true	تباہ	حادثہ
+Relation	T5	T1	CauseEffect	true	حادثے	تباہ
+Relation	T1	T5	EffectCause	true	تباہ	حادثے
+Relation	T0	T6	NoRel	true	حادثے	بچ
+Relation	T0	T7	NoRel	true	حادثے	تیار
+Relation	T0	T8	NoRel	true	حادثے	اطلاع
+Relation	T1	T6	NoRel	true	تباہ	بچ
+Relation	T1	T7	NoRel	true	تباہ	تیار
+Relation	T2	T0	NoRel	true	حادثہ	حادثے
+Relation	T2	T4	NoRel	true	حادثہ	حادثہ
+Relation	T2	T8	NoRel	true	حادثہ	اطلاع
+Relation	T2	T9	NoRel	true	حادثہ	مارے
+Relation	T3	T5	NoRel	true	پیش	حادثے
+Relation	T3	T9	NoRel	true	پیش	مارے
+Relation	T4	T2	NoRel	true	حادثہ	حادثہ
+Relation	T4	T3	NoRel	true	حادثہ	پیش
+Relation	T4	T8	NoRel	true	حادثہ	اطلاع
+Relation	T4	T9	NoRel	true	حادثہ	مارے
+Relation	T5	T0	NoRel	true	حادثے	حادثے
+Relation	T5	T2	NoRel	true	حادثے	حادثہ
+Relation	T5	T8	NoRel	true	حادثے	اطلاع
+Relation	T5	T9	NoRel	true	حادثے	مارے
+Relation	T6	T2	NoRel	true	بچ	حادثہ
+Relation	T7	T0	NoRel	true	تیار	حادثے
+Relation	T7	T8	NoRel	true	تیار	اطلاع
+Relation	T7	T9	NoRel	true	تیار	مارے
+Relation	T8	T0	NoRel	true	اطلاع	حادثے
+Relation	T8	T1	NoRel	true	اطلاع	تباہ
+Relation	T8	T2	NoRel	true	اطلاع	حادثہ
+Relation	T8	T6	NoRel	true	اطلاع	بچ
+Relation	T8	T7	NoRel	true	اطلاع	تیار
+Relation	T9	T4	NoRel	true	مارے	حادثہ
+Relation	T9	T5	NoRel	true	مارے	حادثے
+Relation	T9	T7	NoRel	true	مارے	تیار

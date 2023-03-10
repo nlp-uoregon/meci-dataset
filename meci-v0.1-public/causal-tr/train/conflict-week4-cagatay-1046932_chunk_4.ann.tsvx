@@ -1,0 +1,66 @@
+Text	Kasaba meydanında öldürüldükten sonra Esved'in cansız bedeni bir arabanın arkasına bağlanıp caddelerde sürüklenerek gezdirilmiştir .	" Değersiz olduğu "nu göstermek için de ölü bir köpeğin parçaları ile birlikte gömülmüştür .	Daha sonra hala bakire olup olmadığını anlamak için cesedi gömüldüğü yerden çıkarılarak Musul Adli Tıp Enstitüsüne gönderilmiştir .	Adli Tıp raporuna göre Esved öldüğünde hala bakire idi .	Yapılan otopsi ; kafatası ve omurilik kırılması sonucu öldüğünü ortaya çıkardı .
+Event	T0	öldürüldükten	EVENT	18
+Event	T1	gezdirilmiştir	EVENT	116
+Event	T2	göstermek	EVENT	155
+Event	T3	gömülmüştür	EVENT	212
+Event	T4	gönderilmiştir	EVENT	341
+Event	T5	öldüğünde	EVENT	387
+Event	T6	otopsi	EVENT	423
+Event	T7	çıkardı	EVENT	486
+Event	T8	bağlanıp	EVENT	83
+Event	T9	ölü	EVENT	173
+Event	T10	anlamak	EVENT	265
+Event	T11	gömüldüğü	EVENT	285
+Event	T12	çıkarılarak	EVENT	302
+Relation	T10	T12	CauseEffect	true	anlamak	çıkarılarak
+Relation	T12	T10	EffectCause	true	çıkarılarak	anlamak
+Relation	T2	T3	CauseEffect	true	göstermek	gömülmüştür
+Relation	T3	T2	EffectCause	true	gömülmüştür	göstermek
+Relation	T10	T4	CauseEffect	true	anlamak	gönderilmiştir
+Relation	T4	T10	EffectCause	true	gönderilmiştir	anlamak
+Relation	T5	T6	CauseEffect	true	öldüğünde	otopsi
+Relation	T6	T5	EffectCause	true	otopsi	öldüğünde
+Relation	T0	T5	NoRel	true	öldürüldükten	öldüğünde
+Relation	T0	T7	NoRel	true	öldürüldükten	çıkardı
+Relation	T0	T9	NoRel	true	öldürüldükten	ölü
+Relation	T1	T0	NoRel	true	gezdirilmiştir	öldürüldükten
+Relation	T1	T10	NoRel	true	gezdirilmiştir	anlamak
+Relation	T1	T11	NoRel	true	gezdirilmiştir	gömüldüğü
+Relation	T1	T6	NoRel	true	gezdirilmiştir	otopsi
+Relation	T1	T9	NoRel	true	gezdirilmiştir	ölü
+Relation	T10	T1	NoRel	true	anlamak	gezdirilmiştir
+Relation	T10	T7	NoRel	true	anlamak	çıkardı
+Relation	T10	T8	NoRel	true	anlamak	bağlanıp
+Relation	T11	T12	NoRel	true	gömüldüğü	çıkarılarak
+Relation	T11	T3	NoRel	true	gömüldüğü	gömülmüştür
+Relation	T11	T9	NoRel	true	gömüldüğü	ölü
+Relation	T12	T1	NoRel	true	çıkarılarak	gezdirilmiştir
+Relation	T12	T11	NoRel	true	çıkarılarak	gömüldüğü
+Relation	T12	T3	NoRel	true	çıkarılarak	gömülmüştür
+Relation	T12	T4	NoRel	true	çıkarılarak	gönderilmiştir
+Relation	T12	T8	NoRel	true	çıkarılarak	bağlanıp
+Relation	T2	T0	NoRel	true	göstermek	öldürüldükten
+Relation	T2	T1	NoRel	true	göstermek	gezdirilmiştir
+Relation	T2	T4	NoRel	true	göstermek	gönderilmiştir
+Relation	T2	T5	NoRel	true	göstermek	öldüğünde
+Relation	T2	T7	NoRel	true	göstermek	çıkardı
+Relation	T2	T8	NoRel	true	göstermek	bağlanıp
+Relation	T2	T9	NoRel	true	göstermek	ölü
+Relation	T3	T10	NoRel	true	gömülmüştür	anlamak
+Relation	T3	T12	NoRel	true	gömülmüştür	çıkarılarak
+Relation	T3	T4	NoRel	true	gömülmüştür	gönderilmiştir
+Relation	T3	T6	NoRel	true	gömülmüştür	otopsi
+Relation	T4	T12	NoRel	true	gönderilmiştir	çıkarılarak
+Relation	T4	T6	NoRel	true	gönderilmiştir	otopsi
+Relation	T4	T9	NoRel	true	gönderilmiştir	ölü
+Relation	T5	T10	NoRel	true	öldüğünde	anlamak
+Relation	T5	T4	NoRel	true	öldüğünde	gönderilmiştir
+Relation	T6	T11	NoRel	true	otopsi	gömüldüğü
+Relation	T6	T12	NoRel	true	otopsi	çıkarılarak
+Relation	T7	T0	NoRel	true	çıkardı	öldürüldükten
+Relation	T7	T3	NoRel	true	çıkardı	gömülmüştür
+Relation	T7	T6	NoRel	true	çıkardı	otopsi
+Relation	T7	T9	NoRel	true	çıkardı	ölü
+Relation	T8	T3	NoRel	true	bağlanıp	gömülmüştür
+Relation	T9	T3	NoRel	true	ölü	gömülmüştür
+Relation	T9	T8	NoRel	true	ölü	bağlanıp

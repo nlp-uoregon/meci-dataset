@@ -1,0 +1,104 @@
+Text	Hülagû’nün ordusu ise Moğol kökenliydi ve şamanist geleneklere sahip çıkıyordu .	Moğol İmparatorluğunun kurulmasından çok uzun olmayan bir süre sonra farklı bölgelerde hâkimiyet kuran ve farklı dinleri seçen aynı kökene bağlı hükümdarlar savaşarak Moğol egemenliğinde ilk onarılmaz çatlağı başlatmıştır .	Berke’nin düşmanca varlığı yüzünden tüm kuvvetini Memlûkler üzerine gönderemeyen Hülagû 1260 yılında Ayn Calut Muharebesinde neredeyse tüm ordusunu kaybederek yenilir .	Hülagû 1262 yılındaki Terek Muharebesinde Berke’ye de yenilecek ve devleti zayıflayacaktır .	Moğolların kendi aralarındaki savaşlar sayesinde Avrupa istilası durmuştur .
+Event	T0	kurulmasından	EVENT	104
+Event	T1	savaşarak	EVENT	238
+Event	T2	başlatmıştır	EVENT	290
+Event	T4	yenilir	EVENT	464
+Event	T5	yenilecek	EVENT	528
+Event	T6	durmuştur	EVENT	632
+Event	T7	sahip çıkıyordu	EVENT	63
+Event	T8	kuran	EVENT	178
+Event	T9	seçen	EVENT	202
+Event	T3	gönderemeyen	EVENT	373
+Event	T10	kaybederek	EVENT	453
+Event	T11	Ayn Calut Muharebesinde	EVENT	406
+Event	T12	Terek Muharebesinde	EVENT	496
+Event	T13	savaşlar	EVENT	597
+Event	T14	istilası	EVENT	623
+Relation	T9	T1	CauseEffect	true	seçen	savaşarak
+Relation	T1	T9	EffectCause	true	savaşarak	seçen
+Relation	T1	T2	CauseEffect	true	savaşarak	başlatmıştır
+Relation	T2	T1	EffectCause	true	başlatmıştır	savaşarak
+Relation	T3	T10	CauseEffect	true	gönderemeyen	kaybederek
+Relation	T10	T3	EffectCause	true	kaybederek	gönderemeyen
+Relation	T10	T4	CauseEffect	true	kaybederek	yenilir
+Relation	T4	T10	EffectCause	true	yenilir	kaybederek
+Relation	T10	T5	CauseEffect	true	kaybederek	yenilecek
+Relation	T5	T10	EffectCause	true	yenilecek	kaybederek
+Relation	T13	T6	CauseEffect	true	savaşlar	durmuştur
+Relation	T6	T13	EffectCause	true	durmuştur	savaşlar
+Relation	T0	T1	NoRel	true	kurulmasından	savaşarak
+Relation	T0	T12	NoRel	true	kurulmasından	Terek Muharebesinde
+Relation	T0	T14	NoRel	true	kurulmasından	istilası
+Relation	T0	T4	NoRel	true	kurulmasından	yenilir
+Relation	T0	T6	NoRel	true	kurulmasından	durmuştur
+Relation	T1	T0	NoRel	true	savaşarak	kurulmasından
+Relation	T1	T13	NoRel	true	savaşarak	savaşlar
+Relation	T1	T14	NoRel	true	savaşarak	istilası
+Relation	T10	T1	NoRel	true	kaybederek	savaşarak
+Relation	T10	T12	NoRel	true	kaybederek	Terek Muharebesinde
+Relation	T10	T13	NoRel	true	kaybederek	savaşlar
+Relation	T10	T14	NoRel	true	kaybederek	istilası
+Relation	T10	T7	NoRel	true	kaybederek	sahip çıkıyordu
+Relation	T10	T8	NoRel	true	kaybederek	kuran
+Relation	T11	T1	NoRel	true	Ayn Calut Muharebesinde	savaşarak
+Relation	T11	T12	NoRel	true	Ayn Calut Muharebesinde	Terek Muharebesinde
+Relation	T11	T14	NoRel	true	Ayn Calut Muharebesinde	istilası
+Relation	T11	T3	NoRel	true	Ayn Calut Muharebesinde	gönderemeyen
+Relation	T11	T7	NoRel	true	Ayn Calut Muharebesinde	sahip çıkıyordu
+Relation	T11	T8	NoRel	true	Ayn Calut Muharebesinde	kuran
+Relation	T12	T0	NoRel	true	Terek Muharebesinde	kurulmasından
+Relation	T12	T10	NoRel	true	Terek Muharebesinde	kaybederek
+Relation	T12	T11	NoRel	true	Terek Muharebesinde	Ayn Calut Muharebesinde
+Relation	T12	T5	NoRel	true	Terek Muharebesinde	yenilecek
+Relation	T12	T9	NoRel	true	Terek Muharebesinde	seçen
+Relation	T13	T0	NoRel	true	savaşlar	kurulmasından
+Relation	T13	T11	NoRel	true	savaşlar	Ayn Calut Muharebesinde
+Relation	T13	T2	NoRel	true	savaşlar	başlatmıştır
+Relation	T13	T5	NoRel	true	savaşlar	yenilecek
+Relation	T14	T12	NoRel	true	istilası	Terek Muharebesinde
+Relation	T14	T13	NoRel	true	istilası	savaşlar
+Relation	T14	T2	NoRel	true	istilası	başlatmıştır
+Relation	T14	T3	NoRel	true	istilası	gönderemeyen
+Relation	T14	T9	NoRel	true	istilası	seçen
+Relation	T2	T0	NoRel	true	başlatmıştır	kurulmasından
+Relation	T2	T11	NoRel	true	başlatmıştır	Ayn Calut Muharebesinde
+Relation	T2	T13	NoRel	true	başlatmıştır	savaşlar
+Relation	T2	T14	NoRel	true	başlatmıştır	istilası
+Relation	T2	T4	NoRel	true	başlatmıştır	yenilir
+Relation	T2	T6	NoRel	true	başlatmıştır	durmuştur
+Relation	T3	T0	NoRel	true	gönderemeyen	kurulmasından
+Relation	T3	T12	NoRel	true	gönderemeyen	Terek Muharebesinde
+Relation	T3	T4	NoRel	true	gönderemeyen	yenilir
+Relation	T3	T8	NoRel	true	gönderemeyen	kuran
+Relation	T3	T9	NoRel	true	gönderemeyen	seçen
+Relation	T4	T0	NoRel	true	yenilir	kurulmasından
+Relation	T4	T1	NoRel	true	yenilir	savaşarak
+Relation	T4	T11	NoRel	true	yenilir	Ayn Calut Muharebesinde
+Relation	T4	T12	NoRel	true	yenilir	Terek Muharebesinde
+Relation	T4	T14	NoRel	true	yenilir	istilası
+Relation	T4	T2	NoRel	true	yenilir	başlatmıştır
+Relation	T4	T7	NoRel	true	yenilir	sahip çıkıyordu
+Relation	T4	T8	NoRel	true	yenilir	kuran
+Relation	T5	T0	NoRel	true	yenilecek	kurulmasından
+Relation	T5	T11	NoRel	true	yenilecek	Ayn Calut Muharebesinde
+Relation	T5	T2	NoRel	true	yenilecek	başlatmıştır
+Relation	T5	T3	NoRel	true	yenilecek	gönderemeyen
+Relation	T5	T7	NoRel	true	yenilecek	sahip çıkıyordu
+Relation	T6	T0	NoRel	true	durmuştur	kurulmasından
+Relation	T6	T1	NoRel	true	durmuştur	savaşarak
+Relation	T6	T14	NoRel	true	durmuştur	istilası
+Relation	T6	T2	NoRel	true	durmuştur	başlatmıştır
+Relation	T6	T7	NoRel	true	durmuştur	sahip çıkıyordu
+Relation	T6	T9	NoRel	true	durmuştur	seçen
+Relation	T7	T0	NoRel	true	sahip çıkıyordu	kurulmasından
+Relation	T7	T3	NoRel	true	sahip çıkıyordu	gönderemeyen
+Relation	T7	T4	NoRel	true	sahip çıkıyordu	yenilir
+Relation	T7	T6	NoRel	true	sahip çıkıyordu	durmuştur
+Relation	T8	T0	NoRel	true	kuran	kurulmasından
+Relation	T8	T10	NoRel	true	kuran	kaybederek
+Relation	T8	T11	NoRel	true	kuran	Ayn Calut Muharebesinde
+Relation	T8	T12	NoRel	true	kuran	Terek Muharebesinde
+Relation	T8	T14	NoRel	true	kuran	istilası
+Relation	T8	T2	NoRel	true	kuran	başlatmıştır
+Relation	T8	T5	NoRel	true	kuran	yenilecek
+Relation	T9	T8	NoRel	true	seçen	kuran

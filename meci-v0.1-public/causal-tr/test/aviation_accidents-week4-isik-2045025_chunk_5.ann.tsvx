@@ -1,0 +1,39 @@
+Text	Rus heyetine " altı çizilerek angajman kurallarının en sıkı şekilde uygulanacağı " söylendi .	NATO Genel Sekreteri Jens Stoltenberg , bu sınır ihlâlleri için " pek kaza gibi durmadığını " ve " bir ülkenin hava sahasının ihlal edilmesi kabul edilemeyeceğini " söyledi .	" Türkiye'nin hava sahasının aynı zamanda NATO'nun hava sahası " olduğunu belirtti .	Kasım 2015'in ortalarında ise Türkiye , Bayırbucak bölgesinde Rusya'nın sivil Türkmen köylerine karşı girişilen hava saldırılarına tepki gösterdi .	Bunun için Rusya Federasyonu'nun Ankara Büyükelçisi Andrey Karlov , Türkiye Dışişleri Bakanlığı'na çağrıldı .
+Event	T0	söylendi	EVENT	83
+Event	T1	söyledi	EVENT	259
+Event	T2	belirtti	EVENT	343
+Event	T4	gösterdi	EVENT	491
+Event	T5	çağrıldı	EVENT	601
+Event	T6	ihlâlleri	EVENT	143
+Event	T7	kaza	EVENT	164
+Event	T8	ihlal	EVENT	220
+Event	T9	saldırılarına	EVENT	471
+Relation	T6	T1	CauseEffect	true	ihlâlleri	söyledi
+Relation	T1	T6	EffectCause	true	söyledi	ihlâlleri
+Relation	T6	T2	CauseEffect	true	ihlâlleri	belirtti
+Relation	T2	T6	EffectCause	true	belirtti	ihlâlleri
+Relation	T9	T4	CauseEffect	true	saldırılarına	gösterdi
+Relation	T4	T9	EffectCause	true	gösterdi	saldırılarına
+Relation	T9	T5	CauseEffect	true	saldırılarına	çağrıldı
+Relation	T5	T9	EffectCause	true	çağrıldı	saldırılarına
+Relation	T6	T0	CauseEffect	true	ihlâlleri	söylendi
+Relation	T0	T6	EffectCause	true	söylendi	ihlâlleri
+Relation	T0	T7	NoRel	true	söylendi	kaza
+Relation	T1	T7	NoRel	true	söyledi	kaza
+Relation	T1	T9	NoRel	true	söyledi	saldırılarına
+Relation	T2	T1	NoRel	true	belirtti	söyledi
+Relation	T2	T4	NoRel	true	belirtti	gösterdi
+Relation	T4	T0	NoRel	true	gösterdi	söylendi
+Relation	T4	T5	NoRel	true	gösterdi	çağrıldı
+Relation	T5	T0	NoRel	true	çağrıldı	söylendi
+Relation	T5	T1	NoRel	true	çağrıldı	söyledi
+Relation	T5	T2	NoRel	true	çağrıldı	belirtti
+Relation	T6	T4	NoRel	true	ihlâlleri	gösterdi
+Relation	T6	T5	NoRel	true	ihlâlleri	çağrıldı
+Relation	T7	T1	NoRel	true	kaza	söyledi
+Relation	T8	T1	NoRel	true	ihlal	söyledi
+Relation	T8	T2	NoRel	true	ihlal	belirtti
+Relation	T8	T5	NoRel	true	ihlal	çağrıldı
+Relation	T8	T9	NoRel	true	ihlal	saldırılarına
+Relation	T9	T1	NoRel	true	saldırılarına	söyledi
+Relation	T9	T7	NoRel	true	saldırılarına	kaza

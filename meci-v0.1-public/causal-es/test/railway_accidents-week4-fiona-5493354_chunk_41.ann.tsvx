@@ -1,0 +1,82 @@
+Text	- 1907_____-___25 DE MAYO : en las cercanías de Sabóia , en la Línea del Sur , un descarrilamiento provoca siete muertos y veintiún heridos .	- 1909_____-___25 DE SEPTIEMBRE : Se produce el choque de dos trenes de mercancías en la línea del Duero , resultando heridos dos ferroviarios .	- 17 DE NOVIEMBRE : El Sudexpreso descarrila entren las estaciones de Pinhel y Guarda , resultando heridos leves los dos miembros de la pareja de conducción de la locomotora que remolcaba el convoy .	- 1910 -___19 DE SEPTIEMBRE : En la estación de Senhora da Hora , próxima a Oporto , un tren de recreo que transportaba 400 viajeros que venían de celebrar una romería dscarrila a causa de un doble cambio .	Se producen al menos 70 heridos , la mayoría leves .
+Event	T0	muertos	EVENT	113
+Event	T1	heridos	EVENT	132
+Event	T2	produce	EVENT	179
+Event	T3	choque	EVENT	190
+Event	T4	heridos	EVENT	260
+Event	T5	remolcaba	EVENT	465
+Event	T6	recreo	EVENT	583
+Event	T7	transportaba	EVENT	594
+Event	T8	celebrar	EVENT	634
+Event	T9	dscarrila	EVENT	655
+Event	T10	cambio	EVENT	685
+Event	T11	producen	EVENT	697
+Event	T12	heridos	EVENT	718
+Event	T13	descarrilamiento	EVENT	82
+Relation	T9	T12	CauseEffect	true	dscarrila	heridos
+Relation	T12	T9	EffectCause	true	heridos	dscarrila
+Relation	T10	T9	CauseEffect	true	cambio	dscarrila
+Relation	T9	T10	EffectCause	true	dscarrila	cambio
+Relation	T13	T0	CauseEffect	true	descarrilamiento	muertos
+Relation	T0	T13	EffectCause	true	muertos	descarrilamiento
+Relation	T13	T1	CauseEffect	true	descarrilamiento	heridos
+Relation	T1	T13	EffectCause	true	heridos	descarrilamiento
+Relation	T3	T4	CauseEffect	true	choque	heridos
+Relation	T4	T3	EffectCause	true	heridos	choque
+Relation	T0	T5	NoRel	true	muertos	remolcaba
+Relation	T0	T6	NoRel	true	muertos	recreo
+Relation	T0	T7	NoRel	true	muertos	transportaba
+Relation	T1	T10	NoRel	true	heridos	cambio
+Relation	T1	T12	NoRel	true	heridos	heridos
+Relation	T1	T4	NoRel	true	heridos	heridos
+Relation	T1	T6	NoRel	true	heridos	recreo
+Relation	T10	T0	NoRel	true	cambio	muertos
+Relation	T10	T1	NoRel	true	cambio	heridos
+Relation	T10	T11	NoRel	true	cambio	producen
+Relation	T10	T12	NoRel	true	cambio	heridos
+Relation	T10	T13	NoRel	true	cambio	descarrilamiento
+Relation	T10	T2	NoRel	true	cambio	produce
+Relation	T10	T4	NoRel	true	cambio	heridos
+Relation	T11	T0	NoRel	true	producen	muertos
+Relation	T11	T1	NoRel	true	producen	heridos
+Relation	T11	T13	NoRel	true	producen	descarrilamiento
+Relation	T11	T3	NoRel	true	producen	choque
+Relation	T11	T7	NoRel	true	producen	transportaba
+Relation	T11	T8	NoRel	true	producen	celebrar
+Relation	T12	T10	NoRel	true	heridos	cambio
+Relation	T12	T11	NoRel	true	heridos	producen
+Relation	T12	T13	NoRel	true	heridos	descarrilamiento
+Relation	T12	T8	NoRel	true	heridos	celebrar
+Relation	T13	T2	NoRel	true	descarrilamiento	produce
+Relation	T13	T3	NoRel	true	descarrilamiento	choque
+Relation	T13	T8	NoRel	true	descarrilamiento	celebrar
+Relation	T2	T0	NoRel	true	produce	muertos
+Relation	T2	T3	NoRel	true	produce	choque
+Relation	T2	T7	NoRel	true	produce	transportaba
+Relation	T3	T10	NoRel	true	choque	cambio
+Relation	T3	T5	NoRel	true	choque	remolcaba
+Relation	T3	T7	NoRel	true	choque	transportaba
+Relation	T3	T9	NoRel	true	choque	dscarrila
+Relation	T4	T0	NoRel	true	heridos	muertos
+Relation	T4	T5	NoRel	true	heridos	remolcaba
+Relation	T4	T8	NoRel	true	heridos	celebrar
+Relation	T4	T9	NoRel	true	heridos	dscarrila
+Relation	T5	T0	NoRel	true	remolcaba	muertos
+Relation	T5	T12	NoRel	true	remolcaba	heridos
+Relation	T5	T13	NoRel	true	remolcaba	descarrilamiento
+Relation	T5	T3	NoRel	true	remolcaba	choque
+Relation	T5	T4	NoRel	true	remolcaba	heridos
+Relation	T5	T6	NoRel	true	remolcaba	recreo
+Relation	T5	T8	NoRel	true	remolcaba	celebrar
+Relation	T6	T11	NoRel	true	recreo	producen
+Relation	T6	T2	NoRel	true	recreo	produce
+Relation	T6	T5	NoRel	true	recreo	remolcaba
+Relation	T7	T12	NoRel	true	transportaba	heridos
+Relation	T7	T3	NoRel	true	transportaba	choque
+Relation	T7	T4	NoRel	true	transportaba	heridos
+Relation	T7	T5	NoRel	true	transportaba	remolcaba
+Relation	T8	T0	NoRel	true	celebrar	muertos
+Relation	T8	T6	NoRel	true	celebrar	recreo
+Relation	T9	T1	NoRel	true	dscarrila	heridos
+Relation	T9	T6	NoRel	true	dscarrila	recreo
+Relation	T9	T8	NoRel	true	dscarrila	celebrar

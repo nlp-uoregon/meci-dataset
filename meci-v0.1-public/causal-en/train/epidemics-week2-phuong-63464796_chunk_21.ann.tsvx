@@ -1,0 +1,83 @@
+Text	The season 's poor harvests and hunger in the Spanish population , as well as negligent medical care , likely contributed to the severity of the influenza pandemic in Spain .	Flu symptoms could be so intense that the region 's physicians often distinguished it from other contagious , seasonal pneumonias that spread from East Europe .	Sixteenth century Spaniards frequently referred to any mass outbreak of deadly disease generically as a _ pestilencia _ , and " plagues " are recognized as occurring in Valencia and Granada during the years 1557 – 59 , despite pathological records of true plague ( like descriptions of buboes ) occurring in the area at the time being scant .	Influenza hit the Kingdom of Portugal at the same time as it spread throughout Spain , with an impact that spread across the Atlantic Ocean .	The kingdom had just suffered food shortages due to 1556 - 57 's poor harvest , which would have exacerbated the effects of the flu on hungry patients .
+Event	T0	harvests	EVENT	19
+Event	T1	hunger	EVENT	32
+Event	T10	plague	EVENT	592
+Event	T11	Influenza	EVENT	679
+Event	T12	occurring	EVENT	631
+Event	T13	scant	EVENT	671
+Event	T14	hit	EVENT	689
+Event	T15	spread	EVENT	740
+Event	T16	impact	EVENT	774
+Event	T17	spread	EVENT	786
+Event	T18	suffered	EVENT	842
+Event	T19	harvest	EVENT	891
+Event	T2	pandemic	EVENT	155
+Event	T20	exacerbated	EVENT	918
+Event	T21	effects	EVENT	934
+Event	T22	flu	EVENT	949
+Event	T4	distinguished	EVENT	244
+Event	T5	pneumonias	EVENT	294
+Event	T6	spread	EVENT	310
+Event	T7	outbreak	EVENT	396
+Event	T8	recognized	EVENT	478
+Event	T9	occurring	EVENT	492
+Relation	T0	T2	CauseEffect	true	harvests	pandemic
+Relation	T2	T0	EffectCause	true	pandemic	harvests
+Relation	T1	T2	CauseEffect	true	hunger	pandemic
+Relation	T2	T1	EffectCause	true	pandemic	hunger
+Relation	T7	T8	CauseEffect	true	outbreak	recognized
+Relation	T8	T7	EffectCause	true	recognized	outbreak
+Relation	T11	T17	CauseEffect	true	Influenza	spread
+Relation	T17	T11	EffectCause	true	spread	Influenza
+Relation	T19	T20	CauseEffect	true	harvest	exacerbated
+Relation	T20	T19	EffectCause	true	exacerbated	harvest
+Relation	T0	T11	NoRel	true	harvests	Influenza
+Relation	T0	T9	NoRel	true	harvests	occurring
+Relation	T1	T4	NoRel	true	hunger	distinguished
+Relation	T1	T7	NoRel	true	hunger	outbreak
+Relation	T10	T21	NoRel	true	plague	effects
+Relation	T10	T22	NoRel	true	plague	flu
+Relation	T10	T8	NoRel	true	plague	recognized
+Relation	T11	T18	NoRel	true	Influenza	suffered
+Relation	T11	T7	NoRel	true	Influenza	outbreak
+Relation	T11	T9	NoRel	true	Influenza	occurring
+Relation	T12	T11	NoRel	true	occurring	Influenza
+Relation	T12	T14	NoRel	true	occurring	hit
+Relation	T12	T18	NoRel	true	occurring	suffered
+Relation	T12	T5	NoRel	true	occurring	pneumonias
+Relation	T12	T6	NoRel	true	occurring	spread
+Relation	T13	T11	NoRel	true	scant	Influenza
+Relation	T13	T4	NoRel	true	scant	distinguished
+Relation	T13	T5	NoRel	true	scant	pneumonias
+Relation	T14	T1	NoRel	true	hit	hunger
+Relation	T14	T21	NoRel	true	hit	effects
+Relation	T15	T14	NoRel	true	spread	hit
+Relation	T15	T18	NoRel	true	spread	suffered
+Relation	T15	T2	NoRel	true	spread	pandemic
+Relation	T15	T8	NoRel	true	spread	recognized
+Relation	T15	T9	NoRel	true	spread	occurring
+Relation	T17	T14	NoRel	true	spread	hit
+Relation	T17	T20	NoRel	true	spread	exacerbated
+Relation	T17	T6	NoRel	true	spread	spread
+Relation	T17	T7	NoRel	true	spread	outbreak
+Relation	T18	T8	NoRel	true	suffered	recognized
+Relation	T2	T4	NoRel	true	pandemic	distinguished
+Relation	T2	T6	NoRel	true	pandemic	spread
+Relation	T20	T1	NoRel	true	exacerbated	hunger
+Relation	T20	T12	NoRel	true	exacerbated	occurring
+Relation	T21	T0	NoRel	true	effects	harvests
+Relation	T21	T5	NoRel	true	effects	pneumonias
+Relation	T22	T12	NoRel	true	flu	occurring
+Relation	T22	T16	NoRel	true	flu	impact
+Relation	T22	T4	NoRel	true	flu	distinguished
+Relation	T4	T16	NoRel	true	distinguished	impact
+Relation	T5	T14	NoRel	true	pneumonias	hit
+Relation	T5	T22	NoRel	true	pneumonias	flu
+Relation	T5	T7	NoRel	true	pneumonias	outbreak
+Relation	T6	T18	NoRel	true	spread	suffered
+Relation	T6	T8	NoRel	true	spread	recognized
+Relation	T7	T0	NoRel	true	outbreak	harvests
+Relation	T7	T13	NoRel	true	outbreak	scant
+Relation	T7	T21	NoRel	true	outbreak	effects
+Relation	T9	T21	NoRel	true	occurring	effects
+Relation	T9	T22	NoRel	true	occurring	flu

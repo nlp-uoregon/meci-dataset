@@ -1,0 +1,132 @@
+Text	Bu durum özellikle Avrupa ve Osmanlı toprakları üzerinde paylaşım çatışmaları yaşayan Rusya , Fransa ve İngiltere’nin hiçbirinin hoşuna gitmiyordu .	1789 Fransız ihtilali sonrası Avrupa'da Fransız yayılması sonrası başlayan , 1790 -1795 Rumeli Dağlı İsyanları , 1798 Napolyon Bonapart'ın Mısır'ı işgali , 1805 de Kara Yorgi önderliğinde başlayan Sırp isyanı , 1805 İngilizlerin Mısır'ı tahliye etmemesi , 1806 Osmanlı - Rus savaşı , 1807 Osmanlı - İngiliz savaşı ve İngiliz donanmasının İskenderiye’yi işgali , tamamen Osmanlı İmparatorluğunun toprak bütünlüğüne karşı gelişmelerdi .	Bunlara ek olarak içeride de , III. Selim'in kurduğu modern Nizâm -ı Cedîd ordusuna karşı , rahata alışmış yeniçeriler , yerel ayanlar , bu ordu ve diğer yenilikler için ihdas edilen İrad -ı Cedid , bahriye hazinesi gibi yeni koyulan vergilerin mültezimlerde yarattığı isteksizlik gibi nedenler de vardı .	12 Nisan 1807 de Osmanlı ordusu Rusya ile savaşmak üzere yola çıktığında Serdar -ı Ekrem Sadrazam Çelebi Mustafa Paşa yerine kaymakamlık görevine , Nizam -ı Cedid karşıtı Köse Musa Paşa atandı .	Köse Musa Paşa , ordunun yokluğunda asayişi sağlamak üzere Nizam -ı Cedid askerlerini şehirdeki değişik karakollara dağıttı ve ek olarak Trabzon'dan 2000 kadar yamak getirtti .
+Event	T0	durum	EVENT	3
+Event	T1	ihtilali	EVENT	162
+Event	T2	yayılması	EVENT	197
+Event	T4	İsyanları	EVENT	250
+Event	T5	işgali	EVENT	296
+Event	T7	isyanı	EVENT	351
+Event	T9	savaşı	EVENT	424
+Event	T10	savaşı	EVENT	456
+Event	T11	işgali	EVENT	502
+Event	T12	gelişmelerdi	EVENT	569
+Event	T13	savaşmak	EVENT	932
+Event	T14	atandı	EVENT	1076
+Event	T15	dağıttı	EVENT	1201
+Event	T16	getirtti	EVENT	1251
+Event	T17	çatışmaları	EVENT	66
+Event	T3	kurduğu	EVENT	629
+Event	T6	koyulan	EVENT	810
+Event	T8	çıktığında	EVENT	952
+Relation	T1	T2	CauseEffect	true	ihtilali	yayılması
+Relation	T2	T1	EffectCause	true	yayılması	ihtilali
+Relation	T13	T8	CauseEffect	true	savaşmak	çıktığında
+Relation	T8	T13	EffectCause	true	çıktığında	savaşmak
+Relation	T0	T15	NoRel	true	durum	dağıttı
+Relation	T0	T16	NoRel	true	durum	getirtti
+Relation	T0	T3	NoRel	true	durum	kurduğu
+Relation	T0	T6	NoRel	true	durum	koyulan
+Relation	T0	T7	NoRel	true	durum	isyanı
+Relation	T0	T8	NoRel	true	durum	çıktığında
+Relation	T0	T9	NoRel	true	durum	savaşı
+Relation	T1	T3	NoRel	true	ihtilali	kurduğu
+Relation	T1	T9	NoRel	true	ihtilali	savaşı
+Relation	T10	T14	NoRel	true	savaşı	atandı
+Relation	T10	T15	NoRel	true	savaşı	dağıttı
+Relation	T10	T17	NoRel	true	savaşı	çatışmaları
+Relation	T10	T3	NoRel	true	savaşı	kurduğu
+Relation	T10	T4	NoRel	true	savaşı	İsyanları
+Relation	T10	T5	NoRel	true	savaşı	işgali
+Relation	T10	T7	NoRel	true	savaşı	isyanı
+Relation	T11	T10	NoRel	true	işgali	savaşı
+Relation	T11	T13	NoRel	true	işgali	savaşmak
+Relation	T11	T14	NoRel	true	işgali	atandı
+Relation	T11	T3	NoRel	true	işgali	kurduğu
+Relation	T11	T6	NoRel	true	işgali	koyulan
+Relation	T12	T0	NoRel	true	gelişmelerdi	durum
+Relation	T12	T13	NoRel	true	gelişmelerdi	savaşmak
+Relation	T12	T14	NoRel	true	gelişmelerdi	atandı
+Relation	T12	T16	NoRel	true	gelişmelerdi	getirtti
+Relation	T12	T17	NoRel	true	gelişmelerdi	çatışmaları
+Relation	T12	T2	NoRel	true	gelişmelerdi	yayılması
+Relation	T13	T0	NoRel	true	savaşmak	durum
+Relation	T13	T1	NoRel	true	savaşmak	ihtilali
+Relation	T13	T11	NoRel	true	savaşmak	işgali
+Relation	T13	T12	NoRel	true	savaşmak	gelişmelerdi
+Relation	T13	T14	NoRel	true	savaşmak	atandı
+Relation	T13	T15	NoRel	true	savaşmak	dağıttı
+Relation	T13	T16	NoRel	true	savaşmak	getirtti
+Relation	T13	T5	NoRel	true	savaşmak	işgali
+Relation	T13	T6	NoRel	true	savaşmak	koyulan
+Relation	T14	T1	NoRel	true	atandı	ihtilali
+Relation	T14	T3	NoRel	true	atandı	kurduğu
+Relation	T15	T11	NoRel	true	dağıttı	işgali
+Relation	T15	T14	NoRel	true	dağıttı	atandı
+Relation	T15	T16	NoRel	true	dağıttı	getirtti
+Relation	T15	T2	NoRel	true	dağıttı	yayılması
+Relation	T15	T7	NoRel	true	dağıttı	isyanı
+Relation	T15	T9	NoRel	true	dağıttı	savaşı
+Relation	T16	T0	NoRel	true	getirtti	durum
+Relation	T16	T13	NoRel	true	getirtti	savaşmak
+Relation	T16	T14	NoRel	true	getirtti	atandı
+Relation	T16	T7	NoRel	true	getirtti	isyanı
+Relation	T16	T8	NoRel	true	getirtti	çıktığında
+Relation	T16	T9	NoRel	true	getirtti	savaşı
+Relation	T17	T11	NoRel	true	çatışmaları	işgali
+Relation	T17	T2	NoRel	true	çatışmaları	yayılması
+Relation	T17	T3	NoRel	true	çatışmaları	kurduğu
+Relation	T17	T5	NoRel	true	çatışmaları	işgali
+Relation	T17	T7	NoRel	true	çatışmaları	isyanı
+Relation	T17	T8	NoRel	true	çatışmaları	çıktığında
+Relation	T17	T9	NoRel	true	çatışmaları	savaşı
+Relation	T2	T12	NoRel	true	yayılması	gelişmelerdi
+Relation	T2	T13	NoRel	true	yayılması	savaşmak
+Relation	T2	T14	NoRel	true	yayılması	atandı
+Relation	T2	T15	NoRel	true	yayılması	dağıttı
+Relation	T2	T3	NoRel	true	yayılması	kurduğu
+Relation	T2	T4	NoRel	true	yayılması	İsyanları
+Relation	T2	T7	NoRel	true	yayılması	isyanı
+Relation	T2	T8	NoRel	true	yayılması	çıktığında
+Relation	T3	T10	NoRel	true	kurduğu	savaşı
+Relation	T3	T12	NoRel	true	kurduğu	gelişmelerdi
+Relation	T3	T14	NoRel	true	kurduğu	atandı
+Relation	T3	T17	NoRel	true	kurduğu	çatışmaları
+Relation	T3	T2	NoRel	true	kurduğu	yayılması
+Relation	T3	T4	NoRel	true	kurduğu	İsyanları
+Relation	T3	T6	NoRel	true	kurduğu	koyulan
+Relation	T3	T7	NoRel	true	kurduğu	isyanı
+Relation	T3	T9	NoRel	true	kurduğu	savaşı
+Relation	T4	T0	NoRel	true	İsyanları	durum
+Relation	T4	T10	NoRel	true	İsyanları	savaşı
+Relation	T4	T11	NoRel	true	İsyanları	işgali
+Relation	T4	T13	NoRel	true	İsyanları	savaşmak
+Relation	T4	T14	NoRel	true	İsyanları	atandı
+Relation	T4	T5	NoRel	true	İsyanları	işgali
+Relation	T4	T6	NoRel	true	İsyanları	koyulan
+Relation	T5	T0	NoRel	true	işgali	durum
+Relation	T5	T1	NoRel	true	işgali	ihtilali
+Relation	T5	T10	NoRel	true	işgali	savaşı
+Relation	T5	T13	NoRel	true	işgali	savaşmak
+Relation	T5	T17	NoRel	true	işgali	çatışmaları
+Relation	T5	T3	NoRel	true	işgali	kurduğu
+Relation	T5	T7	NoRel	true	işgali	isyanı
+Relation	T6	T12	NoRel	true	koyulan	gelişmelerdi
+Relation	T6	T2	NoRel	true	koyulan	yayılması
+Relation	T6	T3	NoRel	true	koyulan	kurduğu
+Relation	T6	T4	NoRel	true	koyulan	İsyanları
+Relation	T6	T5	NoRel	true	koyulan	işgali
+Relation	T7	T0	NoRel	true	isyanı	durum
+Relation	T7	T10	NoRel	true	isyanı	savaşı
+Relation	T7	T17	NoRel	true	isyanı	çatışmaları
+Relation	T7	T2	NoRel	true	isyanı	yayılması
+Relation	T7	T6	NoRel	true	isyanı	koyulan
+Relation	T7	T8	NoRel	true	isyanı	çıktığında
+Relation	T8	T0	NoRel	true	çıktığında	durum
+Relation	T8	T12	NoRel	true	çıktığında	gelişmelerdi
+Relation	T8	T2	NoRel	true	çıktığında	yayılması
+Relation	T8	T4	NoRel	true	çıktığında	İsyanları
+Relation	T8	T7	NoRel	true	çıktığında	isyanı
+Relation	T9	T11	NoRel	true	savaşı	işgali
+Relation	T9	T15	NoRel	true	savaşı	dağıttı
+Relation	T9	T16	NoRel	true	savaşı	getirtti
+Relation	T9	T2	NoRel	true	savaşı	yayılması
+Relation	T9	T3	NoRel	true	savaşı	kurduğu

@@ -1,0 +1,115 @@
+Text	Al menos 800 viviendas han sufrido daños y 60 han sido totalmente destruidas .	El interventor del estado designado por Maduro , Jehyson Guzmán , ha indicado que la región ha recibido más de 40 toneladas de ayuda humanitaria para los afectados por las lluvias y que se ha desplegado maquinaria para desbloquear vías los derrumbes .	Como respuesta , al menos 12.649 funcionarios civiles , entre bomberos , equipos de rescate y protección civil fueron activados a nivel nacional .	El 26 de agosto Nicolás Maduro firmó " decreto de emergencia " por 90 días para los estados afectados por las lluvias : Apure , Bolívar , Yaracuy , Zulia y Mérida .	La organización Cáritas Mérida ha habilitado centros de acopio para ofrecer apoyo a las comundiades de El Valle de Mocotíes y El Salado , y el obispo auxiliar de la Arquidiócesis de Mérida ha visitado las zonas afectadas .
+Event	T0	daños	EVENT	35
+Event	T1	destruidas	EVENT	66
+Event	T2	indicado	EVENT	148
+Event	T3	recibido	EVENT	174
+Event	T4	afectados	EVENT	233
+Event	T5	lluvias	EVENT	251
+Event	T6	desplegado	EVENT	271
+Event	T7	vías	EVENT	310
+Event	T8	derrumbes	EVENT	319
+Event	T9	activados	EVENT	449
+Event	T10	firmó	EVENT	509
+Event	T11	decreto	EVENT	517
+Event	T12	afectados	EVENT	570
+Event	T13	lluvias	EVENT	588
+Event	T14	habilitado	EVENT	677
+Event	T15	visitado	EVENT	835
+Event	T16	afectadas	EVENT	854
+Relation	T5	T0	CauseEffect	true	lluvias	daños
+Relation	T0	T5	EffectCause	true	daños	lluvias
+Relation	T5	T1	CauseEffect	true	lluvias	destruidas
+Relation	T1	T5	EffectCause	true	destruidas	lluvias
+Relation	T5	T8	CauseEffect	true	lluvias	derrumbes
+Relation	T8	T5	EffectCause	true	derrumbes	lluvias
+Relation	T0	T12	NoRel	true	daños	afectados
+Relation	T0	T14	NoRel	true	daños	habilitado
+Relation	T0	T2	NoRel	true	daños	indicado
+Relation	T0	T8	NoRel	true	daños	derrumbes
+Relation	T1	T0	NoRel	true	destruidas	daños
+Relation	T1	T10	NoRel	true	destruidas	firmó
+Relation	T1	T12	NoRel	true	destruidas	afectados
+Relation	T1	T13	NoRel	true	destruidas	lluvias
+Relation	T1	T15	NoRel	true	destruidas	visitado
+Relation	T10	T0	NoRel	true	firmó	daños
+Relation	T10	T12	NoRel	true	firmó	afectados
+Relation	T10	T14	NoRel	true	firmó	habilitado
+Relation	T10	T15	NoRel	true	firmó	visitado
+Relation	T10	T16	NoRel	true	firmó	afectadas
+Relation	T10	T2	NoRel	true	firmó	indicado
+Relation	T10	T4	NoRel	true	firmó	afectados
+Relation	T10	T6	NoRel	true	firmó	desplegado
+Relation	T10	T9	NoRel	true	firmó	activados
+Relation	T11	T0	NoRel	true	decreto	daños
+Relation	T11	T10	NoRel	true	decreto	firmó
+Relation	T11	T2	NoRel	true	decreto	indicado
+Relation	T11	T4	NoRel	true	decreto	afectados
+Relation	T11	T5	NoRel	true	decreto	lluvias
+Relation	T11	T9	NoRel	true	decreto	activados
+Relation	T12	T11	NoRel	true	afectados	decreto
+Relation	T12	T14	NoRel	true	afectados	habilitado
+Relation	T12	T8	NoRel	true	afectados	derrumbes
+Relation	T13	T1	NoRel	true	lluvias	destruidas
+Relation	T13	T10	NoRel	true	lluvias	firmó
+Relation	T13	T11	NoRel	true	lluvias	decreto
+Relation	T13	T16	NoRel	true	lluvias	afectadas
+Relation	T13	T2	NoRel	true	lluvias	indicado
+Relation	T13	T5	NoRel	true	lluvias	lluvias
+Relation	T13	T7	NoRel	true	lluvias	vías
+Relation	T13	T9	NoRel	true	lluvias	activados
+Relation	T14	T0	NoRel	true	habilitado	daños
+Relation	T14	T1	NoRel	true	habilitado	destruidas
+Relation	T14	T5	NoRel	true	habilitado	lluvias
+Relation	T14	T7	NoRel	true	habilitado	vías
+Relation	T15	T1	NoRel	true	visitado	destruidas
+Relation	T15	T10	NoRel	true	visitado	firmó
+Relation	T15	T12	NoRel	true	visitado	afectados
+Relation	T15	T14	NoRel	true	visitado	habilitado
+Relation	T15	T5	NoRel	true	visitado	lluvias
+Relation	T15	T7	NoRel	true	visitado	vías
+Relation	T16	T1	NoRel	true	afectadas	destruidas
+Relation	T16	T11	NoRel	true	afectadas	decreto
+Relation	T16	T13	NoRel	true	afectadas	lluvias
+Relation	T16	T14	NoRel	true	afectadas	habilitado
+Relation	T16	T3	NoRel	true	afectadas	recibido
+Relation	T16	T6	NoRel	true	afectadas	desplegado
+Relation	T2	T0	NoRel	true	indicado	daños
+Relation	T2	T1	NoRel	true	indicado	destruidas
+Relation	T2	T11	NoRel	true	indicado	decreto
+Relation	T2	T13	NoRel	true	indicado	lluvias
+Relation	T2	T15	NoRel	true	indicado	visitado
+Relation	T2	T16	NoRel	true	indicado	afectadas
+Relation	T2	T3	NoRel	true	indicado	recibido
+Relation	T2	T4	NoRel	true	indicado	afectados
+Relation	T2	T6	NoRel	true	indicado	desplegado
+Relation	T2	T8	NoRel	true	indicado	derrumbes
+Relation	T3	T12	NoRel	true	recibido	afectados
+Relation	T3	T13	NoRel	true	recibido	lluvias
+Relation	T3	T2	NoRel	true	recibido	indicado
+Relation	T4	T14	NoRel	true	afectados	habilitado
+Relation	T4	T2	NoRel	true	afectados	indicado
+Relation	T5	T15	NoRel	true	lluvias	visitado
+Relation	T5	T3	NoRel	true	lluvias	recibido
+Relation	T5	T7	NoRel	true	lluvias	vías
+Relation	T6	T1	NoRel	true	desplegado	destruidas
+Relation	T6	T11	NoRel	true	desplegado	decreto
+Relation	T6	T14	NoRel	true	desplegado	habilitado
+Relation	T6	T3	NoRel	true	desplegado	recibido
+Relation	T7	T11	NoRel	true	vías	decreto
+Relation	T7	T12	NoRel	true	vías	afectados
+Relation	T7	T13	NoRel	true	vías	lluvias
+Relation	T7	T3	NoRel	true	vías	recibido
+Relation	T7	T6	NoRel	true	vías	desplegado
+Relation	T7	T8	NoRel	true	vías	derrumbes
+Relation	T8	T3	NoRel	true	derrumbes	recibido
+Relation	T8	T4	NoRel	true	derrumbes	afectados
+Relation	T8	T9	NoRel	true	derrumbes	activados
+Relation	T9	T1	NoRel	true	activados	destruidas
+Relation	T9	T11	NoRel	true	activados	decreto
+Relation	T9	T12	NoRel	true	activados	afectados
+Relation	T9	T13	NoRel	true	activados	lluvias
+Relation	T9	T16	NoRel	true	activados	afectadas
+Relation	T9	T4	NoRel	true	activados	afectados
+Relation	T9	T5	NoRel	true	activados	lluvias
+Relation	T9	T7	NoRel	true	activados	vías
+Relation	T9	T8	NoRel	true	activados	derrumbes

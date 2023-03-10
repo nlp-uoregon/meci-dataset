@@ -1,0 +1,82 @@
+Text	The findings of the investigation stated the engines failed following their intake of a large amount of dust .	This occurred as a result of the pilot overshooting the runway and continuing the take - off through a grassy area at the end of the runway .	Following the engine failure the plane rapidly descended into the neighbouring Gwammaja area of Kano ultimately destroying several structures on the ground .	Its crash resulted in the deaths of all but six ( five passengers and one crew member ) of the plane 's occupants in addition to 30 civilians on the ground .	- Viasa Flight 742 , another crash in which a small twinjet aircraft ( a McDonnell Douglas DC - 9 ) crashed into a crowded city area shortly after takeoff , causing a high number of ground fatalities .
+Event	T0	findings	EVENT	4
+Event	T1	stated	EVENT	34
+Event	T2	intake	EVENT	76
+Event	T3	occurred	EVENT	116
+Event	T4	overshooting	EVENT	150
+Event	T5	failure	EVENT	274
+Event	T6	destroying	EVENT	365
+Event	T7	resulted	EVENT	421
+Event	T8	deaths	EVENT	437
+Event	T9	Flight	EVENT	577
+Event	T10	crowded	EVENT	684
+Event	T11	takeoff	EVENT	716
+Event	T12	causing	EVENT	726
+Event	T13	fatalities	EVENT	758
+Event	T14	failed	EVENT	53
+Event	T15	take - off	EVENT	193
+Event	T16	descended	EVENT	300
+Event	T17	crash	EVENT	598
+Event	T18	crashed	EVENT	669
+Relation	T2	T14	CauseEffect	true	intake	failed
+Relation	T14	T2	EffectCause	true	failed	intake
+Relation	T4	T3	CauseEffect	true	overshooting	occurred
+Relation	T3	T4	EffectCause	true	occurred	overshooting
+Relation	T7	T8	CauseEffect	true	resulted	deaths
+Relation	T8	T7	EffectCause	true	deaths	resulted
+Relation	T18	T13	CauseEffect	true	crashed	fatalities
+Relation	T13	T18	EffectCause	true	fatalities	crashed
+Relation	T1	T13	NoRel	true	stated	fatalities
+Relation	T10	T14	NoRel	true	crowded	failed
+Relation	T10	T3	NoRel	true	crowded	occurred
+Relation	T11	T13	NoRel	true	takeoff	fatalities
+Relation	T11	T15	NoRel	true	takeoff	take - off
+Relation	T11	T16	NoRel	true	takeoff	descended
+Relation	T11	T18	NoRel	true	takeoff	crashed
+Relation	T11	T7	NoRel	true	takeoff	resulted
+Relation	T13	T0	NoRel	true	fatalities	findings
+Relation	T13	T11	NoRel	true	fatalities	takeoff
+Relation	T13	T14	NoRel	true	fatalities	failed
+Relation	T13	T4	NoRel	true	fatalities	overshooting
+Relation	T13	T5	NoRel	true	fatalities	failure
+Relation	T13	T8	NoRel	true	fatalities	deaths
+Relation	T14	T16	NoRel	true	failed	descended
+Relation	T14	T6	NoRel	true	failed	destroying
+Relation	T14	T8	NoRel	true	failed	deaths
+Relation	T15	T14	NoRel	true	take - off	failed
+Relation	T15	T18	NoRel	true	take - off	crashed
+Relation	T15	T3	NoRel	true	take - off	occurred
+Relation	T15	T9	NoRel	true	take - off	Flight
+Relation	T16	T13	NoRel	true	descended	fatalities
+Relation	T16	T17	NoRel	true	descended	crash
+Relation	T16	T2	NoRel	true	descended	intake
+Relation	T16	T4	NoRel	true	descended	overshooting
+Relation	T16	T8	NoRel	true	descended	deaths
+Relation	T17	T10	NoRel	true	crash	crowded
+Relation	T17	T15	NoRel	true	crash	take - off
+Relation	T17	T5	NoRel	true	crash	failure
+Relation	T17	T9	NoRel	true	crash	Flight
+Relation	T18	T12	NoRel	true	crashed	causing
+Relation	T18	T17	NoRel	true	crashed	crash
+Relation	T18	T7	NoRel	true	crashed	resulted
+Relation	T2	T13	NoRel	true	intake	fatalities
+Relation	T2	T17	NoRel	true	intake	crash
+Relation	T3	T11	NoRel	true	occurred	takeoff
+Relation	T3	T12	NoRel	true	occurred	causing
+Relation	T3	T18	NoRel	true	occurred	crashed
+Relation	T4	T13	NoRel	true	overshooting	fatalities
+Relation	T4	T17	NoRel	true	overshooting	crash
+Relation	T4	T2	NoRel	true	overshooting	intake
+Relation	T4	T7	NoRel	true	overshooting	resulted
+Relation	T5	T16	NoRel	true	failure	descended
+Relation	T5	T7	NoRel	true	failure	resulted
+Relation	T6	T0	NoRel	true	destroying	findings
+Relation	T7	T15	NoRel	true	resulted	take - off
+Relation	T8	T10	NoRel	true	deaths	crowded
+Relation	T8	T12	NoRel	true	deaths	causing
+Relation	T8	T18	NoRel	true	deaths	crashed
+Relation	T8	T3	NoRel	true	deaths	occurred
+Relation	T8	T6	NoRel	true	deaths	destroying
+Relation	T9	T0	NoRel	true	Flight	findings
+Relation	T9	T10	NoRel	true	Flight	crowded
+Relation	T9	T16	NoRel	true	Flight	descended

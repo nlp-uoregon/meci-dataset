@@ -1,0 +1,69 @@
+Text	Operasyona USS Ronald Reagan hava grubu ve Yokota Hava Üssü'nden havacılar katıldı .	ABD Uluslararası Gelişim Ajansı bölgeye birkaç yüz kişiden oluşan iki ekip gönderdi .	ABD personeli büyük zarar gören Sendai Havalimanı'nı onarmak için çalışmalar yaptı .	ABD Dışişleri Bakanlığı iletişim sistemleri kurdu ve yolculuk uyarıları yaptı .	- Azerbaycan hükûmeti Japonya'ya felaketin yaralarını sarma amaçlı olarak 1 milyon dolarlık yardım bağışladı .
+Event	T0	Operasyona	EVENT	0
+Event	T1	katıldı	EVENT	75
+Event	T2	gönderdi	EVENT	160
+Event	T4	kurdu	EVENT	300
+Event	T6	felaketin	EVENT	369
+Event	T7	sarma	EVENT	390
+Event	T8	bağışladı	EVENT	435
+Event	T9	gören	EVENT	197
+Event	T10	onarmak	EVENT	224
+Event	T3	çalışmalar	EVENT	237
+Event	T5	uyarıları	EVENT	318
+Event	T11	yaralarını	EVENT	379
+Relation	T9	T10	CauseEffect	true	gören	onarmak
+Relation	T10	T9	EffectCause	true	onarmak	gören
+Relation	T6	T9	CauseEffect	true	felaketin	gören
+Relation	T9	T6	EffectCause	true	gören	felaketin
+Relation	T6	T11	CauseEffect	true	felaketin	yaralarını
+Relation	T11	T6	EffectCause	true	yaralarını	felaketin
+Relation	T11	T7	CauseEffect	true	yaralarını	sarma
+Relation	T7	T11	EffectCause	true	sarma	yaralarını
+Relation	T7	T8	CauseEffect	true	sarma	bağışladı
+Relation	T8	T7	EffectCause	true	bağışladı	sarma
+Relation	T0	T4	NoRel	true	Operasyona	kurdu
+Relation	T0	T9	NoRel	true	Operasyona	gören
+Relation	T1	T0	NoRel	true	katıldı	Operasyona
+Relation	T1	T10	NoRel	true	katıldı	onarmak
+Relation	T1	T4	NoRel	true	katıldı	kurdu
+Relation	T1	T9	NoRel	true	katıldı	gören
+Relation	T10	T11	NoRel	true	onarmak	yaralarını
+Relation	T10	T3	NoRel	true	onarmak	çalışmalar
+Relation	T10	T7	NoRel	true	onarmak	sarma
+Relation	T11	T1	NoRel	true	yaralarını	katıldı
+Relation	T11	T5	NoRel	true	yaralarını	uyarıları
+Relation	T11	T8	NoRel	true	yaralarını	bağışladı
+Relation	T11	T9	NoRel	true	yaralarını	gören
+Relation	T2	T4	NoRel	true	gönderdi	kurdu
+Relation	T2	T5	NoRel	true	gönderdi	uyarıları
+Relation	T2	T6	NoRel	true	gönderdi	felaketin
+Relation	T2	T8	NoRel	true	gönderdi	bağışladı
+Relation	T3	T1	NoRel	true	çalışmalar	katıldı
+Relation	T3	T10	NoRel	true	çalışmalar	onarmak
+Relation	T3	T11	NoRel	true	çalışmalar	yaralarını
+Relation	T3	T5	NoRel	true	çalışmalar	uyarıları
+Relation	T3	T7	NoRel	true	çalışmalar	sarma
+Relation	T3	T8	NoRel	true	çalışmalar	bağışladı
+Relation	T3	T9	NoRel	true	çalışmalar	gören
+Relation	T4	T2	NoRel	true	kurdu	gönderdi
+Relation	T4	T3	NoRel	true	kurdu	çalışmalar
+Relation	T4	T6	NoRel	true	kurdu	felaketin
+Relation	T4	T7	NoRel	true	kurdu	sarma
+Relation	T5	T3	NoRel	true	uyarıları	çalışmalar
+Relation	T5	T6	NoRel	true	uyarıları	felaketin
+Relation	T5	T7	NoRel	true	uyarıları	sarma
+Relation	T5	T9	NoRel	true	uyarıları	gören
+Relation	T6	T0	NoRel	true	felaketin	Operasyona
+Relation	T6	T1	NoRel	true	felaketin	katıldı
+Relation	T6	T3	NoRel	true	felaketin	çalışmalar
+Relation	T7	T10	NoRel	true	sarma	onarmak
+Relation	T7	T3	NoRel	true	sarma	çalışmalar
+Relation	T7	T5	NoRel	true	sarma	uyarıları
+Relation	T7	T6	NoRel	true	sarma	felaketin
+Relation	T8	T0	NoRel	true	bağışladı	Operasyona
+Relation	T8	T9	NoRel	true	bağışladı	gören
+Relation	T9	T2	NoRel	true	gören	gönderdi
+Relation	T9	T4	NoRel	true	gören	kurdu
+Relation	T9	T5	NoRel	true	gören	uyarıları
+Relation	T9	T7	NoRel	true	gören	sarma
+Relation	T9	T8	NoRel	true	gören	bağışladı

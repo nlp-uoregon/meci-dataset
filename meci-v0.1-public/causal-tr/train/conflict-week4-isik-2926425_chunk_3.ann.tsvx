@@ -1,0 +1,82 @@
+Text	1955'te başlayan ve yıllar süren Vietnam Savaşı boyunca ABD'de üniversite bağışlarının savunma sanayisine aktarılmasına karşı protestolar düzenlenmesiyle etki yatırımı kavramı popüler hâle geldi .	Bu olay etki yatırımcılığının toplumsal sorunları değiştirmede bir araç olabileceğinin göstergesi oldu .	1950'ler ve 1960'larda ise Amerikan Elektrik ve Maden İşçileri Sendikaları , emeklilik fonlarını uygun fiyatlı konut ve sağlık tesislerine yatırmaya başladı .	1979'da Pensilvanya'da meydana gelen Three Mile Adası nükleer felaketinin yankıları , halkın çevre ve iklim değişikliği konusundaki endişelerini arttırdı .	Bu kaza 1984'te ABD Sürdürülebilir Yatırım Forumu gibi sivil toplum kuruluşlarının kurulmasını sağlamıştır .
+Event	T0	başlayan	EVENT	8
+Event	T2	geldi	EVENT	189
+Event	T4	yankıları	EVENT	535
+Event	T5	değişikliği	EVENT	569
+Event	T6	arttırdı	EVENT	606
+Event	T7	kaza	EVENT	620
+Event	T1	Vietnam Savaşı	EVENT	33
+Event	T9	aktarılmasına	EVENT	106
+Event	T10	protestolar	EVENT	126
+Event	T11	olay	EVENT	200
+Event	T12	yatırımı	EVENT	159
+Event	T15	oldu	EVENT	295
+Event	T13	başladı	EVENT	451
+Event	T14	sağlamıştır	EVENT	712
+Relation	T9	T10	CauseEffect	true	aktarılmasına	protestolar
+Relation	T10	T9	EffectCause	true	protestolar	aktarılmasına
+Relation	T1	T9	CauseEffect	true	Vietnam Savaşı	aktarılmasına
+Relation	T9	T1	EffectCause	true	aktarılmasına	Vietnam Savaşı
+Relation	T10	T12	CauseEffect	true	protestolar	yatırımı
+Relation	T12	T10	EffectCause	true	yatırımı	protestolar
+Relation	T4	T6	CauseEffect	true	yankıları	arttırdı
+Relation	T6	T4	EffectCause	true	arttırdı	yankıları
+Relation	T7	T14	CauseEffect	true	kaza	sağlamıştır
+Relation	T14	T7	EffectCause	true	sağlamıştır	kaza
+Relation	T6	T14	CauseEffect	true	arttırdı	sağlamıştır
+Relation	T14	T6	EffectCause	true	sağlamıştır	arttırdı
+Relation	T0	T11	NoRel	true	başlayan	olay
+Relation	T0	T12	NoRel	true	başlayan	yatırımı
+Relation	T0	T13	NoRel	true	başlayan	başladı
+Relation	T0	T2	NoRel	true	başlayan	geldi
+Relation	T1	T12	NoRel	true	Vietnam Savaşı	yatırımı
+Relation	T1	T13	NoRel	true	Vietnam Savaşı	başladı
+Relation	T1	T14	NoRel	true	Vietnam Savaşı	sağlamıştır
+Relation	T1	T2	NoRel	true	Vietnam Savaşı	geldi
+Relation	T1	T4	NoRel	true	Vietnam Savaşı	yankıları
+Relation	T10	T1	NoRel	true	protestolar	Vietnam Savaşı
+Relation	T10	T14	NoRel	true	protestolar	sağlamıştır
+Relation	T10	T2	NoRel	true	protestolar	geldi
+Relation	T10	T7	NoRel	true	protestolar	kaza
+Relation	T11	T1	NoRel	true	olay	Vietnam Savaşı
+Relation	T11	T12	NoRel	true	olay	yatırımı
+Relation	T11	T15	NoRel	true	olay	oldu
+Relation	T11	T6	NoRel	true	olay	arttırdı
+Relation	T11	T7	NoRel	true	olay	kaza
+Relation	T11	T9	NoRel	true	olay	aktarılmasına
+Relation	T12	T13	NoRel	true	yatırımı	başladı
+Relation	T12	T4	NoRel	true	yatırımı	yankıları
+Relation	T13	T0	NoRel	true	başladı	başlayan
+Relation	T13	T12	NoRel	true	başladı	yatırımı
+Relation	T13	T15	NoRel	true	başladı	oldu
+Relation	T13	T7	NoRel	true	başladı	kaza
+Relation	T13	T9	NoRel	true	başladı	aktarılmasına
+Relation	T14	T15	NoRel	true	sağlamıştır	oldu
+Relation	T14	T4	NoRel	true	sağlamıştır	yankıları
+Relation	T15	T0	NoRel	true	oldu	başlayan
+Relation	T15	T13	NoRel	true	oldu	başladı
+Relation	T15	T4	NoRel	true	oldu	yankıları
+Relation	T15	T5	NoRel	true	oldu	değişikliği
+Relation	T15	T6	NoRel	true	oldu	arttırdı
+Relation	T2	T12	NoRel	true	geldi	yatırımı
+Relation	T2	T13	NoRel	true	geldi	başladı
+Relation	T2	T15	NoRel	true	geldi	oldu
+Relation	T2	T9	NoRel	true	geldi	aktarılmasına
+Relation	T4	T10	NoRel	true	yankıları	protestolar
+Relation	T4	T11	NoRel	true	yankıları	olay
+Relation	T4	T2	NoRel	true	yankıları	geldi
+Relation	T4	T5	NoRel	true	yankıları	değişikliği
+Relation	T4	T7	NoRel	true	yankıları	kaza
+Relation	T5	T10	NoRel	true	değişikliği	protestolar
+Relation	T5	T13	NoRel	true	değişikliği	başladı
+Relation	T5	T6	NoRel	true	değişikliği	arttırdı
+Relation	T5	T7	NoRel	true	değişikliği	kaza
+Relation	T5	T9	NoRel	true	değişikliği	aktarılmasına
+Relation	T6	T13	NoRel	true	arttırdı	başladı
+Relation	T6	T7	NoRel	true	arttırdı	kaza
+Relation	T7	T11	NoRel	true	kaza	olay
+Relation	T7	T2	NoRel	true	kaza	geldi
+Relation	T7	T6	NoRel	true	kaza	arttırdı
+Relation	T7	T9	NoRel	true	kaza	aktarılmasına
+Relation	T9	T13	NoRel	true	aktarılmasına	başladı
+Relation	T9	T2	NoRel	true	aktarılmasına	geldi

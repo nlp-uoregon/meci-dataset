@@ -1,0 +1,68 @@
+Text	At about 17:00 , two thrusts were launched , east and west of the River Orne .	The eastern attack , carried out by II Battalion and supporting units , under Major Hans von Luck , was intended to destroy the 6th Airborne Division 's Orne bridgehead , but was almost immediately stopped in its tracks by intense Allied air attacks and naval gunfire .	To the west , a larger Armoured Group initially fared somewhat better .	Taking advantage of the gap between the Sword and Juno sectors , elements of the 192nd Panzer grenadier Regiment were able to reach the coast at Lion - sur- Mer by 8:00 p.m. ; however , with few flak units and very little support from the _ Luftwaffe _ , they too suffered devastating losses to Allied aircraft .	When 250 Gliders of the British 6th Airlanding Brigade overflew their positions , on their way to reinforce the Orne bridgehead in Operation Mallard , the Germans , believing they were about to be cut off , retired .
+Event	T0	thrusts	EVENT	21
+Event	T1	launched	EVENT	34
+Event	T2	attack	EVENT	91
+Event	T3	intended	EVENT	183
+Event	T4	destroy	EVENT	195
+Event	T5	attacks	EVENT	321
+Event	T6	gunfire	EVENT	339
+Event	T7	fared	EVENT	397
+Event	T8	gap	EVENT	445
+Event	T9	able	EVENT	539
+Event	T10	reach	EVENT	547
+Event	T11	losses	EVENT	706
+Event	T12	overflew	EVENT	789
+Event	T13	reinforce	EVENT	832
+Event	T14	Operation	EVENT	865
+Event	T15	believing	EVENT	899
+Event	T16	retired	EVENT	941
+Event	T17	carried out	EVENT	100
+Event	T18	stopped	EVENT	277
+Event	T19	Taking advantage	EVENT	421
+Event	T20	support	EVENT	643
+Event	T21	cut off	EVENT	931
+Relation	T2	T3	CauseEffect	true	attack	intended
+Relation	T3	T2	EffectCause	true	intended	attack
+Relation	T2	T4	CauseEffect	true	attack	destroy
+Relation	T4	T2	EffectCause	true	destroy	attack
+Relation	T5	T18	CauseEffect	true	attacks	stopped
+Relation	T18	T5	EffectCause	true	stopped	attacks
+Relation	T4	T18	CauseEffect	true	destroy	stopped
+Relation	T18	T4	EffectCause	true	stopped	destroy
+Relation	T19	T10	CauseEffect	true	Taking advantage	reach
+Relation	T10	T19	EffectCause	true	reach	Taking advantage
+Relation	T20	T11	CauseEffect	true	support	losses
+Relation	T11	T20	EffectCause	true	losses	support
+Relation	T12	T16	CauseEffect	true	overflew	retired
+Relation	T16	T12	EffectCause	true	retired	overflew
+Relation	T12	T21	CauseEffect	true	overflew	cut off
+Relation	T21	T12	EffectCause	true	cut off	overflew
+Relation	T21	T16	CauseEffect	true	cut off	retired
+Relation	T16	T21	EffectCause	true	retired	cut off
+Relation	T0	T5	NoRel	true	thrusts	attacks
+Relation	T0	T6	NoRel	true	thrusts	gunfire
+Relation	T1	T3	NoRel	true	launched	intended
+Relation	T1	T9	NoRel	true	launched	able
+Relation	T12	T2	NoRel	true	overflew	attack
+Relation	T13	T21	NoRel	true	reinforce	cut off
+Relation	T14	T6	NoRel	true	Operation	gunfire
+Relation	T15	T13	NoRel	true	believing	reinforce
+Relation	T16	T14	NoRel	true	retired	Operation
+Relation	T16	T5	NoRel	true	retired	attacks
+Relation	T17	T4	NoRel	true	carried out	destroy
+Relation	T17	T7	NoRel	true	carried out	fared
+Relation	T18	T16	NoRel	true	stopped	retired
+Relation	T18	T20	NoRel	true	stopped	support
+Relation	T19	T0	NoRel	true	Taking advantage	thrusts
+Relation	T19	T17	NoRel	true	Taking advantage	carried out
+Relation	T19	T5	NoRel	true	Taking advantage	attacks
+Relation	T2	T16	NoRel	true	attack	retired
+Relation	T2	T17	NoRel	true	attack	carried out
+Relation	T20	T0	NoRel	true	support	thrusts
+Relation	T20	T21	NoRel	true	support	cut off
+Relation	T3	T0	NoRel	true	intended	thrusts
+Relation	T3	T14	NoRel	true	intended	Operation
+Relation	T3	T18	NoRel	true	intended	stopped
+Relation	T4	T20	NoRel	true	destroy	support
+Relation	T7	T20	NoRel	true	fared	support
+Relation	T9	T2	NoRel	true	able	attack

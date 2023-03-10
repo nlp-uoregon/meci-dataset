@@ -1,0 +1,66 @@
+Text	- Hindistan , 15 İtalyan turist dahil 23 vaka daha doğruladı ve toplam sayı 29'a ulaştı .	- Irak ilk ölümünü koronavirüsten doğruladı .	- İtalya 28 ölümü daha doğrulayarak toplamı 107'ye çıkardı .	Bu onu tek bir günde en yüksek artış haline getirdi .	Ülke 587 yeni vakayı onaylayarak toplam vaka sayısını 3.089'a getirdi .
+Event	T0	doğruladı	EVENT	51
+Event	T1	ulaştı	EVENT	81
+Event	T2	ölümünü	EVENT	101
+Event	T3	doğruladı	EVENT	124
+Event	T4	ölümü	EVENT	148
+Event	T5	çıkardı	EVENT	187
+Event	T6	artış	EVENT	228
+Event	T7	getirdi	EVENT	241
+Event	T8	onaylayarak	EVENT	272
+Event	T9	getirdi	EVENT	313
+Event	T10	koronavirüsten	EVENT	109
+Event	T11	doğrulayarak	EVENT	159
+Relation	T0	T1	CauseEffect	true	doğruladı	ulaştı
+Relation	T1	T0	EffectCause	true	ulaştı	doğruladı
+Relation	T10	T2	CauseEffect	true	koronavirüsten	ölümünü
+Relation	T2	T10	EffectCause	true	ölümünü	koronavirüsten
+Relation	T2	T3	CauseEffect	true	ölümünü	doğruladı
+Relation	T3	T2	EffectCause	true	doğruladı	ölümünü
+Relation	T4	T11	CauseEffect	true	ölümü	doğrulayarak
+Relation	T11	T4	EffectCause	true	doğrulayarak	ölümü
+Relation	T11	T5	CauseEffect	true	doğrulayarak	çıkardı
+Relation	T5	T11	EffectCause	true	çıkardı	doğrulayarak
+Relation	T8	T9	CauseEffect	true	onaylayarak	getirdi
+Relation	T9	T8	EffectCause	true	getirdi	onaylayarak
+Relation	T0	T11	NoRel	true	doğruladı	doğrulayarak
+Relation	T0	T3	NoRel	true	doğruladı	doğruladı
+Relation	T0	T4	NoRel	true	doğruladı	ölümü
+Relation	T0	T6	NoRel	true	doğruladı	artış
+Relation	T1	T5	NoRel	true	ulaştı	çıkardı
+Relation	T10	T11	NoRel	true	koronavirüsten	doğrulayarak
+Relation	T10	T5	NoRel	true	koronavirüsten	çıkardı
+Relation	T10	T9	NoRel	true	koronavirüsten	getirdi
+Relation	T11	T6	NoRel	true	doğrulayarak	artış
+Relation	T11	T8	NoRel	true	doğrulayarak	onaylayarak
+Relation	T2	T1	NoRel	true	ölümünü	ulaştı
+Relation	T2	T11	NoRel	true	ölümünü	doğrulayarak
+Relation	T2	T4	NoRel	true	ölümünü	ölümü
+Relation	T2	T6	NoRel	true	ölümünü	artış
+Relation	T3	T5	NoRel	true	doğruladı	çıkardı
+Relation	T3	T6	NoRel	true	doğruladı	artış
+Relation	T3	T9	NoRel	true	doğruladı	getirdi
+Relation	T4	T3	NoRel	true	ölümü	doğruladı
+Relation	T4	T5	NoRel	true	ölümü	çıkardı
+Relation	T4	T7	NoRel	true	ölümü	getirdi
+Relation	T5	T2	NoRel	true	çıkardı	ölümünü
+Relation	T5	T7	NoRel	true	çıkardı	getirdi
+Relation	T5	T8	NoRel	true	çıkardı	onaylayarak
+Relation	T5	T9	NoRel	true	çıkardı	getirdi
+Relation	T6	T0	NoRel	true	artış	doğruladı
+Relation	T6	T10	NoRel	true	artış	koronavirüsten
+Relation	T6	T4	NoRel	true	artış	ölümü
+Relation	T6	T7	NoRel	true	artış	getirdi
+Relation	T7	T10	NoRel	true	getirdi	koronavirüsten
+Relation	T7	T11	NoRel	true	getirdi	doğrulayarak
+Relation	T7	T2	NoRel	true	getirdi	ölümünü
+Relation	T7	T3	NoRel	true	getirdi	doğruladı
+Relation	T7	T6	NoRel	true	getirdi	artış
+Relation	T7	T8	NoRel	true	getirdi	onaylayarak
+Relation	T7	T9	NoRel	true	getirdi	getirdi
+Relation	T8	T11	NoRel	true	onaylayarak	doğrulayarak
+Relation	T8	T3	NoRel	true	onaylayarak	doğruladı
+Relation	T8	T7	NoRel	true	onaylayarak	getirdi
+Relation	T9	T2	NoRel	true	getirdi	ölümünü
+Relation	T9	T4	NoRel	true	getirdi	ölümü
+Relation	T9	T6	NoRel	true	getirdi	artış

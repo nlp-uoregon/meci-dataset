@@ -1,0 +1,31 @@
+Text	UNITED AIRLINES FLIGHT 173 was a scheduled flight from John F . Kennedy International Airport in New York City to Portland International Airport in Portland , Oregon , with a scheduled stop in Denver , Colorado .	On December 28 , 1978 , the aircraft flying this route ran out of fuel while troubleshooting a landing gear problem and crashed in a suburban Portland neighborhood near NE 157th Avenue and East Burnside Street , killing 10 on board .	The aircraft involved was a Douglas DC - 8 60 series , powered by four Pratt & Whitney JT 3D engines and delivered new to United Airlines in May 1968 .	The aircraft was registered N8082U and was the 357th DC - 8 built at the Long Beach assembly plant .	The 60 series was a stretched version of the DC - 8 that was longer than the DC - 8 series 10 through 50 .
+Event	T0	flight	EVENT	43
+Event	T1	stop	EVENT	185
+Event	T2	flying	EVENT	250
+Event	T3	troubleshooting	EVENT	290
+Event	T4	problem	EVENT	321
+Event	T5	crashed	EVENT	333
+Event	T6	killing	EVENT	425
+Event	T7	involved	EVENT	460
+Event	T8	powered	EVENT	502
+Event	T9	registered	EVENT	616
+Event	T10	built	EVENT	659
+Event	T11	stretched	EVENT	720
+Event	T12	ran out of	EVENT	268
+Event	T13	delivered	EVENT	552
+Relation	T5	T6	CauseEffect	true	crashed	killing
+Relation	T6	T5	EffectCause	true	killing	crashed
+Relation	T0	T11	NoRel	true	flight	stretched
+Relation	T0	T3	NoRel	true	flight	troubleshooting
+Relation	T1	T3	NoRel	true	stop	troubleshooting
+Relation	T10	T12	NoRel	true	built	ran out of
+Relation	T10	T4	NoRel	true	built	problem
+Relation	T11	T10	NoRel	true	stretched	built
+Relation	T12	T11	NoRel	true	ran out of	stretched
+Relation	T12	T2	NoRel	true	ran out of	flying
+Relation	T13	T11	NoRel	true	delivered	stretched
+Relation	T13	T8	NoRel	true	delivered	powered
+Relation	T13	T9	NoRel	true	delivered	registered
+Relation	T2	T13	NoRel	true	flying	delivered
+Relation	T2	T3	NoRel	true	flying	troubleshooting
+Relation	T7	T2	NoRel	true	involved	flying

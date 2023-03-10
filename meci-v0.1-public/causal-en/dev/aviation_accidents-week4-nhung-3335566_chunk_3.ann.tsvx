@@ -1,0 +1,56 @@
+Text	He had been friends with strategic theorist ( and later Nobel prize winner in economics ) Thomas Schelling since they worked in the administration of the Marshall Plan in Paris .	In 1964 , when McNaughton and Schelling were teaching at Harvard , Schelling was asked to work at the Department of Defense .	He suggested McNaughton go instead , promising to advise McNaughton on weapons and strategy ; McNaughton was appointed Assistant Secretary of Defense for International Security Affairs .	Together , they outlined a bombing strategy to intimidate North Vietnam in the spring of 1964 , leading to the first phase of Operation Rolling Thunder which took place between March 2 and 24 , 1965 .	The conditions for a bombing halt , outlined in a confidential memorandum by McNaughton to McNamara were that North Vietnam must not only cease infiltration efforts , but also take steps to withdraw troops currently operating in South Vietnam .
+Event	T0	worked	EVENT	118
+Event	T1	teaching	EVENT	224
+Event	T2	asked	EVENT	260
+Event	T3	suggested	EVENT	308
+Event	T4	go	EVENT	329
+Event	T5	promising	EVENT	342
+Event	T6	advise	EVENT	355
+Event	T7	appointed	EVENT	414
+Event	T8	outlined	EVENT	508
+Event	T9	strategy	EVENT	527
+Event	T10	intimidate	EVENT	539
+Event	T11	phase	EVENT	609
+Event	T12	halt	EVENT	722
+Event	T13	outlined	EVENT	729
+Event	T14	steps	EVENT	874
+Event	T15	withdraw	EVENT	883
+Event	T16	operating	EVENT	909
+Event	T17	work	EVENT	269
+Event	T18	took place	EVENT	650
+Relation	T8	T9	CauseEffect	true	outlined	strategy
+Relation	T9	T8	EffectCause	true	strategy	outlined
+Relation	T9	T10	CauseEffect	true	strategy	intimidate
+Relation	T10	T9	EffectCause	true	intimidate	strategy
+Relation	T14	T15	CauseEffect	true	steps	withdraw
+Relation	T15	T14	EffectCause	true	withdraw	steps
+Relation	T0	T2	NoRel	true	worked	asked
+Relation	T0	T9	NoRel	true	worked	strategy
+Relation	T1	T14	NoRel	true	teaching	steps
+Relation	T1	T15	NoRel	true	teaching	withdraw
+Relation	T10	T15	NoRel	true	intimidate	withdraw
+Relation	T10	T18	NoRel	true	intimidate	took place
+Relation	T11	T0	NoRel	true	phase	worked
+Relation	T11	T9	NoRel	true	phase	strategy
+Relation	T12	T9	NoRel	true	halt	strategy
+Relation	T13	T12	NoRel	true	outlined	halt
+Relation	T15	T13	NoRel	true	withdraw	outlined
+Relation	T2	T14	NoRel	true	asked	steps
+Relation	T2	T16	NoRel	true	asked	operating
+Relation	T3	T17	NoRel	true	suggested	work
+Relation	T3	T7	NoRel	true	suggested	appointed
+Relation	T3	T8	NoRel	true	suggested	outlined
+Relation	T4	T2	NoRel	true	go	asked
+Relation	T5	T10	NoRel	true	promising	intimidate
+Relation	T5	T14	NoRel	true	promising	steps
+Relation	T5	T15	NoRel	true	promising	withdraw
+Relation	T5	T4	NoRel	true	promising	go
+Relation	T7	T10	NoRel	true	appointed	intimidate
+Relation	T7	T2	NoRel	true	appointed	asked
+Relation	T7	T4	NoRel	true	appointed	go
+Relation	T7	T5	NoRel	true	appointed	promising
+Relation	T8	T11	NoRel	true	outlined	phase
+Relation	T8	T3	NoRel	true	outlined	suggested
+Relation	T9	T16	NoRel	true	strategy	operating
+Relation	T9	T18	NoRel	true	strategy	took place
+Relation	T9	T2	NoRel	true	strategy	asked

@@ -1,0 +1,25 @@
+Text	جب برطانوی افسروں نے چرچل کی توجہ بنگال میں بڑے پیمانے پر ہونے والی اموات کی طرف دلائی تو چرچل کا جواب تھا کہ " پھر گاندھی ابھی تک کیوں نہیں مرا ؟	"	“ And when conscience -stricken British officials wrote to the Prime Minister in London pointing out that his policies were causing needless loss of life all he could do was write peevishly in the margin of the report , ‘ Why hasn’t Gandhi died yet ?' "	-	1943 - 1944 ء کے بنگال کے قحط کی وجہ خراب فصل نہیں تھی ۔
+Event	T0	اموات	EVENT	68
+Event	T1	جواب	EVENT	98
+Event	T2	wrote	EVENT	199
+Event	T3	loss	EVENT	290
+Event	T4	write	EVENT	323
+Event	T5	died	EVENT	389
+Event	T6	قحط	EVENT	431
+Relation	T3	T2	CauseEffect	true	loss	wrote
+Relation	T2	T3	EffectCause	true	wrote	loss
+Relation	T2	T4	CauseEffect	true	wrote	write
+Relation	T4	T2	EffectCause	true	write	wrote
+Relation	T0	T3	NoRel	true	اموات	loss
+Relation	T0	T6	NoRel	true	اموات	قحط
+Relation	T1	T3	NoRel	true	جواب	loss
+Relation	T1	T6	NoRel	true	جواب	قحط
+Relation	T2	T6	NoRel	true	wrote	قحط
+Relation	T3	T1	NoRel	true	loss	جواب
+Relation	T4	T1	NoRel	true	write	جواب
+Relation	T4	T5	NoRel	true	write	died
+Relation	T4	T6	NoRel	true	write	قحط
+Relation	T5	T1	NoRel	true	died	جواب
+Relation	T5	T2	NoRel	true	died	wrote
+Relation	T5	T3	NoRel	true	died	loss
+Relation	T5	T6	NoRel	true	died	قحط

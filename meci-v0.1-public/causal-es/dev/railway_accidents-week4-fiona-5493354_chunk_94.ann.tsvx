@@ -1,0 +1,96 @@
+Text	- 22 DE AGOSTO : El descarrilamiento de un automotor de la CP Serie 9500 en la Línea de Túa junto al apeadero de Brunheda provoca una víctima mortal .	- 2009_____-___1 DE SEPTIEMBRE : Una colisión entre un automóvil y un automotor de la Serie 0650 en un paso a nivel sin guardia en la Línea del Duero a su paso por el concejo de Baião resultó en cinco muertos y dos heridos .	- 2010_____-___9 DE JUNIO : Tres personas resultaron muertas al ser atropelladas por una composición internacional proveniente de París , con destino a Lisboa .	El accidente se produjo en la parroquia de Arroyos , en el ayuntamiento de Torres Novas .	- 2012_____-___2 DE MAYO : una unidad eléctrica serie 3150 choca por alcance con otra unidad similar que se hallaba detenida en la estación de Caxias , en la línea de Cascais , provocando heridas a 33 personas .
+Event	T0	descarrilamiento	EVENT	20
+Event	T1	provoca	EVENT	122
+Event	T2	colisión	EVENT	188
+Event	T3	paso	EVENT	254
+Event	T4	paso	EVENT	306
+Event	T5	muertos	EVENT	352
+Event	T6	heridos	EVENT	366
+Event	T7	muertas	EVENT	429
+Event	T8	atropelladas	EVENT	444
+Event	T9	composición	EVENT	465
+Event	T10	produjo	EVENT	553
+Event	T11	choca	EVENT	686
+Event	T12	alcance	EVENT	696
+Event	T13	detenida	EVENT	743
+Event	T14	heridas	EVENT	815
+Event	T15	víctima	EVENT	134
+Relation	T0	T15	CauseEffect	true	descarrilamiento	víctima
+Relation	T15	T0	EffectCause	true	víctima	descarrilamiento
+Relation	T2	T5	CauseEffect	true	colisión	muertos
+Relation	T5	T2	EffectCause	true	muertos	colisión
+Relation	T2	T6	CauseEffect	true	colisión	heridos
+Relation	T6	T2	EffectCause	true	heridos	colisión
+Relation	T11	T14	CauseEffect	true	choca	heridas
+Relation	T14	T11	EffectCause	true	heridas	choca
+Relation	T8	T7	CauseEffect	true	atropelladas	muertas
+Relation	T7	T8	EffectCause	true	muertas	atropelladas
+Relation	T0	T1	NoRel	true	descarrilamiento	provoca
+Relation	T0	T3	NoRel	true	descarrilamiento	paso
+Relation	T0	T6	NoRel	true	descarrilamiento	heridos
+Relation	T0	T7	NoRel	true	descarrilamiento	muertas
+Relation	T1	T0	NoRel	true	provoca	descarrilamiento
+Relation	T1	T11	NoRel	true	provoca	choca
+Relation	T1	T12	NoRel	true	provoca	alcance
+Relation	T1	T13	NoRel	true	provoca	detenida
+Relation	T1	T4	NoRel	true	provoca	paso
+Relation	T1	T5	NoRel	true	provoca	muertos
+Relation	T1	T6	NoRel	true	provoca	heridos
+Relation	T1	T7	NoRel	true	provoca	muertas
+Relation	T1	T8	NoRel	true	provoca	atropelladas
+Relation	T1	T9	NoRel	true	provoca	composición
+Relation	T10	T0	NoRel	true	produjo	descarrilamiento
+Relation	T10	T13	NoRel	true	produjo	detenida
+Relation	T11	T10	NoRel	true	choca	produjo
+Relation	T11	T2	NoRel	true	choca	colisión
+Relation	T11	T7	NoRel	true	choca	muertas
+Relation	T12	T13	NoRel	true	alcance	detenida
+Relation	T12	T14	NoRel	true	alcance	heridas
+Relation	T12	T5	NoRel	true	alcance	muertos
+Relation	T12	T7	NoRel	true	alcance	muertas
+Relation	T13	T0	NoRel	true	detenida	descarrilamiento
+Relation	T13	T10	NoRel	true	detenida	produjo
+Relation	T13	T12	NoRel	true	detenida	alcance
+Relation	T13	T15	NoRel	true	detenida	víctima
+Relation	T13	T3	NoRel	true	detenida	paso
+Relation	T13	T6	NoRel	true	detenida	heridos
+Relation	T14	T0	NoRel	true	heridas	descarrilamiento
+Relation	T14	T3	NoRel	true	heridas	paso
+Relation	T14	T5	NoRel	true	heridas	muertos
+Relation	T14	T9	NoRel	true	heridas	composición
+Relation	T15	T1	NoRel	true	víctima	provoca
+Relation	T15	T13	NoRel	true	víctima	detenida
+Relation	T15	T14	NoRel	true	víctima	heridas
+Relation	T15	T3	NoRel	true	víctima	paso
+Relation	T15	T4	NoRel	true	víctima	paso
+Relation	T15	T5	NoRel	true	víctima	muertos
+Relation	T15	T9	NoRel	true	víctima	composición
+Relation	T2	T1	NoRel	true	colisión	provoca
+Relation	T2	T10	NoRel	true	colisión	produjo
+Relation	T2	T15	NoRel	true	colisión	víctima
+Relation	T3	T11	NoRel	true	paso	choca
+Relation	T3	T7	NoRel	true	paso	muertas
+Relation	T4	T13	NoRel	true	paso	detenida
+Relation	T4	T15	NoRel	true	paso	víctima
+Relation	T4	T2	NoRel	true	paso	colisión
+Relation	T4	T3	NoRel	true	paso	paso
+Relation	T5	T13	NoRel	true	muertos	detenida
+Relation	T5	T14	NoRel	true	muertos	heridas
+Relation	T5	T4	NoRel	true	muertos	paso
+Relation	T5	T6	NoRel	true	muertos	heridos
+Relation	T6	T12	NoRel	true	heridos	alcance
+Relation	T6	T15	NoRel	true	heridos	víctima
+Relation	T6	T7	NoRel	true	heridos	muertas
+Relation	T6	T8	NoRel	true	heridos	atropelladas
+Relation	T7	T1	NoRel	true	muertas	provoca
+Relation	T7	T10	NoRel	true	muertas	produjo
+Relation	T7	T12	NoRel	true	muertas	alcance
+Relation	T7	T13	NoRel	true	muertas	detenida
+Relation	T7	T3	NoRel	true	muertas	paso
+Relation	T7	T4	NoRel	true	muertas	paso
+Relation	T7	T5	NoRel	true	muertas	muertos
+Relation	T8	T12	NoRel	true	atropelladas	alcance
+Relation	T9	T0	NoRel	true	composición	descarrilamiento
+Relation	T9	T10	NoRel	true	composición	produjo
+Relation	T9	T12	NoRel	true	composición	alcance
+Relation	T9	T4	NoRel	true	composición	paso

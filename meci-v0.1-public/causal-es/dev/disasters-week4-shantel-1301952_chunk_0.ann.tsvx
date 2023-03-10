@@ -1,0 +1,58 @@
+Text	YOUSSEF BELHADJ , alias _ Abu Dujanah _ ( Touzine , Marruecos , 1976 ) es un yihadista marroquí , condenado por terrorismo .	Se le consideraba uno de los tres presuntos autores intelectuales de los atentados del 11 de marzo de 2004 en Madrid , junto a Rabei Osman _ El Egipcio _ y Hassan El Haski .	Fue condenado a 12 años de prisión en el juicio por los atentados de Madrid .	Fue detenido en Bélgica en febrero de 2005 y extraditado a España en abril siguiente , donde ingresó en prisión incondicional .	Fue el portavoz de los terroristas en el vídeo que el 13 de marzo de 2004 – dos días después de los atentados y en la noche previa a las elecciones generales – dejaron en una papelera cercana a la mezquita madrileña de la M-30 , tras previo aviso a Telemadrid .
+Event	T0	condenado	EVENT	98
+Event	T1	terrorismo	EVENT	112
+Event	T2	consideraba	EVENT	131
+Event	T3	atentados	EVENT	198
+Event	T4	juicio	EVENT	340
+Event	T5	atentados	EVENT	355
+Event	T6	detenido	EVENT	381
+Event	T7	extraditado	EVENT	422
+Event	T8	atentados	EVENT	605
+Event	T9	dejaron	EVENT	665
+Event	T10	aviso	EVENT	746
+Event	T11	condenado	EVENT	303
+Relation	T1	T0	CauseEffect	true	terrorismo	condenado
+Relation	T0	T1	EffectCause	true	condenado	terrorismo
+Relation	T5	T6	CauseEffect	true	atentados	detenido
+Relation	T6	T5	EffectCause	true	detenido	atentados
+Relation	T5	T11	CauseEffect	true	atentados	condenado
+Relation	T11	T5	EffectCause	true	condenado	atentados
+Relation	T0	T6	NoRel	true	condenado	detenido
+Relation	T1	T10	NoRel	true	terrorismo	aviso
+Relation	T1	T3	NoRel	true	terrorismo	atentados
+Relation	T1	T4	NoRel	true	terrorismo	juicio
+Relation	T1	T8	NoRel	true	terrorismo	atentados
+Relation	T1	T9	NoRel	true	terrorismo	dejaron
+Relation	T10	T0	NoRel	true	aviso	condenado
+Relation	T10	T11	NoRel	true	aviso	condenado
+Relation	T10	T2	NoRel	true	aviso	consideraba
+Relation	T10	T4	NoRel	true	aviso	juicio
+Relation	T10	T8	NoRel	true	aviso	atentados
+Relation	T11	T1	NoRel	true	condenado	terrorismo
+Relation	T11	T2	NoRel	true	condenado	consideraba
+Relation	T11	T6	NoRel	true	condenado	detenido
+Relation	T2	T5	NoRel	true	consideraba	atentados
+Relation	T2	T7	NoRel	true	consideraba	extraditado
+Relation	T2	T9	NoRel	true	consideraba	dejaron
+Relation	T3	T0	NoRel	true	atentados	condenado
+Relation	T3	T1	NoRel	true	atentados	terrorismo
+Relation	T3	T11	NoRel	true	atentados	condenado
+Relation	T3	T2	NoRel	true	atentados	consideraba
+Relation	T3	T7	NoRel	true	atentados	extraditado
+Relation	T3	T8	NoRel	true	atentados	atentados
+Relation	T4	T2	NoRel	true	juicio	consideraba
+Relation	T4	T3	NoRel	true	juicio	atentados
+Relation	T4	T9	NoRel	true	juicio	dejaron
+Relation	T5	T1	NoRel	true	atentados	terrorismo
+Relation	T5	T7	NoRel	true	atentados	extraditado
+Relation	T5	T9	NoRel	true	atentados	dejaron
+Relation	T6	T2	NoRel	true	detenido	consideraba
+Relation	T7	T2	NoRel	true	extraditado	consideraba
+Relation	T7	T4	NoRel	true	extraditado	juicio
+Relation	T7	T6	NoRel	true	extraditado	detenido
+Relation	T7	T9	NoRel	true	extraditado	dejaron
+Relation	T8	T1	NoRel	true	atentados	terrorismo
+Relation	T8	T9	NoRel	true	atentados	dejaron
+Relation	T9	T3	NoRel	true	dejaron	atentados
+Relation	T9	T5	NoRel	true	dejaron	atentados
+Relation	T9	T7	NoRel	true	dejaron	extraditado

@@ -1,0 +1,60 @@
+Text	El VUELO 1145 DE SOSOLISO AIRLINES ( SO1145 / OSL1145 ) fue un vuelo de pasajeros doméstico de Sosoliso Airlines programado entre las ciudades nigerianas de Abuya ( ABV ) y Port Harcourt ( PHC ) .	Aproximadamente a las 14:08 hora local ( 13:08 UTC ) del 10 de diciembre de 2005 , el vuelo 1145 de Abuya aterrizó en el Aeropuerto Internacional de Port Harcourt .	El avión , un McDonnell Douglas DC-9-32 con 110 personas a bordo , se estrelló contra el suelo y estalló en llamas .	Inmediatamente después del accidente , siete sobrevivientes fueron recuperados y llevados a hospitales , pero solo dos personas sobrevivieron .	Fue el segundo desastre aéreo que ocurrió en Nigeria en menos de tres meses , después del Vuelo 210 de Bellview Airlines , que se estrelló el 22 de octubre de 2005 por razones desconocidas , matando a las 117 personas a bordo .
+Event	T0	vuelo	EVENT	63
+Event	T1	programado	EVENT	113
+Event	T2	vuelo	EVENT	283
+Event	T3	aterrizó	EVENT	303
+Event	T4	estrelló	EVENT	432
+Event	T5	llamas	EVENT	470
+Event	T6	accidente	EVENT	506
+Event	T7	recuperados	EVENT	546
+Event	T8	sobrevivieron	EVENT	607
+Event	T9	ocurrió	EVENT	657
+Event	T10	Vuelo	EVENT	713
+Event	T11	estrelló	EVENT	753
+Event	T12	matando	EVENT	814
+Relation	T4	T5	CauseEffect	true	estrelló	llamas
+Relation	T5	T4	EffectCause	true	llamas	estrelló
+Relation	T11	T12	CauseEffect	true	estrelló	matando
+Relation	T12	T11	EffectCause	true	matando	estrelló
+Relation	T0	T3	NoRel	true	vuelo	aterrizó
+Relation	T0	T4	NoRel	true	vuelo	estrelló
+Relation	T0	T5	NoRel	true	vuelo	llamas
+Relation	T0	T6	NoRel	true	vuelo	accidente
+Relation	T0	T7	NoRel	true	vuelo	recuperados
+Relation	T1	T0	NoRel	true	programado	vuelo
+Relation	T1	T4	NoRel	true	programado	estrelló
+Relation	T10	T1	NoRel	true	Vuelo	programado
+Relation	T10	T2	NoRel	true	Vuelo	vuelo
+Relation	T10	T5	NoRel	true	Vuelo	llamas
+Relation	T10	T7	NoRel	true	Vuelo	recuperados
+Relation	T10	T9	NoRel	true	Vuelo	ocurrió
+Relation	T11	T1	NoRel	true	estrelló	programado
+Relation	T11	T7	NoRel	true	estrelló	recuperados
+Relation	T11	T8	NoRel	true	estrelló	sobrevivieron
+Relation	T12	T10	NoRel	true	matando	Vuelo
+Relation	T12	T9	NoRel	true	matando	ocurrió
+Relation	T2	T5	NoRel	true	vuelo	llamas
+Relation	T2	T6	NoRel	true	vuelo	accidente
+Relation	T3	T1	NoRel	true	aterrizó	programado
+Relation	T3	T12	NoRel	true	aterrizó	matando
+Relation	T3	T9	NoRel	true	aterrizó	ocurrió
+Relation	T4	T1	NoRel	true	estrelló	programado
+Relation	T4	T6	NoRel	true	estrelló	accidente
+Relation	T4	T7	NoRel	true	estrelló	recuperados
+Relation	T4	T9	NoRel	true	estrelló	ocurrió
+Relation	T5	T7	NoRel	true	llamas	recuperados
+Relation	T6	T12	NoRel	true	accidente	matando
+Relation	T6	T3	NoRel	true	accidente	aterrizó
+Relation	T6	T4	NoRel	true	accidente	estrelló
+Relation	T7	T10	NoRel	true	recuperados	Vuelo
+Relation	T7	T11	NoRel	true	recuperados	estrelló
+Relation	T7	T12	NoRel	true	recuperados	matando
+Relation	T7	T2	NoRel	true	recuperados	vuelo
+Relation	T8	T11	NoRel	true	sobrevivieron	estrelló
+Relation	T8	T2	NoRel	true	sobrevivieron	vuelo
+Relation	T8	T7	NoRel	true	sobrevivieron	recuperados
+Relation	T9	T0	NoRel	true	ocurrió	vuelo
+Relation	T9	T1	NoRel	true	ocurrió	programado
+Relation	T9	T12	NoRel	true	ocurrió	matando
+Relation	T9	T7	NoRel	true	ocurrió	recuperados
+Relation	T9	T8	NoRel	true	ocurrió	sobrevivieron

@@ -1,0 +1,22 @@
+Text	9 Mayıs 1959'da Aeroflot tarafından işletilmek üzere CCCP - 11149 kuyruk numarasını aldı .	Kaza anında uçağın 4641 uçuş saati vardı .	15 Mayıs 1970 günü , yapacakları birkaç eğitim uçuşunun ilki için yerel saatle 05.04'te Kişinev Havalimanı'ndan kalkış yaptılar .	İlk üç eğitim uçuşunu tamamlayan mürettebat , Kişinev Havalimanı'na geri döndü ve dördüncü eğitim uçuşu için hazırlıklara başladılar .	11:34'de tekrar kalkış yaptılar .
+Event	T0	aldı	EVENT	84
+Event	T1	döndü	EVENT	337
+Event	T2	Kaza	EVENT	91
+Event	T3	yaptılar	EVENT	253
+Event	T4	tamamlayan	EVENT	286
+Event	T5	başladılar	EVENT	386
+Event	T6	yaptılar	EVENT	422
+Relation	T4	T1	CauseEffect	true	tamamlayan	döndü
+Relation	T1	T4	EffectCause	true	döndü	tamamlayan
+Relation	T4	T5	CauseEffect	true	tamamlayan	başladılar
+Relation	T5	T4	EffectCause	true	başladılar	tamamlayan
+Relation	T0	T1	NoRel	true	aldı	döndü
+Relation	T0	T3	NoRel	true	aldı	yaptılar
+Relation	T0	T4	NoRel	true	aldı	tamamlayan
+Relation	T0	T5	NoRel	true	aldı	başladılar
+Relation	T1	T3	NoRel	true	döndü	yaptılar
+Relation	T1	T5	NoRel	true	döndü	başladılar
+Relation	T1	T6	NoRel	true	döndü	yaptılar
+Relation	T2	T1	NoRel	true	Kaza	döndü
+Relation	T2	T5	NoRel	true	Kaza	başladılar
+Relation	T4	T6	NoRel	true	tamamlayan	yaptılar

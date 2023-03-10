@@ -1,0 +1,143 @@
+Text	: * La tripulación no tenía entrenamiento práctico en maniobrar la aeronave a alturas elevadas y frente al evento de anomalías en la indicación de velocidad .	: * La mala gestión del factor sorpresa , lo que generó una gran carga emocional sobre los dos copilotos .	: * La ausencia de una pantalla en la cabina que mostrara claramente las inconsistencias en las mediciones de velocidad del aire identificadas por la computadora .	' '' 3 ) La falta de reacción por parte de la tripulación ante el aviso de pérdida , que puede haber sido inducida por :	: * Mala interpretación de las señales de alarmas sonoras , debido a la falta de conciencia , durante el entrenamiento , de los fenómenos de pérdida de sustentación , la alarma de pérdida y de las sacudidas tipo " buffeting "
+Event	T2	evento	EVENT	107
+Event	T4	indicación	EVENT	133
+Event	T7	generó	EVENT	208
+Event	T9	ausencia	EVENT	273
+Event	T10	inconsistencias	EVENT	339
+Event	T11	mediciones	EVENT	362
+Event	T12	identificadas	EVENT	395
+Event	T14	reacción	EVENT	451
+Event	T15	aviso	EVENT	496
+Event	T16	pérdida	EVENT	505
+Event	T17	inducida	EVENT	536
+Event	T18	interpretación	EVENT	560
+Event	T19	entrenamiento	EVENT	656
+Event	T20	fenómenos	EVENT	679
+Event	T21	pérdida	EVENT	692
+Event	T22	pérdida	EVENT	731
+Event	T23	sacudidas	EVENT	748
+Event	T24	buffeting	EVENT	765
+Event	T1	gestión	EVENT	171
+Relation	T1	T7	CauseEffect	true	gestión	generó
+Relation	T7	T1	EffectCause	true	generó	gestión
+Relation	T1	T11	NoRel	true	gestión	mediciones
+Relation	T1	T14	NoRel	true	gestión	reacción
+Relation	T1	T17	NoRel	true	gestión	inducida
+Relation	T1	T18	NoRel	true	gestión	interpretación
+Relation	T1	T19	NoRel	true	gestión	entrenamiento
+Relation	T1	T23	NoRel	true	gestión	sacudidas
+Relation	T1	T4	NoRel	true	gestión	indicación
+Relation	T10	T1	NoRel	true	inconsistencias	gestión
+Relation	T10	T14	NoRel	true	inconsistencias	reacción
+Relation	T10	T16	NoRel	true	inconsistencias	pérdida
+Relation	T10	T17	NoRel	true	inconsistencias	inducida
+Relation	T10	T18	NoRel	true	inconsistencias	interpretación
+Relation	T10	T20	NoRel	true	inconsistencias	fenómenos
+Relation	T10	T21	NoRel	true	inconsistencias	pérdida
+Relation	T10	T24	NoRel	true	inconsistencias	buffeting
+Relation	T11	T19	NoRel	true	mediciones	entrenamiento
+Relation	T11	T2	NoRel	true	mediciones	evento
+Relation	T11	T21	NoRel	true	mediciones	pérdida
+Relation	T11	T22	NoRel	true	mediciones	pérdida
+Relation	T11	T4	NoRel	true	mediciones	indicación
+Relation	T11	T9	NoRel	true	mediciones	ausencia
+Relation	T12	T1	NoRel	true	identificadas	gestión
+Relation	T12	T15	NoRel	true	identificadas	aviso
+Relation	T12	T17	NoRel	true	identificadas	inducida
+Relation	T12	T18	NoRel	true	identificadas	interpretación
+Relation	T12	T2	NoRel	true	identificadas	evento
+Relation	T12	T21	NoRel	true	identificadas	pérdida
+Relation	T12	T22	NoRel	true	identificadas	pérdida
+Relation	T12	T23	NoRel	true	identificadas	sacudidas
+Relation	T12	T4	NoRel	true	identificadas	indicación
+Relation	T14	T1	NoRel	true	reacción	gestión
+Relation	T14	T10	NoRel	true	reacción	inconsistencias
+Relation	T14	T11	NoRel	true	reacción	mediciones
+Relation	T14	T12	NoRel	true	reacción	identificadas
+Relation	T14	T19	NoRel	true	reacción	entrenamiento
+Relation	T14	T2	NoRel	true	reacción	evento
+Relation	T14	T22	NoRel	true	reacción	pérdida
+Relation	T14	T4	NoRel	true	reacción	indicación
+Relation	T15	T1	NoRel	true	aviso	gestión
+Relation	T15	T12	NoRel	true	aviso	identificadas
+Relation	T15	T14	NoRel	true	aviso	reacción
+Relation	T15	T17	NoRel	true	aviso	inducida
+Relation	T16	T1	NoRel	true	pérdida	gestión
+Relation	T16	T15	NoRel	true	pérdida	aviso
+Relation	T16	T20	NoRel	true	pérdida	fenómenos
+Relation	T16	T23	NoRel	true	pérdida	sacudidas
+Relation	T16	T24	NoRel	true	pérdida	buffeting
+Relation	T16	T4	NoRel	true	pérdida	indicación
+Relation	T16	T7	NoRel	true	pérdida	generó
+Relation	T17	T12	NoRel	true	inducida	identificadas
+Relation	T17	T14	NoRel	true	inducida	reacción
+Relation	T17	T15	NoRel	true	inducida	aviso
+Relation	T17	T18	NoRel	true	inducida	interpretación
+Relation	T17	T2	NoRel	true	inducida	evento
+Relation	T17	T21	NoRel	true	inducida	pérdida
+Relation	T17	T24	NoRel	true	inducida	buffeting
+Relation	T18	T16	NoRel	true	interpretación	pérdida
+Relation	T18	T22	NoRel	true	interpretación	pérdida
+Relation	T18	T24	NoRel	true	interpretación	buffeting
+Relation	T19	T10	NoRel	true	entrenamiento	inconsistencias
+Relation	T19	T11	NoRel	true	entrenamiento	mediciones
+Relation	T19	T15	NoRel	true	entrenamiento	aviso
+Relation	T19	T17	NoRel	true	entrenamiento	inducida
+Relation	T19	T24	NoRel	true	entrenamiento	buffeting
+Relation	T19	T4	NoRel	true	entrenamiento	indicación
+Relation	T2	T10	NoRel	true	evento	inconsistencias
+Relation	T2	T14	NoRel	true	evento	reacción
+Relation	T2	T15	NoRel	true	evento	aviso
+Relation	T2	T18	NoRel	true	evento	interpretación
+Relation	T2	T19	NoRel	true	evento	entrenamiento
+Relation	T2	T20	NoRel	true	evento	fenómenos
+Relation	T2	T21	NoRel	true	evento	pérdida
+Relation	T2	T22	NoRel	true	evento	pérdida
+Relation	T20	T10	NoRel	true	fenómenos	inconsistencias
+Relation	T20	T15	NoRel	true	fenómenos	aviso
+Relation	T20	T18	NoRel	true	fenómenos	interpretación
+Relation	T20	T23	NoRel	true	fenómenos	sacudidas
+Relation	T20	T24	NoRel	true	fenómenos	buffeting
+Relation	T21	T10	NoRel	true	pérdida	inconsistencias
+Relation	T21	T12	NoRel	true	pérdida	identificadas
+Relation	T21	T14	NoRel	true	pérdida	reacción
+Relation	T21	T15	NoRel	true	pérdida	aviso
+Relation	T21	T16	NoRel	true	pérdida	pérdida
+Relation	T21	T18	NoRel	true	pérdida	interpretación
+Relation	T21	T20	NoRel	true	pérdida	fenómenos
+Relation	T21	T22	NoRel	true	pérdida	pérdida
+Relation	T21	T7	NoRel	true	pérdida	generó
+Relation	T22	T17	NoRel	true	pérdida	inducida
+Relation	T22	T18	NoRel	true	pérdida	interpretación
+Relation	T22	T2	NoRel	true	pérdida	evento
+Relation	T22	T7	NoRel	true	pérdida	generó
+Relation	T22	T9	NoRel	true	pérdida	ausencia
+Relation	T23	T16	NoRel	true	sacudidas	pérdida
+Relation	T23	T18	NoRel	true	sacudidas	interpretación
+Relation	T23	T21	NoRel	true	sacudidas	pérdida
+Relation	T23	T4	NoRel	true	sacudidas	indicación
+Relation	T23	T9	NoRel	true	sacudidas	ausencia
+Relation	T24	T1	NoRel	true	buffeting	gestión
+Relation	T24	T14	NoRel	true	buffeting	reacción
+Relation	T24	T16	NoRel	true	buffeting	pérdida
+Relation	T24	T23	NoRel	true	buffeting	sacudidas
+Relation	T24	T7	NoRel	true	buffeting	generó
+Relation	T4	T10	NoRel	true	indicación	inconsistencias
+Relation	T4	T14	NoRel	true	indicación	reacción
+Relation	T4	T15	NoRel	true	indicación	aviso
+Relation	T4	T21	NoRel	true	indicación	pérdida
+Relation	T4	T23	NoRel	true	indicación	sacudidas
+Relation	T4	T9	NoRel	true	indicación	ausencia
+Relation	T7	T10	NoRel	true	generó	inconsistencias
+Relation	T7	T12	NoRel	true	generó	identificadas
+Relation	T7	T17	NoRel	true	generó	inducida
+Relation	T7	T19	NoRel	true	generó	entrenamiento
+Relation	T7	T20	NoRel	true	generó	fenómenos
+Relation	T7	T24	NoRel	true	generó	buffeting
+Relation	T7	T9	NoRel	true	generó	ausencia
+Relation	T9	T14	NoRel	true	ausencia	reacción
+Relation	T9	T21	NoRel	true	ausencia	pérdida
+Relation	T9	T22	NoRel	true	ausencia	pérdida
+Relation	T9	T24	NoRel	true	ausencia	buffeting
+Relation	T9	T4	NoRel	true	ausencia	indicación
+Relation	T9	T7	NoRel	true	ausencia	generó

@@ -1,0 +1,106 @@
+Text	| | 100 % | 100 % | No | No | No | | | | | diversifi | storage | alternati | | | | | cation | | ve | +-----------+-----------+-----------+-----------+-----------+-----------+	None of Gazprom 's European clients have sued Gazprom for irregularities in gas shipments in January 2009 , hence Gazprom suspended its litigation with Naftogaz Ukraine at the Arbitration Institute of the Stockholm Chamber of Commerce over alleged violation of contractual terms on transiting natural gas to Europe by Naftogaz late December 2009 .	Both Russia and Ukraine claimed to have emerged triumphant from the dispute , but both countries sustained major blows to their economies in the middle of an already serious economic crisis .	Gazprom was estimated to have lost about $ 1.5 billion in revenues due to lack of sales , while Ukraine lost an estimated $ 100 million in transit fees and was speculated to have incurred major economic losses due to much of its industry , the backbone of its economy , being temporarily shut down .	Analysts pointed out that the crisis and the way it was handled had a negative and possibly irreversible impact on the reputations of both Russia as an energy supplier , and Ukraine as a transit country .
+Event	T0	sued	EVENT	216
+Event	T1	irregularities	EVENT	233
+Event	T10	dispute	EVENT	591
+Event	T11	sustained	EVENT	620
+Event	T12	blows	EVENT	636
+Event	T13	crisis	EVENT	706
+Event	T14	estimated	EVENT	727
+Event	T15	lost	EVENT	745
+Event	T16	lack	EVENT	789
+Event	T17	sales	EVENT	797
+Event	T18	lost	EVENT	819
+Event	T19	fees	EVENT	862
+Event	T2	shipments	EVENT	255
+Event	T20	speculated	EVENT	875
+Event	T21	incurred	EVENT	894
+Event	T22	crisis	EVENT	1045
+Event	T23	handled	EVENT	1071
+Event	T24	impact	EVENT	1120
+Event	T25	reputations	EVENT	1134
+Event	T26	shut down	EVENT	1003
+Event	T3	suspended	EVENT	297
+Event	T4	litigation	EVENT	311
+Event	T5	losses	EVENT	918
+Event	T6	violation	EVENT	423
+Event	T7	transiting	EVENT	457
+Event	T8	claimed	EVENT	547
+Event	T9	triumphant	EVENT	571
+Relation	T1	T0	CauseEffect	true	irregularities	sued
+Relation	T0	T1	EffectCause	true	sued	irregularities
+Relation	T0	T3	CauseEffect	true	sued	suspended
+Relation	T3	T0	EffectCause	true	suspended	sued
+Relation	T10	T9	CauseEffect	true	dispute	triumphant
+Relation	T9	T10	EffectCause	true	triumphant	dispute
+Relation	T11	T13	CauseEffect	true	sustained	crisis
+Relation	T13	T11	EffectCause	true	crisis	sustained
+Relation	T15	T16	CauseEffect	true	lost	lack
+Relation	T16	T15	EffectCause	true	lack	lost
+Relation	T18	T19	CauseEffect	true	lost	fees
+Relation	T19	T18	EffectCause	true	fees	lost
+Relation	T5	T26	CauseEffect	true	losses	shut down
+Relation	T26	T5	EffectCause	true	shut down	losses
+Relation	T24	T23	CauseEffect	true	impact	handled
+Relation	T23	T24	EffectCause	true	handled	impact
+Relation	T24	T22	CauseEffect	true	impact	crisis
+Relation	T22	T24	EffectCause	true	crisis	impact
+Relation	T0	T21	NoRel	true	sued	incurred
+Relation	T1	T17	NoRel	true	irregularities	sales
+Relation	T1	T6	NoRel	true	irregularities	violation
+Relation	T10	T20	NoRel	true	dispute	speculated
+Relation	T10	T22	NoRel	true	dispute	crisis
+Relation	T10	T24	NoRel	true	dispute	impact
+Relation	T11	T12	NoRel	true	sustained	blows
+Relation	T11	T16	NoRel	true	sustained	lack
+Relation	T11	T26	NoRel	true	sustained	shut down
+Relation	T11	T8	NoRel	true	sustained	claimed
+Relation	T12	T19	NoRel	true	blows	fees
+Relation	T12	T6	NoRel	true	blows	violation
+Relation	T13	T23	NoRel	true	crisis	handled
+Relation	T14	T4	NoRel	true	estimated	litigation
+Relation	T15	T1	NoRel	true	lost	irregularities
+Relation	T16	T2	NoRel	true	lack	shipments
+Relation	T16	T24	NoRel	true	lack	impact
+Relation	T16	T5	NoRel	true	lack	losses
+Relation	T17	T12	NoRel	true	sales	blows
+Relation	T17	T6	NoRel	true	sales	violation
+Relation	T19	T12	NoRel	true	fees	blows
+Relation	T2	T19	NoRel	true	shipments	fees
+Relation	T20	T14	NoRel	true	speculated	estimated
+Relation	T20	T22	NoRel	true	speculated	crisis
+Relation	T20	T24	NoRel	true	speculated	impact
+Relation	T21	T17	NoRel	true	incurred	sales
+Relation	T21	T8	NoRel	true	incurred	claimed
+Relation	T22	T10	NoRel	true	crisis	dispute
+Relation	T23	T3	NoRel	true	handled	suspended
+Relation	T23	T4	NoRel	true	handled	litigation
+Relation	T23	T7	NoRel	true	handled	transiting
+Relation	T24	T10	NoRel	true	impact	dispute
+Relation	T24	T13	NoRel	true	impact	crisis
+Relation	T25	T0	NoRel	true	reputations	sued
+Relation	T25	T14	NoRel	true	reputations	estimated
+Relation	T25	T19	NoRel	true	reputations	fees
+Relation	T25	T24	NoRel	true	reputations	impact
+Relation	T25	T6	NoRel	true	reputations	violation
+Relation	T25	T8	NoRel	true	reputations	claimed
+Relation	T26	T10	NoRel	true	shut down	dispute
+Relation	T3	T14	NoRel	true	suspended	estimated
+Relation	T3	T18	NoRel	true	suspended	lost
+Relation	T4	T16	NoRel	true	litigation	lack
+Relation	T4	T18	NoRel	true	litigation	lost
+Relation	T4	T24	NoRel	true	litigation	impact
+Relation	T4	T9	NoRel	true	litigation	triumphant
+Relation	T5	T11	NoRel	true	losses	sustained
+Relation	T5	T2	NoRel	true	losses	shipments
+Relation	T6	T19	NoRel	true	violation	fees
+Relation	T6	T24	NoRel	true	violation	impact
+Relation	T6	T3	NoRel	true	violation	suspended
+Relation	T6	T8	NoRel	true	violation	claimed
+Relation	T7	T0	NoRel	true	transiting	sued
+Relation	T7	T1	NoRel	true	transiting	irregularities
+Relation	T7	T18	NoRel	true	transiting	lost
+Relation	T7	T24	NoRel	true	transiting	impact
+Relation	T7	T4	NoRel	true	transiting	litigation
+Relation	T8	T19	NoRel	true	claimed	fees
+Relation	T9	T1	NoRel	true	triumphant	irregularities
+Relation	T9	T22	NoRel	true	triumphant	crisis

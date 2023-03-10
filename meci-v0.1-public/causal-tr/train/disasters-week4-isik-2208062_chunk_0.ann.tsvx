@@ -1,0 +1,25 @@
+Text	20 Şubat 1943'te Meksikalı çiftçi Dionisio Pulido'nun mısır tarlasında açılan çukurdan dumanlar yükselmeye başladı .	Bir hafta içinde 170 m'lik bir kül konisi oluştu .	Volkanik faaliyetler 9 yıl sürdü .	Dokuz yılın sonunda 100 milkarelik alan külle kaplandı , 365 m yüksekliğe sahip volkan konisi oluştu .	Paricutin Yanardağı , Everest Dağı , Büyük Kanyon , Büyük Set Resifi , Victoria Çavlanı , Kuzey ışıkları , Rio de Janeiro Limanı ile birlikte dünyanın _ yedi doğal harika _sından biri kabul edilir .
+Event	T0	açılan	EVENT	71
+Event	T1	başladı	EVENT	107
+Event	T2	oluştu	EVENT	159
+Event	T3	sürdü	EVENT	195
+Event	T4	kaplandı	EVENT	249
+Event	T5	oluştu	EVENT	297
+Event	T6	edilir	EVENT	496
+Relation	T0	T1	CauseEffect	true	açılan	başladı
+Relation	T1	T0	EffectCause	true	başladı	açılan
+Relation	T0	T4	NoRel	true	açılan	kaplandı
+Relation	T0	T6	NoRel	true	açılan	edilir
+Relation	T1	T5	NoRel	true	başladı	oluştu
+Relation	T2	T3	NoRel	true	oluştu	sürdü
+Relation	T3	T0	NoRel	true	sürdü	açılan
+Relation	T3	T5	NoRel	true	sürdü	oluştu
+Relation	T4	T1	NoRel	true	kaplandı	başladı
+Relation	T4	T2	NoRel	true	kaplandı	oluştu
+Relation	T4	T3	NoRel	true	kaplandı	sürdü
+Relation	T4	T5	NoRel	true	kaplandı	oluştu
+Relation	T5	T2	NoRel	true	oluştu	oluştu
+Relation	T6	T0	NoRel	true	edilir	açılan
+Relation	T6	T3	NoRel	true	edilir	sürdü
+Relation	T6	T4	NoRel	true	edilir	kaplandı
+Relation	T6	T5	NoRel	true	edilir	oluştu

@@ -1,0 +1,17 @@
+Text	عدوی مرض یا انفیکشن طب میں کسی خورد نامیہ سے پیدا ہونے والے مرض کو کہا جاتا ہے ۔	یہ خورد نامیہ جراثیم بھی ہو سکتا ہے ، طفیلی بھی اور کوئی وائرس بھی ۔			
+Event	T0	کہا	EVENT	67
+Event	T2	پیدا	EVENT	45
+Event	T3	مرض	EVENT	5
+Event	T4	انفیکشن	EVENT	12
+Event	T1	مرض	EVENT	60
+Relation	T2	T4	CauseEffect	true	پیدا	انفیکشن
+Relation	T4	T2	EffectCause	true	انفیکشن	پیدا
+Relation	T2	T3	CauseEffect	true	پیدا	مرض
+Relation	T3	T2	EffectCause	true	مرض	پیدا
+Relation	T2	T1	CauseEffect	true	پیدا	مرض
+Relation	T1	T2	EffectCause	true	مرض	پیدا
+Relation	T0	T1	NoRel	true	کہا	مرض
+Relation	T0	T3	NoRel	true	کہا	مرض
+Relation	T3	T4	NoRel	true	مرض	انفیکشن
+Relation	T4	T1	NoRel	true	انفیکشن	مرض
+Relation	T4	T3	NoRel	true	انفیکشن	مرض

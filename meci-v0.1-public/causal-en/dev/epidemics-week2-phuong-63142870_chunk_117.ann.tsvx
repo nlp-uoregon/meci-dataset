@@ -1,0 +1,86 @@
+Text	Spain announced on 29 May 2021 that it would allow cruise ships dock in its ports beginning on 7 June , hoping to salvage the hard - hit tourist industry and considering the low incidence of the virus and the high level of COVID - 19 vaccination amongst tourists and in the country itself .	Cruise line stock fell sharply on 27 March 2020 when the US $ 2 trillion relief package passed by the U.S. Congress and signed by President Trump excluded companies that are not " organized " under United States law .	Carnival Corporation & plc is registered in Panama , England and Wales ; Royal Caribbean International is chartered in Liberia , and Norwegian Cruise Line Holdings is domiciled in Bermuda .	Senator Sheldon Whitehouse , ( D - RI ) , tweeted : " The giant cruise companies incorporate overseas to dodge US taxes , flag vessels overseas to avoid US taxes and laws , and pollute without offset .	Why should we bail them out ? "
+Event	T0	announced	EVENT	6
+Event	T1	allow	EVENT	45
+Event	T10	passed	EVENT	379
+Event	T11	signed	EVENT	411
+Event	T12	excluded	EVENT	437
+Event	T13	organized	EVENT	471
+Event	T14	registered	EVENT	539
+Event	T15	chartered	EVENT	615
+Event	T16	domiciled	EVENT	676
+Event	T17	tweeted	EVENT	741
+Event	T18	incorporate	EVENT	780
+Event	T19	dodge	EVENT	804
+Event	T2	dock	EVENT	64
+Event	T20	flag	EVENT	821
+Event	T21	pollute	EVENT	876
+Event	T22	offset	EVENT	892
+Event	T23	bail	EVENT	915
+Event	T24	avoid	EVENT	846
+Event	T3	hoping	EVENT	104
+Event	T4	salvage	EVENT	114
+Event	T6	considering	EVENT	158
+Event	T7	incidence	EVENT	178
+Event	T8	vaccination	EVENT	234
+Event	T9	fell	EVENT	309
+Relation	T1	T2	CauseEffect	true	allow	dock
+Relation	T2	T1	EffectCause	true	dock	allow
+Relation	T11	T9	CauseEffect	true	signed	fell
+Relation	T9	T11	EffectCause	true	fell	signed
+Relation	T10	T9	CauseEffect	true	passed	fell
+Relation	T9	T10	EffectCause	true	fell	passed
+Relation	T19	T18	CauseEffect	true	dodge	incorporate
+Relation	T18	T19	EffectCause	true	incorporate	dodge
+Relation	T8	T1	CauseEffect	true	vaccination	allow
+Relation	T1	T8	EffectCause	true	allow	vaccination
+Relation	T3	T1	CauseEffect	true	hoping	allow
+Relation	T1	T3	EffectCause	true	allow	hoping
+Relation	T6	T1	CauseEffect	true	considering	allow
+Relation	T1	T6	EffectCause	true	allow	considering
+Relation	T24	T20	CauseEffect	true	avoid	flag
+Relation	T20	T24	EffectCause	true	flag	avoid
+Relation	T0	T22	NoRel	true	announced	offset
+Relation	T1	T24	NoRel	true	allow	avoid
+Relation	T10	T16	NoRel	true	passed	domiciled
+Relation	T11	T2	NoRel	true	signed	dock
+Relation	T11	T22	NoRel	true	signed	offset
+Relation	T12	T11	NoRel	true	excluded	signed
+Relation	T12	T16	NoRel	true	excluded	domiciled
+Relation	T13	T10	NoRel	true	organized	passed
+Relation	T13	T2	NoRel	true	organized	dock
+Relation	T13	T20	NoRel	true	organized	flag
+Relation	T14	T12	NoRel	true	registered	excluded
+Relation	T14	T2	NoRel	true	registered	dock
+Relation	T14	T23	NoRel	true	registered	bail
+Relation	T15	T17	NoRel	true	chartered	tweeted
+Relation	T16	T11	NoRel	true	domiciled	signed
+Relation	T16	T3	NoRel	true	domiciled	hoping
+Relation	T17	T19	NoRel	true	tweeted	dodge
+Relation	T17	T8	NoRel	true	tweeted	vaccination
+Relation	T18	T7	NoRel	true	incorporate	incidence
+Relation	T19	T0	NoRel	true	dodge	announced
+Relation	T19	T11	NoRel	true	dodge	signed
+Relation	T19	T4	NoRel	true	dodge	salvage
+Relation	T19	T8	NoRel	true	dodge	vaccination
+Relation	T2	T19	NoRel	true	dock	dodge
+Relation	T20	T0	NoRel	true	flag	announced
+Relation	T20	T12	NoRel	true	flag	excluded
+Relation	T20	T7	NoRel	true	flag	incidence
+Relation	T21	T13	NoRel	true	pollute	organized
+Relation	T21	T16	NoRel	true	pollute	domiciled
+Relation	T21	T7	NoRel	true	pollute	incidence
+Relation	T22	T14	NoRel	true	offset	registered
+Relation	T22	T20	NoRel	true	offset	flag
+Relation	T23	T6	NoRel	true	bail	considering
+Relation	T24	T13	NoRel	true	avoid	organized
+Relation	T24	T19	NoRel	true	avoid	dodge
+Relation	T3	T23	NoRel	true	hoping	bail
+Relation	T3	T4	NoRel	true	hoping	salvage
+Relation	T4	T22	NoRel	true	salvage	offset
+Relation	T6	T12	NoRel	true	considering	excluded
+Relation	T6	T15	NoRel	true	considering	chartered
+Relation	T7	T0	NoRel	true	incidence	announced
+Relation	T7	T16	NoRel	true	incidence	domiciled
+Relation	T8	T6	NoRel	true	vaccination	considering
+Relation	T9	T0	NoRel	true	fell	announced
+Relation	T9	T22	NoRel	true	fell	offset

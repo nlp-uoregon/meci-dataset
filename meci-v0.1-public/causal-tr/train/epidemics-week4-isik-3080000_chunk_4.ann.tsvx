@@ -1,0 +1,88 @@
+Text	1813 -1814 salgınının kaynağının 1812'de Konstantinopolis'te başlayan bir salgın olduğuna inanılıyor Veba Mısır'daki İskenderiye'ye yayılmıştı ve Ocak 1813'te Malta'daki yetkililer bu salgının farkındaydı .	Veba , İskenderiye'den Malta'ya giden gemilerdeki enfekte mürettebat ile Malta Adalarına ulaştı .	İngiliz bayrağını taşıyan Maltalı bir brigantine olan _ San Nicola _ ( veya _ St. Nicholas _ 17 Mart 1813'te İskenderiye'den ayrılmıştı ve geminin limandan ayrılmasından bir hafta sonra mürettebatından ikisi hastalandı .	28 Mart'ta Malta'ya ulaşan gemi , Marsamxett Limanı'nda iki hafta karantinaya alındı .	Gemi ile kıyı arasında iletişim olmaması için sağlık görevlileri gönderildi .
+Event	T0	başlayan	EVENT	61
+Event	T1	salgın	EVENT	74
+Event	T2	yayılmıştı	EVENT	132
+Event	T3	ulaştı	EVENT	296
+Event	T4	ayrılmıştı	EVENT	430
+Event	T5	ayrılmasından	EVENT	461
+Event	T6	hastalandı	EVENT	513
+Event	T7	alındı	EVENT	604
+Event	T8	gönderildi	EVENT	678
+Event	T9	salgınının	EVENT	11
+Event	T10	enfekte	EVENT	257
+Event	T11	Veba	EVENT	207
+Event	T12	giden	EVENT	239
+Event	T13	taşıyan	EVENT	323
+Relation	T11	T6	CauseEffect	true	Veba	hastalandı
+Relation	T6	T11	EffectCause	true	hastalandı	Veba
+Relation	T6	T10	CauseEffect	true	hastalandı	enfekte
+Relation	T10	T6	EffectCause	true	enfekte	hastalandı
+Relation	T10	T3	CauseEffect	true	enfekte	ulaştı
+Relation	T3	T10	EffectCause	true	ulaştı	enfekte
+Relation	T3	T7	CauseEffect	true	ulaştı	alındı
+Relation	T7	T3	EffectCause	true	alındı	ulaştı
+Relation	T7	T8	CauseEffect	true	alındı	gönderildi
+Relation	T8	T7	EffectCause	true	gönderildi	alındı
+Relation	T0	T1	NoRel	true	başlayan	salgın
+Relation	T0	T5	NoRel	true	başlayan	ayrılmasından
+Relation	T0	T6	NoRel	true	başlayan	hastalandı
+Relation	T0	T7	NoRel	true	başlayan	alındı
+Relation	T0	T9	NoRel	true	başlayan	salgınının
+Relation	T1	T11	NoRel	true	salgın	Veba
+Relation	T1	T2	NoRel	true	salgın	yayılmıştı
+Relation	T1	T4	NoRel	true	salgın	ayrılmıştı
+Relation	T1	T5	NoRel	true	salgın	ayrılmasından
+Relation	T1	T7	NoRel	true	salgın	alındı
+Relation	T10	T0	NoRel	true	enfekte	başlayan
+Relation	T10	T11	NoRel	true	enfekte	Veba
+Relation	T10	T4	NoRel	true	enfekte	ayrılmıştı
+Relation	T10	T7	NoRel	true	enfekte	alındı
+Relation	T10	T8	NoRel	true	enfekte	gönderildi
+Relation	T11	T0	NoRel	true	Veba	başlayan
+Relation	T11	T8	NoRel	true	Veba	gönderildi
+Relation	T12	T0	NoRel	true	giden	başlayan
+Relation	T12	T11	NoRel	true	giden	Veba
+Relation	T12	T2	NoRel	true	giden	yayılmıştı
+Relation	T12	T5	NoRel	true	giden	ayrılmasından
+Relation	T12	T8	NoRel	true	giden	gönderildi
+Relation	T13	T0	NoRel	true	taşıyan	başlayan
+Relation	T13	T11	NoRel	true	taşıyan	Veba
+Relation	T13	T12	NoRel	true	taşıyan	giden
+Relation	T13	T3	NoRel	true	taşıyan	ulaştı
+Relation	T13	T7	NoRel	true	taşıyan	alındı
+Relation	T13	T8	NoRel	true	taşıyan	gönderildi
+Relation	T13	T9	NoRel	true	taşıyan	salgınının
+Relation	T2	T13	NoRel	true	yayılmıştı	taşıyan
+Relation	T2	T9	NoRel	true	yayılmıştı	salgınının
+Relation	T3	T1	NoRel	true	ulaştı	salgın
+Relation	T3	T4	NoRel	true	ulaştı	ayrılmıştı
+Relation	T3	T5	NoRel	true	ulaştı	ayrılmasından
+Relation	T3	T8	NoRel	true	ulaştı	gönderildi
+Relation	T4	T10	NoRel	true	ayrılmıştı	enfekte
+Relation	T4	T11	NoRel	true	ayrılmıştı	Veba
+Relation	T4	T12	NoRel	true	ayrılmıştı	giden
+Relation	T4	T8	NoRel	true	ayrılmıştı	gönderildi
+Relation	T5	T0	NoRel	true	ayrılmasından	başlayan
+Relation	T5	T11	NoRel	true	ayrılmasından	Veba
+Relation	T5	T13	NoRel	true	ayrılmasından	taşıyan
+Relation	T5	T3	NoRel	true	ayrılmasından	ulaştı
+Relation	T5	T6	NoRel	true	ayrılmasından	hastalandı
+Relation	T5	T7	NoRel	true	ayrılmasından	alındı
+Relation	T5	T9	NoRel	true	ayrılmasından	salgınının
+Relation	T6	T4	NoRel	true	hastalandı	ayrılmıştı
+Relation	T6	T8	NoRel	true	hastalandı	gönderildi
+Relation	T6	T9	NoRel	true	hastalandı	salgınının
+Relation	T7	T11	NoRel	true	alındı	Veba
+Relation	T7	T13	NoRel	true	alındı	taşıyan
+Relation	T7	T2	NoRel	true	alındı	yayılmıştı
+Relation	T7	T4	NoRel	true	alındı	ayrılmıştı
+Relation	T8	T0	NoRel	true	gönderildi	başlayan
+Relation	T8	T11	NoRel	true	gönderildi	Veba
+Relation	T8	T3	NoRel	true	gönderildi	ulaştı
+Relation	T8	T4	NoRel	true	gönderildi	ayrılmıştı
+Relation	T9	T0	NoRel	true	salgınının	başlayan
+Relation	T9	T1	NoRel	true	salgınının	salgın
+Relation	T9	T10	NoRel	true	salgınının	enfekte
+Relation	T9	T13	NoRel	true	salgınının	taşıyan
+Relation	T9	T6	NoRel	true	salgınının	hastalandı
+Relation	T9	T7	NoRel	true	salgınının	alındı

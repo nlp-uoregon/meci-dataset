@@ -1,0 +1,133 @@
+Text	Fire officerer blev dræbt og tyve andre såret , mens Hitler slap med nogle knubs .	Hans storhedsvanvid voksede , og han følte sig frelst af forsynet for at redde Tyskland .	Der havde været andre attentatforsøg , og der fandtes anden modstand i Tyskland , men oftest uden en sammenhængende modstandsbevægelse .	For at gennemføre et _ coup_d’etat _ var der brug for en gruppe indflydelsesrige personer , som modstanden kunne samle sig omkring og et samspil med de væbnede styrker og forberedelse af civil og militær administration .	I Tyskland var de væbnede styrker den eneste større bevæbnede magt , der var relativt uafhængig af partiet , og som ville kunne vælte Hitler .
+Event	T0	dræbt	EVENT	20
+Event	T1	såret	EVENT	40
+Event	T2	slap	EVENT	60
+Event	T3	knubs	EVENT	75
+Event	T4	voksede	EVENT	103
+Event	T5	følte	EVENT	120
+Event	T6	forsynet	EVENT	140
+Event	T7	redde	EVENT	156
+Event	T8	attentatforsøg	EVENT	195
+Event	T9	gennemføre	EVENT	317
+Event	T10	brug	EVENT	355
+Event	T11	samle	EVENT	423
+Event	T12	samspil	EVENT	447
+Event	T13	forberedelse	EVENT	481
+Event	T14	vælte	EVENT	659
+Event	T15	frelst	EVENT	130
+Event	T16	modstand	EVENT	233
+Event	T17	modstandsbevægelse	EVENT	289
+Event	T18	bevæbnede	EVENT	583
+Relation	T2	T4	CauseEffect	true	slap	voksede
+Relation	T4	T2	EffectCause	true	voksede	slap
+Relation	T15	T4	CauseEffect	true	frelst	voksede
+Relation	T4	T15	EffectCause	true	voksede	frelst
+Relation	T0	T1	NoRel	true	dræbt	såret
+Relation	T0	T15	NoRel	true	dræbt	frelst
+Relation	T0	T16	NoRel	true	dræbt	modstand
+Relation	T0	T17	NoRel	true	dræbt	modstandsbevægelse
+Relation	T1	T11	NoRel	true	såret	samle
+Relation	T1	T13	NoRel	true	såret	forberedelse
+Relation	T1	T15	NoRel	true	såret	frelst
+Relation	T1	T17	NoRel	true	såret	modstandsbevægelse
+Relation	T1	T4	NoRel	true	såret	voksede
+Relation	T1	T6	NoRel	true	såret	forsynet
+Relation	T1	T7	NoRel	true	såret	redde
+Relation	T1	T9	NoRel	true	såret	gennemføre
+Relation	T10	T0	NoRel	true	brug	dræbt
+Relation	T10	T1	NoRel	true	brug	såret
+Relation	T10	T11	NoRel	true	brug	samle
+Relation	T10	T12	NoRel	true	brug	samspil
+Relation	T10	T14	NoRel	true	brug	vælte
+Relation	T10	T17	NoRel	true	brug	modstandsbevægelse
+Relation	T10	T5	NoRel	true	brug	følte
+Relation	T10	T6	NoRel	true	brug	forsynet
+Relation	T11	T10	NoRel	true	samle	brug
+Relation	T11	T12	NoRel	true	samle	samspil
+Relation	T11	T13	NoRel	true	samle	forberedelse
+Relation	T11	T14	NoRel	true	samle	vælte
+Relation	T11	T18	NoRel	true	samle	bevæbnede
+Relation	T11	T2	NoRel	true	samle	slap
+Relation	T11	T6	NoRel	true	samle	forsynet
+Relation	T11	T8	NoRel	true	samle	attentatforsøg
+Relation	T12	T0	NoRel	true	samspil	dræbt
+Relation	T12	T1	NoRel	true	samspil	såret
+Relation	T12	T10	NoRel	true	samspil	brug
+Relation	T12	T13	NoRel	true	samspil	forberedelse
+Relation	T12	T15	NoRel	true	samspil	frelst
+Relation	T12	T17	NoRel	true	samspil	modstandsbevægelse
+Relation	T12	T18	NoRel	true	samspil	bevæbnede
+Relation	T12	T6	NoRel	true	samspil	forsynet
+Relation	T12	T9	NoRel	true	samspil	gennemføre
+Relation	T13	T14	NoRel	true	forberedelse	vælte
+Relation	T13	T3	NoRel	true	forberedelse	knubs
+Relation	T13	T6	NoRel	true	forberedelse	forsynet
+Relation	T13	T8	NoRel	true	forberedelse	attentatforsøg
+Relation	T13	T9	NoRel	true	forberedelse	gennemføre
+Relation	T14	T0	NoRel	true	vælte	dræbt
+Relation	T14	T1	NoRel	true	vælte	såret
+Relation	T14	T11	NoRel	true	vælte	samle
+Relation	T14	T12	NoRel	true	vælte	samspil
+Relation	T14	T13	NoRel	true	vælte	forberedelse
+Relation	T14	T2	NoRel	true	vælte	slap
+Relation	T14	T3	NoRel	true	vælte	knubs
+Relation	T14	T6	NoRel	true	vælte	forsynet
+Relation	T15	T12	NoRel	true	frelst	samspil
+Relation	T15	T14	NoRel	true	frelst	vælte
+Relation	T15	T17	NoRel	true	frelst	modstandsbevægelse
+Relation	T15	T6	NoRel	true	frelst	forsynet
+Relation	T15	T9	NoRel	true	frelst	gennemføre
+Relation	T16	T10	NoRel	true	modstand	brug
+Relation	T16	T14	NoRel	true	modstand	vælte
+Relation	T16	T3	NoRel	true	modstand	knubs
+Relation	T16	T5	NoRel	true	modstand	følte
+Relation	T17	T0	NoRel	true	modstandsbevægelse	dræbt
+Relation	T17	T10	NoRel	true	modstandsbevægelse	brug
+Relation	T17	T12	NoRel	true	modstandsbevægelse	samspil
+Relation	T17	T3	NoRel	true	modstandsbevægelse	knubs
+Relation	T17	T9	NoRel	true	modstandsbevægelse	gennemføre
+Relation	T18	T0	NoRel	true	bevæbnede	dræbt
+Relation	T18	T11	NoRel	true	bevæbnede	samle
+Relation	T18	T12	NoRel	true	bevæbnede	samspil
+Relation	T18	T4	NoRel	true	bevæbnede	voksede
+Relation	T18	T7	NoRel	true	bevæbnede	redde
+Relation	T18	T8	NoRel	true	bevæbnede	attentatforsøg
+Relation	T2	T18	NoRel	true	slap	bevæbnede
+Relation	T2	T5	NoRel	true	slap	følte
+Relation	T2	T7	NoRel	true	slap	redde
+Relation	T2	T8	NoRel	true	slap	attentatforsøg
+Relation	T2	T9	NoRel	true	slap	gennemføre
+Relation	T3	T10	NoRel	true	knubs	brug
+Relation	T3	T11	NoRel	true	knubs	samle
+Relation	T3	T16	NoRel	true	knubs	modstand
+Relation	T3	T18	NoRel	true	knubs	bevæbnede
+Relation	T3	T4	NoRel	true	knubs	voksede
+Relation	T4	T1	NoRel	true	voksede	såret
+Relation	T4	T9	NoRel	true	voksede	gennemføre
+Relation	T5	T12	NoRel	true	følte	samspil
+Relation	T5	T13	NoRel	true	følte	forberedelse
+Relation	T5	T14	NoRel	true	følte	vælte
+Relation	T5	T18	NoRel	true	følte	bevæbnede
+Relation	T5	T7	NoRel	true	følte	redde
+Relation	T6	T0	NoRel	true	forsynet	dræbt
+Relation	T6	T15	NoRel	true	forsynet	frelst
+Relation	T6	T17	NoRel	true	forsynet	modstandsbevægelse
+Relation	T6	T4	NoRel	true	forsynet	voksede
+Relation	T6	T5	NoRel	true	forsynet	følte
+Relation	T6	T8	NoRel	true	forsynet	attentatforsøg
+Relation	T7	T13	NoRel	true	redde	forberedelse
+Relation	T7	T16	NoRel	true	redde	modstand
+Relation	T7	T4	NoRel	true	redde	voksede
+Relation	T7	T6	NoRel	true	redde	forsynet
+Relation	T7	T9	NoRel	true	redde	gennemføre
+Relation	T8	T10	NoRel	true	attentatforsøg	brug
+Relation	T8	T13	NoRel	true	attentatforsøg	forberedelse
+Relation	T8	T18	NoRel	true	attentatforsøg	bevæbnede
+Relation	T8	T5	NoRel	true	attentatforsøg	følte
+Relation	T9	T12	NoRel	true	gennemføre	samspil
+Relation	T9	T13	NoRel	true	gennemføre	forberedelse
+Relation	T9	T3	NoRel	true	gennemføre	knubs
+Relation	T9	T4	NoRel	true	gennemføre	voksede
+Relation	T9	T6	NoRel	true	gennemføre	forsynet
+Relation	T9	T7	NoRel	true	gennemføre	redde
+Relation	T9	T8	NoRel	true	gennemføre	attentatforsøg

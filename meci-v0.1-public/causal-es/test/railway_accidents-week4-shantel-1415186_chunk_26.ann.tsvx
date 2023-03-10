@@ -1,0 +1,76 @@
+Text	UGT pide responsabilidades al Consell y cree que el accidente que costo la vida a 42 personas se pudo evitar , Levante-EMV , 12 de julio de 2006	La oposición pide la dimisión de Garcia Antón y la Generalitat replica que la causa del accidente fue un ' error fatal ' , Levante-EMV , 5 de julio de 2006	El Consell denunciara a quien diga que había problemas de seguridad y no lo comunico , Las Provincias .	El PSPV pedira la dimisión de Garcia Anton y una comisión investigadora , Levante-EMV , 11 de julio de 2006	_ Fabra destituye a la gerente que manipuló el accidente de Metro _ por Vicente Useros , Xavier Borrás y publicado en El Mundo el 30 de octubre de 2012 .
+Event	T0	cree	EVENT	40
+Event	T1	accidente	EVENT	52
+Event	T2	costo	EVENT	66
+Event	T3	pide	EVENT	158
+Event	T4	dimisión	EVENT	166
+Event	T5	replica	EVENT	208
+Event	T6	accidente	EVENT	233
+Event	T7	denunciara	EVENT	312
+Event	T8	diga	EVENT	331
+Event	T9	pedira	EVENT	413
+Event	T10	dimisión	EVENT	423
+Event	T11	destituye	EVENT	521
+Event	T12	manipuló	EVENT	548
+Event	T13	accidente	EVENT	560
+Event	T14	publicado	EVENT	618
+Relation	T1	T2	CauseEffect	true	accidente	costo
+Relation	T2	T1	EffectCause	true	costo	accidente
+Relation	T0	T1	NoRel	true	cree	accidente
+Relation	T0	T12	NoRel	true	cree	manipuló
+Relation	T0	T13	NoRel	true	cree	accidente
+Relation	T0	T4	NoRel	true	cree	dimisión
+Relation	T10	T1	NoRel	true	dimisión	accidente
+Relation	T10	T11	NoRel	true	dimisión	destituye
+Relation	T10	T3	NoRel	true	dimisión	pide
+Relation	T11	T0	NoRel	true	destituye	cree
+Relation	T11	T6	NoRel	true	destituye	accidente
+Relation	T11	T8	NoRel	true	destituye	diga
+Relation	T12	T1	NoRel	true	manipuló	accidente
+Relation	T12	T2	NoRel	true	manipuló	costo
+Relation	T12	T4	NoRel	true	manipuló	dimisión
+Relation	T13	T0	NoRel	true	accidente	cree
+Relation	T13	T1	NoRel	true	accidente	accidente
+Relation	T13	T14	NoRel	true	accidente	publicado
+Relation	T13	T3	NoRel	true	accidente	pide
+Relation	T13	T4	NoRel	true	accidente	dimisión
+Relation	T13	T5	NoRel	true	accidente	replica
+Relation	T13	T7	NoRel	true	accidente	denunciara
+Relation	T14	T2	NoRel	true	publicado	costo
+Relation	T14	T5	NoRel	true	publicado	replica
+Relation	T14	T6	NoRel	true	publicado	accidente
+Relation	T2	T0	NoRel	true	costo	cree
+Relation	T2	T10	NoRel	true	costo	dimisión
+Relation	T2	T11	NoRel	true	costo	destituye
+Relation	T2	T12	NoRel	true	costo	manipuló
+Relation	T2	T4	NoRel	true	costo	dimisión
+Relation	T3	T0	NoRel	true	pide	cree
+Relation	T3	T12	NoRel	true	pide	manipuló
+Relation	T3	T14	NoRel	true	pide	publicado
+Relation	T3	T2	NoRel	true	pide	costo
+Relation	T3	T7	NoRel	true	pide	denunciara
+Relation	T4	T10	NoRel	true	dimisión	dimisión
+Relation	T4	T11	NoRel	true	dimisión	destituye
+Relation	T4	T14	NoRel	true	dimisión	publicado
+Relation	T4	T3	NoRel	true	dimisión	pide
+Relation	T5	T1	NoRel	true	replica	accidente
+Relation	T5	T11	NoRel	true	replica	destituye
+Relation	T5	T7	NoRel	true	replica	denunciara
+Relation	T6	T13	NoRel	true	accidente	accidente
+Relation	T6	T3	NoRel	true	accidente	pide
+Relation	T7	T0	NoRel	true	denunciara	cree
+Relation	T7	T1	NoRel	true	denunciara	accidente
+Relation	T7	T10	NoRel	true	denunciara	dimisión
+Relation	T7	T13	NoRel	true	denunciara	accidente
+Relation	T7	T14	NoRel	true	denunciara	publicado
+Relation	T7	T3	NoRel	true	denunciara	pide
+Relation	T7	T5	NoRel	true	denunciara	replica
+Relation	T8	T12	NoRel	true	diga	manipuló
+Relation	T8	T4	NoRel	true	diga	dimisión
+Relation	T8	T9	NoRel	true	diga	pedira
+Relation	T9	T0	NoRel	true	pedira	cree
+Relation	T9	T1	NoRel	true	pedira	accidente
+Relation	T9	T11	NoRel	true	pedira	destituye
+Relation	T9	T12	NoRel	true	pedira	manipuló
+Relation	T9	T4	NoRel	true	pedira	dimisión
+Relation	T9	T5	NoRel	true	pedira	replica

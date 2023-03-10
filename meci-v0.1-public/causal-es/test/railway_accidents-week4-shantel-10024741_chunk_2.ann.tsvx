@@ -1,0 +1,199 @@
+Text	Esto hizo que el humo se propagara rápidamente mientras se agolpaban por salir , así que la mayoría de los pasajeros murieron asfixiados .	Los que si pudieron huir lo hicieron de forma atropellada , en un espacio estrecho y oscurecido , y algunos de ellos fallecieron electrocutados al tocar cables de alta tensión .	El sistema de ventilación se había activado para intentar absorber el humo de la estación de Ulduz , pero a los quince minutos empezó a desplazarlo por el túnel hacia Nariman Narimanov , de modo que los trabajadores del metro y los bomberos que habían entrado para evacuar la zona también se vieron afectados .	Por último , se avisó tarde a los servicios de rescate y hubo problemas de coordinación en el despliegue del dispositivo .	Los bomberos de Bakú tardaron horas en sofocar las llamas debido a la compleja situación .
+Event	T0	hizo	EVENT	5
+Event	T1	humo	EVENT	17
+Event	T2	propagara	EVENT	25
+Event	T3	agolpaban	EVENT	59
+Event	T4	salir	EVENT	73
+Event	T5	asfixiados	EVENT	126
+Event	T6	huir	EVENT	159
+Event	T9	electrocutados	EVENT	268
+Event	T10	tocar	EVENT	286
+Event	T11	activado	EVENT	352
+Event	T13	empezó	EVENT	444
+Event	T14	desplazarlo	EVENT	453
+Event	T15	entrado	EVENT	569
+Event	T16	evacuar	EVENT	582
+Event	T17	afectados	EVENT	616
+Event	T18	avisó	EVENT	644
+Event	T19	rescate	EVENT	675
+Event	T20	problemas	EVENT	690
+Event	T21	coordinación	EVENT	703
+Event	T22	despliegue	EVENT	722
+Event	T23	tardaron	EVENT	772
+Event	T24	sofocar	EVENT	790
+Event	T25	situación	EVENT	830
+Relation	T1	T5	CauseEffect	true	humo	asfixiados
+Relation	T5	T1	EffectCause	true	asfixiados	humo
+Relation	T10	T9	CauseEffect	true	tocar	electrocutados
+Relation	T9	T10	EffectCause	true	electrocutados	tocar
+Relation	T14	T17	CauseEffect	true	desplazarlo	afectados
+Relation	T17	T14	EffectCause	true	afectados	desplazarlo
+Relation	T0	T16	NoRel	true	hizo	evacuar
+Relation	T0	T17	NoRel	true	hizo	afectados
+Relation	T0	T18	NoRel	true	hizo	avisó
+Relation	T0	T2	NoRel	true	hizo	propagara
+Relation	T0	T22	NoRel	true	hizo	despliegue
+Relation	T0	T9	NoRel	true	hizo	electrocutados
+Relation	T1	T10	NoRel	true	humo	tocar
+Relation	T1	T11	NoRel	true	humo	activado
+Relation	T1	T22	NoRel	true	humo	despliegue
+Relation	T1	T3	NoRel	true	humo	agolpaban
+Relation	T1	T4	NoRel	true	humo	salir
+Relation	T1	T6	NoRel	true	humo	huir
+Relation	T10	T14	NoRel	true	tocar	desplazarlo
+Relation	T10	T15	NoRel	true	tocar	entrado
+Relation	T10	T17	NoRel	true	tocar	afectados
+Relation	T10	T18	NoRel	true	tocar	avisó
+Relation	T10	T2	NoRel	true	tocar	propagara
+Relation	T10	T22	NoRel	true	tocar	despliegue
+Relation	T10	T24	NoRel	true	tocar	sofocar
+Relation	T11	T1	NoRel	true	activado	humo
+Relation	T11	T13	NoRel	true	activado	empezó
+Relation	T11	T17	NoRel	true	activado	afectados
+Relation	T11	T19	NoRel	true	activado	rescate
+Relation	T11	T24	NoRel	true	activado	sofocar
+Relation	T11	T3	NoRel	true	activado	agolpaban
+Relation	T13	T18	NoRel	true	empezó	avisó
+Relation	T13	T23	NoRel	true	empezó	tardaron
+Relation	T13	T3	NoRel	true	empezó	agolpaban
+Relation	T14	T13	NoRel	true	desplazarlo	empezó
+Relation	T14	T18	NoRel	true	desplazarlo	avisó
+Relation	T14	T20	NoRel	true	desplazarlo	problemas
+Relation	T14	T22	NoRel	true	desplazarlo	despliegue
+Relation	T14	T24	NoRel	true	desplazarlo	sofocar
+Relation	T15	T0	NoRel	true	entrado	hizo
+Relation	T15	T10	NoRel	true	entrado	tocar
+Relation	T15	T21	NoRel	true	entrado	coordinación
+Relation	T15	T5	NoRel	true	entrado	asfixiados
+Relation	T15	T6	NoRel	true	entrado	huir
+Relation	T15	T9	NoRel	true	entrado	electrocutados
+Relation	T16	T11	NoRel	true	evacuar	activado
+Relation	T16	T15	NoRel	true	evacuar	entrado
+Relation	T16	T23	NoRel	true	evacuar	tardaron
+Relation	T16	T24	NoRel	true	evacuar	sofocar
+Relation	T16	T3	NoRel	true	evacuar	agolpaban
+Relation	T17	T0	NoRel	true	afectados	hizo
+Relation	T17	T13	NoRel	true	afectados	empezó
+Relation	T17	T15	NoRel	true	afectados	entrado
+Relation	T17	T21	NoRel	true	afectados	coordinación
+Relation	T17	T23	NoRel	true	afectados	tardaron
+Relation	T17	T24	NoRel	true	afectados	sofocar
+Relation	T17	T25	NoRel	true	afectados	situación
+Relation	T17	T3	NoRel	true	afectados	agolpaban
+Relation	T17	T5	NoRel	true	afectados	asfixiados
+Relation	T17	T6	NoRel	true	afectados	huir
+Relation	T18	T11	NoRel	true	avisó	activado
+Relation	T18	T13	NoRel	true	avisó	empezó
+Relation	T18	T14	NoRel	true	avisó	desplazarlo
+Relation	T18	T15	NoRel	true	avisó	entrado
+Relation	T18	T16	NoRel	true	avisó	evacuar
+Relation	T18	T17	NoRel	true	avisó	afectados
+Relation	T18	T24	NoRel	true	avisó	sofocar
+Relation	T18	T3	NoRel	true	avisó	agolpaban
+Relation	T18	T4	NoRel	true	avisó	salir
+Relation	T18	T5	NoRel	true	avisó	asfixiados
+Relation	T18	T6	NoRel	true	avisó	huir
+Relation	T19	T1	NoRel	true	rescate	humo
+Relation	T19	T11	NoRel	true	rescate	activado
+Relation	T19	T13	NoRel	true	rescate	empezó
+Relation	T19	T16	NoRel	true	rescate	evacuar
+Relation	T19	T5	NoRel	true	rescate	asfixiados
+Relation	T19	T6	NoRel	true	rescate	huir
+Relation	T19	T9	NoRel	true	rescate	electrocutados
+Relation	T2	T10	NoRel	true	propagara	tocar
+Relation	T2	T11	NoRel	true	propagara	activado
+Relation	T2	T13	NoRel	true	propagara	empezó
+Relation	T2	T14	NoRel	true	propagara	desplazarlo
+Relation	T2	T16	NoRel	true	propagara	evacuar
+Relation	T2	T17	NoRel	true	propagara	afectados
+Relation	T2	T18	NoRel	true	propagara	avisó
+Relation	T2	T19	NoRel	true	propagara	rescate
+Relation	T2	T21	NoRel	true	propagara	coordinación
+Relation	T2	T25	NoRel	true	propagara	situación
+Relation	T2	T3	NoRel	true	propagara	agolpaban
+Relation	T2	T5	NoRel	true	propagara	asfixiados
+Relation	T2	T9	NoRel	true	propagara	electrocutados
+Relation	T20	T2	NoRel	true	problemas	propagara
+Relation	T20	T22	NoRel	true	problemas	despliegue
+Relation	T20	T23	NoRel	true	problemas	tardaron
+Relation	T20	T24	NoRel	true	problemas	sofocar
+Relation	T20	T25	NoRel	true	problemas	situación
+Relation	T20	T4	NoRel	true	problemas	salir
+Relation	T20	T5	NoRel	true	problemas	asfixiados
+Relation	T20	T6	NoRel	true	problemas	huir
+Relation	T20	T9	NoRel	true	problemas	electrocutados
+Relation	T21	T10	NoRel	true	coordinación	tocar
+Relation	T21	T11	NoRel	true	coordinación	activado
+Relation	T21	T2	NoRel	true	coordinación	propagara
+Relation	T21	T23	NoRel	true	coordinación	tardaron
+Relation	T21	T4	NoRel	true	coordinación	salir
+Relation	T21	T9	NoRel	true	coordinación	electrocutados
+Relation	T22	T14	NoRel	true	despliegue	desplazarlo
+Relation	T22	T15	NoRel	true	despliegue	entrado
+Relation	T22	T17	NoRel	true	despliegue	afectados
+Relation	T22	T20	NoRel	true	despliegue	problemas
+Relation	T22	T24	NoRel	true	despliegue	sofocar
+Relation	T22	T25	NoRel	true	despliegue	situación
+Relation	T23	T10	NoRel	true	tardaron	tocar
+Relation	T23	T16	NoRel	true	tardaron	evacuar
+Relation	T23	T21	NoRel	true	tardaron	coordinación
+Relation	T23	T24	NoRel	true	tardaron	sofocar
+Relation	T23	T3	NoRel	true	tardaron	agolpaban
+Relation	T23	T6	NoRel	true	tardaron	huir
+Relation	T24	T13	NoRel	true	sofocar	empezó
+Relation	T24	T19	NoRel	true	sofocar	rescate
+Relation	T24	T25	NoRel	true	sofocar	situación
+Relation	T24	T3	NoRel	true	sofocar	agolpaban
+Relation	T24	T9	NoRel	true	sofocar	electrocutados
+Relation	T25	T0	NoRel	true	situación	hizo
+Relation	T25	T14	NoRel	true	situación	desplazarlo
+Relation	T25	T15	NoRel	true	situación	entrado
+Relation	T25	T16	NoRel	true	situación	evacuar
+Relation	T25	T17	NoRel	true	situación	afectados
+Relation	T25	T19	NoRel	true	situación	rescate
+Relation	T25	T22	NoRel	true	situación	despliegue
+Relation	T25	T24	NoRel	true	situación	sofocar
+Relation	T25	T3	NoRel	true	situación	agolpaban
+Relation	T3	T0	NoRel	true	agolpaban	hizo
+Relation	T3	T10	NoRel	true	agolpaban	tocar
+Relation	T3	T14	NoRel	true	agolpaban	desplazarlo
+Relation	T3	T16	NoRel	true	agolpaban	evacuar
+Relation	T3	T19	NoRel	true	agolpaban	rescate
+Relation	T3	T2	NoRel	true	agolpaban	propagara
+Relation	T3	T20	NoRel	true	agolpaban	problemas
+Relation	T3	T21	NoRel	true	agolpaban	coordinación
+Relation	T3	T22	NoRel	true	agolpaban	despliegue
+Relation	T3	T23	NoRel	true	agolpaban	tardaron
+Relation	T3	T4	NoRel	true	agolpaban	salir
+Relation	T3	T5	NoRel	true	agolpaban	asfixiados
+Relation	T3	T6	NoRel	true	agolpaban	huir
+Relation	T4	T1	NoRel	true	salir	humo
+Relation	T4	T13	NoRel	true	salir	empezó
+Relation	T4	T14	NoRel	true	salir	desplazarlo
+Relation	T4	T17	NoRel	true	salir	afectados
+Relation	T4	T19	NoRel	true	salir	rescate
+Relation	T4	T25	NoRel	true	salir	situación
+Relation	T4	T3	NoRel	true	salir	agolpaban
+Relation	T5	T10	NoRel	true	asfixiados	tocar
+Relation	T5	T13	NoRel	true	asfixiados	empezó
+Relation	T5	T20	NoRel	true	asfixiados	problemas
+Relation	T5	T21	NoRel	true	asfixiados	coordinación
+Relation	T5	T23	NoRel	true	asfixiados	tardaron
+Relation	T5	T25	NoRel	true	asfixiados	situación
+Relation	T5	T4	NoRel	true	asfixiados	salir
+Relation	T6	T1	NoRel	true	huir	humo
+Relation	T6	T10	NoRel	true	huir	tocar
+Relation	T6	T16	NoRel	true	huir	evacuar
+Relation	T6	T19	NoRel	true	huir	rescate
+Relation	T6	T2	NoRel	true	huir	propagara
+Relation	T6	T20	NoRel	true	huir	problemas
+Relation	T6	T22	NoRel	true	huir	despliegue
+Relation	T6	T3	NoRel	true	huir	agolpaban
+Relation	T6	T9	NoRel	true	huir	electrocutados
+Relation	T9	T0	NoRel	true	electrocutados	hizo
+Relation	T9	T14	NoRel	true	electrocutados	desplazarlo
+Relation	T9	T15	NoRel	true	electrocutados	entrado
+Relation	T9	T2	NoRel	true	electrocutados	propagara
+Relation	T9	T20	NoRel	true	electrocutados	problemas
+Relation	T9	T24	NoRel	true	electrocutados	sofocar
+Relation	T9	T6	NoRel	true	electrocutados	huir

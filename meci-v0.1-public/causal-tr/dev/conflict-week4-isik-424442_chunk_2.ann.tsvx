@@ -1,0 +1,31 @@
+Text	Fakat Cade savaşmaya devam etti .	Bir müddet sonra savaşırken ölümcül bir şekilde yaralandı ve yakalandı .	Bunun ardından isyancılar dağıtıldılar .	Bu isyan kraliyetin otoritesini sarstı ve İrlanda'da bulunan dük Richard'ın ülkesine rahatça dönmesini sağladı .	
+Event	T0	etti	EVENT	27
+Event	T1	yaralandı	EVENT	82
+Event	T2	yakalandı	EVENT	95
+Event	T3	dağıtıldılar	EVENT	133
+Event	T4	isyan	EVENT	151
+Event	T5	sarstı	EVENT	180
+Event	T6	sağladı	EVENT	251
+Relation	T1	T2	CauseEffect	true	yaralandı	yakalandı
+Relation	T2	T1	EffectCause	true	yakalandı	yaralandı
+Relation	T0	T1	CauseEffect	true	etti	yaralandı
+Relation	T1	T0	EffectCause	true	yaralandı	etti
+Relation	T2	T3	CauseEffect	true	yakalandı	dağıtıldılar
+Relation	T3	T2	EffectCause	true	dağıtıldılar	yakalandı
+Relation	T4	T5	CauseEffect	true	isyan	sarstı
+Relation	T5	T4	EffectCause	true	sarstı	isyan
+Relation	T4	T6	CauseEffect	true	isyan	sağladı
+Relation	T6	T4	EffectCause	true	sağladı	isyan
+Relation	T0	T3	NoRel	true	etti	dağıtıldılar
+Relation	T0	T4	NoRel	true	etti	isyan
+Relation	T0	T5	NoRel	true	etti	sarstı
+Relation	T1	T3	NoRel	true	yaralandı	dağıtıldılar
+Relation	T1	T6	NoRel	true	yaralandı	sağladı
+Relation	T2	T5	NoRel	true	yakalandı	sarstı
+Relation	T3	T1	NoRel	true	dağıtıldılar	yaralandı
+Relation	T3	T5	NoRel	true	dağıtıldılar	sarstı
+Relation	T4	T2	NoRel	true	isyan	yakalandı
+Relation	T4	T3	NoRel	true	isyan	dağıtıldılar
+Relation	T5	T0	NoRel	true	sarstı	etti
+Relation	T5	T1	NoRel	true	sarstı	yaralandı
+Relation	T6	T0	NoRel	true	sağladı	etti

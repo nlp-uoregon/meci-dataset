@@ -1,0 +1,74 @@
+Text	El VUELO 804 DE EGYPTAIR ( MS804 ) fue un vuelo internacional operado por EgyptAir que cubría la ruta París-El Cairo y que desapareció de los radares a las 02:45 hora local ( UTC+2 ) el 19 de mayo de 2016 mientras volaba sobre el mar Mediterráneo .	En el avión viajaban 56 pasajeros , 7 miembros de la tripulación y 3 guardias de seguridad .	Por el momento se desconoce si fue un accidente o un atentado terrorista , así como si hay supervivientes .	Supuestamente se habían encontrado restos del avión cerca de la isla griega de Kárpatos , aunque un alto funcionario griego de aeronáutica afirmó que los restos encontrados no son de un avión y el vicepresidente de Egypt Air mantiene la misma postura .	Según la información de los radares militares griegos , el vuelo 804 se desvió de su rumbo poco después de entrar en el FIR de Egipto .
+Event	T0	vuelo	EVENT	42
+Event	T1	operado	EVENT	62
+Event	T2	cubría	EVENT	87
+Event	T3	desapareció	EVENT	123
+Event	T4	volaba	EVENT	214
+Event	T5	accidente	EVENT	380
+Event	T6	atentado	EVENT	395
+Event	T7	encontrado	EVENT	474
+Event	T8	afirmó	EVENT	589
+Event	T9	encontrados	EVENT	611
+Event	T10	postura	EVENT	693
+Event	T11	información	EVENT	712
+Event	T12	desvió	EVENT	775
+Event	T13	entrar	EVENT	810
+Relation	T1	T11	NoRel	true	operado	información
+Relation	T1	T4	NoRel	true	operado	volaba
+Relation	T1	T6	NoRel	true	operado	atentado
+Relation	T1	T8	NoRel	true	operado	afirmó
+Relation	T10	T11	NoRel	true	postura	información
+Relation	T10	T12	NoRel	true	postura	desvió
+Relation	T10	T4	NoRel	true	postura	volaba
+Relation	T10	T6	NoRel	true	postura	atentado
+Relation	T11	T1	NoRel	true	información	operado
+Relation	T11	T10	NoRel	true	información	postura
+Relation	T11	T13	NoRel	true	información	entrar
+Relation	T11	T2	NoRel	true	información	cubría
+Relation	T11	T5	NoRel	true	información	accidente
+Relation	T11	T6	NoRel	true	información	atentado
+Relation	T11	T8	NoRel	true	información	afirmó
+Relation	T12	T11	NoRel	true	desvió	información
+Relation	T12	T2	NoRel	true	desvió	cubría
+Relation	T12	T3	NoRel	true	desvió	desapareció
+Relation	T12	T4	NoRel	true	desvió	volaba
+Relation	T12	T6	NoRel	true	desvió	atentado
+Relation	T13	T0	NoRel	true	entrar	vuelo
+Relation	T13	T11	NoRel	true	entrar	información
+Relation	T13	T3	NoRel	true	entrar	desapareció
+Relation	T13	T7	NoRel	true	entrar	encontrado
+Relation	T13	T9	NoRel	true	entrar	encontrados
+Relation	T2	T13	NoRel	true	cubría	entrar
+Relation	T2	T6	NoRel	true	cubría	atentado
+Relation	T2	T7	NoRel	true	cubría	encontrado
+Relation	T2	T9	NoRel	true	cubría	encontrados
+Relation	T3	T0	NoRel	true	desapareció	vuelo
+Relation	T3	T10	NoRel	true	desapareció	postura
+Relation	T3	T12	NoRel	true	desapareció	desvió
+Relation	T3	T5	NoRel	true	desapareció	accidente
+Relation	T4	T11	NoRel	true	volaba	información
+Relation	T4	T3	NoRel	true	volaba	desapareció
+Relation	T4	T5	NoRel	true	volaba	accidente
+Relation	T4	T6	NoRel	true	volaba	atentado
+Relation	T4	T9	NoRel	true	volaba	encontrados
+Relation	T5	T0	NoRel	true	accidente	vuelo
+Relation	T5	T11	NoRel	true	accidente	información
+Relation	T5	T2	NoRel	true	accidente	cubría
+Relation	T5	T8	NoRel	true	accidente	afirmó
+Relation	T6	T11	NoRel	true	atentado	información
+Relation	T6	T3	NoRel	true	atentado	desapareció
+Relation	T7	T0	NoRel	true	encontrado	vuelo
+Relation	T7	T10	NoRel	true	encontrado	postura
+Relation	T7	T13	NoRel	true	encontrado	entrar
+Relation	T7	T2	NoRel	true	encontrado	cubría
+Relation	T7	T4	NoRel	true	encontrado	volaba
+Relation	T7	T5	NoRel	true	encontrado	accidente
+Relation	T7	T9	NoRel	true	encontrado	encontrados
+Relation	T8	T1	NoRel	true	afirmó	operado
+Relation	T8	T10	NoRel	true	afirmó	postura
+Relation	T8	T11	NoRel	true	afirmó	información
+Relation	T8	T13	NoRel	true	afirmó	entrar
+Relation	T8	T5	NoRel	true	afirmó	accidente
+Relation	T9	T12	NoRel	true	encontrados	desvió
+Relation	T9	T4	NoRel	true	encontrados	volaba
+Relation	T9	T8	NoRel	true	encontrados	afirmó

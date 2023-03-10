@@ -1,0 +1,71 @@
+Text	Azerbaycan tarihinin en ölümcül helikopter kazası 20 Kasım 1991'de Hocavend Rayonunun Karakent köyü yakınlarında meydana geldi .	Olayda Tevfik İsmailov , İsmet Gayibov , Muhammet Esedov ve diğerleri de dahil olmak üzere toplam 22 kişi ölmüştü .	24 Temmuz 2019'da Azerbaycan Hava Kuvvetleri'ne ait MIG - 29 uçağı eğitim uçuşları yaparken aniden radarlardan kayboldu .	Uçak Hazar Denizi'ne düşmesiyle pilot Yarbay Reşat Atakişiyev kayboldu ve uzun bir aramanın ardından pilotun cesedi bulundu .	30 Kasım 2021 günü saat 10: 40 sularında Devlet Sınır Hizmetine ait Mil Mi - 17 askeri helikopteri Sengeçal'dan havalandı ve Hızı Rayonundaki Karaheybet uçuş alanında eğitim uçuşları yaptığı sırada düştü .
+Event	T0	kazası	EVENT	43
+Event	T1	geldi	EVENT	121
+Event	T2	ölmüştü	EVENT	235
+Event	T3	kayboldu	EVENT	356
+Event	T4	düşmesiyle	EVENT	388
+Event	T5	kayboldu	EVENT	429
+Event	T6	aramanın	EVENT	450
+Event	T7	bulundu	EVENT	483
+Event	T8	havalandı	EVENT	605
+Event	T11	düştü	EVENT	691
+Event	T12	Olayda	EVENT	129
+Event	T13	uçuşları	EVENT	319
+Event	T9	uçuşları	EVENT	667
+Relation	T0	T2	CauseEffect	true	kazası	ölmüştü
+Relation	T2	T0	EffectCause	true	ölmüştü	kazası
+Relation	T4	T5	CauseEffect	true	düşmesiyle	kayboldu
+Relation	T5	T4	EffectCause	true	kayboldu	düşmesiyle
+Relation	T3	T6	CauseEffect	true	kayboldu	aramanın
+Relation	T6	T3	EffectCause	true	aramanın	kayboldu
+Relation	T6	T7	CauseEffect	true	aramanın	bulundu
+Relation	T7	T6	EffectCause	true	bulundu	aramanın
+Relation	T5	T6	CauseEffect	true	kayboldu	aramanın
+Relation	T6	T5	EffectCause	true	aramanın	kayboldu
+Relation	T9	T8	CauseEffect	true	uçuşları	havalandı
+Relation	T8	T9	EffectCause	true	havalandı	uçuşları
+Relation	T0	T1	NoRel	true	kazası	geldi
+Relation	T0	T13	NoRel	true	kazası	uçuşları
+Relation	T0	T7	NoRel	true	kazası	bulundu
+Relation	T1	T0	NoRel	true	geldi	kazası
+Relation	T1	T2	NoRel	true	geldi	ölmüştü
+Relation	T1	T7	NoRel	true	geldi	bulundu
+Relation	T11	T12	NoRel	true	düştü	Olayda
+Relation	T11	T2	NoRel	true	düştü	ölmüştü
+Relation	T11	T4	NoRel	true	düştü	düşmesiyle
+Relation	T11	T6	NoRel	true	düştü	aramanın
+Relation	T11	T7	NoRel	true	düştü	bulundu
+Relation	T12	T4	NoRel	true	Olayda	düşmesiyle
+Relation	T12	T9	NoRel	true	Olayda	uçuşları
+Relation	T13	T1	NoRel	true	uçuşları	geldi
+Relation	T13	T12	NoRel	true	uçuşları	Olayda
+Relation	T13	T2	NoRel	true	uçuşları	ölmüştü
+Relation	T13	T3	NoRel	true	uçuşları	kayboldu
+Relation	T2	T11	NoRel	true	ölmüştü	düştü
+Relation	T2	T13	NoRel	true	ölmüştü	uçuşları
+Relation	T2	T5	NoRel	true	ölmüştü	kayboldu
+Relation	T2	T6	NoRel	true	ölmüştü	aramanın
+Relation	T3	T0	NoRel	true	kayboldu	kazası
+Relation	T3	T2	NoRel	true	kayboldu	ölmüştü
+Relation	T3	T8	NoRel	true	kayboldu	havalandı
+Relation	T3	T9	NoRel	true	kayboldu	uçuşları
+Relation	T5	T0	NoRel	true	kayboldu	kazası
+Relation	T5	T13	NoRel	true	kayboldu	uçuşları
+Relation	T5	T7	NoRel	true	kayboldu	bulundu
+Relation	T5	T9	NoRel	true	kayboldu	uçuşları
+Relation	T6	T11	NoRel	true	aramanın	düştü
+Relation	T7	T2	NoRel	true	bulundu	ölmüştü
+Relation	T7	T3	NoRel	true	bulundu	kayboldu
+Relation	T7	T5	NoRel	true	bulundu	kayboldu
+Relation	T7	T8	NoRel	true	bulundu	havalandı
+Relation	T7	T9	NoRel	true	bulundu	uçuşları
+Relation	T8	T1	NoRel	true	havalandı	geldi
+Relation	T8	T12	NoRel	true	havalandı	Olayda
+Relation	T8	T13	NoRel	true	havalandı	uçuşları
+Relation	T8	T2	NoRel	true	havalandı	ölmüştü
+Relation	T8	T4	NoRel	true	havalandı	düşmesiyle
+Relation	T8	T7	NoRel	true	havalandı	bulundu
+Relation	T9	T11	NoRel	true	uçuşları	düştü
+Relation	T9	T12	NoRel	true	uçuşları	Olayda
+Relation	T9	T4	NoRel	true	uçuşları	düşmesiyle
+Relation	T9	T6	NoRel	true	uçuşları	aramanın

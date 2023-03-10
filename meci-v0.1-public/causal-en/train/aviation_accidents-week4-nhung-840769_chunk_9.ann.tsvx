@@ -1,0 +1,63 @@
+Text	His administration attracted significant private investment and welcomed the establishment of numerous oil industry and white - collar corporate offices in downtown New Orleans , as well as several sizable new industrial plants elsewhere .	To emphasize his differences from his predecessor , whom he had characterized as dictatorial , Morrison worked to get a law passed to reduce the powers of the mayor .	He created a new city planning commission and moved to make administration more efficient by firing many of Maestri 's patronage appointments ( though some were replaced with Morrison 's own supporters ) .	Morrison downsized city operations by selling off most of the city 's public markets .	Most were torn down , which was regretted later as costing the city valuable community centers .
+Event	T0	attracted	EVENT	19
+Event	T1	investment	EVENT	49
+Event	T2	welcomed	EVENT	64
+Event	T3	establishment	EVENT	77
+Event	T4	characterized	EVENT	304
+Event	T5	worked	EVENT	344
+Event	T6	passed	EVENT	364
+Event	T7	reduce	EVENT	374
+Event	T8	created	EVENT	410
+Event	T9	moved	EVENT	453
+Event	T10	make	EVENT	462
+Event	T11	firing	EVENT	500
+Event	T12	replaced	EVENT	568
+Event	T13	downsized	EVENT	622
+Event	T14	operations	EVENT	637
+Event	T15	regretted	EVENT	732
+Event	T16	costing	EVENT	751
+Event	T17	emphasize	EVENT	243
+Event	T18	selling	EVENT	651
+Event	T19	torn down	EVENT	710
+Relation	T17	T5	CauseEffect	true	emphasize	worked
+Relation	T5	T17	EffectCause	true	worked	emphasize
+Relation	T6	T7	CauseEffect	true	passed	reduce
+Relation	T7	T6	EffectCause	true	reduce	passed
+Relation	T11	T10	CauseEffect	true	firing	make
+Relation	T10	T11	EffectCause	true	make	firing
+Relation	T18	T13	CauseEffect	true	selling	downsized
+Relation	T13	T18	EffectCause	true	downsized	selling
+Relation	T19	T15	CauseEffect	true	torn down	regretted
+Relation	T15	T19	EffectCause	true	regretted	torn down
+Relation	T0	T10	NoRel	true	attracted	make
+Relation	T1	T18	NoRel	true	investment	selling
+Relation	T10	T8	NoRel	true	make	created
+Relation	T11	T13	NoRel	true	firing	downsized
+Relation	T11	T17	NoRel	true	firing	emphasize
+Relation	T11	T2	NoRel	true	firing	welcomed
+Relation	T11	T8	NoRel	true	firing	created
+Relation	T12	T5	NoRel	true	replaced	worked
+Relation	T13	T16	NoRel	true	downsized	costing
+Relation	T14	T0	NoRel	true	operations	attracted
+Relation	T14	T16	NoRel	true	operations	costing
+Relation	T16	T1	NoRel	true	costing	investment
+Relation	T16	T15	NoRel	true	costing	regretted
+Relation	T17	T13	NoRel	true	emphasize	downsized
+Relation	T18	T10	NoRel	true	selling	make
+Relation	T18	T11	NoRel	true	selling	firing
+Relation	T18	T17	NoRel	true	selling	emphasize
+Relation	T18	T7	NoRel	true	selling	reduce
+Relation	T19	T16	NoRel	true	torn down	costing
+Relation	T2	T8	NoRel	true	welcomed	created
+Relation	T3	T10	NoRel	true	establishment	make
+Relation	T3	T2	NoRel	true	establishment	welcomed
+Relation	T5	T13	NoRel	true	worked	downsized
+Relation	T5	T3	NoRel	true	worked	establishment
+Relation	T6	T17	NoRel	true	passed	emphasize
+Relation	T6	T2	NoRel	true	passed	welcomed
+Relation	T6	T4	NoRel	true	passed	characterized
+Relation	T7	T18	NoRel	true	reduce	selling
+Relation	T7	T19	NoRel	true	reduce	torn down
+Relation	T7	T4	NoRel	true	reduce	characterized
+Relation	T8	T6	NoRel	true	created	passed
+Relation	T9	T12	NoRel	true	moved	replaced

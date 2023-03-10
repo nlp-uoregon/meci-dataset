@@ -1,0 +1,56 @@
+Text	Columbia Elementary school opened in August 2004 , and is located in Perris , California .	Following the loss of _ Columbia _ , the space shuttle program was suspended .	The further construction of the International Space Station ( ISS ) was also delayed , as the space shuttles were the only available delivery vehicle for station modules .	The station was supplied using Russian uncrewed _ Progress _ ships , and crews were exchanged using Russian - crewed _ Soyuz _ spacecraft , and forced to operate on a skeleton crew of two .	Less than a year after the accident , President Bush announced the Vision for Space Exploration , calling for the space shuttle fleet to complete the ISS , with retirement by 2010 following the completion of the ISS , to be replaced by a newly developed Crew Exploration Vehicle for travel to the Moon and Mars .
+Event	T0	opened	EVENT	27
+Event	T1	Following	EVENT	91
+Event	T2	loss	EVENT	105
+Event	T3	suspended	EVENT	158
+Event	T4	construction	EVENT	182
+Event	T5	delayed	EVENT	247
+Event	T6	supplied	EVENT	358
+Event	T7	exchanged	EVENT	426
+Event	T8	forced	EVENT	486
+Event	T9	accident	EVENT	559
+Event	T10	announced	EVENT	585
+Event	T11	calling	EVENT	630
+Event	T12	complete	EVENT	669
+Event	T13	retirement	EVENT	693
+Event	T14	completion	EVENT	726
+Event	T15	replaced	EVENT	756
+Event	T16	developed	EVENT	776
+Event	T17	travel	EVENT	815
+Event	T18	located	EVENT	58
+Relation	T2	T3	CauseEffect	true	loss	suspended
+Relation	T3	T2	EffectCause	true	suspended	loss
+Relation	T2	T5	CauseEffect	true	loss	delayed
+Relation	T5	T2	EffectCause	true	delayed	loss
+Relation	T0	T1	NoRel	true	opened	Following
+Relation	T0	T11	NoRel	true	opened	calling
+Relation	T0	T2	NoRel	true	opened	loss
+Relation	T1	T6	NoRel	true	Following	supplied
+Relation	T1	T8	NoRel	true	Following	forced
+Relation	T11	T0	NoRel	true	calling	opened
+Relation	T11	T5	NoRel	true	calling	delayed
+Relation	T11	T6	NoRel	true	calling	supplied
+Relation	T12	T10	NoRel	true	complete	announced
+Relation	T12	T13	NoRel	true	complete	retirement
+Relation	T12	T3	NoRel	true	complete	suspended
+Relation	T13	T11	NoRel	true	retirement	calling
+Relation	T13	T14	NoRel	true	retirement	completion
+Relation	T13	T4	NoRel	true	retirement	construction
+Relation	T13	T8	NoRel	true	retirement	forced
+Relation	T14	T16	NoRel	true	completion	developed
+Relation	T15	T17	NoRel	true	replaced	travel
+Relation	T16	T11	NoRel	true	developed	calling
+Relation	T16	T14	NoRel	true	developed	completion
+Relation	T16	T17	NoRel	true	developed	travel
+Relation	T16	T7	NoRel	true	developed	exchanged
+Relation	T17	T4	NoRel	true	travel	construction
+Relation	T18	T0	NoRel	true	located	opened
+Relation	T18	T6	NoRel	true	located	supplied
+Relation	T2	T15	NoRel	true	loss	replaced
+Relation	T3	T14	NoRel	true	suspended	completion
+Relation	T4	T11	NoRel	true	construction	calling
+Relation	T6	T14	NoRel	true	supplied	completion
+Relation	T7	T16	NoRel	true	exchanged	developed
+Relation	T7	T3	NoRel	true	exchanged	suspended
+Relation	T7	T9	NoRel	true	exchanged	accident
+Relation	T9	T0	NoRel	true	accident	opened

@@ -1,0 +1,37 @@
+Text	The plane later landed at Chattanooga , Tennessee 's Lovell Field in bound from Knoxville , Tennessee 's McGhee Tyson Airport to pick up the ransom .	After picking up the less - than - demanded ransom money , the plane took off , bound for Havana .	The hijackers passed out some of the ransom money to the passengers .	Contrary to the hijackers ' expectations , Cuban leader Fidel Castro did not accept them into that country ; thus the hijackers had the airplane flown to Orlando , Florida and discussed flying to Algeria ( which was not possible due to the airplane 's limited range ) .	This marked the first time a hijacked airplane had left Cuba with the hijackers on board .
+Event	T0	landed	EVENT	16
+Event	T1	ransom	EVENT	141
+Event	T3	accept	EVENT	396
+Event	T4	flown	EVENT	464
+Event	T5	flying	EVENT	505
+Event	T6	marked	EVENT	594
+Event	T7	hijacked	EVENT	618
+Event	T8	left	EVENT	640
+Event	T9	pick up	EVENT	129
+Event	T10	took off	EVENT	219
+Event	T11	passed	EVENT	263
+Event	T2	picking up	EVENT	156
+Relation	T0	T9	CauseEffect	true	landed	pick up
+Relation	T9	T0	EffectCause	true	pick up	landed
+Relation	T3	T4	CauseEffect	true	accept	flown
+Relation	T4	T3	EffectCause	true	flown	accept
+Relation	T3	T6	CauseEffect	true	accept	marked
+Relation	T6	T3	EffectCause	true	marked	accept
+Relation	T3	T8	CauseEffect	true	accept	left
+Relation	T8	T3	EffectCause	true	left	accept
+Relation	T1	T11	NoRel	true	ransom	passed
+Relation	T1	T6	NoRel	true	ransom	marked
+Relation	T1	T7	NoRel	true	ransom	hijacked
+Relation	T10	T1	NoRel	true	took off	ransom
+Relation	T11	T7	NoRel	true	passed	hijacked
+Relation	T2	T11	NoRel	true	picking up	passed
+Relation	T3	T1	NoRel	true	accept	ransom
+Relation	T3	T2	NoRel	true	accept	picking up
+Relation	T4	T11	NoRel	true	flown	passed
+Relation	T4	T2	NoRel	true	flown	picking up
+Relation	T4	T7	NoRel	true	flown	hijacked
+Relation	T5	T9	NoRel	true	flying	pick up
+Relation	T6	T0	NoRel	true	marked	landed
+Relation	T6	T5	NoRel	true	marked	flying
+Relation	T8	T7	NoRel	true	left	hijacked
+Relation	T9	T2	NoRel	true	pick up	picking up

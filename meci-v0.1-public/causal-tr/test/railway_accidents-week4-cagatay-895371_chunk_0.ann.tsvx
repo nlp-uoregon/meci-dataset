@@ -1,0 +1,112 @@
+Text	PAMUKOVA TREN_KAZASI veya PAMUKOVA FACIASI , 22 Temmuz 2004 günü Sakarya’nın Pamukova ilçesinde meydana gelen tren kazasıdır .	Ankara - İstanbul arasında hızlandırılmış tren seferini yapan _ Yakup Kadri Karaosmanoğlu _ adlı tren aşırı hızdan dolayı raydan çıkmış , toplam 230 yolcudan 41 kişinin ölümüne , 89 kişinin de yaralanmasına sebep olmuştur .	Kaza , Türkiye Cumhuriyeti Devlet Demiryolları ( TCDD ) bünyesinde sürmekte olan özelleştirilme süreci ve yeni hayata geçirilen hızlı tren projesinin ilk adımında meydana gelmiştir .	Yolcu sayısı olarak en yoğun hat olan Ankara - İstanbul tren hattı arasında hızlı tren uygulamasına yetersiz altyapıya rağmen aceleyle yapılan geçiş yüzünden meydana gelen kazadan sonra kamuoyu tepki göstermiştir .	TCDD özellikle 1980’li yıllardan başlayarak özelleştirme kapsamında olmuş , art arda başa geçen hükûmetler bu kurumda çeşitli reformlar yapmıştı .
+Event	T1	kazasıdır	EVENT	115
+Event	T3	çıkmış	EVENT	256
+Event	T4	ölümüne	EVENT	296
+Event	T5	Kaza	EVENT	351
+Event	T6	süreci	EVENT	447
+Event	T7	gelmiştir	EVENT	522
+Event	T8	kazadan	EVENT	706
+Event	T9	göstermiştir	EVENT	734
+Event	T11	PAMUKOVA TREN_KAZASI	EVENT	0
+Event	T12	PAMUKOVA FACIASI	EVENT	26
+Event	T13	seferini	EVENT	174
+Event	T2	aşırı hızdan	EVENT	229
+Event	T14	yaralanmasına	EVENT	320
+Event	T15	geçiş	EVENT	677
+Event	T16	özelleştirme	EVENT	793
+Event	T10	reformlar	EVENT	875
+Event	T17	geçen	EVENT	839
+Relation	T2	T11	CauseEffect	true	aşırı hızdan	PAMUKOVA TREN_KAZASI
+Relation	T11	T2	EffectCause	true	PAMUKOVA TREN_KAZASI	aşırı hızdan
+Relation	T2	T3	CauseEffect	true	aşırı hızdan	çıkmış
+Relation	T3	T2	EffectCause	true	çıkmış	aşırı hızdan
+Relation	T3	T4	CauseEffect	true	çıkmış	ölümüne
+Relation	T4	T3	EffectCause	true	ölümüne	çıkmış
+Relation	T4	T14	CauseEffect	true	ölümüne	yaralanmasına
+Relation	T14	T4	EffectCause	true	yaralanmasına	ölümüne
+Relation	T8	T9	CauseEffect	true	kazadan	göstermiştir
+Relation	T9	T8	EffectCause	true	göstermiştir	kazadan
+Relation	T15	T8	CauseEffect	true	geçiş	kazadan
+Relation	T8	T15	EffectCause	true	kazadan	geçiş
+Relation	T17	T10	CauseEffect	true	geçen	reformlar
+Relation	T10	T17	EffectCause	true	reformlar	geçen
+Relation	T16	T10	CauseEffect	true	özelleştirme	reformlar
+Relation	T10	T16	EffectCause	true	reformlar	özelleştirme
+Relation	T1	T14	NoRel	true	kazasıdır	yaralanmasına
+Relation	T1	T4	NoRel	true	kazasıdır	ölümüne
+Relation	T1	T5	NoRel	true	kazasıdır	Kaza
+Relation	T1	T6	NoRel	true	kazasıdır	süreci
+Relation	T1	T8	NoRel	true	kazasıdır	kazadan
+Relation	T10	T4	NoRel	true	reformlar	ölümüne
+Relation	T10	T7	NoRel	true	reformlar	gelmiştir
+Relation	T11	T14	NoRel	true	PAMUKOVA TREN_KAZASI	yaralanmasına
+Relation	T11	T17	NoRel	true	PAMUKOVA TREN_KAZASI	geçen
+Relation	T11	T5	NoRel	true	PAMUKOVA TREN_KAZASI	Kaza
+Relation	T11	T8	NoRel	true	PAMUKOVA TREN_KAZASI	kazadan
+Relation	T12	T13	NoRel	true	PAMUKOVA FACIASI	seferini
+Relation	T12	T14	NoRel	true	PAMUKOVA FACIASI	yaralanmasına
+Relation	T12	T16	NoRel	true	PAMUKOVA FACIASI	özelleştirme
+Relation	T12	T17	NoRel	true	PAMUKOVA FACIASI	geçen
+Relation	T12	T2	NoRel	true	PAMUKOVA FACIASI	aşırı hızdan
+Relation	T12	T3	NoRel	true	PAMUKOVA FACIASI	çıkmış
+Relation	T12	T4	NoRel	true	PAMUKOVA FACIASI	ölümüne
+Relation	T12	T8	NoRel	true	PAMUKOVA FACIASI	kazadan
+Relation	T12	T9	NoRel	true	PAMUKOVA FACIASI	göstermiştir
+Relation	T13	T1	NoRel	true	seferini	kazasıdır
+Relation	T13	T12	NoRel	true	seferini	PAMUKOVA FACIASI
+Relation	T13	T15	NoRel	true	seferini	geçiş
+Relation	T13	T16	NoRel	true	seferini	özelleştirme
+Relation	T13	T6	NoRel	true	seferini	süreci
+Relation	T13	T7	NoRel	true	seferini	gelmiştir
+Relation	T13	T9	NoRel	true	seferini	göstermiştir
+Relation	T14	T17	NoRel	true	yaralanmasına	geçen
+Relation	T14	T2	NoRel	true	yaralanmasına	aşırı hızdan
+Relation	T14	T6	NoRel	true	yaralanmasına	süreci
+Relation	T14	T8	NoRel	true	yaralanmasına	kazadan
+Relation	T15	T10	NoRel	true	geçiş	reformlar
+Relation	T15	T11	NoRel	true	geçiş	PAMUKOVA TREN_KAZASI
+Relation	T15	T17	NoRel	true	geçiş	geçen
+Relation	T15	T2	NoRel	true	geçiş	aşırı hızdan
+Relation	T15	T3	NoRel	true	geçiş	çıkmış
+Relation	T15	T4	NoRel	true	geçiş	ölümüne
+Relation	T16	T13	NoRel	true	özelleştirme	seferini
+Relation	T16	T15	NoRel	true	özelleştirme	geçiş
+Relation	T16	T8	NoRel	true	özelleştirme	kazadan
+Relation	T17	T1	NoRel	true	geçen	kazasıdır
+Relation	T17	T2	NoRel	true	geçen	aşırı hızdan
+Relation	T17	T3	NoRel	true	geçen	çıkmış
+Relation	T2	T10	NoRel	true	aşırı hızdan	reformlar
+Relation	T2	T12	NoRel	true	aşırı hızdan	PAMUKOVA FACIASI
+Relation	T2	T13	NoRel	true	aşırı hızdan	seferini
+Relation	T2	T5	NoRel	true	aşırı hızdan	Kaza
+Relation	T2	T7	NoRel	true	aşırı hızdan	gelmiştir
+Relation	T3	T11	NoRel	true	çıkmış	PAMUKOVA TREN_KAZASI
+Relation	T3	T13	NoRel	true	çıkmış	seferini
+Relation	T3	T17	NoRel	true	çıkmış	geçen
+Relation	T3	T6	NoRel	true	çıkmış	süreci
+Relation	T3	T8	NoRel	true	çıkmış	kazadan
+Relation	T3	T9	NoRel	true	çıkmış	göstermiştir
+Relation	T4	T10	NoRel	true	ölümüne	reformlar
+Relation	T4	T6	NoRel	true	ölümüne	süreci
+Relation	T4	T8	NoRel	true	ölümüne	kazadan
+Relation	T4	T9	NoRel	true	ölümüne	göstermiştir
+Relation	T5	T2	NoRel	true	Kaza	aşırı hızdan
+Relation	T5	T7	NoRel	true	Kaza	gelmiştir
+Relation	T5	T8	NoRel	true	Kaza	kazadan
+Relation	T6	T11	NoRel	true	süreci	PAMUKOVA TREN_KAZASI
+Relation	T6	T16	NoRel	true	süreci	özelleştirme
+Relation	T6	T4	NoRel	true	süreci	ölümüne
+Relation	T6	T5	NoRel	true	süreci	Kaza
+Relation	T6	T8	NoRel	true	süreci	kazadan
+Relation	T6	T9	NoRel	true	süreci	göstermiştir
+Relation	T7	T1	NoRel	true	gelmiştir	kazasıdır
+Relation	T7	T16	NoRel	true	gelmiştir	özelleştirme
+Relation	T7	T6	NoRel	true	gelmiştir	süreci
+Relation	T8	T14	NoRel	true	kazadan	yaralanmasına
+Relation	T8	T17	NoRel	true	kazadan	geçen
+Relation	T8	T2	NoRel	true	kazadan	aşırı hızdan
+Relation	T9	T10	NoRel	true	göstermiştir	reformlar
+Relation	T9	T14	NoRel	true	göstermiştir	yaralanmasına
+Relation	T9	T2	NoRel	true	göstermiştir	aşırı hızdan
+Relation	T9	T6	NoRel	true	göstermiştir	süreci
+Relation	T9	T7	NoRel	true	göstermiştir	gelmiştir

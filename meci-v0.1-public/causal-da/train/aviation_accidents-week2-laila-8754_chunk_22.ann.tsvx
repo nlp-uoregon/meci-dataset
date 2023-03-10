@@ -1,0 +1,44 @@
+Text	Ground Zero blev ikke ryddet op , før efter udgangen af maj 2002 .	Få timer efter angrebene var FBI allerede i stand til at udpege navne , og i mange tilfælde finde de personlige oplysninger , om de formodede piloter og flykaprere .	Mohamed Atta fra Egypten var den taktiske leder af plottet , samt flykaprer på Flight 11 .	Atta døde under angrebet , sammen med de andre flykaprere om bord på hans fly .	Hans efterladte bagage indeholdt papirer , der afslørede identiteten af alle de 19 flykaprere og andre vigtige fingerpeg om deres planer , motiver og baggrunde .
+Event	T0	angrebene	EVENT	82
+Event	T1	udpege	EVENT	124
+Event	T2	finde	EVENT	159
+Event	T3	plottet	EVENT	284
+Event	T4	døde	EVENT	329
+Event	T5	angrebet	EVENT	340
+Event	T6	efterladte	EVENT	409
+Event	T7	indeholdt	EVENT	427
+Event	T8	afslørede	EVENT	451
+Relation	T5	T4	CauseEffect	true	angrebet	døde
+Relation	T4	T5	EffectCause	true	døde	angrebet
+Relation	T7	T8	CauseEffect	true	indeholdt	afslørede
+Relation	T8	T7	EffectCause	true	afslørede	indeholdt
+Relation	T8	T1	CauseEffect	true	afslørede	udpege
+Relation	T1	T8	EffectCause	true	udpege	afslørede
+Relation	T0	T1	NoRel	true	angrebene	udpege
+Relation	T0	T4	NoRel	true	angrebene	døde
+Relation	T0	T6	NoRel	true	angrebene	efterladte
+Relation	T0	T7	NoRel	true	angrebene	indeholdt
+Relation	T1	T3	NoRel	true	udpege	plottet
+Relation	T1	T5	NoRel	true	udpege	angrebet
+Relation	T1	T6	NoRel	true	udpege	efterladte
+Relation	T2	T3	NoRel	true	finde	plottet
+Relation	T2	T4	NoRel	true	finde	døde
+Relation	T2	T5	NoRel	true	finde	angrebet
+Relation	T3	T2	NoRel	true	plottet	finde
+Relation	T3	T5	NoRel	true	plottet	angrebet
+Relation	T3	T6	NoRel	true	plottet	efterladte
+Relation	T3	T7	NoRel	true	plottet	indeholdt
+Relation	T3	T8	NoRel	true	plottet	afslørede
+Relation	T4	T0	NoRel	true	døde	angrebene
+Relation	T4	T6	NoRel	true	døde	efterladte
+Relation	T5	T0	NoRel	true	angrebet	angrebene
+Relation	T5	T1	NoRel	true	angrebet	udpege
+Relation	T5	T8	NoRel	true	angrebet	afslørede
+Relation	T6	T1	NoRel	true	efterladte	udpege
+Relation	T6	T2	NoRel	true	efterladte	finde
+Relation	T6	T8	NoRel	true	efterladte	afslørede
+Relation	T7	T0	NoRel	true	indeholdt	angrebene
+Relation	T7	T3	NoRel	true	indeholdt	plottet
+Relation	T7	T4	NoRel	true	indeholdt	døde
+Relation	T7	T6	NoRel	true	indeholdt	efterladte
+Relation	T8	T5	NoRel	true	afslørede	angrebet

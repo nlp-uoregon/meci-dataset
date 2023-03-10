@@ -1,0 +1,69 @@
+Text	Diğer pilot sağ olarak Lazkiye'deki Rus üssüne ulaştırıldı .	Helikopterle pilotları arama sırasında muhalifler tarafından bir helikopter düşürüldü ve bir Rus deniz piyadesi vuruldu .	Düşen uçağın parçalarının etrafa savrulmasından dolayı Hatay'ın Yayladağı ilçesinde de iki Türk vatandaşının yaralanmasına sebebiyet verdi .	Rusya Savunma Bakanlığı ise uçağın Türk hava sahasını ihlal etmediği iddiasında bulundu .	ABD öncülüğünde IŞİD'e karşı yapılan Doğal Kararlılık Operasyonu'nun Sözcüsü Albay Steve Warren ise Rus uçağının sınır ihlaline karşı on defa uyarıldığını doğruladı .
+Event	T0	ulaştırıldı	EVENT	47
+Event	T1	arama	EVENT	84
+Event	T2	düşürüldü	EVENT	137
+Event	T3	vuruldu	EVENT	173
+Event	T4	Düşen	EVENT	183
+Event	T5	savrulmasından	EVENT	216
+Event	T6	verdi	EVENT	316
+Event	T7	bulundu	EVENT	404
+Event	T8	ihlaline	EVENT	533
+Event	T9	doğruladı	EVENT	569
+Event	T10	yaralanmasına	EVENT	292
+Event	T11	uyarıldığını	EVENT	556
+Event	T12	Doğal Kararlılık Operasyonu'nun	EVENT	451
+Relation	T5	T10	CauseEffect	true	savrulmasından	yaralanmasına
+Relation	T10	T5	EffectCause	true	yaralanmasına	savrulmasından
+Relation	T4	T5	CauseEffect	true	Düşen	savrulmasından
+Relation	T5	T4	EffectCause	true	savrulmasından	Düşen
+Relation	T1	T2	CauseEffect	true	arama	düşürüldü
+Relation	T2	T1	EffectCause	true	düşürüldü	arama
+Relation	T1	T3	CauseEffect	true	arama	vuruldu
+Relation	T3	T1	EffectCause	true	vuruldu	arama
+Relation	T8	T11	CauseEffect	true	ihlaline	uyarıldığını
+Relation	T11	T8	EffectCause	true	uyarıldığını	ihlaline
+Relation	T4	T1	CauseEffect	true	Düşen	arama
+Relation	T1	T4	EffectCause	true	arama	Düşen
+Relation	T1	T0	CauseEffect	true	arama	ulaştırıldı
+Relation	T0	T1	EffectCause	true	ulaştırıldı	arama
+Relation	T0	T10	NoRel	true	ulaştırıldı	yaralanmasına
+Relation	T0	T5	NoRel	true	ulaştırıldı	savrulmasından
+Relation	T0	T6	NoRel	true	ulaştırıldı	verdi
+Relation	T1	T11	NoRel	true	arama	uyarıldığını
+Relation	T1	T7	NoRel	true	arama	bulundu
+Relation	T1	T8	NoRel	true	arama	ihlaline
+Relation	T1	T9	NoRel	true	arama	doğruladı
+Relation	T10	T11	NoRel	true	yaralanmasına	uyarıldığını
+Relation	T10	T6	NoRel	true	yaralanmasına	verdi
+Relation	T11	T0	NoRel	true	uyarıldığını	ulaştırıldı
+Relation	T11	T10	NoRel	true	uyarıldığını	yaralanmasına
+Relation	T11	T12	NoRel	true	uyarıldığını	Doğal Kararlılık Operasyonu'nun
+Relation	T11	T7	NoRel	true	uyarıldığını	bulundu
+Relation	T12	T0	NoRel	true	Doğal Kararlılık Operasyonu'nun	ulaştırıldı
+Relation	T12	T1	NoRel	true	Doğal Kararlılık Operasyonu'nun	arama
+Relation	T12	T3	NoRel	true	Doğal Kararlılık Operasyonu'nun	vuruldu
+Relation	T12	T7	NoRel	true	Doğal Kararlılık Operasyonu'nun	bulundu
+Relation	T2	T11	NoRel	true	düşürüldü	uyarıldığını
+Relation	T2	T12	NoRel	true	düşürüldü	Doğal Kararlılık Operasyonu'nun
+Relation	T2	T5	NoRel	true	düşürüldü	savrulmasından
+Relation	T2	T9	NoRel	true	düşürüldü	doğruladı
+Relation	T3	T11	NoRel	true	vuruldu	uyarıldığını
+Relation	T3	T12	NoRel	true	vuruldu	Doğal Kararlılık Operasyonu'nun
+Relation	T3	T7	NoRel	true	vuruldu	bulundu
+Relation	T3	T9	NoRel	true	vuruldu	doğruladı
+Relation	T4	T10	NoRel	true	Düşen	yaralanmasına
+Relation	T4	T3	NoRel	true	Düşen	vuruldu
+Relation	T5	T11	NoRel	true	savrulmasından	uyarıldığını
+Relation	T5	T3	NoRel	true	savrulmasından	vuruldu
+Relation	T6	T12	NoRel	true	verdi	Doğal Kararlılık Operasyonu'nun
+Relation	T6	T4	NoRel	true	verdi	Düşen
+Relation	T6	T5	NoRel	true	verdi	savrulmasından
+Relation	T6	T7	NoRel	true	verdi	bulundu
+Relation	T7	T1	NoRel	true	bulundu	arama
+Relation	T7	T11	NoRel	true	bulundu	uyarıldığını
+Relation	T7	T2	NoRel	true	bulundu	düşürüldü
+Relation	T7	T8	NoRel	true	bulundu	ihlaline
+Relation	T8	T12	NoRel	true	ihlaline	Doğal Kararlılık Operasyonu'nun
+Relation	T9	T12	NoRel	true	doğruladı	Doğal Kararlılık Operasyonu'nun
+Relation	T9	T5	NoRel	true	doğruladı	savrulmasından
+Relation	T9	T8	NoRel	true	doğruladı	ihlaline

@@ -1,0 +1,119 @@
+Text	Katılımın yüksek olması sebebiyle kortejlerin alana girmesi uzun sürmüş , konuşmalar da uzamıştır .	Saat 19.00 sularında dönemin DİSK genel başkanı Kemal Türkler konuşmasının sonuna geldiğinde etraftan silah sesleri duyulmaya başlandı .	Sular İdaresi binasının üstünden ve meydandaki otelin çeşitli katlarından açılan bu ateş sonucu insanlar panik halde kaçışmaya başladı , kısa bir süre içinde Intercontinental Oteli'nin ( Bugün The Marmara Oteli ) de üst katlarından da ateş açıldı .	İnsanlar panik halde kaçmaya çalışırken polis de ses bombaları ve panzerlerle kalabalığa müdahale etmeye başladı .	Kalabalık , kaçmak için özellikle Kazancı Yokuşu'na yöneldi ancak burada bulunan bir kamyonun yolu tıkaması yığılmaya ve buna bağlı ezilmelere sebep oldu .
+Event	T1	sürmüş	EVENT	65
+Event	T3	ateş	EVENT	321
+Event	T4	başladı	EVENT	364
+Event	T5	açıldı	EVENT	477
+Event	T6	panik	EVENT	495
+Event	T7	başladı	EVENT	591
+Event	T8	yığılmaya	EVENT	709
+Event	T9	uzamıştır	EVENT	88
+Event	T10	olması	EVENT	17
+Event	T11	başlandı	EVENT	226
+Event	T12	geldiğinde	EVENT	182
+Event	T2	panik	EVENT	342
+Event	T13	çalışırken	EVENT	515
+Event	T14	yöneldi	EVENT	653
+Event	T15	oldu	EVENT	750
+Event	T16	tıkaması	EVENT	700
+Relation	T10	T1	CauseEffect	true	olması	sürmüş
+Relation	T1	T10	EffectCause	true	sürmüş	olması
+Relation	T1	T9	CauseEffect	true	sürmüş	uzamıştır
+Relation	T9	T1	EffectCause	true	uzamıştır	sürmüş
+Relation	T12	T11	CauseEffect	true	geldiğinde	başlandı
+Relation	T11	T12	EffectCause	true	başlandı	geldiğinde
+Relation	T3	T2	CauseEffect	true	ateş	panik
+Relation	T2	T3	EffectCause	true	panik	ateş
+Relation	T2	T4	CauseEffect	true	panik	başladı
+Relation	T4	T2	EffectCause	true	başladı	panik
+Relation	T6	T13	CauseEffect	true	panik	çalışırken
+Relation	T13	T6	EffectCause	true	çalışırken	panik
+Relation	T8	T15	CauseEffect	true	yığılmaya	oldu
+Relation	T15	T8	EffectCause	true	oldu	yığılmaya
+Relation	T16	T8	CauseEffect	true	tıkaması	yığılmaya
+Relation	T8	T16	EffectCause	true	yığılmaya	tıkaması
+Relation	T4	T14	CauseEffect	true	başladı	yöneldi
+Relation	T14	T4	EffectCause	true	yöneldi	başladı
+Relation	T13	T14	CauseEffect	true	çalışırken	yöneldi
+Relation	T14	T13	EffectCause	true	yöneldi	çalışırken
+Relation	T5	T6	CauseEffect	true	açıldı	panik
+Relation	T6	T5	EffectCause	true	panik	açıldı
+Relation	T3	T6	CauseEffect	true	ateş	panik
+Relation	T6	T3	EffectCause	true	panik	ateş
+Relation	T1	T11	NoRel	true	sürmüş	başlandı
+Relation	T1	T7	NoRel	true	sürmüş	başladı
+Relation	T1	T8	NoRel	true	sürmüş	yığılmaya
+Relation	T10	T11	NoRel	true	olması	başlandı
+Relation	T10	T15	NoRel	true	olması	oldu
+Relation	T10	T2	NoRel	true	olması	panik
+Relation	T10	T7	NoRel	true	olması	başladı
+Relation	T11	T10	NoRel	true	başlandı	olması
+Relation	T11	T15	NoRel	true	başlandı	oldu
+Relation	T11	T16	NoRel	true	başlandı	tıkaması
+Relation	T11	T4	NoRel	true	başlandı	başladı
+Relation	T11	T9	NoRel	true	başlandı	uzamıştır
+Relation	T12	T15	NoRel	true	geldiğinde	oldu
+Relation	T12	T2	NoRel	true	geldiğinde	panik
+Relation	T12	T3	NoRel	true	geldiğinde	ateş
+Relation	T12	T4	NoRel	true	geldiğinde	başladı
+Relation	T12	T7	NoRel	true	geldiğinde	başladı
+Relation	T12	T9	NoRel	true	geldiğinde	uzamıştır
+Relation	T13	T11	NoRel	true	çalışırken	başlandı
+Relation	T13	T12	NoRel	true	çalışırken	geldiğinde
+Relation	T13	T4	NoRel	true	çalışırken	başladı
+Relation	T13	T5	NoRel	true	çalışırken	açıldı
+Relation	T13	T8	NoRel	true	çalışırken	yığılmaya
+Relation	T14	T12	NoRel	true	yöneldi	geldiğinde
+Relation	T14	T15	NoRel	true	yöneldi	oldu
+Relation	T14	T2	NoRel	true	yöneldi	panik
+Relation	T14	T5	NoRel	true	yöneldi	açıldı
+Relation	T15	T1	NoRel	true	oldu	sürmüş
+Relation	T15	T10	NoRel	true	oldu	olması
+Relation	T15	T13	NoRel	true	oldu	çalışırken
+Relation	T15	T5	NoRel	true	oldu	açıldı
+Relation	T15	T6	NoRel	true	oldu	panik
+Relation	T16	T12	NoRel	true	tıkaması	geldiğinde
+Relation	T16	T3	NoRel	true	tıkaması	ateş
+Relation	T16	T4	NoRel	true	tıkaması	başladı
+Relation	T16	T7	NoRel	true	tıkaması	başladı
+Relation	T2	T1	NoRel	true	panik	sürmüş
+Relation	T2	T10	NoRel	true	panik	olması
+Relation	T2	T13	NoRel	true	panik	çalışırken
+Relation	T2	T14	NoRel	true	panik	yöneldi
+Relation	T2	T6	NoRel	true	panik	panik
+Relation	T2	T9	NoRel	true	panik	uzamıştır
+Relation	T3	T10	NoRel	true	ateş	olması
+Relation	T3	T11	NoRel	true	ateş	başlandı
+Relation	T3	T13	NoRel	true	ateş	çalışırken
+Relation	T3	T14	NoRel	true	ateş	yöneldi
+Relation	T3	T5	NoRel	true	ateş	açıldı
+Relation	T3	T8	NoRel	true	ateş	yığılmaya
+Relation	T4	T10	NoRel	true	başladı	olması
+Relation	T4	T11	NoRel	true	başladı	başlandı
+Relation	T4	T15	NoRel	true	başladı	oldu
+Relation	T4	T16	NoRel	true	başladı	tıkaması
+Relation	T4	T5	NoRel	true	başladı	açıldı
+Relation	T4	T8	NoRel	true	başladı	yığılmaya
+Relation	T4	T9	NoRel	true	başladı	uzamıştır
+Relation	T5	T1	NoRel	true	açıldı	sürmüş
+Relation	T5	T10	NoRel	true	açıldı	olması
+Relation	T5	T14	NoRel	true	açıldı	yöneldi
+Relation	T5	T16	NoRel	true	açıldı	tıkaması
+Relation	T5	T8	NoRel	true	açıldı	yığılmaya
+Relation	T5	T9	NoRel	true	açıldı	uzamıştır
+Relation	T6	T1	NoRel	true	panik	sürmüş
+Relation	T6	T10	NoRel	true	panik	olması
+Relation	T6	T11	NoRel	true	panik	başlandı
+Relation	T6	T12	NoRel	true	panik	geldiğinde
+Relation	T6	T14	NoRel	true	panik	yöneldi
+Relation	T6	T15	NoRel	true	panik	oldu
+Relation	T6	T2	NoRel	true	panik	panik
+Relation	T6	T9	NoRel	true	panik	uzamıştır
+Relation	T7	T11	NoRel	true	başladı	başlandı
+Relation	T7	T15	NoRel	true	başladı	oldu
+Relation	T7	T6	NoRel	true	başladı	panik
+Relation	T8	T1	NoRel	true	yığılmaya	sürmüş
+Relation	T8	T11	NoRel	true	yığılmaya	başlandı
+Relation	T8	T2	NoRel	true	yığılmaya	panik
+Relation	T9	T12	NoRel	true	uzamıştır	geldiğinde
+Relation	T9	T2	NoRel	true	uzamıştır	panik
+Relation	T9	T8	NoRel	true	uzamıştır	yığılmaya

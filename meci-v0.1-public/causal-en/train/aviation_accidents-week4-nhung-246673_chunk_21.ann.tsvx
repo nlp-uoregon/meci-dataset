@@ -1,0 +1,61 @@
+Text	This retraction significantly raised the stall speed of the left wing .	Thus , flying at the takeoff safety airspeed caused the left wing to stall while the right wing was still producing lift , so the aircraft banked sharply and uncontrollably to the left .	Simulator recreations held after the accident determined that " had the pilot maintained excess airspeed the accident may not have occurred . "	The crash of Flight 191 brought strong criticism from the media regarding the DC - 10 's safety and design .	The DC - 10 had been involved in two accidents related to the design of its cargo doors , American Airlines Flight 96 ( 1972 ) and Turkish Airlines Flight 981 ( 1974 ) .
+Event	T0	retraction	EVENT	5
+Event	T1	raised	EVENT	30
+Event	T2	flying	EVENT	79
+Event	T3	takeoff	EVENT	93
+Event	T4	caused	EVENT	117
+Event	T5	stall	EVENT	141
+Event	T6	lift	EVENT	188
+Event	T7	banked	EVENT	211
+Event	T8	held	EVENT	281
+Event	T9	determined	EVENT	305
+Event	T10	accident	EVENT	368
+Event	T11	occurred	EVENT	390
+Event	T12	crash	EVENT	407
+Event	T13	brought	EVENT	427
+Event	T14	criticism	EVENT	442
+Event	T15	design	EVENT	574
+Event	T16	maintained	EVENT	337
+Event	T17	involved	EVENT	533
+Relation	T0	T1	CauseEffect	true	retraction	raised
+Relation	T1	T0	EffectCause	true	raised	retraction
+Relation	T3	T5	CauseEffect	true	takeoff	stall
+Relation	T5	T3	EffectCause	true	stall	takeoff
+Relation	T3	T7	CauseEffect	true	takeoff	banked
+Relation	T7	T3	EffectCause	true	banked	takeoff
+Relation	T16	T10	CauseEffect	true	maintained	accident
+Relation	T10	T16	EffectCause	true	accident	maintained
+Relation	T8	T9	CauseEffect	true	held	determined
+Relation	T9	T8	EffectCause	true	determined	held
+Relation	T12	T14	CauseEffect	true	crash	criticism
+Relation	T14	T12	EffectCause	true	criticism	crash
+Relation	T0	T10	NoRel	true	retraction	accident
+Relation	T0	T12	NoRel	true	retraction	crash
+Relation	T0	T16	NoRel	true	retraction	maintained
+Relation	T1	T7	NoRel	true	raised	banked
+Relation	T10	T12	NoRel	true	accident	crash
+Relation	T10	T5	NoRel	true	accident	stall
+Relation	T11	T2	NoRel	true	occurred	flying
+Relation	T11	T8	NoRel	true	occurred	held
+Relation	T12	T11	NoRel	true	crash	occurred
+Relation	T12	T9	NoRel	true	crash	determined
+Relation	T13	T14	NoRel	true	brought	criticism
+Relation	T14	T0	NoRel	true	criticism	retraction
+Relation	T14	T9	NoRel	true	criticism	determined
+Relation	T15	T16	NoRel	true	design	maintained
+Relation	T16	T1	NoRel	true	maintained	raised
+Relation	T17	T10	NoRel	true	involved	accident
+Relation	T17	T3	NoRel	true	involved	takeoff
+Relation	T2	T13	NoRel	true	flying	brought
+Relation	T3	T2	NoRel	true	takeoff	flying
+Relation	T3	T4	NoRel	true	takeoff	caused
+Relation	T3	T6	NoRel	true	takeoff	lift
+Relation	T4	T15	NoRel	true	caused	design
+Relation	T5	T4	NoRel	true	stall	caused
+Relation	T5	T9	NoRel	true	stall	determined
+Relation	T6	T1	NoRel	true	lift	raised
+Relation	T6	T2	NoRel	true	lift	flying
+Relation	T6	T4	NoRel	true	lift	caused
+Relation	T8	T14	NoRel	true	held	criticism
+Relation	T9	T0	NoRel	true	determined	retraction
+Relation	T9	T4	NoRel	true	determined	caused

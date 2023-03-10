@@ -1,0 +1,45 @@
+Text	SSCB Bakanlar Konseyi Başkanı Alexey Kosıgin , 1972'de ikili Dostluk ve İşbirliği Antlaşması'nı imzaladı .	Haziran 2003'te , ABD liderliğindeki Geçici Koalisyon Yönetimi Baas Partisi'ni yasakladı ve partinin ilk dört kademesinin tüm üyelerini yeni hükûmetten , devlet okullarından ve kolejlerden yasakladı .	Bu hareket , çok fazla deneyimli insanı yeni hükûmete katılmaya engellediği için çeşitli kişilerin eleştirisini aldı .	Doktorlar , profesörler , okul öğretmenleri ve bürokratlar da dahil olmak üzere binlerce kişi görevlerinden alındı .	Birçok öğretmen işini kaybetti , okullarda ve üniversitelerde protestolara ve gösterilere neden oldu .
+Event	T0	imzaladı	EVENT	96
+Event	T1	yasakladı	EVENT	186
+Event	T2	yasakladı	EVENT	296
+Event	T3	hareket	EVENT	311
+Event	T4	aldı	EVENT	420
+Event	T5	alındı	EVENT	535
+Event	T6	kaybetti	EVENT	566
+Event	T7	oldu	EVENT	640
+Event	T8	Dostluk ve İşbirliği Antlaşması'nı	EVENT	61
+Event	T9	engellediği	EVENT	372
+Relation	T9	T4	CauseEffect	true	engellediği	aldı
+Relation	T4	T9	EffectCause	true	aldı	engellediği
+Relation	T5	T6	CauseEffect	true	alındı	kaybetti
+Relation	T6	T5	EffectCause	true	kaybetti	alındı
+Relation	T6	T7	CauseEffect	true	kaybetti	oldu
+Relation	T7	T6	EffectCause	true	oldu	kaybetti
+Relation	T0	T1	NoRel	true	imzaladı	yasakladı
+Relation	T0	T2	NoRel	true	imzaladı	yasakladı
+Relation	T0	T3	NoRel	true	imzaladı	hareket
+Relation	T0	T7	NoRel	true	imzaladı	oldu
+Relation	T0	T8	NoRel	true	imzaladı	Dostluk ve İşbirliği Antlaşması'nı
+Relation	T1	T2	NoRel	true	yasakladı	yasakladı
+Relation	T1	T6	NoRel	true	yasakladı	kaybetti
+Relation	T2	T5	NoRel	true	yasakladı	alındı
+Relation	T2	T9	NoRel	true	yasakladı	engellediği
+Relation	T3	T1	NoRel	true	hareket	yasakladı
+Relation	T3	T4	NoRel	true	hareket	aldı
+Relation	T3	T7	NoRel	true	hareket	oldu
+Relation	T3	T9	NoRel	true	hareket	engellediği
+Relation	T4	T0	NoRel	true	aldı	imzaladı
+Relation	T4	T1	NoRel	true	aldı	yasakladı
+Relation	T4	T2	NoRel	true	aldı	yasakladı
+Relation	T4	T8	NoRel	true	aldı	Dostluk ve İşbirliği Antlaşması'nı
+Relation	T5	T7	NoRel	true	alındı	oldu
+Relation	T5	T9	NoRel	true	alındı	engellediği
+Relation	T6	T1	NoRel	true	kaybetti	yasakladı
+Relation	T6	T2	NoRel	true	kaybetti	yasakladı
+Relation	T7	T0	NoRel	true	oldu	imzaladı
+Relation	T7	T2	NoRel	true	oldu	yasakladı
+Relation	T7	T3	NoRel	true	oldu	hareket
+Relation	T8	T5	NoRel	true	Dostluk ve İşbirliği Antlaşması'nı	alındı
+Relation	T8	T7	NoRel	true	Dostluk ve İşbirliği Antlaşması'nı	oldu
+Relation	T9	T3	NoRel	true	engellediği	hareket
+Relation	T9	T6	NoRel	true	engellediği	kaybetti

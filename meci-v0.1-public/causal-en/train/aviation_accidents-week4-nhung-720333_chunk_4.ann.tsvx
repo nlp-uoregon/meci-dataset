@@ -1,0 +1,72 @@
+Text	Despite this , the captain was able to fight the lack of gravity and re-enter the cockpit .	The speed of the 767 was now dangerously close to the sound barrier , exceeding its design limits and beginning to weaken its airframe .	The captain pulled back on his control column and applied full power to the engines , but neither action had any effect due to the aircraft 's speed and the engines having been shut down .	The captain then deployed the speedbrakes , which slowed the aircraft 's dive , bringing it back to a safer speed .	However , these abrupt maneuvers resulted in the aircraft entering a steep climb , causing g - forces to push the passengers and crew into their seats .
+Event	T0	fight	EVENT	39
+Event	T1	speed	EVENT	96
+Event	T2	exceeding	EVENT	162
+Event	T3	beginning	EVENT	194
+Event	T4	weaken	EVENT	207
+Event	T5	applied	EVENT	279
+Event	T6	action	EVENT	327
+Event	T7	deployed	EVENT	435
+Event	T8	slowed	EVENT	468
+Event	T9	dive	EVENT	491
+Event	T10	resulted	EVENT	567
+Event	T11	entering	EVENT	592
+Event	T12	climb	EVENT	609
+Event	T13	causing	EVENT	617
+Event	T14	push	EVENT	639
+Event	T15	re-enter	EVENT	69
+Event	T16	pulled back	EVENT	241
+Event	T17	shut down	EVENT	406
+Event	T18	bringing	EVENT	498
+Event	T19	speed	EVENT	372
+Event	T20	maneuvers	EVENT	557
+Relation	T7	T8	CauseEffect	true	deployed	slowed
+Relation	T8	T7	EffectCause	true	slowed	deployed
+Relation	T20	T11	CauseEffect	true	maneuvers	entering
+Relation	T11	T20	EffectCause	true	entering	maneuvers
+Relation	T11	T13	CauseEffect	true	entering	causing
+Relation	T13	T11	EffectCause	true	causing	entering
+Relation	T0	T2	NoRel	true	fight	exceeding
+Relation	T1	T0	NoRel	true	speed	fight
+Relation	T1	T3	NoRel	true	speed	beginning
+Relation	T1	T9	NoRel	true	speed	dive
+Relation	T10	T19	NoRel	true	resulted	speed
+Relation	T10	T20	NoRel	true	resulted	maneuvers
+Relation	T10	T9	NoRel	true	resulted	dive
+Relation	T11	T12	NoRel	true	entering	climb
+Relation	T11	T15	NoRel	true	entering	re-enter
+Relation	T11	T16	NoRel	true	entering	pulled back
+Relation	T11	T17	NoRel	true	entering	shut down
+Relation	T12	T18	NoRel	true	climb	bringing
+Relation	T13	T20	NoRel	true	causing	maneuvers
+Relation	T13	T3	NoRel	true	causing	beginning
+Relation	T14	T12	NoRel	true	push	climb
+Relation	T14	T3	NoRel	true	push	beginning
+Relation	T15	T17	NoRel	true	re-enter	shut down
+Relation	T15	T2	NoRel	true	re-enter	exceeding
+Relation	T15	T20	NoRel	true	re-enter	maneuvers
+Relation	T16	T1	NoRel	true	pulled back	speed
+Relation	T16	T7	NoRel	true	pulled back	deployed
+Relation	T18	T6	NoRel	true	bringing	action
+Relation	T18	T9	NoRel	true	bringing	dive
+Relation	T19	T15	NoRel	true	speed	re-enter
+Relation	T19	T4	NoRel	true	speed	weaken
+Relation	T2	T10	NoRel	true	exceeding	resulted
+Relation	T2	T15	NoRel	true	exceeding	re-enter
+Relation	T2	T3	NoRel	true	exceeding	beginning
+Relation	T2	T6	NoRel	true	exceeding	action
+Relation	T2	T9	NoRel	true	exceeding	dive
+Relation	T20	T0	NoRel	true	maneuvers	fight
+Relation	T20	T16	NoRel	true	maneuvers	pulled back
+Relation	T20	T7	NoRel	true	maneuvers	deployed
+Relation	T3	T0	NoRel	true	beginning	fight
+Relation	T3	T13	NoRel	true	beginning	causing
+Relation	T3	T2	NoRel	true	beginning	exceeding
+Relation	T4	T1	NoRel	true	weaken	speed
+Relation	T4	T13	NoRel	true	weaken	causing
+Relation	T4	T3	NoRel	true	weaken	beginning
+Relation	T4	T5	NoRel	true	weaken	applied
+Relation	T8	T12	NoRel	true	slowed	climb
+Relation	T8	T15	NoRel	true	slowed	re-enter
+Relation	T8	T6	NoRel	true	slowed	action
+Relation	T9	T5	NoRel	true	dive	applied

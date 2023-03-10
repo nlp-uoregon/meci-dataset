@@ -1,0 +1,80 @@
+Text	HUGO KASIRGASI , 1989'un eylül ayında , Saffir - Simpson Kasırga Ölçeğine göre 5 şiddetinde ; Guadeloupe , Montserrat , Porto Riko , Saint Croix , Güney Karolina ve Kuzey Karolina'yı vuran ve 82 kişinin ölümüne ve 56.000 kişinin evsiz kalmasına neden olan kasırgadır .	Hugo , Afrika'nın kıyılarından 9 Eylül'de ayrılan tropikal bir dalgadan köken aldı .	Fırtına batı kıyılarını izleyip , 11'inde tropikal bir fırtınaya ve 13'ünde bir kasırgaya dönüştü ve Birleşik Devletler'e doğru yol almaya başladı .	İlk kez Güney Karolina'da 4 şiddetindeyken görüldü .	Kasırga , o zamana kadar kaydedilmiş en yıkıcı kasırgalardan biri olan Frederic Kasırgası'nı geçerek 10 milyar dolar hasara yol açmıştır .
+Event	T0	KASIRGASI	EVENT	5
+Event	T1	vuran	EVENT	183
+Event	T2	ölümüne	EVENT	203
+Event	T3	kasırgadır	EVENT	256
+Event	T4	aldı	EVENT	347
+Event	T5	izleyip	EVENT	378
+Event	T6	fırtınaya	EVENT	409
+Event	T7	dönüştü	EVENT	444
+Event	T8	başladı	EVENT	493
+Event	T9	görüldü	EVENT	546
+Event	T10	kaydedilmiş	EVENT	581
+Event	T11	geçerek	EVENT	649
+Event	T12	açmıştır	EVENT	684
+Event	T13	kalmasına	EVENT	235
+Relation	T0	T2	CauseEffect	true	KASIRGASI	ölümüne
+Relation	T2	T0	EffectCause	true	ölümüne	KASIRGASI
+Relation	T0	T13	CauseEffect	true	KASIRGASI	kalmasına
+Relation	T13	T0	EffectCause	true	kalmasına	KASIRGASI
+Relation	T0	T12	CauseEffect	true	KASIRGASI	açmıştır
+Relation	T12	T0	EffectCause	true	açmıştır	KASIRGASI
+Relation	T12	T11	CauseEffect	true	açmıştır	geçerek
+Relation	T11	T12	EffectCause	true	geçerek	açmıştır
+Relation	T0	T3	NoRel	true	KASIRGASI	kasırgadır
+Relation	T0	T5	NoRel	true	KASIRGASI	izleyip
+Relation	T0	T8	NoRel	true	KASIRGASI	başladı
+Relation	T1	T10	NoRel	true	vuran	kaydedilmiş
+Relation	T1	T2	NoRel	true	vuran	ölümüne
+Relation	T1	T6	NoRel	true	vuran	fırtınaya
+Relation	T1	T8	NoRel	true	vuran	başladı
+Relation	T1	T9	NoRel	true	vuran	görüldü
+Relation	T10	T0	NoRel	true	kaydedilmiş	KASIRGASI
+Relation	T10	T2	NoRel	true	kaydedilmiş	ölümüne
+Relation	T10	T8	NoRel	true	kaydedilmiş	başladı
+Relation	T10	T9	NoRel	true	kaydedilmiş	görüldü
+Relation	T11	T0	NoRel	true	geçerek	KASIRGASI
+Relation	T11	T1	NoRel	true	geçerek	vuran
+Relation	T11	T2	NoRel	true	geçerek	ölümüne
+Relation	T11	T6	NoRel	true	geçerek	fırtınaya
+Relation	T11	T7	NoRel	true	geçerek	dönüştü
+Relation	T11	T8	NoRel	true	geçerek	başladı
+Relation	T12	T4	NoRel	true	açmıştır	aldı
+Relation	T12	T5	NoRel	true	açmıştır	izleyip
+Relation	T13	T11	NoRel	true	kalmasına	geçerek
+Relation	T13	T2	NoRel	true	kalmasına	ölümüne
+Relation	T13	T3	NoRel	true	kalmasına	kasırgadır
+Relation	T2	T10	NoRel	true	ölümüne	kaydedilmiş
+Relation	T2	T12	NoRel	true	ölümüne	açmıştır
+Relation	T2	T4	NoRel	true	ölümüne	aldı
+Relation	T2	T7	NoRel	true	ölümüne	dönüştü
+Relation	T3	T10	NoRel	true	kasırgadır	kaydedilmiş
+Relation	T3	T12	NoRel	true	kasırgadır	açmıştır
+Relation	T3	T6	NoRel	true	kasırgadır	fırtınaya
+Relation	T3	T9	NoRel	true	kasırgadır	görüldü
+Relation	T4	T10	NoRel	true	aldı	kaydedilmiş
+Relation	T4	T5	NoRel	true	aldı	izleyip
+Relation	T4	T8	NoRel	true	aldı	başladı
+Relation	T5	T0	NoRel	true	izleyip	KASIRGASI
+Relation	T5	T10	NoRel	true	izleyip	kaydedilmiş
+Relation	T5	T13	NoRel	true	izleyip	kalmasına
+Relation	T5	T2	NoRel	true	izleyip	ölümüne
+Relation	T5	T7	NoRel	true	izleyip	dönüştü
+Relation	T6	T10	NoRel	true	fırtınaya	kaydedilmiş
+Relation	T6	T3	NoRel	true	fırtınaya	kasırgadır
+Relation	T6	T7	NoRel	true	fırtınaya	dönüştü
+Relation	T7	T0	NoRel	true	dönüştü	KASIRGASI
+Relation	T7	T10	NoRel	true	dönüştü	kaydedilmiş
+Relation	T7	T12	NoRel	true	dönüştü	açmıştır
+Relation	T7	T13	NoRel	true	dönüştü	kalmasına
+Relation	T7	T8	NoRel	true	dönüştü	başladı
+Relation	T8	T2	NoRel	true	başladı	ölümüne
+Relation	T8	T5	NoRel	true	başladı	izleyip
+Relation	T8	T7	NoRel	true	başladı	dönüştü
+Relation	T9	T10	NoRel	true	görüldü	kaydedilmiş
+Relation	T9	T12	NoRel	true	görüldü	açmıştır
+Relation	T9	T13	NoRel	true	görüldü	kalmasına
+Relation	T9	T4	NoRel	true	görüldü	aldı
+Relation	T9	T5	NoRel	true	görüldü	izleyip
+Relation	T9	T6	NoRel	true	görüldü	fırtınaya
+Relation	T9	T7	NoRel	true	görüldü	dönüştü

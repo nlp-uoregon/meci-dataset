@@ -1,0 +1,17 @@
+Text	عالمی ادارہ صحت مرض کی تشخیص کے لیے چند ٹیسٹنگ پروٹوکول شائع کر چکا ہے ۔	ٹیسٹنگ کا معیاری طریقہ ریورس ٹرانسکرپشن پولی میریز چین ری ایکشن ( rRT - PCR ) ہے ۔	ٹیسٹ تنفسی نمونوں کے ذریعے بھی ممکن ہے اس کے لیے نیزوفیرینجیئل سویب یا تھوک کا نمونہ استعمال کیا جاتا ہے ۔	نتیجے عمومًا چند گھنٹوں سے دو دنوں میں دستیاب ہوتے ہیں ۔	خون ٹیسٹ بھی کیا جاسکتا ہے لیکن اس کے لیے دو ہفتوں کے دوران میں خون کے دو نمونے کی ضرورت ہوتی ہے اور اچھے نتائج بھی کم آتے ہیں ۔
+Event	T0	تشخیص	EVENT	23
+Event	T1	ٹیسٹنگ	EVENT	40
+Event	T2	ٹیسٹنگ	EVENT	73
+Event	T3	ٹیسٹ	EVENT	156
+Event	T4	استعمال	EVENT	241
+Event	T5	ٹیسٹ	EVENT	324
+Relation	T0	T1	NoRel	true	تشخیص	ٹیسٹنگ
+Relation	T0	T5	NoRel	true	تشخیص	ٹیسٹ
+Relation	T2	T4	NoRel	true	ٹیسٹنگ	استعمال
+Relation	T2	T5	NoRel	true	ٹیسٹنگ	ٹیسٹ
+Relation	T3	T1	NoRel	true	ٹیسٹ	ٹیسٹنگ
+Relation	T3	T2	NoRel	true	ٹیسٹ	ٹیسٹنگ
+Relation	T4	T0	NoRel	true	استعمال	تشخیص
+Relation	T4	T1	NoRel	true	استعمال	ٹیسٹنگ
+Relation	T5	T1	NoRel	true	ٹیسٹ	ٹیسٹنگ
+Relation	T5	T3	NoRel	true	ٹیسٹ	ٹیسٹ

@@ -1,0 +1,100 @@
+Text	The Canadian Official Historian Charles Stacey , and military historian Michael Reynolds , wrote that German casualty figures for individual operations are difficult to determine .	Stacey attributes this to the gradual degradation of the German logistics chain , leaving incomplete records , and Reynolds wrote that units sometimes over-reported their losses , in the hope of receiving more reinforcements .	German losses for the battle were significantly fewer than those suffered by the Canadians .	According to Reynolds , between 16 July and 1 August , the 1st SS Panzer Division lost 1,092 men killed , wounded or captured — along with 11 _ Panzer__IV tanks and 10 _ Sturmgeschütz__III self - propelled guns — in fighting across all its fronts including at Verrières .	Over a similar period , he estimates the 12th SS Panzer Division — in all sectors — suffered only 134 casualties .
+Event	T0	wrote	EVENT	91
+Event	T1	casualty	EVENT	109
+Event	T2	operations	EVENT	141
+Event	T3	determine	EVENT	169
+Event	T4	attributes	EVENT	188
+Event	T5	degradation	EVENT	219
+Event	T6	leaving	EVENT	263
+Event	T7	wrote	EVENT	305
+Event	T8	losses	EVENT	352
+Event	T9	receiving	EVENT	376
+Event	T10	reinforcements	EVENT	391
+Event	T11	losses	EVENT	415
+Event	T12	battle	EVENT	430
+Event	T13	suffered	EVENT	473
+Event	T14	lost	EVENT	583
+Event	T15	killed	EVENT	598
+Event	T16	wounded	EVENT	607
+Event	T17	captured	EVENT	618
+Event	T18	propelled	EVENT	697
+Event	T19	fighting	EVENT	717
+Event	T20	estimates	EVENT	800
+Event	T21	suffered	EVENT	857
+Event	T22	casualties	EVENT	875
+Event	T23	over-reported	EVENT	332
+Event	T24	hope	EVENT	368
+Relation	T5	T6	CauseEffect	true	degradation	leaving
+Relation	T6	T5	EffectCause	true	leaving	degradation
+Relation	T6	T3	CauseEffect	true	leaving	determine
+Relation	T3	T6	EffectCause	true	determine	leaving
+Relation	T23	T3	CauseEffect	true	over-reported	determine
+Relation	T3	T23	EffectCause	true	determine	over-reported
+Relation	T24	T23	CauseEffect	true	hope	over-reported
+Relation	T23	T24	EffectCause	true	over-reported	hope
+Relation	T19	T15	CauseEffect	true	fighting	killed
+Relation	T15	T19	EffectCause	true	killed	fighting
+Relation	T19	T16	CauseEffect	true	fighting	wounded
+Relation	T16	T19	EffectCause	true	wounded	fighting
+Relation	T19	T17	CauseEffect	true	fighting	captured
+Relation	T17	T19	EffectCause	true	captured	fighting
+Relation	T0	T10	NoRel	true	wrote	reinforcements
+Relation	T0	T11	NoRel	true	wrote	losses
+Relation	T0	T7	NoRel	true	wrote	wrote
+Relation	T1	T0	NoRel	true	casualty	wrote
+Relation	T1	T10	NoRel	true	casualty	reinforcements
+Relation	T1	T11	NoRel	true	casualty	losses
+Relation	T1	T17	NoRel	true	casualty	captured
+Relation	T1	T19	NoRel	true	casualty	fighting
+Relation	T10	T0	NoRel	true	reinforcements	wrote
+Relation	T10	T1	NoRel	true	reinforcements	casualty
+Relation	T10	T15	NoRel	true	reinforcements	killed
+Relation	T10	T20	NoRel	true	reinforcements	estimates
+Relation	T11	T19	NoRel	true	losses	fighting
+Relation	T13	T16	NoRel	true	suffered	wounded
+Relation	T13	T2	NoRel	true	suffered	operations
+Relation	T14	T23	NoRel	true	lost	over-reported
+Relation	T15	T7	NoRel	true	killed	wrote
+Relation	T16	T2	NoRel	true	wounded	operations
+Relation	T16	T22	NoRel	true	wounded	casualties
+Relation	T17	T2	NoRel	true	captured	operations
+Relation	T17	T5	NoRel	true	captured	degradation
+Relation	T18	T0	NoRel	true	propelled	wrote
+Relation	T18	T10	NoRel	true	propelled	reinforcements
+Relation	T18	T20	NoRel	true	propelled	estimates
+Relation	T18	T6	NoRel	true	propelled	leaving
+Relation	T19	T14	NoRel	true	fighting	lost
+Relation	T19	T6	NoRel	true	fighting	leaving
+Relation	T19	T8	NoRel	true	fighting	losses
+Relation	T2	T15	NoRel	true	operations	killed
+Relation	T2	T17	NoRel	true	operations	captured
+Relation	T2	T22	NoRel	true	operations	casualties
+Relation	T2	T23	NoRel	true	operations	over-reported
+Relation	T20	T10	NoRel	true	estimates	reinforcements
+Relation	T20	T14	NoRel	true	estimates	lost
+Relation	T20	T2	NoRel	true	estimates	operations
+Relation	T21	T10	NoRel	true	suffered	reinforcements
+Relation	T21	T13	NoRel	true	suffered	suffered
+Relation	T21	T2	NoRel	true	suffered	operations
+Relation	T21	T6	NoRel	true	suffered	leaving
+Relation	T23	T11	NoRel	true	over-reported	losses
+Relation	T23	T15	NoRel	true	over-reported	killed
+Relation	T23	T21	NoRel	true	over-reported	suffered
+Relation	T24	T3	NoRel	true	hope	determine
+Relation	T3	T13	NoRel	true	determine	suffered
+Relation	T3	T19	NoRel	true	determine	fighting
+Relation	T4	T6	NoRel	true	attributes	leaving
+Relation	T4	T7	NoRel	true	attributes	wrote
+Relation	T5	T0	NoRel	true	degradation	wrote
+Relation	T5	T22	NoRel	true	degradation	casualties
+Relation	T5	T4	NoRel	true	degradation	attributes
+Relation	T7	T20	NoRel	true	wrote	estimates
+Relation	T7	T24	NoRel	true	wrote	hope
+Relation	T7	T3	NoRel	true	wrote	determine
+Relation	T7	T5	NoRel	true	wrote	degradation
+Relation	T8	T1	NoRel	true	losses	casualty
+Relation	T8	T15	NoRel	true	losses	killed
+Relation	T8	T20	NoRel	true	losses	estimates
+Relation	T9	T11	NoRel	true	receiving	losses
+Relation	T9	T16	NoRel	true	receiving	wounded
+Relation	T9	T4	NoRel	true	receiving	attributes

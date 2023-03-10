@@ -1,0 +1,21 @@
+Text	Uzun yıllardır aşı bulma çalışmaları sürmesine rağmen henüz olumlu bir sonuç elde edilememiştir .	Çalışmalar ise farklı ülkelerde DSÖ ( Dünya Sağlık Örgütü ) desteği ile sürdürülmektedir .	Spermdeki ve vajina salgısındaki HIV , dış ortamda birkaç saatte , kuru ortamda ise yarım saatte ölür .	HIV kurumuş kanda da kısa zamanda ölür .	Eşyayı birkaç dakika kaynatarak ya da 60 C °'de 30 dakika ısıtarak virus öldürülür .
+Event	T0	sürmesine	EVENT	37
+Event	T1	ölür	EVENT	286
+Event	T2	ölür	EVENT	327
+Event	T3	ısıtarak	EVENT	392
+Event	T4	öldürülür	EVENT	407
+Event	T5	Çalışmalar	EVENT	98
+Event	T6	desteği	EVENT	158
+Relation	T3	T4	CauseEffect	true	ısıtarak	öldürülür
+Relation	T4	T3	EffectCause	true	öldürülür	ısıtarak
+Relation	T0	T2	NoRel	true	sürmesine	ölür
+Relation	T0	T4	NoRel	true	sürmesine	öldürülür
+Relation	T0	T6	NoRel	true	sürmesine	desteği
+Relation	T1	T2	NoRel	true	ölür	ölür
+Relation	T2	T4	NoRel	true	ölür	öldürülür
+Relation	T2	T5	NoRel	true	ölür	Çalışmalar
+Relation	T3	T0	NoRel	true	ısıtarak	sürmesine
+Relation	T4	T6	NoRel	true	öldürülür	desteği
+Relation	T5	T0	NoRel	true	Çalışmalar	sürmesine
+Relation	T5	T6	NoRel	true	Çalışmalar	desteği
+Relation	T6	T3	NoRel	true	desteği	ısıtarak

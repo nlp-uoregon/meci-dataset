@@ -1,0 +1,34 @@
+Text	İlk başta 300 olarak açıklanan yaralı sayısı da daha sonra 400'den fazla kişiye yükseltildi .	En az 20 bin kişi deprem sonucu evsiz kaldı .	Pico ve Faial adalarında da küçük miktarda hasar meydana geldi .	Lajes'te bulunan ABD askerleri yardım çalışmalarına yardım etti , 150 aileye üste barınak sağladı .	Portekiz Hava Kuvvetleri depremzedelere yardım sağladı , João Coutinho türü bir korvet de adalara tıbbi yardım taşıdı .
+Event	T0	yaralı	EVENT	31
+Event	T1	yükseltildi	EVENT	80
+Event	T2	kaldı	EVENT	132
+Event	T5	sağladı	EVENT	295
+Event	T6	sağladı	EVENT	352
+Event	T7	taşıdı	EVENT	416
+Event	T8	açıklanan	EVENT	21
+Event	T9	deprem	EVENT	112
+Relation	T9	T0	CauseEffect	true	deprem	yaralı
+Relation	T0	T9	EffectCause	true	yaralı	deprem
+Relation	T9	T2	CauseEffect	true	deprem	kaldı
+Relation	T2	T9	EffectCause	true	kaldı	deprem
+Relation	T9	T8	CauseEffect	true	deprem	açıklanan
+Relation	T8	T9	EffectCause	true	açıklanan	deprem
+Relation	T9	T5	CauseEffect	true	deprem	sağladı
+Relation	T5	T9	EffectCause	true	sağladı	deprem
+Relation	T9	T6	CauseEffect	true	deprem	sağladı
+Relation	T6	T9	EffectCause	true	sağladı	deprem
+Relation	T9	T7	CauseEffect	true	deprem	taşıdı
+Relation	T7	T9	EffectCause	true	taşıdı	deprem
+Relation	T0	T5	NoRel	true	yaralı	sağladı
+Relation	T1	T5	NoRel	true	yükseltildi	sağladı
+Relation	T1	T6	NoRel	true	yükseltildi	sağladı
+Relation	T1	T7	NoRel	true	yükseltildi	taşıdı
+Relation	T1	T8	NoRel	true	yükseltildi	açıklanan
+Relation	T1	T9	NoRel	true	yükseltildi	deprem
+Relation	T5	T6	NoRel	true	sağladı	sağladı
+Relation	T6	T5	NoRel	true	sağladı	sağladı
+Relation	T7	T0	NoRel	true	taşıdı	yaralı
+Relation	T7	T1	NoRel	true	taşıdı	yükseltildi
+Relation	T8	T0	NoRel	true	açıklanan	yaralı
+Relation	T8	T6	NoRel	true	açıklanan	sağladı
+Relation	T9	T1	NoRel	true	deprem	yükseltildi

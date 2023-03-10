@@ -1,0 +1,111 @@
+Text	Según Bryant , Bernardo declaró que él siempre había estado dispuesto a liberar a las chicas y que Karla se había negado .	Sin embargo , Mahaffy fue asesinada al ver el rostro de Bernardo después de que se le desprendiera el vendaje que cubría sus ojos .	Homolka hizo referencia a que Paul la mató ya que Mahaffy , al reconocer a Paul , los delataría ante la policía .	Bernardo también declaró que Karla asesinó a Mahaffy , inyectándole una burbuja de aire con una jeringa en su torrente sanguíneo , provocándole una embolia .	Muchos libros han sido escritos basándose en los crímenes de los ' Teale ' , y en octubre de 2005 , una película referente a este caso se estrenó .
+Event	T0	declaró	EVENT	24
+Event	T1	liberar	EVENT	72
+Event	T2	asesinada	EVENT	149
+Event	T3	ver	EVENT	162
+Event	T4	desprendiera	EVENT	209
+Event	T6	cubría	EVENT	237
+Event	T7	referencia	EVENT	268
+Event	T8	mató	EVENT	293
+Event	T9	reconocer	EVENT	318
+Event	T10	delataría	EVENT	341
+Event	T11	declaró	EVENT	386
+Event	T12	asesinó	EVENT	404
+Event	T13	inyectándole	EVENT	424
+Event	T14	provocándole	EVENT	500
+Event	T15	embolia	EVENT	517
+Event	T16	crímenes	EVENT	576
+Event	T17	estrenó	EVENT	665
+Relation	T3	T2	CauseEffect	true	ver	asesinada
+Relation	T2	T3	EffectCause	true	asesinada	ver
+Relation	T4	T3	CauseEffect	true	desprendiera	ver
+Relation	T3	T4	EffectCause	true	ver	desprendiera
+Relation	T3	T9	CauseEffect	true	ver	reconocer
+Relation	T9	T3	EffectCause	true	reconocer	ver
+Relation	T16	T17	CauseEffect	true	crímenes	estrenó
+Relation	T17	T16	EffectCause	true	estrenó	crímenes
+Relation	T0	T16	NoRel	true	declaró	crímenes
+Relation	T0	T17	NoRel	true	declaró	estrenó
+Relation	T0	T3	NoRel	true	declaró	ver
+Relation	T0	T8	NoRel	true	declaró	mató
+Relation	T1	T0	NoRel	true	liberar	declaró
+Relation	T1	T13	NoRel	true	liberar	inyectándole
+Relation	T1	T7	NoRel	true	liberar	referencia
+Relation	T1	T8	NoRel	true	liberar	mató
+Relation	T10	T1	NoRel	true	delataría	liberar
+Relation	T10	T12	NoRel	true	delataría	asesinó
+Relation	T10	T14	NoRel	true	delataría	provocándole
+Relation	T10	T16	NoRel	true	delataría	crímenes
+Relation	T10	T4	NoRel	true	delataría	desprendiera
+Relation	T10	T6	NoRel	true	delataría	cubría
+Relation	T10	T8	NoRel	true	delataría	mató
+Relation	T11	T1	NoRel	true	declaró	liberar
+Relation	T11	T15	NoRel	true	declaró	embolia
+Relation	T12	T1	NoRel	true	asesinó	liberar
+Relation	T12	T10	NoRel	true	asesinó	delataría
+Relation	T12	T15	NoRel	true	asesinó	embolia
+Relation	T12	T3	NoRel	true	asesinó	ver
+Relation	T12	T7	NoRel	true	asesinó	referencia
+Relation	T13	T14	NoRel	true	inyectándole	provocándole
+Relation	T13	T17	NoRel	true	inyectándole	estrenó
+Relation	T13	T7	NoRel	true	inyectándole	referencia
+Relation	T13	T8	NoRel	true	inyectándole	mató
+Relation	T14	T1	NoRel	true	provocándole	liberar
+Relation	T14	T11	NoRel	true	provocándole	declaró
+Relation	T14	T13	NoRel	true	provocándole	inyectándole
+Relation	T14	T4	NoRel	true	provocándole	desprendiera
+Relation	T14	T8	NoRel	true	provocándole	mató
+Relation	T14	T9	NoRel	true	provocándole	reconocer
+Relation	T15	T14	NoRel	true	embolia	provocándole
+Relation	T15	T17	NoRel	true	embolia	estrenó
+Relation	T16	T0	NoRel	true	crímenes	declaró
+Relation	T16	T1	NoRel	true	crímenes	liberar
+Relation	T16	T10	NoRel	true	crímenes	delataría
+Relation	T16	T11	NoRel	true	crímenes	declaró
+Relation	T16	T14	NoRel	true	crímenes	provocándole
+Relation	T16	T15	NoRel	true	crímenes	embolia
+Relation	T17	T11	NoRel	true	estrenó	declaró
+Relation	T17	T12	NoRel	true	estrenó	asesinó
+Relation	T17	T13	NoRel	true	estrenó	inyectándole
+Relation	T17	T2	NoRel	true	estrenó	asesinada
+Relation	T17	T4	NoRel	true	estrenó	desprendiera
+Relation	T2	T12	NoRel	true	asesinada	asesinó
+Relation	T2	T14	NoRel	true	asesinada	provocándole
+Relation	T2	T4	NoRel	true	asesinada	desprendiera
+Relation	T3	T1	NoRel	true	ver	liberar
+Relation	T3	T10	NoRel	true	ver	delataría
+Relation	T3	T17	NoRel	true	ver	estrenó
+Relation	T4	T10	NoRel	true	desprendiera	delataría
+Relation	T4	T11	NoRel	true	desprendiera	declaró
+Relation	T4	T12	NoRel	true	desprendiera	asesinó
+Relation	T4	T13	NoRel	true	desprendiera	inyectándole
+Relation	T4	T14	NoRel	true	desprendiera	provocándole
+Relation	T4	T16	NoRel	true	desprendiera	crímenes
+Relation	T4	T2	NoRel	true	desprendiera	asesinada
+Relation	T4	T7	NoRel	true	desprendiera	referencia
+Relation	T6	T0	NoRel	true	cubría	declaró
+Relation	T6	T1	NoRel	true	cubría	liberar
+Relation	T6	T10	NoRel	true	cubría	delataría
+Relation	T6	T14	NoRel	true	cubría	provocándole
+Relation	T6	T2	NoRel	true	cubría	asesinada
+Relation	T6	T3	NoRel	true	cubría	ver
+Relation	T6	T4	NoRel	true	cubría	desprendiera
+Relation	T6	T9	NoRel	true	cubría	reconocer
+Relation	T7	T0	NoRel	true	referencia	declaró
+Relation	T7	T1	NoRel	true	referencia	liberar
+Relation	T7	T12	NoRel	true	referencia	asesinó
+Relation	T7	T16	NoRel	true	referencia	crímenes
+Relation	T7	T2	NoRel	true	referencia	asesinada
+Relation	T8	T1	NoRel	true	mató	liberar
+Relation	T8	T10	NoRel	true	mató	delataría
+Relation	T8	T11	NoRel	true	mató	declaró
+Relation	T8	T14	NoRel	true	mató	provocándole
+Relation	T8	T4	NoRel	true	mató	desprendiera
+Relation	T8	T6	NoRel	true	mató	cubría
+Relation	T8	T9	NoRel	true	mató	reconocer
+Relation	T9	T1	NoRel	true	reconocer	liberar
+Relation	T9	T10	NoRel	true	reconocer	delataría
+Relation	T9	T13	NoRel	true	reconocer	inyectándole
+Relation	T9	T14	NoRel	true	reconocer	provocándole
+Relation	T9	T15	NoRel	true	reconocer	embolia
+Relation	T9	T6	NoRel	true	reconocer	cubría

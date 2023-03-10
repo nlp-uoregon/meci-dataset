@@ -1,0 +1,128 @@
+Text	16 Ocak günü öğleden sonra , iki uçuş kaydedicisinden biri bulundu ; diğeri ise daha sonra , enkazı kaldırma sürecinde bulundu .	Kazada hem uçuş veri kaydedicisi hem de kokpit ses kaydedicisi hasar gördü ; ancak araştırmacılar yine de her iki kayıt cihazından da verileri alabildiler .	Türkiye Sivil Havacılık Genel Müdürlüğü yetkilileri , ACT Airlines'ın Kurtköy'deki merkezine geldi ve incelemek üzerine kaza yapan uçağın ve mürettebatın dosyalarına el koydu .	Başbakan Yardımcısı Abılgaziyev , aynı hava koşullarına rağmen on bir uçağın güvenli bir şekilde indiğini belirterek kazanın nedeninin pilotaj hatası olabileceğini ileri sürdü .	Uçağın iki kez inmeye çalıştığını ve bir aşamada pist ışıklarına zarar verdiğini de ekledi .
+Event	T0	uçuş	EVENT	33
+Event	T1	bulundu	EVENT	59
+Event	T2	bulundu	EVENT	119
+Event	T3	Kazada	EVENT	129
+Event	T4	uçuş	EVENT	140
+Event	T6	gördü	EVENT	198
+Event	T7	alabildiler	EVENT	272
+Event	T8	geldi	EVENT	379
+Event	T9	incelemek	EVENT	388
+Event	T11	sürdü	EVENT	633
+Event	T12	verdiğini	EVENT	712
+Event	T13	ekledi	EVENT	725
+Event	T14	kaldırma	EVENT	100
+Event	T5	kaza	EVENT	406
+Event	T10	el koydu	EVENT	452
+Event	T15	indiğini	EVENT	560
+Event	T16	kazanın	EVENT	580
+Event	T17	çalıştığını	EVENT	663
+Relation	T3	T6	CauseEffect	true	Kazada	gördü
+Relation	T6	T3	EffectCause	true	gördü	Kazada
+Relation	T9	T10	CauseEffect	true	incelemek	el koydu
+Relation	T10	T9	EffectCause	true	el koydu	incelemek
+Relation	T0	T10	NoRel	true	uçuş	el koydu
+Relation	T0	T11	NoRel	true	uçuş	sürdü
+Relation	T0	T12	NoRel	true	uçuş	verdiğini
+Relation	T0	T13	NoRel	true	uçuş	ekledi
+Relation	T0	T14	NoRel	true	uçuş	kaldırma
+Relation	T0	T16	NoRel	true	uçuş	kazanın
+Relation	T0	T6	NoRel	true	uçuş	gördü
+Relation	T1	T10	NoRel	true	bulundu	el koydu
+Relation	T1	T12	NoRel	true	bulundu	verdiğini
+Relation	T1	T14	NoRel	true	bulundu	kaldırma
+Relation	T1	T6	NoRel	true	bulundu	gördü
+Relation	T1	T7	NoRel	true	bulundu	alabildiler
+Relation	T1	T8	NoRel	true	bulundu	geldi
+Relation	T1	T9	NoRel	true	bulundu	incelemek
+Relation	T10	T1	NoRel	true	el koydu	bulundu
+Relation	T10	T17	NoRel	true	el koydu	çalıştığını
+Relation	T10	T4	NoRel	true	el koydu	uçuş
+Relation	T10	T7	NoRel	true	el koydu	alabildiler
+Relation	T11	T1	NoRel	true	sürdü	bulundu
+Relation	T11	T12	NoRel	true	sürdü	verdiğini
+Relation	T11	T14	NoRel	true	sürdü	kaldırma
+Relation	T11	T15	NoRel	true	sürdü	indiğini
+Relation	T11	T16	NoRel	true	sürdü	kazanın
+Relation	T11	T6	NoRel	true	sürdü	gördü
+Relation	T12	T0	NoRel	true	verdiğini	uçuş
+Relation	T12	T10	NoRel	true	verdiğini	el koydu
+Relation	T12	T11	NoRel	true	verdiğini	sürdü
+Relation	T12	T15	NoRel	true	verdiğini	indiğini
+Relation	T12	T17	NoRel	true	verdiğini	çalıştığını
+Relation	T13	T12	NoRel	true	ekledi	verdiğini
+Relation	T13	T15	NoRel	true	ekledi	indiğini
+Relation	T13	T2	NoRel	true	ekledi	bulundu
+Relation	T13	T3	NoRel	true	ekledi	Kazada
+Relation	T13	T4	NoRel	true	ekledi	uçuş
+Relation	T13	T5	NoRel	true	ekledi	kaza
+Relation	T13	T9	NoRel	true	ekledi	incelemek
+Relation	T14	T0	NoRel	true	kaldırma	uçuş
+Relation	T14	T1	NoRel	true	kaldırma	bulundu
+Relation	T14	T11	NoRel	true	kaldırma	sürdü
+Relation	T14	T13	NoRel	true	kaldırma	ekledi
+Relation	T14	T15	NoRel	true	kaldırma	indiğini
+Relation	T14	T16	NoRel	true	kaldırma	kazanın
+Relation	T14	T2	NoRel	true	kaldırma	bulundu
+Relation	T14	T8	NoRel	true	kaldırma	geldi
+Relation	T14	T9	NoRel	true	kaldırma	incelemek
+Relation	T15	T0	NoRel	true	indiğini	uçuş
+Relation	T15	T11	NoRel	true	indiğini	sürdü
+Relation	T15	T13	NoRel	true	indiğini	ekledi
+Relation	T15	T16	NoRel	true	indiğini	kazanın
+Relation	T15	T17	NoRel	true	indiğini	çalıştığını
+Relation	T15	T2	NoRel	true	indiğini	bulundu
+Relation	T15	T3	NoRel	true	indiğini	Kazada
+Relation	T15	T7	NoRel	true	indiğini	alabildiler
+Relation	T16	T0	NoRel	true	kazanın	uçuş
+Relation	T16	T1	NoRel	true	kazanın	bulundu
+Relation	T16	T13	NoRel	true	kazanın	ekledi
+Relation	T16	T6	NoRel	true	kazanın	gördü
+Relation	T16	T9	NoRel	true	kazanın	incelemek
+Relation	T17	T14	NoRel	true	çalıştığını	kaldırma
+Relation	T17	T15	NoRel	true	çalıştığını	indiğini
+Relation	T17	T3	NoRel	true	çalıştığını	Kazada
+Relation	T17	T6	NoRel	true	çalıştığını	gördü
+Relation	T17	T7	NoRel	true	çalıştığını	alabildiler
+Relation	T2	T0	NoRel	true	bulundu	uçuş
+Relation	T2	T1	NoRel	true	bulundu	bulundu
+Relation	T2	T6	NoRel	true	bulundu	gördü
+Relation	T2	T7	NoRel	true	bulundu	alabildiler
+Relation	T3	T12	NoRel	true	Kazada	verdiğini
+Relation	T3	T13	NoRel	true	Kazada	ekledi
+Relation	T3	T16	NoRel	true	Kazada	kazanın
+Relation	T3	T4	NoRel	true	Kazada	uçuş
+Relation	T3	T8	NoRel	true	Kazada	geldi
+Relation	T3	T9	NoRel	true	Kazada	incelemek
+Relation	T4	T1	NoRel	true	uçuş	bulundu
+Relation	T4	T12	NoRel	true	uçuş	verdiğini
+Relation	T4	T13	NoRel	true	uçuş	ekledi
+Relation	T4	T14	NoRel	true	uçuş	kaldırma
+Relation	T4	T17	NoRel	true	uçuş	çalıştığını
+Relation	T4	T5	NoRel	true	uçuş	kaza
+Relation	T4	T6	NoRel	true	uçuş	gördü
+Relation	T5	T15	NoRel	true	kaza	indiğini
+Relation	T5	T2	NoRel	true	kaza	bulundu
+Relation	T5	T8	NoRel	true	kaza	geldi
+Relation	T6	T1	NoRel	true	gördü	bulundu
+Relation	T6	T13	NoRel	true	gördü	ekledi
+Relation	T6	T14	NoRel	true	gördü	kaldırma
+Relation	T6	T15	NoRel	true	gördü	indiğini
+Relation	T6	T8	NoRel	true	gördü	geldi
+Relation	T7	T0	NoRel	true	alabildiler	uçuş
+Relation	T7	T1	NoRel	true	alabildiler	bulundu
+Relation	T7	T10	NoRel	true	alabildiler	el koydu
+Relation	T7	T11	NoRel	true	alabildiler	sürdü
+Relation	T7	T3	NoRel	true	alabildiler	Kazada
+Relation	T7	T8	NoRel	true	alabildiler	geldi
+Relation	T8	T0	NoRel	true	geldi	uçuş
+Relation	T8	T10	NoRel	true	geldi	el koydu
+Relation	T8	T14	NoRel	true	geldi	kaldırma
+Relation	T8	T15	NoRel	true	geldi	indiğini
+Relation	T8	T16	NoRel	true	geldi	kazanın
+Relation	T9	T1	NoRel	true	incelemek	bulundu
+Relation	T9	T13	NoRel	true	incelemek	ekledi
+Relation	T9	T14	NoRel	true	incelemek	kaldırma
+Relation	T9	T16	NoRel	true	incelemek	kazanın
+Relation	T9	T4	NoRel	true	incelemek	uçuş
+Relation	T9	T5	NoRel	true	incelemek	kaza

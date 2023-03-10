@@ -1,0 +1,71 @@
+Text	Hayatta kalanların 17'si yaralandı .	1. hava koşullarının iniş için gereken minimum güvenlik koşulların altına inmesi rağmen mürettebatı bu durumdan haberdar etmeyen hava trafik kontrolörü ; 2. yaklaşımı uygularken ve güvensiz havalarda uçarken mürettebat hatası .	Kazanın ikincil bir nedeni , METAR'ın kötü hava yoğunlaştığında 20.00 , 20.15 ve 20.30'da hava durumu raporları sağlamamasıydı ve bu da yaklaşımla devam etmesi gerekip gerekmediğini belirlemek için mürettebata yardımcı olacaktı .	Kazakistan Sivil Havacılık Müdürlüğü başkanının , o gün on beş saat çalıştığı ve uçuş için sağlık sertifikası olmadığı için mürettebata uçuşta yardımcı olmaması gerektiği de belirtildi .	Kategori : 1965'te Sovyetler Birliği Kategori : Aeroflot kazaları ve olayları Kategori : Kazakistan SSC'deki havacılık kazaları ve olayları Kategori : İncelenmemiş çeviri içeren sayfalar Kategori : 1965'te havacılık kazaları ve olayları Kategori : İlyuşin İl - 18 içeren kazalar ve olaylar
+Event	T0	yaralandı	EVENT	25
+Event	T1	iniş	EVENT	58
+Event	T2	inmesi	EVENT	111
+Event	T3	uygularken	EVENT	204
+Event	T4	hatası	EVENT	256
+Event	T5	etmesi	EVENT	418
+Event	T6	çalıştığı	EVENT	563
+Event	T7	uçuş	EVENT	576
+Event	T8	belirtildi	EVENT	669
+Event	T9	kazalar	EVENT	953
+Event	T10	olaylar	EVENT	964
+Event	T11	Kazanın	EVENT	265
+Event	T12	yardımcı	EVENT	475
+Relation	T2	T11	CauseEffect	true	inmesi	Kazanın
+Relation	T11	T2	EffectCause	true	Kazanın	inmesi
+Relation	T4	T11	CauseEffect	true	hatası	Kazanın
+Relation	T11	T4	EffectCause	true	Kazanın	hatası
+Relation	T0	T11	NoRel	true	yaralandı	Kazanın
+Relation	T0	T5	NoRel	true	yaralandı	etmesi
+Relation	T0	T7	NoRel	true	yaralandı	uçuş
+Relation	T0	T8	NoRel	true	yaralandı	belirtildi
+Relation	T0	T9	NoRel	true	yaralandı	kazalar
+Relation	T1	T10	NoRel	true	iniş	olaylar
+Relation	T1	T11	NoRel	true	iniş	Kazanın
+Relation	T1	T3	NoRel	true	iniş	uygularken
+Relation	T1	T4	NoRel	true	iniş	hatası
+Relation	T1	T5	NoRel	true	iniş	etmesi
+Relation	T10	T2	NoRel	true	olaylar	inmesi
+Relation	T10	T5	NoRel	true	olaylar	etmesi
+Relation	T10	T6	NoRel	true	olaylar	çalıştığı
+Relation	T11	T0	NoRel	true	Kazanın	yaralandı
+Relation	T11	T7	NoRel	true	Kazanın	uçuş
+Relation	T12	T6	NoRel	true	yardımcı	çalıştığı
+Relation	T12	T9	NoRel	true	yardımcı	kazalar
+Relation	T2	T1	NoRel	true	inmesi	iniş
+Relation	T2	T10	NoRel	true	inmesi	olaylar
+Relation	T2	T3	NoRel	true	inmesi	uygularken
+Relation	T2	T7	NoRel	true	inmesi	uçuş
+Relation	T2	T8	NoRel	true	inmesi	belirtildi
+Relation	T3	T10	NoRel	true	uygularken	olaylar
+Relation	T3	T4	NoRel	true	uygularken	hatası
+Relation	T3	T6	NoRel	true	uygularken	çalıştığı
+Relation	T3	T8	NoRel	true	uygularken	belirtildi
+Relation	T3	T9	NoRel	true	uygularken	kazalar
+Relation	T4	T0	NoRel	true	hatası	yaralandı
+Relation	T4	T2	NoRel	true	hatası	inmesi
+Relation	T4	T8	NoRel	true	hatası	belirtildi
+Relation	T4	T9	NoRel	true	hatası	kazalar
+Relation	T5	T1	NoRel	true	etmesi	iniş
+Relation	T5	T12	NoRel	true	etmesi	yardımcı
+Relation	T5	T2	NoRel	true	etmesi	inmesi
+Relation	T5	T7	NoRel	true	etmesi	uçuş
+Relation	T5	T8	NoRel	true	etmesi	belirtildi
+Relation	T6	T5	NoRel	true	çalıştığı	etmesi
+Relation	T6	T9	NoRel	true	çalıştığı	kazalar
+Relation	T7	T0	NoRel	true	uçuş	yaralandı
+Relation	T7	T4	NoRel	true	uçuş	hatası
+Relation	T7	T5	NoRel	true	uçuş	etmesi
+Relation	T7	T6	NoRel	true	uçuş	çalıştığı
+Relation	T7	T9	NoRel	true	uçuş	kazalar
+Relation	T8	T1	NoRel	true	belirtildi	iniş
+Relation	T8	T3	NoRel	true	belirtildi	uygularken
+Relation	T8	T6	NoRel	true	belirtildi	çalıştığı
+Relation	T8	T9	NoRel	true	belirtildi	kazalar
+Relation	T9	T11	NoRel	true	kazalar	Kazanın
+Relation	T9	T12	NoRel	true	kazalar	yardımcı
+Relation	T9	T2	NoRel	true	kazalar	inmesi
+Relation	T9	T5	NoRel	true	kazalar	etmesi
+Relation	T9	T6	NoRel	true	kazalar	çalıştığı
+Relation	T9	T8	NoRel	true	kazalar	belirtildi

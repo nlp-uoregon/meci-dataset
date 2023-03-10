@@ -1,0 +1,30 @@
+Text	Bunu fırsat bilen gençler Yeni Dünya Matbaası’na yürüdüler .	Birkaç dakika içinde bu matbaa da yerle bir edilmişti .	Makineler , mobilyalar , kitaplar , gazeteler , arşivler sokaklara dökülmüş , parça parça edilmişti .	Bu arada tünelde sol neşriyata ait kitaplar satan Berrak Kitabevi de tahrip edilerek , ticaret hayatından silinmişti .	O zaman bazı bakkaliye ve mağazaların isimleri Tan levhalarını taşıyordu .
+Event	T0	yürüdüler	EVENT	49
+Event	T2	edilmişti	EVENT	105
+Event	T3	edilmişti	EVENT	207
+Event	T5	silinmişti	EVENT	325
+Event	T1	dökülmüş	EVENT	184
+Event	T4	edilerek	EVENT	295
+Event	T6	satan	EVENT	263
+Relation	T0	T2	CauseEffect	true	yürüdüler	edilmişti
+Relation	T2	T0	EffectCause	true	edilmişti	yürüdüler
+Relation	T0	T1	CauseEffect	true	yürüdüler	dökülmüş
+Relation	T1	T0	EffectCause	true	dökülmüş	yürüdüler
+Relation	T0	T3	CauseEffect	true	yürüdüler	edilmişti
+Relation	T3	T0	EffectCause	true	edilmişti	yürüdüler
+Relation	T6	T4	CauseEffect	true	satan	edilerek
+Relation	T4	T6	EffectCause	true	edilerek	satan
+Relation	T0	T4	CauseEffect	true	yürüdüler	edilerek
+Relation	T4	T0	EffectCause	true	edilerek	yürüdüler
+Relation	T4	T5	CauseEffect	true	edilerek	silinmişti
+Relation	T5	T4	EffectCause	true	silinmişti	edilerek
+Relation	T0	T5	NoRel	true	yürüdüler	silinmişti
+Relation	T0	T6	NoRel	true	yürüdüler	satan
+Relation	T1	T2	NoRel	true	dökülmüş	edilmişti
+Relation	T2	T3	NoRel	true	edilmişti	edilmişti
+Relation	T3	T6	NoRel	true	edilmişti	satan
+Relation	T4	T2	NoRel	true	edilerek	edilmişti
+Relation	T5	T0	NoRel	true	silinmişti	yürüdüler
+Relation	T5	T2	NoRel	true	silinmişti	edilmişti
+Relation	T5	T3	NoRel	true	silinmişti	edilmişti
+Relation	T5	T6	NoRel	true	silinmişti	satan

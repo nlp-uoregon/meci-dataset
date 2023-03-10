@@ -1,0 +1,107 @@
+Text	Mange politifolk og reddere rundt omkring i landet tog orlov for at rejse til New York for at hjælpe med oprydningen efter angrebet .	Bloddonationer på tværs af hele USA blev mere populære i ugerne efter terrorangrebet .	For første gang i historien blev SCATANA forpligtet til , at alle fly i USA og flere andre lande , herunder Canada , skulle blive på jorden i flere dage , hvilket førte til problemer for over titusinder af rejsende i hele verden .	Alle internationale flyveruter blev midlertidigt udelukket fra det amerikanske luftrum .	Canada fik omdirigeret 226 fly og lancerede Operation Yellow Ribbon til at håndtere det store antal fly og strandede passagerer .
+Event	T0	rejse	EVENT	68
+Event	T1	hjælpe	EVENT	94
+Event	T2	oprydningen	EVENT	105
+Event	T3	angrebet	EVENT	123
+Event	T4	Bloddonationer	EVENT	134
+Event	T5	populære	EVENT	180
+Event	T6	terrorangrebet	EVENT	204
+Event	T7	forpligtet	EVENT	262
+Event	T8	førte	EVENT	384
+Event	T9	problemer	EVENT	394
+Event	T10	udelukket	EVENT	501
+Event	T11	omdirigeret	EVENT	552
+Event	T12	Operation	EVENT	585
+Event	T13	håndtere	EVENT	616
+Event	T14	strandede	EVENT	648
+Event	T15	blive	EVENT	345
+Relation	T6	T4	CauseEffect	true	terrorangrebet	Bloddonationer
+Relation	T4	T6	EffectCause	true	Bloddonationer	terrorangrebet
+Relation	T15	T9	CauseEffect	true	blive	problemer
+Relation	T9	T15	EffectCause	true	problemer	blive
+Relation	T10	T9	CauseEffect	true	udelukket	problemer
+Relation	T9	T10	EffectCause	true	problemer	udelukket
+Relation	T0	T10	NoRel	true	rejse	udelukket
+Relation	T0	T11	NoRel	true	rejse	omdirigeret
+Relation	T0	T15	NoRel	true	rejse	blive
+Relation	T0	T4	NoRel	true	rejse	Bloddonationer
+Relation	T1	T12	NoRel	true	hjælpe	Operation
+Relation	T1	T15	NoRel	true	hjælpe	blive
+Relation	T1	T2	NoRel	true	hjælpe	oprydningen
+Relation	T1	T4	NoRel	true	hjælpe	Bloddonationer
+Relation	T1	T7	NoRel	true	hjælpe	forpligtet
+Relation	T10	T0	NoRel	true	udelukket	rejse
+Relation	T10	T1	NoRel	true	udelukket	hjælpe
+Relation	T10	T12	NoRel	true	udelukket	Operation
+Relation	T10	T15	NoRel	true	udelukket	blive
+Relation	T10	T4	NoRel	true	udelukket	Bloddonationer
+Relation	T11	T0	NoRel	true	omdirigeret	rejse
+Relation	T11	T1	NoRel	true	omdirigeret	hjælpe
+Relation	T11	T12	NoRel	true	omdirigeret	Operation
+Relation	T11	T15	NoRel	true	omdirigeret	blive
+Relation	T11	T2	NoRel	true	omdirigeret	oprydningen
+Relation	T11	T4	NoRel	true	omdirigeret	Bloddonationer
+Relation	T11	T6	NoRel	true	omdirigeret	terrorangrebet
+Relation	T11	T7	NoRel	true	omdirigeret	forpligtet
+Relation	T12	T1	NoRel	true	Operation	hjælpe
+Relation	T12	T10	NoRel	true	Operation	udelukket
+Relation	T12	T11	NoRel	true	Operation	omdirigeret
+Relation	T12	T13	NoRel	true	Operation	håndtere
+Relation	T12	T3	NoRel	true	Operation	angrebet
+Relation	T12	T7	NoRel	true	Operation	forpligtet
+Relation	T13	T15	NoRel	true	håndtere	blive
+Relation	T13	T3	NoRel	true	håndtere	angrebet
+Relation	T13	T6	NoRel	true	håndtere	terrorangrebet
+Relation	T13	T8	NoRel	true	håndtere	førte
+Relation	T13	T9	NoRel	true	håndtere	problemer
+Relation	T14	T0	NoRel	true	strandede	rejse
+Relation	T14	T10	NoRel	true	strandede	udelukket
+Relation	T14	T13	NoRel	true	strandede	håndtere
+Relation	T14	T2	NoRel	true	strandede	oprydningen
+Relation	T14	T6	NoRel	true	strandede	terrorangrebet
+Relation	T15	T1	NoRel	true	blive	hjælpe
+Relation	T15	T10	NoRel	true	blive	udelukket
+Relation	T15	T2	NoRel	true	blive	oprydningen
+Relation	T15	T3	NoRel	true	blive	angrebet
+Relation	T15	T4	NoRel	true	blive	Bloddonationer
+Relation	T15	T5	NoRel	true	blive	populære
+Relation	T15	T8	NoRel	true	blive	førte
+Relation	T2	T1	NoRel	true	oprydningen	hjælpe
+Relation	T2	T14	NoRel	true	oprydningen	strandede
+Relation	T2	T8	NoRel	true	oprydningen	førte
+Relation	T3	T0	NoRel	true	angrebet	rejse
+Relation	T3	T11	NoRel	true	angrebet	omdirigeret
+Relation	T3	T15	NoRel	true	angrebet	blive
+Relation	T3	T2	NoRel	true	angrebet	oprydningen
+Relation	T3	T4	NoRel	true	angrebet	Bloddonationer
+Relation	T3	T5	NoRel	true	angrebet	populære
+Relation	T3	T9	NoRel	true	angrebet	problemer
+Relation	T4	T12	NoRel	true	Bloddonationer	Operation
+Relation	T4	T7	NoRel	true	Bloddonationer	forpligtet
+Relation	T4	T8	NoRel	true	Bloddonationer	førte
+Relation	T5	T1	NoRel	true	populære	hjælpe
+Relation	T5	T11	NoRel	true	populære	omdirigeret
+Relation	T5	T12	NoRel	true	populære	Operation
+Relation	T5	T13	NoRel	true	populære	håndtere
+Relation	T5	T9	NoRel	true	populære	problemer
+Relation	T6	T0	NoRel	true	terrorangrebet	rejse
+Relation	T6	T10	NoRel	true	terrorangrebet	udelukket
+Relation	T6	T12	NoRel	true	terrorangrebet	Operation
+Relation	T7	T0	NoRel	true	forpligtet	rejse
+Relation	T7	T1	NoRel	true	forpligtet	hjælpe
+Relation	T7	T14	NoRel	true	forpligtet	strandede
+Relation	T7	T9	NoRel	true	forpligtet	problemer
+Relation	T8	T0	NoRel	true	førte	rejse
+Relation	T8	T1	NoRel	true	førte	hjælpe
+Relation	T8	T10	NoRel	true	førte	udelukket
+Relation	T8	T11	NoRel	true	førte	omdirigeret
+Relation	T8	T12	NoRel	true	førte	Operation
+Relation	T8	T14	NoRel	true	førte	strandede
+Relation	T8	T2	NoRel	true	førte	oprydningen
+Relation	T8	T3	NoRel	true	førte	angrebet
+Relation	T9	T1	NoRel	true	problemer	hjælpe
+Relation	T9	T11	NoRel	true	problemer	omdirigeret
+Relation	T9	T12	NoRel	true	problemer	Operation
+Relation	T9	T3	NoRel	true	problemer	angrebet
+Relation	T9	T6	NoRel	true	problemer	terrorangrebet
+Relation	T9	T7	NoRel	true	problemer	forpligtet

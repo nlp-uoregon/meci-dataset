@@ -1,0 +1,70 @@
+Text	جموں و کمشیر کے وزیرِ اعلٰی عمر عبد للہ کے مطابق دہلی سے کشتیاں لائی گئیں تاکہ لوگوں کا انخلاء کیا جا سکے اور ہوائی فوج نے شہر میں امدادی کارروائیاں کیں ۔	ریاست بھر میں 50 کے لگ بھگ پلوں کو نقصان پہنچا ہے ۔	تاہم سیلابی پانی کے اترنے کے بعد ہی نقصانات کا درست تخمینہ لگایا جا سکے گا ۔	ریاستی حکومت نے متائثرہ افراد کی امداد کے لیے مرکزی حکومت سے 25٫000 خیمے اور 40٫000 کمبل مانگے ہیں ۔	جموں ڈویژن میں سخت بارش کے بعد تودے گرنے لگ گئے تھے جن سے سڑکوں ، درجنوں پلوں ، عمارات اور فصلوں کو شدید نقصان پہنچا ۔
+Event	T0	انخلاء	EVENT	88
+Event	T1	پہنچا	EVENT	196
+Event	T2	اترنے	EVENT	227
+Event	T3	لگایا	EVENT	266
+Event	T4	بارش	EVENT	404
+Event	T7	کارروائیاں	EVENT	138
+Event	T8	نقصان	EVENT	190
+Event	T9	نقصانات	EVENT	243
+Event	T10	متائثرہ	EVENT	300
+Event	T11	مانگے	EVENT	373
+Event	T12	تودے	EVENT	416
+Event	T13	گرنے	EVENT	421
+Event	T5	نقصان	EVENT	490
+Relation	T12	T5	CauseEffect	true	تودے	نقصان
+Relation	T5	T12	EffectCause	true	نقصان	تودے
+Relation	T0	T10	NoRel	true	انخلاء	متائثرہ
+Relation	T0	T11	NoRel	true	انخلاء	مانگے
+Relation	T0	T12	NoRel	true	انخلاء	تودے
+Relation	T0	T13	NoRel	true	انخلاء	گرنے
+Relation	T1	T13	NoRel	true	پہنچا	گرنے
+Relation	T1	T4	NoRel	true	پہنچا	بارش
+Relation	T1	T7	NoRel	true	پہنچا	کارروائیاں
+Relation	T10	T11	NoRel	true	متائثرہ	مانگے
+Relation	T10	T3	NoRel	true	متائثرہ	لگایا
+Relation	T10	T4	NoRel	true	متائثرہ	بارش
+Relation	T11	T1	NoRel	true	مانگے	پہنچا
+Relation	T11	T10	NoRel	true	مانگے	متائثرہ
+Relation	T11	T12	NoRel	true	مانگے	تودے
+Relation	T11	T2	NoRel	true	مانگے	اترنے
+Relation	T11	T3	NoRel	true	مانگے	لگایا
+Relation	T11	T7	NoRel	true	مانگے	کارروائیاں
+Relation	T11	T8	NoRel	true	مانگے	نقصان
+Relation	T12	T1	NoRel	true	تودے	پہنچا
+Relation	T12	T10	NoRel	true	تودے	متائثرہ
+Relation	T12	T11	NoRel	true	تودے	مانگے
+Relation	T12	T13	NoRel	true	تودے	گرنے
+Relation	T12	T3	NoRel	true	تودے	لگایا
+Relation	T12	T4	NoRel	true	تودے	بارش
+Relation	T12	T9	NoRel	true	تودے	نقصانات
+Relation	T13	T3	NoRel	true	گرنے	لگایا
+Relation	T13	T8	NoRel	true	گرنے	نقصان
+Relation	T2	T10	NoRel	true	اترنے	متائثرہ
+Relation	T2	T11	NoRel	true	اترنے	مانگے
+Relation	T2	T12	NoRel	true	اترنے	تودے
+Relation	T2	T3	NoRel	true	اترنے	لگایا
+Relation	T2	T4	NoRel	true	اترنے	بارش
+Relation	T2	T5	NoRel	true	اترنے	نقصان
+Relation	T2	T9	NoRel	true	اترنے	نقصانات
+Relation	T3	T1	NoRel	true	لگایا	پہنچا
+Relation	T3	T12	NoRel	true	لگایا	تودے
+Relation	T4	T2	NoRel	true	بارش	اترنے
+Relation	T4	T5	NoRel	true	بارش	نقصان
+Relation	T5	T0	NoRel	true	نقصان	انخلاء
+Relation	T5	T2	NoRel	true	نقصان	اترنے
+Relation	T5	T7	NoRel	true	نقصان	کارروائیاں
+Relation	T5	T8	NoRel	true	نقصان	نقصان
+Relation	T7	T13	NoRel	true	کارروائیاں	گرنے
+Relation	T7	T2	NoRel	true	کارروائیاں	اترنے
+Relation	T7	T4	NoRel	true	کارروائیاں	بارش
+Relation	T7	T5	NoRel	true	کارروائیاں	نقصان
+Relation	T8	T10	NoRel	true	نقصان	متائثرہ
+Relation	T8	T3	NoRel	true	نقصان	لگایا
+Relation	T8	T4	NoRel	true	نقصان	بارش
+Relation	T8	T9	NoRel	true	نقصان	نقصانات
+Relation	T9	T0	NoRel	true	نقصانات	انخلاء
+Relation	T9	T1	NoRel	true	نقصانات	پہنچا
+Relation	T9	T10	NoRel	true	نقصانات	متائثرہ
+Relation	T9	T13	NoRel	true	نقصانات	گرنے
+Relation	T9	T5	NoRel	true	نقصانات	نقصان

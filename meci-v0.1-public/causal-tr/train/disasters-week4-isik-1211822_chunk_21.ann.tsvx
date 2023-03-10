@@ -1,0 +1,93 @@
+Text	Papua Yeni Gine'nin Doğu Sepik ilindeki Wewak kasabasındaki Boram Hastanesi tsunamiden zarar gördü , 4 milyon dolarlık zarara uğrayan hastanedeki yüz hasta dalgalar ulaşmadan önce tahliye edildi .	Hawaii'de sadece altyapı 3 milyon dolarlık zarar gördü , oteller gibi özel mülklere gelen zararlarla birlikte toplam zararın on milyonlarca dolara ulaştığı tahmin edildi .	Midway Atolü'ndeki bazı adacıkları tamamen sular altına gömen 1, 5 metre yüksekliğindeki bir tsunami adacıklarda kuluçkaya yatmış olan 110 bin su kuşunu öldürdü .	Güney Pasifik'teki Tonga , Yeni Zelanda gibi ülkeler ve Amerikan Samoası ile Guam gibi bazı adalarda beklenenden büyük dalgalar gözlemlendi ; fakat bunlar büyük bir zarara yol açmadı .	Buna rağmen Guam'da bazı yollar kapatıldı ve düşük rakımlı bölgeler tahliye edildi .
+Event	T0	gördü	EVENT	93
+Event	T1	edildi	EVENT	188
+Event	T2	gördü	EVENT	246
+Event	T4	edildi	EVENT	360
+Event	T5	gömen	EVENT	425
+Event	T6	tsunami	EVENT	462
+Event	T7	yatmış	EVENT	492
+Event	T8	öldürdü	EVENT	522
+Event	T9	gözlemlendi	EVENT	660
+Event	T10	kapatıldı	EVENT	749
+Event	T11	edildi	EVENT	793
+Event	T12	tsunamiden	EVENT	76
+Event	T13	uğrayan	EVENT	126
+Event	T3	dalgalar	EVENT	651
+Relation	T12	T0	CauseEffect	true	tsunamiden	gördü
+Relation	T0	T12	EffectCause	true	gördü	tsunamiden
+Relation	T12	T13	CauseEffect	true	tsunamiden	uğrayan
+Relation	T13	T12	EffectCause	true	uğrayan	tsunamiden
+Relation	T12	T1	CauseEffect	true	tsunamiden	edildi
+Relation	T1	T12	EffectCause	true	edildi	tsunamiden
+Relation	T6	T5	CauseEffect	true	tsunami	gömen
+Relation	T5	T6	EffectCause	true	gömen	tsunami
+Relation	T6	T8	CauseEffect	true	tsunami	öldürdü
+Relation	T8	T6	EffectCause	true	öldürdü	tsunami
+Relation	T7	T8	CauseEffect	true	yatmış	öldürdü
+Relation	T8	T7	EffectCause	true	öldürdü	yatmış
+Relation	T3	T10	CauseEffect	true	dalgalar	kapatıldı
+Relation	T10	T3	EffectCause	true	kapatıldı	dalgalar
+Relation	T3	T11	CauseEffect	true	dalgalar	edildi
+Relation	T11	T3	EffectCause	true	edildi	dalgalar
+Relation	T0	T10	NoRel	true	gördü	kapatıldı
+Relation	T0	T3	NoRel	true	gördü	dalgalar
+Relation	T0	T9	NoRel	true	gördü	gözlemlendi
+Relation	T1	T13	NoRel	true	edildi	uğrayan
+Relation	T1	T3	NoRel	true	edildi	dalgalar
+Relation	T10	T0	NoRel	true	kapatıldı	gördü
+Relation	T10	T13	NoRel	true	kapatıldı	uğrayan
+Relation	T10	T4	NoRel	true	kapatıldı	edildi
+Relation	T10	T7	NoRel	true	kapatıldı	yatmış
+Relation	T10	T8	NoRel	true	kapatıldı	öldürdü
+Relation	T11	T0	NoRel	true	edildi	gördü
+Relation	T11	T1	NoRel	true	edildi	edildi
+Relation	T11	T13	NoRel	true	edildi	uğrayan
+Relation	T11	T7	NoRel	true	edildi	yatmış
+Relation	T11	T9	NoRel	true	edildi	gözlemlendi
+Relation	T12	T7	NoRel	true	tsunamiden	yatmış
+Relation	T13	T1	NoRel	true	uğrayan	edildi
+Relation	T13	T3	NoRel	true	uğrayan	dalgalar
+Relation	T13	T5	NoRel	true	uğrayan	gömen
+Relation	T13	T7	NoRel	true	uğrayan	yatmış
+Relation	T2	T0	NoRel	true	gördü	gördü
+Relation	T2	T12	NoRel	true	gördü	tsunamiden
+Relation	T2	T4	NoRel	true	gördü	edildi
+Relation	T2	T5	NoRel	true	gördü	gömen
+Relation	T2	T6	NoRel	true	gördü	tsunami
+Relation	T2	T7	NoRel	true	gördü	yatmış
+Relation	T2	T8	NoRel	true	gördü	öldürdü
+Relation	T3	T2	NoRel	true	dalgalar	gördü
+Relation	T3	T7	NoRel	true	dalgalar	yatmış
+Relation	T3	T9	NoRel	true	dalgalar	gözlemlendi
+Relation	T4	T0	NoRel	true	edildi	gördü
+Relation	T4	T11	NoRel	true	edildi	edildi
+Relation	T4	T12	NoRel	true	edildi	tsunamiden
+Relation	T4	T13	NoRel	true	edildi	uğrayan
+Relation	T4	T7	NoRel	true	edildi	yatmış
+Relation	T4	T9	NoRel	true	edildi	gözlemlendi
+Relation	T5	T0	NoRel	true	gömen	gördü
+Relation	T5	T4	NoRel	true	gömen	edildi
+Relation	T5	T8	NoRel	true	gömen	öldürdü
+Relation	T5	T9	NoRel	true	gömen	gözlemlendi
+Relation	T6	T0	NoRel	true	tsunami	gördü
+Relation	T6	T11	NoRel	true	tsunami	edildi
+Relation	T6	T12	NoRel	true	tsunami	tsunamiden
+Relation	T6	T4	NoRel	true	tsunami	edildi
+Relation	T6	T9	NoRel	true	tsunami	gözlemlendi
+Relation	T7	T0	NoRel	true	yatmış	gördü
+Relation	T7	T10	NoRel	true	yatmış	kapatıldı
+Relation	T7	T11	NoRel	true	yatmış	edildi
+Relation	T7	T2	NoRel	true	yatmış	gördü
+Relation	T7	T3	NoRel	true	yatmış	dalgalar
+Relation	T7	T6	NoRel	true	yatmış	tsunami
+Relation	T7	T9	NoRel	true	yatmış	gözlemlendi
+Relation	T8	T10	NoRel	true	öldürdü	kapatıldı
+Relation	T8	T11	NoRel	true	öldürdü	edildi
+Relation	T8	T12	NoRel	true	öldürdü	tsunamiden
+Relation	T8	T13	NoRel	true	öldürdü	uğrayan
+Relation	T8	T9	NoRel	true	öldürdü	gözlemlendi
+Relation	T9	T10	NoRel	true	gözlemlendi	kapatıldı
+Relation	T9	T12	NoRel	true	gözlemlendi	tsunamiden
+Relation	T9	T13	NoRel	true	gözlemlendi	uğrayan
+Relation	T9	T6	NoRel	true	gözlemlendi	tsunami
+Relation	T9	T7	NoRel	true	gözlemlendi	yatmış

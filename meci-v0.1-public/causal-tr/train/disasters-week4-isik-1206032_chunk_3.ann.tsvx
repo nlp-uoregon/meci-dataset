@@ -1,0 +1,34 @@
+Text	Philadelphia'da fırtınanın son rsaında yaklaşık 15 inçlik bir kar kalınlığı ölçüldü .	Philadelphia sakinleri ayrıca kar yağarken şimşek ve yıldırımların gerçekleşmesiyle oluşan ve ender bir meteorolojik olan olan gök gürültülü kar olduğunu da bildirdi .	Berks ilinin büyük bölümü 13-14 inçlik kar yağışı aldı .	Washington , 5 ila 10 inçlik ağır bir kara kaldı .	Kar fırtınasının bir sonucu olarak en az 650 , 000 kişi elektriksiz kaldı .
+Event	T0	ölçüldü	EVENT	76
+Event	T4	bildirdi	EVENT	243
+Event	T5	aldı	EVENT	304
+Event	T6	kaldı	EVENT	354
+Event	T7	fırtınasının	EVENT	366
+Event	T8	kaldı	EVENT	430
+Event	T9	fırtınanın	EVENT	16
+Event	T3	gerçekleşmesiyle	EVENT	153
+Event	T11	kar	EVENT	227
+Relation	T3	T11	CauseEffect	true	gerçekleşmesiyle	kar
+Relation	T11	T3	EffectCause	true	kar	gerçekleşmesiyle
+Relation	T7	T8	CauseEffect	true	fırtınasının	kaldı
+Relation	T8	T7	EffectCause	true	kaldı	fırtınasının
+Relation	T0	T5	NoRel	true	ölçüldü	aldı
+Relation	T0	T6	NoRel	true	ölçüldü	kaldı
+Relation	T0	T7	NoRel	true	ölçüldü	fırtınasının
+Relation	T11	T4	NoRel	true	kar	bildirdi
+Relation	T11	T5	NoRel	true	kar	aldı
+Relation	T11	T7	NoRel	true	kar	fırtınasının
+Relation	T3	T0	NoRel	true	gerçekleşmesiyle	ölçüldü
+Relation	T3	T5	NoRel	true	gerçekleşmesiyle	aldı
+Relation	T3	T6	NoRel	true	gerçekleşmesiyle	kaldı
+Relation	T3	T7	NoRel	true	gerçekleşmesiyle	fırtınasının
+Relation	T3	T9	NoRel	true	gerçekleşmesiyle	fırtınanın
+Relation	T4	T0	NoRel	true	bildirdi	ölçüldü
+Relation	T4	T6	NoRel	true	bildirdi	kaldı
+Relation	T5	T11	NoRel	true	aldı	kar
+Relation	T6	T3	NoRel	true	kaldı	gerçekleşmesiyle
+Relation	T6	T8	NoRel	true	kaldı	kaldı
+Relation	T6	T9	NoRel	true	kaldı	fırtınanın
+Relation	T7	T5	NoRel	true	fırtınasının	aldı
+Relation	T8	T9	NoRel	true	kaldı	fırtınanın
+Relation	T9	T11	NoRel	true	fırtınanın	kar

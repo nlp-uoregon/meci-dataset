@@ -1,0 +1,44 @@
+Text	8 مئی 2015ء کو دن کے وقت پاکستانی فوج کا مل می-17 ہیلی کاپٹر شمالی پاکستان کے علاقہ گلگت بلتستان کی وادی نلتر میں حادثہ کا شکار ہوا ۔ جس میں دو پائلٹ ، انڈونیشیا اور ملیشیا کے سفیروں کی بیویاں اور فلپائن اور ناروے کے پاکستان میں تعینات سفیر ہلاک ہوئے ،	پرواز میں 11 غیر ملکی اور 6 پاکستانی سوار تھے ، جن میں سے 8 ہلاک اور دیگر زخمی ہیں ۔	زخمیوں میں ہالینڈ اور پولینڈ کے سفیر بھی شامل ہیں ۔	حادثہ کا سبب کیا تھا ، اس کی تحقیقات جاری ہیں ، ابتدائی طور پر بعض ذرائع ابلاغ ( جیسے بی بی سی اردو ) کے مطابق ہیلی کاپٹر آرمی پبلک اسکول میں اترتے ہوئے عمارت سے ٹکرایا ۔	جس سے یہ سانحہ رونما ہوا ۔
+Event	T0	حادثہ	EVENT	114
+Event	T1	سانحہ	EVENT	570
+Event	T10	ٹکرایا	EVENT	552
+Event	T3	شامل	EVENT	379
+Event	T4	ہلاک	EVENT	313
+Event	T5	زخمی	EVENT	327
+Event	T6	تحقیقات	EVENT	419
+Event	T7	حادثہ	EVENT	390
+Event	T8	سوار	EVENT	290
+Relation	T0	T4	CauseEffect	true	حادثہ	ہلاک
+Relation	T4	T0	EffectCause	true	ہلاک	حادثہ
+Relation	T0	T5	CauseEffect	true	حادثہ	زخمی
+Relation	T5	T0	EffectCause	true	زخمی	حادثہ
+Relation	T7	T6	CauseEffect	true	حادثہ	تحقیقات
+Relation	T6	T7	EffectCause	true	تحقیقات	حادثہ
+Relation	T10	T7	CauseEffect	true	ٹکرایا	حادثہ
+Relation	T7	T10	EffectCause	true	حادثہ	ٹکرایا
+Relation	T10	T1	CauseEffect	true	ٹکرایا	سانحہ
+Relation	T1	T10	EffectCause	true	سانحہ	ٹکرایا
+Relation	T0	T1	NoRel	true	حادثہ	سانحہ
+Relation	T0	T3	NoRel	true	حادثہ	شامل
+Relation	T1	T3	NoRel	true	سانحہ	شامل
+Relation	T1	T5	NoRel	true	سانحہ	زخمی
+Relation	T1	T6	NoRel	true	سانحہ	تحقیقات
+Relation	T1	T8	NoRel	true	سانحہ	سوار
+Relation	T10	T0	NoRel	true	ٹکرایا	حادثہ
+Relation	T10	T4	NoRel	true	ٹکرایا	ہلاک
+Relation	T10	T5	NoRel	true	ٹکرایا	زخمی
+Relation	T10	T8	NoRel	true	ٹکرایا	سوار
+Relation	T3	T1	NoRel	true	شامل	سانحہ
+Relation	T3	T10	NoRel	true	شامل	ٹکرایا
+Relation	T3	T5	NoRel	true	شامل	زخمی
+Relation	T3	T6	NoRel	true	شامل	تحقیقات
+Relation	T3	T8	NoRel	true	شامل	سوار
+Relation	T4	T10	NoRel	true	ہلاک	ٹکرایا
+Relation	T5	T1	NoRel	true	زخمی	سانحہ
+Relation	T5	T10	NoRel	true	زخمی	ٹکرایا
+Relation	T6	T3	NoRel	true	تحقیقات	شامل
+Relation	T6	T8	NoRel	true	تحقیقات	سوار
+Relation	T7	T1	NoRel	true	حادثہ	سانحہ
+Relation	T8	T10	NoRel	true	سوار	ٹکرایا
+Relation	T8	T3	NoRel	true	سوار	شامل
+Relation	T8	T4	NoRel	true	سوار	ہلاک

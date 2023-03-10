@@ -1,0 +1,79 @@
+Text	On the night of November 24 , 2001 , shortly after the final performance in Leipzig , Thornton was among the 24 people that were killed in the crash of Swiss airline 's Crossair Flight 3597 in Bassersdorf , Switzerland .	Thornton was born in Charleston , South Carolina and began studying voice from the age of six , as well as learning to play the piano and the clarinet .	Inspired by singers whom she idolized and grew up listening to such as Aretha Franklin and Roberta Flack Thornton would mimic the female vocalists she watched on television and / or heard on radio .	Later on she financed her college studies with appearances in talent shows and smaller band concerts .	Throughout that period she frequented a club called The Peacock Lounge , getting up and doing jam sessions when the live band invited people up to sing .
+Event	T0	performance	EVENT	61
+Event	T1	killed	EVENT	129
+Event	T2	crash	EVENT	143
+Event	T3	Flight	EVENT	178
+Event	T4	born	EVENT	234
+Event	T5	studying	EVENT	280
+Event	T6	learning	EVENT	328
+Event	T7	play	EVENT	340
+Event	T8	Inspired	EVENT	374
+Event	T9	idolized	EVENT	403
+Event	T10	mimic	EVENT	494
+Event	T11	watched	EVENT	525
+Event	T12	heard	EVENT	556
+Event	T13	financed	EVENT	586
+Event	T14	studies	EVENT	607
+Event	T15	appearances	EVENT	620
+Event	T16	concerts	EVENT	665
+Event	T17	frequented	EVENT	703
+Event	T18	sessions	EVENT	774
+Event	T19	invited	EVENT	802
+Event	T20	sing	EVENT	823
+Event	T21	shows	EVENT	642
+Relation	T2	T1	CauseEffect	true	crash	killed
+Relation	T1	T2	EffectCause	true	killed	crash
+Relation	T8	T10	CauseEffect	true	Inspired	mimic
+Relation	T10	T8	EffectCause	true	mimic	Inspired
+Relation	T11	T10	CauseEffect	true	watched	mimic
+Relation	T10	T11	EffectCause	true	mimic	watched
+Relation	T12	T10	CauseEffect	true	heard	mimic
+Relation	T10	T12	EffectCause	true	mimic	heard
+Relation	T15	T13	CauseEffect	true	appearances	financed
+Relation	T13	T15	EffectCause	true	financed	appearances
+Relation	T19	T18	CauseEffect	true	invited	sessions
+Relation	T18	T19	EffectCause	true	sessions	invited
+Relation	T0	T11	NoRel	true	performance	watched
+Relation	T0	T20	NoRel	true	performance	sing
+Relation	T0	T6	NoRel	true	performance	learning
+Relation	T0	T7	NoRel	true	performance	play
+Relation	T0	T8	NoRel	true	performance	Inspired
+Relation	T1	T14	NoRel	true	killed	studies
+Relation	T11	T17	NoRel	true	watched	frequented
+Relation	T12	T18	NoRel	true	heard	sessions
+Relation	T12	T2	NoRel	true	heard	crash
+Relation	T12	T3	NoRel	true	heard	Flight
+Relation	T14	T19	NoRel	true	studies	invited
+Relation	T14	T21	NoRel	true	studies	shows
+Relation	T14	T4	NoRel	true	studies	born
+Relation	T15	T0	NoRel	true	appearances	performance
+Relation	T15	T16	NoRel	true	appearances	concerts
+Relation	T15	T18	NoRel	true	appearances	sessions
+Relation	T15	T20	NoRel	true	appearances	sing
+Relation	T16	T20	NoRel	true	concerts	sing
+Relation	T16	T3	NoRel	true	concerts	Flight
+Relation	T16	T4	NoRel	true	concerts	born
+Relation	T16	T5	NoRel	true	concerts	studying
+Relation	T17	T18	NoRel	true	frequented	sessions
+Relation	T19	T21	NoRel	true	invited	shows
+Relation	T19	T3	NoRel	true	invited	Flight
+Relation	T19	T4	NoRel	true	invited	born
+Relation	T19	T9	NoRel	true	invited	idolized
+Relation	T2	T14	NoRel	true	crash	studies
+Relation	T2	T9	NoRel	true	crash	idolized
+Relation	T20	T12	NoRel	true	sing	heard
+Relation	T20	T21	NoRel	true	sing	shows
+Relation	T20	T9	NoRel	true	sing	idolized
+Relation	T4	T14	NoRel	true	born	studies
+Relation	T5	T18	NoRel	true	studying	sessions
+Relation	T5	T19	NoRel	true	studying	invited
+Relation	T5	T20	NoRel	true	studying	sing
+Relation	T5	T8	NoRel	true	studying	Inspired
+Relation	T8	T11	NoRel	true	Inspired	watched
+Relation	T8	T2	NoRel	true	Inspired	crash
+Relation	T8	T21	NoRel	true	Inspired	shows
+Relation	T8	T3	NoRel	true	Inspired	Flight
+Relation	T8	T9	NoRel	true	Inspired	idolized
+Relation	T9	T13	NoRel	true	idolized	financed
+Relation	T9	T17	NoRel	true	idolized	frequented
+Relation	T9	T6	NoRel	true	idolized	learning

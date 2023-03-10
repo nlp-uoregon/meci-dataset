@@ -1,0 +1,204 @@
+Text	A review of data from the airplane 's quick access recorder revealed that the pilots had neglected to perform complete flight control checks before 98 percent of their previous 175 takeoffs in the airplane , indicating that this oversight was habitual and not an exceptional event .	The gust lock handle also included an interlock mechanism intended to limit the throttle levers to just enough power for taxiing and idle while engaged .	According to Gulfstream , this had been intended to prevent pilots from attempting to take off with the gust lock engaged .	However , post-accident testing on other Gulfstream - IV airplanes found that , with the gust lock handle in the ON position , the forward throttle lever movement that could be achieved was three to four times greater than intended .	The NTSB concluded that the probable cause of the accident was the flight crew 's failure to perform the flight control check before takeoff , which led to their attempt to take off with the gust lock system engaged , and their delay in aborting the takeoff after they became aware that the controls were locked .
+Event	T0	review	EVENT	2
+Event	T1	revealed	EVENT	60
+Event	T2	neglected	EVENT	89
+Event	T3	checks	EVENT	134
+Event	T4	takeoffs	EVENT	181
+Event	T5	indicating	EVENT	208
+Event	T6	oversight	EVENT	229
+Event	T7	event	EVENT	275
+Event	T8	included	EVENT	309
+Event	T9	intended	EVENT	341
+Event	T10	limit	EVENT	353
+Event	T11	taxiing	EVENT	404
+Event	T12	idle	EVENT	416
+Event	T13	engaged	EVENT	427
+Event	T14	intended	EVENT	477
+Event	T15	attempting	EVENT	509
+Event	T16	engaged	EVENT	551
+Event	T17	testing	EVENT	585
+Event	T18	found	EVENT	628
+Event	T19	movement	EVENT	715
+Event	T20	achieved	EVENT	738
+Event	T21	concluded	EVENT	804
+Event	T22	accident	EVENT	845
+Event	T23	failure	EVENT	877
+Event	T24	perform	EVENT	888
+Event	T25	takeoff	EVENT	928
+Event	T26	attempt	EVENT	957
+Event	T27	engaged	EVENT	1003
+Event	T28	delay	EVENT	1023
+Event	T29	aborting	EVENT	1032
+Event	T30	takeoff	EVENT	1045
+Event	T31	aware	EVENT	1071
+Event	T32	locked	EVENT	1100
+Event	T33	prevent	EVENT	489
+Event	T34	take off	EVENT	523
+Event	T35	handle	EVENT	660
+Relation	T0	T1	CauseEffect	true	review	revealed
+Relation	T1	T0	EffectCause	true	revealed	review
+Relation	T23	T22	CauseEffect	true	failure	accident
+Relation	T22	T23	EffectCause	true	accident	failure
+Relation	T23	T26	CauseEffect	true	failure	attempt
+Relation	T26	T23	EffectCause	true	attempt	failure
+Relation	T23	T28	CauseEffect	true	failure	delay
+Relation	T28	T23	EffectCause	true	delay	failure
+Relation	T17	T18	CauseEffect	true	testing	found
+Relation	T18	T17	EffectCause	true	found	testing
+Relation	T35	T19	CauseEffect	true	handle	movement
+Relation	T19	T35	EffectCause	true	movement	handle
+Relation	T31	T28	CauseEffect	true	aware	delay
+Relation	T28	T31	EffectCause	true	delay	aware
+Relation	T0	T10	NoRel	true	review	limit
+Relation	T0	T20	NoRel	true	review	achieved
+Relation	T0	T22	NoRel	true	review	accident
+Relation	T0	T26	NoRel	true	review	attempt
+Relation	T0	T33	NoRel	true	review	prevent
+Relation	T1	T10	NoRel	true	revealed	limit
+Relation	T1	T13	NoRel	true	revealed	engaged
+Relation	T1	T19	NoRel	true	revealed	movement
+Relation	T1	T27	NoRel	true	revealed	engaged
+Relation	T1	T31	NoRel	true	revealed	aware
+Relation	T1	T32	NoRel	true	revealed	locked
+Relation	T10	T11	NoRel	true	limit	taxiing
+Relation	T10	T14	NoRel	true	limit	intended
+Relation	T10	T16	NoRel	true	limit	engaged
+Relation	T10	T18	NoRel	true	limit	found
+Relation	T10	T19	NoRel	true	limit	movement
+Relation	T10	T26	NoRel	true	limit	attempt
+Relation	T10	T28	NoRel	true	limit	delay
+Relation	T11	T16	NoRel	true	taxiing	engaged
+Relation	T11	T17	NoRel	true	taxiing	testing
+Relation	T11	T18	NoRel	true	taxiing	found
+Relation	T11	T20	NoRel	true	taxiing	achieved
+Relation	T11	T35	NoRel	true	taxiing	handle
+Relation	T12	T0	NoRel	true	idle	review
+Relation	T12	T22	NoRel	true	idle	accident
+Relation	T12	T24	NoRel	true	idle	perform
+Relation	T12	T32	NoRel	true	idle	locked
+Relation	T12	T4	NoRel	true	idle	takeoffs
+Relation	T13	T27	NoRel	true	engaged	engaged
+Relation	T13	T31	NoRel	true	engaged	aware
+Relation	T13	T33	NoRel	true	engaged	prevent
+Relation	T13	T34	NoRel	true	engaged	take off
+Relation	T14	T12	NoRel	true	intended	idle
+Relation	T14	T19	NoRel	true	intended	movement
+Relation	T14	T31	NoRel	true	intended	aware
+Relation	T14	T7	NoRel	true	intended	event
+Relation	T15	T22	NoRel	true	attempting	accident
+Relation	T15	T26	NoRel	true	attempting	attempt
+Relation	T15	T29	NoRel	true	attempting	aborting
+Relation	T15	T33	NoRel	true	attempting	prevent
+Relation	T15	T4	NoRel	true	attempting	takeoffs
+Relation	T16	T0	NoRel	true	engaged	review
+Relation	T16	T19	NoRel	true	engaged	movement
+Relation	T16	T22	NoRel	true	engaged	accident
+Relation	T16	T34	NoRel	true	engaged	take off
+Relation	T16	T35	NoRel	true	engaged	handle
+Relation	T17	T20	NoRel	true	testing	achieved
+Relation	T17	T21	NoRel	true	testing	concluded
+Relation	T17	T29	NoRel	true	testing	aborting
+Relation	T17	T7	NoRel	true	testing	event
+Relation	T18	T13	NoRel	true	found	engaged
+Relation	T18	T21	NoRel	true	found	concluded
+Relation	T18	T23	NoRel	true	found	failure
+Relation	T18	T33	NoRel	true	found	prevent
+Relation	T18	T34	NoRel	true	found	take off
+Relation	T18	T9	NoRel	true	found	intended
+Relation	T19	T18	NoRel	true	movement	found
+Relation	T19	T24	NoRel	true	movement	perform
+Relation	T19	T30	NoRel	true	movement	takeoff
+Relation	T19	T4	NoRel	true	movement	takeoffs
+Relation	T2	T17	NoRel	true	neglected	testing
+Relation	T2	T26	NoRel	true	neglected	attempt
+Relation	T2	T3	NoRel	true	neglected	checks
+Relation	T2	T5	NoRel	true	neglected	indicating
+Relation	T20	T23	NoRel	true	achieved	failure
+Relation	T20	T33	NoRel	true	achieved	prevent
+Relation	T20	T35	NoRel	true	achieved	handle
+Relation	T21	T2	NoRel	true	concluded	neglected
+Relation	T21	T24	NoRel	true	concluded	perform
+Relation	T21	T32	NoRel	true	concluded	locked
+Relation	T22	T19	NoRel	true	accident	movement
+Relation	T22	T29	NoRel	true	accident	aborting
+Relation	T22	T35	NoRel	true	accident	handle
+Relation	T23	T16	NoRel	true	failure	engaged
+Relation	T23	T19	NoRel	true	failure	movement
+Relation	T23	T3	NoRel	true	failure	checks
+Relation	T24	T0	NoRel	true	perform	review
+Relation	T24	T13	NoRel	true	perform	engaged
+Relation	T24	T22	NoRel	true	perform	accident
+Relation	T25	T22	NoRel	true	takeoff	accident
+Relation	T25	T24	NoRel	true	takeoff	perform
+Relation	T25	T26	NoRel	true	takeoff	attempt
+Relation	T25	T27	NoRel	true	takeoff	engaged
+Relation	T25	T35	NoRel	true	takeoff	handle
+Relation	T26	T10	NoRel	true	attempt	limit
+Relation	T26	T11	NoRel	true	attempt	taxiing
+Relation	T26	T18	NoRel	true	attempt	found
+Relation	T26	T2	NoRel	true	attempt	neglected
+Relation	T26	T25	NoRel	true	attempt	takeoff
+Relation	T26	T28	NoRel	true	attempt	delay
+Relation	T26	T33	NoRel	true	attempt	prevent
+Relation	T27	T0	NoRel	true	engaged	review
+Relation	T27	T12	NoRel	true	engaged	idle
+Relation	T27	T14	NoRel	true	engaged	intended
+Relation	T27	T18	NoRel	true	engaged	found
+Relation	T27	T9	NoRel	true	engaged	intended
+Relation	T28	T11	NoRel	true	delay	taxiing
+Relation	T28	T14	NoRel	true	delay	intended
+Relation	T28	T16	NoRel	true	delay	engaged
+Relation	T28	T22	NoRel	true	delay	accident
+Relation	T28	T24	NoRel	true	delay	perform
+Relation	T28	T25	NoRel	true	delay	takeoff
+Relation	T28	T9	NoRel	true	delay	intended
+Relation	T29	T21	NoRel	true	aborting	concluded
+Relation	T29	T26	NoRel	true	aborting	attempt
+Relation	T3	T12	NoRel	true	checks	idle
+Relation	T3	T24	NoRel	true	checks	perform
+Relation	T3	T25	NoRel	true	checks	takeoff
+Relation	T3	T27	NoRel	true	checks	engaged
+Relation	T3	T30	NoRel	true	checks	takeoff
+Relation	T3	T6	NoRel	true	checks	oversight
+Relation	T30	T15	NoRel	true	takeoff	attempting
+Relation	T30	T16	NoRel	true	takeoff	engaged
+Relation	T30	T22	NoRel	true	takeoff	accident
+Relation	T30	T23	NoRel	true	takeoff	failure
+Relation	T30	T3	NoRel	true	takeoff	checks
+Relation	T30	T9	NoRel	true	takeoff	intended
+Relation	T31	T14	NoRel	true	aware	intended
+Relation	T31	T22	NoRel	true	aware	accident
+Relation	T32	T16	NoRel	true	locked	engaged
+Relation	T32	T2	NoRel	true	locked	neglected
+Relation	T32	T6	NoRel	true	locked	oversight
+Relation	T33	T10	NoRel	true	prevent	limit
+Relation	T33	T27	NoRel	true	prevent	engaged
+Relation	T33	T32	NoRel	true	prevent	locked
+Relation	T34	T15	NoRel	true	take off	attempting
+Relation	T34	T26	NoRel	true	take off	attempt
+Relation	T34	T8	NoRel	true	take off	included
+Relation	T35	T24	NoRel	true	handle	perform
+Relation	T4	T15	NoRel	true	takeoffs	attempting
+Relation	T4	T17	NoRel	true	takeoffs	testing
+Relation	T4	T28	NoRel	true	takeoffs	delay
+Relation	T5	T0	NoRel	true	indicating	review
+Relation	T5	T1	NoRel	true	indicating	revealed
+Relation	T6	T2	NoRel	true	oversight	neglected
+Relation	T6	T20	NoRel	true	oversight	achieved
+Relation	T6	T24	NoRel	true	oversight	perform
+Relation	T6	T35	NoRel	true	oversight	handle
+Relation	T6	T4	NoRel	true	oversight	takeoffs
+Relation	T6	T7	NoRel	true	oversight	event
+Relation	T7	T29	NoRel	true	event	aborting
+Relation	T7	T5	NoRel	true	event	indicating
+Relation	T8	T0	NoRel	true	included	review
+Relation	T8	T10	NoRel	true	included	limit
+Relation	T8	T11	NoRel	true	included	taxiing
+Relation	T8	T15	NoRel	true	included	attempting
+Relation	T8	T22	NoRel	true	included	accident
+Relation	T9	T0	NoRel	true	intended	review
+Relation	T9	T10	NoRel	true	intended	limit
+Relation	T9	T15	NoRel	true	intended	attempting
+Relation	T9	T22	NoRel	true	intended	accident
+Relation	T9	T28	NoRel	true	intended	delay
+Relation	T9	T29	NoRel	true	intended	aborting

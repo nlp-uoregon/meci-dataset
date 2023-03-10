@@ -1,0 +1,38 @@
+Text	Yetkililer , salgını kontrol altına almak için önlemler aldı , ancak bunlar başlangıçta etkisizdi .	Yayılma ağırlaştı çünkü o sırada hastalığın nedenleri bilinmiyordu , sınırlama önlemleri hemen uygulanmadı , ve bazı insanlar enfekte olanları hükûmet tarafından belirlenmiş depolara transfer etmeyi reddederek direndi .	Salgının veba olarak tanımlanmasından hemen sonra ticaret durdu .	5 Mayıs'ta mahkemeler ve tiyatro da dahil olmak üzere kamu binaları kapatıldı .	Liman bölgesindeki kentsel yerleşimler : Valletta ve banliyösü Floriana ve Üç Şehir , Birgu , Cospicua ve Senglea tıbbi gözlem altına alındı .
+Event	T0	etkisizdi	EVENT	88
+Event	T1	ağırlaştı	EVENT	108
+Event	T3	direndi	EVENT	310
+Event	T4	durdu	EVENT	378
+Event	T5	kapatıldı	EVENT	454
+Event	T6	alındı	EVENT	600
+Event	T7	aldı	EVENT	56
+Event	T2	olanları	EVENT	234
+Event	T8	belirlenmiş	EVENT	262
+Relation	T0	T1	CauseEffect	true	etkisizdi	ağırlaştı
+Relation	T1	T0	EffectCause	true	ağırlaştı	etkisizdi
+Relation	T3	T0	CauseEffect	true	direndi	etkisizdi
+Relation	T0	T3	EffectCause	true	etkisizdi	direndi
+Relation	T1	T4	CauseEffect	true	ağırlaştı	durdu
+Relation	T4	T1	EffectCause	true	durdu	ağırlaştı
+Relation	T1	T5	CauseEffect	true	ağırlaştı	kapatıldı
+Relation	T5	T1	EffectCause	true	kapatıldı	ağırlaştı
+Relation	T1	T6	CauseEffect	true	ağırlaştı	alındı
+Relation	T6	T1	EffectCause	true	alındı	ağırlaştı
+Relation	T0	T2	NoRel	true	etkisizdi	olanları
+Relation	T0	T5	NoRel	true	etkisizdi	kapatıldı
+Relation	T0	T6	NoRel	true	etkisizdi	alındı
+Relation	T0	T7	NoRel	true	etkisizdi	aldı
+Relation	T2	T0	NoRel	true	olanları	etkisizdi
+Relation	T2	T8	NoRel	true	olanları	belirlenmiş
+Relation	T3	T4	NoRel	true	direndi	durdu
+Relation	T3	T5	NoRel	true	direndi	kapatıldı
+Relation	T4	T0	NoRel	true	durdu	etkisizdi
+Relation	T4	T6	NoRel	true	durdu	alındı
+Relation	T4	T7	NoRel	true	durdu	aldı
+Relation	T5	T0	NoRel	true	kapatıldı	etkisizdi
+Relation	T5	T4	NoRel	true	kapatıldı	durdu
+Relation	T7	T2	NoRel	true	aldı	olanları
+Relation	T7	T3	NoRel	true	aldı	direndi
+Relation	T7	T4	NoRel	true	aldı	durdu
+Relation	T7	T8	NoRel	true	aldı	belirlenmiş
+Relation	T8	T5	NoRel	true	belirlenmiş	kapatıldı

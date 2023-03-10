@@ -1,0 +1,30 @@
+Text	FLYSTYRTET VED SMOLENSK fandt sted den 10. april 2010 .	Ombord på flyet af typen Tupolev Tu-154M var den polske præsident , Lech Kaczyński , der med sit følge var på vej til en mindehøjtidelighed for Katynmassakren .	Ifølge Smolensk oblasts guvernør døde alle 96 ombordværende .	Lige inden katastrofen var Smolensk dækket af en tæt tåge .	Det betød , at piloterne havde svært ved at lande .
+Event	T0	FLYSTYRTET	EVENT	0
+Event	T1	mindehøjtidelighed	EVENT	177
+Event	T2	døde	EVENT	250
+Event	T3	katastrofen	EVENT	290
+Event	T4	dækket	EVENT	315
+Event	T5	tåge	EVENT	332
+Event	T6	betød	EVENT	343
+Relation	T5	T6	CauseEffect	true	tåge	betød
+Relation	T6	T5	EffectCause	true	betød	tåge
+Relation	T3	T2	CauseEffect	true	katastrofen	døde
+Relation	T2	T3	EffectCause	true	døde	katastrofen
+Relation	T0	T2	CauseEffect	true	FLYSTYRTET	døde
+Relation	T2	T0	EffectCause	true	døde	FLYSTYRTET
+Relation	T5	T3	CauseEffect	true	tåge	katastrofen
+Relation	T3	T5	EffectCause	true	katastrofen	tåge
+Relation	T0	T1	NoRel	true	FLYSTYRTET	mindehøjtidelighed
+Relation	T0	T3	NoRel	true	FLYSTYRTET	katastrofen
+Relation	T0	T4	NoRel	true	FLYSTYRTET	dækket
+Relation	T1	T0	NoRel	true	mindehøjtidelighed	FLYSTYRTET
+Relation	T1	T4	NoRel	true	mindehøjtidelighed	dækket
+Relation	T1	T5	NoRel	true	mindehøjtidelighed	tåge
+Relation	T1	T6	NoRel	true	mindehøjtidelighed	betød
+Relation	T2	T4	NoRel	true	døde	dækket
+Relation	T2	T5	NoRel	true	døde	tåge
+Relation	T3	T0	NoRel	true	katastrofen	FLYSTYRTET
+Relation	T4	T0	NoRel	true	dækket	FLYSTYRTET
+Relation	T4	T1	NoRel	true	dækket	mindehøjtidelighed
+Relation	T4	T3	NoRel	true	dækket	katastrofen
+Relation	T4	T6	NoRel	true	dækket	betød

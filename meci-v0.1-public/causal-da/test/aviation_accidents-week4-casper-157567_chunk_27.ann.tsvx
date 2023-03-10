@@ -1,0 +1,17 @@
+Text	4.	Optagelser viser at lobbyen i begge WTC bygninger var åbenlyst beskadiget , selv om flyene ramte bygninger mange etager oppe .	5 . Seismografiske optagelser .	6 .	Bygningerne styrtede vertikalt sammen med omkring samme hastighed som tyngdeaccellerationen , og præcist ned i deres egne _ fodaftryk _ .
+Event	T0	viser	EVENT	14
+Event	T1	beskadiget	EVENT	66
+Event	T2	ramte	EVENT	94
+Event	T3	optagelser	EVENT	149
+Event	T4	styrtede	EVENT	178
+Relation	T2	T0	CauseEffect	true	ramte	viser
+Relation	T0	T2	EffectCause	true	viser	ramte
+Relation	T2	T4	CauseEffect	true	ramte	styrtede
+Relation	T4	T2	EffectCause	true	styrtede	ramte
+Relation	T0	T3	NoRel	true	viser	optagelser
+Relation	T1	T3	NoRel	true	beskadiget	optagelser
+Relation	T1	T4	NoRel	true	beskadiget	styrtede
+Relation	T2	T1	NoRel	true	ramte	beskadiget
+Relation	T3	T2	NoRel	true	optagelser	ramte
+Relation	T4	T0	NoRel	true	styrtede	viser
+Relation	T4	T3	NoRel	true	styrtede	optagelser

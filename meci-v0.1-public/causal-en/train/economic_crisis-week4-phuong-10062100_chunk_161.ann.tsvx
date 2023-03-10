@@ -1,0 +1,96 @@
+Text	For a summary of U.S. government financial commitments and investments related to the crisis , see CNN – Bailout Scorecard .	[ People queuing outside a Northern Rock bank branch in Birmingham , United Kingdom , on September 15 , 2007 , to withdraw their savings because of the subprime crisis . ]	Several major financial institutions either failed , were bailed out by governments , or merged ( voluntarily or otherwise ) during the crisis .	While the specific circumstances varied , in general the decline in the value of mortgage - backed securities held by these companies resulted in either their insolvency , the equivalent of bank runs as investors pulled funds from them , or inability to secure new funding in the credit markets .	These firms had typically borrowed and invested large sums of money relative to their cash or equity capital , meaning they were highly leveraged and vulnerable to unanticipated credit market disruptions .
+Event	T0	crisis	EVENT	86
+Event	T1	queuing	EVENT	134
+Event	T2	withdraw	EVENT	239
+Event	T3	crisis	EVENT	286
+Event	T4	failed	EVENT	341
+Event	T5	merged	EVENT	386
+Event	T6	crisis	EVENT	433
+Event	T7	varied	EVENT	475
+Event	T8	decline	EVENT	499
+Event	T9	held	EVENT	552
+Event	T10	resulted	EVENT	576
+Event	T11	insolvency	EVENT	601
+Event	T12	equivalent	EVENT	618
+Event	T13	runs	EVENT	637
+Event	T14	pulled	EVENT	655
+Event	T15	secure	EVENT	696
+Event	T16	borrowed	EVENT	765
+Event	T17	invested	EVENT	778
+Event	T18	leveraged	EVENT	875
+Event	T19	disruptions	EVENT	931
+Event	T20	bailed out	EVENT	355
+Event	T21	mortgage - backed securities	EVENT	523
+Event	T22	inability	EVENT	683
+Event	T23	vulnerable	EVENT	889
+Relation	T3	T2	CauseEffect	true	crisis	withdraw
+Relation	T2	T3	EffectCause	true	withdraw	crisis
+Relation	T2	T1	CauseEffect	true	withdraw	queuing
+Relation	T1	T2	EffectCause	true	queuing	withdraw
+Relation	T4	T20	CauseEffect	true	failed	bailed out
+Relation	T20	T4	EffectCause	true	bailed out	failed
+Relation	T6	T5	CauseEffect	true	crisis	merged
+Relation	T5	T6	EffectCause	true	merged	crisis
+Relation	T21	T11	CauseEffect	true	mortgage - backed securities	insolvency
+Relation	T11	T21	EffectCause	true	insolvency	mortgage - backed securities
+Relation	T14	T13	CauseEffect	true	pulled	runs
+Relation	T13	T14	EffectCause	true	runs	pulled
+Relation	T22	T13	CauseEffect	true	inability	runs
+Relation	T13	T22	EffectCause	true	runs	inability
+Relation	T16	T18	CauseEffect	true	borrowed	leveraged
+Relation	T18	T16	EffectCause	true	leveraged	borrowed
+Relation	T17	T18	CauseEffect	true	invested	leveraged
+Relation	T18	T17	EffectCause	true	leveraged	invested
+Relation	T0	T17	NoRel	true	crisis	invested
+Relation	T0	T21	NoRel	true	crisis	mortgage - backed securities
+Relation	T10	T11	NoRel	true	resulted	insolvency
+Relation	T10	T19	NoRel	true	resulted	disruptions
+Relation	T10	T22	NoRel	true	resulted	inability
+Relation	T10	T4	NoRel	true	resulted	failed
+Relation	T10	T5	NoRel	true	resulted	merged
+Relation	T11	T0	NoRel	true	insolvency	crisis
+Relation	T11	T14	NoRel	true	insolvency	pulled
+Relation	T11	T3	NoRel	true	insolvency	crisis
+Relation	T11	T6	NoRel	true	insolvency	crisis
+Relation	T12	T10	NoRel	true	equivalent	resulted
+Relation	T12	T15	NoRel	true	equivalent	secure
+Relation	T12	T17	NoRel	true	equivalent	invested
+Relation	T12	T21	NoRel	true	equivalent	mortgage - backed securities
+Relation	T12	T9	NoRel	true	equivalent	held
+Relation	T13	T10	NoRel	true	runs	resulted
+Relation	T13	T20	NoRel	true	runs	bailed out
+Relation	T14	T0	NoRel	true	pulled	crisis
+Relation	T14	T15	NoRel	true	pulled	secure
+Relation	T15	T10	NoRel	true	secure	resulted
+Relation	T16	T11	NoRel	true	borrowed	insolvency
+Relation	T16	T22	NoRel	true	borrowed	inability
+Relation	T17	T19	NoRel	true	invested	disruptions
+Relation	T2	T23	NoRel	true	withdraw	vulnerable
+Relation	T2	T5	NoRel	true	withdraw	merged
+Relation	T2	T7	NoRel	true	withdraw	varied
+Relation	T2	T8	NoRel	true	withdraw	decline
+Relation	T20	T12	NoRel	true	bailed out	equivalent
+Relation	T20	T3	NoRel	true	bailed out	crisis
+Relation	T21	T2	NoRel	true	mortgage - backed securities	withdraw
+Relation	T21	T22	NoRel	true	mortgage - backed securities	inability
+Relation	T21	T3	NoRel	true	mortgage - backed securities	crisis
+Relation	T21	T6	NoRel	true	mortgage - backed securities	crisis
+Relation	T22	T18	NoRel	true	inability	leveraged
+Relation	T22	T19	NoRel	true	inability	disruptions
+Relation	T23	T8	NoRel	true	vulnerable	decline
+Relation	T3	T21	NoRel	true	crisis	mortgage - backed securities
+Relation	T4	T18	NoRel	true	failed	leveraged
+Relation	T4	T19	NoRel	true	failed	disruptions
+Relation	T5	T14	NoRel	true	merged	pulled
+Relation	T5	T16	NoRel	true	merged	borrowed
+Relation	T5	T17	NoRel	true	merged	invested
+Relation	T5	T3	NoRel	true	merged	crisis
+Relation	T6	T12	NoRel	true	crisis	equivalent
+Relation	T6	T16	NoRel	true	crisis	borrowed
+Relation	T6	T8	NoRel	true	crisis	decline
+Relation	T6	T9	NoRel	true	crisis	held
+Relation	T7	T12	NoRel	true	varied	equivalent
+Relation	T7	T18	NoRel	true	varied	leveraged
+Relation	T8	T14	NoRel	true	decline	pulled
+Relation	T8	T18	NoRel	true	decline	leveraged
+Relation	T9	T14	NoRel	true	held	pulled

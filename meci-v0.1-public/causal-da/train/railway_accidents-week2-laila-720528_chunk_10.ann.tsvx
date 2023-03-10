@@ -1,0 +1,52 @@
+Text	Derfor nåede han ikke at bremse i tide .	På retsmødet tiltaltes han formelt for 79 tilfælde af uagtsomt manddrab men blev løsladt mod kaution mod at han fik frataget sit pas og under den kommende retssag skal melde sig i retten en gang om ugen .	På baggrund af havarikommissionens undersøgelse vil domstolen også se på , om toget , sporet eller sikkerhedssystemet kan have bidraget til ulykken .	Undersøgelser af togets sorte boks viste , at lokomotivføreren fik tre advarselssignaler kl. 20.39 , 20.40 og 20.41 , men det er uklart , om de handlede om , at farten skulle sættes ned .	Lokomotivføreren modtog advarselssignalerne omkring det tidspunkt , hvor han talte i telefon med en billetkontrollør om , hvilken perron toget ville køre ind på senere på ruten .
+Event	T0	nåede	EVENT	7
+Event	T1	bremse	EVENT	25
+Event	T10	bidraget	EVENT	373
+Event	T11	ulykken	EVENT	386
+Event	T12	Undersøgelser	EVENT	396
+Event	T13	viste	EVENT	431
+Event	T14	fik	EVENT	459
+Event	T16	talte	EVENT	661
+Event	T2	tiltaltes	EVENT	54
+Event	T5	kaution	EVENT	134
+Event	T7	retssag	EVENT	196
+Event	T9	undersøgelse	EVENT	281
+Relation	T2	T5	CauseEffect	true	tiltaltes	kaution
+Relation	T5	T2	EffectCause	true	kaution	tiltaltes
+Relation	T0	T1	NoRel	true	nåede	bremse
+Relation	T0	T12	NoRel	true	nåede	Undersøgelser
+Relation	T0	T2	NoRel	true	nåede	tiltaltes
+Relation	T1	T10	NoRel	true	bremse	bidraget
+Relation	T1	T11	NoRel	true	bremse	ulykken
+Relation	T10	T11	NoRel	true	bidraget	ulykken
+Relation	T10	T14	NoRel	true	bidraget	fik
+Relation	T10	T2	NoRel	true	bidraget	tiltaltes
+Relation	T11	T1	NoRel	true	ulykken	bremse
+Relation	T12	T10	NoRel	true	Undersøgelser	bidraget
+Relation	T12	T5	NoRel	true	Undersøgelser	kaution
+Relation	T12	T7	NoRel	true	Undersøgelser	retssag
+Relation	T13	T11	NoRel	true	viste	ulykken
+Relation	T13	T12	NoRel	true	viste	Undersøgelser
+Relation	T13	T14	NoRel	true	viste	fik
+Relation	T13	T16	NoRel	true	viste	talte
+Relation	T13	T2	NoRel	true	viste	tiltaltes
+Relation	T13	T7	NoRel	true	viste	retssag
+Relation	T13	T9	NoRel	true	viste	undersøgelse
+Relation	T14	T12	NoRel	true	fik	Undersøgelser
+Relation	T16	T0	NoRel	true	talte	nåede
+Relation	T16	T11	NoRel	true	talte	ulykken
+Relation	T16	T9	NoRel	true	talte	undersøgelse
+Relation	T2	T10	NoRel	true	tiltaltes	bidraget
+Relation	T2	T12	NoRel	true	tiltaltes	Undersøgelser
+Relation	T2	T16	NoRel	true	tiltaltes	talte
+Relation	T5	T11	NoRel	true	kaution	ulykken
+Relation	T5	T14	NoRel	true	kaution	fik
+Relation	T7	T1	NoRel	true	retssag	bremse
+Relation	T7	T10	NoRel	true	retssag	bidraget
+Relation	T7	T16	NoRel	true	retssag	talte
+Relation	T7	T2	NoRel	true	retssag	tiltaltes
+Relation	T7	T9	NoRel	true	retssag	undersøgelse
+Relation	T9	T12	NoRel	true	undersøgelse	Undersøgelser
+Relation	T9	T14	NoRel	true	undersøgelse	fik
+Relation	T9	T2	NoRel	true	undersøgelse	tiltaltes
+Relation	T9	T5	NoRel	true	undersøgelse	kaution

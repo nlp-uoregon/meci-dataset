@@ -1,0 +1,34 @@
+Text	İki yolcu treni Brüksel yakınındaki Buizingen’de kafa kafaya çarpıştı .	Çok sayıda ölü olduğu rapor edildi .	bakınız : Halle tren kazası	- 24 Mart 2010.	Başkent Oslo'nun yakınlarındaki tren garında park halinde duran on altı vagonlu bir tren kendi kendine hareket ederek deniz kenarındaki bir depoya çarpıp arabalara hasar verdi .
+Event	T0	çarpıştı	EVENT	61
+Event	T1	ölü	EVENT	83
+Event	T2	edildi	EVENT	100
+Event	T4	çarpıp	EVENT	300
+Event	T5	verdi	EVENT	323
+Event	T6	kazası	EVENT	130
+Event	T7	duran	EVENT	211
+Event	T3	ederek	EVENT	264
+Relation	T0	T1	CauseEffect	true	çarpıştı	ölü
+Relation	T1	T0	EffectCause	true	ölü	çarpıştı
+Relation	T1	T2	CauseEffect	true	ölü	edildi
+Relation	T2	T1	EffectCause	true	edildi	ölü
+Relation	T7	T3	CauseEffect	true	duran	ederek
+Relation	T3	T7	EffectCause	true	ederek	duran
+Relation	T3	T4	CauseEffect	true	ederek	çarpıp
+Relation	T4	T3	EffectCause	true	çarpıp	ederek
+Relation	T4	T5	CauseEffect	true	çarpıp	verdi
+Relation	T5	T4	EffectCause	true	verdi	çarpıp
+Relation	T0	T3	NoRel	true	çarpıştı	ederek
+Relation	T1	T3	NoRel	true	ölü	ederek
+Relation	T2	T0	NoRel	true	edildi	çarpıştı
+Relation	T2	T3	NoRel	true	edildi	ederek
+Relation	T2	T7	NoRel	true	edildi	duran
+Relation	T3	T0	NoRel	true	ederek	çarpıştı
+Relation	T3	T1	NoRel	true	ederek	ölü
+Relation	T3	T2	NoRel	true	ederek	edildi
+Relation	T3	T5	NoRel	true	ederek	verdi
+Relation	T4	T6	NoRel	true	çarpıp	kazası
+Relation	T5	T1	NoRel	true	verdi	ölü
+Relation	T5	T2	NoRel	true	verdi	edildi
+Relation	T5	T3	NoRel	true	verdi	ederek
+Relation	T7	T0	NoRel	true	duran	çarpıştı
+Relation	T7	T6	NoRel	true	duran	kazası

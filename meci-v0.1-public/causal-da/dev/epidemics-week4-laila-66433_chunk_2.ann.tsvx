@@ -1,0 +1,51 @@
+Text	Måske i marts hos rekrutter i øvelseslejren Funston i Kansas .	Nogle få uger efter blev en halv million amerikanske soldater sejlet over Atlanterhavet til Vestfronten i Europa .	De første sygdomsudbrud i Europa opstod i april 1918 i Bordeaux og Brest , der var Frankrigs hovedhavne for allierede soldater .	Sygdommen udviklede sig i bølger fra 1918 til 1920 , og det vurderes , at den tog livet af omkring 50 millioner mennesker .	I USA døde 675.000 , og kistesnedkerne kunne ikke holde trit med efterspørgslen .
+Event	T0	sejlet	EVENT	125
+Event	T1	sygdomsudbrud	EVENT	188
+Event	T2	opstod	EVENT	211
+Event	T3	udviklede	EVENT	317
+Event	T4	bølger	EVENT	333
+Event	T5	vurderes	EVENT	367
+Event	T6	døde	EVENT	437
+Event	T7	trit	EVENT	487
+Event	T8	tog livet	EVENT	385
+Event	T9	Sygdommen	EVENT	307
+Relation	T6	T7	CauseEffect	true	døde	trit
+Relation	T7	T6	EffectCause	true	trit	døde
+Relation	T9	T8	CauseEffect	true	Sygdommen	tog livet
+Relation	T8	T9	EffectCause	true	tog livet	Sygdommen
+Relation	T9	T6	CauseEffect	true	Sygdommen	døde
+Relation	T6	T9	EffectCause	true	døde	Sygdommen
+Relation	T0	T6	NoRel	true	sejlet	døde
+Relation	T0	T7	NoRel	true	sejlet	trit
+Relation	T0	T8	NoRel	true	sejlet	tog livet
+Relation	T0	T9	NoRel	true	sejlet	Sygdommen
+Relation	T1	T3	NoRel	true	sygdomsudbrud	udviklede
+Relation	T1	T5	NoRel	true	sygdomsudbrud	vurderes
+Relation	T1	T7	NoRel	true	sygdomsudbrud	trit
+Relation	T2	T3	NoRel	true	opstod	udviklede
+Relation	T2	T7	NoRel	true	opstod	trit
+Relation	T3	T0	NoRel	true	udviklede	sejlet
+Relation	T3	T1	NoRel	true	udviklede	sygdomsudbrud
+Relation	T3	T2	NoRel	true	udviklede	opstod
+Relation	T3	T5	NoRel	true	udviklede	vurderes
+Relation	T3	T6	NoRel	true	udviklede	døde
+Relation	T3	T8	NoRel	true	udviklede	tog livet
+Relation	T4	T2	NoRel	true	bølger	opstod
+Relation	T4	T9	NoRel	true	bølger	Sygdommen
+Relation	T5	T1	NoRel	true	vurderes	sygdomsudbrud
+Relation	T5	T2	NoRel	true	vurderes	opstod
+Relation	T5	T6	NoRel	true	vurderes	døde
+Relation	T5	T9	NoRel	true	vurderes	Sygdommen
+Relation	T6	T3	NoRel	true	døde	udviklede
+Relation	T6	T4	NoRel	true	døde	bølger
+Relation	T6	T5	NoRel	true	døde	vurderes
+Relation	T6	T8	NoRel	true	døde	tog livet
+Relation	T7	T4	NoRel	true	trit	bølger
+Relation	T7	T5	NoRel	true	trit	vurderes
+Relation	T7	T8	NoRel	true	trit	tog livet
+Relation	T8	T0	NoRel	true	tog livet	sejlet
+Relation	T8	T1	NoRel	true	tog livet	sygdomsudbrud
+Relation	T8	T2	NoRel	true	tog livet	opstod
+Relation	T8	T7	NoRel	true	tog livet	trit
+Relation	T9	T0	NoRel	true	Sygdommen	sejlet
+Relation	T9	T4	NoRel	true	Sygdommen	bølger

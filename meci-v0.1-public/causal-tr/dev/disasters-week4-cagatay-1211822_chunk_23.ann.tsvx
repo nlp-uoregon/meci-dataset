@@ -1,0 +1,37 @@
+Text	" açıklamasını yaptı .	- - Şansölye Angela Merkel , Almanya'nın Japonya'ya yardıma hazır olduğunu belirtti .	Technisches Hilfswerk'ten arama ve kurtarma uzmanları Japonya'ya gönderildi .	- Amerika Birleşik Devletleri Başkanı Barack Obama depremden hemen sonra " Yardım etmeye hazırız " dedi .	ABD yardım için Tomodachi Operasyonu ( Tomodachi : Japonca arkadaşlık ) adlı bir operasyon düzenledi .
+Event	T1	belirtti	EVENT	98
+Event	T3	gönderildi	EVENT	174
+Event	T4	yardım	EVENT	297
+Event	T5	düzenledi	EVENT	384
+Event	T2	depremden	EVENT	238
+Event	T6	açıklamasını	EVENT	2
+Event	T7	dedi	EVENT	286
+Event	T8	Tomodachi Operasyonu	EVENT	309
+Relation	T2	T6	CauseEffect	true	depremden	açıklamasını
+Relation	T6	T2	EffectCause	true	açıklamasını	depremden
+Relation	T2	T3	CauseEffect	true	depremden	gönderildi
+Relation	T3	T2	EffectCause	true	gönderildi	depremden
+Relation	T2	T1	CauseEffect	true	depremden	belirtti
+Relation	T1	T2	EffectCause	true	belirtti	depremden
+Relation	T2	T7	CauseEffect	true	depremden	dedi
+Relation	T7	T2	EffectCause	true	dedi	depremden
+Relation	T4	T8	CauseEffect	true	yardım	Tomodachi Operasyonu
+Relation	T8	T4	EffectCause	true	Tomodachi Operasyonu	yardım
+Relation	T2	T4	CauseEffect	true	depremden	yardım
+Relation	T4	T2	EffectCause	true	yardım	depremden
+Relation	T1	T4	NoRel	true	belirtti	yardım
+Relation	T2	T8	NoRel	true	depremden	Tomodachi Operasyonu
+Relation	T4	T1	NoRel	true	yardım	belirtti
+Relation	T5	T1	NoRel	true	düzenledi	belirtti
+Relation	T5	T4	NoRel	true	düzenledi	yardım
+Relation	T5	T8	NoRel	true	düzenledi	Tomodachi Operasyonu
+Relation	T6	T3	NoRel	true	açıklamasını	gönderildi
+Relation	T6	T5	NoRel	true	açıklamasını	düzenledi
+Relation	T6	T7	NoRel	true	açıklamasını	dedi
+Relation	T6	T8	NoRel	true	açıklamasını	Tomodachi Operasyonu
+Relation	T7	T3	NoRel	true	dedi	gönderildi
+Relation	T7	T5	NoRel	true	dedi	düzenledi
+Relation	T8	T1	NoRel	true	Tomodachi Operasyonu	belirtti
+Relation	T8	T2	NoRel	true	Tomodachi Operasyonu	depremden
+Relation	T8	T5	NoRel	true	Tomodachi Operasyonu	düzenledi
+Relation	T8	T7	NoRel	true	Tomodachi Operasyonu	dedi

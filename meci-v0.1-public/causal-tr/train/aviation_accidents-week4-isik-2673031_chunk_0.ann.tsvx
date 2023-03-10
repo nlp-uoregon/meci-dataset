@@ -1,0 +1,70 @@
+Text	AEROFLOT'UN 4225 SEFER SAYILI UÇUŞU , 8 Temmuz 1980'de Alma - Ata Havalimanı'ndan ( şu an Almatı ) Simferopol Havalimanı'na bir Tupolev Tu - 154B - 2 ile yapılan bir tarifeli iç hat uçuşuydu .	Uçak , tırmanış sırasında karşılaştığı sıcak hava sütunu nedeniyle hava hızı aniden düştüğünde yaklaşık 500 fit ( 152,4 m ) yükseklikteydi .	Bu , uçağın kalkış havalimanından yaklaşık 5 km mesafedeyken uçağın perdövitese girmesine , yere düşmesine ve alev almasına neden oldu ve uçaktaki 156'sı yolcu 166 kişinin ölümüne neden oldu .	Bu kaza bugüne kadar Kazakistan'da gerçekleşmiş en büyük havacılık kazasıdır .	Kaza anında Alma - Ata'da bir sıcak hava dalgası yaşanıyordu .
+Event	T0	UÇUŞU	EVENT	30
+Event	T2	uçuşuydu	EVENT	182
+Event	T3	tırmanış	EVENT	200
+Event	T4	kalkış	EVENT	346
+Event	T5	girmesine	EVENT	414
+Event	T6	düşmesine	EVENT	431
+Event	T7	oldu	EVENT	464
+Event	T8	oldu	EVENT	520
+Event	T9	kaza	EVENT	530
+Event	T10	gerçekleşmiş	EVENT	562
+Event	T11	kazasıdır	EVENT	594
+Event	T12	Kaza	EVENT	606
+Event	T13	yaşanıyordu	EVENT	655
+Event	T1	karşılaştığı	EVENT	219
+Relation	T5	T6	CauseEffect	true	girmesine	düşmesine
+Relation	T6	T5	EffectCause	true	düşmesine	girmesine
+Relation	T7	T8	CauseEffect	true	oldu	oldu
+Relation	T8	T7	EffectCause	true	oldu	oldu
+Relation	T0	T1	NoRel	true	UÇUŞU	karşılaştığı
+Relation	T0	T13	NoRel	true	UÇUŞU	yaşanıyordu
+Relation	T0	T6	NoRel	true	UÇUŞU	düşmesine
+Relation	T0	T7	NoRel	true	UÇUŞU	oldu
+Relation	T0	T8	NoRel	true	UÇUŞU	oldu
+Relation	T0	T9	NoRel	true	UÇUŞU	kaza
+Relation	T1	T0	NoRel	true	karşılaştığı	UÇUŞU
+Relation	T1	T11	NoRel	true	karşılaştığı	kazasıdır
+Relation	T1	T12	NoRel	true	karşılaştığı	Kaza
+Relation	T1	T9	NoRel	true	karşılaştığı	kaza
+Relation	T10	T11	NoRel	true	gerçekleşmiş	kazasıdır
+Relation	T10	T12	NoRel	true	gerçekleşmiş	Kaza
+Relation	T10	T3	NoRel	true	gerçekleşmiş	tırmanış
+Relation	T10	T8	NoRel	true	gerçekleşmiş	oldu
+Relation	T11	T0	NoRel	true	kazasıdır	UÇUŞU
+Relation	T11	T3	NoRel	true	kazasıdır	tırmanış
+Relation	T11	T4	NoRel	true	kazasıdır	kalkış
+Relation	T12	T1	NoRel	true	Kaza	karşılaştığı
+Relation	T12	T3	NoRel	true	Kaza	tırmanış
+Relation	T12	T8	NoRel	true	Kaza	oldu
+Relation	T13	T2	NoRel	true	yaşanıyordu	uçuşuydu
+Relation	T13	T3	NoRel	true	yaşanıyordu	tırmanış
+Relation	T13	T5	NoRel	true	yaşanıyordu	girmesine
+Relation	T13	T6	NoRel	true	yaşanıyordu	düşmesine
+Relation	T2	T1	NoRel	true	uçuşuydu	karşılaştığı
+Relation	T3	T13	NoRel	true	tırmanış	yaşanıyordu
+Relation	T3	T9	NoRel	true	tırmanış	kaza
+Relation	T4	T13	NoRel	true	kalkış	yaşanıyordu
+Relation	T4	T8	NoRel	true	kalkış	oldu
+Relation	T5	T11	NoRel	true	girmesine	kazasıdır
+Relation	T5	T13	NoRel	true	girmesine	yaşanıyordu
+Relation	T5	T3	NoRel	true	girmesine	tırmanış
+Relation	T5	T7	NoRel	true	girmesine	oldu
+Relation	T5	T8	NoRel	true	girmesine	oldu
+Relation	T6	T1	NoRel	true	düşmesine	karşılaştığı
+Relation	T6	T12	NoRel	true	düşmesine	Kaza
+Relation	T6	T2	NoRel	true	düşmesine	uçuşuydu
+Relation	T6	T7	NoRel	true	düşmesine	oldu
+Relation	T6	T9	NoRel	true	düşmesine	kaza
+Relation	T7	T10	NoRel	true	oldu	gerçekleşmiş
+Relation	T7	T13	NoRel	true	oldu	yaşanıyordu
+Relation	T8	T2	NoRel	true	oldu	uçuşuydu
+Relation	T8	T5	NoRel	true	oldu	girmesine
+Relation	T8	T9	NoRel	true	oldu	kaza
+Relation	T9	T1	NoRel	true	kaza	karşılaştığı
+Relation	T9	T11	NoRel	true	kaza	kazasıdır
+Relation	T9	T12	NoRel	true	kaza	Kaza
+Relation	T9	T4	NoRel	true	kaza	kalkış
+Relation	T9	T5	NoRel	true	kaza	girmesine
+Relation	T9	T6	NoRel	true	kaza	düşmesine
+Relation	T9	T8	NoRel	true	kaza	oldu

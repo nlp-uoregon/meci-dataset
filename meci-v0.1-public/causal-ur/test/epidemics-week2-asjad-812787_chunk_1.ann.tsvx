@@ -1,0 +1,22 @@
+Text	وہ 1993ء کے عام انتخابات تک اس منصب پر فائز رہے ، جس کا نتیچہ معلق پارلیمان آیا تھا ۔	فُنسِنپیک کے ساتھ نزاعی مذاکروں کے بعد ہون سین کو وزیر اعظمِ ثانی قبول کر لیا گیا اور ہون سین نے وزیر اعظمِ اول نورودوم رینارد کے ساتھ 1997ء میں معاہدہ ٹوٹنے تک یہ منصب سنبھالا ۔	رینارد کے بعد انگ ہوت کو چُنا گیا تھا ۔	1998ء کے انتخابات میں ان کی جماعت سی پی پی جیت گئی مگر حکومت کو فُنسِپیک کے ساتھ اتحاد کرنا پڑا تھا ۔	ہون سین کی سی پی پی کو اس کے بعد سے لگاتار کامیابیاں نصیب ہوئیں اور اس وقت ان کی وزارتِ_عظمیٰ کی یہ چھٹی مدت ہے ۔
+Event	T0	انتخابات	EVENT	16
+Event	T1	قبول	EVENT	152
+Event	T2	ٹوٹنے	EVENT	238
+Event	T3	سنبھالا	EVENT	255
+Event	T4	انتخابات	EVENT	314
+Event	T5	اتحاد	EVENT	386
+Relation	T1	T3	CauseEffect	true	قبول	سنبھالا
+Relation	T3	T1	EffectCause	true	سنبھالا	قبول
+Relation	T4	T5	CauseEffect	true	انتخابات	اتحاد
+Relation	T5	T4	EffectCause	true	اتحاد	انتخابات
+Relation	T0	T1	CauseEffect	true	انتخابات	قبول
+Relation	T1	T0	EffectCause	true	قبول	انتخابات
+Relation	T2	T4	CauseEffect	true	ٹوٹنے	انتخابات
+Relation	T4	T2	EffectCause	true	انتخابات	ٹوٹنے
+Relation	T2	T3	NoRel	true	ٹوٹنے	سنبھالا
+Relation	T2	T5	NoRel	true	ٹوٹنے	اتحاد
+Relation	T3	T2	NoRel	true	سنبھالا	ٹوٹنے
+Relation	T3	T4	NoRel	true	سنبھالا	انتخابات
+Relation	T3	T5	NoRel	true	سنبھالا	اتحاد
+Relation	T4	T1	NoRel	true	انتخابات	قبول
+Relation	T5	T2	NoRel	true	اتحاد	ٹوٹنے

@@ -1,0 +1,39 @@
+Text	On 17 January 1978 , a Green Jackets observation post deployed around the village of Jonesborough began to take heavy fire from the " March Wall " , which drew parallel with the Irish border to the east , along the Dromad woods .	The soldiers returned fire , but the short distance to the border and the open ground prevented them from advancing .	The Commanding Officer , Lieutenant Colonel Ian Corden - Lloyd , along with Captain Schofield and Sergeant Ives flew from the battalion base at Bessbrook Mill to assess the situation and provide information to the troops .	They were escorted by a Scout helicopter with an Airborne Reaction Force ( ARF ) , comprising a medic and three soldiers from the 2nd Bn Light Infantry .	While hovering over the scene of the engagement , the Gazelle received a barrage of 7.62 mm tracer rounds .
+Event	T0	deployed	EVENT	54
+Event	T1	began	EVENT	98
+Event	T10	barrage	EVENT	798
+Event	T11	drew	EVENT	155
+Event	T12	returned	EVENT	243
+Event	T14	hovering	EVENT	731
+Event	T2	prevented	EVENT	316
+Event	T3	advancing	EVENT	336
+Event	T4	flew	EVENT	460
+Event	T5	assess	EVENT	510
+Event	T6	provide	EVENT	535
+Event	T7	escorted	EVENT	581
+Event	T8	engagement	EVENT	762
+Event	T9	received	EVENT	787
+Relation	T12	T2	CauseEffect	true	returned	prevented
+Relation	T2	T12	EffectCause	true	prevented	returned
+Relation	T5	T4	CauseEffect	true	assess	flew
+Relation	T4	T5	EffectCause	true	flew	assess
+Relation	T14	T10	CauseEffect	true	hovering	barrage
+Relation	T10	T14	EffectCause	true	barrage	hovering
+Relation	T0	T11	NoRel	true	deployed	drew
+Relation	T0	T5	NoRel	true	deployed	assess
+Relation	T10	T3	NoRel	true	barrage	advancing
+Relation	T10	T5	NoRel	true	barrage	assess
+Relation	T10	T7	NoRel	true	barrage	escorted
+Relation	T11	T1	NoRel	true	drew	began
+Relation	T12	T7	NoRel	true	returned	escorted
+Relation	T14	T3	NoRel	true	hovering	advancing
+Relation	T2	T0	NoRel	true	prevented	deployed
+Relation	T3	T1	NoRel	true	advancing	began
+Relation	T3	T11	NoRel	true	advancing	drew
+Relation	T3	T6	NoRel	true	advancing	provide
+Relation	T5	T3	NoRel	true	assess	advancing
+Relation	T8	T3	NoRel	true	engagement	advancing
+Relation	T8	T6	NoRel	true	engagement	provide
+Relation	T9	T1	NoRel	true	received	began
+Relation	T9	T4	NoRel	true	received	flew
+Relation	T9	T7	NoRel	true	received	escorted

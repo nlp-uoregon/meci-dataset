@@ -1,0 +1,45 @@
+Text	RWANDAIR FLIGHT 205 was a Canadair CRJ - 100 that crashed into the Terminal Building after an emergency landing at Kigali , Rwanda killing one passenger .	The flight was operated by JetLink Express on behalf of RwandAir .	In the aftermath of the accident , RwandAir suspended all operations with JetLink Express .	The flight took off from Kigali International Airport , shortly after which the pilots informed air traffic control that the Left Thrust lever had become jammed at the Takeoff Power setting .	The pilots did not utilize the Thrust Lever Jammed Abnormal Checklist Procedure and instead immediately returned to the airport with the Right Thrust Lever ( which was adjustable ) at idle , landing shortly after 11:30 am .
+Event	T0	landing	EVENT	104
+Event	T1	killing	EVENT	131
+Event	T2	flight	EVENT	159
+Event	T3	operated	EVENT	170
+Event	T4	accident	EVENT	246
+Event	T5	suspended	EVENT	266
+Event	T6	operations	EVENT	280
+Event	T7	informed	EVENT	401
+Event	T8	jammed	EVENT	468
+Event	T9	setting	EVENT	496
+Event	T10	utilize	EVENT	525
+Event	T11	Procedure	EVENT	576
+Event	T12	landing	EVENT	697
+Event	T13	crashed	EVENT	50
+Event	T14	took off	EVENT	325
+Event	T15	returned	EVENT	610
+Relation	T13	T1	CauseEffect	true	crashed	killing
+Relation	T1	T13	EffectCause	true	killing	crashed
+Relation	T4	T5	CauseEffect	true	accident	suspended
+Relation	T5	T4	EffectCause	true	suspended	accident
+Relation	T10	T12	CauseEffect	true	utilize	landing
+Relation	T12	T10	EffectCause	true	landing	utilize
+Relation	T0	T5	NoRel	true	landing	suspended
+Relation	T1	T8	NoRel	true	killing	jammed
+Relation	T11	T0	NoRel	true	Procedure	landing
+Relation	T11	T7	NoRel	true	Procedure	informed
+Relation	T11	T9	NoRel	true	Procedure	setting
+Relation	T12	T14	NoRel	true	landing	took off
+Relation	T12	T15	NoRel	true	landing	returned
+Relation	T13	T11	NoRel	true	crashed	Procedure
+Relation	T13	T2	NoRel	true	crashed	flight
+Relation	T13	T6	NoRel	true	crashed	operations
+Relation	T13	T7	NoRel	true	crashed	informed
+Relation	T14	T15	NoRel	true	took off	returned
+Relation	T14	T5	NoRel	true	took off	suspended
+Relation	T15	T7	NoRel	true	returned	informed
+Relation	T2	T4	NoRel	true	flight	accident
+Relation	T3	T13	NoRel	true	operated	crashed
+Relation	T5	T0	NoRel	true	suspended	landing
+Relation	T6	T5	NoRel	true	operations	suspended
+Relation	T6	T9	NoRel	true	operations	setting
+Relation	T8	T5	NoRel	true	jammed	suspended
+Relation	T9	T15	NoRel	true	setting	returned
+Relation	T9	T7	NoRel	true	setting	informed

@@ -1,0 +1,76 @@
+Text	There have been several other derailments in the UK due to trains entering speed - restricted sections of track at excessive speed ; the causes have generally been inattention by the driver due to alcohol , fatigue or other causes .	Prominent cases were the Nuneaton rail crash in 1975 ( temporary speed restriction in force due to trackwork , warning sign illumination failed ) , the Morpeth accident in 1984 ( express passenger sleeping car train took restricted sharp curve at full speed ; alcohol a factor ; no fatalities due to the improved crashworthiness of the vehicles )	[ This locomotive was derailed by the 1906 San Francisco earthquake .	The locomotive had three link and pin coupler pockets for moving standard and narrow gauge cars . ]	George D Bibel , _ Train Wreck – the Forensics of Rail Disasters _ , Hopkins University Press , Baltimore , 2012 ,
+Event	T0	derailments	EVENT	30
+Event	T1	inattention	EVENT	164
+Event	T2	fatigue	EVENT	207
+Event	T3	crash	EVENT	272
+Event	T4	warning	EVENT	344
+Event	T5	failed	EVENT	370
+Event	T7	curve	EVENT	471
+Event	T8	derailed	EVENT	602
+Event	T9	earthquake	EVENT	637
+Event	T11	Wreck	EVENT	775
+Event	T12	Disasters	EVENT	805
+Event	T13	excessive speed	EVENT	115
+Event	T14	alcohol	EVENT	197
+Event	T15	other causes	EVENT	218
+Event	T16	restriction	EVENT	304
+Event	T17	full speed	EVENT	480
+Event	T6	Morpeth accident	EVENT	385
+Event	T18	alcohol	EVENT	493
+Event	T19	three link and pin coupler pockets	EVENT	669
+Event	T10	moving standard	EVENT	708
+Event	T20	narrow gauge cars	EVENT	728
+Relation	T13	T0	CauseEffect	true	excessive speed	derailments
+Relation	T0	T13	EffectCause	true	derailments	excessive speed
+Relation	T1	T0	CauseEffect	true	inattention	derailments
+Relation	T0	T1	EffectCause	true	derailments	inattention
+Relation	T14	T1	CauseEffect	true	alcohol	inattention
+Relation	T1	T14	EffectCause	true	inattention	alcohol
+Relation	T2	T1	CauseEffect	true	fatigue	inattention
+Relation	T1	T2	EffectCause	true	inattention	fatigue
+Relation	T15	T1	CauseEffect	true	other causes	inattention
+Relation	T1	T15	EffectCause	true	inattention	other causes
+Relation	T5	T16	CauseEffect	true	failed	restriction
+Relation	T16	T5	EffectCause	true	restriction	failed
+Relation	T5	T3	CauseEffect	true	failed	crash
+Relation	T3	T5	EffectCause	true	crash	failed
+Relation	T17	T6	CauseEffect	true	full speed	Morpeth accident
+Relation	T6	T17	EffectCause	true	Morpeth accident	full speed
+Relation	T9	T8	CauseEffect	true	earthquake	derailed
+Relation	T8	T9	EffectCause	true	derailed	earthquake
+Relation	T20	T19	CauseEffect	true	narrow gauge cars	three link and pin coupler pockets
+Relation	T19	T20	EffectCause	true	three link and pin coupler pockets	narrow gauge cars
+Relation	T10	T19	CauseEffect	true	moving standard	three link and pin coupler pockets
+Relation	T19	T10	EffectCause	true	three link and pin coupler pockets	moving standard
+Relation	T0	T12	NoRel	true	derailments	Disasters
+Relation	T0	T3	NoRel	true	derailments	crash
+Relation	T1	T10	NoRel	true	inattention	moving standard
+Relation	T10	T12	NoRel	true	moving standard	Disasters
+Relation	T10	T14	NoRel	true	moving standard	alcohol
+Relation	T12	T11	NoRel	true	Disasters	Wreck
+Relation	T13	T1	NoRel	true	excessive speed	inattention
+Relation	T13	T18	NoRel	true	excessive speed	alcohol
+Relation	T14	T20	NoRel	true	alcohol	narrow gauge cars
+Relation	T14	T7	NoRel	true	alcohol	curve
+Relation	T15	T12	NoRel	true	other causes	Disasters
+Relation	T15	T2	NoRel	true	other causes	fatigue
+Relation	T18	T4	NoRel	true	alcohol	warning
+Relation	T19	T14	NoRel	true	three link and pin coupler pockets	alcohol
+Relation	T19	T17	NoRel	true	three link and pin coupler pockets	full speed
+Relation	T2	T20	NoRel	true	fatigue	narrow gauge cars
+Relation	T3	T14	NoRel	true	crash	alcohol
+Relation	T3	T19	NoRel	true	crash	three link and pin coupler pockets
+Relation	T3	T6	NoRel	true	crash	Morpeth accident
+Relation	T3	T7	NoRel	true	crash	curve
+Relation	T4	T18	NoRel	true	warning	alcohol
+Relation	T5	T4	NoRel	true	failed	warning
+Relation	T5	T6	NoRel	true	failed	Morpeth accident
+Relation	T6	T0	NoRel	true	Morpeth accident	derailments
+Relation	T7	T0	NoRel	true	curve	derailments
+Relation	T7	T13	NoRel	true	curve	excessive speed
+Relation	T7	T5	NoRel	true	curve	failed
+Relation	T8	T12	NoRel	true	derailed	Disasters
+Relation	T9	T11	NoRel	true	earthquake	Wreck
+Relation	T9	T14	NoRel	true	earthquake	alcohol
+Relation	T9	T19	NoRel	true	earthquake	three link and pin coupler pockets
+Relation	T9	T2	NoRel	true	earthquake	fatigue

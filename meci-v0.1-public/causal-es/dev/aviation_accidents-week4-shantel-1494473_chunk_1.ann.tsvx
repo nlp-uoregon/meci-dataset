@@ -1,0 +1,111 @@
+Text	El Instituto de Protección Civil y Administración de Desastres declaró que podrían haber sido hallados los restos del avión desaparecido en el Páramo de los Conejos , un sitio ubicado a unos diez kilómetros del aeropuerto de origen .	Santa Bárbara Airlines se pronunció en dos ocasiones ; en su primer comunicado manifestaron las palabras de condolencia a los familiares de los pasajeros y tripulantes que fallecieron en el trágico accidente y , además , que se ofrecerían en toda disposición para el traslado de los mismos y para cualquier servicio que los mismos requirieran .	En su segundo comunicado hizo alusión al levantamiento de la orden desprendida del Instituto Nacional de Aeronáutica Civil en la cual obligaban a la empresa a cesar las operaciones donde se utilizara el avión tipo Aeroespatiale ATR 42-300 , por lo tanto , todos los vuelos nacionales habían sido cancelados .	Los vuelos internacionales no se interrumpieron y posteriormente la ruta Mérida_-_Maiquetía estaría siendo cubierta con entera normalidad , aunque los vuelos serían redirigidos al Aeropuerto Internacional Juan Pablo Pérez Alfonso en El Vigía , a unos noventa kilómetros de Mérida .	Uno de los pasajeros era el alcalde del municipio Rangel Alexander Quintero ( cuya capital es la ciudad de Mucuchíes , estado Mérida ) y su hijo Eisberth Quintero de 11 años de edad .
+Event	T0	declaró	EVENT	63
+Event	T1	desaparecido	EVENT	124
+Event	T2	pronunció	EVENT	260
+Event	T3	manifestaron	EVENT	313
+Event	T4	fallecieron	EVENT	406
+Event	T5	accidente	EVENT	432
+Event	T6	traslado	EVENT	501
+Event	T10	obligaban	EVENT	713
+Event	T13	vuelos	EVENT	845
+Event	T14	cancelados	EVENT	875
+Event	T15	vuelos	EVENT	892
+Event	T17	cubierta	EVENT	995
+Event	T18	vuelos	EVENT	1039
+Event	T19	redirigidos	EVENT	1053
+Event	T20	hallados	EVENT	94
+Event	T7	comunicado	EVENT	593
+Event	T8	orden	EVENT	640
+Relation	T5	T4	CauseEffect	true	accidente	fallecieron
+Relation	T4	T5	EffectCause	true	fallecieron	accidente
+Relation	T5	T1	CauseEffect	true	accidente	desaparecido
+Relation	T1	T5	EffectCause	true	desaparecido	accidente
+Relation	T1	T20	CauseEffect	true	desaparecido	hallados
+Relation	T20	T1	EffectCause	true	hallados	desaparecido
+Relation	T5	T8	CauseEffect	true	accidente	orden
+Relation	T8	T5	EffectCause	true	orden	accidente
+Relation	T8	T14	CauseEffect	true	orden	cancelados
+Relation	T14	T8	EffectCause	true	cancelados	orden
+Relation	T0	T10	NoRel	true	declaró	obligaban
+Relation	T0	T17	NoRel	true	declaró	cubierta
+Relation	T0	T20	NoRel	true	declaró	hallados
+Relation	T0	T3	NoRel	true	declaró	manifestaron
+Relation	T0	T4	NoRel	true	declaró	fallecieron
+Relation	T0	T5	NoRel	true	declaró	accidente
+Relation	T0	T7	NoRel	true	declaró	comunicado
+Relation	T1	T10	NoRel	true	desaparecido	obligaban
+Relation	T1	T15	NoRel	true	desaparecido	vuelos
+Relation	T10	T0	NoRel	true	obligaban	declaró
+Relation	T10	T17	NoRel	true	obligaban	cubierta
+Relation	T10	T20	NoRel	true	obligaban	hallados
+Relation	T10	T3	NoRel	true	obligaban	manifestaron
+Relation	T10	T6	NoRel	true	obligaban	traslado
+Relation	T13	T14	NoRel	true	vuelos	cancelados
+Relation	T13	T15	NoRel	true	vuelos	vuelos
+Relation	T13	T2	NoRel	true	vuelos	pronunció
+Relation	T13	T4	NoRel	true	vuelos	fallecieron
+Relation	T13	T6	NoRel	true	vuelos	traslado
+Relation	T14	T17	NoRel	true	cancelados	cubierta
+Relation	T14	T18	NoRel	true	cancelados	vuelos
+Relation	T14	T19	NoRel	true	cancelados	redirigidos
+Relation	T14	T2	NoRel	true	cancelados	pronunció
+Relation	T14	T20	NoRel	true	cancelados	hallados
+Relation	T14	T3	NoRel	true	cancelados	manifestaron
+Relation	T14	T4	NoRel	true	cancelados	fallecieron
+Relation	T14	T7	NoRel	true	cancelados	comunicado
+Relation	T15	T17	NoRel	true	vuelos	cubierta
+Relation	T15	T19	NoRel	true	vuelos	redirigidos
+Relation	T15	T6	NoRel	true	vuelos	traslado
+Relation	T17	T1	NoRel	true	cubierta	desaparecido
+Relation	T17	T10	NoRel	true	cubierta	obligaban
+Relation	T17	T15	NoRel	true	cubierta	vuelos
+Relation	T17	T18	NoRel	true	cubierta	vuelos
+Relation	T17	T20	NoRel	true	cubierta	hallados
+Relation	T17	T4	NoRel	true	cubierta	fallecieron
+Relation	T18	T0	NoRel	true	vuelos	declaró
+Relation	T18	T1	NoRel	true	vuelos	desaparecido
+Relation	T18	T10	NoRel	true	vuelos	obligaban
+Relation	T18	T20	NoRel	true	vuelos	hallados
+Relation	T18	T7	NoRel	true	vuelos	comunicado
+Relation	T18	T8	NoRel	true	vuelos	orden
+Relation	T19	T0	NoRel	true	redirigidos	declaró
+Relation	T19	T18	NoRel	true	redirigidos	vuelos
+Relation	T19	T6	NoRel	true	redirigidos	traslado
+Relation	T2	T1	NoRel	true	pronunció	desaparecido
+Relation	T2	T10	NoRel	true	pronunció	obligaban
+Relation	T2	T15	NoRel	true	pronunció	vuelos
+Relation	T2	T19	NoRel	true	pronunció	redirigidos
+Relation	T20	T0	NoRel	true	hallados	declaró
+Relation	T20	T2	NoRel	true	hallados	pronunció
+Relation	T20	T4	NoRel	true	hallados	fallecieron
+Relation	T20	T5	NoRel	true	hallados	accidente
+Relation	T3	T10	NoRel	true	manifestaron	obligaban
+Relation	T3	T13	NoRel	true	manifestaron	vuelos
+Relation	T3	T6	NoRel	true	manifestaron	traslado
+Relation	T4	T0	NoRel	true	fallecieron	declaró
+Relation	T4	T1	NoRel	true	fallecieron	desaparecido
+Relation	T4	T10	NoRel	true	fallecieron	obligaban
+Relation	T4	T17	NoRel	true	fallecieron	cubierta
+Relation	T4	T18	NoRel	true	fallecieron	vuelos
+Relation	T4	T2	NoRel	true	fallecieron	pronunció
+Relation	T4	T7	NoRel	true	fallecieron	comunicado
+Relation	T4	T8	NoRel	true	fallecieron	orden
+Relation	T5	T13	NoRel	true	accidente	vuelos
+Relation	T5	T18	NoRel	true	accidente	vuelos
+Relation	T5	T3	NoRel	true	accidente	manifestaron
+Relation	T6	T19	NoRel	true	traslado	redirigidos
+Relation	T6	T5	NoRel	true	traslado	accidente
+Relation	T6	T8	NoRel	true	traslado	orden
+Relation	T7	T14	NoRel	true	comunicado	cancelados
+Relation	T7	T2	NoRel	true	comunicado	pronunció
+Relation	T7	T20	NoRel	true	comunicado	hallados
+Relation	T7	T4	NoRel	true	comunicado	fallecieron
+Relation	T7	T8	NoRel	true	comunicado	orden
+Relation	T8	T0	NoRel	true	orden	declaró
+Relation	T8	T1	NoRel	true	orden	desaparecido
+Relation	T8	T13	NoRel	true	orden	vuelos
+Relation	T8	T15	NoRel	true	orden	vuelos
+Relation	T8	T17	NoRel	true	orden	cubierta
+Relation	T8	T18	NoRel	true	orden	vuelos
+Relation	T8	T20	NoRel	true	orden	hallados
+Relation	T8	T3	NoRel	true	orden	manifestaron

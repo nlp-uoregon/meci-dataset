@@ -1,0 +1,66 @@
+Text	Actualmente , según estudios del Centro Nacional de Biotecnología , el virus podría evolucionar de manera que se contagiase entre humanos .	En este sentido , se registró un excepcional caso de contagio de un enfermo a dos familiares en Camboya en 2004 .	Para que aparezca una forma con transmisibilidad entre humanos es necesario que los antígenos de superficie ( hemaglutinina y neuraminidasa ) muten para adaptarse a la especificidad de las membranas de las células humanas , en vez de a las aviarias .	Además la forma de contagio podría evolucionar pasando del contacto directo al modo aéreo .	Todos los virus de la gripe de tipo A , incluidos los que causan epidemias estacionales en el ser humano , son genéticamente hábiles y están bien adaptados para eludir las defensas del huésped .
+Event	T0	estudios	EVENT	20
+Event	T1	evolucionar	EVENT	84
+Event	T2	contagiase	EVENT	113
+Event	T3	registró	EVENT	161
+Event	T4	caso	EVENT	185
+Event	T5	contagio	EVENT	193
+Event	T6	aparezca	EVENT	263
+Event	T7	muten	EVENT	396
+Event	T8	contagio	EVENT	524
+Event	T9	pasando	EVENT	552
+Event	T10	gripe	EVENT	619
+Event	T11	epidemias	EVENT	662
+Event	T12	eludir	EVENT	758
+Event	T13	defensas	EVENT	769
+Relation	T10	T11	CauseEffect	true	gripe	epidemias
+Relation	T11	T10	EffectCause	true	epidemias	gripe
+Relation	T0	T1	NoRel	true	estudios	evolucionar
+Relation	T0	T3	NoRel	true	estudios	registró
+Relation	T0	T4	NoRel	true	estudios	caso
+Relation	T0	T6	NoRel	true	estudios	aparezca
+Relation	T1	T13	NoRel	true	evolucionar	defensas
+Relation	T1	T4	NoRel	true	evolucionar	caso
+Relation	T1	T6	NoRel	true	evolucionar	aparezca
+Relation	T1	T9	NoRel	true	evolucionar	pasando
+Relation	T10	T12	NoRel	true	gripe	eludir
+Relation	T10	T13	NoRel	true	gripe	defensas
+Relation	T10	T2	NoRel	true	gripe	contagiase
+Relation	T10	T5	NoRel	true	gripe	contagio
+Relation	T11	T0	NoRel	true	epidemias	estudios
+Relation	T11	T5	NoRel	true	epidemias	contagio
+Relation	T11	T8	NoRel	true	epidemias	contagio
+Relation	T12	T10	NoRel	true	eludir	gripe
+Relation	T12	T13	NoRel	true	eludir	defensas
+Relation	T12	T7	NoRel	true	eludir	muten
+Relation	T13	T0	NoRel	true	defensas	estudios
+Relation	T13	T12	NoRel	true	defensas	eludir
+Relation	T13	T6	NoRel	true	defensas	aparezca
+Relation	T13	T8	NoRel	true	defensas	contagio
+Relation	T2	T7	NoRel	true	contagiase	muten
+Relation	T3	T1	NoRel	true	registró	evolucionar
+Relation	T3	T11	NoRel	true	registró	epidemias
+Relation	T3	T2	NoRel	true	registró	contagiase
+Relation	T4	T1	NoRel	true	caso	evolucionar
+Relation	T4	T10	NoRel	true	caso	gripe
+Relation	T4	T11	NoRel	true	caso	epidemias
+Relation	T4	T13	NoRel	true	caso	defensas
+Relation	T4	T2	NoRel	true	caso	contagiase
+Relation	T4	T3	NoRel	true	caso	registró
+Relation	T4	T8	NoRel	true	caso	contagio
+Relation	T5	T0	NoRel	true	contagio	estudios
+Relation	T5	T10	NoRel	true	contagio	gripe
+Relation	T5	T13	NoRel	true	contagio	defensas
+Relation	T5	T8	NoRel	true	contagio	contagio
+Relation	T5	T9	NoRel	true	contagio	pasando
+Relation	T6	T0	NoRel	true	aparezca	estudios
+Relation	T6	T5	NoRel	true	aparezca	contagio
+Relation	T6	T9	NoRel	true	aparezca	pasando
+Relation	T7	T10	NoRel	true	muten	gripe
+Relation	T8	T0	NoRel	true	contagio	estudios
+Relation	T8	T10	NoRel	true	contagio	gripe
+Relation	T8	T7	NoRel	true	contagio	muten
+Relation	T9	T0	NoRel	true	pasando	estudios
+Relation	T9	T1	NoRel	true	pasando	evolucionar
+Relation	T9	T6	NoRel	true	pasando	aparezca
+Relation	T9	T7	NoRel	true	pasando	muten

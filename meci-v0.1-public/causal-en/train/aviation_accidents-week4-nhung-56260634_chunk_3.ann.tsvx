@@ -1,0 +1,82 @@
+Text	The speed caused the aircraft to enter an aerodynamic condition known as vortex ring state .	In this condition , a vortex envelops the rotor , causing an aircraft to lose lift , in essence descending in its own downwash .	After two months of investigation by the Marine Corps Judge Advocate General a final report was released which absolved the aircraft itself of any mechanical faults and instead pinned the blame on the exceptionally high rate of descent coupled with human error .	After 16 years of the widows fighting the Marine Corps and the V - 22 Osprey program stakeholders , both pilots were vindicated when they were cleared of blame for the crash in 2016 by then Deputy Defense Secretary Bob Work .	The crash resulted in a two - month moratorium on V - 22 test flights and further postponed its entry into operational military service .
+Event	T0	caused	EVENT	10
+Event	T1	enter	EVENT	33
+Event	T2	envelops	EVENT	122
+Event	T3	causing	EVENT	143
+Event	T5	descending	EVENT	189
+Event	T6	investigation	EVENT	242
+Event	T7	report	EVENT	307
+Event	T8	released	EVENT	318
+Event	T9	absolved	EVENT	333
+Event	T10	faults	EVENT	380
+Event	T11	pinned	EVENT	399
+Event	T12	blame	EVENT	410
+Event	T13	coupled	EVENT	458
+Event	T14	error	EVENT	477
+Event	T15	fighting	EVENT	514
+Event	T16	vindicated	EVENT	602
+Event	T17	cleared	EVENT	628
+Event	T18	crash	EVENT	653
+Event	T20	moratorium	EVENT	747
+Event	T21	flights	EVENT	773
+Event	T22	lose	EVENT	166
+Event	T4	crash	EVENT	715
+Event	T19	postponed	EVENT	793
+Relation	T2	T22	CauseEffect	true	envelops	lose
+Relation	T22	T2	EffectCause	true	lose	envelops
+Relation	T17	T16	CauseEffect	true	cleared	vindicated
+Relation	T16	T17	EffectCause	true	vindicated	cleared
+Relation	T6	T7	CauseEffect	true	investigation	report
+Relation	T7	T6	EffectCause	true	report	investigation
+Relation	T6	T9	CauseEffect	true	investigation	absolved
+Relation	T9	T6	EffectCause	true	absolved	investigation
+Relation	T4	T20	CauseEffect	true	crash	moratorium
+Relation	T20	T4	EffectCause	true	moratorium	crash
+Relation	T4	T19	CauseEffect	true	crash	postponed
+Relation	T19	T4	EffectCause	true	postponed	crash
+Relation	T0	T15	NoRel	true	caused	fighting
+Relation	T0	T17	NoRel	true	caused	cleared
+Relation	T0	T20	NoRel	true	caused	moratorium
+Relation	T0	T22	NoRel	true	caused	lose
+Relation	T0	T3	NoRel	true	caused	causing
+Relation	T10	T16	NoRel	true	faults	vindicated
+Relation	T13	T0	NoRel	true	coupled	caused
+Relation	T13	T5	NoRel	true	coupled	descending
+Relation	T14	T13	NoRel	true	error	coupled
+Relation	T15	T18	NoRel	true	fighting	crash
+Relation	T15	T19	NoRel	true	fighting	postponed
+Relation	T16	T1	NoRel	true	vindicated	enter
+Relation	T16	T10	NoRel	true	vindicated	faults
+Relation	T16	T14	NoRel	true	vindicated	error
+Relation	T16	T15	NoRel	true	vindicated	fighting
+Relation	T17	T0	NoRel	true	cleared	caused
+Relation	T17	T4	NoRel	true	cleared	crash
+Relation	T17	T8	NoRel	true	cleared	released
+Relation	T18	T10	NoRel	true	crash	faults
+Relation	T18	T22	NoRel	true	crash	lose
+Relation	T18	T7	NoRel	true	crash	report
+Relation	T19	T6	NoRel	true	postponed	investigation
+Relation	T2	T12	NoRel	true	envelops	blame
+Relation	T2	T15	NoRel	true	envelops	fighting
+Relation	T20	T14	NoRel	true	moratorium	error
+Relation	T20	T21	NoRel	true	moratorium	flights
+Relation	T20	T6	NoRel	true	moratorium	investigation
+Relation	T21	T15	NoRel	true	flights	fighting
+Relation	T21	T3	NoRel	true	flights	causing
+Relation	T22	T18	NoRel	true	lose	crash
+Relation	T22	T21	NoRel	true	lose	flights
+Relation	T22	T5	NoRel	true	lose	descending
+Relation	T22	T9	NoRel	true	lose	absolved
+Relation	T3	T5	NoRel	true	causing	descending
+Relation	T4	T10	NoRel	true	crash	faults
+Relation	T5	T6	NoRel	true	descending	investigation
+Relation	T6	T10	NoRel	true	investigation	faults
+Relation	T6	T20	NoRel	true	investigation	moratorium
+Relation	T7	T13	NoRel	true	report	coupled
+Relation	T7	T20	NoRel	true	report	moratorium
+Relation	T8	T15	NoRel	true	released	fighting
+Relation	T8	T18	NoRel	true	released	crash
+Relation	T8	T4	NoRel	true	released	crash
+Relation	T9	T1	NoRel	true	absolved	enter
+Relation	T9	T15	NoRel	true	absolved	fighting
+Relation	T9	T7	NoRel	true	absolved	report

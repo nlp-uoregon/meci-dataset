@@ -1,0 +1,109 @@
+Text	13 جنوری 2021ء کو عالمی ادارہ صحت ( WHO ) نے ہدایت_نامہ جاری کیا کہ دنیا بھر میں پی سی آر ٹیسٹ کے لیے سائیکل تھری شولڈ کی حد 40 سے کم کر کے 35 کر دی جاے تاکہ false positive کو مریض نہ گنا جائے ۔	اس کے بعد دنیا بھر میں کورونا کے مریضوں کی تعداد میں کمی آنی شروع ہو گئی ہے ۔	یہ کمی موثر لوک_ڈاون اور کورونا ویکسین سے پہلے ہی آنی شروع ہو گئی تھی ۔	یکم مئی 2021 کو US Center for Disease Control ( CDC ) نے نئی ہدایات جاری کی ہیں کہ اب سے کورونا کی ویکسین لگے ہوئے لوگوں میں جانچ کے لیے سائیکل تھری شولڈ صرف 28 دفعہ کیا جائے گا ۔	اس طرح یہ ثابت کرنے کی کوشش کی جائے گی کہ کورونا ویکسین واقعی بڑی مفید چیز ہے ۔
+Event	T0	ٹیسٹ	EVENT	90
+Event	T3	شروع	EVENT	327
+Event	T4	لگے	EVENT	451
+Event	T5	جانچ	EVENT	470
+Event	T7	ثابت	EVENT	535
+Event	T8	کوشش	EVENT	548
+Event	T9	جاری	EVENT	56
+Event	T10	کم	EVENT	131
+Event	T11	دی	EVENT	146
+Event	T12	false positive	EVENT	158
+Event	T13	گنا	EVENT	184
+Event	T2	کمی	EVENT	248
+Event	T1	لوک_ڈاون	EVENT	285
+Event	T14	کمی	EVENT	276
+Event	T15	جاری	EVENT	413
+Event	T16	کیا	EVENT	511
+Relation	T12	T9	CauseEffect	true	false positive	جاری
+Relation	T9	T12	EffectCause	true	جاری	false positive
+Relation	T9	T11	CauseEffect	true	جاری	دی
+Relation	T11	T9	EffectCause	true	دی	جاری
+Relation	T13	T2	CauseEffect	true	گنا	کمی
+Relation	T2	T13	EffectCause	true	کمی	گنا
+Relation	T5	T15	CauseEffect	true	جانچ	جاری
+Relation	T15	T5	EffectCause	true	جاری	جانچ
+Relation	T16	T7	CauseEffect	true	کیا	ثابت
+Relation	T7	T16	EffectCause	true	ثابت	کیا
+Relation	T0	T1	NoRel	true	ٹیسٹ	لوک_ڈاون
+Relation	T0	T10	NoRel	true	ٹیسٹ	کم
+Relation	T0	T11	NoRel	true	ٹیسٹ	دی
+Relation	T0	T13	NoRel	true	ٹیسٹ	گنا
+Relation	T0	T14	NoRel	true	ٹیسٹ	کمی
+Relation	T0	T15	NoRel	true	ٹیسٹ	جاری
+Relation	T1	T10	NoRel	true	لوک_ڈاون	کم
+Relation	T1	T11	NoRel	true	لوک_ڈاون	دی
+Relation	T1	T15	NoRel	true	لوک_ڈاون	جاری
+Relation	T1	T16	NoRel	true	لوک_ڈاون	کیا
+Relation	T1	T3	NoRel	true	لوک_ڈاون	شروع
+Relation	T1	T4	NoRel	true	لوک_ڈاون	لگے
+Relation	T1	T9	NoRel	true	لوک_ڈاون	جاری
+Relation	T10	T11	NoRel	true	کم	دی
+Relation	T10	T12	NoRel	true	کم	false positive
+Relation	T10	T2	NoRel	true	کم	کمی
+Relation	T10	T3	NoRel	true	کم	شروع
+Relation	T10	T8	NoRel	true	کم	کوشش
+Relation	T11	T1	NoRel	true	دی	لوک_ڈاون
+Relation	T11	T16	NoRel	true	دی	کیا
+Relation	T11	T5	NoRel	true	دی	جانچ
+Relation	T12	T1	NoRel	true	false positive	لوک_ڈاون
+Relation	T12	T14	NoRel	true	false positive	کمی
+Relation	T12	T16	NoRel	true	false positive	کیا
+Relation	T12	T3	NoRel	true	false positive	شروع
+Relation	T12	T4	NoRel	true	false positive	لگے
+Relation	T12	T5	NoRel	true	false positive	جانچ
+Relation	T13	T0	NoRel	true	گنا	ٹیسٹ
+Relation	T13	T1	NoRel	true	گنا	لوک_ڈاون
+Relation	T13	T10	NoRel	true	گنا	کم
+Relation	T13	T16	NoRel	true	گنا	کیا
+Relation	T13	T3	NoRel	true	گنا	شروع
+Relation	T13	T4	NoRel	true	گنا	لگے
+Relation	T14	T0	NoRel	true	کمی	ٹیسٹ
+Relation	T14	T10	NoRel	true	کمی	کم
+Relation	T14	T12	NoRel	true	کمی	false positive
+Relation	T14	T13	NoRel	true	کمی	گنا
+Relation	T14	T2	NoRel	true	کمی	کمی
+Relation	T14	T3	NoRel	true	کمی	شروع
+Relation	T14	T4	NoRel	true	کمی	لگے
+Relation	T14	T7	NoRel	true	کمی	ثابت
+Relation	T15	T10	NoRel	true	جاری	کم
+Relation	T15	T11	NoRel	true	جاری	دی
+Relation	T15	T12	NoRel	true	جاری	false positive
+Relation	T15	T13	NoRel	true	جاری	گنا
+Relation	T15	T14	NoRel	true	جاری	کمی
+Relation	T15	T16	NoRel	true	جاری	کیا
+Relation	T15	T3	NoRel	true	جاری	شروع
+Relation	T15	T4	NoRel	true	جاری	لگے
+Relation	T15	T8	NoRel	true	جاری	کوشش
+Relation	T16	T10	NoRel	true	کیا	کم
+Relation	T16	T14	NoRel	true	کیا	کمی
+Relation	T16	T5	NoRel	true	کیا	جانچ
+Relation	T16	T9	NoRel	true	کیا	جاری
+Relation	T2	T10	NoRel	true	کمی	کم
+Relation	T2	T4	NoRel	true	کمی	لگے
+Relation	T3	T1	NoRel	true	شروع	لوک_ڈاون
+Relation	T3	T13	NoRel	true	شروع	گنا
+Relation	T3	T14	NoRel	true	شروع	کمی
+Relation	T3	T4	NoRel	true	شروع	لگے
+Relation	T3	T5	NoRel	true	شروع	جانچ
+Relation	T3	T8	NoRel	true	شروع	کوشش
+Relation	T4	T0	NoRel	true	لگے	ٹیسٹ
+Relation	T4	T10	NoRel	true	لگے	کم
+Relation	T4	T11	NoRel	true	لگے	دی
+Relation	T4	T3	NoRel	true	لگے	شروع
+Relation	T4	T5	NoRel	true	لگے	جانچ
+Relation	T4	T7	NoRel	true	لگے	ثابت
+Relation	T4	T9	NoRel	true	لگے	جاری
+Relation	T5	T9	NoRel	true	جانچ	جاری
+Relation	T7	T4	NoRel	true	ثابت	لگے
+Relation	T8	T1	NoRel	true	کوشش	لوک_ڈاون
+Relation	T8	T12	NoRel	true	کوشش	false positive
+Relation	T8	T13	NoRel	true	کوشش	گنا
+Relation	T8	T14	NoRel	true	کوشش	کمی
+Relation	T8	T15	NoRel	true	کوشش	جاری
+Relation	T8	T3	NoRel	true	کوشش	شروع
+Relation	T8	T5	NoRel	true	کوشش	جانچ
+Relation	T8	T9	NoRel	true	کوشش	جاری
+Relation	T9	T10	NoRel	true	جاری	کم
+Relation	T9	T16	NoRel	true	جاری	کیا
+Relation	T9	T5	NoRel	true	جاری	جانچ

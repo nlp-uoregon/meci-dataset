@@ -1,0 +1,47 @@
+Text	Det er også det antal man kommer frem til ved at summere det formentlige antal persiske skibe efter Artemisium ( ~ 550 ) og forstærkningerne ( 120 ) , som Herodot nævner .	Den overordnede persiske strategi ved invasionen i 480 f.Kr. var at løbe grækerne over ende med en massiv invasionsstyrke og afslutte erobringen af Grækenland i løbet af et enkelt år .	Tilsvarende prøvede grækerne at få mest muligt ud af deres beskedne antal ved at forsvare afgrænsede områder og holde perserne i felten længst muligt .	Xerxes havde tydeligvis ikke ventet en sådan modstand , ellers ville han have indledt felttoget tidligere på året ( og ikke ventet i 4 dage ved Thermopylæ på at grækerne forsvandt ) .	Tiden var nu af afgørende betydning for perserne – den enorme invasionsstyrke kunne ikke understøttes i ubegrænset tid , og formentlig ønskede Xerxes heller ikke at befinde sig i udkanten af sit rige i længere tid .
+Event	T0	summere	EVENT	49
+Event	T1	nævner	EVENT	163
+Event	T10	ventet	EVENT	633
+Event	T11	forsvandt	EVENT	679
+Event	T2	invasionen	EVENT	210
+Event	T3	løbe	EVENT	240
+Event	T5	prøvede	EVENT	369
+Event	T6	forsvare	EVENT	438
+Event	T7	ventet	EVENT	538
+Event	T8	modstand	EVENT	554
+Event	T9	felttoget	EVENT	595
+Relation	T0	T8	NoRel	true	summere	modstand
+Relation	T1	T5	NoRel	true	nævner	prøvede
+Relation	T1	T6	NoRel	true	nævner	forsvare
+Relation	T10	T1	NoRel	true	ventet	nævner
+Relation	T10	T2	NoRel	true	ventet	invasionen
+Relation	T10	T6	NoRel	true	ventet	forsvare
+Relation	T10	T7	NoRel	true	ventet	ventet
+Relation	T11	T2	NoRel	true	forsvandt	invasionen
+Relation	T11	T7	NoRel	true	forsvandt	ventet
+Relation	T2	T0	NoRel	true	invasionen	summere
+Relation	T2	T1	NoRel	true	invasionen	nævner
+Relation	T2	T3	NoRel	true	invasionen	løbe
+Relation	T2	T6	NoRel	true	invasionen	forsvare
+Relation	T2	T7	NoRel	true	invasionen	ventet
+Relation	T2	T9	NoRel	true	invasionen	felttoget
+Relation	T3	T5	NoRel	true	løbe	prøvede
+Relation	T3	T6	NoRel	true	løbe	forsvare
+Relation	T5	T1	NoRel	true	prøvede	nævner
+Relation	T5	T10	NoRel	true	prøvede	ventet
+Relation	T5	T6	NoRel	true	prøvede	forsvare
+Relation	T5	T8	NoRel	true	prøvede	modstand
+Relation	T6	T11	NoRel	true	forsvare	forsvandt
+Relation	T6	T7	NoRel	true	forsvare	ventet
+Relation	T7	T11	NoRel	true	ventet	forsvandt
+Relation	T7	T3	NoRel	true	ventet	løbe
+Relation	T7	T6	NoRel	true	ventet	forsvare
+Relation	T7	T8	NoRel	true	ventet	modstand
+Relation	T7	T9	NoRel	true	ventet	felttoget
+Relation	T8	T0	NoRel	true	modstand	summere
+Relation	T8	T3	NoRel	true	modstand	løbe
+Relation	T8	T5	NoRel	true	modstand	prøvede
+Relation	T8	T7	NoRel	true	modstand	ventet
+Relation	T9	T0	NoRel	true	felttoget	summere
+Relation	T9	T1	NoRel	true	felttoget	nævner
+Relation	T9	T8	NoRel	true	felttoget	modstand

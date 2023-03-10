@@ -1,0 +1,61 @@
+Text	Lehmann often came into conflict with Hugo Eckener over the safety of his piloting techniques .	Lehmann cancelled important flight tests for the _ Hindenburg _ to fulfill a request by the Nazi Ministry of Propaganda for the _ Hindenburg _ and the _ Graf Zeppelin _ to take part in a propaganda flight (_ Deutschlandfahrt _ ) in support of Adolf Hitler .	Lehmann insisted on making the flight despite unfavorable weather conditions , which resulted in high winds damaging the _ Hindenburg_ { {’}} s lower fin as the airship was being removed from its hangar .	Eckener criticised Lehmann harshly and publicly for endangering the new airship and the entire zeppelin program to impress the Nazis .	However , Lehmann never actually joined the Nazi Party despite his apparent support .
+Event	T0	conflict	EVENT	24
+Event	T1	piloting	EVENT	74
+Event	T2	tests	EVENT	131
+Event	T3	fulfill	EVENT	163
+Event	T4	request	EVENT	173
+Event	T5	flight	EVENT	294
+Event	T6	insisted	EVENT	362
+Event	T7	making	EVENT	374
+Event	T8	flight	EVENT	385
+Event	T9	damaging	EVENT	462
+Event	T10	removed	EVENT	533
+Event	T11	criticised	EVENT	567
+Event	T12	endangering	EVENT	611
+Event	T13	impress	EVENT	674
+Event	T14	joined	EVENT	727
+Event	T15	cancelled	EVENT	104
+Event	T16	take part in	EVENT	268
+Event	T17	support	EVENT	770
+Relation	T1	T0	CauseEffect	true	piloting	conflict
+Relation	T0	T1	EffectCause	true	conflict	piloting
+Relation	T15	T3	CauseEffect	true	cancelled	fulfill
+Relation	T3	T15	EffectCause	true	fulfill	cancelled
+Relation	T4	T16	CauseEffect	true	request	take part in
+Relation	T16	T4	EffectCause	true	take part in	request
+Relation	T8	T9	CauseEffect	true	flight	damaging
+Relation	T9	T8	EffectCause	true	damaging	flight
+Relation	T10	T9	CauseEffect	true	removed	damaging
+Relation	T9	T10	EffectCause	true	damaging	removed
+Relation	T12	T11	CauseEffect	true	endangering	criticised
+Relation	T11	T12	EffectCause	true	criticised	endangering
+Relation	T0	T12	NoRel	true	conflict	endangering
+Relation	T0	T3	NoRel	true	conflict	fulfill
+Relation	T0	T5	NoRel	true	conflict	flight
+Relation	T0	T6	NoRel	true	conflict	insisted
+Relation	T1	T6	NoRel	true	piloting	insisted
+Relation	T10	T2	NoRel	true	removed	tests
+Relation	T11	T17	NoRel	true	criticised	support
+Relation	T11	T6	NoRel	true	criticised	insisted
+Relation	T13	T12	NoRel	true	impress	endangering
+Relation	T14	T15	NoRel	true	joined	cancelled
+Relation	T14	T3	NoRel	true	joined	fulfill
+Relation	T15	T5	NoRel	true	cancelled	flight
+Relation	T16	T0	NoRel	true	take part in	conflict
+Relation	T16	T17	NoRel	true	take part in	support
+Relation	T16	T7	NoRel	true	take part in	making
+Relation	T17	T14	NoRel	true	support	joined
+Relation	T17	T6	NoRel	true	support	insisted
+Relation	T3	T10	NoRel	true	fulfill	removed
+Relation	T3	T11	NoRel	true	fulfill	criticised
+Relation	T3	T6	NoRel	true	fulfill	insisted
+Relation	T4	T17	NoRel	true	request	support
+Relation	T5	T12	NoRel	true	flight	endangering
+Relation	T5	T2	NoRel	true	flight	tests
+Relation	T6	T15	NoRel	true	insisted	cancelled
+Relation	T7	T16	NoRel	true	making	take part in
+Relation	T7	T5	NoRel	true	making	flight
+Relation	T8	T0	NoRel	true	flight	conflict
+Relation	T8	T11	NoRel	true	flight	criticised
+Relation	T8	T3	NoRel	true	flight	fulfill
+Relation	T9	T5	NoRel	true	damaging	flight

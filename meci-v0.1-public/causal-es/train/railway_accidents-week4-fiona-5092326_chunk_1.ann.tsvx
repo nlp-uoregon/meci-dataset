@@ -1,0 +1,146 @@
+Text	En el juicio Once I el tribunal dictó sentencia en 2014 , con 21 condenados ( 18 empresarios , 2 funcionarios y el conductor ) , mientras que en 2018 la Cámara absolvió a uno de los condenados y redujo todas las penas restantes , lo que fue apelado ante la Corte Suprema .	El juicio Once II se realizó en 2018 , y la sentencia registró criterios distintos que Once I , absolviendo al principal acusado , el exministro Julio De Vido del estrago ferroviario , aunque condenándolo por administración fraudulenta .	Entre 2011 y 2013 se produjeron cuatro siniestros ferroviarios en la misma línea ( Sarmiento ) .	Dos de ellos se produjeron en la estación Once , uno en Flores y otro en Castelar .	El primer siniestro se produjo el 13 de septiembre de 2011 , provocando la muerte de 11 personas y lesiones a 228 personas .
+Event	T0	juicio	EVENT	6
+Event	T1	sentencia	EVENT	38
+Event	T2	condenados	EVENT	65
+Event	T3	absolvió	EVENT	160
+Event	T4	redujo	EVENT	195
+Event	T5	penas	EVENT	212
+Event	T6	apelado	EVENT	241
+Event	T7	juicio	EVENT	276
+Event	T8	realizó	EVENT	294
+Event	T9	absolviendo	EVENT	369
+Event	T10	estrago	EVENT	436
+Event	T11	condenándolo	EVENT	465
+Event	T12	produjeron	EVENT	532
+Event	T13	siniestros	EVENT	550
+Event	T14	produjeron	EVENT	624
+Event	T15	siniestro	EVENT	702
+Event	T16	produjo	EVENT	715
+Event	T17	provocando	EVENT	753
+Event	T18	muerte	EVENT	767
+Event	T19	lesiones	EVENT	791
+Relation	T15	T18	CauseEffect	true	siniestro	muerte
+Relation	T18	T15	EffectCause	true	muerte	siniestro
+Relation	T15	T19	CauseEffect	true	siniestro	lesiones
+Relation	T19	T15	EffectCause	true	lesiones	siniestro
+Relation	T0	T11	NoRel	true	juicio	condenándolo
+Relation	T0	T13	NoRel	true	juicio	siniestros
+Relation	T0	T14	NoRel	true	juicio	produjeron
+Relation	T0	T3	NoRel	true	juicio	absolvió
+Relation	T1	T10	NoRel	true	sentencia	estrago
+Relation	T1	T15	NoRel	true	sentencia	siniestro
+Relation	T1	T17	NoRel	true	sentencia	provocando
+Relation	T1	T4	NoRel	true	sentencia	redujo
+Relation	T1	T9	NoRel	true	sentencia	absolviendo
+Relation	T10	T15	NoRel	true	estrago	siniestro
+Relation	T10	T2	NoRel	true	estrago	condenados
+Relation	T10	T3	NoRel	true	estrago	absolvió
+Relation	T10	T4	NoRel	true	estrago	redujo
+Relation	T10	T5	NoRel	true	estrago	penas
+Relation	T10	T8	NoRel	true	estrago	realizó
+Relation	T10	T9	NoRel	true	estrago	absolviendo
+Relation	T11	T12	NoRel	true	condenándolo	produjeron
+Relation	T11	T16	NoRel	true	condenándolo	produjo
+Relation	T11	T18	NoRel	true	condenándolo	muerte
+Relation	T11	T3	NoRel	true	condenándolo	absolvió
+Relation	T11	T5	NoRel	true	condenándolo	penas
+Relation	T12	T15	NoRel	true	produjeron	siniestro
+Relation	T12	T16	NoRel	true	produjeron	produjo
+Relation	T12	T19	NoRel	true	produjeron	lesiones
+Relation	T12	T2	NoRel	true	produjeron	condenados
+Relation	T12	T5	NoRel	true	produjeron	penas
+Relation	T12	T7	NoRel	true	produjeron	juicio
+Relation	T13	T10	NoRel	true	siniestros	estrago
+Relation	T13	T11	NoRel	true	siniestros	condenándolo
+Relation	T13	T15	NoRel	true	siniestros	siniestro
+Relation	T13	T19	NoRel	true	siniestros	lesiones
+Relation	T13	T3	NoRel	true	siniestros	absolvió
+Relation	T13	T8	NoRel	true	siniestros	realizó
+Relation	T14	T1	NoRel	true	produjeron	sentencia
+Relation	T14	T16	NoRel	true	produjeron	produjo
+Relation	T14	T18	NoRel	true	produjeron	muerte
+Relation	T14	T4	NoRel	true	produjeron	redujo
+Relation	T14	T7	NoRel	true	produjeron	juicio
+Relation	T14	T9	NoRel	true	produjeron	absolviendo
+Relation	T15	T11	NoRel	true	siniestro	condenándolo
+Relation	T15	T16	NoRel	true	siniestro	produjo
+Relation	T15	T17	NoRel	true	siniestro	provocando
+Relation	T15	T4	NoRel	true	siniestro	redujo
+Relation	T15	T6	NoRel	true	siniestro	apelado
+Relation	T16	T1	NoRel	true	produjo	sentencia
+Relation	T16	T3	NoRel	true	produjo	absolvió
+Relation	T16	T5	NoRel	true	produjo	penas
+Relation	T16	T6	NoRel	true	produjo	apelado
+Relation	T16	T8	NoRel	true	produjo	realizó
+Relation	T16	T9	NoRel	true	produjo	absolviendo
+Relation	T17	T0	NoRel	true	provocando	juicio
+Relation	T17	T2	NoRel	true	provocando	condenados
+Relation	T17	T3	NoRel	true	provocando	absolvió
+Relation	T17	T5	NoRel	true	provocando	penas
+Relation	T18	T12	NoRel	true	muerte	produjeron
+Relation	T18	T16	NoRel	true	muerte	produjo
+Relation	T18	T2	NoRel	true	muerte	condenados
+Relation	T18	T8	NoRel	true	muerte	realizó
+Relation	T18	T9	NoRel	true	muerte	absolviendo
+Relation	T19	T10	NoRel	true	lesiones	estrago
+Relation	T19	T16	NoRel	true	lesiones	produjo
+Relation	T19	T2	NoRel	true	lesiones	condenados
+Relation	T19	T8	NoRel	true	lesiones	realizó
+Relation	T2	T1	NoRel	true	condenados	sentencia
+Relation	T2	T10	NoRel	true	condenados	estrago
+Relation	T2	T15	NoRel	true	condenados	siniestro
+Relation	T2	T17	NoRel	true	condenados	provocando
+Relation	T2	T18	NoRel	true	condenados	muerte
+Relation	T2	T4	NoRel	true	condenados	redujo
+Relation	T3	T0	NoRel	true	absolvió	juicio
+Relation	T3	T10	NoRel	true	absolvió	estrago
+Relation	T3	T11	NoRel	true	absolvió	condenándolo
+Relation	T3	T15	NoRel	true	absolvió	siniestro
+Relation	T3	T16	NoRel	true	absolvió	produjo
+Relation	T3	T18	NoRel	true	absolvió	muerte
+Relation	T3	T19	NoRel	true	absolvió	lesiones
+Relation	T3	T2	NoRel	true	absolvió	condenados
+Relation	T3	T5	NoRel	true	absolvió	penas
+Relation	T4	T1	NoRel	true	redujo	sentencia
+Relation	T4	T12	NoRel	true	redujo	produjeron
+Relation	T4	T17	NoRel	true	redujo	provocando
+Relation	T4	T5	NoRel	true	redujo	penas
+Relation	T4	T8	NoRel	true	redujo	realizó
+Relation	T5	T10	NoRel	true	penas	estrago
+Relation	T5	T11	NoRel	true	penas	condenándolo
+Relation	T5	T13	NoRel	true	penas	siniestros
+Relation	T5	T16	NoRel	true	penas	produjo
+Relation	T5	T17	NoRel	true	penas	provocando
+Relation	T5	T18	NoRel	true	penas	muerte
+Relation	T5	T3	NoRel	true	penas	absolvió
+Relation	T5	T7	NoRel	true	penas	juicio
+Relation	T5	T9	NoRel	true	penas	absolviendo
+Relation	T6	T2	NoRel	true	apelado	condenados
+Relation	T6	T3	NoRel	true	apelado	absolvió
+Relation	T6	T4	NoRel	true	apelado	redujo
+Relation	T7	T10	NoRel	true	juicio	estrago
+Relation	T7	T11	NoRel	true	juicio	condenándolo
+Relation	T7	T12	NoRel	true	juicio	produjeron
+Relation	T7	T15	NoRel	true	juicio	siniestro
+Relation	T7	T16	NoRel	true	juicio	produjo
+Relation	T7	T18	NoRel	true	juicio	muerte
+Relation	T7	T19	NoRel	true	juicio	lesiones
+Relation	T7	T3	NoRel	true	juicio	absolvió
+Relation	T7	T5	NoRel	true	juicio	penas
+Relation	T8	T0	NoRel	true	realizó	juicio
+Relation	T8	T1	NoRel	true	realizó	sentencia
+Relation	T8	T11	NoRel	true	realizó	condenándolo
+Relation	T8	T12	NoRel	true	realizó	produjeron
+Relation	T8	T13	NoRel	true	realizó	siniestros
+Relation	T8	T16	NoRel	true	realizó	produjo
+Relation	T8	T17	NoRel	true	realizó	provocando
+Relation	T8	T3	NoRel	true	realizó	absolvió
+Relation	T8	T5	NoRel	true	realizó	penas
+Relation	T8	T7	NoRel	true	realizó	juicio
+Relation	T8	T9	NoRel	true	realizó	absolviendo
+Relation	T9	T1	NoRel	true	absolviendo	sentencia
+Relation	T9	T11	NoRel	true	absolviendo	condenándolo
+Relation	T9	T12	NoRel	true	absolviendo	produjeron
+Relation	T9	T17	NoRel	true	absolviendo	provocando
+Relation	T9	T19	NoRel	true	absolviendo	lesiones
+Relation	T9	T7	NoRel	true	absolviendo	juicio

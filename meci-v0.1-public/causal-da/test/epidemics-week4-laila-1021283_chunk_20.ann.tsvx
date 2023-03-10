@@ -1,0 +1,93 @@
+Text	En anden strategi går ud på at skabe _ flokimmunitet _ , dvs. at skabe immunitet " ved at store dele af befolkningen bliver smittet under epidemiens første bølge " .	WHO's ekspert i virus Bruce Aylward advarede mod flokimmunitet som strategisk koncept .	" Flokimmunitet betyder , at folk dør .	Og I prøver ikke at stoppe det . "	Den danske ekspert Kåre Mølbak anbefalede på dette tidspunkt foranstaltninger , som " flader kurven ud " for ikke at overbelaste hospitalsvæsenet .
+Event	T0	skabe	EVENT	31
+Event	T1	smittet	EVENT	124
+Event	T2	epidemiens	EVENT	138
+Event	T3	bølge	EVENT	156
+Event	T4	advarede	EVENT	202
+Event	T5	dør	EVENT	288
+Event	T6	anbefalede	EVENT	360
+Event	T7	overbelaste	EVENT	446
+Event	T8	strategi	EVENT	9
+Event	T9	flokimmunitet	EVENT	39
+Event	T10	immunitet	EVENT	71
+Event	T11	Flokimmunitet	EVENT	256
+Event	T13	stoppe	EVENT	314
+Event	T14	foranstaltninger	EVENT	390
+Event	T12	prøver ikke	EVENT	299
+Relation	T11	T5	CauseEffect	true	Flokimmunitet	dør
+Relation	T5	T11	EffectCause	true	dør	Flokimmunitet
+Relation	T12	T4	CauseEffect	true	prøver ikke	advarede
+Relation	T4	T12	EffectCause	true	advarede	prøver ikke
+Relation	T7	T14	CauseEffect	true	overbelaste	foranstaltninger
+Relation	T14	T7	EffectCause	true	foranstaltninger	overbelaste
+Relation	T0	T11	NoRel	true	skabe	Flokimmunitet
+Relation	T0	T14	NoRel	true	skabe	foranstaltninger
+Relation	T0	T2	NoRel	true	skabe	epidemiens
+Relation	T0	T6	NoRel	true	skabe	anbefalede
+Relation	T0	T8	NoRel	true	skabe	strategi
+Relation	T1	T2	NoRel	true	smittet	epidemiens
+Relation	T1	T3	NoRel	true	smittet	bølge
+Relation	T1	T4	NoRel	true	smittet	advarede
+Relation	T1	T5	NoRel	true	smittet	dør
+Relation	T10	T0	NoRel	true	immunitet	skabe
+Relation	T10	T1	NoRel	true	immunitet	smittet
+Relation	T10	T13	NoRel	true	immunitet	stoppe
+Relation	T10	T14	NoRel	true	immunitet	foranstaltninger
+Relation	T10	T4	NoRel	true	immunitet	advarede
+Relation	T10	T5	NoRel	true	immunitet	dør
+Relation	T10	T6	NoRel	true	immunitet	anbefalede
+Relation	T11	T0	NoRel	true	Flokimmunitet	skabe
+Relation	T11	T14	NoRel	true	Flokimmunitet	foranstaltninger
+Relation	T11	T2	NoRel	true	Flokimmunitet	epidemiens
+Relation	T11	T6	NoRel	true	Flokimmunitet	anbefalede
+Relation	T11	T9	NoRel	true	Flokimmunitet	flokimmunitet
+Relation	T12	T1	NoRel	true	prøver ikke	smittet
+Relation	T12	T13	NoRel	true	prøver ikke	stoppe
+Relation	T12	T14	NoRel	true	prøver ikke	foranstaltninger
+Relation	T12	T5	NoRel	true	prøver ikke	dør
+Relation	T12	T9	NoRel	true	prøver ikke	flokimmunitet
+Relation	T13	T1	NoRel	true	stoppe	smittet
+Relation	T13	T10	NoRel	true	stoppe	immunitet
+Relation	T13	T3	NoRel	true	stoppe	bølge
+Relation	T13	T7	NoRel	true	stoppe	overbelaste
+Relation	T14	T13	NoRel	true	foranstaltninger	stoppe
+Relation	T14	T3	NoRel	true	foranstaltninger	bølge
+Relation	T14	T4	NoRel	true	foranstaltninger	advarede
+Relation	T14	T6	NoRel	true	foranstaltninger	anbefalede
+Relation	T2	T1	NoRel	true	epidemiens	smittet
+Relation	T2	T12	NoRel	true	epidemiens	prøver ikke
+Relation	T2	T5	NoRel	true	epidemiens	dør
+Relation	T2	T9	NoRel	true	epidemiens	flokimmunitet
+Relation	T3	T10	NoRel	true	bølge	immunitet
+Relation	T3	T6	NoRel	true	bølge	anbefalede
+Relation	T3	T7	NoRel	true	bølge	overbelaste
+Relation	T3	T8	NoRel	true	bølge	strategi
+Relation	T3	T9	NoRel	true	bølge	flokimmunitet
+Relation	T4	T0	NoRel	true	advarede	skabe
+Relation	T4	T2	NoRel	true	advarede	epidemiens
+Relation	T4	T5	NoRel	true	advarede	dør
+Relation	T4	T6	NoRel	true	advarede	anbefalede
+Relation	T4	T7	NoRel	true	advarede	overbelaste
+Relation	T5	T0	NoRel	true	dør	skabe
+Relation	T5	T13	NoRel	true	dør	stoppe
+Relation	T5	T4	NoRel	true	dør	advarede
+Relation	T5	T6	NoRel	true	dør	anbefalede
+Relation	T6	T10	NoRel	true	anbefalede	immunitet
+Relation	T6	T2	NoRel	true	anbefalede	epidemiens
+Relation	T6	T7	NoRel	true	anbefalede	overbelaste
+Relation	T6	T8	NoRel	true	anbefalede	strategi
+Relation	T7	T1	NoRel	true	overbelaste	smittet
+Relation	T7	T10	NoRel	true	overbelaste	immunitet
+Relation	T7	T13	NoRel	true	overbelaste	stoppe
+Relation	T7	T6	NoRel	true	overbelaste	anbefalede
+Relation	T8	T0	NoRel	true	strategi	skabe
+Relation	T8	T10	NoRel	true	strategi	immunitet
+Relation	T8	T11	NoRel	true	strategi	Flokimmunitet
+Relation	T8	T5	NoRel	true	strategi	dør
+Relation	T9	T1	NoRel	true	flokimmunitet	smittet
+Relation	T9	T10	NoRel	true	flokimmunitet	immunitet
+Relation	T9	T13	NoRel	true	flokimmunitet	stoppe
+Relation	T9	T14	NoRel	true	flokimmunitet	foranstaltninger
+Relation	T9	T2	NoRel	true	flokimmunitet	epidemiens
+Relation	T9	T5	NoRel	true	flokimmunitet	dør
+Relation	T9	T6	NoRel	true	flokimmunitet	anbefalede

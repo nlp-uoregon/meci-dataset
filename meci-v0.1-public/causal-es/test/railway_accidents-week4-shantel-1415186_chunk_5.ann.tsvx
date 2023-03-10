@@ -1,0 +1,131 @@
+Text	Según testigos , las ventanas del vehículo cedieron permitiendo que los pasajeros salieran despedidos y , puesto que el vehículo se arrastró contra el muro lateral del túnel y sobre la vía , este aplastó a muchas de las víctimas .	La segunda unidad , UTA 3714 , no volcó , solo llegó a descarrilar , por lo que en este no hubo víctimas mortales y este tren regresó a dar servicio de nuevo 5 días después al repararle lo que necesitaba .	Inmediatamente fue informado el Centro de Coordinación de Emergencias por parte de un pasajero afectado , que usó su teléfono móvil particular .	Una veintena de llamadas de socorro fueron efectuadas por otros viajeros a servicios de emergencias .	Efectivos del Cuerpo Municipal de bomberos se desplazaron a la zona , que fue acordonada , para rescatar a los pasajeros atrapados y los cuerpos de los fallecidos .
+Event	T1	despedidos	EVENT	91
+Event	T2	arrastró	EVENT	132
+Event	T3	aplastó	EVENT	196
+Event	T4	volcó	EVENT	265
+Event	T5	llegó	EVENT	278
+Event	T6	descarrilar	EVENT	286
+Event	T7	regresó	EVENT	357
+Event	T8	repararle	EVENT	407
+Event	T9	informado	EVENT	456
+Event	T10	usó	EVENT	547
+Event	T11	llamadas	EVENT	598
+Event	T12	efectuadas	EVENT	625
+Event	T13	desplazaron	EVENT	730
+Event	T14	acordonada	EVENT	762
+Event	T15	rescatar	EVENT	780
+Event	T16	atrapados	EVENT	805
+Event	T17	fallecidos	EVENT	836
+Event	T18	cedieron	EVENT	43
+Relation	T2	T3	CauseEffect	true	arrastró	aplastó
+Relation	T3	T2	EffectCause	true	aplastó	arrastró
+Relation	T18	T1	CauseEffect	true	cedieron	despedidos
+Relation	T1	T18	EffectCause	true	despedidos	cedieron
+Relation	T1	T14	NoRel	true	despedidos	acordonada
+Relation	T1	T16	NoRel	true	despedidos	atrapados
+Relation	T1	T3	NoRel	true	despedidos	aplastó
+Relation	T1	T5	NoRel	true	despedidos	llegó
+Relation	T1	T9	NoRel	true	despedidos	informado
+Relation	T10	T11	NoRel	true	usó	llamadas
+Relation	T10	T12	NoRel	true	usó	efectuadas
+Relation	T10	T16	NoRel	true	usó	atrapados
+Relation	T10	T17	NoRel	true	usó	fallecidos
+Relation	T10	T2	NoRel	true	usó	arrastró
+Relation	T10	T8	NoRel	true	usó	repararle
+Relation	T10	T9	NoRel	true	usó	informado
+Relation	T11	T1	NoRel	true	llamadas	despedidos
+Relation	T11	T2	NoRel	true	llamadas	arrastró
+Relation	T11	T3	NoRel	true	llamadas	aplastó
+Relation	T11	T5	NoRel	true	llamadas	llegó
+Relation	T11	T8	NoRel	true	llamadas	repararle
+Relation	T12	T11	NoRel	true	efectuadas	llamadas
+Relation	T12	T13	NoRel	true	efectuadas	desplazaron
+Relation	T12	T14	NoRel	true	efectuadas	acordonada
+Relation	T12	T16	NoRel	true	efectuadas	atrapados
+Relation	T12	T5	NoRel	true	efectuadas	llegó
+Relation	T13	T14	NoRel	true	desplazaron	acordonada
+Relation	T13	T17	NoRel	true	desplazaron	fallecidos
+Relation	T13	T2	NoRel	true	desplazaron	arrastró
+Relation	T13	T3	NoRel	true	desplazaron	aplastó
+Relation	T13	T6	NoRel	true	desplazaron	descarrilar
+Relation	T13	T8	NoRel	true	desplazaron	repararle
+Relation	T13	T9	NoRel	true	desplazaron	informado
+Relation	T14	T10	NoRel	true	acordonada	usó
+Relation	T14	T13	NoRel	true	acordonada	desplazaron
+Relation	T14	T16	NoRel	true	acordonada	atrapados
+Relation	T14	T5	NoRel	true	acordonada	llegó
+Relation	T14	T7	NoRel	true	acordonada	regresó
+Relation	T14	T9	NoRel	true	acordonada	informado
+Relation	T15	T11	NoRel	true	rescatar	llamadas
+Relation	T15	T14	NoRel	true	rescatar	acordonada
+Relation	T15	T16	NoRel	true	rescatar	atrapados
+Relation	T15	T17	NoRel	true	rescatar	fallecidos
+Relation	T15	T2	NoRel	true	rescatar	arrastró
+Relation	T16	T1	NoRel	true	atrapados	despedidos
+Relation	T16	T11	NoRel	true	atrapados	llamadas
+Relation	T16	T14	NoRel	true	atrapados	acordonada
+Relation	T16	T4	NoRel	true	atrapados	volcó
+Relation	T16	T5	NoRel	true	atrapados	llegó
+Relation	T16	T6	NoRel	true	atrapados	descarrilar
+Relation	T16	T8	NoRel	true	atrapados	repararle
+Relation	T17	T11	NoRel	true	fallecidos	llamadas
+Relation	T17	T12	NoRel	true	fallecidos	efectuadas
+Relation	T17	T14	NoRel	true	fallecidos	acordonada
+Relation	T17	T16	NoRel	true	fallecidos	atrapados
+Relation	T17	T5	NoRel	true	fallecidos	llegó
+Relation	T17	T9	NoRel	true	fallecidos	informado
+Relation	T18	T10	NoRel	true	cedieron	usó
+Relation	T18	T14	NoRel	true	cedieron	acordonada
+Relation	T18	T15	NoRel	true	cedieron	rescatar
+Relation	T18	T17	NoRel	true	cedieron	fallecidos
+Relation	T18	T3	NoRel	true	cedieron	aplastó
+Relation	T18	T4	NoRel	true	cedieron	volcó
+Relation	T18	T7	NoRel	true	cedieron	regresó
+Relation	T18	T8	NoRel	true	cedieron	repararle
+Relation	T2	T11	NoRel	true	arrastró	llamadas
+Relation	T2	T14	NoRel	true	arrastró	acordonada
+Relation	T2	T5	NoRel	true	arrastró	llegó
+Relation	T2	T8	NoRel	true	arrastró	repararle
+Relation	T3	T1	NoRel	true	aplastó	despedidos
+Relation	T3	T14	NoRel	true	aplastó	acordonada
+Relation	T3	T16	NoRel	true	aplastó	atrapados
+Relation	T3	T18	NoRel	true	aplastó	cedieron
+Relation	T3	T7	NoRel	true	aplastó	regresó
+Relation	T3	T8	NoRel	true	aplastó	repararle
+Relation	T4	T10	NoRel	true	volcó	usó
+Relation	T4	T15	NoRel	true	volcó	rescatar
+Relation	T4	T16	NoRel	true	volcó	atrapados
+Relation	T4	T18	NoRel	true	volcó	cedieron
+Relation	T4	T3	NoRel	true	volcó	aplastó
+Relation	T4	T5	NoRel	true	volcó	llegó
+Relation	T4	T8	NoRel	true	volcó	repararle
+Relation	T5	T16	NoRel	true	llegó	atrapados
+Relation	T5	T3	NoRel	true	llegó	aplastó
+Relation	T5	T6	NoRel	true	llegó	descarrilar
+Relation	T5	T7	NoRel	true	llegó	regresó
+Relation	T5	T9	NoRel	true	llegó	informado
+Relation	T6	T13	NoRel	true	descarrilar	desplazaron
+Relation	T6	T16	NoRel	true	descarrilar	atrapados
+Relation	T6	T17	NoRel	true	descarrilar	fallecidos
+Relation	T6	T18	NoRel	true	descarrilar	cedieron
+Relation	T6	T3	NoRel	true	descarrilar	aplastó
+Relation	T6	T4	NoRel	true	descarrilar	volcó
+Relation	T6	T5	NoRel	true	descarrilar	llegó
+Relation	T6	T7	NoRel	true	descarrilar	regresó
+Relation	T7	T1	NoRel	true	regresó	despedidos
+Relation	T7	T12	NoRel	true	regresó	efectuadas
+Relation	T7	T18	NoRel	true	regresó	cedieron
+Relation	T7	T3	NoRel	true	regresó	aplastó
+Relation	T7	T4	NoRel	true	regresó	volcó
+Relation	T8	T11	NoRel	true	repararle	llamadas
+Relation	T8	T12	NoRel	true	repararle	efectuadas
+Relation	T8	T13	NoRel	true	repararle	desplazaron
+Relation	T8	T15	NoRel	true	repararle	rescatar
+Relation	T8	T2	NoRel	true	repararle	arrastró
+Relation	T8	T5	NoRel	true	repararle	llegó
+Relation	T8	T6	NoRel	true	repararle	descarrilar
+Relation	T9	T11	NoRel	true	informado	llamadas
+Relation	T9	T14	NoRel	true	informado	acordonada
+Relation	T9	T15	NoRel	true	informado	rescatar
+Relation	T9	T6	NoRel	true	informado	descarrilar
+Relation	T9	T8	NoRel	true	informado	repararle

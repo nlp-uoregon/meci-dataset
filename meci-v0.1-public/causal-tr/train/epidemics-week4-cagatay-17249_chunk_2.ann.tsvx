@@ -1,0 +1,48 @@
+Text	Cambridgedeki St. John okulunda eğitim gördü .	Yüksek öğrenimini 1569’da Cambridge tamamlayıp burada kısa bir süre veznedar olarak çalıştıktan sonra tıp eğitimi almak üzere Britanya’ya gitti .	1573’te Royal College of Physicians üyeliğine kabul edildi .	1600’de ise bu birliğin başkanı seçildi .	1601’den I. Elizabeth’in 1603’teki ölümüne kadar onun doktoru olarak çalıştı ve daha sonra I. James’in de doktoru oldu .
+Event	T1	öğrenimini	EVENT	54
+Event	T2	tamamlayıp	EVENT	83
+Event	T3	gitti	EVENT	185
+Event	T5	seçildi	EVENT	286
+Event	T6	ölümüne	EVENT	331
+Event	T7	çalıştı	EVENT	365
+Event	T8	eğitim	EVENT	32
+Event	T9	eğitimi	EVENT	153
+Event	T4	kabul edildi	EVENT	239
+Event	T10	oldu	EVENT	410
+Relation	T9	T3	CauseEffect	true	eğitimi	gitti
+Relation	T3	T9	EffectCause	true	gitti	eğitimi
+Relation	T6	T10	CauseEffect	true	ölümüne	oldu
+Relation	T10	T6	EffectCause	true	oldu	ölümüne
+Relation	T1	T2	NoRel	true	öğrenimini	tamamlayıp
+Relation	T1	T3	NoRel	true	öğrenimini	gitti
+Relation	T1	T4	NoRel	true	öğrenimini	kabul edildi
+Relation	T10	T1	NoRel	true	oldu	öğrenimini
+Relation	T10	T2	NoRel	true	oldu	tamamlayıp
+Relation	T10	T3	NoRel	true	oldu	gitti
+Relation	T10	T5	NoRel	true	oldu	seçildi
+Relation	T10	T9	NoRel	true	oldu	eğitimi
+Relation	T2	T3	NoRel	true	tamamlayıp	gitti
+Relation	T2	T4	NoRel	true	tamamlayıp	kabul edildi
+Relation	T2	T5	NoRel	true	tamamlayıp	seçildi
+Relation	T3	T1	NoRel	true	gitti	öğrenimini
+Relation	T3	T10	NoRel	true	gitti	oldu
+Relation	T3	T2	NoRel	true	gitti	tamamlayıp
+Relation	T3	T5	NoRel	true	gitti	seçildi
+Relation	T4	T8	NoRel	true	kabul edildi	eğitim
+Relation	T5	T1	NoRel	true	seçildi	öğrenimini
+Relation	T5	T3	NoRel	true	seçildi	gitti
+Relation	T5	T7	NoRel	true	seçildi	çalıştı
+Relation	T5	T8	NoRel	true	seçildi	eğitim
+Relation	T5	T9	NoRel	true	seçildi	eğitimi
+Relation	T6	T4	NoRel	true	ölümüne	kabul edildi
+Relation	T6	T5	NoRel	true	ölümüne	seçildi
+Relation	T6	T7	NoRel	true	ölümüne	çalıştı
+Relation	T6	T9	NoRel	true	ölümüne	eğitimi
+Relation	T7	T10	NoRel	true	çalıştı	oldu
+Relation	T7	T3	NoRel	true	çalıştı	gitti
+Relation	T7	T4	NoRel	true	çalıştı	kabul edildi
+Relation	T7	T5	NoRel	true	çalıştı	seçildi
+Relation	T7	T8	NoRel	true	çalıştı	eğitim
+Relation	T8	T3	NoRel	true	eğitim	gitti
+Relation	T8	T6	NoRel	true	eğitim	ölümüne
+Relation	T9	T8	NoRel	true	eğitimi	eğitim

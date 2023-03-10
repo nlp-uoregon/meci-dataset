@@ -1,0 +1,56 @@
+Text	El fuselaje frontal quedó destruido , pero la parte posterior del avión permaneció intacta .	El ala izquierda se encontraba sumergida en el río .	El accidente dejó a Nepal Airlines con solo dos aviones en operación para sus vuelos de cabotaje .	La aerolínea informó que efectuaría un cambio de motores que permitiría poner tres Twin Otters más , que en aquel momento estaban aparcados , en el aire , pero que este proceso llevaría al menos cinco meses .	Mientras tanto , la aerolínea esperaba una importante pérdida de cuota de mercado .
+Event	T0	destruido	EVENT	26
+Event	T1	sumergida	EVENT	124
+Event	T2	dejó	EVENT	159
+Event	T3	vuelos	EVENT	224
+Event	T4	informó	EVENT	258
+Event	T5	efectuaría	EVENT	270
+Event	T6	cambio	EVENT	284
+Event	T7	poner	EVENT	317
+Event	T8	aparcados	EVENT	375
+Event	T9	esperaba	EVENT	484
+Event	T10	pérdida	EVENT	508
+Event	T11	accidente	EVENT	149
+Relation	T11	T2	CauseEffect	true	accidente	dejó
+Relation	T2	T11	EffectCause	true	dejó	accidente
+Relation	T0	T1	NoRel	true	destruido	sumergida
+Relation	T0	T6	NoRel	true	destruido	cambio
+Relation	T0	T8	NoRel	true	destruido	aparcados
+Relation	T1	T0	NoRel	true	sumergida	destruido
+Relation	T1	T8	NoRel	true	sumergida	aparcados
+Relation	T10	T11	NoRel	true	pérdida	accidente
+Relation	T10	T2	NoRel	true	pérdida	dejó
+Relation	T10	T4	NoRel	true	pérdida	informó
+Relation	T10	T5	NoRel	true	pérdida	efectuaría
+Relation	T10	T7	NoRel	true	pérdida	poner
+Relation	T11	T0	NoRel	true	accidente	destruido
+Relation	T11	T1	NoRel	true	accidente	sumergida
+Relation	T2	T0	NoRel	true	dejó	destruido
+Relation	T2	T3	NoRel	true	dejó	vuelos
+Relation	T3	T10	NoRel	true	vuelos	pérdida
+Relation	T3	T2	NoRel	true	vuelos	dejó
+Relation	T3	T5	NoRel	true	vuelos	efectuaría
+Relation	T4	T1	NoRel	true	informó	sumergida
+Relation	T4	T10	NoRel	true	informó	pérdida
+Relation	T4	T6	NoRel	true	informó	cambio
+Relation	T5	T10	NoRel	true	efectuaría	pérdida
+Relation	T5	T4	NoRel	true	efectuaría	informó
+Relation	T6	T0	NoRel	true	cambio	destruido
+Relation	T6	T1	NoRel	true	cambio	sumergida
+Relation	T6	T7	NoRel	true	cambio	poner
+Relation	T6	T8	NoRel	true	cambio	aparcados
+Relation	T7	T10	NoRel	true	poner	pérdida
+Relation	T7	T6	NoRel	true	poner	cambio
+Relation	T8	T0	NoRel	true	aparcados	destruido
+Relation	T8	T10	NoRel	true	aparcados	pérdida
+Relation	T8	T3	NoRel	true	aparcados	vuelos
+Relation	T8	T5	NoRel	true	aparcados	efectuaría
+Relation	T8	T6	NoRel	true	aparcados	cambio
+Relation	T8	T7	NoRel	true	aparcados	poner
+Relation	T8	T9	NoRel	true	aparcados	esperaba
+Relation	T9	T1	NoRel	true	esperaba	sumergida
+Relation	T9	T10	NoRel	true	esperaba	pérdida
+Relation	T9	T3	NoRel	true	esperaba	vuelos
+Relation	T9	T4	NoRel	true	esperaba	informó
+Relation	T9	T6	NoRel	true	esperaba	cambio
+Relation	T9	T8	NoRel	true	esperaba	aparcados

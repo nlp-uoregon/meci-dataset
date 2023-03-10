@@ -1,0 +1,54 @@
+Text	Derved steg vandstanden ca. 4 m , som var det man manglede .	De omkringliggende søer , Donssøerne ( Nørresø , Søndersø ) og Stallerup sø , samt tilstødende åer , Vester Nebel Å og Alminde Å forsyner vandværket med vand .	Vandet ledes fra Donssøerne gennem kanaler og ender i et 80 meter langt rør , der har et fald på 25-26 meter , og derfra ind i værkets turbiner .	Der strømmer 6.000 liter vand gennem det 1.7m store rør hvert sekund .	Faldrøret er et nittet stålrør , der er blevet repareret for huller mange gange i årenes løb , pga. korrosion .
+Event	T0	ledes	EVENT	228
+Event	T1	ender	EVENT	267
+Event	T2	fald	EVENT	310
+Event	T3	strømmer	EVENT	371
+Event	T4	repareret	EVENT	485
+Event	T5	korrosion	EVENT	538
+Event	T6	steg	EVENT	7
+Event	T7	manglede	EVENT	50
+Event	T8	omkringliggende	EVENT	64
+Event	T9	forsyner	EVENT	190
+Event	T10	ind	EVENT	342
+Relation	T5	T4	CauseEffect	true	korrosion	repareret
+Relation	T4	T5	EffectCause	true	repareret	korrosion
+Relation	T0	T3	NoRel	true	ledes	strømmer
+Relation	T0	T4	NoRel	true	ledes	repareret
+Relation	T0	T5	NoRel	true	ledes	korrosion
+Relation	T0	T7	NoRel	true	ledes	manglede
+Relation	T1	T5	NoRel	true	ender	korrosion
+Relation	T1	T7	NoRel	true	ender	manglede
+Relation	T10	T1	NoRel	true	ind	ender
+Relation	T10	T2	NoRel	true	ind	fald
+Relation	T10	T5	NoRel	true	ind	korrosion
+Relation	T10	T6	NoRel	true	ind	steg
+Relation	T10	T7	NoRel	true	ind	manglede
+Relation	T10	T9	NoRel	true	ind	forsyner
+Relation	T2	T0	NoRel	true	fald	ledes
+Relation	T2	T4	NoRel	true	fald	repareret
+Relation	T2	T5	NoRel	true	fald	korrosion
+Relation	T2	T6	NoRel	true	fald	steg
+Relation	T2	T7	NoRel	true	fald	manglede
+Relation	T3	T0	NoRel	true	strømmer	ledes
+Relation	T3	T5	NoRel	true	strømmer	korrosion
+Relation	T4	T2	NoRel	true	repareret	fald
+Relation	T4	T9	NoRel	true	repareret	forsyner
+Relation	T5	T1	NoRel	true	korrosion	ender
+Relation	T5	T10	NoRel	true	korrosion	ind
+Relation	T5	T3	NoRel	true	korrosion	strømmer
+Relation	T5	T9	NoRel	true	korrosion	forsyner
+Relation	T6	T2	NoRel	true	steg	fald
+Relation	T6	T3	NoRel	true	steg	strømmer
+Relation	T6	T5	NoRel	true	steg	korrosion
+Relation	T6	T8	NoRel	true	steg	omkringliggende
+Relation	T7	T2	NoRel	true	manglede	fald
+Relation	T7	T8	NoRel	true	manglede	omkringliggende
+Relation	T8	T0	NoRel	true	omkringliggende	ledes
+Relation	T8	T1	NoRel	true	omkringliggende	ender
+Relation	T8	T6	NoRel	true	omkringliggende	steg
+Relation	T9	T10	NoRel	true	forsyner	ind
+Relation	T9	T2	NoRel	true	forsyner	fald
+Relation	T9	T5	NoRel	true	forsyner	korrosion
+Relation	T9	T6	NoRel	true	forsyner	steg
+Relation	T9	T7	NoRel	true	forsyner	manglede
+Relation	T9	T8	NoRel	true	forsyner	omkringliggende

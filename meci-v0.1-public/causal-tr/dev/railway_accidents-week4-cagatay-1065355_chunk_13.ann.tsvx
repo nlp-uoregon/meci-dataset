@@ -1,0 +1,104 @@
+Text	- 2 Şubat , 2003 – Dete ten çarpışması , Zimbabve : İki tren çarpışır , raydan çıkar ve alev alır , 40ın üzerinde ölü .	- 3 Şubat , 2003 – Broadmeadows train runaway & crash , Melbourne , Victoria , Avustrayia : Bir insansız elektrikli banliyö treni Broadmeadows İstasyonu’ndan kurtularak ayrılır ve saatte 100 km den fazla bir hızla Southern Cross Station tren istasyonunda durmakata olan bir dizel yolcu treniyle çarpışmadan önce pek çok yolcuya ve hemzemin geçidine doğru gider .	Çarpışma sonrası iki tren de raydan çıkar .	Bu kazadan dolayı hiç kimse yaralanmaz .	- 18 Şubat , 2003 – Daegu tünel yangını , Güney Kore : Zihinsel hastalıklı bir adam yangın başlatır ve iki metro treni girdap içinde yutulur , 200_den fazla ölü .
+Event	T1	çarpışır	EVENT	61
+Event	T2	çıkar	EVENT	79
+Event	T3	alır	EVENT	93
+Event	T4	ölü	EVENT	114
+Event	T5	runaway	EVENT	158
+Event	T6	crash	EVENT	168
+Event	T7	ayrılır	EVENT	289
+Event	T8	çarpışmadan	EVENT	415
+Event	T9	gider	EVENT	475
+Event	T10	Çarpışma	EVENT	483
+Event	T11	çıkar	EVENT	519
+Event	T13	yangını	EVENT	600
+Event	T14	başlatır	EVENT	659
+Event	T16	yutulur	EVENT	701
+Event	T17	ölü	EVENT	725
+Event	T18	Dete ten çarpışması	EVENT	19
+Relation	T18	T4	CauseEffect	true	Dete ten çarpışması	ölü
+Relation	T4	T18	EffectCause	true	ölü	Dete ten çarpışması
+Relation	T5	T6	CauseEffect	true	runaway	crash
+Relation	T6	T5	EffectCause	true	crash	runaway
+Relation	T7	T8	CauseEffect	true	ayrılır	çarpışmadan
+Relation	T8	T7	EffectCause	true	çarpışmadan	ayrılır
+Relation	T10	T11	CauseEffect	true	Çarpışma	çıkar
+Relation	T11	T10	EffectCause	true	çıkar	Çarpışma
+Relation	T14	T13	CauseEffect	true	başlatır	yangını
+Relation	T13	T14	EffectCause	true	yangını	başlatır
+Relation	T13	T16	CauseEffect	true	yangını	yutulur
+Relation	T16	T13	EffectCause	true	yutulur	yangını
+Relation	T16	T17	CauseEffect	true	yutulur	ölü
+Relation	T17	T16	EffectCause	true	ölü	yutulur
+Relation	T1	T14	NoRel	true	çarpışır	başlatır
+Relation	T1	T17	NoRel	true	çarpışır	ölü
+Relation	T1	T18	NoRel	true	çarpışır	Dete ten çarpışması
+Relation	T1	T2	NoRel	true	çarpışır	çıkar
+Relation	T1	T3	NoRel	true	çarpışır	alır
+Relation	T1	T4	NoRel	true	çarpışır	ölü
+Relation	T1	T7	NoRel	true	çarpışır	ayrılır
+Relation	T1	T9	NoRel	true	çarpışır	gider
+Relation	T10	T13	NoRel	true	Çarpışma	yangını
+Relation	T10	T9	NoRel	true	Çarpışma	gider
+Relation	T11	T7	NoRel	true	çıkar	ayrılır
+Relation	T11	T8	NoRel	true	çıkar	çarpışmadan
+Relation	T11	T9	NoRel	true	çıkar	gider
+Relation	T13	T11	NoRel	true	yangını	çıkar
+Relation	T13	T18	NoRel	true	yangını	Dete ten çarpışması
+Relation	T13	T2	NoRel	true	yangını	çıkar
+Relation	T13	T6	NoRel	true	yangını	crash
+Relation	T14	T10	NoRel	true	başlatır	Çarpışma
+Relation	T14	T11	NoRel	true	başlatır	çıkar
+Relation	T14	T17	NoRel	true	başlatır	ölü
+Relation	T14	T4	NoRel	true	başlatır	ölü
+Relation	T14	T5	NoRel	true	başlatır	runaway
+Relation	T16	T14	NoRel	true	yutulur	başlatır
+Relation	T16	T2	NoRel	true	yutulur	çıkar
+Relation	T16	T4	NoRel	true	yutulur	ölü
+Relation	T16	T6	NoRel	true	yutulur	crash
+Relation	T17	T11	NoRel	true	ölü	çıkar
+Relation	T17	T13	NoRel	true	ölü	yangını
+Relation	T17	T5	NoRel	true	ölü	runaway
+Relation	T17	T7	NoRel	true	ölü	ayrılır
+Relation	T17	T9	NoRel	true	ölü	gider
+Relation	T18	T2	NoRel	true	Dete ten çarpışması	çıkar
+Relation	T18	T3	NoRel	true	Dete ten çarpışması	alır
+Relation	T18	T6	NoRel	true	Dete ten çarpışması	crash
+Relation	T2	T1	NoRel	true	çıkar	çarpışır
+Relation	T2	T10	NoRel	true	çıkar	Çarpışma
+Relation	T2	T11	NoRel	true	çıkar	çıkar
+Relation	T2	T13	NoRel	true	çıkar	yangını
+Relation	T2	T17	NoRel	true	çıkar	ölü
+Relation	T2	T4	NoRel	true	çıkar	ölü
+Relation	T3	T2	NoRel	true	alır	çıkar
+Relation	T3	T4	NoRel	true	alır	ölü
+Relation	T3	T5	NoRel	true	alır	runaway
+Relation	T3	T7	NoRel	true	alır	ayrılır
+Relation	T4	T13	NoRel	true	ölü	yangını
+Relation	T4	T14	NoRel	true	ölü	başlatır
+Relation	T4	T16	NoRel	true	ölü	yutulur
+Relation	T4	T2	NoRel	true	ölü	çıkar
+Relation	T5	T11	NoRel	true	runaway	çıkar
+Relation	T5	T16	NoRel	true	runaway	yutulur
+Relation	T5	T18	NoRel	true	runaway	Dete ten çarpışması
+Relation	T5	T4	NoRel	true	runaway	ölü
+Relation	T6	T1	NoRel	true	crash	çarpışır
+Relation	T6	T11	NoRel	true	crash	çıkar
+Relation	T6	T13	NoRel	true	crash	yangını
+Relation	T7	T1	NoRel	true	ayrılır	çarpışır
+Relation	T7	T10	NoRel	true	ayrılır	Çarpışma
+Relation	T7	T11	NoRel	true	ayrılır	çıkar
+Relation	T7	T17	NoRel	true	ayrılır	ölü
+Relation	T7	T18	NoRel	true	ayrılır	Dete ten çarpışması
+Relation	T7	T6	NoRel	true	ayrılır	crash
+Relation	T8	T10	NoRel	true	çarpışmadan	Çarpışma
+Relation	T8	T16	NoRel	true	çarpışmadan	yutulur
+Relation	T8	T17	NoRel	true	çarpışmadan	ölü
+Relation	T8	T18	NoRel	true	çarpışmadan	Dete ten çarpışması
+Relation	T8	T2	NoRel	true	çarpışmadan	çıkar
+Relation	T8	T6	NoRel	true	çarpışmadan	crash
+Relation	T9	T11	NoRel	true	gider	çıkar
+Relation	T9	T13	NoRel	true	gider	yangını
+Relation	T9	T14	NoRel	true	gider	başlatır
+Relation	T9	T17	NoRel	true	gider	ölü
+Relation	T9	T5	NoRel	true	gider	runaway
+Relation	T9	T6	NoRel	true	gider	crash

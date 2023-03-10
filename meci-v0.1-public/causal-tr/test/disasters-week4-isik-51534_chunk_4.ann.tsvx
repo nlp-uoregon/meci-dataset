@@ -1,0 +1,15 @@
+Text	1980 ile 1986 arasında St. Helens Dağı'nın volkanik faaliyetleri devam eder .	Bu esnada kraterde yeni bir lavadom ( lav patlamasıyla oluşan tepe şeklinde yükselti ) oluşur .	Bu zaman zarfında çok sayıda küçük patlamalar gerçekleşir .	1989 ile 1991 arasında , bazen küçük patlamalarla bağlantılı olan çok sayıda sismik faaliyet olur .	1995 , 1998 ve 2001 yıllarında bir yığın deprem kaydedilir , ancak hiçbir patlama gerçekleşmez .
+Event	T1	oluşur	EVENT	165
+Event	T2	gerçekleşir	EVENT	220
+Event	T3	kaydedilir	EVENT	382
+Event	T4	gerçekleşmez	EVENT	416
+Event	T5	eder	EVENT	71
+Event	T6	olur	EVENT	327
+Relation	T5	T1	CauseEffect	true	eder	oluşur
+Relation	T1	T5	EffectCause	true	oluşur	eder
+Relation	T5	T2	CauseEffect	true	eder	gerçekleşir
+Relation	T2	T5	EffectCause	true	gerçekleşir	eder
+Relation	T3	T1	NoRel	true	kaydedilir	oluşur
+Relation	T4	T1	NoRel	true	gerçekleşmez	oluşur
+Relation	T6	T3	NoRel	true	olur	kaydedilir
+Relation	T6	T4	NoRel	true	olur	gerçekleşmez

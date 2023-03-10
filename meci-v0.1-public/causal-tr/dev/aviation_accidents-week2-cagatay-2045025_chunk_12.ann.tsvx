@@ -1,0 +1,57 @@
+Text	Atlayışları sırasında muhalifler tarafından ateş açıldı .	Paraşütle atlayan pilotlardan biri Suriye Türkmen Ordusu kontrolündeki Türkmen Dağı'na düştü .	Ölü bedeni Suriye Türkmen Ordusu'na mensup 10. Tümen tarafından bulundu .	Rusya Genelkurmay Başkanlığı yaptığı açıklama ile Suriye sınırları içerisinde karadan açılan ateş sonucunda paraşütle atlayan iki pilottan birinin öldürüldüğünü onayladı .	Diğer pilot ise Ensar - üş Şam kontrolündeki Kürt Dağı'na düştü .
+Event	T0	Atlayışları	EVENT	0
+Event	T11	öldürüldüğünü	EVENT	374
+Event	T2	düştü	EVENT	145
+Event	T3	Ölü	EVENT	153
+Event	T4	bulundu	EVENT	217
+Event	T5	açıklama	EVENT	264
+Event	T6	atlayan	EVENT	345
+Event	T7	onayladı	EVENT	388
+Event	T8	düştü	EVENT	457
+Event	T9	atlayan	EVENT	68
+Relation	T9	T2	CauseEffect	true	atlayan	düştü
+Relation	T2	T9	EffectCause	true	düştü	atlayan
+Relation	T2	T3	CauseEffect	true	düştü	Ölü
+Relation	T3	T2	EffectCause	true	Ölü	düştü
+Relation	T2	T4	CauseEffect	true	düştü	bulundu
+Relation	T4	T2	EffectCause	true	bulundu	düştü
+Relation	T11	T7	CauseEffect	true	öldürüldüğünü	onayladı
+Relation	T7	T11	EffectCause	true	onayladı	öldürüldüğünü
+Relation	T6	T8	CauseEffect	true	atlayan	düştü
+Relation	T8	T6	EffectCause	true	düştü	atlayan
+Relation	T0	T8	CauseEffect	true	Atlayışları	düştü
+Relation	T8	T0	EffectCause	true	düştü	Atlayışları
+Relation	T0	T2	CauseEffect	true	Atlayışları	düştü
+Relation	T2	T0	EffectCause	true	düştü	Atlayışları
+Relation	T6	T2	CauseEffect	true	atlayan	düştü
+Relation	T2	T6	EffectCause	true	düştü	atlayan
+Relation	T9	T8	CauseEffect	true	atlayan	düştü
+Relation	T8	T9	EffectCause	true	düştü	atlayan
+Relation	T0	T6	NoRel	true	Atlayışları	atlayan
+Relation	T0	T7	NoRel	true	Atlayışları	onayladı
+Relation	T11	T0	NoRel	true	öldürüldüğünü	Atlayışları
+Relation	T11	T2	NoRel	true	öldürüldüğünü	düştü
+Relation	T11	T4	NoRel	true	öldürüldüğünü	bulundu
+Relation	T11	T6	NoRel	true	öldürüldüğünü	atlayan
+Relation	T2	T7	NoRel	true	düştü	onayladı
+Relation	T3	T4	NoRel	true	Ölü	bulundu
+Relation	T3	T7	NoRel	true	Ölü	onayladı
+Relation	T3	T8	NoRel	true	Ölü	düştü
+Relation	T4	T5	NoRel	true	bulundu	açıklama
+Relation	T4	T8	NoRel	true	bulundu	düştü
+Relation	T5	T11	NoRel	true	açıklama	öldürüldüğünü
+Relation	T5	T2	NoRel	true	açıklama	düştü
+Relation	T5	T3	NoRel	true	açıklama	Ölü
+Relation	T5	T4	NoRel	true	açıklama	bulundu
+Relation	T5	T7	NoRel	true	açıklama	onayladı
+Relation	T5	T8	NoRel	true	açıklama	düştü
+Relation	T6	T11	NoRel	true	atlayan	öldürüldüğünü
+Relation	T7	T0	NoRel	true	onayladı	Atlayışları
+Relation	T7	T4	NoRel	true	onayladı	bulundu
+Relation	T7	T6	NoRel	true	onayladı	atlayan
+Relation	T7	T9	NoRel	true	onayladı	atlayan
+Relation	T8	T4	NoRel	true	düştü	bulundu
+Relation	T8	T7	NoRel	true	düştü	onayladı
+Relation	T9	T11	NoRel	true	atlayan	öldürüldüğünü
+Relation	T9	T3	NoRel	true	atlayan	Ölü
+Relation	T9	T5	NoRel	true	atlayan	açıklama

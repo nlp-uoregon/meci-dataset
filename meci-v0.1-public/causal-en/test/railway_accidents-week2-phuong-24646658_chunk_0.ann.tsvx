@@ -1,0 +1,56 @@
+Text	The CHELFORD RAIL ACCIDENT occurred on 22 December 1894 at Chelford railway station .	The stationmaster was supervising shunting operations , during which a high - sided wagon was fly - shunted ( i.e. run - off ) into a siding in strong winds and rapidly fading light .	As another six wagons were being run onto an adjoining road , the stationmaster saw the high - sided wagon being blown out of its siding by the wind to meet them .	A collision occurred derailing the runaway in such a way that it fouled the main line just as the 16:15 Manchester to Crewe express approached , drawn by two locomotives , LNWR Waterloo Class 2-4-0 No 418 _Zygia_ and Experiment Class No 518 _Express_ .	The stationmaster ran towards them waving a red lamp but the drivers thought he was signalling to the shunters and did not slacken speed .
+Event	T0	occurred	EVENT	27
+Event	T1	fly - shunted	EVENT	180
+Event	T11	derailing	EVENT	455
+Event	T13	fouled	EVENT	499
+Event	T14	approached	EVENT	566
+Event	T15	drawn	EVENT	579
+Event	T17	ran	EVENT	705
+Event	T18	waving	EVENT	722
+Event	T19	thought	EVENT	756
+Event	T20	signalling	EVENT	771
+Event	T21	speed	EVENT	818
+Event	T3	blown out of	EVENT	383
+Event	T5	winds	EVENT	237
+Event	T6	fading	EVENT	255
+Event	T7	saw	EVENT	350
+Event	T9	wind	EVENT	414
+Relation	T5	T1	CauseEffect	true	winds	fly - shunted
+Relation	T1	T5	EffectCause	true	fly - shunted	winds
+Relation	T5	T6	CauseEffect	true	winds	fading
+Relation	T6	T5	EffectCause	true	fading	winds
+Relation	T9	T3	CauseEffect	true	wind	blown out of
+Relation	T3	T9	EffectCause	true	blown out of	wind
+Relation	T11	T13	CauseEffect	true	derailing	fouled
+Relation	T13	T11	EffectCause	true	fouled	derailing
+Relation	T13	T14	CauseEffect	true	fouled	approached
+Relation	T14	T13	EffectCause	true	approached	fouled
+Relation	T13	T15	CauseEffect	true	fouled	drawn
+Relation	T15	T13	EffectCause	true	drawn	fouled
+Relation	T19	T21	CauseEffect	true	thought	speed
+Relation	T21	T19	EffectCause	true	speed	thought
+Relation	T0	T15	NoRel	true	occurred	drawn
+Relation	T0	T18	NoRel	true	occurred	waving
+Relation	T0	T21	NoRel	true	occurred	speed
+Relation	T1	T14	NoRel	true	fly - shunted	approached
+Relation	T13	T17	NoRel	true	fouled	ran
+Relation	T14	T11	NoRel	true	approached	derailing
+Relation	T14	T7	NoRel	true	approached	saw
+Relation	T15	T21	NoRel	true	drawn	speed
+Relation	T17	T15	NoRel	true	ran	drawn
+Relation	T18	T21	NoRel	true	waving	speed
+Relation	T18	T9	NoRel	true	waving	wind
+Relation	T19	T11	NoRel	true	thought	derailing
+Relation	T19	T9	NoRel	true	thought	wind
+Relation	T20	T6	NoRel	true	signalling	fading
+Relation	T21	T13	NoRel	true	speed	fouled
+Relation	T21	T14	NoRel	true	speed	approached
+Relation	T21	T20	NoRel	true	speed	signalling
+Relation	T21	T3	NoRel	true	speed	blown out of
+Relation	T3	T17	NoRel	true	blown out of	ran
+Relation	T3	T18	NoRel	true	blown out of	waving
+Relation	T3	T6	NoRel	true	blown out of	fading
+Relation	T6	T13	NoRel	true	fading	fouled
+Relation	T9	T13	NoRel	true	wind	fouled
+Relation	T9	T14	NoRel	true	wind	approached
+Relation	T9	T17	NoRel	true	wind	ran

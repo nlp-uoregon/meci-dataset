@@ -1,0 +1,24 @@
+Text	پاکستان پولیس کے اعلیٰ عہدیداروں کی سربراہی میں سات گھنٹے تک جاری رہنے والے مذاکرات کے بعد یہ تعطل ختم ہوا ۔	عہدیداروں میں پولیس کے سینئر سپرنٹنڈنٹ پولیس اختر گورچانی ، اسسٹنٹ سپرنٹنڈنٹ پولیس عثمان انور ، ڈپٹی کمشنر اینڈ ڈسٹرکٹ مجسٹریٹ حیدرآباد سہیل اکبر شاہ اور پاکستان رینجرز میجر عامر ہاشمی شامل تھے ۔	اغوا کاروں نے طیارے کے لئے خوراک ، پانی اور ایندھن کا مطالبہ کیا ۔	رینجرز اور فوج کے جوانوں نے پورے ہوائی اڈے کو گھیرے میں لے لیا تھا ۔	حیدری کمپنی ، ساتویں کمانڈو ضرار بٹالین ، ایس ایس جی ڈویژن سے تعلق رکھنے والے کمانڈوز کو طیارے کے ممکنہ طوفان کی وجہ سے الرٹ کردیا گیا تھا ۔
+Event	T0	مذاکرات	EVENT	76
+Event	T1	تعطل	EVENT	94
+Event	T2	مطالبہ	EVENT	359
+Event	T3	طوفان	EVENT	545
+Event	T4	ختم	EVENT	99
+Event	T6	گھیرے	EVENT	418
+Event	T7	الرٹ	EVENT	561
+Relation	T3	T7	CauseEffect	true	طوفان	الرٹ
+Relation	T7	T3	EffectCause	true	الرٹ	طوفان
+Relation	T0	T4	CauseEffect	true	مذاکرات	ختم
+Relation	T4	T0	EffectCause	true	ختم	مذاکرات
+Relation	T0	T7	NoRel	true	مذاکرات	الرٹ
+Relation	T1	T6	NoRel	true	تعطل	گھیرے
+Relation	T1	T7	NoRel	true	تعطل	الرٹ
+Relation	T2	T0	NoRel	true	مطالبہ	مذاکرات
+Relation	T2	T4	NoRel	true	مطالبہ	ختم
+Relation	T2	T7	NoRel	true	مطالبہ	الرٹ
+Relation	T3	T1	NoRel	true	طوفان	تعطل
+Relation	T3	T2	NoRel	true	طوفان	مطالبہ
+Relation	T3	T4	NoRel	true	طوفان	ختم
+Relation	T4	T7	NoRel	true	ختم	الرٹ
+Relation	T6	T3	NoRel	true	گھیرے	طوفان
+Relation	T7	T2	NoRel	true	الرٹ	مطالبہ

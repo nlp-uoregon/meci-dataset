@@ -1,0 +1,56 @@
+Text	En el cuarto día de la batalla dirigió un grupo de mujeres contra el ejército bizantino y derrotó a su comandante en jefe , siendo más tarde herida durante su lucha contra un soldado griego .	Khawlah era hija de uno de los jefes de la tribu Bani Assad .	Su familia estuvo entre las primeras en convertirse al islam .	El nombre de su padre era Malik o Tariq Bin Awse ; también conocido como al-Azwar .	Su talento apareció por primera vez durante la Batalla de Sanita-al-Uqab en 634 , luchando durante el asedio de Damasco , en que su hermano Zirrar ( o Deraar ) dirigía las fuerzas musulmanas y fue herido y hecho prisionero por el ejército bizantino .
+Event	T0	dirigió	EVENT	31
+Event	T1	derrotó	EVENT	90
+Event	T2	herida	EVENT	141
+Event	T3	lucha	EVENT	159
+Event	T4	apareció	EVENT	412
+Event	T6	luchando	EVENT	483
+Event	T7	asedio	EVENT	503
+Event	T8	dirigía	EVENT	561
+Event	T9	herido	EVENT	598
+Event	T10	prisionero	EVENT	613
+Event	T11	estuvo	EVENT	265
+Event	T5	Batalla de Sanita-al-Uqab	EVENT	448
+Relation	T7	T6	CauseEffect	true	asedio	luchando
+Relation	T6	T7	EffectCause	true	luchando	asedio
+Relation	T3	T2	CauseEffect	true	lucha	herida
+Relation	T2	T3	EffectCause	true	herida	lucha
+Relation	T0	T2	NoRel	true	dirigió	herida
+Relation	T0	T9	NoRel	true	dirigió	herido
+Relation	T1	T10	NoRel	true	derrotó	prisionero
+Relation	T1	T4	NoRel	true	derrotó	apareció
+Relation	T1	T7	NoRel	true	derrotó	asedio
+Relation	T10	T5	NoRel	true	prisionero	Batalla de Sanita-al-Uqab
+Relation	T10	T7	NoRel	true	prisionero	asedio
+Relation	T10	T8	NoRel	true	prisionero	dirigía
+Relation	T11	T0	NoRel	true	estuvo	dirigió
+Relation	T11	T1	NoRel	true	estuvo	derrotó
+Relation	T11	T10	NoRel	true	estuvo	prisionero
+Relation	T11	T6	NoRel	true	estuvo	luchando
+Relation	T2	T10	NoRel	true	herida	prisionero
+Relation	T2	T11	NoRel	true	herida	estuvo
+Relation	T2	T4	NoRel	true	herida	apareció
+Relation	T2	T7	NoRel	true	herida	asedio
+Relation	T2	T8	NoRel	true	herida	dirigía
+Relation	T3	T0	NoRel	true	lucha	dirigió
+Relation	T3	T11	NoRel	true	lucha	estuvo
+Relation	T3	T7	NoRel	true	lucha	asedio
+Relation	T4	T0	NoRel	true	apareció	dirigió
+Relation	T4	T3	NoRel	true	apareció	lucha
+Relation	T4	T6	NoRel	true	apareció	luchando
+Relation	T4	T9	NoRel	true	apareció	herido
+Relation	T5	T0	NoRel	true	Batalla de Sanita-al-Uqab	dirigió
+Relation	T5	T2	NoRel	true	Batalla de Sanita-al-Uqab	herida
+Relation	T5	T3	NoRel	true	Batalla de Sanita-al-Uqab	lucha
+Relation	T5	T8	NoRel	true	Batalla de Sanita-al-Uqab	dirigía
+Relation	T6	T10	NoRel	true	luchando	prisionero
+Relation	T6	T4	NoRel	true	luchando	apareció
+Relation	T6	T8	NoRel	true	luchando	dirigía
+Relation	T7	T10	NoRel	true	asedio	prisionero
+Relation	T7	T11	NoRel	true	asedio	estuvo
+Relation	T7	T8	NoRel	true	asedio	dirigía
+Relation	T7	T9	NoRel	true	asedio	herido
+Relation	T8	T3	NoRel	true	dirigía	lucha
+Relation	T8	T5	NoRel	true	dirigía	Batalla de Sanita-al-Uqab
+Relation	T8	T6	NoRel	true	dirigía	luchando
+Relation	T9	T2	NoRel	true	herido	herida

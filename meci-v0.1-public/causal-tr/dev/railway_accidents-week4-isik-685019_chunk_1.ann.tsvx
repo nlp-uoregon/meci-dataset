@@ -1,0 +1,78 @@
+Text	Kazada 8 kişi öldü , 88 kişi yaralandı .	- 2008 , 27 Ocak - İstanbul - Denizli seferini yapan Pamukkale Ekspresi Çöğürler - Değirmenözü ( Kütahya ) istasyonları arasında seyrederken raydan çıktı .	Kaza sonucunda 9 kişi yaşamını yitirdi , 37 kişi yaralandı .	- 2018 , 8 Temmuz - Uzunköprü - İstanbul - Halkalı seferini yapan yolcu treni , Çorlu yakınlarından geçerken , yağış nedeniyle rayların altındaki toprak menfezin kayması sonucu 5 vagon devrildi .	Kazada 25 kişi öldü , 317 kişi de yaralandı .
+Event	T0	öldü	EVENT	14
+Event	T1	yaralandı	EVENT	29
+Event	T2	seyrederken	EVENT	170
+Event	T3	çıktı	EVENT	189
+Event	T4	yitirdi	EVENT	228
+Event	T5	yaralandı	EVENT	246
+Event	T6	geçerken	EVENT	358
+Event	T7	yağış	EVENT	369
+Event	T8	devrildi	EVENT	443
+Event	T9	öldü	EVENT	469
+Event	T10	yaralandı	EVENT	488
+Event	T11	yapan	EVENT	318
+Event	T12	kayması	EVENT	420
+Event	T13	Kazada	EVENT	454
+Relation	T3	T4	CauseEffect	true	çıktı	yitirdi
+Relation	T4	T3	EffectCause	true	yitirdi	çıktı
+Relation	T3	T5	CauseEffect	true	çıktı	yaralandı
+Relation	T5	T3	EffectCause	true	yaralandı	çıktı
+Relation	T7	T12	CauseEffect	true	yağış	kayması
+Relation	T12	T7	EffectCause	true	kayması	yağış
+Relation	T12	T8	CauseEffect	true	kayması	devrildi
+Relation	T8	T12	EffectCause	true	devrildi	kayması
+Relation	T8	T9	CauseEffect	true	devrildi	öldü
+Relation	T9	T8	EffectCause	true	öldü	devrildi
+Relation	T8	T10	CauseEffect	true	devrildi	yaralandı
+Relation	T10	T8	EffectCause	true	yaralandı	devrildi
+Relation	T13	T9	CauseEffect	true	Kazada	öldü
+Relation	T9	T13	EffectCause	true	öldü	Kazada
+Relation	T13	T10	CauseEffect	true	Kazada	yaralandı
+Relation	T10	T13	EffectCause	true	yaralandı	Kazada
+Relation	T0	T1	NoRel	true	öldü	yaralandı
+Relation	T0	T10	NoRel	true	öldü	yaralandı
+Relation	T0	T13	NoRel	true	öldü	Kazada
+Relation	T0	T5	NoRel	true	öldü	yaralandı
+Relation	T0	T6	NoRel	true	öldü	geçerken
+Relation	T0	T7	NoRel	true	öldü	yağış
+Relation	T0	T8	NoRel	true	öldü	devrildi
+Relation	T1	T6	NoRel	true	yaralandı	geçerken
+Relation	T1	T7	NoRel	true	yaralandı	yağış
+Relation	T1	T8	NoRel	true	yaralandı	devrildi
+Relation	T1	T9	NoRel	true	yaralandı	öldü
+Relation	T10	T11	NoRel	true	yaralandı	yapan
+Relation	T10	T3	NoRel	true	yaralandı	çıktı
+Relation	T10	T4	NoRel	true	yaralandı	yitirdi
+Relation	T11	T1	NoRel	true	yapan	yaralandı
+Relation	T12	T13	NoRel	true	kayması	Kazada
+Relation	T13	T2	NoRel	true	Kazada	seyrederken
+Relation	T13	T4	NoRel	true	Kazada	yitirdi
+Relation	T13	T8	NoRel	true	Kazada	devrildi
+Relation	T2	T10	NoRel	true	seyrederken	yaralandı
+Relation	T2	T12	NoRel	true	seyrederken	kayması
+Relation	T2	T3	NoRel	true	seyrederken	çıktı
+Relation	T2	T5	NoRel	true	seyrederken	yaralandı
+Relation	T3	T0	NoRel	true	çıktı	öldü
+Relation	T3	T11	NoRel	true	çıktı	yapan
+Relation	T3	T12	NoRel	true	çıktı	kayması
+Relation	T4	T1	NoRel	true	yitirdi	yaralandı
+Relation	T4	T10	NoRel	true	yitirdi	yaralandı
+Relation	T4	T2	NoRel	true	yitirdi	seyrederken
+Relation	T4	T9	NoRel	true	yitirdi	öldü
+Relation	T5	T0	NoRel	true	yaralandı	öldü
+Relation	T5	T11	NoRel	true	yaralandı	yapan
+Relation	T5	T6	NoRel	true	yaralandı	geçerken
+Relation	T5	T8	NoRel	true	yaralandı	devrildi
+Relation	T6	T1	NoRel	true	geçerken	yaralandı
+Relation	T6	T10	NoRel	true	geçerken	yaralandı
+Relation	T6	T2	NoRel	true	geçerken	seyrederken
+Relation	T6	T8	NoRel	true	geçerken	devrildi
+Relation	T7	T0	NoRel	true	yağış	öldü
+Relation	T7	T10	NoRel	true	yağış	yaralandı
+Relation	T7	T2	NoRel	true	yağış	seyrederken
+Relation	T7	T5	NoRel	true	yağış	yaralandı
+Relation	T7	T6	NoRel	true	yağış	geçerken
+Relation	T8	T0	NoRel	true	devrildi	öldü
+Relation	T8	T11	NoRel	true	devrildi	yapan
+Relation	T8	T4	NoRel	true	devrildi	yitirdi
+Relation	T9	T2	NoRel	true	öldü	seyrederken

@@ -1,0 +1,47 @@
+Text	Bu sırada dört helikopter pilotu , helikopterlerini bırakıp kaçtılar .	Artık şanslarının kalmadığını düşünen bir saldırgan helikopterin içini taramaya başladı , daha sonra da el bombası attı .	Bu sırada diğer saldırganlar da siper aldıkları pozisyondan çıkarak polise karşı bir yarma saldırısına başladılar .	Sonuçta ilk çatışma sırasında öldürülen iki saldırgandan sonra kalan altı saldırgandan da ikisi bu saldırı sonucunda öldürüldü .	Bir saldırgan kaçmaya çalışsa da Alman polisi tarafından yarım saat sonra yakalandı .
+Event	T0	kaçtılar	EVENT	60
+Event	T1	attı	EVENT	186
+Event	T2	çatışma	EVENT	321
+Event	T3	öldürülen	EVENT	339
+Event	T4	saldırı	EVENT	408
+Event	T5	öldürüldü	EVENT	426
+Event	T6	çalışsa	EVENT	460
+Event	T7	yakalandı	EVENT	512
+Event	T8	başladı	EVENT	151
+Event	T9	çıkarak	EVENT	253
+Event	T10	başladılar	EVENT	296
+Relation	T2	T3	CauseEffect	true	çatışma	öldürülen
+Relation	T3	T2	EffectCause	true	öldürülen	çatışma
+Relation	T4	T5	CauseEffect	true	saldırı	öldürüldü
+Relation	T5	T4	EffectCause	true	öldürüldü	saldırı
+Relation	T6	T7	CauseEffect	true	çalışsa	yakalandı
+Relation	T7	T6	EffectCause	true	yakalandı	çalışsa
+Relation	T10	T6	CauseEffect	true	başladılar	çalışsa
+Relation	T6	T10	EffectCause	true	çalışsa	başladılar
+Relation	T8	T9	CauseEffect	true	başladı	çıkarak
+Relation	T9	T8	EffectCause	true	çıkarak	başladı
+Relation	T1	T9	CauseEffect	true	attı	çıkarak
+Relation	T9	T1	EffectCause	true	çıkarak	attı
+Relation	T9	T10	CauseEffect	true	çıkarak	başladılar
+Relation	T10	T9	EffectCause	true	başladılar	çıkarak
+Relation	T0	T3	NoRel	true	kaçtılar	öldürülen
+Relation	T0	T6	NoRel	true	kaçtılar	çalışsa
+Relation	T1	T10	NoRel	true	attı	başladılar
+Relation	T10	T0	NoRel	true	başladılar	kaçtılar
+Relation	T2	T5	NoRel	true	çatışma	öldürüldü
+Relation	T3	T4	NoRel	true	öldürülen	saldırı
+Relation	T4	T0	NoRel	true	saldırı	kaçtılar
+Relation	T4	T1	NoRel	true	saldırı	attı
+Relation	T4	T10	NoRel	true	saldırı	başladılar
+Relation	T4	T3	NoRel	true	saldırı	öldürülen
+Relation	T4	T7	NoRel	true	saldırı	yakalandı
+Relation	T4	T9	NoRel	true	saldırı	çıkarak
+Relation	T6	T1	NoRel	true	çalışsa	attı
+Relation	T6	T2	NoRel	true	çalışsa	çatışma
+Relation	T7	T10	NoRel	true	yakalandı	başladılar
+Relation	T7	T5	NoRel	true	yakalandı	öldürüldü
+Relation	T8	T1	NoRel	true	başladı	attı
+Relation	T8	T10	NoRel	true	başladı	başladılar
+Relation	T9	T0	NoRel	true	çıkarak	kaçtılar
+Relation	T9	T3	NoRel	true	çıkarak	öldürülen
+Relation	T9	T7	NoRel	true	çıkarak	yakalandı

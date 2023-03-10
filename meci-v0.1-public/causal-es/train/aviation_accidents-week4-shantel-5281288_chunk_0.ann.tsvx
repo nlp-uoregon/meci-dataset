@@ -1,0 +1,99 @@
+Text	El lunes 4 de julio de 2011 , un Cessna 208 Caravan de Missinippi Airways se estrelló cuando el piloto intentó abortar el despegue desde el Aeropuerto Pukatawagan .	El avión se salió de la pista y se estrelló en un canal donde comenzó a arder y quedó totalmente destruido .	Un pasajero murió , mientras que el piloto y los otros siete pasajeros resultaron heridos y fueron transportados al hospital .	Ninguno de los trasladados al hospital presentaba heridas de carácter vital .	El avión se trataba de una Cessna 208B Grand Caravan monomotor propiedad de Beaver Air Services y operada por Missinippi Airways ; con registro C-FMCB y número de construcción 208B-1114 .
+Event	T0	estrelló	EVENT	77
+Event	T1	abortar	EVENT	111
+Event	T2	despegue	EVENT	122
+Event	T3	salió	EVENT	177
+Event	T4	estrelló	EVENT	200
+Event	T5	arder	EVENT	237
+Event	T6	destruido	EVENT	262
+Event	T7	murió	EVENT	286
+Event	T8	heridos	EVENT	356
+Event	T9	transportados	EVENT	373
+Event	T10	trasladados	EVENT	416
+Event	T11	heridas	EVENT	451
+Event	T12	operada	EVENT	577
+Event	T13	registro	EVENT	614
+Event	T14	construcción	EVENT	642
+Relation	T3	T4	CauseEffect	true	salió	estrelló
+Relation	T4	T3	EffectCause	true	estrelló	salió
+Relation	T4	T5	CauseEffect	true	estrelló	arder
+Relation	T5	T4	EffectCause	true	arder	estrelló
+Relation	T5	T6	CauseEffect	true	arder	destruido
+Relation	T6	T5	EffectCause	true	destruido	arder
+Relation	T4	T7	CauseEffect	true	estrelló	murió
+Relation	T7	T4	EffectCause	true	murió	estrelló
+Relation	T8	T9	CauseEffect	true	heridos	transportados
+Relation	T9	T8	EffectCause	true	transportados	heridos
+Relation	T0	T13	NoRel	true	estrelló	registro
+Relation	T0	T3	NoRel	true	estrelló	salió
+Relation	T0	T5	NoRel	true	estrelló	arder
+Relation	T1	T0	NoRel	true	abortar	estrelló
+Relation	T1	T10	NoRel	true	abortar	trasladados
+Relation	T1	T13	NoRel	true	abortar	registro
+Relation	T1	T2	NoRel	true	abortar	despegue
+Relation	T1	T3	NoRel	true	abortar	salió
+Relation	T10	T1	NoRel	true	trasladados	abortar
+Relation	T10	T11	NoRel	true	trasladados	heridas
+Relation	T10	T14	NoRel	true	trasladados	construcción
+Relation	T10	T2	NoRel	true	trasladados	despegue
+Relation	T10	T4	NoRel	true	trasladados	estrelló
+Relation	T10	T9	NoRel	true	trasladados	transportados
+Relation	T11	T0	NoRel	true	heridas	estrelló
+Relation	T11	T1	NoRel	true	heridas	abortar
+Relation	T11	T12	NoRel	true	heridas	operada
+Relation	T11	T14	NoRel	true	heridas	construcción
+Relation	T11	T4	NoRel	true	heridas	estrelló
+Relation	T11	T5	NoRel	true	heridas	arder
+Relation	T11	T6	NoRel	true	heridas	destruido
+Relation	T12	T1	NoRel	true	operada	abortar
+Relation	T12	T14	NoRel	true	operada	construcción
+Relation	T12	T6	NoRel	true	operada	destruido
+Relation	T12	T9	NoRel	true	operada	transportados
+Relation	T13	T10	NoRel	true	registro	trasladados
+Relation	T13	T14	NoRel	true	registro	construcción
+Relation	T13	T2	NoRel	true	registro	despegue
+Relation	T13	T3	NoRel	true	registro	salió
+Relation	T13	T7	NoRel	true	registro	murió
+Relation	T13	T8	NoRel	true	registro	heridos
+Relation	T14	T10	NoRel	true	construcción	trasladados
+Relation	T14	T11	NoRel	true	construcción	heridas
+Relation	T14	T12	NoRel	true	construcción	operada
+Relation	T14	T3	NoRel	true	construcción	salió
+Relation	T14	T6	NoRel	true	construcción	destruido
+Relation	T14	T7	NoRel	true	construcción	murió
+Relation	T14	T8	NoRel	true	construcción	heridos
+Relation	T2	T0	NoRel	true	despegue	estrelló
+Relation	T2	T14	NoRel	true	despegue	construcción
+Relation	T2	T7	NoRel	true	despegue	murió
+Relation	T2	T8	NoRel	true	despegue	heridos
+Relation	T2	T9	NoRel	true	despegue	transportados
+Relation	T3	T10	NoRel	true	salió	trasladados
+Relation	T3	T6	NoRel	true	salió	destruido
+Relation	T4	T1	NoRel	true	estrelló	abortar
+Relation	T4	T13	NoRel	true	estrelló	registro
+Relation	T4	T2	NoRel	true	estrelló	despegue
+Relation	T4	T6	NoRel	true	estrelló	destruido
+Relation	T5	T10	NoRel	true	arder	trasladados
+Relation	T5	T13	NoRel	true	arder	registro
+Relation	T5	T8	NoRel	true	arder	heridos
+Relation	T5	T9	NoRel	true	arder	transportados
+Relation	T6	T0	NoRel	true	destruido	estrelló
+Relation	T6	T11	NoRel	true	destruido	heridas
+Relation	T6	T12	NoRel	true	destruido	operada
+Relation	T6	T2	NoRel	true	destruido	despegue
+Relation	T6	T4	NoRel	true	destruido	estrelló
+Relation	T6	T7	NoRel	true	destruido	murió
+Relation	T7	T11	NoRel	true	murió	heridas
+Relation	T7	T13	NoRel	true	murió	registro
+Relation	T7	T5	NoRel	true	murió	arder
+Relation	T7	T8	NoRel	true	murió	heridos
+Relation	T8	T0	NoRel	true	heridos	estrelló
+Relation	T8	T1	NoRel	true	heridos	abortar
+Relation	T8	T10	NoRel	true	heridos	trasladados
+Relation	T8	T2	NoRel	true	heridos	despegue
+Relation	T8	T3	NoRel	true	heridos	salió
+Relation	T8	T6	NoRel	true	heridos	destruido
+Relation	T9	T11	NoRel	true	transportados	heridas
+Relation	T9	T12	NoRel	true	transportados	operada
+Relation	T9	T14	NoRel	true	transportados	construcción
+Relation	T9	T5	NoRel	true	transportados	arder

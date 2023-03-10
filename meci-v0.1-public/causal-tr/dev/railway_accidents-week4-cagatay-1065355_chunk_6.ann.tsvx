@@ -1,0 +1,40 @@
+Text	10 kişi ölür ve 80 üzerinde kişi yaralanır .	Araç sürücüsü daha sonra tehlikeli araç sürmesi nedeniyle ölümcül kazaya sebebiyet vermekten dolayı hapse atılır .	- 27 Mart , 2001 – Pécrot_rail crash , Pécrot , Belçika : İki yolcu treni aynı hatta çarpışır .	8 ölü ve 12 yaralı .	- 12 Nisan , 2001 – Stewiacke , Nova Scotia , Kanada : Bir on üç - on dokuz yaşlarındaki çocuk VIA Rail Canada's _ Ocean __daki kontrol anahtarını kurcalar .
+Event	T0	ölür	EVENT	8
+Event	T1	yaralanır	EVENT	33
+Event	T2	sürmesi	EVENT	85
+Event	T3	atılır	EVENT	151
+Event	T4	crash	EVENT	191
+Event	T5	çarpışır	EVENT	245
+Event	T6	ölü	EVENT	258
+Event	T7	yaralı	EVENT	268
+Event	T8	kurcalar	EVENT	424
+Relation	T2	T0	CauseEffect	true	sürmesi	ölür
+Relation	T0	T2	EffectCause	true	ölür	sürmesi
+Relation	T2	T1	CauseEffect	true	sürmesi	yaralanır
+Relation	T1	T2	EffectCause	true	yaralanır	sürmesi
+Relation	T5	T6	CauseEffect	true	çarpışır	ölü
+Relation	T6	T5	EffectCause	true	ölü	çarpışır
+Relation	T5	T7	CauseEffect	true	çarpışır	yaralı
+Relation	T7	T5	EffectCause	true	yaralı	çarpışır
+Relation	T0	T5	NoRel	true	ölür	çarpışır
+Relation	T0	T6	NoRel	true	ölür	ölü
+Relation	T1	T4	NoRel	true	yaralanır	crash
+Relation	T1	T5	NoRel	true	yaralanır	çarpışır
+Relation	T1	T8	NoRel	true	yaralanır	kurcalar
+Relation	T2	T3	NoRel	true	sürmesi	atılır
+Relation	T2	T5	NoRel	true	sürmesi	çarpışır
+Relation	T2	T7	NoRel	true	sürmesi	yaralı
+Relation	T3	T5	NoRel	true	atılır	çarpışır
+Relation	T4	T3	NoRel	true	crash	atılır
+Relation	T4	T5	NoRel	true	crash	çarpışır
+Relation	T4	T7	NoRel	true	crash	yaralı
+Relation	T5	T3	NoRel	true	çarpışır	atılır
+Relation	T5	T4	NoRel	true	çarpışır	crash
+Relation	T5	T8	NoRel	true	çarpışır	kurcalar
+Relation	T6	T4	NoRel	true	ölü	crash
+Relation	T7	T2	NoRel	true	yaralı	sürmesi
+Relation	T7	T3	NoRel	true	yaralı	atılır
+Relation	T7	T4	NoRel	true	yaralı	crash
+Relation	T8	T0	NoRel	true	kurcalar	ölür
+Relation	T8	T3	NoRel	true	kurcalar	atılır
+Relation	T8	T6	NoRel	true	kurcalar	ölü

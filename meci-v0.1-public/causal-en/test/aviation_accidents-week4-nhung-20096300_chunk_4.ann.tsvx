@@ -1,0 +1,47 @@
+Text	The wreckage was taken back to RAF Binbrook for investigation .	Normally this would have happened at the MOD Crash Investigation Branch , part of the Royal Aircraft Establishment ( now the Air Accidents Investigation Branch ) at Farnborough .	In a letter to the aviation magazine _ FlyPast _ a retired RAF Sqn Ldr states that his aircraft ( Avro Shackleton Mk. III WR 981 ) was the ' Object ' tracked by the various radar stations , and the incident was part of a much larger TACEVAL ( station TACtical EVALuation ) exercise .	Two Lightnings were involved .	The first made four approaches on the Shackleton , before departing the area while the second started an approach ( flown by Capt Schaffner ) , before breaking off to Starboard .
+Event	T0	wreckage	EVENT	4
+Event	T1	investigation	EVENT	48
+Event	T2	happened	EVENT	89
+Event	T3	states	EVENT	314
+Event	T4	tracked	EVENT	393
+Event	T5	incident	EVENT	441
+Event	T6	EVALuation	EVENT	503
+Event	T7	exercise	EVENT	516
+Event	T8	involved	EVENT	547
+Event	T9	made	EVENT	568
+Event	T10	approaches	EVENT	578
+Event	T11	departing	EVENT	616
+Event	T12	started	EVENT	652
+Event	T13	approach	EVENT	663
+Event	T14	flown	EVENT	674
+Event	T15	taken	EVENT	17
+Event	T16	breaking off	EVENT	709
+Relation	T15	T1	CauseEffect	true	taken	investigation
+Relation	T1	T15	EffectCause	true	investigation	taken
+Relation	T7	T5	CauseEffect	true	exercise	incident
+Relation	T5	T7	EffectCause	true	incident	exercise
+Relation	T0	T13	NoRel	true	wreckage	approach
+Relation	T0	T3	NoRel	true	wreckage	states
+Relation	T10	T12	NoRel	true	approaches	started
+Relation	T11	T14	NoRel	true	departing	flown
+Relation	T12	T0	NoRel	true	started	wreckage
+Relation	T12	T2	NoRel	true	started	happened
+Relation	T12	T3	NoRel	true	started	states
+Relation	T12	T9	NoRel	true	started	made
+Relation	T13	T4	NoRel	true	approach	tracked
+Relation	T14	T10	NoRel	true	flown	approaches
+Relation	T14	T3	NoRel	true	flown	states
+Relation	T15	T10	NoRel	true	taken	approaches
+Relation	T15	T16	NoRel	true	taken	breaking off
+Relation	T16	T0	NoRel	true	breaking off	wreckage
+Relation	T2	T1	NoRel	true	happened	investigation
+Relation	T2	T5	NoRel	true	happened	incident
+Relation	T4	T10	NoRel	true	tracked	approaches
+Relation	T5	T16	NoRel	true	incident	breaking off
+Relation	T6	T0	NoRel	true	EVALuation	wreckage
+Relation	T6	T15	NoRel	true	EVALuation	taken
+Relation	T6	T3	NoRel	true	EVALuation	states
+Relation	T6	T7	NoRel	true	EVALuation	exercise
+Relation	T7	T11	NoRel	true	exercise	departing
+Relation	T8	T4	NoRel	true	involved	tracked
+Relation	T9	T12	NoRel	true	made	started

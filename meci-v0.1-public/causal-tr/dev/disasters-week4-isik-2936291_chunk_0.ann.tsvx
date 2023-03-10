@@ -1,0 +1,44 @@
+Text	küçükresim | 300px | 1936 Atlantik kasırga mevsimindeki hava hareketleri 1936 ATLANTIK KASIRGA MEVSIMI , resmi olarak 1 Haziran 1936'da başladı ve 30 Kasım 1936'ya kadar sürdü .	Bu tarihler , geleneksel olarak , Atlantik havzasında çoğu tropikal siklonun oluştuğu her yılın dönemini sınırlar .	1936 sezonu , 3 tropikal depresyon dahil 20 tropikal siklonla oldukça aktifti .	7 fırtına kasırgaya dönüştü ve bunlardan biri büyük bir kasırga haline geldi .	
+Event	T0	hareketleri	EVENT	61
+Event	T1	başladı	EVENT	136
+Event	T2	sürdü	EVENT	170
+Event	T3	oluştuğu	EVENT	255
+Event	T4	dönüştü	EVENT	394
+Event	T5	geldi	EVENT	445
+Event	T6	kasırga	EVENT	35
+Event	T7	KASIRGA	EVENT	87
+Event	T8	fırtına	EVENT	376
+Relation	T8	T4	CauseEffect	true	fırtına	dönüştü
+Relation	T4	T8	EffectCause	true	dönüştü	fırtına
+Relation	T0	T1	NoRel	true	hareketleri	başladı
+Relation	T0	T4	NoRel	true	hareketleri	dönüştü
+Relation	T0	T6	NoRel	true	hareketleri	kasırga
+Relation	T0	T8	NoRel	true	hareketleri	fırtına
+Relation	T1	T3	NoRel	true	başladı	oluştuğu
+Relation	T1	T8	NoRel	true	başladı	fırtına
+Relation	T2	T0	NoRel	true	sürdü	hareketleri
+Relation	T2	T3	NoRel	true	sürdü	oluştuğu
+Relation	T2	T7	NoRel	true	sürdü	KASIRGA
+Relation	T3	T1	NoRel	true	oluştuğu	başladı
+Relation	T3	T2	NoRel	true	oluştuğu	sürdü
+Relation	T3	T5	NoRel	true	oluştuğu	geldi
+Relation	T3	T6	NoRel	true	oluştuğu	kasırga
+Relation	T3	T7	NoRel	true	oluştuğu	KASIRGA
+Relation	T4	T0	NoRel	true	dönüştü	hareketleri
+Relation	T4	T3	NoRel	true	dönüştü	oluştuğu
+Relation	T5	T0	NoRel	true	geldi	hareketleri
+Relation	T5	T1	NoRel	true	geldi	başladı
+Relation	T5	T2	NoRel	true	geldi	sürdü
+Relation	T5	T3	NoRel	true	geldi	oluştuğu
+Relation	T5	T8	NoRel	true	geldi	fırtına
+Relation	T6	T0	NoRel	true	kasırga	hareketleri
+Relation	T6	T2	NoRel	true	kasırga	sürdü
+Relation	T6	T3	NoRel	true	kasırga	oluştuğu
+Relation	T6	T5	NoRel	true	kasırga	geldi
+Relation	T6	T7	NoRel	true	kasırga	KASIRGA
+Relation	T7	T0	NoRel	true	KASIRGA	hareketleri
+Relation	T7	T2	NoRel	true	KASIRGA	sürdü
+Relation	T7	T3	NoRel	true	KASIRGA	oluştuğu
+Relation	T7	T6	NoRel	true	KASIRGA	kasırga
+Relation	T7	T8	NoRel	true	KASIRGA	fırtına
+Relation	T8	T5	NoRel	true	fırtına	geldi

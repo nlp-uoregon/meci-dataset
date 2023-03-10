@@ -1,0 +1,65 @@
+Text	Inmediatamente después de tocar tierra , Yutu experimentó un ciclo de sustitución en la pared del ojo ( eyewall ) , provocando que se debilitara momentáneamente mientras completaba el proceso .	Manteniendo el estado de super tifón , Yutu continuó moviéndose hacia el oeste hacia las Filipinas , entrando al Área de Responsabilidad Filipina ( Philippine Area of Responsibility , PAR ) .	La tormenta causó un daño catastrófico al atravesar Tinian y Saipán , destruyendo numerosos hograes y matando a 2 personas .	Los vientos violentos destruyeron estructuras de concreto en el sur de Saipán y removieron grandes áreas de vegetación .	En las Filipinas , los derrumbes extendidos mataron al menos 6 personas y dejaron más de 23 desaparecidos .
+Event	T0	experimentó	EVENT	46
+Event	T11	atravesar	EVENT	428
+Event	T12	destruyendo	EVENT	456
+Event	T13	matando	EVENT	488
+Event	T14	destruyeron	EVENT	533
+Event	T15	removieron	EVENT	591
+Event	T16	mataron	EVENT	676
+Event	T17	dejaron	EVENT	706
+Event	T3	provocando	EVENT	116
+Event	T8	tocar	EVENT	26
+Event	T1	tormenta	EVENT	389
+Event	T2	derrumbes	EVENT	655
+Relation	T1	T12	CauseEffect	true	tormenta	destruyendo
+Relation	T12	T1	EffectCause	true	destruyendo	tormenta
+Relation	T1	T13	CauseEffect	true	tormenta	matando
+Relation	T13	T1	EffectCause	true	matando	tormenta
+Relation	T1	T14	CauseEffect	true	tormenta	destruyeron
+Relation	T14	T1	EffectCause	true	destruyeron	tormenta
+Relation	T1	T15	CauseEffect	true	tormenta	removieron
+Relation	T15	T1	EffectCause	true	removieron	tormenta
+Relation	T1	T2	CauseEffect	true	tormenta	derrumbes
+Relation	T2	T1	EffectCause	true	derrumbes	tormenta
+Relation	T2	T16	CauseEffect	true	derrumbes	mataron
+Relation	T16	T2	EffectCause	true	mataron	derrumbes
+Relation	T16	T17	CauseEffect	true	mataron	dejaron
+Relation	T17	T16	EffectCause	true	dejaron	mataron
+Relation	T0	T1	NoRel	true	experimentó	tormenta
+Relation	T0	T16	NoRel	true	experimentó	mataron
+Relation	T0	T8	NoRel	true	experimentó	tocar
+Relation	T1	T0	NoRel	true	tormenta	experimentó
+Relation	T1	T11	NoRel	true	tormenta	atravesar
+Relation	T1	T3	NoRel	true	tormenta	provocando
+Relation	T11	T14	NoRel	true	atravesar	destruyeron
+Relation	T11	T17	NoRel	true	atravesar	dejaron
+Relation	T12	T0	NoRel	true	destruyendo	experimentó
+Relation	T13	T0	NoRel	true	matando	experimentó
+Relation	T13	T15	NoRel	true	matando	removieron
+Relation	T13	T2	NoRel	true	matando	derrumbes
+Relation	T13	T3	NoRel	true	matando	provocando
+Relation	T14	T15	NoRel	true	destruyeron	removieron
+Relation	T14	T3	NoRel	true	destruyeron	provocando
+Relation	T15	T11	NoRel	true	removieron	atravesar
+Relation	T15	T12	NoRel	true	removieron	destruyendo
+Relation	T15	T17	NoRel	true	removieron	dejaron
+Relation	T16	T1	NoRel	true	mataron	tormenta
+Relation	T16	T12	NoRel	true	mataron	destruyendo
+Relation	T16	T13	NoRel	true	mataron	matando
+Relation	T16	T14	NoRel	true	mataron	destruyeron
+Relation	T16	T3	NoRel	true	mataron	provocando
+Relation	T17	T11	NoRel	true	dejaron	atravesar
+Relation	T17	T13	NoRel	true	dejaron	matando
+Relation	T17	T2	NoRel	true	dejaron	derrumbes
+Relation	T2	T0	NoRel	true	derrumbes	experimentó
+Relation	T2	T14	NoRel	true	derrumbes	destruyeron
+Relation	T3	T0	NoRel	true	provocando	experimentó
+Relation	T3	T1	NoRel	true	provocando	tormenta
+Relation	T3	T11	NoRel	true	provocando	atravesar
+Relation	T3	T13	NoRel	true	provocando	matando
+Relation	T3	T16	NoRel	true	provocando	mataron
+Relation	T3	T17	NoRel	true	provocando	dejaron
+Relation	T3	T8	NoRel	true	provocando	tocar
+Relation	T8	T1	NoRel	true	tocar	tormenta
+Relation	T8	T16	NoRel	true	tocar	mataron
+Relation	T8	T17	NoRel	true	tocar	dejaron

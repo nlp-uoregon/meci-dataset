@@ -1,0 +1,103 @@
+Text	Patlamayla meydana gelen kül , dünya genelinde dağıldı ve sıcaklıkların düşmesine neden oldu .	Böylece 1816'da Yaz Yaşanmayan Yıl olarak bilinen küresel bir hasat kıtlığı oluştu .	Patlama , kısa bir süre önemli iklim değişikliğine neden oldu , bu da çeşitli aşırı hava koşullarını doğurdu .	Çeşitli iklim zorlamaları , Taş Devri'nin başlangıcından bu yana meydana gelen diğer büyük patlamalara rağmen bu patlamadan beri gözlemlenmeyen , sistematik bir şekilde çakıştı ve etkileşime girdi .	Patlama sonrası iklim değişikliği ile Tambora olayı arasındaki bağlantı çeşitli biliminsanları tarafından kurulmuş olsa da ilgili süreçlerin anlaşılması tamamlanmamıştır .
+Event	T0	kül	EVENT	25
+Event	T1	dağıldı	EVENT	47
+Event	T2	oldu	EVENT	88
+Event	T3	oluştu	EVENT	171
+Event	T4	Patlama	EVENT	180
+Event	T5	doğurdu	EVENT	281
+Event	T6	zorlamaları	EVENT	305
+Event	T8	patlamalara	EVENT	382
+Event	T9	çakıştı	EVENT	460
+Event	T10	girdi	EVENT	482
+Event	T11	Patlama	EVENT	490
+Event	T12	değişikliği	EVENT	512
+Event	T13	olayı	EVENT	536
+Event	T14	kurulmuş	EVENT	596
+Event	T15	Patlamayla	EVENT	0
+Event	T16	oldu	EVENT	237
+Relation	T15	T0	CauseEffect	true	Patlamayla	kül
+Relation	T0	T15	EffectCause	true	kül	Patlamayla
+Relation	T0	T2	CauseEffect	true	kül	oldu
+Relation	T2	T0	EffectCause	true	oldu	kül
+Relation	T2	T3	CauseEffect	true	oldu	oluştu
+Relation	T3	T2	EffectCause	true	oluştu	oldu
+Relation	T4	T16	CauseEffect	true	Patlama	oldu
+Relation	T16	T4	EffectCause	true	oldu	Patlama
+Relation	T16	T5	CauseEffect	true	oldu	doğurdu
+Relation	T5	T16	EffectCause	true	doğurdu	oldu
+Relation	T0	T10	NoRel	true	kül	girdi
+Relation	T0	T11	NoRel	true	kül	Patlama
+Relation	T0	T12	NoRel	true	kül	değişikliği
+Relation	T0	T3	NoRel	true	kül	oluştu
+Relation	T0	T4	NoRel	true	kül	Patlama
+Relation	T0	T9	NoRel	true	kül	çakıştı
+Relation	T1	T15	NoRel	true	dağıldı	Patlamayla
+Relation	T1	T8	NoRel	true	dağıldı	patlamalara
+Relation	T1	T9	NoRel	true	dağıldı	çakıştı
+Relation	T10	T16	NoRel	true	girdi	oldu
+Relation	T10	T2	NoRel	true	girdi	oldu
+Relation	T10	T3	NoRel	true	girdi	oluştu
+Relation	T10	T9	NoRel	true	girdi	çakıştı
+Relation	T11	T1	NoRel	true	Patlama	dağıldı
+Relation	T11	T15	NoRel	true	Patlama	Patlamayla
+Relation	T11	T5	NoRel	true	Patlama	doğurdu
+Relation	T11	T8	NoRel	true	Patlama	patlamalara
+Relation	T12	T0	NoRel	true	değişikliği	kül
+Relation	T12	T10	NoRel	true	değişikliği	girdi
+Relation	T12	T14	NoRel	true	değişikliği	kurulmuş
+Relation	T12	T3	NoRel	true	değişikliği	oluştu
+Relation	T12	T6	NoRel	true	değişikliği	zorlamaları
+Relation	T13	T1	NoRel	true	olayı	dağıldı
+Relation	T13	T14	NoRel	true	olayı	kurulmuş
+Relation	T13	T5	NoRel	true	olayı	doğurdu
+Relation	T14	T13	NoRel	true	kurulmuş	olayı
+Relation	T15	T10	NoRel	true	Patlamayla	girdi
+Relation	T15	T11	NoRel	true	Patlamayla	Patlama
+Relation	T15	T12	NoRel	true	Patlamayla	değişikliği
+Relation	T15	T16	NoRel	true	Patlamayla	oldu
+Relation	T15	T2	NoRel	true	Patlamayla	oldu
+Relation	T15	T3	NoRel	true	Patlamayla	oluştu
+Relation	T15	T4	NoRel	true	Patlamayla	Patlama
+Relation	T15	T6	NoRel	true	Patlamayla	zorlamaları
+Relation	T16	T1	NoRel	true	oldu	dağıldı
+Relation	T16	T11	NoRel	true	oldu	Patlama
+Relation	T16	T13	NoRel	true	oldu	olayı
+Relation	T16	T14	NoRel	true	oldu	kurulmuş
+Relation	T16	T15	NoRel	true	oldu	Patlamayla
+Relation	T16	T8	NoRel	true	oldu	patlamalara
+Relation	T2	T1	NoRel	true	oldu	dağıldı
+Relation	T2	T11	NoRel	true	oldu	Patlama
+Relation	T2	T12	NoRel	true	oldu	değişikliği
+Relation	T2	T14	NoRel	true	oldu	kurulmuş
+Relation	T2	T4	NoRel	true	oldu	Patlama
+Relation	T2	T5	NoRel	true	oldu	doğurdu
+Relation	T2	T9	NoRel	true	oldu	çakıştı
+Relation	T3	T12	NoRel	true	oluştu	değişikliği
+Relation	T3	T13	NoRel	true	oluştu	olayı
+Relation	T3	T15	NoRel	true	oluştu	Patlamayla
+Relation	T3	T16	NoRel	true	oluştu	oldu
+Relation	T3	T6	NoRel	true	oluştu	zorlamaları
+Relation	T4	T0	NoRel	true	Patlama	kül
+Relation	T4	T10	NoRel	true	Patlama	girdi
+Relation	T4	T11	NoRel	true	Patlama	Patlama
+Relation	T4	T12	NoRel	true	Patlama	değişikliği
+Relation	T4	T13	NoRel	true	Patlama	olayı
+Relation	T4	T5	NoRel	true	Patlama	doğurdu
+Relation	T4	T8	NoRel	true	Patlama	patlamalara
+Relation	T5	T1	NoRel	true	doğurdu	dağıldı
+Relation	T5	T11	NoRel	true	doğurdu	Patlama
+Relation	T6	T16	NoRel	true	zorlamaları	oldu
+Relation	T6	T4	NoRel	true	zorlamaları	Patlama
+Relation	T6	T8	NoRel	true	zorlamaları	patlamalara
+Relation	T8	T10	NoRel	true	patlamalara	girdi
+Relation	T8	T13	NoRel	true	patlamalara	olayı
+Relation	T8	T15	NoRel	true	patlamalara	Patlamayla
+Relation	T8	T16	NoRel	true	patlamalara	oldu
+Relation	T8	T3	NoRel	true	patlamalara	oluştu
+Relation	T8	T6	NoRel	true	patlamalara	zorlamaları
+Relation	T8	T9	NoRel	true	patlamalara	çakıştı
+Relation	T9	T0	NoRel	true	çakıştı	kül
+Relation	T9	T12	NoRel	true	çakıştı	değişikliği
+Relation	T9	T13	NoRel	true	çakıştı	olayı
+Relation	T9	T14	NoRel	true	çakıştı	kurulmuş
+Relation	T9	T5	NoRel	true	çakıştı	doğurdu

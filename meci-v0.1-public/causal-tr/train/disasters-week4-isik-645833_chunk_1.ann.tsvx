@@ -1,0 +1,83 @@
+Text	Bu kurum silahlı kuvvetler , özel sektör ( yerel , ulusal ve uluslararası ) , sivil toplum kuruluşları , yabancı hükümetler ve BM kuruluşları tarafından destekleniyordu .	Henüz yaşamakta olan kişilerin aranması , yaralıların bulundukları bölgeden ivedilikle taşınmaları , enkazın kaldırılması , güvenlik önlemlerinin sıkılaştırılması ve depremden etkilenen insanların gereksinimlerine yanıt verilmesi öncelikle ele alınan tedbirlerdi .	Evlerini yitiren insanlara barınma olanağı sağlandı , portatif tuvaletler sipariş edildi , temiz su ve sağlık hizmetleri sunulmaya başlandı , gıda yardımına hız verildi ve özellikle çocuklar için eğitsel ve psikososyal destek sağlandı .	Hemen deprem sonrasında 37 milyon dolarlık bir gelir toplandı .	Bu miktarın 9.5 milyon doları Acil Yardım Destek Ödeneği ( CERF ) tarafından karşılandı .
+Event	T0	aranması	EVENT	202
+Event	T1	taşınmaları	EVENT	258
+Event	T2	kaldırılması	EVENT	280
+Event	T3	yitiren	EVENT	445
+Event	T4	sağlandı	EVENT	479
+Event	T5	edildi	EVENT	518
+Event	T6	verildi	EVENT	597
+Event	T7	sağlandı	EVENT	662
+Event	T8	deprem	EVENT	679
+Event	T9	toplandı	EVENT	726
+Event	T10	karşılandı	EVENT	814
+Event	T11	sıkılaştırılması	EVENT	317
+Event	T12	verilmesi	EVENT	391
+Event	T13	başlandı	EVENT	567
+Relation	T3	T4	CauseEffect	true	yitiren	sağlandı
+Relation	T4	T3	EffectCause	true	sağlandı	yitiren
+Relation	T4	T5	CauseEffect	true	sağlandı	edildi
+Relation	T5	T4	EffectCause	true	edildi	sağlandı
+Relation	T3	T13	CauseEffect	true	yitiren	başlandı
+Relation	T13	T3	EffectCause	true	başlandı	yitiren
+Relation	T3	T6	CauseEffect	true	yitiren	verildi
+Relation	T6	T3	EffectCause	true	verildi	yitiren
+Relation	T8	T9	CauseEffect	true	deprem	toplandı
+Relation	T9	T8	EffectCause	true	toplandı	deprem
+Relation	T8	T3	CauseEffect	true	deprem	yitiren
+Relation	T3	T8	EffectCause	true	yitiren	deprem
+Relation	T8	T7	CauseEffect	true	deprem	sağlandı
+Relation	T7	T8	EffectCause	true	sağlandı	deprem
+Relation	T0	T1	NoRel	true	aranması	taşınmaları
+Relation	T0	T11	NoRel	true	aranması	sıkılaştırılması
+Relation	T0	T12	NoRel	true	aranması	verilmesi
+Relation	T0	T2	NoRel	true	aranması	kaldırılması
+Relation	T0	T4	NoRel	true	aranması	sağlandı
+Relation	T0	T5	NoRel	true	aranması	edildi
+Relation	T0	T7	NoRel	true	aranması	sağlandı
+Relation	T1	T10	NoRel	true	taşınmaları	karşılandı
+Relation	T1	T11	NoRel	true	taşınmaları	sıkılaştırılması
+Relation	T1	T12	NoRel	true	taşınmaları	verilmesi
+Relation	T1	T3	NoRel	true	taşınmaları	yitiren
+Relation	T1	T8	NoRel	true	taşınmaları	deprem
+Relation	T10	T1	NoRel	true	karşılandı	taşınmaları
+Relation	T10	T13	NoRel	true	karşılandı	başlandı
+Relation	T10	T3	NoRel	true	karşılandı	yitiren
+Relation	T10	T4	NoRel	true	karşılandı	sağlandı
+Relation	T10	T7	NoRel	true	karşılandı	sağlandı
+Relation	T11	T3	NoRel	true	sıkılaştırılması	yitiren
+Relation	T11	T4	NoRel	true	sıkılaştırılması	sağlandı
+Relation	T11	T7	NoRel	true	sıkılaştırılması	sağlandı
+Relation	T12	T9	NoRel	true	verilmesi	toplandı
+Relation	T13	T6	NoRel	true	başlandı	verildi
+Relation	T13	T7	NoRel	true	başlandı	sağlandı
+Relation	T2	T11	NoRel	true	kaldırılması	sıkılaştırılması
+Relation	T2	T13	NoRel	true	kaldırılması	başlandı
+Relation	T2	T4	NoRel	true	kaldırılması	sağlandı
+Relation	T2	T6	NoRel	true	kaldırılması	verildi
+Relation	T3	T1	NoRel	true	yitiren	taşınmaları
+Relation	T3	T11	NoRel	true	yitiren	sıkılaştırılması
+Relation	T3	T12	NoRel	true	yitiren	verilmesi
+Relation	T3	T7	NoRel	true	yitiren	sağlandı
+Relation	T4	T0	NoRel	true	sağlandı	aranması
+Relation	T4	T10	NoRel	true	sağlandı	karşılandı
+Relation	T4	T12	NoRel	true	sağlandı	verilmesi
+Relation	T4	T2	NoRel	true	sağlandı	kaldırılması
+Relation	T5	T0	NoRel	true	edildi	aranması
+Relation	T5	T2	NoRel	true	edildi	kaldırılması
+Relation	T5	T8	NoRel	true	edildi	deprem
+Relation	T5	T9	NoRel	true	edildi	toplandı
+Relation	T6	T5	NoRel	true	verildi	edildi
+Relation	T6	T7	NoRel	true	verildi	sağlandı
+Relation	T6	T8	NoRel	true	verildi	deprem
+Relation	T6	T9	NoRel	true	verildi	toplandı
+Relation	T7	T11	NoRel	true	sağlandı	sıkılaştırılması
+Relation	T7	T13	NoRel	true	sağlandı	başlandı
+Relation	T7	T3	NoRel	true	sağlandı	yitiren
+Relation	T7	T9	NoRel	true	sağlandı	toplandı
+Relation	T8	T10	NoRel	true	deprem	karşılandı
+Relation	T8	T13	NoRel	true	deprem	başlandı
+Relation	T8	T5	NoRel	true	deprem	edildi
+Relation	T8	T6	NoRel	true	deprem	verildi
+Relation	T9	T0	NoRel	true	toplandı	aranması
+Relation	T9	T1	NoRel	true	toplandı	taşınmaları
+Relation	T9	T7	NoRel	true	toplandı	sağlandı

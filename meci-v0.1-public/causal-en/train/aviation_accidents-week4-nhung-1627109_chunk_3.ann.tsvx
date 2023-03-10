@@ -1,0 +1,42 @@
+Text	The plane sent out a distress signal , which was picked up by the United States Coast Guard .	The plane 's last - known position was searched , but no wreckage of the plane was ever found , and its passengers have not been heard from since .	Category : 1940 births Category : 1970s missing person cases Category : Members of the Order of the British Empire Category : Missing aviators Category : Missing air passengers Category : Missing person cases in Alaska Category : People declared dead in absentia Category : People from Inverness	Category : Royal Navy officers Category : Scottish sailors Category : Scottish screenwriters Category : Scottish thriller writers Category : Victims of aviation accidents or incidents in 1979 Category : Victims of aviation accidents or incidents in the United States	" Did spy writer 's disappearance mirror his fiction ? " ,
+Event	T0	signal	EVENT	30
+Event	T1	searched	EVENT	133
+Event	T2	wreckage	EVENT	151
+Event	T3	found	EVENT	182
+Event	T4	heard	EVENT	223
+Event	T5	missing	EVENT	282
+Event	T6	Missing	EVENT	368
+Event	T7	Missing	EVENT	396
+Event	T8	Missing	EVENT	430
+Event	T9	cases	EVENT	445
+Event	T10	dead	EVENT	488
+Event	T11	accidents	EVENT	699
+Event	T12	incidents	EVENT	712
+Event	T13	accidents	EVENT	761
+Event	T14	incidents	EVENT	774
+Event	T15	mirror	EVENT	839
+Event	T16	picked up	EVENT	49
+Relation	T0	T16	CauseEffect	true	signal	picked up
+Relation	T16	T0	EffectCause	true	picked up	signal
+Relation	T1	T3	CauseEffect	true	searched	found
+Relation	T3	T1	EffectCause	true	found	searched
+Relation	T1	T4	CauseEffect	true	searched	heard
+Relation	T4	T1	EffectCause	true	heard	searched
+Relation	T0	T1	NoRel	true	signal	searched
+Relation	T1	T9	NoRel	true	searched	cases
+Relation	T11	T7	NoRel	true	accidents	Missing
+Relation	T12	T1	NoRel	true	incidents	searched
+Relation	T12	T16	NoRel	true	incidents	picked up
+Relation	T12	T3	NoRel	true	incidents	found
+Relation	T13	T4	NoRel	true	accidents	heard
+Relation	T15	T9	NoRel	true	mirror	cases
+Relation	T16	T14	NoRel	true	picked up	incidents
+Relation	T16	T7	NoRel	true	picked up	Missing
+Relation	T3	T2	NoRel	true	found	wreckage
+Relation	T4	T14	NoRel	true	heard	incidents
+Relation	T5	T1	NoRel	true	missing	searched
+Relation	T5	T6	NoRel	true	missing	Missing
+Relation	T7	T10	NoRel	true	Missing	dead
+Relation	T7	T11	NoRel	true	Missing	accidents
+Relation	T8	T5	NoRel	true	Missing	missing
+Relation	T9	T7	NoRel	true	cases	Missing

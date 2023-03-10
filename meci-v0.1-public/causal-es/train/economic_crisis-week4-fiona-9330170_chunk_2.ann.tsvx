@@ -1,0 +1,95 @@
+Text	A causa de esto muchas empresas y pymes españolas tuvieron que recurrir a ERTE para suspender temporalmente el empleo de sus trabajadores .	El anuncio vino seguido de un aumento significativo en la cantidad de casos pasando el 14 de marzo de 3146 a 5232 , aumentando en un 66% .	Según el presidente del Gobierno de España , Pedro Sánchez , esta « decisión extraordinaria » fue necesaria al tratarse de un tema de salud y de una crisis social y económica .	Parte de la población española tuvo dificultad para acatar las medidas de dicha cuarentena , habiéndose levantado a 2 de mayo cerca de por saltarse las medidas de confinamiento .	Entre ese día y el 7 de junio se han propuesto otras y han sido detenidas unas 5000 personas por desobediencia grave a los agentes de la autoridad .
+Event	T0	recurrir	EVENT	63
+Event	T1	suspender	EVENT	84
+Event	T2	seguido	EVENT	156
+Event	T3	pasando	EVENT	216
+Event	T4	aumentando	EVENT	256
+Event	T5	crisis	EVENT	428
+Event	T6	dificultad	EVENT	492
+Event	T7	acatar	EVENT	508
+Event	T8	medidas	EVENT	519
+Event	T9	levantado	EVENT	560
+Event	T10	saltarse	EVENT	595
+Event	T11	medidas	EVENT	608
+Event	T12	confinamiento	EVENT	619
+Event	T13	detenidas	EVENT	699
+Event	T14	desobediencia	EVENT	732
+Relation	T14	T13	CauseEffect	true	desobediencia	detenidas
+Relation	T13	T14	EffectCause	true	detenidas	desobediencia
+Relation	T0	T10	NoRel	true	recurrir	saltarse
+Relation	T0	T12	NoRel	true	recurrir	confinamiento
+Relation	T0	T13	NoRel	true	recurrir	detenidas
+Relation	T0	T2	NoRel	true	recurrir	seguido
+Relation	T0	T3	NoRel	true	recurrir	pasando
+Relation	T0	T7	NoRel	true	recurrir	acatar
+Relation	T0	T8	NoRel	true	recurrir	medidas
+Relation	T1	T12	NoRel	true	suspender	confinamiento
+Relation	T1	T13	NoRel	true	suspender	detenidas
+Relation	T1	T14	NoRel	true	suspender	desobediencia
+Relation	T1	T2	NoRel	true	suspender	seguido
+Relation	T1	T3	NoRel	true	suspender	pasando
+Relation	T1	T6	NoRel	true	suspender	dificultad
+Relation	T1	T7	NoRel	true	suspender	acatar
+Relation	T1	T8	NoRel	true	suspender	medidas
+Relation	T10	T12	NoRel	true	saltarse	confinamiento
+Relation	T10	T2	NoRel	true	saltarse	seguido
+Relation	T10	T4	NoRel	true	saltarse	aumentando
+Relation	T11	T0	NoRel	true	medidas	recurrir
+Relation	T11	T14	NoRel	true	medidas	desobediencia
+Relation	T11	T4	NoRel	true	medidas	aumentando
+Relation	T12	T14	NoRel	true	confinamiento	desobediencia
+Relation	T12	T7	NoRel	true	confinamiento	acatar
+Relation	T12	T8	NoRel	true	confinamiento	medidas
+Relation	T13	T1	NoRel	true	detenidas	suspender
+Relation	T13	T10	NoRel	true	detenidas	saltarse
+Relation	T13	T11	NoRel	true	detenidas	medidas
+Relation	T13	T12	NoRel	true	detenidas	confinamiento
+Relation	T13	T2	NoRel	true	detenidas	seguido
+Relation	T13	T3	NoRel	true	detenidas	pasando
+Relation	T13	T5	NoRel	true	detenidas	crisis
+Relation	T14	T0	NoRel	true	desobediencia	recurrir
+Relation	T14	T11	NoRel	true	desobediencia	medidas
+Relation	T14	T12	NoRel	true	desobediencia	confinamiento
+Relation	T14	T3	NoRel	true	desobediencia	pasando
+Relation	T14	T4	NoRel	true	desobediencia	aumentando
+Relation	T14	T5	NoRel	true	desobediencia	crisis
+Relation	T14	T6	NoRel	true	desobediencia	dificultad
+Relation	T14	T7	NoRel	true	desobediencia	acatar
+Relation	T2	T1	NoRel	true	seguido	suspender
+Relation	T2	T11	NoRel	true	seguido	medidas
+Relation	T2	T7	NoRel	true	seguido	acatar
+Relation	T2	T8	NoRel	true	seguido	medidas
+Relation	T3	T12	NoRel	true	pasando	confinamiento
+Relation	T3	T13	NoRel	true	pasando	detenidas
+Relation	T3	T6	NoRel	true	pasando	dificultad
+Relation	T3	T8	NoRel	true	pasando	medidas
+Relation	T4	T13	NoRel	true	aumentando	detenidas
+Relation	T4	T2	NoRel	true	aumentando	seguido
+Relation	T4	T3	NoRel	true	aumentando	pasando
+Relation	T4	T5	NoRel	true	aumentando	crisis
+Relation	T4	T6	NoRel	true	aumentando	dificultad
+Relation	T4	T9	NoRel	true	aumentando	levantado
+Relation	T5	T10	NoRel	true	crisis	saltarse
+Relation	T5	T11	NoRel	true	crisis	medidas
+Relation	T5	T2	NoRel	true	crisis	seguido
+Relation	T6	T1	NoRel	true	dificultad	suspender
+Relation	T6	T2	NoRel	true	dificultad	seguido
+Relation	T6	T3	NoRel	true	dificultad	pasando
+Relation	T6	T4	NoRel	true	dificultad	aumentando
+Relation	T6	T8	NoRel	true	dificultad	medidas
+Relation	T7	T14	NoRel	true	acatar	desobediencia
+Relation	T7	T2	NoRel	true	acatar	seguido
+Relation	T7	T4	NoRel	true	acatar	aumentando
+Relation	T7	T6	NoRel	true	acatar	dificultad
+Relation	T7	T8	NoRel	true	acatar	medidas
+Relation	T8	T0	NoRel	true	medidas	recurrir
+Relation	T8	T1	NoRel	true	medidas	suspender
+Relation	T8	T13	NoRel	true	medidas	detenidas
+Relation	T8	T3	NoRel	true	medidas	pasando
+Relation	T8	T4	NoRel	true	medidas	aumentando
+Relation	T8	T5	NoRel	true	medidas	crisis
+Relation	T8	T6	NoRel	true	medidas	dificultad
+Relation	T9	T10	NoRel	true	levantado	saltarse
+Relation	T9	T2	NoRel	true	levantado	seguido
+Relation	T9	T3	NoRel	true	levantado	pasando
+Relation	T9	T8	NoRel	true	levantado	medidas

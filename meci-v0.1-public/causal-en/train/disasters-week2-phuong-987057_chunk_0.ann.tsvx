@@ -1,0 +1,45 @@
+Text	HURRICANE CLEO was the strongest tropical cyclone of the 1964 Atlantic hurricane season .	It was the third named storm , first hurricane , and first major hurricane of the season .	Cleo was one of the longest - lived storms of the season .	This compact yet powerful hurricane travelled through the Caribbean Sea and later hit Florida before moving offshore Georgia into the Carolinas , killing 156 people and causing roughly $ 187 million in damage .	Major damage was seen as far north as east - central Florida , with the heaviest rains falling along the immediate coast of the Southeast United States into southeast Virginia .
+Event	T0	cyclone	EVENT	42
+Event	T1	travelled	EVENT	276
+Event	T10	causing	EVENT	409
+Event	T11	damage	EVENT	442
+Event	T12	damage	EVENT	457
+Event	T13	seen	EVENT	468
+Event	T14	falling	EVENT	538
+Event	T2	storm	EVENT	113
+Event	T3	hurricane	EVENT	127
+Event	T4	hurricane	EVENT	155
+Event	T5	storms	EVENT	217
+Event	T6	hurricane	EVENT	266
+Event	T7	hit	EVENT	322
+Event	T8	moving	EVENT	341
+Event	T9	killing	EVENT	386
+Relation	T6	T11	CauseEffect	true	hurricane	damage
+Relation	T11	T6	EffectCause	true	damage	hurricane
+Relation	T6	T9	CauseEffect	true	hurricane	killing
+Relation	T9	T6	EffectCause	true	killing	hurricane
+Relation	T12	T14	CauseEffect	true	damage	falling
+Relation	T14	T12	EffectCause	true	falling	damage
+Relation	T0	T13	NoRel	true	cyclone	seen
+Relation	T1	T5	NoRel	true	travelled	storms
+Relation	T10	T11	NoRel	true	causing	damage
+Relation	T10	T2	NoRel	true	causing	storm
+Relation	T11	T10	NoRel	true	damage	causing
+Relation	T11	T13	NoRel	true	damage	seen
+Relation	T12	T11	NoRel	true	damage	damage
+Relation	T12	T13	NoRel	true	damage	seen
+Relation	T12	T6	NoRel	true	damage	hurricane
+Relation	T13	T4	NoRel	true	seen	hurricane
+Relation	T14	T13	NoRel	true	falling	seen
+Relation	T14	T3	NoRel	true	falling	hurricane
+Relation	T14	T8	NoRel	true	falling	moving
+Relation	T2	T6	NoRel	true	storm	hurricane
+Relation	T3	T5	NoRel	true	hurricane	storms
+Relation	T3	T7	NoRel	true	hurricane	hit
+Relation	T5	T6	NoRel	true	storms	hurricane
+Relation	T6	T5	NoRel	true	hurricane	storms
+Relation	T6	T7	NoRel	true	hurricane	hit
+Relation	T7	T14	NoRel	true	hit	falling
+Relation	T8	T12	NoRel	true	moving	damage
+Relation	T8	T9	NoRel	true	moving	killing
+Relation	T9	T0	NoRel	true	killing	cyclone

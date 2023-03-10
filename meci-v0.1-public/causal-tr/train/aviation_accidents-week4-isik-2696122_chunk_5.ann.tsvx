@@ -1,0 +1,68 @@
+Text	Mukashev ayrıca şunları söyledi : " Kazadan sonra uçağın tek bir kısmı bile sağlam kalmadı .	"	2 Mart 2015'te Devletler Arası Havacılık Komitesi , hava koşullarının minimumun gereksinimlerin altında olması nedeniyle başlatılan kaçırılan yaklaşım prosedürü sırasında , irtifâ dümeninin sapmasının kaydedildiğini ve bunun da dik bir dalışa ve uçağın düşmesiyle sonuçlandığını belirten nihai kaza raporunu yayınladı .	Soruşturmada herhangi bir sistem arızası veya dış faktör olduğuna dair bir kanıt bulamadı ve irtifâ dümeninin sapmasının nedenini belirleyemedi .	Kazakistan Cumhurbaşkanı Nursultan Nazarbayev , kazada ölenlerin ailelerine ve arkadaşlarına başsağlığı dileklerini ifade ederek , mağdurların ailelerine gerekli yardımın verileceğini söyledi .
+Event	T0	prosedürü	EVENT	246
+Event	T1	kaydedildiğini	EVENT	296
+Event	T2	dalışa	EVENT	331
+Event	T3	yayınladı	EVENT	403
+Event	T4	sapmasının	EVENT	525
+Event	T5	belirleyemedi	EVENT	545
+Event	T6	söyledi	EVENT	745
+Event	T7	Kazadan	EVENT	36
+Event	T8	düşmesiyle	EVENT	348
+Event	T9	sapmasının	EVENT	285
+Event	T10	Soruşturmada	EVENT	415
+Event	T11	kazada	EVENT	609
+Event	T12	ölenlerin	EVENT	616
+Relation	T9	T2	CauseEffect	true	sapmasının	dalışa
+Relation	T2	T9	EffectCause	true	dalışa	sapmasının
+Relation	T2	T8	CauseEffect	true	dalışa	düşmesiyle
+Relation	T8	T2	EffectCause	true	düşmesiyle	dalışa
+Relation	T4	T7	CauseEffect	true	sapmasının	Kazadan
+Relation	T7	T4	EffectCause	true	Kazadan	sapmasının
+Relation	T9	T7	CauseEffect	true	sapmasının	Kazadan
+Relation	T7	T9	EffectCause	true	Kazadan	sapmasının
+Relation	T12	T6	CauseEffect	true	ölenlerin	söyledi
+Relation	T6	T12	EffectCause	true	söyledi	ölenlerin
+Relation	T0	T1	NoRel	true	prosedürü	kaydedildiğini
+Relation	T0	T12	NoRel	true	prosedürü	ölenlerin
+Relation	T0	T2	NoRel	true	prosedürü	dalışa
+Relation	T0	T3	NoRel	true	prosedürü	yayınladı
+Relation	T1	T10	NoRel	true	kaydedildiğini	Soruşturmada
+Relation	T1	T11	NoRel	true	kaydedildiğini	kazada
+Relation	T1	T12	NoRel	true	kaydedildiğini	ölenlerin
+Relation	T1	T4	NoRel	true	kaydedildiğini	sapmasının
+Relation	T1	T9	NoRel	true	kaydedildiğini	sapmasının
+Relation	T10	T0	NoRel	true	Soruşturmada	prosedürü
+Relation	T10	T11	NoRel	true	Soruşturmada	kazada
+Relation	T10	T4	NoRel	true	Soruşturmada	sapmasının
+Relation	T10	T8	NoRel	true	Soruşturmada	düşmesiyle
+Relation	T10	T9	NoRel	true	Soruşturmada	sapmasının
+Relation	T11	T1	NoRel	true	kazada	kaydedildiğini
+Relation	T11	T4	NoRel	true	kazada	sapmasının
+Relation	T11	T6	NoRel	true	kazada	söyledi
+Relation	T11	T7	NoRel	true	kazada	Kazadan
+Relation	T12	T0	NoRel	true	ölenlerin	prosedürü
+Relation	T12	T1	NoRel	true	ölenlerin	kaydedildiğini
+Relation	T12	T3	NoRel	true	ölenlerin	yayınladı
+Relation	T2	T0	NoRel	true	dalışa	prosedürü
+Relation	T2	T10	NoRel	true	dalışa	Soruşturmada
+Relation	T2	T4	NoRel	true	dalışa	sapmasının
+Relation	T3	T1	NoRel	true	yayınladı	kaydedildiğini
+Relation	T3	T5	NoRel	true	yayınladı	belirleyemedi
+Relation	T4	T1	NoRel	true	sapmasının	kaydedildiğini
+Relation	T4	T11	NoRel	true	sapmasının	kazada
+Relation	T4	T8	NoRel	true	sapmasının	düşmesiyle
+Relation	T5	T2	NoRel	true	belirleyemedi	dalışa
+Relation	T5	T3	NoRel	true	belirleyemedi	yayınladı
+Relation	T5	T6	NoRel	true	belirleyemedi	söyledi
+Relation	T6	T4	NoRel	true	söyledi	sapmasının
+Relation	T6	T8	NoRel	true	söyledi	düşmesiyle
+Relation	T7	T12	NoRel	true	Kazadan	ölenlerin
+Relation	T7	T3	NoRel	true	Kazadan	yayınladı
+Relation	T7	T5	NoRel	true	Kazadan	belirleyemedi
+Relation	T8	T11	NoRel	true	düşmesiyle	kazada
+Relation	T8	T3	NoRel	true	düşmesiyle	yayınladı
+Relation	T8	T9	NoRel	true	düşmesiyle	sapmasının
+Relation	T9	T12	NoRel	true	sapmasının	ölenlerin
+Relation	T9	T3	NoRel	true	sapmasının	yayınladı
+Relation	T9	T4	NoRel	true	sapmasının	sapmasının
+Relation	T9	T5	NoRel	true	sapmasının	belirleyemedi

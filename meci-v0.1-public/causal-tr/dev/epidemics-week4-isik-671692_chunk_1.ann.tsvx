@@ -1,0 +1,44 @@
+Text	Mütevekkil ikinci halifelik dönemi sonunda ölünce , Burji Hanedanı'ndan Memlûk Sultanı olan Farac'ın hükümdarlık döneminde , Abbasi Halifesi oldu .	1412'de Memlûklu Sultanı Farac Abbasi Halifesi olan Mustain ile birlikte , Suriye'ye , orada isyan etmiş olan emirler üzerine , özellikle Halep valisi olan emir El - Muavyed Ebu an - Nasir Seyh el - Mahmudi üzerine bir sefere başladı .	Sultan Farac Gazze'ye geldiğinde orada birkaç gün istirahat etmek niyetindeydi .	Fakat ordusundan bir grubun düşmanları tarafına geçmesi üzerine hemen Şam üzerine yürüyerek şehre girdi ve şehir kapılarını kapattırdı .	İsyancı emirlerin orduları çok geçmeden şehri kuşatmaya aldı ve Sultan Farac uzun bir kuşatmaya hazır beklemekteydi .
+Event	T0	ölünce	EVENT	43
+Event	T1	oldu	EVENT	141
+Event	T2	başladı	EVENT	374
+Event	T3	geçmesi	EVENT	513
+Event	T4	kapattırdı	EVENT	589
+Event	T5	aldı	EVENT	658
+Event	T6	etmiş	EVENT	247
+Event	T7	girdi	EVENT	563
+Event	T8	yürüyerek	EVENT	547
+Relation	T0	T1	CauseEffect	true	ölünce	oldu
+Relation	T1	T0	EffectCause	true	oldu	ölünce
+Relation	T6	T2	CauseEffect	true	etmiş	başladı
+Relation	T2	T6	EffectCause	true	başladı	etmiş
+Relation	T3	T8	CauseEffect	true	geçmesi	yürüyerek
+Relation	T8	T3	EffectCause	true	yürüyerek	geçmesi
+Relation	T8	T7	CauseEffect	true	yürüyerek	girdi
+Relation	T7	T8	EffectCause	true	girdi	yürüyerek
+Relation	T7	T4	CauseEffect	true	girdi	kapattırdı
+Relation	T4	T7	EffectCause	true	kapattırdı	girdi
+Relation	T0	T2	NoRel	true	ölünce	başladı
+Relation	T0	T5	NoRel	true	ölünce	aldı
+Relation	T0	T6	NoRel	true	ölünce	etmiş
+Relation	T0	T8	NoRel	true	ölünce	yürüyerek
+Relation	T1	T5	NoRel	true	oldu	aldı
+Relation	T1	T7	NoRel	true	oldu	girdi
+Relation	T2	T0	NoRel	true	başladı	ölünce
+Relation	T2	T3	NoRel	true	başladı	geçmesi
+Relation	T2	T5	NoRel	true	başladı	aldı
+Relation	T2	T7	NoRel	true	başladı	girdi
+Relation	T2	T8	NoRel	true	başladı	yürüyerek
+Relation	T3	T2	NoRel	true	geçmesi	başladı
+Relation	T3	T7	NoRel	true	geçmesi	girdi
+Relation	T4	T0	NoRel	true	kapattırdı	ölünce
+Relation	T4	T3	NoRel	true	kapattırdı	geçmesi
+Relation	T4	T8	NoRel	true	kapattırdı	yürüyerek
+Relation	T5	T2	NoRel	true	aldı	başladı
+Relation	T5	T3	NoRel	true	aldı	geçmesi
+Relation	T5	T6	NoRel	true	aldı	etmiş
+Relation	T5	T7	NoRel	true	aldı	girdi
+Relation	T5	T8	NoRel	true	aldı	yürüyerek
+Relation	T7	T0	NoRel	true	girdi	ölünce
+Relation	T7	T3	NoRel	true	girdi	geçmesi
+Relation	T8	T2	NoRel	true	yürüyerek	başladı

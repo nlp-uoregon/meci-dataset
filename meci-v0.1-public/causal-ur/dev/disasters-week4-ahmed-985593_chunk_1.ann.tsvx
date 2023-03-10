@@ -1,0 +1,17 @@
+Text	[ کوینا ڈیم سے پانی چھوڑا جا رہا ہے ۔	]_[ ستارا کے قریب سیلاب سے تباہ سڑک ۔ ]_[ خوراک اور دیگر ضروری اشیاء متاثر افراد میں تقسیم کرتے ہوئے ۔	]	اس سیلاب سے سب سے زیادہ متاثرہ علاقے رائے گڑھ ، رتناگری ، سندھودرگ ، ستارا ، سانگلی اور کولہاپور ہیں ۔	شدید بارش کی وجہ سے ان اضلاع میں 1020 سے زیادہ گاؤں متاثر ہوئے ہیں ۔
+Event	T0	چھوڑا	EVENT	20
+Event	T1	سیلاب	EVENT	56
+Event	T2	تباہ	EVENT	65
+Event	T3	کرتے	EVENT	129
+Event	T4	سیلاب	EVENT	146
+Event	T5	بارش	EVENT	251
+Relation	T1	T2	CauseEffect	true	سیلاب	تباہ
+Relation	T2	T1	EffectCause	true	تباہ	سیلاب
+Relation	T0	T3	NoRel	true	چھوڑا	کرتے
+Relation	T0	T4	NoRel	true	چھوڑا	سیلاب
+Relation	T1	T5	NoRel	true	سیلاب	بارش
+Relation	T2	T3	NoRel	true	تباہ	کرتے
+Relation	T2	T5	NoRel	true	تباہ	بارش
+Relation	T3	T5	NoRel	true	کرتے	بارش
+Relation	T4	T2	NoRel	true	سیلاب	تباہ
+Relation	T5	T1	NoRel	true	بارش	سیلاب

@@ -1,0 +1,111 @@
+Text	Más tarde ese mismo día , el JTWC emitió un aviso de que en las siguientes 24 las condiciones para que se formara un ciclón tropical eran _ pobres _ .	En los siguientes días la tormenta empezó a intensificarse hasta que los Servicios Meteorológicos de Mauricio la llamaron _ Hina _ .	El 24 de febrero , Hina empezó a debilitarse hasta que se disipó .	El 6 de marzo el JTWC empezó a monitorear un área de clima perturbado en el océano Índico , y dos días después , emitieron un aviso de Alerta de Ciclón Tropical y la llamaron Zona de Clima de Disturbio 10 .	el 9 de marzo , el disturbio fue reclasificado como ciclón tropical 19S .
+Event	T0	emitió	EVENT	34
+Event	T1	aviso	EVENT	44
+Event	T3	empezó	EVENT	186
+Event	T4	intensificarse	EVENT	195
+Event	T5	llamaron	EVENT	264
+Event	T6	empezó	EVENT	308
+Event	T7	debilitarse	EVENT	317
+Event	T8	disipó	EVENT	342
+Event	T9	empezó	EVENT	373
+Event	T10	monitorear	EVENT	382
+Event	T11	perturbado	EVENT	410
+Event	T12	emitieron	EVENT	464
+Event	T13	aviso	EVENT	477
+Event	T14	Alerta	EVENT	486
+Event	T15	llamaron	EVENT	517
+Event	T16	Disturbio	EVENT	543
+Event	T17	reclasificado	EVENT	591
+Relation	T11	T10	CauseEffect	true	perturbado	monitorear
+Relation	T10	T11	EffectCause	true	monitorear	perturbado
+Relation	T0	T12	NoRel	true	emitió	emitieron
+Relation	T0	T14	NoRel	true	emitió	Alerta
+Relation	T0	T17	NoRel	true	emitió	reclasificado
+Relation	T0	T3	NoRel	true	emitió	empezó
+Relation	T0	T5	NoRel	true	emitió	llamaron
+Relation	T0	T6	NoRel	true	emitió	empezó
+Relation	T0	T7	NoRel	true	emitió	debilitarse
+Relation	T1	T0	NoRel	true	aviso	emitió
+Relation	T1	T12	NoRel	true	aviso	emitieron
+Relation	T1	T4	NoRel	true	aviso	intensificarse
+Relation	T1	T6	NoRel	true	aviso	empezó
+Relation	T1	T7	NoRel	true	aviso	debilitarse
+Relation	T1	T9	NoRel	true	aviso	empezó
+Relation	T10	T1	NoRel	true	monitorear	aviso
+Relation	T10	T12	NoRel	true	monitorear	emitieron
+Relation	T10	T13	NoRel	true	monitorear	aviso
+Relation	T10	T17	NoRel	true	monitorear	reclasificado
+Relation	T10	T8	NoRel	true	monitorear	disipó
+Relation	T11	T0	NoRel	true	perturbado	emitió
+Relation	T11	T1	NoRel	true	perturbado	aviso
+Relation	T11	T14	NoRel	true	perturbado	Alerta
+Relation	T11	T7	NoRel	true	perturbado	debilitarse
+Relation	T11	T8	NoRel	true	perturbado	disipó
+Relation	T12	T1	NoRel	true	emitieron	aviso
+Relation	T12	T11	NoRel	true	emitieron	perturbado
+Relation	T12	T13	NoRel	true	emitieron	aviso
+Relation	T12	T3	NoRel	true	emitieron	empezó
+Relation	T12	T6	NoRel	true	emitieron	empezó
+Relation	T12	T7	NoRel	true	emitieron	debilitarse
+Relation	T12	T9	NoRel	true	emitieron	empezó
+Relation	T13	T16	NoRel	true	aviso	Disturbio
+Relation	T13	T7	NoRel	true	aviso	debilitarse
+Relation	T14	T1	NoRel	true	Alerta	aviso
+Relation	T14	T11	NoRel	true	Alerta	perturbado
+Relation	T14	T12	NoRel	true	Alerta	emitieron
+Relation	T14	T15	NoRel	true	Alerta	llamaron
+Relation	T15	T0	NoRel	true	llamaron	emitió
+Relation	T15	T1	NoRel	true	llamaron	aviso
+Relation	T15	T11	NoRel	true	llamaron	perturbado
+Relation	T15	T3	NoRel	true	llamaron	empezó
+Relation	T15	T5	NoRel	true	llamaron	llamaron
+Relation	T15	T7	NoRel	true	llamaron	debilitarse
+Relation	T15	T8	NoRel	true	llamaron	disipó
+Relation	T16	T11	NoRel	true	Disturbio	perturbado
+Relation	T16	T17	NoRel	true	Disturbio	reclasificado
+Relation	T16	T4	NoRel	true	Disturbio	intensificarse
+Relation	T16	T5	NoRel	true	Disturbio	llamaron
+Relation	T16	T7	NoRel	true	Disturbio	debilitarse
+Relation	T17	T0	NoRel	true	reclasificado	emitió
+Relation	T17	T10	NoRel	true	reclasificado	monitorear
+Relation	T17	T11	NoRel	true	reclasificado	perturbado
+Relation	T17	T13	NoRel	true	reclasificado	aviso
+Relation	T17	T14	NoRel	true	reclasificado	Alerta
+Relation	T17	T16	NoRel	true	reclasificado	Disturbio
+Relation	T17	T5	NoRel	true	reclasificado	llamaron
+Relation	T17	T7	NoRel	true	reclasificado	debilitarse
+Relation	T3	T12	NoRel	true	empezó	emitieron
+Relation	T3	T16	NoRel	true	empezó	Disturbio
+Relation	T3	T17	NoRel	true	empezó	reclasificado
+Relation	T3	T6	NoRel	true	empezó	empezó
+Relation	T3	T7	NoRel	true	empezó	debilitarse
+Relation	T3	T8	NoRel	true	empezó	disipó
+Relation	T3	T9	NoRel	true	empezó	empezó
+Relation	T4	T12	NoRel	true	intensificarse	emitieron
+Relation	T4	T13	NoRel	true	intensificarse	aviso
+Relation	T4	T14	NoRel	true	intensificarse	Alerta
+Relation	T4	T15	NoRel	true	intensificarse	llamaron
+Relation	T4	T17	NoRel	true	intensificarse	reclasificado
+Relation	T4	T9	NoRel	true	intensificarse	empezó
+Relation	T5	T0	NoRel	true	llamaron	emitió
+Relation	T5	T11	NoRel	true	llamaron	perturbado
+Relation	T5	T12	NoRel	true	llamaron	emitieron
+Relation	T5	T14	NoRel	true	llamaron	Alerta
+Relation	T5	T17	NoRel	true	llamaron	reclasificado
+Relation	T5	T3	NoRel	true	llamaron	empezó
+Relation	T5	T6	NoRel	true	llamaron	empezó
+Relation	T5	T7	NoRel	true	llamaron	debilitarse
+Relation	T5	T9	NoRel	true	llamaron	empezó
+Relation	T6	T0	NoRel	true	empezó	emitió
+Relation	T6	T1	NoRel	true	empezó	aviso
+Relation	T6	T14	NoRel	true	empezó	Alerta
+Relation	T6	T15	NoRel	true	empezó	llamaron
+Relation	T6	T16	NoRel	true	empezó	Disturbio
+Relation	T7	T14	NoRel	true	debilitarse	Alerta
+Relation	T7	T17	NoRel	true	debilitarse	reclasificado
+Relation	T7	T6	NoRel	true	debilitarse	empezó
+Relation	T8	T17	NoRel	true	disipó	reclasificado
+Relation	T9	T10	NoRel	true	empezó	monitorear
+Relation	T9	T13	NoRel	true	empezó	aviso
+Relation	T9	T17	NoRel	true	empezó	reclasificado
+Relation	T9	T7	NoRel	true	empezó	debilitarse

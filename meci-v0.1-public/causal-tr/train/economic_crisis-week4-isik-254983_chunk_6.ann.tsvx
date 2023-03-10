@@ -1,0 +1,55 @@
+Text	Bu kararname , tarihçiler tarafından Almanya'da tek parti Nazi devletinin kurulmasında önemli adımlardan biri olarak kabul edilir .	1933'ün Mart ayında Etkinleştirilme Yasası'nı imzaladı .	Hindenburg , Hitler'in başarılarını gördükçe , Hitler'e giderek daha fazla güven kazandı .	Ayrıca 30 Haziran 1934'te ( Hitler'den önce kendisinin atadığı Şansölye Kurt von Schleicher'in öldürüldüğü ) Röhm darbesinin kanlı bir şekilde bastırılmasını onayladı ve bunun için Hitler'i tebrik etti .	Paul von Hindenburg 1933 sonbaharından itibaren sık sık hastalandı ve güncel politik olaylar üzerinde etkili olamadı .
+Event	T0	edilir	EVENT	123
+Event	T1	imzaladı	EVENT	178
+Event	T3	kazandı	EVENT	270
+Event	T4	öldürüldüğü	EVENT	375
+Event	T5	onayladı	EVENT	438
+Event	T6	etti	EVENT	477
+Event	T7	hastalandı	EVENT	540
+Event	T8	kararname	EVENT	3
+Event	T9	Yasası'nı	EVENT	168
+Event	T2	başarılarını	EVENT	212
+Event	T10	darbesinin	EVENT	394
+Relation	T2	T3	CauseEffect	true	başarılarını	kazandı
+Relation	T3	T2	EffectCause	true	kazandı	başarılarını
+Relation	T10	T5	CauseEffect	true	darbesinin	onayladı
+Relation	T5	T10	EffectCause	true	onayladı	darbesinin
+Relation	T5	T6	CauseEffect	true	onayladı	etti
+Relation	T6	T5	EffectCause	true	etti	onayladı
+Relation	T0	T10	NoRel	true	edilir	darbesinin
+Relation	T0	T5	NoRel	true	edilir	onayladı
+Relation	T0	T6	NoRel	true	edilir	etti
+Relation	T0	T7	NoRel	true	edilir	hastalandı
+Relation	T0	T8	NoRel	true	edilir	kararname
+Relation	T0	T9	NoRel	true	edilir	Yasası'nı
+Relation	T1	T10	NoRel	true	imzaladı	darbesinin
+Relation	T1	T4	NoRel	true	imzaladı	öldürüldüğü
+Relation	T1	T5	NoRel	true	imzaladı	onayladı
+Relation	T1	T7	NoRel	true	imzaladı	hastalandı
+Relation	T1	T9	NoRel	true	imzaladı	Yasası'nı
+Relation	T10	T0	NoRel	true	darbesinin	edilir
+Relation	T10	T6	NoRel	true	darbesinin	etti
+Relation	T2	T0	NoRel	true	başarılarını	edilir
+Relation	T2	T9	NoRel	true	başarılarını	Yasası'nı
+Relation	T3	T0	NoRel	true	kazandı	edilir
+Relation	T3	T10	NoRel	true	kazandı	darbesinin
+Relation	T3	T4	NoRel	true	kazandı	öldürüldüğü
+Relation	T4	T2	NoRel	true	öldürüldüğü	başarılarını
+Relation	T4	T6	NoRel	true	öldürüldüğü	etti
+Relation	T4	T7	NoRel	true	öldürüldüğü	hastalandı
+Relation	T4	T9	NoRel	true	öldürüldüğü	Yasası'nı
+Relation	T5	T0	NoRel	true	onayladı	edilir
+Relation	T5	T1	NoRel	true	onayladı	imzaladı
+Relation	T5	T8	NoRel	true	onayladı	kararname
+Relation	T5	T9	NoRel	true	onayladı	Yasası'nı
+Relation	T6	T1	NoRel	true	etti	imzaladı
+Relation	T6	T10	NoRel	true	etti	darbesinin
+Relation	T7	T4	NoRel	true	hastalandı	öldürüldüğü
+Relation	T7	T6	NoRel	true	hastalandı	etti
+Relation	T8	T0	NoRel	true	kararname	edilir
+Relation	T8	T10	NoRel	true	kararname	darbesinin
+Relation	T8	T2	NoRel	true	kararname	başarılarını
+Relation	T8	T7	NoRel	true	kararname	hastalandı
+Relation	T9	T0	NoRel	true	Yasası'nı	edilir
+Relation	T9	T3	NoRel	true	Yasası'nı	kazandı
+Relation	T9	T7	NoRel	true	Yasası'nı	hastalandı

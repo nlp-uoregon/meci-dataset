@@ -1,0 +1,61 @@
+Text	Sonraki kuşatmalara destek amacıyla İl - basan adında bir kale inşa ettirir .	Kuşatma sürmekteyken İskender Bey mali destek sağlamak için İtalya’ya gider .	Döndüğünde 1467 yılı Nisan ayında Leka Dukagin ile birlikte önce bölgedeki Osmanlı birliklerine sonra da Krujë kuşatmasını sürdüren Balaban Paşa’ya saldırır .	Kuşatma kırılacak ve muharebe sırasında Balaban Paşa da Cerc Aleksi adındaki bir arkebüzcünün ateşi sonucu öldürülecektir .	Duruma hakim olan İskender Bey , Osmanlılar tarafından inşa edilen İlbasan kalesini kuşatır .
+Event	T0	ettirir	EVENT	68
+Event	T1	gider	EVENT	148
+Event	T3	saldırır	EVENT	304
+Event	T4	kırılacak	EVENT	323
+Event	T5	muharebe	EVENT	336
+Event	T6	öldürülecektir	EVENT	422
+Event	T8	kuşatır	EVENT	523
+Event	T9	Kuşatma	EVENT	78
+Event	T2	Krujë kuşatmasını	EVENT	261
+Event	T10	Kuşatma	EVENT	315
+Event	T11	ateşi	EVENT	409
+Relation	T2	T3	CauseEffect	true	Krujë kuşatmasını	saldırır
+Relation	T3	T2	EffectCause	true	saldırır	Krujë kuşatmasını
+Relation	T11	T6	CauseEffect	true	ateşi	öldürülecektir
+Relation	T6	T11	EffectCause	true	öldürülecektir	ateşi
+Relation	T4	T8	CauseEffect	true	kırılacak	kuşatır
+Relation	T8	T4	EffectCause	true	kuşatır	kırılacak
+Relation	T3	T4	CauseEffect	true	saldırır	kırılacak
+Relation	T4	T3	EffectCause	true	kırılacak	saldırır
+Relation	T3	T11	CauseEffect	true	saldırır	ateşi
+Relation	T11	T3	EffectCause	true	ateşi	saldırır
+Relation	T0	T11	NoRel	true	ettirir	ateşi
+Relation	T0	T6	NoRel	true	ettirir	öldürülecektir
+Relation	T0	T8	NoRel	true	ettirir	kuşatır
+Relation	T0	T9	NoRel	true	ettirir	Kuşatma
+Relation	T1	T11	NoRel	true	gider	ateşi
+Relation	T1	T2	NoRel	true	gider	Krujë kuşatmasını
+Relation	T1	T8	NoRel	true	gider	kuşatır
+Relation	T10	T1	NoRel	true	Kuşatma	gider
+Relation	T10	T6	NoRel	true	Kuşatma	öldürülecektir
+Relation	T11	T0	NoRel	true	ateşi	ettirir
+Relation	T11	T5	NoRel	true	ateşi	muharebe
+Relation	T11	T9	NoRel	true	ateşi	Kuşatma
+Relation	T2	T6	NoRel	true	Krujë kuşatmasını	öldürülecektir
+Relation	T2	T8	NoRel	true	Krujë kuşatmasını	kuşatır
+Relation	T2	T9	NoRel	true	Krujë kuşatmasını	Kuşatma
+Relation	T3	T10	NoRel	true	saldırır	Kuşatma
+Relation	T3	T5	NoRel	true	saldırır	muharebe
+Relation	T3	T6	NoRel	true	saldırır	öldürülecektir
+Relation	T3	T8	NoRel	true	saldırır	kuşatır
+Relation	T3	T9	NoRel	true	saldırır	Kuşatma
+Relation	T4	T10	NoRel	true	kırılacak	Kuşatma
+Relation	T4	T11	NoRel	true	kırılacak	ateşi
+Relation	T4	T5	NoRel	true	kırılacak	muharebe
+Relation	T4	T9	NoRel	true	kırılacak	Kuşatma
+Relation	T5	T11	NoRel	true	muharebe	ateşi
+Relation	T6	T4	NoRel	true	öldürülecektir	kırılacak
+Relation	T6	T5	NoRel	true	öldürülecektir	muharebe
+Relation	T6	T8	NoRel	true	öldürülecektir	kuşatır
+Relation	T8	T0	NoRel	true	kuşatır	ettirir
+Relation	T8	T10	NoRel	true	kuşatır	Kuşatma
+Relation	T8	T2	NoRel	true	kuşatır	Krujë kuşatmasını
+Relation	T8	T3	NoRel	true	kuşatır	saldırır
+Relation	T8	T5	NoRel	true	kuşatır	muharebe
+Relation	T8	T9	NoRel	true	kuşatır	Kuşatma
+Relation	T9	T0	NoRel	true	Kuşatma	ettirir
+Relation	T9	T10	NoRel	true	Kuşatma	Kuşatma
+Relation	T9	T3	NoRel	true	Kuşatma	saldırır
+Relation	T9	T5	NoRel	true	Kuşatma	muharebe
+Relation	T9	T6	NoRel	true	Kuşatma	öldürülecektir

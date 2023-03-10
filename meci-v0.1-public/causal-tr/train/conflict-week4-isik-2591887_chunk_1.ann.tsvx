@@ -1,0 +1,47 @@
+Text	31 Mart 1944'te 572 Lancaster bombardıman uçağı , 214 Halifax bombardıman uçağı ve 9 spifire avcı uçağı gece 22.00'da Nürnberg şehrini bombalamak için İngiltere'den havalandı .	Uçakların 55'i çeşitli sebeplerden dolayı geri döndü .	Uçaklar Belçika sınırını 01.00'da geçtikten sonra Alman radarları tarafından hızlıca tespit edildiler .	Alman avcı uçakları düşmanı karşılamak için hızlıca üslerinden havalandı ilk bir saatte 45 uçak düşürdü .	Dalga dalga gönderilen Alman avcı uçakları düşmana ağır darbeler vurdu ve uçakların formasyonunu bozdu .
+Event	T0	bombalamak	EVENT	135
+Event	T1	havalandı	EVENT	165
+Event	T2	döndü	EVENT	224
+Event	T3	geçtikten	EVENT	266
+Event	T4	edildiler	EVENT	324
+Event	T5	havalandı	EVENT	399
+Event	T6	düşürdü	EVENT	432
+Event	T7	vurdu	EVENT	507
+Event	T8	bozdu	EVENT	539
+Event	T9	gönderilen	EVENT	454
+Relation	T4	T5	CauseEffect	true	edildiler	havalandı
+Relation	T5	T4	EffectCause	true	havalandı	edildiler
+Relation	T5	T6	CauseEffect	true	havalandı	düşürdü
+Relation	T6	T5	EffectCause	true	düşürdü	havalandı
+Relation	T5	T7	CauseEffect	true	havalandı	vurdu
+Relation	T7	T5	EffectCause	true	vurdu	havalandı
+Relation	T5	T8	CauseEffect	true	havalandı	bozdu
+Relation	T8	T5	EffectCause	true	bozdu	havalandı
+Relation	T0	T1	NoRel	true	bombalamak	havalandı
+Relation	T0	T3	NoRel	true	bombalamak	geçtikten
+Relation	T1	T0	NoRel	true	havalandı	bombalamak
+Relation	T1	T3	NoRel	true	havalandı	geçtikten
+Relation	T1	T6	NoRel	true	havalandı	düşürdü
+Relation	T1	T8	NoRel	true	havalandı	bozdu
+Relation	T1	T9	NoRel	true	havalandı	gönderilen
+Relation	T2	T0	NoRel	true	döndü	bombalamak
+Relation	T2	T1	NoRel	true	döndü	havalandı
+Relation	T2	T4	NoRel	true	döndü	edildiler
+Relation	T2	T7	NoRel	true	döndü	vurdu
+Relation	T2	T9	NoRel	true	döndü	gönderilen
+Relation	T3	T4	NoRel	true	geçtikten	edildiler
+Relation	T3	T5	NoRel	true	geçtikten	havalandı
+Relation	T3	T6	NoRel	true	geçtikten	düşürdü
+Relation	T4	T2	NoRel	true	edildiler	döndü
+Relation	T4	T8	NoRel	true	edildiler	bozdu
+Relation	T5	T9	NoRel	true	havalandı	gönderilen
+Relation	T6	T0	NoRel	true	düşürdü	bombalamak
+Relation	T6	T3	NoRel	true	düşürdü	geçtikten
+Relation	T7	T6	NoRel	true	vurdu	düşürdü
+Relation	T8	T1	NoRel	true	bozdu	havalandı
+Relation	T8	T6	NoRel	true	bozdu	düşürdü
+Relation	T9	T1	NoRel	true	gönderilen	havalandı
+Relation	T9	T2	NoRel	true	gönderilen	döndü
+Relation	T9	T4	NoRel	true	gönderilen	edildiler
+Relation	T9	T5	NoRel	true	gönderilen	havalandı
+Relation	T9	T7	NoRel	true	gönderilen	vurdu

@@ -1,0 +1,177 @@
+Text	På åbent hav kan det være svært overhovedet at opdage en tsunami , men i nærheden af kysten kan kraftige tsunamier skabe omfattende naturkatastrofer med store materielle og menneskelige omkostninger .	En tsunami kan lægge hele kyststrækninger øde .	Ordet _ tsunami_: havnebølge blev dannet af japanske fiskere , der vendte tilbage fra fiskeri og fandt alt ødelagt i havnen , selv om de hverken havde set eller mærket en bølge på åbent hav .	Det skyldes , at Japan har en stejl havkystlinje .	Kæmpebølgerne opbygges , kort før de når stranden og slår over molen ind i havnen , hvor de ødelægger alt .
+Event	T0	opdage	EVENT	47
+Event	T1	tsunami	EVENT	57
+Event	T2	naturkatastrofer	EVENT	132
+Event	T3	tsunami	EVENT	204
+Event	T4	dannet	EVENT	283
+Event	T5	fiskeri	EVENT	335
+Event	T6	fandt	EVENT	346
+Event	T7	ødelagt	EVENT	356
+Event	T8	set	EVENT	400
+Event	T9	mærket	EVENT	410
+Event	T10	bølge	EVENT	420
+Event	T11	opbygges	EVENT	506
+Event	T12	når	EVENT	529
+Event	T13	ødelægger	EVENT	584
+Event	T14	tsunamier	EVENT	105
+Event	T15	omkostninger	EVENT	186
+Event	T16	øde	EVENT	243
+Event	T17	tsunami_	EVENT	257
+Event	T18	havnebølge	EVENT	267
+Event	T19	skyldes	EVENT	445
+Event	T20	Kæmpebølgerne	EVENT	492
+Event	T21	slår	EVENT	545
+Relation	T14	T2	CauseEffect	true	tsunamier	naturkatastrofer
+Relation	T2	T14	EffectCause	true	naturkatastrofer	tsunamier
+Relation	T2	T15	CauseEffect	true	naturkatastrofer	omkostninger
+Relation	T15	T2	EffectCause	true	omkostninger	naturkatastrofer
+Relation	T3	T16	CauseEffect	true	tsunami	øde
+Relation	T16	T3	EffectCause	true	øde	tsunami
+Relation	T7	T17	CauseEffect	true	ødelagt	tsunami_
+Relation	T17	T7	EffectCause	true	tsunami_	ødelagt
+Relation	T7	T18	CauseEffect	true	ødelagt	havnebølge
+Relation	T18	T7	EffectCause	true	havnebølge	ødelagt
+Relation	T0	T16	NoRel	true	opdage	øde
+Relation	T0	T18	NoRel	true	opdage	havnebølge
+Relation	T0	T19	NoRel	true	opdage	skyldes
+Relation	T0	T21	NoRel	true	opdage	slår
+Relation	T0	T3	NoRel	true	opdage	tsunami
+Relation	T1	T10	NoRel	true	tsunami	bølge
+Relation	T1	T17	NoRel	true	tsunami	tsunami_
+Relation	T1	T18	NoRel	true	tsunami	havnebølge
+Relation	T1	T19	NoRel	true	tsunami	skyldes
+Relation	T1	T20	NoRel	true	tsunami	Kæmpebølgerne
+Relation	T1	T21	NoRel	true	tsunami	slår
+Relation	T1	T7	NoRel	true	tsunami	ødelagt
+Relation	T10	T16	NoRel	true	bølge	øde
+Relation	T10	T18	NoRel	true	bølge	havnebølge
+Relation	T10	T3	NoRel	true	bølge	tsunami
+Relation	T10	T7	NoRel	true	bølge	ødelagt
+Relation	T10	T8	NoRel	true	bølge	set
+Relation	T10	T9	NoRel	true	bølge	mærket
+Relation	T11	T12	NoRel	true	opbygges	når
+Relation	T11	T13	NoRel	true	opbygges	ødelægger
+Relation	T11	T18	NoRel	true	opbygges	havnebølge
+Relation	T11	T19	NoRel	true	opbygges	skyldes
+Relation	T11	T20	NoRel	true	opbygges	Kæmpebølgerne
+Relation	T12	T0	NoRel	true	når	opdage
+Relation	T12	T1	NoRel	true	når	tsunami
+Relation	T12	T14	NoRel	true	når	tsunamier
+Relation	T12	T18	NoRel	true	når	havnebølge
+Relation	T12	T4	NoRel	true	når	dannet
+Relation	T12	T7	NoRel	true	når	ødelagt
+Relation	T12	T8	NoRel	true	når	set
+Relation	T12	T9	NoRel	true	når	mærket
+Relation	T13	T1	NoRel	true	ødelægger	tsunami
+Relation	T13	T17	NoRel	true	ødelægger	tsunami_
+Relation	T13	T19	NoRel	true	ødelægger	skyldes
+Relation	T13	T8	NoRel	true	ødelægger	set
+Relation	T14	T13	NoRel	true	tsunamier	ødelægger
+Relation	T14	T16	NoRel	true	tsunamier	øde
+Relation	T14	T17	NoRel	true	tsunamier	tsunami_
+Relation	T14	T19	NoRel	true	tsunamier	skyldes
+Relation	T14	T20	NoRel	true	tsunamier	Kæmpebølgerne
+Relation	T14	T3	NoRel	true	tsunamier	tsunami
+Relation	T15	T10	NoRel	true	omkostninger	bølge
+Relation	T15	T11	NoRel	true	omkostninger	opbygges
+Relation	T15	T12	NoRel	true	omkostninger	når
+Relation	T15	T20	NoRel	true	omkostninger	Kæmpebølgerne
+Relation	T15	T5	NoRel	true	omkostninger	fiskeri
+Relation	T15	T7	NoRel	true	omkostninger	ødelagt
+Relation	T15	T9	NoRel	true	omkostninger	mærket
+Relation	T16	T0	NoRel	true	øde	opdage
+Relation	T16	T1	NoRel	true	øde	tsunami
+Relation	T16	T10	NoRel	true	øde	bølge
+Relation	T16	T12	NoRel	true	øde	når
+Relation	T16	T14	NoRel	true	øde	tsunamier
+Relation	T16	T19	NoRel	true	øde	skyldes
+Relation	T16	T2	NoRel	true	øde	naturkatastrofer
+Relation	T16	T4	NoRel	true	øde	dannet
+Relation	T16	T8	NoRel	true	øde	set
+Relation	T17	T12	NoRel	true	tsunami_	når
+Relation	T17	T14	NoRel	true	tsunami_	tsunamier
+Relation	T17	T8	NoRel	true	tsunami_	set
+Relation	T18	T1	NoRel	true	havnebølge	tsunami
+Relation	T18	T12	NoRel	true	havnebølge	når
+Relation	T18	T13	NoRel	true	havnebølge	ødelægger
+Relation	T18	T14	NoRel	true	havnebølge	tsunamier
+Relation	T18	T17	NoRel	true	havnebølge	tsunami_
+Relation	T18	T19	NoRel	true	havnebølge	skyldes
+Relation	T18	T2	NoRel	true	havnebølge	naturkatastrofer
+Relation	T18	T9	NoRel	true	havnebølge	mærket
+Relation	T19	T0	NoRel	true	skyldes	opdage
+Relation	T19	T13	NoRel	true	skyldes	ødelægger
+Relation	T19	T14	NoRel	true	skyldes	tsunamier
+Relation	T19	T15	NoRel	true	skyldes	omkostninger
+Relation	T19	T16	NoRel	true	skyldes	øde
+Relation	T2	T11	NoRel	true	naturkatastrofer	opbygges
+Relation	T2	T12	NoRel	true	naturkatastrofer	når
+Relation	T2	T16	NoRel	true	naturkatastrofer	øde
+Relation	T2	T19	NoRel	true	naturkatastrofer	skyldes
+Relation	T2	T4	NoRel	true	naturkatastrofer	dannet
+Relation	T2	T6	NoRel	true	naturkatastrofer	fandt
+Relation	T2	T8	NoRel	true	naturkatastrofer	set
+Relation	T2	T9	NoRel	true	naturkatastrofer	mærket
+Relation	T20	T0	NoRel	true	Kæmpebølgerne	opdage
+Relation	T20	T1	NoRel	true	Kæmpebølgerne	tsunami
+Relation	T20	T11	NoRel	true	Kæmpebølgerne	opbygges
+Relation	T20	T12	NoRel	true	Kæmpebølgerne	når
+Relation	T20	T16	NoRel	true	Kæmpebølgerne	øde
+Relation	T20	T17	NoRel	true	Kæmpebølgerne	tsunami_
+Relation	T20	T18	NoRel	true	Kæmpebølgerne	havnebølge
+Relation	T20	T19	NoRel	true	Kæmpebølgerne	skyldes
+Relation	T20	T5	NoRel	true	Kæmpebølgerne	fiskeri
+Relation	T20	T7	NoRel	true	Kæmpebølgerne	ødelagt
+Relation	T20	T9	NoRel	true	Kæmpebølgerne	mærket
+Relation	T21	T10	NoRel	true	slår	bølge
+Relation	T21	T11	NoRel	true	slår	opbygges
+Relation	T21	T17	NoRel	true	slår	tsunami_
+Relation	T21	T19	NoRel	true	slår	skyldes
+Relation	T21	T2	NoRel	true	slår	naturkatastrofer
+Relation	T21	T20	NoRel	true	slår	Kæmpebølgerne
+Relation	T21	T5	NoRel	true	slår	fiskeri
+Relation	T3	T1	NoRel	true	tsunami	tsunami
+Relation	T3	T13	NoRel	true	tsunami	ødelægger
+Relation	T3	T17	NoRel	true	tsunami	tsunami_
+Relation	T3	T9	NoRel	true	tsunami	mærket
+Relation	T4	T0	NoRel	true	dannet	opdage
+Relation	T4	T10	NoRel	true	dannet	bølge
+Relation	T4	T12	NoRel	true	dannet	når
+Relation	T4	T20	NoRel	true	dannet	Kæmpebølgerne
+Relation	T4	T3	NoRel	true	dannet	tsunami
+Relation	T4	T6	NoRel	true	dannet	fandt
+Relation	T4	T7	NoRel	true	dannet	ødelagt
+Relation	T4	T8	NoRel	true	dannet	set
+Relation	T5	T15	NoRel	true	fiskeri	omkostninger
+Relation	T5	T16	NoRel	true	fiskeri	øde
+Relation	T5	T17	NoRel	true	fiskeri	tsunami_
+Relation	T5	T3	NoRel	true	fiskeri	tsunami
+Relation	T5	T4	NoRel	true	fiskeri	dannet
+Relation	T6	T0	NoRel	true	fandt	opdage
+Relation	T6	T11	NoRel	true	fandt	opbygges
+Relation	T6	T14	NoRel	true	fandt	tsunamier
+Relation	T6	T19	NoRel	true	fandt	skyldes
+Relation	T6	T2	NoRel	true	fandt	naturkatastrofer
+Relation	T6	T4	NoRel	true	fandt	dannet
+Relation	T6	T9	NoRel	true	fandt	mærket
+Relation	T7	T0	NoRel	true	ødelagt	opdage
+Relation	T7	T1	NoRel	true	ødelagt	tsunami
+Relation	T7	T10	NoRel	true	ødelagt	bølge
+Relation	T7	T11	NoRel	true	ødelagt	opbygges
+Relation	T7	T14	NoRel	true	ødelagt	tsunamier
+Relation	T7	T16	NoRel	true	ødelagt	øde
+Relation	T7	T19	NoRel	true	ødelagt	skyldes
+Relation	T7	T8	NoRel	true	ødelagt	set
+Relation	T8	T11	NoRel	true	set	opbygges
+Relation	T8	T12	NoRel	true	set	når
+Relation	T8	T17	NoRel	true	set	tsunami_
+Relation	T8	T18	NoRel	true	set	havnebølge
+Relation	T8	T19	NoRel	true	set	skyldes
+Relation	T8	T21	NoRel	true	set	slår
+Relation	T8	T5	NoRel	true	set	fiskeri
+Relation	T8	T6	NoRel	true	set	fandt
+Relation	T9	T1	NoRel	true	mærket	tsunami
+Relation	T9	T14	NoRel	true	mærket	tsunamier
+Relation	T9	T15	NoRel	true	mærket	omkostninger
+Relation	T9	T2	NoRel	true	mærket	naturkatastrofer
+Relation	T9	T4	NoRel	true	mærket	dannet

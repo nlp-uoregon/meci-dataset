@@ -1,0 +1,49 @@
+Text	- 25px 11 Ağustos 2005 – Otomobil kullanan Horsham’da parlayan ışıkları dikkate almadı .	- 25px 25 May 2006 - Lismore level crossing accident – tren ve kamyon siste korunmasız hemzemin geçitte çarpıştı .	Tren yığıldı .	Kamyon sürücüsü öldü .	- 25px 5 Haziran 2007 - Kerang tren çarpışması — - Kamyon tarafından vagonlar dilimlendiğinde 11 tren yolcusu öldü .
+Event	T0	kullanan	EVENT	34
+Event	T1	accident	EVENT	133
+Event	T2	çarpıştı	EVENT	193
+Event	T3	yığıldı	EVENT	209
+Event	T4	öldü	EVENT	235
+Event	T5	çarpışması	EVENT	278
+Event	T6	dilimlendiğinde	EVENT	320
+Event	T7	öldü	EVENT	352
+Event	T8	parlayan	EVENT	54
+Event	T9	siste	EVENT	159
+Relation	T9	T2	CauseEffect	true	siste	çarpıştı
+Relation	T2	T9	EffectCause	true	çarpıştı	siste
+Relation	T2	T1	CauseEffect	true	çarpıştı	accident
+Relation	T1	T2	EffectCause	true	accident	çarpıştı
+Relation	T1	T3	CauseEffect	true	accident	yığıldı
+Relation	T3	T1	EffectCause	true	yığıldı	accident
+Relation	T1	T4	CauseEffect	true	accident	öldü
+Relation	T4	T1	EffectCause	true	öldü	accident
+Relation	T5	T6	CauseEffect	true	çarpışması	dilimlendiğinde
+Relation	T6	T5	EffectCause	true	dilimlendiğinde	çarpışması
+Relation	T6	T7	CauseEffect	true	dilimlendiğinde	öldü
+Relation	T7	T6	EffectCause	true	öldü	dilimlendiğinde
+Relation	T0	T1	NoRel	true	kullanan	accident
+Relation	T0	T2	NoRel	true	kullanan	çarpıştı
+Relation	T0	T4	NoRel	true	kullanan	öldü
+Relation	T0	T5	NoRel	true	kullanan	çarpışması
+Relation	T0	T6	NoRel	true	kullanan	dilimlendiğinde
+Relation	T0	T8	NoRel	true	kullanan	parlayan
+Relation	T1	T0	NoRel	true	accident	kullanan
+Relation	T1	T5	NoRel	true	accident	çarpışması
+Relation	T1	T6	NoRel	true	accident	dilimlendiğinde
+Relation	T2	T3	NoRel	true	çarpıştı	yığıldı
+Relation	T2	T4	NoRel	true	çarpıştı	öldü
+Relation	T2	T7	NoRel	true	çarpıştı	öldü
+Relation	T3	T4	NoRel	true	yığıldı	öldü
+Relation	T3	T9	NoRel	true	yığıldı	siste
+Relation	T4	T3	NoRel	true	öldü	yığıldı
+Relation	T5	T1	NoRel	true	çarpışması	accident
+Relation	T5	T7	NoRel	true	çarpışması	öldü
+Relation	T5	T8	NoRel	true	çarpışması	parlayan
+Relation	T6	T0	NoRel	true	dilimlendiğinde	kullanan
+Relation	T6	T2	NoRel	true	dilimlendiğinde	çarpıştı
+Relation	T6	T3	NoRel	true	dilimlendiğinde	yığıldı
+Relation	T6	T9	NoRel	true	dilimlendiğinde	siste
+Relation	T7	T0	NoRel	true	öldü	kullanan
+Relation	T7	T1	NoRel	true	öldü	accident
+Relation	T9	T3	NoRel	true	siste	yığıldı
+Relation	T9	T5	NoRel	true	siste	çarpışması

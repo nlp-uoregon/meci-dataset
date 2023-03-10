@@ -1,0 +1,70 @@
+Text	The Flight Data Recorder was recovered intact from the wreckage , but the Cockpit Voice Recorder had been damaged in the post-crash fire and was unusable .	The weather at Glens Falls at the time of the accident was reported as " 2,100 ( feet ) overcast , visibility 7 ( miles ) in light rain , wind 180 ( degrees ) at 12 ( knots ) , peak gusts 22 ( knots ) , altimeter 2980 , runway 19 in use " .	The surface temperature was 54 degrees Fahrenheit ( 12 degrees Celsius ) .	The investigation revealed that ATC cleared the flight to " the VOR approach " , without actually specifying which specific VOR approach procedure was to be used , possibly leaving it to the flight crew 's discretion .	According to the radio communication transcript , the flight crew did not inquire as to which specific approach was in effect .
+Event	T0	intact	EVENT	39
+Event	T1	wreckage	EVENT	55
+Event	T2	damaged	EVENT	106
+Event	T3	fire	EVENT	132
+Event	T4	accident	EVENT	202
+Event	T5	reported	EVENT	215
+Event	T6	gusts	EVENT	338
+Event	T7	use	EVENT	389
+Event	T8	revealed	EVENT	490
+Event	T9	cleared	EVENT	508
+Event	T10	flight	EVENT	520
+Event	T11	specifying	EVENT	570
+Event	T12	used	EVENT	629
+Event	T13	leaving	EVENT	645
+Event	T14	inquire	EVENT	765
+Event	T15	approach	EVENT	794
+Event	T16	rain	EVENT	287
+Event	T17	approach	EVENT	540
+Event	T18	communication	EVENT	714
+Relation	T1	T0	CauseEffect	true	wreckage	intact
+Relation	T0	T1	EffectCause	true	intact	wreckage
+Relation	T3	T2	CauseEffect	true	fire	damaged
+Relation	T2	T3	EffectCause	true	damaged	fire
+Relation	T9	T17	CauseEffect	true	cleared	approach
+Relation	T17	T9	EffectCause	true	approach	cleared
+Relation	T0	T2	NoRel	true	intact	damaged
+Relation	T0	T8	NoRel	true	intact	revealed
+Relation	T1	T13	NoRel	true	wreckage	leaving
+Relation	T1	T16	NoRel	true	wreckage	rain
+Relation	T1	T17	NoRel	true	wreckage	approach
+Relation	T10	T14	NoRel	true	flight	inquire
+Relation	T11	T0	NoRel	true	specifying	intact
+Relation	T11	T1	NoRel	true	specifying	wreckage
+Relation	T11	T12	NoRel	true	specifying	used
+Relation	T12	T10	NoRel	true	used	flight
+Relation	T12	T13	NoRel	true	used	leaving
+Relation	T12	T14	NoRel	true	used	inquire
+Relation	T12	T18	NoRel	true	used	communication
+Relation	T12	T7	NoRel	true	used	use
+Relation	T13	T10	NoRel	true	leaving	flight
+Relation	T14	T0	NoRel	true	inquire	intact
+Relation	T14	T12	NoRel	true	inquire	used
+Relation	T14	T16	NoRel	true	inquire	rain
+Relation	T14	T17	NoRel	true	inquire	approach
+Relation	T14	T3	NoRel	true	inquire	fire
+Relation	T14	T6	NoRel	true	inquire	gusts
+Relation	T15	T10	NoRel	true	approach	flight
+Relation	T17	T16	NoRel	true	approach	rain
+Relation	T18	T1	NoRel	true	communication	wreckage
+Relation	T18	T2	NoRel	true	communication	damaged
+Relation	T2	T1	NoRel	true	damaged	wreckage
+Relation	T2	T13	NoRel	true	damaged	leaving
+Relation	T2	T9	NoRel	true	damaged	cleared
+Relation	T3	T18	NoRel	true	fire	communication
+Relation	T4	T0	NoRel	true	accident	intact
+Relation	T4	T13	NoRel	true	accident	leaving
+Relation	T4	T15	NoRel	true	accident	approach
+Relation	T4	T7	NoRel	true	accident	use
+Relation	T5	T15	NoRel	true	reported	approach
+Relation	T6	T10	NoRel	true	gusts	flight
+Relation	T6	T12	NoRel	true	gusts	used
+Relation	T7	T10	NoRel	true	use	flight
+Relation	T7	T17	NoRel	true	use	approach
+Relation	T8	T18	NoRel	true	revealed	communication
+Relation	T8	T5	NoRel	true	revealed	reported
+Relation	T9	T0	NoRel	true	cleared	intact
+Relation	T9	T12	NoRel	true	cleared	used
+Relation	T9	T18	NoRel	true	cleared	communication
+Relation	T9	T2	NoRel	true	cleared	damaged

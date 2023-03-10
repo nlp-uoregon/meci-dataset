@@ -1,0 +1,35 @@
+Text	جب برطانوی افسروں نے چرچل کی توجہ بنگال میں بڑے پیمانے پر ہونے والی اموات کی طرف دلائی تو چرچل کا جواب تھا کہ " پھر گاندھی ابھی تک کیوں نہیں مرا ؟	"	“ And when conscience -stricken British officials wrote to the Prime Minister in London pointing out that his policies were causing needless loss of life all he could do was write peevishly in the margin of the report , ‘ Why hasn’t Gandhi died yet ?' "	-	1943 - 1944 ء کے بنگال کے قحط کی وجہ خراب فصل نہیں تھی ۔
+Event	T0	اموات	EVENT	68
+Event	T1	جواب	EVENT	98
+Event	T2	wrote	EVENT	199
+Event	T3	loss	EVENT	290
+Event	T4	write	EVENT	323
+Event	T5	died	EVENT	389
+Event	T6	قحط	EVENT	431
+Event	T7	مرا	EVENT	141
+Event	T8	دلائی	EVENT	81
+Relation	T3	T2	CauseEffect	true	loss	wrote
+Relation	T2	T3	EffectCause	true	wrote	loss
+Relation	T0	T8	CauseEffect	true	اموات	دلائی
+Relation	T8	T0	EffectCause	true	دلائی	اموات
+Relation	T2	T4	CauseEffect	true	wrote	write
+Relation	T4	T2	EffectCause	true	write	wrote
+Relation	T8	T1	CauseEffect	true	دلائی	جواب
+Relation	T1	T8	EffectCause	true	جواب	دلائی
+Relation	T0	T2	NoRel	true	اموات	wrote
+Relation	T0	T3	NoRel	true	اموات	loss
+Relation	T0	T7	NoRel	true	اموات	مرا
+Relation	T1	T0	NoRel	true	جواب	اموات
+Relation	T1	T7	NoRel	true	جواب	مرا
+Relation	T2	T5	NoRel	true	wrote	died
+Relation	T3	T4	NoRel	true	loss	write
+Relation	T3	T5	NoRel	true	loss	died
+Relation	T3	T7	NoRel	true	loss	مرا
+Relation	T5	T0	NoRel	true	died	اموات
+Relation	T5	T7	NoRel	true	died	مرا
+Relation	T6	T5	NoRel	true	قحط	died
+Relation	T7	T1	NoRel	true	مرا	جواب
+Relation	T7	T3	NoRel	true	مرا	loss
+Relation	T7	T6	NoRel	true	مرا	قحط
+Relation	T8	T4	NoRel	true	دلائی	write
+Relation	T8	T6	NoRel	true	دلائی	قحط

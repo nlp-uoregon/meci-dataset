@@ -1,0 +1,67 @@
+Text	امریکی صدر جارج ڈبلیو بش نے 2001ء میں امریکی ٹریڈ سنٹر پر حملے کو جواز بنا کر " دہشت گردی کے خلاف جنگ " ( war on terror ) کا اعلان کیا ۔	اس جنگ کا پہلا نشانہ افغانستان بنا ۔	اس کے بعد عراق ۔	شروع ہی میں امریکی صدر جارج ڈبلیو بش نے اس جنگ کو صلیبی جنگ ( Crusade war ) بھی کہا جس سے اس کی اصل نیت واضح ہوتی ہے اگرچہ بعد میں اس لفظ کو استعمال نہیں کیا گیا اور کہا گیا کہ یہ دو تہذیبوں کی جنگ نہیں ہے ۔	11 ستمبر 2001ء کو دو مسافر بردار طیارے نیویارک میں واقع عالمی تجارتی مرکز ( ورلڈ ٹریڈ سینٹر ٹاورز ) کی بلند و بالا عمارتوں سے ٹکرا گئے ، جس سے یہ مینار زمین بوس ہو گئے ۔
+Event	T0	حملے	EVENT	58
+Event	T1	جنگ	EVENT	98
+Event	T2	جنگ	EVENT	140
+Event	T3	بنا	EVENT	168
+Event	T4	جنگ	EVENT	234
+Event	T5	جنگ	EVENT	247
+Event	T6	کہا	EVENT	271
+Event	T7	جنگ	EVENT	385
+Event	T10	اعلان	EVENT	125
+Event	T11	استعمال	EVENT	332
+Event	T12	واقع	EVENT	450
+Event	T13	ٹکرا	EVENT	525
+Event	T8	بوس	EVENT	556
+Relation	T0	T1	CauseEffect	true	حملے	جنگ
+Relation	T1	T0	EffectCause	true	جنگ	حملے
+Relation	T13	T8	CauseEffect	true	ٹکرا	بوس
+Relation	T8	T13	EffectCause	true	بوس	ٹکرا
+Relation	T0	T11	NoRel	true	حملے	استعمال
+Relation	T0	T12	NoRel	true	حملے	واقع
+Relation	T0	T13	NoRel	true	حملے	ٹکرا
+Relation	T0	T2	NoRel	true	حملے	جنگ
+Relation	T0	T5	NoRel	true	حملے	جنگ
+Relation	T0	T6	NoRel	true	حملے	کہا
+Relation	T1	T10	NoRel	true	جنگ	اعلان
+Relation	T1	T11	NoRel	true	جنگ	استعمال
+Relation	T1	T5	NoRel	true	جنگ	جنگ
+Relation	T10	T3	NoRel	true	اعلان	بنا
+Relation	T10	T4	NoRel	true	اعلان	جنگ
+Relation	T10	T5	NoRel	true	اعلان	جنگ
+Relation	T10	T6	NoRel	true	اعلان	کہا
+Relation	T11	T0	NoRel	true	استعمال	حملے
+Relation	T11	T10	NoRel	true	استعمال	اعلان
+Relation	T11	T4	NoRel	true	استعمال	جنگ
+Relation	T11	T6	NoRel	true	استعمال	کہا
+Relation	T11	T7	NoRel	true	استعمال	جنگ
+Relation	T12	T10	NoRel	true	واقع	اعلان
+Relation	T12	T11	NoRel	true	واقع	استعمال
+Relation	T12	T13	NoRel	true	واقع	ٹکرا
+Relation	T13	T12	NoRel	true	ٹکرا	واقع
+Relation	T13	T5	NoRel	true	ٹکرا	جنگ
+Relation	T2	T3	NoRel	true	جنگ	بنا
+Relation	T2	T5	NoRel	true	جنگ	جنگ
+Relation	T2	T7	NoRel	true	جنگ	جنگ
+Relation	T3	T0	NoRel	true	بنا	حملے
+Relation	T3	T11	NoRel	true	بنا	استعمال
+Relation	T3	T12	NoRel	true	بنا	واقع
+Relation	T4	T1	NoRel	true	جنگ	جنگ
+Relation	T4	T10	NoRel	true	جنگ	اعلان
+Relation	T4	T2	NoRel	true	جنگ	جنگ
+Relation	T4	T5	NoRel	true	جنگ	جنگ
+Relation	T4	T6	NoRel	true	جنگ	کہا
+Relation	T5	T10	NoRel	true	جنگ	اعلان
+Relation	T5	T2	NoRel	true	جنگ	جنگ
+Relation	T5	T3	NoRel	true	جنگ	بنا
+Relation	T5	T4	NoRel	true	جنگ	جنگ
+Relation	T5	T7	NoRel	true	جنگ	جنگ
+Relation	T6	T12	NoRel	true	کہا	واقع
+Relation	T6	T13	NoRel	true	کہا	ٹکرا
+Relation	T6	T2	NoRel	true	کہا	جنگ
+Relation	T6	T5	NoRel	true	کہا	جنگ
+Relation	T6	T8	NoRel	true	کہا	بوس
+Relation	T7	T1	NoRel	true	جنگ	جنگ
+Relation	T7	T5	NoRel	true	جنگ	جنگ
+Relation	T7	T6	NoRel	true	جنگ	کہا
+Relation	T8	T11	NoRel	true	بوس	استعمال
+Relation	T8	T3	NoRel	true	بوس	بنا

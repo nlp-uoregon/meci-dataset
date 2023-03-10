@@ -1,0 +1,58 @@
+Text	En FN-organisation for biodiversitet og økosystemer anslår i 2020 at der er 850 000 vira i verden , der kan forårsage fremtidige pandemier .	Coronaviruspandemien COVID-19 vil ikke være den sidste pandemi .	Nipahvirus anses for at kunne blive årsag til den næste pandemi .	Tidligere skulle der være et " enormt antal af døde eller syge " for at man kunne tale om en pandemi .	Det er ikke længe tilfældet efter WHO's ændring af definitionen i maj 2009 .
+Event	T0	anslår	EVENT	52
+Event	T1	forårsage	EVENT	108
+Event	T2	pandemier	EVENT	129
+Event	T3	pandemi	EVENT	196
+Event	T4	pandemi	EVENT	262
+Event	T5	døde	EVENT	319
+Event	T6	syge	EVENT	330
+Event	T7	pandemi	EVENT	365
+Event	T8	ændring	EVENT	415
+Event	T9	vira	EVENT	84
+Event	T10	Coronaviruspandemien	EVENT	141
+Event	T11	Nipahvirus	EVENT	206
+Relation	T9	T2	CauseEffect	true	vira	pandemier
+Relation	T2	T9	EffectCause	true	pandemier	vira
+Relation	T0	T2	NoRel	true	anslår	pandemier
+Relation	T0	T3	NoRel	true	anslår	pandemi
+Relation	T0	T5	NoRel	true	anslår	døde
+Relation	T1	T0	NoRel	true	forårsage	anslår
+Relation	T1	T11	NoRel	true	forårsage	Nipahvirus
+Relation	T1	T2	NoRel	true	forårsage	pandemier
+Relation	T1	T4	NoRel	true	forårsage	pandemi
+Relation	T10	T0	NoRel	true	Coronaviruspandemien	anslår
+Relation	T10	T3	NoRel	true	Coronaviruspandemien	pandemi
+Relation	T10	T8	NoRel	true	Coronaviruspandemien	ændring
+Relation	T11	T2	NoRel	true	Nipahvirus	pandemier
+Relation	T11	T7	NoRel	true	Nipahvirus	pandemi
+Relation	T2	T10	NoRel	true	pandemier	Coronaviruspandemien
+Relation	T2	T11	NoRel	true	pandemier	Nipahvirus
+Relation	T2	T6	NoRel	true	pandemier	syge
+Relation	T2	T8	NoRel	true	pandemier	ændring
+Relation	T3	T1	NoRel	true	pandemi	forårsage
+Relation	T3	T10	NoRel	true	pandemi	Coronaviruspandemien
+Relation	T3	T11	NoRel	true	pandemi	Nipahvirus
+Relation	T3	T2	NoRel	true	pandemi	pandemier
+Relation	T3	T6	NoRel	true	pandemi	syge
+Relation	T3	T7	NoRel	true	pandemi	pandemi
+Relation	T3	T9	NoRel	true	pandemi	vira
+Relation	T4	T3	NoRel	true	pandemi	pandemi
+Relation	T4	T6	NoRel	true	pandemi	syge
+Relation	T4	T8	NoRel	true	pandemi	ændring
+Relation	T5	T0	NoRel	true	døde	anslår
+Relation	T5	T2	NoRel	true	døde	pandemier
+Relation	T5	T3	NoRel	true	døde	pandemi
+Relation	T5	T8	NoRel	true	døde	ændring
+Relation	T6	T2	NoRel	true	syge	pandemier
+Relation	T6	T3	NoRel	true	syge	pandemi
+Relation	T6	T4	NoRel	true	syge	pandemi
+Relation	T6	T5	NoRel	true	syge	døde
+Relation	T7	T4	NoRel	true	pandemi	pandemi
+Relation	T7	T8	NoRel	true	pandemi	ændring
+Relation	T8	T0	NoRel	true	ændring	anslår
+Relation	T8	T1	NoRel	true	ændring	forårsage
+Relation	T9	T10	NoRel	true	vira	Coronaviruspandemien
+Relation	T9	T4	NoRel	true	vira	pandemi
+Relation	T9	T5	NoRel	true	vira	døde
+Relation	T9	T6	NoRel	true	vira	syge
+Relation	T9	T8	NoRel	true	vira	ændring

@@ -1,0 +1,45 @@
+Text	Excitement mounted in New Zealand during the day , and by early evening an estimated 10,000 people had arrived at Trentham to greet the airmen , including Dorothy Moncrieff and Laura Hood , the aviators ' wives .	[ Search activity for Hood and Moncrieff drawn on 1885 map of New Zealand ]	At 17:22 NZ time , when the aircraft had been in the air for just over 12 hours , and should have been within about off New Zealand 's coast , signals from the _ Aotearoa _ ceased abruptly .	With the cessation of radio signals hopefulness gave way to anxiety , although the relatively poor reliability of airborne radio at the time did not necessarily mean that loss of signal equalled the loss of the aircraft .	Searchlights were used to illuminate the clouds that were building up , and rockets were still being sent up at 01:40 on 11 January , but the crowd waited in vain .
+Event	T0	mounted	EVENT	11
+Event	T1	arrived	EVENT	103
+Event	T2	greet	EVENT	126
+Event	T3	activity	EVENT	222
+Event	T4	drawn	EVENT	254
+Event	T5	signals	EVENT	432
+Event	T6	ceased	EVENT	462
+Event	T7	cessation	EVENT	489
+Event	T8	anxiety	EVENT	540
+Event	T9	loss	EVENT	651
+Event	T10	equalled	EVENT	666
+Event	T11	loss	EVENT	679
+Event	T12	used	EVENT	720
+Event	T13	illuminate	EVENT	728
+Event	T14	waited	EVENT	850
+Event	T15	building up	EVENT	760
+Event	T16	sent up	EVENT	803
+Relation	T7	T8	CauseEffect	true	cessation	anxiety
+Relation	T8	T7	EffectCause	true	anxiety	cessation
+Relation	T12	T13	CauseEffect	true	used	illuminate
+Relation	T13	T12	EffectCause	true	illuminate	used
+Relation	T0	T15	NoRel	true	mounted	building up
+Relation	T1	T12	NoRel	true	arrived	used
+Relation	T10	T1	NoRel	true	equalled	arrived
+Relation	T11	T14	NoRel	true	loss	waited
+Relation	T12	T14	NoRel	true	used	waited
+Relation	T13	T14	NoRel	true	illuminate	waited
+Relation	T13	T15	NoRel	true	illuminate	building up
+Relation	T14	T11	NoRel	true	waited	loss
+Relation	T15	T11	NoRel	true	building up	loss
+Relation	T15	T4	NoRel	true	building up	drawn
+Relation	T3	T4	NoRel	true	activity	drawn
+Relation	T4	T1	NoRel	true	drawn	arrived
+Relation	T4	T8	NoRel	true	drawn	anxiety
+Relation	T5	T0	NoRel	true	signals	mounted
+Relation	T5	T2	NoRel	true	signals	greet
+Relation	T5	T8	NoRel	true	signals	anxiety
+Relation	T6	T14	NoRel	true	ceased	waited
+Relation	T6	T3	NoRel	true	ceased	activity
+Relation	T6	T7	NoRel	true	ceased	cessation
+Relation	T7	T0	NoRel	true	cessation	mounted
+Relation	T7	T3	NoRel	true	cessation	activity
+Relation	T9	T14	NoRel	true	loss	waited
+Relation	T9	T15	NoRel	true	loss	building up

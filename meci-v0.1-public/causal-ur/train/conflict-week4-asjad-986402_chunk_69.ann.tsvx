@@ -1,0 +1,84 @@
+Text	کچھ پارلیمانی نائبین نے مطالبہ کیا کہ نورٹین پاشا کو سزائے موت دی جائے اور انہیں مقدمے میں ڈالنے کا فیصلہ کیا گیا ، حالانکہ مصطفیٰ کمال کی مداخلت کے بعد مقدمہ منسوخ کر دیا گیا ۔	ٹینر اکام نے لکھا کہ ایک اخبار کے مطابق ، نورٹین پاشا نے اناتولیا میں باقی تمام یونانی اور آرمینیائی آبادیوں کو قتل کرنے کی تجویز پیش کی تھی ، مصطفی کمال نے ایک تجویز مسترد کردی ۔	یہ جذبات بنیادی طور پر ناکام مہم کے دوران یونانی فوج کی جانب سے منظم نسلی صفائی کے بعد انتقام کی خواہش سے پیدا ہوئے ۔	اناتولیا میں رہنے والی عیسائی آبادیوں ، بنیادی طور پر یونانی اور ارمینی شہریوں کے خلاف ترک افواج کے مظالم کی رپورٹنگ کرنے والے کئی معاصر مغربی اخبارات کے مضامین بھی تھے ۔	مثال کے طور پر ، لندن__ٹائمز کے__مطابق ، " ترک حکام واضح طور پر بتاتے ہیں کہ یہ ان کا جان بوجھ کر ارادہ ہے کہ تمام یونانیوں کو مرنے دیں ، اور ان کے اقدامات ان کے بیان کی حمایت کرتے ہیں ۔
+Event	T0	دی	EVENT	63
+Event	T1	ڈالنے	EVENT	91
+Event	T2	مداخلت	EVENT	139
+Event	T3	منسوخ	EVENT	159
+Event	T4	لکھا	EVENT	191
+Event	T5	کرنے	EVENT	294
+Event	T6	کردی	EVENT	351
+Event	T7	جذبات	EVENT	361
+Event	T8	صفائی	EVENT	432
+Event	T9	انتقام	EVENT	445
+Event	T10	خواہش	EVENT	455
+Event	T11	ہوئے	EVENT	469
+Event	T12	مظالم	EVENT	576
+Event	T13	مرنے	EVENT	774
+Relation	T2	T3	CauseEffect	true	مداخلت	منسوخ
+Relation	T3	T2	EffectCause	true	منسوخ	مداخلت
+Relation	T8	T9	CauseEffect	true	صفائی	انتقام
+Relation	T9	T8	EffectCause	true	انتقام	صفائی
+Relation	T10	T11	CauseEffect	true	خواہش	ہوئے
+Relation	T11	T10	EffectCause	true	ہوئے	خواہش
+Relation	T10	T7	CauseEffect	true	خواہش	جذبات
+Relation	T7	T10	EffectCause	true	جذبات	خواہش
+Relation	T0	T11	NoRel	true	دی	ہوئے
+Relation	T0	T12	NoRel	true	دی	مظالم
+Relation	T1	T0	NoRel	true	ڈالنے	دی
+Relation	T1	T10	NoRel	true	ڈالنے	خواہش
+Relation	T1	T2	NoRel	true	ڈالنے	مداخلت
+Relation	T1	T4	NoRel	true	ڈالنے	لکھا
+Relation	T1	T6	NoRel	true	ڈالنے	کردی
+Relation	T1	T8	NoRel	true	ڈالنے	صفائی
+Relation	T1	T9	NoRel	true	ڈالنے	انتقام
+Relation	T10	T1	NoRel	true	خواہش	ڈالنے
+Relation	T10	T2	NoRel	true	خواہش	مداخلت
+Relation	T10	T6	NoRel	true	خواہش	کردی
+Relation	T11	T1	NoRel	true	ہوئے	ڈالنے
+Relation	T11	T13	NoRel	true	ہوئے	مرنے
+Relation	T11	T2	NoRel	true	ہوئے	مداخلت
+Relation	T11	T3	NoRel	true	ہوئے	منسوخ
+Relation	T11	T4	NoRel	true	ہوئے	لکھا
+Relation	T11	T6	NoRel	true	ہوئے	کردی
+Relation	T11	T7	NoRel	true	ہوئے	جذبات
+Relation	T11	T8	NoRel	true	ہوئے	صفائی
+Relation	T11	T9	NoRel	true	ہوئے	انتقام
+Relation	T12	T10	NoRel	true	مظالم	خواہش
+Relation	T12	T13	NoRel	true	مظالم	مرنے
+Relation	T12	T2	NoRel	true	مظالم	مداخلت
+Relation	T12	T6	NoRel	true	مظالم	کردی
+Relation	T12	T8	NoRel	true	مظالم	صفائی
+Relation	T13	T10	NoRel	true	مرنے	خواہش
+Relation	T13	T11	NoRel	true	مرنے	ہوئے
+Relation	T13	T2	NoRel	true	مرنے	مداخلت
+Relation	T2	T0	NoRel	true	مداخلت	دی
+Relation	T2	T1	NoRel	true	مداخلت	ڈالنے
+Relation	T2	T10	NoRel	true	مداخلت	خواہش
+Relation	T3	T12	NoRel	true	منسوخ	مظالم
+Relation	T3	T13	NoRel	true	منسوخ	مرنے
+Relation	T3	T5	NoRel	true	منسوخ	کرنے
+Relation	T3	T6	NoRel	true	منسوخ	کردی
+Relation	T3	T9	NoRel	true	منسوخ	انتقام
+Relation	T4	T11	NoRel	true	لکھا	ہوئے
+Relation	T4	T6	NoRel	true	لکھا	کردی
+Relation	T4	T7	NoRel	true	لکھا	جذبات
+Relation	T4	T9	NoRel	true	لکھا	انتقام
+Relation	T5	T12	NoRel	true	کرنے	مظالم
+Relation	T5	T13	NoRel	true	کرنے	مرنے
+Relation	T5	T2	NoRel	true	کرنے	مداخلت
+Relation	T5	T3	NoRel	true	کرنے	منسوخ
+Relation	T5	T4	NoRel	true	کرنے	لکھا
+Relation	T5	T7	NoRel	true	کرنے	جذبات
+Relation	T5	T9	NoRel	true	کرنے	انتقام
+Relation	T6	T10	NoRel	true	کردی	خواہش
+Relation	T6	T12	NoRel	true	کردی	مظالم
+Relation	T6	T13	NoRel	true	کردی	مرنے
+Relation	T6	T2	NoRel	true	کردی	مداخلت
+Relation	T6	T7	NoRel	true	کردی	جذبات
+Relation	T6	T8	NoRel	true	کردی	صفائی
+Relation	T7	T13	NoRel	true	جذبات	مرنے
+Relation	T7	T3	NoRel	true	جذبات	منسوخ
+Relation	T7	T6	NoRel	true	جذبات	کردی
+Relation	T7	T9	NoRel	true	جذبات	انتقام
+Relation	T8	T5	NoRel	true	صفائی	کرنے
+Relation	T9	T10	NoRel	true	انتقام	خواہش
+Relation	T9	T3	NoRel	true	انتقام	منسوخ

@@ -1,0 +1,30 @@
+Text	El siniestro se saldó con 15 muertos y 112 heridos .	- 16 de septiembre de 1952 .	Junto a la antigua estación de Mislata ( Valencia ) , un tren de la línea de Liria arrolló a un tranvía en un paso a nivel .	5 viajeros del tranvía murieron y otros 26 resultaron heridos .	- 5 de noviembre de 1952 .
+Event	T0	siniestro	EVENT	3
+Event	T1	saldó	EVENT	16
+Event	T2	muertos	EVENT	29
+Event	T3	heridos	EVENT	43
+Event	T4	arrolló	EVENT	165
+Event	T5	paso	EVENT	192
+Event	T6	murieron	EVENT	230
+Event	T7	heridos	EVENT	261
+Relation	T0	T2	CauseEffect	true	siniestro	muertos
+Relation	T2	T0	EffectCause	true	muertos	siniestro
+Relation	T0	T3	CauseEffect	true	siniestro	heridos
+Relation	T3	T0	EffectCause	true	heridos	siniestro
+Relation	T4	T6	CauseEffect	true	arrolló	murieron
+Relation	T6	T4	EffectCause	true	murieron	arrolló
+Relation	T4	T7	CauseEffect	true	arrolló	heridos
+Relation	T7	T4	EffectCause	true	heridos	arrolló
+Relation	T0	T4	NoRel	true	siniestro	arrolló
+Relation	T0	T7	NoRel	true	siniestro	heridos
+Relation	T1	T0	NoRel	true	saldó	siniestro
+Relation	T1	T6	NoRel	true	saldó	murieron
+Relation	T2	T1	NoRel	true	muertos	saldó
+Relation	T2	T6	NoRel	true	muertos	murieron
+Relation	T3	T4	NoRel	true	heridos	arrolló
+Relation	T3	T6	NoRel	true	heridos	murieron
+Relation	T4	T0	NoRel	true	arrolló	siniestro
+Relation	T4	T2	NoRel	true	arrolló	muertos
+Relation	T6	T2	NoRel	true	murieron	muertos
+Relation	T6	T5	NoRel	true	murieron	paso
+Relation	T7	T0	NoRel	true	heridos	siniestro

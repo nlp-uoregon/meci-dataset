@@ -1,0 +1,29 @@
+Text	Televizyon düzmece “ destek gösterisini ” yayınlasa da arkası gelmedi .	Çavuşesku’nun olaylar karşısındaki reaksiyonu halkın belleğine kazınmıştı bile .	22 Aralık gündoğumuyla , çatışmalar tüm büyük kentlere sıçramıştı .	Savunma Bakanı ( General ) Vasile Milea’nın şüpheli ölümü medya tarafından açıklandı .	Ceavuşescu , bunun hemen sonrasında , Politik Yönetim Komitesi’ni toplayarak , ordu liderliğini kendi üzerine aldı .
+Event	T1	yayınlasa	EVENT	42
+Event	T2	olaylar	EVENT	86
+Event	T3	reaksiyonu	EVENT	107
+Event	T5	sıçramıştı	EVENT	208
+Event	T7	açıklandı	EVENT	296
+Event	T8	aldı	EVENT	418
+Event	T9	kazınmıştı	EVENT	135
+Event	T4	toplayarak	EVENT	374
+Relation	T2	T3	CauseEffect	true	olaylar	reaksiyonu
+Relation	T3	T2	EffectCause	true	reaksiyonu	olaylar
+Relation	T3	T9	CauseEffect	true	reaksiyonu	kazınmıştı
+Relation	T9	T3	EffectCause	true	kazınmıştı	reaksiyonu
+Relation	T4	T8	CauseEffect	true	toplayarak	aldı
+Relation	T8	T4	EffectCause	true	aldı	toplayarak
+Relation	T2	T1	NoRel	true	olaylar	yayınlasa
+Relation	T2	T5	NoRel	true	olaylar	sıçramıştı
+Relation	T2	T7	NoRel	true	olaylar	açıklandı
+Relation	T2	T8	NoRel	true	olaylar	aldı
+Relation	T3	T4	NoRel	true	reaksiyonu	toplayarak
+Relation	T4	T1	NoRel	true	toplayarak	yayınlasa
+Relation	T4	T9	NoRel	true	toplayarak	kazınmıştı
+Relation	T7	T1	NoRel	true	açıklandı	yayınlasa
+Relation	T7	T2	NoRel	true	açıklandı	olaylar
+Relation	T7	T8	NoRel	true	açıklandı	aldı
+Relation	T8	T2	NoRel	true	aldı	olaylar
+Relation	T9	T2	NoRel	true	kazınmıştı	olaylar
+Relation	T9	T4	NoRel	true	kazınmıştı	toplayarak
+Relation	T9	T8	NoRel	true	kazınmıştı	aldı

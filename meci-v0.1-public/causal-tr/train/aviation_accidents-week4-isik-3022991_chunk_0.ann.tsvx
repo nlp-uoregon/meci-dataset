@@ -1,0 +1,28 @@
+Text	30 Eylül 1948 günü Aeroflot tarafından işletilen bir Lisunov Li - 2 uçağı , Alma - Ata'dan Moskova'ya Balkaş , Karağandı , Kostanay , Çelyabinsk ve Kazan üzerinden yapılan bir tarifleli iç hat yolcu uçuşu sırasında düştü .	Uçakta bulunan 15 kişinin tamamı öldü .	Kazaya karışan uçak , Aeroflot'un Kazakistan filosuna ait çift motorlu bir Lisunov Li - 2 idi ( seri numarası 239 - 02 , fabrika numarası 18423902 ) .	İlk uçuşunu 1946'da yapan uçak aynı yıl Aeroflot'un Kazakistan filosunda işletilmek üzere CCCP - L4304 kuyruk numarasını aldı .	Kaza anında uçağın 2474 uçuş saati vardı .
+Event	T1	uçuşu	EVENT	199
+Event	T2	düştü	EVENT	215
+Event	T3	öldü	EVENT	256
+Event	T6	aldı	EVENT	535
+Event	T4	Kazaya	EVENT	263
+Event	T7	Kaza	EVENT	542
+Event	T5	uçuşunu	EVENT	418
+Relation	T2	T3	CauseEffect	true	düştü	öldü
+Relation	T3	T2	EffectCause	true	öldü	düştü
+Relation	T4	T3	CauseEffect	true	Kazaya	öldü
+Relation	T3	T4	EffectCause	true	öldü	Kazaya
+Relation	T1	T2	NoRel	true	uçuşu	düştü
+Relation	T1	T7	NoRel	true	uçuşu	Kaza
+Relation	T3	T6	NoRel	true	öldü	aldı
+Relation	T3	T7	NoRel	true	öldü	Kaza
+Relation	T4	T5	NoRel	true	Kazaya	uçuşunu
+Relation	T4	T6	NoRel	true	Kazaya	aldı
+Relation	T5	T3	NoRel	true	uçuşunu	öldü
+Relation	T5	T4	NoRel	true	uçuşunu	Kazaya
+Relation	T5	T7	NoRel	true	uçuşunu	Kaza
+Relation	T6	T5	NoRel	true	aldı	uçuşunu
+Relation	T6	T7	NoRel	true	aldı	Kaza
+Relation	T7	T1	NoRel	true	Kaza	uçuşu
+Relation	T7	T2	NoRel	true	Kaza	düştü
+Relation	T7	T4	NoRel	true	Kaza	Kazaya
+Relation	T7	T5	NoRel	true	Kaza	uçuşunu
+Relation	T7	T6	NoRel	true	Kaza	aldı

@@ -1,0 +1,24 @@
+Text	پاکستان انٹرنیشنل ایئر لائن کی پرواز PK-404 جو کہ ایک فوکر ایف 27 سے چلائی جا رہی تھی ٹیک آف کے فورا بعد 25 اگست 1989 کو 07 : 36 پر غائب ہوگئی ۔	یہ پاکستان انٹرنیشنل ایئر لائن کی ایک مقامی پرواز تھی جو شمالی شہر گلگت سے دارالحکومت اسلام آباد روانہ ہوئی ۔	جہاز میں عملہ سمیت 54 افراد سوار تھے ۔	ہوائی جہاز کے پائلٹ میں سے ایک نے 07 : 40 پر معمول کی ریڈیو کال کی ۔	یہ طیارے کے ساتھ آخری مواصلات تھا ۔
+Event	T1	چلائی	EVENT	69
+Event	T3	پرواز	EVENT	189
+Event	T4	سوار	EVENT	283
+Event	T5	غائب	EVENT	132
+Event	T6	ٹیک آف	EVENT	86
+Event	T7	کال	EVENT	354
+Event	T8	مواصلات	EVENT	385
+Relation	T5	T8	CauseEffect	true	غائب	مواصلات
+Relation	T8	T5	EffectCause	true	مواصلات	غائب
+Relation	T1	T8	NoRel	true	چلائی	مواصلات
+Relation	T3	T1	NoRel	true	پرواز	چلائی
+Relation	T3	T5	NoRel	true	پرواز	غائب
+Relation	T4	T1	NoRel	true	سوار	چلائی
+Relation	T4	T5	NoRel	true	سوار	غائب
+Relation	T4	T6	NoRel	true	سوار	ٹیک آف
+Relation	T6	T4	NoRel	true	ٹیک آف	سوار
+Relation	T7	T4	NoRel	true	کال	سوار
+Relation	T7	T5	NoRel	true	کال	غائب
+Relation	T7	T8	NoRel	true	کال	مواصلات
+Relation	T8	T1	NoRel	true	مواصلات	چلائی
+Relation	T8	T3	NoRel	true	مواصلات	پرواز
+Relation	T8	T4	NoRel	true	مواصلات	سوار
+Relation	T8	T6	NoRel	true	مواصلات	ٹیک آف

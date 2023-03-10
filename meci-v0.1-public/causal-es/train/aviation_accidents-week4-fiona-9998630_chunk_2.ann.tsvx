@@ -1,0 +1,153 @@
+Text	Aproximadamente cuatro minutos después del despegue de la carretera de Kubinka , durante un vuelo nivelado a baja altura sobre la pista 04 , se produjo un incendio en el motor de estribor .	Desde el suelo , se observó la quema a cielo abierto con la aparición de largas columnas de llamas .	La aeronave comenzó a desarrollar un balanceo a la derecha .	Habiendo pasado al giro a la derecha con una disminución y un fuerte aumento en el balanceo , excediendo los 180° , el avión cayó al bosque a aproximadamente a 5 km al este del final de la pista 22 , se destruyó por completo y se quemó .	El accidente ocurrió a las 11:18 , unos 35 segundos después de la aparición de un fuego abierto en el motor derecho .
+Event	T0	despegue	EVENT	43
+Event	T1	nivelado	EVENT	98
+Event	T2	produjo	EVENT	144
+Event	T3	incendio	EVENT	155
+Event	T4	estribor	EVENT	179
+Event	T5	observó	EVENT	210
+Event	T6	quema	EVENT	221
+Event	T7	aparición	EVENT	250
+Event	T8	comenzó	EVENT	303
+Event	T9	desarrollar	EVENT	313
+Event	T10	balanceo	EVENT	328
+Event	T11	giro	EVENT	371
+Event	T12	disminución	EVENT	397
+Event	T13	excediendo	EVENT	446
+Event	T14	cayó	EVENT	477
+Event	T15	destruyó	EVENT	555
+Event	T16	quemó	EVENT	582
+Event	T17	ocurrió	EVENT	603
+Event	T18	aparición	EVENT	656
+Event	T19	abierto	EVENT	678
+Relation	T3	T10	CauseEffect	true	incendio	balanceo
+Relation	T10	T3	EffectCause	true	balanceo	incendio
+Relation	T10	T14	CauseEffect	true	balanceo	cayó
+Relation	T14	T10	EffectCause	true	cayó	balanceo
+Relation	T14	T15	CauseEffect	true	cayó	destruyó
+Relation	T15	T14	EffectCause	true	destruyó	cayó
+Relation	T0	T11	NoRel	true	despegue	giro
+Relation	T0	T12	NoRel	true	despegue	disminución
+Relation	T0	T13	NoRel	true	despegue	excediendo
+Relation	T0	T14	NoRel	true	despegue	cayó
+Relation	T0	T19	NoRel	true	despegue	abierto
+Relation	T0	T4	NoRel	true	despegue	estribor
+Relation	T1	T10	NoRel	true	nivelado	balanceo
+Relation	T1	T12	NoRel	true	nivelado	disminución
+Relation	T1	T16	NoRel	true	nivelado	quemó
+Relation	T1	T17	NoRel	true	nivelado	ocurrió
+Relation	T1	T5	NoRel	true	nivelado	observó
+Relation	T1	T6	NoRel	true	nivelado	quema
+Relation	T1	T7	NoRel	true	nivelado	aparición
+Relation	T1	T9	NoRel	true	nivelado	desarrollar
+Relation	T10	T1	NoRel	true	balanceo	nivelado
+Relation	T10	T11	NoRel	true	balanceo	giro
+Relation	T10	T15	NoRel	true	balanceo	destruyó
+Relation	T10	T4	NoRel	true	balanceo	estribor
+Relation	T10	T8	NoRel	true	balanceo	comenzó
+Relation	T10	T9	NoRel	true	balanceo	desarrollar
+Relation	T11	T18	NoRel	true	giro	aparición
+Relation	T11	T2	NoRel	true	giro	produjo
+Relation	T12	T10	NoRel	true	disminución	balanceo
+Relation	T12	T3	NoRel	true	disminución	incendio
+Relation	T12	T6	NoRel	true	disminución	quema
+Relation	T12	T7	NoRel	true	disminución	aparición
+Relation	T13	T0	NoRel	true	excediendo	despegue
+Relation	T13	T1	NoRel	true	excediendo	nivelado
+Relation	T13	T10	NoRel	true	excediendo	balanceo
+Relation	T13	T14	NoRel	true	excediendo	cayó
+Relation	T13	T17	NoRel	true	excediendo	ocurrió
+Relation	T13	T18	NoRel	true	excediendo	aparición
+Relation	T13	T2	NoRel	true	excediendo	produjo
+Relation	T13	T3	NoRel	true	excediendo	incendio
+Relation	T13	T5	NoRel	true	excediendo	observó
+Relation	T13	T6	NoRel	true	excediendo	quema
+Relation	T13	T8	NoRel	true	excediendo	comenzó
+Relation	T14	T0	NoRel	true	cayó	despegue
+Relation	T14	T1	NoRel	true	cayó	nivelado
+Relation	T14	T16	NoRel	true	cayó	quemó
+Relation	T14	T6	NoRel	true	cayó	quema
+Relation	T14	T9	NoRel	true	cayó	desarrollar
+Relation	T15	T10	NoRel	true	destruyó	balanceo
+Relation	T15	T13	NoRel	true	destruyó	excediendo
+Relation	T15	T2	NoRel	true	destruyó	produjo
+Relation	T15	T8	NoRel	true	destruyó	comenzó
+Relation	T15	T9	NoRel	true	destruyó	desarrollar
+Relation	T16	T10	NoRel	true	quemó	balanceo
+Relation	T16	T12	NoRel	true	quemó	disminución
+Relation	T16	T19	NoRel	true	quemó	abierto
+Relation	T16	T6	NoRel	true	quemó	quema
+Relation	T17	T0	NoRel	true	ocurrió	despegue
+Relation	T17	T14	NoRel	true	ocurrió	cayó
+Relation	T17	T16	NoRel	true	ocurrió	quemó
+Relation	T17	T5	NoRel	true	ocurrió	observó
+Relation	T17	T8	NoRel	true	ocurrió	comenzó
+Relation	T18	T0	NoRel	true	aparición	despegue
+Relation	T18	T1	NoRel	true	aparición	nivelado
+Relation	T18	T12	NoRel	true	aparición	disminución
+Relation	T18	T13	NoRel	true	aparición	excediendo
+Relation	T18	T14	NoRel	true	aparición	cayó
+Relation	T18	T16	NoRel	true	aparición	quemó
+Relation	T18	T19	NoRel	true	aparición	abierto
+Relation	T18	T2	NoRel	true	aparición	produjo
+Relation	T18	T4	NoRel	true	aparición	estribor
+Relation	T18	T5	NoRel	true	aparición	observó
+Relation	T18	T8	NoRel	true	aparición	comenzó
+Relation	T19	T1	NoRel	true	abierto	nivelado
+Relation	T19	T11	NoRel	true	abierto	giro
+Relation	T19	T14	NoRel	true	abierto	cayó
+Relation	T19	T16	NoRel	true	abierto	quemó
+Relation	T19	T6	NoRel	true	abierto	quema
+Relation	T2	T0	NoRel	true	produjo	despegue
+Relation	T2	T10	NoRel	true	produjo	balanceo
+Relation	T2	T12	NoRel	true	produjo	disminución
+Relation	T2	T13	NoRel	true	produjo	excediendo
+Relation	T2	T6	NoRel	true	produjo	quema
+Relation	T2	T9	NoRel	true	produjo	desarrollar
+Relation	T3	T16	NoRel	true	incendio	quemó
+Relation	T3	T2	NoRel	true	incendio	produjo
+Relation	T3	T6	NoRel	true	incendio	quema
+Relation	T3	T8	NoRel	true	incendio	comenzó
+Relation	T4	T1	NoRel	true	estribor	nivelado
+Relation	T4	T10	NoRel	true	estribor	balanceo
+Relation	T4	T13	NoRel	true	estribor	excediendo
+Relation	T4	T14	NoRel	true	estribor	cayó
+Relation	T4	T17	NoRel	true	estribor	ocurrió
+Relation	T4	T19	NoRel	true	estribor	abierto
+Relation	T4	T5	NoRel	true	estribor	observó
+Relation	T4	T8	NoRel	true	estribor	comenzó
+Relation	T5	T10	NoRel	true	observó	balanceo
+Relation	T5	T12	NoRel	true	observó	disminución
+Relation	T5	T16	NoRel	true	observó	quemó
+Relation	T5	T6	NoRel	true	observó	quema
+Relation	T5	T7	NoRel	true	observó	aparición
+Relation	T5	T8	NoRel	true	observó	comenzó
+Relation	T6	T11	NoRel	true	quema	giro
+Relation	T6	T12	NoRel	true	quema	disminución
+Relation	T6	T17	NoRel	true	quema	ocurrió
+Relation	T6	T19	NoRel	true	quema	abierto
+Relation	T6	T2	NoRel	true	quema	produjo
+Relation	T6	T3	NoRel	true	quema	incendio
+Relation	T6	T4	NoRel	true	quema	estribor
+Relation	T6	T5	NoRel	true	quema	observó
+Relation	T6	T7	NoRel	true	quema	aparición
+Relation	T7	T10	NoRel	true	aparición	balanceo
+Relation	T7	T11	NoRel	true	aparición	giro
+Relation	T7	T12	NoRel	true	aparición	disminución
+Relation	T7	T14	NoRel	true	aparición	cayó
+Relation	T7	T15	NoRel	true	aparición	destruyó
+Relation	T7	T16	NoRel	true	aparición	quemó
+Relation	T7	T3	NoRel	true	aparición	incendio
+Relation	T7	T6	NoRel	true	aparición	quema
+Relation	T7	T9	NoRel	true	aparición	desarrollar
+Relation	T8	T0	NoRel	true	comenzó	despegue
+Relation	T8	T5	NoRel	true	comenzó	observó
+Relation	T9	T0	NoRel	true	desarrollar	despegue
+Relation	T9	T11	NoRel	true	desarrollar	giro
+Relation	T9	T12	NoRel	true	desarrollar	disminución
+Relation	T9	T14	NoRel	true	desarrollar	cayó
+Relation	T9	T15	NoRel	true	desarrollar	destruyó
+Relation	T9	T19	NoRel	true	desarrollar	abierto
+Relation	T9	T3	NoRel	true	desarrollar	incendio
+Relation	T9	T5	NoRel	true	desarrollar	observó
+Relation	T9	T6	NoRel	true	desarrollar	quema
+Relation	T9	T7	NoRel	true	desarrollar	aparición

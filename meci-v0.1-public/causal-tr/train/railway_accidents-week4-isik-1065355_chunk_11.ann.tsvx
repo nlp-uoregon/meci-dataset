@@ -1,0 +1,46 @@
+Text	Euromed’in beş vagonu İspanya , Catalunya’nın dış varoşlarındaki Torredembarra istasyonunda hasar gördü .	En az dört yolcu öldü ve diğer 88 kişi yaralandı .	- 23 Nisan , 2002 – Placentia , California , Birleşik Devletler : Bir BNSF Demiryolu yük treni , bir Metrolink treni ile Atwood Junction yakını Placentia’da Orangethorpe Avenue ve Van Buren Street kesişme hattında kafa kafaya çarpışır .	Çarpışmada iki kişi ölür ve yirmi iki kişi ağır yaralanır .	- 2 Mayıs , 2002 – Firdale , Manitoba , Kanada : Bir doğu sınırı CN treni yaklaşık 20 vagon plastik küçük torba , benzin , glikol ve heksan taşıyan bir treyler ile çarpışması sonucu malzemeler alev alır ve yaklaşık 200 ikametgâhı boşaltmaya zorlar .
+Event	T0	gördü	EVENT	98
+Event	T1	öldü	EVENT	123
+Event	T2	yaralandı	EVENT	145
+Event	T3	çarpışır	EVENT	383
+Event	T4	Çarpışmada	EVENT	394
+Event	T5	ölür	EVENT	414
+Event	T6	yaralanır	EVENT	442
+Event	T7	alır	EVENT	652
+Event	T8	zorlar	EVENT	695
+Event	T9	çarpışması	EVENT	618
+Relation	T0	T1	CauseEffect	true	gördü	öldü
+Relation	T1	T0	EffectCause	true	öldü	gördü
+Relation	T0	T2	CauseEffect	true	gördü	yaralandı
+Relation	T2	T0	EffectCause	true	yaralandı	gördü
+Relation	T3	T5	CauseEffect	true	çarpışır	ölür
+Relation	T5	T3	EffectCause	true	ölür	çarpışır
+Relation	T3	T6	CauseEffect	true	çarpışır	yaralanır
+Relation	T6	T3	EffectCause	true	yaralanır	çarpışır
+Relation	T9	T7	CauseEffect	true	çarpışması	alır
+Relation	T7	T9	EffectCause	true	alır	çarpışması
+Relation	T7	T8	CauseEffect	true	alır	zorlar
+Relation	T8	T7	EffectCause	true	zorlar	alır
+Relation	T0	T3	NoRel	true	gördü	çarpışır
+Relation	T0	T5	NoRel	true	gördü	ölür
+Relation	T0	T9	NoRel	true	gördü	çarpışması
+Relation	T1	T2	NoRel	true	öldü	yaralandı
+Relation	T1	T4	NoRel	true	öldü	Çarpışmada
+Relation	T1	T6	NoRel	true	öldü	yaralanır
+Relation	T2	T1	NoRel	true	yaralandı	öldü
+Relation	T2	T7	NoRel	true	yaralandı	alır
+Relation	T3	T1	NoRel	true	çarpışır	öldü
+Relation	T3	T4	NoRel	true	çarpışır	Çarpışmada
+Relation	T3	T7	NoRel	true	çarpışır	alır
+Relation	T4	T5	NoRel	true	Çarpışmada	ölür
+Relation	T5	T1	NoRel	true	ölür	öldü
+Relation	T5	T4	NoRel	true	ölür	Çarpışmada
+Relation	T5	T9	NoRel	true	ölür	çarpışması
+Relation	T6	T2	NoRel	true	yaralanır	yaralandı
+Relation	T6	T5	NoRel	true	yaralanır	ölür
+Relation	T6	T7	NoRel	true	yaralanır	alır
+Relation	T6	T9	NoRel	true	yaralanır	çarpışması
+Relation	T7	T0	NoRel	true	alır	gördü
+Relation	T8	T1	NoRel	true	zorlar	öldü
+Relation	T8	T4	NoRel	true	zorlar	Çarpışmada
+Relation	T9	T4	NoRel	true	çarpışması	Çarpışmada

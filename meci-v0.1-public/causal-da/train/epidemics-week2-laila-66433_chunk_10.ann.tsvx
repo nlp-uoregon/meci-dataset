@@ -1,0 +1,17 @@
+Text	Dødeligheden var fire gange højere for samer end for resten af den norske befolkning .	Sandsynligvis havde samer dårligere nedarvet og oparbejdet immunitet mod influenza , fordi de årlige epidemier ikke nåede ind på Finnmarksvidda .	Det gjorde den første runde med spansk syge heller ikke .	Dermed var der heller ingen på egnen , der blev immune af den ufarlige variant , men desto hårdere ramt i næste omgang .	At mennesker var mere vant til smitsomme sygdomme end i dag fremgår af , at _ Bergens Tidende _ ikke engang omtalte epidemien i sine årskavalkader for 1918 og 1919 .
+Event	T0	Dødeligheden	EVENT	0
+Event	T1	nedarvet	EVENT	123
+Event	T2	epidemier	EVENT	188
+Event	T3	gjorde	EVENT	237
+Event	T5	ramt	EVENT	390
+Event	T6	fremgår	EVENT	472
+Relation	T5	T0	CauseEffect	true	ramt	Dødeligheden
+Relation	T0	T5	EffectCause	true	Dødeligheden	ramt
+Relation	T1	T5	CauseEffect	true	nedarvet	ramt
+Relation	T5	T1	EffectCause	true	ramt	nedarvet
+Relation	T1	T0	CauseEffect	true	nedarvet	Dødeligheden
+Relation	T0	T1	EffectCause	true	Dødeligheden	nedarvet
+Relation	T0	T2	NoRel	true	Dødeligheden	epidemier
+Relation	T6	T0	NoRel	true	fremgår	Dødeligheden
+Relation	T6	T1	NoRel	true	fremgår	nedarvet
+Relation	T6	T2	NoRel	true	fremgår	epidemier

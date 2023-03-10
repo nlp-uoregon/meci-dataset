@@ -1,0 +1,63 @@
+Text	DELTA AIR_LINES FLIGHT 1086 var en planlagt indenrigs flyvetur mellem Atlanta og New York's LaGuardia Airport .	Den 5. marts , 2015 , røg flyet , McDonnell Douglas MD-88 , ud af landingsbane kort tid efter en ellers succesfuld landing i LaGuardia Lufthavn i New York City .	Flyet løb ud af bolværk og ramte omkredshegnet , glidende langs den for cirka 330 meter før den kom til et stop .	Der var ingen dødsfald , men dog 24 mennesked fik større skader .	Flyet var blevet meget skadet .
+Event	T0	planlagt	EVENT	35
+Event	T1	flyvetur	EVENT	54
+Event	T2	røg	EVENT	134
+Event	T3	landing	EVENT	227
+Event	T4	ramte	EVENT	301
+Event	T5	glidende	EVENT	323
+Event	T6	stop	EVENT	381
+Event	T7	dødsfald	EVENT	402
+Event	T8	fik	EVENT	434
+Event	T9	skader	EVENT	445
+Event	T10	skadet	EVENT	477
+Event	T11	løb	EVENT	280
+Relation	T11	T4	CauseEffect	true	løb	ramte
+Relation	T4	T11	EffectCause	true	ramte	løb
+Relation	T4	T10	CauseEffect	true	ramte	skadet
+Relation	T10	T4	EffectCause	true	skadet	ramte
+Relation	T4	T9	CauseEffect	true	ramte	skader
+Relation	T9	T4	EffectCause	true	skader	ramte
+Relation	T0	T2	NoRel	true	planlagt	røg
+Relation	T0	T4	NoRel	true	planlagt	ramte
+Relation	T0	T6	NoRel	true	planlagt	stop
+Relation	T0	T7	NoRel	true	planlagt	dødsfald
+Relation	T1	T5	NoRel	true	flyvetur	glidende
+Relation	T10	T0	NoRel	true	skadet	planlagt
+Relation	T10	T2	NoRel	true	skadet	røg
+Relation	T10	T3	NoRel	true	skadet	landing
+Relation	T10	T6	NoRel	true	skadet	stop
+Relation	T10	T9	NoRel	true	skadet	skader
+Relation	T11	T0	NoRel	true	løb	planlagt
+Relation	T11	T10	NoRel	true	løb	skadet
+Relation	T11	T3	NoRel	true	løb	landing
+Relation	T11	T5	NoRel	true	løb	glidende
+Relation	T11	T8	NoRel	true	løb	fik
+Relation	T2	T1	NoRel	true	røg	flyvetur
+Relation	T2	T10	NoRel	true	røg	skadet
+Relation	T2	T4	NoRel	true	røg	ramte
+Relation	T2	T8	NoRel	true	røg	fik
+Relation	T3	T10	NoRel	true	landing	skadet
+Relation	T3	T2	NoRel	true	landing	røg
+Relation	T3	T7	NoRel	true	landing	dødsfald
+Relation	T3	T8	NoRel	true	landing	fik
+Relation	T4	T3	NoRel	true	ramte	landing
+Relation	T4	T5	NoRel	true	ramte	glidende
+Relation	T4	T7	NoRel	true	ramte	dødsfald
+Relation	T4	T8	NoRel	true	ramte	fik
+Relation	T5	T0	NoRel	true	glidende	planlagt
+Relation	T5	T2	NoRel	true	glidende	røg
+Relation	T5	T4	NoRel	true	glidende	ramte
+Relation	T5	T7	NoRel	true	glidende	dødsfald
+Relation	T5	T8	NoRel	true	glidende	fik
+Relation	T6	T11	NoRel	true	stop	løb
+Relation	T6	T2	NoRel	true	stop	røg
+Relation	T6	T8	NoRel	true	stop	fik
+Relation	T7	T2	NoRel	true	dødsfald	røg
+Relation	T7	T3	NoRel	true	dødsfald	landing
+Relation	T7	T8	NoRel	true	dødsfald	fik
+Relation	T7	T9	NoRel	true	dødsfald	skader
+Relation	T8	T4	NoRel	true	fik	ramte
+Relation	T8	T5	NoRel	true	fik	glidende
+Relation	T8	T7	NoRel	true	fik	dødsfald
+Relation	T9	T5	NoRel	true	skader	glidende
+Relation	T9	T6	NoRel	true	skader	stop

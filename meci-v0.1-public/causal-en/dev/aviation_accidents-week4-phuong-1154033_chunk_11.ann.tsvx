@@ -1,0 +1,97 @@
+Text	The accident was investigated by the Indonesian NTSC , which was assisted by expert groups from the US , Singapore , and Australia .	Around 73 % of the wreckage ( by weight ) was recovered , partially reconstructed , and examined .	Both of the aircraft recorders , the CVR and the FDR , were retrieved from the river and their data were extracted and analyzed .	The investigators tested 20 different simulations for various equipment - failure scenarios , and found that the only scenario that matched the actual radar trajectory of the descent and crash of the flight was a high - speed steep dive commanded by one of the pilots .	Furthermore , the investigators had found the trim jack screw for the horizontal stabilizer , which revealed that flight inputs from one of the pilots had moved the stabilizer from level flight to a full nose - down descent .
+Event	T0	accident	EVENT	4
+Event	T1	investigated	EVENT	17
+Event	T2	assisted	EVENT	65
+Event	T3	wreckage	EVENT	152
+Event	T4	recovered	EVENT	179
+Event	T5	reconstructed	EVENT	201
+Event	T6	examined	EVENT	221
+Event	T7	retrieved	EVENT	292
+Event	T8	extracted	EVENT	337
+Event	T9	analyzed	EVENT	351
+Event	T10	tested	EVENT	380
+Event	T11	simulations	EVENT	400
+Event	T12	found	EVENT	460
+Event	T13	matched	EVENT	494
+Event	T14	descent	EVENT	537
+Event	T15	crash	EVENT	549
+Event	T16	flight	EVENT	562
+Event	T17	commanded	EVENT	599
+Event	T18	found	EVENT	668
+Event	T19	revealed	EVENT	732
+Event	T20	inputs	EVENT	753
+Event	T21	moved	EVENT	787
+Event	T22	flight	EVENT	819
+Event	T23	descent	EVENT	848
+Event	T24	high - speed steep dive	EVENT	575
+Relation	T0	T1	CauseEffect	true	accident	investigated
+Relation	T1	T0	EffectCause	true	investigated	accident
+Relation	T3	T4	CauseEffect	true	wreckage	recovered
+Relation	T4	T3	EffectCause	true	recovered	wreckage
+Relation	T3	T5	CauseEffect	true	wreckage	reconstructed
+Relation	T5	T3	EffectCause	true	reconstructed	wreckage
+Relation	T3	T6	CauseEffect	true	wreckage	examined
+Relation	T6	T3	EffectCause	true	examined	wreckage
+Relation	T7	T8	CauseEffect	true	retrieved	extracted
+Relation	T8	T7	EffectCause	true	extracted	retrieved
+Relation	T7	T9	CauseEffect	true	retrieved	analyzed
+Relation	T9	T7	EffectCause	true	analyzed	retrieved
+Relation	T10	T12	CauseEffect	true	tested	found
+Relation	T12	T10	EffectCause	true	found	tested
+Relation	T24	T15	CauseEffect	true	high - speed steep dive	crash
+Relation	T15	T24	EffectCause	true	crash	high - speed steep dive
+Relation	T18	T19	CauseEffect	true	found	revealed
+Relation	T19	T18	EffectCause	true	revealed	found
+Relation	T0	T3	NoRel	true	accident	wreckage
+Relation	T1	T5	NoRel	true	investigated	reconstructed
+Relation	T1	T7	NoRel	true	investigated	retrieved
+Relation	T10	T20	NoRel	true	tested	inputs
+Relation	T10	T3	NoRel	true	tested	wreckage
+Relation	T10	T9	NoRel	true	tested	analyzed
+Relation	T11	T16	NoRel	true	simulations	flight
+Relation	T11	T4	NoRel	true	simulations	recovered
+Relation	T13	T17	NoRel	true	matched	commanded
+Relation	T13	T20	NoRel	true	matched	inputs
+Relation	T14	T18	NoRel	true	descent	found
+Relation	T14	T6	NoRel	true	descent	examined
+Relation	T16	T1	NoRel	true	flight	investigated
+Relation	T16	T13	NoRel	true	flight	matched
+Relation	T16	T3	NoRel	true	flight	wreckage
+Relation	T16	T4	NoRel	true	flight	recovered
+Relation	T17	T6	NoRel	true	commanded	examined
+Relation	T18	T1	NoRel	true	found	investigated
+Relation	T18	T3	NoRel	true	found	wreckage
+Relation	T19	T16	NoRel	true	revealed	flight
+Relation	T19	T20	NoRel	true	revealed	inputs
+Relation	T19	T21	NoRel	true	revealed	moved
+Relation	T2	T1	NoRel	true	assisted	investigated
+Relation	T2	T12	NoRel	true	assisted	found
+Relation	T2	T20	NoRel	true	assisted	inputs
+Relation	T20	T10	NoRel	true	inputs	tested
+Relation	T20	T21	NoRel	true	inputs	moved
+Relation	T20	T22	NoRel	true	inputs	flight
+Relation	T21	T0	NoRel	true	moved	accident
+Relation	T21	T12	NoRel	true	moved	found
+Relation	T21	T15	NoRel	true	moved	crash
+Relation	T21	T6	NoRel	true	moved	examined
+Relation	T22	T6	NoRel	true	flight	examined
+Relation	T23	T24	NoRel	true	descent	high - speed steep dive
+Relation	T24	T14	NoRel	true	high - speed steep dive	descent
+Relation	T24	T7	NoRel	true	high - speed steep dive	retrieved
+Relation	T3	T11	NoRel	true	wreckage	simulations
+Relation	T3	T18	NoRel	true	wreckage	found
+Relation	T4	T0	NoRel	true	recovered	accident
+Relation	T4	T1	NoRel	true	recovered	investigated
+Relation	T4	T17	NoRel	true	recovered	commanded
+Relation	T4	T23	NoRel	true	recovered	descent
+Relation	T4	T24	NoRel	true	recovered	high - speed steep dive
+Relation	T4	T5	NoRel	true	recovered	reconstructed
+Relation	T4	T6	NoRel	true	recovered	examined
+Relation	T6	T5	NoRel	true	examined	reconstructed
+Relation	T8	T10	NoRel	true	extracted	tested
+Relation	T8	T14	NoRel	true	extracted	descent
+Relation	T9	T10	NoRel	true	analyzed	tested
+Relation	T9	T11	NoRel	true	analyzed	simulations
+Relation	T9	T12	NoRel	true	analyzed	found
+Relation	T9	T16	NoRel	true	analyzed	flight
+Relation	T9	T4	NoRel	true	analyzed	recovered

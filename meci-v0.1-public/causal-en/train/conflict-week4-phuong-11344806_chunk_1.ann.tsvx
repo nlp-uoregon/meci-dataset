@@ -1,0 +1,80 @@
+Text	Prior to the outbreak of the First World War , Wadsworth worked as a clerk .	he ran a garage while a Blackburn Rovers player and the business later failed , which caused financial and health problems for his family .	After his retirement from professional football in 1930 , Wadsworth worked for the Lytham St. Annes Corporation 's transport department .	During the First World War , Wadsworth lied about his age to enlist as a gunner in the Royal Garrison Artillery and was wounded in action .	His older brother Charles was killed in the war and " the atrocities left him physically and mentally scarred , suffering blackouts and grappling with post-traumatic stress " .
+Event	T0	outbreak	EVENT	13
+Event	T1	worked	EVENT	57
+Event	T2	ran	EVENT	80
+Event	T3	failed	EVENT	148
+Event	T4	retirement	EVENT	227
+Event	T5	worked	EVENT	285
+Event	T6	lied	EVENT	394
+Event	T7	enlist	EVENT	416
+Event	T8	action	EVENT	486
+Event	T9	killed	EVENT	525
+Event	T10	war	EVENT	539
+Event	T11	left	EVENT	564
+Event	T12	scarred	EVENT	597
+Event	T13	blackouts	EVENT	617
+Event	T14	grappling	EVENT	631
+Event	T15	stress	EVENT	661
+Event	T16	problems	EVENT	191
+Event	T17	wounded	EVENT	475
+Event	T18	atrocities	EVENT	553
+Relation	T2	T3	CauseEffect	true	ran	failed
+Relation	T3	T2	EffectCause	true	failed	ran
+Relation	T3	T16	CauseEffect	true	failed	problems
+Relation	T16	T3	EffectCause	true	problems	failed
+Relation	T4	T5	CauseEffect	true	retirement	worked
+Relation	T5	T4	EffectCause	true	worked	retirement
+Relation	T7	T6	CauseEffect	true	enlist	lied
+Relation	T6	T7	EffectCause	true	lied	enlist
+Relation	T7	T17	CauseEffect	true	enlist	wounded
+Relation	T17	T7	EffectCause	true	wounded	enlist
+Relation	T10	T9	CauseEffect	true	war	killed
+Relation	T9	T10	EffectCause	true	killed	war
+Relation	T18	T12	CauseEffect	true	atrocities	scarred
+Relation	T12	T18	EffectCause	true	scarred	atrocities
+Relation	T18	T15	CauseEffect	true	atrocities	stress
+Relation	T15	T18	EffectCause	true	stress	atrocities
+Relation	T15	T14	CauseEffect	true	stress	grappling
+Relation	T14	T15	EffectCause	true	grappling	stress
+Relation	T15	T13	CauseEffect	true	stress	blackouts
+Relation	T13	T15	EffectCause	true	blackouts	stress
+Relation	T0	T10	NoRel	true	outbreak	war
+Relation	T0	T16	NoRel	true	outbreak	problems
+Relation	T0	T9	NoRel	true	outbreak	killed
+Relation	T10	T1	NoRel	true	war	worked
+Relation	T10	T11	NoRel	true	war	left
+Relation	T10	T5	NoRel	true	war	worked
+Relation	T11	T13	NoRel	true	left	blackouts
+Relation	T11	T14	NoRel	true	left	grappling
+Relation	T12	T8	NoRel	true	scarred	action
+Relation	T12	T9	NoRel	true	scarred	killed
+Relation	T14	T4	NoRel	true	grappling	retirement
+Relation	T14	T5	NoRel	true	grappling	worked
+Relation	T14	T6	NoRel	true	grappling	lied
+Relation	T15	T0	NoRel	true	stress	outbreak
+Relation	T15	T4	NoRel	true	stress	retirement
+Relation	T15	T5	NoRel	true	stress	worked
+Relation	T16	T15	NoRel	true	problems	stress
+Relation	T16	T17	NoRel	true	problems	wounded
+Relation	T16	T5	NoRel	true	problems	worked
+Relation	T17	T4	NoRel	true	wounded	retirement
+Relation	T2	T13	NoRel	true	ran	blackouts
+Relation	T2	T18	NoRel	true	ran	atrocities
+Relation	T3	T10	NoRel	true	failed	war
+Relation	T4	T15	NoRel	true	retirement	stress
+Relation	T4	T16	NoRel	true	retirement	problems
+Relation	T4	T3	NoRel	true	retirement	failed
+Relation	T4	T6	NoRel	true	retirement	lied
+Relation	T4	T9	NoRel	true	retirement	killed
+Relation	T5	T13	NoRel	true	worked	blackouts
+Relation	T5	T17	NoRel	true	worked	wounded
+Relation	T5	T7	NoRel	true	worked	enlist
+Relation	T6	T12	NoRel	true	lied	scarred
+Relation	T6	T3	NoRel	true	lied	failed
+Relation	T6	T8	NoRel	true	lied	action
+Relation	T7	T18	NoRel	true	enlist	atrocities
+Relation	T7	T3	NoRel	true	enlist	failed
+Relation	T9	T18	NoRel	true	killed	atrocities
+Relation	T9	T2	NoRel	true	killed	ran
+Relation	T9	T5	NoRel	true	killed	worked
+Relation	T9	T6	NoRel	true	killed	lied

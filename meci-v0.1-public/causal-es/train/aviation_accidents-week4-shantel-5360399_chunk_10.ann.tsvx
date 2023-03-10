@@ -1,0 +1,163 @@
+Text	El avión sufrió una despresurización , volando de regreso a Taiwán el mismo día , y efectuándose una reparación provisional al día siguiente .	Una reparación más a fondo fue llevada a cabo por el equipo de China Airlines del 23 al 26 de mayo de 1980 .	Sin embargo , la reparación permanente del golpe de la cola no fue llevado a cabo de acuerdo al Manual de Reparaciones Estructural de Boeing ( SRM ) .	La zona de carenado dañado en la Sección 46 no fue suprimido y la reparación con doblador que se supone que cubría con creces el 30% de la zona dañada no era lo suficientemente extensa como para garantizar la restauración de la resistencia estructural .	En consecuencia , tras repetidos ciclos de despresurización y presurización durante el vuelo , el cono de cola dañado comenzó a romperse gradualmente y finalmente se rompió en vuelo el 25 de mayo de 2002 , exactamente 22 años después de que la reparación errónea fuese efectuada en la cola dañada .
+Event	T0	sufrió	EVENT	9
+Event	T1	despresurización	EVENT	20
+Event	T2	volando	EVENT	39
+Event	T4	reparación	EVENT	147
+Event	T6	golpe	EVENT	295
+Event	T8	dañado	EVENT	423
+Event	T10	reparación	EVENT	469
+Event	T11	cubría	EVENT	511
+Event	T12	dañada	EVENT	547
+Event	T13	restauración	EVENT	612
+Event	T14	ciclos	EVENT	690
+Event	T15	despresurización	EVENT	700
+Event	T16	presurización	EVENT	719
+Event	T17	vuelo	EVENT	744
+Event	T18	comenzó	EVENT	775
+Event	T19	romperse	EVENT	785
+Event	T20	rompió	EVENT	823
+Event	T21	vuelo	EVENT	833
+Event	T22	efectuada	EVENT	926
+Event	T23	dañada	EVENT	947
+Event	T3	reparación	EVENT	101
+Relation	T1	T3	CauseEffect	true	despresurización	reparación
+Relation	T3	T1	EffectCause	true	reparación	despresurización
+Relation	T1	T4	CauseEffect	true	despresurización	reparación
+Relation	T4	T1	EffectCause	true	reparación	despresurización
+Relation	T0	T1	NoRel	true	sufrió	despresurización
+Relation	T0	T10	NoRel	true	sufrió	reparación
+Relation	T0	T14	NoRel	true	sufrió	ciclos
+Relation	T0	T15	NoRel	true	sufrió	despresurización
+Relation	T0	T16	NoRel	true	sufrió	presurización
+Relation	T0	T17	NoRel	true	sufrió	vuelo
+Relation	T0	T18	NoRel	true	sufrió	comenzó
+Relation	T0	T19	NoRel	true	sufrió	romperse
+Relation	T0	T20	NoRel	true	sufrió	rompió
+Relation	T0	T6	NoRel	true	sufrió	golpe
+Relation	T1	T0	NoRel	true	despresurización	sufrió
+Relation	T1	T11	NoRel	true	despresurización	cubría
+Relation	T1	T13	NoRel	true	despresurización	restauración
+Relation	T1	T16	NoRel	true	despresurización	presurización
+Relation	T1	T18	NoRel	true	despresurización	comenzó
+Relation	T1	T19	NoRel	true	despresurización	romperse
+Relation	T1	T20	NoRel	true	despresurización	rompió
+Relation	T1	T21	NoRel	true	despresurización	vuelo
+Relation	T1	T23	NoRel	true	despresurización	dañada
+Relation	T1	T8	NoRel	true	despresurización	dañado
+Relation	T10	T13	NoRel	true	reparación	restauración
+Relation	T10	T14	NoRel	true	reparación	ciclos
+Relation	T10	T15	NoRel	true	reparación	despresurización
+Relation	T10	T17	NoRel	true	reparación	vuelo
+Relation	T10	T2	NoRel	true	reparación	volando
+Relation	T10	T3	NoRel	true	reparación	reparación
+Relation	T10	T6	NoRel	true	reparación	golpe
+Relation	T11	T1	NoRel	true	cubría	despresurización
+Relation	T11	T10	NoRel	true	cubría	reparación
+Relation	T11	T14	NoRel	true	cubría	ciclos
+Relation	T11	T2	NoRel	true	cubría	volando
+Relation	T11	T8	NoRel	true	cubría	dañado
+Relation	T12	T13	NoRel	true	dañada	restauración
+Relation	T12	T19	NoRel	true	dañada	romperse
+Relation	T12	T20	NoRel	true	dañada	rompió
+Relation	T12	T4	NoRel	true	dañada	reparación
+Relation	T12	T6	NoRel	true	dañada	golpe
+Relation	T13	T10	NoRel	true	restauración	reparación
+Relation	T13	T11	NoRel	true	restauración	cubría
+Relation	T13	T12	NoRel	true	restauración	dañada
+Relation	T13	T14	NoRel	true	restauración	ciclos
+Relation	T13	T15	NoRel	true	restauración	despresurización
+Relation	T13	T2	NoRel	true	restauración	volando
+Relation	T13	T3	NoRel	true	restauración	reparación
+Relation	T13	T8	NoRel	true	restauración	dañado
+Relation	T14	T0	NoRel	true	ciclos	sufrió
+Relation	T14	T19	NoRel	true	ciclos	romperse
+Relation	T14	T6	NoRel	true	ciclos	golpe
+Relation	T15	T1	NoRel	true	despresurización	despresurización
+Relation	T15	T13	NoRel	true	despresurización	restauración
+Relation	T15	T14	NoRel	true	despresurización	ciclos
+Relation	T15	T16	NoRel	true	despresurización	presurización
+Relation	T15	T17	NoRel	true	despresurización	vuelo
+Relation	T16	T0	NoRel	true	presurización	sufrió
+Relation	T16	T12	NoRel	true	presurización	dañada
+Relation	T16	T13	NoRel	true	presurización	restauración
+Relation	T16	T14	NoRel	true	presurización	ciclos
+Relation	T16	T15	NoRel	true	presurización	despresurización
+Relation	T16	T19	NoRel	true	presurización	romperse
+Relation	T16	T3	NoRel	true	presurización	reparación
+Relation	T16	T6	NoRel	true	presurización	golpe
+Relation	T17	T11	NoRel	true	vuelo	cubría
+Relation	T17	T14	NoRel	true	vuelo	ciclos
+Relation	T17	T16	NoRel	true	vuelo	presurización
+Relation	T17	T21	NoRel	true	vuelo	vuelo
+Relation	T17	T6	NoRel	true	vuelo	golpe
+Relation	T18	T10	NoRel	true	comenzó	reparación
+Relation	T18	T12	NoRel	true	comenzó	dañada
+Relation	T18	T13	NoRel	true	comenzó	restauración
+Relation	T18	T22	NoRel	true	comenzó	efectuada
+Relation	T18	T3	NoRel	true	comenzó	reparación
+Relation	T18	T4	NoRel	true	comenzó	reparación
+Relation	T18	T6	NoRel	true	comenzó	golpe
+Relation	T19	T10	NoRel	true	romperse	reparación
+Relation	T19	T11	NoRel	true	romperse	cubría
+Relation	T19	T12	NoRel	true	romperse	dañada
+Relation	T19	T14	NoRel	true	romperse	ciclos
+Relation	T19	T17	NoRel	true	romperse	vuelo
+Relation	T19	T23	NoRel	true	romperse	dañada
+Relation	T2	T0	NoRel	true	volando	sufrió
+Relation	T2	T1	NoRel	true	volando	despresurización
+Relation	T2	T10	NoRel	true	volando	reparación
+Relation	T2	T12	NoRel	true	volando	dañada
+Relation	T2	T13	NoRel	true	volando	restauración
+Relation	T2	T15	NoRel	true	volando	despresurización
+Relation	T2	T16	NoRel	true	volando	presurización
+Relation	T2	T20	NoRel	true	volando	rompió
+Relation	T20	T11	NoRel	true	rompió	cubría
+Relation	T20	T12	NoRel	true	rompió	dañada
+Relation	T20	T13	NoRel	true	rompió	restauración
+Relation	T20	T17	NoRel	true	rompió	vuelo
+Relation	T20	T2	NoRel	true	rompió	volando
+Relation	T20	T8	NoRel	true	rompió	dañado
+Relation	T21	T1	NoRel	true	vuelo	despresurización
+Relation	T21	T11	NoRel	true	vuelo	cubría
+Relation	T21	T13	NoRel	true	vuelo	restauración
+Relation	T21	T15	NoRel	true	vuelo	despresurización
+Relation	T21	T18	NoRel	true	vuelo	comenzó
+Relation	T21	T19	NoRel	true	vuelo	romperse
+Relation	T21	T20	NoRel	true	vuelo	rompió
+Relation	T21	T8	NoRel	true	vuelo	dañado
+Relation	T22	T14	NoRel	true	efectuada	ciclos
+Relation	T22	T17	NoRel	true	efectuada	vuelo
+Relation	T22	T20	NoRel	true	efectuada	rompió
+Relation	T22	T4	NoRel	true	efectuada	reparación
+Relation	T22	T8	NoRel	true	efectuada	dañado
+Relation	T23	T11	NoRel	true	dañada	cubría
+Relation	T23	T13	NoRel	true	dañada	restauración
+Relation	T23	T2	NoRel	true	dañada	volando
+Relation	T23	T20	NoRel	true	dañada	rompió
+Relation	T23	T4	NoRel	true	dañada	reparación
+Relation	T3	T10	NoRel	true	reparación	reparación
+Relation	T3	T15	NoRel	true	reparación	despresurización
+Relation	T3	T18	NoRel	true	reparación	comenzó
+Relation	T3	T19	NoRel	true	reparación	romperse
+Relation	T3	T21	NoRel	true	reparación	vuelo
+Relation	T3	T6	NoRel	true	reparación	golpe
+Relation	T4	T10	NoRel	true	reparación	reparación
+Relation	T4	T11	NoRel	true	reparación	cubría
+Relation	T4	T12	NoRel	true	reparación	dañada
+Relation	T4	T19	NoRel	true	reparación	romperse
+Relation	T4	T2	NoRel	true	reparación	volando
+Relation	T4	T6	NoRel	true	reparación	golpe
+Relation	T6	T0	NoRel	true	golpe	sufrió
+Relation	T6	T16	NoRel	true	golpe	presurización
+Relation	T6	T18	NoRel	true	golpe	comenzó
+Relation	T6	T21	NoRel	true	golpe	vuelo
+Relation	T6	T22	NoRel	true	golpe	efectuada
+Relation	T6	T23	NoRel	true	golpe	dañada
+Relation	T6	T3	NoRel	true	golpe	reparación
+Relation	T8	T1	NoRel	true	dañado	despresurización
+Relation	T8	T10	NoRel	true	dañado	reparación
+Relation	T8	T15	NoRel	true	dañado	despresurización
+Relation	T8	T16	NoRel	true	dañado	presurización
+Relation	T8	T21	NoRel	true	dañado	vuelo
+Relation	T8	T22	NoRel	true	dañado	efectuada
+Relation	T8	T23	NoRel	true	dañado	dañada

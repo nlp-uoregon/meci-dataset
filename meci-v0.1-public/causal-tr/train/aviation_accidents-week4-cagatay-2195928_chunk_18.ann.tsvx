@@ -1,0 +1,116 @@
+Text	Anıtın üstünde ölen 39 kişinin adı ve kaza yapan uçağın bir tasviri vardır .	Acil Durum Bakanı Kubatbek Boronov ; kazadan 2 gün sonra , 19 Ocak 2017'de uçağın taşıdığı kargonun Kırgızistan'a ait olmadığını ve İstanbul'da boşaltılmasının planlandığını ve tüm kargoların yandığını açıkladı .	Ayrıca Kırgızistan Hükûmeti , uçağın yakıt ikmali yapmak için Bişkek'e geldiğini açıkladı .	ACT Airlines , yaptığı bir basın açıklamasında uçağın Hong Kong'dan İstanbul'a aktarmasız uçmak için yeterli yakıtı olduğunu açıkladı .	Aynı gün ACT Airlines genel müdür yardımcısı Hamza Tiglay , yakıt ikmali ve mürettebat değişikliği için Bişkek'e inildiğini söyledi .
+Event	T0	ölen	EVENT	15
+Event	T1	boşaltılmasının	EVENT	221
+Event	T2	açıkladı	EVENT	279
+Event	T4	açıkladı	EVENT	371
+Event	T6	açıklamasında	EVENT	415
+Event	T7	uçmak	EVENT	472
+Event	T8	açıkladı	EVENT	507
+Event	T9	değişikliği	EVENT	605
+Event	T10	söyledi	EVENT	642
+Event	T11	kaza	EVENT	38
+Event	T12	kazadan	EVENT	114
+Event	T13	taşıdığı	EVENT	159
+Event	T14	yandığını	EVENT	269
+Event	T15	geldiğini	EVENT	361
+Event	T3	ikmali	EVENT	333
+Event	T5	ikmali	EVENT	584
+Event	T16	inildiğini	EVENT	631
+Relation	T11	T0	CauseEffect	true	kaza	ölen
+Relation	T0	T11	EffectCause	true	ölen	kaza
+Relation	T3	T15	CauseEffect	true	ikmali	geldiğini
+Relation	T15	T3	EffectCause	true	geldiğini	ikmali
+Relation	T5	T16	CauseEffect	true	ikmali	inildiğini
+Relation	T16	T5	EffectCause	true	inildiğini	ikmali
+Relation	T9	T16	CauseEffect	true	değişikliği	inildiğini
+Relation	T16	T9	EffectCause	true	inildiğini	değişikliği
+Relation	T0	T12	NoRel	true	ölen	kazadan
+Relation	T0	T2	NoRel	true	ölen	açıkladı
+Relation	T0	T9	NoRel	true	ölen	değişikliği
+Relation	T1	T0	NoRel	true	boşaltılmasının	ölen
+Relation	T1	T10	NoRel	true	boşaltılmasının	söyledi
+Relation	T1	T11	NoRel	true	boşaltılmasının	kaza
+Relation	T1	T15	NoRel	true	boşaltılmasının	geldiğini
+Relation	T10	T0	NoRel	true	söyledi	ölen
+Relation	T10	T1	NoRel	true	söyledi	boşaltılmasının
+Relation	T10	T11	NoRel	true	söyledi	kaza
+Relation	T10	T12	NoRel	true	söyledi	kazadan
+Relation	T10	T13	NoRel	true	söyledi	taşıdığı
+Relation	T10	T16	NoRel	true	söyledi	inildiğini
+Relation	T10	T4	NoRel	true	söyledi	açıkladı
+Relation	T10	T5	NoRel	true	söyledi	ikmali
+Relation	T10	T7	NoRel	true	söyledi	uçmak
+Relation	T10	T8	NoRel	true	söyledi	açıkladı
+Relation	T11	T15	NoRel	true	kaza	geldiğini
+Relation	T11	T16	NoRel	true	kaza	inildiğini
+Relation	T11	T3	NoRel	true	kaza	ikmali
+Relation	T11	T9	NoRel	true	kaza	değişikliği
+Relation	T12	T1	NoRel	true	kazadan	boşaltılmasının
+Relation	T12	T2	NoRel	true	kazadan	açıkladı
+Relation	T12	T7	NoRel	true	kazadan	uçmak
+Relation	T13	T11	NoRel	true	taşıdığı	kaza
+Relation	T13	T12	NoRel	true	taşıdığı	kazadan
+Relation	T13	T14	NoRel	true	taşıdığı	yandığını
+Relation	T13	T16	NoRel	true	taşıdığı	inildiğini
+Relation	T13	T4	NoRel	true	taşıdığı	açıkladı
+Relation	T13	T6	NoRel	true	taşıdığı	açıklamasında
+Relation	T13	T8	NoRel	true	taşıdığı	açıkladı
+Relation	T13	T9	NoRel	true	taşıdığı	değişikliği
+Relation	T14	T1	NoRel	true	yandığını	boşaltılmasının
+Relation	T14	T11	NoRel	true	yandığını	kaza
+Relation	T14	T13	NoRel	true	yandığını	taşıdığı
+Relation	T14	T15	NoRel	true	yandığını	geldiğini
+Relation	T14	T2	NoRel	true	yandığını	açıkladı
+Relation	T14	T5	NoRel	true	yandığını	ikmali
+Relation	T14	T6	NoRel	true	yandığını	açıklamasında
+Relation	T15	T1	NoRel	true	geldiğini	boşaltılmasının
+Relation	T15	T11	NoRel	true	geldiğini	kaza
+Relation	T15	T14	NoRel	true	geldiğini	yandığını
+Relation	T15	T2	NoRel	true	geldiğini	açıkladı
+Relation	T15	T4	NoRel	true	geldiğini	açıkladı
+Relation	T15	T6	NoRel	true	geldiğini	açıklamasında
+Relation	T15	T8	NoRel	true	geldiğini	açıkladı
+Relation	T16	T12	NoRel	true	inildiğini	kazadan
+Relation	T16	T14	NoRel	true	inildiğini	yandığını
+Relation	T16	T2	NoRel	true	inildiğini	açıkladı
+Relation	T16	T3	NoRel	true	inildiğini	ikmali
+Relation	T16	T7	NoRel	true	inildiğini	uçmak
+Relation	T2	T12	NoRel	true	açıkladı	kazadan
+Relation	T2	T14	NoRel	true	açıkladı	yandığını
+Relation	T2	T4	NoRel	true	açıkladı	açıkladı
+Relation	T2	T5	NoRel	true	açıkladı	ikmali
+Relation	T3	T16	NoRel	true	ikmali	inildiğini
+Relation	T3	T4	NoRel	true	ikmali	açıkladı
+Relation	T3	T5	NoRel	true	ikmali	ikmali
+Relation	T3	T8	NoRel	true	ikmali	açıkladı
+Relation	T4	T11	NoRel	true	açıkladı	kaza
+Relation	T4	T14	NoRel	true	açıkladı	yandığını
+Relation	T4	T2	NoRel	true	açıkladı	açıkladı
+Relation	T4	T3	NoRel	true	açıkladı	ikmali
+Relation	T4	T8	NoRel	true	açıkladı	açıkladı
+Relation	T5	T0	NoRel	true	ikmali	ölen
+Relation	T5	T1	NoRel	true	ikmali	boşaltılmasının
+Relation	T5	T10	NoRel	true	ikmali	söyledi
+Relation	T5	T11	NoRel	true	ikmali	kaza
+Relation	T5	T4	NoRel	true	ikmali	açıkladı
+Relation	T5	T8	NoRel	true	ikmali	açıkladı
+Relation	T5	T9	NoRel	true	ikmali	değişikliği
+Relation	T6	T0	NoRel	true	açıklamasında	ölen
+Relation	T6	T14	NoRel	true	açıklamasında	yandığını
+Relation	T6	T2	NoRel	true	açıklamasında	açıkladı
+Relation	T6	T4	NoRel	true	açıklamasında	açıkladı
+Relation	T6	T5	NoRel	true	açıklamasında	ikmali
+Relation	T6	T8	NoRel	true	açıklamasında	açıkladı
+Relation	T7	T0	NoRel	true	uçmak	ölen
+Relation	T7	T1	NoRel	true	uçmak	boşaltılmasının
+Relation	T7	T10	NoRel	true	uçmak	söyledi
+Relation	T7	T6	NoRel	true	uçmak	açıklamasında
+Relation	T8	T13	NoRel	true	açıkladı	taşıdığı
+Relation	T8	T16	NoRel	true	açıkladı	inildiğini
+Relation	T8	T4	NoRel	true	açıkladı	açıkladı
+Relation	T8	T5	NoRel	true	açıkladı	ikmali
+Relation	T9	T14	NoRel	true	değişikliği	yandığını
+Relation	T9	T15	NoRel	true	değişikliği	geldiğini
+Relation	T9	T3	NoRel	true	değişikliği	ikmali
+Relation	T9	T6	NoRel	true	değişikliği	açıklamasında
+Relation	T9	T7	NoRel	true	değişikliği	uçmak

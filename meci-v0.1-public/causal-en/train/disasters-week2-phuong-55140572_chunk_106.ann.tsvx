@@ -1,0 +1,44 @@
+Text	Portions of the Georgia and South Carolina coasts were also photographed .	Additionally , the _ Sun - Sentinel _ published before and after photos of several landmarks in the Florida Keys .	In the days after the hurricane , due to the heavy rainfall , numerous rivers had flooded , including residential areas .	Public health risks , such as diarrheal infections and mosquito - borne illnesses , remain from the flooding that resulted in the aftermath of the hurricane .	A large concern from flooding is contamination because people become exposed to dirty floodwaters and the potential for contaminated water to enter the local water supply is significant .
+Event	T0	photographed	EVENT	60
+Event	T1	published	EVENT	113
+Event	T10	flooding	EVENT	492
+Event	T11	contamination	EVENT	504
+Event	T12	contaminated	EVENT	591
+Event	T13	enter	EVENT	613
+Event	T15	exposed	EVENT	540
+Event	T2	hurricane	EVENT	212
+Event	T3	rainfall	EVENT	241
+Event	T4	flooded	EVENT	272
+Event	T6	remain	EVENT	396
+Event	T7	flooding	EVENT	412
+Event	T8	resulted	EVENT	426
+Event	T9	hurricane	EVENT	459
+Relation	T4	T3	CauseEffect	true	flooded	rainfall
+Relation	T3	T4	EffectCause	true	rainfall	flooded
+Relation	T4	T2	CauseEffect	true	flooded	hurricane
+Relation	T2	T4	EffectCause	true	hurricane	flooded
+Relation	T11	T10	CauseEffect	true	contamination	flooding
+Relation	T10	T11	EffectCause	true	flooding	contamination
+Relation	T15	T11	CauseEffect	true	exposed	contamination
+Relation	T11	T15	EffectCause	true	contamination	exposed
+Relation	T15	T10	CauseEffect	true	exposed	flooding
+Relation	T10	T15	EffectCause	true	flooding	exposed
+Relation	T11	T13	CauseEffect	true	contamination	enter
+Relation	T13	T11	EffectCause	true	enter	contamination
+Relation	T0	T10	NoRel	true	photographed	flooding
+Relation	T11	T9	NoRel	true	contamination	hurricane
+Relation	T12	T7	NoRel	true	contaminated	flooding
+Relation	T13	T7	NoRel	true	enter	flooding
+Relation	T2	T6	NoRel	true	hurricane	remain
+Relation	T3	T15	NoRel	true	rainfall	exposed
+Relation	T3	T8	NoRel	true	rainfall	resulted
+Relation	T3	T9	NoRel	true	rainfall	hurricane
+Relation	T4	T12	NoRel	true	flooded	contaminated
+Relation	T6	T12	NoRel	true	remain	contaminated
+Relation	T7	T11	NoRel	true	flooding	contamination
+Relation	T7	T2	NoRel	true	flooding	hurricane
+Relation	T7	T3	NoRel	true	flooding	rainfall
+Relation	T7	T9	NoRel	true	flooding	hurricane
+Relation	T8	T15	NoRel	true	resulted	exposed
+Relation	T9	T2	NoRel	true	hurricane	hurricane
+Relation	T9	T4	NoRel	true	hurricane	flooded

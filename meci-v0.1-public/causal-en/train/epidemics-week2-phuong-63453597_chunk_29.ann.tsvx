@@ -1,0 +1,121 @@
+Text	One French company , Valmy SAS , was forced to block an order for PPE to be sent to the UK , after the company 's UK representative told CNN that the order had been blocked by customs officials at the French coast .	Turkey blocked a shipment of ventilators bought by two regional Spanish governments from a Turkish company , citing the risk of a shortage at home in holding onto the ventilators ; 116 of the ventilators were later released .	As the pandemic began to worsen , governments began employing strong - arm tactics including even surreptitious means to obtain medical supplies necessary to fight the coronavirus , either through paying more cash to reroute or seizing such equipment .	Slovakian prime minister Peter Pellegrini said the government was preparing cash worth 1.2 million euros ( $ 1.3 million ) to purchase masks from a contracted Chinese supplier .	He then said " However , a dealer from Germany came there first , paid more for the shipment , and bought it . "
+Event	T0	forced	EVENT	37
+Event	T1	block	EVENT	47
+Event	T10	risk	EVENT	336
+Event	T11	shortage	EVENT	346
+Event	T12	released	EVENT	431
+Event	T13	began	EVENT	458
+Event	T14	worsen	EVENT	467
+Event	T15	employing	EVENT	494
+Event	T16	obtain	EVENT	563
+Event	T17	fight	EVENT	600
+Event	T18	paying	EVENT	639
+Event	T19	reroute	EVENT	659
+Event	T2	order	EVENT	56
+Event	T20	seizing	EVENT	670
+Event	T21	said	EVENT	737
+Event	T22	preparing	EVENT	761
+Event	T23	purchase	EVENT	821
+Event	T24	said	EVENT	881
+Event	T25	paid	EVENT	939
+Event	T26	bought	EVENT	972
+Event	T27	sent	EVENT	76
+Event	T28	came	EVENT	920
+Event	T3	told	EVENT	132
+Event	T4	order	EVENT	150
+Event	T5	blocked	EVENT	165
+Event	T6	blocked	EVENT	223
+Event	T7	shipment	EVENT	233
+Event	T8	bought	EVENT	257
+Event	T9	citing	EVENT	325
+Relation	T2	T27	CauseEffect	true	order	sent
+Relation	T27	T2	EffectCause	true	sent	order
+Relation	T11	T6	CauseEffect	true	shortage	blocked
+Relation	T6	T11	EffectCause	true	blocked	shortage
+Relation	T6	T8	CauseEffect	true	blocked	bought
+Relation	T8	T6	EffectCause	true	bought	blocked
+Relation	T14	T15	CauseEffect	true	worsen	employing
+Relation	T15	T14	EffectCause	true	employing	worsen
+Relation	T16	T17	CauseEffect	true	obtain	fight
+Relation	T17	T16	EffectCause	true	fight	obtain
+Relation	T23	T22	CauseEffect	true	purchase	preparing
+Relation	T22	T23	EffectCause	true	preparing	purchase
+Relation	T19	T18	CauseEffect	true	reroute	paying
+Relation	T18	T19	EffectCause	true	paying	reroute
+Relation	T0	T20	NoRel	true	forced	seizing
+Relation	T0	T25	NoRel	true	forced	paid
+Relation	T1	T11	NoRel	true	block	shortage
+Relation	T1	T2	NoRel	true	block	order
+Relation	T1	T21	NoRel	true	block	said
+Relation	T1	T27	NoRel	true	block	sent
+Relation	T1	T6	NoRel	true	block	blocked
+Relation	T11	T14	NoRel	true	shortage	worsen
+Relation	T11	T27	NoRel	true	shortage	sent
+Relation	T12	T21	NoRel	true	released	said
+Relation	T12	T25	NoRel	true	released	paid
+Relation	T12	T3	NoRel	true	released	told
+Relation	T12	T9	NoRel	true	released	citing
+Relation	T13	T1	NoRel	true	began	block
+Relation	T13	T10	NoRel	true	began	risk
+Relation	T13	T21	NoRel	true	began	said
+Relation	T13	T27	NoRel	true	began	sent
+Relation	T13	T28	NoRel	true	began	came
+Relation	T13	T3	NoRel	true	began	told
+Relation	T13	T7	NoRel	true	began	shipment
+Relation	T13	T9	NoRel	true	began	citing
+Relation	T14	T21	NoRel	true	worsen	said
+Relation	T14	T24	NoRel	true	worsen	said
+Relation	T14	T28	NoRel	true	worsen	came
+Relation	T15	T13	NoRel	true	employing	began
+Relation	T15	T19	NoRel	true	employing	reroute
+Relation	T15	T24	NoRel	true	employing	said
+Relation	T16	T14	NoRel	true	obtain	worsen
+Relation	T16	T19	NoRel	true	obtain	reroute
+Relation	T16	T2	NoRel	true	obtain	order
+Relation	T16	T23	NoRel	true	obtain	purchase
+Relation	T16	T5	NoRel	true	obtain	blocked
+Relation	T17	T11	NoRel	true	fight	shortage
+Relation	T17	T4	NoRel	true	fight	order
+Relation	T17	T5	NoRel	true	fight	blocked
+Relation	T17	T6	NoRel	true	fight	blocked
+Relation	T18	T24	NoRel	true	paying	said
+Relation	T18	T27	NoRel	true	paying	sent
+Relation	T18	T8	NoRel	true	paying	bought
+Relation	T19	T17	NoRel	true	reroute	fight
+Relation	T19	T20	NoRel	true	reroute	seizing
+Relation	T19	T25	NoRel	true	reroute	paid
+Relation	T2	T10	NoRel	true	order	risk
+Relation	T2	T28	NoRel	true	order	came
+Relation	T2	T7	NoRel	true	order	shipment
+Relation	T20	T19	NoRel	true	seizing	reroute
+Relation	T20	T21	NoRel	true	seizing	said
+Relation	T20	T24	NoRel	true	seizing	said
+Relation	T20	T4	NoRel	true	seizing	order
+Relation	T21	T13	NoRel	true	said	began
+Relation	T21	T18	NoRel	true	said	paying
+Relation	T21	T23	NoRel	true	said	purchase
+Relation	T21	T24	NoRel	true	said	said
+Relation	T22	T11	NoRel	true	preparing	shortage
+Relation	T22	T8	NoRel	true	preparing	bought
+Relation	T23	T3	NoRel	true	purchase	told
+Relation	T24	T1	NoRel	true	said	block
+Relation	T24	T16	NoRel	true	said	obtain
+Relation	T24	T5	NoRel	true	said	blocked
+Relation	T25	T13	NoRel	true	paid	began
+Relation	T25	T23	NoRel	true	paid	purchase
+Relation	T27	T0	NoRel	true	sent	forced
+Relation	T27	T8	NoRel	true	sent	bought
+Relation	T28	T10	NoRel	true	came	risk
+Relation	T4	T11	NoRel	true	order	shortage
+Relation	T4	T14	NoRel	true	order	worsen
+Relation	T4	T6	NoRel	true	order	blocked
+Relation	T5	T4	NoRel	true	blocked	order
+Relation	T5	T7	NoRel	true	blocked	shipment
+Relation	T6	T1	NoRel	true	blocked	block
+Relation	T6	T22	NoRel	true	blocked	preparing
+Relation	T7	T19	NoRel	true	shipment	reroute
+Relation	T8	T20	NoRel	true	bought	seizing
+Relation	T8	T24	NoRel	true	bought	said
+Relation	T9	T12	NoRel	true	citing	released
+Relation	T9	T3	NoRel	true	citing	told
+Relation	T9	T7	NoRel	true	citing	shipment

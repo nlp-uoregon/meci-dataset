@@ -1,0 +1,72 @@
+Text	- 12 Eylül 1982 – Alman turistleri taşıyan bir otobüs , İsviçre , Zürih yakınlarındaki hemzemin geçitte bir tren ile çarpıştı , 39 kişi öldü .	Bariyerler kapatılmadı , çünkü operatör yanlış düğmeye basıyordu .	Çarpışmadan sadece iki yalcu hayatta kaldı .	- Hsinchu hemzemin geçit felaketi — 8 Mart , 1981 , bir yolcu treni ile otobüs çarpıştı , en az otuz kişi öldü ve 131 kişi yaralandı .	- Luchu hemzemin geçit felaketi — En az yirmi beş kişi öldü ve oruz iki kişi yaralandı , Aralık 1990 .
+Event	T0	çarpıştı	EVENT	117
+Event	T1	öldü	EVENT	136
+Event	T2	kapatılmadı	EVENT	154
+Event	T3	kaldı	EVENT	247
+Event	T4	felaketi	EVENT	280
+Event	T5	çarpıştı	EVENT	334
+Event	T6	öldü	EVENT	361
+Event	T7	yaralandı	EVENT	378
+Event	T8	felaketi	EVENT	413
+Event	T9	öldü	EVENT	445
+Event	T10	yaralandı	EVENT	467
+Event	T11	basıyordu	EVENT	198
+Relation	T0	T1	CauseEffect	true	çarpıştı	öldü
+Relation	T1	T0	EffectCause	true	öldü	çarpıştı
+Relation	T11	T2	CauseEffect	true	basıyordu	kapatılmadı
+Relation	T2	T11	EffectCause	true	kapatılmadı	basıyordu
+Relation	T5	T6	CauseEffect	true	çarpıştı	öldü
+Relation	T6	T5	EffectCause	true	öldü	çarpıştı
+Relation	T5	T7	CauseEffect	true	çarpıştı	yaralandı
+Relation	T7	T5	EffectCause	true	yaralandı	çarpıştı
+Relation	T0	T11	NoRel	true	çarpıştı	basıyordu
+Relation	T0	T4	NoRel	true	çarpıştı	felaketi
+Relation	T0	T5	NoRel	true	çarpıştı	çarpıştı
+Relation	T1	T11	NoRel	true	öldü	basıyordu
+Relation	T1	T7	NoRel	true	öldü	yaralandı
+Relation	T1	T8	NoRel	true	öldü	felaketi
+Relation	T10	T0	NoRel	true	yaralandı	çarpıştı
+Relation	T10	T1	NoRel	true	yaralandı	öldü
+Relation	T10	T2	NoRel	true	yaralandı	kapatılmadı
+Relation	T10	T3	NoRel	true	yaralandı	kaldı
+Relation	T10	T4	NoRel	true	yaralandı	felaketi
+Relation	T10	T7	NoRel	true	yaralandı	yaralandı
+Relation	T10	T8	NoRel	true	yaralandı	felaketi
+Relation	T10	T9	NoRel	true	yaralandı	öldü
+Relation	T11	T0	NoRel	true	basıyordu	çarpıştı
+Relation	T11	T4	NoRel	true	basıyordu	felaketi
+Relation	T11	T6	NoRel	true	basıyordu	öldü
+Relation	T11	T8	NoRel	true	basıyordu	felaketi
+Relation	T11	T9	NoRel	true	basıyordu	öldü
+Relation	T2	T9	NoRel	true	kapatılmadı	öldü
+Relation	T3	T0	NoRel	true	kaldı	çarpıştı
+Relation	T3	T11	NoRel	true	kaldı	basıyordu
+Relation	T3	T4	NoRel	true	kaldı	felaketi
+Relation	T3	T6	NoRel	true	kaldı	öldü
+Relation	T3	T7	NoRel	true	kaldı	yaralandı
+Relation	T4	T2	NoRel	true	felaketi	kapatılmadı
+Relation	T4	T3	NoRel	true	felaketi	kaldı
+Relation	T4	T5	NoRel	true	felaketi	çarpıştı
+Relation	T4	T6	NoRel	true	felaketi	öldü
+Relation	T4	T8	NoRel	true	felaketi	felaketi
+Relation	T4	T9	NoRel	true	felaketi	öldü
+Relation	T5	T0	NoRel	true	çarpıştı	çarpıştı
+Relation	T5	T1	NoRel	true	çarpıştı	öldü
+Relation	T5	T10	NoRel	true	çarpıştı	yaralandı
+Relation	T5	T3	NoRel	true	çarpıştı	kaldı
+Relation	T5	T8	NoRel	true	çarpıştı	felaketi
+Relation	T6	T10	NoRel	true	öldü	yaralandı
+Relation	T6	T11	NoRel	true	öldü	basıyordu
+Relation	T6	T2	NoRel	true	öldü	kapatılmadı
+Relation	T6	T4	NoRel	true	öldü	felaketi
+Relation	T6	T7	NoRel	true	öldü	yaralandı
+Relation	T7	T1	NoRel	true	yaralandı	öldü
+Relation	T7	T3	NoRel	true	yaralandı	kaldı
+Relation	T7	T4	NoRel	true	yaralandı	felaketi
+Relation	T8	T11	NoRel	true	felaketi	basıyordu
+Relation	T8	T4	NoRel	true	felaketi	felaketi
+Relation	T8	T6	NoRel	true	felaketi	öldü
+Relation	T9	T10	NoRel	true	öldü	yaralandı
+Relation	T9	T11	NoRel	true	öldü	basıyordu
+Relation	T9	T2	NoRel	true	öldü	kapatılmadı
+Relation	T9	T6	NoRel	true	öldü	öldü

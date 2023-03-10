@@ -1,0 +1,20 @@
+Text	He often played poker with his classmates in the " Cafe Tunix " after school hours in Waiblingen .	After inspection of his computer , officers found that Kretschmer was interested in sadomasochistic scenes where a man is bound and humiliated by women .	He viewed such a movie the evening before his attacks .	Kretschmer also researched previous mass shootings such as Erfurt School Massacre , Emsdetten School Shooting , and Columbine High School Massacre .	Kretschmer did not have a criminal record .
+Event	T0	inspection	EVENT	105
+Event	T1	found	EVENT	143
+Event	T11	researched	EVENT	325
+Event	T2	bound	EVENT	221
+Event	T3	humiliated	EVENT	231
+Event	T4	viewed	EVENT	256
+Event	T5	attacks	EVENT	299
+Event	T6	shootings	EVENT	350
+Relation	T5	T4	CauseEffect	true	attacks	viewed
+Relation	T4	T5	EffectCause	true	viewed	attacks
+Relation	T6	T5	CauseEffect	true	shootings	attacks
+Relation	T5	T6	EffectCause	true	attacks	shootings
+Relation	T5	T11	CauseEffect	true	attacks	researched
+Relation	T11	T5	EffectCause	true	researched	attacks
+Relation	T11	T1	NoRel	true	researched	found
+Relation	T11	T2	NoRel	true	researched	bound
+Relation	T2	T4	NoRel	true	bound	viewed
+Relation	T3	T0	NoRel	true	humiliated	inspection
+Relation	T3	T6	NoRel	true	humiliated	shootings

@@ -1,0 +1,75 @@
+Text	HISSÈNE HABRÉ ( Arapça : حسين حبري - [ hiˈsɛn_ˈhabre ] ) ya da bir diğer kullanımı ile HISSEN HABRÉ ; ( 13 Eylül 1942 - 24 Ağustos 2021 ) , Çadlı siyasetçi .	Habré , Afrika kıtasında bulunan Çad'da 1982 ile 1990 yılları arasında devlet başkanlığı makamında bulunmuştur .	İsyancı birlik _ Kuzey Birlikleri Ordusu _ ( Forces Armées du Nord ) lideri olan Habré , 1982 yılında gerçekleştirdiği darbe ile iktidara gelmiştir .	Libya ile yaşanan sorunda Fransa ve ABD kendisini desteklemiş ve eğitim , silah ve finansman sağlamıştır .	Fransa ve ABD'den gelen destekle Muammer Kaddafi önderliğindeki Libya'ya karşı üstünlük kuran Habré , Libya'nın işgal ettiği tüm kuzey bölgelerini işgalde kurtararak , 1987 yılında kazanılan Toyota Savaşı ile birlikte Libya'yı tamamen ülkeden çıkartmıştır .
+Event	T1	darbe	EVENT	390
+Event	T2	gelmiştir	EVENT	409
+Event	T4	desteklemiş	EVENT	471
+Event	T5	işgal	EVENT	640
+Event	T6	kurtararak	EVENT	683
+Event	T7	kazanılan	EVENT	709
+Event	T9	çıkartmıştır	EVENT	771
+Event	T10	bulunmuştur	EVENT	257
+Event	T11	sağlamıştır	EVENT	514
+Event	T3	sorunda	EVENT	439
+Event	T12	destekle	EVENT	552
+Event	T13	kuran	EVENT	616
+Event	T8	Toyota Savaşı	EVENT	719
+Relation	T1	T2	CauseEffect	true	darbe	gelmiştir
+Relation	T2	T1	EffectCause	true	gelmiştir	darbe
+Relation	T2	T10	CauseEffect	true	gelmiştir	bulunmuştur
+Relation	T10	T2	EffectCause	true	bulunmuştur	gelmiştir
+Relation	T3	T4	CauseEffect	true	sorunda	desteklemiş
+Relation	T4	T3	EffectCause	true	desteklemiş	sorunda
+Relation	T4	T11	CauseEffect	true	desteklemiş	sağlamıştır
+Relation	T11	T4	EffectCause	true	sağlamıştır	desteklemiş
+Relation	T11	T13	CauseEffect	true	sağlamıştır	kuran
+Relation	T13	T11	EffectCause	true	kuran	sağlamıştır
+Relation	T12	T13	CauseEffect	true	destekle	kuran
+Relation	T13	T12	EffectCause	true	kuran	destekle
+Relation	T5	T6	CauseEffect	true	işgal	kurtararak
+Relation	T6	T5	EffectCause	true	kurtararak	işgal
+Relation	T13	T6	CauseEffect	true	kuran	kurtararak
+Relation	T6	T13	EffectCause	true	kurtararak	kuran
+Relation	T8	T7	CauseEffect	true	Toyota Savaşı	kazanılan
+Relation	T7	T8	EffectCause	true	kazanılan	Toyota Savaşı
+Relation	T7	T9	CauseEffect	true	kazanılan	çıkartmıştır
+Relation	T9	T7	EffectCause	true	çıkartmıştır	kazanılan
+Relation	T1	T10	NoRel	true	darbe	bulunmuştur
+Relation	T1	T9	NoRel	true	darbe	çıkartmıştır
+Relation	T10	T11	NoRel	true	bulunmuştur	sağlamıştır
+Relation	T10	T12	NoRel	true	bulunmuştur	destekle
+Relation	T10	T6	NoRel	true	bulunmuştur	kurtararak
+Relation	T10	T7	NoRel	true	bulunmuştur	kazanılan
+Relation	T10	T8	NoRel	true	bulunmuştur	Toyota Savaşı
+Relation	T11	T12	NoRel	true	sağlamıştır	destekle
+Relation	T11	T9	NoRel	true	sağlamıştır	çıkartmıştır
+Relation	T12	T10	NoRel	true	destekle	bulunmuştur
+Relation	T12	T11	NoRel	true	destekle	sağlamıştır
+Relation	T12	T2	NoRel	true	destekle	gelmiştir
+Relation	T12	T3	NoRel	true	destekle	sorunda
+Relation	T12	T5	NoRel	true	destekle	işgal
+Relation	T13	T2	NoRel	true	kuran	gelmiştir
+Relation	T2	T13	NoRel	true	gelmiştir	kuran
+Relation	T2	T3	NoRel	true	gelmiştir	sorunda
+Relation	T2	T4	NoRel	true	gelmiştir	desteklemiş
+Relation	T2	T5	NoRel	true	gelmiştir	işgal
+Relation	T2	T7	NoRel	true	gelmiştir	kazanılan
+Relation	T2	T9	NoRel	true	gelmiştir	çıkartmıştır
+Relation	T3	T10	NoRel	true	sorunda	bulunmuştur
+Relation	T3	T11	NoRel	true	sorunda	sağlamıştır
+Relation	T3	T12	NoRel	true	sorunda	destekle
+Relation	T3	T2	NoRel	true	sorunda	gelmiştir
+Relation	T3	T5	NoRel	true	sorunda	işgal
+Relation	T3	T7	NoRel	true	sorunda	kazanılan
+Relation	T4	T1	NoRel	true	desteklemiş	darbe
+Relation	T4	T12	NoRel	true	desteklemiş	destekle
+Relation	T5	T3	NoRel	true	işgal	sorunda
+Relation	T5	T4	NoRel	true	işgal	desteklemiş
+Relation	T6	T10	NoRel	true	kurtararak	bulunmuştur
+Relation	T6	T8	NoRel	true	kurtararak	Toyota Savaşı
+Relation	T7	T1	NoRel	true	kazanılan	darbe
+Relation	T7	T6	NoRel	true	kazanılan	kurtararak
+Relation	T8	T12	NoRel	true	Toyota Savaşı	destekle
+Relation	T8	T5	NoRel	true	Toyota Savaşı	işgal
+Relation	T8	T9	NoRel	true	Toyota Savaşı	çıkartmıştır
+Relation	T9	T1	NoRel	true	çıkartmıştır	darbe
+Relation	T9	T3	NoRel	true	çıkartmıştır	sorunda
+Relation	T9	T6	NoRel	true	çıkartmıştır	kurtararak

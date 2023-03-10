@@ -1,0 +1,49 @@
+Text	Bugün Küçük Buz Devri olarak bilinen olay Avrupa'da zaten ciddi tarımsal sıkıntıya neden olmuştu .	Küçük Buz Devri'nin var olan soğuması , Küçük Buz Devri'nin yakınında meydana gelen Tambora'nın patlamasıyla daha da kötüleşti .	Yaz Yaşanmayan Yıl , tarımsal bir felakettir .	Tarihçi John D. Post , bunu " Batı dünyasındaki son büyük geçim krizi " olarak nitelemiştir .	1816 yılının iklim sapmaları , New England , Atlantik Kanada ve Batı Avrupa'nın bir bölümünde daha fazla etkiye sahip olmuştur .
+Event	T1	olay	EVENT	37
+Event	T2	soğuması	EVENT	128
+Event	T3	patlamasıyla	EVENT	195
+Event	T4	kötüleşti	EVENT	216
+Event	T5	felakettir	EVENT	262
+Event	T6	krizi	EVENT	339
+Event	T7	nitelemiştir	EVENT	354
+Event	T8	sapmaları	EVENT	388
+Event	T9	olmuştu	EVENT	89
+Event	T10	Küçük Buz Devri	EVENT	6
+Event	T11	olmuştur	EVENT	487
+Relation	T10	T9	CauseEffect	true	Küçük Buz Devri	olmuştu
+Relation	T9	T10	EffectCause	true	olmuştu	Küçük Buz Devri
+Relation	T3	T4	CauseEffect	true	patlamasıyla	kötüleşti
+Relation	T4	T3	EffectCause	true	kötüleşti	patlamasıyla
+Relation	T10	T7	CauseEffect	true	Küçük Buz Devri	nitelemiştir
+Relation	T7	T10	EffectCause	true	nitelemiştir	Küçük Buz Devri
+Relation	T8	T11	CauseEffect	true	sapmaları	olmuştur
+Relation	T11	T8	EffectCause	true	olmuştur	sapmaları
+Relation	T1	T7	NoRel	true	olay	nitelemiştir
+Relation	T10	T11	NoRel	true	Küçük Buz Devri	olmuştur
+Relation	T10	T5	NoRel	true	Küçük Buz Devri	felakettir
+Relation	T10	T6	NoRel	true	Küçük Buz Devri	krizi
+Relation	T11	T1	NoRel	true	olmuştur	olay
+Relation	T2	T1	NoRel	true	soğuması	olay
+Relation	T2	T10	NoRel	true	soğuması	Küçük Buz Devri
+Relation	T2	T4	NoRel	true	soğuması	kötüleşti
+Relation	T2	T6	NoRel	true	soğuması	krizi
+Relation	T2	T7	NoRel	true	soğuması	nitelemiştir
+Relation	T3	T1	NoRel	true	patlamasıyla	olay
+Relation	T3	T9	NoRel	true	patlamasıyla	olmuştu
+Relation	T4	T10	NoRel	true	kötüleşti	Küçük Buz Devri
+Relation	T4	T8	NoRel	true	kötüleşti	sapmaları
+Relation	T5	T10	NoRel	true	felakettir	Küçük Buz Devri
+Relation	T5	T6	NoRel	true	felakettir	krizi
+Relation	T5	T8	NoRel	true	felakettir	sapmaları
+Relation	T6	T10	NoRel	true	krizi	Küçük Buz Devri
+Relation	T6	T4	NoRel	true	krizi	kötüleşti
+Relation	T6	T5	NoRel	true	krizi	felakettir
+Relation	T6	T9	NoRel	true	krizi	olmuştu
+Relation	T7	T6	NoRel	true	nitelemiştir	krizi
+Relation	T7	T8	NoRel	true	nitelemiştir	sapmaları
+Relation	T7	T9	NoRel	true	nitelemiştir	olmuştu
+Relation	T8	T10	NoRel	true	sapmaları	Küçük Buz Devri
+Relation	T8	T2	NoRel	true	sapmaları	soğuması
+Relation	T8	T5	NoRel	true	sapmaları	felakettir
+Relation	T9	T11	NoRel	true	olmuştu	olmuştur
+Relation	T9	T6	NoRel	true	olmuştu	krizi

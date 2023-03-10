@@ -1,0 +1,24 @@
+Text	[ La " Economía Mundial " en el tiempo de acuerdo con la teoría de Kondrátiev ]	Carlota Pérez coloca las fases de la innovación sobre una curva logística o curva S , con las siguientes etiquetas : la « irrupción » o inicio de una era tecnológica , « frenesí » o auge del ascenso , « sinergia » o construcción rápida y « madurez » o realización .	Una deuda excesiva que , en última instancia , resulta en consecuencias negativas para la economía , aunque en la política monetaria medidas como la baja de las tasas de interés se utilizan para aumentar los préstamos y estimular el crecimiento .	Como expusieron Reinhart y Rogoff , la deuda excesiva pública y privada , interna y externa , ha llevado repetidamente a las crisis financieras en casi todos los países , a lo largo de los últimos dos siglos .	Estas crisis suelen terminar en pagos y reestructuraciones , aunque a veces mediante degradación de la moneda por la inflación .
+Event	T0	coloca	EVENT	94
+Event	T10	expusieron	EVENT	598
+Event	T11	deuda	EVENT	632
+Event	T12	llevado	EVENT	690
+Event	T13	crisis	EVENT	718
+Event	T14	crisis	EVENT	809
+Event	T1	inflación	EVENT	920
+Relation	T11	T13	CauseEffect	true	deuda	crisis
+Relation	T13	T11	EffectCause	true	crisis	deuda
+Relation	T0	T10	NoRel	true	coloca	expusieron
+Relation	T0	T11	NoRel	true	coloca	deuda
+Relation	T0	T12	NoRel	true	coloca	llevado
+Relation	T1	T10	NoRel	true	inflación	expusieron
+Relation	T1	T11	NoRel	true	inflación	deuda
+Relation	T10	T0	NoRel	true	expusieron	coloca
+Relation	T10	T1	NoRel	true	expusieron	inflación
+Relation	T11	T0	NoRel	true	deuda	coloca
+Relation	T11	T14	NoRel	true	deuda	crisis
+Relation	T12	T1	NoRel	true	llevado	inflación
+Relation	T12	T10	NoRel	true	llevado	expusieron
+Relation	T12	T11	NoRel	true	llevado	deuda
+Relation	T13	T1	NoRel	true	crisis	inflación
+Relation	T14	T11	NoRel	true	crisis	deuda

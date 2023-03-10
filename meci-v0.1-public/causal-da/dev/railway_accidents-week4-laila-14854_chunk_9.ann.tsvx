@@ -1,0 +1,104 @@
+Text	Sammenstødet havde afbrudt telefon- og telegraflinjerne , og man antog , at ulykken var alvorlig .	En reporter fra Berlingske Tidende lejede en bil og kørte i stor hast mod Vigerslev .	Han ankom 45 minutter efter ulykken og var lamslået af hvad han så .	Næste dag , søndag den 2. november , var en stor menneskemængde samlet ved ulykkesstedet .	De døde og sårede var blevet fjernet , men vognene og lokomotivet lå i en stor vragdynge .
+Event	T0	Sammenstødet	EVENT	0
+Event	T1	afbrudt	EVENT	19
+Event	T2	antog	EVENT	65
+Event	T3	ulykken	EVENT	76
+Event	T4	lejede	EVENT	134
+Event	T5	kørte	EVENT	151
+Event	T6	ulykken	EVENT	213
+Event	T7	lamslået	EVENT	228
+Event	T8	så	EVENT	249
+Event	T9	samlet	EVENT	318
+Event	T10	ulykkesstedet	EVENT	329
+Event	T11	døde	EVENT	348
+Event	T12	sårede	EVENT	356
+Event	T13	fjernet	EVENT	374
+Event	T14	ankom	EVENT	189
+Event	T15	alvorlig	EVENT	88
+Relation	T0	T1	CauseEffect	true	Sammenstødet	afbrudt
+Relation	T1	T0	EffectCause	true	afbrudt	Sammenstødet
+Relation	T15	T4	CauseEffect	true	alvorlig	lejede
+Relation	T4	T15	EffectCause	true	lejede	alvorlig
+Relation	T6	T11	CauseEffect	true	ulykken	døde
+Relation	T11	T6	EffectCause	true	døde	ulykken
+Relation	T6	T12	CauseEffect	true	ulykken	sårede
+Relation	T12	T6	EffectCause	true	sårede	ulykken
+Relation	T0	T11	NoRel	true	Sammenstødet	døde
+Relation	T0	T15	NoRel	true	Sammenstødet	alvorlig
+Relation	T0	T4	NoRel	true	Sammenstødet	lejede
+Relation	T1	T10	NoRel	true	afbrudt	ulykkesstedet
+Relation	T1	T11	NoRel	true	afbrudt	døde
+Relation	T1	T3	NoRel	true	afbrudt	ulykken
+Relation	T1	T4	NoRel	true	afbrudt	lejede
+Relation	T1	T8	NoRel	true	afbrudt	så
+Relation	T1	T9	NoRel	true	afbrudt	samlet
+Relation	T10	T0	NoRel	true	ulykkesstedet	Sammenstødet
+Relation	T10	T13	NoRel	true	ulykkesstedet	fjernet
+Relation	T10	T14	NoRel	true	ulykkesstedet	ankom
+Relation	T10	T2	NoRel	true	ulykkesstedet	antog
+Relation	T10	T5	NoRel	true	ulykkesstedet	kørte
+Relation	T10	T6	NoRel	true	ulykkesstedet	ulykken
+Relation	T10	T8	NoRel	true	ulykkesstedet	så
+Relation	T11	T0	NoRel	true	døde	Sammenstødet
+Relation	T11	T2	NoRel	true	døde	antog
+Relation	T11	T5	NoRel	true	døde	kørte
+Relation	T11	T9	NoRel	true	døde	samlet
+Relation	T12	T0	NoRel	true	sårede	Sammenstødet
+Relation	T12	T10	NoRel	true	sårede	ulykkesstedet
+Relation	T12	T14	NoRel	true	sårede	ankom
+Relation	T12	T4	NoRel	true	sårede	lejede
+Relation	T12	T9	NoRel	true	sårede	samlet
+Relation	T13	T12	NoRel	true	fjernet	sårede
+Relation	T13	T4	NoRel	true	fjernet	lejede
+Relation	T13	T8	NoRel	true	fjernet	så
+Relation	T13	T9	NoRel	true	fjernet	samlet
+Relation	T14	T0	NoRel	true	ankom	Sammenstødet
+Relation	T14	T1	NoRel	true	ankom	afbrudt
+Relation	T14	T10	NoRel	true	ankom	ulykkesstedet
+Relation	T14	T11	NoRel	true	ankom	døde
+Relation	T14	T12	NoRel	true	ankom	sårede
+Relation	T14	T13	NoRel	true	ankom	fjernet
+Relation	T14	T15	NoRel	true	ankom	alvorlig
+Relation	T14	T9	NoRel	true	ankom	samlet
+Relation	T15	T11	NoRel	true	alvorlig	døde
+Relation	T15	T13	NoRel	true	alvorlig	fjernet
+Relation	T15	T6	NoRel	true	alvorlig	ulykken
+Relation	T2	T0	NoRel	true	antog	Sammenstødet
+Relation	T2	T12	NoRel	true	antog	sårede
+Relation	T2	T6	NoRel	true	antog	ulykken
+Relation	T2	T8	NoRel	true	antog	så
+Relation	T2	T9	NoRel	true	antog	samlet
+Relation	T3	T0	NoRel	true	ulykken	Sammenstødet
+Relation	T3	T1	NoRel	true	ulykken	afbrudt
+Relation	T3	T10	NoRel	true	ulykken	ulykkesstedet
+Relation	T3	T11	NoRel	true	ulykken	døde
+Relation	T3	T13	NoRel	true	ulykken	fjernet
+Relation	T3	T15	NoRel	true	ulykken	alvorlig
+Relation	T3	T4	NoRel	true	ulykken	lejede
+Relation	T3	T7	NoRel	true	ulykken	lamslået
+Relation	T4	T11	NoRel	true	lejede	døde
+Relation	T4	T13	NoRel	true	lejede	fjernet
+Relation	T4	T2	NoRel	true	lejede	antog
+Relation	T4	T8	NoRel	true	lejede	så
+Relation	T5	T1	NoRel	true	kørte	afbrudt
+Relation	T5	T13	NoRel	true	kørte	fjernet
+Relation	T5	T14	NoRel	true	kørte	ankom
+Relation	T5	T4	NoRel	true	kørte	lejede
+Relation	T5	T9	NoRel	true	kørte	samlet
+Relation	T6	T15	NoRel	true	ulykken	alvorlig
+Relation	T6	T3	NoRel	true	ulykken	ulykken
+Relation	T6	T4	NoRel	true	ulykken	lejede
+Relation	T6	T5	NoRel	true	ulykken	kørte
+Relation	T6	T9	NoRel	true	ulykken	samlet
+Relation	T7	T1	NoRel	true	lamslået	afbrudt
+Relation	T7	T11	NoRel	true	lamslået	døde
+Relation	T7	T12	NoRel	true	lamslået	sårede
+Relation	T7	T13	NoRel	true	lamslået	fjernet
+Relation	T7	T14	NoRel	true	lamslået	ankom
+Relation	T7	T8	NoRel	true	lamslået	så
+Relation	T7	T9	NoRel	true	lamslået	samlet
+Relation	T8	T1	NoRel	true	så	afbrudt
+Relation	T8	T13	NoRel	true	så	fjernet
+Relation	T9	T11	NoRel	true	samlet	døde
+Relation	T9	T12	NoRel	true	samlet	sårede
+Relation	T9	T7	NoRel	true	samlet	lamslået

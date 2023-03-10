@@ -1,0 +1,102 @@
+Text	El ACCIDENTE FERROVIARIO DEL PUENTE GREAT BELT se produjo el 2 de enero de 2019 en el enlace fijo de Gran Belt en Dinamarca cuando un tren de pasajeros colisionó con un semirremolque desde o sobre un tren de carga que pasaba .	The Great Belt Fixed Link es una conexión puente-túnel de 18 km ( 11 millas ) entre las islas danesas de Zelanda y Funen , y el accidente ocurrió en el West Bridge , cerca de Funen .	El accidente ocurrió durante una tormenta , que había cerrado el puente para el tráfico rodado , pero no para el tráfico ferroviario .	Ocho pasajeros murieron , todos ellos ciudadanos daneses , y 16 resultaron heridos , lo que lo convierte en el accidente ferroviario más mortal de Dinamarca desde 1988 .	El accidente está bajo investigación , y se desconoce la causa exacta .
+Event	T0	produjo	EVENT	50
+Event	T1	colisionó	EVENT	152
+Event	T2	pasaba	EVENT	218
+Event	T3	conexión	EVENT	260
+Event	T4	ocurrió	EVENT	365
+Event	T5	ocurrió	EVENT	423
+Event	T6	tormenta	EVENT	443
+Event	T7	cerrado	EVENT	464
+Event	T8	murieron	EVENT	560
+Event	T9	heridos	EVENT	620
+Event	T10	convierte	EVENT	640
+Event	T11	accidente	EVENT	656
+Event	T12	mortal	EVENT	682
+Event	T13	accidente	EVENT	718
+Event	T14	investigación	EVENT	738
+Event	T15	ACCIDENTE	EVENT	3
+Relation	T1	T15	CauseEffect	true	colisionó	ACCIDENTE
+Relation	T15	T1	EffectCause	true	ACCIDENTE	colisionó
+Relation	T11	T9	CauseEffect	true	accidente	heridos
+Relation	T9	T11	EffectCause	true	heridos	accidente
+Relation	T11	T8	CauseEffect	true	accidente	murieron
+Relation	T8	T11	EffectCause	true	murieron	accidente
+Relation	T0	T10	NoRel	true	produjo	convierte
+Relation	T0	T11	NoRel	true	produjo	accidente
+Relation	T0	T12	NoRel	true	produjo	mortal
+Relation	T0	T15	NoRel	true	produjo	ACCIDENTE
+Relation	T0	T6	NoRel	true	produjo	tormenta
+Relation	T1	T14	NoRel	true	colisionó	investigación
+Relation	T1	T3	NoRel	true	colisionó	conexión
+Relation	T1	T8	NoRel	true	colisionó	murieron
+Relation	T1	T9	NoRel	true	colisionó	heridos
+Relation	T10	T11	NoRel	true	convierte	accidente
+Relation	T10	T12	NoRel	true	convierte	mortal
+Relation	T10	T14	NoRel	true	convierte	investigación
+Relation	T10	T15	NoRel	true	convierte	ACCIDENTE
+Relation	T10	T3	NoRel	true	convierte	conexión
+Relation	T10	T4	NoRel	true	convierte	ocurrió
+Relation	T10	T5	NoRel	true	convierte	ocurrió
+Relation	T11	T1	NoRel	true	accidente	colisionó
+Relation	T11	T12	NoRel	true	accidente	mortal
+Relation	T11	T14	NoRel	true	accidente	investigación
+Relation	T11	T2	NoRel	true	accidente	pasaba
+Relation	T11	T3	NoRel	true	accidente	conexión
+Relation	T11	T7	NoRel	true	accidente	cerrado
+Relation	T12	T0	NoRel	true	mortal	produjo
+Relation	T12	T10	NoRel	true	mortal	convierte
+Relation	T12	T11	NoRel	true	mortal	accidente
+Relation	T12	T5	NoRel	true	mortal	ocurrió
+Relation	T12	T9	NoRel	true	mortal	heridos
+Relation	T13	T1	NoRel	true	accidente	colisionó
+Relation	T13	T5	NoRel	true	accidente	ocurrió
+Relation	T13	T6	NoRel	true	accidente	tormenta
+Relation	T13	T7	NoRel	true	accidente	cerrado
+Relation	T14	T0	NoRel	true	investigación	produjo
+Relation	T14	T11	NoRel	true	investigación	accidente
+Relation	T14	T15	NoRel	true	investigación	ACCIDENTE
+Relation	T14	T7	NoRel	true	investigación	cerrado
+Relation	T14	T8	NoRel	true	investigación	murieron
+Relation	T15	T0	NoRel	true	ACCIDENTE	produjo
+Relation	T15	T10	NoRel	true	ACCIDENTE	convierte
+Relation	T15	T3	NoRel	true	ACCIDENTE	conexión
+Relation	T15	T4	NoRel	true	ACCIDENTE	ocurrió
+Relation	T15	T5	NoRel	true	ACCIDENTE	ocurrió
+Relation	T15	T8	NoRel	true	ACCIDENTE	murieron
+Relation	T15	T9	NoRel	true	ACCIDENTE	heridos
+Relation	T2	T11	NoRel	true	pasaba	accidente
+Relation	T2	T4	NoRel	true	pasaba	ocurrió
+Relation	T2	T7	NoRel	true	pasaba	cerrado
+Relation	T2	T8	NoRel	true	pasaba	murieron
+Relation	T3	T13	NoRel	true	conexión	accidente
+Relation	T3	T14	NoRel	true	conexión	investigación
+Relation	T3	T4	NoRel	true	conexión	ocurrió
+Relation	T3	T5	NoRel	true	conexión	ocurrió
+Relation	T3	T6	NoRel	true	conexión	tormenta
+Relation	T3	T7	NoRel	true	conexión	cerrado
+Relation	T3	T8	NoRel	true	conexión	murieron
+Relation	T4	T13	NoRel	true	ocurrió	accidente
+Relation	T4	T14	NoRel	true	ocurrió	investigación
+Relation	T5	T1	NoRel	true	ocurrió	colisionó
+Relation	T5	T15	NoRel	true	ocurrió	ACCIDENTE
+Relation	T5	T4	NoRel	true	ocurrió	ocurrió
+Relation	T6	T0	NoRel	true	tormenta	produjo
+Relation	T6	T1	NoRel	true	tormenta	colisionó
+Relation	T6	T10	NoRel	true	tormenta	convierte
+Relation	T6	T11	NoRel	true	tormenta	accidente
+Relation	T6	T13	NoRel	true	tormenta	accidente
+Relation	T6	T14	NoRel	true	tormenta	investigación
+Relation	T6	T3	NoRel	true	tormenta	conexión
+Relation	T6	T5	NoRel	true	tormenta	ocurrió
+Relation	T6	T8	NoRel	true	tormenta	murieron
+Relation	T7	T1	NoRel	true	cerrado	colisionó
+Relation	T7	T13	NoRel	true	cerrado	accidente
+Relation	T8	T1	NoRel	true	murieron	colisionó
+Relation	T8	T13	NoRel	true	murieron	accidente
+Relation	T8	T15	NoRel	true	murieron	ACCIDENTE
+Relation	T8	T5	NoRel	true	murieron	ocurrió
+Relation	T9	T1	NoRel	true	heridos	colisionó
+Relation	T9	T12	NoRel	true	heridos	mortal
+Relation	T9	T2	NoRel	true	heridos	pasaba
+Relation	T9	T3	NoRel	true	heridos	conexión
+Relation	T9	T6	NoRel	true	heridos	tormenta

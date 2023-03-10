@@ -1,0 +1,22 @@
+Text	Kazada üç kişi ölürken , dört kişi ağır yaralandı .	- 29 Mart 2010.	Moskova metrosu'nda iki kadın terörist tarafından düzenlenen intihar saldırılarında en az 39 kişi öldü .	- 1 Nisan 2010 .	Ülkenin doğusundaki Spišská Nová Ves şehrinde meydana gelen olayda test sürüşü yapan bir lokomotifin sabit konumdaki yolcu trenine çarpması sonucu üç kişi ölürken , on altı kişi de yaralandı .
+Event	T0	Kazada	EVENT	0
+Event	T1	ölürken	EVENT	15
+Event	T10	çarpması	EVENT	321
+Event	T2	yaralandı	EVENT	40
+Event	T4	öldü	EVENT	166
+Event	T5	ölürken	EVENT	345
+Event	T6	yaralandı	EVENT	371
+Relation	T0	T1	NoRel	true	Kazada	ölürken
+Relation	T0	T4	NoRel	true	Kazada	öldü
+Relation	T0	T5	NoRel	true	Kazada	ölürken
+Relation	T0	T6	NoRel	true	Kazada	yaralandı
+Relation	T10	T2	NoRel	true	çarpması	yaralandı
+Relation	T10	T5	NoRel	true	çarpması	ölürken
+Relation	T2	T0	NoRel	true	yaralandı	Kazada
+Relation	T2	T1	NoRel	true	yaralandı	ölürken
+Relation	T2	T5	NoRel	true	yaralandı	ölürken
+Relation	T5	T4	NoRel	true	ölürken	öldü
+Relation	T6	T0	NoRel	true	yaralandı	Kazada
+Relation	T6	T1	NoRel	true	yaralandı	ölürken
+Relation	T6	T4	NoRel	true	yaralandı	öldü
+Relation	T6	T5	NoRel	true	yaralandı	ölürken

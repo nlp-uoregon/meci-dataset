@@ -1,0 +1,77 @@
+Text	El tren pasó por la aguja de desvío con exceso de velocidad y fue encaminado hacia la vía 3 .	Sin embargo tras recorrer 44 metros descarriló y se salió de la vía siguiendo la tangente del desvío .	La cabeza de la composición impactó contra el paso superior de la carretera N-120 , que desvió la composición de nuevo hacia las vías haciendo que el tren finalmente se detuviera encima de la vía 5 .	En el accidente fallecieron cuatro personas : el maquinista , el interventor y dos pasajeros .	Resultaron heridos 47 pasajeros , 13 de ellos graves .
+Event	T0	pasó	EVENT	8
+Event	T1	desvío	EVENT	29
+Event	T2	encaminado	EVENT	66
+Event	T3	recorrer	EVENT	111
+Event	T4	descarriló	EVENT	130
+Event	T5	salió	EVENT	146
+Event	T6	desvío	EVENT	188
+Event	T7	impactó	EVENT	225
+Event	T8	desvió	EVENT	285
+Event	T9	haciendo	EVENT	331
+Event	T10	detuviera	EVENT	366
+Event	T11	fallecieron	EVENT	413
+Event	T12	heridos	EVENT	503
+Event	T13	accidente	EVENT	403
+Relation	T4	T5	CauseEffect	true	descarriló	salió
+Relation	T5	T4	EffectCause	true	salió	descarriló
+Relation	T13	T11	CauseEffect	true	accidente	fallecieron
+Relation	T11	T13	EffectCause	true	fallecieron	accidente
+Relation	T13	T12	CauseEffect	true	accidente	heridos
+Relation	T12	T13	EffectCause	true	heridos	accidente
+Relation	T0	T13	NoRel	true	pasó	accidente
+Relation	T0	T4	NoRel	true	pasó	descarriló
+Relation	T0	T5	NoRel	true	pasó	salió
+Relation	T0	T7	NoRel	true	pasó	impactó
+Relation	T1	T10	NoRel	true	desvío	detuviera
+Relation	T1	T5	NoRel	true	desvío	salió
+Relation	T1	T6	NoRel	true	desvío	desvío
+Relation	T1	T7	NoRel	true	desvío	impactó
+Relation	T1	T8	NoRel	true	desvío	desvió
+Relation	T10	T11	NoRel	true	detuviera	fallecieron
+Relation	T10	T12	NoRel	true	detuviera	heridos
+Relation	T10	T3	NoRel	true	detuviera	recorrer
+Relation	T10	T7	NoRel	true	detuviera	impactó
+Relation	T10	T8	NoRel	true	detuviera	desvió
+Relation	T11	T12	NoRel	true	fallecieron	heridos
+Relation	T11	T2	NoRel	true	fallecieron	encaminado
+Relation	T11	T5	NoRel	true	fallecieron	salió
+Relation	T12	T4	NoRel	true	heridos	descarriló
+Relation	T12	T6	NoRel	true	heridos	desvío
+Relation	T12	T8	NoRel	true	heridos	desvió
+Relation	T13	T0	NoRel	true	accidente	pasó
+Relation	T13	T1	NoRel	true	accidente	desvío
+Relation	T13	T10	NoRel	true	accidente	detuviera
+Relation	T13	T5	NoRel	true	accidente	salió
+Relation	T13	T9	NoRel	true	accidente	haciendo
+Relation	T2	T0	NoRel	true	encaminado	pasó
+Relation	T2	T1	NoRel	true	encaminado	desvío
+Relation	T2	T3	NoRel	true	encaminado	recorrer
+Relation	T2	T6	NoRel	true	encaminado	desvío
+Relation	T2	T9	NoRel	true	encaminado	haciendo
+Relation	T3	T0	NoRel	true	recorrer	pasó
+Relation	T3	T12	NoRel	true	recorrer	heridos
+Relation	T3	T7	NoRel	true	recorrer	impactó
+Relation	T4	T0	NoRel	true	descarriló	pasó
+Relation	T4	T12	NoRel	true	descarriló	heridos
+Relation	T4	T2	NoRel	true	descarriló	encaminado
+Relation	T4	T9	NoRel	true	descarriló	haciendo
+Relation	T5	T0	NoRel	true	salió	pasó
+Relation	T5	T12	NoRel	true	salió	heridos
+Relation	T5	T2	NoRel	true	salió	encaminado
+Relation	T5	T8	NoRel	true	salió	desvió
+Relation	T5	T9	NoRel	true	salió	haciendo
+Relation	T6	T0	NoRel	true	desvío	pasó
+Relation	T6	T2	NoRel	true	desvío	encaminado
+Relation	T6	T3	NoRel	true	desvío	recorrer
+Relation	T6	T8	NoRel	true	desvío	desvió
+Relation	T6	T9	NoRel	true	desvío	haciendo
+Relation	T7	T11	NoRel	true	impactó	fallecieron
+Relation	T7	T12	NoRel	true	impactó	heridos
+Relation	T7	T5	NoRel	true	impactó	salió
+Relation	T8	T2	NoRel	true	desvió	encaminado
+Relation	T8	T4	NoRel	true	desvió	descarriló
+Relation	T8	T6	NoRel	true	desvió	desvío
+Relation	T9	T0	NoRel	true	haciendo	pasó
+Relation	T9	T5	NoRel	true	haciendo	salió
+Relation	T9	T8	NoRel	true	haciendo	desvió

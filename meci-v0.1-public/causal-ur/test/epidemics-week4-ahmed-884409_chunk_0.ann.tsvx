@@ -1,0 +1,81 @@
+Text	upright =1.5_|_legend1_=_|_map2 = COVID -19 Outbreak World Map per Capita .	svg {{ ! } } upright =1.46_|_legend2_=	| image = Covid-19 _SP_-_UTI_V._Nova_Cachoeirinha .jpg | image_upright = 1.35 |_caption = مئی 2020 میں ساؤ پالو کے ایک آئی سی یو میں ایک COVID-19 مریض کا علاج کر رہے |_disease = کورونا وائرس ( COVID -19 ) | virus_strain = Severe acute respiratory syndrome coronavirus 2 ( SARS ‑CoV‑2 ) | location = ساری دنیا | index_case = وہان ، چین |_date_=_–	تاحال ( ) | source = Bats , likely indirectly | confirmed_cases_= 346,798,389 | suspected_cases_= | deaths = 5,586,815 ( اطلاع دی گئی ) 13.4 –22.7 ملین ( اندازہ لگایا گیا ) }} کورونا وائرس کی عالمی وبا ایک عالمگیر وبا ہے جو کورونا وائرس مرض کے پھیلنے سے دنیا بھر میں پھوٹ پڑی ہے ۔	اس وبا کا باعث سارس کووی 2 نامی وائرس ہے جس کی بنا پر انسانوں کا نظام تنفس شدید خرابی سے دوچار ہو جاتا ہے ۔
+Event	T0	Outbreak	EVENT	44
+Event	T1	علاج	EVENT	269
+Event	T2	deaths	EVENT	561
+Event	T3	لگایا	EVENT	622
+Event	T4	مرض	EVENT	698
+Event	T5	پھیلنے	EVENT	705
+Event	T6	پڑی	EVENT	733
+Event	T7	confirmed_cases_	EVENT	509
+Event	T8	suspected_cases_	EVENT	541
+Event	T9	وبا	EVENT	659
+Event	T10	وبا	EVENT	675
+Event	T11	وبا	EVENT	745
+Event	T12	ہو	EVENT	837
+Relation	T11	T12	CauseEffect	true	وبا	ہو
+Relation	T12	T11	EffectCause	true	ہو	وبا
+Relation	T9	T7	CauseEffect	true	وبا	confirmed_cases_
+Relation	T7	T9	EffectCause	true	confirmed_cases_	وبا
+Relation	T9	T8	CauseEffect	true	وبا	suspected_cases_
+Relation	T8	T9	EffectCause	true	suspected_cases_	وبا
+Relation	T9	T2	CauseEffect	true	وبا	deaths
+Relation	T2	T9	EffectCause	true	deaths	وبا
+Relation	T10	T7	CauseEffect	true	وبا	confirmed_cases_
+Relation	T7	T10	EffectCause	true	confirmed_cases_	وبا
+Relation	T10	T8	CauseEffect	true	وبا	suspected_cases_
+Relation	T8	T10	EffectCause	true	suspected_cases_	وبا
+Relation	T10	T2	CauseEffect	true	وبا	deaths
+Relation	T2	T10	EffectCause	true	deaths	وبا
+Relation	T5	T6	CauseEffect	true	پھیلنے	پڑی
+Relation	T6	T5	EffectCause	true	پڑی	پھیلنے
+Relation	T0	T1	NoRel	true	Outbreak	علاج
+Relation	T0	T12	NoRel	true	Outbreak	ہو
+Relation	T0	T2	NoRel	true	Outbreak	deaths
+Relation	T0	T3	NoRel	true	Outbreak	لگایا
+Relation	T0	T6	NoRel	true	Outbreak	پڑی
+Relation	T0	T8	NoRel	true	Outbreak	suspected_cases_
+Relation	T0	T9	NoRel	true	Outbreak	وبا
+Relation	T1	T0	NoRel	true	علاج	Outbreak
+Relation	T1	T10	NoRel	true	علاج	وبا
+Relation	T1	T11	NoRel	true	علاج	وبا
+Relation	T1	T2	NoRel	true	علاج	deaths
+Relation	T1	T4	NoRel	true	علاج	مرض
+Relation	T1	T6	NoRel	true	علاج	پڑی
+Relation	T1	T7	NoRel	true	علاج	confirmed_cases_
+Relation	T1	T8	NoRel	true	علاج	suspected_cases_
+Relation	T10	T11	NoRel	true	وبا	وبا
+Relation	T10	T4	NoRel	true	وبا	مرض
+Relation	T10	T9	NoRel	true	وبا	وبا
+Relation	T11	T3	NoRel	true	وبا	لگایا
+Relation	T12	T2	NoRel	true	ہو	deaths
+Relation	T12	T5	NoRel	true	ہو	پھیلنے
+Relation	T2	T1	NoRel	true	deaths	علاج
+Relation	T2	T11	NoRel	true	deaths	وبا
+Relation	T2	T12	NoRel	true	deaths	ہو
+Relation	T2	T8	NoRel	true	deaths	suspected_cases_
+Relation	T3	T0	NoRel	true	لگایا	Outbreak
+Relation	T3	T12	NoRel	true	لگایا	ہو
+Relation	T3	T4	NoRel	true	لگایا	مرض
+Relation	T3	T5	NoRel	true	لگایا	پھیلنے
+Relation	T3	T7	NoRel	true	لگایا	confirmed_cases_
+Relation	T3	T9	NoRel	true	لگایا	وبا
+Relation	T4	T5	NoRel	true	مرض	پھیلنے
+Relation	T5	T0	NoRel	true	پھیلنے	Outbreak
+Relation	T5	T10	NoRel	true	پھیلنے	وبا
+Relation	T6	T0	NoRel	true	پڑی	Outbreak
+Relation	T6	T12	NoRel	true	پڑی	ہو
+Relation	T6	T2	NoRel	true	پڑی	deaths
+Relation	T6	T3	NoRel	true	پڑی	لگایا
+Relation	T6	T9	NoRel	true	پڑی	وبا
+Relation	T7	T12	NoRel	true	confirmed_cases_	ہو
+Relation	T7	T3	NoRel	true	confirmed_cases_	لگایا
+Relation	T7	T4	NoRel	true	confirmed_cases_	مرض
+Relation	T7	T6	NoRel	true	confirmed_cases_	پڑی
+Relation	T7	T8	NoRel	true	confirmed_cases_	suspected_cases_
+Relation	T8	T3	NoRel	true	suspected_cases_	لگایا
+Relation	T8	T5	NoRel	true	suspected_cases_	پھیلنے
+Relation	T8	T6	NoRel	true	suspected_cases_	پڑی
+Relation	T9	T0	NoRel	true	وبا	Outbreak
+Relation	T9	T10	NoRel	true	وبا	وبا
+Relation	T9	T3	NoRel	true	وبا	لگایا
+Relation	T9	T5	NoRel	true	وبا	پھیلنے

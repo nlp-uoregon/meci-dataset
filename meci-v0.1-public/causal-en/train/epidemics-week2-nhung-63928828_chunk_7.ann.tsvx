@@ -1,0 +1,153 @@
+Text	People refused to bury their dead , who were instead buried by a special group of grave diggers recruited from the poorest beggars , the _ becchini _ , who charged enormous sums to throw the bodies in mass graves .	Those who could not pay left the bodies on the street , which were soon full of rotting corpses .	In the countryside outside Florence , the peasantry fell down dead in their fields which were abandoned by the living , who let loose their animals and ate their supplies because they lost the hope of surviving .	Matteo Villani described how people in Florence , expecting their death , lived to enjoy life without consequences : the poor ignored the class system and started to eat luxury food and dress in fashion of dead aristocrats , and how people started to marry anyone they wished without considering class , status or suitability .	Giovanni Boccaccio claimed that 100.000 people died in Florence .
+Event	T0	refused	EVENT	7
+Event	T1	dead	EVENT	29
+Event	T10	lost	EVENT	497
+Event	T11	hope	EVENT	506
+Event	T12	surviving	EVENT	514
+Event	T13	described	EVENT	541
+Event	T14	expecting	EVENT	576
+Event	T15	death	EVENT	592
+Event	T16	lived	EVENT	600
+Event	T17	ignored	EVENT	652
+Event	T18	started	EVENT	681
+Event	T19	eat	EVENT	692
+Event	T2	buried	EVENT	53
+Event	T20	dress	EVENT	712
+Event	T21	started	EVENT	766
+Event	T22	marry	EVENT	777
+Event	T23	wished	EVENT	795
+Event	T24	considering	EVENT	810
+Event	T25	claimed	EVENT	873
+Event	T26	died	EVENT	901
+Event	T27	bury	EVENT	18
+Event	T28	pay	EVENT	235
+Event	T29	left	EVENT	239
+Event	T3	recruited	EVENT	96
+Event	T30	loose	EVENT	441
+Event	T31	enjoy	EVENT	609
+Event	T4	charged	EVENT	156
+Event	T5	throw	EVENT	181
+Event	T6	rotting	EVENT	295
+Event	T7	dead	EVENT	375
+Event	T8	abandoned	EVENT	407
+Event	T9	ate	EVENT	465
+Relation	T1	T0	CauseEffect	true	dead	refused
+Relation	T0	T1	EffectCause	true	refused	dead
+Relation	T1	T2	CauseEffect	true	dead	buried
+Relation	T2	T1	EffectCause	true	buried	dead
+Relation	T3	T2	CauseEffect	true	recruited	buried
+Relation	T2	T3	EffectCause	true	buried	recruited
+Relation	T4	T5	CauseEffect	true	charged	throw
+Relation	T5	T4	EffectCause	true	throw	charged
+Relation	T28	T29	CauseEffect	true	pay	left
+Relation	T29	T28	EffectCause	true	left	pay
+Relation	T29	T6	CauseEffect	true	left	rotting
+Relation	T6	T29	EffectCause	true	rotting	left
+Relation	T7	T8	CauseEffect	true	dead	abandoned
+Relation	T8	T7	EffectCause	true	abandoned	dead
+Relation	T30	T10	CauseEffect	true	loose	lost
+Relation	T10	T30	EffectCause	true	lost	loose
+Relation	T9	T10	CauseEffect	true	ate	lost
+Relation	T10	T9	EffectCause	true	lost	ate
+Relation	T31	T16	CauseEffect	true	enjoy	lived
+Relation	T16	T31	EffectCause	true	lived	enjoy
+Relation	T17	T18	CauseEffect	true	ignored	started
+Relation	T18	T17	EffectCause	true	started	ignored
+Relation	T17	T20	CauseEffect	true	ignored	dress
+Relation	T20	T17	EffectCause	true	dress	ignored
+Relation	T23	T22	CauseEffect	true	wished	marry
+Relation	T22	T23	EffectCause	true	marry	wished
+Relation	T0	T15	NoRel	true	refused	death
+Relation	T0	T20	NoRel	true	refused	dress
+Relation	T0	T28	NoRel	true	refused	pay
+Relation	T1	T10	NoRel	true	dead	lost
+Relation	T1	T24	NoRel	true	dead	considering
+Relation	T1	T6	NoRel	true	dead	rotting
+Relation	T10	T0	NoRel	true	lost	refused
+Relation	T10	T14	NoRel	true	lost	expecting
+Relation	T10	T24	NoRel	true	lost	considering
+Relation	T10	T28	NoRel	true	lost	pay
+Relation	T10	T31	NoRel	true	lost	enjoy
+Relation	T10	T6	NoRel	true	lost	rotting
+Relation	T11	T1	NoRel	true	hope	dead
+Relation	T11	T14	NoRel	true	hope	expecting
+Relation	T11	T17	NoRel	true	hope	ignored
+Relation	T12	T21	NoRel	true	surviving	started
+Relation	T12	T4	NoRel	true	surviving	charged
+Relation	T13	T7	NoRel	true	described	dead
+Relation	T14	T11	NoRel	true	expecting	hope
+Relation	T14	T17	NoRel	true	expecting	ignored
+Relation	T14	T31	NoRel	true	expecting	enjoy
+Relation	T15	T11	NoRel	true	death	hope
+Relation	T15	T17	NoRel	true	death	ignored
+Relation	T15	T24	NoRel	true	death	considering
+Relation	T15	T5	NoRel	true	death	throw
+Relation	T15	T7	NoRel	true	death	dead
+Relation	T16	T30	NoRel	true	lived	loose
+Relation	T16	T6	NoRel	true	lived	rotting
+Relation	T17	T11	NoRel	true	ignored	hope
+Relation	T18	T15	NoRel	true	started	death
+Relation	T18	T23	NoRel	true	started	wished
+Relation	T18	T9	NoRel	true	started	ate
+Relation	T19	T5	NoRel	true	eat	throw
+Relation	T2	T15	NoRel	true	buried	death
+Relation	T2	T27	NoRel	true	buried	bury
+Relation	T2	T29	NoRel	true	buried	left
+Relation	T2	T5	NoRel	true	buried	throw
+Relation	T20	T1	NoRel	true	dress	dead
+Relation	T20	T25	NoRel	true	dress	claimed
+Relation	T20	T28	NoRel	true	dress	pay
+Relation	T20	T6	NoRel	true	dress	rotting
+Relation	T21	T26	NoRel	true	started	died
+Relation	T21	T5	NoRel	true	started	throw
+Relation	T22	T30	NoRel	true	marry	loose
+Relation	T22	T9	NoRel	true	marry	ate
+Relation	T23	T0	NoRel	true	wished	refused
+Relation	T23	T17	NoRel	true	wished	ignored
+Relation	T23	T2	NoRel	true	wished	buried
+Relation	T23	T26	NoRel	true	wished	died
+Relation	T25	T13	NoRel	true	claimed	described
+Relation	T25	T15	NoRel	true	claimed	death
+Relation	T25	T17	NoRel	true	claimed	ignored
+Relation	T25	T22	NoRel	true	claimed	marry
+Relation	T25	T29	NoRel	true	claimed	left
+Relation	T26	T0	NoRel	true	died	refused
+Relation	T26	T22	NoRel	true	died	marry
+Relation	T26	T7	NoRel	true	died	dead
+Relation	T26	T8	NoRel	true	died	abandoned
+Relation	T27	T0	NoRel	true	bury	refused
+Relation	T27	T2	NoRel	true	bury	buried
+Relation	T27	T22	NoRel	true	bury	marry
+Relation	T27	T23	NoRel	true	bury	wished
+Relation	T27	T28	NoRel	true	bury	pay
+Relation	T29	T20	NoRel	true	left	dress
+Relation	T29	T31	NoRel	true	left	enjoy
+Relation	T3	T14	NoRel	true	recruited	expecting
+Relation	T3	T19	NoRel	true	recruited	eat
+Relation	T3	T29	NoRel	true	recruited	left
+Relation	T3	T30	NoRel	true	recruited	loose
+Relation	T30	T1	NoRel	true	loose	dead
+Relation	T30	T19	NoRel	true	loose	eat
+Relation	T30	T20	NoRel	true	loose	dress
+Relation	T30	T21	NoRel	true	loose	started
+Relation	T31	T4	NoRel	true	enjoy	charged
+Relation	T31	T8	NoRel	true	enjoy	abandoned
+Relation	T4	T24	NoRel	true	charged	considering
+Relation	T4	T6	NoRel	true	charged	rotting
+Relation	T4	T7	NoRel	true	charged	dead
+Relation	T5	T11	NoRel	true	throw	hope
+Relation	T5	T21	NoRel	true	throw	started
+Relation	T5	T28	NoRel	true	throw	pay
+Relation	T6	T18	NoRel	true	rotting	started
+Relation	T6	T2	NoRel	true	rotting	buried
+Relation	T6	T3	NoRel	true	rotting	recruited
+Relation	T7	T11	NoRel	true	dead	hope
+Relation	T7	T14	NoRel	true	dead	expecting
+Relation	T7	T18	NoRel	true	dead	started
+Relation	T7	T26	NoRel	true	dead	died
+Relation	T8	T16	NoRel	true	abandoned	lived
+Relation	T8	T22	NoRel	true	abandoned	marry
+Relation	T9	T16	NoRel	true	ate	lived
+Relation	T9	T23	NoRel	true	ate	wished
+Relation	T9	T26	NoRel	true	ate	died
+Relation	T9	T31	NoRel	true	ate	enjoy

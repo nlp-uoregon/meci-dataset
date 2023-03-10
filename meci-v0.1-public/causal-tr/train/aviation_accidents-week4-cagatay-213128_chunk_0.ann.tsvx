@@ -1,0 +1,60 @@
+Text	LARRY A. SILVERSTEIN ( d. 1932 , Brooklyn , New York ) , Amerikalı milyarder emlak yatırımcısı ve işletmecisi , Silverstein Properties müteahhitlik şirketinin başkanı .	11_Eylül saldırılarından önce 3, 9 milyar dolara çeşitli saldırıları kapsayan bir sigorta sözleşmesi yapması dolayısıyla 11 Eylül saldırılarında parmağı olduğu hakkında spekülasyonlar vardır .	90'lı yıllarda da terör tehlikesi atlatan bina garanti olsun diye kendisi tarafından sigortalatılmıştır .	Saldırılardan sonra sigorta için anlaşılan miktarı kabul etmemiş , iki ayrı saldırı olduğunu söyleyip sigorta şirketine dava açmış ve başlangıçta anlaşılan miktarın iki katını kazanmıştır .	Silverman aynı zamanda New York Üniversitesi'nin mütevelli heyeti üyesidir .
+Event	T0	yapması	EVENT	270
+Event	T1	saldırılarında	EVENT	299
+Event	T2	sigortalatılmıştır	EVENT	447
+Event	T3	Saldırılardan	EVENT	468
+Event	T4	saldırı	EVENT	544
+Event	T5	söyleyip	EVENT	561
+Event	T6	açmış	EVENT	593
+Event	T7	kazanmıştır	EVENT	644
+Event	T8	saldırılarından	EVENT	178
+Event	T9	saldırıları	EVENT	226
+Event	T10	spekülasyonlar	EVENT	338
+Event	T11	atlatan	EVENT	396
+Relation	T0	T10	CauseEffect	true	yapması	spekülasyonlar
+Relation	T10	T0	EffectCause	true	spekülasyonlar	yapması
+Relation	T11	T2	CauseEffect	true	atlatan	sigortalatılmıştır
+Relation	T2	T11	EffectCause	true	sigortalatılmıştır	atlatan
+Relation	T6	T7	CauseEffect	true	açmış	kazanmıştır
+Relation	T7	T6	EffectCause	true	kazanmıştır	açmış
+Relation	T0	T11	NoRel	true	yapması	atlatan
+Relation	T0	T5	NoRel	true	yapması	söyleyip
+Relation	T1	T7	NoRel	true	saldırılarında	kazanmıştır
+Relation	T1	T8	NoRel	true	saldırılarında	saldırılarından
+Relation	T10	T2	NoRel	true	spekülasyonlar	sigortalatılmıştır
+Relation	T10	T5	NoRel	true	spekülasyonlar	söyleyip
+Relation	T10	T6	NoRel	true	spekülasyonlar	açmış
+Relation	T11	T5	NoRel	true	atlatan	söyleyip
+Relation	T11	T9	NoRel	true	atlatan	saldırıları
+Relation	T2	T1	NoRel	true	sigortalatılmıştır	saldırılarında
+Relation	T2	T4	NoRel	true	sigortalatılmıştır	saldırı
+Relation	T2	T5	NoRel	true	sigortalatılmıştır	söyleyip
+Relation	T2	T9	NoRel	true	sigortalatılmıştır	saldırıları
+Relation	T3	T1	NoRel	true	Saldırılardan	saldırılarında
+Relation	T3	T10	NoRel	true	Saldırılardan	spekülasyonlar
+Relation	T3	T2	NoRel	true	Saldırılardan	sigortalatılmıştır
+Relation	T3	T6	NoRel	true	Saldırılardan	açmış
+Relation	T3	T7	NoRel	true	Saldırılardan	kazanmıştır
+Relation	T3	T8	NoRel	true	Saldırılardan	saldırılarından
+Relation	T3	T9	NoRel	true	Saldırılardan	saldırıları
+Relation	T4	T1	NoRel	true	saldırı	saldırılarında
+Relation	T4	T5	NoRel	true	saldırı	söyleyip
+Relation	T4	T7	NoRel	true	saldırı	kazanmıştır
+Relation	T5	T0	NoRel	true	söyleyip	yapması
+Relation	T5	T10	NoRel	true	söyleyip	spekülasyonlar
+Relation	T5	T11	NoRel	true	söyleyip	atlatan
+Relation	T5	T4	NoRel	true	söyleyip	saldırı
+Relation	T5	T6	NoRel	true	söyleyip	açmış
+Relation	T5	T9	NoRel	true	söyleyip	saldırıları
+Relation	T6	T1	NoRel	true	açmış	saldırılarında
+Relation	T6	T2	NoRel	true	açmış	sigortalatılmıştır
+Relation	T6	T3	NoRel	true	açmış	Saldırılardan
+Relation	T6	T8	NoRel	true	açmış	saldırılarından
+Relation	T7	T10	NoRel	true	kazanmıştır	spekülasyonlar
+Relation	T7	T2	NoRel	true	kazanmıştır	sigortalatılmıştır
+Relation	T7	T9	NoRel	true	kazanmıştır	saldırıları
+Relation	T8	T10	NoRel	true	saldırılarından	spekülasyonlar
+Relation	T8	T2	NoRel	true	saldırılarından	sigortalatılmıştır
+Relation	T8	T5	NoRel	true	saldırılarından	söyleyip
+Relation	T9	T0	NoRel	true	saldırıları	yapması
+Relation	T9	T7	NoRel	true	saldırıları	kazanmıştır

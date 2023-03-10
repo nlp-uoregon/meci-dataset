@@ -1,0 +1,94 @@
+Text	ÇORLU TREN_KAZASI , 8 Temmuz 2018 tarihinde meydana gelmiş olan tren kazasıdır .	Kaza esnasında Uzunköprü'den İstanbul'a doğru hareket eden yolcu treni Çorlu yakınlarından geçerken yağış nedeniyle rayların altındaki toprak menfezin kayması sonucu 5 vagon devrilmiştir .	Kazada 25 kişi ölmüş 317 kişi de yaralanmıştır .	8 Temmuz 2018'de İstanbul - Halkalı seferini yapan yolcu treninin 5 vagonu , saat 17:00 civarında Tekirdağ'ın Muratlı ile Çorlu ilçeleri arasındaki Sarılar Mahallesi'nde raydan çıkarak devrildi .	Kaza aşırı yağışa bağlı rayların üzerinden geçtiği ve denetiminin yapılmadığı menfezin kayması sonucu gerçekleşmiştir .
+Event	T0	kazasıdır	EVENT	69
+Event	T1	hareket	EVENT	127
+Event	T2	yağış	EVENT	181
+Event	T3	devrilmiştir	EVENT	255
+Event	T4	Kazada	EVENT	270
+Event	T5	ölmüş	EVENT	285
+Event	T6	yaralanmıştır	EVENT	303
+Event	T7	devrildi	EVENT	504
+Event	T8	geçtiği	EVENT	558
+Event	T10	ÇORLU TREN_KAZASI	EVENT	0
+Event	T11	kayması	EVENT	232
+Event	T12	çıkarak	EVENT	496
+Event	T13	yağışa	EVENT	526
+Event	T14	Kaza	EVENT	515
+Event	T15	kayması	EVENT	602
+Relation	T2	T11	CauseEffect	true	yağış	kayması
+Relation	T11	T2	EffectCause	true	kayması	yağış
+Relation	T11	T3	CauseEffect	true	kayması	devrilmiştir
+Relation	T3	T11	EffectCause	true	devrilmiştir	kayması
+Relation	T3	T10	CauseEffect	true	devrilmiştir	ÇORLU TREN_KAZASI
+Relation	T10	T3	EffectCause	true	ÇORLU TREN_KAZASI	devrilmiştir
+Relation	T10	T5	CauseEffect	true	ÇORLU TREN_KAZASI	ölmüş
+Relation	T5	T10	EffectCause	true	ölmüş	ÇORLU TREN_KAZASI
+Relation	T10	T6	CauseEffect	true	ÇORLU TREN_KAZASI	yaralanmıştır
+Relation	T6	T10	EffectCause	true	yaralanmıştır	ÇORLU TREN_KAZASI
+Relation	T13	T15	CauseEffect	true	yağışa	kayması
+Relation	T15	T13	EffectCause	true	kayması	yağışa
+Relation	T15	T14	CauseEffect	true	kayması	Kaza
+Relation	T14	T15	EffectCause	true	Kaza	kayması
+Relation	T0	T13	NoRel	true	kazasıdır	yağışa
+Relation	T0	T2	NoRel	true	kazasıdır	yağış
+Relation	T0	T4	NoRel	true	kazasıdır	Kazada
+Relation	T0	T8	NoRel	true	kazasıdır	geçtiği
+Relation	T1	T11	NoRel	true	hareket	kayması
+Relation	T1	T12	NoRel	true	hareket	çıkarak
+Relation	T1	T2	NoRel	true	hareket	yağış
+Relation	T10	T0	NoRel	true	ÇORLU TREN_KAZASI	kazasıdır
+Relation	T10	T12	NoRel	true	ÇORLU TREN_KAZASI	çıkarak
+Relation	T10	T14	NoRel	true	ÇORLU TREN_KAZASI	Kaza
+Relation	T10	T4	NoRel	true	ÇORLU TREN_KAZASI	Kazada
+Relation	T10	T7	NoRel	true	ÇORLU TREN_KAZASI	devrildi
+Relation	T10	T8	NoRel	true	ÇORLU TREN_KAZASI	geçtiği
+Relation	T11	T12	NoRel	true	kayması	çıkarak
+Relation	T11	T6	NoRel	true	kayması	yaralanmıştır
+Relation	T11	T7	NoRel	true	kayması	devrildi
+Relation	T12	T10	NoRel	true	çıkarak	ÇORLU TREN_KAZASI
+Relation	T12	T13	NoRel	true	çıkarak	yağışa
+Relation	T12	T2	NoRel	true	çıkarak	yağış
+Relation	T12	T4	NoRel	true	çıkarak	Kazada
+Relation	T12	T8	NoRel	true	çıkarak	geçtiği
+Relation	T13	T11	NoRel	true	yağışa	kayması
+Relation	T13	T12	NoRel	true	yağışa	çıkarak
+Relation	T13	T2	NoRel	true	yağışa	yağış
+Relation	T13	T3	NoRel	true	yağışa	devrilmiştir
+Relation	T13	T6	NoRel	true	yağışa	yaralanmıştır
+Relation	T13	T8	NoRel	true	yağışa	geçtiği
+Relation	T14	T6	NoRel	true	Kaza	yaralanmıştır
+Relation	T14	T7	NoRel	true	Kaza	devrildi
+Relation	T15	T11	NoRel	true	kayması	kayması
+Relation	T15	T2	NoRel	true	kayması	yağış
+Relation	T15	T3	NoRel	true	kayması	devrilmiştir
+Relation	T15	T4	NoRel	true	kayması	Kazada
+Relation	T2	T4	NoRel	true	yağış	Kazada
+Relation	T2	T5	NoRel	true	yağış	ölmüş
+Relation	T2	T8	NoRel	true	yağış	geçtiği
+Relation	T3	T12	NoRel	true	devrilmiştir	çıkarak
+Relation	T3	T2	NoRel	true	devrilmiştir	yağış
+Relation	T3	T5	NoRel	true	devrilmiştir	ölmüş
+Relation	T3	T6	NoRel	true	devrilmiştir	yaralanmıştır
+Relation	T3	T8	NoRel	true	devrilmiştir	geçtiği
+Relation	T4	T0	NoRel	true	Kazada	kazasıdır
+Relation	T4	T1	NoRel	true	Kazada	hareket
+Relation	T4	T11	NoRel	true	Kazada	kayması
+Relation	T4	T12	NoRel	true	Kazada	çıkarak
+Relation	T4	T15	NoRel	true	Kazada	kayması
+Relation	T4	T2	NoRel	true	Kazada	yağış
+Relation	T4	T5	NoRel	true	Kazada	ölmüş
+Relation	T4	T7	NoRel	true	Kazada	devrildi
+Relation	T5	T13	NoRel	true	ölmüş	yağışa
+Relation	T5	T7	NoRel	true	ölmüş	devrildi
+Relation	T5	T8	NoRel	true	ölmüş	geçtiği
+Relation	T6	T11	NoRel	true	yaralanmıştır	kayması
+Relation	T6	T13	NoRel	true	yaralanmıştır	yağışa
+Relation	T6	T14	NoRel	true	yaralanmıştır	Kaza
+Relation	T6	T15	NoRel	true	yaralanmıştır	kayması
+Relation	T6	T2	NoRel	true	yaralanmıştır	yağış
+Relation	T6	T5	NoRel	true	yaralanmıştır	ölmüş
+Relation	T7	T14	NoRel	true	devrildi	Kaza
+Relation	T7	T2	NoRel	true	devrildi	yağış
+Relation	T7	T5	NoRel	true	devrildi	ölmüş
+Relation	T8	T14	NoRel	true	geçtiği	Kaza
+Relation	T8	T15	NoRel	true	geçtiği	kayması
+Relation	T8	T7	NoRel	true	geçtiği	devrildi

@@ -1,0 +1,30 @@
+Text	En az yirmi iki kişi öldü .	- 14 Ocak , 1990 - Léon hemzemin geçit felaketi — Bir yerel otobüs , bir yük treniyle çarpıştı .	En az otuz üç kişi öldü ve yirmi altı kişi yaralandı .	- Aralık 2006 - Cuautilan hemzemin geçit felaketi — Bir yolcu otobüsü , otuz altı otomobil yüklü tren ile çarpıştı .	En az yirmi sekiz ölü ve diğer on dört kişi yaralı .
+Event	T0	öldü	EVENT	21
+Event	T1	felaketi	EVENT	67
+Event	T2	çarpıştı	EVENT	114
+Event	T3	öldü	EVENT	144
+Event	T4	yaralandı	EVENT	168
+Event	T5	felaketi	EVENT	221
+Event	T6	çarpıştı	EVENT	286
+Event	T7	ölü	EVENT	315
+Event	T8	yaralı	EVENT	341
+Relation	T2	T3	CauseEffect	true	çarpıştı	öldü
+Relation	T3	T2	EffectCause	true	öldü	çarpıştı
+Relation	T2	T4	CauseEffect	true	çarpıştı	yaralandı
+Relation	T4	T2	EffectCause	true	yaralandı	çarpıştı
+Relation	T6	T7	CauseEffect	true	çarpıştı	ölü
+Relation	T7	T6	EffectCause	true	ölü	çarpıştı
+Relation	T6	T8	CauseEffect	true	çarpıştı	yaralı
+Relation	T8	T6	EffectCause	true	yaralı	çarpıştı
+Relation	T0	T3	NoRel	true	öldü	öldü
+Relation	T0	T4	NoRel	true	öldü	yaralandı
+Relation	T0	T5	NoRel	true	öldü	felaketi
+Relation	T2	T8	NoRel	true	çarpıştı	yaralı
+Relation	T3	T5	NoRel	true	öldü	felaketi
+Relation	T5	T0	NoRel	true	felaketi	öldü
+Relation	T5	T3	NoRel	true	felaketi	öldü
+Relation	T5	T7	NoRel	true	felaketi	ölü
+Relation	T6	T5	NoRel	true	çarpıştı	felaketi
+Relation	T7	T0	NoRel	true	ölü	öldü
+Relation	T7	T3	NoRel	true	ölü	öldü
+Relation	T8	T0	NoRel	true	yaralı	öldü

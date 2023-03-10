@@ -1,0 +1,74 @@
+Text	The water was able to penetrate inside the sensor bodies , then froze in flight , rendering two of three of the sensors inoperative , thus removing the protection they normally provided in the aircraft 's flight management system .	The primary cause of the accident was that the crew attempted an improvised test of the AOA warning system , not knowing that it was not functioning properly due to the inoperative sensors .	They also disregarded the proper speed limits for the tests they were performing , resulting in a stall .	The aircraft 's computers received conflicting information from the three AOA sensors .	The aircraft computer system ’s programming logic had been designed to reject one sensor value if it deviated significantly from the other two sensor values .
+Event	T1	penetrate	EVENT	22
+Event	T2	rendering	EVENT	82
+Event	T3	removing	EVENT	139
+Event	T4	protection	EVENT	152
+Event	T5	provided	EVENT	177
+Event	T6	accident	EVENT	257
+Event	T7	attempted	EVENT	284
+Event	T8	test	EVENT	308
+Event	T9	knowing	EVENT	345
+Event	T10	functioning	EVENT	369
+Event	T11	disregarded	EVENT	433
+Event	T12	tests	EVENT	477
+Event	T13	performing	EVENT	493
+Event	T14	resulting	EVENT	506
+Event	T15	stall	EVENT	521
+Event	T16	designed	EVENT	676
+Event	T17	reject	EVENT	688
+Event	T18	deviated	EVENT	718
+Event	T19	froze	EVENT	64
+Event	T20	received	EVENT	555
+Relation	T7	T6	CauseEffect	true	attempted	accident
+Relation	T6	T7	EffectCause	true	accident	attempted
+Relation	T9	T6	CauseEffect	true	knowing	accident
+Relation	T6	T9	EffectCause	true	accident	knowing
+Relation	T2	T3	CauseEffect	true	rendering	removing
+Relation	T3	T2	EffectCause	true	removing	rendering
+Relation	T11	T6	CauseEffect	true	disregarded	accident
+Relation	T6	T11	EffectCause	true	accident	disregarded
+Relation	T11	T15	CauseEffect	true	disregarded	stall
+Relation	T15	T11	EffectCause	true	stall	disregarded
+Relation	T16	T17	CauseEffect	true	designed	reject
+Relation	T17	T16	EffectCause	true	reject	designed
+Relation	T18	T17	CauseEffect	true	deviated	reject
+Relation	T17	T18	EffectCause	true	reject	deviated
+Relation	T1	T5	NoRel	true	penetrate	provided
+Relation	T10	T12	NoRel	true	functioning	tests
+Relation	T10	T17	NoRel	true	functioning	reject
+Relation	T10	T3	NoRel	true	functioning	removing
+Relation	T13	T11	NoRel	true	performing	disregarded
+Relation	T14	T11	NoRel	true	resulting	disregarded
+Relation	T14	T15	NoRel	true	resulting	stall
+Relation	T14	T5	NoRel	true	resulting	provided
+Relation	T16	T14	NoRel	true	designed	resulting
+Relation	T16	T15	NoRel	true	designed	stall
+Relation	T16	T18	NoRel	true	designed	deviated
+Relation	T16	T20	NoRel	true	designed	received
+Relation	T16	T9	NoRel	true	designed	knowing
+Relation	T17	T3	NoRel	true	reject	removing
+Relation	T17	T4	NoRel	true	reject	protection
+Relation	T18	T13	NoRel	true	deviated	performing
+Relation	T19	T17	NoRel	true	froze	reject
+Relation	T19	T5	NoRel	true	froze	provided
+Relation	T2	T9	NoRel	true	rendering	knowing
+Relation	T20	T4	NoRel	true	received	protection
+Relation	T20	T6	NoRel	true	received	accident
+Relation	T20	T7	NoRel	true	received	attempted
+Relation	T3	T12	NoRel	true	removing	tests
+Relation	T3	T18	NoRel	true	removing	deviated
+Relation	T4	T1	NoRel	true	protection	penetrate
+Relation	T4	T12	NoRel	true	protection	tests
+Relation	T4	T18	NoRel	true	protection	deviated
+Relation	T5	T13	NoRel	true	provided	performing
+Relation	T5	T20	NoRel	true	provided	received
+Relation	T5	T4	NoRel	true	provided	protection
+Relation	T6	T15	NoRel	true	accident	stall
+Relation	T6	T8	NoRel	true	accident	test
+Relation	T7	T10	NoRel	true	attempted	functioning
+Relation	T7	T13	NoRel	true	attempted	performing
+Relation	T7	T14	NoRel	true	attempted	resulting
+Relation	T7	T20	NoRel	true	attempted	received
+Relation	T8	T13	NoRel	true	test	performing
+Relation	T8	T3	NoRel	true	test	removing
+Relation	T9	T17	NoRel	true	knowing	reject

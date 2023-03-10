@@ -1,0 +1,98 @@
+Text	When he failed to return , searches were launched about six hours later .	There was no signal from the plane 's emergency locator transmitter ( ELT ) designed to be automatically activated in the event of a crash , but it was of an older type notorious for failing to operate after a crash .	It was first thought that Fossett may have also been wearing a Breitling Emergency watch with a manually operated ELT that had a range of up to , but no signal was received from it .	On September 13 , Fossett 's wife , Peggy , issued a statement clarifying that he owned such a watch but was not wearing it when he took off for the Labor Day flight .	Fossett took off with enough fuel for four to five hours of flight , according to spokesperson Major Cynthia S. Ryan , Public Information Officer with the Civil Air Patrol ( CAP ) .
+Event	T0	failed	EVENT	8
+Event	T1	return	EVENT	18
+Event	T2	searches	EVENT	27
+Event	T3	launched	EVENT	41
+Event	T4	signal	EVENT	87
+Event	T5	designed	EVENT	150
+Event	T6	activated	EVENT	179
+Event	T7	crash	EVENT	207
+Event	T8	notorious	EVENT	243
+Event	T9	failing	EVENT	257
+Event	T10	operate	EVENT	268
+Event	T11	crash	EVENT	284
+Event	T12	thought	EVENT	305
+Event	T13	wearing	EVENT	345
+Event	T14	operated	EVENT	397
+Event	T15	signal	EVENT	445
+Event	T16	received	EVENT	456
+Event	T17	issued	EVENT	519
+Event	T18	clarifying	EVENT	538
+Event	T19	owned	EVENT	557
+Event	T20	wearing	EVENT	588
+Event	T21	flight	EVENT	634
+Event	T22	flight	EVENT	703
+Event	T23	took off	EVENT	607
+Event	T24	took off	EVENT	651
+Relation	T0	T3	CauseEffect	true	failed	launched
+Relation	T3	T0	EffectCause	true	launched	failed
+Relation	T17	T18	CauseEffect	true	issued	clarifying
+Relation	T18	T17	EffectCause	true	clarifying	issued
+Relation	T0	T10	NoRel	true	failed	operate
+Relation	T0	T11	NoRel	true	failed	crash
+Relation	T0	T19	NoRel	true	failed	owned
+Relation	T1	T0	NoRel	true	return	failed
+Relation	T1	T8	NoRel	true	return	notorious
+Relation	T10	T12	NoRel	true	operate	thought
+Relation	T11	T19	NoRel	true	crash	owned
+Relation	T12	T24	NoRel	true	thought	took off
+Relation	T13	T2	NoRel	true	wearing	searches
+Relation	T13	T20	NoRel	true	wearing	wearing
+Relation	T13	T24	NoRel	true	wearing	took off
+Relation	T13	T3	NoRel	true	wearing	launched
+Relation	T13	T8	NoRel	true	wearing	notorious
+Relation	T14	T13	NoRel	true	operated	wearing
+Relation	T14	T17	NoRel	true	operated	issued
+Relation	T14	T4	NoRel	true	operated	signal
+Relation	T15	T16	NoRel	true	signal	received
+Relation	T15	T19	NoRel	true	signal	owned
+Relation	T15	T4	NoRel	true	signal	signal
+Relation	T16	T15	NoRel	true	received	signal
+Relation	T16	T22	NoRel	true	received	flight
+Relation	T16	T9	NoRel	true	received	failing
+Relation	T17	T1	NoRel	true	issued	return
+Relation	T17	T14	NoRel	true	issued	operated
+Relation	T17	T16	NoRel	true	issued	received
+Relation	T17	T19	NoRel	true	issued	owned
+Relation	T17	T20	NoRel	true	issued	wearing
+Relation	T18	T15	NoRel	true	clarifying	signal
+Relation	T18	T2	NoRel	true	clarifying	searches
+Relation	T18	T8	NoRel	true	clarifying	notorious
+Relation	T19	T10	NoRel	true	owned	operate
+Relation	T2	T11	NoRel	true	searches	crash
+Relation	T2	T18	NoRel	true	searches	clarifying
+Relation	T2	T20	NoRel	true	searches	wearing
+Relation	T2	T23	NoRel	true	searches	took off
+Relation	T2	T6	NoRel	true	searches	activated
+Relation	T20	T0	NoRel	true	wearing	failed
+Relation	T20	T7	NoRel	true	wearing	crash
+Relation	T21	T14	NoRel	true	flight	operated
+Relation	T21	T17	NoRel	true	flight	issued
+Relation	T21	T3	NoRel	true	flight	launched
+Relation	T22	T10	NoRel	true	flight	operate
+Relation	T22	T17	NoRel	true	flight	issued
+Relation	T23	T15	NoRel	true	took off	signal
+Relation	T23	T16	NoRel	true	took off	received
+Relation	T23	T21	NoRel	true	took off	flight
+Relation	T23	T24	NoRel	true	took off	took off
+Relation	T24	T1	NoRel	true	took off	return
+Relation	T24	T15	NoRel	true	took off	signal
+Relation	T24	T16	NoRel	true	took off	received
+Relation	T24	T19	NoRel	true	took off	owned
+Relation	T3	T1	NoRel	true	launched	return
+Relation	T3	T13	NoRel	true	launched	wearing
+Relation	T4	T20	NoRel	true	signal	wearing
+Relation	T4	T9	NoRel	true	signal	failing
+Relation	T5	T17	NoRel	true	designed	issued
+Relation	T5	T9	NoRel	true	designed	failing
+Relation	T6	T20	NoRel	true	activated	wearing
+Relation	T7	T21	NoRel	true	crash	flight
+Relation	T8	T11	NoRel	true	notorious	crash
+Relation	T8	T12	NoRel	true	notorious	thought
+Relation	T8	T13	NoRel	true	notorious	wearing
+Relation	T8	T5	NoRel	true	notorious	designed
+Relation	T8	T6	NoRel	true	notorious	activated
+Relation	T9	T0	NoRel	true	failing	failed
+Relation	T9	T16	NoRel	true	failing	received
+Relation	T9	T19	NoRel	true	failing	owned
+Relation	T9	T3	NoRel	true	failing	launched

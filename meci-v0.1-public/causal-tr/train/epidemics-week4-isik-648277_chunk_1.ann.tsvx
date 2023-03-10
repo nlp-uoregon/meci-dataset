@@ -1,0 +1,54 @@
+Text	ABD'deki kariyeri , izleyici rekoru kıran 2008'in sonlarındaki _ Saturday Night Live _ bölümü ile yükseldi .	2009 Grammy Ödülleri'nde En İyi Yeni Sanatçı ile En İyi Kadın Vokal Pop Performansı dallarında ödül kazandı .	İkinci stüdyo albümü _ 21 _ , 2011'in başlarında piyasaya sürüldü .	Albüm , iyi eleştiriler aldı ve çıkış albümünün elde ettiği başarıyı geçti .	Bu albümle Adele , Yılın Albümü dahil olmak üzere altı Grammy Ödülü kazandı ve böylece bir gecede en çok Grammy Ödülü kazanan kadın şarkıcı olarak Beyoncé ile eşit oldu .
+Event	T0	kariyeri	EVENT	9
+Event	T1	kıran	EVENT	36
+Event	T2	yükseldi	EVENT	98
+Event	T3	kazandı	EVENT	209
+Event	T4	sürüldü	EVENT	277
+Event	T5	aldı	EVENT	311
+Event	T6	çıkış	EVENT	319
+Event	T7	geçti	EVENT	356
+Event	T8	kazandı	EVENT	432
+Event	T9	oldu	EVENT	528
+Relation	T1	T2	CauseEffect	true	kıran	yükseldi
+Relation	T2	T1	EffectCause	true	yükseldi	kıran
+Relation	T2	T3	CauseEffect	true	yükseldi	kazandı
+Relation	T3	T2	EffectCause	true	kazandı	yükseldi
+Relation	T5	T7	CauseEffect	true	aldı	geçti
+Relation	T7	T5	EffectCause	true	geçti	aldı
+Relation	T4	T5	CauseEffect	true	sürüldü	aldı
+Relation	T5	T4	EffectCause	true	aldı	sürüldü
+Relation	T5	T8	CauseEffect	true	aldı	kazandı
+Relation	T8	T5	EffectCause	true	kazandı	aldı
+Relation	T8	T9	CauseEffect	true	kazandı	oldu
+Relation	T9	T8	EffectCause	true	oldu	kazandı
+Relation	T0	T2	NoRel	true	kariyeri	yükseldi
+Relation	T0	T5	NoRel	true	kariyeri	aldı
+Relation	T0	T8	NoRel	true	kariyeri	kazandı
+Relation	T0	T9	NoRel	true	kariyeri	oldu
+Relation	T1	T3	NoRel	true	kıran	kazandı
+Relation	T1	T4	NoRel	true	kıran	sürüldü
+Relation	T1	T5	NoRel	true	kıran	aldı
+Relation	T1	T7	NoRel	true	kıran	geçti
+Relation	T1	T8	NoRel	true	kıran	kazandı
+Relation	T1	T9	NoRel	true	kıran	oldu
+Relation	T2	T0	NoRel	true	yükseldi	kariyeri
+Relation	T2	T7	NoRel	true	yükseldi	geçti
+Relation	T3	T0	NoRel	true	kazandı	kariyeri
+Relation	T3	T1	NoRel	true	kazandı	kıran
+Relation	T3	T7	NoRel	true	kazandı	geçti
+Relation	T4	T2	NoRel	true	sürüldü	yükseldi
+Relation	T4	T6	NoRel	true	sürüldü	çıkış
+Relation	T4	T8	NoRel	true	sürüldü	kazandı
+Relation	T5	T0	NoRel	true	aldı	kariyeri
+Relation	T5	T9	NoRel	true	aldı	oldu
+Relation	T6	T3	NoRel	true	çıkış	kazandı
+Relation	T6	T5	NoRel	true	çıkış	aldı
+Relation	T6	T9	NoRel	true	çıkış	oldu
+Relation	T7	T3	NoRel	true	geçti	kazandı
+Relation	T7	T4	NoRel	true	geçti	sürüldü
+Relation	T7	T9	NoRel	true	geçti	oldu
+Relation	T8	T2	NoRel	true	kazandı	yükseldi
+Relation	T9	T1	NoRel	true	oldu	kıran
+Relation	T9	T2	NoRel	true	oldu	yükseldi
+Relation	T9	T4	NoRel	true	oldu	sürüldü
+Relation	T9	T7	NoRel	true	oldu	geçti

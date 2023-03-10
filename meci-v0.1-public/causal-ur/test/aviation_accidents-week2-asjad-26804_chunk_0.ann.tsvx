@@ -1,0 +1,37 @@
+Text	تصغیر| نقشہ جس میں پرواز 655 کا راستہ اور اسے گرائے جانے کا مقام دکھایا گیا ہے__ہوا پیمائی ایران پرواز 655__( آئی آر 655 ) ایک تجارتی پرواز تھی جو ہوا پیمائی ملی ایران کے تحت بندر عباس ، ایران سے دبئی ، متحدہ عرب امارات کے درمیان چلائی جاتی تھی ۔	اتوار 3 جولائی 1988ء کو ایران عراق جنگ کے آخری ایام میں اس مسافر ہوائی جہاز کو آبنائے ہرمز میں امریکی بحریہ کے میزائل بردار بحری جہاز یو ایس ایس ونسینس نے مار گرایا جس سے جہاز میں سوار تمام 290 مسافر اور عملے کے اراکین جاں بحق ہوئے ۔	ہلاک شدگان میں 38 غیر ملکی ، 66 بچے اور ایک حاملہ خاتون بھی شامل تھیں ۔	امریکی حکومت نے جو عذر لنگ پیش کیا وہ یہ تھا کہ اس مسافر جہاز کو غلطی سے ایف 14 ٹام کیٹ لڑاکا طیارہ سمجھ کر میزائل کا نشانہ بنایا گیا جبکہ ایرانی حکومت کا موقف یہ ہے کہ میزائل بردار بحری جہاز نے جان بوجھ کر اس مسافر طیارے کو نشانہ بنایا ۔	پرواز نمبر__آئی آر 655__اب بھی تہران سے بذریعہ بندر عباس دبئی جانے والی ہوا پیمائی ایران کی پرواز کے لیے استعمال کیا جاتا ہے ۔
+Event	T1	دکھایا	EVENT	65
+Event	T10	استعمال	EVENT	897
+Event	T13	پیش	EVENT	580
+Event	T2	نشانہ	EVENT	778
+Event	T3	چلائی	EVENT	230
+Event	T4	جنگ	EVENT	282
+Event	T5	جاں بحق	EVENT	466
+Event	T6	ہلاک	EVENT	481
+Event	T7	موقف	EVENT	708
+Event	T8	نشانہ	EVENT	671
+Relation	T4	T5	CauseEffect	true	جنگ	جاں بحق
+Relation	T5	T4	EffectCause	true	جاں بحق	جنگ
+Relation	T2	T6	CauseEffect	true	نشانہ	ہلاک
+Relation	T6	T2	EffectCause	true	ہلاک	نشانہ
+Relation	T8	T6	CauseEffect	true	نشانہ	ہلاک
+Relation	T6	T8	EffectCause	true	ہلاک	نشانہ
+Relation	T1	T5	NoRel	true	دکھایا	جاں بحق
+Relation	T10	T5	NoRel	true	استعمال	جاں بحق
+Relation	T13	T10	NoRel	true	پیش	استعمال
+Relation	T13	T6	NoRel	true	پیش	ہلاک
+Relation	T2	T10	NoRel	true	نشانہ	استعمال
+Relation	T3	T1	NoRel	true	چلائی	دکھایا
+Relation	T3	T2	NoRel	true	چلائی	نشانہ
+Relation	T3	T5	NoRel	true	چلائی	جاں بحق
+Relation	T3	T8	NoRel	true	چلائی	نشانہ
+Relation	T4	T3	NoRel	true	جنگ	چلائی
+Relation	T4	T6	NoRel	true	جنگ	ہلاک
+Relation	T5	T1	NoRel	true	جاں بحق	دکھایا
+Relation	T5	T13	NoRel	true	جاں بحق	پیش
+Relation	T6	T1	NoRel	true	ہلاک	دکھایا
+Relation	T6	T10	NoRel	true	ہلاک	استعمال
+Relation	T6	T13	NoRel	true	ہلاک	پیش
+Relation	T6	T4	NoRel	true	ہلاک	جنگ
+Relation	T7	T13	NoRel	true	موقف	پیش
+Relation	T8	T1	NoRel	true	نشانہ	دکھایا
+Relation	T8	T5	NoRel	true	نشانہ	جاں بحق

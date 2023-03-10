@@ -1,0 +1,29 @@
+Text	Saldırı 2 Kasım 1914 tarihinde başladı ve önümüzdeki dört gün boyunca Alman kuvvetleri Tanga Savaşı'nda savaştı .	Lettow - Vorbeck sonrasında Doğu Afrika'daki İngiliz demiryollarına saldırı düzenledi .	19 Ocak 1915 tarihinde Jassin'de , İngilizler üzerinde ikinci bir zafer kazandı .	Mayıs 1928 ve Temmuz 1930 tarihleri_​​arasında , monarşist Alman Ulusal Halk Partisinin bir Reichstag milletvekili olarak görev yaptı .	Yoğun bir şekilde " Hitler ve onun hareketine güvenilmeyen " birisi olarak Nazilere karşı Stahlhelm ile bir koalisyon oluşturmak fikri ile akrabası Hans - Jürgen von Blumenthal'e yaklaştı .
+Event	T0	Saldırı	EVENT	0
+Event	T1	başladı	EVENT	31
+Event	T2	savaştı	EVENT	104
+Event	T3	düzenledi	EVENT	190
+Event	T4	kazandı	EVENT	274
+Event	T5	yaptı	EVENT	412
+Event	T6	Savaşı'nda	EVENT	93
+Event	T7	yaklaştı	EVENT	599
+Relation	T0	T2	CauseEffect	true	Saldırı	savaştı
+Relation	T2	T0	EffectCause	true	savaştı	Saldırı
+Relation	T1	T0	NoRel	true	başladı	Saldırı
+Relation	T1	T3	NoRel	true	başladı	düzenledi
+Relation	T1	T4	NoRel	true	başladı	kazandı
+Relation	T2	T1	NoRel	true	savaştı	başladı
+Relation	T2	T3	NoRel	true	savaştı	düzenledi
+Relation	T2	T6	NoRel	true	savaştı	Savaşı'nda
+Relation	T2	T7	NoRel	true	savaştı	yaklaştı
+Relation	T3	T1	NoRel	true	düzenledi	başladı
+Relation	T3	T7	NoRel	true	düzenledi	yaklaştı
+Relation	T4	T2	NoRel	true	kazandı	savaştı
+Relation	T4	T7	NoRel	true	kazandı	yaklaştı
+Relation	T5	T3	NoRel	true	yaptı	düzenledi
+Relation	T5	T6	NoRel	true	yaptı	Savaşı'nda
+Relation	T6	T0	NoRel	true	Savaşı'nda	Saldırı
+Relation	T7	T0	NoRel	true	yaklaştı	Saldırı
+Relation	T7	T2	NoRel	true	yaklaştı	savaştı
+Relation	T7	T3	NoRel	true	yaklaştı	düzenledi
+Relation	T7	T4	NoRel	true	yaklaştı	kazandı

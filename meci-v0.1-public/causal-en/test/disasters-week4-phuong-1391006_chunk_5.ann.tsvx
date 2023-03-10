@@ -1,0 +1,86 @@
+Text	Shortly afterwards , the fire suddenly increased in size and she was overcome by smoke ; the tape recording of the call is blank .	Farther east , the occupant of the other pickup left his vehicle and ran out of the entrance portal .	The two elderly occupants of a private car were overcome by smoke without ever leaving their vehicle .	The two occupants of the beer truck were also overcome by smoke , and collapsed and died as they stepped out of the truck cab .	In total , two people died in the initial crash ( es ) , five were killed by the smoke and fire , and two were hospitalized for smoke inhalation .
+Event	T0	fire	EVENT	25
+Event	T1	increased	EVENT	39
+Event	T2	overcome	EVENT	69
+Event	T3	smoke	EVENT	81
+Event	T4	call	EVENT	115
+Event	T5	left	EVENT	179
+Event	T6	overcome	EVENT	281
+Event	T7	smoke	EVENT	293
+Event	T8	leaving	EVENT	312
+Event	T9	overcome	EVENT	382
+Event	T10	smoke	EVENT	394
+Event	T11	collapsed	EVENT	406
+Event	T12	died	EVENT	420
+Event	T13	died	EVENT	486
+Event	T14	crash	EVENT	506
+Event	T15	killed	EVENT	531
+Event	T16	smoke	EVENT	545
+Event	T17	fire	EVENT	555
+Event	T18	hospitalized	EVENT	575
+Event	T19	inhalation	EVENT	598
+Event	T20	ran out of	EVENT	200
+Event	T21	stepped out	EVENT	433
+Relation	T0	T3	CauseEffect	true	fire	smoke
+Relation	T3	T0	EffectCause	true	smoke	fire
+Relation	T1	T2	CauseEffect	true	increased	overcome
+Relation	T2	T1	EffectCause	true	overcome	increased
+Relation	T7	T6	CauseEffect	true	smoke	overcome
+Relation	T6	T7	EffectCause	true	overcome	smoke
+Relation	T10	T9	CauseEffect	true	smoke	overcome
+Relation	T9	T10	EffectCause	true	overcome	smoke
+Relation	T9	T11	CauseEffect	true	overcome	collapsed
+Relation	T11	T9	EffectCause	true	collapsed	overcome
+Relation	T9	T12	CauseEffect	true	overcome	died
+Relation	T12	T9	EffectCause	true	died	overcome
+Relation	T14	T13	CauseEffect	true	crash	died
+Relation	T13	T14	EffectCause	true	died	crash
+Relation	T16	T15	CauseEffect	true	smoke	killed
+Relation	T15	T16	EffectCause	true	killed	smoke
+Relation	T17	T15	CauseEffect	true	fire	killed
+Relation	T15	T17	EffectCause	true	killed	fire
+Relation	T19	T18	CauseEffect	true	inhalation	hospitalized
+Relation	T18	T19	EffectCause	true	hospitalized	inhalation
+Relation	T0	T18	NoRel	true	fire	hospitalized
+Relation	T0	T20	NoRel	true	fire	ran out of
+Relation	T10	T18	NoRel	true	smoke	hospitalized
+Relation	T10	T4	NoRel	true	smoke	call
+Relation	T11	T3	NoRel	true	collapsed	smoke
+Relation	T13	T18	NoRel	true	died	hospitalized
+Relation	T13	T21	NoRel	true	died	stepped out
+Relation	T14	T10	NoRel	true	crash	smoke
+Relation	T15	T10	NoRel	true	killed	smoke
+Relation	T15	T19	NoRel	true	killed	inhalation
+Relation	T16	T10	NoRel	true	smoke	smoke
+Relation	T16	T17	NoRel	true	smoke	fire
+Relation	T16	T3	NoRel	true	smoke	smoke
+Relation	T16	T8	NoRel	true	smoke	leaving
+Relation	T17	T19	NoRel	true	fire	inhalation
+Relation	T17	T8	NoRel	true	fire	leaving
+Relation	T18	T11	NoRel	true	hospitalized	collapsed
+Relation	T18	T5	NoRel	true	hospitalized	left
+Relation	T18	T7	NoRel	true	hospitalized	smoke
+Relation	T19	T14	NoRel	true	inhalation	crash
+Relation	T19	T5	NoRel	true	inhalation	left
+Relation	T19	T6	NoRel	true	inhalation	overcome
+Relation	T19	T7	NoRel	true	inhalation	smoke
+Relation	T2	T21	NoRel	true	overcome	stepped out
+Relation	T20	T2	NoRel	true	ran out of	overcome
+Relation	T21	T17	NoRel	true	stepped out	fire
+Relation	T3	T16	NoRel	true	smoke	smoke
+Relation	T3	T21	NoRel	true	smoke	stepped out
+Relation	T3	T5	NoRel	true	smoke	left
+Relation	T4	T1	NoRel	true	call	increased
+Relation	T5	T19	NoRel	true	left	inhalation
+Relation	T5	T4	NoRel	true	left	call
+Relation	T6	T14	NoRel	true	overcome	crash
+Relation	T6	T15	NoRel	true	overcome	killed
+Relation	T6	T19	NoRel	true	overcome	inhalation
+Relation	T7	T12	NoRel	true	smoke	died
+Relation	T7	T15	NoRel	true	smoke	killed
+Relation	T7	T8	NoRel	true	smoke	leaving
+Relation	T8	T14	NoRel	true	leaving	crash
+Relation	T8	T19	NoRel	true	leaving	inhalation
+Relation	T9	T19	NoRel	true	overcome	inhalation
+Relation	T9	T20	NoRel	true	overcome	ran out of
+Relation	T9	T4	NoRel	true	overcome	call

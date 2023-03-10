@@ -1,0 +1,148 @@
+Text	کئی ترقی یافتہ ممالک کے ہسپتالوں کے پاس فی شخص بستر ناکافی ہیں ، جو ہسپتال میں بھرتی ہونے والے کووڈ 19 کے متاثرین کی تعداد میں اچانک اضافے کو سنبھالنے کے لیے نظام صحت کی وسعت کو محدود کرتا ہے ۔	چین میں ایک مطالعے نے پایا کہ 5 % کو آئی سی یو میں داخل کیا گیا تھا اور 2.3 % کو میکانیکی وینٹی لیشن کی ضرورت تھی اور 1.4 % لقمہ اجل بنے تھے ۔	عالمی ادارہ صحت کی جانب سے کسی بھی دوا کو اس بیماری کے علاج کے لیے منظور نہیں کیا لیکن مختلف قومی طبی حکام کی طرف سے کچھ کی سفارش کی گئی ہے ۔	ممکنہ علاج کی تحقیق جنوری 2020ء میں شروع ہوئی ، اور متعدد اینٹی وائرل دوائیں کلینیکل مراحل میں ہیں ۔	اگرچہ نئی دواؤں کو تیار ہونے میں 2021 تک کا وقت لگ سکتا ہے ، آزمائی گئیں ادویات میں سے اکثر دوسرے استعمال کے لیے پہلے ہی منظور شدہ ہیں ، یا ان پر پہلے ہی اعلیٰ سطحی جانچ جاری ہے ۔
+Event	T0	بھرتی	EVENT	79
+Event	T1	اضافے	EVENT	133
+Event	T2	سنبھالنے	EVENT	142
+Event	T3	مطالعے	EVENT	206
+Event	T4	پایا	EVENT	216
+Event	T5	بنے	EVENT	327
+Event	T6	علاج	EVENT	392
+Event	T7	منظور	EVENT	404
+Event	T8	علاج	EVENT	485
+Event	T9	تحقیق	EVENT	493
+Event	T11	آزمائی	EVENT	641
+Event	T12	استعمال	EVENT	678
+Event	T13	جاری	EVENT	750
+Event	T14	ناکافی	EVENT	52
+Event	T15	متاثرین	EVENT	106
+Event	T16	محدود	EVENT	178
+Event	T17	داخل	EVENT	245
+Event	T18	ضرورت	EVENT	298
+Event	T19	سفارش	EVENT	461
+Event	T10	شروع	EVENT	515
+Relation	T14	T16	CauseEffect	true	ناکافی	محدود
+Relation	T16	T14	EffectCause	true	محدود	ناکافی
+Relation	T0	T15	NoRel	true	بھرتی	متاثرین
+Relation	T0	T16	NoRel	true	بھرتی	محدود
+Relation	T0	T2	NoRel	true	بھرتی	سنبھالنے
+Relation	T0	T4	NoRel	true	بھرتی	پایا
+Relation	T0	T5	NoRel	true	بھرتی	بنے
+Relation	T0	T6	NoRel	true	بھرتی	علاج
+Relation	T0	T7	NoRel	true	بھرتی	منظور
+Relation	T0	T8	NoRel	true	بھرتی	علاج
+Relation	T1	T10	NoRel	true	اضافے	شروع
+Relation	T1	T12	NoRel	true	اضافے	استعمال
+Relation	T1	T13	NoRel	true	اضافے	جاری
+Relation	T1	T14	NoRel	true	اضافے	ناکافی
+Relation	T1	T18	NoRel	true	اضافے	ضرورت
+Relation	T1	T19	NoRel	true	اضافے	سفارش
+Relation	T1	T3	NoRel	true	اضافے	مطالعے
+Relation	T1	T6	NoRel	true	اضافے	علاج
+Relation	T1	T8	NoRel	true	اضافے	علاج
+Relation	T10	T0	NoRel	true	شروع	بھرتی
+Relation	T10	T1	NoRel	true	شروع	اضافے
+Relation	T10	T12	NoRel	true	شروع	استعمال
+Relation	T10	T15	NoRel	true	شروع	متاثرین
+Relation	T10	T3	NoRel	true	شروع	مطالعے
+Relation	T10	T6	NoRel	true	شروع	علاج
+Relation	T10	T8	NoRel	true	شروع	علاج
+Relation	T11	T14	NoRel	true	آزمائی	ناکافی
+Relation	T11	T18	NoRel	true	آزمائی	ضرورت
+Relation	T11	T19	NoRel	true	آزمائی	سفارش
+Relation	T11	T3	NoRel	true	آزمائی	مطالعے
+Relation	T11	T9	NoRel	true	آزمائی	تحقیق
+Relation	T12	T0	NoRel	true	استعمال	بھرتی
+Relation	T12	T10	NoRel	true	استعمال	شروع
+Relation	T12	T11	NoRel	true	استعمال	آزمائی
+Relation	T12	T16	NoRel	true	استعمال	محدود
+Relation	T12	T18	NoRel	true	استعمال	ضرورت
+Relation	T12	T5	NoRel	true	استعمال	بنے
+Relation	T12	T8	NoRel	true	استعمال	علاج
+Relation	T13	T10	NoRel	true	جاری	شروع
+Relation	T13	T11	NoRel	true	جاری	آزمائی
+Relation	T13	T16	NoRel	true	جاری	محدود
+Relation	T13	T17	NoRel	true	جاری	داخل
+Relation	T13	T19	NoRel	true	جاری	سفارش
+Relation	T13	T3	NoRel	true	جاری	مطالعے
+Relation	T13	T9	NoRel	true	جاری	تحقیق
+Relation	T14	T18	NoRel	true	ناکافی	ضرورت
+Relation	T14	T6	NoRel	true	ناکافی	علاج
+Relation	T15	T18	NoRel	true	متاثرین	ضرورت
+Relation	T15	T19	NoRel	true	متاثرین	سفارش
+Relation	T15	T2	NoRel	true	متاثرین	سنبھالنے
+Relation	T15	T6	NoRel	true	متاثرین	علاج
+Relation	T16	T0	NoRel	true	محدود	بھرتی
+Relation	T16	T1	NoRel	true	محدود	اضافے
+Relation	T16	T2	NoRel	true	محدود	سنبھالنے
+Relation	T16	T6	NoRel	true	محدود	علاج
+Relation	T16	T9	NoRel	true	محدود	تحقیق
+Relation	T17	T1	NoRel	true	داخل	اضافے
+Relation	T17	T13	NoRel	true	داخل	جاری
+Relation	T17	T4	NoRel	true	داخل	پایا
+Relation	T17	T5	NoRel	true	داخل	بنے
+Relation	T17	T7	NoRel	true	داخل	منظور
+Relation	T17	T8	NoRel	true	داخل	علاج
+Relation	T18	T10	NoRel	true	ضرورت	شروع
+Relation	T18	T13	NoRel	true	ضرورت	جاری
+Relation	T18	T17	NoRel	true	ضرورت	داخل
+Relation	T18	T19	NoRel	true	ضرورت	سفارش
+Relation	T18	T2	NoRel	true	ضرورت	سنبھالنے
+Relation	T18	T6	NoRel	true	ضرورت	علاج
+Relation	T18	T7	NoRel	true	ضرورت	منظور
+Relation	T18	T8	NoRel	true	ضرورت	علاج
+Relation	T19	T0	NoRel	true	سفارش	بھرتی
+Relation	T19	T10	NoRel	true	سفارش	شروع
+Relation	T19	T11	NoRel	true	سفارش	آزمائی
+Relation	T19	T13	NoRel	true	سفارش	جاری
+Relation	T19	T16	NoRel	true	سفارش	محدود
+Relation	T19	T5	NoRel	true	سفارش	بنے
+Relation	T19	T6	NoRel	true	سفارش	علاج
+Relation	T19	T7	NoRel	true	سفارش	منظور
+Relation	T19	T8	NoRel	true	سفارش	علاج
+Relation	T19	T9	NoRel	true	سفارش	تحقیق
+Relation	T2	T0	NoRel	true	سنبھالنے	بھرتی
+Relation	T2	T10	NoRel	true	سنبھالنے	شروع
+Relation	T2	T11	NoRel	true	سنبھالنے	آزمائی
+Relation	T2	T4	NoRel	true	سنبھالنے	پایا
+Relation	T2	T6	NoRel	true	سنبھالنے	علاج
+Relation	T2	T7	NoRel	true	سنبھالنے	منظور
+Relation	T2	T9	NoRel	true	سنبھالنے	تحقیق
+Relation	T3	T0	NoRel	true	مطالعے	بھرتی
+Relation	T3	T10	NoRel	true	مطالعے	شروع
+Relation	T3	T11	NoRel	true	مطالعے	آزمائی
+Relation	T3	T14	NoRel	true	مطالعے	ناکافی
+Relation	T3	T16	NoRel	true	مطالعے	محدود
+Relation	T3	T18	NoRel	true	مطالعے	ضرورت
+Relation	T3	T4	NoRel	true	مطالعے	پایا
+Relation	T3	T5	NoRel	true	مطالعے	بنے
+Relation	T3	T7	NoRel	true	مطالعے	منظور
+Relation	T3	T8	NoRel	true	مطالعے	علاج
+Relation	T3	T9	NoRel	true	مطالعے	تحقیق
+Relation	T4	T0	NoRel	true	پایا	بھرتی
+Relation	T4	T1	NoRel	true	پایا	اضافے
+Relation	T4	T15	NoRel	true	پایا	متاثرین
+Relation	T4	T19	NoRel	true	پایا	سفارش
+Relation	T4	T5	NoRel	true	پایا	بنے
+Relation	T4	T7	NoRel	true	پایا	منظور
+Relation	T4	T8	NoRel	true	پایا	علاج
+Relation	T5	T10	NoRel	true	بنے	شروع
+Relation	T5	T13	NoRel	true	بنے	جاری
+Relation	T5	T16	NoRel	true	بنے	محدود
+Relation	T5	T18	NoRel	true	بنے	ضرورت
+Relation	T6	T14	NoRel	true	علاج	ناکافی
+Relation	T6	T15	NoRel	true	علاج	متاثرین
+Relation	T6	T17	NoRel	true	علاج	داخل
+Relation	T6	T2	NoRel	true	علاج	سنبھالنے
+Relation	T6	T4	NoRel	true	علاج	پایا
+Relation	T7	T12	NoRel	true	منظور	استعمال
+Relation	T7	T17	NoRel	true	منظور	داخل
+Relation	T7	T19	NoRel	true	منظور	سفارش
+Relation	T7	T2	NoRel	true	منظور	سنبھالنے
+Relation	T7	T8	NoRel	true	منظور	علاج
+Relation	T8	T10	NoRel	true	علاج	شروع
+Relation	T8	T12	NoRel	true	علاج	استعمال
+Relation	T8	T13	NoRel	true	علاج	جاری
+Relation	T8	T16	NoRel	true	علاج	محدود
+Relation	T8	T3	NoRel	true	علاج	مطالعے
+Relation	T8	T9	NoRel	true	علاج	تحقیق
+Relation	T9	T0	NoRel	true	تحقیق	بھرتی
+Relation	T9	T16	NoRel	true	تحقیق	محدود

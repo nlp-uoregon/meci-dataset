@@ -1,0 +1,105 @@
+Text	LOCKERBIE FACIASI veya PAN AM'IN 103 SEFER SAYILI UÇUŞU , 21 Aralık 1988 Çarşamba günü , Londra Heathrow Havalimanı'ndan New York John F. Kennedy Uluslararası Havaalanı'na sefer yapan Pan Am Havayolları'na ait Boeing 747 - 121 tipi uçağın bombalanması olayıdır .	Patlayıcı bir aygıtın infilak etmesiyle uçakta bulunan 243 yolcu ve 16 mürettebatın tümü yaşamını yitirdi .	Uçağın büyük parçaları İskoçya'nın güneyindeki Lockerbie kasabasına düşünce yerde bulunan 11 kişi daha hayatını kaybetti .	İskoçya polisi ve Amerika Birleşik Devletleri Federal Soruşturma Bürosu'nun üç yıl ortaklaşa yürüttüğü soruşturmanın ardından , Kasım 1991'de iki Libya vatandaşı hakkında cinayetten tutuklama emri çıkarıldı .	Uzun süren pazarlıklar ve Birleşmiş Milletler yaptırımları sonrasında Libya lideri Albay Muammer Kaddafi , 1999'da iki adamı Camp Zeist , Hollanda'da yargılanmak üzere teslim etti .
+Event	T0	UÇUŞU	EVENT	50
+Event	T1	olayıdır	EVENT	252
+Event	T3	etmesiyle	EVENT	293
+Event	T4	yitirdi	EVENT	361
+Event	T5	düşünce	EVENT	439
+Event	T6	kaybetti	EVENT	483
+Event	T7	çıkarıldı	EVENT	691
+Event	T8	yargılanmak	EVENT	853
+Event	T10	sefer	EVENT	172
+Event	T11	bombalanması	EVENT	239
+Event	T12	soruşturmanın	EVENT	597
+Event	T13	tutuklama	EVENT	676
+Event	T14	pazarlıklar	EVENT	714
+Event	T15	yaptırımları	EVENT	749
+Event	T9	teslim etti	EVENT	871
+Event	T16	cinayetten	EVENT	665
+Relation	T16	T13	CauseEffect	true	cinayetten	tutuklama
+Relation	T13	T16	EffectCause	true	tutuklama	cinayetten
+Relation	T16	T7	CauseEffect	true	cinayetten	çıkarıldı
+Relation	T7	T16	EffectCause	true	çıkarıldı	cinayetten
+Relation	T11	T4	CauseEffect	true	bombalanması	yitirdi
+Relation	T4	T11	EffectCause	true	yitirdi	bombalanması
+Relation	T3	T4	CauseEffect	true	etmesiyle	yitirdi
+Relation	T4	T3	EffectCause	true	yitirdi	etmesiyle
+Relation	T11	T5	CauseEffect	true	bombalanması	düşünce
+Relation	T5	T11	EffectCause	true	düşünce	bombalanması
+Relation	T3	T5	CauseEffect	true	etmesiyle	düşünce
+Relation	T5	T3	EffectCause	true	düşünce	etmesiyle
+Relation	T5	T6	CauseEffect	true	düşünce	kaybetti
+Relation	T6	T5	EffectCause	true	kaybetti	düşünce
+Relation	T1	T12	CauseEffect	true	olayıdır	soruşturmanın
+Relation	T12	T1	EffectCause	true	soruşturmanın	olayıdır
+Relation	T12	T13	CauseEffect	true	soruşturmanın	tutuklama
+Relation	T13	T12	EffectCause	true	tutuklama	soruşturmanın
+Relation	T12	T7	CauseEffect	true	soruşturmanın	çıkarıldı
+Relation	T7	T12	EffectCause	true	çıkarıldı	soruşturmanın
+Relation	T15	T8	CauseEffect	true	yaptırımları	yargılanmak
+Relation	T8	T15	EffectCause	true	yargılanmak	yaptırımları
+Relation	T8	T9	CauseEffect	true	yargılanmak	teslim etti
+Relation	T9	T8	EffectCause	true	teslim etti	yargılanmak
+Relation	T0	T1	NoRel	true	UÇUŞU	olayıdır
+Relation	T0	T10	NoRel	true	UÇUŞU	sefer
+Relation	T0	T11	NoRel	true	UÇUŞU	bombalanması
+Relation	T0	T15	NoRel	true	UÇUŞU	yaptırımları
+Relation	T0	T7	NoRel	true	UÇUŞU	çıkarıldı
+Relation	T0	T9	NoRel	true	UÇUŞU	teslim etti
+Relation	T1	T11	NoRel	true	olayıdır	bombalanması
+Relation	T1	T8	NoRel	true	olayıdır	yargılanmak
+Relation	T10	T0	NoRel	true	sefer	UÇUŞU
+Relation	T10	T4	NoRel	true	sefer	yitirdi
+Relation	T10	T5	NoRel	true	sefer	düşünce
+Relation	T11	T1	NoRel	true	bombalanması	olayıdır
+Relation	T11	T10	NoRel	true	bombalanması	sefer
+Relation	T11	T14	NoRel	true	bombalanması	pazarlıklar
+Relation	T11	T3	NoRel	true	bombalanması	etmesiyle
+Relation	T11	T8	NoRel	true	bombalanması	yargılanmak
+Relation	T12	T0	NoRel	true	soruşturmanın	UÇUŞU
+Relation	T12	T5	NoRel	true	soruşturmanın	düşünce
+Relation	T12	T6	NoRel	true	soruşturmanın	kaybetti
+Relation	T12	T8	NoRel	true	soruşturmanın	yargılanmak
+Relation	T13	T15	NoRel	true	tutuklama	yaptırımları
+Relation	T14	T0	NoRel	true	pazarlıklar	UÇUŞU
+Relation	T14	T11	NoRel	true	pazarlıklar	bombalanması
+Relation	T14	T12	NoRel	true	pazarlıklar	soruşturmanın
+Relation	T14	T13	NoRel	true	pazarlıklar	tutuklama
+Relation	T14	T5	NoRel	true	pazarlıklar	düşünce
+Relation	T14	T9	NoRel	true	pazarlıklar	teslim etti
+Relation	T15	T0	NoRel	true	yaptırımları	UÇUŞU
+Relation	T15	T12	NoRel	true	yaptırımları	soruşturmanın
+Relation	T15	T14	NoRel	true	yaptırımları	pazarlıklar
+Relation	T15	T16	NoRel	true	yaptırımları	cinayetten
+Relation	T15	T5	NoRel	true	yaptırımları	düşünce
+Relation	T16	T5	NoRel	true	cinayetten	düşünce
+Relation	T16	T8	NoRel	true	cinayetten	yargılanmak
+Relation	T3	T0	NoRel	true	etmesiyle	UÇUŞU
+Relation	T3	T11	NoRel	true	etmesiyle	bombalanması
+Relation	T3	T14	NoRel	true	etmesiyle	pazarlıklar
+Relation	T3	T9	NoRel	true	etmesiyle	teslim etti
+Relation	T4	T0	NoRel	true	yitirdi	UÇUŞU
+Relation	T4	T1	NoRel	true	yitirdi	olayıdır
+Relation	T4	T10	NoRel	true	yitirdi	sefer
+Relation	T4	T15	NoRel	true	yitirdi	yaptırımları
+Relation	T4	T16	NoRel	true	yitirdi	cinayetten
+Relation	T4	T5	NoRel	true	yitirdi	düşünce
+Relation	T4	T9	NoRel	true	yitirdi	teslim etti
+Relation	T5	T13	NoRel	true	düşünce	tutuklama
+Relation	T5	T16	NoRel	true	düşünce	cinayetten
+Relation	T6	T0	NoRel	true	kaybetti	UÇUŞU
+Relation	T6	T1	NoRel	true	kaybetti	olayıdır
+Relation	T6	T12	NoRel	true	kaybetti	soruşturmanın
+Relation	T6	T13	NoRel	true	kaybetti	tutuklama
+Relation	T6	T15	NoRel	true	kaybetti	yaptırımları
+Relation	T7	T0	NoRel	true	çıkarıldı	UÇUŞU
+Relation	T7	T11	NoRel	true	çıkarıldı	bombalanması
+Relation	T7	T15	NoRel	true	çıkarıldı	yaptırımları
+Relation	T7	T4	NoRel	true	çıkarıldı	yitirdi
+Relation	T8	T10	NoRel	true	yargılanmak	sefer
+Relation	T8	T4	NoRel	true	yargılanmak	yitirdi
+Relation	T9	T0	NoRel	true	teslim etti	UÇUŞU
+Relation	T9	T1	NoRel	true	teslim etti	olayıdır
+Relation	T9	T15	NoRel	true	teslim etti	yaptırımları
+Relation	T9	T3	NoRel	true	teslim etti	etmesiyle
+Relation	T9	T6	NoRel	true	teslim etti	kaybetti
+Relation	T9	T7	NoRel	true	teslim etti	çıkarıldı

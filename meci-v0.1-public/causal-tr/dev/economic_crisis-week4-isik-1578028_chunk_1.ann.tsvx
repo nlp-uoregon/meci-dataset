@@ -1,0 +1,49 @@
+Text	Hükümetin grevciler ile yaptığı müzakerenin başarısızlıkla sonuçlanmasının ardından , 2 Nisan 1920'de Ruhr bölgesine daha fazla asker gönderildi .	Çoğunluğu Freikorps'a bağlı hükûmet birlikleri Ruhr Kızılordusu'nu yendi ve bölgeyi yeniden kontrol altına aldılar .	Yaşanan çatışmalarda Freikorps birlikleri 250 kayıp verirken Ruhr Kızılordusu ise binlerce kayıp verdi .	Ruhr Kızılordusu 1920-1922 yılları_arasında 35.000 siyasi cinayetin sorumlusuydu .	Almanya Dışişleri Bakanı Walther Rathenau tırmanan şiddetin bir parçası olarak 1922'de Ruhr Kızılordusu tarafından öldürülmüştü .
+Event	T0	müzakerenin	EVENT	32
+Event	T1	gönderildi	EVENT	134
+Event	T2	yendi	EVENT	214
+Event	T3	aldılar	EVENT	254
+Event	T4	çatışmalarda	EVENT	272
+Event	T6	verdi	EVENT	361
+Event	T7	öldürülmüştü	EVENT	567
+Event	T8	verirken	EVENT	316
+Event	T5	cinayetin	EVENT	427
+Event	T9	şiddetin	EVENT	503
+Relation	T0	T1	CauseEffect	true	müzakerenin	gönderildi
+Relation	T1	T0	EffectCause	true	gönderildi	müzakerenin
+Relation	T2	T3	CauseEffect	true	yendi	aldılar
+Relation	T3	T2	EffectCause	true	aldılar	yendi
+Relation	T4	T8	CauseEffect	true	çatışmalarda	verirken
+Relation	T8	T4	EffectCause	true	verirken	çatışmalarda
+Relation	T4	T6	CauseEffect	true	çatışmalarda	verdi
+Relation	T6	T4	EffectCause	true	verdi	çatışmalarda
+Relation	T9	T7	CauseEffect	true	şiddetin	öldürülmüştü
+Relation	T7	T9	EffectCause	true	öldürülmüştü	şiddetin
+Relation	T0	T2	NoRel	true	müzakerenin	yendi
+Relation	T0	T6	NoRel	true	müzakerenin	verdi
+Relation	T0	T7	NoRel	true	müzakerenin	öldürülmüştü
+Relation	T0	T9	NoRel	true	müzakerenin	şiddetin
+Relation	T1	T3	NoRel	true	gönderildi	aldılar
+Relation	T1	T4	NoRel	true	gönderildi	çatışmalarda
+Relation	T1	T5	NoRel	true	gönderildi	cinayetin
+Relation	T2	T0	NoRel	true	yendi	müzakerenin
+Relation	T2	T4	NoRel	true	yendi	çatışmalarda
+Relation	T2	T5	NoRel	true	yendi	cinayetin
+Relation	T3	T1	NoRel	true	aldılar	gönderildi
+Relation	T3	T9	NoRel	true	aldılar	şiddetin
+Relation	T4	T2	NoRel	true	çatışmalarda	yendi
+Relation	T4	T7	NoRel	true	çatışmalarda	öldürülmüştü
+Relation	T5	T0	NoRel	true	cinayetin	müzakerenin
+Relation	T5	T4	NoRel	true	cinayetin	çatışmalarda
+Relation	T5	T8	NoRel	true	cinayetin	verirken
+Relation	T6	T8	NoRel	true	verdi	verirken
+Relation	T6	T9	NoRel	true	verdi	şiddetin
+Relation	T7	T0	NoRel	true	öldürülmüştü	müzakerenin
+Relation	T7	T2	NoRel	true	öldürülmüştü	yendi
+Relation	T7	T3	NoRel	true	öldürülmüştü	aldılar
+Relation	T7	T4	NoRel	true	öldürülmüştü	çatışmalarda
+Relation	T7	T6	NoRel	true	öldürülmüştü	verdi
+Relation	T8	T3	NoRel	true	verirken	aldılar
+Relation	T9	T0	NoRel	true	şiddetin	müzakerenin
+Relation	T9	T2	NoRel	true	şiddetin	yendi
+Relation	T9	T4	NoRel	true	şiddetin	çatışmalarda

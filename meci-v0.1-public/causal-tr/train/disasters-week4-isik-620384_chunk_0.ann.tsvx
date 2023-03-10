@@ -1,0 +1,44 @@
+Text	küçükresim | Gümrü'deki Kutsal Kurtarıcı Kilisesi'nin depremden sonraki görünümü GÜMRÜ DEPREMI olarak da adlandırılan SPITAK DEPREMI , o tarihte Sovyetler Birliği bünyesinde bulunan Ermenistan'ın Spitak bölgesinde 7 Aralık 1988 günü yerel saatle 11:41 ( UTC itibarıyla 07:41 ) 'de meydana gelen 7.2 büyüklüğünde bir sarsıntıdır .	Yerel binalar ( özellikle okullar ve hastaneler ) depreme dayanamamış ve bu durum 20.000 insanın yaşamına mal olmuştur .	Tahminlere göre depremin 5 dakika sonra meydana gelmesi durumunda çocuklar , okullarının zayıf binalarından çıkmış olacaklardı .	Bu denli küçük bir gecikme birçok insanın yaşamını kurtarabilirdi .	Fakat olayda 1000 kadar çocuk hayatını kaybetti .
+Event	T0	görünümü	EVENT	72
+Event	T1	DEPREMI	EVENT	125
+Event	T2	sarsıntıdır	EVENT	316
+Event	T3	depremin	EVENT	467
+Event	T4	gelmesi	EVENT	499
+Event	T7	kaybetti	EVENT	687
+Event	T8	DEPREMI	EVENT	87
+Event	T9	gelen	EVENT	289
+Event	T10	olmuştur	EVENT	440
+Relation	T1	T10	CauseEffect	true	DEPREMI	olmuştur
+Relation	T10	T1	EffectCause	true	olmuştur	DEPREMI
+Relation	T8	T10	CauseEffect	true	DEPREMI	olmuştur
+Relation	T10	T8	EffectCause	true	olmuştur	DEPREMI
+Relation	T1	T7	CauseEffect	true	DEPREMI	kaybetti
+Relation	T7	T1	EffectCause	true	kaybetti	DEPREMI
+Relation	T8	T7	CauseEffect	true	DEPREMI	kaybetti
+Relation	T7	T8	EffectCause	true	kaybetti	DEPREMI
+Relation	T0	T3	NoRel	true	görünümü	depremin
+Relation	T1	T2	NoRel	true	DEPREMI	sarsıntıdır
+Relation	T1	T4	NoRel	true	DEPREMI	gelmesi
+Relation	T1	T8	NoRel	true	DEPREMI	DEPREMI
+Relation	T10	T9	NoRel	true	olmuştur	gelen
+Relation	T2	T0	NoRel	true	sarsıntıdır	görünümü
+Relation	T2	T10	NoRel	true	sarsıntıdır	olmuştur
+Relation	T2	T4	NoRel	true	sarsıntıdır	gelmesi
+Relation	T2	T7	NoRel	true	sarsıntıdır	kaybetti
+Relation	T3	T0	NoRel	true	depremin	görünümü
+Relation	T3	T10	NoRel	true	depremin	olmuştur
+Relation	T3	T2	NoRel	true	depremin	sarsıntıdır
+Relation	T4	T0	NoRel	true	gelmesi	görünümü
+Relation	T4	T2	NoRel	true	gelmesi	sarsıntıdır
+Relation	T4	T9	NoRel	true	gelmesi	gelen
+Relation	T7	T0	NoRel	true	kaybetti	görünümü
+Relation	T7	T10	NoRel	true	kaybetti	olmuştur
+Relation	T7	T3	NoRel	true	kaybetti	depremin
+Relation	T8	T0	NoRel	true	DEPREMI	görünümü
+Relation	T8	T2	NoRel	true	DEPREMI	sarsıntıdır
+Relation	T8	T3	NoRel	true	DEPREMI	depremin
+Relation	T8	T9	NoRel	true	DEPREMI	gelen
+Relation	T9	T0	NoRel	true	gelen	görünümü
+Relation	T9	T10	NoRel	true	gelen	olmuştur
+Relation	T9	T2	NoRel	true	gelen	sarsıntıdır
+Relation	T9	T4	NoRel	true	gelen	gelmesi

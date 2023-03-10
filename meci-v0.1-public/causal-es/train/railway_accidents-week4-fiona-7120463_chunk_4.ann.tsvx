@@ -1,0 +1,54 @@
+Text	La pérdida de frenos hizo que no se respetara la parada del tranvía existente en la glorieta de las Pirámides .	Los heridos fueron destinados a diversas casas de socorro del barrio de Arganzuela , así como a hospital provincial de Madrid ubicado en Atocha .	De los quince fallecidos , uno de ellos quedó sin identficar durante una semana .	Para mantener el servicio de transporte se tuvo que desviar a puentes adyacentes un servicio temporal .	El servicio tranviario de la línea 31 quedó restablecido en agosto de este mismo año .
+Event	T0	pérdida	EVENT	3
+Event	T1	hizo	EVENT	21
+Event	T2	parada	EVENT	49
+Event	T3	heridos	EVENT	116
+Event	T4	destinados	EVENT	131
+Event	T5	fallecidos	EVENT	272
+Event	T6	quedó	EVENT	298
+Event	T7	identficar	EVENT	308
+Event	T8	tuvo	EVENT	383
+Event	T9	desviar	EVENT	392
+Event	T10	restablecido	EVENT	488
+Relation	T0	T5	NoRel	true	pérdida	fallecidos
+Relation	T1	T2	NoRel	true	hizo	parada
+Relation	T1	T5	NoRel	true	hizo	fallecidos
+Relation	T1	T6	NoRel	true	hizo	quedó
+Relation	T1	T7	NoRel	true	hizo	identficar
+Relation	T1	T9	NoRel	true	hizo	desviar
+Relation	T10	T0	NoRel	true	restablecido	pérdida
+Relation	T10	T1	NoRel	true	restablecido	hizo
+Relation	T10	T6	NoRel	true	restablecido	quedó
+Relation	T2	T0	NoRel	true	parada	pérdida
+Relation	T2	T10	NoRel	true	parada	restablecido
+Relation	T2	T3	NoRel	true	parada	heridos
+Relation	T2	T4	NoRel	true	parada	destinados
+Relation	T2	T6	NoRel	true	parada	quedó
+Relation	T3	T6	NoRel	true	heridos	quedó
+Relation	T3	T7	NoRel	true	heridos	identficar
+Relation	T3	T8	NoRel	true	heridos	tuvo
+Relation	T4	T0	NoRel	true	destinados	pérdida
+Relation	T4	T1	NoRel	true	destinados	hizo
+Relation	T4	T6	NoRel	true	destinados	quedó
+Relation	T4	T8	NoRel	true	destinados	tuvo
+Relation	T4	T9	NoRel	true	destinados	desviar
+Relation	T5	T1	NoRel	true	fallecidos	hizo
+Relation	T5	T10	NoRel	true	fallecidos	restablecido
+Relation	T5	T3	NoRel	true	fallecidos	heridos
+Relation	T5	T6	NoRel	true	fallecidos	quedó
+Relation	T6	T0	NoRel	true	quedó	pérdida
+Relation	T6	T1	NoRel	true	quedó	hizo
+Relation	T6	T2	NoRel	true	quedó	parada
+Relation	T6	T3	NoRel	true	quedó	heridos
+Relation	T6	T5	NoRel	true	quedó	fallecidos
+Relation	T6	T9	NoRel	true	quedó	desviar
+Relation	T7	T0	NoRel	true	identficar	pérdida
+Relation	T7	T2	NoRel	true	identficar	parada
+Relation	T7	T8	NoRel	true	identficar	tuvo
+Relation	T8	T0	NoRel	true	tuvo	pérdida
+Relation	T8	T9	NoRel	true	tuvo	desviar
+Relation	T9	T0	NoRel	true	desviar	pérdida
+Relation	T9	T1	NoRel	true	desviar	hizo
+Relation	T9	T5	NoRel	true	desviar	fallecidos
+Relation	T9	T7	NoRel	true	desviar	identficar
+Relation	T9	T8	NoRel	true	desviar	tuvo

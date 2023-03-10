@@ -1,0 +1,40 @@
+Text	1	- İlk defa Leopoldville , Belçika Kongo'sunda yaşamış bir kişiden 1959 alınan kanda tespit edildi .	O tarihten beri dolapta saklanan kanın , 1998'de geliştirilen HIV testi ile hastalığı taşıdığı onaylandı .	- Dünyayı dolaşmış , 1961'de Batı Afrika'da uzun yolculuk yapmış Norveçli bir gemici bağışıklık yetersizliği ile 1966 öldü .	Karısı ve kızı da ertesi yıl aynı sebeple öldü .
+Event	T0	alınan	EVENT	73
+Event	T1	edildi	EVENT	93
+Event	T2	testi	EVENT	168
+Event	T3	onaylandı	EVENT	197
+Event	T4	öldü	EVENT	327
+Event	T5	öldü	EVENT	376
+Event	T6	saklanan	EVENT	126
+Event	T7	taşıdığı	EVENT	188
+Event	T8	dolaşmış	EVENT	219
+Event	T9	yapmış	EVENT	267
+Relation	T1	T6	CauseEffect	true	edildi	saklanan
+Relation	T6	T1	EffectCause	true	saklanan	edildi
+Relation	T0	T1	CauseEffect	true	alınan	edildi
+Relation	T1	T0	EffectCause	true	edildi	alınan
+Relation	T2	T3	CauseEffect	true	testi	onaylandı
+Relation	T3	T2	EffectCause	true	onaylandı	testi
+Relation	T0	T4	NoRel	true	alınan	öldü
+Relation	T0	T5	NoRel	true	alınan	öldü
+Relation	T1	T3	NoRel	true	edildi	onaylandı
+Relation	T1	T4	NoRel	true	edildi	öldü
+Relation	T3	T4	NoRel	true	onaylandı	öldü
+Relation	T3	T8	NoRel	true	onaylandı	dolaşmış
+Relation	T4	T0	NoRel	true	öldü	alınan
+Relation	T4	T5	NoRel	true	öldü	öldü
+Relation	T4	T6	NoRel	true	öldü	saklanan
+Relation	T4	T9	NoRel	true	öldü	yapmış
+Relation	T5	T0	NoRel	true	öldü	alınan
+Relation	T5	T3	NoRel	true	öldü	onaylandı
+Relation	T5	T4	NoRel	true	öldü	öldü
+Relation	T6	T2	NoRel	true	saklanan	testi
+Relation	T6	T4	NoRel	true	saklanan	öldü
+Relation	T7	T5	NoRel	true	taşıdığı	öldü
+Relation	T7	T9	NoRel	true	taşıdığı	yapmış
+Relation	T8	T2	NoRel	true	dolaşmış	testi
+Relation	T8	T6	NoRel	true	dolaşmış	saklanan
+Relation	T9	T1	NoRel	true	yapmış	edildi
+Relation	T9	T2	NoRel	true	yapmış	testi
+Relation	T9	T4	NoRel	true	yapmış	öldü
+Relation	T9	T5	NoRel	true	yapmış	öldü

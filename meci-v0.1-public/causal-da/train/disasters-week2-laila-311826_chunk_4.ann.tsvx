@@ -1,0 +1,19 @@
+Text	En regimentsavis for 1. bataljon af Queen's Royal Regiment udstationeret i Quetta skrev i november 1935 :	Der var flere efterskælv lige indtil oktober samme år .	Det største var den 2. juni 1935 .	Det var på 5,8__M__(w ) og forårsagede yderligere skader i Mastung , Maguchar og Kalat , men ingen i Quetta .	- Jordskælvet i Baluchistan 1945 - Jordskælvet i Kashmir 2005_- Jordskælvet i Baluchistan 2008_- Indiske Plade
+Event	T0	udstationeret	EVENT	59
+Event	T1	skrev	EVENT	82
+Event	T2	efterskælv	EVENT	120
+Event	T3	største	EVENT	166
+Event	T4	forårsagede	EVENT	224
+Event	T5	skader	EVENT	247
+Relation	T3	T5	CauseEffect	true	største	skader
+Relation	T5	T3	EffectCause	true	skader	største
+Relation	T3	T4	CauseEffect	true	største	forårsagede
+Relation	T4	T3	EffectCause	true	forårsagede	største
+Relation	T0	T2	NoRel	true	udstationeret	efterskælv
+Relation	T0	T5	NoRel	true	udstationeret	skader
+Relation	T3	T0	NoRel	true	største	udstationeret
+Relation	T3	T2	NoRel	true	største	efterskælv
+Relation	T4	T2	NoRel	true	forårsagede	efterskælv
+Relation	T4	T5	NoRel	true	forårsagede	skader
+Relation	T5	T1	NoRel	true	skader	skrev
+Relation	T5	T4	NoRel	true	skader	forårsagede

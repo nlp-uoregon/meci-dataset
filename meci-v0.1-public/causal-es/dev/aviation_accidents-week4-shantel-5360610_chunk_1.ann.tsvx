@@ -1,0 +1,97 @@
+Text	Las tripulaciones de tierra y el ingeniero de vuelo , confiando en las lecturas erróneas del nuevo FQI instalado , cargaron el avión con una cantidad inadecuada de combustible para el vuelo .	En el vuelo de Bari a Djerba , ambos motores se apagaron en vuelo .	El motor derecho del avión falló a 23.000 pies ( 7.000 metros ) .	El avión comenzó a descender a 17.000 pies , pero cien segundos después de que el motor derecho fallase , el motor izquierdo también falló .	La tripulación de vuelo no se percató del agotamiento de combustible por el dispositivo del ATR 42 instalado que indicaba una cantidad de combustible correcto en los tanques , incluso después de que todo el combustible hubiese sido consumido .
+Event	T0	lecturas	EVENT	71
+Event	T1	instalado	EVENT	103
+Event	T2	cargaron	EVENT	115
+Event	T3	vuelo	EVENT	184
+Event	T4	vuelo	EVENT	198
+Event	T5	falló	EVENT	287
+Event	T6	comenzó	EVENT	335
+Event	T7	descender	EVENT	345
+Event	T8	fallase	EVENT	422
+Event	T9	falló	EVENT	459
+Event	T10	percató	EVENT	497
+Event	T11	agotamiento	EVENT	509
+Event	T12	indicaba	EVENT	580
+Event	T13	consumido	EVENT	699
+Event	T14	apagaron	EVENT	240
+Relation	T5	T7	CauseEffect	true	falló	descender
+Relation	T7	T5	EffectCause	true	descender	falló
+Relation	T0	T11	NoRel	true	lecturas	agotamiento
+Relation	T0	T2	NoRel	true	lecturas	cargaron
+Relation	T0	T3	NoRel	true	lecturas	vuelo
+Relation	T0	T4	NoRel	true	lecturas	vuelo
+Relation	T0	T6	NoRel	true	lecturas	comenzó
+Relation	T0	T9	NoRel	true	lecturas	falló
+Relation	T1	T0	NoRel	true	instalado	lecturas
+Relation	T1	T10	NoRel	true	instalado	percató
+Relation	T1	T12	NoRel	true	instalado	indicaba
+Relation	T1	T2	NoRel	true	instalado	cargaron
+Relation	T1	T5	NoRel	true	instalado	falló
+Relation	T1	T6	NoRel	true	instalado	comenzó
+Relation	T1	T8	NoRel	true	instalado	fallase
+Relation	T1	T9	NoRel	true	instalado	falló
+Relation	T10	T0	NoRel	true	percató	lecturas
+Relation	T10	T11	NoRel	true	percató	agotamiento
+Relation	T10	T13	NoRel	true	percató	consumido
+Relation	T10	T3	NoRel	true	percató	vuelo
+Relation	T10	T4	NoRel	true	percató	vuelo
+Relation	T10	T5	NoRel	true	percató	falló
+Relation	T10	T8	NoRel	true	percató	fallase
+Relation	T11	T10	NoRel	true	agotamiento	percató
+Relation	T11	T13	NoRel	true	agotamiento	consumido
+Relation	T11	T3	NoRel	true	agotamiento	vuelo
+Relation	T11	T4	NoRel	true	agotamiento	vuelo
+Relation	T11	T7	NoRel	true	agotamiento	descender
+Relation	T12	T1	NoRel	true	indicaba	instalado
+Relation	T12	T11	NoRel	true	indicaba	agotamiento
+Relation	T12	T13	NoRel	true	indicaba	consumido
+Relation	T12	T14	NoRel	true	indicaba	apagaron
+Relation	T12	T5	NoRel	true	indicaba	falló
+Relation	T12	T8	NoRel	true	indicaba	fallase
+Relation	T13	T1	NoRel	true	consumido	instalado
+Relation	T13	T11	NoRel	true	consumido	agotamiento
+Relation	T13	T14	NoRel	true	consumido	apagaron
+Relation	T13	T3	NoRel	true	consumido	vuelo
+Relation	T13	T4	NoRel	true	consumido	vuelo
+Relation	T13	T6	NoRel	true	consumido	comenzó
+Relation	T13	T7	NoRel	true	consumido	descender
+Relation	T14	T11	NoRel	true	apagaron	agotamiento
+Relation	T14	T13	NoRel	true	apagaron	consumido
+Relation	T14	T3	NoRel	true	apagaron	vuelo
+Relation	T14	T4	NoRel	true	apagaron	vuelo
+Relation	T14	T6	NoRel	true	apagaron	comenzó
+Relation	T14	T9	NoRel	true	apagaron	falló
+Relation	T2	T12	NoRel	true	cargaron	indicaba
+Relation	T2	T13	NoRel	true	cargaron	consumido
+Relation	T2	T8	NoRel	true	cargaron	fallase
+Relation	T3	T0	NoRel	true	vuelo	lecturas
+Relation	T3	T1	NoRel	true	vuelo	instalado
+Relation	T3	T10	NoRel	true	vuelo	percató
+Relation	T3	T11	NoRel	true	vuelo	agotamiento
+Relation	T3	T14	NoRel	true	vuelo	apagaron
+Relation	T3	T2	NoRel	true	vuelo	cargaron
+Relation	T3	T5	NoRel	true	vuelo	falló
+Relation	T4	T1	NoRel	true	vuelo	instalado
+Relation	T4	T13	NoRel	true	vuelo	consumido
+Relation	T4	T2	NoRel	true	vuelo	cargaron
+Relation	T5	T10	NoRel	true	falló	percató
+Relation	T5	T12	NoRel	true	falló	indicaba
+Relation	T5	T13	NoRel	true	falló	consumido
+Relation	T5	T2	NoRel	true	falló	cargaron
+Relation	T6	T0	NoRel	true	comenzó	lecturas
+Relation	T6	T1	NoRel	true	comenzó	instalado
+Relation	T6	T3	NoRel	true	comenzó	vuelo
+Relation	T6	T8	NoRel	true	comenzó	fallase
+Relation	T7	T11	NoRel	true	descender	agotamiento
+Relation	T7	T13	NoRel	true	descender	consumido
+Relation	T7	T4	NoRel	true	descender	vuelo
+Relation	T7	T6	NoRel	true	descender	comenzó
+Relation	T7	T8	NoRel	true	descender	fallase
+Relation	T8	T0	NoRel	true	fallase	lecturas
+Relation	T8	T13	NoRel	true	fallase	consumido
+Relation	T8	T2	NoRel	true	fallase	cargaron
+Relation	T8	T6	NoRel	true	fallase	comenzó
+Relation	T8	T9	NoRel	true	fallase	falló
+Relation	T9	T0	NoRel	true	falló	lecturas
+Relation	T9	T2	NoRel	true	falló	cargaron
+Relation	T9	T8	NoRel	true	falló	fallase

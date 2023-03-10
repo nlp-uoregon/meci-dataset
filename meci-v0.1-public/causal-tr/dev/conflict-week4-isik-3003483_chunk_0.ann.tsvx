@@ -1,0 +1,51 @@
+Text	OSMANLI'NIN MANI'YI ISTILASI ( ) , 1803 yılında Manya Burnu'nda Rum isyancılar ile Osmanlı ordusu arasında meydana gelen bir muharebedir .	Muharebe , Manyotların isyanını bastırmak için Osmanlı tarafından yapılan bir dizi istiladan biriydi .	Manya Burnu , Yunanistan'ın engebeli arazisi ve Manyotların isyanları nedeniyle Osmanlı'nın ele geçiremediği bir bölgesiydi .	Manyotlar , Venedik ile Osmanlılar arasında ne zaman savaş çıksa Venediklilerle ittifak yaparak Osmanlılara zarar vermiş ve korsanlık yapmayı da adet edinmişlerdir .	Zanetos Grigorakis , Mani beyi olarak atanmış ve Zanetbey adını almıştır .
+Event	T0	muharebedir	EVENT	125
+Event	T1	yapılan	EVENT	205
+Event	T2	isyanları	EVENT	302
+Event	T4	çıksa	EVENT	427
+Event	T5	ittifak	EVENT	448
+Event	T6	vermiş	EVENT	482
+Event	T7	atanmış	EVENT	572
+Event	T8	OSMANLI'NIN MANI'YI ISTILASI	EVENT	0
+Event	T9	Muharebe	EVENT	139
+Event	T3	edinmişlerdir	EVENT	518
+Relation	T4	T5	CauseEffect	true	çıksa	ittifak
+Relation	T5	T4	EffectCause	true	ittifak	çıksa
+Relation	T5	T6	CauseEffect	true	ittifak	vermiş
+Relation	T6	T5	EffectCause	true	vermiş	ittifak
+Relation	T0	T5	NoRel	true	muharebedir	ittifak
+Relation	T0	T6	NoRel	true	muharebedir	vermiş
+Relation	T0	T8	NoRel	true	muharebedir	OSMANLI'NIN MANI'YI ISTILASI
+Relation	T0	T9	NoRel	true	muharebedir	Muharebe
+Relation	T1	T5	NoRel	true	yapılan	ittifak
+Relation	T1	T6	NoRel	true	yapılan	vermiş
+Relation	T1	T7	NoRel	true	yapılan	atanmış
+Relation	T1	T8	NoRel	true	yapılan	OSMANLI'NIN MANI'YI ISTILASI
+Relation	T2	T0	NoRel	true	isyanları	muharebedir
+Relation	T2	T5	NoRel	true	isyanları	ittifak
+Relation	T2	T7	NoRel	true	isyanları	atanmış
+Relation	T2	T9	NoRel	true	isyanları	Muharebe
+Relation	T3	T2	NoRel	true	edinmişlerdir	isyanları
+Relation	T3	T4	NoRel	true	edinmişlerdir	çıksa
+Relation	T4	T0	NoRel	true	çıksa	muharebedir
+Relation	T4	T8	NoRel	true	çıksa	OSMANLI'NIN MANI'YI ISTILASI
+Relation	T4	T9	NoRel	true	çıksa	Muharebe
+Relation	T5	T1	NoRel	true	ittifak	yapılan
+Relation	T5	T7	NoRel	true	ittifak	atanmış
+Relation	T5	T9	NoRel	true	ittifak	Muharebe
+Relation	T6	T0	NoRel	true	vermiş	muharebedir
+Relation	T6	T8	NoRel	true	vermiş	OSMANLI'NIN MANI'YI ISTILASI
+Relation	T7	T2	NoRel	true	atanmış	isyanları
+Relation	T7	T4	NoRel	true	atanmış	çıksa
+Relation	T7	T5	NoRel	true	atanmış	ittifak
+Relation	T7	T6	NoRel	true	atanmış	vermiş
+Relation	T7	T9	NoRel	true	atanmış	Muharebe
+Relation	T8	T1	NoRel	true	OSMANLI'NIN MANI'YI ISTILASI	yapılan
+Relation	T8	T2	NoRel	true	OSMANLI'NIN MANI'YI ISTILASI	isyanları
+Relation	T8	T4	NoRel	true	OSMANLI'NIN MANI'YI ISTILASI	çıksa
+Relation	T8	T5	NoRel	true	OSMANLI'NIN MANI'YI ISTILASI	ittifak
+Relation	T8	T6	NoRel	true	OSMANLI'NIN MANI'YI ISTILASI	vermiş
+Relation	T9	T0	NoRel	true	Muharebe	muharebedir
+Relation	T9	T3	NoRel	true	Muharebe	edinmişlerdir
+Relation	T9	T5	NoRel	true	Muharebe	ittifak
+Relation	T9	T8	NoRel	true	Muharebe	OSMANLI'NIN MANI'YI ISTILASI

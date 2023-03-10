@@ -1,0 +1,50 @@
+Text	Først fra omkring 1300 kan man se en vis støtte fra byen .	Ordrer til alle magistrater om kun at bære venetianske stoffer betød en vækst i produktionen .	Udviklingen af uldindustrien blev imidlertid bremset af handels- og skatteinteresser .	På den ene side importerede købmændene det fineste uld fra Flandern for at kunne eksportere det til Mellemøsten .	Trods det blev meget af det i Venedig , hvilket skadede den lokale industri .
+Event	T0	se	EVENT	31
+Event	T1	støtte	EVENT	41
+Event	T2	Ordrer	EVENT	59
+Event	T3	bære	EVENT	97
+Event	T4	betød	EVENT	122
+Event	T5	vækst	EVENT	131
+Event	T6	Udviklingen	EVENT	154
+Event	T7	bremset	EVENT	199
+Event	T8	blev	EVENT	365
+Event	T9	skadede	EVENT	403
+Relation	T2	T4	CauseEffect	true	Ordrer	betød
+Relation	T4	T2	EffectCause	true	betød	Ordrer
+Relation	T2	T5	CauseEffect	true	Ordrer	vækst
+Relation	T5	T2	EffectCause	true	vækst	Ordrer
+Relation	T3	T4	CauseEffect	true	bære	betød
+Relation	T4	T3	EffectCause	true	betød	bære
+Relation	T3	T5	CauseEffect	true	bære	vækst
+Relation	T5	T3	EffectCause	true	vækst	bære
+Relation	T9	T7	CauseEffect	true	skadede	bremset
+Relation	T7	T9	EffectCause	true	bremset	skadede
+Relation	T8	T9	CauseEffect	true	blev	skadede
+Relation	T9	T8	EffectCause	true	skadede	blev
+Relation	T1	T0	NoRel	true	støtte	se
+Relation	T1	T2	NoRel	true	støtte	Ordrer
+Relation	T1	T5	NoRel	true	støtte	vækst
+Relation	T1	T8	NoRel	true	støtte	blev
+Relation	T1	T9	NoRel	true	støtte	skadede
+Relation	T3	T0	NoRel	true	bære	se
+Relation	T3	T1	NoRel	true	bære	støtte
+Relation	T3	T2	NoRel	true	bære	Ordrer
+Relation	T3	T8	NoRel	true	bære	blev
+Relation	T4	T7	NoRel	true	betød	bremset
+Relation	T4	T9	NoRel	true	betød	skadede
+Relation	T5	T0	NoRel	true	vækst	se
+Relation	T5	T1	NoRel	true	vækst	støtte
+Relation	T5	T6	NoRel	true	vækst	Udviklingen
+Relation	T6	T1	NoRel	true	Udviklingen	støtte
+Relation	T6	T2	NoRel	true	Udviklingen	Ordrer
+Relation	T6	T5	NoRel	true	Udviklingen	vækst
+Relation	T6	T8	NoRel	true	Udviklingen	blev
+Relation	T6	T9	NoRel	true	Udviklingen	skadede
+Relation	T7	T3	NoRel	true	bremset	bære
+Relation	T7	T4	NoRel	true	bremset	betød
+Relation	T8	T1	NoRel	true	blev	støtte
+Relation	T8	T5	NoRel	true	blev	vækst
+Relation	T8	T7	NoRel	true	blev	bremset
+Relation	T9	T0	NoRel	true	skadede	se
+Relation	T9	T4	NoRel	true	skadede	betød
+Relation	T9	T6	NoRel	true	skadede	Udviklingen

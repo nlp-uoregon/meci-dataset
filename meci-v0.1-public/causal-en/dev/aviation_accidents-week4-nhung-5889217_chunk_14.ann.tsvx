@@ -1,0 +1,57 @@
+Text	One flight attendant was found with a total of 85 % of carboxyhemoglobin concentration inside her blood , along with her colleagues .	One female passenger was killed due to severe trauma , combined with burns on her body .	The remaining 78 people ( 75 passengers and 3 flight attendants ) survived the crash .	Nearly 60 people were taken to a hospital , some with critical injuries , but others managed to escape with few injuries and 15 were able to continue their journeys .	Some survivors said they owed their lives to the flight attendant who managed to open the emergency exit in the rear of the aircraft .
+Event	T0	found	EVENT	25
+Event	T1	trauma	EVENT	180
+Event	T2	combined	EVENT	189
+Event	T3	burns	EVENT	203
+Event	T4	survived	EVENT	289
+Event	T5	crash	EVENT	302
+Event	T6	injuries	EVENT	373
+Event	T7	managed	EVENT	395
+Event	T8	escape	EVENT	406
+Event	T9	injuries	EVENT	422
+Event	T10	continue	EVENT	451
+Event	T11	journeys	EVENT	466
+Event	T12	said	EVENT	492
+Event	T13	owed	EVENT	502
+Event	T14	managed	EVENT	547
+Event	T15	open	EVENT	558
+Event	T16	exit	EVENT	577
+Event	T17	killed	EVENT	159
+Event	T18	taken	EVENT	332
+Relation	T1	T17	CauseEffect	true	trauma	killed
+Relation	T17	T1	EffectCause	true	killed	trauma
+Relation	T3	T17	CauseEffect	true	burns	killed
+Relation	T17	T3	EffectCause	true	killed	burns
+Relation	T5	T6	CauseEffect	true	crash	injuries
+Relation	T6	T5	EffectCause	true	injuries	crash
+Relation	T6	T18	CauseEffect	true	injuries	taken
+Relation	T18	T6	EffectCause	true	taken	injuries
+Relation	T14	T13	CauseEffect	true	managed	owed
+Relation	T13	T14	EffectCause	true	owed	managed
+Relation	T0	T12	NoRel	true	found	said
+Relation	T0	T13	NoRel	true	found	owed
+Relation	T0	T17	NoRel	true	found	killed
+Relation	T1	T12	NoRel	true	trauma	said
+Relation	T1	T15	NoRel	true	trauma	open
+Relation	T1	T6	NoRel	true	trauma	injuries
+Relation	T10	T11	NoRel	true	continue	journeys
+Relation	T11	T14	NoRel	true	journeys	managed
+Relation	T13	T10	NoRel	true	owed	continue
+Relation	T13	T16	NoRel	true	owed	exit
+Relation	T13	T18	NoRel	true	owed	taken
+Relation	T13	T8	NoRel	true	owed	escape
+Relation	T15	T11	NoRel	true	open	journeys
+Relation	T15	T18	NoRel	true	open	taken
+Relation	T16	T0	NoRel	true	exit	found
+Relation	T16	T17	NoRel	true	exit	killed
+Relation	T16	T4	NoRel	true	exit	survived
+Relation	T16	T9	NoRel	true	exit	injuries
+Relation	T17	T12	NoRel	true	killed	said
+Relation	T17	T13	NoRel	true	killed	owed
+Relation	T18	T1	NoRel	true	taken	trauma
+Relation	T2	T18	NoRel	true	combined	taken
+Relation	T3	T5	NoRel	true	burns	crash
+Relation	T7	T11	NoRel	true	managed	journeys
+Relation	T7	T8	NoRel	true	managed	escape
+Relation	T8	T4	NoRel	true	escape	survived
+Relation	T9	T10	NoRel	true	injuries	continue

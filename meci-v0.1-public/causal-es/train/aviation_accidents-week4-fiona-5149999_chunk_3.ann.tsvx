@@ -1,0 +1,57 @@
+Text	Entre los muertos se encuentra el miembro del Consejo de Administración de Surgutneftegas Nikolai Medvedev .	También se encuentran los tripulantes Sergei Anstin ( Capitán , 27 años de edad ) , Nikita Chekhlov ( Copiloto , 24 años de edad ) , Marina Berdikovna ( Asistente de vuelo ) y Liubov Boldireva ( Asistente de vuelo ) .	El capitán Anstin regresaba a Surgut , su ciudad natal , para celebrar su cumpleaños número 28 al día siguiente , mientras que el copiloto iba a casarse en menos de un mes .	[ miniaturade imagen | derecha | 250px | Restos del avión accidentado . ] Actualmente no se ha iniciado ninguna investigación , pero las autoridades rusas han interrogado a los controladores aéreos y estos han indicado que la comunicación con el avión se perdió pocos minutos después el despegue .	Las autoridades recuperaron las cajas negras horas después del accidente .
+Event	T0	muertos	EVENT	10
+Event	T1	celebrar	EVENT	389
+Event	T2	casarse	EVENT	472
+Event	T3	accidentado	EVENT	559
+Event	T4	iniciado	EVENT	596
+Event	T5	investigación	EVENT	613
+Event	T6	interrogado	EVENT	660
+Event	T7	indicado	EVENT	711
+Event	T8	comunicación	EVENT	727
+Event	T9	perdió	EVENT	756
+Event	T10	despegue	EVENT	788
+Event	T11	recuperaron	EVENT	815
+Event	T12	accidente	EVENT	862
+Relation	T12	T0	CauseEffect	true	accidente	muertos
+Relation	T0	T12	EffectCause	true	muertos	accidente
+Relation	T0	T10	NoRel	true	muertos	despegue
+Relation	T0	T7	NoRel	true	muertos	indicado
+Relation	T0	T9	NoRel	true	muertos	perdió
+Relation	T1	T10	NoRel	true	celebrar	despegue
+Relation	T1	T3	NoRel	true	celebrar	accidentado
+Relation	T1	T4	NoRel	true	celebrar	iniciado
+Relation	T1	T9	NoRel	true	celebrar	perdió
+Relation	T10	T7	NoRel	true	despegue	indicado
+Relation	T10	T9	NoRel	true	despegue	perdió
+Relation	T11	T0	NoRel	true	recuperaron	muertos
+Relation	T11	T1	NoRel	true	recuperaron	celebrar
+Relation	T11	T2	NoRel	true	recuperaron	casarse
+Relation	T11	T3	NoRel	true	recuperaron	accidentado
+Relation	T11	T8	NoRel	true	recuperaron	comunicación
+Relation	T12	T10	NoRel	true	accidente	despegue
+Relation	T12	T3	NoRel	true	accidente	accidentado
+Relation	T12	T8	NoRel	true	accidente	comunicación
+Relation	T2	T5	NoRel	true	casarse	investigación
+Relation	T2	T9	NoRel	true	casarse	perdió
+Relation	T3	T0	NoRel	true	accidentado	muertos
+Relation	T3	T10	NoRel	true	accidentado	despegue
+Relation	T3	T4	NoRel	true	accidentado	iniciado
+Relation	T4	T2	NoRel	true	iniciado	casarse
+Relation	T4	T7	NoRel	true	iniciado	indicado
+Relation	T5	T1	NoRel	true	investigación	celebrar
+Relation	T5	T4	NoRel	true	investigación	iniciado
+Relation	T6	T3	NoRel	true	interrogado	accidentado
+Relation	T6	T5	NoRel	true	interrogado	investigación
+Relation	T7	T0	NoRel	true	indicado	muertos
+Relation	T7	T10	NoRel	true	indicado	despegue
+Relation	T7	T11	NoRel	true	indicado	recuperaron
+Relation	T7	T12	NoRel	true	indicado	accidente
+Relation	T7	T2	NoRel	true	indicado	casarse
+Relation	T7	T4	NoRel	true	indicado	iniciado
+Relation	T7	T9	NoRel	true	indicado	perdió
+Relation	T8	T11	NoRel	true	comunicación	recuperaron
+Relation	T8	T5	NoRel	true	comunicación	investigación
+Relation	T9	T0	NoRel	true	perdió	muertos
+Relation	T9	T11	NoRel	true	perdió	recuperaron
+Relation	T9	T4	NoRel	true	perdió	iniciado
+Relation	T9	T7	NoRel	true	perdió	indicado

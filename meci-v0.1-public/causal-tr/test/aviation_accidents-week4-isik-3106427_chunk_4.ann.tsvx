@@ -1,0 +1,73 @@
+Text	6 Eylül 1958'de Amerika Birleşik Devletleri'nin Moskova Büyükelçiliği , Sovyet Dışişleri Bakanlığı'na Adana'dan kalkıp Adana'ya dönmesi planlanan ve kaybolan 17 kişilik mürettebatlı silahsız C- 130 hakkında bilgi isteyen bir nota verdi .	Ayrıca İran hükûmetine de benzer bir nota verildi .	12 Eylül günü Sovyetler Birliği notaya yanıt olarak kendi topraklarında bir uçağın " düştüğünü " iddia ederek enkaz bulduklarını duyurdu ve " mürettebatın altı üyesinin öldüğü varsayılabilir " açıklamasını yaptı .	Aynı günün ilerleyen saatlerinde Amerika Birleşik Devletleri Dışişleri Bakanlığı , Amerika Birleşik Devletleri'ne ait bir C- 130 tipi uçağın Türkiye sınırları içerisinde , Kars civarında Türkiye - Sovyetler Birliği sınırına 35 mil uzakta Sovyetler Birliği tarafından düşürüldüğünü ve uçakta bulunan 17 kişiden 6'sının öldüğünü bildiklerini açıkladı .	24 Eylül 1958'de KGB , 6 cesedi Amerika Birleşik Devletleri Hava Kuvvetleri'ne teslim etti , ancak uçakta bulunan diğer 11 kişinin varlığı Sovyet makamları tarafından asla kabul edilmedi .
+Event	T0	dönmesi	EVENT	128
+Event	T1	kaybolan	EVENT	149
+Event	T2	verdi	EVENT	230
+Event	T3	verildi	EVENT	280
+Event	T4	yanıt	EVENT	329
+Event	T5	duyurdu	EVENT	419
+Event	T6	yaptı	EVENT	496
+Event	T7	düşürüldüğünü	EVENT	771
+Event	T8	öldüğünü	EVENT	822
+Event	T9	açıkladı	EVENT	844
+Event	T10	etti	EVENT	941
+Event	T11	notaya	EVENT	322
+Relation	T11	T4	CauseEffect	true	notaya	yanıt
+Relation	T4	T11	EffectCause	true	yanıt	notaya
+Relation	T11	T5	CauseEffect	true	notaya	duyurdu
+Relation	T5	T11	EffectCause	true	duyurdu	notaya
+Relation	T11	T6	CauseEffect	true	notaya	yaptı
+Relation	T6	T11	EffectCause	true	yaptı	notaya
+Relation	T2	T4	CauseEffect	true	verdi	yanıt
+Relation	T4	T2	EffectCause	true	yanıt	verdi
+Relation	T2	T5	CauseEffect	true	verdi	duyurdu
+Relation	T5	T2	EffectCause	true	duyurdu	verdi
+Relation	T2	T6	CauseEffect	true	verdi	yaptı
+Relation	T6	T2	EffectCause	true	yaptı	verdi
+Relation	T7	T8	CauseEffect	true	düşürüldüğünü	öldüğünü
+Relation	T8	T7	EffectCause	true	öldüğünü	düşürüldüğünü
+Relation	T7	T1	CauseEffect	true	düşürüldüğünü	kaybolan
+Relation	T1	T7	EffectCause	true	kaybolan	düşürüldüğünü
+Relation	T8	T10	CauseEffect	true	öldüğünü	etti
+Relation	T10	T8	EffectCause	true	etti	öldüğünü
+Relation	T0	T1	NoRel	true	dönmesi	kaybolan
+Relation	T0	T3	NoRel	true	dönmesi	verildi
+Relation	T0	T8	NoRel	true	dönmesi	öldüğünü
+Relation	T1	T2	NoRel	true	kaybolan	verdi
+Relation	T1	T3	NoRel	true	kaybolan	verildi
+Relation	T1	T4	NoRel	true	kaybolan	yanıt
+Relation	T10	T0	NoRel	true	etti	dönmesi
+Relation	T10	T1	NoRel	true	etti	kaybolan
+Relation	T10	T11	NoRel	true	etti	notaya
+Relation	T10	T5	NoRel	true	etti	duyurdu
+Relation	T10	T9	NoRel	true	etti	açıkladı
+Relation	T11	T3	NoRel	true	notaya	verildi
+Relation	T11	T8	NoRel	true	notaya	öldüğünü
+Relation	T11	T9	NoRel	true	notaya	açıkladı
+Relation	T2	T11	NoRel	true	verdi	notaya
+Relation	T2	T3	NoRel	true	verdi	verildi
+Relation	T2	T7	NoRel	true	verdi	düşürüldüğünü
+Relation	T2	T8	NoRel	true	verdi	öldüğünü
+Relation	T3	T11	NoRel	true	verildi	notaya
+Relation	T3	T2	NoRel	true	verildi	verdi
+Relation	T3	T6	NoRel	true	verildi	yaptı
+Relation	T3	T9	NoRel	true	verildi	açıkladı
+Relation	T4	T1	NoRel	true	yanıt	kaybolan
+Relation	T4	T10	NoRel	true	yanıt	etti
+Relation	T4	T5	NoRel	true	yanıt	duyurdu
+Relation	T4	T8	NoRel	true	yanıt	öldüğünü
+Relation	T5	T0	NoRel	true	duyurdu	dönmesi
+Relation	T5	T1	NoRel	true	duyurdu	kaybolan
+Relation	T5	T10	NoRel	true	duyurdu	etti
+Relation	T5	T3	NoRel	true	duyurdu	verildi
+Relation	T6	T10	NoRel	true	yaptı	etti
+Relation	T6	T3	NoRel	true	yaptı	verildi
+Relation	T6	T4	NoRel	true	yaptı	yanıt
+Relation	T6	T8	NoRel	true	yaptı	öldüğünü
+Relation	T6	T9	NoRel	true	yaptı	açıkladı
+Relation	T7	T3	NoRel	true	düşürüldüğünü	verildi
+Relation	T7	T4	NoRel	true	düşürüldüğünü	yanıt
+Relation	T7	T5	NoRel	true	düşürüldüğünü	duyurdu
+Relation	T8	T1	NoRel	true	öldüğünü	kaybolan
+Relation	T8	T3	NoRel	true	öldüğünü	verildi
+Relation	T8	T4	NoRel	true	öldüğünü	yanıt
+Relation	T9	T8	NoRel	true	açıkladı	öldüğünü

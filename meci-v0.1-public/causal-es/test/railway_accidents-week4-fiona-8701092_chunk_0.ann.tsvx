@@ -1,0 +1,128 @@
+Text	El descarrilamiento de Eschede ocurrió el 3 de junio de 1998 , cerca de la aldea de Eschede en el distrito de Celle en Baja Sajonia , Alemania , cuando un tren de alta velocidad descarriló y se estrelló en un puente de carretera .	101 personas murieron y alrededor de 100 resultaron heridas .	Sigue siendo el peor desastre ferroviario en la historia de la República Federal de Alemania y el peor desastre ferroviario de alta velocidad en todo el mundo .	La causa fue una grieta de fatiga en una rueda que , cuando falló , hizo que el tren descarrilara en un conjunto de puntos y se estrellara contra los pilares de un puente de carretera de hormigón , lo que provocó que colapsara y aplastara a dos coches .	Los coches restantes y la cabeza motriz trasera se estrellaron contra los restos .
+Event	T0	descarrilamiento	EVENT	3
+Event	T1	ocurrió	EVENT	31
+Event	T2	descarriló	EVENT	178
+Event	T3	estrelló	EVENT	194
+Event	T4	murieron	EVENT	244
+Event	T5	heridas	EVENT	283
+Event	T6	desastre	EVENT	314
+Event	T7	desastre	EVENT	396
+Event	T8	causa	EVENT	457
+Event	T9	grieta	EVENT	471
+Event	T10	fatiga	EVENT	481
+Event	T11	falló	EVENT	514
+Event	T12	hizo	EVENT	522
+Event	T13	descarrilara	EVENT	539
+Event	T14	estrellara	EVENT	582
+Event	T15	provocó	EVENT	659
+Event	T16	colapsara	EVENT	671
+Event	T17	aplastara	EVENT	683
+Event	T18	estrellaron	EVENT	759
+Relation	T2	T3	CauseEffect	true	descarriló	estrelló
+Relation	T3	T2	EffectCause	true	estrelló	descarriló
+Relation	T3	T4	CauseEffect	true	estrelló	murieron
+Relation	T4	T3	EffectCause	true	murieron	estrelló
+Relation	T3	T5	CauseEffect	true	estrelló	heridas
+Relation	T5	T3	EffectCause	true	heridas	estrelló
+Relation	T9	T13	CauseEffect	true	grieta	descarrilara
+Relation	T13	T9	EffectCause	true	descarrilara	grieta
+Relation	T13	T14	CauseEffect	true	descarrilara	estrellara
+Relation	T14	T13	EffectCause	true	estrellara	descarrilara
+Relation	T14	T16	CauseEffect	true	estrellara	colapsara
+Relation	T16	T14	EffectCause	true	colapsara	estrellara
+Relation	T16	T17	CauseEffect	true	colapsara	aplastara
+Relation	T17	T16	EffectCause	true	aplastara	colapsara
+Relation	T0	T1	NoRel	true	descarrilamiento	ocurrió
+Relation	T0	T17	NoRel	true	descarrilamiento	aplastara
+Relation	T0	T18	NoRel	true	descarrilamiento	estrellaron
+Relation	T0	T3	NoRel	true	descarrilamiento	estrelló
+Relation	T0	T4	NoRel	true	descarrilamiento	murieron
+Relation	T0	T8	NoRel	true	descarrilamiento	causa
+Relation	T1	T7	NoRel	true	ocurrió	desastre
+Relation	T10	T0	NoRel	true	fatiga	descarrilamiento
+Relation	T10	T1	NoRel	true	fatiga	ocurrió
+Relation	T10	T12	NoRel	true	fatiga	hizo
+Relation	T10	T14	NoRel	true	fatiga	estrellara
+Relation	T10	T16	NoRel	true	fatiga	colapsara
+Relation	T10	T8	NoRel	true	fatiga	causa
+Relation	T11	T0	NoRel	true	falló	descarrilamiento
+Relation	T11	T1	NoRel	true	falló	ocurrió
+Relation	T11	T10	NoRel	true	falló	fatiga
+Relation	T11	T16	NoRel	true	falló	colapsara
+Relation	T11	T18	NoRel	true	falló	estrellaron
+Relation	T11	T2	NoRel	true	falló	descarriló
+Relation	T11	T6	NoRel	true	falló	desastre
+Relation	T11	T8	NoRel	true	falló	causa
+Relation	T12	T10	NoRel	true	hizo	fatiga
+Relation	T12	T13	NoRel	true	hizo	descarrilara
+Relation	T12	T14	NoRel	true	hizo	estrellara
+Relation	T12	T16	NoRel	true	hizo	colapsara
+Relation	T13	T15	NoRel	true	descarrilara	provocó
+Relation	T13	T16	NoRel	true	descarrilara	colapsara
+Relation	T13	T17	NoRel	true	descarrilara	aplastara
+Relation	T13	T2	NoRel	true	descarrilara	descarriló
+Relation	T13	T3	NoRel	true	descarrilara	estrelló
+Relation	T13	T4	NoRel	true	descarrilara	murieron
+Relation	T14	T0	NoRel	true	estrellara	descarrilamiento
+Relation	T14	T1	NoRel	true	estrellara	ocurrió
+Relation	T14	T11	NoRel	true	estrellara	falló
+Relation	T14	T15	NoRel	true	estrellara	provocó
+Relation	T14	T17	NoRel	true	estrellara	aplastara
+Relation	T14	T18	NoRel	true	estrellara	estrellaron
+Relation	T14	T2	NoRel	true	estrellara	descarriló
+Relation	T14	T5	NoRel	true	estrellara	heridas
+Relation	T14	T7	NoRel	true	estrellara	desastre
+Relation	T15	T14	NoRel	true	provocó	estrellara
+Relation	T15	T3	NoRel	true	provocó	estrelló
+Relation	T16	T10	NoRel	true	colapsara	fatiga
+Relation	T16	T13	NoRel	true	colapsara	descarrilara
+Relation	T17	T18	NoRel	true	aplastara	estrellaron
+Relation	T17	T2	NoRel	true	aplastara	descarriló
+Relation	T17	T5	NoRel	true	aplastara	heridas
+Relation	T18	T0	NoRel	true	estrellaron	descarrilamiento
+Relation	T18	T12	NoRel	true	estrellaron	hizo
+Relation	T18	T13	NoRel	true	estrellaron	descarrilara
+Relation	T18	T16	NoRel	true	estrellaron	colapsara
+Relation	T18	T17	NoRel	true	estrellaron	aplastara
+Relation	T18	T3	NoRel	true	estrellaron	estrelló
+Relation	T2	T0	NoRel	true	descarriló	descarrilamiento
+Relation	T2	T1	NoRel	true	descarriló	ocurrió
+Relation	T2	T10	NoRel	true	descarriló	fatiga
+Relation	T2	T11	NoRel	true	descarriló	falló
+Relation	T2	T13	NoRel	true	descarriló	descarrilara
+Relation	T2	T18	NoRel	true	descarriló	estrellaron
+Relation	T2	T4	NoRel	true	descarriló	murieron
+Relation	T2	T5	NoRel	true	descarriló	heridas
+Relation	T2	T7	NoRel	true	descarriló	desastre
+Relation	T2	T9	NoRel	true	descarriló	grieta
+Relation	T3	T9	NoRel	true	estrelló	grieta
+Relation	T4	T0	NoRel	true	murieron	descarrilamiento
+Relation	T4	T1	NoRel	true	murieron	ocurrió
+Relation	T4	T10	NoRel	true	murieron	fatiga
+Relation	T4	T11	NoRel	true	murieron	falló
+Relation	T4	T13	NoRel	true	murieron	descarrilara
+Relation	T4	T18	NoRel	true	murieron	estrellaron
+Relation	T4	T2	NoRel	true	murieron	descarriló
+Relation	T4	T5	NoRel	true	murieron	heridas
+Relation	T4	T9	NoRel	true	murieron	grieta
+Relation	T5	T1	NoRel	true	heridas	ocurrió
+Relation	T5	T7	NoRel	true	heridas	desastre
+Relation	T6	T0	NoRel	true	desastre	descarrilamiento
+Relation	T6	T1	NoRel	true	desastre	ocurrió
+Relation	T6	T11	NoRel	true	desastre	falló
+Relation	T6	T15	NoRel	true	desastre	provocó
+Relation	T6	T4	NoRel	true	desastre	murieron
+Relation	T7	T0	NoRel	true	desastre	descarrilamiento
+Relation	T7	T11	NoRel	true	desastre	falló
+Relation	T7	T15	NoRel	true	desastre	provocó
+Relation	T7	T16	NoRel	true	desastre	colapsara
+Relation	T7	T9	NoRel	true	desastre	grieta
+Relation	T8	T16	NoRel	true	causa	colapsara
+Relation	T8	T17	NoRel	true	causa	aplastara
+Relation	T8	T2	NoRel	true	causa	descarriló
+Relation	T9	T1	NoRel	true	grieta	ocurrió
+Relation	T9	T10	NoRel	true	grieta	fatiga
+Relation	T9	T14	NoRel	true	grieta	estrellara
+Relation	T9	T16	NoRel	true	grieta	colapsara
+Relation	T9	T3	NoRel	true	grieta	estrelló
+Relation	T9	T6	NoRel	true	grieta	desastre

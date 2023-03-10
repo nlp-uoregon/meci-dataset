@@ -1,0 +1,42 @@
+Text	In Cisie near Warsaw , 25 Poles were caught hiding Jews ; all were killed and the village was burned to the ground as punishment .	In Gołąbki , Jerzy and Irena Krępeć provided a hiding place for as many as 30 Jews on their farm and set up homeschooling for all children , Christian and Jewish together ; their actions were " an open secret in the village . "	Other villagers helped " if only to provide a meal . "	Another farm couple , Alfreda and Bolesław Pietraszek , provided shelter for Jewish families consisting of 18 people in Ceranów near Sokołów Podlaski , and their neighbors brought food to those being rescued .	In Markowa , where 17 Jews survived the war in hiding with their Christian neighbors , entire Polish family of Józef and Wiktoria Ulma including 6 children and prenatal child were shot dead by the Germans for hiding the Szall and Goldman families .
+Event	T1	killed	EVENT	67
+Event	T10	war	EVENT	664
+Event	T11	hiding	EVENT	671
+Event	T12	shot dead	EVENT	804
+Event	T13	hiding	EVENT	833
+Event	T16	burned	EVENT	94
+Event	T19	provided	EVENT	470
+Event	T2	punishment	EVENT	118
+Event	T20	brought	EVENT	586
+Event	T3	provided	EVENT	167
+Event	T4	hiding	EVENT	178
+Event	T5	homeschooling	EVENT	239
+Event	T6	actions	EVENT	310
+Event	T8	rescued	EVENT	614
+Event	T9	survived	EVENT	651
+Relation	T16	T1	CauseEffect	true	burned	killed
+Relation	T1	T16	EffectCause	true	killed	burned
+Relation	T2	T16	CauseEffect	true	punishment	burned
+Relation	T16	T2	EffectCause	true	burned	punishment
+Relation	T1	T2	CauseEffect	true	killed	punishment
+Relation	T2	T1	EffectCause	true	punishment	killed
+Relation	T8	T19	CauseEffect	true	rescued	provided
+Relation	T19	T8	EffectCause	true	provided	rescued
+Relation	T9	T11	CauseEffect	true	survived	hiding
+Relation	T11	T9	EffectCause	true	hiding	survived
+Relation	T13	T12	CauseEffect	true	hiding	shot dead
+Relation	T12	T13	EffectCause	true	shot dead	hiding
+Relation	T1	T4	NoRel	true	killed	hiding
+Relation	T10	T11	NoRel	true	war	hiding
+Relation	T10	T2	NoRel	true	war	punishment
+Relation	T11	T8	NoRel	true	hiding	rescued
+Relation	T12	T3	NoRel	true	shot dead	provided
+Relation	T2	T11	NoRel	true	punishment	hiding
+Relation	T2	T19	NoRel	true	punishment	provided
+Relation	T3	T16	NoRel	true	provided	burned
+Relation	T3	T5	NoRel	true	provided	homeschooling
+Relation	T4	T6	NoRel	true	hiding	actions
+Relation	T5	T12	NoRel	true	homeschooling	shot dead
+Relation	T5	T13	NoRel	true	homeschooling	hiding
+Relation	T6	T10	NoRel	true	actions	war
+Relation	T9	T8	NoRel	true	survived	rescued

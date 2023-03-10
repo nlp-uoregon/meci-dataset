@@ -1,0 +1,33 @@
+Text	- 8 December 1989 Following a lengthy court battle the British government agrees to extradite Reyat , who is a dual British - Canadian national , to Canada .	- 10 May 1991 Inderjit Singh Reyat receives a ten - year sentence after being convicted of two counts of manslaughter and four explosives charges relating to the Narita Airport bombing .	- 9 to 15 October 1992 Talwinder Singh Parmar interrogated by Punjab Police ; apparently names Lakhbir Singh Rode as mastermind , and confesses to supplying the dynamite for the operation .	The confession is destroyed , since Lakhbir is said to have been an Indian agent .	- 15 October 1992
+Event	T1	agrees	EVENT	74
+Event	T10	confesses	EVENT	479
+Event	T11	supplying	EVENT	492
+Event	T12	operation	EVENT	523
+Event	T13	confession	EVENT	539
+Event	T14	destroyed	EVENT	553
+Event	T2	extradite	EVENT	84
+Event	T3	receives	EVENT	193
+Event	T4	sentence	EVENT	215
+Event	T5	convicted	EVENT	236
+Event	T6	counts	EVENT	253
+Event	T7	manslaughter	EVENT	263
+Event	T8	bombing	EVENT	335
+Event	T9	interrogated	EVENT	391
+Relation	T5	T4	CauseEffect	true	convicted	sentence
+Relation	T4	T5	EffectCause	true	sentence	convicted
+Relation	T8	T4	CauseEffect	true	bombing	sentence
+Relation	T4	T8	EffectCause	true	sentence	bombing
+Relation	T7	T4	CauseEffect	true	manslaughter	sentence
+Relation	T4	T7	EffectCause	true	sentence	manslaughter
+Relation	T1	T10	NoRel	true	agrees	confesses
+Relation	T1	T12	NoRel	true	agrees	operation
+Relation	T1	T9	NoRel	true	agrees	interrogated
+Relation	T11	T10	NoRel	true	supplying	confesses
+Relation	T11	T5	NoRel	true	supplying	convicted
+Relation	T12	T2	NoRel	true	operation	extradite
+Relation	T13	T9	NoRel	true	confession	interrogated
+Relation	T14	T2	NoRel	true	destroyed	extradite
+Relation	T14	T9	NoRel	true	destroyed	interrogated
+Relation	T3	T5	NoRel	true	receives	convicted
+Relation	T7	T5	NoRel	true	manslaughter	convicted
+Relation	T9	T7	NoRel	true	interrogated	manslaughter

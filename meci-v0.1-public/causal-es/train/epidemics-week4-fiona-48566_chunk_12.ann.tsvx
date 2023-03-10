@@ -1,0 +1,86 @@
+Text	Otra erupción de gripe aviaria en enero de 2005 afectó a 33 de 64 ciudades y provincias en Vietnam , llevando a la matanza de casi 1,2 millones de aves de corral .	Se cree que hasta 140 millones de aves pueden haber muerto o sido sacrificadas por la epidemia .	En Vietnam y Tailandia se han presentado casos aislados en los que se sospecha de transmisión del virus de humano a humano .	En un caso , la niña que recibió el virus de un ave estuvo al cuidado de su madre durante unos 5 días hasta que murió .	Poco después , la madre enfermó y murió también .
+Event	T0	erupción	EVENT	5
+Event	T1	afectó	EVENT	48
+Event	T2	llevando	EVENT	101
+Event	T3	matanza	EVENT	115
+Event	T4	cree	EVENT	167
+Event	T5	muerto	EVENT	216
+Event	T6	sacrificadas	EVENT	230
+Event	T7	epidemia	EVENT	250
+Event	T8	sospecha	EVENT	331
+Event	T9	transmisión	EVENT	343
+Event	T10	recibió	EVENT	411
+Event	T11	virus	EVENT	422
+Event	T12	murió	EVENT	498
+Event	T13	enfermó	EVENT	530
+Event	T14	murió	EVENT	540
+Relation	T0	T1	CauseEffect	true	erupción	afectó
+Relation	T1	T0	EffectCause	true	afectó	erupción
+Relation	T0	T3	CauseEffect	true	erupción	matanza
+Relation	T3	T0	EffectCause	true	matanza	erupción
+Relation	T13	T14	CauseEffect	true	enfermó	murió
+Relation	T14	T13	EffectCause	true	murió	enfermó
+Relation	T10	T12	CauseEffect	true	recibió	murió
+Relation	T12	T10	EffectCause	true	murió	recibió
+Relation	T0	T10	NoRel	true	erupción	recibió
+Relation	T0	T2	NoRel	true	erupción	llevando
+Relation	T0	T5	NoRel	true	erupción	muerto
+Relation	T0	T7	NoRel	true	erupción	epidemia
+Relation	T0	T8	NoRel	true	erupción	sospecha
+Relation	T0	T9	NoRel	true	erupción	transmisión
+Relation	T1	T12	NoRel	true	afectó	murió
+Relation	T1	T13	NoRel	true	afectó	enfermó
+Relation	T1	T3	NoRel	true	afectó	matanza
+Relation	T1	T7	NoRel	true	afectó	epidemia
+Relation	T1	T8	NoRel	true	afectó	sospecha
+Relation	T10	T1	NoRel	true	recibió	afectó
+Relation	T10	T13	NoRel	true	recibió	enfermó
+Relation	T10	T9	NoRel	true	recibió	transmisión
+Relation	T11	T13	NoRel	true	virus	enfermó
+Relation	T11	T14	NoRel	true	virus	murió
+Relation	T11	T3	NoRel	true	virus	matanza
+Relation	T12	T0	NoRel	true	murió	erupción
+Relation	T12	T1	NoRel	true	murió	afectó
+Relation	T12	T7	NoRel	true	murió	epidemia
+Relation	T12	T9	NoRel	true	murió	transmisión
+Relation	T13	T1	NoRel	true	enfermó	afectó
+Relation	T13	T12	NoRel	true	enfermó	murió
+Relation	T13	T5	NoRel	true	enfermó	muerto
+Relation	T14	T11	NoRel	true	murió	virus
+Relation	T14	T2	NoRel	true	murió	llevando
+Relation	T14	T5	NoRel	true	murió	muerto
+Relation	T14	T7	NoRel	true	murió	epidemia
+Relation	T2	T1	NoRel	true	llevando	afectó
+Relation	T2	T11	NoRel	true	llevando	virus
+Relation	T2	T14	NoRel	true	llevando	murió
+Relation	T3	T1	NoRel	true	matanza	afectó
+Relation	T3	T10	NoRel	true	matanza	recibió
+Relation	T3	T13	NoRel	true	matanza	enfermó
+Relation	T3	T9	NoRel	true	matanza	transmisión
+Relation	T4	T10	NoRel	true	cree	recibió
+Relation	T4	T11	NoRel	true	cree	virus
+Relation	T5	T1	NoRel	true	muerto	afectó
+Relation	T5	T10	NoRel	true	muerto	recibió
+Relation	T5	T13	NoRel	true	muerto	enfermó
+Relation	T5	T8	NoRel	true	muerto	sospecha
+Relation	T6	T11	NoRel	true	sacrificadas	virus
+Relation	T6	T13	NoRel	true	sacrificadas	enfermó
+Relation	T6	T14	NoRel	true	sacrificadas	murió
+Relation	T6	T8	NoRel	true	sacrificadas	sospecha
+Relation	T7	T1	NoRel	true	epidemia	afectó
+Relation	T7	T14	NoRel	true	epidemia	murió
+Relation	T7	T2	NoRel	true	epidemia	llevando
+Relation	T7	T3	NoRel	true	epidemia	matanza
+Relation	T7	T9	NoRel	true	epidemia	transmisión
+Relation	T8	T12	NoRel	true	sospecha	murió
+Relation	T8	T14	NoRel	true	sospecha	murió
+Relation	T8	T4	NoRel	true	sospecha	cree
+Relation	T9	T11	NoRel	true	transmisión	virus
+Relation	T9	T12	NoRel	true	transmisión	murió
+Relation	T9	T13	NoRel	true	transmisión	enfermó
+Relation	T9	T14	NoRel	true	transmisión	murió
+Relation	T9	T2	NoRel	true	transmisión	llevando
+Relation	T9	T3	NoRel	true	transmisión	matanza
+Relation	T9	T5	NoRel	true	transmisión	muerto
+Relation	T9	T6	NoRel	true	transmisión	sacrificadas
+Relation	T9	T8	NoRel	true	transmisión	sospecha

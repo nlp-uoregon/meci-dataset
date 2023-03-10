@@ -1,0 +1,15 @@
+Text	Kabinin enkazında tamamen giysisiz bir erkek cesedi bulundu .	Bu cesedin kimliği tespit edilmedi ancak cesedin yanında kaptan pilot belgesi bulundu .	Kokpitteki yolcu cesedinin bir pilot olan ancak Tupolev ANT - 20 uçurma tecrübesi olmayan Kozlov adındaki bir pilota ve kaptan pilotun Kozlov'un uçağı kontrol etmesine izin verdiği tespit edildi .	Kozlov , yanlışlıkla veya uçağın tepkisini test etmek için , dengeleyici kontrol mekanizmasını seyir esnasında açtı .	Bu mekanizmayı seyir esnasında açmak uçağın aerodinamik yapısından dolayı uçağı dalışa geçirdi .
+Event	T0	bulundu	EVENT	52
+Event	T2	bulundu	EVENT	140
+Event	T3	edildi	EVENT	338
+Event	T5	açtı	EVENT	458
+Event	T8	geçirdi	EVENT	552
+Event	T1	enkazında	EVENT	8
+Relation	T5	T8	CauseEffect	true	açtı	geçirdi
+Relation	T8	T5	EffectCause	true	geçirdi	açtı
+Relation	T0	T2	NoRel	true	bulundu	bulundu
+Relation	T1	T2	NoRel	true	enkazında	bulundu
+Relation	T2	T1	NoRel	true	bulundu	enkazında
+Relation	T3	T2	NoRel	true	edildi	bulundu
+Relation	T3	T8	NoRel	true	edildi	geçirdi
+Relation	T8	T3	NoRel	true	geçirdi	edildi

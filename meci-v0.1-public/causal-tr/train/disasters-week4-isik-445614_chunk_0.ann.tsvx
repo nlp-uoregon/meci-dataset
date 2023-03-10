@@ -1,0 +1,42 @@
+Text	1966 VARTO DEPREMI , 19 Ağustos 1966 tarihinde Türkiye'nin Doğu Anadolu Bölgesi'nde yer alan Muş ilinin Varto kazasında meydana geldi .	Büyüklüğü 6,9 M _ ( s ) olan deprem sonucunda 2.394 kişi öldü .	Varto'da 1966 yılında iki deprem oldu .	İlk deprem , 7 Mart 1966 tarihinde Türkiye saatiyle 03: 16'da 5.6 M _ ( s ) büyüklüğünde oldu .	14 kişinin ölümüne ve 75 kişinin de yaralanmasına yol açtı .
+Event	T0	DEPREMI	EVENT	11
+Event	T1	geldi	EVENT	128
+Event	T2	deprem	EVENT	165
+Event	T3	öldü	EVENT	193
+Event	T4	deprem	EVENT	244
+Event	T5	ölümüne	EVENT	347
+Event	T6	açtı	EVENT	390
+Event	T7	oldu	EVENT	233
+Event	T8	yaralanmasına	EVENT	372
+Relation	T0	T3	CauseEffect	true	DEPREMI	öldü
+Relation	T3	T0	EffectCause	true	öldü	DEPREMI
+Relation	T0	T7	CauseEffect	true	DEPREMI	oldu
+Relation	T7	T0	EffectCause	true	oldu	DEPREMI
+Relation	T4	T6	CauseEffect	true	deprem	açtı
+Relation	T6	T4	EffectCause	true	açtı	deprem
+Relation	T0	T4	NoRel	true	DEPREMI	deprem
+Relation	T0	T5	NoRel	true	DEPREMI	ölümüne
+Relation	T0	T6	NoRel	true	DEPREMI	açtı
+Relation	T1	T2	NoRel	true	geldi	deprem
+Relation	T1	T4	NoRel	true	geldi	deprem
+Relation	T2	T3	NoRel	true	deprem	öldü
+Relation	T2	T5	NoRel	true	deprem	ölümüne
+Relation	T2	T7	NoRel	true	deprem	oldu
+Relation	T3	T2	NoRel	true	öldü	deprem
+Relation	T3	T4	NoRel	true	öldü	deprem
+Relation	T3	T7	NoRel	true	öldü	oldu
+Relation	T4	T5	NoRel	true	deprem	ölümüne
+Relation	T4	T7	NoRel	true	deprem	oldu
+Relation	T5	T0	NoRel	true	ölümüne	DEPREMI
+Relation	T5	T3	NoRel	true	ölümüne	öldü
+Relation	T5	T8	NoRel	true	ölümüne	yaralanmasına
+Relation	T6	T1	NoRel	true	açtı	geldi
+Relation	T6	T3	NoRel	true	açtı	öldü
+Relation	T6	T7	NoRel	true	açtı	oldu
+Relation	T6	T8	NoRel	true	açtı	yaralanmasına
+Relation	T7	T1	NoRel	true	oldu	geldi
+Relation	T7	T8	NoRel	true	oldu	yaralanmasına
+Relation	T8	T0	NoRel	true	yaralanmasına	DEPREMI
+Relation	T8	T1	NoRel	true	yaralanmasına	geldi
+Relation	T8	T5	NoRel	true	yaralanmasına	ölümüne
+Relation	T8	T7	NoRel	true	yaralanmasına	oldu

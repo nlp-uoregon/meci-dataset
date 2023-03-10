@@ -1,0 +1,107 @@
+Text	1859’daki jeomanyetik fırtınanın etkileri hakkında , dünya çapındaki raporlar , Carrington ve Stewart’ın gözlemlerini destekleyen Elias Loomis tarafından derlenip basıldı .	1- 2 Eylül 1859’da kaydedilen en büyük jeomanyetik fırtına meydana geldi .	Aurorae , kuzey yarımkürede Karayipler’den bile olmak üzere tüm dünyada görüldü ; Rocky Dağları üzerindekiler o kadar parlaktı ki , parlaması sabah olduğunu zannettiklerinden kahvaltı hazırlamaya başlamalarına sebep olan altın madencilerini uyandırdı .	Kuzeydoğu Amerika’da uyanan insanlar aurora’nın ışığı sayesinde gazete okuyabiliyorlardı .	Aurora , Küba ve Hawaii gibi kutuplardan bile görünürdü .
+Event	T0	basıldı	EVENT	163
+Event	T1	kaydedilen	EVENT	192
+Event	T2	geldi	EVENT	240
+Event	T3	görüldü	EVENT	320
+Event	T4	parlaktı	EVENT	366
+Event	T5	parlaması	EVENT	380
+Event	T6	uyandırdı	EVENT	489
+Event	T7	görünürdü	EVENT	638
+Event	T8	fırtınanın	EVENT	22
+Event	T9	raporlar	EVENT	69
+Event	T10	etkileri	EVENT	33
+Event	T11	fırtına	EVENT	224
+Event	T12	zannettiklerinden	EVENT	405
+Event	T13	olan	EVENT	464
+Event	T14	uyanan	EVENT	522
+Event	T15	okuyabiliyorlardı	EVENT	572
+Relation	T8	T10	CauseEffect	true	fırtınanın	etkileri
+Relation	T10	T8	EffectCause	true	etkileri	fırtınanın
+Relation	T10	T9	CauseEffect	true	etkileri	raporlar
+Relation	T9	T10	EffectCause	true	raporlar	etkileri
+Relation	T11	T3	CauseEffect	true	fırtına	görüldü
+Relation	T3	T11	EffectCause	true	görüldü	fırtına
+Relation	T4	T6	CauseEffect	true	parlaktı	uyandırdı
+Relation	T6	T4	EffectCause	true	uyandırdı	parlaktı
+Relation	T6	T12	CauseEffect	true	uyandırdı	zannettiklerinden
+Relation	T12	T6	EffectCause	true	zannettiklerinden	uyandırdı
+Relation	T12	T13	CauseEffect	true	zannettiklerinden	olan
+Relation	T13	T12	EffectCause	true	olan	zannettiklerinden
+Relation	T14	T15	CauseEffect	true	uyanan	okuyabiliyorlardı
+Relation	T15	T14	EffectCause	true	okuyabiliyorlardı	uyanan
+Relation	T3	T7	CauseEffect	true	görüldü	görünürdü
+Relation	T7	T3	EffectCause	true	görünürdü	görüldü
+Relation	T0	T10	NoRel	true	basıldı	etkileri
+Relation	T0	T14	NoRel	true	basıldı	uyanan
+Relation	T0	T15	NoRel	true	basıldı	okuyabiliyorlardı
+Relation	T0	T6	NoRel	true	basıldı	uyandırdı
+Relation	T0	T7	NoRel	true	basıldı	görünürdü
+Relation	T1	T0	NoRel	true	kaydedilen	basıldı
+Relation	T1	T12	NoRel	true	kaydedilen	zannettiklerinden
+Relation	T1	T4	NoRel	true	kaydedilen	parlaktı
+Relation	T1	T7	NoRel	true	kaydedilen	görünürdü
+Relation	T1	T8	NoRel	true	kaydedilen	fırtınanın
+Relation	T10	T11	NoRel	true	etkileri	fırtına
+Relation	T10	T12	NoRel	true	etkileri	zannettiklerinden
+Relation	T10	T2	NoRel	true	etkileri	geldi
+Relation	T11	T12	NoRel	true	fırtına	zannettiklerinden
+Relation	T11	T13	NoRel	true	fırtına	olan
+Relation	T11	T14	NoRel	true	fırtına	uyanan
+Relation	T11	T2	NoRel	true	fırtına	geldi
+Relation	T11	T4	NoRel	true	fırtına	parlaktı
+Relation	T12	T3	NoRel	true	zannettiklerinden	görüldü
+Relation	T12	T8	NoRel	true	zannettiklerinden	fırtınanın
+Relation	T12	T9	NoRel	true	zannettiklerinden	raporlar
+Relation	T13	T11	NoRel	true	olan	fırtına
+Relation	T13	T14	NoRel	true	olan	uyanan
+Relation	T13	T15	NoRel	true	olan	okuyabiliyorlardı
+Relation	T13	T2	NoRel	true	olan	geldi
+Relation	T13	T4	NoRel	true	olan	parlaktı
+Relation	T13	T6	NoRel	true	olan	uyandırdı
+Relation	T13	T9	NoRel	true	olan	raporlar
+Relation	T14	T0	NoRel	true	uyanan	basıldı
+Relation	T14	T1	NoRel	true	uyanan	kaydedilen
+Relation	T14	T13	NoRel	true	uyanan	olan
+Relation	T14	T4	NoRel	true	uyanan	parlaktı
+Relation	T14	T5	NoRel	true	uyanan	parlaması
+Relation	T14	T6	NoRel	true	uyanan	uyandırdı
+Relation	T14	T7	NoRel	true	uyanan	görünürdü
+Relation	T15	T4	NoRel	true	okuyabiliyorlardı	parlaktı
+Relation	T15	T6	NoRel	true	okuyabiliyorlardı	uyandırdı
+Relation	T15	T8	NoRel	true	okuyabiliyorlardı	fırtınanın
+Relation	T2	T12	NoRel	true	geldi	zannettiklerinden
+Relation	T2	T13	NoRel	true	geldi	olan
+Relation	T2	T14	NoRel	true	geldi	uyanan
+Relation	T2	T3	NoRel	true	geldi	görüldü
+Relation	T2	T4	NoRel	true	geldi	parlaktı
+Relation	T2	T5	NoRel	true	geldi	parlaması
+Relation	T2	T6	NoRel	true	geldi	uyandırdı
+Relation	T2	T8	NoRel	true	geldi	fırtınanın
+Relation	T3	T13	NoRel	true	görüldü	olan
+Relation	T3	T15	NoRel	true	görüldü	okuyabiliyorlardı
+Relation	T3	T4	NoRel	true	görüldü	parlaktı
+Relation	T3	T5	NoRel	true	görüldü	parlaması
+Relation	T3	T6	NoRel	true	görüldü	uyandırdı
+Relation	T4	T10	NoRel	true	parlaktı	etkileri
+Relation	T4	T13	NoRel	true	parlaktı	olan
+Relation	T4	T15	NoRel	true	parlaktı	okuyabiliyorlardı
+Relation	T4	T2	NoRel	true	parlaktı	geldi
+Relation	T4	T9	NoRel	true	parlaktı	raporlar
+Relation	T5	T10	NoRel	true	parlaması	etkileri
+Relation	T5	T13	NoRel	true	parlaması	olan
+Relation	T5	T14	NoRel	true	parlaması	uyanan
+Relation	T5	T2	NoRel	true	parlaması	geldi
+Relation	T5	T9	NoRel	true	parlaması	raporlar
+Relation	T6	T11	NoRel	true	uyandırdı	fırtına
+Relation	T7	T14	NoRel	true	görünürdü	uyanan
+Relation	T7	T6	NoRel	true	görünürdü	uyandırdı
+Relation	T8	T1	NoRel	true	fırtınanın	kaydedilen
+Relation	T8	T12	NoRel	true	fırtınanın	zannettiklerinden
+Relation	T8	T2	NoRel	true	fırtınanın	geldi
+Relation	T8	T3	NoRel	true	fırtınanın	görüldü
+Relation	T8	T4	NoRel	true	fırtınanın	parlaktı
+Relation	T9	T14	NoRel	true	raporlar	uyanan
+Relation	T9	T2	NoRel	true	raporlar	geldi
+Relation	T9	T3	NoRel	true	raporlar	görüldü
+Relation	T9	T5	NoRel	true	raporlar	parlaması
+Relation	T9	T7	NoRel	true	raporlar	görünürdü

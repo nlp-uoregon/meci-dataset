@@ -1,0 +1,78 @@
+Text	Deprem ; Adıyaman , Adana , Batman , Bingöl , Çorum , Diyarbakır , Gaziantep , Hatay , Kahramanmaraş , Malatya , Mardin , Osmaniye , Samsun , Sivas , Siirt , Şanlıurfa , Şırnak , Tokat ve Tunceli gibi birçok il ve Irak , İran , İsrail , Lübnan ve Suriye'de de hissedildi .	Depremde Elazığ , Malatya , Kahramanmaraş , Diyarbakır , Şanlıurfa , Adıyaman ve Batman'da bazı binalar yıkıldı .	Depremin kırsal bölgelere olan yakınlığı nedeni ile nihai hasarın tespitinin zaman alacağı belirtildi .	İçişleri Bakanı Süleyman Soylu , son açıklamasında 37'si Elazığ , 4'ü Malatya'da olmak üzere 41 kişinin hayatını kaybettiğini açıkladı .	Depremin ardından ilk açıklamaları yapan İçişleri Bakanı Süleyman Soylu'nun açıklamalarına göre , 41 kişi öldü ve 1.466 kişi hafif ve orta derecede yaralandı .
+Event	T0	Deprem	EVENT	0
+Event	T1	hissedildi	EVENT	260
+Event	T2	Depremde	EVENT	273
+Event	T3	yıkıldı	EVENT	377
+Event	T4	Depremin	EVENT	387
+Event	T5	belirtildi	EVENT	478
+Event	T6	açıkladı	EVENT	617
+Event	T7	Depremin	EVENT	628
+Event	T8	açıklamalarına	EVENT	704
+Event	T9	öldü	EVENT	734
+Event	T10	yaralandı	EVENT	776
+Event	T11	olan	EVENT	413
+Event	T12	açıklamasında	EVENT	528
+Relation	T0	T1	CauseEffect	true	Deprem	hissedildi
+Relation	T1	T0	EffectCause	true	hissedildi	Deprem
+Relation	T2	T3	CauseEffect	true	Depremde	yıkıldı
+Relation	T3	T2	EffectCause	true	yıkıldı	Depremde
+Relation	T11	T5	CauseEffect	true	olan	belirtildi
+Relation	T5	T11	EffectCause	true	belirtildi	olan
+Relation	T0	T12	CauseEffect	true	Deprem	açıklamasında
+Relation	T12	T0	EffectCause	true	açıklamasında	Deprem
+Relation	T12	T6	CauseEffect	true	açıklamasında	açıkladı
+Relation	T6	T12	EffectCause	true	açıkladı	açıklamasında
+Relation	T0	T9	CauseEffect	true	Deprem	öldü
+Relation	T9	T0	EffectCause	true	öldü	Deprem
+Relation	T0	T10	CauseEffect	true	Deprem	yaralandı
+Relation	T10	T0	EffectCause	true	yaralandı	Deprem
+Relation	T0	T2	NoRel	true	Deprem	Depremde
+Relation	T0	T3	NoRel	true	Deprem	yıkıldı
+Relation	T0	T4	NoRel	true	Deprem	Depremin
+Relation	T0	T5	NoRel	true	Deprem	belirtildi
+Relation	T1	T10	NoRel	true	hissedildi	yaralandı
+Relation	T1	T11	NoRel	true	hissedildi	olan
+Relation	T1	T2	NoRel	true	hissedildi	Depremde
+Relation	T1	T5	NoRel	true	hissedildi	belirtildi
+Relation	T10	T1	NoRel	true	yaralandı	hissedildi
+Relation	T10	T12	NoRel	true	yaralandı	açıklamasında
+Relation	T10	T4	NoRel	true	yaralandı	Depremin
+Relation	T10	T7	NoRel	true	yaralandı	Depremin
+Relation	T11	T12	NoRel	true	olan	açıklamasında
+Relation	T11	T3	NoRel	true	olan	yıkıldı
+Relation	T11	T8	NoRel	true	olan	açıklamalarına
+Relation	T12	T3	NoRel	true	açıklamasında	yıkıldı
+Relation	T12	T8	NoRel	true	açıklamasında	açıklamalarına
+Relation	T2	T1	NoRel	true	Depremde	hissedildi
+Relation	T2	T5	NoRel	true	Depremde	belirtildi
+Relation	T2	T8	NoRel	true	Depremde	açıklamalarına
+Relation	T3	T0	NoRel	true	yıkıldı	Deprem
+Relation	T3	T12	NoRel	true	yıkıldı	açıklamasında
+Relation	T3	T5	NoRel	true	yıkıldı	belirtildi
+Relation	T3	T6	NoRel	true	yıkıldı	açıkladı
+Relation	T4	T12	NoRel	true	Depremin	açıklamasında
+Relation	T4	T5	NoRel	true	Depremin	belirtildi
+Relation	T4	T6	NoRel	true	Depremin	açıkladı
+Relation	T4	T8	NoRel	true	Depremin	açıklamalarına
+Relation	T5	T0	NoRel	true	belirtildi	Deprem
+Relation	T5	T10	NoRel	true	belirtildi	yaralandı
+Relation	T5	T12	NoRel	true	belirtildi	açıklamasında
+Relation	T5	T7	NoRel	true	belirtildi	Depremin
+Relation	T5	T8	NoRel	true	belirtildi	açıklamalarına
+Relation	T5	T9	NoRel	true	belirtildi	öldü
+Relation	T6	T0	NoRel	true	açıkladı	Deprem
+Relation	T6	T10	NoRel	true	açıkladı	yaralandı
+Relation	T6	T2	NoRel	true	açıkladı	Depremde
+Relation	T6	T8	NoRel	true	açıkladı	açıklamalarına
+Relation	T7	T0	NoRel	true	Depremin	Deprem
+Relation	T7	T8	NoRel	true	Depremin	açıklamalarına
+Relation	T7	T9	NoRel	true	Depremin	öldü
+Relation	T8	T10	NoRel	true	açıklamalarına	yaralandı
+Relation	T8	T2	NoRel	true	açıklamalarına	Depremde
+Relation	T8	T4	NoRel	true	açıklamalarına	Depremin
+Relation	T8	T6	NoRel	true	açıklamalarına	açıkladı
+Relation	T8	T9	NoRel	true	açıklamalarına	öldü
+Relation	T9	T10	NoRel	true	öldü	yaralandı
+Relation	T9	T12	NoRel	true	öldü	açıklamasında
+Relation	T9	T5	NoRel	true	öldü	belirtildi
+Relation	T9	T6	NoRel	true	öldü	açıkladı

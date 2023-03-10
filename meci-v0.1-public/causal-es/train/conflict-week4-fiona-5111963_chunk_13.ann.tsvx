@@ -1,0 +1,83 @@
+Text	El 4 de mayo , las fuerzas de seguridad tomaron el control de la carretera que comunica las provincias de Hadramout , Shabwa y Abyan .	Otras operaciones en Shabwa lograron además lograron eliminar a los terroristas de Mefraq al Said , Hesat al Labn , Al Karif y Al Naqaba .	Además , se abatieron a al menos 37 combatientes en la localidad de Yul Reda .	El 6 de mayo la ofensiva consiguió lograr uno de sus objetivos principales al tomar la zona montañosa de Al Mahfad , en una batalla en la que se cobró varias decenas de muertos entre los yihadistas , que abandonaron el área al amanecer .	Además tomaron posesión de otro bastión del grupo terrorista de Haban y Qarn al-Sawad , en la zona de Shabwa .
+Event	T0	tomaron	EVENT	40
+Event	T1	control	EVENT	51
+Event	T2	comunica	EVENT	79
+Event	T3	operaciones	EVENT	141
+Event	T4	lograron	EVENT	163
+Event	T5	eliminar	EVENT	188
+Event	T6	abatieron	EVENT	286
+Event	T7	lograr	EVENT	388
+Event	T8	tomar	EVENT	431
+Event	T9	cobró	EVENT	498
+Event	T10	muertos	EVENT	522
+Event	T11	abandonaron	EVENT	557
+Event	T12	amanecer	EVENT	580
+Event	T13	ofensiva	EVENT	369
+Relation	T3	T5	CauseEffect	true	operaciones	eliminar
+Relation	T5	T3	EffectCause	true	eliminar	operaciones
+Relation	T3	T6	CauseEffect	true	operaciones	abatieron
+Relation	T6	T3	EffectCause	true	abatieron	operaciones
+Relation	T13	T8	CauseEffect	true	ofensiva	tomar
+Relation	T8	T13	EffectCause	true	tomar	ofensiva
+Relation	T13	T10	CauseEffect	true	ofensiva	muertos
+Relation	T10	T13	EffectCause	true	muertos	ofensiva
+Relation	T0	T1	NoRel	true	tomaron	control
+Relation	T0	T12	NoRel	true	tomaron	amanecer
+Relation	T0	T4	NoRel	true	tomaron	lograron
+Relation	T0	T6	NoRel	true	tomaron	abatieron
+Relation	T0	T7	NoRel	true	tomaron	lograr
+Relation	T1	T10	NoRel	true	control	muertos
+Relation	T1	T12	NoRel	true	control	amanecer
+Relation	T1	T8	NoRel	true	control	tomar
+Relation	T10	T11	NoRel	true	muertos	abandonaron
+Relation	T10	T12	NoRel	true	muertos	amanecer
+Relation	T10	T3	NoRel	true	muertos	operaciones
+Relation	T10	T9	NoRel	true	muertos	cobró
+Relation	T11	T10	NoRel	true	abandonaron	muertos
+Relation	T11	T2	NoRel	true	abandonaron	comunica
+Relation	T11	T5	NoRel	true	abandonaron	eliminar
+Relation	T12	T0	NoRel	true	amanecer	tomaron
+Relation	T12	T10	NoRel	true	amanecer	muertos
+Relation	T12	T5	NoRel	true	amanecer	eliminar
+Relation	T12	T8	NoRel	true	amanecer	tomar
+Relation	T13	T4	NoRel	true	ofensiva	lograron
+Relation	T13	T5	NoRel	true	ofensiva	eliminar
+Relation	T13	T6	NoRel	true	ofensiva	abatieron
+Relation	T13	T7	NoRel	true	ofensiva	lograr
+Relation	T2	T10	NoRel	true	comunica	muertos
+Relation	T2	T3	NoRel	true	comunica	operaciones
+Relation	T2	T4	NoRel	true	comunica	lograron
+Relation	T2	T5	NoRel	true	comunica	eliminar
+Relation	T2	T7	NoRel	true	comunica	lograr
+Relation	T3	T0	NoRel	true	operaciones	tomaron
+Relation	T3	T10	NoRel	true	operaciones	muertos
+Relation	T3	T12	NoRel	true	operaciones	amanecer
+Relation	T3	T2	NoRel	true	operaciones	comunica
+Relation	T3	T4	NoRel	true	operaciones	lograron
+Relation	T3	T7	NoRel	true	operaciones	lograr
+Relation	T3	T8	NoRel	true	operaciones	tomar
+Relation	T4	T11	NoRel	true	lograron	abandonaron
+Relation	T4	T5	NoRel	true	lograron	eliminar
+Relation	T4	T8	NoRel	true	lograron	tomar
+Relation	T5	T0	NoRel	true	eliminar	tomaron
+Relation	T5	T11	NoRel	true	eliminar	abandonaron
+Relation	T5	T12	NoRel	true	eliminar	amanecer
+Relation	T5	T2	NoRel	true	eliminar	comunica
+Relation	T5	T6	NoRel	true	eliminar	abatieron
+Relation	T5	T8	NoRel	true	eliminar	tomar
+Relation	T5	T9	NoRel	true	eliminar	cobró
+Relation	T6	T11	NoRel	true	abatieron	abandonaron
+Relation	T6	T12	NoRel	true	abatieron	amanecer
+Relation	T6	T13	NoRel	true	abatieron	ofensiva
+Relation	T6	T4	NoRel	true	abatieron	lograron
+Relation	T7	T10	NoRel	true	lograr	muertos
+Relation	T7	T13	NoRel	true	lograr	ofensiva
+Relation	T7	T3	NoRel	true	lograr	operaciones
+Relation	T7	T5	NoRel	true	lograr	eliminar
+Relation	T7	T8	NoRel	true	lograr	tomar
+Relation	T8	T12	NoRel	true	tomar	amanecer
+Relation	T8	T4	NoRel	true	tomar	lograron
+Relation	T9	T10	NoRel	true	cobró	muertos
+Relation	T9	T11	NoRel	true	cobró	abandonaron
+Relation	T9	T7	NoRel	true	cobró	lograr
+Relation	T9	T8	NoRel	true	cobró	tomar

@@ -1,0 +1,45 @@
+Text	ملائیشیا کا ایک طیارہ جو 8 مارچ کو کوالالمپور سے بیجنگ جاتے ہوئے جو ملائیشیا اور ویتنام کے درمیان گم ہو گیا بدقسمت گمشدہ طیارے میں عملے کے 12 افراد سمیت 239 افراد سوار ہیں طیارے کا تاحال کچھ پتہ نہیں چلا ۔	8 مارچ پر 00: 41 مقامی وقت کو جہاز کوالا لمپور انٹرنیشنل ایئرپورٹ سے روانہ ہوا اور منصوبے کے مطابق بیجنگ کیپٹل انٹرنیشل ایئرپورٹ میں 06 : 30 مقامی وقت کو اترنا تھا ۔	35,000 فٹ کی مقررہ کروز بلندی تک چڑھا اور 471 بحری میل فی گھنٹا پر سفر کر رہا تھا جب سارا رابطہ منقطع ہو گیا اور ٹرانسپونڈر کا سگنل بھی غائب ہو گیا ۔	جہاز کا آخری معلوم مقام 01 : 20 مقامی وقت پر IGARI نامی وے پوائنٹ پر تھا ۔	توقع تھی کہ جہاز نے ہو چی مِنھ شہر کے ایئر ٹریفک کنٹرول سے رابطہ قائم کرنا تھا ، جیسے ہی وہ ویتنامی فضائی حدود میں داخل ہوا ، اس مقام سے تھوڑے ہی شمال کو جہاں رابطہ منقطع ہوا ۔
+Event	T0	چلا	EVENT	200
+Event	T1	ہوا	EVENT	281
+Event	T2	منصوبے	EVENT	289
+Event	T3	اترنا	EVENT	360
+Event	T4	چڑھا	EVENT	405
+Event	T5	سفر	EVENT	439
+Event	T6	منقطع	EVENT	468
+Event	T7	غائب	EVENT	508
+Event	T8	ہوا	EVENT	717
+Event	T9	ہوا	EVENT	768
+Relation	T0	T3	NoRel	true	چلا	اترنا
+Relation	T1	T7	NoRel	true	ہوا	غائب
+Relation	T2	T0	NoRel	true	منصوبے	چلا
+Relation	T2	T3	NoRel	true	منصوبے	اترنا
+Relation	T2	T5	NoRel	true	منصوبے	سفر
+Relation	T2	T6	NoRel	true	منصوبے	منقطع
+Relation	T2	T7	NoRel	true	منصوبے	غائب
+Relation	T2	T9	NoRel	true	منصوبے	ہوا
+Relation	T3	T4	NoRel	true	اترنا	چڑھا
+Relation	T3	T6	NoRel	true	اترنا	منقطع
+Relation	T3	T8	NoRel	true	اترنا	ہوا
+Relation	T3	T9	NoRel	true	اترنا	ہوا
+Relation	T4	T0	NoRel	true	چڑھا	چلا
+Relation	T4	T1	NoRel	true	چڑھا	ہوا
+Relation	T4	T2	NoRel	true	چڑھا	منصوبے
+Relation	T4	T6	NoRel	true	چڑھا	منقطع
+Relation	T4	T7	NoRel	true	چڑھا	غائب
+Relation	T5	T0	NoRel	true	سفر	چلا
+Relation	T5	T1	NoRel	true	سفر	ہوا
+Relation	T5	T7	NoRel	true	سفر	غائب
+Relation	T5	T8	NoRel	true	سفر	ہوا
+Relation	T5	T9	NoRel	true	سفر	ہوا
+Relation	T6	T0	NoRel	true	منقطع	چلا
+Relation	T6	T1	NoRel	true	منقطع	ہوا
+Relation	T6	T5	NoRel	true	منقطع	سفر
+Relation	T7	T0	NoRel	true	غائب	چلا
+Relation	T7	T3	NoRel	true	غائب	اترنا
+Relation	T7	T9	NoRel	true	غائب	ہوا
+Relation	T8	T1	NoRel	true	ہوا	ہوا
+Relation	T8	T6	NoRel	true	ہوا	منقطع
+Relation	T8	T9	NoRel	true	ہوا	ہوا
+Relation	T9	T0	NoRel	true	ہوا	چلا
+Relation	T9	T1	NoRel	true	ہوا	ہوا
+Relation	T9	T5	NoRel	true	ہوا	سفر

@@ -1,0 +1,82 @@
+Text	UNITED AIRLINES' FLYNUMMER 93 ( engelsk : UNITED AIRLINES FLIGHT 93 ) var det fjerde fly , der blev kapret som en del af terrorangrebet den 11. september 2001 .	Flyet skulle ifølge hjernen bag terrorangrebet , Khalid Sheikh Mohammed , have ramt United States Capitol , hovedsædet for USAs Kongres .	Flyet havde fløjet i cirka 40 minutter , da besætningen i cockpittet blev overmandet af terrorister , som overtog kontrollen med flyet og fløj det mod den amerikanske hovedstad Washington D.C.	Flere af flyets passagerer og kabinebesætningsmedlemmer ringede til deres familiemedlemmer og repræsentanter fra United Airlines for at informere dem om kapringen af flyet .	I sidste ende besluttede passagererne sig for at gøre modstand mod terroristerne , hvilket resulterede i flyets nedstyrtning .
+Event	T0	kapret	EVENT	100
+Event	T1	terrorangrebet	EVENT	121
+Event	T3	terrorangrebet	EVENT	193
+Event	T6	overmandet	EVENT	373
+Event	T8	fløj	EVENT	437
+Event	T9	ringede	EVENT	548
+Event	T11	kapringen	EVENT	645
+Event	T14	nedstyrtning	EVENT	778
+Event	T2	gøre modstand	EVENT	715
+Event	T4	ramt	EVENT	240
+Event	T5	fløjet	EVENT	311
+Event	T7	overtog	EVENT	405
+Event	T10	informere	EVENT	628
+Event	T12	besluttede	EVENT	680
+Relation	T6	T8	CauseEffect	true	overmandet	fløj
+Relation	T8	T6	EffectCause	true	fløj	overmandet
+Relation	T0	T8	CauseEffect	true	kapret	fløj
+Relation	T8	T0	EffectCause	true	fløj	kapret
+Relation	T11	T9	CauseEffect	true	kapringen	ringede
+Relation	T9	T11	EffectCause	true	ringede	kapringen
+Relation	T2	T14	CauseEffect	true	gøre modstand	nedstyrtning
+Relation	T14	T2	EffectCause	true	nedstyrtning	gøre modstand
+Relation	T0	T1	NoRel	true	kapret	terrorangrebet
+Relation	T0	T3	NoRel	true	kapret	terrorangrebet
+Relation	T0	T6	NoRel	true	kapret	overmandet
+Relation	T0	T7	NoRel	true	kapret	overtog
+Relation	T0	T9	NoRel	true	kapret	ringede
+Relation	T1	T10	NoRel	true	terrorangrebet	informere
+Relation	T1	T6	NoRel	true	terrorangrebet	overmandet
+Relation	T10	T3	NoRel	true	informere	terrorangrebet
+Relation	T10	T6	NoRel	true	informere	overmandet
+Relation	T10	T7	NoRel	true	informere	overtog
+Relation	T10	T9	NoRel	true	informere	ringede
+Relation	T11	T0	NoRel	true	kapringen	kapret
+Relation	T11	T10	NoRel	true	kapringen	informere
+Relation	T11	T12	NoRel	true	kapringen	besluttede
+Relation	T11	T2	NoRel	true	kapringen	gøre modstand
+Relation	T11	T4	NoRel	true	kapringen	ramt
+Relation	T11	T7	NoRel	true	kapringen	overtog
+Relation	T12	T10	NoRel	true	besluttede	informere
+Relation	T12	T14	NoRel	true	besluttede	nedstyrtning
+Relation	T12	T3	NoRel	true	besluttede	terrorangrebet
+Relation	T14	T1	NoRel	true	nedstyrtning	terrorangrebet
+Relation	T14	T4	NoRel	true	nedstyrtning	ramt
+Relation	T14	T6	NoRel	true	nedstyrtning	overmandet
+Relation	T14	T8	NoRel	true	nedstyrtning	fløj
+Relation	T2	T0	NoRel	true	gøre modstand	kapret
+Relation	T2	T3	NoRel	true	gøre modstand	terrorangrebet
+Relation	T2	T4	NoRel	true	gøre modstand	ramt
+Relation	T3	T0	NoRel	true	terrorangrebet	kapret
+Relation	T3	T1	NoRel	true	terrorangrebet	terrorangrebet
+Relation	T3	T2	NoRel	true	terrorangrebet	gøre modstand
+Relation	T3	T4	NoRel	true	terrorangrebet	ramt
+Relation	T3	T7	NoRel	true	terrorangrebet	overtog
+Relation	T4	T0	NoRel	true	ramt	kapret
+Relation	T4	T1	NoRel	true	ramt	terrorangrebet
+Relation	T4	T10	NoRel	true	ramt	informere
+Relation	T4	T5	NoRel	true	ramt	fløjet
+Relation	T4	T6	NoRel	true	ramt	overmandet
+Relation	T5	T11	NoRel	true	fløjet	kapringen
+Relation	T6	T1	NoRel	true	overmandet	terrorangrebet
+Relation	T6	T11	NoRel	true	overmandet	kapringen
+Relation	T6	T2	NoRel	true	overmandet	gøre modstand
+Relation	T6	T4	NoRel	true	overmandet	ramt
+Relation	T6	T5	NoRel	true	overmandet	fløjet
+Relation	T6	T7	NoRel	true	overmandet	overtog
+Relation	T6	T9	NoRel	true	overmandet	ringede
+Relation	T7	T1	NoRel	true	overtog	terrorangrebet
+Relation	T7	T11	NoRel	true	overtog	kapringen
+Relation	T7	T3	NoRel	true	overtog	terrorangrebet
+Relation	T7	T4	NoRel	true	overtog	ramt
+Relation	T7	T6	NoRel	true	overtog	overmandet
+Relation	T8	T1	NoRel	true	fløj	terrorangrebet
+Relation	T8	T10	NoRel	true	fløj	informere
+Relation	T8	T12	NoRel	true	fløj	besluttede
+Relation	T8	T14	NoRel	true	fløj	nedstyrtning
+Relation	T8	T3	NoRel	true	fløj	terrorangrebet
+Relation	T9	T0	NoRel	true	ringede	kapret
+Relation	T9	T1	NoRel	true	ringede	terrorangrebet
+Relation	T9	T14	NoRel	true	ringede	nedstyrtning
+Relation	T9	T5	NoRel	true	ringede	fløjet

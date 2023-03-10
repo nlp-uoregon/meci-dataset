@@ -1,0 +1,74 @@
+Text	El ACCIDENTE DEL LINDSTRAND LBL 600C DE 2012 tuvo lugar el jueves 23 de agosto de dicho año en el momento que un globo aerostático tipo Lindstrand LBL 600C que realizaba un vuelo turístico , se estrelló chocando contra unos árboles durante una tormenta sobre los pantanos de Liubliana , Eslovenia .	Posterior al impacto , se desató un incendio que mató a 6 de las 32 personas a bordo .	A las 04:54:18 a._m. UTC , el piloto del globo aerostático despegó con 31 pasajeros en la canasta .	Después del despegue , el globo comenzó a moverse hacia el sur , llevado por vientos con velocidad respecto al suelo de menos de 20 km/h , que es un viento ligero del norte .	Después de las 05:28:36 a._m. UTC , el globo alcanzó su mayor altitud del día de 1.371 metros sobre el nivel medio del mar ( AMSL ) , seguido de un rápido descenso .
+Event	T0	ACCIDENTE	EVENT	3
+Event	T1	realizaba	EVENT	160
+Event	T2	chocando	EVENT	203
+Event	T3	tormenta	EVENT	244
+Event	T4	impacto	EVENT	312
+Event	T5	desató	EVENT	325
+Event	T6	incendio	EVENT	335
+Event	T7	mató	EVENT	348
+Event	T8	despegó	EVENT	445
+Event	T9	despegue	EVENT	498
+Event	T10	comenzó	EVENT	518
+Event	T11	moverse	EVENT	528
+Event	T12	llevado	EVENT	551
+Event	T13	alcanzó	EVENT	706
+Event	T14	descenso	EVENT	816
+Relation	T6	T7	CauseEffect	true	incendio	mató
+Relation	T7	T6	EffectCause	true	mató	incendio
+Relation	T4	T6	CauseEffect	true	impacto	incendio
+Relation	T6	T4	EffectCause	true	incendio	impacto
+Relation	T0	T2	NoRel	true	ACCIDENTE	chocando
+Relation	T0	T4	NoRel	true	ACCIDENTE	impacto
+Relation	T0	T5	NoRel	true	ACCIDENTE	desató
+Relation	T0	T8	NoRel	true	ACCIDENTE	despegó
+Relation	T1	T0	NoRel	true	realizaba	ACCIDENTE
+Relation	T1	T13	NoRel	true	realizaba	alcanzó
+Relation	T1	T14	NoRel	true	realizaba	descenso
+Relation	T10	T13	NoRel	true	comenzó	alcanzó
+Relation	T10	T6	NoRel	true	comenzó	incendio
+Relation	T11	T3	NoRel	true	moverse	tormenta
+Relation	T11	T4	NoRel	true	moverse	impacto
+Relation	T11	T9	NoRel	true	moverse	despegue
+Relation	T12	T0	NoRel	true	llevado	ACCIDENTE
+Relation	T12	T11	NoRel	true	llevado	moverse
+Relation	T12	T14	NoRel	true	llevado	descenso
+Relation	T12	T2	NoRel	true	llevado	chocando
+Relation	T12	T6	NoRel	true	llevado	incendio
+Relation	T13	T0	NoRel	true	alcanzó	ACCIDENTE
+Relation	T13	T1	NoRel	true	alcanzó	realizaba
+Relation	T13	T6	NoRel	true	alcanzó	incendio
+Relation	T13	T8	NoRel	true	alcanzó	despegó
+Relation	T14	T12	NoRel	true	descenso	llevado
+Relation	T14	T6	NoRel	true	descenso	incendio
+Relation	T14	T7	NoRel	true	descenso	mató
+Relation	T2	T10	NoRel	true	chocando	comenzó
+Relation	T2	T11	NoRel	true	chocando	moverse
+Relation	T2	T3	NoRel	true	chocando	tormenta
+Relation	T3	T0	NoRel	true	tormenta	ACCIDENTE
+Relation	T3	T13	NoRel	true	tormenta	alcanzó
+Relation	T3	T4	NoRel	true	tormenta	impacto
+Relation	T3	T9	NoRel	true	tormenta	despegue
+Relation	T4	T12	NoRel	true	impacto	llevado
+Relation	T4	T13	NoRel	true	impacto	alcanzó
+Relation	T4	T14	NoRel	true	impacto	descenso
+Relation	T4	T7	NoRel	true	impacto	mató
+Relation	T4	T9	NoRel	true	impacto	despegue
+Relation	T5	T13	NoRel	true	desató	alcanzó
+Relation	T5	T2	NoRel	true	desató	chocando
+Relation	T5	T4	NoRel	true	desató	impacto
+Relation	T5	T6	NoRel	true	desató	incendio
+Relation	T5	T7	NoRel	true	desató	mató
+Relation	T6	T8	NoRel	true	incendio	despegó
+Relation	T7	T11	NoRel	true	mató	moverse
+Relation	T7	T12	NoRel	true	mató	llevado
+Relation	T7	T2	NoRel	true	mató	chocando
+Relation	T7	T8	NoRel	true	mató	despegó
+Relation	T8	T0	NoRel	true	despegó	ACCIDENTE
+Relation	T8	T11	NoRel	true	despegó	moverse
+Relation	T8	T14	NoRel	true	despegó	descenso
+Relation	T8	T4	NoRel	true	despegó	impacto
+Relation	T8	T5	NoRel	true	despegó	desató
+Relation	T9	T0	NoRel	true	despegue	ACCIDENTE
+Relation	T9	T13	NoRel	true	despegue	alcanzó
+Relation	T9	T14	NoRel	true	despegue	descenso

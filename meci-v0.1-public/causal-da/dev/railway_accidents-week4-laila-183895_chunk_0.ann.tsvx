@@ -1,0 +1,113 @@
+Text	Den 6. januar 1986 kl. 22:36 holdt tog 10266 for " stop " foran Hundige Station , idet den udløste togvej ikke kunne komme til udførelse på grund af manglende kontrol på et sporskifte .	Tog 40266 der fulgte umiddelbart efter tog 10266 fik efter passagen af Ishøj T HKT-information om 90 km/t .	I næste afsnit modtog toget information om 50 km/t , hvorfor lokomotivføreren indledte en fuldbremsning .	Da denne viste sig at være utilstrækkelig iværksatte HKT-anlægget en nødbremsning .	Da denne heller ikke var tilstrækkelig kolliderede 40266 med bagenden af det holdende 10266 .
+Event	T0	holdt	EVENT	29
+Event	T1	udløste	EVENT	91
+Event	T2	kontrol	EVENT	159
+Event	T3	sporskifte	EVENT	173
+Event	T4	fulgte	EVENT	200
+Event	T5	fik	EVENT	235
+Event	T6	passagen	EVENT	245
+Event	T7	modtog	EVENT	309
+Event	T8	information	EVENT	322
+Event	T9	indledte	EVENT	372
+Event	T10	fuldbremsning	EVENT	384
+Event	T11	viste	EVENT	409
+Event	T12	iværksatte	EVENT	442
+Event	T13	nødbremsning	EVENT	469
+Event	T14	kolliderede	EVENT	523
+Event	T15	udførelse	EVENT	127
+Event	T16	var	EVENT	505
+Relation	T16	T14	CauseEffect	true	var	kolliderede
+Relation	T14	T16	EffectCause	true	kolliderede	var
+Relation	T11	T14	CauseEffect	true	viste	kolliderede
+Relation	T14	T11	EffectCause	true	kolliderede	viste
+Relation	T7	T10	CauseEffect	true	modtog	fuldbremsning
+Relation	T10	T7	EffectCause	true	fuldbremsning	modtog
+Relation	T2	T14	CauseEffect	true	kontrol	kolliderede
+Relation	T14	T2	EffectCause	true	kolliderede	kontrol
+Relation	T0	T11	NoRel	true	holdt	viste
+Relation	T0	T15	NoRel	true	holdt	udførelse
+Relation	T0	T4	NoRel	true	holdt	fulgte
+Relation	T0	T6	NoRel	true	holdt	passagen
+Relation	T0	T8	NoRel	true	holdt	information
+Relation	T1	T11	NoRel	true	udløste	viste
+Relation	T1	T12	NoRel	true	udløste	iværksatte
+Relation	T1	T13	NoRel	true	udløste	nødbremsning
+Relation	T1	T15	NoRel	true	udløste	udførelse
+Relation	T1	T2	NoRel	true	udløste	kontrol
+Relation	T1	T9	NoRel	true	udløste	indledte
+Relation	T10	T14	NoRel	true	fuldbremsning	kolliderede
+Relation	T10	T2	NoRel	true	fuldbremsning	kontrol
+Relation	T10	T4	NoRel	true	fuldbremsning	fulgte
+Relation	T10	T8	NoRel	true	fuldbremsning	information
+Relation	T11	T0	NoRel	true	viste	holdt
+Relation	T11	T13	NoRel	true	viste	nødbremsning
+Relation	T11	T15	NoRel	true	viste	udførelse
+Relation	T11	T4	NoRel	true	viste	fulgte
+Relation	T11	T5	NoRel	true	viste	fik
+Relation	T11	T7	NoRel	true	viste	modtog
+Relation	T11	T9	NoRel	true	viste	indledte
+Relation	T12	T11	NoRel	true	iværksatte	viste
+Relation	T12	T15	NoRel	true	iværksatte	udførelse
+Relation	T12	T7	NoRel	true	iværksatte	modtog
+Relation	T13	T12	NoRel	true	nødbremsning	iværksatte
+Relation	T13	T16	NoRel	true	nødbremsning	var
+Relation	T13	T2	NoRel	true	nødbremsning	kontrol
+Relation	T14	T13	NoRel	true	kolliderede	nødbremsning
+Relation	T14	T15	NoRel	true	kolliderede	udførelse
+Relation	T15	T0	NoRel	true	udførelse	holdt
+Relation	T15	T1	NoRel	true	udførelse	udløste
+Relation	T15	T11	NoRel	true	udførelse	viste
+Relation	T15	T16	NoRel	true	udførelse	var
+Relation	T15	T4	NoRel	true	udførelse	fulgte
+Relation	T15	T5	NoRel	true	udførelse	fik
+Relation	T15	T7	NoRel	true	udførelse	modtog
+Relation	T15	T9	NoRel	true	udførelse	indledte
+Relation	T16	T6	NoRel	true	var	passagen
+Relation	T16	T7	NoRel	true	var	modtog
+Relation	T16	T9	NoRel	true	var	indledte
+Relation	T2	T15	NoRel	true	kontrol	udførelse
+Relation	T2	T3	NoRel	true	kontrol	sporskifte
+Relation	T2	T4	NoRel	true	kontrol	fulgte
+Relation	T2	T6	NoRel	true	kontrol	passagen
+Relation	T2	T9	NoRel	true	kontrol	indledte
+Relation	T3	T13	NoRel	true	sporskifte	nødbremsning
+Relation	T3	T14	NoRel	true	sporskifte	kolliderede
+Relation	T3	T16	NoRel	true	sporskifte	var
+Relation	T3	T5	NoRel	true	sporskifte	fik
+Relation	T3	T6	NoRel	true	sporskifte	passagen
+Relation	T3	T8	NoRel	true	sporskifte	information
+Relation	T4	T0	NoRel	true	fulgte	holdt
+Relation	T4	T11	NoRel	true	fulgte	viste
+Relation	T4	T5	NoRel	true	fulgte	fik
+Relation	T4	T8	NoRel	true	fulgte	information
+Relation	T4	T9	NoRel	true	fulgte	indledte
+Relation	T5	T0	NoRel	true	fik	holdt
+Relation	T5	T11	NoRel	true	fik	viste
+Relation	T5	T12	NoRel	true	fik	iværksatte
+Relation	T5	T14	NoRel	true	fik	kolliderede
+Relation	T5	T3	NoRel	true	fik	sporskifte
+Relation	T5	T7	NoRel	true	fik	modtog
+Relation	T5	T9	NoRel	true	fik	indledte
+Relation	T6	T1	NoRel	true	passagen	udløste
+Relation	T6	T12	NoRel	true	passagen	iværksatte
+Relation	T6	T13	NoRel	true	passagen	nødbremsning
+Relation	T6	T14	NoRel	true	passagen	kolliderede
+Relation	T6	T7	NoRel	true	passagen	modtog
+Relation	T7	T0	NoRel	true	modtog	holdt
+Relation	T7	T1	NoRel	true	modtog	udløste
+Relation	T7	T13	NoRel	true	modtog	nødbremsning
+Relation	T7	T15	NoRel	true	modtog	udførelse
+Relation	T7	T16	NoRel	true	modtog	var
+Relation	T7	T2	NoRel	true	modtog	kontrol
+Relation	T7	T5	NoRel	true	modtog	fik
+Relation	T7	T6	NoRel	true	modtog	passagen
+Relation	T8	T1	NoRel	true	information	udløste
+Relation	T8	T11	NoRel	true	information	viste
+Relation	T8	T12	NoRel	true	information	iværksatte
+Relation	T8	T13	NoRel	true	information	nødbremsning
+Relation	T8	T7	NoRel	true	information	modtog
+Relation	T9	T0	NoRel	true	indledte	holdt
+Relation	T9	T1	NoRel	true	indledte	udløste
+Relation	T9	T10	NoRel	true	indledte	fuldbremsning
+Relation	T9	T2	NoRel	true	indledte	kontrol
+Relation	T9	T7	NoRel	true	indledte	modtog

@@ -1,0 +1,45 @@
+Text	- - Bosna Hersek Güvenlik Bakanlığı depremden sonra Hırvatistan İçişleri Bakanlığı'na - Sivil Koruma Karargahı - yardım teklifinde bulundu .	Ayrıca bakanlık , Bosna Hersek ve Hırvatistan'daki kurumlarla istişareler ve koordinasyonun ardından iki koruma ve kurtarma ekibi hazırladı .	Bunlar , 42 kurtarıcıdan oluşan Federal Sivil Koruma İdaresi ekibi ve Hırvatistan tarafından yardım kabul edilirse , eşlik eden ekipmanlarıyla birlikte etkilenen bölgeye gönderilecek olan Sırp Cumhuriyeti Sivil Koruma İdaresi'nin 18 kurtarıcıdan oluşan ekibi .	- - Acil Servis , Hırvat makamlarına müdahale etme ve destek sağlama istekliliğini gösterdi .	DSU arama ve kurtarma ekipleri , Hırvat hükûmetinin yaptığı yardım talebi üzerine Hırvatistan'a müdahale etmeye hazır olduklarını belirtti .
+Event	T0	depremden	EVENT	36
+Event	T1	bulundu	EVENT	131
+Event	T2	hazırladı	EVENT	271
+Event	T3	gönderilecek	EVENT	453
+Event	T5	gösterdi	EVENT	627
+Event	T7	talebi	EVENT	705
+Event	T9	belirtti	EVENT	768
+Event	T10	istişareler	EVENT	203
+Event	T11	koordinasyonun	EVENT	218
+Relation	T0	T1	CauseEffect	true	depremden	bulundu
+Relation	T1	T0	EffectCause	true	bulundu	depremden
+Relation	T0	T2	CauseEffect	true	depremden	hazırladı
+Relation	T2	T0	EffectCause	true	hazırladı	depremden
+Relation	T10	T11	CauseEffect	true	istişareler	koordinasyonun
+Relation	T11	T10	EffectCause	true	koordinasyonun	istişareler
+Relation	T11	T2	CauseEffect	true	koordinasyonun	hazırladı
+Relation	T2	T11	EffectCause	true	hazırladı	koordinasyonun
+Relation	T2	T5	CauseEffect	true	hazırladı	gösterdi
+Relation	T5	T2	EffectCause	true	gösterdi	hazırladı
+Relation	T0	T7	CauseEffect	true	depremden	talebi
+Relation	T7	T0	EffectCause	true	talebi	depremden
+Relation	T7	T9	CauseEffect	true	talebi	belirtti
+Relation	T9	T7	EffectCause	true	belirtti	talebi
+Relation	T0	T10	NoRel	true	depremden	istişareler
+Relation	T0	T11	NoRel	true	depremden	koordinasyonun
+Relation	T0	T3	NoRel	true	depremden	gönderilecek
+Relation	T0	T9	NoRel	true	depremden	belirtti
+Relation	T10	T2	NoRel	true	istişareler	hazırladı
+Relation	T10	T3	NoRel	true	istişareler	gönderilecek
+Relation	T10	T7	NoRel	true	istişareler	talebi
+Relation	T11	T7	NoRel	true	koordinasyonun	talebi
+Relation	T11	T9	NoRel	true	koordinasyonun	belirtti
+Relation	T2	T3	NoRel	true	hazırladı	gönderilecek
+Relation	T3	T0	NoRel	true	gönderilecek	depremden
+Relation	T3	T5	NoRel	true	gönderilecek	gösterdi
+Relation	T3	T7	NoRel	true	gönderilecek	talebi
+Relation	T3	T9	NoRel	true	gönderilecek	belirtti
+Relation	T5	T1	NoRel	true	gösterdi	bulundu
+Relation	T5	T9	NoRel	true	gösterdi	belirtti
+Relation	T7	T1	NoRel	true	talebi	bulundu
+Relation	T7	T2	NoRel	true	talebi	hazırladı
+Relation	T9	T0	NoRel	true	belirtti	depremden
+Relation	T9	T11	NoRel	true	belirtti	koordinasyonun
+Relation	T9	T5	NoRel	true	belirtti	gösterdi

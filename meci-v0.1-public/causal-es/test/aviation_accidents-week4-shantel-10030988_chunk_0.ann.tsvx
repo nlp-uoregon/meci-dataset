@@ -1,0 +1,71 @@
+Text	El VUELO 51 DE SILA ( SL51 ) fue un vuelo ruso regional de pasajeros que sufrió un accidente la noche del domingo 12 de septiembre de 2021 en el territorio de la región de Irkutsk de la Federación de Rusia .	El avión de pasajeros Let L-410 de la aerolínea rusa Aeroservis ( operado por SiLA ) realizando un vuelo interno en la ruta de Irkutsk a Kazachinskoye , realizó un aterrizaje forzoso a 4 kilómetros del aeropuerto de destino .	De las 16 personas a bordo ( 14 pasajeros y 2 miembros de la tripulación ) , 4 de ellas murieron ( 3 pasajeros y el primer oficial ) , el resto resultaron heridas .	El avión quedó destruido debido al impacto , sin embargo no se reportó fuego .	SiLA informó que la aeronave estaba en su segunda aproximación en medio de una densa niebla cuando se estrelló .
+Event	T0	vuelo	EVENT	36
+Event	T1	sufrió	EVENT	73
+Event	T2	accidente	EVENT	83
+Event	T3	operado	EVENT	274
+Event	T4	realizando	EVENT	293
+Event	T5	vuelo	EVENT	307
+Event	T6	realizó	EVENT	361
+Event	T7	murieron	EVENT	522
+Event	T8	heridas	EVENT	589
+Event	T9	impacto	EVENT	634
+Event	T10	informó	EVENT	683
+Event	T11	aproximación	EVENT	728
+Event	T12	estrelló	EVENT	780
+Relation	T2	T7	CauseEffect	true	accidente	murieron
+Relation	T7	T2	EffectCause	true	murieron	accidente
+Relation	T2	T8	CauseEffect	true	accidente	heridas
+Relation	T8	T2	EffectCause	true	heridas	accidente
+Relation	T0	T12	NoRel	true	vuelo	estrelló
+Relation	T0	T6	NoRel	true	vuelo	realizó
+Relation	T1	T0	NoRel	true	sufrió	vuelo
+Relation	T1	T12	NoRel	true	sufrió	estrelló
+Relation	T1	T5	NoRel	true	sufrió	vuelo
+Relation	T1	T6	NoRel	true	sufrió	realizó
+Relation	T10	T2	NoRel	true	informó	accidente
+Relation	T10	T4	NoRel	true	informó	realizando
+Relation	T10	T5	NoRel	true	informó	vuelo
+Relation	T11	T10	NoRel	true	aproximación	informó
+Relation	T11	T12	NoRel	true	aproximación	estrelló
+Relation	T11	T4	NoRel	true	aproximación	realizando
+Relation	T11	T8	NoRel	true	aproximación	heridas
+Relation	T11	T9	NoRel	true	aproximación	impacto
+Relation	T12	T2	NoRel	true	estrelló	accidente
+Relation	T12	T4	NoRel	true	estrelló	realizando
+Relation	T12	T5	NoRel	true	estrelló	vuelo
+Relation	T2	T0	NoRel	true	accidente	vuelo
+Relation	T2	T11	NoRel	true	accidente	aproximación
+Relation	T2	T12	NoRel	true	accidente	estrelló
+Relation	T2	T5	NoRel	true	accidente	vuelo
+Relation	T2	T6	NoRel	true	accidente	realizó
+Relation	T2	T9	NoRel	true	accidente	impacto
+Relation	T3	T0	NoRel	true	operado	vuelo
+Relation	T3	T11	NoRel	true	operado	aproximación
+Relation	T3	T2	NoRel	true	operado	accidente
+Relation	T3	T5	NoRel	true	operado	vuelo
+Relation	T3	T8	NoRel	true	operado	heridas
+Relation	T4	T0	NoRel	true	realizando	vuelo
+Relation	T4	T1	NoRel	true	realizando	sufrió
+Relation	T4	T12	NoRel	true	realizando	estrelló
+Relation	T4	T2	NoRel	true	realizando	accidente
+Relation	T4	T3	NoRel	true	realizando	operado
+Relation	T4	T9	NoRel	true	realizando	impacto
+Relation	T5	T10	NoRel	true	vuelo	informó
+Relation	T5	T12	NoRel	true	vuelo	estrelló
+Relation	T5	T6	NoRel	true	vuelo	realizó
+Relation	T5	T7	NoRel	true	vuelo	murieron
+Relation	T5	T9	NoRel	true	vuelo	impacto
+Relation	T6	T0	NoRel	true	realizó	vuelo
+Relation	T6	T1	NoRel	true	realizó	sufrió
+Relation	T6	T2	NoRel	true	realizó	accidente
+Relation	T6	T9	NoRel	true	realizó	impacto
+Relation	T7	T0	NoRel	true	murieron	vuelo
+Relation	T7	T11	NoRel	true	murieron	aproximación
+Relation	T7	T4	NoRel	true	murieron	realizando
+Relation	T7	T8	NoRel	true	murieron	heridas
+Relation	T8	T5	NoRel	true	heridas	vuelo
+Relation	T9	T0	NoRel	true	impacto	vuelo
+Relation	T9	T10	NoRel	true	impacto	informó
+Relation	T9	T11	NoRel	true	impacto	aproximación
+Relation	T9	T12	NoRel	true	impacto	estrelló
+Relation	T9	T3	NoRel	true	impacto	operado

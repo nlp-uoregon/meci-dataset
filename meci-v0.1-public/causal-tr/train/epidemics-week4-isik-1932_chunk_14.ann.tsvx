@@ -1,0 +1,38 @@
+Text	Bazı kuruluşların ' pencere dönemi ' ile ilgili olarak verdikleri süreler , " Üçüncü Ay"ın _ maksimum _ sınır olarak düşünülmesi gerektiğini kanıtlamaktadır :	- New York Sağlık Müdürlüğü’nün hazırladığı broşüre göre " New York’ta kullanılan HIV antikor testlerinde , enfekte olmuş insanların neredeyse tümü bir ayda pozitif çıkmaktadır .	Hatta bunların çoğunluğu , daha kısa surede bile pozitif sonuc vermektedir .	" - Kaliforniya AIDS Merkezi'nin 1998'de yayınladığı rehber % 96'dan daha fazla sayıda insanın , 2 ile 12 hafta arasında pozitif sonucu eline alacağını söylüyor .	Çok nadir bazı durumlarda , bunun altı aya uzayabileceği belirtiliyor .
+Event	T3	vermektedir	EVENT	401
+Event	T5	söylüyor	EVENT	567
+Event	T6	belirtiliyor	EVENT	635
+Event	T7	çıkmaktadır	EVENT	324
+Event	T1	testlerinde	EVENT	253
+Event	T2	olmuş	EVENT	275
+Event	T4	rehber	EVENT	468
+Event	T8	durumlarda	EVENT	593
+Event	T9	broşüre	EVENT	203
+Relation	T2	T1	CauseEffect	true	olmuş	testlerinde
+Relation	T1	T2	EffectCause	true	testlerinde	olmuş
+Relation	T1	T7	CauseEffect	true	testlerinde	çıkmaktadır
+Relation	T7	T1	EffectCause	true	çıkmaktadır	testlerinde
+Relation	T1	T3	CauseEffect	true	testlerinde	vermektedir
+Relation	T3	T1	EffectCause	true	vermektedir	testlerinde
+Relation	T8	T6	CauseEffect	true	durumlarda	belirtiliyor
+Relation	T6	T8	EffectCause	true	belirtiliyor	durumlarda
+Relation	T4	T6	CauseEffect	true	rehber	belirtiliyor
+Relation	T6	T4	EffectCause	true	belirtiliyor	rehber
+Relation	T4	T5	CauseEffect	true	rehber	söylüyor
+Relation	T5	T4	EffectCause	true	söylüyor	rehber
+Relation	T1	T4	NoRel	true	testlerinde	rehber
+Relation	T1	T6	NoRel	true	testlerinde	belirtiliyor
+Relation	T2	T7	NoRel	true	olmuş	çıkmaktadır
+Relation	T4	T1	NoRel	true	rehber	testlerinde
+Relation	T4	T7	NoRel	true	rehber	çıkmaktadır
+Relation	T5	T2	NoRel	true	söylüyor	olmuş
+Relation	T5	T6	NoRel	true	söylüyor	belirtiliyor
+Relation	T6	T2	NoRel	true	belirtiliyor	olmuş
+Relation	T6	T5	NoRel	true	belirtiliyor	söylüyor
+Relation	T7	T4	NoRel	true	çıkmaktadır	rehber
+Relation	T7	T8	NoRel	true	çıkmaktadır	durumlarda
+Relation	T8	T4	NoRel	true	durumlarda	rehber
+Relation	T8	T5	NoRel	true	durumlarda	söylüyor
+Relation	T9	T3	NoRel	true	broşüre	vermektedir
+Relation	T9	T5	NoRel	true	broşüre	söylüyor
+Relation	T9	T6	NoRel	true	broşüre	belirtiliyor

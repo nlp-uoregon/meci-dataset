@@ -1,0 +1,55 @@
+Text	KOLERAEPIDEMIEN I HAITI I 2010 var en en epidemi af kolera , der brød ud i Artebonitedalen i Haiti i midten af oktober 2010 .	Den 9. januar 2011 er 3_790 døde og 185 012 tilfælde raporteret .	Efterhånden bredte smitten sig til USA pga. en kvinde , der havde besøgt noget familie i Haiti .	Hun blev indlagt på et hospital i Florida .	Sygdommen har også ramt nabolandet den Dominikanske Republik .
+Event	T0	epidemi	EVENT	41
+Event	T1	døde	EVENT	154
+Event	T2	raporteret	EVENT	179
+Event	T3	smitten	EVENT	211
+Event	T4	besøgt	EVENT	258
+Event	T5	indlagt	EVENT	298
+Event	T6	Sygdommen	EVENT	333
+Event	T7	ramt	EVENT	352
+Event	T8	KOLERAEPIDEMIEN	EVENT	0
+Event	T9	kolera	EVENT	52
+Event	T10	brød ud	EVENT	65
+Relation	T9	T1	CauseEffect	true	kolera	døde
+Relation	T1	T9	EffectCause	true	døde	kolera
+Relation	T4	T5	CauseEffect	true	besøgt	indlagt
+Relation	T5	T4	EffectCause	true	indlagt	besøgt
+Relation	T4	T3	CauseEffect	true	besøgt	smitten
+Relation	T3	T4	EffectCause	true	smitten	besøgt
+Relation	T8	T1	CauseEffect	true	KOLERAEPIDEMIEN	døde
+Relation	T1	T8	EffectCause	true	døde	KOLERAEPIDEMIEN
+Relation	T0	T1	CauseEffect	true	epidemi	døde
+Relation	T1	T0	EffectCause	true	døde	epidemi
+Relation	T10	T1	CauseEffect	true	brød ud	døde
+Relation	T1	T10	EffectCause	true	døde	brød ud
+Relation	T0	T3	NoRel	true	epidemi	smitten
+Relation	T0	T8	NoRel	true	epidemi	KOLERAEPIDEMIEN
+Relation	T1	T2	NoRel	true	døde	raporteret
+Relation	T1	T3	NoRel	true	døde	smitten
+Relation	T1	T7	NoRel	true	døde	ramt
+Relation	T10	T3	NoRel	true	brød ud	smitten
+Relation	T2	T10	NoRel	true	raporteret	brød ud
+Relation	T2	T7	NoRel	true	raporteret	ramt
+Relation	T2	T8	NoRel	true	raporteret	KOLERAEPIDEMIEN
+Relation	T3	T6	NoRel	true	smitten	Sygdommen
+Relation	T3	T8	NoRel	true	smitten	KOLERAEPIDEMIEN
+Relation	T4	T8	NoRel	true	besøgt	KOLERAEPIDEMIEN
+Relation	T5	T0	NoRel	true	indlagt	epidemi
+Relation	T5	T1	NoRel	true	indlagt	døde
+Relation	T5	T6	NoRel	true	indlagt	Sygdommen
+Relation	T6	T0	NoRel	true	Sygdommen	epidemi
+Relation	T6	T4	NoRel	true	Sygdommen	besøgt
+Relation	T6	T7	NoRel	true	Sygdommen	ramt
+Relation	T6	T8	NoRel	true	Sygdommen	KOLERAEPIDEMIEN
+Relation	T7	T5	NoRel	true	ramt	indlagt
+Relation	T7	T6	NoRel	true	ramt	Sygdommen
+Relation	T8	T10	NoRel	true	KOLERAEPIDEMIEN	brød ud
+Relation	T8	T2	NoRel	true	KOLERAEPIDEMIEN	raporteret
+Relation	T8	T3	NoRel	true	KOLERAEPIDEMIEN	smitten
+Relation	T8	T7	NoRel	true	KOLERAEPIDEMIEN	ramt
+Relation	T9	T10	NoRel	true	kolera	brød ud
+Relation	T9	T2	NoRel	true	kolera	raporteret
+Relation	T9	T3	NoRel	true	kolera	smitten
+Relation	T9	T4	NoRel	true	kolera	besøgt
+Relation	T9	T5	NoRel	true	kolera	indlagt
+Relation	T9	T8	NoRel	true	kolera	KOLERAEPIDEMIEN

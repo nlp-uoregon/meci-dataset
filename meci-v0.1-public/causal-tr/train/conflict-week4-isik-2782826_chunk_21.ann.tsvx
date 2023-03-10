@@ -1,0 +1,39 @@
+Text	Bu etkiyi hayvan deneklerde ortaya koyan deneyler bulunmaktadır .	Yine başka deneyler görsel aramanın hız ve kesinliğini etkileyen uyaran faktörlerinin doğasını keşfetmiştir .	Örneğin , tek bir hedefi bulmak için gereken süre , görsel alandaki şeylerin sayısıyla yükselmektedir .	Tepki süresindeki bu artış eğer dikkat dağıtıcılar hedefe benzerse daha keskinleşirken , farklıysa daha hafif seyretmektedir .	Eğer dikkat dağıtıcılar hedeften biçim ve renk olarak çok farklıysa süre artışı hiç görülmeyebilir .
+Event	T0	deneyler	EVENT	41
+Event	T1	keşfetmiştir	EVENT	161
+Event	T2	yükselmektedir	EVENT	263
+Event	T3	artış	EVENT	301
+Event	T4	seyretmektedir	EVENT	390
+Event	T5	artışı	EVENT	480
+Event	T6	deneyler	EVENT	77
+Event	T7	aramanın	EVENT	93
+Event	T8	etkileyen	EVENT	121
+Event	T9	keskinleşirken	EVENT	352
+Relation	T6	T1	CauseEffect	true	deneyler	keşfetmiştir
+Relation	T1	T6	EffectCause	true	keşfetmiştir	deneyler
+Relation	T0	T7	NoRel	true	deneyler	aramanın
+Relation	T1	T0	NoRel	true	keşfetmiştir	deneyler
+Relation	T1	T5	NoRel	true	keşfetmiştir	artışı
+Relation	T2	T7	NoRel	true	yükselmektedir	aramanın
+Relation	T2	T8	NoRel	true	yükselmektedir	etkileyen
+Relation	T3	T1	NoRel	true	artış	keşfetmiştir
+Relation	T3	T5	NoRel	true	artış	artışı
+Relation	T3	T6	NoRel	true	artış	deneyler
+Relation	T4	T3	NoRel	true	seyretmektedir	artış
+Relation	T4	T7	NoRel	true	seyretmektedir	aramanın
+Relation	T4	T8	NoRel	true	seyretmektedir	etkileyen
+Relation	T5	T0	NoRel	true	artışı	deneyler
+Relation	T5	T3	NoRel	true	artışı	artış
+Relation	T5	T4	NoRel	true	artışı	seyretmektedir
+Relation	T5	T9	NoRel	true	artışı	keskinleşirken
+Relation	T6	T4	NoRel	true	deneyler	seyretmektedir
+Relation	T6	T5	NoRel	true	deneyler	artışı
+Relation	T6	T8	NoRel	true	deneyler	etkileyen
+Relation	T7	T0	NoRel	true	aramanın	deneyler
+Relation	T7	T8	NoRel	true	aramanın	etkileyen
+Relation	T8	T2	NoRel	true	etkileyen	yükselmektedir
+Relation	T8	T5	NoRel	true	etkileyen	artışı
+Relation	T8	T9	NoRel	true	etkileyen	keskinleşirken
+Relation	T9	T2	NoRel	true	keskinleşirken	yükselmektedir
+Relation	T9	T4	NoRel	true	keskinleşirken	seyretmektedir
+Relation	T9	T6	NoRel	true	keskinleşirken	deneyler

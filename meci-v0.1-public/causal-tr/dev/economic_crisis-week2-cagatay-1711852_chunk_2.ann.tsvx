@@ -1,0 +1,18 @@
+Text	1946 devalüasyonunun yapıldığı sırada Türkiye'nin geleneksel tarım ürünleri fazlalarının , savaştan zor durumda çıkan Avrupa'ya kolaylıkla satılabileceği , bu nedenle devalüasyon kararının hatalı bir karar olduğu öne sürülmüştür .	1930- 1945 döneminde ( 1938 hariç ) fazla veren dış ticaret dengesi bu dönemde önemli ölçüde bozulmuştur .	1950- 1960 yılları arasında , özel sermaye , öncelikle büyük ticaret ve tarım burjuvazisinin elinde birikmeye başladı .	Liberalizasyon politikası sonucu ithalatın sürekli artması ve ihracat gelirlerindeki yetersizlik dış ticaret açıklarına sebep olmuş ve dış borçlar sürekli artmıştır .	1958 yılına gelindiğinde , Türkiye artık dış borç anapara ve faiz ödemelerinde zorluk çekmeye başlamış ve dış borçlarda moratoryuma ( borç erteleme ) gitmek zorunda kalmıştır .
+Event	T11	bozulmuştur	EVENT	324
+Event	T16	artmıştır	EVENT	613
+Event	T3	artması	EVENT	509
+Event	T7	satılabileceği	EVENT	139
+Event	T8	devalüasyon	EVENT	167
+Relation	T11	T3	CauseEffect	true	bozulmuştur	artması
+Relation	T3	T11	EffectCause	true	artması	bozulmuştur
+Relation	T3	T16	CauseEffect	true	artması	artmıştır
+Relation	T16	T3	EffectCause	true	artmıştır	artması
+Relation	T11	T16	NoRel	true	bozulmuştur	artmıştır
+Relation	T11	T8	NoRel	true	bozulmuştur	devalüasyon
+Relation	T16	T11	NoRel	true	artmıştır	bozulmuştur
+Relation	T3	T7	NoRel	true	artması	satılabileceği
+Relation	T3	T8	NoRel	true	artması	devalüasyon
+Relation	T7	T16	NoRel	true	satılabileceği	artmıştır
+Relation	T8	T11	NoRel	true	devalüasyon	bozulmuştur
+Relation	T8	T16	NoRel	true	devalüasyon	artmıştır

@@ -1,0 +1,40 @@
+Text	Efter ulykken blev en eftersøgning sat i gang af den svenske redningstjeneste , men sne , vind og dårlig sigtbarhed , forhindrede en rekognoscering fra helikoptere .	Den 17. marts blev søgningen efter overlevende afblæst .	Herefter blev der alarmeret dels mandskab på landjorden , men også danske og svenske redningshelikoptere , samt et norsk P-3 Orion og amerikansk AWACS blev anvendt til at søge efter flyet i området .	Området blev under eftersøgningen karakteriseret som svært tilgængeligt med ca. 40 km til nærmeste farbare vej , mange klipper , gletsjere og desuden lavinefare .	Desuden blæste det kraftigt med snefygning til følge .
+Event	T0	forhindrede	EVENT	118
+Event	T1	rekognoscering	EVENT	133
+Event	T2	søgningen	EVENT	185
+Event	T3	afblæst	EVENT	213
+Event	T4	alarmeret	EVENT	241
+Event	T5	anvendt	EVENT	379
+Event	T6	søge	EVENT	394
+Event	T7	karakteriseret	EVENT	457
+Event	T8	blæste	EVENT	594
+Relation	T0	T3	CauseEffect	true	forhindrede	afblæst
+Relation	T3	T0	EffectCause	true	afblæst	forhindrede
+Relation	T8	T3	CauseEffect	true	blæste	afblæst
+Relation	T3	T8	EffectCause	true	afblæst	blæste
+Relation	T0	T2	NoRel	true	forhindrede	søgningen
+Relation	T0	T4	NoRel	true	forhindrede	alarmeret
+Relation	T0	T7	NoRel	true	forhindrede	karakteriseret
+Relation	T1	T5	NoRel	true	rekognoscering	anvendt
+Relation	T1	T6	NoRel	true	rekognoscering	søge
+Relation	T1	T7	NoRel	true	rekognoscering	karakteriseret
+Relation	T2	T0	NoRel	true	søgningen	forhindrede
+Relation	T2	T1	NoRel	true	søgningen	rekognoscering
+Relation	T2	T3	NoRel	true	søgningen	afblæst
+Relation	T2	T4	NoRel	true	søgningen	alarmeret
+Relation	T3	T1	NoRel	true	afblæst	rekognoscering
+Relation	T3	T4	NoRel	true	afblæst	alarmeret
+Relation	T3	T6	NoRel	true	afblæst	søge
+Relation	T3	T7	NoRel	true	afblæst	karakteriseret
+Relation	T4	T1	NoRel	true	alarmeret	rekognoscering
+Relation	T4	T3	NoRel	true	alarmeret	afblæst
+Relation	T4	T6	NoRel	true	alarmeret	søge
+Relation	T4	T8	NoRel	true	alarmeret	blæste
+Relation	T5	T0	NoRel	true	anvendt	forhindrede
+Relation	T5	T6	NoRel	true	anvendt	søge
+Relation	T5	T7	NoRel	true	anvendt	karakteriseret
+Relation	T6	T0	NoRel	true	søge	forhindrede
+Relation	T6	T4	NoRel	true	søge	alarmeret
+Relation	T6	T5	NoRel	true	søge	anvendt
+Relation	T6	T7	NoRel	true	søge	karakteriseret
+Relation	T7	T5	NoRel	true	karakteriseret	anvendt

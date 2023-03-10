@@ -1,0 +1,65 @@
+Text	El VUELO 601 DE SITA AIR fue un vuelo regional operado por Sita Air entre Katmandú , Nepal y Lukla , Nepal que se estrelló el 28 de septiembre de 2012 , matando a las diecinueve personas que viajaban a bordo .	El avión se estrelló en una de las orillas del río Manohara mientras el avión efectuaba su regreso al Aeropuerto Internacional Tribhuvan después de lo que se sospecha que fue un choque con un pájaro .	[ El avión accidentado en 2011 .	] El avión era un turbohélice bimotor civil Dornier 228-202 , en vuelo regular de la transportista aérea nepalí Sita Air , con registro 9N-AHA .	Fue producido por la planta de aeronaves alemana " Dornier Flugzeugwerke " en la Unión Europea como Dornier 228-202 y estaba en servicio desde el 8 de abril de 1987 , es decir , durante más de veinticinco años .
+Event	T0	vuelo	EVENT	32
+Event	T1	operado	EVENT	47
+Event	T2	estrelló	EVENT	114
+Event	T3	matando	EVENT	153
+Event	T4	viajaban	EVENT	191
+Event	T5	estrelló	EVENT	222
+Event	T6	efectuaba	EVENT	288
+Event	T7	regreso	EVENT	301
+Event	T8	sospecha	EVENT	368
+Event	T9	choque	EVENT	388
+Event	T10	accidentado	EVENT	422
+Event	T11	registro	EVENT	571
+Event	T12	producido	EVENT	593
+Relation	T2	T3	CauseEffect	true	estrelló	matando
+Relation	T3	T2	EffectCause	true	matando	estrelló
+Relation	T1	T0	NoRel	true	operado	vuelo
+Relation	T1	T3	NoRel	true	operado	matando
+Relation	T1	T4	NoRel	true	operado	viajaban
+Relation	T1	T6	NoRel	true	operado	efectuaba
+Relation	T10	T11	NoRel	true	accidentado	registro
+Relation	T10	T12	NoRel	true	accidentado	producido
+Relation	T10	T3	NoRel	true	accidentado	matando
+Relation	T10	T9	NoRel	true	accidentado	choque
+Relation	T11	T10	NoRel	true	registro	accidentado
+Relation	T11	T12	NoRel	true	registro	producido
+Relation	T11	T3	NoRel	true	registro	matando
+Relation	T11	T5	NoRel	true	registro	estrelló
+Relation	T12	T0	NoRel	true	producido	vuelo
+Relation	T12	T3	NoRel	true	producido	matando
+Relation	T12	T4	NoRel	true	producido	viajaban
+Relation	T12	T7	NoRel	true	producido	regreso
+Relation	T2	T1	NoRel	true	estrelló	operado
+Relation	T2	T5	NoRel	true	estrelló	estrelló
+Relation	T2	T7	NoRel	true	estrelló	regreso
+Relation	T3	T0	NoRel	true	matando	vuelo
+Relation	T3	T11	NoRel	true	matando	registro
+Relation	T3	T12	NoRel	true	matando	producido
+Relation	T3	T6	NoRel	true	matando	efectuaba
+Relation	T3	T7	NoRel	true	matando	regreso
+Relation	T3	T8	NoRel	true	matando	sospecha
+Relation	T3	T9	NoRel	true	matando	choque
+Relation	T4	T0	NoRel	true	viajaban	vuelo
+Relation	T4	T1	NoRel	true	viajaban	operado
+Relation	T4	T11	NoRel	true	viajaban	registro
+Relation	T4	T8	NoRel	true	viajaban	sospecha
+Relation	T6	T11	NoRel	true	efectuaba	registro
+Relation	T6	T7	NoRel	true	efectuaba	regreso
+Relation	T6	T8	NoRel	true	efectuaba	sospecha
+Relation	T7	T1	NoRel	true	regreso	operado
+Relation	T7	T10	NoRel	true	regreso	accidentado
+Relation	T7	T11	NoRel	true	regreso	registro
+Relation	T7	T2	NoRel	true	regreso	estrelló
+Relation	T7	T3	NoRel	true	regreso	matando
+Relation	T7	T4	NoRel	true	regreso	viajaban
+Relation	T7	T9	NoRel	true	regreso	choque
+Relation	T8	T11	NoRel	true	sospecha	registro
+Relation	T8	T2	NoRel	true	sospecha	estrelló
+Relation	T8	T6	NoRel	true	sospecha	efectuaba
+Relation	T8	T9	NoRel	true	sospecha	choque
+Relation	T9	T0	NoRel	true	choque	vuelo
+Relation	T9	T12	NoRel	true	choque	producido
+Relation	T9	T2	NoRel	true	choque	estrelló
+Relation	T9	T3	NoRel	true	choque	matando
+Relation	T9	T6	NoRel	true	choque	efectuaba

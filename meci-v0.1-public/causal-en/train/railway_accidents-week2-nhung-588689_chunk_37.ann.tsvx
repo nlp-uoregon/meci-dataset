@@ -1,0 +1,75 @@
+Text	- May 19 , 2004 –__ United States __– near Gunter , Texas : One person dies and four are injured when a BNSF Railway train fails to adhere to an after - arrival track warrant and collides with another train .	- June 1 , 2004 –__ Denmark __– Holstebro : Two regional trains enter the same track and collide head - on .	24 people were injured , 2 more seriously injured .	- June 17 , 2004_–__ India __– KARANJADI TRAIN_CRASH : 20 people die and 100 are injured when 10 carriages fall off a bridge during a monsoon - induced landslide .	- June 28 , 2004_–__ United States __– Macdona , Texas , near San Antonio : 4 people die and 51 are injured when a Union Pacific Railroad train fails to stop at a signal and collides with another train , causing lethal chlorine gas to leak out of a train car .
+Event	T0	dies	EVENT	71
+Event	T1	injured	EVENT	89
+Event	T10	landslide	EVENT	522
+Event	T11	die	EVENT	619
+Event	T12	injured	EVENT	634
+Event	T13	fails	EVENT	678
+Event	T14	stop	EVENT	687
+Event	T15	signal	EVENT	697
+Event	T16	collides	EVENT	708
+Event	T17	collide	EVENT	298
+Event	T19	fall off	EVENT	477
+Event	T2	fails	EVENT	123
+Event	T20	leak	EVENT	769
+Event	T3	warrant	EVENT	167
+Event	T4	collides	EVENT	179
+Event	T5	enter	EVENT	273
+Event	T6	injured	EVENT	333
+Event	T7	injured	EVENT	360
+Event	T8	die	EVENT	435
+Event	T9	injured	EVENT	451
+Relation	T2	T0	CauseEffect	true	fails	dies
+Relation	T0	T2	EffectCause	true	dies	fails
+Relation	T2	T1	CauseEffect	true	fails	injured
+Relation	T1	T2	EffectCause	true	injured	fails
+Relation	T17	T6	CauseEffect	true	collide	injured
+Relation	T6	T17	EffectCause	true	injured	collide
+Relation	T17	T7	CauseEffect	true	collide	injured
+Relation	T7	T17	EffectCause	true	injured	collide
+Relation	T10	T19	CauseEffect	true	landslide	fall off
+Relation	T19	T10	EffectCause	true	fall off	landslide
+Relation	T13	T11	CauseEffect	true	fails	die
+Relation	T11	T13	EffectCause	true	die	fails
+Relation	T19	T9	CauseEffect	true	fall off	injured
+Relation	T9	T19	EffectCause	true	injured	fall off
+Relation	T19	T8	CauseEffect	true	fall off	die
+Relation	T8	T19	EffectCause	true	die	fall off
+Relation	T13	T12	CauseEffect	true	fails	injured
+Relation	T12	T13	EffectCause	true	injured	fails
+Relation	T0	T13	NoRel	true	dies	fails
+Relation	T0	T20	NoRel	true	dies	leak
+Relation	T0	T3	NoRel	true	dies	warrant
+Relation	T1	T17	NoRel	true	injured	collide
+Relation	T1	T5	NoRel	true	injured	enter
+Relation	T10	T12	NoRel	true	landslide	injured
+Relation	T11	T17	NoRel	true	die	collide
+Relation	T11	T4	NoRel	true	die	collides
+Relation	T12	T14	NoRel	true	injured	stop
+Relation	T12	T8	NoRel	true	injured	die
+Relation	T13	T10	NoRel	true	fails	landslide
+Relation	T13	T8	NoRel	true	fails	die
+Relation	T13	T9	NoRel	true	fails	injured
+Relation	T14	T1	NoRel	true	stop	injured
+Relation	T14	T11	NoRel	true	stop	die
+Relation	T15	T14	NoRel	true	signal	stop
+Relation	T15	T4	NoRel	true	signal	collides
+Relation	T15	T6	NoRel	true	signal	injured
+Relation	T19	T11	NoRel	true	fall off	die
+Relation	T19	T14	NoRel	true	fall off	stop
+Relation	T2	T13	NoRel	true	fails	fails
+Relation	T20	T9	NoRel	true	leak	injured
+Relation	T3	T15	NoRel	true	warrant	signal
+Relation	T3	T5	NoRel	true	warrant	enter
+Relation	T4	T17	NoRel	true	collides	collide
+Relation	T5	T0	NoRel	true	enter	dies
+Relation	T5	T20	NoRel	true	enter	leak
+Relation	T6	T1	NoRel	true	injured	injured
+Relation	T7	T2	NoRel	true	injured	fails
+Relation	T8	T4	NoRel	true	die	collides
+Relation	T9	T10	NoRel	true	injured	landslide
+Relation	T9	T11	NoRel	true	injured	die
+Relation	T9	T14	NoRel	true	injured	stop
+Relation	T9	T15	NoRel	true	injured	signal
+Relation	T9	T16	NoRel	true	injured	collides
+Relation	T9	T6	NoRel	true	injured	injured

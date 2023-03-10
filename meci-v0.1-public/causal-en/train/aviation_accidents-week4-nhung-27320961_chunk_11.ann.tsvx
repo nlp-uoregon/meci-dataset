@@ -1,0 +1,44 @@
+Text	According to one story , Linderman exited the plane after surviving the crash , only to die after returning in an effort to help others still aboard .	_ American Cowboy__magazine editor Kendra Santos describes another story , on a visit by Linderman to Denver 's Pig ’ n ' Whistle restaurant hours before the accident , as having " been passed along — cowboy to cowboy " .	Linderman allegedly cashed a check at the restaurant and was asked for his address , which he is said to have given as " Heaven . "	He was buried in Livingston , Montana .	Nicknamed " The King " by other rodeo performers , Linderman has been honored posthumously on several occasions .
+Event	T1	exited	EVENT	35
+Event	T2	surviving	EVENT	58
+Event	T3	crash	EVENT	72
+Event	T4	die	EVENT	88
+Event	T5	returning	EVENT	98
+Event	T6	effort	EVENT	114
+Event	T7	help	EVENT	124
+Event	T8	describes	EVENT	200
+Event	T10	visit	EVENT	231
+Event	T11	accident	EVENT	309
+Event	T12	cashed	EVENT	393
+Event	T13	asked	EVENT	434
+Event	T14	said	EVENT	470
+Event	T15	given	EVENT	483
+Event	T16	buried	EVENT	512
+Event	T17	Nicknamed	EVENT	545
+Event	T9	honored	EVENT	615
+Relation	T3	T4	CauseEffect	true	crash	die
+Relation	T4	T3	EffectCause	true	die	crash
+Relation	T1	T14	NoRel	true	exited	said
+Relation	T1	T2	NoRel	true	exited	surviving
+Relation	T10	T1	NoRel	true	visit	exited
+Relation	T10	T16	NoRel	true	visit	buried
+Relation	T10	T6	NoRel	true	visit	effort
+Relation	T11	T5	NoRel	true	accident	returning
+Relation	T11	T6	NoRel	true	accident	effort
+Relation	T11	T8	NoRel	true	accident	describes
+Relation	T12	T14	NoRel	true	cashed	said
+Relation	T12	T9	NoRel	true	cashed	honored
+Relation	T13	T17	NoRel	true	asked	Nicknamed
+Relation	T14	T17	NoRel	true	said	Nicknamed
+Relation	T15	T8	NoRel	true	given	describes
+Relation	T17	T11	NoRel	true	Nicknamed	accident
+Relation	T17	T16	NoRel	true	Nicknamed	buried
+Relation	T2	T11	NoRel	true	surviving	accident
+Relation	T2	T5	NoRel	true	surviving	returning
+Relation	T3	T13	NoRel	true	crash	asked
+Relation	T3	T5	NoRel	true	crash	returning
+Relation	T4	T13	NoRel	true	die	asked
+Relation	T4	T6	NoRel	true	die	effort
+Relation	T6	T5	NoRel	true	effort	returning
+Relation	T7	T12	NoRel	true	help	cashed
+Relation	T9	T17	NoRel	true	honored	Nicknamed

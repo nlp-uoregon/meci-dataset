@@ -1,0 +1,73 @@
+Text	Amerika Birleşik Devletleri'ndeki durgunlukların birçoğuna bankacılık paniği neden oldu .	Büyük Buhran , 1929'dan 1933'e kadar çok sayıda bankada gerçekleşen çeşitli bankacılık krizlerini içeriyordu ; bunlardan bazıları ABD'nin bölgelerine özgüdür Bankaların faaliyetleri , yasaları bankaların sadece tek bir şube işletmesine izin veren eyaletlerde en yaygın olanıdır ve özellikle tek şubeli bankalar bölgelerde bulunduğunda birden fazla şubesi olan bankalara kıyasla riski önemli ölçüde arttırmaktadır .	ekonomik olarak tek bir endüstriye bağımlıdır .	Bankacılık panikleri , muhabir ağlarını düşüren Tennessee ve Kentucky'deki bir dizi bankanın çöküşüyle tetiklenen borsa çöküşünden bir yıl sonra Kasım 1930'da Yukarı - Güney'de başladı .	Aralık ayında New York , tek bir bankanın birçok şubesinde yer alan devasa banka işlemleri yaşadı .
+Event	T0	oldu	EVENT	83
+Event	T1	gerçekleşen	EVENT	146
+Event	T2	içeriyordu	EVENT	188
+Event	T3	faaliyetleri	EVENT	259
+Event	T4	arttırmaktadır	EVENT	488
+Event	T5	panikleri	EVENT	564
+Event	T6	düşüren	EVENT	593
+Event	T8	çöküşünden	EVENT	673
+Event	T9	başladı	EVENT	730
+Event	T10	yaşadı	EVENT	831
+Event	T11	Buhran	EVENT	96
+Event	T12	bağımlıdır	EVENT	540
+Event	T13	çöküşüyle	EVENT	646
+Relation	T13	T8	CauseEffect	true	çöküşüyle	çöküşünden
+Relation	T8	T13	EffectCause	true	çöküşünden	çöküşüyle
+Relation	T8	T5	CauseEffect	true	çöküşünden	panikleri
+Relation	T5	T8	EffectCause	true	panikleri	çöküşünden
+Relation	T0	T12	NoRel	true	oldu	bağımlıdır
+Relation	T0	T9	NoRel	true	oldu	başladı
+Relation	T1	T12	NoRel	true	gerçekleşen	bağımlıdır
+Relation	T1	T5	NoRel	true	gerçekleşen	panikleri
+Relation	T10	T0	NoRel	true	yaşadı	oldu
+Relation	T10	T13	NoRel	true	yaşadı	çöküşüyle
+Relation	T11	T0	NoRel	true	Buhran	oldu
+Relation	T11	T2	NoRel	true	Buhran	içeriyordu
+Relation	T11	T8	NoRel	true	Buhran	çöküşünden
+Relation	T12	T0	NoRel	true	bağımlıdır	oldu
+Relation	T12	T13	NoRel	true	bağımlıdır	çöküşüyle
+Relation	T12	T3	NoRel	true	bağımlıdır	faaliyetleri
+Relation	T12	T4	NoRel	true	bağımlıdır	arttırmaktadır
+Relation	T12	T6	NoRel	true	bağımlıdır	düşüren
+Relation	T13	T1	NoRel	true	çöküşüyle	gerçekleşen
+Relation	T13	T10	NoRel	true	çöküşüyle	yaşadı
+Relation	T13	T4	NoRel	true	çöküşüyle	arttırmaktadır
+Relation	T13	T9	NoRel	true	çöküşüyle	başladı
+Relation	T2	T1	NoRel	true	içeriyordu	gerçekleşen
+Relation	T2	T10	NoRel	true	içeriyordu	yaşadı
+Relation	T2	T12	NoRel	true	içeriyordu	bağımlıdır
+Relation	T2	T13	NoRel	true	içeriyordu	çöküşüyle
+Relation	T2	T4	NoRel	true	içeriyordu	arttırmaktadır
+Relation	T2	T5	NoRel	true	içeriyordu	panikleri
+Relation	T2	T6	NoRel	true	içeriyordu	düşüren
+Relation	T2	T8	NoRel	true	içeriyordu	çöküşünden
+Relation	T3	T0	NoRel	true	faaliyetleri	oldu
+Relation	T3	T1	NoRel	true	faaliyetleri	gerçekleşen
+Relation	T3	T10	NoRel	true	faaliyetleri	yaşadı
+Relation	T3	T11	NoRel	true	faaliyetleri	Buhran
+Relation	T3	T2	NoRel	true	faaliyetleri	içeriyordu
+Relation	T3	T5	NoRel	true	faaliyetleri	panikleri
+Relation	T3	T8	NoRel	true	faaliyetleri	çöküşünden
+Relation	T3	T9	NoRel	true	faaliyetleri	başladı
+Relation	T4	T1	NoRel	true	arttırmaktadır	gerçekleşen
+Relation	T4	T13	NoRel	true	arttırmaktadır	çöküşüyle
+Relation	T4	T3	NoRel	true	arttırmaktadır	faaliyetleri
+Relation	T4	T6	NoRel	true	arttırmaktadır	düşüren
+Relation	T4	T9	NoRel	true	arttırmaktadır	başladı
+Relation	T5	T1	NoRel	true	panikleri	gerçekleşen
+Relation	T5	T10	NoRel	true	panikleri	yaşadı
+Relation	T5	T11	NoRel	true	panikleri	Buhran
+Relation	T5	T12	NoRel	true	panikleri	bağımlıdır
+Relation	T5	T2	NoRel	true	panikleri	içeriyordu
+Relation	T5	T4	NoRel	true	panikleri	arttırmaktadır
+Relation	T5	T6	NoRel	true	panikleri	düşüren
+Relation	T6	T12	NoRel	true	düşüren	bağımlıdır
+Relation	T6	T13	NoRel	true	düşüren	çöküşüyle
+Relation	T6	T3	NoRel	true	düşüren	faaliyetleri
+Relation	T8	T3	NoRel	true	çöküşünden	faaliyetleri
+Relation	T8	T4	NoRel	true	çöküşünden	arttırmaktadır
+Relation	T9	T1	NoRel	true	başladı	gerçekleşen
+Relation	T9	T3	NoRel	true	başladı	faaliyetleri
+Relation	T9	T4	NoRel	true	başladı	arttırmaktadır
+Relation	T9	T6	NoRel	true	başladı	düşüren

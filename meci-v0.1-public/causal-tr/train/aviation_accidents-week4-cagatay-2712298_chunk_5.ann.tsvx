@@ -1,0 +1,81 @@
+Text	Mevcut koşullar , uçuşun alternatif havalimanına yönlendirilmesini gerektiriyordu .	NDB ve ADF yanıp sönmeye başladı ancak uçak hafifçe sola sapmaya başladı .	Kontrolör mürettebatı sapma konusunda bilgilendirdi , rotayı 2 ° düzeltmelerini ve piste yaklaşmak için ışıkları takip etmelerini söyledi .	Mürettebat , kontrolörün söylediklerini duydu ve pist ışıklarını gördüklerini belirtti .	Uçak pistin biraz solundayken biraz sağına gitti ve kontrolör rotayı 3 ° değiştirme talimatı verdi .
+Event	T0	gerektiriyordu	EVENT	67
+Event	T1	başladı	EVENT	109
+Event	T3	sapma	EVENT	181
+Event	T4	bilgilendirdi	EVENT	197
+Event	T5	takip	EVENT	272
+Event	T6	söyledi	EVENT	289
+Event	T7	duydu	EVENT	339
+Event	T8	belirtti	EVENT	377
+Event	T9	gitti	EVENT	431
+Event	T10	verdi	EVENT	481
+Event	T2	sapmaya	EVENT	141
+Event	T11	yaklaşmak	EVENT	248
+Relation	T0	T1	CauseEffect	true	gerektiriyordu	başladı
+Relation	T1	T0	EffectCause	true	başladı	gerektiriyordu
+Relation	T2	T4	CauseEffect	true	sapmaya	bilgilendirdi
+Relation	T4	T2	EffectCause	true	bilgilendirdi	sapmaya
+Relation	T11	T5	CauseEffect	true	yaklaşmak	takip
+Relation	T5	T11	EffectCause	true	takip	yaklaşmak
+Relation	T7	T8	CauseEffect	true	duydu	belirtti
+Relation	T8	T7	EffectCause	true	belirtti	duydu
+Relation	T7	T9	CauseEffect	true	duydu	gitti
+Relation	T9	T7	EffectCause	true	gitti	duydu
+Relation	T9	T10	CauseEffect	true	gitti	verdi
+Relation	T10	T9	EffectCause	true	verdi	gitti
+Relation	T0	T11	NoRel	true	gerektiriyordu	yaklaşmak
+Relation	T0	T2	NoRel	true	gerektiriyordu	sapmaya
+Relation	T0	T5	NoRel	true	gerektiriyordu	takip
+Relation	T0	T6	NoRel	true	gerektiriyordu	söyledi
+Relation	T0	T9	NoRel	true	gerektiriyordu	gitti
+Relation	T1	T3	NoRel	true	başladı	sapma
+Relation	T1	T5	NoRel	true	başladı	takip
+Relation	T1	T7	NoRel	true	başladı	duydu
+Relation	T1	T8	NoRel	true	başladı	belirtti
+Relation	T10	T0	NoRel	true	verdi	gerektiriyordu
+Relation	T10	T1	NoRel	true	verdi	başladı
+Relation	T10	T11	NoRel	true	verdi	yaklaşmak
+Relation	T10	T4	NoRel	true	verdi	bilgilendirdi
+Relation	T11	T1	NoRel	true	yaklaşmak	başladı
+Relation	T11	T10	NoRel	true	yaklaşmak	verdi
+Relation	T11	T2	NoRel	true	yaklaşmak	sapmaya
+Relation	T11	T3	NoRel	true	yaklaşmak	sapma
+Relation	T11	T7	NoRel	true	yaklaşmak	duydu
+Relation	T11	T8	NoRel	true	yaklaşmak	belirtti
+Relation	T2	T1	NoRel	true	sapmaya	başladı
+Relation	T2	T10	NoRel	true	sapmaya	verdi
+Relation	T2	T3	NoRel	true	sapmaya	sapma
+Relation	T2	T5	NoRel	true	sapmaya	takip
+Relation	T2	T7	NoRel	true	sapmaya	duydu
+Relation	T2	T8	NoRel	true	sapmaya	belirtti
+Relation	T2	T9	NoRel	true	sapmaya	gitti
+Relation	T3	T0	NoRel	true	sapma	gerektiriyordu
+Relation	T3	T4	NoRel	true	sapma	bilgilendirdi
+Relation	T3	T5	NoRel	true	sapma	takip
+Relation	T3	T6	NoRel	true	sapma	söyledi
+Relation	T3	T7	NoRel	true	sapma	duydu
+Relation	T3	T8	NoRel	true	sapma	belirtti
+Relation	T4	T0	NoRel	true	bilgilendirdi	gerektiriyordu
+Relation	T4	T10	NoRel	true	bilgilendirdi	verdi
+Relation	T4	T11	NoRel	true	bilgilendirdi	yaklaşmak
+Relation	T4	T5	NoRel	true	bilgilendirdi	takip
+Relation	T4	T6	NoRel	true	bilgilendirdi	söyledi
+Relation	T4	T8	NoRel	true	bilgilendirdi	belirtti
+Relation	T5	T0	NoRel	true	takip	gerektiriyordu
+Relation	T5	T1	NoRel	true	takip	başladı
+Relation	T5	T6	NoRel	true	takip	söyledi
+Relation	T5	T7	NoRel	true	takip	duydu
+Relation	T6	T7	NoRel	true	söyledi	duydu
+Relation	T6	T8	NoRel	true	söyledi	belirtti
+Relation	T7	T11	NoRel	true	duydu	yaklaşmak
+Relation	T7	T2	NoRel	true	duydu	sapmaya
+Relation	T7	T3	NoRel	true	duydu	sapma
+Relation	T8	T1	NoRel	true	belirtti	başladı
+Relation	T8	T3	NoRel	true	belirtti	sapma
+Relation	T8	T4	NoRel	true	belirtti	bilgilendirdi
+Relation	T8	T5	NoRel	true	belirtti	takip
+Relation	T8	T6	NoRel	true	belirtti	söyledi
+Relation	T9	T3	NoRel	true	gitti	sapma
+Relation	T9	T4	NoRel	true	gitti	bilgilendirdi
+Relation	T9	T6	NoRel	true	gitti	söyledi
+Relation	T9	T8	NoRel	true	gitti	belirtti

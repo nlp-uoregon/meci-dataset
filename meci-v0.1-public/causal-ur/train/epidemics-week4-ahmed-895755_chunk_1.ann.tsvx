@@ -1,0 +1,48 @@
+Text	تشخیص شدہ معاملات میں اموات کا تناسب 1 فیصد اور 5 فیصد کے درمیان میں ہے ۔	لیکن عمر اور صحت کی دوسری نوعیتوں کے لحاظ سے تبدیل بھی ہوسکتا ہے ۔	انفیکشن ایک شخص سے دوسرے میں سانس کے ذریعے منتقل ہوتا ہے ، جو عموماً کھانسی اور چھینکنے سے ہوتا ہے ۔	عموماً دو اور چودہ ایام کے درمیان میں علامات ظاہر ہونا شروع ہو جاتی ہیں ، اوسطًا پانچ دن ۔	تشخیص کرنے کا معیاری طریقہ نیزوفیرینجیئل سویب ( nasopharyngeal swab ) سے رِیورس ٹرانس ‌کِرِپشن پولی ‌مِیریز چین ری ‌ایکشن ( rRT - PCR ) کے ذریعہ ہے ۔
+Event	T1	اموات	EVENT	22
+Event	T2	انفیکشن	EVENT	141
+Event	T3	چھینکنے	EVENT	221
+Event	T4	شروع	EVENT	297
+Event	T6	تشخیص	EVENT	0
+Event	T7	تبدیل	EVENT	119
+Event	T8	منتقل	EVENT	184
+Event	T9	کھانسی	EVENT	210
+Event	T10	تشخیص	EVENT	333
+Event	T5	nasopharyngeal swab	EVENT	381
+Event	T11	rRT - PCR	EVENT	457
+Relation	T8	T2	CauseEffect	true	منتقل	انفیکشن
+Relation	T2	T8	EffectCause	true	انفیکشن	منتقل
+Relation	T1	T11	NoRel	true	اموات	rRT - PCR
+Relation	T1	T3	NoRel	true	اموات	چھینکنے
+Relation	T1	T4	NoRel	true	اموات	شروع
+Relation	T1	T9	NoRel	true	اموات	کھانسی
+Relation	T10	T11	NoRel	true	تشخیص	rRT - PCR
+Relation	T10	T4	NoRel	true	تشخیص	شروع
+Relation	T11	T1	NoRel	true	rRT - PCR	اموات
+Relation	T11	T10	NoRel	true	rRT - PCR	تشخیص
+Relation	T11	T4	NoRel	true	rRT - PCR	شروع
+Relation	T11	T7	NoRel	true	rRT - PCR	تبدیل
+Relation	T2	T5	NoRel	true	انفیکشن	nasopharyngeal swab
+Relation	T2	T6	NoRel	true	انفیکشن	تشخیص
+Relation	T2	T7	NoRel	true	انفیکشن	تبدیل
+Relation	T3	T10	NoRel	true	چھینکنے	تشخیص
+Relation	T3	T4	NoRel	true	چھینکنے	شروع
+Relation	T3	T5	NoRel	true	چھینکنے	nasopharyngeal swab
+Relation	T3	T6	NoRel	true	چھینکنے	تشخیص
+Relation	T3	T9	NoRel	true	چھینکنے	کھانسی
+Relation	T4	T1	NoRel	true	شروع	اموات
+Relation	T4	T11	NoRel	true	شروع	rRT - PCR
+Relation	T4	T7	NoRel	true	شروع	تبدیل
+Relation	T4	T8	NoRel	true	شروع	منتقل
+Relation	T5	T11	NoRel	true	nasopharyngeal swab	rRT - PCR
+Relation	T5	T2	NoRel	true	nasopharyngeal swab	انفیکشن
+Relation	T5	T8	NoRel	true	nasopharyngeal swab	منتقل
+Relation	T5	T9	NoRel	true	nasopharyngeal swab	کھانسی
+Relation	T6	T10	NoRel	true	تشخیص	تشخیص
+Relation	T6	T2	NoRel	true	تشخیص	انفیکشن
+Relation	T6	T5	NoRel	true	تشخیص	nasopharyngeal swab
+Relation	T6	T9	NoRel	true	تشخیص	کھانسی
+Relation	T7	T3	NoRel	true	تبدیل	چھینکنے
+Relation	T8	T10	NoRel	true	منتقل	تشخیص
+Relation	T8	T5	NoRel	true	منتقل	nasopharyngeal swab
+Relation	T9	T8	NoRel	true	کھانسی	منتقل

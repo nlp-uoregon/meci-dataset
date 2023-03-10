@@ -1,0 +1,42 @@
+Text	_ 76-076_ is later placed on display in park near DeBary , Florida , marked as _ 85-0125 _ , in memory of an airman killed in the Khobar Towers terrorist bombing .	21 March : Two T - 38 Talon Air Force trainer jets collide over south - east Franklin County , Alabama , during a training mission , killing 3 out of the 4 airmen aboard .	The collision creates an explosion " louder than thunder " that can be heard from miles away .	Captain Jefferson K. Dubel is the sole survivor , having ejected out of his aircraft after the collision .	The wreckage is strewn across 2 square miles of land around Franklin County Road 79. :
+Event	T0	marked	EVENT	69
+Event	T1	killed	EVENT	116
+Event	T2	bombing	EVENT	154
+Event	T3	mission	EVENT	287
+Event	T4	killing	EVENT	297
+Event	T5	creates	EVENT	350
+Event	T6	explosion	EVENT	361
+Event	T7	heard	EVENT	407
+Event	T8	collision	EVENT	526
+Event	T9	wreckage	EVENT	542
+Event	T10	strewn	EVENT	554
+Event	T11	display	EVENT	29
+Event	T12	collide	EVENT	215
+Event	T13	ejected	EVENT	488
+Relation	T2	T1	CauseEffect	true	bombing	killed
+Relation	T1	T2	EffectCause	true	killed	bombing
+Relation	T12	T4	CauseEffect	true	collide	killing
+Relation	T4	T12	EffectCause	true	killing	collide
+Relation	T6	T7	CauseEffect	true	explosion	heard
+Relation	T7	T6	EffectCause	true	heard	explosion
+Relation	T1	T3	NoRel	true	killed	mission
+Relation	T1	T5	NoRel	true	killed	creates
+Relation	T1	T7	NoRel	true	killed	heard
+Relation	T11	T0	NoRel	true	display	marked
+Relation	T11	T1	NoRel	true	display	killed
+Relation	T11	T6	NoRel	true	display	explosion
+Relation	T13	T2	NoRel	true	ejected	bombing
+Relation	T13	T3	NoRel	true	ejected	mission
+Relation	T3	T13	NoRel	true	mission	ejected
+Relation	T3	T4	NoRel	true	mission	killing
+Relation	T3	T6	NoRel	true	mission	explosion
+Relation	T4	T0	NoRel	true	killing	marked
+Relation	T5	T12	NoRel	true	creates	collide
+Relation	T5	T7	NoRel	true	creates	heard
+Relation	T5	T8	NoRel	true	creates	collision
+Relation	T6	T12	NoRel	true	explosion	collide
+Relation	T6	T4	NoRel	true	explosion	killing
+Relation	T8	T1	NoRel	true	collision	killed
+Relation	T8	T13	NoRel	true	collision	ejected
+Relation	T9	T13	NoRel	true	wreckage	ejected
+Relation	T9	T2	NoRel	true	wreckage	bombing

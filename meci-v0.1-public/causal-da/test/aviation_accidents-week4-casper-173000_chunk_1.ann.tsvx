@@ -1,0 +1,55 @@
+Text	I nogle år studerede han i USA .	Først et semester ved _ Chowan College _ , en lille baptistisk uddannelsesinstitution i _ Murfreeboro _ , North Carolina , derefter ved _ North Carolina Agricultural and Technical State University _ i _ Greensboro _ , hvor han gik sammen med Ramzi Yousefs bror , og hvorfra han fik en eksamen i 1986 som maskiningeniør .	Han rejste til Afghanistan i slutningen af 1980'erne , hvor hans brødre kæmpede mod Sovjetunionen , der invaderede Afghanistan i de år .	Han mistænkes for at have begyndt på sin anti-amerikanske terrorvirksomhed i de tidlige 1990'ere .	Ifølge undersøgelsesrapporten om 11. september 2001 er Khalid Sheikh Mohammed tidligere kuwaitisk medlem af den Osama bin Laden-ledede terrororganisation al-Qaeda , og han fungerede som " hovedarkitekt bag angrebene 11. september 2001 " .
+Event	T0	studerede	EVENT	11
+Event	T1	gik	EVENT	260
+Event	T2	fik	EVENT	311
+Event	T3	eksamen	EVENT	318
+Event	T4	rejste	EVENT	358
+Event	T5	kæmpede	EVENT	426
+Event	T6	invaderede	EVENT	458
+Event	T7	mistænkes	EVENT	495
+Event	T8	terrorvirksomhed	EVENT	549
+Event	T9	undersøgelsesrapporten	EVENT	597
+Event	T10	fungerede	EVENT	762
+Event	T11	angrebene	EVENT	796
+Relation	T6	T5	CauseEffect	true	invaderede	kæmpede
+Relation	T5	T6	EffectCause	true	kæmpede	invaderede
+Relation	T4	T7	CauseEffect	true	rejste	mistænkes
+Relation	T7	T4	EffectCause	true	mistænkes	rejste
+Relation	T0	T1	NoRel	true	studerede	gik
+Relation	T0	T9	NoRel	true	studerede	undersøgelsesrapporten
+Relation	T1	T2	NoRel	true	gik	fik
+Relation	T1	T3	NoRel	true	gik	eksamen
+Relation	T1	T5	NoRel	true	gik	kæmpede
+Relation	T1	T8	NoRel	true	gik	terrorvirksomhed
+Relation	T10	T0	NoRel	true	fungerede	studerede
+Relation	T10	T1	NoRel	true	fungerede	gik
+Relation	T10	T11	NoRel	true	fungerede	angrebene
+Relation	T10	T4	NoRel	true	fungerede	rejste
+Relation	T10	T7	NoRel	true	fungerede	mistænkes
+Relation	T10	T9	NoRel	true	fungerede	undersøgelsesrapporten
+Relation	T11	T6	NoRel	true	angrebene	invaderede
+Relation	T11	T9	NoRel	true	angrebene	undersøgelsesrapporten
+Relation	T2	T5	NoRel	true	fik	kæmpede
+Relation	T2	T6	NoRel	true	fik	invaderede
+Relation	T3	T11	NoRel	true	eksamen	angrebene
+Relation	T3	T6	NoRel	true	eksamen	invaderede
+Relation	T3	T7	NoRel	true	eksamen	mistænkes
+Relation	T3	T8	NoRel	true	eksamen	terrorvirksomhed
+Relation	T4	T11	NoRel	true	rejste	angrebene
+Relation	T4	T9	NoRel	true	rejste	undersøgelsesrapporten
+Relation	T6	T10	NoRel	true	invaderede	fungerede
+Relation	T6	T2	NoRel	true	invaderede	fik
+Relation	T6	T8	NoRel	true	invaderede	terrorvirksomhed
+Relation	T6	T9	NoRel	true	invaderede	undersøgelsesrapporten
+Relation	T7	T1	NoRel	true	mistænkes	gik
+Relation	T7	T2	NoRel	true	mistænkes	fik
+Relation	T7	T3	NoRel	true	mistænkes	eksamen
+Relation	T8	T11	NoRel	true	terrorvirksomhed	angrebene
+Relation	T8	T2	NoRel	true	terrorvirksomhed	fik
+Relation	T8	T3	NoRel	true	terrorvirksomhed	eksamen
+Relation	T8	T4	NoRel	true	terrorvirksomhed	rejste
+Relation	T8	T5	NoRel	true	terrorvirksomhed	kæmpede
+Relation	T9	T1	NoRel	true	undersøgelsesrapporten	gik
+Relation	T9	T5	NoRel	true	undersøgelsesrapporten	kæmpede
+Relation	T9	T6	NoRel	true	undersøgelsesrapporten	invaderede
+Relation	T9	T8	NoRel	true	undersøgelsesrapporten	terrorvirksomhed

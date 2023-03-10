@@ -1,0 +1,45 @@
+Text	Elektrikli sandalyenin ilk kurbanı kız arkadaşını öldürmekten yargılanan William Kemmler'dır .	6 Ağustos 1890 yılında elektrikli sandalye ile hayatına son verilmiştir .	Elektrikli sandalyenin amacı mahkûma verilen aşırı miktarda akım ile iç organlara ( beyin dahil ) hayati derecede zarar vermektir .	Ölüm genellikle kalp durmasından ( kardiyak arrest ) veya beyin ölümünden dolayı gerçekleşir .	Çoğu kişi tarafından bu idam şekli en çok acı veren idam şekli olarak görülür .
+Event	T0	verilmiştir	EVENT	155
+Event	T1	Ölüm	EVENT	301
+Event	T2	durmasından	EVENT	322
+Event	T6	idam	EVENT	420
+Event	T7	acı	EVENT	438
+Event	T8	idam	EVENT	448
+Event	T9	görülür	EVENT	466
+Event	T10	öldürmekten	EVENT	50
+Event	T3	beyin ölümünden	EVENT	359
+Event	T4	zarar vermektir	EVENT	283
+Relation	T10	T0	CauseEffect	true	öldürmekten	verilmiştir
+Relation	T0	T10	EffectCause	true	verilmiştir	öldürmekten
+Relation	T2	T1	CauseEffect	true	durmasından	Ölüm
+Relation	T1	T2	EffectCause	true	Ölüm	durmasından
+Relation	T3	T1	CauseEffect	true	beyin ölümünden	Ölüm
+Relation	T1	T3	EffectCause	true	Ölüm	beyin ölümünden
+Relation	T4	T2	CauseEffect	true	zarar vermektir	durmasından
+Relation	T2	T4	EffectCause	true	durmasından	zarar vermektir
+Relation	T4	T3	CauseEffect	true	zarar vermektir	beyin ölümünden
+Relation	T3	T4	EffectCause	true	beyin ölümünden	zarar vermektir
+Relation	T1	T9	NoRel	true	Ölüm	görülür
+Relation	T10	T1	NoRel	true	öldürmekten	Ölüm
+Relation	T10	T9	NoRel	true	öldürmekten	görülür
+Relation	T3	T0	NoRel	true	beyin ölümünden	verilmiştir
+Relation	T3	T10	NoRel	true	beyin ölümünden	öldürmekten
+Relation	T3	T2	NoRel	true	beyin ölümünden	durmasından
+Relation	T3	T7	NoRel	true	beyin ölümünden	acı
+Relation	T3	T8	NoRel	true	beyin ölümünden	idam
+Relation	T4	T10	NoRel	true	zarar vermektir	öldürmekten
+Relation	T4	T6	NoRel	true	zarar vermektir	idam
+Relation	T4	T8	NoRel	true	zarar vermektir	idam
+Relation	T6	T10	NoRel	true	idam	öldürmekten
+Relation	T6	T4	NoRel	true	idam	zarar vermektir
+Relation	T6	T7	NoRel	true	idam	acı
+Relation	T7	T0	NoRel	true	acı	verilmiştir
+Relation	T7	T1	NoRel	true	acı	Ölüm
+Relation	T7	T2	NoRel	true	acı	durmasından
+Relation	T7	T3	NoRel	true	acı	beyin ölümünden
+Relation	T7	T8	NoRel	true	acı	idam
+Relation	T8	T0	NoRel	true	idam	verilmiştir
+Relation	T8	T1	NoRel	true	idam	Ölüm
+Relation	T8	T10	NoRel	true	idam	öldürmekten
+Relation	T8	T4	NoRel	true	idam	zarar vermektir
+Relation	T9	T10	NoRel	true	görülür	öldürmekten

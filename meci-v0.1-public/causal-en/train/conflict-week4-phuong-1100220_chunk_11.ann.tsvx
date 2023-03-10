@@ -1,0 +1,79 @@
+Text	The adult humour comic _ Viz _ ran a photo strip in its issue 107 called " Four Minutes to Fall in Love " , where a boyfriend and girlfriend cram a whole relationship into the four minutes before a nuclear attack .	The four - minute warning had become the inspiration for many jokes and sketches in comedy programmes in Britain , in the same way that the Emergency Broadcast System had in the United States ( see nuclear weapons in popular culture ) .	In one episode of _ Only Fools and Horses _ , " The Russians Are Coming , " Delboy and Rodney Trotter sell fallout shelter kits and have an attack drill .	Driving towards their shelter , they are stopped by the police for speeding and asked : " You just heard the four - minute warning ? "	After being sent on their way , Rodney points out : " We died forty - five seconds ago . "
+Event	T0	ran	EVENT	31
+Event	T1	strip	EVENT	43
+Event	T2	called	EVENT	66
+Event	T3	cram	EVENT	141
+Event	T4	attack	EVENT	206
+Event	T5	warning	EVENT	233
+Event	T6	become	EVENT	245
+Event	T7	inspiration	EVENT	256
+Event	T8	jokes	EVENT	277
+Event	T9	sketches	EVENT	287
+Event	T10	Coming	EVENT	517
+Event	T11	drill	EVENT	599
+Event	T12	Driving	EVENT	607
+Event	T13	stopped	EVENT	648
+Event	T14	speeding	EVENT	674
+Event	T15	asked	EVENT	687
+Event	T16	heard	EVENT	706
+Event	T17	sent	EVENT	754
+Event	T18	died	EVENT	799
+Event	T19	comedy programmes	EVENT	299
+Event	T20	sell	EVENT	554
+Event	T21	points out :	EVENT	781
+Relation	T4	T3	CauseEffect	true	attack	cram
+Relation	T3	T4	EffectCause	true	cram	attack
+Relation	T5	T7	CauseEffect	true	warning	inspiration
+Relation	T7	T5	EffectCause	true	inspiration	warning
+Relation	T5	T8	CauseEffect	true	warning	jokes
+Relation	T8	T5	EffectCause	true	jokes	warning
+Relation	T5	T9	CauseEffect	true	warning	sketches
+Relation	T9	T5	EffectCause	true	sketches	warning
+Relation	T20	T11	CauseEffect	true	sell	drill
+Relation	T11	T20	EffectCause	true	drill	sell
+Relation	T14	T13	CauseEffect	true	speeding	stopped
+Relation	T13	T14	EffectCause	true	stopped	speeding
+Relation	T17	T21	CauseEffect	true	sent	points out :
+Relation	T21	T17	EffectCause	true	points out :	sent
+Relation	T0	T15	NoRel	true	ran	asked
+Relation	T1	T3	NoRel	true	strip	cram
+Relation	T1	T8	NoRel	true	strip	jokes
+Relation	T11	T12	NoRel	true	drill	Driving
+Relation	T11	T19	NoRel	true	drill	comedy programmes
+Relation	T11	T21	NoRel	true	drill	points out :
+Relation	T13	T0	NoRel	true	stopped	ran
+Relation	T13	T10	NoRel	true	stopped	Coming
+Relation	T14	T1	NoRel	true	speeding	strip
+Relation	T14	T8	NoRel	true	speeding	jokes
+Relation	T14	T9	NoRel	true	speeding	sketches
+Relation	T15	T13	NoRel	true	asked	stopped
+Relation	T15	T16	NoRel	true	asked	heard
+Relation	T15	T20	NoRel	true	asked	sell
+Relation	T15	T5	NoRel	true	asked	warning
+Relation	T15	T6	NoRel	true	asked	become
+Relation	T15	T8	NoRel	true	asked	jokes
+Relation	T16	T0	NoRel	true	heard	ran
+Relation	T16	T14	NoRel	true	heard	speeding
+Relation	T16	T20	NoRel	true	heard	sell
+Relation	T17	T10	NoRel	true	sent	Coming
+Relation	T17	T11	NoRel	true	sent	drill
+Relation	T17	T13	NoRel	true	sent	stopped
+Relation	T17	T2	NoRel	true	sent	called
+Relation	T18	T4	NoRel	true	died	attack
+Relation	T20	T8	NoRel	true	sell	jokes
+Relation	T21	T12	NoRel	true	points out :	Driving
+Relation	T21	T19	NoRel	true	points out :	comedy programmes
+Relation	T21	T6	NoRel	true	points out :	become
+Relation	T21	T8	NoRel	true	points out :	jokes
+Relation	T3	T12	NoRel	true	cram	Driving
+Relation	T3	T14	NoRel	true	cram	speeding
+Relation	T3	T5	NoRel	true	cram	warning
+Relation	T4	T1	NoRel	true	attack	strip
+Relation	T4	T14	NoRel	true	attack	speeding
+Relation	T4	T6	NoRel	true	attack	become
+Relation	T5	T18	NoRel	true	warning	died
+Relation	T6	T13	NoRel	true	become	stopped
+Relation	T7	T14	NoRel	true	inspiration	speeding
+Relation	T8	T18	NoRel	true	jokes	died
+Relation	T9	T1	NoRel	true	sketches	strip
+Relation	T9	T10	NoRel	true	sketches	Coming

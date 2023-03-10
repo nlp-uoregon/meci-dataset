@@ -1,0 +1,31 @@
+Text	Asıl episantr Reseda'da , Reseda Bulvarı ve Strathern Sokağı'nın kesiştiği yere denk gelir .	Depremin Northridge Depremi olarak isimlendirilmesinin sebepleri , episantrı hassas bir şekilde belirlemenin uzun zaman alması , hasarın Northridge'de yoğunlaşması ve basının Northridge ismini kullanmasıdır .	ABD Milli Jeofizik Veri Merkezi depremin hiposantrının coğrafi koordinatlarını 34 ° 12′ 47″K 118 ° 32′ 13″B ve derinliğini de 17 km ( 10.56 mil ) olarak hesaplamıştır .	Bölgenin San Andreas Fayı'na yakınlığına rağmen deprem bu fay üzerinde meydana gelmemiştir .	Depreme sebep olan fay daha önce keşfedilmemiş olan Northridge kör bindirme fayıdır ( Pico bindirme fayı olarak da bilinir ) .
+Event	T0	gelir	EVENT	85
+Event	T1	yoğunlaşması	EVENT	244
+Event	T2	kullanmasıdır	EVENT	286
+Event	T3	hesaplamıştır	EVENT	455
+Event	T4	deprem	EVENT	519
+Event	T5	meydana	EVENT	542
+Event	T7	hasarın	EVENT	222
+Event	T8	Northridge Depremi	EVENT	102
+Relation	T7	T1	CauseEffect	true	hasarın	yoğunlaşması
+Relation	T1	T7	EffectCause	true	yoğunlaşması	hasarın
+Relation	T1	T2	CauseEffect	true	yoğunlaşması	kullanmasıdır
+Relation	T2	T1	EffectCause	true	kullanmasıdır	yoğunlaşması
+Relation	T0	T2	NoRel	true	gelir	kullanmasıdır
+Relation	T0	T3	NoRel	true	gelir	hesaplamıştır
+Relation	T0	T4	NoRel	true	gelir	deprem
+Relation	T0	T5	NoRel	true	gelir	meydana
+Relation	T0	T7	NoRel	true	gelir	hasarın
+Relation	T1	T0	NoRel	true	yoğunlaşması	gelir
+Relation	T1	T8	NoRel	true	yoğunlaşması	Northridge Depremi
+Relation	T2	T4	NoRel	true	kullanmasıdır	deprem
+Relation	T2	T7	NoRel	true	kullanmasıdır	hasarın
+Relation	T4	T3	NoRel	true	deprem	hesaplamıştır
+Relation	T4	T8	NoRel	true	deprem	Northridge Depremi
+Relation	T5	T0	NoRel	true	meydana	gelir
+Relation	T5	T3	NoRel	true	meydana	hesaplamıştır
+Relation	T7	T0	NoRel	true	hasarın	gelir
+Relation	T8	T2	NoRel	true	Northridge Depremi	kullanmasıdır
+Relation	T8	T3	NoRel	true	Northridge Depremi	hesaplamıştır
+Relation	T8	T4	NoRel	true	Northridge Depremi	deprem
+Relation	T8	T7	NoRel	true	Northridge Depremi	hasarın

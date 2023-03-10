@@ -1,0 +1,53 @@
+Text	ARJANTIN COVID - 19 AŞI SKANDALI ( ) Arjantin Sağlık Bakanlığı'nda COVID - 19 aşılarının uygulanmasına ilişkin siyasi bir skandaldır .	Aşı protokolünde belirlenen sınırlamalar nedeniyle henüz bu aşıları yaptırmaya yetkili olmayan vatandaşlar Cumhurbaşkanı Alberto Fernandez'in partisiyle olan ilişkileri sayesinde aşılan malırını konu edinir .	Skandal ilk olarak kendisine " masanın altında " aşı yapılmasının teklif edildiğini iddia eden , ancak teklif edenlerin kimliğini vermeyi reddeden entelektüel Beatriz Sarlo tarafından ortaya atıldı .	Bu açıklamadan sonra şikayetle karşı karşıya kalan Buenos Aires Özerk Şehri Sağlık Bakanı Fernán Quirós eğer böyle bir yasadışı aşılama kampanyası varsa bunun Buenos Aires Özerk Şehri'nde olmadığını belirtti .	Beatriz Sarlo'dan sonra ikinci açıklama gazeteci Horacio Verbitsky tarafından yapıldı .
+Event	T0	skandaldır	EVENT	122
+Event	T2	edinir	EVENT	335
+Event	T3	Skandal	EVENT	344
+Event	T4	iddia	EVENT	428
+Event	T5	atıldı	EVENT	535
+Event	T6	açıklamadan	EVENT	547
+Event	T8	kampanyası	EVENT	680
+Event	T9	belirtti	EVENT	743
+Event	T10	açıklama	EVENT	785
+Event	T11	yapıldı	EVENT	832
+Event	T12	SKANDALI	EVENT	24
+Relation	T4	T9	CauseEffect	true	iddia	belirtti
+Relation	T9	T4	EffectCause	true	belirtti	iddia
+Relation	T4	T12	CauseEffect	true	iddia	SKANDALI
+Relation	T12	T4	EffectCause	true	SKANDALI	iddia
+Relation	T11	T12	CauseEffect	true	yapıldı	SKANDALI
+Relation	T12	T11	EffectCause	true	SKANDALI	yapıldı
+Relation	T5	T12	CauseEffect	true	atıldı	SKANDALI
+Relation	T12	T5	EffectCause	true	SKANDALI	atıldı
+Relation	T0	T2	NoRel	true	skandaldır	edinir
+Relation	T0	T3	NoRel	true	skandaldır	Skandal
+Relation	T0	T4	NoRel	true	skandaldır	iddia
+Relation	T10	T8	NoRel	true	açıklama	kampanyası
+Relation	T10	T9	NoRel	true	açıklama	belirtti
+Relation	T11	T10	NoRel	true	yapıldı	açıklama
+Relation	T11	T5	NoRel	true	yapıldı	atıldı
+Relation	T11	T8	NoRel	true	yapıldı	kampanyası
+Relation	T12	T0	NoRel	true	SKANDALI	skandaldır
+Relation	T12	T10	NoRel	true	SKANDALI	açıklama
+Relation	T12	T3	NoRel	true	SKANDALI	Skandal
+Relation	T12	T6	NoRel	true	SKANDALI	açıklamadan
+Relation	T12	T9	NoRel	true	SKANDALI	belirtti
+Relation	T2	T11	NoRel	true	edinir	yapıldı
+Relation	T2	T12	NoRel	true	edinir	SKANDALI
+Relation	T2	T4	NoRel	true	edinir	iddia
+Relation	T3	T10	NoRel	true	Skandal	açıklama
+Relation	T3	T11	NoRel	true	Skandal	yapıldı
+Relation	T3	T8	NoRel	true	Skandal	kampanyası
+Relation	T4	T10	NoRel	true	iddia	açıklama
+Relation	T4	T3	NoRel	true	iddia	Skandal
+Relation	T4	T8	NoRel	true	iddia	kampanyası
+Relation	T5	T0	NoRel	true	atıldı	skandaldır
+Relation	T5	T11	NoRel	true	atıldı	yapıldı
+Relation	T5	T8	NoRel	true	atıldı	kampanyası
+Relation	T6	T10	NoRel	true	açıklamadan	açıklama
+Relation	T6	T12	NoRel	true	açıklamadan	SKANDALI
+Relation	T6	T5	NoRel	true	açıklamadan	atıldı
+Relation	T6	T9	NoRel	true	açıklamadan	belirtti
+Relation	T8	T3	NoRel	true	kampanyası	Skandal
+Relation	T9	T0	NoRel	true	belirtti	skandaldır
+Relation	T9	T11	NoRel	true	belirtti	yapıldı
+Relation	T9	T5	NoRel	true	belirtti	atıldı

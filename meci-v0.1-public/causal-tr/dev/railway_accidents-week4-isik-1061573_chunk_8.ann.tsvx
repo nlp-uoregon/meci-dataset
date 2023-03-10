@@ -1,0 +1,62 @@
+Text	- 11 Eylül , 1986 - Pathali Pahar hemzemin geçit felaketi — Bir yerel otobüs , Assam’da bir yolcu treniyle çarpıştı ; en az yirmi sekiz kişi öldü ve altmış kişi yaralandı .	- 20 Mart , 1991 - Annupur hemzemin geçit felaketi — Madhya Pradeş’de bir otobüs pek çok araçla çarpıştı ve takiben yolcu trenine çarptı .	En az otuz beş kişi öldü ve yirmi yedi kişi yaralandı .	- Nisan 1999 - Jhukia hemzemin geçit felaketi — Düğün partili bir otobüs , yolcu treniyle çarpıştı .	En az 45 kişi öldü .
+Event	T0	felaketi	EVENT	49
+Event	T1	çarpıştı	EVENT	107
+Event	T2	öldü	EVENT	141
+Event	T3	yaralandı	EVENT	161
+Event	T4	felaketi	EVENT	215
+Event	T5	çarpıştı	EVENT	269
+Event	T6	çarptı	EVENT	303
+Event	T7	öldü	EVENT	332
+Event	T8	yaralandı	EVENT	356
+Event	T9	felaketi	EVENT	405
+Event	T10	çarpıştı	EVENT	458
+Event	T11	öldü	EVENT	483
+Relation	T1	T0	CauseEffect	true	çarpıştı	felaketi
+Relation	T0	T1	EffectCause	true	felaketi	çarpıştı
+Relation	T0	T2	CauseEffect	true	felaketi	öldü
+Relation	T2	T0	EffectCause	true	öldü	felaketi
+Relation	T0	T3	CauseEffect	true	felaketi	yaralandı
+Relation	T3	T0	EffectCause	true	yaralandı	felaketi
+Relation	T5	T6	CauseEffect	true	çarpıştı	çarptı
+Relation	T6	T5	EffectCause	true	çarptı	çarpıştı
+Relation	T6	T4	CauseEffect	true	çarptı	felaketi
+Relation	T4	T6	EffectCause	true	felaketi	çarptı
+Relation	T4	T7	CauseEffect	true	felaketi	öldü
+Relation	T7	T4	EffectCause	true	öldü	felaketi
+Relation	T4	T8	CauseEffect	true	felaketi	yaralandı
+Relation	T8	T4	EffectCause	true	yaralandı	felaketi
+Relation	T10	T9	CauseEffect	true	çarpıştı	felaketi
+Relation	T9	T10	EffectCause	true	felaketi	çarpıştı
+Relation	T9	T11	CauseEffect	true	felaketi	öldü
+Relation	T11	T9	EffectCause	true	öldü	felaketi
+Relation	T0	T6	NoRel	true	felaketi	çarptı
+Relation	T1	T11	NoRel	true	çarpıştı	öldü
+Relation	T1	T3	NoRel	true	çarpıştı	yaralandı
+Relation	T1	T4	NoRel	true	çarpıştı	felaketi
+Relation	T1	T6	NoRel	true	çarpıştı	çarptı
+Relation	T10	T0	NoRel	true	çarpıştı	felaketi
+Relation	T10	T2	NoRel	true	çarpıştı	öldü
+Relation	T10	T3	NoRel	true	çarpıştı	yaralandı
+Relation	T10	T5	NoRel	true	çarpıştı	çarpıştı
+Relation	T10	T8	NoRel	true	çarpıştı	yaralandı
+Relation	T11	T1	NoRel	true	öldü	çarpıştı
+Relation	T11	T3	NoRel	true	öldü	yaralandı
+Relation	T11	T8	NoRel	true	öldü	yaralandı
+Relation	T2	T1	NoRel	true	öldü	çarpıştı
+Relation	T2	T11	NoRel	true	öldü	öldü
+Relation	T2	T5	NoRel	true	öldü	çarpıştı
+Relation	T3	T10	NoRel	true	yaralandı	çarpıştı
+Relation	T4	T11	NoRel	true	felaketi	öldü
+Relation	T4	T3	NoRel	true	felaketi	yaralandı
+Relation	T5	T10	NoRel	true	çarpıştı	çarpıştı
+Relation	T5	T7	NoRel	true	çarpıştı	öldü
+Relation	T6	T2	NoRel	true	çarptı	öldü
+Relation	T6	T8	NoRel	true	çarptı	yaralandı
+Relation	T6	T9	NoRel	true	çarptı	felaketi
+Relation	T7	T10	NoRel	true	öldü	çarpıştı
+Relation	T7	T11	NoRel	true	öldü	öldü
+Relation	T7	T9	NoRel	true	öldü	felaketi
+Relation	T8	T3	NoRel	true	yaralandı	yaralandı
+Relation	T8	T6	NoRel	true	yaralandı	çarptı
+Relation	T9	T2	NoRel	true	felaketi	öldü
+Relation	T9	T6	NoRel	true	felaketi	çarptı

@@ -1,0 +1,67 @@
+Text	Habere göre Kasım ayında kendisine Bosna -Hersek vatandaşlığı verilirken savaş döneminde yetkililerin Halid Şeyh Muhammed'in ülkede olduğundan haberdardı ve kendisine verilen vatandaşlık devlet sırrı olarak saklanmaktaydı .	1996 yılı başlarında , 1993 Dünya Ticaret Merkezi saldırısıyla ilişkisi olduğu gerekçesiyle kendisini arayan Amerika Birleşik Devletleri yetkililerinden kaçarak tekrar Pakistan'a gitti .	Önce Pakistan'ın Karaçi şehrine , sonrasında ise Afganistan'a gitti ve Usame bin Ladin'in liderliğindeki el - Kaide'ye katıldı .	1999'da Kandehar'a geçerek el - Kaide'ye medya ve teknik yönden destek sağladı .	2000 yılı sonlarında , el - Kaide'nin Kandehar'daki medya komitesinin başına geçti .
+Event	T0	gitti	EVENT	403
+Event	T1	gitti	EVENT	473
+Event	T2	katıldı	EVENT	530
+Event	T3	geçerek	EVENT	559
+Event	T4	sağladı	EVENT	611
+Event	T5	geçti	EVENT	698
+Event	T6	verilirken	EVENT	62
+Event	T7	saldırısıyla	EVENT	274
+Event	T8	kaçarak	EVENT	377
+Event	T9	saklanmaktaydı	EVENT	207
+Event	T10	arayan	EVENT	326
+Relation	T8	T0	CauseEffect	true	kaçarak	gitti
+Relation	T0	T8	EffectCause	true	gitti	kaçarak
+Relation	T8	T1	CauseEffect	true	kaçarak	gitti
+Relation	T1	T8	EffectCause	true	gitti	kaçarak
+Relation	T1	T2	CauseEffect	true	gitti	katıldı
+Relation	T2	T1	EffectCause	true	katıldı	gitti
+Relation	T2	T4	CauseEffect	true	katıldı	sağladı
+Relation	T4	T2	EffectCause	true	sağladı	katıldı
+Relation	T3	T5	CauseEffect	true	geçerek	geçti
+Relation	T5	T3	EffectCause	true	geçti	geçerek
+Relation	T4	T5	CauseEffect	true	sağladı	geçti
+Relation	T5	T4	EffectCause	true	geçti	sağladı
+Relation	T7	T10	CauseEffect	true	saldırısıyla	arayan
+Relation	T10	T7	EffectCause	true	arayan	saldırısıyla
+Relation	T10	T8	CauseEffect	true	arayan	kaçarak
+Relation	T8	T10	EffectCause	true	kaçarak	arayan
+Relation	T10	T9	CauseEffect	true	arayan	saklanmaktaydı
+Relation	T9	T10	EffectCause	true	saklanmaktaydı	arayan
+Relation	T0	T1	NoRel	true	gitti	gitti
+Relation	T0	T10	NoRel	true	gitti	arayan
+Relation	T0	T3	NoRel	true	gitti	geçerek
+Relation	T1	T10	NoRel	true	gitti	arayan
+Relation	T1	T3	NoRel	true	gitti	geçerek
+Relation	T1	T5	NoRel	true	gitti	geçti
+Relation	T10	T2	NoRel	true	arayan	katıldı
+Relation	T10	T4	NoRel	true	arayan	sağladı
+Relation	T10	T6	NoRel	true	arayan	verilirken
+Relation	T2	T10	NoRel	true	katıldı	arayan
+Relation	T2	T5	NoRel	true	katıldı	geçti
+Relation	T2	T6	NoRel	true	katıldı	verilirken
+Relation	T2	T7	NoRel	true	katıldı	saldırısıyla
+Relation	T3	T0	NoRel	true	geçerek	gitti
+Relation	T3	T10	NoRel	true	geçerek	arayan
+Relation	T3	T2	NoRel	true	geçerek	katıldı
+Relation	T3	T6	NoRel	true	geçerek	verilirken
+Relation	T4	T10	NoRel	true	sağladı	arayan
+Relation	T4	T3	NoRel	true	sağladı	geçerek
+Relation	T4	T6	NoRel	true	sağladı	verilirken
+Relation	T4	T9	NoRel	true	sağladı	saklanmaktaydı
+Relation	T5	T0	NoRel	true	geçti	gitti
+Relation	T6	T0	NoRel	true	verilirken	gitti
+Relation	T6	T2	NoRel	true	verilirken	katıldı
+Relation	T6	T4	NoRel	true	verilirken	sağladı
+Relation	T6	T5	NoRel	true	verilirken	geçti
+Relation	T6	T7	NoRel	true	verilirken	saldırısıyla
+Relation	T6	T8	NoRel	true	verilirken	kaçarak
+Relation	T7	T3	NoRel	true	saldırısıyla	geçerek
+Relation	T7	T4	NoRel	true	saldırısıyla	sağladı
+Relation	T7	T5	NoRel	true	saldırısıyla	geçti
+Relation	T7	T8	NoRel	true	saldırısıyla	kaçarak
+Relation	T7	T9	NoRel	true	saldırısıyla	saklanmaktaydı
+Relation	T8	T3	NoRel	true	kaçarak	geçerek
+Relation	T8	T9	NoRel	true	kaçarak	saklanmaktaydı
+Relation	T9	T2	NoRel	true	saklanmaktaydı	katıldı
+Relation	T9	T3	NoRel	true	saklanmaktaydı	geçerek

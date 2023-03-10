@@ -1,0 +1,19 @@
+Text	Çin'deki insan bağışıklık yetmezlik virüsünün ( HIV ) bugünkü yayılımı çoğunlukla damar içi uyuşturucu kullanımı ve fuhuş yollarıyla gerçekleşmiştir .	Çin'de HIV'den etkilenen insanların sayısı tahminen 430.000 ile 1, 5 milyon arasındadır ya da toplam nüfusunun yaklaşık % 0, 1'i .	National Intelligence Council .	The next wave of HIV / AIDS : Nigeria , Ethiopia , Russia , India , China .	ICA 2002 - 04 D. September , 2002.
+Event	T0	yayılımı	EVENT	62
+Event	T1	kullanımı	EVENT	103
+Event	T3	wave	EVENT	323
+Event	T4	fuhuş	EVENT	116
+Event	T2	etkilenen	EVENT	166
+Relation	T1	T0	CauseEffect	true	kullanımı	yayılımı
+Relation	T0	T1	EffectCause	true	yayılımı	kullanımı
+Relation	T4	T0	CauseEffect	true	fuhuş	yayılımı
+Relation	T0	T4	EffectCause	true	yayılımı	fuhuş
+Relation	T0	T2	CauseEffect	true	yayılımı	etkilenen
+Relation	T2	T0	EffectCause	true	etkilenen	yayılımı
+Relation	T0	T3	NoRel	true	yayılımı	wave
+Relation	T1	T2	NoRel	true	kullanımı	etkilenen
+Relation	T1	T3	NoRel	true	kullanımı	wave
+Relation	T2	T4	NoRel	true	etkilenen	fuhuş
+Relation	T3	T4	NoRel	true	wave	fuhuş
+Relation	T4	T1	NoRel	true	fuhuş	kullanımı
+Relation	T4	T3	NoRel	true	fuhuş	wave

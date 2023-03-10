@@ -1,0 +1,55 @@
+Text	On September 1 , 2010 , in a direct response to the shooting , activist settlers and " hundreds " of members of Likud holding placards that read " They shoot , we build " began construction in settlements across the West Bank , including a structure at the entrance to Kiryat Arba , very near the site of the attack .	Human Rights Watch responded by calling on Hamas to cease attacks on civilians .	Ban Ki -moon , Secretary - General of the United nations , said that " this attack must be recognized for what it is : a cynical and blatant attempt to undermine the direct Israeli - Palestinian negotiations starting tomorrow . "	Palestinian Authority and Israel forces started arresting Hamas supporters .	Israeli forces killed Iyad Shilbaya , a commander of the Izz ad - Din al - Qassam Brigades , twelve others were arrested in the overnight operation between September 16 and 17 .
+Event	T0	shooting	EVENT	52
+Event	T1	holding	EVENT	118
+Event	T10	recognized	EVENT	490
+Event	T11	attempt	EVENT	540
+Event	T12	undermine	EVENT	551
+Event	T13	starting	EVENT	607
+Event	T14	arresting	EVENT	677
+Event	T15	killed	EVENT	721
+Event	T16	arrested	EVENT	818
+Event	T17	operation	EVENT	844
+Event	T18	response	EVENT	36
+Event	T19	cease	EVENT	370
+Event	T2	read	EVENT	140
+Event	T3	shoot	EVENT	152
+Event	T4	build	EVENT	163
+Event	T5	construction	EVENT	177
+Event	T6	attack	EVENT	309
+Event	T7	responded	EVENT	337
+Event	T8	said	EVENT	458
+Event	T9	attack	EVENT	475
+Relation	T0	T18	CauseEffect	true	shooting	response
+Relation	T18	T0	EffectCause	true	response	shooting
+Relation	T10	T12	CauseEffect	true	recognized	undermine
+Relation	T12	T10	EffectCause	true	undermine	recognized
+Relation	T14	T16	CauseEffect	true	arresting	arrested
+Relation	T16	T14	EffectCause	true	arrested	arresting
+Relation	T0	T10	NoRel	true	shooting	recognized
+Relation	T1	T14	NoRel	true	holding	arresting
+Relation	T1	T17	NoRel	true	holding	operation
+Relation	T1	T6	NoRel	true	holding	attack
+Relation	T10	T18	NoRel	true	recognized	response
+Relation	T10	T4	NoRel	true	recognized	build
+Relation	T11	T19	NoRel	true	attempt	cease
+Relation	T13	T6	NoRel	true	starting	attack
+Relation	T14	T15	NoRel	true	arresting	killed
+Relation	T14	T8	NoRel	true	arresting	said
+Relation	T15	T16	NoRel	true	killed	arrested
+Relation	T16	T1	NoRel	true	arrested	holding
+Relation	T16	T17	NoRel	true	arrested	operation
+Relation	T17	T13	NoRel	true	operation	starting
+Relation	T18	T1	NoRel	true	response	holding
+Relation	T19	T13	NoRel	true	cease	starting
+Relation	T19	T16	NoRel	true	cease	arrested
+Relation	T2	T18	NoRel	true	read	response
+Relation	T3	T1	NoRel	true	shoot	holding
+Relation	T3	T18	NoRel	true	shoot	response
+Relation	T3	T8	NoRel	true	shoot	said
+Relation	T4	T1	NoRel	true	build	holding
+Relation	T4	T19	NoRel	true	build	cease
+Relation	T5	T0	NoRel	true	construction	shooting
+Relation	T5	T19	NoRel	true	construction	cease
+Relation	T6	T1	NoRel	true	attack	holding
+Relation	T7	T17	NoRel	true	responded	operation
+Relation	T8	T11	NoRel	true	said	attempt

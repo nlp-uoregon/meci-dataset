@@ -1,0 +1,42 @@
+Text	Bir trenin sürücüsü ölürken , yedi yolcu da yaralandı .	İki tren de İstanbul'dan Eskişehir'e gidiyordu .	İkinci tren sinyalde geçti ve öndeki tren hareketsiz dururken ona arkadan çarptı .	Kategori : Türkiye'de demiryolu kazaları Kategori : Bilecik tarihi Kategori : 2010'da Türkiye Kategori : 2010'da demiryolu kazaları	http : / / news . bbc . co . uk / 1 / hi / world / europe / 8438277 . stm Türkiye kuzeyinde trenler çarpıştı BBC News Online 3 Ocak 2010
+Event	T0	ölürken	EVENT	20
+Event	T1	yaralandı	EVENT	44
+Event	T2	geçti	EVENT	126
+Event	T3	çarptı	EVENT	179
+Event	T4	kazaları	EVENT	311
+Event	T5	çarpıştı	EVENT	420
+Event	T6	gidiyordu	EVENT	93
+Event	T7	dururken	EVENT	158
+Event	T8	kazaları	EVENT	220
+Relation	T2	T3	CauseEffect	true	geçti	çarptı
+Relation	T3	T2	EffectCause	true	çarptı	geçti
+Relation	T7	T3	CauseEffect	true	dururken	çarptı
+Relation	T3	T7	EffectCause	true	çarptı	dururken
+Relation	T3	T0	CauseEffect	true	çarptı	ölürken
+Relation	T0	T3	EffectCause	true	ölürken	çarptı
+Relation	T3	T1	CauseEffect	true	çarptı	yaralandı
+Relation	T1	T3	EffectCause	true	yaralandı	çarptı
+Relation	T0	T1	NoRel	true	ölürken	yaralandı
+Relation	T0	T2	NoRel	true	ölürken	geçti
+Relation	T0	T6	NoRel	true	ölürken	gidiyordu
+Relation	T0	T8	NoRel	true	ölürken	kazaları
+Relation	T1	T4	NoRel	true	yaralandı	kazaları
+Relation	T1	T7	NoRel	true	yaralandı	dururken
+Relation	T2	T4	NoRel	true	geçti	kazaları
+Relation	T3	T4	NoRel	true	çarptı	kazaları
+Relation	T3	T5	NoRel	true	çarptı	çarpıştı
+Relation	T4	T0	NoRel	true	kazaları	ölürken
+Relation	T5	T0	NoRel	true	çarpıştı	ölürken
+Relation	T5	T1	NoRel	true	çarpıştı	yaralandı
+Relation	T5	T2	NoRel	true	çarpıştı	geçti
+Relation	T5	T4	NoRel	true	çarpıştı	kazaları
+Relation	T5	T6	NoRel	true	çarpıştı	gidiyordu
+Relation	T6	T1	NoRel	true	gidiyordu	yaralandı
+Relation	T6	T3	NoRel	true	gidiyordu	çarptı
+Relation	T6	T7	NoRel	true	gidiyordu	dururken
+Relation	T6	T8	NoRel	true	gidiyordu	kazaları
+Relation	T7	T1	NoRel	true	dururken	yaralandı
+Relation	T7	T4	NoRel	true	dururken	kazaları
+Relation	T7	T6	NoRel	true	dururken	gidiyordu
+Relation	T8	T4	NoRel	true	kazaları	kazaları
+Relation	T8	T6	NoRel	true	kazaları	gidiyordu

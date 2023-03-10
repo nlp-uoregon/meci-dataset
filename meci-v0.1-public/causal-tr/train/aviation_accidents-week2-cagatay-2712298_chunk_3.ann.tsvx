@@ -1,0 +1,41 @@
+Text	Bunun ardından kontrolör , 20 sefer sayılı uçuşu alternatif havalimanı olan Sary - Arka Havalimanı'na yönlendirdi ; ancak beş dakika sonra operasyon yöneticisi bu kararı değiştirdi ve 20 sefer sayılı uçuşa irtifalarını önce 4.500 metreye ( 14.800_ft ) ardından 3.000 metreye ( 9. 800_ft ) alçalarak Almatı'ya inişe başlamalarını söyledi .	Prosedürlere aykırı olarak kontrolör , görüş mesafesini veya bulutun alt yüksekliğini mürettebata söylemedi .	Mürettebat 3. 000 metre irtifada hava trafik kontrolörüyle temasa geçti ve 700 metre ( 2. 300_ft ) irtifaya inme izni aldı .	İniş 230 ° başta gerçekleştirilecekti .	Kontrolör havalimanı civarındaki sis varlığı konusunda uyardı ancak biraz azaldığını ve muhtemelen görünürlüğün minimum güvenli seviyenin altına düşmesini beklemediğini söyledi .
+Event	T0	uçuşu	EVENT	43
+Event	T1	yönlendirdi	EVENT	102
+Event	T10	söyledi	EVENT	783
+Event	T13	alçalarak	EVENT	289
+Event	T14	inişe	EVENT	309
+Event	T17	sis	EVENT	647
+Event	T18	azaldığını	EVENT	688
+Event	T2	değiştirdi	EVENT	170
+Event	T3	söyledi	EVENT	329
+Event	T6	İniş	EVENT	574
+Event	T8	uyardı	EVENT	669
+Relation	T17	T8	CauseEffect	true	sis	uyardı
+Relation	T8	T17	EffectCause	true	uyardı	sis
+Relation	T0	T18	NoRel	true	uçuşu	azaldığını
+Relation	T0	T8	NoRel	true	uçuşu	uyardı
+Relation	T1	T13	NoRel	true	yönlendirdi	alçalarak
+Relation	T1	T18	NoRel	true	yönlendirdi	azaldığını
+Relation	T1	T3	NoRel	true	yönlendirdi	söyledi
+Relation	T10	T14	NoRel	true	söyledi	inişe
+Relation	T10	T17	NoRel	true	söyledi	sis
+Relation	T13	T1	NoRel	true	alçalarak	yönlendirdi
+Relation	T13	T14	NoRel	true	alçalarak	inişe
+Relation	T13	T2	NoRel	true	alçalarak	değiştirdi
+Relation	T13	T8	NoRel	true	alçalarak	uyardı
+Relation	T14	T0	NoRel	true	inişe	uçuşu
+Relation	T14	T10	NoRel	true	inişe	söyledi
+Relation	T17	T2	NoRel	true	sis	değiştirdi
+Relation	T17	T3	NoRel	true	sis	söyledi
+Relation	T17	T6	NoRel	true	sis	İniş
+Relation	T18	T1	NoRel	true	azaldığını	yönlendirdi
+Relation	T18	T2	NoRel	true	azaldığını	değiştirdi
+Relation	T2	T6	NoRel	true	değiştirdi	İniş
+Relation	T2	T8	NoRel	true	değiştirdi	uyardı
+Relation	T3	T10	NoRel	true	söyledi	söyledi
+Relation	T3	T13	NoRel	true	söyledi	alçalarak
+Relation	T3	T2	NoRel	true	söyledi	değiştirdi
+Relation	T6	T0	NoRel	true	İniş	uçuşu
+Relation	T6	T17	NoRel	true	İniş	sis
+Relation	T8	T13	NoRel	true	uyardı	alçalarak
+Relation	T8	T6	NoRel	true	uyardı	İniş

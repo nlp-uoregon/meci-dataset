@@ -1,0 +1,73 @@
+Text	- 11 Haziran , 1962 - Salisberry hemzemin geçit felaketi – En az kırk bir kişi öldü ve yetmiş kişi yaralandı .	Olay Buenos_Aires’in banliyösünde bir ekspres trenin aşırı yüklü otobüse çarpmasıyla meydana geldi .	- 31 Ekim , 1984 - San Justo hemzemin geçit felaketi – En az kırk üç kişi öldü ve yirmi iki kişi yaralandı .	Olay yerel bir otobüsün bir banliyö treniyle çarpışmasıyla meydana geldi .	- 9 Mart , 2008 , Dolores , Buenos Aires – Bir otobüs , bir yolcu treniyle çarpıştı , 17 ölü , en az 35 yaralı .
+Event	T1	öldü	EVENT	79
+Event	T2	yaralandı	EVENT	99
+Event	T3	Olay	EVENT	111
+Event	T5	felaketi	EVENT	256
+Event	T6	öldü	EVENT	286
+Event	T7	yaralandı	EVENT	309
+Event	T8	Olay	EVENT	321
+Event	T10	çarpıştı	EVENT	471
+Event	T11	ölü	EVENT	485
+Event	T12	yaralı	EVENT	500
+Event	T13	felaketi	EVENT	48
+Event	T14	çarpmasıyla	EVENT	184
+Event	T4	çarpışmasıyla	EVENT	366
+Relation	T14	T1	CauseEffect	true	çarpmasıyla	öldü
+Relation	T1	T14	EffectCause	true	öldü	çarpmasıyla
+Relation	T14	T2	CauseEffect	true	çarpmasıyla	yaralandı
+Relation	T2	T14	EffectCause	true	yaralandı	çarpmasıyla
+Relation	T4	T6	CauseEffect	true	çarpışmasıyla	öldü
+Relation	T6	T4	EffectCause	true	öldü	çarpışmasıyla
+Relation	T4	T7	CauseEffect	true	çarpışmasıyla	yaralandı
+Relation	T7	T4	EffectCause	true	yaralandı	çarpışmasıyla
+Relation	T10	T11	CauseEffect	true	çarpıştı	ölü
+Relation	T11	T10	EffectCause	true	ölü	çarpıştı
+Relation	T10	T12	CauseEffect	true	çarpıştı	yaralı
+Relation	T12	T10	EffectCause	true	yaralı	çarpıştı
+Relation	T1	T2	NoRel	true	öldü	yaralandı
+Relation	T1	T3	NoRel	true	öldü	Olay
+Relation	T10	T3	NoRel	true	çarpıştı	Olay
+Relation	T11	T14	NoRel	true	ölü	çarpmasıyla
+Relation	T11	T4	NoRel	true	ölü	çarpışmasıyla
+Relation	T11	T5	NoRel	true	ölü	felaketi
+Relation	T11	T8	NoRel	true	ölü	Olay
+Relation	T12	T11	NoRel	true	yaralı	ölü
+Relation	T12	T14	NoRel	true	yaralı	çarpmasıyla
+Relation	T12	T4	NoRel	true	yaralı	çarpışmasıyla
+Relation	T12	T8	NoRel	true	yaralı	Olay
+Relation	T13	T1	NoRel	true	felaketi	öldü
+Relation	T13	T6	NoRel	true	felaketi	öldü
+Relation	T14	T3	NoRel	true	çarpmasıyla	Olay
+Relation	T14	T5	NoRel	true	çarpmasıyla	felaketi
+Relation	T14	T6	NoRel	true	çarpmasıyla	öldü
+Relation	T2	T10	NoRel	true	yaralandı	çarpıştı
+Relation	T3	T1	NoRel	true	Olay	öldü
+Relation	T3	T13	NoRel	true	Olay	felaketi
+Relation	T3	T8	NoRel	true	Olay	Olay
+Relation	T4	T12	NoRel	true	çarpışmasıyla	yaralı
+Relation	T4	T14	NoRel	true	çarpışmasıyla	çarpmasıyla
+Relation	T5	T1	NoRel	true	felaketi	öldü
+Relation	T5	T10	NoRel	true	felaketi	çarpıştı
+Relation	T5	T11	NoRel	true	felaketi	ölü
+Relation	T5	T13	NoRel	true	felaketi	felaketi
+Relation	T5	T4	NoRel	true	felaketi	çarpışmasıyla
+Relation	T5	T6	NoRel	true	felaketi	öldü
+Relation	T6	T12	NoRel	true	öldü	yaralı
+Relation	T6	T13	NoRel	true	öldü	felaketi
+Relation	T6	T14	NoRel	true	öldü	çarpmasıyla
+Relation	T6	T3	NoRel	true	öldü	Olay
+Relation	T6	T5	NoRel	true	öldü	felaketi
+Relation	T7	T1	NoRel	true	yaralandı	öldü
+Relation	T7	T10	NoRel	true	yaralandı	çarpıştı
+Relation	T7	T12	NoRel	true	yaralandı	yaralı
+Relation	T7	T13	NoRel	true	yaralandı	felaketi
+Relation	T7	T14	NoRel	true	yaralandı	çarpmasıyla
+Relation	T7	T3	NoRel	true	yaralandı	Olay
+Relation	T7	T5	NoRel	true	yaralandı	felaketi
+Relation	T7	T6	NoRel	true	yaralandı	öldü
+Relation	T7	T8	NoRel	true	yaralandı	Olay
+Relation	T8	T1	NoRel	true	Olay	öldü
+Relation	T8	T11	NoRel	true	Olay	ölü
+Relation	T8	T2	NoRel	true	Olay	yaralandı
+Relation	T8	T6	NoRel	true	Olay	öldü
+Relation	T8	T7	NoRel	true	Olay	yaralandı

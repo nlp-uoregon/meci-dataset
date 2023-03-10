@@ -1,0 +1,28 @@
+Text	2020 BINGÖL DEPREMI , 14 Haziran 2020 tarihinde yerel saatle 17.24'te Türkiye'nin Bingöl ilinde meydana gelen 5.8 büyüklüğündeki deprem .	Söz konusu depremin ardından büyüklükleri 5.5 ile 1.0 arasında olan 392 adet artçı deprem meydana geldi .	Deprem Karlıova ilçesinin Kaynarpınar köyü ile Yedisu ilçesinin Elmalı ve Dinarbey köylerinde bazı hasarlara yol açtı .	Kaynarpınar'da bir karakolun gözetleme kulesinin yıkılması sonucu bir korucu öldü .	Elmalı ve Dinarbey'de 10 evde çökme meydana geldi .
+Event	T0	DEPREMI	EVENT	12
+Event	T1	deprem	EVENT	129
+Event	T2	depremin	EVENT	149
+Event	T3	geldi	EVENT	236
+Event	T4	Deprem	EVENT	244
+Event	T5	açtı	EVENT	357
+Event	T6	öldü	EVENT	441
+Event	T7	geldi	EVENT	492
+Event	T8	yıkılması	EVENT	413
+Relation	T8	T6	CauseEffect	true	yıkılması	öldü
+Relation	T6	T8	EffectCause	true	öldü	yıkılması
+Relation	T0	T4	NoRel	true	DEPREMI	Deprem
+Relation	T0	T8	NoRel	true	DEPREMI	yıkılması
+Relation	T1	T2	NoRel	true	deprem	depremin
+Relation	T1	T3	NoRel	true	deprem	geldi
+Relation	T1	T4	NoRel	true	deprem	Deprem
+Relation	T2	T7	NoRel	true	depremin	geldi
+Relation	T3	T0	NoRel	true	geldi	DEPREMI
+Relation	T3	T1	NoRel	true	geldi	deprem
+Relation	T3	T4	NoRel	true	geldi	Deprem
+Relation	T3	T8	NoRel	true	geldi	yıkılması
+Relation	T4	T2	NoRel	true	Deprem	depremin
+Relation	T4	T3	NoRel	true	Deprem	geldi
+Relation	T5	T7	NoRel	true	açtı	geldi
+Relation	T6	T2	NoRel	true	öldü	depremin
+Relation	T7	T8	NoRel	true	geldi	yıkılması
+Relation	T8	T4	NoRel	true	yıkılması	Deprem

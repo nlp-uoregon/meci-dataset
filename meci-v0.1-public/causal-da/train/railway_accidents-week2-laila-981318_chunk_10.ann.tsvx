@@ -1,0 +1,71 @@
+Text	Senere på dagen kom det frem , at seks personer var dræbt som følge af den voldsomme ulykke .	Dette tal blev opjusteret dagen derpå , den 3. januar , på et nyt pressemøde , hvor det endelige antal dræbte var otte .	Politiet henviste til , at toget havde været svært tilgængeligt grundet den massive ødelæggelse , og at man derfor først fandt yderligere to lig i løbet af natten til den 3. januar .	De fleste af de omkomne befandt sig til venstre i togets forreste del , der blev hårdest ramt .	På grund af nogle af de afdødes meget voldsomme læsioner anvendte retsmedicinerne DNA og tandkort for at foretage en endelig identifikation .
+Event	T0	kom	EVENT	16
+Event	T1	dræbt	EVENT	52
+Event	T10	ramt	EVENT	487
+Event	T11	anvendte	EVENT	551
+Event	T12	foretage	EVENT	599
+Event	T13	identifikation	EVENT	619
+Event	T2	ulykke	EVENT	85
+Event	T3	opjusteret	EVENT	109
+Event	T4	dræbte	EVENT	197
+Event	T6	ødelæggelse	EVENT	299
+Event	T7	fandt	EVENT	336
+Event	T8	lig	EVENT	356
+Event	T9	befandt	EVENT	422
+Relation	T2	T1	CauseEffect	true	ulykke	dræbt
+Relation	T1	T2	EffectCause	true	dræbt	ulykke
+Relation	T2	T4	CauseEffect	true	ulykke	dræbte
+Relation	T4	T2	EffectCause	true	dræbte	ulykke
+Relation	T8	T3	CauseEffect	true	lig	opjusteret
+Relation	T3	T8	EffectCause	true	opjusteret	lig
+Relation	T2	T6	CauseEffect	true	ulykke	ødelæggelse
+Relation	T6	T2	EffectCause	true	ødelæggelse	ulykke
+Relation	T0	T11	NoRel	true	kom	anvendte
+Relation	T0	T13	NoRel	true	kom	identifikation
+Relation	T0	T2	NoRel	true	kom	ulykke
+Relation	T0	T3	NoRel	true	kom	opjusteret
+Relation	T0	T6	NoRel	true	kom	ødelæggelse
+Relation	T0	T9	NoRel	true	kom	befandt
+Relation	T1	T3	NoRel	true	dræbt	opjusteret
+Relation	T1	T4	NoRel	true	dræbt	dræbte
+Relation	T1	T9	NoRel	true	dræbt	befandt
+Relation	T10	T0	NoRel	true	ramt	kom
+Relation	T10	T1	NoRel	true	ramt	dræbt
+Relation	T10	T11	NoRel	true	ramt	anvendte
+Relation	T10	T3	NoRel	true	ramt	opjusteret
+Relation	T10	T4	NoRel	true	ramt	dræbte
+Relation	T11	T0	NoRel	true	anvendte	kom
+Relation	T11	T1	NoRel	true	anvendte	dræbt
+Relation	T11	T12	NoRel	true	anvendte	foretage
+Relation	T12	T1	NoRel	true	foretage	dræbt
+Relation	T12	T11	NoRel	true	foretage	anvendte
+Relation	T12	T2	NoRel	true	foretage	ulykke
+Relation	T12	T6	NoRel	true	foretage	ødelæggelse
+Relation	T12	T7	NoRel	true	foretage	fandt
+Relation	T12	T8	NoRel	true	foretage	lig
+Relation	T12	T9	NoRel	true	foretage	befandt
+Relation	T13	T10	NoRel	true	identifikation	ramt
+Relation	T13	T12	NoRel	true	identifikation	foretage
+Relation	T13	T3	NoRel	true	identifikation	opjusteret
+Relation	T13	T7	NoRel	true	identifikation	fandt
+Relation	T13	T8	NoRel	true	identifikation	lig
+Relation	T2	T0	NoRel	true	ulykke	kom
+Relation	T2	T10	NoRel	true	ulykke	ramt
+Relation	T2	T3	NoRel	true	ulykke	opjusteret
+Relation	T2	T7	NoRel	true	ulykke	fandt
+Relation	T3	T4	NoRel	true	opjusteret	dræbte
+Relation	T4	T11	NoRel	true	dræbte	anvendte
+Relation	T4	T8	NoRel	true	dræbte	lig
+Relation	T6	T8	NoRel	true	ødelæggelse	lig
+Relation	T6	T9	NoRel	true	ødelæggelse	befandt
+Relation	T7	T0	NoRel	true	fandt	kom
+Relation	T7	T1	NoRel	true	fandt	dræbt
+Relation	T7	T10	NoRel	true	fandt	ramt
+Relation	T7	T11	NoRel	true	fandt	anvendte
+Relation	T7	T3	NoRel	true	fandt	opjusteret
+Relation	T7	T9	NoRel	true	fandt	befandt
+Relation	T9	T1	NoRel	true	befandt	dræbt
+Relation	T9	T10	NoRel	true	befandt	ramt
+Relation	T9	T13	NoRel	true	befandt	identifikation
+Relation	T9	T3	NoRel	true	befandt	opjusteret
+Relation	T9	T6	NoRel	true	befandt	ødelæggelse

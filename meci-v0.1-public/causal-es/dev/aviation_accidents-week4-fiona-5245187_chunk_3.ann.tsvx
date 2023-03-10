@@ -1,0 +1,123 @@
+Text	Los curiosos empezaron a lanzar piedras a los soldados como represalia .	El agua para combatir el incendio se retrasó varias horas debido a la escasez de camiones de bomberos , por lo que los civiles trataron de luchar contra el fuego a mano con cubos de plástico .	Los camiones con agua procedentes de una construcción cercana tuvieron dificultades para llegar al lugar debido a las estrechas carreteras del barrio .	El acceso al lugar estuvo inicialmente restringido por el fuego , y más tarde por los fuertes vientos y precipitaciones .	Los rescatadores expresaron su preocupación de que un apartamento de tres plantas se colapsase y cayese .
+Event	T0	empezaron	EVENT	13
+Event	T1	represalia	EVENT	60
+Event	T2	combatir	EVENT	86
+Event	T3	incendio	EVENT	98
+Event	T4	retrasó	EVENT	110
+Event	T5	trataron	EVENT	200
+Event	T6	luchar	EVENT	212
+Event	T7	construcción	EVENT	307
+Event	T8	dificultades	EVENT	337
+Event	T9	acceso	EVENT	421
+Event	T10	restringido	EVENT	457
+Event	T11	fuego	EVENT	476
+Event	T12	vientos	EVENT	512
+Event	T13	precipitaciones	EVENT	522
+Event	T14	expresaron	EVENT	557
+Event	T15	preocupación	EVENT	571
+Event	T16	colapsase	EVENT	625
+Event	T17	cayese	EVENT	637
+Relation	T13	T10	CauseEffect	true	precipitaciones	restringido
+Relation	T10	T13	EffectCause	true	restringido	precipitaciones
+Relation	T0	T1	NoRel	true	empezaron	represalia
+Relation	T0	T11	NoRel	true	empezaron	fuego
+Relation	T0	T6	NoRel	true	empezaron	luchar
+Relation	T0	T8	NoRel	true	empezaron	dificultades
+Relation	T1	T0	NoRel	true	represalia	empezaron
+Relation	T1	T15	NoRel	true	represalia	preocupación
+Relation	T1	T17	NoRel	true	represalia	cayese
+Relation	T1	T3	NoRel	true	represalia	incendio
+Relation	T1	T5	NoRel	true	represalia	trataron
+Relation	T1	T6	NoRel	true	represalia	luchar
+Relation	T10	T0	NoRel	true	restringido	empezaron
+Relation	T10	T12	NoRel	true	restringido	vientos
+Relation	T10	T17	NoRel	true	restringido	cayese
+Relation	T10	T4	NoRel	true	restringido	retrasó
+Relation	T10	T5	NoRel	true	restringido	trataron
+Relation	T11	T13	NoRel	true	fuego	precipitaciones
+Relation	T11	T15	NoRel	true	fuego	preocupación
+Relation	T11	T2	NoRel	true	fuego	combatir
+Relation	T11	T4	NoRel	true	fuego	retrasó
+Relation	T11	T9	NoRel	true	fuego	acceso
+Relation	T12	T0	NoRel	true	vientos	empezaron
+Relation	T12	T10	NoRel	true	vientos	restringido
+Relation	T12	T14	NoRel	true	vientos	expresaron
+Relation	T12	T2	NoRel	true	vientos	combatir
+Relation	T12	T3	NoRel	true	vientos	incendio
+Relation	T13	T11	NoRel	true	precipitaciones	fuego
+Relation	T13	T12	NoRel	true	precipitaciones	vientos
+Relation	T13	T16	NoRel	true	precipitaciones	colapsase
+Relation	T13	T3	NoRel	true	precipitaciones	incendio
+Relation	T13	T5	NoRel	true	precipitaciones	trataron
+Relation	T13	T9	NoRel	true	precipitaciones	acceso
+Relation	T14	T13	NoRel	true	expresaron	precipitaciones
+Relation	T14	T3	NoRel	true	expresaron	incendio
+Relation	T14	T5	NoRel	true	expresaron	trataron
+Relation	T14	T6	NoRel	true	expresaron	luchar
+Relation	T14	T8	NoRel	true	expresaron	dificultades
+Relation	T14	T9	NoRel	true	expresaron	acceso
+Relation	T15	T10	NoRel	true	preocupación	restringido
+Relation	T15	T11	NoRel	true	preocupación	fuego
+Relation	T15	T14	NoRel	true	preocupación	expresaron
+Relation	T15	T5	NoRel	true	preocupación	trataron
+Relation	T15	T9	NoRel	true	preocupación	acceso
+Relation	T16	T0	NoRel	true	colapsase	empezaron
+Relation	T16	T14	NoRel	true	colapsase	expresaron
+Relation	T16	T5	NoRel	true	colapsase	trataron
+Relation	T16	T8	NoRel	true	colapsase	dificultades
+Relation	T16	T9	NoRel	true	colapsase	acceso
+Relation	T17	T1	NoRel	true	cayese	represalia
+Relation	T17	T11	NoRel	true	cayese	fuego
+Relation	T17	T16	NoRel	true	cayese	colapsase
+Relation	T17	T4	NoRel	true	cayese	retrasó
+Relation	T17	T5	NoRel	true	cayese	trataron
+Relation	T17	T6	NoRel	true	cayese	luchar
+Relation	T2	T0	NoRel	true	combatir	empezaron
+Relation	T2	T1	NoRel	true	combatir	represalia
+Relation	T2	T11	NoRel	true	combatir	fuego
+Relation	T2	T12	NoRel	true	combatir	vientos
+Relation	T2	T15	NoRel	true	combatir	preocupación
+Relation	T2	T3	NoRel	true	combatir	incendio
+Relation	T2	T5	NoRel	true	combatir	trataron
+Relation	T2	T7	NoRel	true	combatir	construcción
+Relation	T2	T9	NoRel	true	combatir	acceso
+Relation	T3	T0	NoRel	true	incendio	empezaron
+Relation	T3	T11	NoRel	true	incendio	fuego
+Relation	T3	T12	NoRel	true	incendio	vientos
+Relation	T3	T2	NoRel	true	incendio	combatir
+Relation	T3	T4	NoRel	true	incendio	retrasó
+Relation	T3	T6	NoRel	true	incendio	luchar
+Relation	T3	T9	NoRel	true	incendio	acceso
+Relation	T4	T0	NoRel	true	retrasó	empezaron
+Relation	T4	T1	NoRel	true	retrasó	represalia
+Relation	T4	T12	NoRel	true	retrasó	vientos
+Relation	T4	T13	NoRel	true	retrasó	precipitaciones
+Relation	T4	T15	NoRel	true	retrasó	preocupación
+Relation	T4	T5	NoRel	true	retrasó	trataron
+Relation	T4	T6	NoRel	true	retrasó	luchar
+Relation	T5	T0	NoRel	true	trataron	empezaron
+Relation	T5	T10	NoRel	true	trataron	restringido
+Relation	T5	T15	NoRel	true	trataron	preocupación
+Relation	T5	T6	NoRel	true	trataron	luchar
+Relation	T6	T11	NoRel	true	luchar	fuego
+Relation	T6	T12	NoRel	true	luchar	vientos
+Relation	T6	T13	NoRel	true	luchar	precipitaciones
+Relation	T6	T16	NoRel	true	luchar	colapsase
+Relation	T7	T1	NoRel	true	construcción	represalia
+Relation	T7	T11	NoRel	true	construcción	fuego
+Relation	T7	T14	NoRel	true	construcción	expresaron
+Relation	T7	T5	NoRel	true	construcción	trataron
+Relation	T7	T8	NoRel	true	construcción	dificultades
+Relation	T8	T10	NoRel	true	dificultades	restringido
+Relation	T8	T11	NoRel	true	dificultades	fuego
+Relation	T8	T14	NoRel	true	dificultades	expresaron
+Relation	T8	T16	NoRel	true	dificultades	colapsase
+Relation	T8	T17	NoRel	true	dificultades	cayese
+Relation	T8	T2	NoRel	true	dificultades	combatir
+Relation	T8	T5	NoRel	true	dificultades	trataron
+Relation	T8	T7	NoRel	true	dificultades	construcción
+Relation	T8	T9	NoRel	true	dificultades	acceso
+Relation	T9	T13	NoRel	true	acceso	precipitaciones
+Relation	T9	T16	NoRel	true	acceso	colapsase
+Relation	T9	T2	NoRel	true	acceso	combatir
+Relation	T9	T8	NoRel	true	acceso	dificultades

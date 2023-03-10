@@ -1,0 +1,19 @@
+Text	Kitleler bu tarihi beklemeyip 9 Kasım’da sokaklara döküldüler .	Silahlı işçiler ve askerler sokakları doldurdular .	Bunun üstüne 9 Kasım sabahı Berlin’de Spartakistler ve Devrimci İşçi Temsilcileri iki ayrı genel grev çağrısı yapınca işçiler greve çıktı .	Bir grup Liebknecht’in önderliğinde İmparatorluk Sarayı’nı bir grup da Emniyet Sarayı’nı ele geçirdi .	USPD’nin sol kanadından olan Eichorn devimci polis şefi ilan edildi .
+Event	T0	döküldüler	EVENT	51
+Event	T1	doldurdular	EVENT	102
+Event	T2	yapınca	EVENT	226
+Event	T3	çıktı	EVENT	248
+Event	T4	geçirdi	EVENT	349
+Event	T5	edildi	EVENT	420
+Relation	T2	T3	CauseEffect	true	yapınca	çıktı
+Relation	T3	T2	EffectCause	true	çıktı	yapınca
+Relation	T4	T5	CauseEffect	true	geçirdi	edildi
+Relation	T5	T4	EffectCause	true	edildi	geçirdi
+Relation	T0	T1	CauseEffect	true	döküldüler	doldurdular
+Relation	T1	T0	EffectCause	true	doldurdular	döküldüler
+Relation	T0	T3	NoRel	true	döküldüler	çıktı
+Relation	T2	T0	NoRel	true	yapınca	döküldüler
+Relation	T3	T5	NoRel	true	çıktı	edildi
+Relation	T4	T0	NoRel	true	geçirdi	döküldüler
+Relation	T4	T3	NoRel	true	geçirdi	çıktı
+Relation	T5	T2	NoRel	true	edildi	yapınca

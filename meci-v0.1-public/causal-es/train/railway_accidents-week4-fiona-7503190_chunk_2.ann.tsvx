@@ -1,0 +1,74 @@
+Text	El accidente ocurrió en una curva , motivo por el cual ninguno de los maquinistas tuvo oportunidad de ver el otro tren , o intentar una frenada de emergencia , antes de la colisión .	Los dos primeros vagones y la parte delantera del tercer coche ET1016 , y el carro del conductor del ET1021 , se desintegraron en el impacto ; el segundo coche de ET1021 descarriló y fue gravemente dañado ; los otros coches de ambos trenes se mantuvieron casi intactos .	Un hospital de campaña se creó adyacente al lugar del accidente .	Algunos de los heridos fueron transportados por helicóptero a un hospital .	Se hizo un llamamiento a la población local para donar sangre .
+Event	T0	ocurrió	EVENT	13
+Event	T1	intentar	EVENT	123
+Event	T2	frenada	EVENT	136
+Event	T3	colisión	EVENT	172
+Event	T4	desintegraron	EVENT	296
+Event	T5	impacto	EVENT	316
+Event	T6	descarriló	EVENT	353
+Event	T7	dañado	EVENT	381
+Event	T8	mantuvieron	EVENT	426
+Event	T9	accidente	EVENT	508
+Event	T10	heridos	EVENT	535
+Event	T11	transportados	EVENT	550
+Event	T12	hizo	EVENT	599
+Event	T13	llamamiento	EVENT	607
+Relation	T5	T4	CauseEffect	true	impacto	desintegraron
+Relation	T4	T5	EffectCause	true	desintegraron	impacto
+Relation	T6	T7	CauseEffect	true	descarriló	dañado
+Relation	T7	T6	EffectCause	true	dañado	descarriló
+Relation	T0	T1	NoRel	true	ocurrió	intentar
+Relation	T0	T10	NoRel	true	ocurrió	heridos
+Relation	T0	T13	NoRel	true	ocurrió	llamamiento
+Relation	T0	T4	NoRel	true	ocurrió	desintegraron
+Relation	T0	T8	NoRel	true	ocurrió	mantuvieron
+Relation	T0	T9	NoRel	true	ocurrió	accidente
+Relation	T1	T10	NoRel	true	intentar	heridos
+Relation	T1	T12	NoRel	true	intentar	hizo
+Relation	T1	T2	NoRel	true	intentar	frenada
+Relation	T1	T4	NoRel	true	intentar	desintegraron
+Relation	T1	T5	NoRel	true	intentar	impacto
+Relation	T1	T8	NoRel	true	intentar	mantuvieron
+Relation	T11	T13	NoRel	true	transportados	llamamiento
+Relation	T11	T2	NoRel	true	transportados	frenada
+Relation	T11	T8	NoRel	true	transportados	mantuvieron
+Relation	T11	T9	NoRel	true	transportados	accidente
+Relation	T12	T11	NoRel	true	hizo	transportados
+Relation	T12	T9	NoRel	true	hizo	accidente
+Relation	T13	T1	NoRel	true	llamamiento	intentar
+Relation	T13	T2	NoRel	true	llamamiento	frenada
+Relation	T13	T3	NoRel	true	llamamiento	colisión
+Relation	T13	T4	NoRel	true	llamamiento	desintegraron
+Relation	T13	T6	NoRel	true	llamamiento	descarriló
+Relation	T2	T10	NoRel	true	frenada	heridos
+Relation	T2	T12	NoRel	true	frenada	hizo
+Relation	T2	T9	NoRel	true	frenada	accidente
+Relation	T3	T1	NoRel	true	colisión	intentar
+Relation	T3	T11	NoRel	true	colisión	transportados
+Relation	T3	T12	NoRel	true	colisión	hizo
+Relation	T3	T13	NoRel	true	colisión	llamamiento
+Relation	T3	T4	NoRel	true	colisión	desintegraron
+Relation	T3	T5	NoRel	true	colisión	impacto
+Relation	T3	T6	NoRel	true	colisión	descarriló
+Relation	T3	T7	NoRel	true	colisión	dañado
+Relation	T3	T8	NoRel	true	colisión	mantuvieron
+Relation	T3	T9	NoRel	true	colisión	accidente
+Relation	T4	T6	NoRel	true	desintegraron	descarriló
+Relation	T4	T8	NoRel	true	desintegraron	mantuvieron
+Relation	T4	T9	NoRel	true	desintegraron	accidente
+Relation	T5	T10	NoRel	true	impacto	heridos
+Relation	T5	T6	NoRel	true	impacto	descarriló
+Relation	T6	T1	NoRel	true	descarriló	intentar
+Relation	T6	T11	NoRel	true	descarriló	transportados
+Relation	T6	T3	NoRel	true	descarriló	colisión
+Relation	T6	T8	NoRel	true	descarriló	mantuvieron
+Relation	T7	T13	NoRel	true	dañado	llamamiento
+Relation	T7	T3	NoRel	true	dañado	colisión
+Relation	T7	T5	NoRel	true	dañado	impacto
+Relation	T8	T1	NoRel	true	mantuvieron	intentar
+Relation	T8	T11	NoRel	true	mantuvieron	transportados
+Relation	T8	T12	NoRel	true	mantuvieron	hizo
+Relation	T8	T3	NoRel	true	mantuvieron	colisión
+Relation	T8	T5	NoRel	true	mantuvieron	impacto
+Relation	T9	T0	NoRel	true	accidente	ocurrió
+Relation	T9	T10	NoRel	true	accidente	heridos

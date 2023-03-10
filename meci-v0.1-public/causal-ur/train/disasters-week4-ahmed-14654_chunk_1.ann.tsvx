@@ -1,0 +1,121 @@
+Text	آغاز سے قبل اور تعمیر کے دوران اس سرنگ کو Chunnel کے نام سے پکارا جاتا تھا تاہم آج کل اسے چینل ٹنل ہی کہا جاتا ہے ۔	برطانیہ عظمی اور یورپ کو آپس میں زمینی راستے سے ملانے کا خیال پہلی مرتبہ 1802ء میں فرانسیسی انجینئر البرٹ میتھیو فیویئر نے پیش کیا ۔	درمیان میں کئی مرتبہ تجاویز پیش کی گئی اور کچھ کام بھی کیا گیا لیکن اس پر مکمل عملدرآمد نہ ہو سکا ۔	1974ء میں برطانیہ اور فرانس کی حکومتوں نے ایک مرتبہ پھر سرنگ کی تعمیر کی ایک اور کوشش پر رضامند کا اظہار کیا لیکن مالی بحران کے باعث برطانوی وزیر اعظم ہیرالڈ ولسن نے منصوبے کی منسوخی کا اعلان کر دیا ۔	1984ء میں برطانیہ اور فرانس کی حکومتوں نے 4 تجاویز پر غور کیا جن میں دو ریلوے سرنگیں ، ایک سڑک کی سرنگ اور ایک پل شامل تھا ۔
+Event	T0	پکارا	EVENT	60
+Event	T1	کہا	EVENT	102
+Event	T2	ملانے	EVENT	164
+Event	T3	پیش	EVENT	277
+Event	T4	تعمیر	EVENT	413
+Event	T5	کوشش	EVENT	430
+Event	T7	منسوخی	EVENT	525
+Event	T8	آغاز	EVENT	0
+Event	T9	قبل	EVENT	8
+Event	T10	تعمیر	EVENT	16
+Event	T11	خیال	EVENT	173
+Event	T12	پیش	EVENT	239
+Event	T13	کام	EVENT	296
+Event	T14	عملدرآمد	EVENT	328
+Event	T15	اظہار	EVENT	448
+Event	T16	اعلان	EVENT	535
+Event	T6	غور	EVENT	604
+Event	T17	شامل	EVENT	664
+Relation	T0	T1	CauseEffect	true	پکارا	کہا
+Relation	T1	T0	EffectCause	true	کہا	پکارا
+Relation	T0	T15	NoRel	true	پکارا	اظہار
+Relation	T0	T3	NoRel	true	پکارا	پیش
+Relation	T0	T5	NoRel	true	پکارا	کوشش
+Relation	T0	T7	NoRel	true	پکارا	منسوخی
+Relation	T1	T11	NoRel	true	کہا	خیال
+Relation	T1	T15	NoRel	true	کہا	اظہار
+Relation	T1	T16	NoRel	true	کہا	اعلان
+Relation	T1	T7	NoRel	true	کہا	منسوخی
+Relation	T10	T1	NoRel	true	تعمیر	کہا
+Relation	T10	T11	NoRel	true	تعمیر	خیال
+Relation	T10	T15	NoRel	true	تعمیر	اظہار
+Relation	T10	T3	NoRel	true	تعمیر	پیش
+Relation	T10	T4	NoRel	true	تعمیر	تعمیر
+Relation	T10	T6	NoRel	true	تعمیر	غور
+Relation	T11	T12	NoRel	true	خیال	پیش
+Relation	T11	T3	NoRel	true	خیال	پیش
+Relation	T11	T5	NoRel	true	خیال	کوشش
+Relation	T11	T6	NoRel	true	خیال	غور
+Relation	T12	T10	NoRel	true	پیش	تعمیر
+Relation	T12	T11	NoRel	true	پیش	خیال
+Relation	T12	T16	NoRel	true	پیش	اعلان
+Relation	T12	T17	NoRel	true	پیش	شامل
+Relation	T12	T3	NoRel	true	پیش	پیش
+Relation	T12	T6	NoRel	true	پیش	غور
+Relation	T12	T7	NoRel	true	پیش	منسوخی
+Relation	T12	T9	NoRel	true	پیش	قبل
+Relation	T13	T0	NoRel	true	کام	پکارا
+Relation	T13	T10	NoRel	true	کام	تعمیر
+Relation	T13	T12	NoRel	true	کام	پیش
+Relation	T13	T14	NoRel	true	کام	عملدرآمد
+Relation	T13	T2	NoRel	true	کام	ملانے
+Relation	T13	T7	NoRel	true	کام	منسوخی
+Relation	T13	T8	NoRel	true	کام	آغاز
+Relation	T14	T11	NoRel	true	عملدرآمد	خیال
+Relation	T14	T13	NoRel	true	عملدرآمد	کام
+Relation	T14	T16	NoRel	true	عملدرآمد	اعلان
+Relation	T14	T17	NoRel	true	عملدرآمد	شامل
+Relation	T14	T3	NoRel	true	عملدرآمد	پیش
+Relation	T14	T4	NoRel	true	عملدرآمد	تعمیر
+Relation	T14	T5	NoRel	true	عملدرآمد	کوشش
+Relation	T14	T9	NoRel	true	عملدرآمد	قبل
+Relation	T15	T10	NoRel	true	اظہار	تعمیر
+Relation	T15	T12	NoRel	true	اظہار	پیش
+Relation	T15	T16	NoRel	true	اظہار	اعلان
+Relation	T15	T2	NoRel	true	اظہار	ملانے
+Relation	T15	T4	NoRel	true	اظہار	تعمیر
+Relation	T16	T10	NoRel	true	اعلان	تعمیر
+Relation	T16	T11	NoRel	true	اعلان	خیال
+Relation	T16	T13	NoRel	true	اعلان	کام
+Relation	T16	T17	NoRel	true	اعلان	شامل
+Relation	T16	T2	NoRel	true	اعلان	ملانے
+Relation	T16	T3	NoRel	true	اعلان	پیش
+Relation	T16	T4	NoRel	true	اعلان	تعمیر
+Relation	T16	T7	NoRel	true	اعلان	منسوخی
+Relation	T17	T11	NoRel	true	شامل	خیال
+Relation	T17	T12	NoRel	true	شامل	پیش
+Relation	T17	T16	NoRel	true	شامل	اعلان
+Relation	T17	T3	NoRel	true	شامل	پیش
+Relation	T17	T4	NoRel	true	شامل	تعمیر
+Relation	T17	T8	NoRel	true	شامل	آغاز
+Relation	T2	T0	NoRel	true	ملانے	پکارا
+Relation	T2	T10	NoRel	true	ملانے	تعمیر
+Relation	T2	T11	NoRel	true	ملانے	خیال
+Relation	T2	T14	NoRel	true	ملانے	عملدرآمد
+Relation	T2	T15	NoRel	true	ملانے	اظہار
+Relation	T2	T17	NoRel	true	ملانے	شامل
+Relation	T2	T3	NoRel	true	ملانے	پیش
+Relation	T3	T0	NoRel	true	پیش	پکارا
+Relation	T3	T1	NoRel	true	پیش	کہا
+Relation	T3	T14	NoRel	true	پیش	عملدرآمد
+Relation	T3	T5	NoRel	true	پیش	کوشش
+Relation	T3	T7	NoRel	true	پیش	منسوخی
+Relation	T4	T0	NoRel	true	تعمیر	پکارا
+Relation	T4	T16	NoRel	true	تعمیر	اعلان
+Relation	T4	T2	NoRel	true	تعمیر	ملانے
+Relation	T4	T3	NoRel	true	تعمیر	پیش
+Relation	T4	T5	NoRel	true	تعمیر	کوشش
+Relation	T4	T9	NoRel	true	تعمیر	قبل
+Relation	T5	T10	NoRel	true	کوشش	تعمیر
+Relation	T5	T17	NoRel	true	کوشش	شامل
+Relation	T5	T3	NoRel	true	کوشش	پیش
+Relation	T5	T6	NoRel	true	کوشش	غور
+Relation	T5	T9	NoRel	true	کوشش	قبل
+Relation	T6	T10	NoRel	true	غور	تعمیر
+Relation	T6	T11	NoRel	true	غور	خیال
+Relation	T6	T15	NoRel	true	غور	اظہار
+Relation	T6	T2	NoRel	true	غور	ملانے
+Relation	T6	T7	NoRel	true	غور	منسوخی
+Relation	T7	T1	NoRel	true	منسوخی	کہا
+Relation	T7	T12	NoRel	true	منسوخی	پیش
+Relation	T7	T16	NoRel	true	منسوخی	اعلان
+Relation	T7	T2	NoRel	true	منسوخی	ملانے
+Relation	T7	T8	NoRel	true	منسوخی	آغاز
+Relation	T7	T9	NoRel	true	منسوخی	قبل
+Relation	T8	T10	NoRel	true	آغاز	تعمیر
+Relation	T8	T13	NoRel	true	آغاز	کام
+Relation	T8	T16	NoRel	true	آغاز	اعلان
+Relation	T8	T9	NoRel	true	آغاز	قبل
+Relation	T9	T10	NoRel	true	قبل	تعمیر
+Relation	T9	T12	NoRel	true	قبل	پیش

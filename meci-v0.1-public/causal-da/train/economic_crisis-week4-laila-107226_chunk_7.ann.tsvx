@@ -1,0 +1,92 @@
+Text	Derfor faldt sedlernes værdi markant i forhold til sølvværdien .	På blot 6 år var mængden af sedler i omløb blevet femdoblet ved indgangen til 1813 .	Dette problem forsøgtes løst ved forordningen af 5. januar 1813 om " forandring af pengevæsenet " .	Oprustningen de foregående år , den engelske erobring af flåden og senere blokade af handelsskibene i Østersøen og Kattegat havde både reduceret statens indtægter og forøget dens udgifter .	I denne periode var valutakurserne primært baseret på sølvlagrene , og den nyoprettede bank , Rigsbanken , skulle tilvejebringe en sølvbeholdning , som blev opnået ved beskatning på 6 % af værdien af al fast ejendom .
+Event	T0	faldt	EVENT	7
+Event	T1	løst	EVENT	174
+Event	T2	Oprustningen	EVENT	250
+Event	T3	erobring	EVENT	295
+Event	T4	blokade	EVENT	324
+Event	T5	reduceret	EVENT	385
+Event	T6	forøget	EVENT	416
+Event	T7	opnået	EVENT	597
+Event	T8	beskatning	EVENT	608
+Event	T9	femdoblet	EVENT	115
+Event	T10	forordningen	EVENT	183
+Event	T11	valutakurserne	EVENT	460
+Event	T12	sølvlagrene	EVENT	494
+Event	T13	tilvejebringe	EVENT	554
+Relation	T10	T1	CauseEffect	true	forordningen	løst
+Relation	T1	T10	EffectCause	true	løst	forordningen
+Relation	T2	T5	CauseEffect	true	Oprustningen	reduceret
+Relation	T5	T2	EffectCause	true	reduceret	Oprustningen
+Relation	T3	T5	CauseEffect	true	erobring	reduceret
+Relation	T5	T3	EffectCause	true	reduceret	erobring
+Relation	T4	T5	CauseEffect	true	blokade	reduceret
+Relation	T5	T4	EffectCause	true	reduceret	blokade
+Relation	T2	T6	CauseEffect	true	Oprustningen	forøget
+Relation	T6	T2	EffectCause	true	forøget	Oprustningen
+Relation	T3	T6	CauseEffect	true	erobring	forøget
+Relation	T6	T3	EffectCause	true	forøget	erobring
+Relation	T4	T6	CauseEffect	true	blokade	forøget
+Relation	T6	T4	EffectCause	true	forøget	blokade
+Relation	T12	T13	CauseEffect	true	sølvlagrene	tilvejebringe
+Relation	T13	T12	EffectCause	true	tilvejebringe	sølvlagrene
+Relation	T13	T8	CauseEffect	true	tilvejebringe	beskatning
+Relation	T8	T13	EffectCause	true	beskatning	tilvejebringe
+Relation	T0	T1	NoRel	true	faldt	løst
+Relation	T0	T10	NoRel	true	faldt	forordningen
+Relation	T0	T12	NoRel	true	faldt	sølvlagrene
+Relation	T0	T3	NoRel	true	faldt	erobring
+Relation	T0	T8	NoRel	true	faldt	beskatning
+Relation	T1	T0	NoRel	true	løst	faldt
+Relation	T1	T13	NoRel	true	løst	tilvejebringe
+Relation	T1	T2	NoRel	true	løst	Oprustningen
+Relation	T1	T3	NoRel	true	løst	erobring
+Relation	T1	T4	NoRel	true	løst	blokade
+Relation	T1	T8	NoRel	true	løst	beskatning
+Relation	T1	T9	NoRel	true	løst	femdoblet
+Relation	T10	T12	NoRel	true	forordningen	sølvlagrene
+Relation	T10	T4	NoRel	true	forordningen	blokade
+Relation	T10	T8	NoRel	true	forordningen	beskatning
+Relation	T11	T0	NoRel	true	valutakurserne	faldt
+Relation	T11	T10	NoRel	true	valutakurserne	forordningen
+Relation	T11	T2	NoRel	true	valutakurserne	Oprustningen
+Relation	T11	T4	NoRel	true	valutakurserne	blokade
+Relation	T11	T8	NoRel	true	valutakurserne	beskatning
+Relation	T12	T11	NoRel	true	sølvlagrene	valutakurserne
+Relation	T12	T4	NoRel	true	sølvlagrene	blokade
+Relation	T13	T0	NoRel	true	tilvejebringe	faldt
+Relation	T13	T10	NoRel	true	tilvejebringe	forordningen
+Relation	T13	T2	NoRel	true	tilvejebringe	Oprustningen
+Relation	T13	T7	NoRel	true	tilvejebringe	opnået
+Relation	T2	T8	NoRel	true	Oprustningen	beskatning
+Relation	T3	T0	NoRel	true	erobring	faldt
+Relation	T3	T1	NoRel	true	erobring	løst
+Relation	T3	T10	NoRel	true	erobring	forordningen
+Relation	T3	T7	NoRel	true	erobring	opnået
+Relation	T3	T8	NoRel	true	erobring	beskatning
+Relation	T3	T9	NoRel	true	erobring	femdoblet
+Relation	T4	T1	NoRel	true	blokade	løst
+Relation	T4	T10	NoRel	true	blokade	forordningen
+Relation	T4	T11	NoRel	true	blokade	valutakurserne
+Relation	T4	T7	NoRel	true	blokade	opnået
+Relation	T4	T9	NoRel	true	blokade	femdoblet
+Relation	T5	T0	NoRel	true	reduceret	faldt
+Relation	T5	T10	NoRel	true	reduceret	forordningen
+Relation	T5	T13	NoRel	true	reduceret	tilvejebringe
+Relation	T6	T12	NoRel	true	forøget	sølvlagrene
+Relation	T6	T13	NoRel	true	forøget	tilvejebringe
+Relation	T6	T9	NoRel	true	forøget	femdoblet
+Relation	T7	T10	NoRel	true	opnået	forordningen
+Relation	T7	T13	NoRel	true	opnået	tilvejebringe
+Relation	T7	T3	NoRel	true	opnået	erobring
+Relation	T7	T5	NoRel	true	opnået	reduceret
+Relation	T7	T6	NoRel	true	opnået	forøget
+Relation	T8	T0	NoRel	true	beskatning	faldt
+Relation	T8	T1	NoRel	true	beskatning	løst
+Relation	T8	T11	NoRel	true	beskatning	valutakurserne
+Relation	T8	T12	NoRel	true	beskatning	sølvlagrene
+Relation	T8	T6	NoRel	true	beskatning	forøget
+Relation	T9	T10	NoRel	true	femdoblet	forordningen
+Relation	T9	T11	NoRel	true	femdoblet	valutakurserne
+Relation	T9	T12	NoRel	true	femdoblet	sølvlagrene
+Relation	T9	T3	NoRel	true	femdoblet	erobring
+Relation	T9	T4	NoRel	true	femdoblet	blokade

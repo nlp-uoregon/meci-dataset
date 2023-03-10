@@ -1,0 +1,67 @@
+Text	El General Morazán junto al Coronel Román Valladares al mando de otro destacamento de la Fuerza Aliada rodean el cerro “ _ Caranguije _ ” y atacan el flanco derecho de las Fuerzas Federales .	El combate se intensificó por espacio de cinco horas , a las 15:00 horas ( ) las tropas federales de Milla fueron aplastadas por los hombres al mando del General Francisco Morazán .	Vencido el General José Justo Milla y algunos de sus oficiales que sobrevivieron huyeron del campo de batalla , dejando documentos , baúles y otros pertrechos .	Por su parte la fuerza reservista aliada al mando del Coronel José María Gutiérrez Osejo y el Capitán Francisco Ferrera , no les fue posible entrar en acción .	Tras esta victoria , Morazán marchó a Tegucigalpa a tomarla el 12 de noviembre y el 26 de ese mismo mes llega a la capital Comayagua donde hizo su entrada triunfal y ocupó la jefatura del Estado de Honduras la cual presidía interinamente el señor Miguel Eusebio Bustamante .
+Event	T0	rodean	EVENT	103
+Event	T1	atacan	EVENT	140
+Event	T2	combate	EVENT	195
+Event	T3	intensificó	EVENT	206
+Event	T4	aplastadas	EVENT	306
+Event	T5	Vencido	EVENT	374
+Event	T6	dejando	EVENT	486
+Event	T7	victoria	EVENT	705
+Event	T8	marchó	EVENT	724
+Event	T9	llega	EVENT	799
+Event	T10	hizo	EVENT	834
+Event	T11	triunfal	EVENT	850
+Event	T12	ocupó	EVENT	861
+Event	T13	presidía	EVENT	910
+Relation	T1	T4	CauseEffect	true	atacan	aplastadas
+Relation	T4	T1	EffectCause	true	aplastadas	atacan
+Relation	T0	T1	CauseEffect	true	rodean	atacan
+Relation	T1	T0	EffectCause	true	atacan	rodean
+Relation	T0	T10	NoRel	true	rodean	hizo
+Relation	T0	T13	NoRel	true	rodean	presidía
+Relation	T0	T6	NoRel	true	rodean	dejando
+Relation	T1	T2	NoRel	true	atacan	combate
+Relation	T1	T5	NoRel	true	atacan	Vencido
+Relation	T1	T7	NoRel	true	atacan	victoria
+Relation	T10	T12	NoRel	true	hizo	ocupó
+Relation	T10	T8	NoRel	true	hizo	marchó
+Relation	T11	T10	NoRel	true	triunfal	hizo
+Relation	T11	T12	NoRel	true	triunfal	ocupó
+Relation	T11	T2	NoRel	true	triunfal	combate
+Relation	T11	T8	NoRel	true	triunfal	marchó
+Relation	T12	T0	NoRel	true	ocupó	rodean
+Relation	T12	T10	NoRel	true	ocupó	hizo
+Relation	T12	T9	NoRel	true	ocupó	llega
+Relation	T13	T0	NoRel	true	presidía	rodean
+Relation	T13	T1	NoRel	true	presidía	atacan
+Relation	T13	T12	NoRel	true	presidía	ocupó
+Relation	T13	T4	NoRel	true	presidía	aplastadas
+Relation	T13	T6	NoRel	true	presidía	dejando
+Relation	T13	T7	NoRel	true	presidía	victoria
+Relation	T13	T9	NoRel	true	presidía	llega
+Relation	T2	T10	NoRel	true	combate	hizo
+Relation	T2	T12	NoRel	true	combate	ocupó
+Relation	T2	T4	NoRel	true	combate	aplastadas
+Relation	T3	T10	NoRel	true	intensificó	hizo
+Relation	T3	T6	NoRel	true	intensificó	dejando
+Relation	T3	T7	NoRel	true	intensificó	victoria
+Relation	T3	T8	NoRel	true	intensificó	marchó
+Relation	T4	T11	NoRel	true	aplastadas	triunfal
+Relation	T4	T12	NoRel	true	aplastadas	ocupó
+Relation	T4	T5	NoRel	true	aplastadas	Vencido
+Relation	T5	T9	NoRel	true	Vencido	llega
+Relation	T6	T11	NoRel	true	dejando	triunfal
+Relation	T6	T12	NoRel	true	dejando	ocupó
+Relation	T6	T5	NoRel	true	dejando	Vencido
+Relation	T6	T8	NoRel	true	dejando	marchó
+Relation	T7	T11	NoRel	true	victoria	triunfal
+Relation	T7	T8	NoRel	true	victoria	marchó
+Relation	T8	T12	NoRel	true	marchó	ocupó
+Relation	T8	T2	NoRel	true	marchó	combate
+Relation	T8	T3	NoRel	true	marchó	intensificó
+Relation	T8	T4	NoRel	true	marchó	aplastadas
+Relation	T9	T0	NoRel	true	llega	rodean
+Relation	T9	T10	NoRel	true	llega	hizo
+Relation	T9	T11	NoRel	true	llega	triunfal
+Relation	T9	T2	NoRel	true	llega	combate
+Relation	T9	T3	NoRel	true	llega	intensificó

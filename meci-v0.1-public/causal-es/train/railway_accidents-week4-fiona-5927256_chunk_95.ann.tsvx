@@ -1,0 +1,91 @@
+Text	En la línea de Madrid a Irún , entre las estaciones de Robledo de Chavela y Santa María de la Alameda se produce el choque entre una doble composición de automotores TER que desde Madrid se dirigía a La Coruña y Vigo y un tractor de maniobras que circulaba aislado .	El accidente tuvo un balance de 28 víctimas mortales y alrededor de 80 heridos .	- 13 de julio de 1968 .	A la salida de la Estación de Medina del Campo ( Valladolid ) el expreso Coruña_–_Madrid choca con un tren de mercancías .	El accidente causa 9 muertos y más de 60 heridos .
+Event	T0	produce	EVENT	105
+Event	T1	choque	EVENT	116
+Event	T2	composición	EVENT	139
+Event	T3	dirigía	EVENT	190
+Event	T4	tuvo	EVENT	280
+Event	T5	balance	EVENT	288
+Event	T6	heridos	EVENT	338
+Event	T7	salida	EVENT	377
+Event	T8	choca	EVENT	461
+Event	T9	muertos	EVENT	516
+Event	T10	heridos	EVENT	536
+Event	T11	accidente	EVENT	270
+Event	T12	víctimas	EVENT	302
+Event	T13	accidente	EVENT	498
+Relation	T11	T12	CauseEffect	true	accidente	víctimas
+Relation	T12	T11	EffectCause	true	víctimas	accidente
+Relation	T11	T6	CauseEffect	true	accidente	heridos
+Relation	T6	T11	EffectCause	true	heridos	accidente
+Relation	T13	T9	CauseEffect	true	accidente	muertos
+Relation	T9	T13	EffectCause	true	muertos	accidente
+Relation	T13	T10	CauseEffect	true	accidente	heridos
+Relation	T10	T13	EffectCause	true	heridos	accidente
+Relation	T0	T10	NoRel	true	produce	heridos
+Relation	T0	T11	NoRel	true	produce	accidente
+Relation	T0	T13	NoRel	true	produce	accidente
+Relation	T0	T2	NoRel	true	produce	composición
+Relation	T0	T3	NoRel	true	produce	dirigía
+Relation	T0	T4	NoRel	true	produce	tuvo
+Relation	T0	T5	NoRel	true	produce	balance
+Relation	T1	T0	NoRel	true	choque	produce
+Relation	T1	T10	NoRel	true	choque	heridos
+Relation	T1	T2	NoRel	true	choque	composición
+Relation	T10	T1	NoRel	true	heridos	choque
+Relation	T10	T9	NoRel	true	heridos	muertos
+Relation	T11	T10	NoRel	true	accidente	heridos
+Relation	T11	T13	NoRel	true	accidente	accidente
+Relation	T11	T3	NoRel	true	accidente	dirigía
+Relation	T11	T9	NoRel	true	accidente	muertos
+Relation	T12	T1	NoRel	true	víctimas	choque
+Relation	T12	T10	NoRel	true	víctimas	heridos
+Relation	T12	T5	NoRel	true	víctimas	balance
+Relation	T12	T6	NoRel	true	víctimas	heridos
+Relation	T13	T2	NoRel	true	accidente	composición
+Relation	T13	T3	NoRel	true	accidente	dirigía
+Relation	T13	T4	NoRel	true	accidente	tuvo
+Relation	T13	T8	NoRel	true	accidente	choca
+Relation	T2	T13	NoRel	true	composición	accidente
+Relation	T2	T3	NoRel	true	composición	dirigía
+Relation	T2	T5	NoRel	true	composición	balance
+Relation	T2	T7	NoRel	true	composición	salida
+Relation	T2	T8	NoRel	true	composición	choca
+Relation	T2	T9	NoRel	true	composición	muertos
+Relation	T3	T11	NoRel	true	dirigía	accidente
+Relation	T3	T12	NoRel	true	dirigía	víctimas
+Relation	T3	T13	NoRel	true	dirigía	accidente
+Relation	T3	T2	NoRel	true	dirigía	composición
+Relation	T3	T6	NoRel	true	dirigía	heridos
+Relation	T3	T7	NoRel	true	dirigía	salida
+Relation	T4	T0	NoRel	true	tuvo	produce
+Relation	T4	T1	NoRel	true	tuvo	choque
+Relation	T4	T13	NoRel	true	tuvo	accidente
+Relation	T4	T3	NoRel	true	tuvo	dirigía
+Relation	T4	T6	NoRel	true	tuvo	heridos
+Relation	T4	T9	NoRel	true	tuvo	muertos
+Relation	T5	T0	NoRel	true	balance	produce
+Relation	T5	T1	NoRel	true	balance	choque
+Relation	T5	T11	NoRel	true	balance	accidente
+Relation	T5	T12	NoRel	true	balance	víctimas
+Relation	T5	T2	NoRel	true	balance	composición
+Relation	T5	T3	NoRel	true	balance	dirigía
+Relation	T5	T6	NoRel	true	balance	heridos
+Relation	T5	T7	NoRel	true	balance	salida
+Relation	T5	T9	NoRel	true	balance	muertos
+Relation	T6	T0	NoRel	true	heridos	produce
+Relation	T6	T3	NoRel	true	heridos	dirigía
+Relation	T6	T4	NoRel	true	heridos	tuvo
+Relation	T6	T9	NoRel	true	heridos	muertos
+Relation	T7	T0	NoRel	true	salida	produce
+Relation	T7	T1	NoRel	true	salida	choque
+Relation	T7	T12	NoRel	true	salida	víctimas
+Relation	T7	T4	NoRel	true	salida	tuvo
+Relation	T7	T6	NoRel	true	salida	heridos
+Relation	T8	T0	NoRel	true	choca	produce
+Relation	T8	T3	NoRel	true	choca	dirigía
+Relation	T9	T0	NoRel	true	muertos	produce
+Relation	T9	T1	NoRel	true	muertos	choque
+Relation	T9	T10	NoRel	true	muertos	heridos
+Relation	T9	T11	NoRel	true	muertos	accidente
+Relation	T9	T4	NoRel	true	muertos	tuvo
+Relation	T9	T6	NoRel	true	muertos	heridos

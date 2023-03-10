@@ -1,0 +1,21 @@
+Text	küçükresim | Amerikan Birliği Bankası , New York şehri .	26 Nisan 1932 .	BANKA YIĞILMASI , bir bankadan aynı anda birçok kişi para çekmeye çalışırsa oluşur .	Diğer bir deyişle , kısmi rezerv bankacılık sisteminde ( bankaların normalde varlıklarının sadece küçük bir kısmını nakit olarak tuttuğunda ) , çok sayıda müşteri aynı anda bir finansal kuruluşla mevduat hesaplarından nakit çektiği için finans kurumu temerrüt eder veya olabilir ; nakit tutar veya devlet tahvili , kıymetli maden veya değerli taş gibi diğer varlıklara aktarırlar .	Başka bir kuruma para transfer ettiklerinde , bu bir sermaye uçuşu olarak nitelendirilebilir .
+Event	T0	oluşur	EVENT	149
+Event	T1	çektiği	EVENT	382
+Event	T2	eder	EVENT	418
+Event	T4	uçuşu	EVENT	601
+Event	T5	YIĞILMASI	EVENT	79
+Event	T3	transfer	EVENT	562
+Relation	T1	T2	CauseEffect	true	çektiği	eder
+Relation	T2	T1	EffectCause	true	eder	çektiği
+Relation	T2	T5	CauseEffect	true	eder	YIĞILMASI
+Relation	T5	T2	EffectCause	true	YIĞILMASI	eder
+Relation	T3	T4	CauseEffect	true	transfer	uçuşu
+Relation	T4	T3	EffectCause	true	uçuşu	transfer
+Relation	T0	T1	NoRel	true	oluşur	çektiği
+Relation	T0	T2	NoRel	true	oluşur	eder
+Relation	T2	T0	NoRel	true	eder	oluşur
+Relation	T2	T3	NoRel	true	eder	transfer
+Relation	T3	T1	NoRel	true	transfer	çektiği
+Relation	T4	T2	NoRel	true	uçuşu	eder
+Relation	T4	T5	NoRel	true	uçuşu	YIĞILMASI
+Relation	T5	T3	NoRel	true	YIĞILMASI	transfer

@@ -1,0 +1,73 @@
+Text	While the Congonhas runway was under renovation , the 2006 – 07 Brazilian aviation crisis continued to advance , meaning that the runway was open for use despite the incomplete refit .	On July 16 , the day before the crash , four pilots who landed at the airport reported poor braking , including a TAM pilot , who managed to stop his aircraft just a few metres before the end of the runway .	Between 12:25 pm and 12:28 pm , Infraero suspended operations at the airport to examine the runway conditions , and cleared it after reporting " no puddles and water slides . "	At 12:42 local time the same day , Pantanal Linhas Aéreas Flight 4763 , an ATR 42- 300 , hydroplaned after touching down on runway 17 R .	The aircraft veered to the left , struck a concrete box and a small light pole , and entered the grass between the runway and taxiway .
+Event	T0	renovation	EVENT	37
+Event	T1	advance	EVENT	103
+Event	T2	refit	EVENT	177
+Event	T3	crash	EVENT	217
+Event	T4	landed	EVENT	241
+Event	T6	managed	EVENT	315
+Event	T7	stop	EVENT	326
+Event	T8	operations	EVENT	444
+Event	T9	examine	EVENT	473
+Event	T10	cleared	EVENT	509
+Event	T11	reporting	EVENT	526
+Event	T12	puddles	EVENT	541
+Event	T13	slides	EVENT	559
+Event	T14	hydroplaned	EVENT	659
+Event	T15	veered	EVENT	721
+Event	T16	struck	EVENT	742
+Event	T17	entered	EVENT	793
+Event	T18	2006 – 07 Brazilian aviation crisis	EVENT	54
+Event	T19	open	EVENT	141
+Event	T5	poor braking	EVENT	272
+Event	T20	suspended	EVENT	434
+Relation	T18	T19	CauseEffect	true	2006 – 07 Brazilian aviation crisis	open
+Relation	T19	T18	EffectCause	true	open	2006 – 07 Brazilian aviation crisis
+Relation	T5	T3	CauseEffect	true	poor braking	crash
+Relation	T3	T5	EffectCause	true	crash	poor braking
+Relation	T3	T20	CauseEffect	true	crash	suspended
+Relation	T20	T3	EffectCause	true	suspended	crash
+Relation	T3	T9	CauseEffect	true	crash	examine
+Relation	T9	T3	EffectCause	true	examine	crash
+Relation	T11	T10	CauseEffect	true	reporting	cleared
+Relation	T10	T11	EffectCause	true	cleared	reporting
+Relation	T14	T15	CauseEffect	true	hydroplaned	veered
+Relation	T15	T14	EffectCause	true	veered	hydroplaned
+Relation	T15	T16	CauseEffect	true	veered	struck
+Relation	T16	T15	EffectCause	true	struck	veered
+Relation	T16	T17	CauseEffect	true	struck	entered
+Relation	T17	T16	EffectCause	true	entered	struck
+Relation	T0	T11	NoRel	true	renovation	reporting
+Relation	T0	T20	NoRel	true	renovation	suspended
+Relation	T1	T9	NoRel	true	advance	examine
+Relation	T10	T0	NoRel	true	cleared	renovation
+Relation	T11	T17	NoRel	true	reporting	entered
+Relation	T12	T10	NoRel	true	puddles	cleared
+Relation	T12	T15	NoRel	true	puddles	veered
+Relation	T12	T3	NoRel	true	puddles	crash
+Relation	T13	T16	NoRel	true	slides	struck
+Relation	T13	T20	NoRel	true	slides	suspended
+Relation	T14	T20	NoRel	true	hydroplaned	suspended
+Relation	T15	T1	NoRel	true	veered	advance
+Relation	T15	T11	NoRel	true	veered	reporting
+Relation	T16	T14	NoRel	true	struck	hydroplaned
+Relation	T16	T2	NoRel	true	struck	refit
+Relation	T16	T4	NoRel	true	struck	landed
+Relation	T17	T0	NoRel	true	entered	renovation
+Relation	T17	T10	NoRel	true	entered	cleared
+Relation	T17	T19	NoRel	true	entered	open
+Relation	T18	T15	NoRel	true	2006 – 07 Brazilian aviation crisis	veered
+Relation	T18	T17	NoRel	true	2006 – 07 Brazilian aviation crisis	entered
+Relation	T18	T3	NoRel	true	2006 – 07 Brazilian aviation crisis	crash
+Relation	T19	T13	NoRel	true	open	slides
+Relation	T19	T5	NoRel	true	open	poor braking
+Relation	T19	T6	NoRel	true	open	managed
+Relation	T19	T7	NoRel	true	open	stop
+Relation	T2	T13	NoRel	true	refit	slides
+Relation	T20	T14	NoRel	true	suspended	hydroplaned
+Relation	T20	T7	NoRel	true	suspended	stop
+Relation	T3	T16	NoRel	true	crash	struck
+Relation	T6	T15	NoRel	true	managed	veered
+Relation	T6	T19	NoRel	true	managed	open
+Relation	T7	T6	NoRel	true	stop	managed
+Relation	T9	T11	NoRel	true	examine	reporting
+Relation	T9	T5	NoRel	true	examine	poor braking

@@ -1,0 +1,140 @@
+Text	El VUELO 183 DE NEPAL AIRLINES fue un vuelo nacional regular de pasajeros en un avión tipo de Havilland Canada DHC-6 Twin Otter , que se estrelló en la selva cerca de Dhikura VDC , unos 74 kilómetros al suroeste de Pokhara , Nepal el 16 de febrero de 2014 .	Un helicóptero avistó los restos carbonizados y todavía en llamas de la aeronave y notificó que el avión se había estrellado en una colina .	El avión partió del aeropuerto de Pokhara en el centro de Nepal con quince pasajeros y tres tripulantes a bordo y fue programado para llegar al aeropuerto de Jumla en el noroeste del país , a las 13:45 hora estándar del Nepal ( 08:00 UTC ) .	El vuelo de 30 minutos estaba tratando de desviarse al aeropuerto de Bhairahawa debido a las condiciones climáticas lo que originó que el contacto con el avión se perdiera .	La última comunicación por radio con la tripulación de la aeronave fue a las 13:13 , cuando la tripulación informó de su posición aproximada a la torre de Bhairahawa .
+Event	T0	VUELO	EVENT	3
+Event	T1	vuelo	EVENT	38
+Event	T2	estrelló	EVENT	137
+Event	T3	avistó	EVENT	273
+Event	T4	carbonizados	EVENT	291
+Event	T5	notificó	EVENT	341
+Event	T6	estrellado	EVENT	372
+Event	T7	partió	EVENT	408
+Event	T8	programado	EVENT	517
+Event	T9	llegar	EVENT	533
+Event	T10	vuelo	EVENT	644
+Event	T11	tratando	EVENT	671
+Event	T12	desviarse	EVENT	683
+Event	T13	originó	EVENT	764
+Event	T14	contacto	EVENT	779
+Event	T15	perdiera	EVENT	804
+Event	T16	comunicación	EVENT	825
+Event	T17	informó	EVENT	922
+Event	T18	condiciones	EVENT	734
+Relation	T18	T15	CauseEffect	true	condiciones	perdiera
+Relation	T15	T18	EffectCause	true	perdiera	condiciones
+Relation	T18	T2	CauseEffect	true	condiciones	estrelló
+Relation	T2	T18	EffectCause	true	estrelló	condiciones
+Relation	T0	T1	NoRel	true	VUELO	vuelo
+Relation	T0	T10	NoRel	true	VUELO	vuelo
+Relation	T0	T12	NoRel	true	VUELO	desviarse
+Relation	T0	T13	NoRel	true	VUELO	originó
+Relation	T0	T16	NoRel	true	VUELO	comunicación
+Relation	T0	T17	NoRel	true	VUELO	informó
+Relation	T0	T8	NoRel	true	VUELO	programado
+Relation	T1	T0	NoRel	true	vuelo	VUELO
+Relation	T1	T10	NoRel	true	vuelo	vuelo
+Relation	T1	T14	NoRel	true	vuelo	contacto
+Relation	T1	T15	NoRel	true	vuelo	perdiera
+Relation	T1	T17	NoRel	true	vuelo	informó
+Relation	T1	T2	NoRel	true	vuelo	estrelló
+Relation	T1	T5	NoRel	true	vuelo	notificó
+Relation	T1	T8	NoRel	true	vuelo	programado
+Relation	T10	T4	NoRel	true	vuelo	carbonizados
+Relation	T10	T5	NoRel	true	vuelo	notificó
+Relation	T10	T7	NoRel	true	vuelo	partió
+Relation	T11	T0	NoRel	true	tratando	VUELO
+Relation	T11	T10	NoRel	true	tratando	vuelo
+Relation	T11	T14	NoRel	true	tratando	contacto
+Relation	T11	T16	NoRel	true	tratando	comunicación
+Relation	T11	T6	NoRel	true	tratando	estrellado
+Relation	T12	T0	NoRel	true	desviarse	VUELO
+Relation	T12	T6	NoRel	true	desviarse	estrellado
+Relation	T12	T7	NoRel	true	desviarse	partió
+Relation	T13	T1	NoRel	true	originó	vuelo
+Relation	T13	T11	NoRel	true	originó	tratando
+Relation	T13	T12	NoRel	true	originó	desviarse
+Relation	T13	T15	NoRel	true	originó	perdiera
+Relation	T13	T16	NoRel	true	originó	comunicación
+Relation	T13	T2	NoRel	true	originó	estrelló
+Relation	T13	T6	NoRel	true	originó	estrellado
+Relation	T13	T7	NoRel	true	originó	partió
+Relation	T13	T9	NoRel	true	originó	llegar
+Relation	T14	T1	NoRel	true	contacto	vuelo
+Relation	T14	T11	NoRel	true	contacto	tratando
+Relation	T14	T3	NoRel	true	contacto	avistó
+Relation	T14	T7	NoRel	true	contacto	partió
+Relation	T14	T8	NoRel	true	contacto	programado
+Relation	T14	T9	NoRel	true	contacto	llegar
+Relation	T15	T0	NoRel	true	perdiera	VUELO
+Relation	T15	T13	NoRel	true	perdiera	originó
+Relation	T15	T14	NoRel	true	perdiera	contacto
+Relation	T15	T16	NoRel	true	perdiera	comunicación
+Relation	T15	T3	NoRel	true	perdiera	avistó
+Relation	T15	T4	NoRel	true	perdiera	carbonizados
+Relation	T15	T9	NoRel	true	perdiera	llegar
+Relation	T16	T1	NoRel	true	comunicación	vuelo
+Relation	T16	T10	NoRel	true	comunicación	vuelo
+Relation	T16	T17	NoRel	true	comunicación	informó
+Relation	T17	T0	NoRel	true	informó	VUELO
+Relation	T17	T10	NoRel	true	informó	vuelo
+Relation	T17	T11	NoRel	true	informó	tratando
+Relation	T17	T5	NoRel	true	informó	notificó
+Relation	T17	T8	NoRel	true	informó	programado
+Relation	T18	T0	NoRel	true	condiciones	VUELO
+Relation	T18	T14	NoRel	true	condiciones	contacto
+Relation	T18	T16	NoRel	true	condiciones	comunicación
+Relation	T18	T7	NoRel	true	condiciones	partió
+Relation	T18	T8	NoRel	true	condiciones	programado
+Relation	T18	T9	NoRel	true	condiciones	llegar
+Relation	T2	T10	NoRel	true	estrelló	vuelo
+Relation	T2	T12	NoRel	true	estrelló	desviarse
+Relation	T2	T14	NoRel	true	estrelló	contacto
+Relation	T2	T15	NoRel	true	estrelló	perdiera
+Relation	T2	T16	NoRel	true	estrelló	comunicación
+Relation	T2	T17	NoRel	true	estrelló	informó
+Relation	T2	T3	NoRel	true	estrelló	avistó
+Relation	T3	T0	NoRel	true	avistó	VUELO
+Relation	T3	T11	NoRel	true	avistó	tratando
+Relation	T3	T14	NoRel	true	avistó	contacto
+Relation	T3	T17	NoRel	true	avistó	informó
+Relation	T3	T4	NoRel	true	avistó	carbonizados
+Relation	T3	T9	NoRel	true	avistó	llegar
+Relation	T4	T0	NoRel	true	carbonizados	VUELO
+Relation	T4	T12	NoRel	true	carbonizados	desviarse
+Relation	T4	T14	NoRel	true	carbonizados	contacto
+Relation	T4	T16	NoRel	true	carbonizados	comunicación
+Relation	T4	T17	NoRel	true	carbonizados	informó
+Relation	T4	T5	NoRel	true	carbonizados	notificó
+Relation	T4	T6	NoRel	true	carbonizados	estrellado
+Relation	T4	T9	NoRel	true	carbonizados	llegar
+Relation	T5	T0	NoRel	true	notificó	VUELO
+Relation	T5	T1	NoRel	true	notificó	vuelo
+Relation	T5	T10	NoRel	true	notificó	vuelo
+Relation	T5	T14	NoRel	true	notificó	contacto
+Relation	T5	T2	NoRel	true	notificó	estrelló
+Relation	T5	T4	NoRel	true	notificó	carbonizados
+Relation	T5	T7	NoRel	true	notificó	partió
+Relation	T6	T11	NoRel	true	estrellado	tratando
+Relation	T6	T12	NoRel	true	estrellado	desviarse
+Relation	T6	T17	NoRel	true	estrellado	informó
+Relation	T6	T3	NoRel	true	estrellado	avistó
+Relation	T6	T8	NoRel	true	estrellado	programado
+Relation	T7	T1	NoRel	true	partió	vuelo
+Relation	T7	T10	NoRel	true	partió	vuelo
+Relation	T7	T12	NoRel	true	partió	desviarse
+Relation	T7	T14	NoRel	true	partió	contacto
+Relation	T7	T16	NoRel	true	partió	comunicación
+Relation	T7	T17	NoRel	true	partió	informó
+Relation	T7	T2	NoRel	true	partió	estrelló
+Relation	T7	T6	NoRel	true	partió	estrellado
+Relation	T7	T8	NoRel	true	partió	programado
+Relation	T8	T10	NoRel	true	programado	vuelo
+Relation	T8	T14	NoRel	true	programado	contacto
+Relation	T8	T17	NoRel	true	programado	informó
+Relation	T8	T2	NoRel	true	programado	estrelló
+Relation	T8	T6	NoRel	true	programado	estrellado
+Relation	T8	T7	NoRel	true	programado	partió
+Relation	T8	T9	NoRel	true	programado	llegar
+Relation	T9	T10	NoRel	true	llegar	vuelo
+Relation	T9	T12	NoRel	true	llegar	desviarse
+Relation	T9	T15	NoRel	true	llegar	perdiera
+Relation	T9	T18	NoRel	true	llegar	condiciones
+Relation	T9	T4	NoRel	true	llegar	carbonizados

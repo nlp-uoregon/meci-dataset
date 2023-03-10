@@ -1,0 +1,50 @@
+Text	Similar girders collapsed that night . ]	On 3 May 2021 at 22:25 CDT ( UTC−5 ) , an eastward - bound train was passing on the elevated section of track between Olivos and Tezonco stations in Tláhuac .	Around before reaching Olivos station , the section between columns 12 and 13 collapsed when a beam supporting two girders failed , causing the last two train cars to fall off the track .	The fallen cars ended up suspended in a V - shape with one train car hitting the ground and the other left dangling .	Debris fell onto an automobile traveling on Tláhuac Avenue , killing the driver and injuring his wife .
+Event	T0	collapsed	EVENT	16
+Event	T1	reaching	EVENT	214
+Event	T10	killing	EVENT	567
+Event	T11	injuring	EVENT	590
+Event	T13	fall off	EVENT	367
+Event	T14	ended up	EVENT	404
+Event	T15	hitting	EVENT	457
+Event	T16	fell onto	EVENT	513
+Event	T2	section	EVENT	244
+Event	T3	collapsed	EVENT	278
+Event	T4	failed	EVENT	323
+Event	T5	causing	EVENT	332
+Event	T6	fallen	EVENT	392
+Event	T7	suspended	EVENT	413
+Event	T8	dangling	EVENT	495
+Event	T9	traveling	EVENT	537
+Relation	T4	T13	CauseEffect	true	failed	fall off
+Relation	T13	T4	EffectCause	true	fall off	failed
+Relation	T16	T11	CauseEffect	true	fell onto	injuring
+Relation	T11	T16	EffectCause	true	injuring	fell onto
+Relation	T16	T10	CauseEffect	true	fell onto	killing
+Relation	T10	T16	EffectCause	true	killing	fell onto
+Relation	T0	T2	NoRel	true	collapsed	section
+Relation	T1	T6	NoRel	true	reaching	fallen
+Relation	T1	T7	NoRel	true	reaching	suspended
+Relation	T10	T0	NoRel	true	killing	collapsed
+Relation	T10	T11	NoRel	true	killing	injuring
+Relation	T13	T1	NoRel	true	fall off	reaching
+Relation	T13	T3	NoRel	true	fall off	collapsed
+Relation	T13	T6	NoRel	true	fall off	fallen
+Relation	T13	T8	NoRel	true	fall off	dangling
+Relation	T14	T0	NoRel	true	ended up	collapsed
+Relation	T14	T1	NoRel	true	ended up	reaching
+Relation	T14	T2	NoRel	true	ended up	section
+Relation	T15	T10	NoRel	true	hitting	killing
+Relation	T15	T9	NoRel	true	hitting	traveling
+Relation	T16	T4	NoRel	true	fell onto	failed
+Relation	T16	T6	NoRel	true	fell onto	fallen
+Relation	T3	T13	NoRel	true	collapsed	fall off
+Relation	T5	T2	NoRel	true	causing	section
+Relation	T6	T0	NoRel	true	fallen	collapsed
+Relation	T6	T1	NoRel	true	fallen	reaching
+Relation	T6	T11	NoRel	true	fallen	injuring
+Relation	T6	T13	NoRel	true	fallen	fall off
+Relation	T6	T3	NoRel	true	fallen	collapsed
+Relation	T6	T7	NoRel	true	fallen	suspended
+Relation	T7	T8	NoRel	true	suspended	dangling
+Relation	T8	T11	NoRel	true	dangling	injuring
+Relation	T9	T0	NoRel	true	traveling	collapsed

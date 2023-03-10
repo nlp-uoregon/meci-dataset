@@ -1,0 +1,40 @@
+Text	El ACCIDENTE FERROVIARIO DE KING'S CROSS se produjo el 4 de febrero de 1945 en la Estación de King's Cross de Londres , en la línea principal de la costa del Ferrocarril de Londres y del Noreste .	Dos pasajeros murieron y otros 25 resultaron heridos , así como el asistente del tren .	La salida de la Estación de King's Cross se realiza a través del túnel de Gasworks , que tiene tres galerías , cada una de las cuales alojaba dos vías en la época del accidente .	La galería central albergaba en su lado occidental la línea principal número 1 ( inicialmente descendente ) y una línea secundaria en su lado oriental ( ascendente ) .	Los trenes de los andenes 5 , 6 y 7 alcanzaban la vía no. 1 de la línea principal en sentido descendente a través de un cruce desde la línea secundaria , controlada por el punto de paso no. 145 .
+Event	T0	ACCIDENTE	EVENT	3
+Event	T1	produjo	EVENT	44
+Event	T2	murieron	EVENT	211
+Event	T3	heridos	EVENT	242
+Event	T4	salida	EVENT	288
+Event	T5	realiza	EVENT	329
+Event	T6	accidente	EVENT	452
+Event	T7	cruce	EVENT	752
+Event	T8	controlada	EVENT	786
+Relation	T0	T2	CauseEffect	true	ACCIDENTE	murieron
+Relation	T2	T0	EffectCause	true	murieron	ACCIDENTE
+Relation	T0	T3	CauseEffect	true	ACCIDENTE	heridos
+Relation	T3	T0	EffectCause	true	heridos	ACCIDENTE
+Relation	T0	T5	NoRel	true	ACCIDENTE	realiza
+Relation	T0	T8	NoRel	true	ACCIDENTE	controlada
+Relation	T1	T2	NoRel	true	produjo	murieron
+Relation	T1	T4	NoRel	true	produjo	salida
+Relation	T1	T6	NoRel	true	produjo	accidente
+Relation	T1	T7	NoRel	true	produjo	cruce
+Relation	T2	T5	NoRel	true	murieron	realiza
+Relation	T2	T7	NoRel	true	murieron	cruce
+Relation	T3	T1	NoRel	true	heridos	produjo
+Relation	T3	T4	NoRel	true	heridos	salida
+Relation	T3	T6	NoRel	true	heridos	accidente
+Relation	T3	T8	NoRel	true	heridos	controlada
+Relation	T4	T1	NoRel	true	salida	produjo
+Relation	T4	T3	NoRel	true	salida	heridos
+Relation	T4	T8	NoRel	true	salida	controlada
+Relation	T6	T1	NoRel	true	accidente	produjo
+Relation	T6	T3	NoRel	true	accidente	heridos
+Relation	T7	T2	NoRel	true	cruce	murieron
+Relation	T7	T3	NoRel	true	cruce	heridos
+Relation	T7	T4	NoRel	true	cruce	salida
+Relation	T7	T6	NoRel	true	cruce	accidente
+Relation	T7	T8	NoRel	true	cruce	controlada
+Relation	T8	T1	NoRel	true	controlada	produjo
+Relation	T8	T3	NoRel	true	controlada	heridos
+Relation	T8	T6	NoRel	true	controlada	accidente
+Relation	T8	T7	NoRel	true	controlada	cruce

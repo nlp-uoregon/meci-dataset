@@ -1,0 +1,13 @@
+Text	- El ángulo de ataque ( AOA ) es un parámetro de vuelo críticamente importante , y los sistemas de control de vuelo de plena autoridad , como los que equipan aviones A330 / A340 , requieren datos AOA precisos para funcionar correctamente .	La aeronave estaba equipada con tres ADIRU para proporcionar redundancia para la tolerancia a fallos , y los FCPC utilizaron los tres valores de AOA independientes para verificar su consistencia .	En el caso habitual , cuando los tres valores de AOA fueron válidos y consistentes , los FCPC utilizaron el valor promedio de AOA 1 y AOA 2 para sus cálculos .	Si AOA 1 o AOA 2 fuesen desviados significativamente de los otros dos valores , los FCPC utilizarían un valor memorizado durante 1,2 segundos .	El algoritmo FCPC fue muy efectivo , pero no pudo manejar correctamente un escenario en el que hubo múltiples picos en AOA 1 o AOA 2 distanciados 1.2 segundos .
+Event	T10	memorizado	EVENT	707
+Event	T3	equipada	EVENT	259
+Event	T6	verificar	EVENT	409
+Event	T9	desviados	EVENT	621
+Event	T1	fue	EVENT	759
+Relation	T1	T9	NoRel	true	fue	desviados
+Relation	T10	T6	NoRel	true	memorizado	verificar
+Relation	T10	T9	NoRel	true	memorizado	desviados
+Relation	T3	T9	NoRel	true	equipada	desviados
+Relation	T6	T10	NoRel	true	verificar	memorizado
+Relation	T6	T9	NoRel	true	verificar	desviados
+Relation	T9	T10	NoRel	true	desviados	memorizado

@@ -1,0 +1,38 @@
+Text	Deprem kurbanlarının sayısı 3.000 kişi tahmin edilir .	Bu depremin dalgaları yeraltından da yayıldığı için jeofizikçiler için büyük bir anlamı vardır .	Bu dalgaların oluşumu ve süresinin ölçülmesi ile yeraltı hakkında birçok bilgiye ulaşılabilmiştir .	Bu depremde bir çan gibi vuran yerin titreşimi , bir hafta ölçülebilir düzeyde sürmüştür .	- Puerto Saavedra tamamen yıkıldı .
+Event	T0	Deprem	EVENT	0
+Event	T1	yayıldığı	EVENT	92
+Event	T2	depremde	EVENT	255
+Event	T4	titreşimi	EVENT	289
+Event	T5	sürmüştür	EVENT	331
+Event	T6	yıkıldı	EVENT	369
+Event	T7	edilir	EVENT	46
+Event	T8	ulaşılabilmiştir	EVENT	233
+Event	T9	ölçülmesi	EVENT	187
+Relation	T0	T7	CauseEffect	true	Deprem	edilir
+Relation	T7	T0	EffectCause	true	edilir	Deprem
+Relation	T0	T9	CauseEffect	true	Deprem	ölçülmesi
+Relation	T9	T0	EffectCause	true	ölçülmesi	Deprem
+Relation	T9	T8	CauseEffect	true	ölçülmesi	ulaşılabilmiştir
+Relation	T8	T9	EffectCause	true	ulaşılabilmiştir	ölçülmesi
+Relation	T0	T6	CauseEffect	true	Deprem	yıkıldı
+Relation	T6	T0	EffectCause	true	yıkıldı	Deprem
+Relation	T2	T6	CauseEffect	true	depremde	yıkıldı
+Relation	T6	T2	EffectCause	true	yıkıldı	depremde
+Relation	T0	T4	NoRel	true	Deprem	titreşimi
+Relation	T1	T8	NoRel	true	yayıldığı	ulaşılabilmiştir
+Relation	T1	T9	NoRel	true	yayıldığı	ölçülmesi
+Relation	T2	T5	NoRel	true	depremde	sürmüştür
+Relation	T2	T9	NoRel	true	depremde	ölçülmesi
+Relation	T4	T7	NoRel	true	titreşimi	edilir
+Relation	T4	T9	NoRel	true	titreşimi	ölçülmesi
+Relation	T5	T0	NoRel	true	sürmüştür	Deprem
+Relation	T5	T4	NoRel	true	sürmüştür	titreşimi
+Relation	T5	T8	NoRel	true	sürmüştür	ulaşılabilmiştir
+Relation	T6	T4	NoRel	true	yıkıldı	titreşimi
+Relation	T6	T5	NoRel	true	yıkıldı	sürmüştür
+Relation	T7	T6	NoRel	true	edilir	yıkıldı
+Relation	T8	T0	NoRel	true	ulaşılabilmiştir	Deprem
+Relation	T8	T2	NoRel	true	ulaşılabilmiştir	depremde
+Relation	T8	T4	NoRel	true	ulaşılabilmiştir	titreşimi
+Relation	T9	T2	NoRel	true	ölçülmesi	depremde
+Relation	T9	T7	NoRel	true	ölçülmesi	edilir

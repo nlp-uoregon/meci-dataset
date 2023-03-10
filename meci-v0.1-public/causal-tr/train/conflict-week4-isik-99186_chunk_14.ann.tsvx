@@ -1,0 +1,37 @@
+Text	Verilen karar daha sonra Türkiye Büyük Millet Meclisine getirildi .	24 Nisan 1972 Pazartesi günü yapılan Meclis oturumunda CHP lideri İsmet İnönü , _ " 27 Mayıs'tan sonra idama mahkûm edilenlerin idam edilmemeleri için parti olarak var güçleriyle çalıştıklarını , siyasi suçlardan dolayı idam olmamasını , yeni bir kanun çıkarılmasını " _ önerdi ve şöyle devam etti :	_ " Suçluların cezaları müebbet hapse çevrilmelidir .	Nihayet bunlar genç , tecrübesiz , taşkın insanlardır .	Taşkınlıklarının hiçbir netice veremeyeceği kendilerine ve emsallerine öğretilmiştir .
+Event	T0	karar	EVENT	8
+Event	T1	getirildi	EVENT	56
+Event	T4	önerdi	EVENT	339
+Event	T5	etti	EVENT	361
+Event	T6	çevrilmelidir	EVENT	406
+Event	T3	oturumunda	EVENT	112
+Event	T7	idama	EVENT	171
+Event	T8	suçlardan	EVENT	271
+Event	T9	çalıştıklarını	EVENT	247
+Event	T10	çıkarılmasını	EVENT	321
+Relation	T3	T4	CauseEffect	true	oturumunda	önerdi
+Relation	T4	T3	EffectCause	true	önerdi	oturumunda
+Relation	T7	T9	CauseEffect	true	idama	çalıştıklarını
+Relation	T9	T7	EffectCause	true	çalıştıklarını	idama
+Relation	T7	T10	CauseEffect	true	idama	çıkarılmasını
+Relation	T10	T7	EffectCause	true	çıkarılmasını	idama
+Relation	T8	T7	CauseEffect	true	suçlardan	idama
+Relation	T7	T8	EffectCause	true	idama	suçlardan
+Relation	T0	T3	NoRel	true	karar	oturumunda
+Relation	T0	T4	NoRel	true	karar	önerdi
+Relation	T1	T3	NoRel	true	getirildi	oturumunda
+Relation	T1	T5	NoRel	true	getirildi	etti
+Relation	T10	T5	NoRel	true	çıkarılmasını	etti
+Relation	T10	T9	NoRel	true	çıkarılmasını	çalıştıklarını
+Relation	T4	T7	NoRel	true	önerdi	idama
+Relation	T4	T8	NoRel	true	önerdi	suçlardan
+Relation	T4	T9	NoRel	true	önerdi	çalıştıklarını
+Relation	T5	T3	NoRel	true	etti	oturumunda
+Relation	T5	T6	NoRel	true	etti	çevrilmelidir
+Relation	T5	T8	NoRel	true	etti	suçlardan
+Relation	T5	T9	NoRel	true	etti	çalıştıklarını
+Relation	T6	T3	NoRel	true	çevrilmelidir	oturumunda
+Relation	T7	T1	NoRel	true	idama	getirildi
+Relation	T8	T4	NoRel	true	suçlardan	önerdi
+Relation	T9	T0	NoRel	true	çalıştıklarını	karar
+Relation	T9	T10	NoRel	true	çalıştıklarını	çıkarılmasını

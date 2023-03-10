@@ -1,0 +1,97 @@
+Text	thumb| Stillezonen i IC4 MG 5855 set modsat køreretningen i forhold til IC Lyn 210 .	thumb| DB Cargos øltog passerer Odense i 2015 .	Det første sæt i InterCity Lyn 210 , bestående af to IC4-togsæt på vej fra Aarhus ( afgang kl. 5.19 ) til Københavns Lufthavn ( planlagt ankomst kl. 9.04 ) , blev ramt af en eller flere dele fra et modkørende godstog fra DB Cargo Scandinavia , umiddelbart efter lyntogets afgang fra Nyborg , hvilket resulterede i en kraftig opbremsning af lyntoget .	Ombord på lyntoget var 131 passagerer og tre medarbejdere .	Godstoget , G 9223 , bestod af otte lommevogne lastet med gardintrailere hhv. veksellad med tomme ølkasser , der skulle transporteres mellem kombiterminalen i Høje Taastrup til Carlsbergs bryggeri i Fredericia .
+Event	T0	køreretningen	EVENT	44
+Event	T1	passerer	EVENT	108
+Event	T2	sæt	EVENT	144
+Event	T3	ankomst	EVENT	270
+Event	T4	ramt	EVENT	296
+Event	T5	afgang	EVENT	405
+Event	T6	resulterede	EVENT	433
+Event	T7	opbremsning	EVENT	458
+Event	T8	bestod	EVENT	565
+Event	T9	lastet	EVENT	591
+Event	T10	set	EVENT	33
+Event	T11	på vej	EVENT	197
+Event	T12	afgang	EVENT	217
+Event	T13	modkørende	EVENT	331
+Event	T14	var	EVENT	503
+Event	T15	transporteres	EVENT	664
+Relation	T4	T7	CauseEffect	true	ramt	opbremsning
+Relation	T7	T4	EffectCause	true	opbremsning	ramt
+Relation	T0	T6	NoRel	true	køreretningen	resulterede
+Relation	T0	T7	NoRel	true	køreretningen	opbremsning
+Relation	T1	T11	NoRel	true	passerer	på vej
+Relation	T1	T15	NoRel	true	passerer	transporteres
+Relation	T1	T5	NoRel	true	passerer	afgang
+Relation	T1	T6	NoRel	true	passerer	resulterede
+Relation	T10	T14	NoRel	true	set	var
+Relation	T10	T4	NoRel	true	set	ramt
+Relation	T11	T1	NoRel	true	på vej	passerer
+Relation	T11	T2	NoRel	true	på vej	sæt
+Relation	T11	T5	NoRel	true	på vej	afgang
+Relation	T11	T9	NoRel	true	på vej	lastet
+Relation	T12	T11	NoRel	true	afgang	på vej
+Relation	T12	T14	NoRel	true	afgang	var
+Relation	T12	T4	NoRel	true	afgang	ramt
+Relation	T12	T6	NoRel	true	afgang	resulterede
+Relation	T12	T9	NoRel	true	afgang	lastet
+Relation	T13	T1	NoRel	true	modkørende	passerer
+Relation	T13	T11	NoRel	true	modkørende	på vej
+Relation	T13	T12	NoRel	true	modkørende	afgang
+Relation	T13	T15	NoRel	true	modkørende	transporteres
+Relation	T13	T3	NoRel	true	modkørende	ankomst
+Relation	T13	T4	NoRel	true	modkørende	ramt
+Relation	T13	T5	NoRel	true	modkørende	afgang
+Relation	T13	T6	NoRel	true	modkørende	resulterede
+Relation	T14	T1	NoRel	true	var	passerer
+Relation	T14	T11	NoRel	true	var	på vej
+Relation	T14	T12	NoRel	true	var	afgang
+Relation	T14	T13	NoRel	true	var	modkørende
+Relation	T14	T2	NoRel	true	var	sæt
+Relation	T14	T4	NoRel	true	var	ramt
+Relation	T15	T1	NoRel	true	transporteres	passerer
+Relation	T15	T12	NoRel	true	transporteres	afgang
+Relation	T15	T3	NoRel	true	transporteres	ankomst
+Relation	T15	T7	NoRel	true	transporteres	opbremsning
+Relation	T15	T9	NoRel	true	transporteres	lastet
+Relation	T2	T13	NoRel	true	sæt	modkørende
+Relation	T2	T14	NoRel	true	sæt	var
+Relation	T2	T3	NoRel	true	sæt	ankomst
+Relation	T3	T1	NoRel	true	ankomst	passerer
+Relation	T3	T10	NoRel	true	ankomst	set
+Relation	T3	T4	NoRel	true	ankomst	ramt
+Relation	T3	T5	NoRel	true	ankomst	afgang
+Relation	T3	T9	NoRel	true	ankomst	lastet
+Relation	T4	T11	NoRel	true	ramt	på vej
+Relation	T4	T12	NoRel	true	ramt	afgang
+Relation	T4	T15	NoRel	true	ramt	transporteres
+Relation	T4	T3	NoRel	true	ramt	ankomst
+Relation	T4	T5	NoRel	true	ramt	afgang
+Relation	T4	T8	NoRel	true	ramt	bestod
+Relation	T5	T1	NoRel	true	afgang	passerer
+Relation	T5	T13	NoRel	true	afgang	modkørende
+Relation	T5	T14	NoRel	true	afgang	var
+Relation	T5	T3	NoRel	true	afgang	ankomst
+Relation	T5	T8	NoRel	true	afgang	bestod
+Relation	T6	T11	NoRel	true	resulterede	på vej
+Relation	T6	T12	NoRel	true	resulterede	afgang
+Relation	T6	T13	NoRel	true	resulterede	modkørende
+Relation	T6	T15	NoRel	true	resulterede	transporteres
+Relation	T6	T7	NoRel	true	resulterede	opbremsning
+Relation	T6	T9	NoRel	true	resulterede	lastet
+Relation	T7	T10	NoRel	true	opbremsning	set
+Relation	T7	T12	NoRel	true	opbremsning	afgang
+Relation	T7	T13	NoRel	true	opbremsning	modkørende
+Relation	T7	T8	NoRel	true	opbremsning	bestod
+Relation	T8	T11	NoRel	true	bestod	på vej
+Relation	T8	T12	NoRel	true	bestod	afgang
+Relation	T8	T3	NoRel	true	bestod	ankomst
+Relation	T8	T7	NoRel	true	bestod	opbremsning
+Relation	T9	T0	NoRel	true	lastet	køreretningen
+Relation	T9	T10	NoRel	true	lastet	set
+Relation	T9	T12	NoRel	true	lastet	afgang
+Relation	T9	T14	NoRel	true	lastet	var
+Relation	T9	T15	NoRel	true	lastet	transporteres
+Relation	T9	T2	NoRel	true	lastet	sæt
+Relation	T9	T3	NoRel	true	lastet	ankomst
+Relation	T9	T4	NoRel	true	lastet	ramt
+Relation	T9	T5	NoRel	true	lastet	afgang

@@ -1,0 +1,17 @@
+Text	ستمبر 2014 میں کشمیر کے علاقے میں برسات کی بے پناہ بارشوں سے سیلاب آیا تھا ۔	بھارت میں جموں اور کشمیر کے علاقے اور پاکستان میں آزاد کشمیر ، گلگت بلتستان اور پنجاب کے علاے سب سے زیادہ متائثر ہوئے ۔	7 ستمبر 2014 تک بھارت میں 200 کے قریب جبکہ پاکستان مین 205 کے قریب لوگ سیلاب کی وجہ سے ہلاک ہوئے ہیں ۔	بھارت کے محکمہ داخلہ کے مطابق ریاست جموں و کشمیر میں ہزاروں گاؤں بارشون سے متائثر ہوئے ہیں اور 350 دیہات پانی کے نیچے ڈوب گئے ہیں ۔	ابھی تک کل 1 لاکھ 30 ہزار افراد کو نکالا جا چکا ہے جن میں سری نگر شہر سے 87000 افراد شامل ہیں ۔
+Event	T0	بارشوں	EVENT	51
+Event	T1	آیا	EVENT	67
+Event	T2	سیلاب	EVENT	268
+Event	T3	ہوئے	EVENT	289
+Event	T4	نکالا	EVENT	467
+Relation	T0	T1	CauseEffect	true	بارشوں	آیا
+Relation	T1	T0	EffectCause	true	آیا	بارشوں
+Relation	T2	T3	CauseEffect	true	سیلاب	ہوئے
+Relation	T3	T2	EffectCause	true	ہوئے	سیلاب
+Relation	T1	T2	NoRel	true	آیا	سیلاب
+Relation	T1	T3	NoRel	true	آیا	ہوئے
+Relation	T1	T4	NoRel	true	آیا	نکالا
+Relation	T2	T0	NoRel	true	سیلاب	بارشوں
+Relation	T4	T0	NoRel	true	نکالا	بارشوں
+Relation	T4	T1	NoRel	true	نکالا	آیا
+Relation	T4	T3	NoRel	true	نکالا	ہوئے

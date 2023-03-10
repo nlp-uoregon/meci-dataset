@@ -1,0 +1,37 @@
+Text	ایک دوسری تحقیق کے مطابق جو 15 حاملہ خواتین کے بارے میں ہے ، اس کے مطابق زیادہ تر خواتین کو بخار اور کھانسی کے شکایت رہی ، جب کہ لیبارٹری ٹیسٹ میں 12 خواتین میں لیمفوسیٹوپینیا برآمد ہوا ہے ۔	ان مریضوں کی گراوؤنڈ گلاس اوپاسٹی کی ابتدائی کمپیوٹری ٹوموگرافی کی رپورٹیں غیر حاملہ مریضوں کی سابقہ معلومات کے مطابق تھیں ۔	وضع حمل کے بعد کی تصاویر میں نمونیا میں اضافہ دیکھنے کو نہیں ملا ۔	ذرائع ابلاغ کی اطلاعات کے مطابق مارچ 2020ء میں 100 حاملہ خواتین نے بچوں کو جن مدیا ، جب کہ زچگی کے بعد کسی ماں کی موت واقع نہیں ہوئی ۔	اپریل 2020ء میں ، ایران میں حمل کے 30ویں ہفتے میں 27 سالہ حاملہ کی موت ہوئی ، ہوسکتا ہے کہ اس کی موت کوویڈ 19 سے ہوئی ہو ۔
+Event	T0	تحقیق	EVENT	10
+Event	T1	شکایت	EVENT	111
+Event	T10	زچگی	EVENT	474
+Event	T13	حمل	EVENT	546
+Event	T15	موت	EVENT	615
+Event	T2	ٹیسٹ	EVENT	138
+Event	T5	حمل	EVENT	320
+Event	T6	نمونیا	EVENT	345
+Event	T8	اطلاعات	EVENT	398
+Relation	T0	T1	CauseEffect	true	تحقیق	شکایت
+Relation	T1	T0	EffectCause	true	شکایت	تحقیق
+Relation	T0	T15	NoRel	true	تحقیق	موت
+Relation	T0	T2	NoRel	true	تحقیق	ٹیسٹ
+Relation	T0	T6	NoRel	true	تحقیق	نمونیا
+Relation	T0	T8	NoRel	true	تحقیق	اطلاعات
+Relation	T10	T2	NoRel	true	زچگی	ٹیسٹ
+Relation	T10	T5	NoRel	true	زچگی	حمل
+Relation	T10	T8	NoRel	true	زچگی	اطلاعات
+Relation	T13	T1	NoRel	true	حمل	شکایت
+Relation	T13	T2	NoRel	true	حمل	ٹیسٹ
+Relation	T15	T1	NoRel	true	موت	شکایت
+Relation	T15	T10	NoRel	true	موت	زچگی
+Relation	T15	T5	NoRel	true	موت	حمل
+Relation	T2	T1	NoRel	true	ٹیسٹ	شکایت
+Relation	T2	T10	NoRel	true	ٹیسٹ	زچگی
+Relation	T2	T6	NoRel	true	ٹیسٹ	نمونیا
+Relation	T5	T1	NoRel	true	حمل	شکایت
+Relation	T5	T8	NoRel	true	حمل	اطلاعات
+Relation	T6	T1	NoRel	true	نمونیا	شکایت
+Relation	T6	T10	NoRel	true	نمونیا	زچگی
+Relation	T6	T13	NoRel	true	نمونیا	حمل
+Relation	T6	T15	NoRel	true	نمونیا	موت
+Relation	T6	T2	NoRel	true	نمونیا	ٹیسٹ
+Relation	T8	T0	NoRel	true	اطلاعات	تحقیق
+Relation	T8	T1	NoRel	true	اطلاعات	شکایت
+Relation	T8	T13	NoRel	true	اطلاعات	حمل

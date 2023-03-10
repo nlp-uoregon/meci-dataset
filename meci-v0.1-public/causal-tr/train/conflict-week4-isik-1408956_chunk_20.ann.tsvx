@@ -1,0 +1,37 @@
+Text	İran ve Afganistan'da hâlâ yasak kapsamındadır , Mısırda yasaklama girişimleri sürmektedir .	_ Don Kişot _ Cervantes Roman 17. yüzyılın başında İspanya'da yazılan satirik roman , İspanyol engizisyonu tarafından “ Hayırseverliğin değersiz kılınması ” nedeniyle yasaklandı .	Daha sonra bazı bölümleri sansürlenerek basılan kitap İspanya'da ancak 19. yüzyılda eksiksiz olarak yayımlanabildi .	_ Çizgilerle Nazım Hikmet _ Müjdat Gezen , Savaş Dinçel Biyografi 1979'da yazarları mahkemeye verildi , hakim davayı saçma bulunca beraat ettiler .	Kitap 2011'de yeniden basıldı .
+Event	T0	yasak	EVENT	27
+Event	T1	sürmektedir	EVENT	79
+Event	T2	yazılan	EVENT	155
+Event	T3	yasaklandı	EVENT	260
+Event	T4	yayımlanabildi	EVENT	373
+Event	T5	verildi	EVENT	484
+Event	T6	ettiler	EVENT	528
+Event	T7	basıldı	EVENT	560
+Event	T8	sansürlenerek	EVENT	299
+Event	T9	basılan	EVENT	313
+Relation	T3	T8	CauseEffect	true	yasaklandı	sansürlenerek
+Relation	T8	T3	EffectCause	true	sansürlenerek	yasaklandı
+Relation	T8	T9	CauseEffect	true	sansürlenerek	basılan
+Relation	T9	T8	EffectCause	true	basılan	sansürlenerek
+Relation	T6	T7	CauseEffect	true	ettiler	basıldı
+Relation	T7	T6	EffectCause	true	basıldı	ettiler
+Relation	T0	T6	NoRel	true	yasak	ettiler
+Relation	T1	T0	NoRel	true	sürmektedir	yasak
+Relation	T1	T2	NoRel	true	sürmektedir	yazılan
+Relation	T1	T3	NoRel	true	sürmektedir	yasaklandı
+Relation	T2	T1	NoRel	true	yazılan	sürmektedir
+Relation	T2	T4	NoRel	true	yazılan	yayımlanabildi
+Relation	T2	T7	NoRel	true	yazılan	basıldı
+Relation	T2	T9	NoRel	true	yazılan	basılan
+Relation	T3	T0	NoRel	true	yasaklandı	yasak
+Relation	T3	T1	NoRel	true	yasaklandı	sürmektedir
+Relation	T3	T2	NoRel	true	yasaklandı	yazılan
+Relation	T4	T5	NoRel	true	yayımlanabildi	verildi
+Relation	T4	T7	NoRel	true	yayımlanabildi	basıldı
+Relation	T4	T9	NoRel	true	yayımlanabildi	basılan
+Relation	T5	T8	NoRel	true	verildi	sansürlenerek
+Relation	T6	T0	NoRel	true	ettiler	yasak
+Relation	T7	T1	NoRel	true	basıldı	sürmektedir
+Relation	T8	T4	NoRel	true	sansürlenerek	yayımlanabildi
+Relation	T8	T5	NoRel	true	sansürlenerek	verildi
+Relation	T9	T3	NoRel	true	basılan	yasaklandı

@@ -1,0 +1,66 @@
+Text	The possibility of pilot error as a cause of the accident was suggested by DGCA 's Arun Kumar .	Several concerns were raised on the inquiry on this incident , by Captain Mohan Ranganathan , Yeshwant Shenoy and others , that it might get covered up and the truth would never surface .	Royal Aeronautical Society fellow and aviation safety expert Amit Singh alleged that evidence in the crash site was being tampered , as few unidentified people were spotted near the wreckage , thus asked for an open investigation .	He also pointed out that investigations were flawed and instead of punishing real culprits , actions were taken against the pilots .	The AAIB team in Kozhikode probed the incident with the assistance of Airports Authority of India officials , air traffic control , ground staff , CISF , the fire team and the rescue team .
+Event	T0	error	EVENT	25
+Event	T1	accident	EVENT	49
+Event	T10	tampered	EVENT	406
+Event	T11	spotted	EVENT	449
+Event	T13	asked	EVENT	482
+Event	T14	investigation	EVENT	500
+Event	T15	investigations	EVENT	541
+Event	T16	flawed	EVENT	561
+Event	T17	punishing	EVENT	583
+Event	T18	actions	EVENT	609
+Event	T19	taken	EVENT	622
+Event	T2	suggested	EVENT	62
+Event	T20	probed	EVENT	676
+Event	T21	incident	EVENT	687
+Event	T4	raised	EVENT	118
+Event	T6	incident	EVENT	148
+Event	T7	surface	EVENT	274
+Event	T8	alleged	EVENT	356
+Event	T9	crash	EVENT	385
+Relation	T0	T1	CauseEffect	true	error	accident
+Relation	T1	T0	EffectCause	true	accident	error
+Relation	T1	T2	CauseEffect	true	accident	suggested
+Relation	T2	T1	EffectCause	true	suggested	accident
+Relation	T6	T4	CauseEffect	true	incident	raised
+Relation	T4	T6	EffectCause	true	raised	incident
+Relation	T8	T10	CauseEffect	true	alleged	tampered
+Relation	T10	T8	EffectCause	true	tampered	alleged
+Relation	T11	T13	CauseEffect	true	spotted	asked
+Relation	T13	T11	EffectCause	true	asked	spotted
+Relation	T16	T17	CauseEffect	true	flawed	punishing
+Relation	T17	T16	EffectCause	true	punishing	flawed
+Relation	T16	T18	CauseEffect	true	flawed	actions
+Relation	T18	T16	EffectCause	true	actions	flawed
+Relation	T0	T6	NoRel	true	error	incident
+Relation	T0	T9	NoRel	true	error	crash
+Relation	T1	T16	NoRel	true	accident	flawed
+Relation	T1	T9	NoRel	true	accident	crash
+Relation	T10	T2	NoRel	true	tampered	suggested
+Relation	T11	T2	NoRel	true	spotted	suggested
+Relation	T13	T17	NoRel	true	asked	punishing
+Relation	T13	T19	NoRel	true	asked	taken
+Relation	T13	T20	NoRel	true	asked	probed
+Relation	T13	T9	NoRel	true	asked	crash
+Relation	T14	T17	NoRel	true	investigation	punishing
+Relation	T14	T7	NoRel	true	investigation	surface
+Relation	T14	T9	NoRel	true	investigation	crash
+Relation	T15	T0	NoRel	true	investigations	error
+Relation	T15	T1	NoRel	true	investigations	accident
+Relation	T16	T19	NoRel	true	flawed	taken
+Relation	T16	T2	NoRel	true	flawed	suggested
+Relation	T17	T2	NoRel	true	punishing	suggested
+Relation	T17	T6	NoRel	true	punishing	incident
+Relation	T17	T7	NoRel	true	punishing	surface
+Relation	T18	T10	NoRel	true	actions	tampered
+Relation	T18	T13	NoRel	true	actions	asked
+Relation	T18	T15	NoRel	true	actions	investigations
+Relation	T18	T2	NoRel	true	actions	suggested
+Relation	T18	T21	NoRel	true	actions	incident
+Relation	T19	T13	NoRel	true	taken	asked
+Relation	T19	T15	NoRel	true	taken	investigations
+Relation	T19	T6	NoRel	true	taken	incident
+Relation	T2	T17	NoRel	true	suggested	punishing
+Relation	T2	T8	NoRel	true	suggested	alleged
+Relation	T20	T2	NoRel	true	probed	suggested
+Relation	T9	T17	NoRel	true	crash	punishing

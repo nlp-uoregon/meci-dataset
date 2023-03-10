@@ -1,0 +1,50 @@
+Text	The gang continued its activities and robbed $ 11,000 from a bank in Clinton , Oklahoma .	Two days later , Underhill apparently acted alone in a bank robbery in Canton , Kansas but rejoined the gang by the time the Bailey - Underhill Gang struck a bank in Kingfisher , Oklahoma on August 9 , 1933 .	Three days after the Kingfisher robbery , Bailey was visiting Robert Shannon , father - in - law of Machine Gun Kelly , at his Texas ranch and safehouse when police and federal agents raided the property .	Bailey had been passed ransom money from Kelly 's kidnapping of oil tycoon Charles Urschel and wrongly convicted in the plot two months later .	With Bailey serving a life sentence , Underhill took charge of the gang .
+Event	T0	continued	EVENT	9
+Event	T1	activities	EVENT	23
+Event	T10	kidnapping	EVENT	555
+Event	T11	convicted	EVENT	608
+Event	T13	serving	EVENT	661
+Event	T14	sentence	EVENT	676
+Event	T15	charge	EVENT	702
+Event	T16	acted	EVENT	128
+Event	T2	robbed	EVENT	38
+Event	T3	robbery	EVENT	150
+Event	T4	rejoined	EVENT	181
+Event	T5	struck	EVENT	239
+Event	T6	robbery	EVENT	331
+Event	T7	visiting	EVENT	352
+Event	T8	raided	EVENT	483
+Event	T9	passed	EVENT	521
+Relation	T8	T7	CauseEffect	true	raided	visiting
+Relation	T7	T8	EffectCause	true	visiting	raided
+Relation	T9	T10	CauseEffect	true	passed	kidnapping
+Relation	T10	T9	EffectCause	true	kidnapping	passed
+Relation	T9	T11	CauseEffect	true	passed	convicted
+Relation	T11	T9	EffectCause	true	convicted	passed
+Relation	T11	T13	CauseEffect	true	convicted	serving
+Relation	T13	T11	EffectCause	true	serving	convicted
+Relation	T13	T15	CauseEffect	true	serving	charge
+Relation	T15	T13	EffectCause	true	charge	serving
+Relation	T0	T11	NoRel	true	continued	convicted
+Relation	T0	T14	NoRel	true	continued	sentence
+Relation	T0	T3	NoRel	true	continued	robbery
+Relation	T0	T4	NoRel	true	continued	rejoined
+Relation	T1	T11	NoRel	true	activities	convicted
+Relation	T1	T7	NoRel	true	activities	visiting
+Relation	T11	T3	NoRel	true	convicted	robbery
+Relation	T13	T16	NoRel	true	serving	acted
+Relation	T13	T6	NoRel	true	serving	robbery
+Relation	T13	T7	NoRel	true	serving	visiting
+Relation	T13	T8	NoRel	true	serving	raided
+Relation	T14	T4	NoRel	true	sentence	rejoined
+Relation	T15	T11	NoRel	true	charge	convicted
+Relation	T15	T7	NoRel	true	charge	visiting
+Relation	T16	T2	NoRel	true	acted	robbed
+Relation	T16	T9	NoRel	true	acted	passed
+Relation	T2	T11	NoRel	true	robbed	convicted
+Relation	T3	T11	NoRel	true	robbery	convicted
+Relation	T5	T10	NoRel	true	struck	kidnapping
+Relation	T6	T14	NoRel	true	robbery	sentence
+Relation	T7	T0	NoRel	true	visiting	continued
+Relation	T8	T4	NoRel	true	raided	rejoined
+Relation	T9	T15	NoRel	true	passed	charge

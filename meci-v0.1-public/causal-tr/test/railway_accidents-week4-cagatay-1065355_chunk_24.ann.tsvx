@@ -1,0 +1,35 @@
+Text	Dizel ve benzin taşıyan on bir vagon tahrip oldu .	Bir kişi öldü .	- 30 Ağustos , 2009 – Bir yolcu treni Yaounde yakını , Kamerun’da raydan çıktı ; 5 ölü 275 yaralı .	- 2 Eylül , 2009 – A Riga - Daugavpils treni Livani yakınında bir " Volvo " ekskavatör ile çarpıştı .	3 kişi yaralandı ve 1 kişi öldü .
+Event	T0	oldu	EVENT	44
+Event	T1	öldü	EVENT	60
+Event	T2	çıktı	EVENT	140
+Event	T3	ölü	EVENT	150
+Event	T4	yaralı	EVENT	158
+Event	T5	çarpıştı	EVENT	258
+Event	T6	yaralandı	EVENT	276
+Event	T7	öldü	EVENT	296
+Relation	T0	T1	CauseEffect	true	oldu	öldü
+Relation	T1	T0	EffectCause	true	öldü	oldu
+Relation	T2	T3	CauseEffect	true	çıktı	ölü
+Relation	T3	T2	EffectCause	true	ölü	çıktı
+Relation	T2	T4	CauseEffect	true	çıktı	yaralı
+Relation	T4	T2	EffectCause	true	yaralı	çıktı
+Relation	T5	T6	CauseEffect	true	çarpıştı	yaralandı
+Relation	T6	T5	EffectCause	true	yaralandı	çarpıştı
+Relation	T5	T7	CauseEffect	true	çarpıştı	öldü
+Relation	T7	T5	EffectCause	true	öldü	çarpıştı
+Relation	T0	T5	NoRel	true	oldu	çarpıştı
+Relation	T0	T6	NoRel	true	oldu	yaralandı
+Relation	T0	T7	NoRel	true	oldu	öldü
+Relation	T1	T2	NoRel	true	öldü	çıktı
+Relation	T1	T4	NoRel	true	öldü	yaralı
+Relation	T1	T7	NoRel	true	öldü	öldü
+Relation	T3	T4	NoRel	true	ölü	yaralı
+Relation	T4	T0	NoRel	true	yaralı	oldu
+Relation	T4	T1	NoRel	true	yaralı	öldü
+Relation	T4	T3	NoRel	true	yaralı	ölü
+Relation	T4	T5	NoRel	true	yaralı	çarpıştı
+Relation	T4	T6	NoRel	true	yaralı	yaralandı
+Relation	T5	T1	NoRel	true	çarpıştı	öldü
+Relation	T5	T3	NoRel	true	çarpıştı	ölü
+Relation	T6	T7	NoRel	true	yaralandı	öldü
+Relation	T7	T4	NoRel	true	öldü	yaralı

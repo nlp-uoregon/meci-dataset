@@ -1,0 +1,49 @@
+Text	Çapı 20 santimete kadar olan ponza taşları saat 8 civarında yağmaya başladı ve onu , saat 9-10 gibi civarında kül yağışı izledi .	Yarımadanın her tarafında dağdan aşağı doğru patlayan piroklastik akıntılar , Tambora köyünü silip süpürdü .	11 Nisan akşamına kadar yüksek sesli patlamalar duyuldu .	Kül örtüsü , Batı Cava ve Güney Sulawesi'ye kadar yayılmıştır .	Batavia'da azotlu bir koku fark edilirken ağır teframsı yağışlar meydana geldi ve 11 ila 17 Nisan arasında azalmaya başladı .
+Event	T0	başladı	EVENT	68
+Event	T1	izledi	EVENT	121
+Event	T2	patlayan	EVENT	175
+Event	T3	süpürdü	EVENT	229
+Event	T4	duyuldu	EVENT	287
+Event	T5	yayılmıştır	EVENT	347
+Event	T6	geldi	EVENT	434
+Event	T7	başladı	EVENT	477
+Event	T8	akıntılar	EVENT	196
+Event	T9	edilirken	EVENT	393
+Relation	T8	T3	CauseEffect	true	akıntılar	süpürdü
+Relation	T3	T8	EffectCause	true	süpürdü	akıntılar
+Relation	T0	T1	NoRel	true	başladı	izledi
+Relation	T0	T9	NoRel	true	başladı	edilirken
+Relation	T1	T0	NoRel	true	izledi	başladı
+Relation	T1	T2	NoRel	true	izledi	patlayan
+Relation	T1	T3	NoRel	true	izledi	süpürdü
+Relation	T1	T6	NoRel	true	izledi	geldi
+Relation	T1	T8	NoRel	true	izledi	akıntılar
+Relation	T2	T1	NoRel	true	patlayan	izledi
+Relation	T2	T6	NoRel	true	patlayan	geldi
+Relation	T3	T5	NoRel	true	süpürdü	yayılmıştır
+Relation	T3	T7	NoRel	true	süpürdü	başladı
+Relation	T3	T9	NoRel	true	süpürdü	edilirken
+Relation	T4	T1	NoRel	true	duyuldu	izledi
+Relation	T4	T3	NoRel	true	duyuldu	süpürdü
+Relation	T4	T7	NoRel	true	duyuldu	başladı
+Relation	T5	T0	NoRel	true	yayılmıştır	başladı
+Relation	T5	T3	NoRel	true	yayılmıştır	süpürdü
+Relation	T5	T4	NoRel	true	yayılmıştır	duyuldu
+Relation	T5	T6	NoRel	true	yayılmıştır	geldi
+Relation	T6	T1	NoRel	true	geldi	izledi
+Relation	T6	T2	NoRel	true	geldi	patlayan
+Relation	T6	T4	NoRel	true	geldi	duyuldu
+Relation	T6	T5	NoRel	true	geldi	yayılmıştır
+Relation	T6	T8	NoRel	true	geldi	akıntılar
+Relation	T7	T2	NoRel	true	başladı	patlayan
+Relation	T7	T3	NoRel	true	başladı	süpürdü
+Relation	T7	T6	NoRel	true	başladı	geldi
+Relation	T7	T8	NoRel	true	başladı	akıntılar
+Relation	T7	T9	NoRel	true	başladı	edilirken
+Relation	T8	T2	NoRel	true	akıntılar	patlayan
+Relation	T8	T5	NoRel	true	akıntılar	yayılmıştır
+Relation	T8	T6	NoRel	true	akıntılar	geldi
+Relation	T9	T1	NoRel	true	edilirken	izledi
+Relation	T9	T3	NoRel	true	edilirken	süpürdü
+Relation	T9	T5	NoRel	true	edilirken	yayılmıştır
+Relation	T9	T7	NoRel	true	edilirken	başladı

@@ -1,0 +1,79 @@
+Text	All 269 passengers and crew aboard were killed , including Larry McDonald , a United States Representative from Georgia .	The Soviet Union found the wreckage under the sea two weeks later on September 15 , and found the flight recorders in October , but this information was kept secret until 1992 .	The Soviet Union initially denied knowledge of the incident , but later admitted shooting down the aircraft , claiming that it was on a MASINT spy mission .	The Politburo of the Communist Party of the Soviet Union said it was a deliberate provocation by the United States to probe the Soviet Union 's military preparedness , or even to provoke a war .	The White House accused the Soviet Union of obstructing search and rescue operations .
+Event	T0	killed	EVENT	40
+Event	T1	found	EVENT	139
+Event	T2	wreckage	EVENT	149
+Event	T3	found	EVENT	210
+Event	T5	incident	EVENT	351
+Event	T6	claiming	EVENT	410
+Event	T7	mission	EVENT	447
+Event	T8	said	EVENT	514
+Event	T9	provocation	EVENT	539
+Event	T10	probe	EVENT	575
+Event	T11	preparedness	EVENT	610
+Event	T12	provoke	EVENT	636
+Event	T13	war	EVENT	646
+Event	T14	accused	EVENT	668
+Event	T15	search	EVENT	708
+Event	T16	operations	EVENT	726
+Event	T17	kept secret	EVENT	275
+Event	T4	flight recorders	EVENT	220
+Event	T18	denied	EVENT	327
+Event	T19	admitted	EVENT	372
+Event	T20	shooting down	EVENT	381
+Event	T21	obstructing	EVENT	696
+Relation	T0	T1	CauseEffect	true	killed	found
+Relation	T1	T0	EffectCause	true	found	killed
+Relation	T0	T3	CauseEffect	true	killed	found
+Relation	T3	T0	EffectCause	true	found	killed
+Relation	T18	T19	CauseEffect	true	denied	admitted
+Relation	T19	T18	EffectCause	true	admitted	denied
+Relation	T20	T19	CauseEffect	true	shooting down	admitted
+Relation	T19	T20	EffectCause	true	admitted	shooting down
+Relation	T7	T20	CauseEffect	true	mission	shooting down
+Relation	T20	T7	EffectCause	true	shooting down	mission
+Relation	T10	T9	CauseEffect	true	probe	provocation
+Relation	T9	T10	EffectCause	true	provocation	probe
+Relation	T12	T9	CauseEffect	true	provoke	provocation
+Relation	T9	T12	EffectCause	true	provocation	provoke
+Relation	T21	T14	CauseEffect	true	obstructing	accused
+Relation	T14	T21	EffectCause	true	accused	obstructing
+Relation	T0	T10	NoRel	true	killed	probe
+Relation	T0	T13	NoRel	true	killed	war
+Relation	T10	T16	NoRel	true	probe	operations
+Relation	T10	T19	NoRel	true	probe	admitted
+Relation	T11	T13	NoRel	true	preparedness	war
+Relation	T11	T2	NoRel	true	preparedness	wreckage
+Relation	T11	T7	NoRel	true	preparedness	mission
+Relation	T11	T8	NoRel	true	preparedness	said
+Relation	T12	T15	NoRel	true	provoke	search
+Relation	T13	T10	NoRel	true	war	probe
+Relation	T13	T11	NoRel	true	war	preparedness
+Relation	T13	T16	NoRel	true	war	operations
+Relation	T14	T8	NoRel	true	accused	said
+Relation	T15	T13	NoRel	true	search	war
+Relation	T15	T19	NoRel	true	search	admitted
+Relation	T15	T3	NoRel	true	search	found
+Relation	T15	T4	NoRel	true	search	flight recorders
+Relation	T15	T6	NoRel	true	search	claiming
+Relation	T15	T7	NoRel	true	search	mission
+Relation	T16	T15	NoRel	true	operations	search
+Relation	T16	T2	NoRel	true	operations	wreckage
+Relation	T17	T18	NoRel	true	kept secret	denied
+Relation	T17	T3	NoRel	true	kept secret	found
+Relation	T17	T7	NoRel	true	kept secret	mission
+Relation	T19	T12	NoRel	true	admitted	provoke
+Relation	T19	T17	NoRel	true	admitted	kept secret
+Relation	T19	T8	NoRel	true	admitted	said
+Relation	T2	T16	NoRel	true	wreckage	operations
+Relation	T2	T20	NoRel	true	wreckage	shooting down
+Relation	T20	T10	NoRel	true	shooting down	probe
+Relation	T21	T18	NoRel	true	obstructing	denied
+Relation	T21	T4	NoRel	true	obstructing	flight recorders
+Relation	T21	T9	NoRel	true	obstructing	provocation
+Relation	T3	T2	NoRel	true	found	wreckage
+Relation	T4	T11	NoRel	true	flight recorders	preparedness
+Relation	T4	T2	NoRel	true	flight recorders	wreckage
+Relation	T6	T0	NoRel	true	claiming	killed
+Relation	T6	T21	NoRel	true	claiming	obstructing
+Relation	T9	T13	NoRel	true	provocation	war
+Relation	T9	T8	NoRel	true	provocation	said

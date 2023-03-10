@@ -1,0 +1,105 @@
+Text	La entrega se realizó en la vía Borgognissanti ( Florencia ) , y mientras el especialista Giovanne Poggi certificaba su autenticidad , la policía arrestaba al ladrón .	Vicenzo Peruggia fue juzgado en ese país y condenado a un año y quince meses de prisión , pero quedó en libertad luego de siete meses .	Luego de esto , la obra realizó una gira de dos meses por diversos museos italianos , antes de retornar al _ Louvre _ .	En el juicio , Vicenzo declaró haberlo hecho como un « acto patriótico » y nunca delató a ningún cómplice .	Tras la gran estafa , Valfierno y Chaudron viajaron a Los Ángeles , donde amasaron una gran fortuna vendiendo falsificaciones a las estrellas de cine .
+Event	T0	entrega	EVENT	3
+Event	T1	realizó	EVENT	14
+Event	T2	certificaba	EVENT	105
+Event	T3	arrestaba	EVENT	146
+Event	T4	juzgado	EVENT	189
+Event	T5	condenado	EVENT	211
+Event	T6	realizó	EVENT	328
+Event	T7	gira	EVENT	340
+Event	T8	retornar	EVENT	399
+Event	T9	juicio	EVENT	430
+Event	T10	declaró	EVENT	447
+Event	T11	hecho	EVENT	463
+Event	T12	delató	EVENT	505
+Event	T13	estafa	EVENT	545
+Event	T14	viajaron	EVENT	575
+Event	T15	amasaron	EVENT	606
+Event	T16	falsificaciones	EVENT	642
+Relation	T4	T5	CauseEffect	true	juzgado	condenado
+Relation	T5	T4	EffectCause	true	condenado	juzgado
+Relation	T16	T15	CauseEffect	true	falsificaciones	amasaron
+Relation	T15	T16	EffectCause	true	amasaron	falsificaciones
+Relation	T0	T13	NoRel	true	entrega	estafa
+Relation	T0	T14	NoRel	true	entrega	viajaron
+Relation	T0	T2	NoRel	true	entrega	certificaba
+Relation	T0	T5	NoRel	true	entrega	condenado
+Relation	T0	T7	NoRel	true	entrega	gira
+Relation	T1	T10	NoRel	true	realizó	declaró
+Relation	T1	T11	NoRel	true	realizó	hecho
+Relation	T1	T15	NoRel	true	realizó	amasaron
+Relation	T1	T16	NoRel	true	realizó	falsificaciones
+Relation	T1	T2	NoRel	true	realizó	certificaba
+Relation	T1	T3	NoRel	true	realizó	arrestaba
+Relation	T1	T5	NoRel	true	realizó	condenado
+Relation	T1	T8	NoRel	true	realizó	retornar
+Relation	T10	T11	NoRel	true	declaró	hecho
+Relation	T10	T12	NoRel	true	declaró	delató
+Relation	T10	T13	NoRel	true	declaró	estafa
+Relation	T10	T16	NoRel	true	declaró	falsificaciones
+Relation	T10	T2	NoRel	true	declaró	certificaba
+Relation	T10	T9	NoRel	true	declaró	juicio
+Relation	T11	T15	NoRel	true	hecho	amasaron
+Relation	T11	T16	NoRel	true	hecho	falsificaciones
+Relation	T11	T5	NoRel	true	hecho	condenado
+Relation	T11	T7	NoRel	true	hecho	gira
+Relation	T11	T9	NoRel	true	hecho	juicio
+Relation	T12	T10	NoRel	true	delató	declaró
+Relation	T12	T13	NoRel	true	delató	estafa
+Relation	T12	T16	NoRel	true	delató	falsificaciones
+Relation	T12	T5	NoRel	true	delató	condenado
+Relation	T12	T7	NoRel	true	delató	gira
+Relation	T13	T0	NoRel	true	estafa	entrega
+Relation	T13	T1	NoRel	true	estafa	realizó
+Relation	T13	T12	NoRel	true	estafa	delató
+Relation	T13	T15	NoRel	true	estafa	amasaron
+Relation	T13	T3	NoRel	true	estafa	arrestaba
+Relation	T14	T10	NoRel	true	viajaron	declaró
+Relation	T14	T13	NoRel	true	viajaron	estafa
+Relation	T14	T15	NoRel	true	viajaron	amasaron
+Relation	T14	T3	NoRel	true	viajaron	arrestaba
+Relation	T14	T8	NoRel	true	viajaron	retornar
+Relation	T15	T2	NoRel	true	amasaron	certificaba
+Relation	T15	T8	NoRel	true	amasaron	retornar
+Relation	T16	T11	NoRel	true	falsificaciones	hecho
+Relation	T16	T14	NoRel	true	falsificaciones	viajaron
+Relation	T16	T8	NoRel	true	falsificaciones	retornar
+Relation	T2	T11	NoRel	true	certificaba	hecho
+Relation	T2	T12	NoRel	true	certificaba	delató
+Relation	T2	T3	NoRel	true	certificaba	arrestaba
+Relation	T2	T5	NoRel	true	certificaba	condenado
+Relation	T3	T1	NoRel	true	arrestaba	realizó
+Relation	T3	T2	NoRel	true	arrestaba	certificaba
+Relation	T3	T4	NoRel	true	arrestaba	juzgado
+Relation	T3	T6	NoRel	true	arrestaba	realizó
+Relation	T4	T14	NoRel	true	juzgado	viajaron
+Relation	T4	T2	NoRel	true	juzgado	certificaba
+Relation	T4	T9	NoRel	true	juzgado	juicio
+Relation	T5	T1	NoRel	true	condenado	realizó
+Relation	T5	T13	NoRel	true	condenado	estafa
+Relation	T5	T14	NoRel	true	condenado	viajaron
+Relation	T5	T7	NoRel	true	condenado	gira
+Relation	T6	T1	NoRel	true	realizó	realizó
+Relation	T6	T12	NoRel	true	realizó	delató
+Relation	T6	T13	NoRel	true	realizó	estafa
+Relation	T6	T14	NoRel	true	realizó	viajaron
+Relation	T6	T8	NoRel	true	realizó	retornar
+Relation	T6	T9	NoRel	true	realizó	juicio
+Relation	T7	T1	NoRel	true	gira	realizó
+Relation	T7	T11	NoRel	true	gira	hecho
+Relation	T7	T12	NoRel	true	gira	delató
+Relation	T7	T15	NoRel	true	gira	amasaron
+Relation	T7	T4	NoRel	true	gira	juzgado
+Relation	T7	T6	NoRel	true	gira	realizó
+Relation	T8	T12	NoRel	true	retornar	delató
+Relation	T8	T13	NoRel	true	retornar	estafa
+Relation	T8	T16	NoRel	true	retornar	falsificaciones
+Relation	T8	T2	NoRel	true	retornar	certificaba
+Relation	T8	T4	NoRel	true	retornar	juzgado
+Relation	T8	T5	NoRel	true	retornar	condenado
+Relation	T8	T6	NoRel	true	retornar	realizó
+Relation	T8	T9	NoRel	true	retornar	juicio
+Relation	T9	T15	NoRel	true	juicio	amasaron
+Relation	T9	T3	NoRel	true	juicio	arrestaba
+Relation	T9	T5	NoRel	true	juicio	condenado
+Relation	T9	T8	NoRel	true	juicio	retornar

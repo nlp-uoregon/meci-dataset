@@ -1,0 +1,64 @@
+Text	مگر 1765 ء میں معاہدہ الٰہ باد طے پایا جس کے نتیجے میں شاہ عالم ثانی نے ٹیکس وصول کرنے کے اختیارات ایسٹ انڈیا کمپنی کو بخش دیے ۔	راتوں رات ٹیکس بڑھ کر 50 فیصد ہو گیا ۔	اس سے غربت میں شدید اضافہ ہوا اور آنے والے بُرے وقتوں کے لیے بچت کرنا انتہائی مشکل ہو گیا ۔	Cornelius Wallard کے مطابق ہندوستان میں دو ہزار سالوں میں 17 دفعہ قحط پڑا تھا ۔	مگر ایسٹ انڈیا کمپنی کے 120 سالہ دور میں 34 دفعہ قحط پڑا ۔
+Event	T0	معاہدہ	EVENT	15
+Event	T1	پایا	EVENT	34
+Event	T3	بڑھ	EVENT	144
+Event	T8	بخش	EVENT	119
+Event	T2	وصول	EVENT	77
+Event	T9	ہو	EVENT	159
+Event	T4	غربت	EVENT	174
+Event	T10	اضافہ	EVENT	188
+Event	T5	بچت	EVENT	229
+Event	T11	مشکل	EVENT	246
+Event	T12	قحط	EVENT	326
+Event	T6	قحط	EVENT	389
+Relation	T1	T8	CauseEffect	true	پایا	بخش
+Relation	T8	T1	EffectCause	true	بخش	پایا
+Relation	T8	T3	CauseEffect	true	بخش	بڑھ
+Relation	T3	T8	EffectCause	true	بڑھ	بخش
+Relation	T3	T10	CauseEffect	true	بڑھ	اضافہ
+Relation	T10	T3	EffectCause	true	اضافہ	بڑھ
+Relation	T3	T11	CauseEffect	true	بڑھ	مشکل
+Relation	T11	T3	EffectCause	true	مشکل	بڑھ
+Relation	T8	T6	CauseEffect	true	بخش	قحط
+Relation	T6	T8	EffectCause	true	قحط	بخش
+Relation	T0	T12	NoRel	true	معاہدہ	قحط
+Relation	T0	T4	NoRel	true	معاہدہ	غربت
+Relation	T0	T8	NoRel	true	معاہدہ	بخش
+Relation	T1	T12	NoRel	true	پایا	قحط
+Relation	T1	T4	NoRel	true	پایا	غربت
+Relation	T1	T5	NoRel	true	پایا	بچت
+Relation	T10	T11	NoRel	true	اضافہ	مشکل
+Relation	T10	T12	NoRel	true	اضافہ	قحط
+Relation	T11	T0	NoRel	true	مشکل	معاہدہ
+Relation	T11	T1	NoRel	true	مشکل	پایا
+Relation	T11	T10	NoRel	true	مشکل	اضافہ
+Relation	T11	T8	NoRel	true	مشکل	بخش
+Relation	T12	T0	NoRel	true	قحط	معاہدہ
+Relation	T12	T6	NoRel	true	قحط	قحط
+Relation	T12	T8	NoRel	true	قحط	بخش
+Relation	T2	T11	NoRel	true	وصول	مشکل
+Relation	T2	T12	NoRel	true	وصول	قحط
+Relation	T2	T9	NoRel	true	وصول	ہو
+Relation	T4	T10	NoRel	true	غربت	اضافہ
+Relation	T4	T12	NoRel	true	غربت	قحط
+Relation	T4	T2	NoRel	true	غربت	وصول
+Relation	T4	T3	NoRel	true	غربت	بڑھ
+Relation	T4	T6	NoRel	true	غربت	قحط
+Relation	T4	T9	NoRel	true	غربت	ہو
+Relation	T5	T1	NoRel	true	بچت	پایا
+Relation	T5	T10	NoRel	true	بچت	اضافہ
+Relation	T5	T4	NoRel	true	بچت	غربت
+Relation	T6	T0	NoRel	true	قحط	معاہدہ
+Relation	T6	T1	NoRel	true	قحط	پایا
+Relation	T6	T10	NoRel	true	قحط	اضافہ
+Relation	T6	T12	NoRel	true	قحط	قحط
+Relation	T6	T2	NoRel	true	قحط	وصول
+Relation	T8	T12	NoRel	true	بخش	قحط
+Relation	T8	T2	NoRel	true	بخش	وصول
+Relation	T8	T5	NoRel	true	بخش	بچت
+Relation	T8	T9	NoRel	true	بخش	ہو
+Relation	T9	T11	NoRel	true	ہو	مشکل
+Relation	T9	T2	NoRel	true	ہو	وصول
+Relation	T9	T3	NoRel	true	ہو	بڑھ
+Relation	T9	T5	NoRel	true	ہو	بچت
+Relation	T9	T8	NoRel	true	ہو	بخش

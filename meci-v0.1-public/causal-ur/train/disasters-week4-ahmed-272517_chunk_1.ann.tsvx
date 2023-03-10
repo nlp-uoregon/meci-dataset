@@ -1,0 +1,30 @@
+Text	اگرچہ یہ طاقت اور چال میں گلگامش کے برابر ہے ، مگر یہ جنگلی یا قدرتی دنیا کی علامت ہے ۔	اسے مہذب کرنے کے لیے متضاد الفاظ کا استعمال کیا گیا ، جیسے شہری نسل کا سپاہی بادشاہ ۔	انکیدو پھر بادشاہ کا مستقل ساتھی اور گہرا محبوب دوست بن جاتا ہے ۔	وہ ہر مہم جوئی پر اس کے ہمراہ ہوتا ہے ، یہاں تک کہ ( دیوتاؤں کے سازش سے ) بیمار ہوتا اور مر جاتا ہے ۔	انکیدو کی موت نے گلگامش میں لافانی ہونے کی تحریک پیدا کر دی ۔
+Event	T0	استعمال	EVENT	124
+Event	T1	سازش	EVENT	304
+Event	T2	بیمار	EVENT	314
+Event	T3	مر	EVENT	329
+Event	T4	موت	EVENT	352
+Event	T5	پیدا	EVENT	391
+Event	T6	بن	EVENT	227
+Event	T7	ہمراہ	EVENT	264
+Relation	T2	T3	CauseEffect	true	بیمار	مر
+Relation	T3	T2	EffectCause	true	مر	بیمار
+Relation	T4	T5	CauseEffect	true	موت	پیدا
+Relation	T5	T4	EffectCause	true	پیدا	موت
+Relation	T0	T4	NoRel	true	استعمال	موت
+Relation	T0	T5	NoRel	true	استعمال	پیدا
+Relation	T0	T6	NoRel	true	استعمال	بن
+Relation	T0	T7	NoRel	true	استعمال	ہمراہ
+Relation	T1	T3	NoRel	true	سازش	مر
+Relation	T1	T5	NoRel	true	سازش	پیدا
+Relation	T2	T0	NoRel	true	بیمار	استعمال
+Relation	T2	T1	NoRel	true	بیمار	سازش
+Relation	T3	T6	NoRel	true	مر	بن
+Relation	T4	T3	NoRel	true	موت	مر
+Relation	T4	T7	NoRel	true	موت	ہمراہ
+Relation	T5	T6	NoRel	true	پیدا	بن
+Relation	T6	T0	NoRel	true	بن	استعمال
+Relation	T6	T3	NoRel	true	بن	مر
+Relation	T6	T7	NoRel	true	بن	ہمراہ
+Relation	T7	T0	NoRel	true	ہمراہ	استعمال
+Relation	T7	T3	NoRel	true	ہمراہ	مر

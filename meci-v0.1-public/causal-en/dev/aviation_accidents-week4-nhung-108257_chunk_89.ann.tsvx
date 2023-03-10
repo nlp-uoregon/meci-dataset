@@ -1,0 +1,53 @@
+Text	The power supply cables were fed to the rear of the aircraft in raceways on opposite sides of the fuselage until they came together behind the two recorders . "	Passenger pain and suffering was an important factor in determining the level of compensation that was paid by Korean Air Lines .	Fragments from the proximity fused R - 98 medium range air - to - air missile exploding behind the tail caused punctures to the pressurized passenger cabin .	When one of the flight crew radioed Tokyo Area Control one minute and two seconds after missile detonation his breathing was already " accentuated " , indicating to ICAO analysts that he was speaking through the microphone located in his oxygen mask , " Korean Air 007 ah ... We are ... Rapid compressions .	Descend to 10,000 . "
+Event	T0	fed	EVENT	29
+Event	T1	pain	EVENT	171
+Event	T2	suffering	EVENT	180
+Event	T3	determining	EVENT	217
+Event	T4	compensation	EVENT	242
+Event	T5	paid	EVENT	264
+Event	T6	Fragments	EVENT	291
+Event	T7	fused	EVENT	320
+Event	T8	exploding	EVENT	369
+Event	T9	punctures	EVENT	402
+Event	T10	radioed	EVENT	477
+Event	T11	detonation	EVENT	545
+Event	T12	breathing	EVENT	560
+Event	T13	accentuated	EVENT	584
+Event	T14	indicating	EVENT	600
+Event	T15	speaking	EVENT	640
+Event	T16	compressions	EVENT	742
+Event	T17	Descend	EVENT	757
+Event	T18	came	EVENT	118
+Relation	T1	T3	CauseEffect	true	pain	determining
+Relation	T3	T1	EffectCause	true	determining	pain
+Relation	T2	T3	CauseEffect	true	suffering	determining
+Relation	T3	T2	EffectCause	true	determining	suffering
+Relation	T8	T9	CauseEffect	true	exploding	punctures
+Relation	T9	T8	EffectCause	true	punctures	exploding
+Relation	T12	T14	CauseEffect	true	breathing	indicating
+Relation	T14	T12	EffectCause	true	indicating	breathing
+Relation	T0	T1	NoRel	true	fed	pain
+Relation	T0	T18	NoRel	true	fed	came
+Relation	T1	T14	NoRel	true	pain	indicating
+Relation	T10	T1	NoRel	true	radioed	pain
+Relation	T10	T2	NoRel	true	radioed	suffering
+Relation	T10	T8	NoRel	true	radioed	exploding
+Relation	T11	T2	NoRel	true	detonation	suffering
+Relation	T11	T5	NoRel	true	detonation	paid
+Relation	T12	T5	NoRel	true	breathing	paid
+Relation	T14	T15	NoRel	true	indicating	speaking
+Relation	T15	T1	NoRel	true	speaking	pain
+Relation	T15	T11	NoRel	true	speaking	detonation
+Relation	T16	T10	NoRel	true	compressions	radioed
+Relation	T16	T2	NoRel	true	compressions	suffering
+Relation	T16	T5	NoRel	true	compressions	paid
+Relation	T17	T0	NoRel	true	Descend	fed
+Relation	T17	T16	NoRel	true	Descend	compressions
+Relation	T18	T13	NoRel	true	came	accentuated
+Relation	T3	T14	NoRel	true	determining	indicating
+Relation	T5	T0	NoRel	true	paid	fed
+Relation	T5	T8	NoRel	true	paid	exploding
+Relation	T7	T17	NoRel	true	fused	Descend
+Relation	T7	T6	NoRel	true	fused	Fragments
+Relation	T9	T10	NoRel	true	punctures	radioed
+Relation	T9	T7	NoRel	true	punctures	fused

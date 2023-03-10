@@ -1,0 +1,76 @@
+Text	Kaza arkasında 9 ölü ve 115 yaralı bırakır ve Perus istasyonunu tahrip eder .	- 15 Ağustos , 2000 - Kenya Broadcasting Corporation raporuna göre , Butere - Kisumu hattında çalışan ve 400 yolcusu olan tren Viktorya Gölü sahilinde , Lela , Nyanza , Kenya rayları yarıp geçer , kazaya fren tutmama nedeni sebep olur .	- 17 Ağustos , 2000 – Kisumu’da bir yük treninin bir yüklü otobüse trafiğin yoğun olduğu saatte hemzemin geçitte çarpması sonrası , 6 ölü .	- 19 Ağustos , 2000 - Kenya Television Network raporuna göre sıvılaştırılmış gaz taşıyan bir Mombasa - Nairobi yük treni Eastern , Kenya , Mavoka’da sıvılaştırılmış gazın patlaması ve alev alması ile 25 kişi öldü ve 50_den fazla kişi yaralandı ; kurbanların ve yaralananların çoğu demiryolu hattı yakınındaki evlerde ikamet edenlerdi .	- 17 Ekim , 2000 – Hatfield demiryolu çarpışması , İngiltere , Birleşik Krallık : Londra - Leeds ekpresi 115 mph ( 185 km / h ) ile geçtiğinde , bir hatalı ray , “ rotatif temas yorgunluğu ” olarak bilinen bir durum nedeniyle 300 parçaya kırılır .
+Event	T0	Kaza	EVENT	0
+Event	T1	ölü	EVENT	17
+Event	T10	çarpışması	EVENT	829
+Event	T12	yorgunluğu	EVENT	969
+Event	T13	kırılır	EVENT	1029
+Event	T18	çarpması	EVENT	428
+Event	T2	bırakır	EVENT	35
+Event	T3	eder	EVENT	71
+Event	T4	geçer	EVENT	267
+Event	T5	ölü	EVENT	449
+Event	T6	patlaması	EVENT	626
+Event	T8	öldü	EVENT	663
+Event	T9	yaralandı	EVENT	689
+Relation	T0	T1	CauseEffect	true	Kaza	ölü
+Relation	T1	T0	EffectCause	true	ölü	Kaza
+Relation	T0	T2	CauseEffect	true	Kaza	bırakır
+Relation	T2	T0	EffectCause	true	bırakır	Kaza
+Relation	T0	T3	CauseEffect	true	Kaza	eder
+Relation	T3	T0	EffectCause	true	eder	Kaza
+Relation	T18	T5	CauseEffect	true	çarpması	ölü
+Relation	T5	T18	EffectCause	true	ölü	çarpması
+Relation	T6	T8	CauseEffect	true	patlaması	öldü
+Relation	T8	T6	EffectCause	true	öldü	patlaması
+Relation	T6	T9	CauseEffect	true	patlaması	yaralandı
+Relation	T9	T6	EffectCause	true	yaralandı	patlaması
+Relation	T12	T13	CauseEffect	true	yorgunluğu	kırılır
+Relation	T13	T12	EffectCause	true	kırılır	yorgunluğu
+Relation	T0	T4	NoRel	true	Kaza	geçer
+Relation	T0	T6	NoRel	true	Kaza	patlaması
+Relation	T1	T10	NoRel	true	ölü	çarpışması
+Relation	T1	T2	NoRel	true	ölü	bırakır
+Relation	T1	T3	NoRel	true	ölü	eder
+Relation	T1	T5	NoRel	true	ölü	ölü
+Relation	T10	T1	NoRel	true	çarpışması	ölü
+Relation	T10	T12	NoRel	true	çarpışması	yorgunluğu
+Relation	T10	T13	NoRel	true	çarpışması	kırılır
+Relation	T10	T4	NoRel	true	çarpışması	geçer
+Relation	T10	T9	NoRel	true	çarpışması	yaralandı
+Relation	T12	T18	NoRel	true	yorgunluğu	çarpması
+Relation	T13	T0	NoRel	true	kırılır	Kaza
+Relation	T13	T10	NoRel	true	kırılır	çarpışması
+Relation	T13	T18	NoRel	true	kırılır	çarpması
+Relation	T13	T4	NoRel	true	kırılır	geçer
+Relation	T13	T5	NoRel	true	kırılır	ölü
+Relation	T13	T6	NoRel	true	kırılır	patlaması
+Relation	T18	T1	NoRel	true	çarpması	ölü
+Relation	T18	T2	NoRel	true	çarpması	bırakır
+Relation	T18	T4	NoRel	true	çarpması	geçer
+Relation	T18	T6	NoRel	true	çarpması	patlaması
+Relation	T2	T10	NoRel	true	bırakır	çarpışması
+Relation	T2	T18	NoRel	true	bırakır	çarpması
+Relation	T2	T5	NoRel	true	bırakır	ölü
+Relation	T2	T8	NoRel	true	bırakır	öldü
+Relation	T3	T12	NoRel	true	eder	yorgunluğu
+Relation	T3	T2	NoRel	true	eder	bırakır
+Relation	T3	T4	NoRel	true	eder	geçer
+Relation	T3	T6	NoRel	true	eder	patlaması
+Relation	T4	T13	NoRel	true	geçer	kırılır
+Relation	T4	T18	NoRel	true	geçer	çarpması
+Relation	T4	T2	NoRel	true	geçer	bırakır
+Relation	T4	T3	NoRel	true	geçer	eder
+Relation	T4	T9	NoRel	true	geçer	yaralandı
+Relation	T5	T0	NoRel	true	ölü	Kaza
+Relation	T5	T1	NoRel	true	ölü	ölü
+Relation	T5	T12	NoRel	true	ölü	yorgunluğu
+Relation	T5	T13	NoRel	true	ölü	kırılır
+Relation	T5	T4	NoRel	true	ölü	geçer
+Relation	T6	T1	NoRel	true	patlaması	ölü
+Relation	T8	T10	NoRel	true	öldü	çarpışması
+Relation	T8	T3	NoRel	true	öldü	eder
+Relation	T8	T5	NoRel	true	öldü	ölü
+Relation	T9	T0	NoRel	true	yaralandı	Kaza
+Relation	T9	T10	NoRel	true	yaralandı	çarpışması
+Relation	T9	T4	NoRel	true	yaralandı	geçer
+Relation	T9	T5	NoRel	true	yaralandı	ölü

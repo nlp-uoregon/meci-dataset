@@ -1,0 +1,87 @@
+Text	Alcohol - based gel or foam hand sanitizers work well to destroy viruses and bacteria .	Anyone with flu - like symptoms , such as a sudden fever , cough , or muscle aches , should stay away from work or public transportation and should contact a doctor for advice .	Social distancing , another tactic , is staying away from other people who might be infected , and can include avoiding large gatherings , spreading out a little at work , or perhaps staying home and lying low if an infection is spreading in a community .	Public health and other responsible authorities have action plans which may request or require social distancing actions , depending on the severity of the outbreak .	Vaccines are available for different kinds of swine flu .
+Event	T0	destroy	EVENT	57
+Event	T1	fever	EVENT	139
+Event	T2	cough	EVENT	147
+Event	T3	aches	EVENT	165
+Event	T7	infected	EVENT	350
+Event	T8	avoiding	EVENT	377
+Event	T9	gatherings	EVENT	392
+Event	T10	staying	EVENT	449
+Event	T12	infection	EVENT	482
+Event	T13	spreading	EVENT	495
+Event	T14	action	EVENT	575
+Event	T15	request	EVENT	598
+Event	T16	require	EVENT	609
+Event	T17	actions	EVENT	635
+Event	T18	outbreak	EVENT	678
+Event	T19	Vaccines	EVENT	689
+Event	T20	flu	EVENT	741
+Event	T21	symptoms	EVENT	111
+Event	T4	stay away	EVENT	180
+Event	T22	contact	EVENT	236
+Event	T5	Social distancing	EVENT	266
+Event	T6	staying away	EVENT	306
+Event	T23	spreading out	EVENT	405
+Event	T11	lying low	EVENT	466
+Event	T24	social distancing	EVENT	617
+Relation	T21	T4	CauseEffect	true	symptoms	stay away
+Relation	T4	T21	EffectCause	true	stay away	symptoms
+Relation	T21	T22	CauseEffect	true	symptoms	contact
+Relation	T22	T21	EffectCause	true	contact	symptoms
+Relation	T12	T11	CauseEffect	true	infection	lying low
+Relation	T11	T12	EffectCause	true	lying low	infection
+Relation	T20	T19	CauseEffect	true	flu	Vaccines
+Relation	T19	T20	EffectCause	true	Vaccines	flu
+Relation	T18	T24	CauseEffect	true	outbreak	social distancing
+Relation	T24	T18	EffectCause	true	social distancing	outbreak
+Relation	T0	T15	NoRel	true	destroy	request
+Relation	T0	T20	NoRel	true	destroy	flu
+Relation	T1	T12	NoRel	true	fever	infection
+Relation	T1	T18	NoRel	true	fever	outbreak
+Relation	T1	T23	NoRel	true	fever	spreading out
+Relation	T1	T24	NoRel	true	fever	social distancing
+Relation	T1	T9	NoRel	true	fever	gatherings
+Relation	T11	T22	NoRel	true	lying low	contact
+Relation	T11	T8	NoRel	true	lying low	avoiding
+Relation	T12	T9	NoRel	true	infection	gatherings
+Relation	T13	T10	NoRel	true	spreading	staying
+Relation	T14	T16	NoRel	true	action	require
+Relation	T14	T4	NoRel	true	action	stay away
+Relation	T15	T14	NoRel	true	request	action
+Relation	T15	T8	NoRel	true	request	avoiding
+Relation	T16	T20	NoRel	true	require	flu
+Relation	T16	T4	NoRel	true	require	stay away
+Relation	T16	T6	NoRel	true	require	staying away
+Relation	T17	T21	NoRel	true	actions	symptoms
+Relation	T18	T6	NoRel	true	outbreak	staying away
+Relation	T19	T0	NoRel	true	Vaccines	destroy
+Relation	T2	T21	NoRel	true	cough	symptoms
+Relation	T20	T2	NoRel	true	flu	cough
+Relation	T20	T23	NoRel	true	flu	spreading out
+Relation	T21	T11	NoRel	true	symptoms	lying low
+Relation	T21	T19	NoRel	true	symptoms	Vaccines
+Relation	T22	T10	NoRel	true	contact	staying
+Relation	T22	T24	NoRel	true	contact	social distancing
+Relation	T22	T9	NoRel	true	contact	gatherings
+Relation	T23	T14	NoRel	true	spreading out	action
+Relation	T23	T3	NoRel	true	spreading out	aches
+Relation	T24	T11	NoRel	true	social distancing	lying low
+Relation	T24	T15	NoRel	true	social distancing	request
+Relation	T24	T16	NoRel	true	social distancing	require
+Relation	T24	T19	NoRel	true	social distancing	Vaccines
+Relation	T3	T18	NoRel	true	aches	outbreak
+Relation	T3	T21	NoRel	true	aches	symptoms
+Relation	T4	T11	NoRel	true	stay away	lying low
+Relation	T4	T13	NoRel	true	stay away	spreading
+Relation	T4	T16	NoRel	true	stay away	require
+Relation	T4	T5	NoRel	true	stay away	Social distancing
+Relation	T5	T4	NoRel	true	Social distancing	stay away
+Relation	T6	T11	NoRel	true	staying away	lying low
+Relation	T6	T2	NoRel	true	staying away	cough
+Relation	T7	T14	NoRel	true	infected	action
+Relation	T8	T0	NoRel	true	avoiding	destroy
+Relation	T8	T13	NoRel	true	avoiding	spreading
+Relation	T8	T17	NoRel	true	avoiding	actions
+Relation	T8	T4	NoRel	true	avoiding	stay away
+Relation	T9	T11	NoRel	true	gatherings	lying low
+Relation	T9	T21	NoRel	true	gatherings	symptoms

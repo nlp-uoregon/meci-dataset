@@ -1,0 +1,62 @@
+Text	Cesetlerinden biri Wehrmacht üniforması giymiş ve diğerinin ise üstünde sadece iç çamaşırı olduğunu söyledi .	Axmann ve Krumnow tarafından belirtilen yerlerde 20 - 21 Temmuz 1965 tarihlerinde yapılan kazılarda cesetleri arama çalışmaları başarısızlıkla sonuçlandı .	Artur Axmann , Bormann'ın intiharı ile ilgili haklı çıktı .	7 Aralık 1972 tarihinde , Krumnow'un onları gömdüğünü iddia ettiği Lehrter İstasyonu'nun yapımı sırasında inşaat işçileri , iki adet ceset buldu .	Yapılan Otopsi sırasında iki cesedinde iskeletlerinin çenelerinde cam kırıklarının olduğu ve siyanür içerek öldüğü saptandı .
+Event	T0	giymiş	EVENT	40
+Event	T1	söyledi	EVENT	100
+Event	T2	kazılarda	EVENT	200
+Event	T3	sonuçlandı	EVENT	253
+Event	T4	intiharı	EVENT	292
+Event	T5	çıktı	EVENT	318
+Event	T6	yapımı	EVENT	415
+Event	T7	buldu	EVENT	465
+Event	T8	Otopsi	EVENT	481
+Event	T9	saptandı	EVENT	588
+Event	T11	içerek	EVENT	574
+Event	T12	öldüğü	EVENT	581
+Relation	T7	T8	CauseEffect	true	buldu	Otopsi
+Relation	T8	T7	EffectCause	true	Otopsi	buldu
+Relation	T8	T9	CauseEffect	true	Otopsi	saptandı
+Relation	T9	T8	EffectCause	true	saptandı	Otopsi
+Relation	T11	T12	CauseEffect	true	içerek	öldüğü
+Relation	T12	T11	EffectCause	true	öldüğü	içerek
+Relation	T0	T1	NoRel	true	giymiş	söyledi
+Relation	T0	T11	NoRel	true	giymiş	içerek
+Relation	T0	T5	NoRel	true	giymiş	çıktı
+Relation	T0	T9	NoRel	true	giymiş	saptandı
+Relation	T1	T11	NoRel	true	söyledi	içerek
+Relation	T1	T2	NoRel	true	söyledi	kazılarda
+Relation	T1	T6	NoRel	true	söyledi	yapımı
+Relation	T1	T7	NoRel	true	söyledi	buldu
+Relation	T1	T8	NoRel	true	söyledi	Otopsi
+Relation	T11	T0	NoRel	true	içerek	giymiş
+Relation	T11	T1	NoRel	true	içerek	söyledi
+Relation	T11	T6	NoRel	true	içerek	yapımı
+Relation	T11	T8	NoRel	true	içerek	Otopsi
+Relation	T2	T12	NoRel	true	kazılarda	öldüğü
+Relation	T2	T4	NoRel	true	kazılarda	intiharı
+Relation	T3	T0	NoRel	true	sonuçlandı	giymiş
+Relation	T3	T6	NoRel	true	sonuçlandı	yapımı
+Relation	T4	T1	NoRel	true	intiharı	söyledi
+Relation	T4	T11	NoRel	true	intiharı	içerek
+Relation	T4	T12	NoRel	true	intiharı	öldüğü
+Relation	T4	T2	NoRel	true	intiharı	kazılarda
+Relation	T4	T6	NoRel	true	intiharı	yapımı
+Relation	T4	T7	NoRel	true	intiharı	buldu
+Relation	T4	T8	NoRel	true	intiharı	Otopsi
+Relation	T5	T1	NoRel	true	çıktı	söyledi
+Relation	T5	T12	NoRel	true	çıktı	öldüğü
+Relation	T5	T2	NoRel	true	çıktı	kazılarda
+Relation	T5	T3	NoRel	true	çıktı	sonuçlandı
+Relation	T5	T9	NoRel	true	çıktı	saptandı
+Relation	T6	T2	NoRel	true	yapımı	kazılarda
+Relation	T6	T5	NoRel	true	yapımı	çıktı
+Relation	T6	T7	NoRel	true	yapımı	buldu
+Relation	T7	T0	NoRel	true	buldu	giymiş
+Relation	T7	T12	NoRel	true	buldu	öldüğü
+Relation	T7	T2	NoRel	true	buldu	kazılarda
+Relation	T7	T4	NoRel	true	buldu	intiharı
+Relation	T7	T5	NoRel	true	buldu	çıktı
+Relation	T7	T9	NoRel	true	buldu	saptandı
+Relation	T8	T12	NoRel	true	Otopsi	öldüğü
+Relation	T8	T2	NoRel	true	Otopsi	kazılarda
+Relation	T9	T0	NoRel	true	saptandı	giymiş
+Relation	T9	T2	NoRel	true	saptandı	kazılarda
+Relation	T9	T4	NoRel	true	saptandı	intiharı

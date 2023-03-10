@@ -1,0 +1,55 @@
+Text	SINCAN İSLAM AYAKLANMASI ( ‎) , 1937 yılında Sincan'ın güneyinde çıkan bir ayaklanmaydı .	Ayaklanma , Sovyet yanlısı Sheng Shicai yönetimine karşı Ulusal Devrimci Ordu'nun 36. Tümeni tarafından kısmen desteklenen Küçük Ahund liderliğindeki 1. 500 Uygur Müslüman tarafından çıkarıldı .	Sheng Shicai , 6. Uygur Tümeni komutanı ve Kaşgar Askeri Bölgesi Başkan Yardımcısı Tümgeneral Mahmut Muhiti'ye karşı harekete geçti .	Muhiti , artan Dociet etkisinden rahatsız olarak çevresinde gizli bir grup oluşturdu .	Sheng , Muhiti'nin bir Çinli Müslüman General Ma Hushan ile ittifak kurmasından korkuyordu .
+Event	T0	çıkan	EVENT	65
+Event	T1	ayaklanmaydı	EVENT	75
+Event	T2	çıkarıldı	EVENT	273
+Event	T3	geçti	EVENT	411
+Event	T4	rahatsız	EVENT	452
+Event	T5	oluşturdu	EVENT	494
+Event	T6	korkuyordu	EVENT	586
+Event	T7	SINCAN İSLAM AYAKLANMASI	EVENT	0
+Event	T8	Ayaklanma	EVENT	90
+Event	T9	desteklenen	EVENT	201
+Event	T10	artan	EVENT	428
+Relation	T10	T4	CauseEffect	true	artan	rahatsız
+Relation	T4	T10	EffectCause	true	rahatsız	artan
+Relation	T4	T5	CauseEffect	true	rahatsız	oluşturdu
+Relation	T5	T4	EffectCause	true	oluşturdu	rahatsız
+Relation	T6	T3	CauseEffect	true	korkuyordu	geçti
+Relation	T3	T6	EffectCause	true	geçti	korkuyordu
+Relation	T0	T1	NoRel	true	çıkan	ayaklanmaydı
+Relation	T0	T3	NoRel	true	çıkan	geçti
+Relation	T0	T5	NoRel	true	çıkan	oluşturdu
+Relation	T0	T6	NoRel	true	çıkan	korkuyordu
+Relation	T0	T7	NoRel	true	çıkan	SINCAN İSLAM AYAKLANMASI
+Relation	T0	T9	NoRel	true	çıkan	desteklenen
+Relation	T1	T10	NoRel	true	ayaklanmaydı	artan
+Relation	T1	T3	NoRel	true	ayaklanmaydı	geçti
+Relation	T10	T1	NoRel	true	artan	ayaklanmaydı
+Relation	T10	T3	NoRel	true	artan	geçti
+Relation	T10	T5	NoRel	true	artan	oluşturdu
+Relation	T10	T6	NoRel	true	artan	korkuyordu
+Relation	T10	T7	NoRel	true	artan	SINCAN İSLAM AYAKLANMASI
+Relation	T2	T0	NoRel	true	çıkarıldı	çıkan
+Relation	T2	T9	NoRel	true	çıkarıldı	desteklenen
+Relation	T3	T9	NoRel	true	geçti	desteklenen
+Relation	T4	T7	NoRel	true	rahatsız	SINCAN İSLAM AYAKLANMASI
+Relation	T4	T8	NoRel	true	rahatsız	Ayaklanma
+Relation	T5	T10	NoRel	true	oluşturdu	artan
+Relation	T5	T3	NoRel	true	oluşturdu	geçti
+Relation	T5	T7	NoRel	true	oluşturdu	SINCAN İSLAM AYAKLANMASI
+Relation	T6	T1	NoRel	true	korkuyordu	ayaklanmaydı
+Relation	T6	T2	NoRel	true	korkuyordu	çıkarıldı
+Relation	T6	T5	NoRel	true	korkuyordu	oluşturdu
+Relation	T6	T9	NoRel	true	korkuyordu	desteklenen
+Relation	T7	T0	NoRel	true	SINCAN İSLAM AYAKLANMASI	çıkan
+Relation	T7	T2	NoRel	true	SINCAN İSLAM AYAKLANMASI	çıkarıldı
+Relation	T7	T4	NoRel	true	SINCAN İSLAM AYAKLANMASI	rahatsız
+Relation	T7	T5	NoRel	true	SINCAN İSLAM AYAKLANMASI	oluşturdu
+Relation	T7	T6	NoRel	true	SINCAN İSLAM AYAKLANMASI	korkuyordu
+Relation	T7	T9	NoRel	true	SINCAN İSLAM AYAKLANMASI	desteklenen
+Relation	T8	T1	NoRel	true	Ayaklanma	ayaklanmaydı
+Relation	T8	T3	NoRel	true	Ayaklanma	geçti
+Relation	T8	T4	NoRel	true	Ayaklanma	rahatsız
+Relation	T8	T9	NoRel	true	Ayaklanma	desteklenen
+Relation	T9	T4	NoRel	true	desteklenen	rahatsız
+Relation	T9	T8	NoRel	true	desteklenen	Ayaklanma

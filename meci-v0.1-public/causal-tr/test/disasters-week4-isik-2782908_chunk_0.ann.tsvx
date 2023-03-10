@@ -1,0 +1,47 @@
+Text	1919 SOMA DEPREMI Manisa'nın Soma ilçesinde 18 Kasım 1919 tarihinde meydana gelen 7, 0 büyüklüğündeki depremdir .	Soma , Bergama , Ayvalık , Midilli , Edremit ve Balıkesir'deki birçok evin , minarelerin ve kamuya ait binaların hasara uğradığından veya çöktüğünden eski kaynaklarda bahsedilmektedir .	Depremde yaklaşık olarak 3 bine yakın kişi hayatını kaybetmiş ve 16 bine yakın ağır hasarlı bina tespit edilmiştir .	Depremle birlikte demir yollarında da hasarlar meydana geldiği bilinmektedir .	Kategori : 1919'daki doğal afetler Kategori : 1910'lardaki depremler Kategori : Soma tarihi Kategori : 1919'da Osmanlı İmparatorluğu
+Event	T0	depremdir	EVENT	102
+Event	T1	çöktüğünden	EVENT	252
+Event	T2	bahsedilmektedir	EVENT	281
+Event	T3	Depremde	EVENT	300
+Event	T4	kaybetmiş	EVENT	352
+Event	T5	edilmiştir	EVENT	404
+Event	T6	afetler	EVENT	523
+Event	T7	depremler	EVENT	555
+Event	T8	DEPREMI	EVENT	10
+Event	T9	bilinmektedir	EVENT	480
+Relation	T8	T2	CauseEffect	true	DEPREMI	bahsedilmektedir
+Relation	T2	T8	EffectCause	true	bahsedilmektedir	DEPREMI
+Relation	T8	T4	CauseEffect	true	DEPREMI	kaybetmiş
+Relation	T4	T8	EffectCause	true	kaybetmiş	DEPREMI
+Relation	T8	T5	CauseEffect	true	DEPREMI	edilmiştir
+Relation	T5	T8	EffectCause	true	edilmiştir	DEPREMI
+Relation	T8	T9	CauseEffect	true	DEPREMI	bilinmektedir
+Relation	T9	T8	EffectCause	true	bilinmektedir	DEPREMI
+Relation	T0	T3	NoRel	true	depremdir	Depremde
+Relation	T1	T4	NoRel	true	çöktüğünden	kaybetmiş
+Relation	T1	T7	NoRel	true	çöktüğünden	depremler
+Relation	T1	T8	NoRel	true	çöktüğünden	DEPREMI
+Relation	T1	T9	NoRel	true	çöktüğünden	bilinmektedir
+Relation	T2	T5	NoRel	true	bahsedilmektedir	edilmiştir
+Relation	T3	T5	NoRel	true	Depremde	edilmiştir
+Relation	T3	T6	NoRel	true	Depremde	afetler
+Relation	T3	T8	NoRel	true	Depremde	DEPREMI
+Relation	T4	T0	NoRel	true	kaybetmiş	depremdir
+Relation	T4	T5	NoRel	true	kaybetmiş	edilmiştir
+Relation	T4	T7	NoRel	true	kaybetmiş	depremler
+Relation	T4	T9	NoRel	true	kaybetmiş	bilinmektedir
+Relation	T5	T1	NoRel	true	edilmiştir	çöktüğünden
+Relation	T5	T2	NoRel	true	edilmiştir	bahsedilmektedir
+Relation	T5	T3	NoRel	true	edilmiştir	Depremde
+Relation	T5	T4	NoRel	true	edilmiştir	kaybetmiş
+Relation	T6	T2	NoRel	true	afetler	bahsedilmektedir
+Relation	T6	T3	NoRel	true	afetler	Depremde
+Relation	T6	T4	NoRel	true	afetler	kaybetmiş
+Relation	T6	T9	NoRel	true	afetler	bilinmektedir
+Relation	T7	T1	NoRel	true	depremler	çöktüğünden
+Relation	T7	T5	NoRel	true	depremler	edilmiştir
+Relation	T7	T6	NoRel	true	depremler	afetler
+Relation	T8	T0	NoRel	true	DEPREMI	depremdir
+Relation	T8	T1	NoRel	true	DEPREMI	çöktüğünden
+Relation	T8	T7	NoRel	true	DEPREMI	depremler
+Relation	T9	T5	NoRel	true	bilinmektedir	edilmiştir

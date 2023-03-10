@@ -1,0 +1,28 @@
+Text	خون کی جانچ میں سفید خون کی کمی کی بھی تصدیق ہوئی ہے ۔	مریض میں علامات مرض کے ظہور کے درمیان میں ارتقائی مدت ایک دن سے چودہ دن رہتی ہے ، اکثریت میں پانچ دن رہی ، ایک مریض میں علامات مرض کے ظہور کے درمیان میں ارتقائی مدت 27 دن بھی رہی ہے ۔	15 جنوری 2020 کو ، عالمی ادارہ صحت نے نئے کورونا وائرس کی تشخیص کے لیے ایک ضابطہ مقرر کیا ، جسے جرمنی کے چیریٹی اسپتال سے وائرولوجی ٹیم نے تیار کیا تھا ۔	چینی حکومتی دستاویزات کے مطابق ، 17 نومبر 2019ء کو سب سے پہلا تصدیق شدہ مریض ووہان ، ہوبئی ، چین کا ایک 55 سالہ شخص تھا ۔	اگلے مہینے میں ، ہوبی میں کورونا وائرس کے واقعات کی تعداد آہستہ آہستہ دو سو ہوگئی ، اس کے بعد جنوری 2020ء مریضوں میں تیزی سے اضافہ ہوا ۔
+Event	T1	کمی	EVENT	28
+Event	T3	ظہور	EVENT	78
+Event	T4	ظہور	EVENT	189
+Event	T5	تشخیص	EVENT	297
+Event	T6	تصدیق	EVENT	455
+Event	T8	واقعات	EVENT	557
+Event	T9	ہوگئی	EVENT	591
+Relation	T1	T3	CauseEffect	true	کمی	ظہور
+Relation	T3	T1	EffectCause	true	ظہور	کمی
+Relation	T1	T6	NoRel	true	کمی	تصدیق
+Relation	T1	T9	NoRel	true	کمی	ہوگئی
+Relation	T3	T4	NoRel	true	ظہور	ظہور
+Relation	T3	T6	NoRel	true	ظہور	تصدیق
+Relation	T3	T8	NoRel	true	ظہور	واقعات
+Relation	T3	T9	NoRel	true	ظہور	ہوگئی
+Relation	T4	T3	NoRel	true	ظہور	ظہور
+Relation	T4	T8	NoRel	true	ظہور	واقعات
+Relation	T4	T9	NoRel	true	ظہور	ہوگئی
+Relation	T5	T6	NoRel	true	تشخیص	تصدیق
+Relation	T6	T3	NoRel	true	تصدیق	ظہور
+Relation	T6	T5	NoRel	true	تصدیق	تشخیص
+Relation	T6	T8	NoRel	true	تصدیق	واقعات
+Relation	T6	T9	NoRel	true	تصدیق	ہوگئی
+Relation	T8	T1	NoRel	true	واقعات	کمی
+Relation	T8	T3	NoRel	true	واقعات	ظہور
+Relation	T8	T9	NoRel	true	واقعات	ہوگئی
+Relation	T9	T3	NoRel	true	ہوگئی	ظہور

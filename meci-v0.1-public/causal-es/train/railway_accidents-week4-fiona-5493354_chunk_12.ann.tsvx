@@ -1,0 +1,58 @@
+Text	- 1880 -___8 DE FEBRERO : descarrilamiento de un tren de mercancías a su paso por la aguja de entrada de la estación de Vale da Figueira .	Se debió a un doble cambio de agujas .	Parte del material descarrilado volcó sobre el talud de un terraplén .	Se produjeron cuantiosos daños materiales , pero la fuente no cita víctimas .	- 9 DE MARZO : entre las estaciones de Espinho y Esmoriz descarrila un tren de viajeros que realizaba el trayecto de Lisboa a Oporto , sin daños personales .
+Event	T0	descarrilamiento	EVENT	26
+Event	T1	paso	EVENT	73
+Event	T2	debió	EVENT	142
+Event	T3	cambio	EVENT	159
+Event	T4	volcó	EVENT	210
+Event	T5	produjeron	EVENT	252
+Event	T6	daños	EVENT	274
+Event	T7	víctimas	EVENT	316
+Event	T8	descarrila	EVENT	384
+Event	T9	realizaba	EVENT	419
+Event	T10	trayecto	EVENT	432
+Event	T11	daños	EVENT	466
+Relation	T3	T0	CauseEffect	true	cambio	descarrilamiento
+Relation	T0	T3	EffectCause	true	descarrilamiento	cambio
+Relation	T0	T6	CauseEffect	true	descarrilamiento	daños
+Relation	T6	T0	EffectCause	true	daños	descarrilamiento
+Relation	T0	T1	NoRel	true	descarrilamiento	paso
+Relation	T0	T10	NoRel	true	descarrilamiento	trayecto
+Relation	T0	T5	NoRel	true	descarrilamiento	produjeron
+Relation	T0	T7	NoRel	true	descarrilamiento	víctimas
+Relation	T0	T8	NoRel	true	descarrilamiento	descarrila
+Relation	T10	T0	NoRel	true	trayecto	descarrilamiento
+Relation	T10	T11	NoRel	true	trayecto	daños
+Relation	T10	T2	NoRel	true	trayecto	debió
+Relation	T10	T8	NoRel	true	trayecto	descarrila
+Relation	T10	T9	NoRel	true	trayecto	realizaba
+Relation	T11	T10	NoRel	true	daños	trayecto
+Relation	T11	T2	NoRel	true	daños	debió
+Relation	T11	T3	NoRel	true	daños	cambio
+Relation	T11	T4	NoRel	true	daños	volcó
+Relation	T11	T8	NoRel	true	daños	descarrila
+Relation	T11	T9	NoRel	true	daños	realizaba
+Relation	T2	T0	NoRel	true	debió	descarrilamiento
+Relation	T2	T1	NoRel	true	debió	paso
+Relation	T2	T10	NoRel	true	debió	trayecto
+Relation	T2	T11	NoRel	true	debió	daños
+Relation	T2	T5	NoRel	true	debió	produjeron
+Relation	T2	T7	NoRel	true	debió	víctimas
+Relation	T3	T8	NoRel	true	cambio	descarrila
+Relation	T4	T0	NoRel	true	volcó	descarrilamiento
+Relation	T4	T11	NoRel	true	volcó	daños
+Relation	T4	T2	NoRel	true	volcó	debió
+Relation	T4	T8	NoRel	true	volcó	descarrila
+Relation	T5	T11	NoRel	true	produjeron	daños
+Relation	T5	T4	NoRel	true	produjeron	volcó
+Relation	T5	T7	NoRel	true	produjeron	víctimas
+Relation	T5	T8	NoRel	true	produjeron	descarrila
+Relation	T6	T11	NoRel	true	daños	daños
+Relation	T6	T2	NoRel	true	daños	debió
+Relation	T6	T4	NoRel	true	daños	volcó
+Relation	T6	T8	NoRel	true	daños	descarrila
+Relation	T7	T5	NoRel	true	víctimas	produjeron
+Relation	T8	T10	NoRel	true	descarrila	trayecto
+Relation	T8	T11	NoRel	true	descarrila	daños
+Relation	T9	T4	NoRel	true	realizaba	volcó
+Relation	T9	T7	NoRel	true	realizaba	víctimas
+Relation	T9	T8	NoRel	true	realizaba	descarrila

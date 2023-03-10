@@ -1,0 +1,46 @@
+Text	1945 yılında II. Dünya Savaşı sonunda , Lettow - Vorbeck perişan haldeydi .	İki oğlu , Rüdiger ve Arnd , Wehrmacht'ta hizmet verirken şehit olmuşlardı .	Bremen'deki evi Müttefik güçlerin bombalarıyla tahrip olmuştu .	Ancak , Alman ekonomik mucizesi ile tekrar rahata kavuştu .	1953 yılında , Doğu Afrika'yı ziyaret etti .
+Event	T1	olmuştu	EVENT	207
+Event	T2	mucizesi	EVENT	240
+Event	T3	kavuştu	EVENT	267
+Event	T4	etti	EVENT	315
+Event	T5	II. Dünya Savaşı	EVENT	13
+Event	T6	olmuşlardı	EVENT	140
+Event	T7	hizmet	EVENT	118
+Event	T8	bombalarıyla	EVENT	187
+Event	T9	haldeydi	EVENT	65
+Relation	T7	T6	CauseEffect	true	hizmet	olmuşlardı
+Relation	T6	T7	EffectCause	true	olmuşlardı	hizmet
+Relation	T8	T1	CauseEffect	true	bombalarıyla	olmuştu
+Relation	T1	T8	EffectCause	true	olmuştu	bombalarıyla
+Relation	T2	T3	CauseEffect	true	mucizesi	kavuştu
+Relation	T3	T2	EffectCause	true	kavuştu	mucizesi
+Relation	T5	T7	CauseEffect	true	II. Dünya Savaşı	hizmet
+Relation	T7	T5	EffectCause	true	hizmet	II. Dünya Savaşı
+Relation	T5	T8	CauseEffect	true	II. Dünya Savaşı	bombalarıyla
+Relation	T8	T5	EffectCause	true	bombalarıyla	II. Dünya Savaşı
+Relation	T6	T9	CauseEffect	true	olmuşlardı	haldeydi
+Relation	T9	T6	EffectCause	true	haldeydi	olmuşlardı
+Relation	T1	T9	CauseEffect	true	olmuştu	haldeydi
+Relation	T9	T1	EffectCause	true	haldeydi	olmuştu
+Relation	T1	T2	NoRel	true	olmuştu	mucizesi
+Relation	T1	T5	NoRel	true	olmuştu	II. Dünya Savaşı
+Relation	T2	T1	NoRel	true	mucizesi	olmuştu
+Relation	T2	T5	NoRel	true	mucizesi	II. Dünya Savaşı
+Relation	T2	T6	NoRel	true	mucizesi	olmuşlardı
+Relation	T2	T9	NoRel	true	mucizesi	haldeydi
+Relation	T3	T1	NoRel	true	kavuştu	olmuştu
+Relation	T3	T8	NoRel	true	kavuştu	bombalarıyla
+Relation	T4	T5	NoRel	true	etti	II. Dünya Savaşı
+Relation	T4	T9	NoRel	true	etti	haldeydi
+Relation	T5	T6	NoRel	true	II. Dünya Savaşı	olmuşlardı
+Relation	T5	T9	NoRel	true	II. Dünya Savaşı	haldeydi
+Relation	T6	T1	NoRel	true	olmuşlardı	olmuştu
+Relation	T6	T8	NoRel	true	olmuşlardı	bombalarıyla
+Relation	T7	T1	NoRel	true	hizmet	olmuştu
+Relation	T7	T2	NoRel	true	hizmet	mucizesi
+Relation	T7	T3	NoRel	true	hizmet	kavuştu
+Relation	T8	T4	NoRel	true	bombalarıyla	etti
+Relation	T9	T2	NoRel	true	haldeydi	mucizesi
+Relation	T9	T3	NoRel	true	haldeydi	kavuştu
+Relation	T9	T4	NoRel	true	haldeydi	etti
+Relation	T9	T8	NoRel	true	haldeydi	bombalarıyla

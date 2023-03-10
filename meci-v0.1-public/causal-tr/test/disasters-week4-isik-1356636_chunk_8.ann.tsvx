@@ -1,0 +1,41 @@
+Text	Ankara’daki Türk Kızılayı Afet Operasyon Merkezi’nde bir kriz masası oluşturuldu ve en çok ihtiyaç duyulan malzemeler kamuoyu ile paylaşıldı .	Saat 15: 30 sularında enkazlardan çıkarılan yaralılar hastanelere ulaştırılmaya başlandı .	Muradiye Devlet Hastanesi tedbir amacıyla boşaltılırken , il merkezinde jandarma ve çevik kuvvet ekipleri , hasarlı bina veya enkazlara vatandaşların girmesini engellemek için güvenlik önlemleri aldı .	Van Yüzüncü Yıl Tıp Fakültesi Hastanesinde artçı sarsıntıların devam etmesi nedeniyle hastalar bahçeye taşındı .	Acil sağlık hizmetleri ve polisin telefon santralleri , kısa mesaj servisine açıldı .
+Event	T0	oluşturuldu	EVENT	69
+Event	T1	paylaşıldı	EVENT	130
+Event	T2	çıkarılan	EVENT	177
+Event	T3	başlandı	EVENT	223
+Event	T5	boşaltılırken	EVENT	276
+Event	T6	aldı	EVENT	429
+Event	T7	etmesi	EVENT	505
+Event	T8	taşındı	EVENT	539
+Event	T9	açıldı	EVENT	626
+Relation	T0	T1	CauseEffect	true	oluşturuldu	paylaşıldı
+Relation	T1	T0	EffectCause	true	paylaşıldı	oluşturuldu
+Relation	T2	T3	CauseEffect	true	çıkarılan	başlandı
+Relation	T3	T2	EffectCause	true	başlandı	çıkarılan
+Relation	T7	T8	CauseEffect	true	etmesi	taşındı
+Relation	T8	T7	EffectCause	true	taşındı	etmesi
+Relation	T0	T2	NoRel	true	oluşturuldu	çıkarılan
+Relation	T0	T3	NoRel	true	oluşturuldu	başlandı
+Relation	T0	T5	NoRel	true	oluşturuldu	boşaltılırken
+Relation	T0	T7	NoRel	true	oluşturuldu	etmesi
+Relation	T0	T8	NoRel	true	oluşturuldu	taşındı
+Relation	T1	T2	NoRel	true	paylaşıldı	çıkarılan
+Relation	T1	T5	NoRel	true	paylaşıldı	boşaltılırken
+Relation	T1	T8	NoRel	true	paylaşıldı	taşındı
+Relation	T2	T0	NoRel	true	çıkarılan	oluşturuldu
+Relation	T2	T8	NoRel	true	çıkarılan	taşındı
+Relation	T3	T0	NoRel	true	başlandı	oluşturuldu
+Relation	T5	T0	NoRel	true	boşaltılırken	oluşturuldu
+Relation	T5	T7	NoRel	true	boşaltılırken	etmesi
+Relation	T5	T8	NoRel	true	boşaltılırken	taşındı
+Relation	T5	T9	NoRel	true	boşaltılırken	açıldı
+Relation	T6	T3	NoRel	true	aldı	başlandı
+Relation	T7	T3	NoRel	true	etmesi	başlandı
+Relation	T7	T5	NoRel	true	etmesi	boşaltılırken
+Relation	T7	T6	NoRel	true	etmesi	aldı
+Relation	T7	T9	NoRel	true	etmesi	açıldı
+Relation	T8	T1	NoRel	true	taşındı	paylaşıldı
+Relation	T8	T5	NoRel	true	taşındı	boşaltılırken
+Relation	T8	T9	NoRel	true	taşındı	açıldı
+Relation	T9	T7	NoRel	true	açıldı	etmesi
+Relation	T9	T8	NoRel	true	açıldı	taşındı

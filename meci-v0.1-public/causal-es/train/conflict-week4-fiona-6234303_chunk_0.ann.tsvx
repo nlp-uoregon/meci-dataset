@@ -1,0 +1,78 @@
+Text	La HUELGA DE LAS CAMISERAS DE NUEVA YORK DE 1909 ( en inglés : _ New York shirtwaist strike of 1909 _ ) o LEVANTAMIENTO DE LAS 20_000 , fue una huelga laboral en la que participaron principalmente mujeres inmigrantes de origen europeo y de familia judía que trabajaban en Nueva York en las fábricas textiles de camisas .	La huelga fue liderada por Clara Lemlich , de origen ruso , y apoyado por la _ Liga Nacional de Sindicatos de Mujeres de América _ ( _ National Women's Trade Union League of America _ - NWTUL ) .	La huelga comenzó el 23 de noviembre de 1909 .	En febrero de 1910 , la NWTUL acordó con los dueños de algunas fábricas la mejora en los salarios , mejores condiciones laborales y reducción de la jornada laboral .	La huelga general fue suspendida el 15 de febrero de 1910 aunque algunas protestas continuaron .
+Event	T0	HUELGA	EVENT	3
+Event	T1	strike	EVENT	85
+Event	T2	LEVANTAMIENTO	EVENT	106
+Event	T3	participaron	EVENT	169
+Event	T4	trabajaban	EVENT	258
+Event	T5	liderada	EVENT	335
+Event	T6	apoyado	EVENT	383
+Event	T7	comenzó	EVENT	527
+Event	T8	mejora	EVENT	639
+Event	T9	reducción	EVENT	696
+Event	T10	huelga	EVENT	733
+Event	T11	suspendida	EVENT	752
+Event	T12	continuaron	EVENT	813
+Event	T13	huelga	EVENT	520
+Relation	T13	T8	CauseEffect	true	huelga	mejora
+Relation	T8	T13	EffectCause	true	mejora	huelga
+Relation	T13	T9	CauseEffect	true	huelga	reducción
+Relation	T9	T13	EffectCause	true	reducción	huelga
+Relation	T0	T2	NoRel	true	HUELGA	LEVANTAMIENTO
+Relation	T0	T4	NoRel	true	HUELGA	trabajaban
+Relation	T0	T5	NoRel	true	HUELGA	liderada
+Relation	T0	T6	NoRel	true	HUELGA	apoyado
+Relation	T0	T7	NoRel	true	HUELGA	comenzó
+Relation	T0	T8	NoRel	true	HUELGA	mejora
+Relation	T1	T3	NoRel	true	strike	participaron
+Relation	T1	T4	NoRel	true	strike	trabajaban
+Relation	T10	T1	NoRel	true	huelga	strike
+Relation	T10	T2	NoRel	true	huelga	LEVANTAMIENTO
+Relation	T10	T3	NoRel	true	huelga	participaron
+Relation	T10	T6	NoRel	true	huelga	apoyado
+Relation	T11	T1	NoRel	true	suspendida	strike
+Relation	T11	T12	NoRel	true	suspendida	continuaron
+Relation	T11	T3	NoRel	true	suspendida	participaron
+Relation	T11	T5	NoRel	true	suspendida	liderada
+Relation	T11	T7	NoRel	true	suspendida	comenzó
+Relation	T12	T13	NoRel	true	continuaron	huelga
+Relation	T12	T2	NoRel	true	continuaron	LEVANTAMIENTO
+Relation	T12	T4	NoRel	true	continuaron	trabajaban
+Relation	T12	T7	NoRel	true	continuaron	comenzó
+Relation	T12	T9	NoRel	true	continuaron	reducción
+Relation	T13	T11	NoRel	true	huelga	suspendida
+Relation	T13	T12	NoRel	true	huelga	continuaron
+Relation	T13	T2	NoRel	true	huelga	LEVANTAMIENTO
+Relation	T13	T6	NoRel	true	huelga	apoyado
+Relation	T2	T10	NoRel	true	LEVANTAMIENTO	huelga
+Relation	T2	T13	NoRel	true	LEVANTAMIENTO	huelga
+Relation	T2	T8	NoRel	true	LEVANTAMIENTO	mejora
+Relation	T3	T0	NoRel	true	participaron	HUELGA
+Relation	T3	T1	NoRel	true	participaron	strike
+Relation	T3	T10	NoRel	true	participaron	huelga
+Relation	T3	T13	NoRel	true	participaron	huelga
+Relation	T3	T8	NoRel	true	participaron	mejora
+Relation	T4	T1	NoRel	true	trabajaban	strike
+Relation	T4	T13	NoRel	true	trabajaban	huelga
+Relation	T4	T2	NoRel	true	trabajaban	LEVANTAMIENTO
+Relation	T4	T3	NoRel	true	trabajaban	participaron
+Relation	T4	T5	NoRel	true	trabajaban	liderada
+Relation	T4	T7	NoRel	true	trabajaban	comenzó
+Relation	T4	T8	NoRel	true	trabajaban	mejora
+Relation	T4	T9	NoRel	true	trabajaban	reducción
+Relation	T5	T0	NoRel	true	liderada	HUELGA
+Relation	T5	T13	NoRel	true	liderada	huelga
+Relation	T5	T4	NoRel	true	liderada	trabajaban
+Relation	T6	T1	NoRel	true	apoyado	strike
+Relation	T6	T10	NoRel	true	apoyado	huelga
+Relation	T6	T3	NoRel	true	apoyado	participaron
+Relation	T6	T9	NoRel	true	apoyado	reducción
+Relation	T7	T13	NoRel	true	comenzó	huelga
+Relation	T7	T2	NoRel	true	comenzó	LEVANTAMIENTO
+Relation	T7	T3	NoRel	true	comenzó	participaron
+Relation	T7	T8	NoRel	true	comenzó	mejora
+Relation	T8	T0	NoRel	true	mejora	HUELGA
+Relation	T8	T11	NoRel	true	mejora	suspendida
+Relation	T8	T12	NoRel	true	mejora	continuaron
+Relation	T8	T9	NoRel	true	mejora	reducción
+Relation	T9	T11	NoRel	true	reducción	suspendida
+Relation	T9	T3	NoRel	true	reducción	participaron

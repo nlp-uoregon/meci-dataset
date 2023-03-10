@@ -1,0 +1,52 @@
+Text	Página 243 .	- 1865 - 16 DE FEBRERO : descarrilamiento del tren correo de la línea del Este en las cercanías de la estación de Portalegre .	Del accidente resultan un herido grave y otro leve .	- 18 DE SEPTIEMBRE : una composición que transportaba trabajadores entre Beja y Casével , en la entonces denominada Línea del Sur ( actualmente Línea del Alentejo ) , se ve forzada a efectuar un frenado de emergencia debido a un sabotaje en la vía ; los ocupantes salieron despedidos de la composición , produciéndose tres muertos y dos heridos graves .	SANTOS , Luís Filipe Rosa ( 1995 ) . Os Acessos a Faro e aos Concelhos Limítrofes na Segunda Metade do Séc. XIX .
+Event	T0	descarrilamiento	EVENT	38
+Event	T1	resultan	EVENT	154
+Event	T2	composición	EVENT	218
+Event	T3	transportaba	EVENT	234
+Event	T4	forzada	EVENT	366
+Event	T5	efectuar	EVENT	376
+Event	T6	frenado	EVENT	388
+Event	T7	sabotaje	EVENT	422
+Event	T8	despedidos	EVENT	466
+Event	T9	muertos	EVENT	516
+Event	T10	Acessos	EVENT	587
+Event	T11	heridos	EVENT	530
+Relation	T0	T1	CauseEffect	true	descarrilamiento	resultan
+Relation	T1	T0	EffectCause	true	resultan	descarrilamiento
+Relation	T6	T9	CauseEffect	true	frenado	muertos
+Relation	T9	T6	EffectCause	true	muertos	frenado
+Relation	T6	T11	CauseEffect	true	frenado	heridos
+Relation	T11	T6	EffectCause	true	heridos	frenado
+Relation	T0	T2	NoRel	true	descarrilamiento	composición
+Relation	T0	T5	NoRel	true	descarrilamiento	efectuar
+Relation	T1	T11	NoRel	true	resultan	heridos
+Relation	T1	T3	NoRel	true	resultan	transportaba
+Relation	T1	T6	NoRel	true	resultan	frenado
+Relation	T1	T9	NoRel	true	resultan	muertos
+Relation	T10	T11	NoRel	true	Acessos	heridos
+Relation	T10	T5	NoRel	true	Acessos	efectuar
+Relation	T10	T7	NoRel	true	Acessos	sabotaje
+Relation	T11	T2	NoRel	true	heridos	composición
+Relation	T11	T9	NoRel	true	heridos	muertos
+Relation	T2	T1	NoRel	true	composición	resultan
+Relation	T2	T11	NoRel	true	composición	heridos
+Relation	T2	T6	NoRel	true	composición	frenado
+Relation	T3	T0	NoRel	true	transportaba	descarrilamiento
+Relation	T3	T1	NoRel	true	transportaba	resultan
+Relation	T3	T2	NoRel	true	transportaba	composición
+Relation	T3	T4	NoRel	true	transportaba	forzada
+Relation	T4	T11	NoRel	true	forzada	heridos
+Relation	T4	T2	NoRel	true	forzada	composición
+Relation	T4	T7	NoRel	true	forzada	sabotaje
+Relation	T5	T3	NoRel	true	efectuar	transportaba
+Relation	T6	T1	NoRel	true	frenado	resultan
+Relation	T6	T5	NoRel	true	frenado	efectuar
+Relation	T7	T0	NoRel	true	sabotaje	descarrilamiento
+Relation	T7	T10	NoRel	true	sabotaje	Acessos
+Relation	T7	T3	NoRel	true	sabotaje	transportaba
+Relation	T7	T8	NoRel	true	sabotaje	despedidos
+Relation	T8	T0	NoRel	true	despedidos	descarrilamiento
+Relation	T8	T2	NoRel	true	despedidos	composición
+Relation	T8	T5	NoRel	true	despedidos	efectuar
+Relation	T9	T0	NoRel	true	muertos	descarrilamiento
+Relation	T9	T4	NoRel	true	muertos	forzada

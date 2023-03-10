@@ -1,0 +1,58 @@
+Text	İskender Bey bu muharebede kazandığı zaferle hem bölgedeki varlığını sağlamlaştırdı , hem de Osmanlı tehdidiyle karşı karşıya olan Avrupa devletlerine kendisini tanıtmış oldu .	İzleyen iki yıl boyunca Leş Birliği orduları 1445 yılında Prizren yakınlarında savaşılan Mokra Muharebesi'nde ve 1446 yılında savaşılan Otonete Muharebesi'nde Osmanlı Ordularını yenecektir .	Arnavutluk ayaklanması sırasında Venedik Cumhuriyeti İskender Bey'i desteklemiştir .	Venediklilerin desteğinin ardındaki sebep , Arnavutluk bölgesinin Osmanlılarla aralarında tampon bölge olması ve Venedik topraklarına saldırıları engellemesidir .	Leş Birliği'nin kurulduğu topraklar eskiden Venedik denetiminde olmasına rağmen birliğin varlığı Venedik tarafından onay görmüştür .
+Event	T3	yenecektir	EVENT	355
+Event	T4	ayaklanması	EVENT	379
+Event	T5	desteklemiştir	EVENT	436
+Event	T6	engellemesidir	EVENT	599
+Event	T7	muharebede	EVENT	16
+Event	T8	zaferle	EVENT	37
+Event	T9	sağlamlaştırdı	EVENT	69
+Event	T10	oldu	EVENT	170
+Event	T11	Mokra Muharebesi'nde	EVENT	266
+Event	T1	Otonete Muharebesi'nde	EVENT	313
+Event	T2	görmüştür	EVENT	737
+Relation	T7	T8	CauseEffect	true	muharebede	zaferle
+Relation	T8	T7	EffectCause	true	zaferle	muharebede
+Relation	T8	T9	CauseEffect	true	zaferle	sağlamlaştırdı
+Relation	T9	T8	EffectCause	true	sağlamlaştırdı	zaferle
+Relation	T8	T10	CauseEffect	true	zaferle	oldu
+Relation	T10	T8	EffectCause	true	oldu	zaferle
+Relation	T11	T3	CauseEffect	true	Mokra Muharebesi'nde	yenecektir
+Relation	T3	T11	EffectCause	true	yenecektir	Mokra Muharebesi'nde
+Relation	T1	T3	CauseEffect	true	Otonete Muharebesi'nde	yenecektir
+Relation	T3	T1	EffectCause	true	yenecektir	Otonete Muharebesi'nde
+Relation	T4	T5	CauseEffect	true	ayaklanması	desteklemiştir
+Relation	T5	T4	EffectCause	true	desteklemiştir	ayaklanması
+Relation	T1	T4	NoRel	true	Otonete Muharebesi'nde	ayaklanması
+Relation	T1	T6	NoRel	true	Otonete Muharebesi'nde	engellemesidir
+Relation	T1	T7	NoRel	true	Otonete Muharebesi'nde	muharebede
+Relation	T1	T8	NoRel	true	Otonete Muharebesi'nde	zaferle
+Relation	T10	T5	NoRel	true	oldu	desteklemiştir
+Relation	T10	T6	NoRel	true	oldu	engellemesidir
+Relation	T11	T6	NoRel	true	Mokra Muharebesi'nde	engellemesidir
+Relation	T2	T10	NoRel	true	görmüştür	oldu
+Relation	T2	T4	NoRel	true	görmüştür	ayaklanması
+Relation	T2	T5	NoRel	true	görmüştür	desteklemiştir
+Relation	T3	T4	NoRel	true	yenecektir	ayaklanması
+Relation	T3	T6	NoRel	true	yenecektir	engellemesidir
+Relation	T4	T2	NoRel	true	ayaklanması	görmüştür
+Relation	T4	T3	NoRel	true	ayaklanması	yenecektir
+Relation	T4	T6	NoRel	true	ayaklanması	engellemesidir
+Relation	T4	T7	NoRel	true	ayaklanması	muharebede
+Relation	T4	T9	NoRel	true	ayaklanması	sağlamlaştırdı
+Relation	T5	T1	NoRel	true	desteklemiştir	Otonete Muharebesi'nde
+Relation	T5	T11	NoRel	true	desteklemiştir	Mokra Muharebesi'nde
+Relation	T5	T2	NoRel	true	desteklemiştir	görmüştür
+Relation	T5	T6	NoRel	true	desteklemiştir	engellemesidir
+Relation	T5	T8	NoRel	true	desteklemiştir	zaferle
+Relation	T6	T10	NoRel	true	engellemesidir	oldu
+Relation	T6	T7	NoRel	true	engellemesidir	muharebede
+Relation	T6	T8	NoRel	true	engellemesidir	zaferle
+Relation	T6	T9	NoRel	true	engellemesidir	sağlamlaştırdı
+Relation	T7	T1	NoRel	true	muharebede	Otonete Muharebesi'nde
+Relation	T7	T11	NoRel	true	muharebede	Mokra Muharebesi'nde
+Relation	T7	T4	NoRel	true	muharebede	ayaklanması
+Relation	T7	T5	NoRel	true	muharebede	desteklemiştir
+Relation	T8	T2	NoRel	true	zaferle	görmüştür
+Relation	T8	T4	NoRel	true	zaferle	ayaklanması
+Relation	T8	T6	NoRel	true	zaferle	engellemesidir
+Relation	T9	T6	NoRel	true	sağlamlaştırdı	engellemesidir

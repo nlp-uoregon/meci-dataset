@@ -1,0 +1,43 @@
+Text	12 Haziran'da Shaker üyeleri , soğuktan yok olan ekinleri yeniden ekmek zorunda kaldılar .	7 Temmuz'da hava oldukça soğudu ve hiçbir şey gelişmez oldu .	Berkshire Tepeleri , 23 Ağustos'ta tekrar dondu .	Temmuz ve Ağustos aylarında Pennsylvania'nın kuzeybatısından güneye kadar göl ve nehirlerde buzlanma görüldü .	Don olayı , 20 ve 21 Ağustos tarihlerinde Virginia'nın güneyine kadar uzandı .
+Event	T1	soğudu	EVENT	116
+Event	T3	dondu	EVENT	195
+Event	T4	görüldü	EVENT	304
+Event	T6	uzandı	EVENT	384
+Event	T7	kaldılar	EVENT	80
+Event	T8	soğuktan	EVENT	31
+Event	T9	olan	EVENT	44
+Event	T10	oldu	EVENT	146
+Event	T2	Don	EVENT	314
+Relation	T8	T9	CauseEffect	true	soğuktan	olan
+Relation	T9	T8	EffectCause	true	olan	soğuktan
+Relation	T9	T7	CauseEffect	true	olan	kaldılar
+Relation	T7	T9	EffectCause	true	kaldılar	olan
+Relation	T1	T10	CauseEffect	true	soğudu	oldu
+Relation	T10	T1	EffectCause	true	oldu	soğudu
+Relation	T1	T3	CauseEffect	true	soğudu	dondu
+Relation	T3	T1	EffectCause	true	dondu	soğudu
+Relation	T1	T4	CauseEffect	true	soğudu	görüldü
+Relation	T4	T1	EffectCause	true	görüldü	soğudu
+Relation	T1	T2	NoRel	true	soğudu	Don
+Relation	T1	T7	NoRel	true	soğudu	kaldılar
+Relation	T10	T4	NoRel	true	oldu	görüldü
+Relation	T10	T8	NoRel	true	oldu	soğuktan
+Relation	T2	T8	NoRel	true	Don	soğuktan
+Relation	T3	T10	NoRel	true	dondu	oldu
+Relation	T3	T9	NoRel	true	dondu	olan
+Relation	T4	T3	NoRel	true	görüldü	dondu
+Relation	T4	T6	NoRel	true	görüldü	uzandı
+Relation	T4	T8	NoRel	true	görüldü	soğuktan
+Relation	T4	T9	NoRel	true	görüldü	olan
+Relation	T6	T1	NoRel	true	uzandı	soğudu
+Relation	T6	T2	NoRel	true	uzandı	Don
+Relation	T6	T3	NoRel	true	uzandı	dondu
+Relation	T6	T7	NoRel	true	uzandı	kaldılar
+Relation	T6	T9	NoRel	true	uzandı	olan
+Relation	T7	T10	NoRel	true	kaldılar	oldu
+Relation	T7	T3	NoRel	true	kaldılar	dondu
+Relation	T7	T6	NoRel	true	kaldılar	uzandı
+Relation	T8	T2	NoRel	true	soğuktan	Don
+Relation	T8	T4	NoRel	true	soğuktan	görüldü
+Relation	T9	T10	NoRel	true	olan	oldu
+Relation	T9	T2	NoRel	true	olan	Don

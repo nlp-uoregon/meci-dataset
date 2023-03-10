@@ -1,0 +1,111 @@
+Text	Selv om ingen - i første omgang - tog ansvar for angrebene slog USA fast , at man ville gå i krig mod terroristerne og dem , der beskyttede dem .	Blandt konsekvenser af angrebet var indførelsen af USA PATRIOT Act og Homeland Security Act .	Som følge af terrorangrebet styrkede mange af verdens lande deres antiterrorlovgivning .	Nogle af de amerikanske børser lukkede resten af ugen efter terrorangrebet , og havde ved genåbningen lidt et enormt tab , især i luftfarts- og forsikringsbranchen .	Ødelæggelsen af flere milliard-dyre kontorbygninger forvoldte en alvorlig skade for økonomien i Lower Manhattan .
+Event	T0	slog	EVENT	59
+Event	T1	gå	EVENT	88
+Event	T2	krig	EVENT	93
+Event	T3	beskyttede	EVENT	129
+Event	T4	konsekvenser	EVENT	153
+Event	T5	angrebet	EVENT	169
+Event	T6	indførelsen	EVENT	182
+Event	T7	styrkede	EVENT	268
+Event	T8	lukkede	EVENT	360
+Event	T9	terrorangrebet	EVENT	389
+Event	T10	tab	EVENT	446
+Event	T11	Ødelæggelsen	EVENT	495
+Event	T12	forvoldte	EVENT	547
+Event	T13	skade	EVENT	569
+Event	T14	terrorangrebet	EVENT	253
+Event	T15	angrebene	EVENT	49
+Relation	T11	T13	CauseEffect	true	Ødelæggelsen	skade
+Relation	T13	T11	EffectCause	true	skade	Ødelæggelsen
+Relation	T9	T8	CauseEffect	true	terrorangrebet	lukkede
+Relation	T8	T9	EffectCause	true	lukkede	terrorangrebet
+Relation	T8	T10	CauseEffect	true	lukkede	tab
+Relation	T10	T8	EffectCause	true	tab	lukkede
+Relation	T15	T2	CauseEffect	true	angrebene	krig
+Relation	T2	T15	EffectCause	true	krig	angrebene
+Relation	T14	T7	CauseEffect	true	terrorangrebet	styrkede
+Relation	T7	T14	EffectCause	true	styrkede	terrorangrebet
+Relation	T0	T13	NoRel	true	slog	skade
+Relation	T0	T14	NoRel	true	slog	terrorangrebet
+Relation	T0	T3	NoRel	true	slog	beskyttede
+Relation	T0	T4	NoRel	true	slog	konsekvenser
+Relation	T0	T6	NoRel	true	slog	indførelsen
+Relation	T0	T7	NoRel	true	slog	styrkede
+Relation	T1	T10	NoRel	true	gå	tab
+Relation	T1	T12	NoRel	true	gå	forvoldte
+Relation	T1	T6	NoRel	true	gå	indførelsen
+Relation	T1	T9	NoRel	true	gå	terrorangrebet
+Relation	T10	T1	NoRel	true	tab	gå
+Relation	T10	T13	NoRel	true	tab	skade
+Relation	T10	T15	NoRel	true	tab	angrebene
+Relation	T10	T5	NoRel	true	tab	angrebet
+Relation	T11	T10	NoRel	true	Ødelæggelsen	tab
+Relation	T11	T14	NoRel	true	Ødelæggelsen	terrorangrebet
+Relation	T11	T6	NoRel	true	Ødelæggelsen	indførelsen
+Relation	T12	T13	NoRel	true	forvoldte	skade
+Relation	T12	T15	NoRel	true	forvoldte	angrebene
+Relation	T12	T2	NoRel	true	forvoldte	krig
+Relation	T12	T7	NoRel	true	forvoldte	styrkede
+Relation	T13	T14	NoRel	true	skade	terrorangrebet
+Relation	T13	T5	NoRel	true	skade	angrebet
+Relation	T13	T7	NoRel	true	skade	styrkede
+Relation	T14	T0	NoRel	true	terrorangrebet	slog
+Relation	T14	T2	NoRel	true	terrorangrebet	krig
+Relation	T14	T5	NoRel	true	terrorangrebet	angrebet
+Relation	T14	T8	NoRel	true	terrorangrebet	lukkede
+Relation	T15	T1	NoRel	true	angrebene	gå
+Relation	T15	T12	NoRel	true	angrebene	forvoldte
+Relation	T2	T0	NoRel	true	krig	slog
+Relation	T2	T1	NoRel	true	krig	gå
+Relation	T2	T10	NoRel	true	krig	tab
+Relation	T2	T13	NoRel	true	krig	skade
+Relation	T2	T14	NoRel	true	krig	terrorangrebet
+Relation	T2	T6	NoRel	true	krig	indførelsen
+Relation	T2	T7	NoRel	true	krig	styrkede
+Relation	T3	T0	NoRel	true	beskyttede	slog
+Relation	T3	T10	NoRel	true	beskyttede	tab
+Relation	T3	T15	NoRel	true	beskyttede	angrebene
+Relation	T3	T2	NoRel	true	beskyttede	krig
+Relation	T3	T4	NoRel	true	beskyttede	konsekvenser
+Relation	T3	T6	NoRel	true	beskyttede	indførelsen
+Relation	T3	T8	NoRel	true	beskyttede	lukkede
+Relation	T3	T9	NoRel	true	beskyttede	terrorangrebet
+Relation	T4	T0	NoRel	true	konsekvenser	slog
+Relation	T4	T10	NoRel	true	konsekvenser	tab
+Relation	T4	T14	NoRel	true	konsekvenser	terrorangrebet
+Relation	T4	T15	NoRel	true	konsekvenser	angrebene
+Relation	T4	T2	NoRel	true	konsekvenser	krig
+Relation	T4	T6	NoRel	true	konsekvenser	indførelsen
+Relation	T4	T8	NoRel	true	konsekvenser	lukkede
+Relation	T5	T10	NoRel	true	angrebet	tab
+Relation	T5	T11	NoRel	true	angrebet	Ødelæggelsen
+Relation	T5	T12	NoRel	true	angrebet	forvoldte
+Relation	T5	T14	NoRel	true	angrebet	terrorangrebet
+Relation	T5	T15	NoRel	true	angrebet	angrebene
+Relation	T5	T2	NoRel	true	angrebet	krig
+Relation	T5	T3	NoRel	true	angrebet	beskyttede
+Relation	T5	T4	NoRel	true	angrebet	konsekvenser
+Relation	T5	T8	NoRel	true	angrebet	lukkede
+Relation	T6	T0	NoRel	true	indførelsen	slog
+Relation	T6	T10	NoRel	true	indførelsen	tab
+Relation	T6	T11	NoRel	true	indførelsen	Ødelæggelsen
+Relation	T6	T14	NoRel	true	indførelsen	terrorangrebet
+Relation	T6	T2	NoRel	true	indførelsen	krig
+Relation	T6	T3	NoRel	true	indførelsen	beskyttede
+Relation	T6	T5	NoRel	true	indførelsen	angrebet
+Relation	T7	T0	NoRel	true	styrkede	slog
+Relation	T7	T11	NoRel	true	styrkede	Ødelæggelsen
+Relation	T7	T13	NoRel	true	styrkede	skade
+Relation	T7	T2	NoRel	true	styrkede	krig
+Relation	T7	T4	NoRel	true	styrkede	konsekvenser
+Relation	T7	T6	NoRel	true	styrkede	indførelsen
+Relation	T8	T0	NoRel	true	lukkede	slog
+Relation	T8	T11	NoRel	true	lukkede	Ødelæggelsen
+Relation	T8	T12	NoRel	true	lukkede	forvoldte
+Relation	T8	T2	NoRel	true	lukkede	krig
+Relation	T8	T3	NoRel	true	lukkede	beskyttede
+Relation	T8	T7	NoRel	true	lukkede	styrkede
+Relation	T9	T0	NoRel	true	terrorangrebet	slog
+Relation	T9	T12	NoRel	true	terrorangrebet	forvoldte
+Relation	T9	T3	NoRel	true	terrorangrebet	beskyttede
+Relation	T9	T5	NoRel	true	terrorangrebet	angrebet

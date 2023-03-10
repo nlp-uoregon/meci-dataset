@@ -1,0 +1,84 @@
+Text	Kazadan dolayı ağır hasar alan uçak 20 saat sonra güvenli bir konuma çekildi .	Kazadan sonra uçuşa kapatılan havalimanı ertesi gün sabah 9'da uçuşlara tekrar açıldı .	Kazanın ardından Trabzon Cumhuriyet Başsavcılığı tarafından soruşturma başlatıldı .	Soruşturma kapsamında 38 yolcu , 3 pilot ve 8 şahidin ifadesine başvuruldu .	Kazanın nedeninin Ulaştırma Bakanlığı tarafından hazırlanacak " Kaza Kırım Raporu " ile ortaya çıkması bekleniyor .
+Event	T0	Kazadan	EVENT	0
+Event	T1	çekildi	EVENT	69
+Event	T2	Kazadan	EVENT	79
+Event	T3	kapatılan	EVENT	99
+Event	T4	açıldı	EVENT	158
+Event	T5	Kazanın	EVENT	167
+Event	T6	başlatıldı	EVENT	238
+Event	T7	Soruşturma	EVENT	251
+Event	T8	başvuruldu	EVENT	315
+Event	T9	hasar alan	EVENT	20
+Event	T10	Kazanın	EVENT	328
+Event	T11	hazırlanacak	EVENT	377
+Relation	T0	T9	CauseEffect	true	Kazadan	hasar alan
+Relation	T9	T0	EffectCause	true	hasar alan	Kazadan
+Relation	T9	T1	CauseEffect	true	hasar alan	çekildi
+Relation	T1	T9	EffectCause	true	çekildi	hasar alan
+Relation	T2	T3	CauseEffect	true	Kazadan	kapatılan
+Relation	T3	T2	EffectCause	true	kapatılan	Kazadan
+Relation	T0	T3	CauseEffect	true	Kazadan	kapatılan
+Relation	T3	T0	EffectCause	true	kapatılan	Kazadan
+Relation	T5	T3	CauseEffect	true	Kazanın	kapatılan
+Relation	T3	T5	EffectCause	true	kapatılan	Kazanın
+Relation	T5	T9	CauseEffect	true	Kazanın	hasar alan
+Relation	T9	T5	EffectCause	true	hasar alan	Kazanın
+Relation	T2	T9	CauseEffect	true	Kazadan	hasar alan
+Relation	T9	T2	EffectCause	true	hasar alan	Kazadan
+Relation	T5	T6	CauseEffect	true	Kazanın	başlatıldı
+Relation	T6	T5	EffectCause	true	başlatıldı	Kazanın
+Relation	T2	T6	CauseEffect	true	Kazadan	başlatıldı
+Relation	T6	T2	EffectCause	true	başlatıldı	Kazadan
+Relation	T0	T6	CauseEffect	true	Kazadan	başlatıldı
+Relation	T6	T0	EffectCause	true	başlatıldı	Kazadan
+Relation	T10	T6	CauseEffect	true	Kazanın	başlatıldı
+Relation	T6	T10	EffectCause	true	başlatıldı	Kazanın
+Relation	T10	T7	CauseEffect	true	Kazanın	Soruşturma
+Relation	T7	T10	EffectCause	true	Soruşturma	Kazanın
+Relation	T10	T3	CauseEffect	true	Kazanın	kapatılan
+Relation	T3	T10	EffectCause	true	kapatılan	Kazanın
+Relation	T10	T9	CauseEffect	true	Kazanın	hasar alan
+Relation	T9	T10	EffectCause	true	hasar alan	Kazanın
+Relation	T0	T7	CauseEffect	true	Kazadan	Soruşturma
+Relation	T7	T0	EffectCause	true	Soruşturma	Kazadan
+Relation	T2	T7	CauseEffect	true	Kazadan	Soruşturma
+Relation	T7	T2	EffectCause	true	Soruşturma	Kazadan
+Relation	T0	T11	NoRel	true	Kazadan	hazırlanacak
+Relation	T0	T5	NoRel	true	Kazadan	Kazanın
+Relation	T1	T2	NoRel	true	çekildi	Kazadan
+Relation	T1	T3	NoRel	true	çekildi	kapatılan
+Relation	T1	T6	NoRel	true	çekildi	başlatıldı
+Relation	T10	T1	NoRel	true	Kazanın	çekildi
+Relation	T10	T2	NoRel	true	Kazanın	Kazadan
+Relation	T10	T5	NoRel	true	Kazanın	Kazanın
+Relation	T10	T8	NoRel	true	Kazanın	başvuruldu
+Relation	T11	T1	NoRel	true	hazırlanacak	çekildi
+Relation	T11	T4	NoRel	true	hazırlanacak	açıldı
+Relation	T11	T6	NoRel	true	hazırlanacak	başlatıldı
+Relation	T11	T9	NoRel	true	hazırlanacak	hasar alan
+Relation	T2	T0	NoRel	true	Kazadan	Kazadan
+Relation	T2	T11	NoRel	true	Kazadan	hazırlanacak
+Relation	T3	T11	NoRel	true	kapatılan	hazırlanacak
+Relation	T3	T4	NoRel	true	kapatılan	açıldı
+Relation	T4	T1	NoRel	true	açıldı	çekildi
+Relation	T4	T3	NoRel	true	açıldı	kapatılan
+Relation	T4	T6	NoRel	true	açıldı	başlatıldı
+Relation	T4	T9	NoRel	true	açıldı	hasar alan
+Relation	T5	T1	NoRel	true	Kazanın	çekildi
+Relation	T5	T10	NoRel	true	Kazanın	Kazanın
+Relation	T5	T11	NoRel	true	Kazanın	hazırlanacak
+Relation	T5	T2	NoRel	true	Kazanın	Kazadan
+Relation	T5	T4	NoRel	true	Kazanın	açıldı
+Relation	T6	T11	NoRel	true	başlatıldı	hazırlanacak
+Relation	T6	T3	NoRel	true	başlatıldı	kapatılan
+Relation	T6	T8	NoRel	true	başlatıldı	başvuruldu
+Relation	T6	T9	NoRel	true	başlatıldı	hasar alan
+Relation	T7	T1	NoRel	true	Soruşturma	çekildi
+Relation	T7	T3	NoRel	true	Soruşturma	kapatılan
+Relation	T7	T5	NoRel	true	Soruşturma	Kazanın
+Relation	T8	T0	NoRel	true	başvuruldu	Kazadan
+Relation	T8	T11	NoRel	true	başvuruldu	hazırlanacak
+Relation	T8	T3	NoRel	true	başvuruldu	kapatılan
+Relation	T8	T5	NoRel	true	başvuruldu	Kazanın
+Relation	T9	T6	NoRel	true	hasar alan	başlatıldı
+Relation	T9	T7	NoRel	true	hasar alan	Soruşturma

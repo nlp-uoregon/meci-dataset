@@ -1,0 +1,19 @@
+Text	Bu manzaralı yol sonbahara mevsiminde bu yaprak dökmeye hazırlanan ve renklerini yeşilden turuncuya ve sarıya dönüştüren ağaçlarla dolu olan zirve ve tepeleri doldurdukları zaman çok büyük sayıda motorlu vasıtaları ile gelen ziyaretçi çekmektedir .	Karayolu uzerinde ziyaretcilerin durup manzarayı seyredebilmeleri için 75 oto park etme durağı tesis edilmiştir .	Karayolunda trafik Ulusal Park Hizmeti Ranger'leri tarafından idare edilmektedir .	Bu karayolu üzerinde maksimum hız saatte 60 km olarak sınırlanmıştır .	Bu manzaralı karayolu bisiklet , diğer iki tekerlekli vasitalar ve ata binenler tarafından da kullanılmaktadır .
+Event	T0	dönüştüren	EVENT	110
+Event	T2	çekmektedir	EVENT	235
+Event	T3	edilmiştir	EVENT	350
+Event	T4	mevsiminde	EVENT	27
+Event	T1	sınırlanmıştır	EVENT	500
+Relation	T4	T0	CauseEffect	true	mevsiminde	dönüştüren
+Relation	T0	T4	EffectCause	true	dönüştüren	mevsiminde
+Relation	T0	T2	CauseEffect	true	dönüştüren	çekmektedir
+Relation	T2	T0	EffectCause	true	çekmektedir	dönüştüren
+Relation	T1	T2	NoRel	true	sınırlanmıştır	çekmektedir
+Relation	T1	T3	NoRel	true	sınırlanmıştır	edilmiştir
+Relation	T2	T1	NoRel	true	çekmektedir	sınırlanmıştır
+Relation	T2	T3	NoRel	true	çekmektedir	edilmiştir
+Relation	T2	T4	NoRel	true	çekmektedir	mevsiminde
+Relation	T3	T0	NoRel	true	edilmiştir	dönüştüren
+Relation	T3	T1	NoRel	true	edilmiştir	sınırlanmıştır
+Relation	T4	T1	NoRel	true	mevsiminde	sınırlanmıştır
+Relation	T4	T3	NoRel	true	mevsiminde	edilmiştir

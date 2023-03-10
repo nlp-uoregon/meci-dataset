@@ -1,0 +1,20 @@
+Text	Murieron 10 personas y 76 resultaron heridas .	- 28 de diciembre de 1956 .	Entre las estaciones de Quereño y Sobradelo ( Orense ) descarriló el expreso Madrid_–_Coruña .	5 muertos y 49 heridos .	- 4 de agosto de 1957 .
+Event	T0	Murieron	EVENT	0
+Event	T1	heridas	EVENT	37
+Event	T2	descarriló	EVENT	130
+Event	T3	expreso	EVENT	144
+Event	T4	muertos	EVENT	172
+Event	T5	heridos	EVENT	185
+Relation	T2	T4	CauseEffect	true	descarriló	muertos
+Relation	T4	T2	EffectCause	true	muertos	descarriló
+Relation	T2	T5	CauseEffect	true	descarriló	heridos
+Relation	T5	T2	EffectCause	true	heridos	descarriló
+Relation	T0	T2	NoRel	true	Murieron	descarriló
+Relation	T1	T0	NoRel	true	heridas	Murieron
+Relation	T1	T2	NoRel	true	heridas	descarriló
+Relation	T1	T3	NoRel	true	heridas	expreso
+Relation	T3	T5	NoRel	true	expreso	heridos
+Relation	T4	T0	NoRel	true	muertos	Murieron
+Relation	T4	T3	NoRel	true	muertos	expreso
+Relation	T4	T5	NoRel	true	muertos	heridos
+Relation	T5	T4	NoRel	true	heridos	muertos

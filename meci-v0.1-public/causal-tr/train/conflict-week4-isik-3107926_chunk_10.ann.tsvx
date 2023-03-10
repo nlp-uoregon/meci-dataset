@@ -1,0 +1,60 @@
+Text	1553 yılında Akdeniz'deki mücadele daha hareketli geçti .	Sinan Paşa ve Turgut Reis komutasındaki Osmanlı donanması ; Antoine Escalin des Aimars komutasındaki Fransız Donanmasıyla birleşerek Napoli , Sicilya ve Korsika kıyılarını vurduktan sonra , Ağustos ve Eylül aylarında İspanya Krallığı'nın müttefiki Cenevizlilerin idaresindeki Korsika'yı ele geçirdi .	Öte yandan , İspanya Krallığı 1550 yılında işgal ettiği Mehdiye'yi daha fazla elinde tutamayacağını anladı .	İmparator V. Karl kaleyi Malta Şövalyeleri'ne devretmeyi önerdiyse de , teklifinin reddedilmesi üzerine kaleyi tahliye etti .	Bunun üzerine Osmanlılar kaleyi tekrar ele geçirdiler .
+Event	T0	mücadele	EVENT	26
+Event	T1	geçti	EVENT	50
+Event	T2	vurduktan	EVENT	230
+Event	T3	geçirdi	EVENT	349
+Event	T4	işgal	EVENT	402
+Event	T5	önerdiyse	EVENT	525
+Event	T6	reddedilmesi	EVENT	551
+Event	T7	etti	EVENT	587
+Event	T8	geçirdiler	EVENT	637
+Event	T9	birleşerek	EVENT	180
+Event	T10	anladı	EVENT	459
+Relation	T10	T5	CauseEffect	true	anladı	önerdiyse
+Relation	T5	T10	EffectCause	true	önerdiyse	anladı
+Relation	T5	T6	CauseEffect	true	önerdiyse	reddedilmesi
+Relation	T6	T5	EffectCause	true	reddedilmesi	önerdiyse
+Relation	T6	T7	CauseEffect	true	reddedilmesi	etti
+Relation	T7	T6	EffectCause	true	etti	reddedilmesi
+Relation	T7	T8	CauseEffect	true	etti	geçirdiler
+Relation	T8	T7	EffectCause	true	geçirdiler	etti
+Relation	T0	T1	NoRel	true	mücadele	geçti
+Relation	T0	T10	NoRel	true	mücadele	anladı
+Relation	T0	T2	NoRel	true	mücadele	vurduktan
+Relation	T0	T3	NoRel	true	mücadele	geçirdi
+Relation	T0	T6	NoRel	true	mücadele	reddedilmesi
+Relation	T1	T3	NoRel	true	geçti	geçirdi
+Relation	T1	T7	NoRel	true	geçti	etti
+Relation	T10	T3	NoRel	true	anladı	geçirdi
+Relation	T10	T6	NoRel	true	anladı	reddedilmesi
+Relation	T10	T8	NoRel	true	anladı	geçirdiler
+Relation	T10	T9	NoRel	true	anladı	birleşerek
+Relation	T2	T0	NoRel	true	vurduktan	mücadele
+Relation	T2	T1	NoRel	true	vurduktan	geçti
+Relation	T2	T10	NoRel	true	vurduktan	anladı
+Relation	T2	T3	NoRel	true	vurduktan	geçirdi
+Relation	T2	T4	NoRel	true	vurduktan	işgal
+Relation	T2	T8	NoRel	true	vurduktan	geçirdiler
+Relation	T2	T9	NoRel	true	vurduktan	birleşerek
+Relation	T3	T0	NoRel	true	geçirdi	mücadele
+Relation	T3	T2	NoRel	true	geçirdi	vurduktan
+Relation	T3	T5	NoRel	true	geçirdi	önerdiyse
+Relation	T3	T9	NoRel	true	geçirdi	birleşerek
+Relation	T4	T10	NoRel	true	işgal	anladı
+Relation	T4	T5	NoRel	true	işgal	önerdiyse
+Relation	T4	T8	NoRel	true	işgal	geçirdiler
+Relation	T5	T0	NoRel	true	önerdiyse	mücadele
+Relation	T5	T3	NoRel	true	önerdiyse	geçirdi
+Relation	T5	T4	NoRel	true	önerdiyse	işgal
+Relation	T6	T2	NoRel	true	reddedilmesi	vurduktan
+Relation	T6	T4	NoRel	true	reddedilmesi	işgal
+Relation	T6	T8	NoRel	true	reddedilmesi	geçirdiler
+Relation	T7	T1	NoRel	true	etti	geçti
+Relation	T7	T5	NoRel	true	etti	önerdiyse
+Relation	T8	T1	NoRel	true	geçirdiler	geçti
+Relation	T8	T2	NoRel	true	geçirdiler	vurduktan
+Relation	T8	T4	NoRel	true	geçirdiler	işgal
+Relation	T9	T1	NoRel	true	birleşerek	geçti
+Relation	T9	T2	NoRel	true	birleşerek	vurduktan
+Relation	T9	T3	NoRel	true	birleşerek	geçirdi
+Relation	T9	T7	NoRel	true	birleşerek	etti

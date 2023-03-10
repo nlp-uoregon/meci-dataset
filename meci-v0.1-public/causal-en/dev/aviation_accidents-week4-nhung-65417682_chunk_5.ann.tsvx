@@ -1,0 +1,63 @@
+Text	Twenty - five bodies were found at the crash site .	Two cadets survived the accident , but one of them , having received burns to 90 % of his body , died on 26 September in an ambulance hospital in Kharkiv .	A total of 26 people died in the plane crash – 19 cadets and seven crew members .	The bodies of the dead were badly burned and mutilated , and a DNA examination was required to identify them , which took 2 – 3 weeks .	One cadet survived and is in the Military Medical Clinical Center of the Northern Region " with numerous bruises and concussions . " .
+Event	T0	found	EVENT	26
+Event	T1	crash	EVENT	39
+Event	T2	survived	EVENT	63
+Event	T3	accident	EVENT	76
+Event	T4	burns	EVENT	121
+Event	T5	died	EVENT	149
+Event	T6	died	EVENT	229
+Event	T7	crash	EVENT	247
+Event	T8	dead	EVENT	308
+Event	T9	burned	EVENT	324
+Event	T10	mutilated	EVENT	335
+Event	T11	examination	EVENT	357
+Event	T12	required	EVENT	373
+Event	T13	identify	EVENT	385
+Event	T14	took	EVENT	407
+Event	T15	survived	EVENT	436
+Event	T16	bruises	EVENT	531
+Event	T17	concussions	EVENT	543
+Relation	T1	T0	CauseEffect	true	crash	found
+Relation	T0	T1	EffectCause	true	found	crash
+Relation	T3	T2	CauseEffect	true	accident	survived
+Relation	T2	T3	EffectCause	true	survived	accident
+Relation	T3	T4	CauseEffect	true	accident	burns
+Relation	T4	T3	EffectCause	true	burns	accident
+Relation	T4	T5	CauseEffect	true	burns	died
+Relation	T5	T4	EffectCause	true	died	burns
+Relation	T7	T6	CauseEffect	true	crash	died
+Relation	T6	T7	EffectCause	true	died	crash
+Relation	T9	T11	CauseEffect	true	burned	examination
+Relation	T11	T9	EffectCause	true	examination	burned
+Relation	T10	T11	CauseEffect	true	mutilated	examination
+Relation	T11	T10	EffectCause	true	examination	mutilated
+Relation	T11	T13	CauseEffect	true	examination	identify
+Relation	T13	T11	EffectCause	true	identify	examination
+Relation	T7	T9	CauseEffect	true	crash	burned
+Relation	T9	T7	EffectCause	true	burned	crash
+Relation	T7	T10	CauseEffect	true	crash	mutilated
+Relation	T10	T7	EffectCause	true	mutilated	crash
+Relation	T7	T15	CauseEffect	true	crash	survived
+Relation	T15	T7	EffectCause	true	survived	crash
+Relation	T0	T9	NoRel	true	found	burned
+Relation	T1	T14	NoRel	true	crash	took
+Relation	T10	T12	NoRel	true	mutilated	required
+Relation	T11	T15	NoRel	true	examination	survived
+Relation	T11	T5	NoRel	true	examination	died
+Relation	T12	T17	NoRel	true	required	concussions
+Relation	T13	T14	NoRel	true	identify	took
+Relation	T13	T17	NoRel	true	identify	concussions
+Relation	T15	T3	NoRel	true	survived	accident
+Relation	T16	T14	NoRel	true	bruises	took
+Relation	T16	T15	NoRel	true	bruises	survived
+Relation	T16	T5	NoRel	true	bruises	died
+Relation	T17	T4	NoRel	true	concussions	burns
+Relation	T2	T14	NoRel	true	survived	took
+Relation	T4	T17	NoRel	true	burns	concussions
+Relation	T5	T0	NoRel	true	died	found
+Relation	T5	T9	NoRel	true	died	burned
+Relation	T6	T15	NoRel	true	died	survived
+Relation	T6	T5	NoRel	true	died	died
+Relation	T7	T17	NoRel	true	crash	concussions
+Relation	T9	T0	NoRel	true	burned	found
+Relation	T9	T5	NoRel	true	burned	died

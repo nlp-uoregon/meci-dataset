@@ -1,0 +1,135 @@
+Text	La rápida caída de temperatura con poco viento proporciona las condiciones para una formación de niebla conocida como niebla de radiación , caracterizada por una niebla espesa y baja que impacta significativamente las operaciones .	En septiembre de 2009 , un mes después del inicio de operaciones en el aeropuerto de Yichun , China Southern Airlines decidió no operar de noche en ese aeropuerto debido a preocupaciones con la seguridad de las operaciones .	La noche del accidente , el observatorio meteorológico del aeropuerto emitió boletines indicando las condiciones de visibilidad .	A las 19:00 , la visibilidad era de 1,0 km ( 0,62 mi ) , a las 21:00 era de 8,0 km ( 5,0 mi ) .	A las 21:08 , el aeropuerto emitió un boletín especial informando que la visibilidad se redujo a 2,8 km ( 1,7 millas ) y disminuyó rápidamente .
+Event	T0	caída	EVENT	10
+Event	T1	proporciona	EVENT	47
+Event	T2	formación	EVENT	84
+Event	T4	impacta	EVENT	187
+Event	T5	operaciones	EVENT	218
+Event	T6	inicio	EVENT	275
+Event	T7	operaciones	EVENT	285
+Event	T8	decidió	EVENT	350
+Event	T9	operar	EVENT	361
+Event	T10	preocupaciones	EVENT	404
+Event	T11	operaciones	EVENT	443
+Event	T12	accidente	EVENT	470
+Event	T13	indicando	EVENT	544
+Event	T14	emitió	EVENT	711
+Event	T15	boletín	EVENT	721
+Event	T16	informando	EVENT	738
+Event	T17	redujo	EVENT	771
+Event	T18	disminuyó	EVENT	804
+Event	T3	boletines	EVENT	534
+Relation	T17	T15	CauseEffect	true	redujo	boletín
+Relation	T15	T17	EffectCause	true	boletín	redujo
+Relation	T0	T1	NoRel	true	caída	proporciona
+Relation	T0	T11	NoRel	true	caída	operaciones
+Relation	T0	T16	NoRel	true	caída	informando
+Relation	T0	T17	NoRel	true	caída	redujo
+Relation	T0	T18	NoRel	true	caída	disminuyó
+Relation	T0	T8	NoRel	true	caída	decidió
+Relation	T1	T11	NoRel	true	proporciona	operaciones
+Relation	T1	T12	NoRel	true	proporciona	accidente
+Relation	T1	T16	NoRel	true	proporciona	informando
+Relation	T10	T11	NoRel	true	preocupaciones	operaciones
+Relation	T10	T16	NoRel	true	preocupaciones	informando
+Relation	T10	T18	NoRel	true	preocupaciones	disminuyó
+Relation	T10	T2	NoRel	true	preocupaciones	formación
+Relation	T10	T5	NoRel	true	preocupaciones	operaciones
+Relation	T10	T7	NoRel	true	preocupaciones	operaciones
+Relation	T10	T8	NoRel	true	preocupaciones	decidió
+Relation	T11	T1	NoRel	true	operaciones	proporciona
+Relation	T11	T13	NoRel	true	operaciones	indicando
+Relation	T11	T16	NoRel	true	operaciones	informando
+Relation	T11	T2	NoRel	true	operaciones	formación
+Relation	T11	T9	NoRel	true	operaciones	operar
+Relation	T12	T15	NoRel	true	accidente	boletín
+Relation	T12	T16	NoRel	true	accidente	informando
+Relation	T12	T18	NoRel	true	accidente	disminuyó
+Relation	T12	T2	NoRel	true	accidente	formación
+Relation	T12	T4	NoRel	true	accidente	impacta
+Relation	T12	T5	NoRel	true	accidente	operaciones
+Relation	T12	T6	NoRel	true	accidente	inicio
+Relation	T12	T7	NoRel	true	accidente	operaciones
+Relation	T13	T0	NoRel	true	indicando	caída
+Relation	T13	T15	NoRel	true	indicando	boletín
+Relation	T13	T2	NoRel	true	indicando	formación
+Relation	T13	T9	NoRel	true	indicando	operar
+Relation	T14	T11	NoRel	true	emitió	operaciones
+Relation	T14	T13	NoRel	true	emitió	indicando
+Relation	T14	T16	NoRel	true	emitió	informando
+Relation	T14	T17	NoRel	true	emitió	redujo
+Relation	T14	T2	NoRel	true	emitió	formación
+Relation	T14	T3	NoRel	true	emitió	boletines
+Relation	T14	T6	NoRel	true	emitió	inicio
+Relation	T14	T8	NoRel	true	emitió	decidió
+Relation	T15	T11	NoRel	true	boletín	operaciones
+Relation	T15	T12	NoRel	true	boletín	accidente
+Relation	T15	T14	NoRel	true	boletín	emitió
+Relation	T15	T3	NoRel	true	boletín	boletines
+Relation	T15	T6	NoRel	true	boletín	inicio
+Relation	T15	T9	NoRel	true	boletín	operar
+Relation	T16	T1	NoRel	true	informando	proporciona
+Relation	T16	T10	NoRel	true	informando	preocupaciones
+Relation	T16	T13	NoRel	true	informando	indicando
+Relation	T16	T14	NoRel	true	informando	emitió
+Relation	T16	T4	NoRel	true	informando	impacta
+Relation	T16	T8	NoRel	true	informando	decidió
+Relation	T17	T12	NoRel	true	redujo	accidente
+Relation	T17	T14	NoRel	true	redujo	emitió
+Relation	T17	T18	NoRel	true	redujo	disminuyó
+Relation	T17	T3	NoRel	true	redujo	boletines
+Relation	T17	T8	NoRel	true	redujo	decidió
+Relation	T17	T9	NoRel	true	redujo	operar
+Relation	T18	T10	NoRel	true	disminuyó	preocupaciones
+Relation	T18	T11	NoRel	true	disminuyó	operaciones
+Relation	T18	T14	NoRel	true	disminuyó	emitió
+Relation	T18	T15	NoRel	true	disminuyó	boletín
+Relation	T18	T17	NoRel	true	disminuyó	redujo
+Relation	T18	T2	NoRel	true	disminuyó	formación
+Relation	T18	T3	NoRel	true	disminuyó	boletines
+Relation	T18	T5	NoRel	true	disminuyó	operaciones
+Relation	T2	T11	NoRel	true	formación	operaciones
+Relation	T2	T13	NoRel	true	formación	indicando
+Relation	T2	T14	NoRel	true	formación	emitió
+Relation	T2	T18	NoRel	true	formación	disminuyó
+Relation	T2	T5	NoRel	true	formación	operaciones
+Relation	T3	T1	NoRel	true	boletines	proporciona
+Relation	T3	T11	NoRel	true	boletines	operaciones
+Relation	T3	T18	NoRel	true	boletines	disminuyó
+Relation	T3	T2	NoRel	true	boletines	formación
+Relation	T3	T7	NoRel	true	boletines	operaciones
+Relation	T4	T1	NoRel	true	impacta	proporciona
+Relation	T4	T10	NoRel	true	impacta	preocupaciones
+Relation	T4	T11	NoRel	true	impacta	operaciones
+Relation	T4	T16	NoRel	true	impacta	informando
+Relation	T4	T8	NoRel	true	impacta	decidió
+Relation	T4	T9	NoRel	true	impacta	operar
+Relation	T5	T10	NoRel	true	operaciones	preocupaciones
+Relation	T5	T11	NoRel	true	operaciones	operaciones
+Relation	T5	T12	NoRel	true	operaciones	accidente
+Relation	T5	T18	NoRel	true	operaciones	disminuyó
+Relation	T5	T2	NoRel	true	operaciones	formación
+Relation	T5	T3	NoRel	true	operaciones	boletines
+Relation	T5	T8	NoRel	true	operaciones	decidió
+Relation	T5	T9	NoRel	true	operaciones	operar
+Relation	T6	T1	NoRel	true	inicio	proporciona
+Relation	T6	T11	NoRel	true	inicio	operaciones
+Relation	T6	T12	NoRel	true	inicio	accidente
+Relation	T6	T13	NoRel	true	inicio	indicando
+Relation	T6	T17	NoRel	true	inicio	redujo
+Relation	T6	T7	NoRel	true	inicio	operaciones
+Relation	T6	T8	NoRel	true	inicio	decidió
+Relation	T7	T10	NoRel	true	operaciones	preocupaciones
+Relation	T7	T18	NoRel	true	operaciones	disminuyó
+Relation	T8	T0	NoRel	true	decidió	caída
+Relation	T8	T1	NoRel	true	decidió	proporciona
+Relation	T8	T17	NoRel	true	decidió	redujo
+Relation	T8	T18	NoRel	true	decidió	disminuyó
+Relation	T8	T6	NoRel	true	decidió	inicio
+Relation	T9	T0	NoRel	true	operar	caída
+Relation	T9	T15	NoRel	true	operar	boletín
+Relation	T9	T18	NoRel	true	operar	disminuyó
+Relation	T9	T2	NoRel	true	operar	formación
+Relation	T9	T4	NoRel	true	operar	impacta
+Relation	T9	T5	NoRel	true	operar	operaciones
+Relation	T9	T7	NoRel	true	operar	operaciones
+Relation	T9	T8	NoRel	true	operar	decidió

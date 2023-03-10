@@ -1,0 +1,89 @@
+Text	Obi - Wan - Kenobi ise Luke'u gizli gözetimiyle Anakin'in Tatooine gezegenindeki üvey kardeşi Owen Lars'a teslim eder .	Vader ve Grand Moff Tarkin ( Peter Cushing ) Asiler tarafından çalınan Ölüm Yıldızı süper silahının gizli planlarını geri kazanmakla görevlendirildi .	Vader , planları droid R2 - D2 içine gizleyen ve Vader'in eski Jedi Ustası Obi- Wan Kenobi'yi Tatooine gezegeninde bulması için gönderen Prenses Leia'yı yakalar ve işkence eder .	Leia'nın Obi- Wan'ın müttefikleri Luke Skywalker ve Han Solo tarafından kurtarılması sırasında Vader , ışın kılıcı düellosunda Obi- Wan'ı öldürür .	Ölüm Yıldızı'ndaki Asi saldırısı sırasında Vader , TIE savaşçısına biner ve Asi X kanatlı savaşçıları vurmaya çalışır , ancak geri dönmeye karar veren Han Solo müdahale eder ve Vader'in gemisini rotadan uzaklaştırarak Luke'un Ölüm Yıldızını yok etmesine izin verir .
+Event	T0	eder	EVENT	113
+Event	T1	çalınan	EVENT	183
+Event	T2	görevlendirildi	EVENT	253
+Event	T4	yakalar	EVENT	424
+Event	T5	eder	EVENT	443
+Event	T6	kurtarılması	EVENT	522
+Event	T7	düellosunda	EVENT	565
+Event	T8	öldürür	EVENT	588
+Event	T9	saldırısı	EVENT	621
+Event	T10	biner	EVENT	665
+Event	T11	çalışır	EVENT	708
+Event	T13	eder	EVENT	767
+Event	T14	verir	EVENT	857
+Event	T15	gönderen	EVENT	399
+Event	T3	uzaklaştırarak	EVENT	801
+Relation	T7	T8	CauseEffect	true	düellosunda	öldürür
+Relation	T8	T7	EffectCause	true	öldürür	düellosunda
+Relation	T6	T7	CauseEffect	true	kurtarılması	düellosunda
+Relation	T7	T6	EffectCause	true	düellosunda	kurtarılması
+Relation	T11	T3	CauseEffect	true	çalışır	uzaklaştırarak
+Relation	T3	T11	EffectCause	true	uzaklaştırarak	çalışır
+Relation	T3	T14	CauseEffect	true	uzaklaştırarak	verir
+Relation	T14	T3	EffectCause	true	verir	uzaklaştırarak
+Relation	T10	T11	CauseEffect	true	biner	çalışır
+Relation	T11	T10	EffectCause	true	çalışır	biner
+Relation	T0	T1	NoRel	true	eder	çalınan
+Relation	T0	T10	NoRel	true	eder	biner
+Relation	T0	T13	NoRel	true	eder	eder
+Relation	T1	T13	NoRel	true	çalınan	eder
+Relation	T1	T14	NoRel	true	çalınan	verir
+Relation	T1	T15	NoRel	true	çalınan	gönderen
+Relation	T1	T3	NoRel	true	çalınan	uzaklaştırarak
+Relation	T1	T7	NoRel	true	çalınan	düellosunda
+Relation	T10	T1	NoRel	true	biner	çalınan
+Relation	T10	T4	NoRel	true	biner	yakalar
+Relation	T10	T7	NoRel	true	biner	düellosunda
+Relation	T10	T8	NoRel	true	biner	öldürür
+Relation	T11	T14	NoRel	true	çalışır	verir
+Relation	T11	T15	NoRel	true	çalışır	gönderen
+Relation	T11	T8	NoRel	true	çalışır	öldürür
+Relation	T11	T9	NoRel	true	çalışır	saldırısı
+Relation	T13	T0	NoRel	true	eder	eder
+Relation	T13	T14	NoRel	true	eder	verir
+Relation	T13	T4	NoRel	true	eder	yakalar
+Relation	T13	T5	NoRel	true	eder	eder
+Relation	T13	T6	NoRel	true	eder	kurtarılması
+Relation	T13	T7	NoRel	true	eder	düellosunda
+Relation	T14	T10	NoRel	true	verir	biner
+Relation	T14	T4	NoRel	true	verir	yakalar
+Relation	T14	T8	NoRel	true	verir	öldürür
+Relation	T14	T9	NoRel	true	verir	saldırısı
+Relation	T15	T3	NoRel	true	gönderen	uzaklaştırarak
+Relation	T15	T5	NoRel	true	gönderen	eder
+Relation	T15	T6	NoRel	true	gönderen	kurtarılması
+Relation	T2	T1	NoRel	true	görevlendirildi	çalınan
+Relation	T2	T10	NoRel	true	görevlendirildi	biner
+Relation	T2	T3	NoRel	true	görevlendirildi	uzaklaştırarak
+Relation	T2	T5	NoRel	true	görevlendirildi	eder
+Relation	T2	T6	NoRel	true	görevlendirildi	kurtarılması
+Relation	T3	T7	NoRel	true	uzaklaştırarak	düellosunda
+Relation	T3	T9	NoRel	true	uzaklaştırarak	saldırısı
+Relation	T4	T0	NoRel	true	yakalar	eder
+Relation	T4	T1	NoRel	true	yakalar	çalınan
+Relation	T4	T13	NoRel	true	yakalar	eder
+Relation	T4	T6	NoRel	true	yakalar	kurtarılması
+Relation	T4	T7	NoRel	true	yakalar	düellosunda
+Relation	T4	T8	NoRel	true	yakalar	öldürür
+Relation	T4	T9	NoRel	true	yakalar	saldırısı
+Relation	T5	T10	NoRel	true	eder	biner
+Relation	T5	T13	NoRel	true	eder	eder
+Relation	T5	T15	NoRel	true	eder	gönderen
+Relation	T5	T2	NoRel	true	eder	görevlendirildi
+Relation	T5	T3	NoRel	true	eder	uzaklaştırarak
+Relation	T5	T4	NoRel	true	eder	yakalar
+Relation	T5	T7	NoRel	true	eder	düellosunda
+Relation	T6	T14	NoRel	true	kurtarılması	verir
+Relation	T6	T9	NoRel	true	kurtarılması	saldırısı
+Relation	T7	T11	NoRel	true	düellosunda	çalışır
+Relation	T7	T14	NoRel	true	düellosunda	verir
+Relation	T7	T3	NoRel	true	düellosunda	uzaklaştırarak
+Relation	T8	T11	NoRel	true	öldürür	çalışır
+Relation	T8	T15	NoRel	true	öldürür	gönderen
+Relation	T8	T4	NoRel	true	öldürür	yakalar
+Relation	T8	T5	NoRel	true	öldürür	eder
+Relation	T9	T0	NoRel	true	saldırısı	eder
+Relation	T9	T10	NoRel	true	saldırısı	biner
+Relation	T9	T5	NoRel	true	saldırısı	eder
+Relation	T9	T6	NoRel	true	saldırısı	kurtarılması

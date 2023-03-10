@@ -1,0 +1,56 @@
+Text	1744'te tekrar harekete geçen Nadir Şah , bu sefer 150.000 askeriyle Kars’ı kuşattı .	Kars savunmacısı serasker Hacı Ahmed Paşa’nın celadetli savunması karşısında çekilip gitmekten başka çare bulamadı .	Bir kısım muharebelerden sonra Osmanlılardan bir şey koparamayacağını anlayan Nadir Şah , sulh istedi .	4 Eylül 1746’da İstanbul’da yapılan antlaşmada sekiz yıl önceki gibi Kasr-ı Şirin Antlaşması esasları kabul edildi .	Caferi mezhebinin beşinci hak mezhep olarak kabul edilmesi yine reddedildi .
+Event	T0	kuşattı	EVENT	76
+Event	T1	savunması	EVENT	142
+Event	T2	çekilip	EVENT	163
+Event	T3	istedi	EVENT	298
+Event	T6	reddedildi	EVENT	488
+Event	T7	harekete	EVENT	15
+Event	T8	muharebelerden	EVENT	213
+Event	T9	anlayan	EVENT	273
+Event	T10	antlaşmada	EVENT	343
+Event	T11	Kasr-ı Şirin Antlaşması	EVENT	376
+Event	T4	kabul edildi	EVENT	409
+Relation	T1	T2	CauseEffect	true	savunması	çekilip
+Relation	T2	T1	EffectCause	true	çekilip	savunması
+Relation	T8	T9	CauseEffect	true	muharebelerden	anlayan
+Relation	T9	T8	EffectCause	true	anlayan	muharebelerden
+Relation	T9	T3	CauseEffect	true	anlayan	istedi
+Relation	T3	T9	EffectCause	true	istedi	anlayan
+Relation	T0	T1	NoRel	true	kuşattı	savunması
+Relation	T0	T10	NoRel	true	kuşattı	antlaşmada
+Relation	T0	T3	NoRel	true	kuşattı	istedi
+Relation	T0	T9	NoRel	true	kuşattı	anlayan
+Relation	T1	T11	NoRel	true	savunması	Kasr-ı Şirin Antlaşması
+Relation	T1	T6	NoRel	true	savunması	reddedildi
+Relation	T1	T9	NoRel	true	savunması	anlayan
+Relation	T10	T11	NoRel	true	antlaşmada	Kasr-ı Şirin Antlaşması
+Relation	T10	T4	NoRel	true	antlaşmada	kabul edildi
+Relation	T10	T7	NoRel	true	antlaşmada	harekete
+Relation	T11	T0	NoRel	true	Kasr-ı Şirin Antlaşması	kuşattı
+Relation	T11	T1	NoRel	true	Kasr-ı Şirin Antlaşması	savunması
+Relation	T11	T10	NoRel	true	Kasr-ı Şirin Antlaşması	antlaşmada
+Relation	T11	T3	NoRel	true	Kasr-ı Şirin Antlaşması	istedi
+Relation	T11	T4	NoRel	true	Kasr-ı Şirin Antlaşması	kabul edildi
+Relation	T11	T8	NoRel	true	Kasr-ı Şirin Antlaşması	muharebelerden
+Relation	T11	T9	NoRel	true	Kasr-ı Şirin Antlaşması	anlayan
+Relation	T2	T6	NoRel	true	çekilip	reddedildi
+Relation	T2	T7	NoRel	true	çekilip	harekete
+Relation	T3	T7	NoRel	true	istedi	harekete
+Relation	T4	T0	NoRel	true	kabul edildi	kuşattı
+Relation	T4	T1	NoRel	true	kabul edildi	savunması
+Relation	T4	T11	NoRel	true	kabul edildi	Kasr-ı Şirin Antlaşması
+Relation	T4	T2	NoRel	true	kabul edildi	çekilip
+Relation	T4	T9	NoRel	true	kabul edildi	anlayan
+Relation	T6	T11	NoRel	true	reddedildi	Kasr-ı Şirin Antlaşması
+Relation	T6	T8	NoRel	true	reddedildi	muharebelerden
+Relation	T7	T0	NoRel	true	harekete	kuşattı
+Relation	T7	T1	NoRel	true	harekete	savunması
+Relation	T7	T11	NoRel	true	harekete	Kasr-ı Şirin Antlaşması
+Relation	T7	T2	NoRel	true	harekete	çekilip
+Relation	T7	T6	NoRel	true	harekete	reddedildi
+Relation	T8	T10	NoRel	true	muharebelerden	antlaşmada
+Relation	T8	T11	NoRel	true	muharebelerden	Kasr-ı Şirin Antlaşması
+Relation	T8	T2	NoRel	true	muharebelerden	çekilip
+Relation	T8	T7	NoRel	true	muharebelerden	harekete
+Relation	T9	T1	NoRel	true	anlayan	savunması
+Relation	T9	T7	NoRel	true	anlayan	harekete

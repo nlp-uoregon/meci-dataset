@@ -1,0 +1,69 @@
+Text	En Ambo , la ciudad natal de Hachalu , tres policías y 78 civiles murieron en el " caos " que rodeó su funeral , incluido uno de los tíos de Hachalu .	Al menos nueve de los civiles fueron asesinados por las fuerzas de seguridad .	En Shashamane , la violencia fue particularmente generalizada , con " hasta 150 " personas asesinadas allí solo , según el subcomisionado regional de policía , Girma Gelan .	Los informes de testigos presenciales afirmaron que " todos menos 4 o 5 edificios " en el centro de la ciudad habían sido incendiados , y que la comunidad rastafari había sido atacada debido a su asociación con el emperador Haile Selassie .	Testigos que hablaron con Voice of America describieron cómo fueron atacados los centros comerciales , restaurantes , residencias y hoteles propiedad de " forasteros " , incluido uno propiedad del célebre corredor Haile Gebrselassie .
+Event	T0	murieron	EVENT	66
+Event	T1	caos	EVENT	83
+Event	T10	asociación	EVENT	600
+Event	T11	hablaron	EVENT	658
+Event	T12	atacados	EVENT	713
+Event	T2	rodeó	EVENT	94
+Event	T3	funeral	EVENT	103
+Event	T4	asesinados	EVENT	188
+Event	T5	violencia	EVENT	249
+Event	T6	asesinadas	EVENT	321
+Event	T7	informes	EVENT	408
+Event	T8	afirmaron	EVENT	442
+Event	T9	incendiados	EVENT	526
+Relation	T1	T0	CauseEffect	true	caos	murieron
+Relation	T0	T1	EffectCause	true	murieron	caos
+Relation	T1	T4	CauseEffect	true	caos	asesinados
+Relation	T4	T1	EffectCause	true	asesinados	caos
+Relation	T5	T6	CauseEffect	true	violencia	asesinadas
+Relation	T6	T5	EffectCause	true	asesinadas	violencia
+Relation	T1	T9	CauseEffect	true	caos	incendiados
+Relation	T9	T1	EffectCause	true	incendiados	caos
+Relation	T1	T7	CauseEffect	true	caos	informes
+Relation	T7	T1	EffectCause	true	informes	caos
+Relation	T1	T12	CauseEffect	true	caos	atacados
+Relation	T12	T1	EffectCause	true	atacados	caos
+Relation	T0	T12	NoRel	true	murieron	atacados
+Relation	T1	T5	NoRel	true	caos	violencia
+Relation	T1	T6	NoRel	true	caos	asesinadas
+Relation	T10	T12	NoRel	true	asociación	atacados
+Relation	T10	T2	NoRel	true	asociación	rodeó
+Relation	T10	T6	NoRel	true	asociación	asesinadas
+Relation	T10	T9	NoRel	true	asociación	incendiados
+Relation	T11	T1	NoRel	true	hablaron	caos
+Relation	T11	T12	NoRel	true	hablaron	atacados
+Relation	T11	T2	NoRel	true	hablaron	rodeó
+Relation	T11	T3	NoRel	true	hablaron	funeral
+Relation	T11	T5	NoRel	true	hablaron	violencia
+Relation	T11	T7	NoRel	true	hablaron	informes
+Relation	T12	T2	NoRel	true	atacados	rodeó
+Relation	T12	T3	NoRel	true	atacados	funeral
+Relation	T12	T4	NoRel	true	atacados	asesinados
+Relation	T12	T7	NoRel	true	atacados	informes
+Relation	T2	T1	NoRel	true	rodeó	caos
+Relation	T2	T8	NoRel	true	rodeó	afirmaron
+Relation	T3	T11	NoRel	true	funeral	hablaron
+Relation	T4	T0	NoRel	true	asesinados	murieron
+Relation	T4	T10	NoRel	true	asesinados	asociación
+Relation	T4	T12	NoRel	true	asesinados	atacados
+Relation	T4	T7	NoRel	true	asesinados	informes
+Relation	T5	T1	NoRel	true	violencia	caos
+Relation	T5	T12	NoRel	true	violencia	atacados
+Relation	T5	T2	NoRel	true	violencia	rodeó
+Relation	T5	T4	NoRel	true	violencia	asesinados
+Relation	T5	T8	NoRel	true	violencia	afirmaron
+Relation	T5	T9	NoRel	true	violencia	incendiados
+Relation	T6	T10	NoRel	true	asesinadas	asociación
+Relation	T6	T11	NoRel	true	asesinadas	hablaron
+Relation	T6	T12	NoRel	true	asesinadas	atacados
+Relation	T7	T0	NoRel	true	informes	murieron
+Relation	T7	T2	NoRel	true	informes	rodeó
+Relation	T7	T5	NoRel	true	informes	violencia
+Relation	T7	T6	NoRel	true	informes	asesinadas
+Relation	T7	T9	NoRel	true	informes	incendiados
+Relation	T8	T11	NoRel	true	afirmaron	hablaron
+Relation	T8	T4	NoRel	true	afirmaron	asesinados
+Relation	T9	T0	NoRel	true	incendiados	murieron
+Relation	T9	T7	NoRel	true	incendiados	informes
+Relation	T9	T8	NoRel	true	incendiados	afirmaron

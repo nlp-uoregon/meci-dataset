@@ -1,0 +1,44 @@
+Text	PM Modi surveys flood -hit areas in Kerala , announces Rs 500 crore interim relief -	Rahul urges Modi to declare Kerala floods a national disaster -	-	Modi begins aerial survey of Kerala floods -	Kerala floods : The ghost of past environment policy returns -
+Event	T0	announces	EVENT	45
+Event	T1	relief	EVENT	76
+Event	T2	urges	EVENT	91
+Event	T3	declare	EVENT	105
+Event	T4	floods	EVENT	120
+Event	T5	disaster	EVENT	138
+Event	T6	survey	EVENT	170
+Event	T7	floods	EVENT	187
+Event	T8	floods	EVENT	203
+Event	T9	returns	EVENT	249
+Relation	T4	T0	CauseEffect	true	floods	announces
+Relation	T0	T4	EffectCause	true	announces	floods
+Relation	T7	T6	CauseEffect	true	floods	survey
+Relation	T6	T7	EffectCause	true	survey	floods
+Relation	T5	T2	CauseEffect	true	disaster	urges
+Relation	T2	T5	EffectCause	true	urges	disaster
+Relation	T0	T2	NoRel	true	announces	urges
+Relation	T1	T2	NoRel	true	relief	urges
+Relation	T1	T4	NoRel	true	relief	floods
+Relation	T1	T6	NoRel	true	relief	survey
+Relation	T2	T3	NoRel	true	urges	declare
+Relation	T2	T7	NoRel	true	urges	floods
+Relation	T2	T9	NoRel	true	urges	returns
+Relation	T3	T0	NoRel	true	declare	announces
+Relation	T3	T7	NoRel	true	declare	floods
+Relation	T3	T9	NoRel	true	declare	returns
+Relation	T4	T3	NoRel	true	floods	declare
+Relation	T4	T5	NoRel	true	floods	disaster
+Relation	T5	T4	NoRel	true	disaster	floods
+Relation	T5	T9	NoRel	true	disaster	returns
+Relation	T6	T0	NoRel	true	survey	announces
+Relation	T6	T1	NoRel	true	survey	relief
+Relation	T6	T2	NoRel	true	survey	urges
+Relation	T6	T3	NoRel	true	survey	declare
+Relation	T6	T8	NoRel	true	survey	floods
+Relation	T7	T4	NoRel	true	floods	floods
+Relation	T8	T0	NoRel	true	floods	announces
+Relation	T8	T3	NoRel	true	floods	declare
+Relation	T8	T4	NoRel	true	floods	floods
+Relation	T8	T9	NoRel	true	floods	returns
+Relation	T9	T6	NoRel	true	returns	survey
+Relation	T9	T7	NoRel	true	returns	floods
+Relation	T9	T8	NoRel	true	returns	floods

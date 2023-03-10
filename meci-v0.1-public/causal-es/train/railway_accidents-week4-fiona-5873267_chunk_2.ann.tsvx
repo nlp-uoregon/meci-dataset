@@ -1,0 +1,59 @@
+Text	Dos de ellos se produjeron en la estación Once .	El primer siniestro se produjo el 22 de febrero de 2012 , provocando la muerte de 51 personas y lesiones a 702 personas .	El segundo se produjo el 13 de junio de 2013 , provocando la muerte de 3 personas y lesiones a 315 personas .	El tercero se produjo el 19 de octubre de 2013 , provocando lesiones a 105 personas .	
+Event	T0	produjeron	EVENT	16
+Event	T1	siniestro	EVENT	59
+Event	T2	produjo	EVENT	72
+Event	T3	provocando	EVENT	107
+Event	T4	muerte	EVENT	121
+Event	T5	lesiones	EVENT	145
+Event	T6	produjo	EVENT	185
+Event	T7	provocando	EVENT	218
+Event	T8	muerte	EVENT	232
+Event	T9	lesiones	EVENT	255
+Event	T10	tercero	EVENT	284
+Event	T11	produjo	EVENT	295
+Event	T12	lesiones	EVENT	341
+Relation	T1	T4	CauseEffect	true	siniestro	muerte
+Relation	T4	T1	EffectCause	true	muerte	siniestro
+Relation	T1	T5	CauseEffect	true	siniestro	lesiones
+Relation	T5	T1	EffectCause	true	lesiones	siniestro
+Relation	T0	T10	NoRel	true	produjeron	tercero
+Relation	T0	T12	NoRel	true	produjeron	lesiones
+Relation	T0	T3	NoRel	true	produjeron	provocando
+Relation	T0	T8	NoRel	true	produjeron	muerte
+Relation	T1	T12	NoRel	true	siniestro	lesiones
+Relation	T1	T3	NoRel	true	siniestro	provocando
+Relation	T10	T11	NoRel	true	tercero	produjo
+Relation	T10	T8	NoRel	true	tercero	muerte
+Relation	T11	T10	NoRel	true	produjo	tercero
+Relation	T11	T2	NoRel	true	produjo	produjo
+Relation	T11	T4	NoRel	true	produjo	muerte
+Relation	T11	T7	NoRel	true	produjo	provocando
+Relation	T12	T11	NoRel	true	lesiones	produjo
+Relation	T12	T2	NoRel	true	lesiones	produjo
+Relation	T12	T5	NoRel	true	lesiones	lesiones
+Relation	T12	T9	NoRel	true	lesiones	lesiones
+Relation	T2	T6	NoRel	true	produjo	produjo
+Relation	T2	T9	NoRel	true	produjo	lesiones
+Relation	T3	T1	NoRel	true	provocando	siniestro
+Relation	T3	T12	NoRel	true	provocando	lesiones
+Relation	T3	T2	NoRel	true	provocando	produjo
+Relation	T3	T6	NoRel	true	provocando	produjo
+Relation	T4	T8	NoRel	true	muerte	muerte
+Relation	T4	T9	NoRel	true	muerte	lesiones
+Relation	T5	T0	NoRel	true	lesiones	produjeron
+Relation	T5	T11	NoRel	true	lesiones	produjo
+Relation	T5	T8	NoRel	true	lesiones	muerte
+Relation	T6	T11	NoRel	true	produjo	produjo
+Relation	T6	T9	NoRel	true	produjo	lesiones
+Relation	T7	T1	NoRel	true	provocando	siniestro
+Relation	T7	T12	NoRel	true	provocando	lesiones
+Relation	T7	T3	NoRel	true	provocando	provocando
+Relation	T7	T8	NoRel	true	provocando	muerte
+Relation	T8	T1	NoRel	true	muerte	siniestro
+Relation	T8	T10	NoRel	true	muerte	tercero
+Relation	T9	T0	NoRel	true	lesiones	produjeron
+Relation	T9	T1	NoRel	true	lesiones	siniestro
+Relation	T9	T2	NoRel	true	lesiones	produjo
+Relation	T9	T3	NoRel	true	lesiones	provocando
+Relation	T9	T7	NoRel	true	lesiones	provocando
+Relation	T9	T8	NoRel	true	lesiones	muerte

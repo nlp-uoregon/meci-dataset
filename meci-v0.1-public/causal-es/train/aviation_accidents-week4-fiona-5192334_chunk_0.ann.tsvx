@@ -1,0 +1,62 @@
+Text	El ACCIDENTE DEL BELL 212 DE LA FUERZA AÉREA COLOMBIANA DE 2012 fue un accidente aéreo que tuvo lugar a las 16:30 horas del 30 de abril de 2012 .	El helicóptero siniestrado , un Bell 212 Rapaz perteneciente a la Fuerza Aérea Colombiana , había despegado del Aeropuerto Internacional Ernesto Cortissoz , en la ciudad de Barranquilla .	Su destino era el Aeropuerto Juan H. White , situado en la localidad de Caucasia , realizando un vuelo de transporte y traslado de personal para dar apoyo a la Fuerza de Tarea del Nudo Paramillo .	El siniestro se produjo en el durante el transcurso del vuelo , cuando súbitamente la aeronave se precipitó contra el suelo a las afueras de la localidad de Sabanagrande , en el Departamento de Atlántico , Colombia .	En el accidente fallecieron los 7 integrantes de la Fuerza Aérea Colombiana y los 6 miembros de la Policía Nacional Colombiana .
+Event	T0	ACCIDENTE	EVENT	3
+Event	T1	accidente	EVENT	71
+Event	T2	siniestrado	EVENT	161
+Event	T3	despegado	EVENT	244
+Event	T4	realizando	EVENT	417
+Event	T5	vuelo	EVENT	431
+Event	T6	traslado	EVENT	453
+Event	T7	produjo	EVENT	547
+Event	T9	vuelo	EVENT	587
+Event	T10	precipitó	EVENT	629
+Event	T11	fallecieron	EVENT	764
+Event	T12	siniestro	EVENT	534
+Relation	T10	T12	CauseEffect	true	precipitó	siniestro
+Relation	T12	T10	EffectCause	true	siniestro	precipitó
+Relation	T12	T11	CauseEffect	true	siniestro	fallecieron
+Relation	T11	T12	EffectCause	true	fallecieron	siniestro
+Relation	T0	T10	NoRel	true	ACCIDENTE	precipitó
+Relation	T0	T11	NoRel	true	ACCIDENTE	fallecieron
+Relation	T0	T2	NoRel	true	ACCIDENTE	siniestrado
+Relation	T0	T5	NoRel	true	ACCIDENTE	vuelo
+Relation	T0	T6	NoRel	true	ACCIDENTE	traslado
+Relation	T0	T7	NoRel	true	ACCIDENTE	produjo
+Relation	T1	T10	NoRel	true	accidente	precipitó
+Relation	T1	T4	NoRel	true	accidente	realizando
+Relation	T1	T7	NoRel	true	accidente	produjo
+Relation	T10	T3	NoRel	true	precipitó	despegado
+Relation	T10	T5	NoRel	true	precipitó	vuelo
+Relation	T10	T7	NoRel	true	precipitó	produjo
+Relation	T10	T9	NoRel	true	precipitó	vuelo
+Relation	T11	T10	NoRel	true	fallecieron	precipitó
+Relation	T11	T5	NoRel	true	fallecieron	vuelo
+Relation	T11	T6	NoRel	true	fallecieron	traslado
+Relation	T12	T1	NoRel	true	siniestro	accidente
+Relation	T12	T2	NoRel	true	siniestro	siniestrado
+Relation	T12	T3	NoRel	true	siniestro	despegado
+Relation	T12	T5	NoRel	true	siniestro	vuelo
+Relation	T2	T1	NoRel	true	siniestrado	accidente
+Relation	T2	T11	NoRel	true	siniestrado	fallecieron
+Relation	T2	T12	NoRel	true	siniestrado	siniestro
+Relation	T2	T4	NoRel	true	siniestrado	realizando
+Relation	T2	T5	NoRel	true	siniestrado	vuelo
+Relation	T2	T9	NoRel	true	siniestrado	vuelo
+Relation	T3	T10	NoRel	true	despegado	precipitó
+Relation	T3	T11	NoRel	true	despegado	fallecieron
+Relation	T3	T12	NoRel	true	despegado	siniestro
+Relation	T3	T9	NoRel	true	despegado	vuelo
+Relation	T4	T5	NoRel	true	realizando	vuelo
+Relation	T4	T7	NoRel	true	realizando	produjo
+Relation	T5	T4	NoRel	true	vuelo	realizando
+Relation	T6	T0	NoRel	true	traslado	ACCIDENTE
+Relation	T6	T1	NoRel	true	traslado	accidente
+Relation	T6	T3	NoRel	true	traslado	despegado
+Relation	T6	T4	NoRel	true	traslado	realizando
+Relation	T7	T0	NoRel	true	produjo	ACCIDENTE
+Relation	T7	T10	NoRel	true	produjo	precipitó
+Relation	T7	T11	NoRel	true	produjo	fallecieron
+Relation	T7	T6	NoRel	true	produjo	traslado
+Relation	T9	T10	NoRel	true	vuelo	precipitó
+Relation	T9	T11	NoRel	true	vuelo	fallecieron
+Relation	T9	T6	NoRel	true	vuelo	traslado
+Relation	T9	T7	NoRel	true	vuelo	produjo

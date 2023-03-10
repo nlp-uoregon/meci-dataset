@@ -1,0 +1,42 @@
+Text	Kalkış , tırmanış ve uçuş sırasında uçak sistemleri stabil bir şekilde çalışıyordu .	16 Ocak 2017 günü saat 00.41'de , uçak _ KAMUD _ referans noktası üzerinden uçuş seviyesinde Bişkek ATC Bölge Kontrol Merkezinin kontrol sahasına girdi ( Çin'de belirlenmiş ayrılma sistemine göre ) .	Saat 00.51'de mürettebat iniş için irtifaya alçalma izni istedi .	Saat 00.59'da , mürettebat Manas Havalimanı için hava durumu bilgilerini aldı : " Pist görüş mesafesi ; pist eşiğinde 400 m , pist orta noktasında ve pist sonunda 300 m , dikey görüş mesafesi 130_ft " .	Saat 01.01'de mürettebat açıkça belirtilen şu verileri aldı : pistin ortasında pist görüş mesafesi 300 m , dikey görüş mesafesi 150_ft .
+Event	T0	Kalkış	EVENT	0
+Event	T1	uçuş	EVENT	21
+Event	T2	çalışıyordu	EVENT	71
+Event	T3	uçuş	EVENT	161
+Event	T4	girdi	EVENT	231
+Event	T6	iniş	EVENT	310
+Event	T7	istedi	EVENT	342
+Event	T8	aldı	EVENT	424
+Event	T9	aldı	EVENT	609
+Event	T10	tırmanış	EVENT	9
+Relation	T6	T7	CauseEffect	true	iniş	istedi
+Relation	T7	T6	EffectCause	true	istedi	iniş
+Relation	T6	T8	CauseEffect	true	iniş	aldı
+Relation	T8	T6	EffectCause	true	aldı	iniş
+Relation	T6	T9	CauseEffect	true	iniş	aldı
+Relation	T9	T6	EffectCause	true	aldı	iniş
+Relation	T0	T7	NoRel	true	Kalkış	istedi
+Relation	T1	T0	NoRel	true	uçuş	Kalkış
+Relation	T1	T3	NoRel	true	uçuş	uçuş
+Relation	T1	T4	NoRel	true	uçuş	girdi
+Relation	T1	T6	NoRel	true	uçuş	iniş
+Relation	T1	T7	NoRel	true	uçuş	istedi
+Relation	T10	T2	NoRel	true	tırmanış	çalışıyordu
+Relation	T10	T3	NoRel	true	tırmanış	uçuş
+Relation	T2	T10	NoRel	true	çalışıyordu	tırmanış
+Relation	T2	T3	NoRel	true	çalışıyordu	uçuş
+Relation	T2	T7	NoRel	true	çalışıyordu	istedi
+Relation	T2	T9	NoRel	true	çalışıyordu	aldı
+Relation	T3	T7	NoRel	true	uçuş	istedi
+Relation	T4	T0	NoRel	true	girdi	Kalkış
+Relation	T6	T0	NoRel	true	iniş	Kalkış
+Relation	T6	T10	NoRel	true	iniş	tırmanış
+Relation	T7	T1	NoRel	true	istedi	uçuş
+Relation	T7	T3	NoRel	true	istedi	uçuş
+Relation	T8	T3	NoRel	true	aldı	uçuş
+Relation	T8	T4	NoRel	true	aldı	girdi
+Relation	T8	T9	NoRel	true	aldı	aldı
+Relation	T9	T1	NoRel	true	aldı	uçuş
+Relation	T9	T2	NoRel	true	aldı	çalışıyordu
+Relation	T9	T7	NoRel	true	aldı	istedi
+Relation	T9	T8	NoRel	true	aldı	aldı

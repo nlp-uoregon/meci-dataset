@@ -1,0 +1,67 @@
+Text	thumb|	Det forulykkede tog transporteres væk	TOGULYKKEN I JELLING skete den 1. august 1995 hvor to regionaltog stødte frontalt sammen i sydenden af Jelling Station .	Ingen personer omkom ved ulykken – men af de i alt 69 personer i togene , blev 19 indlagt og 35 behandlet på skadestuer ; 15 kom ikke på sygehus .	De to regionaltog var så sammenfiltrede , at de måtte skæres op på stedet for at blive fragtet bort .
+Event	T0	TOGULYKKEN	EVENT	45
+Event	T1	skete	EVENT	66
+Event	T2	omkom	EVENT	181
+Event	T3	ulykken	EVENT	191
+Event	T4	indlagt	EVENT	248
+Event	T5	behandlet	EVENT	262
+Event	T6	kom	EVENT	291
+Event	T7	sammenfiltrede	EVENT	338
+Event	T8	transporteres	EVENT	27
+Event	T9	forulykkede	EVENT	11
+Event	T10	stødte	EVENT	111
+Event	T11	skæres op	EVENT	367
+Event	T12	fragtet bort	EVENT	400
+Relation	T10	T0	CauseEffect	true	stødte	TOGULYKKEN
+Relation	T0	T10	EffectCause	true	TOGULYKKEN	stødte
+Relation	T0	T4	CauseEffect	true	TOGULYKKEN	indlagt
+Relation	T4	T0	EffectCause	true	indlagt	TOGULYKKEN
+Relation	T0	T5	CauseEffect	true	TOGULYKKEN	behandlet
+Relation	T5	T0	EffectCause	true	behandlet	TOGULYKKEN
+Relation	T7	T11	CauseEffect	true	sammenfiltrede	skæres op
+Relation	T11	T7	EffectCause	true	skæres op	sammenfiltrede
+Relation	T0	T3	NoRel	true	TOGULYKKEN	ulykken
+Relation	T0	T6	NoRel	true	TOGULYKKEN	kom
+Relation	T1	T0	NoRel	true	skete	TOGULYKKEN
+Relation	T1	T12	NoRel	true	skete	fragtet bort
+Relation	T1	T7	NoRel	true	skete	sammenfiltrede
+Relation	T10	T11	NoRel	true	stødte	skæres op
+Relation	T10	T12	NoRel	true	stødte	fragtet bort
+Relation	T10	T5	NoRel	true	stødte	behandlet
+Relation	T11	T0	NoRel	true	skæres op	TOGULYKKEN
+Relation	T11	T1	NoRel	true	skæres op	skete
+Relation	T12	T0	NoRel	true	fragtet bort	TOGULYKKEN
+Relation	T12	T5	NoRel	true	fragtet bort	behandlet
+Relation	T12	T8	NoRel	true	fragtet bort	transporteres
+Relation	T2	T1	NoRel	true	omkom	skete
+Relation	T2	T11	NoRel	true	omkom	skæres op
+Relation	T2	T3	NoRel	true	omkom	ulykken
+Relation	T2	T9	NoRel	true	omkom	forulykkede
+Relation	T3	T12	NoRel	true	ulykken	fragtet bort
+Relation	T3	T5	NoRel	true	ulykken	behandlet
+Relation	T3	T7	NoRel	true	ulykken	sammenfiltrede
+Relation	T4	T10	NoRel	true	indlagt	stødte
+Relation	T4	T2	NoRel	true	indlagt	omkom
+Relation	T4	T5	NoRel	true	indlagt	behandlet
+Relation	T4	T7	NoRel	true	indlagt	sammenfiltrede
+Relation	T5	T1	NoRel	true	behandlet	skete
+Relation	T5	T10	NoRel	true	behandlet	stødte
+Relation	T5	T12	NoRel	true	behandlet	fragtet bort
+Relation	T5	T7	NoRel	true	behandlet	sammenfiltrede
+Relation	T6	T10	NoRel	true	kom	stødte
+Relation	T6	T12	NoRel	true	kom	fragtet bort
+Relation	T6	T5	NoRel	true	kom	behandlet
+Relation	T6	T8	NoRel	true	kom	transporteres
+Relation	T6	T9	NoRel	true	kom	forulykkede
+Relation	T7	T10	NoRel	true	sammenfiltrede	stødte
+Relation	T7	T12	NoRel	true	sammenfiltrede	fragtet bort
+Relation	T7	T2	NoRel	true	sammenfiltrede	omkom
+Relation	T7	T6	NoRel	true	sammenfiltrede	kom
+Relation	T8	T0	NoRel	true	transporteres	TOGULYKKEN
+Relation	T8	T12	NoRel	true	transporteres	fragtet bort
+Relation	T8	T4	NoRel	true	transporteres	indlagt
+Relation	T8	T7	NoRel	true	transporteres	sammenfiltrede
+Relation	T9	T10	NoRel	true	forulykkede	stødte
+Relation	T9	T12	NoRel	true	forulykkede	fragtet bort
+Relation	T9	T3	NoRel	true	forulykkede	ulykken
+Relation	T9	T5	NoRel	true	forulykkede	behandlet

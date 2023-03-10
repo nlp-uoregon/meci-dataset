@@ -1,0 +1,165 @@
+Text	Kırgızistan Hükûmeti ve ACT Airlines uçağın yakıt ikmali ve mürettebat değişikliği için Bişkek'e inişe geçtiğini açıklasa da Kırgızistan muhalefeti uçağın kargo enkazında Rusça ve Kırgızca etiket basılı ürünler bulunduğu , ACT Airlines'ın uçakta Hong Kong'dan İstanbul'a direkt gidecek yakıt olduğunu açıklamasından dolayı kargoların Bişkek'te indirileceğini ve havalimanında kaçakçılık veya yolsuzluk yapılıyor olabileceğini söyledi .	Kazanın ardından Devletler Arası Havacılık Komitesi ; yaptığı araştırma sonucunda uçağın herhangi bir arızasının olmadığını veya hava trafik kontrolörlerinin bir hata yapmadığını , uçağın pilotaj hatası nedeniyle yanlış süzülüş hattını yakalaması sonucunda kaza yaptığını açıkladı .	13 Ocak 2003'te üretilen ve TC - MCL kuyruk numaralı Boeing 747 - 412F ( üretici seri numarası 32897 ) , Türk Hava Yolları adına ACT Airlines ( günümüzde MyCARGO Airlines ) tarafından işletiliyordu .	4 adet Pratt & Whitney PW4056 turbofan motoruyla donatılmıştı .	Kaza anında 46.820 uçuş saati ve 8.308 inişi vardı .
+Event	T0	ikmali	EVENT	50
+Event	T1	değişikliği	EVENT	71
+Event	T2	açıklasa	EVENT	113
+Event	T3	açıklamasından	EVENT	301
+Event	T5	söyledi	EVENT	426
+Event	T6	Kazanın	EVENT	436
+Event	T7	araştırma	EVENT	498
+Event	T8	hatası	EVENT	632
+Event	T9	açıkladı	EVENT	708
+Event	T10	işletiliyordu	EVENT	903
+Event	T11	Kaza	EVENT	983
+Event	T12	kaçakçılık	EVENT	376
+Event	T13	yolsuzluk	EVENT	392
+Event	T4	inişe	EVENT	97
+Event	T14	enkazında	EVENT	161
+Event	T15	indirileceğini	EVENT	344
+Event	T16	yakalaması	EVENT	672
+Event	T17	kaza	EVENT	693
+Event	T18	üretilen	EVENT	735
+Event	T19	donatılmıştı	EVENT	968
+Relation	T0	T4	CauseEffect	true	ikmali	inişe
+Relation	T4	T0	EffectCause	true	inişe	ikmali
+Relation	T1	T4	CauseEffect	true	değişikliği	inişe
+Relation	T4	T1	EffectCause	true	inişe	değişikliği
+Relation	T14	T2	CauseEffect	true	enkazında	açıklasa
+Relation	T2	T14	EffectCause	true	açıklasa	enkazında
+Relation	T14	T3	CauseEffect	true	enkazında	açıklamasından
+Relation	T3	T14	EffectCause	true	açıklamasından	enkazında
+Relation	T3	T5	CauseEffect	true	açıklamasından	söyledi
+Relation	T5	T3	EffectCause	true	söyledi	açıklamasından
+Relation	T7	T9	CauseEffect	true	araştırma	açıkladı
+Relation	T9	T7	EffectCause	true	açıkladı	araştırma
+Relation	T16	T17	CauseEffect	true	yakalaması	kaza
+Relation	T17	T16	EffectCause	true	kaza	yakalaması
+Relation	T8	T16	CauseEffect	true	hatası	yakalaması
+Relation	T16	T8	EffectCause	true	yakalaması	hatası
+Relation	T8	T17	CauseEffect	true	hatası	kaza
+Relation	T17	T8	EffectCause	true	kaza	hatası
+Relation	T17	T14	CauseEffect	true	kaza	enkazında
+Relation	T14	T17	EffectCause	true	enkazında	kaza
+Relation	T0	T1	NoRel	true	ikmali	değişikliği
+Relation	T0	T17	NoRel	true	ikmali	kaza
+Relation	T0	T18	NoRel	true	ikmali	üretilen
+Relation	T0	T2	NoRel	true	ikmali	açıklasa
+Relation	T0	T3	NoRel	true	ikmali	açıklamasından
+Relation	T0	T5	NoRel	true	ikmali	söyledi
+Relation	T0	T7	NoRel	true	ikmali	araştırma
+Relation	T0	T9	NoRel	true	ikmali	açıkladı
+Relation	T1	T11	NoRel	true	değişikliği	Kaza
+Relation	T1	T12	NoRel	true	değişikliği	kaçakçılık
+Relation	T1	T14	NoRel	true	değişikliği	enkazında
+Relation	T10	T11	NoRel	true	işletiliyordu	Kaza
+Relation	T10	T12	NoRel	true	işletiliyordu	kaçakçılık
+Relation	T10	T14	NoRel	true	işletiliyordu	enkazında
+Relation	T10	T18	NoRel	true	işletiliyordu	üretilen
+Relation	T10	T2	NoRel	true	işletiliyordu	açıklasa
+Relation	T10	T4	NoRel	true	işletiliyordu	inişe
+Relation	T10	T8	NoRel	true	işletiliyordu	hatası
+Relation	T11	T13	NoRel	true	Kaza	yolsuzluk
+Relation	T11	T15	NoRel	true	Kaza	indirileceğini
+Relation	T11	T16	NoRel	true	Kaza	yakalaması
+Relation	T11	T18	NoRel	true	Kaza	üretilen
+Relation	T11	T3	NoRel	true	Kaza	açıklamasından
+Relation	T11	T5	NoRel	true	Kaza	söyledi
+Relation	T11	T8	NoRel	true	Kaza	hatası
+Relation	T11	T9	NoRel	true	Kaza	açıkladı
+Relation	T12	T13	NoRel	true	kaçakçılık	yolsuzluk
+Relation	T12	T14	NoRel	true	kaçakçılık	enkazında
+Relation	T12	T16	NoRel	true	kaçakçılık	yakalaması
+Relation	T13	T14	NoRel	true	yolsuzluk	enkazında
+Relation	T13	T15	NoRel	true	yolsuzluk	indirileceğini
+Relation	T13	T17	NoRel	true	yolsuzluk	kaza
+Relation	T13	T18	NoRel	true	yolsuzluk	üretilen
+Relation	T13	T7	NoRel	true	yolsuzluk	araştırma
+Relation	T13	T8	NoRel	true	yolsuzluk	hatası
+Relation	T14	T0	NoRel	true	enkazında	ikmali
+Relation	T14	T10	NoRel	true	enkazında	işletiliyordu
+Relation	T14	T18	NoRel	true	enkazında	üretilen
+Relation	T14	T19	NoRel	true	enkazında	donatılmıştı
+Relation	T14	T6	NoRel	true	enkazında	Kazanın
+Relation	T14	T9	NoRel	true	enkazında	açıkladı
+Relation	T15	T11	NoRel	true	indirileceğini	Kaza
+Relation	T15	T13	NoRel	true	indirileceğini	yolsuzluk
+Relation	T15	T14	NoRel	true	indirileceğini	enkazında
+Relation	T15	T19	NoRel	true	indirileceğini	donatılmıştı
+Relation	T15	T2	NoRel	true	indirileceğini	açıklasa
+Relation	T15	T5	NoRel	true	indirileceğini	söyledi
+Relation	T15	T7	NoRel	true	indirileceğini	araştırma
+Relation	T15	T9	NoRel	true	indirileceğini	açıkladı
+Relation	T16	T18	NoRel	true	yakalaması	üretilen
+Relation	T16	T2	NoRel	true	yakalaması	açıklasa
+Relation	T16	T5	NoRel	true	yakalaması	söyledi
+Relation	T17	T0	NoRel	true	kaza	ikmali
+Relation	T17	T11	NoRel	true	kaza	Kaza
+Relation	T17	T19	NoRel	true	kaza	donatılmıştı
+Relation	T17	T2	NoRel	true	kaza	açıklasa
+Relation	T17	T4	NoRel	true	kaza	inişe
+Relation	T17	T5	NoRel	true	kaza	söyledi
+Relation	T17	T6	NoRel	true	kaza	Kazanın
+Relation	T17	T7	NoRel	true	kaza	araştırma
+Relation	T18	T10	NoRel	true	üretilen	işletiliyordu
+Relation	T18	T14	NoRel	true	üretilen	enkazında
+Relation	T18	T15	NoRel	true	üretilen	indirileceğini
+Relation	T18	T16	NoRel	true	üretilen	yakalaması
+Relation	T18	T17	NoRel	true	üretilen	kaza
+Relation	T18	T19	NoRel	true	üretilen	donatılmıştı
+Relation	T18	T2	NoRel	true	üretilen	açıklasa
+Relation	T18	T4	NoRel	true	üretilen	inişe
+Relation	T18	T5	NoRel	true	üretilen	söyledi
+Relation	T18	T7	NoRel	true	üretilen	araştırma
+Relation	T18	T9	NoRel	true	üretilen	açıkladı
+Relation	T19	T16	NoRel	true	donatılmıştı	yakalaması
+Relation	T19	T2	NoRel	true	donatılmıştı	açıklasa
+Relation	T19	T6	NoRel	true	donatılmıştı	Kazanın
+Relation	T19	T8	NoRel	true	donatılmıştı	hatası
+Relation	T2	T10	NoRel	true	açıklasa	işletiliyordu
+Relation	T2	T12	NoRel	true	açıklasa	kaçakçılık
+Relation	T2	T13	NoRel	true	açıklasa	yolsuzluk
+Relation	T2	T15	NoRel	true	açıklasa	indirileceğini
+Relation	T2	T3	NoRel	true	açıklasa	açıklamasından
+Relation	T2	T4	NoRel	true	açıklasa	inişe
+Relation	T2	T5	NoRel	true	açıklasa	söyledi
+Relation	T3	T0	NoRel	true	açıklamasından	ikmali
+Relation	T3	T1	NoRel	true	açıklamasından	değişikliği
+Relation	T3	T10	NoRel	true	açıklamasından	işletiliyordu
+Relation	T3	T12	NoRel	true	açıklamasından	kaçakçılık
+Relation	T3	T13	NoRel	true	açıklamasından	yolsuzluk
+Relation	T3	T18	NoRel	true	açıklamasından	üretilen
+Relation	T3	T8	NoRel	true	açıklamasından	hatası
+Relation	T4	T10	NoRel	true	inişe	işletiliyordu
+Relation	T4	T12	NoRel	true	inişe	kaçakçılık
+Relation	T4	T13	NoRel	true	inişe	yolsuzluk
+Relation	T4	T17	NoRel	true	inişe	kaza
+Relation	T4	T18	NoRel	true	inişe	üretilen
+Relation	T4	T19	NoRel	true	inişe	donatılmıştı
+Relation	T4	T5	NoRel	true	inişe	söyledi
+Relation	T4	T7	NoRel	true	inişe	araştırma
+Relation	T5	T18	NoRel	true	söyledi	üretilen
+Relation	T5	T2	NoRel	true	söyledi	açıklasa
+Relation	T5	T9	NoRel	true	söyledi	açıkladı
+Relation	T6	T0	NoRel	true	Kazanın	ikmali
+Relation	T6	T10	NoRel	true	Kazanın	işletiliyordu
+Relation	T6	T11	NoRel	true	Kazanın	Kaza
+Relation	T6	T13	NoRel	true	Kazanın	yolsuzluk
+Relation	T6	T14	NoRel	true	Kazanın	enkazında
+Relation	T6	T16	NoRel	true	Kazanın	yakalaması
+Relation	T6	T8	NoRel	true	Kazanın	hatası
+Relation	T6	T9	NoRel	true	Kazanın	açıkladı
+Relation	T7	T13	NoRel	true	araştırma	yolsuzluk
+Relation	T7	T15	NoRel	true	araştırma	indirileceğini
+Relation	T7	T18	NoRel	true	araştırma	üretilen
+Relation	T7	T19	NoRel	true	araştırma	donatılmıştı
+Relation	T7	T2	NoRel	true	araştırma	açıklasa
+Relation	T7	T3	NoRel	true	araştırma	açıklamasından
+Relation	T7	T4	NoRel	true	araştırma	inişe
+Relation	T8	T10	NoRel	true	hatası	işletiliyordu
+Relation	T8	T19	NoRel	true	hatası	donatılmıştı
+Relation	T8	T2	NoRel	true	hatası	açıklasa
+Relation	T8	T4	NoRel	true	hatası	inişe
+Relation	T8	T7	NoRel	true	hatası	araştırma
+Relation	T9	T11	NoRel	true	açıkladı	Kaza
+Relation	T9	T14	NoRel	true	açıkladı	enkazında
+Relation	T9	T2	NoRel	true	açıkladı	açıklasa
+Relation	T9	T6	NoRel	true	açıkladı	Kazanın

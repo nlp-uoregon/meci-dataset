@@ -1,0 +1,72 @@
+Text	El VUELO 883 DE AERO CARIBBEAN fue un vuelo internacional entre el de Aeropuerto Internacional Toussaint Louverture de Puerto Príncipe , Haití y el Aeropuerto Internacional José Martí de La Habana , Cuba , con escala en el Aeropuerto Internacional de Santiago de Cuba operado por la compañía cubana Aero Caribbean .	El aparato , un ATR 72-212 , se estrelló el 4 de noviembre de 2010 en torno a Guasimal , en la provincia de Sancti Spíritus , falleciendo sus 68 ocupantes — 61 pasajeros y 7 tripulantes — .	Es el accidente más mortal de un ATR 72 junto con el vuelo 4184 de American Eagle estrellado en octubre de 1994 , ya que tienen el mismo número de víctimas .	Además , curiosamente el desastre de ambos vuelos fueron causados por la misma razón : el engelamiento .	El avión involucrado era un ATR 72-212 con matrícula CU-T1549 , que operaba con Aero Caribean desde .
+Event	T0	escala	EVENT	210
+Event	T1	operado	EVENT	268
+Event	T2	estrelló	EVENT	348
+Event	T3	falleciendo	EVENT	442
+Event	T4	accidente	EVENT	512
+Event	T5	mortal	EVENT	526
+Event	T6	estrellado	EVENT	588
+Event	T7	desastre	EVENT	689
+Event	T8	causados	EVENT	721
+Event	T9	engelamiento	EVENT	754
+Event	T10	involucrado	EVENT	778
+Event	T11	operaba	EVENT	837
+Event	T12	VUELO	EVENT	3
+Relation	T2	T3	CauseEffect	true	estrelló	falleciendo
+Relation	T3	T2	EffectCause	true	falleciendo	estrelló
+Relation	T9	T7	CauseEffect	true	engelamiento	desastre
+Relation	T7	T9	EffectCause	true	desastre	engelamiento
+Relation	T0	T12	NoRel	true	escala	VUELO
+Relation	T0	T3	NoRel	true	escala	falleciendo
+Relation	T0	T7	NoRel	true	escala	desastre
+Relation	T0	T9	NoRel	true	escala	engelamiento
+Relation	T1	T0	NoRel	true	operado	escala
+Relation	T1	T11	NoRel	true	operado	operaba
+Relation	T1	T4	NoRel	true	operado	accidente
+Relation	T1	T5	NoRel	true	operado	mortal
+Relation	T10	T11	NoRel	true	involucrado	operaba
+Relation	T10	T2	NoRel	true	involucrado	estrelló
+Relation	T10	T5	NoRel	true	involucrado	mortal
+Relation	T11	T12	NoRel	true	operaba	VUELO
+Relation	T11	T5	NoRel	true	operaba	mortal
+Relation	T11	T8	NoRel	true	operaba	causados
+Relation	T12	T5	NoRel	true	VUELO	mortal
+Relation	T12	T7	NoRel	true	VUELO	desastre
+Relation	T12	T8	NoRel	true	VUELO	causados
+Relation	T2	T0	NoRel	true	estrelló	escala
+Relation	T2	T1	NoRel	true	estrelló	operado
+Relation	T2	T10	NoRel	true	estrelló	involucrado
+Relation	T2	T11	NoRel	true	estrelló	operaba
+Relation	T2	T12	NoRel	true	estrelló	VUELO
+Relation	T2	T5	NoRel	true	estrelló	mortal
+Relation	T2	T7	NoRel	true	estrelló	desastre
+Relation	T3	T0	NoRel	true	falleciendo	escala
+Relation	T3	T1	NoRel	true	falleciendo	operado
+Relation	T3	T10	NoRel	true	falleciendo	involucrado
+Relation	T3	T6	NoRel	true	falleciendo	estrellado
+Relation	T3	T7	NoRel	true	falleciendo	desastre
+Relation	T3	T8	NoRel	true	falleciendo	causados
+Relation	T4	T10	NoRel	true	accidente	involucrado
+Relation	T4	T12	NoRel	true	accidente	VUELO
+Relation	T4	T9	NoRel	true	accidente	engelamiento
+Relation	T5	T12	NoRel	true	mortal	VUELO
+Relation	T5	T4	NoRel	true	mortal	accidente
+Relation	T5	T6	NoRel	true	mortal	estrellado
+Relation	T6	T1	NoRel	true	estrellado	operado
+Relation	T6	T4	NoRel	true	estrellado	accidente
+Relation	T6	T5	NoRel	true	estrellado	mortal
+Relation	T6	T7	NoRel	true	estrellado	desastre
+Relation	T6	T8	NoRel	true	estrellado	causados
+Relation	T6	T9	NoRel	true	estrellado	engelamiento
+Relation	T7	T0	NoRel	true	desastre	escala
+Relation	T7	T10	NoRel	true	desastre	involucrado
+Relation	T7	T3	NoRel	true	desastre	falleciendo
+Relation	T7	T5	NoRel	true	desastre	mortal
+Relation	T7	T6	NoRel	true	desastre	estrellado
+Relation	T7	T8	NoRel	true	desastre	causados
+Relation	T8	T1	NoRel	true	causados	operado
+Relation	T8	T4	NoRel	true	causados	accidente
+Relation	T8	T5	NoRel	true	causados	mortal
+Relation	T8	T9	NoRel	true	causados	engelamiento
+Relation	T9	T11	NoRel	true	engelamiento	operaba
+Relation	T9	T3	NoRel	true	engelamiento	falleciendo

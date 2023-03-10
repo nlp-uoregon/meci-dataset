@@ -1,0 +1,128 @@
+Text	El piloto fue ordenado que hiciera un aterrizaje forzoso en MCAS Miramar pero perdió el segundo motor en su intento a aterrizar .	Los relatos de testigos reportaron que el jet volaba lentamente de oeste-este a baja altura y vertía combustible .	El jet voló sobre University City High School y se estrelló en el área residencial justo al pasar por la escuela pero a dos millas de la pista de Miramar .	El representante Duncan Hunter , el republicano clasificado del Comité de Servicios Armados de la Casa , reportó que los " motores fallaron , causando que el jet perdiera empuje "	El piloto fue eyectado y fue encontrado suspendido de un árbol en un cañón cerca del sitio del accidente .
+Event	T0	ordenado	EVENT	14
+Event	T1	hiciera	EVENT	27
+Event	T2	perdió	EVENT	78
+Event	T3	intento	EVENT	108
+Event	T4	aterrizar	EVENT	118
+Event	T5	relatos	EVENT	134
+Event	T6	reportaron	EVENT	154
+Event	T7	volaba	EVENT	176
+Event	T8	voló	EVENT	252
+Event	T9	estrelló	EVENT	296
+Event	T10	pasar	EVENT	337
+Event	T11	clasificado	EVENT	449
+Event	T12	reportó	EVENT	506
+Event	T13	fallaron	EVENT	532
+Event	T14	causando	EVENT	543
+Event	T15	empuje	EVENT	572
+Event	T16	eyectado	EVENT	595
+Event	T18	accidente	EVENT	676
+Event	T19	encontrado	EVENT	610
+Relation	T13	T9	CauseEffect	true	fallaron	estrelló
+Relation	T9	T13	EffectCause	true	estrelló	fallaron
+Relation	T18	T16	CauseEffect	true	accidente	eyectado
+Relation	T16	T18	EffectCause	true	eyectado	accidente
+Relation	T0	T10	NoRel	true	ordenado	pasar
+Relation	T0	T15	NoRel	true	ordenado	empuje
+Relation	T0	T18	NoRel	true	ordenado	accidente
+Relation	T0	T19	NoRel	true	ordenado	encontrado
+Relation	T0	T2	NoRel	true	ordenado	perdió
+Relation	T0	T5	NoRel	true	ordenado	relatos
+Relation	T0	T9	NoRel	true	ordenado	estrelló
+Relation	T1	T10	NoRel	true	hiciera	pasar
+Relation	T1	T11	NoRel	true	hiciera	clasificado
+Relation	T1	T14	NoRel	true	hiciera	causando
+Relation	T1	T15	NoRel	true	hiciera	empuje
+Relation	T1	T16	NoRel	true	hiciera	eyectado
+Relation	T1	T19	NoRel	true	hiciera	encontrado
+Relation	T1	T2	NoRel	true	hiciera	perdió
+Relation	T1	T7	NoRel	true	hiciera	volaba
+Relation	T10	T0	NoRel	true	pasar	ordenado
+Relation	T10	T13	NoRel	true	pasar	fallaron
+Relation	T10	T19	NoRel	true	pasar	encontrado
+Relation	T10	T5	NoRel	true	pasar	relatos
+Relation	T10	T8	NoRel	true	pasar	voló
+Relation	T10	T9	NoRel	true	pasar	estrelló
+Relation	T11	T5	NoRel	true	clasificado	relatos
+Relation	T12	T14	NoRel	true	reportó	causando
+Relation	T12	T16	NoRel	true	reportó	eyectado
+Relation	T12	T18	NoRel	true	reportó	accidente
+Relation	T12	T7	NoRel	true	reportó	volaba
+Relation	T13	T11	NoRel	true	fallaron	clasificado
+Relation	T13	T12	NoRel	true	fallaron	reportó
+Relation	T13	T15	NoRel	true	fallaron	empuje
+Relation	T13	T16	NoRel	true	fallaron	eyectado
+Relation	T13	T2	NoRel	true	fallaron	perdió
+Relation	T14	T10	NoRel	true	causando	pasar
+Relation	T14	T12	NoRel	true	causando	reportó
+Relation	T14	T13	NoRel	true	causando	fallaron
+Relation	T14	T18	NoRel	true	causando	accidente
+Relation	T14	T4	NoRel	true	causando	aterrizar
+Relation	T14	T5	NoRel	true	causando	relatos
+Relation	T14	T7	NoRel	true	causando	volaba
+Relation	T14	T8	NoRel	true	causando	voló
+Relation	T15	T4	NoRel	true	empuje	aterrizar
+Relation	T15	T7	NoRel	true	empuje	volaba
+Relation	T15	T8	NoRel	true	empuje	voló
+Relation	T16	T1	NoRel	true	eyectado	hiciera
+Relation	T16	T2	NoRel	true	eyectado	perdió
+Relation	T16	T7	NoRel	true	eyectado	volaba
+Relation	T18	T0	NoRel	true	accidente	ordenado
+Relation	T18	T10	NoRel	true	accidente	pasar
+Relation	T18	T11	NoRel	true	accidente	clasificado
+Relation	T18	T12	NoRel	true	accidente	reportó
+Relation	T18	T14	NoRel	true	accidente	causando
+Relation	T18	T2	NoRel	true	accidente	perdió
+Relation	T18	T4	NoRel	true	accidente	aterrizar
+Relation	T19	T1	NoRel	true	encontrado	hiciera
+Relation	T19	T14	NoRel	true	encontrado	causando
+Relation	T19	T15	NoRel	true	encontrado	empuje
+Relation	T19	T2	NoRel	true	encontrado	perdió
+Relation	T19	T5	NoRel	true	encontrado	relatos
+Relation	T19	T8	NoRel	true	encontrado	voló
+Relation	T2	T11	NoRel	true	perdió	clasificado
+Relation	T2	T14	NoRel	true	perdió	causando
+Relation	T2	T15	NoRel	true	perdió	empuje
+Relation	T2	T19	NoRel	true	perdió	encontrado
+Relation	T2	T3	NoRel	true	perdió	intento
+Relation	T2	T4	NoRel	true	perdió	aterrizar
+Relation	T2	T6	NoRel	true	perdió	reportaron
+Relation	T3	T0	NoRel	true	intento	ordenado
+Relation	T3	T16	NoRel	true	intento	eyectado
+Relation	T3	T6	NoRel	true	intento	reportaron
+Relation	T4	T12	NoRel	true	aterrizar	reportó
+Relation	T4	T15	NoRel	true	aterrizar	empuje
+Relation	T4	T16	NoRel	true	aterrizar	eyectado
+Relation	T4	T19	NoRel	true	aterrizar	encontrado
+Relation	T5	T12	NoRel	true	relatos	reportó
+Relation	T5	T15	NoRel	true	relatos	empuje
+Relation	T5	T6	NoRel	true	relatos	reportaron
+Relation	T5	T7	NoRel	true	relatos	volaba
+Relation	T5	T9	NoRel	true	relatos	estrelló
+Relation	T6	T0	NoRel	true	reportaron	ordenado
+Relation	T6	T1	NoRel	true	reportaron	hiciera
+Relation	T6	T13	NoRel	true	reportaron	fallaron
+Relation	T6	T5	NoRel	true	reportaron	relatos
+Relation	T6	T7	NoRel	true	reportaron	volaba
+Relation	T7	T1	NoRel	true	volaba	hiciera
+Relation	T7	T10	NoRel	true	volaba	pasar
+Relation	T7	T11	NoRel	true	volaba	clasificado
+Relation	T7	T12	NoRel	true	volaba	reportó
+Relation	T7	T16	NoRel	true	volaba	eyectado
+Relation	T7	T18	NoRel	true	volaba	accidente
+Relation	T7	T2	NoRel	true	volaba	perdió
+Relation	T7	T5	NoRel	true	volaba	relatos
+Relation	T8	T10	NoRel	true	voló	pasar
+Relation	T8	T16	NoRel	true	voló	eyectado
+Relation	T8	T5	NoRel	true	voló	relatos
+Relation	T8	T7	NoRel	true	voló	volaba
+Relation	T8	T9	NoRel	true	voló	estrelló
+Relation	T9	T0	NoRel	true	estrelló	ordenado
+Relation	T9	T1	NoRel	true	estrelló	hiciera
+Relation	T9	T10	NoRel	true	estrelló	pasar
+Relation	T9	T12	NoRel	true	estrelló	reportó
+Relation	T9	T15	NoRel	true	estrelló	empuje
+Relation	T9	T16	NoRel	true	estrelló	eyectado
+Relation	T9	T18	NoRel	true	estrelló	accidente
+Relation	T9	T5	NoRel	true	estrelló	relatos
+Relation	T9	T6	NoRel	true	estrelló	reportaron

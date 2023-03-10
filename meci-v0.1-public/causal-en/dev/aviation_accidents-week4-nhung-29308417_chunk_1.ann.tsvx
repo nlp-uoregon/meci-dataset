@@ -1,0 +1,137 @@
+Text	A subsequent investigation found a simulated engine failure procedure was being conducted , which involved a member of the crew pulling back the throttle lever for engine No. 4 prior to taking off .	Investigators found that if the throttle lever was pulled back too far , it would cause the propeller to reverse — a feature designed to slow the aircraft upon landing .	Once the landing gear was raised , the crew would have to raise a metal flag in the cockpit to bring the propeller blades back into the correct position , since a safety device prevented electric power from operating the rotating mechanism at the roots of the blades unless the aircraft was on the ground or the flag was manually raised .	The Civil Aeronautics Board ( CAB ) concluded one of the flight crew applied full power to No. 4 engine , thinking this would bring the aircraft out of the increasing bank .	Because the blades were reversed and the flag was not raised , that increased the reverse thrust from No. 4 engine , causing the DC - 6 to spiral out of control .
+Event	T0	found	EVENT	27
+Event	T1	simulated	EVENT	35
+Event	T2	procedure	EVENT	60
+Event	T3	conducted	EVENT	80
+Event	T4	involved	EVENT	98
+Event	T5	found	EVENT	213
+Event	T6	reverse	EVENT	304
+Event	T7	designed	EVENT	324
+Event	T8	landing	EVENT	359
+Event	T9	raised	EVENT	395
+Event	T10	raise	EVENT	427
+Event	T11	bring	EVENT	464
+Event	T12	operating	EVENT	576
+Event	T13	rotating	EVENT	590
+Event	T14	raised	EVENT	699
+Event	T15	concluded	EVENT	744
+Event	T16	applied	EVENT	777
+Event	T17	thinking	EVENT	814
+Event	T18	bring	EVENT	834
+Event	T19	increasing	EVENT	864
+Event	T20	reversed	EVENT	906
+Event	T21	raised	EVENT	936
+Event	T22	increased	EVENT	950
+Event	T23	thrust	EVENT	972
+Event	T24	causing	EVENT	999
+Event	T25	pulling back	EVENT	128
+Event	T26	taking off	EVENT	186
+Event	T27	pulled back	EVENT	250
+Event	T28	slow	EVENT	336
+Event	T29	prevented	EVENT	546
+Event	T30	cause	EVENT	281
+Relation	T27	T6	CauseEffect	true	pulled back	reverse
+Relation	T6	T27	EffectCause	true	reverse	pulled back
+Relation	T16	T18	CauseEffect	true	applied	bring
+Relation	T18	T16	EffectCause	true	bring	applied
+Relation	T20	T22	CauseEffect	true	reversed	increased
+Relation	T22	T20	EffectCause	true	increased	reversed
+Relation	T21	T22	CauseEffect	true	raised	increased
+Relation	T22	T21	EffectCause	true	increased	raised
+Relation	T22	T24	CauseEffect	true	increased	causing
+Relation	T24	T22	EffectCause	true	causing	increased
+Relation	T7	T28	CauseEffect	true	designed	slow
+Relation	T28	T7	EffectCause	true	slow	designed
+Relation	T0	T17	NoRel	true	found	thinking
+Relation	T0	T22	NoRel	true	found	increased
+Relation	T0	T25	NoRel	true	found	pulling back
+Relation	T0	T28	NoRel	true	found	slow
+Relation	T0	T4	NoRel	true	found	involved
+Relation	T1	T10	NoRel	true	simulated	raise
+Relation	T1	T13	NoRel	true	simulated	rotating
+Relation	T1	T24	NoRel	true	simulated	causing
+Relation	T1	T29	NoRel	true	simulated	prevented
+Relation	T1	T9	NoRel	true	simulated	raised
+Relation	T10	T2	NoRel	true	raise	procedure
+Relation	T10	T23	NoRel	true	raise	thrust
+Relation	T10	T30	NoRel	true	raise	cause
+Relation	T11	T12	NoRel	true	bring	operating
+Relation	T12	T7	NoRel	true	operating	designed
+Relation	T12	T8	NoRel	true	operating	landing
+Relation	T13	T24	NoRel	true	rotating	causing
+Relation	T14	T11	NoRel	true	raised	bring
+Relation	T14	T12	NoRel	true	raised	operating
+Relation	T15	T24	NoRel	true	concluded	causing
+Relation	T15	T25	NoRel	true	concluded	pulling back
+Relation	T15	T26	NoRel	true	concluded	taking off
+Relation	T15	T29	NoRel	true	concluded	prevented
+Relation	T15	T3	NoRel	true	concluded	conducted
+Relation	T16	T2	NoRel	true	applied	procedure
+Relation	T16	T28	NoRel	true	applied	slow
+Relation	T17	T13	NoRel	true	thinking	rotating
+Relation	T17	T23	NoRel	true	thinking	thrust
+Relation	T18	T7	NoRel	true	bring	designed
+Relation	T19	T14	NoRel	true	increasing	raised
+Relation	T19	T15	NoRel	true	increasing	concluded
+Relation	T19	T6	NoRel	true	increasing	reverse
+Relation	T2	T12	NoRel	true	procedure	operating
+Relation	T2	T19	NoRel	true	procedure	increasing
+Relation	T2	T29	NoRel	true	procedure	prevented
+Relation	T2	T6	NoRel	true	procedure	reverse
+Relation	T20	T15	NoRel	true	reversed	concluded
+Relation	T20	T25	NoRel	true	reversed	pulling back
+Relation	T20	T30	NoRel	true	reversed	cause
+Relation	T21	T12	NoRel	true	raised	operating
+Relation	T21	T30	NoRel	true	raised	cause
+Relation	T21	T4	NoRel	true	raised	involved
+Relation	T22	T28	NoRel	true	increased	slow
+Relation	T22	T5	NoRel	true	increased	found
+Relation	T23	T2	NoRel	true	thrust	procedure
+Relation	T24	T16	NoRel	true	causing	applied
+Relation	T24	T2	NoRel	true	causing	procedure
+Relation	T25	T11	NoRel	true	pulling back	bring
+Relation	T25	T20	NoRel	true	pulling back	reversed
+Relation	T25	T30	NoRel	true	pulling back	cause
+Relation	T26	T20	NoRel	true	taking off	reversed
+Relation	T26	T27	NoRel	true	taking off	pulled back
+Relation	T27	T18	NoRel	true	pulled back	bring
+Relation	T27	T19	NoRel	true	pulled back	increasing
+Relation	T27	T29	NoRel	true	pulled back	prevented
+Relation	T27	T8	NoRel	true	pulled back	landing
+Relation	T28	T0	NoRel	true	slow	found
+Relation	T28	T14	NoRel	true	slow	raised
+Relation	T28	T17	NoRel	true	slow	thinking
+Relation	T28	T29	NoRel	true	slow	prevented
+Relation	T28	T5	NoRel	true	slow	found
+Relation	T28	T8	NoRel	true	slow	landing
+Relation	T29	T9	NoRel	true	prevented	raised
+Relation	T3	T17	NoRel	true	conducted	thinking
+Relation	T3	T18	NoRel	true	conducted	bring
+Relation	T3	T20	NoRel	true	conducted	reversed
+Relation	T30	T16	NoRel	true	cause	applied
+Relation	T30	T24	NoRel	true	cause	causing
+Relation	T30	T4	NoRel	true	cause	involved
+Relation	T30	T9	NoRel	true	cause	raised
+Relation	T4	T2	NoRel	true	involved	procedure
+Relation	T4	T24	NoRel	true	involved	causing
+Relation	T4	T3	NoRel	true	involved	conducted
+Relation	T4	T30	NoRel	true	involved	cause
+Relation	T5	T0	NoRel	true	found	found
+Relation	T5	T19	NoRel	true	found	increasing
+Relation	T5	T2	NoRel	true	found	procedure
+Relation	T6	T14	NoRel	true	reverse	raised
+Relation	T6	T19	NoRel	true	reverse	increasing
+Relation	T6	T2	NoRel	true	reverse	procedure
+Relation	T6	T24	NoRel	true	reverse	causing
+Relation	T6	T3	NoRel	true	reverse	conducted
+Relation	T6	T8	NoRel	true	reverse	landing
+Relation	T7	T15	NoRel	true	designed	concluded
+Relation	T7	T2	NoRel	true	designed	procedure
+Relation	T7	T27	NoRel	true	designed	pulled back
+Relation	T8	T20	NoRel	true	landing	reversed
+Relation	T8	T24	NoRel	true	landing	causing
+Relation	T9	T1	NoRel	true	raised	simulated
+Relation	T9	T15	NoRel	true	raised	concluded
+Relation	T9	T18	NoRel	true	raised	bring
+Relation	T9	T21	NoRel	true	raised	raised
+Relation	T9	T3	NoRel	true	raised	conducted

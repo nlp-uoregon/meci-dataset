@@ -1,0 +1,58 @@
+Text	As soon as the Congress was over , the party launched a wave of weapon snatches , attacks on police , prison escapes and annihilation campaigns .	By 1973 - 74 10 policemen in West Bengal were killed by the party and there were 39 incidents of gun snatching .	But when the state machinery came down on the revolutionaries heavily , the party had to face a serious setback .	Most of the leaders were either incarcerated or killed .	The reorganisation process , therefore , began after August 1977 when the detainees were released .
+Event	T0	launched	EVENT	45
+Event	T1	wave	EVENT	56
+Event	T2	snatches	EVENT	71
+Event	T3	attacks	EVENT	82
+Event	T4	escapes	EVENT	109
+Event	T5	campaigns	EVENT	134
+Event	T6	killed	EVENT	192
+Event	T7	incidents	EVENT	230
+Event	T8	snatching	EVENT	247
+Event	T9	face	EVENT	348
+Event	T10	setback	EVENT	363
+Event	T11	incarcerated	EVENT	405
+Event	T12	killed	EVENT	421
+Event	T13	began	EVENT	471
+Event	T14	released	EVENT	519
+Event	T15	over	EVENT	28
+Event	T16	came down	EVENT	288
+Event	T17	revolutionaries	EVENT	305
+Event	T18	reorganisation	EVENT	434
+Relation	T15	T0	CauseEffect	true	over	launched
+Relation	T0	T15	EffectCause	true	launched	over
+Relation	T17	T10	CauseEffect	true	revolutionaries	setback
+Relation	T10	T17	EffectCause	true	setback	revolutionaries
+Relation	T17	T11	CauseEffect	true	revolutionaries	incarcerated
+Relation	T11	T17	EffectCause	true	incarcerated	revolutionaries
+Relation	T17	T12	CauseEffect	true	revolutionaries	killed
+Relation	T12	T17	EffectCause	true	killed	revolutionaries
+Relation	T14	T18	CauseEffect	true	released	reorganisation
+Relation	T18	T14	EffectCause	true	reorganisation	released
+Relation	T1	T12	NoRel	true	wave	killed
+Relation	T1	T15	NoRel	true	wave	over
+Relation	T1	T2	NoRel	true	wave	snatches
+Relation	T1	T8	NoRel	true	wave	snatching
+Relation	T10	T16	NoRel	true	setback	came down
+Relation	T11	T14	NoRel	true	incarcerated	released
+Relation	T12	T14	NoRel	true	killed	released
+Relation	T14	T3	NoRel	true	released	attacks
+Relation	T14	T7	NoRel	true	released	incidents
+Relation	T15	T4	NoRel	true	over	escapes
+Relation	T16	T10	NoRel	true	came down	setback
+Relation	T17	T14	NoRel	true	revolutionaries	released
+Relation	T18	T8	NoRel	true	reorganisation	snatching
+Relation	T2	T13	NoRel	true	snatches	began
+Relation	T2	T5	NoRel	true	snatches	campaigns
+Relation	T2	T9	NoRel	true	snatches	face
+Relation	T3	T14	NoRel	true	attacks	released
+Relation	T4	T1	NoRel	true	escapes	wave
+Relation	T4	T12	NoRel	true	escapes	killed
+Relation	T5	T10	NoRel	true	campaigns	setback
+Relation	T6	T4	NoRel	true	killed	escapes
+Relation	T6	T7	NoRel	true	killed	incidents
+Relation	T7	T0	NoRel	true	incidents	launched
+Relation	T7	T17	NoRel	true	incidents	revolutionaries
+Relation	T7	T5	NoRel	true	incidents	campaigns
+Relation	T9	T16	NoRel	true	face	came down
+Relation	T9	T3	NoRel	true	face	attacks
+Relation	T9	T7	NoRel	true	face	incidents

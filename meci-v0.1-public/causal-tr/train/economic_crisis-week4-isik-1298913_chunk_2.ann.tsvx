@@ -1,0 +1,31 @@
+Text	Adolf Hitler , Joseph Goebbels , Hermann Göring , Heinrich Himmler , Martin Bormann ve Joachim von Ribbentrop'un katılımı ile Mecklenburg'da Schwerin'de doğduğu yerde bir devlet cenazesi düzenlenerek toprağa verildi .	Cenazesinde Hitlerjugend'in binlerce üyesi yan yana dizildi .	Naaşı Davos kasabasından Schwerin'e özel bir trenle nakledildi .	Tabutu , Stuttgart , Würzburg , Erfurt , Halle , Magdeburg ve Wittenberg'de durdu .	Dul eşi , annesi ve erkek kardeşi cenaze töreninde hazır bulundu ve Hitler kendilerine başsağlığı diledi .
+Event	T0	verildi	EVENT	208
+Event	T1	Cenazesinde	EVENT	218
+Event	T2	dizildi	EVENT	270
+Event	T3	nakledildi	EVENT	332
+Event	T4	bulundu	EVENT	486
+Event	T5	diledi	EVENT	527
+Event	T6	katılımı	EVENT	113
+Event	T7	düzenlenerek	EVENT	187
+Event	T8	durdu	EVENT	421
+Relation	T7	T6	CauseEffect	true	düzenlenerek	katılımı
+Relation	T6	T7	EffectCause	true	katılımı	düzenlenerek
+Relation	T3	T8	CauseEffect	true	nakledildi	durdu
+Relation	T8	T3	EffectCause	true	durdu	nakledildi
+Relation	T1	T2	NoRel	true	Cenazesinde	dizildi
+Relation	T1	T5	NoRel	true	Cenazesinde	diledi
+Relation	T2	T0	NoRel	true	dizildi	verildi
+Relation	T2	T1	NoRel	true	dizildi	Cenazesinde
+Relation	T3	T2	NoRel	true	nakledildi	dizildi
+Relation	T3	T4	NoRel	true	nakledildi	bulundu
+Relation	T4	T6	NoRel	true	bulundu	katılımı
+Relation	T4	T8	NoRel	true	bulundu	durdu
+Relation	T5	T3	NoRel	true	diledi	nakledildi
+Relation	T5	T6	NoRel	true	diledi	katılımı
+Relation	T5	T7	NoRel	true	diledi	düzenlenerek
+Relation	T6	T1	NoRel	true	katılımı	Cenazesinde
+Relation	T6	T3	NoRel	true	katılımı	nakledildi
+Relation	T6	T5	NoRel	true	katılımı	diledi
+Relation	T7	T1	NoRel	true	düzenlenerek	Cenazesinde
+Relation	T7	T8	NoRel	true	düzenlenerek	durdu
+Relation	T8	T7	NoRel	true	durdu	düzenlenerek

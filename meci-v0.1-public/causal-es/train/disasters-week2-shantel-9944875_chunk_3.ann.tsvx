@@ -1,0 +1,207 @@
+Text	Un accidente similar había ocurrido en el vuelo 80 de FedEx Express el año anterior , donde ambos miembros de la tripulación murieron en un aterrizaje con rebote .	Se sabía que las tripulaciones de vuelo encontraban difíciles de detectar los aterrizajes rebotados del MD-11 .	El informe final hizo varias recomendaciones para mejorar el entrenamiento , los procedimientos y los instrumentos de vuelo para ayudar a las tripulaciones a lidiar con aterrizajes con rebote .	- Vuelo 80 de FedEx Express : un MD-11 que rebotó y se volcó al aterrizar en 2009 - Vuelo 642 de China Airlines : un MD-11 que aterrizó con fuerza y se rompió en 1999 - Vuelo 14 de FedEx Express : un MD-11 que rebotó y volcó al aterrizar en 1997 - Lista de accidentes e incidentes relacionados con aviones comerciales	- Informe con fotografías de la aeronave siniestrada ( en árabe ) - Informe final ( Archivo ) - Autoridad General de Aviación Civil
+Event	T1	vuelo	EVENT	42
+Event	T10	vuelo	EVENT	394
+Event	T14	Vuelo	EVENT	472
+Event	T15	rebotó	EVENT	513
+Event	T16	volcó	EVENT	525
+Event	T17	aterrizar	EVENT	534
+Event	T18	Vuelo	EVENT	554
+Event	T19	aterrizó	EVENT	597
+Event	T2	murieron	EVENT	125
+Event	T20	rompió	EVENT	622
+Event	T21	Vuelo	EVENT	639
+Event	T22	rebotó	EVENT	680
+Event	T23	volcó	EVENT	689
+Event	T24	aterrizar	EVENT	698
+Event	T26	accidentes	EVENT	727
+Event	T27	Informe	EVENT	790
+Event	T28	siniestrada	EVENT	829
+Event	T3	aterrizaje	EVENT	140
+Event	T4	rebote	EVENT	155
+Event	T5	accidente	EVENT	3
+Event	T7	rebotados	EVENT	254
+Event	T9	entrenamiento	EVENT	337
+Event	T6	informe	EVENT	279
+Relation	T5	T2	CauseEffect	true	accidente	murieron
+Relation	T2	T5	EffectCause	true	murieron	accidente
+Relation	T1	T5	CauseEffect	true	vuelo	accidente
+Relation	T5	T1	EffectCause	true	accidente	vuelo
+Relation	T5	T6	CauseEffect	true	accidente	informe
+Relation	T6	T5	EffectCause	true	informe	accidente
+Relation	T28	T27	CauseEffect	true	siniestrada	Informe
+Relation	T27	T28	EffectCause	true	Informe	siniestrada
+Relation	T5	T3	CauseEffect	true	accidente	aterrizaje
+Relation	T3	T5	EffectCause	true	aterrizaje	accidente
+Relation	T1	T14	NoRel	true	vuelo	Vuelo
+Relation	T1	T16	NoRel	true	vuelo	volcó
+Relation	T1	T17	NoRel	true	vuelo	aterrizar
+Relation	T1	T2	NoRel	true	vuelo	murieron
+Relation	T1	T20	NoRel	true	vuelo	rompió
+Relation	T1	T21	NoRel	true	vuelo	Vuelo
+Relation	T10	T19	NoRel	true	vuelo	aterrizó
+Relation	T10	T20	NoRel	true	vuelo	rompió
+Relation	T10	T26	NoRel	true	vuelo	accidentes
+Relation	T10	T28	NoRel	true	vuelo	siniestrada
+Relation	T10	T6	NoRel	true	vuelo	informe
+Relation	T10	T9	NoRel	true	vuelo	entrenamiento
+Relation	T14	T16	NoRel	true	Vuelo	volcó
+Relation	T14	T17	NoRel	true	Vuelo	aterrizar
+Relation	T14	T28	NoRel	true	Vuelo	siniestrada
+Relation	T14	T3	NoRel	true	Vuelo	aterrizaje
+Relation	T14	T5	NoRel	true	Vuelo	accidente
+Relation	T14	T6	NoRel	true	Vuelo	informe
+Relation	T14	T7	NoRel	true	Vuelo	rebotados
+Relation	T14	T9	NoRel	true	Vuelo	entrenamiento
+Relation	T15	T1	NoRel	true	rebotó	vuelo
+Relation	T15	T14	NoRel	true	rebotó	Vuelo
+Relation	T15	T16	NoRel	true	rebotó	volcó
+Relation	T15	T20	NoRel	true	rebotó	rompió
+Relation	T15	T21	NoRel	true	rebotó	Vuelo
+Relation	T15	T23	NoRel	true	rebotó	volcó
+Relation	T15	T26	NoRel	true	rebotó	accidentes
+Relation	T15	T27	NoRel	true	rebotó	Informe
+Relation	T15	T28	NoRel	true	rebotó	siniestrada
+Relation	T15	T7	NoRel	true	rebotó	rebotados
+Relation	T16	T15	NoRel	true	volcó	rebotó
+Relation	T16	T17	NoRel	true	volcó	aterrizar
+Relation	T16	T23	NoRel	true	volcó	volcó
+Relation	T16	T28	NoRel	true	volcó	siniestrada
+Relation	T16	T4	NoRel	true	volcó	rebote
+Relation	T17	T10	NoRel	true	aterrizar	vuelo
+Relation	T17	T14	NoRel	true	aterrizar	Vuelo
+Relation	T17	T18	NoRel	true	aterrizar	Vuelo
+Relation	T17	T2	NoRel	true	aterrizar	murieron
+Relation	T17	T20	NoRel	true	aterrizar	rompió
+Relation	T17	T23	NoRel	true	aterrizar	volcó
+Relation	T17	T26	NoRel	true	aterrizar	accidentes
+Relation	T17	T28	NoRel	true	aterrizar	siniestrada
+Relation	T17	T3	NoRel	true	aterrizar	aterrizaje
+Relation	T17	T7	NoRel	true	aterrizar	rebotados
+Relation	T18	T10	NoRel	true	Vuelo	vuelo
+Relation	T18	T14	NoRel	true	Vuelo	Vuelo
+Relation	T18	T2	NoRel	true	Vuelo	murieron
+Relation	T18	T24	NoRel	true	Vuelo	aterrizar
+Relation	T18	T5	NoRel	true	Vuelo	accidente
+Relation	T19	T14	NoRel	true	aterrizó	Vuelo
+Relation	T19	T16	NoRel	true	aterrizó	volcó
+Relation	T19	T17	NoRel	true	aterrizó	aterrizar
+Relation	T19	T18	NoRel	true	aterrizó	Vuelo
+Relation	T19	T26	NoRel	true	aterrizó	accidentes
+Relation	T19	T27	NoRel	true	aterrizó	Informe
+Relation	T19	T28	NoRel	true	aterrizó	siniestrada
+Relation	T19	T4	NoRel	true	aterrizó	rebote
+Relation	T19	T6	NoRel	true	aterrizó	informe
+Relation	T2	T15	NoRel	true	murieron	rebotó
+Relation	T2	T16	NoRel	true	murieron	volcó
+Relation	T2	T17	NoRel	true	murieron	aterrizar
+Relation	T2	T18	NoRel	true	murieron	Vuelo
+Relation	T2	T19	NoRel	true	murieron	aterrizó
+Relation	T2	T20	NoRel	true	murieron	rompió
+Relation	T2	T24	NoRel	true	murieron	aterrizar
+Relation	T2	T26	NoRel	true	murieron	accidentes
+Relation	T2	T6	NoRel	true	murieron	informe
+Relation	T20	T10	NoRel	true	rompió	vuelo
+Relation	T20	T14	NoRel	true	rompió	Vuelo
+Relation	T20	T21	NoRel	true	rompió	Vuelo
+Relation	T20	T23	NoRel	true	rompió	volcó
+Relation	T20	T4	NoRel	true	rompió	rebote
+Relation	T20	T5	NoRel	true	rompió	accidente
+Relation	T20	T6	NoRel	true	rompió	informe
+Relation	T20	T7	NoRel	true	rompió	rebotados
+Relation	T21	T15	NoRel	true	Vuelo	rebotó
+Relation	T21	T18	NoRel	true	Vuelo	Vuelo
+Relation	T21	T2	NoRel	true	Vuelo	murieron
+Relation	T21	T20	NoRel	true	Vuelo	rompió
+Relation	T21	T26	NoRel	true	Vuelo	accidentes
+Relation	T21	T27	NoRel	true	Vuelo	Informe
+Relation	T21	T3	NoRel	true	Vuelo	aterrizaje
+Relation	T21	T5	NoRel	true	Vuelo	accidente
+Relation	T21	T7	NoRel	true	Vuelo	rebotados
+Relation	T22	T10	NoRel	true	rebotó	vuelo
+Relation	T22	T15	NoRel	true	rebotó	rebotó
+Relation	T22	T17	NoRel	true	rebotó	aterrizar
+Relation	T22	T20	NoRel	true	rebotó	rompió
+Relation	T22	T21	NoRel	true	rebotó	Vuelo
+Relation	T22	T28	NoRel	true	rebotó	siniestrada
+Relation	T22	T4	NoRel	true	rebotó	rebote
+Relation	T22	T5	NoRel	true	rebotó	accidente
+Relation	T22	T6	NoRel	true	rebotó	informe
+Relation	T22	T9	NoRel	true	rebotó	entrenamiento
+Relation	T23	T1	NoRel	true	volcó	vuelo
+Relation	T23	T17	NoRel	true	volcó	aterrizar
+Relation	T23	T2	NoRel	true	volcó	murieron
+Relation	T23	T26	NoRel	true	volcó	accidentes
+Relation	T23	T4	NoRel	true	volcó	rebote
+Relation	T23	T6	NoRel	true	volcó	informe
+Relation	T23	T7	NoRel	true	volcó	rebotados
+Relation	T24	T15	NoRel	true	aterrizar	rebotó
+Relation	T24	T16	NoRel	true	aterrizar	volcó
+Relation	T24	T2	NoRel	true	aterrizar	murieron
+Relation	T24	T21	NoRel	true	aterrizar	Vuelo
+Relation	T24	T6	NoRel	true	aterrizar	informe
+Relation	T24	T7	NoRel	true	aterrizar	rebotados
+Relation	T26	T1	NoRel	true	accidentes	vuelo
+Relation	T26	T17	NoRel	true	accidentes	aterrizar
+Relation	T26	T22	NoRel	true	accidentes	rebotó
+Relation	T26	T23	NoRel	true	accidentes	volcó
+Relation	T26	T27	NoRel	true	accidentes	Informe
+Relation	T26	T28	NoRel	true	accidentes	siniestrada
+Relation	T26	T4	NoRel	true	accidentes	rebote
+Relation	T26	T5	NoRel	true	accidentes	accidente
+Relation	T26	T7	NoRel	true	accidentes	rebotados
+Relation	T27	T14	NoRel	true	Informe	Vuelo
+Relation	T27	T17	NoRel	true	Informe	aterrizar
+Relation	T27	T18	NoRel	true	Informe	Vuelo
+Relation	T27	T2	NoRel	true	Informe	murieron
+Relation	T27	T24	NoRel	true	Informe	aterrizar
+Relation	T27	T5	NoRel	true	Informe	accidente
+Relation	T27	T7	NoRel	true	Informe	rebotados
+Relation	T27	T9	NoRel	true	Informe	entrenamiento
+Relation	T28	T10	NoRel	true	siniestrada	vuelo
+Relation	T28	T14	NoRel	true	siniestrada	Vuelo
+Relation	T28	T17	NoRel	true	siniestrada	aterrizar
+Relation	T28	T18	NoRel	true	siniestrada	Vuelo
+Relation	T28	T2	NoRel	true	siniestrada	murieron
+Relation	T28	T22	NoRel	true	siniestrada	rebotó
+Relation	T28	T3	NoRel	true	siniestrada	aterrizaje
+Relation	T28	T4	NoRel	true	siniestrada	rebote
+Relation	T28	T9	NoRel	true	siniestrada	entrenamiento
+Relation	T3	T10	NoRel	true	aterrizaje	vuelo
+Relation	T3	T15	NoRel	true	aterrizaje	rebotó
+Relation	T3	T23	NoRel	true	aterrizaje	volcó
+Relation	T3	T26	NoRel	true	aterrizaje	accidentes
+Relation	T3	T7	NoRel	true	aterrizaje	rebotados
+Relation	T4	T1	NoRel	true	rebote	vuelo
+Relation	T4	T10	NoRel	true	rebote	vuelo
+Relation	T4	T17	NoRel	true	rebote	aterrizar
+Relation	T4	T19	NoRel	true	rebote	aterrizó
+Relation	T4	T27	NoRel	true	rebote	Informe
+Relation	T4	T9	NoRel	true	rebote	entrenamiento
+Relation	T5	T15	NoRel	true	accidente	rebotó
+Relation	T5	T20	NoRel	true	accidente	rompió
+Relation	T5	T21	NoRel	true	accidente	Vuelo
+Relation	T5	T22	NoRel	true	accidente	rebotó
+Relation	T5	T26	NoRel	true	accidente	accidentes
+Relation	T5	T28	NoRel	true	accidente	siniestrada
+Relation	T6	T1	NoRel	true	informe	vuelo
+Relation	T6	T18	NoRel	true	informe	Vuelo
+Relation	T6	T19	NoRel	true	informe	aterrizó
+Relation	T6	T2	NoRel	true	informe	murieron
+Relation	T6	T21	NoRel	true	informe	Vuelo
+Relation	T6	T27	NoRel	true	informe	Informe
+Relation	T6	T7	NoRel	true	informe	rebotados
+Relation	T6	T9	NoRel	true	informe	entrenamiento
+Relation	T7	T1	NoRel	true	rebotados	vuelo
+Relation	T7	T17	NoRel	true	rebotados	aterrizar
+Relation	T7	T20	NoRel	true	rebotados	rompió
+Relation	T7	T22	NoRel	true	rebotados	rebotó
+Relation	T7	T23	NoRel	true	rebotados	volcó
+Relation	T7	T26	NoRel	true	rebotados	accidentes
+Relation	T7	T27	NoRel	true	rebotados	Informe
+Relation	T7	T5	NoRel	true	rebotados	accidente
+Relation	T7	T6	NoRel	true	rebotados	informe
+Relation	T9	T20	NoRel	true	entrenamiento	rompió
+Relation	T9	T21	NoRel	true	entrenamiento	Vuelo
+Relation	T9	T3	NoRel	true	entrenamiento	aterrizaje
+Relation	T9	T4	NoRel	true	entrenamiento	rebote
+Relation	T9	T7	NoRel	true	entrenamiento	rebotados

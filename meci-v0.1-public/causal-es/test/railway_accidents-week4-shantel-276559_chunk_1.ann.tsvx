@@ -1,0 +1,40 @@
+Text	Después de la muerte de su padre cuando tenía seis años , el hermano de su madre , el abad de Croisilles , desempeñó el papel de padre y desde 1798 estuvo a cargo de su educación .	El abad le enseñó latín , griego , retórica y filosofía .	Desde 1804 Dumont estudió en el Liceo Imperial de Caen .	En la biblioteca de Caen , empezó a leer los enciclopedistas y los informes de los viajes de Bougainville , Cook y Anson , y llegó a ser un apasionado acerca de estas cuestiones .	A la edad de 17 años suspendió las pruebas físicas del examen de ingreso en la École Polytechnique y decidió alistarse en la marina .
+Event	T0	muerte	EVENT	14
+Event	T1	desempeñó	EVENT	107
+Event	T2	educación	EVENT	169
+Event	T3	enseñó	EVENT	192
+Event	T4	estudió	EVENT	257
+Event	T5	viajes	EVENT	379
+Event	T6	suspendió	EVENT	497
+Event	T7	examen	EVENT	531
+Event	T8	ingreso	EVENT	541
+Event	T9	alistarse	EVENT	585
+Relation	T0	T1	CauseEffect	true	muerte	desempeñó
+Relation	T1	T0	EffectCause	true	desempeñó	muerte
+Relation	T0	T8	NoRel	true	muerte	ingreso
+Relation	T0	T9	NoRel	true	muerte	alistarse
+Relation	T1	T2	NoRel	true	desempeñó	educación
+Relation	T1	T4	NoRel	true	desempeñó	estudió
+Relation	T1	T7	NoRel	true	desempeñó	examen
+Relation	T1	T9	NoRel	true	desempeñó	alistarse
+Relation	T2	T3	NoRel	true	educación	enseñó
+Relation	T2	T5	NoRel	true	educación	viajes
+Relation	T2	T7	NoRel	true	educación	examen
+Relation	T2	T9	NoRel	true	educación	alistarse
+Relation	T3	T2	NoRel	true	enseñó	educación
+Relation	T4	T0	NoRel	true	estudió	muerte
+Relation	T4	T3	NoRel	true	estudió	enseñó
+Relation	T4	T9	NoRel	true	estudió	alistarse
+Relation	T5	T6	NoRel	true	viajes	suspendió
+Relation	T5	T7	NoRel	true	viajes	examen
+Relation	T6	T0	NoRel	true	suspendió	muerte
+Relation	T6	T7	NoRel	true	suspendió	examen
+Relation	T6	T9	NoRel	true	suspendió	alistarse
+Relation	T7	T0	NoRel	true	examen	muerte
+Relation	T7	T9	NoRel	true	examen	alistarse
+Relation	T8	T0	NoRel	true	ingreso	muerte
+Relation	T8	T2	NoRel	true	ingreso	educación
+Relation	T8	T5	NoRel	true	ingreso	viajes
+Relation	T9	T1	NoRel	true	alistarse	desempeñó
+Relation	T9	T4	NoRel	true	alistarse	estudió
+Relation	T9	T5	NoRel	true	alistarse	viajes

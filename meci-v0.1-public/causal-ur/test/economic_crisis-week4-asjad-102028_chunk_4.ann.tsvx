@@ -1,0 +1,29 @@
+Text	CIA - The World Factbook - تووالو was used for PPP Conversion rate and GDP PPP per capita .	Data from 2002 .	Annual wages were calculated by multiplying monthly wages by 12 , weekly wages by 52 , daily wages by 5x52 and hourly wages by Wx52 , where W is the legal maximum ( or the practical , if lower ) workweek length in hours .	A مساوی قوت خرید ( PPP ) conversion rate from 2009 — obtain ed from the بین الاقوامی مالیاتی فنڈ ( IMF ) 's World Economic Outlook Database , October 2010 Edition — was used to convert the annual wage from national currency to بین الاقوامی ڈالرs .	GDP ( PPP ) per capita and PPP conversion rate for all IMF member countries , from the IMF 's World Economic Outlook Database , October 2010 Edition .
+Event	T0	used	EVENT	38
+Event	T1	wages	EVENT	116
+Event	T2	calculated	EVENT	127
+Event	T3	multiplying	EVENT	141
+Event	T4	ed	EVENT	391
+Event	T5	used	EVENT	500
+Event	T6	convert	EVENT	508
+Event	T7	conversion	EVENT	610
+Relation	T4	T6	CauseEffect	true	ed	convert
+Relation	T6	T4	EffectCause	true	convert	ed
+Relation	T0	T3	NoRel	true	used	multiplying
+Relation	T0	T5	NoRel	true	used	used
+Relation	T1	T0	NoRel	true	wages	used
+Relation	T1	T2	NoRel	true	wages	calculated
+Relation	T2	T0	NoRel	true	calculated	used
+Relation	T2	T3	NoRel	true	calculated	multiplying
+Relation	T2	T4	NoRel	true	calculated	ed
+Relation	T2	T7	NoRel	true	calculated	conversion
+Relation	T3	T2	NoRel	true	multiplying	calculated
+Relation	T3	T5	NoRel	true	multiplying	used
+Relation	T3	T6	NoRel	true	multiplying	convert
+Relation	T4	T0	NoRel	true	ed	used
+Relation	T4	T5	NoRel	true	ed	used
+Relation	T5	T1	NoRel	true	used	wages
+Relation	T5	T6	NoRel	true	used	convert
+Relation	T6	T0	NoRel	true	convert	used
+Relation	T7	T1	NoRel	true	conversion	wages
+Relation	T7	T2	NoRel	true	conversion	calculated

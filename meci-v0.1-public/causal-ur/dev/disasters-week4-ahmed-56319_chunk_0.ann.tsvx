@@ -1,0 +1,42 @@
+Text	قدرتی آفت کسی بھی قدرتی خطرے جیسے سیلاب ، ٹورنیڈو ، سمندری طوفان ، آتش_فشاں ، زلزلے یا تودے وغیرہ سے منسلک اثرات کا نام ہے جو ماحول پر اس طرح اثر انداز ہوتے ہیں کہ قدرتی وسائل ، مالی اور جانی نقصان کا سبب بنتے ہیں ۔	قدرتی آفت کے نتیجے میں ہونے والا نقصان کی شدت اس ماحول سے منسلک آبادی کا آفت کے برپا ہونے یا اس سے نبرد آزما ہونے کی خاصیت پر منحصر ہوتا ہے ۔	قدرتی آفت بارے یہ نظریہ دراصل اس بنیاد پر قائم کیا گیا ہے کہ کسی بھی آفت کا اس خطے میں زندہ اشیاء کی موجودگی اور آفت کے برپا ہونے کے نتیجہ میں منسلک بے بسی کے ساتھ کس درجہ کا تعلق ہو سکتا ہے ۔	تکنیکی لحاظ سے قدرتی آفت کی تعریف دراصل آبادیوں کی موجودگی اور ان کو متوقع آفات سے خطرات کے دائرہ میں ہی ممکن ہے ۔	مثال کے طور پر غیر آباد خطے میں انتہائی شدید ترین زلزلہ بھی تکنیکی لحاظ سے قدرتی آفت قرار نہیں دیا جا سکتا ۔
+Event	T0	طوفان	EVENT	59
+Event	T1	اثرات	EVENT	107
+Event	T2	بنتے	EVENT	205
+Event	T3	آفت	EVENT	222
+Event	T4	نقصان	EVENT	249
+Event	T5	آفت	EVENT	289
+Event	T6	موجودگی	EVENT	459
+Event	T7	ہونے	EVENT	483
+Event	T8	تعریف	EVENT	579
+Event	T9	موجودگی	EVENT	602
+Event	T10	زلزلہ	EVENT	716
+Relation	T3	T4	CauseEffect	true	آفت	نقصان
+Relation	T4	T3	EffectCause	true	نقصان	آفت
+Relation	T0	T5	NoRel	true	طوفان	آفت
+Relation	T0	T9	NoRel	true	طوفان	موجودگی
+Relation	T1	T3	NoRel	true	اثرات	آفت
+Relation	T1	T6	NoRel	true	اثرات	موجودگی
+Relation	T1	T7	NoRel	true	اثرات	ہونے
+Relation	T1	T8	NoRel	true	اثرات	تعریف
+Relation	T10	T0	NoRel	true	زلزلہ	طوفان
+Relation	T10	T4	NoRel	true	زلزلہ	نقصان
+Relation	T2	T7	NoRel	true	بنتے	ہونے
+Relation	T3	T2	NoRel	true	آفت	بنتے
+Relation	T3	T5	NoRel	true	آفت	آفت
+Relation	T4	T10	NoRel	true	نقصان	زلزلہ
+Relation	T4	T5	NoRel	true	نقصان	آفت
+Relation	T4	T6	NoRel	true	نقصان	موجودگی
+Relation	T4	T9	NoRel	true	نقصان	موجودگی
+Relation	T5	T0	NoRel	true	آفت	طوفان
+Relation	T5	T6	NoRel	true	آفت	موجودگی
+Relation	T5	T7	NoRel	true	آفت	ہونے
+Relation	T6	T1	NoRel	true	موجودگی	اثرات
+Relation	T6	T10	NoRel	true	موجودگی	زلزلہ
+Relation	T6	T9	NoRel	true	موجودگی	موجودگی
+Relation	T7	T0	NoRel	true	ہونے	طوفان
+Relation	T7	T3	NoRel	true	ہونے	آفت
+Relation	T7	T6	NoRel	true	ہونے	موجودگی
+Relation	T7	T8	NoRel	true	ہونے	تعریف
+Relation	T8	T6	NoRel	true	تعریف	موجودگی
+Relation	T9	T10	NoRel	true	موجودگی	زلزلہ
+Relation	T9	T5	NoRel	true	موجودگی	آفت

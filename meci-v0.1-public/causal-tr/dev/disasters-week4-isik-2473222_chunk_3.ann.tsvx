@@ -1,0 +1,51 @@
+Text	31 Ekim 2019 günü saat 09.11'de yerin 10 km. altında ve 6,5 büyüklüğünde bir deprem , merkez_üssü Kisante'nin 1 km güneyinde bulunan bölgede meydana geldi .	Deprem Filipinler'deki Mindanao adasını vurdu .	Davao ve Soccksargen'deki bazı binalar ciddi şekilde hasar gördü ve bazıları çöktü .	Bu iki deprede ( 29 ve 31 Ekim ) 24'ten fazla ölüm meydana geldi .	500'den fazla insan yaralandı ve 2 kişinin hala kayıp olduğu bildirildi .
+Event	T0	deprem	EVENT	77
+Event	T1	geldi	EVENT	149
+Event	T2	Deprem	EVENT	157
+Event	T3	vurdu	EVENT	197
+Event	T4	gördü	EVENT	264
+Event	T5	çöktü	EVENT	282
+Event	T6	geldi	EVENT	349
+Event	T7	yaralandı	EVENT	377
+Event	T8	bildirildi	EVENT	418
+Relation	T2	T4	CauseEffect	true	Deprem	gördü
+Relation	T4	T2	EffectCause	true	gördü	Deprem
+Relation	T4	T5	CauseEffect	true	gördü	çöktü
+Relation	T5	T4	EffectCause	true	çöktü	gördü
+Relation	T2	T6	CauseEffect	true	Deprem	geldi
+Relation	T6	T2	EffectCause	true	geldi	Deprem
+Relation	T2	T7	CauseEffect	true	Deprem	yaralandı
+Relation	T7	T2	EffectCause	true	yaralandı	Deprem
+Relation	T2	T8	CauseEffect	true	Deprem	bildirildi
+Relation	T8	T2	EffectCause	true	bildirildi	Deprem
+Relation	T0	T4	CauseEffect	true	deprem	gördü
+Relation	T4	T0	EffectCause	true	gördü	deprem
+Relation	T0	T6	CauseEffect	true	deprem	geldi
+Relation	T6	T0	EffectCause	true	geldi	deprem
+Relation	T0	T7	CauseEffect	true	deprem	yaralandı
+Relation	T7	T0	EffectCause	true	yaralandı	deprem
+Relation	T0	T8	CauseEffect	true	deprem	bildirildi
+Relation	T8	T0	EffectCause	true	bildirildi	deprem
+Relation	T0	T1	NoRel	true	deprem	geldi
+Relation	T0	T2	NoRel	true	deprem	Deprem
+Relation	T1	T5	NoRel	true	geldi	çöktü
+Relation	T1	T7	NoRel	true	geldi	yaralandı
+Relation	T1	T8	NoRel	true	geldi	bildirildi
+Relation	T2	T3	NoRel	true	Deprem	vurdu
+Relation	T2	T5	NoRel	true	Deprem	çöktü
+Relation	T3	T4	NoRel	true	vurdu	gördü
+Relation	T3	T6	NoRel	true	vurdu	geldi
+Relation	T4	T6	NoRel	true	gördü	geldi
+Relation	T4	T8	NoRel	true	gördü	bildirildi
+Relation	T5	T0	NoRel	true	çöktü	deprem
+Relation	T5	T1	NoRel	true	çöktü	geldi
+Relation	T5	T8	NoRel	true	çöktü	bildirildi
+Relation	T6	T1	NoRel	true	geldi	geldi
+Relation	T6	T4	NoRel	true	geldi	gördü
+Relation	T6	T8	NoRel	true	geldi	bildirildi
+Relation	T7	T4	NoRel	true	yaralandı	gördü
+Relation	T7	T6	NoRel	true	yaralandı	geldi
+Relation	T7	T8	NoRel	true	yaralandı	bildirildi
+Relation	T8	T4	NoRel	true	bildirildi	gördü
+Relation	T8	T6	NoRel	true	bildirildi	geldi
+Relation	T8	T7	NoRel	true	bildirildi	yaralandı

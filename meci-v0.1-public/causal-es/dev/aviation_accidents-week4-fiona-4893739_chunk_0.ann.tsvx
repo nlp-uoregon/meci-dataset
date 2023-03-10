@@ -1,0 +1,63 @@
+Text	El VUELO 523 DE CARIBBEAN AIRLINES fue un vuelo desde Nueva York a Georgetown , Guyana con escala intermedia en Puerto España , Trinidad el 30 de julio de 2011 .	El Boeing 737-800 registrado como 9Y-PBM aterrizó en el Aeropuerto Internacional Cheddi Jagan , pero no se logró detener el avión debido al clima lluvioso , saliéndose de la pista a las 01:32 hora local , e impactó con la valla perimetral .	El avión se detuvo cien metros después de la cabecera de pista 06 tras pasar por encima de una carretera y romperla en dos secciones .	No hubo incendio , y solo siete de los 157 pasajeros y seis tripulantes resultaron heridos .	No se informó de ningún muerto directo tras el accidente .
+Event	T0	vuelo	EVENT	42
+Event	T1	registrado	EVENT	180
+Event	T2	aterrizó	EVENT	203
+Event	T3	detener	EVENT	275
+Event	T4	saliéndose	EVENT	319
+Event	T5	impactó	EVENT	369
+Event	T6	detuvo	EVENT	415
+Event	T7	romperla	EVENT	510
+Event	T8	incendio	EVENT	546
+Event	T9	heridos	EVENT	621
+Event	T10	informó	EVENT	637
+Event	T11	accidente	EVENT	678
+Relation	T5	T9	CauseEffect	true	impactó	heridos
+Relation	T9	T5	EffectCause	true	heridos	impactó
+Relation	T0	T2	NoRel	true	vuelo	aterrizó
+Relation	T0	T5	NoRel	true	vuelo	impactó
+Relation	T1	T0	NoRel	true	registrado	vuelo
+Relation	T1	T5	NoRel	true	registrado	impactó
+Relation	T1	T6	NoRel	true	registrado	detuvo
+Relation	T1	T8	NoRel	true	registrado	incendio
+Relation	T10	T1	NoRel	true	informó	registrado
+Relation	T10	T11	NoRel	true	informó	accidente
+Relation	T10	T2	NoRel	true	informó	aterrizó
+Relation	T10	T7	NoRel	true	informó	romperla
+Relation	T10	T8	NoRel	true	informó	incendio
+Relation	T11	T0	NoRel	true	accidente	vuelo
+Relation	T11	T5	NoRel	true	accidente	impactó
+Relation	T11	T6	NoRel	true	accidente	detuvo
+Relation	T11	T7	NoRel	true	accidente	romperla
+Relation	T11	T9	NoRel	true	accidente	heridos
+Relation	T2	T0	NoRel	true	aterrizó	vuelo
+Relation	T2	T4	NoRel	true	aterrizó	saliéndose
+Relation	T3	T0	NoRel	true	detener	vuelo
+Relation	T3	T1	NoRel	true	detener	registrado
+Relation	T3	T10	NoRel	true	detener	informó
+Relation	T3	T11	NoRel	true	detener	accidente
+Relation	T3	T2	NoRel	true	detener	aterrizó
+Relation	T3	T7	NoRel	true	detener	romperla
+Relation	T4	T0	NoRel	true	saliéndose	vuelo
+Relation	T4	T10	NoRel	true	saliéndose	informó
+Relation	T4	T5	NoRel	true	saliéndose	impactó
+Relation	T4	T8	NoRel	true	saliéndose	incendio
+Relation	T5	T0	NoRel	true	impactó	vuelo
+Relation	T5	T1	NoRel	true	impactó	registrado
+Relation	T5	T10	NoRel	true	impactó	informó
+Relation	T5	T2	NoRel	true	impactó	aterrizó
+Relation	T5	T3	NoRel	true	impactó	detener
+Relation	T5	T7	NoRel	true	impactó	romperla
+Relation	T6	T0	NoRel	true	detuvo	vuelo
+Relation	T6	T2	NoRel	true	detuvo	aterrizó
+Relation	T7	T1	NoRel	true	romperla	registrado
+Relation	T7	T10	NoRel	true	romperla	informó
+Relation	T7	T2	NoRel	true	romperla	aterrizó
+Relation	T7	T5	NoRel	true	romperla	impactó
+Relation	T7	T8	NoRel	true	romperla	incendio
+Relation	T8	T2	NoRel	true	incendio	aterrizó
+Relation	T8	T3	NoRel	true	incendio	detener
+Relation	T8	T4	NoRel	true	incendio	saliéndose
+Relation	T8	T9	NoRel	true	incendio	heridos
+Relation	T9	T1	NoRel	true	heridos	registrado
+Relation	T9	T11	NoRel	true	heridos	accidente
+Relation	T9	T6	NoRel	true	heridos	detuvo

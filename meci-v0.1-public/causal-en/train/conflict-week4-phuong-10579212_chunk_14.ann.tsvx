@@ -1,0 +1,88 @@
+Text	The Black Watch had to be reformed after Verrières Ridge , having sustained more casualties than any Canadian infantry battalion since the disastrous 1942 raid on Dieppe .	The central area of the ridge near Verrières Village was eventually taken and held by the Royal Hamilton Light Infantry .	The east side was also taken , but subsequently lost , although two British armoured brigades were able to secure significant footholds near the positions of the Royal Hamilton Light Infantry .	The failure to capture the ridge had little effect on the overall Allied position , as the success of Operation Cobra was so overwhelming that the Germans diverted significant resources , including two _ Panzer _ divisions , from the ridge in their attempt to keep Bradley 's forces boxed in .	With German defences weakened , subsequent Commonwealth attacks on the ridge were successful ; Operation Totalize finally managed to wrest the position from its SS defenders on 8 August .
+Event	T0	reformed	EVENT	26
+Event	T1	sustained	EVENT	66
+Event	T2	casualties	EVENT	81
+Event	T3	disastrous	EVENT	139
+Event	T4	raid	EVENT	155
+Event	T5	taken	EVENT	240
+Event	T6	held	EVENT	250
+Event	T7	taken	EVENT	317
+Event	T8	lost	EVENT	342
+Event	T9	secure	EVENT	401
+Event	T10	failure	EVENT	492
+Event	T11	capture	EVENT	503
+Event	T12	effect	EVENT	532
+Event	T13	success	EVENT	579
+Event	T14	Operation	EVENT	590
+Event	T15	overwhelming	EVENT	613
+Event	T16	diverted	EVENT	643
+Event	T17	attempt	EVENT	737
+Event	T18	keep	EVENT	748
+Event	T19	weakened	EVENT	803
+Event	T20	attacks	EVENT	838
+Event	T21	successful	EVENT	864
+Event	T22	managed	EVENT	904
+Event	T23	wrest	EVENT	915
+Relation	T3	T1	CauseEffect	true	disastrous	sustained
+Relation	T1	T3	EffectCause	true	sustained	disastrous
+Relation	T1	T0	CauseEffect	true	sustained	reformed
+Relation	T0	T1	EffectCause	true	reformed	sustained
+Relation	T7	T8	CauseEffect	true	taken	lost
+Relation	T8	T7	EffectCause	true	lost	taken
+Relation	T11	T12	CauseEffect	true	capture	effect
+Relation	T12	T11	EffectCause	true	effect	capture
+Relation	T13	T16	CauseEffect	true	success	diverted
+Relation	T16	T13	EffectCause	true	diverted	success
+Relation	T19	T21	CauseEffect	true	weakened	successful
+Relation	T21	T19	EffectCause	true	successful	weakened
+Relation	T0	T5	NoRel	true	reformed	taken
+Relation	T0	T8	NoRel	true	reformed	lost
+Relation	T1	T18	NoRel	true	sustained	keep
+Relation	T1	T4	NoRel	true	sustained	raid
+Relation	T1	T7	NoRel	true	sustained	taken
+Relation	T10	T20	NoRel	true	failure	attacks
+Relation	T13	T10	NoRel	true	success	failure
+Relation	T14	T11	NoRel	true	Operation	capture
+Relation	T14	T16	NoRel	true	Operation	diverted
+Relation	T14	T18	NoRel	true	Operation	keep
+Relation	T14	T2	NoRel	true	Operation	casualties
+Relation	T14	T23	NoRel	true	Operation	wrest
+Relation	T14	T4	NoRel	true	Operation	raid
+Relation	T14	T8	NoRel	true	Operation	lost
+Relation	T15	T10	NoRel	true	overwhelming	failure
+Relation	T15	T11	NoRel	true	overwhelming	capture
+Relation	T15	T19	NoRel	true	overwhelming	weakened
+Relation	T15	T22	NoRel	true	overwhelming	managed
+Relation	T15	T3	NoRel	true	overwhelming	disastrous
+Relation	T16	T4	NoRel	true	diverted	raid
+Relation	T17	T13	NoRel	true	attempt	success
+Relation	T17	T18	NoRel	true	attempt	keep
+Relation	T17	T20	NoRel	true	attempt	attacks
+Relation	T17	T21	NoRel	true	attempt	successful
+Relation	T17	T6	NoRel	true	attempt	held
+Relation	T18	T15	NoRel	true	keep	overwhelming
+Relation	T19	T17	NoRel	true	weakened	attempt
+Relation	T19	T6	NoRel	true	weakened	held
+Relation	T19	T8	NoRel	true	weakened	lost
+Relation	T2	T22	NoRel	true	casualties	managed
+Relation	T2	T7	NoRel	true	casualties	taken
+Relation	T20	T16	NoRel	true	attacks	diverted
+Relation	T20	T8	NoRel	true	attacks	lost
+Relation	T21	T16	NoRel	true	successful	diverted
+Relation	T22	T0	NoRel	true	managed	reformed
+Relation	T22	T14	NoRel	true	managed	Operation
+Relation	T23	T15	NoRel	true	wrest	overwhelming
+Relation	T23	T21	NoRel	true	wrest	successful
+Relation	T3	T4	NoRel	true	disastrous	raid
+Relation	T4	T8	NoRel	true	raid	lost
+Relation	T5	T4	NoRel	true	taken	raid
+Relation	T5	T9	NoRel	true	taken	secure
+Relation	T6	T11	NoRel	true	held	capture
+Relation	T6	T14	NoRel	true	held	Operation
+Relation	T6	T21	NoRel	true	held	successful
+Relation	T7	T0	NoRel	true	taken	reformed
+Relation	T8	T13	NoRel	true	lost	success
+Relation	T8	T20	NoRel	true	lost	attacks
+Relation	T9	T16	NoRel	true	secure	diverted
+Relation	T9	T20	NoRel	true	secure	attacks
+Relation	T9	T6	NoRel	true	secure	held

@@ -1,0 +1,34 @@
+Text	SECURITATE ( Rumence _ Güvenlik _ ) , resmi adıyla DEPARTAMENTUL SECURITĂȚII STATULUI ( Devlet Güvenlik Bakanlığı , kısaca DSS ) , Romanya Sosyalist Cumhuriyeti'nin gizli polis teşkilatı .	Komünist rejimden önce Romen gizli polisine Siguranța Statului olarak anılıyordu .	30 Ağustos 1948'de Romanya Kızıl Ordu işgali altındayken Sovyet NKVD'nin yardımıyla kuruldu .	1989'da Nicolae Ceaușescu'nun devrilmesinin ardından DSS , Parlamentonun DSS'yi çeşitli alt bölümlere dönüştüren bir yasayı onayladığı 1991 yılına kadar varoldu .	Securitate , Romanya nüfusu ile oranı ele alındığında Doğu bloğundaki en büyük gizli polis kuvvetlerinden biriydi .
+Event	T0	anılıyordu	EVENT	259
+Event	T1	işgali	EVENT	310
+Event	T2	kuruldu	EVENT	356
+Event	T3	devrilmesinin	EVENT	396
+Event	T4	dönüştüren	EVENT	468
+Event	T5	onayladığı	EVENT	490
+Event	T6	varoldu	EVENT	519
+Event	T8	yardımıyla	EVENT	345
+Relation	T1	T8	CauseEffect	true	işgali	yardımıyla
+Relation	T8	T1	EffectCause	true	yardımıyla	işgali
+Relation	T8	T2	CauseEffect	true	yardımıyla	kuruldu
+Relation	T2	T8	EffectCause	true	kuruldu	yardımıyla
+Relation	T0	T1	NoRel	true	anılıyordu	işgali
+Relation	T0	T8	NoRel	true	anılıyordu	yardımıyla
+Relation	T1	T0	NoRel	true	işgali	anılıyordu
+Relation	T1	T2	NoRel	true	işgali	kuruldu
+Relation	T1	T6	NoRel	true	işgali	varoldu
+Relation	T2	T1	NoRel	true	kuruldu	işgali
+Relation	T2	T4	NoRel	true	kuruldu	dönüştüren
+Relation	T3	T1	NoRel	true	devrilmesinin	işgali
+Relation	T3	T5	NoRel	true	devrilmesinin	onayladığı
+Relation	T4	T5	NoRel	true	dönüştüren	onayladığı
+Relation	T4	T6	NoRel	true	dönüştüren	varoldu
+Relation	T5	T2	NoRel	true	onayladığı	kuruldu
+Relation	T5	T3	NoRel	true	onayladığı	devrilmesinin
+Relation	T5	T6	NoRel	true	onayladığı	varoldu
+Relation	T6	T2	NoRel	true	varoldu	kuruldu
+Relation	T6	T3	NoRel	true	varoldu	devrilmesinin
+Relation	T6	T5	NoRel	true	varoldu	onayladığı
+Relation	T8	T0	NoRel	true	yardımıyla	anılıyordu
+Relation	T8	T3	NoRel	true	yardımıyla	devrilmesinin
+Relation	T8	T4	NoRel	true	yardımıyla	dönüştüren
+Relation	T8	T5	NoRel	true	yardımıyla	onayladığı

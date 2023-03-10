@@ -1,0 +1,29 @@
+Text	Den spanske havarikommission CIAIAC ( _ Comisión de Investigación de Accidentes e Incidentes de Aviación Civil _ ) har offentliggjort sin officielle version af havarirapporten .	- Flaps var i _ Take-Off_ position ( 11 ° ) ved det første startforsøg .	- RAT ( _ Ram Air Temperature _ ) angav at luftindtagets lufttemperatur var 104 ° C i bagbord motor og de korrekte 30 ° C i styrbord motor .	- Flyteknikere slog sikringen til varmelegemet i luftindtaget fra og RAT angav nu 30 ° C .	Manglende varmelegemer er tilladt i hht. _ Minimum Equipment List _ , der er en liste over acceptable småfejl der må flyves med .
+Event	T0	Investigación	EVENT	52
+Event	T1	offentliggjort	EVENT	119
+Event	T2	startforsøg	EVENT	237
+Event	T3	angav	EVENT	285
+Event	T4	slog	EVENT	407
+Event	T5	angav	EVENT	465
+Event	T6	tilladt	EVENT	509
+Event	T7	flyves	EVENT	600
+Relation	T2	T1	CauseEffect	true	startforsøg	offentliggjort
+Relation	T1	T2	EffectCause	true	offentliggjort	startforsøg
+Relation	T0	T5	NoRel	true	Investigación	angav
+Relation	T1	T6	NoRel	true	offentliggjort	tilladt
+Relation	T1	T7	NoRel	true	offentliggjort	flyves
+Relation	T2	T5	NoRel	true	startforsøg	angav
+Relation	T2	T7	NoRel	true	startforsøg	flyves
+Relation	T3	T4	NoRel	true	angav	slog
+Relation	T3	T7	NoRel	true	angav	flyves
+Relation	T4	T0	NoRel	true	slog	Investigación
+Relation	T4	T1	NoRel	true	slog	offentliggjort
+Relation	T4	T2	NoRel	true	slog	startforsøg
+Relation	T4	T7	NoRel	true	slog	flyves
+Relation	T5	T4	NoRel	true	angav	slog
+Relation	T5	T7	NoRel	true	angav	flyves
+Relation	T6	T0	NoRel	true	tilladt	Investigación
+Relation	T6	T4	NoRel	true	tilladt	slog
+Relation	T7	T1	NoRel	true	flyves	offentliggjort
+Relation	T7	T4	NoRel	true	flyves	slog
+Relation	T7	T6	NoRel	true	flyves	tilladt

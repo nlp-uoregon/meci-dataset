@@ -1,0 +1,51 @@
+Text	The Canadian Aviation Safety Board ( CASB ) determined that an uncontained failure of the left engine thirteenth stage compressor disc had occurred .	Debris from the engine punctured a fuel cell , resulting in the fire .	The disc failure was the result of fatigue cracking .	The fire was attributed to a faulty compressor disc that blew apart , rupturing the fuel tanks .	This incident was similar to the cause of the British Airtours Flight 28 M disaster that claimed 55 lives in 1985 .
+Event	T0	determined	EVENT	44
+Event	T1	failure	EVENT	75
+Event	T2	occurred	EVENT	139
+Event	T3	Debris	EVENT	150
+Event	T4	punctured	EVENT	173
+Event	T5	resulting	EVENT	197
+Event	T6	fire	EVENT	214
+Event	T7	failure	EVENT	230
+Event	T8	cracking	EVENT	264
+Event	T9	fire	EVENT	279
+Event	T10	rupturing	EVENT	345
+Event	T11	incident	EVENT	377
+Event	T12	cause	EVENT	405
+Event	T13	disaster	EVENT	447
+Event	T14	claimed	EVENT	461
+Event	T15	lives	EVENT	472
+Event	T16	blew	EVENT	332
+Relation	T4	T6	CauseEffect	true	punctured	fire
+Relation	T6	T4	EffectCause	true	fire	punctured
+Relation	T8	T7	CauseEffect	true	cracking	failure
+Relation	T7	T8	EffectCause	true	failure	cracking
+Relation	T16	T9	CauseEffect	true	blew	fire
+Relation	T9	T16	EffectCause	true	fire	blew
+Relation	T13	T15	CauseEffect	true	disaster	lives
+Relation	T15	T13	EffectCause	true	lives	disaster
+Relation	T0	T4	NoRel	true	determined	punctured
+Relation	T10	T2	NoRel	true	rupturing	occurred
+Relation	T11	T6	NoRel	true	incident	fire
+Relation	T11	T9	NoRel	true	incident	fire
+Relation	T12	T1	NoRel	true	cause	failure
+Relation	T12	T13	NoRel	true	cause	disaster
+Relation	T12	T16	NoRel	true	cause	blew
+Relation	T13	T14	NoRel	true	disaster	claimed
+Relation	T15	T6	NoRel	true	lives	fire
+Relation	T15	T7	NoRel	true	lives	failure
+Relation	T16	T12	NoRel	true	blew	cause
+Relation	T4	T14	NoRel	true	punctured	claimed
+Relation	T4	T5	NoRel	true	punctured	resulting
+Relation	T5	T8	NoRel	true	resulting	cracking
+Relation	T5	T9	NoRel	true	resulting	fire
+Relation	T6	T0	NoRel	true	fire	determined
+Relation	T6	T1	NoRel	true	fire	failure
+Relation	T6	T14	NoRel	true	fire	claimed
+Relation	T6	T9	NoRel	true	fire	fire
+Relation	T7	T11	NoRel	true	failure	incident
+Relation	T7	T5	NoRel	true	failure	resulting
+Relation	T9	T11	NoRel	true	fire	incident
+Relation	T9	T15	NoRel	true	fire	lives
+Relation	T9	T6	NoRel	true	fire	fire
+Relation	T9	T7	NoRel	true	fire	failure

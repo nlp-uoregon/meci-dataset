@@ -1,0 +1,33 @@
+Text	küçükresim | İzmir Metropoliti Hrisostomos İZMIRLI AZIZ HRISOSTOMOS KALAFATIS ( _ Chrysostomos Kalafatis _ ; d. 1867 , Tirilye - ö. 1922 , İzmir ) , Rum din ve siyaset adamı .	I. Dünya Savaşı'ndan sonra İzmir'in Yunan işgali altında bulunduğu dönemde İzmir metropoliti idi .	Türk ordusunun Yunan işgaline son vermek üzere şehre girmesinden sonra halk tarafından linç edilerek öldürüldü .	4 Kasım 1922'de Rum Ortodoks Kilisesi tarafından Azîz mertebesine yükseltildi .	1867’de Tirilye ' ] ] dünyaya geldi .
+Event	T0	girmesinden	EVENT	328
+Event	T1	linç	EVENT	362
+Event	T2	öldürüldü	EVENT	376
+Event	T3	yükseltildi	EVENT	454
+Event	T4	geldi	EVENT	498
+Event	T5	I. Dünya Savaşı'ndan	EVENT	176
+Event	T6	işgali	EVENT	218
+Event	T7	işgaline	EVENT	296
+Relation	T1	T2	CauseEffect	true	linç	öldürüldü
+Relation	T2	T1	EffectCause	true	öldürüldü	linç
+Relation	T7	T0	CauseEffect	true	işgaline	girmesinden
+Relation	T0	T7	EffectCause	true	girmesinden	işgaline
+Relation	T0	T1	CauseEffect	true	girmesinden	linç
+Relation	T1	T0	EffectCause	true	linç	girmesinden
+Relation	T2	T3	CauseEffect	true	öldürüldü	yükseltildi
+Relation	T3	T2	EffectCause	true	yükseltildi	öldürüldü
+Relation	T0	T4	NoRel	true	girmesinden	geldi
+Relation	T2	T4	NoRel	true	öldürüldü	geldi
+Relation	T2	T5	NoRel	true	öldürüldü	I. Dünya Savaşı'ndan
+Relation	T3	T6	NoRel	true	yükseltildi	işgali
+Relation	T3	T7	NoRel	true	yükseltildi	işgaline
+Relation	T4	T6	NoRel	true	geldi	işgali
+Relation	T5	T4	NoRel	true	I. Dünya Savaşı'ndan	geldi
+Relation	T6	T0	NoRel	true	işgali	girmesinden
+Relation	T6	T2	NoRel	true	işgali	öldürüldü
+Relation	T6	T4	NoRel	true	işgali	geldi
+Relation	T6	T5	NoRel	true	işgali	I. Dünya Savaşı'ndan
+Relation	T6	T7	NoRel	true	işgali	işgaline
+Relation	T7	T1	NoRel	true	işgaline	linç
+Relation	T7	T2	NoRel	true	işgaline	öldürüldü
+Relation	T7	T3	NoRel	true	işgaline	yükseltildi
+Relation	T7	T6	NoRel	true	işgaline	işgali

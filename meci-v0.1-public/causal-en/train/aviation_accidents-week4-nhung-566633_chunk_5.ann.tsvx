@@ -1,0 +1,40 @@
+Text	- March 22 – Philippine Airlines Flight 137 , an Airbus A320 - 214 with 127 people on board , overshoots the end of the runway while landing at Bacolod City Domestic Airport in Bacolod in the Philippines , plowing through several houses .	All on board the airliner survive , but three people on the ground die ; 89 people are injured in the accident .	- April 2 – The Government of Slovakia establishes the Civil Aviation Authority of the Slovak Republic as Slovakia ′s national civil aviation authority .	- SATA International – the future Azores Airlines – which had not flown since 1994 when it was known as OceanAir , resumes flight operations .	- April 20 – Air France Flight 422 , a Boeing 727 , crashes into a mountain near Bogotá , Colombia , in foggy weather shortly after take off from El Dorado International Airport , killing all 53 people on board .
+Event	T0	overshoots	EVENT	94
+Event	T1	landing	EVENT	133
+Event	T2	survive	EVENT	265
+Event	T3	die	EVENT	306
+Event	T4	injured	EVENT	326
+Event	T5	accident	EVENT	341
+Event	T6	establishes	EVENT	391
+Event	T7	flown	EVENT	572
+Event	T8	operations	EVENT	636
+Event	T9	killing	EVENT	829
+Event	T10	plowing	EVENT	206
+Event	T11	crashes	EVENT	701
+Event	T12	take off	EVENT	781
+Relation	T0	T10	CauseEffect	true	overshoots	plowing
+Relation	T10	T0	EffectCause	true	plowing	overshoots
+Relation	T5	T2	CauseEffect	true	accident	survive
+Relation	T2	T5	EffectCause	true	survive	accident
+Relation	T5	T3	CauseEffect	true	accident	die
+Relation	T3	T5	EffectCause	true	die	accident
+Relation	T5	T4	CauseEffect	true	accident	injured
+Relation	T4	T5	EffectCause	true	injured	accident
+Relation	T11	T9	CauseEffect	true	crashes	killing
+Relation	T9	T11	EffectCause	true	killing	crashes
+Relation	T11	T8	NoRel	true	crashes	operations
+Relation	T12	T5	NoRel	true	take off	accident
+Relation	T3	T0	NoRel	true	die	overshoots
+Relation	T3	T2	NoRel	true	die	survive
+Relation	T3	T8	NoRel	true	die	operations
+Relation	T4	T10	NoRel	true	injured	plowing
+Relation	T4	T9	NoRel	true	injured	killing
+Relation	T5	T7	NoRel	true	accident	flown
+Relation	T6	T10	NoRel	true	establishes	plowing
+Relation	T7	T10	NoRel	true	flown	plowing
+Relation	T7	T4	NoRel	true	flown	injured
+Relation	T8	T3	NoRel	true	operations	die
+Relation	T8	T6	NoRel	true	operations	establishes
+Relation	T8	T7	NoRel	true	operations	flown
+Relation	T9	T1	NoRel	true	killing	landing
+Relation	T9	T2	NoRel	true	killing	survive

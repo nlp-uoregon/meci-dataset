@@ -1,0 +1,117 @@
+Text	Según más testigos presenciales , después de que la aeronave cayó en picada , alrededor de cinco explosiones pudieron ser oídas a un kilómetro ( 0.62mi ) .	El avión se invirtió , la nariz golpeó un hotel y el resto del avión impactó tres edificios , uno de ellos un salón de masajes repleto de gente , en un ángulo casi perpendicular .	Tras el impacto , el avión explotó y de acuerdo con los testigos parecía " una escena del infierno " , con cuerpos que eran expulsados hacia la calle .	Se trata del accidente de un Hércules C-130 más mortífero en Indonesia , superando el accidente de 1991 en Yakartadel este .	Asimismo , es el tercer accidente aéreo más mortífero en la provincia de Sumatradel norte , después del vuelo 152 de Garuda Indonesia y el vuelo 091 de Mandala Airlines , además de ser el segundo desastre aéreo en Indonesia en menos de seis meses , luego del accidente del vuelo 8501 de Indonesia AirAsia en diciembre del 2014 .
+Event	T1	oídas	EVENT	122
+Event	T2	invirtió	EVENT	168
+Event	T3	golpeó	EVENT	188
+Event	T4	impactó	EVENT	225
+Event	T5	impacto	EVENT	344
+Event	T6	explotó	EVENT	363
+Event	T7	expulsados	EVENT	460
+Event	T8	trata	EVENT	491
+Event	T9	accidente	EVENT	501
+Event	T10	superando	EVENT	561
+Event	T11	accidente	EVENT	574
+Event	T12	vuelo	EVENT	717
+Event	T13	vuelo	EVENT	752
+Event	T14	desastre	EVENT	809
+Event	T15	accidente	EVENT	872
+Event	T16	vuelo	EVENT	886
+Event	T17	cayó	EVENT	61
+Relation	T17	T3	CauseEffect	true	cayó	golpeó
+Relation	T3	T17	EffectCause	true	golpeó	cayó
+Relation	T17	T4	CauseEffect	true	cayó	impactó
+Relation	T4	T17	EffectCause	true	impactó	cayó
+Relation	T4	T6	CauseEffect	true	impactó	explotó
+Relation	T6	T4	EffectCause	true	explotó	impactó
+Relation	T1	T10	NoRel	true	oídas	superando
+Relation	T1	T12	NoRel	true	oídas	vuelo
+Relation	T1	T8	NoRel	true	oídas	trata
+Relation	T1	T9	NoRel	true	oídas	accidente
+Relation	T10	T11	NoRel	true	superando	accidente
+Relation	T10	T12	NoRel	true	superando	vuelo
+Relation	T10	T14	NoRel	true	superando	desastre
+Relation	T10	T15	NoRel	true	superando	accidente
+Relation	T10	T16	NoRel	true	superando	vuelo
+Relation	T10	T7	NoRel	true	superando	expulsados
+Relation	T10	T9	NoRel	true	superando	accidente
+Relation	T11	T1	NoRel	true	accidente	oídas
+Relation	T11	T10	NoRel	true	accidente	superando
+Relation	T11	T12	NoRel	true	accidente	vuelo
+Relation	T11	T13	NoRel	true	accidente	vuelo
+Relation	T11	T17	NoRel	true	accidente	cayó
+Relation	T11	T3	NoRel	true	accidente	golpeó
+Relation	T11	T4	NoRel	true	accidente	impactó
+Relation	T12	T1	NoRel	true	vuelo	oídas
+Relation	T12	T17	NoRel	true	vuelo	cayó
+Relation	T12	T4	NoRel	true	vuelo	impactó
+Relation	T12	T6	NoRel	true	vuelo	explotó
+Relation	T13	T17	NoRel	true	vuelo	cayó
+Relation	T13	T4	NoRel	true	vuelo	impactó
+Relation	T13	T5	NoRel	true	vuelo	impacto
+Relation	T14	T11	NoRel	true	desastre	accidente
+Relation	T14	T12	NoRel	true	desastre	vuelo
+Relation	T14	T15	NoRel	true	desastre	accidente
+Relation	T14	T6	NoRel	true	desastre	explotó
+Relation	T14	T7	NoRel	true	desastre	expulsados
+Relation	T14	T8	NoRel	true	desastre	trata
+Relation	T15	T1	NoRel	true	accidente	oídas
+Relation	T15	T11	NoRel	true	accidente	accidente
+Relation	T15	T16	NoRel	true	accidente	vuelo
+Relation	T15	T4	NoRel	true	accidente	impactó
+Relation	T15	T5	NoRel	true	accidente	impacto
+Relation	T15	T6	NoRel	true	accidente	explotó
+Relation	T15	T7	NoRel	true	accidente	expulsados
+Relation	T16	T12	NoRel	true	vuelo	vuelo
+Relation	T16	T15	NoRel	true	vuelo	accidente
+Relation	T16	T17	NoRel	true	vuelo	cayó
+Relation	T16	T2	NoRel	true	vuelo	invirtió
+Relation	T16	T3	NoRel	true	vuelo	golpeó
+Relation	T16	T6	NoRel	true	vuelo	explotó
+Relation	T17	T10	NoRel	true	cayó	superando
+Relation	T17	T16	NoRel	true	cayó	vuelo
+Relation	T17	T8	NoRel	true	cayó	trata
+Relation	T17	T9	NoRel	true	cayó	accidente
+Relation	T2	T10	NoRel	true	invirtió	superando
+Relation	T2	T13	NoRel	true	invirtió	vuelo
+Relation	T2	T15	NoRel	true	invirtió	accidente
+Relation	T2	T17	NoRel	true	invirtió	cayó
+Relation	T2	T6	NoRel	true	invirtió	explotó
+Relation	T3	T1	NoRel	true	golpeó	oídas
+Relation	T3	T10	NoRel	true	golpeó	superando
+Relation	T3	T12	NoRel	true	golpeó	vuelo
+Relation	T3	T13	NoRel	true	golpeó	vuelo
+Relation	T3	T15	NoRel	true	golpeó	accidente
+Relation	T3	T16	NoRel	true	golpeó	vuelo
+Relation	T3	T4	NoRel	true	golpeó	impactó
+Relation	T3	T6	NoRel	true	golpeó	explotó
+Relation	T3	T9	NoRel	true	golpeó	accidente
+Relation	T4	T13	NoRel	true	impactó	vuelo
+Relation	T4	T16	NoRel	true	impactó	vuelo
+Relation	T4	T5	NoRel	true	impactó	impacto
+Relation	T4	T7	NoRel	true	impactó	expulsados
+Relation	T5	T10	NoRel	true	impacto	superando
+Relation	T5	T11	NoRel	true	impacto	accidente
+Relation	T5	T3	NoRel	true	impacto	golpeó
+Relation	T5	T6	NoRel	true	impacto	explotó
+Relation	T5	T7	NoRel	true	impacto	expulsados
+Relation	T5	T9	NoRel	true	impacto	accidente
+Relation	T6	T12	NoRel	true	explotó	vuelo
+Relation	T6	T15	NoRel	true	explotó	accidente
+Relation	T6	T16	NoRel	true	explotó	vuelo
+Relation	T6	T2	NoRel	true	explotó	invirtió
+Relation	T6	T7	NoRel	true	explotó	expulsados
+Relation	T7	T1	NoRel	true	expulsados	oídas
+Relation	T7	T11	NoRel	true	expulsados	accidente
+Relation	T7	T13	NoRel	true	expulsados	vuelo
+Relation	T7	T15	NoRel	true	expulsados	accidente
+Relation	T7	T17	NoRel	true	expulsados	cayó
+Relation	T7	T3	NoRel	true	expulsados	golpeó
+Relation	T7	T8	NoRel	true	expulsados	trata
+Relation	T8	T10	NoRel	true	trata	superando
+Relation	T8	T7	NoRel	true	trata	expulsados
+Relation	T9	T10	NoRel	true	accidente	superando
+Relation	T9	T14	NoRel	true	accidente	desastre
+Relation	T9	T16	NoRel	true	accidente	vuelo
+Relation	T9	T3	NoRel	true	accidente	golpeó
+Relation	T9	T5	NoRel	true	accidente	impacto
+Relation	T9	T7	NoRel	true	accidente	expulsados
+Relation	T9	T8	NoRel	true	accidente	trata

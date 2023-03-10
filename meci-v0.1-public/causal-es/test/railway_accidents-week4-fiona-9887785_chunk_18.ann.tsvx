@@ -1,0 +1,135 @@
+Text	- Días después , Florencia Serranía fue relevada de la Dirección General del STC , quedando el Ingeniero Guillermo Calderón Aguilera como Director General , siendo ratificado en el Poder Legislativo de México a la semana siguiente	- : La cancillería de Azerbaiyán en México expresa sus condolencias por la tragedia .	- : El presidente de Bolivia Luis Arce dirigió su mensaje al presidente Andrés Manuel López Obrador , en donde ofreció sus condolencias por la muerte de 25 personas tras el colapso de un puente en la Línea 12 del Metro .	- : Justin Trudeau , primer ministro de Canadá , expresó sus condolencias y solidaridad con las víctimas del desplome .	- : El presidente de Corea del Sur Moon Jae-in también expresó su deseo de que “ el pueblo mexicano pueda recuperarse lo antes posibles del shock y el dolor ” causados por el accidente .
+Event	T0	relevada	EVENT	40
+Event	T1	quedando	EVENT	83
+Event	T2	ratificado	EVENT	164
+Event	T3	expresa	EVENT	274
+Event	T4	condolencias	EVENT	286
+Event	T5	tragedia	EVENT	306
+Event	T6	dirigió	EVENT	356
+Event	T7	mensaje	EVENT	367
+Event	T8	ofreció	EVENT	428
+Event	T9	condolencias	EVENT	440
+Event	T10	muerte	EVENT	460
+Event	T11	colapso	EVENT	490
+Event	T12	condolencias	EVENT	599
+Event	T13	desplome	EVENT	647
+Event	T14	shock	EVENT	798
+Event	T15	dolor	EVENT	809
+Event	T16	causados	EVENT	817
+Event	T17	accidente	EVENT	833
+Relation	T11	T10	CauseEffect	true	colapso	muerte
+Relation	T10	T11	EffectCause	true	muerte	colapso
+Relation	T0	T12	NoRel	true	relevada	condolencias
+Relation	T0	T14	NoRel	true	relevada	shock
+Relation	T0	T2	NoRel	true	relevada	ratificado
+Relation	T0	T3	NoRel	true	relevada	expresa
+Relation	T0	T9	NoRel	true	relevada	condolencias
+Relation	T1	T0	NoRel	true	quedando	relevada
+Relation	T1	T13	NoRel	true	quedando	desplome
+Relation	T1	T17	NoRel	true	quedando	accidente
+Relation	T1	T6	NoRel	true	quedando	dirigió
+Relation	T1	T9	NoRel	true	quedando	condolencias
+Relation	T10	T0	NoRel	true	muerte	relevada
+Relation	T10	T12	NoRel	true	muerte	condolencias
+Relation	T10	T4	NoRel	true	muerte	condolencias
+Relation	T10	T7	NoRel	true	muerte	mensaje
+Relation	T11	T1	NoRel	true	colapso	quedando
+Relation	T11	T12	NoRel	true	colapso	condolencias
+Relation	T11	T17	NoRel	true	colapso	accidente
+Relation	T11	T2	NoRel	true	colapso	ratificado
+Relation	T11	T4	NoRel	true	colapso	condolencias
+Relation	T11	T5	NoRel	true	colapso	tragedia
+Relation	T12	T0	NoRel	true	condolencias	relevada
+Relation	T12	T10	NoRel	true	condolencias	muerte
+Relation	T12	T11	NoRel	true	condolencias	colapso
+Relation	T12	T13	NoRel	true	condolencias	desplome
+Relation	T12	T3	NoRel	true	condolencias	expresa
+Relation	T12	T6	NoRel	true	condolencias	dirigió
+Relation	T12	T8	NoRel	true	condolencias	ofreció
+Relation	T12	T9	NoRel	true	condolencias	condolencias
+Relation	T13	T0	NoRel	true	desplome	relevada
+Relation	T13	T1	NoRel	true	desplome	quedando
+Relation	T13	T17	NoRel	true	desplome	accidente
+Relation	T13	T2	NoRel	true	desplome	ratificado
+Relation	T13	T4	NoRel	true	desplome	condolencias
+Relation	T13	T7	NoRel	true	desplome	mensaje
+Relation	T13	T8	NoRel	true	desplome	ofreció
+Relation	T14	T11	NoRel	true	shock	colapso
+Relation	T14	T15	NoRel	true	shock	dolor
+Relation	T14	T3	NoRel	true	shock	expresa
+Relation	T14	T5	NoRel	true	shock	tragedia
+Relation	T14	T6	NoRel	true	shock	dirigió
+Relation	T14	T7	NoRel	true	shock	mensaje
+Relation	T14	T9	NoRel	true	shock	condolencias
+Relation	T15	T11	NoRel	true	dolor	colapso
+Relation	T15	T17	NoRel	true	dolor	accidente
+Relation	T15	T3	NoRel	true	dolor	expresa
+Relation	T15	T4	NoRel	true	dolor	condolencias
+Relation	T15	T5	NoRel	true	dolor	tragedia
+Relation	T15	T9	NoRel	true	dolor	condolencias
+Relation	T16	T0	NoRel	true	causados	relevada
+Relation	T16	T12	NoRel	true	causados	condolencias
+Relation	T16	T17	NoRel	true	causados	accidente
+Relation	T16	T2	NoRel	true	causados	ratificado
+Relation	T16	T6	NoRel	true	causados	dirigió
+Relation	T16	T7	NoRel	true	causados	mensaje
+Relation	T17	T12	NoRel	true	accidente	condolencias
+Relation	T17	T13	NoRel	true	accidente	desplome
+Relation	T17	T16	NoRel	true	accidente	causados
+Relation	T17	T2	NoRel	true	accidente	ratificado
+Relation	T17	T4	NoRel	true	accidente	condolencias
+Relation	T17	T8	NoRel	true	accidente	ofreció
+Relation	T2	T0	NoRel	true	ratificado	relevada
+Relation	T2	T1	NoRel	true	ratificado	quedando
+Relation	T2	T11	NoRel	true	ratificado	colapso
+Relation	T2	T15	NoRel	true	ratificado	dolor
+Relation	T2	T17	NoRel	true	ratificado	accidente
+Relation	T2	T3	NoRel	true	ratificado	expresa
+Relation	T2	T5	NoRel	true	ratificado	tragedia
+Relation	T2	T6	NoRel	true	ratificado	dirigió
+Relation	T2	T7	NoRel	true	ratificado	mensaje
+Relation	T3	T1	NoRel	true	expresa	quedando
+Relation	T3	T11	NoRel	true	expresa	colapso
+Relation	T3	T15	NoRel	true	expresa	dolor
+Relation	T3	T2	NoRel	true	expresa	ratificado
+Relation	T3	T4	NoRel	true	expresa	condolencias
+Relation	T3	T8	NoRel	true	expresa	ofreció
+Relation	T3	T9	NoRel	true	expresa	condolencias
+Relation	T4	T1	NoRel	true	condolencias	quedando
+Relation	T4	T10	NoRel	true	condolencias	muerte
+Relation	T4	T11	NoRel	true	condolencias	colapso
+Relation	T4	T16	NoRel	true	condolencias	causados
+Relation	T4	T2	NoRel	true	condolencias	ratificado
+Relation	T4	T3	NoRel	true	condolencias	expresa
+Relation	T4	T7	NoRel	true	condolencias	mensaje
+Relation	T5	T10	NoRel	true	tragedia	muerte
+Relation	T5	T12	NoRel	true	tragedia	condolencias
+Relation	T5	T14	NoRel	true	tragedia	shock
+Relation	T5	T17	NoRel	true	tragedia	accidente
+Relation	T5	T7	NoRel	true	tragedia	mensaje
+Relation	T5	T8	NoRel	true	tragedia	ofreció
+Relation	T6	T0	NoRel	true	dirigió	relevada
+Relation	T6	T10	NoRel	true	dirigió	muerte
+Relation	T6	T11	NoRel	true	dirigió	colapso
+Relation	T6	T12	NoRel	true	dirigió	condolencias
+Relation	T6	T5	NoRel	true	dirigió	tragedia
+Relation	T6	T7	NoRel	true	dirigió	mensaje
+Relation	T6	T8	NoRel	true	dirigió	ofreció
+Relation	T7	T1	NoRel	true	mensaje	quedando
+Relation	T7	T11	NoRel	true	mensaje	colapso
+Relation	T7	T12	NoRel	true	mensaje	condolencias
+Relation	T7	T14	NoRel	true	mensaje	shock
+Relation	T7	T15	NoRel	true	mensaje	dolor
+Relation	T7	T16	NoRel	true	mensaje	causados
+Relation	T7	T2	NoRel	true	mensaje	ratificado
+Relation	T7	T3	NoRel	true	mensaje	expresa
+Relation	T8	T10	NoRel	true	ofreció	muerte
+Relation	T8	T11	NoRel	true	ofreció	colapso
+Relation	T8	T5	NoRel	true	ofreció	tragedia
+Relation	T9	T0	NoRel	true	condolencias	relevada
+Relation	T9	T13	NoRel	true	condolencias	desplome
+Relation	T9	T2	NoRel	true	condolencias	ratificado
+Relation	T9	T3	NoRel	true	condolencias	expresa
+Relation	T9	T4	NoRel	true	condolencias	condolencias
+Relation	T9	T6	NoRel	true	condolencias	dirigió
+Relation	T9	T8	NoRel	true	condolencias	ofreció

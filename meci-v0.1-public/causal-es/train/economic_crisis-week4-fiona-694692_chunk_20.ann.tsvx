@@ -1,0 +1,73 @@
+Text	Sobre las 16:00 el _ Seydlitz _ estaba fuera de peligro inminente , por lo que se detuvo para permitir el desembarco de Bödicker , que embarcó en el buque torpedero _ V28 _ para trasladarse a bordo del _ Lützow _ .	A las 04:50 del 25 de abril los cruceros de batalla germanos se estaban aproximando a Lowestoft cuando los cruceros ligeros _ Rostock _ y _ Elbing _ , que habían estado cubriendo el flanco del sur , divisaron a los cruceros ligeros y destructores de la Fuerza Harwich del comodoro Tyrwhitt .	Bödicker se negó a ser distraído por los buques británicos y en su lugar guió los cañones de sus barcos contra la localidad costera de Lowestoft .	Desde una distancia de 13 km , los cruceros de batalla alemanes destruyeron dos baterías costeras de 150 mm y 200 viviendas de la localidad inglesa .	Sobre las 05:20 los atacantes alemanes tomaron rumbo norte , en dirección a Yarmouth , a donde llegaron unos 20 minutos después .
+Event	T0	detuvo	EVENT	82
+Event	T1	permitir	EVENT	94
+Event	T2	desembarco	EVENT	106
+Event	T3	embarcó	EVENT	135
+Event	T4	trasladarse	EVENT	178
+Event	T5	aproximando	EVENT	287
+Event	T6	cubriendo	EVENT	384
+Event	T7	divisaron	EVENT	414
+Event	T8	negó	EVENT	519
+Event	T9	distraído	EVENT	530
+Event	T10	guió	EVENT	580
+Event	T11	batalla	EVENT	701
+Event	T12	destruyeron	EVENT	718
+Relation	T10	T12	CauseEffect	true	guió	destruyeron
+Relation	T12	T10	EffectCause	true	destruyeron	guió
+Relation	T0	T1	NoRel	true	detuvo	permitir
+Relation	T0	T11	NoRel	true	detuvo	batalla
+Relation	T0	T12	NoRel	true	detuvo	destruyeron
+Relation	T0	T2	NoRel	true	detuvo	desembarco
+Relation	T0	T3	NoRel	true	detuvo	embarcó
+Relation	T0	T4	NoRel	true	detuvo	trasladarse
+Relation	T0	T5	NoRel	true	detuvo	aproximando
+Relation	T0	T8	NoRel	true	detuvo	negó
+Relation	T1	T0	NoRel	true	permitir	detuvo
+Relation	T1	T10	NoRel	true	permitir	guió
+Relation	T10	T1	NoRel	true	guió	permitir
+Relation	T10	T5	NoRel	true	guió	aproximando
+Relation	T10	T6	NoRel	true	guió	cubriendo
+Relation	T10	T7	NoRel	true	guió	divisaron
+Relation	T10	T8	NoRel	true	guió	negó
+Relation	T11	T1	NoRel	true	batalla	permitir
+Relation	T11	T10	NoRel	true	batalla	guió
+Relation	T11	T3	NoRel	true	batalla	embarcó
+Relation	T11	T6	NoRel	true	batalla	cubriendo
+Relation	T11	T8	NoRel	true	batalla	negó
+Relation	T11	T9	NoRel	true	batalla	distraído
+Relation	T12	T1	NoRel	true	destruyeron	permitir
+Relation	T12	T8	NoRel	true	destruyeron	negó
+Relation	T2	T0	NoRel	true	desembarco	detuvo
+Relation	T2	T4	NoRel	true	desembarco	trasladarse
+Relation	T2	T5	NoRel	true	desembarco	aproximando
+Relation	T2	T6	NoRel	true	desembarco	cubriendo
+Relation	T2	T9	NoRel	true	desembarco	distraído
+Relation	T3	T1	NoRel	true	embarcó	permitir
+Relation	T3	T4	NoRel	true	embarcó	trasladarse
+Relation	T4	T10	NoRel	true	trasladarse	guió
+Relation	T4	T12	NoRel	true	trasladarse	destruyeron
+Relation	T4	T5	NoRel	true	trasladarse	aproximando
+Relation	T4	T8	NoRel	true	trasladarse	negó
+Relation	T5	T0	NoRel	true	aproximando	detuvo
+Relation	T5	T1	NoRel	true	aproximando	permitir
+Relation	T5	T6	NoRel	true	aproximando	cubriendo
+Relation	T6	T10	NoRel	true	cubriendo	guió
+Relation	T6	T12	NoRel	true	cubriendo	destruyeron
+Relation	T6	T5	NoRel	true	cubriendo	aproximando
+Relation	T6	T7	NoRel	true	cubriendo	divisaron
+Relation	T7	T0	NoRel	true	divisaron	detuvo
+Relation	T7	T12	NoRel	true	divisaron	destruyeron
+Relation	T7	T4	NoRel	true	divisaron	trasladarse
+Relation	T7	T5	NoRel	true	divisaron	aproximando
+Relation	T7	T8	NoRel	true	divisaron	negó
+Relation	T7	T9	NoRel	true	divisaron	distraído
+Relation	T8	T0	NoRel	true	negó	detuvo
+Relation	T8	T11	NoRel	true	negó	batalla
+Relation	T8	T5	NoRel	true	negó	aproximando
+Relation	T8	T6	NoRel	true	negó	cubriendo
+Relation	T9	T0	NoRel	true	distraído	detuvo
+Relation	T9	T1	NoRel	true	distraído	permitir
+Relation	T9	T12	NoRel	true	distraído	destruyeron
+Relation	T9	T2	NoRel	true	distraído	desembarco
+Relation	T9	T3	NoRel	true	distraído	embarcó
+Relation	T9	T7	NoRel	true	distraído	divisaron

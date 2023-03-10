@@ -1,0 +1,53 @@
+Text	I. Justinianus , kısa bir yas dönemine başlattı .	Depremini takip eden kırk gün boyunca tacını takmadı .	Deprem daha sonra yıllık yalvarışın liturjisinde anıldı .	Agathias ayrıca nüfusun tutumu üzerinde kısa süreli bir etki yarattığını iddia eder : zenginler yardımseverliğe yöneldi , şüpheliler dua etmeye yöneldi ve kötülük görünür bir çabası içinde erdeme yönlendirildi .	Agathias , kısa sürede herkesin eski tutumlarına döndüğünü bildirir .
+Event	T0	başlattı	EVENT	39
+Event	T2	takmadı	EVENT	95
+Event	T3	Deprem	EVENT	105
+Event	T4	anıldı	EVENT	154
+Event	T5	eder	EVENT	242
+Event	T8	yönlendirildi	EVENT	359
+Event	T9	bildirir	EVENT	434
+Event	T1	Depremini	EVENT	50
+Event	T10	yöneldi	EVENT	275
+Event	T6	yöneldi	EVENT	307
+Relation	T1	T0	CauseEffect	true	Depremini	başlattı
+Relation	T0	T1	EffectCause	true	başlattı	Depremini
+Relation	T0	T2	CauseEffect	true	başlattı	takmadı
+Relation	T2	T0	EffectCause	true	takmadı	başlattı
+Relation	T1	T10	CauseEffect	true	Depremini	yöneldi
+Relation	T10	T1	EffectCause	true	yöneldi	Depremini
+Relation	T1	T6	CauseEffect	true	Depremini	yöneldi
+Relation	T6	T1	EffectCause	true	yöneldi	Depremini
+Relation	T1	T8	CauseEffect	true	Depremini	yönlendirildi
+Relation	T8	T1	EffectCause	true	yönlendirildi	Depremini
+Relation	T10	T5	CauseEffect	true	yöneldi	eder
+Relation	T5	T10	EffectCause	true	eder	yöneldi
+Relation	T6	T5	CauseEffect	true	yöneldi	eder
+Relation	T5	T6	EffectCause	true	eder	yöneldi
+Relation	T8	T5	CauseEffect	true	yönlendirildi	eder
+Relation	T5	T8	EffectCause	true	eder	yönlendirildi
+Relation	T0	T10	NoRel	true	başlattı	yöneldi
+Relation	T0	T3	NoRel	true	başlattı	Deprem
+Relation	T0	T4	NoRel	true	başlattı	anıldı
+Relation	T0	T6	NoRel	true	başlattı	yöneldi
+Relation	T0	T8	NoRel	true	başlattı	yönlendirildi
+Relation	T1	T2	NoRel	true	Depremini	takmadı
+Relation	T1	T9	NoRel	true	Depremini	bildirir
+Relation	T10	T0	NoRel	true	yöneldi	başlattı
+Relation	T10	T8	NoRel	true	yöneldi	yönlendirildi
+Relation	T10	T9	NoRel	true	yöneldi	bildirir
+Relation	T2	T1	NoRel	true	takmadı	Depremini
+Relation	T2	T10	NoRel	true	takmadı	yöneldi
+Relation	T2	T4	NoRel	true	takmadı	anıldı
+Relation	T2	T6	NoRel	true	takmadı	yöneldi
+Relation	T3	T9	NoRel	true	Deprem	bildirir
+Relation	T4	T2	NoRel	true	anıldı	takmadı
+Relation	T4	T9	NoRel	true	anıldı	bildirir
+Relation	T6	T0	NoRel	true	yöneldi	başlattı
+Relation	T6	T4	NoRel	true	yöneldi	anıldı
+Relation	T8	T2	NoRel	true	yönlendirildi	takmadı
+Relation	T8	T6	NoRel	true	yönlendirildi	yöneldi
+Relation	T8	T9	NoRel	true	yönlendirildi	bildirir
+Relation	T9	T0	NoRel	true	bildirir	başlattı
+Relation	T9	T2	NoRel	true	bildirir	takmadı
+Relation	T9	T3	NoRel	true	bildirir	Deprem
+Relation	T9	T4	NoRel	true	bildirir	anıldı

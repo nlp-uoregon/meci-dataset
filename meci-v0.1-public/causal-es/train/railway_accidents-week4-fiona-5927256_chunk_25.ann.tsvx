@@ -1,0 +1,32 @@
+Text	- 23 de enero de 1920 .	En la línea Córdoba –_Bélmez , cerca de la estación de la Balanzona ( o Valenzona ) , situada en los límites del municipio de la capital cordobesa con el de Obejo , un tren mixto descarrila tras fallarle los frenos al descender una pendiente .	Al menos se produjeron 7 muertos y una veintena de heridos .	Algunas fuentes elevan la cifra de fallecidos a la veintena .	- 21 de junio de 1920 .
+Event	T0	fallarle	EVENT	219
+Event	T1	descender	EVENT	242
+Event	T2	produjeron	EVENT	280
+Event	T3	muertos	EVENT	293
+Event	T4	heridos	EVENT	319
+Event	T5	elevan	EVENT	345
+Event	T6	cifra	EVENT	355
+Event	T7	fallecidos	EVENT	364
+Event	T8	descarrila	EVENT	203
+Relation	T0	T8	CauseEffect	true	fallarle	descarrila
+Relation	T8	T0	EffectCause	true	descarrila	fallarle
+Relation	T8	T3	CauseEffect	true	descarrila	muertos
+Relation	T3	T8	EffectCause	true	muertos	descarrila
+Relation	T8	T4	CauseEffect	true	descarrila	heridos
+Relation	T4	T8	EffectCause	true	heridos	descarrila
+Relation	T0	T2	NoRel	true	fallarle	produjeron
+Relation	T1	T0	NoRel	true	descender	fallarle
+Relation	T1	T6	NoRel	true	descender	cifra
+Relation	T1	T7	NoRel	true	descender	fallecidos
+Relation	T1	T8	NoRel	true	descender	descarrila
+Relation	T3	T1	NoRel	true	muertos	descender
+Relation	T3	T6	NoRel	true	muertos	cifra
+Relation	T4	T0	NoRel	true	heridos	fallarle
+Relation	T4	T2	NoRel	true	heridos	produjeron
+Relation	T5	T1	NoRel	true	elevan	descender
+Relation	T5	T4	NoRel	true	elevan	heridos
+Relation	T5	T6	NoRel	true	elevan	cifra
+Relation	T6	T3	NoRel	true	cifra	muertos
+Relation	T6	T5	NoRel	true	cifra	elevan
+Relation	T7	T8	NoRel	true	fallecidos	descarrila
+Relation	T8	T7	NoRel	true	descarrila	fallecidos

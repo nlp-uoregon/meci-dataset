@@ -1,0 +1,48 @@
+Text	FRONTAL_KOLLISION PÅ GRØNNEHAVE STATION ( Helsingør ) .	Under indkørsel på Grønnehave Station HHGB den 15. juli 1996 kolliderede tog 136 fra Hornbæk frontalt med det udkørende tog 37 .	Det anslås at tog 37's hastighed var 10-15 km/t medens det modkørende 136 holdt stille eller næsten stille .	Ved kollisionen blev enkelte personer lettere kvæstet og der skete begrænsede materielle skader .	DSB's havarigruppe forestod undersøgelserne på vegne af Tilsynet med privatbanerne .
+Event	T0	indkørsel	EVENT	62
+Event	T1	kolliderede	EVENT	117
+Event	T2	anslås	EVENT	189
+Event	T4	kollisionen	EVENT	298
+Event	T5	kvæstet	EVENT	340
+Event	T6	skader	EVENT	383
+Event	T7	undersøgelserne	EVENT	420
+Event	T8	holdt stille	EVENT	259
+Event	T9	modkørende	EVENT	244
+Event	T10	hastighed	EVENT	208
+Event	T3	FRONTAL_KOLLISION	EVENT	0
+Relation	T4	T5	CauseEffect	true	kollisionen	kvæstet
+Relation	T5	T4	EffectCause	true	kvæstet	kollisionen
+Relation	T4	T6	CauseEffect	true	kollisionen	skader
+Relation	T6	T4	EffectCause	true	skader	kollisionen
+Relation	T1	T5	CauseEffect	true	kolliderede	kvæstet
+Relation	T5	T1	EffectCause	true	kvæstet	kolliderede
+Relation	T1	T6	CauseEffect	true	kolliderede	skader
+Relation	T6	T1	EffectCause	true	skader	kolliderede
+Relation	T3	T5	CauseEffect	true	FRONTAL_KOLLISION	kvæstet
+Relation	T5	T3	EffectCause	true	kvæstet	FRONTAL_KOLLISION
+Relation	T3	T6	CauseEffect	true	FRONTAL_KOLLISION	skader
+Relation	T6	T3	EffectCause	true	skader	FRONTAL_KOLLISION
+Relation	T0	T6	NoRel	true	indkørsel	skader
+Relation	T0	T9	NoRel	true	indkørsel	modkørende
+Relation	T1	T3	NoRel	true	kolliderede	FRONTAL_KOLLISION
+Relation	T1	T7	NoRel	true	kolliderede	undersøgelserne
+Relation	T10	T7	NoRel	true	hastighed	undersøgelserne
+Relation	T10	T8	NoRel	true	hastighed	holdt stille
+Relation	T2	T10	NoRel	true	anslås	hastighed
+Relation	T2	T8	NoRel	true	anslås	holdt stille
+Relation	T3	T1	NoRel	true	FRONTAL_KOLLISION	kolliderede
+Relation	T3	T8	NoRel	true	FRONTAL_KOLLISION	holdt stille
+Relation	T3	T9	NoRel	true	FRONTAL_KOLLISION	modkørende
+Relation	T4	T7	NoRel	true	kollisionen	undersøgelserne
+Relation	T5	T0	NoRel	true	kvæstet	indkørsel
+Relation	T5	T9	NoRel	true	kvæstet	modkørende
+Relation	T6	T0	NoRel	true	skader	indkørsel
+Relation	T6	T5	NoRel	true	skader	kvæstet
+Relation	T6	T8	NoRel	true	skader	holdt stille
+Relation	T7	T1	NoRel	true	undersøgelserne	kolliderede
+Relation	T8	T5	NoRel	true	holdt stille	kvæstet
+Relation	T9	T0	NoRel	true	modkørende	indkørsel
+Relation	T9	T10	NoRel	true	modkørende	hastighed
+Relation	T9	T3	NoRel	true	modkørende	FRONTAL_KOLLISION
+Relation	T9	T4	NoRel	true	modkørende	kollisionen
+Relation	T9	T7	NoRel	true	modkørende	undersøgelserne

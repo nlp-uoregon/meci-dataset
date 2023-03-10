@@ -1,0 +1,41 @@
+Text	Fırtınanın New York kadar kuzeyde bir alanı vurabileceğini söylediler .	Büyük dalgalar ve sualtı akıntıları öngörüldü , bu yüzden Amerikan Sahil Güvenlik Teşkilatı Kuzeydoğu ABD'de hazırlandı ve hazırlıklara yardım etti .	Massachusetts'teki Cod Burnu'nda , bir jet uçağı açıktaki gemilere birtakım uyarılarda bulundu .	Bir Sahil Güvenlik devriye gemisi arama ve kuratarma amacıyla kıyıya gönderildi .	Denizcilere fırtınada çok dikkatli olmaları söylendi .
+Event	T0	söylediler	EVENT	59
+Event	T1	öngörüldü	EVENT	108
+Event	T2	etti	EVENT	215
+Event	T3	bulundu	EVENT	309
+Event	T6	gönderildi	EVENT	388
+Event	T7	fırtınada	EVENT	413
+Event	T8	söylendi	EVENT	445
+Event	T9	Fırtınanın	EVENT	0
+Event	T10	hazırlandı	EVENT	181
+Relation	T9	T0	CauseEffect	true	Fırtınanın	söylediler
+Relation	T0	T9	EffectCause	true	söylediler	Fırtınanın
+Relation	T9	T1	CauseEffect	true	Fırtınanın	öngörüldü
+Relation	T1	T9	EffectCause	true	öngörüldü	Fırtınanın
+Relation	T1	T10	CauseEffect	true	öngörüldü	hazırlandı
+Relation	T10	T1	EffectCause	true	hazırlandı	öngörüldü
+Relation	T10	T2	CauseEffect	true	hazırlandı	etti
+Relation	T2	T10	EffectCause	true	etti	hazırlandı
+Relation	T1	T3	CauseEffect	true	öngörüldü	bulundu
+Relation	T3	T1	EffectCause	true	bulundu	öngörüldü
+Relation	T1	T6	CauseEffect	true	öngörüldü	gönderildi
+Relation	T6	T1	EffectCause	true	gönderildi	öngörüldü
+Relation	T1	T8	CauseEffect	true	öngörüldü	söylendi
+Relation	T8	T1	EffectCause	true	söylendi	öngörüldü
+Relation	T7	T8	CauseEffect	true	fırtınada	söylendi
+Relation	T8	T7	EffectCause	true	söylendi	fırtınada
+Relation	T0	T7	NoRel	true	söylediler	fırtınada
+Relation	T10	T6	NoRel	true	hazırlandı	gönderildi
+Relation	T10	T9	NoRel	true	hazırlandı	Fırtınanın
+Relation	T2	T1	NoRel	true	etti	öngörüldü
+Relation	T2	T6	NoRel	true	etti	gönderildi
+Relation	T2	T8	NoRel	true	etti	söylendi
+Relation	T3	T2	NoRel	true	bulundu	etti
+Relation	T3	T7	NoRel	true	bulundu	fırtınada
+Relation	T3	T8	NoRel	true	bulundu	söylendi
+Relation	T6	T10	NoRel	true	gönderildi	hazırlandı
+Relation	T7	T2	NoRel	true	fırtınada	etti
+Relation	T7	T9	NoRel	true	fırtınada	Fırtınanın
+Relation	T8	T0	NoRel	true	söylendi	söylediler
+Relation	T9	T6	NoRel	true	Fırtınanın	gönderildi
+Relation	T9	T8	NoRel	true	Fırtınanın	söylendi

@@ -1,0 +1,37 @@
+Text	NORTHWEST AIRLINES FLIGHT 5 was a flight from Miami International Airport to Minneapolis − Saint Paul International Airport , which , on January 4 , 1990 , suffered the loss of the number three ( starboard ) engine at in mid-flight over Madison , Florida .	The Boeing 727- 251 , operated by Northwest Airlines , took off from Miami at 08:15 EST on the morning of January 4 , 1990 .	About an hour later , at approximately 09:10 EST , the pilots reported hearing a loud bang towards the rear of the aircraft .	The 14 - year - old jet continued to fly normally , and the crew , not knowing that an engine had fallen off , flew for almost 50 minutes before carrying out a safe emergency landing at Tampa International Airport at 09:58 EST .	The engine , a Pratt & Whitney JT 8D - 15 , was found a day later in a field near Madison , Florida .
+Event	T0	flight	EVENT	34
+Event	T1	suffered	EVENT	156
+Event	T2	loss	EVENT	169
+Event	T3	operated	EVENT	279
+Event	T4	hearing	EVENT	453
+Event	T5	bang	EVENT	468
+Event	T6	continued	EVENT	532
+Event	T7	fly	EVENT	545
+Event	T8	knowing	EVENT	579
+Event	T9	flew	EVENT	619
+Event	T10	landing	EVENT	683
+Event	T11	found	EVENT	785
+Event	T12	took off	EVENT	312
+Event	T13	fallen off	EVENT	606
+Relation	T8	T6	CauseEffect	true	knowing	continued
+Relation	T6	T8	EffectCause	true	continued	knowing
+Relation	T13	T10	CauseEffect	true	fallen off	landing
+Relation	T10	T13	EffectCause	true	landing	fallen off
+Relation	T0	T11	NoRel	true	flight	found
+Relation	T1	T5	NoRel	true	suffered	bang
+Relation	T1	T8	NoRel	true	suffered	knowing
+Relation	T11	T9	NoRel	true	found	flew
+Relation	T12	T0	NoRel	true	took off	flight
+Relation	T12	T13	NoRel	true	took off	fallen off
+Relation	T12	T9	NoRel	true	took off	flew
+Relation	T2	T11	NoRel	true	loss	found
+Relation	T3	T0	NoRel	true	operated	flight
+Relation	T3	T11	NoRel	true	operated	found
+Relation	T4	T0	NoRel	true	hearing	flight
+Relation	T4	T8	NoRel	true	hearing	knowing
+Relation	T5	T13	NoRel	true	bang	fallen off
+Relation	T5	T8	NoRel	true	bang	knowing
+Relation	T6	T13	NoRel	true	continued	fallen off
+Relation	T6	T4	NoRel	true	continued	hearing
+Relation	T7	T5	NoRel	true	fly	bang
+Relation	T8	T0	NoRel	true	knowing	flight

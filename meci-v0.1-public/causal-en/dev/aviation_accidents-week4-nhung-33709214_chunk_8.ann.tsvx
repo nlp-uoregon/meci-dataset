@@ -1,0 +1,54 @@
+Text	| group= Note }} laid a foam blanket around the burning wreckage and sprayed foam on the fire .	He used all the foam without extinguishing the flames .	Two other fire tenders from neighbouring areas arrived to assist .	It was 90 minutes before the fire was extinguished .	After sunrise , police , firemen and undertakers worked for an hour to remove the bodies of the 18 people killed in the accident .
+Event	T0	laid	EVENT	17
+Event	T1	used	EVENT	99
+Event	T2	extinguishing	EVENT	125
+Event	T3	fire	EVENT	162
+Event	T4	arrived	EVENT	199
+Event	T5	assist	EVENT	210
+Event	T6	fire	EVENT	248
+Event	T7	extinguished	EVENT	257
+Event	T8	worked	EVENT	321
+Event	T9	remove	EVENT	343
+Event	T10	killed	EVENT	378
+Event	T11	accident	EVENT	392
+Event	T12	burning	EVENT	48
+Event	T13	fire	EVENT	89
+Event	T14	tenders	EVENT	167
+Event	T15	sunrise	EVENT	278
+Relation	T12	T0	CauseEffect	true	burning	laid
+Relation	T0	T12	EffectCause	true	laid	burning
+Relation	T13	T0	CauseEffect	true	fire	laid
+Relation	T0	T13	EffectCause	true	laid	fire
+Relation	T4	T5	CauseEffect	true	arrived	assist
+Relation	T5	T4	EffectCause	true	assist	arrived
+Relation	T8	T9	CauseEffect	true	worked	remove
+Relation	T9	T8	EffectCause	true	remove	worked
+Relation	T11	T10	CauseEffect	true	accident	killed
+Relation	T10	T11	EffectCause	true	killed	accident
+Relation	T1	T11	NoRel	true	used	accident
+Relation	T1	T13	NoRel	true	used	fire
+Relation	T1	T9	NoRel	true	used	remove
+Relation	T10	T8	NoRel	true	killed	worked
+Relation	T11	T15	NoRel	true	accident	sunrise
+Relation	T11	T3	NoRel	true	accident	fire
+Relation	T12	T13	NoRel	true	burning	fire
+Relation	T12	T2	NoRel	true	burning	extinguishing
+Relation	T13	T11	NoRel	true	fire	accident
+Relation	T13	T12	NoRel	true	fire	burning
+Relation	T13	T6	NoRel	true	fire	fire
+Relation	T14	T6	NoRel	true	tenders	fire
+Relation	T15	T6	NoRel	true	sunrise	fire
+Relation	T2	T1	NoRel	true	extinguishing	used
+Relation	T3	T13	NoRel	true	fire	fire
+Relation	T3	T4	NoRel	true	fire	arrived
+Relation	T3	T7	NoRel	true	fire	extinguished
+Relation	T4	T10	NoRel	true	arrived	killed
+Relation	T4	T3	NoRel	true	arrived	fire
+Relation	T6	T11	NoRel	true	fire	accident
+Relation	T7	T12	NoRel	true	extinguished	burning
+Relation	T7	T13	NoRel	true	extinguished	fire
+Relation	T7	T15	NoRel	true	extinguished	sunrise
+Relation	T8	T11	NoRel	true	worked	accident
+Relation	T8	T15	NoRel	true	worked	sunrise
+Relation	T8	T2	NoRel	true	worked	extinguishing
+Relation	T9	T1	NoRel	true	remove	used

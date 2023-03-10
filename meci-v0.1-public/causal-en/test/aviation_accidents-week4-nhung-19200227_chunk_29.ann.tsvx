@@ -1,0 +1,35 @@
+Text	23 December : LTV A - 7D Corsair II , _ 67-14586_ , while assigned to Eglin AFB , Florida 's 3246th Test Wing , Air Development & Test Center for mission support , suffers engine failure on take - off from Tallahassee Municipal Airport , Florida and makes forced landing , coming down largely intact .	Airframe is hauled back to Eglin AFB on a truck , where it is either scrapped or becomes a target hulk .	23 December : General Dynamics FB - 111A ,__68 – 290_ , crashes in the area of the Ashland forest in Maine , ~ 45 minutes after take - off from Loring AFB , Maine .	2 January : USMC McDonnell - Douglas F - 4J Phantom II , BuNo__155506_ , of VMFA -333 , crashes on approach to NAS Oceana , Virginia .	Both crew eject safely .
+Event	T0	assigned	EVENT	58
+Event	T1	landing	EVENT	263
+Event	T2	intact	EVENT	293
+Event	T3	scrapped	EVENT	371
+Event	T4	becomes	EVENT	383
+Event	T5	crashes	EVENT	463
+Event	T6	eject	EVENT	717
+Event	T7	suffers	EVENT	164
+Event	T8	take - off	EVENT	190
+Event	T9	hauled back	EVENT	314
+Event	T10	take - off	EVENT	535
+Event	T11	crashes	EVENT	660
+Relation	T7	T1	CauseEffect	true	suffers	landing
+Relation	T1	T7	EffectCause	true	landing	suffers
+Relation	T9	T3	CauseEffect	true	hauled back	scrapped
+Relation	T3	T9	EffectCause	true	scrapped	hauled back
+Relation	T9	T4	CauseEffect	true	hauled back	becomes
+Relation	T4	T9	EffectCause	true	becomes	hauled back
+Relation	T11	T6	CauseEffect	true	crashes	eject
+Relation	T6	T11	EffectCause	true	eject	crashes
+Relation	T2	T11	NoRel	true	intact	crashes
+Relation	T3	T0	NoRel	true	scrapped	assigned
+Relation	T3	T7	NoRel	true	scrapped	suffers
+Relation	T4	T2	NoRel	true	becomes	intact
+Relation	T4	T3	NoRel	true	becomes	scrapped
+Relation	T4	T6	NoRel	true	becomes	eject
+Relation	T5	T8	NoRel	true	crashes	take - off
+Relation	T6	T10	NoRel	true	eject	take - off
+Relation	T6	T4	NoRel	true	eject	becomes
+Relation	T6	T9	NoRel	true	eject	hauled back
+Relation	T7	T5	NoRel	true	suffers	crashes
+Relation	T7	T9	NoRel	true	suffers	hauled back
+Relation	T8	T10	NoRel	true	take - off	take - off
+Relation	T9	T6	NoRel	true	hauled back	eject

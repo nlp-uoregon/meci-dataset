@@ -1,0 +1,77 @@
+Text	As a result of this finding , the FAA ordered the servo valves to be replaced and new training protocol for pilots to handle unexpected movement of flight controls to be developed .	The FAA ordered an upgrade of all Boeing 737 rudder control systems by 12 November 2002 .	According to the series _ Mayday _ , the rudder issue had been corrected before construction started on the accident aircraft .	Nevertheless , the theory of a rudder malfunction was investigated with the possibility of corrosion of and / or debris getting stuck in the PCU , and was disproved .	SilkAir paid USD $ 10,000 compensation to each victim 's family , the maximum under the Warsaw Convention .
+Event	T0	finding	EVENT	20
+Event	T1	ordered	EVENT	38
+Event	T2	replaced	EVENT	69
+Event	T3	training	EVENT	86
+Event	T4	movement	EVENT	136
+Event	T5	developed	EVENT	170
+Event	T6	ordered	EVENT	190
+Event	T7	upgrade	EVENT	201
+Event	T8	series	EVENT	289
+Event	T9	corrected	EVENT	335
+Event	T10	accident	EVENT	380
+Event	T11	malfunction	EVENT	438
+Event	T12	investigated	EVENT	454
+Event	T13	corrosion	EVENT	491
+Event	T14	stuck	EVENT	528
+Event	T15	disproved	EVENT	555
+Event	T16	paid	EVENT	575
+Event	T17	compensation	EVENT	593
+Event	T18	handle	EVENT	118
+Event	T19	debris	EVENT	513
+Event	T20	theory	EVENT	419
+Event	T21	victim	EVENT	614
+Relation	T18	T2	CauseEffect	true	handle	replaced
+Relation	T2	T18	EffectCause	true	replaced	handle
+Relation	T18	T3	CauseEffect	true	handle	training
+Relation	T3	T18	EffectCause	true	training	handle
+Relation	T7	T18	CauseEffect	true	upgrade	handle
+Relation	T18	T7	EffectCause	true	handle	upgrade
+Relation	T13	T11	CauseEffect	true	corrosion	malfunction
+Relation	T11	T13	EffectCause	true	malfunction	corrosion
+Relation	T14	T11	CauseEffect	true	stuck	malfunction
+Relation	T11	T14	EffectCause	true	malfunction	stuck
+Relation	T20	T15	CauseEffect	true	theory	disproved
+Relation	T15	T20	EffectCause	true	disproved	theory
+Relation	T21	T17	CauseEffect	true	victim	compensation
+Relation	T17	T21	EffectCause	true	compensation	victim
+Relation	T0	T19	NoRel	true	finding	debris
+Relation	T0	T2	NoRel	true	finding	replaced
+Relation	T0	T8	NoRel	true	finding	series
+Relation	T1	T18	NoRel	true	ordered	handle
+Relation	T1	T6	NoRel	true	ordered	ordered
+Relation	T1	T9	NoRel	true	ordered	corrected
+Relation	T10	T18	NoRel	true	accident	handle
+Relation	T11	T21	NoRel	true	malfunction	victim
+Relation	T11	T7	NoRel	true	malfunction	upgrade
+Relation	T12	T1	NoRel	true	investigated	ordered
+Relation	T12	T21	NoRel	true	investigated	victim
+Relation	T12	T9	NoRel	true	investigated	corrected
+Relation	T13	T4	NoRel	true	corrosion	movement
+Relation	T14	T16	NoRel	true	stuck	paid
+Relation	T15	T11	NoRel	true	disproved	malfunction
+Relation	T16	T0	NoRel	true	paid	finding
+Relation	T16	T5	NoRel	true	paid	developed
+Relation	T16	T8	NoRel	true	paid	series
+Relation	T17	T10	NoRel	true	compensation	accident
+Relation	T17	T2	NoRel	true	compensation	replaced
+Relation	T18	T0	NoRel	true	handle	finding
+Relation	T18	T12	NoRel	true	handle	investigated
+Relation	T18	T20	NoRel	true	handle	theory
+Relation	T2	T20	NoRel	true	replaced	theory
+Relation	T2	T8	NoRel	true	replaced	series
+Relation	T20	T0	NoRel	true	theory	finding
+Relation	T20	T18	NoRel	true	theory	handle
+Relation	T21	T12	NoRel	true	victim	investigated
+Relation	T21	T16	NoRel	true	victim	paid
+Relation	T4	T21	NoRel	true	movement	victim
+Relation	T4	T8	NoRel	true	movement	series
+Relation	T5	T15	NoRel	true	developed	disproved
+Relation	T5	T8	NoRel	true	developed	series
+Relation	T5	T9	NoRel	true	developed	corrected
+Relation	T6	T14	NoRel	true	ordered	stuck
+Relation	T6	T2	NoRel	true	ordered	replaced
+Relation	T6	T8	NoRel	true	ordered	series
+Relation	T8	T19	NoRel	true	series	debris
+Relation	T8	T6	NoRel	true	series	ordered
+Relation	T9	T12	NoRel	true	corrected	investigated

@@ -1,0 +1,31 @@
+Text	1 Mayıs 1923’te işçi sınıfı tekrar şaha kalkıyordu .	Almanya’nın birçok şehrinde yapılan gösterilere 750.000 işçi katıldı .	Ruhr bölgesinde başlayan grev büyük bir etki yaratmıştı .	Bu grev boyunca bazı fabrikalarda işgaller gerçekleştirildi .	Bu grevler haziran ayında birçok yere yayıldı .
+Event	T0	kalkıyordu	EVENT	40
+Event	T1	katıldı	EVENT	114
+Event	T2	grev	EVENT	149
+Event	T3	yaratmıştı	EVENT	169
+Event	T4	grev	EVENT	185
+Event	T6	grevler	EVENT	247
+Event	T7	yayıldı	EVENT	282
+Event	T5	işgaller	EVENT	216
+Relation	T2	T3	CauseEffect	true	grev	yaratmıştı
+Relation	T3	T2	EffectCause	true	yaratmıştı	grev
+Relation	T4	T5	CauseEffect	true	grev	işgaller
+Relation	T5	T4	EffectCause	true	işgaller	grev
+Relation	T0	T2	CauseEffect	true	kalkıyordu	grev
+Relation	T2	T0	EffectCause	true	grev	kalkıyordu
+Relation	T0	T7	CauseEffect	true	kalkıyordu	yayıldı
+Relation	T7	T0	EffectCause	true	yayıldı	kalkıyordu
+Relation	T0	T3	NoRel	true	kalkıyordu	yaratmıştı
+Relation	T0	T6	NoRel	true	kalkıyordu	grevler
+Relation	T1	T2	NoRel	true	katıldı	grev
+Relation	T1	T3	NoRel	true	katıldı	yaratmıştı
+Relation	T2	T1	NoRel	true	grev	katıldı
+Relation	T3	T1	NoRel	true	yaratmıştı	katıldı
+Relation	T3	T4	NoRel	true	yaratmıştı	grev
+Relation	T4	T2	NoRel	true	grev	grev
+Relation	T4	T6	NoRel	true	grev	grevler
+Relation	T4	T7	NoRel	true	grev	yayıldı
+Relation	T5	T7	NoRel	true	işgaller	yayıldı
+Relation	T6	T2	NoRel	true	grevler	grev
+Relation	T6	T5	NoRel	true	grevler	işgaller
+Relation	T7	T4	NoRel	true	yayıldı	grev

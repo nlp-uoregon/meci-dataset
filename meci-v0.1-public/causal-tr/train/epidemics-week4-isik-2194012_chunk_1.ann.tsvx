@@ -1,0 +1,53 @@
+Text	2012 itibarıyla _ CIA World Factbook _ , 15- 49 yaş grubunda ÇIN HALK CUMHURIYETI'NDE HIV / AIDS ile yaşayan yetişkinlerin yüzde oranının % 0, 1 olduğu tahminine vardı ; bu değer Japonya'nınkiyle aynı ve Birleşik Krallık ( % 0, 2 ) ve Avusturya ( % 0, 3 ) gibi birçok Avrupa Birliği ülkesinden daha düşüktür .	2001'de yayımlanan bir Birleşmiş Milletler raporuna göre ülkede HIV'in yayılımındaki ana etkenler , uyuşturucu kullanıcıları arası iğne paylaşımı ve kan bağışı ile ilgili sorunlar .	Örneğin , 1990'lar boyunca Çin'in birçok kırsal bölgesinde yapılan hatalı kan toplama programları sonucunda yüksek sayıda insan HIV'le enfekte oldu .	Cinsel yolla bulaşım katlanarak artıyor .	Bu , UN raporunda 21. yüzyılın en savunmasız olarak görülen grupların hangileri olduğunu açığa vurmaktadır : " yaygın bilgi eksikliği , koruma beceri eksikliği , muazzam oranda içsel işçi göçü , temel sosyal olanaklardan yoksun azınlık toplulukları , göreli yoksulluk , gençlik ve cinsiyet eşitsizliği .
+Event	T2	yayılımındaki	EVENT	381
+Event	T3	paylaşımı	EVENT	446
+Event	T4	oldu	EVENT	635
+Event	T5	artıyor	EVENT	674
+Event	T6	göçü	EVENT	872
+Event	T7	yaşayan	EVENT	101
+Event	T8	vardı	EVENT	162
+Event	T9	bağışı	EVENT	463
+Event	T10	raporuna	EVENT	353
+Event	T1	programları	EVENT	578
+Relation	T3	T2	CauseEffect	true	paylaşımı	yayılımındaki
+Relation	T2	T3	EffectCause	true	yayılımındaki	paylaşımı
+Relation	T9	T2	CauseEffect	true	bağışı	yayılımındaki
+Relation	T2	T9	EffectCause	true	yayılımındaki	bağışı
+Relation	T1	T4	CauseEffect	true	programları	oldu
+Relation	T4	T1	EffectCause	true	oldu	programları
+Relation	T1	T5	NoRel	true	programları	artıyor
+Relation	T1	T6	NoRel	true	programları	göçü
+Relation	T1	T8	NoRel	true	programları	vardı
+Relation	T10	T2	NoRel	true	raporuna	yayılımındaki
+Relation	T10	T3	NoRel	true	raporuna	paylaşımı
+Relation	T10	T7	NoRel	true	raporuna	yaşayan
+Relation	T10	T9	NoRel	true	raporuna	bağışı
+Relation	T2	T1	NoRel	true	yayılımındaki	programları
+Relation	T2	T10	NoRel	true	yayılımındaki	raporuna
+Relation	T2	T5	NoRel	true	yayılımındaki	artıyor
+Relation	T2	T7	NoRel	true	yayılımındaki	yaşayan
+Relation	T2	T8	NoRel	true	yayılımındaki	vardı
+Relation	T3	T4	NoRel	true	paylaşımı	oldu
+Relation	T3	T5	NoRel	true	paylaşımı	artıyor
+Relation	T3	T7	NoRel	true	paylaşımı	yaşayan
+Relation	T3	T8	NoRel	true	paylaşımı	vardı
+Relation	T3	T9	NoRel	true	paylaşımı	bağışı
+Relation	T4	T2	NoRel	true	oldu	yayılımındaki
+Relation	T4	T3	NoRel	true	oldu	paylaşımı
+Relation	T5	T1	NoRel	true	artıyor	programları
+Relation	T5	T2	NoRel	true	artıyor	yayılımındaki
+Relation	T5	T3	NoRel	true	artıyor	paylaşımı
+Relation	T5	T4	NoRel	true	artıyor	oldu
+Relation	T6	T1	NoRel	true	göçü	programları
+Relation	T6	T4	NoRel	true	göçü	oldu
+Relation	T6	T7	NoRel	true	göçü	yaşayan
+Relation	T6	T9	NoRel	true	göçü	bağışı
+Relation	T7	T3	NoRel	true	yaşayan	paylaşımı
+Relation	T7	T4	NoRel	true	yaşayan	oldu
+Relation	T7	T5	NoRel	true	yaşayan	artıyor
+Relation	T7	T6	NoRel	true	yaşayan	göçü
+Relation	T8	T3	NoRel	true	vardı	paylaşımı
+Relation	T8	T6	NoRel	true	vardı	göçü
+Relation	T9	T1	NoRel	true	bağışı	programları
+Relation	T9	T7	NoRel	true	bağışı	yaşayan
+Relation	T9	T8	NoRel	true	bağışı	vardı

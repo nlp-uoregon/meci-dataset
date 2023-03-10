@@ -1,0 +1,46 @@
+Text	Bütün bu olan biteni gören papa , büyük bir üzüntü içinde , titreyerek İsa'nın çarmıha gerildiği haçın önüne gelir .	Burada diz çöküp İsa'ya yalvarmak isterken askerler gelir ve papayı vururlar ve papa ölür .	Fatima'nın üçüncü sırrı Katolikler için çok korkutucudur .	Bu sır 1917 yılında Lizbon'a yakın bir yer olan Fatima kasabasında " Meryem Ana " olarak , olağandışı bir olayla görünen bir kişi tarafından üç küçük çocuğa verilmiştir .	" Meryem Ana " çocuklara birkaç kere göründüğü yere gelmelerini ister .
+Event	T0	gören	EVENT	21
+Event	T1	titreyerek	EVENT	60
+Event	T2	gerildiği	EVENT	87
+Event	T3	gelir	EVENT	109
+Event	T4	çöküp	EVENT	128
+Event	T5	gelir	EVENT	169
+Event	T6	ölür	EVENT	202
+Event	T7	sır	EVENT	271
+Event	T8	verilmiştir	EVENT	425
+Event	T9	vururlar	EVENT	185
+Event	T10	olayla	EVENT	374
+Relation	T0	T1	CauseEffect	true	gören	titreyerek
+Relation	T1	T0	EffectCause	true	titreyerek	gören
+Relation	T9	T6	CauseEffect	true	vururlar	ölür
+Relation	T6	T9	EffectCause	true	ölür	vururlar
+Relation	T0	T2	NoRel	true	gören	gerildiği
+Relation	T0	T8	NoRel	true	gören	verilmiştir
+Relation	T1	T2	NoRel	true	titreyerek	gerildiği
+Relation	T1	T3	NoRel	true	titreyerek	gelir
+Relation	T1	T5	NoRel	true	titreyerek	gelir
+Relation	T1	T8	NoRel	true	titreyerek	verilmiştir
+Relation	T1	T9	NoRel	true	titreyerek	vururlar
+Relation	T10	T3	NoRel	true	olayla	gelir
+Relation	T10	T4	NoRel	true	olayla	çöküp
+Relation	T10	T8	NoRel	true	olayla	verilmiştir
+Relation	T10	T9	NoRel	true	olayla	vururlar
+Relation	T2	T0	NoRel	true	gerildiği	gören
+Relation	T2	T1	NoRel	true	gerildiği	titreyerek
+Relation	T2	T3	NoRel	true	gerildiği	gelir
+Relation	T4	T0	NoRel	true	çöküp	gören
+Relation	T4	T10	NoRel	true	çöküp	olayla
+Relation	T4	T3	NoRel	true	çöküp	gelir
+Relation	T4	T6	NoRel	true	çöküp	ölür
+Relation	T5	T3	NoRel	true	gelir	gelir
+Relation	T5	T9	NoRel	true	gelir	vururlar
+Relation	T6	T3	NoRel	true	ölür	gelir
+Relation	T6	T4	NoRel	true	ölür	çöküp
+Relation	T6	T8	NoRel	true	ölür	verilmiştir
+Relation	T7	T0	NoRel	true	sır	gören
+Relation	T7	T3	NoRel	true	sır	gelir
+Relation	T7	T4	NoRel	true	sır	çöküp
+Relation	T7	T9	NoRel	true	sır	vururlar
+Relation	T8	T3	NoRel	true	verilmiştir	gelir
+Relation	T8	T6	NoRel	true	verilmiştir	ölür
+Relation	T8	T9	NoRel	true	verilmiştir	vururlar

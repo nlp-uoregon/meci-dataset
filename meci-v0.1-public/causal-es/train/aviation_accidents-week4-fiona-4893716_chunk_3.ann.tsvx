@@ -1,0 +1,225 @@
+Text	La búsqueda fue detenida el 3 de agosto debido a que se aproximaba un tifón , pero fueron retomadas el 5 de agosto .	El 17 de agosto de 2011 , el equipo de búsqueda identificó la localización de treinta y nueve partes del avión , incluyendo la sección de cola que contenía así mismo la grabadora de datos y voz .	La Junta de Investigación de Accidentes de Aviación y Ferrocarriles de Corea del Sur ( ARAIB ) llevó a cabo la investigación , pero debido a la pérdida de ambos registradores de vuelo , no pudo determinar completamente las causas del incendio ni la secuencia exacta de eventos que llevaron al impacto con el mar .	A partir de la distribución del daño por fuego y calor en los escombros recuperados , se determinó que se inició un incendio en o cerca de una de las tarimas ULD que contenían mercancías peligrosas en el fuselaje trasero , pero no se encontró evidencia suficiente para determinar exactamente qué causó el incendio .	El fuego no fue contenido y se propagó rápidamente hacia el resto del fuselaje .
+Event	T0	búsqueda	EVENT	3
+Event	T1	detenida	EVENT	16
+Event	T2	retomadas	EVENT	90
+Event	T3	identificó	EVENT	165
+Event	T4	localización	EVENT	179
+Event	T5	Investigación	EVENT	325
+Event	T6	investigación	EVENT	424
+Event	T7	pérdida	EVENT	457
+Event	T8	determinar	EVENT	507
+Event	T9	incendio	EVENT	547
+Event	T10	eventos	EVENT	582
+Event	T11	impacto	EVENT	606
+Event	T12	distribución	EVENT	642
+Event	T13	daño	EVENT	659
+Event	T14	fuego	EVENT	668
+Event	T15	recuperados	EVENT	699
+Event	T16	determinó	EVENT	716
+Event	T17	inició	EVENT	733
+Event	T18	incendio	EVENT	743
+Event	T19	evidencia	EVENT	870
+Event	T20	determinar	EVENT	896
+Event	T21	causó	EVENT	923
+Event	T22	incendio	EVENT	932
+Event	T23	contenido	EVENT	959
+Event	T24	propagó	EVENT	974
+Relation	T1	T2	CauseEffect	true	detenida	retomadas
+Relation	T2	T1	EffectCause	true	retomadas	detenida
+Relation	T23	T24	CauseEffect	true	contenido	propagó
+Relation	T24	T23	EffectCause	true	propagó	contenido
+Relation	T0	T11	NoRel	true	búsqueda	impacto
+Relation	T0	T12	NoRel	true	búsqueda	distribución
+Relation	T0	T14	NoRel	true	búsqueda	fuego
+Relation	T0	T16	NoRel	true	búsqueda	determinó
+Relation	T0	T19	NoRel	true	búsqueda	evidencia
+Relation	T0	T21	NoRel	true	búsqueda	causó
+Relation	T0	T23	NoRel	true	búsqueda	contenido
+Relation	T0	T24	NoRel	true	búsqueda	propagó
+Relation	T0	T5	NoRel	true	búsqueda	Investigación
+Relation	T0	T6	NoRel	true	búsqueda	investigación
+Relation	T0	T7	NoRel	true	búsqueda	pérdida
+Relation	T0	T8	NoRel	true	búsqueda	determinar
+Relation	T1	T0	NoRel	true	detenida	búsqueda
+Relation	T1	T10	NoRel	true	detenida	eventos
+Relation	T1	T11	NoRel	true	detenida	impacto
+Relation	T1	T13	NoRel	true	detenida	daño
+Relation	T1	T16	NoRel	true	detenida	determinó
+Relation	T1	T21	NoRel	true	detenida	causó
+Relation	T1	T23	NoRel	true	detenida	contenido
+Relation	T1	T24	NoRel	true	detenida	propagó
+Relation	T1	T5	NoRel	true	detenida	Investigación
+Relation	T1	T6	NoRel	true	detenida	investigación
+Relation	T1	T7	NoRel	true	detenida	pérdida
+Relation	T1	T8	NoRel	true	detenida	determinar
+Relation	T1	T9	NoRel	true	detenida	incendio
+Relation	T10	T14	NoRel	true	eventos	fuego
+Relation	T10	T15	NoRel	true	eventos	recuperados
+Relation	T10	T24	NoRel	true	eventos	propagó
+Relation	T10	T3	NoRel	true	eventos	identificó
+Relation	T11	T0	NoRel	true	impacto	búsqueda
+Relation	T11	T17	NoRel	true	impacto	inició
+Relation	T11	T18	NoRel	true	impacto	incendio
+Relation	T11	T19	NoRel	true	impacto	evidencia
+Relation	T11	T21	NoRel	true	impacto	causó
+Relation	T11	T24	NoRel	true	impacto	propagó
+Relation	T11	T3	NoRel	true	impacto	identificó
+Relation	T11	T6	NoRel	true	impacto	investigación
+Relation	T12	T17	NoRel	true	distribución	inició
+Relation	T12	T18	NoRel	true	distribución	incendio
+Relation	T12	T20	NoRel	true	distribución	determinar
+Relation	T12	T21	NoRel	true	distribución	causó
+Relation	T12	T5	NoRel	true	distribución	Investigación
+Relation	T12	T6	NoRel	true	distribución	investigación
+Relation	T12	T7	NoRel	true	distribución	pérdida
+Relation	T12	T8	NoRel	true	distribución	determinar
+Relation	T13	T0	NoRel	true	daño	búsqueda
+Relation	T13	T14	NoRel	true	daño	fuego
+Relation	T13	T18	NoRel	true	daño	incendio
+Relation	T13	T19	NoRel	true	daño	evidencia
+Relation	T13	T2	NoRel	true	daño	retomadas
+Relation	T13	T20	NoRel	true	daño	determinar
+Relation	T13	T21	NoRel	true	daño	causó
+Relation	T13	T22	NoRel	true	daño	incendio
+Relation	T13	T4	NoRel	true	daño	localización
+Relation	T13	T9	NoRel	true	daño	incendio
+Relation	T14	T11	NoRel	true	fuego	impacto
+Relation	T14	T13	NoRel	true	fuego	daño
+Relation	T14	T17	NoRel	true	fuego	inició
+Relation	T14	T18	NoRel	true	fuego	incendio
+Relation	T14	T22	NoRel	true	fuego	incendio
+Relation	T14	T24	NoRel	true	fuego	propagó
+Relation	T14	T3	NoRel	true	fuego	identificó
+Relation	T15	T1	NoRel	true	recuperados	detenida
+Relation	T15	T11	NoRel	true	recuperados	impacto
+Relation	T15	T17	NoRel	true	recuperados	inició
+Relation	T15	T20	NoRel	true	recuperados	determinar
+Relation	T15	T21	NoRel	true	recuperados	causó
+Relation	T15	T3	NoRel	true	recuperados	identificó
+Relation	T15	T6	NoRel	true	recuperados	investigación
+Relation	T16	T11	NoRel	true	determinó	impacto
+Relation	T16	T18	NoRel	true	determinó	incendio
+Relation	T16	T2	NoRel	true	determinó	retomadas
+Relation	T16	T21	NoRel	true	determinó	causó
+Relation	T16	T23	NoRel	true	determinó	contenido
+Relation	T16	T4	NoRel	true	determinó	localización
+Relation	T16	T6	NoRel	true	determinó	investigación
+Relation	T16	T9	NoRel	true	determinó	incendio
+Relation	T17	T1	NoRel	true	inició	detenida
+Relation	T17	T13	NoRel	true	inició	daño
+Relation	T17	T18	NoRel	true	inició	incendio
+Relation	T17	T20	NoRel	true	inició	determinar
+Relation	T17	T21	NoRel	true	inició	causó
+Relation	T17	T24	NoRel	true	inició	propagó
+Relation	T17	T4	NoRel	true	inició	localización
+Relation	T17	T6	NoRel	true	inició	investigación
+Relation	T17	T7	NoRel	true	inició	pérdida
+Relation	T17	T9	NoRel	true	inició	incendio
+Relation	T18	T0	NoRel	true	incendio	búsqueda
+Relation	T18	T12	NoRel	true	incendio	distribución
+Relation	T18	T13	NoRel	true	incendio	daño
+Relation	T18	T15	NoRel	true	incendio	recuperados
+Relation	T18	T16	NoRel	true	incendio	determinó
+Relation	T18	T17	NoRel	true	incendio	inició
+Relation	T18	T20	NoRel	true	incendio	determinar
+Relation	T18	T7	NoRel	true	incendio	pérdida
+Relation	T19	T1	NoRel	true	evidencia	detenida
+Relation	T19	T10	NoRel	true	evidencia	eventos
+Relation	T19	T18	NoRel	true	evidencia	incendio
+Relation	T19	T24	NoRel	true	evidencia	propagó
+Relation	T19	T3	NoRel	true	evidencia	identificó
+Relation	T19	T8	NoRel	true	evidencia	determinar
+Relation	T19	T9	NoRel	true	evidencia	incendio
+Relation	T2	T0	NoRel	true	retomadas	búsqueda
+Relation	T2	T11	NoRel	true	retomadas	impacto
+Relation	T2	T13	NoRel	true	retomadas	daño
+Relation	T2	T16	NoRel	true	retomadas	determinó
+Relation	T2	T19	NoRel	true	retomadas	evidencia
+Relation	T2	T22	NoRel	true	retomadas	incendio
+Relation	T2	T3	NoRel	true	retomadas	identificó
+Relation	T2	T4	NoRel	true	retomadas	localización
+Relation	T2	T9	NoRel	true	retomadas	incendio
+Relation	T20	T11	NoRel	true	determinar	impacto
+Relation	T20	T13	NoRel	true	determinar	daño
+Relation	T20	T15	NoRel	true	determinar	recuperados
+Relation	T20	T16	NoRel	true	determinar	determinó
+Relation	T20	T19	NoRel	true	determinar	evidencia
+Relation	T20	T3	NoRel	true	determinar	identificó
+Relation	T20	T5	NoRel	true	determinar	Investigación
+Relation	T20	T7	NoRel	true	determinar	pérdida
+Relation	T21	T1	NoRel	true	causó	detenida
+Relation	T21	T10	NoRel	true	causó	eventos
+Relation	T21	T14	NoRel	true	causó	fuego
+Relation	T21	T16	NoRel	true	causó	determinó
+Relation	T21	T17	NoRel	true	causó	inició
+Relation	T21	T18	NoRel	true	causó	incendio
+Relation	T21	T5	NoRel	true	causó	Investigación
+Relation	T21	T6	NoRel	true	causó	investigación
+Relation	T21	T8	NoRel	true	causó	determinar
+Relation	T21	T9	NoRel	true	causó	incendio
+Relation	T22	T11	NoRel	true	incendio	impacto
+Relation	T22	T14	NoRel	true	incendio	fuego
+Relation	T22	T15	NoRel	true	incendio	recuperados
+Relation	T22	T17	NoRel	true	incendio	inició
+Relation	T22	T2	NoRel	true	incendio	retomadas
+Relation	T22	T21	NoRel	true	incendio	causó
+Relation	T22	T23	NoRel	true	incendio	contenido
+Relation	T22	T6	NoRel	true	incendio	investigación
+Relation	T22	T7	NoRel	true	incendio	pérdida
+Relation	T23	T10	NoRel	true	contenido	eventos
+Relation	T23	T17	NoRel	true	contenido	inició
+Relation	T23	T18	NoRel	true	contenido	incendio
+Relation	T23	T3	NoRel	true	contenido	identificó
+Relation	T24	T0	NoRel	true	propagó	búsqueda
+Relation	T24	T1	NoRel	true	propagó	detenida
+Relation	T24	T11	NoRel	true	propagó	impacto
+Relation	T24	T6	NoRel	true	propagó	investigación
+Relation	T24	T9	NoRel	true	propagó	incendio
+Relation	T3	T12	NoRel	true	identificó	distribución
+Relation	T3	T14	NoRel	true	identificó	fuego
+Relation	T3	T21	NoRel	true	identificó	causó
+Relation	T3	T22	NoRel	true	identificó	incendio
+Relation	T3	T4	NoRel	true	identificó	localización
+Relation	T3	T7	NoRel	true	identificó	pérdida
+Relation	T4	T0	NoRel	true	localización	búsqueda
+Relation	T4	T11	NoRel	true	localización	impacto
+Relation	T4	T12	NoRel	true	localización	distribución
+Relation	T4	T14	NoRel	true	localización	fuego
+Relation	T4	T3	NoRel	true	localización	identificó
+Relation	T4	T5	NoRel	true	localización	Investigación
+Relation	T5	T1	NoRel	true	Investigación	detenida
+Relation	T5	T11	NoRel	true	Investigación	impacto
+Relation	T5	T19	NoRel	true	Investigación	evidencia
+Relation	T5	T4	NoRel	true	Investigación	localización
+Relation	T5	T7	NoRel	true	Investigación	pérdida
+Relation	T6	T10	NoRel	true	investigación	eventos
+Relation	T6	T11	NoRel	true	investigación	impacto
+Relation	T6	T14	NoRel	true	investigación	fuego
+Relation	T6	T15	NoRel	true	investigación	recuperados
+Relation	T6	T16	NoRel	true	investigación	determinó
+Relation	T6	T18	NoRel	true	investigación	incendio
+Relation	T6	T20	NoRel	true	investigación	determinar
+Relation	T6	T24	NoRel	true	investigación	propagó
+Relation	T6	T5	NoRel	true	investigación	Investigación
+Relation	T6	T7	NoRel	true	investigación	pérdida
+Relation	T7	T0	NoRel	true	pérdida	búsqueda
+Relation	T7	T12	NoRel	true	pérdida	distribución
+Relation	T7	T13	NoRel	true	pérdida	daño
+Relation	T7	T15	NoRel	true	pérdida	recuperados
+Relation	T7	T18	NoRel	true	pérdida	incendio
+Relation	T7	T19	NoRel	true	pérdida	evidencia
+Relation	T7	T9	NoRel	true	pérdida	incendio
+Relation	T8	T11	NoRel	true	determinar	impacto
+Relation	T8	T14	NoRel	true	determinar	fuego
+Relation	T8	T17	NoRel	true	determinar	inició
+Relation	T8	T19	NoRel	true	determinar	evidencia
+Relation	T8	T2	NoRel	true	determinar	retomadas
+Relation	T8	T23	NoRel	true	determinar	contenido
+Relation	T8	T5	NoRel	true	determinar	Investigación
+Relation	T8	T6	NoRel	true	determinar	investigación
+Relation	T8	T9	NoRel	true	determinar	incendio
+Relation	T9	T14	NoRel	true	incendio	fuego
+Relation	T9	T15	NoRel	true	incendio	recuperados
+Relation	T9	T17	NoRel	true	incendio	inició
+Relation	T9	T22	NoRel	true	incendio	incendio
+Relation	T9	T3	NoRel	true	incendio	identificó

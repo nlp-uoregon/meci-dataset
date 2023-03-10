@@ -1,0 +1,57 @@
+Text	İskender Bey’i çok değerli bir müttefik olarak gören Venedikliler 20 Ağustos 1463 tarihinde iki ülke arasında barış antlaşması imzalarlar .	Antlaşmaya göre Arnavutluk karasularında Venedik donanmasının bulunmasına izin verilirken , Venediklilerin Osmanlılarla yapacakları herhangi bir antlaşmada Arnavutluk bağımsızlığının garanti edileceği karar altına alınır .	Osmanlılara karşı yeni bir haçlı seferi girişiminde bulunan Papa II . Pius 1464 yılı Ağustos ayında ölünce Ohri’de Osmanlılara saldırmış olan İskender Bey yalnız kalır .	1465 yılı Nisan ayındaki Vaikal Muharebesi’nde İskender Bey Balaban Paşa’ya karşı pirus zaferi olarak tanımlanabilecek bir galibiyet alır .	Savaşta yenilen Osmanlılar çok önemli Arnavut asillerini ele geçirmeyi başarır .
+Event	T0	alınır	EVENT	354
+Event	T2	ölünce	EVENT	463
+Event	T3	saldırmış	EVENT	490
+Event	T4	zaferi	EVENT	621
+Event	T5	alır	EVENT	666
+Event	T6	yenilen	EVENT	681
+Event	T7	başarır	EVENT	744
+Event	T8	imzalarlar	EVENT	127
+Event	T9	gören	EVENT	47
+Event	T10	kalır	EVENT	525
+Event	T1	Vaikal Muharebesi’nde	EVENT	558
+Relation	T9	T8	CauseEffect	true	gören	imzalarlar
+Relation	T8	T9	EffectCause	true	imzalarlar	gören
+Relation	T8	T0	CauseEffect	true	imzalarlar	alınır
+Relation	T0	T8	EffectCause	true	alınır	imzalarlar
+Relation	T2	T10	CauseEffect	true	ölünce	kalır
+Relation	T10	T2	EffectCause	true	kalır	ölünce
+Relation	T1	T4	CauseEffect	true	Vaikal Muharebesi’nde	zaferi
+Relation	T4	T1	EffectCause	true	zaferi	Vaikal Muharebesi’nde
+Relation	T1	T5	CauseEffect	true	Vaikal Muharebesi’nde	alır
+Relation	T5	T1	EffectCause	true	alır	Vaikal Muharebesi’nde
+Relation	T1	T7	CauseEffect	true	Vaikal Muharebesi’nde	başarır
+Relation	T7	T1	EffectCause	true	başarır	Vaikal Muharebesi’nde
+Relation	T1	T6	CauseEffect	true	Vaikal Muharebesi’nde	yenilen
+Relation	T6	T1	EffectCause	true	yenilen	Vaikal Muharebesi’nde
+Relation	T0	T1	NoRel	true	alınır	Vaikal Muharebesi’nde
+Relation	T0	T5	NoRel	true	alınır	alır
+Relation	T1	T2	NoRel	true	Vaikal Muharebesi’nde	ölünce
+Relation	T1	T8	NoRel	true	Vaikal Muharebesi’nde	imzalarlar
+Relation	T10	T0	NoRel	true	kalır	alınır
+Relation	T10	T1	NoRel	true	kalır	Vaikal Muharebesi’nde
+Relation	T10	T3	NoRel	true	kalır	saldırmış
+Relation	T10	T8	NoRel	true	kalır	imzalarlar
+Relation	T2	T1	NoRel	true	ölünce	Vaikal Muharebesi’nde
+Relation	T2	T7	NoRel	true	ölünce	başarır
+Relation	T2	T9	NoRel	true	ölünce	gören
+Relation	T3	T8	NoRel	true	saldırmış	imzalarlar
+Relation	T3	T9	NoRel	true	saldırmış	gören
+Relation	T4	T10	NoRel	true	zaferi	kalır
+Relation	T5	T0	NoRel	true	alır	alınır
+Relation	T5	T9	NoRel	true	alır	gören
+Relation	T6	T0	NoRel	true	yenilen	alınır
+Relation	T6	T2	NoRel	true	yenilen	ölünce
+Relation	T6	T4	NoRel	true	yenilen	zaferi
+Relation	T6	T7	NoRel	true	yenilen	başarır
+Relation	T6	T8	NoRel	true	yenilen	imzalarlar
+Relation	T7	T4	NoRel	true	başarır	zaferi
+Relation	T7	T8	NoRel	true	başarır	imzalarlar
+Relation	T8	T1	NoRel	true	imzalarlar	Vaikal Muharebesi’nde
+Relation	T8	T3	NoRel	true	imzalarlar	saldırmış
+Relation	T8	T5	NoRel	true	imzalarlar	alır
+Relation	T9	T1	NoRel	true	gören	Vaikal Muharebesi’nde
+Relation	T9	T2	NoRel	true	gören	ölünce
+Relation	T9	T3	NoRel	true	gören	saldırmış
+Relation	T9	T5	NoRel	true	gören	alır
+Relation	T9	T6	NoRel	true	gören	yenilen

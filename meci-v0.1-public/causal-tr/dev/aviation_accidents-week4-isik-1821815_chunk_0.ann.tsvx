@@ -1,0 +1,44 @@
+Text	VILLA CASTELLI HELIKOPTER KAZASI 9 Mart 2015 tarihinde , Arjantin'in kuzeybatısında La Rioja bölgesi Villa Castelli kasabasında meydana gelen kaza .	İki helikopterin çarpışması sonucu meydana gelen kazada 10 kişi öldü .	Helikopterler , Fransız televizyon kanalı TF1'de yayınlanan _ Dropped _ isimli yarışmanın çekilen bir bölümü için yarışmacıları taşımaktaydı .	Yarışmacılar arasında sekiz Fransız sporcuda mevcuttu : Florence Arthaud , Alain Bernard , Philippe Candeloro , Jeannie Longo , Anne - Flore Marxer , Camille Muffat , Alexis Vastine ve Sylvain Wiltord .	Bernard ve Wiltord kaza sırasında helikopterde değillerdi .
+Event	T1	kaza	EVENT	142
+Event	T2	kazada	EVENT	198
+Event	T3	öldü	EVENT	213
+Event	T4	yayınlanan	EVENT	269
+Event	T5	çekilen	EVENT	310
+Event	T6	taşımaktaydı	EVENT	348
+Event	T7	kaza	EVENT	585
+Event	T8	VILLA CASTELLI HELIKOPTER KAZASI	EVENT	0
+Event	T9	çarpışması	EVENT	166
+Relation	T9	T3	CauseEffect	true	çarpışması	öldü
+Relation	T3	T9	EffectCause	true	öldü	çarpışması
+Relation	T9	T2	CauseEffect	true	çarpışması	kazada
+Relation	T2	T9	EffectCause	true	kazada	çarpışması
+Relation	T2	T3	CauseEffect	true	kazada	öldü
+Relation	T3	T2	EffectCause	true	öldü	kazada
+Relation	T6	T3	CauseEffect	true	taşımaktaydı	öldü
+Relation	T3	T6	EffectCause	true	öldü	taşımaktaydı
+Relation	T5	T6	CauseEffect	true	çekilen	taşımaktaydı
+Relation	T6	T5	EffectCause	true	taşımaktaydı	çekilen
+Relation	T1	T3	NoRel	true	kaza	öldü
+Relation	T1	T7	NoRel	true	kaza	kaza
+Relation	T1	T8	NoRel	true	kaza	VILLA CASTELLI HELIKOPTER KAZASI
+Relation	T1	T9	NoRel	true	kaza	çarpışması
+Relation	T2	T5	NoRel	true	kazada	çekilen
+Relation	T3	T4	NoRel	true	öldü	yayınlanan
+Relation	T3	T5	NoRel	true	öldü	çekilen
+Relation	T3	T8	NoRel	true	öldü	VILLA CASTELLI HELIKOPTER KAZASI
+Relation	T4	T2	NoRel	true	yayınlanan	kazada
+Relation	T4	T3	NoRel	true	yayınlanan	öldü
+Relation	T5	T2	NoRel	true	çekilen	kazada
+Relation	T5	T3	NoRel	true	çekilen	öldü
+Relation	T5	T4	NoRel	true	çekilen	yayınlanan
+Relation	T5	T7	NoRel	true	çekilen	kaza
+Relation	T5	T9	NoRel	true	çekilen	çarpışması
+Relation	T6	T7	NoRel	true	taşımaktaydı	kaza
+Relation	T7	T2	NoRel	true	kaza	kazada
+Relation	T7	T4	NoRel	true	kaza	yayınlanan
+Relation	T7	T6	NoRel	true	kaza	taşımaktaydı
+Relation	T8	T1	NoRel	true	VILLA CASTELLI HELIKOPTER KAZASI	kaza
+Relation	T8	T6	NoRel	true	VILLA CASTELLI HELIKOPTER KAZASI	taşımaktaydı
+Relation	T8	T9	NoRel	true	VILLA CASTELLI HELIKOPTER KAZASI	çarpışması
+Relation	T9	T6	NoRel	true	çarpışması	taşımaktaydı
+Relation	T9	T7	NoRel	true	çarpışması	kaza

@@ -1,0 +1,61 @@
+Text	Tras la salida del cercanías un grupo de unas treinta personas optó por cruzar por las vías a pie .	A esa misma hora , tenía previsto recorrer sin parada por la otra vía un tren de viajeros de larga distancia Alaris 1202 procedente de Alicante y con destino Barcelona .	Era un Serie 490 de Renfe , que circulaba en hora a una velocidad de 139 km/h , inferior a la permitida de 150 km/h .	El Alaris se cruzó a unos ciento cincuenta metros del apeadero con el cercanías que salía en dirección contraria , por lo que bajó la intensidad de los focos para no deslumbrar al otro tren , según declaraciones del propio maquinista .	A las 23:23 llegó al apeadero y descubrió al grupo de personas cruzando la vía , por lo que activó la bocina y el freno de emergencia .
+Event	T0	salida	EVENT	8
+Event	T1	optó	EVENT	63
+Event	T2	cruzar	EVENT	72
+Event	T3	recorrer	EVENT	134
+Event	T4	parada	EVENT	147
+Event	T5	circulaba	EVENT	302
+Event	T6	cruzó	EVENT	401
+Event	T7	bajó	EVENT	514
+Event	T9	declaraciones	EVENT	586
+Event	T10	llegó	EVENT	636
+Event	T11	descubrió	EVENT	656
+Event	T12	cruzando	EVENT	687
+Event	T13	activó	EVENT	716
+Relation	T11	T13	CauseEffect	true	descubrió	activó
+Relation	T13	T11	EffectCause	true	activó	descubrió
+Relation	T0	T10	NoRel	true	salida	llegó
+Relation	T0	T11	NoRel	true	salida	descubrió
+Relation	T0	T4	NoRel	true	salida	parada
+Relation	T0	T6	NoRel	true	salida	cruzó
+Relation	T1	T12	NoRel	true	optó	cruzando
+Relation	T1	T2	NoRel	true	optó	cruzar
+Relation	T1	T3	NoRel	true	optó	recorrer
+Relation	T1	T5	NoRel	true	optó	circulaba
+Relation	T1	T6	NoRel	true	optó	cruzó
+Relation	T1	T7	NoRel	true	optó	bajó
+Relation	T10	T7	NoRel	true	llegó	bajó
+Relation	T10	T9	NoRel	true	llegó	declaraciones
+Relation	T11	T1	NoRel	true	descubrió	optó
+Relation	T11	T2	NoRel	true	descubrió	cruzar
+Relation	T11	T5	NoRel	true	descubrió	circulaba
+Relation	T11	T7	NoRel	true	descubrió	bajó
+Relation	T12	T0	NoRel	true	cruzando	salida
+Relation	T12	T2	NoRel	true	cruzando	cruzar
+Relation	T12	T9	NoRel	true	cruzando	declaraciones
+Relation	T13	T0	NoRel	true	activó	salida
+Relation	T13	T3	NoRel	true	activó	recorrer
+Relation	T13	T4	NoRel	true	activó	parada
+Relation	T13	T5	NoRel	true	activó	circulaba
+Relation	T13	T7	NoRel	true	activó	bajó
+Relation	T2	T3	NoRel	true	cruzar	recorrer
+Relation	T2	T7	NoRel	true	cruzar	bajó
+Relation	T2	T9	NoRel	true	cruzar	declaraciones
+Relation	T3	T12	NoRel	true	recorrer	cruzando
+Relation	T3	T2	NoRel	true	recorrer	cruzar
+Relation	T3	T6	NoRel	true	recorrer	cruzó
+Relation	T3	T7	NoRel	true	recorrer	bajó
+Relation	T4	T0	NoRel	true	parada	salida
+Relation	T4	T6	NoRel	true	parada	cruzó
+Relation	T4	T9	NoRel	true	parada	declaraciones
+Relation	T5	T6	NoRel	true	circulaba	cruzó
+Relation	T6	T9	NoRel	true	cruzó	declaraciones
+Relation	T7	T0	NoRel	true	bajó	salida
+Relation	T7	T1	NoRel	true	bajó	optó
+Relation	T7	T12	NoRel	true	bajó	cruzando
+Relation	T7	T13	NoRel	true	bajó	activó
+Relation	T7	T2	NoRel	true	bajó	cruzar
+Relation	T9	T10	NoRel	true	declaraciones	llegó
+Relation	T9	T13	NoRel	true	declaraciones	activó
+Relation	T9	T2	NoRel	true	declaraciones	cruzar
+Relation	T9	T4	NoRel	true	declaraciones	parada

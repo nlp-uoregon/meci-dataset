@@ -1,0 +1,46 @@
+Text	میانمار میں کورونا وائرس کی وبا اس سال مارچ پہلی لہر کے طور پر شروع ہوئی تھی ، جس کی وجہ سے میانمار سمیت دنیا بھر میں لاک ڈاؤن لاگو ہوا تھا ۔	ملک کے کاروبار پر اس کا کافی منفی اثر پڑا اور کئی لوگ اس قدر مجبور ہوئے کہ اپنی بقا کے لیے چوہے اور سانب کھانے لگے ۔	سائنس دانوں نے 6 نئے کورونا وائرس کا پتہ لگایا ہے ۔	یہ میانمار میں پائے جانے والے چمگاڈر کی تین اقسام میں پایا جاتا ہے ۔	یہ کورونا وائرس کی طرح ہیں ۔
+Event	T0	وبا	EVENT	28
+Event	T1	لہر	EVENT	49
+Event	T7	پائے	EVENT	326
+Event	T8	پایا	EVENT	365
+Event	T9	شروع	EVENT	63
+Event	T10	لاک ڈاؤن	EVENT	118
+Event	T2	اثر	EVENT	176
+Event	T3	مجبور	EVENT	203
+Event	T4	کھانے	EVENT	247
+Event	T5	پتہ	EVENT	296
+Relation	T10	T2	CauseEffect	true	لاک ڈاؤن	اثر
+Relation	T2	T10	EffectCause	true	اثر	لاک ڈاؤن
+Relation	T2	T3	CauseEffect	true	اثر	مجبور
+Relation	T3	T2	EffectCause	true	مجبور	اثر
+Relation	T0	T3	NoRel	true	وبا	مجبور
+Relation	T0	T7	NoRel	true	وبا	پائے
+Relation	T0	T8	NoRel	true	وبا	پایا
+Relation	T1	T4	NoRel	true	لہر	کھانے
+Relation	T1	T5	NoRel	true	لہر	پتہ
+Relation	T1	T8	NoRel	true	لہر	پایا
+Relation	T1	T9	NoRel	true	لہر	شروع
+Relation	T10	T3	NoRel	true	لاک ڈاؤن	مجبور
+Relation	T10	T4	NoRel	true	لاک ڈاؤن	کھانے
+Relation	T2	T7	NoRel	true	اثر	پائے
+Relation	T3	T1	NoRel	true	مجبور	لہر
+Relation	T3	T10	NoRel	true	مجبور	لاک ڈاؤن
+Relation	T3	T5	NoRel	true	مجبور	پتہ
+Relation	T4	T10	NoRel	true	کھانے	لاک ڈاؤن
+Relation	T4	T3	NoRel	true	کھانے	مجبور
+Relation	T4	T5	NoRel	true	کھانے	پتہ
+Relation	T5	T3	NoRel	true	پتہ	مجبور
+Relation	T5	T9	NoRel	true	پتہ	شروع
+Relation	T7	T1	NoRel	true	پائے	لہر
+Relation	T7	T3	NoRel	true	پائے	مجبور
+Relation	T7	T4	NoRel	true	پائے	کھانے
+Relation	T7	T5	NoRel	true	پائے	پتہ
+Relation	T8	T0	NoRel	true	پایا	وبا
+Relation	T8	T10	NoRel	true	پایا	لاک ڈاؤن
+Relation	T8	T2	NoRel	true	پایا	اثر
+Relation	T8	T3	NoRel	true	پایا	مجبور
+Relation	T8	T7	NoRel	true	پایا	پائے
+Relation	T9	T0	NoRel	true	شروع	وبا
+Relation	T9	T2	NoRel	true	شروع	اثر
+Relation	T9	T5	NoRel	true	شروع	پتہ
+Relation	T9	T7	NoRel	true	شروع	پائے

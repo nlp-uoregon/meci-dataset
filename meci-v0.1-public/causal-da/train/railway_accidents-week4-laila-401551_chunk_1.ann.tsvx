@@ -1,0 +1,72 @@
+Text	Strækningen mellem Vejle og Herning er enkeltsporet .	Togene - fra Fredericia hhv. Herning - skulle planmæssigt krydse hinanden på Jelling station .	Toget fra Herning satte - efter passagerudveksling - i gang fra Jelling station uden at have fået signal eller anden tilladelse til dette og kolliderede med det indkørende tog fra Fredericia ( Vejle ) , der havde fået signal til indkørsel på stationen .	Begge togs lokomotivførere nåede at bremse en smule før kollisionen , hvor togenes hastighed var ca. 50 km/t.	Togene bestod begge af togsæt Litra MR .
+Event	T0	Strækningen	EVENT	0
+Event	T1	krydse	EVENT	112
+Event	T2	satte	EVENT	167
+Event	T3	passagerudveksling	EVENT	181
+Event	T4	kolliderede	EVENT	290
+Event	T5	signal	EVENT	367
+Event	T6	indkørsel	EVENT	378
+Event	T7	nåede	EVENT	430
+Event	T8	bremse	EVENT	439
+Event	T9	kollisionen	EVENT	459
+Event	T10	bestod	EVENT	520
+Event	T11	signal	EVENT	247
+Event	T12	tilladelse	EVENT	266
+Event	T13	enkeltsporet	EVENT	39
+Relation	T13	T1	CauseEffect	true	enkeltsporet	krydse
+Relation	T1	T13	EffectCause	true	krydse	enkeltsporet
+Relation	T2	T4	CauseEffect	true	satte	kolliderede
+Relation	T4	T2	EffectCause	true	kolliderede	satte
+Relation	T0	T13	NoRel	true	Strækningen	enkeltsporet
+Relation	T0	T5	NoRel	true	Strækningen	signal
+Relation	T0	T7	NoRel	true	Strækningen	nåede
+Relation	T1	T11	NoRel	true	krydse	signal
+Relation	T1	T6	NoRel	true	krydse	indkørsel
+Relation	T10	T1	NoRel	true	bestod	krydse
+Relation	T10	T4	NoRel	true	bestod	kolliderede
+Relation	T11	T1	NoRel	true	signal	krydse
+Relation	T11	T8	NoRel	true	signal	bremse
+Relation	T12	T0	NoRel	true	tilladelse	Strækningen
+Relation	T12	T10	NoRel	true	tilladelse	bestod
+Relation	T12	T11	NoRel	true	tilladelse	signal
+Relation	T12	T5	NoRel	true	tilladelse	signal
+Relation	T12	T7	NoRel	true	tilladelse	nåede
+Relation	T12	T8	NoRel	true	tilladelse	bremse
+Relation	T12	T9	NoRel	true	tilladelse	kollisionen
+Relation	T13	T0	NoRel	true	enkeltsporet	Strækningen
+Relation	T13	T12	NoRel	true	enkeltsporet	tilladelse
+Relation	T13	T4	NoRel	true	enkeltsporet	kolliderede
+Relation	T13	T6	NoRel	true	enkeltsporet	indkørsel
+Relation	T2	T7	NoRel	true	satte	nåede
+Relation	T2	T8	NoRel	true	satte	bremse
+Relation	T3	T0	NoRel	true	passagerudveksling	Strækningen
+Relation	T3	T11	NoRel	true	passagerudveksling	signal
+Relation	T3	T6	NoRel	true	passagerudveksling	indkørsel
+Relation	T3	T8	NoRel	true	passagerudveksling	bremse
+Relation	T3	T9	NoRel	true	passagerudveksling	kollisionen
+Relation	T4	T1	NoRel	true	kolliderede	krydse
+Relation	T4	T10	NoRel	true	kolliderede	bestod
+Relation	T4	T12	NoRel	true	kolliderede	tilladelse
+Relation	T4	T3	NoRel	true	kolliderede	passagerudveksling
+Relation	T5	T0	NoRel	true	signal	Strækningen
+Relation	T5	T10	NoRel	true	signal	bestod
+Relation	T5	T12	NoRel	true	signal	tilladelse
+Relation	T5	T13	NoRel	true	signal	enkeltsporet
+Relation	T5	T2	NoRel	true	signal	satte
+Relation	T5	T4	NoRel	true	signal	kolliderede
+Relation	T5	T9	NoRel	true	signal	kollisionen
+Relation	T6	T11	NoRel	true	indkørsel	signal
+Relation	T6	T2	NoRel	true	indkørsel	satte
+Relation	T7	T12	NoRel	true	nåede	tilladelse
+Relation	T7	T3	NoRel	true	nåede	passagerudveksling
+Relation	T7	T5	NoRel	true	nåede	signal
+Relation	T7	T6	NoRel	true	nåede	indkørsel
+Relation	T8	T11	NoRel	true	bremse	signal
+Relation	T8	T12	NoRel	true	bremse	tilladelse
+Relation	T8	T13	NoRel	true	bremse	enkeltsporet
+Relation	T8	T3	NoRel	true	bremse	passagerudveksling
+Relation	T8	T4	NoRel	true	bremse	kolliderede
+Relation	T8	T6	NoRel	true	bremse	indkørsel
+Relation	T9	T0	NoRel	true	kollisionen	Strækningen
+Relation	T9	T1	NoRel	true	kollisionen	krydse
+Relation	T9	T2	NoRel	true	kollisionen	satte

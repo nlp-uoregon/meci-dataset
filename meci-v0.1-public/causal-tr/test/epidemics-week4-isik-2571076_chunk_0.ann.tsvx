@@ -1,0 +1,43 @@
+Text	BEYAZ SARAY KORONAVIRUS TIMI , Koronavirüs hastalığının ( COVID - 19 ) " İdarenin çabalarını izleme , önleme , içerme ve hafifletme çabalarını koordine eden ve denetleyen " ABD Dışişleri Bakanlığı'na bağlı timdir .	29 Ocak 2020'de kurulmuştur .	Tim'e ABD Başkan Yardımcısı Mike Pence başkanlık etmektedir .	Deborah Birx kriz yanıt koordinatörüdür .	küçükresim | Donald Trump ve Beyaz Saray Koronavirus Timi üyeleri 16 Mart 2020'de basına seslendi .
+Event	T1	kurulmuştur	EVENT	231
+Event	T2	etmektedir	EVENT	294
+Event	T4	seslendi	EVENT	438
+Event	T5	izleme	EVENT	93
+Event	T6	eden	EVENT	152
+Event	T7	denetleyen	EVENT	160
+Event	T8	önleme	EVENT	102
+Event	T9	içerme	EVENT	111
+Event	T10	hafifletme	EVENT	121
+Relation	T5	T6	CauseEffect	true	izleme	eden
+Relation	T6	T5	EffectCause	true	eden	izleme
+Relation	T5	T7	CauseEffect	true	izleme	denetleyen
+Relation	T7	T5	EffectCause	true	denetleyen	izleme
+Relation	T8	T6	CauseEffect	true	önleme	eden
+Relation	T6	T8	EffectCause	true	eden	önleme
+Relation	T8	T7	CauseEffect	true	önleme	denetleyen
+Relation	T7	T8	EffectCause	true	denetleyen	önleme
+Relation	T9	T6	CauseEffect	true	içerme	eden
+Relation	T6	T9	EffectCause	true	eden	içerme
+Relation	T9	T7	CauseEffect	true	içerme	denetleyen
+Relation	T7	T9	EffectCause	true	denetleyen	içerme
+Relation	T10	T6	CauseEffect	true	hafifletme	eden
+Relation	T6	T10	EffectCause	true	eden	hafifletme
+Relation	T10	T7	CauseEffect	true	hafifletme	denetleyen
+Relation	T7	T10	EffectCause	true	denetleyen	hafifletme
+Relation	T1	T6	NoRel	true	kurulmuştur	eden
+Relation	T1	T8	NoRel	true	kurulmuştur	önleme
+Relation	T10	T9	NoRel	true	hafifletme	içerme
+Relation	T2	T10	NoRel	true	etmektedir	hafifletme
+Relation	T2	T4	NoRel	true	etmektedir	seslendi
+Relation	T2	T8	NoRel	true	etmektedir	önleme
+Relation	T4	T2	NoRel	true	seslendi	etmektedir
+Relation	T4	T6	NoRel	true	seslendi	eden
+Relation	T5	T1	NoRel	true	izleme	kurulmuştur
+Relation	T5	T10	NoRel	true	izleme	hafifletme
+Relation	T5	T2	NoRel	true	izleme	etmektedir
+Relation	T5	T4	NoRel	true	izleme	seslendi
+Relation	T5	T8	NoRel	true	izleme	önleme
+Relation	T6	T2	NoRel	true	eden	etmektedir
+Relation	T7	T4	NoRel	true	denetleyen	seslendi
+Relation	T9	T1	NoRel	true	içerme	kurulmuştur
+Relation	T9	T5	NoRel	true	içerme	izleme

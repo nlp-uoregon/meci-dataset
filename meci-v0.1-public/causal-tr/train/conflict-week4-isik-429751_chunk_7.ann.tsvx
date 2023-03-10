@@ -1,0 +1,24 @@
+Text	bağlantı =https : / / tr .	wikipedia. org / wiki / Dosya : Je % C5 % 84cy1.jpg % 7Calt =A large group of Polish Prisoners of War | küçükresim | Polonya'nın Sovyet işgali sırasında Kızıl Ordu tarafından esir alınan Polonyalı askerler İşgalle beraber aynı süre zarfında Sovyetler'in Polonyalı sivil vatandaşlara karşı baskı ve zorlamaları da artmıştır .	Dönemin Polonya'sında zorunlu askerlik sistemi olduğu için , hayatının bir kesiminde askeriyede görev yapmış herkes NKVD tarafından savaş esiri olarak tutuklanmıştır .	Bu tutukluların arasında birçok üniversite mezunu eğitimli insan da vardı .	Polonya Milletine Karşı Suçları Kovuşturma Komisyonu'nun ( IPN ) tahminlerine göre , kabaca 320.000 Polonya vatandaşı Sovyetler Birliği'ne sürülmüştür ( bu rakam yaklaşık bazı tarihçilere göre 700.000 - 1. 000.000 arasındadır ) .
+Event	T0	işgali	EVENT	163
+Event	T1	alınan	EVENT	207
+Event	T2	İşgalle	EVENT	233
+Event	T5	artmıştır	EVENT	340
+Event	T6	tutuklanmıştır	EVENT	503
+Event	T7	sürülmüştür	EVENT	735
+Event	T8	War	EVENT	125
+Event	T3	yapmış	EVENT	454
+Relation	T0	T1	CauseEffect	true	işgali	alınan
+Relation	T1	T0	EffectCause	true	alınan	işgali
+Relation	T2	T5	CauseEffect	true	İşgalle	artmıştır
+Relation	T5	T2	EffectCause	true	artmıştır	İşgalle
+Relation	T3	T6	CauseEffect	true	yapmış	tutuklanmıştır
+Relation	T6	T3	EffectCause	true	tutuklanmıştır	yapmış
+Relation	T1	T2	NoRel	true	alınan	İşgalle
+Relation	T1	T3	NoRel	true	alınan	yapmış
+Relation	T2	T0	NoRel	true	İşgalle	işgali
+Relation	T3	T1	NoRel	true	yapmış	alınan
+Relation	T3	T2	NoRel	true	yapmış	İşgalle
+Relation	T5	T8	NoRel	true	artmıştır	War
+Relation	T6	T1	NoRel	true	tutuklanmıştır	alınan
+Relation	T7	T1	NoRel	true	sürülmüştür	alınan
+Relation	T8	T1	NoRel	true	War	alınan

@@ -1,0 +1,23 @@
+Text	Setenta feridos en choque de comboios y continuación de la misma noticia , artículos en _ Diario de Lisboa _ , 31 de enero de 1980 , portada y página 24 , en Archivo digital de la Fundación Mario Soares ( en portugués ) .	Oito feridos num choque de comboios perto de Santarem , artículo en el _ Diario de Lisboa _ , 17 de julio de 1980 , última página , en Archivo digital de la Fundación Mario Soares ( en portugués ) .	Trezentos feridos ligeiros no choque do Sudexpress com o foguete , artículo en el _ Diario de Lisboa _ , 25 de julio de 1981 , página 12 , en Archivo digital de la Fundación Mario Soares ( en portugués ) .	« Dos españoles , muertos en accidente ferroviario en Portugal » , artículo en _ ABC _ , edición Sevilla , 13 de septiembre de 1981 , página 5 .	Hemeroteca digital del diario ABC
+Event	T0	choque	EVENT	19
+Event	T1	continuación	EVENT	40
+Event	T2	noticia	EVENT	65
+Event	T3	choque	EVENT	239
+Event	T4	artículo	EVENT	278
+Event	T5	choque	EVENT	451
+Event	T6	muertos	EVENT	645
+Event	T7	accidente	EVENT	656
+Relation	T7	T6	CauseEffect	true	accidente	muertos
+Relation	T6	T7	EffectCause	true	muertos	accidente
+Relation	T1	T6	NoRel	true	continuación	muertos
+Relation	T1	T7	NoRel	true	continuación	accidente
+Relation	T2	T1	NoRel	true	noticia	continuación
+Relation	T3	T2	NoRel	true	choque	noticia
+Relation	T4	T0	NoRel	true	artículo	choque
+Relation	T4	T2	NoRel	true	artículo	noticia
+Relation	T4	T3	NoRel	true	artículo	choque
+Relation	T4	T7	NoRel	true	artículo	accidente
+Relation	T5	T2	NoRel	true	choque	noticia
+Relation	T5	T4	NoRel	true	choque	artículo
+Relation	T7	T1	NoRel	true	accidente	continuación
+Relation	T7	T3	NoRel	true	accidente	choque

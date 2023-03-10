@@ -1,0 +1,48 @@
+Text	A Chemins de fer de l ' État express from Cherbourg to Paris derails at between Saint - Élier and Conches - en - Ouche , and part of the train falls into the river Iton ; 36 people are killed and 68 injured .	- December 23 , 1933 –__ France __–	LAGNY - POMPONNE RAIL ACCIDENT : Rear - end collision of Paris - Nancy express and Paris - Strasbourg fast train between Lagny - sur - Marne and Pomponne ( Seine - et - Marne ) , 17 mi ( 23 km ) out of Paris .	204 are killed and 300 injured aboard the Nancy express as its 7 wooden coaches are smashed .	The driver of the Strasbourg train had passed a signal at danger in darkness and fog , but the " Crocodile " acoustic warning system was found to have failed because the contacts had iced over .
+Event	T0	derails	EVENT	61
+Event	T1	falls	EVENT	143
+Event	T10	passed	EVENT	588
+Event	T11	signal	EVENT	597
+Event	T12	danger	EVENT	607
+Event	T13	found	EVENT	686
+Event	T14	failed	EVENT	700
+Event	T2	killed	EVENT	185
+Event	T3	injured	EVENT	199
+Event	T5	collision	EVENT	289
+Event	T6	killed	EVENT	463
+Event	T7	injured	EVENT	478
+Event	T8	iced	EVENT	732
+Event	T9	smashed	EVENT	539
+Relation	T0	T1	CauseEffect	true	derails	falls
+Relation	T1	T0	EffectCause	true	falls	derails
+Relation	T1	T2	CauseEffect	true	falls	killed
+Relation	T2	T1	EffectCause	true	killed	falls
+Relation	T1	T3	CauseEffect	true	falls	injured
+Relation	T3	T1	EffectCause	true	injured	falls
+Relation	T9	T6	CauseEffect	true	smashed	killed
+Relation	T6	T9	EffectCause	true	killed	smashed
+Relation	T9	T7	CauseEffect	true	smashed	injured
+Relation	T7	T9	EffectCause	true	injured	smashed
+Relation	T8	T14	CauseEffect	true	iced	failed
+Relation	T14	T8	EffectCause	true	failed	iced
+Relation	T5	T7	CauseEffect	true	collision	injured
+Relation	T7	T5	EffectCause	true	injured	collision
+Relation	T5	T6	CauseEffect	true	collision	killed
+Relation	T6	T5	EffectCause	true	killed	collision
+Relation	T0	T6	NoRel	true	derails	killed
+Relation	T1	T12	NoRel	true	falls	danger
+Relation	T1	T13	NoRel	true	falls	found
+Relation	T10	T13	NoRel	true	passed	found
+Relation	T11	T0	NoRel	true	signal	derails
+Relation	T11	T13	NoRel	true	signal	found
+Relation	T11	T8	NoRel	true	signal	iced
+Relation	T12	T9	NoRel	true	danger	smashed
+Relation	T13	T8	NoRel	true	found	iced
+Relation	T2	T9	NoRel	true	killed	smashed
+Relation	T3	T5	NoRel	true	injured	collision
+Relation	T5	T0	NoRel	true	collision	derails
+Relation	T5	T12	NoRel	true	collision	danger
+Relation	T7	T14	NoRel	true	injured	failed
+Relation	T7	T2	NoRel	true	injured	killed
+Relation	T8	T0	NoRel	true	iced	derails
+Relation	T8	T5	NoRel	true	iced	collision

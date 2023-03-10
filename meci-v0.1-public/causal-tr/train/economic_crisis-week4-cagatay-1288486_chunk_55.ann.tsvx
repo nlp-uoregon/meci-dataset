@@ -1,0 +1,37 @@
+Text	Ama buna rağmen Komitern’in görüşü çerçevesinde “ işçi hükûmetleri ” kurmayı düşünüyordu .	Bu bağlamsa Saksonya ve Thüringe’de SPD’yle ortak koalisyona girdi ve de yerel hükûmete 3 bakan verdi .	Merkezi hükûmet bu yerel hükûmete karşı bir saldırı planı içindeydi .	20 Ekim’de eyalete ordu birliklerini yığmaya başladı .	KPD bunun üzerine genel grevi başlatma ve silahlı ayaklanma kararı verdi .
+Event	T1	girdi	EVENT	152
+Event	T2	verdi	EVENT	187
+Event	T4	başlatma	EVENT	350
+Event	T5	verdi	EVENT	387
+Event	T6	düşünüyordu	EVENT	77
+Event	T7	yığmaya	EVENT	302
+Event	T3	saldırı	EVENT	239
+Event	T8	ayaklanma	EVENT	370
+Relation	T6	T1	CauseEffect	true	düşünüyordu	girdi
+Relation	T1	T6	EffectCause	true	girdi	düşünüyordu
+Relation	T3	T7	CauseEffect	true	saldırı	yığmaya
+Relation	T7	T3	EffectCause	true	yığmaya	saldırı
+Relation	T7	T4	CauseEffect	true	yığmaya	başlatma
+Relation	T4	T7	EffectCause	true	başlatma	yığmaya
+Relation	T7	T8	CauseEffect	true	yığmaya	ayaklanma
+Relation	T8	T7	EffectCause	true	ayaklanma	yığmaya
+Relation	T7	T5	CauseEffect	true	yığmaya	verdi
+Relation	T5	T7	EffectCause	true	verdi	yığmaya
+Relation	T1	T2	NoRel	true	girdi	verdi
+Relation	T1	T3	NoRel	true	girdi	saldırı
+Relation	T1	T7	NoRel	true	girdi	yığmaya
+Relation	T2	T3	NoRel	true	verdi	saldırı
+Relation	T2	T4	NoRel	true	verdi	başlatma
+Relation	T3	T5	NoRel	true	saldırı	verdi
+Relation	T3	T6	NoRel	true	saldırı	düşünüyordu
+Relation	T4	T2	NoRel	true	başlatma	verdi
+Relation	T5	T1	NoRel	true	verdi	girdi
+Relation	T5	T4	NoRel	true	verdi	başlatma
+Relation	T5	T6	NoRel	true	verdi	düşünüyordu
+Relation	T5	T8	NoRel	true	verdi	ayaklanma
+Relation	T6	T3	NoRel	true	düşünüyordu	saldırı
+Relation	T6	T8	NoRel	true	düşünüyordu	ayaklanma
+Relation	T8	T1	NoRel	true	ayaklanma	girdi
+Relation	T8	T2	NoRel	true	ayaklanma	verdi
+Relation	T8	T5	NoRel	true	ayaklanma	verdi
+Relation	T8	T6	NoRel	true	ayaklanma	düşünüyordu

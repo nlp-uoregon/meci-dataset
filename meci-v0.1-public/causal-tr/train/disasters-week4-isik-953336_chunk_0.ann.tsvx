@@ -1,0 +1,40 @@
+Text	küçükresim | Avezzano'dan geriye kalan harabeler 1915 AVEZZANO DEPREMI , 30 Ağustos 1915 günü saat 8:00'da İtalya'da , L ' Aquila yakınlarındaki Avezzano kasabasında meydana gelmiştir .	Avezzano'nun çok büyük hasar gördüğü depremde yaklaşık 30,000 kişi ölmüştür .	küçükresim | Avezzano'da bulunan Orsini Kalesi'nin harabeleri Deprem bir dakika sürmesine rağmen etkileri çok büyük olmuştur .	Depremde tüm Avezzano kasabası yıkıldı .	Yalnızca Via XX . Settembre üzerinde bulunan birçok katlı bina ve Orsini Kalesi ayakta kaldı .
+Event	T0	gelmiştir	EVENT	174
+Event	T1	depremde	EVENT	223
+Event	T2	ölmüştür	EVENT	253
+Event	T3	Deprem	EVENT	326
+Event	T5	yıkıldı	EVENT	422
+Event	T6	DEPREMI	EVENT	63
+Event	T7	hasar	EVENT	209
+Event	T4	kaldı	EVENT	519
+Event	T8	olmuştur	EVENT	380
+Relation	T6	T7	CauseEffect	true	DEPREMI	hasar
+Relation	T7	T6	EffectCause	true	hasar	DEPREMI
+Relation	T6	T2	CauseEffect	true	DEPREMI	ölmüştür
+Relation	T2	T6	EffectCause	true	ölmüştür	DEPREMI
+Relation	T6	T5	CauseEffect	true	DEPREMI	yıkıldı
+Relation	T5	T6	EffectCause	true	yıkıldı	DEPREMI
+Relation	T6	T4	CauseEffect	true	DEPREMI	kaldı
+Relation	T4	T6	EffectCause	true	kaldı	DEPREMI
+Relation	T3	T8	CauseEffect	true	Deprem	olmuştur
+Relation	T8	T3	EffectCause	true	olmuştur	Deprem
+Relation	T0	T2	NoRel	true	gelmiştir	ölmüştür
+Relation	T0	T5	NoRel	true	gelmiştir	yıkıldı
+Relation	T0	T8	NoRel	true	gelmiştir	olmuştur
+Relation	T1	T3	NoRel	true	depremde	Deprem
+Relation	T1	T8	NoRel	true	depremde	olmuştur
+Relation	T2	T1	NoRel	true	ölmüştür	depremde
+Relation	T2	T3	NoRel	true	ölmüştür	Deprem
+Relation	T2	T8	NoRel	true	ölmüştür	olmuştur
+Relation	T3	T4	NoRel	true	Deprem	kaldı
+Relation	T3	T6	NoRel	true	Deprem	DEPREMI
+Relation	T4	T0	NoRel	true	kaldı	gelmiştir
+Relation	T4	T5	NoRel	true	kaldı	yıkıldı
+Relation	T5	T1	NoRel	true	yıkıldı	depremde
+Relation	T5	T2	NoRel	true	yıkıldı	ölmüştür
+Relation	T5	T3	NoRel	true	yıkıldı	Deprem
+Relation	T6	T8	NoRel	true	DEPREMI	olmuştur
+Relation	T7	T8	NoRel	true	hasar	olmuştur
+Relation	T8	T1	NoRel	true	olmuştur	depremde
+Relation	T8	T2	NoRel	true	olmuştur	ölmüştür
+Relation	T8	T7	NoRel	true	olmuştur	hasar

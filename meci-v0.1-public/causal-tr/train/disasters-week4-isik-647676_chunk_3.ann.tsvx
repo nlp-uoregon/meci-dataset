@@ -1,0 +1,45 @@
+Text	Su Kaynakları Bakanlığı 14 Haziran'da yaptığı açıklamada yaklaşık 1 milyon hektarlık tarım alanının kullanılamaz duruma geldiğini açıkladı .	En büyük zararın görüldüğü eyaletler Guangdong , Fujian , Jiangxi , Hunan ve Hubei'ydi .	25 Mayıs - 14 Haziran tarihleri_arasında 18 kişi yaşamını yitirirken selin etkilerinin yoğun biçimde duyumsandığı 17 kentte yaşayan 2.22 milyon kişi ise ağır zarar görmüştür .	415 mm olarak ölçülen ortalama yağış miktarı medya tarafından " deli yağmur " olarak adlandırılıyordu .	Shenzhen'deki 300 yer 15 Haziran tarihi itibarıyla su altında kalmıştı .
+Event	T0	açıklamada	EVENT	46
+Event	T1	açıkladı	EVENT	130
+Event	T2	görmüştür	EVENT	394
+Event	T3	ölçülen	EVENT	420
+Event	T4	yağış	EVENT	437
+Event	T5	yağmur	EVENT	475
+Event	T6	adlandırılıyordu	EVENT	491
+Event	T7	kalmıştı	EVENT	572
+Event	T8	selin	EVENT	299
+Event	T9	yitirirken	EVENT	288
+Relation	T8	T9	CauseEffect	true	selin	yitirirken
+Relation	T9	T8	EffectCause	true	yitirirken	selin
+Relation	T8	T2	CauseEffect	true	selin	görmüştür
+Relation	T2	T8	EffectCause	true	görmüştür	selin
+Relation	T0	T1	NoRel	true	açıklamada	açıkladı
+Relation	T0	T2	NoRel	true	açıklamada	görmüştür
+Relation	T0	T4	NoRel	true	açıklamada	yağış
+Relation	T0	T7	NoRel	true	açıklamada	kalmıştı
+Relation	T0	T8	NoRel	true	açıklamada	selin
+Relation	T1	T0	NoRel	true	açıkladı	açıklamada
+Relation	T1	T6	NoRel	true	açıkladı	adlandırılıyordu
+Relation	T1	T7	NoRel	true	açıkladı	kalmıştı
+Relation	T2	T6	NoRel	true	görmüştür	adlandırılıyordu
+Relation	T2	T9	NoRel	true	görmüştür	yitirirken
+Relation	T3	T1	NoRel	true	ölçülen	açıkladı
+Relation	T3	T2	NoRel	true	ölçülen	görmüştür
+Relation	T3	T6	NoRel	true	ölçülen	adlandırılıyordu
+Relation	T3	T7	NoRel	true	ölçülen	kalmıştı
+Relation	T3	T8	NoRel	true	ölçülen	selin
+Relation	T3	T9	NoRel	true	ölçülen	yitirirken
+Relation	T4	T1	NoRel	true	yağış	açıkladı
+Relation	T4	T6	NoRel	true	yağış	adlandırılıyordu
+Relation	T4	T7	NoRel	true	yağış	kalmıştı
+Relation	T5	T2	NoRel	true	yağmur	görmüştür
+Relation	T5	T9	NoRel	true	yağmur	yitirirken
+Relation	T6	T2	NoRel	true	adlandırılıyordu	görmüştür
+Relation	T6	T8	NoRel	true	adlandırılıyordu	selin
+Relation	T7	T3	NoRel	true	kalmıştı	ölçülen
+Relation	T7	T5	NoRel	true	kalmıştı	yağmur
+Relation	T8	T1	NoRel	true	selin	açıkladı
+Relation	T8	T4	NoRel	true	selin	yağış
+Relation	T8	T5	NoRel	true	selin	yağmur
+Relation	T9	T0	NoRel	true	yitirirken	açıklamada
+Relation	T9	T2	NoRel	true	yitirirken	görmüştür

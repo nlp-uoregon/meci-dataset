@@ -1,0 +1,23 @@
+Text	GEDIZ DEPREMI , 28 Mart 1970 tarihinde , mahallî saatla 23.00'ten az sonra , merkezi Kütahya'nın batısındaki Gediz yöresinde meydana gelen deprem .	Depremde Batı Anadolu sarsılmıştır .	Bu depremi daha başka sarsıntılar takip etmiş ve haftalar sonra dahi farklı büyüklükte sarsıntılar ve ufak depremler hissedilmiştir .	Depremin dış merkezi 39.2 ° N ve 29.5 ° E olarak verilmektedir .	Sarsıntının büyüklüğü Richter ölçüsüne göre 7,6 idi .
+Event	T0	DEPREMI	EVENT	6
+Event	T1	deprem	EVENT	139
+Event	T2	sarsılmıştır	EVENT	170
+Event	T3	depremi	EVENT	188
+Event	T4	etmiş	EVENT	225
+Event	T5	sarsıntılar	EVENT	272
+Event	T6	hissedilmiştir	EVENT	302
+Relation	T0	T2	CauseEffect	true	DEPREMI	sarsılmıştır
+Relation	T2	T0	EffectCause	true	sarsılmıştır	DEPREMI
+Relation	T0	T1	NoRel	true	DEPREMI	deprem
+Relation	T0	T6	NoRel	true	DEPREMI	hissedilmiştir
+Relation	T2	T3	NoRel	true	sarsılmıştır	depremi
+Relation	T2	T5	NoRel	true	sarsılmıştır	sarsıntılar
+Relation	T3	T0	NoRel	true	depremi	DEPREMI
+Relation	T4	T0	NoRel	true	etmiş	DEPREMI
+Relation	T4	T2	NoRel	true	etmiş	sarsılmıştır
+Relation	T4	T3	NoRel	true	etmiş	depremi
+Relation	T5	T0	NoRel	true	sarsıntılar	DEPREMI
+Relation	T5	T4	NoRel	true	sarsıntılar	etmiş
+Relation	T6	T0	NoRel	true	hissedilmiştir	DEPREMI
+Relation	T6	T2	NoRel	true	hissedilmiştir	sarsılmıştır
+Relation	T6	T5	NoRel	true	hissedilmiştir	sarsıntılar

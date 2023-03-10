@@ -1,0 +1,44 @@
+Text	Başta İstanbul olmak üzere Kocaeli , Sakarya , Yalova , Tekirdağ , Düzce , Balıkesir , Çanakkale ve Bursa'da yüz yüze eğitime bir gün ara verildi .	İstanbul Valisi Ali Yerlikaya , trafik seyir ve can güvenliği için 29 Kasım saat 23:00'dan 30 Kasım 18:00'a kadar şehir genelinde motokuryelik yapılamayacağını , motorsiklet ve elektrikli scooterlerın kullanılmasının yasaklandığını ilan etti .	Getir ve Yemeksepeti , fırtına nedeniyle İstanbul'daki tüm motosikletli teslimat hizmetlerini durdurduğunu açıkladı .	İstanbul Üniversitesi ve Marmara Üniversitesi olumsuz hava koşulları nedeniyle yüz yüze eğitime bir gün ara verildiğini , 30 Kasım'daki tüm sınavların iptal edildiğini ve eğitime uzaktan öğretim yöntemiyle devam edileceğini duyurdu .	30 Kasım'da Türk Hava Yolları lodos fırtınası nedeniyle Anadolu'dan İstanbul Havalimanı'na yapılan tüm yurtiçi uçuş seferlerini geçici olarak durdurduğunu duyurdu .
+Event	T1	verildi	EVENT	138
+Event	T3	etti	EVENT	385
+Event	T4	fırtına	EVENT	415
+Event	T5	açıkladı	EVENT	499
+Event	T6	verildiğini	EVENT	618
+Event	T8	duyurdu	EVENT	734
+Event	T9	fırtınası	EVENT	780
+Event	T10	duyurdu	EVENT	899
+Event	T2	edildiğini	EVENT	667
+Relation	T4	T3	CauseEffect	true	fırtına	etti
+Relation	T3	T4	EffectCause	true	etti	fırtına
+Relation	T4	T1	CauseEffect	true	fırtına	verildi
+Relation	T1	T4	EffectCause	true	verildi	fırtına
+Relation	T4	T5	CauseEffect	true	fırtına	açıkladı
+Relation	T5	T4	EffectCause	true	açıkladı	fırtına
+Relation	T4	T8	CauseEffect	true	fırtına	duyurdu
+Relation	T8	T4	EffectCause	true	duyurdu	fırtına
+Relation	T4	T10	CauseEffect	true	fırtına	duyurdu
+Relation	T10	T4	EffectCause	true	duyurdu	fırtına
+Relation	T9	T10	CauseEffect	true	fırtınası	duyurdu
+Relation	T10	T9	EffectCause	true	duyurdu	fırtınası
+Relation	T1	T10	NoRel	true	verildi	duyurdu
+Relation	T1	T2	NoRel	true	verildi	edildiğini
+Relation	T1	T9	NoRel	true	verildi	fırtınası
+Relation	T2	T10	NoRel	true	edildiğini	duyurdu
+Relation	T2	T4	NoRel	true	edildiğini	fırtına
+Relation	T2	T5	NoRel	true	edildiğini	açıkladı
+Relation	T3	T10	NoRel	true	etti	duyurdu
+Relation	T5	T10	NoRel	true	açıkladı	duyurdu
+Relation	T5	T3	NoRel	true	açıkladı	etti
+Relation	T5	T9	NoRel	true	açıkladı	fırtınası
+Relation	T6	T4	NoRel	true	verildiğini	fırtına
+Relation	T6	T5	NoRel	true	verildiğini	açıkladı
+Relation	T6	T8	NoRel	true	verildiğini	duyurdu
+Relation	T6	T9	NoRel	true	verildiğini	fırtınası
+Relation	T8	T1	NoRel	true	duyurdu	verildi
+Relation	T8	T3	NoRel	true	duyurdu	etti
+Relation	T8	T5	NoRel	true	duyurdu	açıkladı
+Relation	T8	T6	NoRel	true	duyurdu	verildiğini
+Relation	T8	T9	NoRel	true	duyurdu	fırtınası
+Relation	T9	T1	NoRel	true	fırtınası	verildi
+Relation	T9	T2	NoRel	true	fırtınası	edildiğini
+Relation	T9	T5	NoRel	true	fırtınası	açıkladı

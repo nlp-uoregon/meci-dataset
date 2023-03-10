@@ -1,0 +1,39 @@
+Text	Anadolu'nun kuzeybatısındaki Marmara Denizi bölgesinin aktif tektoniği , sismik yüzey faylanmaları ile birçok büyük deprem üreten sağ yanal atılımlı Kuzey Anadolu Fay Zonu ( KAF ) tarafından domine edilir .	KAF'taki sağ yanal faylanma İzmit'in batısına kadar devam eder , ancak Marmara Denizi'nde birkaç paralel alt kol üzerine dağılır .	Marmara Denizi'ndeki sismik yansıma araştırmaları , büyük normal bileşenlere sahip birçok fay ortaya çıkarmakta ve kenarlarında normal faylanma mekanizmalı depremler görülmektedir .	Dünyanın ve günümüzde Türkiye'nin en aktif fay hatlarından birisi olarak kabul edilen Kuzey Anadolu Fay Hattı , batıda Ege Denizi'nden başlayıp doğuda İran - Türkiye sınırına kadar 1500 km uzunlukta sağ - yanal atılımlı olarak uzanmaktadır .	KAF tarihte ve günümüzde birçok can kaybı ve maddi kayıp ile sonuçlanan yıkıcı depremler üretmiştir .
+Event	T0	faylanmaları	EVENT	86
+Event	T1	üreten	EVENT	123
+Event	T10	üretmiştir	EVENT	851
+Event	T12	depremler	EVENT	494
+Event	T3	faylanma	EVENT	226
+Event	T5	araştırmaları	EVENT	374
+Event	T6	çıkarmakta	EVENT	439
+Event	T9	kayıp	EVENT	813
+Relation	T0	T1	CauseEffect	true	faylanmaları	üreten
+Relation	T1	T0	EffectCause	true	üreten	faylanmaları
+Relation	T5	T6	CauseEffect	true	araştırmaları	çıkarmakta
+Relation	T6	T5	EffectCause	true	çıkarmakta	araştırmaları
+Relation	T3	T12	CauseEffect	true	faylanma	depremler
+Relation	T12	T3	EffectCause	true	depremler	faylanma
+Relation	T12	T9	CauseEffect	true	depremler	kayıp
+Relation	T9	T12	EffectCause	true	kayıp	depremler
+Relation	T3	T10	CauseEffect	true	faylanma	üretmiştir
+Relation	T10	T3	EffectCause	true	üretmiştir	faylanma
+Relation	T10	T9	CauseEffect	true	üretmiştir	kayıp
+Relation	T9	T10	EffectCause	true	kayıp	üretmiştir
+Relation	T0	T12	CauseEffect	true	faylanmaları	depremler
+Relation	T12	T0	EffectCause	true	depremler	faylanmaları
+Relation	T0	T5	NoRel	true	faylanmaları	araştırmaları
+Relation	T0	T6	NoRel	true	faylanmaları	çıkarmakta
+Relation	T0	T9	NoRel	true	faylanmaları	kayıp
+Relation	T1	T3	NoRel	true	üreten	faylanma
+Relation	T1	T6	NoRel	true	üreten	çıkarmakta
+Relation	T1	T9	NoRel	true	üreten	kayıp
+Relation	T10	T6	NoRel	true	üretmiştir	çıkarmakta
+Relation	T5	T10	NoRel	true	araştırmaları	üretmiştir
+Relation	T5	T9	NoRel	true	araştırmaları	kayıp
+Relation	T6	T10	NoRel	true	çıkarmakta	üretmiştir
+Relation	T6	T12	NoRel	true	çıkarmakta	depremler
+Relation	T6	T3	NoRel	true	çıkarmakta	faylanma
+Relation	T6	T9	NoRel	true	çıkarmakta	kayıp
+Relation	T9	T0	NoRel	true	kayıp	faylanmaları
+Relation	T9	T1	NoRel	true	kayıp	üreten
+Relation	T9	T5	NoRel	true	kayıp	araştırmaları

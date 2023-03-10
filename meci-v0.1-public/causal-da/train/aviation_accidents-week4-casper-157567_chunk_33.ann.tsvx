@@ -1,0 +1,32 @@
+Text	Kun at stålbjælkerne blev tilstrækkeligt svækket .	Stål begynder at miste sin styrke allerede ved 450 grader .	Ved 600 grader mister stålet omkring 50 % af sin bæreevne og ved 1000 grader har det kun omkring 10 % styrke tilbage .	Desuden var jetbrændstof langt fra det eneste der brændte i bygningerne , hvor alskens inventar , møbler , papir , eksplosive rengøringsmidler , maling , etc. var med til at vedligeholde brande der ifølge NIST lokalt nåede helt op på over 1000 grader .	Derudover blev stålets bæreevne undermineret af de store temperaturforskelle i de enkelte stålbjælker , som kunne nå op på flere hundrede grader .
+Event	T0	svækket	EVENT	41
+Event	T1	begynder	EVENT	56
+Event	T2	miste	EVENT	68
+Event	T3	mister	EVENT	126
+Event	T4	brændte	EVENT	280
+Event	T5	brande	EVENT	417
+Event	T6	nåede	EVENT	447
+Event	T7	undermineret	EVENT	515
+Relation	T2	T0	CauseEffect	true	miste	svækket
+Relation	T0	T2	EffectCause	true	svækket	miste
+Relation	T3	T0	CauseEffect	true	mister	svækket
+Relation	T0	T3	EffectCause	true	svækket	mister
+Relation	T7	T0	CauseEffect	true	undermineret	svækket
+Relation	T0	T7	EffectCause	true	svækket	undermineret
+Relation	T1	T5	NoRel	true	begynder	brande
+Relation	T1	T7	NoRel	true	begynder	undermineret
+Relation	T2	T1	NoRel	true	miste	begynder
+Relation	T2	T3	NoRel	true	miste	mister
+Relation	T2	T6	NoRel	true	miste	nåede
+Relation	T4	T3	NoRel	true	brændte	mister
+Relation	T4	T5	NoRel	true	brændte	brande
+Relation	T4	T6	NoRel	true	brændte	nåede
+Relation	T5	T2	NoRel	true	brande	miste
+Relation	T5	T3	NoRel	true	brande	mister
+Relation	T5	T6	NoRel	true	brande	nåede
+Relation	T5	T7	NoRel	true	brande	undermineret
+Relation	T6	T0	NoRel	true	nåede	svækket
+Relation	T6	T2	NoRel	true	nåede	miste
+Relation	T6	T7	NoRel	true	nåede	undermineret
+Relation	T7	T2	NoRel	true	undermineret	miste
+Relation	T7	T3	NoRel	true	undermineret	mister

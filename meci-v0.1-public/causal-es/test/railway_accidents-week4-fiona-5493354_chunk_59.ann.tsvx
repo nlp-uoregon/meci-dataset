@@ -1,0 +1,41 @@
+Text	Parte de la composición cayó al río Túa .	Se produjo al menos un muerto y probablemente numerosos heridos entre los pasajeros .	- 11 DE AGOSTO : Un automóvil es arrollado por un tren cerca de la estación de Curia , en el municipio de Anadia .	Los cinco ocupantes del vehículo arrollado resultaron muertos .	- 1929 -___11 DE ENERO : Tres pasajeros resultan heridos leves en lisboa como consecuencia del descarrilamiento de un tren procedente de la línea del Norte cuando efectuaba su entrada en la estación de Santa Apolónia
+Event	T0	cayó	EVENT	24
+Event	T1	produjo	EVENT	45
+Event	T2	muerto	EVENT	65
+Event	T3	heridos	EVENT	98
+Event	T4	arrollado	EVENT	161
+Event	T5	muertos	EVENT	297
+Event	T6	descarrilamiento	EVENT	402
+Event	T7	efectuaba	EVENT	470
+Event	T8	entrada	EVENT	483
+Relation	T4	T5	CauseEffect	true	arrollado	muertos
+Relation	T5	T4	EffectCause	true	muertos	arrollado
+Relation	T0	T2	CauseEffect	true	cayó	muerto
+Relation	T2	T0	EffectCause	true	muerto	cayó
+Relation	T0	T3	CauseEffect	true	cayó	heridos
+Relation	T3	T0	EffectCause	true	heridos	cayó
+Relation	T0	T4	NoRel	true	cayó	arrollado
+Relation	T0	T8	NoRel	true	cayó	entrada
+Relation	T1	T2	NoRel	true	produjo	muerto
+Relation	T1	T5	NoRel	true	produjo	muertos
+Relation	T1	T7	NoRel	true	produjo	efectuaba
+Relation	T2	T5	NoRel	true	muerto	muertos
+Relation	T2	T7	NoRel	true	muerto	efectuaba
+Relation	T2	T8	NoRel	true	muerto	entrada
+Relation	T3	T5	NoRel	true	heridos	muertos
+Relation	T3	T6	NoRel	true	heridos	descarrilamiento
+Relation	T3	T7	NoRel	true	heridos	efectuaba
+Relation	T4	T1	NoRel	true	arrollado	produjo
+Relation	T4	T2	NoRel	true	arrollado	muerto
+Relation	T4	T3	NoRel	true	arrollado	heridos
+Relation	T5	T1	NoRel	true	muertos	produjo
+Relation	T5	T3	NoRel	true	muertos	heridos
+Relation	T6	T0	NoRel	true	descarrilamiento	cayó
+Relation	T6	T2	NoRel	true	descarrilamiento	muerto
+Relation	T6	T8	NoRel	true	descarrilamiento	entrada
+Relation	T7	T0	NoRel	true	efectuaba	cayó
+Relation	T7	T1	NoRel	true	efectuaba	produjo
+Relation	T7	T3	NoRel	true	efectuaba	heridos
+Relation	T8	T1	NoRel	true	entrada	produjo
+Relation	T8	T3	NoRel	true	entrada	heridos
+Relation	T8	T7	NoRel	true	entrada	efectuaba

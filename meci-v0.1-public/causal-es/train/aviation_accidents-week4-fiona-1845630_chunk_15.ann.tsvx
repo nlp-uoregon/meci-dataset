@@ -1,0 +1,189 @@
+Text	El accidente fue investigado por la Comisión de Investigación de Accidentes e Incidentes de Aviación Civil ( CIAIAC ) .	Representantes de la National Transportation Safety Board ( NTSB ) de Estados Unidos , del fabricante de aviones Boeing ( como sucesor de McDonnell Douglas , fabricante del avión ) y del fabricante del motor Pratt and Whitney ayudaron en la investigación .	La CIAIAC publicó un informe preliminar en octubre de 2008 , un informe interino en agosto de 2009 , una nota de progreso en agosto de 2010 , y el informe final en julio de 2011 .	El informe final concluye que la causa del accidente fue que la tripulación perdió el control del avión debido a la entrada en pérdida justo después del despegue .	Esta situación se produjo porque los pilotos no desplegaron los flaps y slats del avión , tras no seguir correctamente el procedimiento en tres listas de comprobación diferentes .
+Event	T0	accidente	EVENT	3
+Event	T1	investigado	EVENT	17
+Event	T2	Investigación	EVENT	48
+Event	T3	Incidentes	EVENT	78
+Event	T4	ayudaron	EVENT	346
+Event	T5	investigación	EVENT	361
+Event	T6	publicó	EVENT	387
+Event	T7	informe	EVENT	398
+Event	T8	informe	EVENT	560
+Event	T9	concluye	EVENT	574
+Event	T10	accidente	EVENT	600
+Event	T11	perdió	EVENT	633
+Event	T12	control	EVENT	643
+Event	T13	pérdida	EVENT	684
+Event	T14	despegue	EVENT	710
+Event	T15	situación	EVENT	726
+Event	T16	produjo	EVENT	739
+Event	T17	desplegaron	EVENT	769
+Event	T18	flaps	EVENT	785
+Event	T19	slats	EVENT	793
+Event	T20	procedimiento	EVENT	843
+Event	T21	comprobación	EVENT	875
+Relation	T13	T10	CauseEffect	true	pérdida	accidente
+Relation	T10	T13	EffectCause	true	accidente	pérdida
+Relation	T17	T10	CauseEffect	true	desplegaron	accidente
+Relation	T10	T17	EffectCause	true	accidente	desplegaron
+Relation	T0	T13	NoRel	true	accidente	pérdida
+Relation	T0	T15	NoRel	true	accidente	situación
+Relation	T0	T16	NoRel	true	accidente	produjo
+Relation	T0	T17	NoRel	true	accidente	desplegaron
+Relation	T0	T20	NoRel	true	accidente	procedimiento
+Relation	T0	T4	NoRel	true	accidente	ayudaron
+Relation	T0	T7	NoRel	true	accidente	informe
+Relation	T1	T10	NoRel	true	investigado	accidente
+Relation	T1	T11	NoRel	true	investigado	perdió
+Relation	T1	T15	NoRel	true	investigado	situación
+Relation	T1	T2	NoRel	true	investigado	Investigación
+Relation	T1	T21	NoRel	true	investigado	comprobación
+Relation	T1	T3	NoRel	true	investigado	Incidentes
+Relation	T1	T4	NoRel	true	investigado	ayudaron
+Relation	T1	T6	NoRel	true	investigado	publicó
+Relation	T1	T7	NoRel	true	investigado	informe
+Relation	T10	T0	NoRel	true	accidente	accidente
+Relation	T10	T1	NoRel	true	accidente	investigado
+Relation	T10	T11	NoRel	true	accidente	perdió
+Relation	T10	T14	NoRel	true	accidente	despegue
+Relation	T10	T15	NoRel	true	accidente	situación
+Relation	T10	T18	NoRel	true	accidente	flaps
+Relation	T10	T7	NoRel	true	accidente	informe
+Relation	T11	T0	NoRel	true	perdió	accidente
+Relation	T11	T1	NoRel	true	perdió	investigado
+Relation	T11	T13	NoRel	true	perdió	pérdida
+Relation	T11	T17	NoRel	true	perdió	desplegaron
+Relation	T11	T20	NoRel	true	perdió	procedimiento
+Relation	T11	T6	NoRel	true	perdió	publicó
+Relation	T11	T7	NoRel	true	perdió	informe
+Relation	T11	T8	NoRel	true	perdió	informe
+Relation	T11	T9	NoRel	true	perdió	concluye
+Relation	T12	T1	NoRel	true	control	investigado
+Relation	T12	T13	NoRel	true	control	pérdida
+Relation	T12	T16	NoRel	true	control	produjo
+Relation	T12	T19	NoRel	true	control	slats
+Relation	T12	T4	NoRel	true	control	ayudaron
+Relation	T12	T6	NoRel	true	control	publicó
+Relation	T13	T0	NoRel	true	pérdida	accidente
+Relation	T13	T16	NoRel	true	pérdida	produjo
+Relation	T13	T18	NoRel	true	pérdida	flaps
+Relation	T13	T6	NoRel	true	pérdida	publicó
+Relation	T14	T0	NoRel	true	despegue	accidente
+Relation	T14	T1	NoRel	true	despegue	investigado
+Relation	T14	T10	NoRel	true	despegue	accidente
+Relation	T14	T19	NoRel	true	despegue	slats
+Relation	T14	T2	NoRel	true	despegue	Investigación
+Relation	T14	T20	NoRel	true	despegue	procedimiento
+Relation	T14	T21	NoRel	true	despegue	comprobación
+Relation	T14	T5	NoRel	true	despegue	investigación
+Relation	T14	T7	NoRel	true	despegue	informe
+Relation	T15	T10	NoRel	true	situación	accidente
+Relation	T15	T17	NoRel	true	situación	desplegaron
+Relation	T15	T18	NoRel	true	situación	flaps
+Relation	T15	T20	NoRel	true	situación	procedimiento
+Relation	T15	T21	NoRel	true	situación	comprobación
+Relation	T15	T4	NoRel	true	situación	ayudaron
+Relation	T15	T5	NoRel	true	situación	investigación
+Relation	T15	T6	NoRel	true	situación	publicó
+Relation	T15	T9	NoRel	true	situación	concluye
+Relation	T16	T1	NoRel	true	produjo	investigado
+Relation	T16	T15	NoRel	true	produjo	situación
+Relation	T16	T7	NoRel	true	produjo	informe
+Relation	T16	T9	NoRel	true	produjo	concluye
+Relation	T17	T1	NoRel	true	desplegaron	investigado
+Relation	T17	T14	NoRel	true	desplegaron	despegue
+Relation	T17	T18	NoRel	true	desplegaron	flaps
+Relation	T17	T19	NoRel	true	desplegaron	slats
+Relation	T17	T2	NoRel	true	desplegaron	Investigación
+Relation	T17	T3	NoRel	true	desplegaron	Incidentes
+Relation	T17	T5	NoRel	true	desplegaron	investigación
+Relation	T17	T8	NoRel	true	desplegaron	informe
+Relation	T18	T0	NoRel	true	flaps	accidente
+Relation	T18	T10	NoRel	true	flaps	accidente
+Relation	T18	T12	NoRel	true	flaps	control
+Relation	T18	T13	NoRel	true	flaps	pérdida
+Relation	T18	T14	NoRel	true	flaps	despegue
+Relation	T18	T20	NoRel	true	flaps	procedimiento
+Relation	T18	T3	NoRel	true	flaps	Incidentes
+Relation	T18	T7	NoRel	true	flaps	informe
+Relation	T18	T9	NoRel	true	flaps	concluye
+Relation	T19	T13	NoRel	true	slats	pérdida
+Relation	T19	T14	NoRel	true	slats	despegue
+Relation	T19	T2	NoRel	true	slats	Investigación
+Relation	T19	T4	NoRel	true	slats	ayudaron
+Relation	T19	T6	NoRel	true	slats	publicó
+Relation	T19	T8	NoRel	true	slats	informe
+Relation	T2	T0	NoRel	true	Investigación	accidente
+Relation	T2	T15	NoRel	true	Investigación	situación
+Relation	T2	T21	NoRel	true	Investigación	comprobación
+Relation	T2	T5	NoRel	true	Investigación	investigación
+Relation	T2	T7	NoRel	true	Investigación	informe
+Relation	T2	T8	NoRel	true	Investigación	informe
+Relation	T20	T0	NoRel	true	procedimiento	accidente
+Relation	T20	T11	NoRel	true	procedimiento	perdió
+Relation	T20	T19	NoRel	true	procedimiento	slats
+Relation	T20	T6	NoRel	true	procedimiento	publicó
+Relation	T20	T7	NoRel	true	procedimiento	informe
+Relation	T20	T9	NoRel	true	procedimiento	concluye
+Relation	T21	T13	NoRel	true	comprobación	pérdida
+Relation	T21	T16	NoRel	true	comprobación	produjo
+Relation	T21	T18	NoRel	true	comprobación	flaps
+Relation	T21	T19	NoRel	true	comprobación	slats
+Relation	T21	T6	NoRel	true	comprobación	publicó
+Relation	T21	T7	NoRel	true	comprobación	informe
+Relation	T21	T9	NoRel	true	comprobación	concluye
+Relation	T3	T1	NoRel	true	Incidentes	investigado
+Relation	T3	T10	NoRel	true	Incidentes	accidente
+Relation	T3	T11	NoRel	true	Incidentes	perdió
+Relation	T3	T15	NoRel	true	Incidentes	situación
+Relation	T3	T17	NoRel	true	Incidentes	desplegaron
+Relation	T3	T2	NoRel	true	Incidentes	Investigación
+Relation	T3	T20	NoRel	true	Incidentes	procedimiento
+Relation	T3	T21	NoRel	true	Incidentes	comprobación
+Relation	T3	T5	NoRel	true	Incidentes	investigación
+Relation	T3	T6	NoRel	true	Incidentes	publicó
+Relation	T3	T8	NoRel	true	Incidentes	informe
+Relation	T3	T9	NoRel	true	Incidentes	concluye
+Relation	T4	T1	NoRel	true	ayudaron	investigado
+Relation	T4	T14	NoRel	true	ayudaron	despegue
+Relation	T4	T15	NoRel	true	ayudaron	situación
+Relation	T4	T16	NoRel	true	ayudaron	produjo
+Relation	T4	T18	NoRel	true	ayudaron	flaps
+Relation	T4	T3	NoRel	true	ayudaron	Incidentes
+Relation	T4	T5	NoRel	true	ayudaron	investigación
+Relation	T4	T6	NoRel	true	ayudaron	publicó
+Relation	T4	T7	NoRel	true	ayudaron	informe
+Relation	T5	T0	NoRel	true	investigación	accidente
+Relation	T5	T12	NoRel	true	investigación	control
+Relation	T5	T13	NoRel	true	investigación	pérdida
+Relation	T5	T14	NoRel	true	investigación	despegue
+Relation	T6	T1	NoRel	true	publicó	investigado
+Relation	T6	T10	NoRel	true	publicó	accidente
+Relation	T6	T15	NoRel	true	publicó	situación
+Relation	T6	T17	NoRel	true	publicó	desplegaron
+Relation	T6	T2	NoRel	true	publicó	Investigación
+Relation	T6	T21	NoRel	true	publicó	comprobación
+Relation	T6	T5	NoRel	true	publicó	investigación
+Relation	T7	T0	NoRel	true	informe	accidente
+Relation	T7	T10	NoRel	true	informe	accidente
+Relation	T7	T19	NoRel	true	informe	slats
+Relation	T7	T2	NoRel	true	informe	Investigación
+Relation	T7	T20	NoRel	true	informe	procedimiento
+Relation	T7	T4	NoRel	true	informe	ayudaron
+Relation	T8	T0	NoRel	true	informe	accidente
+Relation	T8	T1	NoRel	true	informe	investigado
+Relation	T8	T11	NoRel	true	informe	perdió
+Relation	T8	T12	NoRel	true	informe	control
+Relation	T8	T17	NoRel	true	informe	desplegaron
+Relation	T8	T18	NoRel	true	informe	flaps
+Relation	T8	T21	NoRel	true	informe	comprobación
+Relation	T8	T4	NoRel	true	informe	ayudaron
+Relation	T8	T6	NoRel	true	informe	publicó
+Relation	T8	T7	NoRel	true	informe	informe
+Relation	T8	T9	NoRel	true	informe	concluye
+Relation	T9	T0	NoRel	true	concluye	accidente
+Relation	T9	T12	NoRel	true	concluye	control
+Relation	T9	T17	NoRel	true	concluye	desplegaron
+Relation	T9	T21	NoRel	true	concluye	comprobación
+Relation	T9	T4	NoRel	true	concluye	ayudaron
+Relation	T9	T6	NoRel	true	concluye	publicó
+Relation	T9	T7	NoRel	true	concluye	informe

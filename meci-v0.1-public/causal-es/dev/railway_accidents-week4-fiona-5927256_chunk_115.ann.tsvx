@@ -1,0 +1,57 @@
+Text	- 9 de enero de 1984 .	Cerca de Pravia ( Asturias ) el choque de dos trenes de viajeros en el interior de un túnel se saldó con tres personas muertas y ochenta heridas .	- El 30 de octubre de 1984 , En Villajoyosa , línea de Alicante a Denia , la colisión entre dos trenes de FEVE causó 9 fallecidos y 28 heridos .	- 15 de noviembre de 1987 .	En Ceceda ( Asturias ) un tren compuesto de tres unidades que desde Oviedo se dirigía a Bilbao cae desde un puente al río Piloña .
+Event	T0	choque	EVENT	55
+Event	T1	saldó	EVENT	118
+Event	T2	muertas	EVENT	142
+Event	T3	heridas	EVENT	160
+Event	T4	colisión	EVENT	247
+Event	T5	causó	EVENT	281
+Event	T6	fallecidos	EVENT	289
+Event	T7	heridos	EVENT	305
+Event	T8	dirigía	EVENT	421
+Event	T9	cae	EVENT	438
+Relation	T0	T2	CauseEffect	true	choque	muertas
+Relation	T2	T0	EffectCause	true	muertas	choque
+Relation	T0	T3	CauseEffect	true	choque	heridas
+Relation	T3	T0	EffectCause	true	heridas	choque
+Relation	T4	T6	CauseEffect	true	colisión	fallecidos
+Relation	T6	T4	EffectCause	true	fallecidos	colisión
+Relation	T4	T7	CauseEffect	true	colisión	heridos
+Relation	T7	T4	EffectCause	true	heridos	colisión
+Relation	T0	T5	NoRel	true	choque	causó
+Relation	T0	T6	NoRel	true	choque	fallecidos
+Relation	T0	T8	NoRel	true	choque	dirigía
+Relation	T1	T0	NoRel	true	saldó	choque
+Relation	T1	T3	NoRel	true	saldó	heridas
+Relation	T1	T5	NoRel	true	saldó	causó
+Relation	T1	T6	NoRel	true	saldó	fallecidos
+Relation	T1	T7	NoRel	true	saldó	heridos
+Relation	T2	T1	NoRel	true	muertas	saldó
+Relation	T2	T4	NoRel	true	muertas	colisión
+Relation	T2	T5	NoRel	true	muertas	causó
+Relation	T2	T7	NoRel	true	muertas	heridos
+Relation	T2	T9	NoRel	true	muertas	cae
+Relation	T3	T4	NoRel	true	heridas	colisión
+Relation	T3	T7	NoRel	true	heridas	heridos
+Relation	T3	T8	NoRel	true	heridas	dirigía
+Relation	T4	T3	NoRel	true	colisión	heridas
+Relation	T4	T5	NoRel	true	colisión	causó
+Relation	T4	T8	NoRel	true	colisión	dirigía
+Relation	T4	T9	NoRel	true	colisión	cae
+Relation	T5	T2	NoRel	true	causó	muertas
+Relation	T5	T4	NoRel	true	causó	colisión
+Relation	T5	T8	NoRel	true	causó	dirigía
+Relation	T6	T0	NoRel	true	fallecidos	choque
+Relation	T6	T7	NoRel	true	fallecidos	heridos
+Relation	T7	T6	NoRel	true	heridos	fallecidos
+Relation	T8	T0	NoRel	true	dirigía	choque
+Relation	T8	T4	NoRel	true	dirigía	colisión
+Relation	T8	T6	NoRel	true	dirigía	fallecidos
+Relation	T8	T7	NoRel	true	dirigía	heridos
+Relation	T8	T9	NoRel	true	dirigía	cae
+Relation	T9	T0	NoRel	true	cae	choque
+Relation	T9	T1	NoRel	true	cae	saldó
+Relation	T9	T3	NoRel	true	cae	heridas
+Relation	T9	T4	NoRel	true	cae	colisión
+Relation	T9	T5	NoRel	true	cae	causó
+Relation	T9	T7	NoRel	true	cae	heridos
+Relation	T9	T8	NoRel	true	cae	dirigía

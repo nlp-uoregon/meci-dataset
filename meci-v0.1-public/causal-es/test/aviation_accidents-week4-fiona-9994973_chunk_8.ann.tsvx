@@ -1,0 +1,49 @@
+Text	El Metroliner sufrió daños sustanciales en el empenaje y la sección de cola , pero el piloto pudo continuar la aproximación y aterrizó de manera segura .	Tenemos entendido que el piloto de la otra aeronave , un Cirrus SR22 , desplegó el paracaídas de recuperación balística y que el piloto y el pasajero no sufrieron lesiones .	Estamos participando en una investigación activa del incidente con la FAA y la NTSB .	A medida que la información salga a la luz , si las autoridades consideran apropiado compartirla con el público , lo haremos .	No podemos expresar la gratitud que tenemos en toda la empresa porque nadie resultó herido .
+Event	T0	continuar	EVENT	98
+Event	T1	aproximación	EVENT	111
+Event	T2	aterrizó	EVENT	126
+Event	T3	entendido	EVENT	162
+Event	T4	desplegó	EVENT	225
+Event	T5	paracaídas	EVENT	237
+Event	T6	recuperación	EVENT	251
+Event	T7	lesiones	EVENT	317
+Event	T8	participando	EVENT	336
+Event	T9	incidente	EVENT	381
+Event	T10	salga	EVENT	442
+Event	T11	herido	EVENT	625
+Relation	T0	T1	NoRel	true	continuar	aproximación
+Relation	T0	T10	NoRel	true	continuar	salga
+Relation	T0	T11	NoRel	true	continuar	herido
+Relation	T0	T5	NoRel	true	continuar	paracaídas
+Relation	T0	T7	NoRel	true	continuar	lesiones
+Relation	T1	T10	NoRel	true	aproximación	salga
+Relation	T1	T3	NoRel	true	aproximación	entendido
+Relation	T1	T9	NoRel	true	aproximación	incidente
+Relation	T10	T7	NoRel	true	salga	lesiones
+Relation	T10	T8	NoRel	true	salga	participando
+Relation	T11	T8	NoRel	true	herido	participando
+Relation	T2	T1	NoRel	true	aterrizó	aproximación
+Relation	T2	T5	NoRel	true	aterrizó	paracaídas
+Relation	T2	T6	NoRel	true	aterrizó	recuperación
+Relation	T2	T7	NoRel	true	aterrizó	lesiones
+Relation	T2	T9	NoRel	true	aterrizó	incidente
+Relation	T4	T1	NoRel	true	desplegó	aproximación
+Relation	T4	T10	NoRel	true	desplegó	salga
+Relation	T4	T6	NoRel	true	desplegó	recuperación
+Relation	T4	T7	NoRel	true	desplegó	lesiones
+Relation	T4	T8	NoRel	true	desplegó	participando
+Relation	T5	T0	NoRel	true	paracaídas	continuar
+Relation	T5	T6	NoRel	true	paracaídas	recuperación
+Relation	T5	T7	NoRel	true	paracaídas	lesiones
+Relation	T5	T9	NoRel	true	paracaídas	incidente
+Relation	T6	T1	NoRel	true	recuperación	aproximación
+Relation	T6	T4	NoRel	true	recuperación	desplegó
+Relation	T6	T9	NoRel	true	recuperación	incidente
+Relation	T7	T1	NoRel	true	lesiones	aproximación
+Relation	T7	T11	NoRel	true	lesiones	herido
+Relation	T7	T6	NoRel	true	lesiones	recuperación
+Relation	T8	T10	NoRel	true	participando	salga
+Relation	T8	T5	NoRel	true	participando	paracaídas
+Relation	T9	T10	NoRel	true	incidente	salga
+Relation	T9	T4	NoRel	true	incidente	desplegó
+Relation	T9	T8	NoRel	true	incidente	participando

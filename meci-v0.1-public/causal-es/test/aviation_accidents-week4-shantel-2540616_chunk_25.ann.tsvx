@@ -1,0 +1,62 @@
+Text	A las 19:00 UTC del 1 de junio , España envió un avión CASA CN-235 de patrulla marítima en misión de búsqueda y salvamento cerca de Cabo Verde .	El director ejecutivo de Air France , Pierre-Henri Gourgeon , afirmó : « Estamos probablemente ante una gran catástrofe aérea » .	Un portavoz de Air France especuló que la aeronave podría haber sido alcanzada por un rayo , aunque este hecho rara vez causa un accidente de aviación .	Las autoridades del aeropuerto Charles De Gaulle afirmaron que no había « ninguna esperanza de encontrar supervivientes » .	[ Corte de este a oeste con la profundidad del lugar donde cayeron los restos del avión .
+Event	T0	envió	EVENT	40
+Event	T1	misión	EVENT	91
+Event	T2	búsqueda	EVENT	101
+Event	T3	salvamento	EVENT	112
+Event	T4	catástrofe	EVENT	254
+Event	T5	especuló	EVENT	301
+Event	T6	alcanzada	EVENT	344
+Event	T7	rayo	EVENT	361
+Event	T8	hecho	EVENT	380
+Event	T9	causa	EVENT	395
+Event	T10	accidente	EVENT	404
+Event	T11	cayeron	EVENT	611
+Relation	T4	T0	CauseEffect	true	catástrofe	envió
+Relation	T0	T4	EffectCause	true	envió	catástrofe
+Relation	T4	T11	CauseEffect	true	catástrofe	cayeron
+Relation	T11	T4	EffectCause	true	cayeron	catástrofe
+Relation	T0	T1	NoRel	true	envió	misión
+Relation	T0	T2	NoRel	true	envió	búsqueda
+Relation	T0	T6	NoRel	true	envió	alcanzada
+Relation	T0	T8	NoRel	true	envió	hecho
+Relation	T0	T9	NoRel	true	envió	causa
+Relation	T1	T11	NoRel	true	misión	cayeron
+Relation	T1	T4	NoRel	true	misión	catástrofe
+Relation	T1	T9	NoRel	true	misión	causa
+Relation	T10	T5	NoRel	true	accidente	especuló
+Relation	T10	T6	NoRel	true	accidente	alcanzada
+Relation	T10	T7	NoRel	true	accidente	rayo
+Relation	T10	T8	NoRel	true	accidente	hecho
+Relation	T11	T1	NoRel	true	cayeron	misión
+Relation	T11	T5	NoRel	true	cayeron	especuló
+Relation	T11	T6	NoRel	true	cayeron	alcanzada
+Relation	T11	T7	NoRel	true	cayeron	rayo
+Relation	T2	T0	NoRel	true	búsqueda	envió
+Relation	T2	T11	NoRel	true	búsqueda	cayeron
+Relation	T2	T4	NoRel	true	búsqueda	catástrofe
+Relation	T2	T8	NoRel	true	búsqueda	hecho
+Relation	T2	T9	NoRel	true	búsqueda	causa
+Relation	T3	T11	NoRel	true	salvamento	cayeron
+Relation	T3	T5	NoRel	true	salvamento	especuló
+Relation	T3	T7	NoRel	true	salvamento	rayo
+Relation	T4	T2	NoRel	true	catástrofe	búsqueda
+Relation	T4	T3	NoRel	true	catástrofe	salvamento
+Relation	T4	T8	NoRel	true	catástrofe	hecho
+Relation	T4	T9	NoRel	true	catástrofe	causa
+Relation	T5	T0	NoRel	true	especuló	envió
+Relation	T5	T3	NoRel	true	especuló	salvamento
+Relation	T6	T1	NoRel	true	alcanzada	misión
+Relation	T6	T4	NoRel	true	alcanzada	catástrofe
+Relation	T6	T5	NoRel	true	alcanzada	especuló
+Relation	T6	T9	NoRel	true	alcanzada	causa
+Relation	T7	T1	NoRel	true	rayo	misión
+Relation	T7	T10	NoRel	true	rayo	accidente
+Relation	T7	T3	NoRel	true	rayo	salvamento
+Relation	T7	T4	NoRel	true	rayo	catástrofe
+Relation	T8	T11	NoRel	true	hecho	cayeron
+Relation	T8	T4	NoRel	true	hecho	catástrofe
+Relation	T8	T6	NoRel	true	hecho	alcanzada
+Relation	T8	T7	NoRel	true	hecho	rayo
+Relation	T8	T9	NoRel	true	hecho	causa
+Relation	T9	T11	NoRel	true	causa	cayeron
+Relation	T9	T4	NoRel	true	causa	catástrofe

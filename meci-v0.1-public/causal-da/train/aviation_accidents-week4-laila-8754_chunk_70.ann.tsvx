@@ -1,0 +1,95 @@
+Text	Fonde over hele USA begyndte at indsamle penge til finansiering af et mindesmærke for ofrene i løbet af den første måned efter styrtet .	Den 25. august 2008 donerede brandfolk i New York et kors lavet af stål fra resterne af World Trade Center .	Bjælken , der var sat ovenpå er formet som Pentagon og det hele blev opsat uden for brandstationen for Shanksville Volunteer Fire Department .	Efter angrebene blev Fresh Kills Landfill på Staten Island midlertidigt genåbnet for at man skulle have et sted at anbringe og gennemgå ruinerne fra ødelæggelserne .	Det meste blev senere fjernet og solgt til skrothandlere .
+Event	T0	begyndte	EVENT	20
+Event	T1	indsamle	EVENT	32
+Event	T2	finansiering	EVENT	51
+Event	T3	styrtet	EVENT	127
+Event	T4	donerede	EVENT	157
+Event	T5	lavet	EVENT	195
+Event	T6	sat	EVENT	264
+Event	T7	formet	EVENT	278
+Event	T8	opsat	EVENT	315
+Event	T9	genåbnet	EVENT	461
+Event	T10	gennemgå	EVENT	516
+Event	T11	ødelæggelserne	EVENT	538
+Event	T12	fjernet	EVENT	577
+Event	T13	solgt	EVENT	588
+Event	T14	anbringe	EVENT	504
+Event	T15	mindesmærke	EVENT	70
+Relation	T14	T9	CauseEffect	true	anbringe	genåbnet
+Relation	T9	T14	EffectCause	true	genåbnet	anbringe
+Relation	T10	T9	CauseEffect	true	gennemgå	genåbnet
+Relation	T9	T10	EffectCause	true	genåbnet	gennemgå
+Relation	T0	T10	NoRel	true	begyndte	gennemgå
+Relation	T0	T11	NoRel	true	begyndte	ødelæggelserne
+Relation	T0	T13	NoRel	true	begyndte	solgt
+Relation	T0	T15	NoRel	true	begyndte	mindesmærke
+Relation	T0	T3	NoRel	true	begyndte	styrtet
+Relation	T0	T6	NoRel	true	begyndte	sat
+Relation	T1	T14	NoRel	true	indsamle	anbringe
+Relation	T1	T15	NoRel	true	indsamle	mindesmærke
+Relation	T1	T2	NoRel	true	indsamle	finansiering
+Relation	T1	T5	NoRel	true	indsamle	lavet
+Relation	T1	T8	NoRel	true	indsamle	opsat
+Relation	T10	T0	NoRel	true	gennemgå	begyndte
+Relation	T10	T1	NoRel	true	gennemgå	indsamle
+Relation	T10	T13	NoRel	true	gennemgå	solgt
+Relation	T10	T14	NoRel	true	gennemgå	anbringe
+Relation	T10	T2	NoRel	true	gennemgå	finansiering
+Relation	T10	T3	NoRel	true	gennemgå	styrtet
+Relation	T11	T1	NoRel	true	ødelæggelserne	indsamle
+Relation	T11	T13	NoRel	true	ødelæggelserne	solgt
+Relation	T11	T2	NoRel	true	ødelæggelserne	finansiering
+Relation	T11	T3	NoRel	true	ødelæggelserne	styrtet
+Relation	T11	T4	NoRel	true	ødelæggelserne	donerede
+Relation	T12	T13	NoRel	true	fjernet	solgt
+Relation	T12	T14	NoRel	true	fjernet	anbringe
+Relation	T12	T7	NoRel	true	fjernet	formet
+Relation	T12	T9	NoRel	true	fjernet	genåbnet
+Relation	T13	T0	NoRel	true	solgt	begyndte
+Relation	T13	T1	NoRel	true	solgt	indsamle
+Relation	T13	T11	NoRel	true	solgt	ødelæggelserne
+Relation	T13	T12	NoRel	true	solgt	fjernet
+Relation	T13	T14	NoRel	true	solgt	anbringe
+Relation	T13	T15	NoRel	true	solgt	mindesmærke
+Relation	T13	T3	NoRel	true	solgt	styrtet
+Relation	T13	T5	NoRel	true	solgt	lavet
+Relation	T13	T8	NoRel	true	solgt	opsat
+Relation	T14	T13	NoRel	true	anbringe	solgt
+Relation	T14	T4	NoRel	true	anbringe	donerede
+Relation	T14	T5	NoRel	true	anbringe	lavet
+Relation	T14	T6	NoRel	true	anbringe	sat
+Relation	T14	T8	NoRel	true	anbringe	opsat
+Relation	T15	T11	NoRel	true	mindesmærke	ødelæggelserne
+Relation	T15	T12	NoRel	true	mindesmærke	fjernet
+Relation	T15	T3	NoRel	true	mindesmærke	styrtet
+Relation	T15	T5	NoRel	true	mindesmærke	lavet
+Relation	T15	T7	NoRel	true	mindesmærke	formet
+Relation	T2	T15	NoRel	true	finansiering	mindesmærke
+Relation	T3	T0	NoRel	true	styrtet	begyndte
+Relation	T3	T14	NoRel	true	styrtet	anbringe
+Relation	T3	T2	NoRel	true	styrtet	finansiering
+Relation	T3	T8	NoRel	true	styrtet	opsat
+Relation	T4	T11	NoRel	true	donerede	ødelæggelserne
+Relation	T4	T12	NoRel	true	donerede	fjernet
+Relation	T4	T13	NoRel	true	donerede	solgt
+Relation	T4	T14	NoRel	true	donerede	anbringe
+Relation	T5	T1	NoRel	true	lavet	indsamle
+Relation	T5	T11	NoRel	true	lavet	ødelæggelserne
+Relation	T5	T13	NoRel	true	lavet	solgt
+Relation	T5	T14	NoRel	true	lavet	anbringe
+Relation	T5	T2	NoRel	true	lavet	finansiering
+Relation	T5	T4	NoRel	true	lavet	donerede
+Relation	T5	T6	NoRel	true	lavet	sat
+Relation	T5	T8	NoRel	true	lavet	opsat
+Relation	T6	T1	NoRel	true	sat	indsamle
+Relation	T6	T10	NoRel	true	sat	gennemgå
+Relation	T7	T1	NoRel	true	formet	indsamle
+Relation	T7	T14	NoRel	true	formet	anbringe
+Relation	T7	T4	NoRel	true	formet	donerede
+Relation	T7	T8	NoRel	true	formet	opsat
+Relation	T8	T1	NoRel	true	opsat	indsamle
+Relation	T8	T10	NoRel	true	opsat	gennemgå
+Relation	T8	T14	NoRel	true	opsat	anbringe
+Relation	T8	T7	NoRel	true	opsat	formet
+Relation	T9	T1	NoRel	true	genåbnet	indsamle
+Relation	T9	T4	NoRel	true	genåbnet	donerede

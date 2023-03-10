@@ -1,0 +1,90 @@
+Text	200px | küçükresim | sağ | Carmo Rahibe Manastırı 1755'teki depremde harâb olmuştu .	Harâbe , 1755 Depremi'ni hatırlatması için korunmaktadır .	Ekonomi târihçisi Álvaro Pereira , Lizbon'un o esnâda nüfûsunun yaklaşık 200 bin kişi olduğunu ve bunun 30 bin ilâ 40 bin civârında kısmının depremde can verdiğini hesaplamaktadır .	Pereira , depremin yol açtığı binâ yıkımından ayrıca , sebep olduğu yangınlar ve tsunamiden dolayı Portekiz’de , İspanya’da ve Fas’ta toplamda 50 bin civârında insanın öldüğünü tahmin etmektedir .	Bununla birlikte , 2009 yılında yapılan bir çalışma , toplam ölü sayısındaki yüksekliğin sâdece 1 Kasım'daki depremden kaynaklanmadığını , daha sonra meydâna gelen artçı depremlerle ölü sayısının yükselmiş olduğunu göstermektedir .
+Event	T0	hesaplamaktadır	EVENT	308
+Event	T2	yıkımından	EVENT	361
+Event	T4	yangınlar	EVENT	394
+Event	T5	tsunamiden	EVENT	407
+Event	T6	etmektedir	EVENT	510
+Event	T7	çalışma	EVENT	567
+Event	T9	yükselmiş	EVENT	719
+Event	T10	göstermektedir	EVENT	738
+Event	T11	olmuştu	EVENT	75
+Event	T12	depremde	EVENT	60
+Event	T13	depremde	EVENT	285
+Event	T14	depremin	EVENT	336
+Event	T1	depremlerle	EVENT	693
+Relation	T12	T11	CauseEffect	true	depremde	olmuştu
+Relation	T11	T12	EffectCause	true	olmuştu	depremde
+Relation	T13	T0	CauseEffect	true	depremde	hesaplamaktadır
+Relation	T0	T13	EffectCause	true	hesaplamaktadır	depremde
+Relation	T13	T2	CauseEffect	true	depremde	yıkımından
+Relation	T2	T13	EffectCause	true	yıkımından	depremde
+Relation	T13	T5	CauseEffect	true	depremde	tsunamiden
+Relation	T5	T13	EffectCause	true	tsunamiden	depremde
+Relation	T14	T2	CauseEffect	true	depremin	yıkımından
+Relation	T2	T14	EffectCause	true	yıkımından	depremin
+Relation	T14	T4	CauseEffect	true	depremin	yangınlar
+Relation	T4	T14	EffectCause	true	yangınlar	depremin
+Relation	T13	T4	CauseEffect	true	depremde	yangınlar
+Relation	T4	T13	EffectCause	true	yangınlar	depremde
+Relation	T14	T5	CauseEffect	true	depremin	tsunamiden
+Relation	T5	T14	EffectCause	true	tsunamiden	depremin
+Relation	T2	T6	CauseEffect	true	yıkımından	etmektedir
+Relation	T6	T2	EffectCause	true	etmektedir	yıkımından
+Relation	T4	T6	CauseEffect	true	yangınlar	etmektedir
+Relation	T6	T4	EffectCause	true	etmektedir	yangınlar
+Relation	T5	T6	CauseEffect	true	tsunamiden	etmektedir
+Relation	T6	T5	EffectCause	true	etmektedir	tsunamiden
+Relation	T1	T9	CauseEffect	true	depremlerle	yükselmiş
+Relation	T9	T1	EffectCause	true	yükselmiş	depremlerle
+Relation	T7	T10	CauseEffect	true	çalışma	göstermektedir
+Relation	T10	T7	EffectCause	true	göstermektedir	çalışma
+Relation	T0	T10	NoRel	true	hesaplamaktadır	göstermektedir
+Relation	T0	T12	NoRel	true	hesaplamaktadır	depremde
+Relation	T0	T5	NoRel	true	hesaplamaktadır	tsunamiden
+Relation	T1	T14	NoRel	true	depremlerle	depremin
+Relation	T1	T2	NoRel	true	depremlerle	yıkımından
+Relation	T1	T6	NoRel	true	depremlerle	etmektedir
+Relation	T10	T14	NoRel	true	göstermektedir	depremin
+Relation	T10	T2	NoRel	true	göstermektedir	yıkımından
+Relation	T10	T5	NoRel	true	göstermektedir	tsunamiden
+Relation	T10	T9	NoRel	true	göstermektedir	yükselmiş
+Relation	T11	T5	NoRel	true	olmuştu	tsunamiden
+Relation	T11	T6	NoRel	true	olmuştu	etmektedir
+Relation	T11	T9	NoRel	true	olmuştu	yükselmiş
+Relation	T12	T14	NoRel	true	depremde	depremin
+Relation	T12	T4	NoRel	true	depremde	yangınlar
+Relation	T12	T7	NoRel	true	depremde	çalışma
+Relation	T13	T10	NoRel	true	depremde	göstermektedir
+Relation	T13	T11	NoRel	true	depremde	olmuştu
+Relation	T13	T12	NoRel	true	depremde	depremde
+Relation	T13	T6	NoRel	true	depremde	etmektedir
+Relation	T13	T7	NoRel	true	depremde	çalışma
+Relation	T14	T0	NoRel	true	depremin	hesaplamaktadır
+Relation	T14	T11	NoRel	true	depremin	olmuştu
+Relation	T14	T12	NoRel	true	depremin	depremde
+Relation	T2	T1	NoRel	true	yıkımından	depremlerle
+Relation	T2	T10	NoRel	true	yıkımından	göstermektedir
+Relation	T2	T12	NoRel	true	yıkımından	depremde
+Relation	T4	T2	NoRel	true	yangınlar	yıkımından
+Relation	T4	T5	NoRel	true	yangınlar	tsunamiden
+Relation	T5	T0	NoRel	true	tsunamiden	hesaplamaktadır
+Relation	T5	T10	NoRel	true	tsunamiden	göstermektedir
+Relation	T5	T12	NoRel	true	tsunamiden	depremde
+Relation	T5	T2	NoRel	true	tsunamiden	yıkımından
+Relation	T6	T11	NoRel	true	etmektedir	olmuştu
+Relation	T6	T12	NoRel	true	etmektedir	depremde
+Relation	T6	T13	NoRel	true	etmektedir	depremde
+Relation	T6	T14	NoRel	true	etmektedir	depremin
+Relation	T6	T9	NoRel	true	etmektedir	yükselmiş
+Relation	T7	T1	NoRel	true	çalışma	depremlerle
+Relation	T7	T11	NoRel	true	çalışma	olmuştu
+Relation	T7	T12	NoRel	true	çalışma	depremde
+Relation	T7	T13	NoRel	true	çalışma	depremde
+Relation	T7	T14	NoRel	true	çalışma	depremin
+Relation	T7	T2	NoRel	true	çalışma	yıkımından
+Relation	T7	T5	NoRel	true	çalışma	tsunamiden
+Relation	T9	T0	NoRel	true	yükselmiş	hesaplamaktadır
+Relation	T9	T12	NoRel	true	yükselmiş	depremde
+Relation	T9	T13	NoRel	true	yükselmiş	depremde
+Relation	T9	T14	NoRel	true	yükselmiş	depremin
+Relation	T9	T4	NoRel	true	yükselmiş	yangınlar

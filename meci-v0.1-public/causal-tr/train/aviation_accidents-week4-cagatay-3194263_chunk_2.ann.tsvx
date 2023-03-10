@@ -1,0 +1,67 @@
+Text	Şimdiye kadar Zengezur bölgesinde Azerbaycan ile Ermenistan arasında neredeyse kesin bir sınır yoktu ve iki ülke arasındaki sınırın çizilmesi meselesi Ermenistan'ın yenilgisinden hemen sonra ortaya çıktı .	İki ülke arasında başka sınır sorunları da var ; Ermenistan , 1990'lardan beri Azerbaycan'ın Kazah Rayonunda üç Azerbaycan köyünü ve Nahçıvan Özerk Cumhuriyeti'ndeki Kerki köyü de dahil olmak üzere birçok köyü işgal ediyor .	16 Kasım'da çıkan çatışmada 6 Ermeni ve 7 Azerbaycanlı askeri hayatını kaybetmişti ve aynı gün Rusya Savunma Bakanı Sergey Şoygu'nun arabulucuğu ile ateşkes görüşmeleri yapıldı .	Azerbaycan ile Ermenistan arasındaki gerginlik Mayıs ayından bu yana tırmanıyor .	Ermenistan'a göre , Azerbaycan ordusu güney sınırını geçerek Garagol Gölü'nü işgal etti , ancak Azerbaycan Dışişleri Bakanlığı iddiaları yalanladı ve Azerbaycan'ın kendi sınırlarını koruduğunu söyledi .
+Event	T0	yenilgisinden	EVENT	165
+Event	T1	çıktı	EVENT	198
+Event	T2	sorunları	EVENT	236
+Event	T3	ediyor	EVENT	422
+Event	T4	çatışmada	EVENT	449
+Event	T5	kaybetmişti	EVENT	502
+Event	T6	yapıldı	EVENT	600
+Event	T7	gerginlik	EVENT	647
+Event	T8	tırmanıyor	EVENT	679
+Event	T10	yalanladı	EVENT	829
+Event	T11	söyledi	EVENT	885
+Event	T12	arabulucuğu	EVENT	564
+Event	T9	işgal	EVENT	769
+Relation	T0	T1	CauseEffect	true	yenilgisinden	çıktı
+Relation	T1	T0	EffectCause	true	çıktı	yenilgisinden
+Relation	T3	T2	CauseEffect	true	ediyor	sorunları
+Relation	T2	T3	EffectCause	true	sorunları	ediyor
+Relation	T4	T5	CauseEffect	true	çatışmada	kaybetmişti
+Relation	T5	T4	EffectCause	true	kaybetmişti	çatışmada
+Relation	T5	T6	CauseEffect	true	kaybetmişti	yapıldı
+Relation	T6	T5	EffectCause	true	yapıldı	kaybetmişti
+Relation	T9	T10	CauseEffect	true	işgal	yalanladı
+Relation	T10	T9	EffectCause	true	yalanladı	işgal
+Relation	T0	T10	NoRel	true	yenilgisinden	yalanladı
+Relation	T0	T2	NoRel	true	yenilgisinden	sorunları
+Relation	T0	T7	NoRel	true	yenilgisinden	gerginlik
+Relation	T0	T8	NoRel	true	yenilgisinden	tırmanıyor
+Relation	T0	T9	NoRel	true	yenilgisinden	işgal
+Relation	T1	T5	NoRel	true	çıktı	kaybetmişti
+Relation	T10	T1	NoRel	true	yalanladı	çıktı
+Relation	T10	T2	NoRel	true	yalanladı	sorunları
+Relation	T10	T3	NoRel	true	yalanladı	ediyor
+Relation	T10	T6	NoRel	true	yalanladı	yapıldı
+Relation	T10	T7	NoRel	true	yalanladı	gerginlik
+Relation	T11	T3	NoRel	true	söyledi	ediyor
+Relation	T11	T4	NoRel	true	söyledi	çatışmada
+Relation	T11	T6	NoRel	true	söyledi	yapıldı
+Relation	T11	T8	NoRel	true	söyledi	tırmanıyor
+Relation	T11	T9	NoRel	true	söyledi	işgal
+Relation	T12	T0	NoRel	true	arabulucuğu	yenilgisinden
+Relation	T12	T4	NoRel	true	arabulucuğu	çatışmada
+Relation	T12	T5	NoRel	true	arabulucuğu	kaybetmişti
+Relation	T2	T5	NoRel	true	sorunları	kaybetmişti
+Relation	T3	T1	NoRel	true	ediyor	çıktı
+Relation	T3	T10	NoRel	true	ediyor	yalanladı
+Relation	T3	T5	NoRel	true	ediyor	kaybetmişti
+Relation	T4	T0	NoRel	true	çatışmada	yenilgisinden
+Relation	T4	T7	NoRel	true	çatışmada	gerginlik
+Relation	T4	T8	NoRel	true	çatışmada	tırmanıyor
+Relation	T5	T0	NoRel	true	kaybetmişti	yenilgisinden
+Relation	T5	T10	NoRel	true	kaybetmişti	yalanladı
+Relation	T5	T11	NoRel	true	kaybetmişti	söyledi
+Relation	T5	T12	NoRel	true	kaybetmişti	arabulucuğu
+Relation	T5	T2	NoRel	true	kaybetmişti	sorunları
+Relation	T5	T3	NoRel	true	kaybetmişti	ediyor
+Relation	T6	T2	NoRel	true	yapıldı	sorunları
+Relation	T6	T3	NoRel	true	yapıldı	ediyor
+Relation	T7	T0	NoRel	true	gerginlik	yenilgisinden
+Relation	T7	T11	NoRel	true	gerginlik	söyledi
+Relation	T7	T2	NoRel	true	gerginlik	sorunları
+Relation	T7	T6	NoRel	true	gerginlik	yapıldı
+Relation	T8	T0	NoRel	true	tırmanıyor	yenilgisinden
+Relation	T8	T10	NoRel	true	tırmanıyor	yalanladı
+Relation	T9	T0	NoRel	true	işgal	yenilgisinden
+Relation	T9	T1	NoRel	true	işgal	çıktı
+Relation	T9	T6	NoRel	true	işgal	yapıldı

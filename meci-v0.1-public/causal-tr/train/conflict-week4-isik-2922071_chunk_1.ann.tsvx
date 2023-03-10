@@ -1,0 +1,44 @@
+Text	1860'larda Smithies , birkaç cilt halinde yayınlanan A Mother's Lessons on Kindness to Animals'ı yazdı .	1870'de Angela Burdett - Coutts ile birlikte RSPCA'da ( Royal Society for the Prevention of Cruelty to Animals ) Kadınlar Komitesi'ni kurdu .	1875'te ilk Merhamet Grubu'nu ( _ Band of Mercy _ ) kurdu .	Smithies 1877'de öldü ; ölüm döşeğinde şöyle dedi : " _ Çocuklara Tanrı'nın alt yaratıklarına karşı nazik ve merhametli olmayı öğretmek , Mesih'in müjdesine giden yolu hazırlıyor .	_ " Stoke Newington'da 1883'te ölen oğlu Thomas ile birlikte Abney Park Mezarlığı'na gömüldü .
+Event	T0	yazdı	EVENT	97
+Event	T1	Cruelty	EVENT	197
+Event	T2	kurdu	EVENT	239
+Event	T3	kurdu	EVENT	299
+Event	T4	öldü	EVENT	324
+Event	T6	dedi	EVENT	352
+Event	T7	hazırlıyor	EVENT	475
+Event	T8	ölen	EVENT	519
+Event	T9	gömüldü	EVENT	573
+Event	T10	yayınlanan	EVENT	42
+Relation	T4	T9	CauseEffect	true	öldü	gömüldü
+Relation	T9	T4	EffectCause	true	gömüldü	öldü
+Relation	T8	T9	CauseEffect	true	ölen	gömüldü
+Relation	T9	T8	EffectCause	true	gömüldü	ölen
+Relation	T0	T6	NoRel	true	yazdı	dedi
+Relation	T0	T9	NoRel	true	yazdı	gömüldü
+Relation	T1	T0	NoRel	true	Cruelty	yazdı
+Relation	T1	T6	NoRel	true	Cruelty	dedi
+Relation	T10	T1	NoRel	true	yayınlanan	Cruelty
+Relation	T10	T3	NoRel	true	yayınlanan	kurdu
+Relation	T10	T4	NoRel	true	yayınlanan	öldü
+Relation	T2	T0	NoRel	true	kurdu	yazdı
+Relation	T3	T1	NoRel	true	kurdu	Cruelty
+Relation	T3	T10	NoRel	true	kurdu	yayınlanan
+Relation	T3	T2	NoRel	true	kurdu	kurdu
+Relation	T3	T4	NoRel	true	kurdu	öldü
+Relation	T3	T8	NoRel	true	kurdu	ölen
+Relation	T4	T0	NoRel	true	öldü	yazdı
+Relation	T4	T1	NoRel	true	öldü	Cruelty
+Relation	T4	T6	NoRel	true	öldü	dedi
+Relation	T4	T7	NoRel	true	öldü	hazırlıyor
+Relation	T4	T8	NoRel	true	öldü	ölen
+Relation	T6	T0	NoRel	true	dedi	yazdı
+Relation	T6	T1	NoRel	true	dedi	Cruelty
+Relation	T6	T2	NoRel	true	dedi	kurdu
+Relation	T6	T4	NoRel	true	dedi	öldü
+Relation	T6	T7	NoRel	true	dedi	hazırlıyor
+Relation	T7	T1	NoRel	true	hazırlıyor	Cruelty
+Relation	T8	T1	NoRel	true	ölen	Cruelty
+Relation	T8	T10	NoRel	true	ölen	yayınlanan
+Relation	T8	T3	NoRel	true	ölen	kurdu
+Relation	T8	T4	NoRel	true	ölen	öldü
+Relation	T9	T7	NoRel	true	gömüldü	hazırlıyor

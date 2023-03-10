@@ -1,0 +1,44 @@
+Text	VKPD başındaki birleşik kelimesini atarak KPD olarak anılmaya başlandı .	Kısa bir sürede 500.000 üyeye sahip olan KPD artık kitlesel bir güç haline gelmişti .	20 Şubat 1920’de yapılan seçimlerde Orta Almanya’da en güçlü parti KPD olmuştu .	Seçimlerden sonra sosyal demokrat bölge valisi “ işçileri komünistlerin teröründen kurtarmak ve asayişi sağlamak ” için bölgeye güvenlik güçlerini yığmaya başladı .	Güvenlik güçleri bazı şehirleri işgal etmeye başladı , bunun üzerine işçiler ayaklanmaya başladı .
+Event	T0	başlandı	EVENT	62
+Event	T1	gelmişti	EVENT	148
+Event	T2	başladı	EVENT	395
+Event	T3	olmuştu	EVENT	230
+Event	T4	seçimlerde	EVENT	184
+Event	T5	Seçimlerden	EVENT	240
+Event	T6	kurtarmak	EVENT	323
+Event	T7	sağlamak	EVENT	344
+Event	T8	işgal	EVENT	437
+Event	T9	ayaklanmaya	EVENT	482
+Relation	T4	T3	CauseEffect	true	seçimlerde	olmuştu
+Relation	T3	T4	EffectCause	true	olmuştu	seçimlerde
+Relation	T6	T2	CauseEffect	true	kurtarmak	başladı
+Relation	T2	T6	EffectCause	true	başladı	kurtarmak
+Relation	T7	T2	CauseEffect	true	sağlamak	başladı
+Relation	T2	T7	EffectCause	true	başladı	sağlamak
+Relation	T8	T9	CauseEffect	true	işgal	ayaklanmaya
+Relation	T9	T8	EffectCause	true	ayaklanmaya	işgal
+Relation	T0	T3	NoRel	true	başlandı	olmuştu
+Relation	T0	T5	NoRel	true	başlandı	Seçimlerden
+Relation	T0	T7	NoRel	true	başlandı	sağlamak
+Relation	T1	T0	NoRel	true	gelmişti	başlandı
+Relation	T1	T3	NoRel	true	gelmişti	olmuştu
+Relation	T1	T5	NoRel	true	gelmişti	Seçimlerden
+Relation	T1	T6	NoRel	true	gelmişti	kurtarmak
+Relation	T1	T8	NoRel	true	gelmişti	işgal
+Relation	T3	T2	NoRel	true	olmuştu	başladı
+Relation	T3	T5	NoRel	true	olmuştu	Seçimlerden
+Relation	T4	T2	NoRel	true	seçimlerde	başladı
+Relation	T4	T7	NoRel	true	seçimlerde	sağlamak
+Relation	T4	T8	NoRel	true	seçimlerde	işgal
+Relation	T5	T2	NoRel	true	Seçimlerden	başladı
+Relation	T5	T4	NoRel	true	Seçimlerden	seçimlerde
+Relation	T5	T9	NoRel	true	Seçimlerden	ayaklanmaya
+Relation	T6	T5	NoRel	true	kurtarmak	Seçimlerden
+Relation	T6	T8	NoRel	true	kurtarmak	işgal
+Relation	T6	T9	NoRel	true	kurtarmak	ayaklanmaya
+Relation	T7	T3	NoRel	true	sağlamak	olmuştu
+Relation	T7	T5	NoRel	true	sağlamak	Seçimlerden
+Relation	T7	T6	NoRel	true	sağlamak	kurtarmak
+Relation	T9	T0	NoRel	true	ayaklanmaya	başlandı
+Relation	T9	T4	NoRel	true	ayaklanmaya	seçimlerde
+Relation	T9	T5	NoRel	true	ayaklanmaya	Seçimlerden

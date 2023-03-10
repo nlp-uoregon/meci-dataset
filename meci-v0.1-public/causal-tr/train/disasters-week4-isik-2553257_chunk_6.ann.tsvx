@@ -1,0 +1,100 @@
+Text	İranlı bir yetkili , depremden 43 köyün etkilenmiş olabileceğini açıkladı .	Yetkili , bu köylerin bazılarında % 10 ile % 1, 0 arasında hasar oluştuğunun belirtildiğini ancak şu ana kadar can kaybı olmadığını ifade etti .	Azerbaycan Cumhurbaşkanı İlham Aliyev , deprem nedeniyle Türkiye Cumhurbaşkanı Recep Tayyip Erdoğan'a taziye mesajı gönderdi .	Van'da can kayıpları ve yaralıların olduğunu öğrenmekten büyük üzüntü duyduğunu belirten Aliyev , kendisi ve Azerbaycan halkı adına Cumhurbaşkanı Erdoğan'a , hayatını kaybedenlerin ailelerine , yakınlarına ve Türk halkına başsağlığı temennisinde bulundu , yaralılara şifa diledi .	Avrupa Birliği Türkiye Delegasyonu ile Amerika Birleşik Devletleri ve Birleşik Krallık’ın Ankara Büyükelçilikleri Twitter hesaplarından paylaştıkları mesajlarda depremde hayatını kaybedenlerin yakınlarına başsağlığı mesajı yayımladılar .
+Event	T0	depremden	EVENT	21
+Event	T1	etkilenmiş	EVENT	40
+Event	T2	açıkladı	EVENT	65
+Event	T3	hasar	EVENT	135
+Event	T4	belirtildiğini	EVENT	153
+Event	T6	etti	EVENT	214
+Event	T7	deprem	EVENT	261
+Event	T8	gönderdi	EVENT	337
+Event	T9	öğrenmekten	EVENT	393
+Event	T11	bulundu	EVENT	594
+Event	T12	diledi	EVENT	620
+Event	T14	yayımladılar	EVENT	852
+Event	T5	belirten	EVENT	428
+Event	T10	mesajlarda	EVENT	779
+Event	T15	depremde	EVENT	790
+Relation	T0	T2	CauseEffect	true	depremden	açıkladı
+Relation	T2	T0	EffectCause	true	açıkladı	depremden
+Relation	T0	T6	CauseEffect	true	depremden	etti
+Relation	T6	T0	EffectCause	true	etti	depremden
+Relation	T7	T8	CauseEffect	true	deprem	gönderdi
+Relation	T8	T7	EffectCause	true	gönderdi	deprem
+Relation	T8	T5	CauseEffect	true	gönderdi	belirten
+Relation	T5	T8	EffectCause	true	belirten	gönderdi
+Relation	T8	T11	CauseEffect	true	gönderdi	bulundu
+Relation	T11	T8	EffectCause	true	bulundu	gönderdi
+Relation	T8	T12	CauseEffect	true	gönderdi	diledi
+Relation	T12	T8	EffectCause	true	diledi	gönderdi
+Relation	T15	T10	CauseEffect	true	depremde	mesajlarda
+Relation	T10	T15	EffectCause	true	mesajlarda	depremde
+Relation	T10	T14	CauseEffect	true	mesajlarda	yayımladılar
+Relation	T14	T10	EffectCause	true	yayımladılar	mesajlarda
+Relation	T0	T14	NoRel	true	depremden	yayımladılar
+Relation	T0	T3	NoRel	true	depremden	hasar
+Relation	T0	T8	NoRel	true	depremden	gönderdi
+Relation	T1	T0	NoRel	true	etkilenmiş	depremden
+Relation	T1	T10	NoRel	true	etkilenmiş	mesajlarda
+Relation	T1	T15	NoRel	true	etkilenmiş	depremde
+Relation	T1	T2	NoRel	true	etkilenmiş	açıkladı
+Relation	T1	T3	NoRel	true	etkilenmiş	hasar
+Relation	T1	T6	NoRel	true	etkilenmiş	etti
+Relation	T1	T8	NoRel	true	etkilenmiş	gönderdi
+Relation	T10	T1	NoRel	true	mesajlarda	etkilenmiş
+Relation	T10	T11	NoRel	true	mesajlarda	bulundu
+Relation	T10	T12	NoRel	true	mesajlarda	diledi
+Relation	T10	T3	NoRel	true	mesajlarda	hasar
+Relation	T11	T15	NoRel	true	bulundu	depremde
+Relation	T11	T2	NoRel	true	bulundu	açıkladı
+Relation	T11	T5	NoRel	true	bulundu	belirten
+Relation	T11	T9	NoRel	true	bulundu	öğrenmekten
+Relation	T12	T0	NoRel	true	diledi	depremden
+Relation	T12	T14	NoRel	true	diledi	yayımladılar
+Relation	T12	T2	NoRel	true	diledi	açıkladı
+Relation	T12	T3	NoRel	true	diledi	hasar
+Relation	T12	T4	NoRel	true	diledi	belirtildiğini
+Relation	T12	T6	NoRel	true	diledi	etti
+Relation	T12	T9	NoRel	true	diledi	öğrenmekten
+Relation	T14	T1	NoRel	true	yayımladılar	etkilenmiş
+Relation	T14	T12	NoRel	true	yayımladılar	diledi
+Relation	T14	T2	NoRel	true	yayımladılar	açıkladı
+Relation	T14	T3	NoRel	true	yayımladılar	hasar
+Relation	T14	T5	NoRel	true	yayımladılar	belirten
+Relation	T14	T8	NoRel	true	yayımladılar	gönderdi
+Relation	T15	T1	NoRel	true	depremde	etkilenmiş
+Relation	T15	T12	NoRel	true	depremde	diledi
+Relation	T15	T2	NoRel	true	depremde	açıkladı
+Relation	T2	T11	NoRel	true	açıkladı	bulundu
+Relation	T2	T14	NoRel	true	açıkladı	yayımladılar
+Relation	T2	T8	NoRel	true	açıkladı	gönderdi
+Relation	T2	T9	NoRel	true	açıkladı	öğrenmekten
+Relation	T3	T0	NoRel	true	hasar	depremden
+Relation	T3	T10	NoRel	true	hasar	mesajlarda
+Relation	T3	T14	NoRel	true	hasar	yayımladılar
+Relation	T3	T7	NoRel	true	hasar	deprem
+Relation	T4	T12	NoRel	true	belirtildiğini	diledi
+Relation	T4	T2	NoRel	true	belirtildiğini	açıkladı
+Relation	T5	T0	NoRel	true	belirten	depremden
+Relation	T5	T12	NoRel	true	belirten	diledi
+Relation	T5	T14	NoRel	true	belirten	yayımladılar
+Relation	T5	T15	NoRel	true	belirten	depremde
+Relation	T5	T4	NoRel	true	belirten	belirtildiğini
+Relation	T6	T10	NoRel	true	etti	mesajlarda
+Relation	T6	T11	NoRel	true	etti	bulundu
+Relation	T6	T2	NoRel	true	etti	açıkladı
+Relation	T6	T7	NoRel	true	etti	deprem
+Relation	T7	T11	NoRel	true	deprem	bulundu
+Relation	T7	T12	NoRel	true	deprem	diledi
+Relation	T7	T15	NoRel	true	deprem	depremde
+Relation	T7	T5	NoRel	true	deprem	belirten
+Relation	T8	T1	NoRel	true	gönderdi	etkilenmiş
+Relation	T8	T14	NoRel	true	gönderdi	yayımladılar
+Relation	T8	T15	NoRel	true	gönderdi	depremde
+Relation	T8	T9	NoRel	true	gönderdi	öğrenmekten
+Relation	T9	T0	NoRel	true	öğrenmekten	depremden
+Relation	T9	T10	NoRel	true	öğrenmekten	mesajlarda
+Relation	T9	T11	NoRel	true	öğrenmekten	bulundu
+Relation	T9	T2	NoRel	true	öğrenmekten	açıkladı
+Relation	T9	T5	NoRel	true	öğrenmekten	belirten
+Relation	T9	T6	NoRel	true	öğrenmekten	etti
+Relation	T9	T8	NoRel	true	öğrenmekten	gönderdi

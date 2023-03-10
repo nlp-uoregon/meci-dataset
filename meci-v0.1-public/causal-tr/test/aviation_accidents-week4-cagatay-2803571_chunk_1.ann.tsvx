@@ -1,0 +1,23 @@
+Text	State lawmaker and local pilot among 7 killed in midair collision over Alaska’s Kenai Peninsula , Zaz Hollander , James Brooks , _ Anchorage Daily News _ , July 31,_2020 .	NTSB recovering planes in midair collision near Soldotna that killed 7 , including legislator and local pilot , Morgan Krakow , _ Anchorage Daily News _ , August 1, 2020 .	Kenai legislator and local pilot among 7 killed in midair plane crash , Tegan Hanlon , Alaska Public Media , July 31, 2020 .	Mid- Air Collision Leaves Seven Dead on the Kenai Peninsula , press release , Alaska Department of Public Safety , July 31, 2020 .	
+Event	T0	collision	EVENT	56
+Event	T1	recovering	EVENT	177
+Event	T2	collision	EVENT	205
+Event	T3	killed	EVENT	234
+Event	T4	killed	EVENT	385
+Event	T5	crash	EVENT	408
+Event	T6	Dead	EVENT	501
+Relation	T2	T3	CauseEffect	true	collision	killed
+Relation	T3	T2	EffectCause	true	killed	collision
+Relation	T5	T4	CauseEffect	true	crash	killed
+Relation	T4	T5	EffectCause	true	killed	crash
+Relation	T0	T4	NoRel	true	collision	killed
+Relation	T1	T0	NoRel	true	recovering	collision
+Relation	T1	T2	NoRel	true	recovering	collision
+Relation	T1	T4	NoRel	true	recovering	killed
+Relation	T2	T5	NoRel	true	collision	crash
+Relation	T2	T6	NoRel	true	collision	Dead
+Relation	T3	T0	NoRel	true	killed	collision
+Relation	T4	T1	NoRel	true	killed	recovering
+Relation	T4	T6	NoRel	true	killed	Dead
+Relation	T5	T6	NoRel	true	crash	Dead
+Relation	T6	T1	NoRel	true	Dead	recovering

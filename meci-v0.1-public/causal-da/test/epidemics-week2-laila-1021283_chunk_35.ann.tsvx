@@ -1,0 +1,16 @@
+Text	Nationalbanken øgede udstedelsen af årlige statsobligationer fra 75 til 125 milliarder kroner for at finansiere nogle af de mange tiltag .	I februar 2020 havde danske virksomheder 426 mia kr, dog hovedsageligt i de store virksomheder .	Store virksomheder sendte sårbare medarbejdere hjem med løn og afgrænsede øvrige medarbejderes sandsynlighed for at smitte hinanden .	Forlystelsesparker som Tivoli , Bakken , og Legoland udskød sin forårsåbning i foreløbig nogle uger .	Danmarks grænser blev lukket fra 14. marts kl. 12 .
+Event	T0	udstedelsen	EVENT	21
+Event	T1	tiltag	EVENT	130
+Event	T2	sendte	EVENT	255
+Event	T3	smitte	EVENT	352
+Event	T4	udskød	EVENT	423
+Relation	T1	T0	CauseEffect	true	tiltag	udstedelsen
+Relation	T0	T1	EffectCause	true	udstedelsen	tiltag
+Relation	T1	T2	CauseEffect	true	tiltag	sendte
+Relation	T2	T1	EffectCause	true	sendte	tiltag
+Relation	T1	T4	CauseEffect	true	tiltag	udskød
+Relation	T4	T1	EffectCause	true	udskød	tiltag
+Relation	T3	T2	CauseEffect	true	smitte	sendte
+Relation	T2	T3	EffectCause	true	sendte	smitte
+Relation	T3	T4	NoRel	true	smitte	udskød
+Relation	T4	T3	NoRel	true	udskød	smitte

@@ -1,0 +1,57 @@
+Text	- 7 Haziran , 1951 - Nova Iguacu hemzemin geçiti felaketi — Ev ile iş arası çalışan bir tren benzin taşıyan bir kamyona çarptı ; en az elli dört kişi öldü .	.	- 24 Ocak , 2009 – Toronto , Wallace Caddesi’nde bir tren boş bir polis telsizli devriye arabasıyla kavşağın soltarafında çarpıştı .	- 25 Ocak , 2009 – Kebek eyaleti Vanier_‘de bir adam arabası ile son iki hemzemin geçitten birinde bir tren ile çarpıştı ve adam öldü .	- 23 Aralık , 1988 - Qinghemen hemzemin geçidi felaketi – Bir yerel otobüs , Shenyang’da bir yolcu treniyle çarpıştı , en az kırk altı ölü ve altmış üç yaralı .
+Event	T0	felaketi	EVENT	49
+Event	T1	çarptı	EVENT	120
+Event	T2	öldü	EVENT	150
+Event	T3	çarpıştı	EVENT	281
+Event	T4	çarpıştı	EVENT	404
+Event	T5	öldü	EVENT	421
+Event	T6	felaketi	EVENT	475
+Event	T7	çarpıştı	EVENT	536
+Event	T8	ölü	EVENT	563
+Event	T9	yaralı	EVENT	580
+Event	T10	taşıyan	EVENT	100
+Event	T11	çalışan	EVENT	76
+Relation	T1	T0	CauseEffect	true	çarptı	felaketi
+Relation	T0	T1	EffectCause	true	felaketi	çarptı
+Relation	T0	T2	CauseEffect	true	felaketi	öldü
+Relation	T2	T0	EffectCause	true	öldü	felaketi
+Relation	T4	T5	CauseEffect	true	çarpıştı	öldü
+Relation	T5	T4	EffectCause	true	öldü	çarpıştı
+Relation	T7	T6	CauseEffect	true	çarpıştı	felaketi
+Relation	T6	T7	EffectCause	true	felaketi	çarpıştı
+Relation	T6	T8	CauseEffect	true	felaketi	ölü
+Relation	T8	T6	EffectCause	true	ölü	felaketi
+Relation	T6	T9	CauseEffect	true	felaketi	yaralı
+Relation	T9	T6	EffectCause	true	yaralı	felaketi
+Relation	T0	T4	NoRel	true	felaketi	çarpıştı
+Relation	T0	T5	NoRel	true	felaketi	öldü
+Relation	T0	T6	NoRel	true	felaketi	felaketi
+Relation	T1	T2	NoRel	true	çarptı	öldü
+Relation	T1	T3	NoRel	true	çarptı	çarpıştı
+Relation	T1	T4	NoRel	true	çarptı	çarpıştı
+Relation	T1	T8	NoRel	true	çarptı	ölü
+Relation	T1	T9	NoRel	true	çarptı	yaralı
+Relation	T10	T1	NoRel	true	taşıyan	çarptı
+Relation	T10	T2	NoRel	true	taşıyan	öldü
+Relation	T10	T7	NoRel	true	taşıyan	çarpıştı
+Relation	T10	T8	NoRel	true	taşıyan	ölü
+Relation	T11	T0	NoRel	true	çalışan	felaketi
+Relation	T11	T10	NoRel	true	çalışan	taşıyan
+Relation	T11	T2	NoRel	true	çalışan	öldü
+Relation	T11	T7	NoRel	true	çalışan	çarpıştı
+Relation	T3	T0	NoRel	true	çarpıştı	felaketi
+Relation	T3	T11	NoRel	true	çarpıştı	çalışan
+Relation	T3	T2	NoRel	true	çarpıştı	öldü
+Relation	T3	T4	NoRel	true	çarpıştı	çarpıştı
+Relation	T3	T9	NoRel	true	çarpıştı	yaralı
+Relation	T4	T10	NoRel	true	çarpıştı	taşıyan
+Relation	T5	T8	NoRel	true	öldü	ölü
+Relation	T6	T1	NoRel	true	felaketi	çarptı
+Relation	T6	T11	NoRel	true	felaketi	çalışan
+Relation	T6	T2	NoRel	true	felaketi	öldü
+Relation	T6	T4	NoRel	true	felaketi	çarpıştı
+Relation	T8	T1	NoRel	true	ölü	çarptı
+Relation	T8	T4	NoRel	true	ölü	çarpıştı
+Relation	T8	T9	NoRel	true	ölü	yaralı
+Relation	T9	T10	NoRel	true	yaralı	taşıyan
+Relation	T9	T7	NoRel	true	yaralı	çarpıştı

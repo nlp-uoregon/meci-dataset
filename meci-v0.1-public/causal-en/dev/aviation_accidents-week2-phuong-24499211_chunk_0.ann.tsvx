@@ -1,0 +1,41 @@
+Text	Lieutenant JOHN MONCRIEFF and Captain GEORGE HOOD were two New Zealanders who vanished on 10 January 1928 while attempting the first trans-Tasman flight from Australia to New Zealand .	Radio signals were received from their aircraft for 12 hours after their departure from Sydney , but despite a number of purported sightings in New Zealand , and many land searches in the intervening years , no trace of the aviators or their aircraft has ever been found .	John Robert Moncrieff was a New Zealander by adoption , being born at Lerwick in the Shetland Islands on 22 September 1894 .	Educated at Leith Academy in Scotland , he emigrated to New Zealand early at the age of 16 and trained as a motor engineer .	He enlisted in the armed forces in December 1917 , and took a flying course with the Canterbury ( NZ ) Aviation Company at the Sockburn aerodrome ( later renamed Wigram Aerodrome ) .
+Event	T0	vanished	EVENT	78
+Event	T1	attempting	EVENT	112
+Event	T10	born	EVENT	520
+Event	T11	Educated	EVENT	583
+Event	T12	emigrated	EVENT	626
+Event	T13	trained	EVENT	678
+Event	T14	enlisted	EVENT	711
+Event	T15	took	EVENT	763
+Event	T16	renamed	EVENT	862
+Event	T2	flight	EVENT	146
+Event	T3	signals	EVENT	191
+Event	T5	departure	EVENT	258
+Event	T6	sightings	EVENT	316
+Event	T7	searches	EVENT	357
+Event	T8	found	EVENT	450
+Event	T9	adoption	EVENT	503
+Relation	T2	T0	CauseEffect	true	flight	vanished
+Relation	T0	T2	EffectCause	true	vanished	flight
+Relation	T14	T15	CauseEffect	true	enlisted	took
+Relation	T15	T14	EffectCause	true	took	enlisted
+Relation	T0	T1	NoRel	true	vanished	attempting
+Relation	T1	T10	NoRel	true	attempting	born
+Relation	T11	T0	NoRel	true	Educated	vanished
+Relation	T11	T6	NoRel	true	Educated	sightings
+Relation	T12	T2	NoRel	true	emigrated	flight
+Relation	T14	T10	NoRel	true	enlisted	born
+Relation	T14	T6	NoRel	true	enlisted	sightings
+Relation	T14	T7	NoRel	true	enlisted	searches
+Relation	T2	T13	NoRel	true	flight	trained
+Relation	T2	T9	NoRel	true	flight	adoption
+Relation	T3	T6	NoRel	true	signals	sightings
+Relation	T5	T11	NoRel	true	departure	Educated
+Relation	T5	T13	NoRel	true	departure	trained
+Relation	T5	T7	NoRel	true	departure	searches
+Relation	T7	T1	NoRel	true	searches	attempting
+Relation	T8	T0	NoRel	true	found	vanished
+Relation	T8	T1	NoRel	true	found	attempting
+Relation	T8	T16	NoRel	true	found	renamed
+Relation	T9	T16	NoRel	true	adoption	renamed
+Relation	T9	T7	NoRel	true	adoption	searches

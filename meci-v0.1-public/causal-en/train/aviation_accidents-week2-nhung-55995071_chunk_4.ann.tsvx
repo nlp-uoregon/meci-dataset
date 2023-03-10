@@ -1,0 +1,49 @@
+Text	At 21:47 , approximately 90 seconds before the start of the planned holding pattern , the controller cleared the crew to descend to and to continue the approach .	Shortly after , the autopilot captured the ILS localizer , which is an instrument landing system that is used to guide the aircraft along the axis of the runway , and the crew prepared for landing .	The controller stated that he would clear the aircraft to land after the crew reported their position .	[ Brest Airport Runway 26L , the runway intended by Flight 5672 to land ]	At 21:48 , the First Officer extended the flaps and the aircraft was stabilized at 2,000 ft .
+Event	T0	start	EVENT	47
+Event	T1	pattern	EVENT	76
+Event	T10	landing	EVENT	352
+Event	T11	stated	EVENT	377
+Event	T12	clear	EVENT	398
+Event	T13	reported	EVENT	440
+Event	T14	intended	EVENT	506
+Event	T15	extended	EVENT	569
+Event	T16	stabilized	EVENT	609
+Event	T2	cleared	EVENT	101
+Event	T3	continue	EVENT	139
+Event	T4	approach	EVENT	152
+Event	T5	captured	EVENT	193
+Event	T6	landing	EVENT	245
+Event	T8	guide	EVENT	276
+Relation	T4	T5	CauseEffect	true	approach	captured
+Relation	T5	T4	EffectCause	true	captured	approach
+Relation	T13	T12	CauseEffect	true	reported	clear
+Relation	T12	T13	EffectCause	true	clear	reported
+Relation	T16	T15	CauseEffect	true	stabilized	extended
+Relation	T15	T16	EffectCause	true	extended	stabilized
+Relation	T0	T2	NoRel	true	start	cleared
+Relation	T1	T0	NoRel	true	pattern	start
+Relation	T1	T10	NoRel	true	pattern	landing
+Relation	T1	T15	NoRel	true	pattern	extended
+Relation	T1	T16	NoRel	true	pattern	stabilized
+Relation	T10	T15	NoRel	true	landing	extended
+Relation	T10	T6	NoRel	true	landing	landing
+Relation	T11	T16	NoRel	true	stated	stabilized
+Relation	T12	T4	NoRel	true	clear	approach
+Relation	T13	T10	NoRel	true	reported	landing
+Relation	T13	T2	NoRel	true	reported	cleared
+Relation	T14	T15	NoRel	true	intended	extended
+Relation	T14	T16	NoRel	true	intended	stabilized
+Relation	T15	T6	NoRel	true	extended	landing
+Relation	T16	T10	NoRel	true	stabilized	landing
+Relation	T16	T11	NoRel	true	stabilized	stated
+Relation	T16	T12	NoRel	true	stabilized	clear
+Relation	T2	T0	NoRel	true	cleared	start
+Relation	T2	T10	NoRel	true	cleared	landing
+Relation	T3	T1	NoRel	true	continue	pattern
+Relation	T3	T16	NoRel	true	continue	stabilized
+Relation	T4	T10	NoRel	true	approach	landing
+Relation	T4	T6	NoRel	true	approach	landing
+Relation	T5	T13	NoRel	true	captured	reported
+Relation	T5	T15	NoRel	true	captured	extended
+Relation	T6	T11	NoRel	true	landing	stated
+Relation	T8	T1	NoRel	true	guide	pattern

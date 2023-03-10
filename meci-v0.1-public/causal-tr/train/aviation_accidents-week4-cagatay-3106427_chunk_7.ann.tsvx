@@ -1,0 +1,62 @@
+Text	Amerikan / Rus komisyonu 1993'te enkaz sahasında araştırma gerçekleştirildi ve neticesinde oluşturulan raporda altı kişinin kalıntıları doğrulandı .	Ayrıca raporda , başka kişilerin de kalıntılarının olabileceği ancak uçağın düşmesinin ardından çıkan yangının kalıntıların kimliğinin tespit edilmesini engellediği belirtildi .	Bir görgü tanığı olan General Sozinov , enkazın sekiz saat yandığını söyledi .	Ayrıca Sovyet avcı uçağı mürettebatının ve görgü tanıklarının tamamı vurulan uçaktan paraşütle atlayan kimseyi görmediğini söyledi .	Uçağın neden Sovyet hava sahasına girdiği kesin olarak bilinmiyor .
+Event	T1	doğrulandı	EVENT	136
+Event	T2	düşmesinin	EVENT	225
+Event	T3	yangının	EVENT	251
+Event	T4	tespit	EVENT	284
+Event	T5	belirtildi	EVENT	314
+Event	T6	söyledi	EVENT	396
+Event	T7	vurulan	EVENT	475
+Event	T8	söyledi	EVENT	529
+Event	T9	araştırma	EVENT	49
+Event	T10	engellediği	EVENT	302
+Event	T11	yandığını	EVENT	386
+Event	T12	girdiği	EVENT	573
+Relation	T9	T1	CauseEffect	true	araştırma	doğrulandı
+Relation	T1	T9	EffectCause	true	doğrulandı	araştırma
+Relation	T2	T3	CauseEffect	true	düşmesinin	yangının
+Relation	T3	T2	EffectCause	true	yangının	düşmesinin
+Relation	T3	T10	CauseEffect	true	yangının	engellediği
+Relation	T10	T3	EffectCause	true	engellediği	yangının
+Relation	T12	T7	CauseEffect	true	girdiği	vurulan
+Relation	T7	T12	EffectCause	true	vurulan	girdiği
+Relation	T7	T2	CauseEffect	true	vurulan	düşmesinin
+Relation	T2	T7	EffectCause	true	düşmesinin	vurulan
+Relation	T2	T11	CauseEffect	true	düşmesinin	yandığını
+Relation	T11	T2	EffectCause	true	yandığını	düşmesinin
+Relation	T1	T7	NoRel	true	doğrulandı	vurulan
+Relation	T10	T11	NoRel	true	engellediği	yandığını
+Relation	T10	T12	NoRel	true	engellediği	girdiği
+Relation	T10	T9	NoRel	true	engellediği	araştırma
+Relation	T11	T10	NoRel	true	yandığını	engellediği
+Relation	T11	T3	NoRel	true	yandığını	yangının
+Relation	T11	T5	NoRel	true	yandığını	belirtildi
+Relation	T11	T9	NoRel	true	yandığını	araştırma
+Relation	T12	T4	NoRel	true	girdiği	tespit
+Relation	T12	T8	NoRel	true	girdiği	söyledi
+Relation	T2	T12	NoRel	true	düşmesinin	girdiği
+Relation	T2	T5	NoRel	true	düşmesinin	belirtildi
+Relation	T3	T1	NoRel	true	yangının	doğrulandı
+Relation	T3	T11	NoRel	true	yangının	yandığını
+Relation	T3	T7	NoRel	true	yangının	vurulan
+Relation	T3	T8	NoRel	true	yangının	söyledi
+Relation	T4	T1	NoRel	true	tespit	doğrulandı
+Relation	T4	T2	NoRel	true	tespit	düşmesinin
+Relation	T4	T3	NoRel	true	tespit	yangının
+Relation	T4	T7	NoRel	true	tespit	vurulan
+Relation	T5	T4	NoRel	true	belirtildi	tespit
+Relation	T6	T12	NoRel	true	söyledi	girdiği
+Relation	T6	T3	NoRel	true	söyledi	yangının
+Relation	T6	T9	NoRel	true	söyledi	araştırma
+Relation	T7	T4	NoRel	true	vurulan	tespit
+Relation	T7	T8	NoRel	true	vurulan	söyledi
+Relation	T8	T1	NoRel	true	söyledi	doğrulandı
+Relation	T8	T12	NoRel	true	söyledi	girdiği
+Relation	T8	T2	NoRel	true	söyledi	düşmesinin
+Relation	T8	T3	NoRel	true	söyledi	yangının
+Relation	T8	T6	NoRel	true	söyledi	söyledi
+Relation	T8	T7	NoRel	true	söyledi	vurulan
+Relation	T8	T9	NoRel	true	söyledi	araştırma
+Relation	T9	T10	NoRel	true	araştırma	engellediği
+Relation	T9	T11	NoRel	true	araştırma	yandığını
+Relation	T9	T12	NoRel	true	araştırma	girdiği
+Relation	T9	T4	NoRel	true	araştırma	tespit

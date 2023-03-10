@@ -1,0 +1,79 @@
+Text	Dicha barrera no funcionaba correctamente ya que se encontraba trabada con un palo a 45 grados con señales sonoras y auditivas permanentes , cuyo funcionamiento no estaba relacionado con la aproximación de formaciones .	La empresa responsable de que la barrera funcionara correctamente era TBA del grupo Cirigliano .	En el momento de la rotura de la barrera , se encontraba en sitio un banderillero que permitió el paso del camión a pesar de la anomalía de la situación .	La Policía Metropolitana de la Ciudad de Buenos Aires a cargo de la seguridad vial en Buenos Aires tampoco dio aviso de la situación ni tomo acción alguna a pesar de que el hecho estaba siendo monitoreado en vivo .	Dicha fuerza de seguridad no colocó " en consigna " de uno de sus agentes en el lugar pese a haber tenido filmada la maniobra .
+Event	T0	funcionaba	EVENT	17
+Event	T1	trabada	EVENT	63
+Event	T2	funcionamiento	EVENT	146
+Event	T3	aproximación	EVENT	190
+Event	T4	funcionara	EVENT	261
+Event	T5	rotura	EVENT	337
+Event	T6	permitió	EVENT	403
+Event	T7	paso	EVENT	415
+Event	T8	situación	EVENT	595
+Event	T9	acción	EVENT	613
+Event	T10	hecho	EVENT	645
+Event	T11	monitoreado	EVENT	665
+Event	T12	colocó	EVENT	716
+Event	T13	filmada	EVENT	793
+Event	T14	maniobra	EVENT	804
+Relation	T1	T0	CauseEffect	true	trabada	funcionaba
+Relation	T0	T1	EffectCause	true	funcionaba	trabada
+Relation	T0	T11	NoRel	true	funcionaba	monitoreado
+Relation	T0	T12	NoRel	true	funcionaba	colocó
+Relation	T0	T13	NoRel	true	funcionaba	filmada
+Relation	T0	T3	NoRel	true	funcionaba	aproximación
+Relation	T0	T4	NoRel	true	funcionaba	funcionara
+Relation	T0	T8	NoRel	true	funcionaba	situación
+Relation	T1	T14	NoRel	true	trabada	maniobra
+Relation	T1	T2	NoRel	true	trabada	funcionamiento
+Relation	T10	T12	NoRel	true	hecho	colocó
+Relation	T10	T14	NoRel	true	hecho	maniobra
+Relation	T10	T6	NoRel	true	hecho	permitió
+Relation	T10	T9	NoRel	true	hecho	acción
+Relation	T11	T10	NoRel	true	monitoreado	hecho
+Relation	T11	T12	NoRel	true	monitoreado	colocó
+Relation	T11	T13	NoRel	true	monitoreado	filmada
+Relation	T11	T2	NoRel	true	monitoreado	funcionamiento
+Relation	T11	T5	NoRel	true	monitoreado	rotura
+Relation	T11	T7	NoRel	true	monitoreado	paso
+Relation	T12	T11	NoRel	true	colocó	monitoreado
+Relation	T12	T13	NoRel	true	colocó	filmada
+Relation	T12	T14	NoRel	true	colocó	maniobra
+Relation	T12	T2	NoRel	true	colocó	funcionamiento
+Relation	T13	T1	NoRel	true	filmada	trabada
+Relation	T13	T12	NoRel	true	filmada	colocó
+Relation	T13	T2	NoRel	true	filmada	funcionamiento
+Relation	T13	T3	NoRel	true	filmada	aproximación
+Relation	T13	T4	NoRel	true	filmada	funcionara
+Relation	T13	T8	NoRel	true	filmada	situación
+Relation	T14	T0	NoRel	true	maniobra	funcionaba
+Relation	T14	T12	NoRel	true	maniobra	colocó
+Relation	T14	T9	NoRel	true	maniobra	acción
+Relation	T2	T0	NoRel	true	funcionamiento	funcionaba
+Relation	T2	T6	NoRel	true	funcionamiento	permitió
+Relation	T2	T9	NoRel	true	funcionamiento	acción
+Relation	T3	T14	NoRel	true	aproximación	maniobra
+Relation	T3	T5	NoRel	true	aproximación	rotura
+Relation	T4	T0	NoRel	true	funcionara	funcionaba
+Relation	T4	T1	NoRel	true	funcionara	trabada
+Relation	T4	T10	NoRel	true	funcionara	hecho
+Relation	T4	T11	NoRel	true	funcionara	monitoreado
+Relation	T4	T13	NoRel	true	funcionara	filmada
+Relation	T4	T14	NoRel	true	funcionara	maniobra
+Relation	T5	T0	NoRel	true	rotura	funcionaba
+Relation	T5	T1	NoRel	true	rotura	trabada
+Relation	T5	T10	NoRel	true	rotura	hecho
+Relation	T5	T12	NoRel	true	rotura	colocó
+Relation	T5	T4	NoRel	true	rotura	funcionara
+Relation	T6	T0	NoRel	true	permitió	funcionaba
+Relation	T6	T10	NoRel	true	permitió	hecho
+Relation	T6	T14	NoRel	true	permitió	maniobra
+Relation	T6	T2	NoRel	true	permitió	funcionamiento
+Relation	T6	T4	NoRel	true	permitió	funcionara
+Relation	T6	T5	NoRel	true	permitió	rotura
+Relation	T7	T0	NoRel	true	paso	funcionaba
+Relation	T7	T3	NoRel	true	paso	aproximación
+Relation	T7	T5	NoRel	true	paso	rotura
+Relation	T8	T0	NoRel	true	situación	funcionaba
+Relation	T8	T2	NoRel	true	situación	funcionamiento
+Relation	T8	T3	NoRel	true	situación	aproximación
+Relation	T9	T13	NoRel	true	acción	filmada
+Relation	T9	T3	NoRel	true	acción	aproximación

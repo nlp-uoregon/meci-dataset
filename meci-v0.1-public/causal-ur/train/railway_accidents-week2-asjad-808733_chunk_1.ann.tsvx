@@ -1,0 +1,39 @@
+Text	ایک مقامی عہدیدار نے کہا کہ زیادہ تر متاثرین یہاں کام کرنے کے لیے نقل مکانی کر کے آئے ہوئے تھے اور ان کے خاندانون کا تعلق اتر پردیش اور بہار کی ریاستوں سے ہے ۔	جن کی شناخت ہو گئی ان کا شیتلا ماتا مندر ، پٹنہ میں انتم سنسکار کر دیا گیا ، جبکہ کچھ کو ان کے آبائی علاقوں میں واپس بھیج دیا گیا ۔	وزیر ریلوے پیوش گوئل حادثہ کے وقت امریکا کے دورے پر تھے ، انہوں نے بھارت اپنی فوری واپسی کا اعلان کیا ۔	جالندھر اور امرتسر کی درمیانی ریل کو روک دیا گیا اور حادثے کے ایک دن کے بعد 37 ٹرینیں منسوخ کر دی گئیں ۔	وزیر مملکت برائے ریلوے منوج سنہا کا کہنا تھا کہ ریلوے انتظامیہ کو تقریب کا مقام یا وقت کے متعلق آگاہ نہیں کیا گیا ۔
+Event	T0	کہا	EVENT	21
+Event	T1	شناخت	EVENT	166
+Event	T2	حادثہ	EVENT	313
+Event	T3	دورے	EVENT	336
+Event	T4	واپسی	EVENT	375
+Event	T5	حادثے	EVENT	449
+Event	T6	منسوخ	EVENT	482
+Event	T7	کہنا	EVENT	537
+Relation	T2	T4	CauseEffect	true	حادثہ	واپسی
+Relation	T4	T2	EffectCause	true	واپسی	حادثہ
+Relation	T5	T6	CauseEffect	true	حادثے	منسوخ
+Relation	T6	T5	EffectCause	true	منسوخ	حادثے
+Relation	T5	T4	CauseEffect	true	حادثے	واپسی
+Relation	T4	T5	EffectCause	true	واپسی	حادثے
+Relation	T2	T0	CauseEffect	true	حادثہ	کہا
+Relation	T0	T2	EffectCause	true	کہا	حادثہ
+Relation	T2	T7	CauseEffect	true	حادثہ	کہنا
+Relation	T7	T2	EffectCause	true	کہنا	حادثہ
+Relation	T0	T5	NoRel	true	کہا	حادثے
+Relation	T0	T7	NoRel	true	کہا	کہنا
+Relation	T1	T0	NoRel	true	شناخت	کہا
+Relation	T1	T3	NoRel	true	شناخت	دورے
+Relation	T1	T4	NoRel	true	شناخت	واپسی
+Relation	T1	T7	NoRel	true	شناخت	کہنا
+Relation	T2	T5	NoRel	true	حادثہ	حادثے
+Relation	T3	T0	NoRel	true	دورے	کہا
+Relation	T3	T2	NoRel	true	دورے	حادثہ
+Relation	T3	T4	NoRel	true	دورے	واپسی
+Relation	T3	T7	NoRel	true	دورے	کہنا
+Relation	T4	T7	NoRel	true	واپسی	کہنا
+Relation	T5	T0	NoRel	true	حادثے	کہا
+Relation	T5	T2	NoRel	true	حادثے	حادثہ
+Relation	T5	T3	NoRel	true	حادثے	دورے
+Relation	T6	T0	NoRel	true	منسوخ	کہا
+Relation	T6	T1	NoRel	true	منسوخ	شناخت
+Relation	T6	T2	NoRel	true	منسوخ	حادثہ
+Relation	T7	T3	NoRel	true	کہنا	دورے
+Relation	T7	T5	NoRel	true	کہنا	حادثے

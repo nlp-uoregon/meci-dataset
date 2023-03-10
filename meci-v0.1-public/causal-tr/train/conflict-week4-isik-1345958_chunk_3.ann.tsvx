@@ -1,0 +1,33 @@
+Text	Ahsoka , " Klon Savaşları"nın yedi sezonunun altısında başrol oyuncusu olarak bulunur .	Cumhuriyetin Büyük Ordusu'nda 501. Lejyon'un padawan komutanıdır ve Anakin'in çırağı olarak Jedi'ların yollarını öğrenmeye devam eder .	İkili karşılıklı bir sevgi geliştirir , zaman zaman birbirlerini korumak veya kurtarmak için büyük riskler alırlar .	Anakin'in Ahsoka'ya olan endişelerinden dolayı yaptığı bazı eylemler , onun karanlık gücünü ortaya çıkarır örneğin Ahsoka kaybolduğunda yerini bilen mahkumlara işkence etmesi gibi .	Ahsoka ayrıca Anakin'le birlikte savaş boyunca yanlarında olan Kaptan Rex'den bazı dersler alır .
+Event	T0	eder	EVENT	217
+Event	T1	geliştirir	EVENT	251
+Event	T3	eylemler	EVENT	401
+Event	T4	kaybolduğunda	EVENT	463
+Event	T5	etmesi	EVENT	509
+Event	T6	savaş	EVENT	556
+Event	T7	alır	EVENT	614
+Event	T2	çıkarır	EVENT	440
+Relation	T3	T2	CauseEffect	true	eylemler	çıkarır
+Relation	T2	T3	EffectCause	true	çıkarır	eylemler
+Relation	T5	T2	CauseEffect	true	etmesi	çıkarır
+Relation	T2	T5	EffectCause	true	çıkarır	etmesi
+Relation	T0	T2	NoRel	true	eder	çıkarır
+Relation	T0	T6	NoRel	true	eder	savaş
+Relation	T1	T3	NoRel	true	geliştirir	eylemler
+Relation	T1	T5	NoRel	true	geliştirir	etmesi
+Relation	T1	T6	NoRel	true	geliştirir	savaş
+Relation	T2	T0	NoRel	true	çıkarır	eder
+Relation	T2	T1	NoRel	true	çıkarır	geliştirir
+Relation	T3	T0	NoRel	true	eylemler	eder
+Relation	T3	T5	NoRel	true	eylemler	etmesi
+Relation	T4	T1	NoRel	true	kaybolduğunda	geliştirir
+Relation	T4	T6	NoRel	true	kaybolduğunda	savaş
+Relation	T5	T0	NoRel	true	etmesi	eder
+Relation	T5	T1	NoRel	true	etmesi	geliştirir
+Relation	T6	T0	NoRel	true	savaş	eder
+Relation	T6	T1	NoRel	true	savaş	geliştirir
+Relation	T6	T2	NoRel	true	savaş	çıkarır
+Relation	T6	T3	NoRel	true	savaş	eylemler
+Relation	T7	T2	NoRel	true	alır	çıkarır
+Relation	T7	T4	NoRel	true	alır	kaybolduğunda
+Relation	T7	T5	NoRel	true	alır	etmesi

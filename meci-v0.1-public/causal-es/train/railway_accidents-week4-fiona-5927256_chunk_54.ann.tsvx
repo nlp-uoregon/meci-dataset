@@ -1,0 +1,83 @@
+Text	Los vagones se hallaban aparcados a la espera de ser descargados en una de las vías del muelle de la estación de la citada localidad , que almacenaba también una importante cantidad de material de guerra , provocando la explosión del mismo .	Murieron alrededor de un centenar de personas y otras 1500 resultaron heridas . .	- 3 de diciembre de 1940 .	En la estación de Velilla de Ebro ( Zaragoza ) chocan el expreso Madrid_-_Barcelona y su homólogo que cubría la relación contraria .	Fallecen 53 personas y 58 resultan heridas .
+Event	T0	aparcados	EVENT	24
+Event	T1	espera	EVENT	39
+Event	T2	descargados	EVENT	53
+Event	T3	almacenaba	EVENT	139
+Event	T4	guerra	EVENT	197
+Event	T5	provocando	EVENT	206
+Event	T6	explosión	EVENT	220
+Event	T7	Murieron	EVENT	242
+Event	T8	heridas	EVENT	312
+Event	T9	chocan	EVENT	398
+Event	T10	cubría	EVENT	453
+Event	T11	Fallecen	EVENT	484
+Event	T12	heridas	EVENT	519
+Relation	T6	T7	CauseEffect	true	explosión	Murieron
+Relation	T7	T6	EffectCause	true	Murieron	explosión
+Relation	T6	T8	CauseEffect	true	explosión	heridas
+Relation	T8	T6	EffectCause	true	heridas	explosión
+Relation	T9	T11	CauseEffect	true	chocan	Fallecen
+Relation	T11	T9	EffectCause	true	Fallecen	chocan
+Relation	T9	T12	CauseEffect	true	chocan	heridas
+Relation	T12	T9	EffectCause	true	heridas	chocan
+Relation	T0	T1	NoRel	true	aparcados	espera
+Relation	T0	T10	NoRel	true	aparcados	cubría
+Relation	T0	T11	NoRel	true	aparcados	Fallecen
+Relation	T0	T2	NoRel	true	aparcados	descargados
+Relation	T0	T3	NoRel	true	aparcados	almacenaba
+Relation	T0	T5	NoRel	true	aparcados	provocando
+Relation	T0	T8	NoRel	true	aparcados	heridas
+Relation	T0	T9	NoRel	true	aparcados	chocan
+Relation	T1	T10	NoRel	true	espera	cubría
+Relation	T1	T4	NoRel	true	espera	guerra
+Relation	T1	T5	NoRel	true	espera	provocando
+Relation	T1	T7	NoRel	true	espera	Murieron
+Relation	T1	T9	NoRel	true	espera	chocan
+Relation	T10	T0	NoRel	true	cubría	aparcados
+Relation	T10	T1	NoRel	true	cubría	espera
+Relation	T10	T12	NoRel	true	cubría	heridas
+Relation	T10	T2	NoRel	true	cubría	descargados
+Relation	T10	T3	NoRel	true	cubría	almacenaba
+Relation	T10	T7	NoRel	true	cubría	Murieron
+Relation	T11	T1	NoRel	true	Fallecen	espera
+Relation	T11	T3	NoRel	true	Fallecen	almacenaba
+Relation	T11	T5	NoRel	true	Fallecen	provocando
+Relation	T11	T7	NoRel	true	Fallecen	Murieron
+Relation	T12	T0	NoRel	true	heridas	aparcados
+Relation	T12	T1	NoRel	true	heridas	espera
+Relation	T12	T3	NoRel	true	heridas	almacenaba
+Relation	T12	T6	NoRel	true	heridas	explosión
+Relation	T12	T8	NoRel	true	heridas	heridas
+Relation	T2	T0	NoRel	true	descargados	aparcados
+Relation	T2	T1	NoRel	true	descargados	espera
+Relation	T2	T12	NoRel	true	descargados	heridas
+Relation	T2	T6	NoRel	true	descargados	explosión
+Relation	T2	T9	NoRel	true	descargados	chocan
+Relation	T3	T1	NoRel	true	almacenaba	espera
+Relation	T3	T12	NoRel	true	almacenaba	heridas
+Relation	T4	T0	NoRel	true	guerra	aparcados
+Relation	T4	T1	NoRel	true	guerra	espera
+Relation	T4	T10	NoRel	true	guerra	cubría
+Relation	T4	T11	NoRel	true	guerra	Fallecen
+Relation	T4	T5	NoRel	true	guerra	provocando
+Relation	T4	T6	NoRel	true	guerra	explosión
+Relation	T4	T7	NoRel	true	guerra	Murieron
+Relation	T4	T8	NoRel	true	guerra	heridas
+Relation	T5	T1	NoRel	true	provocando	espera
+Relation	T5	T12	NoRel	true	provocando	heridas
+Relation	T5	T2	NoRel	true	provocando	descargados
+Relation	T6	T1	NoRel	true	explosión	espera
+Relation	T6	T10	NoRel	true	explosión	cubría
+Relation	T6	T12	NoRel	true	explosión	heridas
+Relation	T6	T4	NoRel	true	explosión	guerra
+Relation	T7	T0	NoRel	true	Murieron	aparcados
+Relation	T7	T1	NoRel	true	Murieron	espera
+Relation	T7	T12	NoRel	true	Murieron	heridas
+Relation	T7	T3	NoRel	true	Murieron	almacenaba
+Relation	T8	T4	NoRel	true	heridas	guerra
+Relation	T8	T5	NoRel	true	heridas	provocando
+Relation	T8	T7	NoRel	true	heridas	Murieron
+Relation	T9	T1	NoRel	true	chocan	espera
+Relation	T9	T10	NoRel	true	chocan	cubría
+Relation	T9	T3	NoRel	true	chocan	almacenaba
+Relation	T9	T5	NoRel	true	chocan	provocando

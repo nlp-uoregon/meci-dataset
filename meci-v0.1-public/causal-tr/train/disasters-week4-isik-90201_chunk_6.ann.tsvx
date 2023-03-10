@@ -1,0 +1,26 @@
+Text	Birçok insan , tepelerdeki Yaodong ismi verilen evlerde yaşamaktaydı .	Bu , büyük ölüm sayısına sebep olan başlıca etmendi .	Deprem toprak kaymaları nedeni ile mağaraların yıkılmasına sebep olmuştur .	Depremin sebep olduğu maddi zararın şu_anki terimlerle ölçülmesi imkânsızdır .	Ancak ölü sayısı , geleneksel olarak 830.000 olarak belirtilmektedir .
+Event	T1	kaymaları	EVENT	139
+Event	T4	belirtilmektedir	EVENT	332
+Event	T5	etmendi	EVENT	115
+Event	T6	olmuştur	EVENT	190
+Event	T7	Deprem	EVENT	125
+Event	T2	Depremin	EVENT	201
+Event	T8	zararın	EVENT	229
+Relation	T7	T1	CauseEffect	true	Deprem	kaymaları
+Relation	T1	T7	EffectCause	true	kaymaları	Deprem
+Relation	T1	T6	CauseEffect	true	kaymaları	olmuştur
+Relation	T6	T1	EffectCause	true	olmuştur	kaymaları
+Relation	T2	T8	CauseEffect	true	Depremin	zararın
+Relation	T8	T2	EffectCause	true	zararın	Depremin
+Relation	T6	T5	CauseEffect	true	olmuştur	etmendi
+Relation	T5	T6	EffectCause	true	etmendi	olmuştur
+Relation	T7	T4	CauseEffect	true	Deprem	belirtilmektedir
+Relation	T4	T7	EffectCause	true	belirtilmektedir	Deprem
+Relation	T1	T8	NoRel	true	kaymaları	zararın
+Relation	T2	T5	NoRel	true	Depremin	etmendi
+Relation	T4	T2	NoRel	true	belirtilmektedir	Depremin
+Relation	T4	T5	NoRel	true	belirtilmektedir	etmendi
+Relation	T5	T1	NoRel	true	etmendi	kaymaları
+Relation	T5	T4	NoRel	true	etmendi	belirtilmektedir
+Relation	T6	T7	NoRel	true	olmuştur	Deprem
+Relation	T8	T7	NoRel	true	zararın	Deprem

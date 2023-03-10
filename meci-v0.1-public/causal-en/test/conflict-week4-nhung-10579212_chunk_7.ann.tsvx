@@ -1,0 +1,39 @@
+Text	It was led by the South Saskatchewan Regiment , with supporting units from the Queen 's Own Cameron Highlanders of Canada .	In the early hours of 20 July , the Camerons secured a position in Saint - André - sur - Orne but were quickly pinned down by German infantry and tanks .	At the same time , the South Saskatchewan Regiment moved directly up the slopes of Verrières Ridge , supported by tanks and Hawker Typhoon ground attack aircraft .	The Canadian attack faltered in torrential rain , which rendered air support useless and turned the ground into mud .	Counter-attacks by two divisions threw the South Saskatchewans back past their support lines and their supporting battalion — the Essex Scottish — came under attack .
+Event	T0	led	EVENT	7
+Event	T1	secured	EVENT	169
+Event	T2	position	EVENT	179
+Event	T3	moved	EVENT	329
+Event	T4	supported	EVENT	379
+Event	T5	attack	EVENT	424
+Event	T6	rain	EVENT	485
+Event	T7	Counter-attacks	EVENT	560
+Event	T8	threw	EVENT	593
+Event	T9	attack	EVENT	718
+Event	T10	pinned down	EVENT	235
+Event	T11	faltered	EVENT	462
+Event	T12	rendered	EVENT	498
+Event	T13	turned	EVENT	531
+Relation	T4	T3	CauseEffect	true	supported	moved
+Relation	T3	T4	EffectCause	true	moved	supported
+Relation	T6	T12	CauseEffect	true	rain	rendered
+Relation	T12	T6	EffectCause	true	rendered	rain
+Relation	T6	T13	CauseEffect	true	rain	turned
+Relation	T13	T6	EffectCause	true	turned	rain
+Relation	T6	T11	CauseEffect	true	rain	faltered
+Relation	T11	T6	EffectCause	true	faltered	rain
+Relation	T0	T6	NoRel	true	led	rain
+Relation	T1	T11	NoRel	true	secured	faltered
+Relation	T1	T5	NoRel	true	secured	attack
+Relation	T11	T10	NoRel	true	faltered	pinned down
+Relation	T12	T9	NoRel	true	rendered	attack
+Relation	T13	T3	NoRel	true	turned	moved
+Relation	T2	T5	NoRel	true	position	attack
+Relation	T3	T1	NoRel	true	moved	secured
+Relation	T3	T11	NoRel	true	moved	faltered
+Relation	T4	T1	NoRel	true	supported	secured
+Relation	T5	T2	NoRel	true	attack	position
+Relation	T6	T8	NoRel	true	rain	threw
+Relation	T8	T4	NoRel	true	threw	supported
+Relation	T8	T9	NoRel	true	threw	attack
+Relation	T9	T6	NoRel	true	attack	rain
+Relation	T9	T7	NoRel	true	attack	Counter-attacks

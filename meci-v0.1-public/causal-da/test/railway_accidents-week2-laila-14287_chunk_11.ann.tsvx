@@ -1,0 +1,54 @@
+Text	Mindestenen til ære for Peter Sabroe blev rejst i anledning af 100 årsdagen for ulykken , der kostede Peter Sabroe livet .	Den 26. juli 1913 kørte et tog galt i en frygtelig ulykke ved Bramming .	Hele 15 mennesker mistede livet , og en af dem var Peter Sabroe .	En af dem som deltog i mindeceremonien , var Peter Sabroes oldebarn Peter Storm .	Juleaftensdag 1898 i Skejby , nord for Århus omkom fem børn fra fattige familier ved kulilteforgiftning , da forældrene blev nødt til at efterlade dem alene hjemme .
+Event	T0	Mindestenen	EVENT	0
+Event	T1	rejst	EVENT	42
+Event	T10	efterlade	EVENT	481
+Event	T2	ulykken	EVENT	80
+Event	T3	kostede	EVENT	94
+Event	T4	kørte	EVENT	141
+Event	T5	ulykke	EVENT	174
+Event	T6	deltog	EVENT	276
+Event	T7	mindeceremonien	EVENT	285
+Event	T8	omkom	EVENT	389
+Event	T9	kulilteforgiftning	EVENT	429
+Relation	T2	T3	CauseEffect	true	ulykken	kostede
+Relation	T3	T2	EffectCause	true	kostede	ulykken
+Relation	T4	T5	CauseEffect	true	kørte	ulykke
+Relation	T5	T4	EffectCause	true	ulykke	kørte
+Relation	T9	T8	CauseEffect	true	kulilteforgiftning	omkom
+Relation	T8	T9	EffectCause	true	omkom	kulilteforgiftning
+Relation	T10	T8	CauseEffect	true	efterlade	omkom
+Relation	T8	T10	EffectCause	true	omkom	efterlade
+Relation	T0	T2	NoRel	true	Mindestenen	ulykken
+Relation	T0	T7	NoRel	true	Mindestenen	mindeceremonien
+Relation	T0	T8	NoRel	true	Mindestenen	omkom
+Relation	T1	T5	NoRel	true	rejst	ulykke
+Relation	T1	T6	NoRel	true	rejst	deltog
+Relation	T1	T9	NoRel	true	rejst	kulilteforgiftning
+Relation	T10	T0	NoRel	true	efterlade	Mindestenen
+Relation	T10	T7	NoRel	true	efterlade	mindeceremonien
+Relation	T2	T10	NoRel	true	ulykken	efterlade
+Relation	T2	T8	NoRel	true	ulykken	omkom
+Relation	T3	T1	NoRel	true	kostede	rejst
+Relation	T3	T10	NoRel	true	kostede	efterlade
+Relation	T3	T5	NoRel	true	kostede	ulykke
+Relation	T3	T8	NoRel	true	kostede	omkom
+Relation	T4	T0	NoRel	true	kørte	Mindestenen
+Relation	T4	T1	NoRel	true	kørte	rejst
+Relation	T4	T2	NoRel	true	kørte	ulykken
+Relation	T4	T6	NoRel	true	kørte	deltog
+Relation	T5	T10	NoRel	true	ulykke	efterlade
+Relation	T5	T3	NoRel	true	ulykke	kostede
+Relation	T5	T6	NoRel	true	ulykke	deltog
+Relation	T6	T0	NoRel	true	deltog	Mindestenen
+Relation	T6	T3	NoRel	true	deltog	kostede
+Relation	T6	T4	NoRel	true	deltog	kørte
+Relation	T6	T5	NoRel	true	deltog	ulykke
+Relation	T6	T7	NoRel	true	deltog	mindeceremonien
+Relation	T6	T8	NoRel	true	deltog	omkom
+Relation	T7	T10	NoRel	true	mindeceremonien	efterlade
+Relation	T7	T9	NoRel	true	mindeceremonien	kulilteforgiftning
+Relation	T8	T0	NoRel	true	omkom	Mindestenen
+Relation	T9	T10	NoRel	true	kulilteforgiftning	efterlade
+Relation	T9	T2	NoRel	true	kulilteforgiftning	ulykken
+Relation	T9	T4	NoRel	true	kulilteforgiftning	kørte
+Relation	T9	T6	NoRel	true	kulilteforgiftning	deltog

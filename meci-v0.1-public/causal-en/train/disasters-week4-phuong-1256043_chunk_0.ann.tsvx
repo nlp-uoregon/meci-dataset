@@ -1,0 +1,70 @@
+Text	CARL DREGA ( January 19 , 1935 – August 19 , 1997 ) was a man from Bow , New Hampshire , who killed two state troopers , a judge and a newspaper editor and wounded four other law enforcement officers before being shot to death in a gunfight with police .	Drega had a long history of conflict with government officials over code enforcement issues , starting in the 1970s over whether he could use tarpaper to side his vacation house in Columbia , New Hampshire .	He claimed that in 1981 , of the riverbank along his property collapsed during a rainstorm .	Drega decided to dump and pack enough dirt to repair the erosion damage , saying this would restore his lot along the Connecticut River to its original size .	State officials , on the other hand , contested that Drega was trying to change the course of the river .
+Event	T0	killed	EVENT	93
+Event	T1	wounded	EVENT	156
+Event	T2	death	EVENT	221
+Event	T3	gunfight	EVENT	232
+Event	T4	conflict	EVENT	283
+Event	T5	starting	EVENT	349
+Event	T6	use	EVENT	393
+Event	T7	side	EVENT	409
+Event	T8	claimed	EVENT	466
+Event	T9	collapsed	EVENT	525
+Event	T10	rainstorm	EVENT	544
+Event	T11	decided	EVENT	562
+Event	T12	dump	EVENT	573
+Event	T13	pack	EVENT	582
+Event	T14	repair	EVENT	602
+Event	T15	damage	EVENT	621
+Event	T16	saying	EVENT	630
+Event	T17	restore	EVENT	648
+Event	T18	contested	EVENT	753
+Event	T19	trying	EVENT	778
+Event	T20	change	EVENT	788
+Relation	T3	T2	CauseEffect	true	gunfight	death
+Relation	T2	T3	EffectCause	true	death	gunfight
+Relation	T10	T9	CauseEffect	true	rainstorm	collapsed
+Relation	T9	T10	EffectCause	true	collapsed	rainstorm
+Relation	T14	T12	CauseEffect	true	repair	dump
+Relation	T12	T14	EffectCause	true	dump	repair
+Relation	T14	T13	CauseEffect	true	repair	pack
+Relation	T13	T14	EffectCause	true	pack	repair
+Relation	T17	T14	CauseEffect	true	restore	repair
+Relation	T14	T17	EffectCause	true	repair	restore
+Relation	T0	T2	NoRel	true	killed	death
+Relation	T1	T10	NoRel	true	wounded	rainstorm
+Relation	T1	T19	NoRel	true	wounded	trying
+Relation	T10	T19	NoRel	true	rainstorm	trying
+Relation	T10	T6	NoRel	true	rainstorm	use
+Relation	T11	T7	NoRel	true	decided	side
+Relation	T12	T0	NoRel	true	dump	killed
+Relation	T13	T1	NoRel	true	pack	wounded
+Relation	T13	T10	NoRel	true	pack	rainstorm
+Relation	T13	T15	NoRel	true	pack	damage
+Relation	T13	T5	NoRel	true	pack	starting
+Relation	T14	T15	NoRel	true	repair	damage
+Relation	T14	T3	NoRel	true	repair	gunfight
+Relation	T15	T7	NoRel	true	damage	side
+Relation	T16	T2	NoRel	true	saying	death
+Relation	T16	T8	NoRel	true	saying	claimed
+Relation	T17	T13	NoRel	true	restore	pack
+Relation	T17	T7	NoRel	true	restore	side
+Relation	T18	T14	NoRel	true	contested	repair
+Relation	T18	T4	NoRel	true	contested	conflict
+Relation	T18	T8	NoRel	true	contested	claimed
+Relation	T19	T6	NoRel	true	trying	use
+Relation	T20	T16	NoRel	true	change	saying
+Relation	T20	T18	NoRel	true	change	contested
+Relation	T20	T19	NoRel	true	change	trying
+Relation	T20	T5	NoRel	true	change	starting
+Relation	T3	T11	NoRel	true	gunfight	decided
+Relation	T3	T16	NoRel	true	gunfight	saying
+Relation	T5	T20	NoRel	true	starting	change
+Relation	T6	T14	NoRel	true	use	repair
+Relation	T7	T1	NoRel	true	side	wounded
+Relation	T7	T12	NoRel	true	side	dump
+Relation	T7	T13	NoRel	true	side	pack
+Relation	T7	T19	NoRel	true	side	trying
+Relation	T7	T20	NoRel	true	side	change
+Relation	T8	T20	NoRel	true	claimed	change
+Relation	T9	T6	NoRel	true	collapsed	use
+Relation	T9	T8	NoRel	true	collapsed	claimed

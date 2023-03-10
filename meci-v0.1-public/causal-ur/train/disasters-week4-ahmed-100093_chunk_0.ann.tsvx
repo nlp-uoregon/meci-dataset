@@ -1,0 +1,29 @@
+Text	تصغیر| ٹاور برج لندن میں واقع یہ مشہور پُل تقریباً 800 فٹ لمبا ہے ۔	اس کی تعمیر 1884ء میں شروع ہو کر 1894ء میں مکمل ہوئی ۔	ٹاور آف لندن کے قریب اور مشہور دریائے ٹیمز پر واقع یہ پُل ہاریس جونز اور وولف بیری ( Horace Jones and Wolf Barry ) نامی ماہرین کا تخلیق کردہ شاہکا رہے ۔	اس کی خاص بات یہ ہے کہ یہ درمیان سے 2 حصوں میں تقسیم ہوکر اوپر اٹھ جاتا ہے ۔	اس طرح بڑے بحری جہاز بھی بآسانی نیچے سے گزر سکتے ہیں ۔
+Event	T0	تعمیر	EVENT	74
+Event	T1	شروع	EVENT	90
+Event	T3	تخلیق	EVENT	253
+Event	T4	تقسیم	EVENT	323
+Event	T5	گزر	EVENT	393
+Event	T6	واقع	EVENT	25
+Event	T7	مکمل	EVENT	111
+Event	T2	اٹھ	EVENT	339
+Relation	T0	T4	NoRel	true	تعمیر	تقسیم
+Relation	T0	T7	NoRel	true	تعمیر	مکمل
+Relation	T1	T3	NoRel	true	شروع	تخلیق
+Relation	T1	T4	NoRel	true	شروع	تقسیم
+Relation	T2	T0	NoRel	true	اٹھ	تعمیر
+Relation	T2	T7	NoRel	true	اٹھ	مکمل
+Relation	T4	T2	NoRel	true	تقسیم	اٹھ
+Relation	T4	T3	NoRel	true	تقسیم	تخلیق
+Relation	T4	T7	NoRel	true	تقسیم	مکمل
+Relation	T5	T1	NoRel	true	گزر	شروع
+Relation	T5	T2	NoRel	true	گزر	اٹھ
+Relation	T5	T6	NoRel	true	گزر	واقع
+Relation	T6	T1	NoRel	true	واقع	شروع
+Relation	T6	T2	NoRel	true	واقع	اٹھ
+Relation	T6	T7	NoRel	true	واقع	مکمل
+Relation	T7	T0	NoRel	true	مکمل	تعمیر
+Relation	T7	T1	NoRel	true	مکمل	شروع
+Relation	T7	T2	NoRel	true	مکمل	اٹھ
+Relation	T7	T4	NoRel	true	مکمل	تقسیم
+Relation	T7	T6	NoRel	true	مکمل	واقع

@@ -1,0 +1,28 @@
+Text	Mayıs 1928 federal seçimlerinde parti Reichstag'da yalnızca 12 sandalye kazandı .	En yüksek eyalet kazancı yine Bavyera'da ( % 5, 1 ) oldu , ancak üç bölgede Naziler oyların % 1'ini bile alamadı .	Genel olarak Parti , oyların % 2.6'sını ( 810.100 ) kazandı .	Kısmen kötü sonuçlar nedeniyle Hitler , Almanların hedefleri hakkında daha fazla bilgi sahibi olmaları gerektiğine karar verdi .	Yayıncısının cesaretini kırmasına rağmen , keşfedilen ve ölümünden sonra _ Zweites Buch _ olarak yayınlanan ikinci bir kitap yazdı .
+Event	T0	kazandı	EVENT	72
+Event	T1	alamadı	EVENT	187
+Event	T10	sonuçlar	EVENT	271
+Event	T11	yayınlanan	EVENT	485
+Event	T2	kazandı	EVENT	249
+Event	T4	keşfedilen	EVENT	431
+Event	T6	yazdı	EVENT	513
+Event	T7	seçimlerinde	EVENT	19
+Relation	T4	T11	CauseEffect	true	keşfedilen	yayınlanan
+Relation	T11	T4	EffectCause	true	yayınlanan	keşfedilen
+Relation	T10	T6	CauseEffect	true	sonuçlar	yazdı
+Relation	T6	T10	EffectCause	true	yazdı	sonuçlar
+Relation	T6	T11	CauseEffect	true	yazdı	yayınlanan
+Relation	T11	T6	EffectCause	true	yayınlanan	yazdı
+Relation	T1	T2	NoRel	true	alamadı	kazandı
+Relation	T1	T6	NoRel	true	alamadı	yazdı
+Relation	T1	T7	NoRel	true	alamadı	seçimlerinde
+Relation	T10	T4	NoRel	true	sonuçlar	keşfedilen
+Relation	T11	T0	NoRel	true	yayınlanan	kazandı
+Relation	T2	T6	NoRel	true	kazandı	yazdı
+Relation	T2	T7	NoRel	true	kazandı	seçimlerinde
+Relation	T4	T0	NoRel	true	keşfedilen	kazandı
+Relation	T4	T10	NoRel	true	keşfedilen	sonuçlar
+Relation	T4	T6	NoRel	true	keşfedilen	yazdı
+Relation	T4	T7	NoRel	true	keşfedilen	seçimlerinde
+Relation	T6	T4	NoRel	true	yazdı	keşfedilen
+Relation	T7	T0	NoRel	true	seçimlerinde	kazandı

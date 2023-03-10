@@ -1,0 +1,97 @@
+Text	El VUELO 475 DE LÍNEAS AÉREAS FILIPINAS era un vuelo de pasajeros que iba desde el Aeropuerto Internacional Ninoy Aquino al Aeropuerto de Bancasi e invadió la pista al efectuar el aterrizaje en este último .	El 26 de octubre de 2007 a las 6:25 a.m. aproximadamente , el vuelo 475 sobrepasó la pista durante la operación de aterrizaje en el Aeropuerto de Bancasi .	No hubo víctimas mortales entre la tripulación ni entre los pasajeros .	La aeronave , un A320-214 con número de registro RP-C3224 , quedó totalmente destruido durante el incidente y fue retirado de servicio posteriormente .	Después de que este sorbre pasara la pista , se precipitó en un campo de alubias antes de colisionar con algunos cocoteros .
+Event	T0	vuelo	EVENT	47
+Event	T1	iba	EVENT	70
+Event	T2	invadió	EVENT	148
+Event	T3	efectuar	EVENT	168
+Event	T4	aterrizaje	EVENT	180
+Event	T5	vuelo	EVENT	270
+Event	T6	sobrepasó	EVENT	280
+Event	T7	operación	EVENT	310
+Event	T8	aterrizaje	EVENT	323
+Event	T9	quedó	EVENT	496
+Event	T10	destruido	EVENT	513
+Event	T11	incidente	EVENT	534
+Event	T12	retirado	EVENT	550
+Event	T13	pasara	EVENT	615
+Event	T14	precipitó	EVENT	636
+Event	T15	colisionar	EVENT	678
+Relation	T11	T10	CauseEffect	true	incidente	destruido
+Relation	T10	T11	EffectCause	true	destruido	incidente
+Relation	T0	T10	NoRel	true	vuelo	destruido
+Relation	T0	T11	NoRel	true	vuelo	incidente
+Relation	T0	T12	NoRel	true	vuelo	retirado
+Relation	T0	T14	NoRel	true	vuelo	precipitó
+Relation	T0	T9	NoRel	true	vuelo	quedó
+Relation	T1	T12	NoRel	true	iba	retirado
+Relation	T1	T14	NoRel	true	iba	precipitó
+Relation	T1	T15	NoRel	true	iba	colisionar
+Relation	T1	T3	NoRel	true	iba	efectuar
+Relation	T10	T14	NoRel	true	destruido	precipitó
+Relation	T10	T5	NoRel	true	destruido	vuelo
+Relation	T10	T9	NoRel	true	destruido	quedó
+Relation	T11	T13	NoRel	true	incidente	pasara
+Relation	T11	T3	NoRel	true	incidente	efectuar
+Relation	T11	T4	NoRel	true	incidente	aterrizaje
+Relation	T11	T5	NoRel	true	incidente	vuelo
+Relation	T11	T6	NoRel	true	incidente	sobrepasó
+Relation	T11	T8	NoRel	true	incidente	aterrizaje
+Relation	T12	T1	NoRel	true	retirado	iba
+Relation	T12	T10	NoRel	true	retirado	destruido
+Relation	T12	T14	NoRel	true	retirado	precipitó
+Relation	T12	T2	NoRel	true	retirado	invadió
+Relation	T12	T7	NoRel	true	retirado	operación
+Relation	T12	T9	NoRel	true	retirado	quedó
+Relation	T13	T11	NoRel	true	pasara	incidente
+Relation	T13	T2	NoRel	true	pasara	invadió
+Relation	T13	T5	NoRel	true	pasara	vuelo
+Relation	T13	T8	NoRel	true	pasara	aterrizaje
+Relation	T13	T9	NoRel	true	pasara	quedó
+Relation	T14	T10	NoRel	true	precipitó	destruido
+Relation	T14	T13	NoRel	true	precipitó	pasara
+Relation	T14	T3	NoRel	true	precipitó	efectuar
+Relation	T14	T6	NoRel	true	precipitó	sobrepasó
+Relation	T14	T7	NoRel	true	precipitó	operación
+Relation	T15	T0	NoRel	true	colisionar	vuelo
+Relation	T15	T11	NoRel	true	colisionar	incidente
+Relation	T15	T12	NoRel	true	colisionar	retirado
+Relation	T15	T2	NoRel	true	colisionar	invadió
+Relation	T15	T3	NoRel	true	colisionar	efectuar
+Relation	T15	T6	NoRel	true	colisionar	sobrepasó
+Relation	T2	T11	NoRel	true	invadió	incidente
+Relation	T2	T14	NoRel	true	invadió	precipitó
+Relation	T2	T15	NoRel	true	invadió	colisionar
+Relation	T3	T11	NoRel	true	efectuar	incidente
+Relation	T3	T15	NoRel	true	efectuar	colisionar
+Relation	T3	T2	NoRel	true	efectuar	invadió
+Relation	T3	T6	NoRel	true	efectuar	sobrepasó
+Relation	T3	T9	NoRel	true	efectuar	quedó
+Relation	T4	T11	NoRel	true	aterrizaje	incidente
+Relation	T5	T0	NoRel	true	vuelo	vuelo
+Relation	T5	T11	NoRel	true	vuelo	incidente
+Relation	T5	T12	NoRel	true	vuelo	retirado
+Relation	T5	T15	NoRel	true	vuelo	colisionar
+Relation	T5	T2	NoRel	true	vuelo	invadió
+Relation	T5	T4	NoRel	true	vuelo	aterrizaje
+Relation	T5	T6	NoRel	true	vuelo	sobrepasó
+Relation	T5	T9	NoRel	true	vuelo	quedó
+Relation	T6	T1	NoRel	true	sobrepasó	iba
+Relation	T6	T11	NoRel	true	sobrepasó	incidente
+Relation	T6	T15	NoRel	true	sobrepasó	colisionar
+Relation	T6	T2	NoRel	true	sobrepasó	invadió
+Relation	T6	T4	NoRel	true	sobrepasó	aterrizaje
+Relation	T6	T5	NoRel	true	sobrepasó	vuelo
+Relation	T6	T8	NoRel	true	sobrepasó	aterrizaje
+Relation	T7	T11	NoRel	true	operación	incidente
+Relation	T7	T12	NoRel	true	operación	retirado
+Relation	T7	T14	NoRel	true	operación	precipitó
+Relation	T7	T15	NoRel	true	operación	colisionar
+Relation	T7	T2	NoRel	true	operación	invadió
+Relation	T7	T4	NoRel	true	operación	aterrizaje
+Relation	T8	T1	NoRel	true	aterrizaje	iba
+Relation	T8	T12	NoRel	true	aterrizaje	retirado
+Relation	T8	T13	NoRel	true	aterrizaje	pasara
+Relation	T8	T15	NoRel	true	aterrizaje	colisionar
+Relation	T8	T2	NoRel	true	aterrizaje	invadió
+Relation	T9	T0	NoRel	true	quedó	vuelo
+Relation	T9	T2	NoRel	true	quedó	invadió
+Relation	T9	T5	NoRel	true	quedó	vuelo

@@ -1,0 +1,39 @@
+Text	- La violencia de género es una práctica social ampliamente extendida en México , ya que 66.1 por ciento de mujeres de 18 años y más ha experimentado al menos un acto de este tipo .	En la mayoría de los casos el agresor es la pareja de la víctima .	- Entre 2012 y 2013 el Observatorio Ciudadano Nacional de Feminicidios documentó 3 mil 892 mujeres asesinadas en todos el país , pero solo 15.7 por ciento de los casos fueron investigados como feminicidios .	- En el país fueron asesinadas siete mujeres al día entre 2013 y 2014 y las cifras no han dejado de crecer desde hace 15 años .	- Más de 365 mil mujeres fueron víctimas de la violencia durante el 2015 ; de ellas , al menos 65 mil tuvieron que ser hospitalizadas por la gravedad de sus lesiones en alguno de los tres sistemas de salud pública : IMSS , ISSSTE o Salubridad , de acuerdo con cálculos de organizaciones civiles y de apoyo a víctimas .
+Event	T10	víctimas	EVENT	617
+Event	T12	hospitalizadas	EVENT	704
+Event	T13	lesiones	EVENT	742
+Event	T3	documentó	EVENT	320
+Event	T4	asesinadas	EVENT	348
+Event	T5	investigados	EVENT	424
+Event	T6	feminicidios	EVENT	442
+Event	T7	asesinadas	EVENT	477
+Event	T9	crecer	EVENT	557
+Relation	T13	T12	CauseEffect	true	lesiones	hospitalizadas
+Relation	T12	T13	EffectCause	true	hospitalizadas	lesiones
+Relation	T10	T12	NoRel	true	víctimas	hospitalizadas
+Relation	T10	T3	NoRel	true	víctimas	documentó
+Relation	T10	T5	NoRel	true	víctimas	investigados
+Relation	T10	T7	NoRel	true	víctimas	asesinadas
+Relation	T12	T3	NoRel	true	hospitalizadas	documentó
+Relation	T12	T6	NoRel	true	hospitalizadas	feminicidios
+Relation	T12	T7	NoRel	true	hospitalizadas	asesinadas
+Relation	T12	T9	NoRel	true	hospitalizadas	crecer
+Relation	T13	T4	NoRel	true	lesiones	asesinadas
+Relation	T13	T5	NoRel	true	lesiones	investigados
+Relation	T13	T6	NoRel	true	lesiones	feminicidios
+Relation	T3	T13	NoRel	true	documentó	lesiones
+Relation	T3	T7	NoRel	true	documentó	asesinadas
+Relation	T4	T3	NoRel	true	asesinadas	documentó
+Relation	T4	T5	NoRel	true	asesinadas	investigados
+Relation	T4	T7	NoRel	true	asesinadas	asesinadas
+Relation	T5	T13	NoRel	true	investigados	lesiones
+Relation	T5	T7	NoRel	true	investigados	asesinadas
+Relation	T6	T13	NoRel	true	feminicidios	lesiones
+Relation	T6	T3	NoRel	true	feminicidios	documentó
+Relation	T6	T5	NoRel	true	feminicidios	investigados
+Relation	T7	T12	NoRel	true	asesinadas	hospitalizadas
+Relation	T7	T4	NoRel	true	asesinadas	asesinadas
+Relation	T7	T5	NoRel	true	asesinadas	investigados
+Relation	T7	T6	NoRel	true	asesinadas	feminicidios
+Relation	T9	T10	NoRel	true	crecer	víctimas
+Relation	T9	T6	NoRel	true	crecer	feminicidios

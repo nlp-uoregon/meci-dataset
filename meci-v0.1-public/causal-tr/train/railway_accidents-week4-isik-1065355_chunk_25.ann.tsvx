@@ -1,0 +1,19 @@
+Text	Ekskavatör sürücüsü sarhoştu ve treni görmedi .	- 21 Eylül , 2009 – Bir yolcu treni Craiova istasyonundan ayrıldıktan sonra yaklaşık 100 km / h hızdayken raydan çıktı ve 16 kişi yaralandı .	Gerçek neden henüz tam belirlenmedi .	Müfettişler bir sabotajdan şüheleniyor .	- 21 Eylül , 2009 – Tuğla yüklü bir kamyon , Gura Ocnitei , Dâmboviţa County yakınında bir lokomotifle çarpıştı .
+Event	T0	sarhoştu	EVENT	20
+Event	T1	görmedi	EVENT	38
+Event	T2	çıktı	EVENT	161
+Event	T3	yaralandı	EVENT	178
+Event	T5	şüheleniyor	EVENT	255
+Event	T6	çarpıştı	EVENT	372
+Relation	T0	T1	CauseEffect	true	sarhoştu	görmedi
+Relation	T1	T0	EffectCause	true	görmedi	sarhoştu
+Relation	T2	T3	CauseEffect	true	çıktı	yaralandı
+Relation	T3	T2	EffectCause	true	yaralandı	çıktı
+Relation	T2	T5	CauseEffect	true	çıktı	şüheleniyor
+Relation	T5	T2	EffectCause	true	şüheleniyor	çıktı
+Relation	T0	T6	NoRel	true	sarhoştu	çarpıştı
+Relation	T1	T2	NoRel	true	görmedi	çıktı
+Relation	T2	T0	NoRel	true	çıktı	sarhoştu
+Relation	T3	T5	NoRel	true	yaralandı	şüheleniyor
+Relation	T6	T3	NoRel	true	çarpıştı	yaralandı
+Relation	T6	T5	NoRel	true	çarpıştı	şüheleniyor

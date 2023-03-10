@@ -1,0 +1,16 @@
+Text	Şans eseri lav , duman ve küller adanın küçük havaalanını hemen etkilemedi bu nedenle birkaç kişinin adadan havayoluyla tahliye edilmesi başarılabildi .	Havayolu , genelde denizyoluyla adadan ayrılması uygun olmayan - özellikle de adanın hastanesindeki ağır hastalar için - kullanıldı .	Püskürmenin ilk anından başlayarak altı saat içinde adadaki yaklaşık 5.300 kişinin hemen hepsi güvenli bir biçimde anakaraya götürülmüştü .	Yaklaşık 500 gönüllü bazı önemli işlerin idaresini sürdürmek ve tehlike altında olan evlerdeki değerli eşyaları kurtarmak için kaldılar .	Bu kişiler ilk olarak at , sığır ve koyun sürüleri gibi ahır hayvanlarını telef olmamaları için derhâl kestiler .
+Event	T1	başarılabildi	EVENT	137
+Event	T2	kullanıldı	EVENT	274
+Event	T3	Püskürmenin	EVENT	287
+Event	T4	götürülmüştü	EVENT	412
+Event	T6	kestiler	EVENT	668
+Relation	T2	T1	CauseEffect	true	kullanıldı	başarılabildi
+Relation	T1	T2	EffectCause	true	başarılabildi	kullanıldı
+Relation	T1	T4	NoRel	true	başarılabildi	götürülmüştü
+Relation	T1	T6	NoRel	true	başarılabildi	kestiler
+Relation	T2	T3	NoRel	true	kullanıldı	Püskürmenin
+Relation	T3	T1	NoRel	true	Püskürmenin	başarılabildi
+Relation	T3	T4	NoRel	true	Püskürmenin	götürülmüştü
+Relation	T4	T6	NoRel	true	götürülmüştü	kestiler
+Relation	T6	T2	NoRel	true	kestiler	kullanıldı
+Relation	T6	T3	NoRel	true	kestiler	Püskürmenin

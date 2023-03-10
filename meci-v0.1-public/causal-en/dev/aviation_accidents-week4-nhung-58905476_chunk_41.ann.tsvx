@@ -1,0 +1,102 @@
+Text	On 15 November , the US Air Line Pilots Association ( ALPA ) , the largest pilots ' union , representing 61,000 pilots , urged the FAA and NTSB to ensure pilots receive all relevant information addressing a " potential , significant aviation system safety deficiency . "	ALPA 's United Airlines branch , in line with its management , disagrees as the 737 pilot manual includes a standard procedure to shut down the flight - control behavior , and dismissed the MCAS implication in the accident as " speculation " based on the Boeing safety - warning bulletin and the follow - on FAA airworthiness directive .	In an internal message on 19 November 2018 , Boeing CEO Dennis Muilenburg defended the Flight Crew Operations Manual as describing the relevant function of MCAS .	On 20 November , Boeing was to hold a conference call with 737 Max operators to detail the new MCAS not present in the Next Generation models .	The conference call was cancelled later , to be replaced by a series of regional calls to allow more questions .
+Event	T0	representing	EVENT	92
+Event	T1	urged	EVENT	121
+Event	T2	receive	EVENT	161
+Event	T3	addressing	EVENT	194
+Event	T4	deficiency	EVENT	256
+Event	T5	disagrees	EVENT	334
+Event	T6	procedure	EVENT	388
+Event	T7	dismissed	EVENT	447
+Event	T8	implication	EVENT	466
+Event	T9	accident	EVENT	485
+Event	T10	speculation	EVENT	499
+Event	T11	message	EVENT	624
+Event	T12	defended	EVENT	683
+Event	T13	describing	EVENT	729
+Event	T14	hold	EVENT	803
+Event	T15	call	EVENT	821
+Event	T16	present	EVENT	876
+Event	T17	call	EVENT	931
+Event	T18	cancelled	EVENT	940
+Event	T19	replaced	EVENT	964
+Event	T20	series	EVENT	978
+Event	T21	calls	EVENT	997
+Event	T22	ensure	EVENT	147
+Event	T23	includes	EVENT	368
+Event	T24	shut down	EVENT	401
+Event	T25	detail	EVENT	852
+Event	T26	allow	EVENT	1006
+Relation	T1	T22	CauseEffect	true	urged	ensure
+Relation	T22	T1	EffectCause	true	ensure	urged
+Relation	T23	T5	CauseEffect	true	includes	disagrees
+Relation	T5	T23	EffectCause	true	disagrees	includes
+Relation	T7	T5	CauseEffect	true	dismissed	disagrees
+Relation	T5	T7	EffectCause	true	disagrees	dismissed
+Relation	T13	T12	CauseEffect	true	describing	defended
+Relation	T12	T13	EffectCause	true	defended	describing
+Relation	T15	T25	CauseEffect	true	call	detail
+Relation	T25	T15	EffectCause	true	detail	call
+Relation	T20	T26	CauseEffect	true	series	allow
+Relation	T26	T20	EffectCause	true	allow	series
+Relation	T0	T10	NoRel	true	representing	speculation
+Relation	T0	T22	NoRel	true	representing	ensure
+Relation	T0	T8	NoRel	true	representing	implication
+Relation	T0	T9	NoRel	true	representing	accident
+Relation	T11	T12	NoRel	true	message	defended
+Relation	T11	T14	NoRel	true	message	hold
+Relation	T11	T15	NoRel	true	message	call
+Relation	T11	T8	NoRel	true	message	implication
+Relation	T12	T19	NoRel	true	defended	replaced
+Relation	T12	T5	NoRel	true	defended	disagrees
+Relation	T12	T8	NoRel	true	defended	implication
+Relation	T13	T16	NoRel	true	describing	present
+Relation	T13	T18	NoRel	true	describing	cancelled
+Relation	T13	T23	NoRel	true	describing	includes
+Relation	T14	T17	NoRel	true	hold	call
+Relation	T14	T21	NoRel	true	hold	calls
+Relation	T14	T5	NoRel	true	hold	disagrees
+Relation	T15	T14	NoRel	true	call	hold
+Relation	T15	T3	NoRel	true	call	addressing
+Relation	T16	T13	NoRel	true	present	describing
+Relation	T17	T10	NoRel	true	call	speculation
+Relation	T17	T2	NoRel	true	call	receive
+Relation	T17	T8	NoRel	true	call	implication
+Relation	T18	T11	NoRel	true	cancelled	message
+Relation	T18	T14	NoRel	true	cancelled	hold
+Relation	T18	T5	NoRel	true	cancelled	disagrees
+Relation	T19	T6	NoRel	true	replaced	procedure
+Relation	T19	T8	NoRel	true	replaced	implication
+Relation	T2	T16	NoRel	true	receive	present
+Relation	T2	T5	NoRel	true	receive	disagrees
+Relation	T20	T5	NoRel	true	series	disagrees
+Relation	T20	T6	NoRel	true	series	procedure
+Relation	T20	T9	NoRel	true	series	accident
+Relation	T21	T16	NoRel	true	calls	present
+Relation	T21	T18	NoRel	true	calls	cancelled
+Relation	T21	T5	NoRel	true	calls	disagrees
+Relation	T22	T16	NoRel	true	ensure	present
+Relation	T23	T0	NoRel	true	includes	representing
+Relation	T23	T18	NoRel	true	includes	cancelled
+Relation	T24	T22	NoRel	true	shut down	ensure
+Relation	T24	T8	NoRel	true	shut down	implication
+Relation	T24	T9	NoRel	true	shut down	accident
+Relation	T25	T13	NoRel	true	detail	describing
+Relation	T25	T7	NoRel	true	detail	dismissed
+Relation	T25	T8	NoRel	true	detail	implication
+Relation	T26	T14	NoRel	true	allow	hold
+Relation	T26	T4	NoRel	true	allow	deficiency
+Relation	T3	T15	NoRel	true	addressing	call
+Relation	T3	T16	NoRel	true	addressing	present
+Relation	T3	T17	NoRel	true	addressing	call
+Relation	T4	T0	NoRel	true	deficiency	representing
+Relation	T4	T25	NoRel	true	deficiency	detail
+Relation	T4	T7	NoRel	true	deficiency	dismissed
+Relation	T5	T15	NoRel	true	disagrees	call
+Relation	T5	T8	NoRel	true	disagrees	implication
+Relation	T6	T3	NoRel	true	procedure	addressing
+Relation	T6	T8	NoRel	true	procedure	implication
+Relation	T7	T13	NoRel	true	dismissed	describing
+Relation	T8	T0	NoRel	true	implication	representing
+Relation	T8	T24	NoRel	true	implication	shut down
+Relation	T8	T7	NoRel	true	implication	dismissed
+Relation	T9	T21	NoRel	true	accident	calls

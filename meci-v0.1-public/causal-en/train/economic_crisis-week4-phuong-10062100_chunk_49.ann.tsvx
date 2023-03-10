@@ -1,0 +1,156 @@
+Text	Nine states were above the national foreclosure rate average of 1.84 % of households .	" The FBI defines mortgage fraud as ' the intentional misstatement , misrepresentation , or omission by an applicant or other interest parties , relied on by a lender or underwriter to provide funding for , to purchase , or to insure a mortgage loan . ' "	In 2004 , the Federal Bureau of Investigation warned of an " epidemic " in mortgage fraud , an important credit risk of nonprime mortgage lending , which , they said , could lead to " a problem that could have as much impact as the S&L crisis " .	Despite this , the Bush administration prevented states from investigating and prosecuting predatory lenders by invoking a banking law from 1863 " to issue formal opinions preempting all state predatory lending laws , thereby rendering them inoperative . "	The Financial Crisis Inquiry Commission reported in January 2011 that : " ... mortgage fraud ... flourished in an environment of collapsing lending standards and lax regulation .
+Event	T0	defines	EVENT	97
+Event	T1	fraud	EVENT	114
+Event	T2	misstatement	EVENT	141
+Event	T3	misrepresentation	EVENT	156
+Event	T4	omission	EVENT	179
+Event	T5	warned	EVENT	389
+Event	T6	epidemic	EVENT	404
+Event	T7	fraud	EVENT	427
+Event	T8	risk	EVENT	455
+Event	T9	lending	EVENT	481
+Event	T10	said	EVENT	504
+Event	T11	impact	EVENT	561
+Event	T12	crisis	EVENT	579
+Event	T13	prevented	EVENT	629
+Event	T14	investigating	EVENT	651
+Event	T15	prosecuting	EVENT	669
+Event	T16	invoking	EVENT	702
+Event	T17	issue	EVENT	740
+Event	T18	preempting	EVENT	762
+Event	T19	rendering	EVENT	816
+Event	T20	reported	EVENT	887
+Event	T21	fraud	EVENT	934
+Event	T22	flourished	EVENT	944
+Event	T24	relied on	EVENT	232
+Event	T25	provide	EVENT	272
+Event	T26	purchase	EVENT	297
+Event	T27	insure	EVENT	314
+Event	T28	lead	EVENT	517
+Event	T29	problem	EVENT	529
+Event	T23	lax regulation	EVENT	1009
+Event	T30	collapsing lending standards	EVENT	976
+Relation	T25	T24	CauseEffect	true	provide	relied on
+Relation	T24	T25	EffectCause	true	relied on	provide
+Relation	T26	T25	CauseEffect	true	purchase	provide
+Relation	T25	T26	EffectCause	true	provide	purchase
+Relation	T27	T25	CauseEffect	true	insure	provide
+Relation	T25	T27	EffectCause	true	provide	insure
+Relation	T6	T5	CauseEffect	true	epidemic	warned
+Relation	T5	T6	EffectCause	true	warned	epidemic
+Relation	T7	T6	CauseEffect	true	fraud	epidemic
+Relation	T6	T7	EffectCause	true	epidemic	fraud
+Relation	T8	T7	CauseEffect	true	risk	fraud
+Relation	T7	T8	EffectCause	true	fraud	risk
+Relation	T9	T8	CauseEffect	true	lending	risk
+Relation	T8	T9	EffectCause	true	risk	lending
+Relation	T6	T29	CauseEffect	true	epidemic	problem
+Relation	T29	T6	EffectCause	true	problem	epidemic
+Relation	T17	T16	CauseEffect	true	issue	invoking
+Relation	T16	T17	EffectCause	true	invoking	issue
+Relation	T13	T19	CauseEffect	true	prevented	rendering
+Relation	T19	T13	EffectCause	true	rendering	prevented
+Relation	T14	T13	CauseEffect	true	investigating	prevented
+Relation	T13	T14	EffectCause	true	prevented	investigating
+Relation	T15	T13	CauseEffect	true	prosecuting	prevented
+Relation	T13	T15	EffectCause	true	prevented	prosecuting
+Relation	T30	T22	CauseEffect	true	collapsing lending standards	flourished
+Relation	T22	T30	EffectCause	true	flourished	collapsing lending standards
+Relation	T23	T22	CauseEffect	true	lax regulation	flourished
+Relation	T22	T23	EffectCause	true	flourished	lax regulation
+Relation	T0	T16	NoRel	true	defines	invoking
+Relation	T0	T17	NoRel	true	defines	issue
+Relation	T0	T21	NoRel	true	defines	fraud
+Relation	T0	T26	NoRel	true	defines	purchase
+Relation	T0	T27	NoRel	true	defines	insure
+Relation	T0	T9	NoRel	true	defines	lending
+Relation	T1	T13	NoRel	true	fraud	prevented
+Relation	T1	T19	NoRel	true	fraud	rendering
+Relation	T1	T23	NoRel	true	fraud	lax regulation
+Relation	T1	T26	NoRel	true	fraud	purchase
+Relation	T1	T29	NoRel	true	fraud	problem
+Relation	T1	T9	NoRel	true	fraud	lending
+Relation	T10	T28	NoRel	true	said	lead
+Relation	T10	T6	NoRel	true	said	epidemic
+Relation	T11	T1	NoRel	true	impact	fraud
+Relation	T11	T10	NoRel	true	impact	said
+Relation	T11	T13	NoRel	true	impact	prevented
+Relation	T12	T21	NoRel	true	crisis	fraud
+Relation	T12	T26	NoRel	true	crisis	purchase
+Relation	T12	T7	NoRel	true	crisis	fraud
+Relation	T13	T0	NoRel	true	prevented	defines
+Relation	T13	T27	NoRel	true	prevented	insure
+Relation	T13	T30	NoRel	true	prevented	collapsing lending standards
+Relation	T13	T4	NoRel	true	prevented	omission
+Relation	T14	T16	NoRel	true	investigating	invoking
+Relation	T14	T23	NoRel	true	investigating	lax regulation
+Relation	T15	T14	NoRel	true	prosecuting	investigating
+Relation	T15	T4	NoRel	true	prosecuting	omission
+Relation	T15	T8	NoRel	true	prosecuting	risk
+Relation	T16	T11	NoRel	true	invoking	impact
+Relation	T16	T19	NoRel	true	invoking	rendering
+Relation	T16	T2	NoRel	true	invoking	misstatement
+Relation	T16	T21	NoRel	true	invoking	fraud
+Relation	T17	T21	NoRel	true	issue	fraud
+Relation	T18	T0	NoRel	true	preempting	defines
+Relation	T18	T26	NoRel	true	preempting	purchase
+Relation	T18	T29	NoRel	true	preempting	problem
+Relation	T19	T22	NoRel	true	rendering	flourished
+Relation	T19	T29	NoRel	true	rendering	problem
+Relation	T19	T9	NoRel	true	rendering	lending
+Relation	T2	T18	NoRel	true	misstatement	preempting
+Relation	T2	T30	NoRel	true	misstatement	collapsing lending standards
+Relation	T20	T0	NoRel	true	reported	defines
+Relation	T20	T2	NoRel	true	reported	misstatement
+Relation	T20	T23	NoRel	true	reported	lax regulation
+Relation	T20	T29	NoRel	true	reported	problem
+Relation	T21	T0	NoRel	true	fraud	defines
+Relation	T21	T16	NoRel	true	fraud	invoking
+Relation	T21	T22	NoRel	true	fraud	flourished
+Relation	T21	T25	NoRel	true	fraud	provide
+Relation	T21	T29	NoRel	true	fraud	problem
+Relation	T22	T25	NoRel	true	flourished	provide
+Relation	T23	T16	NoRel	true	lax regulation	invoking
+Relation	T23	T17	NoRel	true	lax regulation	issue
+Relation	T23	T27	NoRel	true	lax regulation	insure
+Relation	T23	T3	NoRel	true	lax regulation	misrepresentation
+Relation	T23	T8	NoRel	true	lax regulation	risk
+Relation	T24	T15	NoRel	true	relied on	prosecuting
+Relation	T25	T0	NoRel	true	provide	defines
+Relation	T25	T18	NoRel	true	provide	preempting
+Relation	T25	T22	NoRel	true	provide	flourished
+Relation	T25	T3	NoRel	true	provide	misrepresentation
+Relation	T26	T11	NoRel	true	purchase	impact
+Relation	T26	T16	NoRel	true	purchase	invoking
+Relation	T26	T18	NoRel	true	purchase	preempting
+Relation	T26	T20	NoRel	true	purchase	reported
+Relation	T28	T13	NoRel	true	lead	prevented
+Relation	T28	T2	NoRel	true	lead	misstatement
+Relation	T28	T23	NoRel	true	lead	lax regulation
+Relation	T28	T4	NoRel	true	lead	omission
+Relation	T29	T0	NoRel	true	problem	defines
+Relation	T29	T20	NoRel	true	problem	reported
+Relation	T29	T21	NoRel	true	problem	fraud
+Relation	T3	T30	NoRel	true	misrepresentation	collapsing lending standards
+Relation	T30	T17	NoRel	true	collapsing lending standards	issue
+Relation	T30	T19	NoRel	true	collapsing lending standards	rendering
+Relation	T30	T5	NoRel	true	collapsing lending standards	warned
+Relation	T4	T0	NoRel	true	omission	defines
+Relation	T4	T17	NoRel	true	omission	issue
+Relation	T4	T20	NoRel	true	omission	reported
+Relation	T4	T29	NoRel	true	omission	problem
+Relation	T5	T19	NoRel	true	warned	rendering
+Relation	T5	T3	NoRel	true	warned	misrepresentation
+Relation	T6	T11	NoRel	true	epidemic	impact
+Relation	T6	T14	NoRel	true	epidemic	investigating
+Relation	T6	T26	NoRel	true	epidemic	purchase
+Relation	T6	T3	NoRel	true	epidemic	misrepresentation
+Relation	T7	T0	NoRel	true	fraud	defines
+Relation	T7	T12	NoRel	true	fraud	crisis
+Relation	T7	T13	NoRel	true	fraud	prevented
+Relation	T8	T24	NoRel	true	risk	relied on
+Relation	T9	T0	NoRel	true	lending	defines
+Relation	T9	T22	NoRel	true	lending	flourished
+Relation	T9	T23	NoRel	true	lending	lax regulation
+Relation	T9	T4	NoRel	true	lending	omission
+Relation	T9	T6	NoRel	true	lending	epidemic

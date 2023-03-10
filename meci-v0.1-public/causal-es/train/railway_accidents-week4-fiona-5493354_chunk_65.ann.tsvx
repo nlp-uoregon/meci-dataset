@@ -1,0 +1,120 @@
+Text	El accidente deja un muerto y cincuenta heridos .	- 19 DE OCTUBRE : el choque de dos trenes en la estación de Caxarias deja un muerto y cinco heridos .	- 1952 -___06 DE MARZO : En la estación de Rossio de Lisboa se produce el choque entre un tren de viajeros y otra composición vacía en maniobras , produciéndose cincuenta heridos leves .	- 31 DE MARZO : TRAGÉDIA DE GIBALTA -	Un corrimiento de tierras sobre la vía , junto al Faro de Gibalta , provoca el descarrilamiento de una composición en la Línea de Cascais , habiendo diez muertos y treinta y ocho heridos .
+Event	T0	deja	EVENT	13
+Event	T1	muerto	EVENT	21
+Event	T2	heridos	EVENT	40
+Event	T3	choque	EVENT	71
+Event	T4	deja	EVENT	119
+Event	T5	muerto	EVENT	127
+Event	T6	heridos	EVENT	142
+Event	T7	produce	EVENT	215
+Event	T8	choque	EVENT	226
+Event	T9	maniobras	EVENT	287
+Event	T10	corrimiento	EVENT	380
+Event	T11	provoca	EVENT	445
+Event	T12	descarrilamiento	EVENT	456
+Event	T13	composición	EVENT	480
+Event	T14	muertos	EVENT	531
+Event	T15	heridos	EVENT	556
+Event	T16	accidente	EVENT	3
+Relation	T16	T1	CauseEffect	true	accidente	muerto
+Relation	T1	T16	EffectCause	true	muerto	accidente
+Relation	T16	T2	CauseEffect	true	accidente	heridos
+Relation	T2	T16	EffectCause	true	heridos	accidente
+Relation	T10	T12	CauseEffect	true	corrimiento	descarrilamiento
+Relation	T12	T10	EffectCause	true	descarrilamiento	corrimiento
+Relation	T12	T14	CauseEffect	true	descarrilamiento	muertos
+Relation	T14	T12	EffectCause	true	muertos	descarrilamiento
+Relation	T12	T15	CauseEffect	true	descarrilamiento	heridos
+Relation	T15	T12	EffectCause	true	heridos	descarrilamiento
+Relation	T3	T5	CauseEffect	true	choque	muerto
+Relation	T5	T3	EffectCause	true	muerto	choque
+Relation	T3	T6	CauseEffect	true	choque	heridos
+Relation	T6	T3	EffectCause	true	heridos	choque
+Relation	T0	T3	NoRel	true	deja	choque
+Relation	T0	T9	NoRel	true	deja	maniobras
+Relation	T1	T11	NoRel	true	muerto	provoca
+Relation	T1	T14	NoRel	true	muerto	muertos
+Relation	T1	T15	NoRel	true	muerto	heridos
+Relation	T1	T2	NoRel	true	muerto	heridos
+Relation	T1	T5	NoRel	true	muerto	muerto
+Relation	T1	T6	NoRel	true	muerto	heridos
+Relation	T1	T7	NoRel	true	muerto	produce
+Relation	T1	T9	NoRel	true	muerto	maniobras
+Relation	T10	T1	NoRel	true	corrimiento	muerto
+Relation	T10	T15	NoRel	true	corrimiento	heridos
+Relation	T10	T16	NoRel	true	corrimiento	accidente
+Relation	T10	T2	NoRel	true	corrimiento	heridos
+Relation	T10	T9	NoRel	true	corrimiento	maniobras
+Relation	T11	T16	NoRel	true	provoca	accidente
+Relation	T11	T4	NoRel	true	provoca	deja
+Relation	T11	T9	NoRel	true	provoca	maniobras
+Relation	T12	T0	NoRel	true	descarrilamiento	deja
+Relation	T12	T2	NoRel	true	descarrilamiento	heridos
+Relation	T12	T5	NoRel	true	descarrilamiento	muerto
+Relation	T12	T8	NoRel	true	descarrilamiento	choque
+Relation	T13	T11	NoRel	true	composición	provoca
+Relation	T13	T14	NoRel	true	composición	muertos
+Relation	T13	T6	NoRel	true	composición	heridos
+Relation	T14	T1	NoRel	true	muertos	muerto
+Relation	T14	T2	NoRel	true	muertos	heridos
+Relation	T14	T4	NoRel	true	muertos	deja
+Relation	T14	T6	NoRel	true	muertos	heridos
+Relation	T15	T0	NoRel	true	heridos	deja
+Relation	T15	T3	NoRel	true	heridos	choque
+Relation	T15	T6	NoRel	true	heridos	heridos
+Relation	T15	T8	NoRel	true	heridos	choque
+Relation	T16	T0	NoRel	true	accidente	deja
+Relation	T16	T11	NoRel	true	accidente	provoca
+Relation	T16	T12	NoRel	true	accidente	descarrilamiento
+Relation	T16	T13	NoRel	true	accidente	composición
+Relation	T16	T5	NoRel	true	accidente	muerto
+Relation	T16	T6	NoRel	true	accidente	heridos
+Relation	T16	T7	NoRel	true	accidente	produce
+Relation	T16	T8	NoRel	true	accidente	choque
+Relation	T2	T0	NoRel	true	heridos	deja
+Relation	T2	T1	NoRel	true	heridos	muerto
+Relation	T2	T10	NoRel	true	heridos	corrimiento
+Relation	T2	T11	NoRel	true	heridos	provoca
+Relation	T2	T15	NoRel	true	heridos	heridos
+Relation	T2	T6	NoRel	true	heridos	heridos
+Relation	T3	T1	NoRel	true	choque	muerto
+Relation	T3	T10	NoRel	true	choque	corrimiento
+Relation	T3	T13	NoRel	true	choque	composición
+Relation	T3	T14	NoRel	true	choque	muertos
+Relation	T3	T7	NoRel	true	choque	produce
+Relation	T3	T8	NoRel	true	choque	choque
+Relation	T3	T9	NoRel	true	choque	maniobras
+Relation	T4	T1	NoRel	true	deja	muerto
+Relation	T4	T12	NoRel	true	deja	descarrilamiento
+Relation	T4	T14	NoRel	true	deja	muertos
+Relation	T4	T15	NoRel	true	deja	heridos
+Relation	T4	T2	NoRel	true	deja	heridos
+Relation	T4	T3	NoRel	true	deja	choque
+Relation	T4	T6	NoRel	true	deja	heridos
+Relation	T5	T0	NoRel	true	muerto	deja
+Relation	T5	T1	NoRel	true	muerto	muerto
+Relation	T5	T10	NoRel	true	muerto	corrimiento
+Relation	T5	T12	NoRel	true	muerto	descarrilamiento
+Relation	T5	T15	NoRel	true	muerto	heridos
+Relation	T5	T8	NoRel	true	muerto	choque
+Relation	T5	T9	NoRel	true	muerto	maniobras
+Relation	T6	T10	NoRel	true	heridos	corrimiento
+Relation	T6	T13	NoRel	true	heridos	composición
+Relation	T6	T15	NoRel	true	heridos	heridos
+Relation	T6	T16	NoRel	true	heridos	accidente
+Relation	T6	T4	NoRel	true	heridos	deja
+Relation	T6	T7	NoRel	true	heridos	produce
+Relation	T6	T8	NoRel	true	heridos	choque
+Relation	T7	T13	NoRel	true	produce	composición
+Relation	T7	T15	NoRel	true	produce	heridos
+Relation	T7	T16	NoRel	true	produce	accidente
+Relation	T7	T9	NoRel	true	produce	maniobras
+Relation	T8	T10	NoRel	true	choque	corrimiento
+Relation	T8	T13	NoRel	true	choque	composición
+Relation	T8	T16	NoRel	true	choque	accidente
+Relation	T8	T5	NoRel	true	choque	muerto
+Relation	T9	T1	NoRel	true	maniobras	muerto
+Relation	T9	T12	NoRel	true	maniobras	descarrilamiento
+Relation	T9	T14	NoRel	true	maniobras	muertos
+Relation	T9	T2	NoRel	true	maniobras	heridos
+Relation	T9	T3	NoRel	true	maniobras	choque

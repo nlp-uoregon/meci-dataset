@@ -1,0 +1,53 @@
+Text	Uçak hasar gördü lakin hala iniş takımlarının üstündeydi .	514 sefer sayılı uçuşun mürettebatı daha sonra yaptıkları için takdir edildi .	Uçak kazanın ardından başarıyla onarıldı ve havalimanından Alrosa tarafından kullanılmaya devam etmek üzere kalktı .	514 sefer sayılı uçuşta sorunun ilk belirtileri yerel saatle 06: 59'da ( 02 : 59 UTC ) fark edildiğinde 10. 600 m ( FL 348 , 34.800 fit ) irtifada ve Usinsk civarındaydılar .	Kısa bir süre sonra , uçakğın elektrik sistemi tamamen arızalandı ve bu da navigasyon ve elektrikli yakıt pompaları gibi sistemlerin devre dışı kalmasıyla sonuçlandı .
+Event	T0	gördü	EVENT	11
+Event	T1	yaptıkları	EVENT	106
+Event	T2	edildi	EVENT	129
+Event	T3	kazanın	EVENT	143
+Event	T4	onarıldı	EVENT	170
+Event	T5	kalktı	EVENT	246
+Event	T6	sorunun	EVENT	279
+Event	T7	belirtileri	EVENT	291
+Event	T9	arızalandı	EVENT	485
+Event	T10	sonuçlandı	EVENT	585
+Relation	T1	T2	CauseEffect	true	yaptıkları	edildi
+Relation	T2	T1	EffectCause	true	edildi	yaptıkları
+Relation	T9	T10	CauseEffect	true	arızalandı	sonuçlandı
+Relation	T10	T9	EffectCause	true	sonuçlandı	arızalandı
+Relation	T4	T5	CauseEffect	true	onarıldı	kalktı
+Relation	T5	T4	EffectCause	true	kalktı	onarıldı
+Relation	T3	T0	CauseEffect	true	kazanın	gördü
+Relation	T0	T3	EffectCause	true	gördü	kazanın
+Relation	T0	T4	CauseEffect	true	gördü	onarıldı
+Relation	T4	T0	EffectCause	true	onarıldı	gördü
+Relation	T6	T7	CauseEffect	true	sorunun	belirtileri
+Relation	T7	T6	EffectCause	true	belirtileri	sorunun
+Relation	T0	T10	NoRel	true	gördü	sonuçlandı
+Relation	T1	T0	NoRel	true	yaptıkları	gördü
+Relation	T1	T3	NoRel	true	yaptıkları	kazanın
+Relation	T1	T4	NoRel	true	yaptıkları	onarıldı
+Relation	T1	T5	NoRel	true	yaptıkları	kalktı
+Relation	T1	T9	NoRel	true	yaptıkları	arızalandı
+Relation	T10	T0	NoRel	true	sonuçlandı	gördü
+Relation	T10	T3	NoRel	true	sonuçlandı	kazanın
+Relation	T10	T5	NoRel	true	sonuçlandı	kalktı
+Relation	T2	T4	NoRel	true	edildi	onarıldı
+Relation	T2	T5	NoRel	true	edildi	kalktı
+Relation	T2	T7	NoRel	true	edildi	belirtileri
+Relation	T2	T9	NoRel	true	edildi	arızalandı
+Relation	T3	T10	NoRel	true	kazanın	sonuçlandı
+Relation	T3	T4	NoRel	true	kazanın	onarıldı
+Relation	T3	T7	NoRel	true	kazanın	belirtileri
+Relation	T4	T1	NoRel	true	onarıldı	yaptıkları
+Relation	T4	T3	NoRel	true	onarıldı	kazanın
+Relation	T4	T6	NoRel	true	onarıldı	sorunun
+Relation	T4	T7	NoRel	true	onarıldı	belirtileri
+Relation	T5	T6	NoRel	true	kalktı	sorunun
+Relation	T5	T7	NoRel	true	kalktı	belirtileri
+Relation	T6	T0	NoRel	true	sorunun	gördü
+Relation	T6	T10	NoRel	true	sorunun	sonuçlandı
+Relation	T6	T3	NoRel	true	sorunun	kazanın
+Relation	T7	T10	NoRel	true	belirtileri	sonuçlandı
+Relation	T7	T3	NoRel	true	belirtileri	kazanın
+Relation	T7	T5	NoRel	true	belirtileri	kalktı
+Relation	T9	T2	NoRel	true	arızalandı	edildi
+Relation	T9	T3	NoRel	true	arızalandı	kazanın

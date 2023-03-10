@@ -1,0 +1,28 @@
+Text	Şimdiye kadar böyle bir hesap bulunamadı .	- Nikolay Çavuşesku mahkemeyi açıkça reddetti .	Çavuşesku'nun avukatlarından biri infazdan önce , ikili mahkemeyi tanımadığı için karara itiraz etme yolu olmadığını ileri sürdü .	- Yargıçların kararı , daha yüksek bir mahkemeye başvurulmasına izin verdi .	Çavuşesku , karardan birkaç dakika sonra idam edildi ve bu hüküm tartışmalı hale geldi .
+Event	T0	reddetti	EVENT	80
+Event	T2	sürdü	EVENT	214
+Event	T3	kararı	EVENT	236
+Event	T4	verdi	EVENT	291
+Event	T5	edildi	EVENT	345
+Event	T6	geldi	EVENT	380
+Event	T1	tanımadığı	EVENT	157
+Relation	T1	T2	CauseEffect	true	tanımadığı	sürdü
+Relation	T2	T1	EffectCause	true	sürdü	tanımadığı
+Relation	T3	T4	CauseEffect	true	kararı	verdi
+Relation	T4	T3	EffectCause	true	verdi	kararı
+Relation	T4	T5	CauseEffect	true	verdi	edildi
+Relation	T5	T4	EffectCause	true	edildi	verdi
+Relation	T5	T6	CauseEffect	true	edildi	geldi
+Relation	T6	T5	EffectCause	true	geldi	edildi
+Relation	T0	T3	NoRel	true	reddetti	kararı
+Relation	T0	T4	NoRel	true	reddetti	verdi
+Relation	T0	T6	NoRel	true	reddetti	geldi
+Relation	T1	T3	NoRel	true	tanımadığı	kararı
+Relation	T1	T4	NoRel	true	tanımadığı	verdi
+Relation	T2	T3	NoRel	true	sürdü	kararı
+Relation	T2	T4	NoRel	true	sürdü	verdi
+Relation	T3	T1	NoRel	true	kararı	tanımadığı
+Relation	T3	T2	NoRel	true	kararı	sürdü
+Relation	T3	T5	NoRel	true	kararı	edildi
+Relation	T4	T6	NoRel	true	verdi	geldi
+Relation	T5	T2	NoRel	true	edildi	sürdü

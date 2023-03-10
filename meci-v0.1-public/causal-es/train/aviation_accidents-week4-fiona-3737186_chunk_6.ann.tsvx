@@ -1,0 +1,119 @@
+Text	La tripulación de vuelo no adquirió ninguna referencia visual terrestre antes de iniciar la aproximación .	El avión comenzó su descenso final para el aterrizaje demasiado pronto .	La aeronave había descendido a 280 pies sobre el suelo cuando el sistema de toma de conciencia y la advertencia Terreno sonaba en la cabina .	El capitán ordenó un Go-Around y el piloto automático se desconectó .	El primer oficial levanto la nariz de la aeronave durante 4 segundos y las palancas de empuje se ajustan para iniciar un go-around .
+Event	T0	adquirió	EVENT	27
+Event	T1	iniciar	EVENT	81
+Event	T2	aproximación	EVENT	92
+Event	T3	comenzó	EVENT	116
+Event	T4	final	EVENT	136
+Event	T5	aterrizaje	EVENT	150
+Event	T6	descendido	EVENT	198
+Event	T7	toma	EVENT	256
+Event	T8	advertencia	EVENT	280
+Event	T9	sonaba	EVENT	300
+Event	T10	ordenó	EVENT	333
+Event	T11	desconectó	EVENT	379
+Event	T12	levanto	EVENT	410
+Event	T13	empuje	EVENT	479
+Event	T14	ajustan	EVENT	489
+Event	T15	iniciar	EVENT	502
+Event	T16	go-around	EVENT	513
+Relation	T10	T11	CauseEffect	true	ordenó	desconectó
+Relation	T11	T10	EffectCause	true	desconectó	ordenó
+Relation	T0	T1	NoRel	true	adquirió	iniciar
+Relation	T0	T12	NoRel	true	adquirió	levanto
+Relation	T0	T15	NoRel	true	adquirió	iniciar
+Relation	T0	T2	NoRel	true	adquirió	aproximación
+Relation	T0	T7	NoRel	true	adquirió	toma
+Relation	T1	T0	NoRel	true	iniciar	adquirió
+Relation	T1	T11	NoRel	true	iniciar	desconectó
+Relation	T1	T13	NoRel	true	iniciar	empuje
+Relation	T1	T16	NoRel	true	iniciar	go-around
+Relation	T1	T3	NoRel	true	iniciar	comenzó
+Relation	T1	T7	NoRel	true	iniciar	toma
+Relation	T10	T0	NoRel	true	ordenó	adquirió
+Relation	T10	T12	NoRel	true	ordenó	levanto
+Relation	T10	T13	NoRel	true	ordenó	empuje
+Relation	T10	T3	NoRel	true	ordenó	comenzó
+Relation	T10	T5	NoRel	true	ordenó	aterrizaje
+Relation	T10	T6	NoRel	true	ordenó	descendido
+Relation	T10	T9	NoRel	true	ordenó	sonaba
+Relation	T11	T14	NoRel	true	desconectó	ajustan
+Relation	T11	T15	NoRel	true	desconectó	iniciar
+Relation	T12	T1	NoRel	true	levanto	iniciar
+Relation	T12	T11	NoRel	true	levanto	desconectó
+Relation	T12	T14	NoRel	true	levanto	ajustan
+Relation	T12	T15	NoRel	true	levanto	iniciar
+Relation	T12	T3	NoRel	true	levanto	comenzó
+Relation	T12	T4	NoRel	true	levanto	final
+Relation	T12	T8	NoRel	true	levanto	advertencia
+Relation	T13	T10	NoRel	true	empuje	ordenó
+Relation	T13	T15	NoRel	true	empuje	iniciar
+Relation	T13	T7	NoRel	true	empuje	toma
+Relation	T14	T13	NoRel	true	ajustan	empuje
+Relation	T14	T2	NoRel	true	ajustan	aproximación
+Relation	T14	T3	NoRel	true	ajustan	comenzó
+Relation	T14	T4	NoRel	true	ajustan	final
+Relation	T14	T5	NoRel	true	ajustan	aterrizaje
+Relation	T14	T7	NoRel	true	ajustan	toma
+Relation	T15	T1	NoRel	true	iniciar	iniciar
+Relation	T15	T12	NoRel	true	iniciar	levanto
+Relation	T15	T2	NoRel	true	iniciar	aproximación
+Relation	T15	T3	NoRel	true	iniciar	comenzó
+Relation	T15	T5	NoRel	true	iniciar	aterrizaje
+Relation	T15	T6	NoRel	true	iniciar	descendido
+Relation	T15	T7	NoRel	true	iniciar	toma
+Relation	T15	T8	NoRel	true	iniciar	advertencia
+Relation	T15	T9	NoRel	true	iniciar	sonaba
+Relation	T16	T0	NoRel	true	go-around	adquirió
+Relation	T16	T11	NoRel	true	go-around	desconectó
+Relation	T16	T12	NoRel	true	go-around	levanto
+Relation	T16	T15	NoRel	true	go-around	iniciar
+Relation	T16	T2	NoRel	true	go-around	aproximación
+Relation	T16	T5	NoRel	true	go-around	aterrizaje
+Relation	T2	T1	NoRel	true	aproximación	iniciar
+Relation	T2	T12	NoRel	true	aproximación	levanto
+Relation	T2	T13	NoRel	true	aproximación	empuje
+Relation	T2	T15	NoRel	true	aproximación	iniciar
+Relation	T2	T3	NoRel	true	aproximación	comenzó
+Relation	T2	T5	NoRel	true	aproximación	aterrizaje
+Relation	T2	T8	NoRel	true	aproximación	advertencia
+Relation	T2	T9	NoRel	true	aproximación	sonaba
+Relation	T3	T10	NoRel	true	comenzó	ordenó
+Relation	T3	T13	NoRel	true	comenzó	empuje
+Relation	T3	T15	NoRel	true	comenzó	iniciar
+Relation	T3	T4	NoRel	true	comenzó	final
+Relation	T4	T14	NoRel	true	final	ajustan
+Relation	T4	T16	NoRel	true	final	go-around
+Relation	T4	T5	NoRel	true	final	aterrizaje
+Relation	T5	T0	NoRel	true	aterrizaje	adquirió
+Relation	T5	T12	NoRel	true	aterrizaje	levanto
+Relation	T5	T14	NoRel	true	aterrizaje	ajustan
+Relation	T5	T15	NoRel	true	aterrizaje	iniciar
+Relation	T5	T16	NoRel	true	aterrizaje	go-around
+Relation	T5	T3	NoRel	true	aterrizaje	comenzó
+Relation	T5	T6	NoRel	true	aterrizaje	descendido
+Relation	T5	T7	NoRel	true	aterrizaje	toma
+Relation	T6	T10	NoRel	true	descendido	ordenó
+Relation	T6	T11	NoRel	true	descendido	desconectó
+Relation	T6	T14	NoRel	true	descendido	ajustan
+Relation	T6	T2	NoRel	true	descendido	aproximación
+Relation	T6	T3	NoRel	true	descendido	comenzó
+Relation	T6	T4	NoRel	true	descendido	final
+Relation	T7	T0	NoRel	true	toma	adquirió
+Relation	T7	T1	NoRel	true	toma	iniciar
+Relation	T7	T4	NoRel	true	toma	final
+Relation	T7	T5	NoRel	true	toma	aterrizaje
+Relation	T7	T6	NoRel	true	toma	descendido
+Relation	T7	T8	NoRel	true	toma	advertencia
+Relation	T7	T9	NoRel	true	toma	sonaba
+Relation	T8	T0	NoRel	true	advertencia	adquirió
+Relation	T8	T11	NoRel	true	advertencia	desconectó
+Relation	T8	T15	NoRel	true	advertencia	iniciar
+Relation	T8	T2	NoRel	true	advertencia	aproximación
+Relation	T8	T3	NoRel	true	advertencia	comenzó
+Relation	T8	T5	NoRel	true	advertencia	aterrizaje
+Relation	T8	T7	NoRel	true	advertencia	toma
+Relation	T9	T0	NoRel	true	sonaba	adquirió
+Relation	T9	T10	NoRel	true	sonaba	ordenó
+Relation	T9	T11	NoRel	true	sonaba	desconectó
+Relation	T9	T16	NoRel	true	sonaba	go-around
+Relation	T9	T2	NoRel	true	sonaba	aproximación

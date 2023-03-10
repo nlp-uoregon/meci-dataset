@@ -1,0 +1,78 @@
+Text	1964 ALASKA DEPREMI , 27 Mart 1964 tarihinde merkez_üssü Amerika Birleşik Devletleri'nin Alaska eyaletinin güney kıyılarında 9.2 M _ ( w ) büyüklüğünde meydana gelen deprem .	Saat 17:36'da ( 28 Mart 3: 36 UTC ) meydana gelen deprem , 1960'da yaşanan Şili depreminden sonra yeryüzündeki en büyük ikinci deprem olarak kayıtlara geçti .	Deprem , dört dakika otuz sekiz saniye sürdü ve Alaska kıyılarında 67 metre yüksekliğe kadar ulaşan tsunami meydana getirdi .	131 kişi hayatını kaybetmesine sebep olan deprem yaklaşık 311 milyon dolarlık hasar oluşturdu .	
+Event	T0	DEPREMI	EVENT	12
+Event	T1	deprem	EVENT	166
+Event	T2	deprem	EVENT	225
+Event	T3	yaşanan	EVENT	242
+Event	T4	depreminden	EVENT	255
+Event	T5	deprem	EVENT	302
+Event	T6	geçti	EVENT	326
+Event	T7	Deprem	EVENT	334
+Event	T8	sürdü	EVENT	373
+Event	T9	getirdi	EVENT	450
+Event	T10	deprem	EVENT	502
+Event	T11	oluşturdu	EVENT	544
+Event	T12	kaybetmesine	EVENT	478
+Relation	T0	T6	CauseEffect	true	DEPREMI	geçti
+Relation	T6	T0	EffectCause	true	geçti	DEPREMI
+Relation	T0	T9	CauseEffect	true	DEPREMI	getirdi
+Relation	T9	T0	EffectCause	true	getirdi	DEPREMI
+Relation	T0	T12	CauseEffect	true	DEPREMI	kaybetmesine
+Relation	T12	T0	EffectCause	true	kaybetmesine	DEPREMI
+Relation	T0	T11	CauseEffect	true	DEPREMI	oluşturdu
+Relation	T11	T0	EffectCause	true	oluşturdu	DEPREMI
+Relation	T0	T3	NoRel	true	DEPREMI	yaşanan
+Relation	T0	T7	NoRel	true	DEPREMI	Deprem
+Relation	T1	T0	NoRel	true	deprem	DEPREMI
+Relation	T1	T11	NoRel	true	deprem	oluşturdu
+Relation	T1	T5	NoRel	true	deprem	deprem
+Relation	T10	T1	NoRel	true	deprem	deprem
+Relation	T10	T11	NoRel	true	deprem	oluşturdu
+Relation	T10	T12	NoRel	true	deprem	kaybetmesine
+Relation	T10	T4	NoRel	true	deprem	depreminden
+Relation	T10	T5	NoRel	true	deprem	deprem
+Relation	T10	T6	NoRel	true	deprem	geçti
+Relation	T10	T8	NoRel	true	deprem	sürdü
+Relation	T10	T9	NoRel	true	deprem	getirdi
+Relation	T11	T1	NoRel	true	oluşturdu	deprem
+Relation	T11	T3	NoRel	true	oluşturdu	yaşanan
+Relation	T11	T4	NoRel	true	oluşturdu	depreminden
+Relation	T11	T8	NoRel	true	oluşturdu	sürdü
+Relation	T12	T10	NoRel	true	kaybetmesine	deprem
+Relation	T12	T11	NoRel	true	kaybetmesine	oluşturdu
+Relation	T12	T2	NoRel	true	kaybetmesine	deprem
+Relation	T12	T3	NoRel	true	kaybetmesine	yaşanan
+Relation	T12	T4	NoRel	true	kaybetmesine	depreminden
+Relation	T12	T9	NoRel	true	kaybetmesine	getirdi
+Relation	T2	T0	NoRel	true	deprem	DEPREMI
+Relation	T2	T1	NoRel	true	deprem	deprem
+Relation	T2	T12	NoRel	true	deprem	kaybetmesine
+Relation	T2	T3	NoRel	true	deprem	yaşanan
+Relation	T2	T4	NoRel	true	deprem	depreminden
+Relation	T3	T4	NoRel	true	yaşanan	depreminden
+Relation	T3	T6	NoRel	true	yaşanan	geçti
+Relation	T3	T7	NoRel	true	yaşanan	Deprem
+Relation	T4	T10	NoRel	true	depreminden	deprem
+Relation	T4	T11	NoRel	true	depreminden	oluşturdu
+Relation	T4	T3	NoRel	true	depreminden	yaşanan
+Relation	T4	T9	NoRel	true	depreminden	getirdi
+Relation	T5	T0	NoRel	true	deprem	DEPREMI
+Relation	T5	T1	NoRel	true	deprem	deprem
+Relation	T5	T11	NoRel	true	deprem	oluşturdu
+Relation	T5	T12	NoRel	true	deprem	kaybetmesine
+Relation	T5	T2	NoRel	true	deprem	deprem
+Relation	T6	T1	NoRel	true	geçti	deprem
+Relation	T6	T12	NoRel	true	geçti	kaybetmesine
+Relation	T6	T8	NoRel	true	geçti	sürdü
+Relation	T6	T9	NoRel	true	geçti	getirdi
+Relation	T7	T4	NoRel	true	Deprem	depreminden
+Relation	T7	T5	NoRel	true	Deprem	deprem
+Relation	T7	T9	NoRel	true	Deprem	getirdi
+Relation	T8	T1	NoRel	true	sürdü	deprem
+Relation	T8	T10	NoRel	true	sürdü	deprem
+Relation	T8	T2	NoRel	true	sürdü	deprem
+Relation	T8	T3	NoRel	true	sürdü	yaşanan
+Relation	T8	T7	NoRel	true	sürdü	Deprem
+Relation	T9	T10	NoRel	true	getirdi	deprem
+Relation	T9	T2	NoRel	true	getirdi	deprem
+Relation	T9	T4	NoRel	true	getirdi	depreminden
+Relation	T9	T7	NoRel	true	getirdi	Deprem

@@ -1,0 +1,34 @@
+Text	9/11 kommissionen mener , at flyet stadig var under kaprernes kontrol , men at de måtte have vurderet , at det kun var et spørgsmål om sekunder , inden passagererne var trængt ind og havde overvundet dem .	Andre hævder , at der ikke kan være tvivl om , at passagererne trængte ind i cockpittet .	Flynummer 93 styrtede ned i et nedlagt kulmineområde ved Stonycreek Township klokken 10:03:11 .	National Transportation_Safety_Board ( NTSB ) rapporterede , at flyet styrtede ned med en hastighed på 906 km/t i en vinkel på 40 ° på ryggen .	Det lavede et næsten tre meter dybt og omkring 12 meter stort nedslagskrater .
+Event	T0	mener	EVENT	18
+Event	T1	kontrol	EVENT	62
+Event	T2	vurderet	EVENT	93
+Event	T3	overvundet	EVENT	189
+Event	T4	hævder	EVENT	212
+Event	T5	nedlagt	EVENT	327
+Event	T6	rapporterede	EVENT	438
+Event	T7	lavede	EVENT	540
+Event	T8	styrtede ned	EVENT	309
+Relation	T1	T8	CauseEffect	true	kontrol	styrtede ned
+Relation	T8	T1	EffectCause	true	styrtede ned	kontrol
+Relation	T8	T6	CauseEffect	true	styrtede ned	rapporterede
+Relation	T6	T8	EffectCause	true	rapporterede	styrtede ned
+Relation	T1	T0	NoRel	true	kontrol	mener
+Relation	T1	T4	NoRel	true	kontrol	hævder
+Relation	T1	T7	NoRel	true	kontrol	lavede
+Relation	T2	T5	NoRel	true	vurderet	nedlagt
+Relation	T3	T0	NoRel	true	overvundet	mener
+Relation	T3	T2	NoRel	true	overvundet	vurderet
+Relation	T3	T5	NoRel	true	overvundet	nedlagt
+Relation	T4	T0	NoRel	true	hævder	mener
+Relation	T4	T2	NoRel	true	hævder	vurderet
+Relation	T4	T3	NoRel	true	hævder	overvundet
+Relation	T4	T7	NoRel	true	hævder	lavede
+Relation	T5	T0	NoRel	true	nedlagt	mener
+Relation	T5	T1	NoRel	true	nedlagt	kontrol
+Relation	T5	T2	NoRel	true	nedlagt	vurderet
+Relation	T5	T7	NoRel	true	nedlagt	lavede
+Relation	T6	T2	NoRel	true	rapporterede	vurderet
+Relation	T6	T5	NoRel	true	rapporterede	nedlagt
+Relation	T7	T2	NoRel	true	lavede	vurderet
+Relation	T7	T5	NoRel	true	lavede	nedlagt
+Relation	T8	T5	NoRel	true	styrtede ned	nedlagt

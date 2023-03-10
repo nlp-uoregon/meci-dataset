@@ -1,0 +1,50 @@
+Text	1547 yılında Şah Tahmasb’ın kardeşi Elkas Mirza , Şirvan valiliğindeyken saltanat sevdasına kapıldığı için kardeşinin kaçarak İstanbul’a geldi ve Osmanlı Devleti’ne sığındı .	Kanuni Sultan Süleyman , uzun süredir Avrupa ile meşgul olmasından istifade etmeye çalışan Şah Tahmasb’ın , Doğu Anadolu’ya yeniden girip Van kalesi başta olmak üzere bazı yerleri işgal ettikten başka , Şiiliğin Anadolu içlerinde yayılmasını temin edecek propagandadan geri durmamış olması sebebiyle İran’a savaş açmak istiyordu .	Şehzade Elkas Mirza’nın sığınma fırsatını kaçırmayarak İran ile savaşa karar verdi .	Ordu 29 Mart 1548 günü İstanbul’dan hareket etti .	Elkas Mirza yanına verilen Osmanlı kuvvetleri ile öncü kuvvet olarak gönderildi .
+Event	T0	kapıldığı	EVENT	92
+Event	T1	geldi	EVENT	137
+Event	T2	sığındı	EVENT	165
+Event	T3	sığınma	EVENT	530
+Event	T4	verdi	EVENT	583
+Event	T5	etti	EVENT	635
+Event	T6	gönderildi	EVENT	711
+Event	T7	kaçarak	EVENT	118
+Event	T8	verilen	EVENT	661
+Relation	T0	T7	CauseEffect	true	kapıldığı	kaçarak
+Relation	T7	T0	EffectCause	true	kaçarak	kapıldığı
+Relation	T7	T1	CauseEffect	true	kaçarak	geldi
+Relation	T1	T7	EffectCause	true	geldi	kaçarak
+Relation	T1	T2	CauseEffect	true	geldi	sığındı
+Relation	T2	T1	EffectCause	true	sığındı	geldi
+Relation	T3	T4	CauseEffect	true	sığınma	verdi
+Relation	T4	T3	EffectCause	true	verdi	sığınma
+Relation	T4	T5	CauseEffect	true	verdi	etti
+Relation	T5	T4	EffectCause	true	etti	verdi
+Relation	T2	T8	CauseEffect	true	sığındı	verilen
+Relation	T8	T2	EffectCause	true	verilen	sığındı
+Relation	T5	T6	CauseEffect	true	etti	gönderildi
+Relation	T6	T5	EffectCause	true	gönderildi	etti
+Relation	T0	T1	NoRel	true	kapıldığı	geldi
+Relation	T0	T2	NoRel	true	kapıldığı	sığındı
+Relation	T0	T3	NoRel	true	kapıldığı	sığınma
+Relation	T0	T8	NoRel	true	kapıldığı	verilen
+Relation	T1	T3	NoRel	true	geldi	sığınma
+Relation	T1	T5	NoRel	true	geldi	etti
+Relation	T2	T5	NoRel	true	sığındı	etti
+Relation	T2	T6	NoRel	true	sığındı	gönderildi
+Relation	T3	T0	NoRel	true	sığınma	kapıldığı
+Relation	T3	T1	NoRel	true	sığınma	geldi
+Relation	T3	T2	NoRel	true	sığınma	sığındı
+Relation	T3	T7	NoRel	true	sığınma	kaçarak
+Relation	T3	T8	NoRel	true	sığınma	verilen
+Relation	T4	T7	NoRel	true	verdi	kaçarak
+Relation	T4	T8	NoRel	true	verdi	verilen
+Relation	T5	T2	NoRel	true	etti	sığındı
+Relation	T5	T3	NoRel	true	etti	sığınma
+Relation	T5	T7	NoRel	true	etti	kaçarak
+Relation	T6	T2	NoRel	true	gönderildi	sığındı
+Relation	T6	T3	NoRel	true	gönderildi	sığınma
+Relation	T6	T7	NoRel	true	gönderildi	kaçarak
+Relation	T7	T2	NoRel	true	kaçarak	sığındı
+Relation	T7	T3	NoRel	true	kaçarak	sığınma
+Relation	T7	T8	NoRel	true	kaçarak	verilen
+Relation	T8	T3	NoRel	true	verilen	sığınma
+Relation	T8	T5	NoRel	true	verilen	etti

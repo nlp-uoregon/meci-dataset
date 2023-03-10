@@ -1,0 +1,61 @@
+Text	küçükresim | Lavrentiy Beria tarafından Josef Staline yazılan Polonyalı sivil ve subay esirlerin kurşuna dizilmesinin tavsiye edildiği 5 Mart 1940 tarihli rapor ve listenin orijinali KATYN KATLIAMI veya KATYN ORMANI KATLIAMI , 1940 yılında yaklaşık 22.000 Polonyalı subay , sivil ve aydınların başlarına birer kurşun sıkılarak gerçekleştirilen toplu infaz .	Sovyetler Birliği hükûmeti uzun yıllar bu olayda kendisinin sorumlu olmadığını açıkladı , olayın Nazi Almanyası tarafından gerçekleştirildiğini savundu .	Ancak 1990 yılında Mihail Gorbaçov yaşananların Sovyetler tarafından gerçekleştirildiğini kabul etti .	Sovyetler Birliği'nin dağılmasının ardından 1992 yılında Rusya Devlet Başkanı Boris Yeltsin , Polonya Devlet Başkanı Lech Walesa'ya infaza dair Josef Stalin'in imzaladığı emrin orijinal belgelerini verdi .	Ayrıca 2010 yılında , dönemin Rusya başbakanı Dmitri Medvedev , 22.000 bin kişinin infaz edildiği bu katliam hakkındaki Sovyet belgelerinin çevrimiçi olarak yayınlanmasını emretmiştir .
+Event	T1	infaz	EVENT	350
+Event	T2	açıkladı	EVENT	437
+Event	T3	savundu	EVENT	502
+Event	T4	etti	EVENT	608
+Event	T5	verdi	EVENT	813
+Event	T6	edildiği	EVENT	910
+Event	T7	katliam	EVENT	922
+Event	T8	emretmiştir	EVENT	993
+Event	T9	KATYN KATLIAMI	EVENT	183
+Event	T10	KATYN ORMANI KATLIAMI	EVENT	203
+Event	T11	sıkılarak	EVENT	317
+Event	T12	dağılmasının	EVENT	637
+Relation	T11	T1	CauseEffect	true	sıkılarak	infaz
+Relation	T1	T11	EffectCause	true	infaz	sıkılarak
+Relation	T1	T9	CauseEffect	true	infaz	KATYN KATLIAMI
+Relation	T9	T1	EffectCause	true	KATYN KATLIAMI	infaz
+Relation	T1	T10	CauseEffect	true	infaz	KATYN ORMANI KATLIAMI
+Relation	T10	T1	EffectCause	true	KATYN ORMANI KATLIAMI	infaz
+Relation	T12	T5	CauseEffect	true	dağılmasının	verdi
+Relation	T5	T12	EffectCause	true	verdi	dağılmasının
+Relation	T6	T7	CauseEffect	true	edildiği	katliam
+Relation	T7	T6	EffectCause	true	katliam	edildiği
+Relation	T1	T2	NoRel	true	infaz	açıkladı
+Relation	T1	T3	NoRel	true	infaz	savundu
+Relation	T10	T12	NoRel	true	KATYN ORMANI KATLIAMI	dağılmasının
+Relation	T10	T3	NoRel	true	KATYN ORMANI KATLIAMI	savundu
+Relation	T12	T11	NoRel	true	dağılmasının	sıkılarak
+Relation	T12	T8	NoRel	true	dağılmasının	emretmiştir
+Relation	T2	T1	NoRel	true	açıkladı	infaz
+Relation	T2	T11	NoRel	true	açıkladı	sıkılarak
+Relation	T2	T12	NoRel	true	açıkladı	dağılmasının
+Relation	T2	T3	NoRel	true	açıkladı	savundu
+Relation	T2	T5	NoRel	true	açıkladı	verdi
+Relation	T2	T6	NoRel	true	açıkladı	edildiği
+Relation	T3	T6	NoRel	true	savundu	edildiği
+Relation	T3	T9	NoRel	true	savundu	KATYN KATLIAMI
+Relation	T4	T5	NoRel	true	etti	verdi
+Relation	T5	T11	NoRel	true	verdi	sıkılarak
+Relation	T5	T4	NoRel	true	verdi	etti
+Relation	T6	T10	NoRel	true	edildiği	KATYN ORMANI KATLIAMI
+Relation	T6	T11	NoRel	true	edildiği	sıkılarak
+Relation	T6	T12	NoRel	true	edildiği	dağılmasının
+Relation	T6	T2	NoRel	true	edildiği	açıkladı
+Relation	T6	T5	NoRel	true	edildiği	verdi
+Relation	T6	T9	NoRel	true	edildiği	KATYN KATLIAMI
+Relation	T7	T10	NoRel	true	katliam	KATYN ORMANI KATLIAMI
+Relation	T7	T11	NoRel	true	katliam	sıkılarak
+Relation	T7	T2	NoRel	true	katliam	açıkladı
+Relation	T7	T3	NoRel	true	katliam	savundu
+Relation	T7	T4	NoRel	true	katliam	etti
+Relation	T7	T9	NoRel	true	katliam	KATYN KATLIAMI
+Relation	T8	T11	NoRel	true	emretmiştir	sıkılarak
+Relation	T8	T2	NoRel	true	emretmiştir	açıkladı
+Relation	T8	T6	NoRel	true	emretmiştir	edildiği
+Relation	T8	T9	NoRel	true	emretmiştir	KATYN KATLIAMI
+Relation	T9	T11	NoRel	true	KATYN KATLIAMI	sıkılarak
+Relation	T9	T3	NoRel	true	KATYN KATLIAMI	savundu
+Relation	T9	T4	NoRel	true	KATYN KATLIAMI	etti
+Relation	T9	T7	NoRel	true	KATYN KATLIAMI	katliam
+Relation	T9	T8	NoRel	true	KATYN KATLIAMI	emretmiştir

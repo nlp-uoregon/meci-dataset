@@ -1,0 +1,102 @@
+Text	Salgın özellikle başkent Valletta ve banliyösü Floriana'da ve Birkirkara , Qormi ve Żebbuġ köylerinde şiddetliydi .	Salgın 1813'ün sonlarında azalmaya başladı ve Ocak 1814'e kadar bittiğine inanılıyordu .	Bununla birlikte , hastalık Şubat ayında kontamine giysiler yoluyla Gozo'ya istemeden bulaştı ve Xagħra köyünde başka bir salgın meydana geldi .	Sınırlama önlemleri derhal uygulandı , yayılmayı sınırladı ve Gozo'da çok daha düşük bir ölüm oranıyla sonuçlandı .	İkinci veba salgını , 14. yüzyılda Kara Ölüm ile başladı ve 19. yüzyıla kadar tekrarlamaya devam etti .
+Event	T0	Salgın	EVENT	0
+Event	T1	Salgın	EVENT	116
+Event	T2	başladı	EVENT	151
+Event	T3	hastalık	EVENT	224
+Event	T4	bulaştı	EVENT	291
+Event	T5	geldi	EVENT	342
+Event	T6	uygulandı	EVENT	377
+Event	T7	sınırladı	EVENT	399
+Event	T8	ölüm	EVENT	439
+Event	T9	sonuçlandı	EVENT	453
+Event	T10	Ölüm	EVENT	506
+Event	T11	başladı	EVENT	515
+Event	T12	etti	EVENT	563
+Event	T13	inanılıyordu	EVENT	190
+Event	T14	kontamine	EVENT	246
+Event	T15	salgını	EVENT	478
+Relation	T1	T2	CauseEffect	true	Salgın	başladı
+Relation	T2	T1	EffectCause	true	başladı	Salgın
+Relation	T3	T14	CauseEffect	true	hastalık	kontamine
+Relation	T14	T3	EffectCause	true	kontamine	hastalık
+Relation	T14	T4	CauseEffect	true	kontamine	bulaştı
+Relation	T4	T14	EffectCause	true	bulaştı	kontamine
+Relation	T4	T5	CauseEffect	true	bulaştı	geldi
+Relation	T5	T4	EffectCause	true	geldi	bulaştı
+Relation	T5	T6	CauseEffect	true	geldi	uygulandı
+Relation	T6	T5	EffectCause	true	uygulandı	geldi
+Relation	T6	T7	CauseEffect	true	uygulandı	sınırladı
+Relation	T7	T6	EffectCause	true	sınırladı	uygulandı
+Relation	T7	T9	CauseEffect	true	sınırladı	sonuçlandı
+Relation	T9	T7	EffectCause	true	sonuçlandı	sınırladı
+Relation	T10	T15	CauseEffect	true	Ölüm	salgını
+Relation	T15	T10	EffectCause	true	salgını	Ölüm
+Relation	T15	T12	CauseEffect	true	salgını	etti
+Relation	T12	T15	EffectCause	true	etti	salgını
+Relation	T0	T1	NoRel	true	Salgın	Salgın
+Relation	T0	T11	NoRel	true	Salgın	başladı
+Relation	T0	T12	NoRel	true	Salgın	etti
+Relation	T0	T14	NoRel	true	Salgın	kontamine
+Relation	T0	T4	NoRel	true	Salgın	bulaştı
+Relation	T0	T5	NoRel	true	Salgın	geldi
+Relation	T0	T7	NoRel	true	Salgın	sınırladı
+Relation	T0	T8	NoRel	true	Salgın	ölüm
+Relation	T1	T15	NoRel	true	Salgın	salgını
+Relation	T1	T6	NoRel	true	Salgın	uygulandı
+Relation	T1	T9	NoRel	true	Salgın	sonuçlandı
+Relation	T10	T12	NoRel	true	Ölüm	etti
+Relation	T10	T13	NoRel	true	Ölüm	inanılıyordu
+Relation	T10	T4	NoRel	true	Ölüm	bulaştı
+Relation	T10	T9	NoRel	true	Ölüm	sonuçlandı
+Relation	T11	T1	NoRel	true	başladı	Salgın
+Relation	T11	T10	NoRel	true	başladı	Ölüm
+Relation	T11	T15	NoRel	true	başladı	salgını
+Relation	T11	T2	NoRel	true	başladı	başladı
+Relation	T11	T5	NoRel	true	başladı	geldi
+Relation	T11	T8	NoRel	true	başladı	ölüm
+Relation	T11	T9	NoRel	true	başladı	sonuçlandı
+Relation	T12	T0	NoRel	true	etti	Salgın
+Relation	T12	T13	NoRel	true	etti	inanılıyordu
+Relation	T12	T2	NoRel	true	etti	başladı
+Relation	T12	T3	NoRel	true	etti	hastalık
+Relation	T13	T12	NoRel	true	inanılıyordu	etti
+Relation	T13	T3	NoRel	true	inanılıyordu	hastalık
+Relation	T13	T4	NoRel	true	inanılıyordu	bulaştı
+Relation	T14	T0	NoRel	true	kontamine	Salgın
+Relation	T14	T1	NoRel	true	kontamine	Salgın
+Relation	T14	T11	NoRel	true	kontamine	başladı
+Relation	T14	T13	NoRel	true	kontamine	inanılıyordu
+Relation	T14	T5	NoRel	true	kontamine	geldi
+Relation	T14	T6	NoRel	true	kontamine	uygulandı
+Relation	T15	T2	NoRel	true	salgını	başladı
+Relation	T2	T8	NoRel	true	başladı	ölüm
+Relation	T3	T0	NoRel	true	hastalık	Salgın
+Relation	T3	T1	NoRel	true	hastalık	Salgın
+Relation	T3	T11	NoRel	true	hastalık	başladı
+Relation	T3	T2	NoRel	true	hastalık	başladı
+Relation	T3	T6	NoRel	true	hastalık	uygulandı
+Relation	T3	T7	NoRel	true	hastalık	sınırladı
+Relation	T4	T10	NoRel	true	bulaştı	Ölüm
+Relation	T4	T11	NoRel	true	bulaştı	başladı
+Relation	T4	T8	NoRel	true	bulaştı	ölüm
+Relation	T5	T11	NoRel	true	geldi	başladı
+Relation	T5	T13	NoRel	true	geldi	inanılıyordu
+Relation	T6	T0	NoRel	true	uygulandı	Salgın
+Relation	T6	T1	NoRel	true	uygulandı	Salgın
+Relation	T6	T3	NoRel	true	uygulandı	hastalık
+Relation	T6	T4	NoRel	true	uygulandı	bulaştı
+Relation	T6	T9	NoRel	true	uygulandı	sonuçlandı
+Relation	T7	T11	NoRel	true	sınırladı	başladı
+Relation	T7	T4	NoRel	true	sınırladı	bulaştı
+Relation	T8	T1	NoRel	true	ölüm	Salgın
+Relation	T8	T10	NoRel	true	ölüm	Ölüm
+Relation	T8	T11	NoRel	true	ölüm	başladı
+Relation	T8	T15	NoRel	true	ölüm	salgını
+Relation	T8	T3	NoRel	true	ölüm	hastalık
+Relation	T8	T5	NoRel	true	ölüm	geldi
+Relation	T9	T1	NoRel	true	sonuçlandı	Salgın
+Relation	T9	T14	NoRel	true	sonuçlandı	kontamine
+Relation	T9	T15	NoRel	true	sonuçlandı	salgını
+Relation	T9	T2	NoRel	true	sonuçlandı	başladı
+Relation	T9	T3	NoRel	true	sonuçlandı	hastalık
+Relation	T9	T4	NoRel	true	sonuçlandı	bulaştı

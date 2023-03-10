@@ -1,0 +1,62 @@
+Text	In response to this accident , American Airlines was fined $ 500,000 ( equivalent to $ million in dollars ) by the U.S. government for improper maintenance procedures .	Earl Russell Marshall , one of the American Airlines mechanics who had last performed this maintenance procedure on the aircraft , subsequently committed suicide the night before he was to be deposed by McDonnell Douglas attorneys .	On June 6 , 1979 , two weeks after the crash , the FAA suspended the type certificate for the DC - 10 , thereby grounding all DC - 10s under its jurisdiction .	It also enacted a special air regulation banning the DC - 10 from U.S. airspace , which prevented foreign DC - 10s not under the jurisdiction of the FAA from flying within the country .	This was done while the FAA investigated whether the airplane 's engine mounting and pylon design met relevant requirements .
+Event	T0	accident	EVENT	20
+Event	T1	fined	EVENT	53
+Event	T2	procedures	EVENT	156
+Event	T3	performed	EVENT	245
+Event	T4	procedure	EVENT	272
+Event	T5	suicide	EVENT	323
+Event	T6	deposed	EVENT	361
+Event	T7	crash	EVENT	441
+Event	T8	suspended	EVENT	457
+Event	T9	grounding	EVENT	514
+Event	T10	enacted	EVENT	570
+Event	T11	banning	EVENT	603
+Event	T12	prevented	EVENT	650
+Event	T13	flying	EVENT	720
+Event	T14	done	EVENT	757
+Event	T15	investigated	EVENT	776
+Event	T16	met	EVENT	846
+Relation	T0	T1	CauseEffect	true	accident	fined
+Relation	T1	T0	EffectCause	true	fined	accident
+Relation	T6	T5	CauseEffect	true	deposed	suicide
+Relation	T5	T6	EffectCause	true	suicide	deposed
+Relation	T8	T9	CauseEffect	true	suspended	grounding
+Relation	T9	T8	EffectCause	true	grounding	suspended
+Relation	T0	T14	NoRel	true	accident	done
+Relation	T10	T14	NoRel	true	enacted	done
+Relation	T10	T15	NoRel	true	enacted	investigated
+Relation	T10	T7	NoRel	true	enacted	crash
+Relation	T11	T0	NoRel	true	banning	accident
+Relation	T11	T7	NoRel	true	banning	crash
+Relation	T12	T13	NoRel	true	prevented	flying
+Relation	T12	T4	NoRel	true	prevented	procedure
+Relation	T14	T11	NoRel	true	done	banning
+Relation	T14	T12	NoRel	true	done	prevented
+Relation	T14	T5	NoRel	true	done	suicide
+Relation	T14	T8	NoRel	true	done	suspended
+Relation	T15	T14	NoRel	true	investigated	done
+Relation	T15	T3	NoRel	true	investigated	performed
+Relation	T16	T2	NoRel	true	met	procedures
+Relation	T16	T3	NoRel	true	met	performed
+Relation	T16	T6	NoRel	true	met	deposed
+Relation	T16	T7	NoRel	true	met	crash
+Relation	T2	T0	NoRel	true	procedures	accident
+Relation	T2	T16	NoRel	true	procedures	met
+Relation	T2	T6	NoRel	true	procedures	deposed
+Relation	T2	T7	NoRel	true	procedures	crash
+Relation	T3	T10	NoRel	true	performed	enacted
+Relation	T3	T15	NoRel	true	performed	investigated
+Relation	T4	T14	NoRel	true	procedure	done
+Relation	T4	T15	NoRel	true	procedure	investigated
+Relation	T4	T6	NoRel	true	procedure	deposed
+Relation	T4	T8	NoRel	true	procedure	suspended
+Relation	T5	T16	NoRel	true	suicide	met
+Relation	T6	T2	NoRel	true	deposed	procedures
+Relation	T7	T0	NoRel	true	crash	accident
+Relation	T8	T12	NoRel	true	suspended	prevented
+Relation	T8	T15	NoRel	true	suspended	investigated
+Relation	T8	T4	NoRel	true	suspended	procedure
+Relation	T8	T6	NoRel	true	suspended	deposed
+Relation	T9	T2	NoRel	true	grounding	procedures
+Relation	T9	T3	NoRel	true	grounding	performed
+Relation	T9	T5	NoRel	true	grounding	suicide

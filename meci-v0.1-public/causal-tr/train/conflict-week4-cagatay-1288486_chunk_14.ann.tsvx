@@ -1,0 +1,64 @@
+Text	Başta tersane işçileri olmak üzere binlerce Kiel’li işçi gösteri düzenledi .	Subaylar göstericilere ateş edince askerlerde ayaklanarak asker konseyleri kurdular .	20.000 denizcinin kurduğu asker konseylerini , çoğunluğunu tersane işçilerinin oluşturduğu işçi konseyleri takip etti .	4 Kasım’da tüm Kiel şehrinin denetimi işçi ve asker konseylerinin elindeydi .	Ayaklanma 5 ve 6 Kasım’da Lübeck , Brunsbüttel’e daha sonra da Altona , Bremen , Bremenhaven , Cuxhaven , Flensburg , Hamburg , Neümünster , Oldenburg , Kendsburg ve Rostock şehirlerine yayılarak buralarda da işçi ve asker konseyleri kuruldu .
+Event	T0	düzenledi	EVENT	65
+Event	T1	ateş	EVENT	100
+Event	T2	kurdular	EVENT	152
+Event	T3	etti	EVENT	276
+Event	T4	denetimi	EVENT	312
+Event	T5	Ayaklanma	EVENT	361
+Event	T6	kuruldu	EVENT	595
+Event	T7	ayaklanarak	EVENT	123
+Event	T8	kurduğu	EVENT	181
+Event	T9	oluşturduğu	EVENT	242
+Event	T10	yayılarak	EVENT	547
+Relation	T1	T7	CauseEffect	true	ateş	ayaklanarak
+Relation	T7	T1	EffectCause	true	ayaklanarak	ateş
+Relation	T1	T2	CauseEffect	true	ateş	kurdular
+Relation	T2	T1	EffectCause	true	kurdular	ateş
+Relation	T7	T9	CauseEffect	true	ayaklanarak	oluşturduğu
+Relation	T9	T7	EffectCause	true	oluşturduğu	ayaklanarak
+Relation	T0	T1	CauseEffect	true	düzenledi	ateş
+Relation	T1	T0	EffectCause	true	ateş	düzenledi
+Relation	T1	T5	CauseEffect	true	ateş	Ayaklanma
+Relation	T5	T1	EffectCause	true	Ayaklanma	ateş
+Relation	T10	T6	CauseEffect	true	yayılarak	kuruldu
+Relation	T6	T10	EffectCause	true	kuruldu	yayılarak
+Relation	T0	T2	NoRel	true	düzenledi	kurdular
+Relation	T0	T5	NoRel	true	düzenledi	Ayaklanma
+Relation	T0	T8	NoRel	true	düzenledi	kurduğu
+Relation	T0	T9	NoRel	true	düzenledi	oluşturduğu
+Relation	T1	T10	NoRel	true	ateş	yayılarak
+Relation	T1	T3	NoRel	true	ateş	etti
+Relation	T1	T4	NoRel	true	ateş	denetimi
+Relation	T1	T9	NoRel	true	ateş	oluşturduğu
+Relation	T10	T0	NoRel	true	yayılarak	düzenledi
+Relation	T10	T1	NoRel	true	yayılarak	ateş
+Relation	T10	T4	NoRel	true	yayılarak	denetimi
+Relation	T10	T5	NoRel	true	yayılarak	Ayaklanma
+Relation	T10	T7	NoRel	true	yayılarak	ayaklanarak
+Relation	T10	T9	NoRel	true	yayılarak	oluşturduğu
+Relation	T2	T10	NoRel	true	kurdular	yayılarak
+Relation	T2	T5	NoRel	true	kurdular	Ayaklanma
+Relation	T2	T7	NoRel	true	kurdular	ayaklanarak
+Relation	T2	T8	NoRel	true	kurdular	kurduğu
+Relation	T3	T0	NoRel	true	etti	düzenledi
+Relation	T3	T10	NoRel	true	etti	yayılarak
+Relation	T3	T2	NoRel	true	etti	kurdular
+Relation	T3	T9	NoRel	true	etti	oluşturduğu
+Relation	T4	T0	NoRel	true	denetimi	düzenledi
+Relation	T4	T8	NoRel	true	denetimi	kurduğu
+Relation	T5	T2	NoRel	true	Ayaklanma	kurdular
+Relation	T5	T3	NoRel	true	Ayaklanma	etti
+Relation	T5	T6	NoRel	true	Ayaklanma	kuruldu
+Relation	T5	T8	NoRel	true	Ayaklanma	kurduğu
+Relation	T5	T9	NoRel	true	Ayaklanma	oluşturduğu
+Relation	T6	T8	NoRel	true	kuruldu	kurduğu
+Relation	T6	T9	NoRel	true	kuruldu	oluşturduğu
+Relation	T7	T10	NoRel	true	ayaklanarak	yayılarak
+Relation	T7	T3	NoRel	true	ayaklanarak	etti
+Relation	T8	T0	NoRel	true	kurduğu	düzenledi
+Relation	T8	T1	NoRel	true	kurduğu	ateş
+Relation	T9	T0	NoRel	true	oluşturduğu	düzenledi
+Relation	T9	T1	NoRel	true	oluşturduğu	ateş
+Relation	T9	T2	NoRel	true	oluşturduğu	kurdular
+Relation	T9	T4	NoRel	true	oluşturduğu	denetimi
+Relation	T9	T5	NoRel	true	oluşturduğu	Ayaklanma

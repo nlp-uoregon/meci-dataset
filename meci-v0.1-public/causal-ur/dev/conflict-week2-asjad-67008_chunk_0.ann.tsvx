@@ -1,0 +1,53 @@
+Text	1990ء میں صدام حسین کے زمانی صدارت میں عراق نے کویت پر حملہ کر قبضہ کر لیا جو سات ماہ جاری رہا ۔	کویتی حکمران رات کو سعودی عرب فرار ہو گئے ۔	عراق کا الزام تھا کہ کویت اس کا تیل چوری کر رہا ہے ۔	حملے سے پہلے امریکی سفیر نے صدام حسین کو یقین دلایا کہ عرب تنازاعات میں امریکہ نہیں پڑے گا ۔	سقوط کے بعد جارج بش کی صدارت میں امریکہ نے سعودی عرب میں اپنی فوجیں جمع کیں اور حملہ کر کے کویت کو عراق سے آزاد کرا لیا ۔
+Event	T0	حملہ	EVENT	55
+Event	T1	قبضہ	EVENT	63
+Event	T10	جمع	EVENT	355
+Event	T11	آزاد	EVENT	394
+Event	T2	فرار	EVENT	127
+Event	T4	الزام	EVENT	149
+Event	T5	چوری	EVENT	177
+Event	T6	حملے	EVENT	194
+Event	T7	سقوط	EVENT	287
+Event	T8	حملہ	EVENT	367
+Event	T9	یقین	EVENT	235
+Relation	T1	T2	CauseEffect	true	قبضہ	فرار
+Relation	T2	T1	EffectCause	true	فرار	قبضہ
+Relation	T8	T11	CauseEffect	true	حملہ	آزاد
+Relation	T11	T8	EffectCause	true	آزاد	حملہ
+Relation	T1	T7	CauseEffect	true	قبضہ	سقوط
+Relation	T7	T1	EffectCause	true	سقوط	قبضہ
+Relation	T5	T1	CauseEffect	true	چوری	قبضہ
+Relation	T1	T5	EffectCause	true	قبضہ	چوری
+Relation	T0	T11	NoRel	true	حملہ	آزاد
+Relation	T0	T2	NoRel	true	حملہ	فرار
+Relation	T0	T9	NoRel	true	حملہ	یقین
+Relation	T1	T10	NoRel	true	قبضہ	جمع
+Relation	T1	T4	NoRel	true	قبضہ	الزام
+Relation	T1	T8	NoRel	true	قبضہ	حملہ
+Relation	T10	T11	NoRel	true	جمع	آزاد
+Relation	T10	T9	NoRel	true	جمع	یقین
+Relation	T11	T0	NoRel	true	آزاد	حملہ
+Relation	T11	T10	NoRel	true	آزاد	جمع
+Relation	T11	T2	NoRel	true	آزاد	فرار
+Relation	T11	T4	NoRel	true	آزاد	الزام
+Relation	T11	T7	NoRel	true	آزاد	سقوط
+Relation	T4	T1	NoRel	true	الزام	قبضہ
+Relation	T4	T10	NoRel	true	الزام	جمع
+Relation	T4	T11	NoRel	true	الزام	آزاد
+Relation	T4	T9	NoRel	true	الزام	یقین
+Relation	T5	T11	NoRel	true	چوری	آزاد
+Relation	T5	T2	NoRel	true	چوری	فرار
+Relation	T5	T9	NoRel	true	چوری	یقین
+Relation	T6	T11	NoRel	true	حملے	آزاد
+Relation	T6	T4	NoRel	true	حملے	الزام
+Relation	T6	T7	NoRel	true	حملے	سقوط
+Relation	T7	T0	NoRel	true	سقوط	حملہ
+Relation	T7	T11	NoRel	true	سقوط	آزاد
+Relation	T8	T0	NoRel	true	حملہ	حملہ
+Relation	T8	T10	NoRel	true	حملہ	جمع
+Relation	T8	T5	NoRel	true	حملہ	چوری
+Relation	T8	T7	NoRel	true	حملہ	سقوط
+Relation	T8	T9	NoRel	true	حملہ	یقین
+Relation	T9	T5	NoRel	true	یقین	چوری
+Relation	T9	T6	NoRel	true	یقین	حملے
+Relation	T9	T7	NoRel	true	یقین	سقوط

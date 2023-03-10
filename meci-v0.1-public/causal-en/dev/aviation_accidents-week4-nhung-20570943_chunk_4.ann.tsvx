@@ -1,0 +1,66 @@
+Text	In this area of rural Arkansas there was no controlled airspace below 18,000 feet ( 5,486 m ) .	Further , according to Federal Aviation Regulations the airline dispatcher should have been notified the flight was proceeding under VFR .	The captain also could have contacted controllers in Fort Worth to open their flight plan or receive radar vectoring in the area .	From the conversation of the crew on the recorder the board concluded the flight encountered inclement weather conditions during the flight and was likely in inclement weather conditions when it crashed .	The board concluded that the cause of the accident was the captain {{'}} s decision to continue flying into inclement weather at night , his not taking advantage of the nearby navigational aids to get a fix on their position , and his decision to descend despite the first officer { {'}} s concerns about position and terrain .
+Event	T0	notified	EVENT	188
+Event	T1	flight	EVENT	201
+Event	T2	contacted	EVENT	263
+Event	T3	open	EVENT	302
+Event	T4	receive	EVENT	328
+Event	T5	vectoring	EVENT	342
+Event	T6	conversation	EVENT	375
+Event	T7	concluded	EVENT	426
+Event	T8	flight	EVENT	499
+Event	T9	crashed	EVENT	561
+Event	T10	concluded	EVENT	581
+Event	T11	accident	EVENT	613
+Event	T12	decision	EVENT	646
+Event	T13	fix	EVENT	774
+Event	T14	decision	EVENT	806
+Event	T15	descend	EVENT	818
+Event	T16	concerns	EVENT	861
+Event	T17	proceeding	EVENT	212
+Event	T18	encountered	EVENT	447
+Relation	T2	T3	CauseEffect	true	contacted	open
+Relation	T3	T2	EffectCause	true	open	contacted
+Relation	T2	T4	CauseEffect	true	contacted	receive
+Relation	T4	T2	EffectCause	true	receive	contacted
+Relation	T18	T9	CauseEffect	true	encountered	crashed
+Relation	T9	T18	EffectCause	true	crashed	encountered
+Relation	T12	T11	CauseEffect	true	decision	accident
+Relation	T11	T12	EffectCause	true	accident	decision
+Relation	T14	T11	CauseEffect	true	decision	accident
+Relation	T11	T14	EffectCause	true	accident	decision
+Relation	T13	T11	CauseEffect	true	fix	accident
+Relation	T11	T13	EffectCause	true	accident	fix
+Relation	T1	T3	NoRel	true	flight	open
+Relation	T1	T5	NoRel	true	flight	vectoring
+Relation	T1	T7	NoRel	true	flight	concluded
+Relation	T11	T16	NoRel	true	accident	concerns
+Relation	T11	T2	NoRel	true	accident	contacted
+Relation	T11	T6	NoRel	true	accident	conversation
+Relation	T13	T1	NoRel	true	fix	flight
+Relation	T13	T14	NoRel	true	fix	decision
+Relation	T14	T2	NoRel	true	decision	contacted
+Relation	T14	T6	NoRel	true	decision	conversation
+Relation	T15	T10	NoRel	true	descend	concluded
+Relation	T15	T16	NoRel	true	descend	concerns
+Relation	T16	T15	NoRel	true	concerns	descend
+Relation	T16	T8	NoRel	true	concerns	flight
+Relation	T16	T9	NoRel	true	concerns	crashed
+Relation	T17	T2	NoRel	true	proceeding	contacted
+Relation	T17	T7	NoRel	true	proceeding	concluded
+Relation	T18	T10	NoRel	true	encountered	concluded
+Relation	T18	T14	NoRel	true	encountered	decision
+Relation	T18	T3	NoRel	true	encountered	open
+Relation	T18	T8	NoRel	true	encountered	flight
+Relation	T2	T5	NoRel	true	contacted	vectoring
+Relation	T3	T10	NoRel	true	open	concluded
+Relation	T4	T13	NoRel	true	receive	fix
+Relation	T4	T17	NoRel	true	receive	proceeding
+Relation	T4	T3	NoRel	true	receive	open
+Relation	T5	T11	NoRel	true	vectoring	accident
+Relation	T6	T11	NoRel	true	conversation	accident
+Relation	T6	T3	NoRel	true	conversation	open
+Relation	T7	T17	NoRel	true	concluded	proceeding
+Relation	T7	T2	NoRel	true	concluded	contacted
+Relation	T8	T15	NoRel	true	flight	descend
+Relation	T8	T4	NoRel	true	flight	receive
+Relation	T9	T16	NoRel	true	crashed	concerns

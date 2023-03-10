@@ -1,0 +1,35 @@
+Text	Como en el caso del siniestro ocurrido ocho días antes en la provincia leonesa , la censura oculta por completo el suceso .	Sólo al periódico abulense Diario de Ávila se le permitió publicar una corta crónica acerca del mismo .	- 15 de noviembre de 1945 .	Entre Gérgal y Fuente Santa , en la línea de Linares a Almería se produce un choque entre el correo que unía la capital almeriense con Madrid y un tren de mercancías cargado de uvas , pescado y minerales .	Varios coches del correo se incendian tras el choque debido al contacto de los mismos con los cables del tendido eléctrico de la línea .
+Event	T0	ocurrido	EVENT	30
+Event	T1	oculta	EVENT	92
+Event	T2	suceso	EVENT	115
+Event	T3	publicar	EVENT	182
+Event	T4	produce	EVENT	322
+Event	T5	choque	EVENT	333
+Event	T6	cargado	EVENT	422
+Event	T7	incendian	EVENT	490
+Event	T8	contacto	EVENT	525
+Event	T9	choque	EVENT	508
+Relation	T9	T7	CauseEffect	true	choque	incendian
+Relation	T7	T9	EffectCause	true	incendian	choque
+Relation	T0	T1	NoRel	true	ocurrido	oculta
+Relation	T0	T2	NoRel	true	ocurrido	suceso
+Relation	T0	T3	NoRel	true	ocurrido	publicar
+Relation	T0	T5	NoRel	true	ocurrido	choque
+Relation	T0	T6	NoRel	true	ocurrido	cargado
+Relation	T1	T2	NoRel	true	oculta	suceso
+Relation	T1	T3	NoRel	true	oculta	publicar
+Relation	T1	T4	NoRel	true	oculta	produce
+Relation	T1	T5	NoRel	true	oculta	choque
+Relation	T1	T6	NoRel	true	oculta	cargado
+Relation	T1	T7	NoRel	true	oculta	incendian
+Relation	T2	T5	NoRel	true	suceso	choque
+Relation	T2	T9	NoRel	true	suceso	choque
+Relation	T3	T0	NoRel	true	publicar	ocurrido
+Relation	T3	T7	NoRel	true	publicar	incendian
+Relation	T4	T7	NoRel	true	produce	incendian
+Relation	T5	T0	NoRel	true	choque	ocurrido
+Relation	T7	T5	NoRel	true	incendian	choque
+Relation	T8	T0	NoRel	true	contacto	ocurrido
+Relation	T8	T3	NoRel	true	contacto	publicar
+Relation	T9	T0	NoRel	true	choque	ocurrido
+Relation	T9	T4	NoRel	true	choque	produce

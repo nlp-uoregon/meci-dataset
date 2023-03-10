@@ -1,0 +1,42 @@
+Text	Afløbssporet endte fortsat i en sporstopper , placeret mellem de to fjerntogsspor , men omkring år 2000 blev det fjernet , og de to spor løber nu sammen efter broerne over Hvidovrevej .	Sikkerheden i tilfælde af signalforbikørsler baserer sig nu på at ATC kan nødbremse toget før det når sporsammenløbet .			
+Event	T0	fjernet	EVENT	113
+Event	T1	løber	EVENT	137
+Event	T2	baserer	EVENT	231
+Event	T3	nødbremse	EVENT	260
+Event	T4	sporsammenløbet	EVENT	288
+Event	T5	endte	EVENT	13
+Event	T6	placeret	EVENT	46
+Event	T7	Sikkerheden	EVENT	186
+Event	T8	signalforbikørsler	EVENT	212
+Relation	T0	T1	CauseEffect	true	fjernet	løber
+Relation	T1	T0	EffectCause	true	løber	fjernet
+Relation	T0	T3	NoRel	true	fjernet	nødbremse
+Relation	T0	T4	NoRel	true	fjernet	sporsammenløbet
+Relation	T0	T8	NoRel	true	fjernet	signalforbikørsler
+Relation	T1	T2	NoRel	true	løber	baserer
+Relation	T1	T3	NoRel	true	løber	nødbremse
+Relation	T1	T4	NoRel	true	løber	sporsammenløbet
+Relation	T1	T5	NoRel	true	løber	endte
+Relation	T2	T0	NoRel	true	baserer	fjernet
+Relation	T2	T3	NoRel	true	baserer	nødbremse
+Relation	T3	T1	NoRel	true	nødbremse	løber
+Relation	T3	T2	NoRel	true	nødbremse	baserer
+Relation	T3	T4	NoRel	true	nødbremse	sporsammenløbet
+Relation	T3	T6	NoRel	true	nødbremse	placeret
+Relation	T3	T8	NoRel	true	nødbremse	signalforbikørsler
+Relation	T4	T0	NoRel	true	sporsammenløbet	fjernet
+Relation	T4	T2	NoRel	true	sporsammenløbet	baserer
+Relation	T5	T3	NoRel	true	endte	nødbremse
+Relation	T5	T6	NoRel	true	endte	placeret
+Relation	T5	T8	NoRel	true	endte	signalforbikørsler
+Relation	T6	T0	NoRel	true	placeret	fjernet
+Relation	T6	T7	NoRel	true	placeret	Sikkerheden
+Relation	T7	T0	NoRel	true	Sikkerheden	fjernet
+Relation	T7	T1	NoRel	true	Sikkerheden	løber
+Relation	T7	T2	NoRel	true	Sikkerheden	baserer
+Relation	T7	T3	NoRel	true	Sikkerheden	nødbremse
+Relation	T7	T4	NoRel	true	Sikkerheden	sporsammenløbet
+Relation	T7	T5	NoRel	true	Sikkerheden	endte
+Relation	T8	T2	NoRel	true	signalforbikørsler	baserer
+Relation	T8	T3	NoRel	true	signalforbikørsler	nødbremse
+Relation	T8	T5	NoRel	true	signalforbikørsler	endte

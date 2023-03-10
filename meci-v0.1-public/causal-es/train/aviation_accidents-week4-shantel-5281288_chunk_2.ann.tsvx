@@ -1,0 +1,101 @@
+Text	El piloto rechazó el despegue con aproximadamente 600 pies restantes de pista .	El piloto seleccionó la potencia del motor en ralentí , el empuje de la hélice en reversa y los flaps a 0 ° para maximizar la tracción de frenado .	La aeronave continuó pasando el final de la pista 33 .	La aeronave viajaba a una velocidad relativamente baja , pero el piloto no pudo detenerse antes de que la aeronave descendiera por la pendiente empinada y descendiera por un terraplén antes de detenerse en un barranco .	Como resultado del impacto , la aeronave resultó dañada y su sistema de combustible se vio afectado , por lo que se produjo un incendio posterior al accidente .
+Event	T0	rechazó	EVENT	10
+Event	T1	despegue	EVENT	21
+Event	T2	seleccionó	EVENT	90
+Event	T3	ralentí	EVENT	126
+Event	T4	empuje	EVENT	139
+Event	T5	tracción	EVENT	206
+Event	T6	frenado	EVENT	218
+Event	T7	pasando	EVENT	249
+Event	T8	viajaba	EVENT	295
+Event	T10	descendiera	EVENT	398
+Event	T11	descendiera	EVENT	438
+Event	T12	detenerse	EVENT	476
+Event	T13	impacto	EVENT	522
+Event	T14	dañada	EVENT	552
+Event	T15	afectado	EVENT	594
+Event	T17	accidente	EVENT	652
+Event	T16	incendio	EVENT	630
+Relation	T15	T16	CauseEffect	true	afectado	incendio
+Relation	T16	T15	EffectCause	true	incendio	afectado
+Relation	T13	T14	CauseEffect	true	impacto	dañada
+Relation	T14	T13	EffectCause	true	dañada	impacto
+Relation	T10	T13	CauseEffect	true	descendiera	impacto
+Relation	T13	T10	EffectCause	true	impacto	descendiera
+Relation	T0	T16	NoRel	true	rechazó	incendio
+Relation	T0	T4	NoRel	true	rechazó	empuje
+Relation	T0	T6	NoRel	true	rechazó	frenado
+Relation	T1	T14	NoRel	true	despegue	dañada
+Relation	T1	T3	NoRel	true	despegue	ralentí
+Relation	T1	T4	NoRel	true	despegue	empuje
+Relation	T1	T6	NoRel	true	despegue	frenado
+Relation	T10	T12	NoRel	true	descendiera	detenerse
+Relation	T10	T5	NoRel	true	descendiera	tracción
+Relation	T10	T7	NoRel	true	descendiera	pasando
+Relation	T11	T1	NoRel	true	descendiera	despegue
+Relation	T11	T10	NoRel	true	descendiera	descendiera
+Relation	T11	T16	NoRel	true	descendiera	incendio
+Relation	T11	T4	NoRel	true	descendiera	empuje
+Relation	T11	T6	NoRel	true	descendiera	frenado
+Relation	T11	T7	NoRel	true	descendiera	pasando
+Relation	T12	T10	NoRel	true	detenerse	descendiera
+Relation	T12	T13	NoRel	true	detenerse	impacto
+Relation	T12	T8	NoRel	true	detenerse	viajaba
+Relation	T13	T12	NoRel	true	impacto	detenerse
+Relation	T13	T15	NoRel	true	impacto	afectado
+Relation	T13	T2	NoRel	true	impacto	seleccionó
+Relation	T13	T3	NoRel	true	impacto	ralentí
+Relation	T13	T4	NoRel	true	impacto	empuje
+Relation	T13	T6	NoRel	true	impacto	frenado
+Relation	T14	T0	NoRel	true	dañada	rechazó
+Relation	T14	T10	NoRel	true	dañada	descendiera
+Relation	T14	T15	NoRel	true	dañada	afectado
+Relation	T14	T5	NoRel	true	dañada	tracción
+Relation	T14	T6	NoRel	true	dañada	frenado
+Relation	T14	T7	NoRel	true	dañada	pasando
+Relation	T15	T1	NoRel	true	afectado	despegue
+Relation	T15	T12	NoRel	true	afectado	detenerse
+Relation	T15	T17	NoRel	true	afectado	accidente
+Relation	T15	T4	NoRel	true	afectado	empuje
+Relation	T15	T6	NoRel	true	afectado	frenado
+Relation	T16	T0	NoRel	true	incendio	rechazó
+Relation	T16	T13	NoRel	true	incendio	impacto
+Relation	T16	T4	NoRel	true	incendio	empuje
+Relation	T17	T10	NoRel	true	accidente	descendiera
+Relation	T17	T11	NoRel	true	accidente	descendiera
+Relation	T17	T16	NoRel	true	accidente	incendio
+Relation	T17	T4	NoRel	true	accidente	empuje
+Relation	T2	T0	NoRel	true	seleccionó	rechazó
+Relation	T2	T11	NoRel	true	seleccionó	descendiera
+Relation	T2	T15	NoRel	true	seleccionó	afectado
+Relation	T2	T7	NoRel	true	seleccionó	pasando
+Relation	T3	T12	NoRel	true	ralentí	detenerse
+Relation	T3	T2	NoRel	true	ralentí	seleccionó
+Relation	T3	T4	NoRel	true	ralentí	empuje
+Relation	T3	T5	NoRel	true	ralentí	tracción
+Relation	T3	T6	NoRel	true	ralentí	frenado
+Relation	T3	T7	NoRel	true	ralentí	pasando
+Relation	T4	T13	NoRel	true	empuje	impacto
+Relation	T4	T14	NoRel	true	empuje	dañada
+Relation	T5	T1	NoRel	true	tracción	despegue
+Relation	T5	T12	NoRel	true	tracción	detenerse
+Relation	T5	T13	NoRel	true	tracción	impacto
+Relation	T5	T14	NoRel	true	tracción	dañada
+Relation	T5	T15	NoRel	true	tracción	afectado
+Relation	T5	T2	NoRel	true	tracción	seleccionó
+Relation	T5	T3	NoRel	true	tracción	ralentí
+Relation	T5	T4	NoRel	true	tracción	empuje
+Relation	T5	T8	NoRel	true	tracción	viajaba
+Relation	T6	T0	NoRel	true	frenado	rechazó
+Relation	T6	T10	NoRel	true	frenado	descendiera
+Relation	T7	T0	NoRel	true	pasando	rechazó
+Relation	T7	T10	NoRel	true	pasando	descendiera
+Relation	T7	T13	NoRel	true	pasando	impacto
+Relation	T7	T3	NoRel	true	pasando	ralentí
+Relation	T7	T4	NoRel	true	pasando	empuje
+Relation	T7	T5	NoRel	true	pasando	tracción
+Relation	T8	T15	NoRel	true	viajaba	afectado
+Relation	T8	T16	NoRel	true	viajaba	incendio
+Relation	T8	T17	NoRel	true	viajaba	accidente
+Relation	T8	T2	NoRel	true	viajaba	seleccionó
+Relation	T8	T7	NoRel	true	viajaba	pasando

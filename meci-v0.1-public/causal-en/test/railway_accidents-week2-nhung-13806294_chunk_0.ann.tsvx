@@ -1,0 +1,82 @@
+Text	A RUNAWAY TRAIN is a type of railroad incident in which unattended rolling stock is accidentally allowed to roll onto the main line , a moving train loses enough braking power to be unable to stop in safety , or a train operates at unsafe speeds due to loss of operator control .	If the uncontrolled rolling stock derails or hits another train , it will result in a train wreck .	A railway air brake can fail if valves on the pipe between each wagon are accidentally closed ; the 1953 Pennsylvania Railroad train wreck and the 1988 Gare de Lyon train accident were results of a valve accidentally closed by the crew , reducing braking power .	A parked train or cut of cars may also run away if not properly tied down with a sufficient number of hand brakes .	Date Location Cause Details References
+Event	T0	incident	EVENT	38
+Event	T1	allowed	EVENT	97
+Event	T10	wreck	EVENT	372
+Event	T12	fail	EVENT	404
+Event	T13	closed	EVENT	467
+Event	T14	wreck	EVENT	513
+Event	T15	accident	EVENT	551
+Event	T16	results	EVENT	565
+Event	T17	closed	EVENT	597
+Event	T18	parked	EVENT	645
+Event	T19	cut	EVENT	661
+Event	T2	moving	EVENT	136
+Event	T3	loses	EVENT	149
+Event	T4	stop	EVENT	192
+Event	T5	operates	EVENT	220
+Event	T6	loss	EVENT	253
+Event	T7	derails	EVENT	314
+Event	T8	hits	EVENT	325
+Event	T9	result	EVENT	354
+Relation	T0	T1	CauseEffect	true	incident	allowed
+Relation	T1	T0	EffectCause	true	allowed	incident
+Relation	T2	T1	CauseEffect	true	moving	allowed
+Relation	T1	T2	EffectCause	true	allowed	moving
+Relation	T1	T3	CauseEffect	true	allowed	loses
+Relation	T3	T1	EffectCause	true	loses	allowed
+Relation	T3	T4	CauseEffect	true	loses	stop
+Relation	T4	T3	EffectCause	true	stop	loses
+Relation	T5	T6	CauseEffect	true	operates	loss
+Relation	T6	T5	EffectCause	true	loss	operates
+Relation	T7	T10	CauseEffect	true	derails	wreck
+Relation	T10	T7	EffectCause	true	wreck	derails
+Relation	T8	T10	CauseEffect	true	hits	wreck
+Relation	T10	T8	EffectCause	true	wreck	hits
+Relation	T13	T12	CauseEffect	true	closed	fail
+Relation	T12	T13	EffectCause	true	fail	closed
+Relation	T17	T14	CauseEffect	true	closed	wreck
+Relation	T14	T17	EffectCause	true	wreck	closed
+Relation	T17	T15	CauseEffect	true	closed	accident
+Relation	T15	T17	EffectCause	true	accident	closed
+Relation	T1	T14	NoRel	true	allowed	wreck
+Relation	T1	T7	NoRel	true	allowed	derails
+Relation	T10	T14	NoRel	true	wreck	wreck
+Relation	T10	T2	NoRel	true	wreck	moving
+Relation	T12	T16	NoRel	true	fail	results
+Relation	T13	T15	NoRel	true	closed	accident
+Relation	T13	T16	NoRel	true	closed	results
+Relation	T14	T19	NoRel	true	wreck	cut
+Relation	T15	T0	NoRel	true	accident	incident
+Relation	T15	T5	NoRel	true	accident	operates
+Relation	T15	T9	NoRel	true	accident	result
+Relation	T16	T13	NoRel	true	results	closed
+Relation	T16	T4	NoRel	true	results	stop
+Relation	T17	T1	NoRel	true	closed	allowed
+Relation	T17	T12	NoRel	true	closed	fail
+Relation	T17	T18	NoRel	true	closed	parked
+Relation	T17	T9	NoRel	true	closed	result
+Relation	T18	T0	NoRel	true	parked	incident
+Relation	T18	T4	NoRel	true	parked	stop
+Relation	T18	T9	NoRel	true	parked	result
+Relation	T19	T0	NoRel	true	cut	incident
+Relation	T19	T4	NoRel	true	cut	stop
+Relation	T2	T13	NoRel	true	moving	closed
+Relation	T2	T4	NoRel	true	moving	stop
+Relation	T2	T5	NoRel	true	moving	operates
+Relation	T2	T7	NoRel	true	moving	derails
+Relation	T3	T8	NoRel	true	loses	hits
+Relation	T4	T10	NoRel	true	stop	wreck
+Relation	T4	T12	NoRel	true	stop	fail
+Relation	T4	T15	NoRel	true	stop	accident
+Relation	T4	T5	NoRel	true	stop	operates
+Relation	T5	T10	NoRel	true	operates	wreck
+Relation	T5	T14	NoRel	true	operates	wreck
+Relation	T5	T17	NoRel	true	operates	closed
+Relation	T6	T1	NoRel	true	loss	allowed
+Relation	T6	T9	NoRel	true	loss	result
+Relation	T7	T18	NoRel	true	derails	parked
+Relation	T8	T3	NoRel	true	hits	loses
+Relation	T8	T9	NoRel	true	hits	result
+Relation	T9	T13	NoRel	true	result	closed
+Relation	T9	T14	NoRel	true	result	wreck
+Relation	T9	T6	NoRel	true	result	loss

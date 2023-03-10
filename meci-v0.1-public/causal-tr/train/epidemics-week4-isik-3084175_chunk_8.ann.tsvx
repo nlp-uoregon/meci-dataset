@@ -1,0 +1,34 @@
+Text	Bu yasa , hane reislerini çiçek hastalığı için zorunlu raportör yaptı .	Yani bu kişilerin evlerinde çiçek hastalığını Massachusetts Körfezi Kolonisi'nin seçkinlerine bildirmeleri gerekiyordu .	Enfekte olan haneler daha sonra kırmızı bir bayrak yerleştirilerek tanımlanacaktı .	Güney Carolina'da bu uyarılar enfekte hanelerin dışına asılacaktı ve bildirimler zounluydu .	Birçok kolonide , gemiyle gelen kişileri karantinaya almak için adalar kuruldu .
+Event	T0	hastalığı	EVENT	32
+Event	T1	yaptı	EVENT	64
+Event	T2	tanımlanacaktı	EVENT	260
+Event	T3	asılacaktı	EVENT	332
+Event	T4	kuruldu	EVENT	441
+Event	T5	yasa	EVENT	3
+Event	T6	gerekiyordu	EVENT	179
+Event	T7	gelen	EVENT	396
+Relation	T5	T1	CauseEffect	true	yasa	yaptı
+Relation	T1	T5	EffectCause	true	yaptı	yasa
+Relation	T5	T6	CauseEffect	true	yasa	gerekiyordu
+Relation	T6	T5	EffectCause	true	gerekiyordu	yasa
+Relation	T6	T2	CauseEffect	true	gerekiyordu	tanımlanacaktı
+Relation	T2	T6	EffectCause	true	tanımlanacaktı	gerekiyordu
+Relation	T2	T3	CauseEffect	true	tanımlanacaktı	asılacaktı
+Relation	T3	T2	EffectCause	true	asılacaktı	tanımlanacaktı
+Relation	T0	T2	NoRel	true	hastalığı	tanımlanacaktı
+Relation	T0	T5	NoRel	true	hastalığı	yasa
+Relation	T1	T2	NoRel	true	yaptı	tanımlanacaktı
+Relation	T1	T4	NoRel	true	yaptı	kuruldu
+Relation	T2	T7	NoRel	true	tanımlanacaktı	gelen
+Relation	T3	T4	NoRel	true	asılacaktı	kuruldu
+Relation	T3	T5	NoRel	true	asılacaktı	yasa
+Relation	T4	T1	NoRel	true	kuruldu	yaptı
+Relation	T4	T2	NoRel	true	kuruldu	tanımlanacaktı
+Relation	T4	T3	NoRel	true	kuruldu	asılacaktı
+Relation	T5	T2	NoRel	true	yasa	tanımlanacaktı
+Relation	T5	T4	NoRel	true	yasa	kuruldu
+Relation	T5	T7	NoRel	true	yasa	gelen
+Relation	T6	T0	NoRel	true	gerekiyordu	hastalığı
+Relation	T7	T0	NoRel	true	gelen	hastalığı
+Relation	T7	T4	NoRel	true	gelen	kuruldu
+Relation	T7	T6	NoRel	true	gelen	gerekiyordu

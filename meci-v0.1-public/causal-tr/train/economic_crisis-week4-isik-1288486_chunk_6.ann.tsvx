@@ -1,0 +1,45 @@
+Text	1915'te küçük çaplı da olsa yer yer eylemler yapılıyordu .	Bu kendiliğinden meydana gelen gösteriler gittikçe büyüyerek , polisle çatışmaya kadar varabiliyordu .	1 Mayıs 1916’da Rosa Luxemburg ve Karl Liebknecht’in başını çektiği Enternasyonalist Grup bir gösteri düzenledi .	Bu gösteri boyunca “ Kahrolsun savaş ” , “ Kahrolsun hükûmet ” sloganları atıldı .	Bu gösterinin ardından Liebknecht tutuklanarak 2 , 5 yıl ağır hapis cezası aldı .
+Event	T0	gösteriler	EVENT	90
+Event	T1	büyüyerek	EVENT	110
+Event	T3	çektiği	EVENT	222
+Event	T4	düzenledi	EVENT	264
+Event	T5	tutuklanarak	EVENT	393
+Event	T6	aldı	EVENT	434
+Event	T7	yapılıyordu	EVENT	45
+Event	T8	varabiliyordu	EVENT	146
+Event	T2	atıldı	EVENT	350
+Relation	T7	T1	CauseEffect	true	yapılıyordu	büyüyerek
+Relation	T1	T7	EffectCause	true	büyüyerek	yapılıyordu
+Relation	T0	T1	CauseEffect	true	gösteriler	büyüyerek
+Relation	T1	T0	EffectCause	true	büyüyerek	gösteriler
+Relation	T1	T8	CauseEffect	true	büyüyerek	varabiliyordu
+Relation	T8	T1	EffectCause	true	varabiliyordu	büyüyerek
+Relation	T3	T4	CauseEffect	true	çektiği	düzenledi
+Relation	T4	T3	EffectCause	true	düzenledi	çektiği
+Relation	T4	T2	CauseEffect	true	düzenledi	atıldı
+Relation	T2	T4	EffectCause	true	atıldı	düzenledi
+Relation	T3	T5	CauseEffect	true	çektiği	tutuklanarak
+Relation	T5	T3	EffectCause	true	tutuklanarak	çektiği
+Relation	T5	T6	CauseEffect	true	tutuklanarak	aldı
+Relation	T6	T5	EffectCause	true	aldı	tutuklanarak
+Relation	T0	T2	NoRel	true	gösteriler	atıldı
+Relation	T0	T3	NoRel	true	gösteriler	çektiği
+Relation	T0	T5	NoRel	true	gösteriler	tutuklanarak
+Relation	T0	T7	NoRel	true	gösteriler	yapılıyordu
+Relation	T1	T3	NoRel	true	büyüyerek	çektiği
+Relation	T1	T5	NoRel	true	büyüyerek	tutuklanarak
+Relation	T1	T6	NoRel	true	büyüyerek	aldı
+Relation	T2	T1	NoRel	true	atıldı	büyüyerek
+Relation	T2	T8	NoRel	true	atıldı	varabiliyordu
+Relation	T3	T2	NoRel	true	çektiği	atıldı
+Relation	T3	T7	NoRel	true	çektiği	yapılıyordu
+Relation	T4	T6	NoRel	true	düzenledi	aldı
+Relation	T5	T1	NoRel	true	tutuklanarak	büyüyerek
+Relation	T5	T2	NoRel	true	tutuklanarak	atıldı
+Relation	T5	T8	NoRel	true	tutuklanarak	varabiliyordu
+Relation	T6	T4	NoRel	true	aldı	düzenledi
+Relation	T7	T0	NoRel	true	yapılıyordu	gösteriler
+Relation	T7	T4	NoRel	true	yapılıyordu	düzenledi
+Relation	T7	T6	NoRel	true	yapılıyordu	aldı
+Relation	T8	T2	NoRel	true	varabiliyordu	atıldı
+Relation	T8	T4	NoRel	true	varabiliyordu	düzenledi

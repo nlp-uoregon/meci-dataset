@@ -1,0 +1,93 @@
+Text	El VUELO 407 DE EMIRATES era un vuelo de Emirates desde Melbourne a Dubái con un Airbus A340-500 .	El 20 de marzo de 2009 , el vuelo no logró despegar correctamente en el aeropuerto de Melbourne , golpeando varias estructuras en el extremo de la pista antes de finalmente escalar lo suficiente para volver al aeropuerto para un aterrizaje seguro .	Aunque no se produjeron muertes ni heridos , el daño a la aeronave fue lo suficientemente grave como para que la Oficina de Seguridad del Transporte de Australia clasificara el evento como un " accidente " .	Los funcionarios de aviación lo han descrito como " lo más cerca que hemos estado nunca de una gran catástrofe de aviación en Australia " .	El vuelo programado partió de Melbourne según lo planeado a las 22:30 utilizando la pista 16 de 3657 m de largo ( 11.998 pies ) .
+Event	T0	vuelo	EVENT	32
+Event	T1	despegar	EVENT	142
+Event	T2	golpeando	EVENT	197
+Event	T3	escalar	EVENT	272
+Event	T4	volver	EVENT	299
+Event	T5	muertes	EVENT	372
+Event	T6	heridos	EVENT	383
+Event	T7	daño	EVENT	396
+Event	T8	clasificara	EVENT	510
+Event	T9	evento	EVENT	525
+Event	T10	accidente	EVENT	542
+Event	T11	descrito	EVENT	592
+Event	T12	catástrofe	EVENT	656
+Event	T13	partió	EVENT	716
+Event	T14	planeado	EVENT	745
+Relation	T1	T2	CauseEffect	true	despegar	golpeando
+Relation	T2	T1	EffectCause	true	golpeando	despegar
+Relation	T0	T1	NoRel	true	vuelo	despegar
+Relation	T0	T10	NoRel	true	vuelo	accidente
+Relation	T0	T11	NoRel	true	vuelo	descrito
+Relation	T0	T12	NoRel	true	vuelo	catástrofe
+Relation	T0	T2	NoRel	true	vuelo	golpeando
+Relation	T0	T3	NoRel	true	vuelo	escalar
+Relation	T0	T4	NoRel	true	vuelo	volver
+Relation	T0	T5	NoRel	true	vuelo	muertes
+Relation	T0	T6	NoRel	true	vuelo	heridos
+Relation	T0	T8	NoRel	true	vuelo	clasificara
+Relation	T1	T10	NoRel	true	despegar	accidente
+Relation	T1	T11	NoRel	true	despegar	descrito
+Relation	T1	T13	NoRel	true	despegar	partió
+Relation	T1	T14	NoRel	true	despegar	planeado
+Relation	T1	T4	NoRel	true	despegar	volver
+Relation	T1	T9	NoRel	true	despegar	evento
+Relation	T10	T14	NoRel	true	accidente	planeado
+Relation	T10	T2	NoRel	true	accidente	golpeando
+Relation	T10	T3	NoRel	true	accidente	escalar
+Relation	T10	T7	NoRel	true	accidente	daño
+Relation	T10	T8	NoRel	true	accidente	clasificara
+Relation	T10	T9	NoRel	true	accidente	evento
+Relation	T11	T0	NoRel	true	descrito	vuelo
+Relation	T11	T13	NoRel	true	descrito	partió
+Relation	T11	T5	NoRel	true	descrito	muertes
+Relation	T12	T14	NoRel	true	catástrofe	planeado
+Relation	T12	T4	NoRel	true	catástrofe	volver
+Relation	T12	T5	NoRel	true	catástrofe	muertes
+Relation	T12	T6	NoRel	true	catástrofe	heridos
+Relation	T12	T9	NoRel	true	catástrofe	evento
+Relation	T13	T10	NoRel	true	partió	accidente
+Relation	T13	T2	NoRel	true	partió	golpeando
+Relation	T13	T5	NoRel	true	partió	muertes
+Relation	T13	T8	NoRel	true	partió	clasificara
+Relation	T14	T10	NoRel	true	planeado	accidente
+Relation	T14	T11	NoRel	true	planeado	descrito
+Relation	T14	T12	NoRel	true	planeado	catástrofe
+Relation	T14	T2	NoRel	true	planeado	golpeando
+Relation	T14	T3	NoRel	true	planeado	escalar
+Relation	T14	T4	NoRel	true	planeado	volver
+Relation	T14	T5	NoRel	true	planeado	muertes
+Relation	T14	T6	NoRel	true	planeado	heridos
+Relation	T2	T0	NoRel	true	golpeando	vuelo
+Relation	T3	T1	NoRel	true	escalar	despegar
+Relation	T3	T10	NoRel	true	escalar	accidente
+Relation	T3	T12	NoRel	true	escalar	catástrofe
+Relation	T3	T4	NoRel	true	escalar	volver
+Relation	T3	T6	NoRel	true	escalar	heridos
+Relation	T4	T0	NoRel	true	volver	vuelo
+Relation	T4	T10	NoRel	true	volver	accidente
+Relation	T4	T12	NoRel	true	volver	catástrofe
+Relation	T4	T13	NoRel	true	volver	partió
+Relation	T4	T5	NoRel	true	volver	muertes
+Relation	T4	T6	NoRel	true	volver	heridos
+Relation	T4	T9	NoRel	true	volver	evento
+Relation	T5	T12	NoRel	true	muertes	catástrofe
+Relation	T6	T1	NoRel	true	heridos	despegar
+Relation	T6	T11	NoRel	true	heridos	descrito
+Relation	T6	T3	NoRel	true	heridos	escalar
+Relation	T7	T0	NoRel	true	daño	vuelo
+Relation	T7	T12	NoRel	true	daño	catástrofe
+Relation	T7	T5	NoRel	true	daño	muertes
+Relation	T7	T6	NoRel	true	daño	heridos
+Relation	T7	T9	NoRel	true	daño	evento
+Relation	T8	T11	NoRel	true	clasificara	descrito
+Relation	T8	T2	NoRel	true	clasificara	golpeando
+Relation	T8	T3	NoRel	true	clasificara	escalar
+Relation	T8	T6	NoRel	true	clasificara	heridos
+Relation	T9	T12	NoRel	true	evento	catástrofe
+Relation	T9	T13	NoRel	true	evento	partió
+Relation	T9	T2	NoRel	true	evento	golpeando
+Relation	T9	T3	NoRel	true	evento	escalar
+Relation	T9	T5	NoRel	true	evento	muertes
+Relation	T9	T6	NoRel	true	evento	heridos
+Relation	T9	T8	NoRel	true	evento	clasificara

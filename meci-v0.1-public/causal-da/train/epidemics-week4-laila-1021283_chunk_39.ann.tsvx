@@ -1,0 +1,67 @@
+Text	Den officielle fødselsdagsfejring var aflyst pga. nedlukningen .	På blot 2-3 uger faldt trafikken drastisk på vejene og i offentlig trafik .	På Køge Bugt Motorvejen var der 55 % færre biler , og de øvrige motorveje havde også mindre trafik end normalt .	Københavns Metro havde 90 % færre passagerer trods myldretidsdrift hele dagen , og der var 75 % færre i forlængede S-tog .	Samme dag annoncerede sundhedsminister Magnus Heunicke en mere offensiv teststrategi .
+Event	T0	fødselsdagsfejring	EVENT	15
+Event	T1	aflyst	EVENT	38
+Event	T2	nedlukningen	EVENT	50
+Event	T3	myldretidsdrift	EVENT	305
+Event	T4	annoncerede	EVENT	387
+Event	T5	teststrategi	EVENT	449
+Event	T6	faldt trafikken	EVENT	82
+Event	T7	færre	EVENT	178
+Event	T8	mindre	EVENT	226
+Event	T9	færre	EVENT	282
+Event	T10	færre	EVENT	350
+Relation	T2	T0	CauseEffect	true	nedlukningen	fødselsdagsfejring
+Relation	T0	T2	EffectCause	true	fødselsdagsfejring	nedlukningen
+Relation	T2	T6	CauseEffect	true	nedlukningen	faldt trafikken
+Relation	T6	T2	EffectCause	true	faldt trafikken	nedlukningen
+Relation	T2	T7	CauseEffect	true	nedlukningen	færre
+Relation	T7	T2	EffectCause	true	færre	nedlukningen
+Relation	T2	T8	CauseEffect	true	nedlukningen	mindre
+Relation	T8	T2	EffectCause	true	mindre	nedlukningen
+Relation	T2	T9	CauseEffect	true	nedlukningen	færre
+Relation	T9	T2	EffectCause	true	færre	nedlukningen
+Relation	T2	T10	CauseEffect	true	nedlukningen	færre
+Relation	T10	T2	EffectCause	true	færre	nedlukningen
+Relation	T0	T1	NoRel	true	fødselsdagsfejring	aflyst
+Relation	T0	T4	NoRel	true	fødselsdagsfejring	annoncerede
+Relation	T0	T5	NoRel	true	fødselsdagsfejring	teststrategi
+Relation	T0	T7	NoRel	true	fødselsdagsfejring	færre
+Relation	T1	T3	NoRel	true	aflyst	myldretidsdrift
+Relation	T1	T4	NoRel	true	aflyst	annoncerede
+Relation	T1	T8	NoRel	true	aflyst	mindre
+Relation	T1	T9	NoRel	true	aflyst	færre
+Relation	T10	T1	NoRel	true	færre	aflyst
+Relation	T10	T6	NoRel	true	færre	faldt trafikken
+Relation	T10	T8	NoRel	true	færre	mindre
+Relation	T10	T9	NoRel	true	færre	færre
+Relation	T2	T1	NoRel	true	nedlukningen	aflyst
+Relation	T2	T5	NoRel	true	nedlukningen	teststrategi
+Relation	T3	T10	NoRel	true	myldretidsdrift	færre
+Relation	T3	T9	NoRel	true	myldretidsdrift	færre
+Relation	T4	T0	NoRel	true	annoncerede	fødselsdagsfejring
+Relation	T4	T1	NoRel	true	annoncerede	aflyst
+Relation	T4	T3	NoRel	true	annoncerede	myldretidsdrift
+Relation	T4	T5	NoRel	true	annoncerede	teststrategi
+Relation	T4	T8	NoRel	true	annoncerede	mindre
+Relation	T4	T9	NoRel	true	annoncerede	færre
+Relation	T5	T10	NoRel	true	teststrategi	færre
+Relation	T5	T3	NoRel	true	teststrategi	myldretidsdrift
+Relation	T5	T6	NoRel	true	teststrategi	faldt trafikken
+Relation	T5	T9	NoRel	true	teststrategi	færre
+Relation	T6	T1	NoRel	true	faldt trafikken	aflyst
+Relation	T6	T10	NoRel	true	faldt trafikken	færre
+Relation	T6	T4	NoRel	true	faldt trafikken	annoncerede
+Relation	T6	T7	NoRel	true	faldt trafikken	færre
+Relation	T6	T8	NoRel	true	faldt trafikken	mindre
+Relation	T6	T9	NoRel	true	faldt trafikken	færre
+Relation	T7	T1	NoRel	true	færre	aflyst
+Relation	T7	T10	NoRel	true	færre	færre
+Relation	T7	T5	NoRel	true	færre	teststrategi
+Relation	T7	T8	NoRel	true	færre	mindre
+Relation	T8	T5	NoRel	true	mindre	teststrategi
+Relation	T8	T7	NoRel	true	mindre	færre
+Relation	T8	T9	NoRel	true	mindre	færre
+Relation	T9	T0	NoRel	true	færre	fødselsdagsfejring
+Relation	T9	T4	NoRel	true	færre	annoncerede
+Relation	T9	T6	NoRel	true	færre	faldt trafikken
+Relation	T9	T8	NoRel	true	færre	mindre

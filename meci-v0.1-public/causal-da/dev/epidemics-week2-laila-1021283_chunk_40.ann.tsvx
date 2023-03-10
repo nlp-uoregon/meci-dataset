@@ -1,0 +1,46 @@
+Text	Dette blev imidlertid besværliggjort af mangel på nødvendige materialer .	Den 25. april indførte politiet opholdsforbud ved butikcentret i Lakolk på Rømø som det første sted i landet .	En periode med godt vejr havde fået flere til at bevæge sig ud , og der var ifølge politiet for mange mennesker forsamlet på samme område .	Senere samme dag blev der tilsvarende indført opholdsforbud på Islands Brygge i København .	D. 27. april gik Arnold Busck-kæden konkurs pga. nedlukkede butikker under krisen .
+Event	T0	besværliggjort	EVENT	22
+Event	T1	indførte	EVENT	88
+Event	T10	krisen	EVENT	492
+Event	T2	opholdsforbud	EVENT	106
+Event	T3	periode	EVENT	188
+Event	T6	forsamlet	EVENT	297
+Event	T7	gik	EVENT	430
+Event	T8	konkurs	EVENT	453
+Event	T9	nedlukkede	EVENT	466
+Relation	T10	T9	CauseEffect	true	krisen	nedlukkede
+Relation	T9	T10	EffectCause	true	nedlukkede	krisen
+Relation	T9	T8	CauseEffect	true	nedlukkede	konkurs
+Relation	T8	T9	EffectCause	true	konkurs	nedlukkede
+Relation	T3	T6	CauseEffect	true	periode	forsamlet
+Relation	T6	T3	EffectCause	true	forsamlet	periode
+Relation	T6	T1	CauseEffect	true	forsamlet	indførte
+Relation	T1	T6	EffectCause	true	indførte	forsamlet
+Relation	T6	T2	CauseEffect	true	forsamlet	opholdsforbud
+Relation	T2	T6	EffectCause	true	opholdsforbud	forsamlet
+Relation	T0	T1	NoRel	true	besværliggjort	indførte
+Relation	T0	T8	NoRel	true	besværliggjort	konkurs
+Relation	T0	T9	NoRel	true	besværliggjort	nedlukkede
+Relation	T1	T0	NoRel	true	indførte	besværliggjort
+Relation	T1	T3	NoRel	true	indførte	periode
+Relation	T1	T8	NoRel	true	indførte	konkurs
+Relation	T10	T2	NoRel	true	krisen	opholdsforbud
+Relation	T10	T6	NoRel	true	krisen	forsamlet
+Relation	T10	T8	NoRel	true	krisen	konkurs
+Relation	T2	T10	NoRel	true	opholdsforbud	krisen
+Relation	T2	T7	NoRel	true	opholdsforbud	gik
+Relation	T2	T8	NoRel	true	opholdsforbud	konkurs
+Relation	T2	T9	NoRel	true	opholdsforbud	nedlukkede
+Relation	T3	T0	NoRel	true	periode	besværliggjort
+Relation	T3	T8	NoRel	true	periode	konkurs
+Relation	T6	T0	NoRel	true	forsamlet	besværliggjort
+Relation	T6	T10	NoRel	true	forsamlet	krisen
+Relation	T6	T8	NoRel	true	forsamlet	konkurs
+Relation	T6	T9	NoRel	true	forsamlet	nedlukkede
+Relation	T7	T0	NoRel	true	gik	besværliggjort
+Relation	T7	T3	NoRel	true	gik	periode
+Relation	T7	T8	NoRel	true	gik	konkurs
+Relation	T7	T9	NoRel	true	gik	nedlukkede
+Relation	T8	T0	NoRel	true	konkurs	besværliggjort
+Relation	T8	T2	NoRel	true	konkurs	opholdsforbud
+Relation	T9	T7	NoRel	true	nedlukkede	gik

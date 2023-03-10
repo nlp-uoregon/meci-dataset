@@ -1,0 +1,54 @@
+Text	Los pasajeros y la tripulación pudieron respirar normalmente pero solo doce minutos , pues la provisión es limitada .	En condiciones normales , los pilotos hubieran realizado un descenso de emergencia hasta una altura en la que el aire fuera respirable .	Sin embargo , los pilotos estaban afectados por la falta de oxígeno y no fueron capaces de reaccionar adecuadamente .	El avión siguió su ascenso y la escasez de oxígeno dejó inconscientes a los pilotos y a los pasajeros , produciéndose daño cerebral minutos más tarde en la mayoría de ellos .	Se cree que uno de los pasajeros envió un mensaje con el teléfono móvil indicando las condiciones de la cabina .
+Event	T0	respirar	EVENT	40
+Event	T1	provisión	EVENT	94
+Event	T2	realizado	EVENT	165
+Event	T3	descenso	EVENT	178
+Event	T4	emergencia	EVENT	190
+Event	T5	afectados	EVENT	289
+Event	T6	reaccionar	EVENT	346
+Event	T7	siguió	EVENT	382
+Event	T8	ascenso	EVENT	392
+Event	T9	escasez	EVENT	405
+Event	T10	envió	EVENT	581
+Relation	T5	T6	CauseEffect	true	afectados	reaccionar
+Relation	T6	T5	EffectCause	true	reaccionar	afectados
+Relation	T0	T1	NoRel	true	respirar	provisión
+Relation	T0	T4	NoRel	true	respirar	emergencia
+Relation	T0	T5	NoRel	true	respirar	afectados
+Relation	T0	T9	NoRel	true	respirar	escasez
+Relation	T1	T0	NoRel	true	provisión	respirar
+Relation	T1	T2	NoRel	true	provisión	realizado
+Relation	T1	T4	NoRel	true	provisión	emergencia
+Relation	T1	T5	NoRel	true	provisión	afectados
+Relation	T1	T6	NoRel	true	provisión	reaccionar
+Relation	T1	T8	NoRel	true	provisión	ascenso
+Relation	T1	T9	NoRel	true	provisión	escasez
+Relation	T10	T0	NoRel	true	envió	respirar
+Relation	T10	T1	NoRel	true	envió	provisión
+Relation	T10	T2	NoRel	true	envió	realizado
+Relation	T2	T4	NoRel	true	realizado	emergencia
+Relation	T3	T10	NoRel	true	descenso	envió
+Relation	T3	T4	NoRel	true	descenso	emergencia
+Relation	T3	T5	NoRel	true	descenso	afectados
+Relation	T4	T2	NoRel	true	emergencia	realizado
+Relation	T4	T5	NoRel	true	emergencia	afectados
+Relation	T4	T9	NoRel	true	emergencia	escasez
+Relation	T5	T1	NoRel	true	afectados	provisión
+Relation	T5	T10	NoRel	true	afectados	envió
+Relation	T5	T2	NoRel	true	afectados	realizado
+Relation	T5	T7	NoRel	true	afectados	siguió
+Relation	T6	T0	NoRel	true	reaccionar	respirar
+Relation	T6	T1	NoRel	true	reaccionar	provisión
+Relation	T6	T8	NoRel	true	reaccionar	ascenso
+Relation	T6	T9	NoRel	true	reaccionar	escasez
+Relation	T7	T3	NoRel	true	siguió	descenso
+Relation	T7	T9	NoRel	true	siguió	escasez
+Relation	T8	T3	NoRel	true	ascenso	descenso
+Relation	T8	T7	NoRel	true	ascenso	siguió
+Relation	T8	T9	NoRel	true	ascenso	escasez
+Relation	T9	T0	NoRel	true	escasez	respirar
+Relation	T9	T10	NoRel	true	escasez	envió
+Relation	T9	T2	NoRel	true	escasez	realizado
+Relation	T9	T3	NoRel	true	escasez	descenso
+Relation	T9	T4	NoRel	true	escasez	emergencia
+Relation	T9	T6	NoRel	true	escasez	reaccionar

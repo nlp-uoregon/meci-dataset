@@ -1,0 +1,54 @@
+Text	On the same day , Herbst was assigned to command the 27th Fighter Squadron in the first American all - jet fighter group — 1st Fighter Group — flying P - 80s .	On July 4 , Herbst was fatally injured in front of 30,000 people at the San Diego County Fair when his P-80A - 1- LO ,__44-85083_ , part of the 445th Fighter Squadron , 412th Fighter Group , based in March Field , crashed just west of the Del Mar Fairgrounds .	Flying in formation with Olds , Herbst crashed in a dry riverbed near the Del Mar Racetrack after his aircraft stalled during an encore of their routine finale in which the pair of P-80s did a loop while configured to land .	Olds narrowly avoided the same fate .	Herbst 's new wife witnessed the accident , as did his 13 - year - old son Tommy .
+Event	T0	assigned	EVENT	29
+Event	T1	command	EVENT	41
+Event	T2	flying	EVENT	143
+Event	T3	crashed	EVENT	374
+Event	T4	crashed	EVENT	460
+Event	T5	stalled	EVENT	532
+Event	T6	encore	EVENT	550
+Event	T7	did	EVENT	608
+Event	T8	loop	EVENT	614
+Event	T9	configured	EVENT	625
+Event	T10	land	EVENT	639
+Event	T11	avoided	EVENT	660
+Event	T12	fate	EVENT	677
+Event	T13	witnessed	EVENT	703
+Event	T14	accident	EVENT	717
+Event	T15	injured	EVENT	191
+Event	T16	Flying	EVENT	421
+Relation	T0	T2	CauseEffect	true	assigned	flying
+Relation	T2	T0	EffectCause	true	flying	assigned
+Relation	T3	T15	CauseEffect	true	crashed	injured
+Relation	T15	T3	EffectCause	true	injured	crashed
+Relation	T0	T10	NoRel	true	assigned	land
+Relation	T1	T0	NoRel	true	command	assigned
+Relation	T1	T12	NoRel	true	command	fate
+Relation	T1	T16	NoRel	true	command	Flying
+Relation	T10	T1	NoRel	true	land	command
+Relation	T11	T9	NoRel	true	avoided	configured
+Relation	T12	T0	NoRel	true	fate	assigned
+Relation	T13	T1	NoRel	true	witnessed	command
+Relation	T13	T2	NoRel	true	witnessed	flying
+Relation	T13	T7	NoRel	true	witnessed	did
+Relation	T13	T9	NoRel	true	witnessed	configured
+Relation	T14	T13	NoRel	true	accident	witnessed
+Relation	T14	T6	NoRel	true	accident	encore
+Relation	T15	T0	NoRel	true	injured	assigned
+Relation	T15	T10	NoRel	true	injured	land
+Relation	T15	T4	NoRel	true	injured	crashed
+Relation	T15	T9	NoRel	true	injured	configured
+Relation	T16	T8	NoRel	true	Flying	loop
+Relation	T2	T6	NoRel	true	flying	encore
+Relation	T4	T1	NoRel	true	crashed	command
+Relation	T4	T13	NoRel	true	crashed	witnessed
+Relation	T4	T15	NoRel	true	crashed	injured
+Relation	T5	T13	NoRel	true	stalled	witnessed
+Relation	T5	T2	NoRel	true	stalled	flying
+Relation	T6	T10	NoRel	true	encore	land
+Relation	T6	T12	NoRel	true	encore	fate
+Relation	T6	T4	NoRel	true	encore	crashed
+Relation	T6	T5	NoRel	true	encore	stalled
+Relation	T8	T7	NoRel	true	loop	did
+Relation	T8	T9	NoRel	true	loop	configured
+Relation	T9	T11	NoRel	true	configured	avoided
+Relation	T9	T12	NoRel	true	configured	fate

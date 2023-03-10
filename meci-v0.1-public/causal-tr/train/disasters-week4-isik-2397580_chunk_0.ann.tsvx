@@ -1,0 +1,130 @@
+Text	2019'un Mart ve Nisan aylarında sel baskınları , İran'ın Gülistan , Fars , Huzistan , Luristan ve diğer illerindeki geniş alanlarını etkiledi ve 6 Nisan itibariye ülke çapında en az 70 kişi ölümüne neden oldu .	İran , iki hafta boyunca üç büyük yağmur dalgası ve sel baskını ile karşı karşıya kaldı .	İlk yağmur dalgası 17 Mart'ta başladı ve kuzey illeri olan Gülistan ve Mazanderan'ı sular altında bıraktı .	Yağışlar o kadar şiddetliydi ki , Gülistan , Mart ayının ortasındaki ilk yağış dalgasında bir günde ortalama yıllık yağışının % 70'ini aldı ve ardışık üç yağış dalgası , İran'ın 31 ilinden 26'sında sel ve taşkınların görülmesine neden oldu .	Sel , İran'ın ulusal bayramı olan Nevruz ile aynı zamana denk geldi .
+Event	T0	baskınları	EVENT	36
+Event	T1	etkiledi	EVENT	133
+Event	T2	oldu	EVENT	204
+Event	T3	dalgası	EVENT	252
+Event	T4	baskını	EVENT	267
+Event	T5	kaldı	EVENT	293
+Event	T6	dalgası	EVENT	312
+Event	T7	başladı	EVENT	331
+Event	T8	bıraktı	EVENT	399
+Event	T9	Yağışlar	EVENT	409
+Event	T10	aldı	EVENT	544
+Event	T11	dalgası	EVENT	569
+Event	T12	sel	EVENT	607
+Event	T13	oldu	EVENT	644
+Event	T14	geldi	EVENT	713
+Event	T15	dalgasında	EVENT	488
+Event	T16	taşkınların	EVENT	614
+Event	T17	Sel	EVENT	651
+Relation	T0	T1	CauseEffect	true	baskınları	etkiledi
+Relation	T1	T0	EffectCause	true	etkiledi	baskınları
+Relation	T0	T2	CauseEffect	true	baskınları	oldu
+Relation	T2	T0	EffectCause	true	oldu	baskınları
+Relation	T3	T4	CauseEffect	true	dalgası	baskını
+Relation	T4	T3	EffectCause	true	baskını	dalgası
+Relation	T6	T8	CauseEffect	true	dalgası	bıraktı
+Relation	T8	T6	EffectCause	true	bıraktı	dalgası
+Relation	T9	T11	CauseEffect	true	Yağışlar	dalgası
+Relation	T11	T9	EffectCause	true	dalgası	Yağışlar
+Relation	T11	T12	CauseEffect	true	dalgası	sel
+Relation	T12	T11	EffectCause	true	sel	dalgası
+Relation	T11	T16	CauseEffect	true	dalgası	taşkınların
+Relation	T16	T11	EffectCause	true	taşkınların	dalgası
+Relation	T9	T13	CauseEffect	true	Yağışlar	oldu
+Relation	T13	T9	EffectCause	true	oldu	Yağışlar
+Relation	T0	T11	NoRel	true	baskınları	dalgası
+Relation	T0	T16	NoRel	true	baskınları	taşkınların
+Relation	T0	T17	NoRel	true	baskınları	Sel
+Relation	T0	T4	NoRel	true	baskınları	baskını
+Relation	T1	T11	NoRel	true	etkiledi	dalgası
+Relation	T1	T12	NoRel	true	etkiledi	sel
+Relation	T1	T5	NoRel	true	etkiledi	kaldı
+Relation	T1	T7	NoRel	true	etkiledi	başladı
+Relation	T10	T12	NoRel	true	aldı	sel
+Relation	T10	T17	NoRel	true	aldı	Sel
+Relation	T10	T5	NoRel	true	aldı	kaldı
+Relation	T11	T10	NoRel	true	dalgası	aldı
+Relation	T11	T15	NoRel	true	dalgası	dalgasında
+Relation	T11	T3	NoRel	true	dalgası	dalgası
+Relation	T11	T6	NoRel	true	dalgası	dalgası
+Relation	T11	T7	NoRel	true	dalgası	başladı
+Relation	T12	T0	NoRel	true	sel	baskınları
+Relation	T12	T10	NoRel	true	sel	aldı
+Relation	T12	T13	NoRel	true	sel	oldu
+Relation	T12	T16	NoRel	true	sel	taşkınların
+Relation	T12	T2	NoRel	true	sel	oldu
+Relation	T12	T8	NoRel	true	sel	bıraktı
+Relation	T13	T10	NoRel	true	oldu	aldı
+Relation	T13	T11	NoRel	true	oldu	dalgası
+Relation	T13	T15	NoRel	true	oldu	dalgasında
+Relation	T13	T4	NoRel	true	oldu	baskını
+Relation	T14	T12	NoRel	true	geldi	sel
+Relation	T14	T13	NoRel	true	geldi	oldu
+Relation	T14	T15	NoRel	true	geldi	dalgasında
+Relation	T14	T5	NoRel	true	geldi	kaldı
+Relation	T14	T6	NoRel	true	geldi	dalgası
+Relation	T14	T7	NoRel	true	geldi	başladı
+Relation	T14	T9	NoRel	true	geldi	Yağışlar
+Relation	T15	T0	NoRel	true	dalgasında	baskınları
+Relation	T15	T1	NoRel	true	dalgasında	etkiledi
+Relation	T15	T11	NoRel	true	dalgasında	dalgası
+Relation	T15	T12	NoRel	true	dalgasında	sel
+Relation	T15	T16	NoRel	true	dalgasında	taşkınların
+Relation	T15	T5	NoRel	true	dalgasında	kaldı
+Relation	T15	T7	NoRel	true	dalgasında	başladı
+Relation	T15	T8	NoRel	true	dalgasında	bıraktı
+Relation	T16	T0	NoRel	true	taşkınların	baskınları
+Relation	T16	T12	NoRel	true	taşkınların	sel
+Relation	T16	T9	NoRel	true	taşkınların	Yağışlar
+Relation	T17	T0	NoRel	true	Sel	baskınları
+Relation	T17	T15	NoRel	true	Sel	dalgasında
+Relation	T17	T2	NoRel	true	Sel	oldu
+Relation	T17	T3	NoRel	true	Sel	dalgası
+Relation	T17	T5	NoRel	true	Sel	kaldı
+Relation	T17	T7	NoRel	true	Sel	başladı
+Relation	T17	T8	NoRel	true	Sel	bıraktı
+Relation	T2	T1	NoRel	true	oldu	etkiledi
+Relation	T2	T11	NoRel	true	oldu	dalgası
+Relation	T2	T16	NoRel	true	oldu	taşkınların
+Relation	T3	T0	NoRel	true	dalgası	baskınları
+Relation	T3	T1	NoRel	true	dalgası	etkiledi
+Relation	T3	T12	NoRel	true	dalgası	sel
+Relation	T3	T13	NoRel	true	dalgası	oldu
+Relation	T3	T14	NoRel	true	dalgası	geldi
+Relation	T3	T15	NoRel	true	dalgası	dalgasında
+Relation	T3	T17	NoRel	true	dalgası	Sel
+Relation	T3	T9	NoRel	true	dalgası	Yağışlar
+Relation	T4	T12	NoRel	true	baskını	sel
+Relation	T4	T5	NoRel	true	baskını	kaldı
+Relation	T5	T1	NoRel	true	kaldı	etkiledi
+Relation	T5	T10	NoRel	true	kaldı	aldı
+Relation	T5	T13	NoRel	true	kaldı	oldu
+Relation	T5	T2	NoRel	true	kaldı	oldu
+Relation	T5	T4	NoRel	true	kaldı	baskını
+Relation	T5	T7	NoRel	true	kaldı	başladı
+Relation	T6	T0	NoRel	true	dalgası	baskınları
+Relation	T6	T1	NoRel	true	dalgası	etkiledi
+Relation	T6	T12	NoRel	true	dalgası	sel
+Relation	T6	T13	NoRel	true	dalgası	oldu
+Relation	T6	T15	NoRel	true	dalgası	dalgasında
+Relation	T6	T2	NoRel	true	dalgası	oldu
+Relation	T7	T1	NoRel	true	başladı	etkiledi
+Relation	T7	T10	NoRel	true	başladı	aldı
+Relation	T7	T11	NoRel	true	başladı	dalgası
+Relation	T7	T12	NoRel	true	başladı	sel
+Relation	T7	T16	NoRel	true	başladı	taşkınların
+Relation	T7	T17	NoRel	true	başladı	Sel
+Relation	T7	T3	NoRel	true	başladı	dalgası
+Relation	T7	T4	NoRel	true	başladı	baskını
+Relation	T8	T15	NoRel	true	bıraktı	dalgasında
+Relation	T8	T16	NoRel	true	bıraktı	taşkınların
+Relation	T8	T2	NoRel	true	bıraktı	oldu
+Relation	T8	T4	NoRel	true	bıraktı	baskını
+Relation	T8	T5	NoRel	true	bıraktı	kaldı
+Relation	T8	T9	NoRel	true	bıraktı	Yağışlar
+Relation	T9	T0	NoRel	true	Yağışlar	baskınları
+Relation	T9	T10	NoRel	true	Yağışlar	aldı
+Relation	T9	T14	NoRel	true	Yağışlar	geldi
+Relation	T9	T6	NoRel	true	Yağışlar	dalgası
+Relation	T9	T8	NoRel	true	Yağışlar	bıraktı

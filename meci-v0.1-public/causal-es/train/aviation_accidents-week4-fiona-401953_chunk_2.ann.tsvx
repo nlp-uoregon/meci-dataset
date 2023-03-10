@@ -1,0 +1,70 @@
+Text	A bordo de la aeronave se encontraban 73 peruanos , 11 estadounidenses , 4 italianos , 2 brasileños , 1 colombiano , 1 española y 1 australiana .	La investigación del lugar del accidente fue obstaculizada por saqueadores , que descendieron sobre el accidente y robaron varios elementos para venderlos como chatarra .	Una recompensa de US $ 500 ( equivalente a $ 641.42 en 2018 ) logró asegurar la devolución del registrador de datos de vuelo .	Después de 312 días de investigaciones , no hubo informes de cualquier fallo técnico .	Se determinó que la causa oficial del accidente fue un error del piloto por no seguir los procedimientos estándar en condiciones climáticas adversas .
+Event	T0	investigación	EVENT	149
+Event	T1	obstaculizada	EVENT	191
+Event	T2	descendieron	EVENT	227
+Event	T3	accidente	EVENT	249
+Event	T4	robaron	EVENT	261
+Event	T5	recompensa	EVENT	321
+Event	T6	asegurar	EVENT	385
+Event	T7	devolución	EVENT	397
+Event	T8	investigaciones	EVENT	467
+Event	T9	informes	EVENT	493
+Event	T10	fallo	EVENT	515
+Event	T11	determinó	EVENT	534
+Event	T12	accidente	EVENT	569
+Event	T13	error	EVENT	586
+Relation	T5	T7	CauseEffect	true	recompensa	devolución
+Relation	T7	T5	EffectCause	true	devolución	recompensa
+Relation	T13	T12	CauseEffect	true	error	accidente
+Relation	T12	T13	EffectCause	true	accidente	error
+Relation	T0	T1	NoRel	true	investigación	obstaculizada
+Relation	T0	T2	NoRel	true	investigación	descendieron
+Relation	T0	T7	NoRel	true	investigación	devolución
+Relation	T1	T10	NoRel	true	obstaculizada	fallo
+Relation	T10	T0	NoRel	true	fallo	investigación
+Relation	T10	T1	NoRel	true	fallo	obstaculizada
+Relation	T10	T11	NoRel	true	fallo	determinó
+Relation	T10	T5	NoRel	true	fallo	recompensa
+Relation	T10	T8	NoRel	true	fallo	investigaciones
+Relation	T10	T9	NoRel	true	fallo	informes
+Relation	T11	T5	NoRel	true	determinó	recompensa
+Relation	T11	T9	NoRel	true	determinó	informes
+Relation	T12	T11	NoRel	true	accidente	determinó
+Relation	T12	T4	NoRel	true	accidente	robaron
+Relation	T12	T9	NoRel	true	accidente	informes
+Relation	T13	T0	NoRel	true	error	investigación
+Relation	T13	T3	NoRel	true	error	accidente
+Relation	T13	T7	NoRel	true	error	devolución
+Relation	T13	T9	NoRel	true	error	informes
+Relation	T2	T1	NoRel	true	descendieron	obstaculizada
+Relation	T2	T11	NoRel	true	descendieron	determinó
+Relation	T2	T12	NoRel	true	descendieron	accidente
+Relation	T2	T3	NoRel	true	descendieron	accidente
+Relation	T3	T1	NoRel	true	accidente	obstaculizada
+Relation	T3	T2	NoRel	true	accidente	descendieron
+Relation	T3	T5	NoRel	true	accidente	recompensa
+Relation	T3	T6	NoRel	true	accidente	asegurar
+Relation	T3	T8	NoRel	true	accidente	investigaciones
+Relation	T4	T0	NoRel	true	robaron	investigación
+Relation	T4	T1	NoRel	true	robaron	obstaculizada
+Relation	T4	T2	NoRel	true	robaron	descendieron
+Relation	T4	T7	NoRel	true	robaron	devolución
+Relation	T4	T9	NoRel	true	robaron	informes
+Relation	T5	T0	NoRel	true	recompensa	investigación
+Relation	T5	T11	NoRel	true	recompensa	determinó
+Relation	T5	T6	NoRel	true	recompensa	asegurar
+Relation	T5	T9	NoRel	true	recompensa	informes
+Relation	T6	T3	NoRel	true	asegurar	accidente
+Relation	T6	T4	NoRel	true	asegurar	robaron
+Relation	T7	T1	NoRel	true	devolución	obstaculizada
+Relation	T7	T10	NoRel	true	devolución	fallo
+Relation	T7	T6	NoRel	true	devolución	asegurar
+Relation	T7	T8	NoRel	true	devolución	investigaciones
+Relation	T8	T0	NoRel	true	investigaciones	investigación
+Relation	T8	T11	NoRel	true	investigaciones	determinó
+Relation	T8	T13	NoRel	true	investigaciones	error
+Relation	T9	T0	NoRel	true	informes	investigación
+Relation	T9	T1	NoRel	true	informes	obstaculizada
+Relation	T9	T11	NoRel	true	informes	determinó
+Relation	T9	T5	NoRel	true	informes	recompensa
+Relation	T9	T6	NoRel	true	informes	asegurar

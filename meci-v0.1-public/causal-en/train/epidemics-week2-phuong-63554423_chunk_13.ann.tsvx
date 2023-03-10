@@ -1,0 +1,109 @@
+Text	When the ship arrived in Guam on 26 March the ship 's commanding officer , Captain Brett Crozier , wanted to have most of the crew immediately taken ashore , saying it was impossible to prevent the spread of the virus in the close quarters of the ship .	Rear Adm. Stuart P. Baker , who was the commanding officer of Carrier Strike Group 9 and thus Crozier 's immediate superior , disagreed , feeling such an action was impractical and too drastic .	On 30 March , Crozier sent an email to communicate the status of his ship and her crew , saying it was not possible to observe CDC / Navy recommendations for individual quarantine or social distancing aboard the carrier .	Crozier referred to the viral spread on the less crowded cruise ship _ Diamond Princess _ as an example of how quickly a virus can spread on a crowded vessel .	The letter provided his superiors with options , including ready for battle while sick , but recommended most of the crew 's evacuation , keeping only enough crew on board to maintain the nuclear reactors , provide security , and to sanitize the ship .
+Event	T0	arrived	EVENT	14
+Event	T1	wanted	EVENT	99
+Event	T10	communicate	EVENT	488
+Event	T11	saying	EVENT	538
+Event	T12	observe	EVENT	568
+Event	T13	distancing	EVENT	639
+Event	T14	spread	EVENT	701
+Event	T15	spread	EVENT	802
+Event	T16	provided	EVENT	842
+Event	T17	battle	EVENT	900
+Event	T18	sick	EVENT	913
+Event	T19	recommended	EVENT	924
+Event	T2	saying	EVENT	158
+Event	T20	evacuation	EVENT	956
+Event	T21	keeping	EVENT	969
+Event	T22	ashore	EVENT	149
+Event	T24	maintain	EVENT	1006
+Event	T25	sanitize	EVENT	1064
+Event	T26	provide	EVENT	1038
+Event	T3	prevent	EVENT	186
+Event	T4	spread	EVENT	198
+Event	T5	virus	EVENT	212
+Event	T6	disagreed	EVENT	380
+Event	T7	feeling	EVENT	392
+Event	T8	action	EVENT	408
+Event	T9	sent	EVENT	471
+Relation	T10	T9	CauseEffect	true	communicate	sent
+Relation	T9	T10	EffectCause	true	sent	communicate
+Relation	T17	T16	CauseEffect	true	battle	provided
+Relation	T16	T17	EffectCause	true	provided	battle
+Relation	T24	T21	CauseEffect	true	maintain	keeping
+Relation	T21	T24	EffectCause	true	keeping	maintain
+Relation	T26	T21	CauseEffect	true	provide	keeping
+Relation	T21	T26	EffectCause	true	keeping	provide
+Relation	T25	T21	CauseEffect	true	sanitize	keeping
+Relation	T21	T25	EffectCause	true	keeping	sanitize
+Relation	T8	T6	CauseEffect	true	action	disagreed
+Relation	T6	T8	EffectCause	true	disagreed	action
+Relation	T3	T22	CauseEffect	true	prevent	ashore
+Relation	T22	T3	EffectCause	true	ashore	prevent
+Relation	T14	T15	CauseEffect	true	spread	spread
+Relation	T15	T14	EffectCause	true	spread	spread
+Relation	T0	T15	NoRel	true	arrived	spread
+Relation	T1	T21	NoRel	true	wanted	keeping
+Relation	T10	T2	NoRel	true	communicate	saying
+Relation	T11	T3	NoRel	true	saying	prevent
+Relation	T11	T5	NoRel	true	saying	virus
+Relation	T12	T25	NoRel	true	observe	sanitize
+Relation	T13	T16	NoRel	true	distancing	provided
+Relation	T13	T17	NoRel	true	distancing	battle
+Relation	T13	T2	NoRel	true	distancing	saying
+Relation	T13	T21	NoRel	true	distancing	keeping
+Relation	T13	T24	NoRel	true	distancing	maintain
+Relation	T14	T2	NoRel	true	spread	saying
+Relation	T14	T22	NoRel	true	spread	ashore
+Relation	T14	T3	NoRel	true	spread	prevent
+Relation	T15	T24	NoRel	true	spread	maintain
+Relation	T15	T9	NoRel	true	spread	sent
+Relation	T16	T7	NoRel	true	provided	feeling
+Relation	T17	T14	NoRel	true	battle	spread
+Relation	T17	T4	NoRel	true	battle	spread
+Relation	T18	T14	NoRel	true	sick	spread
+Relation	T18	T17	NoRel	true	sick	battle
+Relation	T18	T6	NoRel	true	sick	disagreed
+Relation	T19	T0	NoRel	true	recommended	arrived
+Relation	T2	T1	NoRel	true	saying	wanted
+Relation	T2	T16	NoRel	true	saying	provided
+Relation	T2	T6	NoRel	true	saying	disagreed
+Relation	T2	T9	NoRel	true	saying	sent
+Relation	T20	T13	NoRel	true	evacuation	distancing
+Relation	T20	T15	NoRel	true	evacuation	spread
+Relation	T20	T5	NoRel	true	evacuation	virus
+Relation	T21	T0	NoRel	true	keeping	arrived
+Relation	T22	T14	NoRel	true	ashore	spread
+Relation	T22	T21	NoRel	true	ashore	keeping
+Relation	T22	T6	NoRel	true	ashore	disagreed
+Relation	T24	T0	NoRel	true	maintain	arrived
+Relation	T24	T10	NoRel	true	maintain	communicate
+Relation	T24	T16	NoRel	true	maintain	provided
+Relation	T24	T19	NoRel	true	maintain	recommended
+Relation	T24	T5	NoRel	true	maintain	virus
+Relation	T24	T8	NoRel	true	maintain	action
+Relation	T25	T17	NoRel	true	sanitize	battle
+Relation	T25	T26	NoRel	true	sanitize	provide
+Relation	T25	T4	NoRel	true	sanitize	spread
+Relation	T25	T6	NoRel	true	sanitize	disagreed
+Relation	T25	T8	NoRel	true	sanitize	action
+Relation	T26	T2	NoRel	true	provide	saying
+Relation	T26	T4	NoRel	true	provide	spread
+Relation	T26	T6	NoRel	true	provide	disagreed
+Relation	T3	T12	NoRel	true	prevent	observe
+Relation	T3	T24	NoRel	true	prevent	maintain
+Relation	T3	T26	NoRel	true	prevent	provide
+Relation	T4	T11	NoRel	true	spread	saying
+Relation	T4	T26	NoRel	true	spread	provide
+Relation	T5	T24	NoRel	true	virus	maintain
+Relation	T5	T3	NoRel	true	virus	prevent
+Relation	T5	T9	NoRel	true	virus	sent
+Relation	T6	T3	NoRel	true	disagreed	prevent
+Relation	T7	T10	NoRel	true	feeling	communicate
+Relation	T7	T13	NoRel	true	feeling	distancing
+Relation	T7	T14	NoRel	true	feeling	spread
+Relation	T8	T12	NoRel	true	action	observe
+Relation	T8	T17	NoRel	true	action	battle
+Relation	T8	T7	NoRel	true	action	feeling
+Relation	T9	T13	NoRel	true	sent	distancing
+Relation	T9	T18	NoRel	true	sent	sick
+Relation	T9	T3	NoRel	true	sent	prevent

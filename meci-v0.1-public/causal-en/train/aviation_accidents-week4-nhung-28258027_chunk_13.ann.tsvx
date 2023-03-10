@@ -1,0 +1,75 @@
+Text	The NTSB made several recommendations to the Federal Aviation Administration .	Most notable among these were recommendations regarding fire safety equipment , emergency lighting , and crew instructions to passengers regarding the location of emergency exits and evacuation procedures .	The Board suggested that flight attendants physically point to the location of each exit when conducting the pre-flight passenger safety briefing , to increase passenger retention .	The Board also pointed to a need for emergency exit lighting , as well as clear , simple instruction for opening emergency exits , calling the instructions present on the accident aircraft " misleading . "	The Board also noted the limitations of the aircraft 's non-precision approach equipment , suggesting that a more precise instrument landing system could have reduced the likelihood of an accident .
+Event	T0	made	EVENT	9
+Event	T1	recommendations	EVENT	22
+Event	T2	recommendations	EVENT	109
+Event	T3	exits	EVENT	252
+Event	T4	procedures	EVENT	273
+Event	T5	suggested	EVENT	296
+Event	T6	exit	EVENT	370
+Event	T7	conducting	EVENT	380
+Event	T8	briefing	EVENT	423
+Event	T9	increase	EVENT	437
+Event	T10	retention	EVENT	456
+Event	T11	pointed	EVENT	483
+Event	T12	opening	EVENT	573
+Event	T13	calling	EVENT	599
+Event	T14	present	EVENT	624
+Event	T15	accident	EVENT	639
+Event	T16	misleading	EVENT	659
+Event	T17	noted	EVENT	689
+Event	T18	limitations	EVENT	699
+Event	T19	suggesting	EVENT	765
+Event	T20	reduced	EVENT	833
+Event	T21	accident	EVENT	862
+Event	T22	point	EVENT	340
+Relation	T7	T9	CauseEffect	true	conducting	increase
+Relation	T9	T7	EffectCause	true	increase	conducting
+Relation	T0	T14	NoRel	true	made	present
+Relation	T0	T17	NoRel	true	made	noted
+Relation	T0	T8	NoRel	true	made	briefing
+Relation	T1	T14	NoRel	true	recommendations	present
+Relation	T1	T21	NoRel	true	recommendations	accident
+Relation	T10	T0	NoRel	true	retention	made
+Relation	T10	T17	NoRel	true	retention	noted
+Relation	T10	T8	NoRel	true	retention	briefing
+Relation	T11	T1	NoRel	true	pointed	recommendations
+Relation	T11	T16	NoRel	true	pointed	misleading
+Relation	T11	T17	NoRel	true	pointed	noted
+Relation	T11	T6	NoRel	true	pointed	exit
+Relation	T12	T15	NoRel	true	opening	accident
+Relation	T14	T6	NoRel	true	present	exit
+Relation	T15	T1	NoRel	true	accident	recommendations
+Relation	T15	T13	NoRel	true	accident	calling
+Relation	T16	T11	NoRel	true	misleading	pointed
+Relation	T16	T4	NoRel	true	misleading	procedures
+Relation	T16	T9	NoRel	true	misleading	increase
+Relation	T18	T12	NoRel	true	limitations	opening
+Relation	T18	T2	NoRel	true	limitations	recommendations
+Relation	T18	T20	NoRel	true	limitations	reduced
+Relation	T18	T6	NoRel	true	limitations	exit
+Relation	T2	T11	NoRel	true	recommendations	pointed
+Relation	T2	T17	NoRel	true	recommendations	noted
+Relation	T20	T16	NoRel	true	reduced	misleading
+Relation	T20	T18	NoRel	true	reduced	limitations
+Relation	T20	T19	NoRel	true	reduced	suggesting
+Relation	T20	T5	NoRel	true	reduced	suggested
+Relation	T21	T3	NoRel	true	accident	exits
+Relation	T22	T13	NoRel	true	point	calling
+Relation	T22	T19	NoRel	true	point	suggesting
+Relation	T22	T7	NoRel	true	point	conducting
+Relation	T3	T21	NoRel	true	exits	accident
+Relation	T3	T22	NoRel	true	exits	point
+Relation	T4	T1	NoRel	true	procedures	recommendations
+Relation	T4	T6	NoRel	true	procedures	exit
+Relation	T4	T7	NoRel	true	procedures	conducting
+Relation	T5	T12	NoRel	true	suggested	opening
+Relation	T5	T15	NoRel	true	suggested	accident
+Relation	T5	T4	NoRel	true	suggested	procedures
+Relation	T6	T11	NoRel	true	exit	pointed
+Relation	T6	T14	NoRel	true	exit	present
+Relation	T6	T15	NoRel	true	exit	accident
+Relation	T7	T17	NoRel	true	conducting	noted
+Relation	T8	T10	NoRel	true	briefing	retention
+Relation	T9	T12	NoRel	true	increase	opening
+Relation	T9	T15	NoRel	true	increase	accident
+Relation	T9	T6	NoRel	true	increase	exit

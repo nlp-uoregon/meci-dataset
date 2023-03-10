@@ -1,0 +1,52 @@
+Text	2 Mart 1444 tarihinde İskender Bey , bölgedeki tüm Arnavutluk prenslerini bir araya getirerek Leş Birliği'ni kurmayı başarır .	Arnavutlar arasında bu dayanışma sayesinde İskender Bey hem bölgedeki egemenliğini artıracak , hem de nispeten büyük bir ordu meydana getirip kaleler inşa edebilecektir .	İskender Bey , Osmanlılara karşı gerilla taktikleriyle saldırarak dağlık bölgeyi kendisi için bir avantaja çevirir .	Hakimiyetinin ilk yıllarında yaklaşık 10.000 ila 15.000 askere komuta etse de tüm Arnavut topraklarında sarsılmaz bir denetimi bulunmaktadır .	29 Haziran 1444 Debre bölgesinde yaşanan Torvioll Muharebesi'nde İskender Bey komutasındaki Leş Birliği ordusu 25.000 kişilik Osmanlı ordusuyla karşı karşıya gelir .
+Event	T0	başarır	EVENT	117
+Event	T1	dayanışma	EVENT	150
+Event	T3	çevirir	EVENT	405
+Event	T6	gelir	EVENT	716
+Event	T7	getirerek	EVENT	84
+Event	T8	artıracak	EVENT	210
+Event	T9	getirip	EVENT	261
+Event	T2	edebilecektir	EVENT	282
+Event	T10	saldırarak	EVENT	353
+Event	T4	etse	EVENT	485
+Event	T11	Torvioll Muharebesi'nde	EVENT	599
+Relation	T7	T0	CauseEffect	true	getirerek	başarır
+Relation	T0	T7	EffectCause	true	başarır	getirerek
+Relation	T0	T8	CauseEffect	true	başarır	artıracak
+Relation	T8	T0	EffectCause	true	artıracak	başarır
+Relation	T0	T9	CauseEffect	true	başarır	getirip
+Relation	T9	T0	EffectCause	true	getirip	başarır
+Relation	T9	T2	CauseEffect	true	getirip	edebilecektir
+Relation	T2	T9	EffectCause	true	edebilecektir	getirip
+Relation	T10	T3	CauseEffect	true	saldırarak	çevirir
+Relation	T3	T10	EffectCause	true	çevirir	saldırarak
+Relation	T9	T6	CauseEffect	true	getirip	gelir
+Relation	T6	T9	EffectCause	true	gelir	getirip
+Relation	T6	T11	CauseEffect	true	gelir	Torvioll Muharebesi'nde
+Relation	T11	T6	EffectCause	true	Torvioll Muharebesi'nde	gelir
+Relation	T0	T10	NoRel	true	başarır	saldırarak
+Relation	T0	T3	NoRel	true	başarır	çevirir
+Relation	T1	T11	NoRel	true	dayanışma	Torvioll Muharebesi'nde
+Relation	T1	T4	NoRel	true	dayanışma	etse
+Relation	T1	T9	NoRel	true	dayanışma	getirip
+Relation	T10	T2	NoRel	true	saldırarak	edebilecektir
+Relation	T10	T8	NoRel	true	saldırarak	artıracak
+Relation	T11	T0	NoRel	true	Torvioll Muharebesi'nde	başarır
+Relation	T11	T1	NoRel	true	Torvioll Muharebesi'nde	dayanışma
+Relation	T11	T3	NoRel	true	Torvioll Muharebesi'nde	çevirir
+Relation	T11	T8	NoRel	true	Torvioll Muharebesi'nde	artıracak
+Relation	T11	T9	NoRel	true	Torvioll Muharebesi'nde	getirip
+Relation	T2	T0	NoRel	true	edebilecektir	başarır
+Relation	T2	T8	NoRel	true	edebilecektir	artıracak
+Relation	T3	T1	NoRel	true	çevirir	dayanışma
+Relation	T4	T2	NoRel	true	etse	edebilecektir
+Relation	T4	T9	NoRel	true	etse	getirip
+Relation	T6	T10	NoRel	true	gelir	saldırarak
+Relation	T7	T11	NoRel	true	getirerek	Torvioll Muharebesi'nde
+Relation	T7	T2	NoRel	true	getirerek	edebilecektir
+Relation	T8	T2	NoRel	true	artıracak	edebilecektir
+Relation	T8	T3	NoRel	true	artıracak	çevirir
+Relation	T8	T4	NoRel	true	artıracak	etse
+Relation	T8	T6	NoRel	true	artıracak	gelir
+Relation	T9	T3	NoRel	true	getirip	çevirir
+Relation	T9	T7	NoRel	true	getirip	getirerek

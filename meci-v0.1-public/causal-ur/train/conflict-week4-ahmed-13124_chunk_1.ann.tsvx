@@ -1,0 +1,117 @@
+Text	سقوط بغداد کے ساتھ ہی ملک بھر میں خانہ جنگی کی صورت حال پیدا ہو گئی اور عراق کے شہروں کوت اور ناصریہ نے تو ایک دوسرے کے خلاف جنگ تک کا اعلان کر دیا ۔	عراق کی یہ صورت حال آج تک قائم ہے جہاں اب تک لاکھوں افراد مارے جاچکے ہیں ۔	سقوط بغداد کے وقت فرار ہونے والے عراقی صدر صدام حسین اور ان کے صاحبزادے عودے اور قوصے حسین بعد ازاں گرفتار اور قتل ہوئے ۔	عودے اور قوصے 22 جولائی 2003ء کو ایک چھاپے میں مارے گئے جبکہ صدام حسین 13 دسمبر 2003ء کو تکریت کے نواح میں ( امریکی ذرائع کے مطابق ) ایک زیر زمین پناہ گاہ سے گرفتار ہوئے ۔	مبصرین کے مطابق امریکی حملے کا مقصد مسرق وسطٰی کے تیل کے زخائر پر قبضہ کرنا تھا ۔
+Event	T0	سقوط	EVENT	0
+Event	T1	جنگی	EVENT	39
+Event	T2	اعلان	EVENT	135
+Event	T4	سقوط	EVENT	225
+Event	T5	فرار	EVENT	243
+Event	T6	گرفتار	EVENT	325
+Event	T9	حملے	EVENT	542
+Event	T10	قبضہ	EVENT	585
+Event	T11	پیدا	EVENT	56
+Event	T12	جنگ	EVENT	125
+Event	T13	مارے	EVENT	208
+Event	T3	وقت	EVENT	239
+Event	T14	قتل	EVENT	336
+Event	T7	چھاپے	EVENT	384
+Event	T15	مارے	EVENT	394
+Event	T16	گرفتار	EVENT	505
+Relation	T0	T1	CauseEffect	true	سقوط	جنگی
+Relation	T1	T0	EffectCause	true	جنگی	سقوط
+Relation	T12	T13	CauseEffect	true	جنگ	مارے
+Relation	T13	T12	EffectCause	true	مارے	جنگ
+Relation	T4	T5	CauseEffect	true	سقوط	فرار
+Relation	T5	T4	EffectCause	true	فرار	سقوط
+Relation	T7	T15	CauseEffect	true	چھاپے	مارے
+Relation	T15	T7	EffectCause	true	مارے	چھاپے
+Relation	T7	T16	CauseEffect	true	چھاپے	گرفتار
+Relation	T16	T7	EffectCause	true	گرفتار	چھاپے
+Relation	T10	T9	CauseEffect	true	قبضہ	حملے
+Relation	T9	T10	EffectCause	true	حملے	قبضہ
+Relation	T0	T10	NoRel	true	سقوط	قبضہ
+Relation	T0	T13	NoRel	true	سقوط	مارے
+Relation	T0	T15	NoRel	true	سقوط	مارے
+Relation	T0	T6	NoRel	true	سقوط	گرفتار
+Relation	T1	T11	NoRel	true	جنگی	پیدا
+Relation	T1	T12	NoRel	true	جنگی	جنگ
+Relation	T1	T13	NoRel	true	جنگی	مارے
+Relation	T1	T14	NoRel	true	جنگی	قتل
+Relation	T1	T16	NoRel	true	جنگی	گرفتار
+Relation	T1	T2	NoRel	true	جنگی	اعلان
+Relation	T1	T3	NoRel	true	جنگی	وقت
+Relation	T1	T5	NoRel	true	جنگی	فرار
+Relation	T10	T1	NoRel	true	قبضہ	جنگی
+Relation	T10	T12	NoRel	true	قبضہ	جنگ
+Relation	T10	T14	NoRel	true	قبضہ	قتل
+Relation	T10	T2	NoRel	true	قبضہ	اعلان
+Relation	T10	T3	NoRel	true	قبضہ	وقت
+Relation	T10	T4	NoRel	true	قبضہ	سقوط
+Relation	T10	T6	NoRel	true	قبضہ	گرفتار
+Relation	T10	T7	NoRel	true	قبضہ	چھاپے
+Relation	T11	T0	NoRel	true	پیدا	سقوط
+Relation	T11	T10	NoRel	true	پیدا	قبضہ
+Relation	T11	T12	NoRel	true	پیدا	جنگ
+Relation	T11	T14	NoRel	true	پیدا	قتل
+Relation	T11	T5	NoRel	true	پیدا	فرار
+Relation	T11	T6	NoRel	true	پیدا	گرفتار
+Relation	T12	T0	NoRel	true	جنگ	سقوط
+Relation	T12	T15	NoRel	true	جنگ	مارے
+Relation	T12	T2	NoRel	true	جنگ	اعلان
+Relation	T12	T6	NoRel	true	جنگ	گرفتار
+Relation	T13	T3	NoRel	true	مارے	وقت
+Relation	T13	T4	NoRel	true	مارے	سقوط
+Relation	T13	T5	NoRel	true	مارے	فرار
+Relation	T13	T6	NoRel	true	مارے	گرفتار
+Relation	T13	T7	NoRel	true	مارے	چھاپے
+Relation	T13	T9	NoRel	true	مارے	حملے
+Relation	T14	T1	NoRel	true	قتل	جنگی
+Relation	T14	T2	NoRel	true	قتل	اعلان
+Relation	T14	T3	NoRel	true	قتل	وقت
+Relation	T14	T4	NoRel	true	قتل	سقوط
+Relation	T15	T1	NoRel	true	مارے	جنگی
+Relation	T15	T11	NoRel	true	مارے	پیدا
+Relation	T15	T13	NoRel	true	مارے	مارے
+Relation	T15	T14	NoRel	true	مارے	قتل
+Relation	T15	T3	NoRel	true	مارے	وقت
+Relation	T15	T5	NoRel	true	مارے	فرار
+Relation	T15	T9	NoRel	true	مارے	حملے
+Relation	T16	T0	NoRel	true	گرفتار	سقوط
+Relation	T16	T11	NoRel	true	گرفتار	پیدا
+Relation	T16	T13	NoRel	true	گرفتار	مارے
+Relation	T16	T14	NoRel	true	گرفتار	قتل
+Relation	T16	T3	NoRel	true	گرفتار	وقت
+Relation	T16	T6	NoRel	true	گرفتار	گرفتار
+Relation	T16	T9	NoRel	true	گرفتار	حملے
+Relation	T2	T10	NoRel	true	اعلان	قبضہ
+Relation	T2	T11	NoRel	true	اعلان	پیدا
+Relation	T2	T12	NoRel	true	اعلان	جنگ
+Relation	T2	T13	NoRel	true	اعلان	مارے
+Relation	T2	T14	NoRel	true	اعلان	قتل
+Relation	T2	T16	NoRel	true	اعلان	گرفتار
+Relation	T2	T6	NoRel	true	اعلان	گرفتار
+Relation	T2	T9	NoRel	true	اعلان	حملے
+Relation	T3	T13	NoRel	true	وقت	مارے
+Relation	T3	T14	NoRel	true	وقت	قتل
+Relation	T3	T16	NoRel	true	وقت	گرفتار
+Relation	T3	T2	NoRel	true	وقت	اعلان
+Relation	T3	T6	NoRel	true	وقت	گرفتار
+Relation	T3	T7	NoRel	true	وقت	چھاپے
+Relation	T4	T11	NoRel	true	سقوط	پیدا
+Relation	T4	T13	NoRel	true	سقوط	مارے
+Relation	T4	T16	NoRel	true	سقوط	گرفتار
+Relation	T4	T7	NoRel	true	سقوط	چھاپے
+Relation	T5	T0	NoRel	true	فرار	سقوط
+Relation	T5	T10	NoRel	true	فرار	قبضہ
+Relation	T5	T15	NoRel	true	فرار	مارے
+Relation	T5	T16	NoRel	true	فرار	گرفتار
+Relation	T5	T9	NoRel	true	فرار	حملے
+Relation	T6	T11	NoRel	true	گرفتار	پیدا
+Relation	T6	T12	NoRel	true	گرفتار	جنگ
+Relation	T7	T13	NoRel	true	چھاپے	مارے
+Relation	T7	T3	NoRel	true	چھاپے	وقت
+Relation	T7	T4	NoRel	true	چھاپے	سقوط
+Relation	T7	T5	NoRel	true	چھاپے	فرار
+Relation	T7	T6	NoRel	true	چھاپے	گرفتار
+Relation	T9	T0	NoRel	true	حملے	سقوط
+Relation	T9	T16	NoRel	true	حملے	گرفتار
+Relation	T9	T4	NoRel	true	حملے	سقوط
+Relation	T9	T5	NoRel	true	حملے	فرار

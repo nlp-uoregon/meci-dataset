@@ -1,0 +1,41 @@
+Text	El VUELO 213 DE BHOJA AIR fue un vuelo de cabotaje regular de pasajeros operado por la aerolínea pakistaní Bhoja Air .	El 20 de abril de 2012 , el avión Boeing 737-236 , que había partido desde el Aeropuerto Internacional Jinnah , Karachi , se estrelló durante su aproximación al Aeropuerto Internacional Benazir Bhutto en Islamabad .	Los 121 pasajeros y seis tripulantes murieron en el accidente .	La aeronave accidentada era un Boeing 737-236 , con matrícula AP-BKC , y número de serie 23167 .	El avión voló por primera vez el 13 de diciembre de 1984 y prestó servicios en British Airways y Comair .
+Event	T0	vuelo	EVENT	33
+Event	T1	operado	EVENT	72
+Event	T2	partido	EVENT	180
+Event	T3	estrelló	EVENT	244
+Event	T4	aproximación	EVENT	264
+Event	T5	murieron	EVENT	372
+Event	T6	accidente	EVENT	387
+Event	T7	accidentada	EVENT	411
+Event	T8	voló	EVENT	505
+Relation	T6	T5	CauseEffect	true	accidente	murieron
+Relation	T5	T6	EffectCause	true	murieron	accidente
+Relation	T3	T6	CauseEffect	true	estrelló	accidente
+Relation	T6	T3	EffectCause	true	accidente	estrelló
+Relation	T0	T2	NoRel	true	vuelo	partido
+Relation	T0	T3	NoRel	true	vuelo	estrelló
+Relation	T0	T4	NoRel	true	vuelo	aproximación
+Relation	T0	T5	NoRel	true	vuelo	murieron
+Relation	T0	T8	NoRel	true	vuelo	voló
+Relation	T1	T0	NoRel	true	operado	vuelo
+Relation	T1	T3	NoRel	true	operado	estrelló
+Relation	T2	T3	NoRel	true	partido	estrelló
+Relation	T2	T5	NoRel	true	partido	murieron
+Relation	T2	T7	NoRel	true	partido	accidentada
+Relation	T3	T0	NoRel	true	estrelló	vuelo
+Relation	T3	T5	NoRel	true	estrelló	murieron
+Relation	T3	T7	NoRel	true	estrelló	accidentada
+Relation	T3	T8	NoRel	true	estrelló	voló
+Relation	T4	T6	NoRel	true	aproximación	accidente
+Relation	T4	T8	NoRel	true	aproximación	voló
+Relation	T5	T1	NoRel	true	murieron	operado
+Relation	T5	T7	NoRel	true	murieron	accidentada
+Relation	T6	T1	NoRel	true	accidente	operado
+Relation	T6	T2	NoRel	true	accidente	partido
+Relation	T6	T4	NoRel	true	accidente	aproximación
+Relation	T7	T2	NoRel	true	accidentada	partido
+Relation	T7	T5	NoRel	true	accidentada	murieron
+Relation	T7	T6	NoRel	true	accidentada	accidente
+Relation	T7	T8	NoRel	true	accidentada	voló
+Relation	T8	T4	NoRel	true	voló	aproximación
+Relation	T8	T7	NoRel	true	voló	accidentada

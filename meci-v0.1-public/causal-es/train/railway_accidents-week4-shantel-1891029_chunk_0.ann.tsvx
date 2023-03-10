@@ -1,0 +1,82 @@
+Text	El ACCIDENTE DE TRENES DE CHATSWORTH EN LOS ÁNGELES fue un accidente ferroviario que ocurrió el 12 de septiembre de 2008 a las 16:23 PDT ( 23:23 GMT ) en el distrito Chatsworth de Los Ángeles , California en los Estados Unidos .	La colisión es el accidente ferroviario más mortífero en los Estados Unidos desde el accidente ferroviario de Big Bayou Canot de 1993 .	Los motivos del choque aún no se han esclarecido pero Tyrell especificó a ABC7 que la locomotora estaba jalando al tren de Metrolink , y que la fuerza de la colisión al parecer empujó a la pesada locomotora al primer vagón de pasajeros , el cual se volcó a un lado .	Los trenes viajaban por la misma vía , y aparentemente los trenes se cambian desde una locación remota .	Tyrell le dijo a la emisora que “ _ claramente algo estuvo mal _ ” .
+Event	T0	ACCIDENTE	EVENT	3
+Event	T2	colisión	EVENT	232
+Event	T3	accidente	EVENT	247
+Event	T4	accidente	EVENT	314
+Event	T5	choque	EVENT	381
+Event	T6	esclarecido	EVENT	402
+Event	T7	especificó	EVENT	426
+Event	T8	jalando	EVENT	469
+Event	T9	colisión	EVENT	522
+Event	T10	empujó	EVENT	542
+Event	T11	volcó	EVENT	614
+Event	T12	viajaban	EVENT	643
+Event	T13	cambian	EVENT	701
+Event	T14	dijo	EVENT	747
+Relation	T9	T10	CauseEffect	true	colisión	empujó
+Relation	T10	T9	EffectCause	true	empujó	colisión
+Relation	T10	T11	CauseEffect	true	empujó	volcó
+Relation	T11	T10	EffectCause	true	volcó	empujó
+Relation	T0	T11	NoRel	true	ACCIDENTE	volcó
+Relation	T0	T12	NoRel	true	ACCIDENTE	viajaban
+Relation	T0	T6	NoRel	true	ACCIDENTE	esclarecido
+Relation	T0	T7	NoRel	true	ACCIDENTE	especificó
+Relation	T0	T9	NoRel	true	ACCIDENTE	colisión
+Relation	T10	T2	NoRel	true	empujó	colisión
+Relation	T10	T5	NoRel	true	empujó	choque
+Relation	T10	T7	NoRel	true	empujó	especificó
+Relation	T11	T0	NoRel	true	volcó	ACCIDENTE
+Relation	T11	T13	NoRel	true	volcó	cambian
+Relation	T11	T14	NoRel	true	volcó	dijo
+Relation	T11	T2	NoRel	true	volcó	colisión
+Relation	T11	T4	NoRel	true	volcó	accidente
+Relation	T12	T14	NoRel	true	viajaban	dijo
+Relation	T12	T6	NoRel	true	viajaban	esclarecido
+Relation	T12	T7	NoRel	true	viajaban	especificó
+Relation	T12	T8	NoRel	true	viajaban	jalando
+Relation	T12	T9	NoRel	true	viajaban	colisión
+Relation	T13	T0	NoRel	true	cambian	ACCIDENTE
+Relation	T13	T12	NoRel	true	cambian	viajaban
+Relation	T13	T3	NoRel	true	cambian	accidente
+Relation	T13	T9	NoRel	true	cambian	colisión
+Relation	T14	T12	NoRel	true	dijo	viajaban
+Relation	T14	T13	NoRel	true	dijo	cambian
+Relation	T14	T3	NoRel	true	dijo	accidente
+Relation	T14	T7	NoRel	true	dijo	especificó
+Relation	T14	T9	NoRel	true	dijo	colisión
+Relation	T2	T10	NoRel	true	colisión	empujó
+Relation	T2	T12	NoRel	true	colisión	viajaban
+Relation	T2	T14	NoRel	true	colisión	dijo
+Relation	T2	T3	NoRel	true	colisión	accidente
+Relation	T2	T5	NoRel	true	colisión	choque
+Relation	T3	T10	NoRel	true	accidente	empujó
+Relation	T3	T11	NoRel	true	accidente	volcó
+Relation	T3	T12	NoRel	true	accidente	viajaban
+Relation	T3	T14	NoRel	true	accidente	dijo
+Relation	T3	T6	NoRel	true	accidente	esclarecido
+Relation	T3	T7	NoRel	true	accidente	especificó
+Relation	T4	T12	NoRel	true	accidente	viajaban
+Relation	T4	T14	NoRel	true	accidente	dijo
+Relation	T4	T2	NoRel	true	accidente	colisión
+Relation	T4	T7	NoRel	true	accidente	especificó
+Relation	T4	T9	NoRel	true	accidente	colisión
+Relation	T5	T13	NoRel	true	choque	cambian
+Relation	T5	T14	NoRel	true	choque	dijo
+Relation	T6	T0	NoRel	true	esclarecido	ACCIDENTE
+Relation	T6	T11	NoRel	true	esclarecido	volcó
+Relation	T6	T13	NoRel	true	esclarecido	cambian
+Relation	T6	T4	NoRel	true	esclarecido	accidente
+Relation	T7	T11	NoRel	true	especificó	volcó
+Relation	T7	T12	NoRel	true	especificó	viajaban
+Relation	T7	T5	NoRel	true	especificó	choque
+Relation	T7	T8	NoRel	true	especificó	jalando
+Relation	T7	T9	NoRel	true	especificó	colisión
+Relation	T8	T0	NoRel	true	jalando	ACCIDENTE
+Relation	T8	T10	NoRel	true	jalando	empujó
+Relation	T8	T2	NoRel	true	jalando	colisión
+Relation	T8	T3	NoRel	true	jalando	accidente
+Relation	T8	T5	NoRel	true	jalando	choque
+Relation	T9	T11	NoRel	true	colisión	volcó
+Relation	T9	T12	NoRel	true	colisión	viajaban
+Relation	T9	T14	NoRel	true	colisión	dijo
+Relation	T9	T3	NoRel	true	colisión	accidente

@@ -1,0 +1,53 @@
+Text	Denne får i 2003 selskab af en gasturbine , der flyttes fra Næstved Kraftvarmeværk .	I 2006 etableres yderligere 2 spidslast varmekedler , der alene kan levere varme til spidslast ( se nedenfor under Brændsel og fjernvarmeproduktion for yderligere info ) .	I 2006 blev den tidligere spidslast dieselmotor og de tilhørende bygninger indrettet som teknologimuseet DieselHouse af MAN B&W Diesel A/S .	Den 12. april 1994 opstod et strømsvigt grundet en højspændingsfejl på værket , hvilket mørklagde store dele af den indre by samt Vesterbro i fire timer .	Blandt andet gik Rådhusuret i stå .
+Event	T0	får	EVENT	6
+Event	T1	flyttes	EVENT	48
+Event	T2	etableres	EVENT	92
+Event	T3	indrettet	EVENT	332
+Event	T4	opstod	EVENT	417
+Event	T5	mørklagde	EVENT	486
+Event	T6	gik	EVENT	566
+Event	T7	levere	EVENT	153
+Event	T8	strømsvigt	EVENT	427
+Event	T9	højspændingsfejl	EVENT	449
+Relation	T9	T8	CauseEffect	true	højspændingsfejl	strømsvigt
+Relation	T8	T9	EffectCause	true	strømsvigt	højspændingsfejl
+Relation	T8	T5	CauseEffect	true	strømsvigt	mørklagde
+Relation	T5	T8	EffectCause	true	mørklagde	strømsvigt
+Relation	T8	T6	CauseEffect	true	strømsvigt	gik
+Relation	T6	T8	EffectCause	true	gik	strømsvigt
+Relation	T0	T4	NoRel	true	får	opstod
+Relation	T0	T6	NoRel	true	får	gik
+Relation	T0	T7	NoRel	true	får	levere
+Relation	T1	T6	NoRel	true	flyttes	gik
+Relation	T1	T8	NoRel	true	flyttes	strømsvigt
+Relation	T2	T5	NoRel	true	etableres	mørklagde
+Relation	T2	T6	NoRel	true	etableres	gik
+Relation	T2	T8	NoRel	true	etableres	strømsvigt
+Relation	T3	T2	NoRel	true	indrettet	etableres
+Relation	T3	T5	NoRel	true	indrettet	mørklagde
+Relation	T3	T6	NoRel	true	indrettet	gik
+Relation	T3	T8	NoRel	true	indrettet	strømsvigt
+Relation	T3	T9	NoRel	true	indrettet	højspændingsfejl
+Relation	T4	T1	NoRel	true	opstod	flyttes
+Relation	T4	T3	NoRel	true	opstod	indrettet
+Relation	T4	T7	NoRel	true	opstod	levere
+Relation	T4	T8	NoRel	true	opstod	strømsvigt
+Relation	T5	T1	NoRel	true	mørklagde	flyttes
+Relation	T5	T2	NoRel	true	mørklagde	etableres
+Relation	T6	T2	NoRel	true	gik	etableres
+Relation	T6	T3	NoRel	true	gik	indrettet
+Relation	T6	T4	NoRel	true	gik	opstod
+Relation	T6	T5	NoRel	true	gik	mørklagde
+Relation	T6	T7	NoRel	true	gik	levere
+Relation	T6	T9	NoRel	true	gik	højspændingsfejl
+Relation	T7	T0	NoRel	true	levere	får
+Relation	T7	T2	NoRel	true	levere	etableres
+Relation	T7	T3	NoRel	true	levere	indrettet
+Relation	T7	T5	NoRel	true	levere	mørklagde
+Relation	T7	T8	NoRel	true	levere	strømsvigt
+Relation	T7	T9	NoRel	true	levere	højspændingsfejl
+Relation	T8	T2	NoRel	true	strømsvigt	etableres
+Relation	T9	T0	NoRel	true	højspændingsfejl	får
+Relation	T9	T2	NoRel	true	højspændingsfejl	etableres
+Relation	T9	T5	NoRel	true	højspændingsfejl	mørklagde
+Relation	T9	T7	NoRel	true	højspændingsfejl	levere

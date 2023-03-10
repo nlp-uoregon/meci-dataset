@@ -1,0 +1,48 @@
+Text	5 saat 42 dakika uçuştan sonra yerel saatle 00: 19'da uçak Yakutsk'a indi .	İniş sırasında uçuş mühendisi yanlışlıkla motorların kontrol kollarını " ters itme " konumundan " ileri itme " konumuna getirdi , yani itme ters çeviricilerini açmak yerine 1 ve 4 numaralı motorların gücünü arttırdı .	Bunun sonucunda uçak hızlanmaya başladı .	Pilotlar motorların kalkış modunda olduğunu fark edemedi .	Hızın düşmek yerine arttığını gördüklerinde acil frenlemeyi açtılar .
+Event	T0	indi	EVENT	69
+Event	T1	İniş	EVENT	76
+Event	T3	getirdi	EVENT	196
+Event	T5	açmak	EVENT	236
+Event	T6	arttırdı	EVENT	283
+Event	T7	başladı	EVENT	326
+Event	T9	düşmek	EVENT	401
+Event	T2	arttığını	EVENT	415
+Event	T4	gördüklerinde	EVENT	425
+Event	T10	açtılar	EVENT	455
+Relation	T6	T7	CauseEffect	true	arttırdı	başladı
+Relation	T7	T6	EffectCause	true	başladı	arttırdı
+Relation	T4	T10	CauseEffect	true	gördüklerinde	açtılar
+Relation	T10	T4	EffectCause	true	açtılar	gördüklerinde
+Relation	T0	T10	NoRel	true	indi	açtılar
+Relation	T0	T4	NoRel	true	indi	gördüklerinde
+Relation	T0	T5	NoRel	true	indi	açmak
+Relation	T0	T6	NoRel	true	indi	arttırdı
+Relation	T1	T5	NoRel	true	İniş	açmak
+Relation	T1	T7	NoRel	true	İniş	başladı
+Relation	T10	T1	NoRel	true	açtılar	İniş
+Relation	T2	T3	NoRel	true	arttığını	getirdi
+Relation	T2	T5	NoRel	true	arttığını	açmak
+Relation	T2	T7	NoRel	true	arttığını	başladı
+Relation	T2	T9	NoRel	true	arttığını	düşmek
+Relation	T3	T0	NoRel	true	getirdi	indi
+Relation	T3	T10	NoRel	true	getirdi	açtılar
+Relation	T3	T4	NoRel	true	getirdi	gördüklerinde
+Relation	T3	T7	NoRel	true	getirdi	başladı
+Relation	T3	T9	NoRel	true	getirdi	düşmek
+Relation	T4	T1	NoRel	true	gördüklerinde	İniş
+Relation	T4	T3	NoRel	true	gördüklerinde	getirdi
+Relation	T4	T6	NoRel	true	gördüklerinde	arttırdı
+Relation	T4	T7	NoRel	true	gördüklerinde	başladı
+Relation	T5	T1	NoRel	true	açmak	İniş
+Relation	T5	T2	NoRel	true	açmak	arttığını
+Relation	T5	T7	NoRel	true	açmak	başladı
+Relation	T5	T9	NoRel	true	açmak	düşmek
+Relation	T6	T1	NoRel	true	arttırdı	İniş
+Relation	T6	T2	NoRel	true	arttırdı	arttığını
+Relation	T6	T3	NoRel	true	arttırdı	getirdi
+Relation	T7	T10	NoRel	true	başladı	açtılar
+Relation	T7	T2	NoRel	true	başladı	arttığını
+Relation	T7	T4	NoRel	true	başladı	gördüklerinde
+Relation	T7	T5	NoRel	true	başladı	açmak
+Relation	T9	T6	NoRel	true	düşmek	arttırdı
+Relation	T9	T7	NoRel	true	düşmek	başladı

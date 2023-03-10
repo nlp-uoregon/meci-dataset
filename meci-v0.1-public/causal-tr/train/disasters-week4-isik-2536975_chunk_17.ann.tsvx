@@ -1,0 +1,40 @@
+Text	" ifadeleri yer aldı .	- : Dışişleri Bakanı Nikos Dendias , mevkidaşı Mevlüt Çavuşoğlu'nu telefonla aradı .	Depremle ilgili geçmiş olsun dileklerini ileten Dendias yardıma hazır olduklarını bildirdi .	Yunanistan Başbakanı Kiryakos Miçotakis , depremden sonra sosyal medya hesabından paylaştığı mesajda , " Türkiye'yi vuran yıkıcı depremin ardından Cumhurbaşkanı Erdoğan ve Türk halkı ile canı gönülden dayanışma içindeyiz .	Arama ve kurtarma ekiplerimiz yardım etmeye hazır .
+Event	T0	aldı	EVENT	16
+Event	T1	aradı	EVENT	100
+Event	T2	bildirdi	EVENT	190
+Event	T3	depremin	EVENT	330
+Event	T4	yardım	EVENT	454
+Event	T5	Depremle	EVENT	108
+Event	T6	ileten	EVENT	149
+Event	T7	depremden	EVENT	243
+Event	T8	paylaştığı	EVENT	283
+Relation	T5	T1	CauseEffect	true	Depremle	aradı
+Relation	T1	T5	EffectCause	true	aradı	Depremle
+Relation	T1	T6	CauseEffect	true	aradı	ileten
+Relation	T6	T1	EffectCause	true	ileten	aradı
+Relation	T1	T2	CauseEffect	true	aradı	bildirdi
+Relation	T2	T1	EffectCause	true	bildirdi	aradı
+Relation	T7	T8	CauseEffect	true	depremden	paylaştığı
+Relation	T8	T7	EffectCause	true	paylaştığı	depremden
+Relation	T0	T2	NoRel	true	aldı	bildirdi
+Relation	T0	T4	NoRel	true	aldı	yardım
+Relation	T1	T7	NoRel	true	aradı	depremden
+Relation	T1	T8	NoRel	true	aradı	paylaştığı
+Relation	T2	T8	NoRel	true	bildirdi	paylaştığı
+Relation	T3	T5	NoRel	true	depremin	Depremle
+Relation	T3	T6	NoRel	true	depremin	ileten
+Relation	T4	T3	NoRel	true	yardım	depremin
+Relation	T4	T5	NoRel	true	yardım	Depremle
+Relation	T5	T2	NoRel	true	Depremle	bildirdi
+Relation	T5	T3	NoRel	true	Depremle	depremin
+Relation	T5	T8	NoRel	true	Depremle	paylaştığı
+Relation	T6	T3	NoRel	true	ileten	depremin
+Relation	T6	T7	NoRel	true	ileten	depremden
+Relation	T6	T8	NoRel	true	ileten	paylaştığı
+Relation	T7	T0	NoRel	true	depremden	aldı
+Relation	T7	T4	NoRel	true	depremden	yardım
+Relation	T7	T6	NoRel	true	depremden	ileten
+Relation	T8	T0	NoRel	true	paylaştığı	aldı
+Relation	T8	T2	NoRel	true	paylaştığı	bildirdi
+Relation	T8	T4	NoRel	true	paylaştığı	yardım
+Relation	T8	T5	NoRel	true	paylaştığı	Depremle

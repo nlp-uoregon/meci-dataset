@@ -1,0 +1,78 @@
+Text	- The unsatisfactory flight plan , which established the flight approaching the airport at a bearing of 240 ° from the side of the mountains ; - The approach configuration itself , which was not approved by the Ministry of Civil Aviation	- Insufficient preparation for the flight to Sochi Airport by the crew , resulting in their following the air traffic controller ’s instructions which put them on a dangerous course , causing the flight to enter the clouds and crash into the mountain . -	The vicinity of the approach of aircraft to the mountains , specifically the distance of separation between incoming flights and the mountains .	After the crash the approach by the mountains was banned .	All incoming aircraft to Sochi Airport now carry out approach over the sea .
+Event	T0	established	EVENT	41
+Event	T1	approaching	EVENT	64
+Event	T10	causing	EVENT	422
+Event	T11	flight	EVENT	434
+Event	T12	enter	EVENT	444
+Event	T13	crash	EVENT	465
+Event	T14	approach	EVENT	513
+Event	T15	separation	EVENT	582
+Event	T16	flights	EVENT	610
+Event	T17	crash	EVENT	648
+Event	T18	approach	EVENT	658
+Event	T19	banned	EVENT	688
+Event	T2	bearing	EVENT	93
+Event	T20	approach	EVENT	750
+Event	T22	Insufficient preparation	EVENT	240
+Event	T3	configuration	EVENT	158
+Event	T4	approved	EVENT	195
+Event	T5	flight	EVENT	273
+Event	T6	resulting	EVENT	311
+Event	T7	following	EVENT	330
+Event	T8	instructions	EVENT	370
+Event	T9	course	EVENT	413
+Relation	T0	T2	CauseEffect	true	established	bearing
+Relation	T2	T0	EffectCause	true	bearing	established
+Relation	T3	T0	CauseEffect	true	configuration	established
+Relation	T0	T3	EffectCause	true	established	configuration
+Relation	T22	T7	CauseEffect	true	Insufficient preparation	following
+Relation	T7	T22	EffectCause	true	following	Insufficient preparation
+Relation	T17	T19	CauseEffect	true	crash	banned
+Relation	T19	T17	EffectCause	true	banned	crash
+Relation	T19	T20	CauseEffect	true	banned	approach
+Relation	T20	T19	EffectCause	true	approach	banned
+Relation	T7	T9	CauseEffect	true	following	course
+Relation	T9	T7	EffectCause	true	course	following
+Relation	T0	T1	NoRel	true	established	approaching
+Relation	T0	T18	NoRel	true	established	approach
+Relation	T0	T6	NoRel	true	established	resulting
+Relation	T0	T7	NoRel	true	established	following
+Relation	T10	T2	NoRel	true	causing	bearing
+Relation	T10	T22	NoRel	true	causing	Insufficient preparation
+Relation	T10	T5	NoRel	true	causing	flight
+Relation	T11	T15	NoRel	true	flight	separation
+Relation	T11	T3	NoRel	true	flight	configuration
+Relation	T12	T15	NoRel	true	enter	separation
+Relation	T12	T20	NoRel	true	enter	approach
+Relation	T12	T6	NoRel	true	enter	resulting
+Relation	T13	T12	NoRel	true	crash	enter
+Relation	T15	T9	NoRel	true	separation	course
+Relation	T16	T11	NoRel	true	flights	flight
+Relation	T17	T10	NoRel	true	crash	causing
+Relation	T17	T2	NoRel	true	crash	bearing
+Relation	T17	T3	NoRel	true	crash	configuration
+Relation	T17	T4	NoRel	true	crash	approved
+Relation	T18	T19	NoRel	true	approach	banned
+Relation	T19	T4	NoRel	true	banned	approved
+Relation	T2	T15	NoRel	true	bearing	separation
+Relation	T2	T17	NoRel	true	bearing	crash
+Relation	T2	T5	NoRel	true	bearing	flight
+Relation	T20	T13	NoRel	true	approach	crash
+Relation	T20	T17	NoRel	true	approach	crash
+Relation	T20	T4	NoRel	true	approach	approved
+Relation	T20	T7	NoRel	true	approach	following
+Relation	T22	T1	NoRel	true	Insufficient preparation	approaching
+Relation	T4	T10	NoRel	true	approved	causing
+Relation	T4	T16	NoRel	true	approved	flights
+Relation	T4	T5	NoRel	true	approved	flight
+Relation	T4	T7	NoRel	true	approved	following
+Relation	T5	T15	NoRel	true	flight	separation
+Relation	T7	T0	NoRel	true	following	established
+Relation	T7	T12	NoRel	true	following	enter
+Relation	T7	T13	NoRel	true	following	crash
+Relation	T8	T10	NoRel	true	instructions	causing
+Relation	T8	T17	NoRel	true	instructions	crash
+Relation	T8	T18	NoRel	true	instructions	approach
+Relation	T9	T10	NoRel	true	course	causing
+Relation	T9	T19	NoRel	true	course	banned
+Relation	T9	T6	NoRel	true	course	resulting

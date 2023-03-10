@@ -1,0 +1,15 @@
+Text	Samtidig var voldene en snærende binding for byens ekspansion .	Familier var stuvet sammen i bag- og sidehuse , flere familier i samme lejlighed ; i 1853 boede der 220.000 mennesker i Indre by .	I gaderne flød affald og ekskrementer , og byen savnede egentlige kloakker .	Drikkevandet var urent overfladevand tilført gennem udhulede træstammer fra de omkringliggende søer , og renovationen ( " natmændene " ) var usystematisk og lemfældig .	Lægerne var magtesløse .
+Event	T0	binding	EVENT	33
+Event	T1	ekspansion	EVENT	51
+Event	T3	flød	EVENT	205
+Event	T4	savnede	EVENT	243
+Event	T5	tilført	EVENT	309
+Relation	T0	T3	CauseEffect	true	binding	flød
+Relation	T3	T0	EffectCause	true	flød	binding
+Relation	T3	T4	CauseEffect	true	flød	savnede
+Relation	T4	T3	EffectCause	true	savnede	flød
+Relation	T1	T3	NoRel	true	ekspansion	flød
+Relation	T1	T4	NoRel	true	ekspansion	savnede
+Relation	T3	T1	NoRel	true	flød	ekspansion
+Relation	T3	T5	NoRel	true	flød	tilført
+Relation	T4	T1	NoRel	true	savnede	ekspansion

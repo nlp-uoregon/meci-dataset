@@ -1,0 +1,30 @@
+Text	İşçi ve asker kitleleri devrimci komitenin kararlarını beklerken 11 Ocak’ta karşı devrim saldırıya geçti .	KPD’nin büroları ordu tarafından işgal ediliyordu .	13 Ocak’ta ise Berlin’e karşıdevrim hâkim oluyordu .	Hükûmet devrimci hareketi tamamen ortadan kaldırmak için Freikorps sayesinde tüm devrimcileri öldürüyordu .	15 Ocak’ta da Rosa Luxemburg ve Karl Liebknecht öldürüldüler .
+Event	T0	beklerken	EVENT	55
+Event	T1	geçti	EVENT	99
+Event	T2	hareketi	EVENT	229
+Event	T3	öldürüyordu	EVENT	306
+Event	T4	öldürüldüler	EVENT	368
+Event	T5	ediliyordu	EVENT	146
+Event	T6	oluyordu	EVENT	201
+Relation	T1	T5	CauseEffect	true	geçti	ediliyordu
+Relation	T5	T1	EffectCause	true	ediliyordu	geçti
+Relation	T1	T3	CauseEffect	true	geçti	öldürüyordu
+Relation	T3	T1	EffectCause	true	öldürüyordu	geçti
+Relation	T3	T4	CauseEffect	true	öldürüyordu	öldürüldüler
+Relation	T4	T3	EffectCause	true	öldürüldüler	öldürüyordu
+Relation	T0	T2	NoRel	true	beklerken	hareketi
+Relation	T0	T4	NoRel	true	beklerken	öldürüldüler
+Relation	T0	T6	NoRel	true	beklerken	oluyordu
+Relation	T1	T6	NoRel	true	geçti	oluyordu
+Relation	T2	T0	NoRel	true	hareketi	beklerken
+Relation	T2	T1	NoRel	true	hareketi	geçti
+Relation	T2	T4	NoRel	true	hareketi	öldürüldüler
+Relation	T3	T0	NoRel	true	öldürüyordu	beklerken
+Relation	T4	T0	NoRel	true	öldürüldüler	beklerken
+Relation	T4	T1	NoRel	true	öldürüldüler	geçti
+Relation	T4	T5	NoRel	true	öldürüldüler	ediliyordu
+Relation	T5	T3	NoRel	true	ediliyordu	öldürüyordu
+Relation	T5	T4	NoRel	true	ediliyordu	öldürüldüler
+Relation	T5	T6	NoRel	true	ediliyordu	oluyordu
+Relation	T6	T4	NoRel	true	oluyordu	öldürüldüler
+Relation	T6	T5	NoRel	true	oluyordu	ediliyordu

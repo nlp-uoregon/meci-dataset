@@ -1,0 +1,79 @@
+Text	Pero al aterrizar , se sale de pista y se estrella contra la torre de control , y se incendia .	Fallece el piloto , y 41 personas resultan heridas .	El aparato , un ATR-72 , tenía poco más de ocho años , y ya había operado anteriormente para Bangkok Airways .	El fuselaje de la aeronave pasó algunos años en carreteras en diferentes partes de Samui antes de ser hundido en octubre de 2013 como parte del Proyecto de arrecifes artificiales de Majcha Air Samui .	- Accidente de aviación - Anexo : Accidentes más graves de aviación ( 1943 - presente ) - Anexo : Accidentes e incidentes notables en la aviación civil - Anexo : Accidentes por fabricante de aeronave
+Event	T0	sale	EVENT	23
+Event	T1	estrella	EVENT	42
+Event	T2	incendia	EVENT	85
+Event	T3	Fallece	EVENT	96
+Event	T4	heridas	EVENT	139
+Event	T5	operado	EVENT	215
+Event	T6	fuselaje	EVENT	263
+Event	T7	pasó	EVENT	287
+Event	T8	hundido	EVENT	362
+Event	T9	arrecifes	EVENT	416
+Event	T10	Accidente	EVENT	463
+Event	T11	Accidentes	EVENT	495
+Event	T12	Accidentes	EVENT	559
+Event	T13	Accidentes	EVENT	623
+Relation	T0	T1	CauseEffect	true	sale	estrella
+Relation	T1	T0	EffectCause	true	estrella	sale
+Relation	T1	T2	CauseEffect	true	estrella	incendia
+Relation	T2	T1	EffectCause	true	incendia	estrella
+Relation	T2	T3	CauseEffect	true	incendia	Fallece
+Relation	T3	T2	EffectCause	true	Fallece	incendia
+Relation	T2	T4	CauseEffect	true	incendia	heridas
+Relation	T4	T2	EffectCause	true	heridas	incendia
+Relation	T0	T13	NoRel	true	sale	Accidentes
+Relation	T0	T2	NoRel	true	sale	incendia
+Relation	T0	T6	NoRel	true	sale	fuselaje
+Relation	T1	T5	NoRel	true	estrella	operado
+Relation	T1	T8	NoRel	true	estrella	hundido
+Relation	T1	T9	NoRel	true	estrella	arrecifes
+Relation	T10	T0	NoRel	true	Accidente	sale
+Relation	T10	T1	NoRel	true	Accidente	estrella
+Relation	T10	T3	NoRel	true	Accidente	Fallece
+Relation	T10	T5	NoRel	true	Accidente	operado
+Relation	T10	T9	NoRel	true	Accidente	arrecifes
+Relation	T11	T13	NoRel	true	Accidentes	Accidentes
+Relation	T11	T2	NoRel	true	Accidentes	incendia
+Relation	T11	T4	NoRel	true	Accidentes	heridas
+Relation	T11	T8	NoRel	true	Accidentes	hundido
+Relation	T11	T9	NoRel	true	Accidentes	arrecifes
+Relation	T12	T1	NoRel	true	Accidentes	estrella
+Relation	T12	T13	NoRel	true	Accidentes	Accidentes
+Relation	T12	T6	NoRel	true	Accidentes	fuselaje
+Relation	T12	T8	NoRel	true	Accidentes	hundido
+Relation	T13	T10	NoRel	true	Accidentes	Accidente
+Relation	T13	T12	NoRel	true	Accidentes	Accidentes
+Relation	T13	T2	NoRel	true	Accidentes	incendia
+Relation	T13	T3	NoRel	true	Accidentes	Fallece
+Relation	T2	T13	NoRel	true	incendia	Accidentes
+Relation	T2	T5	NoRel	true	incendia	operado
+Relation	T2	T6	NoRel	true	incendia	fuselaje
+Relation	T2	T7	NoRel	true	incendia	pasó
+Relation	T2	T8	NoRel	true	incendia	hundido
+Relation	T3	T0	NoRel	true	Fallece	sale
+Relation	T3	T12	NoRel	true	Fallece	Accidentes
+Relation	T3	T13	NoRel	true	Fallece	Accidentes
+Relation	T3	T8	NoRel	true	Fallece	hundido
+Relation	T4	T1	NoRel	true	heridas	estrella
+Relation	T4	T10	NoRel	true	heridas	Accidente
+Relation	T5	T12	NoRel	true	operado	Accidentes
+Relation	T5	T4	NoRel	true	operado	heridas
+Relation	T5	T6	NoRel	true	operado	fuselaje
+Relation	T5	T7	NoRel	true	operado	pasó
+Relation	T5	T9	NoRel	true	operado	arrecifes
+Relation	T6	T11	NoRel	true	fuselaje	Accidentes
+Relation	T6	T13	NoRel	true	fuselaje	Accidentes
+Relation	T6	T2	NoRel	true	fuselaje	incendia
+Relation	T6	T5	NoRel	true	fuselaje	operado
+Relation	T6	T7	NoRel	true	fuselaje	pasó
+Relation	T6	T9	NoRel	true	fuselaje	arrecifes
+Relation	T7	T0	NoRel	true	pasó	sale
+Relation	T7	T1	NoRel	true	pasó	estrella
+Relation	T7	T13	NoRel	true	pasó	Accidentes
+Relation	T7	T2	NoRel	true	pasó	incendia
+Relation	T8	T2	NoRel	true	hundido	incendia
+Relation	T8	T6	NoRel	true	hundido	fuselaje
+Relation	T8	T7	NoRel	true	hundido	pasó
+Relation	T9	T2	NoRel	true	arrecifes	incendia
+Relation	T9	T3	NoRel	true	arrecifes	Fallece
+Relation	T9	T8	NoRel	true	arrecifes	hundido

@@ -1,0 +1,127 @@
+Text	The parked airplane that was struck by the DC - 6 burned so extensively that little remained of it afterwards .	The Civil Aeronautics Board ( CAB ) held a hearing in Dallas in December 1949 to investigate the causes of the accident .	During the hearings , it was revealed that neither Claude nor Forbes knew that Lewis had feathered the No. 4 propeller ; Claude did not find out until hearing Lewis ' statement being read to the CAB .	After investigating the remains of the aircraft , conducting flight tests to replicate the accident scenario , and completing the hearing , the CAB concluded in August 1950 that the probable cause of the accident was " the faulty execution of an engine - out approach . "	A series of significant mishaps by the crew contributed to the final outcome :
+Event	T0	parked	EVENT	4
+Event	T1	struck	EVENT	29
+Event	T2	burned	EVENT	50
+Event	T3	remained	EVENT	84
+Event	T4	held	EVENT	148
+Event	T5	hearing	EVENT	155
+Event	T6	investigate	EVENT	193
+Event	T7	accident	EVENT	223
+Event	T8	hearings	EVENT	245
+Event	T9	revealed	EVENT	263
+Event	T10	knew	EVENT	303
+Event	T11	feathered	EVENT	323
+Event	T12	hearing	EVENT	385
+Event	T13	statement	EVENT	401
+Event	T14	read	EVENT	417
+Event	T15	investigating	EVENT	441
+Event	T16	remains	EVENT	459
+Event	T17	tests	EVENT	503
+Event	T18	replicate	EVENT	512
+Event	T19	scenario	EVENT	535
+Event	T20	completing	EVENT	550
+Event	T21	hearing	EVENT	565
+Event	T22	concluded	EVENT	583
+Event	T23	accident	EVENT	639
+Event	T24	execution	EVENT	665
+Event	T25	approach	EVENT	694
+Event	T26	series	EVENT	709
+Event	T27	mishaps	EVENT	731
+Event	T28	conducting	EVENT	485
+Relation	T2	T3	CauseEffect	true	burned	remained
+Relation	T3	T2	EffectCause	true	remained	burned
+Relation	T7	T6	CauseEffect	true	accident	investigate
+Relation	T6	T7	EffectCause	true	investigate	accident
+Relation	T5	T6	CauseEffect	true	hearing	investigate
+Relation	T6	T5	EffectCause	true	investigate	hearing
+Relation	T15	T18	CauseEffect	true	investigating	replicate
+Relation	T18	T15	EffectCause	true	replicate	investigating
+Relation	T28	T18	CauseEffect	true	conducting	replicate
+Relation	T18	T28	EffectCause	true	replicate	conducting
+Relation	T24	T23	CauseEffect	true	execution	accident
+Relation	T23	T24	EffectCause	true	accident	execution
+Relation	T27	T23	CauseEffect	true	mishaps	accident
+Relation	T23	T27	EffectCause	true	accident	mishaps
+Relation	T0	T11	NoRel	true	parked	feathered
+Relation	T0	T16	NoRel	true	parked	remains
+Relation	T0	T7	NoRel	true	parked	accident
+Relation	T1	T18	NoRel	true	struck	replicate
+Relation	T1	T25	NoRel	true	struck	approach
+Relation	T10	T2	NoRel	true	knew	burned
+Relation	T10	T27	NoRel	true	knew	mishaps
+Relation	T10	T3	NoRel	true	knew	remained
+Relation	T10	T8	NoRel	true	knew	hearings
+Relation	T10	T9	NoRel	true	knew	revealed
+Relation	T11	T14	NoRel	true	feathered	read
+Relation	T11	T17	NoRel	true	feathered	tests
+Relation	T11	T18	NoRel	true	feathered	replicate
+Relation	T12	T13	NoRel	true	hearing	statement
+Relation	T12	T14	NoRel	true	hearing	read
+Relation	T12	T22	NoRel	true	hearing	concluded
+Relation	T12	T28	NoRel	true	hearing	conducting
+Relation	T13	T15	NoRel	true	statement	investigating
+Relation	T13	T22	NoRel	true	statement	concluded
+Relation	T14	T16	NoRel	true	read	remains
+Relation	T14	T27	NoRel	true	read	mishaps
+Relation	T15	T16	NoRel	true	investigating	remains
+Relation	T15	T4	NoRel	true	investigating	held
+Relation	T16	T2	NoRel	true	remains	burned
+Relation	T16	T23	NoRel	true	remains	accident
+Relation	T16	T27	NoRel	true	remains	mishaps
+Relation	T16	T6	NoRel	true	remains	investigate
+Relation	T17	T2	NoRel	true	tests	burned
+Relation	T17	T4	NoRel	true	tests	held
+Relation	T18	T3	NoRel	true	replicate	remained
+Relation	T2	T17	NoRel	true	burned	tests
+Relation	T2	T19	NoRel	true	burned	scenario
+Relation	T2	T21	NoRel	true	burned	hearing
+Relation	T2	T23	NoRel	true	burned	accident
+Relation	T20	T21	NoRel	true	completing	hearing
+Relation	T20	T27	NoRel	true	completing	mishaps
+Relation	T22	T24	NoRel	true	concluded	execution
+Relation	T22	T28	NoRel	true	concluded	conducting
+Relation	T22	T6	NoRel	true	concluded	investigate
+Relation	T23	T16	NoRel	true	accident	remains
+Relation	T23	T19	NoRel	true	accident	scenario
+Relation	T23	T4	NoRel	true	accident	held
+Relation	T24	T13	NoRel	true	execution	statement
+Relation	T24	T21	NoRel	true	execution	hearing
+Relation	T24	T25	NoRel	true	execution	approach
+Relation	T24	T4	NoRel	true	execution	held
+Relation	T24	T8	NoRel	true	execution	hearings
+Relation	T25	T14	NoRel	true	approach	read
+Relation	T25	T19	NoRel	true	approach	scenario
+Relation	T25	T28	NoRel	true	approach	conducting
+Relation	T25	T5	NoRel	true	approach	hearing
+Relation	T25	T9	NoRel	true	approach	revealed
+Relation	T26	T11	NoRel	true	series	feathered
+Relation	T26	T18	NoRel	true	series	replicate
+Relation	T27	T11	NoRel	true	mishaps	feathered
+Relation	T28	T0	NoRel	true	conducting	parked
+Relation	T28	T23	NoRel	true	conducting	accident
+Relation	T3	T27	NoRel	true	remained	mishaps
+Relation	T3	T5	NoRel	true	remained	hearing
+Relation	T3	T9	NoRel	true	remained	revealed
+Relation	T4	T14	NoRel	true	held	read
+Relation	T4	T17	NoRel	true	held	tests
+Relation	T4	T18	NoRel	true	held	replicate
+Relation	T4	T5	NoRel	true	held	hearing
+Relation	T5	T19	NoRel	true	hearing	scenario
+Relation	T5	T25	NoRel	true	hearing	approach
+Relation	T5	T27	NoRel	true	hearing	mishaps
+Relation	T5	T28	NoRel	true	hearing	conducting
+Relation	T5	T3	NoRel	true	hearing	remained
+Relation	T6	T0	NoRel	true	investigate	parked
+Relation	T6	T18	NoRel	true	investigate	replicate
+Relation	T7	T1	NoRel	true	accident	struck
+Relation	T7	T13	NoRel	true	accident	statement
+Relation	T7	T19	NoRel	true	accident	scenario
+Relation	T7	T22	NoRel	true	accident	concluded
+Relation	T8	T0	NoRel	true	hearings	parked
+Relation	T8	T1	NoRel	true	hearings	struck
+Relation	T8	T10	NoRel	true	hearings	knew
+Relation	T9	T1	NoRel	true	revealed	struck
+Relation	T9	T11	NoRel	true	revealed	feathered
+Relation	T9	T19	NoRel	true	revealed	scenario
+Relation	T9	T22	NoRel	true	revealed	concluded
+Relation	T9	T7	NoRel	true	revealed	accident

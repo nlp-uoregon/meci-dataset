@@ -1,0 +1,47 @@
+Text	Although the crew module remained mostly intact through the breakup , it was damaged enough that it lost pressure at a rate fast " enough to incapacitate the crew within seconds " , and was completely depressurized no later than 09:00:53 .	-____ 09:00:57 ( EI+1008 ) _: The crew module , intact to this point , was seen breaking into small subcomponents .	It disappeared from view at 09:01:10 .	The crew members , if not already dead , were killed no later than this point .	-____ 09:05 _: Residents of north central Texas , particularly near Tyler , reported a loud boom , a small concussion wave , smoke trails and debris in the clear skies above the counties east of Dallas .
+Event	T0	remained	EVENT	25
+Event	T1	intact	EVENT	41
+Event	T2	breakup	EVENT	60
+Event	T3	damaged	EVENT	77
+Event	T4	incapacitate	EVENT	141
+Event	T5	depressurized	EVENT	201
+Event	T6	intact	EVENT	288
+Event	T7	disappeared	EVENT	359
+Event	T8	dead	EVENT	429
+Event	T9	killed	EVENT	441
+Event	T10	reported	EVENT	551
+Event	T11	boom	EVENT	567
+Event	T12	wave	EVENT	593
+Event	T13	debris	EVENT	617
+Event	T14	lost	EVENT	100
+Event	T15	breaking	EVENT	320
+Event	T16	smoke	EVENT	600
+Relation	T2	T3	CauseEffect	true	breakup	damaged
+Relation	T3	T2	EffectCause	true	damaged	breakup
+Relation	T3	T14	CauseEffect	true	damaged	lost
+Relation	T14	T3	EffectCause	true	lost	damaged
+Relation	T3	T5	CauseEffect	true	damaged	depressurized
+Relation	T5	T3	EffectCause	true	depressurized	damaged
+Relation	T0	T13	NoRel	true	remained	debris
+Relation	T1	T14	NoRel	true	intact	lost
+Relation	T1	T4	NoRel	true	intact	incapacitate
+Relation	T10	T2	NoRel	true	reported	breakup
+Relation	T10	T5	NoRel	true	reported	depressurized
+Relation	T10	T9	NoRel	true	reported	killed
+Relation	T12	T11	NoRel	true	wave	boom
+Relation	T14	T11	NoRel	true	lost	boom
+Relation	T15	T5	NoRel	true	breaking	depressurized
+Relation	T15	T7	NoRel	true	breaking	disappeared
+Relation	T16	T1	NoRel	true	smoke	intact
+Relation	T16	T7	NoRel	true	smoke	disappeared
+Relation	T2	T13	NoRel	true	breakup	debris
+Relation	T3	T1	NoRel	true	damaged	intact
+Relation	T3	T7	NoRel	true	damaged	disappeared
+Relation	T3	T9	NoRel	true	damaged	killed
+Relation	T4	T12	NoRel	true	incapacitate	wave
+Relation	T5	T11	NoRel	true	depressurized	boom
+Relation	T7	T4	NoRel	true	disappeared	incapacitate
+Relation	T8	T1	NoRel	true	dead	intact
+Relation	T9	T13	NoRel	true	killed	debris
+Relation	T9	T4	NoRel	true	killed	incapacitate
+Relation	T9	T7	NoRel	true	killed	disappeared

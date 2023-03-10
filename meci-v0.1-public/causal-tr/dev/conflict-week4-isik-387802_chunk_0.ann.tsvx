@@ -1,0 +1,34 @@
+Text	YILDIZ SUIKASTI , 21 Temmuz 1905 günü Osmanlı padişahı II. Abdülhamit'e karşı Ermeni Devrimci Federasyonu tarafından Yıldız Hamidiye Camii önünde yapılmış bombalı bir suikast girişimidir .	Doğu Anadolu Bölgesi'nde bağımsız bir Ermeni Devleti kurulmasını isteyen Ermeni Devrimci Federasyonu yanlısı bir grup Ermeni Osmanlı padişahı II. Abdülhamit'i öldürmeyi planladı .	Bu amaçla bir atlı arabaya 120 kg miktarında patlayıcı yerleştirerek padişahın Cuma selamlığından sonra Yıldız Hamidiye Camii önündeki yoluna yerleştirdiler .	Suikast için padişahın kendi arabasına yürüyüş süresi ( 1 dk 42 saniye ) gibi en ince detay dahi hesaplanmıştı .	Patlayıcıların içine konduğu arabaya metal parçaları doldurulup bombanın etkisi artırılmıştı .
+Event	T1	yapılmış	EVENT	146
+Event	T2	girişimidir	EVENT	175
+Event	T3	planladı	EVENT	358
+Event	T4	yerleştirdiler	EVENT	511
+Event	T6	hesaplanmıştı	EVENT	625
+Event	T7	artırılmıştı	EVENT	721
+Event	T8	YILDIZ SUIKASTI	EVENT	0
+Event	T9	yerleştirerek	EVENT	424
+Event	T5	doldurulup	EVENT	694
+Relation	T3	T8	CauseEffect	true	planladı	YILDIZ SUIKASTI
+Relation	T8	T3	EffectCause	true	YILDIZ SUIKASTI	planladı
+Relation	T3	T9	CauseEffect	true	planladı	yerleştirerek
+Relation	T9	T3	EffectCause	true	yerleştirerek	planladı
+Relation	T9	T4	CauseEffect	true	yerleştirerek	yerleştirdiler
+Relation	T4	T9	EffectCause	true	yerleştirdiler	yerleştirerek
+Relation	T3	T6	CauseEffect	true	planladı	hesaplanmıştı
+Relation	T6	T3	EffectCause	true	hesaplanmıştı	planladı
+Relation	T5	T7	CauseEffect	true	doldurulup	artırılmıştı
+Relation	T7	T5	EffectCause	true	artırılmıştı	doldurulup
+Relation	T1	T4	NoRel	true	yapılmış	yerleştirdiler
+Relation	T2	T4	NoRel	true	girişimidir	yerleştirdiler
+Relation	T2	T7	NoRel	true	girişimidir	artırılmıştı
+Relation	T5	T1	NoRel	true	doldurulup	yapılmış
+Relation	T5	T2	NoRel	true	doldurulup	girişimidir
+Relation	T5	T6	NoRel	true	doldurulup	hesaplanmıştı
+Relation	T5	T8	NoRel	true	doldurulup	YILDIZ SUIKASTI
+Relation	T6	T2	NoRel	true	hesaplanmıştı	girişimidir
+Relation	T6	T7	NoRel	true	hesaplanmıştı	artırılmıştı
+Relation	T7	T3	NoRel	true	artırılmıştı	planladı
+Relation	T7	T8	NoRel	true	artırılmıştı	YILDIZ SUIKASTI
+Relation	T7	T9	NoRel	true	artırılmıştı	yerleştirerek
+Relation	T8	T9	NoRel	true	YILDIZ SUIKASTI	yerleştirerek
+Relation	T9	T6	NoRel	true	yerleştirerek	hesaplanmıştı

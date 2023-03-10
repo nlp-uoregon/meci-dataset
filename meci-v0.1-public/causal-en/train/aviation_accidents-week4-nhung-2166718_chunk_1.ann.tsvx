@@ -1,0 +1,32 @@
+Text	The aircraft involved was a Boeing 737 - 2H6 registered as It had been delivered new to MAS in September 1972 with registration	Flight 653 departed from Runway 22 at Penang International Airport at exactly 19:21 for Kuala Lumpur 's Subang Airport ( now known as Sultan Abdul Aziz Shah Airport ) .	Captain GK Ganjoor and First Officer Karamuzaman Jali were making landing preparations at 19:54 , while at an altitude of over Batu Arang and descending toward Runway 33 at Subang Airport , when the crew reported to Subang Tower that an " unidentified hijacker " was on board , after someone knocked on the cockpit doors .	Subsequently , the pilots were forced to cut off all communications by a group of hijackers who suddenly barged into the cockpit .	The tower immediately notified the authorities , who made emergency preparations at the airport .
+Event	T0	registered	EVENT	45
+Event	T1	departed	EVENT	139
+Event	T2	descending	EVENT	439
+Event	T3	reported	EVENT	501
+Event	T4	hijacker	EVENT	549
+Event	T5	forced	EVENT	651
+Event	T6	communications	EVENT	673
+Event	T7	notified	EVENT	773
+Event	T8	delivered	EVENT	71
+Event	T9	landing	EVENT	363
+Event	T10	knocked	EVENT	589
+Event	T11	barged	EVENT	725
+Event	T12	made	EVENT	804
+Relation	T11	T5	CauseEffect	true	barged	forced
+Relation	T5	T11	EffectCause	true	forced	barged
+Relation	T0	T6	NoRel	true	registered	communications
+Relation	T1	T0	NoRel	true	departed	registered
+Relation	T10	T4	NoRel	true	knocked	hijacker
+Relation	T10	T6	NoRel	true	knocked	communications
+Relation	T10	T7	NoRel	true	knocked	notified
+Relation	T11	T12	NoRel	true	barged	made
+Relation	T2	T4	NoRel	true	descending	hijacker
+Relation	T4	T5	NoRel	true	hijacker	forced
+Relation	T5	T10	NoRel	true	forced	knocked
+Relation	T5	T7	NoRel	true	forced	notified
+Relation	T6	T5	NoRel	true	communications	forced
+Relation	T6	T8	NoRel	true	communications	delivered
+Relation	T7	T1	NoRel	true	notified	departed
+Relation	T7	T10	NoRel	true	notified	knocked
+Relation	T7	T9	NoRel	true	notified	landing
+Relation	T8	T2	NoRel	true	delivered	descending

@@ -1,0 +1,57 @@
+Text	AIRWORK FLIGHT 23 was a New Zealand Post cargo flight between Auckland International Airport ( AKL / NZAA ) and Woodbourne Airport ( BHE / NZWB ) that disintegrated on 3 May 2005 .	The aircraft was scheduled for take off at 9:00 P.M. local time , but it was delayed while cargo was being loaded .	During the delay the pilots ordered an extra 570 L ( about 1,000 pounds ) of fuel and told the person refueling to put all the fuel in the left wing fuel tank , instead of splitting the fuel exactly between the two tanks , as was company procedure .	The flight eventually took off at 9:36 P.M. local time .	Immediately after take off the autopilot was engaged and it controlled the aircraft during its climb to flight level 220 .
+Event	T0	flight	EVENT	47
+Event	T1	disintegrated	EVENT	151
+Event	T2	scheduled	EVENT	198
+Event	T3	delayed	EVENT	258
+Event	T4	loaded	EVENT	288
+Event	T5	delay	EVENT	308
+Event	T6	ordered	EVENT	325
+Event	T7	told	EVENT	383
+Event	T8	refueling	EVENT	399
+Event	T9	put	EVENT	412
+Event	T10	splitting	EVENT	469
+Event	T11	procedure	EVENT	535
+Event	T12	flight	EVENT	551
+Event	T13	engaged	EVENT	649
+Event	T14	controlled	EVENT	664
+Event	T15	take off	EVENT	212
+Event	T16	took off	EVENT	569
+Event	T17	take off	EVENT	622
+Event	T18	climb	EVENT	699
+Relation	T8	T9	CauseEffect	true	refueling	put
+Relation	T9	T8	EffectCause	true	put	refueling
+Relation	T0	T10	NoRel	true	flight	splitting
+Relation	T0	T3	NoRel	true	flight	delayed
+Relation	T1	T12	NoRel	true	disintegrated	flight
+Relation	T1	T5	NoRel	true	disintegrated	delay
+Relation	T10	T7	NoRel	true	splitting	told
+Relation	T11	T1	NoRel	true	procedure	disintegrated
+Relation	T11	T13	NoRel	true	procedure	engaged
+Relation	T11	T18	NoRel	true	procedure	climb
+Relation	T14	T0	NoRel	true	controlled	flight
+Relation	T14	T3	NoRel	true	controlled	delayed
+Relation	T14	T5	NoRel	true	controlled	delay
+Relation	T14	T9	NoRel	true	controlled	put
+Relation	T15	T14	NoRel	true	take off	controlled
+Relation	T15	T4	NoRel	true	take off	loaded
+Relation	T16	T11	NoRel	true	took off	procedure
+Relation	T16	T2	NoRel	true	took off	scheduled
+Relation	T16	T9	NoRel	true	took off	put
+Relation	T17	T2	NoRel	true	take off	scheduled
+Relation	T17	T7	NoRel	true	take off	told
+Relation	T18	T5	NoRel	true	climb	delay
+Relation	T2	T0	NoRel	true	scheduled	flight
+Relation	T3	T5	NoRel	true	delayed	delay
+Relation	T4	T14	NoRel	true	loaded	controlled
+Relation	T4	T16	NoRel	true	loaded	took off
+Relation	T4	T8	NoRel	true	loaded	refueling
+Relation	T5	T12	NoRel	true	delay	flight
+Relation	T5	T16	NoRel	true	delay	took off
+Relation	T5	T7	NoRel	true	delay	told
+Relation	T6	T11	NoRel	true	ordered	procedure
+Relation	T6	T2	NoRel	true	ordered	scheduled
+Relation	T7	T8	NoRel	true	told	refueling
+Relation	T8	T14	NoRel	true	refueling	controlled
+Relation	T8	T4	NoRel	true	refueling	loaded
+Relation	T9	T2	NoRel	true	put	scheduled
+Relation	T9	T5	NoRel	true	put	delay

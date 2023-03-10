@@ -1,0 +1,55 @@
+Text	The POLISH – TEUTONIC WAR ( 1326 – 1332 ) was the war between the Kingdom of Poland and the State of the Teutonic Order over Pomerelia , fought from 1326 to 1332 .	Until the death of Duke Mestwin II in 1294 , the Duchy of Pomerelia on the Baltic coast , stretching from the border with the Imperial Duchy of Pomerania in the west to the Prussian territory of the Order state at the Vistula river in the east , had been held by the Samborides dynasty , liensmen of the Polish Piast rulers .	Przemysł II , King of Poland since 1295 , incorporated Pomerelia ( ) into the Lands of the Polish Crown , against the protest of the Imperial Margraviate of Brandenburg referring to the Treaty of Arnswalde signed with Duke Mestwin in 1269 .	The next year , the Ascanian margraves instigated the kidnapping and killing of King Przemysł , probably backed by King Wenceslaus II of Bohemia , who aimed for the Polish crown .	King Wenceslaus II prevailed against his Piast rival Władysław I the Elbow - high and was crowned King of Poland in 1300 .
+Event	T0	war	EVENT	50
+Event	T1	fought	EVENT	137
+Event	T2	death	EVENT	174
+Event	T3	stretching	EVENT	254
+Event	T4	held	EVENT	419
+Event	T5	incorporated	EVENT	532
+Event	T6	protest	EVENT	608
+Event	T7	referring	EVENT	659
+Event	T8	Treaty	EVENT	676
+Event	T9	signed	EVENT	696
+Event	T10	instigated	EVENT	770
+Event	T11	kidnapping	EVENT	785
+Event	T12	killing	EVENT	800
+Event	T13	backed	EVENT	836
+Event	T14	aimed	EVENT	882
+Event	T15	prevailed	EVENT	930
+Event	T16	crowned	EVENT	1001
+Relation	T14	T13	CauseEffect	true	aimed	backed
+Relation	T13	T14	EffectCause	true	backed	aimed
+Relation	T13	T10	CauseEffect	true	backed	instigated
+Relation	T10	T13	EffectCause	true	instigated	backed
+Relation	T0	T1	NoRel	true	war	fought
+Relation	T0	T10	NoRel	true	war	instigated
+Relation	T0	T13	NoRel	true	war	backed
+Relation	T0	T16	NoRel	true	war	crowned
+Relation	T0	T5	NoRel	true	war	incorporated
+Relation	T1	T10	NoRel	true	fought	instigated
+Relation	T1	T4	NoRel	true	fought	held
+Relation	T1	T7	NoRel	true	fought	referring
+Relation	T10	T1	NoRel	true	instigated	fought
+Relation	T10	T7	NoRel	true	instigated	referring
+Relation	T11	T1	NoRel	true	kidnapping	fought
+Relation	T11	T15	NoRel	true	kidnapping	prevailed
+Relation	T11	T16	NoRel	true	kidnapping	crowned
+Relation	T12	T1	NoRel	true	killing	fought
+Relation	T12	T14	NoRel	true	killing	aimed
+Relation	T12	T15	NoRel	true	killing	prevailed
+Relation	T13	T7	NoRel	true	backed	referring
+Relation	T14	T0	NoRel	true	aimed	war
+Relation	T15	T1	NoRel	true	prevailed	fought
+Relation	T16	T10	NoRel	true	crowned	instigated
+Relation	T2	T4	NoRel	true	death	held
+Relation	T3	T11	NoRel	true	stretching	kidnapping
+Relation	T3	T12	NoRel	true	stretching	killing
+Relation	T3	T2	NoRel	true	stretching	death
+Relation	T4	T15	NoRel	true	held	prevailed
+Relation	T4	T3	NoRel	true	held	stretching
+Relation	T4	T6	NoRel	true	held	protest
+Relation	T5	T1	NoRel	true	incorporated	fought
+Relation	T6	T0	NoRel	true	protest	war
+Relation	T6	T16	NoRel	true	protest	crowned
+Relation	T8	T15	NoRel	true	Treaty	prevailed
+Relation	T9	T3	NoRel	true	signed	stretching
+Relation	T9	T8	NoRel	true	signed	Treaty

@@ -1,0 +1,58 @@
+Text	Se informaron 48 heridos inmediatamente después del incidente , aunque el total se actualizó posteriormente a 84 .	Los pasajeros heridos , tres de ellos en estado crítico , fueron llevados a varios hospitales en Ankara .	Un pasajero herido murió después .	Los fiscales completaron la investigación inicial tomando las declaraciones de los tres funcionarios ferroviarios detenidos .	El despachador declaró que " ordenó al conmutador que pusiera el tren de alta velocidad en la vía H1 ya que la locomotora estaba en la vía H2 " .
+Event	T0	informaron	EVENT	3
+Event	T1	heridos	EVENT	17
+Event	T2	incidente	EVENT	52
+Event	T3	actualizó	EVENT	83
+Event	T4	heridos	EVENT	129
+Event	T5	completaron	EVENT	269
+Event	T6	investigación	EVENT	284
+Event	T7	tomando	EVENT	306
+Event	T8	declaraciones	EVENT	318
+Event	T9	detenidos	EVENT	370
+Event	T10	declaró	EVENT	397
+Event	T11	pusiera	EVENT	436
+Relation	T2	T1	CauseEffect	true	incidente	heridos
+Relation	T1	T2	EffectCause	true	heridos	incidente
+Relation	T0	T11	NoRel	true	informaron	pusiera
+Relation	T0	T3	NoRel	true	informaron	actualizó
+Relation	T0	T4	NoRel	true	informaron	heridos
+Relation	T0	T9	NoRel	true	informaron	detenidos
+Relation	T1	T10	NoRel	true	heridos	declaró
+Relation	T1	T4	NoRel	true	heridos	heridos
+Relation	T1	T6	NoRel	true	heridos	investigación
+Relation	T1	T8	NoRel	true	heridos	declaraciones
+Relation	T10	T5	NoRel	true	declaró	completaron
+Relation	T10	T9	NoRel	true	declaró	detenidos
+Relation	T11	T3	NoRel	true	pusiera	actualizó
+Relation	T11	T6	NoRel	true	pusiera	investigación
+Relation	T11	T7	NoRel	true	pusiera	tomando
+Relation	T2	T0	NoRel	true	incidente	informaron
+Relation	T2	T3	NoRel	true	incidente	actualizó
+Relation	T2	T5	NoRel	true	incidente	completaron
+Relation	T2	T8	NoRel	true	incidente	declaraciones
+Relation	T3	T4	NoRel	true	actualizó	heridos
+Relation	T3	T6	NoRel	true	actualizó	investigación
+Relation	T4	T1	NoRel	true	heridos	heridos
+Relation	T4	T10	NoRel	true	heridos	declaró
+Relation	T4	T11	NoRel	true	heridos	pusiera
+Relation	T4	T5	NoRel	true	heridos	completaron
+Relation	T4	T7	NoRel	true	heridos	tomando
+Relation	T5	T0	NoRel	true	completaron	informaron
+Relation	T5	T10	NoRel	true	completaron	declaró
+Relation	T5	T4	NoRel	true	completaron	heridos
+Relation	T5	T7	NoRel	true	completaron	tomando
+Relation	T5	T9	NoRel	true	completaron	detenidos
+Relation	T6	T1	NoRel	true	investigación	heridos
+Relation	T6	T10	NoRel	true	investigación	declaró
+Relation	T6	T2	NoRel	true	investigación	incidente
+Relation	T6	T7	NoRel	true	investigación	tomando
+Relation	T7	T10	NoRel	true	tomando	declaró
+Relation	T7	T4	NoRel	true	tomando	heridos
+Relation	T7	T8	NoRel	true	tomando	declaraciones
+Relation	T7	T9	NoRel	true	tomando	detenidos
+Relation	T8	T2	NoRel	true	declaraciones	incidente
+Relation	T8	T7	NoRel	true	declaraciones	tomando
+Relation	T9	T0	NoRel	true	detenidos	informaron
+Relation	T9	T10	NoRel	true	detenidos	declaró
+Relation	T9	T4	NoRel	true	detenidos	heridos
+Relation	T9	T6	NoRel	true	detenidos	investigación

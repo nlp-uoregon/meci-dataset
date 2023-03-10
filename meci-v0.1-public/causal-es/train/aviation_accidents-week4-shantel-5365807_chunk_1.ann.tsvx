@@ -1,0 +1,51 @@
+Text	El avión era un Piper PA-34-200 Seneca I , registro RP-C4431 .	Además de Robredo y Abrazado había dos tripulantes a bordo ; el piloto , quien también era el CEO de Aviatour Air ( la compañía que operaba el avión ) ; y el copiloto , de nacionalidad nepalí .	Durante el vuelo hacia Naga la tripulación de la Seneca solicitó un aterrizaje de emergencia en el aeropuerto de Masbate , mencionando problemas con el motor .	En torno a las 15:30 , Abrazado envió un mensaje de texto , informando a quien les tenía que recoger de que regresaban a Cebú debido a problemas con una de las hélices [ sic ] .	También pidió que se les consiguiesen billetes para el vuelo más próximo a Mactan .
+Event	T0	registro	EVENT	43
+Event	T1	vuelo	EVENT	268
+Event	T2	solicitó	EVENT	313
+Event	T3	aterrizaje	EVENT	325
+Event	T4	emergencia	EVENT	339
+Event	T5	problemas	EVENT	392
+Event	T6	envió	EVENT	449
+Event	T7	informando	EVENT	477
+Event	T8	recoger	EVENT	510
+Event	T9	regresaban	EVENT	525
+Event	T10	problemas	EVENT	552
+Event	T11	consiguiesen	EVENT	620
+Relation	T0	T7	NoRel	true	registro	informando
+Relation	T1	T2	NoRel	true	vuelo	solicitó
+Relation	T1	T4	NoRel	true	vuelo	emergencia
+Relation	T1	T6	NoRel	true	vuelo	envió
+Relation	T1	T7	NoRel	true	vuelo	informando
+Relation	T1	T8	NoRel	true	vuelo	recoger
+Relation	T1	T9	NoRel	true	vuelo	regresaban
+Relation	T10	T11	NoRel	true	problemas	consiguiesen
+Relation	T10	T4	NoRel	true	problemas	emergencia
+Relation	T10	T6	NoRel	true	problemas	envió
+Relation	T11	T3	NoRel	true	consiguiesen	aterrizaje
+Relation	T11	T7	NoRel	true	consiguiesen	informando
+Relation	T2	T0	NoRel	true	solicitó	registro
+Relation	T2	T10	NoRel	true	solicitó	problemas
+Relation	T2	T7	NoRel	true	solicitó	informando
+Relation	T3	T11	NoRel	true	aterrizaje	consiguiesen
+Relation	T3	T9	NoRel	true	aterrizaje	regresaban
+Relation	T4	T0	NoRel	true	emergencia	registro
+Relation	T4	T11	NoRel	true	emergencia	consiguiesen
+Relation	T4	T3	NoRel	true	emergencia	aterrizaje
+Relation	T4	T6	NoRel	true	emergencia	envió
+Relation	T4	T9	NoRel	true	emergencia	regresaban
+Relation	T5	T2	NoRel	true	problemas	solicitó
+Relation	T5	T3	NoRel	true	problemas	aterrizaje
+Relation	T5	T6	NoRel	true	problemas	envió
+Relation	T6	T0	NoRel	true	envió	registro
+Relation	T6	T10	NoRel	true	envió	problemas
+Relation	T6	T2	NoRel	true	envió	solicitó
+Relation	T6	T3	NoRel	true	envió	aterrizaje
+Relation	T6	T5	NoRel	true	envió	problemas
+Relation	T7	T4	NoRel	true	informando	emergencia
+Relation	T7	T6	NoRel	true	informando	envió
+Relation	T7	T9	NoRel	true	informando	regresaban
+Relation	T8	T11	NoRel	true	recoger	consiguiesen
+Relation	T9	T0	NoRel	true	regresaban	registro
+Relation	T9	T4	NoRel	true	regresaban	emergencia
+Relation	T9	T6	NoRel	true	regresaban	envió
+Relation	T9	T8	NoRel	true	regresaban	recoger

@@ -1,0 +1,40 @@
+Text	AZERBAYCAN HAVA YOLLARI'NIN 56 SEFER SAYILI UÇUŞU , 5 Aralık 1995'ta Azerbaycan Hava Yolları'nı ait Tu - 134 model bir uçağın Nahçıvan - Bakü seferini yaparken düşmesi olayıdır .	Uçağın inmesine birkaç dakika kala , sol motorda bir arıza meydana geldi ve mühendis pilot , yanlışlıkla sağ motoru kapattı .	Pilot , uçağı kötü araziye indirmeye karar verdi .	Uçak , yüksek voltajlı bir elektrik hattına çarptı .	82 kişiden 52'si öldü .
+Event	T0	UÇUŞU	EVENT	44
+Event	T1	olayıdır	EVENT	168
+Event	T2	inmesine	EVENT	186
+Event	T4	kapattı	EVENT	295
+Event	T5	verdi	EVENT	348
+Event	T6	çarptı	EVENT	400
+Event	T7	öldü	EVENT	426
+Event	T8	düşmesi	EVENT	160
+Event	T3	arıza	EVENT	232
+Relation	T3	T5	CauseEffect	true	arıza	verdi
+Relation	T5	T3	EffectCause	true	verdi	arıza
+Relation	T4	T5	CauseEffect	true	kapattı	verdi
+Relation	T5	T4	EffectCause	true	verdi	kapattı
+Relation	T6	T8	CauseEffect	true	çarptı	düşmesi
+Relation	T8	T6	EffectCause	true	düşmesi	çarptı
+Relation	T8	T7	CauseEffect	true	düşmesi	öldü
+Relation	T7	T8	EffectCause	true	öldü	düşmesi
+Relation	T0	T1	NoRel	true	UÇUŞU	olayıdır
+Relation	T0	T8	NoRel	true	UÇUŞU	düşmesi
+Relation	T1	T0	NoRel	true	olayıdır	UÇUŞU
+Relation	T1	T2	NoRel	true	olayıdır	inmesine
+Relation	T1	T7	NoRel	true	olayıdır	öldü
+Relation	T2	T4	NoRel	true	inmesine	kapattı
+Relation	T2	T8	NoRel	true	inmesine	düşmesi
+Relation	T3	T0	NoRel	true	arıza	UÇUŞU
+Relation	T3	T2	NoRel	true	arıza	inmesine
+Relation	T3	T7	NoRel	true	arıza	öldü
+Relation	T4	T0	NoRel	true	kapattı	UÇUŞU
+Relation	T4	T2	NoRel	true	kapattı	inmesine
+Relation	T4	T3	NoRel	true	kapattı	arıza
+Relation	T5	T6	NoRel	true	verdi	çarptı
+Relation	T6	T4	NoRel	true	çarptı	kapattı
+Relation	T6	T5	NoRel	true	çarptı	verdi
+Relation	T6	T7	NoRel	true	çarptı	öldü
+Relation	T7	T0	NoRel	true	öldü	UÇUŞU
+Relation	T7	T6	NoRel	true	öldü	çarptı
+Relation	T8	T0	NoRel	true	düşmesi	UÇUŞU
+Relation	T8	T3	NoRel	true	düşmesi	arıza
+Relation	T8	T5	NoRel	true	düşmesi	verdi

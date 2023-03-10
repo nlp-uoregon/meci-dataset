@@ -1,0 +1,65 @@
+Text	Flammerne oplyste store dele af himmelen .	I Neustadt cirka 35 kilometer derfra faldt der askeregn dagen efter .	Mange brændte ihjel , døde af varmechok eller blev kvalt af brandgasser i beskyttelsesrummene .	Dem , der ikke fik reddet sig , var stadig udsat for ildstormen og udetonerede bomber .	Efter de første angreb i 1944 havde luftforsvaret sikret , at det var muligt at bryde igennem til nabohusenes kældre .
+Event	T0	oplyste	EVENT	10
+Event	T1	faldt	EVENT	80
+Event	T2	ihjel	EVENT	127
+Event	T3	døde	EVENT	135
+Event	T4	varmechok	EVENT	143
+Event	T5	kvalt	EVENT	164
+Event	T6	reddet	EVENT	228
+Event	T7	ildstormen	EVENT	262
+Event	T8	bomber	EVENT	288
+Event	T9	angreb	EVENT	313
+Event	T10	sikret	EVENT	347
+Event	T11	brændte	EVENT	119
+Event	T12	bryde	EVENT	377
+Relation	T10	T12	CauseEffect	true	sikret	bryde
+Relation	T12	T10	EffectCause	true	bryde	sikret
+Relation	T4	T3	CauseEffect	true	varmechok	døde
+Relation	T3	T4	EffectCause	true	døde	varmechok
+Relation	T5	T3	CauseEffect	true	kvalt	døde
+Relation	T3	T5	EffectCause	true	døde	kvalt
+Relation	T0	T1	NoRel	true	oplyste	faldt
+Relation	T0	T10	NoRel	true	oplyste	sikret
+Relation	T0	T11	NoRel	true	oplyste	brændte
+Relation	T0	T2	NoRel	true	oplyste	ihjel
+Relation	T0	T3	NoRel	true	oplyste	døde
+Relation	T0	T8	NoRel	true	oplyste	bomber
+Relation	T1	T0	NoRel	true	faldt	oplyste
+Relation	T1	T2	NoRel	true	faldt	ihjel
+Relation	T1	T3	NoRel	true	faldt	døde
+Relation	T1	T6	NoRel	true	faldt	reddet
+Relation	T1	T8	NoRel	true	faldt	bomber
+Relation	T1	T9	NoRel	true	faldt	angreb
+Relation	T10	T9	NoRel	true	sikret	angreb
+Relation	T11	T1	NoRel	true	brændte	faldt
+Relation	T11	T2	NoRel	true	brændte	ihjel
+Relation	T11	T3	NoRel	true	brændte	døde
+Relation	T11	T7	NoRel	true	brændte	ildstormen
+Relation	T11	T9	NoRel	true	brændte	angreb
+Relation	T12	T11	NoRel	true	bryde	brændte
+Relation	T12	T2	NoRel	true	bryde	ihjel
+Relation	T12	T4	NoRel	true	bryde	varmechok
+Relation	T12	T9	NoRel	true	bryde	angreb
+Relation	T2	T9	NoRel	true	ihjel	angreb
+Relation	T3	T10	NoRel	true	døde	sikret
+Relation	T3	T12	NoRel	true	døde	bryde
+Relation	T4	T1	NoRel	true	varmechok	faldt
+Relation	T4	T11	NoRel	true	varmechok	brændte
+Relation	T4	T9	NoRel	true	varmechok	angreb
+Relation	T5	T4	NoRel	true	kvalt	varmechok
+Relation	T5	T6	NoRel	true	kvalt	reddet
+Relation	T6	T1	NoRel	true	reddet	faldt
+Relation	T6	T2	NoRel	true	reddet	ihjel
+Relation	T6	T3	NoRel	true	reddet	døde
+Relation	T7	T0	NoRel	true	ildstormen	oplyste
+Relation	T7	T1	NoRel	true	ildstormen	faldt
+Relation	T7	T10	NoRel	true	ildstormen	sikret
+Relation	T7	T3	NoRel	true	ildstormen	døde
+Relation	T7	T8	NoRel	true	ildstormen	bomber
+Relation	T8	T11	NoRel	true	bomber	brændte
+Relation	T8	T12	NoRel	true	bomber	bryde
+Relation	T8	T4	NoRel	true	bomber	varmechok
+Relation	T8	T6	NoRel	true	bomber	reddet
+Relation	T9	T0	NoRel	true	angreb	oplyste
+Relation	T9	T12	NoRel	true	angreb	bryde
+Relation	T9	T3	NoRel	true	angreb	døde

@@ -1,0 +1,123 @@
+Text	Rumours of the disease spreading prompted traders to act quickly as a reduction in the indigenous population meant a reduction in profit from the furs they brought in .	A good information network , a supply of vaccines at posts , and a willingness among all for vaccination meant their efforts were much more successful than American responses .	Vaccination performed by Hudson Bay Company workers and trained Indigenous people were critical to limiting the spread of smallpox in Canada .	After the epidemic , the Hudson Bay Company implemented a territory wide vaccination program which further reduced smallpox deaths .	Unfortunately , as people entered communities to vaccinate against smallpox , they brought with them other diseases that kept mortality rates high .
+Event	T0	Rumours	EVENT	0
+Event	T1	prompted	EVENT	33
+Event	T2	act	EVENT	53
+Event	T3	reduction	EVENT	70
+Event	T4	meant	EVENT	109
+Event	T5	reduction	EVENT	117
+Event	T6	supply	EVENT	200
+Event	T7	meant	EVENT	274
+Event	T8	responses	EVENT	334
+Event	T9	performed	EVENT	358
+Event	T10	trained	EVENT	402
+Event	T11	critical	EVENT	433
+Event	T12	limiting	EVENT	445
+Event	T13	spread	EVENT	458
+Event	T14	epidemic	EVENT	499
+Event	T15	implemented	EVENT	533
+Event	T16	reduced	EVENT	596
+Event	T17	deaths	EVENT	613
+Event	T18	entered	EVENT	648
+Event	T19	vaccinate	EVENT	671
+Event	T20	brought	EVENT	705
+Event	T21	willingness	EVENT	236
+Event	T22	more successful	EVENT	304
+Event	T23	good information network	EVENT	171
+Event	T24	Vaccination	EVENT	346
+Event	T25	vaccination program	EVENT	562
+Event	T26	other diseases	EVENT	723
+Event	T27	mortality rates high	EVENT	748
+Relation	T0	T1	CauseEffect	true	Rumours	prompted
+Relation	T1	T0	EffectCause	true	prompted	Rumours
+Relation	T3	T5	CauseEffect	true	reduction	reduction
+Relation	T5	T3	EffectCause	true	reduction	reduction
+Relation	T5	T2	CauseEffect	true	reduction	act
+Relation	T2	T5	EffectCause	true	act	reduction
+Relation	T23	T22	CauseEffect	true	good information network	more successful
+Relation	T22	T23	EffectCause	true	more successful	good information network
+Relation	T6	T22	CauseEffect	true	supply	more successful
+Relation	T22	T6	EffectCause	true	more successful	supply
+Relation	T21	T22	CauseEffect	true	willingness	more successful
+Relation	T22	T21	EffectCause	true	more successful	willingness
+Relation	T12	T24	CauseEffect	true	limiting	Vaccination
+Relation	T24	T12	EffectCause	true	Vaccination	limiting
+Relation	T14	T15	CauseEffect	true	epidemic	implemented
+Relation	T15	T14	EffectCause	true	implemented	epidemic
+Relation	T14	T25	CauseEffect	true	epidemic	vaccination program
+Relation	T25	T14	EffectCause	true	vaccination program	epidemic
+Relation	T16	T25	CauseEffect	true	reduced	vaccination program
+Relation	T25	T16	EffectCause	true	vaccination program	reduced
+Relation	T26	T27	CauseEffect	true	other diseases	mortality rates high
+Relation	T27	T26	EffectCause	true	mortality rates high	other diseases
+Relation	T0	T20	NoRel	true	Rumours	brought
+Relation	T0	T25	NoRel	true	Rumours	vaccination program
+Relation	T0	T6	NoRel	true	Rumours	supply
+Relation	T1	T10	NoRel	true	prompted	trained
+Relation	T10	T13	NoRel	true	trained	spread
+Relation	T10	T14	NoRel	true	trained	epidemic
+Relation	T10	T23	NoRel	true	trained	good information network
+Relation	T10	T24	NoRel	true	trained	Vaccination
+Relation	T10	T25	NoRel	true	trained	vaccination program
+Relation	T11	T15	NoRel	true	critical	implemented
+Relation	T11	T17	NoRel	true	critical	deaths
+Relation	T12	T1	NoRel	true	limiting	prompted
+Relation	T12	T23	NoRel	true	limiting	good information network
+Relation	T13	T16	NoRel	true	spread	reduced
+Relation	T13	T17	NoRel	true	spread	deaths
+Relation	T13	T19	NoRel	true	spread	vaccinate
+Relation	T13	T2	NoRel	true	spread	act
+Relation	T13	T20	NoRel	true	spread	brought
+Relation	T13	T22	NoRel	true	spread	more successful
+Relation	T13	T25	NoRel	true	spread	vaccination program
+Relation	T13	T8	NoRel	true	spread	responses
+Relation	T14	T16	NoRel	true	epidemic	reduced
+Relation	T14	T19	NoRel	true	epidemic	vaccinate
+Relation	T15	T12	NoRel	true	implemented	limiting
+Relation	T15	T19	NoRel	true	implemented	vaccinate
+Relation	T15	T20	NoRel	true	implemented	brought
+Relation	T15	T22	NoRel	true	implemented	more successful
+Relation	T15	T25	NoRel	true	implemented	vaccination program
+Relation	T16	T10	NoRel	true	reduced	trained
+Relation	T17	T20	NoRel	true	deaths	brought
+Relation	T17	T7	NoRel	true	deaths	meant
+Relation	T18	T14	NoRel	true	entered	epidemic
+Relation	T19	T0	NoRel	true	vaccinate	Rumours
+Relation	T19	T21	NoRel	true	vaccinate	willingness
+Relation	T19	T7	NoRel	true	vaccinate	meant
+Relation	T2	T23	NoRel	true	act	good information network
+Relation	T2	T26	NoRel	true	act	other diseases
+Relation	T20	T0	NoRel	true	brought	Rumours
+Relation	T20	T13	NoRel	true	brought	spread
+Relation	T20	T2	NoRel	true	brought	act
+Relation	T20	T27	NoRel	true	brought	mortality rates high
+Relation	T20	T8	NoRel	true	brought	responses
+Relation	T21	T1	NoRel	true	willingness	prompted
+Relation	T21	T15	NoRel	true	willingness	implemented
+Relation	T21	T4	NoRel	true	willingness	meant
+Relation	T23	T0	NoRel	true	good information network	Rumours
+Relation	T24	T3	NoRel	true	Vaccination	reduction
+Relation	T25	T1	NoRel	true	vaccination program	prompted
+Relation	T25	T12	NoRel	true	vaccination program	limiting
+Relation	T25	T24	NoRel	true	vaccination program	Vaccination
+Relation	T25	T27	NoRel	true	vaccination program	mortality rates high
+Relation	T26	T12	NoRel	true	other diseases	limiting
+Relation	T26	T23	NoRel	true	other diseases	good information network
+Relation	T27	T10	NoRel	true	mortality rates high	trained
+Relation	T27	T20	NoRel	true	mortality rates high	brought
+Relation	T3	T22	NoRel	true	reduction	more successful
+Relation	T3	T26	NoRel	true	reduction	other diseases
+Relation	T3	T6	NoRel	true	reduction	supply
+Relation	T4	T11	NoRel	true	meant	critical
+Relation	T4	T27	NoRel	true	meant	mortality rates high
+Relation	T4	T5	NoRel	true	meant	reduction
+Relation	T5	T11	NoRel	true	reduction	critical
+Relation	T5	T12	NoRel	true	reduction	limiting
+Relation	T6	T1	NoRel	true	supply	prompted
+Relation	T7	T1	NoRel	true	meant	prompted
+Relation	T7	T18	NoRel	true	meant	entered
+Relation	T7	T24	NoRel	true	meant	Vaccination
+Relation	T8	T13	NoRel	true	responses	spread
+Relation	T8	T25	NoRel	true	responses	vaccination program
+Relation	T8	T3	NoRel	true	responses	reduction
+Relation	T8	T6	NoRel	true	responses	supply
+Relation	T9	T15	NoRel	true	performed	implemented

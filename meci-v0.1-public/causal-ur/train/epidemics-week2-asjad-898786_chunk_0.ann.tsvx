@@ -1,0 +1,21 @@
+Text	}} مغربی افریقا میں ایبولا وائرس کی وبا ( 2013ء – 2016ء ) تاریخ میں ایبولا وائرس مرض ( ای وی ڈی ) کے بڑے بیمانے پر پھیلنے والی تھی ، جس کے سبب کئی افراد لقمہ اجل بنے اور خطے میں سماجی اقتصادی خلل ہوا ، بالخصوص گینیا ، لائبیریا اور سیرا لیون میں ۔	سب سے پہلے متاثرین دسمبر 2013ء میں گینیا میں آئے ؛ بعد ازاں مرض پڑوسی ممالک ، لائبیریا اور سیرا لیون میں پھیل گیا ، کہیں اور بھی مرض کا مدھم پھیلاؤ ہوا ۔	اس کی وجہ سے کئی اموات ہوئیں ، اور ابتدا میں شرح اموات زیادہ رپورٹ ہوا ، جبکہ زیر علاج مریضوں کا تناسب 57 – 59 % تھا ۔	حتمی تعداد 28,616 تھی جن میں سے 11,310 کی اموات ہوئی ، شرح اموات 40 % ۔	ایبولا وائرس نے نائیجیریا اور مالی میں کم تباہی مچائی ، اور سینیگال ، مملکت متحدہ اور اٹلی میں مقید کیس رپورٹ ہوئے ۔
+Event	T0	پھیلنے	EVENT	115
+Event	T11	اموات	EVENT	579
+Event	T3	آئے	EVENT	292
+Event	T4	مرض	EVENT	307
+Event	T5	مرض	EVENT	376
+Event	T8	اموات	EVENT	450
+Relation	T5	T8	CauseEffect	true	مرض	اموات
+Relation	T8	T5	EffectCause	true	اموات	مرض
+Relation	T4	T8	CauseEffect	true	مرض	اموات
+Relation	T8	T4	EffectCause	true	اموات	مرض
+Relation	T4	T11	CauseEffect	true	مرض	اموات
+Relation	T11	T4	EffectCause	true	اموات	مرض
+Relation	T5	T11	CauseEffect	true	مرض	اموات
+Relation	T11	T5	EffectCause	true	اموات	مرض
+Relation	T11	T3	NoRel	true	اموات	آئے
+Relation	T11	T8	NoRel	true	اموات	اموات
+Relation	T3	T0	NoRel	true	آئے	پھیلنے
+Relation	T5	T4	NoRel	true	مرض	مرض
+Relation	T8	T11	NoRel	true	اموات	اموات
+Relation	T8	T3	NoRel	true	اموات	آئے

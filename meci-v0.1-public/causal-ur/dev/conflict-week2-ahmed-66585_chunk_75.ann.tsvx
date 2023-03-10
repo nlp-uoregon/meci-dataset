@@ -1,0 +1,49 @@
+Text	11۔ پونچھ میں فوجی ناکہ بندی کی وجہ سے تجارت میں خلل پڑ گیا ۔ جس سے علاقہ میں اشیاء خوردنی کا حصول مشکل ہوتا جا رہا تھا ۔	ہندو تاجران نے اس موقع سے فائدہ اٹھانا شروع کر دیا اور ڈوگرہ فوج کے علاقے میں پھیل کر مورچہ بند ہو جانے کے بعد انہوں نے مسلمانوں سے منہ مانگی قیمتیں وصول کرنی شروع کر دیں ۔	یہاں تک کہ نمک پانچ روپے سیر فروخت ہونے لگا ۔	یوں مسلمانوں کی زندگی مزید اَجیرن ہو گئی ۔	جب سردار محمد ابراہیم کو ڈوگرہ فوج کی وحشت و بربریت کے ان اقدامات کا علم ہوا تو انہوں نے اپنے انتخابی حلقہ سدھنوتی اور باغ کی دورہ کیا ۔
+Event	T0	پھیل	EVENT	200
+Event	T1	وصول	EVENT	271
+Event	T10	فروخت	EVENT	324
+Event	T11	دورہ	EVENT	510
+Event	T2	اَجیرن	EVENT	368
+Event	T3	وحشت	EVENT	422
+Event	T4	علم	EVENT	453
+Event	T5	خلل	EVENT	49
+Event	T6	فوجی ناکہ بندی	EVENT	14
+Event	T7	مشکل	EVENT	99
+Event	T8	فائدہ	EVENT	148
+Relation	T6	T5	CauseEffect	true	فوجی ناکہ بندی	خلل
+Relation	T5	T6	EffectCause	true	خلل	فوجی ناکہ بندی
+Relation	T5	T7	CauseEffect	true	خلل	مشکل
+Relation	T7	T5	EffectCause	true	مشکل	خلل
+Relation	T5	T8	CauseEffect	true	خلل	فائدہ
+Relation	T8	T5	EffectCause	true	فائدہ	خلل
+Relation	T8	T2	CauseEffect	true	فائدہ	اَجیرن
+Relation	T2	T8	EffectCause	true	اَجیرن	فائدہ
+Relation	T4	T11	CauseEffect	true	علم	دورہ
+Relation	T11	T4	EffectCause	true	دورہ	علم
+Relation	T0	T4	NoRel	true	پھیل	علم
+Relation	T0	T5	NoRel	true	پھیل	خلل
+Relation	T0	T7	NoRel	true	پھیل	مشکل
+Relation	T1	T11	NoRel	true	وصول	دورہ
+Relation	T1	T2	NoRel	true	وصول	اَجیرن
+Relation	T1	T5	NoRel	true	وصول	خلل
+Relation	T10	T5	NoRel	true	فروخت	خلل
+Relation	T11	T2	NoRel	true	دورہ	اَجیرن
+Relation	T11	T5	NoRel	true	دورہ	خلل
+Relation	T11	T8	NoRel	true	دورہ	فائدہ
+Relation	T2	T1	NoRel	true	اَجیرن	وصول
+Relation	T2	T4	NoRel	true	اَجیرن	علم
+Relation	T2	T6	NoRel	true	اَجیرن	فوجی ناکہ بندی
+Relation	T3	T0	NoRel	true	وحشت	پھیل
+Relation	T3	T10	NoRel	true	وحشت	فروخت
+Relation	T3	T4	NoRel	true	وحشت	علم
+Relation	T3	T5	NoRel	true	وحشت	خلل
+Relation	T4	T0	NoRel	true	علم	پھیل
+Relation	T4	T5	NoRel	true	علم	خلل
+Relation	T5	T0	NoRel	true	خلل	پھیل
+Relation	T6	T0	NoRel	true	فوجی ناکہ بندی	پھیل
+Relation	T6	T4	NoRel	true	فوجی ناکہ بندی	علم
+Relation	T6	T7	NoRel	true	فوجی ناکہ بندی	مشکل
+Relation	T7	T10	NoRel	true	مشکل	فروخت
+Relation	T7	T11	NoRel	true	مشکل	دورہ
+Relation	T8	T3	NoRel	true	فائدہ	وحشت
+Relation	T8	T6	NoRel	true	فائدہ	فوجی ناکہ بندی

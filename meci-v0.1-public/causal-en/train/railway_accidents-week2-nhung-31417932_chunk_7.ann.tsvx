@@ -1,0 +1,21 @@
+Text	The accident occurred at the Fairview Avenue grade crossing / Fairview Station .	She crossed the center track and was struck and killed instantly .	Her lawyer saw the oncoming train and was not struck .	Accident was caught on tape by railfan 's camera .	- August 28 , 1991 –__ United States __– New York City : 1991 UNION SQUARE DERAILMENT - Five people are killed and more than 200 injured when a # 4 Lexington Avenue express train derails going over a switch just north of Union Square .
+Event	T0	occurred	EVENT	13
+Event	T1	crossed	EVENT	85
+Event	T11	crossing	EVENT	51
+Event	T2	struck	EVENT	118
+Event	T3	killed	EVENT	129
+Event	T4	saw	EVENT	159
+Event	T5	struck	EVENT	194
+Event	T6	Accident	EVENT	203
+Event	T8	killed	EVENT	358
+Event	T9	injured	EVENT	383
+Relation	T6	T8	CauseEffect	true	Accident	killed
+Relation	T8	T6	EffectCause	true	killed	Accident
+Relation	T6	T9	CauseEffect	true	Accident	injured
+Relation	T9	T6	EffectCause	true	injured	Accident
+Relation	T1	T4	NoRel	true	crossed	saw
+Relation	T1	T5	NoRel	true	crossed	struck
+Relation	T11	T2	NoRel	true	crossing	struck
+Relation	T11	T5	NoRel	true	crossing	struck
+Relation	T2	T0	NoRel	true	struck	occurred
+Relation	T8	T4	NoRel	true	killed	saw

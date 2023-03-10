@@ -1,0 +1,70 @@
+Text	Subprime lending was a major contributor to this increase in home ownership rates and in the overall demand for housing , which drove prices higher .	Borrowers who would not be able to make the higher payments once the initial grace period ended , were planning to refinance their mortgages after a year or two of appreciation .	As a result of the depreciating housing prices , borrowers ’ ability to refinance became more difficult .	Borrowers who found themselves unable to escape higher monthly payments by refinancing began to default .	As more borrowers stopped making their mortgage payments , foreclosures and the supply of homes for sale increased .
+Event	T0	lending	EVENT	9
+Event	T1	increase	EVENT	49
+Event	T2	demand	EVENT	101
+Event	T3	drove	EVENT	128
+Event	T4	make	EVENT	185
+Event	T5	payments	EVENT	201
+Event	T6	ended	EVENT	240
+Event	T7	planning	EVENT	253
+Event	T8	refinance	EVENT	265
+Event	T9	appreciation	EVENT	314
+Event	T10	depreciating	EVENT	348
+Event	T11	became	EVENT	411
+Event	T12	found	EVENT	449
+Event	T13	escape	EVENT	476
+Event	T14	began	EVENT	522
+Event	T15	default	EVENT	531
+Event	T17	payments	EVENT	589
+Event	T18	foreclosures	EVENT	600
+Event	T19	supply	EVENT	621
+Event	T20	increased	EVENT	646
+Event	T21	more difficult	EVENT	418
+Event	T22	stopped	EVENT	559
+Relation	T0	T1	CauseEffect	true	lending	increase
+Relation	T1	T0	EffectCause	true	increase	lending
+Relation	T1	T3	CauseEffect	true	increase	drove
+Relation	T3	T1	EffectCause	true	drove	increase
+Relation	T10	T21	CauseEffect	true	depreciating	more difficult
+Relation	T21	T10	EffectCause	true	more difficult	depreciating
+Relation	T21	T15	CauseEffect	true	more difficult	default
+Relation	T15	T21	EffectCause	true	default	more difficult
+Relation	T22	T20	CauseEffect	true	stopped	increased
+Relation	T20	T22	EffectCause	true	increased	stopped
+Relation	T0	T7	NoRel	true	lending	planning
+Relation	T1	T12	NoRel	true	increase	found
+Relation	T1	T6	NoRel	true	increase	ended
+Relation	T10	T11	NoRel	true	depreciating	became
+Relation	T10	T15	NoRel	true	depreciating	default
+Relation	T10	T7	NoRel	true	depreciating	planning
+Relation	T11	T0	NoRel	true	became	lending
+Relation	T12	T1	NoRel	true	found	increase
+Relation	T12	T22	NoRel	true	found	stopped
+Relation	T12	T3	NoRel	true	found	drove
+Relation	T13	T10	NoRel	true	escape	depreciating
+Relation	T13	T22	NoRel	true	escape	stopped
+Relation	T14	T9	NoRel	true	began	appreciation
+Relation	T15	T18	NoRel	true	default	foreclosures
+Relation	T15	T9	NoRel	true	default	appreciation
+Relation	T19	T10	NoRel	true	supply	depreciating
+Relation	T19	T4	NoRel	true	supply	make
+Relation	T19	T5	NoRel	true	supply	payments
+Relation	T2	T18	NoRel	true	demand	foreclosures
+Relation	T2	T6	NoRel	true	demand	ended
+Relation	T20	T4	NoRel	true	increased	make
+Relation	T21	T2	NoRel	true	more difficult	demand
+Relation	T21	T4	NoRel	true	more difficult	make
+Relation	T22	T15	NoRel	true	stopped	default
+Relation	T22	T4	NoRel	true	stopped	make
+Relation	T4	T12	NoRel	true	make	found
+Relation	T4	T20	NoRel	true	make	increased
+Relation	T5	T12	NoRel	true	payments	found
+Relation	T6	T0	NoRel	true	ended	lending
+Relation	T7	T14	NoRel	true	planning	began
+Relation	T7	T22	NoRel	true	planning	stopped
+Relation	T7	T9	NoRel	true	planning	appreciation
+Relation	T8	T11	NoRel	true	refinance	became
+Relation	T8	T12	NoRel	true	refinance	found
+Relation	T9	T2	NoRel	true	appreciation	demand
+Relation	T9	T21	NoRel	true	appreciation	more difficult
+Relation	T9	T22	NoRel	true	appreciation	stopped

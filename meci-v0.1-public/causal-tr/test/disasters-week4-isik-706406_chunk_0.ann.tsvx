@@ -1,0 +1,62 @@
+Text	1951 ÇANKIRI DEPREMI , merkezi Çankırı'nın Kurşunlu ilçesi olan 6, 9 M _ ( s ) büyüklüğünde bir depremdir .	Çankırı'nın 40 km kuzeybatısında ve Kuzey Anadolu Fay Hattı üzerinde yer alan Kurşunlu ilçesinde 13 Ağustos 1951 tarihinde saat 20: 33'te meydana gelen depremde 50 kişi ölmüş , 3.354 bina yıkılmış ve 13.373 bina da hasar görmüştür .	Bu deprem , Çankırı'nın haricinde Sinop , Eskişehir , Kayseri , İnegöl , Samsun , Merzifon , Amasya , Çerkeş ve Çorum'da hissedilmiş ama büyük bir hasar görülmemiştir .	Kurşunlu ilçesinin Yeşilöz , Çatkese , Sivricek ve Hocahasan köyleri en fazla hasara uğrayan yerler olmuş , köylerdeki binaların neredeyse tamamı yıkılmıştır .	Ilgaz da en çok hasara uğrayan ilçelerden birisi olmuş ; Belören köyünde 100 ev , Çörekçiler köyünde ise 50 ev yıkılmıştır .
+Event	T0	DEPREMI	EVENT	13
+Event	T1	depremdir	EVENT	96
+Event	T2	depremde	EVENT	260
+Event	T3	ölmüş	EVENT	277
+Event	T4	yıkılmış	EVENT	296
+Event	T5	deprem	EVENT	344
+Event	T6	hissedilmiş	EVENT	462
+Event	T8	yıkılmıştır	EVENT	656
+Event	T9	yıkılmıştır	EVENT	781
+Event	T10	görmüştür	EVENT	329
+Event	T7	olmuş	EVENT	610
+Event	T11	olmuş	EVENT	719
+Relation	T0	T3	CauseEffect	true	DEPREMI	ölmüş
+Relation	T3	T0	EffectCause	true	ölmüş	DEPREMI
+Relation	T0	T4	CauseEffect	true	DEPREMI	yıkılmış
+Relation	T4	T0	EffectCause	true	yıkılmış	DEPREMI
+Relation	T0	T10	CauseEffect	true	DEPREMI	görmüştür
+Relation	T10	T0	EffectCause	true	görmüştür	DEPREMI
+Relation	T0	T6	CauseEffect	true	DEPREMI	hissedilmiş
+Relation	T6	T0	EffectCause	true	hissedilmiş	DEPREMI
+Relation	T0	T8	CauseEffect	true	DEPREMI	yıkılmıştır
+Relation	T8	T0	EffectCause	true	yıkılmıştır	DEPREMI
+Relation	T0	T9	CauseEffect	true	DEPREMI	yıkılmıştır
+Relation	T9	T0	EffectCause	true	yıkılmıştır	DEPREMI
+Relation	T0	T1	NoRel	true	DEPREMI	depremdir
+Relation	T0	T11	NoRel	true	DEPREMI	olmuş
+Relation	T0	T7	NoRel	true	DEPREMI	olmuş
+Relation	T1	T0	NoRel	true	depremdir	DEPREMI
+Relation	T1	T2	NoRel	true	depremdir	depremde
+Relation	T1	T5	NoRel	true	depremdir	deprem
+Relation	T1	T7	NoRel	true	depremdir	olmuş
+Relation	T10	T1	NoRel	true	görmüştür	depremdir
+Relation	T10	T2	NoRel	true	görmüştür	depremde
+Relation	T10	T4	NoRel	true	görmüştür	yıkılmış
+Relation	T10	T7	NoRel	true	görmüştür	olmuş
+Relation	T11	T4	NoRel	true	olmuş	yıkılmış
+Relation	T2	T10	NoRel	true	depremde	görmüştür
+Relation	T2	T3	NoRel	true	depremde	ölmüş
+Relation	T3	T1	NoRel	true	ölmüş	depremdir
+Relation	T3	T5	NoRel	true	ölmüş	deprem
+Relation	T3	T6	NoRel	true	ölmüş	hissedilmiş
+Relation	T3	T9	NoRel	true	ölmüş	yıkılmıştır
+Relation	T4	T1	NoRel	true	yıkılmış	depremdir
+Relation	T4	T8	NoRel	true	yıkılmış	yıkılmıştır
+Relation	T4	T9	NoRel	true	yıkılmış	yıkılmıştır
+Relation	T5	T0	NoRel	true	deprem	DEPREMI
+Relation	T5	T1	NoRel	true	deprem	depremdir
+Relation	T5	T10	NoRel	true	deprem	görmüştür
+Relation	T5	T3	NoRel	true	deprem	ölmüş
+Relation	T5	T4	NoRel	true	deprem	yıkılmış
+Relation	T6	T1	NoRel	true	hissedilmiş	depremdir
+Relation	T6	T10	NoRel	true	hissedilmiş	görmüştür
+Relation	T6	T11	NoRel	true	hissedilmiş	olmuş
+Relation	T6	T4	NoRel	true	hissedilmiş	yıkılmış
+Relation	T7	T10	NoRel	true	olmuş	görmüştür
+Relation	T7	T11	NoRel	true	olmuş	olmuş
+Relation	T7	T2	NoRel	true	olmuş	depremde
+Relation	T7	T8	NoRel	true	olmuş	yıkılmıştır
+Relation	T8	T3	NoRel	true	yıkılmıştır	ölmüş
+Relation	T9	T2	NoRel	true	yıkılmıştır	depremde
+Relation	T9	T7	NoRel	true	yıkılmıştır	olmuş

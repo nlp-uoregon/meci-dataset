@@ -1,0 +1,61 @@
+Text	Con la última escala hecha en Rafaela , el convoy llevaba 2.130 pasajeros .	La formación , a cargo del maquinista de relevos Antonio Gore , no pudo evitar el choque : la locomotora " saltó " de las vías y se desplomó paralelo a ellas , siguiendo su recorrido por cientos de metros hasta que los dos coches del centro se incrustaron entre sí .	Inmediatamente , los habitantes del lugar y varios de los pasajeros del tren colaboraron en las tareas de ayuda .	En las tareas de rescate hubo policías y bomberos que iban llegando desde San Jerónimo , Esperanza , San Francisco , Rafaela , Gálvez , Rosario , Santa Fe , Paraná y otras poblaciones vecinas .	
+Event	T0	hecha	EVENT	21
+Event	T1	choque	EVENT	158
+Event	T2	saltó	EVENT	183
+Event	T3	desplomó	EVENT	208
+Event	T4	recorrido	EVENT	249
+Event	T5	incrustaron	EVENT	320
+Event	T6	colaboraron	EVENT	420
+Event	T7	tareas	EVENT	439
+Event	T8	ayuda	EVENT	449
+Event	T9	tareas	EVENT	464
+Event	T10	rescate	EVENT	474
+Event	T11	llegando	EVENT	516
+Relation	T0	T8	NoRel	true	hecha	ayuda
+Relation	T1	T0	NoRel	true	choque	hecha
+Relation	T1	T11	NoRel	true	choque	llegando
+Relation	T1	T2	NoRel	true	choque	saltó
+Relation	T1	T6	NoRel	true	choque	colaboraron
+Relation	T1	T7	NoRel	true	choque	tareas
+Relation	T1	T8	NoRel	true	choque	ayuda
+Relation	T10	T0	NoRel	true	rescate	hecha
+Relation	T10	T1	NoRel	true	rescate	choque
+Relation	T10	T9	NoRel	true	rescate	tareas
+Relation	T11	T0	NoRel	true	llegando	hecha
+Relation	T11	T1	NoRel	true	llegando	choque
+Relation	T11	T4	NoRel	true	llegando	recorrido
+Relation	T11	T8	NoRel	true	llegando	ayuda
+Relation	T2	T0	NoRel	true	saltó	hecha
+Relation	T2	T1	NoRel	true	saltó	choque
+Relation	T2	T5	NoRel	true	saltó	incrustaron
+Relation	T2	T7	NoRel	true	saltó	tareas
+Relation	T2	T8	NoRel	true	saltó	ayuda
+Relation	T3	T0	NoRel	true	desplomó	hecha
+Relation	T3	T11	NoRel	true	desplomó	llegando
+Relation	T3	T5	NoRel	true	desplomó	incrustaron
+Relation	T3	T6	NoRel	true	desplomó	colaboraron
+Relation	T3	T9	NoRel	true	desplomó	tareas
+Relation	T4	T0	NoRel	true	recorrido	hecha
+Relation	T4	T2	NoRel	true	recorrido	saltó
+Relation	T4	T6	NoRel	true	recorrido	colaboraron
+Relation	T4	T7	NoRel	true	recorrido	tareas
+Relation	T5	T1	NoRel	true	incrustaron	choque
+Relation	T5	T3	NoRel	true	incrustaron	desplomó
+Relation	T5	T6	NoRel	true	incrustaron	colaboraron
+Relation	T5	T8	NoRel	true	incrustaron	ayuda
+Relation	T5	T9	NoRel	true	incrustaron	tareas
+Relation	T6	T0	NoRel	true	colaboraron	hecha
+Relation	T6	T2	NoRel	true	colaboraron	saltó
+Relation	T6	T3	NoRel	true	colaboraron	desplomó
+Relation	T6	T9	NoRel	true	colaboraron	tareas
+Relation	T7	T1	NoRel	true	tareas	choque
+Relation	T7	T10	NoRel	true	tareas	rescate
+Relation	T7	T5	NoRel	true	tareas	incrustaron
+Relation	T7	T6	NoRel	true	tareas	colaboraron
+Relation	T8	T0	NoRel	true	ayuda	hecha
+Relation	T8	T11	NoRel	true	ayuda	llegando
+Relation	T8	T2	NoRel	true	ayuda	saltó
+Relation	T8	T5	NoRel	true	ayuda	incrustaron
+Relation	T9	T0	NoRel	true	tareas	hecha
+Relation	T9	T11	NoRel	true	tareas	llegando
+Relation	T9	T6	NoRel	true	tareas	colaboraron

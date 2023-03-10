@@ -1,0 +1,40 @@
+Text	Bu gezi neticesinde Falkenhayn , ordularının Bağdat'ın geri alınması için Irak Cephesinde kullanılması fikrinden cayarak durumu İstanbul ve Berlin'e bildirmiştir .	Savaştan sonra Almanya'ya dönerek siyasi yaşama atıldı .	1921 - 1932 arasında Reichstag ( Parlamento ) üyeliğinde bulundu .	Katolik Merkez Partisi'nin aşırı sağ kanadından olan Papen'in kralcılar , eski soylular , büyük iş çevreleri ve Alman ordusu ile bağları olmakla birlikte siyasi yandaşı yoktu .	Bu nedenle Cumhurbaşkanı Paul von Hindenburg'un danışmanı General Kurt von Schleicher'in entrikaları sonucunda başbakanlığa getirilmesi ( 1 Haziran 1932 ) kamuoyunda tam bir şaşkınlık yarattı .
+Event	T0	gezi	EVENT	3
+Event	T1	alınması	EVENT	60
+Event	T2	kullanılması	EVENT	90
+Event	T3	bildirmiştir	EVENT	149
+Event	T4	atıldı	EVENT	212
+Event	T5	bulundu	EVENT	278
+Event	T6	getirilmesi	EVENT	589
+Event	T7	yarattı	EVENT	649
+Event	T8	dönerek	EVENT	190
+Event	T9	entrikaları	EVENT	554
+Relation	T4	T5	CauseEffect	true	atıldı	bulundu
+Relation	T5	T4	EffectCause	true	bulundu	atıldı
+Relation	T9	T6	CauseEffect	true	entrikaları	getirilmesi
+Relation	T6	T9	EffectCause	true	getirilmesi	entrikaları
+Relation	T6	T7	CauseEffect	true	getirilmesi	yarattı
+Relation	T7	T6	EffectCause	true	yarattı	getirilmesi
+Relation	T0	T2	NoRel	true	gezi	kullanılması
+Relation	T0	T3	NoRel	true	gezi	bildirmiştir
+Relation	T1	T2	NoRel	true	alınması	kullanılması
+Relation	T1	T9	NoRel	true	alınması	entrikaları
+Relation	T2	T4	NoRel	true	kullanılması	atıldı
+Relation	T2	T8	NoRel	true	kullanılması	dönerek
+Relation	T3	T7	NoRel	true	bildirmiştir	yarattı
+Relation	T3	T9	NoRel	true	bildirmiştir	entrikaları
+Relation	T4	T2	NoRel	true	atıldı	kullanılması
+Relation	T4	T3	NoRel	true	atıldı	bildirmiştir
+Relation	T4	T6	NoRel	true	atıldı	getirilmesi
+Relation	T5	T1	NoRel	true	bulundu	alınması
+Relation	T5	T3	NoRel	true	bulundu	bildirmiştir
+Relation	T5	T6	NoRel	true	bulundu	getirilmesi
+Relation	T5	T8	NoRel	true	bulundu	dönerek
+Relation	T6	T0	NoRel	true	getirilmesi	gezi
+Relation	T7	T0	NoRel	true	yarattı	gezi
+Relation	T7	T4	NoRel	true	yarattı	atıldı
+Relation	T8	T4	NoRel	true	dönerek	atıldı
+Relation	T8	T9	NoRel	true	dönerek	entrikaları
+Relation	T9	T3	NoRel	true	entrikaları	bildirmiştir
+Relation	T9	T5	NoRel	true	entrikaları	bulundu
+Relation	T9	T8	NoRel	true	entrikaları	dönerek

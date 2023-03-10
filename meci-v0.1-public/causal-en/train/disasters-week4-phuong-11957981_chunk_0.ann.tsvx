@@ -1,0 +1,101 @@
+Text	[ Memorial to the Buddhists killed in the demonstrations during the Phat Dan of 1963 in Hue , Vietnam . ]	The HUẾ PHẬT ĐẢN SHOOTINGS were the deaths of nine unarmed Buddhist civilians on 8 May 1963 in the city of Huế , South Vietnam at the hands of the army and security forces of the government of Ngô Đình Diệm , a Roman Catholic .	The army and police fired guns and launched grenades into a crowd of Buddhists who had been protesting against a government ban on flying the Buddhist flag on the day of Phật Đản , which commemorates the birth of Gautama Buddha .	Diệm denied governmental responsibility for the incident and blamed the Việt Cộng , which added to discontent among the Buddhist majority .	The incident spurred a protest movement by Buddhists against the religious discrimination which they felt was perpetrated by the Diệm regime , known as the _ Buddhist crisis _ , and this led to widespread civil disobedience among the South Vietnamese .
+Event	T0	killed	EVENT	28
+Event	T1	demonstrations	EVENT	42
+Event	T2	SHOOTINGS	EVENT	123
+Event	T3	deaths	EVENT	142
+Event	T4	protesting	EVENT	426
+Event	T5	ban	EVENT	458
+Event	T6	flying	EVENT	465
+Event	T7	commemorates	EVENT	521
+Event	T8	birth	EVENT	538
+Event	T9	denied	EVENT	569
+Event	T10	incident	EVENT	612
+Event	T11	blamed	EVENT	625
+Event	T12	added	EVENT	654
+Event	T13	discontent	EVENT	663
+Event	T14	spurred	EVENT	717
+Event	T15	movement	EVENT	735
+Event	T16	discrimination	EVENT	779
+Event	T17	felt	EVENT	805
+Event	T18	perpetrated	EVENT	814
+Event	T19	crisis	EVENT	871
+Event	T20	disobedience	EVENT	915
+Event	T21	army and security forces	EVENT	253
+Event	T22	fired	EVENT	354
+Event	T23	grenades	EVENT	378
+Event	T24	against	EVENT	757
+Event	T25	regime	EVENT	838
+Relation	T1	T0	CauseEffect	true	demonstrations	killed
+Relation	T0	T1	EffectCause	true	killed	demonstrations
+Relation	T21	T3	CauseEffect	true	army and security forces	deaths
+Relation	T3	T21	EffectCause	true	deaths	army and security forces
+Relation	T4	T23	CauseEffect	true	protesting	grenades
+Relation	T23	T4	EffectCause	true	grenades	protesting
+Relation	T4	T22	CauseEffect	true	protesting	fired
+Relation	T22	T4	EffectCause	true	fired	protesting
+Relation	T9	T13	CauseEffect	true	denied	discontent
+Relation	T13	T9	EffectCause	true	discontent	denied
+Relation	T11	T13	CauseEffect	true	blamed	discontent
+Relation	T13	T11	EffectCause	true	discontent	blamed
+Relation	T16	T15	CauseEffect	true	discrimination	movement
+Relation	T15	T16	EffectCause	true	movement	discrimination
+Relation	T25	T15	CauseEffect	true	regime	movement
+Relation	T15	T25	EffectCause	true	movement	regime
+Relation	T19	T20	CauseEffect	true	crisis	disobedience
+Relation	T20	T19	EffectCause	true	disobedience	crisis
+Relation	T0	T13	NoRel	true	killed	discontent
+Relation	T0	T21	NoRel	true	killed	army and security forces
+Relation	T0	T3	NoRel	true	killed	deaths
+Relation	T0	T7	NoRel	true	killed	commemorates
+Relation	T1	T19	NoRel	true	demonstrations	crisis
+Relation	T1	T2	NoRel	true	demonstrations	SHOOTINGS
+Relation	T1	T20	NoRel	true	demonstrations	disobedience
+Relation	T1	T23	NoRel	true	demonstrations	grenades
+Relation	T1	T6	NoRel	true	demonstrations	flying
+Relation	T10	T20	NoRel	true	incident	disobedience
+Relation	T10	T9	NoRel	true	incident	denied
+Relation	T11	T20	NoRel	true	blamed	disobedience
+Relation	T11	T4	NoRel	true	blamed	protesting
+Relation	T11	T6	NoRel	true	blamed	flying
+Relation	T12	T4	NoRel	true	added	protesting
+Relation	T12	T7	NoRel	true	added	commemorates
+Relation	T13	T15	NoRel	true	discontent	movement
+Relation	T13	T17	NoRel	true	discontent	felt
+Relation	T13	T20	NoRel	true	discontent	disobedience
+Relation	T15	T20	NoRel	true	movement	disobedience
+Relation	T16	T19	NoRel	true	discrimination	crisis
+Relation	T16	T8	NoRel	true	discrimination	birth
+Relation	T16	T9	NoRel	true	discrimination	denied
+Relation	T18	T1	NoRel	true	perpetrated	demonstrations
+Relation	T18	T20	NoRel	true	perpetrated	disobedience
+Relation	T18	T23	NoRel	true	perpetrated	grenades
+Relation	T19	T11	NoRel	true	crisis	blamed
+Relation	T2	T16	NoRel	true	SHOOTINGS	discrimination
+Relation	T2	T19	NoRel	true	SHOOTINGS	crisis
+Relation	T20	T10	NoRel	true	disobedience	incident
+Relation	T20	T18	NoRel	true	disobedience	perpetrated
+Relation	T20	T5	NoRel	true	disobedience	ban
+Relation	T21	T1	NoRel	true	army and security forces	demonstrations
+Relation	T21	T12	NoRel	true	army and security forces	added
+Relation	T21	T16	NoRel	true	army and security forces	discrimination
+Relation	T22	T19	NoRel	true	fired	crisis
+Relation	T22	T7	NoRel	true	fired	commemorates
+Relation	T23	T1	NoRel	true	grenades	demonstrations
+Relation	T23	T8	NoRel	true	grenades	birth
+Relation	T24	T23	NoRel	true	against	grenades
+Relation	T25	T16	NoRel	true	regime	discrimination
+Relation	T25	T2	NoRel	true	regime	SHOOTINGS
+Relation	T25	T5	NoRel	true	regime	ban
+Relation	T3	T16	NoRel	true	deaths	discrimination
+Relation	T3	T25	NoRel	true	deaths	regime
+Relation	T3	T4	NoRel	true	deaths	protesting
+Relation	T6	T0	NoRel	true	flying	killed
+Relation	T6	T2	NoRel	true	flying	SHOOTINGS
+Relation	T6	T3	NoRel	true	flying	deaths
+Relation	T7	T6	NoRel	true	commemorates	flying
+Relation	T8	T10	NoRel	true	birth	incident
+Relation	T8	T17	NoRel	true	birth	felt
+Relation	T8	T3	NoRel	true	birth	deaths
+Relation	T8	T4	NoRel	true	birth	protesting
+Relation	T8	T5	NoRel	true	birth	ban
+Relation	T8	T7	NoRel	true	birth	commemorates

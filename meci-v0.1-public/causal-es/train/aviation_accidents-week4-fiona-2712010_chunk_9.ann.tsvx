@@ -1,0 +1,198 @@
+Text	El informe encontró que el accidente había sido causado por fallas por fatiga . del rotor de la primera etapa del compresor de baja presión en el motor No. 1 , que resultó en la desintegración del disco del rotor .	Los fragmentos del disco del rotor destruyeron el motor No. 1 , cortaron los sistemas hidráulicos No. 1 y No. 3 , y cortaron parcialmente las líneas de combustible al motor No. 2 .	Los componentes calientes y el fluido hidráulico encendieron el combustible que se derramaba de las líneas de combustible dañadas , y provocó rápidamente un gran incendio en la sección de cola del avión .	Este incendio , a su vez , destruyó las varillas que accionaban las superficies de control traseras ( elevadores y timón ) resultando en que los pilotos perdieran el control de la aeronave .	Antes del accidente , el fabricante de la aeronave , Tupolev , había publicado un boletín de servicio que requería pruebas más estrictas de los componentes del compresor de baja presión .
+Event	T0	encontró	EVENT	11
+Event	T1	accidente	EVENT	27
+Event	T2	causado	EVENT	48
+Event	T3	fallas	EVENT	60
+Event	T4	fatiga	EVENT	71
+Event	T5	desintegración	EVENT	178
+Event	T6	destruyeron	EVENT	250
+Event	T7	cortaron	EVENT	279
+Event	T8	cortaron	EVENT	331
+Event	T9	encendieron	EVENT	445
+Event	T10	derramaba	EVENT	479
+Event	T11	dañadas	EVENT	518
+Event	T12	provocó	EVENT	530
+Event	T13	incendio	EVENT	558
+Event	T14	incendio	EVENT	606
+Event	T15	destruyó	EVENT	628
+Event	T16	accionaban	EVENT	654
+Event	T17	resultando	EVENT	724
+Event	T18	perdieran	EVENT	754
+Event	T19	control	EVENT	767
+Event	T20	accidente	EVENT	802
+Event	T21	publicado	EVENT	861
+Event	T22	pruebas	EVENT	907
+Relation	T3	T1	CauseEffect	true	fallas	accidente
+Relation	T1	T3	EffectCause	true	accidente	fallas
+Relation	T5	T6	CauseEffect	true	desintegración	destruyeron
+Relation	T6	T5	EffectCause	true	destruyeron	desintegración
+Relation	T5	T7	CauseEffect	true	desintegración	cortaron
+Relation	T7	T5	EffectCause	true	cortaron	desintegración
+Relation	T5	T8	CauseEffect	true	desintegración	cortaron
+Relation	T8	T5	EffectCause	true	cortaron	desintegración
+Relation	T9	T13	CauseEffect	true	encendieron	incendio
+Relation	T13	T9	EffectCause	true	incendio	encendieron
+Relation	T14	T15	CauseEffect	true	incendio	destruyó
+Relation	T15	T14	EffectCause	true	destruyó	incendio
+Relation	T15	T18	CauseEffect	true	destruyó	perdieran
+Relation	T18	T15	EffectCause	true	perdieran	destruyó
+Relation	T0	T11	NoRel	true	encontró	dañadas
+Relation	T0	T13	NoRel	true	encontró	incendio
+Relation	T0	T15	NoRel	true	encontró	destruyó
+Relation	T0	T7	NoRel	true	encontró	cortaron
+Relation	T0	T8	NoRel	true	encontró	cortaron
+Relation	T1	T10	NoRel	true	accidente	derramaba
+Relation	T1	T16	NoRel	true	accidente	accionaban
+Relation	T1	T21	NoRel	true	accidente	publicado
+Relation	T1	T4	NoRel	true	accidente	fatiga
+Relation	T1	T7	NoRel	true	accidente	cortaron
+Relation	T1	T8	NoRel	true	accidente	cortaron
+Relation	T10	T0	NoRel	true	derramaba	encontró
+Relation	T10	T12	NoRel	true	derramaba	provocó
+Relation	T10	T13	NoRel	true	derramaba	incendio
+Relation	T10	T14	NoRel	true	derramaba	incendio
+Relation	T10	T19	NoRel	true	derramaba	control
+Relation	T10	T2	NoRel	true	derramaba	causado
+Relation	T10	T21	NoRel	true	derramaba	publicado
+Relation	T10	T4	NoRel	true	derramaba	fatiga
+Relation	T10	T7	NoRel	true	derramaba	cortaron
+Relation	T10	T9	NoRel	true	derramaba	encendieron
+Relation	T11	T0	NoRel	true	dañadas	encontró
+Relation	T11	T1	NoRel	true	dañadas	accidente
+Relation	T11	T18	NoRel	true	dañadas	perdieran
+Relation	T11	T21	NoRel	true	dañadas	publicado
+Relation	T12	T10	NoRel	true	provocó	derramaba
+Relation	T12	T13	NoRel	true	provocó	incendio
+Relation	T12	T15	NoRel	true	provocó	destruyó
+Relation	T12	T18	NoRel	true	provocó	perdieran
+Relation	T12	T19	NoRel	true	provocó	control
+Relation	T12	T2	NoRel	true	provocó	causado
+Relation	T12	T7	NoRel	true	provocó	cortaron
+Relation	T12	T8	NoRel	true	provocó	cortaron
+Relation	T13	T0	NoRel	true	incendio	encontró
+Relation	T13	T11	NoRel	true	incendio	dañadas
+Relation	T13	T17	NoRel	true	incendio	resultando
+Relation	T13	T18	NoRel	true	incendio	perdieran
+Relation	T13	T21	NoRel	true	incendio	publicado
+Relation	T13	T4	NoRel	true	incendio	fatiga
+Relation	T13	T8	NoRel	true	incendio	cortaron
+Relation	T14	T1	NoRel	true	incendio	accidente
+Relation	T14	T12	NoRel	true	incendio	provocó
+Relation	T14	T18	NoRel	true	incendio	perdieran
+Relation	T14	T19	NoRel	true	incendio	control
+Relation	T14	T20	NoRel	true	incendio	accidente
+Relation	T14	T3	NoRel	true	incendio	fallas
+Relation	T14	T4	NoRel	true	incendio	fatiga
+Relation	T14	T6	NoRel	true	incendio	destruyeron
+Relation	T15	T0	NoRel	true	destruyó	encontró
+Relation	T15	T11	NoRel	true	destruyó	dañadas
+Relation	T15	T12	NoRel	true	destruyó	provocó
+Relation	T15	T19	NoRel	true	destruyó	control
+Relation	T15	T22	NoRel	true	destruyó	pruebas
+Relation	T15	T3	NoRel	true	destruyó	fallas
+Relation	T15	T5	NoRel	true	destruyó	desintegración
+Relation	T16	T12	NoRel	true	accionaban	provocó
+Relation	T16	T17	NoRel	true	accionaban	resultando
+Relation	T16	T22	NoRel	true	accionaban	pruebas
+Relation	T16	T3	NoRel	true	accionaban	fallas
+Relation	T16	T4	NoRel	true	accionaban	fatiga
+Relation	T16	T8	NoRel	true	accionaban	cortaron
+Relation	T17	T1	NoRel	true	resultando	accidente
+Relation	T17	T10	NoRel	true	resultando	derramaba
+Relation	T17	T11	NoRel	true	resultando	dañadas
+Relation	T17	T18	NoRel	true	resultando	perdieran
+Relation	T17	T19	NoRel	true	resultando	control
+Relation	T17	T6	NoRel	true	resultando	destruyeron
+Relation	T17	T7	NoRel	true	resultando	cortaron
+Relation	T17	T8	NoRel	true	resultando	cortaron
+Relation	T18	T12	NoRel	true	perdieran	provocó
+Relation	T18	T19	NoRel	true	perdieran	control
+Relation	T18	T2	NoRel	true	perdieran	causado
+Relation	T18	T22	NoRel	true	perdieran	pruebas
+Relation	T18	T8	NoRel	true	perdieran	cortaron
+Relation	T19	T0	NoRel	true	control	encontró
+Relation	T19	T10	NoRel	true	control	derramaba
+Relation	T19	T12	NoRel	true	control	provocó
+Relation	T19	T13	NoRel	true	control	incendio
+Relation	T19	T17	NoRel	true	control	resultando
+Relation	T19	T20	NoRel	true	control	accidente
+Relation	T19	T21	NoRel	true	control	publicado
+Relation	T19	T6	NoRel	true	control	destruyeron
+Relation	T19	T7	NoRel	true	control	cortaron
+Relation	T2	T10	NoRel	true	causado	derramaba
+Relation	T2	T19	NoRel	true	causado	control
+Relation	T2	T20	NoRel	true	causado	accidente
+Relation	T2	T3	NoRel	true	causado	fallas
+Relation	T2	T5	NoRel	true	causado	desintegración
+Relation	T2	T6	NoRel	true	causado	destruyeron
+Relation	T2	T9	NoRel	true	causado	encendieron
+Relation	T20	T0	NoRel	true	accidente	encontró
+Relation	T20	T1	NoRel	true	accidente	accidente
+Relation	T20	T12	NoRel	true	accidente	provocó
+Relation	T20	T15	NoRel	true	accidente	destruyó
+Relation	T20	T18	NoRel	true	accidente	perdieran
+Relation	T20	T19	NoRel	true	accidente	control
+Relation	T20	T2	NoRel	true	accidente	causado
+Relation	T20	T21	NoRel	true	accidente	publicado
+Relation	T20	T3	NoRel	true	accidente	fallas
+Relation	T20	T7	NoRel	true	accidente	cortaron
+Relation	T21	T0	NoRel	true	publicado	encontró
+Relation	T21	T12	NoRel	true	publicado	provocó
+Relation	T21	T16	NoRel	true	publicado	accionaban
+Relation	T21	T17	NoRel	true	publicado	resultando
+Relation	T21	T2	NoRel	true	publicado	causado
+Relation	T21	T22	NoRel	true	publicado	pruebas
+Relation	T21	T3	NoRel	true	publicado	fallas
+Relation	T21	T8	NoRel	true	publicado	cortaron
+Relation	T22	T10	NoRel	true	pruebas	derramaba
+Relation	T22	T2	NoRel	true	pruebas	causado
+Relation	T22	T20	NoRel	true	pruebas	accidente
+Relation	T22	T3	NoRel	true	pruebas	fallas
+Relation	T22	T5	NoRel	true	pruebas	desintegración
+Relation	T22	T6	NoRel	true	pruebas	destruyeron
+Relation	T22	T8	NoRel	true	pruebas	cortaron
+Relation	T3	T13	NoRel	true	fallas	incendio
+Relation	T3	T15	NoRel	true	fallas	destruyó
+Relation	T3	T20	NoRel	true	fallas	accidente
+Relation	T3	T21	NoRel	true	fallas	publicado
+Relation	T4	T0	NoRel	true	fatiga	encontró
+Relation	T4	T1	NoRel	true	fatiga	accidente
+Relation	T4	T12	NoRel	true	fatiga	provocó
+Relation	T4	T17	NoRel	true	fatiga	resultando
+Relation	T4	T18	NoRel	true	fatiga	perdieran
+Relation	T4	T19	NoRel	true	fatiga	control
+Relation	T4	T21	NoRel	true	fatiga	publicado
+Relation	T4	T22	NoRel	true	fatiga	pruebas
+Relation	T5	T14	NoRel	true	desintegración	incendio
+Relation	T5	T15	NoRel	true	desintegración	destruyó
+Relation	T5	T16	NoRel	true	desintegración	accionaban
+Relation	T5	T2	NoRel	true	desintegración	causado
+Relation	T5	T20	NoRel	true	desintegración	accidente
+Relation	T5	T9	NoRel	true	desintegración	encendieron
+Relation	T6	T13	NoRel	true	destruyeron	incendio
+Relation	T6	T16	NoRel	true	destruyeron	accionaban
+Relation	T6	T21	NoRel	true	destruyeron	publicado
+Relation	T6	T3	NoRel	true	destruyeron	fallas
+Relation	T6	T4	NoRel	true	destruyeron	fatiga
+Relation	T7	T1	NoRel	true	cortaron	accidente
+Relation	T7	T10	NoRel	true	cortaron	derramaba
+Relation	T7	T14	NoRel	true	cortaron	incendio
+Relation	T7	T15	NoRel	true	cortaron	destruyó
+Relation	T7	T16	NoRel	true	cortaron	accionaban
+Relation	T7	T6	NoRel	true	cortaron	destruyeron
+Relation	T8	T1	NoRel	true	cortaron	accidente
+Relation	T8	T12	NoRel	true	cortaron	provocó
+Relation	T8	T13	NoRel	true	cortaron	incendio
+Relation	T8	T17	NoRel	true	cortaron	resultando
+Relation	T8	T22	NoRel	true	cortaron	pruebas
+Relation	T8	T4	NoRel	true	cortaron	fatiga
+Relation	T8	T6	NoRel	true	cortaron	destruyeron
+Relation	T8	T7	NoRel	true	cortaron	cortaron
+Relation	T8	T9	NoRel	true	cortaron	encendieron
+Relation	T9	T14	NoRel	true	encendieron	incendio
+Relation	T9	T16	NoRel	true	encendieron	accionaban
+Relation	T9	T2	NoRel	true	encendieron	causado
+Relation	T9	T20	NoRel	true	encendieron	accidente
+Relation	T9	T6	NoRel	true	encendieron	destruyeron
+Relation	T9	T7	NoRel	true	encendieron	cortaron
+Relation	T9	T8	NoRel	true	encendieron	cortaron

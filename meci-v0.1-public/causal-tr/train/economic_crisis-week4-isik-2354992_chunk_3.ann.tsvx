@@ -1,0 +1,53 @@
+Text	Tren yolları ve sokaklar ablukaya alındı .	Şehir Bargteheide'de " Stormarn Sovyet Cumhuriyeti " ilan edildi ve ayaklanmaya direnenler ile birlikte yerel hükûmet yetkilileri tutuklandı .	Pankartlar asıldı ve bölge halkına kendilerine destek vermeleri için çağrıda bulunuldu .	Pankartlarda ve dağıtılan bildirilerde " Yaşasın Sovyet Almanya ! Yaşasın Dünya Sovyet Devletleri Federasyonu ! Yaşasın Dünya Devrimi ! " sloganları yazılıyordu .	Ayaklanmada en az 100 kişinin hayatını kaybetti , 300'den fazla kişi yaralandı .
+Event	T0	alındı	EVENT	34
+Event	T1	edildi	EVENT	101
+Event	T2	ayaklanmaya	EVENT	111
+Event	T3	tutuklandı	EVENT	173
+Event	T4	asıldı	EVENT	197
+Event	T5	yazılıyordu	EVENT	424
+Event	T6	Ayaklanmada	EVENT	438
+Event	T7	kaybetti	EVENT	477
+Event	T8	yaralandı	EVENT	507
+Event	T9	bulunuldu	EVENT	263
+Relation	T6	T7	CauseEffect	true	Ayaklanmada	kaybetti
+Relation	T7	T6	EffectCause	true	kaybetti	Ayaklanmada
+Relation	T6	T8	CauseEffect	true	Ayaklanmada	yaralandı
+Relation	T8	T6	EffectCause	true	yaralandı	Ayaklanmada
+Relation	T6	T0	CauseEffect	true	Ayaklanmada	alındı
+Relation	T0	T6	EffectCause	true	alındı	Ayaklanmada
+Relation	T6	T1	CauseEffect	true	Ayaklanmada	edildi
+Relation	T1	T6	EffectCause	true	edildi	Ayaklanmada
+Relation	T6	T4	CauseEffect	true	Ayaklanmada	asıldı
+Relation	T4	T6	EffectCause	true	asıldı	Ayaklanmada
+Relation	T6	T9	CauseEffect	true	Ayaklanmada	bulunuldu
+Relation	T9	T6	EffectCause	true	bulunuldu	Ayaklanmada
+Relation	T1	T3	CauseEffect	true	edildi	tutuklandı
+Relation	T3	T1	EffectCause	true	tutuklandı	edildi
+Relation	T0	T1	NoRel	true	alındı	edildi
+Relation	T0	T3	NoRel	true	alındı	tutuklandı
+Relation	T0	T7	NoRel	true	alındı	kaybetti
+Relation	T0	T9	NoRel	true	alındı	bulunuldu
+Relation	T1	T2	NoRel	true	edildi	ayaklanmaya
+Relation	T1	T5	NoRel	true	edildi	yazılıyordu
+Relation	T1	T7	NoRel	true	edildi	kaybetti
+Relation	T2	T1	NoRel	true	ayaklanmaya	edildi
+Relation	T2	T4	NoRel	true	ayaklanmaya	asıldı
+Relation	T2	T8	NoRel	true	ayaklanmaya	yaralandı
+Relation	T2	T9	NoRel	true	ayaklanmaya	bulunuldu
+Relation	T3	T5	NoRel	true	tutuklandı	yazılıyordu
+Relation	T3	T7	NoRel	true	tutuklandı	kaybetti
+Relation	T3	T9	NoRel	true	tutuklandı	bulunuldu
+Relation	T4	T1	NoRel	true	asıldı	edildi
+Relation	T5	T0	NoRel	true	yazılıyordu	alındı
+Relation	T5	T3	NoRel	true	yazılıyordu	tutuklandı
+Relation	T5	T8	NoRel	true	yazılıyordu	yaralandı
+Relation	T7	T1	NoRel	true	kaybetti	edildi
+Relation	T7	T3	NoRel	true	kaybetti	tutuklandı
+Relation	T7	T9	NoRel	true	kaybetti	bulunuldu
+Relation	T8	T0	NoRel	true	yaralandı	alındı
+Relation	T8	T2	NoRel	true	yaralandı	ayaklanmaya
+Relation	T8	T3	NoRel	true	yaralandı	tutuklandı
+Relation	T8	T5	NoRel	true	yaralandı	yazılıyordu
+Relation	T8	T9	NoRel	true	yaralandı	bulunuldu
+Relation	T9	T4	NoRel	true	bulunuldu	asıldı
+Relation	T9	T7	NoRel	true	bulunuldu	kaybetti

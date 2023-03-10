@@ -1,0 +1,122 @@
+Text	El VUELO 222 DE TRANSASIA AIRWAYS ( GE 222 / TNA222 ) del 23 de julio de 2014 fue un vuelo de cabotaje de pasajeros programado operado por un avión ATR 72-500 .	Partió del aeropuerto Internacional de Kaohsiung a las 17:43 horas ( hora local ) hacia Magong , en la República de China , con 54 pasajeros y 4 miembros de la tripulación a bordo .	El aparato se estrelló realizando la maniobra de _ motor y al aire _ tras un aterrizaje de emergencia fallido en Magong ( islas Pescadores ) .	48 personas fallecieron y 10 resultaron heridas .	Una investigación del Consejo de Seguridad de la Aviación de Taiwán descubrió que los pilotos descendieron intencionalmente por debajo de la altitud mínima de descenso y que el capitán estaba demasiado confiado , lo que provocó un error del piloto al aterrizaje .
+Event	T0	vuelo	EVENT	85
+Event	T1	cabotaje	EVENT	94
+Event	T2	operado	EVENT	127
+Event	T3	Partió	EVENT	161
+Event	T4	realizando	EVENT	366
+Event	T5	maniobra	EVENT	380
+Event	T6	aterrizaje	EVENT	420
+Event	T7	fallido	EVENT	445
+Event	T8	fallecieron	EVENT	498
+Event	T9	heridas	EVENT	526
+Event	T10	investigación	EVENT	540
+Event	T11	descubrió	EVENT	604
+Event	T12	descendieron	EVENT	630
+Event	T13	descenso	EVENT	695
+Event	T14	provocó	EVENT	756
+Event	T15	error	EVENT	767
+Event	T16	aterrizaje	EVENT	787
+Relation	T15	T8	CauseEffect	true	error	fallecieron
+Relation	T8	T15	EffectCause	true	fallecieron	error
+Relation	T15	T9	CauseEffect	true	error	heridas
+Relation	T9	T15	EffectCause	true	heridas	error
+Relation	T0	T10	NoRel	true	vuelo	investigación
+Relation	T0	T15	NoRel	true	vuelo	error
+Relation	T0	T3	NoRel	true	vuelo	Partió
+Relation	T0	T6	NoRel	true	vuelo	aterrizaje
+Relation	T0	T7	NoRel	true	vuelo	fallido
+Relation	T1	T0	NoRel	true	cabotaje	vuelo
+Relation	T1	T10	NoRel	true	cabotaje	investigación
+Relation	T1	T12	NoRel	true	cabotaje	descendieron
+Relation	T1	T2	NoRel	true	cabotaje	operado
+Relation	T1	T5	NoRel	true	cabotaje	maniobra
+Relation	T1	T8	NoRel	true	cabotaje	fallecieron
+Relation	T10	T0	NoRel	true	investigación	vuelo
+Relation	T10	T11	NoRel	true	investigación	descubrió
+Relation	T10	T12	NoRel	true	investigación	descendieron
+Relation	T10	T15	NoRel	true	investigación	error
+Relation	T10	T16	NoRel	true	investigación	aterrizaje
+Relation	T10	T4	NoRel	true	investigación	realizando
+Relation	T11	T0	NoRel	true	descubrió	vuelo
+Relation	T11	T1	NoRel	true	descubrió	cabotaje
+Relation	T11	T12	NoRel	true	descubrió	descendieron
+Relation	T11	T14	NoRel	true	descubrió	provocó
+Relation	T11	T15	NoRel	true	descubrió	error
+Relation	T11	T16	NoRel	true	descubrió	aterrizaje
+Relation	T11	T4	NoRel	true	descubrió	realizando
+Relation	T11	T7	NoRel	true	descubrió	fallido
+Relation	T12	T0	NoRel	true	descendieron	vuelo
+Relation	T12	T1	NoRel	true	descendieron	cabotaje
+Relation	T12	T10	NoRel	true	descendieron	investigación
+Relation	T12	T15	NoRel	true	descendieron	error
+Relation	T12	T3	NoRel	true	descendieron	Partió
+Relation	T12	T5	NoRel	true	descendieron	maniobra
+Relation	T13	T1	NoRel	true	descenso	cabotaje
+Relation	T13	T11	NoRel	true	descenso	descubrió
+Relation	T13	T12	NoRel	true	descenso	descendieron
+Relation	T13	T5	NoRel	true	descenso	maniobra
+Relation	T13	T6	NoRel	true	descenso	aterrizaje
+Relation	T13	T9	NoRel	true	descenso	heridas
+Relation	T14	T0	NoRel	true	provocó	vuelo
+Relation	T14	T10	NoRel	true	provocó	investigación
+Relation	T14	T12	NoRel	true	provocó	descendieron
+Relation	T14	T15	NoRel	true	provocó	error
+Relation	T14	T2	NoRel	true	provocó	operado
+Relation	T14	T4	NoRel	true	provocó	realizando
+Relation	T14	T5	NoRel	true	provocó	maniobra
+Relation	T14	T6	NoRel	true	provocó	aterrizaje
+Relation	T14	T7	NoRel	true	provocó	fallido
+Relation	T14	T8	NoRel	true	provocó	fallecieron
+Relation	T15	T0	NoRel	true	error	vuelo
+Relation	T15	T13	NoRel	true	error	descenso
+Relation	T15	T16	NoRel	true	error	aterrizaje
+Relation	T15	T2	NoRel	true	error	operado
+Relation	T15	T5	NoRel	true	error	maniobra
+Relation	T16	T15	NoRel	true	aterrizaje	error
+Relation	T16	T2	NoRel	true	aterrizaje	operado
+Relation	T16	T4	NoRel	true	aterrizaje	realizando
+Relation	T16	T6	NoRel	true	aterrizaje	aterrizaje
+Relation	T2	T10	NoRel	true	operado	investigación
+Relation	T2	T11	NoRel	true	operado	descubrió
+Relation	T2	T13	NoRel	true	operado	descenso
+Relation	T2	T14	NoRel	true	operado	provocó
+Relation	T2	T16	NoRel	true	operado	aterrizaje
+Relation	T2	T3	NoRel	true	operado	Partió
+Relation	T3	T12	NoRel	true	Partió	descendieron
+Relation	T3	T13	NoRel	true	Partió	descenso
+Relation	T3	T15	NoRel	true	Partió	error
+Relation	T3	T2	NoRel	true	Partió	operado
+Relation	T3	T9	NoRel	true	Partió	heridas
+Relation	T4	T0	NoRel	true	realizando	vuelo
+Relation	T4	T10	NoRel	true	realizando	investigación
+Relation	T4	T12	NoRel	true	realizando	descendieron
+Relation	T4	T8	NoRel	true	realizando	fallecieron
+Relation	T5	T10	NoRel	true	maniobra	investigación
+Relation	T5	T11	NoRel	true	maniobra	descubrió
+Relation	T5	T13	NoRel	true	maniobra	descenso
+Relation	T5	T2	NoRel	true	maniobra	operado
+Relation	T5	T3	NoRel	true	maniobra	Partió
+Relation	T5	T4	NoRel	true	maniobra	realizando
+Relation	T5	T6	NoRel	true	maniobra	aterrizaje
+Relation	T5	T9	NoRel	true	maniobra	heridas
+Relation	T6	T15	NoRel	true	aterrizaje	error
+Relation	T6	T2	NoRel	true	aterrizaje	operado
+Relation	T6	T7	NoRel	true	aterrizaje	fallido
+Relation	T7	T14	NoRel	true	fallido	provocó
+Relation	T7	T2	NoRel	true	fallido	operado
+Relation	T7	T5	NoRel	true	fallido	maniobra
+Relation	T8	T1	NoRel	true	fallecieron	cabotaje
+Relation	T8	T10	NoRel	true	fallecieron	investigación
+Relation	T8	T13	NoRel	true	fallecieron	descenso
+Relation	T8	T14	NoRel	true	fallecieron	provocó
+Relation	T8	T5	NoRel	true	fallecieron	maniobra
+Relation	T8	T6	NoRel	true	fallecieron	aterrizaje
+Relation	T8	T7	NoRel	true	fallecieron	fallido
+Relation	T9	T0	NoRel	true	heridas	vuelo
+Relation	T9	T10	NoRel	true	heridas	investigación
+Relation	T9	T13	NoRel	true	heridas	descenso
+Relation	T9	T16	NoRel	true	heridas	aterrizaje
+Relation	T9	T2	NoRel	true	heridas	operado
+Relation	T9	T6	NoRel	true	heridas	aterrizaje
+Relation	T9	T7	NoRel	true	heridas	fallido
+Relation	T9	T8	NoRel	true	heridas	fallecieron

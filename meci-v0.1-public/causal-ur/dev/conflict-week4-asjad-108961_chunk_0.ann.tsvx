@@ -1,0 +1,43 @@
+Text	ایبٹ آباد لجنہ سندیساریاستہائے متحدہ امریکا کی فوج کے ایبٹ آباد میں واقع ایک گھر پر بالگرد حملے کے واقعہ کی تحقیقات کے لیے حکومت پاکستان کی طرف سے بٹھائے جانے والے لَجنہ نے وزیر اعظم پاکستان کو 4 جنوری 2013ء کو پیش کی ۔	امریکی حملہ پاکستان کی حدود کی خلاف ورزی کرتے ہوئے مبینہ طور پر اسامہ بن لادن کی رہائش گاہ پر کیا گیا ۔	اس حملہ میں کئی افراد امریکیوں نے قتل اور زخمی کیے ۔	لجنہ کے سربراہ عدالت اعظم کے منصف جاوید اقبال تھے اور ارکان اشرف جہانگیر قاضی ، عباس خان اور ندیم خان شامل تھے ۔	لجنہ نے بہت سے پاکستانی حکام کے بیان لیے ۔
+Event	T0	حملے	EVENT	91
+Event	T1	واقعہ	EVENT	99
+Event	T2	تحقیقات	EVENT	108
+Event	T3	حملہ	EVENT	227
+Event	T4	کرتے	EVENT	261
+Event	T5	حملہ	EVENT	327
+Event	T6	قتل	EVENT	358
+Event	T7	کیے	EVENT	371
+Event	T8	بیان	EVENT	522
+Relation	T0	T2	CauseEffect	true	حملے	تحقیقات
+Relation	T2	T0	EffectCause	true	تحقیقات	حملے
+Relation	T1	T2	CauseEffect	true	واقعہ	تحقیقات
+Relation	T2	T1	EffectCause	true	تحقیقات	واقعہ
+Relation	T5	T6	CauseEffect	true	حملہ	قتل
+Relation	T6	T5	EffectCause	true	قتل	حملہ
+Relation	T5	T7	CauseEffect	true	حملہ	کیے
+Relation	T7	T5	EffectCause	true	کیے	حملہ
+Relation	T0	T3	NoRel	true	حملے	حملہ
+Relation	T0	T5	NoRel	true	حملے	حملہ
+Relation	T0	T8	NoRel	true	حملے	بیان
+Relation	T1	T0	NoRel	true	واقعہ	حملے
+Relation	T1	T5	NoRel	true	واقعہ	حملہ
+Relation	T1	T6	NoRel	true	واقعہ	قتل
+Relation	T2	T4	NoRel	true	تحقیقات	کرتے
+Relation	T2	T6	NoRel	true	تحقیقات	قتل
+Relation	T2	T7	NoRel	true	تحقیقات	کیے
+Relation	T3	T6	NoRel	true	حملہ	قتل
+Relation	T3	T7	NoRel	true	حملہ	کیے
+Relation	T4	T1	NoRel	true	کرتے	واقعہ
+Relation	T4	T3	NoRel	true	کرتے	حملہ
+Relation	T4	T5	NoRel	true	کرتے	حملہ
+Relation	T5	T0	NoRel	true	حملہ	حملے
+Relation	T5	T2	NoRel	true	حملہ	تحقیقات
+Relation	T5	T3	NoRel	true	حملہ	حملہ
+Relation	T5	T8	NoRel	true	حملہ	بیان
+Relation	T6	T7	NoRel	true	قتل	کیے
+Relation	T7	T1	NoRel	true	کیے	واقعہ
+Relation	T7	T4	NoRel	true	کیے	کرتے
+Relation	T7	T6	NoRel	true	کیے	قتل
+Relation	T8	T2	NoRel	true	بیان	تحقیقات
+Relation	T8	T4	NoRel	true	بیان	کرتے
+Relation	T8	T7	NoRel	true	بیان	کیے

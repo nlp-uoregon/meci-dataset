@@ -1,0 +1,77 @@
+Text	The authorities reopened Gran Canaria airport once the bomb threat had been contained .	The Pan Am plane was ready to depart from Tenerife , but access to the runway was obstructed by the KLM plane and a refueling vehicle ; the KLM captain had decided to fully refuel at Los Rodeos instead of Las Palmas , apparently to save time .	The Pan Am aircraft was unable to maneuver around the refueling KLM in order to reach the runway for takeoff , due to a lack of safe clearance between the two planes , which was just .	The refueling took about 35 minutes , after which the passengers were brought back to the aircraft .	The search for a missing Dutch family of four , who had not returned to the waiting KLM plane , delayed the flight even further .
+Event	T0	reopened	EVENT	16
+Event	T1	threat	EVENT	60
+Event	T2	contained	EVENT	76
+Event	T3	depart	EVENT	118
+Event	T4	obstructed	EVENT	170
+Event	T5	refueling	EVENT	204
+Event	T6	decided	EVENT	244
+Event	T7	refuel	EVENT	261
+Event	T8	maneuver	EVENT	366
+Event	T9	refueling	EVENT	386
+Event	T10	reach	EVENT	412
+Event	T11	takeoff	EVENT	433
+Event	T12	lack	EVENT	452
+Event	T13	took	EVENT	531
+Event	T14	search	EVENT	622
+Event	T15	missing	EVENT	635
+Event	T16	returned	EVENT	678
+Event	T17	waiting	EVENT	694
+Event	T18	delayed	EVENT	714
+Event	T19	flight	EVENT	726
+Event	T20	save	EVENT	320
+Event	T21	brought	EVENT	587
+Relation	T1	T0	CauseEffect	true	threat	reopened
+Relation	T0	T1	EffectCause	true	reopened	threat
+Relation	T8	T10	CauseEffect	true	maneuver	reach
+Relation	T10	T8	EffectCause	true	reach	maneuver
+Relation	T10	T11	CauseEffect	true	reach	takeoff
+Relation	T11	T10	EffectCause	true	takeoff	reach
+Relation	T12	T8	CauseEffect	true	lack	maneuver
+Relation	T8	T12	EffectCause	true	maneuver	lack
+Relation	T15	T14	CauseEffect	true	missing	search
+Relation	T14	T15	EffectCause	true	search	missing
+Relation	T16	T14	CauseEffect	true	returned	search
+Relation	T14	T16	EffectCause	true	search	returned
+Relation	T14	T18	CauseEffect	true	search	delayed
+Relation	T18	T14	EffectCause	true	delayed	search
+Relation	T7	T20	CauseEffect	true	refuel	save
+Relation	T20	T7	EffectCause	true	save	refuel
+Relation	T0	T5	NoRel	true	reopened	refueling
+Relation	T0	T6	NoRel	true	reopened	decided
+Relation	T1	T11	NoRel	true	threat	takeoff
+Relation	T1	T9	NoRel	true	threat	refueling
+Relation	T10	T18	NoRel	true	reach	delayed
+Relation	T11	T18	NoRel	true	takeoff	delayed
+Relation	T12	T1	NoRel	true	lack	threat
+Relation	T12	T18	NoRel	true	lack	delayed
+Relation	T13	T20	NoRel	true	took	save
+Relation	T13	T5	NoRel	true	took	refueling
+Relation	T14	T3	NoRel	true	search	depart
+Relation	T15	T10	NoRel	true	missing	reach
+Relation	T16	T1	NoRel	true	returned	threat
+Relation	T16	T11	NoRel	true	returned	takeoff
+Relation	T16	T3	NoRel	true	returned	depart
+Relation	T17	T4	NoRel	true	waiting	obstructed
+Relation	T18	T0	NoRel	true	delayed	reopened
+Relation	T18	T7	NoRel	true	delayed	refuel
+Relation	T2	T1	NoRel	true	contained	threat
+Relation	T2	T7	NoRel	true	contained	refuel
+Relation	T20	T8	NoRel	true	save	maneuver
+Relation	T21	T1	NoRel	true	brought	threat
+Relation	T3	T0	NoRel	true	depart	reopened
+Relation	T3	T12	NoRel	true	depart	lack
+Relation	T4	T19	NoRel	true	obstructed	flight
+Relation	T4	T5	NoRel	true	obstructed	refueling
+Relation	T5	T13	NoRel	true	refueling	took
+Relation	T5	T2	NoRel	true	refueling	contained
+Relation	T5	T3	NoRel	true	refueling	depart
+Relation	T6	T12	NoRel	true	decided	lack
+Relation	T6	T15	NoRel	true	decided	missing
+Relation	T6	T5	NoRel	true	decided	refueling
+Relation	T7	T0	NoRel	true	refuel	reopened
+Relation	T7	T12	NoRel	true	refuel	lack
+Relation	T7	T19	NoRel	true	refuel	flight
+Relation	T9	T12	NoRel	true	refueling	lack
+Relation	T9	T16	NoRel	true	refueling	returned
+Relation	T9	T6	NoRel	true	refueling	decided

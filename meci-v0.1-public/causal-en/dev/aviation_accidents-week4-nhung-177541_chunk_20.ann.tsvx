@@ -1,0 +1,88 @@
+Text	The team 's report was critical of the Mission Management Team for asserting that there were no safety concerns before the Debris Assessment Team 's investigation had been completed .	Throughout the risk assessment process , senior NASA managers were influenced by their belief that nothing could be done even if damage were detected .	This affected their stance on investigation urgency , thoroughness and possible contingency actions .	They decided to conduct a parametric " what - if " scenario study more suited to determine risk probabilities of future events , instead of inspecting and assessing the actual damage .	The investigation report in particular singled out NASA manager Linda Ham for exhibiting this attitude .
+Event	T0	report	EVENT	12
+Event	T1	critical	EVENT	23
+Event	T2	asserting	EVENT	67
+Event	T3	investigation	EVENT	149
+Event	T4	completed	EVENT	172
+Event	T5	influenced	EVENT	251
+Event	T6	belief	EVENT	271
+Event	T7	done	EVENT	300
+Event	T8	damage	EVENT	313
+Event	T9	detected	EVENT	325
+Event	T10	affected	EVENT	341
+Event	T11	investigation	EVENT	366
+Event	T12	actions	EVENT	428
+Event	T13	decided	EVENT	443
+Event	T14	conduct	EVENT	454
+Event	T15	study	EVENT	498
+Event	T16	suited	EVENT	509
+Event	T17	events	EVENT	558
+Event	T18	inspecting	EVENT	578
+Event	T19	assessing	EVENT	593
+Event	T20	damage	EVENT	614
+Event	T21	report	EVENT	641
+Event	T22	exhibiting	EVENT	701
+Event	T23	determine	EVENT	519
+Relation	T2	T1	CauseEffect	true	asserting	critical
+Relation	T1	T2	EffectCause	true	critical	asserting
+Relation	T6	T5	CauseEffect	true	belief	influenced
+Relation	T5	T6	EffectCause	true	influenced	belief
+Relation	T6	T10	CauseEffect	true	belief	affected
+Relation	T10	T6	EffectCause	true	affected	belief
+Relation	T14	T23	CauseEffect	true	conduct	determine
+Relation	T23	T14	EffectCause	true	determine	conduct
+Relation	T0	T10	NoRel	true	report	affected
+Relation	T0	T16	NoRel	true	report	suited
+Relation	T0	T17	NoRel	true	report	events
+Relation	T0	T5	NoRel	true	report	influenced
+Relation	T1	T18	NoRel	true	critical	inspecting
+Relation	T1	T5	NoRel	true	critical	influenced
+Relation	T1	T8	NoRel	true	critical	damage
+Relation	T10	T16	NoRel	true	affected	suited
+Relation	T10	T22	NoRel	true	affected	exhibiting
+Relation	T10	T3	NoRel	true	affected	investigation
+Relation	T10	T7	NoRel	true	affected	done
+Relation	T11	T15	NoRel	true	investigation	study
+Relation	T12	T10	NoRel	true	actions	affected
+Relation	T12	T20	NoRel	true	actions	damage
+Relation	T14	T21	NoRel	true	conduct	report
+Relation	T14	T5	NoRel	true	conduct	influenced
+Relation	T15	T11	NoRel	true	study	investigation
+Relation	T15	T22	NoRel	true	study	exhibiting
+Relation	T16	T18	NoRel	true	suited	inspecting
+Relation	T16	T9	NoRel	true	suited	detected
+Relation	T17	T12	NoRel	true	events	actions
+Relation	T17	T14	NoRel	true	events	conduct
+Relation	T17	T15	NoRel	true	events	study
+Relation	T17	T19	NoRel	true	events	assessing
+Relation	T17	T3	NoRel	true	events	investigation
+Relation	T18	T1	NoRel	true	inspecting	critical
+Relation	T18	T8	NoRel	true	inspecting	damage
+Relation	T19	T15	NoRel	true	assessing	study
+Relation	T19	T16	NoRel	true	assessing	suited
+Relation	T19	T21	NoRel	true	assessing	report
+Relation	T19	T3	NoRel	true	assessing	investigation
+Relation	T2	T0	NoRel	true	asserting	report
+Relation	T2	T17	NoRel	true	asserting	events
+Relation	T2	T21	NoRel	true	asserting	report
+Relation	T20	T22	NoRel	true	damage	exhibiting
+Relation	T20	T8	NoRel	true	damage	damage
+Relation	T21	T6	NoRel	true	report	belief
+Relation	T22	T11	NoRel	true	exhibiting	investigation
+Relation	T22	T12	NoRel	true	exhibiting	actions
+Relation	T22	T17	NoRel	true	exhibiting	events
+Relation	T22	T4	NoRel	true	exhibiting	completed
+Relation	T22	T8	NoRel	true	exhibiting	damage
+Relation	T3	T18	NoRel	true	investigation	inspecting
+Relation	T3	T21	NoRel	true	investigation	report
+Relation	T3	T7	NoRel	true	investigation	done
+Relation	T4	T17	NoRel	true	completed	events
+Relation	T4	T20	NoRel	true	completed	damage
+Relation	T5	T0	NoRel	true	influenced	report
+Relation	T5	T17	NoRel	true	influenced	events
+Relation	T6	T13	NoRel	true	belief	decided
+Relation	T6	T15	NoRel	true	belief	study
+Relation	T7	T1	NoRel	true	done	critical
+Relation	T7	T10	NoRel	true	done	affected
+Relation	T8	T0	NoRel	true	damage	report
+Relation	T8	T22	NoRel	true	damage	exhibiting

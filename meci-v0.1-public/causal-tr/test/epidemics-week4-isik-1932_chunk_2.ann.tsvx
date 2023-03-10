@@ -1,0 +1,14 @@
+Text	_ Sendrom _ kelimesi ise bir başka hastalıkla bağlantısı olabilecek çeşitli hastalıklar anlamına gelmektedir .	HIV ile yaşayan kişi hastaymış gibi görünmeyebilir veya kişi kendini hasta hissetmeyebilir , HIV ile enfekte olduğunu bile bilmeyebilir .	Çünkü , HIV ile enfekte olan kişilerde semptomların ortaya çıkmasına ve ölüme yol açan şey HIV'in kendisi değil , vücudun bağışıklık sisteminin çökmesiyle tamamen savunmasız kaldığı diğer enfeksiyonlardır .	Virüs tek sarmallı RNA_yı çevreleyen p24 proteinlerinden oluşan kapsit , bunun dışında küçük bir matriksi çevreleyen kılıftan oluşur .	Kılıfta virüsün antijenik yapısını belirleyen glikoproteinler bulunur .
+Event	T1	çökmesiyle	EVENT	393
+Event	T3	açan	EVENT	331
+Event	T4	kaldığı	EVENT	423
+Event	T5	semptomların	EVENT	288
+Relation	T1	T4	CauseEffect	true	çökmesiyle	kaldığı
+Relation	T4	T1	EffectCause	true	kaldığı	çökmesiyle
+Relation	T4	T5	CauseEffect	true	kaldığı	semptomların
+Relation	T5	T4	EffectCause	true	semptomların	kaldığı
+Relation	T5	T3	CauseEffect	true	semptomların	açan
+Relation	T3	T5	EffectCause	true	açan	semptomların
+Relation	T1	T5	NoRel	true	çökmesiyle	semptomların
+Relation	T3	T1	NoRel	true	açan	çökmesiyle
+Relation	T3	T4	NoRel	true	açan	kaldığı

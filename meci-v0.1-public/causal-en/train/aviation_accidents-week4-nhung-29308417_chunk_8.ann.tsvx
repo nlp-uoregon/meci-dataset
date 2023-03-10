@@ -1,0 +1,98 @@
+Text	The pilot then retards the throttle levers to a point below idle speed and that directs the electric mechanisms in the propeller hub to rotate the blades to a position in which they will provide reverse thrust .	Should the pilot need to perform a go - around , he moves the thrust levers forward to a positive position again and that will produce forward thrust , enabling the pilot to execute a go - around maneuver .	The Douglas Aircraft Company designed a system that would prevent the accidental reversal of propeller blades in - flight .	During development of the DC - 6 , the company installed a system that cut electrical power to the mechanisms which rotated the blades while the airplane was in the air .	When there was enough weight on the landing gear ( which would only be the case when the aircraft was on the ground ) , a switch which supplied electrical power to the mechanisms was closed — meaning that when the aircraft touched down the blades could be reversed and thus the airplane could be slowed .
+Event	T0	retards	EVENT	15
+Event	T1	directs	EVENT	80
+Event	T2	rotate	EVENT	136
+Event	T3	thrust	EVENT	203
+Event	T4	perform	EVENT	237
+Event	T5	moves	EVENT	264
+Event	T6	thrust	EVENT	355
+Event	T7	enabling	EVENT	364
+Event	T8	execute	EVENT	386
+Event	T9	maneuver	EVENT	408
+Event	T10	designed	EVENT	448
+Event	T11	reversal	EVENT	500
+Event	T12	flight	EVENT	534
+Event	T13	development	EVENT	550
+Event	T14	installed	EVENT	590
+Event	T15	rotated	EVENT	659
+Event	T17	closed	EVENT	897
+Event	T18	reversed	EVENT	970
+Event	T19	slowed	EVENT	1010
+Event	T20	provide	EVENT	187
+Event	T21	produce	EVENT	339
+Event	T22	prevent	EVENT	477
+Event	T23	cut	EVENT	614
+Event	T24	supplied	EVENT	849
+Event	T16	touched	EVENT	937
+Relation	T1	T2	CauseEffect	true	directs	rotate
+Relation	T2	T1	EffectCause	true	rotate	directs
+Relation	T2	T20	CauseEffect	true	rotate	provide
+Relation	T20	T2	EffectCause	true	provide	rotate
+Relation	T5	T21	CauseEffect	true	moves	produce
+Relation	T21	T5	EffectCause	true	produce	moves
+Relation	T21	T7	CauseEffect	true	produce	enabling
+Relation	T7	T21	EffectCause	true	enabling	produce
+Relation	T10	T22	CauseEffect	true	designed	prevent
+Relation	T22	T10	EffectCause	true	prevent	designed
+Relation	T16	T18	CauseEffect	true	touched	reversed
+Relation	T18	T16	EffectCause	true	reversed	touched
+Relation	T18	T19	CauseEffect	true	reversed	slowed
+Relation	T19	T18	EffectCause	true	slowed	reversed
+Relation	T23	T15	CauseEffect	true	cut	rotated
+Relation	T15	T23	EffectCause	true	rotated	cut
+Relation	T1	T11	NoRel	true	directs	reversal
+Relation	T1	T22	NoRel	true	directs	prevent
+Relation	T1	T9	NoRel	true	directs	maneuver
+Relation	T11	T14	NoRel	true	reversal	installed
+Relation	T12	T15	NoRel	true	flight	rotated
+Relation	T12	T2	NoRel	true	flight	rotate
+Relation	T13	T10	NoRel	true	development	designed
+Relation	T13	T12	NoRel	true	development	flight
+Relation	T13	T18	NoRel	true	development	reversed
+Relation	T13	T9	NoRel	true	development	maneuver
+Relation	T14	T20	NoRel	true	installed	provide
+Relation	T15	T24	NoRel	true	rotated	supplied
+Relation	T15	T7	NoRel	true	rotated	enabling
+Relation	T16	T13	NoRel	true	touched	development
+Relation	T16	T17	NoRel	true	touched	closed
+Relation	T16	T19	NoRel	true	touched	slowed
+Relation	T16	T4	NoRel	true	touched	perform
+Relation	T17	T0	NoRel	true	closed	retards
+Relation	T18	T14	NoRel	true	reversed	installed
+Relation	T19	T13	NoRel	true	slowed	development
+Relation	T19	T14	NoRel	true	slowed	installed
+Relation	T19	T20	NoRel	true	slowed	provide
+Relation	T19	T21	NoRel	true	slowed	produce
+Relation	T19	T5	NoRel	true	slowed	moves
+Relation	T2	T0	NoRel	true	rotate	retards
+Relation	T2	T24	NoRel	true	rotate	supplied
+Relation	T2	T9	NoRel	true	rotate	maneuver
+Relation	T20	T8	NoRel	true	provide	execute
+Relation	T21	T13	NoRel	true	produce	development
+Relation	T22	T12	NoRel	true	prevent	flight
+Relation	T22	T6	NoRel	true	prevent	thrust
+Relation	T23	T11	NoRel	true	cut	reversal
+Relation	T24	T0	NoRel	true	supplied	retards
+Relation	T24	T12	NoRel	true	supplied	flight
+Relation	T24	T20	NoRel	true	supplied	provide
+Relation	T3	T13	NoRel	true	thrust	development
+Relation	T3	T9	NoRel	true	thrust	maneuver
+Relation	T4	T10	NoRel	true	perform	designed
+Relation	T4	T15	NoRel	true	perform	rotated
+Relation	T4	T17	NoRel	true	perform	closed
+Relation	T4	T3	NoRel	true	perform	thrust
+Relation	T4	T9	NoRel	true	perform	maneuver
+Relation	T5	T0	NoRel	true	moves	retards
+Relation	T5	T14	NoRel	true	moves	installed
+Relation	T5	T23	NoRel	true	moves	cut
+Relation	T7	T15	NoRel	true	enabling	rotated
+Relation	T7	T9	NoRel	true	enabling	maneuver
+Relation	T8	T10	NoRel	true	execute	designed
+Relation	T8	T14	NoRel	true	execute	installed
+Relation	T8	T17	NoRel	true	execute	closed
+Relation	T9	T10	NoRel	true	maneuver	designed
+Relation	T9	T13	NoRel	true	maneuver	development
+Relation	T9	T15	NoRel	true	maneuver	rotated
+Relation	T9	T16	NoRel	true	maneuver	touched
+Relation	T9	T22	NoRel	true	maneuver	prevent
+Relation	T9	T24	NoRel	true	maneuver	supplied

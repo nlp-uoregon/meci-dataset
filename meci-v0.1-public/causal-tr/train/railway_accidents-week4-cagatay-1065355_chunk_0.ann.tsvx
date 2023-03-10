@@ -1,0 +1,52 @@
+Text	Dikkate değer tren kazaları , 2000 – günümüz - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 2000s : Ayrıca bakınız — Dış bağlantılar — Kaynakça	- 4 Ocak , 2000 – Åsta kazası , Åsta , Åmot , Norveç : Rørosbanen üzerinde iki dizel yolcu treni çarpışması , 19 ölü .	Yangın çarpışmadan sonra yaklaşık 6 saat sürdü .	- 6 Şubat , 2000 – Brühl , Almanya : Bir gece tren Amsterdam - Basel ekspresi , ana demir yolu üzerinde Köln ve Bonn arasındaki Brühl istasyonunda bir inşaat alanındaki aşırı hız ve raydan çıkma geçerken bir çer çöp ile dolu çöp tenekesine çarptı , 9 kişi öldü .	- 2 Mart , 2000 – Kølkær , Danimarka : İki bölgesel tren , birinin kırmızı sinyalde geçmesinden sonra kafa kafaya çarpıştı .
+Event	T0	kazası	EVENT	210
+Event	T1	çarpışması	EVENT	284
+Event	T2	ölü	EVENT	300
+Event	T3	çarpışmadan	EVENT	313
+Event	T5	geçerken	EVENT	550
+Event	T6	çarptı	EVENT	595
+Event	T7	öldü	EVENT	611
+Event	T8	geçmesinden	EVENT	702
+Event	T9	çarpıştı	EVENT	732
+Event	T10	Yangın	EVENT	306
+Event	T4	çıkma	EVENT	544
+Relation	T1	T2	CauseEffect	true	çarpışması	ölü
+Relation	T2	T1	EffectCause	true	ölü	çarpışması
+Relation	T1	T10	CauseEffect	true	çarpışması	Yangın
+Relation	T10	T1	EffectCause	true	Yangın	çarpışması
+Relation	T4	T6	CauseEffect	true	çıkma	çarptı
+Relation	T6	T4	EffectCause	true	çarptı	çıkma
+Relation	T6	T7	CauseEffect	true	çarptı	öldü
+Relation	T7	T6	EffectCause	true	öldü	çarptı
+Relation	T8	T9	CauseEffect	true	geçmesinden	çarpıştı
+Relation	T9	T8	EffectCause	true	çarpıştı	geçmesinden
+Relation	T0	T10	NoRel	true	kazası	Yangın
+Relation	T0	T5	NoRel	true	kazası	geçerken
+Relation	T0	T6	NoRel	true	kazası	çarptı
+Relation	T1	T3	NoRel	true	çarpışması	çarpışmadan
+Relation	T1	T7	NoRel	true	çarpışması	öldü
+Relation	T1	T9	NoRel	true	çarpışması	çarpıştı
+Relation	T10	T2	NoRel	true	Yangın	ölü
+Relation	T2	T10	NoRel	true	ölü	Yangın
+Relation	T2	T4	NoRel	true	ölü	çıkma
+Relation	T2	T5	NoRel	true	ölü	geçerken
+Relation	T2	T9	NoRel	true	ölü	çarpıştı
+Relation	T3	T1	NoRel	true	çarpışmadan	çarpışması
+Relation	T3	T8	NoRel	true	çarpışmadan	geçmesinden
+Relation	T4	T10	NoRel	true	çıkma	Yangın
+Relation	T4	T3	NoRel	true	çıkma	çarpışmadan
+Relation	T5	T0	NoRel	true	geçerken	kazası
+Relation	T5	T2	NoRel	true	geçerken	ölü
+Relation	T5	T3	NoRel	true	geçerken	çarpışmadan
+Relation	T5	T4	NoRel	true	geçerken	çıkma
+Relation	T5	T9	NoRel	true	geçerken	çarpıştı
+Relation	T6	T3	NoRel	true	çarptı	çarpışmadan
+Relation	T7	T0	NoRel	true	öldü	kazası
+Relation	T7	T1	NoRel	true	öldü	çarpışması
+Relation	T7	T4	NoRel	true	öldü	çıkma
+Relation	T8	T10	NoRel	true	geçmesinden	Yangın
+Relation	T8	T3	NoRel	true	geçmesinden	çarpışmadan
+Relation	T8	T5	NoRel	true	geçmesinden	geçerken
+Relation	T9	T0	NoRel	true	çarpıştı	kazası
+Relation	T9	T1	NoRel	true	çarpıştı	çarpışması
+Relation	T9	T6	NoRel	true	çarpıştı	çarptı

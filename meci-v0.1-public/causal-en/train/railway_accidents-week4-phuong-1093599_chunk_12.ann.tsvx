@@ -1,0 +1,50 @@
+Text	A special case is heat related BUCKLING : in hot weather the rail steel expands .	This is managed by stressing continuously welded rails ( they are tensioned mechanically to be stress neutral at a moderate temperature ) and by providing proper expansion gaps at joints and ensuring that fishplates are properly lubricated .	In addition , lateral restraint is provided by an adequate ballast shoulder .	If any of these measures are inadequate , the track may buckle ; a large lateral distortion takes place , which trains are unable to negotiate .	( In nine years 2000/1 to 2008/ 9 there were 429 track buckle incidents in Great Britain ) .
+Event	T0	BUCKLING	EVENT	31
+Event	T1	expands	EVENT	72
+Event	T2	managed	EVENT	90
+Event	T3	stressing	EVENT	101
+Event	T4	welded	EVENT	124
+Event	T6	providing	EVENT	227
+Event	T7	ensuring	EVENT	273
+Event	T8	lubricated	EVENT	311
+Event	T9	provided	EVENT	359
+Event	T10	buckle	EVENT	458
+Event	T11	negotiate	EVENT	535
+Event	T12	incidents	EVENT	609
+Event	T13	hot weather	EVENT	45
+Event	T14	stress neutral	EVENT	177
+Event	T5	tensioned mechanically	EVENT	148
+Event	T15	inadequate	EVENT	431
+Relation	T13	T1	CauseEffect	true	hot weather	expands
+Relation	T1	T13	EffectCause	true	expands	hot weather
+Relation	T1	T3	CauseEffect	true	expands	stressing
+Relation	T3	T1	EffectCause	true	stressing	expands
+Relation	T14	T5	CauseEffect	true	stress neutral	tensioned mechanically
+Relation	T5	T14	EffectCause	true	tensioned mechanically	stress neutral
+Relation	T1	T6	CauseEffect	true	expands	providing
+Relation	T6	T1	EffectCause	true	providing	expands
+Relation	T15	T10	CauseEffect	true	inadequate	buckle
+Relation	T10	T15	EffectCause	true	buckle	inadequate
+Relation	T10	T14	NoRel	true	buckle	stress neutral
+Relation	T10	T2	NoRel	true	buckle	managed
+Relation	T11	T13	NoRel	true	negotiate	hot weather
+Relation	T12	T4	NoRel	true	incidents	welded
+Relation	T14	T11	NoRel	true	stress neutral	negotiate
+Relation	T14	T9	NoRel	true	stress neutral	provided
+Relation	T15	T4	NoRel	true	inadequate	welded
+Relation	T2	T6	NoRel	true	managed	providing
+Relation	T3	T0	NoRel	true	stressing	BUCKLING
+Relation	T3	T9	NoRel	true	stressing	provided
+Relation	T4	T0	NoRel	true	welded	BUCKLING
+Relation	T4	T11	NoRel	true	welded	negotiate
+Relation	T4	T5	NoRel	true	welded	tensioned mechanically
+Relation	T4	T7	NoRel	true	welded	ensuring
+Relation	T6	T5	NoRel	true	providing	tensioned mechanically
+Relation	T6	T7	NoRel	true	providing	ensuring
+Relation	T7	T5	NoRel	true	ensuring	tensioned mechanically
+Relation	T8	T12	NoRel	true	lubricated	incidents
+Relation	T8	T15	NoRel	true	lubricated	inadequate
+Relation	T8	T3	NoRel	true	lubricated	stressing
+Relation	T9	T10	NoRel	true	provided	buckle
+Relation	T9	T11	NoRel	true	provided	negotiate
+Relation	T9	T2	NoRel	true	provided	managed

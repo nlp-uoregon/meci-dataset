@@ -1,0 +1,115 @@
+Text	Entran en una " guerra de súper villanos " para ganar el Globo Dorado de Poder del Lama Negro , pero todos son derrotados .	Látigo Negro se reincorpora a Maggia y lucha contra los héroes Spider-Man y Iron Man en Nueva Jersey , y finalmente es derrotado por el vigilante Wraith .	El cerebro criminal Justin Hammer contrata a Látigo Negro , y con Fundidor y Ventisca intentan robar un casino en Atlantic City , pero Iron Man los detiene .	Látigo Negro es liberado de la prisión por Hammer y lucha contra Iron Man nuevamente como uno de los operativos disfrazados de Hammer , y a pesar de las probabilidades abrumadoras , el héroe derrota a los villanos .	Scarlotti es reempleado por un consorcio anónimo , financiado por Hammer , para matar al empleado de Stark Vic Martinelli , y se le proporciona un vestuario y armamento mejorados y el nuevo alias Latigazo .
+Event	T0	guerra	EVENT	16
+Event	T1	ganar	EVENT	48
+Event	T10	lucha	EVENT	489
+Event	T11	disfrazados	EVENT	549
+Event	T12	derrota	EVENT	628
+Event	T13	reempleado	EVENT	666
+Event	T14	financiado	EVENT	704
+Event	T15	matar	EVENT	733
+Event	T16	proporciona	EVENT	785
+Event	T2	derrotados	EVENT	111
+Event	T3	reincorpora	EVENT	140
+Event	T4	lucha	EVENT	163
+Event	T5	derrotado	EVENT	243
+Event	T6	contrata	EVENT	313
+Event	T8	detiene	EVENT	427
+Event	T9	liberado	EVENT	453
+Event	T7	intentan	EVENT	365
+Relation	T0	T2	CauseEffect	true	guerra	derrotados
+Relation	T2	T0	EffectCause	true	derrotados	guerra
+Relation	T4	T5	CauseEffect	true	lucha	derrotado
+Relation	T5	T4	EffectCause	true	derrotado	lucha
+Relation	T7	T8	CauseEffect	true	intentan	detiene
+Relation	T8	T7	EffectCause	true	detiene	intentan
+Relation	T6	T7	CauseEffect	true	contrata	intentan
+Relation	T7	T6	EffectCause	true	intentan	contrata
+Relation	T10	T12	CauseEffect	true	lucha	derrota
+Relation	T12	T10	EffectCause	true	derrota	lucha
+Relation	T13	T15	CauseEffect	true	reempleado	matar
+Relation	T15	T13	EffectCause	true	matar	reempleado
+Relation	T1	T0	NoRel	true	ganar	guerra
+Relation	T1	T10	NoRel	true	ganar	lucha
+Relation	T1	T11	NoRel	true	ganar	disfrazados
+Relation	T10	T1	NoRel	true	lucha	ganar
+Relation	T10	T11	NoRel	true	lucha	disfrazados
+Relation	T10	T2	NoRel	true	lucha	derrotados
+Relation	T10	T3	NoRel	true	lucha	reincorpora
+Relation	T10	T5	NoRel	true	lucha	derrotado
+Relation	T10	T8	NoRel	true	lucha	detiene
+Relation	T11	T1	NoRel	true	disfrazados	ganar
+Relation	T11	T10	NoRel	true	disfrazados	lucha
+Relation	T11	T14	NoRel	true	disfrazados	financiado
+Relation	T11	T15	NoRel	true	disfrazados	matar
+Relation	T11	T16	NoRel	true	disfrazados	proporciona
+Relation	T11	T2	NoRel	true	disfrazados	derrotados
+Relation	T11	T4	NoRel	true	disfrazados	lucha
+Relation	T12	T0	NoRel	true	derrota	guerra
+Relation	T12	T13	NoRel	true	derrota	reempleado
+Relation	T12	T15	NoRel	true	derrota	matar
+Relation	T12	T3	NoRel	true	derrota	reincorpora
+Relation	T12	T9	NoRel	true	derrota	liberado
+Relation	T13	T0	NoRel	true	reempleado	guerra
+Relation	T13	T10	NoRel	true	reempleado	lucha
+Relation	T13	T8	NoRel	true	reempleado	detiene
+Relation	T14	T1	NoRel	true	financiado	ganar
+Relation	T14	T10	NoRel	true	financiado	lucha
+Relation	T14	T11	NoRel	true	financiado	disfrazados
+Relation	T14	T15	NoRel	true	financiado	matar
+Relation	T14	T16	NoRel	true	financiado	proporciona
+Relation	T14	T3	NoRel	true	financiado	reincorpora
+Relation	T14	T5	NoRel	true	financiado	derrotado
+Relation	T14	T6	NoRel	true	financiado	contrata
+Relation	T15	T0	NoRel	true	matar	guerra
+Relation	T15	T10	NoRel	true	matar	lucha
+Relation	T15	T4	NoRel	true	matar	lucha
+Relation	T15	T6	NoRel	true	matar	contrata
+Relation	T15	T7	NoRel	true	matar	intentan
+Relation	T15	T8	NoRel	true	matar	detiene
+Relation	T16	T10	NoRel	true	proporciona	lucha
+Relation	T16	T15	NoRel	true	proporciona	matar
+Relation	T16	T4	NoRel	true	proporciona	lucha
+Relation	T16	T5	NoRel	true	proporciona	derrotado
+Relation	T16	T6	NoRel	true	proporciona	contrata
+Relation	T16	T7	NoRel	true	proporciona	intentan
+Relation	T16	T9	NoRel	true	proporciona	liberado
+Relation	T2	T1	NoRel	true	derrotados	ganar
+Relation	T2	T11	NoRel	true	derrotados	disfrazados
+Relation	T2	T16	NoRel	true	derrotados	proporciona
+Relation	T2	T8	NoRel	true	derrotados	detiene
+Relation	T2	T9	NoRel	true	derrotados	liberado
+Relation	T3	T10	NoRel	true	reincorpora	lucha
+Relation	T3	T12	NoRel	true	reincorpora	derrota
+Relation	T3	T16	NoRel	true	reincorpora	proporciona
+Relation	T3	T5	NoRel	true	reincorpora	derrotado
+Relation	T3	T7	NoRel	true	reincorpora	intentan
+Relation	T4	T0	NoRel	true	lucha	guerra
+Relation	T4	T11	NoRel	true	lucha	disfrazados
+Relation	T4	T14	NoRel	true	lucha	financiado
+Relation	T4	T15	NoRel	true	lucha	matar
+Relation	T4	T3	NoRel	true	lucha	reincorpora
+Relation	T4	T8	NoRel	true	lucha	detiene
+Relation	T4	T9	NoRel	true	lucha	liberado
+Relation	T5	T11	NoRel	true	derrotado	disfrazados
+Relation	T5	T15	NoRel	true	derrotado	matar
+Relation	T5	T16	NoRel	true	derrotado	proporciona
+Relation	T5	T3	NoRel	true	derrotado	reincorpora
+Relation	T6	T1	NoRel	true	contrata	ganar
+Relation	T6	T15	NoRel	true	contrata	matar
+Relation	T6	T16	NoRel	true	contrata	proporciona
+Relation	T7	T13	NoRel	true	intentan	reempleado
+Relation	T7	T15	NoRel	true	intentan	matar
+Relation	T7	T2	NoRel	true	intentan	derrotados
+Relation	T7	T5	NoRel	true	intentan	derrotado
+Relation	T8	T11	NoRel	true	detiene	disfrazados
+Relation	T8	T3	NoRel	true	detiene	reincorpora
+Relation	T8	T5	NoRel	true	detiene	derrotado
+Relation	T8	T6	NoRel	true	detiene	contrata
+Relation	T9	T1	NoRel	true	liberado	ganar
+Relation	T9	T11	NoRel	true	liberado	disfrazados
+Relation	T9	T13	NoRel	true	liberado	reempleado
+Relation	T9	T15	NoRel	true	liberado	matar
+Relation	T9	T16	NoRel	true	liberado	proporciona
+Relation	T9	T6	NoRel	true	liberado	contrata
+Relation	T9	T7	NoRel	true	liberado	intentan
+Relation	T9	T8	NoRel	true	liberado	detiene

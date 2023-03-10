@@ -1,0 +1,153 @@
+Text	A las 22:22 hora local , el Boeing 737-823 patinó mientras aterrizaba en la pista 12 en Kingston e invadió el área circundante sufriendo graves daños .	Los informes dan fe de que cayó una fuerte lluvia en el momento del accidente , como se comprobó posteriormente con la emisión de un informe meteorológico especial .	Algunos pasajeros informaron que el servicio a bordo se suspendió varias veces durante el vuelo , antes de ser cancelado por completo debido a las turbulencias .	También se anunció que algunas de las luces de aproximación a la pista del aeropuerto no estaban encendidas en el momento del accidente .	Los funcionarios jamaicanos , sin embargo , minimizaron el papel de las luces como la principal causa del accidente , y señalaron que se había notificado a la tripulación que la pista principal estaba debidamente iluminada .
+Event	T0	patinó	EVENT	43
+Event	T1	aterrizaba	EVENT	59
+Event	T2	invadió	EVENT	99
+Event	T3	daños	EVENT	144
+Event	T6	lluvia	EVENT	195
+Event	T7	accidente	EVENT	220
+Event	T8	comprobó	EVENT	240
+Event	T10	informe	EVENT	285
+Event	T11	informaron	EVENT	336
+Event	T12	suspendió	EVENT	374
+Event	T13	vuelo	EVENT	408
+Event	T14	cancelado	EVENT	429
+Event	T15	turbulencias	EVENT	465
+Event	T16	anunció	EVENT	491
+Event	T17	encendidas	EVENT	577
+Event	T18	accidente	EVENT	606
+Event	T19	accidente	EVENT	724
+Event	T20	señalaron	EVENT	738
+Event	T21	notificado	EVENT	761
+Event	T22	iluminada	EVENT	831
+Event	T4	informes	EVENT	156
+Relation	T2	T3	CauseEffect	true	invadió	daños
+Relation	T3	T2	EffectCause	true	daños	invadió
+Relation	T15	T14	CauseEffect	true	turbulencias	cancelado
+Relation	T14	T15	EffectCause	true	cancelado	turbulencias
+Relation	T0	T1	NoRel	true	patinó	aterrizaba
+Relation	T0	T11	NoRel	true	patinó	informaron
+Relation	T0	T14	NoRel	true	patinó	cancelado
+Relation	T0	T19	NoRel	true	patinó	accidente
+Relation	T0	T21	NoRel	true	patinó	notificado
+Relation	T0	T3	NoRel	true	patinó	daños
+Relation	T1	T10	NoRel	true	aterrizaba	informe
+Relation	T1	T11	NoRel	true	aterrizaba	informaron
+Relation	T1	T12	NoRel	true	aterrizaba	suspendió
+Relation	T1	T14	NoRel	true	aterrizaba	cancelado
+Relation	T1	T3	NoRel	true	aterrizaba	daños
+Relation	T1	T6	NoRel	true	aterrizaba	lluvia
+Relation	T10	T11	NoRel	true	informe	informaron
+Relation	T10	T14	NoRel	true	informe	cancelado
+Relation	T10	T17	NoRel	true	informe	encendidas
+Relation	T10	T19	NoRel	true	informe	accidente
+Relation	T10	T20	NoRel	true	informe	señalaron
+Relation	T10	T21	NoRel	true	informe	notificado
+Relation	T11	T0	NoRel	true	informaron	patinó
+Relation	T11	T14	NoRel	true	informaron	cancelado
+Relation	T11	T16	NoRel	true	informaron	anunció
+Relation	T11	T17	NoRel	true	informaron	encendidas
+Relation	T11	T22	NoRel	true	informaron	iluminada
+Relation	T11	T8	NoRel	true	informaron	comprobó
+Relation	T12	T13	NoRel	true	suspendió	vuelo
+Relation	T12	T15	NoRel	true	suspendió	turbulencias
+Relation	T12	T21	NoRel	true	suspendió	notificado
+Relation	T12	T3	NoRel	true	suspendió	daños
+Relation	T12	T8	NoRel	true	suspendió	comprobó
+Relation	T13	T10	NoRel	true	vuelo	informe
+Relation	T13	T17	NoRel	true	vuelo	encendidas
+Relation	T13	T18	NoRel	true	vuelo	accidente
+Relation	T13	T2	NoRel	true	vuelo	invadió
+Relation	T13	T21	NoRel	true	vuelo	notificado
+Relation	T13	T22	NoRel	true	vuelo	iluminada
+Relation	T13	T7	NoRel	true	vuelo	accidente
+Relation	T14	T0	NoRel	true	cancelado	patinó
+Relation	T14	T1	NoRel	true	cancelado	aterrizaba
+Relation	T14	T12	NoRel	true	cancelado	suspendió
+Relation	T14	T17	NoRel	true	cancelado	encendidas
+Relation	T14	T21	NoRel	true	cancelado	notificado
+Relation	T14	T22	NoRel	true	cancelado	iluminada
+Relation	T14	T8	NoRel	true	cancelado	comprobó
+Relation	T15	T11	NoRel	true	turbulencias	informaron
+Relation	T15	T13	NoRel	true	turbulencias	vuelo
+Relation	T15	T16	NoRel	true	turbulencias	anunció
+Relation	T15	T21	NoRel	true	turbulencias	notificado
+Relation	T15	T4	NoRel	true	turbulencias	informes
+Relation	T16	T1	NoRel	true	anunció	aterrizaba
+Relation	T16	T10	NoRel	true	anunció	informe
+Relation	T16	T11	NoRel	true	anunció	informaron
+Relation	T16	T18	NoRel	true	anunció	accidente
+Relation	T16	T19	NoRel	true	anunció	accidente
+Relation	T17	T10	NoRel	true	encendidas	informe
+Relation	T17	T13	NoRel	true	encendidas	vuelo
+Relation	T17	T18	NoRel	true	encendidas	accidente
+Relation	T17	T19	NoRel	true	encendidas	accidente
+Relation	T17	T2	NoRel	true	encendidas	invadió
+Relation	T17	T21	NoRel	true	encendidas	notificado
+Relation	T17	T3	NoRel	true	encendidas	daños
+Relation	T18	T0	NoRel	true	accidente	patinó
+Relation	T18	T1	NoRel	true	accidente	aterrizaba
+Relation	T18	T16	NoRel	true	accidente	anunció
+Relation	T18	T17	NoRel	true	accidente	encendidas
+Relation	T18	T20	NoRel	true	accidente	señalaron
+Relation	T18	T21	NoRel	true	accidente	notificado
+Relation	T18	T6	NoRel	true	accidente	lluvia
+Relation	T19	T13	NoRel	true	accidente	vuelo
+Relation	T19	T21	NoRel	true	accidente	notificado
+Relation	T2	T12	NoRel	true	invadió	suspendió
+Relation	T2	T19	NoRel	true	invadió	accidente
+Relation	T2	T8	NoRel	true	invadió	comprobó
+Relation	T20	T0	NoRel	true	señalaron	patinó
+Relation	T20	T1	NoRel	true	señalaron	aterrizaba
+Relation	T20	T11	NoRel	true	señalaron	informaron
+Relation	T20	T16	NoRel	true	señalaron	anunció
+Relation	T20	T17	NoRel	true	señalaron	encendidas
+Relation	T20	T19	NoRel	true	señalaron	accidente
+Relation	T20	T7	NoRel	true	señalaron	accidente
+Relation	T20	T8	NoRel	true	señalaron	comprobó
+Relation	T21	T0	NoRel	true	notificado	patinó
+Relation	T21	T10	NoRel	true	notificado	informe
+Relation	T21	T11	NoRel	true	notificado	informaron
+Relation	T21	T14	NoRel	true	notificado	cancelado
+Relation	T21	T15	NoRel	true	notificado	turbulencias
+Relation	T21	T18	NoRel	true	notificado	accidente
+Relation	T21	T19	NoRel	true	notificado	accidente
+Relation	T21	T2	NoRel	true	notificado	invadió
+Relation	T21	T7	NoRel	true	notificado	accidente
+Relation	T22	T0	NoRel	true	iluminada	patinó
+Relation	T22	T10	NoRel	true	iluminada	informe
+Relation	T22	T17	NoRel	true	iluminada	encendidas
+Relation	T22	T18	NoRel	true	iluminada	accidente
+Relation	T22	T6	NoRel	true	iluminada	lluvia
+Relation	T22	T8	NoRel	true	iluminada	comprobó
+Relation	T3	T1	NoRel	true	daños	aterrizaba
+Relation	T3	T11	NoRel	true	daños	informaron
+Relation	T3	T12	NoRel	true	daños	suspendió
+Relation	T3	T15	NoRel	true	daños	turbulencias
+Relation	T3	T16	NoRel	true	daños	anunció
+Relation	T3	T17	NoRel	true	daños	encendidas
+Relation	T3	T18	NoRel	true	daños	accidente
+Relation	T3	T21	NoRel	true	daños	notificado
+Relation	T3	T6	NoRel	true	daños	lluvia
+Relation	T4	T0	NoRel	true	informes	patinó
+Relation	T4	T13	NoRel	true	informes	vuelo
+Relation	T4	T16	NoRel	true	informes	anunció
+Relation	T6	T12	NoRel	true	lluvia	suspendió
+Relation	T6	T14	NoRel	true	lluvia	cancelado
+Relation	T6	T15	NoRel	true	lluvia	turbulencias
+Relation	T6	T16	NoRel	true	lluvia	anunció
+Relation	T6	T17	NoRel	true	lluvia	encendidas
+Relation	T6	T18	NoRel	true	lluvia	accidente
+Relation	T6	T22	NoRel	true	lluvia	iluminada
+Relation	T7	T0	NoRel	true	accidente	patinó
+Relation	T7	T1	NoRel	true	accidente	aterrizaba
+Relation	T7	T10	NoRel	true	accidente	informe
+Relation	T7	T20	NoRel	true	accidente	señalaron
+Relation	T7	T4	NoRel	true	accidente	informes
+Relation	T7	T6	NoRel	true	accidente	lluvia
+Relation	T8	T1	NoRel	true	comprobó	aterrizaba
+Relation	T8	T13	NoRel	true	comprobó	vuelo
+Relation	T8	T14	NoRel	true	comprobó	cancelado
+Relation	T8	T16	NoRel	true	comprobó	anunció
+Relation	T8	T19	NoRel	true	comprobó	accidente
+Relation	T8	T2	NoRel	true	comprobó	invadió
+Relation	T8	T20	NoRel	true	comprobó	señalaron

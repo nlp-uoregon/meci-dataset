@@ -1,0 +1,21 @@
+Text	شاہراہ قراقرم جو بہت زیادہ ٹوٹ پھوٹ چکی تھی اب چلاس سے اوپر مزید چوڑا کرکے کارپٹ تیار کی جاچکی ہے اور نیچے بشام والے حصہ کی مرمت کا کام بھی تیزی سے مکمل کیا جا رہا ہے ۔۔۔۔۔۔۔۔۔	یہ وادی 7900 مربع کلومیٹر کے رقبے میں پھیلی ہوئی ہے ۔۔۔۔۔	ہنزہ میں مقامی راجا کی حکومت ہوتی تھی جسے میر آف ہنزہ کہا جاتا تھا ۔۔۔۔۔	بھٹو دور میں ریاستی حکومت کے خاتمے کے ساتھ ہی ہنزہ میں بھی یہ نظام ختم ہو گیا ۔۔۔۔۔	آج بھی ہنزہ میں میر تو ہے مگر صرف اعزازی عہدہ کے ساتھ ۔۔۔۔۔
+Event	T0	تیار	EVENT	81
+Event	T1	جاچکی	EVENT	89
+Event	T2	مرمت	EVENT	124
+Event	T3	کہا	EVENT	289
+Event	T4	خاتمے	EVENT	337
+Event	T5	ختم	EVENT	375
+Relation	T4	T5	CauseEffect	true	خاتمے	ختم
+Relation	T5	T4	EffectCause	true	ختم	خاتمے
+Relation	T0	T3	NoRel	true	تیار	کہا
+Relation	T1	T3	NoRel	true	جاچکی	کہا
+Relation	T2	T0	NoRel	true	مرمت	تیار
+Relation	T2	T1	NoRel	true	مرمت	جاچکی
+Relation	T3	T0	NoRel	true	کہا	تیار
+Relation	T3	T2	NoRel	true	کہا	مرمت
+Relation	T3	T5	NoRel	true	کہا	ختم
+Relation	T4	T0	NoRel	true	خاتمے	تیار
+Relation	T4	T2	NoRel	true	خاتمے	مرمت
+Relation	T5	T1	NoRel	true	ختم	جاچکی
+Relation	T5	T2	NoRel	true	ختم	مرمت
+Relation	T5	T3	NoRel	true	ختم	کہا

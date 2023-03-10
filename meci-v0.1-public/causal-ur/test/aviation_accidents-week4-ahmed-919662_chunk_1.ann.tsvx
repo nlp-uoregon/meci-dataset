@@ -1,0 +1,41 @@
+Text	خیال کیا جاتا ہے کہ یہ طیارہ ہمالیہ میں گر کر تباہ ہوا تھا ، لیکن اس کا ملبہ کبھی نہیں ملا ۔	یہ طیارہ فوکر F27-200 ٹربوپروپ ہوائی جہاز ، c_/_n 10207 تھا ، جو 1962 میں بنایا گیا تھا ۔	یہ جہاز تقریبا 44 44،524 گھنٹے اڑ چکا تھا ۔	اس میں 2 رولس_روائس ڈارٹ 532 -7E انجن لگے ہوئے تھے ۔	عملے کی طرف سے آخری ٹرانسمیشن 07 : 40 بجے موصول ہوئی جس کے مطابق ان کی توقع تھی کہ 07 : 59 بجے پوائنٹ براوو اور 08 : 32 بجے اسلام آباد وہ لینڈ کریں گے ۔
+Event	T0	گر	EVENT	40
+Event	T1	تباہ	EVENT	46
+Event	T2	ملا	EVENT	87
+Event	T3	بنایا	EVENT	167
+Event	T5	لگے	EVENT	265
+Event	T6	ٹرانسمیشن	EVENT	300
+Event	T8	اڑ	EVENT	214
+Event	T4	موصول	EVENT	322
+Event	T7	لینڈ	EVENT	418
+Relation	T0	T1	CauseEffect	true	گر	تباہ
+Relation	T1	T0	EffectCause	true	تباہ	گر
+Relation	T6	T4	CauseEffect	true	ٹرانسمیشن	موصول
+Relation	T4	T6	EffectCause	true	موصول	ٹرانسمیشن
+Relation	T0	T8	NoRel	true	گر	اڑ
+Relation	T1	T2	NoRel	true	تباہ	ملا
+Relation	T1	T4	NoRel	true	تباہ	موصول
+Relation	T1	T5	NoRel	true	تباہ	لگے
+Relation	T1	T7	NoRel	true	تباہ	لینڈ
+Relation	T2	T0	NoRel	true	ملا	گر
+Relation	T2	T6	NoRel	true	ملا	ٹرانسمیشن
+Relation	T2	T8	NoRel	true	ملا	اڑ
+Relation	T3	T1	NoRel	true	بنایا	تباہ
+Relation	T3	T4	NoRel	true	بنایا	موصول
+Relation	T3	T5	NoRel	true	بنایا	لگے
+Relation	T4	T3	NoRel	true	موصول	بنایا
+Relation	T4	T7	NoRel	true	موصول	لینڈ
+Relation	T5	T0	NoRel	true	لگے	گر
+Relation	T5	T1	NoRel	true	لگے	تباہ
+Relation	T5	T2	NoRel	true	لگے	ملا
+Relation	T5	T3	NoRel	true	لگے	بنایا
+Relation	T6	T0	NoRel	true	ٹرانسمیشن	گر
+Relation	T6	T2	NoRel	true	ٹرانسمیشن	ملا
+Relation	T6	T3	NoRel	true	ٹرانسمیشن	بنایا
+Relation	T6	T8	NoRel	true	ٹرانسمیشن	اڑ
+Relation	T7	T0	NoRel	true	لینڈ	گر
+Relation	T8	T0	NoRel	true	اڑ	گر
+Relation	T8	T1	NoRel	true	اڑ	تباہ
+Relation	T8	T3	NoRel	true	اڑ	بنایا
+Relation	T8	T5	NoRel	true	اڑ	لگے
+Relation	T8	T7	NoRel	true	اڑ	لینڈ

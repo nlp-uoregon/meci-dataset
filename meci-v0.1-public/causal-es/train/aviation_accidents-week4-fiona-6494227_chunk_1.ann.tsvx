@@ -1,0 +1,83 @@
+Text	El vuelo de prueba fue el primer vuelo propulsado de la aeronave en nueve meses , e incluía la primera prueba de vuelo de un nuevo motor de cohete híbrido más potente y de mayor empuje cuyo grano de combustible estaba compuesto de nylon en lugar de caucho .	El vuelo fue el 55° del avión y su 35° vuelo libre .	VSS Enterprise fue piloteado por Peter Siebold y Michael Alsbury .	Según el informe de la NTSB , SpaceShipTwo cayó de la nave nodriza y disparó su nuevo motor de cohete híbrido normalmente .	Aproximadamente once segundos después , el avión espacial se separó violentamente , dando sustancialmente la apariencia de una explosión , y creando un campo de escombros de 35 millas ( 56 km ) de largo .
+Event	T0	vuelo	EVENT	3
+Event	T1	prueba	EVENT	12
+Event	T2	propulsado	EVENT	39
+Event	T3	incluía	EVENT	84
+Event	T4	prueba	EVENT	103
+Event	T5	vuelo	EVENT	113
+Event	T6	compuesto	EVENT	218
+Event	T7	piloteado	EVENT	330
+Event	T8	informe	EVENT	387
+Event	T9	cayó	EVENT	421
+Event	T10	disparó	EVENT	447
+Event	T11	dando	EVENT	586
+Event	T12	explosión	EVENT	629
+Event	T13	creando	EVENT	643
+Relation	T9	T10	CauseEffect	true	cayó	disparó
+Relation	T10	T9	EffectCause	true	disparó	cayó
+Relation	T0	T10	NoRel	true	vuelo	disparó
+Relation	T0	T13	NoRel	true	vuelo	creando
+Relation	T0	T6	NoRel	true	vuelo	compuesto
+Relation	T0	T7	NoRel	true	vuelo	piloteado
+Relation	T1	T11	NoRel	true	prueba	dando
+Relation	T1	T12	NoRel	true	prueba	explosión
+Relation	T1	T2	NoRel	true	prueba	propulsado
+Relation	T1	T3	NoRel	true	prueba	incluía
+Relation	T1	T4	NoRel	true	prueba	prueba
+Relation	T1	T7	NoRel	true	prueba	piloteado
+Relation	T10	T1	NoRel	true	disparó	prueba
+Relation	T10	T11	NoRel	true	disparó	dando
+Relation	T10	T12	NoRel	true	disparó	explosión
+Relation	T10	T5	NoRel	true	disparó	vuelo
+Relation	T10	T6	NoRel	true	disparó	compuesto
+Relation	T10	T7	NoRel	true	disparó	piloteado
+Relation	T11	T0	NoRel	true	dando	vuelo
+Relation	T11	T1	NoRel	true	dando	prueba
+Relation	T11	T2	NoRel	true	dando	propulsado
+Relation	T11	T3	NoRel	true	dando	incluía
+Relation	T12	T1	NoRel	true	explosión	prueba
+Relation	T12	T2	NoRel	true	explosión	propulsado
+Relation	T12	T5	NoRel	true	explosión	vuelo
+Relation	T12	T7	NoRel	true	explosión	piloteado
+Relation	T13	T6	NoRel	true	creando	compuesto
+Relation	T2	T11	NoRel	true	propulsado	dando
+Relation	T2	T3	NoRel	true	propulsado	incluía
+Relation	T2	T7	NoRel	true	propulsado	piloteado
+Relation	T2	T9	NoRel	true	propulsado	cayó
+Relation	T3	T13	NoRel	true	incluía	creando
+Relation	T3	T5	NoRel	true	incluía	vuelo
+Relation	T3	T6	NoRel	true	incluía	compuesto
+Relation	T3	T7	NoRel	true	incluía	piloteado
+Relation	T3	T9	NoRel	true	incluía	cayó
+Relation	T4	T11	NoRel	true	prueba	dando
+Relation	T4	T12	NoRel	true	prueba	explosión
+Relation	T4	T13	NoRel	true	prueba	creando
+Relation	T4	T7	NoRel	true	prueba	piloteado
+Relation	T5	T0	NoRel	true	vuelo	vuelo
+Relation	T5	T10	NoRel	true	vuelo	disparó
+Relation	T5	T11	NoRel	true	vuelo	dando
+Relation	T5	T4	NoRel	true	vuelo	prueba
+Relation	T5	T7	NoRel	true	vuelo	piloteado
+Relation	T6	T1	NoRel	true	compuesto	prueba
+Relation	T6	T10	NoRel	true	compuesto	disparó
+Relation	T6	T11	NoRel	true	compuesto	dando
+Relation	T6	T12	NoRel	true	compuesto	explosión
+Relation	T6	T2	NoRel	true	compuesto	propulsado
+Relation	T6	T4	NoRel	true	compuesto	prueba
+Relation	T6	T7	NoRel	true	compuesto	piloteado
+Relation	T7	T1	NoRel	true	piloteado	prueba
+Relation	T7	T11	NoRel	true	piloteado	dando
+Relation	T7	T12	NoRel	true	piloteado	explosión
+Relation	T7	T2	NoRel	true	piloteado	propulsado
+Relation	T7	T3	NoRel	true	piloteado	incluía
+Relation	T8	T0	NoRel	true	informe	vuelo
+Relation	T8	T1	NoRel	true	informe	prueba
+Relation	T8	T12	NoRel	true	informe	explosión
+Relation	T8	T3	NoRel	true	informe	incluía
+Relation	T8	T4	NoRel	true	informe	prueba
+Relation	T8	T7	NoRel	true	informe	piloteado
+Relation	T9	T1	NoRel	true	cayó	prueba
+Relation	T9	T11	NoRel	true	cayó	dando
+Relation	T9	T13	NoRel	true	cayó	creando
+Relation	T9	T7	NoRel	true	cayó	piloteado
+Relation	T9	T8	NoRel	true	cayó	informe

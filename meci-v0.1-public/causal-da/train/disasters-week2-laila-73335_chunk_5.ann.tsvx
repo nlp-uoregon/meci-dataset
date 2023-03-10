@@ -1,0 +1,71 @@
+Text	En enkelt jolle landede i et tag på et hus 50 meter væk .	- Under et tordenvejr den 27. august 2006 blev der dannet en skypumpe hen over den sydlige del af Lolland .	Skypumpen raserede en gård , hvor tagmaterialer og andet blev slynget 200 meter op i luften .	Ingen personer kom til skade ved skypumpens rasen , men ejeren af gården måtte løbe for livet for ikke at blive ramt af nedfaldende bygningsdele , da skypumpen trak ind over huset .	- En skypumpe ramte den 10. august 2009 Aalborg-forstaden Nørre Tranders , hvor den gav fire huse huller i taget , sendte en campingvogn over en hæk , mens trampoliner fløj flere hundrede meter .
+Event	T0	landede	EVENT	16
+Event	T1	tag	EVENT	29
+Event	T10	gav	EVENT	526
+Event	T11	sendte	EVENT	557
+Event	T12	fløj	EVENT	610
+Event	T2	tordenvejr	EVENT	69
+Event	T3	dannet	EVENT	109
+Event	T4	skypumpe	EVENT	119
+Event	T5	raserede	EVENT	176
+Event	T6	slynget	EVENT	228
+Event	T8	rasen	EVENT	304
+Event	T9	ramte	EVENT	456
+Relation	T4	T5	CauseEffect	true	skypumpe	raserede
+Relation	T5	T4	EffectCause	true	raserede	skypumpe
+Relation	T4	T10	CauseEffect	true	skypumpe	gav
+Relation	T10	T4	EffectCause	true	gav	skypumpe
+Relation	T4	T11	CauseEffect	true	skypumpe	sendte
+Relation	T11	T4	EffectCause	true	sendte	skypumpe
+Relation	T4	T12	CauseEffect	true	skypumpe	fløj
+Relation	T12	T4	EffectCause	true	fløj	skypumpe
+Relation	T4	T9	CauseEffect	true	skypumpe	ramte
+Relation	T9	T4	EffectCause	true	ramte	skypumpe
+Relation	T9	T10	CauseEffect	true	ramte	gav
+Relation	T10	T9	EffectCause	true	gav	ramte
+Relation	T9	T11	CauseEffect	true	ramte	sendte
+Relation	T11	T9	EffectCause	true	sendte	ramte
+Relation	T9	T12	CauseEffect	true	ramte	fløj
+Relation	T12	T9	EffectCause	true	fløj	ramte
+Relation	T0	T10	NoRel	true	landede	gav
+Relation	T0	T8	NoRel	true	landede	rasen
+Relation	T0	T9	NoRel	true	landede	ramte
+Relation	T1	T0	NoRel	true	tag	landede
+Relation	T1	T12	NoRel	true	tag	fløj
+Relation	T1	T3	NoRel	true	tag	dannet
+Relation	T1	T4	NoRel	true	tag	skypumpe
+Relation	T1	T5	NoRel	true	tag	raserede
+Relation	T1	T6	NoRel	true	tag	slynget
+Relation	T10	T1	NoRel	true	gav	tag
+Relation	T10	T12	NoRel	true	gav	fløj
+Relation	T10	T8	NoRel	true	gav	rasen
+Relation	T11	T0	NoRel	true	sendte	landede
+Relation	T11	T12	NoRel	true	sendte	fløj
+Relation	T11	T6	NoRel	true	sendte	slynget
+Relation	T12	T11	NoRel	true	fløj	sendte
+Relation	T12	T2	NoRel	true	fløj	tordenvejr
+Relation	T12	T6	NoRel	true	fløj	slynget
+Relation	T12	T8	NoRel	true	fløj	rasen
+Relation	T2	T0	NoRel	true	tordenvejr	landede
+Relation	T2	T1	NoRel	true	tordenvejr	tag
+Relation	T2	T10	NoRel	true	tordenvejr	gav
+Relation	T2	T3	NoRel	true	tordenvejr	dannet
+Relation	T2	T5	NoRel	true	tordenvejr	raserede
+Relation	T2	T8	NoRel	true	tordenvejr	rasen
+Relation	T3	T12	NoRel	true	dannet	fløj
+Relation	T3	T4	NoRel	true	dannet	skypumpe
+Relation	T3	T6	NoRel	true	dannet	slynget
+Relation	T4	T0	NoRel	true	skypumpe	landede
+Relation	T5	T1	NoRel	true	raserede	tag
+Relation	T5	T11	NoRel	true	raserede	sendte
+Relation	T5	T3	NoRel	true	raserede	dannet
+Relation	T5	T6	NoRel	true	raserede	slynget
+Relation	T5	T8	NoRel	true	raserede	rasen
+Relation	T6	T10	NoRel	true	slynget	gav
+Relation	T6	T2	NoRel	true	slynget	tordenvejr
+Relation	T8	T0	NoRel	true	rasen	landede
+Relation	T9	T1	NoRel	true	ramte	tag
+Relation	T9	T2	NoRel	true	ramte	tordenvejr
+Relation	T9	T3	NoRel	true	ramte	dannet
+Relation	T9	T5	NoRel	true	ramte	raserede
+Relation	T9	T8	NoRel	true	ramte	rasen

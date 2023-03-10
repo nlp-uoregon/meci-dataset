@@ -1,0 +1,36 @@
+Text	Tidligere den 21. juni 2006 havde Norge også haft et tilfælde med to sættevogne , der forskubbede sig på et godstog ved Ingedal Station .	Der skete materielle skader .	Årsagen var , at kongetappen ikke var låst korrekt i lommevognens skammel .	Storebæltsforbindelsen har også tidligere haft togulykker .	Den 5. juni 2006 udbrød der brand i et arbejdskøretøj , da det befandt sig i tunnelen .
+Event	T0	haft	EVENT	45
+Event	T1	tilfælde	EVENT	53
+Event	T2	skader	EVENT	159
+Event	T3	låst	EVENT	206
+Event	T4	togulykker	EVENT	291
+Event	T5	udbrød	EVENT	321
+Event	T6	brand	EVENT	332
+Event	T7	befandt	EVENT	367
+Event	T8	forskubbede	EVENT	86
+Relation	T8	T2	CauseEffect	true	forskubbede	skader
+Relation	T2	T8	EffectCause	true	skader	forskubbede
+Relation	T3	T8	CauseEffect	true	låst	forskubbede
+Relation	T8	T3	EffectCause	true	forskubbede	låst
+Relation	T0	T1	NoRel	true	haft	tilfælde
+Relation	T0	T2	NoRel	true	haft	skader
+Relation	T0	T3	NoRel	true	haft	låst
+Relation	T0	T6	NoRel	true	haft	brand
+Relation	T1	T0	NoRel	true	tilfælde	haft
+Relation	T1	T4	NoRel	true	tilfælde	togulykker
+Relation	T1	T8	NoRel	true	tilfælde	forskubbede
+Relation	T2	T4	NoRel	true	skader	togulykker
+Relation	T2	T5	NoRel	true	skader	udbrød
+Relation	T2	T7	NoRel	true	skader	befandt
+Relation	T4	T3	NoRel	true	togulykker	låst
+Relation	T4	T5	NoRel	true	togulykker	udbrød
+Relation	T4	T6	NoRel	true	togulykker	brand
+Relation	T5	T1	NoRel	true	udbrød	tilfælde
+Relation	T5	T2	NoRel	true	udbrød	skader
+Relation	T5	T3	NoRel	true	udbrød	låst
+Relation	T5	T6	NoRel	true	udbrød	brand
+Relation	T6	T1	NoRel	true	brand	tilfælde
+Relation	T6	T4	NoRel	true	brand	togulykker
+Relation	T6	T5	NoRel	true	brand	udbrød
+Relation	T7	T6	NoRel	true	befandt	brand
+Relation	T8	T6	NoRel	true	forskubbede	brand

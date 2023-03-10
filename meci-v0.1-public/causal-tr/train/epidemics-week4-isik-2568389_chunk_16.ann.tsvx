@@ -1,0 +1,58 @@
+Text	- Tunus ilk vakasını doğruladı .	- Birleşik Krallık , toplamı 39 olan üç ek vakayı daha doğruladı .	Bir hastanın pozitif orijinal tanısı daha sonra negatif olarak doğrulandı .	- Amerika Birleşik Devletleri 13 vaka daha doğruladı ve toplam sayı 102'ye ulaştı .	Beş ölüm daha da teyit edildi ve toplam sayı 6'ya çıktı .
+Event	T0	doğruladı	EVENT	21
+Event	T1	doğruladı	EVENT	88
+Event	T2	tanısı	EVENT	130
+Event	T3	doğrulandı	EVENT	163
+Event	T4	doğruladı	EVENT	219
+Event	T5	ulaştı	EVENT	251
+Event	T6	ölüm	EVENT	264
+Event	T7	edildi	EVENT	283
+Event	T8	çıktı	EVENT	310
+Event	T9	vakasını	EVENT	12
+Event	T10	vakayı	EVENT	76
+Relation	T9	T0	CauseEffect	true	vakasını	doğruladı
+Relation	T0	T9	EffectCause	true	doğruladı	vakasını
+Relation	T10	T1	CauseEffect	true	vakayı	doğruladı
+Relation	T1	T10	EffectCause	true	doğruladı	vakayı
+Relation	T2	T3	CauseEffect	true	tanısı	doğrulandı
+Relation	T3	T2	EffectCause	true	doğrulandı	tanısı
+Relation	T4	T5	CauseEffect	true	doğruladı	ulaştı
+Relation	T5	T4	EffectCause	true	ulaştı	doğruladı
+Relation	T7	T8	CauseEffect	true	edildi	çıktı
+Relation	T8	T7	EffectCause	true	çıktı	edildi
+Relation	T6	T7	CauseEffect	true	ölüm	edildi
+Relation	T7	T6	EffectCause	true	edildi	ölüm
+Relation	T0	T10	NoRel	true	doğruladı	vakayı
+Relation	T0	T2	NoRel	true	doğruladı	tanısı
+Relation	T0	T4	NoRel	true	doğruladı	doğruladı
+Relation	T1	T3	NoRel	true	doğruladı	doğrulandı
+Relation	T1	T7	NoRel	true	doğruladı	edildi
+Relation	T10	T6	NoRel	true	vakayı	ölüm
+Relation	T10	T7	NoRel	true	vakayı	edildi
+Relation	T10	T8	NoRel	true	vakayı	çıktı
+Relation	T10	T9	NoRel	true	vakayı	vakasını
+Relation	T2	T0	NoRel	true	tanısı	doğruladı
+Relation	T2	T4	NoRel	true	tanısı	doğruladı
+Relation	T3	T1	NoRel	true	doğrulandı	doğruladı
+Relation	T3	T7	NoRel	true	doğrulandı	edildi
+Relation	T3	T8	NoRel	true	doğrulandı	çıktı
+Relation	T4	T0	NoRel	true	doğruladı	doğruladı
+Relation	T4	T6	NoRel	true	doğruladı	ölüm
+Relation	T4	T8	NoRel	true	doğruladı	çıktı
+Relation	T4	T9	NoRel	true	doğruladı	vakasını
+Relation	T5	T0	NoRel	true	ulaştı	doğruladı
+Relation	T5	T10	NoRel	true	ulaştı	vakayı
+Relation	T5	T7	NoRel	true	ulaştı	edildi
+Relation	T5	T8	NoRel	true	ulaştı	çıktı
+Relation	T6	T3	NoRel	true	ölüm	doğrulandı
+Relation	T6	T4	NoRel	true	ölüm	doğruladı
+Relation	T6	T8	NoRel	true	ölüm	çıktı
+Relation	T7	T0	NoRel	true	edildi	doğruladı
+Relation	T7	T4	NoRel	true	edildi	doğruladı
+Relation	T7	T5	NoRel	true	edildi	ulaştı
+Relation	T7	T9	NoRel	true	edildi	vakasını
+Relation	T8	T10	NoRel	true	çıktı	vakayı
+Relation	T8	T2	NoRel	true	çıktı	tanısı
+Relation	T8	T6	NoRel	true	çıktı	ölüm
+Relation	T8	T9	NoRel	true	çıktı	vakasını
+Relation	T9	T5	NoRel	true	vakasını	ulaştı

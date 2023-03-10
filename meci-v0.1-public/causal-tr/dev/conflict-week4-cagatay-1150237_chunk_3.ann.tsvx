@@ -1,0 +1,58 @@
+Text	Şehirde giderek artan gerilimle beraber bölgeye takviye asker gönderilmesi talep edilir .	Haziran ayında ABD askerleri şehirdeki tüm motosikletlere direnişçiler tarafından kullanıldığı gerekçesiyle el koyar .	30 Haziran günü yerel bir camide yaşanan patlama sonucu caminin imamıyla beraber 8 kişi hayatını kaybeder .	Felluceliler patlamadan ABD askerlerini suçlarken ABD kaynakları ise bomba üretimi yapan bir birimin kazayla bombayı patlattığını bildirir .	12 Şubat 2004 tarihinde bölgeye gelen General John Abizaid’in konvoyuna roketatar ve hafif silahlarla saldırı düzenlenir .
+Event	T0	edilir	EVENT	81
+Event	T2	kaybeder	EVENT	306
+Event	T3	patlamadan	EVENT	330
+Event	T4	suçlarken	EVENT	357
+Event	T5	kazayla	EVENT	418
+Event	T6	bildirir	EVENT	447
+Event	T7	düzenlenir	EVENT	568
+Event	T8	artan	EVENT	16
+Event	T9	kullanıldığı	EVENT	172
+Event	T1	el koyar	EVENT	198
+Event	T10	patlama	EVENT	250
+Event	T11	patlattığını	EVENT	434
+Relation	T8	T0	CauseEffect	true	artan	edilir
+Relation	T0	T8	EffectCause	true	edilir	artan
+Relation	T9	T1	CauseEffect	true	kullanıldığı	el koyar
+Relation	T1	T9	EffectCause	true	el koyar	kullanıldığı
+Relation	T10	T2	CauseEffect	true	patlama	kaybeder
+Relation	T2	T10	EffectCause	true	kaybeder	patlama
+Relation	T11	T2	CauseEffect	true	patlattığını	kaybeder
+Relation	T2	T11	EffectCause	true	kaybeder	patlattığını
+Relation	T3	T2	CauseEffect	true	patlamadan	kaybeder
+Relation	T2	T3	EffectCause	true	kaybeder	patlamadan
+Relation	T0	T11	NoRel	true	edilir	patlattığını
+Relation	T0	T4	NoRel	true	edilir	suçlarken
+Relation	T0	T5	NoRel	true	edilir	kazayla
+Relation	T0	T6	NoRel	true	edilir	bildirir
+Relation	T0	T9	NoRel	true	edilir	kullanıldığı
+Relation	T1	T4	NoRel	true	el koyar	suçlarken
+Relation	T10	T0	NoRel	true	patlama	edilir
+Relation	T10	T11	NoRel	true	patlama	patlattığını
+Relation	T10	T3	NoRel	true	patlama	patlamadan
+Relation	T10	T4	NoRel	true	patlama	suçlarken
+Relation	T10	T8	NoRel	true	patlama	artan
+Relation	T11	T1	NoRel	true	patlattığını	el koyar
+Relation	T11	T6	NoRel	true	patlattığını	bildirir
+Relation	T11	T7	NoRel	true	patlattığını	düzenlenir
+Relation	T11	T8	NoRel	true	patlattığını	artan
+Relation	T2	T1	NoRel	true	kaybeder	el koyar
+Relation	T2	T7	NoRel	true	kaybeder	düzenlenir
+Relation	T3	T0	NoRel	true	patlamadan	edilir
+Relation	T3	T8	NoRel	true	patlamadan	artan
+Relation	T3	T9	NoRel	true	patlamadan	kullanıldığı
+Relation	T4	T0	NoRel	true	suçlarken	edilir
+Relation	T4	T2	NoRel	true	suçlarken	kaybeder
+Relation	T4	T3	NoRel	true	suçlarken	patlamadan
+Relation	T5	T0	NoRel	true	kazayla	edilir
+Relation	T5	T10	NoRel	true	kazayla	patlama
+Relation	T5	T4	NoRel	true	kazayla	suçlarken
+Relation	T6	T1	NoRel	true	bildirir	el koyar
+Relation	T6	T2	NoRel	true	bildirir	kaybeder
+Relation	T6	T5	NoRel	true	bildirir	kazayla
+Relation	T7	T11	NoRel	true	düzenlenir	patlattığını
+Relation	T7	T2	NoRel	true	düzenlenir	kaybeder
+Relation	T7	T8	NoRel	true	düzenlenir	artan
+Relation	T8	T1	NoRel	true	artan	el koyar
+Relation	T8	T7	NoRel	true	artan	düzenlenir
+Relation	T9	T10	NoRel	true	kullanıldığı	patlama

@@ -1,0 +1,71 @@
+Text	Et minut senere blev transponderen slukket , men kontroltårnet i Cleveland fortsatte med at overvåge flyet på radaren .	Herndon Center videresendte oplysningerne om flynummer 93 til den statslige luftfartskontrols hovedkvarter .	Klokken 09:43:03 ringede passageren Joseph Deluca til sin far fra række 26 i flyet for at fortælle ham , at flyet var blevet kapret .	Klokken 09:43:38 forsøgte Todd Beamer at ringe til sin kone fra række 32 , men blev omdirigeret til telefonisten Lisa D. Jefferson .	Todd Beamer fortalte hende , at hans fly var blevet kapret , og at flyets oprindelige piloter lå døde eller døende på gulvet .
+Event	T0	slukket	EVENT	35
+Event	T1	fortsatte	EVENT	75
+Event	T2	overvåge	EVENT	92
+Event	T3	ringede	EVENT	246
+Event	T4	fortælle	EVENT	319
+Event	T5	kapret	EVENT	354
+Event	T6	forsøgte	EVENT	380
+Event	T7	ringe	EVENT	404
+Event	T8	omdirigeret	EVENT	447
+Event	T9	fortalte	EVENT	508
+Event	T10	kapret	EVENT	548
+Event	T11	døde	EVENT	593
+Event	T12	døende	EVENT	604
+Relation	T5	T3	CauseEffect	true	kapret	ringede
+Relation	T3	T5	EffectCause	true	ringede	kapret
+Relation	T5	T7	CauseEffect	true	kapret	ringe
+Relation	T7	T5	EffectCause	true	ringe	kapret
+Relation	T0	T11	NoRel	true	slukket	døde
+Relation	T0	T12	NoRel	true	slukket	døende
+Relation	T0	T2	NoRel	true	slukket	overvåge
+Relation	T0	T4	NoRel	true	slukket	fortælle
+Relation	T0	T5	NoRel	true	slukket	kapret
+Relation	T0	T8	NoRel	true	slukket	omdirigeret
+Relation	T1	T7	NoRel	true	fortsatte	ringe
+Relation	T10	T11	NoRel	true	kapret	døde
+Relation	T10	T4	NoRel	true	kapret	fortælle
+Relation	T10	T5	NoRel	true	kapret	kapret
+Relation	T10	T6	NoRel	true	kapret	forsøgte
+Relation	T10	T8	NoRel	true	kapret	omdirigeret
+Relation	T10	T9	NoRel	true	kapret	fortalte
+Relation	T11	T10	NoRel	true	døde	kapret
+Relation	T11	T3	NoRel	true	døde	ringede
+Relation	T11	T8	NoRel	true	døde	omdirigeret
+Relation	T11	T9	NoRel	true	døde	fortalte
+Relation	T12	T10	NoRel	true	døende	kapret
+Relation	T12	T2	NoRel	true	døende	overvåge
+Relation	T12	T3	NoRel	true	døende	ringede
+Relation	T12	T4	NoRel	true	døende	fortælle
+Relation	T12	T9	NoRel	true	døende	fortalte
+Relation	T2	T3	NoRel	true	overvåge	ringede
+Relation	T2	T4	NoRel	true	overvåge	fortælle
+Relation	T3	T0	NoRel	true	ringede	slukket
+Relation	T3	T10	NoRel	true	ringede	kapret
+Relation	T3	T12	NoRel	true	ringede	døende
+Relation	T3	T4	NoRel	true	ringede	fortælle
+Relation	T3	T8	NoRel	true	ringede	omdirigeret
+Relation	T4	T10	NoRel	true	fortælle	kapret
+Relation	T4	T11	NoRel	true	fortælle	døde
+Relation	T4	T3	NoRel	true	fortælle	ringede
+Relation	T4	T9	NoRel	true	fortælle	fortalte
+Relation	T6	T11	NoRel	true	forsøgte	døde
+Relation	T6	T3	NoRel	true	forsøgte	ringede
+Relation	T6	T8	NoRel	true	forsøgte	omdirigeret
+Relation	T7	T0	NoRel	true	ringe	slukket
+Relation	T7	T12	NoRel	true	ringe	døende
+Relation	T7	T3	NoRel	true	ringe	ringede
+Relation	T7	T4	NoRel	true	ringe	fortælle
+Relation	T7	T6	NoRel	true	ringe	forsøgte
+Relation	T8	T11	NoRel	true	omdirigeret	døde
+Relation	T8	T3	NoRel	true	omdirigeret	ringede
+Relation	T8	T5	NoRel	true	omdirigeret	kapret
+Relation	T8	T7	NoRel	true	omdirigeret	ringe
+Relation	T8	T9	NoRel	true	omdirigeret	fortalte
+Relation	T9	T1	NoRel	true	fortalte	fortsatte
+Relation	T9	T12	NoRel	true	fortalte	døende
+Relation	T9	T2	NoRel	true	fortalte	overvåge
+Relation	T9	T4	NoRel	true	fortalte	fortælle
+Relation	T9	T5	NoRel	true	fortalte	kapret
+Relation	T9	T7	NoRel	true	fortalte	ringe
+Relation	T9	T8	NoRel	true	fortalte	omdirigeret

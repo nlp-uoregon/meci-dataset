@@ -1,0 +1,73 @@
+Text	After a normal takeoff , the flight was assigned a cruise altitude of flight level 250 ( FL250 ) , then reassigned to FL240 .	At 09:54 , the flight crew responded to the Houston Air Route Traffic Control Center and started descending to 9,000 feet .	At approximately 10:03 while descending through 11,500 feet with an indicated airspeed of 260 knots , the leading edge of the left horizontal stabilizer separated from the airframe , and the airplane pitched down dramatically , rolling around on an axis as the left wing folded .	The escaping fuel from the wings ignited , and the pilot s lost consciousness from the severe g - forces , which reached at least 3.375 times the force of gravity , caused by the severe oscillations of the crippled aircraft .	The wreckage fell in southeast Colorado County , Texas , exploding on impact , off Farm to Market Road 102 , southeast of Eagle Lake , Texas , and west of Downtown Houston .
+Event	T0	takeoff	EVENT	15
+Event	T1	flight	EVENT	29
+Event	T2	assigned	EVENT	40
+Event	T3	reassigned	EVENT	104
+Event	T4	descending	EVENT	223
+Event	T5	separated	EVENT	403
+Event	T6	folded	EVENT	521
+Event	T7	escaping	EVENT	534
+Event	T8	ignited	EVENT	563
+Event	T9	reached	EVENT	643
+Event	T10	caused	EVENT	695
+Event	T11	oscillations	EVENT	716
+Event	T12	crippled	EVENT	736
+Event	T13	fell	EVENT	769
+Event	T14	responded	EVENT	153
+Event	T15	descending	EVENT	279
+Event	T16	pitched down	EVENT	450
+Event	T17	rolling around	EVENT	478
+Event	T18	lost	EVENT	589
+Event	T19	exploding	EVENT	813
+Relation	T5	T16	CauseEffect	true	separated	pitched down
+Relation	T16	T5	EffectCause	true	pitched down	separated
+Relation	T6	T16	CauseEffect	true	folded	pitched down
+Relation	T16	T6	EffectCause	true	pitched down	folded
+Relation	T8	T18	CauseEffect	true	ignited	lost
+Relation	T18	T8	EffectCause	true	lost	ignited
+Relation	T9	T10	CauseEffect	true	reached	caused
+Relation	T10	T9	EffectCause	true	caused	reached
+Relation	T0	T19	NoRel	true	takeoff	exploding
+Relation	T0	T4	NoRel	true	takeoff	descending
+Relation	T1	T12	NoRel	true	flight	crippled
+Relation	T1	T15	NoRel	true	flight	descending
+Relation	T10	T15	NoRel	true	caused	descending
+Relation	T11	T4	NoRel	true	oscillations	descending
+Relation	T11	T7	NoRel	true	oscillations	escaping
+Relation	T12	T11	NoRel	true	crippled	oscillations
+Relation	T12	T13	NoRel	true	crippled	fell
+Relation	T12	T16	NoRel	true	crippled	pitched down
+Relation	T12	T8	NoRel	true	crippled	ignited
+Relation	T13	T5	NoRel	true	fell	separated
+Relation	T14	T11	NoRel	true	responded	oscillations
+Relation	T14	T12	NoRel	true	responded	crippled
+Relation	T14	T16	NoRel	true	responded	pitched down
+Relation	T14	T5	NoRel	true	responded	separated
+Relation	T14	T8	NoRel	true	responded	ignited
+Relation	T15	T2	NoRel	true	descending	assigned
+Relation	T15	T3	NoRel	true	descending	reassigned
+Relation	T16	T0	NoRel	true	pitched down	takeoff
+Relation	T16	T11	NoRel	true	pitched down	oscillations
+Relation	T16	T14	NoRel	true	pitched down	responded
+Relation	T16	T4	NoRel	true	pitched down	descending
+Relation	T16	T9	NoRel	true	pitched down	reached
+Relation	T17	T10	NoRel	true	rolling around	caused
+Relation	T17	T12	NoRel	true	rolling around	crippled
+Relation	T17	T5	NoRel	true	rolling around	separated
+Relation	T18	T2	NoRel	true	lost	assigned
+Relation	T3	T10	NoRel	true	reassigned	caused
+Relation	T3	T6	NoRel	true	reassigned	folded
+Relation	T4	T11	NoRel	true	descending	oscillations
+Relation	T4	T9	NoRel	true	descending	reached
+Relation	T5	T10	NoRel	true	separated	caused
+Relation	T5	T11	NoRel	true	separated	oscillations
+Relation	T5	T3	NoRel	true	separated	reassigned
+Relation	T6	T10	NoRel	true	folded	caused
+Relation	T6	T11	NoRel	true	folded	oscillations
+Relation	T7	T5	NoRel	true	escaping	separated
+Relation	T7	T6	NoRel	true	escaping	folded
+Relation	T8	T1	NoRel	true	ignited	flight
+Relation	T8	T9	NoRel	true	ignited	reached
+Relation	T9	T15	NoRel	true	reached	descending
+Relation	T9	T16	NoRel	true	reached	pitched down
+Relation	T9	T8	NoRel	true	reached	ignited

@@ -1,0 +1,63 @@
+Text	Kırmızı renk , iniş takımının yere değmediğini , mavi suda kızaklamayı ve yeşil , zemindeki tekerlekleri gösterir .	Çarpma sonucunda bir yangın çıktı ve kabine etki edip sızarak yolculardan birini öldürdü .	Çarpışma sonucu ikinci pilot da hayatını kaybetti .	51 kişi ağır ( 2 mürettebat dahil ) ve 5'i hafif yaralandı .	Kazanın etkisiyle uçakta yangın çıktı ve kabine de etki ederek yolculardan birinin ölümüne sebebiyet verdi .
+Event	T0	gösterir	EVENT	105
+Event	T1	çıktı	EVENT	144
+Event	T2	sızarak	EVENT	170
+Event	T3	öldürdü	EVENT	197
+Event	T4	kaybetti	EVENT	248
+Event	T5	yaralandı	EVENT	308
+Event	T6	çıktı	EVENT	352
+Event	T7	ederek	EVENT	376
+Event	T8	verdi	EVENT	421
+Event	T9	Çarpma	EVENT	116
+Event	T10	Çarpışma	EVENT	207
+Event	T11	Kazanın	EVENT	320
+Relation	T9	T1	CauseEffect	true	Çarpma	çıktı
+Relation	T1	T9	EffectCause	true	çıktı	Çarpma
+Relation	T1	T2	CauseEffect	true	çıktı	sızarak
+Relation	T2	T1	EffectCause	true	sızarak	çıktı
+Relation	T2	T3	CauseEffect	true	sızarak	öldürdü
+Relation	T3	T2	EffectCause	true	öldürdü	sızarak
+Relation	T10	T4	CauseEffect	true	Çarpışma	kaybetti
+Relation	T4	T10	EffectCause	true	kaybetti	Çarpışma
+Relation	T10	T5	CauseEffect	true	Çarpışma	yaralandı
+Relation	T5	T10	EffectCause	true	yaralandı	Çarpışma
+Relation	T11	T6	CauseEffect	true	Kazanın	çıktı
+Relation	T6	T11	EffectCause	true	çıktı	Kazanın
+Relation	T6	T7	CauseEffect	true	çıktı	ederek
+Relation	T7	T6	EffectCause	true	ederek	çıktı
+Relation	T7	T8	CauseEffect	true	ederek	verdi
+Relation	T8	T7	EffectCause	true	verdi	ederek
+Relation	T0	T11	NoRel	true	gösterir	Kazanın
+Relation	T0	T2	NoRel	true	gösterir	sızarak
+Relation	T0	T6	NoRel	true	gösterir	çıktı
+Relation	T0	T7	NoRel	true	gösterir	ederek
+Relation	T1	T4	NoRel	true	çıktı	kaybetti
+Relation	T1	T5	NoRel	true	çıktı	yaralandı
+Relation	T1	T8	NoRel	true	çıktı	verdi
+Relation	T10	T2	NoRel	true	Çarpışma	sızarak
+Relation	T10	T6	NoRel	true	Çarpışma	çıktı
+Relation	T10	T8	NoRel	true	Çarpışma	verdi
+Relation	T11	T10	NoRel	true	Kazanın	Çarpışma
+Relation	T11	T2	NoRel	true	Kazanın	sızarak
+Relation	T2	T9	NoRel	true	sızarak	Çarpma
+Relation	T3	T1	NoRel	true	öldürdü	çıktı
+Relation	T3	T4	NoRel	true	öldürdü	kaybetti
+Relation	T3	T5	NoRel	true	öldürdü	yaralandı
+Relation	T3	T8	NoRel	true	öldürdü	verdi
+Relation	T4	T1	NoRel	true	kaybetti	çıktı
+Relation	T4	T5	NoRel	true	kaybetti	yaralandı
+Relation	T5	T9	NoRel	true	yaralandı	Çarpma
+Relation	T6	T0	NoRel	true	çıktı	gösterir
+Relation	T6	T10	NoRel	true	çıktı	Çarpışma
+Relation	T6	T2	NoRel	true	çıktı	sızarak
+Relation	T6	T3	NoRel	true	çıktı	öldürdü
+Relation	T6	T4	NoRel	true	çıktı	kaybetti
+Relation	T7	T1	NoRel	true	ederek	çıktı
+Relation	T8	T0	NoRel	true	verdi	gösterir
+Relation	T8	T1	NoRel	true	verdi	çıktı
+Relation	T8	T10	NoRel	true	verdi	Çarpışma
+Relation	T8	T2	NoRel	true	verdi	sızarak
+Relation	T8	T3	NoRel	true	verdi	öldürdü
+Relation	T8	T4	NoRel	true	verdi	kaybetti
+Relation	T9	T5	NoRel	true	Çarpma	yaralandı
+Relation	T9	T6	NoRel	true	Çarpma	çıktı

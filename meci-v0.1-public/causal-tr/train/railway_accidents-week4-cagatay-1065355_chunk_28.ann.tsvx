@@ -1,0 +1,54 @@
+Text	Olayı tüm okul sınıfı gördü ve olay İsveç ve Norveç TV sinde şiddetli bir şekilde bahsedildi .	- 5 Ekim , 2009 – Bir yolcu treni saat 04: 50 de yerel zamanla ( 21: 50 4 Ekim UTC ) Hua Hin’de raydan çıktı .	En az yedi kişi öldü ve düzinelercesi yaralandı .	Occurs during heavy rain .	- 21 Ekim , 2009 – 21 yolcu öldü ve yaklaşık 17 kişi yaralandı .
+Event	T0	gördü	EVENT	22
+Event	T1	olay	EVENT	31
+Event	T2	bahsedildi	EVENT	82
+Event	T3	çıktı	EVENT	198
+Event	T4	öldü	EVENT	222
+Event	T5	yaralandı	EVENT	244
+Event	T6	Occurs	EVENT	256
+Event	T7	rain	EVENT	276
+Event	T8	öldü	EVENT	311
+Event	T9	yaralandı	EVENT	336
+Event	T10	Olayı	EVENT	0
+Relation	T0	T2	CauseEffect	true	gördü	bahsedildi
+Relation	T2	T0	EffectCause	true	bahsedildi	gördü
+Relation	T3	T4	CauseEffect	true	çıktı	öldü
+Relation	T4	T3	EffectCause	true	öldü	çıktı
+Relation	T3	T5	CauseEffect	true	çıktı	yaralandı
+Relation	T5	T3	EffectCause	true	yaralandı	çıktı
+Relation	T0	T5	NoRel	true	gördü	yaralandı
+Relation	T0	T6	NoRel	true	gördü	Occurs
+Relation	T0	T7	NoRel	true	gördü	rain
+Relation	T0	T8	NoRel	true	gördü	öldü
+Relation	T1	T10	NoRel	true	olay	Olayı
+Relation	T1	T5	NoRel	true	olay	yaralandı
+Relation	T1	T8	NoRel	true	olay	öldü
+Relation	T10	T3	NoRel	true	Olayı	çıktı
+Relation	T10	T4	NoRel	true	Olayı	öldü
+Relation	T10	T5	NoRel	true	Olayı	yaralandı
+Relation	T10	T7	NoRel	true	Olayı	rain
+Relation	T2	T4	NoRel	true	bahsedildi	öldü
+Relation	T2	T6	NoRel	true	bahsedildi	Occurs
+Relation	T4	T10	NoRel	true	öldü	Olayı
+Relation	T4	T9	NoRel	true	öldü	yaralandı
+Relation	T5	T7	NoRel	true	yaralandı	rain
+Relation	T5	T8	NoRel	true	yaralandı	öldü
+Relation	T5	T9	NoRel	true	yaralandı	yaralandı
+Relation	T6	T1	NoRel	true	Occurs	olay
+Relation	T6	T2	NoRel	true	Occurs	bahsedildi
+Relation	T6	T9	NoRel	true	Occurs	yaralandı
+Relation	T7	T1	NoRel	true	rain	olay
+Relation	T7	T2	NoRel	true	rain	bahsedildi
+Relation	T7	T3	NoRel	true	rain	çıktı
+Relation	T7	T4	NoRel	true	rain	öldü
+Relation	T7	T6	NoRel	true	rain	Occurs
+Relation	T7	T8	NoRel	true	rain	öldü
+Relation	T8	T3	NoRel	true	öldü	çıktı
+Relation	T9	T0	NoRel	true	yaralandı	gördü
+Relation	T9	T1	NoRel	true	yaralandı	olay
+Relation	T9	T10	NoRel	true	yaralandı	Olayı
+Relation	T9	T3	NoRel	true	yaralandı	çıktı
+Relation	T9	T4	NoRel	true	yaralandı	öldü
+Relation	T9	T5	NoRel	true	yaralandı	yaralandı
+Relation	T9	T6	NoRel	true	yaralandı	Occurs
+Relation	T9	T8	NoRel	true	yaralandı	öldü

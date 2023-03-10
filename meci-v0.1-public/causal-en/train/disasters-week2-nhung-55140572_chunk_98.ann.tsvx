@@ -1,0 +1,62 @@
+Text	At a September 10 news conference , Governor Kenneth Mapp described Irma as a " horrific disaster " for which " [ t ] here will be no restorations or solutions in days or weeks . "	The Federal Emergency Management Agency airlifted in goods for residents , who were subjected to a curfew .	Norwegian Cruise Lines and Royal Caribbean Cruise Line agreed to transport tourists to Florida , contingent upon port availability following the state 's own experience with Irma .	On Saint John , described as " perhaps the site of Irma 's worst devastation on American soil , " it took six days for an active - theater disaster zone to be established , leading to criticism of the U.S. government response .	The National Guard was delayed in reaching Saint John due to the number of overturned boats left in the harbor .
+Event	T0	described	EVENT	58
+Event	T1	disaster	EVENT	89
+Event	T10	took	EVENT	571
+Event	T11	disaster	EVENT	609
+Event	T12	established	EVENT	629
+Event	T13	criticism	EVENT	654
+Event	T14	response	EVENT	687
+Event	T15	delayed	EVENT	721
+Event	T16	reaching	EVENT	732
+Event	T17	overturned	EVENT	773
+Event	T18	left	EVENT	790
+Event	T19	solutions	EVENT	150
+Event	T2	restorations	EVENT	134
+Event	T3	airlifted	EVENT	221
+Event	T4	curfew	EVENT	280
+Event	T5	agreed	EVENT	344
+Event	T6	transport	EVENT	354
+Event	T7	experience	EVENT	447
+Event	T8	described	EVENT	486
+Event	T9	devastation	EVENT	535
+Relation	T1	T2	CauseEffect	true	disaster	restorations
+Relation	T2	T1	EffectCause	true	restorations	disaster
+Relation	T1	T19	CauseEffect	true	disaster	solutions
+Relation	T19	T1	EffectCause	true	solutions	disaster
+Relation	T3	T4	CauseEffect	true	airlifted	curfew
+Relation	T4	T3	EffectCause	true	curfew	airlifted
+Relation	T7	T6	CauseEffect	true	experience	transport
+Relation	T6	T7	EffectCause	true	transport	experience
+Relation	T12	T13	CauseEffect	true	established	criticism
+Relation	T13	T12	EffectCause	true	criticism	established
+Relation	T15	T17	CauseEffect	true	delayed	overturned
+Relation	T17	T15	EffectCause	true	overturned	delayed
+Relation	T1	T16	NoRel	true	disaster	reaching
+Relation	T1	T3	NoRel	true	disaster	airlifted
+Relation	T1	T4	NoRel	true	disaster	curfew
+Relation	T10	T0	NoRel	true	took	described
+Relation	T10	T4	NoRel	true	took	curfew
+Relation	T11	T15	NoRel	true	disaster	delayed
+Relation	T11	T17	NoRel	true	disaster	overturned
+Relation	T11	T4	NoRel	true	disaster	curfew
+Relation	T11	T5	NoRel	true	disaster	agreed
+Relation	T12	T9	NoRel	true	established	devastation
+Relation	T14	T1	NoRel	true	response	disaster
+Relation	T14	T11	NoRel	true	response	disaster
+Relation	T14	T15	NoRel	true	response	delayed
+Relation	T15	T5	NoRel	true	delayed	agreed
+Relation	T15	T9	NoRel	true	delayed	devastation
+Relation	T16	T0	NoRel	true	reaching	described
+Relation	T16	T15	NoRel	true	reaching	delayed
+Relation	T17	T1	NoRel	true	overturned	disaster
+Relation	T17	T11	NoRel	true	overturned	disaster
+Relation	T17	T12	NoRel	true	overturned	established
+Relation	T18	T11	NoRel	true	left	disaster
+Relation	T19	T3	NoRel	true	solutions	airlifted
+Relation	T2	T0	NoRel	true	restorations	described
+Relation	T3	T19	NoRel	true	airlifted	solutions
+Relation	T3	T5	NoRel	true	airlifted	agreed
+Relation	T3	T6	NoRel	true	airlifted	transport
+Relation	T5	T19	NoRel	true	agreed	solutions
+Relation	T7	T1	NoRel	true	experience	disaster
+Relation	T8	T14	NoRel	true	described	response

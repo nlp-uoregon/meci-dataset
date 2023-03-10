@@ -1,0 +1,30 @@
+Text	1994 کے وسط مسافر اورفریٹ ٹرینوں اپریشن شروع -	نومبر 1996 lorry میں اگ لگنے سے شدید نقصان پہنچا ماکھو سرنگ -	نومبر 2007 High Speed 1 , لندن سے ملانے والی سرنگ سے کھول دی ، -	ستمبر 2008 ایک اور اگ لگنے سے ایک دھرکی lorry سرنگ شدید نقصان پہنچا -	دسمبر 2009 eurostar ٹرینوں کی سرنگ میں پھنسے ہوئے برف پگھلنے کی وجہ سے کھبتا ٹرینوں کی کہربائی یتھیار -
+Event	T0	شروع	EVENT	40
+Event	T1	لگنے	EVENT	71
+Event	T2	پہنچا	EVENT	90
+Event	T3	کھول	EVENT	162
+Event	T4	لگنے	EVENT	196
+Event	T5	پہنچا	EVENT	236
+Event	T6	سرنگ	EVENT	274
+Event	T7	پگھلنے	EVENT	298
+Relation	T1	T2	CauseEffect	true	لگنے	پہنچا
+Relation	T2	T1	EffectCause	true	پہنچا	لگنے
+Relation	T4	T5	CauseEffect	true	لگنے	پہنچا
+Relation	T5	T4	EffectCause	true	پہنچا	لگنے
+Relation	T0	T1	NoRel	true	شروع	لگنے
+Relation	T0	T5	NoRel	true	شروع	پہنچا
+Relation	T0	T7	NoRel	true	شروع	پگھلنے
+Relation	T1	T0	NoRel	true	لگنے	شروع
+Relation	T1	T6	NoRel	true	لگنے	سرنگ
+Relation	T2	T6	NoRel	true	پہنچا	سرنگ
+Relation	T2	T7	NoRel	true	پہنچا	پگھلنے
+Relation	T3	T0	NoRel	true	کھول	شروع
+Relation	T3	T4	NoRel	true	کھول	لگنے
+Relation	T3	T5	NoRel	true	کھول	پہنچا
+Relation	T4	T0	NoRel	true	لگنے	شروع
+Relation	T4	T2	NoRel	true	لگنے	پہنچا
+Relation	T4	T3	NoRel	true	لگنے	کھول
+Relation	T4	T6	NoRel	true	لگنے	سرنگ
+Relation	T5	T3	NoRel	true	پہنچا	کھول
+Relation	T6	T3	NoRel	true	سرنگ	کھول
+Relation	T6	T7	NoRel	true	سرنگ	پگھلنے

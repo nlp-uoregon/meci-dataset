@@ -1,0 +1,52 @@
+Text	- 20 August 1995 – The Firozabad rail disaster occurred when the Purushottam Express collided with the stationary Kalindi Express near Firozabad , killing 400 .	- 18 April 1996 – A Gorakhpur – Gonda passenger train collided with a stationary freight train at Domingarh station near Gorakhpur , Uttar Pradesh , killing 60 .	- 14 May 1996 – An Ernakulam – Kayamkulam train collided with a bus at an unmanned level - crossing near Alappuzha , Kerala , killing 35 people in a marriage party .	- 25 May 1996 – An Allahabad - bound passenger train collided with a tractor - trolley at an unmanned level - crossing near Varanasi , killing 25 .	- 30 December 1996 – The Brahmaputra Mail train bombing occurred when the Brahmaputra Mail was blasted by a bomb between Kokrajhar and Fakiragram stations in lower Assam , killing 33 .
+Event	T1	collided	EVENT	85
+Event	T2	killing	EVENT	147
+Event	T3	collided	EVENT	215
+Event	T4	killing	EVENT	310
+Event	T5	collided	EVENT	371
+Event	T6	crossing	EVENT	414
+Event	T7	killing	EVENT	449
+Event	T8	party	EVENT	481
+Event	T9	collided	EVENT	542
+Event	T10	crossing	EVENT	599
+Event	T11	killing	EVENT	624
+Event	T12	occurred	EVENT	693
+Event	T13	blasted	EVENT	732
+Event	T14	bomb	EVENT	745
+Event	T15	killing	EVENT	809
+Event	T16	Firozabad rail disaster	EVENT	23
+Relation	T1	T2	CauseEffect	true	collided	killing
+Relation	T2	T1	EffectCause	true	killing	collided
+Relation	T3	T4	CauseEffect	true	collided	killing
+Relation	T4	T3	EffectCause	true	killing	collided
+Relation	T5	T7	CauseEffect	true	collided	killing
+Relation	T7	T5	EffectCause	true	killing	collided
+Relation	T9	T11	CauseEffect	true	collided	killing
+Relation	T11	T9	EffectCause	true	killing	collided
+Relation	T14	T13	CauseEffect	true	bomb	blasted
+Relation	T13	T14	EffectCause	true	blasted	bomb
+Relation	T13	T15	CauseEffect	true	blasted	killing
+Relation	T15	T13	EffectCause	true	killing	blasted
+Relation	T1	T10	NoRel	true	collided	crossing
+Relation	T1	T4	NoRel	true	collided	killing
+Relation	T10	T1	NoRel	true	crossing	collided
+Relation	T12	T1	NoRel	true	occurred	collided
+Relation	T13	T10	NoRel	true	blasted	crossing
+Relation	T13	T11	NoRel	true	blasted	killing
+Relation	T13	T3	NoRel	true	blasted	collided
+Relation	T13	T8	NoRel	true	blasted	party
+Relation	T14	T10	NoRel	true	bomb	crossing
+Relation	T14	T16	NoRel	true	bomb	Firozabad rail disaster
+Relation	T14	T2	NoRel	true	bomb	killing
+Relation	T14	T3	NoRel	true	bomb	collided
+Relation	T14	T6	NoRel	true	bomb	crossing
+Relation	T15	T10	NoRel	true	killing	crossing
+Relation	T16	T1	NoRel	true	Firozabad rail disaster	collided
+Relation	T16	T3	NoRel	true	Firozabad rail disaster	collided
+Relation	T4	T1	NoRel	true	killing	collided
+Relation	T4	T7	NoRel	true	killing	killing
+Relation	T5	T9	NoRel	true	collided	collided
+Relation	T6	T10	NoRel	true	crossing	crossing
+Relation	T8	T1	NoRel	true	party	collided
+Relation	T8	T11	NoRel	true	party	killing
+Relation	T9	T16	NoRel	true	collided	Firozabad rail disaster

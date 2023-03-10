@@ -1,0 +1,39 @@
+Text	Han blev øjeblikkeligt tilbageholdt i Guantanamo-lejren .	Under USA's retsmøder i marts 2007 tilstod Sheikh Mohammed igen sit ansvar for angrebene : " Jeg var ansvarlig for 9/11 , fra A til Z " .	Mohammed aflagde tilståelse efter at være blevet tortureret med waterboarding .	I november 2009 meddelte den amerikanske justitsminister Eric Holder , at Mohammed og de fire anklagede medsammensvorne vil blive flyttet fra Guantanamo-lejren , for at blive stillet for en civil domstol nær Ground Zero i New York .	Ingen retssagsdato blev givet .
+Event	T0	tilbageholdt	EVENT	23
+Event	T1	retsmøder	EVENT	70
+Event	T2	angrebene	EVENT	137
+Event	T4	tortureret	EVENT	245
+Event	T5	meddelte	EVENT	292
+Event	T6	flyttet	EVENT	406
+Event	T7	stillet	EVENT	451
+Event	T8	givet	EVENT	533
+Event	T9	tilstod	EVENT	93
+Relation	T1	T9	CauseEffect	true	retsmøder	tilstod
+Relation	T9	T1	EffectCause	true	tilstod	retsmøder
+Relation	T4	T9	CauseEffect	true	tortureret	tilstod
+Relation	T9	T4	EffectCause	true	tilstod	tortureret
+Relation	T9	T6	CauseEffect	true	tilstod	flyttet
+Relation	T6	T9	EffectCause	true	flyttet	tilstod
+Relation	T0	T4	NoRel	true	tilbageholdt	tortureret
+Relation	T0	T6	NoRel	true	tilbageholdt	flyttet
+Relation	T0	T8	NoRel	true	tilbageholdt	givet
+Relation	T1	T2	NoRel	true	retsmøder	angrebene
+Relation	T1	T5	NoRel	true	retsmøder	meddelte
+Relation	T2	T5	NoRel	true	angrebene	meddelte
+Relation	T2	T6	NoRel	true	angrebene	flyttet
+Relation	T2	T7	NoRel	true	angrebene	stillet
+Relation	T4	T0	NoRel	true	tortureret	tilbageholdt
+Relation	T4	T5	NoRel	true	tortureret	meddelte
+Relation	T4	T6	NoRel	true	tortureret	flyttet
+Relation	T4	T7	NoRel	true	tortureret	stillet
+Relation	T5	T1	NoRel	true	meddelte	retsmøder
+Relation	T5	T6	NoRel	true	meddelte	flyttet
+Relation	T6	T4	NoRel	true	flyttet	tortureret
+Relation	T6	T5	NoRel	true	flyttet	meddelte
+Relation	T6	T7	NoRel	true	flyttet	stillet
+Relation	T6	T8	NoRel	true	flyttet	givet
+Relation	T7	T4	NoRel	true	stillet	tortureret
+Relation	T8	T0	NoRel	true	givet	tilbageholdt
+Relation	T8	T4	NoRel	true	givet	tortureret
+Relation	T8	T7	NoRel	true	givet	stillet
+Relation	T9	T0	NoRel	true	tilstod	tilbageholdt

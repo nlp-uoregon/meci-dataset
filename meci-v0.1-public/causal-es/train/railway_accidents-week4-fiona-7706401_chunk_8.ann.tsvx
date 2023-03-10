@@ -1,0 +1,18 @@
+Text	- Las otras Tragedias , artículo en la edición digital del _ Diario de Ávila _ , 27-03-2010 .	- Decreto de 28-12-1945 , por el que se dispone el ingreso en la Orden Civil de Beneficencia de la Villa de Arévalo .	Boletín Oficial del Estado ( BOE ) de 31-01-1946 , número 31 , página 846 .	- « 96 morti e 100 feriti in un altro scontro sulle ferrovie spagnole ( 96 muertos y 100 heridos en otro choque en los ferrocarriles españoles ) » , artículo en el diario _ la Stampa _ , edición del 13 de enero de 1944 , página 1 .	Hemeroteca En línea del diario La Stampa ( en italiano ) .
+Event	T0	ingreso	EVENT	145
+Event	T1	morti	EVENT	295
+Event	T2	feriti	EVENT	307
+Event	T3	muertos	EVENT	363
+Event	T4	heridos	EVENT	377
+Event	T5	choque	EVENT	393
+Relation	T5	T4	CauseEffect	true	choque	heridos
+Relation	T4	T5	EffectCause	true	heridos	choque
+Relation	T5	T3	CauseEffect	true	choque	muertos
+Relation	T3	T5	EffectCause	true	muertos	choque
+Relation	T0	T3	NoRel	true	ingreso	muertos
+Relation	T0	T4	NoRel	true	ingreso	heridos
+Relation	T1	T3	NoRel	true	morti	muertos
+Relation	T4	T1	NoRel	true	heridos	morti
+Relation	T5	T0	NoRel	true	choque	ingreso
+Relation	T5	T1	NoRel	true	choque	morti
+Relation	T5	T2	NoRel	true	choque	feriti

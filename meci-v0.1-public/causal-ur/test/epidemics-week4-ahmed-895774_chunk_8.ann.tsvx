@@ -1,0 +1,68 @@
+Text	حیدراباد کے جس انجینئر کو کورونا کا انفیکشن ہوا تھا وہ 88 لوگوں کے رابطے میں آچکا تھا ۔	حکومت نے ان سبھی کا ٹیسٹ کیا بشمول اس کا شریک سفر جس نے اس کے ساتھ بنگلور کا سفر کیا تھا ۔	حکومت تلنگانہ کے افسران خبر دی کہ اس انجینئر نے جن لوگوں سے ملاقاتیں کی ان میں سے 36 لوگوں میں کورونا کا انفیکشن پایا گیا گوکہ وہ ابھی ابتدائی مراحل میں تھے ۔	بنگلور میں انٹیل کا ملازم جو اس انجینئر سے ملا تھا ، اسے فی الحال الگ کر دیا گیا ہے ۔	دہلی کے جس شخص کی تشخیص ہوئی تھی اس نے ایئر انڈیا میں سفر کیا تھا جس کے عملہ کے 15 افراد کو 14 دنوں کے لیے الگ تھلگ کر دیا گیا ۔
+Event	T2	سفر	EVENT	134
+Event	T5	ملا	EVENT	381
+Event	T7	انفیکشن	EVENT	36
+Event	T8	رابطے	EVENT	67
+Event	T9	ٹیسٹ	EVENT	108
+Event	T10	سفر	EVENT	165
+Event	T1	خبر	EVENT	203
+Event	T11	ملاقاتیں	EVENT	239
+Event	T12	انفیکشن	EVENT	284
+Event	T3	الگ	EVENT	404
+Event	T4	تشخیص	EVENT	442
+Event	T13	سفر	EVENT	478
+Event	T14	الگ	EVENT	531
+Relation	T7	T9	CauseEffect	true	انفیکشن	ٹیسٹ
+Relation	T9	T7	EffectCause	true	ٹیسٹ	انفیکشن
+Relation	T11	T12	CauseEffect	true	ملاقاتیں	انفیکشن
+Relation	T12	T11	EffectCause	true	انفیکشن	ملاقاتیں
+Relation	T9	T1	CauseEffect	true	ٹیسٹ	خبر
+Relation	T1	T9	EffectCause	true	خبر	ٹیسٹ
+Relation	T5	T3	CauseEffect	true	ملا	الگ
+Relation	T3	T5	EffectCause	true	الگ	ملا
+Relation	T4	T14	CauseEffect	true	تشخیص	الگ
+Relation	T14	T4	EffectCause	true	الگ	تشخیص
+Relation	T1	T2	NoRel	true	خبر	سفر
+Relation	T10	T11	NoRel	true	سفر	ملاقاتیں
+Relation	T10	T12	NoRel	true	سفر	انفیکشن
+Relation	T10	T2	NoRel	true	سفر	سفر
+Relation	T10	T5	NoRel	true	سفر	ملا
+Relation	T11	T2	NoRel	true	ملاقاتیں	سفر
+Relation	T11	T3	NoRel	true	ملاقاتیں	الگ
+Relation	T12	T1	NoRel	true	انفیکشن	خبر
+Relation	T12	T10	NoRel	true	انفیکشن	سفر
+Relation	T12	T3	NoRel	true	انفیکشن	الگ
+Relation	T12	T4	NoRel	true	انفیکشن	تشخیص
+Relation	T12	T8	NoRel	true	انفیکشن	رابطے
+Relation	T13	T11	NoRel	true	سفر	ملاقاتیں
+Relation	T13	T12	NoRel	true	سفر	انفیکشن
+Relation	T13	T9	NoRel	true	سفر	ٹیسٹ
+Relation	T14	T11	NoRel	true	الگ	ملاقاتیں
+Relation	T14	T13	NoRel	true	الگ	سفر
+Relation	T2	T12	NoRel	true	سفر	انفیکشن
+Relation	T2	T13	NoRel	true	سفر	سفر
+Relation	T2	T3	NoRel	true	سفر	الگ
+Relation	T2	T4	NoRel	true	سفر	تشخیص
+Relation	T3	T11	NoRel	true	الگ	ملاقاتیں
+Relation	T3	T13	NoRel	true	الگ	سفر
+Relation	T3	T2	NoRel	true	الگ	سفر
+Relation	T3	T4	NoRel	true	الگ	تشخیص
+Relation	T3	T8	NoRel	true	الگ	رابطے
+Relation	T3	T9	NoRel	true	الگ	ٹیسٹ
+Relation	T4	T1	NoRel	true	تشخیص	خبر
+Relation	T4	T3	NoRel	true	تشخیص	الگ
+Relation	T4	T7	NoRel	true	تشخیص	انفیکشن
+Relation	T5	T13	NoRel	true	ملا	سفر
+Relation	T5	T2	NoRel	true	ملا	سفر
+Relation	T7	T1	NoRel	true	انفیکشن	خبر
+Relation	T7	T10	NoRel	true	انفیکشن	سفر
+Relation	T7	T3	NoRel	true	انفیکشن	الگ
+Relation	T8	T1	NoRel	true	رابطے	خبر
+Relation	T8	T10	NoRel	true	رابطے	سفر
+Relation	T8	T12	NoRel	true	رابطے	انفیکشن
+Relation	T8	T7	NoRel	true	رابطے	انفیکشن
+Relation	T9	T12	NoRel	true	ٹیسٹ	انفیکشن
+Relation	T9	T14	NoRel	true	ٹیسٹ	الگ
+Relation	T9	T3	NoRel	true	ٹیسٹ	الگ
+Relation	T9	T4	NoRel	true	ٹیسٹ	تشخیص
+Relation	T9	T5	NoRel	true	ٹیسٹ	ملا

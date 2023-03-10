@@ -1,0 +1,80 @@
+Text	Buna örnek olarak , 1978'de Romanya'dan iki ölüm cezası almış ve başına Ceaușescu'nun iki milyon ABD doları ödül koyduğu yüksek rütbeli Ion Mihai Pacepa'ya düzenlenmiş suikast girişimi gösterilebilir .	Ceaușescu'nun koyduğu ödüle Yasser Arafat ve Muammer el - Kaddafi birer milyon dolar daha ekledi .	Bir iddia ise 1980'lerde Securitate yetkililerinin Pacepa'ya suikast yapmak için Çakal Carlos'u kiraladığıdır .	Evlere ve ofislere zorla girilmesi ve mikrofon yerleştirilmesi , Securitate'ın genel nüfustan bilgi çıkarmak için kullandığı bir başka taktikti .	Telefon görüşmeleri rutin olarak izlenirdi ve tüm dahili ve uluslararası faks ve teleks iletişimleri engellenirdi .
+Event	T0	almış	EVENT	56
+Event	T1	gösterilebilir	EVENT	185
+Event	T2	ödüle	EVENT	224
+Event	T3	ekledi	EVENT	292
+Event	T4	iddia	EVENT	305
+Event	T6	girilmesi	EVENT	438
+Event	T7	yerleştirilmesi	EVENT	460
+Event	T9	taktikti	EVENT	548
+Event	T11	koyduğu	EVENT	113
+Event	T12	girişimi	EVENT	176
+Event	T5	kiraladığıdır	EVENT	397
+Event	T8	izlenirdi	EVENT	592
+Event	T13	engellenirdi	EVENT	660
+Relation	T12	T4	CauseEffect	true	girişimi	iddia
+Relation	T4	T12	EffectCause	true	iddia	girişimi
+Relation	T4	T5	CauseEffect	true	iddia	kiraladığıdır
+Relation	T5	T4	EffectCause	true	kiraladığıdır	iddia
+Relation	T11	T3	CauseEffect	true	koyduğu	ekledi
+Relation	T3	T11	EffectCause	true	ekledi	koyduğu
+Relation	T3	T12	CauseEffect	true	ekledi	girişimi
+Relation	T12	T3	EffectCause	true	girişimi	ekledi
+Relation	T0	T11	CauseEffect	true	almış	koyduğu
+Relation	T11	T0	EffectCause	true	koyduğu	almış
+Relation	T0	T12	NoRel	true	almış	girişimi
+Relation	T0	T13	NoRel	true	almış	engellenirdi
+Relation	T0	T5	NoRel	true	almış	kiraladığıdır
+Relation	T0	T6	NoRel	true	almış	girilmesi
+Relation	T1	T0	NoRel	true	gösterilebilir	almış
+Relation	T1	T11	NoRel	true	gösterilebilir	koyduğu
+Relation	T1	T12	NoRel	true	gösterilebilir	girişimi
+Relation	T1	T3	NoRel	true	gösterilebilir	ekledi
+Relation	T1	T5	NoRel	true	gösterilebilir	kiraladığıdır
+Relation	T1	T7	NoRel	true	gösterilebilir	yerleştirilmesi
+Relation	T11	T1	NoRel	true	koyduğu	gösterilebilir
+Relation	T11	T4	NoRel	true	koyduğu	iddia
+Relation	T11	T6	NoRel	true	koyduğu	girilmesi
+Relation	T12	T2	NoRel	true	girişimi	ödüle
+Relation	T12	T5	NoRel	true	girişimi	kiraladığıdır
+Relation	T12	T8	NoRel	true	girişimi	izlenirdi
+Relation	T13	T1	NoRel	true	engellenirdi	gösterilebilir
+Relation	T13	T4	NoRel	true	engellenirdi	iddia
+Relation	T13	T6	NoRel	true	engellenirdi	girilmesi
+Relation	T13	T8	NoRel	true	engellenirdi	izlenirdi
+Relation	T2	T0	NoRel	true	ödüle	almış
+Relation	T2	T1	NoRel	true	ödüle	gösterilebilir
+Relation	T2	T12	NoRel	true	ödüle	girişimi
+Relation	T2	T3	NoRel	true	ödüle	ekledi
+Relation	T2	T4	NoRel	true	ödüle	iddia
+Relation	T2	T7	NoRel	true	ödüle	yerleştirilmesi
+Relation	T3	T0	NoRel	true	ekledi	almış
+Relation	T3	T4	NoRel	true	ekledi	iddia
+Relation	T3	T6	NoRel	true	ekledi	girilmesi
+Relation	T3	T7	NoRel	true	ekledi	yerleştirilmesi
+Relation	T3	T8	NoRel	true	ekledi	izlenirdi
+Relation	T4	T11	NoRel	true	iddia	koyduğu
+Relation	T4	T2	NoRel	true	iddia	ödüle
+Relation	T4	T6	NoRel	true	iddia	girilmesi
+Relation	T4	T8	NoRel	true	iddia	izlenirdi
+Relation	T5	T1	NoRel	true	kiraladığıdır	gösterilebilir
+Relation	T5	T13	NoRel	true	kiraladığıdır	engellenirdi
+Relation	T5	T2	NoRel	true	kiraladığıdır	ödüle
+Relation	T6	T1	NoRel	true	girilmesi	gösterilebilir
+Relation	T6	T11	NoRel	true	girilmesi	koyduğu
+Relation	T6	T12	NoRel	true	girilmesi	girişimi
+Relation	T6	T2	NoRel	true	girilmesi	ödüle
+Relation	T6	T9	NoRel	true	girilmesi	taktikti
+Relation	T7	T13	NoRel	true	yerleştirilmesi	engellenirdi
+Relation	T7	T4	NoRel	true	yerleştirilmesi	iddia
+Relation	T7	T5	NoRel	true	yerleştirilmesi	kiraladığıdır
+Relation	T7	T8	NoRel	true	yerleştirilmesi	izlenirdi
+Relation	T7	T9	NoRel	true	yerleştirilmesi	taktikti
+Relation	T8	T0	NoRel	true	izlenirdi	almış
+Relation	T8	T1	NoRel	true	izlenirdi	gösterilebilir
+Relation	T8	T11	NoRel	true	izlenirdi	koyduğu
+Relation	T8	T13	NoRel	true	izlenirdi	engellenirdi
+Relation	T8	T4	NoRel	true	izlenirdi	iddia
+Relation	T8	T5	NoRel	true	izlenirdi	kiraladığıdır
+Relation	T9	T3	NoRel	true	taktikti	ekledi
+Relation	T9	T6	NoRel	true	taktikti	girilmesi

@@ -1,0 +1,130 @@
+Text	It is not clear how many people caught the disease and made a recovery because only deaths were recorded and many records were destroyed in the Great Fire of London the following year .	In the few districts where intact records remain , plague deaths varied between 30 % and over 50 % of the total population .	it was very dismal to behold the red crosses , and read in great letters “ LORD , HAVE MERCY UPON US ” on the doors , and watchmen standing before them with halberds ... people passing by them so gingerly , and with such fearful looks as if they had been lined with enemies in ambush to destroy them .	.. a man at the corner of Artillery - wall , that as I judge , through the dizziness of his head with the disease , which seized upon him there , had dasht his face against the wall ; and when I came by , he lay hanging with his bloody face over the rails , and bleeding upon the ground ...	I went and spoke to him ; he could make no answer , but rattled in the throat , and as I was informed , within half an hour died in the place .
+Event	T0	caught	EVENT	32
+Event	T1	disease	EVENT	43
+Event	T2	made	EVENT	55
+Event	T3	recovery	EVENT	62
+Event	T4	deaths	EVENT	84
+Event	T5	recorded	EVENT	96
+Event	T6	destroyed	EVENT	127
+Event	T7	Fire	EVENT	150
+Event	T8	varied	EVENT	251
+Event	T9	read	EVENT	362
+Event	T10	standing	EVENT	442
+Event	T11	passing	EVENT	488
+Event	T12	lined	EVENT	566
+Event	T13	ambush	EVENT	588
+Event	T14	destroy	EVENT	598
+Event	T15	judge	EVENT	668
+Event	T16	dizziness	EVENT	688
+Event	T17	disease	EVENT	719
+Event	T18	seized	EVENT	735
+Event	T19	dasht	EVENT	763
+Event	T20	came	EVENT	808
+Event	T21	hanging	EVENT	825
+Event	T22	bleeding	EVENT	875
+Event	T23	spoke	EVENT	915
+Event	T24	make	EVENT	939
+Event	T25	rattled	EVENT	960
+Event	T26	informed	EVENT	997
+Event	T27	died	EVENT	1028
+Event	T28	deaths	EVENT	244
+Event	T29	plague	EVENT	237
+Event	T30	fearful	EVENT	532
+Relation	T29	T28	CauseEffect	true	plague	deaths
+Relation	T28	T29	EffectCause	true	deaths	plague
+Relation	T14	T13	CauseEffect	true	destroy	ambush
+Relation	T13	T14	EffectCause	true	ambush	destroy
+Relation	T12	T30	CauseEffect	true	lined	fearful
+Relation	T30	T12	EffectCause	true	fearful	lined
+Relation	T17	T16	CauseEffect	true	disease	dizziness
+Relation	T16	T17	EffectCause	true	dizziness	disease
+Relation	T17	T19	CauseEffect	true	disease	dasht
+Relation	T19	T17	EffectCause	true	dasht	disease
+Relation	T17	T27	CauseEffect	true	disease	died
+Relation	T27	T17	EffectCause	true	died	disease
+Relation	T0	T5	NoRel	true	caught	recorded
+Relation	T0	T8	NoRel	true	caught	varied
+Relation	T1	T5	NoRel	true	disease	recorded
+Relation	T10	T1	NoRel	true	standing	disease
+Relation	T11	T3	NoRel	true	passing	recovery
+Relation	T12	T10	NoRel	true	lined	standing
+Relation	T12	T16	NoRel	true	lined	dizziness
+Relation	T12	T23	NoRel	true	lined	spoke
+Relation	T12	T4	NoRel	true	lined	deaths
+Relation	T13	T20	NoRel	true	ambush	came
+Relation	T14	T20	NoRel	true	destroy	came
+Relation	T15	T27	NoRel	true	judge	died
+Relation	T16	T24	NoRel	true	dizziness	make
+Relation	T16	T8	NoRel	true	dizziness	varied
+Relation	T17	T12	NoRel	true	disease	lined
+Relation	T17	T26	NoRel	true	disease	informed
+Relation	T17	T5	NoRel	true	disease	recorded
+Relation	T18	T0	NoRel	true	seized	caught
+Relation	T18	T10	NoRel	true	seized	standing
+Relation	T18	T12	NoRel	true	seized	lined
+Relation	T18	T15	NoRel	true	seized	judge
+Relation	T18	T17	NoRel	true	seized	disease
+Relation	T18	T19	NoRel	true	seized	dasht
+Relation	T18	T27	NoRel	true	seized	died
+Relation	T18	T28	NoRel	true	seized	deaths
+Relation	T19	T0	NoRel	true	dasht	caught
+Relation	T19	T11	NoRel	true	dasht	passing
+Relation	T2	T27	NoRel	true	made	died
+Relation	T2	T7	NoRel	true	made	Fire
+Relation	T20	T0	NoRel	true	came	caught
+Relation	T20	T19	NoRel	true	came	dasht
+Relation	T21	T29	NoRel	true	hanging	plague
+Relation	T22	T24	NoRel	true	bleeding	make
+Relation	T22	T29	NoRel	true	bleeding	plague
+Relation	T23	T10	NoRel	true	spoke	standing
+Relation	T23	T19	NoRel	true	spoke	dasht
+Relation	T24	T18	NoRel	true	make	seized
+Relation	T24	T6	NoRel	true	make	destroyed
+Relation	T25	T12	NoRel	true	rattled	lined
+Relation	T25	T2	NoRel	true	rattled	made
+Relation	T25	T7	NoRel	true	rattled	Fire
+Relation	T26	T0	NoRel	true	informed	caught
+Relation	T26	T15	NoRel	true	informed	judge
+Relation	T26	T23	NoRel	true	informed	spoke
+Relation	T26	T29	NoRel	true	informed	plague
+Relation	T26	T4	NoRel	true	informed	deaths
+Relation	T27	T1	NoRel	true	died	disease
+Relation	T27	T12	NoRel	true	died	lined
+Relation	T27	T4	NoRel	true	died	deaths
+Relation	T27	T9	NoRel	true	died	read
+Relation	T28	T17	NoRel	true	deaths	disease
+Relation	T28	T26	NoRel	true	deaths	informed
+Relation	T28	T30	NoRel	true	deaths	fearful
+Relation	T29	T20	NoRel	true	plague	came
+Relation	T29	T4	NoRel	true	plague	deaths
+Relation	T3	T13	NoRel	true	recovery	ambush
+Relation	T3	T18	NoRel	true	recovery	seized
+Relation	T3	T20	NoRel	true	recovery	came
+Relation	T3	T23	NoRel	true	recovery	spoke
+Relation	T30	T19	NoRel	true	fearful	dasht
+Relation	T30	T23	NoRel	true	fearful	spoke
+Relation	T30	T24	NoRel	true	fearful	make
+Relation	T30	T28	NoRel	true	fearful	deaths
+Relation	T4	T13	NoRel	true	deaths	ambush
+Relation	T4	T9	NoRel	true	deaths	read
+Relation	T5	T12	NoRel	true	recorded	lined
+Relation	T5	T29	NoRel	true	recorded	plague
+Relation	T5	T8	NoRel	true	recorded	varied
+Relation	T6	T13	NoRel	true	destroyed	ambush
+Relation	T6	T19	NoRel	true	destroyed	dasht
+Relation	T6	T20	NoRel	true	destroyed	came
+Relation	T6	T24	NoRel	true	destroyed	make
+Relation	T6	T29	NoRel	true	destroyed	plague
+Relation	T6	T4	NoRel	true	destroyed	deaths
+Relation	T6	T7	NoRel	true	destroyed	Fire
+Relation	T7	T10	NoRel	true	Fire	standing
+Relation	T7	T15	NoRel	true	Fire	judge
+Relation	T7	T25	NoRel	true	Fire	rattled
+Relation	T7	T28	NoRel	true	Fire	deaths
+Relation	T8	T14	NoRel	true	varied	destroy
+Relation	T8	T16	NoRel	true	varied	dizziness
+Relation	T8	T3	NoRel	true	varied	recovery
+Relation	T8	T30	NoRel	true	varied	fearful
+Relation	T9	T2	NoRel	true	read	made
+Relation	T9	T21	NoRel	true	read	hanging
+Relation	T9	T26	NoRel	true	read	informed

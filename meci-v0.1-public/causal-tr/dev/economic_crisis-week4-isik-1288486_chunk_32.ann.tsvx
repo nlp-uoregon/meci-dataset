@@ -1,0 +1,30 @@
+Text	Hükûmet ilk olarak işçi ve asker konseylerini dağıttı .	Yer yer güçlü ayaklanmalar ve grevler gerçekleşmiş olmasına rağmen karşı devrim güçlerine karşı çok uzun süre dayanamadı .	Kömür işçilerinin başlattıkları kitle grevleri Berlin’e de ulaştı .	Berlin’de yarım milyon işçi konseylerin tanınması , siyasi tutukluların serbest bırakılması , olağanüstü döneme ait yargı organlarının kaldırılması , karşıdevrimci örgütlenme olan Freikorpslar’ın dağıtılması ve kısa sürede devrimci silahlı birliğin kurulması talepleriyle genel greve çıktı .	İşçi sınıfın yoğun olduğu bölgelerde hareketlilik artıyordu .
+Event	T0	dağıttı	EVENT	46
+Event	T2	grevleri	EVENT	217
+Event	T3	ulaştı	EVENT	238
+Event	T9	çıktı	EVENT	531
+Event	T10	artıyordu	EVENT	589
+Event	T1	ayaklanmalar	EVENT	70
+Event	T11	grevler	EVENT	86
+Event	T4	talepleriyle	EVENT	506
+Relation	T2	T3	CauseEffect	true	grevleri	ulaştı
+Relation	T3	T2	EffectCause	true	ulaştı	grevleri
+Relation	T4	T9	CauseEffect	true	talepleriyle	çıktı
+Relation	T9	T4	EffectCause	true	çıktı	talepleriyle
+Relation	T0	T1	NoRel	true	dağıttı	ayaklanmalar
+Relation	T0	T11	NoRel	true	dağıttı	grevler
+Relation	T1	T2	NoRel	true	ayaklanmalar	grevleri
+Relation	T1	T3	NoRel	true	ayaklanmalar	ulaştı
+Relation	T1	T4	NoRel	true	ayaklanmalar	talepleriyle
+Relation	T10	T3	NoRel	true	artıyordu	ulaştı
+Relation	T10	T4	NoRel	true	artıyordu	talepleriyle
+Relation	T10	T9	NoRel	true	artıyordu	çıktı
+Relation	T11	T1	NoRel	true	grevler	ayaklanmalar
+Relation	T11	T2	NoRel	true	grevler	grevleri
+Relation	T11	T3	NoRel	true	grevler	ulaştı
+Relation	T11	T9	NoRel	true	grevler	çıktı
+Relation	T2	T11	NoRel	true	grevleri	grevler
+Relation	T2	T9	NoRel	true	grevleri	çıktı
+Relation	T4	T10	NoRel	true	talepleriyle	artıyordu
+Relation	T9	T1	NoRel	true	çıktı	ayaklanmalar
+Relation	T9	T3	NoRel	true	çıktı	ulaştı

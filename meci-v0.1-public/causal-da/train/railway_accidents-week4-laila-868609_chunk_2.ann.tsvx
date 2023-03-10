@@ -1,0 +1,132 @@
+Text	Den tyske jernbanehavarikommission - Eisenbahn-Unfalluntersuchungstelle des Bundes - indledte den 9. februar en undersøgelse af ulykken .	Den 16. februar oplyste politiets efterforskere , at det var en menneskelig fejl , der havde forårsaget ulykken .	Ifølge lederen af efterforskningen , Oberstaatsanwalt Wolfgang Giese , kunne ulykken være undgået , hvis en 39-årig stationsbestyrer havde fulgt reglerne .	Medarbejderen tillod , at de to tog kørte imod hinanden på strækningen og indså for sent sin fejl .	Han foretog et nødopkald kort før kollisionen , men opkaldet blev ikke besvaret .
+Event	T0	indledte	EVENT	85
+Event	T1	undersøgelse	EVENT	112
+Event	T2	ulykken	EVENT	128
+Event	T3	oplyste	EVENT	154
+Event	T4	fejl	EVENT	214
+Event	T5	ulykken	EVENT	242
+Event	T6	ulykken	EVENT	329
+Event	T7	undgået	EVENT	342
+Event	T8	fulgt	EVENT	391
+Event	T9	tillod	EVENT	422
+Event	T10	indså	EVENT	482
+Event	T11	fejl	EVENT	501
+Event	T12	foretog	EVENT	512
+Event	T13	nødopkald	EVENT	523
+Event	T14	kollisionen	EVENT	542
+Event	T15	opkaldet	EVENT	560
+Event	T16	besvaret	EVENT	579
+Event	T17	kørte	EVENT	444
+Relation	T4	T5	CauseEffect	true	fejl	ulykken
+Relation	T5	T4	EffectCause	true	ulykken	fejl
+Relation	T11	T14	CauseEffect	true	fejl	kollisionen
+Relation	T14	T11	EffectCause	true	kollisionen	fejl
+Relation	T0	T1	NoRel	true	indledte	undersøgelse
+Relation	T0	T14	NoRel	true	indledte	kollisionen
+Relation	T0	T2	NoRel	true	indledte	ulykken
+Relation	T0	T3	NoRel	true	indledte	oplyste
+Relation	T0	T8	NoRel	true	indledte	fulgt
+Relation	T1	T0	NoRel	true	undersøgelse	indledte
+Relation	T1	T10	NoRel	true	undersøgelse	indså
+Relation	T1	T2	NoRel	true	undersøgelse	ulykken
+Relation	T1	T3	NoRel	true	undersøgelse	oplyste
+Relation	T1	T6	NoRel	true	undersøgelse	ulykken
+Relation	T10	T0	NoRel	true	indså	indledte
+Relation	T10	T1	NoRel	true	indså	undersøgelse
+Relation	T10	T11	NoRel	true	indså	fejl
+Relation	T10	T14	NoRel	true	indså	kollisionen
+Relation	T10	T8	NoRel	true	indså	fulgt
+Relation	T10	T9	NoRel	true	indså	tillod
+Relation	T11	T0	NoRel	true	fejl	indledte
+Relation	T11	T10	NoRel	true	fejl	indså
+Relation	T11	T17	NoRel	true	fejl	kørte
+Relation	T11	T4	NoRel	true	fejl	fejl
+Relation	T11	T7	NoRel	true	fejl	undgået
+Relation	T11	T8	NoRel	true	fejl	fulgt
+Relation	T12	T0	NoRel	true	foretog	indledte
+Relation	T12	T1	NoRel	true	foretog	undersøgelse
+Relation	T12	T13	NoRel	true	foretog	nødopkald
+Relation	T12	T14	NoRel	true	foretog	kollisionen
+Relation	T12	T15	NoRel	true	foretog	opkaldet
+Relation	T12	T16	NoRel	true	foretog	besvaret
+Relation	T12	T17	NoRel	true	foretog	kørte
+Relation	T12	T2	NoRel	true	foretog	ulykken
+Relation	T12	T4	NoRel	true	foretog	fejl
+Relation	T12	T6	NoRel	true	foretog	ulykken
+Relation	T13	T1	NoRel	true	nødopkald	undersøgelse
+Relation	T13	T14	NoRel	true	nødopkald	kollisionen
+Relation	T13	T15	NoRel	true	nødopkald	opkaldet
+Relation	T13	T16	NoRel	true	nødopkald	besvaret
+Relation	T13	T2	NoRel	true	nødopkald	ulykken
+Relation	T13	T3	NoRel	true	nødopkald	oplyste
+Relation	T13	T6	NoRel	true	nødopkald	ulykken
+Relation	T13	T7	NoRel	true	nødopkald	undgået
+Relation	T13	T8	NoRel	true	nødopkald	fulgt
+Relation	T14	T12	NoRel	true	kollisionen	foretog
+Relation	T14	T15	NoRel	true	kollisionen	opkaldet
+Relation	T14	T16	NoRel	true	kollisionen	besvaret
+Relation	T14	T17	NoRel	true	kollisionen	kørte
+Relation	T14	T2	NoRel	true	kollisionen	ulykken
+Relation	T14	T3	NoRel	true	kollisionen	oplyste
+Relation	T14	T8	NoRel	true	kollisionen	fulgt
+Relation	T15	T12	NoRel	true	opkaldet	foretog
+Relation	T15	T13	NoRel	true	opkaldet	nødopkald
+Relation	T15	T8	NoRel	true	opkaldet	fulgt
+Relation	T16	T1	NoRel	true	besvaret	undersøgelse
+Relation	T16	T12	NoRel	true	besvaret	foretog
+Relation	T16	T14	NoRel	true	besvaret	kollisionen
+Relation	T16	T6	NoRel	true	besvaret	ulykken
+Relation	T16	T8	NoRel	true	besvaret	fulgt
+Relation	T17	T10	NoRel	true	kørte	indså
+Relation	T17	T11	NoRel	true	kørte	fejl
+Relation	T17	T2	NoRel	true	kørte	ulykken
+Relation	T17	T5	NoRel	true	kørte	ulykken
+Relation	T17	T6	NoRel	true	kørte	ulykken
+Relation	T2	T1	NoRel	true	ulykken	undersøgelse
+Relation	T2	T11	NoRel	true	ulykken	fejl
+Relation	T2	T15	NoRel	true	ulykken	opkaldet
+Relation	T2	T16	NoRel	true	ulykken	besvaret
+Relation	T2	T17	NoRel	true	ulykken	kørte
+Relation	T2	T6	NoRel	true	ulykken	ulykken
+Relation	T2	T9	NoRel	true	ulykken	tillod
+Relation	T3	T0	NoRel	true	oplyste	indledte
+Relation	T3	T1	NoRel	true	oplyste	undersøgelse
+Relation	T3	T10	NoRel	true	oplyste	indså
+Relation	T3	T11	NoRel	true	oplyste	fejl
+Relation	T3	T13	NoRel	true	oplyste	nødopkald
+Relation	T3	T15	NoRel	true	oplyste	opkaldet
+Relation	T3	T7	NoRel	true	oplyste	undgået
+Relation	T4	T13	NoRel	true	fejl	nødopkald
+Relation	T4	T17	NoRel	true	fejl	kørte
+Relation	T4	T2	NoRel	true	fejl	ulykken
+Relation	T4	T6	NoRel	true	fejl	ulykken
+Relation	T4	T7	NoRel	true	fejl	undgået
+Relation	T5	T0	NoRel	true	ulykken	indledte
+Relation	T5	T11	NoRel	true	ulykken	fejl
+Relation	T5	T13	NoRel	true	ulykken	nødopkald
+Relation	T5	T14	NoRel	true	ulykken	kollisionen
+Relation	T5	T15	NoRel	true	ulykken	opkaldet
+Relation	T5	T2	NoRel	true	ulykken	ulykken
+Relation	T5	T7	NoRel	true	ulykken	undgået
+Relation	T6	T0	NoRel	true	ulykken	indledte
+Relation	T6	T1	NoRel	true	ulykken	undersøgelse
+Relation	T6	T10	NoRel	true	ulykken	indså
+Relation	T6	T2	NoRel	true	ulykken	ulykken
+Relation	T6	T3	NoRel	true	ulykken	oplyste
+Relation	T6	T7	NoRel	true	ulykken	undgået
+Relation	T6	T8	NoRel	true	ulykken	fulgt
+Relation	T7	T11	NoRel	true	undgået	fejl
+Relation	T7	T15	NoRel	true	undgået	opkaldet
+Relation	T7	T16	NoRel	true	undgået	besvaret
+Relation	T7	T17	NoRel	true	undgået	kørte
+Relation	T7	T2	NoRel	true	undgået	ulykken
+Relation	T7	T4	NoRel	true	undgået	fejl
+Relation	T7	T6	NoRel	true	undgået	ulykken
+Relation	T8	T1	NoRel	true	fulgt	undersøgelse
+Relation	T8	T17	NoRel	true	fulgt	kørte
+Relation	T8	T4	NoRel	true	fulgt	fejl
+Relation	T9	T10	NoRel	true	tillod	indså
+Relation	T9	T13	NoRel	true	tillod	nødopkald
+Relation	T9	T17	NoRel	true	tillod	kørte
+Relation	T9	T6	NoRel	true	tillod	ulykken
+Relation	T9	T8	NoRel	true	tillod	fulgt

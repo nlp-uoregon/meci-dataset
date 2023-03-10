@@ -1,0 +1,33 @@
+Text	Patlamaaltı ay sonra durmuştu .	Lav akışı 21 Nisan 40 km² kaplı olan 13 ay sonra ve 100 m maksimum derinliği ile durduruldu .	Üretilen lav yatakları esas lav türü with Pāhoehoe ve lav bir budella ( lav tüpleri ) alanlar vardı .	Nisan ve Mayıs ayında toprağa çatlaklardan yayılan 1948 CO2 Hekla 15 koyun ve bâzı vahşi hayvanlar ve kuşlar ölüm çukurların da toplandı .	küçükresim | sağ | Hekla with Þjórsá in the foreground Hekla 1970 patlama 5 Mayıs 1970 tarihinde 21: 23'te başladı ve 5 Temmuz yılına kadar sürdü .
+Event	T0	Patlamaaltı	EVENT	0
+Event	T1	akışı	EVENT	36
+Event	T2	durduruldu	EVENT	113
+Event	T3	yayılan	EVENT	271
+Event	T4	toplandı	EVENT	356
+Event	T5	patlama	EVENT	433
+Event	T6	başladı	EVENT	474
+Event	T7	sürdü	EVENT	507
+Event	T8	durmuştu	EVENT	21
+Relation	T3	T4	CauseEffect	true	yayılan	toplandı
+Relation	T4	T3	EffectCause	true	toplandı	yayılan
+Relation	T0	T3	NoRel	true	Patlamaaltı	yayılan
+Relation	T1	T0	NoRel	true	akışı	Patlamaaltı
+Relation	T1	T3	NoRel	true	akışı	yayılan
+Relation	T1	T8	NoRel	true	akışı	durmuştu
+Relation	T2	T0	NoRel	true	durduruldu	Patlamaaltı
+Relation	T2	T1	NoRel	true	durduruldu	akışı
+Relation	T2	T7	NoRel	true	durduruldu	sürdü
+Relation	T3	T5	NoRel	true	yayılan	patlama
+Relation	T3	T6	NoRel	true	yayılan	başladı
+Relation	T3	T7	NoRel	true	yayılan	sürdü
+Relation	T3	T8	NoRel	true	yayılan	durmuştu
+Relation	T4	T2	NoRel	true	toplandı	durduruldu
+Relation	T5	T3	NoRel	true	patlama	yayılan
+Relation	T5	T4	NoRel	true	patlama	toplandı
+Relation	T6	T0	NoRel	true	başladı	Patlamaaltı
+Relation	T6	T2	NoRel	true	başladı	durduruldu
+Relation	T6	T3	NoRel	true	başladı	yayılan
+Relation	T6	T5	NoRel	true	başladı	patlama
+Relation	T7	T2	NoRel	true	sürdü	durduruldu
+Relation	T8	T5	NoRel	true	durmuştu	patlama
+Relation	T8	T6	NoRel	true	durmuştu	başladı

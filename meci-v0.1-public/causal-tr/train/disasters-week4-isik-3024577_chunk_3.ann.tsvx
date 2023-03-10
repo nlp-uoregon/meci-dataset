@@ -1,0 +1,17 @@
+Text	Angela Merkel : " Sizin yanınızdayız , buradaki manzara korkunç .	Ben gördüğüm bu yıkım karşısında şoka uğramış durumdayım .	" demiştir .	Avrupa komisyonu başkanı Ursula von der Leyen de Belçika'da incelemelerde bulunmuştur , zarar gören bölge halkının yaralarını sarması için bütün Avrupa'nın kalbinin afetzedelerle olduğunu söylemiştir .	Yine bu hafta içerisinde Birleşik Krallık , Fransa ve İsviçre'de de ani su baskınları görülmüştür .
+Event	T0	yıkım	EVENT	82
+Event	T2	zarar	EVENT	226
+Event	T4	söylemiştir	EVENT	326
+Event	T5	görülmüştür	EVENT	426
+Event	T1	durumdayım	EVENT	112
+Event	T6	bulunmuştur	EVENT	212
+Relation	T0	T1	CauseEffect	true	yıkım	durumdayım
+Relation	T1	T0	EffectCause	true	durumdayım	yıkım
+Relation	T1	T4	NoRel	true	durumdayım	söylemiştir
+Relation	T2	T1	NoRel	true	zarar	durumdayım
+Relation	T2	T6	NoRel	true	zarar	bulunmuştur
+Relation	T4	T0	NoRel	true	söylemiştir	yıkım
+Relation	T4	T6	NoRel	true	söylemiştir	bulunmuştur
+Relation	T6	T0	NoRel	true	bulunmuştur	yıkım
+Relation	T6	T1	NoRel	true	bulunmuştur	durumdayım
+Relation	T6	T2	NoRel	true	bulunmuştur	zarar

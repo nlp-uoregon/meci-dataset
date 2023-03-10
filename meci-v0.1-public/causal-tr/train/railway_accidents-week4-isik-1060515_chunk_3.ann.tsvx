@@ -1,0 +1,12 @@
+Text	Kaza iki ana nedene sahipti .	İlki tren sürücüsünün treni Wavre’den hareket ettirmesinin tecrübesizliği .	Tren , makinist yeri sinyalı geçtiğinde durmuştu ; bu nedenle makinist hareket ettiğinde sinyal ışığının kırmızı olduğunu göremiyordu .	Diğer sebep ise Wavre ve Leuven istasyonu memurları arasındaki lisan engeliydi .	Belçika’da Fransızca ve Holandaca’nın her ikisi de resmi konuşma diliydi ve demiryolu kadrosundan sadece birini konuşması isteniyordu .
+Event	T0	Kaza	EVENT	0
+Event	T2	durmuştu	EVENT	146
+Event	T4	göremiyordu	EVENT	228
+Event	T6	isteniyordu	EVENT	445
+Event	T1	ettiğinde	EVENT	185
+Relation	T4	T0	CauseEffect	true	göremiyordu	Kaza
+Relation	T0	T4	EffectCause	true	Kaza	göremiyordu
+Relation	T6	T0	CauseEffect	true	isteniyordu	Kaza
+Relation	T0	T6	EffectCause	true	Kaza	isteniyordu
+Relation	T0	T2	NoRel	true	Kaza	durmuştu
+Relation	T4	T1	NoRel	true	göremiyordu	ettiğinde

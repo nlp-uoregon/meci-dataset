@@ -1,0 +1,65 @@
+Text	Tedavi için Sovyetler Birliği’ne gitti ve bir iyileşme yaşadı .	Tunus Kenti’ne dönüşünde , vasiyetini , The Wretched of the Earth ( ‘ Yeryüzünün Lanetlileri ’ )’ni yazdırdı .	Yatağa tutsak olmadığı zamanlarda , Cezayir - Tunus sınırındaki Ghardiamo’da ALN ( Armée de Libération Nationale , Ulusal Kurtuluş Ordusu ) subaylarına dersler verdi .	Roma’da , Sartre’a son bir konuklukta bulundu ve daha fazla kan kanseri tedavisi için ABD’ye gitti .	İronik olarak , ABD’ye tedavi için yaptığı yolculukta , CİA tarafından yardım edildi .
+Event	T0	Tedavi	EVENT	0
+Event	T1	gitti	EVENT	33
+Event	T2	yaşadı	EVENT	55
+Event	T3	dönüşünde	EVENT	79
+Event	T4	Wretched	EVENT	108
+Event	T5	verdi	EVENT	335
+Event	T6	bulundu	EVENT	381
+Event	T7	tedavisi	EVENT	415
+Event	T8	gitti	EVENT	436
+Event	T9	tedavi	EVENT	467
+Event	T10	yolculukta	EVENT	487
+Event	T11	edildi	EVENT	522
+Relation	T0	T1	CauseEffect	true	Tedavi	gitti
+Relation	T1	T0	EffectCause	true	gitti	Tedavi
+Relation	T7	T8	CauseEffect	true	tedavisi	gitti
+Relation	T8	T7	EffectCause	true	gitti	tedavisi
+Relation	T9	T10	CauseEffect	true	tedavi	yolculukta
+Relation	T10	T9	EffectCause	true	yolculukta	tedavi
+Relation	T7	T10	CauseEffect	true	tedavisi	yolculukta
+Relation	T10	T7	EffectCause	true	yolculukta	tedavisi
+Relation	T0	T10	NoRel	true	Tedavi	yolculukta
+Relation	T0	T11	NoRel	true	Tedavi	edildi
+Relation	T0	T2	NoRel	true	Tedavi	yaşadı
+Relation	T0	T3	NoRel	true	Tedavi	dönüşünde
+Relation	T0	T7	NoRel	true	Tedavi	tedavisi
+Relation	T1	T3	NoRel	true	gitti	dönüşünde
+Relation	T1	T6	NoRel	true	gitti	bulundu
+Relation	T10	T6	NoRel	true	yolculukta	bulundu
+Relation	T10	T8	NoRel	true	yolculukta	gitti
+Relation	T11	T3	NoRel	true	edildi	dönüşünde
+Relation	T11	T4	NoRel	true	edildi	Wretched
+Relation	T11	T6	NoRel	true	edildi	bulundu
+Relation	T11	T9	NoRel	true	edildi	tedavi
+Relation	T2	T0	NoRel	true	yaşadı	Tedavi
+Relation	T2	T3	NoRel	true	yaşadı	dönüşünde
+Relation	T2	T4	NoRel	true	yaşadı	Wretched
+Relation	T2	T6	NoRel	true	yaşadı	bulundu
+Relation	T2	T9	NoRel	true	yaşadı	tedavi
+Relation	T3	T5	NoRel	true	dönüşünde	verdi
+Relation	T3	T7	NoRel	true	dönüşünde	tedavisi
+Relation	T3	T8	NoRel	true	dönüşünde	gitti
+Relation	T4	T0	NoRel	true	Wretched	Tedavi
+Relation	T4	T11	NoRel	true	Wretched	edildi
+Relation	T4	T3	NoRel	true	Wretched	dönüşünde
+Relation	T4	T6	NoRel	true	Wretched	bulundu
+Relation	T4	T7	NoRel	true	Wretched	tedavisi
+Relation	T4	T9	NoRel	true	Wretched	tedavi
+Relation	T5	T0	NoRel	true	verdi	Tedavi
+Relation	T5	T11	NoRel	true	verdi	edildi
+Relation	T5	T2	NoRel	true	verdi	yaşadı
+Relation	T5	T6	NoRel	true	verdi	bulundu
+Relation	T5	T8	NoRel	true	verdi	gitti
+Relation	T6	T4	NoRel	true	bulundu	Wretched
+Relation	T6	T7	NoRel	true	bulundu	tedavisi
+Relation	T6	T9	NoRel	true	bulundu	tedavi
+Relation	T8	T1	NoRel	true	gitti	gitti
+Relation	T8	T10	NoRel	true	gitti	yolculukta
+Relation	T8	T4	NoRel	true	gitti	Wretched
+Relation	T8	T9	NoRel	true	gitti	tedavi
+Relation	T9	T0	NoRel	true	tedavi	Tedavi
+Relation	T9	T1	NoRel	true	tedavi	gitti
+Relation	T9	T5	NoRel	true	tedavi	verdi
+Relation	T9	T6	NoRel	true	tedavi	bulundu
+Relation	T9	T8	NoRel	true	tedavi	gitti

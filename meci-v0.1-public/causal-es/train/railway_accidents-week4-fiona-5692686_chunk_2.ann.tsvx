@@ -1,0 +1,52 @@
+Text	, Este accidente es el más grave del suburbano barcelonés y el segundo en España por detrás del accidente en el metro de Valencia de 2006 .	- 31 de octubre de 2004 : dos trenes chocan en la estación de Vall d'Hebron cuando uno que iba desde la estación de Penitents a la de Vall d'Hebron colisionó contra el otro que salió de la cochera de Vall d'Hebron .	Como consecuencia del impacto resultaron heridas 36 personas , de las cuales , veinte fueron trasladadas a diferentes hospitales de Barcelona y la línea 3 fue cortada parcialmente entre Lesseps y Montbau .	El conductor de uno de los trenes quedó atrapado durante 4 horas en la cabina de conducción con pronóstico grave .	- 9 de diciembre de 2009 : un tren descarrila a baja velocidad al salir del depósito de La Sagrera justo antes de empezar el servicio sin causar daños personales ni materiales .
+Event	T0	accidente	EVENT	7
+Event	T1	accidente	EVENT	96
+Event	T2	chocan	EVENT	177
+Event	T3	colisionó	EVENT	288
+Event	T4	salió	EVENT	317
+Event	T5	heridas	EVENT	397
+Event	T6	trasladadas	EVENT	449
+Event	T7	cortada	EVENT	515
+Event	T8	atrapado	EVENT	602
+Event	T9	salir	EVENT	743
+Event	T10	empezar	EVENT	791
+Relation	T2	T5	CauseEffect	true	chocan	heridas
+Relation	T5	T2	EffectCause	true	heridas	chocan
+Relation	T2	T0	CauseEffect	true	chocan	accidente
+Relation	T0	T2	EffectCause	true	accidente	chocan
+Relation	T0	T3	NoRel	true	accidente	colisionó
+Relation	T1	T10	NoRel	true	accidente	empezar
+Relation	T1	T3	NoRel	true	accidente	colisionó
+Relation	T1	T4	NoRel	true	accidente	salió
+Relation	T1	T7	NoRel	true	accidente	cortada
+Relation	T10	T0	NoRel	true	empezar	accidente
+Relation	T10	T6	NoRel	true	empezar	trasladadas
+Relation	T2	T10	NoRel	true	chocan	empezar
+Relation	T2	T3	NoRel	true	chocan	colisionó
+Relation	T2	T6	NoRel	true	chocan	trasladadas
+Relation	T2	T7	NoRel	true	chocan	cortada
+Relation	T2	T8	NoRel	true	chocan	atrapado
+Relation	T3	T4	NoRel	true	colisionó	salió
+Relation	T3	T5	NoRel	true	colisionó	heridas
+Relation	T3	T8	NoRel	true	colisionó	atrapado
+Relation	T4	T5	NoRel	true	salió	heridas
+Relation	T4	T6	NoRel	true	salió	trasladadas
+Relation	T4	T7	NoRel	true	salió	cortada
+Relation	T5	T10	NoRel	true	heridas	empezar
+Relation	T5	T3	NoRel	true	heridas	colisionó
+Relation	T6	T1	NoRel	true	trasladadas	accidente
+Relation	T6	T2	NoRel	true	trasladadas	chocan
+Relation	T6	T5	NoRel	true	trasladadas	heridas
+Relation	T7	T10	NoRel	true	cortada	empezar
+Relation	T7	T4	NoRel	true	cortada	salió
+Relation	T8	T10	NoRel	true	atrapado	empezar
+Relation	T8	T2	NoRel	true	atrapado	chocan
+Relation	T8	T3	NoRel	true	atrapado	colisionó
+Relation	T8	T4	NoRel	true	atrapado	salió
+Relation	T8	T7	NoRel	true	atrapado	cortada
+Relation	T9	T0	NoRel	true	salir	accidente
+Relation	T9	T10	NoRel	true	salir	empezar
+Relation	T9	T3	NoRel	true	salir	colisionó
+Relation	T9	T5	NoRel	true	salir	heridas
+Relation	T9	T6	NoRel	true	salir	trasladadas
+Relation	T9	T7	NoRel	true	salir	cortada

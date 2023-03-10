@@ -1,0 +1,62 @@
+Text	Çarpışma sonucu ise ikinci pilot hayatını kaybetti ve 51'i ağır ( 2 mürettebat ile beraber ) , 56 kişi yaralandı .	- Air France Flight 358 , bir Airbus A340 ( F - GLZQ ) pisti aşarak ve 2005 yılında Toronto Pearson Uluslararası Havaalanında düştü .	- TAM Airlines Flight 3054 , bir Airbus A320 ( PR - MBK ) pisti aşarak 2007 yılında São Paulo - Congonhas Havaalanında bir benzin istasyonuna çarptı .	- - " 14 Eylül 1993'te Varşova'daki Airbus A320 - 211 Uçağına Kaza Raporu " ( Arşiv ) - Ana Komisyon Uçak Kazası Soruşturması - Ekler ( Arşiv ) - CVR transkripti , Frenleme Sisteminin Dokümantasyonu , Lufthansa A320 kullanım kılavuzundan alıntı	Kategori : 1993'te Polonya Kategori : Lufthansa Kategori : Polonya'daki havacılık kazaları ve olayları Kategori : 1993'te havacılık kazaları ve olayları
+Event	T0	kaybetti	EVENT	42
+Event	T1	yaralandı	EVENT	103
+Event	T2	aşarak	EVENT	176
+Event	T3	düştü	EVENT	241
+Event	T4	aşarak	EVENT	313
+Event	T5	çarptı	EVENT	391
+Event	T7	Soruşturması	EVENT	513
+Event	T9	alıntı	EVENT	638
+Event	T10	kazaları	EVENT	777
+Event	T11	olayları	EVENT	789
+Event	T12	Çarpışma	EVENT	0
+Event	T6	Kaza	EVENT	462
+Relation	T12	T0	CauseEffect	true	Çarpışma	kaybetti
+Relation	T0	T12	EffectCause	true	kaybetti	Çarpışma
+Relation	T12	T1	CauseEffect	true	Çarpışma	yaralandı
+Relation	T1	T12	EffectCause	true	yaralandı	Çarpışma
+Relation	T0	T1	NoRel	true	kaybetti	yaralandı
+Relation	T0	T2	NoRel	true	kaybetti	aşarak
+Relation	T0	T5	NoRel	true	kaybetti	çarptı
+Relation	T0	T7	NoRel	true	kaybetti	Soruşturması
+Relation	T1	T10	NoRel	true	yaralandı	kazaları
+Relation	T10	T12	NoRel	true	kazaları	Çarpışma
+Relation	T10	T3	NoRel	true	kazaları	düştü
+Relation	T10	T6	NoRel	true	kazaları	Kaza
+Relation	T11	T10	NoRel	true	olayları	kazaları
+Relation	T11	T4	NoRel	true	olayları	aşarak
+Relation	T11	T6	NoRel	true	olayları	Kaza
+Relation	T11	T7	NoRel	true	olayları	Soruşturması
+Relation	T11	T9	NoRel	true	olayları	alıntı
+Relation	T12	T11	NoRel	true	Çarpışma	olayları
+Relation	T12	T3	NoRel	true	Çarpışma	düştü
+Relation	T12	T4	NoRel	true	Çarpışma	aşarak
+Relation	T2	T0	NoRel	true	aşarak	kaybetti
+Relation	T2	T1	NoRel	true	aşarak	yaralandı
+Relation	T2	T12	NoRel	true	aşarak	Çarpışma
+Relation	T2	T5	NoRel	true	aşarak	çarptı
+Relation	T2	T6	NoRel	true	aşarak	Kaza
+Relation	T2	T7	NoRel	true	aşarak	Soruşturması
+Relation	T3	T11	NoRel	true	düştü	olayları
+Relation	T3	T12	NoRel	true	düştü	Çarpışma
+Relation	T4	T11	NoRel	true	aşarak	olayları
+Relation	T4	T12	NoRel	true	aşarak	Çarpışma
+Relation	T4	T2	NoRel	true	aşarak	aşarak
+Relation	T4	T3	NoRel	true	aşarak	düştü
+Relation	T4	T5	NoRel	true	aşarak	çarptı
+Relation	T4	T6	NoRel	true	aşarak	Kaza
+Relation	T5	T0	NoRel	true	çarptı	kaybetti
+Relation	T5	T12	NoRel	true	çarptı	Çarpışma
+Relation	T5	T3	NoRel	true	çarptı	düştü
+Relation	T5	T4	NoRel	true	çarptı	aşarak
+Relation	T5	T7	NoRel	true	çarptı	Soruşturması
+Relation	T6	T0	NoRel	true	Kaza	kaybetti
+Relation	T6	T10	NoRel	true	Kaza	kazaları
+Relation	T6	T12	NoRel	true	Kaza	Çarpışma
+Relation	T6	T2	NoRel	true	Kaza	aşarak
+Relation	T6	T9	NoRel	true	Kaza	alıntı
+Relation	T7	T0	NoRel	true	Soruşturması	kaybetti
+Relation	T7	T9	NoRel	true	Soruşturması	alıntı
+Relation	T9	T11	NoRel	true	alıntı	olayları
+Relation	T9	T12	NoRel	true	alıntı	Çarpışma
+Relation	T9	T4	NoRel	true	alıntı	aşarak

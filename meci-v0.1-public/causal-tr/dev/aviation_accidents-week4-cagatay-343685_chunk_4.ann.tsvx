@@ -1,0 +1,69 @@
+Text	Kazadan yaklaşık yirmi dakika sonra Alman ambulans helikopterleri çevre şehirlerden oraya ulaştırıldı .	Devamlı olarak ambulanslar geldi ve gitti .	Ayrıca saatler sonra bir otobüs oraya ulaştı ve yaralılarla dolu şekilde 80 kilometre ötedeki Ludwigshawen kentine gitti .	Bir paramedik çalışanı kazanın yarattığı tansiyon biraz hafifledikten sonra şunları söyledi :	" Otobüsün içinde 5 tane feci bir şekilde yanmış kazazede vardı .
+Event	T0	Kazadan	EVENT	0
+Event	T1	ulaştırıldı	EVENT	90
+Event	T2	geldi	EVENT	131
+Event	T3	gitti	EVENT	140
+Event	T4	ulaştı	EVENT	186
+Event	T5	gitti	EVENT	263
+Event	T6	tansiyon	EVENT	312
+Event	T7	söyledi	EVENT	355
+Event	T8	yanmış	EVENT	407
+Event	T9	yaralılarla	EVENT	196
+Event	T10	kazanın	EVENT	294
+Relation	T0	T1	CauseEffect	true	Kazadan	ulaştırıldı
+Relation	T1	T0	EffectCause	true	ulaştırıldı	Kazadan
+Relation	T0	T2	CauseEffect	true	Kazadan	geldi
+Relation	T2	T0	EffectCause	true	geldi	Kazadan
+Relation	T0	T3	CauseEffect	true	Kazadan	gitti
+Relation	T3	T0	EffectCause	true	gitti	Kazadan
+Relation	T0	T4	CauseEffect	true	Kazadan	ulaştı
+Relation	T4	T0	EffectCause	true	ulaştı	Kazadan
+Relation	T0	T9	CauseEffect	true	Kazadan	yaralılarla
+Relation	T9	T0	EffectCause	true	yaralılarla	Kazadan
+Relation	T0	T8	CauseEffect	true	Kazadan	yanmış
+Relation	T8	T0	EffectCause	true	yanmış	Kazadan
+Relation	T0	T6	CauseEffect	true	Kazadan	tansiyon
+Relation	T6	T0	EffectCause	true	tansiyon	Kazadan
+Relation	T10	T2	CauseEffect	true	kazanın	geldi
+Relation	T2	T10	EffectCause	true	geldi	kazanın
+Relation	T10	T3	CauseEffect	true	kazanın	gitti
+Relation	T3	T10	EffectCause	true	gitti	kazanın
+Relation	T10	T1	CauseEffect	true	kazanın	ulaştırıldı
+Relation	T1	T10	EffectCause	true	ulaştırıldı	kazanın
+Relation	T10	T4	CauseEffect	true	kazanın	ulaştı
+Relation	T4	T10	EffectCause	true	ulaştı	kazanın
+Relation	T10	T9	CauseEffect	true	kazanın	yaralılarla
+Relation	T9	T10	EffectCause	true	yaralılarla	kazanın
+Relation	T0	T10	NoRel	true	Kazadan	kazanın
+Relation	T1	T5	NoRel	true	ulaştırıldı	gitti
+Relation	T10	T0	NoRel	true	kazanın	Kazadan
+Relation	T2	T1	NoRel	true	geldi	ulaştırıldı
+Relation	T2	T6	NoRel	true	geldi	tansiyon
+Relation	T3	T1	NoRel	true	gitti	ulaştırıldı
+Relation	T3	T4	NoRel	true	gitti	ulaştı
+Relation	T3	T6	NoRel	true	gitti	tansiyon
+Relation	T3	T9	NoRel	true	gitti	yaralılarla
+Relation	T4	T1	NoRel	true	ulaştı	ulaştırıldı
+Relation	T4	T2	NoRel	true	ulaştı	geldi
+Relation	T4	T3	NoRel	true	ulaştı	gitti
+Relation	T4	T6	NoRel	true	ulaştı	tansiyon
+Relation	T5	T3	NoRel	true	gitti	gitti
+Relation	T5	T7	NoRel	true	gitti	söyledi
+Relation	T5	T8	NoRel	true	gitti	yanmış
+Relation	T6	T4	NoRel	true	tansiyon	ulaştı
+Relation	T6	T7	NoRel	true	tansiyon	söyledi
+Relation	T7	T0	NoRel	true	söyledi	Kazadan
+Relation	T7	T10	NoRel	true	söyledi	kazanın
+Relation	T7	T2	NoRel	true	söyledi	geldi
+Relation	T7	T4	NoRel	true	söyledi	ulaştı
+Relation	T7	T6	NoRel	true	söyledi	tansiyon
+Relation	T7	T9	NoRel	true	söyledi	yaralılarla
+Relation	T8	T1	NoRel	true	yanmış	ulaştırıldı
+Relation	T8	T2	NoRel	true	yanmış	geldi
+Relation	T8	T4	NoRel	true	yanmış	ulaştı
+Relation	T8	T5	NoRel	true	yanmış	gitti
+Relation	T8	T7	NoRel	true	yanmış	söyledi
+Relation	T9	T2	NoRel	true	yaralılarla	geldi
+Relation	T9	T6	NoRel	true	yaralılarla	tansiyon
+Relation	T9	T7	NoRel	true	yaralılarla	söyledi
+Relation	T9	T8	NoRel	true	yaralılarla	yanmış

@@ -1,0 +1,46 @@
+Text	Disse forhandlinger lykkedes dog ikke .	Den 12. oktober 2000 blev det amerikanske flådeskib USS Cole bombet i Adens havn i Yemen , hvor 17 amerikanske søfolk døde , hvilket al-Qaeda også menes at stå bag .	Ligeledes menes bin Laden også at være manden bag bombeattentatet mod World Trade Center i 1993 .	I 2001 blev al-Qaeda kendt over hele verden , da de angiveligt angreb World Trade Center i New York samt forsvarsdepartementet Pentagon i Washington D.C.	Terrorangrebet dræbte næsten 3.000 mennesker og kom som et stort chok for USA og resten af verden .
+Event	T0	lykkedes	EVENT	20
+Event	T1	bombet	EVENT	101
+Event	T2	døde	EVENT	158
+Event	T3	menes	EVENT	216
+Event	T4	bombeattentatet	EVENT	256
+Event	T5	kendt	EVENT	325
+Event	T6	angreb	EVENT	367
+Event	T7	dræbte	EVENT	473
+Event	T8	kom	EVENT	506
+Event	T9	chok	EVENT	523
+Relation	T0	T1	CauseEffect	true	lykkedes	bombet
+Relation	T1	T0	EffectCause	true	bombet	lykkedes
+Relation	T4	T1	CauseEffect	true	bombeattentatet	bombet
+Relation	T1	T4	EffectCause	true	bombet	bombeattentatet
+Relation	T1	T6	CauseEffect	true	bombet	angreb
+Relation	T6	T1	EffectCause	true	angreb	bombet
+Relation	T0	T3	NoRel	true	lykkedes	menes
+Relation	T0	T4	NoRel	true	lykkedes	bombeattentatet
+Relation	T0	T6	NoRel	true	lykkedes	angreb
+Relation	T0	T8	NoRel	true	lykkedes	kom
+Relation	T1	T8	NoRel	true	bombet	kom
+Relation	T2	T0	NoRel	true	døde	lykkedes
+Relation	T2	T1	NoRel	true	døde	bombet
+Relation	T2	T5	NoRel	true	døde	kendt
+Relation	T3	T0	NoRel	true	menes	lykkedes
+Relation	T3	T2	NoRel	true	menes	døde
+Relation	T3	T7	NoRel	true	menes	dræbte
+Relation	T3	T8	NoRel	true	menes	kom
+Relation	T4	T9	NoRel	true	bombeattentatet	chok
+Relation	T5	T2	NoRel	true	kendt	døde
+Relation	T5	T7	NoRel	true	kendt	dræbte
+Relation	T5	T8	NoRel	true	kendt	kom
+Relation	T6	T3	NoRel	true	angreb	menes
+Relation	T6	T5	NoRel	true	angreb	kendt
+Relation	T7	T1	NoRel	true	dræbte	bombet
+Relation	T7	T4	NoRel	true	dræbte	bombeattentatet
+Relation	T7	T6	NoRel	true	dræbte	angreb
+Relation	T8	T1	NoRel	true	kom	bombet
+Relation	T8	T2	NoRel	true	kom	døde
+Relation	T8	T6	NoRel	true	kom	angreb
+Relation	T8	T7	NoRel	true	kom	dræbte
+Relation	T8	T9	NoRel	true	kom	chok
+Relation	T9	T2	NoRel	true	chok	døde
+Relation	T9	T6	NoRel	true	chok	angreb
+Relation	T9	T7	NoRel	true	chok	dræbte

@@ -1,0 +1,136 @@
+Text	En este punto el tren se descarriló , cayendo por el barranco .	La investigación sobre el accidente constató que idealmente todas las estaciones debían construirse de tal manera que no existiera un gradiente en sus líneas , pero el terreno montañoso de la zona hizo que esto fuera imposible en el caso de Vicuña .	Asimismo , indicó que los frenos del tren eran de diseño Westinghouse , por lo que debían ser a prueba de fallos aun cuando la locomotora hubiera estado en ralentí en aquel momento y una falla en el sistema pudo haber pasado desapercibida .	El informe también destacó que , contra las regulaciones , se había convertido en práctica habitual no mantener los frenos aplicados cuando los trenes esperaran durante largos períodos en la estación .	Los informes de prensa en el momento afirmaron que un niño de seis años se había metido en la cabina de la locomotora y accidentalmente liberó los frenos .
+Event	T0	descarriló	EVENT	25
+Event	T1	cayendo	EVENT	38
+Event	T2	investigación	EVENT	67
+Event	T3	constató	EVENT	100
+Event	T4	hizo	EVENT	261
+Event	T5	indicó	EVENT	325
+Event	T6	fallos	EVENT	420
+Event	T7	ralentí	EVENT	470
+Event	T8	falla	EVENT	501
+Event	T9	desapercibida	EVENT	539
+Event	T10	informe	EVENT	558
+Event	T11	destacó	EVENT	574
+Event	T12	regulaciones	EVENT	599
+Event	T13	aplicados	EVENT	678
+Event	T14	esperaran	EVENT	706
+Event	T15	informes	EVENT	761
+Event	T16	afirmaron	EVENT	794
+Event	T17	metido	EVENT	838
+Event	T18	liberó	EVENT	893
+Relation	T0	T1	CauseEffect	true	descarriló	cayendo
+Relation	T1	T0	EffectCause	true	cayendo	descarriló
+Relation	T0	T11	NoRel	true	descarriló	destacó
+Relation	T0	T16	NoRel	true	descarriló	afirmaron
+Relation	T0	T17	NoRel	true	descarriló	metido
+Relation	T0	T2	NoRel	true	descarriló	investigación
+Relation	T0	T4	NoRel	true	descarriló	hizo
+Relation	T0	T5	NoRel	true	descarriló	indicó
+Relation	T0	T7	NoRel	true	descarriló	ralentí
+Relation	T0	T9	NoRel	true	descarriló	desapercibida
+Relation	T1	T10	NoRel	true	cayendo	informe
+Relation	T1	T12	NoRel	true	cayendo	regulaciones
+Relation	T1	T13	NoRel	true	cayendo	aplicados
+Relation	T1	T16	NoRel	true	cayendo	afirmaron
+Relation	T1	T17	NoRel	true	cayendo	metido
+Relation	T1	T3	NoRel	true	cayendo	constató
+Relation	T1	T5	NoRel	true	cayendo	indicó
+Relation	T1	T8	NoRel	true	cayendo	falla
+Relation	T10	T1	NoRel	true	informe	cayendo
+Relation	T10	T14	NoRel	true	informe	esperaran
+Relation	T10	T15	NoRel	true	informe	informes
+Relation	T10	T18	NoRel	true	informe	liberó
+Relation	T10	T3	NoRel	true	informe	constató
+Relation	T10	T5	NoRel	true	informe	indicó
+Relation	T10	T7	NoRel	true	informe	ralentí
+Relation	T10	T8	NoRel	true	informe	falla
+Relation	T10	T9	NoRel	true	informe	desapercibida
+Relation	T11	T13	NoRel	true	destacó	aplicados
+Relation	T11	T17	NoRel	true	destacó	metido
+Relation	T12	T10	NoRel	true	regulaciones	informe
+Relation	T12	T13	NoRel	true	regulaciones	aplicados
+Relation	T12	T5	NoRel	true	regulaciones	indicó
+Relation	T12	T9	NoRel	true	regulaciones	desapercibida
+Relation	T13	T1	NoRel	true	aplicados	cayendo
+Relation	T13	T4	NoRel	true	aplicados	hizo
+Relation	T13	T7	NoRel	true	aplicados	ralentí
+Relation	T13	T8	NoRel	true	aplicados	falla
+Relation	T14	T15	NoRel	true	esperaran	informes
+Relation	T14	T17	NoRel	true	esperaran	metido
+Relation	T14	T18	NoRel	true	esperaran	liberó
+Relation	T14	T3	NoRel	true	esperaran	constató
+Relation	T14	T5	NoRel	true	esperaran	indicó
+Relation	T15	T0	NoRel	true	informes	descarriló
+Relation	T15	T12	NoRel	true	informes	regulaciones
+Relation	T15	T17	NoRel	true	informes	metido
+Relation	T15	T18	NoRel	true	informes	liberó
+Relation	T16	T0	NoRel	true	afirmaron	descarriló
+Relation	T16	T10	NoRel	true	afirmaron	informe
+Relation	T16	T17	NoRel	true	afirmaron	metido
+Relation	T16	T3	NoRel	true	afirmaron	constató
+Relation	T16	T4	NoRel	true	afirmaron	hizo
+Relation	T16	T5	NoRel	true	afirmaron	indicó
+Relation	T16	T7	NoRel	true	afirmaron	ralentí
+Relation	T16	T8	NoRel	true	afirmaron	falla
+Relation	T16	T9	NoRel	true	afirmaron	desapercibida
+Relation	T17	T1	NoRel	true	metido	cayendo
+Relation	T17	T13	NoRel	true	metido	aplicados
+Relation	T17	T14	NoRel	true	metido	esperaran
+Relation	T17	T16	NoRel	true	metido	afirmaron
+Relation	T17	T2	NoRel	true	metido	investigación
+Relation	T17	T3	NoRel	true	metido	constató
+Relation	T17	T4	NoRel	true	metido	hizo
+Relation	T17	T8	NoRel	true	metido	falla
+Relation	T17	T9	NoRel	true	metido	desapercibida
+Relation	T18	T13	NoRel	true	liberó	aplicados
+Relation	T18	T14	NoRel	true	liberó	esperaran
+Relation	T18	T2	NoRel	true	liberó	investigación
+Relation	T18	T4	NoRel	true	liberó	hizo
+Relation	T18	T7	NoRel	true	liberó	ralentí
+Relation	T2	T13	NoRel	true	investigación	aplicados
+Relation	T2	T14	NoRel	true	investigación	esperaran
+Relation	T2	T16	NoRel	true	investigación	afirmaron
+Relation	T2	T3	NoRel	true	investigación	constató
+Relation	T2	T5	NoRel	true	investigación	indicó
+Relation	T2	T9	NoRel	true	investigación	desapercibida
+Relation	T3	T10	NoRel	true	constató	informe
+Relation	T3	T11	NoRel	true	constató	destacó
+Relation	T3	T18	NoRel	true	constató	liberó
+Relation	T3	T5	NoRel	true	constató	indicó
+Relation	T3	T6	NoRel	true	constató	fallos
+Relation	T4	T10	NoRel	true	hizo	informe
+Relation	T4	T14	NoRel	true	hizo	esperaran
+Relation	T4	T2	NoRel	true	hizo	investigación
+Relation	T4	T5	NoRel	true	hizo	indicó
+Relation	T4	T7	NoRel	true	hizo	ralentí
+Relation	T4	T8	NoRel	true	hizo	falla
+Relation	T5	T0	NoRel	true	indicó	descarriló
+Relation	T5	T10	NoRel	true	indicó	informe
+Relation	T5	T17	NoRel	true	indicó	metido
+Relation	T5	T3	NoRel	true	indicó	constató
+Relation	T5	T8	NoRel	true	indicó	falla
+Relation	T5	T9	NoRel	true	indicó	desapercibida
+Relation	T6	T12	NoRel	true	fallos	regulaciones
+Relation	T6	T13	NoRel	true	fallos	aplicados
+Relation	T6	T14	NoRel	true	fallos	esperaran
+Relation	T6	T15	NoRel	true	fallos	informes
+Relation	T6	T16	NoRel	true	fallos	afirmaron
+Relation	T6	T17	NoRel	true	fallos	metido
+Relation	T6	T2	NoRel	true	fallos	investigación
+Relation	T6	T8	NoRel	true	fallos	falla
+Relation	T6	T9	NoRel	true	fallos	desapercibida
+Relation	T7	T0	NoRel	true	ralentí	descarriló
+Relation	T7	T1	NoRel	true	ralentí	cayendo
+Relation	T7	T18	NoRel	true	ralentí	liberó
+Relation	T7	T3	NoRel	true	ralentí	constató
+Relation	T7	T5	NoRel	true	ralentí	indicó
+Relation	T7	T9	NoRel	true	ralentí	desapercibida
+Relation	T8	T14	NoRel	true	falla	esperaran
+Relation	T8	T18	NoRel	true	falla	liberó
+Relation	T8	T2	NoRel	true	falla	investigación
+Relation	T8	T3	NoRel	true	falla	constató
+Relation	T8	T9	NoRel	true	falla	desapercibida
+Relation	T9	T0	NoRel	true	desapercibida	descarriló
+Relation	T9	T1	NoRel	true	desapercibida	cayendo
+Relation	T9	T11	NoRel	true	desapercibida	destacó
+Relation	T9	T6	NoRel	true	desapercibida	fallos

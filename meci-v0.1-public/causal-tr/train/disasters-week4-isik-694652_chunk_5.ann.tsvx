@@ -1,0 +1,23 @@
+Text	Zorlu kış şartlarından dolayı depremden 15 gün sonra bir doktor , 25 gün sonra da Kızılay yardımı gelir .	Dönemin Reşadiye Belediye Başkanı Tahir Bey'de ailesiyle birlikte hayatını kaybetmiş .	Anısına ağıt yakılmıştır .	Daha sonra ağıt , Sevda Gül tarafından " Reşadiye Irmağı " isimli türkü olarak seslendirilmiştir .	
+Event	T1	gelir	EVENT	98
+Event	T2	kaybetmiş	EVENT	181
+Event	T3	yakılmıştır	EVENT	206
+Event	T4	seslendirilmiştir	EVENT	299
+Event	T5	şartlarından	EVENT	10
+Event	T6	depremden	EVENT	30
+Relation	T5	T1	CauseEffect	true	şartlarından	gelir
+Relation	T1	T5	EffectCause	true	gelir	şartlarından
+Relation	T6	T2	CauseEffect	true	depremden	kaybetmiş
+Relation	T2	T6	EffectCause	true	kaybetmiş	depremden
+Relation	T2	T3	CauseEffect	true	kaybetmiş	yakılmıştır
+Relation	T3	T2	EffectCause	true	yakılmıştır	kaybetmiş
+Relation	T3	T4	CauseEffect	true	yakılmıştır	seslendirilmiştir
+Relation	T4	T3	EffectCause	true	seslendirilmiştir	yakılmıştır
+Relation	T1	T2	NoRel	true	gelir	kaybetmiş
+Relation	T1	T4	NoRel	true	gelir	seslendirilmiştir
+Relation	T1	T6	NoRel	true	gelir	depremden
+Relation	T3	T1	NoRel	true	yakılmıştır	gelir
+Relation	T3	T6	NoRel	true	yakılmıştır	depremden
+Relation	T4	T2	NoRel	true	seslendirilmiştir	kaybetmiş
+Relation	T6	T1	NoRel	true	depremden	gelir
+Relation	T6	T5	NoRel	true	depremden	şartlarından

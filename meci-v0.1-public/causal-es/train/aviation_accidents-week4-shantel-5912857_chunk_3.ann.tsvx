@@ -1,0 +1,67 @@
+Text	Poco después del accidente , el Comité de Seguridad Nacional en el Transporte ( NTSC ) recuperó la grabadora de datos de vuelo para su investigación .	El 1 de mayo de 2013 , la búsqueda de la grabadora de voz fue suspendida , aun cuando ya había sido localizada , por las malas condiciones meteorológicas .	La NTSC se centró en su primera etapa en recopilar los testimonios de tripulantes , pasajeros y testigos .	La NTSC publicó un informe provisional el 15 de mayo de 2013 .	Los datos de vuelo mostraron que el avión continuó descendiendo por debajo de la altitud mínima de descenso ( MDA ) , que era de AGL .
+Event	T0	accidente	EVENT	17
+Event	T1	recuperó	EVENT	87
+Event	T2	investigación	EVENT	135
+Event	T3	búsqueda	EVENT	177
+Event	T4	suspendida	EVENT	213
+Event	T5	localizada	EVENT	251
+Event	T6	centró	EVENT	318
+Event	T7	etapa	EVENT	339
+Event	T8	recopilar	EVENT	348
+Event	T9	publicó	EVENT	422
+Event	T10	mostraron	EVENT	496
+Event	T11	descendiendo	EVENT	528
+Event	T12	descenso	EVENT	576
+Relation	T0	T2	CauseEffect	true	accidente	investigación
+Relation	T2	T0	EffectCause	true	investigación	accidente
+Relation	T0	T1	NoRel	true	accidente	recuperó
+Relation	T0	T3	NoRel	true	accidente	búsqueda
+Relation	T0	T6	NoRel	true	accidente	centró
+Relation	T0	T7	NoRel	true	accidente	etapa
+Relation	T1	T4	NoRel	true	recuperó	suspendida
+Relation	T1	T7	NoRel	true	recuperó	etapa
+Relation	T1	T8	NoRel	true	recuperó	recopilar
+Relation	T10	T0	NoRel	true	mostraron	accidente
+Relation	T10	T2	NoRel	true	mostraron	investigación
+Relation	T10	T4	NoRel	true	mostraron	suspendida
+Relation	T10	T6	NoRel	true	mostraron	centró
+Relation	T10	T9	NoRel	true	mostraron	publicó
+Relation	T11	T7	NoRel	true	descendiendo	etapa
+Relation	T11	T9	NoRel	true	descendiendo	publicó
+Relation	T12	T2	NoRel	true	descenso	investigación
+Relation	T12	T4	NoRel	true	descenso	suspendida
+Relation	T12	T8	NoRel	true	descenso	recopilar
+Relation	T12	T9	NoRel	true	descenso	publicó
+Relation	T2	T10	NoRel	true	investigación	mostraron
+Relation	T2	T8	NoRel	true	investigación	recopilar
+Relation	T3	T1	NoRel	true	búsqueda	recuperó
+Relation	T3	T10	NoRel	true	búsqueda	mostraron
+Relation	T3	T11	NoRel	true	búsqueda	descendiendo
+Relation	T3	T12	NoRel	true	búsqueda	descenso
+Relation	T3	T5	NoRel	true	búsqueda	localizada
+Relation	T3	T7	NoRel	true	búsqueda	etapa
+Relation	T3	T8	NoRel	true	búsqueda	recopilar
+Relation	T4	T0	NoRel	true	suspendida	accidente
+Relation	T4	T7	NoRel	true	suspendida	etapa
+Relation	T4	T8	NoRel	true	suspendida	recopilar
+Relation	T5	T0	NoRel	true	localizada	accidente
+Relation	T5	T12	NoRel	true	localizada	descenso
+Relation	T5	T2	NoRel	true	localizada	investigación
+Relation	T5	T3	NoRel	true	localizada	búsqueda
+Relation	T5	T6	NoRel	true	localizada	centró
+Relation	T5	T8	NoRel	true	localizada	recopilar
+Relation	T6	T1	NoRel	true	centró	recuperó
+Relation	T6	T11	NoRel	true	centró	descendiendo
+Relation	T6	T2	NoRel	true	centró	investigación
+Relation	T6	T5	NoRel	true	centró	localizada
+Relation	T6	T9	NoRel	true	centró	publicó
+Relation	T7	T10	NoRel	true	etapa	mostraron
+Relation	T7	T11	NoRel	true	etapa	descendiendo
+Relation	T7	T9	NoRel	true	etapa	publicó
+Relation	T8	T1	NoRel	true	recopilar	recuperó
+Relation	T8	T10	NoRel	true	recopilar	mostraron
+Relation	T8	T12	NoRel	true	recopilar	descenso
+Relation	T8	T4	NoRel	true	recopilar	suspendida
+Relation	T8	T9	NoRel	true	recopilar	publicó
+Relation	T9	T10	NoRel	true	publicó	mostraron
+Relation	T9	T5	NoRel	true	publicó	localizada

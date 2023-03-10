@@ -1,0 +1,34 @@
+Text	Belçika'da ülkenin doğu kesiminde kara ve demiryolları kullanım dışı kalmış olup bazı bölgelerde belediyeler hala izole kalan vatandaşlar olduğunu rapor etmişlerdir .	Bu meteorolojik felaketin ana sorumlusu insan etkisinin de tetiklediği iklim değişikliği olarak görülmektedir .	Bu yaz özellikle Kanada'da görülen 50 ° C üzeri yaz sıcaklıkları son yıllarda deneyimlenen uç hava olaylarına önemli bir örnek olarak verilebilir .	Yine iklimsel anomali olarak Arktik bölgelerde yaşanan küresel ısınma Kuzey Yarımküre'de yaz ve güz sıcaklık farklarının azalmasını ve dolaylı olarak küresel ölçekte hava akımlarının durağanlaşmasını beraberinde getirmiştir .	Daha nemli ve yavaş fırtına sistemleri de çok ağır yağış düşmelerine neden olmuş olabilir .
+Event	T0	felaketin	EVENT	183
+Event	T1	değişikliği	EVENT	244
+Event	T3	getirmiştir	EVENT	639
+Event	T4	kalmış	EVENT	69
+Event	T5	etmişlerdir	EVENT	153
+Event	T7	olaylarına	EVENT	378
+Event	T6	azalmasını	EVENT	548
+Event	T8	durağanlaşmasını	EVENT	610
+Event	T2	ısınma	EVENT	490
+Relation	T0	T4	CauseEffect	true	felaketin	kalmış
+Relation	T4	T0	EffectCause	true	kalmış	felaketin
+Relation	T0	T5	CauseEffect	true	felaketin	etmişlerdir
+Relation	T5	T0	EffectCause	true	etmişlerdir	felaketin
+Relation	T0	T3	NoRel	true	felaketin	getirmiştir
+Relation	T0	T7	NoRel	true	felaketin	olaylarına
+Relation	T1	T2	NoRel	true	değişikliği	ısınma
+Relation	T1	T4	NoRel	true	değişikliği	kalmış
+Relation	T1	T5	NoRel	true	değişikliği	etmişlerdir
+Relation	T1	T8	NoRel	true	değişikliği	durağanlaşmasını
+Relation	T2	T1	NoRel	true	ısınma	değişikliği
+Relation	T2	T7	NoRel	true	ısınma	olaylarına
+Relation	T3	T4	NoRel	true	getirmiştir	kalmış
+Relation	T4	T7	NoRel	true	kalmış	olaylarına
+Relation	T4	T8	NoRel	true	kalmış	durağanlaşmasını
+Relation	T5	T1	NoRel	true	etmişlerdir	değişikliği
+Relation	T5	T4	NoRel	true	etmişlerdir	kalmış
+Relation	T5	T6	NoRel	true	etmişlerdir	azalmasını
+Relation	T6	T7	NoRel	true	azalmasını	olaylarına
+Relation	T7	T2	NoRel	true	olaylarına	ısınma
+Relation	T7	T6	NoRel	true	olaylarına	azalmasını
+Relation	T8	T0	NoRel	true	durağanlaşmasını	felaketin
+Relation	T8	T3	NoRel	true	durağanlaşmasını	getirmiştir
+Relation	T8	T4	NoRel	true	durağanlaşmasını	kalmış

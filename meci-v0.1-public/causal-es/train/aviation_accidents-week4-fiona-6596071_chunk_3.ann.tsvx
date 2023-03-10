@@ -1,0 +1,95 @@
+Text	Varios buzos participaron en los esfuerzos de rescate , pero las condiciones peligrosas de baja visibilidad y escombros hicieron su trabajo muy difícil .	La mayoría de los supervivientes estaban sentados cerca de la parte trasera .	Los registradores de vuelo de la aeronave fueron recuperados poco después de las 16:00 .	Después de las 20:00 , se utilizaron grúas para levantar grandes secciones del fuselaje a tierra .	El último informe del Consejo de Seguridad Aérea de Taiwán sobre el accidente de febrero confirma que el capitán de la aeronave ATR 72-600 desconectó erróneamente el motor que estaba trabajando cuando el otro perdió potencia .
+Event	T0	participaron	EVENT	13
+Event	T1	esfuerzos	EVENT	33
+Event	T2	rescate	EVENT	46
+Event	T3	hicieron	EVENT	120
+Event	T4	trabajo	EVENT	132
+Event	T5	sentados	EVENT	195
+Event	T6	vuelo	EVENT	253
+Event	T7	recuperados	EVENT	281
+Event	T8	utilizaron	EVENT	347
+Event	T9	levantar	EVENT	369
+Event	T10	informe	EVENT	430
+Event	T11	accidente	EVENT	488
+Event	T12	confirma	EVENT	509
+Event	T13	desconectó	EVENT	559
+Event	T14	trabajando	EVENT	603
+Event	T15	perdió	EVENT	629
+Relation	T13	T11	CauseEffect	true	desconectó	accidente
+Relation	T11	T13	EffectCause	true	accidente	desconectó
+Relation	T0	T11	NoRel	true	participaron	accidente
+Relation	T0	T8	NoRel	true	participaron	utilizaron
+Relation	T0	T9	NoRel	true	participaron	levantar
+Relation	T1	T0	NoRel	true	esfuerzos	participaron
+Relation	T1	T10	NoRel	true	esfuerzos	informe
+Relation	T1	T15	NoRel	true	esfuerzos	perdió
+Relation	T1	T3	NoRel	true	esfuerzos	hicieron
+Relation	T1	T4	NoRel	true	esfuerzos	trabajo
+Relation	T1	T6	NoRel	true	esfuerzos	vuelo
+Relation	T1	T7	NoRel	true	esfuerzos	recuperados
+Relation	T10	T1	NoRel	true	informe	esfuerzos
+Relation	T10	T11	NoRel	true	informe	accidente
+Relation	T10	T3	NoRel	true	informe	hicieron
+Relation	T11	T1	NoRel	true	accidente	esfuerzos
+Relation	T11	T5	NoRel	true	accidente	sentados
+Relation	T11	T7	NoRel	true	accidente	recuperados
+Relation	T11	T8	NoRel	true	accidente	utilizaron
+Relation	T12	T15	NoRel	true	confirma	perdió
+Relation	T12	T9	NoRel	true	confirma	levantar
+Relation	T13	T0	NoRel	true	desconectó	participaron
+Relation	T13	T1	NoRel	true	desconectó	esfuerzos
+Relation	T13	T12	NoRel	true	desconectó	confirma
+Relation	T13	T14	NoRel	true	desconectó	trabajando
+Relation	T13	T15	NoRel	true	desconectó	perdió
+Relation	T13	T8	NoRel	true	desconectó	utilizaron
+Relation	T13	T9	NoRel	true	desconectó	levantar
+Relation	T14	T1	NoRel	true	trabajando	esfuerzos
+Relation	T14	T11	NoRel	true	trabajando	accidente
+Relation	T14	T15	NoRel	true	trabajando	perdió
+Relation	T14	T9	NoRel	true	trabajando	levantar
+Relation	T15	T0	NoRel	true	perdió	participaron
+Relation	T15	T1	NoRel	true	perdió	esfuerzos
+Relation	T15	T10	NoRel	true	perdió	informe
+Relation	T15	T11	NoRel	true	perdió	accidente
+Relation	T15	T4	NoRel	true	perdió	trabajo
+Relation	T2	T0	NoRel	true	rescate	participaron
+Relation	T2	T10	NoRel	true	rescate	informe
+Relation	T2	T14	NoRel	true	rescate	trabajando
+Relation	T2	T15	NoRel	true	rescate	perdió
+Relation	T2	T4	NoRel	true	rescate	trabajo
+Relation	T2	T6	NoRel	true	rescate	vuelo
+Relation	T2	T9	NoRel	true	rescate	levantar
+Relation	T3	T1	NoRel	true	hicieron	esfuerzos
+Relation	T3	T11	NoRel	true	hicieron	accidente
+Relation	T3	T12	NoRel	true	hicieron	confirma
+Relation	T3	T13	NoRel	true	hicieron	desconectó
+Relation	T3	T4	NoRel	true	hicieron	trabajo
+Relation	T3	T7	NoRel	true	hicieron	recuperados
+Relation	T3	T9	NoRel	true	hicieron	levantar
+Relation	T4	T1	NoRel	true	trabajo	esfuerzos
+Relation	T4	T7	NoRel	true	trabajo	recuperados
+Relation	T5	T1	NoRel	true	sentados	esfuerzos
+Relation	T5	T11	NoRel	true	sentados	accidente
+Relation	T5	T6	NoRel	true	sentados	vuelo
+Relation	T5	T8	NoRel	true	sentados	utilizaron
+Relation	T6	T0	NoRel	true	vuelo	participaron
+Relation	T6	T1	NoRel	true	vuelo	esfuerzos
+Relation	T6	T7	NoRel	true	vuelo	recuperados
+Relation	T7	T0	NoRel	true	recuperados	participaron
+Relation	T7	T10	NoRel	true	recuperados	informe
+Relation	T7	T12	NoRel	true	recuperados	confirma
+Relation	T7	T13	NoRel	true	recuperados	desconectó
+Relation	T7	T14	NoRel	true	recuperados	trabajando
+Relation	T7	T2	NoRel	true	recuperados	rescate
+Relation	T7	T5	NoRel	true	recuperados	sentados
+Relation	T8	T11	NoRel	true	utilizaron	accidente
+Relation	T8	T12	NoRel	true	utilizaron	confirma
+Relation	T8	T13	NoRel	true	utilizaron	desconectó
+Relation	T8	T3	NoRel	true	utilizaron	hicieron
+Relation	T8	T5	NoRel	true	utilizaron	sentados
+Relation	T9	T1	NoRel	true	levantar	esfuerzos
+Relation	T9	T14	NoRel	true	levantar	trabajando
+Relation	T9	T15	NoRel	true	levantar	perdió
+Relation	T9	T3	NoRel	true	levantar	hicieron
+Relation	T9	T7	NoRel	true	levantar	recuperados
+Relation	T9	T8	NoRel	true	levantar	utilizaron

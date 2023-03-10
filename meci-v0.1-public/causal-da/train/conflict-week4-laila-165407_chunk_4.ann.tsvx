@@ -1,0 +1,76 @@
+Text	' Han affyrede straks sin riffel og slog alarm ' fortalte Tucker senere , og fortsatte : ' vagtposterne på den modsatte bred gjorde det samme .	Selvfølgelig var mændene straks oppe , men før de kunne nå til deres positioner , havde zuluerne affyret en byge af skud , smidt deres musketter og havde overrendt vognene .	De kom så hurtigt , at der ikke var nogen orden i mændenes forsvar .	Det var hver mand , der kæmpede for sit liv , og indenfor få minutter var det overstået , og mændene var simpelthen nedslagtet .	'
+Event	T0	fortalte	EVENT	49
+Event	T1	fortsatte	EVENT	77
+Event	T2	gjorde	EVENT	125
+Event	T3	affyret	EVENT	241
+Event	T4	smidt	EVENT	267
+Event	T5	overrendt	EVENT	298
+Event	T6	kom	EVENT	321
+Event	T7	kæmpede	EVENT	411
+Event	T8	overstået	EVENT	465
+Event	T9	nedslagtet	EVENT	503
+Event	T10	affyrede	EVENT	6
+Event	T11	slog alarm	EVENT	36
+Event	T12	oppe	EVENT	176
+Event	T13	før	EVENT	187
+Event	T14	orden	EVENT	360
+Relation	T6	T14	CauseEffect	true	kom	orden
+Relation	T14	T6	EffectCause	true	orden	kom
+Relation	T0	T12	NoRel	true	fortalte	oppe
+Relation	T0	T4	NoRel	true	fortalte	smidt
+Relation	T0	T7	NoRel	true	fortalte	kæmpede
+Relation	T0	T8	NoRel	true	fortalte	overstået
+Relation	T0	T9	NoRel	true	fortalte	nedslagtet
+Relation	T1	T0	NoRel	true	fortsatte	fortalte
+Relation	T1	T10	NoRel	true	fortsatte	affyrede
+Relation	T1	T7	NoRel	true	fortsatte	kæmpede
+Relation	T10	T1	NoRel	true	affyrede	fortsatte
+Relation	T10	T11	NoRel	true	affyrede	slog alarm
+Relation	T10	T13	NoRel	true	affyrede	før
+Relation	T10	T3	NoRel	true	affyrede	affyret
+Relation	T10	T4	NoRel	true	affyrede	smidt
+Relation	T10	T8	NoRel	true	affyrede	overstået
+Relation	T11	T0	NoRel	true	slog alarm	fortalte
+Relation	T11	T1	NoRel	true	slog alarm	fortsatte
+Relation	T11	T12	NoRel	true	slog alarm	oppe
+Relation	T11	T5	NoRel	true	slog alarm	overrendt
+Relation	T11	T8	NoRel	true	slog alarm	overstået
+Relation	T12	T0	NoRel	true	oppe	fortalte
+Relation	T12	T1	NoRel	true	oppe	fortsatte
+Relation	T12	T6	NoRel	true	oppe	kom
+Relation	T13	T11	NoRel	true	før	slog alarm
+Relation	T13	T14	NoRel	true	før	orden
+Relation	T13	T2	NoRel	true	før	gjorde
+Relation	T13	T7	NoRel	true	før	kæmpede
+Relation	T14	T13	NoRel	true	orden	før
+Relation	T14	T3	NoRel	true	orden	affyret
+Relation	T14	T7	NoRel	true	orden	kæmpede
+Relation	T2	T5	NoRel	true	gjorde	overrendt
+Relation	T2	T8	NoRel	true	gjorde	overstået
+Relation	T2	T9	NoRel	true	gjorde	nedslagtet
+Relation	T3	T1	NoRel	true	affyret	fortsatte
+Relation	T3	T12	NoRel	true	affyret	oppe
+Relation	T3	T2	NoRel	true	affyret	gjorde
+Relation	T3	T7	NoRel	true	affyret	kæmpede
+Relation	T4	T14	NoRel	true	smidt	orden
+Relation	T4	T6	NoRel	true	smidt	kom
+Relation	T5	T11	NoRel	true	overrendt	slog alarm
+Relation	T5	T14	NoRel	true	overrendt	orden
+Relation	T5	T3	NoRel	true	overrendt	affyret
+Relation	T5	T6	NoRel	true	overrendt	kom
+Relation	T5	T7	NoRel	true	overrendt	kæmpede
+Relation	T5	T9	NoRel	true	overrendt	nedslagtet
+Relation	T6	T1	NoRel	true	kom	fortsatte
+Relation	T6	T10	NoRel	true	kom	affyrede
+Relation	T6	T11	NoRel	true	kom	slog alarm
+Relation	T6	T12	NoRel	true	kom	oppe
+Relation	T7	T0	NoRel	true	kæmpede	fortalte
+Relation	T7	T10	NoRel	true	kæmpede	affyrede
+Relation	T7	T12	NoRel	true	kæmpede	oppe
+Relation	T7	T8	NoRel	true	kæmpede	overstået
+Relation	T8	T12	NoRel	true	overstået	oppe
+Relation	T8	T2	NoRel	true	overstået	gjorde
+Relation	T8	T5	NoRel	true	overstået	overrendt
+Relation	T9	T4	NoRel	true	nedslagtet	smidt
+Relation	T9	T5	NoRel	true	nedslagtet	overrendt
+Relation	T9	T6	NoRel	true	nedslagtet	kom

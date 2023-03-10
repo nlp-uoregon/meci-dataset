@@ -1,0 +1,22 @@
+Text	Ceaușescu'nun devrilmesinden sonra , Securitate 1991'e kadar varlığını korudu .	1991'de Parlamento Securitate'yi yeniden organize etti .	Yeniden organizasyonun sonucunda kurum birkaç gizli ve özel servise bölündü .	Bu servisler arasında SRI ( Romanya İstihbarat Teşkilatı ) , SIE ( Dış İstihbarat Servisi ) , SPP ( Koruma ve Muhafız Servisi / eski V. Müdürlük ) , STS ( Özel Telekomünikasyon Servisi / eski Teknik Operasyonlar Genel Müdürlüğü ) vb. vardır .	Bununla birlikte , 1991'in başlarında , çok sayıda protestocu ülke çapındaki Securitate ofislerindeki kurum dosyalarına erişim talebinde bulunmak için birleşti .
+Event	T0	devrilmesinden	EVENT	14
+Event	T1	korudu	EVENT	71
+Event	T2	etti	EVENT	130
+Event	T3	bölündü	EVENT	205
+Event	T5	birleşti	EVENT	609
+Event	T4	talebinde	EVENT	585
+Relation	T2	T3	CauseEffect	true	etti	bölündü
+Relation	T3	T2	EffectCause	true	bölündü	etti
+Relation	T0	T2	CauseEffect	true	devrilmesinden	etti
+Relation	T2	T0	EffectCause	true	etti	devrilmesinden
+Relation	T4	T5	CauseEffect	true	talebinde	birleşti
+Relation	T5	T4	EffectCause	true	birleşti	talebinde
+Relation	T0	T1	NoRel	true	devrilmesinden	korudu
+Relation	T1	T4	NoRel	true	korudu	talebinde
+Relation	T1	T5	NoRel	true	korudu	birleşti
+Relation	T2	T4	NoRel	true	etti	talebinde
+Relation	T2	T5	NoRel	true	etti	birleşti
+Relation	T3	T1	NoRel	true	bölündü	korudu
+Relation	T4	T0	NoRel	true	talebinde	devrilmesinden
+Relation	T4	T2	NoRel	true	talebinde	etti
+Relation	T5	T1	NoRel	true	birleşti	korudu

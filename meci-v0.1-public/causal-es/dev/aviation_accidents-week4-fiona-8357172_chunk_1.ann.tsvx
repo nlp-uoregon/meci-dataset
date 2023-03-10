@@ -1,0 +1,81 @@
+Text	El avión se desvió a CFB Goose Bay , una base aérea militar también utilizada para vuelos civiles , y aterrizó a las 3:42 p.m.	Hora del meridiano de Greenwich ( 15:42 UTC ) después de sufrir un fallo no contenido en su exterior de estribor ( N. º 4 ) motor mientras vuela 150 kilómetros ( 93 millas ) al sureste de Paamiut , Groenlandia .	El motor que falló había operado 3.527 ciclos desde que era nuevo .	No se reportaron heridos entre los 497 pasajeros y 24 tripulantes a bordo .	No se permitió a los pasajeros desembarcar del A380 hasta que otro avión de Air France y un avión fletado arribaron a la mañana siguiente , porque el aeropuerto ( ubicado en la base aérea de las Fuerzas Armadas canadienses ) no está equipado para acomodar un gran número de pasajeros
+Event	T0	desvió	EVENT	12
+Event	T1	vuelos	EVENT	83
+Event	T2	aterrizó	EVENT	102
+Event	T3	sufrir	EVENT	184
+Event	T4	fallo	EVENT	194
+Event	T5	contenido	EVENT	203
+Event	T6	vuela	EVENT	266
+Event	T7	falló	EVENT	352
+Event	T8	operado	EVENT	364
+Event	T9	heridos	EVENT	424
+Event	T10	permitió	EVENT	489
+Event	T11	desembarcar	EVENT	514
+Event	T12	arribaron	EVENT	589
+Event	T13	equipado	EVENT	716
+Relation	T0	T2	CauseEffect	true	desvió	aterrizó
+Relation	T2	T0	EffectCause	true	aterrizó	desvió
+Relation	T0	T13	NoRel	true	desvió	equipado
+Relation	T0	T5	NoRel	true	desvió	contenido
+Relation	T0	T8	NoRel	true	desvió	operado
+Relation	T0	T9	NoRel	true	desvió	heridos
+Relation	T1	T13	NoRel	true	vuelos	equipado
+Relation	T10	T3	NoRel	true	permitió	sufrir
+Relation	T10	T7	NoRel	true	permitió	falló
+Relation	T10	T8	NoRel	true	permitió	operado
+Relation	T11	T0	NoRel	true	desembarcar	desvió
+Relation	T11	T1	NoRel	true	desembarcar	vuelos
+Relation	T11	T12	NoRel	true	desembarcar	arribaron
+Relation	T11	T2	NoRel	true	desembarcar	aterrizó
+Relation	T11	T3	NoRel	true	desembarcar	sufrir
+Relation	T11	T6	NoRel	true	desembarcar	vuela
+Relation	T12	T0	NoRel	true	arribaron	desvió
+Relation	T12	T10	NoRel	true	arribaron	permitió
+Relation	T12	T13	NoRel	true	arribaron	equipado
+Relation	T12	T6	NoRel	true	arribaron	vuela
+Relation	T13	T10	NoRel	true	equipado	permitió
+Relation	T13	T12	NoRel	true	equipado	arribaron
+Relation	T13	T3	NoRel	true	equipado	sufrir
+Relation	T13	T7	NoRel	true	equipado	falló
+Relation	T13	T8	NoRel	true	equipado	operado
+Relation	T13	T9	NoRel	true	equipado	heridos
+Relation	T2	T10	NoRel	true	aterrizó	permitió
+Relation	T2	T12	NoRel	true	aterrizó	arribaron
+Relation	T3	T0	NoRel	true	sufrir	desvió
+Relation	T3	T1	NoRel	true	sufrir	vuelos
+Relation	T3	T10	NoRel	true	sufrir	permitió
+Relation	T3	T11	NoRel	true	sufrir	desembarcar
+Relation	T3	T4	NoRel	true	sufrir	fallo
+Relation	T4	T0	NoRel	true	fallo	desvió
+Relation	T4	T5	NoRel	true	fallo	contenido
+Relation	T4	T6	NoRel	true	fallo	vuela
+Relation	T4	T7	NoRel	true	fallo	falló
+Relation	T4	T9	NoRel	true	fallo	heridos
+Relation	T5	T0	NoRel	true	contenido	desvió
+Relation	T5	T1	NoRel	true	contenido	vuelos
+Relation	T5	T11	NoRel	true	contenido	desembarcar
+Relation	T5	T3	NoRel	true	contenido	sufrir
+Relation	T5	T7	NoRel	true	contenido	falló
+Relation	T5	T8	NoRel	true	contenido	operado
+Relation	T6	T11	NoRel	true	vuela	desembarcar
+Relation	T6	T2	NoRel	true	vuela	aterrizó
+Relation	T6	T4	NoRel	true	vuela	fallo
+Relation	T6	T7	NoRel	true	vuela	falló
+Relation	T7	T0	NoRel	true	falló	desvió
+Relation	T7	T11	NoRel	true	falló	desembarcar
+Relation	T7	T2	NoRel	true	falló	aterrizó
+Relation	T7	T3	NoRel	true	falló	sufrir
+Relation	T7	T5	NoRel	true	falló	contenido
+Relation	T8	T12	NoRel	true	operado	arribaron
+Relation	T8	T13	NoRel	true	operado	equipado
+Relation	T8	T2	NoRel	true	operado	aterrizó
+Relation	T8	T3	NoRel	true	operado	sufrir
+Relation	T8	T4	NoRel	true	operado	fallo
+Relation	T8	T5	NoRel	true	operado	contenido
+Relation	T8	T6	NoRel	true	operado	vuela
+Relation	T8	T9	NoRel	true	operado	heridos
+Relation	T9	T1	NoRel	true	heridos	vuelos
+Relation	T9	T13	NoRel	true	heridos	equipado
+Relation	T9	T3	NoRel	true	heridos	sufrir
+Relation	T9	T7	NoRel	true	heridos	falló
+Relation	T9	T8	NoRel	true	heridos	operado

@@ -1,0 +1,56 @@
+Text	Şemdinli’de askeri araca saldırı : 5 asker hayatını kaybetti .	, _ İMC TV _ , 10 Temmuz 2016 , Erişim tarihi : 10 Temmuz 2016 .	Van Erciş ve Hakkâri Şemdinli’de 7 şehit , _ Hürriyet _ , 10 Temmuz 2016 , Erişim tarihi : 13 Temmuz 2016 .	Yüksekova'da roketatarlı saldırı : 4 yaralı , _ Sputniknews _ , 6 Nisan 2016 , Erişim tarihi : 6 Nisan 2016 .	Yüksekova'da polis aracı devrildi : 2 yaralı , _ Haber7. com _ , 18 Nisan 2016 , Erişim tarihi : 20 Nisan 2016 .
+Event	T0	saldırı	EVENT	25
+Event	T1	kaybetti	EVENT	52
+Event	T2	şehit	EVENT	163
+Event	T3	saldırı	EVENT	261
+Event	T4	yaralı	EVENT	273
+Event	T5	devrildi	EVENT	371
+Event	T6	yaralı	EVENT	384
+Event	T7	Erişim	EVENT	95
+Event	T8	Erişim	EVENT	203
+Event	T9	Erişim	EVENT	315
+Event	T10	Erişim	EVENT	427
+Relation	T0	T1	CauseEffect	true	saldırı	kaybetti
+Relation	T1	T0	EffectCause	true	kaybetti	saldırı
+Relation	T3	T4	CauseEffect	true	saldırı	yaralı
+Relation	T4	T3	EffectCause	true	yaralı	saldırı
+Relation	T5	T6	CauseEffect	true	devrildi	yaralı
+Relation	T6	T5	EffectCause	true	yaralı	devrildi
+Relation	T0	T8	NoRel	true	saldırı	Erişim
+Relation	T1	T4	NoRel	true	kaybetti	yaralı
+Relation	T1	T9	NoRel	true	kaybetti	Erişim
+Relation	T10	T0	NoRel	true	Erişim	saldırı
+Relation	T10	T1	NoRel	true	Erişim	kaybetti
+Relation	T10	T3	NoRel	true	Erişim	saldırı
+Relation	T10	T5	NoRel	true	Erişim	devrildi
+Relation	T10	T7	NoRel	true	Erişim	Erişim
+Relation	T2	T0	NoRel	true	şehit	saldırı
+Relation	T2	T10	NoRel	true	şehit	Erişim
+Relation	T3	T1	NoRel	true	saldırı	kaybetti
+Relation	T3	T10	NoRel	true	saldırı	Erişim
+Relation	T3	T2	NoRel	true	saldırı	şehit
+Relation	T3	T6	NoRel	true	saldırı	yaralı
+Relation	T4	T1	NoRel	true	yaralı	kaybetti
+Relation	T4	T5	NoRel	true	yaralı	devrildi
+Relation	T4	T7	NoRel	true	yaralı	Erişim
+Relation	T4	T9	NoRel	true	yaralı	Erişim
+Relation	T5	T1	NoRel	true	devrildi	kaybetti
+Relation	T5	T3	NoRel	true	devrildi	saldırı
+Relation	T5	T8	NoRel	true	devrildi	Erişim
+Relation	T5	T9	NoRel	true	devrildi	Erişim
+Relation	T6	T0	NoRel	true	yaralı	saldırı
+Relation	T6	T2	NoRel	true	yaralı	şehit
+Relation	T6	T7	NoRel	true	yaralı	Erişim
+Relation	T7	T2	NoRel	true	Erişim	şehit
+Relation	T7	T6	NoRel	true	Erişim	yaralı
+Relation	T8	T0	NoRel	true	Erişim	saldırı
+Relation	T8	T1	NoRel	true	Erişim	kaybetti
+Relation	T8	T10	NoRel	true	Erişim	Erişim
+Relation	T8	T2	NoRel	true	Erişim	şehit
+Relation	T8	T6	NoRel	true	Erişim	yaralı
+Relation	T9	T0	NoRel	true	Erişim	saldırı
+Relation	T9	T1	NoRel	true	Erişim	kaybetti
+Relation	T9	T3	NoRel	true	Erişim	saldırı
+Relation	T9	T4	NoRel	true	Erişim	yaralı
+Relation	T9	T5	NoRel	true	Erişim	devrildi
+Relation	T9	T8	NoRel	true	Erişim	Erişim

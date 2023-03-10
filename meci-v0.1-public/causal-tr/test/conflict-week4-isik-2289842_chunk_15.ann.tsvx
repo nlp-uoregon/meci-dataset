@@ -1,0 +1,58 @@
+Text	Persler daha sonra Tarsus'u ve Kilikya ovasını ele geçirdi .	Bu yenilgi , Bizans imparatorluğunu yarıya böldü , Konstantinopolis ve Anadolu topraklarını Suriye , Filistin , Mısır ve Afrika Eksarhlığı arasındaki bağlantısını koparttı .	alt= This map shows the approximate campaign paths of Persian and Roman Generals from 611 to 624 as described in the text .	| küçükresim | sağ | 300px | 611'den 624'_kadar Suriye , Anadolu , Ermenistan ve Mezopotamya sefer haritası Suriye'de Perslere karşı direniş güçlü değildi ; yerliler tahkimatı yaptırmış olsa da , genellikle Perslerle pazarlık etmeye çalışmışlardır .	Şam , Epemiye ve Emesa şehirleri 613 yılında hızla düşerek Sasani ordusuna daha güneyde Palaestina Prima'ya saldırma şansını verdi .
+Event	T0	geçirdi	EVENT	51
+Event	T1	yenilgi	EVENT	64
+Event	T2	böldü	EVENT	104
+Event	T3	koparttı	EVENT	224
+Event	T4	shows	EVENT	249
+Event	T5	described	EVENT	335
+Event	T6	sefer	EVENT	452
+Event	T7	direniş	EVENT	492
+Event	T8	yaptırmış	EVENT	535
+Event	T9	düşerek	EVENT	660
+Event	T10	saldırma	EVENT	717
+Event	T11	verdi	EVENT	734
+Relation	T1	T2	CauseEffect	true	yenilgi	böldü
+Relation	T2	T1	EffectCause	true	böldü	yenilgi
+Relation	T1	T3	CauseEffect	true	yenilgi	koparttı
+Relation	T3	T1	EffectCause	true	koparttı	yenilgi
+Relation	T9	T10	CauseEffect	true	düşerek	saldırma
+Relation	T10	T9	EffectCause	true	saldırma	düşerek
+Relation	T0	T4	NoRel	true	geçirdi	shows
+Relation	T1	T0	NoRel	true	yenilgi	geçirdi
+Relation	T10	T11	NoRel	true	saldırma	verdi
+Relation	T10	T4	NoRel	true	saldırma	shows
+Relation	T10	T8	NoRel	true	saldırma	yaptırmış
+Relation	T11	T1	NoRel	true	verdi	yenilgi
+Relation	T11	T2	NoRel	true	verdi	böldü
+Relation	T11	T5	NoRel	true	verdi	described
+Relation	T11	T9	NoRel	true	verdi	düşerek
+Relation	T2	T11	NoRel	true	böldü	verdi
+Relation	T2	T3	NoRel	true	böldü	koparttı
+Relation	T2	T4	NoRel	true	böldü	shows
+Relation	T2	T6	NoRel	true	böldü	sefer
+Relation	T3	T0	NoRel	true	koparttı	geçirdi
+Relation	T3	T7	NoRel	true	koparttı	direniş
+Relation	T3	T8	NoRel	true	koparttı	yaptırmış
+Relation	T4	T3	NoRel	true	shows	koparttı
+Relation	T5	T0	NoRel	true	described	geçirdi
+Relation	T5	T4	NoRel	true	described	shows
+Relation	T5	T7	NoRel	true	described	direniş
+Relation	T5	T8	NoRel	true	described	yaptırmış
+Relation	T5	T9	NoRel	true	described	düşerek
+Relation	T6	T10	NoRel	true	sefer	saldırma
+Relation	T6	T2	NoRel	true	sefer	böldü
+Relation	T6	T3	NoRel	true	sefer	koparttı
+Relation	T7	T1	NoRel	true	direniş	yenilgi
+Relation	T7	T2	NoRel	true	direniş	böldü
+Relation	T7	T6	NoRel	true	direniş	sefer
+Relation	T7	T8	NoRel	true	direniş	yaptırmış
+Relation	T8	T10	NoRel	true	yaptırmış	saldırma
+Relation	T8	T11	NoRel	true	yaptırmış	verdi
+Relation	T8	T2	NoRel	true	yaptırmış	böldü
+Relation	T8	T3	NoRel	true	yaptırmış	koparttı
+Relation	T8	T6	NoRel	true	yaptırmış	sefer
+Relation	T8	T7	NoRel	true	yaptırmış	direniş
+Relation	T8	T9	NoRel	true	yaptırmış	düşerek
+Relation	T9	T0	NoRel	true	düşerek	geçirdi
+Relation	T9	T11	NoRel	true	düşerek	verdi
+Relation	T9	T7	NoRel	true	düşerek	direniş

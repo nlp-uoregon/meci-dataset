@@ -1,0 +1,46 @@
+Text	Dört kişi öldü ve 102 kişi yaralandı .	- 11 Kasım , 2000 – Kaprun disaster , Avustrya : Bir funicular tren , tünelde emniyetsiz bir şekilde ısıtıcı yüklenmesi nedeniyle alev aldı .	155 ölü .	- 2 Aralık , 2000 – Sarai Banjara demiryolu felaketi , kalabalık bir banliyö treni Hindistan , Punjab’da bir raydan çıkmış bir yük trenine çarpştı .	45_den fazla ölü .
+Event	T0	öldü	EVENT	10
+Event	T1	yaralandı	EVENT	27
+Event	T2	yüklenmesi	EVENT	148
+Event	T3	aldı	EVENT	174
+Event	T4	ölü	EVENT	185
+Event	T5	felaketi	EVENT	235
+Event	T6	çıkmış	EVENT	307
+Event	T7	çarpştı	EVENT	330
+Event	T8	ölü	EVENT	353
+Relation	T2	T3	CauseEffect	true	yüklenmesi	aldı
+Relation	T3	T2	EffectCause	true	aldı	yüklenmesi
+Relation	T3	T4	CauseEffect	true	aldı	ölü
+Relation	T4	T3	EffectCause	true	ölü	aldı
+Relation	T6	T7	CauseEffect	true	çıkmış	çarpştı
+Relation	T7	T6	EffectCause	true	çarpştı	çıkmış
+Relation	T7	T8	CauseEffect	true	çarpştı	ölü
+Relation	T8	T7	EffectCause	true	ölü	çarpştı
+Relation	T0	T5	NoRel	true	öldü	felaketi
+Relation	T0	T6	NoRel	true	öldü	çıkmış
+Relation	T1	T0	NoRel	true	yaralandı	öldü
+Relation	T1	T4	NoRel	true	yaralandı	ölü
+Relation	T1	T5	NoRel	true	yaralandı	felaketi
+Relation	T2	T0	NoRel	true	yüklenmesi	öldü
+Relation	T2	T4	NoRel	true	yüklenmesi	ölü
+Relation	T2	T6	NoRel	true	yüklenmesi	çıkmış
+Relation	T2	T7	NoRel	true	yüklenmesi	çarpştı
+Relation	T2	T8	NoRel	true	yüklenmesi	ölü
+Relation	T3	T0	NoRel	true	aldı	öldü
+Relation	T3	T5	NoRel	true	aldı	felaketi
+Relation	T3	T7	NoRel	true	aldı	çarpştı
+Relation	T4	T5	NoRel	true	ölü	felaketi
+Relation	T4	T7	NoRel	true	ölü	çarpştı
+Relation	T5	T2	NoRel	true	felaketi	yüklenmesi
+Relation	T5	T6	NoRel	true	felaketi	çıkmış
+Relation	T5	T8	NoRel	true	felaketi	ölü
+Relation	T6	T3	NoRel	true	çıkmış	aldı
+Relation	T6	T5	NoRel	true	çıkmış	felaketi
+Relation	T7	T2	NoRel	true	çarpştı	yüklenmesi
+Relation	T7	T3	NoRel	true	çarpştı	aldı
+Relation	T7	T5	NoRel	true	çarpştı	felaketi
+Relation	T8	T1	NoRel	true	ölü	yaralandı
+Relation	T8	T3	NoRel	true	ölü	aldı
+Relation	T8	T4	NoRel	true	ölü	ölü
+Relation	T8	T5	NoRel	true	ölü	felaketi
+Relation	T8	T6	NoRel	true	ölü	çıkmış

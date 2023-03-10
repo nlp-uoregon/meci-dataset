@@ -1,0 +1,73 @@
+Text	The co-pilot reported to Captain Chun twice during the flight after the missiles ' detonation , " Engines normal , sir . "	The first missile was radar - controlled and proximity fuzed , and detonated behind the aircraft .	Sending fragments forward , it either severed or unraveled the crossover cable from the left inboard elevator to the right elevator .	This , with damage to one of the four hydraulic systems , caused KAL 007 to ascend from , at which point the autopilot was disengaged .	Fragments from the proximity fuzed air - to - air missile that detonated behind the aircraft , punctured the fuselage and caused rapid decompression of the pressurised cabin .
+Event	T0	reported	EVENT	13
+Event	T1	flight	EVENT	55
+Event	T2	detonation	EVENT	83
+Event	T3	controlled	EVENT	153
+Event	T4	fuzed	EVENT	178
+Event	T5	detonated	EVENT	190
+Event	T6	severed	EVENT	260
+Event	T7	unraveled	EVENT	271
+Event	T8	damage	EVENT	368
+Event	T9	caused	EVENT	414
+Event	T10	ascend	EVENT	432
+Event	T11	disengaged	EVENT	479
+Event	T12	Fragments	EVENT	492
+Event	T13	fuzed	EVENT	521
+Event	T14	detonated	EVENT	555
+Event	T15	punctured	EVENT	587
+Event	T16	decompression	EVENT	627
+Event	T17	pressurised	EVENT	648
+Event	T18	Sending	EVENT	222
+Relation	T2	T0	CauseEffect	true	detonation	reported
+Relation	T0	T2	EffectCause	true	reported	detonation
+Relation	T5	T18	CauseEffect	true	detonated	Sending
+Relation	T18	T5	EffectCause	true	Sending	detonated
+Relation	T18	T6	CauseEffect	true	Sending	severed
+Relation	T6	T18	EffectCause	true	severed	Sending
+Relation	T18	T7	CauseEffect	true	Sending	unraveled
+Relation	T7	T18	EffectCause	true	unraveled	Sending
+Relation	T8	T9	CauseEffect	true	damage	caused
+Relation	T9	T8	EffectCause	true	caused	damage
+Relation	T14	T15	CauseEffect	true	detonated	punctured
+Relation	T15	T14	EffectCause	true	punctured	detonated
+Relation	T15	T16	CauseEffect	true	punctured	decompression
+Relation	T16	T15	EffectCause	true	decompression	punctured
+Relation	T0	T16	NoRel	true	reported	decompression
+Relation	T0	T5	NoRel	true	reported	detonated
+Relation	T1	T17	NoRel	true	flight	pressurised
+Relation	T10	T8	NoRel	true	ascend	damage
+Relation	T11	T16	NoRel	true	disengaged	decompression
+Relation	T11	T17	NoRel	true	disengaged	pressurised
+Relation	T13	T0	NoRel	true	fuzed	reported
+Relation	T13	T2	NoRel	true	fuzed	detonation
+Relation	T13	T5	NoRel	true	fuzed	detonated
+Relation	T13	T6	NoRel	true	fuzed	severed
+Relation	T14	T0	NoRel	true	detonated	reported
+Relation	T14	T10	NoRel	true	detonated	ascend
+Relation	T14	T16	NoRel	true	detonated	decompression
+Relation	T15	T9	NoRel	true	punctured	caused
+Relation	T16	T0	NoRel	true	decompression	reported
+Relation	T17	T10	NoRel	true	pressurised	ascend
+Relation	T18	T0	NoRel	true	Sending	reported
+Relation	T18	T14	NoRel	true	Sending	detonated
+Relation	T18	T8	NoRel	true	Sending	damage
+Relation	T2	T14	NoRel	true	detonation	detonated
+Relation	T2	T4	NoRel	true	detonation	fuzed
+Relation	T3	T10	NoRel	true	controlled	ascend
+Relation	T3	T2	NoRel	true	controlled	detonation
+Relation	T3	T8	NoRel	true	controlled	damage
+Relation	T5	T0	NoRel	true	detonated	reported
+Relation	T6	T17	NoRel	true	severed	pressurised
+Relation	T6	T7	NoRel	true	severed	unraveled
+Relation	T7	T0	NoRel	true	unraveled	reported
+Relation	T7	T8	NoRel	true	unraveled	damage
+Relation	T7	T9	NoRel	true	unraveled	caused
+Relation	T8	T1	NoRel	true	damage	flight
+Relation	T8	T11	NoRel	true	damage	disengaged
+Relation	T8	T12	NoRel	true	damage	Fragments
+Relation	T8	T13	NoRel	true	damage	fuzed
+Relation	T8	T18	NoRel	true	damage	Sending
+Relation	T8	T6	NoRel	true	damage	severed
+Relation	T8	T7	NoRel	true	damage	unraveled
+Relation	T9	T1	NoRel	true	caused	flight
+Relation	T9	T17	NoRel	true	caused	pressurised

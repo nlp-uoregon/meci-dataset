@@ -1,0 +1,44 @@
+Text	3 ölü ve 39 yaralı .	- 8 Mart , 2000 – Naka - Meguro train disaster , Japonya : Bir Tokyo Metro treni raydan çıktı ve sonraki hattaki diğer bir trene çarptı ; 5 ölü ve 63 yaralı .	- 5 Nisan , 2000 – Lillestrøm , Skedsmo , Norveç : Bir yük treninin frenleri Strømmen ve Lillestrøm arasında başarılı olmadı ; tren Lillestrøm istasyonunda durmakta olan bir yük trenine çarptı .	Propan yüklü iki gaz tankı ateş aldı .	Can kaybı olmadı .
+Event	T0	ölü	EVENT	2
+Event	T1	yaralı	EVENT	12
+Event	T2	disaster	EVENT	59
+Event	T3	çıktı	EVENT	109
+Event	T4	çarptı	EVENT	150
+Event	T5	ölü	EVENT	161
+Event	T6	yaralı	EVENT	171
+Event	T7	çarptı	EVENT	366
+Event	T8	aldı	EVENT	407
+Relation	T3	T4	CauseEffect	true	çıktı	çarptı
+Relation	T4	T3	EffectCause	true	çarptı	çıktı
+Relation	T4	T2	CauseEffect	true	çarptı	disaster
+Relation	T2	T4	EffectCause	true	disaster	çarptı
+Relation	T2	T5	CauseEffect	true	disaster	ölü
+Relation	T5	T2	EffectCause	true	ölü	disaster
+Relation	T2	T6	CauseEffect	true	disaster	yaralı
+Relation	T6	T2	EffectCause	true	yaralı	disaster
+Relation	T7	T8	CauseEffect	true	çarptı	aldı
+Relation	T8	T7	EffectCause	true	aldı	çarptı
+Relation	T0	T4	NoRel	true	ölü	çarptı
+Relation	T0	T6	NoRel	true	ölü	yaralı
+Relation	T1	T2	NoRel	true	yaralı	disaster
+Relation	T1	T3	NoRel	true	yaralı	çıktı
+Relation	T1	T5	NoRel	true	yaralı	ölü
+Relation	T1	T8	NoRel	true	yaralı	aldı
+Relation	T2	T0	NoRel	true	disaster	ölü
+Relation	T2	T8	NoRel	true	disaster	aldı
+Relation	T3	T2	NoRel	true	çıktı	disaster
+Relation	T3	T6	NoRel	true	çıktı	yaralı
+Relation	T3	T8	NoRel	true	çıktı	aldı
+Relation	T4	T5	NoRel	true	çarptı	ölü
+Relation	T4	T7	NoRel	true	çarptı	çarptı
+Relation	T4	T8	NoRel	true	çarptı	aldı
+Relation	T5	T7	NoRel	true	ölü	çarptı
+Relation	T5	T8	NoRel	true	ölü	aldı
+Relation	T6	T3	NoRel	true	yaralı	çıktı
+Relation	T6	T4	NoRel	true	yaralı	çarptı
+Relation	T6	T5	NoRel	true	yaralı	ölü
+Relation	T6	T7	NoRel	true	yaralı	çarptı
+Relation	T7	T1	NoRel	true	çarptı	yaralı
+Relation	T7	T5	NoRel	true	çarptı	ölü
+Relation	T8	T1	NoRel	true	aldı	yaralı
+Relation	T8	T3	NoRel	true	aldı	çıktı

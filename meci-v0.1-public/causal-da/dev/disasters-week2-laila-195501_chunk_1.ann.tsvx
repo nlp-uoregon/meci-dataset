@@ -1,0 +1,19 @@
+Text	Ilden breder sig med vinden og ofte med stor hastighed , især når ilden har fat i tørre trækroner .	Slukning af skovbrand er en helt speciel disciplin indenfor brandslukning , og til dette anvendes brandfolk , køretøjer , fly og helikoptere samt modbrande .	Skovbrande er et udbredt fænomen i Californien og om sommeren i Sydeuropa .	I sommeren 2007 døde 65 mennesker på få dage i meget omfattende skovbrande i Grækenland .	Skovbrænde er vanskelige at slukke på grund af deres omfang , og fordi de ofte ligger langt fra steder hvor almindelige brandslukningsapparater kan nå .
+Event	T1	Slukning	EVENT	100
+Event	T2	disciplin	EVENT	141
+Event	T3	anvendes	EVENT	189
+Event	T4	Skovbrande	EVENT	258
+Event	T5	døde	EVENT	350
+Event	T6	skovbrande	EVENT	398
+Event	T7	slukke	EVENT	452
+Relation	T6	T5	CauseEffect	true	skovbrande	døde
+Relation	T5	T6	EffectCause	true	døde	skovbrande
+Relation	T1	T2	NoRel	true	Slukning	disciplin
+Relation	T1	T3	NoRel	true	Slukning	anvendes
+Relation	T1	T7	NoRel	true	Slukning	slukke
+Relation	T2	T3	NoRel	true	disciplin	anvendes
+Relation	T3	T1	NoRel	true	anvendes	Slukning
+Relation	T4	T2	NoRel	true	Skovbrande	disciplin
+Relation	T4	T5	NoRel	true	Skovbrande	døde
+Relation	T5	T1	NoRel	true	døde	Slukning
+Relation	T6	T1	NoRel	true	skovbrande	Slukning

@@ -1,0 +1,78 @@
+Text	Tenían conocimiento del mal estado del material rodante y de la política empresarial de TBA , y recibieron alertas por parte de la CNRT .	A pesar de esto , utilizaron artimañas burocráticas para detener las medidas que eviten el plan delictivo de la empresa .	Así , contribuyeron al mal estado del material que fue entregado en consesión a TBA .	En los fundamentos de la sentencia , el tribunal menciona que con el accionar delictivo de los imputados se incumplieron las condiciones de seguridad , superando el umbral del riesgo permitido en el rubro ferroviario .	A su vez , destruyeron el estándar de calidad proyectando un trato indigno a los usuarios del servicio .
+Event	T0	alertas	EVENT	107
+Event	T1	utilizaron	EVENT	156
+Event	T2	detener	EVENT	195
+Event	T3	medidas	EVENT	207
+Event	T4	contribuyeron	EVENT	266
+Event	T5	entregado	EVENT	315
+Event	T6	sentencia	EVENT	371
+Event	T7	menciona	EVENT	395
+Event	T8	incumplieron	EVENT	454
+Event	T9	superando	EVENT	498
+Event	T10	permitido	EVENT	529
+Event	T11	destruyeron	EVENT	576
+Event	T12	proyectando	EVENT	611
+Event	T13	artimañas	EVENT	167
+Relation	T13	T2	CauseEffect	true	artimañas	detener
+Relation	T2	T13	EffectCause	true	detener	artimañas
+Relation	T0	T1	NoRel	true	alertas	utilizaron
+Relation	T0	T10	NoRel	true	alertas	permitido
+Relation	T0	T12	NoRel	true	alertas	proyectando
+Relation	T0	T2	NoRel	true	alertas	detener
+Relation	T0	T3	NoRel	true	alertas	medidas
+Relation	T0	T5	NoRel	true	alertas	entregado
+Relation	T1	T0	NoRel	true	utilizaron	alertas
+Relation	T1	T12	NoRel	true	utilizaron	proyectando
+Relation	T1	T2	NoRel	true	utilizaron	detener
+Relation	T1	T5	NoRel	true	utilizaron	entregado
+Relation	T1	T6	NoRel	true	utilizaron	sentencia
+Relation	T10	T11	NoRel	true	permitido	destruyeron
+Relation	T10	T7	NoRel	true	permitido	menciona
+Relation	T11	T0	NoRel	true	destruyeron	alertas
+Relation	T11	T1	NoRel	true	destruyeron	utilizaron
+Relation	T11	T12	NoRel	true	destruyeron	proyectando
+Relation	T11	T4	NoRel	true	destruyeron	contribuyeron
+Relation	T11	T5	NoRel	true	destruyeron	entregado
+Relation	T11	T6	NoRel	true	destruyeron	sentencia
+Relation	T12	T1	NoRel	true	proyectando	utilizaron
+Relation	T12	T3	NoRel	true	proyectando	medidas
+Relation	T12	T6	NoRel	true	proyectando	sentencia
+Relation	T13	T6	NoRel	true	artimañas	sentencia
+Relation	T13	T7	NoRel	true	artimañas	menciona
+Relation	T13	T8	NoRel	true	artimañas	incumplieron
+Relation	T2	T10	NoRel	true	detener	permitido
+Relation	T2	T11	NoRel	true	detener	destruyeron
+Relation	T2	T3	NoRel	true	detener	medidas
+Relation	T2	T5	NoRel	true	detener	entregado
+Relation	T2	T6	NoRel	true	detener	sentencia
+Relation	T3	T0	NoRel	true	medidas	alertas
+Relation	T3	T12	NoRel	true	medidas	proyectando
+Relation	T3	T13	NoRel	true	medidas	artimañas
+Relation	T3	T2	NoRel	true	medidas	detener
+Relation	T3	T9	NoRel	true	medidas	superando
+Relation	T4	T0	NoRel	true	contribuyeron	alertas
+Relation	T4	T1	NoRel	true	contribuyeron	utilizaron
+Relation	T4	T10	NoRel	true	contribuyeron	permitido
+Relation	T4	T11	NoRel	true	contribuyeron	destruyeron
+Relation	T4	T12	NoRel	true	contribuyeron	proyectando
+Relation	T4	T3	NoRel	true	contribuyeron	medidas
+Relation	T4	T6	NoRel	true	contribuyeron	sentencia
+Relation	T5	T12	NoRel	true	entregado	proyectando
+Relation	T5	T2	NoRel	true	entregado	detener
+Relation	T5	T6	NoRel	true	entregado	sentencia
+Relation	T5	T8	NoRel	true	entregado	incumplieron
+Relation	T6	T13	NoRel	true	sentencia	artimañas
+Relation	T6	T8	NoRel	true	sentencia	incumplieron
+Relation	T7	T0	NoRel	true	menciona	alertas
+Relation	T7	T13	NoRel	true	menciona	artimañas
+Relation	T7	T5	NoRel	true	menciona	entregado
+Relation	T7	T8	NoRel	true	menciona	incumplieron
+Relation	T7	T9	NoRel	true	menciona	superando
+Relation	T8	T2	NoRel	true	incumplieron	detener
+Relation	T8	T6	NoRel	true	incumplieron	sentencia
+Relation	T8	T7	NoRel	true	incumplieron	menciona
+Relation	T8	T9	NoRel	true	incumplieron	superando
+Relation	T9	T0	NoRel	true	superando	alertas
+Relation	T9	T11	NoRel	true	superando	destruyeron
+Relation	T9	T4	NoRel	true	superando	contribuyeron
+Relation	T9	T8	NoRel	true	superando	incumplieron

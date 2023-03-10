@@ -1,0 +1,32 @@
+Text	" _ diyerek yorumladı .	Müge Anlı'nın ise atv'deki programında sarf ettiği sözler , halkın tepkisini çekti .	Yapılan bu yorumlar üzerine RTÜK , inceleme başlattı .	Bu sözlerin sosyal medyada yayılmasının ardından sunucunun kanaldan istifa etmesi ve kanalın konuyla ilgili açıklama yapması beklendi .	Çağdaş Gazeteciler Derneği ; ırkçılık içerdiğini belirttikleri bu yoruma yer vermenin suç olduğu gerekçesiyle , Türk Ceza Kanunu'nun 216. maddesine ( halkı kin ve düşmanlığa tahrik veya aşağılama ) dayanarak dava açtı .
+Event	T0	çekti	EVENT	101
+Event	T1	yorumlar	EVENT	120
+Event	T2	başlattı	EVENT	153
+Event	T3	yayılmasının	EVENT	191
+Event	T5	beklendi	EVENT	289
+Event	T6	belirttikleri	EVENT	349
+Event	T9	açtı	EVENT	513
+Event	T10	sözler	EVENT	75
+Relation	T10	T0	CauseEffect	true	sözler	çekti
+Relation	T0	T10	EffectCause	true	çekti	sözler
+Relation	T0	T1	CauseEffect	true	çekti	yorumlar
+Relation	T1	T0	EffectCause	true	yorumlar	çekti
+Relation	T1	T2	CauseEffect	true	yorumlar	başlattı
+Relation	T2	T1	EffectCause	true	başlattı	yorumlar
+Relation	T0	T3	CauseEffect	true	çekti	yayılmasının
+Relation	T3	T0	EffectCause	true	yayılmasının	çekti
+Relation	T3	T5	CauseEffect	true	yayılmasının	beklendi
+Relation	T5	T3	EffectCause	true	beklendi	yayılmasının
+Relation	T10	T6	CauseEffect	true	sözler	belirttikleri
+Relation	T6	T10	EffectCause	true	belirttikleri	sözler
+Relation	T6	T9	CauseEffect	true	belirttikleri	açtı
+Relation	T9	T6	EffectCause	true	açtı	belirttikleri
+Relation	T10	T1	NoRel	true	sözler	yorumlar
+Relation	T10	T5	NoRel	true	sözler	beklendi
+Relation	T2	T6	NoRel	true	başlattı	belirttikleri
+Relation	T3	T9	NoRel	true	yayılmasının	açtı
+Relation	T5	T1	NoRel	true	beklendi	yorumlar
+Relation	T5	T10	NoRel	true	beklendi	sözler
+Relation	T6	T3	NoRel	true	belirttikleri	yayılmasının
+Relation	T9	T1	NoRel	true	açtı	yorumlar
+Relation	T9	T2	NoRel	true	açtı	başlattı

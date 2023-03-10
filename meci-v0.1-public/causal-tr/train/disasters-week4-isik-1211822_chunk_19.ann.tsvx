@@ -1,0 +1,37 @@
+Text	küçükresim | sağ | Midway Atolü'nde tsunami tarafından bir plajda kumların arasına sıkıştırılmış bir kuş .	Depremden kısa bir süre sonra Hawaii'deki Pasifik Tsunami Uyarı Sistemi ( PTWC ) Pasifik Okyanusu'ndaki bazı bölgeler için tsunami uyarısı yaptı .	Saat 07.30'da ( UTC ) , tüm Pasifik'i kapsayan geniş kapsamlı bir tsunami uyarısı yaptı .	Rusya , Kuril Adaları'nda kıyıya yakın bölgelerde yaşayan 11 bin vatandaşını tahliye etti .	ABD Batı Kıyısı ve Alaska Tsunami Uyarı Sistemi , Kaliforniya'nın büyük kısmındaki kıyı bölgeleri , Oregon'un tamamı ve Alaska'nın batısı için bir tsunami uyarısında bulundu ve Alaska'nın Pasifik Kıyısı , Washington eyaleti ve Kanada'daki Britanya Kolumbiyası'nı kapsayan bir tsunami önlem tavsiyesi yayınladı .
+Event	T0	tsunami	EVENT	36
+Event	T1	Depremden	EVENT	107
+Event	T2	yaptı	EVENT	246
+Event	T3	yaptı	EVENT	336
+Event	T4	etti	EVENT	429
+Event	T6	bulundu	EVENT	602
+Event	T7	yayınladı	EVENT	736
+Event	T8	sıkıştırılmış	EVENT	83
+Relation	T0	T8	CauseEffect	true	tsunami	sıkıştırılmış
+Relation	T8	T0	EffectCause	true	sıkıştırılmış	tsunami
+Relation	T0	T3	NoRel	true	tsunami	yaptı
+Relation	T0	T4	NoRel	true	tsunami	etti
+Relation	T0	T6	NoRel	true	tsunami	bulundu
+Relation	T0	T7	NoRel	true	tsunami	yayınladı
+Relation	T1	T2	NoRel	true	Depremden	yaptı
+Relation	T1	T4	NoRel	true	Depremden	etti
+Relation	T1	T6	NoRel	true	Depremden	bulundu
+Relation	T1	T7	NoRel	true	Depremden	yayınladı
+Relation	T2	T0	NoRel	true	yaptı	tsunami
+Relation	T2	T1	NoRel	true	yaptı	Depremden
+Relation	T2	T4	NoRel	true	yaptı	etti
+Relation	T3	T2	NoRel	true	yaptı	yaptı
+Relation	T3	T4	NoRel	true	yaptı	etti
+Relation	T3	T7	NoRel	true	yaptı	yayınladı
+Relation	T3	T8	NoRel	true	yaptı	sıkıştırılmış
+Relation	T4	T0	NoRel	true	etti	tsunami
+Relation	T4	T1	NoRel	true	etti	Depremden
+Relation	T4	T7	NoRel	true	etti	yayınladı
+Relation	T6	T1	NoRel	true	bulundu	Depremden
+Relation	T6	T3	NoRel	true	bulundu	yaptı
+Relation	T6	T4	NoRel	true	bulundu	etti
+Relation	T6	T7	NoRel	true	bulundu	yayınladı
+Relation	T7	T0	NoRel	true	yayınladı	tsunami
+Relation	T7	T2	NoRel	true	yayınladı	yaptı
+Relation	T7	T4	NoRel	true	yayınladı	etti
+Relation	T8	T7	NoRel	true	sıkıştırılmış	yayınladı

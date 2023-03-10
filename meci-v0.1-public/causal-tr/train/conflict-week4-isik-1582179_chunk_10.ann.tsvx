@@ -1,0 +1,55 @@
+Text	Tasmanya'daki çatışmalarda taraflar üç kolda toplanır : 1. yerleşimciler , askerler , memurlar ; 2. kır haydutları ( _ bushranger _ ) ; 3. Tasmanya yerlileri .	Tasmanya yerlilerinin erkekleri tüfeklerle vurulmuş , kadınlarına tecavüz edilmiş ya da işkence ve zehirli un verilerek öldürülmüş , çocukları ise çalıştırılmak üzere kaçırılmıştır .	Kır haydutları kadınları için Tasmanya yerlilerine saldırmışlardır .	Çoğunlukla kaçak eski hükümlülerden oluşan soyguncu Tasmanya haydutlarının ( _ Tasmanian bushrangers _ ) yaptığı katliamların yalnızca bir tanesi kaydedilmiştir .	1807 - 8 yılında güney içbölgede ( _ Southern interior _ ) Lemon ve Brown adlı iki kır haydutu ( _ bushranger _ ) ikisi erkek üçü kadın beş Tasmanya yerlisini işkence ederek öldürmüştür
+Event	T0	vurulmuş	EVENT	203
+Event	T1	işkence	EVENT	248
+Event	T2	öldürülmüş	EVENT	280
+Event	T3	kaçırılmıştır	EVENT	327
+Event	T4	saldırmışlardır	EVENT	394
+Event	T5	katliamların	EVENT	525
+Event	T6	kaydedilmiştir	EVENT	558
+Event	T7	çatışmalarda	EVENT	14
+Event	T8	edilmiş	EVENT	234
+Event	T9	öldürmüştür	EVENT	749
+Event	T10	verilerek	EVENT	270
+Relation	T1	T2	CauseEffect	true	işkence	öldürülmüş
+Relation	T2	T1	EffectCause	true	öldürülmüş	işkence
+Relation	T10	T2	CauseEffect	true	verilerek	öldürülmüş
+Relation	T2	T10	EffectCause	true	öldürülmüş	verilerek
+Relation	T0	T1	NoRel	true	vurulmuş	işkence
+Relation	T0	T10	NoRel	true	vurulmuş	verilerek
+Relation	T0	T4	NoRel	true	vurulmuş	saldırmışlardır
+Relation	T0	T7	NoRel	true	vurulmuş	çatışmalarda
+Relation	T0	T9	NoRel	true	vurulmuş	öldürmüştür
+Relation	T1	T0	NoRel	true	işkence	vurulmuş
+Relation	T1	T4	NoRel	true	işkence	saldırmışlardır
+Relation	T1	T7	NoRel	true	işkence	çatışmalarda
+Relation	T10	T8	NoRel	true	verilerek	edilmiş
+Relation	T2	T0	NoRel	true	öldürülmüş	vurulmuş
+Relation	T2	T3	NoRel	true	öldürülmüş	kaçırılmıştır
+Relation	T2	T8	NoRel	true	öldürülmüş	edilmiş
+Relation	T2	T9	NoRel	true	öldürülmüş	öldürmüştür
+Relation	T3	T10	NoRel	true	kaçırılmıştır	verilerek
+Relation	T3	T4	NoRel	true	kaçırılmıştır	saldırmışlardır
+Relation	T4	T1	NoRel	true	saldırmışlardır	işkence
+Relation	T4	T10	NoRel	true	saldırmışlardır	verilerek
+Relation	T4	T2	NoRel	true	saldırmışlardır	öldürülmüş
+Relation	T4	T3	NoRel	true	saldırmışlardır	kaçırılmıştır
+Relation	T5	T0	NoRel	true	katliamların	vurulmuş
+Relation	T5	T10	NoRel	true	katliamların	verilerek
+Relation	T5	T2	NoRel	true	katliamların	öldürülmüş
+Relation	T5	T3	NoRel	true	katliamların	kaçırılmıştır
+Relation	T5	T4	NoRel	true	katliamların	saldırmışlardır
+Relation	T6	T1	NoRel	true	kaydedilmiştir	işkence
+Relation	T6	T10	NoRel	true	kaydedilmiştir	verilerek
+Relation	T6	T2	NoRel	true	kaydedilmiştir	öldürülmüş
+Relation	T6	T4	NoRel	true	kaydedilmiştir	saldırmışlardır
+Relation	T6	T7	NoRel	true	kaydedilmiştir	çatışmalarda
+Relation	T7	T3	NoRel	true	çatışmalarda	kaçırılmıştır
+Relation	T7	T5	NoRel	true	çatışmalarda	katliamların
+Relation	T7	T6	NoRel	true	çatışmalarda	kaydedilmiştir
+Relation	T7	T8	NoRel	true	çatışmalarda	edilmiş
+Relation	T8	T2	NoRel	true	edilmiş	öldürülmüş
+Relation	T8	T9	NoRel	true	edilmiş	öldürmüştür
+Relation	T9	T0	NoRel	true	öldürmüştür	vurulmuş
+Relation	T9	T1	NoRel	true	öldürmüştür	işkence
+Relation	T9	T2	NoRel	true	öldürmüştür	öldürülmüş
+Relation	T9	T3	NoRel	true	öldürmüştür	kaçırılmıştır

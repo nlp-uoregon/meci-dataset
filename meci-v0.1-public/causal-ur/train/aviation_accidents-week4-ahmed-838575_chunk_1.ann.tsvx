@@ -1,0 +1,54 @@
+Text	1990ء میں ہی یہ طیارہ چینی سول ایوی ایشن اتھارٹی کے سپرد کیا گیا تھا اور اِس کا رجسٹریشن نمبرB -2622 تھا ۔	اِس پرواز میں عملے کے 11 افراد سوار تھے جن میں فلائٹ افسر ژوئی ماؤ ، مقام تلاش کنندہ لان_ژنگ فینگ ، فلائٹ انجنئیر گوشومنگ بھی شامل تھے ۔	علاوہ ازیں عملے کے باقی سات افراد تھے ۔	24 فروری 1999ء کو یہ پرواز چینگدو کے ہوائی اڈے سے روانہ ہوئی اور اِس کی منزل وین_ژو لونگوان بین الاقوامی ہوائی اڈا تھی ۔	پرواز کی روانگی کے کچھ ہی وقت کے بعد جہاز کے پروں میں تکنیکی خرابی سے گڑبڑ پیدا ہوئی اور جہاز کا ابتدائی حصہ یا نوکیلا حصہ نیچے کی جانب جھکتا چلا گیا ۔
+Event	T0	پرواز	EVENT	111
+Event	T1	پرواز	EVENT	305
+Event	T3	پرواز	EVENT	405
+Event	T4	روانگی	EVENT	414
+Event	T5	خرابی	EVENT	466
+Event	T7	سپرد	EVENT	52
+Event	T8	سوار	EVENT	138
+Event	T9	شامل	EVENT	233
+Event	T10	روانہ	EVENT	334
+Event	T2	پیدا	EVENT	480
+Event	T6	جھکتا	EVENT	541
+Relation	T5	T2	CauseEffect	true	خرابی	پیدا
+Relation	T2	T5	EffectCause	true	پیدا	خرابی
+Relation	T0	T1	NoRel	true	پرواز	پرواز
+Relation	T0	T2	NoRel	true	پرواز	پیدا
+Relation	T0	T3	NoRel	true	پرواز	پرواز
+Relation	T0	T5	NoRel	true	پرواز	خرابی
+Relation	T1	T10	NoRel	true	پرواز	روانہ
+Relation	T1	T4	NoRel	true	پرواز	روانگی
+Relation	T1	T5	NoRel	true	پرواز	خرابی
+Relation	T1	T8	NoRel	true	پرواز	سوار
+Relation	T10	T0	NoRel	true	روانہ	پرواز
+Relation	T10	T4	NoRel	true	روانہ	روانگی
+Relation	T10	T5	NoRel	true	روانہ	خرابی
+Relation	T10	T6	NoRel	true	روانہ	جھکتا
+Relation	T2	T3	NoRel	true	پیدا	پرواز
+Relation	T3	T0	NoRel	true	پرواز	پرواز
+Relation	T3	T5	NoRel	true	پرواز	خرابی
+Relation	T3	T7	NoRel	true	پرواز	سپرد
+Relation	T3	T9	NoRel	true	پرواز	شامل
+Relation	T4	T0	NoRel	true	روانگی	پرواز
+Relation	T4	T3	NoRel	true	روانگی	پرواز
+Relation	T4	T9	NoRel	true	روانگی	شامل
+Relation	T5	T10	NoRel	true	خرابی	روانہ
+Relation	T5	T3	NoRel	true	خرابی	پرواز
+Relation	T5	T4	NoRel	true	خرابی	روانگی
+Relation	T5	T6	NoRel	true	خرابی	جھکتا
+Relation	T5	T7	NoRel	true	خرابی	سپرد
+Relation	T6	T1	NoRel	true	جھکتا	پرواز
+Relation	T7	T0	NoRel	true	سپرد	پرواز
+Relation	T7	T1	NoRel	true	سپرد	پرواز
+Relation	T7	T10	NoRel	true	سپرد	روانہ
+Relation	T7	T5	NoRel	true	سپرد	خرابی
+Relation	T7	T8	NoRel	true	سپرد	سوار
+Relation	T8	T0	NoRel	true	سوار	پرواز
+Relation	T8	T10	NoRel	true	سوار	روانہ
+Relation	T8	T2	NoRel	true	سوار	پیدا
+Relation	T8	T9	NoRel	true	سوار	شامل
+Relation	T9	T0	NoRel	true	شامل	پرواز
+Relation	T9	T1	NoRel	true	شامل	پرواز
+Relation	T9	T10	NoRel	true	شامل	روانہ
+Relation	T9	T3	NoRel	true	شامل	پرواز
+Relation	T9	T6	NoRel	true	شامل	جھکتا

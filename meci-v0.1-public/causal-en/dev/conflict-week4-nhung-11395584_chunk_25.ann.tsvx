@@ -1,0 +1,40 @@
+Text	Immediately after the events , 91 revolutionaries were sentenced to exile .	Of these , a small group was transported by barges from Giurgiu , on their way to the Austrian - ruled Svinița , near the Danube port of Orschowa .	The revolutionary artist Constantin Daniel Rosenthal and Maria Rosetti , both of whom had been allowed to go free and had subsequently followed the barges on shore , pointed out that the Ottomans had stepped out of their jurisdiction , and were able to persuade the mayor of Svinița to disarm the guards , which in turn allowed the prisoners to flee .	The escapees then made their way to Paris .	Most other revolutionaries were detained in areas of present - day Bulgaria until spring 1849 , and , passing through Rustchuk and Varna , were taken to the Anatolian city of Brusa , where they lived at the expense of the Ottoman state .
+Event	T0	events	EVENT	22
+Event	T1	exile	EVENT	68
+Event	T2	transported	EVENT	105
+Event	T4	allowed	EVENT	319
+Event	T5	followed	EVENT	359
+Event	T6	persuade	EVENT	477
+Event	T7	disarm	EVENT	510
+Event	T8	allowed	EVENT	544
+Event	T9	flee	EVENT	569
+Event	T10	made	EVENT	594
+Event	T11	detained	EVENT	652
+Event	T12	passing	EVENT	722
+Event	T13	taken	EVENT	764
+Event	T14	lived	EVENT	814
+Event	T3	stepped	EVENT	424
+Relation	T7	T9	CauseEffect	true	disarm	flee
+Relation	T9	T7	EffectCause	true	flee	disarm
+Relation	T0	T6	NoRel	true	events	persuade
+Relation	T1	T12	NoRel	true	exile	passing
+Relation	T10	T0	NoRel	true	made	events
+Relation	T10	T5	NoRel	true	made	followed
+Relation	T10	T7	NoRel	true	made	disarm
+Relation	T11	T14	NoRel	true	detained	lived
+Relation	T13	T9	NoRel	true	taken	flee
+Relation	T14	T1	NoRel	true	lived	exile
+Relation	T14	T13	NoRel	true	lived	taken
+Relation	T14	T8	NoRel	true	lived	allowed
+Relation	T2	T9	NoRel	true	transported	flee
+Relation	T4	T8	NoRel	true	allowed	allowed
+Relation	T5	T2	NoRel	true	followed	transported
+Relation	T5	T3	NoRel	true	followed	stepped
+Relation	T6	T3	NoRel	true	persuade	stepped
+Relation	T7	T11	NoRel	true	disarm	detained
+Relation	T7	T12	NoRel	true	disarm	passing
+Relation	T8	T14	NoRel	true	allowed	lived
+Relation	T9	T0	NoRel	true	flee	events
+Relation	T9	T10	NoRel	true	flee	made
+Relation	T9	T14	NoRel	true	flee	lived
+Relation	T9	T2	NoRel	true	flee	transported

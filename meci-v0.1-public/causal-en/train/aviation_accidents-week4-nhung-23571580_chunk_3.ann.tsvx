@@ -1,0 +1,59 @@
+Text	Flight 4226 then struck multiple structures on the ground , including a local school and two mosques , crashed and burst into flames .	Most buildings collapsed due to the disaster .	Praying service was held at the local mosques at the time of the crash .	Eyewitnesses stated that survivors on the ground began to wail and scream , rushing to the crash site to search for their relatives trapped inside the rubble .	According to eyewitness , they heard several calls for help from inside the plane .
+Event	T0	Flight	EVENT	0
+Event	T1	struck	EVENT	17
+Event	T2	crashed	EVENT	103
+Event	T3	disaster	EVENT	171
+Event	T4	service	EVENT	190
+Event	T5	held	EVENT	202
+Event	T6	crash	EVENT	247
+Event	T7	stated	EVENT	268
+Event	T8	wail	EVENT	313
+Event	T9	scream	EVENT	322
+Event	T10	rushing	EVENT	331
+Event	T11	crash	EVENT	346
+Event	T12	search	EVENT	360
+Event	T13	trapped	EVENT	387
+Event	T14	rubble	EVENT	406
+Event	T15	heard	EVENT	446
+Event	T16	calls	EVENT	460
+Event	T17	flames	EVENT	126
+Event	T18	collapsed	EVENT	150
+Relation	T3	T18	CauseEffect	true	disaster	collapsed
+Relation	T18	T3	EffectCause	true	collapsed	disaster
+Relation	T10	T12	CauseEffect	true	rushing	search
+Relation	T12	T10	EffectCause	true	search	rushing
+Relation	T11	T13	CauseEffect	true	crash	trapped
+Relation	T13	T11	EffectCause	true	trapped	crash
+Relation	T11	T16	CauseEffect	true	crash	calls
+Relation	T16	T11	EffectCause	true	calls	crash
+Relation	T0	T6	NoRel	true	Flight	crash
+Relation	T0	T7	NoRel	true	Flight	stated
+Relation	T1	T0	NoRel	true	struck	Flight
+Relation	T1	T10	NoRel	true	struck	rushing
+Relation	T1	T16	NoRel	true	struck	calls
+Relation	T10	T6	NoRel	true	rushing	crash
+Relation	T11	T5	NoRel	true	crash	held
+Relation	T13	T15	NoRel	true	trapped	heard
+Relation	T13	T16	NoRel	true	trapped	calls
+Relation	T13	T6	NoRel	true	trapped	crash
+Relation	T14	T5	NoRel	true	rubble	held
+Relation	T14	T7	NoRel	true	rubble	stated
+Relation	T14	T9	NoRel	true	rubble	scream
+Relation	T17	T2	NoRel	true	flames	crashed
+Relation	T17	T7	NoRel	true	flames	stated
+Relation	T18	T10	NoRel	true	collapsed	rushing
+Relation	T18	T15	NoRel	true	collapsed	heard
+Relation	T18	T8	NoRel	true	collapsed	wail
+Relation	T2	T0	NoRel	true	crashed	Flight
+Relation	T2	T7	NoRel	true	crashed	stated
+Relation	T3	T1	NoRel	true	disaster	struck
+Relation	T3	T8	NoRel	true	disaster	wail
+Relation	T4	T17	NoRel	true	service	flames
+Relation	T4	T6	NoRel	true	service	crash
+Relation	T4	T8	NoRel	true	service	wail
+Relation	T5	T2	NoRel	true	held	crashed
+Relation	T5	T9	NoRel	true	held	scream
+Relation	T7	T0	NoRel	true	stated	Flight
+Relation	T7	T16	NoRel	true	stated	calls
+Relation	T7	T18	NoRel	true	stated	collapsed
+Relation	T8	T7	NoRel	true	wail	stated

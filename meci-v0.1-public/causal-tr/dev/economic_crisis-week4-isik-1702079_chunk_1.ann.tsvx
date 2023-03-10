@@ -1,0 +1,37 @@
+Text	General Ne Win , askerlerine “ Silahlar yukarıya bakmayacak ” şeklinde emir vererek göstericilerin vurulmasını istedi .	Ancak krizi başarılı şekilde yönetemedi .	Bunun üzerine 18 Eylül tarihinde ülke genelinde sıkıyönetim ilan edilerek ' ' Devlet Hukuku ve Nizamı Yenileme Konseyi '' yönetime geldi .	Konseye başkanlık yapan General Saw Maung’un yönetiminde yaklaşık 3 bin kişinin öldürülmesiyle ayaklanma bastırıldı .	Bu ayaklanma 08.08. 88 tarihinde vuku bulduğu için _ 8888 Ayaklanması _ olarak adlandırılmıştır .
+Event	T0	istedi	EVENT	111
+Event	T1	krizi	EVENT	126
+Event	T4	geldi	EVENT	293
+Event	T5	bastırıldı	EVENT	406
+Event	T6	ayaklanma	EVENT	422
+Event	T7	bulduğu	EVENT	457
+Event	T8	vererek	EVENT	76
+Event	T2	yönetemedi	EVENT	149
+Event	T3	edilerek	EVENT	227
+Event	T9	öldürülmesiyle	EVENT	381
+Relation	T2	T3	CauseEffect	true	yönetemedi	edilerek
+Relation	T3	T2	EffectCause	true	edilerek	yönetemedi
+Relation	T2	T4	CauseEffect	true	yönetemedi	geldi
+Relation	T4	T2	EffectCause	true	geldi	yönetemedi
+Relation	T9	T5	CauseEffect	true	öldürülmesiyle	bastırıldı
+Relation	T5	T9	EffectCause	true	bastırıldı	öldürülmesiyle
+Relation	T4	T9	CauseEffect	true	geldi	öldürülmesiyle
+Relation	T9	T4	EffectCause	true	öldürülmesiyle	geldi
+Relation	T1	T5	NoRel	true	krizi	bastırıldı
+Relation	T1	T6	NoRel	true	krizi	ayaklanma
+Relation	T2	T0	NoRel	true	yönetemedi	istedi
+Relation	T2	T9	NoRel	true	yönetemedi	öldürülmesiyle
+Relation	T3	T1	NoRel	true	edilerek	krizi
+Relation	T3	T6	NoRel	true	edilerek	ayaklanma
+Relation	T3	T8	NoRel	true	edilerek	vererek
+Relation	T4	T3	NoRel	true	geldi	edilerek
+Relation	T5	T0	NoRel	true	bastırıldı	istedi
+Relation	T5	T6	NoRel	true	bastırıldı	ayaklanma
+Relation	T5	T8	NoRel	true	bastırıldı	vererek
+Relation	T6	T3	NoRel	true	ayaklanma	edilerek
+Relation	T6	T4	NoRel	true	ayaklanma	geldi
+Relation	T6	T7	NoRel	true	ayaklanma	bulduğu
+Relation	T7	T3	NoRel	true	bulduğu	edilerek
+Relation	T7	T4	NoRel	true	bulduğu	geldi
+Relation	T8	T6	NoRel	true	vererek	ayaklanma
+Relation	T9	T7	NoRel	true	öldürülmesiyle	bulduğu

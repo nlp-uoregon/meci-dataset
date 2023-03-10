@@ -1,0 +1,62 @@
+Text	Ögeday’ın ölümü üzerine Moğollar geri çekilince Hırvat asilleri ve kentleri bağlılıklarından dolayı kral tarafından ödüllendirilecektir .	Moğol istilaları önce Macar topraklarının parçası olan doğu Karpatya bölgesindeki Moldova ve Eflak topraklarında yaşanır .	Bölgedeki onbinlerce Rumen , topraklarını Altın Orda saldırılarına karşı korurken hayatını kaybedecektir .	Bu dönemde yaşanan imha o kadar büyüktür ki , bölgedeki Rumenlere ait yazılı tüm tarih bilgisi kaybolmuştur .	Ana hedefi Macar toprakları olan istila sırasında Rumenler tutunamamış ve ormanlara , dağlara çekilmişlerdir .
+Event	T0	ölümü	EVENT	10
+Event	T1	çekilince	EVENT	38
+Event	T2	ödüllendirilecektir	EVENT	116
+Event	T3	istilaları	EVENT	144
+Event	T4	yaşanır	EVENT	251
+Event	T5	saldırılarına	EVENT	314
+Event	T6	kaybedecektir	EVENT	352
+Event	T7	imha	EVENT	387
+Event	T8	kaybolmuştur	EVENT	463
+Event	T9	istila	EVENT	511
+Event	T10	çekilmişlerdir	EVENT	572
+Event	T11	korurken	EVENT	334
+Relation	T0	T1	CauseEffect	true	ölümü	çekilince
+Relation	T1	T0	EffectCause	true	çekilince	ölümü
+Relation	T5	T6	CauseEffect	true	saldırılarına	kaybedecektir
+Relation	T6	T5	EffectCause	true	kaybedecektir	saldırılarına
+Relation	T5	T11	CauseEffect	true	saldırılarına	korurken
+Relation	T11	T5	EffectCause	true	korurken	saldırılarına
+Relation	T5	T7	CauseEffect	true	saldırılarına	imha
+Relation	T7	T5	EffectCause	true	imha	saldırılarına
+Relation	T9	T10	CauseEffect	true	istila	çekilmişlerdir
+Relation	T10	T9	EffectCause	true	çekilmişlerdir	istila
+Relation	T0	T11	NoRel	true	ölümü	korurken
+Relation	T0	T9	NoRel	true	ölümü	istila
+Relation	T1	T10	NoRel	true	çekilince	çekilmişlerdir
+Relation	T1	T4	NoRel	true	çekilince	yaşanır
+Relation	T1	T7	NoRel	true	çekilince	imha
+Relation	T1	T9	NoRel	true	çekilince	istila
+Relation	T10	T7	NoRel	true	çekilmişlerdir	imha
+Relation	T11	T0	NoRel	true	korurken	ölümü
+Relation	T11	T10	NoRel	true	korurken	çekilmişlerdir
+Relation	T11	T2	NoRel	true	korurken	ödüllendirilecektir
+Relation	T11	T4	NoRel	true	korurken	yaşanır
+Relation	T2	T1	NoRel	true	ödüllendirilecektir	çekilince
+Relation	T2	T10	NoRel	true	ödüllendirilecektir	çekilmişlerdir
+Relation	T2	T6	NoRel	true	ödüllendirilecektir	kaybedecektir
+Relation	T2	T9	NoRel	true	ödüllendirilecektir	istila
+Relation	T3	T0	NoRel	true	istilaları	ölümü
+Relation	T3	T1	NoRel	true	istilaları	çekilince
+Relation	T3	T5	NoRel	true	istilaları	saldırılarına
+Relation	T3	T7	NoRel	true	istilaları	imha
+Relation	T3	T8	NoRel	true	istilaları	kaybolmuştur
+Relation	T4	T11	NoRel	true	yaşanır	korurken
+Relation	T4	T7	NoRel	true	yaşanır	imha
+Relation	T5	T0	NoRel	true	saldırılarına	ölümü
+Relation	T5	T8	NoRel	true	saldırılarına	kaybolmuştur
+Relation	T5	T9	NoRel	true	saldırılarına	istila
+Relation	T6	T7	NoRel	true	kaybedecektir	imha
+Relation	T7	T0	NoRel	true	imha	ölümü
+Relation	T7	T10	NoRel	true	imha	çekilmişlerdir
+Relation	T7	T11	NoRel	true	imha	korurken
+Relation	T7	T2	NoRel	true	imha	ödüllendirilecektir
+Relation	T7	T6	NoRel	true	imha	kaybedecektir
+Relation	T8	T1	NoRel	true	kaybolmuştur	çekilince
+Relation	T8	T2	NoRel	true	kaybolmuştur	ödüllendirilecektir
+Relation	T8	T5	NoRel	true	kaybolmuştur	saldırılarına
+Relation	T8	T6	NoRel	true	kaybolmuştur	kaybedecektir
+Relation	T8	T7	NoRel	true	kaybolmuştur	imha
+Relation	T9	T11	NoRel	true	istila	korurken
+Relation	T9	T4	NoRel	true	istila	yaşanır
+Relation	T9	T5	NoRel	true	istila	saldırılarına

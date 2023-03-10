@@ -1,0 +1,23 @@
+Text	Deprem , Ağrı , Iğdır , Kars ve Türkiye - İran sınırının İran tarafında , sınıra yakın olan bölgelerde hissedildi .	Depremin şiddeti VII , derinliği ise 5 km veya 27,1 idi .	Deprem sırasında köy sakinlerinin çoğunun yaylada olması , can kaybını azalttı .	Depremden sonra çeşitli kuruluşlar bölgeye yardım gönderdi , üç bakan bölgeye gitti , Yunanistan yardım teklif etti ve Fransa Türkiye'ye dayanışma mesajı gönderdi .	küçükresim | 230px | Depremin şiddet haritası Bölge Kuzey Anadolu Fay Hattı veya Doğu Anadolu Fay Hattı üzerinde değildir .
+Event	T0	Deprem	EVENT	0
+Event	T1	hissedildi	EVENT	103
+Event	T10	teklif etti	EVENT	359
+Event	T2	Deprem	EVENT	174
+Event	T3	azalttı	EVENT	245
+Event	T4	gönderdi	EVENT	305
+Event	T5	gitti	EVENT	333
+Event	T6	gönderdi	EVENT	409
+Relation	T0	T4	NoRel	true	Deprem	gönderdi
+Relation	T1	T5	NoRel	true	hissedildi	gitti
+Relation	T10	T0	NoRel	true	teklif etti	Deprem
+Relation	T10	T5	NoRel	true	teklif etti	gitti
+Relation	T10	T6	NoRel	true	teklif etti	gönderdi
+Relation	T2	T1	NoRel	true	Deprem	hissedildi
+Relation	T2	T6	NoRel	true	Deprem	gönderdi
+Relation	T3	T0	NoRel	true	azalttı	Deprem
+Relation	T4	T0	NoRel	true	gönderdi	Deprem
+Relation	T4	T1	NoRel	true	gönderdi	hissedildi
+Relation	T4	T3	NoRel	true	gönderdi	azalttı
+Relation	T5	T10	NoRel	true	gitti	teklif etti
+Relation	T5	T4	NoRel	true	gitti	gönderdi
+Relation	T6	T5	NoRel	true	gönderdi	gitti

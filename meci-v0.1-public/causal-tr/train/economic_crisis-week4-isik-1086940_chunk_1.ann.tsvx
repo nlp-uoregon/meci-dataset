@@ -1,0 +1,45 @@
+Text	Çekoslovakya Bilim Akademisi Ekonomi Enstitüsü'nde yüksek lisans öğrenimi gördü .	1971 - 1986 yılları arasında Çekoslovakya Devlet Bankası'nda çeşitli görevler üstledi .	1992 yılında Çek Sosyalist Cumhuriyeti'nde yapılan seçimleri partisi kazandı .	Cumhurbaşkanı Václav Havel tarafından başbakanlığa atandı .	Ülkenin Slovakya ile barışçıl bir şekilde ayrılmasından sonra yeni kurulan Çek Cumhuriyeti'nde yapılan ilk seçimleri kazanarak tekrar başbakanlığa atandı .
+Event	T0	gördü	EVENT	74
+Event	T1	üstledi	EVENT	160
+Event	T2	seçimleri	EVENT	221
+Event	T3	kazandı	EVENT	239
+Event	T4	atandı	EVENT	300
+Event	T5	ayrılmasından	EVENT	351
+Event	T6	kazanarak	EVENT	426
+Event	T7	atandı	EVENT	456
+Event	T8	kurulan	EVENT	376
+Event	T9	seçimleri	EVENT	416
+Relation	T2	T3	CauseEffect	true	seçimleri	kazandı
+Relation	T3	T2	EffectCause	true	kazandı	seçimleri
+Relation	T5	T8	CauseEffect	true	ayrılmasından	kurulan
+Relation	T8	T5	EffectCause	true	kurulan	ayrılmasından
+Relation	T6	T7	CauseEffect	true	kazanarak	atandı
+Relation	T7	T6	EffectCause	true	atandı	kazanarak
+Relation	T8	T9	CauseEffect	true	kurulan	seçimleri
+Relation	T9	T8	EffectCause	true	seçimleri	kurulan
+Relation	T9	T6	CauseEffect	true	seçimleri	kazanarak
+Relation	T6	T9	EffectCause	true	kazanarak	seçimleri
+Relation	T0	T3	NoRel	true	gördü	kazandı
+Relation	T0	T5	NoRel	true	gördü	ayrılmasından
+Relation	T1	T4	NoRel	true	üstledi	atandı
+Relation	T1	T5	NoRel	true	üstledi	ayrılmasından
+Relation	T2	T1	NoRel	true	seçimleri	üstledi
+Relation	T2	T4	NoRel	true	seçimleri	atandı
+Relation	T2	T9	NoRel	true	seçimleri	seçimleri
+Relation	T3	T1	NoRel	true	kazandı	üstledi
+Relation	T4	T0	NoRel	true	atandı	gördü
+Relation	T4	T2	NoRel	true	atandı	seçimleri
+Relation	T4	T3	NoRel	true	atandı	kazandı
+Relation	T4	T5	NoRel	true	atandı	ayrılmasından
+Relation	T4	T6	NoRel	true	atandı	kazanarak
+Relation	T4	T9	NoRel	true	atandı	seçimleri
+Relation	T5	T2	NoRel	true	ayrılmasından	seçimleri
+Relation	T5	T3	NoRel	true	ayrılmasından	kazandı
+Relation	T5	T9	NoRel	true	ayrılmasından	seçimleri
+Relation	T7	T0	NoRel	true	atandı	gördü
+Relation	T7	T8	NoRel	true	atandı	kurulan
+Relation	T7	T9	NoRel	true	atandı	seçimleri
+Relation	T8	T0	NoRel	true	kurulan	gördü
+Relation	T8	T3	NoRel	true	kurulan	kazandı
+Relation	T9	T4	NoRel	true	seçimleri	atandı
+Relation	T9	T5	NoRel	true	seçimleri	ayrılmasından

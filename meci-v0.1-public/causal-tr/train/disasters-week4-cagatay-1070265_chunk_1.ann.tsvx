@@ -1,0 +1,30 @@
+Text	Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü'nün internet sitesindeki verilere göre , saat 04.32'deki ilk depremin ardından bölgede , büyüklükleri en büyük 5 , 5/ 5 , 3/ 5 , 1 ile 2, 6 arasında değişen 84 sarsıntı meydana gelmiştir .	Palu ilçesi ise en tehlikeli bölge olarak görülmektedir .	Son belirlemelere göre büyük depremi takip eden 800 artçı sarsıntı olmuştur .	- : Devlet Bakanı Cemil Çiçek ve dört bakan daha deprem bölgesini ziyaret etmiştir .	Kızılay yardım için harekete geçmiştir .
+Event	T0	depremin	EVENT	134
+Event	T2	belirlemelere	EVENT	324
+Event	T3	sarsıntı	EVENT	233
+Event	T1	depremi	EVENT	349
+Event	T4	sarsıntı	EVENT	378
+Event	T5	ziyaret	EVENT	464
+Event	T6	harekete	EVENT	503
+Relation	T0	T3	CauseEffect	true	depremin	sarsıntı
+Relation	T3	T0	EffectCause	true	sarsıntı	depremin
+Relation	T1	T4	CauseEffect	true	depremi	sarsıntı
+Relation	T4	T1	EffectCause	true	sarsıntı	depremi
+Relation	T1	T5	CauseEffect	true	depremi	ziyaret
+Relation	T5	T1	EffectCause	true	ziyaret	depremi
+Relation	T0	T5	CauseEffect	true	depremin	ziyaret
+Relation	T5	T0	EffectCause	true	ziyaret	depremin
+Relation	T1	T6	CauseEffect	true	depremi	harekete
+Relation	T6	T1	EffectCause	true	harekete	depremi
+Relation	T0	T6	CauseEffect	true	depremin	harekete
+Relation	T6	T0	EffectCause	true	harekete	depremin
+Relation	T0	T4	NoRel	true	depremin	sarsıntı
+Relation	T2	T1	NoRel	true	belirlemelere	depremi
+Relation	T2	T3	NoRel	true	belirlemelere	sarsıntı
+Relation	T2	T5	NoRel	true	belirlemelere	ziyaret
+Relation	T2	T6	NoRel	true	belirlemelere	harekete
+Relation	T3	T1	NoRel	true	sarsıntı	depremi
+Relation	T4	T0	NoRel	true	sarsıntı	depremin
+Relation	T4	T2	NoRel	true	sarsıntı	belirlemelere
+Relation	T4	T3	NoRel	true	sarsıntı	sarsıntı
+Relation	T5	T6	NoRel	true	ziyaret	harekete

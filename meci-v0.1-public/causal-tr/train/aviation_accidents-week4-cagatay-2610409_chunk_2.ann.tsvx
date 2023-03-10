@@ -1,0 +1,36 @@
+Text	Uçak yerel saatle 23: 25'te Trabzon Havalimanı'nın pist 11'e inişe geçti .	O günkü hava raporlarına göre inişten üç saat önce başlayan yağmurdan dolayı pist ıslaktı ve görüş mesafesi 4000 metreye düşmüştü .	Tekerlekleri yeren değen uçak , pistin sonunda duramadığı için pistin sol tarafından çıktı ve çimde kaymaya başladı .	Pistin yanındaki yamaçta duran uçaktaki 162 yolcu ve 6 mürettabat kayıp verilmeden tahliye edildi .	Kaza sırasında uçağın sağ motoru kopup denize düştü .
+Event	T1	inişten	EVENT	105
+Event	T2	düşmüştü	EVENT	196
+Event	T3	çıktı	EVENT	292
+Event	T4	başladı	EVENT	315
+Event	T5	kayıp	EVENT	391
+Event	T6	edildi	EVENT	416
+Event	T7	Kaza	EVENT	425
+Event	T8	düştü	EVENT	471
+Event	T9	inişe	EVENT	61
+Relation	T2	T3	CauseEffect	true	düşmüştü	çıktı
+Relation	T3	T2	EffectCause	true	çıktı	düşmüştü
+Relation	T3	T4	CauseEffect	true	çıktı	başladı
+Relation	T4	T3	EffectCause	true	başladı	çıktı
+Relation	T7	T6	CauseEffect	true	Kaza	edildi
+Relation	T6	T7	EffectCause	true	edildi	Kaza
+Relation	T4	T7	CauseEffect	true	başladı	Kaza
+Relation	T7	T4	EffectCause	true	Kaza	başladı
+Relation	T1	T2	NoRel	true	inişten	düşmüştü
+Relation	T2	T1	NoRel	true	düşmüştü	inişten
+Relation	T2	T4	NoRel	true	düşmüştü	başladı
+Relation	T2	T5	NoRel	true	düşmüştü	kayıp
+Relation	T2	T7	NoRel	true	düşmüştü	Kaza
+Relation	T2	T8	NoRel	true	düşmüştü	düştü
+Relation	T2	T9	NoRel	true	düşmüştü	inişe
+Relation	T3	T8	NoRel	true	çıktı	düştü
+Relation	T5	T3	NoRel	true	kayıp	çıktı
+Relation	T6	T8	NoRel	true	edildi	düştü
+Relation	T7	T1	NoRel	true	Kaza	inişten
+Relation	T7	T3	NoRel	true	Kaza	çıktı
+Relation	T7	T8	NoRel	true	Kaza	düştü
+Relation	T8	T4	NoRel	true	düştü	başladı
+Relation	T8	T6	NoRel	true	düştü	edildi
+Relation	T9	T4	NoRel	true	inişe	başladı
+Relation	T9	T5	NoRel	true	inişe	kayıp
+Relation	T9	T7	NoRel	true	inişe	Kaza

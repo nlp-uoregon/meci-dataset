@@ -1,0 +1,58 @@
+Text	Tüm bu işlemler yaklaşık bir saat boyunca tekrarlandı .	Nefes alamıyor olmanın verdiği panikle el ve ayaklarımı hareket ettirmeye çalıştığımdan bileklerimde yaralar oluşmuştu .	" ifadelerini kullanmıştı .	Kendisinin bu uygulamaya kaç kez maruz kaldığı yönünde ise farklı iddialar mevcuttur .	Muhammed bu tekniğin kendisine beş kez uygulandığını ifade ederken , 2007'de NBC News'te çıkan haberde birkaç CIA yetkilisinin Muhammed'in konuşmaya başlamasından önce en az iki seans waterboarding ve diğer aşırı tekniklerin uygulandığını belirtildi .
+Event	T0	işlemler	EVENT	7
+Event	T1	tekrarlandı	EVENT	42
+Event	T2	hareket	EVENT	112
+Event	T3	oluşmuştu	EVENT	165
+Event	T4	çıkan	EVENT	381
+Event	T5	belirtildi	EVENT	531
+Event	T6	panikle	EVENT	87
+Event	T7	uygulamaya	EVENT	219
+Event	T8	uygulandığını	EVENT	331
+Event	T9	konuşmaya	EVENT	431
+Event	T10	waterboarding	EVENT	476
+Relation	T6	T2	CauseEffect	true	panikle	hareket
+Relation	T2	T6	EffectCause	true	hareket	panikle
+Relation	T2	T3	CauseEffect	true	hareket	oluşmuştu
+Relation	T3	T2	EffectCause	true	oluşmuştu	hareket
+Relation	T7	T6	CauseEffect	true	uygulamaya	panikle
+Relation	T6	T7	EffectCause	true	panikle	uygulamaya
+Relation	T0	T6	CauseEffect	true	işlemler	panikle
+Relation	T6	T0	EffectCause	true	panikle	işlemler
+Relation	T8	T6	CauseEffect	true	uygulandığını	panikle
+Relation	T6	T8	EffectCause	true	panikle	uygulandığını
+Relation	T10	T9	CauseEffect	true	waterboarding	konuşmaya
+Relation	T9	T10	EffectCause	true	konuşmaya	waterboarding
+Relation	T0	T1	NoRel	true	işlemler	tekrarlandı
+Relation	T0	T5	NoRel	true	işlemler	belirtildi
+Relation	T1	T0	NoRel	true	tekrarlandı	işlemler
+Relation	T10	T7	NoRel	true	waterboarding	uygulamaya
+Relation	T10	T8	NoRel	true	waterboarding	uygulandığını
+Relation	T2	T0	NoRel	true	hareket	işlemler
+Relation	T2	T10	NoRel	true	hareket	waterboarding
+Relation	T2	T4	NoRel	true	hareket	çıkan
+Relation	T2	T5	NoRel	true	hareket	belirtildi
+Relation	T2	T7	NoRel	true	hareket	uygulamaya
+Relation	T2	T8	NoRel	true	hareket	uygulandığını
+Relation	T2	T9	NoRel	true	hareket	konuşmaya
+Relation	T3	T5	NoRel	true	oluşmuştu	belirtildi
+Relation	T3	T6	NoRel	true	oluşmuştu	panikle
+Relation	T3	T7	NoRel	true	oluşmuştu	uygulamaya
+Relation	T3	T9	NoRel	true	oluşmuştu	konuşmaya
+Relation	T4	T1	NoRel	true	çıkan	tekrarlandı
+Relation	T4	T2	NoRel	true	çıkan	hareket
+Relation	T4	T3	NoRel	true	çıkan	oluşmuştu
+Relation	T4	T9	NoRel	true	çıkan	konuşmaya
+Relation	T5	T3	NoRel	true	belirtildi	oluşmuştu
+Relation	T6	T10	NoRel	true	panikle	waterboarding
+Relation	T6	T5	NoRel	true	panikle	belirtildi
+Relation	T7	T0	NoRel	true	uygulamaya	işlemler
+Relation	T7	T1	NoRel	true	uygulamaya	tekrarlandı
+Relation	T7	T5	NoRel	true	uygulamaya	belirtildi
+Relation	T8	T0	NoRel	true	uygulandığını	işlemler
+Relation	T8	T3	NoRel	true	uygulandığını	oluşmuştu
+Relation	T9	T0	NoRel	true	konuşmaya	işlemler
+Relation	T9	T1	NoRel	true	konuşmaya	tekrarlandı
+Relation	T9	T2	NoRel	true	konuşmaya	hareket
+Relation	T9	T3	NoRel	true	konuşmaya	oluşmuştu
+Relation	T9	T5	NoRel	true	konuşmaya	belirtildi
+Relation	T9	T7	NoRel	true	konuşmaya	uygulamaya

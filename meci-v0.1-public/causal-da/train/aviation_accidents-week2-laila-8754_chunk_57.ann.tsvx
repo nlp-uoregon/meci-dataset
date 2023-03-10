@@ -1,0 +1,79 @@
+Text	Det nordamerikanske luftrum holdt lukket i flere dage efter angrebene , hvilket førte til en nedskæring på næsten 20 % i lufttrafikkens kapacitet .	Som følge af tvillingetårnenes kollaps blev mere end 2.500 forurenende stoffer , herunder kendte kræftfremkaldende stoffer , spredt ud over Manhattan .	Dette har ført til invaliderende sygdomme blandt redningsarbejderne .	For eksempel døde NYPD-officeren Frank Macrì af lungekræft , der havde bredt sig i hele hans krop , den 3. september 2007 ; hans familie har taget hans kræftsygdom som et resultat af den lange arbejdstid , som han har haft på stedet .	Effekter på helbredet udvidede sig ligeledes til nogle beboere , studerende og kontorarbejdere i Lower Manhattan samt i nærheden af Chinatown .
+Event	T0	lukket	EVENT	34
+Event	T1	angrebene	EVENT	60
+Event	T10	udvidede	EVENT	627
+Event	T11	spredt	EVENT	273
+Event	T12	kollaps	EVENT	179
+Event	T13	bredt sig	EVENT	441
+Event	T2	nedskæring	EVENT	93
+Event	T3	ført	EVENT	310
+Event	T4	sygdomme	EVENT	333
+Event	T5	døde	EVENT	383
+Event	T6	taget	EVENT	511
+Event	T7	kræftsygdom	EVENT	522
+Event	T8	haft	EVENT	588
+Event	T9	Effekter	EVENT	605
+Relation	T1	T2	CauseEffect	true	angrebene	nedskæring
+Relation	T2	T1	EffectCause	true	nedskæring	angrebene
+Relation	T1	T0	CauseEffect	true	angrebene	lukket
+Relation	T0	T1	EffectCause	true	lukket	angrebene
+Relation	T12	T11	CauseEffect	true	kollaps	spredt
+Relation	T11	T12	EffectCause	true	spredt	kollaps
+Relation	T11	T3	CauseEffect	true	spredt	ført
+Relation	T3	T11	EffectCause	true	ført	spredt
+Relation	T13	T5	CauseEffect	true	bredt sig	døde
+Relation	T5	T13	EffectCause	true	døde	bredt sig
+Relation	T11	T4	CauseEffect	true	spredt	sygdomme
+Relation	T4	T11	EffectCause	true	sygdomme	spredt
+Relation	T8	T7	CauseEffect	true	haft	kræftsygdom
+Relation	T7	T8	EffectCause	true	kræftsygdom	haft
+Relation	T0	T13	NoRel	true	lukket	bredt sig
+Relation	T0	T3	NoRel	true	lukket	ført
+Relation	T0	T9	NoRel	true	lukket	Effekter
+Relation	T1	T13	NoRel	true	angrebene	bredt sig
+Relation	T1	T3	NoRel	true	angrebene	ført
+Relation	T1	T7	NoRel	true	angrebene	kræftsygdom
+Relation	T10	T2	NoRel	true	udvidede	nedskæring
+Relation	T10	T5	NoRel	true	udvidede	døde
+Relation	T10	T9	NoRel	true	udvidede	Effekter
+Relation	T11	T2	NoRel	true	spredt	nedskæring
+Relation	T11	T7	NoRel	true	spredt	kræftsygdom
+Relation	T11	T8	NoRel	true	spredt	haft
+Relation	T11	T9	NoRel	true	spredt	Effekter
+Relation	T12	T1	NoRel	true	kollaps	angrebene
+Relation	T12	T2	NoRel	true	kollaps	nedskæring
+Relation	T12	T3	NoRel	true	kollaps	ført
+Relation	T12	T4	NoRel	true	kollaps	sygdomme
+Relation	T12	T5	NoRel	true	kollaps	døde
+Relation	T12	T8	NoRel	true	kollaps	haft
+Relation	T12	T9	NoRel	true	kollaps	Effekter
+Relation	T13	T1	NoRel	true	bredt sig	angrebene
+Relation	T13	T10	NoRel	true	bredt sig	udvidede
+Relation	T13	T7	NoRel	true	bredt sig	kræftsygdom
+Relation	T13	T9	NoRel	true	bredt sig	Effekter
+Relation	T2	T10	NoRel	true	nedskæring	udvidede
+Relation	T2	T8	NoRel	true	nedskæring	haft
+Relation	T3	T0	NoRel	true	ført	lukket
+Relation	T3	T13	NoRel	true	ført	bredt sig
+Relation	T3	T5	NoRel	true	ført	døde
+Relation	T4	T12	NoRel	true	sygdomme	kollaps
+Relation	T4	T13	NoRel	true	sygdomme	bredt sig
+Relation	T4	T3	NoRel	true	sygdomme	ført
+Relation	T4	T7	NoRel	true	sygdomme	kræftsygdom
+Relation	T5	T1	NoRel	true	døde	angrebene
+Relation	T5	T10	NoRel	true	døde	udvidede
+Relation	T5	T6	NoRel	true	døde	taget
+Relation	T6	T13	NoRel	true	taget	bredt sig
+Relation	T6	T7	NoRel	true	taget	kræftsygdom
+Relation	T7	T10	NoRel	true	kræftsygdom	udvidede
+Relation	T7	T13	NoRel	true	kræftsygdom	bredt sig
+Relation	T7	T3	NoRel	true	kræftsygdom	ført
+Relation	T7	T5	NoRel	true	kræftsygdom	døde
+Relation	T8	T12	NoRel	true	haft	kollaps
+Relation	T8	T5	NoRel	true	haft	døde
+Relation	T8	T6	NoRel	true	haft	taget
+Relation	T9	T10	NoRel	true	Effekter	udvidede
+Relation	T9	T11	NoRel	true	Effekter	spredt
+Relation	T9	T3	NoRel	true	Effekter	ført
+Relation	T9	T6	NoRel	true	Effekter	taget
+Relation	T9	T7	NoRel	true	Effekter	kræftsygdom

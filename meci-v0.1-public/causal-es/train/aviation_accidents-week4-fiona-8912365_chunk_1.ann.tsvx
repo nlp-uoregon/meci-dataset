@@ -1,0 +1,98 @@
+Text	[ La aeronave accidentada en octubre de 2017 ] El avión accidentado era un Sukhoi Superjet 100 de fabricación rusa .	La aeronave llevaba el registro RA-89098 y el número de serie del fabricante 95135 y había volado por primera vez en junio del 2017 .	El vuelo 1492 despegó del Aeropuerto Internacional de Moscú-Sheremétievo al aeropuerto de Múrmansk a las 18:04 hora local ( 15:04 UTC ) .	Dejó de ascender en el nivel de vuelo 090 y dio la vuelta , realizando un aterrizaje de emergencia 30 minutos después del despegue , cuando se informó que se había desviado de la pista .	Posteriormente , la aeronave se incendió .
+Event	T0	accidentada	EVENT	14
+Event	T1	accidentado	EVENT	56
+Event	T2	volado	EVENT	208
+Event	T3	vuelo	EVENT	254
+Event	T4	despegó	EVENT	265
+Event	T5	Dejó	EVENT	389
+Event	T6	ascender	EVENT	397
+Event	T7	vuelo	EVENT	421
+Event	T8	realizando	EVENT	449
+Event	T9	aterrizaje	EVENT	463
+Event	T10	emergencia	EVENT	477
+Event	T11	despegue	EVENT	511
+Event	T12	informó	EVENT	532
+Event	T13	desviado	EVENT	553
+Event	T14	incendió	EVENT	608
+Relation	T13	T14	CauseEffect	true	desviado	incendió
+Relation	T14	T13	EffectCause	true	incendió	desviado
+Relation	T0	T1	NoRel	true	accidentada	accidentado
+Relation	T0	T10	NoRel	true	accidentada	emergencia
+Relation	T0	T11	NoRel	true	accidentada	despegue
+Relation	T0	T12	NoRel	true	accidentada	informó
+Relation	T0	T2	NoRel	true	accidentada	volado
+Relation	T0	T6	NoRel	true	accidentada	ascender
+Relation	T0	T7	NoRel	true	accidentada	vuelo
+Relation	T1	T0	NoRel	true	accidentado	accidentada
+Relation	T1	T10	NoRel	true	accidentado	emergencia
+Relation	T1	T12	NoRel	true	accidentado	informó
+Relation	T1	T14	NoRel	true	accidentado	incendió
+Relation	T1	T2	NoRel	true	accidentado	volado
+Relation	T1	T5	NoRel	true	accidentado	Dejó
+Relation	T1	T7	NoRel	true	accidentado	vuelo
+Relation	T1	T8	NoRel	true	accidentado	realizando
+Relation	T1	T9	NoRel	true	accidentado	aterrizaje
+Relation	T10	T0	NoRel	true	emergencia	accidentada
+Relation	T10	T12	NoRel	true	emergencia	informó
+Relation	T10	T3	NoRel	true	emergencia	vuelo
+Relation	T10	T5	NoRel	true	emergencia	Dejó
+Relation	T10	T6	NoRel	true	emergencia	ascender
+Relation	T10	T7	NoRel	true	emergencia	vuelo
+Relation	T11	T12	NoRel	true	despegue	informó
+Relation	T11	T13	NoRel	true	despegue	desviado
+Relation	T11	T3	NoRel	true	despegue	vuelo
+Relation	T11	T4	NoRel	true	despegue	despegó
+Relation	T11	T6	NoRel	true	despegue	ascender
+Relation	T11	T8	NoRel	true	despegue	realizando
+Relation	T12	T11	NoRel	true	informó	despegue
+Relation	T12	T13	NoRel	true	informó	desviado
+Relation	T12	T14	NoRel	true	informó	incendió
+Relation	T12	T6	NoRel	true	informó	ascender
+Relation	T13	T12	NoRel	true	desviado	informó
+Relation	T13	T3	NoRel	true	desviado	vuelo
+Relation	T13	T6	NoRel	true	desviado	ascender
+Relation	T13	T7	NoRel	true	desviado	vuelo
+Relation	T14	T1	NoRel	true	incendió	accidentado
+Relation	T14	T12	NoRel	true	incendió	informó
+Relation	T14	T3	NoRel	true	incendió	vuelo
+Relation	T14	T7	NoRel	true	incendió	vuelo
+Relation	T14	T9	NoRel	true	incendió	aterrizaje
+Relation	T2	T10	NoRel	true	volado	emergencia
+Relation	T2	T3	NoRel	true	volado	vuelo
+Relation	T2	T5	NoRel	true	volado	Dejó
+Relation	T2	T9	NoRel	true	volado	aterrizaje
+Relation	T3	T12	NoRel	true	vuelo	informó
+Relation	T3	T13	NoRel	true	vuelo	desviado
+Relation	T4	T11	NoRel	true	despegó	despegue
+Relation	T4	T3	NoRel	true	despegó	vuelo
+Relation	T4	T6	NoRel	true	despegó	ascender
+Relation	T5	T10	NoRel	true	Dejó	emergencia
+Relation	T5	T12	NoRel	true	Dejó	informó
+Relation	T5	T2	NoRel	true	Dejó	volado
+Relation	T5	T7	NoRel	true	Dejó	vuelo
+Relation	T6	T11	NoRel	true	ascender	despegue
+Relation	T6	T12	NoRel	true	ascender	informó
+Relation	T6	T3	NoRel	true	ascender	vuelo
+Relation	T6	T5	NoRel	true	ascender	Dejó
+Relation	T6	T7	NoRel	true	ascender	vuelo
+Relation	T6	T9	NoRel	true	ascender	aterrizaje
+Relation	T7	T10	NoRel	true	vuelo	emergencia
+Relation	T7	T12	NoRel	true	vuelo	informó
+Relation	T7	T13	NoRel	true	vuelo	desviado
+Relation	T7	T14	NoRel	true	vuelo	incendió
+Relation	T7	T2	NoRel	true	vuelo	volado
+Relation	T7	T3	NoRel	true	vuelo	vuelo
+Relation	T7	T4	NoRel	true	vuelo	despegó
+Relation	T7	T5	NoRel	true	vuelo	Dejó
+Relation	T7	T6	NoRel	true	vuelo	ascender
+Relation	T7	T9	NoRel	true	vuelo	aterrizaje
+Relation	T8	T0	NoRel	true	realizando	accidentada
+Relation	T8	T11	NoRel	true	realizando	despegue
+Relation	T8	T12	NoRel	true	realizando	informó
+Relation	T8	T14	NoRel	true	realizando	incendió
+Relation	T8	T3	NoRel	true	realizando	vuelo
+Relation	T8	T6	NoRel	true	realizando	ascender
+Relation	T9	T0	NoRel	true	aterrizaje	accidentada
+Relation	T9	T10	NoRel	true	aterrizaje	emergencia
+Relation	T9	T6	NoRel	true	aterrizaje	ascender
+Relation	T9	T8	NoRel	true	aterrizaje	realizando

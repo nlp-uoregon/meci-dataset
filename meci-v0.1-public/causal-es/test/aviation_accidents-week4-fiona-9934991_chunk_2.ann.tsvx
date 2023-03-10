@@ -1,0 +1,134 @@
+Text	El vuelo 6780 fue vectorizado para una aproximación del sistema de aterrizaje por instrumentos ( ILS ) a la pista 27 en el aeropuerto de Sumburgh .	La aeronave descendió a 2.000 pies ( 610 m ) y capturó el localizador 9 millas náuticas al este del aeropuerto .	Durante la aproximación , el capitán decidió dar la vuelta debido a una fuerte tormenta que se mostraba en el radar meteorológico .	Cuando la aeronave giró hacia el sur , fue alcanzada por un rayo , que entró en la estructura del avión en la cúpula directamente en frente de la cabina y salió por el escape de la unidad de potencia auxiliar ( APU ) en la cola .	Un rayo esférico apareció brevemente en la cabina justo antes del ataque .
+Event	T0	vuelo	EVENT	3
+Event	T1	vectorizado	EVENT	18
+Event	T2	aproximación	EVENT	39
+Event	T3	aterrizaje	EVENT	67
+Event	T4	descendió	EVENT	160
+Event	T5	capturó	EVENT	195
+Event	T6	aproximación	EVENT	272
+Event	T7	tormenta	EVENT	340
+Event	T8	mostraba	EVENT	356
+Event	T9	giró	EVENT	412
+Event	T10	alcanzada	EVENT	436
+Event	T11	rayo	EVENT	453
+Event	T12	entró	EVENT	464
+Event	T13	salió	EVENT	548
+Event	T14	escape	EVENT	561
+Event	T15	rayo	EVENT	626
+Event	T16	apareció	EVENT	640
+Event	T17	ataque	EVENT	689
+Relation	T0	T11	NoRel	true	vuelo	rayo
+Relation	T0	T13	NoRel	true	vuelo	salió
+Relation	T0	T15	NoRel	true	vuelo	rayo
+Relation	T0	T17	NoRel	true	vuelo	ataque
+Relation	T0	T3	NoRel	true	vuelo	aterrizaje
+Relation	T0	T7	NoRel	true	vuelo	tormenta
+Relation	T0	T9	NoRel	true	vuelo	giró
+Relation	T1	T0	NoRel	true	vectorizado	vuelo
+Relation	T1	T17	NoRel	true	vectorizado	ataque
+Relation	T10	T0	NoRel	true	alcanzada	vuelo
+Relation	T10	T1	NoRel	true	alcanzada	vectorizado
+Relation	T10	T14	NoRel	true	alcanzada	escape
+Relation	T10	T15	NoRel	true	alcanzada	rayo
+Relation	T10	T5	NoRel	true	alcanzada	capturó
+Relation	T10	T6	NoRel	true	alcanzada	aproximación
+Relation	T10	T9	NoRel	true	alcanzada	giró
+Relation	T11	T13	NoRel	true	rayo	salió
+Relation	T11	T14	NoRel	true	rayo	escape
+Relation	T11	T2	NoRel	true	rayo	aproximación
+Relation	T11	T3	NoRel	true	rayo	aterrizaje
+Relation	T11	T4	NoRel	true	rayo	descendió
+Relation	T12	T13	NoRel	true	entró	salió
+Relation	T12	T17	NoRel	true	entró	ataque
+Relation	T12	T5	NoRel	true	entró	capturó
+Relation	T13	T14	NoRel	true	salió	escape
+Relation	T13	T17	NoRel	true	salió	ataque
+Relation	T13	T5	NoRel	true	salió	capturó
+Relation	T14	T0	NoRel	true	escape	vuelo
+Relation	T14	T15	NoRel	true	escape	rayo
+Relation	T14	T16	NoRel	true	escape	apareció
+Relation	T14	T17	NoRel	true	escape	ataque
+Relation	T14	T3	NoRel	true	escape	aterrizaje
+Relation	T14	T5	NoRel	true	escape	capturó
+Relation	T14	T6	NoRel	true	escape	aproximación
+Relation	T14	T7	NoRel	true	escape	tormenta
+Relation	T14	T8	NoRel	true	escape	mostraba
+Relation	T15	T0	NoRel	true	rayo	vuelo
+Relation	T15	T1	NoRel	true	rayo	vectorizado
+Relation	T15	T10	NoRel	true	rayo	alcanzada
+Relation	T15	T17	NoRel	true	rayo	ataque
+Relation	T15	T2	NoRel	true	rayo	aproximación
+Relation	T15	T3	NoRel	true	rayo	aterrizaje
+Relation	T15	T5	NoRel	true	rayo	capturó
+Relation	T15	T9	NoRel	true	rayo	giró
+Relation	T16	T0	NoRel	true	apareció	vuelo
+Relation	T16	T1	NoRel	true	apareció	vectorizado
+Relation	T16	T12	NoRel	true	apareció	entró
+Relation	T16	T14	NoRel	true	apareció	escape
+Relation	T16	T15	NoRel	true	apareció	rayo
+Relation	T16	T17	NoRel	true	apareció	ataque
+Relation	T16	T3	NoRel	true	apareció	aterrizaje
+Relation	T16	T5	NoRel	true	apareció	capturó
+Relation	T16	T7	NoRel	true	apareció	tormenta
+Relation	T16	T8	NoRel	true	apareció	mostraba
+Relation	T16	T9	NoRel	true	apareció	giró
+Relation	T17	T1	NoRel	true	ataque	vectorizado
+Relation	T17	T11	NoRel	true	ataque	rayo
+Relation	T17	T13	NoRel	true	ataque	salió
+Relation	T17	T15	NoRel	true	ataque	rayo
+Relation	T17	T3	NoRel	true	ataque	aterrizaje
+Relation	T17	T5	NoRel	true	ataque	capturó
+Relation	T17	T6	NoRel	true	ataque	aproximación
+Relation	T17	T7	NoRel	true	ataque	tormenta
+Relation	T17	T9	NoRel	true	ataque	giró
+Relation	T2	T0	NoRel	true	aproximación	vuelo
+Relation	T2	T10	NoRel	true	aproximación	alcanzada
+Relation	T2	T13	NoRel	true	aproximación	salió
+Relation	T2	T15	NoRel	true	aproximación	rayo
+Relation	T2	T17	NoRel	true	aproximación	ataque
+Relation	T2	T3	NoRel	true	aproximación	aterrizaje
+Relation	T2	T8	NoRel	true	aproximación	mostraba
+Relation	T3	T1	NoRel	true	aterrizaje	vectorizado
+Relation	T3	T10	NoRel	true	aterrizaje	alcanzada
+Relation	T3	T13	NoRel	true	aterrizaje	salió
+Relation	T3	T17	NoRel	true	aterrizaje	ataque
+Relation	T3	T5	NoRel	true	aterrizaje	capturó
+Relation	T3	T6	NoRel	true	aterrizaje	aproximación
+Relation	T4	T1	NoRel	true	descendió	vectorizado
+Relation	T4	T14	NoRel	true	descendió	escape
+Relation	T4	T16	NoRel	true	descendió	apareció
+Relation	T4	T17	NoRel	true	descendió	ataque
+Relation	T4	T2	NoRel	true	descendió	aproximación
+Relation	T4	T8	NoRel	true	descendió	mostraba
+Relation	T4	T9	NoRel	true	descendió	giró
+Relation	T5	T13	NoRel	true	capturó	salió
+Relation	T5	T14	NoRel	true	capturó	escape
+Relation	T5	T4	NoRel	true	capturó	descendió
+Relation	T5	T8	NoRel	true	capturó	mostraba
+Relation	T6	T1	NoRel	true	aproximación	vectorizado
+Relation	T6	T10	NoRel	true	aproximación	alcanzada
+Relation	T6	T11	NoRel	true	aproximación	rayo
+Relation	T6	T13	NoRel	true	aproximación	salió
+Relation	T6	T15	NoRel	true	aproximación	rayo
+Relation	T6	T16	NoRel	true	aproximación	apareció
+Relation	T6	T17	NoRel	true	aproximación	ataque
+Relation	T6	T7	NoRel	true	aproximación	tormenta
+Relation	T6	T8	NoRel	true	aproximación	mostraba
+Relation	T7	T10	NoRel	true	tormenta	alcanzada
+Relation	T7	T11	NoRel	true	tormenta	rayo
+Relation	T7	T15	NoRel	true	tormenta	rayo
+Relation	T7	T17	NoRel	true	tormenta	ataque
+Relation	T7	T2	NoRel	true	tormenta	aproximación
+Relation	T7	T5	NoRel	true	tormenta	capturó
+Relation	T7	T8	NoRel	true	tormenta	mostraba
+Relation	T8	T1	NoRel	true	mostraba	vectorizado
+Relation	T8	T10	NoRel	true	mostraba	alcanzada
+Relation	T8	T14	NoRel	true	mostraba	escape
+Relation	T8	T4	NoRel	true	mostraba	descendió
+Relation	T8	T5	NoRel	true	mostraba	capturó
+Relation	T8	T7	NoRel	true	mostraba	tormenta
+Relation	T9	T12	NoRel	true	giró	entró
+Relation	T9	T13	NoRel	true	giró	salió
+Relation	T9	T16	NoRel	true	giró	apareció
+Relation	T9	T17	NoRel	true	giró	ataque
+Relation	T9	T5	NoRel	true	giró	capturó

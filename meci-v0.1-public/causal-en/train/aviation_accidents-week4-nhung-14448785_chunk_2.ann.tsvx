@@ -1,0 +1,43 @@
+Text	A 2019 article in _ The Guardian _ newspaper reported that , after the crash , documents and photographs about it disappeared .	The 11 September page in the log book for _ Le Suffren _ , a French Navy missile frigate in the area , was torn out .	The aircraft 's black box flight recorder was said to have been damaged , with the recording of flight AF 1611 unreadable , although earlier flights were recorded .	Wreckage recovered was seized by France 's military .	An investigation was started in 2011 by gendarmes , and in September 2019 the theory that a fire had started in a toilet was disproved .
+Event	T0	reported	EVENT	45
+Event	T1	crash	EVENT	71
+Event	T2	disappeared	EVENT	114
+Event	T3	frigate	EVENT	209
+Event	T4	flight	EVENT	272
+Event	T5	said	EVENT	292
+Event	T6	damaged	EVENT	310
+Event	T7	recording	EVENT	329
+Event	T8	flight	EVENT	342
+Event	T9	flights	EVENT	387
+Event	T10	recorded	EVENT	400
+Event	T11	recovered	EVENT	420
+Event	T12	seized	EVENT	434
+Event	T13	investigation	EVENT	468
+Event	T14	started	EVENT	486
+Event	T15	fire	EVENT	557
+Event	T16	started	EVENT	566
+Event	T17	disproved	EVENT	590
+Event	T18	torn out	EVENT	235
+Relation	T0	T2	NoRel	true	reported	disappeared
+Relation	T1	T16	NoRel	true	crash	started
+Relation	T10	T7	NoRel	true	recorded	recording
+Relation	T11	T18	NoRel	true	recovered	torn out
+Relation	T12	T5	NoRel	true	seized	said
+Relation	T12	T8	NoRel	true	seized	flight
+Relation	T14	T11	NoRel	true	started	recovered
+Relation	T15	T2	NoRel	true	fire	disappeared
+Relation	T17	T7	NoRel	true	disproved	recording
+Relation	T17	T8	NoRel	true	disproved	flight
+Relation	T18	T14	NoRel	true	torn out	started
+Relation	T18	T17	NoRel	true	torn out	disproved
+Relation	T18	T2	NoRel	true	torn out	disappeared
+Relation	T18	T7	NoRel	true	torn out	recording
+Relation	T2	T16	NoRel	true	disappeared	started
+Relation	T3	T2	NoRel	true	frigate	disappeared
+Relation	T3	T8	NoRel	true	frigate	flight
+Relation	T5	T18	NoRel	true	said	torn out
+Relation	T5	T8	NoRel	true	said	flight
+Relation	T7	T1	NoRel	true	recording	crash
+Relation	T8	T10	NoRel	true	flight	recorded
+Relation	T8	T18	NoRel	true	flight	torn out
+Relation	T9	T13	NoRel	true	flights	investigation

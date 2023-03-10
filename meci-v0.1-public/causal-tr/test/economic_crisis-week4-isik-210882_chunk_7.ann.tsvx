@@ -1,0 +1,47 @@
+Text	Sanayi üretimi ve ihracat azalıp işsizlik artmış , kapasite olarak talep ve büyüme daralmıştır .	1997 yılına kadar Asya , gelişmekte olan ülkelere akan sermayenin neredeyse yarısına yakınını çekmekteydi .	Özellikle Güney Asya ekonomileri yüksek faiz politikası izleyerek yüksek kar elde etmek isteyen yabancı yatırımcıları kendilerine çektiler .	Bunun sonucu olarak bu ekonomiler yüksek miktarda sıcak para çektiler ve değerli kıymetlerin fiyatları yükseldi .	Bu yıllarda , yani 1980'lerin sonları ve 1990'ların başlarında , Tayland , Malezya , Endonezya , Filipinler , Singapur ve Güney Kore ekonomileri % 8 ile % 12 arasında yüksek büyüme gerçekleştirdiler .
+Event	T1	artmış	EVENT	42
+Event	T2	daralmıştır	EVENT	83
+Event	T3	çekmekteydi	EVENT	191
+Event	T4	çektiler	EVENT	335
+Event	T5	çektiler	EVENT	407
+Event	T6	yükseldi	EVENT	449
+Event	T7	gerçekleştirdiler	EVENT	641
+Event	T8	azalıp	EVENT	26
+Event	T9	politikası	EVENT	250
+Relation	T9	T4	CauseEffect	true	politikası	çektiler
+Relation	T4	T9	EffectCause	true	çektiler	politikası
+Relation	T4	T5	CauseEffect	true	çektiler	çektiler
+Relation	T5	T4	EffectCause	true	çektiler	çektiler
+Relation	T5	T6	CauseEffect	true	çektiler	yükseldi
+Relation	T6	T5	EffectCause	true	yükseldi	çektiler
+Relation	T6	T7	CauseEffect	true	yükseldi	gerçekleştirdiler
+Relation	T7	T6	EffectCause	true	gerçekleştirdiler	yükseldi
+Relation	T1	T3	NoRel	true	artmış	çekmekteydi
+Relation	T1	T4	NoRel	true	artmış	çektiler
+Relation	T1	T5	NoRel	true	artmış	çektiler
+Relation	T1	T7	NoRel	true	artmış	gerçekleştirdiler
+Relation	T1	T8	NoRel	true	artmış	azalıp
+Relation	T1	T9	NoRel	true	artmış	politikası
+Relation	T2	T1	NoRel	true	daralmıştır	artmış
+Relation	T2	T8	NoRel	true	daralmıştır	azalıp
+Relation	T2	T9	NoRel	true	daralmıştır	politikası
+Relation	T3	T2	NoRel	true	çekmekteydi	daralmıştır
+Relation	T3	T5	NoRel	true	çekmekteydi	çektiler
+Relation	T3	T7	NoRel	true	çekmekteydi	gerçekleştirdiler
+Relation	T3	T8	NoRel	true	çekmekteydi	azalıp
+Relation	T4	T1	NoRel	true	çektiler	artmış
+Relation	T4	T7	NoRel	true	çektiler	gerçekleştirdiler
+Relation	T4	T8	NoRel	true	çektiler	azalıp
+Relation	T5	T3	NoRel	true	çektiler	çekmekteydi
+Relation	T5	T8	NoRel	true	çektiler	azalıp
+Relation	T6	T3	NoRel	true	yükseldi	çekmekteydi
+Relation	T6	T9	NoRel	true	yükseldi	politikası
+Relation	T7	T2	NoRel	true	gerçekleştirdiler	daralmıştır
+Relation	T7	T4	NoRel	true	gerçekleştirdiler	çektiler
+Relation	T7	T8	NoRel	true	gerçekleştirdiler	azalıp
+Relation	T7	T9	NoRel	true	gerçekleştirdiler	politikası
+Relation	T8	T1	NoRel	true	azalıp	artmış
+Relation	T8	T2	NoRel	true	azalıp	daralmıştır
+Relation	T8	T3	NoRel	true	azalıp	çekmekteydi
+Relation	T9	T3	NoRel	true	politikası	çekmekteydi
+Relation	T9	T6	NoRel	true	politikası	yükseldi

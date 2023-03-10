@@ -1,0 +1,54 @@
+Text	OF FELAKETI veya OF SEL BASKINI , 6 Temmuz 1929 yılında Trabzon iline bağlı Of , Çaykara ve Sürmene ilçelerinde etkili olan çok sayıda kişinin ölümü ve evin yıkımına sebep olan büyük sel baskınının adıdır .	Bu sel baskınında evlerini kaybedenlerin büyük bölümü Arap Kaymakam döneminde Maçka ilçesinde 1923 mübadelesi ile Yunanistan'a gönderilen Karadeniz Rumları'nın evlerine yerleştirilmiştir .	Felaket Kategori : Maçka Kategori : Sürmene Kategori : Çaykara Kategori : Trabzon tarihi Kategori : Türkiye'deki seller Kategori : 1929'daki doğal afetler Kategori : 1929'da Türkiye		
+Event	T0	FELAKETI	EVENT	3
+Event	T1	BASKINI	EVENT	24
+Event	T2	etkili	EVENT	112
+Event	T3	ölümü	EVENT	143
+Event	T4	baskınında	EVENT	214
+Event	T5	kaybedenlerin	EVENT	234
+Event	T6	yerleştirilmiştir	EVENT	376
+Event	T7	Felaket	EVENT	396
+Event	T8	yıkımına	EVENT	157
+Event	T9	seller	EVENT	509
+Event	T10	afetler	EVENT	543
+Relation	T0	T6	CauseEffect	true	FELAKETI	yerleştirilmiştir
+Relation	T6	T0	EffectCause	true	yerleştirilmiştir	FELAKETI
+Relation	T1	T6	CauseEffect	true	BASKINI	yerleştirilmiştir
+Relation	T6	T1	EffectCause	true	yerleştirilmiştir	BASKINI
+Relation	T0	T5	CauseEffect	true	FELAKETI	kaybedenlerin
+Relation	T5	T0	EffectCause	true	kaybedenlerin	FELAKETI
+Relation	T1	T5	CauseEffect	true	BASKINI	kaybedenlerin
+Relation	T5	T1	EffectCause	true	kaybedenlerin	BASKINI
+Relation	T5	T6	CauseEffect	true	kaybedenlerin	yerleştirilmiştir
+Relation	T6	T5	EffectCause	true	yerleştirilmiştir	kaybedenlerin
+Relation	T4	T5	CauseEffect	true	baskınında	kaybedenlerin
+Relation	T5	T4	EffectCause	true	kaybedenlerin	baskınında
+Relation	T0	T8	NoRel	true	FELAKETI	yıkımına
+Relation	T0	T9	NoRel	true	FELAKETI	seller
+Relation	T1	T0	NoRel	true	BASKINI	FELAKETI
+Relation	T1	T8	NoRel	true	BASKINI	yıkımına
+Relation	T10	T1	NoRel	true	afetler	BASKINI
+Relation	T10	T2	NoRel	true	afetler	etkili
+Relation	T10	T4	NoRel	true	afetler	baskınında
+Relation	T10	T7	NoRel	true	afetler	Felaket
+Relation	T2	T3	NoRel	true	etkili	ölümü
+Relation	T2	T7	NoRel	true	etkili	Felaket
+Relation	T2	T9	NoRel	true	etkili	seller
+Relation	T3	T6	NoRel	true	ölümü	yerleştirilmiştir
+Relation	T4	T2	NoRel	true	baskınında	etkili
+Relation	T4	T6	NoRel	true	baskınında	yerleştirilmiştir
+Relation	T4	T8	NoRel	true	baskınında	yıkımına
+Relation	T4	T9	NoRel	true	baskınında	seller
+Relation	T5	T7	NoRel	true	kaybedenlerin	Felaket
+Relation	T6	T10	NoRel	true	yerleştirilmiştir	afetler
+Relation	T6	T2	NoRel	true	yerleştirilmiştir	etkili
+Relation	T6	T7	NoRel	true	yerleştirilmiştir	Felaket
+Relation	T6	T8	NoRel	true	yerleştirilmiştir	yıkımına
+Relation	T7	T1	NoRel	true	Felaket	BASKINI
+Relation	T7	T4	NoRel	true	Felaket	baskınında
+Relation	T7	T6	NoRel	true	Felaket	yerleştirilmiştir
+Relation	T8	T3	NoRel	true	yıkımına	ölümü
+Relation	T8	T6	NoRel	true	yıkımına	yerleştirilmiştir
+Relation	T8	T7	NoRel	true	yıkımına	Felaket
+Relation	T9	T0	NoRel	true	seller	FELAKETI
+Relation	T9	T3	NoRel	true	seller	ölümü
+Relation	T9	T4	NoRel	true	seller	baskınında

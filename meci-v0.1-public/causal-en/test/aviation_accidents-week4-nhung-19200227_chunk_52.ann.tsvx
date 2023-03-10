@@ -1,0 +1,74 @@
+Text	27 March : A USN Grumman F - 14A Tomcat , BuNo__158995_ , ' NK 106 ' , of VF - 1 , crashes and catapults across scrub grass to come to rest against a concrete highway divider on CA - 163 , the Cabrillo Freeway , on approach to NAS Miramar , San Diego , California , exploding in flames .	Both crew members eject seconds before impact ; one fatality , no civilian deaths . °	26 April : Lockheed P - 3 Orion , BuNo__152724_ , ' LJ - 04 ' , of VP - 23 , crashed at sea on landing approach to Lajes , killing seven .	Cause of the accident was undetermined due to inability to recover aircraft remains from the extreme depths .	4 May : First prototype Lockheed Have Blue stealth test bed , c / n 1001 , on its 37th flight , hit the runway a little too hard at Groom Lake , Nevada , and had to lift off for another pass rather than go into a skid , but had bent the right main gear strut .
+Event	T0	crashes	EVENT	83
+Event	T1	catapults	EVENT	95
+Event	T2	rest	EVENT	135
+Event	T3	divider	EVENT	167
+Event	T4	approach	EVENT	215
+Event	T5	flames	EVENT	279
+Event	T6	eject	EVENT	306
+Event	T7	impact	EVENT	327
+Event	T8	fatality	EVENT	340
+Event	T9	deaths	EVENT	363
+Event	T10	crashed	EVENT	451
+Event	T11	killing	EVENT	497
+Event	T12	accident	EVENT	526
+Event	T13	recover	EVENT	572
+Event	T14	test	EVENT	674
+Event	T15	flight	EVENT	710
+Event	T16	had	EVENT	781
+Event	T17	pass	EVENT	809
+Event	T18	skid	EVENT	836
+Event	T19	bent	EVENT	851
+Event	T20	strut	EVENT	876
+Event	T21	exploding	EVENT	266
+Event	T22	hit	EVENT	719
+Relation	T10	T11	CauseEffect	true	crashed	killing
+Relation	T11	T10	EffectCause	true	killing	crashed
+Relation	T0	T18	NoRel	true	crashes	skid
+Relation	T0	T22	NoRel	true	crashes	hit
+Relation	T0	T9	NoRel	true	crashes	deaths
+Relation	T1	T16	NoRel	true	catapults	had
+Relation	T1	T19	NoRel	true	catapults	bent
+Relation	T1	T20	NoRel	true	catapults	strut
+Relation	T1	T3	NoRel	true	catapults	divider
+Relation	T1	T4	NoRel	true	catapults	approach
+Relation	T1	T8	NoRel	true	catapults	fatality
+Relation	T11	T8	NoRel	true	killing	fatality
+Relation	T13	T10	NoRel	true	recover	crashed
+Relation	T13	T11	NoRel	true	recover	killing
+Relation	T13	T18	NoRel	true	recover	skid
+Relation	T14	T13	NoRel	true	test	recover
+Relation	T14	T18	NoRel	true	test	skid
+Relation	T14	T9	NoRel	true	test	deaths
+Relation	T15	T18	NoRel	true	flight	skid
+Relation	T15	T5	NoRel	true	flight	flames
+Relation	T16	T4	NoRel	true	had	approach
+Relation	T16	T5	NoRel	true	had	flames
+Relation	T17	T0	NoRel	true	pass	crashes
+Relation	T17	T15	NoRel	true	pass	flight
+Relation	T18	T19	NoRel	true	skid	bent
+Relation	T18	T22	NoRel	true	skid	hit
+Relation	T19	T10	NoRel	true	bent	crashed
+Relation	T19	T7	NoRel	true	bent	impact
+Relation	T19	T8	NoRel	true	bent	fatality
+Relation	T2	T10	NoRel	true	rest	crashed
+Relation	T2	T6	NoRel	true	rest	eject
+Relation	T20	T16	NoRel	true	strut	had
+Relation	T20	T2	NoRel	true	strut	rest
+Relation	T21	T14	NoRel	true	exploding	test
+Relation	T21	T15	NoRel	true	exploding	flight
+Relation	T21	T16	NoRel	true	exploding	had
+Relation	T21	T18	NoRel	true	exploding	skid
+Relation	T21	T4	NoRel	true	exploding	approach
+Relation	T22	T19	NoRel	true	hit	bent
+Relation	T3	T16	NoRel	true	divider	had
+Relation	T4	T9	NoRel	true	approach	deaths
+Relation	T5	T18	NoRel	true	flames	skid
+Relation	T5	T19	NoRel	true	flames	bent
+Relation	T5	T4	NoRel	true	flames	approach
+Relation	T6	T10	NoRel	true	eject	crashed
+Relation	T6	T17	NoRel	true	eject	pass
+Relation	T6	T7	NoRel	true	eject	impact
+Relation	T7	T1	NoRel	true	impact	catapults
+Relation	T7	T19	NoRel	true	impact	bent
+Relation	T8	T9	NoRel	true	fatality	deaths

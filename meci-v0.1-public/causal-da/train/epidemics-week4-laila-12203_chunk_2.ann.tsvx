@@ -1,0 +1,158 @@
+Text	Den kan derfor let forveksles med influenza .	Der findes ingen specifik behandling af sygdommen , så behandlingen kan alene rettes mod symptomerne .	10-20 % af de personer som rammes får så svære symptomer , at de risikerer at dø af sygdommen .	Specielt ældre mennesker over 65 år risikerer at dø af SARS , i denne aldersgruppe er dødeligheden 50 % .	Sygdommen smitter som almindelig influenza via dråbesmitte på tæt hold fra menneske til menneske .
+Event	T0	behandlingen	EVENT	101
+Event	T1	får	EVENT	183
+Event	T2	risikerer	EVENT	214
+Event	T3	dø	EVENT	227
+Event	T4	risikerer	EVENT	281
+Event	T5	dø	EVENT	294
+Event	T6	dødeligheden	EVENT	331
+Event	T7	smitter	EVENT	361
+Event	T8	influenza	EVENT	384
+Event	T9	forveksles	EVENT	19
+Event	T10	influenza	EVENT	34
+Event	T11	behandling	EVENT	72
+Event	T12	sygdommen	EVENT	86
+Event	T13	symptomerne	EVENT	135
+Event	T14	rammes	EVENT	176
+Event	T15	symptomer	EVENT	196
+Event	T16	sygdommen	EVENT	233
+Event	T17	SARS	EVENT	300
+Event	T18	Sygdommen	EVENT	351
+Event	T19	dråbesmitte	EVENT	398
+Relation	T14	T15	CauseEffect	true	rammes	symptomer
+Relation	T15	T14	EffectCause	true	symptomer	rammes
+Relation	T15	T3	CauseEffect	true	symptomer	dø
+Relation	T3	T15	EffectCause	true	dø	symptomer
+Relation	T16	T3	CauseEffect	true	sygdommen	dø
+Relation	T3	T16	EffectCause	true	dø	sygdommen
+Relation	T17	T5	CauseEffect	true	SARS	dø
+Relation	T5	T17	EffectCause	true	dø	SARS
+Relation	T19	T18	CauseEffect	true	dråbesmitte	Sygdommen
+Relation	T18	T19	EffectCause	true	Sygdommen	dråbesmitte
+Relation	T0	T19	NoRel	true	behandlingen	dråbesmitte
+Relation	T0	T3	NoRel	true	behandlingen	dø
+Relation	T0	T8	NoRel	true	behandlingen	influenza
+Relation	T1	T13	NoRel	true	får	symptomerne
+Relation	T1	T14	NoRel	true	får	rammes
+Relation	T1	T15	NoRel	true	får	symptomer
+Relation	T1	T16	NoRel	true	får	sygdommen
+Relation	T1	T2	NoRel	true	får	risikerer
+Relation	T1	T4	NoRel	true	får	risikerer
+Relation	T1	T7	NoRel	true	får	smitter
+Relation	T10	T13	NoRel	true	influenza	symptomerne
+Relation	T10	T14	NoRel	true	influenza	rammes
+Relation	T10	T18	NoRel	true	influenza	Sygdommen
+Relation	T10	T6	NoRel	true	influenza	dødeligheden
+Relation	T10	T8	NoRel	true	influenza	influenza
+Relation	T11	T0	NoRel	true	behandling	behandlingen
+Relation	T11	T1	NoRel	true	behandling	får
+Relation	T11	T13	NoRel	true	behandling	symptomerne
+Relation	T11	T14	NoRel	true	behandling	rammes
+Relation	T11	T17	NoRel	true	behandling	SARS
+Relation	T11	T18	NoRel	true	behandling	Sygdommen
+Relation	T11	T19	NoRel	true	behandling	dråbesmitte
+Relation	T11	T4	NoRel	true	behandling	risikerer
+Relation	T11	T6	NoRel	true	behandling	dødeligheden
+Relation	T11	T8	NoRel	true	behandling	influenza
+Relation	T11	T9	NoRel	true	behandling	forveksles
+Relation	T12	T16	NoRel	true	sygdommen	sygdommen
+Relation	T12	T6	NoRel	true	sygdommen	dødeligheden
+Relation	T13	T1	NoRel	true	symptomerne	får
+Relation	T13	T10	NoRel	true	symptomerne	influenza
+Relation	T13	T11	NoRel	true	symptomerne	behandling
+Relation	T13	T12	NoRel	true	symptomerne	sygdommen
+Relation	T13	T17	NoRel	true	symptomerne	SARS
+Relation	T13	T19	NoRel	true	symptomerne	dråbesmitte
+Relation	T13	T7	NoRel	true	symptomerne	smitter
+Relation	T13	T8	NoRel	true	symptomerne	influenza
+Relation	T13	T9	NoRel	true	symptomerne	forveksles
+Relation	T14	T0	NoRel	true	rammes	behandlingen
+Relation	T14	T10	NoRel	true	rammes	influenza
+Relation	T14	T12	NoRel	true	rammes	sygdommen
+Relation	T14	T13	NoRel	true	rammes	symptomerne
+Relation	T14	T19	NoRel	true	rammes	dråbesmitte
+Relation	T14	T3	NoRel	true	rammes	dø
+Relation	T14	T4	NoRel	true	rammes	risikerer
+Relation	T14	T7	NoRel	true	rammes	smitter
+Relation	T14	T8	NoRel	true	rammes	influenza
+Relation	T14	T9	NoRel	true	rammes	forveksles
+Relation	T15	T0	NoRel	true	symptomer	behandlingen
+Relation	T15	T16	NoRel	true	symptomer	sygdommen
+Relation	T15	T18	NoRel	true	symptomer	Sygdommen
+Relation	T15	T19	NoRel	true	symptomer	dråbesmitte
+Relation	T15	T6	NoRel	true	symptomer	dødeligheden
+Relation	T15	T7	NoRel	true	symptomer	smitter
+Relation	T16	T1	NoRel	true	sygdommen	får
+Relation	T16	T10	NoRel	true	sygdommen	influenza
+Relation	T16	T15	NoRel	true	sygdommen	symptomer
+Relation	T16	T19	NoRel	true	sygdommen	dråbesmitte
+Relation	T16	T2	NoRel	true	sygdommen	risikerer
+Relation	T16	T8	NoRel	true	sygdommen	influenza
+Relation	T17	T11	NoRel	true	SARS	behandling
+Relation	T17	T14	NoRel	true	SARS	rammes
+Relation	T17	T16	NoRel	true	SARS	sygdommen
+Relation	T17	T18	NoRel	true	SARS	Sygdommen
+Relation	T17	T3	NoRel	true	SARS	dø
+Relation	T17	T8	NoRel	true	SARS	influenza
+Relation	T17	T9	NoRel	true	SARS	forveksles
+Relation	T18	T14	NoRel	true	Sygdommen	rammes
+Relation	T18	T15	NoRel	true	Sygdommen	symptomer
+Relation	T18	T17	NoRel	true	Sygdommen	SARS
+Relation	T18	T4	NoRel	true	Sygdommen	risikerer
+Relation	T18	T5	NoRel	true	Sygdommen	dø
+Relation	T19	T16	NoRel	true	dråbesmitte	sygdommen
+Relation	T19	T2	NoRel	true	dråbesmitte	risikerer
+Relation	T19	T6	NoRel	true	dråbesmitte	dødeligheden
+Relation	T19	T9	NoRel	true	dråbesmitte	forveksles
+Relation	T2	T0	NoRel	true	risikerer	behandlingen
+Relation	T2	T15	NoRel	true	risikerer	symptomer
+Relation	T2	T18	NoRel	true	risikerer	Sygdommen
+Relation	T2	T8	NoRel	true	risikerer	influenza
+Relation	T2	T9	NoRel	true	risikerer	forveksles
+Relation	T3	T0	NoRel	true	dø	behandlingen
+Relation	T3	T10	NoRel	true	dø	influenza
+Relation	T3	T13	NoRel	true	dø	symptomerne
+Relation	T3	T19	NoRel	true	dø	dråbesmitte
+Relation	T3	T8	NoRel	true	dø	influenza
+Relation	T3	T9	NoRel	true	dø	forveksles
+Relation	T4	T0	NoRel	true	risikerer	behandlingen
+Relation	T4	T12	NoRel	true	risikerer	sygdommen
+Relation	T4	T19	NoRel	true	risikerer	dråbesmitte
+Relation	T4	T2	NoRel	true	risikerer	risikerer
+Relation	T4	T3	NoRel	true	risikerer	dø
+Relation	T4	T6	NoRel	true	risikerer	dødeligheden
+Relation	T4	T8	NoRel	true	risikerer	influenza
+Relation	T4	T9	NoRel	true	risikerer	forveksles
+Relation	T5	T0	NoRel	true	dø	behandlingen
+Relation	T5	T1	NoRel	true	dø	får
+Relation	T5	T10	NoRel	true	dø	influenza
+Relation	T5	T14	NoRel	true	dø	rammes
+Relation	T5	T19	NoRel	true	dø	dråbesmitte
+Relation	T5	T2	NoRel	true	dø	risikerer
+Relation	T5	T3	NoRel	true	dø	dø
+Relation	T5	T6	NoRel	true	dø	dødeligheden
+Relation	T6	T14	NoRel	true	dødeligheden	rammes
+Relation	T6	T17	NoRel	true	dødeligheden	SARS
+Relation	T6	T3	NoRel	true	dødeligheden	dø
+Relation	T6	T5	NoRel	true	dødeligheden	dø
+Relation	T6	T7	NoRel	true	dødeligheden	smitter
+Relation	T6	T8	NoRel	true	dødeligheden	influenza
+Relation	T6	T9	NoRel	true	dødeligheden	forveksles
+Relation	T7	T0	NoRel	true	smitter	behandlingen
+Relation	T7	T19	NoRel	true	smitter	dråbesmitte
+Relation	T7	T2	NoRel	true	smitter	risikerer
+Relation	T7	T8	NoRel	true	smitter	influenza
+Relation	T8	T19	NoRel	true	influenza	dråbesmitte
+Relation	T8	T3	NoRel	true	influenza	dø
+Relation	T8	T4	NoRel	true	influenza	risikerer
+Relation	T8	T7	NoRel	true	influenza	smitter
+Relation	T9	T0	NoRel	true	forveksles	behandlingen
+Relation	T9	T1	NoRel	true	forveksles	får
+Relation	T9	T11	NoRel	true	forveksles	behandling
+Relation	T9	T14	NoRel	true	forveksles	rammes
+Relation	T9	T15	NoRel	true	forveksles	symptomer
+Relation	T9	T16	NoRel	true	forveksles	sygdommen
+Relation	T9	T19	NoRel	true	forveksles	dråbesmitte
+Relation	T9	T3	NoRel	true	forveksles	dø
+Relation	T9	T5	NoRel	true	forveksles	dø
+Relation	T9	T7	NoRel	true	forveksles	smitter

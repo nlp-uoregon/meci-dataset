@@ -1,0 +1,42 @@
+Text	Om hans optræden blev dokumentarfilmen Man on Wire lavet .	På Memorial Day i 1983 klatrede Dan Goodwin op ad World Trade Centers nordlige tårn .	Hans stunt var for at henlede opmærksomheden på den manglende evne til at redde mennesker potentielt fanget i de øverste etager af skyskrabere .	I 1995 blev VM i skak afholdt på 107. etage i det sydlige tårn .	Den 13. februar 1975 udbrød en brand på 11. etage i det nordlige tårn .
+Event	T0	lavet	EVENT	51
+Event	T1	klatrede	EVENT	82
+Event	T2	stunt	EVENT	150
+Event	T3	henlede	EVENT	167
+Event	T4	redde	EVENT	219
+Event	T5	fanget	EVENT	246
+Event	T6	afholdt	EVENT	312
+Event	T7	udbrød	EVENT	376
+Event	T8	brand	EVENT	386
+Event	T9	optræden	EVENT	8
+Relation	T2	T3	CauseEffect	true	stunt	henlede
+Relation	T3	T2	EffectCause	true	henlede	stunt
+Relation	T1	T3	CauseEffect	true	klatrede	henlede
+Relation	T3	T1	EffectCause	true	henlede	klatrede
+Relation	T0	T3	NoRel	true	lavet	henlede
+Relation	T0	T4	NoRel	true	lavet	redde
+Relation	T0	T6	NoRel	true	lavet	afholdt
+Relation	T0	T8	NoRel	true	lavet	brand
+Relation	T1	T5	NoRel	true	klatrede	fanget
+Relation	T1	T6	NoRel	true	klatrede	afholdt
+Relation	T1	T7	NoRel	true	klatrede	udbrød
+Relation	T1	T9	NoRel	true	klatrede	optræden
+Relation	T2	T1	NoRel	true	stunt	klatrede
+Relation	T3	T6	NoRel	true	henlede	afholdt
+Relation	T5	T0	NoRel	true	fanget	lavet
+Relation	T5	T3	NoRel	true	fanget	henlede
+Relation	T5	T4	NoRel	true	fanget	redde
+Relation	T6	T0	NoRel	true	afholdt	lavet
+Relation	T6	T3	NoRel	true	afholdt	henlede
+Relation	T6	T4	NoRel	true	afholdt	redde
+Relation	T6	T9	NoRel	true	afholdt	optræden
+Relation	T7	T3	NoRel	true	udbrød	henlede
+Relation	T7	T5	NoRel	true	udbrød	fanget
+Relation	T7	T6	NoRel	true	udbrød	afholdt
+Relation	T7	T8	NoRel	true	udbrød	brand
+Relation	T7	T9	NoRel	true	udbrød	optræden
+Relation	T8	T2	NoRel	true	brand	stunt
+Relation	T8	T5	NoRel	true	brand	fanget
+Relation	T9	T0	NoRel	true	optræden	lavet
+Relation	T9	T2	NoRel	true	optræden	stunt
+Relation	T9	T6	NoRel	true	optræden	afholdt

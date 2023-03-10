@@ -1,0 +1,62 @@
+Text	Most commonly : One attacker , two or multiple attackers rush toward tori and try to grab both elbows .	Tori 's challenge is to apply strategy , quick taisabaki , and to maintain aikido 's approach which is - avoiding as much as possible from hurting the attackers .	Therefore , tori does not punch , but rather tries to avoid the attacks or to throw the attackers .	In some aikido styles , the attack is free , and so are the techniques applied - as long as they follow the principles of aikido .	Although in karate the word _ kumite _ is usually reserved for sparring , some schools also employ the term _ randori _ with regard to " mock - combat " in which both karateka move with speed , parrying and attacking with all four limbs ( including knees , elbows , etc. ) .
+Event	T1	try	EVENT	78
+Event	T10	applied	EVENT	438
+Event	T11	reserved	EVENT	548
+Event	T12	sparring	EVENT	561
+Event	T13	employ	EVENT	590
+Event	T14	combat	EVENT	642
+Event	T15	move	EVENT	674
+Event	T16	parrying	EVENT	692
+Event	T17	attacking	EVENT	705
+Event	T18	maintain	EVENT	170
+Event	T19	approach	EVENT	189
+Event	T2	grab	EVENT	85
+Event	T20	avoid	EVENT	321
+Event	T21	follow	EVENT	464
+Event	T3	apply	EVENT	128
+Event	T4	avoiding	EVENT	209
+Event	T5	hurting	EVENT	243
+Event	T6	tries	EVENT	312
+Event	T7	attacks	EVENT	331
+Event	T8	throw	EVENT	345
+Event	T9	attack	EVENT	395
+Relation	T9	T10	CauseEffect	true	attack	applied
+Relation	T10	T9	EffectCause	true	applied	attack
+Relation	T9	T21	CauseEffect	true	attack	follow
+Relation	T21	T9	EffectCause	true	follow	attack
+Relation	T1	T18	NoRel	true	try	maintain
+Relation	T1	T8	NoRel	true	try	throw
+Relation	T10	T1	NoRel	true	applied	try
+Relation	T10	T12	NoRel	true	applied	sparring
+Relation	T10	T17	NoRel	true	applied	attacking
+Relation	T11	T19	NoRel	true	reserved	approach
+Relation	T12	T9	NoRel	true	sparring	attack
+Relation	T13	T8	NoRel	true	employ	throw
+Relation	T13	T9	NoRel	true	employ	attack
+Relation	T14	T2	NoRel	true	combat	grab
+Relation	T15	T2	NoRel	true	move	grab
+Relation	T15	T8	NoRel	true	move	throw
+Relation	T16	T1	NoRel	true	parrying	try
+Relation	T16	T2	NoRel	true	parrying	grab
+Relation	T17	T8	NoRel	true	attacking	throw
+Relation	T18	T13	NoRel	true	maintain	employ
+Relation	T18	T17	NoRel	true	maintain	attacking
+Relation	T18	T8	NoRel	true	maintain	throw
+Relation	T19	T17	NoRel	true	approach	attacking
+Relation	T19	T6	NoRel	true	approach	tries
+Relation	T20	T11	NoRel	true	avoid	reserved
+Relation	T20	T9	NoRel	true	avoid	attack
+Relation	T21	T19	NoRel	true	follow	approach
+Relation	T3	T2	NoRel	true	apply	grab
+Relation	T4	T14	NoRel	true	avoiding	combat
+Relation	T4	T3	NoRel	true	avoiding	apply
+Relation	T4	T5	NoRel	true	avoiding	hurting
+Relation	T5	T11	NoRel	true	hurting	reserved
+Relation	T5	T15	NoRel	true	hurting	move
+Relation	T5	T16	NoRel	true	hurting	parrying
+Relation	T5	T4	NoRel	true	hurting	avoiding
+Relation	T6	T15	NoRel	true	tries	move
+Relation	T6	T2	NoRel	true	tries	grab
+Relation	T6	T3	NoRel	true	tries	apply
+Relation	T8	T15	NoRel	true	throw	move
+Relation	T8	T3	NoRel	true	throw	apply

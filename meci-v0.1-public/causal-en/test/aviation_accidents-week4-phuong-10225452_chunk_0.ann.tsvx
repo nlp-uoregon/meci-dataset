@@ -1,0 +1,51 @@
+Text	PAN AM FLIGHT 6 ( registration N90943 , and sometimes erroneously called Flight 943 ) was a round - the - world airline flight that ditched in the Pacific Ocean on October 16 , 1956 , after two of its four engines failed .	Flight 6 left Philadelphia on October 12 as a DC - 6 B and flew eastward to Europe and Asia on a multi-stop trip .	On the evening of October 15 the flight left Honolulu on a Boeing 377 Stratocruiser Clipper named _ Sovereign Of The Skies _ ( Pan Am fleet number 943 , registered N90943 ) .	The accident was the basis for the 1958 film _ Crash Landing _ .	The aircraft took off from Honolulu , Territory of Hawaii , at 8:26 p.m. HST on the flight 's last leg to San Francisco .
+Event	T0	registration	EVENT	18
+Event	T1	called	EVENT	66
+Event	T2	round	EVENT	92
+Event	T3	flight	EVENT	120
+Event	T4	ditched	EVENT	132
+Event	T5	failed	EVENT	214
+Event	T6	left	EVENT	232
+Event	T7	flew	EVENT	282
+Event	T8	trip	EVENT	331
+Event	T9	left	EVENT	378
+Event	T10	named	EVENT	430
+Event	T11	registered	EVENT	491
+Event	T12	accident	EVENT	517
+Event	T13	film	EVENT	553
+Event	T14	flight	EVENT	662
+Event	T15	leg	EVENT	677
+Event	T16	took off	EVENT	591
+Relation	T5	T4	CauseEffect	true	failed	ditched
+Relation	T4	T5	EffectCause	true	ditched	failed
+Relation	T12	T13	CauseEffect	true	accident	film
+Relation	T13	T12	EffectCause	true	film	accident
+Relation	T0	T10	NoRel	true	registration	named
+Relation	T0	T11	NoRel	true	registration	registered
+Relation	T1	T3	NoRel	true	called	flight
+Relation	T10	T3	NoRel	true	named	flight
+Relation	T11	T12	NoRel	true	registered	accident
+Relation	T11	T8	NoRel	true	registered	trip
+Relation	T12	T16	NoRel	true	accident	took off
+Relation	T13	T10	NoRel	true	film	named
+Relation	T13	T2	NoRel	true	film	round
+Relation	T13	T4	NoRel	true	film	ditched
+Relation	T14	T11	NoRel	true	flight	registered
+Relation	T15	T13	NoRel	true	leg	film
+Relation	T15	T9	NoRel	true	leg	left
+Relation	T16	T0	NoRel	true	took off	registration
+Relation	T16	T10	NoRel	true	took off	named
+Relation	T16	T11	NoRel	true	took off	registered
+Relation	T16	T2	NoRel	true	took off	round
+Relation	T2	T10	NoRel	true	round	named
+Relation	T2	T11	NoRel	true	round	registered
+Relation	T2	T3	NoRel	true	round	flight
+Relation	T4	T15	NoRel	true	ditched	leg
+Relation	T5	T1	NoRel	true	failed	called
+Relation	T5	T11	NoRel	true	failed	registered
+Relation	T6	T7	NoRel	true	left	flew
+Relation	T7	T0	NoRel	true	flew	registration
+Relation	T7	T6	NoRel	true	flew	left
+Relation	T9	T0	NoRel	true	left	registration
+Relation	T9	T10	NoRel	true	left	named
+Relation	T9	T11	NoRel	true	left	registered

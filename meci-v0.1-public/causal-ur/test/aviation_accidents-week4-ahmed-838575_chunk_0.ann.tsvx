@@ -1,0 +1,45 @@
+Text	چین ساؤتھ ویسٹ ائیرلائنز فلائٹ 4509 چین میں ایک اندرونی قسم کی پرواز تھی جو 24 فروری 1999ء کو ایک فضائی حادثے کا شکار ہوئی تھی ۔	یہ پرواز چین کے شہر چینگدو سے ژجیانگ سفر کر رہی تھی ۔	یہ پرواز چین ساؤتھ ویسٹ ائیرلائنز کے طیارہ ٹوپولف 154 ایم کے ساختہ ہوائی جہاز کی تھی جو اپنی منزل پر پہنچنے سے قبل حادثے کا شکار ہوئی ۔	اِس حادثے میں عملے کے 11 اور 50 مسافروں سمیت 61 افراد جاں بحق ہوئے ۔	یہ طیارہ ٹوپولف 154 ایم ساختہ تھا جو غالباً 1990ء میں بنایا گیا تھا ۔
+Event	T0	پرواز	EVENT	63
+Event	T1	حادثے	EVENT	104
+Event	T3	پرواز	EVENT	132
+Event	T4	سفر	EVENT	166
+Event	T5	پرواز	EVENT	186
+Event	T6	پہنچنے	EVENT	284
+Event	T7	حادثے	EVENT	298
+Event	T8	حادثے	EVENT	323
+Event	T10	بنایا	EVENT	442
+Event	T11	جاں بحق	EVENT	373
+Relation	T8	T11	CauseEffect	true	حادثے	جاں بحق
+Relation	T11	T8	EffectCause	true	جاں بحق	حادثے
+Relation	T0	T11	NoRel	true	پرواز	جاں بحق
+Relation	T0	T4	NoRel	true	پرواز	سفر
+Relation	T0	T7	NoRel	true	پرواز	حادثے
+Relation	T1	T11	NoRel	true	حادثے	جاں بحق
+Relation	T10	T0	NoRel	true	بنایا	پرواز
+Relation	T10	T3	NoRel	true	بنایا	پرواز
+Relation	T10	T8	NoRel	true	بنایا	حادثے
+Relation	T11	T0	NoRel	true	جاں بحق	پرواز
+Relation	T11	T1	NoRel	true	جاں بحق	حادثے
+Relation	T11	T10	NoRel	true	جاں بحق	بنایا
+Relation	T11	T5	NoRel	true	جاں بحق	پرواز
+Relation	T11	T6	NoRel	true	جاں بحق	پہنچنے
+Relation	T3	T4	NoRel	true	پرواز	سفر
+Relation	T4	T1	NoRel	true	سفر	حادثے
+Relation	T4	T10	NoRel	true	سفر	بنایا
+Relation	T4	T3	NoRel	true	سفر	پرواز
+Relation	T4	T7	NoRel	true	سفر	حادثے
+Relation	T4	T8	NoRel	true	سفر	حادثے
+Relation	T5	T4	NoRel	true	پرواز	سفر
+Relation	T5	T6	NoRel	true	پرواز	پہنچنے
+Relation	T5	T7	NoRel	true	پرواز	حادثے
+Relation	T6	T10	NoRel	true	پہنچنے	بنایا
+Relation	T6	T3	NoRel	true	پہنچنے	پرواز
+Relation	T6	T4	NoRel	true	پہنچنے	سفر
+Relation	T7	T0	NoRel	true	حادثے	پرواز
+Relation	T7	T1	NoRel	true	حادثے	حادثے
+Relation	T7	T5	NoRel	true	حادثے	پرواز
+Relation	T7	T6	NoRel	true	حادثے	پہنچنے
+Relation	T8	T0	NoRel	true	حادثے	پرواز
+Relation	T8	T10	NoRel	true	حادثے	بنایا
+Relation	T8	T4	NoRel	true	حادثے	سفر
+Relation	T8	T5	NoRel	true	حادثے	پرواز

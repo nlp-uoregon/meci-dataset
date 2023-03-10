@@ -1,0 +1,52 @@
+Text	Colonel Charles A. Lindbergh volunteered his services , and the show continued . "	20 September : First prototype Parnall Pipit , _ N232 _ , suffers structural failure of port tailplane in flight , crash lands at Martlesham Heath , Aeroplane and Armament Experimental Establishment ( A&AEE ) test pilot Sqn. Ldr. Jack Noakes ( AFC , MM ) survives , despite suffering broken neck when thrown from the somersaulting airframe .	25 September : Boeing PW - 9D , _ 28 - 31_ , flown by Lt. Roger V. Williams , suffers mid-air collision with PW - 9D , _ 28 - 36_ , piloted by Lt. William L. Cornelius , both of the 95th Pursuit Squadron , at Rockwell Field , San Diego , California .	Williams bails out and survives but Cornelius is killed .	Cornelius was one of the Three Musketeers Air Corps stunt trio pilots .
+Event	T0	continued	EVENT	69
+Event	T1	failure	EVENT	160
+Event	T2	flight	EVENT	189
+Event	T4	test	EVENT	292
+Event	T5	survives	EVENT	338
+Event	T6	thrown	EVENT	384
+Event	T7	flown	EVENT	470
+Event	T8	collision	EVENT	519
+Event	T9	piloted	EVENT	557
+Event	T10	survives	EVENT	699
+Event	T11	killed	EVENT	725
+Event	T12	stunt	EVENT	786
+Event	T13	volunteered	EVENT	29
+Event	T14	suffers	EVENT	141
+Event	T3	crash	EVENT	198
+Event	T15	broken	EVENT	367
+Event	T16	bails	EVENT	685
+Relation	T1	T3	CauseEffect	true	failure	crash
+Relation	T3	T1	EffectCause	true	crash	failure
+Relation	T6	T15	CauseEffect	true	thrown	broken
+Relation	T15	T6	EffectCause	true	broken	thrown
+Relation	T8	T11	CauseEffect	true	collision	killed
+Relation	T11	T8	EffectCause	true	killed	collision
+Relation	T8	T10	CauseEffect	true	collision	survives
+Relation	T10	T8	EffectCause	true	survives	collision
+Relation	T1	T9	NoRel	true	failure	piloted
+Relation	T11	T2	NoRel	true	killed	flight
+Relation	T11	T3	NoRel	true	killed	crash
+Relation	T12	T0	NoRel	true	stunt	continued
+Relation	T13	T2	NoRel	true	volunteered	flight
+Relation	T14	T0	NoRel	true	suffers	continued
+Relation	T14	T12	NoRel	true	suffers	stunt
+Relation	T14	T13	NoRel	true	suffers	volunteered
+Relation	T15	T14	NoRel	true	broken	suffers
+Relation	T15	T3	NoRel	true	broken	crash
+Relation	T16	T10	NoRel	true	bails	survives
+Relation	T16	T2	NoRel	true	bails	flight
+Relation	T2	T16	NoRel	true	flight	bails
+Relation	T3	T0	NoRel	true	crash	continued
+Relation	T3	T15	NoRel	true	crash	broken
+Relation	T4	T11	NoRel	true	test	killed
+Relation	T4	T14	NoRel	true	test	suffers
+Relation	T5	T0	NoRel	true	survives	continued
+Relation	T5	T4	NoRel	true	survives	test
+Relation	T6	T5	NoRel	true	thrown	survives
+Relation	T7	T4	NoRel	true	flown	test
+Relation	T8	T12	NoRel	true	collision	stunt
+Relation	T8	T2	NoRel	true	collision	flight
+Relation	T9	T13	NoRel	true	piloted	volunteered
+Relation	T9	T14	NoRel	true	piloted	suffers
+Relation	T9	T4	NoRel	true	piloted	test

@@ -1,0 +1,163 @@
+Text	El flujo de tráfico era lento debido a las numerosas colisiones , propiciando que la Ontario Provincial Police incrementase los controles en la zona .	En 1978 , el Vuelo 189 de Air Canada acabó en el Etobicoke Creek , el lugar donde acabó el vuelo 358 , cobrándose la vida de dos personas .	El vuelo de Air Canada se efectuaba con un Douglas DC-9 y aterrizó en la pista 24R-06L , estrellándose al norte del lugar donde lo hizo el Air France 358 y en una zona más profunda del barranco .	La pista donde aterrizó el avión de Air France era la 24L-06R , una pista con orientación este-oeste con una longitud de 2,7 kilómetros ( 9000 pies ) , así que el avión no terminó demasiado lejos de la pista .	Después del accidente del Air France 358 , hubo muchas peticiones para que el barranco fuese rellenado o cubierto por un puente .
+Event	T0	flujo	EVENT	3
+Event	T1	colisiones	EVENT	53
+Event	T2	propiciando	EVENT	66
+Event	T3	incrementase	EVENT	111
+Event	T4	controles	EVENT	128
+Event	T5	Vuelo	EVENT	164
+Event	T6	acabó	EVENT	188
+Event	T7	acabó	EVENT	233
+Event	T8	vuelo	EVENT	242
+Event	T9	cobrándose	EVENT	254
+Event	T10	vuelo	EVENT	294
+Event	T11	efectuaba	EVENT	317
+Event	T12	aterrizó	EVENT	349
+Event	T13	estrellándose	EVENT	380
+Event	T14	hizo	EVENT	422
+Event	T15	aterrizó	EVENT	502
+Event	T16	terminó	EVENT	659
+Event	T17	accidente	EVENT	709
+Event	T18	peticiones	EVENT	752
+Event	T19	rellenado	EVENT	790
+Event	T20	cubierto	EVENT	802
+Relation	T6	T9	CauseEffect	true	acabó	cobrándose
+Relation	T9	T6	EffectCause	true	cobrándose	acabó
+Relation	T0	T11	NoRel	true	flujo	efectuaba
+Relation	T0	T14	NoRel	true	flujo	hizo
+Relation	T0	T15	NoRel	true	flujo	aterrizó
+Relation	T0	T19	NoRel	true	flujo	rellenado
+Relation	T0	T2	NoRel	true	flujo	propiciando
+Relation	T0	T20	NoRel	true	flujo	cubierto
+Relation	T0	T3	NoRel	true	flujo	incrementase
+Relation	T0	T7	NoRel	true	flujo	acabó
+Relation	T1	T0	NoRel	true	colisiones	flujo
+Relation	T1	T13	NoRel	true	colisiones	estrellándose
+Relation	T1	T15	NoRel	true	colisiones	aterrizó
+Relation	T1	T5	NoRel	true	colisiones	Vuelo
+Relation	T1	T8	NoRel	true	colisiones	vuelo
+Relation	T10	T11	NoRel	true	vuelo	efectuaba
+Relation	T10	T12	NoRel	true	vuelo	aterrizó
+Relation	T10	T17	NoRel	true	vuelo	accidente
+Relation	T10	T18	NoRel	true	vuelo	peticiones
+Relation	T10	T2	NoRel	true	vuelo	propiciando
+Relation	T10	T20	NoRel	true	vuelo	cubierto
+Relation	T10	T7	NoRel	true	vuelo	acabó
+Relation	T10	T8	NoRel	true	vuelo	vuelo
+Relation	T11	T12	NoRel	true	efectuaba	aterrizó
+Relation	T11	T16	NoRel	true	efectuaba	terminó
+Relation	T11	T19	NoRel	true	efectuaba	rellenado
+Relation	T11	T3	NoRel	true	efectuaba	incrementase
+Relation	T11	T5	NoRel	true	efectuaba	Vuelo
+Relation	T11	T9	NoRel	true	efectuaba	cobrándose
+Relation	T12	T11	NoRel	true	aterrizó	efectuaba
+Relation	T12	T14	NoRel	true	aterrizó	hizo
+Relation	T12	T17	NoRel	true	aterrizó	accidente
+Relation	T12	T20	NoRel	true	aterrizó	cubierto
+Relation	T12	T3	NoRel	true	aterrizó	incrementase
+Relation	T12	T4	NoRel	true	aterrizó	controles
+Relation	T12	T7	NoRel	true	aterrizó	acabó
+Relation	T13	T11	NoRel	true	estrellándose	efectuaba
+Relation	T13	T12	NoRel	true	estrellándose	aterrizó
+Relation	T13	T20	NoRel	true	estrellándose	cubierto
+Relation	T13	T3	NoRel	true	estrellándose	incrementase
+Relation	T13	T6	NoRel	true	estrellándose	acabó
+Relation	T13	T9	NoRel	true	estrellándose	cobrándose
+Relation	T14	T0	NoRel	true	hizo	flujo
+Relation	T14	T12	NoRel	true	hizo	aterrizó
+Relation	T14	T13	NoRel	true	hizo	estrellándose
+Relation	T14	T15	NoRel	true	hizo	aterrizó
+Relation	T14	T16	NoRel	true	hizo	terminó
+Relation	T14	T2	NoRel	true	hizo	propiciando
+Relation	T14	T20	NoRel	true	hizo	cubierto
+Relation	T14	T9	NoRel	true	hizo	cobrándose
+Relation	T15	T0	NoRel	true	aterrizó	flujo
+Relation	T15	T13	NoRel	true	aterrizó	estrellándose
+Relation	T15	T14	NoRel	true	aterrizó	hizo
+Relation	T15	T3	NoRel	true	aterrizó	incrementase
+Relation	T15	T5	NoRel	true	aterrizó	Vuelo
+Relation	T15	T7	NoRel	true	aterrizó	acabó
+Relation	T16	T0	NoRel	true	terminó	flujo
+Relation	T16	T15	NoRel	true	terminó	aterrizó
+Relation	T16	T19	NoRel	true	terminó	rellenado
+Relation	T16	T20	NoRel	true	terminó	cubierto
+Relation	T16	T3	NoRel	true	terminó	incrementase
+Relation	T16	T5	NoRel	true	terminó	Vuelo
+Relation	T16	T8	NoRel	true	terminó	vuelo
+Relation	T17	T13	NoRel	true	accidente	estrellándose
+Relation	T17	T15	NoRel	true	accidente	aterrizó
+Relation	T17	T4	NoRel	true	accidente	controles
+Relation	T17	T7	NoRel	true	accidente	acabó
+Relation	T18	T1	NoRel	true	peticiones	colisiones
+Relation	T18	T15	NoRel	true	peticiones	aterrizó
+Relation	T18	T17	NoRel	true	peticiones	accidente
+Relation	T18	T19	NoRel	true	peticiones	rellenado
+Relation	T18	T2	NoRel	true	peticiones	propiciando
+Relation	T18	T4	NoRel	true	peticiones	controles
+Relation	T18	T6	NoRel	true	peticiones	acabó
+Relation	T18	T7	NoRel	true	peticiones	acabó
+Relation	T19	T11	NoRel	true	rellenado	efectuaba
+Relation	T19	T15	NoRel	true	rellenado	aterrizó
+Relation	T19	T16	NoRel	true	rellenado	terminó
+Relation	T19	T20	NoRel	true	rellenado	cubierto
+Relation	T19	T3	NoRel	true	rellenado	incrementase
+Relation	T19	T5	NoRel	true	rellenado	Vuelo
+Relation	T19	T7	NoRel	true	rellenado	acabó
+Relation	T19	T8	NoRel	true	rellenado	vuelo
+Relation	T2	T0	NoRel	true	propiciando	flujo
+Relation	T2	T1	NoRel	true	propiciando	colisiones
+Relation	T2	T12	NoRel	true	propiciando	aterrizó
+Relation	T2	T16	NoRel	true	propiciando	terminó
+Relation	T2	T19	NoRel	true	propiciando	rellenado
+Relation	T2	T20	NoRel	true	propiciando	cubierto
+Relation	T2	T4	NoRel	true	propiciando	controles
+Relation	T2	T5	NoRel	true	propiciando	Vuelo
+Relation	T2	T6	NoRel	true	propiciando	acabó
+Relation	T2	T8	NoRel	true	propiciando	vuelo
+Relation	T20	T17	NoRel	true	cubierto	accidente
+Relation	T20	T6	NoRel	true	cubierto	acabó
+Relation	T20	T8	NoRel	true	cubierto	vuelo
+Relation	T3	T13	NoRel	true	incrementase	estrellándose
+Relation	T3	T4	NoRel	true	incrementase	controles
+Relation	T4	T10	NoRel	true	controles	vuelo
+Relation	T4	T11	NoRel	true	controles	efectuaba
+Relation	T4	T12	NoRel	true	controles	aterrizó
+Relation	T4	T13	NoRel	true	controles	estrellándose
+Relation	T4	T16	NoRel	true	controles	terminó
+Relation	T4	T19	NoRel	true	controles	rellenado
+Relation	T4	T20	NoRel	true	controles	cubierto
+Relation	T5	T11	NoRel	true	Vuelo	efectuaba
+Relation	T5	T12	NoRel	true	Vuelo	aterrizó
+Relation	T5	T16	NoRel	true	Vuelo	terminó
+Relation	T5	T2	NoRel	true	Vuelo	propiciando
+Relation	T5	T9	NoRel	true	Vuelo	cobrándose
+Relation	T6	T1	NoRel	true	acabó	colisiones
+Relation	T6	T10	NoRel	true	acabó	vuelo
+Relation	T6	T11	NoRel	true	acabó	efectuaba
+Relation	T6	T13	NoRel	true	acabó	estrellándose
+Relation	T6	T14	NoRel	true	acabó	hizo
+Relation	T6	T16	NoRel	true	acabó	terminó
+Relation	T6	T18	NoRel	true	acabó	peticiones
+Relation	T6	T19	NoRel	true	acabó	rellenado
+Relation	T6	T2	NoRel	true	acabó	propiciando
+Relation	T6	T20	NoRel	true	acabó	cubierto
+Relation	T7	T10	NoRel	true	acabó	vuelo
+Relation	T7	T13	NoRel	true	acabó	estrellándose
+Relation	T7	T14	NoRel	true	acabó	hizo
+Relation	T7	T15	NoRel	true	acabó	aterrizó
+Relation	T7	T17	NoRel	true	acabó	accidente
+Relation	T7	T18	NoRel	true	acabó	peticiones
+Relation	T7	T19	NoRel	true	acabó	rellenado
+Relation	T7	T20	NoRel	true	acabó	cubierto
+Relation	T7	T6	NoRel	true	acabó	acabó
+Relation	T7	T8	NoRel	true	acabó	vuelo
+Relation	T8	T0	NoRel	true	vuelo	flujo
+Relation	T8	T15	NoRel	true	vuelo	aterrizó
+Relation	T8	T17	NoRel	true	vuelo	accidente
+Relation	T8	T4	NoRel	true	vuelo	controles
+Relation	T8	T5	NoRel	true	vuelo	Vuelo
+Relation	T8	T7	NoRel	true	vuelo	acabó
+Relation	T8	T9	NoRel	true	vuelo	cobrándose
+Relation	T9	T16	NoRel	true	cobrándose	terminó
+Relation	T9	T19	NoRel	true	cobrándose	rellenado
+Relation	T9	T2	NoRel	true	cobrándose	propiciando
+Relation	T9	T4	NoRel	true	cobrándose	controles

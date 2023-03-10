@@ -1,0 +1,47 @@
+Text	Yunkyur Havaalanı'na son yaklaşımı sırasında Veretenov gaz kollarıyla motorun gücünü arttırmaya çalıştı ancak motor buna tepki vermedi ve düşük güçte çalışmaya devam etti .	Bu da hızın ve irtifanın azalmasına neden oldu .	Zorunlu iniş yapmak zorunda kaldılar ve havalimanı yakınlarındaki bir bataklık arazisine indiler .	küçükresim | 300px | Motor kontrol sistemi arızası Yakutsk Devlet Havacılık İdaresi tarafından olayı araştırmak için 5 kişilik bir komisyon kuruldu :	- Egorov P. I. - pilot - müfettiş , komisyon başkanı ; - Litovçenko I. G. - komutan , pilot - Kordova A. G. - kıdemli navigatör - Vasilyeva M. S. - Batagai Havalimanı Başkan Yardımcısı - Koçetkova A. V. - Yakutsk Devlet Havacılık İdaresi uçuş güvenliği uzmanı
+Event	T0	yaklaşımı	EVENT	25
+Event	T1	çalıştı	EVENT	96
+Event	T2	vermedi	EVENT	127
+Event	T3	etti	EVENT	166
+Event	T5	indiler	EVENT	311
+Event	T6	arızası	EVENT	364
+Event	T7	araştırmak	EVENT	422
+Event	T8	kuruldu	EVENT	461
+Event	T9	oldu	EVENT	215
+Event	T4	iniş	EVENT	230
+Relation	T1	T2	CauseEffect	true	çalıştı	vermedi
+Relation	T2	T1	EffectCause	true	vermedi	çalıştı
+Relation	T2	T3	CauseEffect	true	vermedi	etti
+Relation	T3	T2	EffectCause	true	etti	vermedi
+Relation	T3	T9	CauseEffect	true	etti	oldu
+Relation	T9	T3	EffectCause	true	oldu	etti
+Relation	T4	T5	CauseEffect	true	iniş	indiler
+Relation	T5	T4	EffectCause	true	indiler	iniş
+Relation	T7	T8	CauseEffect	true	araştırmak	kuruldu
+Relation	T8	T7	EffectCause	true	kuruldu	araştırmak
+Relation	T6	T7	CauseEffect	true	arızası	araştırmak
+Relation	T7	T6	EffectCause	true	araştırmak	arızası
+Relation	T0	T2	NoRel	true	yaklaşımı	vermedi
+Relation	T0	T4	NoRel	true	yaklaşımı	iniş
+Relation	T0	T5	NoRel	true	yaklaşımı	indiler
+Relation	T0	T6	NoRel	true	yaklaşımı	arızası
+Relation	T2	T4	NoRel	true	vermedi	iniş
+Relation	T2	T9	NoRel	true	vermedi	oldu
+Relation	T3	T0	NoRel	true	etti	yaklaşımı
+Relation	T3	T5	NoRel	true	etti	indiler
+Relation	T4	T0	NoRel	true	iniş	yaklaşımı
+Relation	T4	T2	NoRel	true	iniş	vermedi
+Relation	T4	T7	NoRel	true	iniş	araştırmak
+Relation	T5	T0	NoRel	true	indiler	yaklaşımı
+Relation	T5	T3	NoRel	true	indiler	etti
+Relation	T5	T6	NoRel	true	indiler	arızası
+Relation	T6	T0	NoRel	true	arızası	yaklaşımı
+Relation	T6	T5	NoRel	true	arızası	indiler
+Relation	T6	T8	NoRel	true	arızası	kuruldu
+Relation	T7	T9	NoRel	true	araştırmak	oldu
+Relation	T8	T2	NoRel	true	kuruldu	vermedi
+Relation	T8	T5	NoRel	true	kuruldu	indiler
+Relation	T8	T9	NoRel	true	kuruldu	oldu
+Relation	T9	T0	NoRel	true	oldu	yaklaşımı
+Relation	T9	T1	NoRel	true	oldu	çalıştı
+Relation	T9	T8	NoRel	true	oldu	kuruldu

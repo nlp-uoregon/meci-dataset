@@ -1,0 +1,46 @@
+Text	His term of Chief of Staff was noted for financial and structural reforms of the IDF .	His tenure also saw continued operations in the South Lebanon security zone and the withdrawal from the security zone in 2000 .	But the most significant event in his tenure was the eruption of the Second Intifada in September 2000 .	The tough tactics undertaken by Mofaz drew widespread concern from the international community but were broadly supported by the Israeli public .	Controversy erupted over Israeli actions during the Battle of Jenin , intermittent raids in the Gaza Strip , and the continued isolation of Yasser Arafat .
+Event	T0	term	EVENT	4
+Event	T1	noted	EVENT	31
+Event	T2	reforms	EVENT	66
+Event	T3	tenure	EVENT	91
+Event	T4	operations	EVENT	117
+Event	T5	withdrawal	EVENT	171
+Event	T7	tenure	EVENT	253
+Event	T8	eruption	EVENT	268
+Event	T9	undertaken	EVENT	338
+Event	T10	drew	EVENT	358
+Event	T11	supported	EVENT	432
+Event	T12	erupted	EVENT	478
+Event	T13	actions	EVENT	499
+Event	T14	Battle	EVENT	518
+Event	T15	raids	EVENT	549
+Event	T16	isolation	EVENT	593
+Relation	T0	T2	CauseEffect	true	term	reforms
+Relation	T2	T0	EffectCause	true	reforms	term
+Relation	T13	T12	CauseEffect	true	actions	erupted
+Relation	T12	T13	EffectCause	true	erupted	actions
+Relation	T1	T12	NoRel	true	noted	erupted
+Relation	T1	T4	NoRel	true	noted	operations
+Relation	T10	T16	NoRel	true	drew	isolation
+Relation	T12	T4	NoRel	true	erupted	operations
+Relation	T14	T10	NoRel	true	Battle	drew
+Relation	T14	T12	NoRel	true	Battle	erupted
+Relation	T14	T7	NoRel	true	Battle	tenure
+Relation	T15	T1	NoRel	true	raids	noted
+Relation	T15	T10	NoRel	true	raids	drew
+Relation	T15	T11	NoRel	true	raids	supported
+Relation	T16	T0	NoRel	true	isolation	term
+Relation	T16	T10	NoRel	true	isolation	drew
+Relation	T16	T8	NoRel	true	isolation	eruption
+Relation	T2	T11	NoRel	true	reforms	supported
+Relation	T2	T4	NoRel	true	reforms	operations
+Relation	T3	T9	NoRel	true	tenure	undertaken
+Relation	T4	T1	NoRel	true	operations	noted
+Relation	T4	T3	NoRel	true	operations	tenure
+Relation	T4	T7	NoRel	true	operations	tenure
+Relation	T5	T11	NoRel	true	withdrawal	supported
+Relation	T5	T12	NoRel	true	withdrawal	erupted
+Relation	T7	T11	NoRel	true	tenure	supported
+Relation	T7	T12	NoRel	true	tenure	erupted
+Relation	T7	T9	NoRel	true	tenure	undertaken
+Relation	T8	T4	NoRel	true	eruption	operations

@@ -1,0 +1,73 @@
+Text	Before he arrived at the hospital with his grandson , Beckwith was aware that a plane had struck the World Trade Center .	When the boy appeared to be in stable condition , Beckwith left the hospital and went to World Trade Center site after he saw the South Tower collapse via television .	Even though he had been retired for seven years from the New York City Fire Department , he grabbed his old gear and bluffed his way past the blockades and barricades that had been set up and began helping with bucket brigades and missing person searches .	[ President George W. Bush speaking at Ground Zero with Beckwith beside him ]	On September 14 , after Beckwith and some men had unearthed a fire engine buried in rubble from the fallen buildings , they tested its stability as a stand from which to speak , and a Secret Service agent ordered him to help President Bush onto the platform .
+Event	T0	arrived	EVENT	10
+Event	T1	aware	EVENT	67
+Event	T2	struck	EVENT	90
+Event	T3	appeared	EVENT	135
+Event	T4	left	EVENT	181
+Event	T5	went	EVENT	203
+Event	T6	saw	EVENT	244
+Event	T7	collapse	EVENT	264
+Event	T8	retired	EVENT	314
+Event	T9	grabbed	EVENT	382
+Event	T10	bluffed	EVENT	407
+Event	T11	helping	EVENT	488
+Event	T12	missing	EVENT	521
+Event	T13	searches	EVENT	536
+Event	T14	speaking	EVENT	574
+Event	T15	unearthed	EVENT	675
+Event	T17	buried	EVENT	699
+Event	T18	tested	EVENT	749
+Event	T19	speak	EVENT	795
+Event	T20	ordered	EVENT	830
+Event	T21	help	EVENT	845
+Event	T22	set up	EVENT	471
+Relation	T10	T11	CauseEffect	true	bluffed	helping
+Relation	T11	T10	EffectCause	true	helping	bluffed
+Relation	T12	T13	CauseEffect	true	missing	searches
+Relation	T13	T12	EffectCause	true	searches	missing
+Relation	T12	T11	CauseEffect	true	missing	helping
+Relation	T11	T12	EffectCause	true	helping	missing
+Relation	T17	T15	CauseEffect	true	buried	unearthed
+Relation	T15	T17	EffectCause	true	unearthed	buried
+Relation	T0	T12	NoRel	true	arrived	missing
+Relation	T0	T13	NoRel	true	arrived	searches
+Relation	T0	T14	NoRel	true	arrived	speaking
+Relation	T0	T15	NoRel	true	arrived	unearthed
+Relation	T0	T17	NoRel	true	arrived	buried
+Relation	T0	T22	NoRel	true	arrived	set up
+Relation	T1	T20	NoRel	true	aware	ordered
+Relation	T10	T0	NoRel	true	bluffed	arrived
+Relation	T10	T1	NoRel	true	bluffed	aware
+Relation	T10	T17	NoRel	true	bluffed	buried
+Relation	T10	T7	NoRel	true	bluffed	collapse
+Relation	T11	T19	NoRel	true	helping	speak
+Relation	T11	T2	NoRel	true	helping	struck
+Relation	T11	T9	NoRel	true	helping	grabbed
+Relation	T12	T15	NoRel	true	missing	unearthed
+Relation	T12	T7	NoRel	true	missing	collapse
+Relation	T13	T19	NoRel	true	searches	speak
+Relation	T15	T19	NoRel	true	unearthed	speak
+Relation	T17	T21	NoRel	true	buried	help
+Relation	T17	T5	NoRel	true	buried	went
+Relation	T18	T6	NoRel	true	tested	saw
+Relation	T19	T11	NoRel	true	speak	helping
+Relation	T19	T18	NoRel	true	speak	tested
+Relation	T20	T6	NoRel	true	ordered	saw
+Relation	T21	T4	NoRel	true	help	left
+Relation	T22	T3	NoRel	true	set up	appeared
+Relation	T22	T4	NoRel	true	set up	left
+Relation	T3	T17	NoRel	true	appeared	buried
+Relation	T3	T5	NoRel	true	appeared	went
+Relation	T4	T13	NoRel	true	left	searches
+Relation	T4	T14	NoRel	true	left	speaking
+Relation	T4	T22	NoRel	true	left	set up
+Relation	T4	T9	NoRel	true	left	grabbed
+Relation	T5	T11	NoRel	true	went	helping
+Relation	T5	T3	NoRel	true	went	appeared
+Relation	T5	T9	NoRel	true	went	grabbed
+Relation	T6	T2	NoRel	true	saw	struck
+Relation	T7	T1	NoRel	true	collapse	aware
+Relation	T7	T14	NoRel	true	collapse	speaking
+Relation	T8	T11	NoRel	true	retired	helping
+Relation	T8	T7	NoRel	true	retired	collapse
+Relation	T9	T3	NoRel	true	grabbed	appeared

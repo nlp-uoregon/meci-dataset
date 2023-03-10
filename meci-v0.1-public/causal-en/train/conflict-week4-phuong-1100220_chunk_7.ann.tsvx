@@ -1,0 +1,50 @@
+Text	Some coastal and river areas have retained and regularly test the sirens as part of the flood warning defences .	Since 1952 , Broadmoor Hospital has employed a network of 14 sirens to warn of escaped patients ; this is tested every Monday at 10 am .	The hospital sirens were scheduled for removal during 2018 except for one located in the hospital grounds .	Carstairs Hospital also retains its sirens , which are tested monthly .	In some towns , sirens were once used to summon part - time firemen until the introduction of radio pagers during the 1970s – these ' stand alone ' sirens operated independently of the warning network .
+Event	T0	retained	EVENT	34
+Event	T1	test	EVENT	57
+Event	T2	defences	EVENT	102
+Event	T3	employed	EVENT	149
+Event	T4	sirens	EVENT	174
+Event	T5	warn	EVENT	184
+Event	T6	escaped	EVENT	192
+Event	T7	tested	EVENT	219
+Event	T8	scheduled	EVENT	275
+Event	T9	removal	EVENT	289
+Event	T10	retains	EVENT	382
+Event	T11	tested	EVENT	413
+Event	T12	used	EVENT	463
+Event	T13	summon	EVENT	471
+Event	T14	introduction	EVENT	508
+Event	T15	operated	EVENT	585
+Event	T16	warning	EVENT	615
+Relation	T2	T0	CauseEffect	true	defences	retained
+Relation	T0	T2	EffectCause	true	retained	defences
+Relation	T2	T1	CauseEffect	true	defences	test
+Relation	T1	T2	EffectCause	true	test	defences
+Relation	T5	T3	CauseEffect	true	warn	employed
+Relation	T3	T5	EffectCause	true	employed	warn
+Relation	T12	T13	CauseEffect	true	used	summon
+Relation	T13	T12	EffectCause	true	summon	used
+Relation	T0	T16	NoRel	true	retained	warning
+Relation	T0	T9	NoRel	true	retained	removal
+Relation	T1	T11	NoRel	true	test	tested
+Relation	T1	T15	NoRel	true	test	operated
+Relation	T1	T6	NoRel	true	test	escaped
+Relation	T1	T8	NoRel	true	test	scheduled
+Relation	T10	T12	NoRel	true	retains	used
+Relation	T10	T14	NoRel	true	retains	introduction
+Relation	T10	T6	NoRel	true	retains	escaped
+Relation	T11	T0	NoRel	true	tested	retained
+Relation	T12	T1	NoRel	true	used	test
+Relation	T12	T14	NoRel	true	used	introduction
+Relation	T13	T16	NoRel	true	summon	warning
+Relation	T13	T4	NoRel	true	summon	sirens
+Relation	T14	T11	NoRel	true	introduction	tested
+Relation	T14	T3	NoRel	true	introduction	employed
+Relation	T16	T11	NoRel	true	warning	tested
+Relation	T3	T15	NoRel	true	employed	operated
+Relation	T4	T2	NoRel	true	sirens	defences
+Relation	T5	T12	NoRel	true	warn	used
+Relation	T6	T8	NoRel	true	escaped	scheduled
+Relation	T8	T1	NoRel	true	scheduled	test
+Relation	T8	T14	NoRel	true	scheduled	introduction
+Relation	T9	T12	NoRel	true	removal	used

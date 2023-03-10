@@ -1,0 +1,121 @@
+Text	Este incidente fue reportado al control de tráfico aéreo , la rueda de aterrizaje se retrajo normalmente y el vuelo continuó con normalidad .	Durante la toma en la pista 25R del Aeropuerto de Barcelona , el avión comenzó a desviarse a la izquierda del eje de pista .	La tripulación aplicó desviación derecha , frenado y giro de la rueda de morro pero no consiguieron mantener el avión en pista .	Tras salirse de la superficie pavimentada de pista a unos cien nudos , el avión se internó en una zona de arena blanda donde se estaban efectuando trabajos de construcción .	La pata del tren de morro se colapsó y el tren principal izquierdo se retrajo parcialmente poco antes de que el avión se detuviese en el borde de un canal de drenaje .
+Event	T0	reportado	EVENT	19
+Event	T1	aterrizaje	EVENT	71
+Event	T2	retrajo	EVENT	85
+Event	T3	continuó	EVENT	116
+Event	T4	toma	EVENT	153
+Event	T5	comenzó	EVENT	213
+Event	T6	desviarse	EVENT	223
+Event	T7	desviación	EVENT	289
+Event	T8	frenado	EVENT	310
+Event	T9	giro	EVENT	320
+Event	T10	salirse	EVENT	401
+Event	T11	internó	EVENT	479
+Event	T12	trabajos	EVENT	543
+Event	T13	construcción	EVENT	555
+Event	T14	colapsó	EVENT	599
+Event	T15	retrajo	EVENT	640
+Event	T16	detuviese	EVENT	691
+Event	T17	drenaje	EVENT	728
+Relation	T6	T7	CauseEffect	true	desviarse	desviación
+Relation	T7	T6	EffectCause	true	desviación	desviarse
+Relation	T10	T14	CauseEffect	true	salirse	colapsó
+Relation	T14	T10	EffectCause	true	colapsó	salirse
+Relation	T0	T1	NoRel	true	reportado	aterrizaje
+Relation	T0	T11	NoRel	true	reportado	internó
+Relation	T0	T15	NoRel	true	reportado	retrajo
+Relation	T0	T16	NoRel	true	reportado	detuviese
+Relation	T0	T17	NoRel	true	reportado	drenaje
+Relation	T0	T6	NoRel	true	reportado	desviarse
+Relation	T0	T8	NoRel	true	reportado	frenado
+Relation	T1	T10	NoRel	true	aterrizaje	salirse
+Relation	T1	T11	NoRel	true	aterrizaje	internó
+Relation	T1	T13	NoRel	true	aterrizaje	construcción
+Relation	T1	T3	NoRel	true	aterrizaje	continuó
+Relation	T1	T9	NoRel	true	aterrizaje	giro
+Relation	T10	T0	NoRel	true	salirse	reportado
+Relation	T10	T12	NoRel	true	salirse	trabajos
+Relation	T10	T16	NoRel	true	salirse	detuviese
+Relation	T10	T17	NoRel	true	salirse	drenaje
+Relation	T10	T3	NoRel	true	salirse	continuó
+Relation	T10	T8	NoRel	true	salirse	frenado
+Relation	T10	T9	NoRel	true	salirse	giro
+Relation	T11	T10	NoRel	true	internó	salirse
+Relation	T11	T13	NoRel	true	internó	construcción
+Relation	T11	T15	NoRel	true	internó	retrajo
+Relation	T11	T16	NoRel	true	internó	detuviese
+Relation	T11	T8	NoRel	true	internó	frenado
+Relation	T12	T10	NoRel	true	trabajos	salirse
+Relation	T12	T15	NoRel	true	trabajos	retrajo
+Relation	T12	T17	NoRel	true	trabajos	drenaje
+Relation	T12	T2	NoRel	true	trabajos	retrajo
+Relation	T12	T3	NoRel	true	trabajos	continuó
+Relation	T12	T4	NoRel	true	trabajos	toma
+Relation	T12	T6	NoRel	true	trabajos	desviarse
+Relation	T12	T7	NoRel	true	trabajos	desviación
+Relation	T12	T8	NoRel	true	trabajos	frenado
+Relation	T13	T11	NoRel	true	construcción	internó
+Relation	T13	T5	NoRel	true	construcción	comenzó
+Relation	T13	T6	NoRel	true	construcción	desviarse
+Relation	T13	T7	NoRel	true	construcción	desviación
+Relation	T14	T17	NoRel	true	colapsó	drenaje
+Relation	T14	T2	NoRel	true	colapsó	retrajo
+Relation	T14	T3	NoRel	true	colapsó	continuó
+Relation	T14	T5	NoRel	true	colapsó	comenzó
+Relation	T14	T8	NoRel	true	colapsó	frenado
+Relation	T14	T9	NoRel	true	colapsó	giro
+Relation	T15	T1	NoRel	true	retrajo	aterrizaje
+Relation	T15	T13	NoRel	true	retrajo	construcción
+Relation	T15	T2	NoRel	true	retrajo	retrajo
+Relation	T15	T4	NoRel	true	retrajo	toma
+Relation	T15	T9	NoRel	true	retrajo	giro
+Relation	T16	T0	NoRel	true	detuviese	reportado
+Relation	T16	T10	NoRel	true	detuviese	salirse
+Relation	T16	T11	NoRel	true	detuviese	internó
+Relation	T16	T17	NoRel	true	detuviese	drenaje
+Relation	T16	T7	NoRel	true	detuviese	desviación
+Relation	T17	T0	NoRel	true	drenaje	reportado
+Relation	T17	T16	NoRel	true	drenaje	detuviese
+Relation	T17	T2	NoRel	true	drenaje	retrajo
+Relation	T17	T4	NoRel	true	drenaje	toma
+Relation	T17	T6	NoRel	true	drenaje	desviarse
+Relation	T2	T1	NoRel	true	retrajo	aterrizaje
+Relation	T2	T11	NoRel	true	retrajo	internó
+Relation	T2	T12	NoRel	true	retrajo	trabajos
+Relation	T2	T6	NoRel	true	retrajo	desviarse
+Relation	T2	T7	NoRel	true	retrajo	desviación
+Relation	T3	T0	NoRel	true	continuó	reportado
+Relation	T3	T10	NoRel	true	continuó	salirse
+Relation	T3	T14	NoRel	true	continuó	colapsó
+Relation	T4	T0	NoRel	true	toma	reportado
+Relation	T4	T13	NoRel	true	toma	construcción
+Relation	T4	T15	NoRel	true	toma	retrajo
+Relation	T4	T16	NoRel	true	toma	detuviese
+Relation	T4	T17	NoRel	true	toma	drenaje
+Relation	T4	T8	NoRel	true	toma	frenado
+Relation	T4	T9	NoRel	true	toma	giro
+Relation	T5	T0	NoRel	true	comenzó	reportado
+Relation	T5	T16	NoRel	true	comenzó	detuviese
+Relation	T5	T6	NoRel	true	comenzó	desviarse
+Relation	T5	T9	NoRel	true	comenzó	giro
+Relation	T6	T0	NoRel	true	desviarse	reportado
+Relation	T6	T10	NoRel	true	desviarse	salirse
+Relation	T6	T13	NoRel	true	desviarse	construcción
+Relation	T6	T14	NoRel	true	desviarse	colapsó
+Relation	T6	T15	NoRel	true	desviarse	retrajo
+Relation	T6	T17	NoRel	true	desviarse	drenaje
+Relation	T7	T0	NoRel	true	desviación	reportado
+Relation	T7	T10	NoRel	true	desviación	salirse
+Relation	T7	T11	NoRel	true	desviación	internó
+Relation	T7	T17	NoRel	true	desviación	drenaje
+Relation	T7	T3	NoRel	true	desviación	continuó
+Relation	T7	T4	NoRel	true	desviación	toma
+Relation	T7	T5	NoRel	true	desviación	comenzó
+Relation	T7	T9	NoRel	true	desviación	giro
+Relation	T8	T0	NoRel	true	frenado	reportado
+Relation	T8	T1	NoRel	true	frenado	aterrizaje
+Relation	T8	T10	NoRel	true	frenado	salirse
+Relation	T8	T13	NoRel	true	frenado	construcción
+Relation	T8	T14	NoRel	true	frenado	colapsó
+Relation	T8	T4	NoRel	true	frenado	toma
+Relation	T9	T6	NoRel	true	giro	desviarse

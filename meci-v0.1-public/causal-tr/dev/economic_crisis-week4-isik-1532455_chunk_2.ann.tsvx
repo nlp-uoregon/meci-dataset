@@ -1,0 +1,28 @@
+Text	Nazilerin muhalefeti sindirme hareketi sonucu Wels Ağustos 1933'te Alman vatandaşlığından çıkarıldı .	Wels daha sonra Prag'a giderek SPD'nin sürgün organizasyonu olan " Sopade " örgütünü kurdu .	1938'deki Münih Antlaşması sonunda parti merkezini Paris'e taşıdı .	1939'da Paris'te öldü .	Günümüzde Almanya'nın pek çok şehrinde Otto Wels ismini taşıyan sokaklar görmek mümkündür .
+Event	T0	çıkarıldı	EVENT	90
+Event	T2	kurdu	EVENT	187
+Event	T3	Antlaşması	EVENT	211
+Event	T4	taşıdı	EVENT	254
+Event	T5	öldü	EVENT	280
+Event	T6	hareketi	EVENT	30
+Event	T7	giderek	EVENT	125
+Relation	T6	T0	CauseEffect	true	hareketi	çıkarıldı
+Relation	T0	T6	EffectCause	true	çıkarıldı	hareketi
+Relation	T0	T2	CauseEffect	true	çıkarıldı	kurdu
+Relation	T2	T0	EffectCause	true	kurdu	çıkarıldı
+Relation	T3	T4	CauseEffect	true	Antlaşması	taşıdı
+Relation	T4	T3	EffectCause	true	taşıdı	Antlaşması
+Relation	T0	T7	NoRel	true	çıkarıldı	giderek
+Relation	T3	T0	NoRel	true	Antlaşması	çıkarıldı
+Relation	T3	T2	NoRel	true	Antlaşması	kurdu
+Relation	T3	T5	NoRel	true	Antlaşması	öldü
+Relation	T3	T6	NoRel	true	Antlaşması	hareketi
+Relation	T4	T5	NoRel	true	taşıdı	öldü
+Relation	T4	T6	NoRel	true	taşıdı	hareketi
+Relation	T5	T2	NoRel	true	öldü	kurdu
+Relation	T5	T4	NoRel	true	öldü	taşıdı
+Relation	T5	T6	NoRel	true	öldü	hareketi
+Relation	T5	T7	NoRel	true	öldü	giderek
+Relation	T6	T2	NoRel	true	hareketi	kurdu
+Relation	T6	T3	NoRel	true	hareketi	Antlaşması
+Relation	T6	T5	NoRel	true	hareketi	öldü

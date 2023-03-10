@@ -1,0 +1,54 @@
+Text	20 Ekim 1989 günü Tapu ve Kadastro Genel Müdürlüğü'ne ait bir Britten - Norman BN - 2A - 3 Islander tipi uçak , Suriye sınırında kadastro çalışmaları yaparken Suriye Hava Kuvvetleri tarafından vurularak düşürüldü .	Uçakta bulunan beş kişinin tamamı olay sonucunda öldü .	Tapu ve Kadastro Genel Müdürlüğü'ne ait TC - KUN kuyruk numaralı Britten - Norman BN - 2A - 3 Islander tipi uçak , Hatay ilindeki ormanlık bir araziyi haritalandırmak için Adana Şakirpaşa Havalimanı'ndan 5 kişilik mürettebatı ile kalkış yaptı .	Uçak , Suriye sınırına yaklaşık 20 km uzaklıkta Türkiye hava sahası üzerinde seyrederken , Suriye Hava Kuvvetleri'ne ait iki MiG - 21 savaş uçağı tarafından vuruldu .	Vurulmanın etkisiyle kontörlünü kaybeden uçak Antakya yakınlarına düştü ve uçakta bulunan beş kişinin tamamı öldü .
+Event	T0	yaparken	EVENT	150
+Event	T1	düşürüldü	EVENT	203
+Event	T2	öldü	EVENT	264
+Event	T4	seyrederken	EVENT	593
+Event	T5	vuruldu	EVENT	673
+Event	T6	kaybeden	EVENT	715
+Event	T7	düştü	EVENT	749
+Event	T8	öldü	EVENT	792
+Event	T9	haritalandırmak	EVENT	422
+Event	T10	kalkış	EVENT	501
+Relation	T1	T2	CauseEffect	true	düşürüldü	öldü
+Relation	T2	T1	EffectCause	true	öldü	düşürüldü
+Relation	T9	T10	CauseEffect	true	haritalandırmak	kalkış
+Relation	T10	T9	EffectCause	true	kalkış	haritalandırmak
+Relation	T5	T6	CauseEffect	true	vuruldu	kaybeden
+Relation	T6	T5	EffectCause	true	kaybeden	vuruldu
+Relation	T6	T7	CauseEffect	true	kaybeden	düştü
+Relation	T7	T6	EffectCause	true	düştü	kaybeden
+Relation	T6	T1	CauseEffect	true	kaybeden	düşürüldü
+Relation	T1	T6	EffectCause	true	düşürüldü	kaybeden
+Relation	T7	T8	CauseEffect	true	düştü	öldü
+Relation	T8	T7	EffectCause	true	öldü	düştü
+Relation	T7	T2	CauseEffect	true	düştü	öldü
+Relation	T2	T7	EffectCause	true	öldü	düştü
+Relation	T1	T8	CauseEffect	true	düşürüldü	öldü
+Relation	T8	T1	EffectCause	true	öldü	düşürüldü
+Relation	T0	T1	NoRel	true	yaparken	düşürüldü
+Relation	T0	T6	NoRel	true	yaparken	kaybeden
+Relation	T0	T9	NoRel	true	yaparken	haritalandırmak
+Relation	T1	T0	NoRel	true	düşürüldü	yaparken
+Relation	T1	T9	NoRel	true	düşürüldü	haritalandırmak
+Relation	T10	T0	NoRel	true	kalkış	yaparken
+Relation	T10	T1	NoRel	true	kalkış	düşürüldü
+Relation	T10	T2	NoRel	true	kalkış	öldü
+Relation	T10	T4	NoRel	true	kalkış	seyrederken
+Relation	T10	T5	NoRel	true	kalkış	vuruldu
+Relation	T2	T10	NoRel	true	öldü	kalkış
+Relation	T2	T5	NoRel	true	öldü	vuruldu
+Relation	T2	T6	NoRel	true	öldü	kaybeden
+Relation	T2	T9	NoRel	true	öldü	haritalandırmak
+Relation	T4	T1	NoRel	true	seyrederken	düşürüldü
+Relation	T4	T8	NoRel	true	seyrederken	öldü
+Relation	T4	T9	NoRel	true	seyrederken	haritalandırmak
+Relation	T5	T7	NoRel	true	vuruldu	düştü
+Relation	T6	T2	NoRel	true	kaybeden	öldü
+Relation	T7	T0	NoRel	true	düştü	yaparken
+Relation	T7	T1	NoRel	true	düştü	düşürüldü
+Relation	T7	T5	NoRel	true	düştü	vuruldu
+Relation	T7	T9	NoRel	true	düştü	haritalandırmak
+Relation	T8	T0	NoRel	true	öldü	yaparken
+Relation	T8	T10	NoRel	true	öldü	kalkış
+Relation	T8	T5	NoRel	true	öldü	vuruldu
+Relation	T9	T1	NoRel	true	haritalandırmak	düşürüldü

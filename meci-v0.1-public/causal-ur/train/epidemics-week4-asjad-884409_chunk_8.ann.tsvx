@@ -1,0 +1,40 @@
+Text	اس وائرس کے ابتدائی آثار تصدیق سے 8 دسمبر 2019ء ظاہر ہوئے تھے ، اور پہلا مشتبہ واقعہ 31 دسمبر 2019ء میں درج کیا گیا ۔	جنوری 2020ء کو ووہان میں متاثر بازار بند کر دیا گیا اور وائرس کی علامت سے متاثر افراد کو الگ کر دیا گیا ۔	700 سے زائد افراد کو نگرانی میں رکھا گیا ، اور تقریباً 400 افراد کو ان کے علاج اور صحت کی دیکھ بھال کے لیے رکھا گیا ۔	04 مئی 2020ء تک 83,964 افراد وائرس کی علامت سے متاثر ہوئے جس میں سے 78,688 لوگ صحتیاب ہو چکے اور 4,637 لوگوں کی موت ہو چکی ہے ۔	ایران ایشیا میں کورونا وبا سے متاثر ہونے والا دوسرا بڑا ملک ہے اور دنیا بھر میں اس وبا سے متاثرین میں بلحاظ تعداد اس کا درجہ سوم ہے ۔
+Event	T0	وائرس	EVENT	3
+Event	T1	تصدیق	EVENT	25
+Event	T2	ظاہر	EVENT	48
+Event	T3	واقعہ	EVENT	79
+Event	T4	بند	EVENT	155
+Event	T5	نگرانی	EVENT	245
+Event	T6	علاج	EVENT	298
+Event	T7	ہوئے	EVENT	395
+Event	T8	موت	EVENT	454
+Relation	T0	T5	CauseEffect	true	وائرس	نگرانی
+Relation	T5	T0	EffectCause	true	نگرانی	وائرس
+Relation	T0	T6	CauseEffect	true	وائرس	علاج
+Relation	T6	T0	EffectCause	true	علاج	وائرس
+Relation	T0	T7	CauseEffect	true	وائرس	ہوئے
+Relation	T7	T0	EffectCause	true	ہوئے	وائرس
+Relation	T0	T8	CauseEffect	true	وائرس	موت
+Relation	T8	T0	EffectCause	true	موت	وائرس
+Relation	T0	T2	NoRel	true	وائرس	ظاہر
+Relation	T0	T3	NoRel	true	وائرس	واقعہ
+Relation	T0	T4	NoRel	true	وائرس	بند
+Relation	T1	T4	NoRel	true	تصدیق	بند
+Relation	T1	T6	NoRel	true	تصدیق	علاج
+Relation	T2	T1	NoRel	true	ظاہر	تصدیق
+Relation	T2	T3	NoRel	true	ظاہر	واقعہ
+Relation	T3	T5	NoRel	true	واقعہ	نگرانی
+Relation	T3	T6	NoRel	true	واقعہ	علاج
+Relation	T3	T7	NoRel	true	واقعہ	ہوئے
+Relation	T4	T2	NoRel	true	بند	ظاہر
+Relation	T4	T3	NoRel	true	بند	واقعہ
+Relation	T4	T5	NoRel	true	بند	نگرانی
+Relation	T4	T7	NoRel	true	بند	ہوئے
+Relation	T5	T6	NoRel	true	نگرانی	علاج
+Relation	T6	T1	NoRel	true	علاج	تصدیق
+Relation	T6	T2	NoRel	true	علاج	ظاہر
+Relation	T6	T5	NoRel	true	علاج	نگرانی
+Relation	T7	T5	NoRel	true	ہوئے	نگرانی
+Relation	T8	T1	NoRel	true	موت	تصدیق
+Relation	T8	T4	NoRel	true	موت	بند
+Relation	T8	T7	NoRel	true	موت	ہوئے

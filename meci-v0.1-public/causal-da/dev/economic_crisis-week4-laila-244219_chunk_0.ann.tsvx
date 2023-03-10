@@ -1,0 +1,64 @@
+Text	KRONEBANKEN var en dansk bank med hovedsæde i Hillerød .	Banken blev dannet efter , at Sjællandske Bank og Frederiksborg Bank i 1983 fusionerede og i første omgang fortsatte under navnet Sjællandske Bank .	I 1984 ændrede banken navn til Kronebanken .	I december 1984 orienterede det daværende Tilsyn med Banker og Sparekasser ( senere Finanstilsynet ) Danmarks Nationalbank om alvorlige problemer i Kronebanken , der var Danmarks syvendestørste bank .	Banken var blot timer fra en konkurs forårsaget af at lån og garantier til en enkelt kunde på mere end 600 millioner kr. , efter at kunden ( ejendomsfirmaet og byggekoncernen Flexplan Gruppen ledet af byggematador Jørgen Olsen ) gik konkurs .
+Event	T0	dannet	EVENT	69
+Event	T1	fusionerede	EVENT	133
+Event	T2	fortsatte	EVENT	164
+Event	T3	ændrede	EVENT	213
+Event	T4	orienterede	EVENT	267
+Event	T5	problemer	EVENT	387
+Event	T6	forårsaget	EVENT	489
+Event	T7	lån	EVENT	506
+Event	T8	konkurs	EVENT	685
+Event	T9	konkurs	EVENT	481
+Event	T10	garantier	EVENT	513
+Event	T11	enkelt	EVENT	530
+Relation	T8	T9	CauseEffect	true	konkurs	konkurs
+Relation	T9	T8	EffectCause	true	konkurs	konkurs
+Relation	T9	T4	CauseEffect	true	konkurs	orienterede
+Relation	T4	T9	EffectCause	true	orienterede	konkurs
+Relation	T0	T11	NoRel	true	dannet	enkelt
+Relation	T0	T9	NoRel	true	dannet	konkurs
+Relation	T1	T10	NoRel	true	fusionerede	garantier
+Relation	T1	T2	NoRel	true	fusionerede	fortsatte
+Relation	T1	T5	NoRel	true	fusionerede	problemer
+Relation	T1	T8	NoRel	true	fusionerede	konkurs
+Relation	T10	T0	NoRel	true	garantier	dannet
+Relation	T10	T4	NoRel	true	garantier	orienterede
+Relation	T10	T8	NoRel	true	garantier	konkurs
+Relation	T11	T3	NoRel	true	enkelt	ændrede
+Relation	T11	T4	NoRel	true	enkelt	orienterede
+Relation	T11	T5	NoRel	true	enkelt	problemer
+Relation	T11	T7	NoRel	true	enkelt	lån
+Relation	T2	T0	NoRel	true	fortsatte	dannet
+Relation	T2	T11	NoRel	true	fortsatte	enkelt
+Relation	T2	T3	NoRel	true	fortsatte	ændrede
+Relation	T3	T1	NoRel	true	ændrede	fusionerede
+Relation	T3	T10	NoRel	true	ændrede	garantier
+Relation	T3	T11	NoRel	true	ændrede	enkelt
+Relation	T3	T4	NoRel	true	ændrede	orienterede
+Relation	T4	T10	NoRel	true	orienterede	garantier
+Relation	T4	T2	NoRel	true	orienterede	fortsatte
+Relation	T4	T3	NoRel	true	orienterede	ændrede
+Relation	T4	T6	NoRel	true	orienterede	forårsaget
+Relation	T4	T7	NoRel	true	orienterede	lån
+Relation	T5	T1	NoRel	true	problemer	fusionerede
+Relation	T5	T11	NoRel	true	problemer	enkelt
+Relation	T5	T2	NoRel	true	problemer	fortsatte
+Relation	T5	T3	NoRel	true	problemer	ændrede
+Relation	T5	T6	NoRel	true	problemer	forårsaget
+Relation	T5	T7	NoRel	true	problemer	lån
+Relation	T5	T8	NoRel	true	problemer	konkurs
+Relation	T5	T9	NoRel	true	problemer	konkurs
+Relation	T6	T0	NoRel	true	forårsaget	dannet
+Relation	T6	T11	NoRel	true	forårsaget	enkelt
+Relation	T6	T4	NoRel	true	forårsaget	orienterede
+Relation	T6	T5	NoRel	true	forårsaget	problemer
+Relation	T7	T1	NoRel	true	lån	fusionerede
+Relation	T7	T11	NoRel	true	lån	enkelt
+Relation	T7	T8	NoRel	true	lån	konkurs
+Relation	T8	T0	NoRel	true	konkurs	dannet
+Relation	T8	T10	NoRel	true	konkurs	garantier
+Relation	T8	T11	NoRel	true	konkurs	enkelt
+Relation	T8	T2	NoRel	true	konkurs	fortsatte
+Relation	T8	T4	NoRel	true	konkurs	orienterede
+Relation	T9	T10	NoRel	true	konkurs	garantier
+Relation	T9	T7	NoRel	true	konkurs	lån

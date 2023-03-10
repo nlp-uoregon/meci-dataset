@@ -1,0 +1,71 @@
+Text	The landing gear could have been manually lowered , nonetheless .	The pilots cycled the landing gear , but still failed to get the confirmation light .	Loft , who was working the radio during this leg of the flight , told the tower that they would discontinue their approach to their airport and requested to enter a holding pattern .	The approach controller cleared the flight to climb to , and then hold west over the Everglades .	The cockpit crew removed the light assembly , and Second Officer Repo was dispatched to the avionics bay beneath the flight deck to confirm via a small porthole if the landing gear was indeed down .
+Event	T0	lowered	EVENT	42
+Event	T1	cycled	EVENT	77
+Event	T2	failed	EVENT	113
+Event	T3	get	EVENT	123
+Event	T4	working	EVENT	167
+Event	T5	leg	EVENT	197
+Event	T6	flight	EVENT	208
+Event	T7	told	EVENT	217
+Event	T8	discontinue	EVENT	248
+Event	T9	approach	EVENT	266
+Event	T10	requested	EVENT	296
+Event	T11	enter	EVENT	309
+Event	T12	approach	EVENT	339
+Event	T13	cleared	EVENT	359
+Event	T14	flight	EVENT	371
+Event	T15	climb	EVENT	381
+Event	T16	hold	EVENT	401
+Event	T17	removed	EVENT	450
+Event	T18	dispatched	EVENT	507
+Event	T19	confirm	EVENT	565
+Event	T20	landing	EVENT	601
+Relation	T13	T15	CauseEffect	true	cleared	climb
+Relation	T15	T13	EffectCause	true	climb	cleared
+Relation	T18	T19	CauseEffect	true	dispatched	confirm
+Relation	T19	T18	EffectCause	true	confirm	dispatched
+Relation	T20	T18	CauseEffect	true	landing	dispatched
+Relation	T18	T20	EffectCause	true	dispatched	landing
+Relation	T0	T4	NoRel	true	lowered	working
+Relation	T1	T10	NoRel	true	cycled	requested
+Relation	T1	T16	NoRel	true	cycled	hold
+Relation	T10	T12	NoRel	true	requested	approach
+Relation	T10	T2	NoRel	true	requested	failed
+Relation	T11	T13	NoRel	true	enter	cleared
+Relation	T11	T17	NoRel	true	enter	removed
+Relation	T11	T19	NoRel	true	enter	confirm
+Relation	T11	T2	NoRel	true	enter	failed
+Relation	T12	T14	NoRel	true	approach	flight
+Relation	T13	T1	NoRel	true	cleared	cycled
+Relation	T13	T14	NoRel	true	cleared	flight
+Relation	T13	T16	NoRel	true	cleared	hold
+Relation	T13	T17	NoRel	true	cleared	removed
+Relation	T13	T19	NoRel	true	cleared	confirm
+Relation	T13	T20	NoRel	true	cleared	landing
+Relation	T13	T5	NoRel	true	cleared	leg
+Relation	T14	T13	NoRel	true	flight	cleared
+Relation	T14	T19	NoRel	true	flight	confirm
+Relation	T15	T11	NoRel	true	climb	enter
+Relation	T15	T14	NoRel	true	climb	flight
+Relation	T15	T9	NoRel	true	climb	approach
+Relation	T16	T0	NoRel	true	hold	lowered
+Relation	T16	T6	NoRel	true	hold	flight
+Relation	T17	T0	NoRel	true	removed	lowered
+Relation	T17	T18	NoRel	true	removed	dispatched
+Relation	T17	T4	NoRel	true	removed	working
+Relation	T18	T15	NoRel	true	dispatched	climb
+Relation	T18	T17	NoRel	true	dispatched	removed
+Relation	T19	T20	NoRel	true	confirm	landing
+Relation	T19	T9	NoRel	true	confirm	approach
+Relation	T20	T12	NoRel	true	landing	approach
+Relation	T20	T15	NoRel	true	landing	climb
+Relation	T3	T15	NoRel	true	get	climb
+Relation	T3	T2	NoRel	true	get	failed
+Relation	T4	T13	NoRel	true	working	cleared
+Relation	T4	T2	NoRel	true	working	failed
+Relation	T4	T7	NoRel	true	working	told
+Relation	T6	T1	NoRel	true	flight	cycled
+Relation	T6	T19	NoRel	true	flight	confirm
+Relation	T7	T5	NoRel	true	told	leg
+Relation	T8	T14	NoRel	true	discontinue	flight
+Relation	T9	T6	NoRel	true	approach	flight

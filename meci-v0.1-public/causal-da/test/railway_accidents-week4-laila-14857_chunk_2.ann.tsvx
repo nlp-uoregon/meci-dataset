@@ -1,0 +1,54 @@
+Text	Togulykken betød også , at trafikken på hovedvej 1 ved Odense nærmest gik i stå flere dage i træk , da nysgerrige valfartede til ulykkesstedet .	I forbindelse med påkørslen gennemførte DSB sammen med politiet de jernbanesikkerhedsmæssige undersøgelser .	Efter domsafsigelse i Odense Byret blev en kommissionsdomstol , med højesteretsdommer Henrik Tamm i spidsen , nedsat 17. maj 1969 for at klarlægge de nærmere omstændigheder og årsagerne til jernbaneulykken .		
+Event	T0	betød	EVENT	11
+Event	T1	valfartede	EVENT	114
+Event	T2	gennemførte	EVENT	173
+Event	T3	undersøgelser	EVENT	238
+Event	T4	domsafsigelse	EVENT	260
+Event	T5	nedsat	EVENT	364
+Event	T6	klarlægge	EVENT	391
+Event	T7	jernbaneulykken	EVENT	444
+Event	T8	Togulykken	EVENT	0
+Event	T9	gik i stå	EVENT	70
+Event	T10	påkørslen	EVENT	163
+Relation	T5	T6	CauseEffect	true	nedsat	klarlægge
+Relation	T6	T5	EffectCause	true	klarlægge	nedsat
+Relation	T1	T9	CauseEffect	true	valfartede	gik i stå
+Relation	T9	T1	EffectCause	true	gik i stå	valfartede
+Relation	T8	T1	CauseEffect	true	Togulykken	valfartede
+Relation	T1	T8	EffectCause	true	valfartede	Togulykken
+Relation	T0	T3	NoRel	true	betød	undersøgelser
+Relation	T0	T5	NoRel	true	betød	nedsat
+Relation	T0	T6	NoRel	true	betød	klarlægge
+Relation	T1	T0	NoRel	true	valfartede	betød
+Relation	T1	T3	NoRel	true	valfartede	undersøgelser
+Relation	T1	T6	NoRel	true	valfartede	klarlægge
+Relation	T10	T4	NoRel	true	påkørslen	domsafsigelse
+Relation	T10	T5	NoRel	true	påkørslen	nedsat
+Relation	T10	T6	NoRel	true	påkørslen	klarlægge
+Relation	T2	T0	NoRel	true	gennemførte	betød
+Relation	T2	T1	NoRel	true	gennemførte	valfartede
+Relation	T2	T10	NoRel	true	gennemførte	påkørslen
+Relation	T2	T6	NoRel	true	gennemførte	klarlægge
+Relation	T3	T1	NoRel	true	undersøgelser	valfartede
+Relation	T3	T7	NoRel	true	undersøgelser	jernbaneulykken
+Relation	T4	T3	NoRel	true	domsafsigelse	undersøgelser
+Relation	T4	T5	NoRel	true	domsafsigelse	nedsat
+Relation	T5	T1	NoRel	true	nedsat	valfartede
+Relation	T5	T10	NoRel	true	nedsat	påkørslen
+Relation	T5	T2	NoRel	true	nedsat	gennemførte
+Relation	T5	T7	NoRel	true	nedsat	jernbaneulykken
+Relation	T5	T9	NoRel	true	nedsat	gik i stå
+Relation	T6	T1	NoRel	true	klarlægge	valfartede
+Relation	T6	T8	NoRel	true	klarlægge	Togulykken
+Relation	T7	T1	NoRel	true	jernbaneulykken	valfartede
+Relation	T7	T6	NoRel	true	jernbaneulykken	klarlægge
+Relation	T7	T9	NoRel	true	jernbaneulykken	gik i stå
+Relation	T8	T10	NoRel	true	Togulykken	påkørslen
+Relation	T8	T5	NoRel	true	Togulykken	nedsat
+Relation	T8	T6	NoRel	true	Togulykken	klarlægge
+Relation	T8	T7	NoRel	true	Togulykken	jernbaneulykken
+Relation	T9	T0	NoRel	true	gik i stå	betød
+Relation	T9	T10	NoRel	true	gik i stå	påkørslen
+Relation	T9	T5	NoRel	true	gik i stå	nedsat
+Relation	T9	T6	NoRel	true	gik i stå	klarlægge
+Relation	T9	T8	NoRel	true	gik i stå	Togulykken

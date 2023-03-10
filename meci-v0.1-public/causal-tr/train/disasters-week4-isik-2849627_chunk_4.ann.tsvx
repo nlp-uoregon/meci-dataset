@@ -1,0 +1,38 @@
+Text	Fırtına , 15 Ağustos'ta Kuzey Karolina açıklarındaki Outer Banks ile Bermuda'nın ortasından geçti .	Bir süre sonra üst seviyedeki makaslama zayıfladı ve Irene , Bermuda'nın 560 km kuzeydoğusundayken hızla yoğunlaşarak önce bir kasırgaya , 16 Ağustos öğleden sonra ise en yüksek hızı 170 km /s olan bir Kategori 2 kasırgasına dönüştü .	Kasırganın en düşük basıncı ise 970_mbar idi .	Ulusal Kasırga Merkezi meteorologları , Irene'in bir kasırga haline gelme olasılığı taşıdığını düşünmelerine rağmen bu büyüklükte bir yoğunlaşma beklemediklerini ifade etti .	Irene , artan rüzgâr makası bölgesine girmesiyle birlikte zayıflamaya başladı ve sonuç olarak 18 Ağustos'un başlarında , Newfoundland'daki Race Burnu'nun 830 km güneyindeyken kasırga seviyesine düşürüldü .
+Event	T0	geçti	EVENT	92
+Event	T1	zayıfladı	EVENT	140
+Event	T2	kasırgaya	EVENT	227
+Event	T3	dönüştü	EVENT	325
+Event	T5	etti	EVENT	550
+Event	T6	girmesiyle	EVENT	595
+Event	T7	başladı	EVENT	627
+Event	T8	düşürüldü	EVENT	751
+Event	T9	yoğunlaşarak	EVENT	205
+Relation	T9	T3	CauseEffect	true	yoğunlaşarak	dönüştü
+Relation	T3	T9	EffectCause	true	dönüştü	yoğunlaşarak
+Relation	T6	T7	CauseEffect	true	girmesiyle	başladı
+Relation	T7	T6	EffectCause	true	başladı	girmesiyle
+Relation	T7	T8	CauseEffect	true	başladı	düşürüldü
+Relation	T8	T7	EffectCause	true	düşürüldü	başladı
+Relation	T0	T1	NoRel	true	geçti	zayıfladı
+Relation	T1	T2	NoRel	true	zayıfladı	kasırgaya
+Relation	T1	T5	NoRel	true	zayıfladı	etti
+Relation	T2	T5	NoRel	true	kasırgaya	etti
+Relation	T2	T7	NoRel	true	kasırgaya	başladı
+Relation	T2	T8	NoRel	true	kasırgaya	düşürüldü
+Relation	T2	T9	NoRel	true	kasırgaya	yoğunlaşarak
+Relation	T3	T0	NoRel	true	dönüştü	geçti
+Relation	T3	T2	NoRel	true	dönüştü	kasırgaya
+Relation	T3	T5	NoRel	true	dönüştü	etti
+Relation	T3	T8	NoRel	true	dönüştü	düşürüldü
+Relation	T5	T0	NoRel	true	etti	geçti
+Relation	T5	T1	NoRel	true	etti	zayıfladı
+Relation	T5	T2	NoRel	true	etti	kasırgaya
+Relation	T5	T6	NoRel	true	etti	girmesiyle
+Relation	T6	T0	NoRel	true	girmesiyle	geçti
+Relation	T6	T5	NoRel	true	girmesiyle	etti
+Relation	T7	T0	NoRel	true	başladı	geçti
+Relation	T7	T9	NoRel	true	başladı	yoğunlaşarak
+Relation	T8	T0	NoRel	true	düşürüldü	geçti
+Relation	T9	T6	NoRel	true	yoğunlaşarak	girmesiyle
+Relation	T9	T7	NoRel	true	yoğunlaşarak	başladı

@@ -1,0 +1,92 @@
+Text	Fransiskan papazlar , Baf'taki kiliselerini depremin ardından terk etti .	Depremden sadece 30 yıl önce inşa edilmiş olan ve limanı gözetleyen Saranda Kolones kalesi deprem sırasında yıkıldı .	Kuruyan limanı gözetlemek artık bir ihtiyaç olmadığından da tekrar inşa edilmedi .	Deprem , Baf kasabasını kalıcı biçimde değiştirdi .	Limanı kullanılmaz hale getiren deprem , kıyıyı denize doğru genişletti ve bu nedenle limanın korunaklı yeri ortadan kayboldu .
+Event	T0	depremin	EVENT	44
+Event	T3	deprem	EVENT	165
+Event	T4	yıkıldı	EVENT	182
+Event	T5	Deprem	EVENT	275
+Event	T6	değiştirdi	EVENT	314
+Event	T7	deprem	EVENT	359
+Event	T8	genişletti	EVENT	388
+Event	T9	kayboldu	EVENT	444
+Event	T10	Depremden	EVENT	74
+Event	T1	terk etti	EVENT	62
+Event	T2	inşa edilmiş	EVENT	103
+Event	T11	gözetleyen	EVENT	131
+Event	T12	Kuruyan	EVENT	192
+Event	T13	getiren	EVENT	351
+Relation	T0	T1	CauseEffect	true	depremin	terk etti
+Relation	T1	T0	EffectCause	true	terk etti	depremin
+Relation	T0	T9	CauseEffect	true	depremin	kayboldu
+Relation	T9	T0	EffectCause	true	kayboldu	depremin
+Relation	T0	T4	CauseEffect	true	depremin	yıkıldı
+Relation	T4	T0	EffectCause	true	yıkıldı	depremin
+Relation	T0	T6	CauseEffect	true	depremin	değiştirdi
+Relation	T6	T0	EffectCause	true	değiştirdi	depremin
+Relation	T0	T13	CauseEffect	true	depremin	getiren
+Relation	T13	T0	EffectCause	true	getiren	depremin
+Relation	T0	T8	CauseEffect	true	depremin	genişletti
+Relation	T8	T0	EffectCause	true	genişletti	depremin
+Relation	T0	T10	NoRel	true	depremin	Depremden
+Relation	T0	T12	NoRel	true	depremin	Kuruyan
+Relation	T0	T3	NoRel	true	depremin	deprem
+Relation	T1	T10	NoRel	true	terk etti	Depremden
+Relation	T1	T13	NoRel	true	terk etti	getiren
+Relation	T1	T4	NoRel	true	terk etti	yıkıldı
+Relation	T1	T5	NoRel	true	terk etti	Deprem
+Relation	T1	T6	NoRel	true	terk etti	değiştirdi
+Relation	T1	T7	NoRel	true	terk etti	deprem
+Relation	T10	T0	NoRel	true	Depremden	depremin
+Relation	T10	T12	NoRel	true	Depremden	Kuruyan
+Relation	T10	T13	NoRel	true	Depremden	getiren
+Relation	T10	T2	NoRel	true	Depremden	inşa edilmiş
+Relation	T10	T4	NoRel	true	Depremden	yıkıldı
+Relation	T11	T0	NoRel	true	gözetleyen	depremin
+Relation	T11	T10	NoRel	true	gözetleyen	Depremden
+Relation	T11	T2	NoRel	true	gözetleyen	inşa edilmiş
+Relation	T11	T3	NoRel	true	gözetleyen	deprem
+Relation	T11	T5	NoRel	true	gözetleyen	Deprem
+Relation	T11	T7	NoRel	true	gözetleyen	deprem
+Relation	T11	T9	NoRel	true	gözetleyen	kayboldu
+Relation	T12	T0	NoRel	true	Kuruyan	depremin
+Relation	T12	T11	NoRel	true	Kuruyan	gözetleyen
+Relation	T12	T13	NoRel	true	Kuruyan	getiren
+Relation	T12	T3	NoRel	true	Kuruyan	deprem
+Relation	T12	T7	NoRel	true	Kuruyan	deprem
+Relation	T12	T9	NoRel	true	Kuruyan	kayboldu
+Relation	T13	T10	NoRel	true	getiren	Depremden
+Relation	T13	T12	NoRel	true	getiren	Kuruyan
+Relation	T13	T2	NoRel	true	getiren	inşa edilmiş
+Relation	T2	T4	NoRel	true	inşa edilmiş	yıkıldı
+Relation	T2	T5	NoRel	true	inşa edilmiş	Deprem
+Relation	T2	T6	NoRel	true	inşa edilmiş	değiştirdi
+Relation	T3	T0	NoRel	true	deprem	depremin
+Relation	T3	T11	NoRel	true	deprem	gözetleyen
+Relation	T3	T12	NoRel	true	deprem	Kuruyan
+Relation	T3	T7	NoRel	true	deprem	deprem
+Relation	T3	T9	NoRel	true	deprem	kayboldu
+Relation	T4	T1	NoRel	true	yıkıldı	terk etti
+Relation	T4	T11	NoRel	true	yıkıldı	gözetleyen
+Relation	T4	T8	NoRel	true	yıkıldı	genişletti
+Relation	T5	T11	NoRel	true	Deprem	gözetleyen
+Relation	T5	T4	NoRel	true	Deprem	yıkıldı
+Relation	T5	T6	NoRel	true	Deprem	değiştirdi
+Relation	T5	T7	NoRel	true	Deprem	deprem
+Relation	T6	T11	NoRel	true	değiştirdi	gözetleyen
+Relation	T6	T12	NoRel	true	değiştirdi	Kuruyan
+Relation	T6	T13	NoRel	true	değiştirdi	getiren
+Relation	T6	T2	NoRel	true	değiştirdi	inşa edilmiş
+Relation	T6	T3	NoRel	true	değiştirdi	deprem
+Relation	T6	T4	NoRel	true	değiştirdi	yıkıldı
+Relation	T7	T1	NoRel	true	deprem	terk etti
+Relation	T7	T13	NoRel	true	deprem	getiren
+Relation	T7	T2	NoRel	true	deprem	inşa edilmiş
+Relation	T7	T3	NoRel	true	deprem	deprem
+Relation	T7	T5	NoRel	true	deprem	Deprem
+Relation	T7	T6	NoRel	true	deprem	değiştirdi
+Relation	T8	T1	NoRel	true	genişletti	terk etti
+Relation	T8	T12	NoRel	true	genişletti	Kuruyan
+Relation	T8	T3	NoRel	true	genişletti	deprem
+Relation	T9	T10	NoRel	true	kayboldu	Depremden
+Relation	T9	T12	NoRel	true	kayboldu	Kuruyan
+Relation	T9	T4	NoRel	true	kayboldu	yıkıldı
+Relation	T9	T5	NoRel	true	kayboldu	Deprem
+Relation	T9	T8	NoRel	true	kayboldu	genişletti

@@ -1,0 +1,138 @@
+Text	El primer caso confirmado de la pandemia de COVID-19 en FIYI se notifico el día 19 de marzo de 2020 en Lautoka .	Hasta el 9 de agosto de 2021 se han confirmado unos 37,846 casos , de los cuales 327 han fallecido y 12,934 se han recuperado .	En diciembre de 2019 se identificó un nuevo coronavirus que causó una enfermedad respiratoria en la ciudad de Wuhan , provincia de Hubei , China , y se informó a la Organización Mundial de la Salud ( OMS ) el 31 de diciembre de 2019 , que confirmó su preocupación el 12 de enero de 2020 .	La OMS declaró el brote de una Emergencia de Salud Pública de Importancia Internacional el 30 de enero y una pandemia el 11 de marzo .	La tasa de letalidad de COVID-19 es mucho menor que la del SARS , una enfermedad relacionada que surgió en 2002 , pero su transmisión ha sido significativamente mayor , lo que ha provocado un número total de muertes mucho mayor .
+Event	T1	pandemia	EVENT	32
+Event	T10	confirmó	EVENT	480
+Event	T11	preocupación	EVENT	492
+Event	T12	declaró	EVENT	537
+Event	T13	brote	EVENT	548
+Event	T14	Emergencia	EVENT	561
+Event	T15	pandemia	EVENT	639
+Event	T16	surgió	EVENT	762
+Event	T17	transmisión	EVENT	787
+Event	T18	provocado	EVENT	844
+Event	T19	muertes	EVENT	873
+Event	T2	notifico	EVENT	64
+Event	T3	confirmado	EVENT	149
+Event	T4	fallecido	EVENT	202
+Event	T5	recuperado	EVENT	228
+Event	T6	identificó	EVENT	265
+Event	T7	coronavirus	EVENT	285
+Event	T8	causó	EVENT	301
+Event	T9	informó	EVENT	393
+Relation	T1	T2	CauseEffect	true	pandemia	notifico
+Relation	T2	T1	EffectCause	true	notifico	pandemia
+Relation	T1	T3	CauseEffect	true	pandemia	confirmado
+Relation	T3	T1	EffectCause	true	confirmado	pandemia
+Relation	T1	T4	CauseEffect	true	pandemia	fallecido
+Relation	T4	T1	EffectCause	true	fallecido	pandemia
+Relation	T7	T6	CauseEffect	true	coronavirus	identificó
+Relation	T6	T7	EffectCause	true	identificó	coronavirus
+Relation	T7	T10	CauseEffect	true	coronavirus	confirmó
+Relation	T10	T7	EffectCause	true	confirmó	coronavirus
+Relation	T15	T12	CauseEffect	true	pandemia	declaró
+Relation	T12	T15	EffectCause	true	declaró	pandemia
+Relation	T1	T19	CauseEffect	true	pandemia	muertes
+Relation	T19	T1	EffectCause	true	muertes	pandemia
+Relation	T13	T14	CauseEffect	true	brote	Emergencia
+Relation	T14	T13	EffectCause	true	Emergencia	brote
+Relation	T1	T11	NoRel	true	pandemia	preocupación
+Relation	T1	T17	NoRel	true	pandemia	transmisión
+Relation	T1	T18	NoRel	true	pandemia	provocado
+Relation	T1	T5	NoRel	true	pandemia	recuperado
+Relation	T1	T7	NoRel	true	pandemia	coronavirus
+Relation	T10	T12	NoRel	true	confirmó	declaró
+Relation	T10	T15	NoRel	true	confirmó	pandemia
+Relation	T10	T17	NoRel	true	confirmó	transmisión
+Relation	T10	T5	NoRel	true	confirmó	recuperado
+Relation	T11	T12	NoRel	true	preocupación	declaró
+Relation	T11	T14	NoRel	true	preocupación	Emergencia
+Relation	T11	T16	NoRel	true	preocupación	surgió
+Relation	T11	T19	NoRel	true	preocupación	muertes
+Relation	T11	T6	NoRel	true	preocupación	identificó
+Relation	T11	T8	NoRel	true	preocupación	causó
+Relation	T12	T14	NoRel	true	declaró	Emergencia
+Relation	T12	T16	NoRel	true	declaró	surgió
+Relation	T12	T17	NoRel	true	declaró	transmisión
+Relation	T12	T18	NoRel	true	declaró	provocado
+Relation	T12	T19	NoRel	true	declaró	muertes
+Relation	T12	T2	NoRel	true	declaró	notifico
+Relation	T12	T9	NoRel	true	declaró	informó
+Relation	T13	T1	NoRel	true	brote	pandemia
+Relation	T13	T12	NoRel	true	brote	declaró
+Relation	T13	T15	NoRel	true	brote	pandemia
+Relation	T13	T17	NoRel	true	brote	transmisión
+Relation	T13	T2	NoRel	true	brote	notifico
+Relation	T14	T10	NoRel	true	Emergencia	confirmó
+Relation	T14	T12	NoRel	true	Emergencia	declaró
+Relation	T14	T19	NoRel	true	Emergencia	muertes
+Relation	T14	T5	NoRel	true	Emergencia	recuperado
+Relation	T14	T6	NoRel	true	Emergencia	identificó
+Relation	T14	T7	NoRel	true	Emergencia	coronavirus
+Relation	T15	T1	NoRel	true	pandemia	pandemia
+Relation	T15	T18	NoRel	true	pandemia	provocado
+Relation	T15	T2	NoRel	true	pandemia	notifico
+Relation	T15	T5	NoRel	true	pandemia	recuperado
+Relation	T15	T9	NoRel	true	pandemia	informó
+Relation	T16	T1	NoRel	true	surgió	pandemia
+Relation	T16	T11	NoRel	true	surgió	preocupación
+Relation	T16	T12	NoRel	true	surgió	declaró
+Relation	T16	T17	NoRel	true	surgió	transmisión
+Relation	T16	T19	NoRel	true	surgió	muertes
+Relation	T16	T2	NoRel	true	surgió	notifico
+Relation	T16	T7	NoRel	true	surgió	coronavirus
+Relation	T16	T9	NoRel	true	surgió	informó
+Relation	T17	T11	NoRel	true	transmisión	preocupación
+Relation	T17	T18	NoRel	true	transmisión	provocado
+Relation	T17	T19	NoRel	true	transmisión	muertes
+Relation	T17	T4	NoRel	true	transmisión	fallecido
+Relation	T17	T7	NoRel	true	transmisión	coronavirus
+Relation	T18	T14	NoRel	true	provocado	Emergencia
+Relation	T18	T15	NoRel	true	provocado	pandemia
+Relation	T18	T16	NoRel	true	provocado	surgió
+Relation	T18	T2	NoRel	true	provocado	notifico
+Relation	T18	T5	NoRel	true	provocado	recuperado
+Relation	T18	T6	NoRel	true	provocado	identificó
+Relation	T18	T7	NoRel	true	provocado	coronavirus
+Relation	T19	T10	NoRel	true	muertes	confirmó
+Relation	T19	T11	NoRel	true	muertes	preocupación
+Relation	T19	T13	NoRel	true	muertes	brote
+Relation	T19	T18	NoRel	true	muertes	provocado
+Relation	T19	T2	NoRel	true	muertes	notifico
+Relation	T19	T6	NoRel	true	muertes	identificó
+Relation	T19	T7	NoRel	true	muertes	coronavirus
+Relation	T2	T12	NoRel	true	notifico	declaró
+Relation	T2	T13	NoRel	true	notifico	brote
+Relation	T2	T15	NoRel	true	notifico	pandemia
+Relation	T2	T17	NoRel	true	notifico	transmisión
+Relation	T2	T3	NoRel	true	notifico	confirmado
+Relation	T2	T6	NoRel	true	notifico	identificó
+Relation	T3	T11	NoRel	true	confirmado	preocupación
+Relation	T3	T18	NoRel	true	confirmado	provocado
+Relation	T3	T5	NoRel	true	confirmado	recuperado
+Relation	T4	T18	NoRel	true	fallecido	provocado
+Relation	T4	T7	NoRel	true	fallecido	coronavirus
+Relation	T4	T8	NoRel	true	fallecido	causó
+Relation	T5	T1	NoRel	true	recuperado	pandemia
+Relation	T5	T11	NoRel	true	recuperado	preocupación
+Relation	T5	T12	NoRel	true	recuperado	declaró
+Relation	T5	T14	NoRel	true	recuperado	Emergencia
+Relation	T5	T16	NoRel	true	recuperado	surgió
+Relation	T5	T9	NoRel	true	recuperado	informó
+Relation	T6	T10	NoRel	true	identificó	confirmó
+Relation	T6	T16	NoRel	true	identificó	surgió
+Relation	T7	T1	NoRel	true	coronavirus	pandemia
+Relation	T7	T17	NoRel	true	coronavirus	transmisión
+Relation	T7	T19	NoRel	true	coronavirus	muertes
+Relation	T7	T2	NoRel	true	coronavirus	notifico
+Relation	T7	T5	NoRel	true	coronavirus	recuperado
+Relation	T7	T9	NoRel	true	coronavirus	informó
+Relation	T8	T11	NoRel	true	causó	preocupación
+Relation	T8	T13	NoRel	true	causó	brote
+Relation	T8	T18	NoRel	true	causó	provocado
+Relation	T8	T19	NoRel	true	causó	muertes
+Relation	T8	T7	NoRel	true	causó	coronavirus
+Relation	T9	T1	NoRel	true	informó	pandemia
+Relation	T9	T12	NoRel	true	informó	declaró
+Relation	T9	T19	NoRel	true	informó	muertes
+Relation	T9	T4	NoRel	true	informó	fallecido
+Relation	T9	T5	NoRel	true	informó	recuperado
+Relation	T9	T7	NoRel	true	informó	coronavirus

@@ -1,0 +1,96 @@
+Text	اس مرض میں سماجی فاصلہ گیری صرف ان دو معاملوں سے دوری شامل ہو سکتی ہے ۔	تاہم کچھ معاملے میں چھونے اور پاس بیٹھنا بھی مرض کو دعوت دینا ہوتا ہوتا ہے ۔	ایسے میں چھونے کے علاوہ متاثرہ شخص سے کم از کم دو میٹر یا تین میٹر کی دوری بنائے رکھنے کی ضرورت پڑ سکتی ہے ۔	اسی بنا پر سارس وائرس اور کورونا وائرس جیسے وبائی امراض کے وقت لوگوں کو ہدایت دی جاتی ہے ۔	لوگوں کو ہاتھوں کے بار بار دھونے اور ہاتھ ملانے اور گلے ملنے سے روکا جاتا ہے ۔
+Event	T0	مرض	EVENT	3
+Event	T1	دعوت	EVENT	124
+Event	T2	چھونے	EVENT	158
+Event	T3	امراض	EVENT	308
+Event	T4	دھونے	EVENT	376
+Event	T5	ملنے	EVENT	405
+Event	T6	روکا	EVENT	413
+Event	T7	معاملوں	EVENT	38
+Event	T8	چھونے	EVENT	92
+Event	T9	بیٹھنا	EVENT	106
+Event	T10	مرض	EVENT	117
+Event	T11	متاثرہ	EVENT	173
+Event	T12	رکھنے	EVENT	230
+Event	T14	ہدایت	EVENT	330
+Event	T13	ملانے	EVENT	391
+Relation	T9	T10	CauseEffect	true	بیٹھنا	مرض
+Relation	T10	T9	EffectCause	true	مرض	بیٹھنا
+Relation	T8	T10	CauseEffect	true	چھونے	مرض
+Relation	T10	T8	EffectCause	true	مرض	چھونے
+Relation	T0	T1	NoRel	true	مرض	دعوت
+Relation	T0	T13	NoRel	true	مرض	ملانے
+Relation	T0	T2	NoRel	true	مرض	چھونے
+Relation	T0	T5	NoRel	true	مرض	ملنے
+Relation	T0	T6	NoRel	true	مرض	روکا
+Relation	T0	T7	NoRel	true	مرض	معاملوں
+Relation	T1	T12	NoRel	true	دعوت	رکھنے
+Relation	T1	T3	NoRel	true	دعوت	امراض
+Relation	T1	T4	NoRel	true	دعوت	دھونے
+Relation	T1	T5	NoRel	true	دعوت	ملنے
+Relation	T1	T8	NoRel	true	دعوت	چھونے
+Relation	T10	T0	NoRel	true	مرض	مرض
+Relation	T10	T1	NoRel	true	مرض	دعوت
+Relation	T10	T11	NoRel	true	مرض	متاثرہ
+Relation	T10	T3	NoRel	true	مرض	امراض
+Relation	T10	T7	NoRel	true	مرض	معاملوں
+Relation	T11	T12	NoRel	true	متاثرہ	رکھنے
+Relation	T11	T13	NoRel	true	متاثرہ	ملانے
+Relation	T11	T4	NoRel	true	متاثرہ	دھونے
+Relation	T11	T7	NoRel	true	متاثرہ	معاملوں
+Relation	T12	T0	NoRel	true	رکھنے	مرض
+Relation	T12	T11	NoRel	true	رکھنے	متاثرہ
+Relation	T12	T6	NoRel	true	رکھنے	روکا
+Relation	T12	T7	NoRel	true	رکھنے	معاملوں
+Relation	T13	T12	NoRel	true	ملانے	رکھنے
+Relation	T13	T2	NoRel	true	ملانے	چھونے
+Relation	T14	T10	NoRel	true	ہدایت	مرض
+Relation	T14	T12	NoRel	true	ہدایت	رکھنے
+Relation	T14	T13	NoRel	true	ہدایت	ملانے
+Relation	T14	T3	NoRel	true	ہدایت	امراض
+Relation	T14	T4	NoRel	true	ہدایت	دھونے
+Relation	T14	T5	NoRel	true	ہدایت	ملنے
+Relation	T14	T6	NoRel	true	ہدایت	روکا
+Relation	T2	T0	NoRel	true	چھونے	مرض
+Relation	T2	T1	NoRel	true	چھونے	دعوت
+Relation	T2	T11	NoRel	true	چھونے	متاثرہ
+Relation	T2	T7	NoRel	true	چھونے	معاملوں
+Relation	T2	T9	NoRel	true	چھونے	بیٹھنا
+Relation	T3	T0	NoRel	true	امراض	مرض
+Relation	T3	T12	NoRel	true	امراض	رکھنے
+Relation	T3	T13	NoRel	true	امراض	ملانے
+Relation	T3	T14	NoRel	true	امراض	ہدایت
+Relation	T3	T6	NoRel	true	امراض	روکا
+Relation	T4	T1	NoRel	true	دھونے	دعوت
+Relation	T4	T10	NoRel	true	دھونے	مرض
+Relation	T4	T11	NoRel	true	دھونے	متاثرہ
+Relation	T4	T12	NoRel	true	دھونے	رکھنے
+Relation	T4	T13	NoRel	true	دھونے	ملانے
+Relation	T4	T2	NoRel	true	دھونے	چھونے
+Relation	T4	T5	NoRel	true	دھونے	ملنے
+Relation	T5	T11	NoRel	true	ملنے	متاثرہ
+Relation	T5	T12	NoRel	true	ملنے	رکھنے
+Relation	T5	T2	NoRel	true	ملنے	چھونے
+Relation	T5	T6	NoRel	true	ملنے	روکا
+Relation	T5	T7	NoRel	true	ملنے	معاملوں
+Relation	T6	T14	NoRel	true	روکا	ہدایت
+Relation	T6	T3	NoRel	true	روکا	امراض
+Relation	T6	T7	NoRel	true	روکا	معاملوں
+Relation	T6	T8	NoRel	true	روکا	چھونے
+Relation	T7	T1	NoRel	true	معاملوں	دعوت
+Relation	T7	T12	NoRel	true	معاملوں	رکھنے
+Relation	T7	T13	NoRel	true	معاملوں	ملانے
+Relation	T7	T2	NoRel	true	معاملوں	چھونے
+Relation	T7	T3	NoRel	true	معاملوں	امراض
+Relation	T7	T8	NoRel	true	معاملوں	چھونے
+Relation	T8	T11	NoRel	true	چھونے	متاثرہ
+Relation	T8	T13	NoRel	true	چھونے	ملانے
+Relation	T8	T14	NoRel	true	چھونے	ہدایت
+Relation	T8	T5	NoRel	true	چھونے	ملنے
+Relation	T8	T6	NoRel	true	چھونے	روکا
+Relation	T8	T7	NoRel	true	چھونے	معاملوں
+Relation	T9	T0	NoRel	true	بیٹھنا	مرض
+Relation	T9	T11	NoRel	true	بیٹھنا	متاثرہ
+Relation	T9	T12	NoRel	true	بیٹھنا	رکھنے
+Relation	T9	T14	NoRel	true	بیٹھنا	ہدایت
+Relation	T9	T3	NoRel	true	بیٹھنا	امراض

@@ -1,0 +1,43 @@
+Text	Tsunamiden ölenlerin sayısının bu denli fazla olmasınının bir sebebi de , dalgaların beklenmedik derecede yüksek olan boyutlarıydı .	Tsunaminin vurduğu pek çok şehirdeki tsunami setleri dalgaların yüksekliğinden daha küçüktü .	Ayrıca dalgalara yakalanan pek çok kişi dalgalardan kaçabilmek için yeterince yüksekte olduklarını düşünümüştü .	Kuji ve Ōfunato " tamamen yıkılmış ve orada bir kasaba olduğunu dair hiçbir işaret kalmamıştı " .	Gelen haberlere göre dalgaların üç katlı bir bina yüksekliğinde olduğu Rikuzentakata kasabası da yıkılmıştı .
+Event	T0	vurduğu	EVENT	144
+Event	T1	setleri	EVENT	178
+Event	T2	düşünümüştü	EVENT	326
+Event	T3	yıkılmış	EVENT	366
+Event	T4	yıkılmıştı	EVENT	535
+Event	T5	Tsunamiden	EVENT	0
+Event	T6	ölenlerin	EVENT	11
+Event	T7	yakalanan	EVENT	244
+Event	T8	kaçabilmek	EVENT	279
+Event	T9	Gelen	EVENT	438
+Relation	T5	T6	CauseEffect	true	Tsunamiden	ölenlerin
+Relation	T6	T5	EffectCause	true	ölenlerin	Tsunamiden
+Relation	T5	T3	CauseEffect	true	Tsunamiden	yıkılmış
+Relation	T3	T5	EffectCause	true	yıkılmış	Tsunamiden
+Relation	T5	T4	CauseEffect	true	Tsunamiden	yıkılmıştı
+Relation	T4	T5	EffectCause	true	yıkılmıştı	Tsunamiden
+Relation	T0	T3	NoRel	true	vurduğu	yıkılmış
+Relation	T0	T7	NoRel	true	vurduğu	yakalanan
+Relation	T0	T8	NoRel	true	vurduğu	kaçabilmek
+Relation	T1	T2	NoRel	true	setleri	düşünümüştü
+Relation	T1	T9	NoRel	true	setleri	Gelen
+Relation	T2	T1	NoRel	true	düşünümüştü	setleri
+Relation	T2	T3	NoRel	true	düşünümüştü	yıkılmış
+Relation	T2	T5	NoRel	true	düşünümüştü	Tsunamiden
+Relation	T3	T2	NoRel	true	yıkılmış	düşünümüştü
+Relation	T3	T4	NoRel	true	yıkılmış	yıkılmıştı
+Relation	T3	T7	NoRel	true	yıkılmış	yakalanan
+Relation	T4	T1	NoRel	true	yıkılmıştı	setleri
+Relation	T4	T2	NoRel	true	yıkılmıştı	düşünümüştü
+Relation	T4	T7	NoRel	true	yıkılmıştı	yakalanan
+Relation	T5	T0	NoRel	true	Tsunamiden	vurduğu
+Relation	T5	T9	NoRel	true	Tsunamiden	Gelen
+Relation	T6	T0	NoRel	true	ölenlerin	vurduğu
+Relation	T6	T2	NoRel	true	ölenlerin	düşünümüştü
+Relation	T6	T4	NoRel	true	ölenlerin	yıkılmıştı
+Relation	T7	T3	NoRel	true	yakalanan	yıkılmış
+Relation	T7	T9	NoRel	true	yakalanan	Gelen
+Relation	T8	T4	NoRel	true	kaçabilmek	yıkılmıştı
+Relation	T8	T7	NoRel	true	kaçabilmek	yakalanan
+Relation	T9	T0	NoRel	true	Gelen	vurduğu
+Relation	T9	T5	NoRel	true	Gelen	Tsunamiden
+Relation	T9	T8	NoRel	true	Gelen	kaçabilmek

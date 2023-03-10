@@ -1,0 +1,44 @@
+Text	Han blev anklaget for at være skyld i ulykken og blev den 27. oktober idømt 4 måneders simpelt fængsel .	Ulykken kostede 40 mennesker livet , og der var 39 hårdt sårede og krævede mange amputationer , 70 mindre hårdt sårede og 31 lettere sårede .			
+Event	T0	anklaget	EVENT	9
+Event	T1	ulykken	EVENT	38
+Event	T2	idømt	EVENT	70
+Event	T3	fængsel	EVENT	95
+Event	T4	kostede	EVENT	113
+Event	T5	sårede	EVENT	162
+Event	T6	krævede	EVENT	172
+Event	T7	amputationer	EVENT	186
+Event	T8	sårede	EVENT	217
+Event	T9	sårede	EVENT	238
+Relation	T1	T2	CauseEffect	true	ulykken	idømt
+Relation	T2	T1	EffectCause	true	idømt	ulykken
+Relation	T1	T4	CauseEffect	true	ulykken	kostede
+Relation	T4	T1	EffectCause	true	kostede	ulykken
+Relation	T1	T5	CauseEffect	true	ulykken	sårede
+Relation	T5	T1	EffectCause	true	sårede	ulykken
+Relation	T1	T7	CauseEffect	true	ulykken	amputationer
+Relation	T7	T1	EffectCause	true	amputationer	ulykken
+Relation	T1	T8	CauseEffect	true	ulykken	sårede
+Relation	T8	T1	EffectCause	true	sårede	ulykken
+Relation	T1	T9	CauseEffect	true	ulykken	sårede
+Relation	T9	T1	EffectCause	true	sårede	ulykken
+Relation	T0	T3	NoRel	true	anklaget	fængsel
+Relation	T0	T4	NoRel	true	anklaget	kostede
+Relation	T0	T5	NoRel	true	anklaget	sårede
+Relation	T0	T7	NoRel	true	anklaget	amputationer
+Relation	T2	T6	NoRel	true	idømt	krævede
+Relation	T2	T7	NoRel	true	idømt	amputationer
+Relation	T2	T9	NoRel	true	idømt	sårede
+Relation	T3	T4	NoRel	true	fængsel	kostede
+Relation	T3	T5	NoRel	true	fængsel	sårede
+Relation	T3	T6	NoRel	true	fængsel	krævede
+Relation	T3	T8	NoRel	true	fængsel	sårede
+Relation	T3	T9	NoRel	true	fængsel	sårede
+Relation	T4	T6	NoRel	true	kostede	krævede
+Relation	T4	T7	NoRel	true	kostede	amputationer
+Relation	T4	T8	NoRel	true	kostede	sårede
+Relation	T5	T3	NoRel	true	sårede	fængsel
+Relation	T5	T4	NoRel	true	sårede	kostede
+Relation	T5	T9	NoRel	true	sårede	sårede
+Relation	T6	T3	NoRel	true	krævede	fængsel
+Relation	T8	T5	NoRel	true	sårede	sårede
+Relation	T9	T6	NoRel	true	sårede	krævede

@@ -1,0 +1,111 @@
+Text	- Smitten spredes nemt blandt mennesker .	En sygdom er dermed ikke nødvendigvis en pandemi , blot fordi den er vidt udbredt – den skal også være smittefarlig .	Virus og bakterier overføres let mellem mennesker og dyr , jvf zoonose .	Kræft er eksempelvis ikke en pandemi , selvom den er vidt udbredt .	Fra den sorte død over SARS til COVID-19 har verden været udsat for et dusin pandemier .
+Event	T0	spredes	EVENT	10
+Event	T1	overføres	EVENT	179
+Event	T2	zoonose	EVENT	223
+Event	T3	Kræft	EVENT	233
+Event	T4	pandemi	EVENT	262
+Event	T6	pandemier	EVENT	378
+Event	T7	sygdom	EVENT	45
+Event	T8	Smitten	EVENT	2
+Event	T9	pandemi	EVENT	83
+Event	T10	udbredt	EVENT	116
+Event	T11	smittefarlig	EVENT	145
+Event	T12	Virus	EVENT	160
+Event	T13	bakterier	EVENT	169
+Event	T14	udbredt	EVENT	291
+Event	T5	den sorte død	EVENT	305
+Event	T15	SARS	EVENT	324
+Event	T16	COVID-19	EVENT	333
+Relation	T10	T9	CauseEffect	true	udbredt	pandemi
+Relation	T9	T10	EffectCause	true	pandemi	udbredt
+Relation	T11	T9	CauseEffect	true	smittefarlig	pandemi
+Relation	T9	T11	EffectCause	true	pandemi	smittefarlig
+Relation	T0	T12	NoRel	true	spredes	Virus
+Relation	T0	T15	NoRel	true	spredes	SARS
+Relation	T0	T16	NoRel	true	spredes	COVID-19
+Relation	T0	T3	NoRel	true	spredes	Kræft
+Relation	T0	T4	NoRel	true	spredes	pandemi
+Relation	T0	T9	NoRel	true	spredes	pandemi
+Relation	T1	T10	NoRel	true	overføres	udbredt
+Relation	T1	T11	NoRel	true	overføres	smittefarlig
+Relation	T1	T3	NoRel	true	overføres	Kræft
+Relation	T1	T5	NoRel	true	overføres	den sorte død
+Relation	T1	T6	NoRel	true	overføres	pandemier
+Relation	T10	T12	NoRel	true	udbredt	Virus
+Relation	T10	T5	NoRel	true	udbredt	den sorte død
+Relation	T10	T7	NoRel	true	udbredt	sygdom
+Relation	T11	T13	NoRel	true	smittefarlig	bakterier
+Relation	T11	T15	NoRel	true	smittefarlig	SARS
+Relation	T11	T2	NoRel	true	smittefarlig	zoonose
+Relation	T11	T5	NoRel	true	smittefarlig	den sorte død
+Relation	T11	T7	NoRel	true	smittefarlig	sygdom
+Relation	T12	T1	NoRel	true	Virus	overføres
+Relation	T12	T13	NoRel	true	Virus	bakterier
+Relation	T12	T14	NoRel	true	Virus	udbredt
+Relation	T12	T15	NoRel	true	Virus	SARS
+Relation	T12	T2	NoRel	true	Virus	zoonose
+Relation	T12	T4	NoRel	true	Virus	pandemi
+Relation	T12	T6	NoRel	true	Virus	pandemier
+Relation	T13	T1	NoRel	true	bakterier	overføres
+Relation	T13	T10	NoRel	true	bakterier	udbredt
+Relation	T13	T8	NoRel	true	bakterier	Smitten
+Relation	T13	T9	NoRel	true	bakterier	pandemi
+Relation	T14	T13	NoRel	true	udbredt	bakterier
+Relation	T14	T15	NoRel	true	udbredt	SARS
+Relation	T14	T2	NoRel	true	udbredt	zoonose
+Relation	T14	T3	NoRel	true	udbredt	Kræft
+Relation	T14	T4	NoRel	true	udbredt	pandemi
+Relation	T14	T7	NoRel	true	udbredt	sygdom
+Relation	T15	T10	NoRel	true	SARS	udbredt
+Relation	T15	T16	NoRel	true	SARS	COVID-19
+Relation	T15	T6	NoRel	true	SARS	pandemier
+Relation	T15	T7	NoRel	true	SARS	sygdom
+Relation	T15	T8	NoRel	true	SARS	Smitten
+Relation	T16	T3	NoRel	true	COVID-19	Kræft
+Relation	T16	T5	NoRel	true	COVID-19	den sorte død
+Relation	T2	T0	NoRel	true	zoonose	spredes
+Relation	T2	T1	NoRel	true	zoonose	overføres
+Relation	T2	T10	NoRel	true	zoonose	udbredt
+Relation	T2	T12	NoRel	true	zoonose	Virus
+Relation	T2	T3	NoRel	true	zoonose	Kræft
+Relation	T2	T4	NoRel	true	zoonose	pandemi
+Relation	T2	T5	NoRel	true	zoonose	den sorte død
+Relation	T2	T8	NoRel	true	zoonose	Smitten
+Relation	T3	T0	NoRel	true	Kræft	spredes
+Relation	T3	T1	NoRel	true	Kræft	overføres
+Relation	T3	T16	NoRel	true	Kræft	COVID-19
+Relation	T3	T2	NoRel	true	Kræft	zoonose
+Relation	T3	T9	NoRel	true	Kræft	pandemi
+Relation	T4	T0	NoRel	true	pandemi	spredes
+Relation	T4	T1	NoRel	true	pandemi	overføres
+Relation	T4	T12	NoRel	true	pandemi	Virus
+Relation	T4	T13	NoRel	true	pandemi	bakterier
+Relation	T4	T5	NoRel	true	pandemi	den sorte død
+Relation	T5	T12	NoRel	true	den sorte død	Virus
+Relation	T5	T2	NoRel	true	den sorte død	zoonose
+Relation	T5	T7	NoRel	true	den sorte død	sygdom
+Relation	T5	T8	NoRel	true	den sorte død	Smitten
+Relation	T6	T0	NoRel	true	pandemier	spredes
+Relation	T6	T1	NoRel	true	pandemier	overføres
+Relation	T6	T14	NoRel	true	pandemier	udbredt
+Relation	T6	T16	NoRel	true	pandemier	COVID-19
+Relation	T6	T2	NoRel	true	pandemier	zoonose
+Relation	T6	T4	NoRel	true	pandemier	pandemi
+Relation	T6	T5	NoRel	true	pandemier	den sorte død
+Relation	T6	T7	NoRel	true	pandemier	sygdom
+Relation	T7	T10	NoRel	true	sygdom	udbredt
+Relation	T7	T15	NoRel	true	sygdom	SARS
+Relation	T7	T2	NoRel	true	sygdom	zoonose
+Relation	T7	T8	NoRel	true	sygdom	Smitten
+Relation	T8	T1	NoRel	true	Smitten	overføres
+Relation	T8	T10	NoRel	true	Smitten	udbredt
+Relation	T8	T11	NoRel	true	Smitten	smittefarlig
+Relation	T8	T12	NoRel	true	Smitten	Virus
+Relation	T8	T13	NoRel	true	Smitten	bakterier
+Relation	T8	T3	NoRel	true	Smitten	Kræft
+Relation	T8	T9	NoRel	true	Smitten	pandemi
+Relation	T9	T13	NoRel	true	pandemi	bakterier
+Relation	T9	T14	NoRel	true	pandemi	udbredt
+Relation	T9	T15	NoRel	true	pandemi	SARS
+Relation	T9	T4	NoRel	true	pandemi	pandemi
+Relation	T9	T5	NoRel	true	pandemi	den sorte død

@@ -1,0 +1,53 @@
+Text	ان کی حادثاتی کے بعد غلام اسحاق خان نگران صدر منتخب ہوئے ۔	جنرل ضیاء الحق کی موت کے حوالے سے تحقیقات کا آغا ز بھی ہوا لیکن آج تک ان کی موت کے متعلق کوئی حقیقت سامنے نہیں آ سکی ۔	طیارے میں چیرمین جوائنٹ چیف آف سٹاف کمیٹی جنرل اختر عبدالرحمن سمیت سینئر فوجی افسران سوار تھے ۔	امریکی سفیر آنرڈ رافیل اور امریکی جنرل ہربرٹ ویسم بھی حادثہ کے وقت طیارے میں موجود تھے جو ضیاالحق کے ہمراہ پلک جھپکنے میں راکھ کے ڈھیر میں تبدیل ہو گئے ۔	واشنگٹن نے تحقیقات میں پاکستانیوں کی مدد کے لیے امریکی ایئر فورس کے افسران کی ایک ٹیم روانہ کی ، لیکن دو اطراف نے مختلف نتائج اخذ کیے ۔
+Event	T0	ہوئے	EVENT	52
+Event	T1	موت	EVENT	77
+Event	T2	تحقیقات	EVENT	93
+Event	T3	ہوا	EVENT	114
+Event	T4	موت	EVENT	135
+Event	T5	حادثہ	EVENT	328
+Event	T6	جھپکنے	EVENT	385
+Event	T7	تبدیل	EVENT	413
+Event	T8	گئے	EVENT	422
+Event	T9	تحقیقات	EVENT	439
+Event	T10	کیے	EVENT	558
+Relation	T1	T2	CauseEffect	true	موت	تحقیقات
+Relation	T2	T1	EffectCause	true	تحقیقات	موت
+Relation	T5	T1	CauseEffect	true	حادثہ	موت
+Relation	T1	T5	EffectCause	true	موت	حادثہ
+Relation	T5	T4	CauseEffect	true	حادثہ	موت
+Relation	T4	T5	EffectCause	true	موت	حادثہ
+Relation	T5	T7	CauseEffect	true	حادثہ	تبدیل
+Relation	T7	T5	EffectCause	true	تبدیل	حادثہ
+Relation	T1	T9	CauseEffect	true	موت	تحقیقات
+Relation	T9	T1	EffectCause	true	تحقیقات	موت
+Relation	T0	T3	NoRel	true	ہوئے	ہوا
+Relation	T0	T9	NoRel	true	ہوئے	تحقیقات
+Relation	T1	T10	NoRel	true	موت	کیے
+Relation	T1	T3	NoRel	true	موت	ہوا
+Relation	T1	T7	NoRel	true	موت	تبدیل
+Relation	T1	T8	NoRel	true	موت	گئے
+Relation	T10	T9	NoRel	true	کیے	تحقیقات
+Relation	T2	T0	NoRel	true	تحقیقات	ہوئے
+Relation	T2	T4	NoRel	true	تحقیقات	موت
+Relation	T2	T6	NoRel	true	تحقیقات	جھپکنے
+Relation	T2	T7	NoRel	true	تحقیقات	تبدیل
+Relation	T2	T8	NoRel	true	تحقیقات	گئے
+Relation	T2	T9	NoRel	true	تحقیقات	تحقیقات
+Relation	T3	T4	NoRel	true	ہوا	موت
+Relation	T4	T0	NoRel	true	موت	ہوئے
+Relation	T4	T9	NoRel	true	موت	تحقیقات
+Relation	T5	T0	NoRel	true	حادثہ	ہوئے
+Relation	T5	T10	NoRel	true	حادثہ	کیے
+Relation	T6	T0	NoRel	true	جھپکنے	ہوئے
+Relation	T6	T10	NoRel	true	جھپکنے	کیے
+Relation	T6	T2	NoRel	true	جھپکنے	تحقیقات
+Relation	T6	T4	NoRel	true	جھپکنے	موت
+Relation	T6	T5	NoRel	true	جھپکنے	حادثہ
+Relation	T6	T8	NoRel	true	جھپکنے	گئے
+Relation	T7	T10	NoRel	true	تبدیل	کیے
+Relation	T8	T2	NoRel	true	گئے	تحقیقات
+Relation	T8	T3	NoRel	true	گئے	ہوا
+Relation	T8	T5	NoRel	true	گئے	حادثہ
+Relation	T8	T7	NoRel	true	گئے	تبدیل
+Relation	T8	T9	NoRel	true	گئے	تحقیقات
+Relation	T9	T8	NoRel	true	تحقیقات	گئے

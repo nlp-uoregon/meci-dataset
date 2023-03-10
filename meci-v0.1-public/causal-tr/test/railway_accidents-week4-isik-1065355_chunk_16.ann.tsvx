@@ -1,0 +1,79 @@
+Text	sol | küçükresim | 180px | Mundo a Vapor em Canela , RS , Brezilya'da 1895 Montparnasse çarpışması tekrar inşası	- 23 Ocak , 2008 – D59 numaralı yüksek hızlı tren Beijing - Solar Flare : RE , devletin sahip olduğu bir inşat bölgesine daldığında , orada ( Fangzi , Weifang , Shandong , Çin ) 16ncı grup işçileri bir ray sermenin bakım günenliğini tesis ediyorlardı ; 18 işçi öldü ve diğer dokuzu yaralandı .	- 1 Ocak , 2009 – Innisfail , Queensland yakınında ne engelleyici bir kapı ne de ikaz işaretinin olmadığı bir hemzemin geçitte bir QR Sunlander treninin aşırı yüklü bir kamyonla çarpışması sonrası bir kişi öldü ve sekiz kişi yaralandı .	- 7 Ocak , 2009 – Queensgate , Cincinnati , Ohio’da bir CSX Transportation treninin raydan çıkması sonrası yarım mil çaplı bir alan boşaltıldı .	İkisi Propan taşıyan dört vagon raydan çıktı , fakat hiç sızıntı yoktu .
+Event	T1	öldü	EVENT	374
+Event	T2	yaralandı	EVENT	395
+Event	T3	öldü	EVENT	613
+Event	T4	yaralandı	EVENT	632
+Event	T5	çıkması	EVENT	735
+Event	T6	boşaltıldı	EVENT	776
+Event	T7	çıktı	EVENT	828
+Event	T8	çarpışması	EVENT	88
+Event	T9	inşası	EVENT	106
+Event	T10	daldığında	EVENT	234
+Event	T11	ediyorlardı	EVENT	352
+Event	T12	yüklü	EVENT	566
+Event	T13	çarpışması	EVENT	585
+Relation	T10	T1	CauseEffect	true	daldığında	öldü
+Relation	T1	T10	EffectCause	true	öldü	daldığında
+Relation	T10	T2	CauseEffect	true	daldığında	yaralandı
+Relation	T2	T10	EffectCause	true	yaralandı	daldığında
+Relation	T11	T1	CauseEffect	true	ediyorlardı	öldü
+Relation	T1	T11	EffectCause	true	öldü	ediyorlardı
+Relation	T11	T2	CauseEffect	true	ediyorlardı	yaralandı
+Relation	T2	T11	EffectCause	true	yaralandı	ediyorlardı
+Relation	T12	T13	CauseEffect	true	yüklü	çarpışması
+Relation	T13	T12	EffectCause	true	çarpışması	yüklü
+Relation	T13	T3	CauseEffect	true	çarpışması	öldü
+Relation	T3	T13	EffectCause	true	öldü	çarpışması
+Relation	T13	T4	CauseEffect	true	çarpışması	yaralandı
+Relation	T4	T13	EffectCause	true	yaralandı	çarpışması
+Relation	T5	T6	CauseEffect	true	çıkması	boşaltıldı
+Relation	T6	T5	EffectCause	true	boşaltıldı	çıkması
+Relation	T1	T4	NoRel	true	öldü	yaralandı
+Relation	T1	T9	NoRel	true	öldü	inşası
+Relation	T10	T9	NoRel	true	daldığında	inşası
+Relation	T11	T10	NoRel	true	ediyorlardı	daldığında
+Relation	T11	T4	NoRel	true	ediyorlardı	yaralandı
+Relation	T11	T5	NoRel	true	ediyorlardı	çıkması
+Relation	T11	T7	NoRel	true	ediyorlardı	çıktı
+Relation	T12	T2	NoRel	true	yüklü	yaralandı
+Relation	T12	T4	NoRel	true	yüklü	yaralandı
+Relation	T13	T10	NoRel	true	çarpışması	daldığında
+Relation	T13	T2	NoRel	true	çarpışması	yaralandı
+Relation	T13	T7	NoRel	true	çarpışması	çıktı
+Relation	T13	T9	NoRel	true	çarpışması	inşası
+Relation	T2	T12	NoRel	true	yaralandı	yüklü
+Relation	T2	T4	NoRel	true	yaralandı	yaralandı
+Relation	T2	T6	NoRel	true	yaralandı	boşaltıldı
+Relation	T2	T9	NoRel	true	yaralandı	inşası
+Relation	T3	T10	NoRel	true	öldü	daldığında
+Relation	T3	T11	NoRel	true	öldü	ediyorlardı
+Relation	T3	T4	NoRel	true	öldü	yaralandı
+Relation	T3	T6	NoRel	true	öldü	boşaltıldı
+Relation	T4	T2	NoRel	true	yaralandı	yaralandı
+Relation	T4	T5	NoRel	true	yaralandı	çıkması
+Relation	T5	T10	NoRel	true	çıkması	daldığında
+Relation	T5	T12	NoRel	true	çıkması	yüklü
+Relation	T5	T13	NoRel	true	çıkması	çarpışması
+Relation	T5	T2	NoRel	true	çıkması	yaralandı
+Relation	T5	T9	NoRel	true	çıkması	inşası
+Relation	T6	T1	NoRel	true	boşaltıldı	öldü
+Relation	T6	T10	NoRel	true	boşaltıldı	daldığında
+Relation	T6	T11	NoRel	true	boşaltıldı	ediyorlardı
+Relation	T6	T12	NoRel	true	boşaltıldı	yüklü
+Relation	T6	T3	NoRel	true	boşaltıldı	öldü
+Relation	T6	T8	NoRel	true	boşaltıldı	çarpışması
+Relation	T7	T12	NoRel	true	çıktı	yüklü
+Relation	T7	T13	NoRel	true	çıktı	çarpışması
+Relation	T7	T4	NoRel	true	çıktı	yaralandı
+Relation	T7	T8	NoRel	true	çıktı	çarpışması
+Relation	T8	T1	NoRel	true	çarpışması	öldü
+Relation	T8	T10	NoRel	true	çarpışması	daldığında
+Relation	T8	T12	NoRel	true	çarpışması	yüklü
+Relation	T8	T2	NoRel	true	çarpışması	yaralandı
+Relation	T8	T7	NoRel	true	çarpışması	çıktı
+Relation	T8	T9	NoRel	true	çarpışması	inşası
+Relation	T9	T10	NoRel	true	inşası	daldığında
+Relation	T9	T11	NoRel	true	inşası	ediyorlardı
+Relation	T9	T13	NoRel	true	inşası	çarpışması
+Relation	T9	T4	NoRel	true	inşası	yaralandı
+Relation	T9	T6	NoRel	true	inşası	boşaltıldı

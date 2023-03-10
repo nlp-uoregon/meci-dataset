@@ -1,0 +1,15 @@
+Text	Bu zaman süresi , pencere süresi veya serodönüşüm süresi olarak adlandırılır .	Eğer , antikor bulunursa , test sonucu , pozitif olarak değerlendirilir .	Bu da , o kişi HIV - pozitif demektir .	Eğer , antikor bulunmazsa , test sonucu negatif olarak değerlendirilir .	Bu da , test üç aylık pencere sürenin sonunda yapıldığı sürece , o kişi HIV - negatif demektir .
+Event	T0	değerlendirilir	EVENT	135
+Event	T1	değerlendirilir	EVENT	248
+Event	T2	test	EVENT	274
+Event	T3	yapıldığı	EVENT	312
+Event	T4	adlandırılır	EVENT	64
+Event	T5	bulunursa	EVENT	94
+Relation	T5	T0	CauseEffect	true	bulunursa	değerlendirilir
+Relation	T0	T5	EffectCause	true	değerlendirilir	bulunursa
+Relation	T2	T3	NoRel	true	test	yapıldığı
+Relation	T2	T4	NoRel	true	test	adlandırılır
+Relation	T2	T5	NoRel	true	test	bulunursa
+Relation	T4	T5	NoRel	true	adlandırılır	bulunursa
+Relation	T5	T1	NoRel	true	bulunursa	değerlendirilir
+Relation	T5	T2	NoRel	true	bulunursa	test

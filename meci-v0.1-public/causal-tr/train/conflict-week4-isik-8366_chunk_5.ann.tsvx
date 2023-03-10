@@ -1,0 +1,84 @@
+Text	sağ | küçükresim | 250px | Meksika'da bir boğa güreşi .	İspanya'da yoğun olarak düzenlenen boğa güreşlerinde matador olarak adlandırılan kişi önceden yorulmuş ve kan kaybetmesine yol açacak şekilde yaralanmış boğayı öldürür .	Katalunya Otonom Bölge Parlamentosunda alınan karara göre 2012 yılından sonra boğa güreşi Katalunya'da yasaklanmıştır .	Güney Fransa'nın Provence bölgesinde bulunan Camargue'da boğa güreşlerinin kansız versiyonu olarak bilinen _ Course camarguaise _ düzenlenmektedir .	Bu boğa güreşindeki temel amaç , boğalara zarar vermekten ziyade , boğaların arenaya alındığı 15 dakika içerisinde onların boynuzlarına sarılmış olan iplikleri çözmek yahut halkaları alarak kaçmaktır .
+Event	T0	güreşi	EVENT	47
+Event	T2	güreşlerinde	EVENT	96
+Event	T3	yorulmuş	EVENT	150
+Event	T4	yaralanmış	EVENT	198
+Event	T5	öldürür	EVENT	216
+Event	T6	yasaklanmıştır	EVENT	329
+Event	T7	düzenlenmektedir	EVENT	476
+Event	T8	güreşindeki	EVENT	503
+Event	T9	zarar	EVENT	537
+Event	T10	sarılmış	EVENT	631
+Event	T11	çözmek	EVENT	655
+Event	T12	kaçmaktır	EVENT	685
+Event	T1	karara	EVENT	272
+Event	T13	güreşi	EVENT	309
+Event	T14	güreşlerinin	EVENT	408
+Relation	T2	T5	CauseEffect	true	güreşlerinde	öldürür
+Relation	T5	T2	EffectCause	true	öldürür	güreşlerinde
+Relation	T1	T6	CauseEffect	true	karara	yasaklanmıştır
+Relation	T6	T1	EffectCause	true	yasaklanmıştır	karara
+Relation	T13	T1	CauseEffect	true	güreşi	karara
+Relation	T1	T13	EffectCause	true	karara	güreşi
+Relation	T14	T11	CauseEffect	true	güreşlerinin	çözmek
+Relation	T11	T14	EffectCause	true	çözmek	güreşlerinin
+Relation	T14	T12	CauseEffect	true	güreşlerinin	kaçmaktır
+Relation	T12	T14	EffectCause	true	kaçmaktır	güreşlerinin
+Relation	T0	T10	NoRel	true	güreşi	sarılmış
+Relation	T0	T13	NoRel	true	güreşi	güreşi
+Relation	T0	T3	NoRel	true	güreşi	yorulmuş
+Relation	T0	T8	NoRel	true	güreşi	güreşindeki
+Relation	T1	T10	NoRel	true	karara	sarılmış
+Relation	T10	T14	NoRel	true	sarılmış	güreşlerinin
+Relation	T10	T3	NoRel	true	sarılmış	yorulmuş
+Relation	T10	T4	NoRel	true	sarılmış	yaralanmış
+Relation	T10	T5	NoRel	true	sarılmış	öldürür
+Relation	T10	T6	NoRel	true	sarılmış	yasaklanmıştır
+Relation	T10	T7	NoRel	true	sarılmış	düzenlenmektedir
+Relation	T11	T10	NoRel	true	çözmek	sarılmış
+Relation	T11	T4	NoRel	true	çözmek	yaralanmış
+Relation	T11	T5	NoRel	true	çözmek	öldürür
+Relation	T11	T6	NoRel	true	çözmek	yasaklanmıştır
+Relation	T12	T4	NoRel	true	kaçmaktır	yaralanmış
+Relation	T12	T8	NoRel	true	kaçmaktır	güreşindeki
+Relation	T12	T9	NoRel	true	kaçmaktır	zarar
+Relation	T13	T11	NoRel	true	güreşi	çözmek
+Relation	T13	T3	NoRel	true	güreşi	yorulmuş
+Relation	T13	T4	NoRel	true	güreşi	yaralanmış
+Relation	T13	T6	NoRel	true	güreşi	yasaklanmıştır
+Relation	T13	T9	NoRel	true	güreşi	zarar
+Relation	T14	T0	NoRel	true	güreşlerinin	güreşi
+Relation	T14	T1	NoRel	true	güreşlerinin	karara
+Relation	T14	T9	NoRel	true	güreşlerinin	zarar
+Relation	T2	T0	NoRel	true	güreşlerinde	güreşi
+Relation	T2	T1	NoRel	true	güreşlerinde	karara
+Relation	T2	T13	NoRel	true	güreşlerinde	güreşi
+Relation	T2	T3	NoRel	true	güreşlerinde	yorulmuş
+Relation	T3	T1	NoRel	true	yorulmuş	karara
+Relation	T3	T10	NoRel	true	yorulmuş	sarılmış
+Relation	T3	T12	NoRel	true	yorulmuş	kaçmaktır
+Relation	T3	T13	NoRel	true	yorulmuş	güreşi
+Relation	T3	T14	NoRel	true	yorulmuş	güreşlerinin
+Relation	T3	T5	NoRel	true	yorulmuş	öldürür
+Relation	T3	T7	NoRel	true	yorulmuş	düzenlenmektedir
+Relation	T4	T2	NoRel	true	yaralanmış	güreşlerinde
+Relation	T4	T6	NoRel	true	yaralanmış	yasaklanmıştır
+Relation	T4	T7	NoRel	true	yaralanmış	düzenlenmektedir
+Relation	T4	T8	NoRel	true	yaralanmış	güreşindeki
+Relation	T5	T3	NoRel	true	öldürür	yorulmuş
+Relation	T5	T8	NoRel	true	öldürür	güreşindeki
+Relation	T6	T10	NoRel	true	yasaklanmıştır	sarılmış
+Relation	T6	T13	NoRel	true	yasaklanmıştır	güreşi
+Relation	T6	T3	NoRel	true	yasaklanmıştır	yorulmuş
+Relation	T7	T2	NoRel	true	düzenlenmektedir	güreşlerinde
+Relation	T7	T5	NoRel	true	düzenlenmektedir	öldürür
+Relation	T7	T6	NoRel	true	düzenlenmektedir	yasaklanmıştır
+Relation	T7	T8	NoRel	true	düzenlenmektedir	güreşindeki
+Relation	T8	T0	NoRel	true	güreşindeki	güreşi
+Relation	T8	T12	NoRel	true	güreşindeki	kaçmaktır
+Relation	T8	T13	NoRel	true	güreşindeki	güreşi
+Relation	T8	T4	NoRel	true	güreşindeki	yaralanmış
+Relation	T9	T1	NoRel	true	zarar	karara
+Relation	T9	T10	NoRel	true	zarar	sarılmış
+Relation	T9	T2	NoRel	true	zarar	güreşlerinde
+Relation	T9	T8	NoRel	true	zarar	güreşindeki

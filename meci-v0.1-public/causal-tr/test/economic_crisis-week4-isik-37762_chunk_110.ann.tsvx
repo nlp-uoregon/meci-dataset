@@ -1,0 +1,31 @@
+Text	Mahkemeler bunu meşru bir savunma olarak görmedi .	Kasım 1947'de , 40 SS subayı ve Auschwitz muhafızının davası Kraków'da gerçekleşti .	Çoğu suçlu bulundu ve 23 kişi ölüm cezası aldı .	Batılı müttefikler tarafından yargılananların yanında , yaklaşık 37, 000 SS üyesi Sovyet mahkemelerinde yargılandı ve suçlu bulundu .	Cezaların arasında asılarak idam ve uzun süreli ağır çalışma vardı .
+Event	T0	savunma	EVENT	26
+Event	T2	gerçekleşti	EVENT	122
+Event	T3	bulundu	EVENT	147
+Event	T4	aldı	EVENT	178
+Event	T5	yargılandı	EVENT	289
+Event	T6	bulundu	EVENT	309
+Event	T7	idam	EVENT	347
+Event	T8	çalışma	EVENT	372
+Relation	T2	T3	CauseEffect	true	gerçekleşti	bulundu
+Relation	T3	T2	EffectCause	true	bulundu	gerçekleşti
+Relation	T2	T4	CauseEffect	true	gerçekleşti	aldı
+Relation	T4	T2	EffectCause	true	aldı	gerçekleşti
+Relation	T5	T6	CauseEffect	true	yargılandı	bulundu
+Relation	T6	T5	EffectCause	true	bulundu	yargılandı
+Relation	T0	T2	NoRel	true	savunma	gerçekleşti
+Relation	T0	T3	NoRel	true	savunma	bulundu
+Relation	T0	T4	NoRel	true	savunma	aldı
+Relation	T0	T5	NoRel	true	savunma	yargılandı
+Relation	T0	T7	NoRel	true	savunma	idam
+Relation	T4	T6	NoRel	true	aldı	bulundu
+Relation	T4	T8	NoRel	true	aldı	çalışma
+Relation	T5	T3	NoRel	true	yargılandı	bulundu
+Relation	T6	T4	NoRel	true	bulundu	aldı
+Relation	T7	T0	NoRel	true	idam	savunma
+Relation	T7	T4	NoRel	true	idam	aldı
+Relation	T7	T5	NoRel	true	idam	yargılandı
+Relation	T7	T8	NoRel	true	idam	çalışma
+Relation	T8	T4	NoRel	true	çalışma	aldı
+Relation	T8	T5	NoRel	true	çalışma	yargılandı
+Relation	T8	T7	NoRel	true	çalışma	idam

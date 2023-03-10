@@ -1,0 +1,117 @@
+Text	El ACCIDENTE AÉREO DEL CESSNA 310 EN CALIFORNIA DE 2010 fue un accidente aéreo de un Cessna 310 que se estrelló en unas casas ocurrido el 18 de febrero de 2010 a las hora local , en la cual tres personas murieron , todos empleados de Tesla Motors .	El avión estaba registrado por Air Unique , empresa propiedad de Tesla employee Doug Bourn .	De acuerdo con los primeros reportes en tierra no hubo heridos ni muertes al momento del impacto de la avioneta que se dirigía al Aeropuerto Municipal de Hawthorne , localizado en el Sur de California .	Sin embargo se desconocían las causas del accidente que ocurrió a las 07:55 hora local y sólo testigos presenciales señalaron que la avioneta causó varios incendios tras pegar en una línea eléctrica .	Harold Schapelhouman , jefe de bomberos de Menlo Park , dijo que los bomberos sofocaron incendios en dos casas en la mañana del 17 de febrero , y no hubo informes de lesionados en esas viviendas .
+Event	T0	estrelló	EVENT	103
+Event	T1	ocurrido	EVENT	126
+Event	T2	murieron	EVENT	204
+Event	T3	registrado	EVENT	265
+Event	T4	heridos	EVENT	397
+Event	T5	muertes	EVENT	408
+Event	T6	impacto	EVENT	431
+Event	T7	dirigía	EVENT	461
+Event	T8	accidente	EVENT	587
+Event	T9	ocurrió	EVENT	601
+Event	T10	señalaron	EVENT	661
+Event	T11	causó	EVENT	687
+Event	T12	incendios	EVENT	700
+Event	T13	dijo	EVENT	802
+Event	T14	incendios	EVENT	834
+Event	T15	informes	EVENT	900
+Event	T16	lesionados	EVENT	912
+Relation	T0	T2	CauseEffect	true	estrelló	murieron
+Relation	T2	T0	EffectCause	true	murieron	estrelló
+Relation	T8	T12	CauseEffect	true	accidente	incendios
+Relation	T12	T8	EffectCause	true	incendios	accidente
+Relation	T0	T1	NoRel	true	estrelló	ocurrido
+Relation	T0	T10	NoRel	true	estrelló	señalaron
+Relation	T0	T13	NoRel	true	estrelló	dijo
+Relation	T0	T15	NoRel	true	estrelló	informes
+Relation	T0	T16	NoRel	true	estrelló	lesionados
+Relation	T0	T5	NoRel	true	estrelló	muertes
+Relation	T0	T7	NoRel	true	estrelló	dirigía
+Relation	T1	T0	NoRel	true	ocurrido	estrelló
+Relation	T1	T4	NoRel	true	ocurrido	heridos
+Relation	T1	T5	NoRel	true	ocurrido	muertes
+Relation	T10	T13	NoRel	true	señalaron	dijo
+Relation	T10	T3	NoRel	true	señalaron	registrado
+Relation	T10	T4	NoRel	true	señalaron	heridos
+Relation	T11	T15	NoRel	true	causó	informes
+Relation	T11	T7	NoRel	true	causó	dirigía
+Relation	T11	T8	NoRel	true	causó	accidente
+Relation	T12	T1	NoRel	true	incendios	ocurrido
+Relation	T12	T10	NoRel	true	incendios	señalaron
+Relation	T12	T11	NoRel	true	incendios	causó
+Relation	T12	T14	NoRel	true	incendios	incendios
+Relation	T12	T15	NoRel	true	incendios	informes
+Relation	T12	T5	NoRel	true	incendios	muertes
+Relation	T12	T6	NoRel	true	incendios	impacto
+Relation	T13	T0	NoRel	true	dijo	estrelló
+Relation	T13	T12	NoRel	true	dijo	incendios
+Relation	T13	T3	NoRel	true	dijo	registrado
+Relation	T13	T7	NoRel	true	dijo	dirigía
+Relation	T13	T9	NoRel	true	dijo	ocurrió
+Relation	T14	T1	NoRel	true	incendios	ocurrido
+Relation	T14	T16	NoRel	true	incendios	lesionados
+Relation	T15	T11	NoRel	true	informes	causó
+Relation	T15	T12	NoRel	true	informes	incendios
+Relation	T15	T13	NoRel	true	informes	dijo
+Relation	T15	T14	NoRel	true	informes	incendios
+Relation	T15	T6	NoRel	true	informes	impacto
+Relation	T15	T9	NoRel	true	informes	ocurrió
+Relation	T16	T11	NoRel	true	lesionados	causó
+Relation	T16	T13	NoRel	true	lesionados	dijo
+Relation	T16	T14	NoRel	true	lesionados	incendios
+Relation	T16	T15	NoRel	true	lesionados	informes
+Relation	T16	T2	NoRel	true	lesionados	murieron
+Relation	T16	T3	NoRel	true	lesionados	registrado
+Relation	T16	T5	NoRel	true	lesionados	muertes
+Relation	T16	T6	NoRel	true	lesionados	impacto
+Relation	T16	T7	NoRel	true	lesionados	dirigía
+Relation	T16	T8	NoRel	true	lesionados	accidente
+Relation	T16	T9	NoRel	true	lesionados	ocurrió
+Relation	T2	T10	NoRel	true	murieron	señalaron
+Relation	T2	T15	NoRel	true	murieron	informes
+Relation	T3	T1	NoRel	true	registrado	ocurrido
+Relation	T3	T11	NoRel	true	registrado	causó
+Relation	T3	T6	NoRel	true	registrado	impacto
+Relation	T3	T7	NoRel	true	registrado	dirigía
+Relation	T3	T9	NoRel	true	registrado	ocurrió
+Relation	T4	T0	NoRel	true	heridos	estrelló
+Relation	T4	T1	NoRel	true	heridos	ocurrido
+Relation	T4	T14	NoRel	true	heridos	incendios
+Relation	T4	T15	NoRel	true	heridos	informes
+Relation	T4	T2	NoRel	true	heridos	murieron
+Relation	T4	T3	NoRel	true	heridos	registrado
+Relation	T4	T5	NoRel	true	heridos	muertes
+Relation	T4	T6	NoRel	true	heridos	impacto
+Relation	T4	T8	NoRel	true	heridos	accidente
+Relation	T4	T9	NoRel	true	heridos	ocurrió
+Relation	T5	T0	NoRel	true	muertes	estrelló
+Relation	T5	T1	NoRel	true	muertes	ocurrido
+Relation	T5	T12	NoRel	true	muertes	incendios
+Relation	T5	T13	NoRel	true	muertes	dijo
+Relation	T5	T14	NoRel	true	muertes	incendios
+Relation	T5	T2	NoRel	true	muertes	murieron
+Relation	T5	T4	NoRel	true	muertes	heridos
+Relation	T5	T8	NoRel	true	muertes	accidente
+Relation	T6	T11	NoRel	true	impacto	causó
+Relation	T6	T13	NoRel	true	impacto	dijo
+Relation	T6	T2	NoRel	true	impacto	murieron
+Relation	T6	T4	NoRel	true	impacto	heridos
+Relation	T6	T8	NoRel	true	impacto	accidente
+Relation	T6	T9	NoRel	true	impacto	ocurrió
+Relation	T7	T0	NoRel	true	dirigía	estrelló
+Relation	T7	T10	NoRel	true	dirigía	señalaron
+Relation	T7	T14	NoRel	true	dirigía	incendios
+Relation	T7	T15	NoRel	true	dirigía	informes
+Relation	T7	T2	NoRel	true	dirigía	murieron
+Relation	T7	T5	NoRel	true	dirigía	muertes
+Relation	T8	T16	NoRel	true	accidente	lesionados
+Relation	T8	T5	NoRel	true	accidente	muertes
+Relation	T8	T7	NoRel	true	accidente	dirigía
+Relation	T8	T9	NoRel	true	accidente	ocurrió
+Relation	T9	T0	NoRel	true	ocurrió	estrelló
+Relation	T9	T16	NoRel	true	ocurrió	lesionados
+Relation	T9	T2	NoRel	true	ocurrió	murieron
+Relation	T9	T4	NoRel	true	ocurrió	heridos
+Relation	T9	T6	NoRel	true	ocurrió	impacto
+Relation	T9	T7	NoRel	true	ocurrió	dirigía
+Relation	T9	T8	NoRel	true	ocurrió	accidente

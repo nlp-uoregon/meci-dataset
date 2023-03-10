@@ -1,0 +1,61 @@
+Text	20 Temmuz 2011 FERGANA VADISI DEPREMI çarşamba günü yerel saat ile sabaha karşı 01.35'te 6.1 büyüklüğünde meydana gelen Fergana Vadisi merkezli depremdir .	Deprem Kırgızistan ve Özbekistan sınırına yakın bir yerde merkez_üssü olarak Fergana Vadisi'nin 42 km güneybatısında ve yaklaşık 20 km derinlikte gerçekleşmiştir .	Özbekistan acil durumlar bakanı açıklama yaparak Fergana Vadisi'ni vuran depremin 86 insanın yaralanmasına neden olduğunu açıklamıştır .	Özbekistan'da bazı evlerin yıkılmasıyla 13 insan hayatını kaybetmiştir .	Fergana Vadisi sakinlerinin açıklamalarına göre deprem yaklaşık üç dakika sürmüştür .
+Event	T0	DEPREMI	EVENT	30
+Event	T1	depremdir	EVENT	144
+Event	T2	Deprem	EVENT	156
+Event	T3	gerçekleşmiştir	EVENT	302
+Event	T4	depremin	EVENT	393
+Event	T6	açıklamıştır	EVENT	442
+Event	T7	yıkılmasıyla	EVENT	484
+Event	T8	kaybetmiştir	EVENT	515
+Event	T9	açıklamalarına	EVENT	558
+Event	T10	deprem	EVENT	578
+Event	T11	sürmüştür	EVENT	604
+Event	T12	açıklama	EVENT	352
+Relation	T12	T6	CauseEffect	true	açıklama	açıklamıştır
+Relation	T6	T12	EffectCause	true	açıklamıştır	açıklama
+Relation	T7	T8	CauseEffect	true	yıkılmasıyla	kaybetmiştir
+Relation	T8	T7	EffectCause	true	kaybetmiştir	yıkılmasıyla
+Relation	T0	T4	NoRel	true	DEPREMI	depremin
+Relation	T0	T8	NoRel	true	DEPREMI	kaybetmiştir
+Relation	T1	T0	NoRel	true	depremdir	DEPREMI
+Relation	T1	T12	NoRel	true	depremdir	açıklama
+Relation	T1	T2	NoRel	true	depremdir	Deprem
+Relation	T1	T4	NoRel	true	depremdir	depremin
+Relation	T1	T6	NoRel	true	depremdir	açıklamıştır
+Relation	T1	T7	NoRel	true	depremdir	yıkılmasıyla
+Relation	T1	T9	NoRel	true	depremdir	açıklamalarına
+Relation	T10	T0	NoRel	true	deprem	DEPREMI
+Relation	T10	T1	NoRel	true	deprem	depremdir
+Relation	T10	T11	NoRel	true	deprem	sürmüştür
+Relation	T10	T12	NoRel	true	deprem	açıklama
+Relation	T10	T6	NoRel	true	deprem	açıklamıştır
+Relation	T10	T7	NoRel	true	deprem	yıkılmasıyla
+Relation	T11	T7	NoRel	true	sürmüştür	yıkılmasıyla
+Relation	T11	T8	NoRel	true	sürmüştür	kaybetmiştir
+Relation	T12	T11	NoRel	true	açıklama	sürmüştür
+Relation	T12	T3	NoRel	true	açıklama	gerçekleşmiştir
+Relation	T2	T0	NoRel	true	Deprem	DEPREMI
+Relation	T3	T11	NoRel	true	gerçekleşmiştir	sürmüştür
+Relation	T3	T12	NoRel	true	gerçekleşmiştir	açıklama
+Relation	T3	T4	NoRel	true	gerçekleşmiştir	depremin
+Relation	T3	T8	NoRel	true	gerçekleşmiştir	kaybetmiştir
+Relation	T3	T9	NoRel	true	gerçekleşmiştir	açıklamalarına
+Relation	T4	T10	NoRel	true	depremin	deprem
+Relation	T4	T12	NoRel	true	depremin	açıklama
+Relation	T4	T6	NoRel	true	depremin	açıklamıştır
+Relation	T6	T0	NoRel	true	açıklamıştır	DEPREMI
+Relation	T6	T10	NoRel	true	açıklamıştır	deprem
+Relation	T6	T11	NoRel	true	açıklamıştır	sürmüştür
+Relation	T7	T0	NoRel	true	yıkılmasıyla	DEPREMI
+Relation	T7	T2	NoRel	true	yıkılmasıyla	Deprem
+Relation	T7	T3	NoRel	true	yıkılmasıyla	gerçekleşmiştir
+Relation	T7	T4	NoRel	true	yıkılmasıyla	depremin
+Relation	T7	T9	NoRel	true	yıkılmasıyla	açıklamalarına
+Relation	T8	T0	NoRel	true	kaybetmiştir	DEPREMI
+Relation	T8	T10	NoRel	true	kaybetmiştir	deprem
+Relation	T8	T3	NoRel	true	kaybetmiştir	gerçekleşmiştir
+Relation	T9	T10	NoRel	true	açıklamalarına	deprem
+Relation	T9	T11	NoRel	true	açıklamalarına	sürmüştür
+Relation	T9	T2	NoRel	true	açıklamalarına	Deprem
+Relation	T9	T6	NoRel	true	açıklamalarına	açıklamıştır
+Relation	T9	T7	NoRel	true	açıklamalarına	yıkılmasıyla

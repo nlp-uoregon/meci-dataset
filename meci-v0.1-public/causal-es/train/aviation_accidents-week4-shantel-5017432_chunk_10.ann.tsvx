@@ -1,0 +1,120 @@
+Text	Debido al accidente , Manx2 concluyó su contrato con Flightline BCN , por lo cual no continuó operando para Manx2 .	En abril de 2011 , se anunció que la EASA había iniciado un proceso con el fin de suprimir el certificado de operador aéreo de Flightline .	El 4 de mayo de 2011 , el programa de BBC Radio 4 Face the Facts investigó las circunstancias del accidente .	Se sostuvo que la tripulación se había saltado las regulaciones de seguridad aérea en las tres aproximaciones al descender por debajo de la altura de decisión de 200 pies antes de iniciar los procedimientos de frustrada .	El 6 de mayo , la CAA del Reino Unido publicó una circular de seguridad advirtiendo a todos los operadores del Reino Unido de las nuevas reglas que rigen las aproximaciones de no precisión y las altitudes mínimas de descenso , a aplicar desde el 16 de julio de 2011 .
+Event	T0	accidente	EVENT	10
+Event	T1	concluyó	EVENT	28
+Event	T2	contrato	EVENT	40
+Event	T4	anunció	EVENT	138
+Event	T6	proceso	EVENT	176
+Event	T8	investigó	EVENT	321
+Event	T9	accidente	EVENT	354
+Event	T10	sostuvo	EVENT	369
+Event	T12	aproximaciones	EVENT	461
+Event	T13	descender	EVENT	479
+Event	T14	decisión	EVENT	516
+Event	T16	procedimientos	EVENT	558
+Event	T18	publicó	EVENT	626
+Event	T19	circular	EVENT	638
+Event	T20	advirtiendo	EVENT	660
+Event	T21	reglas	EVENT	725
+Event	T22	rigen	EVENT	736
+Relation	T0	T1	CauseEffect	true	accidente	concluyó
+Relation	T1	T0	EffectCause	true	concluyó	accidente
+Relation	T9	T21	CauseEffect	true	accidente	reglas
+Relation	T21	T9	EffectCause	true	reglas	accidente
+Relation	T0	T12	NoRel	true	accidente	aproximaciones
+Relation	T0	T21	NoRel	true	accidente	reglas
+Relation	T0	T6	NoRel	true	accidente	proceso
+Relation	T0	T9	NoRel	true	accidente	accidente
+Relation	T1	T13	NoRel	true	concluyó	descender
+Relation	T1	T20	NoRel	true	concluyó	advirtiendo
+Relation	T1	T6	NoRel	true	concluyó	proceso
+Relation	T1	T8	NoRel	true	concluyó	investigó
+Relation	T10	T0	NoRel	true	sostuvo	accidente
+Relation	T10	T16	NoRel	true	sostuvo	procedimientos
+Relation	T10	T19	NoRel	true	sostuvo	circular
+Relation	T12	T0	NoRel	true	aproximaciones	accidente
+Relation	T12	T19	NoRel	true	aproximaciones	circular
+Relation	T12	T2	NoRel	true	aproximaciones	contrato
+Relation	T12	T20	NoRel	true	aproximaciones	advirtiendo
+Relation	T12	T21	NoRel	true	aproximaciones	reglas
+Relation	T12	T22	NoRel	true	aproximaciones	rigen
+Relation	T13	T0	NoRel	true	descender	accidente
+Relation	T13	T19	NoRel	true	descender	circular
+Relation	T13	T20	NoRel	true	descender	advirtiendo
+Relation	T13	T21	NoRel	true	descender	reglas
+Relation	T13	T4	NoRel	true	descender	anunció
+Relation	T13	T6	NoRel	true	descender	proceso
+Relation	T13	T8	NoRel	true	descender	investigó
+Relation	T13	T9	NoRel	true	descender	accidente
+Relation	T14	T0	NoRel	true	decisión	accidente
+Relation	T14	T10	NoRel	true	decisión	sostuvo
+Relation	T14	T13	NoRel	true	decisión	descender
+Relation	T14	T19	NoRel	true	decisión	circular
+Relation	T14	T21	NoRel	true	decisión	reglas
+Relation	T14	T22	NoRel	true	decisión	rigen
+Relation	T14	T6	NoRel	true	decisión	proceso
+Relation	T14	T9	NoRel	true	decisión	accidente
+Relation	T16	T1	NoRel	true	procedimientos	concluyó
+Relation	T16	T10	NoRel	true	procedimientos	sostuvo
+Relation	T16	T13	NoRel	true	procedimientos	descender
+Relation	T16	T18	NoRel	true	procedimientos	publicó
+Relation	T16	T2	NoRel	true	procedimientos	contrato
+Relation	T16	T20	NoRel	true	procedimientos	advirtiendo
+Relation	T16	T21	NoRel	true	procedimientos	reglas
+Relation	T16	T22	NoRel	true	procedimientos	rigen
+Relation	T16	T6	NoRel	true	procedimientos	proceso
+Relation	T16	T9	NoRel	true	procedimientos	accidente
+Relation	T18	T12	NoRel	true	publicó	aproximaciones
+Relation	T18	T13	NoRel	true	publicó	descender
+Relation	T18	T21	NoRel	true	publicó	reglas
+Relation	T18	T6	NoRel	true	publicó	proceso
+Relation	T18	T9	NoRel	true	publicó	accidente
+Relation	T19	T1	NoRel	true	circular	concluyó
+Relation	T19	T10	NoRel	true	circular	sostuvo
+Relation	T19	T13	NoRel	true	circular	descender
+Relation	T19	T14	NoRel	true	circular	decisión
+Relation	T19	T16	NoRel	true	circular	procedimientos
+Relation	T19	T21	NoRel	true	circular	reglas
+Relation	T19	T22	NoRel	true	circular	rigen
+Relation	T19	T9	NoRel	true	circular	accidente
+Relation	T2	T0	NoRel	true	contrato	accidente
+Relation	T2	T18	NoRel	true	contrato	publicó
+Relation	T2	T20	NoRel	true	contrato	advirtiendo
+Relation	T2	T21	NoRel	true	contrato	reglas
+Relation	T20	T10	NoRel	true	advirtiendo	sostuvo
+Relation	T20	T12	NoRel	true	advirtiendo	aproximaciones
+Relation	T20	T18	NoRel	true	advirtiendo	publicó
+Relation	T20	T21	NoRel	true	advirtiendo	reglas
+Relation	T21	T1	NoRel	true	reglas	concluyó
+Relation	T21	T12	NoRel	true	reglas	aproximaciones
+Relation	T21	T13	NoRel	true	reglas	descender
+Relation	T21	T16	NoRel	true	reglas	procedimientos
+Relation	T21	T18	NoRel	true	reglas	publicó
+Relation	T21	T19	NoRel	true	reglas	circular
+Relation	T21	T20	NoRel	true	reglas	advirtiendo
+Relation	T21	T22	NoRel	true	reglas	rigen
+Relation	T21	T4	NoRel	true	reglas	anunció
+Relation	T22	T1	NoRel	true	rigen	concluyó
+Relation	T22	T19	NoRel	true	rigen	circular
+Relation	T22	T20	NoRel	true	rigen	advirtiendo
+Relation	T22	T21	NoRel	true	rigen	reglas
+Relation	T22	T6	NoRel	true	rigen	proceso
+Relation	T22	T8	NoRel	true	rigen	investigó
+Relation	T4	T12	NoRel	true	anunció	aproximaciones
+Relation	T4	T18	NoRel	true	anunció	publicó
+Relation	T4	T19	NoRel	true	anunció	circular
+Relation	T4	T2	NoRel	true	anunció	contrato
+Relation	T6	T1	NoRel	true	proceso	concluyó
+Relation	T6	T10	NoRel	true	proceso	sostuvo
+Relation	T6	T13	NoRel	true	proceso	descender
+Relation	T6	T14	NoRel	true	proceso	decisión
+Relation	T6	T16	NoRel	true	proceso	procedimientos
+Relation	T6	T21	NoRel	true	proceso	reglas
+Relation	T6	T8	NoRel	true	proceso	investigó
+Relation	T8	T0	NoRel	true	investigó	accidente
+Relation	T8	T10	NoRel	true	investigó	sostuvo
+Relation	T8	T14	NoRel	true	investigó	decisión
+Relation	T8	T22	NoRel	true	investigó	rigen
+Relation	T8	T4	NoRel	true	investigó	anunció
+Relation	T8	T6	NoRel	true	investigó	proceso
+Relation	T9	T19	NoRel	true	accidente	circular
+Relation	T9	T6	NoRel	true	accidente	proceso

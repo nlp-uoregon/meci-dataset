@@ -1,0 +1,106 @@
+Text	- Kaptan Amerika , vatana ihanetten yargılanmak üzere mahkemeye götürülürken Cross Bones tarafından suikasta uğrar ve öldürülür .	- Amerika Başkanı , tasarıya karşı olup da teslim olan tüm süper kahramanlara genel af ilan eder .	Bazı karakterler bunu kabul edip tasarıyı kabul ederken , bazıları ülkeyi terk etmeye karar veriler .	( Çoğu Kanada'ya kaçar .	) Bazıları ise yeraltına inerler .
+Event	T0	yargılanmak	EVENT	36
+Event	T1	götürülürken	EVENT	64
+Event	T2	uğrar	EVENT	109
+Event	T3	öldürülür	EVENT	118
+Event	T5	kabul	EVENT	251
+Event	T6	terk	EVENT	303
+Event	T7	kaçar	EVENT	348
+Event	T8	ihanetten	EVENT	26
+Event	T9	mahkemeye	EVENT	54
+Event	T10	suikasta	EVENT	100
+Event	T12	teslim olan	EVENT	173
+Event	T13	af	EVENT	214
+Event	T11	kabul	EVENT	271
+Event	T14	karar veriler	EVENT	315
+Event	T15	inerler	EVENT	381
+Event	T4	ilan	EVENT	217
+Relation	T12	T13	CauseEffect	true	teslim olan	af
+Relation	T13	T12	EffectCause	true	af	teslim olan
+Relation	T14	T7	CauseEffect	true	karar veriler	kaçar
+Relation	T7	T14	EffectCause	true	kaçar	karar veriler
+Relation	T14	T15	CauseEffect	true	karar veriler	inerler
+Relation	T15	T14	EffectCause	true	inerler	karar veriler
+Relation	T0	T1	NoRel	true	yargılanmak	götürülürken
+Relation	T0	T13	NoRel	true	yargılanmak	af
+Relation	T0	T4	NoRel	true	yargılanmak	ilan
+Relation	T0	T6	NoRel	true	yargılanmak	terk
+Relation	T0	T7	NoRel	true	yargılanmak	kaçar
+Relation	T1	T14	NoRel	true	götürülürken	karar veriler
+Relation	T1	T3	NoRel	true	götürülürken	öldürülür
+Relation	T1	T8	NoRel	true	götürülürken	ihanetten
+Relation	T10	T4	NoRel	true	suikasta	ilan
+Relation	T10	T5	NoRel	true	suikasta	kabul
+Relation	T10	T6	NoRel	true	suikasta	terk
+Relation	T10	T7	NoRel	true	suikasta	kaçar
+Relation	T10	T8	NoRel	true	suikasta	ihanetten
+Relation	T11	T1	NoRel	true	kabul	götürülürken
+Relation	T11	T12	NoRel	true	kabul	teslim olan
+Relation	T11	T14	NoRel	true	kabul	karar veriler
+Relation	T11	T5	NoRel	true	kabul	kabul
+Relation	T11	T8	NoRel	true	kabul	ihanetten
+Relation	T11	T9	NoRel	true	kabul	mahkemeye
+Relation	T12	T1	NoRel	true	teslim olan	götürülürken
+Relation	T12	T4	NoRel	true	teslim olan	ilan
+Relation	T12	T5	NoRel	true	teslim olan	kabul
+Relation	T12	T7	NoRel	true	teslim olan	kaçar
+Relation	T12	T8	NoRel	true	teslim olan	ihanetten
+Relation	T12	T9	NoRel	true	teslim olan	mahkemeye
+Relation	T13	T11	NoRel	true	af	kabul
+Relation	T13	T6	NoRel	true	af	terk
+Relation	T14	T0	NoRel	true	karar veriler	yargılanmak
+Relation	T14	T11	NoRel	true	karar veriler	kabul
+Relation	T14	T13	NoRel	true	karar veriler	af
+Relation	T14	T2	NoRel	true	karar veriler	uğrar
+Relation	T14	T5	NoRel	true	karar veriler	kabul
+Relation	T14	T6	NoRel	true	karar veriler	terk
+Relation	T14	T8	NoRel	true	karar veriler	ihanetten
+Relation	T15	T0	NoRel	true	inerler	yargılanmak
+Relation	T15	T2	NoRel	true	inerler	uğrar
+Relation	T15	T4	NoRel	true	inerler	ilan
+Relation	T15	T6	NoRel	true	inerler	terk
+Relation	T15	T8	NoRel	true	inerler	ihanetten
+Relation	T2	T0	NoRel	true	uğrar	yargılanmak
+Relation	T2	T11	NoRel	true	uğrar	kabul
+Relation	T2	T13	NoRel	true	uğrar	af
+Relation	T2	T14	NoRel	true	uğrar	karar veriler
+Relation	T2	T15	NoRel	true	uğrar	inerler
+Relation	T2	T4	NoRel	true	uğrar	ilan
+Relation	T2	T5	NoRel	true	uğrar	kabul
+Relation	T2	T7	NoRel	true	uğrar	kaçar
+Relation	T3	T0	NoRel	true	öldürülür	yargılanmak
+Relation	T3	T13	NoRel	true	öldürülür	af
+Relation	T3	T15	NoRel	true	öldürülür	inerler
+Relation	T3	T8	NoRel	true	öldürülür	ihanetten
+Relation	T4	T10	NoRel	true	ilan	suikasta
+Relation	T4	T13	NoRel	true	ilan	af
+Relation	T4	T2	NoRel	true	ilan	uğrar
+Relation	T4	T3	NoRel	true	ilan	öldürülür
+Relation	T4	T7	NoRel	true	ilan	kaçar
+Relation	T4	T9	NoRel	true	ilan	mahkemeye
+Relation	T5	T1	NoRel	true	kabul	götürülürken
+Relation	T5	T10	NoRel	true	kabul	suikasta
+Relation	T5	T14	NoRel	true	kabul	karar veriler
+Relation	T5	T15	NoRel	true	kabul	inerler
+Relation	T5	T4	NoRel	true	kabul	ilan
+Relation	T6	T0	NoRel	true	terk	yargılanmak
+Relation	T6	T10	NoRel	true	terk	suikasta
+Relation	T6	T11	NoRel	true	terk	kabul
+Relation	T6	T13	NoRel	true	terk	af
+Relation	T6	T3	NoRel	true	terk	öldürülür
+Relation	T6	T4	NoRel	true	terk	ilan
+Relation	T7	T0	NoRel	true	kaçar	yargılanmak
+Relation	T7	T1	NoRel	true	kaçar	götürülürken
+Relation	T7	T11	NoRel	true	kaçar	kabul
+Relation	T7	T13	NoRel	true	kaçar	af
+Relation	T7	T3	NoRel	true	kaçar	öldürülür
+Relation	T7	T6	NoRel	true	kaçar	terk
+Relation	T7	T8	NoRel	true	kaçar	ihanetten
+Relation	T8	T11	NoRel	true	ihanetten	kabul
+Relation	T8	T12	NoRel	true	ihanetten	teslim olan
+Relation	T8	T2	NoRel	true	ihanetten	uğrar
+Relation	T8	T9	NoRel	true	ihanetten	mahkemeye
+Relation	T9	T12	NoRel	true	mahkemeye	teslim olan
+Relation	T9	T15	NoRel	true	mahkemeye	inerler
+Relation	T9	T2	NoRel	true	mahkemeye	uğrar
+Relation	T9	T6	NoRel	true	mahkemeye	terk

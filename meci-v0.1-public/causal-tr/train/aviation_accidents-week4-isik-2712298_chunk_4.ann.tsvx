@@ -1,0 +1,42 @@
+Text	Mürettebat yaklaşımı planlanan şekilde uygulamaya başladı ancak uçak pist merkezinin 500 metre ( 1.600_ft ) sağındaydı .	Uçağın inmesine 10 kilometre ( 6,2 mil ) kala kontrolör mürettebata 300 metre ( 980_ft ) irtifaya inme talimatını verdi ve hava koşullarının kötüleşmeye başladığı konusunda uyardı .	Uçak pistin sonundan 8,5 kilometre uzaktayken kayma yoluna girdi ve iniş için irtifa azalmaya devam etti .	Havalimanındaki görüş mesafesi , minimum güvenli mesafenin çok altında ; 800 metreye ulaşmıştı .	Kontrolör ise mürettebatı veya operasyon yöneticisini durum hakkında bilgilendirmedi .
+Event	T0	başladı	EVENT	50
+Event	T1	inmesine	EVENT	128
+Event	T2	verdi	EVENT	235
+Event	T3	başladığı	EVENT	274
+Event	T4	uyardı	EVENT	294
+Event	T5	girdi	EVENT	362
+Event	T6	iniş	EVENT	371
+Event	T8	bilgilendirmedi	EVENT	576
+Event	T7	etti	EVENT	403
+Relation	T3	T4	CauseEffect	true	başladığı	uyardı
+Relation	T4	T3	EffectCause	true	uyardı	başladığı
+Relation	T6	T7	CauseEffect	true	iniş	etti
+Relation	T7	T6	EffectCause	true	etti	iniş
+Relation	T6	T5	CauseEffect	true	iniş	girdi
+Relation	T5	T6	EffectCause	true	girdi	iniş
+Relation	T0	T2	NoRel	true	başladı	verdi
+Relation	T0	T3	NoRel	true	başladı	başladığı
+Relation	T0	T8	NoRel	true	başladı	bilgilendirmedi
+Relation	T1	T7	NoRel	true	inmesine	etti
+Relation	T1	T8	NoRel	true	inmesine	bilgilendirmedi
+Relation	T2	T0	NoRel	true	verdi	başladı
+Relation	T2	T1	NoRel	true	verdi	inmesine
+Relation	T2	T3	NoRel	true	verdi	başladığı
+Relation	T2	T4	NoRel	true	verdi	uyardı
+Relation	T2	T5	NoRel	true	verdi	girdi
+Relation	T2	T6	NoRel	true	verdi	iniş
+Relation	T2	T7	NoRel	true	verdi	etti
+Relation	T4	T0	NoRel	true	uyardı	başladı
+Relation	T4	T1	NoRel	true	uyardı	inmesine
+Relation	T4	T5	NoRel	true	uyardı	girdi
+Relation	T4	T8	NoRel	true	uyardı	bilgilendirmedi
+Relation	T5	T0	NoRel	true	girdi	başladı
+Relation	T5	T3	NoRel	true	girdi	başladığı
+Relation	T6	T2	NoRel	true	iniş	verdi
+Relation	T7	T1	NoRel	true	etti	inmesine
+Relation	T7	T2	NoRel	true	etti	verdi
+Relation	T7	T3	NoRel	true	etti	başladığı
+Relation	T7	T4	NoRel	true	etti	uyardı
+Relation	T8	T2	NoRel	true	bilgilendirmedi	verdi
+Relation	T8	T3	NoRel	true	bilgilendirmedi	başladığı
+Relation	T8	T4	NoRel	true	bilgilendirmedi	uyardı

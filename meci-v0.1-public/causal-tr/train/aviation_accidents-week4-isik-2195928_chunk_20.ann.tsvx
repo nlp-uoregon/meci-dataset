@@ -1,0 +1,47 @@
+Text	Kırgızistan Meclisi , kargonun sahibini ve planlanan varış yerini netleştirmek için 11 üyeli bir komisyon kurdu .	Devlet Ulusal Güvenlik Komitesi ise kargonun 1.902 kilogramlık bir kısmının JTI Kazakhstan LLC siparişi üzerine gerçekten Kırgızistan'a getirileceğini ; ancak kaza günü Kırgızistan'da boşaltılmayacağını açıkladı .	Komitenin açıklamasına göre uçak , Japonya'dan Türkiye'ye kargo taşıyordu .	Uçağın Bişkek'te yakıt ikmali yapması gerekiyordu ve ardından tüm malların boşaltılması için Türkiye'ye gidecekti .	Kırgızistan'a getirilecek kargo ise 1902 kg ağırlığında elektronik çakmaktı ve 19 Ocak'ta başka bir uçuşla Bişkek'e gönderilecekti .
+Event	T0	kurdu	EVENT	106
+Event	T1	siparişi	EVENT	209
+Event	T2	kaza	EVENT	273
+Event	T3	açıkladı	EVENT	317
+Event	T4	açıklamasına	EVENT	338
+Event	T5	taşıyordu	EVENT	392
+Event	T7	boşaltılması	EVENT	479
+Event	T8	gidecekti	EVENT	508
+Event	T9	gönderilecekti	EVENT	636
+Event	T10	netleştirmek	EVENT	66
+Event	T6	ikmali	EVENT	427
+Relation	T10	T0	CauseEffect	true	netleştirmek	kurdu
+Relation	T0	T10	EffectCause	true	kurdu	netleştirmek
+Relation	T5	T8	CauseEffect	true	taşıyordu	gidecekti
+Relation	T8	T5	EffectCause	true	gidecekti	taşıyordu
+Relation	T7	T8	CauseEffect	true	boşaltılması	gidecekti
+Relation	T8	T7	EffectCause	true	gidecekti	boşaltılması
+Relation	T0	T1	NoRel	true	kurdu	siparişi
+Relation	T0	T8	NoRel	true	kurdu	gidecekti
+Relation	T1	T10	NoRel	true	siparişi	netleştirmek
+Relation	T1	T9	NoRel	true	siparişi	gönderilecekti
+Relation	T10	T1	NoRel	true	netleştirmek	siparişi
+Relation	T10	T5	NoRel	true	netleştirmek	taşıyordu
+Relation	T10	T6	NoRel	true	netleştirmek	ikmali
+Relation	T10	T7	NoRel	true	netleştirmek	boşaltılması
+Relation	T2	T5	NoRel	true	kaza	taşıyordu
+Relation	T2	T7	NoRel	true	kaza	boşaltılması
+Relation	T3	T1	NoRel	true	açıkladı	siparişi
+Relation	T3	T5	NoRel	true	açıkladı	taşıyordu
+Relation	T3	T6	NoRel	true	açıkladı	ikmali
+Relation	T3	T7	NoRel	true	açıkladı	boşaltılması
+Relation	T4	T1	NoRel	true	açıklamasına	siparişi
+Relation	T4	T10	NoRel	true	açıklamasına	netleştirmek
+Relation	T4	T5	NoRel	true	açıklamasına	taşıyordu
+Relation	T4	T8	NoRel	true	açıklamasına	gidecekti
+Relation	T5	T0	NoRel	true	taşıyordu	kurdu
+Relation	T5	T6	NoRel	true	taşıyordu	ikmali
+Relation	T5	T9	NoRel	true	taşıyordu	gönderilecekti
+Relation	T6	T1	NoRel	true	ikmali	siparişi
+Relation	T6	T3	NoRel	true	ikmali	açıkladı
+Relation	T6	T7	NoRel	true	ikmali	boşaltılması
+Relation	T6	T8	NoRel	true	ikmali	gidecekti
+Relation	T7	T10	NoRel	true	boşaltılması	netleştirmek
+Relation	T8	T9	NoRel	true	gidecekti	gönderilecekti
+Relation	T9	T0	NoRel	true	gönderilecekti	kurdu
+Relation	T9	T8	NoRel	true	gönderilecekti	gidecekti

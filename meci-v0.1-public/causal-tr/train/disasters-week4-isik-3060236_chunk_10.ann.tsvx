@@ -1,0 +1,38 @@
+Text	Allah rahmet etsin ” ifadelerini kullandı .	- – Devlet Başkanı Aleksandr Lukaşenko Türkiye'ye gönderdiği başsağlığı mesajında " doğal afetlerden dolayı çok sayıda kişinin hayatını kaybetmesinin Belarus'ta büyük bir üzüntü ve acıyla karşılandığını " belirtti .	- - Savunma Bakanı Beni Gantz , Türkiye'ye arama - kurtarma konusunda yardımcı olmak için bir ekip göndermeyi teklif ettiğini açıkladı .	- – Cumhurbaşkanı Sadır Caparov kendisi ve Kırgızistan halkı adına , Türkiye'deki sel felaketi nedeniyle hayatını kaybedenler için Cumhurbaşkanı Recep Tayyip Erdoğan'a başsağlığı dileklerini iletti .	- – Cumhurbaşkanı Volodimir Zelenski , Karadeniz'de yaşanan sel felaketi nedeniyle Cumhurbaşkanı Recep Tayyip Erdoğan ve Türk halkına taziye mesajı gönderdi .
+Event	T0	kaybetmesinin	EVENT	180
+Event	T1	belirtti	EVENT	249
+Event	T2	açıkladı	EVENT	386
+Event	T3	felaketi	EVENT	483
+Event	T5	iletti	EVENT	588
+Event	T6	felaketi	EVENT	661
+Event	T7	gönderdi	EVENT	745
+Event	T8	kullandı	EVENT	33
+Relation	T3	T8	CauseEffect	true	felaketi	kullandı
+Relation	T8	T3	EffectCause	true	kullandı	felaketi
+Relation	T3	T1	CauseEffect	true	felaketi	belirtti
+Relation	T1	T3	EffectCause	true	belirtti	felaketi
+Relation	T3	T2	CauseEffect	true	felaketi	açıkladı
+Relation	T2	T3	EffectCause	true	açıkladı	felaketi
+Relation	T3	T5	CauseEffect	true	felaketi	iletti
+Relation	T5	T3	EffectCause	true	iletti	felaketi
+Relation	T6	T7	CauseEffect	true	felaketi	gönderdi
+Relation	T7	T6	EffectCause	true	gönderdi	felaketi
+Relation	T3	T7	CauseEffect	true	felaketi	gönderdi
+Relation	T7	T3	EffectCause	true	gönderdi	felaketi
+Relation	T0	T2	NoRel	true	kaybetmesinin	açıkladı
+Relation	T0	T6	NoRel	true	kaybetmesinin	felaketi
+Relation	T0	T7	NoRel	true	kaybetmesinin	gönderdi
+Relation	T1	T0	NoRel	true	belirtti	kaybetmesinin
+Relation	T1	T6	NoRel	true	belirtti	felaketi
+Relation	T2	T1	NoRel	true	açıkladı	belirtti
+Relation	T2	T5	NoRel	true	açıkladı	iletti
+Relation	T2	T7	NoRel	true	açıkladı	gönderdi
+Relation	T2	T8	NoRel	true	açıkladı	kullandı
+Relation	T5	T0	NoRel	true	iletti	kaybetmesinin
+Relation	T5	T1	NoRel	true	iletti	belirtti
+Relation	T5	T7	NoRel	true	iletti	gönderdi
+Relation	T5	T8	NoRel	true	iletti	kullandı
+Relation	T6	T8	NoRel	true	felaketi	kullandı
+Relation	T7	T2	NoRel	true	gönderdi	açıkladı
+Relation	T7	T8	NoRel	true	gönderdi	kullandı
+Relation	T8	T0	NoRel	true	kullandı	kaybetmesinin

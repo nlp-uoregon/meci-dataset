@@ -1,0 +1,58 @@
+Text	Paul von Hindenburg , 30 Ocak 1933 tarihinde Adolf Hitler'i Şansölye olarak ataması ile hatırlanır .	Bu sayede Nasyonal Sosyalist Alman İşçi Partisi'nin iktidara yükselişinde önemli rol oynamıştır .	Hindenburg şahsen Hitler'i hor görmekte , onu küçümseyerek defalarca " Bohem Onbaşı " olarak söz etmekteydi .	Hitler'in taleplerini defalarca reddetmiş fakat zorla ve baskı ile şansölye olarak Hitler'i tayin etmiştir .	84 yaşında ve sağlık durumu kötü olmasına rağmen Adolf Hitler'i yenebilecek tek aday olarak kabul edildiği gibi , Hindenburg , 1932 yılında SPD'nin ( Sosyal Demokrat Parti ) desteği ile yeniden Cumhurbaşkanı seçildi .
+Event	T1	hatırlanır	EVENT	88
+Event	T3	oynamıştır	EVENT	186
+Event	T4	reddetmiş	EVENT	341
+Event	T5	baskı	EVENT	366
+Event	T7	desteği	EVENT	592
+Event	T8	seçildi	EVENT	626
+Event	T2	ataması	EVENT	76
+Event	T9	etmekteydi	EVENT	296
+Event	T10	görmekte	EVENT	230
+Event	T11	küçümseyerek	EVENT	245
+Event	T12	taleplerini	EVENT	319
+Event	T13	etmiştir	EVENT	407
+Relation	T2	T3	CauseEffect	true	ataması	oynamıştır
+Relation	T3	T2	EffectCause	true	oynamıştır	ataması
+Relation	T12	T4	CauseEffect	true	taleplerini	reddetmiş
+Relation	T4	T12	EffectCause	true	reddetmiş	taleplerini
+Relation	T5	T13	CauseEffect	true	baskı	etmiştir
+Relation	T13	T5	EffectCause	true	etmiştir	baskı
+Relation	T7	T8	CauseEffect	true	desteği	seçildi
+Relation	T8	T7	EffectCause	true	seçildi	desteği
+Relation	T1	T5	NoRel	true	hatırlanır	baskı
+Relation	T10	T4	NoRel	true	görmekte	reddetmiş
+Relation	T10	T5	NoRel	true	görmekte	baskı
+Relation	T10	T8	NoRel	true	görmekte	seçildi
+Relation	T11	T12	NoRel	true	küçümseyerek	taleplerini
+Relation	T11	T13	NoRel	true	küçümseyerek	etmiştir
+Relation	T11	T5	NoRel	true	küçümseyerek	baskı
+Relation	T11	T7	NoRel	true	küçümseyerek	desteği
+Relation	T12	T1	NoRel	true	taleplerini	hatırlanır
+Relation	T12	T5	NoRel	true	taleplerini	baskı
+Relation	T13	T10	NoRel	true	etmiştir	görmekte
+Relation	T13	T2	NoRel	true	etmiştir	ataması
+Relation	T13	T3	NoRel	true	etmiştir	oynamıştır
+Relation	T2	T10	NoRel	true	ataması	görmekte
+Relation	T2	T13	NoRel	true	ataması	etmiştir
+Relation	T2	T4	NoRel	true	ataması	reddetmiş
+Relation	T2	T7	NoRel	true	ataması	desteği
+Relation	T2	T9	NoRel	true	ataması	etmekteydi
+Relation	T3	T10	NoRel	true	oynamıştır	görmekte
+Relation	T3	T9	NoRel	true	oynamıştır	etmekteydi
+Relation	T4	T13	NoRel	true	reddetmiş	etmiştir
+Relation	T4	T8	NoRel	true	reddetmiş	seçildi
+Relation	T5	T11	NoRel	true	baskı	küçümseyerek
+Relation	T5	T3	NoRel	true	baskı	oynamıştır
+Relation	T5	T9	NoRel	true	baskı	etmekteydi
+Relation	T7	T10	NoRel	true	desteği	görmekte
+Relation	T7	T11	NoRel	true	desteği	küçümseyerek
+Relation	T7	T12	NoRel	true	desteği	taleplerini
+Relation	T7	T5	NoRel	true	desteği	baskı
+Relation	T8	T1	NoRel	true	seçildi	hatırlanır
+Relation	T8	T9	NoRel	true	seçildi	etmekteydi
+Relation	T9	T10	NoRel	true	etmekteydi	görmekte
+Relation	T9	T11	NoRel	true	etmekteydi	küçümseyerek
+Relation	T9	T13	NoRel	true	etmekteydi	etmiştir
+Relation	T9	T4	NoRel	true	etmekteydi	reddetmiş
+Relation	T9	T5	NoRel	true	etmekteydi	baskı
+Relation	T9	T7	NoRel	true	etmekteydi	desteği

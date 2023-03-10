@@ -1,0 +1,54 @@
+Text	İKI ARTI DÖRT ANTLAŞMASI ( ) , 1990'da Batı Almanya ve Doğu Almanya ile Fransa , SSCB , ABD ve Birleşik Krallık arasında müzakere edilen antlaşma .	Bunun sonucunda adı geçen dört ülke , Almanya'daki tüm haklarından vazgeçti ve Almanya birleşerek bağımsız bir devlet oldu .	2005 yılında akademisyen Stephen F. Cohen , NATO'nun asla doğuya genişlemeyeceği konusunda söz verildiğini öne sürdü , fakat o zamanlar İki Artı Dört görüşmelerinde yer almış bir Dışişleri Bakanlığı çalışanı olan Robert Zoellick'e göre , bu bir yanlış algıydı ve bu tarz bir resmî söz verilmemişti .	Eski Sovyetler Birliği Cumhurbaşkanı Mihail Gorbaçov , Mayıs 2008'de böyle bir söz verildiği yönündeki görüşünü yineledi ve " Amerikalılar Soğuk Savaş sonrasında NATO'nun Almanya sınırlarını aşmayacağına söz verdi .	" ifadelerini kullandı .
+Event	T0	antlaşma	EVENT	137
+Event	T1	vazgeçti	EVENT	215
+Event	T2	sürdü	EVENT	384
+Event	T3	yineledi	EVENT	685
+Event	T4	verdi	EVENT	781
+Event	T5	ANTLAŞMASI	EVENT	14
+Event	T6	birleşerek	EVENT	235
+Event	T7	oldu	EVENT	266
+Event	T8	görüşmelerinde	EVENT	423
+Event	T9	almış	EVENT	442
+Event	T10	Soğuk Savaş	EVENT	712
+Event	T11	kullandı	EVENT	803
+Relation	T5	T1	CauseEffect	true	ANTLAŞMASI	vazgeçti
+Relation	T1	T5	EffectCause	true	vazgeçti	ANTLAŞMASI
+Relation	T5	T6	CauseEffect	true	ANTLAŞMASI	birleşerek
+Relation	T6	T5	EffectCause	true	birleşerek	ANTLAŞMASI
+Relation	T1	T7	CauseEffect	true	vazgeçti	oldu
+Relation	T7	T1	EffectCause	true	oldu	vazgeçti
+Relation	T0	T1	NoRel	true	antlaşma	vazgeçti
+Relation	T0	T2	NoRel	true	antlaşma	sürdü
+Relation	T0	T4	NoRel	true	antlaşma	verdi
+Relation	T1	T0	NoRel	true	vazgeçti	antlaşma
+Relation	T1	T2	NoRel	true	vazgeçti	sürdü
+Relation	T1	T3	NoRel	true	vazgeçti	yineledi
+Relation	T10	T3	NoRel	true	Soğuk Savaş	yineledi
+Relation	T10	T8	NoRel	true	Soğuk Savaş	görüşmelerinde
+Relation	T11	T10	NoRel	true	kullandı	Soğuk Savaş
+Relation	T11	T2	NoRel	true	kullandı	sürdü
+Relation	T11	T5	NoRel	true	kullandı	ANTLAŞMASI
+Relation	T11	T6	NoRel	true	kullandı	birleşerek
+Relation	T11	T7	NoRel	true	kullandı	oldu
+Relation	T2	T0	NoRel	true	sürdü	antlaşma
+Relation	T2	T4	NoRel	true	sürdü	verdi
+Relation	T2	T5	NoRel	true	sürdü	ANTLAŞMASI
+Relation	T2	T7	NoRel	true	sürdü	oldu
+Relation	T3	T11	NoRel	true	yineledi	kullandı
+Relation	T3	T2	NoRel	true	yineledi	sürdü
+Relation	T4	T0	NoRel	true	verdi	antlaşma
+Relation	T4	T10	NoRel	true	verdi	Soğuk Savaş
+Relation	T4	T2	NoRel	true	verdi	sürdü
+Relation	T4	T3	NoRel	true	verdi	yineledi
+Relation	T5	T0	NoRel	true	ANTLAŞMASI	antlaşma
+Relation	T5	T11	NoRel	true	ANTLAŞMASI	kullandı
+Relation	T6	T10	NoRel	true	birleşerek	Soğuk Savaş
+Relation	T6	T3	NoRel	true	birleşerek	yineledi
+Relation	T6	T7	NoRel	true	birleşerek	oldu
+Relation	T7	T9	NoRel	true	oldu	almış
+Relation	T8	T1	NoRel	true	görüşmelerinde	vazgeçti
+Relation	T8	T11	NoRel	true	görüşmelerinde	kullandı
+Relation	T8	T2	NoRel	true	görüşmelerinde	sürdü
+Relation	T8	T5	NoRel	true	görüşmelerinde	ANTLAŞMASI
+Relation	T9	T11	NoRel	true	almış	kullandı
+Relation	T9	T3	NoRel	true	almış	yineledi

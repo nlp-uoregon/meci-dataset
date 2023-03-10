@@ -1,0 +1,135 @@
+Text	] Antes de iniciar el procedimiento de aproximación a la pista 05 derecha del Aeropuerto Internacional de la Ciudad de México , el piloto del Learjet 45 no redujo la velocidad de su aeronave a 180 nudos antes de cruzar el VOR Mateo , como se lo instruyó el controlador aéreo .	Se mantuvo arriba de los 250 nudos , muy alta para el corredor aéreo .	Pese a que el piloto confirmó la instrucción de reducir su velocidad , nunca la cumplió .	La alta velocidad que registró el Learjet , pilotado por el capitán Álvaro Sánchez Jiménez , ocasionó que se acercara peligrosamente a un avión pesado de pasajeros Boeing 767-300 de Mexicana , procedente de Buenos Aires , y que entrara en la estela de turbulencia , desestabilizando y derribando a la pequeña aeronave .	Esa misma noche , el entonces procurador de justicia del Distrito Federal , Miguel Ángel Mancera , informaba que por el momento eran trece los cadáveres que se encontraban en el Servicio Médico Forense como resultado del accidente .
+Event	T0	iniciar	EVENT	11
+Event	T1	procedimiento	EVENT	22
+Event	T2	aproximación	EVENT	39
+Event	T3	redujo	EVENT	156
+Event	T4	cruzar	EVENT	212
+Event	T5	instruyó	EVENT	245
+Event	T6	mantuvo	EVENT	280
+Event	T7	confirmó	EVENT	369
+Event	T8	instrucción	EVENT	381
+Event	T9	reducir	EVENT	396
+Event	T10	cumplió	EVENT	428
+Event	T11	registró	EVENT	460
+Event	T12	pilotado	EVENT	482
+Event	T13	ocasionó	EVENT	531
+Event	T15	turbulencia	EVENT	690
+Event	T16	desestabilizando	EVENT	704
+Event	T17	derribando	EVENT	723
+Event	T18	accidente	EVENT	979
+Event	T19	cadáveres	EVENT	901
+Event	T20	entrara	EVENT	666
+Relation	T18	T19	CauseEffect	true	accidente	cadáveres
+Relation	T19	T18	EffectCause	true	cadáveres	accidente
+Relation	T3	T20	CauseEffect	true	redujo	entrara
+Relation	T20	T3	EffectCause	true	entrara	redujo
+Relation	T20	T16	CauseEffect	true	entrara	desestabilizando
+Relation	T16	T20	EffectCause	true	desestabilizando	entrara
+Relation	T20	T17	CauseEffect	true	entrara	derribando
+Relation	T17	T20	EffectCause	true	derribando	entrara
+Relation	T0	T1	NoRel	true	iniciar	procedimiento
+Relation	T0	T10	NoRel	true	iniciar	cumplió
+Relation	T0	T17	NoRel	true	iniciar	derribando
+Relation	T0	T2	NoRel	true	iniciar	aproximación
+Relation	T0	T4	NoRel	true	iniciar	cruzar
+Relation	T1	T10	NoRel	true	procedimiento	cumplió
+Relation	T1	T11	NoRel	true	procedimiento	registró
+Relation	T1	T19	NoRel	true	procedimiento	cadáveres
+Relation	T1	T20	NoRel	true	procedimiento	entrara
+Relation	T1	T3	NoRel	true	procedimiento	redujo
+Relation	T1	T5	NoRel	true	procedimiento	instruyó
+Relation	T1	T6	NoRel	true	procedimiento	mantuvo
+Relation	T10	T11	NoRel	true	cumplió	registró
+Relation	T10	T15	NoRel	true	cumplió	turbulencia
+Relation	T10	T18	NoRel	true	cumplió	accidente
+Relation	T10	T3	NoRel	true	cumplió	redujo
+Relation	T10	T5	NoRel	true	cumplió	instruyó
+Relation	T10	T8	NoRel	true	cumplió	instrucción
+Relation	T11	T0	NoRel	true	registró	iniciar
+Relation	T11	T1	NoRel	true	registró	procedimiento
+Relation	T11	T5	NoRel	true	registró	instruyó
+Relation	T12	T1	NoRel	true	pilotado	procedimiento
+Relation	T12	T15	NoRel	true	pilotado	turbulencia
+Relation	T12	T16	NoRel	true	pilotado	desestabilizando
+Relation	T12	T18	NoRel	true	pilotado	accidente
+Relation	T12	T2	NoRel	true	pilotado	aproximación
+Relation	T12	T20	NoRel	true	pilotado	entrara
+Relation	T12	T4	NoRel	true	pilotado	cruzar
+Relation	T12	T5	NoRel	true	pilotado	instruyó
+Relation	T12	T6	NoRel	true	pilotado	mantuvo
+Relation	T12	T9	NoRel	true	pilotado	reducir
+Relation	T13	T15	NoRel	true	ocasionó	turbulencia
+Relation	T13	T18	NoRel	true	ocasionó	accidente
+Relation	T13	T8	NoRel	true	ocasionó	instrucción
+Relation	T15	T0	NoRel	true	turbulencia	iniciar
+Relation	T15	T10	NoRel	true	turbulencia	cumplió
+Relation	T15	T2	NoRel	true	turbulencia	aproximación
+Relation	T15	T3	NoRel	true	turbulencia	redujo
+Relation	T15	T9	NoRel	true	turbulencia	reducir
+Relation	T16	T12	NoRel	true	desestabilizando	pilotado
+Relation	T16	T17	NoRel	true	desestabilizando	derribando
+Relation	T16	T19	NoRel	true	desestabilizando	cadáveres
+Relation	T16	T3	NoRel	true	desestabilizando	redujo
+Relation	T16	T4	NoRel	true	desestabilizando	cruzar
+Relation	T16	T7	NoRel	true	desestabilizando	confirmó
+Relation	T17	T10	NoRel	true	derribando	cumplió
+Relation	T17	T16	NoRel	true	derribando	desestabilizando
+Relation	T17	T18	NoRel	true	derribando	accidente
+Relation	T17	T19	NoRel	true	derribando	cadáveres
+Relation	T17	T4	NoRel	true	derribando	cruzar
+Relation	T17	T5	NoRel	true	derribando	instruyó
+Relation	T17	T6	NoRel	true	derribando	mantuvo
+Relation	T17	T9	NoRel	true	derribando	reducir
+Relation	T18	T10	NoRel	true	accidente	cumplió
+Relation	T18	T12	NoRel	true	accidente	pilotado
+Relation	T18	T16	NoRel	true	accidente	desestabilizando
+Relation	T18	T2	NoRel	true	accidente	aproximación
+Relation	T18	T5	NoRel	true	accidente	instruyó
+Relation	T18	T8	NoRel	true	accidente	instrucción
+Relation	T18	T9	NoRel	true	accidente	reducir
+Relation	T19	T0	NoRel	true	cadáveres	iniciar
+Relation	T19	T13	NoRel	true	cadáveres	ocasionó
+Relation	T19	T2	NoRel	true	cadáveres	aproximación
+Relation	T19	T7	NoRel	true	cadáveres	confirmó
+Relation	T2	T0	NoRel	true	aproximación	iniciar
+Relation	T2	T1	NoRel	true	aproximación	procedimiento
+Relation	T2	T10	NoRel	true	aproximación	cumplió
+Relation	T2	T17	NoRel	true	aproximación	derribando
+Relation	T2	T7	NoRel	true	aproximación	confirmó
+Relation	T20	T2	NoRel	true	entrara	aproximación
+Relation	T20	T9	NoRel	true	entrara	reducir
+Relation	T3	T10	NoRel	true	redujo	cumplió
+Relation	T3	T16	NoRel	true	redujo	desestabilizando
+Relation	T3	T2	NoRel	true	redujo	aproximación
+Relation	T3	T5	NoRel	true	redujo	instruyó
+Relation	T3	T8	NoRel	true	redujo	instrucción
+Relation	T4	T0	NoRel	true	cruzar	iniciar
+Relation	T4	T12	NoRel	true	cruzar	pilotado
+Relation	T4	T15	NoRel	true	cruzar	turbulencia
+Relation	T4	T16	NoRel	true	cruzar	desestabilizando
+Relation	T4	T18	NoRel	true	cruzar	accidente
+Relation	T4	T20	NoRel	true	cruzar	entrara
+Relation	T5	T15	NoRel	true	instruyó	turbulencia
+Relation	T5	T19	NoRel	true	instruyó	cadáveres
+Relation	T5	T20	NoRel	true	instruyó	entrara
+Relation	T5	T6	NoRel	true	instruyó	mantuvo
+Relation	T6	T0	NoRel	true	mantuvo	iniciar
+Relation	T6	T12	NoRel	true	mantuvo	pilotado
+Relation	T6	T20	NoRel	true	mantuvo	entrara
+Relation	T6	T5	NoRel	true	mantuvo	instruyó
+Relation	T7	T1	NoRel	true	confirmó	procedimiento
+Relation	T7	T11	NoRel	true	confirmó	registró
+Relation	T7	T16	NoRel	true	confirmó	desestabilizando
+Relation	T7	T3	NoRel	true	confirmó	redujo
+Relation	T7	T8	NoRel	true	confirmó	instrucción
+Relation	T8	T15	NoRel	true	instrucción	turbulencia
+Relation	T8	T6	NoRel	true	instrucción	mantuvo
+Relation	T9	T0	NoRel	true	reducir	iniciar
+Relation	T9	T12	NoRel	true	reducir	pilotado
+Relation	T9	T15	NoRel	true	reducir	turbulencia
+Relation	T9	T16	NoRel	true	reducir	desestabilizando
+Relation	T9	T19	NoRel	true	reducir	cadáveres
+Relation	T9	T2	NoRel	true	reducir	aproximación
+Relation	T9	T20	NoRel	true	reducir	entrara
+Relation	T9	T5	NoRel	true	reducir	instruyó
+Relation	T9	T6	NoRel	true	reducir	mantuvo

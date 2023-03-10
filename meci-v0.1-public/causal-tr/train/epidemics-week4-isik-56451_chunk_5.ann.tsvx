@@ -1,0 +1,49 @@
+Text	Geçmişte belirli dönemlerde bu hastalığın büyük salgınları yaşanmıştır .	14. yüzyılda kara ölüm olarak kayıtlara geçen salgının , hıyarcıklı veba olduğu sanılmaktadır .	Bir pire insanı ısırdığında ve yarayı açılmış kanla kirlettiğinde , veba taşıyan bakteriler dokuya geçer .	Y. pestis hücrelerin içinde üreyebilir , bu nedenle fagositozlanmış olsalar bile , hala hayatta kalabilirler .	Vücutta bir kez girdiklerinde , bakteriler interstisyel sıvıyı boşaltan lenfatik sisteme girebilir .
+Event	T0	yaşanmıştır	EVENT	59
+Event	T2	geçen	EVENT	113
+Event	T3	ısırdığında	EVENT	185
+Event	T4	kirlettiğinde	EVENT	221
+Event	T5	geçer	EVENT	268
+Event	T6	üreyebilir	EVENT	304
+Event	T7	girdiklerinde	EVENT	403
+Event	T8	girebilir	EVENT	476
+Event	T9	salgınları	EVENT	48
+Event	T1	kalabilirler	EVENT	372
+Relation	T3	T4	CauseEffect	true	ısırdığında	kirlettiğinde
+Relation	T4	T3	EffectCause	true	kirlettiğinde	ısırdığında
+Relation	T4	T5	CauseEffect	true	kirlettiğinde	geçer
+Relation	T5	T4	EffectCause	true	geçer	kirlettiğinde
+Relation	T5	T6	CauseEffect	true	geçer	üreyebilir
+Relation	T6	T5	EffectCause	true	üreyebilir	geçer
+Relation	T5	T8	CauseEffect	true	geçer	girebilir
+Relation	T8	T5	EffectCause	true	girebilir	geçer
+Relation	T7	T8	CauseEffect	true	girdiklerinde	girebilir
+Relation	T8	T7	EffectCause	true	girebilir	girdiklerinde
+Relation	T0	T3	NoRel	true	yaşanmıştır	ısırdığında
+Relation	T0	T4	NoRel	true	yaşanmıştır	kirlettiğinde
+Relation	T0	T8	NoRel	true	yaşanmıştır	girebilir
+Relation	T1	T0	NoRel	true	kalabilirler	yaşanmıştır
+Relation	T1	T2	NoRel	true	kalabilirler	geçen
+Relation	T1	T4	NoRel	true	kalabilirler	kirlettiğinde
+Relation	T1	T7	NoRel	true	kalabilirler	girdiklerinde
+Relation	T2	T8	NoRel	true	geçen	girebilir
+Relation	T3	T5	NoRel	true	ısırdığında	geçer
+Relation	T4	T0	NoRel	true	kirlettiğinde	yaşanmıştır
+Relation	T5	T0	NoRel	true	geçer	yaşanmıştır
+Relation	T5	T2	NoRel	true	geçer	geçen
+Relation	T5	T3	NoRel	true	geçer	ısırdığında
+Relation	T6	T1	NoRel	true	üreyebilir	kalabilirler
+Relation	T6	T2	NoRel	true	üreyebilir	geçen
+Relation	T6	T4	NoRel	true	üreyebilir	kirlettiğinde
+Relation	T6	T7	NoRel	true	üreyebilir	girdiklerinde
+Relation	T6	T9	NoRel	true	üreyebilir	salgınları
+Relation	T7	T2	NoRel	true	girdiklerinde	geçen
+Relation	T7	T4	NoRel	true	girdiklerinde	kirlettiğinde
+Relation	T7	T6	NoRel	true	girdiklerinde	üreyebilir
+Relation	T7	T9	NoRel	true	girdiklerinde	salgınları
+Relation	T8	T1	NoRel	true	girebilir	kalabilirler
+Relation	T8	T3	NoRel	true	girebilir	ısırdığında
+Relation	T8	T6	NoRel	true	girebilir	üreyebilir
+Relation	T8	T9	NoRel	true	girebilir	salgınları
+Relation	T9	T1	NoRel	true	salgınları	kalabilirler
+Relation	T9	T2	NoRel	true	salgınları	geçen

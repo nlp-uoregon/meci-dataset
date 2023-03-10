@@ -1,0 +1,69 @@
+Text	Først da var banesystemet i Dresden endelig ødelagt .	Den tyske regering benyttede angrebene i propagandaen mod de allierede .	Nazisterne opfordrede til en sidste mobilisering .	De nærede et håb om , at Anti-Hitler-koalitionen faldt , og meddelte til Elblinjen ” At den skulle holdes til det sidste ” ( _ Halten bis zum letzten ! ) _ .	Den 14. april erklærede Mutschmann officielt Dresden for fæstning .
+Event	T0	ødelagt	EVENT	44
+Event	T1	angrebene	EVENT	83
+Event	T2	opfordrede	EVENT	138
+Event	T3	mobilisering	EVENT	163
+Event	T4	nærede	EVENT	181
+Event	T5	faldt	EVENT	227
+Event	T6	meddelte	EVENT	238
+Event	T7	erklærede	EVENT	350
+Event	T8	fæstning	EVENT	393
+Event	T9	håb	EVENT	191
+Event	T10	holdes	EVENT	277
+Event	T11	benyttede	EVENT	73
+Event	T12	propagandaen	EVENT	95
+Relation	T1	T12	CauseEffect	true	angrebene	propagandaen
+Relation	T12	T1	EffectCause	true	propagandaen	angrebene
+Relation	T0	T11	NoRel	true	ødelagt	benyttede
+Relation	T0	T3	NoRel	true	ødelagt	mobilisering
+Relation	T0	T6	NoRel	true	ødelagt	meddelte
+Relation	T0	T7	NoRel	true	ødelagt	erklærede
+Relation	T0	T8	NoRel	true	ødelagt	fæstning
+Relation	T0	T9	NoRel	true	ødelagt	håb
+Relation	T1	T0	NoRel	true	angrebene	ødelagt
+Relation	T1	T2	NoRel	true	angrebene	opfordrede
+Relation	T1	T5	NoRel	true	angrebene	faldt
+Relation	T1	T7	NoRel	true	angrebene	erklærede
+Relation	T1	T9	NoRel	true	angrebene	håb
+Relation	T10	T0	NoRel	true	holdes	ødelagt
+Relation	T10	T12	NoRel	true	holdes	propagandaen
+Relation	T10	T3	NoRel	true	holdes	mobilisering
+Relation	T11	T0	NoRel	true	benyttede	ødelagt
+Relation	T11	T10	NoRel	true	benyttede	holdes
+Relation	T11	T12	NoRel	true	benyttede	propagandaen
+Relation	T11	T6	NoRel	true	benyttede	meddelte
+Relation	T11	T8	NoRel	true	benyttede	fæstning
+Relation	T12	T10	NoRel	true	propagandaen	holdes
+Relation	T12	T11	NoRel	true	propagandaen	benyttede
+Relation	T12	T7	NoRel	true	propagandaen	erklærede
+Relation	T12	T9	NoRel	true	propagandaen	håb
+Relation	T2	T1	NoRel	true	opfordrede	angrebene
+Relation	T2	T3	NoRel	true	opfordrede	mobilisering
+Relation	T2	T7	NoRel	true	opfordrede	erklærede
+Relation	T3	T12	NoRel	true	mobilisering	propagandaen
+Relation	T3	T9	NoRel	true	mobilisering	håb
+Relation	T4	T1	NoRel	true	nærede	angrebene
+Relation	T4	T2	NoRel	true	nærede	opfordrede
+Relation	T4	T5	NoRel	true	nærede	faldt
+Relation	T4	T7	NoRel	true	nærede	erklærede
+Relation	T4	T8	NoRel	true	nærede	fæstning
+Relation	T5	T1	NoRel	true	faldt	angrebene
+Relation	T5	T2	NoRel	true	faldt	opfordrede
+Relation	T5	T4	NoRel	true	faldt	nærede
+Relation	T6	T1	NoRel	true	meddelte	angrebene
+Relation	T6	T11	NoRel	true	meddelte	benyttede
+Relation	T6	T2	NoRel	true	meddelte	opfordrede
+Relation	T6	T4	NoRel	true	meddelte	nærede
+Relation	T6	T5	NoRel	true	meddelte	faldt
+Relation	T6	T7	NoRel	true	meddelte	erklærede
+Relation	T6	T9	NoRel	true	meddelte	håb
+Relation	T7	T10	NoRel	true	erklærede	holdes
+Relation	T7	T2	NoRel	true	erklærede	opfordrede
+Relation	T7	T9	NoRel	true	erklærede	håb
+Relation	T8	T10	NoRel	true	fæstning	holdes
+Relation	T8	T3	NoRel	true	fæstning	mobilisering
+Relation	T8	T4	NoRel	true	fæstning	nærede
+Relation	T9	T11	NoRel	true	håb	benyttede
+Relation	T9	T2	NoRel	true	håb	opfordrede
+Relation	T9	T5	NoRel	true	håb	faldt
+Relation	T9	T6	NoRel	true	håb	meddelte

@@ -1,0 +1,27 @@
+Text	- 22 Haziran , 2009 – Washington’un kuzeydoğusunda iki Washington Metro treni trafiğin yoğun olduğu zaman çarpıştığında dokuz kişi öldü .	33 yıllık metro sisteminin en ölümcülü .	- 29 Haziran , 2009 – Viareggio’da bir yük treni raydan çıktı .	Sıvılaştırılmış gaz taşıyan vagonların ikisi patladı .	Otuz iki kişi öldü bir ev çöktüğünde
+Event	T0	çarpıştığında	EVENT	106
+Event	T1	öldü	EVENT	131
+Event	T3	çıktı	EVENT	235
+Event	T4	patladı	EVENT	288
+Event	T5	öldü	EVENT	312
+Event	T6	çöktüğünde	EVENT	324
+Relation	T0	T1	CauseEffect	true	çarpıştığında	öldü
+Relation	T1	T0	EffectCause	true	öldü	çarpıştığında
+Relation	T3	T4	CauseEffect	true	çıktı	patladı
+Relation	T4	T3	EffectCause	true	patladı	çıktı
+Relation	T4	T5	CauseEffect	true	patladı	öldü
+Relation	T5	T4	EffectCause	true	öldü	patladı
+Relation	T4	T6	CauseEffect	true	patladı	çöktüğünde
+Relation	T6	T4	EffectCause	true	çöktüğünde	patladı
+Relation	T1	T3	NoRel	true	öldü	çıktı
+Relation	T1	T5	NoRel	true	öldü	öldü
+Relation	T1	T6	NoRel	true	öldü	çöktüğünde
+Relation	T3	T1	NoRel	true	çıktı	öldü
+Relation	T3	T5	NoRel	true	çıktı	öldü
+Relation	T3	T6	NoRel	true	çıktı	çöktüğünde
+Relation	T4	T1	NoRel	true	patladı	öldü
+Relation	T5	T0	NoRel	true	öldü	çarpıştığında
+Relation	T5	T3	NoRel	true	öldü	çıktı
+Relation	T6	T0	NoRel	true	çöktüğünde	çarpıştığında
+Relation	T6	T1	NoRel	true	çöktüğünde	öldü
+Relation	T6	T3	NoRel	true	çöktüğünde	çıktı

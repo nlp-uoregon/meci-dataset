@@ -1,0 +1,65 @@
+Text	El VUELO 555 DE NEPAL AIRLINES es un vuelo corto regular de tipo doméstico desde el Aeropuerto de Pokhara al Aeropuerto de Jomsom en Nepal de unos veinte minutos de tiempo de vuelo , operado por Nepal Airlines .	El 16 de mayo de 2013 el avión de Havilland Canada DHC-6 Twin Otter que operaba este vuelo se estrelló en el aeropuerto de Jomson .	Siete e las veintiuna personas a bordo quedaron heridas de gravedad .	No hubo ninguna pérdida personal que lamentar , pero el avión fue declarado como siniestro total .	Según el informe policial , justo después de que el avión tocase tierra en la pista comenzó a girarse a la derecha y cayó veinte metros hasta un bajío del Río Gandaki .
+Event	T0	vuelo	EVENT	175
+Event	T1	operado	EVENT	183
+Event	T2	operaba	EVENT	284
+Event	T3	vuelo	EVENT	297
+Event	T4	estrelló	EVENT	306
+Event	T5	heridas	EVENT	392
+Event	T6	pérdida	EVENT	430
+Event	T7	lamentar	EVENT	451
+Event	T8	declarado	EVENT	480
+Event	T9	informe	EVENT	522
+Event	T10	girarse	EVENT	607
+Event	T11	cayó	EVENT	630
+Event	T12	VUELO	EVENT	3
+Relation	T4	T5	CauseEffect	true	estrelló	heridas
+Relation	T5	T4	EffectCause	true	heridas	estrelló
+Relation	T4	T8	CauseEffect	true	estrelló	declarado
+Relation	T8	T4	EffectCause	true	declarado	estrelló
+Relation	T4	T11	CauseEffect	true	estrelló	cayó
+Relation	T11	T4	EffectCause	true	cayó	estrelló
+Relation	T0	T10	NoRel	true	vuelo	girarse
+Relation	T0	T12	NoRel	true	vuelo	VUELO
+Relation	T0	T6	NoRel	true	vuelo	pérdida
+Relation	T1	T9	NoRel	true	operado	informe
+Relation	T11	T6	NoRel	true	cayó	pérdida
+Relation	T11	T7	NoRel	true	cayó	lamentar
+Relation	T11	T9	NoRel	true	cayó	informe
+Relation	T12	T1	NoRel	true	VUELO	operado
+Relation	T12	T10	NoRel	true	VUELO	girarse
+Relation	T12	T2	NoRel	true	VUELO	operaba
+Relation	T12	T3	NoRel	true	VUELO	vuelo
+Relation	T12	T6	NoRel	true	VUELO	pérdida
+Relation	T12	T9	NoRel	true	VUELO	informe
+Relation	T2	T1	NoRel	true	operaba	operado
+Relation	T2	T5	NoRel	true	operaba	heridas
+Relation	T3	T0	NoRel	true	vuelo	vuelo
+Relation	T3	T10	NoRel	true	vuelo	girarse
+Relation	T3	T2	NoRel	true	vuelo	operaba
+Relation	T3	T4	NoRel	true	vuelo	estrelló
+Relation	T3	T5	NoRel	true	vuelo	heridas
+Relation	T3	T6	NoRel	true	vuelo	pérdida
+Relation	T3	T9	NoRel	true	vuelo	informe
+Relation	T4	T10	NoRel	true	estrelló	girarse
+Relation	T4	T12	NoRel	true	estrelló	VUELO
+Relation	T5	T7	NoRel	true	heridas	lamentar
+Relation	T5	T8	NoRel	true	heridas	declarado
+Relation	T6	T1	NoRel	true	pérdida	operado
+Relation	T6	T10	NoRel	true	pérdida	girarse
+Relation	T6	T11	NoRel	true	pérdida	cayó
+Relation	T6	T7	NoRel	true	pérdida	lamentar
+Relation	T6	T8	NoRel	true	pérdida	declarado
+Relation	T6	T9	NoRel	true	pérdida	informe
+Relation	T7	T1	NoRel	true	lamentar	operado
+Relation	T7	T12	NoRel	true	lamentar	VUELO
+Relation	T7	T6	NoRel	true	lamentar	pérdida
+Relation	T7	T9	NoRel	true	lamentar	informe
+Relation	T8	T10	NoRel	true	declarado	girarse
+Relation	T8	T12	NoRel	true	declarado	VUELO
+Relation	T8	T9	NoRel	true	declarado	informe
+Relation	T9	T1	NoRel	true	informe	operado
+Relation	T9	T12	NoRel	true	informe	VUELO
+Relation	T9	T2	NoRel	true	informe	operaba
+Relation	T9	T3	NoRel	true	informe	vuelo
+Relation	T9	T7	NoRel	true	informe	lamentar
+Relation	T9	T8	NoRel	true	informe	declarado

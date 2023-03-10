@@ -1,0 +1,48 @@
+Text	VIETNAM AIRLINES FLIGHT 831 , a Tupolev Tu - 134 , crashed in a rice field near Semafah karm Village , Tambon Khu Khot , Amphoe Lam Luk Ka , Pathum Thani , Thailand while operating a flight from Hanoi to Bangkok in 1988 .	The cause of the accident is undetermined , however the pilots reported the aircraft may have been struck by lightning .	Three crew and 73 passengers died in the accident .	This accident was the second deadliest accident at the time in Thailand , and is currently the fifth deadliest .	While still flying above the outer marker , the aircraft descended below the minimum safe altitude and crashed into the ground .
+Event	T0	crashed	EVENT	51
+Event	T1	operating	EVENT	171
+Event	T2	flight	EVENT	183
+Event	T3	accident	EVENT	239
+Event	T4	undetermined	EVENT	251
+Event	T5	reported	EVENT	285
+Event	T6	struck	EVENT	321
+Event	T7	lightning	EVENT	331
+Event	T8	died	EVENT	372
+Event	T9	accident	EVENT	384
+Event	T10	accident	EVENT	400
+Event	T11	accident	EVENT	434
+Event	T12	deadliest	EVENT	496
+Event	T13	flying	EVENT	520
+Event	T14	descended	EVENT	565
+Event	T15	crashed	EVENT	611
+Relation	T7	T6	CauseEffect	true	lightning	struck
+Relation	T6	T7	EffectCause	true	struck	lightning
+Relation	T9	T8	CauseEffect	true	accident	died
+Relation	T8	T9	EffectCause	true	died	accident
+Relation	T0	T6	NoRel	true	crashed	struck
+Relation	T0	T7	NoRel	true	crashed	lightning
+Relation	T1	T2	NoRel	true	operating	flight
+Relation	T1	T5	NoRel	true	operating	reported
+Relation	T10	T12	NoRel	true	accident	deadliest
+Relation	T10	T14	NoRel	true	accident	descended
+Relation	T10	T4	NoRel	true	accident	undetermined
+Relation	T11	T13	NoRel	true	accident	flying
+Relation	T12	T0	NoRel	true	deadliest	crashed
+Relation	T12	T5	NoRel	true	deadliest	reported
+Relation	T13	T11	NoRel	true	flying	accident
+Relation	T13	T14	NoRel	true	flying	descended
+Relation	T14	T10	NoRel	true	descended	accident
+Relation	T14	T8	NoRel	true	descended	died
+Relation	T2	T14	NoRel	true	flight	descended
+Relation	T2	T5	NoRel	true	flight	reported
+Relation	T2	T6	NoRel	true	flight	struck
+Relation	T3	T14	NoRel	true	accident	descended
+Relation	T4	T0	NoRel	true	undetermined	crashed
+Relation	T4	T11	NoRel	true	undetermined	accident
+Relation	T4	T9	NoRel	true	undetermined	accident
+Relation	T6	T11	NoRel	true	struck	accident
+Relation	T6	T9	NoRel	true	struck	accident
+Relation	T7	T1	NoRel	true	lightning	operating
+Relation	T8	T1	NoRel	true	died	operating
+Relation	T9	T10	NoRel	true	accident	accident
+Relation	T9	T5	NoRel	true	accident	reported

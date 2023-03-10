@@ -1,0 +1,18 @@
+Text	Bu tür olayları önlemek için çalışmaya devam edeceğiz .	" Avrupa Komisyonu Göç ve Vatandaşlık İşleri Sorumlu Üyesi Dimitris Avramopoulos ; " İstanbul'da masum vatandaşlara yönelik saldırı karşısında dehşete düştüm .	Kalbim , bu gece Türkiye ve hayatını kaybedenler ve aileleriyle .	" Avrupa Birliği Türkiye Raportörü Kati Piri ; " Bu , oldukça üzücü bir haber .	Kalbim ve dualarım bu gece Türkiye'yle .
+Event	T0	saldırı	EVENT	180
+Event	T1	düştüm	EVENT	207
+Event	T3	haber	EVENT	354
+Event	T4	olayları	EVENT	7
+Event	T5	çalışmaya	EVENT	29
+Event	T2	kaybedenler	EVENT	253
+Relation	T0	T2	CauseEffect	true	saldırı	kaybedenler
+Relation	T2	T0	EffectCause	true	kaybedenler	saldırı
+Relation	T0	T4	NoRel	true	saldırı	olayları
+Relation	T1	T0	NoRel	true	düştüm	saldırı
+Relation	T1	T4	NoRel	true	düştüm	olayları
+Relation	T1	T5	NoRel	true	düştüm	çalışmaya
+Relation	T2	T1	NoRel	true	kaybedenler	düştüm
+Relation	T3	T1	NoRel	true	haber	düştüm
+Relation	T3	T5	NoRel	true	haber	çalışmaya
+Relation	T4	T0	NoRel	true	olayları	saldırı
+Relation	T4	T2	NoRel	true	olayları	kaybedenler

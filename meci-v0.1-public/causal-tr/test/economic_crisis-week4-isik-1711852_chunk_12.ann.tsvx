@@ -1,0 +1,85 @@
+Text	Ekonomik beklentilerin olumsuzlaştığı bir ortamda , Hazine'nin yüklü bir borç itfası öncesinde 19 Şubat 2001'de beklenmedik siyasi gerginlikler yaşandı .	Kriz , Milli Güvenlik Kurulu toplantısında Cumhurbaşkanı Ahmet Necdet Sezer ile Başbakan Bülent Ecevit arasındaki tartışmayla patlak verdi .	21 Şubat 2001 tarihli toplantıda Sezer'in Ecevit'e anayasa kitapçığı fırlatması olayından hemen sonra İstanbul Menkul Kıymetler Borsası'nda % 18 , 1 oranında düşüş yaşandı gecelik faizler % 7500’e kadar yükseldi .	Daha sonra " dalgalı kur " sistemine geçilmesi yönünde karar alındı .	Başbakan'ın " devlet yönetiminde kriz var " açıklamasıyla birlikte mali piyasalarda panikle başlayan süreç , yerli parayı savunmak için gecelik faizlerin çok yüksek oranlara ulaşmasına rağmen , yerleşiklerin yoğun döviz talebi nedeniyle Merkez Bankası'nın 5 milyar dolarlık döviz satışıyla sonuçlandı .
+Event	T0	itfası	EVENT	78
+Event	T1	yaşandı	EVENT	144
+Event	T2	Kriz	EVENT	154
+Event	T3	verdi	EVENT	287
+Event	T5	yaşandı	EVENT	459
+Event	T6	yükseldi	EVENT	498
+Event	T8	alındı	EVENT	570
+Event	T9	kriz	EVENT	612
+Event	T10	süreç	EVENT	680
+Event	T12	talebi	EVENT	799
+Event	T13	sonuçlandı	EVENT	869
+Event	T14	tartışmayla	EVENT	268
+Event	T15	fırlatması	EVENT	364
+Event	T7	açıklamasıyla	EVENT	623
+Relation	T14	T3	CauseEffect	true	tartışmayla	verdi
+Relation	T3	T14	EffectCause	true	verdi	tartışmayla
+Relation	T15	T5	CauseEffect	true	fırlatması	yaşandı
+Relation	T5	T15	EffectCause	true	yaşandı	fırlatması
+Relation	T5	T6	CauseEffect	true	yaşandı	yükseldi
+Relation	T6	T5	EffectCause	true	yükseldi	yaşandı
+Relation	T14	T15	CauseEffect	true	tartışmayla	fırlatması
+Relation	T15	T14	EffectCause	true	fırlatması	tartışmayla
+Relation	T6	T8	CauseEffect	true	yükseldi	alındı
+Relation	T8	T6	EffectCause	true	alındı	yükseldi
+Relation	T7	T10	CauseEffect	true	açıklamasıyla	süreç
+Relation	T10	T7	EffectCause	true	süreç	açıklamasıyla
+Relation	T10	T13	CauseEffect	true	süreç	sonuçlandı
+Relation	T13	T10	EffectCause	true	sonuçlandı	süreç
+Relation	T14	T2	CauseEffect	true	tartışmayla	Kriz
+Relation	T2	T14	EffectCause	true	Kriz	tartışmayla
+Relation	T0	T1	NoRel	true	itfası	yaşandı
+Relation	T0	T2	NoRel	true	itfası	Kriz
+Relation	T0	T5	NoRel	true	itfası	yaşandı
+Relation	T0	T8	NoRel	true	itfası	alındı
+Relation	T1	T0	NoRel	true	yaşandı	itfası
+Relation	T1	T14	NoRel	true	yaşandı	tartışmayla
+Relation	T1	T15	NoRel	true	yaşandı	fırlatması
+Relation	T1	T5	NoRel	true	yaşandı	yaşandı
+Relation	T1	T8	NoRel	true	yaşandı	alındı
+Relation	T10	T14	NoRel	true	süreç	tartışmayla
+Relation	T10	T3	NoRel	true	süreç	verdi
+Relation	T10	T5	NoRel	true	süreç	yaşandı
+Relation	T12	T0	NoRel	true	talebi	itfası
+Relation	T12	T14	NoRel	true	talebi	tartışmayla
+Relation	T12	T2	NoRel	true	talebi	Kriz
+Relation	T12	T6	NoRel	true	talebi	yükseldi
+Relation	T12	T7	NoRel	true	talebi	açıklamasıyla
+Relation	T12	T9	NoRel	true	talebi	kriz
+Relation	T13	T15	NoRel	true	sonuçlandı	fırlatması
+Relation	T13	T2	NoRel	true	sonuçlandı	Kriz
+Relation	T13	T3	NoRel	true	sonuçlandı	verdi
+Relation	T14	T1	NoRel	true	tartışmayla	yaşandı
+Relation	T14	T5	NoRel	true	tartışmayla	yaşandı
+Relation	T14	T6	NoRel	true	tartışmayla	yükseldi
+Relation	T15	T0	NoRel	true	fırlatması	itfası
+Relation	T2	T10	NoRel	true	Kriz	süreç
+Relation	T2	T5	NoRel	true	Kriz	yaşandı
+Relation	T2	T7	NoRel	true	Kriz	açıklamasıyla
+Relation	T2	T8	NoRel	true	Kriz	alındı
+Relation	T3	T1	NoRel	true	verdi	yaşandı
+Relation	T3	T12	NoRel	true	verdi	talebi
+Relation	T3	T13	NoRel	true	verdi	sonuçlandı
+Relation	T3	T5	NoRel	true	verdi	yaşandı
+Relation	T3	T8	NoRel	true	verdi	alındı
+Relation	T5	T1	NoRel	true	yaşandı	yaşandı
+Relation	T5	T13	NoRel	true	yaşandı	sonuçlandı
+Relation	T6	T0	NoRel	true	yükseldi	itfası
+Relation	T6	T2	NoRel	true	yükseldi	Kriz
+Relation	T6	T3	NoRel	true	yükseldi	verdi
+Relation	T6	T9	NoRel	true	yükseldi	kriz
+Relation	T7	T0	NoRel	true	açıklamasıyla	itfası
+Relation	T7	T12	NoRel	true	açıklamasıyla	talebi
+Relation	T7	T13	NoRel	true	açıklamasıyla	sonuçlandı
+Relation	T7	T14	NoRel	true	açıklamasıyla	tartışmayla
+Relation	T7	T15	NoRel	true	açıklamasıyla	fırlatması
+Relation	T7	T5	NoRel	true	açıklamasıyla	yaşandı
+Relation	T8	T10	NoRel	true	alındı	süreç
+Relation	T8	T15	NoRel	true	alındı	fırlatması
+Relation	T9	T1	NoRel	true	kriz	yaşandı
+Relation	T9	T14	NoRel	true	kriz	tartışmayla
+Relation	T9	T2	NoRel	true	kriz	Kriz
+Relation	T9	T5	NoRel	true	kriz	yaşandı
+Relation	T9	T6	NoRel	true	kriz	yükseldi
+Relation	T9	T8	NoRel	true	kriz	alındı

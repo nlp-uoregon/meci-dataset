@@ -1,0 +1,35 @@
+Text	It concluded that the aircraft was " not considered safe for flight " due to non-compliance with these orders .	A consequent lawsuit to reopen the case claimed that the report 's information about the cause was not secret and alleged a government coverup , but the case was not reopened .	Category : Accidents and incidents involving United States Air Force aircraft	Category : Aviation accidents and incidents in the United States in 1948	Category : Waycross , Georgia micropolitan area
+Event	T0	concluded	EVENT	3
+Event	T1	flight	EVENT	61
+Event	T2	orders	EVENT	103
+Event	T3	lawsuit	EVENT	125
+Event	T4	reopen	EVENT	136
+Event	T5	claimed	EVENT	152
+Event	T6	alleged	EVENT	226
+Event	T7	coverup	EVENT	247
+Event	T8	case	EVENT	265
+Event	T9	reopened	EVENT	278
+Event	T10	Accidents	EVENT	300
+Event	T11	accidents	EVENT	387
+Event	T12	incidents	EVENT	401
+Event	T13	incidents	EVENT	314
+Relation	T2	T1	CauseEffect	true	orders	flight
+Relation	T1	T2	EffectCause	true	flight	orders
+Relation	T0	T1	NoRel	true	concluded	flight
+Relation	T1	T4	NoRel	true	flight	reopen
+Relation	T11	T12	NoRel	true	accidents	incidents
+Relation	T11	T7	NoRel	true	accidents	coverup
+Relation	T2	T7	NoRel	true	orders	coverup
+Relation	T3	T12	NoRel	true	lawsuit	incidents
+Relation	T4	T7	NoRel	true	reopen	coverup
+Relation	T5	T10	NoRel	true	claimed	Accidents
+Relation	T6	T9	NoRel	true	alleged	reopened
+Relation	T7	T0	NoRel	true	coverup	concluded
+Relation	T7	T1	NoRel	true	coverup	flight
+Relation	T7	T10	NoRel	true	coverup	Accidents
+Relation	T7	T2	NoRel	true	coverup	orders
+Relation	T7	T3	NoRel	true	coverup	lawsuit
+Relation	T8	T3	NoRel	true	case	lawsuit
+Relation	T9	T13	NoRel	true	reopened	incidents
+Relation	T9	T3	NoRel	true	reopened	lawsuit
+Relation	T9	T4	NoRel	true	reopened	reopen

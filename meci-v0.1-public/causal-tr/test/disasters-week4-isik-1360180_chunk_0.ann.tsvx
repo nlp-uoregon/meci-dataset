@@ -1,0 +1,69 @@
+Text	1912 MÜREFTE DEPREMI , 9 Ağustos 1912'de Tekirdağ ilinin Şarköy ilçesinin Mürefte beldesinde 7,3 M _ ( S ) büyüklüğünde gece 3 sularında meydana gelen deprem .	Depremde 216 kişi yaşamını yitirmiş , 466 kişi yaralanmış ve 450 bina hasar görmüştür .	Depremle ilgili önemli ayrıntılardan biri de Balkan Savaşları'dır .	Çünkü savaşa hazırlanan askeri birliklerin , kışlaların , ikmal depolarının ve köprülerin görmüş olduğu zarardır .	Yıkım ve kayıplar yüzünden Ekim ayında savaşa giden askerler uzun bir süre yiyeceksiz kalmıştır .
+Event	T1	deprem	EVENT	151
+Event	T2	Depremde	EVENT	160
+Event	T3	yitirmiş	EVENT	187
+Event	T4	yaralanmış	EVENT	207
+Event	T6	Yıkım	EVENT	431
+Event	T7	kayıplar	EVENT	440
+Event	T8	1912 MÜREFTE DEPREMI	EVENT	0
+Event	T9	görmüştür	EVENT	236
+Event	T5	zarardır	EVENT	420
+Event	T10	Balkan Savaşları'dır	EVENT	293
+Event	T11	hazırlanan	EVENT	329
+Event	T12	kalmıştır	EVENT	517
+Event	T13	giden	EVENT	477
+Relation	T10	T11	CauseEffect	true	Balkan Savaşları'dır	hazırlanan
+Relation	T11	T10	EffectCause	true	hazırlanan	Balkan Savaşları'dır
+Relation	T10	T13	CauseEffect	true	Balkan Savaşları'dır	giden
+Relation	T13	T10	EffectCause	true	giden	Balkan Savaşları'dır
+Relation	T13	T12	CauseEffect	true	giden	kalmıştır
+Relation	T12	T13	EffectCause	true	kalmıştır	giden
+Relation	T8	T6	CauseEffect	true	1912 MÜREFTE DEPREMI	Yıkım
+Relation	T6	T8	EffectCause	true	Yıkım	1912 MÜREFTE DEPREMI
+Relation	T6	T12	CauseEffect	true	Yıkım	kalmıştır
+Relation	T12	T6	EffectCause	true	kalmıştır	Yıkım
+Relation	T7	T12	CauseEffect	true	kayıplar	kalmıştır
+Relation	T12	T7	EffectCause	true	kalmıştır	kayıplar
+Relation	T1	T2	NoRel	true	deprem	Depremde
+Relation	T1	T6	NoRel	true	deprem	Yıkım
+Relation	T1	T7	NoRel	true	deprem	kayıplar
+Relation	T1	T9	NoRel	true	deprem	görmüştür
+Relation	T10	T2	NoRel	true	Balkan Savaşları'dır	Depremde
+Relation	T10	T5	NoRel	true	Balkan Savaşları'dır	zarardır
+Relation	T10	T7	NoRel	true	Balkan Savaşları'dır	kayıplar
+Relation	T10	T8	NoRel	true	Balkan Savaşları'dır	1912 MÜREFTE DEPREMI
+Relation	T10	T9	NoRel	true	Balkan Savaşları'dır	görmüştür
+Relation	T11	T9	NoRel	true	hazırlanan	görmüştür
+Relation	T12	T10	NoRel	true	kalmıştır	Balkan Savaşları'dır
+Relation	T12	T11	NoRel	true	kalmıştır	hazırlanan
+Relation	T13	T6	NoRel	true	giden	Yıkım
+Relation	T2	T10	NoRel	true	Depremde	Balkan Savaşları'dır
+Relation	T3	T10	NoRel	true	yitirmiş	Balkan Savaşları'dır
+Relation	T3	T2	NoRel	true	yitirmiş	Depremde
+Relation	T3	T4	NoRel	true	yitirmiş	yaralanmış
+Relation	T3	T5	NoRel	true	yitirmiş	zarardır
+Relation	T3	T7	NoRel	true	yitirmiş	kayıplar
+Relation	T4	T1	NoRel	true	yaralanmış	deprem
+Relation	T4	T10	NoRel	true	yaralanmış	Balkan Savaşları'dır
+Relation	T4	T11	NoRel	true	yaralanmış	hazırlanan
+Relation	T4	T12	NoRel	true	yaralanmış	kalmıştır
+Relation	T4	T13	NoRel	true	yaralanmış	giden
+Relation	T5	T13	NoRel	true	zarardır	giden
+Relation	T5	T3	NoRel	true	zarardır	yitirmiş
+Relation	T6	T1	NoRel	true	Yıkım	deprem
+Relation	T6	T11	NoRel	true	Yıkım	hazırlanan
+Relation	T6	T3	NoRel	true	Yıkım	yitirmiş
+Relation	T6	T5	NoRel	true	Yıkım	zarardır
+Relation	T7	T10	NoRel	true	kayıplar	Balkan Savaşları'dır
+Relation	T7	T11	NoRel	true	kayıplar	hazırlanan
+Relation	T7	T5	NoRel	true	kayıplar	zarardır
+Relation	T7	T6	NoRel	true	kayıplar	Yıkım
+Relation	T7	T8	NoRel	true	kayıplar	1912 MÜREFTE DEPREMI
+Relation	T7	T9	NoRel	true	kayıplar	görmüştür
+Relation	T8	T11	NoRel	true	1912 MÜREFTE DEPREMI	hazırlanan
+Relation	T8	T5	NoRel	true	1912 MÜREFTE DEPREMI	zarardır
+Relation	T9	T12	NoRel	true	görmüştür	kalmıştır
+Relation	T9	T3	NoRel	true	görmüştür	yitirmiş
+Relation	T9	T6	NoRel	true	görmüştür	Yıkım
+Relation	T9	T7	NoRel	true	görmüştür	kayıplar
+Relation	T9	T8	NoRel	true	görmüştür	1912 MÜREFTE DEPREMI

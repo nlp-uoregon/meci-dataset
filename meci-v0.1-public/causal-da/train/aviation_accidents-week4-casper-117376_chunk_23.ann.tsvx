@@ -1,0 +1,72 @@
+Text	Han fortalte hende , at flyet var blevet kapret af tre mænd , der påstod , at de havde en bombe med om bord .	En anden passager Jeremy Glick , ringede til sin hustru klokken 09:37:41 fra række 27 og fortalte hende , at flyet var blevet kapret af tre mørklødede mænd , der lignede " iranere " , iført røde bandanas , som var udstyret med knive .	Jeremy Glick holdt forbindelsen , indtil flyet styrtede ned .	Han fortalte , at passagererne stemte om , om de skulle storme flykaprerne .	Lufttrafikkontrollens koordinator advarede den statslige luftfartskontrol om , at flynummer 93 ikke svarede og var ude af kurs .
+Event	T0	fortalte	EVENT	4
+Event	T1	kapret	EVENT	41
+Event	T2	påstod	EVENT	66
+Event	T3	ringede	EVENT	143
+Event	T4	fortalte	EVENT	199
+Event	T5	kapret	EVENT	236
+Event	T6	udstyret	EVENT	324
+Event	T7	forbindelsen	EVENT	364
+Event	T8	fortalte	EVENT	411
+Event	T9	stemte	EVENT	438
+Event	T10	storme	EVENT	463
+Event	T11	advarede	EVENT	518
+Event	T12	svarede	EVENT	584
+Event	T13	styrtede	EVENT	392
+Relation	T1	T0	CauseEffect	true	kapret	fortalte
+Relation	T0	T1	EffectCause	true	fortalte	kapret
+Relation	T5	T3	CauseEffect	true	kapret	ringede
+Relation	T3	T5	EffectCause	true	ringede	kapret
+Relation	T0	T10	NoRel	true	fortalte	storme
+Relation	T0	T13	NoRel	true	fortalte	styrtede
+Relation	T0	T5	NoRel	true	fortalte	kapret
+Relation	T0	T8	NoRel	true	fortalte	fortalte
+Relation	T1	T10	NoRel	true	kapret	storme
+Relation	T1	T2	NoRel	true	kapret	påstod
+Relation	T1	T3	NoRel	true	kapret	ringede
+Relation	T1	T4	NoRel	true	kapret	fortalte
+Relation	T1	T7	NoRel	true	kapret	forbindelsen
+Relation	T1	T8	NoRel	true	kapret	fortalte
+Relation	T10	T13	NoRel	true	storme	styrtede
+Relation	T10	T7	NoRel	true	storme	forbindelsen
+Relation	T11	T1	NoRel	true	advarede	kapret
+Relation	T11	T13	NoRel	true	advarede	styrtede
+Relation	T11	T2	NoRel	true	advarede	påstod
+Relation	T11	T5	NoRel	true	advarede	kapret
+Relation	T12	T0	NoRel	true	svarede	fortalte
+Relation	T12	T10	NoRel	true	svarede	storme
+Relation	T12	T3	NoRel	true	svarede	ringede
+Relation	T12	T4	NoRel	true	svarede	fortalte
+Relation	T12	T5	NoRel	true	svarede	kapret
+Relation	T13	T1	NoRel	true	styrtede	kapret
+Relation	T13	T2	NoRel	true	styrtede	påstod
+Relation	T13	T7	NoRel	true	styrtede	forbindelsen
+Relation	T13	T8	NoRel	true	styrtede	fortalte
+Relation	T2	T10	NoRel	true	påstod	storme
+Relation	T2	T12	NoRel	true	påstod	svarede
+Relation	T2	T4	NoRel	true	påstod	fortalte
+Relation	T2	T7	NoRel	true	påstod	forbindelsen
+Relation	T3	T1	NoRel	true	ringede	kapret
+Relation	T3	T10	NoRel	true	ringede	storme
+Relation	T3	T12	NoRel	true	ringede	svarede
+Relation	T4	T10	NoRel	true	fortalte	storme
+Relation	T4	T3	NoRel	true	fortalte	ringede
+Relation	T4	T7	NoRel	true	fortalte	forbindelsen
+Relation	T5	T0	NoRel	true	kapret	fortalte
+Relation	T5	T13	NoRel	true	kapret	styrtede
+Relation	T5	T6	NoRel	true	kapret	udstyret
+Relation	T6	T0	NoRel	true	udstyret	fortalte
+Relation	T6	T10	NoRel	true	udstyret	storme
+Relation	T6	T7	NoRel	true	udstyret	forbindelsen
+Relation	T7	T10	NoRel	true	forbindelsen	storme
+Relation	T7	T13	NoRel	true	forbindelsen	styrtede
+Relation	T7	T4	NoRel	true	forbindelsen	fortalte
+Relation	T8	T13	NoRel	true	fortalte	styrtede
+Relation	T8	T4	NoRel	true	fortalte	fortalte
+Relation	T8	T6	NoRel	true	fortalte	udstyret
+Relation	T8	T7	NoRel	true	fortalte	forbindelsen
+Relation	T9	T0	NoRel	true	stemte	fortalte
+Relation	T9	T1	NoRel	true	stemte	kapret
+Relation	T9	T13	NoRel	true	stemte	styrtede
+Relation	T9	T3	NoRel	true	stemte	ringede
+Relation	T9	T8	NoRel	true	stemte	fortalte

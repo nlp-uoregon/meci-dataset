@@ -1,0 +1,140 @@
+Text	Olayın bir hafta öncesinde başkent Reykjavík'de bir araştırmacı küçük yer sarsıntıları kaydetmiş , ancak merkez_üslerini saptayamamıştır .	Püskürmenin başlamasından iki gün önce bir denizaltı araştırma gemisi , deniz suyu sıcaklığının olağandan daha yüksek olduğunu belirtmiş , aynı zamanda ana kıyıdan 80 kilometre uzaklıkta bulunan bir ada köyü olan Vík'de yaşayanlar , havada hidrojen sülfür kokusu duyumsadıklarını bildirmişlerdir .	Hareketlenmenin su yüzeyine yansıdığı yerde okyanusun derinliği 130 metre kadardır .	Bu derinlikte suyun basıncı , püskürme biçiminde ortaya çıkabilecek bir hareketlenmeye olanak vermeyeceğinden ilk hareketlenmenin su yüzeyinde 14 Kasım'dan birkaç gün öncesinde başladığı düşünülmektedir .	Yanardağ , tabandan başlayarak deniz yüzeyine kadar yavaş yavaş yükselerek konik bir biçim oluşturmuş ve yükseltinin su yüzeyine çıktığı andan sonra da suyun püskürme ve patlamaları durdurması olanaksız hâle gelmiştir .
+Event	T0	Olayın	EVENT	0
+Event	T1	kaydetmiş	EVENT	87
+Event	T2	saptayamamıştır	EVENT	121
+Event	T3	başlamasından	EVENT	151
+Event	T4	belirtmiş	EVENT	266
+Event	T5	bildirmişlerdir	EVENT	419
+Event	T6	Hareketlenmenin	EVENT	437
+Event	T7	püskürme	EVENT	552
+Event	T8	hareketlenmeye	EVENT	594
+Event	T9	hareketlenmenin	EVENT	636
+Event	T10	oluşturmuş	EVENT	818
+Event	T12	çıktığı	EVENT	856
+Event	T13	püskürme	EVENT	885
+Event	T14	durdurması	EVENT	909
+Event	T15	gelmiştir	EVENT	935
+Event	T16	araştırma	EVENT	192
+Event	T17	düşünülmektedir	EVENT	709
+Event	T11	yükselerek	EVENT	791
+Event	T18	patlamaları	EVENT	897
+Relation	T16	T4	CauseEffect	true	araştırma	belirtmiş
+Relation	T4	T16	EffectCause	true	belirtmiş	araştırma
+Relation	T11	T10	CauseEffect	true	yükselerek	oluşturmuş
+Relation	T10	T11	EffectCause	true	oluşturmuş	yükselerek
+Relation	T10	T12	CauseEffect	true	oluşturmuş	çıktığı
+Relation	T12	T10	EffectCause	true	çıktığı	oluşturmuş
+Relation	T12	T15	CauseEffect	true	çıktığı	gelmiştir
+Relation	T15	T12	EffectCause	true	gelmiştir	çıktığı
+Relation	T0	T10	NoRel	true	Olayın	oluşturmuş
+Relation	T0	T13	NoRel	true	Olayın	püskürme
+Relation	T1	T16	NoRel	true	kaydetmiş	araştırma
+Relation	T1	T17	NoRel	true	kaydetmiş	düşünülmektedir
+Relation	T1	T2	NoRel	true	kaydetmiş	saptayamamıştır
+Relation	T1	T6	NoRel	true	kaydetmiş	Hareketlenmenin
+Relation	T10	T1	NoRel	true	oluşturmuş	kaydetmiş
+Relation	T10	T15	NoRel	true	oluşturmuş	gelmiştir
+Relation	T10	T8	NoRel	true	oluşturmuş	hareketlenmeye
+Relation	T11	T0	NoRel	true	yükselerek	Olayın
+Relation	T11	T12	NoRel	true	yükselerek	çıktığı
+Relation	T11	T15	NoRel	true	yükselerek	gelmiştir
+Relation	T11	T16	NoRel	true	yükselerek	araştırma
+Relation	T11	T2	NoRel	true	yükselerek	saptayamamıştır
+Relation	T11	T5	NoRel	true	yükselerek	bildirmişlerdir
+Relation	T11	T6	NoRel	true	yükselerek	Hareketlenmenin
+Relation	T11	T8	NoRel	true	yükselerek	hareketlenmeye
+Relation	T12	T14	NoRel	true	çıktığı	durdurması
+Relation	T12	T3	NoRel	true	çıktığı	başlamasından
+Relation	T12	T7	NoRel	true	çıktığı	püskürme
+Relation	T12	T9	NoRel	true	çıktığı	hareketlenmenin
+Relation	T13	T10	NoRel	true	püskürme	oluşturmuş
+Relation	T13	T17	NoRel	true	püskürme	düşünülmektedir
+Relation	T13	T3	NoRel	true	püskürme	başlamasından
+Relation	T13	T5	NoRel	true	püskürme	bildirmişlerdir
+Relation	T13	T6	NoRel	true	püskürme	Hareketlenmenin
+Relation	T13	T8	NoRel	true	püskürme	hareketlenmeye
+Relation	T14	T1	NoRel	true	durdurması	kaydetmiş
+Relation	T14	T10	NoRel	true	durdurması	oluşturmuş
+Relation	T14	T12	NoRel	true	durdurması	çıktığı
+Relation	T14	T13	NoRel	true	durdurması	püskürme
+Relation	T14	T15	NoRel	true	durdurması	gelmiştir
+Relation	T14	T17	NoRel	true	durdurması	düşünülmektedir
+Relation	T14	T3	NoRel	true	durdurması	başlamasından
+Relation	T14	T5	NoRel	true	durdurması	bildirmişlerdir
+Relation	T14	T7	NoRel	true	durdurması	püskürme
+Relation	T14	T9	NoRel	true	durdurması	hareketlenmenin
+Relation	T15	T0	NoRel	true	gelmiştir	Olayın
+Relation	T15	T14	NoRel	true	gelmiştir	durdurması
+Relation	T15	T16	NoRel	true	gelmiştir	araştırma
+Relation	T15	T18	NoRel	true	gelmiştir	patlamaları
+Relation	T15	T2	NoRel	true	gelmiştir	saptayamamıştır
+Relation	T15	T3	NoRel	true	gelmiştir	başlamasından
+Relation	T15	T5	NoRel	true	gelmiştir	bildirmişlerdir
+Relation	T15	T7	NoRel	true	gelmiştir	püskürme
+Relation	T16	T0	NoRel	true	araştırma	Olayın
+Relation	T16	T11	NoRel	true	araştırma	yükselerek
+Relation	T16	T12	NoRel	true	araştırma	çıktığı
+Relation	T16	T13	NoRel	true	araştırma	püskürme
+Relation	T16	T14	NoRel	true	araştırma	durdurması
+Relation	T16	T18	NoRel	true	araştırma	patlamaları
+Relation	T16	T7	NoRel	true	araştırma	püskürme
+Relation	T17	T11	NoRel	true	düşünülmektedir	yükselerek
+Relation	T17	T15	NoRel	true	düşünülmektedir	gelmiştir
+Relation	T17	T7	NoRel	true	düşünülmektedir	püskürme
+Relation	T17	T8	NoRel	true	düşünülmektedir	hareketlenmeye
+Relation	T17	T9	NoRel	true	düşünülmektedir	hareketlenmenin
+Relation	T18	T14	NoRel	true	patlamaları	durdurması
+Relation	T18	T3	NoRel	true	patlamaları	başlamasından
+Relation	T18	T7	NoRel	true	patlamaları	püskürme
+Relation	T18	T9	NoRel	true	patlamaları	hareketlenmenin
+Relation	T2	T0	NoRel	true	saptayamamıştır	Olayın
+Relation	T2	T1	NoRel	true	saptayamamıştır	kaydetmiş
+Relation	T2	T14	NoRel	true	saptayamamıştır	durdurması
+Relation	T2	T5	NoRel	true	saptayamamıştır	bildirmişlerdir
+Relation	T2	T6	NoRel	true	saptayamamıştır	Hareketlenmenin
+Relation	T2	T7	NoRel	true	saptayamamıştır	püskürme
+Relation	T2	T8	NoRel	true	saptayamamıştır	hareketlenmeye
+Relation	T3	T10	NoRel	true	başlamasından	oluşturmuş
+Relation	T3	T11	NoRel	true	başlamasından	yükselerek
+Relation	T3	T14	NoRel	true	başlamasından	durdurması
+Relation	T3	T18	NoRel	true	başlamasından	patlamaları
+Relation	T3	T4	NoRel	true	başlamasından	belirtmiş
+Relation	T3	T5	NoRel	true	başlamasından	bildirmişlerdir
+Relation	T3	T7	NoRel	true	başlamasından	püskürme
+Relation	T3	T8	NoRel	true	başlamasından	hareketlenmeye
+Relation	T4	T1	NoRel	true	belirtmiş	kaydetmiş
+Relation	T4	T12	NoRel	true	belirtmiş	çıktığı
+Relation	T4	T14	NoRel	true	belirtmiş	durdurması
+Relation	T4	T2	NoRel	true	belirtmiş	saptayamamıştır
+Relation	T4	T6	NoRel	true	belirtmiş	Hareketlenmenin
+Relation	T4	T7	NoRel	true	belirtmiş	püskürme
+Relation	T4	T8	NoRel	true	belirtmiş	hareketlenmeye
+Relation	T5	T0	NoRel	true	bildirmişlerdir	Olayın
+Relation	T5	T11	NoRel	true	bildirmişlerdir	yükselerek
+Relation	T5	T12	NoRel	true	bildirmişlerdir	çıktığı
+Relation	T5	T13	NoRel	true	bildirmişlerdir	püskürme
+Relation	T5	T15	NoRel	true	bildirmişlerdir	gelmiştir
+Relation	T5	T17	NoRel	true	bildirmişlerdir	düşünülmektedir
+Relation	T5	T2	NoRel	true	bildirmişlerdir	saptayamamıştır
+Relation	T5	T6	NoRel	true	bildirmişlerdir	Hareketlenmenin
+Relation	T6	T13	NoRel	true	Hareketlenmenin	püskürme
+Relation	T6	T14	NoRel	true	Hareketlenmenin	durdurması
+Relation	T6	T15	NoRel	true	Hareketlenmenin	gelmiştir
+Relation	T6	T17	NoRel	true	Hareketlenmenin	düşünülmektedir
+Relation	T6	T4	NoRel	true	Hareketlenmenin	belirtmiş
+Relation	T6	T9	NoRel	true	Hareketlenmenin	hareketlenmenin
+Relation	T7	T15	NoRel	true	püskürme	gelmiştir
+Relation	T7	T18	NoRel	true	püskürme	patlamaları
+Relation	T7	T2	NoRel	true	püskürme	saptayamamıştır
+Relation	T7	T4	NoRel	true	püskürme	belirtmiş
+Relation	T7	T6	NoRel	true	püskürme	Hareketlenmenin
+Relation	T7	T9	NoRel	true	püskürme	hareketlenmenin
+Relation	T8	T0	NoRel	true	hareketlenmeye	Olayın
+Relation	T8	T11	NoRel	true	hareketlenmeye	yükselerek
+Relation	T8	T12	NoRel	true	hareketlenmeye	çıktığı
+Relation	T8	T2	NoRel	true	hareketlenmeye	saptayamamıştır
+Relation	T8	T6	NoRel	true	hareketlenmeye	Hareketlenmenin
+Relation	T9	T0	NoRel	true	hareketlenmenin	Olayın
+Relation	T9	T12	NoRel	true	hareketlenmenin	çıktığı
+Relation	T9	T6	NoRel	true	hareketlenmenin	Hareketlenmenin
+Relation	T9	T7	NoRel	true	hareketlenmenin	püskürme

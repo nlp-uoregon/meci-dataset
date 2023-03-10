@@ -1,0 +1,99 @@
+Text	El VUELO 4102 DE RYANAIR fue un vuelo operado por un Boeing 737-8AS , registro EI-DYG , desde el aeropuerto de Frankfurt-Hahn , Alemania , al aeropuerto de Roma Ciampino , Italia , que el 10 de noviembre de 2008 sufrió múltiples impactos con aves .	De las 172 personas que viajaban a bordo , dos tripulantes y ocho pasajeros tuvieron que ser trasladados al hospital y recibieron tratamiento por lesiones menores .	El avión llegó a impactar con noventa aves durante la aproximación final al aeropuerto de Roma Ciampino que dañaron los pontones del tren de aterrizaje y también ambos motores .	Se efectuó un aterrizaje de emergencia sin problemas en Roma Ciampino , aunque se informó que el avión se había salido de la pista 15 durante un breve periodo de tiempo antes de que la tripulación lograse volver a introducirlo en pista .	Los pasajeros fueron evacuados del avión por el servicio de bomberos y se retiraron las cajas negras .
+Event	T0	operado	EVENT	38
+Event	T1	sufrió	EVENT	212
+Event	T2	impactos	EVENT	229
+Event	T3	tratamiento	EVENT	379
+Event	T4	llegó	EVENT	423
+Event	T5	impactar	EVENT	431
+Event	T6	dañaron	EVENT	522
+Event	T7	aterrizaje	EVENT	555
+Event	T8	efectuó	EVENT	595
+Event	T9	aterrizaje	EVENT	606
+Event	T10	emergencia	EVENT	620
+Event	T11	informó	EVENT	674
+Event	T12	salido	EVENT	704
+Event	T13	evacuados	EVENT	851
+Event	T14	retiraron	EVENT	904
+Relation	T9	T13	CauseEffect	true	aterrizaje	evacuados
+Relation	T13	T9	EffectCause	true	evacuados	aterrizaje
+Relation	T9	T14	CauseEffect	true	aterrizaje	retiraron
+Relation	T14	T9	EffectCause	true	retiraron	aterrizaje
+Relation	T5	T6	CauseEffect	true	impactar	dañaron
+Relation	T6	T5	EffectCause	true	dañaron	impactar
+Relation	T0	T13	NoRel	true	operado	evacuados
+Relation	T0	T14	NoRel	true	operado	retiraron
+Relation	T0	T5	NoRel	true	operado	impactar
+Relation	T0	T9	NoRel	true	operado	aterrizaje
+Relation	T1	T10	NoRel	true	sufrió	emergencia
+Relation	T1	T13	NoRel	true	sufrió	evacuados
+Relation	T1	T7	NoRel	true	sufrió	aterrizaje
+Relation	T10	T13	NoRel	true	emergencia	evacuados
+Relation	T10	T2	NoRel	true	emergencia	impactos
+Relation	T10	T3	NoRel	true	emergencia	tratamiento
+Relation	T10	T4	NoRel	true	emergencia	llegó
+Relation	T10	T8	NoRel	true	emergencia	efectuó
+Relation	T11	T0	NoRel	true	informó	operado
+Relation	T11	T10	NoRel	true	informó	emergencia
+Relation	T11	T2	NoRel	true	informó	impactos
+Relation	T11	T5	NoRel	true	informó	impactar
+Relation	T11	T8	NoRel	true	informó	efectuó
+Relation	T12	T10	NoRel	true	salido	emergencia
+Relation	T12	T2	NoRel	true	salido	impactos
+Relation	T12	T7	NoRel	true	salido	aterrizaje
+Relation	T13	T0	NoRel	true	evacuados	operado
+Relation	T13	T1	NoRel	true	evacuados	sufrió
+Relation	T13	T10	NoRel	true	evacuados	emergencia
+Relation	T13	T14	NoRel	true	evacuados	retiraron
+Relation	T13	T3	NoRel	true	evacuados	tratamiento
+Relation	T13	T8	NoRel	true	evacuados	efectuó
+Relation	T14	T0	NoRel	true	retiraron	operado
+Relation	T14	T10	NoRel	true	retiraron	emergencia
+Relation	T14	T11	NoRel	true	retiraron	informó
+Relation	T14	T12	NoRel	true	retiraron	salido
+Relation	T14	T13	NoRel	true	retiraron	evacuados
+Relation	T14	T2	NoRel	true	retiraron	impactos
+Relation	T14	T6	NoRel	true	retiraron	dañaron
+Relation	T2	T0	NoRel	true	impactos	operado
+Relation	T2	T1	NoRel	true	impactos	sufrió
+Relation	T2	T11	NoRel	true	impactos	informó
+Relation	T2	T13	NoRel	true	impactos	evacuados
+Relation	T2	T14	NoRel	true	impactos	retiraron
+Relation	T2	T5	NoRel	true	impactos	impactar
+Relation	T2	T6	NoRel	true	impactos	dañaron
+Relation	T3	T10	NoRel	true	tratamiento	emergencia
+Relation	T3	T11	NoRel	true	tratamiento	informó
+Relation	T3	T13	NoRel	true	tratamiento	evacuados
+Relation	T3	T14	NoRel	true	tratamiento	retiraron
+Relation	T3	T5	NoRel	true	tratamiento	impactar
+Relation	T3	T7	NoRel	true	tratamiento	aterrizaje
+Relation	T3	T8	NoRel	true	tratamiento	efectuó
+Relation	T3	T9	NoRel	true	tratamiento	aterrizaje
+Relation	T4	T1	NoRel	true	llegó	sufrió
+Relation	T4	T14	NoRel	true	llegó	retiraron
+Relation	T4	T2	NoRel	true	llegó	impactos
+Relation	T4	T5	NoRel	true	llegó	impactar
+Relation	T4	T6	NoRel	true	llegó	dañaron
+Relation	T5	T0	NoRel	true	impactar	operado
+Relation	T5	T2	NoRel	true	impactar	impactos
+Relation	T5	T9	NoRel	true	impactar	aterrizaje
+Relation	T6	T0	NoRel	true	dañaron	operado
+Relation	T6	T1	NoRel	true	dañaron	sufrió
+Relation	T6	T12	NoRel	true	dañaron	salido
+Relation	T6	T14	NoRel	true	dañaron	retiraron
+Relation	T6	T4	NoRel	true	dañaron	llegó
+Relation	T7	T11	NoRel	true	aterrizaje	informó
+Relation	T7	T13	NoRel	true	aterrizaje	evacuados
+Relation	T7	T14	NoRel	true	aterrizaje	retiraron
+Relation	T8	T0	NoRel	true	efectuó	operado
+Relation	T8	T1	NoRel	true	efectuó	sufrió
+Relation	T8	T11	NoRel	true	efectuó	informó
+Relation	T8	T13	NoRel	true	efectuó	evacuados
+Relation	T8	T14	NoRel	true	efectuó	retiraron
+Relation	T8	T6	NoRel	true	efectuó	dañaron
+Relation	T8	T9	NoRel	true	efectuó	aterrizaje
+Relation	T9	T0	NoRel	true	aterrizaje	operado
+Relation	T9	T10	NoRel	true	aterrizaje	emergencia
+Relation	T9	T11	NoRel	true	aterrizaje	informó
+Relation	T9	T3	NoRel	true	aterrizaje	tratamiento
+Relation	T9	T6	NoRel	true	aterrizaje	dañaron
+Relation	T9	T7	NoRel	true	aterrizaje	aterrizaje

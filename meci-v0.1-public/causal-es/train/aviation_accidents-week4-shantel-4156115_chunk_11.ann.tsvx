@@ -1,0 +1,136 @@
+Text	Tanto la Administración de Aviación Civil de China ( CAAC ) como el fabricante de la aeronave , Embraer , enviaron equipos de investigadores al lugar del accidente .	La Junta Nacional de Seguridad en el Transporte de EE.UU. Designó un representante acreditado , ya que los motores General Electric CF34 de la aeronave se fabricaron en EE.UU .	Los registradores de vuelo se recuperaron en el lugar y se enviaron a Beijing para su análisis .	Al principio de la investigación , el foco de la investigación fueron las calificaciones del piloto , ya que se supo que más de un centenar de pilotos que volaban para Shenzhen Airlines , la empresa matriz de Henan Airlines , habían falsificado sus afirmaciones de experiencia de vuelo .	Los investigadores de la Administración Estatal de Seguridad Laboral concluyeron que el capitán , en su primer vuelo a Yichun , apagó el piloto automático y se acercó a la pista cubierta por niebla de radiación a pesar de que una visibilidad de 2.800 m ( 9.200 pies ) estaba por debajo del mínimo de 3.600 m ( 11.800 pies ) .
+Event	T0	enviaron	EVENT	106
+Event	T1	accidente	EVENT	154
+Event	T2	Designó	EVENT	224
+Event	T3	fabricaron	EVENT	321
+Event	T4	vuelo	EVENT	364
+Event	T5	recuperaron	EVENT	373
+Event	T6	enviaron	EVENT	402
+Event	T7	análisis	EVENT	429
+Event	T8	investigación	EVENT	459
+Event	T9	investigación	EVENT	489
+Event	T10	calificaciones	EVENT	514
+Event	T11	supo	EVENT	552
+Event	T12	volaban	EVENT	595
+Event	T13	falsificado	EVENT	673
+Event	T14	afirmaciones	EVENT	689
+Event	T15	concluyeron	EVENT	797
+Event	T16	vuelo	EVENT	839
+Event	T17	apagó	EVENT	856
+Event	T18	acercó	EVENT	888
+Relation	T1	T2	CauseEffect	true	accidente	Designó
+Relation	T2	T1	EffectCause	true	Designó	accidente
+Relation	T0	T11	NoRel	true	enviaron	supo
+Relation	T0	T12	NoRel	true	enviaron	volaban
+Relation	T0	T13	NoRel	true	enviaron	falsificado
+Relation	T0	T15	NoRel	true	enviaron	concluyeron
+Relation	T0	T3	NoRel	true	enviaron	fabricaron
+Relation	T0	T4	NoRel	true	enviaron	vuelo
+Relation	T0	T7	NoRel	true	enviaron	análisis
+Relation	T1	T0	NoRel	true	accidente	enviaron
+Relation	T1	T12	NoRel	true	accidente	volaban
+Relation	T1	T15	NoRel	true	accidente	concluyeron
+Relation	T1	T16	NoRel	true	accidente	vuelo
+Relation	T1	T17	NoRel	true	accidente	apagó
+Relation	T1	T18	NoRel	true	accidente	acercó
+Relation	T1	T5	NoRel	true	accidente	recuperaron
+Relation	T1	T9	NoRel	true	accidente	investigación
+Relation	T10	T0	NoRel	true	calificaciones	enviaron
+Relation	T10	T11	NoRel	true	calificaciones	supo
+Relation	T10	T2	NoRel	true	calificaciones	Designó
+Relation	T10	T3	NoRel	true	calificaciones	fabricaron
+Relation	T11	T0	NoRel	true	supo	enviaron
+Relation	T11	T1	NoRel	true	supo	accidente
+Relation	T11	T10	NoRel	true	supo	calificaciones
+Relation	T11	T13	NoRel	true	supo	falsificado
+Relation	T11	T15	NoRel	true	supo	concluyeron
+Relation	T11	T16	NoRel	true	supo	vuelo
+Relation	T11	T18	NoRel	true	supo	acercó
+Relation	T11	T5	NoRel	true	supo	recuperaron
+Relation	T11	T6	NoRel	true	supo	enviaron
+Relation	T11	T8	NoRel	true	supo	investigación
+Relation	T12	T10	NoRel	true	volaban	calificaciones
+Relation	T12	T3	NoRel	true	volaban	fabricaron
+Relation	T13	T0	NoRel	true	falsificado	enviaron
+Relation	T13	T12	NoRel	true	falsificado	volaban
+Relation	T13	T14	NoRel	true	falsificado	afirmaciones
+Relation	T13	T15	NoRel	true	falsificado	concluyeron
+Relation	T13	T3	NoRel	true	falsificado	fabricaron
+Relation	T13	T5	NoRel	true	falsificado	recuperaron
+Relation	T13	T9	NoRel	true	falsificado	investigación
+Relation	T14	T1	NoRel	true	afirmaciones	accidente
+Relation	T14	T10	NoRel	true	afirmaciones	calificaciones
+Relation	T14	T4	NoRel	true	afirmaciones	vuelo
+Relation	T14	T7	NoRel	true	afirmaciones	análisis
+Relation	T14	T9	NoRel	true	afirmaciones	investigación
+Relation	T15	T10	NoRel	true	concluyeron	calificaciones
+Relation	T15	T13	NoRel	true	concluyeron	falsificado
+Relation	T15	T14	NoRel	true	concluyeron	afirmaciones
+Relation	T15	T16	NoRel	true	concluyeron	vuelo
+Relation	T15	T2	NoRel	true	concluyeron	Designó
+Relation	T15	T8	NoRel	true	concluyeron	investigación
+Relation	T16	T0	NoRel	true	vuelo	enviaron
+Relation	T16	T12	NoRel	true	vuelo	volaban
+Relation	T16	T14	NoRel	true	vuelo	afirmaciones
+Relation	T16	T18	NoRel	true	vuelo	acercó
+Relation	T16	T2	NoRel	true	vuelo	Designó
+Relation	T16	T4	NoRel	true	vuelo	vuelo
+Relation	T16	T6	NoRel	true	vuelo	enviaron
+Relation	T16	T7	NoRel	true	vuelo	análisis
+Relation	T16	T9	NoRel	true	vuelo	investigación
+Relation	T17	T16	NoRel	true	apagó	vuelo
+Relation	T17	T18	NoRel	true	apagó	acercó
+Relation	T17	T2	NoRel	true	apagó	Designó
+Relation	T17	T4	NoRel	true	apagó	vuelo
+Relation	T17	T5	NoRel	true	apagó	recuperaron
+Relation	T17	T8	NoRel	true	apagó	investigación
+Relation	T18	T1	NoRel	true	acercó	accidente
+Relation	T18	T11	NoRel	true	acercó	supo
+Relation	T18	T17	NoRel	true	acercó	apagó
+Relation	T18	T4	NoRel	true	acercó	vuelo
+Relation	T2	T0	NoRel	true	Designó	enviaron
+Relation	T2	T10	NoRel	true	Designó	calificaciones
+Relation	T2	T12	NoRel	true	Designó	volaban
+Relation	T2	T13	NoRel	true	Designó	falsificado
+Relation	T2	T14	NoRel	true	Designó	afirmaciones
+Relation	T2	T6	NoRel	true	Designó	enviaron
+Relation	T2	T7	NoRel	true	Designó	análisis
+Relation	T3	T0	NoRel	true	fabricaron	enviaron
+Relation	T3	T10	NoRel	true	fabricaron	calificaciones
+Relation	T3	T11	NoRel	true	fabricaron	supo
+Relation	T3	T12	NoRel	true	fabricaron	volaban
+Relation	T3	T15	NoRel	true	fabricaron	concluyeron
+Relation	T3	T17	NoRel	true	fabricaron	apagó
+Relation	T3	T5	NoRel	true	fabricaron	recuperaron
+Relation	T3	T9	NoRel	true	fabricaron	investigación
+Relation	T4	T1	NoRel	true	vuelo	accidente
+Relation	T4	T11	NoRel	true	vuelo	supo
+Relation	T4	T12	NoRel	true	vuelo	volaban
+Relation	T4	T2	NoRel	true	vuelo	Designó
+Relation	T4	T7	NoRel	true	vuelo	análisis
+Relation	T5	T12	NoRel	true	recuperaron	volaban
+Relation	T5	T14	NoRel	true	recuperaron	afirmaciones
+Relation	T5	T3	NoRel	true	recuperaron	fabricaron
+Relation	T6	T1	NoRel	true	enviaron	accidente
+Relation	T6	T12	NoRel	true	enviaron	volaban
+Relation	T6	T13	NoRel	true	enviaron	falsificado
+Relation	T6	T14	NoRel	true	enviaron	afirmaciones
+Relation	T6	T18	NoRel	true	enviaron	acercó
+Relation	T6	T5	NoRel	true	enviaron	recuperaron
+Relation	T6	T8	NoRel	true	enviaron	investigación
+Relation	T7	T1	NoRel	true	análisis	accidente
+Relation	T7	T15	NoRel	true	análisis	concluyeron
+Relation	T7	T17	NoRel	true	análisis	apagó
+Relation	T7	T2	NoRel	true	análisis	Designó
+Relation	T7	T5	NoRel	true	análisis	recuperaron
+Relation	T7	T9	NoRel	true	análisis	investigación
+Relation	T8	T0	NoRel	true	investigación	enviaron
+Relation	T8	T3	NoRel	true	investigación	fabricaron
+Relation	T8	T6	NoRel	true	investigación	enviaron
+Relation	T9	T10	NoRel	true	investigación	calificaciones
+Relation	T9	T11	NoRel	true	investigación	supo
+Relation	T9	T12	NoRel	true	investigación	volaban
+Relation	T9	T14	NoRel	true	investigación	afirmaciones
+Relation	T9	T16	NoRel	true	investigación	vuelo
+Relation	T9	T2	NoRel	true	investigación	Designó
+Relation	T9	T5	NoRel	true	investigación	recuperaron

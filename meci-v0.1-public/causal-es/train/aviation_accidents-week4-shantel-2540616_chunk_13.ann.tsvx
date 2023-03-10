@@ -1,0 +1,43 @@
+Text	En ese instante , la velocidad de la aeronave con respecto al suelo era de 107 nudos , y se encontraba descendiendo a una tasa de 10.912 pies por minuto .	Su ángulo de cabeceo era de 16,2 grados ( morro hacia arriba ) , con un ángulo de alabeo de 5,3 grados a la izquierda .	Durante este descenso , la aeronave había virado más de 180 grados hacia la derecha hacia rumbo de 270 grados .	La aeronave estuvo en pérdida durante todo su descenso desde 38.000 pies , el cual duró 3 minutos 30 segundos antes de estrellarse contra la superficie del océano a una velocidad vertical de 151 nudos ( 280 km/h ) , y una componente de velocidad horizontal de 107 nudos ( 195 km/h ) respectivamente .	La aeronave se partió con el impacto ; todos sus ocupantes fallecieron , presumiblemente de manera instántanea .
+Event	T0	descendiendo	EVENT	103
+Event	T1	descenso	EVENT	288
+Event	T2	virado	EVENT	317
+Event	T3	descenso	EVENT	433
+Event	T4	duró	EVENT	470
+Event	T5	estrellarse	EVENT	506
+Event	T6	partió	EVENT	703
+Event	T7	impacto	EVENT	717
+Event	T8	fallecieron	EVENT	747
+Relation	T3	T5	CauseEffect	true	descenso	estrellarse
+Relation	T5	T3	EffectCause	true	estrellarse	descenso
+Relation	T7	T6	CauseEffect	true	impacto	partió
+Relation	T6	T7	EffectCause	true	partió	impacto
+Relation	T5	T6	CauseEffect	true	estrellarse	partió
+Relation	T6	T5	EffectCause	true	partió	estrellarse
+Relation	T7	T8	CauseEffect	true	impacto	fallecieron
+Relation	T8	T7	EffectCause	true	fallecieron	impacto
+Relation	T0	T1	NoRel	true	descendiendo	descenso
+Relation	T0	T5	NoRel	true	descendiendo	estrellarse
+Relation	T1	T0	NoRel	true	descenso	descendiendo
+Relation	T1	T2	NoRel	true	descenso	virado
+Relation	T1	T4	NoRel	true	descenso	duró
+Relation	T1	T5	NoRel	true	descenso	estrellarse
+Relation	T1	T8	NoRel	true	descenso	fallecieron
+Relation	T2	T1	NoRel	true	virado	descenso
+Relation	T2	T3	NoRel	true	virado	descenso
+Relation	T2	T4	NoRel	true	virado	duró
+Relation	T2	T5	NoRel	true	virado	estrellarse
+Relation	T2	T8	NoRel	true	virado	fallecieron
+Relation	T3	T2	NoRel	true	descenso	virado
+Relation	T3	T6	NoRel	true	descenso	partió
+Relation	T3	T7	NoRel	true	descenso	impacto
+Relation	T4	T3	NoRel	true	duró	descenso
+Relation	T4	T6	NoRel	true	duró	partió
+Relation	T4	T8	NoRel	true	duró	fallecieron
+Relation	T5	T1	NoRel	true	estrellarse	descenso
+Relation	T6	T0	NoRel	true	partió	descendiendo
+Relation	T7	T1	NoRel	true	impacto	descenso
+Relation	T7	T2	NoRel	true	impacto	virado
+Relation	T8	T2	NoRel	true	fallecieron	virado
+Relation	T8	T5	NoRel	true	fallecieron	estrellarse
+Relation	T8	T6	NoRel	true	fallecieron	partió

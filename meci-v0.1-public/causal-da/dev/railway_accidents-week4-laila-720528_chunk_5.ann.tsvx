@@ -1,0 +1,35 @@
+Text	Kl. 20:41 CEST ( 18:41 UTC ) afsporede Alvia-toget på vej til Ferrol fra Madrid ved Santiago de Compostela .	Alle 13 vogne i toget afsporedes , da toget passerede en kurve .	Fire vogne væltede .	Toget havde 218 passagerer ombord på tidspunktet for ulykken , svarende til en belægningsgrad på 73 % .	En af vognene blev revet fra hinanden i ulykken , og en anden brød i brand .
+Event	T0	afsporede	EVENT	29
+Event	T1	afsporedes	EVENT	131
+Event	T2	passerede	EVENT	153
+Event	T3	væltede	EVENT	185
+Event	T4	ulykken	EVENT	248
+Event	T5	ulykken	EVENT	339
+Event	T6	revet	EVENT	318
+Event	T7	brand	EVENT	368
+Relation	T1	T3	CauseEffect	true	afsporedes	væltede
+Relation	T3	T1	EffectCause	true	væltede	afsporedes
+Relation	T0	T3	CauseEffect	true	afsporede	væltede
+Relation	T3	T0	EffectCause	true	væltede	afsporede
+Relation	T0	T1	NoRel	true	afsporede	afsporedes
+Relation	T0	T2	NoRel	true	afsporede	passerede
+Relation	T0	T5	NoRel	true	afsporede	ulykken
+Relation	T1	T2	NoRel	true	afsporedes	passerede
+Relation	T1	T4	NoRel	true	afsporedes	ulykken
+Relation	T1	T6	NoRel	true	afsporedes	revet
+Relation	T2	T0	NoRel	true	passerede	afsporede
+Relation	T2	T4	NoRel	true	passerede	ulykken
+Relation	T2	T6	NoRel	true	passerede	revet
+Relation	T2	T7	NoRel	true	passerede	brand
+Relation	T3	T5	NoRel	true	væltede	ulykken
+Relation	T3	T7	NoRel	true	væltede	brand
+Relation	T4	T1	NoRel	true	ulykken	afsporedes
+Relation	T4	T2	NoRel	true	ulykken	passerede
+Relation	T4	T6	NoRel	true	ulykken	revet
+Relation	T4	T7	NoRel	true	ulykken	brand
+Relation	T5	T4	NoRel	true	ulykken	ulykken
+Relation	T6	T0	NoRel	true	revet	afsporede
+Relation	T6	T1	NoRel	true	revet	afsporedes
+Relation	T6	T4	NoRel	true	revet	ulykken
+Relation	T6	T5	NoRel	true	revet	ulykken
+Relation	T7	T1	NoRel	true	brand	afsporedes

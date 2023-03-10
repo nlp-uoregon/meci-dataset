@@ -1,0 +1,70 @@
+Text	Particularmente , la pestaña de ajuste derecha había sido fijada en su lugar .	Si ambas lengüetas de ajuste estuvieran operativas , la pérdida de la pestaña de ajuste izquierda sola puede no haber causado la pérdida de control .	Cuando la lengüeta de ajuste falló , Leeward experimentó una fuerza de 17 g que rápidamente lo incapacitaron y probablemente lo dejaron inconsciente .	Este accidente fue reseñado en la temporada 19° de la serie Mayday : Catástrofes aéreas , del canal National Geographic Channel en el episodio " Carrera Mortal " y en Mayday : Informe Especial en el episodio " Muerte En Las Nubes " .	- Accidente de aviación - Anexo : Accidentes más graves de aviación ( 1943 - presente ) - Anexo : Accidentes e incidentes notables en la aviación civil - Anexo : Accidentes por fabricante de aeronave
+Event	T0	fijada	EVENT	58
+Event	T1	pérdida	EVENT	135
+Event	T3	pérdida	EVENT	208
+Event	T4	falló	EVENT	258
+Event	T5	experimentó	EVENT	274
+Event	T6	incapacitaron	EVENT	324
+Event	T7	reseñado	EVENT	399
+Event	T8	Muerte	EVENT	590
+Event	T9	Accidente	EVENT	616
+Event	T10	Accidentes	EVENT	648
+Event	T11	Accidentes	EVENT	712
+Event	T12	Accidentes	EVENT	776
+Event	T2	accidente	EVENT	385
+Relation	T4	T5	CauseEffect	true	falló	experimentó
+Relation	T5	T4	EffectCause	true	experimentó	falló
+Relation	T4	T6	CauseEffect	true	falló	incapacitaron
+Relation	T6	T4	EffectCause	true	incapacitaron	falló
+Relation	T0	T1	NoRel	true	fijada	pérdida
+Relation	T0	T11	NoRel	true	fijada	Accidentes
+Relation	T0	T12	NoRel	true	fijada	Accidentes
+Relation	T0	T2	NoRel	true	fijada	accidente
+Relation	T0	T7	NoRel	true	fijada	reseñado
+Relation	T1	T0	NoRel	true	pérdida	fijada
+Relation	T1	T12	NoRel	true	pérdida	Accidentes
+Relation	T1	T4	NoRel	true	pérdida	falló
+Relation	T1	T7	NoRel	true	pérdida	reseñado
+Relation	T10	T11	NoRel	true	Accidentes	Accidentes
+Relation	T11	T1	NoRel	true	Accidentes	pérdida
+Relation	T11	T10	NoRel	true	Accidentes	Accidentes
+Relation	T11	T12	NoRel	true	Accidentes	Accidentes
+Relation	T11	T7	NoRel	true	Accidentes	reseñado
+Relation	T11	T9	NoRel	true	Accidentes	Accidente
+Relation	T12	T0	NoRel	true	Accidentes	fijada
+Relation	T12	T1	NoRel	true	Accidentes	pérdida
+Relation	T2	T0	NoRel	true	accidente	fijada
+Relation	T2	T11	NoRel	true	accidente	Accidentes
+Relation	T2	T8	NoRel	true	accidente	Muerte
+Relation	T3	T1	NoRel	true	pérdida	pérdida
+Relation	T3	T10	NoRel	true	pérdida	Accidentes
+Relation	T3	T11	NoRel	true	pérdida	Accidentes
+Relation	T3	T6	NoRel	true	pérdida	incapacitaron
+Relation	T3	T9	NoRel	true	pérdida	Accidente
+Relation	T4	T0	NoRel	true	falló	fijada
+Relation	T4	T1	NoRel	true	falló	pérdida
+Relation	T4	T12	NoRel	true	falló	Accidentes
+Relation	T4	T2	NoRel	true	falló	accidente
+Relation	T4	T3	NoRel	true	falló	pérdida
+Relation	T4	T9	NoRel	true	falló	Accidente
+Relation	T5	T11	NoRel	true	experimentó	Accidentes
+Relation	T5	T8	NoRel	true	experimentó	Muerte
+Relation	T6	T0	NoRel	true	incapacitaron	fijada
+Relation	T6	T11	NoRel	true	incapacitaron	Accidentes
+Relation	T6	T12	NoRel	true	incapacitaron	Accidentes
+Relation	T6	T9	NoRel	true	incapacitaron	Accidente
+Relation	T7	T11	NoRel	true	reseñado	Accidentes
+Relation	T7	T12	NoRel	true	reseñado	Accidentes
+Relation	T7	T3	NoRel	true	reseñado	pérdida
+Relation	T7	T4	NoRel	true	reseñado	falló
+Relation	T7	T6	NoRel	true	reseñado	incapacitaron
+Relation	T7	T8	NoRel	true	reseñado	Muerte
+Relation	T8	T1	NoRel	true	Muerte	pérdida
+Relation	T8	T12	NoRel	true	Muerte	Accidentes
+Relation	T8	T2	NoRel	true	Muerte	accidente
+Relation	T8	T6	NoRel	true	Muerte	incapacitaron
+Relation	T8	T7	NoRel	true	Muerte	reseñado
+Relation	T9	T10	NoRel	true	Accidente	Accidentes
+Relation	T9	T12	NoRel	true	Accidente	Accidentes
+Relation	T9	T3	NoRel	true	Accidente	pérdida
+Relation	T9	T4	NoRel	true	Accidente	falló

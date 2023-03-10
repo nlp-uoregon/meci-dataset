@@ -1,0 +1,38 @@
+Text	Kendisi intihar saldırısının emrini veren kişi , 11_Eylül saldırıları yani .	" ifadelerini kullanmıştı .	5 Haziran 2008'de dava Ralph Kohlmann'ın hakimliğinde başladı .	Sanıkların tamamı , mahkeme tarafından kendilerine bir avukat verilmesini reddetti ve kendi kendilerini savunacaklarını belirtti .	8 Aralık 2008'de sanıklar , Kohlmann'a suçlarını itiraf etmek istediklerini belirten bir not gönderdi .
+Event	T0	dava	EVENT	123
+Event	T1	başladı	EVENT	159
+Event	T2	belirtti	EVENT	289
+Event	T4	gönderdi	EVENT	393
+Event	T5	emrini	EVENT	29
+Event	T6	saldırısının	EVENT	16
+Event	T7	saldırıları	EVENT	58
+Event	T8	reddetti	EVENT	243
+Event	T3	belirten	EVENT	376
+Relation	T5	T7	CauseEffect	true	emrini	saldırıları
+Relation	T7	T5	EffectCause	true	saldırıları	emrini
+Relation	T8	T2	CauseEffect	true	reddetti	belirtti
+Relation	T2	T8	EffectCause	true	belirtti	reddetti
+Relation	T3	T4	CauseEffect	true	belirten	gönderdi
+Relation	T4	T3	EffectCause	true	gönderdi	belirten
+Relation	T0	T8	NoRel	true	dava	reddetti
+Relation	T1	T0	NoRel	true	başladı	dava
+Relation	T1	T8	NoRel	true	başladı	reddetti
+Relation	T2	T6	NoRel	true	belirtti	saldırısının
+Relation	T2	T7	NoRel	true	belirtti	saldırıları
+Relation	T3	T1	NoRel	true	belirten	başladı
+Relation	T3	T2	NoRel	true	belirten	belirtti
+Relation	T3	T6	NoRel	true	belirten	saldırısının
+Relation	T3	T7	NoRel	true	belirten	saldırıları
+Relation	T4	T1	NoRel	true	gönderdi	başladı
+Relation	T4	T8	NoRel	true	gönderdi	reddetti
+Relation	T5	T0	NoRel	true	emrini	dava
+Relation	T5	T1	NoRel	true	emrini	başladı
+Relation	T5	T2	NoRel	true	emrini	belirtti
+Relation	T5	T8	NoRel	true	emrini	reddetti
+Relation	T6	T1	NoRel	true	saldırısının	başladı
+Relation	T6	T5	NoRel	true	saldırısının	emrini
+Relation	T7	T2	NoRel	true	saldırıları	belirtti
+Relation	T7	T6	NoRel	true	saldırıları	saldırısının
+Relation	T7	T8	NoRel	true	saldırıları	reddetti
+Relation	T8	T0	NoRel	true	reddetti	dava
+Relation	T8	T4	NoRel	true	reddetti	gönderdi

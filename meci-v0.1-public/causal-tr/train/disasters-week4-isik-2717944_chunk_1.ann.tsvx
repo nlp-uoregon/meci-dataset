@@ -1,0 +1,39 @@
+Text	Kırgızistan'ın Batken şehri de depremden oldukça etkilenmiştir .	Birçok evin duvarlarında çatlaklar rapor edilmiştir .	Deprem merkez_üssüne yakın bölgelerde , halk panik içinde sokaklarda geceyi geçirmiştir .	Tıpkı Kırgız hükümeti gibi dönemin Özbek devlet başkanı İslam Kerimov da deprem bölgesindeki hasar tespiti adına çalışmalar başlatmıştır .	Kırgızistan devlet kurumunda görevli sismolog Kanat Abdrahmetov da depremin oldukça güçlü olduğunu ve fazlaca yıkım yaşadığının açık olduğunu ifade etmiştir .
+Event	T0	depremden	EVENT	31
+Event	T1	etkilenmiştir	EVENT	49
+Event	T2	edilmiştir	EVENT	106
+Event	T3	Deprem	EVENT	119
+Event	T4	panik	EVENT	164
+Event	T5	geçirmiştir	EVENT	195
+Event	T6	deprem	EVENT	282
+Event	T8	başlatmıştır	EVENT	333
+Event	T7	etmiştir	EVENT	496
+Relation	T0	T1	CauseEffect	true	depremden	etkilenmiştir
+Relation	T1	T0	EffectCause	true	etkilenmiştir	depremden
+Relation	T0	T2	CauseEffect	true	depremden	edilmiştir
+Relation	T2	T0	EffectCause	true	edilmiştir	depremden
+Relation	T4	T5	CauseEffect	true	panik	geçirmiştir
+Relation	T5	T4	EffectCause	true	geçirmiştir	panik
+Relation	T0	T4	CauseEffect	true	depremden	panik
+Relation	T4	T0	EffectCause	true	panik	depremden
+Relation	T0	T8	CauseEffect	true	depremden	başlatmıştır
+Relation	T8	T0	EffectCause	true	başlatmıştır	depremden
+Relation	T0	T7	CauseEffect	true	depremden	etmiştir
+Relation	T7	T0	EffectCause	true	etmiştir	depremden
+Relation	T1	T6	NoRel	true	etkilenmiştir	deprem
+Relation	T2	T6	NoRel	true	edilmiştir	deprem
+Relation	T3	T4	NoRel	true	Deprem	panik
+Relation	T3	T5	NoRel	true	Deprem	geçirmiştir
+Relation	T3	T6	NoRel	true	Deprem	deprem
+Relation	T4	T3	NoRel	true	panik	Deprem
+Relation	T4	T7	NoRel	true	panik	etmiştir
+Relation	T5	T0	NoRel	true	geçirmiştir	depremden
+Relation	T5	T6	NoRel	true	geçirmiştir	deprem
+Relation	T6	T1	NoRel	true	deprem	etkilenmiştir
+Relation	T6	T3	NoRel	true	deprem	Deprem
+Relation	T6	T7	NoRel	true	deprem	etmiştir
+Relation	T7	T1	NoRel	true	etmiştir	etkilenmiştir
+Relation	T7	T4	NoRel	true	etmiştir	panik
+Relation	T7	T5	NoRel	true	etmiştir	geçirmiştir
+Relation	T8	T1	NoRel	true	başlatmıştır	etkilenmiştir
+Relation	T8	T6	NoRel	true	başlatmıştır	deprem

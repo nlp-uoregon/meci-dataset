@@ -1,0 +1,46 @@
+Text	En la madrileña estación de Villaverde-Orcasitas , situada en el ramal de Leganés , un tren que transportaba tropas y material militar chocó con una locomotora que realizaba maniobras con el resultado de 17 muertos y 39 heridos .	- 24 de agosto de 1959 .	En la estación de Morés ( Zaragoza ) , el expreso de Barcelona a La Coruña chocó con un tren de mercancías que se hallaba detenido en la referida estación .	Murieron cinco personas y treinta y ocho más resultaron heridas .	- 19 de julio de 1960 .
+Event	T0	transportaba	EVENT	96
+Event	T1	chocó	EVENT	135
+Event	T2	maniobras	EVENT	174
+Event	T3	resultado	EVENT	191
+Event	T4	muertos	EVENT	207
+Event	T5	heridos	EVENT	220
+Event	T6	chocó	EVENT	330
+Event	T7	detenido	EVENT	377
+Event	T8	Murieron	EVENT	412
+Event	T9	heridas	EVENT	468
+Relation	T1	T4	CauseEffect	true	chocó	muertos
+Relation	T4	T1	EffectCause	true	muertos	chocó
+Relation	T1	T5	CauseEffect	true	chocó	heridos
+Relation	T5	T1	EffectCause	true	heridos	chocó
+Relation	T6	T8	CauseEffect	true	chocó	Murieron
+Relation	T8	T6	EffectCause	true	Murieron	chocó
+Relation	T6	T9	CauseEffect	true	chocó	heridas
+Relation	T9	T6	EffectCause	true	heridas	chocó
+Relation	T0	T5	NoRel	true	transportaba	heridos
+Relation	T0	T6	NoRel	true	transportaba	chocó
+Relation	T0	T7	NoRel	true	transportaba	detenido
+Relation	T0	T9	NoRel	true	transportaba	heridas
+Relation	T1	T8	NoRel	true	chocó	Murieron
+Relation	T2	T9	NoRel	true	maniobras	heridas
+Relation	T3	T6	NoRel	true	resultado	chocó
+Relation	T3	T9	NoRel	true	resultado	heridas
+Relation	T4	T0	NoRel	true	muertos	transportaba
+Relation	T4	T3	NoRel	true	muertos	resultado
+Relation	T5	T0	NoRel	true	heridos	transportaba
+Relation	T5	T2	NoRel	true	heridos	maniobras
+Relation	T5	T3	NoRel	true	heridos	resultado
+Relation	T6	T0	NoRel	true	chocó	transportaba
+Relation	T6	T1	NoRel	true	chocó	chocó
+Relation	T6	T4	NoRel	true	chocó	muertos
+Relation	T6	T7	NoRel	true	chocó	detenido
+Relation	T7	T3	NoRel	true	detenido	resultado
+Relation	T7	T4	NoRel	true	detenido	muertos
+Relation	T7	T5	NoRel	true	detenido	heridos
+Relation	T7	T6	NoRel	true	detenido	chocó
+Relation	T7	T9	NoRel	true	detenido	heridas
+Relation	T8	T0	NoRel	true	Murieron	transportaba
+Relation	T8	T7	NoRel	true	Murieron	detenido
+Relation	T9	T1	NoRel	true	heridas	chocó
+Relation	T9	T3	NoRel	true	heridas	resultado
+Relation	T9	T7	NoRel	true	heridas	detenido

@@ -1,0 +1,62 @@
+Text	El avión finalmente se estrelló en la selva de Masine Lek , que se encuentra en Dhikura VDC , en el distrito de Arghakhanchi .	Aunque el accidente no fue presenciado , algunos residentes vieron restos de la aeronave estrellada .	Al inicio nadie fue capaz de llegar al lugar del accidente debido a la mala visibilidad .	Cuando los cuerpos de rescate y recuperación finalmente llegaron al lugar del accidente , encontraron los cuerpos esparcidos por la colina .	De acuerdo con el Ejército de Nepal , el lugar del accidente se encuentra a una altitud de 7000 pies ( 2100 metros ) .
+Event	T0	estrelló	EVENT	23
+Event	T1	accidente	EVENT	137
+Event	T2	presenciado	EVENT	154
+Event	T3	vieron	EVENT	187
+Event	T4	estrellada	EVENT	216
+Event	T5	rescate	EVENT	341
+Event	T6	recuperación	EVENT	351
+Event	T7	llegaron	EVENT	375
+Event	T8	accidente	EVENT	397
+Event	T9	encontraron	EVENT	409
+Event	T10	esparcidos	EVENT	433
+Event	T11	accidente	EVENT	511
+Relation	T8	T10	CauseEffect	true	accidente	esparcidos
+Relation	T10	T8	EffectCause	true	esparcidos	accidente
+Relation	T0	T1	CauseEffect	true	estrelló	accidente
+Relation	T1	T0	EffectCause	true	accidente	estrelló
+Relation	T0	T11	NoRel	true	estrelló	accidente
+Relation	T0	T6	NoRel	true	estrelló	recuperación
+Relation	T1	T10	NoRel	true	accidente	esparcidos
+Relation	T1	T3	NoRel	true	accidente	vieron
+Relation	T1	T8	NoRel	true	accidente	accidente
+Relation	T1	T9	NoRel	true	accidente	encontraron
+Relation	T10	T6	NoRel	true	esparcidos	recuperación
+Relation	T11	T0	NoRel	true	accidente	estrelló
+Relation	T11	T10	NoRel	true	accidente	esparcidos
+Relation	T11	T3	NoRel	true	accidente	vieron
+Relation	T11	T6	NoRel	true	accidente	recuperación
+Relation	T11	T8	NoRel	true	accidente	accidente
+Relation	T2	T1	NoRel	true	presenciado	accidente
+Relation	T2	T3	NoRel	true	presenciado	vieron
+Relation	T2	T5	NoRel	true	presenciado	rescate
+Relation	T2	T6	NoRel	true	presenciado	recuperación
+Relation	T2	T7	NoRel	true	presenciado	llegaron
+Relation	T2	T8	NoRel	true	presenciado	accidente
+Relation	T2	T9	NoRel	true	presenciado	encontraron
+Relation	T3	T0	NoRel	true	vieron	estrelló
+Relation	T3	T1	NoRel	true	vieron	accidente
+Relation	T3	T2	NoRel	true	vieron	presenciado
+Relation	T3	T7	NoRel	true	vieron	llegaron
+Relation	T3	T8	NoRel	true	vieron	accidente
+Relation	T3	T9	NoRel	true	vieron	encontraron
+Relation	T4	T11	NoRel	true	estrellada	accidente
+Relation	T4	T5	NoRel	true	estrellada	rescate
+Relation	T4	T6	NoRel	true	estrellada	recuperación
+Relation	T4	T7	NoRel	true	estrellada	llegaron
+Relation	T4	T9	NoRel	true	estrellada	encontraron
+Relation	T5	T1	NoRel	true	rescate	accidente
+Relation	T5	T4	NoRel	true	rescate	estrellada
+Relation	T6	T2	NoRel	true	recuperación	presenciado
+Relation	T6	T3	NoRel	true	recuperación	vieron
+Relation	T6	T4	NoRel	true	recuperación	estrellada
+Relation	T6	T8	NoRel	true	recuperación	accidente
+Relation	T7	T10	NoRel	true	llegaron	esparcidos
+Relation	T7	T5	NoRel	true	llegaron	rescate
+Relation	T8	T2	NoRel	true	accidente	presenciado
+Relation	T8	T7	NoRel	true	accidente	llegaron
+Relation	T9	T10	NoRel	true	encontraron	esparcidos
+Relation	T9	T11	NoRel	true	encontraron	accidente
+Relation	T9	T2	NoRel	true	encontraron	presenciado
+Relation	T9	T4	NoRel	true	encontraron	estrellada
+Relation	T9	T6	NoRel	true	encontraron	recuperación

@@ -1,0 +1,32 @@
+Text	Halktan devlete kutsal bir bağlılık duyması istendi ve Japonlar “ tanrısal_ırk ” olarak görüldü .	Japonlar II. Dünya Savaşı sırasında Mihver Devletleri safında başta Amerika Birleşik Devletleri olmak üzere Müttefikler'e karşı Pasifik Cephesi'nde savaştılar .	Savaş sırasında Pasifik Okyanusu'ndaki irili - ufaklı tüm adaları işgal ettiler , Avustralya'ya kadar tüm Pasifik'i kontrolleri altına aldılar .	Bu işgallerdeki amaç Japon İmparatorluğu'nun sınırlarını genişletmek ve dünyaya hakim olan bir imparatorluk kurmaktı .	Ancak 1943'ten sonra Japonlar yenilmeye başladı ve işgal ettikleri adaları bir bir kaybetmeye başladılar .
+Event	T0	istendi	EVENT	44
+Event	T1	görüldü	EVENT	88
+Event	T2	savaştılar	EVENT	246
+Event	T3	Savaş	EVENT	259
+Event	T4	aldılar	EVENT	394
+Event	T6	II. Dünya Savaşı	EVENT	107
+Event	T7	ettiler	EVENT	331
+Event	T8	başladı	EVENT	563
+Event	T5	başladılar	EVENT	617
+Relation	T2	T7	CauseEffect	true	savaştılar	ettiler
+Relation	T7	T2	EffectCause	true	ettiler	savaştılar
+Relation	T7	T4	CauseEffect	true	ettiler	aldılar
+Relation	T4	T7	EffectCause	true	aldılar	ettiler
+Relation	T8	T5	CauseEffect	true	başladı	başladılar
+Relation	T5	T8	EffectCause	true	başladılar	başladı
+Relation	T0	T2	NoRel	true	istendi	savaştılar
+Relation	T0	T3	NoRel	true	istendi	Savaş
+Relation	T0	T4	NoRel	true	istendi	aldılar
+Relation	T1	T0	NoRel	true	görüldü	istendi
+Relation	T1	T5	NoRel	true	görüldü	başladılar
+Relation	T2	T5	NoRel	true	savaştılar	başladılar
+Relation	T2	T6	NoRel	true	savaştılar	II. Dünya Savaşı
+Relation	T3	T7	NoRel	true	Savaş	ettiler
+Relation	T4	T2	NoRel	true	aldılar	savaştılar
+Relation	T4	T3	NoRel	true	aldılar	Savaş
+Relation	T5	T4	NoRel	true	başladılar	aldılar
+Relation	T6	T5	NoRel	true	II. Dünya Savaşı	başladılar
+Relation	T6	T7	NoRel	true	II. Dünya Savaşı	ettiler
+Relation	T7	T0	NoRel	true	ettiler	istendi
+Relation	T8	T0	NoRel	true	başladı	istendi
+Relation	T8	T7	NoRel	true	başladı	ettiler

@@ -1,0 +1,62 @@
+Text	This was confirmed by the fact that the tail surfaces of the private plane were found later to have been completely severed and by markings found on the propeller of the Navy plane .	After the propeller of the Navy plane severed the tail surfaces , the private plane pulled ahead for an instant .	The Navy plane swung slightly then overtook the private plane , again cutting one of its wings causing it to immediately spin to the waters below .	An inspection of the Navy plane revealed that the leading edges of both blades of the propeller had been gouged and nicked , apparently at the time the ...	In 1941 Gretchen appealed to Congress to pay for the funeral , which totaled $ 365 .
+Event	T0	confirmed	EVENT	9
+Event	T1	found	EVENT	80
+Event	T2	severed	EVENT	116
+Event	T3	found	EVENT	140
+Event	T4	severed	EVENT	221
+Event	T5	swung	EVENT	312
+Event	T6	overtook	EVENT	332
+Event	T7	cutting	EVENT	367
+Event	T8	causing	EVENT	392
+Event	T9	inspection	EVENT	448
+Event	T10	revealed	EVENT	477
+Event	T11	gouged	EVENT	550
+Event	T12	nicked	EVENT	561
+Event	T13	appealed	EVENT	618
+Event	T14	pay	EVENT	642
+Event	T15	funeral	EVENT	654
+Event	T16	totaled	EVENT	670
+Event	T17	pulled ahead	EVENT	267
+Event	T18	spin	EVENT	418
+Relation	T2	T3	CauseEffect	true	severed	found
+Relation	T3	T2	EffectCause	true	found	severed
+Relation	T4	T17	CauseEffect	true	severed	pulled ahead
+Relation	T17	T4	EffectCause	true	pulled ahead	severed
+Relation	T5	T6	CauseEffect	true	swung	overtook
+Relation	T6	T5	EffectCause	true	overtook	swung
+Relation	T7	T18	CauseEffect	true	cutting	spin
+Relation	T18	T7	EffectCause	true	spin	cutting
+Relation	T9	T11	CauseEffect	true	inspection	gouged
+Relation	T11	T9	EffectCause	true	gouged	inspection
+Relation	T9	T12	CauseEffect	true	inspection	nicked
+Relation	T12	T9	EffectCause	true	nicked	inspection
+Relation	T0	T16	NoRel	true	confirmed	totaled
+Relation	T1	T16	NoRel	true	found	totaled
+Relation	T1	T18	NoRel	true	found	spin
+Relation	T10	T17	NoRel	true	revealed	pulled ahead
+Relation	T11	T12	NoRel	true	gouged	nicked
+Relation	T11	T17	NoRel	true	gouged	pulled ahead
+Relation	T11	T6	NoRel	true	gouged	overtook
+Relation	T12	T16	NoRel	true	nicked	totaled
+Relation	T12	T4	NoRel	true	nicked	severed
+Relation	T13	T10	NoRel	true	appealed	revealed
+Relation	T13	T5	NoRel	true	appealed	swung
+Relation	T16	T2	NoRel	true	totaled	severed
+Relation	T16	T8	NoRel	true	totaled	causing
+Relation	T17	T0	NoRel	true	pulled ahead	confirmed
+Relation	T17	T3	NoRel	true	pulled ahead	found
+Relation	T17	T5	NoRel	true	pulled ahead	swung
+Relation	T17	T9	NoRel	true	pulled ahead	inspection
+Relation	T18	T11	NoRel	true	spin	gouged
+Relation	T18	T3	NoRel	true	spin	found
+Relation	T4	T9	NoRel	true	severed	inspection
+Relation	T5	T12	NoRel	true	swung	nicked
+Relation	T5	T13	NoRel	true	swung	appealed
+Relation	T5	T14	NoRel	true	swung	pay
+Relation	T5	T7	NoRel	true	swung	cutting
+Relation	T7	T12	NoRel	true	cutting	nicked
+Relation	T7	T16	NoRel	true	cutting	totaled
+Relation	T7	T2	NoRel	true	cutting	severed
+Relation	T7	T5	NoRel	true	cutting	swung
+Relation	T9	T4	NoRel	true	inspection	severed
+Relation	T9	T7	NoRel	true	inspection	cutting

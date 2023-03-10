@@ -1,0 +1,77 @@
+Text	El informe preliminar , publicado el 16 de marzo , afirmaba que el avión , dirigido por el copiloto , se había desviado del centro de pista durante la aproximación final y la tripulación decidió efectuar un tercer go-around cuatro segundos antes del impacto .	El avión se balanceó a izquierda y derecha , y el ala derecha impactó a continuación en pista .	Una alarma en cabina , que se creía que se trataba de la sirena de advertencia de entrada en pérdida , sonó repetidamente durante los siete segundos previos al impacto .	No se descubrieron deficiencias en el avión o la infraestructura del aeródromo .	La investigación continúa en curso y no se han notificado nuevos descubrimientos .
+Event	T0	informe	EVENT	3
+Event	T1	publicado	EVENT	24
+Event	T2	afirmaba	EVENT	51
+Event	T3	dirigido	EVENT	75
+Event	T4	desviado	EVENT	111
+Event	T5	efectuar	EVENT	195
+Event	T6	go-around	EVENT	214
+Event	T7	impacto	EVENT	250
+Event	T8	balanceó	EVENT	272
+Event	T9	impactó	EVENT	322
+Event	T10	alarma	EVENT	360
+Event	T11	creía	EVENT	386
+Event	T15	sonó	EVENT	459
+Event	T16	impacto	EVENT	516
+Event	T17	deficiencias	EVENT	545
+Relation	T7	T0	CauseEffect	true	impacto	informe
+Relation	T0	T7	EffectCause	true	informe	impacto
+Relation	T8	T9	CauseEffect	true	balanceó	impactó
+Relation	T9	T8	EffectCause	true	impactó	balanceó
+Relation	T0	T15	NoRel	true	informe	sonó
+Relation	T0	T16	NoRel	true	informe	impacto
+Relation	T0	T3	NoRel	true	informe	dirigido
+Relation	T0	T4	NoRel	true	informe	desviado
+Relation	T1	T10	NoRel	true	publicado	alarma
+Relation	T1	T3	NoRel	true	publicado	dirigido
+Relation	T1	T4	NoRel	true	publicado	desviado
+Relation	T1	T5	NoRel	true	publicado	efectuar
+Relation	T1	T6	NoRel	true	publicado	go-around
+Relation	T10	T0	NoRel	true	alarma	informe
+Relation	T10	T1	NoRel	true	alarma	publicado
+Relation	T10	T16	NoRel	true	alarma	impacto
+Relation	T10	T2	NoRel	true	alarma	afirmaba
+Relation	T10	T3	NoRel	true	alarma	dirigido
+Relation	T10	T4	NoRel	true	alarma	desviado
+Relation	T10	T5	NoRel	true	alarma	efectuar
+Relation	T10	T6	NoRel	true	alarma	go-around
+Relation	T10	T8	NoRel	true	alarma	balanceó
+Relation	T11	T5	NoRel	true	creía	efectuar
+Relation	T11	T6	NoRel	true	creía	go-around
+Relation	T11	T9	NoRel	true	creía	impactó
+Relation	T15	T11	NoRel	true	sonó	creía
+Relation	T15	T16	NoRel	true	sonó	impacto
+Relation	T15	T4	NoRel	true	sonó	desviado
+Relation	T15	T6	NoRel	true	sonó	go-around
+Relation	T15	T8	NoRel	true	sonó	balanceó
+Relation	T16	T15	NoRel	true	impacto	sonó
+Relation	T16	T4	NoRel	true	impacto	desviado
+Relation	T16	T5	NoRel	true	impacto	efectuar
+Relation	T16	T6	NoRel	true	impacto	go-around
+Relation	T16	T9	NoRel	true	impacto	impactó
+Relation	T17	T1	NoRel	true	deficiencias	publicado
+Relation	T17	T16	NoRel	true	deficiencias	impacto
+Relation	T17	T3	NoRel	true	deficiencias	dirigido
+Relation	T17	T8	NoRel	true	deficiencias	balanceó
+Relation	T17	T9	NoRel	true	deficiencias	impactó
+Relation	T2	T4	NoRel	true	afirmaba	desviado
+Relation	T2	T7	NoRel	true	afirmaba	impacto
+Relation	T3	T11	NoRel	true	dirigido	creía
+Relation	T3	T16	NoRel	true	dirigido	impacto
+Relation	T4	T1	NoRel	true	desviado	publicado
+Relation	T4	T11	NoRel	true	desviado	creía
+Relation	T4	T15	NoRel	true	desviado	sonó
+Relation	T4	T9	NoRel	true	desviado	impactó
+Relation	T5	T17	NoRel	true	efectuar	deficiencias
+Relation	T5	T7	NoRel	true	efectuar	impacto
+Relation	T5	T9	NoRel	true	efectuar	impactó
+Relation	T6	T11	NoRel	true	go-around	creía
+Relation	T6	T7	NoRel	true	go-around	impacto
+Relation	T7	T3	NoRel	true	impacto	dirigido
+Relation	T7	T4	NoRel	true	impacto	desviado
+Relation	T7	T6	NoRel	true	impacto	go-around
+Relation	T8	T16	NoRel	true	balanceó	impacto
+Relation	T8	T4	NoRel	true	balanceó	desviado
+Relation	T8	T5	NoRel	true	balanceó	efectuar
+Relation	T8	T6	NoRel	true	balanceó	go-around
+Relation	T9	T4	NoRel	true	impactó	desviado

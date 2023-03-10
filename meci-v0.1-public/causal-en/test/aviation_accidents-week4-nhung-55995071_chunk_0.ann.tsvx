@@ -1,0 +1,34 @@
+Text	AIR FRANCE FLIGHT 5672 ( AF5672 ) was a domestic passenger flight from Nantes Atlantique Airport to Brest - Guipavas Airport , France , which crashed on 22 June 2003 .	The flight was a Bombardier CRJ100ER operated by Brit Air , a regional airline which was a subsidiary of Air France .	The aircraft crashed during its landing phase , striking multiple obstacles and then crashed onto a road and bursting into flames .	The occupants were evacuated immediately .	The captain was killed in the crash , while 23 survived .
+Event	T0	flight	EVENT	59
+Event	T1	crashed	EVENT	142
+Event	T2	flight	EVENT	172
+Event	T3	operated	EVENT	205
+Event	T4	crashed	EVENT	299
+Event	T5	phase	EVENT	326
+Event	T6	striking	EVENT	334
+Event	T7	evacuated	EVENT	437
+Event	T8	killed	EVENT	477
+Event	T9	crash	EVENT	491
+Event	T10	survived	EVENT	508
+Event	T11	crashed	EVENT	371
+Event	T12	flames	EVENT	409
+Relation	T9	T8	CauseEffect	true	crash	killed
+Relation	T8	T9	EffectCause	true	killed	crash
+Relation	T9	T10	CauseEffect	true	crash	survived
+Relation	T10	T9	EffectCause	true	survived	crash
+Relation	T0	T4	NoRel	true	flight	crashed
+Relation	T0	T7	NoRel	true	flight	evacuated
+Relation	T0	T8	NoRel	true	flight	killed
+Relation	T10	T12	NoRel	true	survived	flames
+Relation	T11	T8	NoRel	true	crashed	killed
+Relation	T12	T9	NoRel	true	flames	crash
+Relation	T2	T7	NoRel	true	flight	evacuated
+Relation	T3	T0	NoRel	true	operated	flight
+Relation	T3	T12	NoRel	true	operated	flames
+Relation	T4	T5	NoRel	true	crashed	phase
+Relation	T6	T8	NoRel	true	striking	killed
+Relation	T6	T9	NoRel	true	striking	crash
+Relation	T8	T4	NoRel	true	killed	crashed
+Relation	T9	T11	NoRel	true	crash	crashed
+Relation	T9	T12	NoRel	true	crash	flames
+Relation	T9	T7	NoRel	true	crash	evacuated

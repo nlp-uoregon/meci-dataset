@@ -1,0 +1,53 @@
+Text	Thermopylæ havde vist , at et frontalangreb mod en velbefæstet græsk stilling var omsonst .	Med grækerne forskanset på Korinthtangen var der ikke store chancer for at erobre resten af Grækenland ad landvejen .	Men , som det også var vist ved Thermopylæ , hvis grækerne kunne omgås , kunne deres mindre styrker besejres .	En sådan omgåelse af tangen involverede brug af den persiske flåde .	Kort sagt , hvis Xerxes kunne ødelægge den allierede flåde , ville han være i en stærk position til at gennemtvinge en græsk overgivelse .
+Event	T0	vist	EVENT	17
+Event	T1	frontalangreb	EVENT	30
+Event	T10	gennemtvinge	EVENT	493
+Event	T11	overgivelse	EVENT	515
+Event	T3	forskanset	EVENT	105
+Event	T4	erobre	EVENT	167
+Event	T5	vist	EVENT	233
+Event	T6	besejres	EVENT	310
+Event	T7	omgåelse	EVENT	330
+Event	T8	brug	EVENT	361
+Event	T9	ødelægge	EVENT	420
+Relation	T8	T9	CauseEffect	true	brug	ødelægge
+Relation	T9	T8	EffectCause	true	ødelægge	brug
+Relation	T9	T11	CauseEffect	true	ødelægge	overgivelse
+Relation	T11	T9	EffectCause	true	overgivelse	ødelægge
+Relation	T7	T6	CauseEffect	true	omgåelse	besejres
+Relation	T6	T7	EffectCause	true	besejres	omgåelse
+Relation	T0	T3	NoRel	true	vist	forskanset
+Relation	T0	T4	NoRel	true	vist	erobre
+Relation	T0	T6	NoRel	true	vist	besejres
+Relation	T0	T7	NoRel	true	vist	omgåelse
+Relation	T0	T8	NoRel	true	vist	brug
+Relation	T0	T9	NoRel	true	vist	ødelægge
+Relation	T1	T11	NoRel	true	frontalangreb	overgivelse
+Relation	T1	T5	NoRel	true	frontalangreb	vist
+Relation	T1	T9	NoRel	true	frontalangreb	ødelægge
+Relation	T10	T0	NoRel	true	gennemtvinge	vist
+Relation	T10	T3	NoRel	true	gennemtvinge	forskanset
+Relation	T10	T6	NoRel	true	gennemtvinge	besejres
+Relation	T10	T7	NoRel	true	gennemtvinge	omgåelse
+Relation	T11	T10	NoRel	true	overgivelse	gennemtvinge
+Relation	T11	T5	NoRel	true	overgivelse	vist
+Relation	T11	T7	NoRel	true	overgivelse	omgåelse
+Relation	T3	T1	NoRel	true	forskanset	frontalangreb
+Relation	T3	T9	NoRel	true	forskanset	ødelægge
+Relation	T4	T1	NoRel	true	erobre	frontalangreb
+Relation	T4	T6	NoRel	true	erobre	besejres
+Relation	T5	T0	NoRel	true	vist	vist
+Relation	T5	T1	NoRel	true	vist	frontalangreb
+Relation	T5	T8	NoRel	true	vist	brug
+Relation	T6	T10	NoRel	true	besejres	gennemtvinge
+Relation	T6	T11	NoRel	true	besejres	overgivelse
+Relation	T6	T8	NoRel	true	besejres	brug
+Relation	T7	T0	NoRel	true	omgåelse	vist
+Relation	T7	T1	NoRel	true	omgåelse	frontalangreb
+Relation	T7	T10	NoRel	true	omgåelse	gennemtvinge
+Relation	T7	T3	NoRel	true	omgåelse	forskanset
+Relation	T8	T3	NoRel	true	brug	forskanset
+Relation	T8	T4	NoRel	true	brug	erobre
+Relation	T8	T5	NoRel	true	brug	vist
+Relation	T9	T4	NoRel	true	ødelægge	erobre
+Relation	T9	T6	NoRel	true	ødelægge	besejres

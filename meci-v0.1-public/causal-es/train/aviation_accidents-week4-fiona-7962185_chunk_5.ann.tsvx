@@ -1,0 +1,175 @@
+Text	" El accidente ocurrió debido a la pérdida de control después de experimentar un clima adverso que causó que el avión se parase ... lo que provocó una caída en picada " , dijeron medios estatales .	Después de estudiar los datos de la caja negra , los investigadores decidieron que la colisión " no fue por un acto de sabotaje , explosión o falla del motor " .	El avión volaba desde Myeik a Rangún y los restos se encontraron en el mar frente a la ciudad costera de Dawei .	Todavía no está claro por qué el piloto voló a la tormenta , dado que el radar meteorológico normalmente permite evitar tales nubes .	- Accidente de aviación - Anexo : Accidentes más graves de aviación ( 1943 - presente ) - Anexo : Accidentes e incidentes notables en la aviación militar
+Event	T0	pérdida	EVENT	35
+Event	T1	experimentar	EVENT	65
+Event	T2	causó	EVENT	99
+Event	T3	parase	EVENT	121
+Event	T4	provocó	EVENT	139
+Event	T6	dijeron	EVENT	171
+Event	T7	estudiar	EVENT	209
+Event	T8	colisión	EVENT	284
+Event	T9	acto	EVENT	309
+Event	T10	sabotaje	EVENT	317
+Event	T11	explosión	EVENT	328
+Event	T12	falla	EVENT	340
+Event	T13	volaba	EVENT	369
+Event	T14	encontraron	EVENT	413
+Event	T15	voló	EVENT	513
+Event	T16	tormenta	EVENT	523
+Event	T17	nubes	EVENT	599
+Event	T18	Accidente	EVENT	609
+Event	T19	Accidentes	EVENT	641
+Event	T20	Accidentes	EVENT	705
+Event	T21	accidente	EVENT	5
+Event	T22	caída	EVENT	151
+Relation	T0	T21	CauseEffect	true	pérdida	accidente
+Relation	T21	T0	EffectCause	true	accidente	pérdida
+Relation	T1	T3	CauseEffect	true	experimentar	parase
+Relation	T3	T1	EffectCause	true	parase	experimentar
+Relation	T3	T22	CauseEffect	true	parase	caída
+Relation	T22	T3	EffectCause	true	caída	parase
+Relation	T0	T16	NoRel	true	pérdida	tormenta
+Relation	T0	T19	NoRel	true	pérdida	Accidentes
+Relation	T0	T2	NoRel	true	pérdida	causó
+Relation	T0	T22	NoRel	true	pérdida	caída
+Relation	T0	T7	NoRel	true	pérdida	estudiar
+Relation	T1	T10	NoRel	true	experimentar	sabotaje
+Relation	T1	T14	NoRel	true	experimentar	encontraron
+Relation	T1	T16	NoRel	true	experimentar	tormenta
+Relation	T1	T19	NoRel	true	experimentar	Accidentes
+Relation	T1	T2	NoRel	true	experimentar	causó
+Relation	T1	T20	NoRel	true	experimentar	Accidentes
+Relation	T1	T21	NoRel	true	experimentar	accidente
+Relation	T1	T4	NoRel	true	experimentar	provocó
+Relation	T1	T9	NoRel	true	experimentar	acto
+Relation	T10	T1	NoRel	true	sabotaje	experimentar
+Relation	T10	T11	NoRel	true	sabotaje	explosión
+Relation	T10	T13	NoRel	true	sabotaje	volaba
+Relation	T10	T18	NoRel	true	sabotaje	Accidente
+Relation	T10	T3	NoRel	true	sabotaje	parase
+Relation	T11	T1	NoRel	true	explosión	experimentar
+Relation	T11	T10	NoRel	true	explosión	sabotaje
+Relation	T11	T14	NoRel	true	explosión	encontraron
+Relation	T11	T16	NoRel	true	explosión	tormenta
+Relation	T11	T19	NoRel	true	explosión	Accidentes
+Relation	T11	T2	NoRel	true	explosión	causó
+Relation	T11	T7	NoRel	true	explosión	estudiar
+Relation	T11	T8	NoRel	true	explosión	colisión
+Relation	T11	T9	NoRel	true	explosión	acto
+Relation	T12	T0	NoRel	true	falla	pérdida
+Relation	T12	T11	NoRel	true	falla	explosión
+Relation	T12	T13	NoRel	true	falla	volaba
+Relation	T12	T14	NoRel	true	falla	encontraron
+Relation	T13	T0	NoRel	true	volaba	pérdida
+Relation	T13	T10	NoRel	true	volaba	sabotaje
+Relation	T13	T12	NoRel	true	volaba	falla
+Relation	T13	T14	NoRel	true	volaba	encontraron
+Relation	T13	T15	NoRel	true	volaba	voló
+Relation	T13	T19	NoRel	true	volaba	Accidentes
+Relation	T13	T4	NoRel	true	volaba	provocó
+Relation	T13	T9	NoRel	true	volaba	acto
+Relation	T14	T0	NoRel	true	encontraron	pérdida
+Relation	T14	T10	NoRel	true	encontraron	sabotaje
+Relation	T14	T12	NoRel	true	encontraron	falla
+Relation	T14	T15	NoRel	true	encontraron	voló
+Relation	T14	T20	NoRel	true	encontraron	Accidentes
+Relation	T14	T4	NoRel	true	encontraron	provocó
+Relation	T14	T6	NoRel	true	encontraron	dijeron
+Relation	T14	T7	NoRel	true	encontraron	estudiar
+Relation	T15	T1	NoRel	true	voló	experimentar
+Relation	T15	T10	NoRel	true	voló	sabotaje
+Relation	T15	T16	NoRel	true	voló	tormenta
+Relation	T15	T17	NoRel	true	voló	nubes
+Relation	T15	T18	NoRel	true	voló	Accidente
+Relation	T15	T19	NoRel	true	voló	Accidentes
+Relation	T15	T21	NoRel	true	voló	accidente
+Relation	T15	T4	NoRel	true	voló	provocó
+Relation	T15	T9	NoRel	true	voló	acto
+Relation	T16	T0	NoRel	true	tormenta	pérdida
+Relation	T16	T12	NoRel	true	tormenta	falla
+Relation	T16	T21	NoRel	true	tormenta	accidente
+Relation	T16	T6	NoRel	true	tormenta	dijeron
+Relation	T16	T7	NoRel	true	tormenta	estudiar
+Relation	T16	T9	NoRel	true	tormenta	acto
+Relation	T17	T0	NoRel	true	nubes	pérdida
+Relation	T17	T12	NoRel	true	nubes	falla
+Relation	T17	T13	NoRel	true	nubes	volaba
+Relation	T17	T18	NoRel	true	nubes	Accidente
+Relation	T17	T2	NoRel	true	nubes	causó
+Relation	T17	T4	NoRel	true	nubes	provocó
+Relation	T17	T6	NoRel	true	nubes	dijeron
+Relation	T17	T9	NoRel	true	nubes	acto
+Relation	T18	T12	NoRel	true	Accidente	falla
+Relation	T18	T13	NoRel	true	Accidente	volaba
+Relation	T18	T17	NoRel	true	Accidente	nubes
+Relation	T18	T20	NoRel	true	Accidente	Accidentes
+Relation	T18	T21	NoRel	true	Accidente	accidente
+Relation	T18	T22	NoRel	true	Accidente	caída
+Relation	T18	T8	NoRel	true	Accidente	colisión
+Relation	T18	T9	NoRel	true	Accidente	acto
+Relation	T19	T0	NoRel	true	Accidentes	pérdida
+Relation	T19	T15	NoRel	true	Accidentes	voló
+Relation	T19	T22	NoRel	true	Accidentes	caída
+Relation	T19	T3	NoRel	true	Accidentes	parase
+Relation	T2	T0	NoRel	true	causó	pérdida
+Relation	T2	T10	NoRel	true	causó	sabotaje
+Relation	T2	T11	NoRel	true	causó	explosión
+Relation	T2	T12	NoRel	true	causó	falla
+Relation	T2	T19	NoRel	true	causó	Accidentes
+Relation	T2	T6	NoRel	true	causó	dijeron
+Relation	T20	T1	NoRel	true	Accidentes	experimentar
+Relation	T20	T10	NoRel	true	Accidentes	sabotaje
+Relation	T20	T19	NoRel	true	Accidentes	Accidentes
+Relation	T20	T2	NoRel	true	Accidentes	causó
+Relation	T20	T21	NoRel	true	Accidentes	accidente
+Relation	T20	T4	NoRel	true	Accidentes	provocó
+Relation	T20	T6	NoRel	true	Accidentes	dijeron
+Relation	T20	T8	NoRel	true	Accidentes	colisión
+Relation	T21	T1	NoRel	true	accidente	experimentar
+Relation	T21	T20	NoRel	true	accidente	Accidentes
+Relation	T21	T22	NoRel	true	accidente	caída
+Relation	T21	T6	NoRel	true	accidente	dijeron
+Relation	T21	T8	NoRel	true	accidente	colisión
+Relation	T22	T10	NoRel	true	caída	sabotaje
+Relation	T22	T11	NoRel	true	caída	explosión
+Relation	T22	T19	NoRel	true	caída	Accidentes
+Relation	T22	T2	NoRel	true	caída	causó
+Relation	T22	T4	NoRel	true	caída	provocó
+Relation	T22	T7	NoRel	true	caída	estudiar
+Relation	T22	T9	NoRel	true	caída	acto
+Relation	T3	T12	NoRel	true	parase	falla
+Relation	T3	T13	NoRel	true	parase	volaba
+Relation	T3	T19	NoRel	true	parase	Accidentes
+Relation	T3	T20	NoRel	true	parase	Accidentes
+Relation	T3	T4	NoRel	true	parase	provocó
+Relation	T3	T7	NoRel	true	parase	estudiar
+Relation	T4	T1	NoRel	true	provocó	experimentar
+Relation	T4	T11	NoRel	true	provocó	explosión
+Relation	T4	T12	NoRel	true	provocó	falla
+Relation	T4	T19	NoRel	true	provocó	Accidentes
+Relation	T4	T2	NoRel	true	provocó	causó
+Relation	T4	T22	NoRel	true	provocó	caída
+Relation	T4	T3	NoRel	true	provocó	parase
+Relation	T4	T6	NoRel	true	provocó	dijeron
+Relation	T6	T1	NoRel	true	dijeron	experimentar
+Relation	T6	T12	NoRel	true	dijeron	falla
+Relation	T6	T14	NoRel	true	dijeron	encontraron
+Relation	T6	T17	NoRel	true	dijeron	nubes
+Relation	T6	T20	NoRel	true	dijeron	Accidentes
+Relation	T7	T12	NoRel	true	estudiar	falla
+Relation	T7	T15	NoRel	true	estudiar	voló
+Relation	T7	T18	NoRel	true	estudiar	Accidente
+Relation	T7	T21	NoRel	true	estudiar	accidente
+Relation	T7	T22	NoRel	true	estudiar	caída
+Relation	T8	T1	NoRel	true	colisión	experimentar
+Relation	T8	T10	NoRel	true	colisión	sabotaje
+Relation	T8	T12	NoRel	true	colisión	falla
+Relation	T8	T6	NoRel	true	colisión	dijeron
+Relation	T8	T7	NoRel	true	colisión	estudiar
+Relation	T9	T10	NoRel	true	acto	sabotaje
+Relation	T9	T14	NoRel	true	acto	encontraron
+Relation	T9	T16	NoRel	true	acto	tormenta
+Relation	T9	T18	NoRel	true	acto	Accidente
+Relation	T9	T2	NoRel	true	acto	causó
+Relation	T9	T4	NoRel	true	acto	provocó
+Relation	T9	T6	NoRel	true	acto	dijeron
+Relation	T9	T7	NoRel	true	acto	estudiar

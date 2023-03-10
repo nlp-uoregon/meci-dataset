@@ -1,0 +1,169 @@
+Text	Dette gør den knapt så smitsom , som hvis den var direkte luftbåren og giver håb om , at SARS ikke vil sprede sig så aggressivt som frygtet .	Sygdommen kan smitte en dag før symptomer ses , og også derefter .	Det var i begyndelsen ikke muligt at foretage en effektiv test der kunne konstatere sygdommen , men den 14. april 2003 frigav det tyske firma Artus en test , der på to timer kunne afgøre om en person var inficeret .	I perioden 16. november 2002 – 28. februar 2003 er der rapporteret om i alt 792 tilfælde , hvoraf 31 er døde .	Der er rapporteret om tilfælde i syv byer .
+Event	T0	gør	EVENT	6
+Event	T1	giver	EVENT	71
+Event	T2	sprede	EVENT	103
+Event	T3	frygtet	EVENT	132
+Event	T4	Sygdommen	EVENT	142
+Event	T5	smitte	EVENT	156
+Event	T6	ses	EVENT	184
+Event	T7	foretage	EVENT	246
+Event	T8	test	EVENT	267
+Event	T9	frigav	EVENT	328
+Event	T10	test	EVENT	360
+Event	T11	inficeret	EVENT	413
+Event	T12	tilfælde	EVENT	505
+Event	T13	døde	EVENT	529
+Event	T14	rapporteret	EVENT	543
+Event	T15	tilfælde	EVENT	558
+Event	T16	smitsom	EVENT	23
+Event	T17	SARS	EVENT	89
+Event	T18	konstatere	EVENT	282
+Event	T19	sygdommen	EVENT	293
+Event	T20	afgøre	EVENT	389
+Relation	T4	T12	CauseEffect	true	Sygdommen	tilfælde
+Relation	T12	T4	EffectCause	true	tilfælde	Sygdommen
+Relation	T4	T13	CauseEffect	true	Sygdommen	døde
+Relation	T13	T4	EffectCause	true	døde	Sygdommen
+Relation	T0	T14	NoRel	true	gør	rapporteret
+Relation	T0	T18	NoRel	true	gør	konstatere
+Relation	T0	T19	NoRel	true	gør	sygdommen
+Relation	T0	T20	NoRel	true	gør	afgøre
+Relation	T0	T3	NoRel	true	gør	frygtet
+Relation	T0	T4	NoRel	true	gør	Sygdommen
+Relation	T0	T9	NoRel	true	gør	frigav
+Relation	T1	T0	NoRel	true	giver	gør
+Relation	T1	T10	NoRel	true	giver	test
+Relation	T1	T12	NoRel	true	giver	tilfælde
+Relation	T1	T14	NoRel	true	giver	rapporteret
+Relation	T1	T15	NoRel	true	giver	tilfælde
+Relation	T1	T18	NoRel	true	giver	konstatere
+Relation	T1	T2	NoRel	true	giver	sprede
+Relation	T1	T20	NoRel	true	giver	afgøre
+Relation	T1	T6	NoRel	true	giver	ses
+Relation	T10	T1	NoRel	true	test	giver
+Relation	T10	T11	NoRel	true	test	inficeret
+Relation	T10	T12	NoRel	true	test	tilfælde
+Relation	T10	T13	NoRel	true	test	døde
+Relation	T10	T15	NoRel	true	test	tilfælde
+Relation	T10	T17	NoRel	true	test	SARS
+Relation	T10	T5	NoRel	true	test	smitte
+Relation	T10	T6	NoRel	true	test	ses
+Relation	T10	T8	NoRel	true	test	test
+Relation	T11	T10	NoRel	true	inficeret	test
+Relation	T11	T12	NoRel	true	inficeret	tilfælde
+Relation	T11	T13	NoRel	true	inficeret	døde
+Relation	T11	T14	NoRel	true	inficeret	rapporteret
+Relation	T11	T15	NoRel	true	inficeret	tilfælde
+Relation	T11	T20	NoRel	true	inficeret	afgøre
+Relation	T11	T4	NoRel	true	inficeret	Sygdommen
+Relation	T11	T5	NoRel	true	inficeret	smitte
+Relation	T11	T6	NoRel	true	inficeret	ses
+Relation	T12	T0	NoRel	true	tilfælde	gør
+Relation	T12	T11	NoRel	true	tilfælde	inficeret
+Relation	T12	T16	NoRel	true	tilfælde	smitsom
+Relation	T12	T18	NoRel	true	tilfælde	konstatere
+Relation	T12	T6	NoRel	true	tilfælde	ses
+Relation	T13	T0	NoRel	true	døde	gør
+Relation	T13	T12	NoRel	true	døde	tilfælde
+Relation	T13	T14	NoRel	true	døde	rapporteret
+Relation	T13	T16	NoRel	true	døde	smitsom
+Relation	T13	T17	NoRel	true	døde	SARS
+Relation	T13	T20	NoRel	true	døde	afgøre
+Relation	T13	T5	NoRel	true	døde	smitte
+Relation	T13	T7	NoRel	true	døde	foretage
+Relation	T14	T10	NoRel	true	rapporteret	test
+Relation	T14	T12	NoRel	true	rapporteret	tilfælde
+Relation	T14	T4	NoRel	true	rapporteret	Sygdommen
+Relation	T14	T9	NoRel	true	rapporteret	frigav
+Relation	T15	T14	NoRel	true	tilfælde	rapporteret
+Relation	T15	T17	NoRel	true	tilfælde	SARS
+Relation	T15	T18	NoRel	true	tilfælde	konstatere
+Relation	T15	T4	NoRel	true	tilfælde	Sygdommen
+Relation	T15	T8	NoRel	true	tilfælde	test
+Relation	T16	T10	NoRel	true	smitsom	test
+Relation	T16	T11	NoRel	true	smitsom	inficeret
+Relation	T16	T19	NoRel	true	smitsom	sygdommen
+Relation	T16	T4	NoRel	true	smitsom	Sygdommen
+Relation	T16	T5	NoRel	true	smitsom	smitte
+Relation	T16	T9	NoRel	true	smitsom	frigav
+Relation	T17	T0	NoRel	true	SARS	gør
+Relation	T17	T13	NoRel	true	SARS	døde
+Relation	T17	T14	NoRel	true	SARS	rapporteret
+Relation	T17	T19	NoRel	true	SARS	sygdommen
+Relation	T17	T4	NoRel	true	SARS	Sygdommen
+Relation	T18	T11	NoRel	true	konstatere	inficeret
+Relation	T18	T12	NoRel	true	konstatere	tilfælde
+Relation	T18	T13	NoRel	true	konstatere	døde
+Relation	T18	T7	NoRel	true	konstatere	foretage
+Relation	T18	T9	NoRel	true	konstatere	frigav
+Relation	T19	T12	NoRel	true	sygdommen	tilfælde
+Relation	T19	T14	NoRel	true	sygdommen	rapporteret
+Relation	T19	T16	NoRel	true	sygdommen	smitsom
+Relation	T19	T9	NoRel	true	sygdommen	frigav
+Relation	T2	T10	NoRel	true	sprede	test
+Relation	T2	T12	NoRel	true	sprede	tilfælde
+Relation	T2	T14	NoRel	true	sprede	rapporteret
+Relation	T2	T16	NoRel	true	sprede	smitsom
+Relation	T2	T3	NoRel	true	sprede	frygtet
+Relation	T2	T5	NoRel	true	sprede	smitte
+Relation	T2	T9	NoRel	true	sprede	frigav
+Relation	T20	T1	NoRel	true	afgøre	giver
+Relation	T20	T14	NoRel	true	afgøre	rapporteret
+Relation	T20	T15	NoRel	true	afgøre	tilfælde
+Relation	T20	T16	NoRel	true	afgøre	smitsom
+Relation	T20	T17	NoRel	true	afgøre	SARS
+Relation	T20	T4	NoRel	true	afgøre	Sygdommen
+Relation	T20	T7	NoRel	true	afgøre	foretage
+Relation	T20	T8	NoRel	true	afgøre	test
+Relation	T3	T1	NoRel	true	frygtet	giver
+Relation	T3	T14	NoRel	true	frygtet	rapporteret
+Relation	T3	T2	NoRel	true	frygtet	sprede
+Relation	T3	T5	NoRel	true	frygtet	smitte
+Relation	T3	T6	NoRel	true	frygtet	ses
+Relation	T3	T9	NoRel	true	frygtet	frigav
+Relation	T4	T0	NoRel	true	Sygdommen	gør
+Relation	T4	T1	NoRel	true	Sygdommen	giver
+Relation	T4	T11	NoRel	true	Sygdommen	inficeret
+Relation	T4	T14	NoRel	true	Sygdommen	rapporteret
+Relation	T4	T15	NoRel	true	Sygdommen	tilfælde
+Relation	T4	T17	NoRel	true	Sygdommen	SARS
+Relation	T4	T19	NoRel	true	Sygdommen	sygdommen
+Relation	T4	T2	NoRel	true	Sygdommen	sprede
+Relation	T4	T3	NoRel	true	Sygdommen	frygtet
+Relation	T4	T6	NoRel	true	Sygdommen	ses
+Relation	T4	T7	NoRel	true	Sygdommen	foretage
+Relation	T5	T12	NoRel	true	smitte	tilfælde
+Relation	T5	T13	NoRel	true	smitte	døde
+Relation	T5	T14	NoRel	true	smitte	rapporteret
+Relation	T5	T15	NoRel	true	smitte	tilfælde
+Relation	T5	T18	NoRel	true	smitte	konstatere
+Relation	T5	T3	NoRel	true	smitte	frygtet
+Relation	T5	T4	NoRel	true	smitte	Sygdommen
+Relation	T5	T6	NoRel	true	smitte	ses
+Relation	T6	T0	NoRel	true	ses	gør
+Relation	T6	T1	NoRel	true	ses	giver
+Relation	T6	T13	NoRel	true	ses	døde
+Relation	T6	T14	NoRel	true	ses	rapporteret
+Relation	T6	T17	NoRel	true	ses	SARS
+Relation	T6	T18	NoRel	true	ses	konstatere
+Relation	T6	T3	NoRel	true	ses	frygtet
+Relation	T6	T5	NoRel	true	ses	smitte
+Relation	T7	T11	NoRel	true	foretage	inficeret
+Relation	T7	T18	NoRel	true	foretage	konstatere
+Relation	T7	T20	NoRel	true	foretage	afgøre
+Relation	T7	T3	NoRel	true	foretage	frygtet
+Relation	T7	T4	NoRel	true	foretage	Sygdommen
+Relation	T7	T9	NoRel	true	foretage	frigav
+Relation	T8	T0	NoRel	true	test	gør
+Relation	T8	T1	NoRel	true	test	giver
+Relation	T8	T10	NoRel	true	test	test
+Relation	T8	T18	NoRel	true	test	konstatere
+Relation	T8	T20	NoRel	true	test	afgøre
+Relation	T8	T3	NoRel	true	test	frygtet
+Relation	T8	T6	NoRel	true	test	ses
+Relation	T9	T15	NoRel	true	frigav	tilfælde
+Relation	T9	T16	NoRel	true	frigav	smitsom
+Relation	T9	T18	NoRel	true	frigav	konstatere
+Relation	T9	T4	NoRel	true	frigav	Sygdommen
+Relation	T9	T6	NoRel	true	frigav	ses
+Relation	T9	T7	NoRel	true	frigav	foretage

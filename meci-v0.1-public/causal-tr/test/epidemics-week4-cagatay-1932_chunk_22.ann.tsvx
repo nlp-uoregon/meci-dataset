@@ -1,0 +1,24 @@
+Text	Sulandırılmış çamaşır suyu temas ettiği HIV'i 10 dakika içinde öldürür .	Sodyumhipoklorid , çamaşır suyunda bulunan etkili maddedir , içinde klor vardır .	Çamaşır suyu şişesinin üzerindeki tarifeye göre ( genellikle 10 kez ) sulandırılarak kullanılır .	Sulandırılan çamaşır suyunda klor kokusu bulunmalıdır .	Çamaşır suyu kullanılacağı zaman sulandırılmalıdır , durmakla bozulur .
+Event	T0	öldürür	EVENT	63
+Event	T1	kullanılır	EVENT	240
+Event	T2	bozulur	EVENT	371
+Event	T3	temas	EVENT	27
+Event	T4	sulandırılarak	EVENT	225
+Event	T5	Sulandırılan	EVENT	253
+Event	T6	durmakla	EVENT	362
+Relation	T3	T0	CauseEffect	true	temas	öldürür
+Relation	T0	T3	EffectCause	true	öldürür	temas
+Relation	T6	T2	CauseEffect	true	durmakla	bozulur
+Relation	T2	T6	EffectCause	true	bozulur	durmakla
+Relation	T0	T4	NoRel	true	öldürür	sulandırılarak
+Relation	T0	T5	NoRel	true	öldürür	Sulandırılan
+Relation	T1	T0	NoRel	true	kullanılır	öldürür
+Relation	T2	T4	NoRel	true	bozulur	sulandırılarak
+Relation	T3	T2	NoRel	true	temas	bozulur
+Relation	T3	T5	NoRel	true	temas	Sulandırılan
+Relation	T4	T3	NoRel	true	sulandırılarak	temas
+Relation	T4	T5	NoRel	true	sulandırılarak	Sulandırılan
+Relation	T4	T6	NoRel	true	sulandırılarak	durmakla
+Relation	T5	T6	NoRel	true	Sulandırılan	durmakla
+Relation	T6	T3	NoRel	true	durmakla	temas
+Relation	T6	T4	NoRel	true	durmakla	sulandırılarak

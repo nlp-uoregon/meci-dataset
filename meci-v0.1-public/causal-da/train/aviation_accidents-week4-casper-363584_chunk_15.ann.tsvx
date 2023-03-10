@@ -1,0 +1,23 @@
+Text	- Efter at autopiloten var slået fra , steg flyet fra 35.000 til 38.000 fod ( 10.668 til 11.582 m ) , derefter blev _ Stall Warning _ udløst og flyet faldt .	- Et af piloternes joystick var hevet tilbage ( _ pitch up __– næsen op ) .	- Faldet tog tre minutter og 30 sekunder , flyet var i et stall og indfaldsvinklen var over 35 ° .	- Begge motorer var funktionsdygtige og var under besætningens kontrol .	- De sidste signaler viste at næsen var 16,2 ° over vandret , at vingerne var vippet 5,3 ° mod bagbords side og at den lodrette hastighed var 10.912 fod/min ( 199,5 km/t ) .
+Event	T0	steg	EVENT	39
+Event	T1	udløst	EVENT	134
+Event	T2	faldt	EVENT	150
+Event	T3	tog	EVENT	243
+Event	T4	kontrol	EVENT	396
+Event	T5	viste	EVENT	427
+Event	T6	vippet	EVENT	484
+Relation	T0	T1	CauseEffect	true	steg	udløst
+Relation	T1	T0	EffectCause	true	udløst	steg
+Relation	T1	T2	CauseEffect	true	udløst	faldt
+Relation	T2	T1	EffectCause	true	faldt	udløst
+Relation	T1	T5	NoRel	true	udløst	viste
+Relation	T2	T5	NoRel	true	faldt	viste
+Relation	T3	T4	NoRel	true	tog	kontrol
+Relation	T4	T0	NoRel	true	kontrol	steg
+Relation	T4	T1	NoRel	true	kontrol	udløst
+Relation	T4	T3	NoRel	true	kontrol	tog
+Relation	T5	T0	NoRel	true	viste	steg
+Relation	T5	T2	NoRel	true	viste	faldt
+Relation	T5	T6	NoRel	true	viste	vippet
+Relation	T6	T2	NoRel	true	vippet	faldt
+Relation	T6	T3	NoRel	true	vippet	tog

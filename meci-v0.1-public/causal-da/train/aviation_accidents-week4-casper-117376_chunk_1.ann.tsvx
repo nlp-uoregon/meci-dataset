@@ -1,0 +1,54 @@
+Text	Flyet styrtede ned på en mark i nærheden af Shanksville i Pennsylvania , omkring 130 kilometer sydøst for Pittsburgh og 240 km nordvest for Washington D.C.	Alle 44 personer om bord ( inklusiv de fire flykaprere og syv besætningsmedlemmer ) omkom .	Der var mange vidner til nedstyrtningen , og nyhedsmedierne påbegyndte deres rapporteringer inden for en time efter , at flyet var styrtet ned .	Flyet blev slået i stykker ved nedslaget , hvilket efterlod et krater og nogle vragrester , som blev blæst flere meter væk fra nedstyrtningsstedet .	Passagerernes jordiske rester blev senere identificeret .
+Event	T0	omkom	EVENT	240
+Event	T1	nedstyrtningen	EVENT	273
+Event	T2	påbegyndte	EVENT	308
+Event	T3	rapporteringer	EVENT	325
+Event	T4	stykker	EVENT	412
+Event	T5	nedslaget	EVENT	424
+Event	T6	efterlod	EVENT	444
+Event	T7	blæst	EVENT	494
+Event	T8	nedstyrtningsstedet	EVENT	520
+Event	T9	identificeret	EVENT	584
+Event	T10	styrtede	EVENT	6
+Relation	T10	T0	CauseEffect	true	styrtede	omkom
+Relation	T0	T10	EffectCause	true	omkom	styrtede
+Relation	T1	T3	CauseEffect	true	nedstyrtningen	rapporteringer
+Relation	T3	T1	EffectCause	true	rapporteringer	nedstyrtningen
+Relation	T5	T4	CauseEffect	true	nedslaget	stykker
+Relation	T4	T5	EffectCause	true	stykker	nedslaget
+Relation	T5	T6	CauseEffect	true	nedslaget	efterlod
+Relation	T6	T5	EffectCause	true	efterlod	nedslaget
+Relation	T0	T5	NoRel	true	omkom	nedslaget
+Relation	T1	T5	NoRel	true	nedstyrtningen	nedslaget
+Relation	T1	T6	NoRel	true	nedstyrtningen	efterlod
+Relation	T1	T7	NoRel	true	nedstyrtningen	blæst
+Relation	T1	T8	NoRel	true	nedstyrtningen	nedstyrtningsstedet
+Relation	T10	T7	NoRel	true	styrtede	blæst
+Relation	T10	T9	NoRel	true	styrtede	identificeret
+Relation	T2	T1	NoRel	true	påbegyndte	nedstyrtningen
+Relation	T2	T3	NoRel	true	påbegyndte	rapporteringer
+Relation	T2	T5	NoRel	true	påbegyndte	nedslaget
+Relation	T2	T6	NoRel	true	påbegyndte	efterlod
+Relation	T2	T7	NoRel	true	påbegyndte	blæst
+Relation	T3	T10	NoRel	true	rapporteringer	styrtede
+Relation	T3	T2	NoRel	true	rapporteringer	påbegyndte
+Relation	T4	T3	NoRel	true	stykker	rapporteringer
+Relation	T4	T6	NoRel	true	stykker	efterlod
+Relation	T4	T7	NoRel	true	stykker	blæst
+Relation	T5	T0	NoRel	true	nedslaget	omkom
+Relation	T5	T7	NoRel	true	nedslaget	blæst
+Relation	T5	T9	NoRel	true	nedslaget	identificeret
+Relation	T6	T1	NoRel	true	efterlod	nedstyrtningen
+Relation	T6	T2	NoRel	true	efterlod	påbegyndte
+Relation	T6	T8	NoRel	true	efterlod	nedstyrtningsstedet
+Relation	T6	T9	NoRel	true	efterlod	identificeret
+Relation	T7	T10	NoRel	true	blæst	styrtede
+Relation	T7	T9	NoRel	true	blæst	identificeret
+Relation	T8	T1	NoRel	true	nedstyrtningsstedet	nedstyrtningen
+Relation	T8	T4	NoRel	true	nedstyrtningsstedet	stykker
+Relation	T8	T5	NoRel	true	nedstyrtningsstedet	nedslaget
+Relation	T9	T0	NoRel	true	identificeret	omkom
+Relation	T9	T3	NoRel	true	identificeret	rapporteringer
+Relation	T9	T4	NoRel	true	identificeret	stykker
+Relation	T9	T5	NoRel	true	identificeret	nedslaget
+Relation	T9	T7	NoRel	true	identificeret	blæst

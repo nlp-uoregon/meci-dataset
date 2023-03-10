@@ -1,0 +1,87 @@
+Text	Depremin menşei tektoniktir .	Yaklaşık olarak 3000 km² genişliğindeki sarsıntı alanında takriben 3500 ev tamamen yıkılmış , 7000 ev ağır surette ve 10.600 den fazla bina da fazla ölçüde hasara uğramıştır .	33.000 aile , yaklaşık olarak 80.000 kişi barınaksız kalmış , 6 saniye süren depremde 800 kişi ( yabancı kaynaklarda 1086 kişi ) ölmüş ve 520 ( yabancı kaynaklarda 1260 kişi ) yaralanmıştır .	Deprem sonrasında yıkılan ve tamamen harabeye dönüşen şehrin Uşak yolu üzerinde 7 km ilerisine Kadınlar Pazarı denilen mevkiiye yeniden bir şehir kurulmuş ve yıkılan şehre " Eski Gediz " adı verilmiştir .	Kadınlar Pazarı mevkii Gediz'in 7 km güneyinde Şaphane Dağı eteklerinde yer alır .
+Event	T0	sarsıntı	EVENT	70
+Event	T1	yıkılmış	EVENT	113
+Event	T2	uğramıştır	EVENT	193
+Event	T3	depremde	EVENT	283
+Event	T4	ölmüş	EVENT	335
+Event	T5	yaralanmıştır	EVENT	382
+Event	T6	Deprem	EVENT	398
+Event	T7	yıkılan	EVENT	416
+Event	T8	kurulmuş	EVENT	544
+Event	T9	yıkılan	EVENT	556
+Event	T10	verilmiştir	EVENT	589
+Event	T11	Depremin	EVENT	0
+Event	T12	kalmış	EVENT	259
+Event	T13	dönüşen	EVENT	444
+Relation	T11	T1	CauseEffect	true	Depremin	yıkılmış
+Relation	T1	T11	EffectCause	true	yıkılmış	Depremin
+Relation	T11	T2	CauseEffect	true	Depremin	uğramıştır
+Relation	T2	T11	EffectCause	true	uğramıştır	Depremin
+Relation	T11	T12	CauseEffect	true	Depremin	kalmış
+Relation	T12	T11	EffectCause	true	kalmış	Depremin
+Relation	T3	T4	CauseEffect	true	depremde	ölmüş
+Relation	T4	T3	EffectCause	true	ölmüş	depremde
+Relation	T3	T5	CauseEffect	true	depremde	yaralanmıştır
+Relation	T5	T3	EffectCause	true	yaralanmıştır	depremde
+Relation	T11	T4	CauseEffect	true	Depremin	ölmüş
+Relation	T4	T11	EffectCause	true	ölmüş	Depremin
+Relation	T11	T5	CauseEffect	true	Depremin	yaralanmıştır
+Relation	T5	T11	EffectCause	true	yaralanmıştır	Depremin
+Relation	T6	T7	CauseEffect	true	Deprem	yıkılan
+Relation	T7	T6	EffectCause	true	yıkılan	Deprem
+Relation	T7	T13	CauseEffect	true	yıkılan	dönüşen
+Relation	T13	T7	EffectCause	true	dönüşen	yıkılan
+Relation	T11	T7	CauseEffect	true	Depremin	yıkılan
+Relation	T7	T11	EffectCause	true	yıkılan	Depremin
+Relation	T13	T8	CauseEffect	true	dönüşen	kurulmuş
+Relation	T8	T13	EffectCause	true	kurulmuş	dönüşen
+Relation	T0	T13	NoRel	true	sarsıntı	dönüşen
+Relation	T0	T6	NoRel	true	sarsıntı	Deprem
+Relation	T1	T0	NoRel	true	yıkılmış	sarsıntı
+Relation	T1	T13	NoRel	true	yıkılmış	dönüşen
+Relation	T1	T2	NoRel	true	yıkılmış	uğramıştır
+Relation	T1	T9	NoRel	true	yıkılmış	yıkılan
+Relation	T10	T13	NoRel	true	verilmiştir	dönüşen
+Relation	T10	T2	NoRel	true	verilmiştir	uğramıştır
+Relation	T10	T5	NoRel	true	verilmiştir	yaralanmıştır
+Relation	T10	T6	NoRel	true	verilmiştir	Deprem
+Relation	T10	T7	NoRel	true	verilmiştir	yıkılan
+Relation	T10	T9	NoRel	true	verilmiştir	yıkılan
+Relation	T11	T13	NoRel	true	Depremin	dönüşen
+Relation	T11	T6	NoRel	true	Depremin	Deprem
+Relation	T11	T9	NoRel	true	Depremin	yıkılan
+Relation	T12	T13	NoRel	true	kalmış	dönüşen
+Relation	T12	T4	NoRel	true	kalmış	ölmüş
+Relation	T12	T5	NoRel	true	kalmış	yaralanmıştır
+Relation	T12	T7	NoRel	true	kalmış	yıkılan
+Relation	T13	T0	NoRel	true	dönüşen	sarsıntı
+Relation	T13	T10	NoRel	true	dönüşen	verilmiştir
+Relation	T13	T3	NoRel	true	dönüşen	depremde
+Relation	T13	T5	NoRel	true	dönüşen	yaralanmıştır
+Relation	T2	T4	NoRel	true	uğramıştır	ölmüş
+Relation	T2	T5	NoRel	true	uğramıştır	yaralanmıştır
+Relation	T2	T8	NoRel	true	uğramıştır	kurulmuş
+Relation	T3	T0	NoRel	true	depremde	sarsıntı
+Relation	T3	T7	NoRel	true	depremde	yıkılan
+Relation	T4	T0	NoRel	true	ölmüş	sarsıntı
+Relation	T4	T12	NoRel	true	ölmüş	kalmış
+Relation	T4	T2	NoRel	true	ölmüş	uğramıştır
+Relation	T4	T5	NoRel	true	ölmüş	yaralanmıştır
+Relation	T4	T7	NoRel	true	ölmüş	yıkılan
+Relation	T4	T9	NoRel	true	ölmüş	yıkılan
+Relation	T5	T0	NoRel	true	yaralanmıştır	sarsıntı
+Relation	T5	T12	NoRel	true	yaralanmıştır	kalmış
+Relation	T5	T2	NoRel	true	yaralanmıştır	uğramıştır
+Relation	T6	T13	NoRel	true	Deprem	dönüşen
+Relation	T6	T2	NoRel	true	Deprem	uğramıştır
+Relation	T6	T3	NoRel	true	Deprem	depremde
+Relation	T7	T0	NoRel	true	yıkılan	sarsıntı
+Relation	T7	T5	NoRel	true	yıkılan	yaralanmıştır
+Relation	T7	T9	NoRel	true	yıkılan	yıkılan
+Relation	T8	T10	NoRel	true	kurulmuş	verilmiştir
+Relation	T8	T12	NoRel	true	kurulmuş	kalmış
+Relation	T8	T3	NoRel	true	kurulmuş	depremde
+Relation	T8	T4	NoRel	true	kurulmuş	ölmüş
+Relation	T9	T1	NoRel	true	yıkılan	yıkılmış
+Relation	T9	T12	NoRel	true	yıkılan	kalmış
+Relation	T9	T6	NoRel	true	yıkılan	Deprem

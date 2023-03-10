@@ -1,0 +1,94 @@
+Text	Önemli kaleleri tamir eden ve içlerine dizdar ile hisar eri yerleştiren Fatih Sultan Mehmet , yol boyunca karşılaşılan dirençleri kırarak ilerlemişti .	Sonunda Travnik Kalesini de zapt eden Fatih , ordugâhını buraya kurdurmuş ve Bosna kralının nerede olduğunu soruşturmuş , sonunda Kral Stjepan Tomašević’in Jajce Kalesi’ne sığındığını öğrenmişti .	Kral Stjepan Tomašević çok kuvvetli olan bu kalede batı yardımı gelinceye kadar dayanabileceğini sanıyordu .	Fatih ordunun büyük kısmıyla Travnik’te kalarak 25.000 kişiyle Kralı ele geçirmek üzere Mahmut Paşayı ileri sürmüştü .	Mahmut Paşa emrindeki askerlerle Jajce’ye giderken Kralın Szokol kalesine gittiğini öğrenerek bu kale üzerine yürüdü .
+Event	T0	ilerlemişti	EVENT	138
+Event	T1	zapt	EVENT	180
+Event	T2	geçirmek	EVENT	531
+Event	T3	sürmüştü	EVENT	566
+Event	T4	yürüdü	EVENT	687
+Event	T5	eden	EVENT	22
+Event	T6	yerleştiren	EVENT	60
+Event	T7	dirençleri	EVENT	119
+Event	T8	kırarak	EVENT	130
+Event	T9	kurdurmuş	EVENT	216
+Event	T10	soruşturmuş	EVENT	260
+Event	T11	sığındığını	EVENT	324
+Event	T12	öğrenmişti	EVENT	336
+Event	T13	sanıyordu	EVENT	446
+Event	T14	giderken	EVENT	619
+Event	T15	gittiğini	EVENT	651
+Relation	T7	T8	CauseEffect	true	dirençleri	kırarak
+Relation	T8	T7	EffectCause	true	kırarak	dirençleri
+Relation	T8	T0	CauseEffect	true	kırarak	ilerlemişti
+Relation	T0	T8	EffectCause	true	ilerlemişti	kırarak
+Relation	T10	T12	CauseEffect	true	soruşturmuş	öğrenmişti
+Relation	T12	T10	EffectCause	true	öğrenmişti	soruşturmuş
+Relation	T15	T4	CauseEffect	true	gittiğini	yürüdü
+Relation	T4	T15	EffectCause	true	yürüdü	gittiğini
+Relation	T12	T14	CauseEffect	true	öğrenmişti	giderken
+Relation	T14	T12	EffectCause	true	giderken	öğrenmişti
+Relation	T0	T14	NoRel	true	ilerlemişti	giderken
+Relation	T0	T15	NoRel	true	ilerlemişti	gittiğini
+Relation	T1	T10	NoRel	true	zapt	soruşturmuş
+Relation	T1	T11	NoRel	true	zapt	sığındığını
+Relation	T1	T12	NoRel	true	zapt	öğrenmişti
+Relation	T1	T14	NoRel	true	zapt	giderken
+Relation	T1	T15	NoRel	true	zapt	gittiğini
+Relation	T1	T5	NoRel	true	zapt	eden
+Relation	T1	T9	NoRel	true	zapt	kurdurmuş
+Relation	T10	T11	NoRel	true	soruşturmuş	sığındığını
+Relation	T10	T2	NoRel	true	soruşturmuş	geçirmek
+Relation	T10	T7	NoRel	true	soruşturmuş	dirençleri
+Relation	T11	T3	NoRel	true	sığındığını	sürmüştü
+Relation	T11	T5	NoRel	true	sığındığını	eden
+Relation	T11	T7	NoRel	true	sığındığını	dirençleri
+Relation	T12	T11	NoRel	true	öğrenmişti	sığındığını
+Relation	T12	T13	NoRel	true	öğrenmişti	sanıyordu
+Relation	T12	T15	NoRel	true	öğrenmişti	gittiğini
+Relation	T12	T5	NoRel	true	öğrenmişti	eden
+Relation	T13	T14	NoRel	true	sanıyordu	giderken
+Relation	T13	T2	NoRel	true	sanıyordu	geçirmek
+Relation	T14	T10	NoRel	true	giderken	soruşturmuş
+Relation	T14	T11	NoRel	true	giderken	sığındığını
+Relation	T14	T13	NoRel	true	giderken	sanıyordu
+Relation	T14	T5	NoRel	true	giderken	eden
+Relation	T14	T8	NoRel	true	giderken	kırarak
+Relation	T15	T10	NoRel	true	gittiğini	soruşturmuş
+Relation	T15	T14	NoRel	true	gittiğini	giderken
+Relation	T15	T2	NoRel	true	gittiğini	geçirmek
+Relation	T15	T3	NoRel	true	gittiğini	sürmüştü
+Relation	T15	T6	NoRel	true	gittiğini	yerleştiren
+Relation	T2	T0	NoRel	true	geçirmek	ilerlemişti
+Relation	T2	T10	NoRel	true	geçirmek	soruşturmuş
+Relation	T2	T11	NoRel	true	geçirmek	sığındığını
+Relation	T2	T14	NoRel	true	geçirmek	giderken
+Relation	T2	T3	NoRel	true	geçirmek	sürmüştü
+Relation	T2	T8	NoRel	true	geçirmek	kırarak
+Relation	T3	T10	NoRel	true	sürmüştü	soruşturmuş
+Relation	T3	T4	NoRel	true	sürmüştü	yürüdü
+Relation	T3	T6	NoRel	true	sürmüştü	yerleştiren
+Relation	T3	T9	NoRel	true	sürmüştü	kurdurmuş
+Relation	T4	T11	NoRel	true	yürüdü	sığındığını
+Relation	T4	T14	NoRel	true	yürüdü	giderken
+Relation	T4	T2	NoRel	true	yürüdü	geçirmek
+Relation	T4	T6	NoRel	true	yürüdü	yerleştiren
+Relation	T5	T1	NoRel	true	eden	zapt
+Relation	T5	T11	NoRel	true	eden	sığındığını
+Relation	T5	T7	NoRel	true	eden	dirençleri
+Relation	T5	T9	NoRel	true	eden	kurdurmuş
+Relation	T6	T0	NoRel	true	yerleştiren	ilerlemişti
+Relation	T6	T1	NoRel	true	yerleştiren	zapt
+Relation	T6	T15	NoRel	true	yerleştiren	gittiğini
+Relation	T6	T2	NoRel	true	yerleştiren	geçirmek
+Relation	T6	T3	NoRel	true	yerleştiren	sürmüştü
+Relation	T6	T5	NoRel	true	yerleştiren	eden
+Relation	T7	T0	NoRel	true	dirençleri	ilerlemişti
+Relation	T7	T11	NoRel	true	dirençleri	sığındığını
+Relation	T7	T12	NoRel	true	dirençleri	öğrenmişti
+Relation	T7	T13	NoRel	true	dirençleri	sanıyordu
+Relation	T7	T14	NoRel	true	dirençleri	giderken
+Relation	T7	T2	NoRel	true	dirençleri	geçirmek
+Relation	T7	T3	NoRel	true	dirençleri	sürmüştü
+Relation	T8	T2	NoRel	true	kırarak	geçirmek
+Relation	T8	T5	NoRel	true	kırarak	eden
+Relation	T8	T9	NoRel	true	kırarak	kurdurmuş
+Relation	T9	T0	NoRel	true	kurdurmuş	ilerlemişti
+Relation	T9	T6	NoRel	true	kurdurmuş	yerleştiren

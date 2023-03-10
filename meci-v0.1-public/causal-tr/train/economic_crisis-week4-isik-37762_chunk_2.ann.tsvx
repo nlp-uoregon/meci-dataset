@@ -1,0 +1,34 @@
+Text	SS , Holokost sırasında 5 , 5 ila 6 milyon Yahudi'nin ve milyonlarca diğer kurbanın soykırımındaki rolü en büyük olan örgüttü .	II. Dünya Savaşı ( 1939 - 45 ) sırasında örgütün bütün birimlerinin üyeleri savaş suçları ve insanlığa karşı suçlar işledi .	SS ayrıca ticari işletmelerde yer aldı ve toplama kampı mahkûmlarını köle işçi olarak kullandı .	Nazi Almanyası'nın yenilgisinden sonra SS ve NSDAP Nürnberg Uluslararası Askerî Ceza Mahkemesi tarafından suç örgütleri olarak yargılandı .	SS yönetimi içerisinde hayatta kalanlar arasında en yüksek rütbeye sahip olan Ernst Kaltenbrunner , Nürnberg davaları sırasında insanlığa karşı suçlardan suçlu bulundu ve 1946'da asılarak idam edildi .
+Event	T1	işledi	EVENT	244
+Event	T2	aldı	EVENT	287
+Event	T3	kullandı	EVENT	339
+Event	T4	yenilgisinden	EVENT	369
+Event	T5	yargılandı	EVENT	477
+Event	T6	bulundu	EVENT	650
+Event	T7	edildi	EVENT	683
+Event	T8	Holokost	EVENT	5
+Event	T9	II. Dünya Savaşı	EVENT	128
+Relation	T1	T8	CauseEffect	true	işledi	Holokost
+Relation	T8	T1	EffectCause	true	Holokost	işledi
+Relation	T3	T8	CauseEffect	true	kullandı	Holokost
+Relation	T8	T3	EffectCause	true	Holokost	kullandı
+Relation	T6	T7	CauseEffect	true	bulundu	edildi
+Relation	T7	T6	EffectCause	true	edildi	bulundu
+Relation	T5	T6	CauseEffect	true	yargılandı	bulundu
+Relation	T6	T5	EffectCause	true	bulundu	yargılandı
+Relation	T2	T3	NoRel	true	aldı	kullandı
+Relation	T2	T4	NoRel	true	aldı	yenilgisinden
+Relation	T3	T6	NoRel	true	kullandı	bulundu
+Relation	T4	T7	NoRel	true	yenilgisinden	edildi
+Relation	T4	T9	NoRel	true	yenilgisinden	II. Dünya Savaşı
+Relation	T5	T7	NoRel	true	yargılandı	edildi
+Relation	T5	T8	NoRel	true	yargılandı	Holokost
+Relation	T5	T9	NoRel	true	yargılandı	II. Dünya Savaşı
+Relation	T6	T4	NoRel	true	bulundu	yenilgisinden
+Relation	T7	T2	NoRel	true	edildi	aldı
+Relation	T7	T8	NoRel	true	edildi	Holokost
+Relation	T8	T6	NoRel	true	Holokost	bulundu
+Relation	T8	T9	NoRel	true	Holokost	II. Dünya Savaşı
+Relation	T9	T1	NoRel	true	II. Dünya Savaşı	işledi
+Relation	T9	T2	NoRel	true	II. Dünya Savaşı	aldı
+Relation	T9	T7	NoRel	true	II. Dünya Savaşı	edildi

@@ -1,0 +1,243 @@
+Text	Una unidad de los Ferrocarriles Catalanes que se encontraba aparcada en una vía muerta de la estación subterránea de Plaza de España sufrió un incendio que se avivó fuertemente debido a la corriente de aire generada por otro convoy que llegaba a la estación .	Un nutrido grupo de viajeros del referido convoy se vieron atrapados por la fuerte humareda del incendio , que inundó tanto el túnel de la estación como el interior de los coches del tren que acababa de llegar a la misma .	El pánico colectivo surgido en la multitud provocó una estampida que se saldó con la muerte por asfixia de tres personas y un total de ciento quince heridos .	- 18 de diciembre de 1966 : Accidente ferroviario de Villafranca del Campo : a causa de la niebla , chocan en Villafranca del Campo ( Teruel ) el ómnibus que realizaba el servicio matinal diario entre Teruel y Zaragoza y un mercancías que circulaba vacío en dirección a Valencia .	El suceso se saldó con 30 víctimas mortales y 6 heridos , todos ocupantes del tren de viajeros .
+Event	T0	aparcada	EVENT	60
+Event	T1	muerta	EVENT	80
+Event	T2	sufrió	EVENT	133
+Event	T3	incendio	EVENT	143
+Event	T4	corriente	EVENT	189
+Event	T5	generada	EVENT	207
+Event	T6	llegaba	EVENT	236
+Event	T7	atrapados	EVENT	319
+Event	T8	humareda	EVENT	343
+Event	T9	incendio	EVENT	356
+Event	T10	inundó	EVENT	371
+Event	T11	llegar	EVENT	463
+Event	T12	pánico	EVENT	486
+Event	T13	surgido	EVENT	503
+Event	T14	provocó	EVENT	526
+Event	T15	estampida	EVENT	538
+Event	T16	saldó	EVENT	555
+Event	T17	muerte	EVENT	568
+Event	T18	asfixia	EVENT	579
+Event	T19	heridos	EVENT	632
+Event	T20	Accidente	EVENT	670
+Event	T21	chocan	EVENT	742
+Event	T22	suceso	EVENT	926
+Event	T23	saldó	EVENT	936
+Event	T24	heridos	EVENT	971
+Event	T25	avivó	EVENT	159
+Relation	T4	T25	CauseEffect	true	corriente	avivó
+Relation	T25	T4	EffectCause	true	avivó	corriente
+Relation	T12	T15	CauseEffect	true	pánico	estampida
+Relation	T15	T12	EffectCause	true	estampida	pánico
+Relation	T15	T17	CauseEffect	true	estampida	muerte
+Relation	T17	T15	EffectCause	true	muerte	estampida
+Relation	T15	T19	CauseEffect	true	estampida	heridos
+Relation	T19	T15	EffectCause	true	heridos	estampida
+Relation	T22	T23	CauseEffect	true	suceso	saldó
+Relation	T23	T22	EffectCause	true	saldó	suceso
+Relation	T22	T24	CauseEffect	true	suceso	heridos
+Relation	T24	T22	EffectCause	true	heridos	suceso
+Relation	T0	T10	NoRel	true	aparcada	inundó
+Relation	T0	T19	NoRel	true	aparcada	heridos
+Relation	T0	T25	NoRel	true	aparcada	avivó
+Relation	T0	T6	NoRel	true	aparcada	llegaba
+Relation	T0	T8	NoRel	true	aparcada	humareda
+Relation	T1	T0	NoRel	true	muerta	aparcada
+Relation	T1	T16	NoRel	true	muerta	saldó
+Relation	T1	T19	NoRel	true	muerta	heridos
+Relation	T1	T2	NoRel	true	muerta	sufrió
+Relation	T1	T24	NoRel	true	muerta	heridos
+Relation	T1	T4	NoRel	true	muerta	corriente
+Relation	T10	T11	NoRel	true	inundó	llegar
+Relation	T10	T13	NoRel	true	inundó	surgido
+Relation	T10	T14	NoRel	true	inundó	provocó
+Relation	T10	T15	NoRel	true	inundó	estampida
+Relation	T10	T18	NoRel	true	inundó	asfixia
+Relation	T10	T20	NoRel	true	inundó	Accidente
+Relation	T10	T21	NoRel	true	inundó	chocan
+Relation	T10	T22	NoRel	true	inundó	suceso
+Relation	T10	T25	NoRel	true	inundó	avivó
+Relation	T10	T3	NoRel	true	inundó	incendio
+Relation	T10	T8	NoRel	true	inundó	humareda
+Relation	T10	T9	NoRel	true	inundó	incendio
+Relation	T11	T1	NoRel	true	llegar	muerta
+Relation	T11	T10	NoRel	true	llegar	inundó
+Relation	T11	T2	NoRel	true	llegar	sufrió
+Relation	T11	T21	NoRel	true	llegar	chocan
+Relation	T11	T3	NoRel	true	llegar	incendio
+Relation	T11	T4	NoRel	true	llegar	corriente
+Relation	T11	T5	NoRel	true	llegar	generada
+Relation	T11	T7	NoRel	true	llegar	atrapados
+Relation	T11	T8	NoRel	true	llegar	humareda
+Relation	T12	T10	NoRel	true	pánico	inundó
+Relation	T12	T13	NoRel	true	pánico	surgido
+Relation	T12	T20	NoRel	true	pánico	Accidente
+Relation	T12	T21	NoRel	true	pánico	chocan
+Relation	T12	T25	NoRel	true	pánico	avivó
+Relation	T12	T4	NoRel	true	pánico	corriente
+Relation	T12	T8	NoRel	true	pánico	humareda
+Relation	T13	T14	NoRel	true	surgido	provocó
+Relation	T13	T17	NoRel	true	surgido	muerte
+Relation	T13	T22	NoRel	true	surgido	suceso
+Relation	T13	T3	NoRel	true	surgido	incendio
+Relation	T13	T6	NoRel	true	surgido	llegaba
+Relation	T13	T9	NoRel	true	surgido	incendio
+Relation	T14	T11	NoRel	true	provocó	llegar
+Relation	T14	T16	NoRel	true	provocó	saldó
+Relation	T14	T18	NoRel	true	provocó	asfixia
+Relation	T14	T2	NoRel	true	provocó	sufrió
+Relation	T14	T20	NoRel	true	provocó	Accidente
+Relation	T14	T21	NoRel	true	provocó	chocan
+Relation	T14	T22	NoRel	true	provocó	suceso
+Relation	T14	T23	NoRel	true	provocó	saldó
+Relation	T14	T24	NoRel	true	provocó	heridos
+Relation	T14	T3	NoRel	true	provocó	incendio
+Relation	T14	T9	NoRel	true	provocó	incendio
+Relation	T15	T1	NoRel	true	estampida	muerta
+Relation	T15	T11	NoRel	true	estampida	llegar
+Relation	T15	T13	NoRel	true	estampida	surgido
+Relation	T15	T2	NoRel	true	estampida	sufrió
+Relation	T15	T21	NoRel	true	estampida	chocan
+Relation	T15	T22	NoRel	true	estampida	suceso
+Relation	T15	T23	NoRel	true	estampida	saldó
+Relation	T15	T25	NoRel	true	estampida	avivó
+Relation	T15	T3	NoRel	true	estampida	incendio
+Relation	T15	T4	NoRel	true	estampida	corriente
+Relation	T15	T6	NoRel	true	estampida	llegaba
+Relation	T15	T7	NoRel	true	estampida	atrapados
+Relation	T16	T1	NoRel	true	saldó	muerta
+Relation	T16	T10	NoRel	true	saldó	inundó
+Relation	T16	T11	NoRel	true	saldó	llegar
+Relation	T16	T12	NoRel	true	saldó	pánico
+Relation	T16	T13	NoRel	true	saldó	surgido
+Relation	T16	T14	NoRel	true	saldó	provocó
+Relation	T16	T24	NoRel	true	saldó	heridos
+Relation	T16	T25	NoRel	true	saldó	avivó
+Relation	T16	T4	NoRel	true	saldó	corriente
+Relation	T16	T8	NoRel	true	saldó	humareda
+Relation	T17	T12	NoRel	true	muerte	pánico
+Relation	T17	T13	NoRel	true	muerte	surgido
+Relation	T17	T16	NoRel	true	muerte	saldó
+Relation	T17	T20	NoRel	true	muerte	Accidente
+Relation	T17	T23	NoRel	true	muerte	saldó
+Relation	T18	T0	NoRel	true	asfixia	aparcada
+Relation	T18	T11	NoRel	true	asfixia	llegar
+Relation	T18	T2	NoRel	true	asfixia	sufrió
+Relation	T18	T21	NoRel	true	asfixia	chocan
+Relation	T18	T24	NoRel	true	asfixia	heridos
+Relation	T18	T3	NoRel	true	asfixia	incendio
+Relation	T18	T4	NoRel	true	asfixia	corriente
+Relation	T18	T5	NoRel	true	asfixia	generada
+Relation	T18	T9	NoRel	true	asfixia	incendio
+Relation	T19	T16	NoRel	true	heridos	saldó
+Relation	T19	T20	NoRel	true	heridos	Accidente
+Relation	T19	T22	NoRel	true	heridos	suceso
+Relation	T19	T24	NoRel	true	heridos	heridos
+Relation	T19	T6	NoRel	true	heridos	llegaba
+Relation	T2	T0	NoRel	true	sufrió	aparcada
+Relation	T2	T11	NoRel	true	sufrió	llegar
+Relation	T2	T12	NoRel	true	sufrió	pánico
+Relation	T2	T16	NoRel	true	sufrió	saldó
+Relation	T2	T20	NoRel	true	sufrió	Accidente
+Relation	T2	T22	NoRel	true	sufrió	suceso
+Relation	T2	T24	NoRel	true	sufrió	heridos
+Relation	T2	T4	NoRel	true	sufrió	corriente
+Relation	T2	T5	NoRel	true	sufrió	generada
+Relation	T2	T6	NoRel	true	sufrió	llegaba
+Relation	T2	T8	NoRel	true	sufrió	humareda
+Relation	T20	T0	NoRel	true	Accidente	aparcada
+Relation	T20	T14	NoRel	true	Accidente	provocó
+Relation	T20	T21	NoRel	true	Accidente	chocan
+Relation	T20	T4	NoRel	true	Accidente	corriente
+Relation	T20	T6	NoRel	true	Accidente	llegaba
+Relation	T20	T8	NoRel	true	Accidente	humareda
+Relation	T20	T9	NoRel	true	Accidente	incendio
+Relation	T21	T0	NoRel	true	chocan	aparcada
+Relation	T21	T1	NoRel	true	chocan	muerta
+Relation	T21	T12	NoRel	true	chocan	pánico
+Relation	T21	T13	NoRel	true	chocan	surgido
+Relation	T21	T19	NoRel	true	chocan	heridos
+Relation	T21	T20	NoRel	true	chocan	Accidente
+Relation	T21	T5	NoRel	true	chocan	generada
+Relation	T21	T7	NoRel	true	chocan	atrapados
+Relation	T21	T9	NoRel	true	chocan	incendio
+Relation	T22	T14	NoRel	true	suceso	provocó
+Relation	T22	T19	NoRel	true	suceso	heridos
+Relation	T22	T2	NoRel	true	suceso	sufrió
+Relation	T22	T3	NoRel	true	suceso	incendio
+Relation	T22	T4	NoRel	true	suceso	corriente
+Relation	T22	T6	NoRel	true	suceso	llegaba
+Relation	T23	T0	NoRel	true	saldó	aparcada
+Relation	T23	T12	NoRel	true	saldó	pánico
+Relation	T23	T18	NoRel	true	saldó	asfixia
+Relation	T23	T24	NoRel	true	saldó	heridos
+Relation	T24	T10	NoRel	true	heridos	inundó
+Relation	T24	T14	NoRel	true	heridos	provocó
+Relation	T24	T15	NoRel	true	heridos	estampida
+Relation	T24	T21	NoRel	true	heridos	chocan
+Relation	T24	T6	NoRel	true	heridos	llegaba
+Relation	T25	T14	NoRel	true	avivó	provocó
+Relation	T25	T17	NoRel	true	avivó	muerte
+Relation	T25	T18	NoRel	true	avivó	asfixia
+Relation	T25	T19	NoRel	true	avivó	heridos
+Relation	T25	T20	NoRel	true	avivó	Accidente
+Relation	T25	T5	NoRel	true	avivó	generada
+Relation	T25	T6	NoRel	true	avivó	llegaba
+Relation	T25	T7	NoRel	true	avivó	atrapados
+Relation	T3	T1	NoRel	true	incendio	muerta
+Relation	T3	T22	NoRel	true	incendio	suceso
+Relation	T3	T4	NoRel	true	incendio	corriente
+Relation	T3	T6	NoRel	true	incendio	llegaba
+Relation	T4	T0	NoRel	true	corriente	aparcada
+Relation	T4	T11	NoRel	true	corriente	llegar
+Relation	T4	T12	NoRel	true	corriente	pánico
+Relation	T4	T2	NoRel	true	corriente	sufrió
+Relation	T4	T3	NoRel	true	corriente	incendio
+Relation	T4	T5	NoRel	true	corriente	generada
+Relation	T4	T6	NoRel	true	corriente	llegaba
+Relation	T4	T7	NoRel	true	corriente	atrapados
+Relation	T4	T9	NoRel	true	corriente	incendio
+Relation	T5	T0	NoRel	true	generada	aparcada
+Relation	T5	T1	NoRel	true	generada	muerta
+Relation	T5	T10	NoRel	true	generada	inundó
+Relation	T5	T12	NoRel	true	generada	pánico
+Relation	T5	T14	NoRel	true	generada	provocó
+Relation	T5	T17	NoRel	true	generada	muerte
+Relation	T5	T21	NoRel	true	generada	chocan
+Relation	T5	T25	NoRel	true	generada	avivó
+Relation	T5	T3	NoRel	true	generada	incendio
+Relation	T5	T4	NoRel	true	generada	corriente
+Relation	T5	T7	NoRel	true	generada	atrapados
+Relation	T5	T9	NoRel	true	generada	incendio
+Relation	T6	T10	NoRel	true	llegaba	inundó
+Relation	T6	T12	NoRel	true	llegaba	pánico
+Relation	T6	T13	NoRel	true	llegaba	surgido
+Relation	T6	T16	NoRel	true	llegaba	saldó
+Relation	T6	T18	NoRel	true	llegaba	asfixia
+Relation	T6	T19	NoRel	true	llegaba	heridos
+Relation	T6	T20	NoRel	true	llegaba	Accidente
+Relation	T6	T23	NoRel	true	llegaba	saldó
+Relation	T6	T9	NoRel	true	llegaba	incendio
+Relation	T7	T10	NoRel	true	atrapados	inundó
+Relation	T7	T11	NoRel	true	atrapados	llegar
+Relation	T7	T12	NoRel	true	atrapados	pánico
+Relation	T7	T17	NoRel	true	atrapados	muerte
+Relation	T7	T25	NoRel	true	atrapados	avivó
+Relation	T7	T4	NoRel	true	atrapados	corriente
+Relation	T7	T5	NoRel	true	atrapados	generada
+Relation	T7	T6	NoRel	true	atrapados	llegaba
+Relation	T8	T0	NoRel	true	humareda	aparcada
+Relation	T8	T10	NoRel	true	humareda	inundó
+Relation	T8	T13	NoRel	true	humareda	surgido
+Relation	T8	T15	NoRel	true	humareda	estampida
+Relation	T8	T18	NoRel	true	humareda	asfixia
+Relation	T8	T2	NoRel	true	humareda	sufrió
+Relation	T8	T3	NoRel	true	humareda	incendio
+Relation	T9	T1	NoRel	true	incendio	muerta
+Relation	T9	T10	NoRel	true	incendio	inundó
+Relation	T9	T11	NoRel	true	incendio	llegar
+Relation	T9	T16	NoRel	true	incendio	saldó
+Relation	T9	T19	NoRel	true	incendio	heridos
+Relation	T9	T21	NoRel	true	incendio	chocan
+Relation	T9	T7	NoRel	true	incendio	atrapados
+Relation	T9	T8	NoRel	true	incendio	humareda

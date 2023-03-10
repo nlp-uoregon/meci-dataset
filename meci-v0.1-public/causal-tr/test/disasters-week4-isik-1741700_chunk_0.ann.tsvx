@@ -1,0 +1,46 @@
+Text	IKE KASIRGASI ( ) , 2008'de Küba ve ABD'de zarara yol açan büyük bir kasırga .	Ağustos sonunda Afrika yakınlarında başlayan bir Yeşil Burun tipi kasırgadır .	Daha sonra Karayipler'e yöneldi ve Küba'yı etkileyen en masraflı kasırgası oldu .	Ardından Teksas'ta karaya çıktı ve ABD'de karaya çıkan en masraflı üçüncü kasırga ve Teksas tarihinin en masraflı kasırgası oldu .	
+Event	T0	kasırga	EVENT	69
+Event	T1	başlayan	EVENT	115
+Event	T2	yöneldi	EVENT	182
+Event	T3	etkileyen	EVENT	201
+Event	T4	oldu	EVENT	233
+Event	T5	çıktı	EVENT	266
+Event	T6	çıkan	EVENT	289
+Event	T7	oldu	EVENT	364
+Event	T8	KASIRGASI	EVENT	4
+Event	T9	zarara	EVENT	43
+Relation	T1	T2	CauseEffect	true	başlayan	yöneldi
+Relation	T2	T1	EffectCause	true	yöneldi	başlayan
+Relation	T2	T3	CauseEffect	true	yöneldi	etkileyen
+Relation	T3	T2	EffectCause	true	etkileyen	yöneldi
+Relation	T2	T5	CauseEffect	true	yöneldi	çıktı
+Relation	T5	T2	EffectCause	true	çıktı	yöneldi
+Relation	T8	T4	CauseEffect	true	KASIRGASI	oldu
+Relation	T4	T8	EffectCause	true	oldu	KASIRGASI
+Relation	T0	T5	NoRel	true	kasırga	çıktı
+Relation	T0	T6	NoRel	true	kasırga	çıkan
+Relation	T0	T7	NoRel	true	kasırga	oldu
+Relation	T0	T8	NoRel	true	kasırga	KASIRGASI
+Relation	T1	T6	NoRel	true	başlayan	çıkan
+Relation	T2	T0	NoRel	true	yöneldi	kasırga
+Relation	T2	T8	NoRel	true	yöneldi	KASIRGASI
+Relation	T2	T9	NoRel	true	yöneldi	zarara
+Relation	T3	T6	NoRel	true	etkileyen	çıkan
+Relation	T4	T1	NoRel	true	oldu	başlayan
+Relation	T4	T2	NoRel	true	oldu	yöneldi
+Relation	T4	T5	NoRel	true	oldu	çıktı
+Relation	T4	T9	NoRel	true	oldu	zarara
+Relation	T5	T4	NoRel	true	çıktı	oldu
+Relation	T5	T6	NoRel	true	çıktı	çıkan
+Relation	T5	T9	NoRel	true	çıktı	zarara
+Relation	T6	T4	NoRel	true	çıkan	oldu
+Relation	T6	T8	NoRel	true	çıkan	KASIRGASI
+Relation	T7	T2	NoRel	true	oldu	yöneldi
+Relation	T7	T3	NoRel	true	oldu	etkileyen
+Relation	T7	T5	NoRel	true	oldu	çıktı
+Relation	T8	T2	NoRel	true	KASIRGASI	yöneldi
+Relation	T8	T5	NoRel	true	KASIRGASI	çıktı
+Relation	T8	T6	NoRel	true	KASIRGASI	çıkan
+Relation	T9	T0	NoRel	true	zarara	kasırga
+Relation	T9	T5	NoRel	true	zarara	çıktı
+Relation	T9	T7	NoRel	true	zarara	oldu

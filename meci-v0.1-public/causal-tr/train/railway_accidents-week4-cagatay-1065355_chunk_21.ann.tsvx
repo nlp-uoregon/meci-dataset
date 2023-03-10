@@ -1,0 +1,24 @@
+Text	Beş kişi öldü , bunların hepsi araçta olan kişilerdi .	- 14 Temmuz , 2009 – Bir Dakota , Minnesota , and Eastern yük treni , Quad Cities’in bir parçası Bettendorf , Iowa’da yerel avluda park etmiş demiryolu vagonlarıyla çarpıştı .	Savanna , Illinois’den makinist ve kondüktörün ikisi de öldü .	Lokomotifin ön tarafı şiddetli hasar gördü , hurdaya çıkma olasılığı var .	- 24 Temmuz , 2009 – Rudine , Hırvatistan – Zagrep - Split seferini yapmakta olan bir 521 numaralı HŽ ICN tilting treni , Rudine köyü yakını Labin Dalmatinski ve Kaštel Stari arasında saat 10: 08 de raydan çıktı .
+Event	T0	öldü	EVENT	9
+Event	T1	çarpıştı	EVENT	220
+Event	T2	öldü	EVENT	287
+Event	T3	gördü	EVENT	331
+Event	T4	tilting	EVENT	475
+Event	T5	çıktı	EVENT	575
+Event	T6	seferini	EVENT	428
+Relation	T1	T2	CauseEffect	true	çarpıştı	öldü
+Relation	T2	T1	EffectCause	true	öldü	çarpıştı
+Relation	T1	T3	CauseEffect	true	çarpıştı	gördü
+Relation	T3	T1	EffectCause	true	gördü	çarpıştı
+Relation	T0	T2	NoRel	true	öldü	öldü
+Relation	T0	T4	NoRel	true	öldü	tilting
+Relation	T1	T6	NoRel	true	çarpıştı	seferini
+Relation	T2	T3	NoRel	true	öldü	gördü
+Relation	T2	T4	NoRel	true	öldü	tilting
+Relation	T2	T5	NoRel	true	öldü	çıktı
+Relation	T3	T0	NoRel	true	gördü	öldü
+Relation	T3	T2	NoRel	true	gördü	öldü
+Relation	T3	T4	NoRel	true	gördü	tilting
+Relation	T4	T2	NoRel	true	tilting	öldü
+Relation	T5	T3	NoRel	true	çıktı	gördü
+Relation	T6	T1	NoRel	true	seferini	çarpıştı

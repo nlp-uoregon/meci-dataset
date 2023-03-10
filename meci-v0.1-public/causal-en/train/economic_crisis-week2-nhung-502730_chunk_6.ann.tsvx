@@ -1,0 +1,81 @@
+Text	Power was not fully restored until late the following day .	Among the outcomes of the blackout were detailed restoration procedures that are well documented and used in operator training to reduce restoration time .	The blackout occurred when the city was facing a severe financial crisis and its residents were terrified by the Son of Sam murders .	The nation as a whole , especially New York City , was suffering from a protracted economic downturn , and commentators have contrasted the event with the good - natured " Where Were You When the Lights Went Out ? " atmosphere of 1965 .	Some pointed to the financial crisis as a root cause of the disorder ; others noted the hot July weather , as the East Coast was in the middle of a brutal heat wave .
+Event	T0	restored	EVENT	20
+Event	T1	outcomes	EVENT	70
+Event	T10	terrified	EVENT	312
+Event	T11	murders	EVENT	340
+Event	T12	suffering	EVENT	405
+Event	T13	downturn	EVENT	442
+Event	T14	contrasted	EVENT	475
+Event	T15	event	EVENT	490
+Event	T17	pointed	EVENT	592
+Event	T18	crisis	EVENT	617
+Event	T19	disorder	EVENT	647
+Event	T2	blackout	EVENT	86
+Event	T20	noted	EVENT	665
+Event	T21	wave	EVENT	747
+Event	T24	procedures	EVENT	121
+Event	T4	documented	EVENT	146
+Event	T5	used	EVENT	161
+Event	T6	training	EVENT	178
+Event	T7	occurred	EVENT	229
+Event	T8	facing	EVENT	256
+Event	T9	crisis	EVENT	282
+Relation	T2	T24	CauseEffect	true	blackout	procedures
+Relation	T24	T2	EffectCause	true	procedures	blackout
+Relation	T9	T7	CauseEffect	true	crisis	occurred
+Relation	T7	T9	EffectCause	true	occurred	crisis
+Relation	T11	T10	CauseEffect	true	murders	terrified
+Relation	T10	T11	EffectCause	true	terrified	murders
+Relation	T13	T12	CauseEffect	true	downturn	suffering
+Relation	T12	T13	EffectCause	true	suffering	downturn
+Relation	T19	T18	CauseEffect	true	disorder	crisis
+Relation	T18	T19	EffectCause	true	crisis	disorder
+Relation	T21	T18	CauseEffect	true	wave	crisis
+Relation	T18	T21	EffectCause	true	crisis	wave
+Relation	T0	T11	NoRel	true	restored	murders
+Relation	T0	T14	NoRel	true	restored	contrasted
+Relation	T0	T18	NoRel	true	restored	crisis
+Relation	T1	T13	NoRel	true	outcomes	downturn
+Relation	T1	T14	NoRel	true	outcomes	contrasted
+Relation	T1	T15	NoRel	true	outcomes	event
+Relation	T1	T2	NoRel	true	outcomes	blackout
+Relation	T1	T4	NoRel	true	outcomes	documented
+Relation	T1	T9	NoRel	true	outcomes	crisis
+Relation	T10	T0	NoRel	true	terrified	restored
+Relation	T10	T1	NoRel	true	terrified	outcomes
+Relation	T10	T20	NoRel	true	terrified	noted
+Relation	T11	T1	NoRel	true	murders	outcomes
+Relation	T11	T12	NoRel	true	murders	suffering
+Relation	T11	T9	NoRel	true	murders	crisis
+Relation	T12	T24	NoRel	true	suffering	procedures
+Relation	T13	T7	NoRel	true	downturn	occurred
+Relation	T14	T8	NoRel	true	contrasted	facing
+Relation	T15	T13	NoRel	true	event	downturn
+Relation	T15	T2	NoRel	true	event	blackout
+Relation	T17	T7	NoRel	true	pointed	occurred
+Relation	T18	T13	NoRel	true	crisis	downturn
+Relation	T18	T4	NoRel	true	crisis	documented
+Relation	T19	T0	NoRel	true	disorder	restored
+Relation	T19	T15	NoRel	true	disorder	event
+Relation	T19	T20	NoRel	true	disorder	noted
+Relation	T2	T14	NoRel	true	blackout	contrasted
+Relation	T20	T14	NoRel	true	noted	contrasted
+Relation	T20	T2	NoRel	true	noted	blackout
+Relation	T24	T13	NoRel	true	procedures	downturn
+Relation	T24	T15	NoRel	true	procedures	event
+Relation	T24	T17	NoRel	true	procedures	pointed
+Relation	T24	T7	NoRel	true	procedures	occurred
+Relation	T4	T14	NoRel	true	documented	contrasted
+Relation	T5	T15	NoRel	true	used	event
+Relation	T5	T7	NoRel	true	used	occurred
+Relation	T6	T4	NoRel	true	training	documented
+Relation	T7	T1	NoRel	true	occurred	outcomes
+Relation	T8	T11	NoRel	true	facing	murders
+Relation	T8	T12	NoRel	true	facing	suffering
+Relation	T8	T18	NoRel	true	facing	crisis
+Relation	T8	T20	NoRel	true	facing	noted
+Relation	T8	T5	NoRel	true	facing	used
+Relation	T9	T10	NoRel	true	crisis	terrified
+Relation	T9	T14	NoRel	true	crisis	contrasted
+Relation	T9	T18	NoRel	true	crisis	crisis
+Relation	T9	T24	NoRel	true	crisis	procedures

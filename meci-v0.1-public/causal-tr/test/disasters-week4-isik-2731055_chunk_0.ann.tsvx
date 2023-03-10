@@ -1,0 +1,30 @@
+Text	262 GÜNEYBATI ANADOLU DEPREMI Anadolu'nun batı ve güney kıyılarında yer alan şehirleri Roma'nın Efes kenti ile beraber 262 yılında veya muhtemelen 261. yılında harap etmiştir .	Bu depremin merkez_üssü büyük olasılıkla güney Ege Denizi'ndeydi .	Dönemin raporları , muhtemelen bir tsunami nedeniyle birçok şehrin denizden gelen suyun altında kaldığını belirtmektedir .	Akdeniz'deki antik depremlerin en kapsamlı değerlendirmesini yapan Nicholas Ambraseys , bu depremle ilgili en yazılı referansların en önemli kaynağını Trebellius Pollio'nun yazdığı iddia edilen _ Historia Augusta _ { { ' } } dan bir anlatımı aktarır .	Bu kaynak , sözde biyografik detaylarının çoğunun doğruluğunun şüpheli olmasından dolayı sorunludur .
+Event	T0	etmiştir	EVENT	166
+Event	T1	depremin	EVENT	180
+Event	T2	tsunami	EVENT	279
+Event	T3	belirtmektedir	EVENT	350
+Event	T4	aktarır	EVENT	609
+Event	T5	DEPREMI	EVENT	22
+Event	T6	raporları	EVENT	252
+Relation	T5	T0	CauseEffect	true	DEPREMI	etmiştir
+Relation	T0	T5	EffectCause	true	etmiştir	DEPREMI
+Relation	T5	T6	CauseEffect	true	DEPREMI	raporları
+Relation	T6	T5	EffectCause	true	raporları	DEPREMI
+Relation	T6	T3	CauseEffect	true	raporları	belirtmektedir
+Relation	T3	T6	EffectCause	true	belirtmektedir	raporları
+Relation	T0	T3	NoRel	true	etmiştir	belirtmektedir
+Relation	T0	T4	NoRel	true	etmiştir	aktarır
+Relation	T1	T3	NoRel	true	depremin	belirtmektedir
+Relation	T1	T5	NoRel	true	depremin	DEPREMI
+Relation	T1	T6	NoRel	true	depremin	raporları
+Relation	T2	T1	NoRel	true	tsunami	depremin
+Relation	T2	T4	NoRel	true	tsunami	aktarır
+Relation	T2	T6	NoRel	true	tsunami	raporları
+Relation	T3	T2	NoRel	true	belirtmektedir	tsunami
+Relation	T3	T4	NoRel	true	belirtmektedir	aktarır
+Relation	T4	T0	NoRel	true	aktarır	etmiştir
+Relation	T4	T2	NoRel	true	aktarır	tsunami
+Relation	T4	T5	NoRel	true	aktarır	DEPREMI
+Relation	T5	T3	NoRel	true	DEPREMI	belirtmektedir
+Relation	T5	T4	NoRel	true	DEPREMI	aktarır
+Relation	T6	T4	NoRel	true	raporları	aktarır

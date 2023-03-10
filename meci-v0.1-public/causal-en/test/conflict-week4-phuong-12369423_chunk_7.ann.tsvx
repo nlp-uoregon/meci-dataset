@@ -1,0 +1,69 @@
+Text	On the Polish side the fighting was done mostly by a force privately financed by John Sobieski .	He gained reputation as an able , courageous commander and a patriot , having invested part of his personal fortune in the defense of the Commonwealth .	In 1674 he was elected King of Poland and ruled now as John III .	Sobieski 's reputation also preceded him in the Ottoman Empire , and his victory several years later at the battle of Vienna would ensure his reputation as the top commander fighting the Ottomans — however even he would not be able to stop the Commonwealth from decline and introduce reforms that would save the country .	The Commonwealth did regain the territories lost in this war after the Polish – Ottoman War ( 1683 – 1699 ) in 1699 Treaty of Karlowitz , but that was one of the last of its victories .
+Event	T0	fighting	EVENT	23
+Event	T1	done	EVENT	36
+Event	T2	financed	EVENT	69
+Event	T3	reputation	EVENT	107
+Event	T4	invested	EVENT	175
+Event	T5	elected	EVENT	265
+Event	T6	ruled	EVENT	292
+Event	T7	reputation	EVENT	328
+Event	T8	preceded	EVENT	344
+Event	T9	victory	EVENT	389
+Event	T10	battle	EVENT	424
+Event	T11	ensure	EVENT	447
+Event	T12	reputation	EVENT	458
+Event	T13	fighting	EVENT	490
+Event	T14	decline	EVENT	578
+Event	T15	reforms	EVENT	600
+Event	T16	regain	EVENT	659
+Event	T17	lost	EVENT	682
+Event	T18	war	EVENT	695
+Event	T19	Treaty	EVENT	754
+Event	T20	victories	EVENT	812
+Event	T21	defense	EVENT	220
+Relation	T2	T0	CauseEffect	true	financed	fighting
+Relation	T0	T2	EffectCause	true	fighting	financed
+Relation	T21	T4	CauseEffect	true	defense	invested
+Relation	T4	T21	EffectCause	true	invested	defense
+Relation	T5	T6	CauseEffect	true	elected	ruled
+Relation	T6	T5	EffectCause	true	ruled	elected
+Relation	T9	T12	CauseEffect	true	victory	reputation
+Relation	T12	T9	EffectCause	true	reputation	victory
+Relation	T0	T11	NoRel	true	fighting	ensure
+Relation	T0	T9	NoRel	true	fighting	victory
+Relation	T10	T13	NoRel	true	battle	fighting
+Relation	T10	T7	NoRel	true	battle	reputation
+Relation	T11	T9	NoRel	true	ensure	victory
+Relation	T12	T15	NoRel	true	reputation	reforms
+Relation	T14	T2	NoRel	true	decline	financed
+Relation	T14	T4	NoRel	true	decline	invested
+Relation	T15	T4	NoRel	true	reforms	invested
+Relation	T16	T11	NoRel	true	regain	ensure
+Relation	T16	T15	NoRel	true	regain	reforms
+Relation	T17	T4	NoRel	true	lost	invested
+Relation	T18	T11	NoRel	true	war	ensure
+Relation	T19	T10	NoRel	true	Treaty	battle
+Relation	T19	T16	NoRel	true	Treaty	regain
+Relation	T19	T17	NoRel	true	Treaty	lost
+Relation	T19	T18	NoRel	true	Treaty	war
+Relation	T19	T2	NoRel	true	Treaty	financed
+Relation	T19	T3	NoRel	true	Treaty	reputation
+Relation	T19	T6	NoRel	true	Treaty	ruled
+Relation	T2	T6	NoRel	true	financed	ruled
+Relation	T20	T2	NoRel	true	victories	financed
+Relation	T21	T1	NoRel	true	defense	done
+Relation	T21	T19	NoRel	true	defense	Treaty
+Relation	T3	T15	NoRel	true	reputation	reforms
+Relation	T3	T7	NoRel	true	reputation	reputation
+Relation	T4	T10	NoRel	true	invested	battle
+Relation	T5	T12	NoRel	true	elected	reputation
+Relation	T5	T18	NoRel	true	elected	war
+Relation	T6	T18	NoRel	true	ruled	war
+Relation	T7	T0	NoRel	true	reputation	fighting
+Relation	T7	T15	NoRel	true	reputation	reforms
+Relation	T8	T11	NoRel	true	preceded	ensure
+Relation	T8	T16	NoRel	true	preceded	regain
+Relation	T8	T6	NoRel	true	preceded	ruled
+Relation	T8	T9	NoRel	true	preceded	victory
+Relation	T9	T13	NoRel	true	victory	fighting
+Relation	T9	T8	NoRel	true	victory	preceded

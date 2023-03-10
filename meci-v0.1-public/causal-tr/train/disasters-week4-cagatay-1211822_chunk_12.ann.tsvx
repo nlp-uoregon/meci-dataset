@@ -1,0 +1,81 @@
+Text	4 metrelik bir tsunami Iwate ilini vurdu .	Sendai'deki Wakabayashi - ku da ciddi bir şekilde dalgalar tarafından vuruldu .	2004 Hint Okyanusu depremi ve tsunamisinde olduğu gibi , Japonya'da da 2004 tsunamisinden çok daha yerel olsa bile tsunami , depremden çok daha fazla zarara yol açtı .	Tsunaminin " bütün olarak kasabaları süpürdüğü "ne ilişkin haberler vardı , bunlardan biri 9.500 kişinin kaybolduğu Minamisanriku'ydu .	14 Mart tarihine kadar kasabada toplam bin ceset bulunmuştu .
+Event	T0	tsunami	EVENT	15
+Event	T1	vurdu	EVENT	35
+Event	T2	vuruldu	EVENT	113
+Event	T3	depremi	EVENT	142
+Event	T4	tsunamisinde	EVENT	153
+Event	T5	tsunamisinden	EVENT	199
+Event	T6	tsunami	EVENT	238
+Event	T7	açtı	EVENT	284
+Event	T8	Tsunaminin	EVENT	291
+Event	T9	süpürdüğü	EVENT	328
+Event	T10	haberler	EVENT	350
+Event	T11	kaybolduğu	EVENT	396
+Event	T12	bulunmuştu	EVENT	476
+Relation	T3	T4	CauseEffect	true	depremi	tsunamisinde
+Relation	T4	T3	EffectCause	true	tsunamisinde	depremi
+Relation	T6	T7	CauseEffect	true	tsunami	açtı
+Relation	T7	T6	EffectCause	true	açtı	tsunami
+Relation	T8	T11	CauseEffect	true	Tsunaminin	kaybolduğu
+Relation	T11	T8	EffectCause	true	kaybolduğu	Tsunaminin
+Relation	T0	T10	NoRel	true	tsunami	haberler
+Relation	T0	T12	NoRel	true	tsunami	bulunmuştu
+Relation	T0	T5	NoRel	true	tsunami	tsunamisinden
+Relation	T0	T7	NoRel	true	tsunami	açtı
+Relation	T0	T8	NoRel	true	tsunami	Tsunaminin
+Relation	T1	T11	NoRel	true	vurdu	kaybolduğu
+Relation	T1	T12	NoRel	true	vurdu	bulunmuştu
+Relation	T1	T3	NoRel	true	vurdu	depremi
+Relation	T1	T4	NoRel	true	vurdu	tsunamisinde
+Relation	T1	T5	NoRel	true	vurdu	tsunamisinden
+Relation	T10	T0	NoRel	true	haberler	tsunami
+Relation	T10	T1	NoRel	true	haberler	vurdu
+Relation	T10	T12	NoRel	true	haberler	bulunmuştu
+Relation	T10	T2	NoRel	true	haberler	vuruldu
+Relation	T10	T7	NoRel	true	haberler	açtı
+Relation	T11	T4	NoRel	true	kaybolduğu	tsunamisinde
+Relation	T11	T5	NoRel	true	kaybolduğu	tsunamisinden
+Relation	T12	T0	NoRel	true	bulunmuştu	tsunami
+Relation	T12	T1	NoRel	true	bulunmuştu	vurdu
+Relation	T12	T6	NoRel	true	bulunmuştu	tsunami
+Relation	T12	T9	NoRel	true	bulunmuştu	süpürdüğü
+Relation	T2	T1	NoRel	true	vuruldu	vurdu
+Relation	T2	T5	NoRel	true	vuruldu	tsunamisinden
+Relation	T2	T7	NoRel	true	vuruldu	açtı
+Relation	T2	T8	NoRel	true	vuruldu	Tsunaminin
+Relation	T3	T0	NoRel	true	depremi	tsunami
+Relation	T3	T10	NoRel	true	depremi	haberler
+Relation	T3	T11	NoRel	true	depremi	kaybolduğu
+Relation	T3	T12	NoRel	true	depremi	bulunmuştu
+Relation	T3	T7	NoRel	true	depremi	açtı
+Relation	T3	T9	NoRel	true	depremi	süpürdüğü
+Relation	T4	T10	NoRel	true	tsunamisinde	haberler
+Relation	T4	T2	NoRel	true	tsunamisinde	vuruldu
+Relation	T4	T5	NoRel	true	tsunamisinde	tsunamisinden
+Relation	T4	T7	NoRel	true	tsunamisinde	açtı
+Relation	T5	T0	NoRel	true	tsunamisinden	tsunami
+Relation	T5	T12	NoRel	true	tsunamisinden	bulunmuştu
+Relation	T5	T3	NoRel	true	tsunamisinden	depremi
+Relation	T5	T4	NoRel	true	tsunamisinden	tsunamisinde
+Relation	T5	T6	NoRel	true	tsunamisinden	tsunami
+Relation	T5	T8	NoRel	true	tsunamisinden	Tsunaminin
+Relation	T5	T9	NoRel	true	tsunamisinden	süpürdüğü
+Relation	T6	T10	NoRel	true	tsunami	haberler
+Relation	T6	T2	NoRel	true	tsunami	vuruldu
+Relation	T6	T3	NoRel	true	tsunami	depremi
+Relation	T6	T5	NoRel	true	tsunami	tsunamisinden
+Relation	T7	T0	NoRel	true	açtı	tsunami
+Relation	T7	T10	NoRel	true	açtı	haberler
+Relation	T7	T12	NoRel	true	açtı	bulunmuştu
+Relation	T7	T2	NoRel	true	açtı	vuruldu
+Relation	T7	T4	NoRel	true	açtı	tsunamisinde
+Relation	T7	T5	NoRel	true	açtı	tsunamisinden
+Relation	T7	T9	NoRel	true	açtı	süpürdüğü
+Relation	T8	T1	NoRel	true	Tsunaminin	vurdu
+Relation	T8	T10	NoRel	true	Tsunaminin	haberler
+Relation	T8	T2	NoRel	true	Tsunaminin	vuruldu
+Relation	T8	T9	NoRel	true	Tsunaminin	süpürdüğü
+Relation	T9	T0	NoRel	true	süpürdüğü	tsunami
+Relation	T9	T11	NoRel	true	süpürdüğü	kaybolduğu
+Relation	T9	T2	NoRel	true	süpürdüğü	vuruldu
+Relation	T9	T7	NoRel	true	süpürdüğü	açtı

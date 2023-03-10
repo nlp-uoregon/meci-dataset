@@ -1,0 +1,33 @@
+Text	El accidente se salda solamente con daños materiales .	- 1898 -___13 DE MAYO : en Lisboa descarrila un tranvía de sangre , sin daños personales .	- 1899 -___¿ ? DE ¿ ABRIL ? : en la estación de Coímbra B un tren procedente de Coímbra A choca con otro que se hallaba detenido en la primera .	Se produce un herido leve .	- 9 DE JULIO : dos trenes chocan frontalmente en la estación de Braço de Prata , ubicada en las cercanías de Lisboa y perteneciente a la línea del Norte .
+Event	T0	accidente	EVENT	3
+Event	T2	descarrila	EVENT	89
+Event	T3	choca	EVENT	236
+Event	T4	detenido	EVENT	266
+Event	T5	produce	EVENT	294
+Event	T6	chocan	EVENT	345
+Event	T7	daños	EVENT	36
+Event	T1	herido	EVENT	305
+Relation	T0	T7	CauseEffect	true	accidente	daños
+Relation	T7	T0	EffectCause	true	daños	accidente
+Relation	T3	T1	CauseEffect	true	choca	herido
+Relation	T1	T3	EffectCause	true	herido	choca
+Relation	T0	T1	NoRel	true	accidente	herido
+Relation	T0	T3	NoRel	true	accidente	choca
+Relation	T1	T0	NoRel	true	herido	accidente
+Relation	T1	T6	NoRel	true	herido	chocan
+Relation	T1	T7	NoRel	true	herido	daños
+Relation	T2	T1	NoRel	true	descarrila	herido
+Relation	T2	T3	NoRel	true	descarrila	choca
+Relation	T2	T5	NoRel	true	descarrila	produce
+Relation	T2	T7	NoRel	true	descarrila	daños
+Relation	T3	T2	NoRel	true	choca	descarrila
+Relation	T4	T2	NoRel	true	detenido	descarrila
+Relation	T4	T3	NoRel	true	detenido	choca
+Relation	T4	T5	NoRel	true	detenido	produce
+Relation	T4	T6	NoRel	true	detenido	chocan
+Relation	T4	T7	NoRel	true	detenido	daños
+Relation	T5	T0	NoRel	true	produce	accidente
+Relation	T5	T2	NoRel	true	produce	descarrila
+Relation	T6	T0	NoRel	true	chocan	accidente
+Relation	T6	T7	NoRel	true	chocan	daños
+Relation	T7	T6	NoRel	true	daños	chocan

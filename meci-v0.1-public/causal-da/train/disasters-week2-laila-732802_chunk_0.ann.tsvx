@@ -1,0 +1,33 @@
+Text	thumb| NASA-satellitbillede klokken 12:10 UTC af stormen .	thumb| Mange træer blev væltet eller skadet , her i Beder syd for Århus .	thumb| Væltet træ ved cykelsti i London .	OKTOBERORKANEN 2013 var en kortvarig , men yderst kraftig storm , der ramte dele af Nordvesteuropa den 27. –_30. oktober 2013 og forårsagede mindst 19 dødsfald .	Der var forudsagt vindstyrker på op til 130-145 km/t over Sydengland , men der blev om eftermiddagen den 28. målt vindstød i Sønderjylland på 53 m/s svarende til 193 km/t eller 103 knob , hvilket er rekorden for Danmark .
+Event	T0	stormen	EVENT	49
+Event	T1	væltet	EVENT	83
+Event	T2	skadet	EVENT	96
+Event	T3	storm	EVENT	233
+Event	T4	ramte	EVENT	245
+Event	T5	forårsagede	EVENT	304
+Event	T6	dødsfald	EVENT	326
+Relation	T0	T1	CauseEffect	true	stormen	væltet
+Relation	T1	T0	EffectCause	true	væltet	stormen
+Relation	T0	T2	CauseEffect	true	stormen	skadet
+Relation	T2	T0	EffectCause	true	skadet	stormen
+Relation	T3	T4	CauseEffect	true	storm	ramte
+Relation	T4	T3	EffectCause	true	ramte	storm
+Relation	T3	T5	CauseEffect	true	storm	forårsagede
+Relation	T5	T3	EffectCause	true	forårsagede	storm
+Relation	T3	T6	CauseEffect	true	storm	dødsfald
+Relation	T6	T3	EffectCause	true	dødsfald	storm
+Relation	T0	T3	NoRel	true	stormen	storm
+Relation	T0	T6	NoRel	true	stormen	dødsfald
+Relation	T2	T3	NoRel	true	skadet	storm
+Relation	T2	T4	NoRel	true	skadet	ramte
+Relation	T2	T5	NoRel	true	skadet	forårsagede
+Relation	T3	T0	NoRel	true	storm	stormen
+Relation	T4	T0	NoRel	true	ramte	stormen
+Relation	T4	T1	NoRel	true	ramte	væltet
+Relation	T4	T2	NoRel	true	ramte	skadet
+Relation	T4	T5	NoRel	true	ramte	forårsagede
+Relation	T5	T1	NoRel	true	forårsagede	væltet
+Relation	T5	T2	NoRel	true	forårsagede	skadet
+Relation	T5	T6	NoRel	true	forårsagede	dødsfald
+Relation	T6	T1	NoRel	true	dødsfald	væltet
+Relation	T6	T5	NoRel	true	dødsfald	forårsagede

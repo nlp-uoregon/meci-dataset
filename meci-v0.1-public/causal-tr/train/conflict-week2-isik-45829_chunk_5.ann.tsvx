@@ -1,0 +1,28 @@
+Text	Sampson ve Georgiou , Lefkoşa'da " Cinayet Yolu " ismini alan Ledra Caddesi'nde işlenen bir dizi cinayete katıldı ve çok sayıda İngiliz askeri , polis ve sivili vurarak öldürdüler .	En az 15 cinayete karıştı .	İngiliz kaynaklarına göre gerçek sayı çok daha yüksekti .	Kurbanları arasında üç polis çavuşu vardı ve Mayıs 1957'de Sampson cinayetlerinden biri için yargılandı .	Cinayetini itiraf etti ancak daha sonra itirafının işkence altında alındığı gerekçesiyle beraat etti .
+Event	T1	katıldı	EVENT	106
+Event	T11	vurarak	EVENT	161
+Event	T2	öldürdüler	EVENT	169
+Event	T3	karıştı	EVENT	200
+Event	T4	cinayetlerinden	EVENT	335
+Event	T5	yargılandı	EVENT	361
+Event	T7	işkence	EVENT	425
+Relation	T4	T5	CauseEffect	true	cinayetlerinden	yargılandı
+Relation	T5	T4	EffectCause	true	yargılandı	cinayetlerinden
+Relation	T1	T11	CauseEffect	true	katıldı	vurarak
+Relation	T11	T1	EffectCause	true	vurarak	katıldı
+Relation	T11	T2	CauseEffect	true	vurarak	öldürdüler
+Relation	T2	T11	EffectCause	true	öldürdüler	vurarak
+Relation	T1	T3	CauseEffect	true	katıldı	karıştı
+Relation	T3	T1	EffectCause	true	karıştı	katıldı
+Relation	T11	T4	NoRel	true	vurarak	cinayetlerinden
+Relation	T2	T1	NoRel	true	öldürdüler	katıldı
+Relation	T3	T2	NoRel	true	karıştı	öldürdüler
+Relation	T3	T4	NoRel	true	karıştı	cinayetlerinden
+Relation	T3	T5	NoRel	true	karıştı	yargılandı
+Relation	T4	T11	NoRel	true	cinayetlerinden	vurarak
+Relation	T4	T2	NoRel	true	cinayetlerinden	öldürdüler
+Relation	T5	T11	NoRel	true	yargılandı	vurarak
+Relation	T5	T2	NoRel	true	yargılandı	öldürdüler
+Relation	T5	T7	NoRel	true	yargılandı	işkence
+Relation	T7	T11	NoRel	true	işkence	vurarak
+Relation	T7	T2	NoRel	true	işkence	öldürdüler

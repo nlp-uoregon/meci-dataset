@@ -1,0 +1,63 @@
+Text	küçükresim | sağ | Depremin merkez_üssü ve etki alanın gösteren Amerika Birleşik Devletleri Jeoloji Araştırmaları Kurumu haritası 2013 BELUCISTAN DEPREMLERI Eylül 2013'te güneybatı Pakistan'da , Belucistan eyaletinde meydana gelen depremlerdir .	Ana şok , 24 Eylül 2013 tarihinde Pakistan'ın güneybatısındaki Awaran şehri yakınlarında 7.7 M _ ( l ) büyüklüğünde olan çok kuvvetli depremdi .	En az 825 kişi öldüğü gibi , yüzlerce kişi de yaralandı .	1 dakika süren deprem Karachi'den , Lahor'a ve Hyderabad'a kadar geniş bir bölgede hissedildi ve panik yarattı .	28 Eylül 2013 tarihinde bu sefer 6.8 M _ ( l ) büyüklüğünde bir deprem 14 kilometre kadar kuzeyde oldu ve 22 kişi öldü .
+Event	T0	Depremin	EVENT	19
+Event	T1	DEPREMLERI	EVENT	146
+Event	T2	depremlerdir	EVENT	231
+Event	T3	şok	EVENT	250
+Event	T4	depremdi	EVENT	380
+Event	T5	öldüğü	EVENT	406
+Event	T6	yaralandı	EVENT	437
+Event	T8	hissedildi	EVENT	532
+Event	T9	yarattı	EVENT	552
+Event	T10	deprem	EVENT	626
+Event	T11	oldu	EVENT	660
+Event	T12	öldü	EVENT	676
+Event	T7	süren	EVENT	458
+Relation	T3	T5	CauseEffect	true	şok	öldüğü
+Relation	T5	T3	EffectCause	true	öldüğü	şok
+Relation	T3	T6	CauseEffect	true	şok	yaralandı
+Relation	T6	T3	EffectCause	true	yaralandı	şok
+Relation	T3	T7	CauseEffect	true	şok	süren
+Relation	T7	T3	EffectCause	true	süren	şok
+Relation	T10	T12	CauseEffect	true	deprem	öldü
+Relation	T12	T10	EffectCause	true	öldü	deprem
+Relation	T0	T3	NoRel	true	Depremin	şok
+Relation	T0	T4	NoRel	true	Depremin	depremdi
+Relation	T0	T5	NoRel	true	Depremin	öldüğü
+Relation	T1	T11	NoRel	true	DEPREMLERI	oldu
+Relation	T1	T2	NoRel	true	DEPREMLERI	depremlerdir
+Relation	T1	T9	NoRel	true	DEPREMLERI	yarattı
+Relation	T10	T11	NoRel	true	deprem	oldu
+Relation	T10	T6	NoRel	true	deprem	yaralandı
+Relation	T11	T12	NoRel	true	oldu	öldü
+Relation	T11	T4	NoRel	true	oldu	depremdi
+Relation	T11	T5	NoRel	true	oldu	öldüğü
+Relation	T11	T6	NoRel	true	oldu	yaralandı
+Relation	T11	T7	NoRel	true	oldu	süren
+Relation	T11	T8	NoRel	true	oldu	hissedildi
+Relation	T12	T1	NoRel	true	öldü	DEPREMLERI
+Relation	T12	T2	NoRel	true	öldü	depremlerdir
+Relation	T12	T4	NoRel	true	öldü	depremdi
+Relation	T12	T8	NoRel	true	öldü	hissedildi
+Relation	T2	T12	NoRel	true	depremlerdir	öldü
+Relation	T2	T3	NoRel	true	depremlerdir	şok
+Relation	T3	T0	NoRel	true	şok	Depremin
+Relation	T3	T1	NoRel	true	şok	DEPREMLERI
+Relation	T3	T4	NoRel	true	şok	depremdi
+Relation	T3	T9	NoRel	true	şok	yarattı
+Relation	T4	T10	NoRel	true	depremdi	deprem
+Relation	T4	T2	NoRel	true	depremdi	depremlerdir
+Relation	T4	T7	NoRel	true	depremdi	süren
+Relation	T5	T11	NoRel	true	öldüğü	oldu
+Relation	T5	T7	NoRel	true	öldüğü	süren
+Relation	T6	T0	NoRel	true	yaralandı	Depremin
+Relation	T6	T1	NoRel	true	yaralandı	DEPREMLERI
+Relation	T6	T12	NoRel	true	yaralandı	öldü
+Relation	T6	T5	NoRel	true	yaralandı	öldüğü
+Relation	T6	T8	NoRel	true	yaralandı	hissedildi
+Relation	T7	T10	NoRel	true	süren	deprem
+Relation	T7	T11	NoRel	true	süren	oldu
+Relation	T7	T6	NoRel	true	süren	yaralandı
+Relation	T8	T7	NoRel	true	hissedildi	süren
+Relation	T9	T12	NoRel	true	yarattı	öldü
+Relation	T9	T3	NoRel	true	yarattı	şok
+Relation	T9	T4	NoRel	true	yarattı	depremdi

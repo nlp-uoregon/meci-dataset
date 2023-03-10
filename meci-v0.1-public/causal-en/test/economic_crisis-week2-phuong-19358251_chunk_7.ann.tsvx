@@ -1,0 +1,50 @@
+Text	Next day , trading was suspended for the second day in succession on Russia 's two main stock exchanges ( MICEX and RTS ) after shares fell dramatically , forcing the Federal Financial Markets Service to intervene .	The simultaneous collapse of money markets prompted reaction from the government and the Central Bank , while Finance Minister Alexey Kudrin sought assurances from U.S. Treasury Secretary Henry Paulson that the U.S. did not play politics with Russia in the crisis .	The crisis continued on 18 September , as trading was suspended for the third day in succession on Russia 's two main stock exchanges amidst fear of financial collapse .	News agencies are quoting Russia 's finance minister Alexei Kudrin as saying trading on Russian exchanges will not resume until 19 September 2008 .	Officials at MICEX stock exchange describe conditions in the Russian markets as " extraordinary "
+Event	T0	trading	EVENT	11
+Event	T1	suspended	EVENT	23
+Event	T10	continued	EVENT	493
+Event	T11	trading	EVENT	524
+Event	T12	suspended	EVENT	536
+Event	T13	fear	EVENT	623
+Event	T14	collapse	EVENT	641
+Event	T15	quoting	EVENT	670
+Event	T16	trading	EVENT	729
+Event	T17	resume	EVENT	767
+Event	T3	fell	EVENT	135
+Event	T4	forcing	EVENT	155
+Event	T5	intervene	EVENT	204
+Event	T6	collapse	EVENT	233
+Event	T7	reaction	EVENT	268
+Event	T9	crisis	EVENT	473
+Relation	T3	T1	CauseEffect	true	fell	suspended
+Relation	T1	T3	EffectCause	true	suspended	fell
+Relation	T4	T1	CauseEffect	true	forcing	suspended
+Relation	T1	T4	EffectCause	true	suspended	forcing
+Relation	T6	T7	CauseEffect	true	collapse	reaction
+Relation	T7	T6	EffectCause	true	reaction	collapse
+Relation	T12	T13	CauseEffect	true	suspended	fear
+Relation	T13	T12	EffectCause	true	fear	suspended
+Relation	T0	T14	NoRel	true	trading	collapse
+Relation	T0	T3	NoRel	true	trading	fell
+Relation	T0	T7	NoRel	true	trading	reaction
+Relation	T1	T15	NoRel	true	suspended	quoting
+Relation	T1	T6	NoRel	true	suspended	collapse
+Relation	T10	T4	NoRel	true	continued	forcing
+Relation	T10	T6	NoRel	true	continued	collapse
+Relation	T11	T14	NoRel	true	trading	collapse
+Relation	T11	T3	NoRel	true	trading	fell
+Relation	T11	T5	NoRel	true	trading	intervene
+Relation	T14	T5	NoRel	true	collapse	intervene
+Relation	T14	T6	NoRel	true	collapse	collapse
+Relation	T14	T7	NoRel	true	collapse	reaction
+Relation	T15	T12	NoRel	true	quoting	suspended
+Relation	T15	T7	NoRel	true	quoting	reaction
+Relation	T16	T11	NoRel	true	trading	trading
+Relation	T16	T4	NoRel	true	trading	forcing
+Relation	T17	T11	NoRel	true	resume	trading
+Relation	T17	T3	NoRel	true	resume	fell
+Relation	T17	T6	NoRel	true	resume	collapse
+Relation	T3	T4	NoRel	true	fell	forcing
+Relation	T6	T16	NoRel	true	collapse	trading
+Relation	T7	T13	NoRel	true	reaction	fear
+Relation	T7	T3	NoRel	true	reaction	fell
+Relation	T9	T17	NoRel	true	crisis	resume

@@ -1,0 +1,35 @@
+Text	( Tidligere havde et B-25 propelfly ramt ind i Empire State Building under netop sådanne omstændigheder .	)	På baggrund af dokumentet som skriver : _ " ... sådan en kollision ville kun resultere i lokal skade , som ikke ville bevirke et kollaps eller afgørende skade på bygningen ... " _ anses det for usandsynligt at de kunne styrte sammen blot ved et sammenstød de var designet til at kunne modstå .	De to fly der styrtede ind i tårnene , var af typen Boeing 767 .	Afhængig af modellen er 767 er omkring 20 % større end 707 .
+Event	T0	skriver	EVENT	138
+Event	T1	kollision	EVENT	165
+Event	T2	skade	EVENT	203
+Event	T3	kollaps	EVENT	237
+Event	T4	skade	EVENT	261
+Event	T5	anses	EVENT	288
+Event	T6	sammenstød	EVENT	353
+Event	T7	designet	EVENT	371
+Event	T8	styrtede	EVENT	416
+Relation	T1	T2	CauseEffect	true	kollision	skade
+Relation	T2	T1	EffectCause	true	skade	kollision
+Relation	T2	T3	CauseEffect	true	skade	kollaps
+Relation	T3	T2	EffectCause	true	kollaps	skade
+Relation	T0	T1	NoRel	true	skriver	kollision
+Relation	T0	T3	NoRel	true	skriver	kollaps
+Relation	T1	T0	NoRel	true	kollision	skriver
+Relation	T1	T4	NoRel	true	kollision	skade
+Relation	T2	T6	NoRel	true	skade	sammenstød
+Relation	T2	T7	NoRel	true	skade	designet
+Relation	T3	T4	NoRel	true	kollaps	skade
+Relation	T3	T6	NoRel	true	kollaps	sammenstød
+Relation	T5	T0	NoRel	true	anses	skriver
+Relation	T5	T1	NoRel	true	anses	kollision
+Relation	T5	T7	NoRel	true	anses	designet
+Relation	T6	T3	NoRel	true	sammenstød	kollaps
+Relation	T6	T5	NoRel	true	sammenstød	anses
+Relation	T7	T3	NoRel	true	designet	kollaps
+Relation	T7	T5	NoRel	true	designet	anses
+Relation	T7	T8	NoRel	true	designet	styrtede
+Relation	T8	T2	NoRel	true	styrtede	skade
+Relation	T8	T3	NoRel	true	styrtede	kollaps
+Relation	T8	T4	NoRel	true	styrtede	skade
+Relation	T8	T5	NoRel	true	styrtede	anses
+Relation	T8	T6	NoRel	true	styrtede	sammenstød

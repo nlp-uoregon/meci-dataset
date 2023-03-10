@@ -1,0 +1,76 @@
+Text	Pandemien angreb Messina i 1347 , og _ Den sorte død _ spredtes herefter med stor hast op gennem Europa .	Ud fra de sparsomme kilder og det begrænsede talmateriale antages det , at pandemien havde forårsaget , folketallet i Europa omkring 1450 var blevet reduceret til mellem en tredjedel og halvdelen af befolkningsniveauet fra før 1347 .	Det er den dødeligste pandemi nogensinde .	Efter _ Den sorte død _ hærgede pest Europa de næste århundreder , men mindre hårdt .	Efter alt at dømme var bakterien _ Yersinia pestis _ højst sandsynligt årsagen til pandemien .
+Event	T0	angreb	EVENT	10
+Event	T2	spredtes	EVENT	55
+Event	T3	antages	EVENT	164
+Event	T4	forårsaget	EVENT	197
+Event	T5	reduceret	EVENT	255
+Event	T6	pandemi	EVENT	362
+Event	T8	hærgede	EVENT	407
+Event	T9	pandemien	EVENT	552
+Event	T10	Pandemien	EVENT	0
+Event	T1	Den sorte død	EVENT	39
+Event	T11	pandemien	EVENT	181
+Event	T7	Den sorte død	EVENT	391
+Event	T12	pest	EVENT	415
+Event	T13	bakterien	EVENT	492
+Relation	T11	T5	CauseEffect	true	pandemien	reduceret
+Relation	T5	T11	EffectCause	true	reduceret	pandemien
+Relation	T13	T9	CauseEffect	true	bakterien	pandemien
+Relation	T9	T13	EffectCause	true	pandemien	bakterien
+Relation	T0	T10	NoRel	true	angreb	Pandemien
+Relation	T0	T13	NoRel	true	angreb	bakterien
+Relation	T0	T2	NoRel	true	angreb	spredtes
+Relation	T1	T11	NoRel	true	Den sorte død	pandemien
+Relation	T1	T3	NoRel	true	Den sorte død	antages
+Relation	T1	T4	NoRel	true	Den sorte død	forårsaget
+Relation	T1	T7	NoRel	true	Den sorte død	Den sorte død
+Relation	T10	T0	NoRel	true	Pandemien	angreb
+Relation	T10	T12	NoRel	true	Pandemien	pest
+Relation	T10	T13	NoRel	true	Pandemien	bakterien
+Relation	T10	T2	NoRel	true	Pandemien	spredtes
+Relation	T10	T3	NoRel	true	Pandemien	antages
+Relation	T10	T4	NoRel	true	Pandemien	forårsaget
+Relation	T10	T5	NoRel	true	Pandemien	reduceret
+Relation	T10	T8	NoRel	true	Pandemien	hærgede
+Relation	T11	T1	NoRel	true	pandemien	Den sorte død
+Relation	T11	T13	NoRel	true	pandemien	bakterien
+Relation	T11	T3	NoRel	true	pandemien	antages
+Relation	T11	T9	NoRel	true	pandemien	pandemien
+Relation	T12	T0	NoRel	true	pest	angreb
+Relation	T12	T1	NoRel	true	pest	Den sorte død
+Relation	T12	T13	NoRel	true	pest	bakterien
+Relation	T12	T3	NoRel	true	pest	antages
+Relation	T12	T8	NoRel	true	pest	hærgede
+Relation	T12	T9	NoRel	true	pest	pandemien
+Relation	T13	T10	NoRel	true	bakterien	Pandemien
+Relation	T13	T2	NoRel	true	bakterien	spredtes
+Relation	T2	T1	NoRel	true	spredtes	Den sorte død
+Relation	T2	T3	NoRel	true	spredtes	antages
+Relation	T2	T4	NoRel	true	spredtes	forårsaget
+Relation	T2	T8	NoRel	true	spredtes	hærgede
+Relation	T3	T12	NoRel	true	antages	pest
+Relation	T3	T6	NoRel	true	antages	pandemi
+Relation	T3	T9	NoRel	true	antages	pandemien
+Relation	T4	T1	NoRel	true	forårsaget	Den sorte død
+Relation	T4	T13	NoRel	true	forårsaget	bakterien
+Relation	T4	T6	NoRel	true	forårsaget	pandemi
+Relation	T5	T13	NoRel	true	reduceret	bakterien
+Relation	T5	T2	NoRel	true	reduceret	spredtes
+Relation	T5	T3	NoRel	true	reduceret	antages
+Relation	T5	T8	NoRel	true	reduceret	hærgede
+Relation	T6	T11	NoRel	true	pandemi	pandemien
+Relation	T6	T13	NoRel	true	pandemi	bakterien
+Relation	T6	T2	NoRel	true	pandemi	spredtes
+Relation	T6	T8	NoRel	true	pandemi	hærgede
+Relation	T6	T9	NoRel	true	pandemi	pandemien
+Relation	T7	T10	NoRel	true	Den sorte død	Pandemien
+Relation	T7	T4	NoRel	true	Den sorte død	forårsaget
+Relation	T7	T6	NoRel	true	Den sorte død	pandemi
+Relation	T7	T8	NoRel	true	Den sorte død	hærgede
+Relation	T7	T9	NoRel	true	Den sorte død	pandemien
+Relation	T8	T11	NoRel	true	hærgede	pandemien
+Relation	T8	T3	NoRel	true	hærgede	antages
+Relation	T9	T10	NoRel	true	pandemien	Pandemien
+Relation	T9	T11	NoRel	true	pandemien	pandemien
+Relation	T9	T2	NoRel	true	pandemien	spredtes
+Relation	T9	T5	NoRel	true	pandemien	reduceret

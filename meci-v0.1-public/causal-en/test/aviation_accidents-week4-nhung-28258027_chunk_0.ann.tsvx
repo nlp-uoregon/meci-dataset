@@ -1,0 +1,75 @@
+Text	ALLEGHENY AIRLINES FLIGHT 485 was a regularly scheduled domestic passenger flight between Washington , D.C. and Newport News , Virginia , United States , with three stop- overs , two in Connecticut and a third in Pennsylvania .	On June 7 , 1971 , the Allegheny Airlines Convair CV - 580 operating the flight crashed on approach to Tweed New Haven Regional Airport , New Haven County , Connecticut .	The accident was notable in that all but one person survived the initial impact , however 27 people died in the subsequent fire , after failing to open the emergency exit .	Only the first officer and 2 passengers survived .	Poor visibility in the cabin , a lack of emergency lighting , unclear emergency door instructions , and a lack of additional crew personnel to assist in evacuation were all cited as factors in the high death toll .
+Event	T0	flight	EVENT	75
+Event	T1	approach	EVENT	319
+Event	T2	accident	EVENT	403
+Event	T3	notable	EVENT	416
+Event	T4	survived	EVENT	451
+Event	T5	impact	EVENT	472
+Event	T6	died	EVENT	499
+Event	T7	fire	EVENT	522
+Event	T8	failing	EVENT	535
+Event	T9	open	EVENT	546
+Event	T10	exit	EVENT	565
+Event	T11	survived	EVENT	612
+Event	T12	evacuation	EVENT	776
+Event	T13	cited	EVENT	796
+Event	T14	scheduled	EVENT	46
+Event	T15	crashed	EVENT	308
+Event	T16	death	EVENT	825
+Event	T17	visibility	EVENT	628
+Event	T18	emergency	EVENT	664
+Event	T19	instructions	EVENT	708
+Event	T20	assist	EVENT	766
+Relation	T2	T4	CauseEffect	true	accident	survived
+Relation	T4	T2	EffectCause	true	survived	accident
+Relation	T2	T6	CauseEffect	true	accident	died
+Relation	T6	T2	EffectCause	true	died	accident
+Relation	T7	T6	CauseEffect	true	fire	died
+Relation	T6	T7	EffectCause	true	died	fire
+Relation	T8	T6	CauseEffect	true	failing	died
+Relation	T6	T8	EffectCause	true	died	failing
+Relation	T2	T11	CauseEffect	true	accident	survived
+Relation	T11	T2	EffectCause	true	survived	accident
+Relation	T12	T16	CauseEffect	true	evacuation	death
+Relation	T16	T12	EffectCause	true	death	evacuation
+Relation	T0	T11	NoRel	true	flight	survived
+Relation	T10	T11	NoRel	true	exit	survived
+Relation	T10	T5	NoRel	true	exit	impact
+Relation	T11	T0	NoRel	true	survived	flight
+Relation	T11	T17	NoRel	true	survived	visibility
+Relation	T12	T1	NoRel	true	evacuation	approach
+Relation	T12	T15	NoRel	true	evacuation	crashed
+Relation	T12	T19	NoRel	true	evacuation	instructions
+Relation	T13	T16	NoRel	true	cited	death
+Relation	T14	T1	NoRel	true	scheduled	approach
+Relation	T14	T15	NoRel	true	scheduled	crashed
+Relation	T14	T19	NoRel	true	scheduled	instructions
+Relation	T14	T2	NoRel	true	scheduled	accident
+Relation	T14	T7	NoRel	true	scheduled	fire
+Relation	T14	T9	NoRel	true	scheduled	open
+Relation	T15	T16	NoRel	true	crashed	death
+Relation	T15	T2	NoRel	true	crashed	accident
+Relation	T16	T2	NoRel	true	death	accident
+Relation	T16	T4	NoRel	true	death	survived
+Relation	T17	T11	NoRel	true	visibility	survived
+Relation	T17	T15	NoRel	true	visibility	crashed
+Relation	T17	T9	NoRel	true	visibility	open
+Relation	T19	T13	NoRel	true	instructions	cited
+Relation	T19	T15	NoRel	true	instructions	crashed
+Relation	T2	T7	NoRel	true	accident	fire
+Relation	T20	T12	NoRel	true	assist	evacuation
+Relation	T20	T17	NoRel	true	assist	visibility
+Relation	T20	T5	NoRel	true	assist	impact
+Relation	T4	T20	NoRel	true	survived	assist
+Relation	T5	T0	NoRel	true	impact	flight
+Relation	T6	T11	NoRel	true	died	survived
+Relation	T7	T0	NoRel	true	fire	flight
+Relation	T8	T0	NoRel	true	failing	flight
+Relation	T8	T1	NoRel	true	failing	approach
+Relation	T8	T15	NoRel	true	failing	crashed
+Relation	T8	T17	NoRel	true	failing	visibility
+Relation	T8	T18	NoRel	true	failing	emergency
+Relation	T8	T3	NoRel	true	failing	notable
+Relation	T9	T18	NoRel	true	open	emergency
+Relation	T9	T2	NoRel	true	open	accident
+Relation	T9	T6	NoRel	true	open	died

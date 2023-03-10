@@ -1,0 +1,49 @@
+Text	En az 42 kişi öldü .	- 21 Aralık , 1978 - Monoz hemzemin geçiti felaketi – Okul çocuklarını taşıyan bir otobüs yolcu treniyle çarpıştı .	En az yirmi yedi ölü ve otuz yedi yaralı .	- Ocak 1989 - Ahungalla hemzemin geçit kazası , — En az elli bir kişi öldü ve 110 kişi yaralandı .	- 2005 - Polgahawela hemzemin geçit çarpışması , Sri Lanka — : bir otobüs , bir hemzemin geçitte bir trene üstün olmaya çalışır ; en az 35 kişi ölür .
+Event	T0	öldü	EVENT	14
+Event	T1	felaketi	EVENT	64
+Event	T2	çarpıştı	EVENT	126
+Event	T3	ölü	EVENT	154
+Event	T4	yaralı	EVENT	171
+Event	T5	kazası	EVENT	219
+Event	T6	öldü	EVENT	250
+Event	T7	yaralandı	EVENT	267
+Event	T8	çarpışması	EVENT	315
+Event	T9	çalışır	EVENT	399
+Event	T10	ölür	EVENT	423
+Relation	T2	T3	CauseEffect	true	çarpıştı	ölü
+Relation	T3	T2	EffectCause	true	ölü	çarpıştı
+Relation	T2	T4	CauseEffect	true	çarpıştı	yaralı
+Relation	T4	T2	EffectCause	true	yaralı	çarpıştı
+Relation	T5	T6	CauseEffect	true	kazası	öldü
+Relation	T6	T5	EffectCause	true	öldü	kazası
+Relation	T5	T7	CauseEffect	true	kazası	yaralandı
+Relation	T7	T5	EffectCause	true	yaralandı	kazası
+Relation	T8	T10	CauseEffect	true	çarpışması	ölür
+Relation	T10	T8	EffectCause	true	ölür	çarpışması
+Relation	T9	T8	CauseEffect	true	çalışır	çarpışması
+Relation	T8	T9	EffectCause	true	çarpışması	çalışır
+Relation	T0	T2	NoRel	true	öldü	çarpıştı
+Relation	T0	T3	NoRel	true	öldü	ölü
+Relation	T0	T8	NoRel	true	öldü	çarpışması
+Relation	T1	T0	NoRel	true	felaketi	öldü
+Relation	T1	T10	NoRel	true	felaketi	ölür
+Relation	T1	T7	NoRel	true	felaketi	yaralandı
+Relation	T1	T9	NoRel	true	felaketi	çalışır
+Relation	T10	T1	NoRel	true	ölür	felaketi
+Relation	T2	T1	NoRel	true	çarpıştı	felaketi
+Relation	T2	T5	NoRel	true	çarpıştı	kazası
+Relation	T3	T4	NoRel	true	ölü	yaralı
+Relation	T3	T8	NoRel	true	ölü	çarpışması
+Relation	T4	T6	NoRel	true	yaralı	öldü
+Relation	T4	T8	NoRel	true	yaralı	çarpışması
+Relation	T5	T2	NoRel	true	kazası	çarpıştı
+Relation	T5	T9	NoRel	true	kazası	çalışır
+Relation	T6	T0	NoRel	true	öldü	öldü
+Relation	T7	T1	NoRel	true	yaralandı	felaketi
+Relation	T7	T10	NoRel	true	yaralandı	ölür
+Relation	T7	T6	NoRel	true	yaralandı	öldü
+Relation	T7	T8	NoRel	true	yaralandı	çarpışması
+Relation	T7	T9	NoRel	true	yaralandı	çalışır
+Relation	T8	T6	NoRel	true	çarpışması	öldü
+Relation	T8	T7	NoRel	true	çarpışması	yaralandı
+Relation	T9	T6	NoRel	true	çalışır	öldü

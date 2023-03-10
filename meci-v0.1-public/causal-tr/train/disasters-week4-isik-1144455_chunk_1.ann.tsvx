@@ -1,0 +1,32 @@
+Text	Bu bölgenin 2000 yıllık tarihinde yüksek şiddetli en az 18 deprem meydana geldi .	Cumhuriyet döneminde ise Dinar'da 1925 ve 1971 yıllarında etkili depremler yaşandı .	Ana depremden altı ay önce bölgede yer sarsıntıları başladı ve deprem gününe kadar 77 öncül yer sarsıntısı meydana geldi .	Depremden sonraki bir ay içerisinde ise 660 artçı sarsıntı kaydedildi .	Deprem sonrasında Dinar - Çivril fayında 10 kilometrelik bir kırılma gözlendi .
+Event	T0	geldi	EVENT	74
+Event	T1	yaşandı	EVENT	157
+Event	T2	başladı	EVENT	219
+Event	T3	deprem	EVENT	230
+Event	T4	geldi	EVENT	282
+Event	T5	Depremden	EVENT	290
+Event	T6	kaydedildi	EVENT	349
+Event	T7	Deprem	EVENT	362
+Event	T8	gözlendi	EVENT	431
+Relation	T5	T6	CauseEffect	true	Depremden	kaydedildi
+Relation	T6	T5	EffectCause	true	kaydedildi	Depremden
+Relation	T5	T8	CauseEffect	true	Depremden	gözlendi
+Relation	T8	T5	EffectCause	true	gözlendi	Depremden
+Relation	T7	T8	CauseEffect	true	Deprem	gözlendi
+Relation	T8	T7	EffectCause	true	gözlendi	Deprem
+Relation	T0	T8	NoRel	true	geldi	gözlendi
+Relation	T1	T6	NoRel	true	yaşandı	kaydedildi
+Relation	T1	T8	NoRel	true	yaşandı	gözlendi
+Relation	T2	T5	NoRel	true	başladı	Depremden
+Relation	T2	T6	NoRel	true	başladı	kaydedildi
+Relation	T2	T8	NoRel	true	başladı	gözlendi
+Relation	T3	T0	NoRel	true	deprem	geldi
+Relation	T3	T5	NoRel	true	deprem	Depremden
+Relation	T4	T0	NoRel	true	geldi	geldi
+Relation	T4	T6	NoRel	true	geldi	kaydedildi
+Relation	T6	T3	NoRel	true	kaydedildi	deprem
+Relation	T6	T4	NoRel	true	kaydedildi	geldi
+Relation	T6	T7	NoRel	true	kaydedildi	Deprem
+Relation	T7	T0	NoRel	true	Deprem	geldi
+Relation	T7	T2	NoRel	true	Deprem	başladı
+Relation	T8	T4	NoRel	true	gözlendi	geldi

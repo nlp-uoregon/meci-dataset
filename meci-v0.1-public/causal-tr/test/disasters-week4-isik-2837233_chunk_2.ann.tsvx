@@ -1,0 +1,61 @@
+Text	20 Temmuz 2017'deki depremde , Yunanistan ve Türkiye'de toplam 2 ölüm ve yüzlerce yaralanma bildirildi .	Bu deprem sonrasında Muğla kıyılarında küçük çapta tsunami oluşmuştur .	Oluşan tsunamide ortalama 30–40 cm dalga yüksekliği gözlenmiş , oluşan tsunami nedeni ile maddi hasarlar meydana gelmiştir .	Yapılan saha çalışmalarında tsunaminin maksimum yüksekliği 1, 9 m olarak tespit edilmiştir .	Depremin büyüklüğünü Kandilli Rasathanesi 6,9 M _ ( w ) , Afet ve Acil Durum Yönetimi Başkanlığı ( AFAD ) 6,6 M _ ( w ) , Atina Jeodinamik Enstitüsü 6,7 M _ ( L ) , ABD Jeoloji Araştırmaları Kurumu ( USGS ) ve Avrupa - Akdeniz Sismoloji Merkezi 7,0 M _ ( w ) olarak açıkladı .
+Event	T0	depremde	EVENT	20
+Event	T1	ölüm	EVENT	65
+Event	T2	bildirildi	EVENT	92
+Event	T3	deprem	EVENT	108
+Event	T4	oluşmuştur	EVENT	164
+Event	T5	tsunamide	EVENT	184
+Event	T6	gözlenmiş	EVENT	229
+Event	T7	edilmiştir	EVENT	382
+Event	T8	Depremin	EVENT	395
+Event	T9	açıkladı	EVENT	661
+Event	T10	yaralanma	EVENT	82
+Event	T11	tsunami	EVENT	156
+Event	T12	gelmiştir	EVENT	290
+Event	T13	çalışmalarında	EVENT	315
+Relation	T3	T4	CauseEffect	true	deprem	oluşmuştur
+Relation	T4	T3	EffectCause	true	oluşmuştur	deprem
+Relation	T4	T6	CauseEffect	true	oluşmuştur	gözlenmiş
+Relation	T6	T4	EffectCause	true	gözlenmiş	oluşmuştur
+Relation	T4	T12	CauseEffect	true	oluşmuştur	gelmiştir
+Relation	T12	T4	EffectCause	true	gelmiştir	oluşmuştur
+Relation	T4	T13	CauseEffect	true	oluşmuştur	çalışmalarında
+Relation	T13	T4	EffectCause	true	çalışmalarında	oluşmuştur
+Relation	T13	T7	CauseEffect	true	çalışmalarında	edilmiştir
+Relation	T7	T13	EffectCause	true	edilmiştir	çalışmalarında
+Relation	T0	T13	NoRel	true	depremde	çalışmalarında
+Relation	T0	T7	NoRel	true	depremde	edilmiştir
+Relation	T1	T0	NoRel	true	ölüm	depremde
+Relation	T1	T3	NoRel	true	ölüm	deprem
+Relation	T10	T1	NoRel	true	yaralanma	ölüm
+Relation	T10	T5	NoRel	true	yaralanma	tsunamide
+Relation	T11	T13	NoRel	true	tsunami	çalışmalarında
+Relation	T12	T1	NoRel	true	gelmiştir	ölüm
+Relation	T12	T10	NoRel	true	gelmiştir	yaralanma
+Relation	T12	T13	NoRel	true	gelmiştir	çalışmalarında
+Relation	T12	T3	NoRel	true	gelmiştir	deprem
+Relation	T12	T5	NoRel	true	gelmiştir	tsunamide
+Relation	T12	T6	NoRel	true	gelmiştir	gözlenmiş
+Relation	T13	T5	NoRel	true	çalışmalarında	tsunamide
+Relation	T2	T0	NoRel	true	bildirildi	depremde
+Relation	T2	T3	NoRel	true	bildirildi	deprem
+Relation	T3	T13	NoRel	true	deprem	çalışmalarında
+Relation	T3	T5	NoRel	true	deprem	tsunamide
+Relation	T3	T6	NoRel	true	deprem	gözlenmiş
+Relation	T4	T0	NoRel	true	oluşmuştur	depremde
+Relation	T4	T10	NoRel	true	oluşmuştur	yaralanma
+Relation	T4	T11	NoRel	true	oluşmuştur	tsunami
+Relation	T4	T2	NoRel	true	oluşmuştur	bildirildi
+Relation	T5	T2	NoRel	true	tsunamide	bildirildi
+Relation	T5	T4	NoRel	true	tsunamide	oluşmuştur
+Relation	T6	T7	NoRel	true	gözlenmiş	edilmiştir
+Relation	T7	T1	NoRel	true	edilmiştir	ölüm
+Relation	T8	T0	NoRel	true	Depremin	depremde
+Relation	T8	T1	NoRel	true	Depremin	ölüm
+Relation	T8	T10	NoRel	true	Depremin	yaralanma
+Relation	T8	T12	NoRel	true	Depremin	gelmiştir
+Relation	T8	T13	NoRel	true	Depremin	çalışmalarında
+Relation	T8	T4	NoRel	true	Depremin	oluşmuştur
+Relation	T8	T9	NoRel	true	Depremin	açıkladı
+Relation	T9	T10	NoRel	true	açıkladı	yaralanma
+Relation	T9	T4	NoRel	true	açıkladı	oluşmuştur

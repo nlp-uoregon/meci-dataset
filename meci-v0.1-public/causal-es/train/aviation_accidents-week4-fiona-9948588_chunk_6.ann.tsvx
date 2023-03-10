@@ -1,0 +1,171 @@
+Text	El primer oficial ordenó que los camiones de bomberos fueran enviados a la aeronave .	El capitán pidió la lista de verificación de incendios del motor , se apagó el motor derecho y se activó el extintor .	Luego , el capitán pidió la lista de verificación de evacuación , durante la cual los auxiliares de vuelo ya habían iniciado una evacuación , a pesar de que no se había dado la orden ( que no es obligatoria ) .	Después de apagar el motor izquierdo , el capitán finalmente dio la orden de evacuación y sonó la alarma de evacuación .	La primera salida de emergencia ( la salida de la ventana superior izquierda ) se abrió de 8 a 12 segundos después de que la aeronave se detuvo .
+Event	T0	ordenó	EVENT	18
+Event	T1	enviados	EVENT	61
+Event	T2	pidió	EVENT	97
+Event	T3	verificación	EVENT	115
+Event	T4	incendios	EVENT	131
+Event	T5	apagó	EVENT	156
+Event	T6	activó	EVENT	184
+Event	T7	pidió	EVENT	224
+Event	T9	evacuación	EVENT	258
+Event	T10	iniciado	EVENT	321
+Event	T11	evacuación	EVENT	334
+Event	T12	dado	EVENT	374
+Event	T13	apagar	EVENT	427
+Event	T14	dio	EVENT	477
+Event	T15	evacuación	EVENT	493
+Event	T16	sonó	EVENT	506
+Event	T17	alarma	EVENT	514
+Event	T18	evacuación	EVENT	524
+Event	T19	salida	EVENT	548
+Event	T20	salida	EVENT	574
+Event	T21	abrió	EVENT	619
+Event	T22	detuvo	EVENT	674
+Relation	T15	T16	CauseEffect	true	evacuación	sonó
+Relation	T16	T15	EffectCause	true	sonó	evacuación
+Relation	T0	T10	NoRel	true	ordenó	iniciado
+Relation	T0	T11	NoRel	true	ordenó	evacuación
+Relation	T0	T13	NoRel	true	ordenó	apagar
+Relation	T0	T17	NoRel	true	ordenó	alarma
+Relation	T0	T19	NoRel	true	ordenó	salida
+Relation	T0	T22	NoRel	true	ordenó	detuvo
+Relation	T1	T10	NoRel	true	enviados	iniciado
+Relation	T1	T12	NoRel	true	enviados	dado
+Relation	T1	T14	NoRel	true	enviados	dio
+Relation	T1	T16	NoRel	true	enviados	sonó
+Relation	T1	T19	NoRel	true	enviados	salida
+Relation	T1	T7	NoRel	true	enviados	pidió
+Relation	T10	T12	NoRel	true	iniciado	dado
+Relation	T10	T13	NoRel	true	iniciado	apagar
+Relation	T10	T21	NoRel	true	iniciado	abrió
+Relation	T11	T10	NoRel	true	evacuación	iniciado
+Relation	T11	T15	NoRel	true	evacuación	evacuación
+Relation	T11	T17	NoRel	true	evacuación	alarma
+Relation	T11	T18	NoRel	true	evacuación	evacuación
+Relation	T11	T2	NoRel	true	evacuación	pidió
+Relation	T11	T5	NoRel	true	evacuación	apagó
+Relation	T12	T0	NoRel	true	dado	ordenó
+Relation	T12	T13	NoRel	true	dado	apagar
+Relation	T12	T14	NoRel	true	dado	dio
+Relation	T12	T16	NoRel	true	dado	sonó
+Relation	T12	T21	NoRel	true	dado	abrió
+Relation	T12	T9	NoRel	true	dado	evacuación
+Relation	T13	T14	NoRel	true	apagar	dio
+Relation	T13	T18	NoRel	true	apagar	evacuación
+Relation	T13	T21	NoRel	true	apagar	abrió
+Relation	T13	T4	NoRel	true	apagar	incendios
+Relation	T13	T5	NoRel	true	apagar	apagó
+Relation	T13	T7	NoRel	true	apagar	pidió
+Relation	T13	T9	NoRel	true	apagar	evacuación
+Relation	T14	T0	NoRel	true	dio	ordenó
+Relation	T14	T10	NoRel	true	dio	iniciado
+Relation	T14	T11	NoRel	true	dio	evacuación
+Relation	T14	T12	NoRel	true	dio	dado
+Relation	T14	T13	NoRel	true	dio	apagar
+Relation	T14	T18	NoRel	true	dio	evacuación
+Relation	T14	T2	NoRel	true	dio	pidió
+Relation	T14	T4	NoRel	true	dio	incendios
+Relation	T14	T5	NoRel	true	dio	apagó
+Relation	T14	T6	NoRel	true	dio	activó
+Relation	T15	T10	NoRel	true	evacuación	iniciado
+Relation	T15	T12	NoRel	true	evacuación	dado
+Relation	T15	T13	NoRel	true	evacuación	apagar
+Relation	T15	T17	NoRel	true	evacuación	alarma
+Relation	T15	T2	NoRel	true	evacuación	pidió
+Relation	T15	T4	NoRel	true	evacuación	incendios
+Relation	T16	T0	NoRel	true	sonó	ordenó
+Relation	T16	T14	NoRel	true	sonó	dio
+Relation	T16	T2	NoRel	true	sonó	pidió
+Relation	T16	T20	NoRel	true	sonó	salida
+Relation	T16	T5	NoRel	true	sonó	apagó
+Relation	T16	T7	NoRel	true	sonó	pidió
+Relation	T17	T1	NoRel	true	alarma	enviados
+Relation	T17	T16	NoRel	true	alarma	sonó
+Relation	T17	T18	NoRel	true	alarma	evacuación
+Relation	T17	T22	NoRel	true	alarma	detuvo
+Relation	T18	T0	NoRel	true	evacuación	ordenó
+Relation	T18	T13	NoRel	true	evacuación	apagar
+Relation	T18	T15	NoRel	true	evacuación	evacuación
+Relation	T18	T22	NoRel	true	evacuación	detuvo
+Relation	T19	T0	NoRel	true	salida	ordenó
+Relation	T19	T10	NoRel	true	salida	iniciado
+Relation	T19	T13	NoRel	true	salida	apagar
+Relation	T19	T18	NoRel	true	salida	evacuación
+Relation	T19	T2	NoRel	true	salida	pidió
+Relation	T19	T22	NoRel	true	salida	detuvo
+Relation	T19	T4	NoRel	true	salida	incendios
+Relation	T19	T5	NoRel	true	salida	apagó
+Relation	T19	T6	NoRel	true	salida	activó
+Relation	T19	T7	NoRel	true	salida	pidió
+Relation	T19	T9	NoRel	true	salida	evacuación
+Relation	T2	T1	NoRel	true	pidió	enviados
+Relation	T2	T10	NoRel	true	pidió	iniciado
+Relation	T2	T11	NoRel	true	pidió	evacuación
+Relation	T2	T12	NoRel	true	pidió	dado
+Relation	T2	T16	NoRel	true	pidió	sonó
+Relation	T2	T18	NoRel	true	pidió	evacuación
+Relation	T2	T19	NoRel	true	pidió	salida
+Relation	T2	T6	NoRel	true	pidió	activó
+Relation	T20	T1	NoRel	true	salida	enviados
+Relation	T20	T10	NoRel	true	salida	iniciado
+Relation	T20	T11	NoRel	true	salida	evacuación
+Relation	T20	T15	NoRel	true	salida	evacuación
+Relation	T20	T18	NoRel	true	salida	evacuación
+Relation	T20	T21	NoRel	true	salida	abrió
+Relation	T20	T22	NoRel	true	salida	detuvo
+Relation	T20	T3	NoRel	true	salida	verificación
+Relation	T21	T0	NoRel	true	abrió	ordenó
+Relation	T21	T10	NoRel	true	abrió	iniciado
+Relation	T21	T11	NoRel	true	abrió	evacuación
+Relation	T21	T14	NoRel	true	abrió	dio
+Relation	T21	T20	NoRel	true	abrió	salida
+Relation	T21	T3	NoRel	true	abrió	verificación
+Relation	T21	T9	NoRel	true	abrió	evacuación
+Relation	T22	T10	NoRel	true	detuvo	iniciado
+Relation	T22	T21	NoRel	true	detuvo	abrió
+Relation	T22	T3	NoRel	true	detuvo	verificación
+Relation	T22	T6	NoRel	true	detuvo	activó
+Relation	T22	T7	NoRel	true	detuvo	pidió
+Relation	T3	T10	NoRel	true	verificación	iniciado
+Relation	T3	T12	NoRel	true	verificación	dado
+Relation	T3	T13	NoRel	true	verificación	apagar
+Relation	T3	T14	NoRel	true	verificación	dio
+Relation	T3	T16	NoRel	true	verificación	sonó
+Relation	T3	T17	NoRel	true	verificación	alarma
+Relation	T3	T21	NoRel	true	verificación	abrió
+Relation	T3	T22	NoRel	true	verificación	detuvo
+Relation	T3	T4	NoRel	true	verificación	incendios
+Relation	T3	T5	NoRel	true	verificación	apagó
+Relation	T3	T6	NoRel	true	verificación	activó
+Relation	T3	T7	NoRel	true	verificación	pidió
+Relation	T4	T11	NoRel	true	incendios	evacuación
+Relation	T4	T12	NoRel	true	incendios	dado
+Relation	T4	T13	NoRel	true	incendios	apagar
+Relation	T4	T17	NoRel	true	incendios	alarma
+Relation	T4	T2	NoRel	true	incendios	pidió
+Relation	T4	T3	NoRel	true	incendios	verificación
+Relation	T4	T9	NoRel	true	incendios	evacuación
+Relation	T5	T13	NoRel	true	apagó	apagar
+Relation	T5	T17	NoRel	true	apagó	alarma
+Relation	T5	T18	NoRel	true	apagó	evacuación
+Relation	T5	T19	NoRel	true	apagó	salida
+Relation	T5	T2	NoRel	true	apagó	pidió
+Relation	T5	T9	NoRel	true	apagó	evacuación
+Relation	T6	T0	NoRel	true	activó	ordenó
+Relation	T6	T1	NoRel	true	activó	enviados
+Relation	T6	T18	NoRel	true	activó	evacuación
+Relation	T6	T4	NoRel	true	activó	incendios
+Relation	T6	T5	NoRel	true	activó	apagó
+Relation	T7	T1	NoRel	true	pidió	enviados
+Relation	T7	T13	NoRel	true	pidió	apagar
+Relation	T7	T18	NoRel	true	pidió	evacuación
+Relation	T7	T22	NoRel	true	pidió	detuvo
+Relation	T7	T9	NoRel	true	pidió	evacuación
+Relation	T9	T10	NoRel	true	evacuación	iniciado
+Relation	T9	T12	NoRel	true	evacuación	dado
+Relation	T9	T18	NoRel	true	evacuación	evacuación
+Relation	T9	T2	NoRel	true	evacuación	pidió
+Relation	T9	T20	NoRel	true	evacuación	salida
+Relation	T9	T21	NoRel	true	evacuación	abrió
+Relation	T9	T3	NoRel	true	evacuación	verificación
+Relation	T9	T4	NoRel	true	evacuación	incendios

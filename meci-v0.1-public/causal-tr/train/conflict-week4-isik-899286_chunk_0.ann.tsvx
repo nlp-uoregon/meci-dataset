@@ -1,0 +1,38 @@
+Text	DELIGRAD SAVAŞI ( DELIGRAD MUHAREBESI ) , 1806 yılının aralık ayında bugünkü Sırbistan'da yer alan Deligrad köyü ve civarında Sırbistan isyancı birlikleri ile Osmanlı İmparatorluğu ordusu arasında yapılan savaştır .	İlk ayaklanma , bölgedeki ipleri tamamen ele geçiren ve İstanbul hükümetinin söz geçiremediği yeniçeri seçkin tabakasının kovulmaya başlandığı 1804 başlamıştı .	İhtilalin lideri Kara Yorgi elde etmiş olduğu birkaç ufak tefek başarıdan sonra hedefini Sırbistan'ın özgürlüğü olarak belirledi .	Sırbistan'da suların bir türlü durulmaması üzerine Osmanlı padişahı III. Selim bölgeye büyük bir ordu gönderdi .	Sırplar Türk kuvvetlerini Deligrad'da karşılamaya karar verdiler .
+Event	T1	savaştır	EVENT	205
+Event	T2	ayaklanma	EVENT	220
+Event	T4	başlamıştı	EVENT	364
+Event	T6	belirledi	EVENT	496
+Event	T7	gönderdi	EVENT	610
+Event	T8	DELIGRAD SAVAŞI	EVENT	0
+Event	T9	DELIGRAD MUHAREBESI	EVENT	18
+Event	T3	kovulmaya	EVENT	338
+Event	T10	verdiler	EVENT	677
+Relation	T6	T7	CauseEffect	true	belirledi	gönderdi
+Relation	T7	T6	EffectCause	true	gönderdi	belirledi
+Relation	T7	T10	CauseEffect	true	gönderdi	verdiler
+Relation	T10	T7	EffectCause	true	verdiler	gönderdi
+Relation	T10	T8	CauseEffect	true	verdiler	DELIGRAD SAVAŞI
+Relation	T8	T10	EffectCause	true	DELIGRAD SAVAŞI	verdiler
+Relation	T10	T9	CauseEffect	true	verdiler	DELIGRAD MUHAREBESI
+Relation	T9	T10	EffectCause	true	DELIGRAD MUHAREBESI	verdiler
+Relation	T1	T7	NoRel	true	savaştır	gönderdi
+Relation	T1	T8	NoRel	true	savaştır	DELIGRAD SAVAŞI
+Relation	T10	T6	NoRel	true	verdiler	belirledi
+Relation	T2	T1	NoRel	true	ayaklanma	savaştır
+Relation	T2	T4	NoRel	true	ayaklanma	başlamıştı
+Relation	T2	T6	NoRel	true	ayaklanma	belirledi
+Relation	T2	T8	NoRel	true	ayaklanma	DELIGRAD SAVAŞI
+Relation	T3	T1	NoRel	true	kovulmaya	savaştır
+Relation	T3	T4	NoRel	true	kovulmaya	başlamıştı
+Relation	T3	T6	NoRel	true	kovulmaya	belirledi
+Relation	T3	T8	NoRel	true	kovulmaya	DELIGRAD SAVAŞI
+Relation	T6	T4	NoRel	true	belirledi	başlamıştı
+Relation	T7	T2	NoRel	true	gönderdi	ayaklanma
+Relation	T7	T3	NoRel	true	gönderdi	kovulmaya
+Relation	T8	T1	NoRel	true	DELIGRAD SAVAŞI	savaştır
+Relation	T8	T3	NoRel	true	DELIGRAD SAVAŞI	kovulmaya
+Relation	T8	T6	NoRel	true	DELIGRAD SAVAŞI	belirledi
+Relation	T8	T7	NoRel	true	DELIGRAD SAVAŞI	gönderdi
+Relation	T9	T4	NoRel	true	DELIGRAD MUHAREBESI	başlamıştı
+Relation	T9	T8	NoRel	true	DELIGRAD MUHAREBESI	DELIGRAD SAVAŞI

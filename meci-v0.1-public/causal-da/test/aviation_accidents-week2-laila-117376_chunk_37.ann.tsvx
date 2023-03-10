@@ -1,0 +1,29 @@
+Text	Alle 44 mennesker om bord omkom øjeblikkeligt .	Mange beretninger i medierne og fra øjenvidner fortalte , at flyet styrtede ned klokken 10:06 , hvilket blev støttet af seismografiske data fra området , men den officielle 9/11 rapport bekræfter ikke dette .	Nogle medier og 9/11 kommissionen rapporterede , at flyet styrtede ned klokken 10:03 baseret på analyser af radar- og satellitdata samt flykontrolkommunikation .	Et vidne , Kelly Leverknight , var ved at se nyheder om angrebene , da hun kunne høre flynummer 93 : " Jeg hørte flyet flyve forbi , og jeg gik ud ad fordøren , hvor jeg så flyet styrte ned .	Det så ud til at have kurs mod skolen , hvilket fik mig til at gå i panik , fordi mine tre børn var der .
+Event	T1	støttet	EVENT	157
+Event	T12	omkom	EVENT	26
+Event	T16	styrte ned	EVENT	598
+Event	T17	gå i panik	EVENT	674
+Event	T3	rapporterede	EVENT	291
+Event	T4	analyser	EVENT	353
+Event	T6	angrebene	EVENT	475
+Event	T8	hørte	EVENT	526
+Relation	T6	T12	CauseEffect	true	angrebene	omkom
+Relation	T12	T6	EffectCause	true	omkom	angrebene
+Relation	T16	T17	CauseEffect	true	styrte ned	gå i panik
+Relation	T17	T16	EffectCause	true	gå i panik	styrte ned
+Relation	T16	T12	CauseEffect	true	styrte ned	omkom
+Relation	T12	T16	EffectCause	true	omkom	styrte ned
+Relation	T1	T8	NoRel	true	støttet	hørte
+Relation	T12	T1	NoRel	true	omkom	støttet
+Relation	T12	T8	NoRel	true	omkom	hørte
+Relation	T16	T3	NoRel	true	styrte ned	rapporterede
+Relation	T16	T6	NoRel	true	styrte ned	angrebene
+Relation	T17	T3	NoRel	true	gå i panik	rapporterede
+Relation	T3	T1	NoRel	true	rapporterede	støttet
+Relation	T3	T12	NoRel	true	rapporterede	omkom
+Relation	T3	T4	NoRel	true	rapporterede	analyser
+Relation	T4	T12	NoRel	true	analyser	omkom
+Relation	T4	T16	NoRel	true	analyser	styrte ned
+Relation	T4	T8	NoRel	true	analyser	hørte
+Relation	T6	T8	NoRel	true	angrebene	hørte
+Relation	T8	T6	NoRel	true	hørte	angrebene

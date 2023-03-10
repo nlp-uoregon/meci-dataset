@@ -1,0 +1,51 @@
+Text	KUREKDERE MUHAREBESI , 1854 yılında Kırım Savaşı esnasında gerçekleşmiştir .	Kars üzerinden Gümrü'deki Rus kuvvetlerine saldıran Osmanlı güçleri şiddetli çarpışmalar sonucu Rus kuvvetleri arafından bozguna uğatılmıştır .	Ruslar topyekûn saldıran yaklaşık 40, 000 Osmanlı kuvvetine yarısı kadar bir kuvvetle karşı koymuşlardır .	Osmanlı ordusundaki yönetim aksaklıkları ve üst üste yapılan stratejik hatalar muharebeyi kaybettirmiş savaşın süresi uzamıştır .	Daha sonra başarısız olan yöneticiler görevden alınacaktır .
+Event	T0	Savaşı	EVENT	42
+Event	T1	gerçekleşmiştir	EVENT	59
+Event	T2	saldıran	EVENT	120
+Event	T3	çarpışmalar	EVENT	154
+Event	T4	uğatılmıştır	EVENT	206
+Event	T5	saldıran	EVENT	237
+Event	T6	hatalar	EVENT	399
+Event	T7	uzamıştır	EVENT	446
+Event	T8	alınacaktır	EVENT	505
+Event	T9	KUREKDERE MUHAREBESI	EVENT	0
+Relation	T2	T3	CauseEffect	true	saldıran	çarpışmalar
+Relation	T3	T2	EffectCause	true	çarpışmalar	saldıran
+Relation	T3	T4	CauseEffect	true	çarpışmalar	uğatılmıştır
+Relation	T4	T3	EffectCause	true	uğatılmıştır	çarpışmalar
+Relation	T6	T7	CauseEffect	true	hatalar	uzamıştır
+Relation	T7	T6	EffectCause	true	uzamıştır	hatalar
+Relation	T6	T8	CauseEffect	true	hatalar	alınacaktır
+Relation	T8	T6	EffectCause	true	alınacaktır	hatalar
+Relation	T0	T1	NoRel	true	Savaşı	gerçekleşmiştir
+Relation	T0	T2	NoRel	true	Savaşı	saldıran
+Relation	T0	T4	NoRel	true	Savaşı	uğatılmıştır
+Relation	T0	T7	NoRel	true	Savaşı	uzamıştır
+Relation	T0	T9	NoRel	true	Savaşı	KUREKDERE MUHAREBESI
+Relation	T1	T0	NoRel	true	gerçekleşmiştir	Savaşı
+Relation	T1	T6	NoRel	true	gerçekleşmiştir	hatalar
+Relation	T2	T1	NoRel	true	saldıran	gerçekleşmiştir
+Relation	T2	T6	NoRel	true	saldıran	hatalar
+Relation	T3	T1	NoRel	true	çarpışmalar	gerçekleşmiştir
+Relation	T3	T5	NoRel	true	çarpışmalar	saldıran
+Relation	T3	T6	NoRel	true	çarpışmalar	hatalar
+Relation	T3	T8	NoRel	true	çarpışmalar	alınacaktır
+Relation	T4	T7	NoRel	true	uğatılmıştır	uzamıştır
+Relation	T5	T1	NoRel	true	saldıran	gerçekleşmiştir
+Relation	T5	T3	NoRel	true	saldıran	çarpışmalar
+Relation	T5	T9	NoRel	true	saldıran	KUREKDERE MUHAREBESI
+Relation	T6	T1	NoRel	true	hatalar	gerçekleşmiştir
+Relation	T6	T2	NoRel	true	hatalar	saldıran
+Relation	T6	T4	NoRel	true	hatalar	uğatılmıştır
+Relation	T6	T5	NoRel	true	hatalar	saldıran
+Relation	T6	T9	NoRel	true	hatalar	KUREKDERE MUHAREBESI
+Relation	T7	T0	NoRel	true	uzamıştır	Savaşı
+Relation	T7	T1	NoRel	true	uzamıştır	gerçekleşmiştir
+Relation	T7	T5	NoRel	true	uzamıştır	saldıran
+Relation	T8	T1	NoRel	true	alınacaktır	gerçekleşmiştir
+Relation	T8	T3	NoRel	true	alınacaktır	çarpışmalar
+Relation	T9	T0	NoRel	true	KUREKDERE MUHAREBESI	Savaşı
+Relation	T9	T2	NoRel	true	KUREKDERE MUHAREBESI	saldıran
+Relation	T9	T5	NoRel	true	KUREKDERE MUHAREBESI	saldıran
+Relation	T9	T7	NoRel	true	KUREKDERE MUHAREBESI	uzamıştır
+Relation	T9	T8	NoRel	true	KUREKDERE MUHAREBESI	alınacaktır

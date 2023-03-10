@@ -1,0 +1,104 @@
+Text	Después de las elecciones de 1928 , en las cuales el Partido Socialdemócrata tuvo grandes avances , este logró formar una coalición multipartidista con el Partido de Centro , el Partido Popular de Baviera , el Partido Democrático Alemán , y el Partido Popular Alemán , restableciendo la Coalición de Weimar de 1919 con Hermann Müller como Canciller .	Durante este gobierno estalló la Gran Depresión en 1929 .	El 27 de marzo de 1930 , la coalición colapsó , debido a la disputa por un menor aumento de las cotizaciones al seguro de desempleo y a las intenciones del presidente Paul von Hindenburg de instaurar un gabinete presidencial " antimarxista y antiparlamentario " .	Hindenburg designó canciller a Heinrich Brüning en un gobierno minoritario sin el SPD .	Tras asumir , Brüning presentó su presupuesto , que fue rechazado por el Reichstag .
+Event	T0	elecciones	EVENT	15
+Event	T1	tuvo	EVENT	77
+Event	T2	avances	EVENT	90
+Event	T3	formar	EVENT	111
+Event	T4	coalición	EVENT	122
+Event	T5	restableciendo	EVENT	269
+Event	T6	estalló	EVENT	373
+Event	T7	Depresión	EVENT	389
+Event	T8	colapsó	EVENT	447
+Event	T9	disputa	EVENT	469
+Event	T10	aumento	EVENT	490
+Event	T11	intenciones	EVENT	549
+Event	T12	instaurar	EVENT	599
+Event	T13	designó	EVENT	684
+Event	T14	asumir	EVENT	766
+Event	T15	rechazado	EVENT	817
+Relation	T9	T8	CauseEffect	true	disputa	colapsó
+Relation	T8	T9	EffectCause	true	colapsó	disputa
+Relation	T0	T11	NoRel	true	elecciones	intenciones
+Relation	T0	T12	NoRel	true	elecciones	instaurar
+Relation	T0	T13	NoRel	true	elecciones	designó
+Relation	T0	T15	NoRel	true	elecciones	rechazado
+Relation	T0	T8	NoRel	true	elecciones	colapsó
+Relation	T1	T0	NoRel	true	tuvo	elecciones
+Relation	T1	T10	NoRel	true	tuvo	aumento
+Relation	T1	T15	NoRel	true	tuvo	rechazado
+Relation	T1	T4	NoRel	true	tuvo	coalición
+Relation	T1	T6	NoRel	true	tuvo	estalló
+Relation	T10	T5	NoRel	true	aumento	restableciendo
+Relation	T10	T6	NoRel	true	aumento	estalló
+Relation	T10	T8	NoRel	true	aumento	colapsó
+Relation	T11	T1	NoRel	true	intenciones	tuvo
+Relation	T11	T4	NoRel	true	intenciones	coalición
+Relation	T11	T6	NoRel	true	intenciones	estalló
+Relation	T11	T8	NoRel	true	intenciones	colapsó
+Relation	T11	T9	NoRel	true	intenciones	disputa
+Relation	T12	T0	NoRel	true	instaurar	elecciones
+Relation	T12	T1	NoRel	true	instaurar	tuvo
+Relation	T12	T14	NoRel	true	instaurar	asumir
+Relation	T12	T3	NoRel	true	instaurar	formar
+Relation	T12	T4	NoRel	true	instaurar	coalición
+Relation	T12	T5	NoRel	true	instaurar	restableciendo
+Relation	T12	T8	NoRel	true	instaurar	colapsó
+Relation	T13	T12	NoRel	true	designó	instaurar
+Relation	T13	T15	NoRel	true	designó	rechazado
+Relation	T13	T7	NoRel	true	designó	Depresión
+Relation	T13	T8	NoRel	true	designó	colapsó
+Relation	T14	T0	NoRel	true	asumir	elecciones
+Relation	T14	T3	NoRel	true	asumir	formar
+Relation	T14	T8	NoRel	true	asumir	colapsó
+Relation	T15	T1	NoRel	true	rechazado	tuvo
+Relation	T15	T11	NoRel	true	rechazado	intenciones
+Relation	T15	T12	NoRel	true	rechazado	instaurar
+Relation	T15	T14	NoRel	true	rechazado	asumir
+Relation	T15	T3	NoRel	true	rechazado	formar
+Relation	T15	T7	NoRel	true	rechazado	Depresión
+Relation	T2	T0	NoRel	true	avances	elecciones
+Relation	T2	T1	NoRel	true	avances	tuvo
+Relation	T2	T13	NoRel	true	avances	designó
+Relation	T2	T15	NoRel	true	avances	rechazado
+Relation	T2	T3	NoRel	true	avances	formar
+Relation	T2	T4	NoRel	true	avances	coalición
+Relation	T2	T8	NoRel	true	avances	colapsó
+Relation	T3	T11	NoRel	true	formar	intenciones
+Relation	T3	T14	NoRel	true	formar	asumir
+Relation	T3	T7	NoRel	true	formar	Depresión
+Relation	T4	T1	NoRel	true	coalición	tuvo
+Relation	T4	T13	NoRel	true	coalición	designó
+Relation	T4	T14	NoRel	true	coalición	asumir
+Relation	T4	T7	NoRel	true	coalición	Depresión
+Relation	T4	T8	NoRel	true	coalición	colapsó
+Relation	T5	T12	NoRel	true	restableciendo	instaurar
+Relation	T5	T13	NoRel	true	restableciendo	designó
+Relation	T5	T14	NoRel	true	restableciendo	asumir
+Relation	T5	T2	NoRel	true	restableciendo	avances
+Relation	T5	T4	NoRel	true	restableciendo	coalición
+Relation	T5	T7	NoRel	true	restableciendo	Depresión
+Relation	T5	T8	NoRel	true	restableciendo	colapsó
+Relation	T6	T0	NoRel	true	estalló	elecciones
+Relation	T6	T1	NoRel	true	estalló	tuvo
+Relation	T6	T10	NoRel	true	estalló	aumento
+Relation	T6	T11	NoRel	true	estalló	intenciones
+Relation	T6	T13	NoRel	true	estalló	designó
+Relation	T6	T15	NoRel	true	estalló	rechazado
+Relation	T6	T2	NoRel	true	estalló	avances
+Relation	T6	T3	NoRel	true	estalló	formar
+Relation	T6	T4	NoRel	true	estalló	coalición
+Relation	T6	T5	NoRel	true	estalló	restableciendo
+Relation	T6	T8	NoRel	true	estalló	colapsó
+Relation	T7	T1	NoRel	true	Depresión	tuvo
+Relation	T7	T14	NoRel	true	Depresión	asumir
+Relation	T7	T15	NoRel	true	Depresión	rechazado
+Relation	T7	T2	NoRel	true	Depresión	avances
+Relation	T7	T4	NoRel	true	Depresión	coalición
+Relation	T7	T6	NoRel	true	Depresión	estalló
+Relation	T7	T8	NoRel	true	Depresión	colapsó
+Relation	T8	T10	NoRel	true	colapsó	aumento
+Relation	T8	T14	NoRel	true	colapsó	asumir
+Relation	T8	T4	NoRel	true	colapsó	coalición
+Relation	T8	T7	NoRel	true	colapsó	Depresión
+Relation	T9	T0	NoRel	true	disputa	elecciones
+Relation	T9	T3	NoRel	true	disputa	formar
+Relation	T9	T6	NoRel	true	disputa	estalló

@@ -1,0 +1,92 @@
+Text	El día anterior a la toma de esta medida , el vuelo 2043 de Conviasa , con 97 pasajeros a bordo , emitió la señal _ mayday _ , y aterrizó de emergencia en el Aeropuerto Internacional de Maiquetía , cerca de Caracas , sin inconvenientes .	La aeronave que tuvo el accidente fue un ATR 42-320 número de serie 1010 , matrícula YV-1010 .	Esta aeronave hizo su viaje inaugural en 1994 .	Este modelo cuenta con 2 motores General y un alcance máximo de 1.611 kilómetros .	El avión había tenido varias fallas anteriormente , por lo que fue llevado a reparar a una empresa no certificada en los Estados Unidos , reparación que tuvo un costo de 1.000.000 USD .
+Event	T0	toma	EVENT	21
+Event	T1	medida	EVENT	34
+Event	T2	vuelo	EVENT	46
+Event	T3	emitió	EVENT	98
+Event	T4	señal	EVENT	108
+Event	T5	aterrizó	EVENT	129
+Event	T6	emergencia	EVENT	141
+Event	T7	tuvo	EVENT	254
+Event	T8	accidente	EVENT	262
+Event	T9	hizo	EVENT	347
+Event	T10	inaugural	EVENT	361
+Event	T11	tenido	EVENT	479
+Event	T12	fallas	EVENT	493
+Event	T13	reparar	EVENT	541
+Event	T14	reparación	EVENT	602
+Relation	T12	T13	CauseEffect	true	fallas	reparar
+Relation	T13	T12	EffectCause	true	reparar	fallas
+Relation	T0	T1	NoRel	true	toma	medida
+Relation	T0	T14	NoRel	true	toma	reparación
+Relation	T0	T2	NoRel	true	toma	vuelo
+Relation	T0	T4	NoRel	true	toma	señal
+Relation	T0	T5	NoRel	true	toma	aterrizó
+Relation	T0	T9	NoRel	true	toma	hizo
+Relation	T1	T12	NoRel	true	medida	fallas
+Relation	T1	T2	NoRel	true	medida	vuelo
+Relation	T1	T3	NoRel	true	medida	emitió
+Relation	T1	T6	NoRel	true	medida	emergencia
+Relation	T1	T8	NoRel	true	medida	accidente
+Relation	T1	T9	NoRel	true	medida	hizo
+Relation	T10	T0	NoRel	true	inaugural	toma
+Relation	T10	T3	NoRel	true	inaugural	emitió
+Relation	T10	T4	NoRel	true	inaugural	señal
+Relation	T10	T9	NoRel	true	inaugural	hizo
+Relation	T11	T10	NoRel	true	tenido	inaugural
+Relation	T11	T13	NoRel	true	tenido	reparar
+Relation	T11	T4	NoRel	true	tenido	señal
+Relation	T11	T8	NoRel	true	tenido	accidente
+Relation	T12	T14	NoRel	true	fallas	reparación
+Relation	T12	T2	NoRel	true	fallas	vuelo
+Relation	T12	T5	NoRel	true	fallas	aterrizó
+Relation	T12	T8	NoRel	true	fallas	accidente
+Relation	T13	T0	NoRel	true	reparar	toma
+Relation	T13	T11	NoRel	true	reparar	tenido
+Relation	T13	T2	NoRel	true	reparar	vuelo
+Relation	T13	T4	NoRel	true	reparar	señal
+Relation	T13	T8	NoRel	true	reparar	accidente
+Relation	T13	T9	NoRel	true	reparar	hizo
+Relation	T14	T0	NoRel	true	reparación	toma
+Relation	T14	T13	NoRel	true	reparación	reparar
+Relation	T14	T2	NoRel	true	reparación	vuelo
+Relation	T14	T4	NoRel	true	reparación	señal
+Relation	T14	T8	NoRel	true	reparación	accidente
+Relation	T2	T13	NoRel	true	vuelo	reparar
+Relation	T2	T3	NoRel	true	vuelo	emitió
+Relation	T2	T5	NoRel	true	vuelo	aterrizó
+Relation	T2	T9	NoRel	true	vuelo	hizo
+Relation	T3	T1	NoRel	true	emitió	medida
+Relation	T3	T12	NoRel	true	emitió	fallas
+Relation	T3	T13	NoRel	true	emitió	reparar
+Relation	T3	T14	NoRel	true	emitió	reparación
+Relation	T3	T2	NoRel	true	emitió	vuelo
+Relation	T4	T3	NoRel	true	señal	emitió
+Relation	T4	T6	NoRel	true	señal	emergencia
+Relation	T4	T7	NoRel	true	señal	tuvo
+Relation	T4	T8	NoRel	true	señal	accidente
+Relation	T5	T0	NoRel	true	aterrizó	toma
+Relation	T5	T10	NoRel	true	aterrizó	inaugural
+Relation	T5	T6	NoRel	true	aterrizó	emergencia
+Relation	T5	T7	NoRel	true	aterrizó	tuvo
+Relation	T5	T8	NoRel	true	aterrizó	accidente
+Relation	T6	T0	NoRel	true	emergencia	toma
+Relation	T6	T13	NoRel	true	emergencia	reparar
+Relation	T6	T14	NoRel	true	emergencia	reparación
+Relation	T6	T5	NoRel	true	emergencia	aterrizó
+Relation	T6	T8	NoRel	true	emergencia	accidente
+Relation	T7	T0	NoRel	true	tuvo	toma
+Relation	T7	T1	NoRel	true	tuvo	medida
+Relation	T7	T10	NoRel	true	tuvo	inaugural
+Relation	T7	T12	NoRel	true	tuvo	fallas
+Relation	T7	T2	NoRel	true	tuvo	vuelo
+Relation	T7	T3	NoRel	true	tuvo	emitió
+Relation	T7	T5	NoRel	true	tuvo	aterrizó
+Relation	T7	T6	NoRel	true	tuvo	emergencia
+Relation	T8	T10	NoRel	true	accidente	inaugural
+Relation	T8	T11	NoRel	true	accidente	tenido
+Relation	T8	T4	NoRel	true	accidente	señal
+Relation	T8	T9	NoRel	true	accidente	hizo
+Relation	T9	T0	NoRel	true	hizo	toma
+Relation	T9	T1	NoRel	true	hizo	medida
+Relation	T9	T10	NoRel	true	hizo	inaugural
+Relation	T9	T4	NoRel	true	hizo	señal

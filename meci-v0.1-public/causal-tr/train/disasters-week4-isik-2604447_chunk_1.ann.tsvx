@@ -1,0 +1,67 @@
+Text	Depremin merkez_üssü Aşkabat'ın 25 km güneybatısındaki küçük Kara - Kavdan köyü yakınlarındaydı .	Deprem , neredeyse tüm tuğla binaların yıkıldığı , beton yapıların ağır hasar gördüğü ve yük trenlerinin raydan çıktığı Aşkabat ve yakın köylerde büyük ölçüde hasara neden oldu .	Bunun yanı sıra İran'ın Dergez kentinde de hasar ve kayıplar meydana geldi .	Aşkabat'ın kuzeybatısında ve güneydoğusunda yüzey rüptürü gözlendi .	Medya kaynakları , o zamanki Türkmenistan SSC'nin nüfusunun neredeyse % 10'una denk gelen 10, 000 ila 110, 000 arasında ölü sayısı konusunda değişiyor .
+Event	T0	Depremin	EVENT	0
+Event	T1	Deprem	EVENT	98
+Event	T2	yıkıldığı	EVENT	137
+Event	T3	gördüğü	EVENT	176
+Event	T4	çıktığı	EVENT	210
+Event	T5	oldu	EVENT	270
+Event	T6	hasar	EVENT	320
+Event	T7	geldi	EVENT	346
+Event	T8	gözlendi	EVENT	412
+Event	T9	ölü	EVENT	543
+Event	T10	değişiyor	EVENT	564
+Event	T11	hasara	EVENT	257
+Relation	T1	T5	CauseEffect	true	Deprem	oldu
+Relation	T5	T1	EffectCause	true	oldu	Deprem
+Relation	T1	T2	CauseEffect	true	Deprem	yıkıldığı
+Relation	T2	T1	EffectCause	true	yıkıldığı	Deprem
+Relation	T1	T3	CauseEffect	true	Deprem	gördüğü
+Relation	T3	T1	EffectCause	true	gördüğü	Deprem
+Relation	T1	T4	CauseEffect	true	Deprem	çıktığı
+Relation	T4	T1	EffectCause	true	çıktığı	Deprem
+Relation	T1	T6	CauseEffect	true	Deprem	hasar
+Relation	T6	T1	EffectCause	true	hasar	Deprem
+Relation	T1	T7	CauseEffect	true	Deprem	geldi
+Relation	T7	T1	EffectCause	true	geldi	Deprem
+Relation	T1	T8	CauseEffect	true	Deprem	gözlendi
+Relation	T8	T1	EffectCause	true	gözlendi	Deprem
+Relation	T0	T10	NoRel	true	Depremin	değişiyor
+Relation	T0	T6	NoRel	true	Depremin	hasar
+Relation	T1	T0	NoRel	true	Deprem	Depremin
+Relation	T1	T11	NoRel	true	Deprem	hasara
+Relation	T1	T9	NoRel	true	Deprem	ölü
+Relation	T10	T2	NoRel	true	değişiyor	yıkıldığı
+Relation	T10	T8	NoRel	true	değişiyor	gözlendi
+Relation	T10	T9	NoRel	true	değişiyor	ölü
+Relation	T11	T9	NoRel	true	hasara	ölü
+Relation	T2	T11	NoRel	true	yıkıldığı	hasara
+Relation	T2	T3	NoRel	true	yıkıldığı	gördüğü
+Relation	T3	T0	NoRel	true	gördüğü	Depremin
+Relation	T3	T4	NoRel	true	gördüğü	çıktığı
+Relation	T3	T7	NoRel	true	gördüğü	geldi
+Relation	T4	T0	NoRel	true	çıktığı	Depremin
+Relation	T4	T2	NoRel	true	çıktığı	yıkıldığı
+Relation	T4	T8	NoRel	true	çıktığı	gözlendi
+Relation	T4	T9	NoRel	true	çıktığı	ölü
+Relation	T5	T11	NoRel	true	oldu	hasara
+Relation	T5	T3	NoRel	true	oldu	gördüğü
+Relation	T5	T4	NoRel	true	oldu	çıktığı
+Relation	T5	T6	NoRel	true	oldu	hasar
+Relation	T6	T11	NoRel	true	hasar	hasara
+Relation	T6	T3	NoRel	true	hasar	gördüğü
+Relation	T6	T9	NoRel	true	hasar	ölü
+Relation	T7	T3	NoRel	true	geldi	gördüğü
+Relation	T7	T8	NoRel	true	geldi	gözlendi
+Relation	T8	T10	NoRel	true	gözlendi	değişiyor
+Relation	T8	T3	NoRel	true	gözlendi	gördüğü
+Relation	T8	T4	NoRel	true	gözlendi	çıktığı
+Relation	T8	T5	NoRel	true	gözlendi	oldu
+Relation	T8	T9	NoRel	true	gözlendi	ölü
+Relation	T9	T0	NoRel	true	ölü	Depremin
+Relation	T9	T1	NoRel	true	ölü	Deprem
+Relation	T9	T10	NoRel	true	ölü	değişiyor
+Relation	T9	T11	NoRel	true	ölü	hasara
+Relation	T9	T2	NoRel	true	ölü	yıkıldığı
+Relation	T9	T3	NoRel	true	ölü	gördüğü
+Relation	T9	T4	NoRel	true	ölü	çıktığı
+Relation	T9	T7	NoRel	true	ölü	geldi

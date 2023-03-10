@@ -1,0 +1,47 @@
+Text	El VUELO 5017 DE AIR ALGÉRIE ( AH5017 / DAH5017 ) del 24 de julio de 2014 fue un vuelo internacional regular de pasajeros operado por un avión McDonnell Douglas MD-83 , cuya propietaria es la compañía española SWIFTAIR .	Partió del aeropuerto de Uagadugú , en Burkina Faso , a las 01:17 horas ( hora local ) hacia el aeropuerto Internacional Houari Boumedienne de Argel , capital de Argelia .	La aeronave desapareció de los radares aéreos cincuenta minutos después del despegue , cayendo al norte de Malí , cerca de la frontera con Argelia .	A bordo de la aeronave viajaban 110 pasajeros y 6 tripulantes ( 2 pilotos y 4 auxiliares de vuelo ) , entre los que , según el presidente francés , no hay ningún superviviente .	El vuelo 5017 debía aterrizar a las 05:10 ( hora local de Argelia , 07:10 en Europa Occidental ) .
+Event	T0	vuelo	EVENT	81
+Event	T1	operado	EVENT	122
+Event	T2	Partió	EVENT	221
+Event	T3	desapareció	EVENT	405
+Event	T4	despegue	EVENT	469
+Event	T5	cayendo	EVENT	480
+Event	T6	viajaban	EVENT	565
+Event	T7	vuelo	EVENT	723
+Event	T8	aterrizar	EVENT	740
+Event	T9	superviviente	EVENT	704
+Relation	T5	T9	CauseEffect	true	cayendo	superviviente
+Relation	T9	T5	EffectCause	true	superviviente	cayendo
+Relation	T0	T2	NoRel	true	vuelo	Partió
+Relation	T0	T7	NoRel	true	vuelo	vuelo
+Relation	T0	T8	NoRel	true	vuelo	aterrizar
+Relation	T1	T2	NoRel	true	operado	Partió
+Relation	T1	T3	NoRel	true	operado	desapareció
+Relation	T1	T6	NoRel	true	operado	viajaban
+Relation	T1	T7	NoRel	true	operado	vuelo
+Relation	T1	T8	NoRel	true	operado	aterrizar
+Relation	T2	T6	NoRel	true	Partió	viajaban
+Relation	T2	T7	NoRel	true	Partió	vuelo
+Relation	T2	T9	NoRel	true	Partió	superviviente
+Relation	T3	T0	NoRel	true	desapareció	vuelo
+Relation	T3	T7	NoRel	true	desapareció	vuelo
+Relation	T3	T9	NoRel	true	desapareció	superviviente
+Relation	T4	T0	NoRel	true	despegue	vuelo
+Relation	T4	T1	NoRel	true	despegue	operado
+Relation	T4	T5	NoRel	true	despegue	cayendo
+Relation	T4	T8	NoRel	true	despegue	aterrizar
+Relation	T5	T1	NoRel	true	cayendo	operado
+Relation	T5	T8	NoRel	true	cayendo	aterrizar
+Relation	T6	T2	NoRel	true	viajaban	Partió
+Relation	T6	T5	NoRel	true	viajaban	cayendo
+Relation	T6	T9	NoRel	true	viajaban	superviviente
+Relation	T7	T0	NoRel	true	vuelo	vuelo
+Relation	T7	T1	NoRel	true	vuelo	operado
+Relation	T7	T2	NoRel	true	vuelo	Partió
+Relation	T7	T6	NoRel	true	vuelo	viajaban
+Relation	T8	T0	NoRel	true	aterrizar	vuelo
+Relation	T8	T3	NoRel	true	aterrizar	desapareció
+Relation	T8	T6	NoRel	true	aterrizar	viajaban
+Relation	T9	T0	NoRel	true	superviviente	vuelo
+Relation	T9	T2	NoRel	true	superviviente	Partió
+Relation	T9	T3	NoRel	true	superviviente	desapareció
+Relation	T9	T4	NoRel	true	superviviente	despegue

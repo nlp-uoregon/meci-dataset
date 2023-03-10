@@ -1,0 +1,32 @@
+Text	1600 kişiye sıcak yemek dağıtıldı .	Kızılay 4 Temmuz günü olası artçı şokları da göz önünde bulundurarak bölgeye 400 çadır ve 500 battaniye daha gönderdi .	Yığınçal köyünde kurulan dağınık çadırlar bir araya toplanarak iki tane çadır bölgesi oluşturuldu .	Kızılay bunların dışında tabak , çatal ve kaşık göndermeyince yemekleri almakta sorun yaşandı ve depremzedeler yemekleri ekmek arası almak zorunda kaldı .	Su ayrıca Ağrı ve Doğubayazıt Belediyesi ile Köy Hizmetleri ekipleri tarafından tankerlerle sağlandı .
+Event	T0	dağıtıldı	EVENT	24
+Event	T1	gönderdi	EVENT	145
+Event	T2	kurulan	EVENT	173
+Event	T3	oluşturuldu	EVENT	242
+Event	T4	almak	EVENT	389
+Event	T5	sağlandı	EVENT	503
+Event	T6	artçı	EVENT	64
+Event	T7	yaşandı	EVENT	342
+Relation	T6	T1	CauseEffect	true	artçı	gönderdi
+Relation	T1	T6	EffectCause	true	gönderdi	artçı
+Relation	T7	T4	CauseEffect	true	yaşandı	almak
+Relation	T4	T7	EffectCause	true	almak	yaşandı
+Relation	T0	T7	NoRel	true	dağıtıldı	yaşandı
+Relation	T1	T4	NoRel	true	gönderdi	almak
+Relation	T2	T0	NoRel	true	kurulan	dağıtıldı
+Relation	T2	T1	NoRel	true	kurulan	gönderdi
+Relation	T2	T3	NoRel	true	kurulan	oluşturuldu
+Relation	T2	T7	NoRel	true	kurulan	yaşandı
+Relation	T3	T1	NoRel	true	oluşturuldu	gönderdi
+Relation	T3	T4	NoRel	true	oluşturuldu	almak
+Relation	T3	T5	NoRel	true	oluşturuldu	sağlandı
+Relation	T4	T2	NoRel	true	almak	kurulan
+Relation	T4	T5	NoRel	true	almak	sağlandı
+Relation	T5	T2	NoRel	true	sağlandı	kurulan
+Relation	T5	T3	NoRel	true	sağlandı	oluşturuldu
+Relation	T5	T7	NoRel	true	sağlandı	yaşandı
+Relation	T6	T0	NoRel	true	artçı	dağıtıldı
+Relation	T7	T0	NoRel	true	yaşandı	dağıtıldı
+Relation	T7	T1	NoRel	true	yaşandı	gönderdi
+Relation	T7	T2	NoRel	true	yaşandı	kurulan
+Relation	T7	T5	NoRel	true	yaşandı	sağlandı

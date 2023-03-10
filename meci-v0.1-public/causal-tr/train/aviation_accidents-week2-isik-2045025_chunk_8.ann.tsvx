@@ -1,0 +1,18 @@
+Text	Kesik beyaz çizgiler ise sınırı göstermektedir .	Rusya'nın iddiası Türk uçaklarının geçici olarak Suriye hava sahasını ihlâl ettikleri ve Suriye sınırları içerisinde Rus uçaklarına ateş ettikleridir .	küçükresim | 300px| Yayınlanan ikinci resmi bir haritada savaş uçağın değişik ( kırmızı ) güzergahı görünmektedir .	Türk Hava Kuvvetleri'ne ait iki keşif amaçlı uçuş gerçekleştiren F - 16 tipi savaş uçağı tarafından 24 Kasım 2015 tarihinde 09: 24 saatinde Rus Hava Kuvvetleri'ne ait Sukhoi Su- 24 tipi bir saldırı uçağı düşürüldü .	Türkiye’nin New York’taki Birleşmiş Milletler Daimi Temsilciliği tarafından Birleşmiş Milletler Güvenlik Konseyi Başkanı Büyükelçi Matthew Ryeroft ve Birleşmiş Milletler Genel Sekreteri Ban Ki - Moon'a yazılan mektuba göre milliyeti bilinmeyen iki adet Su- 24 uçağı Yayladağı yakınındaki Türk hava sahasına yaklaştı .
+Event	T1	iddiası	EVENT	59
+Event	T3	keşif	EVENT	349
+Event	T4	düşürüldü	EVENT	521
+Event	T5	yazılan	EVENT	735
+Event	T6	yaklaştı	EVENT	840
+Relation	T6	T4	CauseEffect	true	yaklaştı	düşürüldü
+Relation	T4	T6	EffectCause	true	düşürüldü	yaklaştı
+Relation	T4	T1	CauseEffect	true	düşürüldü	iddiası
+Relation	T1	T4	EffectCause	true	iddiası	düşürüldü
+Relation	T1	T5	NoRel	true	iddiası	yazılan
+Relation	T3	T1	NoRel	true	keşif	iddiası
+Relation	T3	T4	NoRel	true	keşif	düşürüldü
+Relation	T5	T3	NoRel	true	yazılan	keşif
+Relation	T5	T4	NoRel	true	yazılan	düşürüldü
+Relation	T5	T6	NoRel	true	yazılan	yaklaştı
+Relation	T6	T1	NoRel	true	yaklaştı	iddiası
+Relation	T6	T5	NoRel	true	yaklaştı	yazılan

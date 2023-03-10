@@ -1,0 +1,51 @@
+Text	El VUELO 1344 DE AIR INDIA EXPRESS era un vuelo programado desde el Aeropuerto Internacional de Dubái al Aeropuerto Internacional de Kozhikode , Kerala , India .	El 7 de agosto de 2020 , la aeronave que operaba el vuelo , un Boeing 737-8NG , se estrelló tras derrapar fuera de la pista .	Después de que la aeronave salió de la pista , cayó en un valle más allá de la pista , rompiéndose en varios pedazos .	De los 184 pasajeros y 6 tripulantes a bordo de la aeronave ( 190 en total ) , los dos pilotos y 19 pasajeros murieron .	[ La aeronave accidentada , fotografiada en 2016 .
+Event	T0	programado	EVENT	48
+Event	T1	operaba	EVENT	203
+Event	T2	vuelo	EVENT	214
+Event	T3	estrelló	EVENT	245
+Event	T4	derrapar	EVENT	259
+Event	T5	salió	EVENT	315
+Event	T6	cayó	EVENT	335
+Event	T7	rompiéndose	EVENT	375
+Event	T8	murieron	EVENT	517
+Event	T9	accidentada	EVENT	542
+Event	T10	fotografiada	EVENT	556
+Relation	T4	T3	CauseEffect	true	derrapar	estrelló
+Relation	T3	T4	EffectCause	true	estrelló	derrapar
+Relation	T3	T7	CauseEffect	true	estrelló	rompiéndose
+Relation	T7	T3	EffectCause	true	rompiéndose	estrelló
+Relation	T7	T8	CauseEffect	true	rompiéndose	murieron
+Relation	T8	T7	EffectCause	true	murieron	rompiéndose
+Relation	T0	T1	NoRel	true	programado	operaba
+Relation	T0	T2	NoRel	true	programado	vuelo
+Relation	T0	T4	NoRel	true	programado	derrapar
+Relation	T0	T5	NoRel	true	programado	salió
+Relation	T1	T4	NoRel	true	operaba	derrapar
+Relation	T1	T7	NoRel	true	operaba	rompiéndose
+Relation	T10	T2	NoRel	true	fotografiada	vuelo
+Relation	T10	T6	NoRel	true	fotografiada	cayó
+Relation	T10	T8	NoRel	true	fotografiada	murieron
+Relation	T2	T10	NoRel	true	vuelo	fotografiada
+Relation	T2	T8	NoRel	true	vuelo	murieron
+Relation	T3	T0	NoRel	true	estrelló	programado
+Relation	T3	T1	NoRel	true	estrelló	operaba
+Relation	T3	T2	NoRel	true	estrelló	vuelo
+Relation	T3	T8	NoRel	true	estrelló	murieron
+Relation	T3	T9	NoRel	true	estrelló	accidentada
+Relation	T4	T0	NoRel	true	derrapar	programado
+Relation	T4	T2	NoRel	true	derrapar	vuelo
+Relation	T4	T7	NoRel	true	derrapar	rompiéndose
+Relation	T5	T10	NoRel	true	salió	fotografiada
+Relation	T6	T0	NoRel	true	cayó	programado
+Relation	T6	T2	NoRel	true	cayó	vuelo
+Relation	T6	T8	NoRel	true	cayó	murieron
+Relation	T6	T9	NoRel	true	cayó	accidentada
+Relation	T7	T1	NoRel	true	rompiéndose	operaba
+Relation	T7	T2	NoRel	true	rompiéndose	vuelo
+Relation	T7	T9	NoRel	true	rompiéndose	accidentada
+Relation	T8	T0	NoRel	true	murieron	programado
+Relation	T8	T4	NoRel	true	murieron	derrapar
+Relation	T8	T6	NoRel	true	murieron	cayó
+Relation	T9	T1	NoRel	true	accidentada	operaba
+Relation	T9	T10	NoRel	true	accidentada	fotografiada
+Relation	T9	T6	NoRel	true	accidentada	cayó

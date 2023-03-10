@@ -1,0 +1,83 @@
+Text	El 9 de julio de 2021 , un incendio en una fábrica de alimentos y bebidas dejó al menos 52 personas muertas y otras 20 resultaron heridas .	El incendio ocurrió en la fábrica de jugo de Shezam en Rupganj , una ciudad industrial en el distrito de Narayan ganj , Bangladés .	El mismo día , el propietario de Sajeeb Group , cuya subsidiaria Hashem Foods es propietaria de la fábrica de jugos , sus cuatro hijos y otros tres ejecutivos de la empresa fueron arrestados en relación con el incendio .	Se enfrentan a varios cargos que incluyen asesinato , intento de asesinato y causar intencionalmente lesiones graves .	La fábrica fue construida ilegalmente , no tenía salidas de emergencia y carecía de las medidas de seguridad adecuadas .
+Event	T0	incendio	EVENT	27
+Event	T1	dejó	EVENT	74
+Event	T2	muertas	EVENT	100
+Event	T3	heridas	EVENT	130
+Event	T4	ocurrió	EVENT	152
+Event	T5	arrestados	EVENT	452
+Event	T6	incendio	EVENT	482
+Event	T7	enfrentan	EVENT	496
+Event	T8	cargos	EVENT	515
+Event	T9	asesinato	EVENT	535
+Event	T10	intento	EVENT	547
+Event	T11	asesinato	EVENT	558
+Event	T12	causar	EVENT	570
+Event	T13	construida	EVENT	627
+Event	T14	salidas	EVENT	661
+Relation	T0	T2	CauseEffect	true	incendio	muertas
+Relation	T2	T0	EffectCause	true	muertas	incendio
+Relation	T0	T3	CauseEffect	true	incendio	heridas
+Relation	T3	T0	EffectCause	true	heridas	incendio
+Relation	T0	T1	NoRel	true	incendio	dejó
+Relation	T0	T10	NoRel	true	incendio	intento
+Relation	T0	T11	NoRel	true	incendio	asesinato
+Relation	T0	T13	NoRel	true	incendio	construida
+Relation	T0	T14	NoRel	true	incendio	salidas
+Relation	T0	T4	NoRel	true	incendio	ocurrió
+Relation	T0	T7	NoRel	true	incendio	enfrentan
+Relation	T0	T8	NoRel	true	incendio	cargos
+Relation	T0	T9	NoRel	true	incendio	asesinato
+Relation	T1	T13	NoRel	true	dejó	construida
+Relation	T1	T3	NoRel	true	dejó	heridas
+Relation	T1	T4	NoRel	true	dejó	ocurrió
+Relation	T1	T8	NoRel	true	dejó	cargos
+Relation	T10	T1	NoRel	true	intento	dejó
+Relation	T10	T12	NoRel	true	intento	causar
+Relation	T10	T7	NoRel	true	intento	enfrentan
+Relation	T11	T13	NoRel	true	asesinato	construida
+Relation	T11	T14	NoRel	true	asesinato	salidas
+Relation	T12	T0	NoRel	true	causar	incendio
+Relation	T12	T10	NoRel	true	causar	intento
+Relation	T12	T14	NoRel	true	causar	salidas
+Relation	T12	T3	NoRel	true	causar	heridas
+Relation	T12	T6	NoRel	true	causar	incendio
+Relation	T12	T7	NoRel	true	causar	enfrentan
+Relation	T13	T14	NoRel	true	construida	salidas
+Relation	T13	T4	NoRel	true	construida	ocurrió
+Relation	T13	T5	NoRel	true	construida	arrestados
+Relation	T13	T6	NoRel	true	construida	incendio
+Relation	T13	T8	NoRel	true	construida	cargos
+Relation	T14	T2	NoRel	true	salidas	muertas
+Relation	T14	T6	NoRel	true	salidas	incendio
+Relation	T2	T10	NoRel	true	muertas	intento
+Relation	T2	T14	NoRel	true	muertas	salidas
+Relation	T2	T3	NoRel	true	muertas	heridas
+Relation	T2	T7	NoRel	true	muertas	enfrentan
+Relation	T2	T9	NoRel	true	muertas	asesinato
+Relation	T3	T11	NoRel	true	heridas	asesinato
+Relation	T3	T2	NoRel	true	heridas	muertas
+Relation	T3	T4	NoRel	true	heridas	ocurrió
+Relation	T3	T6	NoRel	true	heridas	incendio
+Relation	T3	T7	NoRel	true	heridas	enfrentan
+Relation	T4	T2	NoRel	true	ocurrió	muertas
+Relation	T4	T7	NoRel	true	ocurrió	enfrentan
+Relation	T4	T9	NoRel	true	ocurrió	asesinato
+Relation	T5	T11	NoRel	true	arrestados	asesinato
+Relation	T5	T3	NoRel	true	arrestados	heridas
+Relation	T5	T8	NoRel	true	arrestados	cargos
+Relation	T5	T9	NoRel	true	arrestados	asesinato
+Relation	T6	T12	NoRel	true	incendio	causar
+Relation	T6	T14	NoRel	true	incendio	salidas
+Relation	T6	T2	NoRel	true	incendio	muertas
+Relation	T7	T11	NoRel	true	enfrentan	asesinato
+Relation	T7	T4	NoRel	true	enfrentan	ocurrió
+Relation	T7	T9	NoRel	true	enfrentan	asesinato
+Relation	T8	T0	NoRel	true	cargos	incendio
+Relation	T8	T11	NoRel	true	cargos	asesinato
+Relation	T8	T12	NoRel	true	cargos	causar
+Relation	T8	T14	NoRel	true	cargos	salidas
+Relation	T8	T2	NoRel	true	cargos	muertas
+Relation	T8	T5	NoRel	true	cargos	arrestados
+Relation	T8	T6	NoRel	true	cargos	incendio
+Relation	T8	T9	NoRel	true	cargos	asesinato
+Relation	T9	T2	NoRel	true	asesinato	muertas

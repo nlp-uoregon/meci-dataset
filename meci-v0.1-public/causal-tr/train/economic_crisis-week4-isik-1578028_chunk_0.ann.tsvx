@@ -1,0 +1,57 @@
+Text	küçükresim | 250px | Ruhr Kızılordusu mensubu milisler Dortmund'da , 1920 RUHR KIZILORDUSU ( Almanca : _ Rote Ruhrarmee _ ) , 50.000 ile 80.000 arası mevcuda sahip , Almanya Komünist Partisi'ne üye sol görüşlü Alman işçilerden oluşan bir komünist silahlı örgüttü .	13 Mart 1920 tarihinde Almanya'nın en zengin bölgesi Ruhr'da Kapp Darbesi'ne tepki olarak kurulmuştu .	14 Mart'taki genel grev çağrısından sonra , anti - komünist Freikorps'u ve hükümete bağlı Reichswehr birliklerini yenilgiye uğrattılar ve ardından Almanya'nın en büyük silahlı işçi ayaklanmasını başlattılar .	Ruhr bölgesindeki orta ve zengin sınıf , komünist bir bir darbenin gerçekleşmesinden korkarken , 300.000 maden işçisi ise Ruhr Kızılordusu'nu destekledi .	Ruhr Kızılordusu'na bağlı grevciler Düsseldorf , Elberfeld ve Essen şehirlerinde hakimiyet sağladıktan yakın bir zaman sonra tüm Ruhr bölgesini kontrol altına aldılar .
+Event	T0	tepki	EVENT	342
+Event	T1	kurulmuştu	EVENT	355
+Event	T2	çağrısından	EVENT	392
+Event	T3	uğrattılar	EVENT	492
+Event	T4	başlattılar	EVENT	563
+Event	T5	destekledi	EVENT	719
+Event	T6	sağladıktan	EVENT	823
+Event	T7	aldılar	EVENT	891
+Event	T8	oluşan	EVENT	227
+Event	T9	KIZILORDUSU	EVENT	79
+Event	T10	korkarken	EVENT	662
+Relation	T0	T1	CauseEffect	true	tepki	kurulmuştu
+Relation	T1	T0	EffectCause	true	kurulmuştu	tepki
+Relation	T0	T9	CauseEffect	true	tepki	KIZILORDUSU
+Relation	T9	T0	EffectCause	true	KIZILORDUSU	tepki
+Relation	T10	T5	CauseEffect	true	korkarken	destekledi
+Relation	T5	T10	EffectCause	true	destekledi	korkarken
+Relation	T0	T10	NoRel	true	tepki	korkarken
+Relation	T0	T2	NoRel	true	tepki	çağrısından
+Relation	T0	T3	NoRel	true	tepki	uğrattılar
+Relation	T0	T6	NoRel	true	tepki	sağladıktan
+Relation	T0	T7	NoRel	true	tepki	aldılar
+Relation	T1	T2	NoRel	true	kurulmuştu	çağrısından
+Relation	T1	T3	NoRel	true	kurulmuştu	uğrattılar
+Relation	T1	T7	NoRel	true	kurulmuştu	aldılar
+Relation	T10	T3	NoRel	true	korkarken	uğrattılar
+Relation	T10	T4	NoRel	true	korkarken	başlattılar
+Relation	T10	T8	NoRel	true	korkarken	oluşan
+Relation	T2	T4	NoRel	true	çağrısından	başlattılar
+Relation	T2	T7	NoRel	true	çağrısından	aldılar
+Relation	T2	T9	NoRel	true	çağrısından	KIZILORDUSU
+Relation	T3	T10	NoRel	true	uğrattılar	korkarken
+Relation	T3	T8	NoRel	true	uğrattılar	oluşan
+Relation	T3	T9	NoRel	true	uğrattılar	KIZILORDUSU
+Relation	T4	T0	NoRel	true	başlattılar	tepki
+Relation	T4	T1	NoRel	true	başlattılar	kurulmuştu
+Relation	T4	T10	NoRel	true	başlattılar	korkarken
+Relation	T4	T2	NoRel	true	başlattılar	çağrısından
+Relation	T4	T8	NoRel	true	başlattılar	oluşan
+Relation	T5	T1	NoRel	true	destekledi	kurulmuştu
+Relation	T5	T4	NoRel	true	destekledi	başlattılar
+Relation	T5	T6	NoRel	true	destekledi	sağladıktan
+Relation	T6	T3	NoRel	true	sağladıktan	uğrattılar
+Relation	T6	T7	NoRel	true	sağladıktan	aldılar
+Relation	T6	T9	NoRel	true	sağladıktan	KIZILORDUSU
+Relation	T7	T0	NoRel	true	aldılar	tepki
+Relation	T7	T1	NoRel	true	aldılar	kurulmuştu
+Relation	T7	T10	NoRel	true	aldılar	korkarken
+Relation	T7	T4	NoRel	true	aldılar	başlattılar
+Relation	T7	T9	NoRel	true	aldılar	KIZILORDUSU
+Relation	T8	T0	NoRel	true	oluşan	tepki
+Relation	T8	T1	NoRel	true	oluşan	kurulmuştu
+Relation	T8	T2	NoRel	true	oluşan	çağrısından
+Relation	T8	T7	NoRel	true	oluşan	aldılar
+Relation	T9	T1	NoRel	true	KIZILORDUSU	kurulmuştu
+Relation	T9	T6	NoRel	true	KIZILORDUSU	sağladıktan

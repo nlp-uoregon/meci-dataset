@@ -1,0 +1,37 @@
+Text	SARS ( Akut luftvejssyndrom eller Severe Acute Respiratory Syndrome på engelsk ) er en sygdom der opstod i Kina ( Guangdong ) i 2002 .	I dette område er der en række gunstige betingelser for at virus kan overføres fra dyr til mennesker , jf. zoonose , og nye virussygdomme kan opstå , blandt andet fordi mennesker , fjerkræ og grise lever tæt opad hinanden .	Det er nu efter al sandsynlighed fastslået at sygdommen skyldes coronavirussen SARS-CoV .	Den nye virus ligner dog ikke de almindelige humane coronavira ; den stammer derimod sandsynligvis fra dyr , muligvis fugle .	SARS-virussen er usædvanlig bestandig og muterer ikke i så høj grad som almindelig influenzavirus .
+Event	T0	sygdom	EVENT	87
+Event	T1	opstod	EVENT	98
+Event	T2	overføres	EVENT	204
+Event	T3	zoonose	EVENT	242
+Event	T4	virussygdomme	EVENT	259
+Event	T5	opstå	EVENT	277
+Event	T6	lever	EVENT	333
+Event	T7	fastslået	EVENT	392
+Event	T8	muterer	EVENT	616
+Relation	T6	T5	CauseEffect	true	lever	opstå
+Relation	T5	T6	EffectCause	true	opstå	lever
+Relation	T6	T4	CauseEffect	true	lever	virussygdomme
+Relation	T4	T6	EffectCause	true	virussygdomme	lever
+Relation	T6	T2	CauseEffect	true	lever	overføres
+Relation	T2	T6	EffectCause	true	overføres	lever
+Relation	T0	T1	NoRel	true	sygdom	opstod
+Relation	T0	T2	NoRel	true	sygdom	overføres
+Relation	T1	T0	NoRel	true	opstod	sygdom
+Relation	T1	T3	NoRel	true	opstod	zoonose
+Relation	T1	T4	NoRel	true	opstod	virussygdomme
+Relation	T1	T5	NoRel	true	opstod	opstå
+Relation	T2	T0	NoRel	true	overføres	sygdom
+Relation	T2	T3	NoRel	true	overføres	zoonose
+Relation	T3	T4	NoRel	true	zoonose	virussygdomme
+Relation	T3	T6	NoRel	true	zoonose	lever
+Relation	T3	T7	NoRel	true	zoonose	fastslået
+Relation	T3	T8	NoRel	true	zoonose	muterer
+Relation	T4	T2	NoRel	true	virussygdomme	overføres
+Relation	T4	T5	NoRel	true	virussygdomme	opstå
+Relation	T5	T8	NoRel	true	opstå	muterer
+Relation	T6	T0	NoRel	true	lever	sygdom
+Relation	T6	T7	NoRel	true	lever	fastslået
+Relation	T6	T8	NoRel	true	lever	muterer
+Relation	T7	T3	NoRel	true	fastslået	zoonose
+Relation	T7	T8	NoRel	true	fastslået	muterer
+Relation	T8	T6	NoRel	true	muterer	lever

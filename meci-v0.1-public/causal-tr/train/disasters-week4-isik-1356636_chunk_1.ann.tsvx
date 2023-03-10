@@ -1,0 +1,50 @@
+Text	Hakkâri , Ağrı , Iğdır , Erzurum , Kars , Bingöl , Muş , Bitlis , Siirt , Batman , Mardin , Diyarbakır , Şanlıurfa gibi çevre illerde İran ve Kuzey Irak'ta da hissedilen depremde binalar yıkıldı , elektrik ve telefon hatları kesildi .	Moment magnitüd ölçeğine göre 7.2M _ ( w ) büyüklüğündeki deprem , Cumhuriyet tarihi boyunca Anadolu'da meydana gelen en büyük depremlerden biri olarak kayıtlara geçti .	Alüvyon tabakaları üzerinde bulunan Van şehrinde kumlu , çakıllı ve killi zemin tabakaları bulunmaktadır .	Yer yer zemin yüzeyine 2 metre derinliğe kadar yaklaşan yeraltı suları nedeniyle bazı yapıların temellerinde oturmalar meydana gelmektedir .	Van Gölü ve çevresi , 1100 ve 1900 yılları arasında 5 ile 10 şiddetleri arasındaki pek çok depremden etkilenmiştir .
+Event	T0	depremde	EVENT	170
+Event	T1	yıkıldı	EVENT	187
+Event	T2	kesildi	EVENT	225
+Event	T3	deprem	EVENT	293
+Event	T5	geçti	EVENT	397
+Event	T6	etkilenmiştir	EVENT	754
+Event	T7	hissedilen	EVENT	159
+Event	T4	yaklaşan	EVENT	559
+Event	T8	gelmektedir	EVENT	639
+Event	T9	depremden	EVENT	744
+Relation	T0	T7	CauseEffect	true	depremde	hissedilen
+Relation	T7	T0	EffectCause	true	hissedilen	depremde
+Relation	T0	T1	CauseEffect	true	depremde	yıkıldı
+Relation	T1	T0	EffectCause	true	yıkıldı	depremde
+Relation	T0	T2	CauseEffect	true	depremde	kesildi
+Relation	T2	T0	EffectCause	true	kesildi	depremde
+Relation	T3	T5	CauseEffect	true	deprem	geçti
+Relation	T5	T3	EffectCause	true	geçti	deprem
+Relation	T4	T8	CauseEffect	true	yaklaşan	gelmektedir
+Relation	T8	T4	EffectCause	true	gelmektedir	yaklaşan
+Relation	T9	T6	CauseEffect	true	depremden	etkilenmiştir
+Relation	T6	T9	EffectCause	true	etkilenmiştir	depremden
+Relation	T0	T9	NoRel	true	depremde	depremden
+Relation	T1	T3	NoRel	true	yıkıldı	deprem
+Relation	T1	T8	NoRel	true	yıkıldı	gelmektedir
+Relation	T3	T0	NoRel	true	deprem	depremde
+Relation	T3	T4	NoRel	true	deprem	yaklaşan
+Relation	T3	T6	NoRel	true	deprem	etkilenmiştir
+Relation	T4	T1	NoRel	true	yaklaşan	yıkıldı
+Relation	T4	T9	NoRel	true	yaklaşan	depremden
+Relation	T5	T1	NoRel	true	geçti	yıkıldı
+Relation	T5	T4	NoRel	true	geçti	yaklaşan
+Relation	T5	T7	NoRel	true	geçti	hissedilen
+Relation	T5	T9	NoRel	true	geçti	depremden
+Relation	T6	T2	NoRel	true	etkilenmiştir	kesildi
+Relation	T6	T3	NoRel	true	etkilenmiştir	deprem
+Relation	T6	T4	NoRel	true	etkilenmiştir	yaklaşan
+Relation	T7	T2	NoRel	true	hissedilen	kesildi
+Relation	T7	T3	NoRel	true	hissedilen	deprem
+Relation	T7	T5	NoRel	true	hissedilen	geçti
+Relation	T7	T6	NoRel	true	hissedilen	etkilenmiştir
+Relation	T7	T8	NoRel	true	hissedilen	gelmektedir
+Relation	T7	T9	NoRel	true	hissedilen	depremden
+Relation	T8	T5	NoRel	true	gelmektedir	geçti
+Relation	T8	T6	NoRel	true	gelmektedir	etkilenmiştir
+Relation	T8	T7	NoRel	true	gelmektedir	hissedilen
+Relation	T8	T9	NoRel	true	gelmektedir	depremden
+Relation	T9	T7	NoRel	true	depremden	hissedilen
+Relation	T9	T8	NoRel	true	depremden	gelmektedir

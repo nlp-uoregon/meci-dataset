@@ -1,0 +1,64 @@
+Text	After the casualties had been removed , the Saudi government used bulldozers to clear the area so the ceremony could continue .	The Saudi government had invested in improving crowd flow at Jamaraat Bridge , by widening it to eight lanes .	Plans for the bridge to be demolished and rebuilt as a four - storey structure with air - conditioning were approved in 2005 .	This work went ahead immediately after the January 2006 Hajj and was completed prior to the 2009 Hajj .	These infrastructure improvements were not accompanied by adequate signage telling pilgrims which direction to travel , a problem given that most Hajjis have never visited before .
+Event	T0	casualties	EVENT	10
+Event	T1	removed	EVENT	30
+Event	T10	rebuilt	EVENT	281
+Event	T11	went	EVENT	376
+Event	T12	approved	EVENT	347
+Event	T13	completed	EVENT	435
+Event	T15	accompanied	EVENT	513
+Event	T16	telling	EVENT	545
+Event	T17	travel	EVENT	581
+Event	T18	visited	EVENT	634
+Event	T19	widening	EVENT	210
+Event	T2	used	EVENT	61
+Event	T3	clear	EVENT	80
+Event	T4	ceremony	EVENT	102
+Event	T5	continue	EVENT	117
+Event	T6	invested	EVENT	153
+Event	T7	improving	EVENT	165
+Event	T8	flow	EVENT	181
+Event	T9	demolished	EVENT	266
+Relation	T3	T2	CauseEffect	true	clear	used
+Relation	T2	T3	EffectCause	true	used	clear
+Relation	T5	T3	CauseEffect	true	continue	clear
+Relation	T3	T5	EffectCause	true	clear	continue
+Relation	T12	T9	CauseEffect	true	approved	demolished
+Relation	T9	T12	EffectCause	true	demolished	approved
+Relation	T12	T10	CauseEffect	true	approved	rebuilt
+Relation	T10	T12	EffectCause	true	rebuilt	approved
+Relation	T11	T13	CauseEffect	true	went	completed
+Relation	T13	T11	EffectCause	true	completed	went
+Relation	T1	T0	NoRel	true	removed	casualties
+Relation	T1	T13	NoRel	true	removed	completed
+Relation	T1	T3	NoRel	true	removed	clear
+Relation	T1	T6	NoRel	true	removed	invested
+Relation	T10	T5	NoRel	true	rebuilt	continue
+Relation	T11	T0	NoRel	true	went	casualties
+Relation	T11	T1	NoRel	true	went	removed
+Relation	T11	T7	NoRel	true	went	improving
+Relation	T11	T8	NoRel	true	went	flow
+Relation	T12	T11	NoRel	true	approved	went
+Relation	T12	T4	NoRel	true	approved	ceremony
+Relation	T13	T10	NoRel	true	completed	rebuilt
+Relation	T13	T8	NoRel	true	completed	flow
+Relation	T15	T13	NoRel	true	accompanied	completed
+Relation	T15	T17	NoRel	true	accompanied	travel
+Relation	T16	T4	NoRel	true	telling	ceremony
+Relation	T16	T8	NoRel	true	telling	flow
+Relation	T17	T10	NoRel	true	travel	rebuilt
+Relation	T18	T15	NoRel	true	visited	accompanied
+Relation	T19	T6	NoRel	true	widening	invested
+Relation	T2	T12	NoRel	true	used	approved
+Relation	T2	T7	NoRel	true	used	improving
+Relation	T3	T17	NoRel	true	clear	travel
+Relation	T4	T6	NoRel	true	ceremony	invested
+Relation	T5	T6	NoRel	true	continue	invested
+Relation	T5	T7	NoRel	true	continue	improving
+Relation	T5	T8	NoRel	true	continue	flow
+Relation	T5	T9	NoRel	true	continue	demolished
+Relation	T6	T0	NoRel	true	invested	casualties
+Relation	T7	T12	NoRel	true	improving	approved
+Relation	T7	T16	NoRel	true	improving	telling
+Relation	T8	T0	NoRel	true	flow	casualties
+Relation	T8	T11	NoRel	true	flow	went
+Relation	T9	T15	NoRel	true	demolished	accompanied

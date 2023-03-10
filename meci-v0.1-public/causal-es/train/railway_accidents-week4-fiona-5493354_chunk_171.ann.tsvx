@@ -1,0 +1,92 @@
+Text	Acidente na estaçao de comboio de Santos faz seis mortos , artículo en el diario _ Público _ , edición digital , 2 de octubre de 2002 , consultado el 12 de octubre de 2020 .	« Choque de comboios mata em Sines ( Choque de trenes mortal en Sines ) » , en _ O Correio da manhã _ , edición digital , 14 de mayo de 2003 ( en portugués ) .	Dos españoles y un portugués mueren arrollados por un tren cerca de Oporto , artículo en _ El Mundo _ , edición digital , 08-12-2015	Criança de 10 anos e dois adultos morrem em colisão de carro com comboio em Barcelos , artículo en el diario _ Correio da manhã _ , edición digital , 19 de junio de 2019 , consultado el 12 de octubre de 2020 .	Al menos dos muertos y treinta y siete heridos en un accidente de tren en Portugal , artículo en _ El País _ , edición digital , 31-07-2020
+Event	T0	Acidente	EVENT	0
+Event	T1	mortos	EVENT	50
+Event	T2	consultado	EVENT	136
+Event	T3	Choque	EVENT	176
+Event	T4	mata	EVENT	195
+Event	T5	Choque	EVENT	211
+Event	T6	mortal	EVENT	228
+Event	T7	edición	EVENT	278
+Event	T8	arrollados	EVENT	370
+Event	T9	colisão	EVENT	511
+Event	T10	consultado	EVENT	639
+Event	T11	muertos	EVENT	690
+Event	T12	heridos	EVENT	716
+Event	T13	accidente	EVENT	730
+Relation	T3	T4	CauseEffect	true	Choque	mata
+Relation	T4	T3	EffectCause	true	mata	Choque
+Relation	T13	T12	CauseEffect	true	accidente	heridos
+Relation	T12	T13	EffectCause	true	heridos	accidente
+Relation	T13	T11	CauseEffect	true	accidente	muertos
+Relation	T11	T13	EffectCause	true	muertos	accidente
+Relation	T0	T11	NoRel	true	Acidente	muertos
+Relation	T0	T12	NoRel	true	Acidente	heridos
+Relation	T0	T6	NoRel	true	Acidente	mortal
+Relation	T1	T0	NoRel	true	mortos	Acidente
+Relation	T1	T11	NoRel	true	mortos	muertos
+Relation	T1	T2	NoRel	true	mortos	consultado
+Relation	T1	T4	NoRel	true	mortos	mata
+Relation	T1	T5	NoRel	true	mortos	Choque
+Relation	T1	T6	NoRel	true	mortos	mortal
+Relation	T1	T7	NoRel	true	mortos	edición
+Relation	T1	T8	NoRel	true	mortos	arrollados
+Relation	T10	T11	NoRel	true	consultado	muertos
+Relation	T10	T12	NoRel	true	consultado	heridos
+Relation	T10	T3	NoRel	true	consultado	Choque
+Relation	T10	T4	NoRel	true	consultado	mata
+Relation	T10	T5	NoRel	true	consultado	Choque
+Relation	T10	T7	NoRel	true	consultado	edición
+Relation	T10	T9	NoRel	true	consultado	colisão
+Relation	T11	T12	NoRel	true	muertos	heridos
+Relation	T11	T4	NoRel	true	muertos	mata
+Relation	T11	T6	NoRel	true	muertos	mortal
+Relation	T11	T8	NoRel	true	muertos	arrollados
+Relation	T12	T3	NoRel	true	heridos	Choque
+Relation	T12	T4	NoRel	true	heridos	mata
+Relation	T12	T6	NoRel	true	heridos	mortal
+Relation	T13	T3	NoRel	true	accidente	Choque
+Relation	T13	T5	NoRel	true	accidente	Choque
+Relation	T13	T8	NoRel	true	accidente	arrollados
+Relation	T13	T9	NoRel	true	accidente	colisão
+Relation	T2	T10	NoRel	true	consultado	consultado
+Relation	T2	T13	NoRel	true	consultado	accidente
+Relation	T2	T3	NoRel	true	consultado	Choque
+Relation	T2	T6	NoRel	true	consultado	mortal
+Relation	T3	T1	NoRel	true	Choque	mortos
+Relation	T3	T11	NoRel	true	Choque	muertos
+Relation	T3	T12	NoRel	true	Choque	heridos
+Relation	T3	T5	NoRel	true	Choque	Choque
+Relation	T3	T6	NoRel	true	Choque	mortal
+Relation	T3	T8	NoRel	true	Choque	arrollados
+Relation	T4	T0	NoRel	true	mata	Acidente
+Relation	T4	T1	NoRel	true	mata	mortos
+Relation	T4	T11	NoRel	true	mata	muertos
+Relation	T4	T12	NoRel	true	mata	heridos
+Relation	T4	T13	NoRel	true	mata	accidente
+Relation	T4	T5	NoRel	true	mata	Choque
+Relation	T5	T0	NoRel	true	Choque	Acidente
+Relation	T5	T3	NoRel	true	Choque	Choque
+Relation	T6	T0	NoRel	true	mortal	Acidente
+Relation	T6	T11	NoRel	true	mortal	muertos
+Relation	T6	T12	NoRel	true	mortal	heridos
+Relation	T6	T2	NoRel	true	mortal	consultado
+Relation	T6	T3	NoRel	true	mortal	Choque
+Relation	T6	T8	NoRel	true	mortal	arrollados
+Relation	T7	T0	NoRel	true	edición	Acidente
+Relation	T7	T10	NoRel	true	edición	consultado
+Relation	T7	T13	NoRel	true	edición	accidente
+Relation	T7	T2	NoRel	true	edición	consultado
+Relation	T7	T3	NoRel	true	edición	Choque
+Relation	T7	T9	NoRel	true	edición	colisão
+Relation	T8	T0	NoRel	true	arrollados	Acidente
+Relation	T8	T11	NoRel	true	arrollados	muertos
+Relation	T8	T2	NoRel	true	arrollados	consultado
+Relation	T8	T3	NoRel	true	arrollados	Choque
+Relation	T9	T0	NoRel	true	colisão	Acidente
+Relation	T9	T1	NoRel	true	colisão	mortos
+Relation	T9	T10	NoRel	true	colisão	consultado
+Relation	T9	T12	NoRel	true	colisão	heridos
+Relation	T9	T2	NoRel	true	colisão	consultado
+Relation	T9	T3	NoRel	true	colisão	Choque
+Relation	T9	T6	NoRel	true	colisão	mortal
+Relation	T9	T8	NoRel	true	colisão	arrollados

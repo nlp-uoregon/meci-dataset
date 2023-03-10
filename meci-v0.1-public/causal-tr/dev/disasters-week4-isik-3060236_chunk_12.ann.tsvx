@@ -1,0 +1,71 @@
+Text	Onun için çok daha bilinçli olarak tabiata , doğaya uyum içerisinde , onu anlayarak ve büyük perspektifler içerisinde , 100 , 200 yıllık , geçmişi ve geleceği düşünerek planlamalar yapmamız lazım .	Bunu acı bir şekilde gördük , görüyoruz .	" özeleştirisinde bulundu .	Sel felaketinden sonra , 13 Ağustos 2021'de Resmî Gazete'de yayınlanan Cumhurbaşkanı kararına göre , yakın zamanda meydana gelen yangın ve sel afetleri ile bundan sonra meydana gelebilecek afet durumlarında , hayatı olumsuz etkileyen şartların iyileştirilmesine katkı sağlanması amacıyla insani yardım kampanyası düzenleneceğini ve koordinasyonun yürütülmesi için Afet ve Acil Durum Yönetimi Başkanlığı ( AFAD)'ın görevlendirildiği ifade edildi .	Halka IBAN numarası verilerek yardım istenmesi kamuoyu ve muhalefet partileri tarafından tepkiyle karşılandı .
+Event	T0	gördük	EVENT	219
+Event	T1	görüyoruz	EVENT	228
+Event	T2	bulundu	EVENT	258
+Event	T3	felaketinden	EVENT	272
+Event	T4	yayınlanan	EVENT	328
+Event	T5	kararına	EVENT	353
+Event	T6	yangın	EVENT	397
+Event	T7	afetleri	EVENT	411
+Event	T8	düzenleneceğini	EVENT	581
+Event	T9	edildi	EVENT	706
+Event	T10	istenmesi	EVENT	752
+Event	T11	karşılandı	EVENT	813
+Relation	T3	T2	CauseEffect	true	felaketinden	bulundu
+Relation	T2	T3	EffectCause	true	bulundu	felaketinden
+Relation	T3	T5	CauseEffect	true	felaketinden	kararına
+Relation	T5	T3	EffectCause	true	kararına	felaketinden
+Relation	T5	T4	CauseEffect	true	kararına	yayınlanan
+Relation	T4	T5	EffectCause	true	yayınlanan	kararına
+Relation	T5	T9	CauseEffect	true	kararına	edildi
+Relation	T9	T5	EffectCause	true	edildi	kararına
+Relation	T3	T10	CauseEffect	true	felaketinden	istenmesi
+Relation	T10	T3	EffectCause	true	istenmesi	felaketinden
+Relation	T10	T11	CauseEffect	true	istenmesi	karşılandı
+Relation	T11	T10	EffectCause	true	karşılandı	istenmesi
+Relation	T0	T1	NoRel	true	gördük	görüyoruz
+Relation	T0	T10	NoRel	true	gördük	istenmesi
+Relation	T0	T11	NoRel	true	gördük	karşılandı
+Relation	T0	T3	NoRel	true	gördük	felaketinden
+Relation	T0	T5	NoRel	true	gördük	kararına
+Relation	T0	T6	NoRel	true	gördük	yangın
+Relation	T1	T0	NoRel	true	görüyoruz	gördük
+Relation	T1	T3	NoRel	true	görüyoruz	felaketinden
+Relation	T1	T5	NoRel	true	görüyoruz	kararına
+Relation	T1	T6	NoRel	true	görüyoruz	yangın
+Relation	T10	T5	NoRel	true	istenmesi	kararına
+Relation	T10	T8	NoRel	true	istenmesi	düzenleneceğini
+Relation	T11	T0	NoRel	true	karşılandı	gördük
+Relation	T11	T1	NoRel	true	karşılandı	görüyoruz
+Relation	T11	T3	NoRel	true	karşılandı	felaketinden
+Relation	T11	T5	NoRel	true	karşılandı	kararına
+Relation	T11	T7	NoRel	true	karşılandı	afetleri
+Relation	T2	T0	NoRel	true	bulundu	gördük
+Relation	T2	T5	NoRel	true	bulundu	kararına
+Relation	T2	T8	NoRel	true	bulundu	düzenleneceğini
+Relation	T3	T4	NoRel	true	felaketinden	yayınlanan
+Relation	T3	T8	NoRel	true	felaketinden	düzenleneceğini
+Relation	T4	T10	NoRel	true	yayınlanan	istenmesi
+Relation	T4	T6	NoRel	true	yayınlanan	yangın
+Relation	T5	T1	NoRel	true	kararına	görüyoruz
+Relation	T5	T10	NoRel	true	kararına	istenmesi
+Relation	T5	T11	NoRel	true	kararına	karşılandı
+Relation	T5	T7	NoRel	true	kararına	afetleri
+Relation	T5	T8	NoRel	true	kararına	düzenleneceğini
+Relation	T6	T0	NoRel	true	yangın	gördük
+Relation	T6	T1	NoRel	true	yangın	görüyoruz
+Relation	T6	T11	NoRel	true	yangın	karşılandı
+Relation	T6	T5	NoRel	true	yangın	kararına
+Relation	T6	T8	NoRel	true	yangın	düzenleneceğini
+Relation	T7	T1	NoRel	true	afetleri	görüyoruz
+Relation	T7	T11	NoRel	true	afetleri	karşılandı
+Relation	T7	T4	NoRel	true	afetleri	yayınlanan
+Relation	T7	T6	NoRel	true	afetleri	yangın
+Relation	T7	T9	NoRel	true	afetleri	edildi
+Relation	T8	T1	NoRel	true	düzenleneceğini	görüyoruz
+Relation	T8	T2	NoRel	true	düzenleneceğini	bulundu
+Relation	T8	T3	NoRel	true	düzenleneceğini	felaketinden
+Relation	T9	T1	NoRel	true	edildi	görüyoruz
+Relation	T9	T11	NoRel	true	edildi	karşılandı
+Relation	T9	T3	NoRel	true	edildi	felaketinden
+Relation	T9	T8	NoRel	true	edildi	düzenleneceğini

@@ -1,0 +1,84 @@
+Text	Tsunami alarmı 53 ülkede yayımlandı , ve tsunami Şili'nin Valparaíso denizinde 2.6 m yüksekliğinde kayıt edildi .	Başkan Michelle Bachelet bir " Felaket durumu " ilan etti .	O ayrıca ölülerin en az 723 kişi olduğunu teyit etti .	Çok kişinin kayıp olduğu rapor edildi .	Sismeloglar , depremin çok kuvvetli olması nedeniyle gün uzunluğunu 1, 26 mikro saniye kısalttığını ve dünyanın dönüş eksenini 3 inç veya 2,7 milyarsaniye oynattığını tahmin etmekteler .
+Event	T0	alarmı	EVENT	8
+Event	T1	yayımlandı	EVENT	25
+Event	T2	tsunami	EVENT	41
+Event	T6	kayıp	EVENT	241
+Event	T8	depremin	EVENT	283
+Event	T9	dönüş	EVENT	381
+Event	T5	ölülerin	EVENT	183
+Event	T11	teyit etti	EVENT	216
+Event	T4	ilan etti	EVENT	162
+Event	T3	kayıt edildi	EVENT	99
+Event	T7	rapor edildi	EVENT	254
+Event	T12	kısalttığını	EVENT	356
+Event	T13	oynattığını	EVENT	424
+Event	T10	tahmin etmekteler	EVENT	436
+Relation	T2	T4	CauseEffect	true	tsunami	ilan etti
+Relation	T4	T2	EffectCause	true	ilan etti	tsunami
+Relation	T2	T0	CauseEffect	true	tsunami	alarmı
+Relation	T0	T2	EffectCause	true	alarmı	tsunami
+Relation	T2	T1	CauseEffect	true	tsunami	yayımlandı
+Relation	T1	T2	EffectCause	true	yayımlandı	tsunami
+Relation	T2	T5	CauseEffect	true	tsunami	ölülerin
+Relation	T5	T2	EffectCause	true	ölülerin	tsunami
+Relation	T2	T6	CauseEffect	true	tsunami	kayıp
+Relation	T6	T2	EffectCause	true	kayıp	tsunami
+Relation	T8	T9	CauseEffect	true	depremin	dönüş
+Relation	T9	T8	EffectCause	true	dönüş	depremin
+Relation	T8	T12	CauseEffect	true	depremin	kısalttığını
+Relation	T12	T8	EffectCause	true	kısalttığını	depremin
+Relation	T8	T2	CauseEffect	true	depremin	tsunami
+Relation	T2	T8	EffectCause	true	tsunami	depremin
+Relation	T8	T13	CauseEffect	true	depremin	oynattığını
+Relation	T13	T8	EffectCause	true	oynattığını	depremin
+Relation	T0	T1	NoRel	true	alarmı	yayımlandı
+Relation	T0	T10	NoRel	true	alarmı	tahmin etmekteler
+Relation	T0	T4	NoRel	true	alarmı	ilan etti
+Relation	T0	T6	NoRel	true	alarmı	kayıp
+Relation	T1	T11	NoRel	true	yayımlandı	teyit etti
+Relation	T1	T13	NoRel	true	yayımlandı	oynattığını
+Relation	T1	T4	NoRel	true	yayımlandı	ilan etti
+Relation	T1	T8	NoRel	true	yayımlandı	depremin
+Relation	T10	T0	NoRel	true	tahmin etmekteler	alarmı
+Relation	T10	T1	NoRel	true	tahmin etmekteler	yayımlandı
+Relation	T10	T13	NoRel	true	tahmin etmekteler	oynattığını
+Relation	T10	T6	NoRel	true	tahmin etmekteler	kayıp
+Relation	T11	T1	NoRel	true	teyit etti	yayımlandı
+Relation	T11	T10	NoRel	true	teyit etti	tahmin etmekteler
+Relation	T11	T2	NoRel	true	teyit etti	tsunami
+Relation	T11	T5	NoRel	true	teyit etti	ölülerin
+Relation	T11	T7	NoRel	true	teyit etti	rapor edildi
+Relation	T11	T8	NoRel	true	teyit etti	depremin
+Relation	T12	T11	NoRel	true	kısalttığını	teyit etti
+Relation	T12	T13	NoRel	true	kısalttığını	oynattığını
+Relation	T13	T10	NoRel	true	oynattığını	tahmin etmekteler
+Relation	T13	T5	NoRel	true	oynattığını	ölülerin
+Relation	T2	T3	NoRel	true	tsunami	kayıt edildi
+Relation	T3	T1	NoRel	true	kayıt edildi	yayımlandı
+Relation	T3	T12	NoRel	true	kayıt edildi	kısalttığını
+Relation	T3	T13	NoRel	true	kayıt edildi	oynattığını
+Relation	T3	T2	NoRel	true	kayıt edildi	tsunami
+Relation	T3	T5	NoRel	true	kayıt edildi	ölülerin
+Relation	T3	T6	NoRel	true	kayıt edildi	kayıp
+Relation	T3	T8	NoRel	true	kayıt edildi	depremin
+Relation	T4	T11	NoRel	true	ilan etti	teyit etti
+Relation	T4	T13	NoRel	true	ilan etti	oynattığını
+Relation	T4	T7	NoRel	true	ilan etti	rapor edildi
+Relation	T5	T0	NoRel	true	ölülerin	alarmı
+Relation	T5	T1	NoRel	true	ölülerin	yayımlandı
+Relation	T5	T4	NoRel	true	ölülerin	ilan etti
+Relation	T5	T8	NoRel	true	ölülerin	depremin
+Relation	T6	T12	NoRel	true	kayıp	kısalttığını
+Relation	T6	T3	NoRel	true	kayıp	kayıt edildi
+Relation	T6	T8	NoRel	true	kayıp	depremin
+Relation	T6	T9	NoRel	true	kayıp	dönüş
+Relation	T7	T0	NoRel	true	rapor edildi	alarmı
+Relation	T7	T1	NoRel	true	rapor edildi	yayımlandı
+Relation	T7	T13	NoRel	true	rapor edildi	oynattığını
+Relation	T7	T2	NoRel	true	rapor edildi	tsunami
+Relation	T7	T5	NoRel	true	rapor edildi	ölülerin
+Relation	T7	T8	NoRel	true	rapor edildi	depremin
+Relation	T8	T0	NoRel	true	depremin	alarmı
+Relation	T9	T12	NoRel	true	dönüş	kısalttığını
+Relation	T9	T4	NoRel	true	dönüş	ilan etti
+Relation	T9	T5	NoRel	true	dönüş	ölülerin

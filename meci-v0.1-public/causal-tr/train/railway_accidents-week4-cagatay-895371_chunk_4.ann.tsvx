@@ -1,0 +1,32 @@
+Text	Tüm fatura makinistlere kesilirken , baş makinist Fikret Karabalut 5 ay , ikinci makinist Recep Sönmez ise 3 ay tutuklu kaldı .	Ancak asıl kusurlunun kim olduğu bir türlü tespit edilemedi .	Kazada yaşamını yitirenlerin avukatları kusurlu bulunan rayların yapımında ve kullanımında katkısı olan asıl suçluların bulunması için suç duyurusunda bulundu .	Verilen soruşturma emri Danıştay tarafından iptal edildi .	İkinci girişimde de mahkeme , Danıştay’ı örnek göstererek yeniden bir soruşturma yapılmasına izin vermedi .
+Event	T0	fatura	EVENT	4
+Event	T1	kesilirken	EVENT	24
+Event	T2	kaldı	EVENT	120
+Event	T3	tespit	EVENT	171
+Event	T4	bulundu	EVENT	341
+Event	T5	edildi	EVENT	401
+Event	T6	soruşturma	EVENT	480
+Event	T7	Kazada	EVENT	190
+Event	T8	yitirenlerin	EVENT	206
+Relation	T7	T8	CauseEffect	true	Kazada	yitirenlerin
+Relation	T8	T7	EffectCause	true	yitirenlerin	Kazada
+Relation	T0	T5	NoRel	true	fatura	edildi
+Relation	T1	T4	NoRel	true	kesilirken	bulundu
+Relation	T1	T5	NoRel	true	kesilirken	edildi
+Relation	T1	T6	NoRel	true	kesilirken	soruşturma
+Relation	T2	T4	NoRel	true	kaldı	bulundu
+Relation	T2	T8	NoRel	true	kaldı	yitirenlerin
+Relation	T3	T0	NoRel	true	tespit	fatura
+Relation	T3	T5	NoRel	true	tespit	edildi
+Relation	T3	T6	NoRel	true	tespit	soruşturma
+Relation	T3	T8	NoRel	true	tespit	yitirenlerin
+Relation	T5	T0	NoRel	true	edildi	fatura
+Relation	T5	T1	NoRel	true	edildi	kesilirken
+Relation	T6	T0	NoRel	true	soruşturma	fatura
+Relation	T6	T2	NoRel	true	soruşturma	kaldı
+Relation	T6	T4	NoRel	true	soruşturma	bulundu
+Relation	T6	T5	NoRel	true	soruşturma	edildi
+Relation	T7	T0	NoRel	true	Kazada	fatura
+Relation	T7	T6	NoRel	true	Kazada	soruşturma
+Relation	T8	T1	NoRel	true	yitirenlerin	kesilirken
+Relation	T8	T4	NoRel	true	yitirenlerin	bulundu

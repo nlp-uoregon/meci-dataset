@@ -1,0 +1,92 @@
+Text	Havadaki bu parçacıkların varlığı ve zayıf görüş , La Palma ve La Gomera adalarının havalimanlarındaki tüm ticari operasyonların askıya alınmasına yol açtı .	İspanya Başbakanı Pedro Sánchez , patlamadan kısa bir süre sonra La Palma'daki durumu , sistemin koordinasyonunu ve devreye giren protokolleri ilk elden görmek için takımadalara gitti ve Birleşmiş Milletler Genel Kurulu oturumuna katılımını erteledi .	Pedro Sánchez 24 Eylül'de , bir sonraki bakanlar kurulu toplantısında , adanın afet bölgesi ilan edileceğini , hükümetin evleri yıkılan ailelere , bir yeniden yapılanma planı ve barınma sağlamak için bir dizi acil önlem hazırladığını duyurdu .	Kral Felipe VI , patlamanın olduğu gün öğleden sonra Kanarya Adaları başkanı Ángel Víctor Torres'i durum hakkında bilgi almak için aradı .	Kral Felipe , ertesi gün Córdoba'da üniversite yılı açılış töreninde , " evlerini boşaltanlara " destek mesajı göndererek acil servislere çalışmalarından dolayı teşekkür etti .
+Event	T0	görüş	EVENT	43
+Event	T1	açtı	EVENT	151
+Event	T2	patlamadan	EVENT	192
+Event	T3	gitti	EVENT	336
+Event	T4	erteledi	EVENT	399
+Event	T5	afet	EVENT	489
+Event	T7	yıkılan	EVENT	538
+Event	T8	duyurdu	EVENT	644
+Event	T9	patlamanın	EVENT	671
+Event	T10	aradı	EVENT	785
+Event	T11	etti	EVENT	963
+Event	T12	varlığı	EVENT	26
+Event	T6	planı	EVENT	579
+Event	T13	göndererek	EVENT	904
+Relation	T12	T0	CauseEffect	true	varlığı	görüş
+Relation	T0	T12	EffectCause	true	görüş	varlığı
+Relation	T0	T1	CauseEffect	true	görüş	açtı
+Relation	T1	T0	EffectCause	true	açtı	görüş
+Relation	T2	T3	CauseEffect	true	patlamadan	gitti
+Relation	T3	T2	EffectCause	true	gitti	patlamadan
+Relation	T3	T4	CauseEffect	true	gitti	erteledi
+Relation	T4	T3	EffectCause	true	erteledi	gitti
+Relation	T2	T8	CauseEffect	true	patlamadan	duyurdu
+Relation	T8	T2	EffectCause	true	duyurdu	patlamadan
+Relation	T9	T10	CauseEffect	true	patlamanın	aradı
+Relation	T10	T9	EffectCause	true	aradı	patlamanın
+Relation	T9	T11	CauseEffect	true	patlamanın	etti
+Relation	T11	T9	EffectCause	true	etti	patlamanın
+Relation	T0	T10	NoRel	true	görüş	aradı
+Relation	T0	T2	NoRel	true	görüş	patlamadan
+Relation	T0	T8	NoRel	true	görüş	duyurdu
+Relation	T0	T9	NoRel	true	görüş	patlamanın
+Relation	T1	T3	NoRel	true	açtı	gitti
+Relation	T1	T4	NoRel	true	açtı	erteledi
+Relation	T1	T6	NoRel	true	açtı	planı
+Relation	T1	T7	NoRel	true	açtı	yıkılan
+Relation	T1	T9	NoRel	true	açtı	patlamanın
+Relation	T10	T0	NoRel	true	aradı	görüş
+Relation	T10	T5	NoRel	true	aradı	afet
+Relation	T10	T6	NoRel	true	aradı	planı
+Relation	T10	T7	NoRel	true	aradı	yıkılan
+Relation	T10	T8	NoRel	true	aradı	duyurdu
+Relation	T11	T1	NoRel	true	etti	açtı
+Relation	T11	T13	NoRel	true	etti	göndererek
+Relation	T11	T3	NoRel	true	etti	gitti
+Relation	T11	T7	NoRel	true	etti	yıkılan
+Relation	T11	T8	NoRel	true	etti	duyurdu
+Relation	T12	T9	NoRel	true	varlığı	patlamanın
+Relation	T13	T1	NoRel	true	göndererek	açtı
+Relation	T13	T10	NoRel	true	göndererek	aradı
+Relation	T13	T11	NoRel	true	göndererek	etti
+Relation	T13	T3	NoRel	true	göndererek	gitti
+Relation	T13	T5	NoRel	true	göndererek	afet
+Relation	T13	T6	NoRel	true	göndererek	planı
+Relation	T13	T7	NoRel	true	göndererek	yıkılan
+Relation	T13	T8	NoRel	true	göndererek	duyurdu
+Relation	T2	T0	NoRel	true	patlamadan	görüş
+Relation	T2	T11	NoRel	true	patlamadan	etti
+Relation	T2	T4	NoRel	true	patlamadan	erteledi
+Relation	T3	T0	NoRel	true	gitti	görüş
+Relation	T3	T13	NoRel	true	gitti	göndererek
+Relation	T4	T0	NoRel	true	erteledi	görüş
+Relation	T4	T1	NoRel	true	erteledi	açtı
+Relation	T4	T10	NoRel	true	erteledi	aradı
+Relation	T4	T11	NoRel	true	erteledi	etti
+Relation	T4	T5	NoRel	true	erteledi	afet
+Relation	T4	T6	NoRel	true	erteledi	planı
+Relation	T5	T12	NoRel	true	afet	varlığı
+Relation	T5	T2	NoRel	true	afet	patlamadan
+Relation	T5	T3	NoRel	true	afet	gitti
+Relation	T5	T4	NoRel	true	afet	erteledi
+Relation	T5	T7	NoRel	true	afet	yıkılan
+Relation	T5	T8	NoRel	true	afet	duyurdu
+Relation	T6	T1	NoRel	true	planı	açtı
+Relation	T6	T11	NoRel	true	planı	etti
+Relation	T6	T2	NoRel	true	planı	patlamadan
+Relation	T6	T7	NoRel	true	planı	yıkılan
+Relation	T7	T10	NoRel	true	yıkılan	aradı
+Relation	T7	T11	NoRel	true	yıkılan	etti
+Relation	T7	T2	NoRel	true	yıkılan	patlamadan
+Relation	T7	T4	NoRel	true	yıkılan	erteledi
+Relation	T8	T12	NoRel	true	duyurdu	varlığı
+Relation	T8	T3	NoRel	true	duyurdu	gitti
+Relation	T8	T6	NoRel	true	duyurdu	planı
+Relation	T9	T1	NoRel	true	patlamanın	açtı
+Relation	T9	T12	NoRel	true	patlamanın	varlığı
+Relation	T9	T13	NoRel	true	patlamanın	göndererek
+Relation	T9	T3	NoRel	true	patlamanın	gitti
+Relation	T9	T4	NoRel	true	patlamanın	erteledi
+Relation	T9	T6	NoRel	true	patlamanın	planı
+Relation	T9	T8	NoRel	true	patlamanın	duyurdu

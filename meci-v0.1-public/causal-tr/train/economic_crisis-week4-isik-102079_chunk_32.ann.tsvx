@@ -1,0 +1,38 @@
+Text	Nolte’ye göre faşizm 1917- 1945 arasıyla karakterizedir .	Bu dönemde Sovyetler Birliği'ni ve onun dünya devrimi talebini faşist araçlarla karşılamak gereği doğmuştur .	Nolte 20. yüzyıl Avrupası’ndaki herhangi bir anti - komünist diktatörlüğün amaçladığı ve gerçekleştirdiği her şeyi faşizm kavramı altında toplar .	Faşizan olarak faşizmle ilişkili ya da faşizme benzeyen ama yumuşatılmış bir biçimi ifade eden tutumlar kastedilir .	Bazen bir politik sistemin ya da ideolojinin tekil bileşenleri faşizan olarak değerlendirilir .
+Event	T0	karakterizedir	EVENT	41
+Event	T1	doğmuştur	EVENT	156
+Event	T2	kastedilir	EVENT	419
+Event	T3	değerlendirilir	EVENT	510
+Event	T4	gerçekleştirdiği	EVENT	257
+Event	T5	toplar	EVENT	306
+Event	T6	amaçladığı	EVENT	243
+Event	T7	talebini	EVENT	112
+Event	T8	yumuşatılmış	EVENT	375
+Relation	T7	T1	CauseEffect	true	talebini	doğmuştur
+Relation	T1	T7	EffectCause	true	doğmuştur	talebini
+Relation	T4	T5	CauseEffect	true	gerçekleştirdiği	toplar
+Relation	T5	T4	EffectCause	true	toplar	gerçekleştirdiği
+Relation	T6	T4	CauseEffect	true	amaçladığı	gerçekleştirdiği
+Relation	T4	T6	EffectCause	true	gerçekleştirdiği	amaçladığı
+Relation	T8	T3	CauseEffect	true	yumuşatılmış	değerlendirilir
+Relation	T3	T8	EffectCause	true	değerlendirilir	yumuşatılmış
+Relation	T0	T2	NoRel	true	karakterizedir	kastedilir
+Relation	T0	T5	NoRel	true	karakterizedir	toplar
+Relation	T0	T6	NoRel	true	karakterizedir	amaçladığı
+Relation	T0	T7	NoRel	true	karakterizedir	talebini
+Relation	T1	T0	NoRel	true	doğmuştur	karakterizedir
+Relation	T1	T2	NoRel	true	doğmuştur	kastedilir
+Relation	T1	T5	NoRel	true	doğmuştur	toplar
+Relation	T2	T1	NoRel	true	kastedilir	doğmuştur
+Relation	T3	T0	NoRel	true	değerlendirilir	karakterizedir
+Relation	T3	T1	NoRel	true	değerlendirilir	doğmuştur
+Relation	T3	T2	NoRel	true	değerlendirilir	kastedilir
+Relation	T3	T5	NoRel	true	değerlendirilir	toplar
+Relation	T3	T7	NoRel	true	değerlendirilir	talebini
+Relation	T4	T0	NoRel	true	gerçekleştirdiği	karakterizedir
+Relation	T5	T6	NoRel	true	toplar	amaçladığı
+Relation	T6	T0	NoRel	true	amaçladığı	karakterizedir
+Relation	T6	T7	NoRel	true	amaçladığı	talebini
+Relation	T7	T3	NoRel	true	talebini	değerlendirilir
+Relation	T7	T4	NoRel	true	talebini	gerçekleştirdiği
+Relation	T8	T7	NoRel	true	yumuşatılmış	talebini

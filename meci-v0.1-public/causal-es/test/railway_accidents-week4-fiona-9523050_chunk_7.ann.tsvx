@@ -1,0 +1,45 @@
+Text	Los servicios suburbanos se cancelaron temporalmente , dando la vuelta en Finsbury Park .	El coche no. 1889 sufrió daños tan graves que se debió achatarrar .	Se había programado que se renumeraría como 10153 , pero ese número permaneció sin usar .	Dos semanas después , se reemplazó el pórtico de señales , pero los servicios completos no se restablecieron hasta el 23 de febrero de 1945 .	El oficial de inspección , coronel Wilson , concluyó en su informe que el fallo principal era responsabilidad del maquinista .
+Event	T0	cancelaron	EVENT	28
+Event	T1	daños	EVENT	115
+Event	T2	achatarrar	EVENT	145
+Event	T3	renumeraría	EVENT	185
+Event	T4	permaneció	EVENT	226
+Event	T5	reemplazó	EVENT	273
+Event	T6	restablecieron	EVENT	342
+Event	T7	concluyó	EVENT	434
+Event	T8	informe	EVENT	449
+Event	T9	fallo	EVENT	464
+Relation	T1	T2	CauseEffect	true	daños	achatarrar
+Relation	T2	T1	EffectCause	true	achatarrar	daños
+Relation	T0	T6	NoRel	true	cancelaron	restablecieron
+Relation	T0	T7	NoRel	true	cancelaron	concluyó
+Relation	T1	T7	NoRel	true	daños	concluyó
+Relation	T1	T8	NoRel	true	daños	informe
+Relation	T2	T5	NoRel	true	achatarrar	reemplazó
+Relation	T2	T7	NoRel	true	achatarrar	concluyó
+Relation	T3	T2	NoRel	true	renumeraría	achatarrar
+Relation	T3	T4	NoRel	true	renumeraría	permaneció
+Relation	T3	T9	NoRel	true	renumeraría	fallo
+Relation	T4	T0	NoRel	true	permaneció	cancelaron
+Relation	T4	T1	NoRel	true	permaneció	daños
+Relation	T4	T5	NoRel	true	permaneció	reemplazó
+Relation	T5	T0	NoRel	true	reemplazó	cancelaron
+Relation	T5	T2	NoRel	true	reemplazó	achatarrar
+Relation	T5	T4	NoRel	true	reemplazó	permaneció
+Relation	T5	T7	NoRel	true	reemplazó	concluyó
+Relation	T6	T4	NoRel	true	restablecieron	permaneció
+Relation	T6	T5	NoRel	true	restablecieron	reemplazó
+Relation	T6	T7	NoRel	true	restablecieron	concluyó
+Relation	T7	T0	NoRel	true	concluyó	cancelaron
+Relation	T7	T4	NoRel	true	concluyó	permaneció
+Relation	T7	T5	NoRel	true	concluyó	reemplazó
+Relation	T7	T9	NoRel	true	concluyó	fallo
+Relation	T8	T2	NoRel	true	informe	achatarrar
+Relation	T8	T3	NoRel	true	informe	renumeraría
+Relation	T8	T4	NoRel	true	informe	permaneció
+Relation	T8	T5	NoRel	true	informe	reemplazó
+Relation	T8	T6	NoRel	true	informe	restablecieron
+Relation	T9	T0	NoRel	true	fallo	cancelaron
+Relation	T9	T1	NoRel	true	fallo	daños
+Relation	T9	T2	NoRel	true	fallo	achatarrar
+Relation	T9	T5	NoRel	true	fallo	reemplazó

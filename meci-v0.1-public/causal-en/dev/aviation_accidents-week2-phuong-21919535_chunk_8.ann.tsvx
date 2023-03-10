@@ -1,0 +1,35 @@
+Text	On 31 October 1944 , Foskett was returning to base following an operation when his Spitfire developed engine trouble between the islands of Skiathos and Skópelos over the Aegean Sea .	He attempted to bail out of the aircraft , but his altitude was too low for his parachute to open , and he was consequently killed .	Foskett 's body was later recovered , and he was buried at sea ; he is commemorated on the Malta Memorial .	Foskett 's younger brother Bruce William , a Royal Australian Air Force navigator , had been killed in an operation over Berlin the previous February .	By the time of his death , Foskett had been officially credited with a tally of 6 ½ Axis aircraft shot down .
+Event	T0	returning	EVENT	33
+Event	T1	operation	EVENT	64
+Event	T10	operation	EVENT	531
+Event	T11	death	EVENT	596
+Event	T12	credited	EVENT	632
+Event	T14	shot down	EVENT	675
+Event	T2	trouble	EVENT	109
+Event	T4	open	EVENT	277
+Event	T5	killed	EVENT	308
+Event	T6	recovered	EVENT	343
+Event	T7	buried	EVENT	366
+Event	T8	commemorated	EVENT	388
+Event	T9	killed	EVENT	518
+Relation	T2	T5	CauseEffect	true	trouble	killed
+Relation	T5	T2	EffectCause	true	killed	trouble
+Relation	T10	T9	CauseEffect	true	operation	killed
+Relation	T9	T10	EffectCause	true	killed	operation
+Relation	T14	T12	CauseEffect	true	shot down	credited
+Relation	T12	T14	EffectCause	true	credited	shot down
+Relation	T4	T5	CauseEffect	true	open	killed
+Relation	T5	T4	EffectCause	true	killed	open
+Relation	T0	T12	NoRel	true	returning	credited
+Relation	T10	T12	NoRel	true	operation	credited
+Relation	T11	T12	NoRel	true	death	credited
+Relation	T11	T2	NoRel	true	death	trouble
+Relation	T12	T0	NoRel	true	credited	returning
+Relation	T12	T7	NoRel	true	credited	buried
+Relation	T14	T5	NoRel	true	shot down	killed
+Relation	T2	T12	NoRel	true	trouble	credited
+Relation	T2	T6	NoRel	true	trouble	recovered
+Relation	T5	T12	NoRel	true	killed	credited
+Relation	T6	T10	NoRel	true	recovered	operation
+Relation	T8	T5	NoRel	true	commemorated	killed
+Relation	T9	T6	NoRel	true	killed	recovered

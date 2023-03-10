@@ -1,0 +1,43 @@
+Text	" In February 1971 , the FAA was advised by the County that the dump would be closed by August 1972 , " as stated in the NTSB accident report .	However , the landfill site was not closed in 1972 , and remained open at the time of the accident .	Investigators concluded it was likely the dump was a factor in the accident : " There is little doubt that the municipal dump located adjacent to the airport property attracts birds which are a serious hazard to aircraft . "	Furthermore , the NTSB concluded the FAA had not intervened to take action with regards to the dump .	" In following up on the compliance requirements for airports developed or improved with Federal funds , the FAA did not take adequate measures , in accordance with existing statues , to assure that the hazard was removed from the vicinity of the airport . "
+Event	T0	advised	EVENT	33
+Event	T1	closed	EVENT	78
+Event	T10	action	EVENT	538
+Event	T12	developed	EVENT	634
+Event	T13	improved	EVENT	647
+Event	T14	take	EVENT	693
+Event	T15	assure	EVENT	759
+Event	T17	removed	EVENT	786
+Event	T18	open	EVENT	210
+Event	T2	stated	EVENT	107
+Event	T3	closed	EVENT	180
+Event	T4	accident	EVENT	234
+Event	T5	concluded	EVENT	259
+Event	T6	accident	EVENT	312
+Event	T7	attracts	EVENT	412
+Event	T8	concluded	EVENT	493
+Relation	T4	T18	CauseEffect	true	accident	open
+Relation	T18	T4	EffectCause	true	open	accident
+Relation	T7	T6	CauseEffect	true	attracts	accident
+Relation	T6	T7	EffectCause	true	accident	attracts
+Relation	T17	T12	CauseEffect	true	removed	developed
+Relation	T12	T17	EffectCause	true	developed	removed
+Relation	T17	T13	CauseEffect	true	removed	improved
+Relation	T13	T17	EffectCause	true	improved	removed
+Relation	T0	T5	NoRel	true	advised	concluded
+Relation	T0	T8	NoRel	true	advised	concluded
+Relation	T1	T13	NoRel	true	closed	improved
+Relation	T13	T0	NoRel	true	improved	advised
+Relation	T14	T4	NoRel	true	take	accident
+Relation	T17	T3	NoRel	true	removed	closed
+Relation	T18	T3	NoRel	true	open	closed
+Relation	T2	T0	NoRel	true	stated	advised
+Relation	T2	T15	NoRel	true	stated	assure
+Relation	T3	T10	NoRel	true	closed	action
+Relation	T3	T2	NoRel	true	closed	stated
+Relation	T4	T0	NoRel	true	accident	advised
+Relation	T4	T6	NoRel	true	accident	accident
+Relation	T5	T0	NoRel	true	concluded	advised
+Relation	T5	T10	NoRel	true	concluded	action
+Relation	T5	T4	NoRel	true	concluded	accident
+Relation	T6	T2	NoRel	true	accident	stated
+Relation	T8	T3	NoRel	true	concluded	closed

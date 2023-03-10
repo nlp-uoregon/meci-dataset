@@ -1,0 +1,54 @@
+Text	El testimonio de un ex-ferroviario que esa noche cubría turno en la estación de Valladolid y tuvo acceso a conversaciones entre Valladolid , Medina del Campo y el puesto de mando de Valladolid reza lo siguiente :	Los ocho fallecidos viajaban en el expreso " Cantabria " y eran originarios de la provincia del mismo nombre .	Entre los fallecidos se encontraba el Consejero de Obras Públicas del Gobierno Cántabro , Félix Ducasse .	Otro alto cargo del mismo gobierno , Juan Tarín , director general de Agricultura , quedó atrapado durante horas , siendo liberado por los bomberos .	El accidente provocó un gran impacto en la sociedad vallisoletana .
+Event	T0	testimonio	EVENT	3
+Event	T1	acceso	EVENT	98
+Event	T2	conversaciones	EVENT	107
+Event	T4	viajaban	EVENT	233
+Event	T5	fallecidos	EVENT	334
+Event	T6	atrapado	EVENT	520
+Event	T7	liberado	EVENT	552
+Event	T8	provocó	EVENT	593
+Event	T9	impacto	EVENT	609
+Event	T3	fallecidos	EVENT	222
+Event	T10	accidente	EVENT	583
+Relation	T10	T3	CauseEffect	true	accidente	fallecidos
+Relation	T3	T10	EffectCause	true	fallecidos	accidente
+Relation	T0	T3	NoRel	true	testimonio	fallecidos
+Relation	T0	T4	NoRel	true	testimonio	viajaban
+Relation	T0	T5	NoRel	true	testimonio	fallecidos
+Relation	T0	T6	NoRel	true	testimonio	atrapado
+Relation	T0	T8	NoRel	true	testimonio	provocó
+Relation	T1	T3	NoRel	true	acceso	fallecidos
+Relation	T1	T4	NoRel	true	acceso	viajaban
+Relation	T1	T5	NoRel	true	acceso	fallecidos
+Relation	T1	T7	NoRel	true	acceso	liberado
+Relation	T10	T2	NoRel	true	accidente	conversaciones
+Relation	T10	T4	NoRel	true	accidente	viajaban
+Relation	T10	T6	NoRel	true	accidente	atrapado
+Relation	T10	T9	NoRel	true	accidente	impacto
+Relation	T2	T1	NoRel	true	conversaciones	acceso
+Relation	T2	T9	NoRel	true	conversaciones	impacto
+Relation	T3	T1	NoRel	true	fallecidos	acceso
+Relation	T3	T5	NoRel	true	fallecidos	fallecidos
+Relation	T3	T9	NoRel	true	fallecidos	impacto
+Relation	T4	T1	NoRel	true	viajaban	acceso
+Relation	T4	T5	NoRel	true	viajaban	fallecidos
+Relation	T5	T10	NoRel	true	fallecidos	accidente
+Relation	T5	T6	NoRel	true	fallecidos	atrapado
+Relation	T5	T7	NoRel	true	fallecidos	liberado
+Relation	T6	T0	NoRel	true	atrapado	testimonio
+Relation	T6	T1	NoRel	true	atrapado	acceso
+Relation	T6	T2	NoRel	true	atrapado	conversaciones
+Relation	T6	T3	NoRel	true	atrapado	fallecidos
+Relation	T6	T8	NoRel	true	atrapado	provocó
+Relation	T7	T2	NoRel	true	liberado	conversaciones
+Relation	T7	T3	NoRel	true	liberado	fallecidos
+Relation	T7	T5	NoRel	true	liberado	fallecidos
+Relation	T7	T8	NoRel	true	liberado	provocó
+Relation	T7	T9	NoRel	true	liberado	impacto
+Relation	T8	T1	NoRel	true	provocó	acceso
+Relation	T8	T4	NoRel	true	provocó	viajaban
+Relation	T8	T5	NoRel	true	provocó	fallecidos
+Relation	T8	T6	NoRel	true	provocó	atrapado
+Relation	T8	T7	NoRel	true	provocó	liberado
+Relation	T9	T0	NoRel	true	impacto	testimonio
+Relation	T9	T7	NoRel	true	impacto	liberado

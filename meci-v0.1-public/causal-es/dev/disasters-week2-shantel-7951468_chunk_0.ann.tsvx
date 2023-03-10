@@ -1,0 +1,84 @@
+Text	La ESTAMPIDA DE TURÍN ocurrió el 3 de junio de 2017 cuando un petardo causó el pánico durante la proyección de la Final de la Liga de Campeones de la UEFA 2016-17 , en Turín , Italia .	Al menos 1.527 personas resultaron heridas .	La causa del pánico fue , cuando una persona gritó tras el estallido de un petardo , que se trataba de una bomba , y ocurrió la estampida .	El resultado causó temor por otras posibles explosiones y disparos , aunque fueron desestimados por las autoridades .	Después de la estampida y la evacuación , en el suelo de la plaza estaban esparcidas las zapatillas de deporte de las personas que huyeron despavoridas .
+Event	T1	ocurrió	EVENT	22
+Event	T10	estampida	EVENT	358
+Event	T11	temor	EVENT	389
+Event	T14	desestimados	EVENT	453
+Event	T15	estampida	EVENT	502
+Event	T16	evacuación	EVENT	517
+Event	T2	pánico	EVENT	79
+Event	T3	proyección	EVENT	97
+Event	T4	Final	EVENT	114
+Event	T5	heridas	EVENT	220
+Event	T6	pánico	EVENT	243
+Event	T7	gritó	EVENT	275
+Event	T8	estallido	EVENT	289
+Event	T9	ESTAMPIDA DE TURÍN	EVENT	3
+Event	T12	huyeron	EVENT	619
+Relation	T9	T2	CauseEffect	true	ESTAMPIDA DE TURÍN	pánico
+Relation	T2	T9	EffectCause	true	pánico	ESTAMPIDA DE TURÍN
+Relation	T9	T5	CauseEffect	true	ESTAMPIDA DE TURÍN	heridas
+Relation	T5	T9	EffectCause	true	heridas	ESTAMPIDA DE TURÍN
+Relation	T10	T5	CauseEffect	true	estampida	heridas
+Relation	T5	T10	EffectCause	true	heridas	estampida
+Relation	T8	T10	CauseEffect	true	estallido	estampida
+Relation	T10	T8	EffectCause	true	estampida	estallido
+Relation	T8	T7	CauseEffect	true	estallido	gritó
+Relation	T7	T8	EffectCause	true	gritó	estallido
+Relation	T7	T6	CauseEffect	true	gritó	pánico
+Relation	T6	T7	EffectCause	true	pánico	gritó
+Relation	T15	T12	CauseEffect	true	estampida	huyeron
+Relation	T12	T15	EffectCause	true	huyeron	estampida
+Relation	T1	T10	NoRel	true	ocurrió	estampida
+Relation	T1	T11	NoRel	true	ocurrió	temor
+Relation	T1	T8	NoRel	true	ocurrió	estallido
+Relation	T10	T14	NoRel	true	estampida	desestimados
+Relation	T10	T16	NoRel	true	estampida	evacuación
+Relation	T10	T6	NoRel	true	estampida	pánico
+Relation	T11	T10	NoRel	true	temor	estampida
+Relation	T11	T12	NoRel	true	temor	huyeron
+Relation	T11	T15	NoRel	true	temor	estampida
+Relation	T11	T16	NoRel	true	temor	evacuación
+Relation	T11	T3	NoRel	true	temor	proyección
+Relation	T12	T11	NoRel	true	huyeron	temor
+Relation	T12	T16	NoRel	true	huyeron	evacuación
+Relation	T12	T5	NoRel	true	huyeron	heridas
+Relation	T12	T8	NoRel	true	huyeron	estallido
+Relation	T14	T4	NoRel	true	desestimados	Final
+Relation	T14	T5	NoRel	true	desestimados	heridas
+Relation	T15	T10	NoRel	true	estampida	estampida
+Relation	T15	T2	NoRel	true	estampida	pánico
+Relation	T15	T4	NoRel	true	estampida	Final
+Relation	T15	T5	NoRel	true	estampida	heridas
+Relation	T15	T7	NoRel	true	estampida	gritó
+Relation	T16	T12	NoRel	true	evacuación	huyeron
+Relation	T16	T15	NoRel	true	evacuación	estampida
+Relation	T16	T4	NoRel	true	evacuación	Final
+Relation	T16	T7	NoRel	true	evacuación	gritó
+Relation	T2	T3	NoRel	true	pánico	proyección
+Relation	T2	T5	NoRel	true	pánico	heridas
+Relation	T3	T1	NoRel	true	proyección	ocurrió
+Relation	T3	T11	NoRel	true	proyección	temor
+Relation	T3	T14	NoRel	true	proyección	desestimados
+Relation	T3	T15	NoRel	true	proyección	estampida
+Relation	T3	T8	NoRel	true	proyección	estallido
+Relation	T5	T1	NoRel	true	heridas	ocurrió
+Relation	T5	T11	NoRel	true	heridas	temor
+Relation	T5	T16	NoRel	true	heridas	evacuación
+Relation	T5	T3	NoRel	true	heridas	proyección
+Relation	T5	T8	NoRel	true	heridas	estallido
+Relation	T6	T11	NoRel	true	pánico	temor
+Relation	T6	T16	NoRel	true	pánico	evacuación
+Relation	T6	T2	NoRel	true	pánico	pánico
+Relation	T6	T5	NoRel	true	pánico	heridas
+Relation	T7	T1	NoRel	true	gritó	ocurrió
+Relation	T7	T11	NoRel	true	gritó	temor
+Relation	T7	T3	NoRel	true	gritó	proyección
+Relation	T7	T9	NoRel	true	gritó	ESTAMPIDA DE TURÍN
+Relation	T8	T11	NoRel	true	estallido	temor
+Relation	T8	T3	NoRel	true	estallido	proyección
+Relation	T8	T5	NoRel	true	estallido	heridas
+Relation	T8	T9	NoRel	true	estallido	ESTAMPIDA DE TURÍN
+Relation	T9	T10	NoRel	true	ESTAMPIDA DE TURÍN	estampida
+Relation	T9	T14	NoRel	true	ESTAMPIDA DE TURÍN	desestimados
+Relation	T9	T15	NoRel	true	ESTAMPIDA DE TURÍN	estampida
+Relation	T9	T3	NoRel	true	ESTAMPIDA DE TURÍN	proyección

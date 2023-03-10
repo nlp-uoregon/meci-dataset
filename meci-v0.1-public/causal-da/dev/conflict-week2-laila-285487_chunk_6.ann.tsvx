@@ -1,0 +1,29 @@
+Text	Den var hurtigere end slagskibene og kunne dermed undvige dem i kamp , og til gengæld var den alle andre skibstyper overlegen i kombinationen af ildkraft og pansring .	Eneste trussel var andre panserkrydsere samt chancevåben som torpedoer og miner .	Den løbende udvikling af panser og artilleri , samt det faktum , at slagskibene i perioden blev stadig større og hurtigere , betød at hvis panserkrydseren skulle følge med , måtte der hele tiden bygges nye skibe .	Et stort antal af de eksisterende panserkrydsere blev med ét slag forældede , da det engelske slagskib _ Dreadnought _ blev afleveret i 1906 .	Kun de hurtigste kunne undvige , og ingen havde en ildkraft der kom i nærheden .
+Event	T0	undvige	EVENT	50
+Event	T1	kamp	EVENT	64
+Event	T3	trussel	EVENT	175
+Event	T4	udvikling	EVENT	262
+Event	T5	betød	EVENT	375
+Event	T6	bygges	EVENT	445
+Event	T7	forældede	EVENT	530
+Event	T8	afleveret	EVENT	588
+Relation	T8	T7	CauseEffect	true	afleveret	forældede
+Relation	T7	T8	EffectCause	true	forældede	afleveret
+Relation	T4	T6	CauseEffect	true	udvikling	bygges
+Relation	T6	T4	EffectCause	true	bygges	udvikling
+Relation	T0	T1	NoRel	true	undvige	kamp
+Relation	T0	T3	NoRel	true	undvige	trussel
+Relation	T1	T5	NoRel	true	kamp	betød
+Relation	T3	T0	NoRel	true	trussel	undvige
+Relation	T3	T1	NoRel	true	trussel	kamp
+Relation	T3	T4	NoRel	true	trussel	udvikling
+Relation	T4	T7	NoRel	true	udvikling	forældede
+Relation	T5	T0	NoRel	true	betød	undvige
+Relation	T5	T1	NoRel	true	betød	kamp
+Relation	T6	T1	NoRel	true	bygges	kamp
+Relation	T7	T1	NoRel	true	forældede	kamp
+Relation	T7	T3	NoRel	true	forældede	trussel
+Relation	T7	T5	NoRel	true	forældede	betød
+Relation	T8	T0	NoRel	true	afleveret	undvige
+Relation	T8	T4	NoRel	true	afleveret	udvikling
+Relation	T8	T6	NoRel	true	afleveret	bygges

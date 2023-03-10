@@ -1,0 +1,44 @@
+Text	upright=1.5_|_legend1 = |_legend2 = |_map3 = Sri Lanka COVID - 19 Deaths by district .	svg { { ! } } upright=1.5_|_legend3 = |_map2 = Sri_Lanka COVID - 19 map of confirmed cases .	svg { { ! } } upright=1.5 | disease = کورونا وائرس کا مرض 2019ء |_virus_strain = سارس کووی 2 |_location = سری لنکا |_first_case = کولمبو |_date = 27 جنوری 2020 –	ongoing ( ) |_origin = ووہان ، ہوبئی ، چین |_recovery_cases = 106,641 |_deaths = 850 |_confirmed_cases = 131, 098 |_active_cases = 24, 839 | fatality_rate = | website = } }	سری لنکا میں کورونا وائرس کی وبا کے تیزی سے پھیلنے کے خدشے کی وجہ سے قریب دو ماہ کے لیے ملک کی تالا بندی کی گئی تھی ۔
+Event	T0	Deaths	EVENT	66
+Event	T1	confirmed	EVENT	162
+Event	T2	پھیلنے	EVENT	559
+Event	T3	خدشے	EVENT	569
+Event	T4	disease	EVENT	208
+Event	T5	|_first_case	EVENT	295
+Event	T6	|_deaths	EVENT	412
+Event	T7	|_active_cases	EVENT	456
+Event	T8	|_confirmed_cases	EVENT	427
+Event	T9	وبا	EVENT	544
+Event	T10	بندی	EVENT	615
+Relation	T3	T10	CauseEffect	true	خدشے	بندی
+Relation	T10	T3	EffectCause	true	بندی	خدشے
+Relation	T9	T2	CauseEffect	true	وبا	پھیلنے
+Relation	T2	T9	EffectCause	true	پھیلنے	وبا
+Relation	T0	T10	NoRel	true	Deaths	بندی
+Relation	T0	T2	NoRel	true	Deaths	پھیلنے
+Relation	T0	T4	NoRel	true	Deaths	disease
+Relation	T1	T10	NoRel	true	confirmed	بندی
+Relation	T10	T2	NoRel	true	بندی	پھیلنے
+Relation	T10	T4	NoRel	true	بندی	disease
+Relation	T10	T5	NoRel	true	بندی	|_first_case
+Relation	T10	T6	NoRel	true	بندی	|_deaths
+Relation	T2	T0	NoRel	true	پھیلنے	Deaths
+Relation	T2	T1	NoRel	true	پھیلنے	confirmed
+Relation	T2	T10	NoRel	true	پھیلنے	بندی
+Relation	T2	T5	NoRel	true	پھیلنے	|_first_case
+Relation	T3	T5	NoRel	true	خدشے	|_first_case
+Relation	T3	T7	NoRel	true	خدشے	|_active_cases
+Relation	T4	T10	NoRel	true	disease	بندی
+Relation	T4	T2	NoRel	true	disease	پھیلنے
+Relation	T4	T7	NoRel	true	disease	|_active_cases
+Relation	T5	T10	NoRel	true	|_first_case	بندی
+Relation	T5	T2	NoRel	true	|_first_case	پھیلنے
+Relation	T5	T3	NoRel	true	|_first_case	خدشے
+Relation	T5	T4	NoRel	true	|_first_case	disease
+Relation	T6	T7	NoRel	true	|_deaths	|_active_cases
+Relation	T6	T8	NoRel	true	|_deaths	|_confirmed_cases
+Relation	T7	T10	NoRel	true	|_active_cases	بندی
+Relation	T7	T3	NoRel	true	|_active_cases	خدشے
+Relation	T8	T10	NoRel	true	|_confirmed_cases	بندی
+Relation	T8	T5	NoRel	true	|_confirmed_cases	|_first_case
+Relation	T9	T5	NoRel	true	وبا	|_first_case

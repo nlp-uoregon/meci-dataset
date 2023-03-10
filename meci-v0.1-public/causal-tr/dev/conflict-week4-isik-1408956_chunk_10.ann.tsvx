@@ -1,0 +1,36 @@
+Text	" 20. yüzyılın ' Savaş ve Barış'ı " diye nitelenen hacimli kitap Türkiye'de Can Yayınlarından 2012'de çıktı .	_ Chicago Mezbahaları _ Upton Sinclair Roman Özgün adı _ The Jungle _ olan 1906 tarihli bu ABD romanı , 1956'da Doğu Almanya'da komünizmle uyuşmadığı için yasaklandı .	_ Lolita _ Vladimir Nabokov Roman Rus asıllı yazarın Paris'te İngilizce yazıp yayımladığı roman , müstehcen olduğu gerekçesiyle Fransa , İngiltere , Kanada , Yeni Zelanda , Güney Amerika ve Arjantin'de yasaklandı .	Romanda 12 yaşındaki bir kız çocuğuna ilgi duyan orta yaşlı bir adamın öyküsü anlatılıyordu .	_ Sırça Köşk _ Sabahattin Ali Öykü Yazarın 1947 yılında yayımlandığı bu son öyküsü , devlete bir başkaldırış olduğu iddiasıyla yasaklandı .
+Event	T0	çıktı	EVENT	102
+Event	T1	yasaklandı	EVENT	265
+Event	T2	yayımladığı	EVENT	356
+Event	T3	yasaklandı	EVENT	480
+Event	T4	anlatılıyordu	EVENT	571
+Event	T5	yayımlandığı	EVENT	643
+Event	T6	öyküsü	EVENT	663
+Event	T7	yasaklandı	EVENT	714
+Event	T8	başkaldırış	EVENT	684
+Relation	T8	T7	CauseEffect	true	başkaldırış	yasaklandı
+Relation	T7	T8	EffectCause	true	yasaklandı	başkaldırış
+Relation	T0	T1	NoRel	true	çıktı	yasaklandı
+Relation	T0	T2	NoRel	true	çıktı	yayımladığı
+Relation	T0	T3	NoRel	true	çıktı	yasaklandı
+Relation	T0	T4	NoRel	true	çıktı	anlatılıyordu
+Relation	T0	T6	NoRel	true	çıktı	öyküsü
+Relation	T1	T3	NoRel	true	yasaklandı	yasaklandı
+Relation	T1	T5	NoRel	true	yasaklandı	yayımlandığı
+Relation	T1	T7	NoRel	true	yasaklandı	yasaklandı
+Relation	T2	T0	NoRel	true	yayımladığı	çıktı
+Relation	T2	T1	NoRel	true	yayımladığı	yasaklandı
+Relation	T2	T6	NoRel	true	yayımladığı	öyküsü
+Relation	T2	T7	NoRel	true	yayımladığı	yasaklandı
+Relation	T3	T0	NoRel	true	yasaklandı	çıktı
+Relation	T3	T1	NoRel	true	yasaklandı	yasaklandı
+Relation	T3	T4	NoRel	true	yasaklandı	anlatılıyordu
+Relation	T3	T7	NoRel	true	yasaklandı	yasaklandı
+Relation	T4	T3	NoRel	true	anlatılıyordu	yasaklandı
+Relation	T5	T6	NoRel	true	yayımlandığı	öyküsü
+Relation	T5	T8	NoRel	true	yayımlandığı	başkaldırış
+Relation	T6	T3	NoRel	true	öyküsü	yasaklandı
+Relation	T7	T0	NoRel	true	yasaklandı	çıktı
+Relation	T7	T3	NoRel	true	yasaklandı	yasaklandı
+Relation	T8	T2	NoRel	true	başkaldırış	yayımladığı
+Relation	T8	T6	NoRel	true	başkaldırış	öyküsü

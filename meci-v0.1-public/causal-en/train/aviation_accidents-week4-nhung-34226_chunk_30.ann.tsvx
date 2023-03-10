@@ -1,0 +1,111 @@
+Text	In a 2006 interview , Gagarin 's friend Colonel Valentin Petrov stated that Gagarin never said these words and that the quote originated from Khrushchev 's speech at the plenum of the Central Committee of the CPSU about the state 's anti-religion campaign , saying " Gagarin flew into space , but didn't see any god there " .	Petrov also said Gagarin had been baptised into the Russian Orthodox Church as a child , and a 2011__Foma__magazine article quoted the rector of the Orthodox Church in Star City saying , " Gagarin baptized his elder daughter Yelena shortly before his space flight ; and his family used to celebrate Christmas and Easter and keep icons in the house " .	On 27 March 1968 , while on a routine training flight from Chkalovsky Air Base , Gagarin and flight instructor Vladimir Seryogin died when their MiG - 15 UTI crashed near the town of Kirzhach .	The bodies of Gagarin and Seryogin were cremated and their ashes interred in the walls of the Kremlin .	Wrapped in secrecy , the cause of the crash that killed Gagarin is uncertain and became the subject of several theories , including several conspiracy theories .
+Event	T0	interview	EVENT	10
+Event	T1	stated	EVENT	64
+Event	T2	said	EVENT	90
+Event	T3	originated	EVENT	126
+Event	T4	speech	EVENT	156
+Event	T5	saying	EVENT	258
+Event	T6	flew	EVENT	275
+Event	T7	said	EVENT	338
+Event	T8	baptised	EVENT	360
+Event	T9	quoted	EVENT	450
+Event	T10	saying	EVENT	504
+Event	T11	baptized	EVENT	523
+Event	T12	flight	EVENT	583
+Event	T13	used	EVENT	607
+Event	T14	celebrate	EVENT	615
+Event	T15	keep	EVENT	650
+Event	T16	died	EVENT	807
+Event	T17	crashed	EVENT	836
+Event	T18	cremated	EVENT	912
+Event	T19	interred	EVENT	937
+Event	T20	Wrapped	EVENT	976
+Event	T21	crash	EVENT	1014
+Event	T22	killed	EVENT	1025
+Event	T23	became	EVENT	1057
+Event	T24	theories	EVENT	1087
+Event	T25	theories	EVENT	1127
+Relation	T17	T16	CauseEffect	true	crashed	died
+Relation	T16	T17	EffectCause	true	died	crashed
+Relation	T16	T18	CauseEffect	true	died	cremated
+Relation	T18	T16	EffectCause	true	cremated	died
+Relation	T21	T22	CauseEffect	true	crash	killed
+Relation	T22	T21	EffectCause	true	killed	crash
+Relation	T21	T24	CauseEffect	true	crash	theories
+Relation	T24	T21	EffectCause	true	theories	crash
+Relation	T0	T12	NoRel	true	interview	flight
+Relation	T1	T0	NoRel	true	stated	interview
+Relation	T1	T18	NoRel	true	stated	cremated
+Relation	T1	T2	NoRel	true	stated	said
+Relation	T1	T6	NoRel	true	stated	flew
+Relation	T10	T3	NoRel	true	saying	originated
+Relation	T10	T5	NoRel	true	saying	saying
+Relation	T11	T1	NoRel	true	baptized	stated
+Relation	T11	T10	NoRel	true	baptized	saying
+Relation	T11	T6	NoRel	true	baptized	flew
+Relation	T12	T15	NoRel	true	flight	keep
+Relation	T12	T20	NoRel	true	flight	Wrapped
+Relation	T12	T7	NoRel	true	flight	said
+Relation	T13	T15	NoRel	true	used	keep
+Relation	T14	T7	NoRel	true	celebrate	said
+Relation	T14	T8	NoRel	true	celebrate	baptised
+Relation	T14	T9	NoRel	true	celebrate	quoted
+Relation	T15	T0	NoRel	true	keep	interview
+Relation	T15	T10	NoRel	true	keep	saying
+Relation	T15	T14	NoRel	true	keep	celebrate
+Relation	T15	T17	NoRel	true	keep	crashed
+Relation	T15	T22	NoRel	true	keep	killed
+Relation	T15	T9	NoRel	true	keep	quoted
+Relation	T16	T1	NoRel	true	died	stated
+Relation	T16	T10	NoRel	true	died	saying
+Relation	T16	T15	NoRel	true	died	keep
+Relation	T16	T19	NoRel	true	died	interred
+Relation	T16	T20	NoRel	true	died	Wrapped
+Relation	T16	T24	NoRel	true	died	theories
+Relation	T16	T25	NoRel	true	died	theories
+Relation	T16	T7	NoRel	true	died	said
+Relation	T17	T14	NoRel	true	crashed	celebrate
+Relation	T17	T25	NoRel	true	crashed	theories
+Relation	T18	T1	NoRel	true	cremated	stated
+Relation	T19	T0	NoRel	true	interred	interview
+Relation	T19	T20	NoRel	true	interred	Wrapped
+Relation	T19	T21	NoRel	true	interred	crash
+Relation	T19	T23	NoRel	true	interred	became
+Relation	T19	T3	NoRel	true	interred	originated
+Relation	T2	T3	NoRel	true	said	originated
+Relation	T2	T5	NoRel	true	said	saying
+Relation	T20	T1	NoRel	true	Wrapped	stated
+Relation	T20	T7	NoRel	true	Wrapped	said
+Relation	T21	T23	NoRel	true	crash	became
+Relation	T21	T6	NoRel	true	crash	flew
+Relation	T22	T16	NoRel	true	killed	died
+Relation	T22	T18	NoRel	true	killed	cremated
+Relation	T22	T7	NoRel	true	killed	said
+Relation	T23	T7	NoRel	true	became	said
+Relation	T24	T12	NoRel	true	theories	flight
+Relation	T24	T18	NoRel	true	theories	cremated
+Relation	T24	T4	NoRel	true	theories	speech
+Relation	T25	T15	NoRel	true	theories	keep
+Relation	T25	T17	NoRel	true	theories	crashed
+Relation	T25	T8	NoRel	true	theories	baptised
+Relation	T3	T14	NoRel	true	originated	celebrate
+Relation	T3	T20	NoRel	true	originated	Wrapped
+Relation	T3	T5	NoRel	true	originated	saying
+Relation	T4	T0	NoRel	true	speech	interview
+Relation	T4	T18	NoRel	true	speech	cremated
+Relation	T4	T2	NoRel	true	speech	said
+Relation	T4	T22	NoRel	true	speech	killed
+Relation	T4	T3	NoRel	true	speech	originated
+Relation	T4	T5	NoRel	true	speech	saying
+Relation	T5	T15	NoRel	true	saying	keep
+Relation	T5	T19	NoRel	true	saying	interred
+Relation	T5	T25	NoRel	true	saying	theories
+Relation	T6	T0	NoRel	true	flew	interview
+Relation	T6	T2	NoRel	true	flew	said
+Relation	T7	T10	NoRel	true	said	saying
+Relation	T7	T20	NoRel	true	said	Wrapped
+Relation	T8	T6	NoRel	true	baptised	flew
+Relation	T8	T9	NoRel	true	baptised	quoted
+Relation	T9	T12	NoRel	true	quoted	flight
+Relation	T9	T2	NoRel	true	quoted	said
+Relation	T9	T7	NoRel	true	quoted	said

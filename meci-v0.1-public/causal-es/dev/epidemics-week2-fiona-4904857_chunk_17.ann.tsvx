@@ -1,0 +1,68 @@
+Text	Los británicos destruyeron el lugar de nacimiento del Mulá , Kob Faradod , y otros lugares , pero evitando siempre destruir mezquitas .	En el primer combate contra los derviches se usaron ametralladoras que devastaron los campos de los rebeldes ( Afbakayle , 3 de junio ) .	El segundo combate fue en Fardhhirin ( 16 de julio ) .	Los británicos persiguieron a los seguidores del Mulá día y noche , pero estos , buenos conocedores del terreno , no se dejaron atrapar y finalmente los británicos se retiraron .	Las bajas de los derviches se estimaron en unos 1200 muertos y heridos y atraparon a 800 prisioneros incluyendo a algunos notables .
+Event	T0	destruyeron	EVENT	15
+Event	T1	destruir	EVENT	115
+Event	T10	muertos	EVENT	561
+Event	T11	heridos	EVENT	571
+Event	T12	atraparon	EVENT	581
+Event	T2	combate	EVENT	149
+Event	T3	devastaron	EVENT	207
+Event	T4	combate	EVENT	285
+Event	T5	persiguieron	EVENT	344
+Event	T6	atrapar	EVENT	457
+Event	T7	retiraron	EVENT	496
+Event	T8	bajas	EVENT	512
+Event	T9	estimaron	EVENT	538
+Relation	T2	T3	CauseEffect	true	combate	devastaron
+Relation	T3	T2	EffectCause	true	devastaron	combate
+Relation	T0	T10	NoRel	true	destruyeron	muertos
+Relation	T0	T3	NoRel	true	destruyeron	devastaron
+Relation	T0	T4	NoRel	true	destruyeron	combate
+Relation	T0	T5	NoRel	true	destruyeron	persiguieron
+Relation	T1	T12	NoRel	true	destruir	atraparon
+Relation	T1	T4	NoRel	true	destruir	combate
+Relation	T1	T5	NoRel	true	destruir	persiguieron
+Relation	T10	T2	NoRel	true	muertos	combate
+Relation	T10	T3	NoRel	true	muertos	devastaron
+Relation	T10	T8	NoRel	true	muertos	bajas
+Relation	T11	T0	NoRel	true	heridos	destruyeron
+Relation	T11	T10	NoRel	true	heridos	muertos
+Relation	T11	T6	NoRel	true	heridos	atrapar
+Relation	T11	T7	NoRel	true	heridos	retiraron
+Relation	T12	T0	NoRel	true	atraparon	destruyeron
+Relation	T12	T3	NoRel	true	atraparon	devastaron
+Relation	T12	T6	NoRel	true	atraparon	atrapar
+Relation	T12	T7	NoRel	true	atraparon	retiraron
+Relation	T2	T1	NoRel	true	combate	destruir
+Relation	T2	T7	NoRel	true	combate	retiraron
+Relation	T2	T8	NoRel	true	combate	bajas
+Relation	T2	T9	NoRel	true	combate	estimaron
+Relation	T3	T12	NoRel	true	devastaron	atraparon
+Relation	T3	T4	NoRel	true	devastaron	combate
+Relation	T3	T6	NoRel	true	devastaron	atrapar
+Relation	T4	T1	NoRel	true	combate	destruir
+Relation	T4	T10	NoRel	true	combate	muertos
+Relation	T4	T2	NoRel	true	combate	combate
+Relation	T4	T5	NoRel	true	combate	persiguieron
+Relation	T4	T8	NoRel	true	combate	bajas
+Relation	T5	T1	NoRel	true	persiguieron	destruir
+Relation	T5	T3	NoRel	true	persiguieron	devastaron
+Relation	T5	T7	NoRel	true	persiguieron	retiraron
+Relation	T5	T8	NoRel	true	persiguieron	bajas
+Relation	T5	T9	NoRel	true	persiguieron	estimaron
+Relation	T6	T10	NoRel	true	atrapar	muertos
+Relation	T6	T11	NoRel	true	atrapar	heridos
+Relation	T6	T12	NoRel	true	atrapar	atraparon
+Relation	T6	T8	NoRel	true	atrapar	bajas
+Relation	T7	T12	NoRel	true	retiraron	atraparon
+Relation	T7	T2	NoRel	true	retiraron	combate
+Relation	T7	T4	NoRel	true	retiraron	combate
+Relation	T7	T9	NoRel	true	retiraron	estimaron
+Relation	T8	T1	NoRel	true	bajas	destruir
+Relation	T8	T11	NoRel	true	bajas	heridos
+Relation	T8	T12	NoRel	true	bajas	atraparon
+Relation	T8	T2	NoRel	true	bajas	combate
+Relation	T8	T6	NoRel	true	bajas	atrapar
+Relation	T8	T9	NoRel	true	bajas	estimaron
+Relation	T9	T3	NoRel	true	estimaron	devastaron
+Relation	T9	T6	NoRel	true	estimaron	atrapar
+Relation	T9	T8	NoRel	true	estimaron	bajas

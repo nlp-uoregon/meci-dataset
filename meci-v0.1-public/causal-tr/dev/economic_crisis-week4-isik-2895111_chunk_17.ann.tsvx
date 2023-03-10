@@ -1,0 +1,71 @@
+Text	"	Aralık 2018'de Iliescu , eski Başbakan Yardımcısı Gelu Voican Voiculescu , eski Romanya Hava Kuvvetleri komutanı Iosif Rus ve eski Ulusal Kurtuluş Cephesi konseyi üyesi Emil Dumitrescu , Romanya Devrimi sırasında meydana gelen ölümlerden dolayı insanlığa karşı işlenen suçlarla ilgili olarak Rumen askeri savcıları tarafından suçlandı .	Bun suçlamaların çoğu Çavuşesku'nun devrilmesinden sonra gerçekleşti .	İddianamede ayrıca Çavuşesku'nun " bir yargılama alayından sonra " mahkum edilmesi ve infaz edilmesine de atıfta bulunuldu .	İddianamelere yol açan soruşturma daha önce 2009 yılında kapatılmış , ancak 2016 yılında Avrupa İnsan Hakları Mahkemesi'nde görülen yargılama sonucunda yeniden açılmıştır .
+Event	T0	Devrimi	EVENT	197
+Event	T2	ölümlerden	EVENT	229
+Event	T4	suçlandı	EVENT	328
+Event	T6	gerçekleşti	EVENT	396
+Event	T9	soruşturma	EVENT	558
+Event	T10	kapatılmış	EVENT	592
+Event	T11	yargılama	EVENT	667
+Event	T12	açılmıştır	EVENT	695
+Event	T1	suçlarla	EVENT	271
+Event	T3	devrilmesinden	EVENT	375
+Event	T5	bulunuldu	EVENT	523
+Event	T7	İddianamelere	EVENT	535
+Relation	T0	T2	CauseEffect	true	Devrimi	ölümlerden
+Relation	T2	T0	EffectCause	true	ölümlerden	Devrimi
+Relation	T2	T4	CauseEffect	true	ölümlerden	suçlandı
+Relation	T4	T2	EffectCause	true	suçlandı	ölümlerden
+Relation	T3	T6	CauseEffect	true	devrilmesinden	gerçekleşti
+Relation	T6	T3	EffectCause	true	gerçekleşti	devrilmesinden
+Relation	T11	T12	CauseEffect	true	yargılama	açılmıştır
+Relation	T12	T11	EffectCause	true	açılmıştır	yargılama
+Relation	T7	T9	CauseEffect	true	İddianamelere	soruşturma
+Relation	T9	T7	EffectCause	true	soruşturma	İddianamelere
+Relation	T0	T10	NoRel	true	Devrimi	kapatılmış
+Relation	T0	T3	NoRel	true	Devrimi	devrilmesinden
+Relation	T0	T7	NoRel	true	Devrimi	İddianamelere
+Relation	T1	T0	NoRel	true	suçlarla	Devrimi
+Relation	T1	T10	NoRel	true	suçlarla	kapatılmış
+Relation	T1	T11	NoRel	true	suçlarla	yargılama
+Relation	T1	T3	NoRel	true	suçlarla	devrilmesinden
+Relation	T1	T4	NoRel	true	suçlarla	suçlandı
+Relation	T1	T7	NoRel	true	suçlarla	İddianamelere
+Relation	T10	T0	NoRel	true	kapatılmış	Devrimi
+Relation	T10	T1	NoRel	true	kapatılmış	suçlarla
+Relation	T10	T5	NoRel	true	kapatılmış	bulunuldu
+Relation	T10	T9	NoRel	true	kapatılmış	soruşturma
+Relation	T11	T0	NoRel	true	yargılama	Devrimi
+Relation	T11	T1	NoRel	true	yargılama	suçlarla
+Relation	T11	T10	NoRel	true	yargılama	kapatılmış
+Relation	T11	T3	NoRel	true	yargılama	devrilmesinden
+Relation	T11	T5	NoRel	true	yargılama	bulunuldu
+Relation	T11	T6	NoRel	true	yargılama	gerçekleşti
+Relation	T11	T9	NoRel	true	yargılama	soruşturma
+Relation	T12	T10	NoRel	true	açılmıştır	kapatılmış
+Relation	T12	T2	NoRel	true	açılmıştır	ölümlerden
+Relation	T12	T6	NoRel	true	açılmıştır	gerçekleşti
+Relation	T2	T1	NoRel	true	ölümlerden	suçlarla
+Relation	T2	T3	NoRel	true	ölümlerden	devrilmesinden
+Relation	T2	T9	NoRel	true	ölümlerden	soruşturma
+Relation	T3	T0	NoRel	true	devrilmesinden	Devrimi
+Relation	T3	T10	NoRel	true	devrilmesinden	kapatılmış
+Relation	T3	T2	NoRel	true	devrilmesinden	ölümlerden
+Relation	T4	T0	NoRel	true	suçlandı	Devrimi
+Relation	T4	T10	NoRel	true	suçlandı	kapatılmış
+Relation	T4	T6	NoRel	true	suçlandı	gerçekleşti
+Relation	T4	T9	NoRel	true	suçlandı	soruşturma
+Relation	T5	T6	NoRel	true	bulunuldu	gerçekleşti
+Relation	T5	T9	NoRel	true	bulunuldu	soruşturma
+Relation	T6	T0	NoRel	true	gerçekleşti	Devrimi
+Relation	T6	T11	NoRel	true	gerçekleşti	yargılama
+Relation	T6	T12	NoRel	true	gerçekleşti	açılmıştır
+Relation	T6	T4	NoRel	true	gerçekleşti	suçlandı
+Relation	T6	T7	NoRel	true	gerçekleşti	İddianamelere
+Relation	T7	T12	NoRel	true	İddianamelere	açılmıştır
+Relation	T7	T3	NoRel	true	İddianamelere	devrilmesinden
+Relation	T7	T4	NoRel	true	İddianamelere	suçlandı
+Relation	T7	T5	NoRel	true	İddianamelere	bulunuldu
+Relation	T7	T6	NoRel	true	İddianamelere	gerçekleşti
+Relation	T9	T1	NoRel	true	soruşturma	suçlarla
+Relation	T9	T11	NoRel	true	soruşturma	yargılama
+Relation	T9	T12	NoRel	true	soruşturma	açılmıştır

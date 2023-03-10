@@ -1,0 +1,115 @@
+Text	17 Ocak 2017'de Kırgızistan basını ACT Airlines'ın web sitesinde yaptığı bir basın açıklamasından ötürü mağdurlara tüm maddi ve maddi olmayan kayıplar için tazminat ödemeyi amaçladığını bildirdi .	Ekim 2017'de tüm etkilenen kişilere ve yakınlarına ( 135 kişi ) ACT Airlines tarafından tazminat ödendiği açıklandı ancak tazminatın miktarı açıklanmadı .	Başbakan Yardımcısı Muhammedkalıy Abılgaziyev kaza günü sabahın sonlarına doğru olay yerinde 1000'den fazla kurtarma görevlisinin bulunduğunu bildirdi .	Sağlık Bakanı Talantbek Batyraliyev yerel saatle 23.46'ya kadar yaklaşık 56 doktor ve psikolog ile 14 ambulans ekibinin olay yerine gönderildiğini bildirdi .	Görgü tanıkları bazı acil müdahale ekiplerinin ve yerlilerin uçağın kargo_bölmesinde bulunan elektronik cihazları aldığını gördü .
+Event	T1	kayıplar	EVENT	142
+Event	T3	bildirdi	EVENT	186
+Event	T4	açıklandı	EVENT	303
+Event	T5	tazminatın	EVENT	319
+Event	T6	açıklanmadı	EVENT	338
+Event	T7	kaza	EVENT	398
+Event	T8	olay	EVENT	432
+Event	T9	bildirdi	EVENT	494
+Event	T10	olay	EVENT	625
+Event	T11	bildirdi	EVENT	652
+Event	T12	müdahale	EVENT	689
+Event	T13	gördü	EVENT	786
+Event	T14	açıklamasından	EVENT	83
+Event	T2	tazminat	EVENT	156
+Event	T15	mağdurlara	EVENT	104
+Event	T16	tazminat	EVENT	285
+Event	T17	etkilenen	EVENT	214
+Relation	T1	T15	CauseEffect	true	kayıplar	mağdurlara
+Relation	T15	T1	EffectCause	true	mağdurlara	kayıplar
+Relation	T15	T2	CauseEffect	true	mağdurlara	tazminat
+Relation	T2	T15	EffectCause	true	tazminat	mağdurlara
+Relation	T2	T14	CauseEffect	true	tazminat	açıklamasından
+Relation	T14	T2	EffectCause	true	açıklamasından	tazminat
+Relation	T17	T16	CauseEffect	true	etkilenen	tazminat
+Relation	T16	T17	EffectCause	true	tazminat	etkilenen
+Relation	T16	T4	CauseEffect	true	tazminat	açıklandı
+Relation	T4	T16	EffectCause	true	açıklandı	tazminat
+Relation	T1	T12	NoRel	true	kayıplar	müdahale
+Relation	T1	T16	NoRel	true	kayıplar	tazminat
+Relation	T1	T17	NoRel	true	kayıplar	etkilenen
+Relation	T1	T2	NoRel	true	kayıplar	tazminat
+Relation	T1	T4	NoRel	true	kayıplar	açıklandı
+Relation	T1	T9	NoRel	true	kayıplar	bildirdi
+Relation	T10	T1	NoRel	true	olay	kayıplar
+Relation	T10	T14	NoRel	true	olay	açıklamasından
+Relation	T10	T5	NoRel	true	olay	tazminatın
+Relation	T10	T6	NoRel	true	olay	açıklanmadı
+Relation	T11	T1	NoRel	true	bildirdi	kayıplar
+Relation	T11	T10	NoRel	true	bildirdi	olay
+Relation	T11	T12	NoRel	true	bildirdi	müdahale
+Relation	T11	T14	NoRel	true	bildirdi	açıklamasından
+Relation	T11	T16	NoRel	true	bildirdi	tazminat
+Relation	T11	T4	NoRel	true	bildirdi	açıklandı
+Relation	T11	T5	NoRel	true	bildirdi	tazminatın
+Relation	T11	T6	NoRel	true	bildirdi	açıklanmadı
+Relation	T11	T7	NoRel	true	bildirdi	kaza
+Relation	T12	T1	NoRel	true	müdahale	kayıplar
+Relation	T12	T2	NoRel	true	müdahale	tazminat
+Relation	T12	T8	NoRel	true	müdahale	olay
+Relation	T13	T14	NoRel	true	gördü	açıklamasından
+Relation	T13	T15	NoRel	true	gördü	mağdurlara
+Relation	T13	T16	NoRel	true	gördü	tazminat
+Relation	T13	T17	NoRel	true	gördü	etkilenen
+Relation	T13	T5	NoRel	true	gördü	tazminatın
+Relation	T13	T9	NoRel	true	gördü	bildirdi
+Relation	T14	T1	NoRel	true	açıklamasından	kayıplar
+Relation	T14	T12	NoRel	true	açıklamasından	müdahale
+Relation	T14	T17	NoRel	true	açıklamasından	etkilenen
+Relation	T14	T3	NoRel	true	açıklamasından	bildirdi
+Relation	T14	T6	NoRel	true	açıklamasından	açıklanmadı
+Relation	T15	T16	NoRel	true	mağdurlara	tazminat
+Relation	T15	T17	NoRel	true	mağdurlara	etkilenen
+Relation	T15	T7	NoRel	true	mağdurlara	kaza
+Relation	T16	T10	NoRel	true	tazminat	olay
+Relation	T16	T11	NoRel	true	tazminat	bildirdi
+Relation	T16	T13	NoRel	true	tazminat	gördü
+Relation	T16	T14	NoRel	true	tazminat	açıklamasından
+Relation	T16	T8	NoRel	true	tazminat	olay
+Relation	T16	T9	NoRel	true	tazminat	bildirdi
+Relation	T17	T11	NoRel	true	etkilenen	bildirdi
+Relation	T17	T13	NoRel	true	etkilenen	gördü
+Relation	T17	T15	NoRel	true	etkilenen	mağdurlara
+Relation	T17	T2	NoRel	true	etkilenen	tazminat
+Relation	T17	T4	NoRel	true	etkilenen	açıklandı
+Relation	T17	T7	NoRel	true	etkilenen	kaza
+Relation	T2	T11	NoRel	true	tazminat	bildirdi
+Relation	T2	T13	NoRel	true	tazminat	gördü
+Relation	T2	T16	NoRel	true	tazminat	tazminat
+Relation	T2	T8	NoRel	true	tazminat	olay
+Relation	T2	T9	NoRel	true	tazminat	bildirdi
+Relation	T3	T15	NoRel	true	bildirdi	mağdurlara
+Relation	T3	T17	NoRel	true	bildirdi	etkilenen
+Relation	T3	T7	NoRel	true	bildirdi	kaza
+Relation	T4	T11	NoRel	true	açıklandı	bildirdi
+Relation	T4	T13	NoRel	true	açıklandı	gördü
+Relation	T4	T5	NoRel	true	açıklandı	tazminatın
+Relation	T4	T7	NoRel	true	açıklandı	kaza
+Relation	T4	T9	NoRel	true	açıklandı	bildirdi
+Relation	T5	T1	NoRel	true	tazminatın	kayıplar
+Relation	T5	T17	NoRel	true	tazminatın	etkilenen
+Relation	T5	T3	NoRel	true	tazminatın	bildirdi
+Relation	T5	T4	NoRel	true	tazminatın	açıklandı
+Relation	T5	T7	NoRel	true	tazminatın	kaza
+Relation	T6	T1	NoRel	true	açıklanmadı	kayıplar
+Relation	T6	T5	NoRel	true	açıklanmadı	tazminatın
+Relation	T7	T10	NoRel	true	kaza	olay
+Relation	T7	T11	NoRel	true	kaza	bildirdi
+Relation	T7	T15	NoRel	true	kaza	mağdurlara
+Relation	T7	T3	NoRel	true	kaza	bildirdi
+Relation	T7	T8	NoRel	true	kaza	olay
+Relation	T8	T1	NoRel	true	olay	kayıplar
+Relation	T8	T11	NoRel	true	olay	bildirdi
+Relation	T8	T16	NoRel	true	olay	tazminat
+Relation	T8	T2	NoRel	true	olay	tazminat
+Relation	T8	T7	NoRel	true	olay	kaza
+Relation	T8	T9	NoRel	true	olay	bildirdi
+Relation	T9	T13	NoRel	true	bildirdi	gördü
+Relation	T9	T14	NoRel	true	bildirdi	açıklamasından
+Relation	T9	T16	NoRel	true	bildirdi	tazminat
+Relation	T9	T17	NoRel	true	bildirdi	etkilenen
+Relation	T9	T2	NoRel	true	bildirdi	tazminat
+Relation	T9	T3	NoRel	true	bildirdi	bildirdi
+Relation	T9	T7	NoRel	true	bildirdi	kaza
+Relation	T9	T8	NoRel	true	bildirdi	olay

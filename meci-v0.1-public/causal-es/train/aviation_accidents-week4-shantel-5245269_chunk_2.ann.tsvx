@@ -1,0 +1,64 @@
+Text	A su llegada a Acra , el capitán voló una aproximación acoplada al Sistema de Aterrizaje por Instrumentos ( ILS ) , hasta que vio la pista .	Luego desconectó el piloto automático a 500 pies y voló manualmente la aeronave .	Después de desconectar el piloto automático , entró en condiciones de IMC severas bajo la lluvia .	La aeronave experimentó una aproximación inestable a una alta velocidad de 167kts y aterrizó con un viento de 050_/_15kts a una velocidad de 154kts y alrededor de 5807 pies desde el umbral de la pista 21 y 4000 pies desde el umbral de la pista 03 con visibilidad nula .	La tripulación desplegó inversores de empuje y aplicó los frenos normales , así como los frenos neumáticos de emergencia , pero estas acciones fueron ineficaces para detener la aeronave .
+Event	T0	llegada	EVENT	5
+Event	T1	vio	EVENT	126
+Event	T2	desconectó	EVENT	147
+Event	T3	voló	EVENT	192
+Event	T4	desconectar	EVENT	234
+Event	T5	lluvia	EVENT	313
+Event	T6	experimentó	EVENT	334
+Event	T7	aterrizó	EVENT	406
+Event	T8	desplegó	EVENT	607
+Event	T9	empuje	EVENT	630
+Event	T10	aplicó	EVENT	639
+Event	T11	acciones	EVENT	726
+Event	T12	detener	EVENT	758
+Relation	T0	T1	NoRel	true	llegada	vio
+Relation	T0	T10	NoRel	true	llegada	aplicó
+Relation	T0	T11	NoRel	true	llegada	acciones
+Relation	T0	T2	NoRel	true	llegada	desconectó
+Relation	T0	T4	NoRel	true	llegada	desconectar
+Relation	T10	T11	NoRel	true	aplicó	acciones
+Relation	T10	T12	NoRel	true	aplicó	detener
+Relation	T10	T6	NoRel	true	aplicó	experimentó
+Relation	T10	T8	NoRel	true	aplicó	desplegó
+Relation	T10	T9	NoRel	true	aplicó	empuje
+Relation	T11	T0	NoRel	true	acciones	llegada
+Relation	T11	T12	NoRel	true	acciones	detener
+Relation	T11	T4	NoRel	true	acciones	desconectar
+Relation	T11	T9	NoRel	true	acciones	empuje
+Relation	T12	T11	NoRel	true	detener	acciones
+Relation	T12	T2	NoRel	true	detener	desconectó
+Relation	T12	T4	NoRel	true	detener	desconectar
+Relation	T12	T5	NoRel	true	detener	lluvia
+Relation	T12	T7	NoRel	true	detener	aterrizó
+Relation	T2	T0	NoRel	true	desconectó	llegada
+Relation	T2	T1	NoRel	true	desconectó	vio
+Relation	T2	T10	NoRel	true	desconectó	aplicó
+Relation	T2	T12	NoRel	true	desconectó	detener
+Relation	T2	T4	NoRel	true	desconectó	desconectar
+Relation	T2	T8	NoRel	true	desconectó	desplegó
+Relation	T3	T1	NoRel	true	voló	vio
+Relation	T3	T11	NoRel	true	voló	acciones
+Relation	T3	T7	NoRel	true	voló	aterrizó
+Relation	T4	T1	NoRel	true	desconectar	vio
+Relation	T4	T3	NoRel	true	desconectar	voló
+Relation	T5	T0	NoRel	true	lluvia	llegada
+Relation	T5	T10	NoRel	true	lluvia	aplicó
+Relation	T5	T2	NoRel	true	lluvia	desconectó
+Relation	T5	T3	NoRel	true	lluvia	voló
+Relation	T5	T7	NoRel	true	lluvia	aterrizó
+Relation	T6	T12	NoRel	true	experimentó	detener
+Relation	T6	T2	NoRel	true	experimentó	desconectó
+Relation	T7	T11	NoRel	true	aterrizó	acciones
+Relation	T7	T4	NoRel	true	aterrizó	desconectar
+Relation	T7	T9	NoRel	true	aterrizó	empuje
+Relation	T8	T0	NoRel	true	desplegó	llegada
+Relation	T8	T1	NoRel	true	desplegó	vio
+Relation	T8	T10	NoRel	true	desplegó	aplicó
+Relation	T8	T11	NoRel	true	desplegó	acciones
+Relation	T8	T3	NoRel	true	desplegó	voló
+Relation	T8	T4	NoRel	true	desplegó	desconectar
+Relation	T8	T9	NoRel	true	desplegó	empuje
+Relation	T9	T10	NoRel	true	empuje	aplicó
+Relation	T9	T11	NoRel	true	empuje	acciones
+Relation	T9	T7	NoRel	true	empuje	aterrizó

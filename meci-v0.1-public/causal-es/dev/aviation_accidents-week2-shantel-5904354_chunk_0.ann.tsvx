@@ -1,0 +1,93 @@
+Text	El VUELO 214 DE ASIANA AIRLINES del sábado 6 de julio de 2013 entre el Aeropuerto Internacional de Incheon , cerca de Seúl , Corea del Sur , a San Francisco , Estados Unidos , sufrió un accidente durante su aterrizaje en el Aeropuerto Internacional de San Francisco , a las ( tiempo del Pacífico ) .	El avión siniestrado era un Boeing 777 de la aerolínea coreana Asiana Airlines .	La agencia de noticias surcoreana Yonhap señaló poco después del accidente que el vuelo llevaba 292 pasajeros y 16 tripulantes , y en un primer momento no hubo reportes acerca de víctimas mortales , mientras que Rachael Kagan , portavoz del San Francisco General Hospital , indicó que había diez heridos graves .	Más tarde se confirmó la muerte de dos pasajeros en el lugar del accidente , mientras que otro falleció días más tarde en un hospital .	Portavoces de la Administración Federal de Aviación ( FAA ) precisaron horas después del accidente que la aeronave llegó a aterrizar pero inmediatamente se estrelló e incendió .
+Event	T1	aterrizaje	EVENT	207
+Event	T10	falleció	EVENT	789
+Event	T11	precisaron	EVENT	890
+Event	T12	accidente	EVENT	919
+Event	T14	aterrizar	EVENT	953
+Event	T15	estrelló	EVENT	986
+Event	T17	accidente	EVENT	186
+Event	T2	siniestrado	EVENT	309
+Event	T3	señaló	EVENT	422
+Event	T4	accidente	EVENT	446
+Event	T6	indicó	EVENT	655
+Event	T7	confirmó	EVENT	707
+Event	T8	muerte	EVENT	719
+Event	T9	accidente	EVENT	759
+Event	T5	incendió	EVENT	997
+Relation	T9	T8	CauseEffect	true	accidente	muerte
+Relation	T8	T9	EffectCause	true	muerte	accidente
+Relation	T9	T10	CauseEffect	true	accidente	falleció
+Relation	T10	T9	EffectCause	true	falleció	accidente
+Relation	T1	T11	NoRel	true	aterrizaje	precisaron
+Relation	T1	T12	NoRel	true	aterrizaje	accidente
+Relation	T1	T15	NoRel	true	aterrizaje	estrelló
+Relation	T1	T4	NoRel	true	aterrizaje	accidente
+Relation	T1	T7	NoRel	true	aterrizaje	confirmó
+Relation	T10	T1	NoRel	true	falleció	aterrizaje
+Relation	T10	T3	NoRel	true	falleció	señaló
+Relation	T10	T5	NoRel	true	falleció	incendió
+Relation	T10	T6	NoRel	true	falleció	indicó
+Relation	T10	T8	NoRel	true	falleció	muerte
+Relation	T11	T1	NoRel	true	precisaron	aterrizaje
+Relation	T11	T14	NoRel	true	precisaron	aterrizar
+Relation	T11	T17	NoRel	true	precisaron	accidente
+Relation	T11	T6	NoRel	true	precisaron	indicó
+Relation	T11	T9	NoRel	true	precisaron	accidente
+Relation	T12	T14	NoRel	true	accidente	aterrizar
+Relation	T12	T15	NoRel	true	accidente	estrelló
+Relation	T12	T3	NoRel	true	accidente	señaló
+Relation	T14	T10	NoRel	true	aterrizar	falleció
+Relation	T14	T12	NoRel	true	aterrizar	accidente
+Relation	T14	T3	NoRel	true	aterrizar	señaló
+Relation	T14	T6	NoRel	true	aterrizar	indicó
+Relation	T14	T8	NoRel	true	aterrizar	muerte
+Relation	T14	T9	NoRel	true	aterrizar	accidente
+Relation	T15	T1	NoRel	true	estrelló	aterrizaje
+Relation	T15	T10	NoRel	true	estrelló	falleció
+Relation	T15	T17	NoRel	true	estrelló	accidente
+Relation	T15	T5	NoRel	true	estrelló	incendió
+Relation	T15	T8	NoRel	true	estrelló	muerte
+Relation	T17	T10	NoRel	true	accidente	falleció
+Relation	T17	T11	NoRel	true	accidente	precisaron
+Relation	T17	T15	NoRel	true	accidente	estrelló
+Relation	T17	T2	NoRel	true	accidente	siniestrado
+Relation	T17	T5	NoRel	true	accidente	incendió
+Relation	T17	T6	NoRel	true	accidente	indicó
+Relation	T2	T14	NoRel	true	siniestrado	aterrizar
+Relation	T2	T15	NoRel	true	siniestrado	estrelló
+Relation	T2	T17	NoRel	true	siniestrado	accidente
+Relation	T2	T6	NoRel	true	siniestrado	indicó
+Relation	T2	T8	NoRel	true	siniestrado	muerte
+Relation	T2	T9	NoRel	true	siniestrado	accidente
+Relation	T3	T11	NoRel	true	señaló	precisaron
+Relation	T3	T4	NoRel	true	señaló	accidente
+Relation	T3	T6	NoRel	true	señaló	indicó
+Relation	T3	T7	NoRel	true	señaló	confirmó
+Relation	T3	T8	NoRel	true	señaló	muerte
+Relation	T4	T1	NoRel	true	accidente	aterrizaje
+Relation	T4	T11	NoRel	true	accidente	precisaron
+Relation	T4	T2	NoRel	true	accidente	siniestrado
+Relation	T5	T11	NoRel	true	incendió	precisaron
+Relation	T5	T12	NoRel	true	incendió	accidente
+Relation	T5	T14	NoRel	true	incendió	aterrizar
+Relation	T5	T17	NoRel	true	incendió	accidente
+Relation	T5	T6	NoRel	true	incendió	indicó
+Relation	T5	T7	NoRel	true	incendió	confirmó
+Relation	T5	T8	NoRel	true	incendió	muerte
+Relation	T6	T10	NoRel	true	indicó	falleció
+Relation	T6	T11	NoRel	true	indicó	precisaron
+Relation	T6	T12	NoRel	true	indicó	accidente
+Relation	T6	T15	NoRel	true	indicó	estrelló
+Relation	T6	T3	NoRel	true	indicó	señaló
+Relation	T6	T4	NoRel	true	indicó	accidente
+Relation	T6	T7	NoRel	true	indicó	confirmó
+Relation	T7	T14	NoRel	true	confirmó	aterrizar
+Relation	T7	T17	NoRel	true	confirmó	accidente
+Relation	T7	T5	NoRel	true	confirmó	incendió
+Relation	T7	T6	NoRel	true	confirmó	indicó
+Relation	T7	T8	NoRel	true	confirmó	muerte
+Relation	T8	T11	NoRel	true	muerte	precisaron
+Relation	T8	T12	NoRel	true	muerte	accidente
+Relation	T8	T15	NoRel	true	muerte	estrelló
+Relation	T8	T6	NoRel	true	muerte	indicó
+Relation	T9	T17	NoRel	true	accidente	accidente

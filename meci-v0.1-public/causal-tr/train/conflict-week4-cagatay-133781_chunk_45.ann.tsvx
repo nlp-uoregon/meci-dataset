@@ -1,0 +1,106 @@
+Text	Osmanlı ordusu çekilir çekilmez harekete geçen Şah Safi , büyük bir orduyla Revan’ı kuşattı .	Kış sebebiyle yardım gönderilemediğinden üç ay süren çetin bir savunma savaşı veren Murtaza Paşa’nın şehit olması üzerine kale teslim oldu .	Safevi ordusu Tebriz ve Azerbaycan’ın büyük bir kısmını geri aldı .	Bundan sonra güneye doğru inen Şah’ın karşısına az bir kuvvetle çıkıp savaşan Şam beylerbeyi Küçük Ahmed Paşa yenilip şehit düştü ( 2 Eylül 1636 ) .	1637 yılında sadrazam Bayram Paşa’yı Anadolu’ya gönderip büyük harp hazırlıklarına girişen Sultan IV. Murad , 8 Mayıs 1638’de şeyhülislam Yahya Efendi ile beraber Bağdad seferi için yola çıktı .
+Event	T0	kuşattı	EVENT	84
+Event	T3	olması	EVENT	201
+Event	T5	aldı	EVENT	296
+Event	T6	düştü	EVENT	427
+Event	T7	gönderip	EVENT	500
+Event	T8	seferi	EVENT	622
+Event	T9	çıktı	EVENT	639
+Event	T10	harekete	EVENT	32
+Event	T11	çekilir	EVENT	15
+Event	T12	savaşı	EVENT	165
+Event	T1	teslim oldu	EVENT	221
+Event	T2	inen	EVENT	329
+Event	T4	savaşan	EVENT	373
+Event	T13	yenilip	EVENT	413
+Event	T14	çıkıp	EVENT	367
+Event	T15	hazırlıklarına	EVENT	520
+Relation	T11	T10	CauseEffect	true	çekilir	harekete
+Relation	T10	T11	EffectCause	true	harekete	çekilir
+Relation	T10	T0	CauseEffect	true	harekete	kuşattı
+Relation	T0	T10	EffectCause	true	kuşattı	harekete
+Relation	T12	T3	CauseEffect	true	savaşı	olması
+Relation	T3	T12	EffectCause	true	olması	savaşı
+Relation	T0	T12	CauseEffect	true	kuşattı	savaşı
+Relation	T12	T0	EffectCause	true	savaşı	kuşattı
+Relation	T3	T1	CauseEffect	true	olması	teslim oldu
+Relation	T1	T3	EffectCause	true	teslim oldu	olması
+Relation	T2	T14	CauseEffect	true	inen	çıkıp
+Relation	T14	T2	EffectCause	true	çıkıp	inen
+Relation	T14	T4	CauseEffect	true	çıkıp	savaşan
+Relation	T4	T14	EffectCause	true	savaşan	çıkıp
+Relation	T4	T13	CauseEffect	true	savaşan	yenilip
+Relation	T13	T4	EffectCause	true	yenilip	savaşan
+Relation	T13	T6	CauseEffect	true	yenilip	düştü
+Relation	T6	T13	EffectCause	true	düştü	yenilip
+Relation	T8	T9	CauseEffect	true	seferi	çıktı
+Relation	T9	T8	EffectCause	true	çıktı	seferi
+Relation	T0	T1	NoRel	true	kuşattı	teslim oldu
+Relation	T0	T11	NoRel	true	kuşattı	çekilir
+Relation	T0	T7	NoRel	true	kuşattı	gönderip
+Relation	T1	T11	NoRel	true	teslim oldu	çekilir
+Relation	T1	T14	NoRel	true	teslim oldu	çıkıp
+Relation	T1	T7	NoRel	true	teslim oldu	gönderip
+Relation	T10	T12	NoRel	true	harekete	savaşı
+Relation	T10	T15	NoRel	true	harekete	hazırlıklarına
+Relation	T10	T2	NoRel	true	harekete	inen
+Relation	T10	T7	NoRel	true	harekete	gönderip
+Relation	T11	T15	NoRel	true	çekilir	hazırlıklarına
+Relation	T11	T2	NoRel	true	çekilir	inen
+Relation	T11	T3	NoRel	true	çekilir	olması
+Relation	T11	T4	NoRel	true	çekilir	savaşan
+Relation	T11	T8	NoRel	true	çekilir	seferi
+Relation	T12	T15	NoRel	true	savaşı	hazırlıklarına
+Relation	T12	T2	NoRel	true	savaşı	inen
+Relation	T12	T4	NoRel	true	savaşı	savaşan
+Relation	T12	T5	NoRel	true	savaşı	aldı
+Relation	T12	T6	NoRel	true	savaşı	düştü
+Relation	T13	T1	NoRel	true	yenilip	teslim oldu
+Relation	T13	T12	NoRel	true	yenilip	savaşı
+Relation	T13	T14	NoRel	true	yenilip	çıkıp
+Relation	T13	T2	NoRel	true	yenilip	inen
+Relation	T13	T3	NoRel	true	yenilip	olması
+Relation	T14	T0	NoRel	true	çıkıp	kuşattı
+Relation	T14	T1	NoRel	true	çıkıp	teslim oldu
+Relation	T14	T3	NoRel	true	çıkıp	olması
+Relation	T14	T6	NoRel	true	çıkıp	düştü
+Relation	T15	T13	NoRel	true	hazırlıklarına	yenilip
+Relation	T15	T2	NoRel	true	hazırlıklarına	inen
+Relation	T15	T4	NoRel	true	hazırlıklarına	savaşan
+Relation	T15	T7	NoRel	true	hazırlıklarına	gönderip
+Relation	T15	T8	NoRel	true	hazırlıklarına	seferi
+Relation	T2	T0	NoRel	true	inen	kuşattı
+Relation	T2	T1	NoRel	true	inen	teslim oldu
+Relation	T2	T5	NoRel	true	inen	aldı
+Relation	T2	T8	NoRel	true	inen	seferi
+Relation	T3	T10	NoRel	true	olması	harekete
+Relation	T3	T15	NoRel	true	olması	hazırlıklarına
+Relation	T3	T2	NoRel	true	olması	inen
+Relation	T3	T8	NoRel	true	olması	seferi
+Relation	T4	T1	NoRel	true	savaşan	teslim oldu
+Relation	T4	T10	NoRel	true	savaşan	harekete
+Relation	T4	T8	NoRel	true	savaşan	seferi
+Relation	T5	T0	NoRel	true	aldı	kuşattı
+Relation	T5	T11	NoRel	true	aldı	çekilir
+Relation	T5	T12	NoRel	true	aldı	savaşı
+Relation	T5	T3	NoRel	true	aldı	olması
+Relation	T5	T4	NoRel	true	aldı	savaşan
+Relation	T6	T0	NoRel	true	düştü	kuşattı
+Relation	T6	T12	NoRel	true	düştü	savaşı
+Relation	T6	T15	NoRel	true	düştü	hazırlıklarına
+Relation	T6	T3	NoRel	true	düştü	olması
+Relation	T6	T4	NoRel	true	düştü	savaşan
+Relation	T7	T12	NoRel	true	gönderip	savaşı
+Relation	T7	T13	NoRel	true	gönderip	yenilip
+Relation	T7	T14	NoRel	true	gönderip	çıkıp
+Relation	T7	T4	NoRel	true	gönderip	savaşan
+Relation	T7	T9	NoRel	true	gönderip	çıktı
+Relation	T8	T1	NoRel	true	seferi	teslim oldu
+Relation	T8	T10	NoRel	true	seferi	harekete
+Relation	T8	T11	NoRel	true	seferi	çekilir
+Relation	T8	T12	NoRel	true	seferi	savaşı
+Relation	T8	T3	NoRel	true	seferi	olması
+Relation	T8	T5	NoRel	true	seferi	aldı
+Relation	T8	T6	NoRel	true	seferi	düştü
+Relation	T9	T11	NoRel	true	çıktı	çekilir
+Relation	T9	T6	NoRel	true	çıktı	düştü

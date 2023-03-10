@@ -1,0 +1,55 @@
+Text	ليکن دنيا کے لیے خطرہ بننے والے مسائل کا اجتماعی حل تلاش کرنا ضروری ہے ورنہ توازن بگڑنے کا تمام تر نقصان پوری نوعِ انسانی کو مجموعی طور پر بھگتنا پڑے گا ۔	ہريکين يا_سائيکلون دراصل ايک ديوقامت بگولے سے مشابہ ہوتا ہے جس ميں ہوا ايک بے حد کم دباؤ کے مرکزے کے گرد بڑے حجم ميں قوت کے ساتھ گھومتی ہے اور اس کی رفتار اپنی انتہا کو پہنچ جاتی ہے جو بيرونی اطراف ميں بڑھتا جاتا ہے اور جس کو طوالت مرکز سے 20 يا 30 ميل تک ہوسکتی ہے ۔	مرکز کے گرد گھومنے والی ہوا کا قطر اوسطا 40 کلوميٹر ہوتا ہے ، مگر يہ بعض اوقات بڑھ کر 80 کلوميٹر تک بھی پہنچ جاتا ہے ۔	طوفان کا سب سے خطرناک حصّہ Surge ہوتا ہے ۔	يہ پانی کے ايک عظيم گنبد کی مانند ہوتا ہے جس کی چوڑائی بعض مرتبہ 80 کلوميٹر تک ہوتی ہے اور اس کی راہ ميں آنے والی ساحلی آبادی بُری طرح متاثر ہوتی ہے ۔
+Event	T0	تلاش	EVENT	52
+Event	T1	بگڑنے	EVENT	82
+Event	T2	گھومتی	EVENT	284
+Event	T3	بڑھتا	EVENT	357
+Event	T4	طوفان	EVENT	542
+Event	T5	نقصان	EVENT	99
+Event	T6	خطرہ	EVENT	17
+Event	T7	بننے	EVENT	22
+Event	T8	بھگتنا	EVENT	139
+Event	T9	متاثر	EVENT	720
+Event	T10	پہنچ	EVENT	527
+Event	T11	ہوسکتی	EVENT	411
+Relation	T8	T0	CauseEffect	true	بھگتنا	تلاش
+Relation	T0	T8	EffectCause	true	تلاش	بھگتنا
+Relation	T0	T10	NoRel	true	تلاش	پہنچ
+Relation	T0	T4	NoRel	true	تلاش	طوفان
+Relation	T0	T5	NoRel	true	تلاش	نقصان
+Relation	T1	T10	NoRel	true	بگڑنے	پہنچ
+Relation	T1	T11	NoRel	true	بگڑنے	ہوسکتی
+Relation	T1	T4	NoRel	true	بگڑنے	طوفان
+Relation	T1	T9	NoRel	true	بگڑنے	متاثر
+Relation	T10	T2	NoRel	true	پہنچ	گھومتی
+Relation	T10	T5	NoRel	true	پہنچ	نقصان
+Relation	T11	T0	NoRel	true	ہوسکتی	تلاش
+Relation	T11	T2	NoRel	true	ہوسکتی	گھومتی
+Relation	T11	T6	NoRel	true	ہوسکتی	خطرہ
+Relation	T2	T1	NoRel	true	گھومتی	بگڑنے
+Relation	T2	T9	NoRel	true	گھومتی	متاثر
+Relation	T3	T2	NoRel	true	بڑھتا	گھومتی
+Relation	T3	T5	NoRel	true	بڑھتا	نقصان
+Relation	T3	T8	NoRel	true	بڑھتا	بھگتنا
+Relation	T4	T1	NoRel	true	طوفان	بگڑنے
+Relation	T4	T10	NoRel	true	طوفان	پہنچ
+Relation	T4	T3	NoRel	true	طوفان	بڑھتا
+Relation	T4	T7	NoRel	true	طوفان	بننے
+Relation	T4	T9	NoRel	true	طوفان	متاثر
+Relation	T5	T10	NoRel	true	نقصان	پہنچ
+Relation	T5	T4	NoRel	true	نقصان	طوفان
+Relation	T5	T6	NoRel	true	نقصان	خطرہ
+Relation	T5	T9	NoRel	true	نقصان	متاثر
+Relation	T6	T0	NoRel	true	خطرہ	تلاش
+Relation	T6	T1	NoRel	true	خطرہ	بگڑنے
+Relation	T6	T3	NoRel	true	خطرہ	بڑھتا
+Relation	T6	T4	NoRel	true	خطرہ	طوفان
+Relation	T6	T5	NoRel	true	خطرہ	نقصان
+Relation	T7	T0	NoRel	true	بننے	تلاش
+Relation	T7	T11	NoRel	true	بننے	ہوسکتی
+Relation	T7	T3	NoRel	true	بننے	بڑھتا
+Relation	T8	T11	NoRel	true	بھگتنا	ہوسکتی
+Relation	T8	T2	NoRel	true	بھگتنا	گھومتی
+Relation	T8	T9	NoRel	true	بھگتنا	متاثر
+Relation	T9	T4	NoRel	true	متاثر	طوفان
+Relation	T9	T5	NoRel	true	متاثر	نقصان
+Relation	T9	T7	NoRel	true	متاثر	بننے

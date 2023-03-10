@@ -1,0 +1,82 @@
+Text	Los sobrevivientes huyeron a los Valles Calchaquíes .	Por su parte , el gobernador Albornoz hizo una campaña prolongada en los Valles Calchaquíes , en que no hubo grandes batallas pero logró hostigar a los indígenas lo suficiente como para que se sometieran a la encomienda .	No fundó ciudades , y los jesuitas fundaron dos misiones permanentes en Santa María y San Carlos .	Una vez rendida la resistencia en los Valles , Albornoz volvió sobre los hualfines , dirigidos por el hijo de Chalimín , y los derrotó y apresó .	Desde allí , los cuatrocientos hualfines y abaucanes sobrevivientes fueron enviados a la ciudad de Córdoba en carácter de encomendados .
+Event	T0	huyeron	EVENT	19
+Event	T1	hizo	EVENT	92
+Event	T2	campaña	EVENT	101
+Event	T3	batallas	EVENT	171
+Event	T4	hostigar	EVENT	191
+Event	T5	sometieran	EVENT	247
+Event	T6	encomienda	EVENT	263
+Event	T7	rendida	EVENT	383
+Event	T8	resistencia	EVENT	394
+Event	T9	volvió	EVENT	431
+Event	T10	dirigidos	EVENT	460
+Event	T11	derrotó	EVENT	502
+Event	T12	apresó	EVENT	512
+Event	T13	enviados	EVENT	596
+Event	T14	fundaron	EVENT	311
+Relation	T4	T5	CauseEffect	true	hostigar	sometieran
+Relation	T5	T4	EffectCause	true	sometieran	hostigar
+Relation	T0	T1	NoRel	true	huyeron	hizo
+Relation	T0	T11	NoRel	true	huyeron	derrotó
+Relation	T0	T12	NoRel	true	huyeron	apresó
+Relation	T0	T6	NoRel	true	huyeron	encomienda
+Relation	T0	T7	NoRel	true	huyeron	rendida
+Relation	T0	T9	NoRel	true	huyeron	volvió
+Relation	T1	T12	NoRel	true	hizo	apresó
+Relation	T1	T6	NoRel	true	hizo	encomienda
+Relation	T1	T7	NoRel	true	hizo	rendida
+Relation	T1	T8	NoRel	true	hizo	resistencia
+Relation	T10	T1	NoRel	true	dirigidos	hizo
+Relation	T10	T2	NoRel	true	dirigidos	campaña
+Relation	T10	T8	NoRel	true	dirigidos	resistencia
+Relation	T10	T9	NoRel	true	dirigidos	volvió
+Relation	T11	T0	NoRel	true	derrotó	huyeron
+Relation	T11	T12	NoRel	true	derrotó	apresó
+Relation	T11	T2	NoRel	true	derrotó	campaña
+Relation	T12	T13	NoRel	true	apresó	enviados
+Relation	T12	T14	NoRel	true	apresó	fundaron
+Relation	T12	T3	NoRel	true	apresó	batallas
+Relation	T12	T6	NoRel	true	apresó	encomienda
+Relation	T12	T9	NoRel	true	apresó	volvió
+Relation	T13	T14	NoRel	true	enviados	fundaron
+Relation	T13	T2	NoRel	true	enviados	campaña
+Relation	T14	T11	NoRel	true	fundaron	derrotó
+Relation	T14	T13	NoRel	true	fundaron	enviados
+Relation	T14	T3	NoRel	true	fundaron	batallas
+Relation	T14	T5	NoRel	true	fundaron	sometieran
+Relation	T14	T9	NoRel	true	fundaron	volvió
+Relation	T2	T10	NoRel	true	campaña	dirigidos
+Relation	T2	T13	NoRel	true	campaña	enviados
+Relation	T2	T14	NoRel	true	campaña	fundaron
+Relation	T3	T12	NoRel	true	batallas	apresó
+Relation	T3	T8	NoRel	true	batallas	resistencia
+Relation	T4	T1	NoRel	true	hostigar	hizo
+Relation	T4	T11	NoRel	true	hostigar	derrotó
+Relation	T4	T13	NoRel	true	hostigar	enviados
+Relation	T4	T3	NoRel	true	hostigar	batallas
+Relation	T4	T8	NoRel	true	hostigar	resistencia
+Relation	T5	T2	NoRel	true	sometieran	campaña
+Relation	T5	T7	NoRel	true	sometieran	rendida
+Relation	T6	T1	NoRel	true	encomienda	hizo
+Relation	T6	T10	NoRel	true	encomienda	dirigidos
+Relation	T6	T11	NoRel	true	encomienda	derrotó
+Relation	T6	T12	NoRel	true	encomienda	apresó
+Relation	T6	T3	NoRel	true	encomienda	batallas
+Relation	T6	T5	NoRel	true	encomienda	sometieran
+Relation	T6	T7	NoRel	true	encomienda	rendida
+Relation	T6	T8	NoRel	true	encomienda	resistencia
+Relation	T7	T11	NoRel	true	rendida	derrotó
+Relation	T7	T12	NoRel	true	rendida	apresó
+Relation	T7	T13	NoRel	true	rendida	enviados
+Relation	T7	T14	NoRel	true	rendida	fundaron
+Relation	T7	T3	NoRel	true	rendida	batallas
+Relation	T7	T6	NoRel	true	rendida	encomienda
+Relation	T7	T8	NoRel	true	rendida	resistencia
+Relation	T8	T14	NoRel	true	resistencia	fundaron
+Relation	T8	T3	NoRel	true	resistencia	batallas
+Relation	T8	T7	NoRel	true	resistencia	rendida
+Relation	T9	T10	NoRel	true	volvió	dirigidos
+Relation	T9	T11	NoRel	true	volvió	derrotó
+Relation	T9	T2	NoRel	true	volvió	campaña
+Relation	T9	T3	NoRel	true	volvió	batallas
+Relation	T9	T8	NoRel	true	volvió	resistencia

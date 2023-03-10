@@ -1,0 +1,62 @@
+Text	Bu çerçevede , General Aldana saldırı hazırlıklarına Ocak 1552'de başladı ve Arad kalesinde bir savaş konseyi topladı .	Konseyde , taarruz günü belirlendikten sonra , Mihály Tóth'un büyük bölümü hajduklardan oluşan piyade birliğiyle Segedin'e ilerlemesi ve diğer birliklerin süratle onu takip etmesi stratejisi benimsendi .	Toth’un emrinde yaklaşık 5.000 kişilik bir birlik mevcutken , Segedin kalesindeki Türk garnizonu ise 345 askerden ibaretti .	Şubat ortalarında Gyula ( _ Göle _ ) civarında toplanan Alman - Macar ordusu yanıltma harekatı icra ederek güneye doğru yöneldi ve Beçkerek'i geri almaya teşebbüs edecekmiş gibi yaptı .	19 Şubat’ta Tisa'nın doğu yakasına ulaşan ordu 20 Şubat’ta nehrin batı yakasına geçti ve Segedin şehrini yamaladıktan sonra kaleye saldırdı .
+Event	T0	başladı	EVENT	66
+Event	T2	topladı	EVENT	110
+Event	T3	taarruz	EVENT	131
+Event	T4	belirlendikten	EVENT	144
+Event	T5	ilerlemesi	EVENT	243
+Event	T6	benimsendi	EVENT	311
+Event	T9	yöneldi	EVENT	569
+Event	T10	yaptı	EVENT	627
+Event	T11	geçti	EVENT	715
+Event	T12	yamaladıktan	EVENT	740
+Event	T13	saldırdı	EVENT	766
+Event	T1	harekatı	EVENT	535
+Relation	T0	T2	CauseEffect	true	başladı	topladı
+Relation	T2	T0	EffectCause	true	topladı	başladı
+Relation	T2	T4	CauseEffect	true	topladı	belirlendikten
+Relation	T4	T2	EffectCause	true	belirlendikten	topladı
+Relation	T1	T9	CauseEffect	true	harekatı	yöneldi
+Relation	T9	T1	EffectCause	true	yöneldi	harekatı
+Relation	T1	T10	CauseEffect	true	harekatı	yaptı
+Relation	T10	T1	EffectCause	true	yaptı	harekatı
+Relation	T0	T1	NoRel	true	başladı	harekatı
+Relation	T0	T10	NoRel	true	başladı	yaptı
+Relation	T0	T11	NoRel	true	başladı	geçti
+Relation	T0	T9	NoRel	true	başladı	yöneldi
+Relation	T1	T13	NoRel	true	harekatı	saldırdı
+Relation	T1	T4	NoRel	true	harekatı	belirlendikten
+Relation	T1	T5	NoRel	true	harekatı	ilerlemesi
+Relation	T10	T0	NoRel	true	yaptı	başladı
+Relation	T10	T12	NoRel	true	yaptı	yamaladıktan
+Relation	T10	T13	NoRel	true	yaptı	saldırdı
+Relation	T10	T2	NoRel	true	yaptı	topladı
+Relation	T10	T4	NoRel	true	yaptı	belirlendikten
+Relation	T10	T5	NoRel	true	yaptı	ilerlemesi
+Relation	T11	T2	NoRel	true	geçti	topladı
+Relation	T11	T6	NoRel	true	geçti	benimsendi
+Relation	T11	T9	NoRel	true	geçti	yöneldi
+Relation	T12	T4	NoRel	true	yamaladıktan	belirlendikten
+Relation	T13	T11	NoRel	true	saldırdı	geçti
+Relation	T13	T12	NoRel	true	saldırdı	yamaladıktan
+Relation	T13	T2	NoRel	true	saldırdı	topladı
+Relation	T2	T1	NoRel	true	topladı	harekatı
+Relation	T2	T10	NoRel	true	topladı	yaptı
+Relation	T2	T6	NoRel	true	topladı	benimsendi
+Relation	T2	T9	NoRel	true	topladı	yöneldi
+Relation	T3	T11	NoRel	true	taarruz	geçti
+Relation	T3	T2	NoRel	true	taarruz	topladı
+Relation	T3	T5	NoRel	true	taarruz	ilerlemesi
+Relation	T4	T0	NoRel	true	belirlendikten	başladı
+Relation	T4	T10	NoRel	true	belirlendikten	yaptı
+Relation	T4	T11	NoRel	true	belirlendikten	geçti
+Relation	T4	T3	NoRel	true	belirlendikten	taarruz
+Relation	T4	T5	NoRel	true	belirlendikten	ilerlemesi
+Relation	T4	T9	NoRel	true	belirlendikten	yöneldi
+Relation	T5	T0	NoRel	true	ilerlemesi	başladı
+Relation	T5	T10	NoRel	true	ilerlemesi	yaptı
+Relation	T5	T2	NoRel	true	ilerlemesi	topladı
+Relation	T6	T11	NoRel	true	benimsendi	geçti
+Relation	T6	T12	NoRel	true	benimsendi	yamaladıktan
+Relation	T6	T2	NoRel	true	benimsendi	topladı
+Relation	T9	T12	NoRel	true	yöneldi	yamaladıktan
+Relation	T9	T4	NoRel	true	yöneldi	belirlendikten

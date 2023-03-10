@@ -1,0 +1,105 @@
+Text	Gemi , seferin geri kalanında etkisizdi .	Bombardıman 75 dakika sürdükten sonra Tilghman , yakın mesafeli bir bombardıman için 400 yarda ( 370 m ) yakınlık içinde kapanan Foote'nin filosuna teslim oldu .	Savaştan önce Tilghman , adamlarına kaçmaları için ek süre tanımak için bir saatlik direniş teklif edeceğini söyledi .	Barut deposunun su altında olması ve silahların geri kalanı imha edilmesi veya devrilmesi nedeniyle son birkaç tura kadar sadece bir top hala çalışırken Tilghman , Fort Henry'deki Konfederasyon bayrağının indirilmesini ve kalenin bayrak direğine beyaz bir çarşafın kaldırılmasını emretti .	Beyaz bayrağı gördükten sonra , Birlik savaş gemileri ateşi hemen kesti .
+Event	T1	Bombardıman	EVENT	42
+Event	T2	sürdükten	EVENT	64
+Event	T3	bombardıman	EVENT	110
+Event	T4	oldu	EVENT	197
+Event	T5	teklif	EVENT	296
+Event	T6	söyledi	EVENT	313
+Event	T7	edilmesi	EVENT	388
+Event	T8	devrilmesi	EVENT	402
+Event	T9	indirilmesini	EVENT	528
+Event	T10	emretti	EVENT	603
+Event	T11	kesti	EVENT	679
+Event	T12	seferin	EVENT	7
+Event	T13	Savaştan	EVENT	204
+Event	T14	direniş	EVENT	288
+Event	T15	çalışırken	EVENT	465
+Event	T16	kaldırılmasını	EVENT	588
+Event	T17	gördükten	EVENT	627
+Relation	T17	T11	CauseEffect	true	gördükten	kesti
+Relation	T11	T17	EffectCause	true	kesti	gördükten
+Relation	T7	T10	CauseEffect	true	edilmesi	emretti
+Relation	T10	T7	EffectCause	true	emretti	edilmesi
+Relation	T8	T10	CauseEffect	true	devrilmesi	emretti
+Relation	T10	T8	EffectCause	true	emretti	devrilmesi
+Relation	T1	T14	NoRel	true	Bombardıman	direniş
+Relation	T1	T16	NoRel	true	Bombardıman	kaldırılmasını
+Relation	T1	T4	NoRel	true	Bombardıman	oldu
+Relation	T1	T7	NoRel	true	Bombardıman	edilmesi
+Relation	T1	T9	NoRel	true	Bombardıman	indirilmesini
+Relation	T10	T1	NoRel	true	emretti	Bombardıman
+Relation	T10	T11	NoRel	true	emretti	kesti
+Relation	T10	T12	NoRel	true	emretti	seferin
+Relation	T10	T13	NoRel	true	emretti	Savaştan
+Relation	T10	T16	NoRel	true	emretti	kaldırılmasını
+Relation	T10	T17	NoRel	true	emretti	gördükten
+Relation	T10	T2	NoRel	true	emretti	sürdükten
+Relation	T10	T3	NoRel	true	emretti	bombardıman
+Relation	T10	T4	NoRel	true	emretti	oldu
+Relation	T10	T6	NoRel	true	emretti	söyledi
+Relation	T11	T1	NoRel	true	kesti	Bombardıman
+Relation	T11	T13	NoRel	true	kesti	Savaştan
+Relation	T11	T2	NoRel	true	kesti	sürdükten
+Relation	T11	T3	NoRel	true	kesti	bombardıman
+Relation	T11	T4	NoRel	true	kesti	oldu
+Relation	T12	T13	NoRel	true	seferin	Savaştan
+Relation	T12	T14	NoRel	true	seferin	direniş
+Relation	T12	T3	NoRel	true	seferin	bombardıman
+Relation	T12	T6	NoRel	true	seferin	söyledi
+Relation	T13	T14	NoRel	true	Savaştan	direniş
+Relation	T13	T2	NoRel	true	Savaştan	sürdükten
+Relation	T13	T5	NoRel	true	Savaştan	teklif
+Relation	T13	T9	NoRel	true	Savaştan	indirilmesini
+Relation	T14	T11	NoRel	true	direniş	kesti
+Relation	T14	T16	NoRel	true	direniş	kaldırılmasını
+Relation	T14	T7	NoRel	true	direniş	edilmesi
+Relation	T15	T10	NoRel	true	çalışırken	emretti
+Relation	T15	T11	NoRel	true	çalışırken	kesti
+Relation	T15	T16	NoRel	true	çalışırken	kaldırılmasını
+Relation	T15	T2	NoRel	true	çalışırken	sürdükten
+Relation	T15	T4	NoRel	true	çalışırken	oldu
+Relation	T15	T9	NoRel	true	çalışırken	indirilmesini
+Relation	T16	T2	NoRel	true	kaldırılmasını	sürdükten
+Relation	T16	T5	NoRel	true	kaldırılmasını	teklif
+Relation	T16	T6	NoRel	true	kaldırılmasını	söyledi
+Relation	T17	T1	NoRel	true	gördükten	Bombardıman
+Relation	T17	T13	NoRel	true	gördükten	Savaştan
+Relation	T17	T14	NoRel	true	gördükten	direniş
+Relation	T17	T2	NoRel	true	gördükten	sürdükten
+Relation	T17	T7	NoRel	true	gördükten	edilmesi
+Relation	T17	T9	NoRel	true	gördükten	indirilmesini
+Relation	T2	T1	NoRel	true	sürdükten	Bombardıman
+Relation	T2	T10	NoRel	true	sürdükten	emretti
+Relation	T2	T11	NoRel	true	sürdükten	kesti
+Relation	T3	T14	NoRel	true	bombardıman	direniş
+Relation	T3	T17	NoRel	true	bombardıman	gördükten
+Relation	T3	T4	NoRel	true	bombardıman	oldu
+Relation	T3	T8	NoRel	true	bombardıman	devrilmesi
+Relation	T4	T1	NoRel	true	oldu	Bombardıman
+Relation	T4	T11	NoRel	true	oldu	kesti
+Relation	T4	T13	NoRel	true	oldu	Savaştan
+Relation	T4	T14	NoRel	true	oldu	direniş
+Relation	T4	T15	NoRel	true	oldu	çalışırken
+Relation	T4	T5	NoRel	true	oldu	teklif
+Relation	T4	T6	NoRel	true	oldu	söyledi
+Relation	T4	T8	NoRel	true	oldu	devrilmesi
+Relation	T4	T9	NoRel	true	oldu	indirilmesini
+Relation	T5	T13	NoRel	true	teklif	Savaştan
+Relation	T5	T15	NoRel	true	teklif	çalışırken
+Relation	T5	T16	NoRel	true	teklif	kaldırılmasını
+Relation	T5	T6	NoRel	true	teklif	söyledi
+Relation	T5	T8	NoRel	true	teklif	devrilmesi
+Relation	T6	T1	NoRel	true	söyledi	Bombardıman
+Relation	T6	T5	NoRel	true	söyledi	teklif
+Relation	T7	T17	NoRel	true	edilmesi	gördükten
+Relation	T7	T8	NoRel	true	edilmesi	devrilmesi
+Relation	T7	T9	NoRel	true	edilmesi	indirilmesini
+Relation	T8	T15	NoRel	true	devrilmesi	çalışırken
+Relation	T8	T6	NoRel	true	devrilmesi	söyledi
+Relation	T9	T1	NoRel	true	indirilmesini	Bombardıman
+Relation	T9	T12	NoRel	true	indirilmesini	seferin
+Relation	T9	T15	NoRel	true	indirilmesini	çalışırken
+Relation	T9	T16	NoRel	true	indirilmesini	kaldırılmasını
+Relation	T9	T17	NoRel	true	indirilmesini	gördükten
+Relation	T9	T5	NoRel	true	indirilmesini	teklif
+Relation	T9	T8	NoRel	true	indirilmesini	devrilmesi

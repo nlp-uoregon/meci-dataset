@@ -1,0 +1,23 @@
+Text	یہ 2007ء میں پاکستان انٹرنیشنل ایئر لائنز کے حوالے کیا گیا اور 2007ء میں اس کی پہلی پرواز تھی ۔	طیارے کا سیریل نمبر 663 تھا اور اس کا نام__جسن ابدال__تھا ۔	2009ء میں اسی طیارے کو لاہور ہواؤئی اڈے پر اترتے وقت حادثہ پیش آیا تھا جس سے اسے نقصان پہنچا ۔	تاہم مرمت کے بعد دوبارہ استعمال ہونے لگا ۔	دوسری بار ستمبر 15 ، 2014ء کو فلائیٹ PK -452 جو سکردو سے اسلام آباد ( پاکستان ) 60 افراد کے ساتھ جا رہی تھی ، اسی اثنا میں حادثہ پیش آیا ۔
+Event	T0	پرواز	EVENT	84
+Event	T1	اترتے	EVENT	199
+Event	T2	حادثہ	EVENT	209
+Event	T3	نقصان	EVENT	237
+Event	T4	مرمت	EVENT	256
+Event	T5	استعمال	EVENT	275
+Event	T6	حادثہ	EVENT	417
+Relation	T2	T3	CauseEffect	true	حادثہ	نقصان
+Relation	T3	T2	EffectCause	true	نقصان	حادثہ
+Relation	T4	T5	CauseEffect	true	مرمت	استعمال
+Relation	T5	T4	EffectCause	true	استعمال	مرمت
+Relation	T0	T2	NoRel	true	پرواز	حادثہ
+Relation	T0	T4	NoRel	true	پرواز	مرمت
+Relation	T1	T0	NoRel	true	اترتے	پرواز
+Relation	T1	T3	NoRel	true	اترتے	نقصان
+Relation	T1	T6	NoRel	true	اترتے	حادثہ
+Relation	T3	T1	NoRel	true	نقصان	اترتے
+Relation	T4	T6	NoRel	true	مرمت	حادثہ
+Relation	T5	T0	NoRel	true	استعمال	پرواز
+Relation	T5	T1	NoRel	true	استعمال	اترتے
+Relation	T5	T2	NoRel	true	استعمال	حادثہ
+Relation	T6	T2	NoRel	true	حادثہ	حادثہ

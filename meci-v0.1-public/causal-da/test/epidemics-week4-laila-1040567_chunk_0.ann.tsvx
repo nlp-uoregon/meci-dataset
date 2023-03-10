@@ -1,0 +1,43 @@
+Text	[ Kort om 1889-1890 pandemien fra Henry Parsons ( 1846-1913 ) " Report on the influenza epidemic of 1889-90 " .	]	1889-1890-PANDEMIEN ( også kaldet _ den russiske influenza _ ) var en pandemi i året 1889 og frem .	Traditionelt har årsagen til pandemien væres forklaret med influenzavirus , men nyere forskning tilskriver i stedet pandemien et coronavirus .	[ Karikaturtegning fra Punch , 1891. ]	
+Event	T0	Report	EVENT	64
+Event	T1	epidemic	EVENT	88
+Event	T3	pandemi	EVENT	184
+Event	T4	pandemien	EVENT	243
+Event	T5	forklaret	EVENT	259
+Event	T6	1889-1890 pandemien	EVENT	10
+Event	T7	1889-1890-PANDEMIEN	EVENT	114
+Event	T2	den russiske influenza	EVENT	150
+Event	T8	influenzavirus	EVENT	273
+Event	T9	pandemien	EVENT	330
+Event	T10	coronavirus	EVENT	343
+Relation	T10	T9	CauseEffect	true	coronavirus	pandemien
+Relation	T9	T10	EffectCause	true	pandemien	coronavirus
+Relation	T0	T1	NoRel	true	Report	epidemic
+Relation	T0	T3	NoRel	true	Report	pandemi
+Relation	T0	T6	NoRel	true	Report	1889-1890 pandemien
+Relation	T1	T2	NoRel	true	epidemic	den russiske influenza
+Relation	T1	T3	NoRel	true	epidemic	pandemi
+Relation	T2	T1	NoRel	true	den russiske influenza	epidemic
+Relation	T2	T7	NoRel	true	den russiske influenza	1889-1890-PANDEMIEN
+Relation	T2	T9	NoRel	true	den russiske influenza	pandemien
+Relation	T3	T10	NoRel	true	pandemi	coronavirus
+Relation	T3	T2	NoRel	true	pandemi	den russiske influenza
+Relation	T3	T4	NoRel	true	pandemi	pandemien
+Relation	T3	T5	NoRel	true	pandemi	forklaret
+Relation	T3	T7	NoRel	true	pandemi	1889-1890-PANDEMIEN
+Relation	T4	T1	NoRel	true	pandemien	epidemic
+Relation	T5	T0	NoRel	true	forklaret	Report
+Relation	T5	T1	NoRel	true	forklaret	epidemic
+Relation	T5	T2	NoRel	true	forklaret	den russiske influenza
+Relation	T6	T0	NoRel	true	1889-1890 pandemien	Report
+Relation	T6	T5	NoRel	true	1889-1890 pandemien	forklaret
+Relation	T7	T4	NoRel	true	1889-1890-PANDEMIEN	pandemien
+Relation	T7	T5	NoRel	true	1889-1890-PANDEMIEN	forklaret
+Relation	T7	T8	NoRel	true	1889-1890-PANDEMIEN	influenzavirus
+Relation	T7	T9	NoRel	true	1889-1890-PANDEMIEN	pandemien
+Relation	T8	T4	NoRel	true	influenzavirus	pandemien
+Relation	T8	T7	NoRel	true	influenzavirus	1889-1890-PANDEMIEN
+Relation	T8	T9	NoRel	true	influenzavirus	pandemien
+Relation	T9	T0	NoRel	true	pandemien	Report
+Relation	T9	T1	NoRel	true	pandemien	epidemic
+Relation	T9	T8	NoRel	true	pandemien	influenzavirus

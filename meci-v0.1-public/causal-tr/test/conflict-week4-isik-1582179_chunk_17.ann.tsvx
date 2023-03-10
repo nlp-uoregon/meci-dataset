@@ -1,0 +1,43 @@
+Text	Van Diemen's Land Company 1830 gibi erken dönemde kurtlar için ödül koymuş ve 1888 - 1909 yılları arasında da Tasmanya hükûmeti öldürülen her yetişkin kurt için 1 £ ve her yavru için de 10 şilin ödeme yapmıştır .	2.184 kurt için ödeme yapılmıştır , fakat gerçek sayının bundan daha fazla olduğu düşünülüyor .	Neslinin tükenmesinde çiftçiler ile ödül avcılarının payı vardır .	Bununla birlikte , yok olmasında birden fazla faktörün sebep olması muhtemeldir .	Beyazların getirdiği vahşi köpekler ile rekabet de nihai tükenme sebebi olabildiği gibi , habitat kaybı ve av türlerinin eşzamanlı yok olumu da etken olabilir .
+Event	T0	öldürülen	EVENT	128
+Event	T1	yapmıştır	EVENT	201
+Event	T2	ödeme	EVENT	229
+Event	T3	tükenmesinde	EVENT	318
+Event	T4	getirdiği	EVENT	469
+Event	T5	rekabet	EVENT	498
+Event	T6	kaybı	EVENT	556
+Event	T7	koymuş	EVENT	68
+Event	T8	olumu	EVENT	593
+Relation	T0	T1	CauseEffect	true	öldürülen	yapmıştır
+Relation	T1	T0	EffectCause	true	yapmıştır	öldürülen
+Relation	T5	T3	CauseEffect	true	rekabet	tükenmesinde
+Relation	T3	T5	EffectCause	true	tükenmesinde	rekabet
+Relation	T6	T3	CauseEffect	true	kaybı	tükenmesinde
+Relation	T3	T6	EffectCause	true	tükenmesinde	kaybı
+Relation	T8	T3	CauseEffect	true	olumu	tükenmesinde
+Relation	T3	T8	EffectCause	true	tükenmesinde	olumu
+Relation	T0	T2	NoRel	true	öldürülen	ödeme
+Relation	T0	T5	NoRel	true	öldürülen	rekabet
+Relation	T0	T6	NoRel	true	öldürülen	kaybı
+Relation	T0	T7	NoRel	true	öldürülen	koymuş
+Relation	T1	T4	NoRel	true	yapmıştır	getirdiği
+Relation	T2	T0	NoRel	true	ödeme	öldürülen
+Relation	T2	T4	NoRel	true	ödeme	getirdiği
+Relation	T2	T5	NoRel	true	ödeme	rekabet
+Relation	T2	T7	NoRel	true	ödeme	koymuş
+Relation	T2	T8	NoRel	true	ödeme	olumu
+Relation	T3	T1	NoRel	true	tükenmesinde	yapmıştır
+Relation	T4	T0	NoRel	true	getirdiği	öldürülen
+Relation	T4	T6	NoRel	true	getirdiği	kaybı
+Relation	T4	T8	NoRel	true	getirdiği	olumu
+Relation	T5	T2	NoRel	true	rekabet	ödeme
+Relation	T5	T4	NoRel	true	rekabet	getirdiği
+Relation	T6	T1	NoRel	true	kaybı	yapmıştır
+Relation	T6	T5	NoRel	true	kaybı	rekabet
+Relation	T7	T0	NoRel	true	koymuş	öldürülen
+Relation	T7	T3	NoRel	true	koymuş	tükenmesinde
+Relation	T8	T0	NoRel	true	olumu	öldürülen
+Relation	T8	T2	NoRel	true	olumu	ödeme
+Relation	T8	T4	NoRel	true	olumu	getirdiği
+Relation	T8	T5	NoRel	true	olumu	rekabet
+Relation	T8	T7	NoRel	true	olumu	koymuş

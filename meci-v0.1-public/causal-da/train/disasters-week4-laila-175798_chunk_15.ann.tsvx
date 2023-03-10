@@ -1,0 +1,18 @@
+Text	I november 1944 blev der rekrutteret ti bataljoner folkestorm ( Volkssturm ) i Dresden .	De blev straks taget i ed .	De var i enheder til at bygge skanser , panserjagtkommandoer , efterretningsenheder og transportbataljoner .	Alle Dresdens lastvogne med chauffører blev beslaglagt til folkestormen .	Nogle af dem blev i januar 1945 sendt til østfronten .
+Event	T0	rekrutteret	EVENT	25
+Event	T1	ed	EVENT	112
+Event	T2	bygge	EVENT	141
+Event	T3	beslaglagt	EVENT	270
+Event	T4	folkestormen	EVENT	285
+Event	T5	sendt	EVENT	332
+Relation	T0	T5	NoRel	true	rekrutteret	sendt
+Relation	T2	T4	NoRel	true	bygge	folkestormen
+Relation	T2	T5	NoRel	true	bygge	sendt
+Relation	T3	T0	NoRel	true	beslaglagt	rekrutteret
+Relation	T3	T1	NoRel	true	beslaglagt	ed
+Relation	T3	T2	NoRel	true	beslaglagt	bygge
+Relation	T4	T1	NoRel	true	folkestormen	ed
+Relation	T4	T3	NoRel	true	folkestormen	beslaglagt
+Relation	T5	T1	NoRel	true	sendt	ed
+Relation	T5	T2	NoRel	true	sendt	bygge
+Relation	T5	T3	NoRel	true	sendt	beslaglagt

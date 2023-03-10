@@ -1,0 +1,64 @@
+Text	This was probably caused by the fatigue of the pilot , who , at the request of the deputy chief of the airport , was delayed from the night shift and had been working for around 14 hours .	At 10:38 , the control tower was informed that cloud cover had dropped from 1100 to 450 meters , however , this information was not communicated to the crew of Flight 663 either .	When the crew tried to circumvent the thunderstorm in the conditions of limited visibility , they did not notice that they were right on the mountains .	The lack of visibility and communication resulted in the aircraft colliding with the mountain .	1 . The air traffic controllers allowed a visual flight at an altitude of 1500 meters in a mountainous area without meteorological conditions .
+Event	T0	caused	EVENT	18
+Event	T1	fatigue	EVENT	32
+Event	T2	request	EVENT	68
+Event	T3	delayed	EVENT	117
+Event	T4	shift	EVENT	140
+Event	T5	working	EVENT	159
+Event	T6	informed	EVENT	222
+Event	T7	dropped	EVENT	252
+Event	T8	communicated	EVENT	321
+Event	T9	tried	EVENT	383
+Event	T10	circumvent	EVENT	392
+Event	T11	thunderstorm	EVENT	407
+Event	T12	lack	EVENT	526
+Event	T13	resulted	EVENT	563
+Event	T14	colliding	EVENT	588
+Event	T15	allowed	EVENT	650
+Event	T16	flight	EVENT	667
+Event	T17	notice	EVENT	475
+Relation	T1	T0	CauseEffect	true	fatigue	caused
+Relation	T0	T1	EffectCause	true	caused	fatigue
+Relation	T12	T14	CauseEffect	true	lack	colliding
+Relation	T14	T12	EffectCause	true	colliding	lack
+Relation	T0	T12	NoRel	true	caused	lack
+Relation	T0	T15	NoRel	true	caused	allowed
+Relation	T0	T5	NoRel	true	caused	working
+Relation	T1	T11	NoRel	true	fatigue	thunderstorm
+Relation	T1	T14	NoRel	true	fatigue	colliding
+Relation	T1	T8	NoRel	true	fatigue	communicated
+Relation	T10	T15	NoRel	true	circumvent	allowed
+Relation	T10	T5	NoRel	true	circumvent	working
+Relation	T11	T1	NoRel	true	thunderstorm	fatigue
+Relation	T11	T14	NoRel	true	thunderstorm	colliding
+Relation	T11	T5	NoRel	true	thunderstorm	working
+Relation	T11	T9	NoRel	true	thunderstorm	tried
+Relation	T14	T13	NoRel	true	colliding	resulted
+Relation	T15	T2	NoRel	true	allowed	request
+Relation	T15	T7	NoRel	true	allowed	dropped
+Relation	T15	T9	NoRel	true	allowed	tried
+Relation	T16	T14	NoRel	true	flight	colliding
+Relation	T16	T3	NoRel	true	flight	delayed
+Relation	T16	T7	NoRel	true	flight	dropped
+Relation	T16	T8	NoRel	true	flight	communicated
+Relation	T16	T9	NoRel	true	flight	tried
+Relation	T17	T11	NoRel	true	notice	thunderstorm
+Relation	T2	T12	NoRel	true	request	lack
+Relation	T2	T4	NoRel	true	request	shift
+Relation	T3	T0	NoRel	true	delayed	caused
+Relation	T4	T14	NoRel	true	shift	colliding
+Relation	T4	T17	NoRel	true	shift	notice
+Relation	T5	T3	NoRel	true	working	delayed
+Relation	T5	T4	NoRel	true	working	shift
+Relation	T5	T8	NoRel	true	working	communicated
+Relation	T6	T16	NoRel	true	informed	flight
+Relation	T6	T9	NoRel	true	informed	tried
+Relation	T7	T14	NoRel	true	dropped	colliding
+Relation	T7	T3	NoRel	true	dropped	delayed
+Relation	T8	T14	NoRel	true	communicated	colliding
+Relation	T9	T0	NoRel	true	tried	caused
+Relation	T9	T12	NoRel	true	tried	lack
+Relation	T9	T14	NoRel	true	tried	colliding
+Relation	T9	T2	NoRel	true	tried	request
+Relation	T9	T4	NoRel	true	tried	shift
+Relation	T9	T5	NoRel	true	tried	working

@@ -1,0 +1,42 @@
+Text	VERSAY ANTLAŞMASI'NIN 231. MADDESI , Savaş Suçluluğu Maddesi olarak da geçen bu madde , Alman İmparatorluğu'nun I. Dünya Savaşı'nı kaybetmesiyle imzaladığı Versay Antlaşması ile İtilaf Devletleri'ne vermiş_olduğu zararları ödemesini içeren bir tazminat maddesidir .	231. Madde en tartışmalı maddelerden bir tanesiydi .	Madde ; " İtilaf Devletleri , İlgili Hükümetler ve Almanya teyit ederki , Almanya ve müttefikleri'nin , İtilaf Devletleri'ne vermiş_oldukları tüm kayıplar ve hasarların Almanya ve müttefikleri , tarafından karşılanacaktır .	" Madde her ne kadar diğer İttifak Devletleri'ni de kapsıyor olsa da anlaşmanın başka bir maddesinde " Almanya , savaşın tüm zararlarından sorumludur ...	" ibaresi vardı .
+Event	T4	ANTLAŞMASI'NIN	EVENT	7
+Event	T5	I. Dünya Savaşı'nı	EVENT	112
+Event	T6	Suçluluğu	EVENT	43
+Event	T1	kaybetmesiyle	EVENT	131
+Event	T7	Antlaşması	EVENT	163
+Event	T2	kayıplar	EVENT	465
+Event	T8	hasarların	EVENT	477
+Event	T9	Madde	EVENT	271
+Event	T10	karşılanacaktır	EVENT	525
+Event	T3	vardı	EVENT	707
+Relation	T5	T1	CauseEffect	true	I. Dünya Savaşı'nı	kaybetmesiyle
+Relation	T1	T5	EffectCause	true	kaybetmesiyle	I. Dünya Savaşı'nı
+Relation	T1	T7	CauseEffect	true	kaybetmesiyle	Antlaşması
+Relation	T7	T1	EffectCause	true	Antlaşması	kaybetmesiyle
+Relation	T2	T10	CauseEffect	true	kayıplar	karşılanacaktır
+Relation	T10	T2	EffectCause	true	karşılanacaktır	kayıplar
+Relation	T8	T10	CauseEffect	true	hasarların	karşılanacaktır
+Relation	T10	T8	EffectCause	true	karşılanacaktır	hasarların
+Relation	T1	T6	NoRel	true	kaybetmesiyle	Suçluluğu
+Relation	T1	T8	NoRel	true	kaybetmesiyle	hasarların
+Relation	T10	T3	NoRel	true	karşılanacaktır	vardı
+Relation	T2	T1	NoRel	true	kayıplar	kaybetmesiyle
+Relation	T2	T4	NoRel	true	kayıplar	ANTLAŞMASI'NIN
+Relation	T3	T8	NoRel	true	vardı	hasarların
+Relation	T4	T1	NoRel	true	ANTLAŞMASI'NIN	kaybetmesiyle
+Relation	T4	T2	NoRel	true	ANTLAŞMASI'NIN	kayıplar
+Relation	T4	T3	NoRel	true	ANTLAŞMASI'NIN	vardı
+Relation	T4	T7	NoRel	true	ANTLAŞMASI'NIN	Antlaşması
+Relation	T5	T2	NoRel	true	I. Dünya Savaşı'nı	kayıplar
+Relation	T5	T3	NoRel	true	I. Dünya Savaşı'nı	vardı
+Relation	T5	T6	NoRel	true	I. Dünya Savaşı'nı	Suçluluğu
+Relation	T5	T9	NoRel	true	I. Dünya Savaşı'nı	Madde
+Relation	T6	T3	NoRel	true	Suçluluğu	vardı
+Relation	T6	T7	NoRel	true	Suçluluğu	Antlaşması
+Relation	T7	T4	NoRel	true	Antlaşması	ANTLAŞMASI'NIN
+Relation	T7	T6	NoRel	true	Antlaşması	Suçluluğu
+Relation	T7	T9	NoRel	true	Antlaşması	Madde
+Relation	T8	T1	NoRel	true	hasarların	kaybetmesiyle
+Relation	T8	T2	NoRel	true	hasarların	kayıplar
+Relation	T9	T10	NoRel	true	Madde	karşılanacaktır
+Relation	T9	T3	NoRel	true	Madde	vardı

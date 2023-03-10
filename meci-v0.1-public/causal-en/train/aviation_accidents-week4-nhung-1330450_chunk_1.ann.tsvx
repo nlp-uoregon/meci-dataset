@@ -1,0 +1,36 @@
+Text	At 4:25 a.m. Flight 615 was cleared for the straight - in approach into Oakland .	This approach clearance was the last radio transmission with the flight .	The plane crashed into mountainous terrain southeast of Oakland , careening into Tolman Peak and over its knoll , scattering on the downslope and into Dry Gulch Canyon below in a fiery explosion .	All 50 persons on board perished .	After an investigation , it was determined that the pilot ignored the prescribed instrument landing procedures .
+Event	T0	cleared	EVENT	28
+Event	T1	clearance	EVENT	96
+Event	T2	transmission	EVENT	125
+Event	T3	flight	EVENT	147
+Event	T4	scattering	EVENT	270
+Event	T5	explosion	EVENT	341
+Event	T6	perished	EVENT	377
+Event	T7	investigation	EVENT	397
+Event	T8	determined	EVENT	420
+Event	T9	ignored	EVENT	446
+Event	T10	procedures	EVENT	488
+Event	T11	crashed	EVENT	166
+Event	T12	careening	EVENT	222
+Relation	T11	T6	CauseEffect	true	crashed	perished
+Relation	T6	T11	EffectCause	true	perished	crashed
+Relation	T9	T11	CauseEffect	true	ignored	crashed
+Relation	T11	T9	EffectCause	true	crashed	ignored
+Relation	T0	T4	NoRel	true	cleared	scattering
+Relation	T0	T9	NoRel	true	cleared	ignored
+Relation	T1	T0	NoRel	true	clearance	cleared
+Relation	T1	T8	NoRel	true	clearance	determined
+Relation	T10	T8	NoRel	true	procedures	determined
+Relation	T11	T0	NoRel	true	crashed	cleared
+Relation	T12	T4	NoRel	true	careening	scattering
+Relation	T12	T5	NoRel	true	careening	explosion
+Relation	T2	T0	NoRel	true	transmission	cleared
+Relation	T3	T1	NoRel	true	flight	clearance
+Relation	T4	T11	NoRel	true	scattering	crashed
+Relation	T4	T5	NoRel	true	scattering	explosion
+Relation	T5	T8	NoRel	true	explosion	determined
+Relation	T6	T4	NoRel	true	perished	scattering
+Relation	T7	T1	NoRel	true	investigation	clearance
+Relation	T8	T0	NoRel	true	determined	cleared
+Relation	T8	T7	NoRel	true	determined	investigation
+Relation	T9	T6	NoRel	true	ignored	perished

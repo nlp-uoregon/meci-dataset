@@ -1,0 +1,54 @@
+Text	It was followed by the Super Puma , which approached the landing zone at a steep angle and hovered back and forth above the ground for about 30 seconds , raising ever more snow that fully engulfed the first helicopter .	During this manoeuvre , the third helicopter , also a Super Puma , approached the landing zone , carrying the pilot , an engineer , and 13 officers .	This third aircraft also raised a large cloud of snow from the ground while landing , causing the pilot to lose sight of the marshalling officer on the ground .	The third helicopter then touched the ground which caused the aircraft to roll over .	Thereby its main rotor and tail section collided with the EC155 's main rotor .
+Event	T0	followed	EVENT	7
+Event	T1	approached	EVENT	42
+Event	T2	landing	EVENT	57
+Event	T3	raising	EVENT	154
+Event	T4	engulfed	EVENT	188
+Event	T5	manoeuvre	EVENT	232
+Event	T6	approached	EVENT	287
+Event	T7	carrying	EVENT	317
+Event	T8	raised	EVENT	395
+Event	T9	cloud	EVENT	410
+Event	T10	landing	EVENT	446
+Event	T11	causing	EVENT	456
+Event	T12	touched	EVENT	557
+Event	T13	caused	EVENT	582
+Event	T14	collided	EVENT	657
+Event	T15	hovered	EVENT	91
+Event	T16	lose	EVENT	477
+Event	T17	roll over	EVENT	605
+Relation	T8	T11	CauseEffect	true	raised	causing
+Relation	T11	T8	EffectCause	true	causing	raised
+Relation	T12	T17	CauseEffect	true	touched	roll over
+Relation	T17	T12	EffectCause	true	roll over	touched
+Relation	T0	T10	NoRel	true	followed	landing
+Relation	T0	T16	NoRel	true	followed	lose
+Relation	T0	T2	NoRel	true	followed	landing
+Relation	T1	T0	NoRel	true	approached	followed
+Relation	T1	T10	NoRel	true	approached	landing
+Relation	T1	T12	NoRel	true	approached	touched
+Relation	T1	T13	NoRel	true	approached	caused
+Relation	T10	T1	NoRel	true	landing	approached
+Relation	T11	T12	NoRel	true	causing	touched
+Relation	T11	T3	NoRel	true	causing	raising
+Relation	T11	T9	NoRel	true	causing	cloud
+Relation	T13	T15	NoRel	true	caused	hovered
+Relation	T14	T15	NoRel	true	collided	hovered
+Relation	T15	T2	NoRel	true	hovered	landing
+Relation	T15	T6	NoRel	true	hovered	approached
+Relation	T15	T7	NoRel	true	hovered	carrying
+Relation	T16	T11	NoRel	true	lose	causing
+Relation	T16	T13	NoRel	true	lose	caused
+Relation	T2	T12	NoRel	true	landing	touched
+Relation	T2	T14	NoRel	true	landing	collided
+Relation	T2	T7	NoRel	true	landing	carrying
+Relation	T4	T12	NoRel	true	engulfed	touched
+Relation	T5	T2	NoRel	true	manoeuvre	landing
+Relation	T6	T16	NoRel	true	approached	lose
+Relation	T7	T11	NoRel	true	carrying	causing
+Relation	T7	T14	NoRel	true	carrying	collided
+Relation	T7	T16	NoRel	true	carrying	lose
+Relation	T7	T17	NoRel	true	carrying	roll over
+Relation	T8	T7	NoRel	true	raised	carrying
+Relation	T9	T11	NoRel	true	cloud	causing
+Relation	T9	T13	NoRel	true	cloud	caused

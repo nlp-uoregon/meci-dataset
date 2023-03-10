@@ -1,0 +1,53 @@
+Text	Daha sonra Schindler'in anne ve babasının bulunduğu binaya taşındılar ve sonraki yedi yıl boyunca üst katta ikamet ettiler .	Evlendikten sonra Schindler , babası için çalışmayı bıraktı .	Moravian Electrotechnic'te bir pozisyonda yer aldı ve bir sürücü kursunda yöneticilik yaptı .	Çek Ordusuna bağlı 31'nci Tabur'un 10'uncu Piyade Alayı'nda kıdemsiz onbaşı rütbesine yükseldiği 18 aylık bir görevden sonra Schindler , kısa bir süre sonra iflas edecek olan Moravian Electrotechnic'e geri döndü .	Babasının tarım makineleri işi aynı anda kapandı ve bu durum Schindler'in bir yıl boyunca işsiz kalmasına yol açtı .
+Event	T0	Evlendikten	EVENT	125
+Event	T1	bıraktı	EVENT	177
+Event	T2	aldı	EVENT	233
+Event	T3	yaptı	EVENT	273
+Event	T5	döndü	EVENT	487
+Event	T7	kapandı	EVENT	536
+Event	T9	açtı	EVENT	605
+Event	T10	taşındılar	EVENT	59
+Event	T11	ettiler	EVENT	115
+Event	T6	iflas	EVENT	438
+Relation	T6	T9	CauseEffect	true	iflas	açtı
+Relation	T9	T6	EffectCause	true	açtı	iflas
+Relation	T7	T9	CauseEffect	true	kapandı	açtı
+Relation	T9	T7	EffectCause	true	açtı	kapandı
+Relation	T0	T1	NoRel	true	Evlendikten	bıraktı
+Relation	T0	T2	NoRel	true	Evlendikten	aldı
+Relation	T0	T3	NoRel	true	Evlendikten	yaptı
+Relation	T1	T10	NoRel	true	bıraktı	taşındılar
+Relation	T1	T11	NoRel	true	bıraktı	ettiler
+Relation	T1	T2	NoRel	true	bıraktı	aldı
+Relation	T10	T0	NoRel	true	taşındılar	Evlendikten
+Relation	T10	T1	NoRel	true	taşındılar	bıraktı
+Relation	T10	T2	NoRel	true	taşındılar	aldı
+Relation	T10	T3	NoRel	true	taşındılar	yaptı
+Relation	T10	T6	NoRel	true	taşındılar	iflas
+Relation	T10	T9	NoRel	true	taşındılar	açtı
+Relation	T11	T3	NoRel	true	ettiler	yaptı
+Relation	T11	T6	NoRel	true	ettiler	iflas
+Relation	T11	T7	NoRel	true	ettiler	kapandı
+Relation	T11	T9	NoRel	true	ettiler	açtı
+Relation	T2	T3	NoRel	true	aldı	yaptı
+Relation	T2	T5	NoRel	true	aldı	döndü
+Relation	T2	T7	NoRel	true	aldı	kapandı
+Relation	T3	T11	NoRel	true	yaptı	ettiler
+Relation	T3	T6	NoRel	true	yaptı	iflas
+Relation	T5	T0	NoRel	true	döndü	Evlendikten
+Relation	T5	T1	NoRel	true	döndü	bıraktı
+Relation	T5	T7	NoRel	true	döndü	kapandı
+Relation	T5	T9	NoRel	true	döndü	açtı
+Relation	T6	T0	NoRel	true	iflas	Evlendikten
+Relation	T6	T1	NoRel	true	iflas	bıraktı
+Relation	T6	T2	NoRel	true	iflas	aldı
+Relation	T6	T7	NoRel	true	iflas	kapandı
+Relation	T7	T1	NoRel	true	kapandı	bıraktı
+Relation	T7	T10	NoRel	true	kapandı	taşındılar
+Relation	T7	T11	NoRel	true	kapandı	ettiler
+Relation	T7	T2	NoRel	true	kapandı	aldı
+Relation	T7	T3	NoRel	true	kapandı	yaptı
+Relation	T7	T5	NoRel	true	kapandı	döndü
+Relation	T9	T1	NoRel	true	açtı	bıraktı
+Relation	T9	T11	NoRel	true	açtı	ettiler
+Relation	T9	T3	NoRel	true	açtı	yaptı

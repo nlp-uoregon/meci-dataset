@@ -1,0 +1,109 @@
+Text	Bu kişinin de ilaç çalmak için gizlice bir eczaneye girerek , olay yerinde zehirli dumanlardan etkilenerek ölen bir hırsız olduğu söylenmektedir .	Pek çoğu küllere gömülen evlere dolan karbondioksit ve küçük oranlardaki başka zehirli gazlar daha sonra da bu evlere giren kişileri etkilemiştir .	Zehirli gazların birleşerek ortaya çıkardığı hasarları en aza indirgemek için , aralarında gazı geri itmek için yanardağın çıkardığı soğumuş malzemelerden yapılmış bir duvar inşa etmenin de olduğu pek çok yöntem denenmiştir .	Gazların ortaya çıkan yarıktan yükseldiği ve buradan kasabaya yayıldığı sanılarak alınan bu önlemler kısmen yeterli olmuştur .	Püskürmelerden kaynaklanan nedenlerden dolayı adada toplamda 300 ev yıkılmış , 30 ev de küllere gömülmüştür .
+Event	T1	ölen	EVENT	107
+Event	T2	söylenmektedir	EVENT	130
+Event	T3	etkilemiştir	EVENT	280
+Event	T6	yükseldiği	EVENT	552
+Event	T7	yayıldığı	EVENT	583
+Event	T9	yıkılmış	EVENT	716
+Event	T10	gömülmüştür	EVENT	744
+Event	T11	girerek	EVENT	52
+Event	T12	etkilenerek	EVENT	95
+Event	T13	gömülen	EVENT	164
+Event	T14	birleşerek	EVENT	312
+Event	T15	hasarları	EVENT	340
+Event	T16	denenmiştir	EVENT	507
+Event	T4	olmuştur	EVENT	637
+Event	T5	nedenlerden	EVENT	675
+Relation	T11	T12	CauseEffect	true	girerek	etkilenerek
+Relation	T12	T11	EffectCause	true	etkilenerek	girerek
+Relation	T12	T2	CauseEffect	true	etkilenerek	söylenmektedir
+Relation	T2	T12	EffectCause	true	söylenmektedir	etkilenerek
+Relation	T13	T3	CauseEffect	true	gömülen	etkilemiştir
+Relation	T3	T13	EffectCause	true	etkilemiştir	gömülen
+Relation	T14	T15	CauseEffect	true	birleşerek	hasarları
+Relation	T15	T14	EffectCause	true	hasarları	birleşerek
+Relation	T15	T16	CauseEffect	true	hasarları	denenmiştir
+Relation	T16	T15	EffectCause	true	denenmiştir	hasarları
+Relation	T5	T9	CauseEffect	true	nedenlerden	yıkılmış
+Relation	T9	T5	EffectCause	true	yıkılmış	nedenlerden
+Relation	T5	T10	CauseEffect	true	nedenlerden	gömülmüştür
+Relation	T10	T5	EffectCause	true	gömülmüştür	nedenlerden
+Relation	T1	T11	NoRel	true	ölen	girerek
+Relation	T1	T14	NoRel	true	ölen	birleşerek
+Relation	T1	T6	NoRel	true	ölen	yükseldiği
+Relation	T1	T9	NoRel	true	ölen	yıkılmış
+Relation	T10	T13	NoRel	true	gömülmüştür	gömülen
+Relation	T10	T14	NoRel	true	gömülmüştür	birleşerek
+Relation	T10	T2	NoRel	true	gömülmüştür	söylenmektedir
+Relation	T10	T4	NoRel	true	gömülmüştür	olmuştur
+Relation	T10	T6	NoRel	true	gömülmüştür	yükseldiği
+Relation	T10	T7	NoRel	true	gömülmüştür	yayıldığı
+Relation	T11	T10	NoRel	true	girerek	gömülmüştür
+Relation	T11	T14	NoRel	true	girerek	birleşerek
+Relation	T11	T15	NoRel	true	girerek	hasarları
+Relation	T11	T6	NoRel	true	girerek	yükseldiği
+Relation	T12	T1	NoRel	true	etkilenerek	ölen
+Relation	T12	T13	NoRel	true	etkilenerek	gömülen
+Relation	T12	T5	NoRel	true	etkilenerek	nedenlerden
+Relation	T12	T9	NoRel	true	etkilenerek	yıkılmış
+Relation	T13	T1	NoRel	true	gömülen	ölen
+Relation	T13	T14	NoRel	true	gömülen	birleşerek
+Relation	T13	T4	NoRel	true	gömülen	olmuştur
+Relation	T13	T6	NoRel	true	gömülen	yükseldiği
+Relation	T13	T7	NoRel	true	gömülen	yayıldığı
+Relation	T14	T1	NoRel	true	birleşerek	ölen
+Relation	T14	T11	NoRel	true	birleşerek	girerek
+Relation	T14	T13	NoRel	true	birleşerek	gömülen
+Relation	T15	T2	NoRel	true	hasarları	söylenmektedir
+Relation	T15	T3	NoRel	true	hasarları	etkilemiştir
+Relation	T15	T4	NoRel	true	hasarları	olmuştur
+Relation	T15	T6	NoRel	true	hasarları	yükseldiği
+Relation	T15	T7	NoRel	true	hasarları	yayıldığı
+Relation	T15	T9	NoRel	true	hasarları	yıkılmış
+Relation	T16	T11	NoRel	true	denenmiştir	girerek
+Relation	T16	T12	NoRel	true	denenmiştir	etkilenerek
+Relation	T16	T14	NoRel	true	denenmiştir	birleşerek
+Relation	T16	T2	NoRel	true	denenmiştir	söylenmektedir
+Relation	T16	T4	NoRel	true	denenmiştir	olmuştur
+Relation	T16	T5	NoRel	true	denenmiştir	nedenlerden
+Relation	T16	T6	NoRel	true	denenmiştir	yükseldiği
+Relation	T2	T1	NoRel	true	söylenmektedir	ölen
+Relation	T2	T10	NoRel	true	söylenmektedir	gömülmüştür
+Relation	T2	T11	NoRel	true	söylenmektedir	girerek
+Relation	T2	T14	NoRel	true	söylenmektedir	birleşerek
+Relation	T2	T3	NoRel	true	söylenmektedir	etkilemiştir
+Relation	T3	T1	NoRel	true	etkilemiştir	ölen
+Relation	T3	T11	NoRel	true	etkilemiştir	girerek
+Relation	T3	T12	NoRel	true	etkilemiştir	etkilenerek
+Relation	T3	T14	NoRel	true	etkilemiştir	birleşerek
+Relation	T3	T15	NoRel	true	etkilemiştir	hasarları
+Relation	T3	T16	NoRel	true	etkilemiştir	denenmiştir
+Relation	T3	T4	NoRel	true	etkilemiştir	olmuştur
+Relation	T3	T6	NoRel	true	etkilemiştir	yükseldiği
+Relation	T3	T7	NoRel	true	etkilemiştir	yayıldığı
+Relation	T3	T9	NoRel	true	etkilemiştir	yıkılmış
+Relation	T4	T10	NoRel	true	olmuştur	gömülmüştür
+Relation	T4	T13	NoRel	true	olmuştur	gömülen
+Relation	T4	T15	NoRel	true	olmuştur	hasarları
+Relation	T4	T3	NoRel	true	olmuştur	etkilemiştir
+Relation	T4	T6	NoRel	true	olmuştur	yükseldiği
+Relation	T4	T7	NoRel	true	olmuştur	yayıldığı
+Relation	T5	T11	NoRel	true	nedenlerden	girerek
+Relation	T5	T14	NoRel	true	nedenlerden	birleşerek
+Relation	T5	T16	NoRel	true	nedenlerden	denenmiştir
+Relation	T5	T2	NoRel	true	nedenlerden	söylenmektedir
+Relation	T5	T3	NoRel	true	nedenlerden	etkilemiştir
+Relation	T5	T7	NoRel	true	nedenlerden	yayıldığı
+Relation	T6	T1	NoRel	true	yükseldiği	ölen
+Relation	T6	T11	NoRel	true	yükseldiği	girerek
+Relation	T6	T14	NoRel	true	yükseldiği	birleşerek
+Relation	T6	T2	NoRel	true	yükseldiği	söylenmektedir
+Relation	T6	T3	NoRel	true	yükseldiği	etkilemiştir
+Relation	T6	T4	NoRel	true	yükseldiği	olmuştur
+Relation	T7	T1	NoRel	true	yayıldığı	ölen
+Relation	T7	T12	NoRel	true	yayıldığı	etkilenerek
+Relation	T7	T14	NoRel	true	yayıldığı	birleşerek
+Relation	T7	T9	NoRel	true	yayıldığı	yıkılmış
+Relation	T9	T13	NoRel	true	yıkılmış	gömülen
+Relation	T9	T16	NoRel	true	yıkılmış	denenmiştir
+Relation	T9	T2	NoRel	true	yıkılmış	söylenmektedir

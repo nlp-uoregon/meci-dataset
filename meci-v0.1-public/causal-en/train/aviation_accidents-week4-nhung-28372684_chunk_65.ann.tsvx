@@ -1,0 +1,66 @@
+Text	The plane and house burn and both crew are killed .	Six escape from the house but one man is burned when he returns inside to retrieve hidden money .	The plane had departed from the 32d Division hangar , Illinois National Guard , at the Municipal Airport , and although pre-flight showed no problems , the fuel feed line apparently failed as witnesses reported seeing gas streaming from the plane before the crash .	Lt. Fargo was a Chicago native whose family is well known in society , while Lt. Sandusky was a wartime combat pilot and a salesman for an automobile concern .	10 May : Sole Lockheed Y1C - 12 Vega ,__ 31- 405_ , c / n 158 , of the 59th Service Squadron , a Lockheed DL - 1 Vega acquired by the Army Air Corps for service tests and evaluation , is moderately damaged at Langley Field , Virginia , while piloted by Thomas D. Ferguson .
+Event	T0	burn	EVENT	20
+Event	T1	killed	EVENT	43
+Event	T2	escape	EVENT	56
+Event	T3	burned	EVENT	93
+Event	T4	returns	EVENT	108
+Event	T5	retrieve	EVENT	126
+Event	T6	departed	EVENT	164
+Event	T7	showed	EVENT	281
+Event	T8	problems	EVENT	291
+Event	T9	failed	EVENT	332
+Event	T10	seeing	EVENT	361
+Event	T11	streaming	EVENT	372
+Event	T12	crash	EVENT	408
+Event	T13	acquired	EVENT	694
+Event	T14	tests	EVENT	737
+Event	T15	evaluation	EVENT	747
+Event	T16	damaged	EVENT	774
+Event	T17	piloted	EVENT	818
+Relation	T0	T1	CauseEffect	true	burn	killed
+Relation	T1	T0	EffectCause	true	killed	burn
+Relation	T0	T2	CauseEffect	true	burn	escape
+Relation	T2	T0	EffectCause	true	escape	burn
+Relation	T0	T3	CauseEffect	true	burn	burned
+Relation	T3	T0	EffectCause	true	burned	burn
+Relation	T4	T3	CauseEffect	true	returns	burned
+Relation	T3	T4	EffectCause	true	burned	returns
+Relation	T4	T5	CauseEffect	true	returns	retrieve
+Relation	T5	T4	EffectCause	true	retrieve	returns
+Relation	T11	T9	CauseEffect	true	streaming	failed
+Relation	T9	T11	EffectCause	true	failed	streaming
+Relation	T0	T5	NoRel	true	burn	retrieve
+Relation	T0	T7	NoRel	true	burn	showed
+Relation	T1	T9	NoRel	true	killed	failed
+Relation	T10	T1	NoRel	true	seeing	killed
+Relation	T10	T17	NoRel	true	seeing	piloted
+Relation	T10	T8	NoRel	true	seeing	problems
+Relation	T11	T10	NoRel	true	streaming	seeing
+Relation	T11	T2	NoRel	true	streaming	escape
+Relation	T12	T1	NoRel	true	crash	killed
+Relation	T12	T15	NoRel	true	crash	evaluation
+Relation	T12	T4	NoRel	true	crash	returns
+Relation	T12	T6	NoRel	true	crash	departed
+Relation	T13	T2	NoRel	true	acquired	escape
+Relation	T15	T13	NoRel	true	evaluation	acquired
+Relation	T15	T14	NoRel	true	evaluation	tests
+Relation	T15	T17	NoRel	true	evaluation	piloted
+Relation	T15	T2	NoRel	true	evaluation	escape
+Relation	T15	T4	NoRel	true	evaluation	returns
+Relation	T15	T7	NoRel	true	evaluation	showed
+Relation	T16	T11	NoRel	true	damaged	streaming
+Relation	T16	T17	NoRel	true	damaged	piloted
+Relation	T16	T3	NoRel	true	damaged	burned
+Relation	T16	T9	NoRel	true	damaged	failed
+Relation	T3	T10	NoRel	true	burned	seeing
+Relation	T3	T5	NoRel	true	burned	retrieve
+Relation	T4	T17	NoRel	true	returns	piloted
+Relation	T5	T8	NoRel	true	retrieve	problems
+Relation	T6	T1	NoRel	true	departed	killed
+Relation	T6	T15	NoRel	true	departed	evaluation
+Relation	T6	T2	NoRel	true	departed	escape
+Relation	T6	T5	NoRel	true	departed	retrieve
+Relation	T6	T7	NoRel	true	departed	showed
+Relation	T7	T9	NoRel	true	showed	failed
+Relation	T8	T1	NoRel	true	problems	killed
+Relation	T9	T13	NoRel	true	failed	acquired

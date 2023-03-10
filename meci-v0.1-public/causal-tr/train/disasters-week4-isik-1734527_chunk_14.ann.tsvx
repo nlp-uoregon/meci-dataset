@@ -1,0 +1,44 @@
+Text	Avrupa Komisyonu ise 14 üye devletin her iki ülkeye yardım edeceğini bildirdi .	- – Birleşmiş Milletler ( BM ) , Bosna , Sırbistan ve Hırvatistan'da yaşanılan sel felaketi sebebiyle bölgeye âfet değerlendirme uzmanlarından oluşan bir ekip gönderdiğini duyurdu .	BM Âcil İnsânî Yardım Koordinatörü Valerie Amos ; BM Dünya Gıda Programı ( WFP ) , Birleşmiş Milletler Mülteciler Yüksek Komiserliği ( UNHCR ) , UNICEF , Birleşmiş Milletler Kalkınma Programı ( UNDP ) , Uluslararası Göç Örgütü ( IOM ) gibi kuruluşların da bölgede insânî yardım çalışmalarını sürdürdüklerini ifâde etti .	- NATO – Genel Sekreter Anders Fogh Rasmussen , yaptığı yazılı açıklamada , " Bu korkunç doğal afet sonucunda , kendi adıma tüm hayatını kaybedenlerin yakınlarına başsağlığı dilerim " dedi .	Ayrıca , Bosna - Hersek'ten gelen yardım isteği nedeniyle yirmi NATO müttefiki ülkenin yardıma hazır olduğunu belirtti .
+Event	T1	bildirdi	EVENT	69
+Event	T2	felaketi	EVENT	163
+Event	T3	duyurdu	EVENT	252
+Event	T4	etti	EVENT	576
+Event	T5	afet	EVENT	678
+Event	T6	belirtti	EVENT	884
+Event	T7	açıklamada	EVENT	646
+Event	T8	dedi	EVENT	767
+Event	T9	isteği	EVENT	815
+Relation	T2	T3	CauseEffect	true	felaketi	duyurdu
+Relation	T3	T2	EffectCause	true	duyurdu	felaketi
+Relation	T2	T4	CauseEffect	true	felaketi	etti
+Relation	T4	T2	EffectCause	true	etti	felaketi
+Relation	T5	T7	CauseEffect	true	afet	açıklamada
+Relation	T7	T5	EffectCause	true	açıklamada	afet
+Relation	T7	T8	CauseEffect	true	açıklamada	dedi
+Relation	T8	T7	EffectCause	true	dedi	açıklamada
+Relation	T7	T6	CauseEffect	true	açıklamada	belirtti
+Relation	T6	T7	EffectCause	true	belirtti	açıklamada
+Relation	T5	T9	CauseEffect	true	afet	isteği
+Relation	T9	T5	EffectCause	true	isteği	afet
+Relation	T2	T6	NoRel	true	felaketi	belirtti
+Relation	T2	T8	NoRel	true	felaketi	dedi
+Relation	T2	T9	NoRel	true	felaketi	isteği
+Relation	T3	T1	NoRel	true	duyurdu	bildirdi
+Relation	T3	T8	NoRel	true	duyurdu	dedi
+Relation	T4	T1	NoRel	true	etti	bildirdi
+Relation	T4	T3	NoRel	true	etti	duyurdu
+Relation	T4	T6	NoRel	true	etti	belirtti
+Relation	T5	T2	NoRel	true	afet	felaketi
+Relation	T5	T3	NoRel	true	afet	duyurdu
+Relation	T6	T3	NoRel	true	belirtti	duyurdu
+Relation	T6	T4	NoRel	true	belirtti	etti
+Relation	T6	T8	NoRel	true	belirtti	dedi
+Relation	T6	T9	NoRel	true	belirtti	isteği
+Relation	T7	T2	NoRel	true	açıklamada	felaketi
+Relation	T7	T4	NoRel	true	açıklamada	etti
+Relation	T8	T1	NoRel	true	dedi	bildirdi
+Relation	T8	T3	NoRel	true	dedi	duyurdu
+Relation	T8	T9	NoRel	true	dedi	isteği
+Relation	T9	T1	NoRel	true	isteği	bildirdi
+Relation	T9	T3	NoRel	true	isteği	duyurdu
+Relation	T9	T6	NoRel	true	isteği	belirtti

@@ -1,0 +1,65 @@
+Text	NORTHWEST ORIENT AIRLINES FLIGHT 705 was a scheduled passenger flight operated on February 12 , 1963 , that broke up in midair and crashed into the Florida Everglades shortly after takeoff from Miami International Airport in a severe thunderstorm .	The plane was destined for Portland , Oregon , via Chicago , Spokane , and Seattle .	Prior to departing from Miami in the early afternoon , the Northwest Orient flight crew questioned the ground controller at the airport about the departure routes being used , and the controller replied that most flights were departing " either through a southwest climb or a southeast climb and then back over the top of it . "	After the Boeing 720 lifted off from Runway 27L , helmed by captain Roy Almquist , it made a left turn , based on radar vectors from Miami Departure Control , to avoid areas of anticipated turbulence associated with thunderstorm activity .	Another flight had followed the same guidance shortly before the jet took off .
+Event	T0	operated	EVENT	70
+Event	T1	takeoff	EVENT	181
+Event	T2	thunderstorm	EVENT	234
+Event	T3	destined	EVENT	263
+Event	T4	departing	EVENT	343
+Event	T5	questioned	EVENT	422
+Event	T6	used	EVENT	503
+Event	T7	replied	EVENT	529
+Event	T8	departing	EVENT	560
+Event	T9	climb	EVENT	599
+Event	T10	climb	EVENT	620
+Event	T11	helmed	EVENT	713
+Event	T12	made	EVENT	749
+Event	T13	associated	EVENT	863
+Event	T14	activity	EVENT	892
+Event	T15	flight	EVENT	911
+Event	T16	followed	EVENT	922
+Event	T17	guidance	EVENT	940
+Event	T18	broke up	EVENT	108
+Event	T19	crashed	EVENT	131
+Event	T20	lifted off	EVENT	684
+Event	T21	avoid	EVENT	825
+Event	T22	took off	EVENT	972
+Relation	T0	T3	NoRel	true	operated	destined
+Relation	T0	T9	NoRel	true	operated	climb
+Relation	T1	T14	NoRel	true	takeoff	activity
+Relation	T10	T0	NoRel	true	climb	operated
+Relation	T10	T1	NoRel	true	climb	takeoff
+Relation	T11	T6	NoRel	true	helmed	used
+Relation	T13	T11	NoRel	true	associated	helmed
+Relation	T14	T13	NoRel	true	activity	associated
+Relation	T15	T6	NoRel	true	flight	used
+Relation	T15	T7	NoRel	true	flight	replied
+Relation	T16	T15	NoRel	true	followed	flight
+Relation	T16	T2	NoRel	true	followed	thunderstorm
+Relation	T16	T20	NoRel	true	followed	lifted off
+Relation	T17	T14	NoRel	true	guidance	activity
+Relation	T17	T9	NoRel	true	guidance	climb
+Relation	T18	T22	NoRel	true	broke up	took off
+Relation	T18	T6	NoRel	true	broke up	used
+Relation	T2	T10	NoRel	true	thunderstorm	climb
+Relation	T2	T21	NoRel	true	thunderstorm	avoid
+Relation	T2	T22	NoRel	true	thunderstorm	took off
+Relation	T2	T8	NoRel	true	thunderstorm	departing
+Relation	T20	T9	NoRel	true	lifted off	climb
+Relation	T21	T15	NoRel	true	avoid	flight
+Relation	T3	T22	NoRel	true	destined	took off
+Relation	T4	T7	NoRel	true	departing	replied
+Relation	T4	T8	NoRel	true	departing	departing
+Relation	T5	T10	NoRel	true	questioned	climb
+Relation	T5	T14	NoRel	true	questioned	activity
+Relation	T5	T2	NoRel	true	questioned	thunderstorm
+Relation	T6	T12	NoRel	true	used	made
+Relation	T6	T17	NoRel	true	used	guidance
+Relation	T6	T7	NoRel	true	used	replied
+Relation	T7	T1	NoRel	true	replied	takeoff
+Relation	T7	T16	NoRel	true	replied	followed
+Relation	T7	T19	NoRel	true	replied	crashed
+Relation	T7	T20	NoRel	true	replied	lifted off
+Relation	T7	T22	NoRel	true	replied	took off
+Relation	T8	T0	NoRel	true	departing	operated
+Relation	T8	T22	NoRel	true	departing	took off
+Relation	T8	T9	NoRel	true	departing	climb
+Relation	T9	T0	NoRel	true	climb	operated

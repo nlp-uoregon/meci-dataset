@@ -1,0 +1,59 @@
+Text	- Kaptan Amerika'nın ölümünden çok etkilenen Punisher , Kaptan'ın teslim olduğu zaman bıraktığı maskesini giyerek kostümünü değiştirir ve kendi başına suçlularla mücadeleye devam eder .	- Thor Demir Adam'la kendi klonunu yaratmayı denediği ve diğer kahramanlara zarar verdiği için dövüşür ve zırhını parçalar .			
+Event	T0	ölümünden	EVENT	21
+Event	T2	giyerek	EVENT	106
+Event	T3	değiştirir	EVENT	124
+Event	T5	denediği	EVENT	231
+Event	T7	dövüşür	EVENT	281
+Event	T1	teslim olduğu	EVENT	66
+Event	T8	mücadeleye	EVENT	162
+Event	T9	etkilenen	EVENT	35
+Event	T10	yaratmayı	EVENT	221
+Event	T6	zarar verdiği	EVENT	262
+Event	T11	parçalar	EVENT	300
+Event	T4	devam	EVENT	173
+Relation	T0	T9	CauseEffect	true	ölümünden	etkilenen
+Relation	T9	T0	EffectCause	true	etkilenen	ölümünden
+Relation	T9	T2	CauseEffect	true	etkilenen	giyerek
+Relation	T2	T9	EffectCause	true	giyerek	etkilenen
+Relation	T9	T3	CauseEffect	true	etkilenen	değiştirir
+Relation	T3	T9	EffectCause	true	değiştirir	etkilenen
+Relation	T9	T8	CauseEffect	true	etkilenen	mücadeleye
+Relation	T8	T9	EffectCause	true	mücadeleye	etkilenen
+Relation	T6	T7	CauseEffect	true	zarar verdiği	dövüşür
+Relation	T7	T6	EffectCause	true	dövüşür	zarar verdiği
+Relation	T5	T7	CauseEffect	true	denediği	dövüşür
+Relation	T7	T5	EffectCause	true	dövüşür	denediği
+Relation	T0	T2	NoRel	true	ölümünden	giyerek
+Relation	T0	T8	NoRel	true	ölümünden	mücadeleye
+Relation	T1	T10	NoRel	true	teslim olduğu	yaratmayı
+Relation	T1	T11	NoRel	true	teslim olduğu	parçalar
+Relation	T1	T6	NoRel	true	teslim olduğu	zarar verdiği
+Relation	T1	T7	NoRel	true	teslim olduğu	dövüşür
+Relation	T10	T1	NoRel	true	yaratmayı	teslim olduğu
+Relation	T10	T2	NoRel	true	yaratmayı	giyerek
+Relation	T10	T5	NoRel	true	yaratmayı	denediği
+Relation	T10	T6	NoRel	true	yaratmayı	zarar verdiği
+Relation	T10	T7	NoRel	true	yaratmayı	dövüşür
+Relation	T11	T0	NoRel	true	parçalar	ölümünden
+Relation	T11	T10	NoRel	true	parçalar	yaratmayı
+Relation	T11	T2	NoRel	true	parçalar	giyerek
+Relation	T11	T5	NoRel	true	parçalar	denediği
+Relation	T2	T1	NoRel	true	giyerek	teslim olduğu
+Relation	T2	T5	NoRel	true	giyerek	denediği
+Relation	T2	T7	NoRel	true	giyerek	dövüşür
+Relation	T3	T10	NoRel	true	değiştirir	yaratmayı
+Relation	T3	T5	NoRel	true	değiştirir	denediği
+Relation	T4	T0	NoRel	true	devam	ölümünden
+Relation	T4	T5	NoRel	true	devam	denediği
+Relation	T4	T9	NoRel	true	devam	etkilenen
+Relation	T5	T0	NoRel	true	denediği	ölümünden
+Relation	T5	T1	NoRel	true	denediği	teslim olduğu
+Relation	T5	T3	NoRel	true	denediği	değiştirir
+Relation	T5	T9	NoRel	true	denediği	etkilenen
+Relation	T6	T5	NoRel	true	zarar verdiği	denediği
+Relation	T6	T9	NoRel	true	zarar verdiği	etkilenen
+Relation	T7	T1	NoRel	true	dövüşür	teslim olduğu
+Relation	T7	T9	NoRel	true	dövüşür	etkilenen
+Relation	T8	T10	NoRel	true	mücadeleye	yaratmayı
+Relation	T8	T2	NoRel	true	mücadeleye	giyerek
+Relation	T9	T6	NoRel	true	etkilenen	zarar verdiği

@@ -1,0 +1,84 @@
+Text	Estando en la academia , Kurt Meyer sufrió un grave accidente al querer realizar una broma a uno de sus compañeros cayendo de pie desde una altura de dos pisos ; el aterrizaje lo dejó con múltiples fracturas .	Debido a la resistencia física al golpe recibido y su pronta recuperación se le apoda _ Panzermeyer _ por su similitud con la resistencia de un tanque .	Políticamente activo a una edad temprana y partidario fanático del nazismo , Meyer se unió a las Juventudes Hitlerianas cuando tenía quince años , se convirtió en miembro de pleno derecho del Partido Nazi en septiembre de 1930 y se unió a las SS en octubre de 1931 .	Fue invitado a la boda de Joseph Goebbels en diciembre de ese año .	En mayo de 1934 , Meyer fue transferido a la Leibstandarte SS Adolf Hitler .
+Event	T1	accidente	EVENT	52
+Event	T11	unió	EVENT	449
+Event	T12	convirtió	EVENT	513
+Event	T13	unió	EVENT	595
+Event	T14	invitado	EVENT	634
+Event	T15	boda	EVENT	648
+Event	T16	transferido	EVENT	726
+Event	T2	broma	EVENT	85
+Event	T3	cayendo	EVENT	115
+Event	T4	aterrizaje	EVENT	165
+Event	T6	fracturas	EVENT	198
+Event	T7	recibido	EVENT	250
+Event	T8	recuperación	EVENT	271
+Event	T9	apoda	EVENT	290
+Relation	T2	T1	CauseEffect	true	broma	accidente
+Relation	T1	T2	EffectCause	true	accidente	broma
+Relation	T1	T3	CauseEffect	true	accidente	cayendo
+Relation	T3	T1	EffectCause	true	cayendo	accidente
+Relation	T1	T6	CauseEffect	true	accidente	fracturas
+Relation	T6	T1	EffectCause	true	fracturas	accidente
+Relation	T11	T12	CauseEffect	true	unió	convirtió
+Relation	T12	T11	EffectCause	true	convirtió	unió
+Relation	T1	T12	NoRel	true	accidente	convirtió
+Relation	T11	T1	NoRel	true	unió	accidente
+Relation	T11	T3	NoRel	true	unió	cayendo
+Relation	T11	T6	NoRel	true	unió	fracturas
+Relation	T11	T7	NoRel	true	unió	recibido
+Relation	T11	T8	NoRel	true	unió	recuperación
+Relation	T12	T1	NoRel	true	convirtió	accidente
+Relation	T12	T4	NoRel	true	convirtió	aterrizaje
+Relation	T12	T8	NoRel	true	convirtió	recuperación
+Relation	T13	T1	NoRel	true	unió	accidente
+Relation	T13	T14	NoRel	true	unió	invitado
+Relation	T13	T4	NoRel	true	unió	aterrizaje
+Relation	T13	T7	NoRel	true	unió	recibido
+Relation	T13	T8	NoRel	true	unió	recuperación
+Relation	T13	T9	NoRel	true	unió	apoda
+Relation	T14	T12	NoRel	true	invitado	convirtió
+Relation	T14	T16	NoRel	true	invitado	transferido
+Relation	T14	T2	NoRel	true	invitado	broma
+Relation	T14	T6	NoRel	true	invitado	fracturas
+Relation	T15	T1	NoRel	true	boda	accidente
+Relation	T15	T13	NoRel	true	boda	unió
+Relation	T15	T14	NoRel	true	boda	invitado
+Relation	T15	T3	NoRel	true	boda	cayendo
+Relation	T15	T4	NoRel	true	boda	aterrizaje
+Relation	T15	T7	NoRel	true	boda	recibido
+Relation	T15	T8	NoRel	true	boda	recuperación
+Relation	T15	T9	NoRel	true	boda	apoda
+Relation	T16	T1	NoRel	true	transferido	accidente
+Relation	T16	T13	NoRel	true	transferido	unió
+Relation	T16	T3	NoRel	true	transferido	cayendo
+Relation	T16	T8	NoRel	true	transferido	recuperación
+Relation	T2	T4	NoRel	true	broma	aterrizaje
+Relation	T2	T6	NoRel	true	broma	fracturas
+Relation	T2	T8	NoRel	true	broma	recuperación
+Relation	T3	T14	NoRel	true	cayendo	invitado
+Relation	T3	T2	NoRel	true	cayendo	broma
+Relation	T4	T12	NoRel	true	aterrizaje	convirtió
+Relation	T4	T14	NoRel	true	aterrizaje	invitado
+Relation	T4	T6	NoRel	true	aterrizaje	fracturas
+Relation	T4	T7	NoRel	true	aterrizaje	recibido
+Relation	T4	T8	NoRel	true	aterrizaje	recuperación
+Relation	T6	T11	NoRel	true	fracturas	unió
+Relation	T6	T12	NoRel	true	fracturas	convirtió
+Relation	T6	T14	NoRel	true	fracturas	invitado
+Relation	T6	T3	NoRel	true	fracturas	cayendo
+Relation	T6	T9	NoRel	true	fracturas	apoda
+Relation	T7	T11	NoRel	true	recibido	unió
+Relation	T7	T12	NoRel	true	recibido	convirtió
+Relation	T7	T3	NoRel	true	recibido	cayendo
+Relation	T7	T4	NoRel	true	recibido	aterrizaje
+Relation	T8	T1	NoRel	true	recuperación	accidente
+Relation	T8	T15	NoRel	true	recuperación	boda
+Relation	T8	T4	NoRel	true	recuperación	aterrizaje
+Relation	T8	T6	NoRel	true	recuperación	fracturas
+Relation	T8	T7	NoRel	true	recuperación	recibido
+Relation	T9	T1	NoRel	true	apoda	accidente
+Relation	T9	T11	NoRel	true	apoda	unió
+Relation	T9	T14	NoRel	true	apoda	invitado
+Relation	T9	T4	NoRel	true	apoda	aterrizaje
+Relation	T9	T6	NoRel	true	apoda	fracturas
+Relation	T9	T7	NoRel	true	apoda	recibido

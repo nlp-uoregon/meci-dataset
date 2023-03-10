@@ -1,0 +1,69 @@
+Text	LOKOMOTIV YAROSLAVL UÇAK KAZASI ( Yak - Servis Uçuş 9634 ) 7 Eylül 2011 günü Moskova saatiyle 16.05'te Rus buz hokeyi takımı oyuncularını taşıyan uçak 37 yolcu ve 8 kişiden oluşan mürettabatıyla Yaroslavl kenti yakınlarında düştü .	Kazada çoğunluğu sporcu 45 kişi öldü .	43 kişi olay anında ölürken , 2 kişi kurtarıldı .	Kazadan beş gün sonra , kurtarılan ve Rusya Buz Hokeyi takımından Alexander Galimov Moskova'daki Vishnevskiy Hastanesi'nde öldü .	Kazadan sonra sadece uçak mühendisi Alexander Sizov sağ kalmıştır .
+Event	T1	düştü	EVENT	224
+Event	T2	Kazada	EVENT	232
+Event	T3	öldü	EVENT	264
+Event	T4	olay	EVENT	279
+Event	T5	ölürken	EVENT	291
+Event	T6	kurtarıldı	EVENT	308
+Event	T7	Kazadan	EVENT	321
+Event	T8	kurtarılan	EVENT	345
+Event	T9	öldü	EVENT	444
+Event	T10	taşıyan	EVENT	138
+Event	T11	kalmıştır	EVENT	507
+Event	T12	LOKOMOTIV YAROSLAVL UÇAK KAZASI	EVENT	0
+Relation	T1	T3	CauseEffect	true	düştü	öldü
+Relation	T3	T1	EffectCause	true	öldü	düştü
+Relation	T2	T3	CauseEffect	true	Kazada	öldü
+Relation	T3	T2	EffectCause	true	öldü	Kazada
+Relation	T10	T3	CauseEffect	true	taşıyan	öldü
+Relation	T3	T10	EffectCause	true	öldü	taşıyan
+Relation	T6	T11	CauseEffect	true	kurtarıldı	kalmıştır
+Relation	T11	T6	EffectCause	true	kalmıştır	kurtarıldı
+Relation	T8	T9	CauseEffect	true	kurtarılan	öldü
+Relation	T9	T8	EffectCause	true	öldü	kurtarılan
+Relation	T6	T9	CauseEffect	true	kurtarıldı	öldü
+Relation	T9	T6	EffectCause	true	öldü	kurtarıldı
+Relation	T1	T6	CauseEffect	true	düştü	kurtarıldı
+Relation	T6	T1	EffectCause	true	kurtarıldı	düştü
+Relation	T4	T5	CauseEffect	true	olay	ölürken
+Relation	T5	T4	EffectCause	true	ölürken	olay
+Relation	T4	T6	CauseEffect	true	olay	kurtarıldı
+Relation	T6	T4	EffectCause	true	kurtarıldı	olay
+Relation	T7	T8	CauseEffect	true	Kazadan	kurtarılan
+Relation	T8	T7	EffectCause	true	kurtarılan	Kazadan
+Relation	T1	T10	NoRel	true	düştü	taşıyan
+Relation	T1	T11	NoRel	true	düştü	kalmıştır
+Relation	T1	T12	NoRel	true	düştü	LOKOMOTIV YAROSLAVL UÇAK KAZASI
+Relation	T1	T2	NoRel	true	düştü	Kazada
+Relation	T1	T4	NoRel	true	düştü	olay
+Relation	T1	T7	NoRel	true	düştü	Kazadan
+Relation	T10	T1	NoRel	true	taşıyan	düştü
+Relation	T10	T5	NoRel	true	taşıyan	ölürken
+Relation	T10	T8	NoRel	true	taşıyan	kurtarılan
+Relation	T11	T1	NoRel	true	kalmıştır	düştü
+Relation	T11	T2	NoRel	true	kalmıştır	Kazada
+Relation	T11	T4	NoRel	true	kalmıştır	olay
+Relation	T11	T8	NoRel	true	kalmıştır	kurtarılan
+Relation	T12	T11	NoRel	true	LOKOMOTIV YAROSLAVL UÇAK KAZASI	kalmıştır
+Relation	T12	T7	NoRel	true	LOKOMOTIV YAROSLAVL UÇAK KAZASI	Kazadan
+Relation	T12	T8	NoRel	true	LOKOMOTIV YAROSLAVL UÇAK KAZASI	kurtarılan
+Relation	T2	T10	NoRel	true	Kazada	taşıyan
+Relation	T2	T12	NoRel	true	Kazada	LOKOMOTIV YAROSLAVL UÇAK KAZASI
+Relation	T2	T6	NoRel	true	Kazada	kurtarıldı
+Relation	T3	T8	NoRel	true	öldü	kurtarılan
+Relation	T4	T11	NoRel	true	olay	kalmıştır
+Relation	T4	T12	NoRel	true	olay	LOKOMOTIV YAROSLAVL UÇAK KAZASI
+Relation	T4	T3	NoRel	true	olay	öldü
+Relation	T4	T7	NoRel	true	olay	Kazadan
+Relation	T4	T9	NoRel	true	olay	öldü
+Relation	T5	T12	NoRel	true	ölürken	LOKOMOTIV YAROSLAVL UÇAK KAZASI
+Relation	T5	T9	NoRel	true	ölürken	öldü
+Relation	T6	T2	NoRel	true	kurtarıldı	Kazada
+Relation	T7	T10	NoRel	true	Kazadan	taşıyan
+Relation	T7	T5	NoRel	true	Kazadan	ölürken
+Relation	T7	T6	NoRel	true	Kazadan	kurtarıldı
+Relation	T8	T12	NoRel	true	kurtarılan	LOKOMOTIV YAROSLAVL UÇAK KAZASI
+Relation	T8	T2	NoRel	true	kurtarılan	Kazada
+Relation	T9	T10	NoRel	true	öldü	taşıyan
+Relation	T9	T5	NoRel	true	öldü	ölürken
+Relation	T9	T7	NoRel	true	öldü	Kazadan

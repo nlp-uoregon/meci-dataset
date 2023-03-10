@@ -1,0 +1,27 @@
+Text	Moğolların hafif bombardıman uçakları ve zırhlı arabaları Japonlara hiçbir zarar veremedi ve üç uçak Japonların ağır makineli tüfekleri tarafından vurularak yok edildi .	Yerel Japon kuvvetleri 400 asker ve 10 tankette ile karşı saldırıya geçti , köyde düzinelerce bombalama eylemi gerçekleştirdi .	Sonuçta Moğollar hezimete uğradı .	56 Moğol ve 3 Sovyet danışmanı öldü .	Bunun yanında çok sayıda kişi kayboldu .
+Event	T0	bombardıman	EVENT	17
+Event	T2	edildi	EVENT	161
+Event	T3	geçti	EVENT	238
+Event	T4	gerçekleştirdi	EVENT	281
+Event	T5	uğradı	EVENT	324
+Event	T6	öldü	EVENT	364
+Event	T7	kayboldu	EVENT	401
+Event	T1	vurularak	EVENT	147
+Relation	T1	T2	CauseEffect	true	vurularak	edildi
+Relation	T2	T1	EffectCause	true	edildi	vurularak
+Relation	T3	T5	CauseEffect	true	geçti	uğradı
+Relation	T5	T3	EffectCause	true	uğradı	geçti
+Relation	T4	T5	CauseEffect	true	gerçekleştirdi	uğradı
+Relation	T5	T4	EffectCause	true	uğradı	gerçekleştirdi
+Relation	T0	T1	NoRel	true	bombardıman	vurularak
+Relation	T0	T4	NoRel	true	bombardıman	gerçekleştirdi
+Relation	T1	T5	NoRel	true	vurularak	uğradı
+Relation	T2	T0	NoRel	true	edildi	bombardıman
+Relation	T3	T0	NoRel	true	geçti	bombardıman
+Relation	T3	T4	NoRel	true	geçti	gerçekleştirdi
+Relation	T5	T0	NoRel	true	uğradı	bombardıman
+Relation	T5	T1	NoRel	true	uğradı	vurularak
+Relation	T5	T2	NoRel	true	uğradı	edildi
+Relation	T6	T1	NoRel	true	öldü	vurularak
+Relation	T6	T3	NoRel	true	öldü	geçti
+Relation	T6	T7	NoRel	true	öldü	kayboldu

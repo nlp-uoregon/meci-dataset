@@ -1,0 +1,71 @@
+Text	[ Mindeplade for de 19 omkomne ved ulykken . ]	Den 15. februar 2010 kl. ca. 8:30 skete en FRONTAL_KOLLISION VED HALLE , da to regionaltog kolliderede i Buizingen ved Halle i Belgien .	Ved kollisionen blev 19 personer dræbt , og cirka halvdelen af de 250-300 personer i de to tog angives at være blevet kvæstet .	Kollisionen skete i morgenmyldretiden på strækningen Bruxelles-Mons .	Det ene tog var på vej fra Quiévrain til Liège , og det andet kørte fra Leuven til Braine-le-Comte .
+Event	T0	omkomne	EVENT	23
+Event	T1	ulykken	EVENT	35
+Event	T2	skete	EVENT	81
+Event	T3	kolliderede	EVENT	138
+Event	T4	dræbt	EVENT	217
+Event	T5	angives	EVENT	279
+Event	T6	kvæstet	EVENT	302
+Event	T8	kørte	EVENT	444
+Event	T9	FRONTAL_KOLLISION	EVENT	90
+Event	T10	kollisionen	EVENT	188
+Event	T7	Kollisionen	EVENT	312
+Event	T11	på vej	EVENT	398
+Relation	T10	T4	CauseEffect	true	kollisionen	dræbt
+Relation	T4	T10	EffectCause	true	dræbt	kollisionen
+Relation	T9	T4	CauseEffect	true	FRONTAL_KOLLISION	dræbt
+Relation	T4	T9	EffectCause	true	dræbt	FRONTAL_KOLLISION
+Relation	T3	T4	CauseEffect	true	kolliderede	dræbt
+Relation	T4	T3	EffectCause	true	dræbt	kolliderede
+Relation	T9	T6	CauseEffect	true	FRONTAL_KOLLISION	kvæstet
+Relation	T6	T9	EffectCause	true	kvæstet	FRONTAL_KOLLISION
+Relation	T3	T6	CauseEffect	true	kolliderede	kvæstet
+Relation	T6	T3	EffectCause	true	kvæstet	kolliderede
+Relation	T10	T6	CauseEffect	true	kollisionen	kvæstet
+Relation	T6	T10	EffectCause	true	kvæstet	kollisionen
+Relation	T7	T4	CauseEffect	true	Kollisionen	dræbt
+Relation	T4	T7	EffectCause	true	dræbt	Kollisionen
+Relation	T7	T6	CauseEffect	true	Kollisionen	kvæstet
+Relation	T6	T7	EffectCause	true	kvæstet	Kollisionen
+Relation	T0	T2	NoRel	true	omkomne	skete
+Relation	T0	T4	NoRel	true	omkomne	dræbt
+Relation	T0	T9	NoRel	true	omkomne	FRONTAL_KOLLISION
+Relation	T1	T11	NoRel	true	ulykken	på vej
+Relation	T1	T7	NoRel	true	ulykken	Kollisionen
+Relation	T1	T8	NoRel	true	ulykken	kørte
+Relation	T10	T2	NoRel	true	kollisionen	skete
+Relation	T10	T3	NoRel	true	kollisionen	kolliderede
+Relation	T10	T5	NoRel	true	kollisionen	angives
+Relation	T10	T7	NoRel	true	kollisionen	Kollisionen
+Relation	T10	T8	NoRel	true	kollisionen	kørte
+Relation	T11	T0	NoRel	true	på vej	omkomne
+Relation	T11	T1	NoRel	true	på vej	ulykken
+Relation	T11	T10	NoRel	true	på vej	kollisionen
+Relation	T11	T4	NoRel	true	på vej	dræbt
+Relation	T11	T5	NoRel	true	på vej	angives
+Relation	T11	T8	NoRel	true	på vej	kørte
+Relation	T11	T9	NoRel	true	på vej	FRONTAL_KOLLISION
+Relation	T2	T7	NoRel	true	skete	Kollisionen
+Relation	T2	T8	NoRel	true	skete	kørte
+Relation	T2	T9	NoRel	true	skete	FRONTAL_KOLLISION
+Relation	T3	T0	NoRel	true	kolliderede	omkomne
+Relation	T3	T1	NoRel	true	kolliderede	ulykken
+Relation	T4	T2	NoRel	true	dræbt	skete
+Relation	T5	T0	NoRel	true	angives	omkomne
+Relation	T5	T10	NoRel	true	angives	kollisionen
+Relation	T5	T3	NoRel	true	angives	kolliderede
+Relation	T5	T4	NoRel	true	angives	dræbt
+Relation	T5	T6	NoRel	true	angives	kvæstet
+Relation	T5	T9	NoRel	true	angives	FRONTAL_KOLLISION
+Relation	T6	T2	NoRel	true	kvæstet	skete
+Relation	T6	T4	NoRel	true	kvæstet	dræbt
+Relation	T6	T5	NoRel	true	kvæstet	angives
+Relation	T7	T1	NoRel	true	Kollisionen	ulykken
+Relation	T7	T10	NoRel	true	Kollisionen	kollisionen
+Relation	T8	T0	NoRel	true	kørte	omkomne
+Relation	T8	T1	NoRel	true	kørte	ulykken
+Relation	T8	T11	NoRel	true	kørte	på vej
+Relation	T8	T2	NoRel	true	kørte	skete
+Relation	T8	T9	NoRel	true	kørte	FRONTAL_KOLLISION
+Relation	T9	T0	NoRel	true	FRONTAL_KOLLISION	omkomne
+Relation	T9	T5	NoRel	true	FRONTAL_KOLLISION	angives

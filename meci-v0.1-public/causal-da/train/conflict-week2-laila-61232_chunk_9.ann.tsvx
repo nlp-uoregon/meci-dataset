@@ -1,0 +1,65 @@
+Text	I stedet for offentligt at afsløre , hvorledes en opfindelse fungerede , gav patentsystemet opfindere som fx James Watt den fordel , at de kunne tage monopol på fremstillingen af opfindelser som de første dampmaskiner og derigennem opnå en gevinst , da deres opfindelser var beskyttet mod kopiering .	Dette forøgede hastigheden i den teknologiske udvikling , da det kunne lønne sig at forske i nye teknologier og produktionsmetoder .	I midlertid fører monopoler også ineffektivitet med sig , hvilket kan modvirke eller endda bremse de fordele , som følger af at offentliggøre opfindelser og belønne opfindere .	Watts monopol på dampmaskinen kan have forhindret andre opfindere , eksempelvis Richard Trevithick , William Murdoch og Jonathan Hornblower , i at udvikle forbedrede dampmaskiner .	Dette kan have forsinket den industrielle revolution i op til 20 år .
+Event	T0	afsløre	EVENT	27
+Event	T1	fungerede	EVENT	61
+Event	T12	monopol	EVENT	617
+Event	T13	forhindret	EVENT	650
+Event	T14	udvikle	EVENT	758
+Event	T15	forsinket	EVENT	807
+Event	T2	gav	EVENT	73
+Event	T3	fremstillingen	EVENT	161
+Event	T4	gevinst	EVENT	240
+Event	T5	beskyttet	EVENT	275
+Event	T6	kopiering	EVENT	289
+Event	T9	fører	EVENT	446
+Relation	T5	T4	CauseEffect	true	beskyttet	gevinst
+Relation	T4	T5	EffectCause	true	gevinst	beskyttet
+Relation	T3	T4	CauseEffect	true	fremstillingen	gevinst
+Relation	T4	T3	EffectCause	true	gevinst	fremstillingen
+Relation	T12	T13	CauseEffect	true	monopol	forhindret
+Relation	T13	T12	EffectCause	true	forhindret	monopol
+Relation	T12	T15	CauseEffect	true	monopol	forsinket
+Relation	T15	T12	EffectCause	true	forsinket	monopol
+Relation	T0	T2	NoRel	true	afsløre	gav
+Relation	T1	T0	NoRel	true	fungerede	afsløre
+Relation	T1	T14	NoRel	true	fungerede	udvikle
+Relation	T1	T2	NoRel	true	fungerede	gav
+Relation	T1	T3	NoRel	true	fungerede	fremstillingen
+Relation	T1	T5	NoRel	true	fungerede	beskyttet
+Relation	T1	T9	NoRel	true	fungerede	fører
+Relation	T12	T1	NoRel	true	monopol	fungerede
+Relation	T12	T14	NoRel	true	monopol	udvikle
+Relation	T12	T5	NoRel	true	monopol	beskyttet
+Relation	T12	T6	NoRel	true	monopol	kopiering
+Relation	T13	T15	NoRel	true	forhindret	forsinket
+Relation	T13	T3	NoRel	true	forhindret	fremstillingen
+Relation	T13	T5	NoRel	true	forhindret	beskyttet
+Relation	T13	T9	NoRel	true	forhindret	fører
+Relation	T14	T3	NoRel	true	udvikle	fremstillingen
+Relation	T14	T4	NoRel	true	udvikle	gevinst
+Relation	T14	T6	NoRel	true	udvikle	kopiering
+Relation	T14	T9	NoRel	true	udvikle	fører
+Relation	T15	T0	NoRel	true	forsinket	afsløre
+Relation	T15	T2	NoRel	true	forsinket	gav
+Relation	T2	T12	NoRel	true	gav	monopol
+Relation	T2	T13	NoRel	true	gav	forhindret
+Relation	T2	T3	NoRel	true	gav	fremstillingen
+Relation	T2	T4	NoRel	true	gav	gevinst
+Relation	T2	T5	NoRel	true	gav	beskyttet
+Relation	T2	T6	NoRel	true	gav	kopiering
+Relation	T3	T0	NoRel	true	fremstillingen	afsløre
+Relation	T3	T2	NoRel	true	fremstillingen	gav
+Relation	T3	T5	NoRel	true	fremstillingen	beskyttet
+Relation	T3	T9	NoRel	true	fremstillingen	fører
+Relation	T4	T1	NoRel	true	gevinst	fungerede
+Relation	T4	T13	NoRel	true	gevinst	forhindret
+Relation	T4	T2	NoRel	true	gevinst	gav
+Relation	T5	T2	NoRel	true	beskyttet	gav
+Relation	T6	T12	NoRel	true	kopiering	monopol
+Relation	T6	T13	NoRel	true	kopiering	forhindret
+Relation	T6	T2	NoRel	true	kopiering	gav
+Relation	T6	T9	NoRel	true	kopiering	fører
+Relation	T9	T12	NoRel	true	fører	monopol
+Relation	T9	T13	NoRel	true	fører	forhindret
+Relation	T9	T15	NoRel	true	fører	forsinket
+Relation	T9	T3	NoRel	true	fører	fremstillingen
+Relation	T9	T4	NoRel	true	fører	gevinst

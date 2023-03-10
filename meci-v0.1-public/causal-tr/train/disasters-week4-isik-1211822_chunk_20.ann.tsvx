@@ -1,0 +1,65 @@
+Text	.	Kaliforniya ve Oregon'da bazı bölgeleri 2, 4 metreye kadar varan dalgalar vurdu , bunlar limanlar ve iskelelere zarar verip 10 milyon dolarlık zarara yol açtı .	Kanada'daki Vancouver Adası'nı bir metrelik dalgalar vurdu ; bu kıyıdaki bazı bölgelerin boşaltılmasına ve deniz ulaşımının 12 saatliğine yasaklanmasına yol açtı , bu da ada sakinlerinin işlerine gidememelerine neden oldu .	küçükresim | sol | Tsunamiye önlem olarak Şili'de kıyıdan daha yüksek yerlere çekilmiş tekneler Filipinler'de 0, 5 metreye kadar ulaşan dalgalar ülkenin doğusunu vurdu .	Endonezya'daki Jayapura'da bazı evler hasar gördü .
+Event	T0	vurdu	EVENT	76
+Event	T1	verip	EVENT	120
+Event	T2	açtı	EVENT	156
+Event	T3	vurdu	EVENT	216
+Event	T5	açtı	EVENT	320
+Event	T6	oldu	EVENT	380
+Event	T7	çekilmiş	EVENT	465
+Event	T8	vurdu	EVENT	549
+Event	T9	gördü	EVENT	601
+Event	T4	Tsunamiye	EVENT	406
+Event	T10	önlem	EVENT	416
+Event	T11	dalgalar	EVENT	523
+Relation	T0	T1	CauseEffect	true	vurdu	verip
+Relation	T1	T0	EffectCause	true	verip	vurdu
+Relation	T0	T2	CauseEffect	true	vurdu	açtı
+Relation	T2	T0	EffectCause	true	açtı	vurdu
+Relation	T3	T5	CauseEffect	true	vurdu	açtı
+Relation	T5	T3	EffectCause	true	açtı	vurdu
+Relation	T5	T6	CauseEffect	true	açtı	oldu
+Relation	T6	T5	EffectCause	true	oldu	açtı
+Relation	T4	T10	CauseEffect	true	Tsunamiye	önlem
+Relation	T10	T4	EffectCause	true	önlem	Tsunamiye
+Relation	T10	T7	CauseEffect	true	önlem	çekilmiş
+Relation	T7	T10	EffectCause	true	çekilmiş	önlem
+Relation	T11	T8	CauseEffect	true	dalgalar	vurdu
+Relation	T8	T11	EffectCause	true	vurdu	dalgalar
+Relation	T0	T4	NoRel	true	vurdu	Tsunamiye
+Relation	T0	T6	NoRel	true	vurdu	oldu
+Relation	T1	T2	NoRel	true	verip	açtı
+Relation	T1	T3	NoRel	true	verip	vurdu
+Relation	T1	T4	NoRel	true	verip	Tsunamiye
+Relation	T1	T6	NoRel	true	verip	oldu
+Relation	T1	T7	NoRel	true	verip	çekilmiş
+Relation	T10	T0	NoRel	true	önlem	vurdu
+Relation	T10	T8	NoRel	true	önlem	vurdu
+Relation	T11	T1	NoRel	true	dalgalar	verip
+Relation	T11	T10	NoRel	true	dalgalar	önlem
+Relation	T11	T2	NoRel	true	dalgalar	açtı
+Relation	T11	T4	NoRel	true	dalgalar	Tsunamiye
+Relation	T2	T11	NoRel	true	açtı	dalgalar
+Relation	T2	T4	NoRel	true	açtı	Tsunamiye
+Relation	T2	T8	NoRel	true	açtı	vurdu
+Relation	T2	T9	NoRel	true	açtı	gördü
+Relation	T3	T0	NoRel	true	vurdu	vurdu
+Relation	T3	T11	NoRel	true	vurdu	dalgalar
+Relation	T4	T0	NoRel	true	Tsunamiye	vurdu
+Relation	T4	T11	NoRel	true	Tsunamiye	dalgalar
+Relation	T5	T11	NoRel	true	açtı	dalgalar
+Relation	T5	T2	NoRel	true	açtı	açtı
+Relation	T5	T9	NoRel	true	açtı	gördü
+Relation	T6	T10	NoRel	true	oldu	önlem
+Relation	T6	T11	NoRel	true	oldu	dalgalar
+Relation	T6	T3	NoRel	true	oldu	vurdu
+Relation	T6	T8	NoRel	true	oldu	vurdu
+Relation	T7	T6	NoRel	true	çekilmiş	oldu
+Relation	T8	T10	NoRel	true	vurdu	önlem
+Relation	T8	T3	NoRel	true	vurdu	vurdu
+Relation	T8	T4	NoRel	true	vurdu	Tsunamiye
+Relation	T8	T5	NoRel	true	vurdu	açtı
+Relation	T8	T6	NoRel	true	vurdu	oldu
+Relation	T9	T0	NoRel	true	gördü	vurdu
+Relation	T9	T3	NoRel	true	gördü	vurdu
+Relation	T9	T5	NoRel	true	gördü	açtı
+Relation	T9	T6	NoRel	true	gördü	oldu

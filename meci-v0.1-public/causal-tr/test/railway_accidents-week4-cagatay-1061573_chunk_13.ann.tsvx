@@ -1,0 +1,49 @@
+Text	En az yirmi bir kişi öldü ve altı kişi yaralandı .	- 21 Şubat , 2009 - Slovakyan araba ve tren çarpışması - 12 ölü – Işıklar var fakat geçit engelleri yok	- 7 Haziran , 1980 - Empangeni hemzemin geçit felaketi — Bir otobüs Nkilini - Empangeni yolcu treniyle çarpıştı .	En az altmış dokuz kişi öldü ve doksan üç kişi yaralandı .	- Ekim 1970 - Onyang hemzemin geçit felaketi — Bir kiralık otobüs ekspres tren ile çarpıştı .
+Event	T0	öldü	EVENT	21
+Event	T1	yaralandı	EVENT	39
+Event	T2	çarpışması	EVENT	95
+Event	T3	ölü	EVENT	111
+Event	T4	felaketi	EVENT	201
+Event	T5	çarpıştı	EVENT	258
+Event	T6	öldü	EVENT	293
+Event	T7	yaralandı	EVENT	316
+Event	T8	felaketi	EVENT	364
+Event	T9	çarpıştı	EVENT	411
+Relation	T2	T3	CauseEffect	true	çarpışması	ölü
+Relation	T3	T2	EffectCause	true	ölü	çarpışması
+Relation	T5	T6	CauseEffect	true	çarpıştı	öldü
+Relation	T6	T5	EffectCause	true	öldü	çarpıştı
+Relation	T5	T7	CauseEffect	true	çarpıştı	yaralandı
+Relation	T7	T5	EffectCause	true	yaralandı	çarpıştı
+Relation	T0	T6	NoRel	true	öldü	öldü
+Relation	T0	T7	NoRel	true	öldü	yaralandı
+Relation	T0	T8	NoRel	true	öldü	felaketi
+Relation	T1	T0	NoRel	true	yaralandı	öldü
+Relation	T1	T6	NoRel	true	yaralandı	öldü
+Relation	T1	T9	NoRel	true	yaralandı	çarpıştı
+Relation	T2	T5	NoRel	true	çarpışması	çarpıştı
+Relation	T2	T7	NoRel	true	çarpışması	yaralandı
+Relation	T2	T8	NoRel	true	çarpışması	felaketi
+Relation	T3	T0	NoRel	true	ölü	öldü
+Relation	T3	T1	NoRel	true	ölü	yaralandı
+Relation	T3	T4	NoRel	true	ölü	felaketi
+Relation	T4	T0	NoRel	true	felaketi	öldü
+Relation	T4	T1	NoRel	true	felaketi	yaralandı
+Relation	T4	T3	NoRel	true	felaketi	ölü
+Relation	T4	T6	NoRel	true	felaketi	öldü
+Relation	T4	T7	NoRel	true	felaketi	yaralandı
+Relation	T4	T8	NoRel	true	felaketi	felaketi
+Relation	T5	T1	NoRel	true	çarpıştı	yaralandı
+Relation	T5	T3	NoRel	true	çarpıştı	ölü
+Relation	T5	T8	NoRel	true	çarpıştı	felaketi
+Relation	T6	T2	NoRel	true	öldü	çarpışması
+Relation	T6	T7	NoRel	true	öldü	yaralandı
+Relation	T6	T8	NoRel	true	öldü	felaketi
+Relation	T7	T0	NoRel	true	yaralandı	öldü
+Relation	T7	T3	NoRel	true	yaralandı	ölü
+Relation	T7	T6	NoRel	true	yaralandı	öldü
+Relation	T7	T8	NoRel	true	yaralandı	felaketi
+Relation	T8	T1	NoRel	true	felaketi	yaralandı
+Relation	T9	T0	NoRel	true	çarpıştı	öldü
+Relation	T9	T3	NoRel	true	çarpıştı	ölü
+Relation	T9	T5	NoRel	true	çarpıştı	çarpıştı

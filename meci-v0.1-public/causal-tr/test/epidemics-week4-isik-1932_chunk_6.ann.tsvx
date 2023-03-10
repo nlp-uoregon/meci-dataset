@@ -1,0 +1,53 @@
+Text	- 1984'te HIV için ELISA testi geliştirildi .	HIV'iv enfekte olabilmesi için , virüsün dış ortam koşullarında bozulmayacağı kadar kısa bir süre içinde bir kişiden diğerine nakledilmesi gerekir .	Bu da virüsün diğer vücut sıvılarının içinde bir kişiden diğerine iletilmesi ile gerçekleşebilir .	HIV , korunmasız cinsel ilişki , direkt kan teması , organ nakilleri ve anneden bebeğine olmak üzere dört yolla bulaşabilir .	HIV ile enfekte kişinin spermi , anal , oral ya da vajinal yoldan yapılacak cinsel ilişki sırasındaki vücut sıvıları ve kan yoluyla bulaşabilir .
+Event	T0	geliştirildi	EVENT	31
+Event	T3	ilişki	EVENT	318
+Event	T4	teması	EVENT	338
+Event	T5	ilişki	EVENT	503
+Event	T1	gerçekleşebilir	EVENT	276
+Event	T2	iletilmesi	EVENT	261
+Event	T6	nakilleri	EVENT	353
+Event	T7	bulaşabilir	EVENT	406
+Event	T8	enfekte	EVENT	428
+Event	T9	bulaşabilir	EVENT	552
+Relation	T2	T1	CauseEffect	true	iletilmesi	gerçekleşebilir
+Relation	T1	T2	EffectCause	true	gerçekleşebilir	iletilmesi
+Relation	T3	T7	CauseEffect	true	ilişki	bulaşabilir
+Relation	T7	T3	EffectCause	true	bulaşabilir	ilişki
+Relation	T4	T7	CauseEffect	true	teması	bulaşabilir
+Relation	T7	T4	EffectCause	true	bulaşabilir	teması
+Relation	T6	T7	CauseEffect	true	nakilleri	bulaşabilir
+Relation	T7	T6	EffectCause	true	bulaşabilir	nakilleri
+Relation	T5	T9	CauseEffect	true	ilişki	bulaşabilir
+Relation	T9	T5	EffectCause	true	bulaşabilir	ilişki
+Relation	T0	T1	NoRel	true	geliştirildi	gerçekleşebilir
+Relation	T0	T3	NoRel	true	geliştirildi	ilişki
+Relation	T1	T3	NoRel	true	gerçekleşebilir	ilişki
+Relation	T1	T5	NoRel	true	gerçekleşebilir	ilişki
+Relation	T1	T7	NoRel	true	gerçekleşebilir	bulaşabilir
+Relation	T2	T0	NoRel	true	iletilmesi	geliştirildi
+Relation	T2	T3	NoRel	true	iletilmesi	ilişki
+Relation	T2	T4	NoRel	true	iletilmesi	teması
+Relation	T2	T6	NoRel	true	iletilmesi	nakilleri
+Relation	T2	T8	NoRel	true	iletilmesi	enfekte
+Relation	T3	T0	NoRel	true	ilişki	geliştirildi
+Relation	T3	T4	NoRel	true	ilişki	teması
+Relation	T3	T5	NoRel	true	ilişki	ilişki
+Relation	T3	T6	NoRel	true	ilişki	nakilleri
+Relation	T3	T9	NoRel	true	ilişki	bulaşabilir
+Relation	T4	T3	NoRel	true	teması	ilişki
+Relation	T4	T5	NoRel	true	teması	ilişki
+Relation	T4	T6	NoRel	true	teması	nakilleri
+Relation	T5	T0	NoRel	true	ilişki	geliştirildi
+Relation	T5	T8	NoRel	true	ilişki	enfekte
+Relation	T6	T0	NoRel	true	nakilleri	geliştirildi
+Relation	T6	T1	NoRel	true	nakilleri	gerçekleşebilir
+Relation	T6	T5	NoRel	true	nakilleri	ilişki
+Relation	T6	T8	NoRel	true	nakilleri	enfekte
+Relation	T6	T9	NoRel	true	nakilleri	bulaşabilir
+Relation	T7	T1	NoRel	true	bulaşabilir	gerçekleşebilir
+Relation	T7	T5	NoRel	true	bulaşabilir	ilişki
+Relation	T8	T0	NoRel	true	enfekte	geliştirildi
+Relation	T8	T3	NoRel	true	enfekte	ilişki
+Relation	T9	T1	NoRel	true	bulaşabilir	gerçekleşebilir
+Relation	T9	T6	NoRel	true	bulaşabilir	nakilleri
+Relation	T9	T7	NoRel	true	bulaşabilir	bulaşabilir

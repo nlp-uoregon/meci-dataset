@@ -1,0 +1,29 @@
+Text	- 6 de abril de 1950 .	En las proximidades de la Estación de Villallana , municipio de Lena ( Asturias ) descarrila el tren correo de Madrid a Gijón , en una zona en que se realizaban trabajos en la vía .	El tren se corta hacia su mitad y dos de sus coches caen por un terraplén de varios metros de altura resultando sus cajas aplastadas .	El balance de víctimas fue de 19 muertos y 65 heridos .	- 15 de mayo de 1950 .
+Event	T0	descarrila	EVENT	105
+Event	T1	trabajos	EVENT	184
+Event	T2	corta	EVENT	216
+Event	T3	caen	EVENT	257
+Event	T4	aplastadas	EVENT	327
+Event	T5	balance	EVENT	343
+Event	T6	muertos	EVENT	373
+Event	T7	heridos	EVENT	386
+Relation	T0	T6	CauseEffect	true	descarrila	muertos
+Relation	T6	T0	EffectCause	true	muertos	descarrila
+Relation	T0	T7	CauseEffect	true	descarrila	heridos
+Relation	T7	T0	EffectCause	true	heridos	descarrila
+Relation	T0	T2	NoRel	true	descarrila	corta
+Relation	T1	T0	NoRel	true	trabajos	descarrila
+Relation	T1	T2	NoRel	true	trabajos	corta
+Relation	T1	T3	NoRel	true	trabajos	caen
+Relation	T1	T5	NoRel	true	trabajos	balance
+Relation	T1	T6	NoRel	true	trabajos	muertos
+Relation	T2	T7	NoRel	true	corta	heridos
+Relation	T3	T7	NoRel	true	caen	heridos
+Relation	T4	T0	NoRel	true	aplastadas	descarrila
+Relation	T4	T7	NoRel	true	aplastadas	heridos
+Relation	T5	T2	NoRel	true	balance	corta
+Relation	T5	T4	NoRel	true	balance	aplastadas
+Relation	T5	T7	NoRel	true	balance	heridos
+Relation	T6	T7	NoRel	true	muertos	heridos
+Relation	T7	T1	NoRel	true	heridos	trabajos
+Relation	T7	T5	NoRel	true	heridos	balance

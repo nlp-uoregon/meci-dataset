@@ -1,0 +1,69 @@
+Text	İki lokomotif ve trenin 27 vagonu raydan çıktı .	Bazı vagonlar bahçe yakınına ve tenffüs zamanı okul bahçesine geldi .	- 7 Haziran , 2009 – Bir kız Bacau yakınındaki köprünün resmini çekmeye çalışırken bir bölgesel ekspres tren çarptı ve kız öldü .	- 19 Haziran , 2009 – bir büyük şiddetli yağmur Rockford , Illinois’ı vurdu ve Canadian National yük treninin 114 etanol tankerinin 14_____ünün hattan ayrılmasına ve de alev alıp patlamasına sebep oldu .	Demiryolu kavşağında pek çok kişi yandığında , bir kişi öldü .
+Event	T0	çıktı	EVENT	41
+Event	T2	geldi	EVENT	111
+Event	T3	çekmeye	EVENT	183
+Event	T4	çarptı	EVENT	228
+Event	T5	öldü	EVENT	242
+Event	T6	yağmur	EVENT	290
+Event	T7	vurdu	EVENT	319
+Event	T8	ayrılmasına	EVENT	400
+Event	T9	oldu	EVENT	446
+Event	T10	yandığında	EVENT	487
+Event	T11	öldü	EVENT	509
+Relation	T0	T2	CauseEffect	true	çıktı	geldi
+Relation	T2	T0	EffectCause	true	geldi	çıktı
+Relation	T3	T4	CauseEffect	true	çekmeye	çarptı
+Relation	T4	T3	EffectCause	true	çarptı	çekmeye
+Relation	T4	T5	CauseEffect	true	çarptı	öldü
+Relation	T5	T4	EffectCause	true	öldü	çarptı
+Relation	T6	T8	CauseEffect	true	yağmur	ayrılmasına
+Relation	T8	T6	EffectCause	true	ayrılmasına	yağmur
+Relation	T8	T9	CauseEffect	true	ayrılmasına	oldu
+Relation	T9	T8	EffectCause	true	oldu	ayrılmasına
+Relation	T9	T10	CauseEffect	true	oldu	yandığında
+Relation	T10	T9	EffectCause	true	yandığında	oldu
+Relation	T9	T11	CauseEffect	true	oldu	öldü
+Relation	T11	T9	EffectCause	true	öldü	oldu
+Relation	T0	T10	NoRel	true	çıktı	yandığında
+Relation	T10	T0	NoRel	true	yandığında	çıktı
+Relation	T10	T7	NoRel	true	yandığında	vurdu
+Relation	T10	T8	NoRel	true	yandığında	ayrılmasına
+Relation	T11	T0	NoRel	true	öldü	çıktı
+Relation	T11	T10	NoRel	true	öldü	yandığında
+Relation	T11	T2	NoRel	true	öldü	geldi
+Relation	T11	T7	NoRel	true	öldü	vurdu
+Relation	T2	T6	NoRel	true	geldi	yağmur
+Relation	T2	T8	NoRel	true	geldi	ayrılmasına
+Relation	T2	T9	NoRel	true	geldi	oldu
+Relation	T3	T10	NoRel	true	çekmeye	yandığında
+Relation	T3	T11	NoRel	true	çekmeye	öldü
+Relation	T3	T2	NoRel	true	çekmeye	geldi
+Relation	T3	T5	NoRel	true	çekmeye	öldü
+Relation	T3	T6	NoRel	true	çekmeye	yağmur
+Relation	T3	T8	NoRel	true	çekmeye	ayrılmasına
+Relation	T4	T0	NoRel	true	çarptı	çıktı
+Relation	T4	T2	NoRel	true	çarptı	geldi
+Relation	T4	T8	NoRel	true	çarptı	ayrılmasına
+Relation	T4	T9	NoRel	true	çarptı	oldu
+Relation	T5	T10	NoRel	true	öldü	yandığında
+Relation	T5	T2	NoRel	true	öldü	geldi
+Relation	T5	T6	NoRel	true	öldü	yağmur
+Relation	T5	T7	NoRel	true	öldü	vurdu
+Relation	T5	T9	NoRel	true	öldü	oldu
+Relation	T6	T10	NoRel	true	yağmur	yandığında
+Relation	T6	T2	NoRel	true	yağmur	geldi
+Relation	T6	T3	NoRel	true	yağmur	çekmeye
+Relation	T6	T4	NoRel	true	yağmur	çarptı
+Relation	T6	T5	NoRel	true	yağmur	öldü
+Relation	T6	T9	NoRel	true	yağmur	oldu
+Relation	T7	T10	NoRel	true	vurdu	yandığında
+Relation	T7	T4	NoRel	true	vurdu	çarptı
+Relation	T7	T5	NoRel	true	vurdu	öldü
+Relation	T8	T11	NoRel	true	ayrılmasına	öldü
+Relation	T8	T4	NoRel	true	ayrılmasına	çarptı
+Relation	T8	T7	NoRel	true	ayrılmasına	vurdu
+Relation	T9	T2	NoRel	true	oldu	geldi
+Relation	T9	T3	NoRel	true	oldu	çekmeye
+Relation	T9	T5	NoRel	true	oldu	öldü
+Relation	T9	T6	NoRel	true	oldu	yağmur
+Relation	T9	T7	NoRel	true	oldu	vurdu

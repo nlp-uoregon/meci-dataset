@@ -1,0 +1,74 @@
+Text	It was gradually becoming apparent that the British would not be able to make the hook - up with the 3rd Canadian Infantry Division necessary to protect its right flank in an immediate assault on Caen .	Troops of the King 's Shropshire Light Infantry continued down the Hermanville - Caen road , reaching Biéville - Beuville , close to Caen , but were supported by only a few self - propelled guns , their flanks exposed .	The issue was fully rendered moot when , on the afternoon of 6 June , the 21st Panzer Division , based around Caen , launched the only major German counterattack of D - Day .	The 21st Panzer Division , with its formidable inventory of some 127 Panzer IV tanks , was intended for use as a rapid response force ; on the morning of 6 June , however , its commander , _ Generalmajor _ Edgar Feuchtinger , was in Paris , and Rommel was in Germany .	The division was unable to finalize orders and preparations for a counterattack until late in the day .
+Event	T0	apparent	EVENT	26
+Event	T1	make	EVENT	73
+Event	T2	protect	EVENT	145
+Event	T3	assault	EVENT	185
+Event	T4	reaching	EVENT	296
+Event	T5	supported	EVENT	352
+Event	T6	exposed	EVENT	413
+Event	T7	issue	EVENT	427
+Event	T8	moot	EVENT	452
+Event	T9	launched	EVENT	540
+Event	T10	counterattack	EVENT	571
+Event	T11	intended	EVENT	689
+Event	T12	use	EVENT	702
+Event	T13	orders	EVENT	903
+Event	T14	counterattack	EVENT	933
+Event	T15	close	EVENT	327
+Event	T16	down	EVENT	261
+Event	T17	based around	EVENT	520
+Event	T18	rendered	EVENT	443
+Event	T19	rapid response	EVENT	711
+Event	T20	preparations	EVENT	914
+Relation	T1	T2	CauseEffect	true	make	protect
+Relation	T2	T1	EffectCause	true	protect	make
+Relation	T3	T1	CauseEffect	true	assault	make
+Relation	T1	T3	EffectCause	true	make	assault
+Relation	T5	T6	CauseEffect	true	supported	exposed
+Relation	T6	T5	EffectCause	true	exposed	supported
+Relation	T9	T8	CauseEffect	true	launched	moot
+Relation	T8	T9	EffectCause	true	moot	launched
+Relation	T11	T19	CauseEffect	true	intended	rapid response
+Relation	T19	T11	EffectCause	true	rapid response	intended
+Relation	T0	T7	NoRel	true	apparent	issue
+Relation	T1	T16	NoRel	true	make	down
+Relation	T10	T17	NoRel	true	counterattack	based around
+Relation	T10	T3	NoRel	true	counterattack	assault
+Relation	T10	T8	NoRel	true	counterattack	moot
+Relation	T11	T14	NoRel	true	intended	counterattack
+Relation	T11	T5	NoRel	true	intended	supported
+Relation	T12	T19	NoRel	true	use	rapid response
+Relation	T12	T6	NoRel	true	use	exposed
+Relation	T12	T8	NoRel	true	use	moot
+Relation	T13	T2	NoRel	true	orders	protect
+Relation	T13	T5	NoRel	true	orders	supported
+Relation	T15	T11	NoRel	true	close	intended
+Relation	T15	T3	NoRel	true	close	assault
+Relation	T15	T8	NoRel	true	close	moot
+Relation	T16	T19	NoRel	true	down	rapid response
+Relation	T16	T8	NoRel	true	down	moot
+Relation	T16	T9	NoRel	true	down	launched
+Relation	T17	T14	NoRel	true	based around	counterattack
+Relation	T17	T9	NoRel	true	based around	launched
+Relation	T18	T0	NoRel	true	rendered	apparent
+Relation	T18	T16	NoRel	true	rendered	down
+Relation	T18	T6	NoRel	true	rendered	exposed
+Relation	T2	T11	NoRel	true	protect	intended
+Relation	T2	T8	NoRel	true	protect	moot
+Relation	T20	T18	NoRel	true	preparations	rendered
+Relation	T20	T3	NoRel	true	preparations	assault
+Relation	T3	T10	NoRel	true	assault	counterattack
+Relation	T3	T18	NoRel	true	assault	rendered
+Relation	T4	T11	NoRel	true	reaching	intended
+Relation	T5	T18	NoRel	true	supported	rendered
+Relation	T5	T9	NoRel	true	supported	launched
+Relation	T6	T1	NoRel	true	exposed	make
+Relation	T7	T9	NoRel	true	issue	launched
+Relation	T8	T10	NoRel	true	moot	counterattack
+Relation	T8	T16	NoRel	true	moot	down
+Relation	T8	T3	NoRel	true	moot	assault
+Relation	T8	T4	NoRel	true	moot	reaching
+Relation	T8	T5	NoRel	true	moot	supported
+Relation	T9	T15	NoRel	true	launched	close
+Relation	T9	T5	NoRel	true	launched	supported
+Relation	T9	T7	NoRel	true	launched	issue

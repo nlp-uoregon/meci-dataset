@@ -1,0 +1,45 @@
+Text	Rusya'nın Esad hükûmeti yanında Suriye'de operasyonlara başlaması ile uçakları birçok defa Türk hava sahasını ihlâl etti .	Ekim 2015'in başlarında beri Türkiye ve NATO , Rusya'yı Türk hava sahasını ihlal etmemesi için uyardı .	Yaklaşık iki aydan beri beş defa sınır ihlâli konusunda Rus makamları uyarıldı .	En son ikaz 15 Ekim 2015 tarihinde Türkiye Genelkurmay Başkanlığı Karargahı'nda gerçekleştirildi .	Dokuz kişilik Rus heyeti ile on iki kişilik Türk heyeti toplandı .
+Event	T0	başlaması	EVENT	56
+Event	T2	ihlal	EVENT	198
+Event	T3	uyardı	EVENT	218
+Event	T4	ihlâli	EVENT	266
+Event	T5	uyarıldı	EVENT	297
+Event	T6	ikaz	EVENT	315
+Event	T7	gerçekleştirildi	EVENT	388
+Event	T8	toplandı	EVENT	463
+Event	T1	ihlâl	EVENT	110
+Relation	T0	T1	CauseEffect	true	başlaması	ihlâl
+Relation	T1	T0	EffectCause	true	ihlâl	başlaması
+Relation	T4	T5	CauseEffect	true	ihlâli	uyarıldı
+Relation	T5	T4	EffectCause	true	uyarıldı	ihlâli
+Relation	T2	T3	CauseEffect	true	ihlal	uyardı
+Relation	T3	T2	EffectCause	true	uyardı	ihlal
+Relation	T1	T8	CauseEffect	true	ihlâl	toplandı
+Relation	T8	T1	EffectCause	true	toplandı	ihlâl
+Relation	T1	T6	CauseEffect	true	ihlâl	ikaz
+Relation	T6	T1	EffectCause	true	ikaz	ihlâl
+Relation	T4	T6	CauseEffect	true	ihlâli	ikaz
+Relation	T6	T4	EffectCause	true	ikaz	ihlâli
+Relation	T0	T7	NoRel	true	başlaması	gerçekleştirildi
+Relation	T1	T2	NoRel	true	ihlâl	ihlal
+Relation	T1	T7	NoRel	true	ihlâl	gerçekleştirildi
+Relation	T2	T0	NoRel	true	ihlal	başlaması
+Relation	T2	T1	NoRel	true	ihlal	ihlâl
+Relation	T2	T7	NoRel	true	ihlal	gerçekleştirildi
+Relation	T3	T1	NoRel	true	uyardı	ihlâl
+Relation	T3	T4	NoRel	true	uyardı	ihlâli
+Relation	T3	T5	NoRel	true	uyardı	uyarıldı
+Relation	T3	T8	NoRel	true	uyardı	toplandı
+Relation	T4	T1	NoRel	true	ihlâli	ihlâl
+Relation	T4	T2	NoRel	true	ihlâli	ihlal
+Relation	T4	T8	NoRel	true	ihlâli	toplandı
+Relation	T5	T3	NoRel	true	uyarıldı	uyardı
+Relation	T5	T7	NoRel	true	uyarıldı	gerçekleştirildi
+Relation	T6	T3	NoRel	true	ikaz	uyardı
+Relation	T6	T8	NoRel	true	ikaz	toplandı
+Relation	T7	T6	NoRel	true	gerçekleştirildi	ikaz
+Relation	T8	T0	NoRel	true	toplandı	başlaması
+Relation	T8	T2	NoRel	true	toplandı	ihlal
+Relation	T8	T4	NoRel	true	toplandı	ihlâli
+Relation	T8	T5	NoRel	true	toplandı	uyarıldı
+Relation	T8	T6	NoRel	true	toplandı	ikaz

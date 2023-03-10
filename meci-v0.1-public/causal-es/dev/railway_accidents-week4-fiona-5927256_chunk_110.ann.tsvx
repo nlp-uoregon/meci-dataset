@@ -1,0 +1,38 @@
+Text	Seis de ellas murieron y la restante resultó herida grave .	- 20 de noviembre de 1979 .	Un turismo y un taxi son arrollados por un convoy que efectuaba maniobras en un paso a nivel situado en el casco urbano de Cartagena .	Resultan 6 fallecidos .	- El 6 de diciembre de 1979 , un tren vacío , fuera de control y sin maquinista colisionó con otro que unía Barcelona con Puigcerdá causando 18 muertos y 49 heridos en Las Franquesas del Vallés , Barcelona .
+Event	T0	murieron	EVENT	14
+Event	T1	arrollados	EVENT	113
+Event	T2	maniobras	EVENT	152
+Event	T3	fallecidos	EVENT	234
+Event	T4	colisionó	EVENT	327
+Event	T5	causando	EVENT	379
+Event	T6	muertos	EVENT	391
+Event	T7	heridos	EVENT	404
+Event	T8	herida	EVENT	45
+Relation	T1	T3	CauseEffect	true	arrollados	fallecidos
+Relation	T3	T1	EffectCause	true	fallecidos	arrollados
+Relation	T4	T6	CauseEffect	true	colisionó	muertos
+Relation	T6	T4	EffectCause	true	muertos	colisionó
+Relation	T4	T7	CauseEffect	true	colisionó	heridos
+Relation	T7	T4	EffectCause	true	heridos	colisionó
+Relation	T1	T5	NoRel	true	arrollados	causando
+Relation	T1	T6	NoRel	true	arrollados	muertos
+Relation	T2	T0	NoRel	true	maniobras	murieron
+Relation	T2	T1	NoRel	true	maniobras	arrollados
+Relation	T2	T3	NoRel	true	maniobras	fallecidos
+Relation	T2	T5	NoRel	true	maniobras	causando
+Relation	T2	T8	NoRel	true	maniobras	herida
+Relation	T3	T0	NoRel	true	fallecidos	murieron
+Relation	T3	T2	NoRel	true	fallecidos	maniobras
+Relation	T3	T6	NoRel	true	fallecidos	muertos
+Relation	T3	T7	NoRel	true	fallecidos	heridos
+Relation	T3	T8	NoRel	true	fallecidos	herida
+Relation	T4	T2	NoRel	true	colisionó	maniobras
+Relation	T4	T3	NoRel	true	colisionó	fallecidos
+Relation	T4	T8	NoRel	true	colisionó	herida
+Relation	T5	T7	NoRel	true	causando	heridos
+Relation	T6	T2	NoRel	true	muertos	maniobras
+Relation	T6	T3	NoRel	true	muertos	fallecidos
+Relation	T6	T8	NoRel	true	muertos	herida
+Relation	T7	T5	NoRel	true	heridos	causando
+Relation	T8	T0	NoRel	true	herida	murieron
+Relation	T8	T4	NoRel	true	herida	colisionó

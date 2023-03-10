@@ -1,0 +1,41 @@
+Text	2016ء کے مئی کے آخر میں اور جون کے شروع میں ، مسلسل تیز بارشوں کی وجہ سے یہ سیلاب یورپ میں آیا ، زیادہ تر جرمنی اور فرانس میں ، لیکن آسٹریا ، بلجئیم ، رومانیہ اور مالدووا میں سیلاب آیا ۔	دیگر میں ، جرمنی کی ریاستوں باواریا ، ہیسے ، رائنلینڈ - پالاتینات ، بادن - وورتمبرگ اور نورڈرائن ویسٹ فالن متاثرہ علاقوں میں شامل ہیں ۔	فرانس میں بھی شدید سیلاب تھا ۔	دریا نککر سے شروع ہوا اور ڈینیوب ، رائن ، سین اور ان کے معاون دریاؤں اور بندوں کے ساتھ ساتھ آگے بڑھا ۔	سیلاب سے متاثر ہوئے افراد کی ہلاکت کی تصدیق اب تک ہو چکی ہے ۔
+Event	T0	بارشوں	EVENT	56
+Event	T1	سیلاب	EVENT	76
+Event	T2	آیا	EVENT	91
+Event	T3	آیا	EVENT	181
+Event	T4	سیلاب	EVENT	342
+Event	T5	ہوا	EVENT	372
+Event	T6	بڑھا	EVENT	450
+Event	T7	سیلاب	EVENT	457
+Event	T8	ہلاکت	EVENT	486
+Event	T9	تصدیق	EVENT	495
+Relation	T0	T1	CauseEffect	true	بارشوں	سیلاب
+Relation	T1	T0	EffectCause	true	سیلاب	بارشوں
+Relation	T0	T3	NoRel	true	بارشوں	آیا
+Relation	T0	T6	NoRel	true	بارشوں	بڑھا
+Relation	T0	T8	NoRel	true	بارشوں	ہلاکت
+Relation	T0	T9	NoRel	true	بارشوں	تصدیق
+Relation	T1	T3	NoRel	true	سیلاب	آیا
+Relation	T1	T5	NoRel	true	سیلاب	ہوا
+Relation	T1	T6	NoRel	true	سیلاب	بڑھا
+Relation	T1	T7	NoRel	true	سیلاب	سیلاب
+Relation	T2	T9	NoRel	true	آیا	تصدیق
+Relation	T3	T8	NoRel	true	آیا	ہلاکت
+Relation	T4	T1	NoRel	true	سیلاب	سیلاب
+Relation	T4	T5	NoRel	true	سیلاب	ہوا
+Relation	T4	T6	NoRel	true	سیلاب	بڑھا
+Relation	T5	T7	NoRel	true	ہوا	سیلاب
+Relation	T5	T8	NoRel	true	ہوا	ہلاکت
+Relation	T6	T0	NoRel	true	بڑھا	بارشوں
+Relation	T6	T3	NoRel	true	بڑھا	آیا
+Relation	T6	T4	NoRel	true	بڑھا	سیلاب
+Relation	T6	T7	NoRel	true	بڑھا	سیلاب
+Relation	T7	T0	NoRel	true	سیلاب	بارشوں
+Relation	T7	T6	NoRel	true	سیلاب	بڑھا
+Relation	T8	T0	NoRel	true	ہلاکت	بارشوں
+Relation	T8	T3	NoRel	true	ہلاکت	آیا
+Relation	T8	T5	NoRel	true	ہلاکت	ہوا
+Relation	T8	T7	NoRel	true	ہلاکت	سیلاب
+Relation	T8	T9	NoRel	true	ہلاکت	تصدیق
+Relation	T9	T0	NoRel	true	تصدیق	بارشوں
+Relation	T9	T2	NoRel	true	تصدیق	آیا

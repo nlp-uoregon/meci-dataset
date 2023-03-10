@@ -1,0 +1,15 @@
+Text	- 10 de junio de 1934 .	En un paso a nivel de la línea León_-_Gijón situado en las cercanías de Pola de Gordón ( León ) , un tren arrolla a un autobús que desde la localidad leonesa de Sahagún se dirigía a Asturias .	Murieron 20 personas y 11 más resultaron heridas .	- 24 de junio de 1936 .	En la línea de Palencia a La Coruña , entre las estaciones de Ponferrada y San Miguel de las Dueñas ( León ) , chocan en el interior del túnel número 27 del mencionado ferrocarril el correo de Madrid a La Coruña y un mercancías carbonero .
+Event	T0	arrolla	EVENT	130
+Event	T1	dirigía	EVENT	196
+Event	T2	Murieron	EVENT	217
+Event	T3	heridas	EVENT	258
+Event	T4	chocan	EVENT	403
+Relation	T0	T2	CauseEffect	true	arrolla	Murieron
+Relation	T2	T0	EffectCause	true	Murieron	arrolla
+Relation	T0	T3	CauseEffect	true	arrolla	heridas
+Relation	T3	T0	EffectCause	true	heridas	arrolla
+Relation	T0	T1	NoRel	true	arrolla	dirigía
+Relation	T1	T2	NoRel	true	dirigía	Murieron
+Relation	T2	T1	NoRel	true	Murieron	dirigía
+Relation	T3	T4	NoRel	true	heridas	chocan
+Relation	T4	T2	NoRel	true	chocan	Murieron

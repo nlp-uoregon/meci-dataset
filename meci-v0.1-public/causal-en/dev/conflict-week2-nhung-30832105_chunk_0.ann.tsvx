@@ -1,0 +1,74 @@
+Text	TARGET ANALYSIS is an examination of potential targets to determine military importance , priority of attack , and weapons required to obtain a desired level of damage or casualties .	The Central Intelligence Agency defines it as , " network analysis techniques and specialized analytical tools to identify and detail key figures and organizations who may pose a threat to US interests . "	The most recognizable targeting analyst position in the Intelligence Community lies within the Central Intelligence Agency ( CIA ) within the Directorate of Intelligence ( DI ) .	The CIA identifies its Target Analyst position as one that analysts will “ research , analyze , write , and brief using network analysis techniques and specialized tools to identify and detail key threats to the US .	Targeting analysts regularly produce a range of current and longer - term intelligence products and provide analytic support to operations for key foreign and domestic policymakers , military officials , and intelligence and law enforcement agencies .
+Event	T0	ANALYSIS	EVENT	7
+Event	T1	examination	EVENT	22
+Event	T10	position	EVENT	607
+Event	T11	research	EVENT	644
+Event	T12	analyze	EVENT	655
+Event	T13	write	EVENT	665
+Event	T14	using	EVENT	683
+Event	T15	identify	EVENT	742
+Event	T16	threats	EVENT	766
+Event	T18	produce	EVENT	815
+Event	T2	attack	EVENT	102
+Event	T21	casualties	EVENT	171
+Event	T22	identify	EVENT	298
+Event	T3	obtain	EVENT	135
+Event	T4	damage	EVENT	161
+Event	T5	defines	EVENT	216
+Event	T6	pose	EVENT	356
+Event	T7	threat	EVENT	363
+Event	T8	targeting	EVENT	412
+Event	T9	identifies	EVENT	577
+Relation	T1	T3	CauseEffect	true	examination	obtain
+Relation	T3	T1	EffectCause	true	obtain	examination
+Relation	T1	T4	CauseEffect	true	examination	damage
+Relation	T4	T1	EffectCause	true	damage	examination
+Relation	T1	T21	CauseEffect	true	examination	casualties
+Relation	T21	T1	EffectCause	true	casualties	examination
+Relation	T22	T7	CauseEffect	true	identify	threat
+Relation	T7	T22	EffectCause	true	threat	identify
+Relation	T9	T16	CauseEffect	true	identifies	threats
+Relation	T16	T9	EffectCause	true	threats	identifies
+Relation	T0	T10	NoRel	true	ANALYSIS	position
+Relation	T0	T2	NoRel	true	ANALYSIS	attack
+Relation	T0	T6	NoRel	true	ANALYSIS	pose
+Relation	T1	T11	NoRel	true	examination	research
+Relation	T1	T12	NoRel	true	examination	analyze
+Relation	T1	T18	NoRel	true	examination	produce
+Relation	T10	T15	NoRel	true	position	identify
+Relation	T10	T2	NoRel	true	position	attack
+Relation	T10	T21	NoRel	true	position	casualties
+Relation	T11	T0	NoRel	true	research	ANALYSIS
+Relation	T11	T1	NoRel	true	research	examination
+Relation	T11	T18	NoRel	true	research	produce
+Relation	T11	T21	NoRel	true	research	casualties
+Relation	T12	T16	NoRel	true	analyze	threats
+Relation	T13	T11	NoRel	true	write	research
+Relation	T13	T15	NoRel	true	write	identify
+Relation	T13	T18	NoRel	true	write	produce
+Relation	T14	T10	NoRel	true	using	position
+Relation	T15	T10	NoRel	true	identify	position
+Relation	T16	T12	NoRel	true	threats	analyze
+Relation	T18	T1	NoRel	true	produce	examination
+Relation	T18	T10	NoRel	true	produce	position
+Relation	T18	T16	NoRel	true	produce	threats
+Relation	T18	T3	NoRel	true	produce	obtain
+Relation	T2	T6	NoRel	true	attack	pose
+Relation	T22	T16	NoRel	true	identify	threats
+Relation	T22	T4	NoRel	true	identify	damage
+Relation	T22	T6	NoRel	true	identify	pose
+Relation	T3	T12	NoRel	true	obtain	analyze
+Relation	T3	T13	NoRel	true	obtain	write
+Relation	T3	T5	NoRel	true	obtain	defines
+Relation	T4	T18	NoRel	true	damage	produce
+Relation	T4	T2	NoRel	true	damage	attack
+Relation	T4	T9	NoRel	true	damage	identifies
+Relation	T5	T21	NoRel	true	defines	casualties
+Relation	T6	T1	NoRel	true	pose	examination
+Relation	T6	T2	NoRel	true	pose	attack
+Relation	T6	T22	NoRel	true	pose	identify
+Relation	T8	T12	NoRel	true	targeting	analyze
+Relation	T8	T15	NoRel	true	targeting	identify
+Relation	T9	T12	NoRel	true	identifies	analyze
+Relation	T9	T13	NoRel	true	identifies	write
+Relation	T9	T21	NoRel	true	identifies	casualties

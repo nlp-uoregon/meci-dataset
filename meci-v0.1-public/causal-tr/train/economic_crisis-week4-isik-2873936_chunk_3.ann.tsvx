@@ -1,0 +1,20 @@
+Text	Türk lirasına yüzde 220 değer kaybettirildi ve bir Amerikan doları 9 Türk lirası oldu .	10 Ağustos 1970 tarihinde Süleyman Demirel başbakanlığındaki 32. Türkiye Hükûmeti tarafından ağır bir devalüasyon yapıldı .	Türk lirası yüzde 70'e yakın değer kaybetti .	( bkz. 10 Ağustos 1970 kararları )	1970'li yılların sonlarında devalüasyonlar artık sıklıkla yapılır olmuştu .
+Event	T0	kaybettirildi	EVENT	30
+Event	T1	yapıldı	EVENT	202
+Event	T2	kaybetti	EVENT	247
+Event	T4	oldu	EVENT	81
+Event	T5	kararları	EVENT	281
+Event	T3	olmuştu	EVENT	359
+Relation	T0	T4	CauseEffect	true	kaybettirildi	oldu
+Relation	T4	T0	EffectCause	true	oldu	kaybettirildi
+Relation	T1	T2	CauseEffect	true	yapıldı	kaybetti
+Relation	T2	T1	EffectCause	true	kaybetti	yapıldı
+Relation	T1	T4	NoRel	true	yapıldı	oldu
+Relation	T2	T0	NoRel	true	kaybetti	kaybettirildi
+Relation	T2	T5	NoRel	true	kaybetti	kararları
+Relation	T3	T1	NoRel	true	olmuştu	yapıldı
+Relation	T3	T4	NoRel	true	olmuştu	oldu
+Relation	T3	T5	NoRel	true	olmuştu	kararları
+Relation	T4	T2	NoRel	true	oldu	kaybetti
+Relation	T5	T1	NoRel	true	kararları	yapıldı
+Relation	T5	T4	NoRel	true	kararları	oldu

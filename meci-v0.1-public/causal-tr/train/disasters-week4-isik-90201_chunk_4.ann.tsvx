@@ -1,0 +1,20 @@
+Text	Deprem sonucunda şunu yazmıştır " Depremin ilk başında , içerideki insanlar hemen dışarı çıkmamalıdırlar .	Çömelmeli ve şanslarını beklemelidirler .	Yuva çökse bile , içinde bulunan bazı yumurtalar sağlam kalabilirler .	" Bunun gösterdiği , içeride kalanların bazılarının sağ kalırken , birçok insanın kaçmaya çalışırken öldüğüdür .	Deprem Xi'an'da bulunan Küçük Vahşi Kaz Pagodası'nın yüksekliğinin 45 metreden 43.4 metreye düşmesine sebep olmuştur .
+Event	T0	Deprem	EVENT	0
+Event	T1	yazmıştır	EVENT	22
+Event	T4	öldüğüdür	EVENT	321
+Event	T5	Deprem	EVENT	333
+Event	T2	çalışırken	EVENT	310
+Event	T3	olmuştur	EVENT	441
+Relation	T0	T1	CauseEffect	true	Deprem	yazmıştır
+Relation	T1	T0	EffectCause	true	yazmıştır	Deprem
+Relation	T2	T4	CauseEffect	true	çalışırken	öldüğüdür
+Relation	T4	T2	EffectCause	true	öldüğüdür	çalışırken
+Relation	T5	T3	CauseEffect	true	Deprem	olmuştur
+Relation	T3	T5	EffectCause	true	olmuştur	Deprem
+Relation	T1	T2	NoRel	true	yazmıştır	çalışırken
+Relation	T1	T4	NoRel	true	yazmıştır	öldüğüdür
+Relation	T1	T5	NoRel	true	yazmıştır	Deprem
+Relation	T3	T0	NoRel	true	olmuştur	Deprem
+Relation	T4	T5	NoRel	true	öldüğüdür	Deprem
+Relation	T5	T0	NoRel	true	Deprem	Deprem
+Relation	T5	T2	NoRel	true	Deprem	çalışırken

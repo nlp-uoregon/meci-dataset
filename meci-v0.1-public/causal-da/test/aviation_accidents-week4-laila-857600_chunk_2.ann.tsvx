@@ -1,0 +1,19 @@
+Text	Flyet havde omtrent 56.000 flyvetimer fordelt på 21.000 flyvninger .	Airbus A321-200-serien fløj første gang i marts 1993 , og blev operativt i januar 1994 .	Der er bygget over 931 eksemplarer siden da .	Flyet er generelt godkendt til 220 passagerer og en maksimal startvægt på 93.000 kg.	Metrojet , som opererede flyvningen , er et russisk flyselskab fra 1993 .
+Event	T0	fløj	EVENT	92
+Event	T1	operativt	EVENT	132
+Event	T2	bygget	EVENT	165
+Event	T3	godkendt	EVENT	222
+Event	T4	flyvningen	EVENT	314
+Event	T5	flyvetimer	EVENT	27
+Relation	T0	T5	NoRel	true	fløj	flyvetimer
+Relation	T1	T2	NoRel	true	operativt	bygget
+Relation	T2	T5	NoRel	true	bygget	flyvetimer
+Relation	T3	T0	NoRel	true	godkendt	fløj
+Relation	T3	T1	NoRel	true	godkendt	operativt
+Relation	T3	T4	NoRel	true	godkendt	flyvningen
+Relation	T4	T0	NoRel	true	flyvningen	fløj
+Relation	T4	T5	NoRel	true	flyvningen	flyvetimer
+Relation	T5	T1	NoRel	true	flyvetimer	operativt
+Relation	T5	T2	NoRel	true	flyvetimer	bygget
+Relation	T5	T3	NoRel	true	flyvetimer	godkendt
+Relation	T5	T4	NoRel	true	flyvetimer	flyvningen

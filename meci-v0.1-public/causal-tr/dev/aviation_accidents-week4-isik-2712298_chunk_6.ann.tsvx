@@ -1,0 +1,79 @@
+Text	Kontrolör , mürettebata inişi iptal etmesini ve etrafta dolaşmasını tavsiye etti , ancak mürettebat bu tavsiyeyi görmezden geldi ve inişe devam etti .	Yaklaşım sırasında , gözetmen pilot Azakov , kaptan pilot Artamonov'a yaklaşma ve aletli yaklaşma talimatı verirken , Azakov diğer iniş görevlerini üstlendi .	Mürettebat arasında karar irtifasında ( 130 m ) kararsızlık vardı ; çünkü kontrolör görüş mesafesi nedeniyle etrafta dolaşmalarını söyledi , ancak iki kokpit üyesi pist ışıklarını gördüklerini söyledi ve kaptan inişe devam etti .	Kısa bir süre sonra mürettebat ışıkları görememeye başladı ancak kaptan bunun farkında değildi .	Kaptan inişe az kala ışıkları görebilmek için dikkatini aletlerinden çekip dışarıya verdi ancak uçağın rotadan çıkmasına neden oldu .
+Event	T0	etti	EVENT	144
+Event	T1	Yaklaşım	EVENT	151
+Event	T2	üstlendi	EVENT	299
+Event	T4	söyledi	EVENT	503
+Event	T5	etti	EVENT	533
+Event	T6	verdi	EVENT	721
+Event	T7	tavsiye	EVENT	68
+Event	T8	iptal	EVENT	30
+Event	T9	dolaşmasını	EVENT	56
+Event	T10	geldi	EVENT	123
+Event	T11	talimatı	EVENT	249
+Event	T3	söyledi	EVENT	441
+Event	T12	başladı	EVENT	591
+Event	T13	çıkmasına	EVENT	748
+Relation	T10	T0	CauseEffect	true	geldi	etti
+Relation	T0	T10	EffectCause	true	etti	geldi
+Relation	T1	T2	CauseEffect	true	Yaklaşım	üstlendi
+Relation	T2	T1	EffectCause	true	üstlendi	Yaklaşım
+Relation	T1	T11	CauseEffect	true	Yaklaşım	talimatı
+Relation	T11	T1	EffectCause	true	talimatı	Yaklaşım
+Relation	T4	T5	CauseEffect	true	söyledi	etti
+Relation	T5	T4	EffectCause	true	etti	söyledi
+Relation	T12	T13	CauseEffect	true	başladı	çıkmasına
+Relation	T13	T12	EffectCause	true	çıkmasına	başladı
+Relation	T0	T1	NoRel	true	etti	Yaklaşım
+Relation	T0	T11	NoRel	true	etti	talimatı
+Relation	T0	T13	NoRel	true	etti	çıkmasına
+Relation	T0	T5	NoRel	true	etti	etti
+Relation	T0	T7	NoRel	true	etti	tavsiye
+Relation	T0	T8	NoRel	true	etti	iptal
+Relation	T0	T9	NoRel	true	etti	dolaşmasını
+Relation	T1	T12	NoRel	true	Yaklaşım	başladı
+Relation	T10	T1	NoRel	true	geldi	Yaklaşım
+Relation	T10	T11	NoRel	true	geldi	talimatı
+Relation	T10	T12	NoRel	true	geldi	başladı
+Relation	T10	T4	NoRel	true	geldi	söyledi
+Relation	T11	T10	NoRel	true	talimatı	geldi
+Relation	T11	T7	NoRel	true	talimatı	tavsiye
+Relation	T12	T11	NoRel	true	başladı	talimatı
+Relation	T12	T2	NoRel	true	başladı	üstlendi
+Relation	T12	T3	NoRel	true	başladı	söyledi
+Relation	T12	T5	NoRel	true	başladı	etti
+Relation	T12	T6	NoRel	true	başladı	verdi
+Relation	T12	T7	NoRel	true	başladı	tavsiye
+Relation	T12	T8	NoRel	true	başladı	iptal
+Relation	T12	T9	NoRel	true	başladı	dolaşmasını
+Relation	T13	T3	NoRel	true	çıkmasına	söyledi
+Relation	T13	T5	NoRel	true	çıkmasına	etti
+Relation	T13	T6	NoRel	true	çıkmasına	verdi
+Relation	T2	T12	NoRel	true	üstlendi	başladı
+Relation	T2	T4	NoRel	true	üstlendi	söyledi
+Relation	T2	T6	NoRel	true	üstlendi	verdi
+Relation	T4	T1	NoRel	true	söyledi	Yaklaşım
+Relation	T4	T11	NoRel	true	söyledi	talimatı
+Relation	T4	T9	NoRel	true	söyledi	dolaşmasını
+Relation	T5	T1	NoRel	true	etti	Yaklaşım
+Relation	T5	T8	NoRel	true	etti	iptal
+Relation	T6	T0	NoRel	true	verdi	etti
+Relation	T6	T11	NoRel	true	verdi	talimatı
+Relation	T6	T12	NoRel	true	verdi	başladı
+Relation	T6	T3	NoRel	true	verdi	söyledi
+Relation	T6	T5	NoRel	true	verdi	etti
+Relation	T7	T1	NoRel	true	tavsiye	Yaklaşım
+Relation	T7	T10	NoRel	true	tavsiye	geldi
+Relation	T7	T11	NoRel	true	tavsiye	talimatı
+Relation	T7	T13	NoRel	true	tavsiye	çıkmasına
+Relation	T7	T2	NoRel	true	tavsiye	üstlendi
+Relation	T8	T1	NoRel	true	iptal	Yaklaşım
+Relation	T8	T12	NoRel	true	iptal	başladı
+Relation	T8	T13	NoRel	true	iptal	çıkmasına
+Relation	T8	T5	NoRel	true	iptal	etti
+Relation	T8	T6	NoRel	true	iptal	verdi
+Relation	T9	T0	NoRel	true	dolaşmasını	etti
+Relation	T9	T13	NoRel	true	dolaşmasını	çıkmasına
+Relation	T9	T2	NoRel	true	dolaşmasını	üstlendi
+Relation	T9	T4	NoRel	true	dolaşmasını	söyledi
+Relation	T9	T7	NoRel	true	dolaşmasını	tavsiye
+Relation	T9	T8	NoRel	true	dolaşmasını	iptal

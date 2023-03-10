@@ -1,0 +1,30 @@
+Text	8 مارچ پتانم تیٹا ، کیرلا میں ایک ہی خاندان کے پانچ افراد کورونا وائرس سے متاثر پائے گیے ۔	ان میں 3 اٹلی کا سفر کر کے آئے تھے جبکہ دو کو ان کے رہنے کی وجہ سے ہوا ۔	-	9 مارچ ایرناکولم میں 3 سالہ بچہ اطالیہ سے لوٹا اور وائرس سے متاثر پایا گیا ۔	بچاو کے تحت والدین کو بھی الگ تھلگ کر دیا گیا ۔
+Event	T0	سفر	EVENT	108
+Event	T1	رہنے	EVENT	143
+Event	T2	ہوا	EVENT	158
+Event	T3	لوٹا	EVENT	208
+Event	T5	متاثر	EVENT	74
+Event	T6	آئے	EVENT	118
+Event	T7	متاثر	EVENT	226
+Event	T4	تھلگ	EVENT	273
+Relation	T1	T2	CauseEffect	true	رہنے	ہوا
+Relation	T2	T1	EffectCause	true	ہوا	رہنے
+Relation	T0	T5	CauseEffect	true	سفر	متاثر
+Relation	T5	T0	EffectCause	true	متاثر	سفر
+Relation	T3	T7	CauseEffect	true	لوٹا	متاثر
+Relation	T7	T3	EffectCause	true	متاثر	لوٹا
+Relation	T0	T1	NoRel	true	سفر	رہنے
+Relation	T0	T3	NoRel	true	سفر	لوٹا
+Relation	T1	T3	NoRel	true	رہنے	لوٹا
+Relation	T1	T5	NoRel	true	رہنے	متاثر
+Relation	T1	T6	NoRel	true	رہنے	آئے
+Relation	T2	T0	NoRel	true	ہوا	سفر
+Relation	T2	T4	NoRel	true	ہوا	تھلگ
+Relation	T2	T6	NoRel	true	ہوا	آئے
+Relation	T3	T5	NoRel	true	لوٹا	متاثر
+Relation	T4	T0	NoRel	true	تھلگ	سفر
+Relation	T4	T2	NoRel	true	تھلگ	ہوا
+Relation	T5	T1	NoRel	true	متاثر	رہنے
+Relation	T5	T6	NoRel	true	متاثر	آئے
+Relation	T5	T7	NoRel	true	متاثر	متاثر
+Relation	T6	T5	NoRel	true	آئے	متاثر

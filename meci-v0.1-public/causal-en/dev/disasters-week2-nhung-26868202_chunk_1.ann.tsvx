@@ -1,0 +1,44 @@
+Text	Laxmanpur - Bathe was targeted because Ranvir Sena members believed the village 's Dalits , mostly poor and landless , were sympathizers of the Communist Party of India ( Marxist – Leninist ) Liberation behind the killing of 37 upper caste men in Bara in Gaya district in 1992 .	Ranvir Sena , a far - right_wing militia of upper caste landlords , was created by Bhumihar caste to take on the Naxals	In the well - planned operation , about 100 Ranbir Sena activists carrying firearms had descended on Lakshman pur Bathe at around 11 pm .	They forced their way into huts by breaking open the doors and fired indiscriminately at people who were asleep .	The entire hamlet located on the banks of the Sone river was virtually decimated in the attack that lasted more than three hours .
+Event	T0	targeted	EVENT	22
+Event	T1	believed	EVENT	59
+Event	T10	decimated	EVENT	722
+Event	T11	attack	EVENT	739
+Event	T12	lasted	EVENT	751
+Event	T14	take on	EVENT	380
+Event	T15	breaking	EVENT	572
+Event	T2	Liberation	EVENT	192
+Event	T3	killing	EVENT	214
+Event	T4	created	EVENT	351
+Event	T5	operation	EVENT	421
+Event	T6	carrying	EVENT	465
+Event	T7	descended	EVENT	487
+Event	T8	forced	EVENT	542
+Event	T9	fired	EVENT	600
+Relation	T0	T1	CauseEffect	true	targeted	believed
+Relation	T1	T0	EffectCause	true	believed	targeted
+Relation	T3	T0	CauseEffect	true	killing	targeted
+Relation	T0	T3	EffectCause	true	targeted	killing
+Relation	T4	T14	CauseEffect	true	created	take on
+Relation	T14	T4	EffectCause	true	take on	created
+Relation	T0	T2	CauseEffect	true	targeted	Liberation
+Relation	T2	T0	EffectCause	true	Liberation	targeted
+Relation	T1	T8	NoRel	true	believed	forced
+Relation	T10	T14	NoRel	true	decimated	take on
+Relation	T10	T7	NoRel	true	decimated	descended
+Relation	T12	T1	NoRel	true	lasted	believed
+Relation	T12	T10	NoRel	true	lasted	decimated
+Relation	T12	T14	NoRel	true	lasted	take on
+Relation	T12	T8	NoRel	true	lasted	forced
+Relation	T14	T2	NoRel	true	take on	Liberation
+Relation	T15	T12	NoRel	true	breaking	lasted
+Relation	T15	T5	NoRel	true	breaking	operation
+Relation	T2	T1	NoRel	true	Liberation	believed
+Relation	T2	T12	NoRel	true	Liberation	lasted
+Relation	T2	T5	NoRel	true	Liberation	operation
+Relation	T3	T2	NoRel	true	killing	Liberation
+Relation	T5	T2	NoRel	true	operation	Liberation
+Relation	T7	T10	NoRel	true	descended	decimated
+Relation	T7	T12	NoRel	true	descended	lasted
+Relation	T7	T15	NoRel	true	descended	breaking
+Relation	T8	T6	NoRel	true	forced	carrying
+Relation	T9	T15	NoRel	true	fired	breaking

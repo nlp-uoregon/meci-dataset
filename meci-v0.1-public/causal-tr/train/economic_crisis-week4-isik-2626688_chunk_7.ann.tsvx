@@ -1,0 +1,39 @@
+Text	Banka işlemleri önümüzdeki birkaç yıl boyunca ABD'yi rahatsız etmeye devam etti .	Şehir çapındaki koşular arasında Boston ( Aralık 1931 ) , Chicago ( Haziran 1931 ve Haziran 1932 ) , Toledo ( Haziran 1931 ) ve St. Louis ( Ocak 1933 ) bulunur .	Depresyon sırasında uygulamaya konan kurumlar , ABD ticari bankalarında 1930'lardan bu yana , 1980'lerin ve 1990'ların ABD tasarrufları ve kredi krizi gibi koşullar altında bile kaçmasını engellemiştir .	2007'de başlayan küresel mali kriz , bir banka işlemiyle karşılaştırılabilir piyasa likidite başarısızlıkları etrafında toplanmıştır .	Kriz , İngiltere'nin Kuzey Kayası ve ABD'nin IndyMac'ı ile ilişkili olanlar da dahil olmak üzere bir banka kamulaştırması dalgası içeriyordu .
+Event	T0	işlemleri	EVENT	6
+Event	T1	etti	EVENT	75
+Event	T2	koşular	EVENT	98
+Event	T3	Depresyon	EVENT	244
+Event	T5	engellemiştir	EVENT	432
+Event	T7	kriz	EVENT	478
+Event	T9	toplanmıştır	EVENT	568
+Event	T10	Kriz	EVENT	583
+Event	T11	içeriyordu	EVENT	713
+Relation	T7	T9	CauseEffect	true	kriz	toplanmıştır
+Relation	T9	T7	EffectCause	true	toplanmıştır	kriz
+Relation	T0	T10	NoRel	true	işlemleri	Kriz
+Relation	T0	T11	NoRel	true	işlemleri	içeriyordu
+Relation	T0	T2	NoRel	true	işlemleri	koşular
+Relation	T0	T7	NoRel	true	işlemleri	kriz
+Relation	T1	T11	NoRel	true	etti	içeriyordu
+Relation	T1	T2	NoRel	true	etti	koşular
+Relation	T10	T0	NoRel	true	Kriz	işlemleri
+Relation	T10	T11	NoRel	true	Kriz	içeriyordu
+Relation	T10	T3	NoRel	true	Kriz	Depresyon
+Relation	T11	T1	NoRel	true	içeriyordu	etti
+Relation	T11	T10	NoRel	true	içeriyordu	Kriz
+Relation	T11	T3	NoRel	true	içeriyordu	Depresyon
+Relation	T11	T5	NoRel	true	içeriyordu	engellemiştir
+Relation	T2	T10	NoRel	true	koşular	Kriz
+Relation	T2	T3	NoRel	true	koşular	Depresyon
+Relation	T2	T5	NoRel	true	koşular	engellemiştir
+Relation	T2	T7	NoRel	true	koşular	kriz
+Relation	T2	T9	NoRel	true	koşular	toplanmıştır
+Relation	T3	T2	NoRel	true	Depresyon	koşular
+Relation	T3	T9	NoRel	true	Depresyon	toplanmıştır
+Relation	T5	T0	NoRel	true	engellemiştir	işlemleri
+Relation	T5	T1	NoRel	true	engellemiştir	etti
+Relation	T5	T11	NoRel	true	engellemiştir	içeriyordu
+Relation	T7	T3	NoRel	true	kriz	Depresyon
+Relation	T7	T5	NoRel	true	kriz	engellemiştir
+Relation	T9	T1	NoRel	true	toplanmıştır	etti
+Relation	T9	T2	NoRel	true	toplanmıştır	koşular

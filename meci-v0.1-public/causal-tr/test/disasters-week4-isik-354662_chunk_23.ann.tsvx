@@ -1,0 +1,41 @@
+Text	Püskürmeler başladığı günden itibaren olay tüm dünya basınında manşetler ile duyuruldu .	Ada ilk günden başlayarak İzlanda basın yayın ekiplerinin uğrak yeri oldu .	Püskürmeler sürmekteyken olay Avrupa basınında sık sık yer alan haberlerden biri hâline geldi .	Adalıların lavları durdurabilmek için harcadıkları yoğun emek pek çok dergi de kapak oldu .	National Geographic dergisi 1973 yıllı _ Yanardağ bir İzlanda köyünü yok ediyor _ adlı sayısı ile bu olayı okuyucularına duyurmuştur .
+Event	T2	duyuruldu	EVENT	77
+Event	T3	olay	EVENT	190
+Event	T4	geldi	EVENT	253
+Event	T5	ediyor	EVENT	426
+Event	T6	olayı	EVENT	454
+Event	T7	duyurmuştur	EVENT	474
+Event	T1	olay	EVENT	38
+Event	T8	oldu	EVENT	346
+Event	T9	lavları	EVENT	272
+Event	T10	emek	EVENT	318
+Relation	T1	T2	CauseEffect	true	olay	duyuruldu
+Relation	T2	T1	EffectCause	true	duyuruldu	olay
+Relation	T3	T4	CauseEffect	true	olay	geldi
+Relation	T4	T3	EffectCause	true	geldi	olay
+Relation	T9	T10	CauseEffect	true	lavları	emek
+Relation	T10	T9	EffectCause	true	emek	lavları
+Relation	T10	T8	CauseEffect	true	emek	oldu
+Relation	T8	T10	EffectCause	true	oldu	emek
+Relation	T4	T8	CauseEffect	true	geldi	oldu
+Relation	T8	T4	EffectCause	true	oldu	geldi
+Relation	T4	T7	CauseEffect	true	geldi	duyurmuştur
+Relation	T7	T4	EffectCause	true	duyurmuştur	geldi
+Relation	T10	T7	NoRel	true	emek	duyurmuştur
+Relation	T2	T10	NoRel	true	duyuruldu	emek
+Relation	T2	T5	NoRel	true	duyuruldu	ediyor
+Relation	T2	T7	NoRel	true	duyuruldu	duyurmuştur
+Relation	T3	T2	NoRel	true	olay	duyuruldu
+Relation	T3	T7	NoRel	true	olay	duyurmuştur
+Relation	T3	T8	NoRel	true	olay	oldu
+Relation	T3	T9	NoRel	true	olay	lavları
+Relation	T4	T1	NoRel	true	geldi	olay
+Relation	T4	T10	NoRel	true	geldi	emek
+Relation	T4	T2	NoRel	true	geldi	duyuruldu
+Relation	T5	T3	NoRel	true	ediyor	olay
+Relation	T6	T1	NoRel	true	olayı	olay
+Relation	T6	T2	NoRel	true	olayı	duyuruldu
+Relation	T7	T6	NoRel	true	duyurmuştur	olayı
+Relation	T8	T2	NoRel	true	oldu	duyuruldu
+Relation	T8	T7	NoRel	true	oldu	duyurmuştur
+Relation	T9	T8	NoRel	true	lavları	oldu

@@ -1,0 +1,60 @@
+Text	ہوائی اڈے کی تمام لائٹس بند کردی گئی تھیں اور ہوائی اڈے سے ملنے والے روڈ لنک سیل کردیئے گئے تھے ۔	پانی اور کھانا پہنچانے کے لئے ، پاکستان پولیس گورچانی اور انور نے رضاکارانہ خدمات انجام دیں اور اس طرح پولیس غیر مسلح ہونے کے باوجود طیارے تک پہنچنے میں کامیاب ہوگئی ۔	جب افسران ہائی جیکرز کو مشغول کرنے کے لئے طیارے میں موجود تھے ، اسپیشل سروس گروپ نے مشن کے لئے تیار کیا ۔	اس دوران میں ، افسروں نے ایک دوسرے سے ہندی بولی اور ہائی جیکرز کو راضی کیا کہ وہ ہندوستانی شہری ہیں ، جیسا کہ اغوا کاروں نے سوچا تھا کہ وہ ہندوستانی ہوائی اڈے پر ہیں ۔	وہ دو ہائی جیکرز جنہوں نے اپنی شناخت صابر اور شبیر کے نام سے کی تھی ان کے جسموں پر دستی بم باندھے باہر آئے تھے ۔
+Event	T0	پہنچنے	EVENT	240
+Event	T3	سوچا	EVENT	496
+Event	T4	شناخت	EVENT	571
+Event	T5	بند	EVENT	24
+Event	T6	سیل	EVENT	77
+Event	T7	کامیاب	EVENT	251
+Event	T1	پہنچانے	EVENT	113
+Event	T8	رضاکارانہ	EVENT	164
+Event	T9	مشغول	EVENT	290
+Event	T2	تیار	EVENT	361
+Event	T10	بولی	EVENT	415
+Event	T11	راضی	EVENT	438
+Event	T12	آئے	EVENT	643
+Relation	T1	T8	CauseEffect	true	پہنچانے	رضاکارانہ
+Relation	T8	T1	EffectCause	true	رضاکارانہ	پہنچانے
+Relation	T0	T12	NoRel	true	پہنچنے	آئے
+Relation	T0	T5	NoRel	true	پہنچنے	بند
+Relation	T1	T2	NoRel	true	پہنچانے	تیار
+Relation	T1	T3	NoRel	true	پہنچانے	سوچا
+Relation	T1	T5	NoRel	true	پہنچانے	بند
+Relation	T10	T1	NoRel	true	بولی	پہنچانے
+Relation	T10	T2	NoRel	true	بولی	تیار
+Relation	T10	T9	NoRel	true	بولی	مشغول
+Relation	T11	T10	NoRel	true	راضی	بولی
+Relation	T11	T2	NoRel	true	راضی	تیار
+Relation	T11	T9	NoRel	true	راضی	مشغول
+Relation	T12	T3	NoRel	true	آئے	سوچا
+Relation	T12	T5	NoRel	true	آئے	بند
+Relation	T2	T10	NoRel	true	تیار	بولی
+Relation	T2	T11	NoRel	true	تیار	راضی
+Relation	T2	T4	NoRel	true	تیار	شناخت
+Relation	T2	T5	NoRel	true	تیار	بند
+Relation	T3	T0	NoRel	true	سوچا	پہنچنے
+Relation	T3	T10	NoRel	true	سوچا	بولی
+Relation	T3	T5	NoRel	true	سوچا	بند
+Relation	T3	T9	NoRel	true	سوچا	مشغول
+Relation	T4	T1	NoRel	true	شناخت	پہنچانے
+Relation	T4	T10	NoRel	true	شناخت	بولی
+Relation	T4	T5	NoRel	true	شناخت	بند
+Relation	T4	T8	NoRel	true	شناخت	رضاکارانہ
+Relation	T5	T11	NoRel	true	بند	راضی
+Relation	T5	T12	NoRel	true	بند	آئے
+Relation	T5	T3	NoRel	true	بند	سوچا
+Relation	T6	T10	NoRel	true	سیل	بولی
+Relation	T6	T2	NoRel	true	سیل	تیار
+Relation	T6	T3	NoRel	true	سیل	سوچا
+Relation	T7	T0	NoRel	true	کامیاب	پہنچنے
+Relation	T7	T10	NoRel	true	کامیاب	بولی
+Relation	T7	T11	NoRel	true	کامیاب	راضی
+Relation	T7	T3	NoRel	true	کامیاب	سوچا
+Relation	T7	T8	NoRel	true	کامیاب	رضاکارانہ
+Relation	T7	T9	NoRel	true	کامیاب	مشغول
+Relation	T8	T0	NoRel	true	رضاکارانہ	پہنچنے
+Relation	T8	T11	NoRel	true	رضاکارانہ	راضی
+Relation	T9	T0	NoRel	true	مشغول	پہنچنے
+Relation	T9	T11	NoRel	true	مشغول	راضی
+Relation	T9	T5	NoRel	true	مشغول	بند
+Relation	T9	T7	NoRel	true	مشغول	کامیاب
+Relation	T9	T8	NoRel	true	مشغول	رضاکارانہ

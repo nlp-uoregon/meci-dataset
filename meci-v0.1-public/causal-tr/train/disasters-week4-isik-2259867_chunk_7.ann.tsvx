@@ -1,0 +1,48 @@
+Text	Adaya giden gemilerin yakındaki adalara yönlendirildiği belirtildi .	Osmanlı döneminden kalan Defterdar Camii'nin minaresi yıkıldı .	Ayrıca , Agios Nikolaos Katedrali'nin bir bölümü çöktü ve bunların dışında birkaç yerde de çökmeler ve yıkılmalar oluştu .	Depremden sonra artçı sarsıntılar devam etti ve 23 Temmuz 08:00 itibarıyla , 825'in üzerinde artçı sarsıntı kaydedildi .	Bunlardan en büyük artçı sarsıntı ; 4.9 büyüklüğünde oldu .
+Event	T0	belirtildi	EVENT	56
+Event	T1	yıkıldı	EVENT	123
+Event	T2	çöktü	EVENT	182
+Event	T4	oluştu	EVENT	247
+Event	T5	Depremden	EVENT	256
+Event	T6	etti	EVENT	296
+Event	T7	kaydedildi	EVENT	364
+Event	T8	sarsıntı	EVENT	402
+Event	T9	oldu	EVENT	430
+Relation	T5	T0	CauseEffect	true	Depremden	belirtildi
+Relation	T0	T5	EffectCause	true	belirtildi	Depremden
+Relation	T5	T1	CauseEffect	true	Depremden	yıkıldı
+Relation	T1	T5	EffectCause	true	yıkıldı	Depremden
+Relation	T5	T2	CauseEffect	true	Depremden	çöktü
+Relation	T2	T5	EffectCause	true	çöktü	Depremden
+Relation	T5	T4	CauseEffect	true	Depremden	oluştu
+Relation	T4	T5	EffectCause	true	oluştu	Depremden
+Relation	T5	T6	CauseEffect	true	Depremden	etti
+Relation	T6	T5	EffectCause	true	etti	Depremden
+Relation	T6	T9	CauseEffect	true	etti	oldu
+Relation	T9	T6	EffectCause	true	oldu	etti
+Relation	T6	T7	CauseEffect	true	etti	kaydedildi
+Relation	T7	T6	EffectCause	true	kaydedildi	etti
+Relation	T0	T1	NoRel	true	belirtildi	yıkıldı
+Relation	T0	T4	NoRel	true	belirtildi	oluştu
+Relation	T1	T2	NoRel	true	yıkıldı	çöktü
+Relation	T1	T8	NoRel	true	yıkıldı	sarsıntı
+Relation	T2	T4	NoRel	true	çöktü	oluştu
+Relation	T2	T8	NoRel	true	çöktü	sarsıntı
+Relation	T2	T9	NoRel	true	çöktü	oldu
+Relation	T4	T1	NoRel	true	oluştu	yıkıldı
+Relation	T4	T2	NoRel	true	oluştu	çöktü
+Relation	T4	T8	NoRel	true	oluştu	sarsıntı
+Relation	T5	T9	NoRel	true	Depremden	oldu
+Relation	T6	T0	NoRel	true	etti	belirtildi
+Relation	T6	T2	NoRel	true	etti	çöktü
+Relation	T6	T4	NoRel	true	etti	oluştu
+Relation	T7	T1	NoRel	true	kaydedildi	yıkıldı
+Relation	T7	T4	NoRel	true	kaydedildi	oluştu
+Relation	T7	T5	NoRel	true	kaydedildi	Depremden
+Relation	T7	T8	NoRel	true	kaydedildi	sarsıntı
+Relation	T7	T9	NoRel	true	kaydedildi	oldu
+Relation	T8	T2	NoRel	true	sarsıntı	çöktü
+Relation	T8	T4	NoRel	true	sarsıntı	oluştu
+Relation	T8	T7	NoRel	true	sarsıntı	kaydedildi
+Relation	T9	T0	NoRel	true	oldu	belirtildi
+Relation	T9	T8	NoRel	true	oldu	sarsıntı

@@ -1,0 +1,77 @@
+Text	Saldırı , KPD üyesi olan ev sahibiyle tartıştıktan sonra meydana geldi ve Wessel'i vuran Rotfront arkadaşlarından Albert Hochter ile iletişime geçti .	Wessel , aylar önce Horst - Wessel - Lied olarak Nazi marşı olarak bilinecek bir şarkıyı kaleme almıştı .	Goebbels saldırıda ele geçirildi ( ve Wessel'in ölüm döşeğinde geçirdiği haftalar ) şarkıyı duyurmak için kullanıldı ve cenazesi Naziler için anti - komünist propaganda fırsatı olarak kullanıldı .	Mayıs ayında Goebbels , cumhurbaşkanı Hindenburg'a " iftira atmaktan " mahkum edildi ve 800 mark para cezasına çarptırıldı .	Cezası , Goebbels'in 1929 tarihli _ Der Angriff _ gazetesinde yazdığı bir makaleden kaynaklanıyordu .
+Event	T0	Saldırı	EVENT	0
+Event	T1	tartıştıktan	EVENT	38
+Event	T2	geldi	EVENT	65
+Event	T3	vuran	EVENT	83
+Event	T4	geçti	EVENT	143
+Event	T5	almıştı	EVENT	247
+Event	T6	geçirildi	EVENT	280
+Event	T7	ölüm	EVENT	305
+Event	T8	geçirdiği	EVENT	320
+Event	T9	kullanıldı	EVENT	363
+Event	T10	kullanıldı	EVENT	441
+Event	T11	iftira	EVENT	507
+Event	T12	edildi	EVENT	532
+Event	T13	çarptırıldı	EVENT	565
+Event	T15	makaleden	EVENT	653
+Relation	T11	T12	CauseEffect	true	iftira	edildi
+Relation	T12	T11	EffectCause	true	edildi	iftira
+Relation	T12	T13	CauseEffect	true	edildi	çarptırıldı
+Relation	T13	T12	EffectCause	true	çarptırıldı	edildi
+Relation	T15	T11	CauseEffect	true	makaleden	iftira
+Relation	T11	T15	EffectCause	true	iftira	makaleden
+Relation	T0	T10	NoRel	true	Saldırı	kullanıldı
+Relation	T0	T2	NoRel	true	Saldırı	geldi
+Relation	T0	T4	NoRel	true	Saldırı	geçti
+Relation	T0	T6	NoRel	true	Saldırı	geçirildi
+Relation	T0	T7	NoRel	true	Saldırı	ölüm
+Relation	T0	T8	NoRel	true	Saldırı	geçirdiği
+Relation	T0	T9	NoRel	true	Saldırı	kullanıldı
+Relation	T1	T11	NoRel	true	tartıştıktan	iftira
+Relation	T1	T3	NoRel	true	tartıştıktan	vuran
+Relation	T1	T7	NoRel	true	tartıştıktan	ölüm
+Relation	T1	T9	NoRel	true	tartıştıktan	kullanıldı
+Relation	T10	T12	NoRel	true	kullanıldı	edildi
+Relation	T10	T5	NoRel	true	kullanıldı	almıştı
+Relation	T10	T8	NoRel	true	kullanıldı	geçirdiği
+Relation	T11	T1	NoRel	true	iftira	tartıştıktan
+Relation	T11	T10	NoRel	true	iftira	kullanıldı
+Relation	T11	T13	NoRel	true	iftira	çarptırıldı
+Relation	T12	T6	NoRel	true	edildi	geçirildi
+Relation	T13	T1	NoRel	true	çarptırıldı	tartıştıktan
+Relation	T13	T11	NoRel	true	çarptırıldı	iftira
+Relation	T13	T15	NoRel	true	çarptırıldı	makaleden
+Relation	T13	T5	NoRel	true	çarptırıldı	almıştı
+Relation	T13	T8	NoRel	true	çarptırıldı	geçirdiği
+Relation	T13	T9	NoRel	true	çarptırıldı	kullanıldı
+Relation	T15	T10	NoRel	true	makaleden	kullanıldı
+Relation	T15	T3	NoRel	true	makaleden	vuran
+Relation	T15	T4	NoRel	true	makaleden	geçti
+Relation	T15	T7	NoRel	true	makaleden	ölüm
+Relation	T2	T12	NoRel	true	geldi	edildi
+Relation	T2	T5	NoRel	true	geldi	almıştı
+Relation	T3	T6	NoRel	true	vuran	geçirildi
+Relation	T4	T10	NoRel	true	geçti	kullanıldı
+Relation	T4	T3	NoRel	true	geçti	vuran
+Relation	T4	T7	NoRel	true	geçti	ölüm
+Relation	T4	T8	NoRel	true	geçti	geçirdiği
+Relation	T5	T11	NoRel	true	almıştı	iftira
+Relation	T5	T13	NoRel	true	almıştı	çarptırıldı
+Relation	T5	T9	NoRel	true	almıştı	kullanıldı
+Relation	T6	T1	NoRel	true	geçirildi	tartıştıktan
+Relation	T6	T7	NoRel	true	geçirildi	ölüm
+Relation	T6	T8	NoRel	true	geçirildi	geçirdiği
+Relation	T6	T9	NoRel	true	geçirildi	kullanıldı
+Relation	T7	T1	NoRel	true	ölüm	tartıştıktan
+Relation	T7	T12	NoRel	true	ölüm	edildi
+Relation	T7	T13	NoRel	true	ölüm	çarptırıldı
+Relation	T7	T4	NoRel	true	ölüm	geçti
+Relation	T7	T5	NoRel	true	ölüm	almıştı
+Relation	T8	T1	NoRel	true	geçirdiği	tartıştıktan
+Relation	T8	T13	NoRel	true	geçirdiği	çarptırıldı
+Relation	T8	T2	NoRel	true	geçirdiği	geldi
+Relation	T8	T7	NoRel	true	geçirdiği	ölüm
+Relation	T9	T0	NoRel	true	kullanıldı	Saldırı
+Relation	T9	T11	NoRel	true	kullanıldı	iftira
+Relation	T9	T13	NoRel	true	kullanıldı	çarptırıldı
+Relation	T9	T6	NoRel	true	kullanıldı	geçirildi

@@ -1,0 +1,17 @@
+Text	küçükresim | sağ | Kral Abdullah Sokağında tünel ( Cidde - Suudi Arabistan ) küçükresim | sağ | Cidde , Kral Abdulaziz Uluslararası Havaalanı kuzeyde yer alıyor .	Mekke'ye giden ana otoyollar güneydoğuda yer alıyor .	Harita ölçeği ; yaklaşık kuzeyden güneye 25 km ( 15½ mi ) küçükresim | sağ | 1924 yılına ait bu gravürde , şehrin arkasında Cebel El - Hicaz dağları görünüyor .	2009 CIDDE SELI , Kızıldeniz'in doğu kıyısında Cidde şehrinde ve Suudi Arabistan'ın Mekke ilinin bir kısmında meydana gelen bir su baskınıdır .	3 Ocak 2010'da yapılan araştırma sonucu bazı 122 kişinin öldüğü , 350 kişinin de kaybolduğu açıklanmıştır .
+Event	T0	baskınıdır	EVENT	509
+Event	T1	araştırma	EVENT	545
+Event	T2	öldüğü	EVENT	579
+Event	T3	açıklanmıştır	EVENT	614
+Event	T4	SELI	EVENT	389
+Event	T5	kaybolduğu	EVENT	603
+Relation	T0	T4	CauseEffect	true	baskınıdır	SELI
+Relation	T4	T0	EffectCause	true	SELI	baskınıdır
+Relation	T1	T3	CauseEffect	true	araştırma	açıklanmıştır
+Relation	T3	T1	EffectCause	true	açıklanmıştır	araştırma
+Relation	T1	T4	NoRel	true	araştırma	SELI
+Relation	T2	T3	NoRel	true	öldüğü	açıklanmıştır
+Relation	T3	T5	NoRel	true	açıklanmıştır	kaybolduğu
+Relation	T5	T0	NoRel	true	kaybolduğu	baskınıdır
+Relation	T5	T1	NoRel	true	kaybolduğu	araştırma
+Relation	T5	T2	NoRel	true	kaybolduğu	öldüğü

@@ -1,0 +1,18 @@
+Text	Hastalık muhtemelen Şoşoni Kızılderili kabilelerinin seyahatleri yoluyla yayıldı .	1780'den başlayarak günümüz New Mexico'sunu oluşturan bölgede Pueblos'a dek ulaştı .	Ayrıca 1782'de Hudson's Bay Company'nin iç ticaret merkezlerinde de ortaya çıktı .	Kuzeybatı kıyısı da dahil olmak üzere kıtadaki hemen hemen her kabileyi etkiledi .	Bugünkü Washington'un batı bölgesinde yaklaşık 11.000 Yerli Amerikalıyı öldürdüğü ve nüfusu sadece yedi yılda 37.000'den 26.000'e düşürdüğü tahmin ediliyor .
+Event	T0	seyahatleri	EVENT	53
+Event	T1	yayıldı	EVENT	73
+Event	T2	ulaştı	EVENT	159
+Event	T4	etkiledi	EVENT	323
+Event	T5	öldürdüğü	EVENT	406
+Relation	T0	T1	CauseEffect	true	seyahatleri	yayıldı
+Relation	T1	T0	EffectCause	true	yayıldı	seyahatleri
+Relation	T0	T4	CauseEffect	true	seyahatleri	etkiledi
+Relation	T4	T0	EffectCause	true	etkiledi	seyahatleri
+Relation	T1	T2	CauseEffect	true	yayıldı	ulaştı
+Relation	T2	T1	EffectCause	true	ulaştı	yayıldı
+Relation	T2	T5	CauseEffect	true	ulaştı	öldürdüğü
+Relation	T5	T2	EffectCause	true	öldürdüğü	ulaştı
+Relation	T1	T4	NoRel	true	yayıldı	etkiledi
+Relation	T2	T0	NoRel	true	ulaştı	seyahatleri
+Relation	T4	T2	NoRel	true	etkiledi	ulaştı
+Relation	T5	T4	NoRel	true	öldürdüğü	etkiledi

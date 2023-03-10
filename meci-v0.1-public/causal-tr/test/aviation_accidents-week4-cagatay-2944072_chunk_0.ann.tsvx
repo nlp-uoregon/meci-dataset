@@ -1,0 +1,48 @@
+Text	LUFTHANSA'NIN 2904 SEFER SAYILI UÇUŞU , 14 Eylül 1993'te Okęcie Uluslararası Havaalanı'ndaki pistte zamanında duramayan Lufthansa havayollarına ait Airbus A320 - 200 uçağı kaza yaptı .	Frankfurt'tan Varşova'ya gerçekleştirilen bir uçuştu .	sağ | küçükresim | Kaza uçağına benzer bir Lufthansa Airbus A320 uçağı .	sol | küçükresim | İlk önce ana destek ve sonrasında ikinci desteğin yere konması ile frenlerin devreye girmesi arasında geçen sürenin ilüstrasyonu .	Lufthansa Uçuş 2904 , Okęcie Uluslararası Havaalanı Pist 11'e iniş izni verildi ve uçak piste yaklaşırken pilotlar rüzgar kesmesinin varlığından haberdar edildi .
+Event	T2	uçuştu	EVENT	231
+Event	T3	konması	EVENT	387
+Event	T4	girmesi	EVENT	417
+Event	T5	geçen	EVENT	434
+Event	T6	verildi	EVENT	535
+Event	T7	edildi	EVENT	617
+Event	T8	kaza	EVENT	172
+Event	T9	UÇUŞU	EVENT	32
+Event	T1	Kaza	EVENT	259
+Event	T10	destek	EVENT	345
+Event	T11	desteğin	EVENT	373
+Event	T12	iniş	EVENT	525
+Relation	T6	T12	CauseEffect	true	verildi	iniş
+Relation	T12	T6	EffectCause	true	iniş	verildi
+Relation	T1	T12	NoRel	true	Kaza	iniş
+Relation	T1	T4	NoRel	true	Kaza	girmesi
+Relation	T1	T5	NoRel	true	Kaza	geçen
+Relation	T1	T6	NoRel	true	Kaza	verildi
+Relation	T10	T1	NoRel	true	destek	Kaza
+Relation	T10	T12	NoRel	true	destek	iniş
+Relation	T11	T10	NoRel	true	desteğin	destek
+Relation	T11	T4	NoRel	true	desteğin	girmesi
+Relation	T11	T7	NoRel	true	desteğin	edildi
+Relation	T12	T2	NoRel	true	iniş	uçuştu
+Relation	T12	T4	NoRel	true	iniş	girmesi
+Relation	T2	T1	NoRel	true	uçuştu	Kaza
+Relation	T2	T12	NoRel	true	uçuştu	iniş
+Relation	T3	T12	NoRel	true	konması	iniş
+Relation	T3	T8	NoRel	true	konması	kaza
+Relation	T4	T1	NoRel	true	girmesi	Kaza
+Relation	T4	T12	NoRel	true	girmesi	iniş
+Relation	T4	T2	NoRel	true	girmesi	uçuştu
+Relation	T4	T9	NoRel	true	girmesi	UÇUŞU
+Relation	T5	T2	NoRel	true	geçen	uçuştu
+Relation	T6	T10	NoRel	true	verildi	destek
+Relation	T6	T2	NoRel	true	verildi	uçuştu
+Relation	T6	T3	NoRel	true	verildi	konması
+Relation	T6	T8	NoRel	true	verildi	kaza
+Relation	T7	T4	NoRel	true	edildi	girmesi
+Relation	T7	T5	NoRel	true	edildi	geçen
+Relation	T7	T8	NoRel	true	edildi	kaza
+Relation	T8	T10	NoRel	true	kaza	destek
+Relation	T8	T12	NoRel	true	kaza	iniş
+Relation	T8	T4	NoRel	true	kaza	girmesi
+Relation	T8	T7	NoRel	true	kaza	edildi
+Relation	T9	T2	NoRel	true	UÇUŞU	uçuştu
+Relation	T9	T3	NoRel	true	UÇUŞU	konması

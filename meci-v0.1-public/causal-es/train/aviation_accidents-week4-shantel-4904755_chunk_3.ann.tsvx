@@ -1,0 +1,83 @@
+Text	Como resultado del incidente , 7 pasajeros y 2 miembros de la tripulación recibieron lesiones de diversa gravedad , la aeronave sufrió daños estructurales importantes , como el ala izquierda que estaba completamente rota y separada del aparato y el tren de aterrizaje derecho se rompió .	La evacuación de los pasajeros de la aeronave fue realizada por miembros de la tripulación de vuelo y de cabina .	Las víctimas fueron trasladadas a hospitales de Blagovéshchensk , la información en los medios sobre su número cambió varias veces .	El accidente fue declarado inicialmente por varios medios de comunicación como excursión en la pista .	El 9 de agosto , el Comité de Aviación Interestatal de la Comunidad de Estados Independientes abrió una investigación del accidente , con B G Rafikov a la cabeza .
+Event	T0	incidente	EVENT	19
+Event	T1	lesiones	EVENT	85
+Event	T2	separada	EVENT	223
+Event	T3	aterrizaje	EVENT	257
+Event	T4	rompió	EVENT	279
+Event	T5	evacuación	EVENT	291
+Event	T6	realizada	EVENT	338
+Event	T7	trasladadas	EVENT	422
+Event	T8	cambió	EVENT	513
+Event	T9	declarado	EVENT	552
+Event	T10	excursión	EVENT	614
+Event	T11	abrió	EVENT	732
+Event	T12	investigación	EVENT	742
+Event	T13	accidente	EVENT	760
+Relation	T0	T1	CauseEffect	true	incidente	lesiones
+Relation	T1	T0	EffectCause	true	lesiones	incidente
+Relation	T0	T5	CauseEffect	true	incidente	evacuación
+Relation	T5	T0	EffectCause	true	evacuación	incidente
+Relation	T0	T12	NoRel	true	incidente	investigación
+Relation	T0	T13	NoRel	true	incidente	accidente
+Relation	T0	T3	NoRel	true	incidente	aterrizaje
+Relation	T0	T6	NoRel	true	incidente	realizada
+Relation	T0	T7	NoRel	true	incidente	trasladadas
+Relation	T0	T9	NoRel	true	incidente	declarado
+Relation	T1	T11	NoRel	true	lesiones	abrió
+Relation	T1	T3	NoRel	true	lesiones	aterrizaje
+Relation	T1	T6	NoRel	true	lesiones	realizada
+Relation	T10	T0	NoRel	true	excursión	incidente
+Relation	T10	T13	NoRel	true	excursión	accidente
+Relation	T10	T2	NoRel	true	excursión	separada
+Relation	T10	T3	NoRel	true	excursión	aterrizaje
+Relation	T10	T4	NoRel	true	excursión	rompió
+Relation	T10	T5	NoRel	true	excursión	evacuación
+Relation	T10	T6	NoRel	true	excursión	realizada
+Relation	T10	T8	NoRel	true	excursión	cambió
+Relation	T10	T9	NoRel	true	excursión	declarado
+Relation	T11	T12	NoRel	true	abrió	investigación
+Relation	T11	T13	NoRel	true	abrió	accidente
+Relation	T11	T3	NoRel	true	abrió	aterrizaje
+Relation	T11	T5	NoRel	true	abrió	evacuación
+Relation	T11	T9	NoRel	true	abrió	declarado
+Relation	T12	T0	NoRel	true	investigación	incidente
+Relation	T12	T11	NoRel	true	investigación	abrió
+Relation	T12	T3	NoRel	true	investigación	aterrizaje
+Relation	T12	T4	NoRel	true	investigación	rompió
+Relation	T12	T8	NoRel	true	investigación	cambió
+Relation	T12	T9	NoRel	true	investigación	declarado
+Relation	T13	T11	NoRel	true	accidente	abrió
+Relation	T13	T2	NoRel	true	accidente	separada
+Relation	T13	T3	NoRel	true	accidente	aterrizaje
+Relation	T2	T1	NoRel	true	separada	lesiones
+Relation	T2	T10	NoRel	true	separada	excursión
+Relation	T2	T12	NoRel	true	separada	investigación
+Relation	T2	T4	NoRel	true	separada	rompió
+Relation	T2	T6	NoRel	true	separada	realizada
+Relation	T2	T7	NoRel	true	separada	trasladadas
+Relation	T2	T8	NoRel	true	separada	cambió
+Relation	T3	T0	NoRel	true	aterrizaje	incidente
+Relation	T3	T1	NoRel	true	aterrizaje	lesiones
+Relation	T3	T12	NoRel	true	aterrizaje	investigación
+Relation	T4	T3	NoRel	true	rompió	aterrizaje
+Relation	T5	T11	NoRel	true	evacuación	abrió
+Relation	T5	T4	NoRel	true	evacuación	rompió
+Relation	T5	T6	NoRel	true	evacuación	realizada
+Relation	T5	T7	NoRel	true	evacuación	trasladadas
+Relation	T6	T1	NoRel	true	realizada	lesiones
+Relation	T6	T7	NoRel	true	realizada	trasladadas
+Relation	T7	T11	NoRel	true	trasladadas	abrió
+Relation	T7	T13	NoRel	true	trasladadas	accidente
+Relation	T7	T4	NoRel	true	trasladadas	rompió
+Relation	T7	T8	NoRel	true	trasladadas	cambió
+Relation	T7	T9	NoRel	true	trasladadas	declarado
+Relation	T8	T11	NoRel	true	cambió	abrió
+Relation	T8	T12	NoRel	true	cambió	investigación
+Relation	T9	T0	NoRel	true	declarado	incidente
+Relation	T9	T1	NoRel	true	declarado	lesiones
+Relation	T9	T11	NoRel	true	declarado	abrió
+Relation	T9	T13	NoRel	true	declarado	accidente
+Relation	T9	T2	NoRel	true	declarado	separada
+Relation	T9	T6	NoRel	true	declarado	realizada
+Relation	T9	T7	NoRel	true	declarado	trasladadas
+Relation	T9	T8	NoRel	true	declarado	cambió

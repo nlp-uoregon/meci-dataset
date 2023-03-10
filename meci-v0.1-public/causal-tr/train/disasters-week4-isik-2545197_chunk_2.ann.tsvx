@@ -1,0 +1,76 @@
+Text	Ayrıca 75 kişilik Jandarma Arama Kurtarma ( JAK ) ve 10 kişilik AFAD arama kurtarma ekibi ile 2 araç , Ankara'dan askeri uçakla bölgeye gönderiliyor " denildi .	İlk çığ düşmesinde beş , ikinci çığda ise 33 kişinin hayatını kaybettiği açıklanmış , çığ altında kalan üç kişi için arama çalışmalarının devam ettiği belirtilmişti .	Perşembe sabahı başlayan arama çalışmalarında çığ altında kalmış olan son üç kişinin cesedine ulaşıldı .	Ancak bir itfaiye erinin halen çığ altında kaldığı ve kötü hava koşullarından dolayı cenazesine ulaşılamadığı Van Valiliği tarafından doğrulandı .	İtfaiye eri Mehmet Can Daşdemir'in cansız bedenine 39 gün sonra ulaşıldı .
+Event	T0	gönderiliyor	EVENT	136
+Event	T2	açıklanmış	EVENT	234
+Event	T3	belirtilmişti	EVENT	312
+Event	T4	ulaşıldı	EVENT	422
+Event	T5	kaldığı	EVENT	476
+Event	T6	doğrulandı	EVENT	567
+Event	T7	ulaşıldı	EVENT	644
+Event	T8	denildi	EVENT	151
+Event	T1	çığ	EVENT	165
+Event	T9	çığda	EVENT	193
+Event	T10	kalan	EVENT	259
+Event	T11	çalışmalarının	EVENT	284
+Event	T12	çalışmalarında	EVENT	359
+Event	T13	kalmış	EVENT	386
+Relation	T10	T11	CauseEffect	true	kalan	çalışmalarının
+Relation	T11	T10	EffectCause	true	çalışmalarının	kalan
+Relation	T13	T12	CauseEffect	true	kalmış	çalışmalarında
+Relation	T12	T13	EffectCause	true	çalışmalarında	kalmış
+Relation	T12	T4	CauseEffect	true	çalışmalarında	ulaşıldı
+Relation	T4	T12	EffectCause	true	ulaşıldı	çalışmalarında
+Relation	T11	T4	CauseEffect	true	çalışmalarının	ulaşıldı
+Relation	T4	T11	EffectCause	true	ulaşıldı	çalışmalarının
+Relation	T0	T12	NoRel	true	gönderiliyor	çalışmalarında
+Relation	T0	T5	NoRel	true	gönderiliyor	kaldığı
+Relation	T0	T9	NoRel	true	gönderiliyor	çığda
+Relation	T1	T12	NoRel	true	çığ	çalışmalarında
+Relation	T1	T13	NoRel	true	çığ	kalmış
+Relation	T1	T6	NoRel	true	çığ	doğrulandı
+Relation	T10	T13	NoRel	true	kalan	kalmış
+Relation	T10	T5	NoRel	true	kalan	kaldığı
+Relation	T10	T9	NoRel	true	kalan	çığda
+Relation	T11	T3	NoRel	true	çalışmalarının	belirtilmişti
+Relation	T11	T5	NoRel	true	çalışmalarının	kaldığı
+Relation	T12	T10	NoRel	true	çalışmalarında	kalan
+Relation	T12	T3	NoRel	true	çalışmalarında	belirtilmişti
+Relation	T12	T6	NoRel	true	çalışmalarında	doğrulandı
+Relation	T12	T9	NoRel	true	çalışmalarında	çığda
+Relation	T13	T11	NoRel	true	kalmış	çalışmalarının
+Relation	T13	T4	NoRel	true	kalmış	ulaşıldı
+Relation	T13	T5	NoRel	true	kalmış	kaldığı
+Relation	T13	T7	NoRel	true	kalmış	ulaşıldı
+Relation	T13	T8	NoRel	true	kalmış	denildi
+Relation	T2	T1	NoRel	true	açıklanmış	çığ
+Relation	T2	T5	NoRel	true	açıklanmış	kaldığı
+Relation	T2	T6	NoRel	true	açıklanmış	doğrulandı
+Relation	T2	T8	NoRel	true	açıklanmış	denildi
+Relation	T2	T9	NoRel	true	açıklanmış	çığda
+Relation	T3	T11	NoRel	true	belirtilmişti	çalışmalarının
+Relation	T3	T6	NoRel	true	belirtilmişti	doğrulandı
+Relation	T4	T0	NoRel	true	ulaşıldı	gönderiliyor
+Relation	T4	T1	NoRel	true	ulaşıldı	çığ
+Relation	T4	T10	NoRel	true	ulaşıldı	kalan
+Relation	T4	T2	NoRel	true	ulaşıldı	açıklanmış
+Relation	T4	T6	NoRel	true	ulaşıldı	doğrulandı
+Relation	T4	T7	NoRel	true	ulaşıldı	ulaşıldı
+Relation	T4	T9	NoRel	true	ulaşıldı	çığda
+Relation	T5	T1	NoRel	true	kaldığı	çığ
+Relation	T5	T6	NoRel	true	kaldığı	doğrulandı
+Relation	T6	T10	NoRel	true	doğrulandı	kalan
+Relation	T6	T11	NoRel	true	doğrulandı	çalışmalarının
+Relation	T6	T4	NoRel	true	doğrulandı	ulaşıldı
+Relation	T6	T5	NoRel	true	doğrulandı	kaldığı
+Relation	T6	T7	NoRel	true	doğrulandı	ulaşıldı
+Relation	T7	T1	NoRel	true	ulaşıldı	çığ
+Relation	T7	T2	NoRel	true	ulaşıldı	açıklanmış
+Relation	T8	T1	NoRel	true	denildi	çığ
+Relation	T8	T12	NoRel	true	denildi	çalışmalarında
+Relation	T8	T2	NoRel	true	denildi	açıklanmış
+Relation	T9	T10	NoRel	true	çığda	kalan
+Relation	T9	T11	NoRel	true	çığda	çalışmalarının
+Relation	T9	T2	NoRel	true	çığda	açıklanmış
+Relation	T9	T4	NoRel	true	çığda	ulaşıldı
+Relation	T9	T5	NoRel	true	çığda	kaldığı
+Relation	T9	T6	NoRel	true	çığda	doğrulandı
+Relation	T9	T8	NoRel	true	çığda	denildi

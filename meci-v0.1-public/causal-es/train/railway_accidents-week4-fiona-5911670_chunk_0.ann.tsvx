@@ -1,0 +1,65 @@
+Text	El ACCIDENTE FERROVIARIO DE BRÉTIGNY-SUR-ORGE se produjo en la estación de Brétigny , en la localidad homónima , en el departamento de Essonne , al sur de París , el 12 de julio de 2013 .	En el accidente fallecieron seis personas , hubo doce heridos , entre ellos nueve en estado grave .	El tren regional , un Intercités , descarriló cuatro de los siete convoyes cuando realizaba el trayecto entre París y Limoges .	En los vagones llevaba a bordo a 350 personas y se dirigía a Limoges .	Las causas del accidente obligaron a suspender el tráfico en la estación Brétigny-sur-Orge y en la Línea RER C de la Red Ferroviaria Exprés Regional de París .
+Event	T0	produjo	EVENT	49
+Event	T1	fallecieron	EVENT	204
+Event	T2	heridos	EVENT	242
+Event	T3	descarriló	EVENT	323
+Event	T4	realizaba	EVENT	370
+Event	T5	trayecto	EVENT	383
+Event	T6	dirigía	EVENT	467
+Event	T7	causas	EVENT	491
+Event	T8	obligaron	EVENT	512
+Event	T9	suspender	EVENT	524
+Event	T10	tráfico	EVENT	537
+Event	T11	ACCIDENTE	EVENT	3
+Relation	T11	T1	CauseEffect	true	ACCIDENTE	fallecieron
+Relation	T1	T11	EffectCause	true	fallecieron	ACCIDENTE
+Relation	T11	T2	CauseEffect	true	ACCIDENTE	heridos
+Relation	T2	T11	EffectCause	true	heridos	ACCIDENTE
+Relation	T3	T11	CauseEffect	true	descarriló	ACCIDENTE
+Relation	T11	T3	EffectCause	true	ACCIDENTE	descarriló
+Relation	T0	T3	NoRel	true	produjo	descarriló
+Relation	T0	T7	NoRel	true	produjo	causas
+Relation	T0	T8	NoRel	true	produjo	obligaron
+Relation	T0	T9	NoRel	true	produjo	suspender
+Relation	T1	T3	NoRel	true	fallecieron	descarriló
+Relation	T1	T4	NoRel	true	fallecieron	realizaba
+Relation	T10	T1	NoRel	true	tráfico	fallecieron
+Relation	T10	T3	NoRel	true	tráfico	descarriló
+Relation	T10	T6	NoRel	true	tráfico	dirigía
+Relation	T10	T7	NoRel	true	tráfico	causas
+Relation	T11	T10	NoRel	true	ACCIDENTE	tráfico
+Relation	T11	T9	NoRel	true	ACCIDENTE	suspender
+Relation	T2	T9	NoRel	true	heridos	suspender
+Relation	T3	T0	NoRel	true	descarriló	produjo
+Relation	T3	T2	NoRel	true	descarriló	heridos
+Relation	T3	T5	NoRel	true	descarriló	trayecto
+Relation	T3	T6	NoRel	true	descarriló	dirigía
+Relation	T3	T9	NoRel	true	descarriló	suspender
+Relation	T4	T10	NoRel	true	realizaba	tráfico
+Relation	T4	T11	NoRel	true	realizaba	ACCIDENTE
+Relation	T4	T6	NoRel	true	realizaba	dirigía
+Relation	T4	T7	NoRel	true	realizaba	causas
+Relation	T4	T8	NoRel	true	realizaba	obligaron
+Relation	T4	T9	NoRel	true	realizaba	suspender
+Relation	T5	T1	NoRel	true	trayecto	fallecieron
+Relation	T5	T11	NoRel	true	trayecto	ACCIDENTE
+Relation	T5	T7	NoRel	true	trayecto	causas
+Relation	T6	T0	NoRel	true	dirigía	produjo
+Relation	T6	T1	NoRel	true	dirigía	fallecieron
+Relation	T6	T10	NoRel	true	dirigía	tráfico
+Relation	T6	T11	NoRel	true	dirigía	ACCIDENTE
+Relation	T6	T3	NoRel	true	dirigía	descarriló
+Relation	T6	T4	NoRel	true	dirigía	realizaba
+Relation	T7	T2	NoRel	true	causas	heridos
+Relation	T7	T8	NoRel	true	causas	obligaron
+Relation	T8	T0	NoRel	true	obligaron	produjo
+Relation	T8	T1	NoRel	true	obligaron	fallecieron
+Relation	T8	T10	NoRel	true	obligaron	tráfico
+Relation	T8	T11	NoRel	true	obligaron	ACCIDENTE
+Relation	T8	T2	NoRel	true	obligaron	heridos
+Relation	T8	T5	NoRel	true	obligaron	trayecto
+Relation	T9	T0	NoRel	true	suspender	produjo
+Relation	T9	T1	NoRel	true	suspender	fallecieron
+Relation	T9	T10	NoRel	true	suspender	tráfico
+Relation	T9	T11	NoRel	true	suspender	ACCIDENTE
+Relation	T9	T2	NoRel	true	suspender	heridos

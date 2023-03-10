@@ -1,0 +1,118 @@
+Text	Los ATENTADOS EN ADÉN ocurrieron entre el 10 al 13 de octubre de 2021 y estaban dirigidos a miembros del Estado yemení , los ataques dejaron 18 fallecidos .	El 10 de octubre de 2021 , un coche bomba en Adén ( Yemen ) mató a seis personas e hirió a otras siete .	La agencia de noticias estatal dijo que la bomba fue un intento de asesinato terrorista dirigido al gobernador de Adén Ahmed Lamlas y al ministro de agricultura Salem al-Suqatri .	El 30 de octubre de 2021 , un coche bomba cerca del Aeropuerto Internacional de Adén mató al menos a 12 civiles e hirió a varios más .	El primer ministro Mueeen Abdulmalek Saeed lo describió como un atentado terrorista con bomba .
+Event	T0	ATENTADOS	EVENT	4
+Event	T1	ocurrieron	EVENT	22
+Event	T2	dirigidos	EVENT	80
+Event	T4	fallecidos	EVENT	144
+Event	T5	mató	EVENT	217
+Event	T6	hirió	EVENT	240
+Event	T7	dijo	EVENT	293
+Event	T8	bomba	EVENT	305
+Event	T9	intento	EVENT	318
+Event	T10	asesinato	EVENT	329
+Event	T11	dirigido	EVENT	350
+Event	T12	mató	EVENT	527
+Event	T13	hirió	EVENT	556
+Event	T14	atentado	EVENT	641
+Event	T3	bomba	EVENT	193
+Event	T15	bomba	EVENT	478
+Event	T16	describió	EVENT	623
+Relation	T0	T4	CauseEffect	true	ATENTADOS	fallecidos
+Relation	T4	T0	EffectCause	true	fallecidos	ATENTADOS
+Relation	T3	T5	CauseEffect	true	bomba	mató
+Relation	T5	T3	EffectCause	true	mató	bomba
+Relation	T3	T6	CauseEffect	true	bomba	hirió
+Relation	T6	T3	EffectCause	true	hirió	bomba
+Relation	T15	T12	CauseEffect	true	bomba	mató
+Relation	T12	T15	EffectCause	true	mató	bomba
+Relation	T15	T13	CauseEffect	true	bomba	hirió
+Relation	T13	T15	EffectCause	true	hirió	bomba
+Relation	T0	T10	NoRel	true	ATENTADOS	asesinato
+Relation	T0	T14	NoRel	true	ATENTADOS	atentado
+Relation	T0	T16	NoRel	true	ATENTADOS	describió
+Relation	T0	T7	NoRel	true	ATENTADOS	dijo
+Relation	T1	T13	NoRel	true	ocurrieron	hirió
+Relation	T1	T2	NoRel	true	ocurrieron	dirigidos
+Relation	T1	T3	NoRel	true	ocurrieron	bomba
+Relation	T1	T5	NoRel	true	ocurrieron	mató
+Relation	T1	T8	NoRel	true	ocurrieron	bomba
+Relation	T1	T9	NoRel	true	ocurrieron	intento
+Relation	T10	T0	NoRel	true	asesinato	ATENTADOS
+Relation	T10	T1	NoRel	true	asesinato	ocurrieron
+Relation	T10	T15	NoRel	true	asesinato	bomba
+Relation	T10	T3	NoRel	true	asesinato	bomba
+Relation	T11	T10	NoRel	true	dirigido	asesinato
+Relation	T11	T5	NoRel	true	dirigido	mató
+Relation	T12	T14	NoRel	true	mató	atentado
+Relation	T12	T2	NoRel	true	mató	dirigidos
+Relation	T12	T6	NoRel	true	mató	hirió
+Relation	T12	T8	NoRel	true	mató	bomba
+Relation	T12	T9	NoRel	true	mató	intento
+Relation	T13	T0	NoRel	true	hirió	ATENTADOS
+Relation	T13	T14	NoRel	true	hirió	atentado
+Relation	T13	T2	NoRel	true	hirió	dirigidos
+Relation	T13	T5	NoRel	true	hirió	mató
+Relation	T13	T9	NoRel	true	hirió	intento
+Relation	T14	T1	NoRel	true	atentado	ocurrieron
+Relation	T14	T11	NoRel	true	atentado	dirigido
+Relation	T14	T2	NoRel	true	atentado	dirigidos
+Relation	T14	T6	NoRel	true	atentado	hirió
+Relation	T15	T1	NoRel	true	bomba	ocurrieron
+Relation	T15	T4	NoRel	true	bomba	fallecidos
+Relation	T16	T13	NoRel	true	describió	hirió
+Relation	T16	T4	NoRel	true	describió	fallecidos
+Relation	T16	T6	NoRel	true	describió	hirió
+Relation	T16	T8	NoRel	true	describió	bomba
+Relation	T16	T9	NoRel	true	describió	intento
+Relation	T2	T1	NoRel	true	dirigidos	ocurrieron
+Relation	T2	T11	NoRel	true	dirigidos	dirigido
+Relation	T2	T13	NoRel	true	dirigidos	hirió
+Relation	T2	T14	NoRel	true	dirigidos	atentado
+Relation	T2	T15	NoRel	true	dirigidos	bomba
+Relation	T2	T16	NoRel	true	dirigidos	describió
+Relation	T2	T4	NoRel	true	dirigidos	fallecidos
+Relation	T2	T9	NoRel	true	dirigidos	intento
+Relation	T3	T1	NoRel	true	bomba	ocurrieron
+Relation	T3	T10	NoRel	true	bomba	asesinato
+Relation	T3	T15	NoRel	true	bomba	bomba
+Relation	T3	T16	NoRel	true	bomba	describió
+Relation	T3	T2	NoRel	true	bomba	dirigidos
+Relation	T4	T10	NoRel	true	fallecidos	asesinato
+Relation	T4	T11	NoRel	true	fallecidos	dirigido
+Relation	T4	T12	NoRel	true	fallecidos	mató
+Relation	T4	T13	NoRel	true	fallecidos	hirió
+Relation	T4	T14	NoRel	true	fallecidos	atentado
+Relation	T4	T3	NoRel	true	fallecidos	bomba
+Relation	T4	T9	NoRel	true	fallecidos	intento
+Relation	T5	T0	NoRel	true	mató	ATENTADOS
+Relation	T5	T1	NoRel	true	mató	ocurrieron
+Relation	T5	T12	NoRel	true	mató	mató
+Relation	T5	T14	NoRel	true	mató	atentado
+Relation	T5	T16	NoRel	true	mató	describió
+Relation	T5	T4	NoRel	true	mató	fallecidos
+Relation	T5	T7	NoRel	true	mató	dijo
+Relation	T5	T8	NoRel	true	mató	bomba
+Relation	T6	T10	NoRel	true	hirió	asesinato
+Relation	T6	T16	NoRel	true	hirió	describió
+Relation	T6	T2	NoRel	true	hirió	dirigidos
+Relation	T6	T5	NoRel	true	hirió	mató
+Relation	T6	T8	NoRel	true	hirió	bomba
+Relation	T7	T0	NoRel	true	dijo	ATENTADOS
+Relation	T7	T1	NoRel	true	dijo	ocurrieron
+Relation	T7	T14	NoRel	true	dijo	atentado
+Relation	T7	T15	NoRel	true	dijo	bomba
+Relation	T7	T2	NoRel	true	dijo	dirigidos
+Relation	T7	T6	NoRel	true	dijo	hirió
+Relation	T7	T8	NoRel	true	dijo	bomba
+Relation	T7	T9	NoRel	true	dijo	intento
+Relation	T8	T1	NoRel	true	bomba	ocurrieron
+Relation	T8	T10	NoRel	true	bomba	asesinato
+Relation	T8	T11	NoRel	true	bomba	dirigido
+Relation	T8	T13	NoRel	true	bomba	hirió
+Relation	T8	T14	NoRel	true	bomba	atentado
+Relation	T8	T15	NoRel	true	bomba	bomba
+Relation	T8	T2	NoRel	true	bomba	dirigidos
+Relation	T8	T3	NoRel	true	bomba	bomba
+Relation	T8	T7	NoRel	true	bomba	dijo
+Relation	T9	T1	NoRel	true	intento	ocurrieron
+Relation	T9	T13	NoRel	true	intento	hirió
+Relation	T9	T6	NoRel	true	intento	hirió

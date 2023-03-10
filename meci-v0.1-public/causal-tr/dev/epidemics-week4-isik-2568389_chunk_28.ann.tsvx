@@ -1,0 +1,54 @@
+Text	Öğleden sonra 293 vaka daha doğrulandı ve toplam sayı 5, 621'e ulaştı .	- İsveç 22 vaka daha doğruladı ve toplam sayı 52'ye ulaştı .	- İngiltere 34 yeni vakayı doğruladı , ardından Kuzey İrlanda ilave ikisini doğruladı ve toplam sayıyı 87'ye çıkardı .	- ABD , 11 ölüm açıkladı .	İlk ölümünü Kaliforniya'daki Washington eyaletinin dışındaki ilk ölümle doğruladı .
+Event	T1	doğrulandı	EVENT	28
+Event	T2	ulaştı	EVENT	63
+Event	T3	doğruladı	EVENT	93
+Event	T4	ulaştı	EVENT	124
+Event	T5	doğruladı	EVENT	160
+Event	T6	doğruladı	EVENT	209
+Event	T7	çıkardı	EVENT	242
+Event	T8	açıkladı	EVENT	268
+Event	T9	ölümünü	EVENT	283
+Event	T10	doğruladı	EVENT	351
+Event	T11	ölüm	EVENT	263
+Relation	T1	T2	CauseEffect	true	doğrulandı	ulaştı
+Relation	T2	T1	EffectCause	true	ulaştı	doğrulandı
+Relation	T3	T4	CauseEffect	true	doğruladı	ulaştı
+Relation	T4	T3	EffectCause	true	ulaştı	doğruladı
+Relation	T6	T7	CauseEffect	true	doğruladı	çıkardı
+Relation	T7	T6	EffectCause	true	çıkardı	doğruladı
+Relation	T5	T6	CauseEffect	true	doğruladı	doğruladı
+Relation	T6	T5	EffectCause	true	doğruladı	doğruladı
+Relation	T11	T8	CauseEffect	true	ölüm	açıkladı
+Relation	T8	T11	EffectCause	true	açıkladı	ölüm
+Relation	T9	T10	CauseEffect	true	ölümünü	doğruladı
+Relation	T10	T9	EffectCause	true	doğruladı	ölümünü
+Relation	T1	T3	NoRel	true	doğrulandı	doğruladı
+Relation	T10	T1	NoRel	true	doğruladı	doğrulandı
+Relation	T10	T5	NoRel	true	doğruladı	doğruladı
+Relation	T11	T4	NoRel	true	ölüm	ulaştı
+Relation	T11	T6	NoRel	true	ölüm	doğruladı
+Relation	T11	T9	NoRel	true	ölüm	ölümünü
+Relation	T2	T8	NoRel	true	ulaştı	açıkladı
+Relation	T3	T1	NoRel	true	doğruladı	doğrulandı
+Relation	T3	T11	NoRel	true	doğruladı	ölüm
+Relation	T3	T7	NoRel	true	doğruladı	çıkardı
+Relation	T4	T2	NoRel	true	ulaştı	ulaştı
+Relation	T4	T5	NoRel	true	ulaştı	doğruladı
+Relation	T4	T7	NoRel	true	ulaştı	çıkardı
+Relation	T5	T11	NoRel	true	doğruladı	ölüm
+Relation	T5	T2	NoRel	true	doğruladı	ulaştı
+Relation	T5	T3	NoRel	true	doğruladı	doğruladı
+Relation	T5	T8	NoRel	true	doğruladı	açıkladı
+Relation	T6	T11	NoRel	true	doğruladı	ölüm
+Relation	T6	T4	NoRel	true	doğruladı	ulaştı
+Relation	T7	T10	NoRel	true	çıkardı	doğruladı
+Relation	T7	T11	NoRel	true	çıkardı	ölüm
+Relation	T7	T2	NoRel	true	çıkardı	ulaştı
+Relation	T7	T8	NoRel	true	çıkardı	açıkladı
+Relation	T8	T2	NoRel	true	açıkladı	ulaştı
+Relation	T8	T4	NoRel	true	açıkladı	ulaştı
+Relation	T8	T5	NoRel	true	açıkladı	doğruladı
+Relation	T8	T6	NoRel	true	açıkladı	doğruladı
+Relation	T8	T9	NoRel	true	açıkladı	ölümünü
+Relation	T9	T5	NoRel	true	ölümünü	doğruladı
+Relation	T9	T7	NoRel	true	ölümünü	çıkardı

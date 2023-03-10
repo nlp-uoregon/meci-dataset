@@ -1,0 +1,68 @@
+Text	Bunlar ; Yukarı Yeşilırmak çizgisi , Kelkit - Deliçay çizgisi , Yaylalar ve Orta Yeşilırmak çizgisi ve kıyı çizgisidir .	Bu çizgilerin hepsi de kırıklara karşılık gelmektedir .	Kelkit Irmağı kırığı , Reşadiye’de doğu - güneydoğu ve batı - kuzeybatı doğrultusunda alçalmış ve yükselmiş ve böylece iki blok arasında 380 cm’lik bir düzey farkı doğmuştur .	Deprem sırasında kıyı çizgisi Çarşamba ilçesinin kuzeyi ile Giresun arasında 15–100 m kadar geri çekilmiş ve Fatsa’da da bir deprem dalgası oluşmuştur .	Türk halkını derinden yaralayan deprem Kelkit ırmağı boyundaki tüm şehirleri vurmuş , en fazla can kaybının yaşandığı yerleşim birimlerinden biri de Tokat'ın Reşadiye ilçesi olmuş , köy ve mahalleriyle yerle bir olan kentte çoğu enkaz altında kalarak , bir kısmı da yanarak 2100 kişi ölmüştür .
+Event	T0	alçalmış	EVENT	263
+Event	T1	yükselmiş	EVENT	275
+Event	T2	doğmuştur	EVENT	341
+Event	T3	Deprem	EVENT	353
+Event	T4	çekilmiş	EVENT	450
+Event	T5	oluşmuştur	EVENT	493
+Event	T6	deprem	EVENT	538
+Event	T7	vurmuş	EVENT	583
+Event	T9	yanarak	EVENT	772
+Event	T10	ölmüştür	EVENT	790
+Event	T11	olmuş	EVENT	680
+Event	T12	kalarak	EVENT	749
+Relation	T3	T4	CauseEffect	true	Deprem	çekilmiş
+Relation	T4	T3	EffectCause	true	çekilmiş	Deprem
+Relation	T4	T5	CauseEffect	true	çekilmiş	oluşmuştur
+Relation	T5	T4	EffectCause	true	oluşmuştur	çekilmiş
+Relation	T9	T10	CauseEffect	true	yanarak	ölmüştür
+Relation	T10	T9	EffectCause	true	ölmüştür	yanarak
+Relation	T12	T10	CauseEffect	true	kalarak	ölmüştür
+Relation	T10	T12	EffectCause	true	ölmüştür	kalarak
+Relation	T6	T10	CauseEffect	true	deprem	ölmüştür
+Relation	T10	T6	EffectCause	true	ölmüştür	deprem
+Relation	T6	T11	CauseEffect	true	deprem	olmuş
+Relation	T11	T6	EffectCause	true	olmuş	deprem
+Relation	T0	T1	NoRel	true	alçalmış	yükselmiş
+Relation	T0	T10	NoRel	true	alçalmış	ölmüştür
+Relation	T0	T12	NoRel	true	alçalmış	kalarak
+Relation	T0	T3	NoRel	true	alçalmış	Deprem
+Relation	T1	T12	NoRel	true	yükselmiş	kalarak
+Relation	T10	T11	NoRel	true	ölmüştür	olmuş
+Relation	T10	T5	NoRel	true	ölmüştür	oluşmuştur
+Relation	T11	T0	NoRel	true	olmuş	alçalmış
+Relation	T11	T2	NoRel	true	olmuş	doğmuştur
+Relation	T11	T3	NoRel	true	olmuş	Deprem
+Relation	T11	T9	NoRel	true	olmuş	yanarak
+Relation	T12	T0	NoRel	true	kalarak	alçalmış
+Relation	T12	T5	NoRel	true	kalarak	oluşmuştur
+Relation	T12	T9	NoRel	true	kalarak	yanarak
+Relation	T2	T10	NoRel	true	doğmuştur	ölmüştür
+Relation	T2	T3	NoRel	true	doğmuştur	Deprem
+Relation	T2	T4	NoRel	true	doğmuştur	çekilmiş
+Relation	T2	T6	NoRel	true	doğmuştur	deprem
+Relation	T2	T7	NoRel	true	doğmuştur	vurmuş
+Relation	T2	T9	NoRel	true	doğmuştur	yanarak
+Relation	T3	T0	NoRel	true	Deprem	alçalmış
+Relation	T3	T1	NoRel	true	Deprem	yükselmiş
+Relation	T3	T10	NoRel	true	Deprem	ölmüştür
+Relation	T3	T5	NoRel	true	Deprem	oluşmuştur
+Relation	T3	T6	NoRel	true	Deprem	deprem
+Relation	T4	T0	NoRel	true	çekilmiş	alçalmış
+Relation	T4	T1	NoRel	true	çekilmiş	yükselmiş
+Relation	T4	T2	NoRel	true	çekilmiş	doğmuştur
+Relation	T4	T6	NoRel	true	çekilmiş	deprem
+Relation	T5	T0	NoRel	true	oluşmuştur	alçalmış
+Relation	T5	T12	NoRel	true	oluşmuştur	kalarak
+Relation	T5	T2	NoRel	true	oluşmuştur	doğmuştur
+Relation	T5	T7	NoRel	true	oluşmuştur	vurmuş
+Relation	T6	T1	NoRel	true	deprem	yükselmiş
+Relation	T6	T4	NoRel	true	deprem	çekilmiş
+Relation	T6	T5	NoRel	true	deprem	oluşmuştur
+Relation	T6	T9	NoRel	true	deprem	yanarak
+Relation	T7	T12	NoRel	true	vurmuş	kalarak
+Relation	T7	T4	NoRel	true	vurmuş	çekilmiş
+Relation	T9	T0	NoRel	true	yanarak	alçalmış
+Relation	T9	T12	NoRel	true	yanarak	kalarak
+Relation	T9	T3	NoRel	true	yanarak	Deprem
+Relation	T9	T7	NoRel	true	yanarak	vurmuş

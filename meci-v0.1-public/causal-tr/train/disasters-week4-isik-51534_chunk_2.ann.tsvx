@@ -1,0 +1,40 @@
+Text	Şans eseri seyrek olarak yerleşilmiş bölge , tamamen tahrip olmakla kalmamış ayrıca tabiat da tamamen değişmiştir .	Aralarında , o sırada gaz salımı ölçümleri yapan volkanolog David A. Johnston'ın da olduğu 57 kişi bu patlamada hayatını kaybeder .	Yaklaşık 3 km³ kayaç , bu patlamada harekete geçer .	Küller ve gaz bulutları , 18 km yüksekliğe kadar yükselerek , Troposferi geçer ve Stratosfer'e ulaşır .	Kül atımı 9 saat sürer ve 3 gün sonra ABD'nin doğusunda kaydedilir .
+Event	T1	değişmiştir	EVENT	102
+Event	T2	kaybeder	EVENT	237
+Event	T3	geçer	EVENT	293
+Event	T4	geçer	EVENT	374
+Event	T5	ulaşır	EVENT	396
+Event	T6	atımı	EVENT	409
+Event	T7	sürer	EVENT	422
+Event	T8	kaydedilir	EVENT	461
+Event	T9	patlamada	EVENT	218
+Event	T10	yükselerek	EVENT	350
+Relation	T9	T2	CauseEffect	true	patlamada	kaybeder
+Relation	T2	T9	EffectCause	true	kaybeder	patlamada
+Relation	T9	T3	CauseEffect	true	patlamada	geçer
+Relation	T3	T9	EffectCause	true	geçer	patlamada
+Relation	T4	T5	CauseEffect	true	geçer	ulaşır
+Relation	T5	T4	EffectCause	true	ulaşır	geçer
+Relation	T10	T4	CauseEffect	true	yükselerek	geçer
+Relation	T4	T10	EffectCause	true	geçer	yükselerek
+Relation	T9	T1	CauseEffect	true	patlamada	değişmiştir
+Relation	T1	T9	EffectCause	true	değişmiştir	patlamada
+Relation	T1	T10	NoRel	true	değişmiştir	yükselerek
+Relation	T1	T2	NoRel	true	değişmiştir	kaybeder
+Relation	T10	T2	NoRel	true	yükselerek	kaybeder
+Relation	T10	T6	NoRel	true	yükselerek	atımı
+Relation	T10	T7	NoRel	true	yükselerek	sürer
+Relation	T10	T8	NoRel	true	yükselerek	kaydedilir
+Relation	T2	T10	NoRel	true	kaybeder	yükselerek
+Relation	T2	T7	NoRel	true	kaybeder	sürer
+Relation	T3	T10	NoRel	true	geçer	yükselerek
+Relation	T3	T5	NoRel	true	geçer	ulaşır
+Relation	T4	T7	NoRel	true	geçer	sürer
+Relation	T5	T6	NoRel	true	ulaşır	atımı
+Relation	T6	T4	NoRel	true	atımı	geçer
+Relation	T7	T3	NoRel	true	sürer	geçer
+Relation	T8	T1	NoRel	true	kaydedilir	değişmiştir
+Relation	T8	T7	NoRel	true	kaydedilir	sürer
+Relation	T9	T4	NoRel	true	patlamada	geçer
+Relation	T9	T5	NoRel	true	patlamada	ulaşır
+Relation	T9	T6	NoRel	true	patlamada	atımı

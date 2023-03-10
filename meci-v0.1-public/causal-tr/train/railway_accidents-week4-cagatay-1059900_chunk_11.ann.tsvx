@@ -1,0 +1,61 @@
+Text	Kocaeli'de meydana gelen olayda 11621 sefer sayılı _ Adapazarı Ekspresi _'nin raydan çıkmasıyla karşı yönden gelen 11620 sefer sayılı diğer trenin bu trene çarpması sonucu 1'i ağır 32 kişi yaralandı .	- 24 Temmuz 2013 - İspanya'da son 40 yılın en büyük kazası meydana geldi içerisinde 218 yolcu bulunan treninin tüm vagonları raydan çıktı .	Galiçya'da 80 kişi öldü .	150'nin üzerinde kişide yaralandı .	Kazanın suçlusu 80 kilometre yapması gereken yerde 190 kilometre hız yapan makinist olarak belirlendi .
+Event	T0	olayda	EVENT	25
+Event	T1	yaralandı	EVENT	189
+Event	T3	çıktı	EVENT	333
+Event	T4	öldü	EVENT	360
+Event	T5	yaralandı	EVENT	391
+Event	T6	yapması	EVENT	432
+Event	T7	belirlendi	EVENT	494
+Event	T8	çıkmasıyla	EVENT	85
+Event	T9	çarpması	EVENT	156
+Event	T10	kazası	EVENT	253
+Event	T2	Kazanın	EVENT	403
+Event	T11	hız yapan	EVENT	468
+Relation	T8	T9	CauseEffect	true	çıkmasıyla	çarpması
+Relation	T9	T8	EffectCause	true	çarpması	çıkmasıyla
+Relation	T9	T1	CauseEffect	true	çarpması	yaralandı
+Relation	T1	T9	EffectCause	true	yaralandı	çarpması
+Relation	T10	T4	CauseEffect	true	kazası	öldü
+Relation	T4	T10	EffectCause	true	öldü	kazası
+Relation	T10	T5	CauseEffect	true	kazası	yaralandı
+Relation	T5	T10	EffectCause	true	yaralandı	kazası
+Relation	T11	T2	CauseEffect	true	hız yapan	Kazanın
+Relation	T2	T11	EffectCause	true	Kazanın	hız yapan
+Relation	T0	T1	NoRel	true	olayda	yaralandı
+Relation	T0	T10	NoRel	true	olayda	kazası
+Relation	T0	T11	NoRel	true	olayda	hız yapan
+Relation	T0	T8	NoRel	true	olayda	çıkmasıyla
+Relation	T1	T11	NoRel	true	yaralandı	hız yapan
+Relation	T10	T2	NoRel	true	kazası	Kazanın
+Relation	T10	T8	NoRel	true	kazası	çıkmasıyla
+Relation	T11	T10	NoRel	true	hız yapan	kazası
+Relation	T11	T3	NoRel	true	hız yapan	çıktı
+Relation	T11	T5	NoRel	true	hız yapan	yaralandı
+Relation	T11	T6	NoRel	true	hız yapan	yapması
+Relation	T2	T0	NoRel	true	Kazanın	olayda
+Relation	T2	T6	NoRel	true	Kazanın	yapması
+Relation	T2	T7	NoRel	true	Kazanın	belirlendi
+Relation	T2	T8	NoRel	true	Kazanın	çıkmasıyla
+Relation	T2	T9	NoRel	true	Kazanın	çarpması
+Relation	T3	T1	NoRel	true	çıktı	yaralandı
+Relation	T4	T11	NoRel	true	öldü	hız yapan
+Relation	T4	T2	NoRel	true	öldü	Kazanın
+Relation	T4	T3	NoRel	true	öldü	çıktı
+Relation	T4	T9	NoRel	true	öldü	çarpması
+Relation	T5	T1	NoRel	true	yaralandı	yaralandı
+Relation	T5	T11	NoRel	true	yaralandı	hız yapan
+Relation	T5	T2	NoRel	true	yaralandı	Kazanın
+Relation	T5	T6	NoRel	true	yaralandı	yapması
+Relation	T5	T7	NoRel	true	yaralandı	belirlendi
+Relation	T6	T0	NoRel	true	yapması	olayda
+Relation	T6	T4	NoRel	true	yapması	öldü
+Relation	T6	T7	NoRel	true	yapması	belirlendi
+Relation	T7	T0	NoRel	true	belirlendi	olayda
+Relation	T7	T1	NoRel	true	belirlendi	yaralandı
+Relation	T7	T11	NoRel	true	belirlendi	hız yapan
+Relation	T7	T4	NoRel	true	belirlendi	öldü
+Relation	T8	T0	NoRel	true	çıkmasıyla	olayda
+Relation	T8	T3	NoRel	true	çıkmasıyla	çıktı
+Relation	T9	T0	NoRel	true	çarpması	olayda
+Relation	T9	T10	NoRel	true	çarpması	kazası
+Relation	T9	T6	NoRel	true	çarpması	yapması

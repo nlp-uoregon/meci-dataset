@@ -1,0 +1,16 @@
+Text	اس سفوف کے منجن سے دانت کا درد جاتا رہتا ہے ۔	سوزش میں ایک بہترین ٹانک کا درجہ رکھتا چند دنوں تک کھجور کے باقاعدہ استعمال سے کوڑھ کے مرض میں فائدہ ہوتا ہے ۔	-	نوزائیدہ بچے کو کھجور منہ میں چبا کر تھوڑی تھوڑی کھلائیے ۔	-
+Event	T0	جاتا	EVENT	31
+Event	T1	سوزش	EVENT	46
+Event	T2	استعمال	EVENT	114
+Event	T3	مرض	EVENT	133
+Event	T4	فائدہ	EVENT	141
+Relation	T2	T4	CauseEffect	true	استعمال	فائدہ
+Relation	T4	T2	EffectCause	true	فائدہ	استعمال
+Relation	T0	T2	NoRel	true	جاتا	استعمال
+Relation	T1	T2	NoRel	true	سوزش	استعمال
+Relation	T1	T3	NoRel	true	سوزش	مرض
+Relation	T3	T0	NoRel	true	مرض	جاتا
+Relation	T3	T1	NoRel	true	مرض	سوزش
+Relation	T3	T2	NoRel	true	مرض	استعمال
+Relation	T4	T1	NoRel	true	فائدہ	سوزش
+Relation	T4	T3	NoRel	true	فائدہ	مرض

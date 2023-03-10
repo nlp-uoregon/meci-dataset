@@ -1,0 +1,50 @@
+Text	May : Sumitoshi Nakao becomes the first Japanese aviator to save his life by parachute when he bails out of one of two Mitsubishi 1MF2 Hayabusa - type fighter prototypes when it disintegrates during a diving test during official Army trials at Tokorozawa .	Pilot uninjured .	Because of the accident , further flight evaluations of the type are suspended and the other airframe is statically tested to destruction .	1 May : Curtiss O - 1B Falcon ,__ 27-279_ , assigned at Middletown Air Depot , Pennsylvania , crashes at Whitney Point , New York , this date .	Pilot Lt. Bushrod Hoppin is uninjured , but his passenger , Congressman Thaddeus Campbell Sweet is killed .
+Event	T0	becomes	EVENT	22
+Event	T1	save	EVENT	60
+Event	T2	disintegrates	EVENT	178
+Event	T3	test	EVENT	208
+Event	T4	trials	EVENT	234
+Event	T5	accident	EVENT	290
+Event	T6	evaluations	EVENT	316
+Event	T7	suspended	EVENT	344
+Event	T8	destruction	EVENT	401
+Event	T9	assigned	EVENT	459
+Event	T10	crashes	EVENT	509
+Event	T11	uninjured	EVENT	587
+Event	T12	killed	EVENT	658
+Event	T13	bails	EVENT	95
+Event	T14	uninjured	EVENT	263
+Event	T15	tested	EVENT	391
+Relation	T1	T0	CauseEffect	true	save	becomes
+Relation	T0	T1	EffectCause	true	becomes	save
+Relation	T5	T14	CauseEffect	true	accident	uninjured
+Relation	T14	T5	EffectCause	true	uninjured	accident
+Relation	T10	T12	CauseEffect	true	crashes	killed
+Relation	T12	T10	EffectCause	true	killed	crashes
+Relation	T10	T11	CauseEffect	true	crashes	uninjured
+Relation	T11	T10	EffectCause	true	uninjured	crashes
+Relation	T5	T6	CauseEffect	true	accident	evaluations
+Relation	T6	T5	EffectCause	true	evaluations	accident
+Relation	T5	T15	CauseEffect	true	accident	tested
+Relation	T15	T5	EffectCause	true	tested	accident
+Relation	T1	T12	NoRel	true	save	killed
+Relation	T10	T14	NoRel	true	crashes	uninjured
+Relation	T10	T15	NoRel	true	crashes	tested
+Relation	T10	T7	NoRel	true	crashes	suspended
+Relation	T13	T1	NoRel	true	bails	save
+Relation	T13	T4	NoRel	true	bails	trials
+Relation	T14	T13	NoRel	true	uninjured	bails
+Relation	T14	T2	NoRel	true	uninjured	disintegrates
+Relation	T14	T4	NoRel	true	uninjured	trials
+Relation	T15	T2	NoRel	true	tested	disintegrates
+Relation	T15	T9	NoRel	true	tested	assigned
+Relation	T2	T12	NoRel	true	disintegrates	killed
+Relation	T2	T15	NoRel	true	disintegrates	tested
+Relation	T3	T11	NoRel	true	test	uninjured
+Relation	T3	T7	NoRel	true	test	suspended
+Relation	T4	T12	NoRel	true	trials	killed
+Relation	T4	T6	NoRel	true	trials	evaluations
+Relation	T5	T2	NoRel	true	accident	disintegrates
+Relation	T6	T1	NoRel	true	evaluations	save
+Relation	T9	T3	NoRel	true	assigned	test
+Relation	T9	T4	NoRel	true	assigned	trials

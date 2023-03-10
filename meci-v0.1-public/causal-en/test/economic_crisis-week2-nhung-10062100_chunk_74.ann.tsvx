@@ -1,0 +1,90 @@
+Text	Credit default swaps ( CDS ) are financial instruments used as a hedge and protection for debtholders , in particular MBS investors , from the risk of default , or by speculators to profit from default .	As the net worth of banks and other financial institutions deteriorated because of losses related to subprime mortgages , the likelihood increased that those providing the protection would have to pay their counterparties .	This created uncertainty across the system , as investors wondered which companies would be required to pay to cover mortgage defaults .	Like all swaps and other financial derivatives , CDS may either be used to hedge risks ( specifically , to insure creditors against default ) or to profit from speculation .	The volume of CDS outstanding increased 100 - fold from 1998 to 2008 , with estimates of the debt covered by CDS contracts , as of November 2008 , ranging from US $ 33 to $ 47 trillion .
+Event	T0	used	EVENT	55
+Event	T1	protection	EVENT	75
+Event	T10	wondered	EVENT	486
+Event	T11	pay	EVENT	532
+Event	T12	defaults	EVENT	554
+Event	T13	used	EVENT	632
+Event	T14	speculation	EVENT	725
+Event	T15	increased	EVENT	769
+Event	T16	estimates	EVENT	815
+Event	T17	covered	EVENT	837
+Event	T18	contracts	EVENT	852
+Event	T19	ranging	EVENT	886
+Event	T21	losses	EVENT	287
+Event	T22	mortgages	EVENT	314
+Event	T23	insure	EVENT	672
+Event	T24	profit	EVENT	713
+Event	T3	default	EVENT	151
+Event	T4	default	EVENT	194
+Event	T5	deteriorated	EVENT	263
+Event	T6	increased	EVENT	341
+Event	T7	protection	EVENT	376
+Event	T8	pay	EVENT	401
+Event	T9	uncertainty	EVENT	441
+Relation	T1	T3	CauseEffect	true	protection	default
+Relation	T3	T1	EffectCause	true	default	protection
+Relation	T21	T5	CauseEffect	true	losses	deteriorated
+Relation	T5	T21	EffectCause	true	deteriorated	losses
+Relation	T22	T21	CauseEffect	true	mortgages	losses
+Relation	T21	T22	EffectCause	true	losses	mortgages
+Relation	T5	T6	CauseEffect	true	deteriorated	increased
+Relation	T6	T5	EffectCause	true	increased	deteriorated
+Relation	T7	T8	CauseEffect	true	protection	pay
+Relation	T8	T7	EffectCause	true	pay	protection
+Relation	T11	T10	CauseEffect	true	pay	wondered
+Relation	T10	T11	EffectCause	true	wondered	pay
+Relation	T24	T13	CauseEffect	true	profit	used
+Relation	T13	T24	EffectCause	true	used	profit
+Relation	T23	T13	CauseEffect	true	insure	used
+Relation	T13	T23	EffectCause	true	used	insure
+Relation	T0	T14	NoRel	true	used	speculation
+Relation	T0	T15	NoRel	true	used	increased
+Relation	T0	T19	NoRel	true	used	ranging
+Relation	T0	T6	NoRel	true	used	increased
+Relation	T1	T11	NoRel	true	protection	pay
+Relation	T1	T13	NoRel	true	protection	used
+Relation	T10	T13	NoRel	true	wondered	used
+Relation	T10	T16	NoRel	true	wondered	estimates
+Relation	T10	T22	NoRel	true	wondered	mortgages
+Relation	T11	T8	NoRel	true	pay	pay
+Relation	T12	T11	NoRel	true	defaults	pay
+Relation	T13	T10	NoRel	true	used	wondered
+Relation	T13	T18	NoRel	true	used	contracts
+Relation	T13	T19	NoRel	true	used	ranging
+Relation	T13	T8	NoRel	true	used	pay
+Relation	T14	T0	NoRel	true	speculation	used
+Relation	T14	T13	NoRel	true	speculation	used
+Relation	T14	T19	NoRel	true	speculation	ranging
+Relation	T14	T24	NoRel	true	speculation	profit
+Relation	T14	T8	NoRel	true	speculation	pay
+Relation	T15	T19	NoRel	true	increased	ranging
+Relation	T16	T24	NoRel	true	estimates	profit
+Relation	T16	T7	NoRel	true	estimates	protection
+Relation	T16	T8	NoRel	true	estimates	pay
+Relation	T17	T1	NoRel	true	covered	protection
+Relation	T17	T12	NoRel	true	covered	defaults
+Relation	T18	T19	NoRel	true	contracts	ranging
+Relation	T18	T7	NoRel	true	contracts	protection
+Relation	T19	T1	NoRel	true	ranging	protection
+Relation	T19	T6	NoRel	true	ranging	increased
+Relation	T21	T1	NoRel	true	losses	protection
+Relation	T21	T15	NoRel	true	losses	increased
+Relation	T21	T19	NoRel	true	losses	ranging
+Relation	T21	T6	NoRel	true	losses	increased
+Relation	T22	T5	NoRel	true	mortgages	deteriorated
+Relation	T24	T16	NoRel	true	profit	estimates
+Relation	T24	T21	NoRel	true	profit	losses
+Relation	T24	T7	NoRel	true	profit	protection
+Relation	T3	T13	NoRel	true	default	used
+Relation	T3	T14	NoRel	true	default	speculation
+Relation	T3	T7	NoRel	true	default	protection
+Relation	T4	T1	NoRel	true	default	protection
+Relation	T5	T16	NoRel	true	deteriorated	estimates
+Relation	T5	T22	NoRel	true	deteriorated	mortgages
+Relation	T6	T14	NoRel	true	increased	speculation
+Relation	T6	T15	NoRel	true	increased	increased
+Relation	T7	T5	NoRel	true	protection	deteriorated
+Relation	T8	T17	NoRel	true	pay	covered
+Relation	T8	T24	NoRel	true	pay	profit
+Relation	T9	T4	NoRel	true	uncertainty	default

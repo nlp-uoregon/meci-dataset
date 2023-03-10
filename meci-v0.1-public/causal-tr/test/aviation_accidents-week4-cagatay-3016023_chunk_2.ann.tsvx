@@ -1,0 +1,13 @@
+Text	Uçak , , lk tırmanış esnasında saat 11.49'da uçak düştü .	Kategori : 1970'te Sovyetler Birliği Kategori : Aeroflot kazaları ve olayları Kategori : Moldova SSC'deki havacılık kazaları ve olayları Kategori : 1970'te havacılık kazaları ve olayları Kategori : Antonov An - 10 içeren kazalar ve olaylar Kategori : Pilotaj hatası nedeniyle gerçekleşen havacılık kazaları ve olayları			
+Event	T0	tırmanış	EVENT	12
+Event	T1	düştü	EVENT	50
+Event	T6	hatası	EVENT	317
+Event	T8	kazaları	EVENT	356
+Event	T9	olayları	EVENT	368
+Relation	T6	T8	CauseEffect	true	hatası	kazaları
+Relation	T8	T6	EffectCause	true	kazaları	hatası
+Relation	T6	T9	CauseEffect	true	hatası	olayları
+Relation	T9	T6	EffectCause	true	olayları	hatası
+Relation	T1	T8	NoRel	true	düştü	kazaları
+Relation	T8	T9	NoRel	true	kazaları	olayları
+Relation	T9	T1	NoRel	true	olayları	düştü

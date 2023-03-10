@@ -1,0 +1,64 @@
+Text	Bosna Sancakbeyi Mehmed Paşa ve Pojega Sancakbeyi Ulama Paşa Veröce'yi ( 30 Temmuz ) ve Çazma'yı fethederek sınırı Zagreb'in 50 kilometre yakınına kadar genişlettiler .	1552 yılında Osmanlı donanması da Batı Akdeniz'e açılarak Napoli Krallığı'na bağlı Calabria'yı istila etti ve Ponza muharebesinde Andrea Doria komutasındaki Ceneviz donanmasını yenilgiye uğrattı .	1553 yılı Macaristan cephesindeki savaşın bir süreliğine durduğu bir sene oldu .	Bunun birinci sebebi , Kutsal Roma İmparatorluğu'nun barış teklifinde bulunmasıydı .	V. Karl ve Kral Ferdinand tarafından görevlendirilen elçiler François Zay ile Verantius'un Osmanlı topraklarına girişlerini teminen Osmanlı Sarayı tarafından altı aylık ateşkes ilan edildi .
+Event	T0	fethederek	EVENT	97
+Event	T1	genişlettiler	EVENT	153
+Event	T2	etti	EVENT	271
+Event	T3	uğrattı	EVENT	356
+Event	T4	savaşın	EVENT	400
+Event	T5	teminen	EVENT	656
+Event	T6	edildi	EVENT	714
+Event	T7	açılarak	EVENT	218
+Event	T8	muharebesinde	EVENT	285
+Event	T9	oldu	EVENT	440
+Event	T10	bulunmasıydı	EVENT	517
+Event	T11	görevlendirilen	EVENT	569
+Relation	T0	T1	CauseEffect	true	fethederek	genişlettiler
+Relation	T1	T0	EffectCause	true	genişlettiler	fethederek
+Relation	T7	T2	CauseEffect	true	açılarak	etti
+Relation	T2	T7	EffectCause	true	etti	açılarak
+Relation	T2	T8	CauseEffect	true	etti	muharebesinde
+Relation	T8	T2	EffectCause	true	muharebesinde	etti
+Relation	T8	T3	CauseEffect	true	muharebesinde	uğrattı
+Relation	T3	T8	EffectCause	true	uğrattı	muharebesinde
+Relation	T10	T9	CauseEffect	true	bulunmasıydı	oldu
+Relation	T9	T10	EffectCause	true	oldu	bulunmasıydı
+Relation	T6	T9	CauseEffect	true	edildi	oldu
+Relation	T9	T6	EffectCause	true	oldu	edildi
+Relation	T0	T11	NoRel	true	fethederek	görevlendirilen
+Relation	T0	T3	NoRel	true	fethederek	uğrattı
+Relation	T0	T4	NoRel	true	fethederek	savaşın
+Relation	T0	T5	NoRel	true	fethederek	teminen
+Relation	T0	T6	NoRel	true	fethederek	edildi
+Relation	T1	T10	NoRel	true	genişlettiler	bulunmasıydı
+Relation	T1	T5	NoRel	true	genişlettiler	teminen
+Relation	T1	T6	NoRel	true	genişlettiler	edildi
+Relation	T10	T1	NoRel	true	bulunmasıydı	genişlettiler
+Relation	T10	T2	NoRel	true	bulunmasıydı	etti
+Relation	T10	T3	NoRel	true	bulunmasıydı	uğrattı
+Relation	T10	T4	NoRel	true	bulunmasıydı	savaşın
+Relation	T10	T5	NoRel	true	bulunmasıydı	teminen
+Relation	T11	T10	NoRel	true	görevlendirilen	bulunmasıydı
+Relation	T11	T2	NoRel	true	görevlendirilen	etti
+Relation	T11	T5	NoRel	true	görevlendirilen	teminen
+Relation	T11	T7	NoRel	true	görevlendirilen	açılarak
+Relation	T2	T10	NoRel	true	etti	bulunmasıydı
+Relation	T2	T3	NoRel	true	etti	uğrattı
+Relation	T2	T4	NoRel	true	etti	savaşın
+Relation	T2	T5	NoRel	true	etti	teminen
+Relation	T2	T6	NoRel	true	etti	edildi
+Relation	T3	T11	NoRel	true	uğrattı	görevlendirilen
+Relation	T3	T2	NoRel	true	uğrattı	etti
+Relation	T3	T5	NoRel	true	uğrattı	teminen
+Relation	T3	T7	NoRel	true	uğrattı	açılarak
+Relation	T4	T0	NoRel	true	savaşın	fethederek
+Relation	T4	T10	NoRel	true	savaşın	bulunmasıydı
+Relation	T4	T3	NoRel	true	savaşın	uğrattı
+Relation	T4	T5	NoRel	true	savaşın	teminen
+Relation	T5	T1	NoRel	true	teminen	genişlettiler
+Relation	T5	T7	NoRel	true	teminen	açılarak
+Relation	T6	T10	NoRel	true	edildi	bulunmasıydı
+Relation	T6	T5	NoRel	true	edildi	teminen
+Relation	T6	T8	NoRel	true	edildi	muharebesinde
+Relation	T7	T1	NoRel	true	açılarak	genişlettiler
+Relation	T7	T10	NoRel	true	açılarak	bulunmasıydı
+Relation	T7	T3	NoRel	true	açılarak	uğrattı
+Relation	T8	T5	NoRel	true	muharebesinde	teminen

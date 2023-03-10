@@ -1,0 +1,64 @@
+Text	En anden stewardesse , Sandra Bradshaw , ringede til sin mand klokken 09:50:04 og fortalte ham , at hun var ved at koge vand til at skolde flykaprerne med .	Passageren Lauren Grandcolas ringede til sin mand i alt to gange : En gang før afgang og en gang under kapringen , men fik ikke kontakt nogle af gangene .	Bagefter gav hun sin telefon til en anden passager Honor Elizabeth Wainio , som ringede til sin stedmor klokken 09:53:43 , og hun afsluttede opkaldet fire et halvt minut senere med ordene " Jeg er nødt til at gå .	De vil bryde ind i cockpittet .	Jeg elsker dig . "
+Event	T0	ringede	EVENT	41
+Event	T1	fortalte	EVENT	82
+Event	T2	koge	EVENT	115
+Event	T3	skolde	EVENT	132
+Event	T4	ringede	EVENT	186
+Event	T5	kapringen	EVENT	260
+Event	T6	kontakt	EVENT	285
+Event	T7	gav	EVENT	321
+Event	T8	ringede	EVENT	392
+Event	T9	opkaldet	EVENT	453
+Event	T10	gå	EVENT	521
+Event	T11	bryde	EVENT	533
+Relation	T5	T4	CauseEffect	true	kapringen	ringede
+Relation	T4	T5	EffectCause	true	ringede	kapringen
+Relation	T5	T0	CauseEffect	true	kapringen	ringede
+Relation	T0	T5	EffectCause	true	ringede	kapringen
+Relation	T5	T8	CauseEffect	true	kapringen	ringede
+Relation	T8	T5	EffectCause	true	ringede	kapringen
+Relation	T0	T9	NoRel	true	ringede	opkaldet
+Relation	T1	T3	NoRel	true	fortalte	skolde
+Relation	T1	T4	NoRel	true	fortalte	ringede
+Relation	T1	T5	NoRel	true	fortalte	kapringen
+Relation	T1	T9	NoRel	true	fortalte	opkaldet
+Relation	T10	T0	NoRel	true	gå	ringede
+Relation	T10	T1	NoRel	true	gå	fortalte
+Relation	T10	T11	NoRel	true	gå	bryde
+Relation	T10	T2	NoRel	true	gå	koge
+Relation	T10	T6	NoRel	true	gå	kontakt
+Relation	T10	T9	NoRel	true	gå	opkaldet
+Relation	T11	T4	NoRel	true	bryde	ringede
+Relation	T11	T6	NoRel	true	bryde	kontakt
+Relation	T11	T8	NoRel	true	bryde	ringede
+Relation	T2	T0	NoRel	true	koge	ringede
+Relation	T2	T3	NoRel	true	koge	skolde
+Relation	T2	T4	NoRel	true	koge	ringede
+Relation	T2	T5	NoRel	true	koge	kapringen
+Relation	T2	T9	NoRel	true	koge	opkaldet
+Relation	T3	T0	NoRel	true	skolde	ringede
+Relation	T3	T10	NoRel	true	skolde	gå
+Relation	T3	T11	NoRel	true	skolde	bryde
+Relation	T3	T2	NoRel	true	skolde	koge
+Relation	T3	T5	NoRel	true	skolde	kapringen
+Relation	T3	T7	NoRel	true	skolde	gav
+Relation	T3	T8	NoRel	true	skolde	ringede
+Relation	T3	T9	NoRel	true	skolde	opkaldet
+Relation	T4	T11	NoRel	true	ringede	bryde
+Relation	T4	T8	NoRel	true	ringede	ringede
+Relation	T5	T1	NoRel	true	kapringen	fortalte
+Relation	T5	T9	NoRel	true	kapringen	opkaldet
+Relation	T6	T0	NoRel	true	kontakt	ringede
+Relation	T6	T1	NoRel	true	kontakt	fortalte
+Relation	T6	T10	NoRel	true	kontakt	gå
+Relation	T6	T11	NoRel	true	kontakt	bryde
+Relation	T6	T2	NoRel	true	kontakt	koge
+Relation	T6	T3	NoRel	true	kontakt	skolde
+Relation	T7	T10	NoRel	true	gav	gå
+Relation	T7	T11	NoRel	true	gav	bryde
+Relation	T7	T3	NoRel	true	gav	skolde
+Relation	T7	T4	NoRel	true	gav	ringede
+Relation	T8	T9	NoRel	true	ringede	opkaldet
+Relation	T9	T0	NoRel	true	opkaldet	ringede
+Relation	T9	T2	NoRel	true	opkaldet	koge
+Relation	T9	T5	NoRel	true	opkaldet	kapringen

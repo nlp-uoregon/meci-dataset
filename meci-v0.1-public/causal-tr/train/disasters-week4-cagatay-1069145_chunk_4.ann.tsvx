@@ -1,0 +1,37 @@
+Text	Bir subtropikal fırtına olmasının ardından , Gabrielle'in bulunduğu alanın kuzeyinde daha soğuk hava , batısında ve doğusunda ise yağmursuz hava , rüzgâr değişimleri ve kasırganın yolu üzerinde daha soğuk su sıcaklıkları bulunmaktaydı .	Bu durum Gabrielle'in daha da güçlenmesini önledi .	Fakat , kasırganın batı ve kuzey bölümlerinde gök gürültülü fırtınalar meydana geldi .	ve kötü havanın daha da kötüleşmesine sebep oldu .	Daha sonra yağış şeritleri sona erdi ve alçak basınç sisteminin merkezini gök gürültülü fırtınalardan uzakta bıraktı .
+Event	T1	değişimleri	EVENT	154
+Event	T2	önledi	EVENT	280
+Event	T4	erdi	EVENT	459
+Event	T5	bıraktı	EVENT	536
+Event	T6	fırtına	EVENT	16
+Event	T7	kasırganın	EVENT	169
+Event	T8	kasırganın	EVENT	297
+Event	T3	fırtınalar	EVENT	349
+Event	T9	kötüleşmesine	EVENT	400
+Relation	T6	T1	CauseEffect	true	fırtına	değişimleri
+Relation	T1	T6	EffectCause	true	değişimleri	fırtına
+Relation	T1	T2	CauseEffect	true	değişimleri	önledi
+Relation	T2	T1	EffectCause	true	önledi	değişimleri
+Relation	T8	T3	CauseEffect	true	kasırganın	fırtınalar
+Relation	T3	T8	EffectCause	true	fırtınalar	kasırganın
+Relation	T3	T9	CauseEffect	true	fırtınalar	kötüleşmesine
+Relation	T9	T3	EffectCause	true	kötüleşmesine	fırtınalar
+Relation	T1	T9	NoRel	true	değişimleri	kötüleşmesine
+Relation	T3	T6	NoRel	true	fırtınalar	fırtına
+Relation	T3	T7	NoRel	true	fırtınalar	kasırganın
+Relation	T4	T3	NoRel	true	erdi	fırtınalar
+Relation	T4	T7	NoRel	true	erdi	kasırganın
+Relation	T4	T8	NoRel	true	erdi	kasırganın
+Relation	T5	T2	NoRel	true	bıraktı	önledi
+Relation	T5	T4	NoRel	true	bıraktı	erdi
+Relation	T5	T7	NoRel	true	bıraktı	kasırganın
+Relation	T5	T9	NoRel	true	bıraktı	kötüleşmesine
+Relation	T6	T2	NoRel	true	fırtına	önledi
+Relation	T6	T5	NoRel	true	fırtına	bıraktı
+Relation	T6	T7	NoRel	true	fırtına	kasırganın
+Relation	T6	T8	NoRel	true	fırtına	kasırganın
+Relation	T7	T1	NoRel	true	kasırganın	değişimleri
+Relation	T8	T6	NoRel	true	kasırganın	fırtına
+Relation	T8	T9	NoRel	true	kasırganın	kötüleşmesine
+Relation	T9	T6	NoRel	true	kötüleşmesine	fırtına
+Relation	T9	T7	NoRel	true	kötüleşmesine	kasırganın

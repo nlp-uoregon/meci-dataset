@@ -1,0 +1,18 @@
+Text	- 14 de julio de 1973 .	Descarrila un tren de viajeros de la compañía FEVE que viajaba de Ferrol a Gijón , a la altura de Covas , en el término municipal de Viveiro ( Lugo ) .	Al salirse de la vía chocó contra una trinchera , causando 4 muertos y 45 heridos .	- 26 de julio de 1974 .	Una unidad eléctrica chocó en un paso a nivel con un camión en las cercanías de la estación de la Llagosta ( Barcelona ) .
+Event	T0	Descarrila	EVENT	24
+Event	T1	salirse	EVENT	179
+Event	T2	chocó	EVENT	197
+Event	T3	causando	EVENT	226
+Event	T4	muertos	EVENT	237
+Event	T5	heridos	EVENT	250
+Relation	T2	T4	CauseEffect	true	chocó	muertos
+Relation	T4	T2	EffectCause	true	muertos	chocó
+Relation	T2	T5	CauseEffect	true	chocó	heridos
+Relation	T5	T2	EffectCause	true	heridos	chocó
+Relation	T2	T0	NoRel	true	chocó	Descarrila
+Relation	T2	T3	NoRel	true	chocó	causando
+Relation	T3	T1	NoRel	true	causando	salirse
+Relation	T3	T2	NoRel	true	causando	chocó
+Relation	T3	T4	NoRel	true	causando	muertos
+Relation	T4	T3	NoRel	true	muertos	causando
+Relation	T5	T0	NoRel	true	heridos	Descarrila

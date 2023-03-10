@@ -1,0 +1,46 @@
+Text	Rescue crews reached the crash site while the fire continued to burn but no survivors were found .	Crash investigators found traces of acid that led them to believe a bomb in the lavatory was involved .	Traces of potassium nitrate and carbon , consistent with a " low - velocity explosion " were found .	Gunpowder or stumping powder causes a low - velocity explosion .	The explosion damaged bulkheads in the lavatory , severed pipes in the tail and tore a metre - wide hole in the side of the fuselage .
+Event	T0	reached	EVENT	13
+Event	T1	crash	EVENT	25
+Event	T2	burn	EVENT	64
+Event	T3	found	EVENT	91
+Event	T4	traces	EVENT	125
+Event	T5	led	EVENT	145
+Event	T6	explosion	EVENT	279
+Event	T7	found	EVENT	296
+Event	T8	stumping	EVENT	317
+Event	T9	causes	EVENT	333
+Event	T10	explosion	EVENT	357
+Event	T11	damaged	EVENT	383
+Event	T12	severed	EVENT	419
+Event	T13	tore	EVENT	449
+Event	T14	bomb	EVENT	167
+Relation	T1	T0	CauseEffect	true	crash	reached
+Relation	T0	T1	EffectCause	true	reached	crash
+Relation	T4	T14	CauseEffect	true	traces	bomb
+Relation	T14	T4	EffectCause	true	bomb	traces
+Relation	T11	T12	CauseEffect	true	damaged	severed
+Relation	T12	T11	EffectCause	true	severed	damaged
+Relation	T11	T13	CauseEffect	true	damaged	tore
+Relation	T13	T11	EffectCause	true	tore	damaged
+Relation	T9	T10	CauseEffect	true	causes	explosion
+Relation	T10	T9	EffectCause	true	explosion	causes
+Relation	T0	T4	NoRel	true	reached	traces
+Relation	T0	T5	NoRel	true	reached	led
+Relation	T0	T7	NoRel	true	reached	found
+Relation	T1	T12	NoRel	true	crash	severed
+Relation	T10	T13	NoRel	true	explosion	tore
+Relation	T10	T14	NoRel	true	explosion	bomb
+Relation	T12	T1	NoRel	true	severed	crash
+Relation	T13	T6	NoRel	true	tore	explosion
+Relation	T2	T1	NoRel	true	burn	crash
+Relation	T4	T3	NoRel	true	traces	found
+Relation	T4	T9	NoRel	true	traces	causes
+Relation	T5	T0	NoRel	true	led	reached
+Relation	T6	T1	NoRel	true	explosion	crash
+Relation	T6	T12	NoRel	true	explosion	severed
+Relation	T6	T13	NoRel	true	explosion	tore
+Relation	T7	T2	NoRel	true	found	burn
+Relation	T7	T3	NoRel	true	found	found
+Relation	T8	T3	NoRel	true	stumping	found
+Relation	T8	T4	NoRel	true	stumping	traces
+Relation	T9	T7	NoRel	true	causes	found

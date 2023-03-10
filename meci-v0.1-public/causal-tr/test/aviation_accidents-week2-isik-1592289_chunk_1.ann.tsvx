@@ -1,0 +1,72 @@
+Text	2001'de Libyalı istihbarat subayı Abdelbaset el - Megrahi , bombalamadaki rolünden dolayı hapis cezası adlı .	El - Megrahi , Ağustos 2009'da prostat kanseri teşhisi konduktan sonra İskoçya hükûmeti tarafından serbest bırakıldı ve saldırı sonrasında mahkûm edilen tek kişi olarak Mayıs 2012'de yaşamını yitirdi .	Kaddafi , 2003 yılında Libya'nın Lockerbie faciasıyla ilgili sorumluluğunu kabul etti ve kurbanların ailelerine tazminat ödedi fakat saldırı emrini kendisinin vermediğini dile getirdi .	2011'de Libya iç savaşı sırasında , eski bir hükûmet yetkilisi Kaddafi'nin açıklamasını yalanladı ve Libya liderinin bombalama emrini bizzat verdiğini ileri sürdü .	Bu iddiaların yanı sıra , Pan Am 103 sefer sayılı uçağın düşürülmesine ilişkin çok sayıda komplo teorisi ileri sürülmektedir .
+Event	T10	savaşı	EVENT	515
+Event	T11	yalanladı	EVENT	586
+Event	T12	ileri sürdü	EVENT	649
+Event	T13	ileri sürülmektedir	EVENT	768
+Event	T14	bombalamadaki	EVENT	60
+Event	T16	açıklamasını	EVENT	573
+Event	T17	düşürülmesine	EVENT	720
+Event	T18	bombalama	EVENT	615
+Event	T3	saldırı	EVENT	230
+Event	T4	yitirdi	EVENT	302
+Event	T5	faciasıyla	EVENT	355
+Event	T6	kabul etti	EVENT	387
+Event	T7	ödedi	EVENT	433
+Relation	T6	T7	CauseEffect	true	kabul etti	ödedi
+Relation	T7	T6	EffectCause	true	ödedi	kabul etti
+Relation	T5	T7	CauseEffect	true	faciasıyla	ödedi
+Relation	T7	T5	EffectCause	true	ödedi	faciasıyla
+Relation	T14	T17	CauseEffect	true	bombalamadaki	düşürülmesine
+Relation	T17	T14	EffectCause	true	düşürülmesine	bombalamadaki
+Relation	T10	T12	NoRel	true	savaşı	ileri sürdü
+Relation	T10	T13	NoRel	true	savaşı	ileri sürülmektedir
+Relation	T10	T18	NoRel	true	savaşı	bombalama
+Relation	T10	T3	NoRel	true	savaşı	saldırı
+Relation	T10	T5	NoRel	true	savaşı	faciasıyla
+Relation	T10	T6	NoRel	true	savaşı	kabul etti
+Relation	T11	T6	NoRel	true	yalanladı	kabul etti
+Relation	T12	T18	NoRel	true	ileri sürdü	bombalama
+Relation	T12	T4	NoRel	true	ileri sürdü	yitirdi
+Relation	T12	T5	NoRel	true	ileri sürdü	faciasıyla
+Relation	T12	T6	NoRel	true	ileri sürdü	kabul etti
+Relation	T12	T7	NoRel	true	ileri sürdü	ödedi
+Relation	T13	T17	NoRel	true	ileri sürülmektedir	düşürülmesine
+Relation	T13	T18	NoRel	true	ileri sürülmektedir	bombalama
+Relation	T13	T4	NoRel	true	ileri sürülmektedir	yitirdi
+Relation	T14	T10	NoRel	true	bombalamadaki	savaşı
+Relation	T14	T11	NoRel	true	bombalamadaki	yalanladı
+Relation	T14	T12	NoRel	true	bombalamadaki	ileri sürdü
+Relation	T14	T18	NoRel	true	bombalamadaki	bombalama
+Relation	T14	T3	NoRel	true	bombalamadaki	saldırı
+Relation	T14	T5	NoRel	true	bombalamadaki	faciasıyla
+Relation	T14	T6	NoRel	true	bombalamadaki	kabul etti
+Relation	T14	T7	NoRel	true	bombalamadaki	ödedi
+Relation	T16	T10	NoRel	true	açıklamasını	savaşı
+Relation	T16	T4	NoRel	true	açıklamasını	yitirdi
+Relation	T17	T10	NoRel	true	düşürülmesine	savaşı
+Relation	T17	T3	NoRel	true	düşürülmesine	saldırı
+Relation	T17	T4	NoRel	true	düşürülmesine	yitirdi
+Relation	T17	T7	NoRel	true	düşürülmesine	ödedi
+Relation	T18	T3	NoRel	true	bombalama	saldırı
+Relation	T18	T4	NoRel	true	bombalama	yitirdi
+Relation	T18	T5	NoRel	true	bombalama	faciasıyla
+Relation	T18	T6	NoRel	true	bombalama	kabul etti
+Relation	T18	T7	NoRel	true	bombalama	ödedi
+Relation	T3	T14	NoRel	true	saldırı	bombalamadaki
+Relation	T3	T18	NoRel	true	saldırı	bombalama
+Relation	T3	T7	NoRel	true	saldırı	ödedi
+Relation	T4	T12	NoRel	true	yitirdi	ileri sürdü
+Relation	T4	T14	NoRel	true	yitirdi	bombalamadaki
+Relation	T4	T17	NoRel	true	yitirdi	düşürülmesine
+Relation	T4	T6	NoRel	true	yitirdi	kabul etti
+Relation	T5	T12	NoRel	true	faciasıyla	ileri sürdü
+Relation	T5	T16	NoRel	true	faciasıyla	açıklamasını
+Relation	T5	T18	NoRel	true	faciasıyla	bombalama
+Relation	T6	T11	NoRel	true	kabul etti	yalanladı
+Relation	T6	T12	NoRel	true	kabul etti	ileri sürdü
+Relation	T6	T13	NoRel	true	kabul etti	ileri sürülmektedir
+Relation	T6	T14	NoRel	true	kabul etti	bombalamadaki
+Relation	T7	T10	NoRel	true	ödedi	savaşı
+Relation	T7	T11	NoRel	true	ödedi	yalanladı
+Relation	T7	T16	NoRel	true	ödedi	açıklamasını
+Relation	T7	T4	NoRel	true	ödedi	yitirdi

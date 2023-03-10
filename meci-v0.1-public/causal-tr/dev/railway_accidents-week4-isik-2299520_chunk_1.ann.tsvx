@@ -1,0 +1,70 @@
+Text	Yolda gecikmeden kaynaklı kayıp zamanı telafi etmek için istasyona 40_–_60 km hızla girdi .	Westinghouse hava freninin durduramadığı lokomotif , 60 cm kalınlığındaki istasyon duvarını aştı .	Olayda bir kişi öldü , altı kişi yaralandı .	Birkaç gün düştüğü yerde kalan enkaz , 14 at ile kaldırılmaya çalışıldıysa da başarısız oldu .	Daha sonra 10 kişi ve 250 tonluk bir vinçle kaldırılabildi .
+Event	T0	girdi	EVENT	84
+Event	T1	aştı	EVENT	184
+Event	T2	öldü	EVENT	207
+Event	T3	yaralandı	EVENT	224
+Event	T4	çalışıldıysa	EVENT	298
+Event	T5	kaldırılabildi	EVENT	375
+Event	T6	gecikmeden	EVENT	6
+Event	T7	durduramadığı	EVENT	119
+Event	T8	Olayda	EVENT	191
+Event	T9	oldu	EVENT	324
+Event	T10	kalan	EVENT	261
+Event	T11	düştüğü	EVENT	247
+Relation	T6	T0	CauseEffect	true	gecikmeden	girdi
+Relation	T0	T6	EffectCause	true	girdi	gecikmeden
+Relation	T0	T7	CauseEffect	true	girdi	durduramadığı
+Relation	T7	T0	EffectCause	true	durduramadığı	girdi
+Relation	T7	T1	CauseEffect	true	durduramadığı	aştı
+Relation	T1	T7	EffectCause	true	aştı	durduramadığı
+Relation	T8	T2	CauseEffect	true	Olayda	öldü
+Relation	T2	T8	EffectCause	true	öldü	Olayda
+Relation	T8	T3	CauseEffect	true	Olayda	yaralandı
+Relation	T3	T8	EffectCause	true	yaralandı	Olayda
+Relation	T1	T2	CauseEffect	true	aştı	öldü
+Relation	T2	T1	EffectCause	true	öldü	aştı
+Relation	T1	T3	CauseEffect	true	aştı	yaralandı
+Relation	T3	T1	EffectCause	true	yaralandı	aştı
+Relation	T9	T5	CauseEffect	true	oldu	kaldırılabildi
+Relation	T5	T9	EffectCause	true	kaldırılabildi	oldu
+Relation	T1	T9	CauseEffect	true	aştı	oldu
+Relation	T9	T1	EffectCause	true	oldu	aştı
+Relation	T0	T10	NoRel	true	girdi	kalan
+Relation	T0	T2	NoRel	true	girdi	öldü
+Relation	T0	T3	NoRel	true	girdi	yaralandı
+Relation	T0	T5	NoRel	true	girdi	kaldırılabildi
+Relation	T1	T6	NoRel	true	aştı	gecikmeden
+Relation	T1	T8	NoRel	true	aştı	Olayda
+Relation	T10	T1	NoRel	true	kalan	aştı
+Relation	T10	T4	NoRel	true	kalan	çalışıldıysa
+Relation	T11	T1	NoRel	true	düştüğü	aştı
+Relation	T11	T10	NoRel	true	düştüğü	kalan
+Relation	T11	T2	NoRel	true	düştüğü	öldü
+Relation	T11	T6	NoRel	true	düştüğü	gecikmeden
+Relation	T11	T7	NoRel	true	düştüğü	durduramadığı
+Relation	T11	T8	NoRel	true	düştüğü	Olayda
+Relation	T11	T9	NoRel	true	düştüğü	oldu
+Relation	T2	T10	NoRel	true	öldü	kalan
+Relation	T2	T3	NoRel	true	öldü	yaralandı
+Relation	T2	T9	NoRel	true	öldü	oldu
+Relation	T3	T2	NoRel	true	yaralandı	öldü
+Relation	T3	T5	NoRel	true	yaralandı	kaldırılabildi
+Relation	T4	T0	NoRel	true	çalışıldıysa	girdi
+Relation	T4	T1	NoRel	true	çalışıldıysa	aştı
+Relation	T4	T2	NoRel	true	çalışıldıysa	öldü
+Relation	T4	T7	NoRel	true	çalışıldıysa	durduramadığı
+Relation	T5	T1	NoRel	true	kaldırılabildi	aştı
+Relation	T5	T11	NoRel	true	kaldırılabildi	düştüğü
+Relation	T5	T4	NoRel	true	kaldırılabildi	çalışıldıysa
+Relation	T5	T7	NoRel	true	kaldırılabildi	durduramadığı
+Relation	T5	T8	NoRel	true	kaldırılabildi	Olayda
+Relation	T6	T1	NoRel	true	gecikmeden	aştı
+Relation	T6	T2	NoRel	true	gecikmeden	öldü
+Relation	T6	T3	NoRel	true	gecikmeden	yaralandı
+Relation	T6	T5	NoRel	true	gecikmeden	kaldırılabildi
+Relation	T8	T0	NoRel	true	Olayda	girdi
+Relation	T8	T5	NoRel	true	Olayda	kaldırılabildi
+Relation	T8	T7	NoRel	true	Olayda	durduramadığı
+Relation	T8	T9	NoRel	true	Olayda	oldu
+Relation	T9	T0	NoRel	true	oldu	girdi
+Relation	T9	T4	NoRel	true	oldu	çalışıldıysa

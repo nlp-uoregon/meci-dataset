@@ -1,0 +1,53 @@
+Text	Roman daha sonra _ Schindler'in Listesi _ olarak yeniden adlandırılmıştır ve bu kitap , 1993'te _ Schindler'in Listesi _ başlığıyla , Amerikan Yahudi yönetmen Steven Spielberg tarafından beyaz perdeye uyarlanmıştır .	Filmde , Schindler Liam Neeson tarafından canlandırılmıştır .	Neeson , bu filmdeki performansı ile En İyi Aktör kategorisinde Oskar adayı olmuş , filmse En İyi Film Ödülü'nü kazanmıştır .	Spielberg'in filminin getirdiği_ün , Schindler'i popüler kültüre taşıdı .	Spielberg'in filmi , popüler kültürde Schindler'in bilinirliğinin temelini oluşturdu : kâr amaçlı , etik değerlere çok önem vermeyen bir endüstricinin , bir noktada verdiği sessiz ama bilinçli kararla tüm varlığını , gerektiğinde Nazilerin göz ardı etmesini sağlamak için bile olsa işçilerinin hayatlarını kurtarmaya harcamasının hikâyesi .
+Event	T0	uyarlanmıştır	EVENT	201
+Event	T1	canlandırılmıştır	EVENT	259
+Event	T2	kazanmıştır	EVENT	391
+Event	T4	taşıdı	EVENT	470
+Event	T5	oluşturdu	EVENT	554
+Event	T6	hikâyesi	EVENT	809
+Event	T7	adlandırılmıştır	EVENT	57
+Event	T8	olmuş	EVENT	355
+Event	T9	performansı	EVENT	300
+Event	T3	kararla	EVENT	672
+Event	T10	harcamasının	EVENT	796
+Relation	T9	T8	CauseEffect	true	performansı	olmuş
+Relation	T8	T9	EffectCause	true	olmuş	performansı
+Relation	T1	T8	CauseEffect	true	canlandırılmıştır	olmuş
+Relation	T8	T1	EffectCause	true	olmuş	canlandırılmıştır
+Relation	T2	T4	CauseEffect	true	kazanmıştır	taşıdı
+Relation	T4	T2	EffectCause	true	taşıdı	kazanmıştır
+Relation	T3	T10	CauseEffect	true	kararla	harcamasının
+Relation	T10	T3	EffectCause	true	harcamasının	kararla
+Relation	T0	T3	NoRel	true	uyarlanmıştır	kararla
+Relation	T0	T9	NoRel	true	uyarlanmıştır	performansı
+Relation	T1	T0	NoRel	true	canlandırılmıştır	uyarlanmıştır
+Relation	T1	T2	NoRel	true	canlandırılmıştır	kazanmıştır
+Relation	T1	T3	NoRel	true	canlandırılmıştır	kararla
+Relation	T1	T4	NoRel	true	canlandırılmıştır	taşıdı
+Relation	T1	T5	NoRel	true	canlandırılmıştır	oluşturdu
+Relation	T1	T6	NoRel	true	canlandırılmıştır	hikâyesi
+Relation	T10	T4	NoRel	true	harcamasının	taşıdı
+Relation	T10	T7	NoRel	true	harcamasının	adlandırılmıştır
+Relation	T10	T8	NoRel	true	harcamasının	olmuş
+Relation	T10	T9	NoRel	true	harcamasının	performansı
+Relation	T2	T1	NoRel	true	kazanmıştır	canlandırılmıştır
+Relation	T2	T10	NoRel	true	kazanmıştır	harcamasının
+Relation	T3	T2	NoRel	true	kararla	kazanmıştır
+Relation	T3	T4	NoRel	true	kararla	taşıdı
+Relation	T3	T6	NoRel	true	kararla	hikâyesi
+Relation	T3	T8	NoRel	true	kararla	olmuş
+Relation	T4	T6	NoRel	true	taşıdı	hikâyesi
+Relation	T5	T2	NoRel	true	oluşturdu	kazanmıştır
+Relation	T5	T7	NoRel	true	oluşturdu	adlandırılmıştır
+Relation	T5	T8	NoRel	true	oluşturdu	olmuş
+Relation	T6	T1	NoRel	true	hikâyesi	canlandırılmıştır
+Relation	T6	T10	NoRel	true	hikâyesi	harcamasının
+Relation	T6	T2	NoRel	true	hikâyesi	kazanmıştır
+Relation	T6	T7	NoRel	true	hikâyesi	adlandırılmıştır
+Relation	T6	T9	NoRel	true	hikâyesi	performansı
+Relation	T7	T0	NoRel	true	adlandırılmıştır	uyarlanmıştır
+Relation	T7	T10	NoRel	true	adlandırılmıştır	harcamasının
+Relation	T7	T6	NoRel	true	adlandırılmıştır	hikâyesi
+Relation	T8	T3	NoRel	true	olmuş	kararla
+Relation	T9	T0	NoRel	true	performansı	uyarlanmıştır
+Relation	T9	T4	NoRel	true	performansı	taşıdı

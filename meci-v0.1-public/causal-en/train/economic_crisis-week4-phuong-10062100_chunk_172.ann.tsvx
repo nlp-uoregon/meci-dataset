@@ -1,0 +1,78 @@
+Text	Under the program , a lender would be responsible for reducing monthly payments to no more than 38 % of a borrower 's income , with government sharing the cost to further cut the rate to 31 % .	The plan also involves forgiving a portion of the borrower 's mortgage balance .	Companies that service mortgages will get incentives to modify loans and to help the homeowner stay current .	Untold thousands of people have complained in recent years that they were subjected to a nightmare experience of lost paperwork , misapplied fees and Kafkaesque phone calls with clueless customer service representatives as they strived to avoid foreclosures they say were preventable .	These claims are backed up by a swelling number of academic studies and insider accounts of misconduct and abuse .
+Event	T0	sharing	EVENT	143
+Event	T1	cost	EVENT	155
+Event	T2	cut	EVENT	171
+Event	T3	forgiving	EVENT	217
+Event	T4	service	EVENT	290
+Event	T5	incentives	EVENT	317
+Event	T6	modify	EVENT	331
+Event	T7	complained	EVENT	417
+Event	T8	experience	EVENT	484
+Event	T9	lost	EVENT	498
+Event	T10	calls	EVENT	552
+Event	T11	strived	EVENT	613
+Event	T12	foreclosures	EVENT	630
+Event	T13	say	EVENT	648
+Event	T14	claims	EVENT	677
+Event	T15	swelling	EVENT	703
+Event	T16	studies	EVENT	731
+Event	T17	accounts	EVENT	751
+Event	T18	misconduct	EVENT	763
+Event	T19	abuse	EVENT	778
+Event	T20	help	EVENT	351
+Event	T21	nightmare	EVENT	474
+Event	T22	misapplied	EVENT	515
+Event	T23	backed up	EVENT	688
+Relation	T2	T0	CauseEffect	true	cut	sharing
+Relation	T0	T2	EffectCause	true	sharing	cut
+Relation	T9	T21	CauseEffect	true	lost	nightmare
+Relation	T21	T9	EffectCause	true	nightmare	lost
+Relation	T9	T7	CauseEffect	true	lost	complained
+Relation	T7	T9	EffectCause	true	complained	lost
+Relation	T22	T7	CauseEffect	true	misapplied	complained
+Relation	T7	T22	EffectCause	true	complained	misapplied
+Relation	T10	T7	CauseEffect	true	calls	complained
+Relation	T7	T10	EffectCause	true	complained	calls
+Relation	T16	T14	CauseEffect	true	studies	claims
+Relation	T14	T16	EffectCause	true	claims	studies
+Relation	T17	T14	CauseEffect	true	accounts	claims
+Relation	T14	T17	EffectCause	true	claims	accounts
+Relation	T0	T18	NoRel	true	sharing	misconduct
+Relation	T0	T22	NoRel	true	sharing	misapplied
+Relation	T0	T4	NoRel	true	sharing	service
+Relation	T0	T9	NoRel	true	sharing	lost
+Relation	T10	T0	NoRel	true	calls	sharing
+Relation	T10	T9	NoRel	true	calls	lost
+Relation	T11	T10	NoRel	true	strived	calls
+Relation	T11	T8	NoRel	true	strived	experience
+Relation	T11	T9	NoRel	true	strived	lost
+Relation	T16	T12	NoRel	true	studies	foreclosures
+Relation	T16	T13	NoRel	true	studies	say
+Relation	T16	T3	NoRel	true	studies	forgiving
+Relation	T18	T10	NoRel	true	misconduct	calls
+Relation	T18	T21	NoRel	true	misconduct	nightmare
+Relation	T19	T20	NoRel	true	abuse	help
+Relation	T19	T21	NoRel	true	abuse	nightmare
+Relation	T2	T15	NoRel	true	cut	swelling
+Relation	T2	T3	NoRel	true	cut	forgiving
+Relation	T20	T13	NoRel	true	help	say
+Relation	T20	T21	NoRel	true	help	nightmare
+Relation	T21	T17	NoRel	true	nightmare	accounts
+Relation	T22	T17	NoRel	true	misapplied	accounts
+Relation	T22	T18	NoRel	true	misapplied	misconduct
+Relation	T23	T10	NoRel	true	backed up	calls
+Relation	T23	T12	NoRel	true	backed up	foreclosures
+Relation	T23	T13	NoRel	true	backed up	say
+Relation	T23	T17	NoRel	true	backed up	accounts
+Relation	T23	T2	NoRel	true	backed up	cut
+Relation	T3	T20	NoRel	true	forgiving	help
+Relation	T4	T14	NoRel	true	service	claims
+Relation	T5	T21	NoRel	true	incentives	nightmare
+Relation	T5	T22	NoRel	true	incentives	misapplied
+Relation	T5	T3	NoRel	true	incentives	forgiving
+Relation	T6	T12	NoRel	true	modify	foreclosures
+Relation	T7	T3	NoRel	true	complained	forgiving
+Relation	T8	T14	NoRel	true	experience	claims
+Relation	T8	T15	NoRel	true	experience	swelling
+Relation	T9	T0	NoRel	true	lost	sharing
+Relation	T9	T17	NoRel	true	lost	accounts

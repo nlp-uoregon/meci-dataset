@@ -1,0 +1,80 @@
+Text	sağ | küçükresim | 300px | Belize'de birbiri ile çatışan siviller ile isyan karşıtı kuvvetler .	İSYAN KONTROLÜ , bir isyan , gösteri veya protestoya katılan sivilleri kontrol etmek , dağıtmak ve tutuklamak amacı ile polisler , askerî kuvvetler veya diğer emniyet kuvvetlerinin aldığı tedbirleri kasteder .	Uzun zamandır kanun uygulayıcı memurlar ile askerler kalabalıkları dağıtmak ve isyancıları tutuklamak için cop ve kamçı gibi öldürücü olmayan silahlar kullanmışlardır .	1980'lerden beri isyan kontrolü memurları ayrıca göz yaşartıcı gaz , biber gazı spreyi , plastik mermiler ve şok tabancıları kullanmışlardır .	Bazı bağlamlarda çevik kuvvetler ayrıca tazyikli su fışkırtma araçları , zırhlı savaş araçları , polis köpekleri veya atlı polis kullanabilirler .
+Event	T0	çatışan	EVENT	49
+Event	T1	isyan	EVENT	117
+Event	T2	dağıtmak	EVENT	183
+Event	T3	tutuklamak	EVENT	195
+Event	T4	kasteder	EVENT	295
+Event	T5	tutuklamak	EVENT	397
+Event	T6	katılan	EVENT	149
+Event	T7	kontrol etmek	EVENT	167
+Event	T8	tedbirleri	EVENT	284
+Event	T9	dağıtmak	EVENT	373
+Event	T10	kullanmışlardır	EVENT	457
+Event	T11	kullanmışlardır	EVENT	600
+Event	T12	kullanabilirler	EVENT	747
+Relation	T1	T8	CauseEffect	true	isyan	tedbirleri
+Relation	T8	T1	EffectCause	true	tedbirleri	isyan
+Relation	T6	T8	CauseEffect	true	katılan	tedbirleri
+Relation	T8	T6	EffectCause	true	tedbirleri	katılan
+Relation	T7	T8	CauseEffect	true	kontrol etmek	tedbirleri
+Relation	T8	T7	EffectCause	true	tedbirleri	kontrol etmek
+Relation	T2	T8	CauseEffect	true	dağıtmak	tedbirleri
+Relation	T8	T2	EffectCause	true	tedbirleri	dağıtmak
+Relation	T3	T8	CauseEffect	true	tutuklamak	tedbirleri
+Relation	T8	T3	EffectCause	true	tedbirleri	tutuklamak
+Relation	T9	T10	CauseEffect	true	dağıtmak	kullanmışlardır
+Relation	T10	T9	EffectCause	true	kullanmışlardır	dağıtmak
+Relation	T5	T10	CauseEffect	true	tutuklamak	kullanmışlardır
+Relation	T10	T5	EffectCause	true	kullanmışlardır	tutuklamak
+Relation	T9	T11	CauseEffect	true	dağıtmak	kullanmışlardır
+Relation	T11	T9	EffectCause	true	kullanmışlardır	dağıtmak
+Relation	T5	T11	CauseEffect	true	tutuklamak	kullanmışlardır
+Relation	T11	T5	EffectCause	true	kullanmışlardır	tutuklamak
+Relation	T9	T12	CauseEffect	true	dağıtmak	kullanabilirler
+Relation	T12	T9	EffectCause	true	kullanabilirler	dağıtmak
+Relation	T5	T12	CauseEffect	true	tutuklamak	kullanabilirler
+Relation	T12	T5	EffectCause	true	kullanabilirler	tutuklamak
+Relation	T0	T1	NoRel	true	çatışan	isyan
+Relation	T0	T12	NoRel	true	çatışan	kullanabilirler
+Relation	T0	T2	NoRel	true	çatışan	dağıtmak
+Relation	T0	T4	NoRel	true	çatışan	kasteder
+Relation	T1	T4	NoRel	true	isyan	kasteder
+Relation	T1	T5	NoRel	true	isyan	tutuklamak
+Relation	T1	T6	NoRel	true	isyan	katılan
+Relation	T1	T9	NoRel	true	isyan	dağıtmak
+Relation	T10	T0	NoRel	true	kullanmışlardır	çatışan
+Relation	T10	T11	NoRel	true	kullanmışlardır	kullanmışlardır
+Relation	T10	T2	NoRel	true	kullanmışlardır	dağıtmak
+Relation	T10	T4	NoRel	true	kullanmışlardır	kasteder
+Relation	T10	T8	NoRel	true	kullanmışlardır	tedbirleri
+Relation	T11	T2	NoRel	true	kullanmışlardır	dağıtmak
+Relation	T11	T6	NoRel	true	kullanmışlardır	katılan
+Relation	T12	T2	NoRel	true	kullanabilirler	dağıtmak
+Relation	T12	T3	NoRel	true	kullanabilirler	tutuklamak
+Relation	T12	T7	NoRel	true	kullanabilirler	kontrol etmek
+Relation	T2	T1	NoRel	true	dağıtmak	isyan
+Relation	T2	T4	NoRel	true	dağıtmak	kasteder
+Relation	T2	T5	NoRel	true	dağıtmak	tutuklamak
+Relation	T2	T7	NoRel	true	dağıtmak	kontrol etmek
+Relation	T3	T0	NoRel	true	tutuklamak	çatışan
+Relation	T3	T1	NoRel	true	tutuklamak	isyan
+Relation	T3	T10	NoRel	true	tutuklamak	kullanmışlardır
+Relation	T3	T11	NoRel	true	tutuklamak	kullanmışlardır
+Relation	T3	T5	NoRel	true	tutuklamak	tutuklamak
+Relation	T3	T7	NoRel	true	tutuklamak	kontrol etmek
+Relation	T4	T0	NoRel	true	kasteder	çatışan
+Relation	T4	T12	NoRel	true	kasteder	kullanabilirler
+Relation	T4	T5	NoRel	true	kasteder	tutuklamak
+Relation	T4	T6	NoRel	true	kasteder	katılan
+Relation	T5	T1	NoRel	true	tutuklamak	isyan
+Relation	T6	T11	NoRel	true	katılan	kullanmışlardır
+Relation	T6	T12	NoRel	true	katılan	kullanabilirler
+Relation	T6	T7	NoRel	true	katılan	kontrol etmek
+Relation	T7	T10	NoRel	true	kontrol etmek	kullanmışlardır
+Relation	T7	T11	NoRel	true	kontrol etmek	kullanmışlardır
+Relation	T7	T12	NoRel	true	kontrol etmek	kullanabilirler
+Relation	T7	T4	NoRel	true	kontrol etmek	kasteder
+Relation	T7	T5	NoRel	true	kontrol etmek	tutuklamak
+Relation	T8	T5	NoRel	true	tedbirleri	tutuklamak
+Relation	T9	T3	NoRel	true	dağıtmak	tutuklamak
+Relation	T9	T8	NoRel	true	dağıtmak	tedbirleri

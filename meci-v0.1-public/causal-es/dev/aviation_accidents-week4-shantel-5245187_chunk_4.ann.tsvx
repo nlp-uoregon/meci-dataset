@@ -1,0 +1,144 @@
+Text	El gobierno federal creó una comisión para investigar el accidente .	Tanto la grabadora de voz como la de datos fueron recuperadas y entregadas a la Oficina de Investigación de Accidentes .	Dado que el avión había sido fabricado en Estados Unidos , la NTSB envió un observador a la investigación .	El daño tras el accidente era tan elevado que resultaba imposible obtener ninguna información del lugar , si bien si se pudieron rescatar las grabadoras .	El capitán informó del encendido de la luz de alerta de motor y posteriormente de un fallo de los dos motores durante la aproximación , con el tren desplegado y los flaps totalmente extendidos .
+Event	T0	creó	EVENT	20
+Event	T1	investigar	EVENT	43
+Event	T2	accidente	EVENT	57
+Event	T3	recuperadas	EVENT	119
+Event	T4	entregadas	EVENT	133
+Event	T5	fabricado	EVENT	219
+Event	T6	envió	EVENT	257
+Event	T7	investigación	EVENT	282
+Event	T8	daño	EVENT	301
+Event	T9	accidente	EVENT	314
+Event	T10	rescatar	EVENT	427
+Event	T11	informó	EVENT	464
+Event	T12	encendido	EVENT	476
+Event	T13	alerta	EVENT	499
+Event	T14	fallo	EVENT	538
+Event	T15	aproximación	EVENT	574
+Event	T16	desplegado	EVENT	601
+Event	T17	flaps	EVENT	618
+Event	T18	extendidos	EVENT	635
+Relation	T2	T1	CauseEffect	true	accidente	investigar
+Relation	T1	T2	EffectCause	true	investigar	accidente
+Relation	T0	T11	NoRel	true	creó	informó
+Relation	T0	T15	NoRel	true	creó	aproximación
+Relation	T0	T16	NoRel	true	creó	desplegado
+Relation	T0	T17	NoRel	true	creó	flaps
+Relation	T0	T2	NoRel	true	creó	accidente
+Relation	T0	T8	NoRel	true	creó	daño
+Relation	T1	T11	NoRel	true	investigar	informó
+Relation	T1	T12	NoRel	true	investigar	encendido
+Relation	T1	T13	NoRel	true	investigar	alerta
+Relation	T1	T15	NoRel	true	investigar	aproximación
+Relation	T1	T17	NoRel	true	investigar	flaps
+Relation	T10	T16	NoRel	true	rescatar	desplegado
+Relation	T10	T2	NoRel	true	rescatar	accidente
+Relation	T10	T3	NoRel	true	rescatar	recuperadas
+Relation	T10	T5	NoRel	true	rescatar	fabricado
+Relation	T10	T6	NoRel	true	rescatar	envió
+Relation	T10	T7	NoRel	true	rescatar	investigación
+Relation	T10	T8	NoRel	true	rescatar	daño
+Relation	T10	T9	NoRel	true	rescatar	accidente
+Relation	T11	T0	NoRel	true	informó	creó
+Relation	T11	T10	NoRel	true	informó	rescatar
+Relation	T11	T13	NoRel	true	informó	alerta
+Relation	T11	T14	NoRel	true	informó	fallo
+Relation	T11	T16	NoRel	true	informó	desplegado
+Relation	T11	T18	NoRel	true	informó	extendidos
+Relation	T11	T4	NoRel	true	informó	entregadas
+Relation	T11	T6	NoRel	true	informó	envió
+Relation	T11	T9	NoRel	true	informó	accidente
+Relation	T12	T0	NoRel	true	encendido	creó
+Relation	T12	T14	NoRel	true	encendido	fallo
+Relation	T12	T16	NoRel	true	encendido	desplegado
+Relation	T12	T6	NoRel	true	encendido	envió
+Relation	T12	T7	NoRel	true	encendido	investigación
+Relation	T12	T8	NoRel	true	encendido	daño
+Relation	T13	T1	NoRel	true	alerta	investigar
+Relation	T13	T12	NoRel	true	alerta	encendido
+Relation	T13	T15	NoRel	true	alerta	aproximación
+Relation	T13	T18	NoRel	true	alerta	extendidos
+Relation	T13	T2	NoRel	true	alerta	accidente
+Relation	T13	T7	NoRel	true	alerta	investigación
+Relation	T14	T0	NoRel	true	fallo	creó
+Relation	T14	T1	NoRel	true	fallo	investigar
+Relation	T14	T16	NoRel	true	fallo	desplegado
+Relation	T14	T17	NoRel	true	fallo	flaps
+Relation	T14	T18	NoRel	true	fallo	extendidos
+Relation	T14	T5	NoRel	true	fallo	fabricado
+Relation	T14	T6	NoRel	true	fallo	envió
+Relation	T14	T8	NoRel	true	fallo	daño
+Relation	T15	T10	NoRel	true	aproximación	rescatar
+Relation	T15	T13	NoRel	true	aproximación	alerta
+Relation	T15	T14	NoRel	true	aproximación	fallo
+Relation	T15	T16	NoRel	true	aproximación	desplegado
+Relation	T15	T18	NoRel	true	aproximación	extendidos
+Relation	T15	T3	NoRel	true	aproximación	recuperadas
+Relation	T15	T8	NoRel	true	aproximación	daño
+Relation	T16	T10	NoRel	true	desplegado	rescatar
+Relation	T16	T12	NoRel	true	desplegado	encendido
+Relation	T16	T15	NoRel	true	desplegado	aproximación
+Relation	T16	T17	NoRel	true	desplegado	flaps
+Relation	T16	T5	NoRel	true	desplegado	fabricado
+Relation	T16	T7	NoRel	true	desplegado	investigación
+Relation	T17	T1	NoRel	true	flaps	investigar
+Relation	T17	T13	NoRel	true	flaps	alerta
+Relation	T17	T15	NoRel	true	flaps	aproximación
+Relation	T17	T18	NoRel	true	flaps	extendidos
+Relation	T17	T7	NoRel	true	flaps	investigación
+Relation	T17	T8	NoRel	true	flaps	daño
+Relation	T18	T10	NoRel	true	extendidos	rescatar
+Relation	T18	T15	NoRel	true	extendidos	aproximación
+Relation	T18	T2	NoRel	true	extendidos	accidente
+Relation	T18	T6	NoRel	true	extendidos	envió
+Relation	T18	T9	NoRel	true	extendidos	accidente
+Relation	T2	T12	NoRel	true	accidente	encendido
+Relation	T2	T17	NoRel	true	accidente	flaps
+Relation	T2	T3	NoRel	true	accidente	recuperadas
+Relation	T2	T4	NoRel	true	accidente	entregadas
+Relation	T2	T5	NoRel	true	accidente	fabricado
+Relation	T2	T8	NoRel	true	accidente	daño
+Relation	T3	T12	NoRel	true	recuperadas	encendido
+Relation	T3	T15	NoRel	true	recuperadas	aproximación
+Relation	T3	T17	NoRel	true	recuperadas	flaps
+Relation	T3	T2	NoRel	true	recuperadas	accidente
+Relation	T3	T4	NoRel	true	recuperadas	entregadas
+Relation	T4	T1	NoRel	true	entregadas	investigar
+Relation	T4	T11	NoRel	true	entregadas	informó
+Relation	T4	T16	NoRel	true	entregadas	desplegado
+Relation	T4	T17	NoRel	true	entregadas	flaps
+Relation	T4	T2	NoRel	true	entregadas	accidente
+Relation	T4	T6	NoRel	true	entregadas	envió
+Relation	T4	T7	NoRel	true	entregadas	investigación
+Relation	T4	T9	NoRel	true	entregadas	accidente
+Relation	T5	T10	NoRel	true	fabricado	rescatar
+Relation	T5	T12	NoRel	true	fabricado	encendido
+Relation	T5	T15	NoRel	true	fabricado	aproximación
+Relation	T5	T16	NoRel	true	fabricado	desplegado
+Relation	T5	T8	NoRel	true	fabricado	daño
+Relation	T6	T1	NoRel	true	envió	investigar
+Relation	T6	T10	NoRel	true	envió	rescatar
+Relation	T6	T12	NoRel	true	envió	encendido
+Relation	T6	T13	NoRel	true	envió	alerta
+Relation	T6	T14	NoRel	true	envió	fallo
+Relation	T6	T17	NoRel	true	envió	flaps
+Relation	T6	T4	NoRel	true	envió	entregadas
+Relation	T6	T5	NoRel	true	envió	fabricado
+Relation	T7	T1	NoRel	true	investigación	investigar
+Relation	T7	T11	NoRel	true	investigación	informó
+Relation	T7	T12	NoRel	true	investigación	encendido
+Relation	T7	T14	NoRel	true	investigación	fallo
+Relation	T7	T4	NoRel	true	investigación	entregadas
+Relation	T8	T1	NoRel	true	daño	investigar
+Relation	T8	T15	NoRel	true	daño	aproximación
+Relation	T8	T16	NoRel	true	daño	desplegado
+Relation	T8	T2	NoRel	true	daño	accidente
+Relation	T8	T4	NoRel	true	daño	entregadas
+Relation	T8	T5	NoRel	true	daño	fabricado
+Relation	T8	T6	NoRel	true	daño	envió
+Relation	T8	T7	NoRel	true	daño	investigación
+Relation	T9	T0	NoRel	true	accidente	creó
+Relation	T9	T1	NoRel	true	accidente	investigar
+Relation	T9	T10	NoRel	true	accidente	rescatar
+Relation	T9	T12	NoRel	true	accidente	encendido
+Relation	T9	T17	NoRel	true	accidente	flaps

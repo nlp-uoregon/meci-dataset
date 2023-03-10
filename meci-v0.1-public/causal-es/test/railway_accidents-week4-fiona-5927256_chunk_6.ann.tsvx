@@ -1,0 +1,90 @@
+Text	Entre las estaciones de Jerez de la Frontera y El Cuervo , pertenecientes a la línea Sevilla_–_Cádiz , se produce el descarrilamiento del correo ascendente que prestaba servicio entre las dos últimas ciudades citadas con el resultado de 7 muertos y 22 heridos .	- 7 de septiembre de 1872 .	El puente sobre el Barranco de San Jorge de la línea Tarragona -_Valencia , situado en las proximidades del castillo de Sant Jordi de Alfama , a tres kilómetros de la estación de La Ametlla de Mar ( Tarragona ) , se hunde al paso del tren correo de Barcelona a Valencia .	El puente se vio afectado en sus cimientos a causa de la fuerte avenida que experimentó el arroyo que atravesaba el mismo debido a una fuerte tormenta .	El accidente arrojó una cifra de 17 muertos y 25 heridos .
+Event	T0	produce	EVENT	106
+Event	T1	descarrilamiento	EVENT	117
+Event	T2	citadas	EVENT	209
+Event	T3	resultado	EVENT	224
+Event	T4	muertos	EVENT	239
+Event	T5	heridos	EVENT	252
+Event	T6	hunde	EVENT	506
+Event	T7	afectado	EVENT	579
+Event	T8	avenida	EVENT	626
+Event	T9	experimentó	EVENT	638
+Event	T10	atravesaba	EVENT	664
+Event	T11	tormenta	EVENT	704
+Event	T12	arrojó	EVENT	728
+Event	T13	muertos	EVENT	751
+Event	T14	heridos	EVENT	764
+Event	T15	accidente	EVENT	718
+Relation	T1	T4	CauseEffect	true	descarrilamiento	muertos
+Relation	T4	T1	EffectCause	true	muertos	descarrilamiento
+Relation	T1	T5	CauseEffect	true	descarrilamiento	heridos
+Relation	T5	T1	EffectCause	true	heridos	descarrilamiento
+Relation	T15	T13	CauseEffect	true	accidente	muertos
+Relation	T13	T15	EffectCause	true	muertos	accidente
+Relation	T15	T14	CauseEffect	true	accidente	heridos
+Relation	T14	T15	EffectCause	true	heridos	accidente
+Relation	T0	T1	NoRel	true	produce	descarrilamiento
+Relation	T0	T13	NoRel	true	produce	muertos
+Relation	T0	T14	NoRel	true	produce	heridos
+Relation	T0	T5	NoRel	true	produce	heridos
+Relation	T1	T14	NoRel	true	descarrilamiento	heridos
+Relation	T1	T6	NoRel	true	descarrilamiento	hunde
+Relation	T10	T2	NoRel	true	atravesaba	citadas
+Relation	T11	T0	NoRel	true	tormenta	produce
+Relation	T11	T12	NoRel	true	tormenta	arrojó
+Relation	T11	T3	NoRel	true	tormenta	resultado
+Relation	T11	T5	NoRel	true	tormenta	heridos
+Relation	T11	T8	NoRel	true	tormenta	avenida
+Relation	T11	T9	NoRel	true	tormenta	experimentó
+Relation	T12	T1	NoRel	true	arrojó	descarrilamiento
+Relation	T12	T5	NoRel	true	arrojó	heridos
+Relation	T13	T0	NoRel	true	muertos	produce
+Relation	T13	T11	NoRel	true	muertos	tormenta
+Relation	T14	T1	NoRel	true	heridos	descarrilamiento
+Relation	T14	T10	NoRel	true	heridos	atravesaba
+Relation	T14	T13	NoRel	true	heridos	muertos
+Relation	T14	T3	NoRel	true	heridos	resultado
+Relation	T14	T6	NoRel	true	heridos	hunde
+Relation	T14	T7	NoRel	true	heridos	afectado
+Relation	T14	T8	NoRel	true	heridos	avenida
+Relation	T14	T9	NoRel	true	heridos	experimentó
+Relation	T15	T5	NoRel	true	accidente	heridos
+Relation	T15	T6	NoRel	true	accidente	hunde
+Relation	T15	T9	NoRel	true	accidente	experimentó
+Relation	T2	T11	NoRel	true	citadas	tormenta
+Relation	T2	T15	NoRel	true	citadas	accidente
+Relation	T2	T6	NoRel	true	citadas	hunde
+Relation	T2	T8	NoRel	true	citadas	avenida
+Relation	T3	T11	NoRel	true	resultado	tormenta
+Relation	T3	T12	NoRel	true	resultado	arrojó
+Relation	T3	T14	NoRel	true	resultado	heridos
+Relation	T3	T2	NoRel	true	resultado	citadas
+Relation	T3	T7	NoRel	true	resultado	afectado
+Relation	T3	T8	NoRel	true	resultado	avenida
+Relation	T3	T9	NoRel	true	resultado	experimentó
+Relation	T4	T12	NoRel	true	muertos	arrojó
+Relation	T4	T5	NoRel	true	muertos	heridos
+Relation	T4	T8	NoRel	true	muertos	avenida
+Relation	T4	T9	NoRel	true	muertos	experimentó
+Relation	T5	T0	NoRel	true	heridos	produce
+Relation	T5	T11	NoRel	true	heridos	tormenta
+Relation	T5	T12	NoRel	true	heridos	arrojó
+Relation	T5	T15	NoRel	true	heridos	accidente
+Relation	T5	T9	NoRel	true	heridos	experimentó
+Relation	T6	T13	NoRel	true	hunde	muertos
+Relation	T6	T14	NoRel	true	hunde	heridos
+Relation	T7	T0	NoRel	true	afectado	produce
+Relation	T7	T13	NoRel	true	afectado	muertos
+Relation	T7	T3	NoRel	true	afectado	resultado
+Relation	T7	T9	NoRel	true	afectado	experimentó
+Relation	T8	T0	NoRel	true	avenida	produce
+Relation	T8	T15	NoRel	true	avenida	accidente
+Relation	T8	T3	NoRel	true	avenida	resultado
+Relation	T8	T5	NoRel	true	avenida	heridos
+Relation	T8	T6	NoRel	true	avenida	hunde
+Relation	T8	T9	NoRel	true	avenida	experimentó
+Relation	T9	T0	NoRel	true	experimentó	produce
+Relation	T9	T10	NoRel	true	experimentó	atravesaba
+Relation	T9	T11	NoRel	true	experimentó	tormenta
+Relation	T9	T12	NoRel	true	experimentó	arrojó
+Relation	T9	T7	NoRel	true	experimentó	afectado

@@ -1,0 +1,32 @@
+Text	American millionaire philanthropist Lewis Katz and six others were killed in a Gulfstream IV crash in Bedford , Massachusetts , on 31 May 2014 .	Katz , the co-owner of _ The Philadelphia Inquirer _ and several major sports teams , had chartered the twinjet for a day trip from Atlantic City , New Jersey , to Concord , Massachusetts .	In addition to several personal friends , he had also invited Edward G. Rendell , a former governor of Pennsylvania , who was unable to accept .	The flight crew consisted of pilot - in - command James McDowell , of Georgetown , Delaware ; co-pilot Bauke " Mike " de Vries , of Marlton , New Jersey ; and one flight attendant .	The pilots attempted to take off with the airplane 's gust lock inadvertently engaged , which resulted in the plane overrunning the runway and crashing into a ravine .
+Event	T0	crash	EVENT	93
+Event	T1	chartered	EVENT	235
+Event	T2	trip	EVENT	267
+Event	T3	invited	EVENT	389
+Event	T4	accept	EVENT	471
+Event	T5	consisted	EVENT	496
+Event	T6	attempted	EVENT	673
+Event	T7	engaged	EVENT	740
+Event	T8	resulted	EVENT	756
+Event	T9	overrunning	EVENT	778
+Event	T10	killed	EVENT	67
+Event	T11	take off	EVENT	686
+Event	T12	crashing	EVENT	805
+Relation	T0	T10	CauseEffect	true	crash	killed
+Relation	T10	T0	EffectCause	true	killed	crash
+Relation	T7	T9	CauseEffect	true	engaged	overrunning
+Relation	T9	T7	EffectCause	true	overrunning	engaged
+Relation	T7	T12	CauseEffect	true	engaged	crashing
+Relation	T12	T7	EffectCause	true	crashing	engaged
+Relation	T0	T4	NoRel	true	crash	accept
+Relation	T0	T5	NoRel	true	crash	consisted
+Relation	T0	T6	NoRel	true	crash	attempted
+Relation	T10	T1	NoRel	true	killed	chartered
+Relation	T10	T3	NoRel	true	killed	invited
+Relation	T11	T1	NoRel	true	take off	chartered
+Relation	T11	T6	NoRel	true	take off	attempted
+Relation	T11	T7	NoRel	true	take off	engaged
+Relation	T4	T10	NoRel	true	accept	killed
+Relation	T5	T1	NoRel	true	consisted	chartered
+Relation	T7	T3	NoRel	true	engaged	invited
+Relation	T7	T4	NoRel	true	engaged	accept

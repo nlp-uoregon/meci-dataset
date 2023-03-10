@@ -1,0 +1,30 @@
+Text	Optegnelser over dødsfald blandt de meget fattige er ikke bevaret .	Det først registrerede offer for pesten er Margaret Porteous , der døde den 12. april 1665 .	I juli 1665 nåede pesten til selve London .	Kong Karl 2. af England , hans familie og hoffet flyttede til Oxford .	Men byens Lord Mayor og hans rådmænd blev på deres post .
+Event	T0	dødsfald	EVENT	17
+Event	T1	offer	EVENT	91
+Event	T2	pesten	EVENT	101
+Event	T3	døde	EVENT	135
+Event	T4	pesten	EVENT	179
+Event	T5	flyttede	EVENT	254
+Event	T6	blev	EVENT	313
+Event	T7	nåede	EVENT	173
+Relation	T2	T3	CauseEffect	true	pesten	døde
+Relation	T3	T2	EffectCause	true	døde	pesten
+Relation	T0	T3	NoRel	true	dødsfald	døde
+Relation	T1	T0	NoRel	true	offer	dødsfald
+Relation	T1	T2	NoRel	true	offer	pesten
+Relation	T1	T5	NoRel	true	offer	flyttede
+Relation	T1	T6	NoRel	true	offer	blev
+Relation	T1	T7	NoRel	true	offer	nåede
+Relation	T2	T5	NoRel	true	pesten	flyttede
+Relation	T2	T7	NoRel	true	pesten	nåede
+Relation	T3	T0	NoRel	true	døde	dødsfald
+Relation	T3	T7	NoRel	true	døde	nåede
+Relation	T4	T0	NoRel	true	pesten	dødsfald
+Relation	T4	T2	NoRel	true	pesten	pesten
+Relation	T4	T3	NoRel	true	pesten	døde
+Relation	T5	T6	NoRel	true	flyttede	blev
+Relation	T6	T0	NoRel	true	blev	dødsfald
+Relation	T6	T5	NoRel	true	blev	flyttede
+Relation	T7	T1	NoRel	true	nåede	offer
+Relation	T7	T2	NoRel	true	nåede	pesten
+Relation	T7	T5	NoRel	true	nåede	flyttede

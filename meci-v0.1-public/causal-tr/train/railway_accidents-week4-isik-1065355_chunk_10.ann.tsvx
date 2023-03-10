@@ -1,0 +1,39 @@
+Text	Bir kişi ölür ve diğer sayısız kişi kimyasal açık olma nedeniyle tedavi edilir .	- 6 Şubat , 2002 – Charlotte’s Dale tren çarpışması , Güney Afrika : Ev ile iş arası çalışan iki tren Durban yakını Charlotte’s Dale’de çarpıştı .	16sı çocuk 22 ölü .	- 20 Şubat , 2002 – Al Ayatt tren felaketi , Mısır : Kapasitesinin iki katı yüklü bir tren alev aldığında , 373 ölü .	- 30 Mart , 2002 – Euromed rotasında Valensiya - Barselona hattında bir İspanyol yüksek hızlı ekspres treni , Tortosa - Barcelona Catalunya ekspresi ile kafa kafaya çarpıştı .
+Event	T0	ölür	EVENT	9
+Event	T1	edilir	EVENT	72
+Event	T2	çarpışması	EVENT	122
+Event	T3	çarpıştı	EVENT	217
+Event	T4	ölü	EVENT	242
+Event	T5	felaketi	EVENT	282
+Event	T6	aldığında	EVENT	344
+Event	T7	ölü	EVENT	360
+Event	T8	çarpıştı	EVENT	531
+Relation	T2	T4	CauseEffect	true	çarpışması	ölü
+Relation	T4	T2	EffectCause	true	ölü	çarpışması
+Relation	T6	T5	CauseEffect	true	aldığında	felaketi
+Relation	T5	T6	EffectCause	true	felaketi	aldığında
+Relation	T5	T7	CauseEffect	true	felaketi	ölü
+Relation	T7	T5	EffectCause	true	ölü	felaketi
+Relation	T1	T4	NoRel	true	edilir	ölü
+Relation	T1	T5	NoRel	true	edilir	felaketi
+Relation	T1	T8	NoRel	true	edilir	çarpıştı
+Relation	T2	T0	NoRel	true	çarpışması	ölür
+Relation	T2	T5	NoRel	true	çarpışması	felaketi
+Relation	T3	T2	NoRel	true	çarpıştı	çarpışması
+Relation	T3	T6	NoRel	true	çarpıştı	aldığında
+Relation	T4	T0	NoRel	true	ölü	ölür
+Relation	T4	T1	NoRel	true	ölü	edilir
+Relation	T5	T1	NoRel	true	felaketi	edilir
+Relation	T5	T8	NoRel	true	felaketi	çarpıştı
+Relation	T6	T3	NoRel	true	aldığında	çarpıştı
+Relation	T7	T0	NoRel	true	ölü	ölür
+Relation	T7	T2	NoRel	true	ölü	çarpışması
+Relation	T7	T3	NoRel	true	ölü	çarpıştı
+Relation	T7	T4	NoRel	true	ölü	ölü
+Relation	T7	T8	NoRel	true	ölü	çarpıştı
+Relation	T8	T0	NoRel	true	çarpıştı	ölür
+Relation	T8	T1	NoRel	true	çarpıştı	edilir
+Relation	T8	T4	NoRel	true	çarpıştı	ölü
+Relation	T8	T5	NoRel	true	çarpıştı	felaketi
+Relation	T8	T6	NoRel	true	çarpıştı	aldığında
+Relation	T8	T7	NoRel	true	çarpıştı	ölü

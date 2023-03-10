@@ -1,0 +1,29 @@
+Text	El 4 de agosto de 2021 , dos trenes de pasajeros chocaron en Milavče en la República Checa .	Tres personas murieron y 67 resultaron heridas .	Las colisiones de trenes en la República Checa son relativamente frecuentes según las normas europeas debido a los sistemas de seguridad obsoletos .	Después de una colisión mortal en 2020 , el gobierno checo anunció un programa de modernización .	A partir de 2021 , el Sistema Europeo de Control de Trenes ( ECTS ) está instalado en solo 500 km ( 310 millas ) de ferrocarril ; Para 2025 , se prevé ampliarlo a todas las líneas principales .
+Event	T0	chocaron	EVENT	49
+Event	T1	murieron	EVENT	107
+Event	T2	heridas	EVENT	132
+Event	T3	colisiones	EVENT	146
+Event	T4	mortal	EVENT	315
+Event	T5	anunció	EVENT	350
+Event	T6	modernización	EVENT	373
+Event	T7	instalado	EVENT	462
+Relation	T0	T1	CauseEffect	true	chocaron	murieron
+Relation	T1	T0	EffectCause	true	murieron	chocaron
+Relation	T0	T2	CauseEffect	true	chocaron	heridas
+Relation	T2	T0	EffectCause	true	heridas	chocaron
+Relation	T4	T5	CauseEffect	true	mortal	anunció
+Relation	T5	T4	EffectCause	true	anunció	mortal
+Relation	T0	T4	NoRel	true	chocaron	mortal
+Relation	T1	T5	NoRel	true	murieron	anunció
+Relation	T2	T3	NoRel	true	heridas	colisiones
+Relation	T2	T4	NoRel	true	heridas	mortal
+Relation	T3	T4	NoRel	true	colisiones	mortal
+Relation	T3	T5	NoRel	true	colisiones	anunció
+Relation	T4	T0	NoRel	true	mortal	chocaron
+Relation	T5	T0	NoRel	true	anunció	chocaron
+Relation	T5	T6	NoRel	true	anunció	modernización
+Relation	T6	T1	NoRel	true	modernización	murieron
+Relation	T6	T7	NoRel	true	modernización	instalado
+Relation	T7	T1	NoRel	true	instalado	murieron
+Relation	T7	T2	NoRel	true	instalado	heridas
+Relation	T7	T4	NoRel	true	instalado	mortal

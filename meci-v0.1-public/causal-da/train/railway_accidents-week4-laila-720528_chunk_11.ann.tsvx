@@ -1,0 +1,68 @@
+Text	Lokomotivføreren fik opkaldet klokken 20.39 , da toget kørte med 199 km/t .	Opkaldet varede mindre end to minutter og blev afsluttet 11 sekunder før , at toget kørte af skinnerne .	Føreren bremsede op kl. 20.40 , da toget kørte med 195 km/t til trods for , at fartgrænsen på den del af strækningen var 80 km/t , men da var det for sent .	Retten har tidligere sagt , at toget kørte med 192 km/t ganske kort tid inden afsporingen , og at det forulykkede med en hastighed på 153 km/t .	File : Accidente ferroviario de Angrois cerca de Santiago de Compostela - 24-07-2013 .
+Event	T0	opkaldet	EVENT	21
+Event	T1	kørte	EVENT	55
+Event	T2	varede	EVENT	85
+Event	T3	afsluttet	EVENT	123
+Event	T4	kørte	EVENT	160
+Event	T5	kørte	EVENT	222
+Event	T6	sagt	EVENT	359
+Event	T7	kørte	EVENT	375
+Event	T8	afsporingen	EVENT	416
+Event	T9	forulykkede	EVENT	440
+Event	T10	Accidente	EVENT	490
+Event	T11	fartgrænsen	EVENT	260
+Event	T12	bremsede	EVENT	189
+Relation	T7	T4	CauseEffect	true	kørte	kørte
+Relation	T4	T7	EffectCause	true	kørte	kørte
+Relation	T11	T12	CauseEffect	true	fartgrænsen	bremsede
+Relation	T12	T11	EffectCause	true	bremsede	fartgrænsen
+Relation	T0	T12	CauseEffect	true	opkaldet	bremsede
+Relation	T12	T0	EffectCause	true	bremsede	opkaldet
+Relation	T8	T9	CauseEffect	true	afsporingen	forulykkede
+Relation	T9	T8	EffectCause	true	forulykkede	afsporingen
+Relation	T7	T8	CauseEffect	true	kørte	afsporingen
+Relation	T8	T7	EffectCause	true	afsporingen	kørte
+Relation	T0	T1	NoRel	true	opkaldet	kørte
+Relation	T0	T2	NoRel	true	opkaldet	varede
+Relation	T0	T4	NoRel	true	opkaldet	kørte
+Relation	T0	T6	NoRel	true	opkaldet	sagt
+Relation	T0	T7	NoRel	true	opkaldet	kørte
+Relation	T0	T9	NoRel	true	opkaldet	forulykkede
+Relation	T1	T0	NoRel	true	kørte	opkaldet
+Relation	T1	T4	NoRel	true	kørte	kørte
+Relation	T1	T8	NoRel	true	kørte	afsporingen
+Relation	T10	T11	NoRel	true	Accidente	fartgrænsen
+Relation	T10	T4	NoRel	true	Accidente	kørte
+Relation	T10	T5	NoRel	true	Accidente	kørte
+Relation	T10	T9	NoRel	true	Accidente	forulykkede
+Relation	T11	T9	NoRel	true	fartgrænsen	forulykkede
+Relation	T12	T1	NoRel	true	bremsede	kørte
+Relation	T2	T0	NoRel	true	varede	opkaldet
+Relation	T2	T10	NoRel	true	varede	Accidente
+Relation	T2	T7	NoRel	true	varede	kørte
+Relation	T2	T8	NoRel	true	varede	afsporingen
+Relation	T3	T2	NoRel	true	afsluttet	varede
+Relation	T3	T6	NoRel	true	afsluttet	sagt
+Relation	T3	T9	NoRel	true	afsluttet	forulykkede
+Relation	T4	T0	NoRel	true	kørte	opkaldet
+Relation	T4	T1	NoRel	true	kørte	kørte
+Relation	T4	T2	NoRel	true	kørte	varede
+Relation	T4	T9	NoRel	true	kørte	forulykkede
+Relation	T5	T11	NoRel	true	kørte	fartgrænsen
+Relation	T5	T12	NoRel	true	kørte	bremsede
+Relation	T5	T7	NoRel	true	kørte	kørte
+Relation	T5	T8	NoRel	true	kørte	afsporingen
+Relation	T6	T11	NoRel	true	sagt	fartgrænsen
+Relation	T6	T7	NoRel	true	sagt	kørte
+Relation	T6	T8	NoRel	true	sagt	afsporingen
+Relation	T7	T0	NoRel	true	kørte	opkaldet
+Relation	T7	T1	NoRel	true	kørte	kørte
+Relation	T7	T11	NoRel	true	kørte	fartgrænsen
+Relation	T7	T5	NoRel	true	kørte	kørte
+Relation	T8	T0	NoRel	true	afsporingen	opkaldet
+Relation	T8	T10	NoRel	true	afsporingen	Accidente
+Relation	T8	T11	NoRel	true	afsporingen	fartgrænsen
+Relation	T8	T4	NoRel	true	afsporingen	kørte
+Relation	T8	T6	NoRel	true	afsporingen	sagt
+Relation	T9	T12	NoRel	true	forulykkede	bremsede
+Relation	T9	T7	NoRel	true	forulykkede	kørte

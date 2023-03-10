@@ -1,0 +1,35 @@
+Text	Brüksel kontrolörü , ayrıca Leuven’den Wavre’ye doğru henüz hareket etmiş olan bir yolcu treninin makinisti ile temas kurmaya çalışmıştı , çünkü tren diğer tren gibi aynı hatta zıt yönde olmak üzere seyir ediyordu .	Tekrar denendi , kontrolör makiniste ulaşmada başarılı değildi .	- 08: 47 — İşletme kurallarına göre bütün makinistlerden kendi hızlarını bir düşük hıza indirmelerini istemek için havai hat elektriği kesildi , fakat maalesef çok geçti .	- 08: 50 — İki tren Pécrot’un köyünde kafa kafaya çarpıştı .	İki makinist de dahil olmak üzere sekiz kişi öldü ve on iki kişi yaralandı .
+Event	T0	hareket	EVENT	60
+Event	T2	denendi	EVENT	223
+Event	T3	istemek	EVENT	383
+Event	T4	kesildi	EVENT	416
+Event	T5	geçti	EVENT	445
+Event	T6	çarpıştı	EVENT	503
+Event	T7	öldü	EVENT	559
+Event	T8	çalışmıştı	EVENT	126
+Event	T9	yaralandı	EVENT	579
+Relation	T0	T8	CauseEffect	true	hareket	çalışmıştı
+Relation	T8	T0	EffectCause	true	çalışmıştı	hareket
+Relation	T0	T2	CauseEffect	true	hareket	denendi
+Relation	T2	T0	EffectCause	true	denendi	hareket
+Relation	T3	T4	CauseEffect	true	istemek	kesildi
+Relation	T4	T3	EffectCause	true	kesildi	istemek
+Relation	T5	T6	CauseEffect	true	geçti	çarpıştı
+Relation	T6	T5	EffectCause	true	çarpıştı	geçti
+Relation	T6	T9	CauseEffect	true	çarpıştı	yaralandı
+Relation	T9	T6	EffectCause	true	yaralandı	çarpıştı
+Relation	T2	T3	NoRel	true	denendi	istemek
+Relation	T2	T4	NoRel	true	denendi	kesildi
+Relation	T2	T6	NoRel	true	denendi	çarpıştı
+Relation	T3	T0	NoRel	true	istemek	hareket
+Relation	T4	T8	NoRel	true	kesildi	çalışmıştı
+Relation	T5	T4	NoRel	true	geçti	kesildi
+Relation	T5	T9	NoRel	true	geçti	yaralandı
+Relation	T6	T2	NoRel	true	çarpıştı	denendi
+Relation	T6	T3	NoRel	true	çarpıştı	istemek
+Relation	T7	T2	NoRel	true	öldü	denendi
+Relation	T7	T3	NoRel	true	öldü	istemek
+Relation	T7	T4	NoRel	true	öldü	kesildi
+Relation	T8	T5	NoRel	true	çalışmıştı	geçti
+Relation	T9	T2	NoRel	true	yaralandı	denendi
+Relation	T9	T4	NoRel	true	yaralandı	kesildi

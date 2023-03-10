@@ -1,0 +1,21 @@
+Text	1930'ların ortalarında , NSKK da günümüz Amerikan Otomobil Kurumu veya İngiliz Otomobil Kurumu ile karşılaştırılabilecek bir düzeyde yol yardımı olarak görev yaptı .	NSKK üyeliğine otomobil kullanma bilgisi ve ehliyeti olmayan kişileri üyelik için kabul ediyordu .	NSKK eğitim bilgisi herhangi eksikliği telafisi olarak düşünülmüştür .	NSKK eğitimi ırksal doktrinine uygun olarak Aryan ırkı niteliklere uygun üyelerine gösterildi .	NSKK kendi sistemi ile paramiliter bir örgüt oldu .
+Event	T0	yaptı	EVENT	158
+Event	T2	telafisi	EVENT	304
+Event	T3	eğitimi	EVENT	341
+Event	T4	gösterildi	EVENT	419
+Event	T1	ediyordu	EVENT	254
+Event	T5	eksikliği	EVENT	294
+Relation	T5	T3	CauseEffect	true	eksikliği	eğitimi
+Relation	T3	T5	EffectCause	true	eğitimi	eksikliği
+Relation	T3	T2	CauseEffect	true	eğitimi	telafisi
+Relation	T2	T3	EffectCause	true	telafisi	eğitimi
+Relation	T0	T2	NoRel	true	yaptı	telafisi
+Relation	T0	T3	NoRel	true	yaptı	eğitimi
+Relation	T1	T3	NoRel	true	ediyordu	eğitimi
+Relation	T2	T0	NoRel	true	telafisi	yaptı
+Relation	T2	T1	NoRel	true	telafisi	ediyordu
+Relation	T2	T5	NoRel	true	telafisi	eksikliği
+Relation	T3	T1	NoRel	true	eğitimi	ediyordu
+Relation	T4	T1	NoRel	true	gösterildi	ediyordu
+Relation	T5	T0	NoRel	true	eksikliği	yaptı
+Relation	T5	T4	NoRel	true	eksikliği	gösterildi

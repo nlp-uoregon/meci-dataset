@@ -1,0 +1,54 @@
+Text	26 Aralık 1941 günü Aeroflot tarafından işletilen bir Tupolev TB - 3 ( ANT - 6 modelinin kargo - yolcu versiyonu ) ; Almatı Havalimanı'ndan Abay Havalimanı'na giderken Dmitriyevka , Kazakistan SSC'nin 6 km kuzeybatısına düştü ve bunun sonucunda uçakta bulunan Kazakistan SSC yöneticileri de dahil 34 kişiden 26'sı öldü .	Bu olay , Kazakistan'da belgelenen ilk uçak kazasıdır .	Kaza yapan uçak , Sivil Hava Filosu Kazakistan Bölgesel İdaresi , Aeroflot'a ait bir Tupolev TB - 3 CCCP - L3043 idi .	1939'da üretildi ( fabrika numarası 22182 ) ve aynı yıl Sivil Hava Filosu Kazakistan Bölgesel İdaresi , Aeroflot'a teslim edildi .	Uçak kaza yaptığında 2.150 uçuş saatine sahipti .
+Event	T0	işletilen	EVENT	40
+Event	T1	düştü	EVENT	220
+Event	T2	öldü	EVENT	314
+Event	T3	olay	EVENT	324
+Event	T4	belgelenen	EVENT	345
+Event	T5	kazasıdır	EVENT	365
+Event	T7	üretildi	EVENT	504
+Event	T9	uçuş	EVENT	654
+Event	T10	sahipti	EVENT	667
+Event	T6	Kaza	EVENT	377
+Event	T8	teslim edildi	EVENT	611
+Relation	T1	T2	CauseEffect	true	düştü	öldü
+Relation	T2	T1	EffectCause	true	öldü	düştü
+Relation	T5	T4	CauseEffect	true	kazasıdır	belgelenen
+Relation	T4	T5	EffectCause	true	belgelenen	kazasıdır
+Relation	T0	T2	NoRel	true	işletilen	öldü
+Relation	T0	T4	NoRel	true	işletilen	belgelenen
+Relation	T0	T7	NoRel	true	işletilen	üretildi
+Relation	T0	T9	NoRel	true	işletilen	uçuş
+Relation	T1	T0	NoRel	true	düştü	işletilen
+Relation	T1	T3	NoRel	true	düştü	olay
+Relation	T1	T6	NoRel	true	düştü	Kaza
+Relation	T1	T9	NoRel	true	düştü	uçuş
+Relation	T10	T3	NoRel	true	sahipti	olay
+Relation	T10	T5	NoRel	true	sahipti	kazasıdır
+Relation	T10	T7	NoRel	true	sahipti	üretildi
+Relation	T2	T4	NoRel	true	öldü	belgelenen
+Relation	T2	T6	NoRel	true	öldü	Kaza
+Relation	T2	T7	NoRel	true	öldü	üretildi
+Relation	T2	T8	NoRel	true	öldü	teslim edildi
+Relation	T3	T0	NoRel	true	olay	işletilen
+Relation	T3	T1	NoRel	true	olay	düştü
+Relation	T3	T10	NoRel	true	olay	sahipti
+Relation	T3	T2	NoRel	true	olay	öldü
+Relation	T3	T4	NoRel	true	olay	belgelenen
+Relation	T3	T5	NoRel	true	olay	kazasıdır
+Relation	T4	T3	NoRel	true	belgelenen	olay
+Relation	T4	T7	NoRel	true	belgelenen	üretildi
+Relation	T5	T3	NoRel	true	kazasıdır	olay
+Relation	T5	T8	NoRel	true	kazasıdır	teslim edildi
+Relation	T5	T9	NoRel	true	kazasıdır	uçuş
+Relation	T6	T10	NoRel	true	Kaza	sahipti
+Relation	T6	T2	NoRel	true	Kaza	öldü
+Relation	T6	T4	NoRel	true	Kaza	belgelenen
+Relation	T6	T9	NoRel	true	Kaza	uçuş
+Relation	T7	T3	NoRel	true	üretildi	olay
+Relation	T7	T4	NoRel	true	üretildi	belgelenen
+Relation	T7	T5	NoRel	true	üretildi	kazasıdır
+Relation	T7	T9	NoRel	true	üretildi	uçuş
+Relation	T8	T1	NoRel	true	teslim edildi	düştü
+Relation	T8	T7	NoRel	true	teslim edildi	üretildi
+Relation	T9	T10	NoRel	true	uçuş	sahipti
+Relation	T9	T2	NoRel	true	uçuş	öldü

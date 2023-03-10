@@ -1,0 +1,664 @@
+Text	" اگر یہی اصول دسمبر 2019 میں اپنائے جاتے تو دنیا میں کورونا وائرس کی عالمی وبا کبھی نہ آتی " To be clear : If these new policies had been the global approach to “ Covid ” since دسمبر 2019 , there would never have been a pandemic at all .	2021ء تک یا جلد سارس -کووی-2 کے خلاف کوئی ویکسین تیار کرنا متوقع نہیں ہے ، کووِڈ 19 کی عالمگیر وبا کو قابو کرنے کا کلیدی حصہ وبائی لہر کو کم کرنا ہے ، جسے وبائی موڑ ( epidemic curve ) کہتے ہیں ، جس کے ذریعے انفیکشنوں کی شرح کو کم کرنے والے اقدامات میں مدد مل سکتی ہے ۔	انفیکشن کی شرح مدہم کرنے سے صحت کی سہولیات کو زیر کرنیوالے جوکہم کو کم کرنے ، موجودہ کیسوں کے بہتر علاج کرنے اور ویکسین اور علاج کی تیاری کے لیے مزید وقت پانے میں مدد حاصل ہوتی ہے ۔	مقامات میں انفیکشن کے منتقل ہونے کے مواقع کو کم کرنے کی احتیاطی تدابير میں گھر میں قیام کرانا ، سفر اور عوامی سرگرمیوں کو ترک کرنا ، صابن سے ہاتھ دھونا عمومًا گرم پانی سے کم سے کم بیس سیکنڈوں تک ، بغیر دھلے ہاتھوں سے آنکھوں ، ناک اور منھ کو چھونے کو ترک کرنا شامل ہیں ۔	بیماریوں سے بچاؤ اور کنٹرول کے مراکز ( سی ڈی سی ) نے تجویز دی ہے کہ کھانسی یا چھینک کے دوران منھ اور ناک کو ٹِشو سے ڈھانپ لیں یا ٹشو نہ ہونے کی صورت میں کہنی رکھ کر کھانسا یا چھینکا جائے ۔
+Event	T0	pandemic	EVENT	221
+Event	T1	تیار	EVENT	288
+Event	T2	اقدامات	EVENT	479
+Event	T3	انفیکشن	EVENT	508
+Event	T4	کرنے	EVENT	528
+Event	T5	علاج	EVENT	607
+Event	T6	علاج	EVENT	632
+Event	T7	تیاری	EVENT	640
+Event	T8	پانے	EVENT	662
+Event	T9	انفیکشن	EVENT	701
+Event	T11	سفر	EVENT	786
+Event	T12	چھونے	EVENT	931
+Event	T13	چھینک	EVENT	1038
+Event	T14	کھانسا	EVENT	1125
+Event	T15	چھینکا	EVENT	1135
+Event	T16	policies	EVENT	121
+Event	T17	approach	EVENT	150
+Event	T18	اصول	EVENT	10
+Event	T19	اپنائے	EVENT	30
+Event	T20	وبا	EVENT	76
+Event	T21	متوقع	EVENT	298
+Event	T22	وبا	EVENT	334
+Event	T23	قابو	EVENT	341
+Event	T24	کم	EVENT	377
+Event	T25	epidemic curve	EVENT	406
+Event	T26	کہتے	EVENT	423
+Event	T27	انفیکشنوں	EVENT	446
+Event	T28	کم	EVENT	466
+Event	T29	مدد	EVENT	491
+Event	T30	کم	EVENT	576
+Event	T31	مدد	EVENT	671
+Event	T33	منتقل	EVENT	712
+Event	T34	کم	EVENT	735
+Event	T10	تدابير	EVENT	754
+Event	T32	قیام	EVENT	773
+Event	T35	ترک	EVENT	812
+Event	T36	دھونا	EVENT	836
+Event	T37	ترک	EVENT	940
+Event	T38	شامل	EVENT	949
+Event	T39	سرگرمیوں	EVENT	800
+Event	T40	تجویز	EVENT	1013
+Event	T41	کھانسی	EVENT	1028
+Event	T42	ڈھانپ	EVENT	1076
+Relation	T17	T0	CauseEffect	true	approach	pandemic
+Relation	T0	T17	EffectCause	true	pandemic	approach
+Relation	T19	T20	CauseEffect	true	اپنائے	وبا
+Relation	T20	T19	EffectCause	true	وبا	اپنائے
+Relation	T23	T1	CauseEffect	true	قابو	تیار
+Relation	T1	T23	EffectCause	true	تیار	قابو
+Relation	T1	T24	CauseEffect	true	تیار	کم
+Relation	T24	T1	EffectCause	true	کم	تیار
+Relation	T24	T29	CauseEffect	true	کم	مدد
+Relation	T29	T24	EffectCause	true	مدد	کم
+Relation	T4	T31	CauseEffect	true	کرنے	مدد
+Relation	T31	T4	EffectCause	true	مدد	کرنے
+Relation	T4	T30	CauseEffect	true	کرنے	کم
+Relation	T30	T4	EffectCause	true	کم	کرنے
+Relation	T4	T5	CauseEffect	true	کرنے	علاج
+Relation	T5	T4	EffectCause	true	علاج	کرنے
+Relation	T4	T8	CauseEffect	true	کرنے	پانے
+Relation	T8	T4	EffectCause	true	پانے	کرنے
+Relation	T9	T33	CauseEffect	true	انفیکشن	منتقل
+Relation	T33	T9	EffectCause	true	منتقل	انفیکشن
+Relation	T10	T34	CauseEffect	true	تدابير	کم
+Relation	T34	T10	EffectCause	true	کم	تدابير
+Relation	T0	T10	NoRel	true	pandemic	تدابير
+Relation	T0	T11	NoRel	true	pandemic	سفر
+Relation	T0	T20	NoRel	true	pandemic	وبا
+Relation	T0	T27	NoRel	true	pandemic	انفیکشنوں
+Relation	T0	T31	NoRel	true	pandemic	مدد
+Relation	T0	T35	NoRel	true	pandemic	ترک
+Relation	T0	T37	NoRel	true	pandemic	ترک
+Relation	T0	T38	NoRel	true	pandemic	شامل
+Relation	T0	T5	NoRel	true	pandemic	علاج
+Relation	T0	T7	NoRel	true	pandemic	تیاری
+Relation	T1	T10	NoRel	true	تیار	تدابير
+Relation	T1	T11	NoRel	true	تیار	سفر
+Relation	T1	T13	NoRel	true	تیار	چھینک
+Relation	T1	T14	NoRel	true	تیار	کھانسا
+Relation	T1	T16	NoRel	true	تیار	policies
+Relation	T1	T20	NoRel	true	تیار	وبا
+Relation	T1	T29	NoRel	true	تیار	مدد
+Relation	T1	T31	NoRel	true	تیار	مدد
+Relation	T1	T32	NoRel	true	تیار	قیام
+Relation	T1	T34	NoRel	true	تیار	کم
+Relation	T1	T35	NoRel	true	تیار	ترک
+Relation	T1	T36	NoRel	true	تیار	دھونا
+Relation	T1	T40	NoRel	true	تیار	تجویز
+Relation	T1	T41	NoRel	true	تیار	کھانسی
+Relation	T1	T42	NoRel	true	تیار	ڈھانپ
+Relation	T1	T8	NoRel	true	تیار	پانے
+Relation	T10	T0	NoRel	true	تدابير	pandemic
+Relation	T10	T12	NoRel	true	تدابير	چھونے
+Relation	T10	T13	NoRel	true	تدابير	چھینک
+Relation	T10	T16	NoRel	true	تدابير	policies
+Relation	T10	T20	NoRel	true	تدابير	وبا
+Relation	T10	T21	NoRel	true	تدابير	متوقع
+Relation	T10	T29	NoRel	true	تدابير	مدد
+Relation	T10	T36	NoRel	true	تدابير	دھونا
+Relation	T10	T39	NoRel	true	تدابير	سرگرمیوں
+Relation	T10	T4	NoRel	true	تدابير	کرنے
+Relation	T10	T40	NoRel	true	تدابير	تجویز
+Relation	T10	T7	NoRel	true	تدابير	تیاری
+Relation	T10	T9	NoRel	true	تدابير	انفیکشن
+Relation	T11	T1	NoRel	true	سفر	تیار
+Relation	T11	T13	NoRel	true	سفر	چھینک
+Relation	T11	T15	NoRel	true	سفر	چھینکا
+Relation	T11	T22	NoRel	true	سفر	وبا
+Relation	T11	T24	NoRel	true	سفر	کم
+Relation	T11	T25	NoRel	true	سفر	epidemic curve
+Relation	T11	T29	NoRel	true	سفر	مدد
+Relation	T11	T32	NoRel	true	سفر	قیام
+Relation	T11	T33	NoRel	true	سفر	منتقل
+Relation	T11	T36	NoRel	true	سفر	دھونا
+Relation	T11	T38	NoRel	true	سفر	شامل
+Relation	T11	T7	NoRel	true	سفر	تیاری
+Relation	T11	T9	NoRel	true	سفر	انفیکشن
+Relation	T12	T0	NoRel	true	چھونے	pandemic
+Relation	T12	T11	NoRel	true	چھونے	سفر
+Relation	T12	T15	NoRel	true	چھونے	چھینکا
+Relation	T12	T16	NoRel	true	چھونے	policies
+Relation	T12	T17	NoRel	true	چھونے	approach
+Relation	T12	T18	NoRel	true	چھونے	اصول
+Relation	T12	T19	NoRel	true	چھونے	اپنائے
+Relation	T12	T2	NoRel	true	چھونے	اقدامات
+Relation	T12	T21	NoRel	true	چھونے	متوقع
+Relation	T12	T25	NoRel	true	چھونے	epidemic curve
+Relation	T12	T30	NoRel	true	چھونے	کم
+Relation	T12	T31	NoRel	true	چھونے	مدد
+Relation	T12	T33	NoRel	true	چھونے	منتقل
+Relation	T12	T36	NoRel	true	چھونے	دھونا
+Relation	T12	T37	NoRel	true	چھونے	ترک
+Relation	T12	T40	NoRel	true	چھونے	تجویز
+Relation	T12	T42	NoRel	true	چھونے	ڈھانپ
+Relation	T12	T5	NoRel	true	چھونے	علاج
+Relation	T12	T6	NoRel	true	چھونے	علاج
+Relation	T12	T8	NoRel	true	چھونے	پانے
+Relation	T13	T11	NoRel	true	چھینک	سفر
+Relation	T13	T20	NoRel	true	چھینک	وبا
+Relation	T13	T21	NoRel	true	چھینک	متوقع
+Relation	T13	T29	NoRel	true	چھینک	مدد
+Relation	T13	T33	NoRel	true	چھینک	منتقل
+Relation	T13	T34	NoRel	true	چھینک	کم
+Relation	T13	T35	NoRel	true	چھینک	ترک
+Relation	T13	T40	NoRel	true	چھینک	تجویز
+Relation	T13	T8	NoRel	true	چھینک	پانے
+Relation	T14	T0	NoRel	true	کھانسا	pandemic
+Relation	T14	T1	NoRel	true	کھانسا	تیار
+Relation	T14	T10	NoRel	true	کھانسا	تدابير
+Relation	T14	T12	NoRel	true	کھانسا	چھونے
+Relation	T14	T17	NoRel	true	کھانسا	approach
+Relation	T14	T24	NoRel	true	کھانسا	کم
+Relation	T14	T26	NoRel	true	کھانسا	کہتے
+Relation	T14	T28	NoRel	true	کھانسا	کم
+Relation	T14	T29	NoRel	true	کھانسا	مدد
+Relation	T14	T30	NoRel	true	کھانسا	کم
+Relation	T14	T33	NoRel	true	کھانسا	منتقل
+Relation	T14	T35	NoRel	true	کھانسا	ترک
+Relation	T14	T36	NoRel	true	کھانسا	دھونا
+Relation	T14	T38	NoRel	true	کھانسا	شامل
+Relation	T14	T39	NoRel	true	کھانسا	سرگرمیوں
+Relation	T14	T9	NoRel	true	کھانسا	انفیکشن
+Relation	T15	T0	NoRel	true	چھینکا	pandemic
+Relation	T15	T12	NoRel	true	چھینکا	چھونے
+Relation	T15	T13	NoRel	true	چھینکا	چھینک
+Relation	T15	T23	NoRel	true	چھینکا	قابو
+Relation	T15	T24	NoRel	true	چھینکا	کم
+Relation	T15	T25	NoRel	true	چھینکا	epidemic curve
+Relation	T15	T26	NoRel	true	چھینکا	کہتے
+Relation	T15	T29	NoRel	true	چھینکا	مدد
+Relation	T15	T30	NoRel	true	چھینکا	کم
+Relation	T15	T33	NoRel	true	چھینکا	منتقل
+Relation	T15	T35	NoRel	true	چھینکا	ترک
+Relation	T15	T36	NoRel	true	چھینکا	دھونا
+Relation	T15	T37	NoRel	true	چھینکا	ترک
+Relation	T15	T6	NoRel	true	چھینکا	علاج
+Relation	T16	T0	NoRel	true	policies	pandemic
+Relation	T16	T10	NoRel	true	policies	تدابير
+Relation	T16	T14	NoRel	true	policies	کھانسا
+Relation	T16	T15	NoRel	true	policies	چھینکا
+Relation	T16	T25	NoRel	true	policies	epidemic curve
+Relation	T16	T27	NoRel	true	policies	انفیکشنوں
+Relation	T16	T29	NoRel	true	policies	مدد
+Relation	T16	T3	NoRel	true	policies	انفیکشن
+Relation	T16	T30	NoRel	true	policies	کم
+Relation	T16	T32	NoRel	true	policies	قیام
+Relation	T16	T36	NoRel	true	policies	دھونا
+Relation	T16	T40	NoRel	true	policies	تجویز
+Relation	T16	T41	NoRel	true	policies	کھانسی
+Relation	T16	T42	NoRel	true	policies	ڈھانپ
+Relation	T16	T5	NoRel	true	policies	علاج
+Relation	T16	T8	NoRel	true	policies	پانے
+Relation	T17	T11	NoRel	true	approach	سفر
+Relation	T17	T14	NoRel	true	approach	کھانسا
+Relation	T17	T2	NoRel	true	approach	اقدامات
+Relation	T17	T20	NoRel	true	approach	وبا
+Relation	T17	T21	NoRel	true	approach	متوقع
+Relation	T17	T23	NoRel	true	approach	قابو
+Relation	T17	T29	NoRel	true	approach	مدد
+Relation	T17	T30	NoRel	true	approach	کم
+Relation	T17	T5	NoRel	true	approach	علاج
+Relation	T18	T1	NoRel	true	اصول	تیار
+Relation	T18	T16	NoRel	true	اصول	policies
+Relation	T18	T17	NoRel	true	اصول	approach
+Relation	T18	T19	NoRel	true	اصول	اپنائے
+Relation	T18	T20	NoRel	true	اصول	وبا
+Relation	T18	T22	NoRel	true	اصول	وبا
+Relation	T18	T28	NoRel	true	اصول	کم
+Relation	T18	T3	NoRel	true	اصول	انفیکشن
+Relation	T18	T31	NoRel	true	اصول	مدد
+Relation	T18	T32	NoRel	true	اصول	قیام
+Relation	T18	T33	NoRel	true	اصول	منتقل
+Relation	T18	T35	NoRel	true	اصول	ترک
+Relation	T18	T36	NoRel	true	اصول	دھونا
+Relation	T18	T41	NoRel	true	اصول	کھانسی
+Relation	T18	T9	NoRel	true	اصول	انفیکشن
+Relation	T19	T0	NoRel	true	اپنائے	pandemic
+Relation	T19	T1	NoRel	true	اپنائے	تیار
+Relation	T19	T11	NoRel	true	اپنائے	سفر
+Relation	T19	T12	NoRel	true	اپنائے	چھونے
+Relation	T19	T13	NoRel	true	اپنائے	چھینک
+Relation	T19	T14	NoRel	true	اپنائے	کھانسا
+Relation	T19	T16	NoRel	true	اپنائے	policies
+Relation	T19	T18	NoRel	true	اپنائے	اصول
+Relation	T19	T25	NoRel	true	اپنائے	epidemic curve
+Relation	T19	T31	NoRel	true	اپنائے	مدد
+Relation	T19	T33	NoRel	true	اپنائے	منتقل
+Relation	T19	T36	NoRel	true	اپنائے	دھونا
+Relation	T19	T4	NoRel	true	اپنائے	کرنے
+Relation	T19	T42	NoRel	true	اپنائے	ڈھانپ
+Relation	T19	T6	NoRel	true	اپنائے	علاج
+Relation	T19	T8	NoRel	true	اپنائے	پانے
+Relation	T2	T10	NoRel	true	اقدامات	تدابير
+Relation	T2	T11	NoRel	true	اقدامات	سفر
+Relation	T2	T13	NoRel	true	اقدامات	چھینک
+Relation	T2	T14	NoRel	true	اقدامات	کھانسا
+Relation	T2	T17	NoRel	true	اقدامات	approach
+Relation	T2	T20	NoRel	true	اقدامات	وبا
+Relation	T2	T22	NoRel	true	اقدامات	وبا
+Relation	T2	T26	NoRel	true	اقدامات	کہتے
+Relation	T2	T27	NoRel	true	اقدامات	انفیکشنوں
+Relation	T2	T28	NoRel	true	اقدامات	کم
+Relation	T2	T29	NoRel	true	اقدامات	مدد
+Relation	T2	T30	NoRel	true	اقدامات	کم
+Relation	T2	T34	NoRel	true	اقدامات	کم
+Relation	T2	T4	NoRel	true	اقدامات	کرنے
+Relation	T2	T41	NoRel	true	اقدامات	کھانسی
+Relation	T2	T42	NoRel	true	اقدامات	ڈھانپ
+Relation	T2	T6	NoRel	true	اقدامات	علاج
+Relation	T2	T7	NoRel	true	اقدامات	تیاری
+Relation	T2	T8	NoRel	true	اقدامات	پانے
+Relation	T20	T17	NoRel	true	وبا	approach
+Relation	T20	T28	NoRel	true	وبا	کم
+Relation	T20	T29	NoRel	true	وبا	مدد
+Relation	T20	T3	NoRel	true	وبا	انفیکشن
+Relation	T20	T35	NoRel	true	وبا	ترک
+Relation	T20	T4	NoRel	true	وبا	کرنے
+Relation	T20	T41	NoRel	true	وبا	کھانسی
+Relation	T21	T0	NoRel	true	متوقع	pandemic
+Relation	T21	T14	NoRel	true	متوقع	کھانسا
+Relation	T21	T16	NoRel	true	متوقع	policies
+Relation	T21	T2	NoRel	true	متوقع	اقدامات
+Relation	T21	T25	NoRel	true	متوقع	epidemic curve
+Relation	T21	T27	NoRel	true	متوقع	انفیکشنوں
+Relation	T21	T28	NoRel	true	متوقع	کم
+Relation	T21	T29	NoRel	true	متوقع	مدد
+Relation	T21	T3	NoRel	true	متوقع	انفیکشن
+Relation	T21	T30	NoRel	true	متوقع	کم
+Relation	T21	T31	NoRel	true	متوقع	مدد
+Relation	T21	T32	NoRel	true	متوقع	قیام
+Relation	T21	T35	NoRel	true	متوقع	ترک
+Relation	T21	T5	NoRel	true	متوقع	علاج
+Relation	T21	T9	NoRel	true	متوقع	انفیکشن
+Relation	T22	T0	NoRel	true	وبا	pandemic
+Relation	T22	T10	NoRel	true	وبا	تدابير
+Relation	T22	T15	NoRel	true	وبا	چھینکا
+Relation	T22	T18	NoRel	true	وبا	اصول
+Relation	T22	T20	NoRel	true	وبا	وبا
+Relation	T22	T24	NoRel	true	وبا	کم
+Relation	T22	T27	NoRel	true	وبا	انفیکشنوں
+Relation	T22	T3	NoRel	true	وبا	انفیکشن
+Relation	T22	T30	NoRel	true	وبا	کم
+Relation	T22	T32	NoRel	true	وبا	قیام
+Relation	T22	T33	NoRel	true	وبا	منتقل
+Relation	T22	T34	NoRel	true	وبا	کم
+Relation	T22	T36	NoRel	true	وبا	دھونا
+Relation	T22	T42	NoRel	true	وبا	ڈھانپ
+Relation	T22	T6	NoRel	true	وبا	علاج
+Relation	T22	T7	NoRel	true	وبا	تیاری
+Relation	T22	T8	NoRel	true	وبا	پانے
+Relation	T23	T10	NoRel	true	قابو	تدابير
+Relation	T23	T12	NoRel	true	قابو	چھونے
+Relation	T23	T14	NoRel	true	قابو	کھانسا
+Relation	T23	T18	NoRel	true	قابو	اصول
+Relation	T23	T19	NoRel	true	قابو	اپنائے
+Relation	T23	T2	NoRel	true	قابو	اقدامات
+Relation	T23	T24	NoRel	true	قابو	کم
+Relation	T23	T25	NoRel	true	قابو	epidemic curve
+Relation	T23	T27	NoRel	true	قابو	انفیکشنوں
+Relation	T23	T28	NoRel	true	قابو	کم
+Relation	T23	T31	NoRel	true	قابو	مدد
+Relation	T23	T33	NoRel	true	قابو	منتقل
+Relation	T23	T34	NoRel	true	قابو	کم
+Relation	T23	T35	NoRel	true	قابو	ترک
+Relation	T23	T37	NoRel	true	قابو	ترک
+Relation	T23	T38	NoRel	true	قابو	شامل
+Relation	T23	T40	NoRel	true	قابو	تجویز
+Relation	T23	T42	NoRel	true	قابو	ڈھانپ
+Relation	T24	T12	NoRel	true	کم	چھونے
+Relation	T24	T13	NoRel	true	کم	چھینک
+Relation	T24	T16	NoRel	true	کم	policies
+Relation	T24	T2	NoRel	true	کم	اقدامات
+Relation	T24	T22	NoRel	true	کم	وبا
+Relation	T24	T26	NoRel	true	کم	کہتے
+Relation	T24	T27	NoRel	true	کم	انفیکشنوں
+Relation	T24	T3	NoRel	true	کم	انفیکشن
+Relation	T24	T30	NoRel	true	کم	کم
+Relation	T24	T31	NoRel	true	کم	مدد
+Relation	T24	T33	NoRel	true	کم	منتقل
+Relation	T24	T35	NoRel	true	کم	ترک
+Relation	T24	T7	NoRel	true	کم	تیاری
+Relation	T24	T8	NoRel	true	کم	پانے
+Relation	T24	T9	NoRel	true	کم	انفیکشن
+Relation	T25	T12	NoRel	true	epidemic curve	چھونے
+Relation	T25	T15	NoRel	true	epidemic curve	چھینکا
+Relation	T25	T24	NoRel	true	epidemic curve	کم
+Relation	T25	T26	NoRel	true	epidemic curve	کہتے
+Relation	T25	T27	NoRel	true	epidemic curve	انفیکشنوں
+Relation	T25	T32	NoRel	true	epidemic curve	قیام
+Relation	T25	T36	NoRel	true	epidemic curve	دھونا
+Relation	T25	T38	NoRel	true	epidemic curve	شامل
+Relation	T25	T7	NoRel	true	epidemic curve	تیاری
+Relation	T26	T0	NoRel	true	کہتے	pandemic
+Relation	T26	T1	NoRel	true	کہتے	تیار
+Relation	T26	T17	NoRel	true	کہتے	approach
+Relation	T26	T24	NoRel	true	کہتے	کم
+Relation	T26	T25	NoRel	true	کہتے	epidemic curve
+Relation	T26	T27	NoRel	true	کہتے	انفیکشنوں
+Relation	T26	T28	NoRel	true	کہتے	کم
+Relation	T26	T33	NoRel	true	کہتے	منتقل
+Relation	T26	T36	NoRel	true	کہتے	دھونا
+Relation	T26	T38	NoRel	true	کہتے	شامل
+Relation	T26	T39	NoRel	true	کہتے	سرگرمیوں
+Relation	T26	T42	NoRel	true	کہتے	ڈھانپ
+Relation	T26	T6	NoRel	true	کہتے	علاج
+Relation	T26	T7	NoRel	true	کہتے	تیاری
+Relation	T27	T1	NoRel	true	انفیکشنوں	تیار
+Relation	T27	T12	NoRel	true	انفیکشنوں	چھونے
+Relation	T27	T14	NoRel	true	انفیکشنوں	کھانسا
+Relation	T27	T15	NoRel	true	انفیکشنوں	چھینکا
+Relation	T27	T16	NoRel	true	انفیکشنوں	policies
+Relation	T27	T21	NoRel	true	انفیکشنوں	متوقع
+Relation	T27	T22	NoRel	true	انفیکشنوں	وبا
+Relation	T27	T23	NoRel	true	انفیکشنوں	قابو
+Relation	T27	T26	NoRel	true	انفیکشنوں	کہتے
+Relation	T27	T30	NoRel	true	انفیکشنوں	کم
+Relation	T27	T31	NoRel	true	انفیکشنوں	مدد
+Relation	T27	T32	NoRel	true	انفیکشنوں	قیام
+Relation	T27	T33	NoRel	true	انفیکشنوں	منتقل
+Relation	T27	T34	NoRel	true	انفیکشنوں	کم
+Relation	T27	T35	NoRel	true	انفیکشنوں	ترک
+Relation	T27	T37	NoRel	true	انفیکشنوں	ترک
+Relation	T27	T39	NoRel	true	انفیکشنوں	سرگرمیوں
+Relation	T27	T40	NoRel	true	انفیکشنوں	تجویز
+Relation	T28	T0	NoRel	true	کم	pandemic
+Relation	T28	T1	NoRel	true	کم	تیار
+Relation	T28	T10	NoRel	true	کم	تدابير
+Relation	T28	T18	NoRel	true	کم	اصول
+Relation	T28	T23	NoRel	true	کم	قابو
+Relation	T28	T24	NoRel	true	کم	کم
+Relation	T28	T25	NoRel	true	کم	epidemic curve
+Relation	T28	T26	NoRel	true	کم	کہتے
+Relation	T28	T29	NoRel	true	کم	مدد
+Relation	T28	T31	NoRel	true	کم	مدد
+Relation	T28	T33	NoRel	true	کم	منتقل
+Relation	T28	T34	NoRel	true	کم	کم
+Relation	T28	T36	NoRel	true	کم	دھونا
+Relation	T28	T37	NoRel	true	کم	ترک
+Relation	T28	T39	NoRel	true	کم	سرگرمیوں
+Relation	T28	T4	NoRel	true	کم	کرنے
+Relation	T28	T6	NoRel	true	کم	علاج
+Relation	T28	T7	NoRel	true	کم	تیاری
+Relation	T28	T8	NoRel	true	کم	پانے
+Relation	T28	T9	NoRel	true	کم	انفیکشن
+Relation	T29	T0	NoRel	true	مدد	pandemic
+Relation	T29	T1	NoRel	true	مدد	تیار
+Relation	T29	T14	NoRel	true	مدد	کھانسا
+Relation	T29	T18	NoRel	true	مدد	اصول
+Relation	T29	T20	NoRel	true	مدد	وبا
+Relation	T29	T21	NoRel	true	مدد	متوقع
+Relation	T29	T25	NoRel	true	مدد	epidemic curve
+Relation	T29	T27	NoRel	true	مدد	انفیکشنوں
+Relation	T29	T31	NoRel	true	مدد	مدد
+Relation	T29	T36	NoRel	true	مدد	دھونا
+Relation	T29	T37	NoRel	true	مدد	ترک
+Relation	T29	T4	NoRel	true	مدد	کرنے
+Relation	T29	T40	NoRel	true	مدد	تجویز
+Relation	T29	T42	NoRel	true	مدد	ڈھانپ
+Relation	T3	T1	NoRel	true	انفیکشن	تیار
+Relation	T3	T10	NoRel	true	انفیکشن	تدابير
+Relation	T3	T12	NoRel	true	انفیکشن	چھونے
+Relation	T3	T16	NoRel	true	انفیکشن	policies
+Relation	T3	T18	NoRel	true	انفیکشن	اصول
+Relation	T3	T22	NoRel	true	انفیکشن	وبا
+Relation	T3	T23	NoRel	true	انفیکشن	قابو
+Relation	T3	T25	NoRel	true	انفیکشن	epidemic curve
+Relation	T3	T26	NoRel	true	انفیکشن	کہتے
+Relation	T3	T31	NoRel	true	انفیکشن	مدد
+Relation	T3	T32	NoRel	true	انفیکشن	قیام
+Relation	T3	T37	NoRel	true	انفیکشن	ترک
+Relation	T3	T4	NoRel	true	انفیکشن	کرنے
+Relation	T3	T40	NoRel	true	انفیکشن	تجویز
+Relation	T3	T42	NoRel	true	انفیکشن	ڈھانپ
+Relation	T3	T5	NoRel	true	انفیکشن	علاج
+Relation	T30	T1	NoRel	true	کم	تیار
+Relation	T30	T13	NoRel	true	کم	چھینک
+Relation	T30	T14	NoRel	true	کم	کھانسا
+Relation	T30	T17	NoRel	true	کم	approach
+Relation	T30	T18	NoRel	true	کم	اصول
+Relation	T30	T2	NoRel	true	کم	اقدامات
+Relation	T30	T21	NoRel	true	کم	متوقع
+Relation	T30	T22	NoRel	true	کم	وبا
+Relation	T30	T3	NoRel	true	کم	انفیکشن
+Relation	T30	T31	NoRel	true	کم	مدد
+Relation	T30	T38	NoRel	true	کم	شامل
+Relation	T30	T7	NoRel	true	کم	تیاری
+Relation	T30	T9	NoRel	true	کم	انفیکشن
+Relation	T31	T0	NoRel	true	مدد	pandemic
+Relation	T31	T10	NoRel	true	مدد	تدابير
+Relation	T31	T16	NoRel	true	مدد	policies
+Relation	T31	T17	NoRel	true	مدد	approach
+Relation	T31	T19	NoRel	true	مدد	اپنائے
+Relation	T31	T20	NoRel	true	مدد	وبا
+Relation	T31	T22	NoRel	true	مدد	وبا
+Relation	T31	T23	NoRel	true	مدد	قابو
+Relation	T31	T24	NoRel	true	مدد	کم
+Relation	T31	T28	NoRel	true	مدد	کم
+Relation	T31	T34	NoRel	true	مدد	کم
+Relation	T31	T36	NoRel	true	مدد	دھونا
+Relation	T31	T39	NoRel	true	مدد	سرگرمیوں
+Relation	T31	T40	NoRel	true	مدد	تجویز
+Relation	T31	T41	NoRel	true	مدد	کھانسی
+Relation	T31	T5	NoRel	true	مدد	علاج
+Relation	T31	T8	NoRel	true	مدد	پانے
+Relation	T32	T0	NoRel	true	قیام	pandemic
+Relation	T32	T12	NoRel	true	قیام	چھونے
+Relation	T32	T16	NoRel	true	قیام	policies
+Relation	T32	T17	NoRel	true	قیام	approach
+Relation	T32	T18	NoRel	true	قیام	اصول
+Relation	T32	T19	NoRel	true	قیام	اپنائے
+Relation	T32	T2	NoRel	true	قیام	اقدامات
+Relation	T32	T22	NoRel	true	قیام	وبا
+Relation	T32	T25	NoRel	true	قیام	epidemic curve
+Relation	T32	T27	NoRel	true	قیام	انفیکشنوں
+Relation	T32	T30	NoRel	true	قیام	کم
+Relation	T32	T6	NoRel	true	قیام	علاج
+Relation	T32	T7	NoRel	true	قیام	تیاری
+Relation	T32	T8	NoRel	true	قیام	پانے
+Relation	T33	T13	NoRel	true	منتقل	چھینک
+Relation	T33	T14	NoRel	true	منتقل	کھانسا
+Relation	T33	T16	NoRel	true	منتقل	policies
+Relation	T33	T2	NoRel	true	منتقل	اقدامات
+Relation	T33	T22	NoRel	true	منتقل	وبا
+Relation	T33	T30	NoRel	true	منتقل	کم
+Relation	T33	T31	NoRel	true	منتقل	مدد
+Relation	T33	T32	NoRel	true	منتقل	قیام
+Relation	T33	T35	NoRel	true	منتقل	ترک
+Relation	T33	T37	NoRel	true	منتقل	ترک
+Relation	T33	T41	NoRel	true	منتقل	کھانسی
+Relation	T33	T6	NoRel	true	منتقل	علاج
+Relation	T34	T11	NoRel	true	کم	سفر
+Relation	T34	T12	NoRel	true	کم	چھونے
+Relation	T34	T14	NoRel	true	کم	کھانسا
+Relation	T34	T19	NoRel	true	کم	اپنائے
+Relation	T34	T26	NoRel	true	کم	کہتے
+Relation	T34	T27	NoRel	true	کم	انفیکشنوں
+Relation	T34	T3	NoRel	true	کم	انفیکشن
+Relation	T34	T37	NoRel	true	کم	ترک
+Relation	T34	T39	NoRel	true	کم	سرگرمیوں
+Relation	T34	T4	NoRel	true	کم	کرنے
+Relation	T34	T42	NoRel	true	کم	ڈھانپ
+Relation	T34	T6	NoRel	true	کم	علاج
+Relation	T34	T8	NoRel	true	کم	پانے
+Relation	T34	T9	NoRel	true	کم	انفیکشن
+Relation	T35	T16	NoRel	true	ترک	policies
+Relation	T35	T18	NoRel	true	ترک	اصول
+Relation	T35	T21	NoRel	true	ترک	متوقع
+Relation	T35	T24	NoRel	true	ترک	کم
+Relation	T35	T25	NoRel	true	ترک	epidemic curve
+Relation	T35	T28	NoRel	true	ترک	کم
+Relation	T35	T36	NoRel	true	ترک	دھونا
+Relation	T35	T4	NoRel	true	ترک	کرنے
+Relation	T35	T40	NoRel	true	ترک	تجویز
+Relation	T35	T7	NoRel	true	ترک	تیاری
+Relation	T35	T8	NoRel	true	ترک	پانے
+Relation	T36	T1	NoRel	true	دھونا	تیار
+Relation	T36	T15	NoRel	true	دھونا	چھینکا
+Relation	T36	T17	NoRel	true	دھونا	approach
+Relation	T36	T29	NoRel	true	دھونا	مدد
+Relation	T36	T30	NoRel	true	دھونا	کم
+Relation	T36	T32	NoRel	true	دھونا	قیام
+Relation	T36	T33	NoRel	true	دھونا	منتقل
+Relation	T36	T37	NoRel	true	دھونا	ترک
+Relation	T36	T40	NoRel	true	دھونا	تجویز
+Relation	T36	T41	NoRel	true	دھونا	کھانسی
+Relation	T36	T5	NoRel	true	دھونا	علاج
+Relation	T36	T8	NoRel	true	دھونا	پانے
+Relation	T37	T10	NoRel	true	ترک	تدابير
+Relation	T37	T13	NoRel	true	ترک	چھینک
+Relation	T37	T19	NoRel	true	ترک	اپنائے
+Relation	T37	T20	NoRel	true	ترک	وبا
+Relation	T37	T22	NoRel	true	ترک	وبا
+Relation	T37	T23	NoRel	true	ترک	قابو
+Relation	T37	T24	NoRel	true	ترک	کم
+Relation	T37	T31	NoRel	true	ترک	مدد
+Relation	T37	T33	NoRel	true	ترک	منتقل
+Relation	T38	T0	NoRel	true	شامل	pandemic
+Relation	T38	T1	NoRel	true	شامل	تیار
+Relation	T38	T11	NoRel	true	شامل	سفر
+Relation	T38	T23	NoRel	true	شامل	قابو
+Relation	T38	T27	NoRel	true	شامل	انفیکشنوں
+Relation	T38	T29	NoRel	true	شامل	مدد
+Relation	T38	T3	NoRel	true	شامل	انفیکشن
+Relation	T38	T32	NoRel	true	شامل	قیام
+Relation	T38	T35	NoRel	true	شامل	ترک
+Relation	T38	T40	NoRel	true	شامل	تجویز
+Relation	T38	T7	NoRel	true	شامل	تیاری
+Relation	T38	T8	NoRel	true	شامل	پانے
+Relation	T39	T0	NoRel	true	سرگرمیوں	pandemic
+Relation	T39	T15	NoRel	true	سرگرمیوں	چھینکا
+Relation	T39	T2	NoRel	true	سرگرمیوں	اقدامات
+Relation	T39	T21	NoRel	true	سرگرمیوں	متوقع
+Relation	T39	T23	NoRel	true	سرگرمیوں	قابو
+Relation	T39	T24	NoRel	true	سرگرمیوں	کم
+Relation	T39	T25	NoRel	true	سرگرمیوں	epidemic curve
+Relation	T39	T31	NoRel	true	سرگرمیوں	مدد
+Relation	T39	T34	NoRel	true	سرگرمیوں	کم
+Relation	T39	T35	NoRel	true	سرگرمیوں	ترک
+Relation	T39	T42	NoRel	true	سرگرمیوں	ڈھانپ
+Relation	T39	T5	NoRel	true	سرگرمیوں	علاج
+Relation	T39	T6	NoRel	true	سرگرمیوں	علاج
+Relation	T39	T7	NoRel	true	سرگرمیوں	تیاری
+Relation	T4	T10	NoRel	true	کرنے	تدابير
+Relation	T4	T11	NoRel	true	کرنے	سفر
+Relation	T4	T13	NoRel	true	کرنے	چھینک
+Relation	T4	T16	NoRel	true	کرنے	policies
+Relation	T4	T17	NoRel	true	کرنے	approach
+Relation	T4	T19	NoRel	true	کرنے	اپنائے
+Relation	T4	T20	NoRel	true	کرنے	وبا
+Relation	T4	T24	NoRel	true	کرنے	کم
+Relation	T4	T27	NoRel	true	کرنے	انفیکشنوں
+Relation	T4	T3	NoRel	true	کرنے	انفیکشن
+Relation	T4	T32	NoRel	true	کرنے	قیام
+Relation	T4	T34	NoRel	true	کرنے	کم
+Relation	T4	T37	NoRel	true	کرنے	ترک
+Relation	T40	T0	NoRel	true	تجویز	pandemic
+Relation	T40	T15	NoRel	true	تجویز	چھینکا
+Relation	T40	T18	NoRel	true	تجویز	اصول
+Relation	T40	T24	NoRel	true	تجویز	کم
+Relation	T40	T25	NoRel	true	تجویز	epidemic curve
+Relation	T40	T26	NoRel	true	تجویز	کہتے
+Relation	T40	T27	NoRel	true	تجویز	انفیکشنوں
+Relation	T40	T30	NoRel	true	تجویز	کم
+Relation	T40	T32	NoRel	true	تجویز	قیام
+Relation	T40	T33	NoRel	true	تجویز	منتقل
+Relation	T40	T39	NoRel	true	تجویز	سرگرمیوں
+Relation	T40	T4	NoRel	true	تجویز	کرنے
+Relation	T40	T5	NoRel	true	تجویز	علاج
+Relation	T40	T8	NoRel	true	تجویز	پانے
+Relation	T41	T11	NoRel	true	کھانسی	سفر
+Relation	T41	T12	NoRel	true	کھانسی	چھونے
+Relation	T41	T16	NoRel	true	کھانسی	policies
+Relation	T41	T18	NoRel	true	کھانسی	اصول
+Relation	T41	T20	NoRel	true	کھانسی	وبا
+Relation	T41	T23	NoRel	true	کھانسی	قابو
+Relation	T41	T26	NoRel	true	کھانسی	کہتے
+Relation	T41	T27	NoRel	true	کھانسی	انفیکشنوں
+Relation	T41	T30	NoRel	true	کھانسی	کم
+Relation	T41	T31	NoRel	true	کھانسی	مدد
+Relation	T41	T35	NoRel	true	کھانسی	ترک
+Relation	T41	T37	NoRel	true	کھانسی	ترک
+Relation	T41	T4	NoRel	true	کھانسی	کرنے
+Relation	T41	T9	NoRel	true	کھانسی	انفیکشن
+Relation	T42	T12	NoRel	true	ڈھانپ	چھونے
+Relation	T42	T14	NoRel	true	ڈھانپ	کھانسا
+Relation	T42	T17	NoRel	true	ڈھانپ	approach
+Relation	T42	T23	NoRel	true	ڈھانپ	قابو
+Relation	T42	T24	NoRel	true	ڈھانپ	کم
+Relation	T42	T25	NoRel	true	ڈھانپ	epidemic curve
+Relation	T42	T27	NoRel	true	ڈھانپ	انفیکشنوں
+Relation	T42	T28	NoRel	true	ڈھانپ	کم
+Relation	T42	T30	NoRel	true	ڈھانپ	کم
+Relation	T42	T31	NoRel	true	ڈھانپ	مدد
+Relation	T42	T32	NoRel	true	ڈھانپ	قیام
+Relation	T42	T33	NoRel	true	ڈھانپ	منتقل
+Relation	T42	T34	NoRel	true	ڈھانپ	کم
+Relation	T42	T39	NoRel	true	ڈھانپ	سرگرمیوں
+Relation	T42	T41	NoRel	true	ڈھانپ	کھانسی
+Relation	T42	T6	NoRel	true	ڈھانپ	علاج
+Relation	T5	T10	NoRel	true	علاج	تدابير
+Relation	T5	T14	NoRel	true	علاج	کھانسا
+Relation	T5	T19	NoRel	true	علاج	اپنائے
+Relation	T5	T20	NoRel	true	علاج	وبا
+Relation	T5	T21	NoRel	true	علاج	متوقع
+Relation	T5	T22	NoRel	true	علاج	وبا
+Relation	T5	T26	NoRel	true	علاج	کہتے
+Relation	T5	T29	NoRel	true	علاج	مدد
+Relation	T5	T32	NoRel	true	علاج	قیام
+Relation	T5	T34	NoRel	true	علاج	کم
+Relation	T5	T35	NoRel	true	علاج	ترک
+Relation	T5	T36	NoRel	true	علاج	دھونا
+Relation	T5	T39	NoRel	true	علاج	سرگرمیوں
+Relation	T5	T40	NoRel	true	علاج	تجویز
+Relation	T5	T7	NoRel	true	علاج	تیاری
+Relation	T5	T9	NoRel	true	علاج	انفیکشن
+Relation	T6	T0	NoRel	true	علاج	pandemic
+Relation	T6	T1	NoRel	true	علاج	تیار
+Relation	T6	T10	NoRel	true	علاج	تدابير
+Relation	T6	T13	NoRel	true	علاج	چھینک
+Relation	T6	T17	NoRel	true	علاج	approach
+Relation	T6	T18	NoRel	true	علاج	اصول
+Relation	T6	T24	NoRel	true	علاج	کم
+Relation	T6	T25	NoRel	true	علاج	epidemic curve
+Relation	T6	T37	NoRel	true	علاج	ترک
+Relation	T6	T39	NoRel	true	علاج	سرگرمیوں
+Relation	T6	T40	NoRel	true	علاج	تجویز
+Relation	T6	T7	NoRel	true	علاج	تیاری
+Relation	T7	T11	NoRel	true	تیاری	سفر
+Relation	T7	T13	NoRel	true	تیاری	چھینک
+Relation	T7	T21	NoRel	true	تیاری	متوقع
+Relation	T7	T22	NoRel	true	تیاری	وبا
+Relation	T7	T23	NoRel	true	تیاری	قابو
+Relation	T7	T27	NoRel	true	تیاری	انفیکشنوں
+Relation	T7	T30	NoRel	true	تیاری	کم
+Relation	T7	T33	NoRel	true	تیاری	منتقل
+Relation	T7	T35	NoRel	true	تیاری	ترک
+Relation	T7	T4	NoRel	true	تیاری	کرنے
+Relation	T7	T9	NoRel	true	تیاری	انفیکشن
+Relation	T8	T1	NoRel	true	پانے	تیار
+Relation	T8	T12	NoRel	true	پانے	چھونے
+Relation	T8	T14	NoRel	true	پانے	کھانسا
+Relation	T8	T18	NoRel	true	پانے	اصول
+Relation	T8	T19	NoRel	true	پانے	اپنائے
+Relation	T8	T25	NoRel	true	پانے	epidemic curve
+Relation	T8	T29	NoRel	true	پانے	مدد
+Relation	T8	T33	NoRel	true	پانے	منتقل
+Relation	T8	T34	NoRel	true	پانے	کم
+Relation	T8	T37	NoRel	true	پانے	ترک
+Relation	T8	T40	NoRel	true	پانے	تجویز
+Relation	T8	T5	NoRel	true	پانے	علاج
+Relation	T8	T6	NoRel	true	پانے	علاج
+Relation	T8	T7	NoRel	true	پانے	تیاری
+Relation	T8	T9	NoRel	true	پانے	انفیکشن
+Relation	T9	T12	NoRel	true	انفیکشن	چھونے
+Relation	T9	T18	NoRel	true	انفیکشن	اصول
+Relation	T9	T19	NoRel	true	انفیکشن	اپنائے
+Relation	T9	T21	NoRel	true	انفیکشن	متوقع
+Relation	T9	T23	NoRel	true	انفیکشن	قابو
+Relation	T9	T29	NoRel	true	انفیکشن	مدد
+Relation	T9	T30	NoRel	true	انفیکشن	کم
+Relation	T9	T32	NoRel	true	انفیکشن	قیام
+Relation	T9	T35	NoRel	true	انفیکشن	ترک
+Relation	T9	T5	NoRel	true	انفیکشن	علاج

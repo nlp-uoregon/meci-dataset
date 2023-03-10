@@ -1,0 +1,148 @@
+Text	Los estudios mediante modelos y simulacros realizado en Estados Unidos sugieren que si el 10_% de los lugares de trabajo afectados se cierran el índice de transmisión de infección global es de alrededor de 11,9_% y el tiempo del pico de la epidemia se retrasa ligeramente .	En contraste , si el 33_% de los lugares de trabajo afectados son cerrados , el índice de ataque disminuye a 4,9_% , y el tiempo del pico es retrasado por 1 semana .	Durante el estallido de SARS del 2003 en Singapur , alrededor de 8,000 personas estuvieron sometidas a cuarentena obligatoria en los hogares y un adicionalmente 4300 estuvieron estuvieron sometidas a un auto-monitoreo de síntomas y un contacto telefónico diario con autoridades de salud como medios de controlar la epidemia .	A pesar de que solo 58 de estos individuos fueron finalmente diagnosticados con SARS , oficiales de salud pública estuvieron satisfechos que esta medida ayudó a impedir que la epidemia se extendiera más .	El auto aislamiento voluntario puede haber ayudado a reducir la transmisión de influenza en Texas en 2009 .
+Event	T0	estudios	EVENT	4
+Event	T1	realizado	EVENT	43
+Event	T13	estallido	EVENT	451
+Event	T14	sometidas	EVENT	531
+Event	T15	sometidas	EVENT	628
+Event	T16	contacto	EVENT	675
+Event	T17	controlar	EVENT	742
+Event	T18	epidemia	EVENT	755
+Event	T19	diagnosticados	EVENT	827
+Event	T2	sugieren	EVENT	71
+Event	T20	satisfechos	EVENT	891
+Event	T21	ayudó	EVENT	919
+Event	T22	epidemia	EVENT	942
+Event	T23	extendiera	EVENT	954
+Event	T27	influenza	EVENT	1050
+Event	T3	afectados	EVENT	121
+Event	T7	epidemia	EVENT	240
+Event	T8	retrasa	EVENT	252
+Event	T9	afectados	EVENT	326
+Event	T4	medida	EVENT	912
+Relation	T7	T0	CauseEffect	true	epidemia	estudios
+Relation	T0	T7	EffectCause	true	estudios	epidemia
+Relation	T13	T14	CauseEffect	true	estallido	sometidas
+Relation	T14	T13	EffectCause	true	sometidas	estallido
+Relation	T18	T15	CauseEffect	true	epidemia	sometidas
+Relation	T15	T18	EffectCause	true	sometidas	epidemia
+Relation	T18	T19	CauseEffect	true	epidemia	diagnosticados
+Relation	T19	T18	EffectCause	true	diagnosticados	epidemia
+Relation	T4	T20	CauseEffect	true	medida	satisfechos
+Relation	T20	T4	EffectCause	true	satisfechos	medida
+Relation	T4	T21	CauseEffect	true	medida	ayudó
+Relation	T21	T4	EffectCause	true	ayudó	medida
+Relation	T0	T15	NoRel	true	estudios	sometidas
+Relation	T0	T2	NoRel	true	estudios	sugieren
+Relation	T0	T20	NoRel	true	estudios	satisfechos
+Relation	T0	T9	NoRel	true	estudios	afectados
+Relation	T1	T16	NoRel	true	realizado	contacto
+Relation	T1	T17	NoRel	true	realizado	controlar
+Relation	T1	T18	NoRel	true	realizado	epidemia
+Relation	T1	T22	NoRel	true	realizado	epidemia
+Relation	T1	T23	NoRel	true	realizado	extendiera
+Relation	T1	T27	NoRel	true	realizado	influenza
+Relation	T1	T4	NoRel	true	realizado	medida
+Relation	T1	T8	NoRel	true	realizado	retrasa
+Relation	T13	T1	NoRel	true	estallido	realizado
+Relation	T13	T18	NoRel	true	estallido	epidemia
+Relation	T13	T23	NoRel	true	estallido	extendiera
+Relation	T13	T9	NoRel	true	estallido	afectados
+Relation	T14	T16	NoRel	true	sometidas	contacto
+Relation	T14	T17	NoRel	true	sometidas	controlar
+Relation	T14	T22	NoRel	true	sometidas	epidemia
+Relation	T14	T27	NoRel	true	sometidas	influenza
+Relation	T14	T3	NoRel	true	sometidas	afectados
+Relation	T14	T7	NoRel	true	sometidas	epidemia
+Relation	T15	T13	NoRel	true	sometidas	estallido
+Relation	T15	T19	NoRel	true	sometidas	diagnosticados
+Relation	T15	T9	NoRel	true	sometidas	afectados
+Relation	T16	T0	NoRel	true	contacto	estudios
+Relation	T16	T13	NoRel	true	contacto	estallido
+Relation	T16	T14	NoRel	true	contacto	sometidas
+Relation	T16	T17	NoRel	true	contacto	controlar
+Relation	T16	T18	NoRel	true	contacto	epidemia
+Relation	T16	T19	NoRel	true	contacto	diagnosticados
+Relation	T16	T20	NoRel	true	contacto	satisfechos
+Relation	T16	T22	NoRel	true	contacto	epidemia
+Relation	T17	T0	NoRel	true	controlar	estudios
+Relation	T17	T13	NoRel	true	controlar	estallido
+Relation	T17	T15	NoRel	true	controlar	sometidas
+Relation	T17	T16	NoRel	true	controlar	contacto
+Relation	T17	T21	NoRel	true	controlar	ayudó
+Relation	T17	T22	NoRel	true	controlar	epidemia
+Relation	T17	T23	NoRel	true	controlar	extendiera
+Relation	T18	T1	NoRel	true	epidemia	realizado
+Relation	T18	T2	NoRel	true	epidemia	sugieren
+Relation	T18	T21	NoRel	true	epidemia	ayudó
+Relation	T18	T22	NoRel	true	epidemia	epidemia
+Relation	T18	T3	NoRel	true	epidemia	afectados
+Relation	T19	T0	NoRel	true	diagnosticados	estudios
+Relation	T19	T1	NoRel	true	diagnosticados	realizado
+Relation	T19	T13	NoRel	true	diagnosticados	estallido
+Relation	T19	T14	NoRel	true	diagnosticados	sometidas
+Relation	T19	T15	NoRel	true	diagnosticados	sometidas
+Relation	T19	T16	NoRel	true	diagnosticados	contacto
+Relation	T19	T17	NoRel	true	diagnosticados	controlar
+Relation	T19	T4	NoRel	true	diagnosticados	medida
+Relation	T19	T9	NoRel	true	diagnosticados	afectados
+Relation	T2	T13	NoRel	true	sugieren	estallido
+Relation	T2	T21	NoRel	true	sugieren	ayudó
+Relation	T2	T27	NoRel	true	sugieren	influenza
+Relation	T20	T1	NoRel	true	satisfechos	realizado
+Relation	T20	T15	NoRel	true	satisfechos	sometidas
+Relation	T20	T16	NoRel	true	satisfechos	contacto
+Relation	T20	T21	NoRel	true	satisfechos	ayudó
+Relation	T20	T22	NoRel	true	satisfechos	epidemia
+Relation	T20	T23	NoRel	true	satisfechos	extendiera
+Relation	T20	T27	NoRel	true	satisfechos	influenza
+Relation	T20	T3	NoRel	true	satisfechos	afectados
+Relation	T20	T7	NoRel	true	satisfechos	epidemia
+Relation	T21	T0	NoRel	true	ayudó	estudios
+Relation	T21	T13	NoRel	true	ayudó	estallido
+Relation	T21	T18	NoRel	true	ayudó	epidemia
+Relation	T21	T19	NoRel	true	ayudó	diagnosticados
+Relation	T21	T2	NoRel	true	ayudó	sugieren
+Relation	T21	T22	NoRel	true	ayudó	epidemia
+Relation	T21	T27	NoRel	true	ayudó	influenza
+Relation	T22	T14	NoRel	true	epidemia	sometidas
+Relation	T22	T18	NoRel	true	epidemia	epidemia
+Relation	T22	T23	NoRel	true	epidemia	extendiera
+Relation	T22	T3	NoRel	true	epidemia	afectados
+Relation	T22	T8	NoRel	true	epidemia	retrasa
+Relation	T23	T16	NoRel	true	extendiera	contacto
+Relation	T23	T17	NoRel	true	extendiera	controlar
+Relation	T23	T20	NoRel	true	extendiera	satisfechos
+Relation	T23	T21	NoRel	true	extendiera	ayudó
+Relation	T23	T22	NoRel	true	extendiera	epidemia
+Relation	T23	T27	NoRel	true	extendiera	influenza
+Relation	T23	T8	NoRel	true	extendiera	retrasa
+Relation	T27	T15	NoRel	true	influenza	sometidas
+Relation	T27	T23	NoRel	true	influenza	extendiera
+Relation	T3	T15	NoRel	true	afectados	sometidas
+Relation	T3	T16	NoRel	true	afectados	contacto
+Relation	T3	T9	NoRel	true	afectados	afectados
+Relation	T4	T0	NoRel	true	medida	estudios
+Relation	T4	T13	NoRel	true	medida	estallido
+Relation	T4	T15	NoRel	true	medida	sometidas
+Relation	T4	T2	NoRel	true	medida	sugieren
+Relation	T7	T1	NoRel	true	epidemia	realizado
+Relation	T7	T17	NoRel	true	epidemia	controlar
+Relation	T7	T20	NoRel	true	epidemia	satisfechos
+Relation	T7	T27	NoRel	true	epidemia	influenza
+Relation	T7	T3	NoRel	true	epidemia	afectados
+Relation	T7	T4	NoRel	true	epidemia	medida
+Relation	T7	T8	NoRel	true	epidemia	retrasa
+Relation	T7	T9	NoRel	true	epidemia	afectados
+Relation	T8	T1	NoRel	true	retrasa	realizado
+Relation	T8	T14	NoRel	true	retrasa	sometidas
+Relation	T8	T17	NoRel	true	retrasa	controlar
+Relation	T8	T22	NoRel	true	retrasa	epidemia
+Relation	T8	T27	NoRel	true	retrasa	influenza
+Relation	T8	T7	NoRel	true	retrasa	epidemia
+Relation	T8	T9	NoRel	true	retrasa	afectados
+Relation	T9	T13	NoRel	true	afectados	estallido
+Relation	T9	T14	NoRel	true	afectados	sometidas
+Relation	T9	T20	NoRel	true	afectados	satisfechos
+Relation	T9	T23	NoRel	true	afectados	extendiera
+Relation	T9	T27	NoRel	true	afectados	influenza
+Relation	T9	T8	NoRel	true	afectados	retrasa

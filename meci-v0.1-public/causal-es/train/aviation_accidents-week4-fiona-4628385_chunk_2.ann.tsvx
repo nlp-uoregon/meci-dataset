@@ -1,0 +1,63 @@
+Text	Tan sólo media hora después del despegue , cuando el avión vuela a altitud de crucero con un Nivel de vuelo ( FL ) 390 , el monitor electrónico centralizado del avión ( ECAM ) mostró un mensaje " ENG 2 CTL SYS FAULT " .	La tripulación contactó con el control de mantenimiento del departamento de ingeniería de la aerolínea y debatieron también sobre las fluctuaciones del aparato .	Como el otro motor operaba en parámetros normales tripulantes y el control de mantenimiento decidieron que era seguro continuar con el vuelo .	Cerca de dos horas después del despegue , a las 03:16 UTC , el mensaje " ENG 2 CTL SYS FAULT " reapareció en el ECAM .	Los tripulantes llamaron nuevamente al control de mantenimiento para revisar la decisión tomada .
+Event	T0	despegue	EVENT	32
+Event	T1	vuela	EVENT	59
+Event	T2	mostró	EVENT	176
+Event	T3	contactó	EVENT	235
+Event	T4	debatieron	EVENT	325
+Event	T5	fluctuaciones	EVENT	354
+Event	T6	operaba	EVENT	401
+Event	T7	control	EVENT	449
+Event	T8	vuelo	EVENT	517
+Event	T9	despegue	EVENT	556
+Event	T10	reapareció	EVENT	620
+Event	T11	llamaron	EVENT	660
+Event	T12	revisar	EVENT	713
+Event	T13	tomada	EVENT	733
+Relation	T0	T3	NoRel	true	despegue	contactó
+Relation	T1	T4	NoRel	true	vuela	debatieron
+Relation	T1	T8	NoRel	true	vuela	vuelo
+Relation	T10	T12	NoRel	true	reapareció	revisar
+Relation	T10	T3	NoRel	true	reapareció	contactó
+Relation	T10	T6	NoRel	true	reapareció	operaba
+Relation	T10	T7	NoRel	true	reapareció	control
+Relation	T10	T9	NoRel	true	reapareció	despegue
+Relation	T11	T1	NoRel	true	llamaron	vuela
+Relation	T11	T10	NoRel	true	llamaron	reapareció
+Relation	T11	T13	NoRel	true	llamaron	tomada
+Relation	T11	T7	NoRel	true	llamaron	control
+Relation	T11	T9	NoRel	true	llamaron	despegue
+Relation	T12	T1	NoRel	true	revisar	vuela
+Relation	T12	T13	NoRel	true	revisar	tomada
+Relation	T12	T3	NoRel	true	revisar	contactó
+Relation	T12	T6	NoRel	true	revisar	operaba
+Relation	T12	T7	NoRel	true	revisar	control
+Relation	T13	T0	NoRel	true	tomada	despegue
+Relation	T13	T2	NoRel	true	tomada	mostró
+Relation	T13	T4	NoRel	true	tomada	debatieron
+Relation	T13	T8	NoRel	true	tomada	vuelo
+Relation	T2	T10	NoRel	true	mostró	reapareció
+Relation	T2	T7	NoRel	true	mostró	control
+Relation	T2	T9	NoRel	true	mostró	despegue
+Relation	T3	T1	NoRel	true	contactó	vuela
+Relation	T3	T10	NoRel	true	contactó	reapareció
+Relation	T3	T13	NoRel	true	contactó	tomada
+Relation	T3	T6	NoRel	true	contactó	operaba
+Relation	T4	T13	NoRel	true	debatieron	tomada
+Relation	T4	T2	NoRel	true	debatieron	mostró
+Relation	T4	T3	NoRel	true	debatieron	contactó
+Relation	T4	T9	NoRel	true	debatieron	despegue
+Relation	T5	T1	NoRel	true	fluctuaciones	vuela
+Relation	T5	T3	NoRel	true	fluctuaciones	contactó
+Relation	T5	T9	NoRel	true	fluctuaciones	despegue
+Relation	T6	T0	NoRel	true	operaba	despegue
+Relation	T6	T4	NoRel	true	operaba	debatieron
+Relation	T7	T0	NoRel	true	control	despegue
+Relation	T7	T11	NoRel	true	control	llamaron
+Relation	T7	T12	NoRel	true	control	revisar
+Relation	T8	T10	NoRel	true	vuelo	reapareció
+Relation	T8	T2	NoRel	true	vuelo	mostró
+Relation	T8	T6	NoRel	true	vuelo	operaba
+Relation	T8	T7	NoRel	true	vuelo	control
+Relation	T8	T9	NoRel	true	vuelo	despegue
+Relation	T9	T1	NoRel	true	despegue	vuela
+Relation	T9	T11	NoRel	true	despegue	llamaron

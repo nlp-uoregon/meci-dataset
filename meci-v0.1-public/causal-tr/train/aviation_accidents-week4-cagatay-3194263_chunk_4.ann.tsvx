@@ -1,0 +1,54 @@
+Text	Azerbaycan Devlet Sınır Hizmeti Başkanı Elçin Guliyev , pilotun deneyimli olduğunu ve Birinci Karabağ Savaşı'na katıldığını , helikopterin neredeyse yeni olduğunu ve yakın zamanda tamir edildiğini söyledi .	Guliyev , helikopterin kara kutusunun bulunduğunu belirterek , olaya dış güçlerin karışmadığını kaydetti .	İlk bilgilere göre helikopter kazasında iki albay , beş binbaşı , dört yüzbaşı , iki teğmen ve bir müteahhit hayatını kaybederken , bir albay ve bir kaptan da yaralandı .	DSH'ya göre kazada hayatını kaybedenlerin listesi :	1. Cevadov Füzuli Ali İbrahim oğlu — albay 2. Nazirov Emil Nazir oğlu — yarbay 3. Hasanov Elmir Mircelil oğlu — binbaşı 4.
+Event	T0	tamir	EVENT	180
+Event	T1	söyledi	EVENT	197
+Event	T2	kaydetti	EVENT	303
+Event	T3	kazasında	EVENT	344
+Event	T4	kaybederken	EVENT	432
+Event	T5	yaralandı	EVENT	473
+Event	T6	katıldığını	EVENT	112
+Event	T7	bulunduğunu	EVENT	245
+Event	T8	belirterek	EVENT	257
+Event	T9	kazada	EVENT	497
+Event	T10	kaybedenlerin	EVENT	513
+Relation	T3	T4	CauseEffect	true	kazasında	kaybederken
+Relation	T4	T3	EffectCause	true	kaybederken	kazasında
+Relation	T3	T5	CauseEffect	true	kazasında	yaralandı
+Relation	T5	T3	EffectCause	true	yaralandı	kazasında
+Relation	T9	T10	CauseEffect	true	kazada	kaybedenlerin
+Relation	T10	T9	EffectCause	true	kaybedenlerin	kazada
+Relation	T3	T10	CauseEffect	true	kazasında	kaybedenlerin
+Relation	T10	T3	EffectCause	true	kaybedenlerin	kazasında
+Relation	T9	T4	CauseEffect	true	kazada	kaybederken
+Relation	T4	T9	EffectCause	true	kaybederken	kazada
+Relation	T9	T5	CauseEffect	true	kazada	yaralandı
+Relation	T5	T9	EffectCause	true	yaralandı	kazada
+Relation	T0	T3	NoRel	true	tamir	kazasında
+Relation	T0	T4	NoRel	true	tamir	kaybederken
+Relation	T0	T7	NoRel	true	tamir	bulunduğunu
+Relation	T1	T3	NoRel	true	söyledi	kazasında
+Relation	T10	T1	NoRel	true	kaybedenlerin	söyledi
+Relation	T10	T2	NoRel	true	kaybedenlerin	kaydetti
+Relation	T10	T4	NoRel	true	kaybedenlerin	kaybederken
+Relation	T10	T5	NoRel	true	kaybedenlerin	yaralandı
+Relation	T10	T7	NoRel	true	kaybedenlerin	bulunduğunu
+Relation	T2	T1	NoRel	true	kaydetti	söyledi
+Relation	T2	T5	NoRel	true	kaydetti	yaralandı
+Relation	T2	T7	NoRel	true	kaydetti	bulunduğunu
+Relation	T2	T8	NoRel	true	kaydetti	belirterek
+Relation	T4	T0	NoRel	true	kaybederken	tamir
+Relation	T4	T7	NoRel	true	kaybederken	bulunduğunu
+Relation	T5	T6	NoRel	true	yaralandı	katıldığını
+Relation	T5	T7	NoRel	true	yaralandı	bulunduğunu
+Relation	T5	T8	NoRel	true	yaralandı	belirterek
+Relation	T6	T4	NoRel	true	katıldığını	kaybederken
+Relation	T6	T9	NoRel	true	katıldığını	kazada
+Relation	T7	T1	NoRel	true	bulunduğunu	söyledi
+Relation	T7	T4	NoRel	true	bulunduğunu	kaybederken
+Relation	T7	T6	NoRel	true	bulunduğunu	katıldığını
+Relation	T7	T9	NoRel	true	bulunduğunu	kazada
+Relation	T8	T0	NoRel	true	belirterek	tamir
+Relation	T8	T3	NoRel	true	belirterek	kazasında
+Relation	T8	T5	NoRel	true	belirterek	yaralandı
+Relation	T9	T3	NoRel	true	kazada	kazasında
+Relation	T9	T6	NoRel	true	kazada	katıldığını
+Relation	T9	T7	NoRel	true	kazada	bulunduğunu

@@ -1,0 +1,81 @@
+Text	They did not return home until after the war , in 1945 .	The rest of the Gagarin family believed the two older children were dead , and Yuri became ill with " grief and hunger " ; he was also beaten for refusing to work for the German forces and spent the remainder of the war at a hospital as a patient and later as an orderly .	His mother was hospitalized during the same period , after a German soldier gashed her leg with a scythe .	When the Germans were routed out of Klushino on 9 March 1944 , Yuri helped the Red Army find mines buried in the roads by the fleeing German army .	In 1946 , the family moved to Gzhatsk , where Gagarin continued his education .
+Event	T0	believed	EVENT	88
+Event	T1	dead	EVENT	125
+Event	T2	ill	EVENT	148
+Event	T3	grief	EVENT	159
+Event	T4	beaten	EVENT	192
+Event	T5	refusing	EVENT	203
+Event	T6	spent	EVENT	246
+Event	T7	war	EVENT	273
+Event	T8	hospitalized	EVENT	345
+Event	T9	gashed	EVENT	406
+Event	T10	scythe	EVENT	428
+Event	T11	helped	EVENT	505
+Event	T12	find	EVENT	525
+Event	T13	buried	EVENT	536
+Event	T14	fleeing	EVENT	563
+Event	T15	moved	EVENT	606
+Event	T16	continued	EVENT	639
+Event	T17	education	EVENT	653
+Event	T18	return	EVENT	13
+Event	T19	war	EVENT	41
+Event	T20	hunger	EVENT	169
+Event	T21	routed	EVENT	459
+Relation	T3	T2	CauseEffect	true	grief	ill
+Relation	T2	T3	EffectCause	true	ill	grief
+Relation	T20	T2	CauseEffect	true	hunger	ill
+Relation	T2	T20	EffectCause	true	ill	hunger
+Relation	T5	T4	CauseEffect	true	refusing	beaten
+Relation	T4	T5	EffectCause	true	beaten	refusing
+Relation	T9	T8	CauseEffect	true	gashed	hospitalized
+Relation	T8	T9	EffectCause	true	hospitalized	gashed
+Relation	T11	T12	CauseEffect	true	helped	find
+Relation	T12	T11	EffectCause	true	find	helped
+Relation	T13	T12	CauseEffect	true	buried	find
+Relation	T12	T13	EffectCause	true	find	buried
+Relation	T0	T12	NoRel	true	believed	find
+Relation	T0	T14	NoRel	true	believed	fleeing
+Relation	T1	T17	NoRel	true	dead	education
+Relation	T10	T17	NoRel	true	scythe	education
+Relation	T10	T3	NoRel	true	scythe	grief
+Relation	T10	T4	NoRel	true	scythe	beaten
+Relation	T10	T9	NoRel	true	scythe	gashed
+Relation	T11	T3	NoRel	true	helped	grief
+Relation	T11	T4	NoRel	true	helped	beaten
+Relation	T11	T7	NoRel	true	helped	war
+Relation	T12	T21	NoRel	true	find	routed
+Relation	T13	T1	NoRel	true	buried	dead
+Relation	T14	T16	NoRel	true	fleeing	continued
+Relation	T15	T1	NoRel	true	moved	dead
+Relation	T15	T10	NoRel	true	moved	scythe
+Relation	T17	T19	NoRel	true	education	war
+Relation	T17	T8	NoRel	true	education	hospitalized
+Relation	T18	T6	NoRel	true	return	spent
+Relation	T19	T0	NoRel	true	war	believed
+Relation	T19	T14	NoRel	true	war	fleeing
+Relation	T19	T4	NoRel	true	war	beaten
+Relation	T19	T9	NoRel	true	war	gashed
+Relation	T2	T10	NoRel	true	ill	scythe
+Relation	T20	T10	NoRel	true	hunger	scythe
+Relation	T20	T11	NoRel	true	hunger	helped
+Relation	T20	T17	NoRel	true	hunger	education
+Relation	T21	T0	NoRel	true	routed	believed
+Relation	T21	T14	NoRel	true	routed	fleeing
+Relation	T21	T18	NoRel	true	routed	return
+Relation	T21	T5	NoRel	true	routed	refusing
+Relation	T21	T6	NoRel	true	routed	spent
+Relation	T3	T20	NoRel	true	grief	hunger
+Relation	T3	T7	NoRel	true	grief	war
+Relation	T4	T17	NoRel	true	beaten	education
+Relation	T4	T21	NoRel	true	beaten	routed
+Relation	T5	T13	NoRel	true	refusing	buried
+Relation	T5	T15	NoRel	true	refusing	moved
+Relation	T5	T21	NoRel	true	refusing	routed
+Relation	T5	T8	NoRel	true	refusing	hospitalized
+Relation	T6	T18	NoRel	true	spent	return
+Relation	T6	T2	NoRel	true	spent	ill
+Relation	T7	T21	NoRel	true	war	routed
+Relation	T8	T5	NoRel	true	hospitalized	refusing
+Relation	T9	T0	NoRel	true	gashed	believed
+Relation	T9	T13	NoRel	true	gashed	buried
+Relation	T9	T21	NoRel	true	gashed	routed

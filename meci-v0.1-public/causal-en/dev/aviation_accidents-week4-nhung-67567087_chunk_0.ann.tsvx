@@ -1,0 +1,42 @@
+Text	CHINA AIRLINES FLIGHT 825 was a scheduled China Airlines passenger flight from Taipei 's Songshan Airport to Kai Tak Airport , Hong Kong .	On 20 November 1971 , a Sud Aviation SE - 210 operating this route disintegrated in midair over the Penghu islands , killing all 25 onboard .	The aircraft involved was a Sud Aviation SE - 210 Caravelle III built in March 1962 , new to Swissair with registration HB - ICT .	The aircraft was involved in a separate accident as Swissair Flight 142 on 25 April 1962 , where it experienced problems with its nose landing gear enroute from Geneva , Switzerland to Paris , France .	Due to unsatisfactory maintenance and a lack of fuel , the flight was diverted by air traffic control ( ATC ) to Zurich Airport .
+Event	T0	scheduled	EVENT	32
+Event	T1	flight	EVENT	67
+Event	T2	operating	EVENT	185
+Event	T3	killing	EVENT	256
+Event	T4	involved	EVENT	294
+Event	T5	built	EVENT	345
+Event	T6	registration	EVENT	388
+Event	T7	involved	EVENT	429
+Event	T8	accident	EVENT	452
+Event	T9	problems	EVENT	524
+Event	T10	maintenance	EVENT	636
+Event	T11	lack	EVENT	654
+Event	T12	flight	EVENT	673
+Event	T13	diverted	EVENT	684
+Relation	T10	T13	CauseEffect	true	maintenance	diverted
+Relation	T13	T10	EffectCause	true	diverted	maintenance
+Relation	T11	T13	CauseEffect	true	lack	diverted
+Relation	T13	T11	EffectCause	true	diverted	lack
+Relation	T9	T8	CauseEffect	true	problems	accident
+Relation	T8	T9	EffectCause	true	accident	problems
+Relation	T1	T12	NoRel	true	flight	flight
+Relation	T1	T4	NoRel	true	flight	involved
+Relation	T10	T4	NoRel	true	maintenance	involved
+Relation	T10	T6	NoRel	true	maintenance	registration
+Relation	T10	T8	NoRel	true	maintenance	accident
+Relation	T11	T5	NoRel	true	lack	built
+Relation	T11	T6	NoRel	true	lack	registration
+Relation	T12	T3	NoRel	true	flight	killing
+Relation	T12	T5	NoRel	true	flight	built
+Relation	T12	T6	NoRel	true	flight	registration
+Relation	T13	T0	NoRel	true	diverted	scheduled
+Relation	T13	T1	NoRel	true	diverted	flight
+Relation	T13	T9	NoRel	true	diverted	problems
+Relation	T2	T12	NoRel	true	operating	flight
+Relation	T3	T2	NoRel	true	killing	operating
+Relation	T3	T5	NoRel	true	killing	built
+Relation	T4	T12	NoRel	true	involved	flight
+Relation	T5	T12	NoRel	true	built	flight
+Relation	T6	T10	NoRel	true	registration	maintenance
+Relation	T6	T13	NoRel	true	registration	diverted
+Relation	T9	T1	NoRel	true	problems	flight

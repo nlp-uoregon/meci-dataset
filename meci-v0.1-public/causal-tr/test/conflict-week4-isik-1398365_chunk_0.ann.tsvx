@@ -1,0 +1,34 @@
+Text	TIPPECANOE MUHAREBESI , 7 Kasım 1811 tarihinde Indiana Toprakları ( : en : Indiana Territory ) Valisi William Henry Harrison kumandasındaki Birleşik Devletler kuvvetleri ve Shawnee kabilesinin lideri Tecumseh ile bağlantılı Kızılderili savaşçılar arasında yapılan bir muharebedir .	Tecumseh ve kardeşi Tenskwatawa ( " Peygamber " ) , ABD'nin yerli topraklarına yayılmasına karşı çıkan çeşitli Kızılderili kabilelerden oluşan bir konfederasyonun liderleriydiler .	Gerilim ve şiddet arttıkça , Vali Harrison konfederasyonun Prophetstown'daki merkezini dağıtmak için yaklaşık 1.000 kişilik bir orduyla Tippecanoe ve Wabash nehirlerinin birleştiği noktaya yürüdü .	Harrison'un ordusu geldiğinde , henüz Birleşik Devletler'e güçle karşı gelecek durumda olmayan Tecumseh müttefik toplamak için uzaktaydı .	Ruhani bir lider olan ama asker olmayan Tenskwatawa baştaydı .
+Event	T2	muharebedir	EVENT	268
+Event	T4	arttıkça	EVENT	481
+Event	T5	dağıtmak	EVENT	550
+Event	T6	yürüdü	EVENT	652
+Event	T8	TIPPECANOE MUHAREBESI	EVENT	0
+Event	T9	yayılmasına	EVENT	361
+Event	T10	çıkan	EVENT	379
+Event	T1	geldiğinde	EVENT	680
+Relation	T9	T10	CauseEffect	true	yayılmasına	çıkan
+Relation	T10	T9	EffectCause	true	çıkan	yayılmasına
+Relation	T10	T8	CauseEffect	true	çıkan	TIPPECANOE MUHAREBESI
+Relation	T8	T10	EffectCause	true	TIPPECANOE MUHAREBESI	çıkan
+Relation	T4	T6	CauseEffect	true	arttıkça	yürüdü
+Relation	T6	T4	EffectCause	true	yürüdü	arttıkça
+Relation	T6	T8	CauseEffect	true	yürüdü	TIPPECANOE MUHAREBESI
+Relation	T8	T6	EffectCause	true	TIPPECANOE MUHAREBESI	yürüdü
+Relation	T1	T5	NoRel	true	geldiğinde	dağıtmak
+Relation	T1	T9	NoRel	true	geldiğinde	yayılmasına
+Relation	T10	T1	NoRel	true	çıkan	geldiğinde
+Relation	T2	T1	NoRel	true	muharebedir	geldiğinde
+Relation	T2	T10	NoRel	true	muharebedir	çıkan
+Relation	T2	T4	NoRel	true	muharebedir	arttıkça
+Relation	T2	T6	NoRel	true	muharebedir	yürüdü
+Relation	T2	T9	NoRel	true	muharebedir	yayılmasına
+Relation	T4	T2	NoRel	true	arttıkça	muharebedir
+Relation	T5	T10	NoRel	true	dağıtmak	çıkan
+Relation	T5	T8	NoRel	true	dağıtmak	TIPPECANOE MUHAREBESI
+Relation	T6	T10	NoRel	true	yürüdü	çıkan
+Relation	T6	T5	NoRel	true	yürüdü	dağıtmak
+Relation	T8	T1	NoRel	true	TIPPECANOE MUHAREBESI	geldiğinde
+Relation	T8	T4	NoRel	true	TIPPECANOE MUHAREBESI	arttıkça
+Relation	T8	T9	NoRel	true	TIPPECANOE MUHAREBESI	yayılmasına
+Relation	T9	T2	NoRel	true	yayılmasına	muharebedir

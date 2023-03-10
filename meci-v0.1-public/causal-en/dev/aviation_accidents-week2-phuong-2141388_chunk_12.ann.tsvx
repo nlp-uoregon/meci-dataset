@@ -1,0 +1,50 @@
+Text	It is believed that Preston 's actions influenced Samuel Byck to attempt to hijack a plane five days later , carrying a_.22 caliber revolver and a gasoline bomb .	According to self - recorded audio from before the hijacking , Byck intended to assassinate President Nixon .	Police shot him , and he died by suicide .	Preston was initially charged with unlawful entry into the White House grounds , a misdemeanor with a fine of and a maximum six - month jail term .	His lawyers arranged a plea bargain in which all charges under civilian jurisdiction would be dropped if the case were transferred to the military .
+Event	T1	entry	EVENT	360
+Event	T10	died	EVENT	298
+Event	T11	suicide	EVENT	306
+Event	T12	charged	EVENT	338
+Event	T13	misdemeanor	EVENT	399
+Event	T14	fine	EVENT	418
+Event	T15	arranged	EVENT	476
+Event	T16	bargain	EVENT	492
+Event	T17	charges	EVENT	513
+Event	T18	dropped	EVENT	558
+Event	T19	Preston 's actions	EVENT	20
+Event	T3	hijack	EVENT	76
+Event	T4	carrying	EVENT	109
+Event	T6	hijacking	EVENT	214
+Event	T8	assassinate	EVENT	243
+Event	T9	shot	EVENT	280
+Relation	T19	T3	CauseEffect	true	Preston 's actions	hijack
+Relation	T3	T19	EffectCause	true	hijack	Preston 's actions
+Relation	T19	T4	CauseEffect	true	Preston 's actions	carrying
+Relation	T4	T19	EffectCause	true	carrying	Preston 's actions
+Relation	T11	T10	CauseEffect	true	suicide	died
+Relation	T10	T11	EffectCause	true	died	suicide
+Relation	T1	T12	CauseEffect	true	entry	charged
+Relation	T12	T1	EffectCause	true	charged	entry
+Relation	T12	T16	CauseEffect	true	charged	bargain
+Relation	T16	T12	EffectCause	true	bargain	charged
+Relation	T1	T8	NoRel	true	entry	assassinate
+Relation	T11	T17	NoRel	true	suicide	charges
+Relation	T11	T4	NoRel	true	suicide	carrying
+Relation	T12	T13	NoRel	true	charged	misdemeanor
+Relation	T12	T15	NoRel	true	charged	arranged
+Relation	T12	T8	NoRel	true	charged	assassinate
+Relation	T14	T10	NoRel	true	fine	died
+Relation	T14	T3	NoRel	true	fine	hijack
+Relation	T15	T17	NoRel	true	arranged	charges
+Relation	T15	T8	NoRel	true	arranged	assassinate
+Relation	T16	T1	NoRel	true	bargain	entry
+Relation	T16	T8	NoRel	true	bargain	assassinate
+Relation	T17	T14	NoRel	true	charges	fine
+Relation	T17	T9	NoRel	true	charges	shot
+Relation	T19	T14	NoRel	true	Preston 's actions	fine
+Relation	T19	T8	NoRel	true	Preston 's actions	assassinate
+Relation	T3	T14	NoRel	true	hijack	fine
+Relation	T4	T15	NoRel	true	carrying	arranged
+Relation	T4	T18	NoRel	true	carrying	dropped
+Relation	T8	T6	NoRel	true	assassinate	hijacking
+Relation	T9	T15	NoRel	true	shot	arranged
+Relation	T9	T19	NoRel	true	shot	Preston 's actions
+Relation	T9	T4	NoRel	true	shot	carrying

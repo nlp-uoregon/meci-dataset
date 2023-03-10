@@ -1,0 +1,67 @@
+Text	1968 darbesi sırasında partiye sadece 5.000 kişi üyeydi ; 1970'lerin sonunda üye sayısı 1, 2 milyona yükseldi .	1974'te Iraklı Baasçılar , hükûmetin girişimlerine desteği genişletmek için Ulusal İlerici Cephe'yi kurdular .	Parti içindeki çekişmeler devam etti ve hükûmet , partinin Bölge Komutanlığının ilk genel sekreteri Fuad er - Rikabi de dahil olmak üzere muhalif üyelerini periyodik olarak tasfiye etti .	Partinin güçlü adamı olarak ortaya çıkan Hüseyin , artan gücünü 1979'da el - Bekir'i bir kenara itmek için kullandı ve 2003 Irak İstilası'na kadar Irak'ı yönetti .	El - Bekir'in görev süresi boyunca Irak , vatandaşlarının sağlık , barınma , eğitim ve kazanç standartlarında Avrupa ülkeleriyle kıyaslanabilir düzeylere sahip olmasıyla en dramatik ve başarılı ekonomik büyüme dönemini yaşadı Ülkenin büyümesine yardımcı olmak için birçok büyük altyapı oluşturuldu ve Irak petrol endüstrisi Sovyetler Birliği'nin yardımıyla kamulaştırıldı .
+Event	T0	yükseldi	EVENT	101
+Event	T1	kurdular	EVENT	212
+Event	T2	etti	EVENT	255
+Event	T3	etti	EVENT	404
+Event	T5	kullandı	EVENT	518
+Event	T6	yönetti	EVENT	565
+Event	T7	yaşadı	EVENT	794
+Event	T8	oluşturuldu	EVENT	861
+Event	T9	kamulaştırıldı	EVENT	932
+Event	T10	darbesi	EVENT	5
+Event	T4	artan	EVENT	462
+Event	T11	yardımıyla	EVENT	921
+Relation	T2	T3	CauseEffect	true	etti	etti
+Relation	T3	T2	EffectCause	true	etti	etti
+Relation	T4	T5	CauseEffect	true	artan	kullandı
+Relation	T5	T4	EffectCause	true	kullandı	artan
+Relation	T4	T6	CauseEffect	true	artan	yönetti
+Relation	T6	T4	EffectCause	true	yönetti	artan
+Relation	T11	T9	CauseEffect	true	yardımıyla	kamulaştırıldı
+Relation	T9	T11	EffectCause	true	kamulaştırıldı	yardımıyla
+Relation	T8	T7	CauseEffect	true	oluşturuldu	yaşadı
+Relation	T7	T8	EffectCause	true	yaşadı	oluşturuldu
+Relation	T9	T7	CauseEffect	true	kamulaştırıldı	yaşadı
+Relation	T7	T9	EffectCause	true	yaşadı	kamulaştırıldı
+Relation	T0	T10	NoRel	true	yükseldi	darbesi
+Relation	T0	T2	NoRel	true	yükseldi	etti
+Relation	T0	T6	NoRel	true	yükseldi	yönetti
+Relation	T0	T9	NoRel	true	yükseldi	kamulaştırıldı
+Relation	T1	T10	NoRel	true	kurdular	darbesi
+Relation	T1	T11	NoRel	true	kurdular	yardımıyla
+Relation	T1	T2	NoRel	true	kurdular	etti
+Relation	T1	T5	NoRel	true	kurdular	kullandı
+Relation	T1	T9	NoRel	true	kurdular	kamulaştırıldı
+Relation	T10	T0	NoRel	true	darbesi	yükseldi
+Relation	T10	T7	NoRel	true	darbesi	yaşadı
+Relation	T11	T10	NoRel	true	yardımıyla	darbesi
+Relation	T11	T6	NoRel	true	yardımıyla	yönetti
+Relation	T2	T1	NoRel	true	etti	kurdular
+Relation	T2	T11	NoRel	true	etti	yardımıyla
+Relation	T2	T4	NoRel	true	etti	artan
+Relation	T2	T8	NoRel	true	etti	oluşturuldu
+Relation	T3	T1	NoRel	true	etti	kurdular
+Relation	T3	T6	NoRel	true	etti	yönetti
+Relation	T3	T8	NoRel	true	etti	oluşturuldu
+Relation	T3	T9	NoRel	true	etti	kamulaştırıldı
+Relation	T4	T0	NoRel	true	artan	yükseldi
+Relation	T4	T1	NoRel	true	artan	kurdular
+Relation	T4	T10	NoRel	true	artan	darbesi
+Relation	T4	T11	NoRel	true	artan	yardımıyla
+Relation	T4	T8	NoRel	true	artan	oluşturuldu
+Relation	T4	T9	NoRel	true	artan	kamulaştırıldı
+Relation	T5	T7	NoRel	true	kullandı	yaşadı
+Relation	T5	T9	NoRel	true	kullandı	kamulaştırıldı
+Relation	T6	T0	NoRel	true	yönetti	yükseldi
+Relation	T6	T11	NoRel	true	yönetti	yardımıyla
+Relation	T6	T5	NoRel	true	yönetti	kullandı
+Relation	T6	T9	NoRel	true	yönetti	kamulaştırıldı
+Relation	T7	T10	NoRel	true	yaşadı	darbesi
+Relation	T7	T4	NoRel	true	yaşadı	artan
+Relation	T8	T0	NoRel	true	oluşturuldu	yükseldi
+Relation	T8	T1	NoRel	true	oluşturuldu	kurdular
+Relation	T8	T2	NoRel	true	oluşturuldu	etti
+Relation	T8	T3	NoRel	true	oluşturuldu	etti
+Relation	T8	T4	NoRel	true	oluşturuldu	artan
+Relation	T9	T5	NoRel	true	kamulaştırıldı	kullandı
+Relation	T9	T8	NoRel	true	kamulaştırıldı	oluşturuldu

@@ -1,0 +1,69 @@
+Text	A group of several thousands soldiers , comprising Oltenian _ pandurs _ and volunteers from throughout the land , rallied in Râmnicu Vâlcea under Magheru 's command , without ever going into action .	In Bucharest itself , as Fuat prepared to lead his 6000 troops into the garrison on Dealul Spirii , a 900 - strong force led by a detachment of firemen met him with resistance , provoking a brief battle that only lasted two and a half hours during which 158 Turks and 48 Romanians died and 400 Turks and 57 Romanians were wounded .	In the evening , the entire city had been pacified .	On September 27 , a Russian force under Alexander von Lüders joined the occupation of Bucharest , taking over administration over one half of the city .	Russia 's expedition into the two Danubian Principalities was the only independent military initiative of her foreign interventions against the Revolutions of 1848 .
+Event	T0	rallied	EVENT	114
+Event	T1	command	EVENT	157
+Event	T2	prepared	EVENT	230
+Event	T3	lead	EVENT	242
+Event	T4	led	EVENT	321
+Event	T5	detachment	EVENT	330
+Event	T6	met	EVENT	352
+Event	T7	resistance	EVENT	365
+Event	T8	provoking	EVENT	378
+Event	T9	battle	EVENT	396
+Event	T10	lasted	EVENT	413
+Event	T11	died	EVENT	481
+Event	T12	wounded	EVENT	522
+Event	T13	pacified	EVENT	574
+Event	T14	joined	EVENT	646
+Event	T15	occupation	EVENT	657
+Event	T16	expedition	EVENT	748
+Event	T17	initiative	EVENT	830
+Event	T18	interventions	EVENT	856
+Event	T19	Revolutions	EVENT	882
+Event	T20	administration	EVENT	695
+Relation	T1	T0	CauseEffect	true	command	rallied
+Relation	T0	T1	EffectCause	true	rallied	command
+Relation	T7	T9	CauseEffect	true	resistance	battle
+Relation	T9	T7	EffectCause	true	battle	resistance
+Relation	T9	T11	CauseEffect	true	battle	died
+Relation	T11	T9	EffectCause	true	died	battle
+Relation	T9	T12	CauseEffect	true	battle	wounded
+Relation	T12	T9	EffectCause	true	wounded	battle
+Relation	T15	T20	CauseEffect	true	occupation	administration
+Relation	T20	T15	EffectCause	true	administration	occupation
+Relation	T1	T5	NoRel	true	command	detachment
+Relation	T10	T0	NoRel	true	lasted	rallied
+Relation	T10	T1	NoRel	true	lasted	command
+Relation	T10	T11	NoRel	true	lasted	died
+Relation	T10	T19	NoRel	true	lasted	Revolutions
+Relation	T10	T2	NoRel	true	lasted	prepared
+Relation	T13	T11	NoRel	true	pacified	died
+Relation	T14	T1	NoRel	true	joined	command
+Relation	T14	T10	NoRel	true	joined	lasted
+Relation	T15	T10	NoRel	true	occupation	lasted
+Relation	T16	T10	NoRel	true	expedition	lasted
+Relation	T16	T5	NoRel	true	expedition	detachment
+Relation	T16	T9	NoRel	true	expedition	battle
+Relation	T17	T3	NoRel	true	initiative	lead
+Relation	T18	T1	NoRel	true	interventions	command
+Relation	T18	T10	NoRel	true	interventions	lasted
+Relation	T18	T20	NoRel	true	interventions	administration
+Relation	T19	T16	NoRel	true	Revolutions	expedition
+Relation	T19	T17	NoRel	true	Revolutions	initiative
+Relation	T2	T16	NoRel	true	prepared	expedition
+Relation	T2	T4	NoRel	true	prepared	led
+Relation	T2	T9	NoRel	true	prepared	battle
+Relation	T20	T3	NoRel	true	administration	lead
+Relation	T3	T17	NoRel	true	lead	initiative
+Relation	T3	T8	NoRel	true	lead	provoking
+Relation	T4	T1	NoRel	true	led	command
+Relation	T4	T19	NoRel	true	led	Revolutions
+Relation	T4	T20	NoRel	true	led	administration
+Relation	T4	T8	NoRel	true	led	provoking
+Relation	T6	T18	NoRel	true	met	interventions
+Relation	T7	T0	NoRel	true	resistance	rallied
+Relation	T7	T10	NoRel	true	resistance	lasted
+Relation	T7	T2	NoRel	true	resistance	prepared
+Relation	T8	T17	NoRel	true	provoking	initiative
+Relation	T9	T10	NoRel	true	battle	lasted
+Relation	T9	T13	NoRel	true	battle	pacified
+Relation	T9	T18	NoRel	true	battle	interventions

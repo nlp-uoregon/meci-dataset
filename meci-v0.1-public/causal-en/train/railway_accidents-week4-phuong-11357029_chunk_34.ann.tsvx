@@ -1,0 +1,47 @@
+Text	Terrorist sabotage was blamed .	- 15 May 2003 – The Golden Temple Mail caught on fire in the early morning between Ludhiana and Ladhowal stations , killing 36 and injuring 15 .	- 22 June 2003 – The engine and first four coaches of Karwar – Mumbai Central Holiday Special derailed , killing 52 and injuring 26 .	- 2 July 2003 – The Golconda Express derailed at Warangal station , killing 21 and injuring 24 .	- 16 June 2004 – The Matsyagandha Express ( Mangalore – Mumbai ) derailed when it struck a boulder on the line , killing 14 .
+Event	T0	sabotage	EVENT	10
+Event	T1	blamed	EVENT	23
+Event	T2	killing	EVENT	148
+Event	T3	injuring	EVENT	163
+Event	T4	derailed	EVENT	271
+Event	T5	killing	EVENT	282
+Event	T6	injuring	EVENT	297
+Event	T7	derailed	EVENT	348
+Event	T8	killing	EVENT	379
+Event	T9	injuring	EVENT	394
+Event	T10	derailed	EVENT	473
+Event	T11	struck	EVENT	490
+Event	T12	boulder	EVENT	499
+Event	T13	killing	EVENT	521
+Event	T14	fire	EVENT	81
+Relation	T14	T2	CauseEffect	true	fire	killing
+Relation	T2	T14	EffectCause	true	killing	fire
+Relation	T14	T3	CauseEffect	true	fire	injuring
+Relation	T3	T14	EffectCause	true	injuring	fire
+Relation	T4	T5	CauseEffect	true	derailed	killing
+Relation	T5	T4	EffectCause	true	killing	derailed
+Relation	T4	T6	CauseEffect	true	derailed	injuring
+Relation	T6	T4	EffectCause	true	injuring	derailed
+Relation	T7	T8	CauseEffect	true	derailed	killing
+Relation	T8	T7	EffectCause	true	killing	derailed
+Relation	T7	T9	CauseEffect	true	derailed	injuring
+Relation	T9	T7	EffectCause	true	injuring	derailed
+Relation	T11	T10	CauseEffect	true	struck	derailed
+Relation	T10	T11	EffectCause	true	derailed	struck
+Relation	T10	T13	CauseEffect	true	derailed	killing
+Relation	T13	T10	EffectCause	true	killing	derailed
+Relation	T1	T13	NoRel	true	blamed	killing
+Relation	T11	T14	NoRel	true	struck	fire
+Relation	T11	T7	NoRel	true	struck	derailed
+Relation	T11	T9	NoRel	true	struck	injuring
+Relation	T12	T4	NoRel	true	boulder	derailed
+Relation	T13	T6	NoRel	true	killing	injuring
+Relation	T2	T10	NoRel	true	killing	derailed
+Relation	T2	T3	NoRel	true	killing	injuring
+Relation	T2	T7	NoRel	true	killing	derailed
+Relation	T5	T11	NoRel	true	killing	struck
+Relation	T5	T7	NoRel	true	killing	derailed
+Relation	T7	T13	NoRel	true	derailed	killing
+Relation	T7	T2	NoRel	true	derailed	killing
+Relation	T7	T5	NoRel	true	derailed	killing
+Relation	T9	T4	NoRel	true	injuring	derailed

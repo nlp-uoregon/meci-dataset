@@ -1,0 +1,44 @@
+Text	2 Eylül 1958'de , Soğuk Savaş döneminde , Amerika Birleşik Devletleri Hava Kuvvetleri'ne ait bir Lockheed C - 130 Hercules , Ermenistan SSC - Türkiye sınırı boyunca gerçekleştirilen bir keşif uçuşu sırasında Erivan'ın 50 kilometre kuzeybatısında , Sovyetler Birliği hava sahasında Sovyet Hava Kuvvetleri'ne ait MiG - 17 avcı uçakları tarafından düşürüldü .	Sovyetler tarafından uçakta bulunan 17 kişiden 6'sının öldüğü açıklandı ve ölenlerin kalıntıları Amerika Birleşik Devletleri'ne iade edildi , ancak diğer 11 kişinin varlığı reddedildi .	Düşürülen uçak Amerika Birleşik Devletleri Hava Kuvvetleri'ne ait dört turboprop motorlu bir Lockheed C - 130A - II - LM idi ( seri numarası : 3136 ) .	İlk uçuşunu 1957'de yaptı ve Rhein - Main Hava Üssü , Batı Almanya konuşlu olarak 7406 . Destek Filosunda kullanılmaya başlandı .	Uçakta 6 uçuş mürettebatı ve Amerika Birleşik Devletleri Hava Kuvvetleri Güvenlik Servisi'nden ( USAFSS ) 11 kişilik görev ekibi bulunuyordu .
+Event	T0	uçuşu	EVENT	192
+Event	T1	düşürüldü	EVENT	345
+Event	T2	açıklandı	EVENT	419
+Event	T3	reddedildi	EVENT	530
+Event	T4	Düşürülen	EVENT	543
+Event	T5	uçuşunu	EVENT	699
+Event	T6	yaptı	EVENT	715
+Event	T7	başlandı	EVENT	814
+Event	T8	öldüğü	EVENT	412
+Event	T9	iade edildi	EVENT	485
+Relation	T1	T8	CauseEffect	true	düşürüldü	öldüğü
+Relation	T8	T1	EffectCause	true	öldüğü	düşürüldü
+Relation	T4	T8	CauseEffect	true	Düşürülen	öldüğü
+Relation	T8	T4	EffectCause	true	öldüğü	Düşürülen
+Relation	T0	T5	NoRel	true	uçuşu	uçuşunu
+Relation	T0	T6	NoRel	true	uçuşu	yaptı
+Relation	T0	T7	NoRel	true	uçuşu	başlandı
+Relation	T0	T8	NoRel	true	uçuşu	öldüğü
+Relation	T1	T3	NoRel	true	düşürüldü	reddedildi
+Relation	T2	T1	NoRel	true	açıklandı	düşürüldü
+Relation	T2	T3	NoRel	true	açıklandı	reddedildi
+Relation	T2	T5	NoRel	true	açıklandı	uçuşunu
+Relation	T2	T7	NoRel	true	açıklandı	başlandı
+Relation	T2	T8	NoRel	true	açıklandı	öldüğü
+Relation	T3	T9	NoRel	true	reddedildi	iade edildi
+Relation	T4	T5	NoRel	true	Düşürülen	uçuşunu
+Relation	T4	T7	NoRel	true	Düşürülen	başlandı
+Relation	T5	T2	NoRel	true	uçuşunu	açıklandı
+Relation	T5	T6	NoRel	true	uçuşunu	yaptı
+Relation	T5	T7	NoRel	true	uçuşunu	başlandı
+Relation	T5	T9	NoRel	true	uçuşunu	iade edildi
+Relation	T6	T1	NoRel	true	yaptı	düşürüldü
+Relation	T6	T2	NoRel	true	yaptı	açıklandı
+Relation	T6	T5	NoRel	true	yaptı	uçuşunu
+Relation	T6	T7	NoRel	true	yaptı	başlandı
+Relation	T6	T9	NoRel	true	yaptı	iade edildi
+Relation	T7	T2	NoRel	true	başlandı	açıklandı
+Relation	T7	T4	NoRel	true	başlandı	Düşürülen
+Relation	T8	T5	NoRel	true	öldüğü	uçuşunu
+Relation	T8	T6	NoRel	true	öldüğü	yaptı
+Relation	T8	T7	NoRel	true	öldüğü	başlandı
+Relation	T9	T2	NoRel	true	iade edildi	açıklandı
+Relation	T9	T6	NoRel	true	iade edildi	yaptı

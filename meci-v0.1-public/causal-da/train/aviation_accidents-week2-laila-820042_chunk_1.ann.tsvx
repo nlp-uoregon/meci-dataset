@@ -1,0 +1,58 @@
+Text	Grunden til styrtet er lige nu under undersøgelse af NTSB , som mener at vejrforhold og mekaniske fejl muligvis har bidraget til ulykken .	thumb| left | Flyet involveret i ulykken set i Hartsfield-Jackson Atlanta International Airport i januar 2015 .	Flyet som var involveret var et McDonnell Douglas MD-88 , registreringsnummer N909 DL , serie nummeret 49540 , og linienummer 1395 .	Det var ejet af Wilmington Trust Company of Wilmington , Delaware , og opereret af Delta Air_Lines .	Flyet var bygget i 1987 , og blev registreret for første gang den 19. januar , 1988 .
+Event	T0	styrtet	EVENT	12
+Event	T1	undersøgelse	EVENT	37
+Event	T10	bygget	EVENT	495
+Event	T11	registreret	EVENT	519
+Event	T12	involveret	EVENT	159
+Event	T2	mener	EVENT	64
+Event	T4	bidraget	EVENT	116
+Event	T5	ulykken	EVENT	129
+Event	T6	set	EVENT	180
+Event	T7	involveret	EVENT	265
+Event	T8	ejet	EVENT	392
+Event	T9	opereret	EVENT	455
+Relation	T1	T2	CauseEffect	true	undersøgelse	mener
+Relation	T2	T1	EffectCause	true	mener	undersøgelse
+Relation	T0	T12	NoRel	true	styrtet	involveret
+Relation	T0	T6	NoRel	true	styrtet	set
+Relation	T0	T7	NoRel	true	styrtet	involveret
+Relation	T1	T0	NoRel	true	undersøgelse	styrtet
+Relation	T1	T11	NoRel	true	undersøgelse	registreret
+Relation	T1	T6	NoRel	true	undersøgelse	set
+Relation	T1	T9	NoRel	true	undersøgelse	opereret
+Relation	T10	T0	NoRel	true	bygget	styrtet
+Relation	T10	T11	NoRel	true	bygget	registreret
+Relation	T10	T7	NoRel	true	bygget	involveret
+Relation	T11	T10	NoRel	true	registreret	bygget
+Relation	T11	T12	NoRel	true	registreret	involveret
+Relation	T11	T2	NoRel	true	registreret	mener
+Relation	T11	T4	NoRel	true	registreret	bidraget
+Relation	T11	T6	NoRel	true	registreret	set
+Relation	T11	T8	NoRel	true	registreret	ejet
+Relation	T11	T9	NoRel	true	registreret	opereret
+Relation	T12	T7	NoRel	true	involveret	involveret
+Relation	T2	T10	NoRel	true	mener	bygget
+Relation	T4	T0	NoRel	true	bidraget	styrtet
+Relation	T4	T1	NoRel	true	bidraget	undersøgelse
+Relation	T4	T11	NoRel	true	bidraget	registreret
+Relation	T4	T9	NoRel	true	bidraget	opereret
+Relation	T5	T0	NoRel	true	ulykken	styrtet
+Relation	T5	T2	NoRel	true	ulykken	mener
+Relation	T5	T6	NoRel	true	ulykken	set
+Relation	T6	T10	NoRel	true	set	bygget
+Relation	T6	T12	NoRel	true	set	involveret
+Relation	T6	T2	NoRel	true	set	mener
+Relation	T6	T7	NoRel	true	set	involveret
+Relation	T7	T12	NoRel	true	involveret	involveret
+Relation	T7	T4	NoRel	true	involveret	bidraget
+Relation	T7	T8	NoRel	true	involveret	ejet
+Relation	T8	T4	NoRel	true	ejet	bidraget
+Relation	T8	T5	NoRel	true	ejet	ulykken
+Relation	T8	T9	NoRel	true	ejet	opereret
+Relation	T9	T1	NoRel	true	opereret	undersøgelse
+Relation	T9	T11	NoRel	true	opereret	registreret
+Relation	T9	T12	NoRel	true	opereret	involveret
+Relation	T9	T4	NoRel	true	opereret	bidraget
+Relation	T9	T5	NoRel	true	opereret	ulykken
+Relation	T9	T6	NoRel	true	opereret	set
+Relation	T9	T7	NoRel	true	opereret	involveret

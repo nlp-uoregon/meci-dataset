@@ -1,0 +1,139 @@
+Text	If the signal is fitted with TPWS , the driver resets the Driver Reminder Appliance , pushes the TPWS Trainstop Override button in the cab , and proceeds cautiously through the section .	If the train reaches the next signal without finding an obstruction , they must obey its aspect , at which point they can revert to normal working .	If contact with the signaller cannot be made then the driver must not move the train , unless it is standing at one of the following signals :	- An Intermediate Block Home signal - A signal controlled from a signal box that is closed - An automatic signal where local instructions permit it , e.g. signals within tunnels on the Northern City Line .	After passing a signal at danger under his own authority , the driver must stop at the next signal ( even if it is showing a proceed aspect ) and inform the signaller of what they have done .
+Event	T0	signal	EVENT	7
+Event	T1	fitted	EVENT	17
+Event	T2	resets	EVENT	47
+Event	T3	pushes	EVENT	86
+Event	T5	section	EVENT	177
+Event	T6	reaches	EVENT	200
+Event	T7	signal	EVENT	217
+Event	T9	obstruction	EVENT	243
+Event	T10	obey	EVENT	267
+Event	T12	contact	EVENT	339
+Event	T13	made	EVENT	376
+Event	T14	move	EVENT	406
+Event	T15	standing	EVENT	436
+Event	T16	signals	EVENT	469
+Event	T17	signal	EVENT	508
+Event	T18	controlled	EVENT	526
+Event	T19	closed	EVENT	563
+Event	T21	permit	EVENT	617
+Event	T22	signals	EVENT	634
+Event	T23	passing	EVENT	691
+Event	T24	signal	EVENT	701
+Event	T25	danger	EVENT	711
+Event	T26	stop	EVENT	760
+Event	T27	showing	EVENT	800
+Event	T28	inform	EVENT	831
+Event	T29	done	EVENT	870
+Event	T4	proceeds cautiously	EVENT	145
+Event	T11	normal working	EVENT	319
+Event	T8	without finding	EVENT	224
+Event	T20	automatic signal	EVENT	575
+Relation	T10	T11	CauseEffect	true	obey	normal working
+Relation	T11	T10	EffectCause	true	normal working	obey
+Relation	T8	T10	CauseEffect	true	without finding	obey
+Relation	T10	T8	EffectCause	true	obey	without finding
+Relation	T21	T20	CauseEffect	true	permit	automatic signal
+Relation	T20	T21	EffectCause	true	automatic signal	permit
+Relation	T23	T26	CauseEffect	true	passing	stop
+Relation	T26	T23	EffectCause	true	stop	passing
+Relation	T29	T28	CauseEffect	true	done	inform
+Relation	T28	T29	EffectCause	true	inform	done
+Relation	T0	T25	NoRel	true	signal	danger
+Relation	T0	T6	NoRel	true	signal	reaches
+Relation	T1	T14	NoRel	true	fitted	move
+Relation	T1	T17	NoRel	true	fitted	signal
+Relation	T1	T19	NoRel	true	fitted	closed
+Relation	T1	T20	NoRel	true	fitted	automatic signal
+Relation	T1	T23	NoRel	true	fitted	passing
+Relation	T10	T2	NoRel	true	obey	resets
+Relation	T10	T20	NoRel	true	obey	automatic signal
+Relation	T10	T26	NoRel	true	obey	stop
+Relation	T11	T14	NoRel	true	normal working	move
+Relation	T11	T17	NoRel	true	normal working	signal
+Relation	T11	T18	NoRel	true	normal working	controlled
+Relation	T11	T6	NoRel	true	normal working	reaches
+Relation	T12	T16	NoRel	true	contact	signals
+Relation	T12	T20	NoRel	true	contact	automatic signal
+Relation	T12	T29	NoRel	true	contact	done
+Relation	T12	T5	NoRel	true	contact	section
+Relation	T12	T7	NoRel	true	contact	signal
+Relation	T12	T8	NoRel	true	contact	without finding
+Relation	T12	T9	NoRel	true	contact	obstruction
+Relation	T13	T11	NoRel	true	made	normal working
+Relation	T13	T22	NoRel	true	made	signals
+Relation	T13	T29	NoRel	true	made	done
+Relation	T14	T0	NoRel	true	move	signal
+Relation	T14	T18	NoRel	true	move	controlled
+Relation	T14	T23	NoRel	true	move	passing
+Relation	T14	T27	NoRel	true	move	showing
+Relation	T15	T11	NoRel	true	standing	normal working
+Relation	T15	T3	NoRel	true	standing	pushes
+Relation	T15	T6	NoRel	true	standing	reaches
+Relation	T15	T8	NoRel	true	standing	without finding
+Relation	T16	T13	NoRel	true	signals	made
+Relation	T16	T21	NoRel	true	signals	permit
+Relation	T16	T22	NoRel	true	signals	signals
+Relation	T17	T27	NoRel	true	signal	showing
+Relation	T17	T4	NoRel	true	signal	proceeds cautiously
+Relation	T18	T12	NoRel	true	controlled	contact
+Relation	T18	T24	NoRel	true	controlled	signal
+Relation	T19	T1	NoRel	true	closed	fitted
+Relation	T19	T12	NoRel	true	closed	contact
+Relation	T19	T2	NoRel	true	closed	resets
+Relation	T19	T26	NoRel	true	closed	stop
+Relation	T19	T27	NoRel	true	closed	showing
+Relation	T19	T29	NoRel	true	closed	done
+Relation	T19	T8	NoRel	true	closed	without finding
+Relation	T2	T15	NoRel	true	resets	standing
+Relation	T2	T6	NoRel	true	resets	reaches
+Relation	T20	T19	NoRel	true	automatic signal	closed
+Relation	T20	T2	NoRel	true	automatic signal	resets
+Relation	T20	T29	NoRel	true	automatic signal	done
+Relation	T20	T4	NoRel	true	automatic signal	proceeds cautiously
+Relation	T20	T9	NoRel	true	automatic signal	obstruction
+Relation	T21	T14	NoRel	true	permit	move
+Relation	T21	T25	NoRel	true	permit	danger
+Relation	T21	T28	NoRel	true	permit	inform
+Relation	T21	T9	NoRel	true	permit	obstruction
+Relation	T22	T21	NoRel	true	signals	permit
+Relation	T22	T23	NoRel	true	signals	passing
+Relation	T22	T27	NoRel	true	signals	showing
+Relation	T22	T28	NoRel	true	signals	inform
+Relation	T23	T19	NoRel	true	passing	closed
+Relation	T23	T5	NoRel	true	passing	section
+Relation	T24	T8	NoRel	true	signal	without finding
+Relation	T25	T11	NoRel	true	danger	normal working
+Relation	T25	T28	NoRel	true	danger	inform
+Relation	T26	T13	NoRel	true	stop	made
+Relation	T26	T4	NoRel	true	stop	proceeds cautiously
+Relation	T26	T9	NoRel	true	stop	obstruction
+Relation	T27	T12	NoRel	true	showing	contact
+Relation	T28	T25	NoRel	true	inform	danger
+Relation	T29	T13	NoRel	true	done	made
+Relation	T29	T16	NoRel	true	done	signals
+Relation	T29	T27	NoRel	true	done	showing
+Relation	T3	T7	NoRel	true	pushes	signal
+Relation	T4	T0	NoRel	true	proceeds cautiously	signal
+Relation	T4	T10	NoRel	true	proceeds cautiously	obey
+Relation	T4	T11	NoRel	true	proceeds cautiously	normal working
+Relation	T4	T12	NoRel	true	proceeds cautiously	contact
+Relation	T4	T13	NoRel	true	proceeds cautiously	made
+Relation	T4	T19	NoRel	true	proceeds cautiously	closed
+Relation	T4	T22	NoRel	true	proceeds cautiously	signals
+Relation	T4	T9	NoRel	true	proceeds cautiously	obstruction
+Relation	T5	T17	NoRel	true	section	signal
+Relation	T5	T26	NoRel	true	section	stop
+Relation	T6	T25	NoRel	true	reaches	danger
+Relation	T6	T27	NoRel	true	reaches	showing
+Relation	T7	T11	NoRel	true	signal	normal working
+Relation	T7	T3	NoRel	true	signal	pushes
+Relation	T8	T12	NoRel	true	without finding	contact
+Relation	T8	T16	NoRel	true	without finding	signals
+Relation	T8	T18	NoRel	true	without finding	controlled
+Relation	T8	T21	NoRel	true	without finding	permit
+Relation	T8	T9	NoRel	true	without finding	obstruction
+Relation	T9	T10	NoRel	true	obstruction	obey
+Relation	T9	T23	NoRel	true	obstruction	passing
+Relation	T9	T29	NoRel	true	obstruction	done
+Relation	T9	T7	NoRel	true	obstruction	signal

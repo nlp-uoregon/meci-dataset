@@ -1,0 +1,70 @@
+Text	Ayrıca BUCHRUCKER DARBESI olarak bilinen , 1 Ekim 1923'te gerçekleşen KÜSTRIN DARBESI , 26 Eylül 1923'te Alman hükümeti tarafından Ruhr'un işgaline karşı ortaya çıkan direnişin bastırılmasından dolayı ortaya çıkan bir tepkiydi .	Bruno Ernst Buchrucker liderliğindeki Kara Reichswehr grupları , Şansölye Gustav Stresemann'ın Alman hükümetini devirmek ve parlamenter - demokratik Cumhuriyet'i ulusal bir diktatörlükle değiştirmek istedi .	Darbenin bir başka nedeni de Reichswehr'in iş ayrıntılarını lağvetme kararıydı , bu da üyelerinin çoğunun geçim kaynaklarını kaybetmesine neden oldu .	Bir garnizon kenti olan Küstrin'i işgal etme girişimi , Reichswehr birimleri tarafından engellendi .	Buchrucker ve diğer subaylar tutuklandı ve vatana ihanetten bir kale veya hapishanede hapse mahkum edildiler .
+Event	T0	DARBESI	EVENT	18
+Event	T2	DARBESI	EVENT	78
+Event	T5	bastırılmasından	EVENT	177
+Event	T7	tepkiydi	EVENT	218
+Event	T9	istedi	EVENT	428
+Event	T10	girişimi	EVENT	633
+Event	T11	engellendi	EVENT	676
+Event	T12	tutuklandı	EVENT	718
+Event	T1	direnişin	EVENT	167
+Event	T3	işgaline	EVENT	139
+Event	T6	kararıydı	EVENT	506
+Event	T8	oldu	EVENT	581
+Event	T4	edildiler	EVENT	788
+Relation	T3	T1	CauseEffect	true	işgaline	direnişin
+Relation	T1	T3	EffectCause	true	direnişin	işgaline
+Relation	T1	T5	CauseEffect	true	direnişin	bastırılmasından
+Relation	T5	T1	EffectCause	true	bastırılmasından	direnişin
+Relation	T5	T7	CauseEffect	true	bastırılmasından	tepkiydi
+Relation	T7	T5	EffectCause	true	tepkiydi	bastırılmasından
+Relation	T5	T0	CauseEffect	true	bastırılmasından	DARBESI
+Relation	T0	T5	EffectCause	true	DARBESI	bastırılmasından
+Relation	T5	T2	CauseEffect	true	bastırılmasından	DARBESI
+Relation	T2	T5	EffectCause	true	DARBESI	bastırılmasından
+Relation	T6	T0	CauseEffect	true	kararıydı	DARBESI
+Relation	T0	T6	EffectCause	true	DARBESI	kararıydı
+Relation	T6	T2	CauseEffect	true	kararıydı	DARBESI
+Relation	T2	T6	EffectCause	true	DARBESI	kararıydı
+Relation	T6	T8	CauseEffect	true	kararıydı	oldu
+Relation	T8	T6	EffectCause	true	oldu	kararıydı
+Relation	T10	T11	CauseEffect	true	girişimi	engellendi
+Relation	T11	T10	EffectCause	true	engellendi	girişimi
+Relation	T12	T4	CauseEffect	true	tutuklandı	edildiler
+Relation	T4	T12	EffectCause	true	edildiler	tutuklandı
+Relation	T0	T10	NoRel	true	DARBESI	girişimi
+Relation	T0	T3	NoRel	true	DARBESI	işgaline
+Relation	T0	T4	NoRel	true	DARBESI	edildiler
+Relation	T0	T8	NoRel	true	DARBESI	oldu
+Relation	T1	T0	NoRel	true	direnişin	DARBESI
+Relation	T1	T6	NoRel	true	direnişin	kararıydı
+Relation	T1	T7	NoRel	true	direnişin	tepkiydi
+Relation	T10	T4	NoRel	true	girişimi	edildiler
+Relation	T10	T5	NoRel	true	girişimi	bastırılmasından
+Relation	T11	T2	NoRel	true	engellendi	DARBESI
+Relation	T11	T3	NoRel	true	engellendi	işgaline
+Relation	T11	T5	NoRel	true	engellendi	bastırılmasından
+Relation	T12	T0	NoRel	true	tutuklandı	DARBESI
+Relation	T12	T1	NoRel	true	tutuklandı	direnişin
+Relation	T12	T11	NoRel	true	tutuklandı	engellendi
+Relation	T12	T5	NoRel	true	tutuklandı	bastırılmasından
+Relation	T12	T8	NoRel	true	tutuklandı	oldu
+Relation	T2	T1	NoRel	true	DARBESI	direnişin
+Relation	T3	T11	NoRel	true	işgaline	engellendi
+Relation	T3	T8	NoRel	true	işgaline	oldu
+Relation	T4	T0	NoRel	true	edildiler	DARBESI
+Relation	T4	T2	NoRel	true	edildiler	DARBESI
+Relation	T5	T6	NoRel	true	bastırılmasından	kararıydı
+Relation	T6	T12	NoRel	true	kararıydı	tutuklandı
+Relation	T6	T4	NoRel	true	kararıydı	edildiler
+Relation	T7	T0	NoRel	true	tepkiydi	DARBESI
+Relation	T7	T1	NoRel	true	tepkiydi	direnişin
+Relation	T7	T8	NoRel	true	tepkiydi	oldu
+Relation	T7	T9	NoRel	true	tepkiydi	istedi
+Relation	T8	T1	NoRel	true	oldu	direnişin
+Relation	T8	T2	NoRel	true	oldu	DARBESI
+Relation	T8	T3	NoRel	true	oldu	işgaline
+Relation	T8	T4	NoRel	true	oldu	edildiler
+Relation	T8	T7	NoRel	true	oldu	tepkiydi
+Relation	T9	T12	NoRel	true	istedi	tutuklandı
+Relation	T9	T7	NoRel	true	istedi	tepkiydi

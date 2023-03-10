@@ -1,0 +1,75 @@
+Text	Rambo , Amerika Birleşik Devletleri'ne döndükten sonra , birçok Amerikalı sivilin Vietnam'dan dönen askerlerden nefret ettiğini görür ve kendisinin ve geri dönen diğer askerlerin savaş karşıtı " hippiler " tarafından küçük düşürüldüğünü ve utandırıldığını iddia eder .	Onlara çöp atan , onlara " bebek katili " diyen ve onları toplumdan dışlayanların olduğunu görür .	Rambo'nun Vietnam'daki ve memleketindeki deneyimleri , aşırı bir travma sonrası stres bozukluğu vakasıyla sonuçlanır .	Aynı zamanda , öz kimliği ve derinlemesine düşünme gibi içsel sorunları , Rambo'nun zor durumları " uygar " bir şekilde ele almaktan ziyade topluma karşı saldırgan olmasına neden olmaya başlamıştır .	Bu sebeple İlk Kan filmi bu noktadan toplanır .
+Event	T0	görür	EVENT	128
+Event	T1	deneyimleri	EVENT	409
+Event	T2	travma	EVENT	433
+Event	T3	sonuçlanır	EVENT	474
+Event	T4	düşünme	EVENT	530
+Event	T5	toplanır	EVENT	724
+Event	T6	döndükten	EVENT	39
+Event	T7	dönen	EVENT	156
+Event	T8	düşürüldüğünü	EVENT	223
+Event	T9	utandırıldığını	EVENT	240
+Event	T10	dışlayanların	EVENT	337
+Event	T11	diyen	EVENT	311
+Event	T12	stres bozukluğu	EVENT	448
+Event	T13	saldırgan	EVENT	641
+Relation	T1	T12	CauseEffect	true	deneyimleri	stres bozukluğu
+Relation	T12	T1	EffectCause	true	stres bozukluğu	deneyimleri
+Relation	T1	T2	CauseEffect	true	deneyimleri	travma
+Relation	T2	T1	EffectCause	true	travma	deneyimleri
+Relation	T13	T5	CauseEffect	true	saldırgan	toplanır
+Relation	T5	T13	EffectCause	true	toplanır	saldırgan
+Relation	T0	T11	NoRel	true	görür	diyen
+Relation	T0	T2	NoRel	true	görür	travma
+Relation	T0	T4	NoRel	true	görür	düşünme
+Relation	T0	T5	NoRel	true	görür	toplanır
+Relation	T0	T8	NoRel	true	görür	düşürüldüğünü
+Relation	T1	T10	NoRel	true	deneyimleri	dışlayanların
+Relation	T1	T9	NoRel	true	deneyimleri	utandırıldığını
+Relation	T10	T13	NoRel	true	dışlayanların	saldırgan
+Relation	T10	T3	NoRel	true	dışlayanların	sonuçlanır
+Relation	T10	T4	NoRel	true	dışlayanların	düşünme
+Relation	T10	T7	NoRel	true	dışlayanların	dönen
+Relation	T10	T8	NoRel	true	dışlayanların	düşürüldüğünü
+Relation	T11	T13	NoRel	true	diyen	saldırgan
+Relation	T11	T4	NoRel	true	diyen	düşünme
+Relation	T11	T8	NoRel	true	diyen	düşürüldüğünü
+Relation	T12	T0	NoRel	true	stres bozukluğu	görür
+Relation	T12	T13	NoRel	true	stres bozukluğu	saldırgan
+Relation	T12	T2	NoRel	true	stres bozukluğu	travma
+Relation	T12	T8	NoRel	true	stres bozukluğu	düşürüldüğünü
+Relation	T13	T1	NoRel	true	saldırgan	deneyimleri
+Relation	T13	T12	NoRel	true	saldırgan	stres bozukluğu
+Relation	T13	T3	NoRel	true	saldırgan	sonuçlanır
+Relation	T13	T4	NoRel	true	saldırgan	düşünme
+Relation	T13	T9	NoRel	true	saldırgan	utandırıldığını
+Relation	T2	T11	NoRel	true	travma	diyen
+Relation	T3	T1	NoRel	true	sonuçlanır	deneyimleri
+Relation	T3	T12	NoRel	true	sonuçlanır	stres bozukluğu
+Relation	T3	T13	NoRel	true	sonuçlanır	saldırgan
+Relation	T3	T7	NoRel	true	sonuçlanır	dönen
+Relation	T3	T8	NoRel	true	sonuçlanır	düşürüldüğünü
+Relation	T3	T9	NoRel	true	sonuçlanır	utandırıldığını
+Relation	T4	T0	NoRel	true	düşünme	görür
+Relation	T4	T1	NoRel	true	düşünme	deneyimleri
+Relation	T4	T11	NoRel	true	düşünme	diyen
+Relation	T5	T1	NoRel	true	toplanır	deneyimleri
+Relation	T5	T10	NoRel	true	toplanır	dışlayanların
+Relation	T5	T12	NoRel	true	toplanır	stres bozukluğu
+Relation	T5	T8	NoRel	true	toplanır	düşürüldüğünü
+Relation	T6	T0	NoRel	true	döndükten	görür
+Relation	T6	T5	NoRel	true	döndükten	toplanır
+Relation	T6	T9	NoRel	true	döndükten	utandırıldığını
+Relation	T7	T1	NoRel	true	dönen	deneyimleri
+Relation	T7	T10	NoRel	true	dönen	dışlayanların
+Relation	T7	T2	NoRel	true	dönen	travma
+Relation	T7	T3	NoRel	true	dönen	sonuçlanır
+Relation	T8	T1	NoRel	true	düşürüldüğünü	deneyimleri
+Relation	T8	T10	NoRel	true	düşürüldüğünü	dışlayanların
+Relation	T8	T4	NoRel	true	düşürüldüğünü	düşünme
+Relation	T8	T9	NoRel	true	düşürüldüğünü	utandırıldığını
+Relation	T9	T10	NoRel	true	utandırıldığını	dışlayanların
+Relation	T9	T3	NoRel	true	utandırıldığını	sonuçlanır
+Relation	T9	T4	NoRel	true	utandırıldığını	düşünme
+Relation	T9	T5	NoRel	true	utandırıldığını	toplanır
+Relation	T9	T8	NoRel	true	utandırıldığını	düşürüldüğünü

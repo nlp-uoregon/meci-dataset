@@ -1,0 +1,54 @@
+Text	He was rushed to the McCready Hospital at Crisfield , suffering from a fractured skull and internal damages . "	He had departed Newark at 1600 hours after flights to the west had been suspended for several hours because of bad weather over the mountains with more coming in from that direction .	22 February : " Lieut. R._M. Barton , speeding along the Jacksonville - Richmond route , was forced to land at Cocoa , Fla. , by a heavy fog .	He made a safe landing . "	23 February : A US Army Air Corps Curtiss O-39 Falcon ,__ 32-219_ , assigned to the air mail service crashes in bad weather near Fremont , Ohio , with pilot Lt. Norman R. Burnett suffering a fractured leg upon descending by parachute .
+Event	T0	rushed	EVENT	7
+Event	T1	suffering	EVENT	54
+Event	T2	fractured	EVENT	71
+Event	T3	damages	EVENT	100
+Event	T4	departed	EVENT	119
+Event	T5	flights	EVENT	155
+Event	T6	suspended	EVENT	184
+Event	T7	speeding	EVENT	334
+Event	T8	forced	EVENT	389
+Event	T9	land	EVENT	399
+Event	T10	fog	EVENT	433
+Event	T11	made	EVENT	442
+Event	T12	landing	EVENT	454
+Event	T13	suffering	EVENT	645
+Event	T14	descending	EVENT	676
+Event	T15	assigned	EVENT	534
+Event	T16	crashes	EVENT	567
+Relation	T1	T0	CauseEffect	true	suffering	rushed
+Relation	T0	T1	EffectCause	true	rushed	suffering
+Relation	T3	T0	CauseEffect	true	damages	rushed
+Relation	T0	T3	EffectCause	true	rushed	damages
+Relation	T10	T8	CauseEffect	true	fog	forced
+Relation	T8	T10	EffectCause	true	forced	fog
+Relation	T16	T13	CauseEffect	true	crashes	suffering
+Relation	T13	T16	EffectCause	true	suffering	crashes
+Relation	T1	T10	NoRel	true	suffering	fog
+Relation	T1	T8	NoRel	true	suffering	forced
+Relation	T10	T14	NoRel	true	fog	descending
+Relation	T11	T12	NoRel	true	made	landing
+Relation	T11	T15	NoRel	true	made	assigned
+Relation	T12	T1	NoRel	true	landing	suffering
+Relation	T14	T1	NoRel	true	descending	suffering
+Relation	T14	T15	NoRel	true	descending	assigned
+Relation	T14	T2	NoRel	true	descending	fractured
+Relation	T14	T3	NoRel	true	descending	damages
+Relation	T15	T0	NoRel	true	assigned	rushed
+Relation	T15	T10	NoRel	true	assigned	fog
+Relation	T2	T1	NoRel	true	fractured	suffering
+Relation	T2	T14	NoRel	true	fractured	descending
+Relation	T2	T5	NoRel	true	fractured	flights
+Relation	T4	T15	NoRel	true	departed	assigned
+Relation	T4	T9	NoRel	true	departed	land
+Relation	T5	T16	NoRel	true	flights	crashes
+Relation	T5	T3	NoRel	true	flights	damages
+Relation	T5	T6	NoRel	true	flights	suspended
+Relation	T6	T14	NoRel	true	suspended	descending
+Relation	T6	T16	NoRel	true	suspended	crashes
+Relation	T6	T2	NoRel	true	suspended	fractured
+Relation	T7	T9	NoRel	true	speeding	land
+Relation	T8	T14	NoRel	true	forced	descending
+Relation	T8	T2	NoRel	true	forced	fractured
+Relation	T9	T16	NoRel	true	land	crashes
+Relation	T9	T6	NoRel	true	land	suspended

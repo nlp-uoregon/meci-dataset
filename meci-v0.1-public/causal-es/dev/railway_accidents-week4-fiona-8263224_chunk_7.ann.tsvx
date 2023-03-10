@@ -1,0 +1,60 @@
+Text	Alaska Airlines anunció que había limitado las tarifas de los vuelos entre Seattle y Portland los días 18 y 19 de diciembre .	La Junta Nacional de Seguridad del Transporte ( NTSB ) abrió una investigación sobre el accidente .	Un equipo de NTSB Go Team de 20 miembros fue enviado al sitio del accidente .	NTSB anunció en su hallazgo preliminar que el registrador de datos del motor trasero mostraba que el tren viajaba a 80 millas por hora ( 130 km/h ) a través de la zona de 30 millas por hora ( 48 km/h ) .	Se espera que la investigación en el sitio tome de siete a diez días para completarse .
+Event	T0	anunció	EVENT	16
+Event	T1	limitado	EVENT	34
+Event	T2	abrió	EVENT	181
+Event	T3	investigación	EVENT	191
+Event	T4	accidente	EVENT	214
+Event	T5	enviado	EVENT	271
+Event	T6	accidente	EVENT	292
+Event	T7	anunció	EVENT	309
+Event	T8	mostraba	EVENT	389
+Event	T9	viajaba	EVENT	410
+Event	T10	espera	EVENT	511
+Event	T11	investigación	EVENT	525
+Event	T12	tome	EVENT	551
+Relation	T0	T1	NoRel	true	anunció	limitado
+Relation	T0	T10	NoRel	true	anunció	espera
+Relation	T0	T11	NoRel	true	anunció	investigación
+Relation	T0	T6	NoRel	true	anunció	accidente
+Relation	T0	T9	NoRel	true	anunció	viajaba
+Relation	T1	T0	NoRel	true	limitado	anunció
+Relation	T1	T2	NoRel	true	limitado	abrió
+Relation	T1	T5	NoRel	true	limitado	enviado
+Relation	T1	T6	NoRel	true	limitado	accidente
+Relation	T1	T9	NoRel	true	limitado	viajaba
+Relation	T10	T0	NoRel	true	espera	anunció
+Relation	T10	T12	NoRel	true	espera	tome
+Relation	T10	T2	NoRel	true	espera	abrió
+Relation	T10	T4	NoRel	true	espera	accidente
+Relation	T11	T0	NoRel	true	investigación	anunció
+Relation	T11	T12	NoRel	true	investigación	tome
+Relation	T12	T10	NoRel	true	tome	espera
+Relation	T12	T2	NoRel	true	tome	abrió
+Relation	T12	T7	NoRel	true	tome	anunció
+Relation	T12	T8	NoRel	true	tome	mostraba
+Relation	T2	T0	NoRel	true	abrió	anunció
+Relation	T2	T1	NoRel	true	abrió	limitado
+Relation	T2	T10	NoRel	true	abrió	espera
+Relation	T2	T6	NoRel	true	abrió	accidente
+Relation	T3	T1	NoRel	true	investigación	limitado
+Relation	T3	T2	NoRel	true	investigación	abrió
+Relation	T3	T6	NoRel	true	investigación	accidente
+Relation	T3	T7	NoRel	true	investigación	anunció
+Relation	T4	T12	NoRel	true	accidente	tome
+Relation	T5	T10	NoRel	true	enviado	espera
+Relation	T5	T12	NoRel	true	enviado	tome
+Relation	T5	T4	NoRel	true	enviado	accidente
+Relation	T5	T9	NoRel	true	enviado	viajaba
+Relation	T6	T11	NoRel	true	accidente	investigación
+Relation	T6	T12	NoRel	true	accidente	tome
+Relation	T7	T0	NoRel	true	anunció	anunció
+Relation	T7	T1	NoRel	true	anunció	limitado
+Relation	T7	T9	NoRel	true	anunció	viajaba
+Relation	T8	T1	NoRel	true	mostraba	limitado
+Relation	T8	T10	NoRel	true	mostraba	espera
+Relation	T8	T11	NoRel	true	mostraba	investigación
+Relation	T8	T5	NoRel	true	mostraba	enviado
+Relation	T8	T6	NoRel	true	mostraba	accidente
+Relation	T9	T10	NoRel	true	viajaba	espera
+Relation	T9	T11	NoRel	true	viajaba	investigación
+Relation	T9	T8	NoRel	true	viajaba	mostraba

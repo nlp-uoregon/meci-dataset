@@ -1,0 +1,40 @@
+Text	Sava Nehri üzerindeki set Rajevo Selo ve Raçinovci kasabalarının yakınlarında yıkıldı ve bu bölgeden binlerce kişi tahliye edildi .	19 Mayıs itibarıyla , Hırvatistan'ın doğu bölgelerinde yaşayan 15.000 kişinin evlerinden tahliye edildiği açıklandı .	Seller nedeniyle iki kişi hayatını kaybetti ve bir kişi sele kapıldı .	- – Amerika Birleşik Devletleri Dışişleri Bakanlığı sözcüsü Jen Psaki , Bosna & Hersek , Sırbistan ve Hırvatistan'da meydana gelen sel felaketi nedeniyle Amerikan halkı adına başsağlığı diledi .	Ayrıca .
+Event	T0	yıkıldı	EVENT	78
+Event	T1	edildi	EVENT	123
+Event	T2	açıklandı	EVENT	238
+Event	T3	Seller	EVENT	250
+Event	T4	kaybetti	EVENT	285
+Event	T5	kapıldı	EVENT	311
+Event	T6	felaketi	EVENT	456
+Event	T7	diledi	EVENT	507
+Relation	T0	T1	CauseEffect	true	yıkıldı	edildi
+Relation	T1	T0	EffectCause	true	edildi	yıkıldı
+Relation	T1	T2	CauseEffect	true	edildi	açıklandı
+Relation	T2	T1	EffectCause	true	açıklandı	edildi
+Relation	T0	T3	CauseEffect	true	yıkıldı	Seller
+Relation	T3	T0	EffectCause	true	Seller	yıkıldı
+Relation	T3	T4	CauseEffect	true	Seller	kaybetti
+Relation	T4	T3	EffectCause	true	kaybetti	Seller
+Relation	T3	T5	CauseEffect	true	Seller	kapıldı
+Relation	T5	T3	EffectCause	true	kapıldı	Seller
+Relation	T3	T7	CauseEffect	true	Seller	diledi
+Relation	T7	T3	EffectCause	true	diledi	Seller
+Relation	T6	T7	CauseEffect	true	felaketi	diledi
+Relation	T7	T6	EffectCause	true	diledi	felaketi
+Relation	T0	T4	NoRel	true	yıkıldı	kaybetti
+Relation	T0	T6	NoRel	true	yıkıldı	felaketi
+Relation	T0	T7	NoRel	true	yıkıldı	diledi
+Relation	T1	T4	NoRel	true	edildi	kaybetti
+Relation	T1	T6	NoRel	true	edildi	felaketi
+Relation	T1	T7	NoRel	true	edildi	diledi
+Relation	T2	T0	NoRel	true	açıklandı	yıkıldı
+Relation	T3	T2	NoRel	true	Seller	açıklandı
+Relation	T4	T6	NoRel	true	kaybetti	felaketi
+Relation	T4	T7	NoRel	true	kaybetti	diledi
+Relation	T5	T1	NoRel	true	kapıldı	edildi
+Relation	T5	T2	NoRel	true	kapıldı	açıklandı
+Relation	T5	T4	NoRel	true	kapıldı	kaybetti
+Relation	T5	T7	NoRel	true	kapıldı	diledi
+Relation	T6	T0	NoRel	true	felaketi	yıkıldı
+Relation	T6	T1	NoRel	true	felaketi	edildi
+Relation	T7	T4	NoRel	true	diledi	kaybetti

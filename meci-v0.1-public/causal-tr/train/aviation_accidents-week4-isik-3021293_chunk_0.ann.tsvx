@@ -1,0 +1,31 @@
+Text	14 Aralık 1942 günü Aeroflot tarafından işletilen bir Tupolev ANT - 20 uçağı , Türkmenabat üzerinden Ürgenç'den Taşkent'e yapılan bir tarifleli iç hat yolcu uçuşu sırasında düştü .	Uçakta bulunan 36 kişinin tamamı öldü .	Kazaya karışan uçak , Aeroflot'un Özbekistan filosu tarafından işletilen altı adet Mikulin AM - 34FRNV motoru ile donatılmış bir Tupolev ANT - 20bis idi .	İlk uçuşunu 1938'de yapan uçak , Aeroflot tarafından işletilmek üzere CCCP - L 760 kuyruk numarasını aldı .	Kaza anında uçağın 272 uçuş saati vardı .
+Event	T0	uçuşu	EVENT	157
+Event	T1	düştü	EVENT	173
+Event	T2	öldü	EVENT	214
+Event	T4	uçuşunu	EVENT	380
+Event	T5	yapan	EVENT	396
+Event	T6	aldı	EVENT	477
+Event	T3	Kazaya	EVENT	221
+Event	T7	Kaza	EVENT	484
+Relation	T1	T2	CauseEffect	true	düştü	öldü
+Relation	T2	T1	EffectCause	true	öldü	düştü
+Relation	T3	T2	CauseEffect	true	Kazaya	öldü
+Relation	T2	T3	EffectCause	true	öldü	Kazaya
+Relation	T0	T3	NoRel	true	uçuşu	Kazaya
+Relation	T0	T4	NoRel	true	uçuşu	uçuşunu
+Relation	T0	T6	NoRel	true	uçuşu	aldı
+Relation	T1	T0	NoRel	true	düştü	uçuşu
+Relation	T1	T6	NoRel	true	düştü	aldı
+Relation	T2	T5	NoRel	true	öldü	yapan
+Relation	T2	T7	NoRel	true	öldü	Kaza
+Relation	T3	T0	NoRel	true	Kazaya	uçuşu
+Relation	T4	T6	NoRel	true	uçuşunu	aldı
+Relation	T5	T4	NoRel	true	yapan	uçuşunu
+Relation	T5	T6	NoRel	true	yapan	aldı
+Relation	T6	T0	NoRel	true	aldı	uçuşu
+Relation	T6	T1	NoRel	true	aldı	düştü
+Relation	T6	T5	NoRel	true	aldı	yapan
+Relation	T6	T7	NoRel	true	aldı	Kaza
+Relation	T7	T2	NoRel	true	Kaza	öldü
+Relation	T7	T4	NoRel	true	Kaza	uçuşunu
+Relation	T7	T5	NoRel	true	Kaza	yapan

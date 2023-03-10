@@ -1,0 +1,46 @@
+Text	Bunu , büyüklük ve süre bakımından benzersiz olarak tanımlar .	Brumalia'nın ( İsimler Festivali ) kutlamaları sırasında , Kış gündönümünden ve Oğlak burcunun işaretine Güneş'in girişinden kısa bir süre önce gerçekleştiğini kaydeder .	Ayrıca şehrin , depremden önce şiddetli bir kıştan etkilendiğini anlatır .	Sarsıntılar , Konstantinopolis sakinlerinin çoğunun uyuduğu gece yarısına doğru başladı .	Sarsıntılar vatandaşları uyandırdı ve binalar sallanıyordu , " çığlıklar ve sesler duyuluyordu " .
+Event	T12	depremden	EVENT	250
+Event	T15	duyuluyordu	EVENT	482
+Event	T2	kaydeder	EVENT	223
+Event	T3	anlatır	EVENT	299
+Event	T4	Sarsıntılar	EVENT	309
+Event	T5	başladı	EVENT	389
+Event	T6	Sarsıntılar	EVENT	399
+Event	T7	uyandırdı	EVENT	424
+Event	T8	sallanıyordu	EVENT	445
+Relation	T6	T7	CauseEffect	true	Sarsıntılar	uyandırdı
+Relation	T7	T6	EffectCause	true	uyandırdı	Sarsıntılar
+Relation	T6	T8	CauseEffect	true	Sarsıntılar	sallanıyordu
+Relation	T8	T6	EffectCause	true	sallanıyordu	Sarsıntılar
+Relation	T8	T7	CauseEffect	true	sallanıyordu	uyandırdı
+Relation	T7	T8	EffectCause	true	uyandırdı	sallanıyordu
+Relation	T6	T15	CauseEffect	true	Sarsıntılar	duyuluyordu
+Relation	T15	T6	EffectCause	true	duyuluyordu	Sarsıntılar
+Relation	T5	T7	CauseEffect	true	başladı	uyandırdı
+Relation	T7	T5	EffectCause	true	uyandırdı	başladı
+Relation	T4	T15	CauseEffect	true	Sarsıntılar	duyuluyordu
+Relation	T15	T4	EffectCause	true	duyuluyordu	Sarsıntılar
+Relation	T4	T7	CauseEffect	true	Sarsıntılar	uyandırdı
+Relation	T7	T4	EffectCause	true	uyandırdı	Sarsıntılar
+Relation	T12	T3	NoRel	true	depremden	anlatır
+Relation	T12	T4	NoRel	true	depremden	Sarsıntılar
+Relation	T12	T6	NoRel	true	depremden	Sarsıntılar
+Relation	T15	T2	NoRel	true	duyuluyordu	kaydeder
+Relation	T2	T12	NoRel	true	kaydeder	depremden
+Relation	T2	T3	NoRel	true	kaydeder	anlatır
+Relation	T3	T15	NoRel	true	anlatır	duyuluyordu
+Relation	T3	T4	NoRel	true	anlatır	Sarsıntılar
+Relation	T3	T8	NoRel	true	anlatır	sallanıyordu
+Relation	T4	T12	NoRel	true	Sarsıntılar	depremden
+Relation	T4	T8	NoRel	true	Sarsıntılar	sallanıyordu
+Relation	T5	T12	NoRel	true	başladı	depremden
+Relation	T5	T15	NoRel	true	başladı	duyuluyordu
+Relation	T5	T2	NoRel	true	başladı	kaydeder
+Relation	T5	T3	NoRel	true	başladı	anlatır
+Relation	T5	T8	NoRel	true	başladı	sallanıyordu
+Relation	T6	T2	NoRel	true	Sarsıntılar	kaydeder
+Relation	T6	T3	NoRel	true	Sarsıntılar	anlatır
+Relation	T6	T4	NoRel	true	Sarsıntılar	Sarsıntılar
+Relation	T6	T5	NoRel	true	Sarsıntılar	başladı
+Relation	T7	T2	NoRel	true	uyandırdı	kaydeder
+Relation	T8	T4	NoRel	true	sallanıyordu	Sarsıntılar

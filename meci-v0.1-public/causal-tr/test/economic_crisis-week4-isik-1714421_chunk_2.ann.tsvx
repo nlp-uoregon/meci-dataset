@@ -1,0 +1,45 @@
+Text	Sonradan işlenen soykırıma katılmadı : sol göz ve göğüsünden yaralandıktan sonra , tedavisi ve iyileşmesi için Güney Afrika'ya gitti .	1907 yılında , binbaşı rütbesine terfi etti ve 11. Kolorduya atandı .	Ekim 1913 yılında , Alman İmparatorluk ordusunda yarbaylığa terfi ettirildi ve Alman Kamerunun'da ( bugünün Kamerun , ve bugünkü Nijerya'nın bir kısmı ) olarak bilinen Alman sömürge güçlerinin komutanı olarak atadı .	Lettow - Vorbeck , Ağustos 1914 yılında , Birinci Dünya Savaşı'nın ilk aşamalarında , sadece 2. 600 Alman vatandaşı ve 2.472 Afrikalı askerden oluşan küçük bir askerî garnizonun komutanıydı .	Lettow - Vorbeck , Tanga şehrinde önemli bir İngiliz amfibisinin saldırısını püskürtmek için hazırlanmıştır .
+Event	T1	yaralandıktan	EVENT	61
+Event	T4	gitti	EVENT	127
+Event	T5	etti	EVENT	174
+Event	T6	atandı	EVENT	196
+Event	T7	ettirildi	EVENT	271
+Event	T8	atadı	EVENT	414
+Event	T10	hazırlanmıştır	EVENT	707
+Event	T11	soykırıma	EVENT	17
+Event	T2	Birinci Dünya Savaşı'nın	EVENT	464
+Event	T3	saldırısını	EVENT	679
+Relation	T1	T4	CauseEffect	true	yaralandıktan	gitti
+Relation	T4	T1	EffectCause	true	gitti	yaralandıktan
+Relation	T3	T10	CauseEffect	true	saldırısını	hazırlanmıştır
+Relation	T10	T3	EffectCause	true	hazırlanmıştır	saldırısını
+Relation	T1	T3	NoRel	true	yaralandıktan	saldırısını
+Relation	T10	T6	NoRel	true	hazırlanmıştır	atandı
+Relation	T10	T7	NoRel	true	hazırlanmıştır	ettirildi
+Relation	T11	T1	NoRel	true	soykırıma	yaralandıktan
+Relation	T11	T10	NoRel	true	soykırıma	hazırlanmıştır
+Relation	T11	T4	NoRel	true	soykırıma	gitti
+Relation	T11	T7	NoRel	true	soykırıma	ettirildi
+Relation	T11	T8	NoRel	true	soykırıma	atadı
+Relation	T3	T5	NoRel	true	saldırısını	etti
+Relation	T3	T7	NoRel	true	saldırısını	ettirildi
+Relation	T3	T8	NoRel	true	saldırısını	atadı
+Relation	T4	T11	NoRel	true	gitti	soykırıma
+Relation	T4	T2	NoRel	true	gitti	Birinci Dünya Savaşı'nın
+Relation	T4	T3	NoRel	true	gitti	saldırısını
+Relation	T4	T5	NoRel	true	gitti	etti
+Relation	T4	T6	NoRel	true	gitti	atandı
+Relation	T5	T10	NoRel	true	etti	hazırlanmıştır
+Relation	T5	T2	NoRel	true	etti	Birinci Dünya Savaşı'nın
+Relation	T5	T3	NoRel	true	etti	saldırısını
+Relation	T5	T4	NoRel	true	etti	gitti
+Relation	T6	T1	NoRel	true	atandı	yaralandıktan
+Relation	T6	T11	NoRel	true	atandı	soykırıma
+Relation	T6	T2	NoRel	true	atandı	Birinci Dünya Savaşı'nın
+Relation	T6	T4	NoRel	true	atandı	gitti
+Relation	T6	T7	NoRel	true	atandı	ettirildi
+Relation	T6	T8	NoRel	true	atandı	atadı
+Relation	T7	T1	NoRel	true	ettirildi	yaralandıktan
+Relation	T8	T3	NoRel	true	atadı	saldırısını
+Relation	T8	T5	NoRel	true	atadı	etti
+Relation	T8	T7	NoRel	true	atadı	ettirildi

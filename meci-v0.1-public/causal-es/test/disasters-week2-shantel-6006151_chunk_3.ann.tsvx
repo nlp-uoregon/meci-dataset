@@ -1,0 +1,38 @@
+Text	Sin embargo , Al Qaeda negó su responsabilidad en la explosión .	Existen diversos rumores que no han sido verificados , como por ejemplo , que se trataría de un complot del gobierno para apaciguar a los manifestantes durante la primavera árabe .	El 28 de octubre de 2011 , en el tribunal de Rabat , Adel al-Othmani fue condenado a muerte por su participación en el atentado .	Hakim Dah recibió una sentencia de cadena perpetua .	A otras cuatro personas se les dieron cuatro años y tres recibieron una condena de dos años por su participación .
+Event	T0	negó	EVENT	23
+Event	T1	explosión	EVENT	53
+Event	T10	sentencia	EVENT	398
+Event	T11	dieron	EVENT	460
+Event	T13	condena	EVENT	501
+Event	T14	participación	EVENT	528
+Event	T7	participación	EVENT	345
+Event	T8	atentado	EVENT	365
+Event	T2	condenado	EVENT	319
+Relation	T7	T2	CauseEffect	true	participación	condenado
+Relation	T2	T7	EffectCause	true	condenado	participación
+Relation	T8	T10	CauseEffect	true	atentado	sentencia
+Relation	T10	T8	EffectCause	true	sentencia	atentado
+Relation	T14	T13	CauseEffect	true	participación	condena
+Relation	T13	T14	EffectCause	true	condena	participación
+Relation	T0	T11	NoRel	true	negó	dieron
+Relation	T0	T14	NoRel	true	negó	participación
+Relation	T0	T2	NoRel	true	negó	condenado
+Relation	T0	T7	NoRel	true	negó	participación
+Relation	T1	T0	NoRel	true	explosión	negó
+Relation	T1	T13	NoRel	true	explosión	condena
+Relation	T10	T1	NoRel	true	sentencia	explosión
+Relation	T10	T13	NoRel	true	sentencia	condena
+Relation	T10	T7	NoRel	true	sentencia	participación
+Relation	T11	T1	NoRel	true	dieron	explosión
+Relation	T11	T10	NoRel	true	dieron	sentencia
+Relation	T11	T14	NoRel	true	dieron	participación
+Relation	T11	T2	NoRel	true	dieron	condenado
+Relation	T11	T8	NoRel	true	dieron	atentado
+Relation	T13	T0	NoRel	true	condena	negó
+Relation	T13	T2	NoRel	true	condena	condenado
+Relation	T13	T7	NoRel	true	condena	participación
+Relation	T14	T0	NoRel	true	participación	negó
+Relation	T14	T11	NoRel	true	participación	dieron
+Relation	T2	T14	NoRel	true	condenado	participación
+Relation	T8	T11	NoRel	true	atentado	dieron
+Relation	T8	T14	NoRel	true	atentado	participación

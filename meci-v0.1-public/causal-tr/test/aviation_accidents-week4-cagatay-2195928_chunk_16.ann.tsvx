@@ -1,0 +1,83 @@
+Text	Kazanın ardından birçok basın kuruluşu , kazayı yapan uçağın ACT Airlines'a ait olmasına rağmen haberlerinde bir Türk Hava Yolları uçağının kaza yaptığını belirtti .	Türk Hava Yolları , uçağın ve mürettebatın onlara ait olmadığını ve kaza yapan uçağın ve mürettebatın ACT Airlines'a ait olduğunu söyleyen bir basın açıklaması yaptı .	Yine de uçuş Türk Hava Yolları uçuş numarası altında gerçekleştirilmişti .	37 kişi Kırgızistan Sağlık Bakanlığına ait sağlık kuruluşlarına getirildi , başarılı bir tedaviden sonra 36 tanesi taburcu edildi , bir kişi hastanede öldü .	Hastanede ölen kişinin 29 yaşında olduğu ve tüm müdahalelere rağmen başarılı olamadıkları açıklandı .
+Event	T0	Kazanın	EVENT	0
+Event	T1	belirtti	EVENT	155
+Event	T2	söyleyen	EVENT	296
+Event	T4	uçuş	EVENT	342
+Event	T5	gerçekleştirilmişti	EVENT	387
+Event	T6	getirildi	EVENT	473
+Event	T7	tedaviden	EVENT	498
+Event	T9	öldü	EVENT	560
+Event	T10	ölen	EVENT	577
+Event	T11	müdahalelere	EVENT	615
+Event	T12	açıklandı	EVENT	657
+Event	T13	kazayı	EVENT	41
+Event	T3	açıklaması	EVENT	315
+Event	T8	taburcu	EVENT	524
+Relation	T1	T3	CauseEffect	true	belirtti	açıklaması
+Relation	T3	T1	EffectCause	true	açıklaması	belirtti
+Relation	T13	T9	CauseEffect	true	kazayı	öldü
+Relation	T9	T13	EffectCause	true	öldü	kazayı
+Relation	T7	T8	CauseEffect	true	tedaviden	taburcu
+Relation	T8	T7	EffectCause	true	taburcu	tedaviden
+Relation	T0	T1	NoRel	true	Kazanın	belirtti
+Relation	T0	T13	NoRel	true	Kazanın	kazayı
+Relation	T0	T5	NoRel	true	Kazanın	gerçekleştirilmişti
+Relation	T0	T9	NoRel	true	Kazanın	öldü
+Relation	T1	T12	NoRel	true	belirtti	açıklandı
+Relation	T1	T5	NoRel	true	belirtti	gerçekleştirilmişti
+Relation	T10	T13	NoRel	true	ölen	kazayı
+Relation	T10	T3	NoRel	true	ölen	açıklaması
+Relation	T10	T4	NoRel	true	ölen	uçuş
+Relation	T10	T5	NoRel	true	ölen	gerçekleştirilmişti
+Relation	T10	T8	NoRel	true	ölen	taburcu
+Relation	T11	T0	NoRel	true	müdahalelere	Kazanın
+Relation	T11	T10	NoRel	true	müdahalelere	ölen
+Relation	T11	T5	NoRel	true	müdahalelere	gerçekleştirilmişti
+Relation	T12	T0	NoRel	true	açıklandı	Kazanın
+Relation	T12	T13	NoRel	true	açıklandı	kazayı
+Relation	T12	T2	NoRel	true	açıklandı	söyleyen
+Relation	T12	T4	NoRel	true	açıklandı	uçuş
+Relation	T12	T6	NoRel	true	açıklandı	getirildi
+Relation	T12	T7	NoRel	true	açıklandı	tedaviden
+Relation	T13	T0	NoRel	true	kazayı	Kazanın
+Relation	T13	T1	NoRel	true	kazayı	belirtti
+Relation	T13	T10	NoRel	true	kazayı	ölen
+Relation	T13	T12	NoRel	true	kazayı	açıklandı
+Relation	T13	T2	NoRel	true	kazayı	söyleyen
+Relation	T2	T0	NoRel	true	söyleyen	Kazanın
+Relation	T2	T4	NoRel	true	söyleyen	uçuş
+Relation	T2	T5	NoRel	true	söyleyen	gerçekleştirilmişti
+Relation	T2	T6	NoRel	true	söyleyen	getirildi
+Relation	T2	T8	NoRel	true	söyleyen	taburcu
+Relation	T3	T11	NoRel	true	açıklaması	müdahalelere
+Relation	T3	T12	NoRel	true	açıklaması	açıklandı
+Relation	T3	T6	NoRel	true	açıklaması	getirildi
+Relation	T4	T10	NoRel	true	uçuş	ölen
+Relation	T4	T11	NoRel	true	uçuş	müdahalelere
+Relation	T4	T2	NoRel	true	uçuş	söyleyen
+Relation	T4	T5	NoRel	true	uçuş	gerçekleştirilmişti
+Relation	T4	T6	NoRel	true	uçuş	getirildi
+Relation	T4	T8	NoRel	true	uçuş	taburcu
+Relation	T4	T9	NoRel	true	uçuş	öldü
+Relation	T5	T10	NoRel	true	gerçekleştirilmişti	ölen
+Relation	T5	T11	NoRel	true	gerçekleştirilmişti	müdahalelere
+Relation	T5	T13	NoRel	true	gerçekleştirilmişti	kazayı
+Relation	T5	T3	NoRel	true	gerçekleştirilmişti	açıklaması
+Relation	T5	T4	NoRel	true	gerçekleştirilmişti	uçuş
+Relation	T5	T8	NoRel	true	gerçekleştirilmişti	taburcu
+Relation	T6	T0	NoRel	true	getirildi	Kazanın
+Relation	T6	T13	NoRel	true	getirildi	kazayı
+Relation	T6	T3	NoRel	true	getirildi	açıklaması
+Relation	T6	T7	NoRel	true	getirildi	tedaviden
+Relation	T7	T1	NoRel	true	tedaviden	belirtti
+Relation	T7	T11	NoRel	true	tedaviden	müdahalelere
+Relation	T7	T13	NoRel	true	tedaviden	kazayı
+Relation	T8	T1	NoRel	true	taburcu	belirtti
+Relation	T8	T12	NoRel	true	taburcu	açıklandı
+Relation	T8	T3	NoRel	true	taburcu	açıklaması
+Relation	T8	T6	NoRel	true	taburcu	getirildi
+Relation	T9	T10	NoRel	true	öldü	ölen
+Relation	T9	T11	NoRel	true	öldü	müdahalelere
+Relation	T9	T2	NoRel	true	öldü	söyleyen
+Relation	T9	T3	NoRel	true	öldü	açıklaması
+Relation	T9	T5	NoRel	true	öldü	gerçekleştirilmişti

@@ -1,0 +1,47 @@
+Text	Haşhaşilerden alınmasının imkansız olduğu düşünülen Alamut Kalesini almak için sefere çıktı ancak kaleler çok sert bir şekilde direniyordu .	Haşhaşilerin lideri olan Rükeneddin Hürşah Maymundiz kalesinde bulunuyordu .	Hülagu kaleyi 4 gün boyunca kuşattı ise kaleyi alamadı .	Hayatından endişe eden Rükneddin Hürşah Hülagu'ya elçi göndererek eğer kendisinin ve ailesinin canını bağışlarsa bütün kaleleri teslim edeceğini söyledi .	Hülagu teklifi kabul etti .
+Event	T0	almak	EVENT	68
+Event	T1	çıktı	EVENT	86
+Event	T2	direniyordu	EVENT	127
+Event	T3	kuşattı	EVENT	246
+Event	T6	teslim	EVENT	403
+Event	T7	söyledi	EVENT	420
+Event	T8	etti	EVENT	451
+Event	T4	göndererek	EVENT	330
+Event	T5	endişe	EVENT	286
+Event	T9	teklifi	EVENT	437
+Relation	T1	T3	CauseEffect	true	çıktı	kuşattı
+Relation	T3	T1	EffectCause	true	kuşattı	çıktı
+Relation	T3	T2	CauseEffect	true	kuşattı	direniyordu
+Relation	T2	T3	EffectCause	true	direniyordu	kuşattı
+Relation	T5	T4	CauseEffect	true	endişe	göndererek
+Relation	T4	T5	EffectCause	true	göndererek	endişe
+Relation	T5	T7	CauseEffect	true	endişe	söyledi
+Relation	T7	T5	EffectCause	true	söyledi	endişe
+Relation	T4	T7	CauseEffect	true	göndererek	söyledi
+Relation	T7	T4	EffectCause	true	söyledi	göndererek
+Relation	T9	T8	CauseEffect	true	teklifi	etti
+Relation	T8	T9	EffectCause	true	etti	teklifi
+Relation	T0	T1	NoRel	true	almak	çıktı
+Relation	T0	T3	NoRel	true	almak	kuşattı
+Relation	T0	T4	NoRel	true	almak	göndererek
+Relation	T0	T7	NoRel	true	almak	söyledi
+Relation	T1	T7	NoRel	true	çıktı	söyledi
+Relation	T1	T8	NoRel	true	çıktı	etti
+Relation	T2	T1	NoRel	true	direniyordu	çıktı
+Relation	T2	T4	NoRel	true	direniyordu	göndererek
+Relation	T2	T5	NoRel	true	direniyordu	endişe
+Relation	T2	T7	NoRel	true	direniyordu	söyledi
+Relation	T2	T9	NoRel	true	direniyordu	teklifi
+Relation	T3	T8	NoRel	true	kuşattı	etti
+Relation	T3	T9	NoRel	true	kuşattı	teklifi
+Relation	T4	T1	NoRel	true	göndererek	çıktı
+Relation	T4	T9	NoRel	true	göndererek	teklifi
+Relation	T6	T1	NoRel	true	teslim	çıktı
+Relation	T6	T3	NoRel	true	teslim	kuşattı
+Relation	T7	T1	NoRel	true	söyledi	çıktı
+Relation	T7	T9	NoRel	true	söyledi	teklifi
+Relation	T8	T1	NoRel	true	etti	çıktı
+Relation	T8	T3	NoRel	true	etti	kuşattı
+Relation	T8	T7	NoRel	true	etti	söyledi
+Relation	T9	T0	NoRel	true	teklifi	almak
+Relation	T9	T4	NoRel	true	teklifi	göndererek

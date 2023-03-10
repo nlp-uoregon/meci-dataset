@@ -1,0 +1,49 @@
+Text	Tambora Dağı , 1815 yılına kadar , kapalı magma odasında hidrojenli magmanın kademeli olarak soğutulması nedeniyle , birkaç yüzyıl boyunca uyku hâlindeydi .	1,5 ila 4,5 kilometrelik derinliklerde odanın içinde magmanın soğutulması ve kristalleşmesi sırasında oluşan yüksek basınçlı akışkan magma eksolüsyonu meydana geldi .	Odanın yaklaşık 4.000 -5.000 bar'lık aşırı basınç altında kaldı ve sıcaklık 700 –850 ° C arasında değişti .	1812'de yanardağ sallanmaya başladı ve koyu bir bulut ortaya çıkardı .	5 Nisan 1815'te , çok büyük bir patlama meydana geldi ve ardından 380 km uzaklıktaki Sulawesi üzerindeki Makassar'dan , 1260 km uzaklıktaki Cava üzerindeki Batavia'dan ( şimdiki Cakarta ) ve 1400 km uzaklıktaki Maluku Adaları üzerindeki Ternate'den patlama sesleri duyuldu .
+Event	T0	soğutulması	EVENT	93
+Event	T1	soğutulması	EVENT	219
+Event	T2	kristalleşmesi	EVENT	234
+Event	T4	geldi	EVENT	316
+Event	T5	başladı	EVENT	460
+Event	T6	çıkardı	EVENT	493
+Event	T7	geldi	EVENT	551
+Event	T8	duyuldu	EVENT	768
+Event	T9	hâlindeydi	EVENT	144
+Event	T3	kaldı	EVENT	382
+Event	T10	değişti	EVENT	422
+Relation	T0	T9	CauseEffect	true	soğutulması	hâlindeydi
+Relation	T9	T0	EffectCause	true	hâlindeydi	soğutulması
+Relation	T1	T4	CauseEffect	true	soğutulması	geldi
+Relation	T4	T1	EffectCause	true	geldi	soğutulması
+Relation	T2	T4	CauseEffect	true	kristalleşmesi	geldi
+Relation	T4	T2	EffectCause	true	geldi	kristalleşmesi
+Relation	T5	T6	CauseEffect	true	başladı	çıkardı
+Relation	T6	T5	EffectCause	true	çıkardı	başladı
+Relation	T7	T8	CauseEffect	true	geldi	duyuldu
+Relation	T8	T7	EffectCause	true	duyuldu	geldi
+Relation	T0	T2	NoRel	true	soğutulması	kristalleşmesi
+Relation	T1	T10	NoRel	true	soğutulması	değişti
+Relation	T1	T5	NoRel	true	soğutulması	başladı
+Relation	T10	T2	NoRel	true	değişti	kristalleşmesi
+Relation	T10	T3	NoRel	true	değişti	kaldı
+Relation	T10	T4	NoRel	true	değişti	geldi
+Relation	T2	T3	NoRel	true	kristalleşmesi	kaldı
+Relation	T3	T10	NoRel	true	kaldı	değişti
+Relation	T3	T2	NoRel	true	kaldı	kristalleşmesi
+Relation	T3	T9	NoRel	true	kaldı	hâlindeydi
+Relation	T4	T0	NoRel	true	geldi	soğutulması
+Relation	T4	T3	NoRel	true	geldi	kaldı
+Relation	T5	T0	NoRel	true	başladı	soğutulması
+Relation	T6	T1	NoRel	true	çıkardı	soğutulması
+Relation	T6	T7	NoRel	true	çıkardı	geldi
+Relation	T7	T0	NoRel	true	geldi	soğutulması
+Relation	T7	T1	NoRel	true	geldi	soğutulması
+Relation	T7	T2	NoRel	true	geldi	kristalleşmesi
+Relation	T7	T5	NoRel	true	geldi	başladı
+Relation	T7	T9	NoRel	true	geldi	hâlindeydi
+Relation	T8	T1	NoRel	true	duyuldu	soğutulması
+Relation	T8	T3	NoRel	true	duyuldu	kaldı
+Relation	T8	T4	NoRel	true	duyuldu	geldi
+Relation	T8	T5	NoRel	true	duyuldu	başladı
+Relation	T9	T5	NoRel	true	hâlindeydi	başladı
+Relation	T9	T7	NoRel	true	hâlindeydi	geldi
+Relation	T9	T8	NoRel	true	hâlindeydi	duyuldu

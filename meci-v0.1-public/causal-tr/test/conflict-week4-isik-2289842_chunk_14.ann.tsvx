@@ -1,0 +1,69 @@
+Text	Hüsrev , Pers generali Şahrbaraz'ın önderliğindeki Herakleios'un generallerinin beceriksizliğini Bizans Suriye'sine saldırmak için kullandı .	Herakleios , Antakya'daki istilayı durdurmaya çalıştı ancak Aziz Syacion'lu Theodorus'un kutsamasına rağmen , Herakleios ve Nicetas komutasında Bizans güçleri Şahin'in elinde ciddi bir yenilgi yaşadı .	Savaşın ayrıntıları bilinmiyor .	Bu zaferden sonra Persler şehri yağmaladı , Antakya Patriğini öldürdü ve birçok vatandaşı tehcir ettiler .	Roma kuvvetleri , başlangıçtaki başarısına rağmen , bölgeyi hemen Antakya'nın kuzeyinde Gülek Boğazı'nda savunmaya çalışırken kaybetti .
+Event	T0	saldırmak	EVENT	116
+Event	T1	kullandı	EVENT	131
+Event	T2	çalıştı	EVENT	188
+Event	T3	kutsamasına	EVENT	231
+Event	T4	yaşadı	EVENT	335
+Event	T5	Savaşın	EVENT	344
+Event	T6	bilinmiyor	EVENT	364
+Event	T7	yağmaladı	EVENT	409
+Event	T8	öldürdü	EVENT	439
+Event	T9	ettiler	EVENT	474
+Event	T10	kaybetti	EVENT	610
+Event	T11	zaferden	EVENT	380
+Event	T12	başarısına	EVENT	516
+Relation	T5	T4	CauseEffect	true	Savaşın	yaşadı
+Relation	T4	T5	EffectCause	true	yaşadı	Savaşın
+Relation	T5	T11	CauseEffect	true	Savaşın	zaferden
+Relation	T11	T5	EffectCause	true	zaferden	Savaşın
+Relation	T11	T7	CauseEffect	true	zaferden	yağmaladı
+Relation	T7	T11	EffectCause	true	yağmaladı	zaferden
+Relation	T11	T8	CauseEffect	true	zaferden	öldürdü
+Relation	T8	T11	EffectCause	true	öldürdü	zaferden
+Relation	T11	T9	CauseEffect	true	zaferden	ettiler
+Relation	T9	T11	EffectCause	true	ettiler	zaferden
+Relation	T0	T3	NoRel	true	saldırmak	kutsamasına
+Relation	T0	T5	NoRel	true	saldırmak	Savaşın
+Relation	T0	T6	NoRel	true	saldırmak	bilinmiyor
+Relation	T0	T8	NoRel	true	saldırmak	öldürdü
+Relation	T1	T0	NoRel	true	kullandı	saldırmak
+Relation	T1	T12	NoRel	true	kullandı	başarısına
+Relation	T1	T2	NoRel	true	kullandı	çalıştı
+Relation	T1	T3	NoRel	true	kullandı	kutsamasına
+Relation	T1	T8	NoRel	true	kullandı	öldürdü
+Relation	T1	T9	NoRel	true	kullandı	ettiler
+Relation	T10	T3	NoRel	true	kaybetti	kutsamasına
+Relation	T11	T1	NoRel	true	zaferden	kullandı
+Relation	T11	T2	NoRel	true	zaferden	çalıştı
+Relation	T12	T1	NoRel	true	başarısına	kullandı
+Relation	T12	T10	NoRel	true	başarısına	kaybetti
+Relation	T12	T11	NoRel	true	başarısına	zaferden
+Relation	T12	T2	NoRel	true	başarısına	çalıştı
+Relation	T12	T4	NoRel	true	başarısına	yaşadı
+Relation	T12	T6	NoRel	true	başarısına	bilinmiyor
+Relation	T2	T1	NoRel	true	çalıştı	kullandı
+Relation	T2	T11	NoRel	true	çalıştı	zaferden
+Relation	T2	T6	NoRel	true	çalıştı	bilinmiyor
+Relation	T2	T9	NoRel	true	çalıştı	ettiler
+Relation	T3	T0	NoRel	true	kutsamasına	saldırmak
+Relation	T3	T10	NoRel	true	kutsamasına	kaybetti
+Relation	T4	T0	NoRel	true	yaşadı	saldırmak
+Relation	T4	T10	NoRel	true	yaşadı	kaybetti
+Relation	T4	T12	NoRel	true	yaşadı	başarısına
+Relation	T4	T3	NoRel	true	yaşadı	kutsamasına
+Relation	T4	T6	NoRel	true	yaşadı	bilinmiyor
+Relation	T4	T7	NoRel	true	yaşadı	yağmaladı
+Relation	T5	T6	NoRel	true	Savaşın	bilinmiyor
+Relation	T5	T9	NoRel	true	Savaşın	ettiler
+Relation	T6	T11	NoRel	true	bilinmiyor	zaferden
+Relation	T6	T12	NoRel	true	bilinmiyor	başarısına
+Relation	T6	T2	NoRel	true	bilinmiyor	çalıştı
+Relation	T6	T9	NoRel	true	bilinmiyor	ettiler
+Relation	T7	T12	NoRel	true	yağmaladı	başarısına
+Relation	T7	T4	NoRel	true	yağmaladı	yaşadı
+Relation	T7	T8	NoRel	true	yağmaladı	öldürdü
+Relation	T7	T9	NoRel	true	yağmaladı	ettiler
+Relation	T8	T1	NoRel	true	öldürdü	kullandı
+Relation	T9	T3	NoRel	true	ettiler	kutsamasına
+Relation	T9	T6	NoRel	true	ettiler	bilinmiyor
+Relation	T9	T8	NoRel	true	ettiler	öldürdü

@@ -1,0 +1,38 @@
+Text	[ El avión involucrado en el accidente , en 2004 .	] [ Altitud del Vuelo 3704 según Flightradar24 ] [ Helicóptero de la Sociedad de la Media Luna Roja Iraní en un vuelo de búsqueda del avión accidentado .	] El avión , un ATR 72-212 msn_391 , registro EP-ATS , se construyó en octubre de 1993 .	Voló por primera vez el 26 de octubre , y fue entregado a Iran Aseman Airlines el 12 de diciembre del mismo año .	Solo había sido operado por esa aerolínea y no había tenido un incidente grave en sus 24 años de funcionamiento .
+Event	T1	accidente	EVENT	29
+Event	T2	vuelo	EVENT	163
+Event	T3	búsqueda	EVENT	172
+Event	T4	accidentado	EVENT	191
+Event	T5	registro	EVENT	242
+Event	T6	construyó	EVENT	263
+Event	T7	Voló	EVENT	294
+Event	T8	entregado	EVENT	340
+Event	T9	operado	EVENT	424
+Relation	T4	T3	CauseEffect	true	accidentado	búsqueda
+Relation	T3	T4	EffectCause	true	búsqueda	accidentado
+Relation	T1	T4	NoRel	true	accidente	accidentado
+Relation	T1	T5	NoRel	true	accidente	registro
+Relation	T1	T6	NoRel	true	accidente	construyó
+Relation	T2	T1	NoRel	true	vuelo	accidente
+Relation	T2	T3	NoRel	true	vuelo	búsqueda
+Relation	T2	T9	NoRel	true	vuelo	operado
+Relation	T3	T1	NoRel	true	búsqueda	accidente
+Relation	T3	T2	NoRel	true	búsqueda	vuelo
+Relation	T3	T5	NoRel	true	búsqueda	registro
+Relation	T4	T2	NoRel	true	accidentado	vuelo
+Relation	T4	T5	NoRel	true	accidentado	registro
+Relation	T4	T7	NoRel	true	accidentado	Voló
+Relation	T5	T2	NoRel	true	registro	vuelo
+Relation	T5	T4	NoRel	true	registro	accidentado
+Relation	T5	T6	NoRel	true	registro	construyó
+Relation	T6	T8	NoRel	true	construyó	entregado
+Relation	T7	T5	NoRel	true	Voló	registro
+Relation	T7	T6	NoRel	true	Voló	construyó
+Relation	T7	T9	NoRel	true	Voló	operado
+Relation	T8	T1	NoRel	true	entregado	accidente
+Relation	T8	T2	NoRel	true	entregado	vuelo
+Relation	T8	T3	NoRel	true	entregado	búsqueda
+Relation	T8	T4	NoRel	true	entregado	accidentado
+Relation	T8	T7	NoRel	true	entregado	Voló
+Relation	T9	T3	NoRel	true	operado	búsqueda
+Relation	T9	T6	NoRel	true	operado	construyó

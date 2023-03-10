@@ -1,0 +1,53 @@
+Text	1917'deki son yaralanması ( ikinci ) çok ağır olduğundan , Hosenfeld'ın cepheye gönderilmemesine yönelik kararı alındı .	Gazi statüsüne girdiğinden ve orduya kattığı hizmetten ötürü 1917'nin sonlarında II'nci Sınıf Demir Haç Nişanı'na layık görüldü .	1918'de harp sona erdi ve Almanya yenildi .	Hosenfeld'sa 1933'te SA'e çağrılıncaya dek asıl mesleği olan ortaokul öğretmenliğini yapmaya başladı .	Nazi Partisi'nin yükselişiyle birlikte ülkedeki askerî ve politik hareketlilikler geri geldi .
+Event	T0	yaralanması	EVENT	14
+Event	T2	görüldü	EVENT	241
+Event	T3	yenildi	EVENT	285
+Event	T4	başladı	EVENT	388
+Event	T5	yükselişiyle	EVENT	415
+Event	T6	geldi	EVENT	485
+Event	T1	kararı alındı	EVENT	105
+Event	T7	girdiğinden	EVENT	136
+Event	T8	hizmetten	EVENT	166
+Event	T9	harp	EVENT	259
+Event	T10	çağrılıncaya	EVENT	321
+Relation	T0	T1	CauseEffect	true	yaralanması	kararı alındı
+Relation	T1	T0	EffectCause	true	kararı alındı	yaralanması
+Relation	T7	T2	CauseEffect	true	girdiğinden	görüldü
+Relation	T2	T7	EffectCause	true	görüldü	girdiğinden
+Relation	T8	T2	CauseEffect	true	hizmetten	görüldü
+Relation	T2	T8	EffectCause	true	görüldü	hizmetten
+Relation	T9	T0	CauseEffect	true	harp	yaralanması
+Relation	T0	T9	EffectCause	true	yaralanması	harp
+Relation	T5	T6	CauseEffect	true	yükselişiyle	geldi
+Relation	T6	T5	EffectCause	true	geldi	yükselişiyle
+Relation	T0	T2	NoRel	true	yaralanması	görüldü
+Relation	T0	T5	NoRel	true	yaralanması	yükselişiyle
+Relation	T0	T6	NoRel	true	yaralanması	geldi
+Relation	T1	T4	NoRel	true	kararı alındı	başladı
+Relation	T1	T8	NoRel	true	kararı alındı	hizmetten
+Relation	T1	T9	NoRel	true	kararı alındı	harp
+Relation	T10	T5	NoRel	true	çağrılıncaya	yükselişiyle
+Relation	T10	T8	NoRel	true	çağrılıncaya	hizmetten
+Relation	T10	T9	NoRel	true	çağrılıncaya	harp
+Relation	T2	T4	NoRel	true	görüldü	başladı
+Relation	T2	T5	NoRel	true	görüldü	yükselişiyle
+Relation	T2	T9	NoRel	true	görüldü	harp
+Relation	T3	T1	NoRel	true	yenildi	kararı alındı
+Relation	T3	T2	NoRel	true	yenildi	görüldü
+Relation	T3	T5	NoRel	true	yenildi	yükselişiyle
+Relation	T3	T8	NoRel	true	yenildi	hizmetten
+Relation	T3	T9	NoRel	true	yenildi	harp
+Relation	T4	T3	NoRel	true	başladı	yenildi
+Relation	T4	T7	NoRel	true	başladı	girdiğinden
+Relation	T5	T4	NoRel	true	yükselişiyle	başladı
+Relation	T6	T10	NoRel	true	geldi	çağrılıncaya
+Relation	T6	T2	NoRel	true	geldi	görüldü
+Relation	T6	T8	NoRel	true	geldi	hizmetten
+Relation	T7	T1	NoRel	true	girdiğinden	kararı alındı
+Relation	T7	T3	NoRel	true	girdiğinden	yenildi
+Relation	T8	T1	NoRel	true	hizmetten	kararı alındı
+Relation	T8	T10	NoRel	true	hizmetten	çağrılıncaya
+Relation	T9	T1	NoRel	true	harp	kararı alındı
+Relation	T9	T10	NoRel	true	harp	çağrılıncaya
+Relation	T9	T5	NoRel	true	harp	yükselişiyle
+Relation	T9	T6	NoRel	true	harp	geldi

@@ -1,0 +1,67 @@
+Text	31 Temmuz 1905'te Kırım'daki Kerç'de bir pogromda , belediye başkanı , polise Yahudi savunma grubuna ateş etmesini emretti ve iki savaşçı öldürüldü .	Pogrom , görünüşte bu amaçla getirilen liman işçileri tarafından yürütüldü .	17 Ekim 1905 tarihli Çar Manifestosu'nun yayınlanmasının ardından , bugünkü Ukrayna'da 660 kasabada , Soluk yerleşim'in Güney ve Güneydoğu bölgelerinde pogromlar gerçekleştirildi .	Buna karşılık , günümüz Litvanya'sında pogrom yoktu .	Ayrıca Belarus veya Rusya'da çok az olay meydana geldi .
+Event	T0	emretti	EVENT	115
+Event	T1	öldürüldü	EVENT	138
+Event	T2	yürütüldü	EVENT	215
+Event	T3	gerçekleştirildi	EVENT	389
+Event	T4	geldi	EVENT	511
+Event	T5	pogromda	EVENT	41
+Event	T6	getirilen	EVENT	179
+Event	T7	Pogrom	EVENT	150
+Event	T8	Manifestosu'nun	EVENT	252
+Event	T9	yayınlanmasının	EVENT	268
+Event	T10	pogromlar	EVENT	379
+Event	T11	pogrom	EVENT	447
+Event	T12	olay	EVENT	498
+Relation	T0	T1	CauseEffect	true	emretti	öldürüldü
+Relation	T1	T0	EffectCause	true	öldürüldü	emretti
+Relation	T8	T10	CauseEffect	true	Manifestosu'nun	pogromlar
+Relation	T10	T8	EffectCause	true	pogromlar	Manifestosu'nun
+Relation	T0	T5	NoRel	true	emretti	pogromda
+Relation	T1	T11	NoRel	true	öldürüldü	pogrom
+Relation	T1	T12	NoRel	true	öldürüldü	olay
+Relation	T1	T7	NoRel	true	öldürüldü	Pogrom
+Relation	T1	T8	NoRel	true	öldürüldü	Manifestosu'nun
+Relation	T1	T9	NoRel	true	öldürüldü	yayınlanmasının
+Relation	T10	T0	NoRel	true	pogromlar	emretti
+Relation	T10	T2	NoRel	true	pogromlar	yürütüldü
+Relation	T10	T4	NoRel	true	pogromlar	geldi
+Relation	T10	T6	NoRel	true	pogromlar	getirilen
+Relation	T11	T4	NoRel	true	pogrom	geldi
+Relation	T11	T6	NoRel	true	pogrom	getirilen
+Relation	T11	T8	NoRel	true	pogrom	Manifestosu'nun
+Relation	T12	T0	NoRel	true	olay	emretti
+Relation	T12	T7	NoRel	true	olay	Pogrom
+Relation	T12	T8	NoRel	true	olay	Manifestosu'nun
+Relation	T2	T10	NoRel	true	yürütüldü	pogromlar
+Relation	T2	T12	NoRel	true	yürütüldü	olay
+Relation	T2	T5	NoRel	true	yürütüldü	pogromda
+Relation	T2	T6	NoRel	true	yürütüldü	getirilen
+Relation	T2	T8	NoRel	true	yürütüldü	Manifestosu'nun
+Relation	T3	T10	NoRel	true	gerçekleştirildi	pogromlar
+Relation	T3	T11	NoRel	true	gerçekleştirildi	pogrom
+Relation	T3	T8	NoRel	true	gerçekleştirildi	Manifestosu'nun
+Relation	T3	T9	NoRel	true	gerçekleştirildi	yayınlanmasının
+Relation	T4	T1	NoRel	true	geldi	öldürüldü
+Relation	T4	T11	NoRel	true	geldi	pogrom
+Relation	T4	T5	NoRel	true	geldi	pogromda
+Relation	T5	T1	NoRel	true	pogromda	öldürüldü
+Relation	T5	T11	NoRel	true	pogromda	pogrom
+Relation	T5	T12	NoRel	true	pogromda	olay
+Relation	T5	T2	NoRel	true	pogromda	yürütüldü
+Relation	T5	T6	NoRel	true	pogromda	getirilen
+Relation	T5	T8	NoRel	true	pogromda	Manifestosu'nun
+Relation	T6	T0	NoRel	true	getirilen	emretti
+Relation	T6	T10	NoRel	true	getirilen	pogromlar
+Relation	T6	T3	NoRel	true	getirilen	gerçekleştirildi
+Relation	T6	T8	NoRel	true	getirilen	Manifestosu'nun
+Relation	T7	T10	NoRel	true	Pogrom	pogromlar
+Relation	T7	T11	NoRel	true	Pogrom	pogrom
+Relation	T7	T3	NoRel	true	Pogrom	gerçekleştirildi
+Relation	T7	T4	NoRel	true	Pogrom	geldi
+Relation	T7	T8	NoRel	true	Pogrom	Manifestosu'nun
+Relation	T8	T1	NoRel	true	Manifestosu'nun	öldürüldü
+Relation	T8	T11	NoRel	true	Manifestosu'nun	pogrom
+Relation	T8	T3	NoRel	true	Manifestosu'nun	gerçekleştirildi
+Relation	T8	T7	NoRel	true	Manifestosu'nun	Pogrom
+Relation	T9	T12	NoRel	true	yayınlanmasının	olay
+Relation	T9	T2	NoRel	true	yayınlanmasının	yürütüldü

@@ -1,0 +1,84 @@
+Text	Kız öldükten kısa bir süre sonra annesinin de ateşi yükseldi , durumu yetkililere bildiren doktorlar arasında alarma geçti .	Kadın 3 Mayıs'ta öldü ve kocası Salvatore de hastalandı ve sonunda öldü .	4 Mayıs'ta Sağlık Kurulu , halk sağlığının tehlikede olduğuna dair bir uyarı yayınladı ve bir gün sonra hastalığın veba olduğunu doğruladı .	Panik Valetta'ya yayıldı ve birçok insan şehri terk etti ve adaları terk etmek için kırsal bölgelere gitti veya gemilere bindi .	İngilizlerin çoğu ve bazı Maltalılar kendilerini evlerinde izole ettiler .
+Event	T0	öldükten	EVENT	4
+Event	T1	yükseldi	EVENT	52
+Event	T2	geçti	EVENT	117
+Event	T3	öldü	EVENT	142
+Event	T4	hastalandı	EVENT	170
+Event	T5	öldü	EVENT	192
+Event	T6	yayınladı	EVENT	276
+Event	T7	doğruladı	EVENT	328
+Event	T8	Panik	EVENT	340
+Event	T9	yayıldı	EVENT	357
+Event	T10	etti	EVENT	392
+Event	T11	gitti	EVENT	441
+Event	T12	bindi	EVENT	461
+Event	T13	ettiler	EVENT	534
+Relation	T1	T2	CauseEffect	true	yükseldi	geçti
+Relation	T2	T1	EffectCause	true	geçti	yükseldi
+Relation	T1	T3	CauseEffect	true	yükseldi	öldü
+Relation	T3	T1	EffectCause	true	öldü	yükseldi
+Relation	T4	T5	CauseEffect	true	hastalandı	öldü
+Relation	T5	T4	EffectCause	true	öldü	hastalandı
+Relation	T2	T6	CauseEffect	true	geçti	yayınladı
+Relation	T6	T2	EffectCause	true	yayınladı	geçti
+Relation	T6	T7	CauseEffect	true	yayınladı	doğruladı
+Relation	T7	T6	EffectCause	true	doğruladı	yayınladı
+Relation	T8	T9	CauseEffect	true	Panik	yayıldı
+Relation	T9	T8	EffectCause	true	yayıldı	Panik
+Relation	T9	T10	CauseEffect	true	yayıldı	etti
+Relation	T10	T9	EffectCause	true	etti	yayıldı
+Relation	T10	T11	CauseEffect	true	etti	gitti
+Relation	T11	T10	EffectCause	true	gitti	etti
+Relation	T10	T12	CauseEffect	true	etti	bindi
+Relation	T12	T10	EffectCause	true	bindi	etti
+Relation	T7	T8	CauseEffect	true	doğruladı	Panik
+Relation	T8	T7	EffectCause	true	Panik	doğruladı
+Relation	T7	T13	CauseEffect	true	doğruladı	ettiler
+Relation	T13	T7	EffectCause	true	ettiler	doğruladı
+Relation	T0	T3	NoRel	true	öldükten	öldü
+Relation	T0	T5	NoRel	true	öldükten	öldü
+Relation	T0	T7	NoRel	true	öldükten	doğruladı
+Relation	T1	T0	NoRel	true	yükseldi	öldükten
+Relation	T1	T13	NoRel	true	yükseldi	ettiler
+Relation	T1	T4	NoRel	true	yükseldi	hastalandı
+Relation	T1	T5	NoRel	true	yükseldi	öldü
+Relation	T1	T8	NoRel	true	yükseldi	Panik
+Relation	T10	T0	NoRel	true	etti	öldükten
+Relation	T10	T3	NoRel	true	etti	öldü
+Relation	T10	T8	NoRel	true	etti	Panik
+Relation	T11	T0	NoRel	true	gitti	öldükten
+Relation	T11	T1	NoRel	true	gitti	yükseldi
+Relation	T11	T2	NoRel	true	gitti	geçti
+Relation	T11	T6	NoRel	true	gitti	yayınladı
+Relation	T11	T9	NoRel	true	gitti	yayıldı
+Relation	T12	T4	NoRel	true	bindi	hastalandı
+Relation	T13	T0	NoRel	true	ettiler	öldükten
+Relation	T13	T11	NoRel	true	ettiler	gitti
+Relation	T2	T0	NoRel	true	geçti	öldükten
+Relation	T2	T12	NoRel	true	geçti	bindi
+Relation	T2	T4	NoRel	true	geçti	hastalandı
+Relation	T2	T7	NoRel	true	geçti	doğruladı
+Relation	T3	T10	NoRel	true	öldü	etti
+Relation	T3	T11	NoRel	true	öldü	gitti
+Relation	T3	T2	NoRel	true	öldü	geçti
+Relation	T4	T0	NoRel	true	hastalandı	öldükten
+Relation	T4	T1	NoRel	true	hastalandı	yükseldi
+Relation	T4	T13	NoRel	true	hastalandı	ettiler
+Relation	T4	T6	NoRel	true	hastalandı	yayınladı
+Relation	T4	T7	NoRel	true	hastalandı	doğruladı
+Relation	T4	T8	NoRel	true	hastalandı	Panik
+Relation	T5	T1	NoRel	true	öldü	yükseldi
+Relation	T5	T11	NoRel	true	öldü	gitti
+Relation	T5	T12	NoRel	true	öldü	bindi
+Relation	T5	T8	NoRel	true	öldü	Panik
+Relation	T6	T1	NoRel	true	yayınladı	yükseldi
+Relation	T6	T4	NoRel	true	yayınladı	hastalandı
+Relation	T7	T0	NoRel	true	doğruladı	öldükten
+Relation	T7	T11	NoRel	true	doğruladı	gitti
+Relation	T7	T3	NoRel	true	doğruladı	öldü
+Relation	T8	T10	NoRel	true	Panik	etti
+Relation	T8	T2	NoRel	true	Panik	geçti
+Relation	T8	T3	NoRel	true	Panik	öldü
+Relation	T9	T1	NoRel	true	yayıldı	yükseldi
+Relation	T9	T11	NoRel	true	yayıldı	gitti
+Relation	T9	T6	NoRel	true	yayıldı	yayınladı

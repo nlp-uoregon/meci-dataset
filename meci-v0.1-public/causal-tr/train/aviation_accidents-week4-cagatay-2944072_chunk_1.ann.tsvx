@@ -1,0 +1,78 @@
+Text	Yan rüzgarı telafi etmek için pilotlar , hafif sağa yatmış uçağı indirmeye çalıştı .	Buna ek olarak , yaklaşık ile normalden daha hızlı indiler .	Kılavuza göre bu , bildirilen hava koşulları için doğru prosedürdü , ancak hava raporu güncel değildi .	Yere temas anında , varsayılan yan rüzgarın , arka rüzgar olduğu ortaya çıktı .	Esmekte olan arka rüzgar ( yaklaşık hızında ) ve artan hız nedeniyle uçak yere yaklaşık olarak ve normal temas noktasının çok ötesinde inişe geçti .
+Event	T0	çalıştı	EVENT	75
+Event	T1	indiler	EVENT	136
+Event	T2	prosedürdü	EVENT	202
+Event	T3	temas	EVENT	255
+Event	T4	çıktı	EVENT	322
+Event	T5	geçti	EVENT	471
+Event	T6	yatmış	EVENT	52
+Event	T7	indirmeye	EVENT	65
+Event	T8	rüzgar	EVENT	301
+Event	T9	rüzgarın	EVENT	285
+Event	T10	rüzgarı	EVENT	4
+Event	T11	telafi	EVENT	12
+Event	T12	rüzgar	EVENT	348
+Event	T13	artan	EVENT	379
+Relation	T11	T6	CauseEffect	true	telafi	yatmış
+Relation	T6	T11	EffectCause	true	yatmış	telafi
+Relation	T12	T13	CauseEffect	true	rüzgar	artan
+Relation	T13	T12	EffectCause	true	artan	rüzgar
+Relation	T8	T13	CauseEffect	true	rüzgar	artan
+Relation	T13	T8	EffectCause	true	artan	rüzgar
+Relation	T13	T5	CauseEffect	true	artan	geçti
+Relation	T5	T13	EffectCause	true	geçti	artan
+Relation	T0	T1	NoRel	true	çalıştı	indiler
+Relation	T0	T13	NoRel	true	çalıştı	artan
+Relation	T0	T5	NoRel	true	çalıştı	geçti
+Relation	T0	T7	NoRel	true	çalıştı	indirmeye
+Relation	T0	T8	NoRel	true	çalıştı	rüzgar
+Relation	T1	T11	NoRel	true	indiler	telafi
+Relation	T1	T5	NoRel	true	indiler	geçti
+Relation	T1	T6	NoRel	true	indiler	yatmış
+Relation	T1	T7	NoRel	true	indiler	indirmeye
+Relation	T10	T0	NoRel	true	rüzgarı	çalıştı
+Relation	T10	T1	NoRel	true	rüzgarı	indiler
+Relation	T10	T13	NoRel	true	rüzgarı	artan
+Relation	T10	T3	NoRel	true	rüzgarı	temas
+Relation	T10	T4	NoRel	true	rüzgarı	çıktı
+Relation	T10	T5	NoRel	true	rüzgarı	geçti
+Relation	T11	T0	NoRel	true	telafi	çalıştı
+Relation	T11	T3	NoRel	true	telafi	temas
+Relation	T11	T7	NoRel	true	telafi	indirmeye
+Relation	T12	T4	NoRel	true	rüzgar	çıktı
+Relation	T12	T8	NoRel	true	rüzgar	rüzgar
+Relation	T13	T0	NoRel	true	artan	çalıştı
+Relation	T13	T7	NoRel	true	artan	indirmeye
+Relation	T13	T9	NoRel	true	artan	rüzgarın
+Relation	T2	T0	NoRel	true	prosedürdü	çalıştı
+Relation	T2	T10	NoRel	true	prosedürdü	rüzgarı
+Relation	T2	T12	NoRel	true	prosedürdü	rüzgar
+Relation	T2	T9	NoRel	true	prosedürdü	rüzgarın
+Relation	T4	T12	NoRel	true	çıktı	rüzgar
+Relation	T4	T13	NoRel	true	çıktı	artan
+Relation	T4	T6	NoRel	true	çıktı	yatmış
+Relation	T4	T7	NoRel	true	çıktı	indirmeye
+Relation	T5	T0	NoRel	true	geçti	çalıştı
+Relation	T5	T11	NoRel	true	geçti	telafi
+Relation	T5	T4	NoRel	true	geçti	çıktı
+Relation	T5	T8	NoRel	true	geçti	rüzgar
+Relation	T6	T1	NoRel	true	yatmış	indiler
+Relation	T6	T13	NoRel	true	yatmış	artan
+Relation	T6	T8	NoRel	true	yatmış	rüzgar
+Relation	T7	T0	NoRel	true	indirmeye	çalıştı
+Relation	T7	T10	NoRel	true	indirmeye	rüzgarı
+Relation	T7	T12	NoRel	true	indirmeye	rüzgar
+Relation	T7	T3	NoRel	true	indirmeye	temas
+Relation	T7	T4	NoRel	true	indirmeye	çıktı
+Relation	T7	T5	NoRel	true	indirmeye	geçti
+Relation	T7	T8	NoRel	true	indirmeye	rüzgar
+Relation	T8	T1	NoRel	true	rüzgar	indiler
+Relation	T8	T12	NoRel	true	rüzgar	rüzgar
+Relation	T8	T3	NoRel	true	rüzgar	temas
+Relation	T8	T4	NoRel	true	rüzgar	çıktı
+Relation	T8	T9	NoRel	true	rüzgar	rüzgarın
+Relation	T9	T0	NoRel	true	rüzgarın	çalıştı
+Relation	T9	T1	NoRel	true	rüzgarın	indiler
+Relation	T9	T11	NoRel	true	rüzgarın	telafi
+Relation	T9	T3	NoRel	true	rüzgarın	temas
+Relation	T9	T7	NoRel	true	rüzgarın	indirmeye

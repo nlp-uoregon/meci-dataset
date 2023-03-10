@@ -1,0 +1,71 @@
+Text	ایسی ملازمت کے دوران تشدد سے موت کی خبریں بھی آتی رہتی ہیں اور اکثر یا تو قانونی کارروائی نہیں ہوتی یا پھر خاطیوں کو مناسب سزائیں نہیں دی جاتی ہیں ۔	کچھ باپ اپنے کم سن بچوں کو کام سکھانے کے لیے کسی کاریگر کے پاس بغیر اجرت روزانہ بھیج دیتے ہیں کہ شاید اس طرح بچہ کوئی ہنر سیکھ لے گا ۔	ایسے کاریگروں کو استاد کہا جاتا ہے ۔	یہ بچے بھی اکثر استاد کے تشدد کا نشانہ بنتے ہیں اور زیادہ تر کوئی ہنر سیکھنے میں بھی ناکام رہتے ہیں ۔	پاکستان کے صوبۂ پنجاب میں بچوں کی مزدوری روکنے کے لیے حکومت نے سات کروڑ کی آبادی کے میں 2005ء تک صرف چوراسی انسپکٹر تعینات کیے تھے ۔
+Event	T0	ملازمت	EVENT	5
+Event	T1	تشدد	EVENT	21
+Event	T2	موت	EVENT	29
+Event	T3	خبریں	EVENT	36
+Event	T4	آتی	EVENT	46
+Event	T5	کارروائی	EVENT	81
+Event	T6	سیکھ	EVENT	271
+Event	T7	کہا	EVENT	307
+Event	T8	تشدد	EVENT	346
+Event	T9	بنتے	EVENT	360
+Event	T10	سیکھنے	EVENT	391
+Event	T11	روکنے	EVENT	464
+Event	T12	کیے	EVENT	546
+Relation	T1	T2	CauseEffect	true	تشدد	موت
+Relation	T2	T1	EffectCause	true	موت	تشدد
+Relation	T2	T3	CauseEffect	true	موت	خبریں
+Relation	T3	T2	EffectCause	true	خبریں	موت
+Relation	T8	T9	CauseEffect	true	تشدد	بنتے
+Relation	T9	T8	EffectCause	true	بنتے	تشدد
+Relation	T11	T12	CauseEffect	true	روکنے	کیے
+Relation	T12	T11	EffectCause	true	کیے	روکنے
+Relation	T0	T1	NoRel	true	ملازمت	تشدد
+Relation	T0	T10	NoRel	true	ملازمت	سیکھنے
+Relation	T0	T11	NoRel	true	ملازمت	روکنے
+Relation	T0	T12	NoRel	true	ملازمت	کیے
+Relation	T0	T5	NoRel	true	ملازمت	کارروائی
+Relation	T0	T6	NoRel	true	ملازمت	سیکھ
+Relation	T1	T11	NoRel	true	تشدد	روکنے
+Relation	T1	T3	NoRel	true	تشدد	خبریں
+Relation	T1	T7	NoRel	true	تشدد	کہا
+Relation	T1	T8	NoRel	true	تشدد	تشدد
+Relation	T1	T9	NoRel	true	تشدد	بنتے
+Relation	T10	T1	NoRel	true	سیکھنے	تشدد
+Relation	T10	T3	NoRel	true	سیکھنے	خبریں
+Relation	T10	T6	NoRel	true	سیکھنے	سیکھ
+Relation	T10	T9	NoRel	true	سیکھنے	بنتے
+Relation	T11	T2	NoRel	true	روکنے	موت
+Relation	T11	T6	NoRel	true	روکنے	سیکھ
+Relation	T12	T2	NoRel	true	کیے	موت
+Relation	T12	T3	NoRel	true	کیے	خبریں
+Relation	T12	T6	NoRel	true	کیے	سیکھ
+Relation	T2	T5	NoRel	true	موت	کارروائی
+Relation	T2	T6	NoRel	true	موت	سیکھ
+Relation	T2	T7	NoRel	true	موت	کہا
+Relation	T3	T11	NoRel	true	خبریں	روکنے
+Relation	T3	T5	NoRel	true	خبریں	کارروائی
+Relation	T3	T7	NoRel	true	خبریں	کہا
+Relation	T3	T9	NoRel	true	خبریں	بنتے
+Relation	T4	T0	NoRel	true	آتی	ملازمت
+Relation	T4	T1	NoRel	true	آتی	تشدد
+Relation	T4	T11	NoRel	true	آتی	روکنے
+Relation	T4	T8	NoRel	true	آتی	تشدد
+Relation	T5	T1	NoRel	true	کارروائی	تشدد
+Relation	T5	T11	NoRel	true	کارروائی	روکنے
+Relation	T5	T3	NoRel	true	کارروائی	خبریں
+Relation	T6	T11	NoRel	true	سیکھ	روکنے
+Relation	T6	T3	NoRel	true	سیکھ	خبریں
+Relation	T7	T0	NoRel	true	کہا	ملازمت
+Relation	T7	T1	NoRel	true	کہا	تشدد
+Relation	T7	T10	NoRel	true	کہا	سیکھنے
+Relation	T7	T11	NoRel	true	کہا	روکنے
+Relation	T7	T5	NoRel	true	کہا	کارروائی
+Relation	T7	T8	NoRel	true	کہا	تشدد
+Relation	T7	T9	NoRel	true	کہا	بنتے
+Relation	T8	T12	NoRel	true	تشدد	کیے
+Relation	T8	T2	NoRel	true	تشدد	موت
+Relation	T8	T3	NoRel	true	تشدد	خبریں
+Relation	T8	T7	NoRel	true	تشدد	کہا
+Relation	T9	T1	NoRel	true	بنتے	تشدد
+Relation	T9	T4	NoRel	true	بنتے	آتی

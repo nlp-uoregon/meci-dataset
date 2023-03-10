@@ -1,0 +1,55 @@
+Text	Two near - casualties of the same bomb were Assistant Secretary of the Navy Franklin Delano Roosevelt and his wife Eleanor , then living across the street from Palmer .	They had passed the house just minutes before the explosion and their residence was close enough that one of the bomber 's body parts landed on their doorstep .	Each of the bombs was delivered with several copies of a pink flyer , titled " Plain Words " , that read as such :	War , Class war , and you were the first to wage it under the cover of the powerful institutions you call order , in the darkness of your laws .	There will have to be bloodshed ; we will not dodge ; there will have to be murder : we will kill , because it is necessary ; there will have to be destruction ; we will destroy to rid the world of your tyrannical institutions .
+Event	T0	casualties	EVENT	11
+Event	T1	bomb	EVENT	34
+Event	T2	passed	EVENT	178
+Event	T3	explosion	EVENT	219
+Event	T4	landed	EVENT	303
+Event	T5	delivered	EVENT	352
+Event	T6	titled	EVENT	400
+Event	T7	read	EVENT	430
+Event	T8	wage	EVENT	489
+Event	T9	call	EVENT	546
+Event	T10	bloodshed	EVENT	612
+Event	T11	murder	EVENT	666
+Event	T12	kill	EVENT	683
+Event	T13	destruction	EVENT	738
+Event	T14	destroy	EVENT	760
+Event	T15	rid	EVENT	771
+Event	T16	close	EVENT	253
+Event	T17	necessary	EVENT	704
+Relation	T16	T4	CauseEffect	true	close	landed
+Relation	T4	T16	EffectCause	true	landed	close
+Relation	T17	T12	CauseEffect	true	necessary	kill
+Relation	T12	T17	EffectCause	true	kill	necessary
+Relation	T14	T15	CauseEffect	true	destroy	rid
+Relation	T15	T14	EffectCause	true	rid	destroy
+Relation	T0	T11	NoRel	true	casualties	murder
+Relation	T0	T3	NoRel	true	casualties	explosion
+Relation	T1	T3	NoRel	true	bomb	explosion
+Relation	T1	T4	NoRel	true	bomb	landed
+Relation	T10	T1	NoRel	true	bloodshed	bomb
+Relation	T10	T4	NoRel	true	bloodshed	landed
+Relation	T11	T9	NoRel	true	murder	call
+Relation	T12	T13	NoRel	true	kill	destruction
+Relation	T12	T14	NoRel	true	kill	destroy
+Relation	T13	T0	NoRel	true	destruction	casualties
+Relation	T14	T16	NoRel	true	destroy	close
+Relation	T14	T3	NoRel	true	destroy	explosion
+Relation	T16	T15	NoRel	true	close	rid
+Relation	T17	T7	NoRel	true	necessary	read
+Relation	T2	T14	NoRel	true	passed	destroy
+Relation	T2	T7	NoRel	true	passed	read
+Relation	T3	T12	NoRel	true	explosion	kill
+Relation	T4	T13	NoRel	true	landed	destruction
+Relation	T4	T3	NoRel	true	landed	explosion
+Relation	T5	T10	NoRel	true	delivered	bloodshed
+Relation	T5	T14	NoRel	true	delivered	destroy
+Relation	T6	T1	NoRel	true	titled	bomb
+Relation	T6	T14	NoRel	true	titled	destroy
+Relation	T6	T2	NoRel	true	titled	passed
+Relation	T6	T3	NoRel	true	titled	explosion
+Relation	T7	T1	NoRel	true	read	bomb
+Relation	T7	T17	NoRel	true	read	necessary
+Relation	T8	T13	NoRel	true	wage	destruction
+Relation	T8	T15	NoRel	true	wage	rid
+Relation	T9	T0	NoRel	true	call	casualties

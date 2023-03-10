@@ -1,0 +1,38 @@
+Text	220px | küçükresim | sağ GJON MARKAGJONI veya CON MARKA CONI , Arnavut hükümetine karşı ayaklanan Arnavut kabile lideri .	1921 yılında Esadistler ile ittifak yaparak Prizren'de Merdita Cumhuriyeti'ni kurdu ve başkanı olarak devletin kısa varlığı boyunca görev yaptı .	Ne var ki , kurduğu cumhuriyet kendi vatandaşları ya da diğer ülkeler tarafından tanınmadı .	Markagjoni'nin isyanı Arnavutluk hükûmeti tarafından bir yıl sonra bastırıldı .	Markagjoni Yugoslavya'ya kaçtı , ama daha sonra ülkesine dönerek aktif siyaset yaptı .
+Event	T0	ittifak	EVENT	150
+Event	T1	kurdu	EVENT	200
+Event	T2	yaptı	EVENT	260
+Event	T3	isyanı	EVENT	376
+Event	T4	bastırıldı	EVENT	428
+Event	T5	kaçtı	EVENT	466
+Event	T6	yaptı	EVENT	520
+Event	T7	ayaklanan	EVENT	88
+Relation	T7	T4	CauseEffect	true	ayaklanan	bastırıldı
+Relation	T4	T7	EffectCause	true	bastırıldı	ayaklanan
+Relation	T3	T4	CauseEffect	true	isyanı	bastırıldı
+Relation	T4	T3	EffectCause	true	bastırıldı	isyanı
+Relation	T4	T5	CauseEffect	true	bastırıldı	kaçtı
+Relation	T5	T4	EffectCause	true	kaçtı	bastırıldı
+Relation	T5	T6	CauseEffect	true	kaçtı	yaptı
+Relation	T6	T5	EffectCause	true	yaptı	kaçtı
+Relation	T0	T4	NoRel	true	ittifak	bastırıldı
+Relation	T1	T0	NoRel	true	kurdu	ittifak
+Relation	T1	T4	NoRel	true	kurdu	bastırıldı
+Relation	T1	T6	NoRel	true	kurdu	yaptı
+Relation	T1	T7	NoRel	true	kurdu	ayaklanan
+Relation	T2	T3	NoRel	true	yaptı	isyanı
+Relation	T2	T4	NoRel	true	yaptı	bastırıldı
+Relation	T2	T7	NoRel	true	yaptı	ayaklanan
+Relation	T3	T1	NoRel	true	isyanı	kurdu
+Relation	T3	T2	NoRel	true	isyanı	yaptı
+Relation	T3	T5	NoRel	true	isyanı	kaçtı
+Relation	T3	T7	NoRel	true	isyanı	ayaklanan
+Relation	T4	T1	NoRel	true	bastırıldı	kurdu
+Relation	T5	T0	NoRel	true	kaçtı	ittifak
+Relation	T5	T1	NoRel	true	kaçtı	kurdu
+Relation	T5	T2	NoRel	true	kaçtı	yaptı
+Relation	T5	T7	NoRel	true	kaçtı	ayaklanan
+Relation	T6	T0	NoRel	true	yaptı	ittifak
+Relation	T6	T1	NoRel	true	yaptı	kurdu
+Relation	T6	T4	NoRel	true	yaptı	bastırıldı
+Relation	T6	T7	NoRel	true	yaptı	ayaklanan

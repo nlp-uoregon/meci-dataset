@@ -1,0 +1,60 @@
+Text	La AD de la FAA tiene efecto solamente en aquellos aviones que estén registrados en los Estados Unidos , ya que la jurisdicción de la FAA se limita al territorio estadounidense .	Los países con acuerdos de reciprocidad en aviación pueden también cumplir la directiva , pero el resto de naciones no están obligadas a seguir esta norma .	Como resultado del incidente , la FAA investigó las técnicas de fabricado de Boeing para descubrir si en algún momento se produce algún fallo que pueda propiciar estos problemas .	El avión que sufrió el incidente no tenía un número demasiado elevado de rotaciones .	Boeing cooperó con la FAA en la investigación del incidente .
+Event	T0	efecto	EVENT	22
+Event	T1	registrados	EVENT	69
+Event	T2	incidente	EVENT	355
+Event	T3	investigó	EVENT	374
+Event	T4	fabricado	EVENT	400
+Event	T5	descubrir	EVENT	425
+Event	T6	fallo	EVENT	472
+Event	T7	sufrió	EVENT	529
+Event	T8	incidente	EVENT	539
+Event	T9	cooperó	EVENT	609
+Event	T10	investigación	EVENT	634
+Event	T11	incidente	EVENT	652
+Relation	T2	T3	CauseEffect	true	incidente	investigó
+Relation	T3	T2	EffectCause	true	investigó	incidente
+Relation	T0	T10	NoRel	true	efecto	investigación
+Relation	T0	T11	NoRel	true	efecto	incidente
+Relation	T0	T2	NoRel	true	efecto	incidente
+Relation	T0	T4	NoRel	true	efecto	fabricado
+Relation	T0	T6	NoRel	true	efecto	fallo
+Relation	T0	T7	NoRel	true	efecto	sufrió
+Relation	T0	T8	NoRel	true	efecto	incidente
+Relation	T1	T0	NoRel	true	registrados	efecto
+Relation	T1	T2	NoRel	true	registrados	incidente
+Relation	T1	T4	NoRel	true	registrados	fabricado
+Relation	T1	T6	NoRel	true	registrados	fallo
+Relation	T10	T11	NoRel	true	investigación	incidente
+Relation	T10	T2	NoRel	true	investigación	incidente
+Relation	T10	T3	NoRel	true	investigación	investigó
+Relation	T10	T4	NoRel	true	investigación	fabricado
+Relation	T11	T0	NoRel	true	incidente	efecto
+Relation	T11	T3	NoRel	true	incidente	investigó
+Relation	T11	T4	NoRel	true	incidente	fabricado
+Relation	T2	T0	NoRel	true	incidente	efecto
+Relation	T2	T1	NoRel	true	incidente	registrados
+Relation	T2	T4	NoRel	true	incidente	fabricado
+Relation	T2	T5	NoRel	true	incidente	descubrir
+Relation	T2	T6	NoRel	true	incidente	fallo
+Relation	T3	T0	NoRel	true	investigó	efecto
+Relation	T3	T1	NoRel	true	investigó	registrados
+Relation	T3	T10	NoRel	true	investigó	investigación
+Relation	T3	T9	NoRel	true	investigó	cooperó
+Relation	T4	T3	NoRel	true	fabricado	investigó
+Relation	T4	T9	NoRel	true	fabricado	cooperó
+Relation	T5	T2	NoRel	true	descubrir	incidente
+Relation	T5	T3	NoRel	true	descubrir	investigó
+Relation	T5	T9	NoRel	true	descubrir	cooperó
+Relation	T6	T1	NoRel	true	fallo	registrados
+Relation	T6	T3	NoRel	true	fallo	investigó
+Relation	T6	T5	NoRel	true	fallo	descubrir
+Relation	T6	T7	NoRel	true	fallo	sufrió
+Relation	T7	T4	NoRel	true	sufrió	fabricado
+Relation	T7	T5	NoRel	true	sufrió	descubrir
+Relation	T8	T0	NoRel	true	incidente	efecto
+Relation	T8	T1	NoRel	true	incidente	registrados
+Relation	T8	T11	NoRel	true	incidente	incidente
+Relation	T8	T2	NoRel	true	incidente	incidente
+Relation	T8	T4	NoRel	true	incidente	fabricado
+Relation	T9	T1	NoRel	true	cooperó	registrados
+Relation	T9	T5	NoRel	true	cooperó	descubrir

@@ -1,0 +1,80 @@
+Text	18 October : En route to Ukraine with paratroopers , Soviet Air Force Ilyushin Il - 76MD__CCCP -76569_ , c / n 0033448421 , crashes in the Caspian Sea some off Nasosnaya Air Base , Azerbaijan following an in - flight fire and resultant wing separation , killing all 57 on board .	Five minutes after take off , the number one engine failed , caught fire and fell off , but debris from the engine punctured the fuel tank , starting a fire .	The crew attempted to return to the airport , but the fire had weakened the left wing and it separated .	A loss of control resulted and the aircraft crashed .	The accident remains the deadliest in Azerbaijan .
+Event	T0	crashes	EVENT	124
+Event	T1	following	EVENT	192
+Event	T2	fire	EVENT	217
+Event	T3	separation	EVENT	241
+Event	T4	killing	EVENT	254
+Event	T5	failed	EVENT	332
+Event	T6	punctured	EVENT	395
+Event	T7	starting	EVENT	421
+Event	T8	fire	EVENT	432
+Event	T9	attempted	EVENT	448
+Event	T10	return	EVENT	461
+Event	T11	fire	EVENT	493
+Event	T12	weakened	EVENT	502
+Event	T13	separated	EVENT	532
+Event	T14	loss	EVENT	546
+Event	T15	resulted	EVENT	562
+Event	T16	crashed	EVENT	588
+Event	T17	remains	EVENT	611
+Event	T18	deadliest	EVENT	623
+Event	T19	take off	EVENT	299
+Event	T20	fire	EVENT	348
+Event	T21	fell off	EVENT	357
+Relation	T0	T4	CauseEffect	true	crashes	killing
+Relation	T4	T0	EffectCause	true	killing	crashes
+Relation	T11	T12	CauseEffect	true	fire	weakened
+Relation	T12	T11	EffectCause	true	weakened	fire
+Relation	T14	T16	CauseEffect	true	loss	crashed
+Relation	T16	T14	EffectCause	true	crashed	loss
+Relation	T0	T17	NoRel	true	crashes	remains
+Relation	T1	T21	NoRel	true	following	fell off
+Relation	T1	T5	NoRel	true	following	failed
+Relation	T10	T11	NoRel	true	return	fire
+Relation	T10	T18	NoRel	true	return	deadliest
+Relation	T10	T6	NoRel	true	return	punctured
+Relation	T10	T8	NoRel	true	return	fire
+Relation	T11	T14	NoRel	true	fire	loss
+Relation	T11	T19	NoRel	true	fire	take off
+Relation	T12	T7	NoRel	true	weakened	starting
+Relation	T12	T9	NoRel	true	weakened	attempted
+Relation	T13	T2	NoRel	true	separated	fire
+Relation	T13	T4	NoRel	true	separated	killing
+Relation	T13	T5	NoRel	true	separated	failed
+Relation	T14	T0	NoRel	true	loss	crashes
+Relation	T14	T19	NoRel	true	loss	take off
+Relation	T14	T4	NoRel	true	loss	killing
+Relation	T14	T8	NoRel	true	loss	fire
+Relation	T15	T1	NoRel	true	resulted	following
+Relation	T15	T12	NoRel	true	resulted	weakened
+Relation	T15	T6	NoRel	true	resulted	punctured
+Relation	T16	T10	NoRel	true	crashed	return
+Relation	T16	T11	NoRel	true	crashed	fire
+Relation	T16	T18	NoRel	true	crashed	deadliest
+Relation	T16	T20	NoRel	true	crashed	fire
+Relation	T16	T21	NoRel	true	crashed	fell off
+Relation	T16	T8	NoRel	true	crashed	fire
+Relation	T17	T2	NoRel	true	remains	fire
+Relation	T17	T20	NoRel	true	remains	fire
+Relation	T18	T10	NoRel	true	deadliest	return
+Relation	T18	T20	NoRel	true	deadliest	fire
+Relation	T19	T0	NoRel	true	take off	crashes
+Relation	T19	T12	NoRel	true	take off	weakened
+Relation	T19	T13	NoRel	true	take off	separated
+Relation	T2	T11	NoRel	true	fire	fire
+Relation	T2	T9	NoRel	true	fire	attempted
+Relation	T20	T7	NoRel	true	fire	starting
+Relation	T21	T1	NoRel	true	fell off	following
+Relation	T3	T15	NoRel	true	separation	resulted
+Relation	T3	T18	NoRel	true	separation	deadliest
+Relation	T4	T15	NoRel	true	killing	resulted
+Relation	T5	T13	NoRel	true	failed	separated
+Relation	T5	T16	NoRel	true	failed	crashed
+Relation	T5	T18	NoRel	true	failed	deadliest
+Relation	T5	T9	NoRel	true	failed	attempted
+Relation	T7	T0	NoRel	true	starting	crashes
+Relation	T7	T2	NoRel	true	starting	fire
+Relation	T8	T13	NoRel	true	fire	separated
+Relation	T8	T15	NoRel	true	fire	resulted
+Relation	T8	T6	NoRel	true	fire	punctured
+Relation	T9	T12	NoRel	true	attempted	weakened

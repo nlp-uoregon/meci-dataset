@@ -1,0 +1,50 @@
+Text	Las personas LGBTQ_+ tienen menos probabilidades de tener seguro médico .	Muchos informaron discriminación , prejuicio y rechazo al intentar buscar atención médica .	La discriminación , el estigma o las barreras financieras en la atención médica pueden hacer que las personas LGBTQ_+ eviten buscar atención ante un contagio de COVID-19 .	A nivel mundial , las demoras hospitalarias causadas por la enfermedad de COVID-19 también han retrasado aún más las cirugías de afirmación de género y la atención para grupos de minorías , repercutiendo incluso esta situación en su salud mental .	Con base en datos , las personas de la comunidad tienen más probabilidades de estar inmunodeprimidas y discapacitadas en comparación con la población general .
+Event	T0	discriminación	EVENT	92
+Event	T1	discriminación	EVENT	169
+Event	T3	contagio	EVENT	315
+Event	T4	causadas	EVENT	382
+Event	T5	enfermedad	EVENT	398
+Event	T6	retrasado	EVENT	433
+Event	T7	cirugías	EVENT	455
+Event	T8	afirmación	EVENT	467
+Event	T9	atención	EVENT	493
+Event	T10	repercutiendo	EVENT	528
+Event	T11	rechazo	EVENT	121
+Relation	T5	T4	CauseEffect	true	enfermedad	causadas
+Relation	T4	T5	EffectCause	true	causadas	enfermedad
+Relation	T5	T6	CauseEffect	true	enfermedad	retrasado
+Relation	T6	T5	EffectCause	true	retrasado	enfermedad
+Relation	T0	T4	NoRel	true	discriminación	causadas
+Relation	T0	T8	NoRel	true	discriminación	afirmación
+Relation	T0	T9	NoRel	true	discriminación	atención
+Relation	T1	T4	NoRel	true	discriminación	causadas
+Relation	T1	T8	NoRel	true	discriminación	afirmación
+Relation	T10	T1	NoRel	true	repercutiendo	discriminación
+Relation	T10	T3	NoRel	true	repercutiendo	contagio
+Relation	T3	T0	NoRel	true	contagio	discriminación
+Relation	T3	T10	NoRel	true	contagio	repercutiendo
+Relation	T3	T5	NoRel	true	contagio	enfermedad
+Relation	T3	T6	NoRel	true	contagio	retrasado
+Relation	T4	T10	NoRel	true	causadas	repercutiendo
+Relation	T4	T11	NoRel	true	causadas	rechazo
+Relation	T4	T9	NoRel	true	causadas	atención
+Relation	T5	T0	NoRel	true	enfermedad	discriminación
+Relation	T5	T1	NoRel	true	enfermedad	discriminación
+Relation	T5	T10	NoRel	true	enfermedad	repercutiendo
+Relation	T5	T8	NoRel	true	enfermedad	afirmación
+Relation	T6	T1	NoRel	true	retrasado	discriminación
+Relation	T6	T10	NoRel	true	retrasado	repercutiendo
+Relation	T6	T11	NoRel	true	retrasado	rechazo
+Relation	T6	T8	NoRel	true	retrasado	afirmación
+Relation	T7	T11	NoRel	true	cirugías	rechazo
+Relation	T7	T6	NoRel	true	cirugías	retrasado
+Relation	T7	T8	NoRel	true	cirugías	afirmación
+Relation	T7	T9	NoRel	true	cirugías	atención
+Relation	T8	T10	NoRel	true	afirmación	repercutiendo
+Relation	T8	T11	NoRel	true	afirmación	rechazo
+Relation	T8	T5	NoRel	true	afirmación	enfermedad
+Relation	T8	T9	NoRel	true	afirmación	atención
+Relation	T9	T0	NoRel	true	atención	discriminación
+Relation	T9	T11	NoRel	true	atención	rechazo
+Relation	T9	T5	NoRel	true	atención	enfermedad
+Relation	T9	T8	NoRel	true	atención	afirmación

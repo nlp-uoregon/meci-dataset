@@ -1,0 +1,31 @@
+Text	Bir yük treninin cuma günü Uttar_Pradesh’te Azamgarh yakınında bölgedeki demiryolu trafiğini yararak raydan çıktığını memurlar söyledi .	Hiç kimse yaralanmadı .	Kaza , Azamgarh yakınındaki buradan 300 km den fazla uzaklıktaki Sathiyaon tren istasyonunda yük treninin üç alt çift dingilinin raydan çıkmasıyla meydana geldiğini bir memur söyledi .	Trafik , faal olan Varanasi – Azamgarh – Gorakhpur yönüne ayrıldı .	- 15 Şubat 2010 .
+Event	T0	yararak	EVENT	93
+Event	T1	çıktığını	EVENT	108
+Event	T2	söyledi	EVENT	127
+Event	T3	Kaza	EVENT	161
+Event	T4	söyledi	EVENT	336
+Event	T5	ayrıldı	EVENT	404
+Event	T6	çıkmasıyla	EVENT	297
+Relation	T6	T3	CauseEffect	true	çıkmasıyla	Kaza
+Relation	T3	T6	EffectCause	true	Kaza	çıkmasıyla
+Relation	T3	T5	CauseEffect	true	Kaza	ayrıldı
+Relation	T5	T3	EffectCause	true	ayrıldı	Kaza
+Relation	T0	T2	NoRel	true	yararak	söyledi
+Relation	T0	T3	NoRel	true	yararak	Kaza
+Relation	T0	T6	NoRel	true	yararak	çıkmasıyla
+Relation	T1	T0	NoRel	true	çıktığını	yararak
+Relation	T1	T2	NoRel	true	çıktığını	söyledi
+Relation	T1	T4	NoRel	true	çıktığını	söyledi
+Relation	T1	T5	NoRel	true	çıktığını	ayrıldı
+Relation	T1	T6	NoRel	true	çıktığını	çıkmasıyla
+Relation	T2	T4	NoRel	true	söyledi	söyledi
+Relation	T2	T6	NoRel	true	söyledi	çıkmasıyla
+Relation	T3	T0	NoRel	true	Kaza	yararak
+Relation	T3	T4	NoRel	true	Kaza	söyledi
+Relation	T4	T3	NoRel	true	söyledi	Kaza
+Relation	T4	T5	NoRel	true	söyledi	ayrıldı
+Relation	T5	T0	NoRel	true	ayrıldı	yararak
+Relation	T5	T1	NoRel	true	ayrıldı	çıktığını
+Relation	T5	T2	NoRel	true	ayrıldı	söyledi
+Relation	T6	T0	NoRel	true	çıkmasıyla	yararak
+Relation	T6	T1	NoRel	true	çıkmasıyla	çıktığını

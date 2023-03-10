@@ -1,0 +1,50 @@
+Text	40 ایمبولینس ، 20 فائر ٹرک ، پولیس ، نیشنل میڈیکل بچاؤ ٹیمیں ، فائر اور بچاؤ ٹیمیں جائے حادثے پر پہونچ چکی ہیں ۔	ملبے کو ہٹانے کا کام جلد ہی شروع ہو گیا جبکہ حادثے کی جگہ کے ارد گرد بھاری کرینیں 16 : 00 بجے مقامی وقت کے مطابق نصب کی گئی تھیں ۔	ریلوے لائن کو دوبارہ کھولنے کے لیے فائر فائٹرز اور ریلوے کارکنوں کی ٹیموں نے بھاری برفباری کے باوجود رات کو کاٹنے اور ہٹانے کا کام جاری رکھا ۔	انقرہ کے چیف پراسیکیوٹر نے حادثہ کی وجہ معلوم کرنے کے لیے تحقیقات شروع کردی ہیں اور اس مقصد کے لیے اپنے معاون اور تین مزید پراسیکیوٹر مقرر کیے ہیں ۔	ریلوے اہلکار ، ایک انسپکٹر ، ایک ٹرین کو روانہ کرنے والا اور ایک سوئچ مین ، جو ٹرینوں کی سمت کے ذمہ دار تھے ، غفلت برتنے کے شک میں گرفتار کیے جا چکے ہیں ۔
+Event	T0	حادثے	EVENT	88
+Event	T1	ہٹانے	EVENT	121
+Event	T11	حادثہ	EVENT	414
+Event	T12	شک	EVENT	660
+Event	T2	کام	EVENT	130
+Event	T4	حادثے	EVENT	158
+Event	T5	نصب	EVENT	226
+Event	T6	کھولنے	EVENT	265
+Event	T7	برفباری	EVENT	327
+Event	T8	کاٹنے	EVENT	352
+Event	T9	ہٹانے	EVENT	362
+Relation	T0	T1	CauseEffect	true	حادثے	ہٹانے
+Relation	T1	T0	EffectCause	true	ہٹانے	حادثے
+Relation	T4	T1	CauseEffect	true	حادثے	ہٹانے
+Relation	T1	T4	EffectCause	true	ہٹانے	حادثے
+Relation	T4	T2	CauseEffect	true	حادثے	کام
+Relation	T2	T4	EffectCause	true	کام	حادثے
+Relation	T11	T1	CauseEffect	true	حادثہ	ہٹانے
+Relation	T1	T11	EffectCause	true	ہٹانے	حادثہ
+Relation	T0	T11	NoRel	true	حادثے	حادثہ
+Relation	T0	T4	NoRel	true	حادثے	حادثے
+Relation	T0	T5	NoRel	true	حادثے	نصب
+Relation	T1	T6	NoRel	true	ہٹانے	کھولنے
+Relation	T1	T9	NoRel	true	ہٹانے	ہٹانے
+Relation	T11	T12	NoRel	true	حادثہ	شک
+Relation	T11	T5	NoRel	true	حادثہ	نصب
+Relation	T11	T6	NoRel	true	حادثہ	کھولنے
+Relation	T12	T0	NoRel	true	شک	حادثے
+Relation	T12	T4	NoRel	true	شک	حادثے
+Relation	T12	T5	NoRel	true	شک	نصب
+Relation	T2	T1	NoRel	true	کام	ہٹانے
+Relation	T2	T11	NoRel	true	کام	حادثہ
+Relation	T4	T0	NoRel	true	حادثے	حادثے
+Relation	T4	T12	NoRel	true	حادثے	شک
+Relation	T4	T6	NoRel	true	حادثے	کھولنے
+Relation	T4	T7	NoRel	true	حادثے	برفباری
+Relation	T4	T9	NoRel	true	حادثے	ہٹانے
+Relation	T5	T4	NoRel	true	نصب	حادثے
+Relation	T5	T8	NoRel	true	نصب	کاٹنے
+Relation	T6	T0	NoRel	true	کھولنے	حادثے
+Relation	T6	T1	NoRel	true	کھولنے	ہٹانے
+Relation	T6	T11	NoRel	true	کھولنے	حادثہ
+Relation	T6	T7	NoRel	true	کھولنے	برفباری
+Relation	T7	T5	NoRel	true	برفباری	نصب
+Relation	T7	T6	NoRel	true	برفباری	کھولنے
+Relation	T8	T11	NoRel	true	کاٹنے	حادثہ
+Relation	T9	T2	NoRel	true	ہٹانے	کام
+Relation	T9	T6	NoRel	true	ہٹانے	کھولنے
+Relation	T9	T7	NoRel	true	ہٹانے	برفباری

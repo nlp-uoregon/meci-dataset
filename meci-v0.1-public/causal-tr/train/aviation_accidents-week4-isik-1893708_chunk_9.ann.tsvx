@@ -1,0 +1,79 @@
+Text	" açıklamasında bulunmuştu .	Polonya'da tutulduğu sırada Muhammed'e , uluslararası hukukun işkence olarak sınıflandırdığı waterboarding adı verilen ve boğulma hissiyatı veren bir sorgulama tekniğinin de aralarında bulunduğu " geliştirilmiş sorgulama teknikleri " uygulandı .	Konuyla ilgili olarak Muhammed Uluslararası Kızılhaç Komitesi yetkililerine " Dikey pozisyona getirilebilen özel bir yatağa bağlandım .	Başıma bir bez örtüldü ve nefes alamamam için bezin üzerinden suratıma döküldü .	Bir süre sonra bu bez kaldırıldı ve yatak dikey pozisyona getirildi .
+Event	T0	tutulduğu	EVENT	40
+Event	T1	işkence	EVENT	91
+Event	T2	sorgulama	EVENT	179
+Event	T3	sorgulama	EVENT	240
+Event	T4	uygulandı	EVENT	263
+Event	T5	bağlandım	EVENT	399
+Event	T6	örtüldü	EVENT	426
+Event	T7	döküldü	EVENT	482
+Event	T8	kaldırıldı	EVENT	514
+Event	T9	getirildi	EVENT	550
+Event	T10	açıklamasında	EVENT	2
+Event	T11	waterboarding	EVENT	122
+Event	T13	veren	EVENT	169
+Relation	T13	T1	CauseEffect	true	veren	işkence
+Relation	T1	T13	EffectCause	true	işkence	veren
+Relation	T2	T11	CauseEffect	true	sorgulama	waterboarding
+Relation	T11	T2	EffectCause	true	waterboarding	sorgulama
+Relation	T0	T2	CauseEffect	true	tutulduğu	sorgulama
+Relation	T2	T0	EffectCause	true	sorgulama	tutulduğu
+Relation	T0	T4	CauseEffect	true	tutulduğu	uygulandı
+Relation	T4	T0	EffectCause	true	uygulandı	tutulduğu
+Relation	T11	T8	CauseEffect	true	waterboarding	kaldırıldı
+Relation	T8	T11	EffectCause	true	kaldırıldı	waterboarding
+Relation	T11	T9	CauseEffect	true	waterboarding	getirildi
+Relation	T9	T11	EffectCause	true	getirildi	waterboarding
+Relation	T4	T5	CauseEffect	true	uygulandı	bağlandım
+Relation	T5	T4	EffectCause	true	bağlandım	uygulandı
+Relation	T4	T6	CauseEffect	true	uygulandı	örtüldü
+Relation	T6	T4	EffectCause	true	örtüldü	uygulandı
+Relation	T4	T7	CauseEffect	true	uygulandı	döküldü
+Relation	T7	T4	EffectCause	true	döküldü	uygulandı
+Relation	T4	T8	CauseEffect	true	uygulandı	kaldırıldı
+Relation	T8	T4	EffectCause	true	kaldırıldı	uygulandı
+Relation	T4	T9	CauseEffect	true	uygulandı	getirildi
+Relation	T9	T4	EffectCause	true	getirildi	uygulandı
+Relation	T0	T6	NoRel	true	tutulduğu	örtüldü
+Relation	T0	T7	NoRel	true	tutulduğu	döküldü
+Relation	T0	T9	NoRel	true	tutulduğu	getirildi
+Relation	T1	T0	NoRel	true	işkence	tutulduğu
+Relation	T1	T10	NoRel	true	işkence	açıklamasında
+Relation	T1	T5	NoRel	true	işkence	bağlandım
+Relation	T10	T5	NoRel	true	açıklamasında	bağlandım
+Relation	T11	T13	NoRel	true	waterboarding	veren
+Relation	T11	T5	NoRel	true	waterboarding	bağlandım
+Relation	T11	T6	NoRel	true	waterboarding	örtüldü
+Relation	T13	T10	NoRel	true	veren	açıklamasında
+Relation	T13	T11	NoRel	true	veren	waterboarding
+Relation	T13	T2	NoRel	true	veren	sorgulama
+Relation	T13	T4	NoRel	true	veren	uygulandı
+Relation	T13	T6	NoRel	true	veren	örtüldü
+Relation	T13	T7	NoRel	true	veren	döküldü
+Relation	T13	T9	NoRel	true	veren	getirildi
+Relation	T2	T10	NoRel	true	sorgulama	açıklamasında
+Relation	T2	T5	NoRel	true	sorgulama	bağlandım
+Relation	T2	T6	NoRel	true	sorgulama	örtüldü
+Relation	T2	T7	NoRel	true	sorgulama	döküldü
+Relation	T2	T8	NoRel	true	sorgulama	kaldırıldı
+Relation	T3	T4	NoRel	true	sorgulama	uygulandı
+Relation	T3	T7	NoRel	true	sorgulama	döküldü
+Relation	T4	T1	NoRel	true	uygulandı	işkence
+Relation	T4	T10	NoRel	true	uygulandı	açıklamasında
+Relation	T4	T11	NoRel	true	uygulandı	waterboarding
+Relation	T4	T13	NoRel	true	uygulandı	veren
+Relation	T5	T2	NoRel	true	bağlandım	sorgulama
+Relation	T5	T3	NoRel	true	bağlandım	sorgulama
+Relation	T5	T6	NoRel	true	bağlandım	örtüldü
+Relation	T5	T7	NoRel	true	bağlandım	döküldü
+Relation	T5	T8	NoRel	true	bağlandım	kaldırıldı
+Relation	T5	T9	NoRel	true	bağlandım	getirildi
+Relation	T6	T7	NoRel	true	örtüldü	döküldü
+Relation	T7	T8	NoRel	true	döküldü	kaldırıldı
+Relation	T8	T10	NoRel	true	kaldırıldı	açıklamasında
+Relation	T8	T3	NoRel	true	kaldırıldı	sorgulama
+Relation	T8	T6	NoRel	true	kaldırıldı	örtüldü
+Relation	T8	T9	NoRel	true	kaldırıldı	getirildi
+Relation	T9	T10	NoRel	true	getirildi	açıklamasında
+Relation	T9	T6	NoRel	true	getirildi	örtüldü
+Relation	T9	T7	NoRel	true	getirildi	döküldü

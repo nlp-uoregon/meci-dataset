@@ -1,0 +1,51 @@
+Text	thumb | left | Romersk port i Trier .	Den sidste position som prokurator er usikker , men var i tilfælde i Gallia Belgica .	Antagelsen er baseret på Plinius' kendskab til provinsen .	Hovedstaden var Augusta Treverorum ( Trier ) , navngivet efter den galliske stammen af trevererne som omgav den .	Plinius siger at " året før denne " dræbte en frygtelig vinter den første høst , som var plantet ; de såede igen i marts og havde " en meget rigelig høst " .
+Event	T0	Antagelsen	EVENT	124
+Event	T1	navngivet	EVENT	230
+Event	T2	omgav	EVENT	285
+Event	T3	siger	EVENT	305
+Event	T4	dræbte	EVENT	333
+Event	T5	høst	EVENT	371
+Event	T6	plantet	EVENT	386
+Event	T7	såede	EVENT	399
+Event	T8	høst	EVENT	446
+Event	T9	baseret	EVENT	138
+Event	T10	frygtelig	EVENT	343
+Relation	T2	T1	CauseEffect	true	omgav	navngivet
+Relation	T1	T2	EffectCause	true	navngivet	omgav
+Relation	T10	T4	CauseEffect	true	frygtelig	dræbte
+Relation	T4	T10	EffectCause	true	dræbte	frygtelig
+Relation	T0	T1	NoRel	true	Antagelsen	navngivet
+Relation	T0	T2	NoRel	true	Antagelsen	omgav
+Relation	T0	T3	NoRel	true	Antagelsen	siger
+Relation	T0	T6	NoRel	true	Antagelsen	plantet
+Relation	T0	T9	NoRel	true	Antagelsen	baseret
+Relation	T1	T0	NoRel	true	navngivet	Antagelsen
+Relation	T1	T10	NoRel	true	navngivet	frygtelig
+Relation	T1	T6	NoRel	true	navngivet	plantet
+Relation	T10	T6	NoRel	true	frygtelig	plantet
+Relation	T2	T0	NoRel	true	omgav	Antagelsen
+Relation	T2	T3	NoRel	true	omgav	siger
+Relation	T2	T4	NoRel	true	omgav	dræbte
+Relation	T2	T7	NoRel	true	omgav	såede
+Relation	T3	T2	NoRel	true	siger	omgav
+Relation	T3	T5	NoRel	true	siger	høst
+Relation	T5	T0	NoRel	true	høst	Antagelsen
+Relation	T5	T1	NoRel	true	høst	navngivet
+Relation	T5	T6	NoRel	true	høst	plantet
+Relation	T5	T7	NoRel	true	høst	såede
+Relation	T6	T10	NoRel	true	plantet	frygtelig
+Relation	T6	T4	NoRel	true	plantet	dræbte
+Relation	T6	T8	NoRel	true	plantet	høst
+Relation	T6	T9	NoRel	true	plantet	baseret
+Relation	T7	T10	NoRel	true	såede	frygtelig
+Relation	T7	T5	NoRel	true	såede	høst
+Relation	T8	T0	NoRel	true	høst	Antagelsen
+Relation	T8	T10	NoRel	true	høst	frygtelig
+Relation	T8	T2	NoRel	true	høst	omgav
+Relation	T8	T4	NoRel	true	høst	dræbte
+Relation	T8	T5	NoRel	true	høst	høst
+Relation	T8	T7	NoRel	true	høst	såede
+Relation	T8	T9	NoRel	true	høst	baseret
+Relation	T9	T0	NoRel	true	baseret	Antagelsen
+Relation	T9	T10	NoRel	true	baseret	frygtelig
+Relation	T9	T6	NoRel	true	baseret	plantet

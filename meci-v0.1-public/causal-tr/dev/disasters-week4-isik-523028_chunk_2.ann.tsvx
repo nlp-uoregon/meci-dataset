@@ -1,0 +1,26 @@
+Text	Ekim 1916'da Johann Handl adındaki bir alman ponza çıkarmak için bir maden arama ruhsatı alır .	8.7 km² bir alanı , yani kabaca Krakatoa'nın doğu yarısının tamamını kapsayan ruhsat 30 yıllıktır .	4 yıl boyunca Rakata'nın güney kıyısını işgal etmesinin ardından anlaşma şartlarına uygun olmayan şekilde işlem yapmasından dolayı işten el çektirildi .	Bu sürede bir koloni kurup dört Avrupalı aileyle ve 30 işçi ile tarla ektiler .	Kazara sıçanları da adayla tanıştırdılar .
+Event	T1	alır	EVENT	89
+Event	T2	etmesinin	EVENT	242
+Event	T4	yapmasından	EVENT	308
+Event	T5	çektirildi	EVENT	336
+Event	T6	tanıştırdılar	EVENT	456
+Event	T3	kurup	EVENT	370
+Event	T7	ektiler	EVENT	419
+Relation	T1	T5	CauseEffect	true	alır	çektirildi
+Relation	T5	T1	EffectCause	true	çektirildi	alır
+Relation	T1	T4	NoRel	true	alır	yapmasından
+Relation	T1	T6	NoRel	true	alır	tanıştırdılar
+Relation	T1	T7	NoRel	true	alır	ektiler
+Relation	T2	T6	NoRel	true	etmesinin	tanıştırdılar
+Relation	T3	T2	NoRel	true	kurup	etmesinin
+Relation	T3	T4	NoRel	true	kurup	yapmasından
+Relation	T3	T5	NoRel	true	kurup	çektirildi
+Relation	T3	T6	NoRel	true	kurup	tanıştırdılar
+Relation	T4	T3	NoRel	true	yapmasından	kurup
+Relation	T4	T6	NoRel	true	yapmasından	tanıştırdılar
+Relation	T5	T3	NoRel	true	çektirildi	kurup
+Relation	T5	T6	NoRel	true	çektirildi	tanıştırdılar
+Relation	T6	T2	NoRel	true	tanıştırdılar	etmesinin
+Relation	T6	T5	NoRel	true	tanıştırdılar	çektirildi
+Relation	T7	T2	NoRel	true	ektiler	etmesinin
+Relation	T7	T6	NoRel	true	ektiler	tanıştırdılar

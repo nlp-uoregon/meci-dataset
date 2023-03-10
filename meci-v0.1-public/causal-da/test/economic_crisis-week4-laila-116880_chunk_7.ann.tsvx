@@ -1,0 +1,62 @@
+Text	Bankdirektør Knud Christensen , der havde været Amagerbankens direktør siden 1980 , døde midt under finanskrisen i 2008 .	Han blev afløst af direktør Jørgen Brændstrup med Allan Ottsen som vicedirektør .	Brændstrup havde indtil da været chef for bankens erhvervsafdeling .	Han omgikkes en række af bankens tabsgivende storkunder privat , hvilket ifølge iagttagere var en medvirkende årsag til , at disse kunder også under krisen havde lempelige vilkår i banken .	Siden 1996 havde advokat N.E. Nielsen været bankens bestyrelsesformand .
+Event	T0	finanskrisen	EVENT	100
+Event	T1	afløst	EVENT	131
+Event	T2	omgikkes	EVENT	277
+Event	T3	tabsgivende	EVENT	306
+Event	T4	døde	EVENT	84
+Event	T5	direktør	EVENT	62
+Event	T6	direktør	EVENT	141
+Event	T7	vicedirektør	EVENT	189
+Event	T8	chef	EVENT	237
+Event	T9	årsag	EVENT	383
+Event	T10	lempelige vilkår	EVENT	435
+Event	T11	bestyrelsesformand	EVENT	515
+Relation	T4	T1	CauseEffect	true	døde	afløst
+Relation	T1	T4	EffectCause	true	afløst	døde
+Relation	T2	T10	CauseEffect	true	omgikkes	lempelige vilkår
+Relation	T10	T2	EffectCause	true	lempelige vilkår	omgikkes
+Relation	T0	T1	NoRel	true	finanskrisen	afløst
+Relation	T0	T3	NoRel	true	finanskrisen	tabsgivende
+Relation	T0	T4	NoRel	true	finanskrisen	døde
+Relation	T0	T5	NoRel	true	finanskrisen	direktør
+Relation	T0	T9	NoRel	true	finanskrisen	årsag
+Relation	T1	T0	NoRel	true	afløst	finanskrisen
+Relation	T1	T10	NoRel	true	afløst	lempelige vilkår
+Relation	T1	T11	NoRel	true	afløst	bestyrelsesformand
+Relation	T1	T6	NoRel	true	afløst	direktør
+Relation	T1	T7	NoRel	true	afløst	vicedirektør
+Relation	T10	T1	NoRel	true	lempelige vilkår	afløst
+Relation	T10	T3	NoRel	true	lempelige vilkår	tabsgivende
+Relation	T10	T6	NoRel	true	lempelige vilkår	direktør
+Relation	T11	T0	NoRel	true	bestyrelsesformand	finanskrisen
+Relation	T11	T6	NoRel	true	bestyrelsesformand	direktør
+Relation	T11	T7	NoRel	true	bestyrelsesformand	vicedirektør
+Relation	T11	T8	NoRel	true	bestyrelsesformand	chef
+Relation	T2	T1	NoRel	true	omgikkes	afløst
+Relation	T2	T5	NoRel	true	omgikkes	direktør
+Relation	T2	T8	NoRel	true	omgikkes	chef
+Relation	T2	T9	NoRel	true	omgikkes	årsag
+Relation	T3	T2	NoRel	true	tabsgivende	omgikkes
+Relation	T3	T9	NoRel	true	tabsgivende	årsag
+Relation	T4	T10	NoRel	true	døde	lempelige vilkår
+Relation	T4	T9	NoRel	true	døde	årsag
+Relation	T5	T10	NoRel	true	direktør	lempelige vilkår
+Relation	T5	T11	NoRel	true	direktør	bestyrelsesformand
+Relation	T5	T3	NoRel	true	direktør	tabsgivende
+Relation	T5	T9	NoRel	true	direktør	årsag
+Relation	T6	T11	NoRel	true	direktør	bestyrelsesformand
+Relation	T6	T2	NoRel	true	direktør	omgikkes
+Relation	T6	T5	NoRel	true	direktør	direktør
+Relation	T6	T8	NoRel	true	direktør	chef
+Relation	T6	T9	NoRel	true	direktør	årsag
+Relation	T7	T0	NoRel	true	vicedirektør	finanskrisen
+Relation	T7	T1	NoRel	true	vicedirektør	afløst
+Relation	T7	T2	NoRel	true	vicedirektør	omgikkes
+Relation	T7	T4	NoRel	true	vicedirektør	døde
+Relation	T7	T5	NoRel	true	vicedirektør	direktør
+Relation	T7	T8	NoRel	true	vicedirektør	chef
+Relation	T8	T10	NoRel	true	chef	lempelige vilkår
+Relation	T8	T6	NoRel	true	chef	direktør
+Relation	T9	T2	NoRel	true	årsag	omgikkes
+Relation	T9	T6	NoRel	true	årsag	direktør
+Relation	T9	T8	NoRel	true	årsag	chef

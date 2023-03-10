@@ -1,0 +1,13 @@
+Text	- 21 Aralık , 2009 – Zagreb , Hırvatistan – Bir erken sabah vakti Sisak Caprag , Zagrep arası çalışan bir 5100 numarlı banliyö HŽ treni Zagreb Glavni Kolodvor’da bumpera çarptı .	Çarpma nedeni lokomotifin fren sistemindeki antifiriz sıvısının azlığıydı çünkü dışarıdaki uç noktada olan düşük hava sıcaklığı ( - 22 C derece ) nedeniyle donmuştu .	Şans eseri trenin hızı sadece saatte 15 ve 20 km idi .	Çarpışma yerel saatle 5: 26'da ( 4: 26 GMT ) meydana geldi .	Trenden 60 kişi ( trenin makinisti dahil ) yaralandı , bunların 7si ağır yaralı .
+Event	T0	çarptı	EVENT	170
+Event	T1	donmuştu	EVENT	335
+Event	T2	Çarpışma	EVENT	401
+Event	T4	yaralandı	EVENT	505
+Relation	T1	T2	CauseEffect	true	donmuştu	Çarpışma
+Relation	T2	T1	EffectCause	true	Çarpışma	donmuştu
+Relation	T2	T4	CauseEffect	true	Çarpışma	yaralandı
+Relation	T4	T2	EffectCause	true	yaralandı	Çarpışma
+Relation	T1	T0	CauseEffect	true	donmuştu	çarptı
+Relation	T0	T1	EffectCause	true	çarptı	donmuştu
+Relation	T0	T4	CauseEffect	true	çarptı	yaralandı
+Relation	T4	T0	EffectCause	true	yaralandı	çarptı

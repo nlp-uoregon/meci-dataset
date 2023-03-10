@@ -1,0 +1,87 @@
+Text	The recession officially ended in the second quarter of 2009 , but the nation 's economy continued to be described as in an " economic malaise " during the second quarter of 2011 .	Some economists described the post-recession years as the weakest recovery since the Great Depression and World War II .	The weak economic recovery has led many to call it a " Zombie Economy " , so - called because it is neither dead nor alive .	Household incomes , as of August 2012 , had fallen more since the end of the recession , than during the 18 - month recession , falling an additional 4.8 % since the end of the recession , totally to 7.2 % since the December 2007 level .	Additionally as of September 2012 , the long - term unemployment was the highest it had been since World War II , and the unemployment rate peaked several months after the end of the recession ( 10.1 % in October 2009 ) and was above 8 % until September 2012 ( 7.8 % ) .
+Event	T0	recession	EVENT	4
+Event	T1	ended	EVENT	25
+Event	T2	continued	EVENT	89
+Event	T3	described	EVENT	105
+Event	T4	malaise	EVENT	135
+Event	T5	described	EVENT	197
+Event	T6	recovery	EVENT	247
+Event	T8	led	EVENT	333
+Event	T9	call	EVENT	345
+Event	T10	called	EVENT	381
+Event	T11	fallen	EVENT	471
+Event	T12	recession	EVENT	504
+Event	T13	recession	EVENT	543
+Event	T14	falling	EVENT	555
+Event	T15	recession	EVENT	604
+Event	T16	peaked	EVENT	805
+Event	T17	end	EVENT	837
+Event	T18	recession	EVENT	848
+Event	T7	weak economic recovery	EVENT	306
+Event	T19	" Zombie Economy "	EVENT	355
+Event	T20	neither dead nor alive	EVENT	402
+Event	T21	highest	EVENT	738
+Event	T22	World War II	EVENT	764
+Relation	T7	T19	CauseEffect	true	weak economic recovery	" Zombie Economy "
+Relation	T19	T7	EffectCause	true	" Zombie Economy "	weak economic recovery
+Relation	T20	T10	CauseEffect	true	neither dead nor alive	called
+Relation	T10	T20	EffectCause	true	called	neither dead nor alive
+Relation	T12	T11	CauseEffect	true	recession	fallen
+Relation	T11	T12	EffectCause	true	fallen	recession
+Relation	T17	T16	CauseEffect	true	end	peaked
+Relation	T16	T17	EffectCause	true	peaked	end
+Relation	T22	T21	CauseEffect	true	World War II	highest
+Relation	T21	T22	EffectCause	true	highest	World War II
+Relation	T0	T15	NoRel	true	recession	recession
+Relation	T1	T3	NoRel	true	ended	described
+Relation	T1	T6	NoRel	true	ended	recovery
+Relation	T10	T15	NoRel	true	called	recession
+Relation	T10	T7	NoRel	true	called	weak economic recovery
+Relation	T11	T19	NoRel	true	fallen	" Zombie Economy "
+Relation	T12	T1	NoRel	true	recession	ended
+Relation	T12	T14	NoRel	true	recession	falling
+Relation	T12	T2	NoRel	true	recession	continued
+Relation	T12	T20	NoRel	true	recession	neither dead nor alive
+Relation	T13	T15	NoRel	true	recession	recession
+Relation	T13	T17	NoRel	true	recession	end
+Relation	T13	T2	NoRel	true	recession	continued
+Relation	T13	T22	NoRel	true	recession	World War II
+Relation	T14	T22	NoRel	true	falling	World War II
+Relation	T15	T0	NoRel	true	recession	recession
+Relation	T15	T1	NoRel	true	recession	ended
+Relation	T15	T10	NoRel	true	recession	called
+Relation	T15	T13	NoRel	true	recession	recession
+Relation	T15	T21	NoRel	true	recession	highest
+Relation	T15	T5	NoRel	true	recession	described
+Relation	T16	T0	NoRel	true	peaked	recession
+Relation	T16	T10	NoRel	true	peaked	called
+Relation	T16	T2	NoRel	true	peaked	continued
+Relation	T16	T7	NoRel	true	peaked	weak economic recovery
+Relation	T17	T9	NoRel	true	end	call
+Relation	T18	T13	NoRel	true	recession	recession
+Relation	T18	T8	NoRel	true	recession	led
+Relation	T2	T1	NoRel	true	continued	ended
+Relation	T2	T8	NoRel	true	continued	led
+Relation	T20	T21	NoRel	true	neither dead nor alive	highest
+Relation	T21	T2	NoRel	true	highest	continued
+Relation	T21	T5	NoRel	true	highest	described
+Relation	T21	T9	NoRel	true	highest	call
+Relation	T22	T19	NoRel	true	World War II	" Zombie Economy "
+Relation	T22	T7	NoRel	true	World War II	weak economic recovery
+Relation	T3	T13	NoRel	true	described	recession
+Relation	T3	T20	NoRel	true	described	neither dead nor alive
+Relation	T3	T21	NoRel	true	described	highest
+Relation	T3	T4	NoRel	true	described	malaise
+Relation	T3	T6	NoRel	true	described	recovery
+Relation	T4	T15	NoRel	true	malaise	recession
+Relation	T5	T10	NoRel	true	described	called
+Relation	T5	T3	NoRel	true	described	described
+Relation	T5	T4	NoRel	true	described	malaise
+Relation	T6	T14	NoRel	true	recovery	falling
+Relation	T7	T0	NoRel	true	weak economic recovery	recession
+Relation	T7	T11	NoRel	true	weak economic recovery	fallen
+Relation	T7	T8	NoRel	true	weak economic recovery	led
+Relation	T8	T7	NoRel	true	led	weak economic recovery
+Relation	T8	T9	NoRel	true	led	call
+Relation	T9	T10	NoRel	true	call	called
+Relation	T9	T4	NoRel	true	call	malaise

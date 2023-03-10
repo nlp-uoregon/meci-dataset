@@ -1,0 +1,73 @@
+Text	KOLOMBIYA ÇATIŞMALARI , Kolombiya'da yaklaşık 1964 veya 1966 yılında devlet güçleri ve Kolombiya Devrimci Silahlı Güçleri ( FARC ) ile Ulusal Kurtuluş Ordusu ( ELN ) gibi köylü gerillalar arasında başlayan ve asimetrik düşük yoğunlukla günümüze kadar devam eden silahlı çatışmalardır .	Kökeni tarihsel olarak , 1948'de popülist lider Jorge Eliecer Gaitán'ın siyasi suikastıyla tetiklenen ve 1960'larda Kolombiya'nın kırsal kesimlerinde komünizme karşı Amerika Birleşik Devletleri destekli kuvvetli baskılar sonrasında Liberal ve Komünist militanların FARC içine yeniden yapılanmasına yol açan _ La Violencia _ olarak bilinen çatışmalara dayanır .	Mücadele için ileri sürülen nedenler gruptan gruba farklılık gösterir .	FARC ve diğer gerilla hareketleri , yoksulların haklarını savunmak , onları devlet şiddetinden korumak ve sosyalizm yoluyla sosyal adalet sağlamak için mücadele ettiklerini iddia etmektedirler .	Kolombiya devleti , düzen ve istikrar için mücadele ettiğini , vatandaşlarının hak ve çıkarlarını korumak istediğini iddia etmektedir .
+Event	T0	ÇATIŞMALARI	EVENT	10
+Event	T1	başlayan	EVENT	197
+Event	T2	çatışmalardır	EVENT	270
+Event	T3	tetiklenen	EVENT	377
+Event	T4	baskılar	EVENT	498
+Event	T6	Mücadele	EVENT	647
+Event	T7	sürülen	EVENT	667
+Event	T8	mücadele	EVENT	871
+Event	T9	iddia	EVENT	892
+Event	T10	mücadele	EVENT	957
+Event	T11	iddia	EVENT	1031
+Event	T12	suikastıyla	EVENT	365
+Event	T5	yapılanmasına	EVENT	570
+Relation	T12	T3	CauseEffect	true	suikastıyla	tetiklenen
+Relation	T3	T12	EffectCause	true	tetiklenen	suikastıyla
+Relation	T12	T0	CauseEffect	true	suikastıyla	ÇATIŞMALARI
+Relation	T0	T12	EffectCause	true	ÇATIŞMALARI	suikastıyla
+Relation	T4	T0	CauseEffect	true	baskılar	ÇATIŞMALARI
+Relation	T0	T4	EffectCause	true	ÇATIŞMALARI	baskılar
+Relation	T4	T5	CauseEffect	true	baskılar	yapılanmasına
+Relation	T5	T4	EffectCause	true	yapılanmasına	baskılar
+Relation	T10	T0	CauseEffect	true	mücadele	ÇATIŞMALARI
+Relation	T0	T10	EffectCause	true	ÇATIŞMALARI	mücadele
+Relation	T8	T0	CauseEffect	true	mücadele	ÇATIŞMALARI
+Relation	T0	T8	EffectCause	true	ÇATIŞMALARI	mücadele
+Relation	T6	T0	CauseEffect	true	Mücadele	ÇATIŞMALARI
+Relation	T0	T6	EffectCause	true	ÇATIŞMALARI	Mücadele
+Relation	T0	T11	NoRel	true	ÇATIŞMALARI	iddia
+Relation	T0	T9	NoRel	true	ÇATIŞMALARI	iddia
+Relation	T1	T10	NoRel	true	başlayan	mücadele
+Relation	T1	T11	NoRel	true	başlayan	iddia
+Relation	T1	T3	NoRel	true	başlayan	tetiklenen
+Relation	T1	T7	NoRel	true	başlayan	sürülen
+Relation	T10	T4	NoRel	true	mücadele	baskılar
+Relation	T10	T8	NoRel	true	mücadele	mücadele
+Relation	T11	T0	NoRel	true	iddia	ÇATIŞMALARI
+Relation	T11	T12	NoRel	true	iddia	suikastıyla
+Relation	T11	T4	NoRel	true	iddia	baskılar
+Relation	T11	T6	NoRel	true	iddia	Mücadele
+Relation	T12	T1	NoRel	true	suikastıyla	başlayan
+Relation	T12	T11	NoRel	true	suikastıyla	iddia
+Relation	T12	T4	NoRel	true	suikastıyla	baskılar
+Relation	T12	T5	NoRel	true	suikastıyla	yapılanmasına
+Relation	T12	T8	NoRel	true	suikastıyla	mücadele
+Relation	T2	T11	NoRel	true	çatışmalardır	iddia
+Relation	T2	T12	NoRel	true	çatışmalardır	suikastıyla
+Relation	T2	T5	NoRel	true	çatışmalardır	yapılanmasına
+Relation	T2	T9	NoRel	true	çatışmalardır	iddia
+Relation	T3	T10	NoRel	true	tetiklenen	mücadele
+Relation	T3	T4	NoRel	true	tetiklenen	baskılar
+Relation	T3	T5	NoRel	true	tetiklenen	yapılanmasına
+Relation	T3	T7	NoRel	true	tetiklenen	sürülen
+Relation	T4	T10	NoRel	true	baskılar	mücadele
+Relation	T5	T11	NoRel	true	yapılanmasına	iddia
+Relation	T5	T12	NoRel	true	yapılanmasına	suikastıyla
+Relation	T5	T2	NoRel	true	yapılanmasına	çatışmalardır
+Relation	T5	T3	NoRel	true	yapılanmasına	tetiklenen
+Relation	T5	T6	NoRel	true	yapılanmasına	Mücadele
+Relation	T6	T11	NoRel	true	Mücadele	iddia
+Relation	T6	T3	NoRel	true	Mücadele	tetiklenen
+Relation	T6	T8	NoRel	true	Mücadele	mücadele
+Relation	T7	T11	NoRel	true	sürülen	iddia
+Relation	T7	T3	NoRel	true	sürülen	tetiklenen
+Relation	T7	T5	NoRel	true	sürülen	yapılanmasına
+Relation	T7	T8	NoRel	true	sürülen	mücadele
+Relation	T7	T9	NoRel	true	sürülen	iddia
+Relation	T8	T10	NoRel	true	mücadele	mücadele
+Relation	T8	T12	NoRel	true	mücadele	suikastıyla
+Relation	T8	T3	NoRel	true	mücadele	tetiklenen
+Relation	T9	T2	NoRel	true	iddia	çatışmalardır
+Relation	T9	T3	NoRel	true	iddia	tetiklenen
+Relation	T9	T8	NoRel	true	iddia	mücadele

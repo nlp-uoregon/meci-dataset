@@ -1,0 +1,39 @@
+Text	VIGERSLEV-ULYKKEN er en jernbaneulykke , som skete 1. november 1919 .	[ Vigerslevulykken 1919 ( af | thumb | De ødelagte vogne og lokomotivet morgenen efter ulykken .	Fotografi af pressefotograf Holger Damgaard ]	Tredjeklassesvognene bagest i tog 168 fra Kalundborg var fyldt med unge mennesker med penge på lommen og i godt humør på vej til hovedstaden for at møde venner og familie og måske have et lille selskab .	Toget , der var forsinket på grund af den megen trafik , skulle have passeret Vigerslev blokpost 20:35 , men var der ikke før 20:50 .
+Event	T0	jernbaneulykke	EVENT	24
+Event	T1	skete	EVENT	45
+Event	T2	ødelagte	EVENT	112
+Event	T3	ulykken	EVENT	157
+Event	T4	fyldt	EVENT	270
+Event	T5	møde	EVENT	361
+Event	T6	forsinket	EVENT	433
+Event	T7	passeret	EVENT	486
+Relation	T3	T2	CauseEffect	true	ulykken	ødelagte
+Relation	T2	T3	EffectCause	true	ødelagte	ulykken
+Relation	T6	T0	CauseEffect	true	forsinket	jernbaneulykke
+Relation	T0	T6	EffectCause	true	jernbaneulykke	forsinket
+Relation	T6	T3	CauseEffect	true	forsinket	ulykken
+Relation	T3	T6	EffectCause	true	ulykken	forsinket
+Relation	T7	T0	CauseEffect	true	passeret	jernbaneulykke
+Relation	T0	T7	EffectCause	true	jernbaneulykke	passeret
+Relation	T0	T1	NoRel	true	jernbaneulykke	skete
+Relation	T0	T3	NoRel	true	jernbaneulykke	ulykken
+Relation	T0	T5	NoRel	true	jernbaneulykke	møde
+Relation	T1	T5	NoRel	true	skete	møde
+Relation	T1	T7	NoRel	true	skete	passeret
+Relation	T2	T1	NoRel	true	ødelagte	skete
+Relation	T2	T5	NoRel	true	ødelagte	møde
+Relation	T3	T1	NoRel	true	ulykken	skete
+Relation	T3	T5	NoRel	true	ulykken	møde
+Relation	T4	T1	NoRel	true	fyldt	skete
+Relation	T4	T2	NoRel	true	fyldt	ødelagte
+Relation	T4	T3	NoRel	true	fyldt	ulykken
+Relation	T4	T7	NoRel	true	fyldt	passeret
+Relation	T5	T0	NoRel	true	møde	jernbaneulykke
+Relation	T5	T2	NoRel	true	møde	ødelagte
+Relation	T5	T4	NoRel	true	møde	fyldt
+Relation	T6	T1	NoRel	true	forsinket	skete
+Relation	T6	T4	NoRel	true	forsinket	fyldt
+Relation	T6	T5	NoRel	true	forsinket	møde
+Relation	T7	T2	NoRel	true	passeret	ødelagte
+Relation	T7	T3	NoRel	true	passeret	ulykken
+Relation	T7	T5	NoRel	true	passeret	møde

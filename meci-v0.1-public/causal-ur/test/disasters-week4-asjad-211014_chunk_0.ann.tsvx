@@ -1,0 +1,20 @@
+Text	" طوفان نوح سے قبل " سے مراد اس بارش یا جھڑی سے پہلے کا زمانہ مراد ہے جو عین طوفان نوح کے شروع ہونے سے قبل برسی تھی ۔	بائبل میں اس سے مراد ھبوط آدم اور حوا سے بعد اور طوفان نوح کے شروع ہونے سے قبل کا زمانہ مرادہے ۔			
+Event	T0	بارش	EVENT	32
+Event	T1	طوفان	EVENT	77
+Event	T2	شروع	EVENT	90
+Event	T3	برسی	EVENT	107
+Event	T4	ھبوط	EVENT	139
+Event	T5	طوفان	EVENT	167
+Event	T6	شروع	EVENT	180
+Relation	T1	T2	NoRel	true	طوفان	شروع
+Relation	T2	T0	NoRel	true	شروع	بارش
+Relation	T2	T4	NoRel	true	شروع	ھبوط
+Relation	T3	T1	NoRel	true	برسی	طوفان
+Relation	T3	T2	NoRel	true	برسی	شروع
+Relation	T3	T5	NoRel	true	برسی	طوفان
+Relation	T3	T6	NoRel	true	برسی	شروع
+Relation	T4	T6	NoRel	true	ھبوط	شروع
+Relation	T5	T0	NoRel	true	طوفان	بارش
+Relation	T5	T3	NoRel	true	طوفان	برسی
+Relation	T5	T6	NoRel	true	طوفان	شروع
+Relation	T6	T2	NoRel	true	شروع	شروع

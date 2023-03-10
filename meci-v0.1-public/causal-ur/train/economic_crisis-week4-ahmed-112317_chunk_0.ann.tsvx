@@ -1,0 +1,49 @@
+Text	امریکا مخالف جذبات ، اصطلاح سے مراد ہے امریکی پالیسیوں ، ثقافت ، سماج ، معاشیات ، بین الاقوامی یا امریکا کی منفی سپر پاور کردار کی مخالفت یا دشمنی ۔	1. امریکی صدر ہیری ٹرومین نے ہیروشیما ناگاساکی کو جوہری طاقت کا کا نشانہ بنا تھا اور سوا لاکھ جاپانی زندہ جل گئے تھے ۔	2 . ویتنام کے تیرہ فیصد جنگلات اور زرعی زمین کو ایجنٹ اورنج نامی کیمیکل چھڑک کر زہریلا کر ڈالا تھا ۔	3 . ایران عراق جنگ میں عراق کی مدد اور عراق میں حلب جاہ شہر میں صدام حسین نے پانچ ہزار عراقی شہریوں کو گیس کے چھڑکاؤ سے مار ڈالے تھے اس کا الزام بھی امریک مدد پر ہے ۔	4 . واشنگٹن ہی نے بذریعہ اقوامِ متحدہ عراق کی دس برس کی مکمل اقتصادی ناکہ بندی کی جس کے سبب پانچ لاکھ سے زائد بچے مرگئے یا اپاہج ہو گئے ۔
+Event	T0	بنا	EVENT	222
+Event	T1	چھڑک	EVENT	340
+Event	T2	ڈالا	EVENT	358
+Event	T3	مدد	EVENT	400
+Event	T4	چھڑکاؤ	EVENT	479
+Event	T5	ڈالے	EVENT	493
+Event	T6	الزام	EVENT	508
+Event	T7	مرگئے	EVENT	650
+Event	T8	گئے	EVENT	668
+Event	T9	مخالفت	EVENT	131
+Event	T10	جل	EVENT	255
+Relation	T0	T10	CauseEffect	true	بنا	جل
+Relation	T10	T0	EffectCause	true	جل	بنا
+Relation	T4	T5	CauseEffect	true	چھڑکاؤ	ڈالے
+Relation	T5	T4	EffectCause	true	ڈالے	چھڑکاؤ
+Relation	T0	T8	NoRel	true	بنا	گئے
+Relation	T1	T10	NoRel	true	چھڑک	جل
+Relation	T1	T2	NoRel	true	چھڑک	ڈالا
+Relation	T1	T4	NoRel	true	چھڑک	چھڑکاؤ
+Relation	T1	T6	NoRel	true	چھڑک	الزام
+Relation	T1	T7	NoRel	true	چھڑک	مرگئے
+Relation	T10	T3	NoRel	true	جل	مدد
+Relation	T10	T6	NoRel	true	جل	الزام
+Relation	T10	T7	NoRel	true	جل	مرگئے
+Relation	T10	T8	NoRel	true	جل	گئے
+Relation	T10	T9	NoRel	true	جل	مخالفت
+Relation	T2	T5	NoRel	true	ڈالا	ڈالے
+Relation	T3	T0	NoRel	true	مدد	بنا
+Relation	T3	T1	NoRel	true	مدد	چھڑک
+Relation	T3	T4	NoRel	true	مدد	چھڑکاؤ
+Relation	T3	T6	NoRel	true	مدد	الزام
+Relation	T3	T8	NoRel	true	مدد	گئے
+Relation	T4	T1	NoRel	true	چھڑکاؤ	چھڑک
+Relation	T4	T6	NoRel	true	چھڑکاؤ	الزام
+Relation	T4	T7	NoRel	true	چھڑکاؤ	مرگئے
+Relation	T5	T10	NoRel	true	ڈالے	جل
+Relation	T5	T7	NoRel	true	ڈالے	مرگئے
+Relation	T6	T10	NoRel	true	الزام	جل
+Relation	T6	T5	NoRel	true	الزام	ڈالے
+Relation	T6	T8	NoRel	true	الزام	گئے
+Relation	T7	T4	NoRel	true	مرگئے	چھڑکاؤ
+Relation	T7	T9	NoRel	true	مرگئے	مخالفت
+Relation	T8	T10	NoRel	true	گئے	جل
+Relation	T8	T3	NoRel	true	گئے	مدد
+Relation	T8	T4	NoRel	true	گئے	چھڑکاؤ
+Relation	T9	T0	NoRel	true	مخالفت	بنا
+Relation	T9	T6	NoRel	true	مخالفت	الزام
+Relation	T9	T8	NoRel	true	مخالفت	گئے

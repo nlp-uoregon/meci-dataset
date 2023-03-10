@@ -1,0 +1,42 @@
+Text	HIV negatif , kanında HIV testi sonucu kanında virüs bulunmayan kişiler için kullanılır .	Bu kişiler aynı zamanda Anti - HIV testi ( ELISA testi negatif ) kişilerdir .	HIV genelde , kan testi ile tanımlanır , bu da HIV antikoru veya HIV testi olarak adlandırılır .	Bu test , bağışıklık sisteminin HIV'_e karşı antikor üretimi olup olmadığına bakar .	Bağışıklık sisteminin , HIV tanımlayacak kadar antikor üretmesi ve bunun testte ortaya çıkması , üç ay kadar bir süre alır .
+Event	T0	kullanılır	EVENT	77
+Event	T1	testi	EVENT	186
+Event	T2	tanımlanır	EVENT	196
+Event	T3	adlandırılır	EVENT	250
+Event	T4	test	EVENT	268
+Event	T5	üretimi	EVENT	318
+Event	T6	bakar	EVENT	342
+Event	T7	üretmesi	EVENT	405
+Event	T8	çıkması	EVENT	437
+Event	T9	alır	EVENT	468
+Event	T10	testi	EVENT	26
+Relation	T10	T0	CauseEffect	true	testi	kullanılır
+Relation	T0	T10	EffectCause	true	kullanılır	testi
+Relation	T1	T2	CauseEffect	true	testi	tanımlanır
+Relation	T2	T1	EffectCause	true	tanımlanır	testi
+Relation	T4	T6	CauseEffect	true	test	bakar
+Relation	T6	T4	EffectCause	true	bakar	test
+Relation	T0	T4	NoRel	true	kullanılır	test
+Relation	T0	T5	NoRel	true	kullanılır	üretimi
+Relation	T1	T8	NoRel	true	testi	çıkması
+Relation	T10	T4	NoRel	true	testi	test
+Relation	T10	T6	NoRel	true	testi	bakar
+Relation	T10	T9	NoRel	true	testi	alır
+Relation	T2	T4	NoRel	true	tanımlanır	test
+Relation	T3	T8	NoRel	true	adlandırılır	çıkması
+Relation	T4	T10	NoRel	true	test	testi
+Relation	T4	T5	NoRel	true	test	üretimi
+Relation	T4	T7	NoRel	true	test	üretmesi
+Relation	T4	T8	NoRel	true	test	çıkması
+Relation	T5	T1	NoRel	true	üretimi	testi
+Relation	T5	T2	NoRel	true	üretimi	tanımlanır
+Relation	T5	T4	NoRel	true	üretimi	test
+Relation	T6	T0	NoRel	true	bakar	kullanılır
+Relation	T6	T3	NoRel	true	bakar	adlandırılır
+Relation	T6	T9	NoRel	true	bakar	alır
+Relation	T7	T4	NoRel	true	üretmesi	test
+Relation	T7	T9	NoRel	true	üretmesi	alır
+Relation	T8	T0	NoRel	true	çıkması	kullanılır
+Relation	T8	T10	NoRel	true	çıkması	testi
+Relation	T8	T9	NoRel	true	çıkması	alır
+Relation	T9	T1	NoRel	true	alır	testi

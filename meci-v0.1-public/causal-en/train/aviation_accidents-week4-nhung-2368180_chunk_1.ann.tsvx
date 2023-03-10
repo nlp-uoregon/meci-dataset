@@ -1,0 +1,81 @@
+Text	Government officials denied that Vreeland ever served in the Navy .	Vreeland 's various claims have included knowing the cause of death of a Canadian Embassy employee before it was officially released , working as an undercover American naval officer , and being the victim of a conspiracy of government officials attempting to keep him quiet .	Police officers have reportedly characterized Vreeland as " a skilled con " .	In 2008 , Vreeland was sentenced in Colorado to 336 years to life in prison after he was convicted of inducement of child prostitution , sexual assault , sexual exploitation of children and distribution of cocaine following his luring of two boys to perform sexual acts on - camera in exchange for cocaine , money and the promise of a drum kit .	Category : People associated with the September 11 attacks
+Event	T0	denied	EVENT	21
+Event	T1	served	EVENT	47
+Event	T2	claims	EVENT	88
+Event	T3	knowing	EVENT	109
+Event	T4	death	EVENT	130
+Event	T5	released	EVENT	192
+Event	T6	working	EVENT	203
+Event	T7	victim	EVENT	267
+Event	T8	conspiracy	EVENT	279
+Event	T9	attempting	EVENT	314
+Event	T10	keep	EVENT	328
+Event	T11	characterized	EVENT	377
+Event	T12	sentenced	EVENT	446
+Event	T13	convicted	EVENT	512
+Event	T14	inducement	EVENT	525
+Event	T15	prostitution	EVENT	545
+Event	T16	assault	EVENT	567
+Event	T17	exploitation	EVENT	584
+Event	T18	distribution	EVENT	613
+Event	T19	luring	EVENT	651
+Event	T20	acts	EVENT	688
+Event	T21	promise	EVENT	745
+Event	T22	associated	EVENT	787
+Relation	T10	T7	CauseEffect	true	keep	victim
+Relation	T7	T10	EffectCause	true	victim	keep
+Relation	T13	T12	CauseEffect	true	convicted	sentenced
+Relation	T12	T13	EffectCause	true	sentenced	convicted
+Relation	T14	T13	CauseEffect	true	inducement	convicted
+Relation	T13	T14	EffectCause	true	convicted	inducement
+Relation	T16	T13	CauseEffect	true	assault	convicted
+Relation	T13	T16	EffectCause	true	convicted	assault
+Relation	T17	T13	CauseEffect	true	exploitation	convicted
+Relation	T13	T17	EffectCause	true	convicted	exploitation
+Relation	T18	T13	CauseEffect	true	distribution	convicted
+Relation	T13	T18	EffectCause	true	convicted	distribution
+Relation	T19	T20	CauseEffect	true	luring	acts
+Relation	T20	T19	EffectCause	true	acts	luring
+Relation	T0	T18	NoRel	true	denied	distribution
+Relation	T0	T4	NoRel	true	denied	death
+Relation	T1	T11	NoRel	true	served	characterized
+Relation	T1	T7	NoRel	true	served	victim
+Relation	T10	T13	NoRel	true	keep	convicted
+Relation	T10	T16	NoRel	true	keep	assault
+Relation	T11	T2	NoRel	true	characterized	claims
+Relation	T12	T11	NoRel	true	sentenced	characterized
+Relation	T12	T4	NoRel	true	sentenced	death
+Relation	T14	T11	NoRel	true	inducement	characterized
+Relation	T14	T6	NoRel	true	inducement	working
+Relation	T15	T1	NoRel	true	prostitution	served
+Relation	T16	T17	NoRel	true	assault	exploitation
+Relation	T16	T19	NoRel	true	assault	luring
+Relation	T17	T22	NoRel	true	exploitation	associated
+Relation	T2	T1	NoRel	true	claims	served
+Relation	T2	T11	NoRel	true	claims	characterized
+Relation	T2	T3	NoRel	true	claims	knowing
+Relation	T2	T9	NoRel	true	claims	attempting
+Relation	T20	T21	NoRel	true	acts	promise
+Relation	T21	T12	NoRel	true	promise	sentenced
+Relation	T21	T13	NoRel	true	promise	convicted
+Relation	T21	T16	NoRel	true	promise	assault
+Relation	T22	T6	NoRel	true	associated	working
+Relation	T3	T15	NoRel	true	knowing	prostitution
+Relation	T3	T19	NoRel	true	knowing	luring
+Relation	T3	T4	NoRel	true	knowing	death
+Relation	T3	T5	NoRel	true	knowing	released
+Relation	T4	T12	NoRel	true	death	sentenced
+Relation	T4	T14	NoRel	true	death	inducement
+Relation	T4	T16	NoRel	true	death	assault
+Relation	T6	T5	NoRel	true	working	released
+Relation	T6	T9	NoRel	true	working	attempting
+Relation	T7	T12	NoRel	true	victim	sentenced
+Relation	T7	T16	NoRel	true	victim	assault
+Relation	T7	T4	NoRel	true	victim	death
+Relation	T8	T21	NoRel	true	conspiracy	promise
+Relation	T8	T5	NoRel	true	conspiracy	released
+Relation	T9	T10	NoRel	true	attempting	keep
+Relation	T9	T15	NoRel	true	attempting	prostitution
+Relation	T9	T18	NoRel	true	attempting	distribution
+Relation	T9	T2	NoRel	true	attempting	claims
+Relation	T9	T6	NoRel	true	attempting	working

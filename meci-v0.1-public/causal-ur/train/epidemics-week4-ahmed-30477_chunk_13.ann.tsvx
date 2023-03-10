@@ -1,0 +1,23 @@
+Text	اس کے برعکس چنگیز خان نے بغداد اور گردونواح میں 1206 ء میں حملہ کیا اور 20 سالوں میں 4 کروڑ لوگ مارے گئے ۔	-___’ بنگال کے قحط کا ذمہ دار برطانیہ تھا ‘ ۔	بی بی سی ۔ ( اردو میں ) -	Famine Crimes : Politics & the Disaster_Relief Industry in Africa By Alexander De Waal -	کس طرح برطانوی حکومت نے انڈیا میں مصنوعی قحط پیدا کیا -
+Event	T0	قحط	EVENT	122
+Event	T2	حملہ	EVENT	59
+Event	T3	مارے	EVENT	96
+Event	T4	Famine	EVENT	179
+Event	T5	Disaster_Relief	EVENT	210
+Event	T6	قحط	EVENT	309
+Event	T7	پیدا	EVENT	313
+Relation	T2	T3	CauseEffect	true	حملہ	مارے
+Relation	T3	T2	EffectCause	true	مارے	حملہ
+Relation	T0	T5	NoRel	true	قحط	Disaster_Relief
+Relation	T2	T6	NoRel	true	حملہ	قحط
+Relation	T3	T5	NoRel	true	مارے	Disaster_Relief
+Relation	T3	T6	NoRel	true	مارے	قحط
+Relation	T3	T7	NoRel	true	مارے	پیدا
+Relation	T4	T3	NoRel	true	Famine	مارے
+Relation	T4	T5	NoRel	true	Famine	Disaster_Relief
+Relation	T5	T4	NoRel	true	Disaster_Relief	Famine
+Relation	T6	T3	NoRel	true	قحط	مارے
+Relation	T6	T4	NoRel	true	قحط	Famine
+Relation	T6	T7	NoRel	true	قحط	پیدا
+Relation	T7	T0	NoRel	true	پیدا	قحط
+Relation	T7	T5	NoRel	true	پیدا	Disaster_Relief

@@ -1,0 +1,69 @@
+Text	Her opbyggede han et tæt samarbejde med Talibanregimet , hvor al-Qaeda fik rollen som den væbnede fløj under Taleban-regimets hær .	Terrorgruppen fik etableret egne træningslejre og anså sig som værende Talibans elitesoldater .	Samtidig gav tilflugtsstedet i Afghanistan al-Qaeda mulighed for at udvikle både sin ideologi og militære styrker .	USA affyrede i 1998 missiler mod mål i Sudan og Afghanistan som gengældelse for terrorangreb mod de amerikanske ambassader i Kenya og Tanzania samme år , som bin Laden ifølge USA stod bag .	Det antages at Osama bin Laden og hans netværk , al-Qaeda , stod bag terrorangrebet på New York og Washington , 11. september 2001 .
+Event	T0	opbyggede	EVENT	4
+Event	T1	samarbejde	EVENT	25
+Event	T2	rollen	EVENT	75
+Event	T3	etableret	EVENT	150
+Event	T4	træningslejre	EVENT	165
+Event	T5	anså	EVENT	182
+Event	T6	udvikle	EVENT	296
+Event	T7	affyrede	EVENT	348
+Event	T8	missiler	EVENT	364
+Event	T9	gengældelse	EVENT	408
+Event	T10	terrorangreb	EVENT	424
+Event	T11	antages	EVENT	538
+Event	T12	stod	EVENT	594
+Event	T13	terrorangrebet	EVENT	603
+Relation	T0	T2	CauseEffect	true	opbyggede	rollen
+Relation	T2	T0	EffectCause	true	rollen	opbyggede
+Relation	T3	T5	CauseEffect	true	etableret	anså
+Relation	T5	T3	EffectCause	true	anså	etableret
+Relation	T7	T10	CauseEffect	true	affyrede	terrorangreb
+Relation	T10	T7	EffectCause	true	terrorangreb	affyrede
+Relation	T13	T11	CauseEffect	true	terrorangrebet	antages
+Relation	T11	T13	EffectCause	true	antages	terrorangrebet
+Relation	T0	T12	NoRel	true	opbyggede	stod
+Relation	T0	T13	NoRel	true	opbyggede	terrorangrebet
+Relation	T1	T5	NoRel	true	samarbejde	anså
+Relation	T10	T1	NoRel	true	terrorangreb	samarbejde
+Relation	T10	T3	NoRel	true	terrorangreb	etableret
+Relation	T10	T4	NoRel	true	terrorangreb	træningslejre
+Relation	T10	T6	NoRel	true	terrorangreb	udvikle
+Relation	T11	T0	NoRel	true	antages	opbyggede
+Relation	T11	T2	NoRel	true	antages	rollen
+Relation	T11	T4	NoRel	true	antages	træningslejre
+Relation	T11	T6	NoRel	true	antages	udvikle
+Relation	T12	T3	NoRel	true	stod	etableret
+Relation	T12	T9	NoRel	true	stod	gengældelse
+Relation	T13	T1	NoRel	true	terrorangrebet	samarbejde
+Relation	T13	T2	NoRel	true	terrorangrebet	rollen
+Relation	T13	T4	NoRel	true	terrorangrebet	træningslejre
+Relation	T13	T5	NoRel	true	terrorangrebet	anså
+Relation	T2	T12	NoRel	true	rollen	stod
+Relation	T2	T5	NoRel	true	rollen	anså
+Relation	T3	T0	NoRel	true	etableret	opbyggede
+Relation	T3	T10	NoRel	true	etableret	terrorangreb
+Relation	T3	T11	NoRel	true	etableret	antages
+Relation	T3	T12	NoRel	true	etableret	stod
+Relation	T3	T2	NoRel	true	etableret	rollen
+Relation	T3	T6	NoRel	true	etableret	udvikle
+Relation	T4	T0	NoRel	true	træningslejre	opbyggede
+Relation	T4	T3	NoRel	true	træningslejre	etableret
+Relation	T4	T5	NoRel	true	træningslejre	anså
+Relation	T4	T6	NoRel	true	træningslejre	udvikle
+Relation	T4	T8	NoRel	true	træningslejre	missiler
+Relation	T4	T9	NoRel	true	træningslejre	gengældelse
+Relation	T5	T9	NoRel	true	anså	gengældelse
+Relation	T6	T0	NoRel	true	udvikle	opbyggede
+Relation	T6	T1	NoRel	true	udvikle	samarbejde
+Relation	T6	T2	NoRel	true	udvikle	rollen
+Relation	T6	T3	NoRel	true	udvikle	etableret
+Relation	T7	T1	NoRel	true	affyrede	samarbejde
+Relation	T7	T12	NoRel	true	affyrede	stod
+Relation	T7	T3	NoRel	true	affyrede	etableret
+Relation	T8	T0	NoRel	true	missiler	opbyggede
+Relation	T8	T10	NoRel	true	missiler	terrorangreb
+Relation	T8	T2	NoRel	true	missiler	rollen
+Relation	T8	T9	NoRel	true	missiler	gengældelse
+Relation	T9	T2	NoRel	true	gengældelse	rollen
+Relation	T9	T4	NoRel	true	gengældelse	træningslejre
+Relation	T9	T7	NoRel	true	gengældelse	affyrede

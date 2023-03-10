@@ -1,0 +1,54 @@
+Text	I 1331 brød der pest ud i Hubei-provinsen centralt i Kina .	Kilden var sandsynligvis en latent smitte blandt smågnavere i Yunnan og Burma , 800 km længere mod syd .	De næste tyve år spredte smitten sig til resten af Kina .	At dømme efter folketællinger omkom mindst 20 millioner .	Kamelkaravanerne langs Silkevejen bragte smitten mod vest .
+Event	T0	brød	EVENT	7
+Event	T1	smitte	EVENT	95
+Event	T2	smitten	EVENT	190
+Event	T3	omkom	EVENT	253
+Event	T4	smitten	EVENT	322
+Event	T5	pest	EVENT	16
+Event	T6	Kilden	EVENT	60
+Event	T7	spredte	EVENT	182
+Event	T8	dømme	EVENT	226
+Event	T9	Kamelkaravanerne	EVENT	281
+Event	T10	bragte	EVENT	315
+Relation	T9	T10	CauseEffect	true	Kamelkaravanerne	bragte
+Relation	T10	T9	EffectCause	true	bragte	Kamelkaravanerne
+Relation	T1	T5	CauseEffect	true	smitte	pest
+Relation	T5	T1	EffectCause	true	pest	smitte
+Relation	T0	T4	NoRel	true	brød	smitten
+Relation	T0	T5	NoRel	true	brød	pest
+Relation	T0	T8	NoRel	true	brød	dømme
+Relation	T1	T2	NoRel	true	smitte	smitten
+Relation	T1	T4	NoRel	true	smitte	smitten
+Relation	T1	T6	NoRel	true	smitte	Kilden
+Relation	T10	T1	NoRel	true	bragte	smitte
+Relation	T10	T2	NoRel	true	bragte	smitten
+Relation	T2	T10	NoRel	true	smitten	bragte
+Relation	T2	T6	NoRel	true	smitten	Kilden
+Relation	T3	T0	NoRel	true	omkom	brød
+Relation	T3	T1	NoRel	true	omkom	smitte
+Relation	T3	T10	NoRel	true	omkom	bragte
+Relation	T3	T2	NoRel	true	omkom	smitten
+Relation	T3	T4	NoRel	true	omkom	smitten
+Relation	T3	T7	NoRel	true	omkom	spredte
+Relation	T3	T9	NoRel	true	omkom	Kamelkaravanerne
+Relation	T4	T2	NoRel	true	smitten	smitten
+Relation	T4	T3	NoRel	true	smitten	omkom
+Relation	T4	T5	NoRel	true	smitten	pest
+Relation	T4	T8	NoRel	true	smitten	dømme
+Relation	T5	T2	NoRel	true	pest	smitten
+Relation	T5	T3	NoRel	true	pest	omkom
+Relation	T5	T9	NoRel	true	pest	Kamelkaravanerne
+Relation	T6	T4	NoRel	true	Kilden	smitten
+Relation	T7	T0	NoRel	true	spredte	brød
+Relation	T7	T4	NoRel	true	spredte	smitten
+Relation	T8	T0	NoRel	true	dømme	brød
+Relation	T8	T1	NoRel	true	dømme	smitte
+Relation	T8	T10	NoRel	true	dømme	bragte
+Relation	T8	T2	NoRel	true	dømme	smitten
+Relation	T8	T5	NoRel	true	dømme	pest
+Relation	T9	T2	NoRel	true	Kamelkaravanerne	smitten
+Relation	T9	T3	NoRel	true	Kamelkaravanerne	omkom
+Relation	T9	T4	NoRel	true	Kamelkaravanerne	smitten
+Relation	T9	T5	NoRel	true	Kamelkaravanerne	pest
+Relation	T9	T6	NoRel	true	Kamelkaravanerne	Kilden
+Relation	T9	T8	NoRel	true	Kamelkaravanerne	dømme

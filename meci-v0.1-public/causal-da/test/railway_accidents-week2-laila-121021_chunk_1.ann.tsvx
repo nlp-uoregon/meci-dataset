@@ -1,0 +1,51 @@
+Text	Det blev antaget at lokomotivføreren havde iagttaget udkørselssignalet skifte først fra rødt til et grønt lys og derefter til to grønne lys i forbindelse gennemkørselssignalgivningen for " Englænderen " , men at han ikke havde iagttaget PU-signalet i spor 2 , der med to hvide lys ved siden af hinanden havde vist signal " forbikørsel forbudt " .	Ulykken og undersøgelsesresultatet var stærkt medvirkende til , at DSB indførte krav om , at anvende rødt lys i PU-signaler når disse skulle sikre mod at tog fejlagtigt satte i gang som følge af signalgivning i samme retning for tog i nabospor .	Ved ulykken blev fem personer kvæstet , heraf en alvorligt .	To af personvognene i " Englænderen " væltede om på siden og seks vogne i godstoget blev afsporet .	
+Event	T1	iagttaget	EVENT	43
+Event	T10	ulykken	EVENT	597
+Event	T11	kvæstet	EVENT	623
+Event	T12	afsporet	EVENT	743
+Event	T2	skifte	EVENT	71
+Event	T4	forbudt	EVENT	335
+Event	T5	Ulykken	EVENT	347
+Event	T6	undersøgelsesresultatet	EVENT	358
+Event	T7	krav	EVENT	427
+Event	T8	anvende	EVENT	440
+Event	T9	signalgivning	EVENT	542
+Relation	T5	T7	CauseEffect	true	Ulykken	krav
+Relation	T7	T5	EffectCause	true	krav	Ulykken
+Relation	T6	T7	CauseEffect	true	undersøgelsesresultatet	krav
+Relation	T7	T6	EffectCause	true	krav	undersøgelsesresultatet
+Relation	T10	T11	CauseEffect	true	ulykken	kvæstet
+Relation	T11	T10	EffectCause	true	kvæstet	ulykken
+Relation	T5	T12	CauseEffect	true	Ulykken	afsporet
+Relation	T12	T5	EffectCause	true	afsporet	Ulykken
+Relation	T10	T12	CauseEffect	true	ulykken	afsporet
+Relation	T12	T10	EffectCause	true	afsporet	ulykken
+Relation	T1	T10	NoRel	true	iagttaget	ulykken
+Relation	T1	T9	NoRel	true	iagttaget	signalgivning
+Relation	T10	T2	NoRel	true	ulykken	skifte
+Relation	T10	T4	NoRel	true	ulykken	forbudt
+Relation	T10	T9	NoRel	true	ulykken	signalgivning
+Relation	T11	T1	NoRel	true	kvæstet	iagttaget
+Relation	T11	T12	NoRel	true	kvæstet	afsporet
+Relation	T11	T6	NoRel	true	kvæstet	undersøgelsesresultatet
+Relation	T11	T7	NoRel	true	kvæstet	krav
+Relation	T12	T11	NoRel	true	afsporet	kvæstet
+Relation	T12	T8	NoRel	true	afsporet	anvende
+Relation	T2	T4	NoRel	true	skifte	forbudt
+Relation	T2	T9	NoRel	true	skifte	signalgivning
+Relation	T4	T1	NoRel	true	forbudt	iagttaget
+Relation	T4	T10	NoRel	true	forbudt	ulykken
+Relation	T4	T12	NoRel	true	forbudt	afsporet
+Relation	T4	T5	NoRel	true	forbudt	Ulykken
+Relation	T4	T6	NoRel	true	forbudt	undersøgelsesresultatet
+Relation	T5	T2	NoRel	true	Ulykken	skifte
+Relation	T5	T4	NoRel	true	Ulykken	forbudt
+Relation	T5	T6	NoRel	true	Ulykken	undersøgelsesresultatet
+Relation	T5	T8	NoRel	true	Ulykken	anvende
+Relation	T5	T9	NoRel	true	Ulykken	signalgivning
+Relation	T6	T8	NoRel	true	undersøgelsesresultatet	anvende
+Relation	T7	T12	NoRel	true	krav	afsporet
+Relation	T8	T5	NoRel	true	anvende	Ulykken
+Relation	T8	T7	NoRel	true	anvende	krav
+Relation	T9	T1	NoRel	true	signalgivning	iagttaget
+Relation	T9	T6	NoRel	true	signalgivning	undersøgelsesresultatet

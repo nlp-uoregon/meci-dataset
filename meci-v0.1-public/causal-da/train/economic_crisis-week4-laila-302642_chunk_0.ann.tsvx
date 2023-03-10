@@ -1,0 +1,24 @@
+Text	thumb | Snit gennem stubmølle med to lofter thumb | Stubmølle på Muhu i Estland .	thumb | left | Stubmølle i Wannegem , Wannegem-Lede , Kruishoutem i Østflandern i Belgien	En STUBMØLLE er en vindmølle af træ på en fod .	Hele møllen kan drejes efter vindretningen .	Stubben , som har givet denne type vindmølle navn , er et lodret stykke egetømmer , der bæres og støttes af møllefodens skråstivere .
+Event	T0	Snit	EVENT	8
+Event	T1	drejes	EVENT	236
+Event	T2	givet	EVENT	283
+Event	T3	bæres	EVENT	353
+Event	T4	fod	EVENT	214
+Event	T5	lodret	EVENT	323
+Event	T6	støttes	EVENT	362
+Relation	T4	T1	CauseEffect	true	fod	drejes
+Relation	T1	T4	EffectCause	true	drejes	fod
+Relation	T0	T2	NoRel	true	Snit	givet
+Relation	T0	T3	NoRel	true	Snit	bæres
+Relation	T1	T2	NoRel	true	drejes	givet
+Relation	T2	T1	NoRel	true	givet	drejes
+Relation	T2	T5	NoRel	true	givet	lodret
+Relation	T3	T1	NoRel	true	bæres	drejes
+Relation	T3	T5	NoRel	true	bæres	lodret
+Relation	T4	T3	NoRel	true	fod	bæres
+Relation	T4	T6	NoRel	true	fod	støttes
+Relation	T5	T3	NoRel	true	lodret	bæres
+Relation	T5	T4	NoRel	true	lodret	fod
+Relation	T6	T0	NoRel	true	støttes	Snit
+Relation	T6	T3	NoRel	true	støttes	bæres
+Relation	T6	T4	NoRel	true	støttes	fod

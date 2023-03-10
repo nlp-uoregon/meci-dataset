@@ -1,0 +1,24 @@
+Text	Merkezi Komite Binası’nın önünde toplanan kalabalığa hitaben umutsuz konuşma girişimlerinde bulundu .	Bu konuşma , binanın kapılarını zorlayan göstericiler tarafından reddedilirken , içine düştüğü durumun güvensizliğini anlamış olan Ceavuşescu , helikopter ile binanın çatısından kaçtı .	Batı Medyası , ayaklanmanın akışı boyunca , Çavuşesku’yu destekleyen Securitate’nin kaç kişiyi öldürdükleri ile ilgili devamlı tahminlerde bulunuyorldu .	Bu sayı gazetelerin ön sayfalarındaki haberlerde , aniden 64.000’e kadar fırlamıştı .	Macar askeri ataşesi bu sayılarla ilgili , yetersiz lojistiğin bu kadar süre içinde bunu yapamayacağı konusundaki kuşkularını dile getirdi .
+Event	T0	bulundu	EVENT	92
+Event	T1	konuşma	EVENT	105
+Event	T2	kaçtı	EVENT	280
+Event	T5	fırlamıştı	EVENT	515
+Event	T6	reddedilirken	EVENT	167
+Event	T3	bulunuyorldu	EVENT	427
+Event	T4	getirdi	EVENT	659
+Relation	T6	T2	CauseEffect	true	reddedilirken	kaçtı
+Relation	T2	T6	EffectCause	true	kaçtı	reddedilirken
+Relation	T0	T6	CauseEffect	true	bulundu	reddedilirken
+Relation	T6	T0	EffectCause	true	reddedilirken	bulundu
+Relation	T1	T0	NoRel	true	konuşma	bulundu
+Relation	T1	T3	NoRel	true	konuşma	bulunuyorldu
+Relation	T1	T4	NoRel	true	konuşma	getirdi
+Relation	T1	T5	NoRel	true	konuşma	fırlamıştı
+Relation	T3	T0	NoRel	true	bulunuyorldu	bulundu
+Relation	T3	T5	NoRel	true	bulunuyorldu	fırlamıştı
+Relation	T4	T0	NoRel	true	getirdi	bulundu
+Relation	T4	T6	NoRel	true	getirdi	reddedilirken
+Relation	T5	T0	NoRel	true	fırlamıştı	bulundu
+Relation	T5	T3	NoRel	true	fırlamıştı	bulunuyorldu
+Relation	T6	T1	NoRel	true	reddedilirken	konuşma
+Relation	T6	T3	NoRel	true	reddedilirken	bulunuyorldu

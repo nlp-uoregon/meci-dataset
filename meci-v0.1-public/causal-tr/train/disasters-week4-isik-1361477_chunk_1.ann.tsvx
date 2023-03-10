@@ -1,0 +1,139 @@
+Text	Depremin etkisiyle 2'si otel olmak üzere 25 bina yıkıldı .	23 Ekim'de meydana gelen deprem nedeniyle Van'da olan arama kurtarma ekiplerinin bir kısmı , binaların yıkıldığı bölgeye sevk edilirken ; daha önce kendi bölgelerine dönmüş arama kurtarma ekipleri de tekrar bölgeye gelerek arama kurtarma çalışmalarında bulunmuşlardır .	12 Kasım günü Afet ve Acil Durum Yönetimi Başkanlığı'ndan yapılan açıklamada ; 25 binanın yıkıldığı , 40 kişinin öldüğü ve 30 kişinin enkazlardan sağ kurtarıldığı bilgisi verilmiştir .	Depremde ölenlerden biri de Japon yardım görevlisi Prof. Dr. Atsushi Miyazaki'dir .	Van'da yaşayan binlerce insan bu depremden sonra bölgeyi terk etmiştir , kalanlar ise soğuk kış aylarını yazlık çadırlarda geçirmiştir Van valiliğinin gönüllülerle beraber yürüttüğü çalışmlar sayesinde ağır hasarlı birçok bina kayıt altına alınıp acil tedbir alınması için ilgili makamlara resmi olarak raporlanmıştır .
+Event	T0	yıkıldı	EVENT	49
+Event	T1	deprem	EVENT	84
+Event	T3	dönmüş	EVENT	225
+Event	T4	açıklamada	EVENT	395
+Event	T5	yıkıldığı	EVENT	419
+Event	T6	öldüğü	EVENT	442
+Event	T7	verilmiştir	EVENT	500
+Event	T8	depremden	EVENT	631
+Event	T9	etmiştir	EVENT	660
+Event	T10	geçirmiştir	EVENT	721
+Event	T11	çalışmlar	EVENT	780
+Event	T13	raporlanmıştır	EVENT	901
+Event	T2	gelerek	EVENT	274
+Event	T14	edilirken	EVENT	185
+Event	T15	bulunmuşlardır	EVENT	312
+Event	T16	kurtarıldığı	EVENT	479
+Event	T12	hasarlı	EVENT	805
+Event	T17	alınıp	EVENT	838
+Relation	T3	T2	CauseEffect	true	dönmüş	gelerek
+Relation	T2	T3	EffectCause	true	gelerek	dönmüş
+Relation	T1	T14	CauseEffect	true	deprem	edilirken
+Relation	T14	T1	EffectCause	true	edilirken	deprem
+Relation	T2	T15	CauseEffect	true	gelerek	bulunmuşlardır
+Relation	T15	T2	EffectCause	true	bulunmuşlardır	gelerek
+Relation	T1	T2	CauseEffect	true	deprem	gelerek
+Relation	T2	T1	EffectCause	true	gelerek	deprem
+Relation	T14	T16	CauseEffect	true	edilirken	kurtarıldığı
+Relation	T16	T14	EffectCause	true	kurtarıldığı	edilirken
+Relation	T15	T16	CauseEffect	true	bulunmuşlardır	kurtarıldığı
+Relation	T16	T15	EffectCause	true	kurtarıldığı	bulunmuşlardır
+Relation	T4	T7	CauseEffect	true	açıklamada	verilmiştir
+Relation	T7	T4	EffectCause	true	verilmiştir	açıklamada
+Relation	T12	T11	CauseEffect	true	hasarlı	çalışmlar
+Relation	T11	T12	EffectCause	true	çalışmlar	hasarlı
+Relation	T11	T17	CauseEffect	true	çalışmlar	alınıp
+Relation	T17	T11	EffectCause	true	alınıp	çalışmlar
+Relation	T17	T13	CauseEffect	true	alınıp	raporlanmıştır
+Relation	T13	T17	EffectCause	true	raporlanmıştır	alınıp
+Relation	T0	T10	NoRel	true	yıkıldı	geçirmiştir
+Relation	T0	T11	NoRel	true	yıkıldı	çalışmlar
+Relation	T0	T13	NoRel	true	yıkıldı	raporlanmıştır
+Relation	T0	T17	NoRel	true	yıkıldı	alınıp
+Relation	T0	T3	NoRel	true	yıkıldı	dönmüş
+Relation	T0	T4	NoRel	true	yıkıldı	açıklamada
+Relation	T0	T6	NoRel	true	yıkıldı	öldüğü
+Relation	T0	T8	NoRel	true	yıkıldı	depremden
+Relation	T1	T12	NoRel	true	deprem	hasarlı
+Relation	T1	T16	NoRel	true	deprem	kurtarıldığı
+Relation	T1	T17	NoRel	true	deprem	alınıp
+Relation	T1	T3	NoRel	true	deprem	dönmüş
+Relation	T1	T5	NoRel	true	deprem	yıkıldığı
+Relation	T10	T1	NoRel	true	geçirmiştir	deprem
+Relation	T10	T11	NoRel	true	geçirmiştir	çalışmlar
+Relation	T10	T16	NoRel	true	geçirmiştir	kurtarıldığı
+Relation	T10	T4	NoRel	true	geçirmiştir	açıklamada
+Relation	T10	T7	NoRel	true	geçirmiştir	verilmiştir
+Relation	T10	T8	NoRel	true	geçirmiştir	depremden
+Relation	T10	T9	NoRel	true	geçirmiştir	etmiştir
+Relation	T11	T14	NoRel	true	çalışmlar	edilirken
+Relation	T11	T16	NoRel	true	çalışmlar	kurtarıldığı
+Relation	T11	T2	NoRel	true	çalışmlar	gelerek
+Relation	T11	T4	NoRel	true	çalışmlar	açıklamada
+Relation	T11	T5	NoRel	true	çalışmlar	yıkıldığı
+Relation	T11	T6	NoRel	true	çalışmlar	öldüğü
+Relation	T11	T7	NoRel	true	çalışmlar	verilmiştir
+Relation	T12	T1	NoRel	true	hasarlı	deprem
+Relation	T12	T14	NoRel	true	hasarlı	edilirken
+Relation	T12	T15	NoRel	true	hasarlı	bulunmuşlardır
+Relation	T12	T16	NoRel	true	hasarlı	kurtarıldığı
+Relation	T12	T2	NoRel	true	hasarlı	gelerek
+Relation	T12	T4	NoRel	true	hasarlı	açıklamada
+Relation	T12	T6	NoRel	true	hasarlı	öldüğü
+Relation	T13	T0	NoRel	true	raporlanmıştır	yıkıldı
+Relation	T13	T2	NoRel	true	raporlanmıştır	gelerek
+Relation	T13	T3	NoRel	true	raporlanmıştır	dönmüş
+Relation	T13	T4	NoRel	true	raporlanmıştır	açıklamada
+Relation	T13	T8	NoRel	true	raporlanmıştır	depremden
+Relation	T13	T9	NoRel	true	raporlanmıştır	etmiştir
+Relation	T14	T10	NoRel	true	edilirken	geçirmiştir
+Relation	T14	T11	NoRel	true	edilirken	çalışmlar
+Relation	T14	T17	NoRel	true	edilirken	alınıp
+Relation	T14	T7	NoRel	true	edilirken	verilmiştir
+Relation	T14	T9	NoRel	true	edilirken	etmiştir
+Relation	T15	T11	NoRel	true	bulunmuşlardır	çalışmlar
+Relation	T15	T12	NoRel	true	bulunmuşlardır	hasarlı
+Relation	T15	T14	NoRel	true	bulunmuşlardır	edilirken
+Relation	T15	T5	NoRel	true	bulunmuşlardır	yıkıldığı
+Relation	T15	T9	NoRel	true	bulunmuşlardır	etmiştir
+Relation	T16	T12	NoRel	true	kurtarıldığı	hasarlı
+Relation	T16	T3	NoRel	true	kurtarıldığı	dönmüş
+Relation	T16	T4	NoRel	true	kurtarıldığı	açıklamada
+Relation	T17	T1	NoRel	true	alınıp	deprem
+Relation	T17	T15	NoRel	true	alınıp	bulunmuşlardır
+Relation	T17	T3	NoRel	true	alınıp	dönmüş
+Relation	T17	T7	NoRel	true	alınıp	verilmiştir
+Relation	T2	T12	NoRel	true	gelerek	hasarlı
+Relation	T2	T8	NoRel	true	gelerek	depremden
+Relation	T2	T9	NoRel	true	gelerek	etmiştir
+Relation	T3	T10	NoRel	true	dönmüş	geçirmiştir
+Relation	T3	T14	NoRel	true	dönmüş	edilirken
+Relation	T3	T17	NoRel	true	dönmüş	alınıp
+Relation	T3	T7	NoRel	true	dönmüş	verilmiştir
+Relation	T4	T10	NoRel	true	açıklamada	geçirmiştir
+Relation	T4	T12	NoRel	true	açıklamada	hasarlı
+Relation	T4	T15	NoRel	true	açıklamada	bulunmuşlardır
+Relation	T4	T16	NoRel	true	açıklamada	kurtarıldığı
+Relation	T4	T3	NoRel	true	açıklamada	dönmüş
+Relation	T5	T0	NoRel	true	yıkıldığı	yıkıldı
+Relation	T5	T1	NoRel	true	yıkıldığı	deprem
+Relation	T5	T2	NoRel	true	yıkıldığı	gelerek
+Relation	T5	T3	NoRel	true	yıkıldığı	dönmüş
+Relation	T6	T1	NoRel	true	öldüğü	deprem
+Relation	T6	T11	NoRel	true	öldüğü	çalışmlar
+Relation	T6	T12	NoRel	true	öldüğü	hasarlı
+Relation	T6	T14	NoRel	true	öldüğü	edilirken
+Relation	T6	T15	NoRel	true	öldüğü	bulunmuşlardır
+Relation	T6	T17	NoRel	true	öldüğü	alınıp
+Relation	T7	T0	NoRel	true	verilmiştir	yıkıldı
+Relation	T7	T10	NoRel	true	verilmiştir	geçirmiştir
+Relation	T7	T11	NoRel	true	verilmiştir	çalışmlar
+Relation	T7	T12	NoRel	true	verilmiştir	hasarlı
+Relation	T7	T13	NoRel	true	verilmiştir	raporlanmıştır
+Relation	T7	T17	NoRel	true	verilmiştir	alınıp
+Relation	T7	T6	NoRel	true	verilmiştir	öldüğü
+Relation	T7	T9	NoRel	true	verilmiştir	etmiştir
+Relation	T8	T0	NoRel	true	depremden	yıkıldı
+Relation	T8	T11	NoRel	true	depremden	çalışmlar
+Relation	T8	T12	NoRel	true	depremden	hasarlı
+Relation	T8	T14	NoRel	true	depremden	edilirken
+Relation	T8	T15	NoRel	true	depremden	bulunmuşlardır
+Relation	T8	T3	NoRel	true	depremden	dönmüş
+Relation	T8	T4	NoRel	true	depremden	açıklamada
+Relation	T8	T6	NoRel	true	depremden	öldüğü
+Relation	T9	T1	NoRel	true	etmiştir	deprem
+Relation	T9	T12	NoRel	true	etmiştir	hasarlı
+Relation	T9	T14	NoRel	true	etmiştir	edilirken
+Relation	T9	T7	NoRel	true	etmiştir	verilmiştir
+Relation	T9	T8	NoRel	true	etmiştir	depremden

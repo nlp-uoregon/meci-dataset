@@ -1,0 +1,60 @@
+Text	El ACCIDENTE DE PIPER SENECA EN FILIPINAS DE 2012 fue el accidente sufrido por un avión ligero el 18 de agosto de 2012 en las costas de la isla de Masbate en Filipinas .	La Piper PA-34 Seneca transportaba a cuatro personas , incluyendo al Secretario de Interior y Gobierno Local filipino Jesse Robredo .	Como resultado del accidente , tres de los cuatro pasajeros murieron , incluyendo a Robredo , que viajaba de Mactán , Cebú a Naga .	El secretario de Enterior Robredo y su ayudante , el Inspector de Jefe de Policía June Paolo Abrazado , estaban en Cebú asistiendo al Congreso Nacional de Apoyo a la Comunidad Investigadora y el Grupo de Detección e Investigación Criminal .	Robredo había adquirido billetes para un vuelo desde el Aeropuerto Internacional de Mactan-Cebú a Manila , pero en su lugar chartearon un avión y así llegar a Naga y estar con su familia .
+Event	T0	ACCIDENTE	EVENT	3
+Event	T1	sufrido	EVENT	67
+Event	T2	transportaba	EVENT	192
+Event	T3	accidente	EVENT	323
+Event	T4	murieron	EVENT	364
+Event	T5	viajaba	EVENT	402
+Event	T6	asistiendo	EVENT	556
+Event	T7	Investigación	EVENT	652
+Event	T8	adquirido	EVENT	691
+Event	T9	vuelo	EVENT	718
+Event	T10	chartearon	EVENT	801
+Event	T11	llegar	EVENT	827
+Relation	T3	T4	CauseEffect	true	accidente	murieron
+Relation	T4	T3	EffectCause	true	murieron	accidente
+Relation	T0	T10	NoRel	true	ACCIDENTE	chartearon
+Relation	T0	T3	NoRel	true	ACCIDENTE	accidente
+Relation	T1	T0	NoRel	true	sufrido	ACCIDENTE
+Relation	T1	T11	NoRel	true	sufrido	llegar
+Relation	T1	T4	NoRel	true	sufrido	murieron
+Relation	T1	T5	NoRel	true	sufrido	viajaba
+Relation	T1	T8	NoRel	true	sufrido	adquirido
+Relation	T1	T9	NoRel	true	sufrido	vuelo
+Relation	T10	T11	NoRel	true	chartearon	llegar
+Relation	T10	T8	NoRel	true	chartearon	adquirido
+Relation	T11	T0	NoRel	true	llegar	ACCIDENTE
+Relation	T11	T2	NoRel	true	llegar	transportaba
+Relation	T11	T3	NoRel	true	llegar	accidente
+Relation	T11	T6	NoRel	true	llegar	asistiendo
+Relation	T11	T7	NoRel	true	llegar	Investigación
+Relation	T11	T8	NoRel	true	llegar	adquirido
+Relation	T11	T9	NoRel	true	llegar	vuelo
+Relation	T2	T3	NoRel	true	transportaba	accidente
+Relation	T2	T7	NoRel	true	transportaba	Investigación
+Relation	T2	T8	NoRel	true	transportaba	adquirido
+Relation	T2	T9	NoRel	true	transportaba	vuelo
+Relation	T3	T1	NoRel	true	accidente	sufrido
+Relation	T3	T10	NoRel	true	accidente	chartearon
+Relation	T3	T9	NoRel	true	accidente	vuelo
+Relation	T4	T7	NoRel	true	murieron	Investigación
+Relation	T4	T9	NoRel	true	murieron	vuelo
+Relation	T5	T10	NoRel	true	viajaba	chartearon
+Relation	T5	T11	NoRel	true	viajaba	llegar
+Relation	T5	T8	NoRel	true	viajaba	adquirido
+Relation	T6	T0	NoRel	true	asistiendo	ACCIDENTE
+Relation	T6	T4	NoRel	true	asistiendo	murieron
+Relation	T6	T7	NoRel	true	asistiendo	Investigación
+Relation	T6	T8	NoRel	true	asistiendo	adquirido
+Relation	T6	T9	NoRel	true	asistiendo	vuelo
+Relation	T7	T1	NoRel	true	Investigación	sufrido
+Relation	T7	T4	NoRel	true	Investigación	murieron
+Relation	T7	T8	NoRel	true	Investigación	adquirido
+Relation	T8	T11	NoRel	true	adquirido	llegar
+Relation	T8	T2	NoRel	true	adquirido	transportaba
+Relation	T8	T3	NoRel	true	adquirido	accidente
+Relation	T8	T6	NoRel	true	adquirido	asistiendo
+Relation	T9	T0	NoRel	true	vuelo	ACCIDENTE
+Relation	T9	T1	NoRel	true	vuelo	sufrido
+Relation	T9	T4	NoRel	true	vuelo	murieron
+Relation	T9	T7	NoRel	true	vuelo	Investigación

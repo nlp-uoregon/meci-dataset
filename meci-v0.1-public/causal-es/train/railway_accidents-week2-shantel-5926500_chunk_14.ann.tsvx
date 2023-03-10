@@ -1,0 +1,85 @@
+Text	Las cajas negras también registraron 4 km antes de la curva , poco más de un minuto antes del accidente , una señal acústica ASFA de _ vía libre _ ( semáforo en verde , punto kilométrico 80,33 ) , que indica circulación normal , sin requerir al maquinista ninguna acción .	Otros accidentes ferroviarios en España de años recientes en los que una señal errónea de _ vía libre _ ha estado también implicada han sido los de Arévalo ( 2010 ) , Villada ( 2006 ) , Chinchilla ( 2003 ) , y Huarte-Araquil ( 1997 ) .	A causa del descarrilamiento , la vía quedó interceptada y el tráfico ferroviario fue suspendido en el tramo afectado perteneciente a la línea de alta velocidad Olmedo-Zamora-Galicia .	Una decena de trenes modificaron su itinerario el 25 de julio de 2013 circulando por otras líneas férreas o se habilitó un transporte alternativo por carretera .	[ El entonces presidente del Gobierno , Mariano Rajoy , y el presidente de la Junta de Galicia , Alberto Núñez Feijóo , visitando el lugar del accidente ]
+Event	T0	registraron	EVENT	25
+Event	T1	curva	EVENT	54
+Event	T10	suspendido	EVENT	595
+Event	T11	modificaron	EVENT	715
+Event	T12	habilitó	EVENT	805
+Event	T13	visitando	EVENT	976
+Event	T14	accidente	EVENT	999
+Event	T2	accidente	EVENT	94
+Event	T3	señal	EVENT	110
+Event	T4	requerir	EVENT	233
+Event	T5	acción	EVENT	264
+Event	T6	accidentes	EVENT	279
+Event	T7	descarrilamiento	EVENT	521
+Event	T8	interceptada	EVENT	553
+Event	T9	tráfico	EVENT	571
+Relation	T7	T8	CauseEffect	true	descarrilamiento	interceptada
+Relation	T8	T7	EffectCause	true	interceptada	descarrilamiento
+Relation	T9	T10	CauseEffect	true	tráfico	suspendido
+Relation	T10	T9	EffectCause	true	suspendido	tráfico
+Relation	T7	T10	CauseEffect	true	descarrilamiento	suspendido
+Relation	T10	T7	EffectCause	true	suspendido	descarrilamiento
+Relation	T7	T11	CauseEffect	true	descarrilamiento	modificaron
+Relation	T11	T7	EffectCause	true	modificaron	descarrilamiento
+Relation	T0	T12	NoRel	true	registraron	habilitó
+Relation	T0	T13	NoRel	true	registraron	visitando
+Relation	T0	T5	NoRel	true	registraron	acción
+Relation	T1	T11	NoRel	true	curva	modificaron
+Relation	T1	T8	NoRel	true	curva	interceptada
+Relation	T10	T0	NoRel	true	suspendido	registraron
+Relation	T10	T6	NoRel	true	suspendido	accidentes
+Relation	T11	T3	NoRel	true	modificaron	señal
+Relation	T11	T5	NoRel	true	modificaron	acción
+Relation	T12	T0	NoRel	true	habilitó	registraron
+Relation	T12	T1	NoRel	true	habilitó	curva
+Relation	T12	T11	NoRel	true	habilitó	modificaron
+Relation	T12	T8	NoRel	true	habilitó	interceptada
+Relation	T12	T9	NoRel	true	habilitó	tráfico
+Relation	T13	T11	NoRel	true	visitando	modificaron
+Relation	T13	T14	NoRel	true	visitando	accidente
+Relation	T13	T2	NoRel	true	visitando	accidente
+Relation	T13	T5	NoRel	true	visitando	acción
+Relation	T13	T7	NoRel	true	visitando	descarrilamiento
+Relation	T13	T9	NoRel	true	visitando	tráfico
+Relation	T14	T10	NoRel	true	accidente	suspendido
+Relation	T14	T12	NoRel	true	accidente	habilitó
+Relation	T14	T5	NoRel	true	accidente	acción
+Relation	T14	T9	NoRel	true	accidente	tráfico
+Relation	T2	T0	NoRel	true	accidente	registraron
+Relation	T2	T11	NoRel	true	accidente	modificaron
+Relation	T3	T0	NoRel	true	señal	registraron
+Relation	T3	T10	NoRel	true	señal	suspendido
+Relation	T3	T2	NoRel	true	señal	accidente
+Relation	T3	T5	NoRel	true	señal	acción
+Relation	T3	T8	NoRel	true	señal	interceptada
+Relation	T4	T11	NoRel	true	requerir	modificaron
+Relation	T4	T6	NoRel	true	requerir	accidentes
+Relation	T4	T9	NoRel	true	requerir	tráfico
+Relation	T5	T0	NoRel	true	acción	registraron
+Relation	T5	T10	NoRel	true	acción	suspendido
+Relation	T5	T11	NoRel	true	acción	modificaron
+Relation	T5	T12	NoRel	true	acción	habilitó
+Relation	T5	T2	NoRel	true	acción	accidente
+Relation	T5	T6	NoRel	true	acción	accidentes
+Relation	T5	T9	NoRel	true	acción	tráfico
+Relation	T6	T1	NoRel	true	accidentes	curva
+Relation	T6	T11	NoRel	true	accidentes	modificaron
+Relation	T6	T14	NoRel	true	accidentes	accidente
+Relation	T6	T4	NoRel	true	accidentes	requerir
+Relation	T6	T9	NoRel	true	accidentes	tráfico
+Relation	T7	T0	NoRel	true	descarrilamiento	registraron
+Relation	T7	T1	NoRel	true	descarrilamiento	curva
+Relation	T7	T13	NoRel	true	descarrilamiento	visitando
+Relation	T7	T14	NoRel	true	descarrilamiento	accidente
+Relation	T7	T3	NoRel	true	descarrilamiento	señal
+Relation	T7	T4	NoRel	true	descarrilamiento	requerir
+Relation	T7	T5	NoRel	true	descarrilamiento	acción
+Relation	T7	T6	NoRel	true	descarrilamiento	accidentes
+Relation	T8	T11	NoRel	true	interceptada	modificaron
+Relation	T8	T13	NoRel	true	interceptada	visitando
+Relation	T8	T14	NoRel	true	interceptada	accidente
+Relation	T8	T3	NoRel	true	interceptada	señal
+Relation	T8	T4	NoRel	true	interceptada	requerir
+Relation	T9	T14	NoRel	true	tráfico	accidente
+Relation	T9	T8	NoRel	true	tráfico	interceptada

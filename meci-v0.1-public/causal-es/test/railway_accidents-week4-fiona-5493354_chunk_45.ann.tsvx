@@ -1,0 +1,55 @@
+Text	Se producen quince heridos .	- 12 DE MARZO : Cerca de la estación de Aregos , en la línea del Duero , un tren mixto descarriló tras arrollar una piedra de gran tamaño desprendida sobre la vía .	Resultó muerto el conductor del tren y se produjeron varios heridos , cuatro de ellos graves .	- 29 DE OCTUBRE : Se produce el descarrilamiento de un tren de mercancías en la línea de Setil a Vendas Novas , entre las estaciones de Quinta Grande y São Torcato .	Al menos murió el maquinista de la locomotora del convoy y se produjeron varios heridos entre la dotación del mismo .
+Event	T0	descarriló	EVENT	116
+Event	T1	arrollar	EVENT	132
+Event	T2	desprendida	EVENT	167
+Event	T3	muerto	EVENT	202
+Event	T4	produjeron	EVENT	236
+Event	T5	heridos	EVENT	254
+Event	T6	produce	EVENT	310
+Event	T7	descarrilamiento	EVENT	321
+Event	T8	murió	EVENT	464
+Event	T9	produjeron	EVENT	517
+Event	T10	heridos	EVENT	535
+Event	T11	dotación	EVENT	552
+Relation	T1	T0	CauseEffect	true	arrollar	descarriló
+Relation	T0	T1	EffectCause	true	descarriló	arrollar
+Relation	T0	T3	CauseEffect	true	descarriló	muerto
+Relation	T3	T0	EffectCause	true	muerto	descarriló
+Relation	T0	T5	CauseEffect	true	descarriló	heridos
+Relation	T5	T0	EffectCause	true	heridos	descarriló
+Relation	T7	T8	CauseEffect	true	descarrilamiento	murió
+Relation	T8	T7	EffectCause	true	murió	descarrilamiento
+Relation	T7	T10	CauseEffect	true	descarrilamiento	heridos
+Relation	T10	T7	EffectCause	true	heridos	descarrilamiento
+Relation	T0	T10	NoRel	true	descarriló	heridos
+Relation	T0	T11	NoRel	true	descarriló	dotación
+Relation	T0	T9	NoRel	true	descarriló	produjeron
+Relation	T1	T4	NoRel	true	arrollar	produjeron
+Relation	T10	T0	NoRel	true	heridos	descarriló
+Relation	T10	T5	NoRel	true	heridos	heridos
+Relation	T10	T6	NoRel	true	heridos	produce
+Relation	T11	T1	NoRel	true	dotación	arrollar
+Relation	T11	T2	NoRel	true	dotación	desprendida
+Relation	T11	T3	NoRel	true	dotación	muerto
+Relation	T2	T10	NoRel	true	desprendida	heridos
+Relation	T2	T6	NoRel	true	desprendida	produce
+Relation	T3	T1	NoRel	true	muerto	arrollar
+Relation	T3	T5	NoRel	true	muerto	heridos
+Relation	T3	T9	NoRel	true	muerto	produjeron
+Relation	T4	T10	NoRel	true	produjeron	heridos
+Relation	T4	T11	NoRel	true	produjeron	dotación
+Relation	T4	T8	NoRel	true	produjeron	murió
+Relation	T5	T1	NoRel	true	heridos	arrollar
+Relation	T5	T10	NoRel	true	heridos	heridos
+Relation	T5	T7	NoRel	true	heridos	descarrilamiento
+Relation	T6	T10	NoRel	true	produce	heridos
+Relation	T6	T3	NoRel	true	produce	muerto
+Relation	T7	T0	NoRel	true	descarrilamiento	descarriló
+Relation	T7	T4	NoRel	true	descarrilamiento	produjeron
+Relation	T7	T6	NoRel	true	descarrilamiento	produce
+Relation	T8	T0	NoRel	true	murió	descarriló
+Relation	T8	T1	NoRel	true	murió	arrollar
+Relation	T9	T1	NoRel	true	produjeron	arrollar
+Relation	T9	T11	NoRel	true	produjeron	dotación
+Relation	T9	T2	NoRel	true	produjeron	desprendida
+Relation	T9	T6	NoRel	true	produjeron	produce

@@ -1,0 +1,39 @@
+Text	2017 KIRMANŞAH DEPREMI , 12 Kasım 2017 tarihinde merkez_üssü İran'ın Kirmanşah Eyaleti olan , Irak'ın Halepçe şehrinin 30 km güneyinde yerin 19 km altında richter ölçeği'ne göre 7.3 M _ ( w ) büyüklüğünde meydana gelen deprem .	Güneyinde Arap , güneybatısında Afrika levhası , kuzeyinde Avrasya ve doğusunda da Hint deprem plakaları arasında sıkışan İran'ın % 90'ı aktif deprem fayları üzerinde bulunmaktadır .	Depremin bulunduğu noktada , Arap levhası Avrasya levhası'nı yılda yaklaşık 26 mm hızla kuzeye doğru itmektedir .	İki plakanın çarpışması yıkıcı depremlere ve İran'ın kuzebatısındaki Zagros Dağları'nın her yıl 2.6 santimetre yükselmesine neden olmaktadır .	Bir önceki yüzyılda , 12 Kasım 2017 depreminin odak noktasının 250 kilometre çapındaki bölgede 6 M _ ( w )'dan büyük dört büyük deprem daha yaşandı .
+Event	T0	DEPREMI	EVENT	15
+Event	T1	deprem	EVENT	219
+Event	T2	sıkışan	EVENT	342
+Event	T3	itmektedir	EVENT	512
+Event	T4	depremlere	EVENT	556
+Event	T5	deprem	EVENT	796
+Event	T6	yaşandı	EVENT	808
+Event	T7	çarpışması	EVENT	538
+Event	T8	olmaktadır	EVENT	655
+Relation	T7	T4	CauseEffect	true	çarpışması	depremlere
+Relation	T4	T7	EffectCause	true	depremlere	çarpışması
+Relation	T7	T8	CauseEffect	true	çarpışması	olmaktadır
+Relation	T8	T7	EffectCause	true	olmaktadır	çarpışması
+Relation	T0	T1	NoRel	true	DEPREMI	deprem
+Relation	T0	T5	NoRel	true	DEPREMI	deprem
+Relation	T1	T5	NoRel	true	deprem	deprem
+Relation	T2	T1	NoRel	true	sıkışan	deprem
+Relation	T2	T5	NoRel	true	sıkışan	deprem
+Relation	T2	T6	NoRel	true	sıkışan	yaşandı
+Relation	T2	T7	NoRel	true	sıkışan	çarpışması
+Relation	T3	T0	NoRel	true	itmektedir	DEPREMI
+Relation	T3	T2	NoRel	true	itmektedir	sıkışan
+Relation	T3	T5	NoRel	true	itmektedir	deprem
+Relation	T3	T7	NoRel	true	itmektedir	çarpışması
+Relation	T4	T1	NoRel	true	depremlere	deprem
+Relation	T4	T3	NoRel	true	depremlere	itmektedir
+Relation	T4	T5	NoRel	true	depremlere	deprem
+Relation	T4	T6	NoRel	true	depremlere	yaşandı
+Relation	T4	T8	NoRel	true	depremlere	olmaktadır
+Relation	T5	T7	NoRel	true	deprem	çarpışması
+Relation	T6	T5	NoRel	true	yaşandı	deprem
+Relation	T7	T1	NoRel	true	çarpışması	deprem
+Relation	T7	T2	NoRel	true	çarpışması	sıkışan
+Relation	T7	T3	NoRel	true	çarpışması	itmektedir
+Relation	T8	T0	NoRel	true	olmaktadır	DEPREMI
+Relation	T8	T1	NoRel	true	olmaktadır	deprem
+Relation	T8	T5	NoRel	true	olmaktadır	deprem
+Relation	T8	T6	NoRel	true	olmaktadır	yaşandı

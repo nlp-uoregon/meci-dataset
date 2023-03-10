@@ -1,0 +1,43 @@
+Text	sağ | küçükresim | 250px | Şehitliğin tören alanı TEKKE BAHÇESI ŞEHITLIĞI , Lefkoşa'nın kuzeyinde yer alan askerî bir mezarlık .	21 Aralık 1963'te başlayan toplumlararası çatışmalardan sonra inşa edilen ilk şehitlik alanıdır .	Şehitlik adını batısında bulunduğu Lefkoşa Mevlevihanesi'nden almaktadır .	Şehitliğe ilk kez Ocak 1964'te Ayvasıl ( Türkeli ) katliamında öldüğüne inanılan 24 kişi , kimlik tespiti yapılmadan defnedilmişti .	Şehitlik ilerleyen yıllarda Lefkoşa çevresinde öldürülen Kıbrıslı Türkleri defnetmek için kullanılmıştır .
+Event	T0	başlayan	EVENT	147
+Event	T1	çatışmalardan	EVENT	171
+Event	T2	inşa	EVENT	191
+Event	T3	öldüğüne	EVENT	365
+Event	T4	tespiti	EVENT	400
+Event	T5	defnedilmişti	EVENT	419
+Event	T6	öldürülen	EVENT	482
+Event	T7	defnetmek	EVENT	510
+Event	T8	kullanılmıştır	EVENT	525
+Event	T9	katliamında	EVENT	353
+Relation	T9	T3	CauseEffect	true	katliamında	öldüğüne
+Relation	T3	T9	EffectCause	true	öldüğüne	katliamında
+Relation	T3	T5	CauseEffect	true	öldüğüne	defnedilmişti
+Relation	T5	T3	EffectCause	true	defnedilmişti	öldüğüne
+Relation	T6	T8	CauseEffect	true	öldürülen	kullanılmıştır
+Relation	T8	T6	EffectCause	true	kullanılmıştır	öldürülen
+Relation	T0	T4	NoRel	true	başlayan	tespiti
+Relation	T0	T8	NoRel	true	başlayan	kullanılmıştır
+Relation	T1	T3	NoRel	true	çatışmalardan	öldüğüne
+Relation	T1	T5	NoRel	true	çatışmalardan	defnedilmişti
+Relation	T1	T9	NoRel	true	çatışmalardan	katliamında
+Relation	T2	T6	NoRel	true	inşa	öldürülen
+Relation	T3	T4	NoRel	true	öldüğüne	tespiti
+Relation	T3	T8	NoRel	true	öldüğüne	kullanılmıştır
+Relation	T4	T5	NoRel	true	tespiti	defnedilmişti
+Relation	T4	T6	NoRel	true	tespiti	öldürülen
+Relation	T4	T9	NoRel	true	tespiti	katliamında
+Relation	T5	T4	NoRel	true	defnedilmişti	tespiti
+Relation	T6	T0	NoRel	true	öldürülen	başlayan
+Relation	T6	T1	NoRel	true	öldürülen	çatışmalardan
+Relation	T6	T7	NoRel	true	öldürülen	defnetmek
+Relation	T6	T9	NoRel	true	öldürülen	katliamında
+Relation	T7	T0	NoRel	true	defnetmek	başlayan
+Relation	T7	T2	NoRel	true	defnetmek	inşa
+Relation	T7	T4	NoRel	true	defnetmek	tespiti
+Relation	T7	T6	NoRel	true	defnetmek	öldürülen
+Relation	T7	T8	NoRel	true	defnetmek	kullanılmıştır
+Relation	T8	T0	NoRel	true	kullanılmıştır	başlayan
+Relation	T8	T4	NoRel	true	kullanılmıştır	tespiti
+Relation	T8	T5	NoRel	true	kullanılmıştır	defnedilmişti
+Relation	T9	T1	NoRel	true	katliamında	çatışmalardan
+Relation	T9	T5	NoRel	true	katliamında	defnedilmişti

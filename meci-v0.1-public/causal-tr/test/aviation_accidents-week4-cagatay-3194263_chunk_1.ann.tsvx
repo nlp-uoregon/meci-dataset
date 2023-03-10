@@ -1,0 +1,82 @@
+Text	Azerbaycan Cumhurbaşkanı İlham Aliyev ve Cumhurbaşkanı Yardımcısı Mehriban Aliyeva , Türkiye cumhurbaşkanı Recep Tayyip Erdoğan ve ülkedeki diğer siyasiler , Azerbaycan'daki yabancı büyükelçiliklerin yanı sıra uluslararası kuruluşlar da kurbanlara taziyelerini iletti .	Olay , Azerbaycan ile Ermenistan arasında geçen yıl Karabağ'da gerçekleşen savaştan bu yana yaşanan en kanlı çatışmadan iki hafta sonra gerçekleşmiştir .	1994 yılında sona eren birinci savaştan sonra Dağlık Karabağ ve çevresi Ermenistan Silahlı Kuvvetleri tarafından işgal edilmiştir .	İkinci Karabağ Savaşı sonucunda 6 binden fazla insan hayatını kaybetti ve Kasım ayında Azerbaycan zafer ilan etti .	Rusya'nın arabuluculuğunda imzalanan ateşkes bildirisine göre , Karabağ'ın bir kısmı Azerbaycan'a geri verildi ve Azerbaycan geçmiş Dağlık Karabağ Özerk Oblastı sınırları içindeki arazilerde yaptığı ilerilemeleri korudu .
+Event	T0	iletti	EVENT	261
+Event	T1	Olay	EVENT	270
+Event	T2	savaştan	EVENT	345
+Event	T3	yaşanan	EVENT	362
+Event	T4	çatışmadan	EVENT	379
+Event	T5	gerçekleşmiştir	EVENT	406
+Event	T6	edilmiştir	EVENT	543
+Event	T8	kaybetti	EVENT	618
+Event	T9	etti	EVENT	665
+Event	T11	verildi	EVENT	775
+Event	T12	korudu	EVENT	885
+Event	T13	arabuluculuğunda	EVENT	682
+Event	T10	imzalanan	EVENT	699
+Event	T7	İkinci Karabağ Savaşı	EVENT	556
+Event	T14	savaştan	EVENT	455
+Relation	T9	T10	CauseEffect	true	etti	imzalanan
+Relation	T10	T9	EffectCause	true	imzalanan	etti
+Relation	T10	T11	CauseEffect	true	imzalanan	verildi
+Relation	T11	T10	EffectCause	true	verildi	imzalanan
+Relation	T10	T12	CauseEffect	true	imzalanan	korudu
+Relation	T12	T10	EffectCause	true	korudu	imzalanan
+Relation	T7	T8	CauseEffect	true	İkinci Karabağ Savaşı	kaybetti
+Relation	T8	T7	EffectCause	true	kaybetti	İkinci Karabağ Savaşı
+Relation	T6	T7	CauseEffect	true	edilmiştir	İkinci Karabağ Savaşı
+Relation	T7	T6	EffectCause	true	İkinci Karabağ Savaşı	edilmiştir
+Relation	T0	T11	NoRel	true	iletti	verildi
+Relation	T0	T2	NoRel	true	iletti	savaştan
+Relation	T0	T5	NoRel	true	iletti	gerçekleşmiştir
+Relation	T0	T7	NoRel	true	iletti	İkinci Karabağ Savaşı
+Relation	T0	T8	NoRel	true	iletti	kaybetti
+Relation	T1	T10	NoRel	true	Olay	imzalanan
+Relation	T1	T7	NoRel	true	Olay	İkinci Karabağ Savaşı
+Relation	T10	T13	NoRel	true	imzalanan	arabuluculuğunda
+Relation	T10	T4	NoRel	true	imzalanan	çatışmadan
+Relation	T10	T6	NoRel	true	imzalanan	edilmiştir
+Relation	T11	T13	NoRel	true	verildi	arabuluculuğunda
+Relation	T11	T3	NoRel	true	verildi	yaşanan
+Relation	T12	T5	NoRel	true	korudu	gerçekleşmiştir
+Relation	T12	T6	NoRel	true	korudu	edilmiştir
+Relation	T13	T12	NoRel	true	arabuluculuğunda	korudu
+Relation	T13	T2	NoRel	true	arabuluculuğunda	savaştan
+Relation	T13	T4	NoRel	true	arabuluculuğunda	çatışmadan
+Relation	T13	T5	NoRel	true	arabuluculuğunda	gerçekleşmiştir
+Relation	T13	T6	NoRel	true	arabuluculuğunda	edilmiştir
+Relation	T13	T9	NoRel	true	arabuluculuğunda	etti
+Relation	T14	T1	NoRel	true	savaştan	Olay
+Relation	T14	T10	NoRel	true	savaştan	imzalanan
+Relation	T14	T11	NoRel	true	savaştan	verildi
+Relation	T14	T2	NoRel	true	savaştan	savaştan
+Relation	T14	T3	NoRel	true	savaştan	yaşanan
+Relation	T14	T5	NoRel	true	savaştan	gerçekleşmiştir
+Relation	T14	T6	NoRel	true	savaştan	edilmiştir
+Relation	T14	T7	NoRel	true	savaştan	İkinci Karabağ Savaşı
+Relation	T2	T14	NoRel	true	savaştan	savaştan
+Relation	T2	T6	NoRel	true	savaştan	edilmiştir
+Relation	T2	T7	NoRel	true	savaştan	İkinci Karabağ Savaşı
+Relation	T3	T11	NoRel	true	yaşanan	verildi
+Relation	T3	T12	NoRel	true	yaşanan	korudu
+Relation	T3	T7	NoRel	true	yaşanan	İkinci Karabağ Savaşı
+Relation	T3	T8	NoRel	true	yaşanan	kaybetti
+Relation	T4	T11	NoRel	true	çatışmadan	verildi
+Relation	T4	T12	NoRel	true	çatışmadan	korudu
+Relation	T4	T14	NoRel	true	çatışmadan	savaştan
+Relation	T4	T6	NoRel	true	çatışmadan	edilmiştir
+Relation	T4	T7	NoRel	true	çatışmadan	İkinci Karabağ Savaşı
+Relation	T5	T1	NoRel	true	gerçekleşmiştir	Olay
+Relation	T5	T13	NoRel	true	gerçekleşmiştir	arabuluculuğunda
+Relation	T5	T14	NoRel	true	gerçekleşmiştir	savaştan
+Relation	T5	T8	NoRel	true	gerçekleşmiştir	kaybetti
+Relation	T5	T9	NoRel	true	gerçekleşmiştir	etti
+Relation	T6	T10	NoRel	true	edilmiştir	imzalanan
+Relation	T6	T13	NoRel	true	edilmiştir	arabuluculuğunda
+Relation	T6	T3	NoRel	true	edilmiştir	yaşanan
+Relation	T7	T2	NoRel	true	İkinci Karabağ Savaşı	savaştan
+Relation	T7	T5	NoRel	true	İkinci Karabağ Savaşı	gerçekleşmiştir
+Relation	T7	T9	NoRel	true	İkinci Karabağ Savaşı	etti
+Relation	T8	T14	NoRel	true	kaybetti	savaştan
+Relation	T8	T4	NoRel	true	kaybetti	çatışmadan
+Relation	T8	T6	NoRel	true	kaybetti	edilmiştir
+Relation	T9	T0	NoRel	true	etti	iletti
+Relation	T9	T7	NoRel	true	etti	İkinci Karabağ Savaşı

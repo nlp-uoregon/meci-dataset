@@ -1,0 +1,109 @@
+Text	Se estima en cerca de 500 casos la aparición de síndrome de Guillain-Barré , causados probablemente por una reacción inmunopatológica a la vacuna y de los cuales 25 terminaron en muerte por complicaciones pulmonares severas .	Hasta la fecha , no se han encontrado otras vacunas de la gripe vinculadas al síndrome de Guillain-Barré .	En septiembre de 1988 , un virus de gripe porcina mató a una mujer en Wisconsin , Estados Unidos , para posteriormente infectar a varios cientos de personas .	Barbara Ann Wieners , mujer embarazada de 32 años , tenía 8 meses de gestación cuando ella y su esposo Ed se enfermaron tras visitar una granja de cerdos en la feria del condado de Walworth .	Barbara murió ocho días después , aunque los médicos lograron inducirle parto y lograron salvar a su pequeña hija antes de morir .
+Event	T0	estima	EVENT	3
+Event	T1	aparición	EVENT	35
+Event	T2	causados	EVENT	77
+Event	T3	reacción	EVENT	108
+Event	T4	muerte	EVENT	179
+Event	T5	complicaciones	EVENT	190
+Event	T6	encontrado	EVENT	253
+Event	T7	virus	EVENT	360
+Event	T8	gripe	EVENT	369
+Event	T9	mató	EVENT	383
+Event	T10	infectar	EVENT	452
+Event	T11	gestación	EVENT	561
+Event	T12	enfermaron	EVENT	601
+Event	T13	visitar	EVENT	617
+Event	T14	murió	EVENT	692
+Event	T15	parto	EVENT	756
+Event	T16	salvar	EVENT	773
+Event	T17	morir	EVENT	807
+Relation	T3	T4	CauseEffect	true	reacción	muerte
+Relation	T4	T3	EffectCause	true	muerte	reacción
+Relation	T8	T9	CauseEffect	true	gripe	mató
+Relation	T9	T8	EffectCause	true	mató	gripe
+Relation	T12	T14	CauseEffect	true	enfermaron	murió
+Relation	T14	T12	EffectCause	true	murió	enfermaron
+Relation	T0	T15	NoRel	true	estima	parto
+Relation	T0	T17	NoRel	true	estima	morir
+Relation	T0	T4	NoRel	true	estima	muerte
+Relation	T0	T5	NoRel	true	estima	complicaciones
+Relation	T1	T0	NoRel	true	aparición	estima
+Relation	T1	T11	NoRel	true	aparición	gestación
+Relation	T1	T16	NoRel	true	aparición	salvar
+Relation	T1	T2	NoRel	true	aparición	causados
+Relation	T1	T4	NoRel	true	aparición	muerte
+Relation	T1	T5	NoRel	true	aparición	complicaciones
+Relation	T1	T7	NoRel	true	aparición	virus
+Relation	T1	T8	NoRel	true	aparición	gripe
+Relation	T10	T1	NoRel	true	infectar	aparición
+Relation	T10	T14	NoRel	true	infectar	murió
+Relation	T10	T15	NoRel	true	infectar	parto
+Relation	T10	T3	NoRel	true	infectar	reacción
+Relation	T10	T7	NoRel	true	infectar	virus
+Relation	T10	T9	NoRel	true	infectar	mató
+Relation	T11	T10	NoRel	true	gestación	infectar
+Relation	T11	T13	NoRel	true	gestación	visitar
+Relation	T11	T15	NoRel	true	gestación	parto
+Relation	T11	T5	NoRel	true	gestación	complicaciones
+Relation	T11	T7	NoRel	true	gestación	virus
+Relation	T11	T9	NoRel	true	gestación	mató
+Relation	T12	T1	NoRel	true	enfermaron	aparición
+Relation	T12	T17	NoRel	true	enfermaron	morir
+Relation	T12	T6	NoRel	true	enfermaron	encontrado
+Relation	T13	T16	NoRel	true	visitar	salvar
+Relation	T14	T10	NoRel	true	murió	infectar
+Relation	T14	T16	NoRel	true	murió	salvar
+Relation	T14	T17	NoRel	true	murió	morir
+Relation	T14	T3	NoRel	true	murió	reacción
+Relation	T14	T4	NoRel	true	murió	muerte
+Relation	T14	T6	NoRel	true	murió	encontrado
+Relation	T14	T8	NoRel	true	murió	gripe
+Relation	T15	T11	NoRel	true	parto	gestación
+Relation	T15	T3	NoRel	true	parto	reacción
+Relation	T15	T4	NoRel	true	parto	muerte
+Relation	T15	T6	NoRel	true	parto	encontrado
+Relation	T16	T0	NoRel	true	salvar	estima
+Relation	T16	T11	NoRel	true	salvar	gestación
+Relation	T16	T12	NoRel	true	salvar	enfermaron
+Relation	T16	T14	NoRel	true	salvar	murió
+Relation	T16	T15	NoRel	true	salvar	parto
+Relation	T16	T3	NoRel	true	salvar	reacción
+Relation	T16	T8	NoRel	true	salvar	gripe
+Relation	T17	T12	NoRel	true	morir	enfermaron
+Relation	T2	T0	NoRel	true	causados	estima
+Relation	T2	T10	NoRel	true	causados	infectar
+Relation	T2	T11	NoRel	true	causados	gestación
+Relation	T2	T12	NoRel	true	causados	enfermaron
+Relation	T2	T13	NoRel	true	causados	visitar
+Relation	T2	T16	NoRel	true	causados	salvar
+Relation	T2	T3	NoRel	true	causados	reacción
+Relation	T3	T1	NoRel	true	reacción	aparición
+Relation	T3	T11	NoRel	true	reacción	gestación
+Relation	T3	T13	NoRel	true	reacción	visitar
+Relation	T3	T17	NoRel	true	reacción	morir
+Relation	T3	T2	NoRel	true	reacción	causados
+Relation	T3	T6	NoRel	true	reacción	encontrado
+Relation	T3	T9	NoRel	true	reacción	mató
+Relation	T4	T10	NoRel	true	muerte	infectar
+Relation	T4	T11	NoRel	true	muerte	gestación
+Relation	T4	T5	NoRel	true	muerte	complicaciones
+Relation	T5	T10	NoRel	true	complicaciones	infectar
+Relation	T5	T11	NoRel	true	complicaciones	gestación
+Relation	T5	T15	NoRel	true	complicaciones	parto
+Relation	T5	T7	NoRel	true	complicaciones	virus
+Relation	T6	T1	NoRel	true	encontrado	aparición
+Relation	T6	T13	NoRel	true	encontrado	visitar
+Relation	T6	T16	NoRel	true	encontrado	salvar
+Relation	T7	T15	NoRel	true	virus	parto
+Relation	T7	T16	NoRel	true	virus	salvar
+Relation	T7	T2	NoRel	true	virus	causados
+Relation	T7	T5	NoRel	true	virus	complicaciones
+Relation	T8	T10	NoRel	true	gripe	infectar
+Relation	T8	T12	NoRel	true	gripe	enfermaron
+Relation	T8	T13	NoRel	true	gripe	visitar
+Relation	T8	T17	NoRel	true	gripe	morir
+Relation	T8	T3	NoRel	true	gripe	reacción
+Relation	T9	T1	NoRel	true	mató	aparición
+Relation	T9	T11	NoRel	true	mató	gestación
+Relation	T9	T15	NoRel	true	mató	parto
+Relation	T9	T16	NoRel	true	mató	salvar

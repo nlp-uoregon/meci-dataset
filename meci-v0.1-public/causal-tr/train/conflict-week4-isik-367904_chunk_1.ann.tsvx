@@ -1,0 +1,63 @@
+Text	Diğer Hint liderler arasında Mahatma Gandhi , yasayı çok eleştirdi ve basın özgürlüğü hakkını kullanan herkesin siyasi suçlara karşılık olarak cezalandırılmaması gerektiğini savundu .	Bu tasarının kabul olması üzerine halk protesto ve miting faaliyetlerine hız verdi .	Pencap'ta protesto hareketleri çok fazla etki gösteriyordu .	Bunun üzerine 10 Nisan'da kongrenin iki lideri Dr. Satya Pal ve Dr. Saifuddin Kitchlew tutuklandı ve Dharamsala'ya gizlice götürüldü .	Ordu Pencap'a çağrıldı .
+Event	T0	eleştirdi	EVENT	57
+Event	T1	savundu	EVENT	174
+Event	T3	verdi	EVENT	261
+Event	T4	hareketleri	EVENT	288
+Event	T5	gösteriyordu	EVENT	315
+Event	T6	tutuklandı	EVENT	417
+Event	T7	götürüldü	EVENT	453
+Event	T8	çağrıldı	EVENT	479
+Event	T9	yasayı	EVENT	46
+Event	T10	olması	EVENT	203
+Event	T11	tasarının	EVENT	187
+Relation	T9	T0	CauseEffect	true	yasayı	eleştirdi
+Relation	T0	T9	EffectCause	true	eleştirdi	yasayı
+Relation	T9	T1	CauseEffect	true	yasayı	savundu
+Relation	T1	T9	EffectCause	true	savundu	yasayı
+Relation	T11	T10	CauseEffect	true	tasarının	olması
+Relation	T10	T11	EffectCause	true	olması	tasarının
+Relation	T9	T10	CauseEffect	true	yasayı	olması
+Relation	T10	T9	EffectCause	true	olması	yasayı
+Relation	T10	T3	CauseEffect	true	olması	verdi
+Relation	T3	T10	EffectCause	true	verdi	olması
+Relation	T4	T5	CauseEffect	true	hareketleri	gösteriyordu
+Relation	T5	T4	EffectCause	true	gösteriyordu	hareketleri
+Relation	T9	T4	CauseEffect	true	yasayı	hareketleri
+Relation	T4	T9	EffectCause	true	hareketleri	yasayı
+Relation	T10	T4	CauseEffect	true	olması	hareketleri
+Relation	T4	T10	EffectCause	true	hareketleri	olması
+Relation	T6	T7	CauseEffect	true	tutuklandı	götürüldü
+Relation	T7	T6	EffectCause	true	götürüldü	tutuklandı
+Relation	T5	T8	CauseEffect	true	gösteriyordu	çağrıldı
+Relation	T8	T5	EffectCause	true	çağrıldı	gösteriyordu
+Relation	T0	T1	NoRel	true	eleştirdi	savundu
+Relation	T0	T11	NoRel	true	eleştirdi	tasarının
+Relation	T0	T4	NoRel	true	eleştirdi	hareketleri
+Relation	T0	T6	NoRel	true	eleştirdi	tutuklandı
+Relation	T1	T0	NoRel	true	savundu	eleştirdi
+Relation	T1	T4	NoRel	true	savundu	hareketleri
+Relation	T1	T7	NoRel	true	savundu	götürüldü
+Relation	T1	T8	NoRel	true	savundu	çağrıldı
+Relation	T10	T7	NoRel	true	olması	götürüldü
+Relation	T11	T0	NoRel	true	tasarının	eleştirdi
+Relation	T11	T3	NoRel	true	tasarının	verdi
+Relation	T11	T5	NoRel	true	tasarının	gösteriyordu
+Relation	T11	T6	NoRel	true	tasarının	tutuklandı
+Relation	T11	T8	NoRel	true	tasarının	çağrıldı
+Relation	T3	T4	NoRel	true	verdi	hareketleri
+Relation	T4	T11	NoRel	true	hareketleri	tasarının
+Relation	T4	T3	NoRel	true	hareketleri	verdi
+Relation	T5	T0	NoRel	true	gösteriyordu	eleştirdi
+Relation	T5	T11	NoRel	true	gösteriyordu	tasarının
+Relation	T5	T6	NoRel	true	gösteriyordu	tutuklandı
+Relation	T5	T9	NoRel	true	gösteriyordu	yasayı
+Relation	T6	T5	NoRel	true	tutuklandı	gösteriyordu
+Relation	T7	T11	NoRel	true	götürüldü	tasarının
+Relation	T7	T3	NoRel	true	götürüldü	verdi
+Relation	T7	T5	NoRel	true	götürüldü	gösteriyordu
+Relation	T7	T8	NoRel	true	götürüldü	çağrıldı
+Relation	T8	T1	NoRel	true	çağrıldı	savundu
+Relation	T8	T10	NoRel	true	çağrıldı	olması
+Relation	T8	T7	NoRel	true	çağrıldı	götürüldü
+Relation	T8	T9	NoRel	true	çağrıldı	yasayı
+Relation	T9	T5	NoRel	true	yasayı	gösteriyordu

@@ -1,0 +1,11 @@
+Text	38 sağlık tesisi zarar gördü , 4'ü kullanılamaz hale geldi .	111 okulda hasar oluştu , 7'si tamamen boşaltıldı .			
+Event	T0	gördü	EVENT	23
+Event	T1	geldi	EVENT	53
+Event	T2	oluştu	EVENT	78
+Event	T3	boşaltıldı	EVENT	100
+Relation	T2	T3	CauseEffect	true	oluştu	boşaltıldı
+Relation	T3	T2	EffectCause	true	boşaltıldı	oluştu
+Relation	T0	T1	CauseEffect	true	gördü	geldi
+Relation	T1	T0	EffectCause	true	geldi	gördü
+Relation	T1	T2	NoRel	true	geldi	oluştu
+Relation	T3	T0	NoRel	true	boşaltıldı	gördü

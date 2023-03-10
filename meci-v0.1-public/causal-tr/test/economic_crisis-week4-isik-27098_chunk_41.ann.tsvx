@@ -1,0 +1,53 @@
+Text	Nasyonal sosyalizmin gelişmesinde etkili olan tek kişi Adolf Hitler olmamıştır .	Hitler'in 1920'den itibaren yakın ilişki kurduğu dostlarından olan Rudolf Hess onun ilk destekçilerinden olmuştur .	Aynı tarihlerde tanıştığı dostlarından olan ve Birahane Darbesi'nde Hitler'e yardım eden Ernst Röhm , Hermann Göring ve Heinrich Himmler , Nasyonal Sosyalist Alman İşçi Partisi'nin örgütlenmesinde etkili olmuşlardır .	Joseph Goebbels'in 1924'te partiye katılmasıyla NSDAP ivme kazandı ve nasyonal sosyalizm yükselişe geçti .	Zekası ve Hitler kadar başarılı olan etkileme yeteneğiyle parti içinde hızla yükselen Goebbels , propagandayı büyük bir ustalıkla kullandı , bunun sonucunda da NSDAP Almanya'nın en büyük partisi olarak 1933'te iktidara geldi .
+Event	T1	katılmasıyla	EVENT	450
+Event	T2	kazandı	EVENT	474
+Event	T3	geçti	EVENT	514
+Event	T5	kullandı	EVENT	652
+Event	T6	geldi	EVENT	741
+Event	T7	olmuştur	EVENT	186
+Event	T8	Darbesi'nde	EVENT	253
+Event	T9	eden	EVENT	281
+Event	T10	olmuşlardır	EVENT	401
+Event	T4	yükselen	EVENT	599
+Relation	T2	T3	CauseEffect	true	kazandı	geçti
+Relation	T3	T2	EffectCause	true	geçti	kazandı
+Relation	T1	T2	CauseEffect	true	katılmasıyla	kazandı
+Relation	T2	T1	EffectCause	true	kazandı	katılmasıyla
+Relation	T5	T2	CauseEffect	true	kullandı	kazandı
+Relation	T2	T5	EffectCause	true	kazandı	kullandı
+Relation	T3	T6	CauseEffect	true	geçti	geldi
+Relation	T6	T3	EffectCause	true	geldi	geçti
+Relation	T1	T4	NoRel	true	katılmasıyla	yükselen
+Relation	T1	T5	NoRel	true	katılmasıyla	kullandı
+Relation	T1	T6	NoRel	true	katılmasıyla	geldi
+Relation	T10	T4	NoRel	true	olmuşlardır	yükselen
+Relation	T10	T7	NoRel	true	olmuşlardır	olmuştur
+Relation	T10	T8	NoRel	true	olmuşlardır	Darbesi'nde
+Relation	T2	T10	NoRel	true	kazandı	olmuşlardır
+Relation	T2	T4	NoRel	true	kazandı	yükselen
+Relation	T2	T7	NoRel	true	kazandı	olmuştur
+Relation	T2	T9	NoRel	true	kazandı	eden
+Relation	T3	T7	NoRel	true	geçti	olmuştur
+Relation	T3	T9	NoRel	true	geçti	eden
+Relation	T4	T1	NoRel	true	yükselen	katılmasıyla
+Relation	T4	T10	NoRel	true	yükselen	olmuşlardır
+Relation	T4	T2	NoRel	true	yükselen	kazandı
+Relation	T4	T6	NoRel	true	yükselen	geldi
+Relation	T4	T9	NoRel	true	yükselen	eden
+Relation	T5	T1	NoRel	true	kullandı	katılmasıyla
+Relation	T5	T10	NoRel	true	kullandı	olmuşlardır
+Relation	T5	T4	NoRel	true	kullandı	yükselen
+Relation	T6	T1	NoRel	true	geldi	katılmasıyla
+Relation	T6	T4	NoRel	true	geldi	yükselen
+Relation	T7	T1	NoRel	true	olmuştur	katılmasıyla
+Relation	T7	T10	NoRel	true	olmuştur	olmuşlardır
+Relation	T7	T8	NoRel	true	olmuştur	Darbesi'nde
+Relation	T7	T9	NoRel	true	olmuştur	eden
+Relation	T8	T10	NoRel	true	Darbesi'nde	olmuşlardır
+Relation	T8	T2	NoRel	true	Darbesi'nde	kazandı
+Relation	T8	T3	NoRel	true	Darbesi'nde	geçti
+Relation	T8	T4	NoRel	true	Darbesi'nde	yükselen
+Relation	T9	T1	NoRel	true	eden	katılmasıyla
+Relation	T9	T10	NoRel	true	eden	olmuşlardır
+Relation	T9	T3	NoRel	true	eden	geçti
+Relation	T9	T4	NoRel	true	eden	yükselen

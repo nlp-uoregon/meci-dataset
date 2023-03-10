@@ -1,0 +1,105 @@
+Text	El coche circuló volcado hacia su izquierda y apoyado en una pared del túnel durante unos metros .	Cuando la pared terminó , justo donde se produce el enlace con el túnel de la línea 5 ( actualmente ramal de la línea 7 ) el coche terminó volcando , produciendo un violento impacto contra el suelo y produciendo el fatal desenlace .	El sistema de seguridad de esta línea era el denominado Frenado Automático Puntual ( FAP ) , que se acabó de instalar año 1999 .	Se trata de un sistema de balizas que actúan como puntos de información al maquinista , ya que el tren y la baliza interaccionan electromagnéticamente , que avisan al conductor o incluso detienen el tren si es necesario con la información que le proporciona cada captador del FAP .	Sin embargo , este sistema solo está en los puntos críticos de la vía como en los cambios de agujas .
+Event	T0	volcado	EVENT	17
+Event	T1	apoyado	EVENT	46
+Event	T3	enlace	EVENT	151
+Event	T4	volcando	EVENT	238
+Event	T5	produciendo	EVENT	249
+Event	T6	impacto	EVENT	273
+Event	T7	produciendo	EVENT	299
+Event	T8	desenlace	EVENT	320
+Event	T9	acabó	EVENT	432
+Event	T10	instalar	EVENT	441
+Event	T11	actúan	EVENT	499
+Event	T12	interaccionan	EVENT	576
+Event	T13	avisan	EVENT	618
+Event	T14	detienen	EVENT	648
+Event	T15	proporciona	EVENT	707
+Event	T16	cambios	EVENT	825
+Relation	T4	T6	CauseEffect	true	volcando	impacto
+Relation	T6	T4	EffectCause	true	impacto	volcando
+Relation	T0	T10	NoRel	true	volcado	instalar
+Relation	T0	T11	NoRel	true	volcado	actúan
+Relation	T0	T3	NoRel	true	volcado	enlace
+Relation	T0	T6	NoRel	true	volcado	impacto
+Relation	T1	T0	NoRel	true	apoyado	volcado
+Relation	T1	T11	NoRel	true	apoyado	actúan
+Relation	T1	T14	NoRel	true	apoyado	detienen
+Relation	T1	T3	NoRel	true	apoyado	enlace
+Relation	T1	T4	NoRel	true	apoyado	volcando
+Relation	T1	T5	NoRel	true	apoyado	produciendo
+Relation	T10	T0	NoRel	true	instalar	volcado
+Relation	T10	T11	NoRel	true	instalar	actúan
+Relation	T10	T7	NoRel	true	instalar	produciendo
+Relation	T11	T1	NoRel	true	actúan	apoyado
+Relation	T11	T10	NoRel	true	actúan	instalar
+Relation	T11	T13	NoRel	true	actúan	avisan
+Relation	T11	T15	NoRel	true	actúan	proporciona
+Relation	T11	T4	NoRel	true	actúan	volcando
+Relation	T11	T6	NoRel	true	actúan	impacto
+Relation	T11	T8	NoRel	true	actúan	desenlace
+Relation	T11	T9	NoRel	true	actúan	acabó
+Relation	T12	T11	NoRel	true	interaccionan	actúan
+Relation	T12	T15	NoRel	true	interaccionan	proporciona
+Relation	T12	T16	NoRel	true	interaccionan	cambios
+Relation	T12	T3	NoRel	true	interaccionan	enlace
+Relation	T12	T6	NoRel	true	interaccionan	impacto
+Relation	T12	T9	NoRel	true	interaccionan	acabó
+Relation	T13	T0	NoRel	true	avisan	volcado
+Relation	T13	T1	NoRel	true	avisan	apoyado
+Relation	T13	T14	NoRel	true	avisan	detienen
+Relation	T13	T3	NoRel	true	avisan	enlace
+Relation	T13	T7	NoRel	true	avisan	produciendo
+Relation	T13	T8	NoRel	true	avisan	desenlace
+Relation	T14	T0	NoRel	true	detienen	volcado
+Relation	T14	T12	NoRel	true	detienen	interaccionan
+Relation	T14	T13	NoRel	true	detienen	avisan
+Relation	T14	T3	NoRel	true	detienen	enlace
+Relation	T14	T6	NoRel	true	detienen	impacto
+Relation	T14	T7	NoRel	true	detienen	produciendo
+Relation	T14	T9	NoRel	true	detienen	acabó
+Relation	T15	T11	NoRel	true	proporciona	actúan
+Relation	T15	T13	NoRel	true	proporciona	avisan
+Relation	T15	T3	NoRel	true	proporciona	enlace
+Relation	T15	T4	NoRel	true	proporciona	volcando
+Relation	T15	T7	NoRel	true	proporciona	produciendo
+Relation	T16	T1	NoRel	true	cambios	apoyado
+Relation	T16	T11	NoRel	true	cambios	actúan
+Relation	T16	T12	NoRel	true	cambios	interaccionan
+Relation	T16	T13	NoRel	true	cambios	avisan
+Relation	T16	T14	NoRel	true	cambios	detienen
+Relation	T16	T3	NoRel	true	cambios	enlace
+Relation	T16	T5	NoRel	true	cambios	produciendo
+Relation	T16	T8	NoRel	true	cambios	desenlace
+Relation	T3	T10	NoRel	true	enlace	instalar
+Relation	T3	T13	NoRel	true	enlace	avisan
+Relation	T3	T8	NoRel	true	enlace	desenlace
+Relation	T3	T9	NoRel	true	enlace	acabó
+Relation	T4	T13	NoRel	true	volcando	avisan
+Relation	T4	T5	NoRel	true	volcando	produciendo
+Relation	T4	T7	NoRel	true	volcando	produciendo
+Relation	T5	T0	NoRel	true	produciendo	volcado
+Relation	T5	T11	NoRel	true	produciendo	actúan
+Relation	T5	T12	NoRel	true	produciendo	interaccionan
+Relation	T5	T14	NoRel	true	produciendo	detienen
+Relation	T5	T15	NoRel	true	produciendo	proporciona
+Relation	T5	T4	NoRel	true	produciendo	volcando
+Relation	T6	T0	NoRel	true	impacto	volcado
+Relation	T6	T10	NoRel	true	impacto	instalar
+Relation	T6	T11	NoRel	true	impacto	actúan
+Relation	T6	T16	NoRel	true	impacto	cambios
+Relation	T6	T3	NoRel	true	impacto	enlace
+Relation	T6	T5	NoRel	true	impacto	produciendo
+Relation	T6	T8	NoRel	true	impacto	desenlace
+Relation	T6	T9	NoRel	true	impacto	acabó
+Relation	T7	T1	NoRel	true	produciendo	apoyado
+Relation	T7	T13	NoRel	true	produciendo	avisan
+Relation	T7	T4	NoRel	true	produciendo	volcando
+Relation	T7	T6	NoRel	true	produciendo	impacto
+Relation	T7	T8	NoRel	true	produciendo	desenlace
+Relation	T7	T9	NoRel	true	produciendo	acabó
+Relation	T8	T15	NoRel	true	desenlace	proporciona
+Relation	T8	T3	NoRel	true	desenlace	enlace
+Relation	T8	T5	NoRel	true	desenlace	produciendo
+Relation	T8	T7	NoRel	true	desenlace	produciendo
+Relation	T9	T13	NoRel	true	acabó	avisan
+Relation	T9	T7	NoRel	true	acabó	produciendo

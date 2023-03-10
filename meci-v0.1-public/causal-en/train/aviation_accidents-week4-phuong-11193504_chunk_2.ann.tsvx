@@ -1,0 +1,56 @@
+Text	The aircraft had previously lost cabin pressure on 5 August ; and earlier on the day of the crash , it had departed Songshan Airport , but the crew aborted the flight 10 minutes later for the same reason .	After repairs were made , the aircraft departed Songshan Airport again bound for Kaohsiung International Airport .	At 14 minutes after takeoff , the aircraft suffered an explosive decompression and disintegrated .	The wreckage was scattered across an area long , located some south of Taipei .	The nose section landed in Sanyi Township , Miaoli County .
+Event	T0	lost	EVENT	28
+Event	T1	crash	EVENT	92
+Event	T2	departed	EVENT	107
+Event	T3	aborted	EVENT	148
+Event	T4	flight	EVENT	160
+Event	T5	repairs	EVENT	212
+Event	T6	made	EVENT	225
+Event	T7	departed	EVENT	245
+Event	T8	bound	EVENT	277
+Event	T9	takeoff	EVENT	341
+Event	T10	suffered	EVENT	364
+Event	T11	decompression	EVENT	386
+Event	T12	disintegrated	EVENT	404
+Event	T13	wreckage	EVENT	424
+Event	T14	scattered	EVENT	437
+Event	T15	landed	EVENT	517
+Relation	T2	T0	CauseEffect	true	departed	lost
+Relation	T0	T2	EffectCause	true	lost	departed
+Relation	T0	T3	CauseEffect	true	lost	aborted
+Relation	T3	T0	EffectCause	true	aborted	lost
+Relation	T0	T5	CauseEffect	true	lost	repairs
+Relation	T5	T0	EffectCause	true	repairs	lost
+Relation	T5	T7	CauseEffect	true	repairs	departed
+Relation	T7	T5	EffectCause	true	departed	repairs
+Relation	T7	T11	CauseEffect	true	departed	decompression
+Relation	T11	T7	EffectCause	true	decompression	departed
+Relation	T11	T12	CauseEffect	true	decompression	disintegrated
+Relation	T12	T11	EffectCause	true	disintegrated	decompression
+Relation	T11	T13	CauseEffect	true	decompression	wreckage
+Relation	T13	T11	EffectCause	true	wreckage	decompression
+Relation	T11	T15	CauseEffect	true	decompression	landed
+Relation	T15	T11	EffectCause	true	landed	decompression
+Relation	T0	T11	NoRel	true	lost	decompression
+Relation	T0	T7	NoRel	true	lost	departed
+Relation	T1	T5	NoRel	true	crash	repairs
+Relation	T11	T4	NoRel	true	decompression	flight
+Relation	T12	T2	NoRel	true	disintegrated	departed
+Relation	T13	T5	NoRel	true	wreckage	repairs
+Relation	T14	T1	NoRel	true	scattered	crash
+Relation	T14	T11	NoRel	true	scattered	decompression
+Relation	T14	T2	NoRel	true	scattered	departed
+Relation	T14	T9	NoRel	true	scattered	takeoff
+Relation	T2	T5	NoRel	true	departed	repairs
+Relation	T3	T4	NoRel	true	aborted	flight
+Relation	T4	T10	NoRel	true	flight	suffered
+Relation	T4	T13	NoRel	true	flight	wreckage
+Relation	T5	T2	NoRel	true	repairs	departed
+Relation	T6	T0	NoRel	true	made	lost
+Relation	T6	T2	NoRel	true	made	departed
+Relation	T7	T1	NoRel	true	departed	crash
+Relation	T7	T12	NoRel	true	departed	disintegrated
+Relation	T8	T11	NoRel	true	bound	decompression
+Relation	T8	T3	NoRel	true	bound	aborted
+Relation	T9	T0	NoRel	true	takeoff	lost
+Relation	T9	T5	NoRel	true	takeoff	repairs

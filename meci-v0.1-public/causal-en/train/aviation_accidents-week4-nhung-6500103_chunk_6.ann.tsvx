@@ -1,0 +1,66 @@
+Text	Therefore , the Safety Board can only conclude that the flight crew failed to relate the fuel remaining and the rate of fuel flow to the time and distance from the airport , because their attention was directed almost entirely toward diagnosing the landing gear problem . "	The failure of the captain to monitor properly the aircraft 's fuel state and to properly respond to the low fuel state and the crewmember 's advisories regarding fuel state .	This resulted in fuel exhaustion to all engines .	His inattention resulted from preoccupation with a landing gear malfunction and preparations for a possible landing emergency .	The failure of the other two flight crewmembers either to fully comprehend the criticality of the fuel state or to successfully communicate their concern to the captain
+Event	T0	conclude	EVENT	38
+Event	T1	failed	EVENT	68
+Event	T2	relate	EVENT	78
+Event	T3	remaining	EVENT	94
+Event	T4	flow	EVENT	125
+Event	T5	directed	EVENT	202
+Event	T6	diagnosing	EVENT	234
+Event	T7	problem	EVENT	262
+Event	T8	failure	EVENT	278
+Event	T9	monitor	EVENT	304
+Event	T10	advisories	EVENT	416
+Event	T11	resulted	EVENT	455
+Event	T12	exhaustion	EVENT	472
+Event	T13	resulted	EVENT	516
+Event	T14	preoccupation	EVENT	530
+Event	T15	malfunction	EVENT	564
+Event	T16	preparations	EVENT	580
+Event	T18	failure	EVENT	632
+Event	T19	comprehend	EVENT	692
+Event	T20	communicate	EVENT	756
+Event	T21	landing	EVENT	608
+Relation	T5	T1	CauseEffect	true	directed	failed
+Relation	T1	T5	EffectCause	true	failed	directed
+Relation	T8	T12	CauseEffect	true	failure	exhaustion
+Relation	T12	T8	EffectCause	true	exhaustion	failure
+Relation	T14	T13	CauseEffect	true	preoccupation	resulted
+Relation	T13	T14	EffectCause	true	resulted	preoccupation
+Relation	T16	T13	CauseEffect	true	preparations	resulted
+Relation	T13	T16	EffectCause	true	resulted	preparations
+Relation	T16	T21	CauseEffect	true	preparations	landing
+Relation	T21	T16	EffectCause	true	landing	preparations
+Relation	T1	T14	NoRel	true	failed	preoccupation
+Relation	T1	T19	NoRel	true	failed	comprehend
+Relation	T10	T2	NoRel	true	advisories	relate
+Relation	T11	T19	NoRel	true	resulted	comprehend
+Relation	T11	T4	NoRel	true	resulted	flow
+Relation	T12	T0	NoRel	true	exhaustion	conclude
+Relation	T14	T0	NoRel	true	preoccupation	conclude
+Relation	T15	T16	NoRel	true	malfunction	preparations
+Relation	T15	T6	NoRel	true	malfunction	diagnosing
+Relation	T16	T7	NoRel	true	preparations	problem
+Relation	T18	T11	NoRel	true	failure	resulted
+Relation	T18	T15	NoRel	true	failure	malfunction
+Relation	T18	T21	NoRel	true	failure	landing
+Relation	T18	T9	NoRel	true	failure	monitor
+Relation	T19	T3	NoRel	true	comprehend	remaining
+Relation	T20	T7	NoRel	true	communicate	problem
+Relation	T21	T13	NoRel	true	landing	resulted
+Relation	T21	T5	NoRel	true	landing	directed
+Relation	T3	T19	NoRel	true	remaining	comprehend
+Relation	T3	T2	NoRel	true	remaining	relate
+Relation	T3	T20	NoRel	true	remaining	communicate
+Relation	T4	T21	NoRel	true	flow	landing
+Relation	T5	T8	NoRel	true	directed	failure
+Relation	T6	T18	NoRel	true	diagnosing	failure
+Relation	T6	T21	NoRel	true	diagnosing	landing
+Relation	T7	T16	NoRel	true	problem	preparations
+Relation	T7	T18	NoRel	true	problem	failure
+Relation	T7	T9	NoRel	true	problem	monitor
+Relation	T8	T0	NoRel	true	failure	conclude
+Relation	T8	T21	NoRel	true	failure	landing
+Relation	T8	T5	NoRel	true	failure	directed
+Relation	T8	T9	NoRel	true	failure	monitor
+Relation	T9	T13	NoRel	true	monitor	resulted
+Relation	T9	T3	NoRel	true	monitor	remaining

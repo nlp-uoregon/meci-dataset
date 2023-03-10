@@ -1,0 +1,74 @@
+Text	Han nævnte , at en af flykaprerne havde et rødt bælte med en bombe_spændt om sin talje .	En United-ansat i San Francisco , Californien , sendte en besked til flyet klokken 09:46 .	Linda Gronlund ringede til sin søster Elsa Strong klokken 09:46:05 og lagde en besked om , at der var " mænd med en bombe . "	Klokken 09:47:57 ringede stewardessen CeeCee Lyles til sin mand og lagde en besked , hvor hun fortalte om kapringen af flyet .	Passageren Marion Britton ringede til sin ven Fred Fiumano klokken 09:49:12 .
+Event	T0	nævnte	EVENT	4
+Event	T1	bombe_spændt	EVENT	61
+Event	T2	sendte	EVENT	137
+Event	T3	besked	EVENT	147
+Event	T4	ringede	EVENT	195
+Event	T5	lagde	EVENT	250
+Event	T6	besked	EVENT	259
+Event	T7	ringede	EVENT	323
+Event	T8	lagde	EVENT	373
+Event	T9	besked	EVENT	382
+Event	T10	fortalte	EVENT	400
+Event	T11	kapringen	EVENT	412
+Event	T12	ringede	EVENT	459
+Relation	T1	T0	CauseEffect	true	bombe_spændt	nævnte
+Relation	T0	T1	EffectCause	true	nævnte	bombe_spændt
+Relation	T4	T6	CauseEffect	true	ringede	besked
+Relation	T6	T4	EffectCause	true	besked	ringede
+Relation	T7	T9	CauseEffect	true	ringede	besked
+Relation	T9	T7	EffectCause	true	besked	ringede
+Relation	T11	T7	CauseEffect	true	kapringen	ringede
+Relation	T7	T11	EffectCause	true	ringede	kapringen
+Relation	T11	T4	CauseEffect	true	kapringen	ringede
+Relation	T4	T11	EffectCause	true	ringede	kapringen
+Relation	T11	T12	CauseEffect	true	kapringen	ringede
+Relation	T12	T11	EffectCause	true	ringede	kapringen
+Relation	T0	T12	NoRel	true	nævnte	ringede
+Relation	T0	T2	NoRel	true	nævnte	sendte
+Relation	T0	T4	NoRel	true	nævnte	ringede
+Relation	T0	T5	NoRel	true	nævnte	lagde
+Relation	T0	T6	NoRel	true	nævnte	besked
+Relation	T0	T8	NoRel	true	nævnte	lagde
+Relation	T1	T3	NoRel	true	bombe_spændt	besked
+Relation	T1	T6	NoRel	true	bombe_spændt	besked
+Relation	T1	T7	NoRel	true	bombe_spændt	ringede
+Relation	T1	T8	NoRel	true	bombe_spændt	lagde
+Relation	T10	T1	NoRel	true	fortalte	bombe_spændt
+Relation	T10	T4	NoRel	true	fortalte	ringede
+Relation	T10	T5	NoRel	true	fortalte	lagde
+Relation	T10	T6	NoRel	true	fortalte	besked
+Relation	T11	T10	NoRel	true	kapringen	fortalte
+Relation	T11	T5	NoRel	true	kapringen	lagde
+Relation	T11	T6	NoRel	true	kapringen	besked
+Relation	T2	T3	NoRel	true	sendte	besked
+Relation	T2	T5	NoRel	true	sendte	lagde
+Relation	T3	T10	NoRel	true	besked	fortalte
+Relation	T3	T11	NoRel	true	besked	kapringen
+Relation	T3	T12	NoRel	true	besked	ringede
+Relation	T3	T6	NoRel	true	besked	besked
+Relation	T4	T2	NoRel	true	ringede	sendte
+Relation	T4	T5	NoRel	true	ringede	lagde
+Relation	T4	T7	NoRel	true	ringede	ringede
+Relation	T5	T0	NoRel	true	lagde	nævnte
+Relation	T5	T1	NoRel	true	lagde	bombe_spændt
+Relation	T5	T11	NoRel	true	lagde	kapringen
+Relation	T5	T6	NoRel	true	lagde	besked
+Relation	T5	T7	NoRel	true	lagde	ringede
+Relation	T6	T0	NoRel	true	besked	nævnte
+Relation	T6	T2	NoRel	true	besked	sendte
+Relation	T6	T3	NoRel	true	besked	besked
+Relation	T6	T5	NoRel	true	besked	lagde
+Relation	T6	T8	NoRel	true	besked	lagde
+Relation	T6	T9	NoRel	true	besked	besked
+Relation	T7	T0	NoRel	true	ringede	nævnte
+Relation	T7	T3	NoRel	true	ringede	besked
+Relation	T7	T4	NoRel	true	ringede	ringede
+Relation	T8	T10	NoRel	true	lagde	fortalte
+Relation	T8	T5	NoRel	true	lagde	lagde
+Relation	T8	T9	NoRel	true	lagde	besked
+Relation	T9	T10	NoRel	true	besked	fortalte
+Relation	T9	T11	NoRel	true	besked	kapringen
+Relation	T9	T12	NoRel	true	besked	ringede
+Relation	T9	T4	NoRel	true	besked	ringede
+Relation	T9	T8	NoRel	true	besked	lagde

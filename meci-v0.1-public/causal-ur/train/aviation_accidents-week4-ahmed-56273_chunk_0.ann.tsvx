@@ -1,0 +1,30 @@
+Text	ایئر بلیو کی پرواز 202 اندرون ملک مسافر پردار جہاز تھا جو 28 جولائی 2010 کو پاکستانی دار الحکومت اسلام آباد کے نواح میں حادثہ کا شکار ہو گیا ۔	جہاز پر سوار ایک سو چھیالیس ( 146 ) مسافر اور عملہ کے چھ ( 6 ) افراد لقمہ اجل بن گئے ۔	یہ حادثہ پاکستان کی فضائی تاریخ کا بد ترین واقعہ ہے ۔	ایئر بلیو کا یہ جہاز ایئر بس A321 - 231 پرواز 202 علامہ اقبال ہوائی اڈا کراچی سے شہید بینظیر بھٹو ہوائی اڈا اسلام آباد جا رہا تھا کہ اسلام آباد کے شمال میں واقع مارگلا پہاڑیوں میں گر کے تباہ ہو گیا ۔	اسلام آباد شہر سے تعلق رکھنے والی ایئر بلیو پاکستان کی دوسری بڑی فضائی کمپنی ہے جس کے پاس اندرون ملک پروازون کا تقریبا تیس فیصد کاروبار ہے ۔
+Event	T0	پرواز	EVENT	13
+Event	T1	حادثہ	EVENT	120
+Event	T4	گئے	EVENT	224
+Event	T5	حادثہ	EVENT	233
+Event	T6	واقعہ	EVENT	273
+Event	T7	گر	EVENT	464
+Event	T2	تباہ	EVENT	470
+Event	T3	جا	EVENT	403
+Relation	T1	T4	CauseEffect	true	حادثہ	گئے
+Relation	T4	T1	EffectCause	true	گئے	حادثہ
+Relation	T5	T2	CauseEffect	true	حادثہ	تباہ
+Relation	T2	T5	EffectCause	true	تباہ	حادثہ
+Relation	T0	T1	NoRel	true	پرواز	حادثہ
+Relation	T0	T2	NoRel	true	پرواز	تباہ
+Relation	T0	T3	NoRel	true	پرواز	جا
+Relation	T0	T7	NoRel	true	پرواز	گر
+Relation	T1	T3	NoRel	true	حادثہ	جا
+Relation	T1	T5	NoRel	true	حادثہ	حادثہ
+Relation	T2	T3	NoRel	true	تباہ	جا
+Relation	T2	T6	NoRel	true	تباہ	واقعہ
+Relation	T3	T0	NoRel	true	جا	پرواز
+Relation	T3	T1	NoRel	true	جا	حادثہ
+Relation	T3	T6	NoRel	true	جا	واقعہ
+Relation	T4	T6	NoRel	true	گئے	واقعہ
+Relation	T5	T6	NoRel	true	حادثہ	واقعہ
+Relation	T5	T7	NoRel	true	حادثہ	گر
+Relation	T6	T4	NoRel	true	واقعہ	گئے
+Relation	T6	T7	NoRel	true	واقعہ	گر
+Relation	T7	T6	NoRel	true	گر	واقعہ

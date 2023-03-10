@@ -1,0 +1,67 @@
+Text	In response to the accident , the French BEA ( Bureau of Enquiry and Analysis for Civil Aviation Safety ) recommended that inspection procedures for engine pylons be modified so that fatigue cracks can be detected more easily .	The BEA also recommended that air traffic controllers receive regular training for emergency situations by theoretical study and by performing practical exercises .	The year after the incident , the crew received the _ Hugh Gordon - Burge Memorial Award _ from the Honourable Company of Air Pilots .	Trans - Air Service Flight 671 was featured in the 4th episode of season 22 of the show _ Mayday _ , titled " Double Trouble " .	- American Airlines Flight 191 - engine separation on takeoff and subsequent crash - El Al Flight 1862 , China Airlines Flight 358 - two other instances of in - flight engine separations resulting in fatal crashes
+Event	T0	accident	EVENT	19
+Event	T1	recommended	EVENT	106
+Event	T2	procedures	EVENT	134
+Event	T3	modified	EVENT	166
+Event	T4	cracks	EVENT	191
+Event	T5	detected	EVENT	205
+Event	T6	recommended	EVENT	241
+Event	T7	receive	EVENT	282
+Event	T8	training	EVENT	298
+Event	T9	study	EVENT	347
+Event	T10	performing	EVENT	360
+Event	T11	exercises	EVENT	381
+Event	T12	incident	EVENT	412
+Event	T13	received	EVENT	432
+Event	T14	featured	EVENT	563
+Event	T15	titled	EVENT	629
+Event	T16	Trouble	EVENT	645
+Event	T17	crash	EVENT	734
+Event	T18	separations	EVENT	832
+Event	T19	crashes	EVENT	863
+Event	T20	separation	EVENT	697
+Relation	T2	T3	CauseEffect	true	procedures	modified
+Relation	T3	T2	EffectCause	true	modified	procedures
+Relation	T3	T5	CauseEffect	true	modified	detected
+Relation	T5	T3	EffectCause	true	detected	modified
+Relation	T8	T7	CauseEffect	true	training	receive
+Relation	T7	T8	EffectCause	true	receive	training
+Relation	T18	T19	CauseEffect	true	separations	crashes
+Relation	T19	T18	EffectCause	true	crashes	separations
+Relation	T0	T1	NoRel	true	accident	recommended
+Relation	T0	T18	NoRel	true	accident	separations
+Relation	T0	T6	NoRel	true	accident	recommended
+Relation	T1	T2	NoRel	true	recommended	procedures
+Relation	T1	T5	NoRel	true	recommended	detected
+Relation	T10	T20	NoRel	true	performing	separation
+Relation	T11	T10	NoRel	true	exercises	performing
+Relation	T11	T3	NoRel	true	exercises	modified
+Relation	T13	T7	NoRel	true	received	receive
+Relation	T15	T1	NoRel	true	titled	recommended
+Relation	T15	T13	NoRel	true	titled	received
+Relation	T15	T3	NoRel	true	titled	modified
+Relation	T15	T6	NoRel	true	titled	recommended
+Relation	T15	T7	NoRel	true	titled	receive
+Relation	T17	T12	NoRel	true	crash	incident
+Relation	T17	T6	NoRel	true	crash	recommended
+Relation	T17	T8	NoRel	true	crash	training
+Relation	T18	T15	NoRel	true	separations	titled
+Relation	T18	T2	NoRel	true	separations	procedures
+Relation	T18	T4	NoRel	true	separations	cracks
+Relation	T19	T0	NoRel	true	crashes	accident
+Relation	T19	T13	NoRel	true	crashes	received
+Relation	T19	T5	NoRel	true	crashes	detected
+Relation	T2	T16	NoRel	true	procedures	Trouble
+Relation	T20	T13	NoRel	true	separation	received
+Relation	T3	T1	NoRel	true	modified	recommended
+Relation	T4	T14	NoRel	true	cracks	featured
+Relation	T4	T16	NoRel	true	cracks	Trouble
+Relation	T5	T12	NoRel	true	detected	incident
+Relation	T6	T11	NoRel	true	recommended	exercises
+Relation	T6	T13	NoRel	true	recommended	received
+Relation	T6	T2	NoRel	true	recommended	procedures
+Relation	T7	T10	NoRel	true	receive	performing
+Relation	T7	T6	NoRel	true	receive	recommended
+Relation	T8	T12	NoRel	true	training	incident
+Relation	T8	T19	NoRel	true	training	crashes
+Relation	T9	T1	NoRel	true	study	recommended

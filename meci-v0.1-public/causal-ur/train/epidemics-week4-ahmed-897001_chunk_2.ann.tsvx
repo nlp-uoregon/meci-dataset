@@ -1,0 +1,75 @@
+Text	700 سے زائد افراد کو نگرانی میں رکھا گیا اور تقریباً 400 افراد کو ان کے علاج اور صحت کی دیکھ بھال کے لیے رکھا گیا ۔	انفیکشن کی تشخیص کے لیے ایک پولیمریز چین رد عمل ( PCR ) ٹیسٹ تیار کیا گیا تھا ، اس انتہائی نگہداشت کے ساتھ ووہان کے 41 افراد کے گروپ میں ایک نئے کورونا وائرس کی دریافت کی تصدیق ہوئی ۔	ان میں دو لوگوں نے ابھی جلد ہی شادی کی تھی ۔	ان میں ایک بازار بھی نہیں گیا تھا ۔	اور کچھ لوگ اس سمندری غذائی بازار میں کام کرنے والے خاندان سے تھے ۔
+Event	T0	نگرانی	EVENT	21
+Event	T1	علاج	EVENT	72
+Event	T2	انفیکشن	EVENT	116
+Event	T3	تشخیص	EVENT	127
+Event	T4	دریافت	EVENT	277
+Event	T6	شادی	EVENT	331
+Event	T7	رکھا	EVENT	105
+Event	T9	دیکھ بھال	EVENT	88
+Event	T8	ٹیسٹ	EVENT	172
+Event	T10	تیار	EVENT	177
+Event	T11	تصدیق	EVENT	287
+Event	T5	گیا	EVENT	371
+Event	T12	کام	EVENT	419
+Relation	T1	T0	CauseEffect	true	علاج	نگرانی
+Relation	T0	T1	EffectCause	true	نگرانی	علاج
+Relation	T9	T0	CauseEffect	true	دیکھ بھال	نگرانی
+Relation	T0	T9	EffectCause	true	نگرانی	دیکھ بھال
+Relation	T1	T7	CauseEffect	true	علاج	رکھا
+Relation	T7	T1	EffectCause	true	رکھا	علاج
+Relation	T9	T7	CauseEffect	true	دیکھ بھال	رکھا
+Relation	T7	T9	EffectCause	true	رکھا	دیکھ بھال
+Relation	T3	T10	CauseEffect	true	تشخیص	تیار
+Relation	T10	T3	EffectCause	true	تیار	تشخیص
+Relation	T10	T11	CauseEffect	true	تیار	تصدیق
+Relation	T11	T10	EffectCause	true	تصدیق	تیار
+Relation	T0	T11	NoRel	true	نگرانی	تصدیق
+Relation	T0	T5	NoRel	true	نگرانی	گیا
+Relation	T1	T11	NoRel	true	علاج	تصدیق
+Relation	T1	T12	NoRel	true	علاج	کام
+Relation	T1	T9	NoRel	true	علاج	دیکھ بھال
+Relation	T10	T12	NoRel	true	تیار	کام
+Relation	T10	T2	NoRel	true	تیار	انفیکشن
+Relation	T10	T8	NoRel	true	تیار	ٹیسٹ
+Relation	T11	T0	NoRel	true	تصدیق	نگرانی
+Relation	T11	T1	NoRel	true	تصدیق	علاج
+Relation	T11	T3	NoRel	true	تصدیق	تشخیص
+Relation	T11	T6	NoRel	true	تصدیق	شادی
+Relation	T11	T7	NoRel	true	تصدیق	رکھا
+Relation	T11	T8	NoRel	true	تصدیق	ٹیسٹ
+Relation	T12	T1	NoRel	true	کام	علاج
+Relation	T12	T8	NoRel	true	کام	ٹیسٹ
+Relation	T2	T0	NoRel	true	انفیکشن	نگرانی
+Relation	T2	T1	NoRel	true	انفیکشن	علاج
+Relation	T2	T10	NoRel	true	انفیکشن	تیار
+Relation	T2	T3	NoRel	true	انفیکشن	تشخیص
+Relation	T2	T5	NoRel	true	انفیکشن	گیا
+Relation	T2	T7	NoRel	true	انفیکشن	رکھا
+Relation	T2	T8	NoRel	true	انفیکشن	ٹیسٹ
+Relation	T3	T12	NoRel	true	تشخیص	کام
+Relation	T3	T2	NoRel	true	تشخیص	انفیکشن
+Relation	T3	T7	NoRel	true	تشخیص	رکھا
+Relation	T4	T11	NoRel	true	دریافت	تصدیق
+Relation	T4	T2	NoRel	true	دریافت	انفیکشن
+Relation	T4	T3	NoRel	true	دریافت	تشخیص
+Relation	T4	T8	NoRel	true	دریافت	ٹیسٹ
+Relation	T5	T0	NoRel	true	گیا	نگرانی
+Relation	T5	T11	NoRel	true	گیا	تصدیق
+Relation	T5	T12	NoRel	true	گیا	کام
+Relation	T5	T6	NoRel	true	گیا	شادی
+Relation	T6	T0	NoRel	true	شادی	نگرانی
+Relation	T6	T1	NoRel	true	شادی	علاج
+Relation	T6	T10	NoRel	true	شادی	تیار
+Relation	T6	T11	NoRel	true	شادی	تصدیق
+Relation	T6	T12	NoRel	true	شادی	کام
+Relation	T6	T3	NoRel	true	شادی	تشخیص
+Relation	T7	T0	NoRel	true	رکھا	نگرانی
+Relation	T7	T12	NoRel	true	رکھا	کام
+Relation	T7	T5	NoRel	true	رکھا	گیا
+Relation	T8	T1	NoRel	true	ٹیسٹ	علاج
+Relation	T8	T12	NoRel	true	ٹیسٹ	کام
+Relation	T8	T2	NoRel	true	ٹیسٹ	انفیکشن
+Relation	T8	T3	NoRel	true	ٹیسٹ	تشخیص
+Relation	T9	T10	NoRel	true	دیکھ بھال	تیار
+Relation	T9	T5	NoRel	true	دیکھ بھال	گیا

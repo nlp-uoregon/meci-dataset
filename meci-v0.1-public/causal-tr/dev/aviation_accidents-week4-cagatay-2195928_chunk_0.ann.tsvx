@@ -1,0 +1,75 @@
+Text	TÜRK HAVA YOLLARI'NIN 6491 SEFER SAYILI UÇUŞU , Türk Hava Yolları adına ACT Airlines tarafından işletilen ve 16 Ocak 2017 günü Hong Kong'dan İstanbul'a gitmesi planlanan bir kargo uçağının Kırgızistan'daki duraklama noktasına inmeye çalışırken yerleşim bölgesine düşmesiyle sonuçlanan uluslararası bir kargo uçuşudur .	Uçağın 4 kişilik mürettebatı ve havalimanının yaklaşık batısındaki Daça - Su yerleşim yerinde bulunan 17'si çocuk 35 yerel sakin olmak üzere toplam 39 kişi kaza sonucunda öldü , 36 yerel sakin de çeşitli şiddetli yaralanmalar geçirdi .	Resmî açıklamalara göre uçağın kargo bölmesinde 85.618 kilogram tüketim malı vardı .	İnişe geçen uçak , Manas Uluslararası Havalimanı'ndaki 26 numaralı pistin tüm uzunluğu boyunca uçtu ve pistin son ucunun 900 metre ötesinde yere değdi .	Kazanın ardından 17 Ocak 2017 Salı günü Kırgızistan'da 1 günlük ulusal yas ilan edildi .
+Event	T0	UÇUŞU	EVENT	40
+Event	T1	işletilen	EVENT	96
+Event	T2	gitmesi	EVENT	152
+Event	T3	uçuşudur	EVENT	308
+Event	T4	öldü	EVENT	490
+Event	T6	tüketim	EVENT	619
+Event	T8	uçtu	EVENT	735
+Event	T9	değdi	EVENT	785
+Event	T10	Kazanın	EVENT	793
+Event	T11	edildi	EVENT	873
+Event	T12	düşmesiyle	EVENT	263
+Event	T13	yaralanmalar	EVENT	532
+Event	T5	açıklamalara	EVENT	561
+Event	T7	İnişe	EVENT	640
+Relation	T12	T4	CauseEffect	true	düşmesiyle	öldü
+Relation	T4	T12	EffectCause	true	öldü	düşmesiyle
+Relation	T12	T13	CauseEffect	true	düşmesiyle	yaralanmalar
+Relation	T13	T12	EffectCause	true	yaralanmalar	düşmesiyle
+Relation	T9	T12	CauseEffect	true	değdi	düşmesiyle
+Relation	T12	T9	EffectCause	true	düşmesiyle	değdi
+Relation	T8	T9	CauseEffect	true	uçtu	değdi
+Relation	T9	T8	EffectCause	true	değdi	uçtu
+Relation	T9	T10	CauseEffect	true	değdi	Kazanın
+Relation	T10	T9	EffectCause	true	Kazanın	değdi
+Relation	T10	T11	CauseEffect	true	Kazanın	edildi
+Relation	T11	T10	EffectCause	true	edildi	Kazanın
+Relation	T0	T1	NoRel	true	UÇUŞU	işletilen
+Relation	T0	T3	NoRel	true	UÇUŞU	uçuşudur
+Relation	T0	T5	NoRel	true	UÇUŞU	açıklamalara
+Relation	T0	T6	NoRel	true	UÇUŞU	tüketim
+Relation	T0	T7	NoRel	true	UÇUŞU	İnişe
+Relation	T1	T10	NoRel	true	işletilen	Kazanın
+Relation	T1	T4	NoRel	true	işletilen	öldü
+Relation	T1	T8	NoRel	true	işletilen	uçtu
+Relation	T10	T12	NoRel	true	Kazanın	düşmesiyle
+Relation	T10	T2	NoRel	true	Kazanın	gitmesi
+Relation	T10	T3	NoRel	true	Kazanın	uçuşudur
+Relation	T10	T4	NoRel	true	Kazanın	öldü
+Relation	T10	T5	NoRel	true	Kazanın	açıklamalara
+Relation	T10	T7	NoRel	true	Kazanın	İnişe
+Relation	T10	T8	NoRel	true	Kazanın	uçtu
+Relation	T11	T5	NoRel	true	edildi	açıklamalara
+Relation	T11	T6	NoRel	true	edildi	tüketim
+Relation	T12	T6	NoRel	true	düşmesiyle	tüketim
+Relation	T12	T8	NoRel	true	düşmesiyle	uçtu
+Relation	T13	T3	NoRel	true	yaralanmalar	uçuşudur
+Relation	T13	T4	NoRel	true	yaralanmalar	öldü
+Relation	T13	T5	NoRel	true	yaralanmalar	açıklamalara
+Relation	T13	T6	NoRel	true	yaralanmalar	tüketim
+Relation	T13	T9	NoRel	true	yaralanmalar	değdi
+Relation	T2	T12	NoRel	true	gitmesi	düşmesiyle
+Relation	T2	T5	NoRel	true	gitmesi	açıklamalara
+Relation	T3	T1	NoRel	true	uçuşudur	işletilen
+Relation	T3	T13	NoRel	true	uçuşudur	yaralanmalar
+Relation	T3	T2	NoRel	true	uçuşudur	gitmesi
+Relation	T3	T6	NoRel	true	uçuşudur	tüketim
+Relation	T3	T9	NoRel	true	uçuşudur	değdi
+Relation	T4	T10	NoRel	true	öldü	Kazanın
+Relation	T4	T2	NoRel	true	öldü	gitmesi
+Relation	T4	T7	NoRel	true	öldü	İnişe
+Relation	T5	T1	NoRel	true	açıklamalara	işletilen
+Relation	T5	T13	NoRel	true	açıklamalara	yaralanmalar
+Relation	T5	T7	NoRel	true	açıklamalara	İnişe
+Relation	T5	T9	NoRel	true	açıklamalara	değdi
+Relation	T6	T11	NoRel	true	tüketim	edildi
+Relation	T7	T3	NoRel	true	İnişe	uçuşudur
+Relation	T7	T5	NoRel	true	İnişe	açıklamalara
+Relation	T8	T1	NoRel	true	uçtu	işletilen
+Relation	T8	T11	NoRel	true	uçtu	edildi
+Relation	T8	T12	NoRel	true	uçtu	düşmesiyle
+Relation	T8	T7	NoRel	true	uçtu	İnişe
+Relation	T9	T0	NoRel	true	değdi	UÇUŞU
+Relation	T9	T2	NoRel	true	değdi	gitmesi
+Relation	T9	T4	NoRel	true	değdi	öldü

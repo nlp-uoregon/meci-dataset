@@ -1,0 +1,43 @@
+Text	sağ | 250px | küçükresim | İngiltere'de Kyrill tarafından sökülen bir ağaç .	sağ | 250px | küçükresim | Delft , Hollanda'da kasırganın verdiği zarar .	sağ | 250px | küçükresim | Devrilen elektrik direkleri .	KYRILL , 2007 yılında Kuzey ve Orta Avrupa'da esen , büyük maddi zarara ve can kayıplarına neden olan kasırga ve o kasırgaya neden olan alçak basınç alanı .	15 Ocak 2007'de Newfoundland'da oluştu .
+Event	T0	sökülen	EVENT	58
+Event	T1	zarar	EVENT	143
+Event	T3	kasırga	EVENT	310
+Event	T4	oluştu	EVENT	397
+Event	T5	kasırganın	EVENT	124
+Event	T6	Devrilen	EVENT	178
+Event	T2	alanı	EVENT	357
+Event	T7	zarara	EVENT	273
+Event	T8	kayıplarına	EVENT	287
+Relation	T5	T1	CauseEffect	true	kasırganın	zarar
+Relation	T1	T5	EffectCause	true	zarar	kasırganın
+Relation	T2	T3	CauseEffect	true	alanı	kasırga
+Relation	T3	T2	EffectCause	true	kasırga	alanı
+Relation	T3	T7	CauseEffect	true	kasırga	zarara
+Relation	T7	T3	EffectCause	true	zarara	kasırga
+Relation	T3	T8	CauseEffect	true	kasırga	kayıplarına
+Relation	T8	T3	EffectCause	true	kayıplarına	kasırga
+Relation	T0	T3	NoRel	true	sökülen	kasırga
+Relation	T0	T6	NoRel	true	sökülen	Devrilen
+Relation	T0	T7	NoRel	true	sökülen	zarara
+Relation	T0	T8	NoRel	true	sökülen	kayıplarına
+Relation	T1	T0	NoRel	true	zarar	sökülen
+Relation	T1	T2	NoRel	true	zarar	alanı
+Relation	T1	T3	NoRel	true	zarar	kasırga
+Relation	T2	T5	NoRel	true	alanı	kasırganın
+Relation	T2	T8	NoRel	true	alanı	kayıplarına
+Relation	T3	T1	NoRel	true	kasırga	zarar
+Relation	T3	T4	NoRel	true	kasırga	oluştu
+Relation	T4	T1	NoRel	true	oluştu	zarar
+Relation	T4	T2	NoRel	true	oluştu	alanı
+Relation	T4	T3	NoRel	true	oluştu	kasırga
+Relation	T4	T6	NoRel	true	oluştu	Devrilen
+Relation	T5	T6	NoRel	true	kasırganın	Devrilen
+Relation	T5	T7	NoRel	true	kasırganın	zarara
+Relation	T5	T8	NoRel	true	kasırganın	kayıplarına
+Relation	T6	T2	NoRel	true	Devrilen	alanı
+Relation	T6	T5	NoRel	true	Devrilen	kasırganın
+Relation	T6	T8	NoRel	true	Devrilen	kayıplarına
+Relation	T7	T0	NoRel	true	zarara	sökülen
+Relation	T7	T1	NoRel	true	zarara	zarar
+Relation	T7	T4	NoRel	true	zarara	oluştu
+Relation	T8	T5	NoRel	true	kayıplarına	kasırganın

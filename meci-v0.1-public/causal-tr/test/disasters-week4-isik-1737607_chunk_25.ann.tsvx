@@ -1,0 +1,83 @@
+Text	Yer titredi ve dört büyük deprem oldu , patlama akşam 20: 48_'da başladı .	15 km uzaklıkta , 09: 35'te kişiler tahliye edilmeye başlandı .	Lava Crater altında başlayan 500 m uzunluğunda çatlak açıldı ve lav çeşmeler ve diğer lav akıntıları oradan fışkırdı .	Patlama sırasında ortaya çıkan kül bulutları fırtınaya neden oldu .	Volkanın gökyüzü ve yeri siyah oldu bu siyah rüzgâr tarafından kuzeye nakledildi .
+Event	T0	titredi	EVENT	4
+Event	T1	oldu	EVENT	33
+Event	T2	patlama	EVENT	40
+Event	T3	başladı	EVENT	65
+Event	T4	başlandı	EVENT	128
+Event	T5	başlayan	EVENT	159
+Event	T6	açıldı	EVENT	193
+Event	T7	fışkırdı	EVENT	247
+Event	T8	Patlama	EVENT	258
+Event	T10	nakledildi	EVENT	396
+Event	T11	deprem	EVENT	26
+Event	T12	oldu	EVENT	319
+Event	T9	rüzgâr	EVENT	371
+Event	T13	oldu	EVENT	357
+Relation	T6	T7	CauseEffect	true	açıldı	fışkırdı
+Relation	T7	T6	EffectCause	true	fışkırdı	açıldı
+Relation	T2	T13	CauseEffect	true	patlama	oldu
+Relation	T13	T2	EffectCause	true	oldu	patlama
+Relation	T9	T10	CauseEffect	true	rüzgâr	nakledildi
+Relation	T10	T9	EffectCause	true	nakledildi	rüzgâr
+Relation	T0	T1	NoRel	true	titredi	oldu
+Relation	T0	T2	NoRel	true	titredi	patlama
+Relation	T1	T10	NoRel	true	oldu	nakledildi
+Relation	T1	T13	NoRel	true	oldu	oldu
+Relation	T1	T2	NoRel	true	oldu	patlama
+Relation	T1	T3	NoRel	true	oldu	başladı
+Relation	T1	T4	NoRel	true	oldu	başlandı
+Relation	T1	T5	NoRel	true	oldu	başlayan
+Relation	T1	T8	NoRel	true	oldu	Patlama
+Relation	T10	T1	NoRel	true	nakledildi	oldu
+Relation	T10	T2	NoRel	true	nakledildi	patlama
+Relation	T10	T3	NoRel	true	nakledildi	başladı
+Relation	T11	T0	NoRel	true	deprem	titredi
+Relation	T11	T10	NoRel	true	deprem	nakledildi
+Relation	T11	T13	NoRel	true	deprem	oldu
+Relation	T11	T6	NoRel	true	deprem	açıldı
+Relation	T11	T8	NoRel	true	deprem	Patlama
+Relation	T12	T0	NoRel	true	oldu	titredi
+Relation	T12	T10	NoRel	true	oldu	nakledildi
+Relation	T12	T11	NoRel	true	oldu	deprem
+Relation	T12	T13	NoRel	true	oldu	oldu
+Relation	T12	T3	NoRel	true	oldu	başladı
+Relation	T12	T6	NoRel	true	oldu	açıldı
+Relation	T12	T9	NoRel	true	oldu	rüzgâr
+Relation	T13	T1	NoRel	true	oldu	oldu
+Relation	T13	T10	NoRel	true	oldu	nakledildi
+Relation	T13	T7	NoRel	true	oldu	fışkırdı
+Relation	T13	T8	NoRel	true	oldu	Patlama
+Relation	T2	T0	NoRel	true	patlama	titredi
+Relation	T2	T1	NoRel	true	patlama	oldu
+Relation	T3	T0	NoRel	true	başladı	titredi
+Relation	T3	T1	NoRel	true	başladı	oldu
+Relation	T3	T2	NoRel	true	başladı	patlama
+Relation	T3	T6	NoRel	true	başladı	açıldı
+Relation	T4	T0	NoRel	true	başlandı	titredi
+Relation	T4	T1	NoRel	true	başlandı	oldu
+Relation	T4	T10	NoRel	true	başlandı	nakledildi
+Relation	T4	T13	NoRel	true	başlandı	oldu
+Relation	T4	T2	NoRel	true	başlandı	patlama
+Relation	T4	T6	NoRel	true	başlandı	açıldı
+Relation	T4	T7	NoRel	true	başlandı	fışkırdı
+Relation	T4	T8	NoRel	true	başlandı	Patlama
+Relation	T4	T9	NoRel	true	başlandı	rüzgâr
+Relation	T5	T10	NoRel	true	başlayan	nakledildi
+Relation	T5	T4	NoRel	true	başlayan	başlandı
+Relation	T5	T6	NoRel	true	başlayan	açıldı
+Relation	T6	T2	NoRel	true	açıldı	patlama
+Relation	T6	T4	NoRel	true	açıldı	başlandı
+Relation	T6	T5	NoRel	true	açıldı	başlayan
+Relation	T7	T0	NoRel	true	fışkırdı	titredi
+Relation	T7	T12	NoRel	true	fışkırdı	oldu
+Relation	T7	T13	NoRel	true	fışkırdı	oldu
+Relation	T7	T2	NoRel	true	fışkırdı	patlama
+Relation	T8	T11	NoRel	true	Patlama	deprem
+Relation	T8	T3	NoRel	true	Patlama	başladı
+Relation	T8	T6	NoRel	true	Patlama	açıldı
+Relation	T8	T7	NoRel	true	Patlama	fışkırdı
+Relation	T9	T13	NoRel	true	rüzgâr	oldu
+Relation	T9	T2	NoRel	true	rüzgâr	patlama
+Relation	T9	T4	NoRel	true	rüzgâr	başlandı
+Relation	T9	T7	NoRel	true	rüzgâr	fışkırdı
+Relation	T9	T8	NoRel	true	rüzgâr	Patlama

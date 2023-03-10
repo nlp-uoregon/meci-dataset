@@ -1,0 +1,73 @@
+Text	Şehitliğe ilk düzenleme mimar Hakkı Atun tarafından 1964 ortalarında yapılmıştır .	Mezarların sayısı arttıkça şehitlik yeniden düzenlenmiştir .	1974'te Kıbrıs Harekâtı sırasında hayatını kaybeden Kıbrıslı Türk mücahitler ve Türk ordusuna mensup askerler , ilk olarak Tekke Bahçesi Şehitliği'ne defnedildiler .	Buraya gömülü olan 84 Türk askerinin naaşı 1983 yılında düzenlenen bir törenle Boğaz Şehitliği'ne aktarıldı .	1974'te çatışmalar sürerken hayatını kaybedenlerin hemen defnedilmesi zaruri olduğundan definler beşer kişinin bir arada olduğu toplu mezarlara yapıldı .
+Event	T0	düzenleme	EVENT	14
+Event	T1	düzenlenmiştir	EVENT	127
+Event	T2	kaybeden	EVENT	187
+Event	T3	defnedildiler	EVENT	294
+Event	T4	gömülü	EVENT	317
+Event	T5	aktarıldı	EVENT	408
+Event	T6	yapıldı	EVENT	564
+Event	T7	yapılmıştır	EVENT	69
+Event	T8	arttıkça	EVENT	101
+Event	T9	Kıbrıs Harekâtı	EVENT	152
+Event	T10	düzenlenen	EVENT	366
+Event	T11	çatışmalar	EVENT	428
+Event	T12	kaybedenlerin	EVENT	457
+Relation	T8	T1	CauseEffect	true	arttıkça	düzenlenmiştir
+Relation	T1	T8	EffectCause	true	düzenlenmiştir	arttıkça
+Relation	T9	T2	CauseEffect	true	Kıbrıs Harekâtı	kaybeden
+Relation	T2	T9	EffectCause	true	kaybeden	Kıbrıs Harekâtı
+Relation	T2	T3	CauseEffect	true	kaybeden	defnedildiler
+Relation	T3	T2	EffectCause	true	defnedildiler	kaybeden
+Relation	T11	T12	CauseEffect	true	çatışmalar	kaybedenlerin
+Relation	T12	T11	EffectCause	true	kaybedenlerin	çatışmalar
+Relation	T12	T6	CauseEffect	true	kaybedenlerin	yapıldı
+Relation	T6	T12	EffectCause	true	yapıldı	kaybedenlerin
+Relation	T0	T2	NoRel	true	düzenleme	kaybeden
+Relation	T0	T3	NoRel	true	düzenleme	defnedildiler
+Relation	T0	T8	NoRel	true	düzenleme	arttıkça
+Relation	T1	T6	NoRel	true	düzenlenmiştir	yapıldı
+Relation	T1	T7	NoRel	true	düzenlenmiştir	yapılmıştır
+Relation	T10	T12	NoRel	true	düzenlenen	kaybedenlerin
+Relation	T10	T7	NoRel	true	düzenlenen	yapılmıştır
+Relation	T10	T9	NoRel	true	düzenlenen	Kıbrıs Harekâtı
+Relation	T11	T5	NoRel	true	çatışmalar	aktarıldı
+Relation	T11	T6	NoRel	true	çatışmalar	yapıldı
+Relation	T11	T7	NoRel	true	çatışmalar	yapılmıştır
+Relation	T12	T10	NoRel	true	kaybedenlerin	düzenlenen
+Relation	T12	T9	NoRel	true	kaybedenlerin	Kıbrıs Harekâtı
+Relation	T2	T10	NoRel	true	kaybeden	düzenlenen
+Relation	T2	T12	NoRel	true	kaybeden	kaybedenlerin
+Relation	T2	T5	NoRel	true	kaybeden	aktarıldı
+Relation	T2	T6	NoRel	true	kaybeden	yapıldı
+Relation	T3	T10	NoRel	true	defnedildiler	düzenlenen
+Relation	T3	T5	NoRel	true	defnedildiler	aktarıldı
+Relation	T3	T6	NoRel	true	defnedildiler	yapıldı
+Relation	T3	T7	NoRel	true	defnedildiler	yapılmıştır
+Relation	T4	T0	NoRel	true	gömülü	düzenleme
+Relation	T4	T1	NoRel	true	gömülü	düzenlenmiştir
+Relation	T4	T12	NoRel	true	gömülü	kaybedenlerin
+Relation	T4	T3	NoRel	true	gömülü	defnedildiler
+Relation	T4	T5	NoRel	true	gömülü	aktarıldı
+Relation	T4	T8	NoRel	true	gömülü	arttıkça
+Relation	T5	T12	NoRel	true	aktarıldı	kaybedenlerin
+Relation	T5	T8	NoRel	true	aktarıldı	arttıkça
+Relation	T5	T9	NoRel	true	aktarıldı	Kıbrıs Harekâtı
+Relation	T6	T0	NoRel	true	yapıldı	düzenleme
+Relation	T6	T10	NoRel	true	yapıldı	düzenlenen
+Relation	T6	T11	NoRel	true	yapıldı	çatışmalar
+Relation	T6	T2	NoRel	true	yapıldı	kaybeden
+Relation	T6	T4	NoRel	true	yapıldı	gömülü
+Relation	T7	T10	NoRel	true	yapılmıştır	düzenlenen
+Relation	T7	T11	NoRel	true	yapılmıştır	çatışmalar
+Relation	T7	T12	NoRel	true	yapılmıştır	kaybedenlerin
+Relation	T7	T2	NoRel	true	yapılmıştır	kaybeden
+Relation	T7	T4	NoRel	true	yapılmıştır	gömülü
+Relation	T7	T9	NoRel	true	yapılmıştır	Kıbrıs Harekâtı
+Relation	T8	T12	NoRel	true	arttıkça	kaybedenlerin
+Relation	T8	T3	NoRel	true	arttıkça	defnedildiler
+Relation	T8	T4	NoRel	true	arttıkça	gömülü
+Relation	T9	T10	NoRel	true	Kıbrıs Harekâtı	düzenlenen
+Relation	T9	T3	NoRel	true	Kıbrıs Harekâtı	defnedildiler
+Relation	T9	T6	NoRel	true	Kıbrıs Harekâtı	yapıldı
+Relation	T9	T7	NoRel	true	Kıbrıs Harekâtı	yapılmıştır
+Relation	T9	T8	NoRel	true	Kıbrıs Harekâtı	arttıkça

@@ -1,0 +1,131 @@
+Text	El 17 de abril se levantó la Señal # 2 para Catanduanes y toda la isla de Samar .	PAGASA también emitió avisos de inundaciones para tres regiones de Visayas y Mindanao .	En preparación para las intensas lluvias , la Comisión Nacional de Telecomunicaciones ordenó a las empresas de telecomunicaciones que preparen instalaciones en las áreas afectadas pronosticadas , incluidas estaciones de carga y llamadas gratuitas .	En la subsiguiente suspensión de viajes , 2.507 personas y 61 embarcaciones marítimas quedaron varadas en puertos de todo el país .	Ya el 17 de abril , comenzó la evacuación preventiva en la región de Bicol y la provincia de Samar , y para el 21 de abril , 169.072 personas fueron evacuadas en el valle de Cagayán , la región de Bicol , Visayas del este y Caraga .
+Event	T0	levantó	EVENT	18
+Event	T1	Señal	EVENT	29
+Event	T2	avisos	EVENT	104
+Event	T3	inundaciones	EVENT	114
+Event	T4	preparación	EVENT	173
+Event	T5	lluvias	EVENT	203
+Event	T6	ordenó	EVENT	256
+Event	T7	preparen	EVENT	304
+Event	T8	pronosticadas	EVENT	350
+Event	T9	carga	EVENT	390
+Event	T10	suspensión	EVENT	438
+Event	T11	viajes	EVENT	452
+Event	T12	varadas	EVENT	514
+Event	T13	comenzó	EVENT	571
+Event	T14	preventiva	EVENT	593
+Event	T15	evacuadas	EVENT	700
+Event	T16	evacuación	EVENT	582
+Relation	T16	T15	CauseEffect	true	evacuación	evacuadas
+Relation	T15	T16	EffectCause	true	evacuadas	evacuación
+Relation	T0	T12	NoRel	true	levantó	varadas
+Relation	T0	T16	NoRel	true	levantó	evacuación
+Relation	T0	T4	NoRel	true	levantó	preparación
+Relation	T0	T8	NoRel	true	levantó	pronosticadas
+Relation	T1	T0	NoRel	true	Señal	levantó
+Relation	T1	T10	NoRel	true	Señal	suspensión
+Relation	T1	T11	NoRel	true	Señal	viajes
+Relation	T1	T13	NoRel	true	Señal	comenzó
+Relation	T1	T16	NoRel	true	Señal	evacuación
+Relation	T1	T2	NoRel	true	Señal	avisos
+Relation	T1	T3	NoRel	true	Señal	inundaciones
+Relation	T1	T5	NoRel	true	Señal	lluvias
+Relation	T10	T13	NoRel	true	suspensión	comenzó
+Relation	T10	T14	NoRel	true	suspensión	preventiva
+Relation	T10	T16	NoRel	true	suspensión	evacuación
+Relation	T10	T6	NoRel	true	suspensión	ordenó
+Relation	T10	T7	NoRel	true	suspensión	preparen
+Relation	T10	T9	NoRel	true	suspensión	carga
+Relation	T11	T0	NoRel	true	viajes	levantó
+Relation	T11	T1	NoRel	true	viajes	Señal
+Relation	T11	T13	NoRel	true	viajes	comenzó
+Relation	T11	T4	NoRel	true	viajes	preparación
+Relation	T11	T5	NoRel	true	viajes	lluvias
+Relation	T11	T7	NoRel	true	viajes	preparen
+Relation	T12	T0	NoRel	true	varadas	levantó
+Relation	T12	T14	NoRel	true	varadas	preventiva
+Relation	T12	T15	NoRel	true	varadas	evacuadas
+Relation	T12	T16	NoRel	true	varadas	evacuación
+Relation	T12	T5	NoRel	true	varadas	lluvias
+Relation	T12	T6	NoRel	true	varadas	ordenó
+Relation	T12	T8	NoRel	true	varadas	pronosticadas
+Relation	T13	T1	NoRel	true	comenzó	Señal
+Relation	T13	T10	NoRel	true	comenzó	suspensión
+Relation	T13	T11	NoRel	true	comenzó	viajes
+Relation	T13	T12	NoRel	true	comenzó	varadas
+Relation	T13	T14	NoRel	true	comenzó	preventiva
+Relation	T13	T15	NoRel	true	comenzó	evacuadas
+Relation	T13	T4	NoRel	true	comenzó	preparación
+Relation	T13	T5	NoRel	true	comenzó	lluvias
+Relation	T13	T7	NoRel	true	comenzó	preparen
+Relation	T13	T8	NoRel	true	comenzó	pronosticadas
+Relation	T14	T0	NoRel	true	preventiva	levantó
+Relation	T14	T11	NoRel	true	preventiva	viajes
+Relation	T14	T15	NoRel	true	preventiva	evacuadas
+Relation	T14	T16	NoRel	true	preventiva	evacuación
+Relation	T14	T2	NoRel	true	preventiva	avisos
+Relation	T14	T8	NoRel	true	preventiva	pronosticadas
+Relation	T15	T11	NoRel	true	evacuadas	viajes
+Relation	T15	T13	NoRel	true	evacuadas	comenzó
+Relation	T15	T14	NoRel	true	evacuadas	preventiva
+Relation	T15	T4	NoRel	true	evacuadas	preparación
+Relation	T15	T5	NoRel	true	evacuadas	lluvias
+Relation	T15	T8	NoRel	true	evacuadas	pronosticadas
+Relation	T16	T1	NoRel	true	evacuación	Señal
+Relation	T16	T14	NoRel	true	evacuación	preventiva
+Relation	T16	T2	NoRel	true	evacuación	avisos
+Relation	T16	T3	NoRel	true	evacuación	inundaciones
+Relation	T16	T4	NoRel	true	evacuación	preparación
+Relation	T16	T5	NoRel	true	evacuación	lluvias
+Relation	T16	T9	NoRel	true	evacuación	carga
+Relation	T2	T14	NoRel	true	avisos	preventiva
+Relation	T2	T15	NoRel	true	avisos	evacuadas
+Relation	T2	T3	NoRel	true	avisos	inundaciones
+Relation	T2	T5	NoRel	true	avisos	lluvias
+Relation	T2	T6	NoRel	true	avisos	ordenó
+Relation	T2	T9	NoRel	true	avisos	carga
+Relation	T3	T10	NoRel	true	inundaciones	suspensión
+Relation	T3	T13	NoRel	true	inundaciones	comenzó
+Relation	T3	T15	NoRel	true	inundaciones	evacuadas
+Relation	T3	T5	NoRel	true	inundaciones	lluvias
+Relation	T3	T8	NoRel	true	inundaciones	pronosticadas
+Relation	T4	T1	NoRel	true	preparación	Señal
+Relation	T4	T15	NoRel	true	preparación	evacuadas
+Relation	T4	T16	NoRel	true	preparación	evacuación
+Relation	T4	T2	NoRel	true	preparación	avisos
+Relation	T4	T8	NoRel	true	preparación	pronosticadas
+Relation	T5	T0	NoRel	true	lluvias	levantó
+Relation	T5	T1	NoRel	true	lluvias	Señal
+Relation	T5	T10	NoRel	true	lluvias	suspensión
+Relation	T5	T11	NoRel	true	lluvias	viajes
+Relation	T5	T15	NoRel	true	lluvias	evacuadas
+Relation	T5	T16	NoRel	true	lluvias	evacuación
+Relation	T5	T3	NoRel	true	lluvias	inundaciones
+Relation	T6	T12	NoRel	true	ordenó	varadas
+Relation	T6	T15	NoRel	true	ordenó	evacuadas
+Relation	T6	T2	NoRel	true	ordenó	avisos
+Relation	T6	T4	NoRel	true	ordenó	preparación
+Relation	T6	T7	NoRel	true	ordenó	preparen
+Relation	T6	T8	NoRel	true	ordenó	pronosticadas
+Relation	T7	T0	NoRel	true	preparen	levantó
+Relation	T7	T1	NoRel	true	preparen	Señal
+Relation	T7	T10	NoRel	true	preparen	suspensión
+Relation	T7	T11	NoRel	true	preparen	viajes
+Relation	T7	T12	NoRel	true	preparen	varadas
+Relation	T7	T13	NoRel	true	preparen	comenzó
+Relation	T7	T14	NoRel	true	preparen	preventiva
+Relation	T7	T15	NoRel	true	preparen	evacuadas
+Relation	T7	T16	NoRel	true	preparen	evacuación
+Relation	T7	T2	NoRel	true	preparen	avisos
+Relation	T7	T5	NoRel	true	preparen	lluvias
+Relation	T8	T14	NoRel	true	pronosticadas	preventiva
+Relation	T8	T2	NoRel	true	pronosticadas	avisos
+Relation	T8	T4	NoRel	true	pronosticadas	preparación
+Relation	T8	T5	NoRel	true	pronosticadas	lluvias
+Relation	T8	T9	NoRel	true	pronosticadas	carga
+Relation	T9	T0	NoRel	true	carga	levantó
+Relation	T9	T1	NoRel	true	carga	Señal
+Relation	T9	T10	NoRel	true	carga	suspensión
+Relation	T9	T12	NoRel	true	carga	varadas
+Relation	T9	T5	NoRel	true	carga	lluvias
+Relation	T9	T6	NoRel	true	carga	ordenó

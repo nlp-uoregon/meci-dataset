@@ -1,0 +1,67 @@
+Text	- 15 de octubre de 1938 .	En la estación de Ciudad Real se produce el choque de un tren hospital procedente del frente de Extremadura que transportaba soldados heridos con una locomotora que se encontraba aparcada .	Como consecuencia del accidente pierden la vida doce personas y se produce un número indeterminado de heridos .	- ¿ 16 de diciembre ? de 1938 .	Diarios de la zona franquista publican la noticia de haber ocurrido un choque de dos trenes en la línea Madrid_-_Alicante , entre las estaciones de Higueruela-Bonete y Alpera , en la Provincia de Albacete .
+Event	T0	produce	EVENT	59
+Event	T1	choque	EVENT	70
+Event	T2	transportaba	EVENT	138
+Event	T3	heridos	EVENT	160
+Event	T4	aparcada	EVENT	205
+Event	T5	produce	EVENT	283
+Event	T6	heridos	EVENT	318
+Event	T7	publican	EVENT	390
+Event	T8	noticia	EVENT	402
+Event	T9	ocurrido	EVENT	419
+Event	T10	choque	EVENT	431
+Event	T11	accidente	EVENT	238
+Event	T12	pierden	EVENT	248
+Relation	T11	T12	CauseEffect	true	accidente	pierden
+Relation	T12	T11	EffectCause	true	pierden	accidente
+Relation	T11	T6	CauseEffect	true	accidente	heridos
+Relation	T6	T11	EffectCause	true	heridos	accidente
+Relation	T0	T10	NoRel	true	produce	choque
+Relation	T0	T11	NoRel	true	produce	accidente
+Relation	T0	T8	NoRel	true	produce	noticia
+Relation	T1	T12	NoRel	true	choque	pierden
+Relation	T1	T7	NoRel	true	choque	publican
+Relation	T10	T0	NoRel	true	choque	produce
+Relation	T10	T1	NoRel	true	choque	choque
+Relation	T10	T12	NoRel	true	choque	pierden
+Relation	T10	T8	NoRel	true	choque	noticia
+Relation	T10	T9	NoRel	true	choque	ocurrido
+Relation	T11	T2	NoRel	true	accidente	transportaba
+Relation	T11	T3	NoRel	true	accidente	heridos
+Relation	T12	T2	NoRel	true	pierden	transportaba
+Relation	T12	T3	NoRel	true	pierden	heridos
+Relation	T12	T6	NoRel	true	pierden	heridos
+Relation	T2	T11	NoRel	true	transportaba	accidente
+Relation	T2	T12	NoRel	true	transportaba	pierden
+Relation	T2	T7	NoRel	true	transportaba	publican
+Relation	T3	T10	NoRel	true	heridos	choque
+Relation	T3	T11	NoRel	true	heridos	accidente
+Relation	T3	T5	NoRel	true	heridos	produce
+Relation	T3	T7	NoRel	true	heridos	publican
+Relation	T3	T8	NoRel	true	heridos	noticia
+Relation	T4	T0	NoRel	true	aparcada	produce
+Relation	T4	T10	NoRel	true	aparcada	choque
+Relation	T4	T12	NoRel	true	aparcada	pierden
+Relation	T4	T5	NoRel	true	aparcada	produce
+Relation	T4	T6	NoRel	true	aparcada	heridos
+Relation	T4	T8	NoRel	true	aparcada	noticia
+Relation	T5	T0	NoRel	true	produce	produce
+Relation	T5	T10	NoRel	true	produce	choque
+Relation	T5	T3	NoRel	true	produce	heridos
+Relation	T5	T4	NoRel	true	produce	aparcada
+Relation	T5	T9	NoRel	true	produce	ocurrido
+Relation	T6	T10	NoRel	true	heridos	choque
+Relation	T6	T12	NoRel	true	heridos	pierden
+Relation	T6	T3	NoRel	true	heridos	heridos
+Relation	T6	T9	NoRel	true	heridos	ocurrido
+Relation	T7	T1	NoRel	true	publican	choque
+Relation	T7	T12	NoRel	true	publican	pierden
+Relation	T7	T4	NoRel	true	publican	aparcada
+Relation	T7	T6	NoRel	true	publican	heridos
+Relation	T7	T8	NoRel	true	publican	noticia
+Relation	T8	T10	NoRel	true	noticia	choque
+Relation	T8	T11	NoRel	true	noticia	accidente
+Relation	T9	T1	NoRel	true	ocurrido	choque
+Relation	T9	T2	NoRel	true	ocurrido	transportaba
+Relation	T9	T3	NoRel	true	ocurrido	heridos
+Relation	T9	T5	NoRel	true	ocurrido	produce

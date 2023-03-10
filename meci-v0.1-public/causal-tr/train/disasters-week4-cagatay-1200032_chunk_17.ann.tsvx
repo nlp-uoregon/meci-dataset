@@ -1,0 +1,21 @@
+Text	TSK , Ağrı'ya Doğal Afet Yardım Kurtarma Bölüğü gönderdi ( Zaman ) Tarih : 2 Temmuz 2004 , 08: 50 , Erişim tarihi : 19 Şubat 2011	Ağrı'da orta şiddette deprem meydana geldi ( Zaman ) Tarih : 2 Temmuz 2004 , 03: 50 , Erişim tarihi : 19 Şubat 2011	Ağrı'nın Yığınçal Köyü'nde 16 kişi öldü ( Zaman ) Tarih : 2 Temmuz 2004 , 04: 18 , Erişim tarihi : 19 Şubat 2011	Ağrı'daki depremde ölenlerin sayısı 18'e yükseldi ( Zaman ) Tarih : 2 Temmuz 2004 , 07: 22 , Erişim tarihi : 19 Şubat 2011	" Depremden sonra bölgede artçı depremler beklenebilir " ( Zaman ) Tarih : 2 Temmuz 2004 , 09: 17 , Erişim tarihi : 19 Şubat 2011
+Event	T0	gönderdi	EVENT	48
+Event	T2	öldü	EVENT	281
+Event	T3	yükseldi	EVENT	400
+Event	T4	deprem	EVENT	152
+Event	T1	Depremden	EVENT	484
+Event	T5	artçı depremler	EVENT	508
+Relation	T4	T0	CauseEffect	true	deprem	gönderdi
+Relation	T0	T4	EffectCause	true	gönderdi	deprem
+Relation	T4	T2	CauseEffect	true	deprem	öldü
+Relation	T2	T4	EffectCause	true	öldü	deprem
+Relation	T1	T5	CauseEffect	true	Depremden	artçı depremler
+Relation	T5	T1	EffectCause	true	artçı depremler	Depremden
+Relation	T0	T5	NoRel	true	gönderdi	artçı depremler
+Relation	T1	T0	NoRel	true	Depremden	gönderdi
+Relation	T3	T0	NoRel	true	yükseldi	gönderdi
+Relation	T3	T1	NoRel	true	yükseldi	Depremden
+Relation	T4	T1	NoRel	true	deprem	Depremden
+Relation	T4	T3	NoRel	true	deprem	yükseldi
+Relation	T4	T5	NoRel	true	deprem	artçı depremler
+Relation	T5	T0	NoRel	true	artçı depremler	gönderdi

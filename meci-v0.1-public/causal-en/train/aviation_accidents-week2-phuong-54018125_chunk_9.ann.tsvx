@@ -1,0 +1,49 @@
+Text	Two members of the group approached Admiral Guzmán in the cabin and informed him of the hijacking , at which point his _ aide-de-camp _ attempted to get his pistol but was struck down by one of the hijackers .	In order not to frighten the passengers , they were informed that the aircraft was diverting to Comodoro Rivadavia airport .	The captain managed to find the Falklands thanks to the differences in the pattern of cloud cover over the islands .	After circling , they were able to locate Stanley through a clearing in the clouds .	At that time , there were no active airports on the islands , so the captain landed on Stanley Racecourse at 08:42 .
+Event	T0	approached	EVENT	25
+Event	T1	informed	EVENT	68
+Event	T10	differences	EVENT	391
+Event	T11	pattern	EVENT	410
+Event	T12	circling	EVENT	458
+Event	T14	locate	EVENT	487
+Event	T15	clearing	EVENT	512
+Event	T16	landed	EVENT	614
+Event	T2	hijacking	EVENT	88
+Event	T3	attempted	EVENT	136
+Event	T4	get	EVENT	149
+Event	T5	frighten	EVENT	226
+Event	T6	informed	EVENT	262
+Event	T7	diverting	EVENT	293
+Event	T8	managed	EVENT	347
+Event	T9	find	EVENT	358
+Relation	T0	T1	CauseEffect	true	approached	informed
+Relation	T1	T0	EffectCause	true	informed	approached
+Relation	T7	T5	CauseEffect	true	diverting	frighten
+Relation	T5	T7	EffectCause	true	frighten	diverting
+Relation	T7	T9	CauseEffect	true	diverting	find
+Relation	T9	T7	EffectCause	true	find	diverting
+Relation	T10	T14	CauseEffect	true	differences	locate
+Relation	T14	T10	EffectCause	true	locate	differences
+Relation	T15	T14	CauseEffect	true	clearing	locate
+Relation	T14	T15	EffectCause	true	locate	clearing
+Relation	T0	T8	NoRel	true	approached	managed
+Relation	T0	T9	NoRel	true	approached	find
+Relation	T1	T3	NoRel	true	informed	attempted
+Relation	T10	T4	NoRel	true	differences	get
+Relation	T10	T5	NoRel	true	differences	frighten
+Relation	T10	T6	NoRel	true	differences	informed
+Relation	T11	T9	NoRel	true	pattern	find
+Relation	T16	T10	NoRel	true	landed	differences
+Relation	T16	T2	NoRel	true	landed	hijacking
+Relation	T2	T14	NoRel	true	hijacking	locate
+Relation	T2	T8	NoRel	true	hijacking	managed
+Relation	T4	T10	NoRel	true	get	differences
+Relation	T5	T12	NoRel	true	frighten	circling
+Relation	T5	T2	NoRel	true	frighten	hijacking
+Relation	T5	T3	NoRel	true	frighten	attempted
+Relation	T6	T12	NoRel	true	informed	circling
+Relation	T7	T16	NoRel	true	diverting	landed
+Relation	T8	T1	NoRel	true	managed	informed
+Relation	T8	T10	NoRel	true	managed	differences
+Relation	T8	T2	NoRel	true	managed	hijacking
+Relation	T9	T12	NoRel	true	find	circling
+Relation	T9	T16	NoRel	true	find	landed

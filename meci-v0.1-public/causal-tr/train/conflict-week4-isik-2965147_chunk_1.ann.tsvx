@@ -1,0 +1,24 @@
+Text	Acımasız geçmişine rağmen Daniel , ailesini her şeyden çok önemsediği ve kızı Ofelia'ya Amerika Birleşik Devletleri'nde mümkün olan en iyi hayatı vermeye çalışmış , sevgi dolu bir eş ve bir baba olduğunu göstermiştir .	Geçmiş yaşamının travmasını eşinin desteğiyle kızından saklamıştır .	Daniel karısı Griselda'nın ölümüyle tam anlamıyla kendini kaybetmiş ve neredeyse intiharın eşiğine gelmiştir .	Daniel , Victor Strand gibi güvenmediği kişiler konusunda oldukça temkinlidir , bir kişinin vücut dilinden ve davranışlarından potansiyel tehdidi anlama konusunda oldukça başarılıdır .	Daniel Salazar 1943 yılında El Salvador'da doğup büyümüştür .
+Event	T0	travmasını	EVENT	236
+Event	T1	saklamıştır	EVENT	274
+Event	T2	ölümüyle	EVENT	315
+Event	T3	kaybetmiş	EVENT	346
+Event	T4	gelmiştir	EVENT	387
+Event	T5	anlama	EVENT	545
+Event	T7	desteğiyle	EVENT	254
+Relation	T0	T7	CauseEffect	true	travmasını	desteğiyle
+Relation	T7	T0	EffectCause	true	desteğiyle	travmasını
+Relation	T7	T1	CauseEffect	true	desteğiyle	saklamıştır
+Relation	T1	T7	EffectCause	true	saklamıştır	desteğiyle
+Relation	T2	T3	CauseEffect	true	ölümüyle	kaybetmiş
+Relation	T3	T2	EffectCause	true	kaybetmiş	ölümüyle
+Relation	T3	T4	CauseEffect	true	kaybetmiş	gelmiştir
+Relation	T4	T3	EffectCause	true	gelmiştir	kaybetmiş
+Relation	T2	T5	NoRel	true	ölümüyle	anlama
+Relation	T3	T0	NoRel	true	kaybetmiş	travmasını
+Relation	T3	T1	NoRel	true	kaybetmiş	saklamıştır
+Relation	T4	T1	NoRel	true	gelmiştir	saklamıştır
+Relation	T4	T5	NoRel	true	gelmiştir	anlama
+Relation	T5	T0	NoRel	true	anlama	travmasını
+Relation	T5	T1	NoRel	true	anlama	saklamıştır
+Relation	T5	T3	NoRel	true	anlama	kaybetmiş

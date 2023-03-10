@@ -1,0 +1,90 @@
+Text	Subsequent cases of swine flu were reported in India in 2015 , with over 31,156 positive test cases and 1,841 deaths up to March 2015 .	In pigs , a swine influenza infection produces fever , lethargy , sneezing , coughing , difficulty breathing and decreased appetite .	In some cases the infection can cause miscarriage .	Although mortality is usually low ( around 1 – 4 % ) , the virus can produce weight loss and poor growth , causing economic loss to farmers .	Infected pigs can lose up to 12 pounds of body weight over a three - to four - week period .
+Event	T0	flu	EVENT	26
+Event	T1	reported	EVENT	35
+Event	T2	cases	EVENT	94
+Event	T3	deaths	EVENT	110
+Event	T4	fever	EVENT	183
+Event	T5	lethargy	EVENT	191
+Event	T6	sneezing	EVENT	202
+Event	T7	coughing	EVENT	213
+Event	T9	infection	EVENT	288
+Event	T10	miscarriage	EVENT	308
+Event	T11	mortality	EVENT	331
+Event	T15	Infected	EVENT	464
+Event	T16	infection	EVENT	164
+Event	T8	difficulty breathing	EVENT	224
+Event	T17	decreased appetite .	EVENT	249
+Event	T18	virus	EVENT	381
+Event	T12	weight loss	EVENT	399
+Event	T13	poor growth	EVENT	415
+Event	T14	economic loss	EVENT	437
+Event	T19	lose up to 12 pounds	EVENT	482
+Relation	T0	T3	CauseEffect	true	flu	deaths
+Relation	T3	T0	EffectCause	true	deaths	flu
+Relation	T16	T4	CauseEffect	true	infection	fever
+Relation	T4	T16	EffectCause	true	fever	infection
+Relation	T16	T5	CauseEffect	true	infection	lethargy
+Relation	T5	T16	EffectCause	true	lethargy	infection
+Relation	T16	T6	CauseEffect	true	infection	sneezing
+Relation	T6	T16	EffectCause	true	sneezing	infection
+Relation	T16	T7	CauseEffect	true	infection	coughing
+Relation	T7	T16	EffectCause	true	coughing	infection
+Relation	T16	T8	CauseEffect	true	infection	difficulty breathing
+Relation	T8	T16	EffectCause	true	difficulty breathing	infection
+Relation	T16	T17	CauseEffect	true	infection	decreased appetite .
+Relation	T17	T16	EffectCause	true	decreased appetite .	infection
+Relation	T9	T10	CauseEffect	true	infection	miscarriage
+Relation	T10	T9	EffectCause	true	miscarriage	infection
+Relation	T18	T11	CauseEffect	true	virus	mortality
+Relation	T11	T18	EffectCause	true	mortality	virus
+Relation	T18	T12	CauseEffect	true	virus	weight loss
+Relation	T12	T18	EffectCause	true	weight loss	virus
+Relation	T18	T13	CauseEffect	true	virus	poor growth
+Relation	T13	T18	EffectCause	true	poor growth	virus
+Relation	T12	T14	CauseEffect	true	weight loss	economic loss
+Relation	T14	T12	EffectCause	true	economic loss	weight loss
+Relation	T13	T14	CauseEffect	true	poor growth	economic loss
+Relation	T14	T13	EffectCause	true	economic loss	poor growth
+Relation	T15	T19	CauseEffect	true	Infected	lose up to 12 pounds
+Relation	T19	T15	EffectCause	true	lose up to 12 pounds	Infected
+Relation	T0	T10	NoRel	true	flu	miscarriage
+Relation	T0	T15	NoRel	true	flu	Infected
+Relation	T1	T13	NoRel	true	reported	poor growth
+Relation	T1	T17	NoRel	true	reported	decreased appetite .
+Relation	T1	T2	NoRel	true	reported	cases
+Relation	T10	T8	NoRel	true	miscarriage	difficulty breathing
+Relation	T11	T13	NoRel	true	mortality	poor growth
+Relation	T12	T5	NoRel	true	weight loss	lethargy
+Relation	T13	T8	NoRel	true	poor growth	difficulty breathing
+Relation	T15	T11	NoRel	true	Infected	mortality
+Relation	T15	T18	NoRel	true	Infected	virus
+Relation	T15	T4	NoRel	true	Infected	fever
+Relation	T16	T10	NoRel	true	infection	miscarriage
+Relation	T17	T1	NoRel	true	decreased appetite .	reported
+Relation	T18	T1	NoRel	true	virus	reported
+Relation	T18	T6	NoRel	true	virus	sneezing
+Relation	T18	T8	NoRel	true	virus	difficulty breathing
+Relation	T19	T18	NoRel	true	lose up to 12 pounds	virus
+Relation	T19	T2	NoRel	true	lose up to 12 pounds	cases
+Relation	T19	T3	NoRel	true	lose up to 12 pounds	deaths
+Relation	T2	T11	NoRel	true	cases	mortality
+Relation	T2	T17	NoRel	true	cases	decreased appetite .
+Relation	T2	T18	NoRel	true	cases	virus
+Relation	T2	T19	NoRel	true	cases	lose up to 12 pounds
+Relation	T2	T4	NoRel	true	cases	fever
+Relation	T2	T6	NoRel	true	cases	sneezing
+Relation	T4	T1	NoRel	true	fever	reported
+Relation	T5	T10	NoRel	true	lethargy	miscarriage
+Relation	T5	T14	NoRel	true	lethargy	economic loss
+Relation	T5	T18	NoRel	true	lethargy	virus
+Relation	T6	T10	NoRel	true	sneezing	miscarriage
+Relation	T6	T12	NoRel	true	sneezing	weight loss
+Relation	T6	T18	NoRel	true	sneezing	virus
+Relation	T6	T7	NoRel	true	sneezing	coughing
+Relation	T7	T10	NoRel	true	coughing	miscarriage
+Relation	T7	T8	NoRel	true	coughing	difficulty breathing
+Relation	T8	T14	NoRel	true	difficulty breathing	economic loss
+Relation	T8	T4	NoRel	true	difficulty breathing	fever
+Relation	T8	T5	NoRel	true	difficulty breathing	lethargy
+Relation	T9	T14	NoRel	true	infection	economic loss
+Relation	T9	T2	NoRel	true	infection	cases

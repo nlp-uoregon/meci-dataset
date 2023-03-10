@@ -1,0 +1,30 @@
+Text	Genellikle ayrışmış olan volkanik kayaçlar ile zayıf tutturulmuş ya da hiç tutturulmamış kırıntılar , bölgede canlı yer kaymalarına elverişli zemini oluşturur .	Kuzey Anadolu Fay Hattı’nın kuzeyinde yer alan bu bölgede özellikle kuzeydoğu - güneybatı ve kuzeybatı - güneydoğu gidişli doğrusal hatların varlığı göze çarpmaktadır .	Deprem bölgesinde , depreme bağlı olarak boyları onlarca metreden birkaç kilometreye kadar değişen , genellikle kuzeydoğu - güneybatı gidişli , birbiriyle bağlantısız aralıklı ve basamaklı çok sayıda yarık gelişmiştir .		
+Event	T0	ayrışmış	EVENT	11
+Event	T1	kaymalarına	EVENT	120
+Event	T2	oluşturur	EVENT	149
+Event	T3	çarpmaktadır	EVENT	315
+Event	T4	kırıntılar	EVENT	89
+Event	T5	gelişmiştir	EVENT	536
+Event	T6	depreme	EVENT	350
+Relation	T0	T1	CauseEffect	true	ayrışmış	kaymalarına
+Relation	T1	T0	EffectCause	true	kaymalarına	ayrışmış
+Relation	T4	T1	CauseEffect	true	kırıntılar	kaymalarına
+Relation	T1	T4	EffectCause	true	kaymalarına	kırıntılar
+Relation	T6	T5	CauseEffect	true	depreme	gelişmiştir
+Relation	T5	T6	EffectCause	true	gelişmiştir	depreme
+Relation	T0	T2	NoRel	true	ayrışmış	oluşturur
+Relation	T1	T3	NoRel	true	kaymalarına	çarpmaktadır
+Relation	T1	T6	NoRel	true	kaymalarına	depreme
+Relation	T2	T0	NoRel	true	oluşturur	ayrışmış
+Relation	T2	T1	NoRel	true	oluşturur	kaymalarına
+Relation	T2	T5	NoRel	true	oluşturur	gelişmiştir
+Relation	T2	T6	NoRel	true	oluşturur	depreme
+Relation	T3	T5	NoRel	true	çarpmaktadır	gelişmiştir
+Relation	T3	T6	NoRel	true	çarpmaktadır	depreme
+Relation	T4	T0	NoRel	true	kırıntılar	ayrışmış
+Relation	T4	T2	NoRel	true	kırıntılar	oluşturur
+Relation	T5	T0	NoRel	true	gelişmiştir	ayrışmış
+Relation	T5	T1	NoRel	true	gelişmiştir	kaymalarına
+Relation	T6	T1	NoRel	true	depreme	kaymalarına
+Relation	T6	T2	NoRel	true	depreme	oluşturur
+Relation	T6	T4	NoRel	true	depreme	kırıntılar

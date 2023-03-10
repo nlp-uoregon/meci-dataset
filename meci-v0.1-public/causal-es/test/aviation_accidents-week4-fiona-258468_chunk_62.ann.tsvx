@@ -1,0 +1,100 @@
+Text	La vista se desarrolló en nueve sesiones .	Hay que recordar que durante la instrucción solo cinco testigos habían declarado por este caso .	El 23 de marzo de 2009 comienza en la Audiencia Nacional el juicio penal , contra los tres militares acusados de falsificar las 30 identificaciones , presidido por el juez Javier Gómez Bermúdez .	El 21 de abril de 2009 termina la vista oral y se dicta el visto para sentencia , tras nueve sesiones de tenso juicio .	Finalmente , el 19 de mayo de 2009 , la Sección Primera de la Audiencia Nacional CONDENA a un total de 6 años a los tres militares por FALSEDAD DOCUMENTAL :
+Event	T0	desarrolló	EVENT	12
+Event	T1	sesiones	EVENT	32
+Event	T2	recordar	EVENT	51
+Event	T3	instrucción	EVENT	75
+Event	T4	declarado	EVENT	114
+Event	T5	comienza	EVENT	163
+Event	T6	acusados	EVENT	241
+Event	T7	falsificar	EVENT	253
+Event	T8	presidido	EVENT	290
+Event	T9	termina	EVENT	359
+Event	T10	dicta	EVENT	386
+Event	T11	visto	EVENT	395
+Event	T12	sentencia	EVENT	406
+Event	T13	sesiones	EVENT	429
+Event	T14	juicio	EVENT	447
+Event	T15	CONDENA	EVENT	537
+Relation	T7	T6	CauseEffect	true	falsificar	acusados
+Relation	T6	T7	EffectCause	true	acusados	falsificar
+Relation	T6	T15	CauseEffect	true	acusados	CONDENA
+Relation	T15	T6	EffectCause	true	CONDENA	acusados
+Relation	T0	T10	NoRel	true	desarrolló	dicta
+Relation	T0	T13	NoRel	true	desarrolló	sesiones
+Relation	T0	T15	NoRel	true	desarrolló	CONDENA
+Relation	T0	T5	NoRel	true	desarrolló	comienza
+Relation	T0	T6	NoRel	true	desarrolló	acusados
+Relation	T1	T0	NoRel	true	sesiones	desarrolló
+Relation	T1	T10	NoRel	true	sesiones	dicta
+Relation	T1	T15	NoRel	true	sesiones	CONDENA
+Relation	T1	T2	NoRel	true	sesiones	recordar
+Relation	T1	T3	NoRel	true	sesiones	instrucción
+Relation	T1	T4	NoRel	true	sesiones	declarado
+Relation	T1	T5	NoRel	true	sesiones	comienza
+Relation	T10	T1	NoRel	true	dicta	sesiones
+Relation	T10	T13	NoRel	true	dicta	sesiones
+Relation	T10	T2	NoRel	true	dicta	recordar
+Relation	T10	T3	NoRel	true	dicta	instrucción
+Relation	T10	T5	NoRel	true	dicta	comienza
+Relation	T11	T10	NoRel	true	visto	dicta
+Relation	T11	T12	NoRel	true	visto	sentencia
+Relation	T11	T6	NoRel	true	visto	acusados
+Relation	T11	T7	NoRel	true	visto	falsificar
+Relation	T11	T9	NoRel	true	visto	termina
+Relation	T12	T10	NoRel	true	sentencia	dicta
+Relation	T12	T2	NoRel	true	sentencia	recordar
+Relation	T12	T4	NoRel	true	sentencia	declarado
+Relation	T12	T6	NoRel	true	sentencia	acusados
+Relation	T12	T7	NoRel	true	sentencia	falsificar
+Relation	T12	T8	NoRel	true	sentencia	presidido
+Relation	T12	T9	NoRel	true	sentencia	termina
+Relation	T13	T0	NoRel	true	sesiones	desarrolló
+Relation	T13	T11	NoRel	true	sesiones	visto
+Relation	T13	T2	NoRel	true	sesiones	recordar
+Relation	T13	T4	NoRel	true	sesiones	declarado
+Relation	T13	T7	NoRel	true	sesiones	falsificar
+Relation	T13	T8	NoRel	true	sesiones	presidido
+Relation	T14	T11	NoRel	true	juicio	visto
+Relation	T14	T15	NoRel	true	juicio	CONDENA
+Relation	T14	T2	NoRel	true	juicio	recordar
+Relation	T14	T7	NoRel	true	juicio	falsificar
+Relation	T15	T0	NoRel	true	CONDENA	desarrolló
+Relation	T15	T10	NoRel	true	CONDENA	dicta
+Relation	T15	T11	NoRel	true	CONDENA	visto
+Relation	T15	T12	NoRel	true	CONDENA	sentencia
+Relation	T15	T13	NoRel	true	CONDENA	sesiones
+Relation	T15	T4	NoRel	true	CONDENA	declarado
+Relation	T15	T5	NoRel	true	CONDENA	comienza
+Relation	T15	T9	NoRel	true	CONDENA	termina
+Relation	T2	T1	NoRel	true	recordar	sesiones
+Relation	T2	T12	NoRel	true	recordar	sentencia
+Relation	T2	T14	NoRel	true	recordar	juicio
+Relation	T2	T15	NoRel	true	recordar	CONDENA
+Relation	T2	T5	NoRel	true	recordar	comienza
+Relation	T3	T0	NoRel	true	instrucción	desarrolló
+Relation	T3	T7	NoRel	true	instrucción	falsificar
+Relation	T4	T10	NoRel	true	declarado	dicta
+Relation	T4	T14	NoRel	true	declarado	juicio
+Relation	T5	T12	NoRel	true	comienza	sentencia
+Relation	T5	T15	NoRel	true	comienza	CONDENA
+Relation	T5	T2	NoRel	true	comienza	recordar
+Relation	T5	T8	NoRel	true	comienza	presidido
+Relation	T6	T1	NoRel	true	acusados	sesiones
+Relation	T6	T10	NoRel	true	acusados	dicta
+Relation	T6	T14	NoRel	true	acusados	juicio
+Relation	T6	T3	NoRel	true	acusados	instrucción
+Relation	T7	T10	NoRel	true	falsificar	dicta
+Relation	T7	T14	NoRel	true	falsificar	juicio
+Relation	T7	T15	NoRel	true	falsificar	CONDENA
+Relation	T7	T2	NoRel	true	falsificar	recordar
+Relation	T7	T3	NoRel	true	falsificar	instrucción
+Relation	T8	T1	NoRel	true	presidido	sesiones
+Relation	T8	T12	NoRel	true	presidido	sentencia
+Relation	T8	T14	NoRel	true	presidido	juicio
+Relation	T8	T6	NoRel	true	presidido	acusados
+Relation	T9	T0	NoRel	true	termina	desarrolló
+Relation	T9	T12	NoRel	true	termina	sentencia
+Relation	T9	T13	NoRel	true	termina	sesiones
+Relation	T9	T2	NoRel	true	termina	recordar
+Relation	T9	T3	NoRel	true	termina	instrucción
+Relation	T9	T5	NoRel	true	termina	comienza

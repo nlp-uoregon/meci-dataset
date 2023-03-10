@@ -1,0 +1,50 @@
+Text	Reznov Dragovich , Kravchenko ve Steiner'dan bütün bu olanlar için intikam almak ister ancak bunu başaramayacaktır .	Bu yüzden kendi emelleri için Mason'ı kullanacaktır .	1945'ten tekrar 68'e dönüş yapıyoruz .	Burada SOG ekibiyle birlikte Vietnam'ın kuzeyine operasyona gönderildikten sonra düşürülmüş bir helikopterin içerisinde , ağır ateş altındayız .	Helikopter suya batmaya başlıyor ve bu sırada Reznov yardıma gelip helikopterin kapısını açıyor ve bizi kurtarıyor .
+Event	T0	gönderildikten	EVENT	270
+Event	T1	düşürülmüş	EVENT	291
+Event	T2	kurtarıyor	EVENT	459
+Event	T3	intikam	EVENT	67
+Event	T4	kullanacaktır	EVENT	155
+Event	T5	başaramayacaktır	EVENT	98
+Event	T6	dönüş	EVENT	192
+Event	T7	altındayız	EVENT	342
+Event	T8	batmaya	EVENT	371
+Event	T9	açıyor	EVENT	444
+Relation	T5	T4	CauseEffect	true	başaramayacaktır	kullanacaktır
+Relation	T4	T5	EffectCause	true	kullanacaktır	başaramayacaktır
+Relation	T8	T9	CauseEffect	true	batmaya	açıyor
+Relation	T9	T8	EffectCause	true	açıyor	batmaya
+Relation	T8	T2	CauseEffect	true	batmaya	kurtarıyor
+Relation	T2	T8	EffectCause	true	kurtarıyor	batmaya
+Relation	T0	T1	NoRel	true	gönderildikten	düşürülmüş
+Relation	T0	T3	NoRel	true	gönderildikten	intikam
+Relation	T0	T4	NoRel	true	gönderildikten	kullanacaktır
+Relation	T0	T5	NoRel	true	gönderildikten	başaramayacaktır
+Relation	T0	T9	NoRel	true	gönderildikten	açıyor
+Relation	T1	T0	NoRel	true	düşürülmüş	gönderildikten
+Relation	T1	T5	NoRel	true	düşürülmüş	başaramayacaktır
+Relation	T1	T6	NoRel	true	düşürülmüş	dönüş
+Relation	T1	T9	NoRel	true	düşürülmüş	açıyor
+Relation	T2	T0	NoRel	true	kurtarıyor	gönderildikten
+Relation	T2	T4	NoRel	true	kurtarıyor	kullanacaktır
+Relation	T2	T5	NoRel	true	kurtarıyor	başaramayacaktır
+Relation	T2	T7	NoRel	true	kurtarıyor	altındayız
+Relation	T3	T0	NoRel	true	intikam	gönderildikten
+Relation	T3	T5	NoRel	true	intikam	başaramayacaktır
+Relation	T3	T6	NoRel	true	intikam	dönüş
+Relation	T4	T1	NoRel	true	kullanacaktır	düşürülmüş
+Relation	T4	T2	NoRel	true	kullanacaktır	kurtarıyor
+Relation	T4	T6	NoRel	true	kullanacaktır	dönüş
+Relation	T5	T0	NoRel	true	başaramayacaktır	gönderildikten
+Relation	T5	T2	NoRel	true	başaramayacaktır	kurtarıyor
+Relation	T5	T3	NoRel	true	başaramayacaktır	intikam
+Relation	T5	T7	NoRel	true	başaramayacaktır	altındayız
+Relation	T6	T0	NoRel	true	dönüş	gönderildikten
+Relation	T6	T4	NoRel	true	dönüş	kullanacaktır
+Relation	T6	T5	NoRel	true	dönüş	başaramayacaktır
+Relation	T6	T9	NoRel	true	dönüş	açıyor
+Relation	T7	T0	NoRel	true	altındayız	gönderildikten
+Relation	T7	T3	NoRel	true	altındayız	intikam
+Relation	T7	T4	NoRel	true	altındayız	kullanacaktır
+Relation	T9	T3	NoRel	true	açıyor	intikam
+Relation	T9	T5	NoRel	true	açıyor	başaramayacaktır
+Relation	T9	T6	NoRel	true	açıyor	dönüş

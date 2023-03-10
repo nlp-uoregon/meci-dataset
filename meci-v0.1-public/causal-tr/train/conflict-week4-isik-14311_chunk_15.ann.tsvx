@@ -1,0 +1,51 @@
+Text	Ateşkes başlamadan Girne - Lefkoşa hattı birleşti .	Geçici ateşkes ilan edildiyse de Rum birliklerinin bu ateşkes kurallarına uymaması sonucu 13 Ağustos'ta Türk birlikleri tekrar ilerlemeye başladı .	Türk birlikleri 14 Ağustos'ta başkent Lefkoşa'ya , 15 Ağustos'ta Lefke ve Mağusa'ya girdi .	Uluslararası baskılar sonucunda ateşkes ilan edildi ve adanın % 37'si Türkler'in kontrolüne geçti .	170.000 civarındaki Kıbrıslı Rum kuzeyde bulunan evlerinden göç ettirildi , 50.000 Kıbrıslı Türk ve daha sonra da Türkiye'nin teşviki ile Türkiye'den gelen göçmenler ise bu evlere yerleştirildi .
+Event	T0	birleşti	EVENT	41
+Event	T1	edildiyse	EVENT	72
+Event	T2	ateşkes	EVENT	106
+Event	T3	başladı	EVENT	190
+Event	T4	girdi	EVENT	284
+Event	T5	baskılar	EVENT	305
+Event	T6	edildi	EVENT	337
+Event	T7	geçti	EVENT	384
+Event	T8	ettirildi	EVENT	456
+Event	T9	yerleştirildi	EVENT	572
+Event	T10	Ateşkes	EVENT	0
+Relation	T3	T4	CauseEffect	true	başladı	girdi
+Relation	T4	T3	EffectCause	true	girdi	başladı
+Relation	T5	T6	CauseEffect	true	baskılar	edildi
+Relation	T6	T5	EffectCause	true	edildi	baskılar
+Relation	T7	T8	CauseEffect	true	geçti	ettirildi
+Relation	T8	T7	EffectCause	true	ettirildi	geçti
+Relation	T4	T7	CauseEffect	true	girdi	geçti
+Relation	T7	T4	EffectCause	true	geçti	girdi
+Relation	T7	T9	CauseEffect	true	geçti	yerleştirildi
+Relation	T9	T7	EffectCause	true	yerleştirildi	geçti
+Relation	T0	T3	NoRel	true	birleşti	başladı
+Relation	T0	T5	NoRel	true	birleşti	baskılar
+Relation	T1	T2	NoRel	true	edildiyse	ateşkes
+Relation	T10	T0	NoRel	true	Ateşkes	birleşti
+Relation	T10	T2	NoRel	true	Ateşkes	ateşkes
+Relation	T10	T4	NoRel	true	Ateşkes	girdi
+Relation	T10	T5	NoRel	true	Ateşkes	baskılar
+Relation	T10	T6	NoRel	true	Ateşkes	edildi
+Relation	T10	T7	NoRel	true	Ateşkes	geçti
+Relation	T10	T8	NoRel	true	Ateşkes	ettirildi
+Relation	T2	T1	NoRel	true	ateşkes	edildiyse
+Relation	T2	T4	NoRel	true	ateşkes	girdi
+Relation	T3	T0	NoRel	true	başladı	birleşti
+Relation	T5	T0	NoRel	true	baskılar	birleşti
+Relation	T5	T10	NoRel	true	baskılar	Ateşkes
+Relation	T5	T2	NoRel	true	baskılar	ateşkes
+Relation	T5	T3	NoRel	true	baskılar	başladı
+Relation	T5	T8	NoRel	true	baskılar	ettirildi
+Relation	T6	T0	NoRel	true	edildi	birleşti
+Relation	T6	T2	NoRel	true	edildi	ateşkes
+Relation	T6	T3	NoRel	true	edildi	başladı
+Relation	T6	T4	NoRel	true	edildi	girdi
+Relation	T6	T9	NoRel	true	edildi	yerleştirildi
+Relation	T7	T6	NoRel	true	geçti	edildi
+Relation	T8	T10	NoRel	true	ettirildi	Ateşkes
+Relation	T8	T3	NoRel	true	ettirildi	başladı
+Relation	T9	T1	NoRel	true	yerleştirildi	edildiyse
+Relation	T9	T3	NoRel	true	yerleştirildi	başladı
+Relation	T9	T6	NoRel	true	yerleştirildi	edildi

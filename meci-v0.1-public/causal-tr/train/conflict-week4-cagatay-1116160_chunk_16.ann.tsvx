@@ -1,0 +1,45 @@
+Text	Arkasında talan edilmiş topraklar bıraksa da Batı Avrupa bu geri çekilmenin sonucunda saldırıya uğramaktan korunmuş olur .	Batı Avrupa’nın Macarlar sayesinde Moğolların saldırılarından korunduğuna dair bir inanış olsa da , Moğollar Ögeday’ın ani ölümü sebebiyle geri çekilmiştir .	Ögeday ölmemiş olsaydı Moğolların Avrupa içlerine ne kadar daha ilerleyebileceği tarihçilerce tartışılmıştır .	Ancak dönemin lojistik sorunlarının Moğolların ilerleyişini engelleyeceği öngörülmüştür .	Macarlar Moğol istilasından önemli dersler almışlardır .
+Event	T0	çekilmenin	EVENT	65
+Event	T1	saldırıya	EVENT	86
+Event	T2	ölümü	EVENT	246
+Event	T3	çekilmiştir	EVENT	267
+Event	T5	tartışılmıştır	EVENT	375
+Event	T6	korunmuş	EVENT	107
+Event	T7	saldırılarından	EVENT	169
+Event	T8	korunduğuna	EVENT	185
+Event	T4	engelleyeceği	EVENT	452
+Event	T9	istilasından	EVENT	497
+Event	T10	almışlardır	EVENT	525
+Relation	T0	T6	CauseEffect	true	çekilmenin	korunmuş
+Relation	T6	T0	EffectCause	true	korunmuş	çekilmenin
+Relation	T2	T3	CauseEffect	true	ölümü	çekilmiştir
+Relation	T3	T2	EffectCause	true	çekilmiştir	ölümü
+Relation	T0	T10	NoRel	true	çekilmenin	almışlardır
+Relation	T0	T5	NoRel	true	çekilmenin	tartışılmıştır
+Relation	T0	T8	NoRel	true	çekilmenin	korunduğuna
+Relation	T1	T4	NoRel	true	saldırıya	engelleyeceği
+Relation	T1	T5	NoRel	true	saldırıya	tartışılmıştır
+Relation	T1	T6	NoRel	true	saldırıya	korunmuş
+Relation	T1	T7	NoRel	true	saldırıya	saldırılarından
+Relation	T10	T1	NoRel	true	almışlardır	saldırıya
+Relation	T10	T4	NoRel	true	almışlardır	engelleyeceği
+Relation	T2	T4	NoRel	true	ölümü	engelleyeceği
+Relation	T2	T6	NoRel	true	ölümü	korunmuş
+Relation	T3	T0	NoRel	true	çekilmiştir	çekilmenin
+Relation	T3	T5	NoRel	true	çekilmiştir	tartışılmıştır
+Relation	T4	T0	NoRel	true	engelleyeceği	çekilmenin
+Relation	T4	T8	NoRel	true	engelleyeceği	korunduğuna
+Relation	T4	T9	NoRel	true	engelleyeceği	istilasından
+Relation	T5	T1	NoRel	true	tartışılmıştır	saldırıya
+Relation	T6	T5	NoRel	true	korunmuş	tartışılmıştır
+Relation	T6	T7	NoRel	true	korunmuş	saldırılarından
+Relation	T7	T1	NoRel	true	saldırılarından	saldırıya
+Relation	T7	T3	NoRel	true	saldırılarından	çekilmiştir
+Relation	T7	T5	NoRel	true	saldırılarından	tartışılmıştır
+Relation	T7	T8	NoRel	true	saldırılarından	korunduğuna
+Relation	T8	T5	NoRel	true	korunduğuna	tartışılmıştır
+Relation	T8	T7	NoRel	true	korunduğuna	saldırılarından
+Relation	T8	T9	NoRel	true	korunduğuna	istilasından
+Relation	T9	T10	NoRel	true	istilasından	almışlardır
+Relation	T9	T4	NoRel	true	istilasından	engelleyeceği
+Relation	T9	T7	NoRel	true	istilasından	saldırılarından

@@ -1,0 +1,39 @@
+Text	Açığa çıkan lavlar yoğun ve tıkayıcıydı .	İzlanda dilinde _ apalhraun _ adı verilen bu tip lavlar biriktiği alanlarda yer yer 40 metre derinliğe ulaştı .	Püskürmelerin ilerleyen aşamalarında büyük bir lav kütlesi adada bulunan bir balık yetiştirme çiftliğini yok etti ve ikisine de büyük zarar verdi .	Adanın enerji dağıtım merkezi de lavlar içinde kalarak yok oldu .	Yanardağ kasabaya ve evlerin bulunduğu yerlere çok yakın bir noktada bulunmasına rağmen , bu felakette yalnızca bir kişi yaşamını yitirmiştir .
+Event	T0	tıkayıcıydı	EVENT	28
+Event	T1	biriktiği	EVENT	98
+Event	T2	ulaştı	EVENT	145
+Event	T3	etti	EVENT	263
+Event	T4	verdi	EVENT	294
+Event	T5	oldu	EVENT	361
+Event	T6	felakette	EVENT	461
+Event	T7	yitirmiştir	EVENT	498
+Event	T8	lavlar	EVENT	12
+Relation	T1	T2	CauseEffect	true	biriktiği	ulaştı
+Relation	T2	T1	EffectCause	true	ulaştı	biriktiği
+Relation	T8	T3	CauseEffect	true	lavlar	etti
+Relation	T3	T8	EffectCause	true	etti	lavlar
+Relation	T8	T4	CauseEffect	true	lavlar	verdi
+Relation	T4	T8	EffectCause	true	verdi	lavlar
+Relation	T8	T5	CauseEffect	true	lavlar	oldu
+Relation	T5	T8	EffectCause	true	oldu	lavlar
+Relation	T6	T7	CauseEffect	true	felakette	yitirmiştir
+Relation	T7	T6	EffectCause	true	yitirmiştir	felakette
+Relation	T0	T2	NoRel	true	tıkayıcıydı	ulaştı
+Relation	T1	T3	NoRel	true	biriktiği	etti
+Relation	T1	T4	NoRel	true	biriktiği	verdi
+Relation	T1	T5	NoRel	true	biriktiği	oldu
+Relation	T1	T7	NoRel	true	biriktiği	yitirmiştir
+Relation	T3	T5	NoRel	true	etti	oldu
+Relation	T4	T0	NoRel	true	verdi	tıkayıcıydı
+Relation	T4	T1	NoRel	true	verdi	biriktiği
+Relation	T4	T2	NoRel	true	verdi	ulaştı
+Relation	T4	T7	NoRel	true	verdi	yitirmiştir
+Relation	T5	T0	NoRel	true	oldu	tıkayıcıydı
+Relation	T5	T2	NoRel	true	oldu	ulaştı
+Relation	T6	T5	NoRel	true	felakette	oldu
+Relation	T6	T8	NoRel	true	felakette	lavlar
+Relation	T7	T0	NoRel	true	yitirmiştir	tıkayıcıydı
+Relation	T7	T1	NoRel	true	yitirmiştir	biriktiği
+Relation	T7	T3	NoRel	true	yitirmiştir	etti
+Relation	T7	T8	NoRel	true	yitirmiştir	lavlar
+Relation	T8	T2	NoRel	true	lavlar	ulaştı

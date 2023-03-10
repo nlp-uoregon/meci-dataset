@@ -1,0 +1,31 @@
+Text	Bu sürecin sonunda sosyal demokrat görüşleri benimsedi ve çok geçmeden sosyalizmin temsilcisi olarak adlandırıldı .	1905 yılında Almanya Sosyal Demokrat Partisi’nde ( SPD ) genel sekreter olarak görev aldı .	Partiye getirdiği birçok yenilik sayesinde partinin gelişmesinde önemli bir rol oynadı .	1913 yılında parti başkanı August Bebel’in ölmesinin ardından , başkan seçildi .	Ebert , Almanya’nın I. Dünya Savaşı’na girmesi taraftarıydı .
+Event	T0	benimsedi	EVENT	45
+Event	T1	aldı	EVENT	201
+Event	T3	yenilik	EVENT	233
+Event	T4	oynadı	EVENT	288
+Event	T5	ölmesinin	EVENT	340
+Event	T6	seçildi	EVENT	368
+Event	T8	adlandırıldı	EVENT	101
+Event	T2	I. Dünya Savaşı’na	EVENT	398
+Relation	T3	T4	CauseEffect	true	yenilik	oynadı
+Relation	T4	T3	EffectCause	true	oynadı	yenilik
+Relation	T5	T6	CauseEffect	true	ölmesinin	seçildi
+Relation	T6	T5	EffectCause	true	seçildi	ölmesinin
+Relation	T1	T0	NoRel	true	aldı	benimsedi
+Relation	T1	T3	NoRel	true	aldı	yenilik
+Relation	T1	T6	NoRel	true	aldı	seçildi
+Relation	T2	T4	NoRel	true	I. Dünya Savaşı’na	oynadı
+Relation	T3	T0	NoRel	true	yenilik	benimsedi
+Relation	T3	T2	NoRel	true	yenilik	I. Dünya Savaşı’na
+Relation	T4	T0	NoRel	true	oynadı	benimsedi
+Relation	T4	T2	NoRel	true	oynadı	I. Dünya Savaşı’na
+Relation	T4	T6	NoRel	true	oynadı	seçildi
+Relation	T4	T8	NoRel	true	oynadı	adlandırıldı
+Relation	T5	T2	NoRel	true	ölmesinin	I. Dünya Savaşı’na
+Relation	T5	T3	NoRel	true	ölmesinin	yenilik
+Relation	T6	T2	NoRel	true	seçildi	I. Dünya Savaşı’na
+Relation	T6	T4	NoRel	true	seçildi	oynadı
+Relation	T8	T2	NoRel	true	adlandırıldı	I. Dünya Savaşı’na
+Relation	T8	T3	NoRel	true	adlandırıldı	yenilik
+Relation	T8	T5	NoRel	true	adlandırıldı	ölmesinin
+Relation	T8	T6	NoRel	true	adlandırıldı	seçildi

@@ -1,0 +1,90 @@
+Text	En 1978 , Chile aceptó entregar Townley a los EE.UU. , a fin de reducir la tensión sobre el asesinato de Letelier .	Townley , sin embargo , fue liberado en el marco del programa de protección de testigos .	La justicia de EE._UU. está a la espera de Manuel Contreras y Pedro Espinoza a ser extraditado .	En un artículo publicado 17 de diciembre de 2004 en el Los Angeles Times , Francisco Letelier , hijo de Orlando Letelier , escribió que el asesinato de su padre fue parte de la Operación Cóndor , que se describe como " un intercambio de inteligencia de red utilizado por seis dictadores del Sur de la época para eliminar a los disidentes " .	Francisco Letelier , declaró : " El asesinato de mi padre era parte del Cóndor .
+Event	T0	entregar	EVENT	23
+Event	T1	reducir	EVENT	64
+Event	T10	asesinato	EVENT	442
+Event	T11	describe	EVENT	506
+Event	T12	intercambio	EVENT	525
+Event	T13	utilizado	EVENT	560
+Event	T14	eliminar	EVENT	615
+Event	T15	declaró	EVENT	666
+Event	T16	asesinato	EVENT	681
+Event	T3	asesinato	EVENT	92
+Event	T4	liberado	EVENT	144
+Event	T7	extraditado	EVENT	289
+Event	T8	publicado	EVENT	318
+Event	T9	escribió	EVENT	426
+Event	T2	Operación Cóndor	EVENT	480
+Relation	T3	T0	CauseEffect	true	asesinato	entregar
+Relation	T0	T3	EffectCause	true	entregar	asesinato
+Relation	T0	T4	CauseEffect	true	entregar	liberado
+Relation	T4	T0	EffectCause	true	liberado	entregar
+Relation	T9	T8	CauseEffect	true	escribió	publicado
+Relation	T8	T9	EffectCause	true	publicado	escribió
+Relation	T3	T8	CauseEffect	true	asesinato	publicado
+Relation	T8	T3	EffectCause	true	publicado	asesinato
+Relation	T0	T10	NoRel	true	entregar	asesinato
+Relation	T0	T12	NoRel	true	entregar	intercambio
+Relation	T0	T14	NoRel	true	entregar	eliminar
+Relation	T0	T15	NoRel	true	entregar	declaró
+Relation	T0	T16	NoRel	true	entregar	asesinato
+Relation	T0	T9	NoRel	true	entregar	escribió
+Relation	T1	T0	NoRel	true	reducir	entregar
+Relation	T1	T11	NoRel	true	reducir	describe
+Relation	T1	T14	NoRel	true	reducir	eliminar
+Relation	T1	T3	NoRel	true	reducir	asesinato
+Relation	T1	T8	NoRel	true	reducir	publicado
+Relation	T10	T1	NoRel	true	asesinato	reducir
+Relation	T10	T11	NoRel	true	asesinato	describe
+Relation	T10	T14	NoRel	true	asesinato	eliminar
+Relation	T10	T3	NoRel	true	asesinato	asesinato
+Relation	T10	T4	NoRel	true	asesinato	liberado
+Relation	T10	T9	NoRel	true	asesinato	escribió
+Relation	T11	T1	NoRel	true	describe	reducir
+Relation	T11	T12	NoRel	true	describe	intercambio
+Relation	T11	T13	NoRel	true	describe	utilizado
+Relation	T11	T3	NoRel	true	describe	asesinato
+Relation	T11	T9	NoRel	true	describe	escribió
+Relation	T12	T0	NoRel	true	intercambio	entregar
+Relation	T12	T10	NoRel	true	intercambio	asesinato
+Relation	T12	T11	NoRel	true	intercambio	describe
+Relation	T12	T13	NoRel	true	intercambio	utilizado
+Relation	T12	T14	NoRel	true	intercambio	eliminar
+Relation	T13	T1	NoRel	true	utilizado	reducir
+Relation	T13	T10	NoRel	true	utilizado	asesinato
+Relation	T13	T12	NoRel	true	utilizado	intercambio
+Relation	T14	T1	NoRel	true	eliminar	reducir
+Relation	T14	T10	NoRel	true	eliminar	asesinato
+Relation	T14	T11	NoRel	true	eliminar	describe
+Relation	T14	T13	NoRel	true	eliminar	utilizado
+Relation	T14	T16	NoRel	true	eliminar	asesinato
+Relation	T14	T3	NoRel	true	eliminar	asesinato
+Relation	T14	T7	NoRel	true	eliminar	extraditado
+Relation	T15	T1	NoRel	true	declaró	reducir
+Relation	T15	T10	NoRel	true	declaró	asesinato
+Relation	T15	T12	NoRel	true	declaró	intercambio
+Relation	T15	T13	NoRel	true	declaró	utilizado
+Relation	T15	T14	NoRel	true	declaró	eliminar
+Relation	T15	T3	NoRel	true	declaró	asesinato
+Relation	T15	T7	NoRel	true	declaró	extraditado
+Relation	T15	T8	NoRel	true	declaró	publicado
+Relation	T16	T0	NoRel	true	asesinato	entregar
+Relation	T16	T10	NoRel	true	asesinato	asesinato
+Relation	T16	T15	NoRel	true	asesinato	declaró
+Relation	T16	T8	NoRel	true	asesinato	publicado
+Relation	T16	T9	NoRel	true	asesinato	escribió
+Relation	T2	T1	NoRel	true	Operación Cóndor	reducir
+Relation	T2	T15	NoRel	true	Operación Cóndor	declaró
+Relation	T2	T9	NoRel	true	Operación Cóndor	escribió
+Relation	T3	T15	NoRel	true	asesinato	declaró
+Relation	T3	T2	NoRel	true	asesinato	Operación Cóndor
+Relation	T4	T16	NoRel	true	liberado	asesinato
+Relation	T7	T10	NoRel	true	extraditado	asesinato
+Relation	T7	T13	NoRel	true	extraditado	utilizado
+Relation	T7	T3	NoRel	true	extraditado	asesinato
+Relation	T8	T13	NoRel	true	publicado	utilizado
+Relation	T8	T15	NoRel	true	publicado	declaró
+Relation	T9	T12	NoRel	true	escribió	intercambio
+Relation	T9	T13	NoRel	true	escribió	utilizado
+Relation	T9	T14	NoRel	true	escribió	eliminar
+Relation	T9	T15	NoRel	true	escribió	declaró
+Relation	T9	T4	NoRel	true	escribió	liberado

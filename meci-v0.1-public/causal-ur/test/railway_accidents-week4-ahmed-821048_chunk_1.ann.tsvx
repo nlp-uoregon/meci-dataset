@@ -1,0 +1,101 @@
+Text	تیز رفتار ریل کی تین بوگیاں پٹری سے اترگئیں اور ریلوے لائن کے اوپر سے گزرنے والی ایک پیدل پل ریل کے دو ڈبوں پر گر گئی ۔	آٹھ لوگ جن میں تین ریلوے انجینئر بھی شامل تھے جائے حادثہ پر ہی فوت ہو گئے ۔	حادثہ کے شکار لوگوں میں ایک جرمن شہری بھی ہے ۔	ابتدائی رپورٹ کے مطابق 48 لوگ زخمی ہوئے تھے لیکن تازہ معلومات کے مطابق یہ تعداد 84 تک پہنچ گئی ہے ۔	زخمیوں کو انقرہ کے مختلف ہسپتالوں میں داخل کیا گیا ہے جن میں تین کی حالت نازک ہے اور ہسپتال میں داخل کرنے کے بعد ایک کی موت ہو گئی ہے ۔
+Event	T0	اترگئیں	EVENT	36
+Event	T2	حادثہ	EVENT	171
+Event	T3	فوت	EVENT	183
+Event	T5	حادثہ	EVENT	196
+Event	T6	شکار	EVENT	205
+Event	T7	رپورٹ	EVENT	251
+Event	T11	گر	EVENT	111
+Event	T1	شامل	EVENT	157
+Event	T4	زخمی	EVENT	273
+Event	T12	پہنچ	EVENT	329
+Event	T8	زخمیوں	EVENT	343
+Event	T13	داخل	EVENT	381
+Event	T14	داخل	EVENT	439
+Event	T9	نازک	EVENT	416
+Event	T15	موت	EVENT	463
+Relation	T2	T3	CauseEffect	true	حادثہ	فوت
+Relation	T3	T2	EffectCause	true	فوت	حادثہ
+Relation	T5	T6	CauseEffect	true	حادثہ	شکار
+Relation	T6	T5	EffectCause	true	شکار	حادثہ
+Relation	T5	T4	CauseEffect	true	حادثہ	زخمی
+Relation	T4	T5	EffectCause	true	زخمی	حادثہ
+Relation	T8	T15	CauseEffect	true	زخمیوں	موت
+Relation	T15	T8	EffectCause	true	موت	زخمیوں
+Relation	T8	T13	CauseEffect	true	زخمیوں	داخل
+Relation	T13	T8	EffectCause	true	داخل	زخمیوں
+Relation	T8	T14	CauseEffect	true	زخمیوں	داخل
+Relation	T14	T8	EffectCause	true	داخل	زخمیوں
+Relation	T0	T12	NoRel	true	اترگئیں	پہنچ
+Relation	T0	T4	NoRel	true	اترگئیں	زخمی
+Relation	T0	T5	NoRel	true	اترگئیں	حادثہ
+Relation	T0	T6	NoRel	true	اترگئیں	شکار
+Relation	T0	T8	NoRel	true	اترگئیں	زخمیوں
+Relation	T1	T13	NoRel	true	شامل	داخل
+Relation	T1	T2	NoRel	true	شامل	حادثہ
+Relation	T1	T3	NoRel	true	شامل	فوت
+Relation	T1	T5	NoRel	true	شامل	حادثہ
+Relation	T1	T6	NoRel	true	شامل	شکار
+Relation	T11	T12	NoRel	true	گر	پہنچ
+Relation	T11	T15	NoRel	true	گر	موت
+Relation	T11	T2	NoRel	true	گر	حادثہ
+Relation	T11	T3	NoRel	true	گر	فوت
+Relation	T11	T4	NoRel	true	گر	زخمی
+Relation	T11	T5	NoRel	true	گر	حادثہ
+Relation	T12	T0	NoRel	true	پہنچ	اترگئیں
+Relation	T12	T1	NoRel	true	پہنچ	شامل
+Relation	T12	T3	NoRel	true	پہنچ	فوت
+Relation	T12	T4	NoRel	true	پہنچ	زخمی
+Relation	T12	T5	NoRel	true	پہنچ	حادثہ
+Relation	T12	T8	NoRel	true	پہنچ	زخمیوں
+Relation	T13	T15	NoRel	true	داخل	موت
+Relation	T13	T2	NoRel	true	داخل	حادثہ
+Relation	T13	T4	NoRel	true	داخل	زخمی
+Relation	T13	T5	NoRel	true	داخل	حادثہ
+Relation	T13	T6	NoRel	true	داخل	شکار
+Relation	T13	T9	NoRel	true	داخل	نازک
+Relation	T14	T1	NoRel	true	داخل	شامل
+Relation	T14	T11	NoRel	true	داخل	گر
+Relation	T14	T4	NoRel	true	داخل	زخمی
+Relation	T14	T5	NoRel	true	داخل	حادثہ
+Relation	T14	T7	NoRel	true	داخل	رپورٹ
+Relation	T14	T9	NoRel	true	داخل	نازک
+Relation	T15	T0	NoRel	true	موت	اترگئیں
+Relation	T15	T13	NoRel	true	موت	داخل
+Relation	T15	T2	NoRel	true	موت	حادثہ
+Relation	T15	T4	NoRel	true	موت	زخمی
+Relation	T2	T11	NoRel	true	حادثہ	گر
+Relation	T2	T13	NoRel	true	حادثہ	داخل
+Relation	T2	T5	NoRel	true	حادثہ	حادثہ
+Relation	T2	T7	NoRel	true	حادثہ	رپورٹ
+Relation	T3	T11	NoRel	true	فوت	گر
+Relation	T3	T5	NoRel	true	فوت	حادثہ
+Relation	T3	T6	NoRel	true	فوت	شکار
+Relation	T3	T7	NoRel	true	فوت	رپورٹ
+Relation	T3	T8	NoRel	true	فوت	زخمیوں
+Relation	T3	T9	NoRel	true	فوت	نازک
+Relation	T4	T1	NoRel	true	زخمی	شامل
+Relation	T4	T11	NoRel	true	زخمی	گر
+Relation	T4	T12	NoRel	true	زخمی	پہنچ
+Relation	T4	T14	NoRel	true	زخمی	داخل
+Relation	T4	T2	NoRel	true	زخمی	حادثہ
+Relation	T4	T3	NoRel	true	زخمی	فوت
+Relation	T4	T7	NoRel	true	زخمی	رپورٹ
+Relation	T4	T8	NoRel	true	زخمی	زخمیوں
+Relation	T5	T11	NoRel	true	حادثہ	گر
+Relation	T5	T12	NoRel	true	حادثہ	پہنچ
+Relation	T5	T15	NoRel	true	حادثہ	موت
+Relation	T5	T2	NoRel	true	حادثہ	حادثہ
+Relation	T5	T3	NoRel	true	حادثہ	فوت
+Relation	T6	T1	NoRel	true	شکار	شامل
+Relation	T6	T11	NoRel	true	شکار	گر
+Relation	T7	T1	NoRel	true	رپورٹ	شامل
+Relation	T7	T15	NoRel	true	رپورٹ	موت
+Relation	T7	T3	NoRel	true	رپورٹ	فوت
+Relation	T7	T6	NoRel	true	رپورٹ	شکار
+Relation	T8	T1	NoRel	true	زخمیوں	شامل
+Relation	T9	T13	NoRel	true	نازک	داخل
+Relation	T9	T3	NoRel	true	نازک	فوت
+Relation	T9	T6	NoRel	true	نازک	شکار
+Relation	T9	T7	NoRel	true	نازک	رپورٹ
+Relation	T9	T8	NoRel	true	نازک	زخمیوں

@@ -1,0 +1,75 @@
+Text	RUDOLF_WALTER RICHARD HESS , ( en alemán : Rudolf Heß ) ; ( Alejandría , 26 de abril de 1894 - Spandau , 17 de agosto de 1987 ) , fue un militar y político alemán , uno de los principales miembros del Partido Nacionalsocialista Obrero Alemán ( NSDAP ) del Tercer Reich .	Nombrado lugarteniente ( _ Stellvertreter des Führer _ ) por Adolf Hitler en 1933 , ocupó ese cargo hasta 1941 , cuando voló en solitario a Escocia en un intento de negociar la paz con el Reino Unido durante la Segunda Guerra Mundial .	Hecho prisionero y finalmente condenado por crímenes contra la paz , cumplió cadena perpetua hasta su suicidio en 1987 .	Se alistó como soldado de infantería en el estallido de la Primera Guerra Mundial .	Fue herido varias veces en batalla y recibió la Cruz de Hierro , de segunda clase , en 1915 .
+Event	T0	Nombrado	EVENT	271
+Event	T1	ocupó	EVENT	355
+Event	T2	voló	EVENT	391
+Event	T3	intento	EVENT	425
+Event	T4	negociar	EVENT	436
+Event	T5	condenado	EVENT	537
+Event	T6	crímenes	EVENT	551
+Event	T7	suicidio	EVENT	609
+Event	T8	alistó	EVENT	631
+Event	T9	estallido	EVENT	671
+Event	T10	herido	EVENT	716
+Event	T11	batalla	EVENT	739
+Event	T12	recibió	EVENT	749
+Event	T13	prisionero	EVENT	513
+Relation	T11	T10	CauseEffect	true	batalla	herido
+Relation	T10	T11	EffectCause	true	herido	batalla
+Relation	T13	T5	CauseEffect	true	prisionero	condenado
+Relation	T5	T13	EffectCause	true	condenado	prisionero
+Relation	T0	T1	NoRel	true	Nombrado	ocupó
+Relation	T0	T2	NoRel	true	Nombrado	voló
+Relation	T0	T4	NoRel	true	Nombrado	negociar
+Relation	T0	T5	NoRel	true	Nombrado	condenado
+Relation	T0	T8	NoRel	true	Nombrado	alistó
+Relation	T1	T0	NoRel	true	ocupó	Nombrado
+Relation	T1	T11	NoRel	true	ocupó	batalla
+Relation	T1	T13	NoRel	true	ocupó	prisionero
+Relation	T1	T5	NoRel	true	ocupó	condenado
+Relation	T1	T9	NoRel	true	ocupó	estallido
+Relation	T10	T12	NoRel	true	herido	recibió
+Relation	T10	T2	NoRel	true	herido	voló
+Relation	T10	T3	NoRel	true	herido	intento
+Relation	T10	T5	NoRel	true	herido	condenado
+Relation	T10	T8	NoRel	true	herido	alistó
+Relation	T11	T12	NoRel	true	batalla	recibió
+Relation	T11	T13	NoRel	true	batalla	prisionero
+Relation	T11	T6	NoRel	true	batalla	crímenes
+Relation	T11	T8	NoRel	true	batalla	alistó
+Relation	T12	T10	NoRel	true	recibió	herido
+Relation	T12	T2	NoRel	true	recibió	voló
+Relation	T12	T5	NoRel	true	recibió	condenado
+Relation	T12	T6	NoRel	true	recibió	crímenes
+Relation	T13	T0	NoRel	true	prisionero	Nombrado
+Relation	T13	T4	NoRel	true	prisionero	negociar
+Relation	T13	T8	NoRel	true	prisionero	alistó
+Relation	T2	T10	NoRel	true	voló	herido
+Relation	T2	T4	NoRel	true	voló	negociar
+Relation	T2	T6	NoRel	true	voló	crímenes
+Relation	T2	T8	NoRel	true	voló	alistó
+Relation	T3	T1	NoRel	true	intento	ocupó
+Relation	T3	T12	NoRel	true	intento	recibió
+Relation	T3	T2	NoRel	true	intento	voló
+Relation	T3	T4	NoRel	true	intento	negociar
+Relation	T3	T7	NoRel	true	intento	suicidio
+Relation	T4	T10	NoRel	true	negociar	herido
+Relation	T4	T5	NoRel	true	negociar	condenado
+Relation	T4	T6	NoRel	true	negociar	crímenes
+Relation	T4	T7	NoRel	true	negociar	suicidio
+Relation	T4	T8	NoRel	true	negociar	alistó
+Relation	T4	T9	NoRel	true	negociar	estallido
+Relation	T5	T12	NoRel	true	condenado	recibió
+Relation	T5	T2	NoRel	true	condenado	voló
+Relation	T6	T11	NoRel	true	crímenes	batalla
+Relation	T6	T13	NoRel	true	crímenes	prisionero
+Relation	T7	T10	NoRel	true	suicidio	herido
+Relation	T7	T5	NoRel	true	suicidio	condenado
+Relation	T7	T6	NoRel	true	suicidio	crímenes
+Relation	T8	T11	NoRel	true	alistó	batalla
+Relation	T8	T5	NoRel	true	alistó	condenado
+Relation	T9	T1	NoRel	true	estallido	ocupó
+Relation	T9	T2	NoRel	true	estallido	voló
+Relation	T9	T3	NoRel	true	estallido	intento
+Relation	T9	T5	NoRel	true	estallido	condenado
+Relation	T9	T7	NoRel	true	estallido	suicidio
+Relation	T9	T8	NoRel	true	estallido	alistó

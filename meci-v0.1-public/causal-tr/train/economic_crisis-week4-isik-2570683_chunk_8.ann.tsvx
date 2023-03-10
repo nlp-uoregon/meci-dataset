@@ -1,0 +1,58 @@
+Text	Hitler'in kitabının ilk bölümü olan Mein Kampf , Scheubner - Richter ve darbede ölen on beş adama adanmıştır .	Aufbau Vereinigung , Scheubner - Richter'in ölümünden sonra hızla düşüşe geçti ve Rus üyelerinin çoğunun , giderek artan anti - Slavism ve Lebensraum kavramları üzerinde örgütten vazgeçtikleri görülmüştür .	1933'te Nazilerin Almanya'da iktidara gelmesi Scheubner - Richter'in ulusal kahraman olarak saygı gösterilmesine yol açtı .	Scheubner - Richter , NSDAP'ın iktidara yükselmesinden önce öldürülen , Nazi hareketinin şehitleri olarak sayılan ve Naziler için bir terim olan en önemli Blutzeuge'dan ( " kan tanığı " ) biriydi .	Nazi Almanyası'nın dört bir yanındaki şehirlerde çok sayıda sokak , Scheubner - Richter' ismi verilerek yeniden adlandırıldı .
+Event	T0	ölen	EVENT	80
+Event	T1	adanmıştır	EVENT	98
+Event	T2	ölümünden	EVENT	155
+Event	T3	geçti	EVENT	184
+Event	T4	görülmüştür	EVENT	304
+Event	T5	gelmesi	EVENT	356
+Event	T6	açtı	EVENT	435
+Event	T7	yükselmesinden	EVENT	482
+Event	T8	öldürülen	EVENT	502
+Event	T9	adlandırıldı	EVENT	752
+Event	T10	sayılan	EVENT	548
+Relation	T2	T3	CauseEffect	true	ölümünden	geçti
+Relation	T3	T2	EffectCause	true	geçti	ölümünden
+Relation	T3	T4	CauseEffect	true	geçti	görülmüştür
+Relation	T4	T3	EffectCause	true	görülmüştür	geçti
+Relation	T5	T6	CauseEffect	true	gelmesi	açtı
+Relation	T6	T5	EffectCause	true	açtı	gelmesi
+Relation	T0	T2	NoRel	true	ölen	ölümünden
+Relation	T0	T6	NoRel	true	ölen	açtı
+Relation	T1	T10	NoRel	true	adanmıştır	sayılan
+Relation	T1	T3	NoRel	true	adanmıştır	geçti
+Relation	T1	T4	NoRel	true	adanmıştır	görülmüştür
+Relation	T1	T5	NoRel	true	adanmıştır	gelmesi
+Relation	T1	T6	NoRel	true	adanmıştır	açtı
+Relation	T1	T9	NoRel	true	adanmıştır	adlandırıldı
+Relation	T10	T2	NoRel	true	sayılan	ölümünden
+Relation	T10	T3	NoRel	true	sayılan	geçti
+Relation	T10	T6	NoRel	true	sayılan	açtı
+Relation	T10	T7	NoRel	true	sayılan	yükselmesinden
+Relation	T10	T9	NoRel	true	sayılan	adlandırıldı
+Relation	T2	T1	NoRel	true	ölümünden	adanmıştır
+Relation	T2	T10	NoRel	true	ölümünden	sayılan
+Relation	T2	T4	NoRel	true	ölümünden	görülmüştür
+Relation	T2	T5	NoRel	true	ölümünden	gelmesi
+Relation	T2	T6	NoRel	true	ölümünden	açtı
+Relation	T2	T7	NoRel	true	ölümünden	yükselmesinden
+Relation	T2	T8	NoRel	true	ölümünden	öldürülen
+Relation	T3	T1	NoRel	true	geçti	adanmıştır
+Relation	T3	T9	NoRel	true	geçti	adlandırıldı
+Relation	T4	T0	NoRel	true	görülmüştür	ölen
+Relation	T4	T10	NoRel	true	görülmüştür	sayılan
+Relation	T4	T5	NoRel	true	görülmüştür	gelmesi
+Relation	T4	T7	NoRel	true	görülmüştür	yükselmesinden
+Relation	T5	T1	NoRel	true	gelmesi	adanmıştır
+Relation	T5	T4	NoRel	true	gelmesi	görülmüştür
+Relation	T5	T7	NoRel	true	gelmesi	yükselmesinden
+Relation	T6	T3	NoRel	true	açtı	geçti
+Relation	T7	T0	NoRel	true	yükselmesinden	ölen
+Relation	T7	T10	NoRel	true	yükselmesinden	sayılan
+Relation	T8	T10	NoRel	true	öldürülen	sayılan
+Relation	T8	T2	NoRel	true	öldürülen	ölümünden
+Relation	T8	T9	NoRel	true	öldürülen	adlandırıldı
+Relation	T9	T1	NoRel	true	adlandırıldı	adanmıştır
+Relation	T9	T5	NoRel	true	adlandırıldı	gelmesi
+Relation	T9	T6	NoRel	true	adlandırıldı	açtı
+Relation	T9	T7	NoRel	true	adlandırıldı	yükselmesinden
+Relation	T9	T8	NoRel	true	adlandırıldı	öldürülen

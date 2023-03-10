@@ -1,0 +1,57 @@
+Text	All five passengers and two crew members were killed in the accident , and an individual on the ground , standing in a parking lot , sustained serious burns from aviation fuel and remained in a critical condition for a day after the accident .	The apartment building was damaged , and several parked vehicles destroyed .	[ The remains of 15 cowbirds were found at the end of Runway 20L . ]	Upon reaching the accident site , investigators from the NTSB found both engines , the wings and empennage had separated from the fuselage , which had largely been consumed by fire .	It was clear to investigators the aircraft had encountered a bird strike upon take - off .
+Event	T0	killed	EVENT	46
+Event	T1	accident	EVENT	60
+Event	T10	found	EVENT	452
+Event	T11	separated	EVENT	501
+Event	T12	consumed	EVENT	554
+Event	T13	fire	EVENT	566
+Event	T14	strike	EVENT	639
+Event	T15	encountered	EVENT	620
+Event	T16	take - off	EVENT	651
+Event	T2	standing	EVENT	105
+Event	T3	burns	EVENT	151
+Event	T4	accident	EVENT	233
+Event	T5	damaged	EVENT	271
+Event	T6	destroyed	EVENT	309
+Event	T7	found	EVENT	355
+Event	T8	reaching	EVENT	395
+Event	T9	accident	EVENT	408
+Relation	T1	T0	CauseEffect	true	accident	killed
+Relation	T0	T1	EffectCause	true	killed	accident
+Relation	T4	T3	CauseEffect	true	accident	burns
+Relation	T3	T4	EffectCause	true	burns	accident
+Relation	T4	T7	CauseEffect	true	accident	found
+Relation	T7	T4	EffectCause	true	found	accident
+Relation	T4	T5	CauseEffect	true	accident	damaged
+Relation	T5	T4	EffectCause	true	damaged	accident
+Relation	T4	T6	CauseEffect	true	accident	destroyed
+Relation	T6	T4	EffectCause	true	destroyed	accident
+Relation	T9	T11	CauseEffect	true	accident	separated
+Relation	T11	T9	EffectCause	true	separated	accident
+Relation	T11	T12	CauseEffect	true	separated	consumed
+Relation	T12	T11	EffectCause	true	consumed	separated
+Relation	T9	T14	CauseEffect	true	accident	strike
+Relation	T14	T9	EffectCause	true	strike	accident
+Relation	T13	T12	CauseEffect	true	fire	consumed
+Relation	T12	T13	EffectCause	true	consumed	fire
+Relation	T0	T10	NoRel	true	killed	found
+Relation	T0	T4	NoRel	true	killed	accident
+Relation	T1	T2	NoRel	true	accident	standing
+Relation	T10	T3	NoRel	true	found	burns
+Relation	T11	T3	NoRel	true	separated	burns
+Relation	T13	T14	NoRel	true	fire	strike
+Relation	T13	T6	NoRel	true	fire	destroyed
+Relation	T14	T0	NoRel	true	strike	killed
+Relation	T14	T12	NoRel	true	strike	consumed
+Relation	T15	T5	NoRel	true	encountered	damaged
+Relation	T15	T7	NoRel	true	encountered	found
+Relation	T15	T9	NoRel	true	encountered	accident
+Relation	T2	T10	NoRel	true	standing	found
+Relation	T2	T12	NoRel	true	standing	consumed
+Relation	T2	T8	NoRel	true	standing	reaching
+Relation	T3	T13	NoRel	true	burns	fire
+Relation	T5	T11	NoRel	true	damaged	separated
+Relation	T6	T1	NoRel	true	destroyed	accident
+Relation	T6	T14	NoRel	true	destroyed	strike
+Relation	T7	T2	NoRel	true	found	standing
+Relation	T8	T15	NoRel	true	reaching	encountered

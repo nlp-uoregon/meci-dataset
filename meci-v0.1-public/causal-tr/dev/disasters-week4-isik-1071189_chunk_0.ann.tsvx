@@ -1,0 +1,57 @@
+Text	1976 ÇALDIRAN DEPREMI , 24 Kasım 1976 tarihinde yerel saatle 12: 22'de merkez_üssü Van'ın Muradiye ilçesi Çaldıran bucağı olan 7,5 M _ ( s ) büyüklüğündeki deprem .	3840 kişi öldü , 9232 bina hasar gördü .	2000 kilometrekarelik bir alandaki evlerin % 80'i yıkıldı .	Depremin yanı sıra bölgede gece hava sıcaklığının - 17 dereceye kadar düşmesi sonucu donma nedeniyle de ölümler oldu .	Yağmur ve kar yağışları nedeniyle kurtarma ve yardım çalışmaları gecikti .
+Event	T1	deprem	EVENT	156
+Event	T2	öldü	EVENT	175
+Event	T3	gördü	EVENT	198
+Event	T4	yıkıldı	EVENT	256
+Event	T5	Depremin	EVENT	266
+Event	T6	donma	EVENT	351
+Event	T7	oldu	EVENT	378
+Event	T10	gecikti	EVENT	450
+Event	T11	1976 ÇALDIRAN DEPREMI	EVENT	0
+Event	T12	düşmesi	EVENT	336
+Event	T13	yağışları	EVENT	399
+Event	T8	çalışmaları	EVENT	438
+Relation	T6	T7	CauseEffect	true	donma	oldu
+Relation	T7	T6	EffectCause	true	oldu	donma
+Relation	T12	T6	CauseEffect	true	düşmesi	donma
+Relation	T6	T12	EffectCause	true	donma	düşmesi
+Relation	T13	T10	CauseEffect	true	yağışları	gecikti
+Relation	T10	T13	EffectCause	true	gecikti	yağışları
+Relation	T1	T13	NoRel	true	deprem	yağışları
+Relation	T10	T11	NoRel	true	gecikti	1976 ÇALDIRAN DEPREMI
+Relation	T11	T1	NoRel	true	1976 ÇALDIRAN DEPREMI	deprem
+Relation	T11	T4	NoRel	true	1976 ÇALDIRAN DEPREMI	yıkıldı
+Relation	T12	T1	NoRel	true	düşmesi	deprem
+Relation	T12	T4	NoRel	true	düşmesi	yıkıldı
+Relation	T13	T1	NoRel	true	yağışları	deprem
+Relation	T13	T12	NoRel	true	yağışları	düşmesi
+Relation	T13	T2	NoRel	true	yağışları	öldü
+Relation	T2	T1	NoRel	true	öldü	deprem
+Relation	T2	T12	NoRel	true	öldü	düşmesi
+Relation	T2	T3	NoRel	true	öldü	gördü
+Relation	T2	T5	NoRel	true	öldü	Depremin
+Relation	T2	T6	NoRel	true	öldü	donma
+Relation	T2	T7	NoRel	true	öldü	oldu
+Relation	T3	T13	NoRel	true	gördü	yağışları
+Relation	T3	T2	NoRel	true	gördü	öldü
+Relation	T3	T7	NoRel	true	gördü	oldu
+Relation	T3	T8	NoRel	true	gördü	çalışmaları
+Relation	T4	T1	NoRel	true	yıkıldı	deprem
+Relation	T5	T10	NoRel	true	Depremin	gecikti
+Relation	T5	T11	NoRel	true	Depremin	1976 ÇALDIRAN DEPREMI
+Relation	T5	T3	NoRel	true	Depremin	gördü
+Relation	T5	T8	NoRel	true	Depremin	çalışmaları
+Relation	T6	T1	NoRel	true	donma	deprem
+Relation	T6	T10	NoRel	true	donma	gecikti
+Relation	T6	T13	NoRel	true	donma	yağışları
+Relation	T6	T2	NoRel	true	donma	öldü
+Relation	T7	T11	NoRel	true	oldu	1976 ÇALDIRAN DEPREMI
+Relation	T7	T2	NoRel	true	oldu	öldü
+Relation	T7	T3	NoRel	true	oldu	gördü
+Relation	T7	T4	NoRel	true	oldu	yıkıldı
+Relation	T8	T13	NoRel	true	çalışmaları	yağışları
+Relation	T8	T2	NoRel	true	çalışmaları	öldü
+Relation	T8	T3	NoRel	true	çalışmaları	gördü
+Relation	T8	T4	NoRel	true	çalışmaları	yıkıldı
+Relation	T8	T6	NoRel	true	çalışmaları	donma
+Relation	T8	T7	NoRel	true	çalışmaları	oldu

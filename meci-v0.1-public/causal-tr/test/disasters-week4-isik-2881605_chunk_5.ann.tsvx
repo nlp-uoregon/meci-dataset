@@ -1,0 +1,12 @@
+Text	Ancak hasara rağmen hastane açık kalmaya devam etti .	En çok hasarı ise , şehrin merkezindeki eski binaları aldı .	Sisak ve çevre köylerde 700 ila 1.000 evin hasar gördüğü tahmin edilmektedir .	Merkez_üssünün bulunduğu Strašnik ve yakınlardaki Sibić köyünde neredeyse tüm evler hasar gördü .	Köy nüfusunun bir kısmı tahliye edildi ve çadırlar kuruldu .
+Event	T0	etti	EVENT	47
+Event	T1	aldı	EVENT	108
+Event	T2	gördü	EVENT	284
+Event	T3	edildi	EVENT	324
+Event	T4	kuruldu	EVENT	343
+Relation	T2	T3	CauseEffect	true	gördü	edildi
+Relation	T3	T2	EffectCause	true	edildi	gördü
+Relation	T2	T4	CauseEffect	true	gördü	kuruldu
+Relation	T4	T2	EffectCause	true	kuruldu	gördü
+Relation	T0	T2	NoRel	true	etti	gördü
+Relation	T2	T1	NoRel	true	gördü	aldı

@@ -1,0 +1,30 @@
+Text	[ MiG - 15 similar to the Bulgarian jets that shot down El Al Flight 402 ]	The accident was investigated and the following probable cause statement was issued :	The aircraft sustained a hit or hits which caused loss of pressurization and a fire in the heater compartment .	The aircraft broke up in mid-air due to explosion caused by bullets hitting the right wing and probably the left wing together with a projectile or projectiles of large calibre in the rear end of the fuselage .	Why the plane veered off its intended route was never established with highly conflicting opinions from Israeli and Bulgarian investigators .
+Event	T0	accident	EVENT	79
+Event	T1	investigated	EVENT	92
+Event	T2	statement	EVENT	138
+Event	T3	issued	EVENT	152
+Event	T4	sustained	EVENT	174
+Event	T5	hit	EVENT	186
+Event	T6	loss	EVENT	211
+Event	T7	fire	EVENT	240
+Event	T8	caused	EVENT	323
+Event	T10	established	EVENT	538
+Event	T11	broke up	EVENT	286
+Event	T9	bullets hitting	EVENT	333
+Relation	T5	T6	CauseEffect	true	hit	loss
+Relation	T6	T5	EffectCause	true	loss	hit
+Relation	T6	T0	CauseEffect	true	loss	accident
+Relation	T0	T6	EffectCause	true	accident	loss
+Relation	T9	T11	CauseEffect	true	bullets hitting	broke up
+Relation	T11	T9	EffectCause	true	broke up	bullets hitting
+Relation	T0	T9	NoRel	true	accident	bullets hitting
+Relation	T1	T5	NoRel	true	investigated	hit
+Relation	T11	T4	NoRel	true	broke up	sustained
+Relation	T11	T6	NoRel	true	broke up	loss
+Relation	T2	T11	NoRel	true	statement	broke up
+Relation	T2	T3	NoRel	true	statement	issued
+Relation	T3	T10	NoRel	true	issued	established
+Relation	T3	T7	NoRel	true	issued	fire
+Relation	T4	T5	NoRel	true	sustained	hit
+Relation	T4	T7	NoRel	true	sustained	fire
+Relation	T8	T2	NoRel	true	caused	statement

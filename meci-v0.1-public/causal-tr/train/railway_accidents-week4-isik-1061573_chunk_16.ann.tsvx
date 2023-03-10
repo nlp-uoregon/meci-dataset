@@ -1,0 +1,174 @@
+Text	- Korat hemzemin geçit felaketi — En az kırk kişi öldü ve otuz dokuz kişi yaralandı , olay 1967 yılı Temmuz ayında Nakhon Ratchasima’da aşırı yüklü bir otobüs ile bir ekspres treninin çarpışması sonucu meydana geldi .	- Takhli hemzemin geçit felaketi — Bir palet Lopburi - Pitsanulok yolcu treninin bir tarafına çarptı , en az yirmi yedi kişi öldü , Mayıs 1988 .	- Keshi hemzemin geçit felaketi – En az kırk kişi öldü , olay 19 Eylül 1998 tarihinde Aşgabat eteklerinde bir otobüs ile bir dizel lokomotif trenin çarpışmasıyla meydana geldi .	- Leicester ve Swannington Demiryolu 1832 tren ata ve iki tekerlekli yük arabasına vurdu ; şimdiye kadarki ilk hemzemin geçidindeki kazalardan biri .	- Salinas hemzemin geçit felaketi — Kaliforniya’da bir yerel otobüs , bir yük treniyle çarpışır ; en az yirmi sekiz ölü ve otuz beş yaralı 17 Eylül , 1963.
+Event	T0	felaketi	EVENT	23
+Event	T1	öldü	EVENT	50
+Event	T2	yaralandı	EVENT	74
+Event	T3	olay	EVENT	86
+Event	T4	geldi	EVENT	210
+Event	T5	felaketi	EVENT	242
+Event	T6	çarptı	EVENT	312
+Event	T7	öldü	EVENT	343
+Event	T8	felaketi	EVENT	386
+Event	T9	öldü	EVENT	413
+Event	T10	olay	EVENT	420
+Event	T11	geldi	EVENT	533
+Event	T12	vurdu	EVENT	624
+Event	T13	kazalardan	EVENT	673
+Event	T14	felaketi	EVENT	716
+Event	T15	çarpışır	EVENT	778
+Event	T16	ölü	EVENT	807
+Event	T17	yüklü	EVENT	142
+Event	T18	çarpışması	EVENT	184
+Event	T19	çarpışmasıyla	EVENT	511
+Event	T20	yaralı	EVENT	823
+Relation	T17	T18	CauseEffect	true	yüklü	çarpışması
+Relation	T18	T17	EffectCause	true	çarpışması	yüklü
+Relation	T18	T0	CauseEffect	true	çarpışması	felaketi
+Relation	T0	T18	EffectCause	true	felaketi	çarpışması
+Relation	T0	T1	CauseEffect	true	felaketi	öldü
+Relation	T1	T0	EffectCause	true	öldü	felaketi
+Relation	T0	T2	CauseEffect	true	felaketi	yaralandı
+Relation	T2	T0	EffectCause	true	yaralandı	felaketi
+Relation	T6	T5	CauseEffect	true	çarptı	felaketi
+Relation	T5	T6	EffectCause	true	felaketi	çarptı
+Relation	T5	T7	CauseEffect	true	felaketi	öldü
+Relation	T7	T5	EffectCause	true	öldü	felaketi
+Relation	T19	T8	CauseEffect	true	çarpışmasıyla	felaketi
+Relation	T8	T19	EffectCause	true	felaketi	çarpışmasıyla
+Relation	T8	T9	CauseEffect	true	felaketi	öldü
+Relation	T9	T8	EffectCause	true	öldü	felaketi
+Relation	T12	T13	CauseEffect	true	vurdu	kazalardan
+Relation	T13	T12	EffectCause	true	kazalardan	vurdu
+Relation	T15	T14	CauseEffect	true	çarpışır	felaketi
+Relation	T14	T15	EffectCause	true	felaketi	çarpışır
+Relation	T14	T16	CauseEffect	true	felaketi	ölü
+Relation	T16	T14	EffectCause	true	ölü	felaketi
+Relation	T14	T20	CauseEffect	true	felaketi	yaralı
+Relation	T20	T14	EffectCause	true	yaralı	felaketi
+Relation	T0	T13	NoRel	true	felaketi	kazalardan
+Relation	T0	T3	NoRel	true	felaketi	olay
+Relation	T0	T4	NoRel	true	felaketi	geldi
+Relation	T1	T11	NoRel	true	öldü	geldi
+Relation	T1	T16	NoRel	true	öldü	ölü
+Relation	T1	T4	NoRel	true	öldü	geldi
+Relation	T10	T13	NoRel	true	olay	kazalardan
+Relation	T10	T15	NoRel	true	olay	çarpışır
+Relation	T10	T16	NoRel	true	olay	ölü
+Relation	T10	T17	NoRel	true	olay	yüklü
+Relation	T10	T6	NoRel	true	olay	çarptı
+Relation	T10	T7	NoRel	true	olay	öldü
+Relation	T10	T9	NoRel	true	olay	öldü
+Relation	T11	T10	NoRel	true	geldi	olay
+Relation	T11	T12	NoRel	true	geldi	vurdu
+Relation	T11	T15	NoRel	true	geldi	çarpışır
+Relation	T11	T17	NoRel	true	geldi	yüklü
+Relation	T11	T18	NoRel	true	geldi	çarpışması
+Relation	T11	T4	NoRel	true	geldi	geldi
+Relation	T11	T5	NoRel	true	geldi	felaketi
+Relation	T11	T8	NoRel	true	geldi	felaketi
+Relation	T12	T1	NoRel	true	vurdu	öldü
+Relation	T12	T11	NoRel	true	vurdu	geldi
+Relation	T12	T15	NoRel	true	vurdu	çarpışır
+Relation	T12	T20	NoRel	true	vurdu	yaralı
+Relation	T12	T6	NoRel	true	vurdu	çarptı
+Relation	T13	T15	NoRel	true	kazalardan	çarpışır
+Relation	T13	T18	NoRel	true	kazalardan	çarpışması
+Relation	T13	T19	NoRel	true	kazalardan	çarpışmasıyla
+Relation	T13	T20	NoRel	true	kazalardan	yaralı
+Relation	T13	T7	NoRel	true	kazalardan	öldü
+Relation	T13	T9	NoRel	true	kazalardan	öldü
+Relation	T14	T10	NoRel	true	felaketi	olay
+Relation	T14	T12	NoRel	true	felaketi	vurdu
+Relation	T14	T17	NoRel	true	felaketi	yüklü
+Relation	T14	T18	NoRel	true	felaketi	çarpışması
+Relation	T14	T19	NoRel	true	felaketi	çarpışmasıyla
+Relation	T14	T6	NoRel	true	felaketi	çarptı
+Relation	T14	T8	NoRel	true	felaketi	felaketi
+Relation	T15	T0	NoRel	true	çarpışır	felaketi
+Relation	T15	T10	NoRel	true	çarpışır	olay
+Relation	T15	T13	NoRel	true	çarpışır	kazalardan
+Relation	T15	T17	NoRel	true	çarpışır	yüklü
+Relation	T15	T2	NoRel	true	çarpışır	yaralandı
+Relation	T15	T5	NoRel	true	çarpışır	felaketi
+Relation	T15	T6	NoRel	true	çarpışır	çarptı
+Relation	T15	T7	NoRel	true	çarpışır	öldü
+Relation	T15	T9	NoRel	true	çarpışır	öldü
+Relation	T16	T1	NoRel	true	ölü	öldü
+Relation	T16	T10	NoRel	true	ölü	olay
+Relation	T16	T11	NoRel	true	ölü	geldi
+Relation	T16	T12	NoRel	true	ölü	vurdu
+Relation	T16	T15	NoRel	true	ölü	çarpışır
+Relation	T16	T4	NoRel	true	ölü	geldi
+Relation	T16	T5	NoRel	true	ölü	felaketi
+Relation	T16	T7	NoRel	true	ölü	öldü
+Relation	T17	T1	NoRel	true	yüklü	öldü
+Relation	T17	T11	NoRel	true	yüklü	geldi
+Relation	T17	T13	NoRel	true	yüklü	kazalardan
+Relation	T17	T15	NoRel	true	yüklü	çarpışır
+Relation	T17	T16	NoRel	true	yüklü	ölü
+Relation	T17	T19	NoRel	true	yüklü	çarpışmasıyla
+Relation	T17	T5	NoRel	true	yüklü	felaketi
+Relation	T17	T7	NoRel	true	yüklü	öldü
+Relation	T18	T11	NoRel	true	çarpışması	geldi
+Relation	T18	T19	NoRel	true	çarpışması	çarpışmasıyla
+Relation	T18	T20	NoRel	true	çarpışması	yaralı
+Relation	T18	T7	NoRel	true	çarpışması	öldü
+Relation	T18	T8	NoRel	true	çarpışması	felaketi
+Relation	T18	T9	NoRel	true	çarpışması	öldü
+Relation	T19	T11	NoRel	true	çarpışmasıyla	geldi
+Relation	T19	T14	NoRel	true	çarpışmasıyla	felaketi
+Relation	T19	T16	NoRel	true	çarpışmasıyla	ölü
+Relation	T19	T6	NoRel	true	çarpışmasıyla	çarptı
+Relation	T2	T13	NoRel	true	yaralandı	kazalardan
+Relation	T2	T16	NoRel	true	yaralandı	ölü
+Relation	T2	T17	NoRel	true	yaralandı	yüklü
+Relation	T2	T7	NoRel	true	yaralandı	öldü
+Relation	T20	T11	NoRel	true	yaralı	geldi
+Relation	T20	T16	NoRel	true	yaralı	ölü
+Relation	T20	T18	NoRel	true	yaralı	çarpışması
+Relation	T20	T19	NoRel	true	yaralı	çarpışmasıyla
+Relation	T20	T7	NoRel	true	yaralı	öldü
+Relation	T20	T8	NoRel	true	yaralı	felaketi
+Relation	T3	T11	NoRel	true	olay	geldi
+Relation	T3	T13	NoRel	true	olay	kazalardan
+Relation	T3	T14	NoRel	true	olay	felaketi
+Relation	T3	T15	NoRel	true	olay	çarpışır
+Relation	T3	T2	NoRel	true	olay	yaralandı
+Relation	T3	T6	NoRel	true	olay	çarptı
+Relation	T3	T7	NoRel	true	olay	öldü
+Relation	T3	T8	NoRel	true	olay	felaketi
+Relation	T3	T9	NoRel	true	olay	öldü
+Relation	T4	T0	NoRel	true	geldi	felaketi
+Relation	T4	T1	NoRel	true	geldi	öldü
+Relation	T4	T14	NoRel	true	geldi	felaketi
+Relation	T4	T16	NoRel	true	geldi	ölü
+Relation	T4	T3	NoRel	true	geldi	olay
+Relation	T4	T5	NoRel	true	geldi	felaketi
+Relation	T4	T9	NoRel	true	geldi	öldü
+Relation	T5	T14	NoRel	true	felaketi	felaketi
+Relation	T5	T16	NoRel	true	felaketi	ölü
+Relation	T5	T19	NoRel	true	felaketi	çarpışmasıyla
+Relation	T5	T20	NoRel	true	felaketi	yaralı
+Relation	T5	T3	NoRel	true	felaketi	olay
+Relation	T5	T8	NoRel	true	felaketi	felaketi
+Relation	T5	T9	NoRel	true	felaketi	öldü
+Relation	T6	T1	NoRel	true	çarptı	öldü
+Relation	T6	T11	NoRel	true	çarptı	geldi
+Relation	T6	T17	NoRel	true	çarptı	yüklü
+Relation	T6	T19	NoRel	true	çarptı	çarpışmasıyla
+Relation	T6	T20	NoRel	true	çarptı	yaralı
+Relation	T6	T9	NoRel	true	çarptı	öldü
+Relation	T7	T0	NoRel	true	öldü	felaketi
+Relation	T7	T14	NoRel	true	öldü	felaketi
+Relation	T7	T15	NoRel	true	öldü	çarpışır
+Relation	T7	T16	NoRel	true	öldü	ölü
+Relation	T7	T17	NoRel	true	öldü	yüklü
+Relation	T8	T10	NoRel	true	felaketi	olay
+Relation	T8	T11	NoRel	true	felaketi	geldi
+Relation	T8	T13	NoRel	true	felaketi	kazalardan
+Relation	T8	T14	NoRel	true	felaketi	felaketi
+Relation	T8	T15	NoRel	true	felaketi	çarpışır
+Relation	T8	T2	NoRel	true	felaketi	yaralandı
+Relation	T8	T6	NoRel	true	felaketi	çarptı
+Relation	T8	T7	NoRel	true	felaketi	öldü
+Relation	T9	T15	NoRel	true	öldü	çarpışır
+Relation	T9	T7	NoRel	true	öldü	öldü

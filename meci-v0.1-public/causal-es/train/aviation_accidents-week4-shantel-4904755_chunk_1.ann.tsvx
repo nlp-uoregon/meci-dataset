@@ -1,0 +1,80 @@
+Text	A bordo había 36 pasajeros , así como 4 miembros de la tripulación y un asistente de vuelo .	A las 01:11 ( UTC ) , cuando iban en la ruta de vuelo , la tripulación despegó del aeropuerto de Chita , la primera escala .	El vuelo se realizó en condiciones climáticas difíciles .	Antes del inicio del descenso a las 03:32 , la tripulación escuchó la información del ATIS del aeródromo de Blagovéshchensk , en la segunda escala .	La aproximación de aterrizaje se realizó a alrededor de las 14:00 ( hora local ) en condiciones de actividad de tormenta , con un rumbo magnético de 360° utilizando un sistema de rumbo planeo .
+Event	T0	vuelo	EVENT	141
+Event	T1	despegó	EVENT	164
+Event	T2	escala	EVENT	209
+Event	T3	vuelo	EVENT	221
+Event	T4	realizó	EVENT	230
+Event	T5	inicio	EVENT	286
+Event	T6	descenso	EVENT	297
+Event	T7	escuchó	EVENT	335
+Event	T8	información	EVENT	346
+Event	T9	aproximación	EVENT	428
+Event	T10	aterrizaje	EVENT	444
+Event	T11	realizó	EVENT	458
+Event	T12	actividad	EVENT	524
+Event	T13	condiciones	EVENT	241
+Relation	T0	T10	NoRel	true	vuelo	aterrizaje
+Relation	T0	T11	NoRel	true	vuelo	realizó
+Relation	T0	T13	NoRel	true	vuelo	condiciones
+Relation	T0	T2	NoRel	true	vuelo	escala
+Relation	T0	T5	NoRel	true	vuelo	inicio
+Relation	T0	T8	NoRel	true	vuelo	información
+Relation	T0	T9	NoRel	true	vuelo	aproximación
+Relation	T1	T0	NoRel	true	despegó	vuelo
+Relation	T1	T10	NoRel	true	despegó	aterrizaje
+Relation	T1	T11	NoRel	true	despegó	realizó
+Relation	T1	T2	NoRel	true	despegó	escala
+Relation	T1	T3	NoRel	true	despegó	vuelo
+Relation	T1	T4	NoRel	true	despegó	realizó
+Relation	T1	T6	NoRel	true	despegó	descenso
+Relation	T1	T9	NoRel	true	despegó	aproximación
+Relation	T10	T1	NoRel	true	aterrizaje	despegó
+Relation	T10	T13	NoRel	true	aterrizaje	condiciones
+Relation	T10	T5	NoRel	true	aterrizaje	inicio
+Relation	T10	T9	NoRel	true	aterrizaje	aproximación
+Relation	T11	T0	NoRel	true	realizó	vuelo
+Relation	T11	T13	NoRel	true	realizó	condiciones
+Relation	T11	T8	NoRel	true	realizó	información
+Relation	T12	T10	NoRel	true	actividad	aterrizaje
+Relation	T12	T11	NoRel	true	actividad	realizó
+Relation	T12	T13	NoRel	true	actividad	condiciones
+Relation	T12	T3	NoRel	true	actividad	vuelo
+Relation	T12	T5	NoRel	true	actividad	inicio
+Relation	T12	T6	NoRel	true	actividad	descenso
+Relation	T12	T8	NoRel	true	actividad	información
+Relation	T13	T0	NoRel	true	condiciones	vuelo
+Relation	T13	T2	NoRel	true	condiciones	escala
+Relation	T13	T5	NoRel	true	condiciones	inicio
+Relation	T13	T6	NoRel	true	condiciones	descenso
+Relation	T13	T7	NoRel	true	condiciones	escuchó
+Relation	T13	T8	NoRel	true	condiciones	información
+Relation	T2	T1	NoRel	true	escala	despegó
+Relation	T2	T4	NoRel	true	escala	realizó
+Relation	T2	T6	NoRel	true	escala	descenso
+Relation	T3	T10	NoRel	true	vuelo	aterrizaje
+Relation	T3	T12	NoRel	true	vuelo	actividad
+Relation	T3	T7	NoRel	true	vuelo	escuchó
+Relation	T3	T8	NoRel	true	vuelo	información
+Relation	T4	T13	NoRel	true	realizó	condiciones
+Relation	T5	T1	NoRel	true	inicio	despegó
+Relation	T5	T11	NoRel	true	inicio	realizó
+Relation	T5	T2	NoRel	true	inicio	escala
+Relation	T5	T6	NoRel	true	inicio	descenso
+Relation	T6	T1	NoRel	true	descenso	despegó
+Relation	T6	T11	NoRel	true	descenso	realizó
+Relation	T6	T13	NoRel	true	descenso	condiciones
+Relation	T6	T3	NoRel	true	descenso	vuelo
+Relation	T6	T5	NoRel	true	descenso	inicio
+Relation	T6	T9	NoRel	true	descenso	aproximación
+Relation	T7	T6	NoRel	true	escuchó	descenso
+Relation	T7	T9	NoRel	true	escuchó	aproximación
+Relation	T8	T0	NoRel	true	información	vuelo
+Relation	T8	T2	NoRel	true	información	escala
+Relation	T8	T3	NoRel	true	información	vuelo
+Relation	T8	T4	NoRel	true	información	realizó
+Relation	T8	T6	NoRel	true	información	descenso
+Relation	T8	T9	NoRel	true	información	aproximación
+Relation	T9	T1	NoRel	true	aproximación	despegó
+Relation	T9	T11	NoRel	true	aproximación	realizó
+Relation	T9	T3	NoRel	true	aproximación	vuelo
+Relation	T9	T7	NoRel	true	aproximación	escuchó

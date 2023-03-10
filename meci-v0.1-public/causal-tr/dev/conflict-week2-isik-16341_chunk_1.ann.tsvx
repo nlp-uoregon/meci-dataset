@@ -1,0 +1,60 @@
+Text	İlk saldırı , uçakta bulunan 92 kişinin tamamının ve saldırının etkilediği bölgedeki 1000'den fazla kişinin ölmesiyle sonuçlandı .	17 dakika sonrasında , saat 9.03'de , Ticaret Merkezi'nin güney kulesine United Airlines'ın 175 sefer sayılı uçuşu çarptı .	İkinci saldırı , uçaktaki 65 kişinin tamamının ve etkilenen bölgede yer alan tahmini 1000'den fazla kişinin ölmesiyle sonuçlandı .	İki saat içinde 110 katlı her iki bina da çökerken 7 Dünya Ticaret Merkezi'nin de arasında bulunduğu çevre yapıların bazısı yıkıldı , bazılarıysa hasar gördü .	Dulles Uluslararası Havalimanı'ndan kalkan üçüncü uçak , American Airlines'ın 77 sefer sayılı uçuşu , Ohio üzerindeyken kaçırıldı .
+Event	T0	saldırı	EVENT	4
+Event	T1	etkilediği	EVENT	64
+Event	T10	uçuşu	EVENT	640
+Event	T11	kaçırıldı	EVENT	666
+Event	T13	ölmesiyle	EVENT	108
+Event	T14	ölmesiyle	EVENT	363
+Event	T2	uçuşu	EVENT	240
+Event	T3	çarptı	EVENT	246
+Event	T4	saldırı	EVENT	262
+Event	T5	etkilenen	EVENT	305
+Event	T7	çökerken	EVENT	428
+Event	T8	yıkıldı	EVENT	510
+Relation	T3	T1	CauseEffect	true	çarptı	etkilediği
+Relation	T1	T3	EffectCause	true	etkilediği	çarptı
+Relation	T3	T13	CauseEffect	true	çarptı	ölmesiyle
+Relation	T13	T3	EffectCause	true	ölmesiyle	çarptı
+Relation	T7	T8	CauseEffect	true	çökerken	yıkıldı
+Relation	T8	T7	EffectCause	true	yıkıldı	çökerken
+Relation	T7	T13	CauseEffect	true	çökerken	ölmesiyle
+Relation	T13	T7	EffectCause	true	ölmesiyle	çökerken
+Relation	T3	T7	CauseEffect	true	çarptı	çökerken
+Relation	T7	T3	EffectCause	true	çökerken	çarptı
+Relation	T0	T10	NoRel	true	saldırı	uçuşu
+Relation	T0	T5	NoRel	true	saldırı	etkilenen
+Relation	T0	T8	NoRel	true	saldırı	yıkıldı
+Relation	T1	T10	NoRel	true	etkilediği	uçuşu
+Relation	T1	T11	NoRel	true	etkilediği	kaçırıldı
+Relation	T1	T5	NoRel	true	etkilediği	etkilenen
+Relation	T1	T7	NoRel	true	etkilediği	çökerken
+Relation	T10	T13	NoRel	true	uçuşu	ölmesiyle
+Relation	T10	T14	NoRel	true	uçuşu	ölmesiyle
+Relation	T10	T2	NoRel	true	uçuşu	uçuşu
+Relation	T10	T7	NoRel	true	uçuşu	çökerken
+Relation	T11	T5	NoRel	true	kaçırıldı	etkilenen
+Relation	T13	T1	NoRel	true	ölmesiyle	etkilediği
+Relation	T13	T10	NoRel	true	ölmesiyle	uçuşu
+Relation	T14	T10	NoRel	true	ölmesiyle	uçuşu
+Relation	T14	T7	NoRel	true	ölmesiyle	çökerken
+Relation	T14	T8	NoRel	true	ölmesiyle	yıkıldı
+Relation	T2	T0	NoRel	true	uçuşu	saldırı
+Relation	T2	T13	NoRel	true	uçuşu	ölmesiyle
+Relation	T2	T7	NoRel	true	uçuşu	çökerken
+Relation	T2	T8	NoRel	true	uçuşu	yıkıldı
+Relation	T3	T8	NoRel	true	çarptı	yıkıldı
+Relation	T4	T10	NoRel	true	saldırı	uçuşu
+Relation	T4	T11	NoRel	true	saldırı	kaçırıldı
+Relation	T4	T3	NoRel	true	saldırı	çarptı
+Relation	T4	T5	NoRel	true	saldırı	etkilenen
+Relation	T4	T8	NoRel	true	saldırı	yıkıldı
+Relation	T5	T11	NoRel	true	etkilenen	kaçırıldı
+Relation	T5	T3	NoRel	true	etkilenen	çarptı
+Relation	T5	T4	NoRel	true	etkilenen	saldırı
+Relation	T7	T1	NoRel	true	çökerken	etkilediği
+Relation	T7	T11	NoRel	true	çökerken	kaçırıldı
+Relation	T7	T14	NoRel	true	çökerken	ölmesiyle
+Relation	T8	T0	NoRel	true	yıkıldı	saldırı
+Relation	T8	T13	NoRel	true	yıkıldı	ölmesiyle
+Relation	T8	T2	NoRel	true	yıkıldı	uçuşu
+Relation	T8	T4	NoRel	true	yıkıldı	saldırı

@@ -1,0 +1,126 @@
+Text	El ACCIDENTE FERROVIARIO DE SANTIAGO DE COMPOSTELA o ACCIDENTE DE ANGROIS se produjo el miércoles 24 de julio de 2013 cuando un tren Alvia , que viajaba de Madrid a Ferrol , descarriló en la curva A Grandeira de Angrois , a unos tres kilómetros de la estación de Santiago de Compostela .	De las 224 personas que viajaban a bordo — 218 pasajeros y seis tripulantes — , 144 resultaron heridas y 80 fallecieron .	El tren viajaba a 191 km/h cuando entró en la curva del accidente , duplicando la velocidad máxima de 80 km/h .	Cuando el maquinista se percató de la situación , accionó el freno de emergencia .	El accidente fue grabado por una cámara de seguridad que muestra los trece vehículos descarrilando y cuatro dándose la vuelta .
+Event	T0	ACCIDENTE	EVENT	3
+Event	T1	ACCIDENTE	EVENT	53
+Event	T2	produjo	EVENT	77
+Event	T3	descarriló	EVENT	174
+Event	T4	curva	EVENT	191
+Event	T5	heridas	EVENT	383
+Event	T6	fallecieron	EVENT	396
+Event	T7	viajaba	EVENT	418
+Event	T8	curva	EVENT	456
+Event	T9	accidente	EVENT	466
+Event	T10	duplicando	EVENT	478
+Event	T11	percató	EVENT	546
+Event	T12	situación	EVENT	560
+Event	T13	accionó	EVENT	572
+Event	T14	accidente	EVENT	608
+Event	T15	grabado	EVENT	622
+Event	T16	muestra	EVENT	662
+Event	T17	descarrilando	EVENT	690
+Relation	T3	T0	CauseEffect	true	descarriló	ACCIDENTE
+Relation	T0	T3	EffectCause	true	ACCIDENTE	descarriló
+Relation	T0	T5	CauseEffect	true	ACCIDENTE	heridas
+Relation	T5	T0	EffectCause	true	heridas	ACCIDENTE
+Relation	T0	T6	CauseEffect	true	ACCIDENTE	fallecieron
+Relation	T6	T0	EffectCause	true	fallecieron	ACCIDENTE
+Relation	T11	T13	CauseEffect	true	percató	accionó
+Relation	T13	T11	EffectCause	true	accionó	percató
+Relation	T0	T11	NoRel	true	ACCIDENTE	percató
+Relation	T0	T14	NoRel	true	ACCIDENTE	accidente
+Relation	T0	T15	NoRel	true	ACCIDENTE	grabado
+Relation	T0	T17	NoRel	true	ACCIDENTE	descarrilando
+Relation	T0	T2	NoRel	true	ACCIDENTE	produjo
+Relation	T0	T8	NoRel	true	ACCIDENTE	curva
+Relation	T1	T2	NoRel	true	ACCIDENTE	produjo
+Relation	T1	T3	NoRel	true	ACCIDENTE	descarriló
+Relation	T10	T11	NoRel	true	duplicando	percató
+Relation	T10	T13	NoRel	true	duplicando	accionó
+Relation	T10	T16	NoRel	true	duplicando	muestra
+Relation	T10	T2	NoRel	true	duplicando	produjo
+Relation	T10	T4	NoRel	true	duplicando	curva
+Relation	T10	T8	NoRel	true	duplicando	curva
+Relation	T10	T9	NoRel	true	duplicando	accidente
+Relation	T11	T1	NoRel	true	percató	ACCIDENTE
+Relation	T11	T10	NoRel	true	percató	duplicando
+Relation	T11	T12	NoRel	true	percató	situación
+Relation	T11	T16	NoRel	true	percató	muestra
+Relation	T11	T7	NoRel	true	percató	viajaba
+Relation	T12	T10	NoRel	true	situación	duplicando
+Relation	T12	T11	NoRel	true	situación	percató
+Relation	T12	T16	NoRel	true	situación	muestra
+Relation	T12	T17	NoRel	true	situación	descarrilando
+Relation	T12	T2	NoRel	true	situación	produjo
+Relation	T12	T3	NoRel	true	situación	descarriló
+Relation	T12	T5	NoRel	true	situación	heridas
+Relation	T12	T8	NoRel	true	situación	curva
+Relation	T12	T9	NoRel	true	situación	accidente
+Relation	T13	T10	NoRel	true	accionó	duplicando
+Relation	T13	T15	NoRel	true	accionó	grabado
+Relation	T13	T17	NoRel	true	accionó	descarrilando
+Relation	T13	T4	NoRel	true	accionó	curva
+Relation	T13	T7	NoRel	true	accionó	viajaba
+Relation	T14	T0	NoRel	true	accidente	ACCIDENTE
+Relation	T14	T1	NoRel	true	accidente	ACCIDENTE
+Relation	T14	T10	NoRel	true	accidente	duplicando
+Relation	T14	T12	NoRel	true	accidente	situación
+Relation	T14	T16	NoRel	true	accidente	muestra
+Relation	T14	T2	NoRel	true	accidente	produjo
+Relation	T15	T0	NoRel	true	grabado	ACCIDENTE
+Relation	T15	T1	NoRel	true	grabado	ACCIDENTE
+Relation	T15	T12	NoRel	true	grabado	situación
+Relation	T15	T13	NoRel	true	grabado	accionó
+Relation	T15	T14	NoRel	true	grabado	accidente
+Relation	T15	T4	NoRel	true	grabado	curva
+Relation	T15	T8	NoRel	true	grabado	curva
+Relation	T15	T9	NoRel	true	grabado	accidente
+Relation	T16	T1	NoRel	true	muestra	ACCIDENTE
+Relation	T16	T10	NoRel	true	muestra	duplicando
+Relation	T16	T12	NoRel	true	muestra	situación
+Relation	T16	T13	NoRel	true	muestra	accionó
+Relation	T16	T17	NoRel	true	muestra	descarrilando
+Relation	T16	T3	NoRel	true	muestra	descarriló
+Relation	T16	T5	NoRel	true	muestra	heridas
+Relation	T16	T6	NoRel	true	muestra	fallecieron
+Relation	T17	T1	NoRel	true	descarrilando	ACCIDENTE
+Relation	T17	T11	NoRel	true	descarrilando	percató
+Relation	T17	T15	NoRel	true	descarrilando	grabado
+Relation	T17	T16	NoRel	true	descarrilando	muestra
+Relation	T2	T15	NoRel	true	produjo	grabado
+Relation	T3	T13	NoRel	true	descarriló	accionó
+Relation	T3	T15	NoRel	true	descarriló	grabado
+Relation	T3	T16	NoRel	true	descarriló	muestra
+Relation	T3	T2	NoRel	true	descarriló	produjo
+Relation	T3	T4	NoRel	true	descarriló	curva
+Relation	T3	T6	NoRel	true	descarriló	fallecieron
+Relation	T3	T7	NoRel	true	descarriló	viajaba
+Relation	T3	T9	NoRel	true	descarriló	accidente
+Relation	T4	T10	NoRel	true	curva	duplicando
+Relation	T4	T14	NoRel	true	curva	accidente
+Relation	T4	T15	NoRel	true	curva	grabado
+Relation	T4	T17	NoRel	true	curva	descarrilando
+Relation	T5	T10	NoRel	true	heridas	duplicando
+Relation	T5	T11	NoRel	true	heridas	percató
+Relation	T5	T17	NoRel	true	heridas	descarrilando
+Relation	T5	T6	NoRel	true	heridas	fallecieron
+Relation	T6	T12	NoRel	true	fallecieron	situación
+Relation	T6	T7	NoRel	true	fallecieron	viajaba
+Relation	T6	T9	NoRel	true	fallecieron	accidente
+Relation	T7	T0	NoRel	true	viajaba	ACCIDENTE
+Relation	T7	T14	NoRel	true	viajaba	accidente
+Relation	T7	T3	NoRel	true	viajaba	descarriló
+Relation	T7	T4	NoRel	true	viajaba	curva
+Relation	T7	T8	NoRel	true	viajaba	curva
+Relation	T8	T0	NoRel	true	curva	ACCIDENTE
+Relation	T8	T1	NoRel	true	curva	ACCIDENTE
+Relation	T8	T12	NoRel	true	curva	situación
+Relation	T8	T17	NoRel	true	curva	descarrilando
+Relation	T8	T2	NoRel	true	curva	produjo
+Relation	T8	T3	NoRel	true	curva	descarriló
+Relation	T9	T0	NoRel	true	accidente	ACCIDENTE
+Relation	T9	T10	NoRel	true	accidente	duplicando
+Relation	T9	T13	NoRel	true	accidente	accionó
+Relation	T9	T14	NoRel	true	accidente	accidente
+Relation	T9	T16	NoRel	true	accidente	muestra
+Relation	T9	T17	NoRel	true	accidente	descarrilando
+Relation	T9	T2	NoRel	true	accidente	produjo
+Relation	T9	T8	NoRel	true	accidente	curva

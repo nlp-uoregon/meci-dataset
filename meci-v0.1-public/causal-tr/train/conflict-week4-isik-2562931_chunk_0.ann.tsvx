@@ -1,0 +1,47 @@
+Text	HOHENLINDEN MUHAREBESI 3 Aralık 1800'de Fransız Devrim Savaşları sırasında gerçekleşen muharebe .	Jean Victor Marie Moreau yönetimindeki Fransız ordusu , Avusturyalı Arşidük John liderliğindeki Avusturyalılar ve Bavyeralılar karşısında kesin bir zafer kazandı .	Avusturya güçleri geri çekilmeye zorlandıktan sonra , müttefikler İkinci Koalisyon Savaşı'nı etkili bir şekilde sona erdiren bir ateşkes talebinde bulunmak zorunda kaldılar .	Hohenlinden , günümüzde Almanya'nın Münih kentinin 33 km doğusundadır .	- Arnold , James R . _ Marengo & Hohenlinden .
+Event	T0	muharebe	EVENT	87
+Event	T1	kazandı	EVENT	252
+Event	T2	erdiren	EVENT	379
+Event	T3	bulunmak	EVENT	409
+Event	T4	HOHENLINDEN MUHAREBESI	EVENT	0
+Event	T5	Devrim	EVENT	48
+Event	T6	çekilmeye	EVENT	285
+Event	T7	zorlandıktan	EVENT	295
+Event	T8	Savaşı'nı	EVENT	345
+Event	T9	kaldılar	EVENT	426
+Event	T10	ateşkes	EVENT	391
+Relation	T5	T0	CauseEffect	true	Devrim	muharebe
+Relation	T0	T5	EffectCause	true	muharebe	Devrim
+Relation	T0	T8	NoRel	true	muharebe	Savaşı'nı
+Relation	T1	T0	NoRel	true	kazandı	muharebe
+Relation	T1	T10	NoRel	true	kazandı	ateşkes
+Relation	T1	T8	NoRel	true	kazandı	Savaşı'nı
+Relation	T10	T0	NoRel	true	ateşkes	muharebe
+Relation	T10	T1	NoRel	true	ateşkes	kazandı
+Relation	T10	T2	NoRel	true	ateşkes	erdiren
+Relation	T10	T4	NoRel	true	ateşkes	HOHENLINDEN MUHAREBESI
+Relation	T10	T5	NoRel	true	ateşkes	Devrim
+Relation	T2	T8	NoRel	true	erdiren	Savaşı'nı
+Relation	T3	T0	NoRel	true	bulunmak	muharebe
+Relation	T3	T1	NoRel	true	bulunmak	kazandı
+Relation	T3	T5	NoRel	true	bulunmak	Devrim
+Relation	T3	T6	NoRel	true	bulunmak	çekilmeye
+Relation	T3	T8	NoRel	true	bulunmak	Savaşı'nı
+Relation	T4	T2	NoRel	true	HOHENLINDEN MUHAREBESI	erdiren
+Relation	T4	T3	NoRel	true	HOHENLINDEN MUHAREBESI	bulunmak
+Relation	T4	T8	NoRel	true	HOHENLINDEN MUHAREBESI	Savaşı'nı
+Relation	T5	T1	NoRel	true	Devrim	kazandı
+Relation	T5	T2	NoRel	true	Devrim	erdiren
+Relation	T5	T9	NoRel	true	Devrim	kaldılar
+Relation	T7	T4	NoRel	true	zorlandıktan	HOHENLINDEN MUHAREBESI
+Relation	T7	T6	NoRel	true	zorlandıktan	çekilmeye
+Relation	T7	T8	NoRel	true	zorlandıktan	Savaşı'nı
+Relation	T7	T9	NoRel	true	zorlandıktan	kaldılar
+Relation	T8	T0	NoRel	true	Savaşı'nı	muharebe
+Relation	T8	T5	NoRel	true	Savaşı'nı	Devrim
+Relation	T8	T7	NoRel	true	Savaşı'nı	zorlandıktan
+Relation	T9	T0	NoRel	true	kaldılar	muharebe
+Relation	T9	T10	NoRel	true	kaldılar	ateşkes
+Relation	T9	T5	NoRel	true	kaldılar	Devrim
+Relation	T9	T6	NoRel	true	kaldılar	çekilmeye
+Relation	T9	T8	NoRel	true	kaldılar	Savaşı'nı

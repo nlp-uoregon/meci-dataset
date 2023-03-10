@@ -1,0 +1,84 @@
+Text	Under udkørsel fra Haslev spor 1 mod Tureby den 23. december 1971 blev lokomotivføreren ca. 150 m fra det nordlige indgangssporskifte klar over , at de bageste vogne i tog 5129 , der holdt i spor 2 , ikke var sporfri .	Kollision med vognene var uundgåelig .	På grund af den bro der var styrtet sammen ved Kværkeby 22. december var Vestbanen fortsat spærret og en del tog blev ledt over Køge og Næstved .	Tog 5129 var oprindelig på 140 aksler og stationsbestyreren i Køge fik af Haslev oplyst , at der kunne være 88 aksler i spor 2 .	Toget var derfor afsendt med 84 aksler og stationsbestyreren i Haslev gik derfor ud fra , at toget kunne være i spor 2 .
+Event	T0	udkørsel	EVENT	6
+Event	T1	klar	EVENT	134
+Event	T2	holdt	EVENT	183
+Event	T3	Kollision	EVENT	219
+Event	T4	spærret	EVENT	349
+Event	T5	ledt	EVENT	376
+Event	T6	oplyst	EVENT	485
+Event	T7	afsendt	EVENT	550
+Event	T8	gik	EVENT	603
+Event	T9	sporfri	EVENT	209
+Event	T10	uundgåelig	EVENT	245
+Event	T11	styrtet sammen	EVENT	286
+Event	T12	være	EVENT	507
+Event	T13	være	EVENT	638
+Relation	T9	T10	CauseEffect	true	sporfri	uundgåelig
+Relation	T10	T9	EffectCause	true	uundgåelig	sporfri
+Relation	T11	T4	CauseEffect	true	styrtet sammen	spærret
+Relation	T4	T11	EffectCause	true	spærret	styrtet sammen
+Relation	T4	T5	CauseEffect	true	spærret	ledt
+Relation	T5	T4	EffectCause	true	ledt	spærret
+Relation	T9	T3	CauseEffect	true	sporfri	Kollision
+Relation	T3	T9	EffectCause	true	Kollision	sporfri
+Relation	T6	T7	CauseEffect	true	oplyst	afsendt
+Relation	T7	T6	EffectCause	true	afsendt	oplyst
+Relation	T8	T7	CauseEffect	true	gik	afsendt
+Relation	T7	T8	EffectCause	true	afsendt	gik
+Relation	T6	T8	CauseEffect	true	oplyst	gik
+Relation	T8	T6	EffectCause	true	gik	oplyst
+Relation	T0	T10	NoRel	true	udkørsel	uundgåelig
+Relation	T0	T12	NoRel	true	udkørsel	være
+Relation	T0	T9	NoRel	true	udkørsel	sporfri
+Relation	T1	T0	NoRel	true	klar	udkørsel
+Relation	T1	T10	NoRel	true	klar	uundgåelig
+Relation	T1	T11	NoRel	true	klar	styrtet sammen
+Relation	T1	T4	NoRel	true	klar	spærret
+Relation	T1	T6	NoRel	true	klar	oplyst
+Relation	T1	T8	NoRel	true	klar	gik
+Relation	T10	T0	NoRel	true	uundgåelig	udkørsel
+Relation	T10	T1	NoRel	true	uundgåelig	klar
+Relation	T10	T13	NoRel	true	uundgåelig	være
+Relation	T11	T0	NoRel	true	styrtet sammen	udkørsel
+Relation	T11	T1	NoRel	true	styrtet sammen	klar
+Relation	T11	T13	NoRel	true	styrtet sammen	være
+Relation	T11	T7	NoRel	true	styrtet sammen	afsendt
+Relation	T11	T9	NoRel	true	styrtet sammen	sporfri
+Relation	T12	T0	NoRel	true	være	udkørsel
+Relation	T12	T10	NoRel	true	være	uundgåelig
+Relation	T12	T2	NoRel	true	være	holdt
+Relation	T12	T5	NoRel	true	være	ledt
+Relation	T12	T9	NoRel	true	være	sporfri
+Relation	T13	T0	NoRel	true	være	udkørsel
+Relation	T13	T11	NoRel	true	være	styrtet sammen
+Relation	T13	T9	NoRel	true	være	sporfri
+Relation	T2	T1	NoRel	true	holdt	klar
+Relation	T2	T10	NoRel	true	holdt	uundgåelig
+Relation	T2	T3	NoRel	true	holdt	Kollision
+Relation	T2	T7	NoRel	true	holdt	afsendt
+Relation	T3	T1	NoRel	true	Kollision	klar
+Relation	T3	T12	NoRel	true	Kollision	være
+Relation	T3	T2	NoRel	true	Kollision	holdt
+Relation	T4	T2	NoRel	true	spærret	holdt
+Relation	T4	T7	NoRel	true	spærret	afsendt
+Relation	T4	T8	NoRel	true	spærret	gik
+Relation	T5	T1	NoRel	true	ledt	klar
+Relation	T5	T11	NoRel	true	ledt	styrtet sammen
+Relation	T5	T13	NoRel	true	ledt	være
+Relation	T5	T7	NoRel	true	ledt	afsendt
+Relation	T5	T8	NoRel	true	ledt	gik
+Relation	T6	T0	NoRel	true	oplyst	udkørsel
+Relation	T6	T10	NoRel	true	oplyst	uundgåelig
+Relation	T6	T11	NoRel	true	oplyst	styrtet sammen
+Relation	T6	T13	NoRel	true	oplyst	være
+Relation	T7	T0	NoRel	true	afsendt	udkørsel
+Relation	T7	T10	NoRel	true	afsendt	uundgåelig
+Relation	T7	T13	NoRel	true	afsendt	være
+Relation	T7	T2	NoRel	true	afsendt	holdt
+Relation	T7	T3	NoRel	true	afsendt	Kollision
+Relation	T7	T4	NoRel	true	afsendt	spærret
+Relation	T7	T9	NoRel	true	afsendt	sporfri
+Relation	T8	T0	NoRel	true	gik	udkørsel
+Relation	T8	T3	NoRel	true	gik	Kollision
+Relation	T8	T5	NoRel	true	gik	ledt
+Relation	T9	T13	NoRel	true	sporfri	være

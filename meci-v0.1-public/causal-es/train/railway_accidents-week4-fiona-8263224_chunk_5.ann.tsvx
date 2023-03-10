@@ -1,0 +1,27 @@
+Text	El director ejecutivo de Amtrak , Richard Anderson , dijo que el control positivo del tren no estaba activo en la pista , un factor citado en el descarrilamiento similar del tren de Filadelfia de 2015 .	Tres personas a bordo del tren fueron muertas .	Algunos de los ocupantes de los vehículos en la I-5 también resultaron heridos .	Setenta y siete personas fueron trasladadas a hospitales cercanos , incluido el Madigan Army Medical Center en JBLM , Providence St. Peter Hospital en Olympia , St. Anthony Hospital en Gig Harbor , Tacoma General Hospital y St. Clare Hospital en Lakewood .	Había siete tripulantes ( incluido un técnico de Talgo ) y unos 77 pasajeros a bordo del tren .
+Event	T0	dijo	EVENT	53
+Event	T1	citado	EVENT	132
+Event	T2	muertas	EVENT	241
+Event	T3	heridos	EVENT	322
+Event	T4	trasladadas	EVENT	364
+Event	T5	descarrilamiento	EVENT	145
+Event	T6	activo	EVENT	101
+Relation	T6	T5	CauseEffect	true	activo	descarrilamiento
+Relation	T5	T6	EffectCause	true	descarrilamiento	activo
+Relation	T5	T2	CauseEffect	true	descarrilamiento	muertas
+Relation	T2	T5	EffectCause	true	muertas	descarrilamiento
+Relation	T5	T3	CauseEffect	true	descarrilamiento	heridos
+Relation	T3	T5	EffectCause	true	heridos	descarrilamiento
+Relation	T0	T1	NoRel	true	dijo	citado
+Relation	T0	T3	NoRel	true	dijo	heridos
+Relation	T1	T3	NoRel	true	citado	heridos
+Relation	T1	T4	NoRel	true	citado	trasladadas
+Relation	T1	T6	NoRel	true	citado	activo
+Relation	T2	T1	NoRel	true	muertas	citado
+Relation	T4	T0	NoRel	true	trasladadas	dijo
+Relation	T4	T2	NoRel	true	trasladadas	muertas
+Relation	T4	T6	NoRel	true	trasladadas	activo
+Relation	T5	T4	NoRel	true	descarrilamiento	trasladadas
+Relation	T6	T1	NoRel	true	activo	citado
+Relation	T6	T2	NoRel	true	activo	muertas
+Relation	T6	T4	NoRel	true	activo	trasladadas

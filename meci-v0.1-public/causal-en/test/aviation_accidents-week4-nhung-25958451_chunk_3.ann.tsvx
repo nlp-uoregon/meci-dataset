@@ -1,0 +1,52 @@
+Text	The Anniston airport manager was notified by GP Express that the plane did not arrive and could not be reached approximately 11 minutes after the scheduled arrival time ; however , this information was not shared with local search and rescue authorities .	A search was not started until Sgt. Lachut directed rescuers toward the crash site around noon .	Rescuers arrived on foot about 2:15 p.m. and evacuated the remaining survivors by four - wheel - drive vehicle to Northeast Alabama Regional Medical Center in Anniston .	Heavy rains at the time made travel difficult , obscured visibility , and also quickly knocked down the post-accident fire , the smoke of which may have alerted authorities to the crash and approximate location more quickly .	The findings of the investigation by the National Transportation Safety Board ( NTSB ) were released on March 2 , 1993 .
+Event	T0	notified	EVENT	33
+Event	T1	arrive	EVENT	79
+Event	T2	reached	EVENT	103
+Event	T3	arrival	EVENT	156
+Event	T4	shared	EVENT	206
+Event	T5	search	EVENT	258
+Event	T6	started	EVENT	273
+Event	T7	crash	EVENT	328
+Event	T8	arrived	EVENT	362
+Event	T9	evacuated	EVENT	398
+Event	T10	rains	EVENT	529
+Event	T11	fire	EVENT	641
+Event	T12	smoke	EVENT	652
+Event	T13	alerted	EVENT	676
+Event	T14	crash	EVENT	703
+Event	T15	findings	EVENT	753
+Event	T16	investigation	EVENT	769
+Event	T17	released	EVENT	841
+Event	T18	knocked down	EVENT	610
+Relation	T7	T5	CauseEffect	true	crash	search
+Relation	T5	T7	EffectCause	true	search	crash
+Relation	T14	T12	CauseEffect	true	crash	smoke
+Relation	T12	T14	EffectCause	true	smoke	crash
+Relation	T0	T7	NoRel	true	notified	crash
+Relation	T0	T9	NoRel	true	notified	evacuated
+Relation	T1	T15	NoRel	true	arrive	findings
+Relation	T1	T18	NoRel	true	arrive	knocked down
+Relation	T10	T11	NoRel	true	rains	fire
+Relation	T10	T6	NoRel	true	rains	started
+Relation	T10	T9	NoRel	true	rains	evacuated
+Relation	T12	T17	NoRel	true	smoke	released
+Relation	T12	T2	NoRel	true	smoke	reached
+Relation	T12	T7	NoRel	true	smoke	crash
+Relation	T14	T10	NoRel	true	crash	rains
+Relation	T14	T8	NoRel	true	crash	arrived
+Relation	T15	T2	NoRel	true	findings	reached
+Relation	T16	T12	NoRel	true	investigation	smoke
+Relation	T16	T17	NoRel	true	investigation	released
+Relation	T17	T4	NoRel	true	released	shared
+Relation	T17	T7	NoRel	true	released	crash
+Relation	T18	T13	NoRel	true	knocked down	alerted
+Relation	T18	T16	NoRel	true	knocked down	investigation
+Relation	T5	T9	NoRel	true	search	evacuated
+Relation	T6	T12	NoRel	true	started	smoke
+Relation	T6	T9	NoRel	true	started	evacuated
+Relation	T7	T14	NoRel	true	crash	crash
+Relation	T7	T6	NoRel	true	crash	started
+Relation	T7	T9	NoRel	true	crash	evacuated
+Relation	T8	T12	NoRel	true	arrived	smoke
+Relation	T9	T0	NoRel	true	evacuated	notified
+Relation	T9	T18	NoRel	true	evacuated	knocked down

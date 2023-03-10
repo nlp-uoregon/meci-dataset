@@ -1,0 +1,61 @@
+Text	Bugünkü Moldova'da , Kişinev Katliamı olarak da bilinen 1903 Kişinev pogromu 47-49 kişinin ölümüne yol açtı .	The Times ve The New York Times tarafından yayınlandıktan sonra uluslararası kamuoyunda yankı uyandırdı .	1905'te ikinci , daha küçük bir Kişinev pogromu vardı .	20 Temmuz 1905'te Yekaterinoslav'da ( günümüz Dnipro , Ukrayna ) bir pogrom , Yahudi savunma grubu tarafından durduruldu ( gruptaki bir adam öldü ) .	31 Temmuz 1905'te , belediye başkanının önderlik ettiği bir vatansever alayı şiddetlenen Makaryev kasabasında ( Nizhni Novgorod yakınında ) Soluk yerleşim dışındaki ilk pogrom gerçekleştirildi .
+Event	T1	açtı	EVENT	103
+Event	T2	yayınlandıktan	EVENT	153
+Event	T3	uyandırdı	EVENT	204
+Event	T4	durduruldu	EVENT	382
+Event	T5	öldü	EVENT	413
+Event	T6	şiddetlenen	EVENT	499
+Event	T7	gerçekleştirildi	EVENT	598
+Event	T8	Kişinev Katliamı	EVENT	21
+Event	T9	pogromu	EVENT	256
+Event	T10	pogrom	EVENT	341
+Event	T11	ettiği	EVENT	471
+Event	T12	pogrom	EVENT	591
+Relation	T2	T3	CauseEffect	true	yayınlandıktan	uyandırdı
+Relation	T3	T2	EffectCause	true	uyandırdı	yayınlandıktan
+Relation	T10	T4	CauseEffect	true	pogrom	durduruldu
+Relation	T4	T10	EffectCause	true	durduruldu	pogrom
+Relation	T10	T5	CauseEffect	true	pogrom	öldü
+Relation	T5	T10	EffectCause	true	öldü	pogrom
+Relation	T1	T10	NoRel	true	açtı	pogrom
+Relation	T1	T2	NoRel	true	açtı	yayınlandıktan
+Relation	T1	T6	NoRel	true	açtı	şiddetlenen
+Relation	T1	T9	NoRel	true	açtı	pogromu
+Relation	T10	T2	NoRel	true	pogrom	yayınlandıktan
+Relation	T10	T3	NoRel	true	pogrom	uyandırdı
+Relation	T10	T6	NoRel	true	pogrom	şiddetlenen
+Relation	T10	T9	NoRel	true	pogrom	pogromu
+Relation	T11	T2	NoRel	true	ettiği	yayınlandıktan
+Relation	T12	T10	NoRel	true	pogrom	pogrom
+Relation	T12	T11	NoRel	true	pogrom	ettiği
+Relation	T12	T5	NoRel	true	pogrom	öldü
+Relation	T12	T7	NoRel	true	pogrom	gerçekleştirildi
+Relation	T2	T1	NoRel	true	yayınlandıktan	açtı
+Relation	T2	T12	NoRel	true	yayınlandıktan	pogrom
+Relation	T2	T9	NoRel	true	yayınlandıktan	pogromu
+Relation	T3	T10	NoRel	true	uyandırdı	pogrom
+Relation	T3	T5	NoRel	true	uyandırdı	öldü
+Relation	T3	T8	NoRel	true	uyandırdı	Kişinev Katliamı
+Relation	T4	T1	NoRel	true	durduruldu	açtı
+Relation	T4	T11	NoRel	true	durduruldu	ettiği
+Relation	T4	T12	NoRel	true	durduruldu	pogrom
+Relation	T4	T2	NoRel	true	durduruldu	yayınlandıktan
+Relation	T4	T7	NoRel	true	durduruldu	gerçekleştirildi
+Relation	T4	T8	NoRel	true	durduruldu	Kişinev Katliamı
+Relation	T5	T12	NoRel	true	öldü	pogrom
+Relation	T5	T2	NoRel	true	öldü	yayınlandıktan
+Relation	T5	T7	NoRel	true	öldü	gerçekleştirildi
+Relation	T5	T8	NoRel	true	öldü	Kişinev Katliamı
+Relation	T6	T11	NoRel	true	şiddetlenen	ettiği
+Relation	T6	T4	NoRel	true	şiddetlenen	durduruldu
+Relation	T6	T7	NoRel	true	şiddetlenen	gerçekleştirildi
+Relation	T6	T8	NoRel	true	şiddetlenen	Kişinev Katliamı
+Relation	T7	T11	NoRel	true	gerçekleştirildi	ettiği
+Relation	T7	T4	NoRel	true	gerçekleştirildi	durduruldu
+Relation	T7	T8	NoRel	true	gerçekleştirildi	Kişinev Katliamı
+Relation	T8	T5	NoRel	true	Kişinev Katliamı	öldü
+Relation	T8	T6	NoRel	true	Kişinev Katliamı	şiddetlenen
+Relation	T9	T2	NoRel	true	pogromu	yayınlandıktan
+Relation	T9	T3	NoRel	true	pogromu	uyandırdı
+Relation	T9	T4	NoRel	true	pogromu	durduruldu
+Relation	T9	T8	NoRel	true	pogromu	Kişinev Katliamı

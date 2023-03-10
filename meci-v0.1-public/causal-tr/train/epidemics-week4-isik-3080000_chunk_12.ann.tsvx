@@ -1,0 +1,50 @@
+Text	Enfekte olan insanların evleri kapatıldı , ancak başlangıçta onları arındırmak için hiçbir girişimde bulunulmadı .	Bu binalardan enfekte olmuş bazı hayvanlar kaçmış ve vebanın yayılmasına katkıda bulunmuş olabilir .	Sonunda , evcil hayvanlar evlerde zaptedildi veya kafeslere konuldu ve daha fazla yayılmayı önlemek için sokak hayvanları öldürülmeye başlandı .	Birçok kişi , yetkililer tarafından imha edilmesini önlemek için kontamine malları sakladı .	19 Haziran'da Valletta , Floriana ve Tree Cities içinde ve çevresinde _ çeşitli bariyerler kuruldu .
+Event	T0	kapatıldı	EVENT	31
+Event	T1	kaçmış	EVENT	158
+Event	T3	zaptedildi	EVENT	250
+Event	T4	konuldu	EVENT	276
+Event	T5	başlandı	EVENT	350
+Event	T6	sakladı	EVENT	444
+Event	T7	kuruldu	EVENT	545
+Event	T8	olan	EVENT	8
+Event	T9	olmuş	EVENT	137
+Event	T2	olabilir	EVENT	205
+Relation	T8	T0	CauseEffect	true	olan	kapatıldı
+Relation	T0	T8	EffectCause	true	kapatıldı	olan
+Relation	T1	T2	CauseEffect	true	kaçmış	olabilir
+Relation	T2	T1	EffectCause	true	olabilir	kaçmış
+Relation	T0	T3	CauseEffect	true	kapatıldı	zaptedildi
+Relation	T3	T0	EffectCause	true	zaptedildi	kapatıldı
+Relation	T0	T1	CauseEffect	true	kapatıldı	kaçmış
+Relation	T1	T0	EffectCause	true	kaçmış	kapatıldı
+Relation	T3	T4	CauseEffect	true	zaptedildi	konuldu
+Relation	T4	T3	EffectCause	true	konuldu	zaptedildi
+Relation	T2	T5	CauseEffect	true	olabilir	başlandı
+Relation	T5	T2	EffectCause	true	başlandı	olabilir
+Relation	T0	T2	NoRel	true	kapatıldı	olabilir
+Relation	T0	T6	NoRel	true	kapatıldı	sakladı
+Relation	T0	T9	NoRel	true	kapatıldı	olmuş
+Relation	T1	T3	NoRel	true	kaçmış	zaptedildi
+Relation	T1	T5	NoRel	true	kaçmış	başlandı
+Relation	T1	T8	NoRel	true	kaçmış	olan
+Relation	T2	T0	NoRel	true	olabilir	kapatıldı
+Relation	T2	T6	NoRel	true	olabilir	sakladı
+Relation	T2	T7	NoRel	true	olabilir	kuruldu
+Relation	T3	T5	NoRel	true	zaptedildi	başlandı
+Relation	T3	T9	NoRel	true	zaptedildi	olmuş
+Relation	T5	T0	NoRel	true	başlandı	kapatıldı
+Relation	T5	T1	NoRel	true	başlandı	kaçmış
+Relation	T5	T3	NoRel	true	başlandı	zaptedildi
+Relation	T5	T6	NoRel	true	başlandı	sakladı
+Relation	T5	T8	NoRel	true	başlandı	olan
+Relation	T5	T9	NoRel	true	başlandı	olmuş
+Relation	T6	T2	NoRel	true	sakladı	olabilir
+Relation	T6	T4	NoRel	true	sakladı	konuldu
+Relation	T6	T7	NoRel	true	sakladı	kuruldu
+Relation	T6	T8	NoRel	true	sakladı	olan
+Relation	T7	T3	NoRel	true	kuruldu	zaptedildi
+Relation	T7	T5	NoRel	true	kuruldu	başlandı
+Relation	T7	T8	NoRel	true	kuruldu	olan
+Relation	T8	T3	NoRel	true	olan	zaptedildi
+Relation	T8	T9	NoRel	true	olan	olmuş
+Relation	T9	T8	NoRel	true	olmuş	olan

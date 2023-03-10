@@ -1,0 +1,95 @@
+Text	] [ miniaturadeimagen | 180 px | derecha | Automotor de la CP Serie 9500 .	] 28 DE OCTUBRE : La colisión entre un vehículo y un automotor de la CP Serie 0450 en un paso a nivel sin guardia junto a Leiría , en la Línea del Oeste , provoca tres muertos y un herido .	- 2007_____-___12 DE FEBRERO : Un automotor de la CP Serie 9500 descarrila y cae al río en la Línea del Túa cerca de Castanheiro , resultando en tres víctimas mortales y dos heridos .	- 2008_____-___11 DE MARZO : Una furgoneta de transporte de pacientes es alcanzada por una composición en un paso a nivel en la localidad de Montijos , en Leiría , provocando la muerte de cuatro personas .	- 4 DE MAYO : una composición del Metro de Porto descarriló después de una colisión con un automóvil en una rotonda junto al Hospital Pedro Hispano , en Matosinhos , provocando catorce heridos leves .
+Event	T0	colisión	EVENT	96
+Event	T1	paso	EVENT	164
+Event	T2	muertos	EVENT	243
+Event	T3	herido	EVENT	256
+Event	T4	descarrila	EVENT	329
+Event	T5	heridos	EVENT	439
+Event	T6	alcanzada	EVENT	522
+Event	T7	composición	EVENT	540
+Event	T8	paso	EVENT	558
+Event	T9	provocando	EVENT	613
+Event	T10	muerte	EVENT	627
+Event	T11	composición	EVENT	673
+Event	T12	colisión	EVENT	730
+Event	T13	cae	EVENT	342
+Event	T14	víctimas	EVENT	415
+Relation	T0	T2	CauseEffect	true	colisión	muertos
+Relation	T2	T0	EffectCause	true	muertos	colisión
+Relation	T0	T3	CauseEffect	true	colisión	herido
+Relation	T3	T0	EffectCause	true	herido	colisión
+Relation	T4	T13	CauseEffect	true	descarrila	cae
+Relation	T13	T4	EffectCause	true	cae	descarrila
+Relation	T13	T14	CauseEffect	true	cae	víctimas
+Relation	T14	T13	EffectCause	true	víctimas	cae
+Relation	T13	T5	CauseEffect	true	cae	heridos
+Relation	T5	T13	EffectCause	true	heridos	cae
+Relation	T0	T1	NoRel	true	colisión	paso
+Relation	T1	T0	NoRel	true	paso	colisión
+Relation	T1	T10	NoRel	true	paso	muerte
+Relation	T1	T2	NoRel	true	paso	muertos
+Relation	T1	T5	NoRel	true	paso	heridos
+Relation	T1	T6	NoRel	true	paso	alcanzada
+Relation	T1	T7	NoRel	true	paso	composición
+Relation	T1	T8	NoRel	true	paso	paso
+Relation	T1	T9	NoRel	true	paso	provocando
+Relation	T10	T1	NoRel	true	muerte	paso
+Relation	T10	T11	NoRel	true	muerte	composición
+Relation	T10	T14	NoRel	true	muerte	víctimas
+Relation	T10	T3	NoRel	true	muerte	herido
+Relation	T10	T4	NoRel	true	muerte	descarrila
+Relation	T10	T8	NoRel	true	muerte	paso
+Relation	T10	T9	NoRel	true	muerte	provocando
+Relation	T11	T5	NoRel	true	composición	heridos
+Relation	T11	T6	NoRel	true	composición	alcanzada
+Relation	T12	T10	NoRel	true	colisión	muerte
+Relation	T12	T11	NoRel	true	colisión	composición
+Relation	T12	T4	NoRel	true	colisión	descarrila
+Relation	T12	T6	NoRel	true	colisión	alcanzada
+Relation	T12	T7	NoRel	true	colisión	composición
+Relation	T12	T8	NoRel	true	colisión	paso
+Relation	T13	T1	NoRel	true	cae	paso
+Relation	T13	T10	NoRel	true	cae	muerte
+Relation	T13	T2	NoRel	true	cae	muertos
+Relation	T13	T3	NoRel	true	cae	herido
+Relation	T13	T8	NoRel	true	cae	paso
+Relation	T14	T0	NoRel	true	víctimas	colisión
+Relation	T14	T11	NoRel	true	víctimas	composición
+Relation	T14	T8	NoRel	true	víctimas	paso
+Relation	T2	T10	NoRel	true	muertos	muerte
+Relation	T2	T12	NoRel	true	muertos	colisión
+Relation	T2	T3	NoRel	true	muertos	herido
+Relation	T2	T4	NoRel	true	muertos	descarrila
+Relation	T2	T5	NoRel	true	muertos	heridos
+Relation	T2	T6	NoRel	true	muertos	alcanzada
+Relation	T2	T7	NoRel	true	muertos	composición
+Relation	T2	T9	NoRel	true	muertos	provocando
+Relation	T3	T1	NoRel	true	herido	paso
+Relation	T3	T14	NoRel	true	herido	víctimas
+Relation	T3	T6	NoRel	true	herido	alcanzada
+Relation	T4	T0	NoRel	true	descarrila	colisión
+Relation	T4	T2	NoRel	true	descarrila	muertos
+Relation	T4	T7	NoRel	true	descarrila	composición
+Relation	T5	T10	NoRel	true	heridos	muerte
+Relation	T5	T4	NoRel	true	heridos	descarrila
+Relation	T5	T7	NoRel	true	heridos	composición
+Relation	T5	T9	NoRel	true	heridos	provocando
+Relation	T6	T11	NoRel	true	alcanzada	composición
+Relation	T6	T14	NoRel	true	alcanzada	víctimas
+Relation	T6	T2	NoRel	true	alcanzada	muertos
+Relation	T6	T5	NoRel	true	alcanzada	heridos
+Relation	T6	T8	NoRel	true	alcanzada	paso
+Relation	T7	T12	NoRel	true	composición	colisión
+Relation	T7	T13	NoRel	true	composición	cae
+Relation	T7	T14	NoRel	true	composición	víctimas
+Relation	T7	T8	NoRel	true	composición	paso
+Relation	T8	T10	NoRel	true	paso	muerte
+Relation	T8	T12	NoRel	true	paso	colisión
+Relation	T8	T14	NoRel	true	paso	víctimas
+Relation	T8	T2	NoRel	true	paso	muertos
+Relation	T8	T9	NoRel	true	paso	provocando
+Relation	T9	T1	NoRel	true	provocando	paso
+Relation	T9	T11	NoRel	true	provocando	composición
+Relation	T9	T12	NoRel	true	provocando	colisión
+Relation	T9	T4	NoRel	true	provocando	descarrila
+Relation	T9	T8	NoRel	true	provocando	paso

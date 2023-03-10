@@ -1,0 +1,49 @@
+Text	Taboritsky etraftaki kalabalık tarafından yakalandı .	Olay yerinde ölen Nabokov ile birlikte toplam dokuz kişi suikast girişimi sırasında yaralandı ; Berlin grubunda bulunan Kadet partisi üyesi L. E. Elyaşev ve Rul gazetesinin editörü Avgust Kaminka dahil .	Şabelski ve Taboritsky'e yapılan tıbbi deneyin neticesinde ikisinin de uzun bir süredir uyuşturucu kullandığı , suikast girişiminde oldukça güçlü bir miktarda kullandıkları öğrenildi .	Milyukov'a suikast girişimine dair yargılama süreci 1922 yılının 3 ila 7 Temmuz günleri arasında , Moabit'teki Berlin Adli Mahkemesi'nde gerçekleşti .	Mahkeme , Taboritsky'i , bilinçli bir şekilde Nabokov'un ölümüne sebep açacak yaralara sebep olmaktan ötürü 14 yıl boyunca zorunlu ağır işe mahkum etti .
+Event	T0	yakalandı	EVENT	42
+Event	T2	ölen	EVENT	67
+Event	T3	girişimi	EVENT	119
+Event	T4	yaralandı	EVENT	138
+Event	T6	deneyin	EVENT	297
+Event	T9	öğrenildi	EVENT	431
+Event	T10	süreci	EVENT	488
+Event	T11	gerçekleşti	EVENT	580
+Event	T12	etti	EVENT	741
+Event	T1	girişimine	EVENT	462
+Relation	T3	T2	CauseEffect	true	girişimi	ölen
+Relation	T2	T3	EffectCause	true	ölen	girişimi
+Relation	T3	T4	CauseEffect	true	girişimi	yaralandı
+Relation	T4	T3	EffectCause	true	yaralandı	girişimi
+Relation	T6	T9	CauseEffect	true	deneyin	öğrenildi
+Relation	T9	T6	EffectCause	true	öğrenildi	deneyin
+Relation	T1	T10	CauseEffect	true	girişimine	süreci
+Relation	T10	T1	EffectCause	true	süreci	girişimine
+Relation	T10	T12	CauseEffect	true	süreci	etti
+Relation	T12	T10	EffectCause	true	etti	süreci
+Relation	T0	T1	NoRel	true	yakalandı	girişimine
+Relation	T0	T2	NoRel	true	yakalandı	ölen
+Relation	T0	T3	NoRel	true	yakalandı	girişimi
+Relation	T0	T4	NoRel	true	yakalandı	yaralandı
+Relation	T1	T0	NoRel	true	girişimine	yakalandı
+Relation	T1	T11	NoRel	true	girişimine	gerçekleşti
+Relation	T1	T12	NoRel	true	girişimine	etti
+Relation	T1	T3	NoRel	true	girişimine	girişimi
+Relation	T1	T6	NoRel	true	girişimine	deneyin
+Relation	T10	T4	NoRel	true	süreci	yaralandı
+Relation	T10	T9	NoRel	true	süreci	öğrenildi
+Relation	T11	T6	NoRel	true	gerçekleşti	deneyin
+Relation	T11	T9	NoRel	true	gerçekleşti	öğrenildi
+Relation	T12	T11	NoRel	true	etti	gerçekleşti
+Relation	T12	T2	NoRel	true	etti	ölen
+Relation	T2	T11	NoRel	true	ölen	gerçekleşti
+Relation	T2	T12	NoRel	true	ölen	etti
+Relation	T3	T0	NoRel	true	girişimi	yakalandı
+Relation	T3	T11	NoRel	true	girişimi	gerçekleşti
+Relation	T3	T6	NoRel	true	girişimi	deneyin
+Relation	T4	T1	NoRel	true	yaralandı	girişimine
+Relation	T4	T9	NoRel	true	yaralandı	öğrenildi
+Relation	T6	T1	NoRel	true	deneyin	girişimine
+Relation	T6	T2	NoRel	true	deneyin	ölen
+Relation	T6	T3	NoRel	true	deneyin	girişimi
+Relation	T9	T10	NoRel	true	öğrenildi	süreci
+Relation	T9	T3	NoRel	true	öğrenildi	girişimi
+Relation	T9	T4	NoRel	true	öğrenildi	yaralandı

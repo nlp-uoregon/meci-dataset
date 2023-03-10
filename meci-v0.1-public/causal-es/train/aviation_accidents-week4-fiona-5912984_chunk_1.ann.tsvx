@@ -1,0 +1,118 @@
+Text	En el momento del accidente , la aerolínea se encontraba operando entre Camp Bastion y Dubái por un plazo de un mes .	El vuelo siniestrado partió de Camp Bastion e hizo una escala en la Base Aérea de Bagram para repostar .	El avión había despegado desde la pista 03 de Bagram a las 15:30 hora local ( 11:00 UTC ) y estaba sobrepasando los cuando su morro se elevó rápidamente .	Según una información no confirmada , fue escuchado un miembro de la tripulación por la banda de radio VHF reportando que parte de la carga de cinco vehículos militares pesados de la cabina de carga se habían soltado ; el avión entonces entró en pérdida y se estrelló .	El sitio del siniestro estaba al final de la pista 03 , dentro del perímetro de la base aérea .
+Event	T0	accidente	EVENT	18
+Event	T1	operando	EVENT	57
+Event	T2	partió	EVENT	139
+Event	T3	hizo	EVENT	164
+Event	T4	escala	EVENT	173
+Event	T5	repostar	EVENT	212
+Event	T6	despegado	EVENT	238
+Event	T7	sobrepasando	EVENT	322
+Event	T8	morro	EVENT	349
+Event	T9	elevó	EVENT	358
+Event	T10	confirmada	EVENT	403
+Event	T11	escuchado	EVENT	420
+Event	T12	reportando	EVENT	485
+Event	T13	carga	EVENT	512
+Event	T14	soltado	EVENT	587
+Event	T15	pérdida	EVENT	624
+Event	T16	estrelló	EVENT	637
+Event	T17	siniestro	EVENT	661
+Relation	T15	T16	CauseEffect	true	pérdida	estrelló
+Relation	T16	T15	EffectCause	true	estrelló	pérdida
+Relation	T0	T10	NoRel	true	accidente	confirmada
+Relation	T0	T13	NoRel	true	accidente	carga
+Relation	T0	T14	NoRel	true	accidente	soltado
+Relation	T0	T16	NoRel	true	accidente	estrelló
+Relation	T0	T3	NoRel	true	accidente	hizo
+Relation	T0	T5	NoRel	true	accidente	repostar
+Relation	T0	T6	NoRel	true	accidente	despegado
+Relation	T1	T12	NoRel	true	operando	reportando
+Relation	T1	T4	NoRel	true	operando	escala
+Relation	T1	T6	NoRel	true	operando	despegado
+Relation	T1	T7	NoRel	true	operando	sobrepasando
+Relation	T10	T0	NoRel	true	confirmada	accidente
+Relation	T10	T11	NoRel	true	confirmada	escuchado
+Relation	T10	T16	NoRel	true	confirmada	estrelló
+Relation	T10	T2	NoRel	true	confirmada	partió
+Relation	T10	T4	NoRel	true	confirmada	escala
+Relation	T10	T5	NoRel	true	confirmada	repostar
+Relation	T10	T6	NoRel	true	confirmada	despegado
+Relation	T10	T7	NoRel	true	confirmada	sobrepasando
+Relation	T10	T9	NoRel	true	confirmada	elevó
+Relation	T11	T0	NoRel	true	escuchado	accidente
+Relation	T11	T17	NoRel	true	escuchado	siniestro
+Relation	T11	T4	NoRel	true	escuchado	escala
+Relation	T11	T5	NoRel	true	escuchado	repostar
+Relation	T11	T8	NoRel	true	escuchado	morro
+Relation	T12	T1	NoRel	true	reportando	operando
+Relation	T12	T14	NoRel	true	reportando	soltado
+Relation	T13	T11	NoRel	true	carga	escuchado
+Relation	T13	T14	NoRel	true	carga	soltado
+Relation	T13	T15	NoRel	true	carga	pérdida
+Relation	T13	T9	NoRel	true	carga	elevó
+Relation	T14	T0	NoRel	true	soltado	accidente
+Relation	T14	T1	NoRel	true	soltado	operando
+Relation	T14	T11	NoRel	true	soltado	escuchado
+Relation	T14	T15	NoRel	true	soltado	pérdida
+Relation	T14	T16	NoRel	true	soltado	estrelló
+Relation	T14	T8	NoRel	true	soltado	morro
+Relation	T14	T9	NoRel	true	soltado	elevó
+Relation	T15	T11	NoRel	true	pérdida	escuchado
+Relation	T15	T14	NoRel	true	pérdida	soltado
+Relation	T15	T8	NoRel	true	pérdida	morro
+Relation	T16	T10	NoRel	true	estrelló	confirmada
+Relation	T16	T11	NoRel	true	estrelló	escuchado
+Relation	T16	T12	NoRel	true	estrelló	reportando
+Relation	T16	T4	NoRel	true	estrelló	escala
+Relation	T16	T5	NoRel	true	estrelló	repostar
+Relation	T16	T7	NoRel	true	estrelló	sobrepasando
+Relation	T17	T11	NoRel	true	siniestro	escuchado
+Relation	T17	T12	NoRel	true	siniestro	reportando
+Relation	T17	T15	NoRel	true	siniestro	pérdida
+Relation	T17	T16	NoRel	true	siniestro	estrelló
+Relation	T17	T2	NoRel	true	siniestro	partió
+Relation	T17	T3	NoRel	true	siniestro	hizo
+Relation	T17	T4	NoRel	true	siniestro	escala
+Relation	T17	T9	NoRel	true	siniestro	elevó
+Relation	T2	T10	NoRel	true	partió	confirmada
+Relation	T2	T12	NoRel	true	partió	reportando
+Relation	T2	T15	NoRel	true	partió	pérdida
+Relation	T2	T5	NoRel	true	partió	repostar
+Relation	T2	T7	NoRel	true	partió	sobrepasando
+Relation	T2	T8	NoRel	true	partió	morro
+Relation	T3	T0	NoRel	true	hizo	accidente
+Relation	T3	T10	NoRel	true	hizo	confirmada
+Relation	T3	T14	NoRel	true	hizo	soltado
+Relation	T3	T7	NoRel	true	hizo	sobrepasando
+Relation	T3	T8	NoRel	true	hizo	morro
+Relation	T4	T10	NoRel	true	escala	confirmada
+Relation	T4	T11	NoRel	true	escala	escuchado
+Relation	T4	T13	NoRel	true	escala	carga
+Relation	T4	T16	NoRel	true	escala	estrelló
+Relation	T4	T2	NoRel	true	escala	partió
+Relation	T4	T5	NoRel	true	escala	repostar
+Relation	T5	T1	NoRel	true	repostar	operando
+Relation	T5	T12	NoRel	true	repostar	reportando
+Relation	T5	T17	NoRel	true	repostar	siniestro
+Relation	T5	T3	NoRel	true	repostar	hizo
+Relation	T6	T10	NoRel	true	despegado	confirmada
+Relation	T6	T12	NoRel	true	despegado	reportando
+Relation	T6	T16	NoRel	true	despegado	estrelló
+Relation	T7	T11	NoRel	true	sobrepasando	escuchado
+Relation	T7	T12	NoRel	true	sobrepasando	reportando
+Relation	T7	T16	NoRel	true	sobrepasando	estrelló
+Relation	T7	T2	NoRel	true	sobrepasando	partió
+Relation	T7	T5	NoRel	true	sobrepasando	repostar
+Relation	T8	T10	NoRel	true	morro	confirmada
+Relation	T8	T12	NoRel	true	morro	reportando
+Relation	T8	T14	NoRel	true	morro	soltado
+Relation	T8	T4	NoRel	true	morro	escala
+Relation	T8	T5	NoRel	true	morro	repostar
+Relation	T8	T7	NoRel	true	morro	sobrepasando
+Relation	T9	T0	NoRel	true	elevó	accidente
+Relation	T9	T1	NoRel	true	elevó	operando
+Relation	T9	T10	NoRel	true	elevó	confirmada
+Relation	T9	T11	NoRel	true	elevó	escuchado
+Relation	T9	T13	NoRel	true	elevó	carga
+Relation	T9	T2	NoRel	true	elevó	partió
+Relation	T9	T7	NoRel	true	elevó	sobrepasando

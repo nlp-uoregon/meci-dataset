@@ -1,0 +1,87 @@
+Text	It is customary for the Air Force to impound radar trackings involving possible litigation in cases of aviation accidents .	In the civil litigation for damages , the United States Department of Justice explained that the tapes from the Air Force radar installation at King Salmon , Alaska pertinent to KAL 007 's flight in the Bethel area had been destroyed and could therefore not be supplied to the plaintiffs .	At first Justice Department lawyer Jan Van Flatern stated that they were destroyed 15 days after the shootdown .	Later , he said he had " misspoken " and changed the time of destruction to 30 hours after the event .	A Pentagon spokesman concurred , saying that the tapes are re-cycled for reuse from 24 – 30 hours afterwards ; the fate of KAL 007 was known inside this timeframe .
+Event	T0	impound	EVENT	37
+Event	T1	litigation	EVENT	80
+Event	T10	stated	EVENT	465
+Event	T11	destroyed	EVENT	487
+Event	T12	shootdown	EVENT	515
+Event	T13	said	EVENT	538
+Event	T14	changed	EVENT	568
+Event	T15	destruction	EVENT	588
+Event	T16	event	EVENT	622
+Event	T17	concurred	EVENT	651
+Event	T18	saying	EVENT	663
+Event	T19	re-cycled	EVENT	689
+Event	T2	accidents	EVENT	112
+Event	T20	reuse	EVENT	703
+Event	T22	known	EVENT	765
+Event	T23	installation	EVENT	252
+Event	T3	litigation	EVENT	137
+Event	T4	damages	EVENT	152
+Event	T5	explained	EVENT	202
+Event	T6	pertinent	EVENT	289
+Event	T7	flight	EVENT	313
+Event	T8	destroyed	EVENT	348
+Event	T9	supplied	EVENT	385
+Relation	T8	T9	CauseEffect	true	destroyed	supplied
+Relation	T9	T8	EffectCause	true	supplied	destroyed
+Relation	T12	T11	CauseEffect	true	shootdown	destroyed
+Relation	T11	T12	EffectCause	true	destroyed	shootdown
+Relation	T19	T20	CauseEffect	true	re-cycled	reuse
+Relation	T20	T19	EffectCause	true	reuse	re-cycled
+Relation	T1	T0	CauseEffect	true	litigation	impound
+Relation	T0	T1	EffectCause	true	impound	litigation
+Relation	T14	T17	CauseEffect	true	changed	concurred
+Relation	T17	T14	EffectCause	true	concurred	changed
+Relation	T0	T16	NoRel	true	impound	event
+Relation	T1	T7	NoRel	true	litigation	flight
+Relation	T1	T8	NoRel	true	litigation	destroyed
+Relation	T10	T17	NoRel	true	stated	concurred
+Relation	T10	T6	NoRel	true	stated	pertinent
+Relation	T11	T13	NoRel	true	destroyed	said
+Relation	T11	T19	NoRel	true	destroyed	re-cycled
+Relation	T11	T23	NoRel	true	destroyed	installation
+Relation	T12	T0	NoRel	true	shootdown	impound
+Relation	T12	T16	NoRel	true	shootdown	event
+Relation	T12	T4	NoRel	true	shootdown	damages
+Relation	T13	T1	NoRel	true	said	litigation
+Relation	T13	T12	NoRel	true	said	shootdown
+Relation	T13	T19	NoRel	true	said	re-cycled
+Relation	T13	T22	NoRel	true	said	known
+Relation	T13	T4	NoRel	true	said	damages
+Relation	T13	T5	NoRel	true	said	explained
+Relation	T13	T7	NoRel	true	said	flight
+Relation	T13	T9	NoRel	true	said	supplied
+Relation	T14	T10	NoRel	true	changed	stated
+Relation	T14	T20	NoRel	true	changed	reuse
+Relation	T14	T22	NoRel	true	changed	known
+Relation	T14	T5	NoRel	true	changed	explained
+Relation	T14	T8	NoRel	true	changed	destroyed
+Relation	T15	T22	NoRel	true	destruction	known
+Relation	T15	T6	NoRel	true	destruction	pertinent
+Relation	T17	T18	NoRel	true	concurred	saying
+Relation	T17	T20	NoRel	true	concurred	reuse
+Relation	T17	T9	NoRel	true	concurred	supplied
+Relation	T18	T15	NoRel	true	saying	destruction
+Relation	T18	T17	NoRel	true	saying	concurred
+Relation	T18	T22	NoRel	true	saying	known
+Relation	T19	T14	NoRel	true	re-cycled	changed
+Relation	T2	T13	NoRel	true	accidents	said
+Relation	T20	T0	NoRel	true	reuse	impound
+Relation	T22	T0	NoRel	true	known	impound
+Relation	T22	T13	NoRel	true	known	said
+Relation	T22	T23	NoRel	true	known	installation
+Relation	T22	T7	NoRel	true	known	flight
+Relation	T23	T2	NoRel	true	installation	accidents
+Relation	T23	T20	NoRel	true	installation	reuse
+Relation	T3	T11	NoRel	true	litigation	destroyed
+Relation	T3	T13	NoRel	true	litigation	said
+Relation	T3	T22	NoRel	true	litigation	known
+Relation	T3	T5	NoRel	true	litigation	explained
+Relation	T4	T18	NoRel	true	damages	saying
+Relation	T4	T20	NoRel	true	damages	reuse
+Relation	T4	T9	NoRel	true	damages	supplied
+Relation	T6	T22	NoRel	true	pertinent	known
+Relation	T7	T22	NoRel	true	flight	known
+Relation	T9	T2	NoRel	true	supplied	accidents
+Relation	T9	T20	NoRel	true	supplied	reuse
+Relation	T9	T4	NoRel	true	supplied	damages

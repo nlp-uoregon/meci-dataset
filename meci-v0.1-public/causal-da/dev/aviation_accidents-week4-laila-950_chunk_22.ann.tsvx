@@ -1,0 +1,21 @@
+Text	På en klar dag kunne de besøgende se op til 80 km væk i alle retninger .	Mellem 106. og 107. etage i det nordlige tårn lå restauranten _ Windows on the World _ , der åbnede i april 1976 .	Restauranten blev etableret af Joe Baum for mere end 17 millioner dollars .	På toppen af det nordlige tårn lå to andre spise- og drikkesteder placeret , det ene var navngivet " Hors d'Oeuvrerie " og det andet " Cellar in the Sky " .	" Hors d'Oeuvrerie " serverede dansk smørrebrød i løbet af dagen og sushi om eftermiddagen .
+Event	T0	åbnede	EVENT	166
+Event	T1	etableret	EVENT	206
+Event	T2	placeret	EVENT	330
+Event	T3	serverede	EVENT	442
+Event	T4	se	EVENT	34
+Event	T5	lå	EVENT	119
+Relation	T1	T0	CauseEffect	true	etableret	åbnede
+Relation	T0	T1	EffectCause	true	åbnede	etableret
+Relation	T0	T5	NoRel	true	åbnede	lå
+Relation	T1	T2	NoRel	true	etableret	placeret
+Relation	T1	T4	NoRel	true	etableret	se
+Relation	T2	T4	NoRel	true	placeret	se
+Relation	T2	T5	NoRel	true	placeret	lå
+Relation	T3	T2	NoRel	true	serverede	placeret
+Relation	T3	T4	NoRel	true	serverede	se
+Relation	T4	T3	NoRel	true	se	serverede
+Relation	T4	T5	NoRel	true	se	lå
+Relation	T5	T1	NoRel	true	lå	etableret
+Relation	T5	T2	NoRel	true	lå	placeret
+Relation	T5	T4	NoRel	true	lå	se

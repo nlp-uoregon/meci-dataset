@@ -1,0 +1,55 @@
+Text	An outbreak of plague thus became the trigger for Black Death persecutions , with hundreds of Jews burned at the stake , or rounded up in synagogues and private houses that were then set aflame .	With the decline of plague in Europe , these accusations lessened , but the term " well - poisoning " remains a loaded one that continues to crop up even today among anti-Semites around the world .	[ 2000 Jews burned to death in Strasbourg 1349 during the Black Death ]	Walter Laqueur writes in his book _ The Changing Face of Anti-Semitism : From Ancient Times to the Present Day _ :	There were no mass attacks against " Jewish poisoners " after the period of the Black Death , but the accusation became part and parcel of antisemitic dogma and language .
+Event	T0	outbreak	EVENT	3
+Event	T1	plague	EVENT	15
+Event	T2	became	EVENT	27
+Event	T3	trigger	EVENT	38
+Event	T4	persecutions	EVENT	62
+Event	T5	burned	EVENT	99
+Event	T6	aflame	EVENT	187
+Event	T7	decline	EVENT	205
+Event	T8	plague	EVENT	216
+Event	T9	lessened	EVENT	253
+Event	T10	poisoning	EVENT	286
+Event	T11	continues	EVENT	324
+Event	T12	death	EVENT	416
+Event	T13	Death	EVENT	458
+Event	T14	writes	EVENT	481
+Event	T15	Changing	EVENT	506
+Event	T16	attacks	EVENT	600
+Event	T17	rounded up	EVENT	124
+Relation	T0	T4	CauseEffect	true	outbreak	persecutions
+Relation	T4	T0	EffectCause	true	persecutions	outbreak
+Relation	T5	T4	CauseEffect	true	burned	persecutions
+Relation	T4	T5	EffectCause	true	persecutions	burned
+Relation	T6	T4	CauseEffect	true	aflame	persecutions
+Relation	T4	T6	EffectCause	true	persecutions	aflame
+Relation	T7	T9	CauseEffect	true	decline	lessened
+Relation	T9	T7	EffectCause	true	lessened	decline
+Relation	T0	T10	NoRel	true	outbreak	poisoning
+Relation	T0	T11	NoRel	true	outbreak	continues
+Relation	T1	T13	NoRel	true	plague	Death
+Relation	T1	T14	NoRel	true	plague	writes
+Relation	T10	T1	NoRel	true	poisoning	plague
+Relation	T10	T17	NoRel	true	poisoning	rounded up
+Relation	T10	T8	NoRel	true	poisoning	plague
+Relation	T10	T9	NoRel	true	poisoning	lessened
+Relation	T11	T10	NoRel	true	continues	poisoning
+Relation	T12	T7	NoRel	true	death	decline
+Relation	T13	T16	NoRel	true	Death	attacks
+Relation	T13	T2	NoRel	true	Death	became
+Relation	T15	T16	NoRel	true	Changing	attacks
+Relation	T15	T6	NoRel	true	Changing	aflame
+Relation	T16	T0	NoRel	true	attacks	outbreak
+Relation	T17	T12	NoRel	true	rounded up	death
+Relation	T17	T13	NoRel	true	rounded up	Death
+Relation	T17	T15	NoRel	true	rounded up	Changing
+Relation	T2	T13	NoRel	true	became	Death
+Relation	T3	T12	NoRel	true	trigger	death
+Relation	T3	T5	NoRel	true	trigger	burned
+Relation	T3	T7	NoRel	true	trigger	decline
+Relation	T4	T16	NoRel	true	persecutions	attacks
+Relation	T4	T17	NoRel	true	persecutions	rounded up
+Relation	T4	T7	NoRel	true	persecutions	decline
+Relation	T6	T12	NoRel	true	aflame	death
+Relation	T7	T2	NoRel	true	decline	became
+Relation	T8	T10	NoRel	true	plague	poisoning

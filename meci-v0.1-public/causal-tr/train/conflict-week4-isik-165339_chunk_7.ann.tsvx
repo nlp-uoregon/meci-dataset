@@ -1,0 +1,54 @@
+Text	Halife yakalandı ve öldürülmeden önce halkının katledilmesi ve şehrinin talan edilmesi izletildi .	Bozkır kültürüne göre asil kan yere akarsa , tüm alem düşmanınız olur .	Bu yüzden Halife keçeye sarılıp atlar tarafından çiğnetilmişti .	Bir oğlu hariç tüm oğulları da öldürüldü .	Daha önceki örneklere baktığımızda Moğollar sadece dirençle karşılaştıkları şehirlerde , ele geçirdikten sonra halkıyla birlikte büyük bir yağma ve katliam yapıyorlardı .
+Event	T0	yakalandı	EVENT	7
+Event	T1	öldürülmeden	EVENT	20
+Event	T2	katledilmesi	EVENT	47
+Event	T3	izletildi	EVENT	87
+Event	T4	çiğnetilmişti	EVENT	220
+Event	T5	öldürüldü	EVENT	267
+Event	T6	yağma	EVENT	418
+Event	T7	sarılıp	EVENT	195
+Event	T8	baktığımızda	EVENT	301
+Event	T9	karşılaştıkları	EVENT	339
+Event	T10	geçirdikten	EVENT	372
+Event	T11	katliam	EVENT	427
+Relation	T9	T6	CauseEffect	true	karşılaştıkları	yağma
+Relation	T6	T9	EffectCause	true	yağma	karşılaştıkları
+Relation	T9	T11	CauseEffect	true	karşılaştıkları	katliam
+Relation	T11	T9	EffectCause	true	katliam	karşılaştıkları
+Relation	T0	T10	NoRel	true	yakalandı	geçirdikten
+Relation	T0	T2	NoRel	true	yakalandı	katledilmesi
+Relation	T1	T0	NoRel	true	öldürülmeden	yakalandı
+Relation	T1	T11	NoRel	true	öldürülmeden	katliam
+Relation	T10	T3	NoRel	true	geçirdikten	izletildi
+Relation	T10	T5	NoRel	true	geçirdikten	öldürüldü
+Relation	T10	T6	NoRel	true	geçirdikten	yağma
+Relation	T10	T7	NoRel	true	geçirdikten	sarılıp
+Relation	T10	T9	NoRel	true	geçirdikten	karşılaştıkları
+Relation	T2	T1	NoRel	true	katledilmesi	öldürülmeden
+Relation	T2	T10	NoRel	true	katledilmesi	geçirdikten
+Relation	T2	T4	NoRel	true	katledilmesi	çiğnetilmişti
+Relation	T2	T9	NoRel	true	katledilmesi	karşılaştıkları
+Relation	T3	T0	NoRel	true	izletildi	yakalandı
+Relation	T3	T2	NoRel	true	izletildi	katledilmesi
+Relation	T4	T1	NoRel	true	çiğnetilmişti	öldürülmeden
+Relation	T4	T3	NoRel	true	çiğnetilmişti	izletildi
+Relation	T5	T1	NoRel	true	öldürüldü	öldürülmeden
+Relation	T5	T2	NoRel	true	öldürüldü	katledilmesi
+Relation	T5	T8	NoRel	true	öldürüldü	baktığımızda
+Relation	T5	T9	NoRel	true	öldürüldü	karşılaştıkları
+Relation	T6	T1	NoRel	true	yağma	öldürülmeden
+Relation	T6	T10	NoRel	true	yağma	geçirdikten
+Relation	T6	T2	NoRel	true	yağma	katledilmesi
+Relation	T6	T7	NoRel	true	yağma	sarılıp
+Relation	T7	T1	NoRel	true	sarılıp	öldürülmeden
+Relation	T7	T5	NoRel	true	sarılıp	öldürüldü
+Relation	T7	T6	NoRel	true	sarılıp	yağma
+Relation	T8	T1	NoRel	true	baktığımızda	öldürülmeden
+Relation	T8	T10	NoRel	true	baktığımızda	geçirdikten
+Relation	T8	T11	NoRel	true	baktığımızda	katliam
+Relation	T8	T2	NoRel	true	baktığımızda	katledilmesi
+Relation	T8	T4	NoRel	true	baktığımızda	çiğnetilmişti
+Relation	T8	T5	NoRel	true	baktığımızda	öldürüldü
+Relation	T9	T0	NoRel	true	karşılaştıkları	yakalandı
+Relation	T9	T1	NoRel	true	karşılaştıkları	öldürülmeden
+Relation	T9	T2	NoRel	true	karşılaştıkları	katledilmesi

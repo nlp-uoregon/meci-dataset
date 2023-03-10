@@ -1,0 +1,119 @@
+Text	Ocak ayının sonuna gelindiğinde yanardağın ortaya çıkardığı malzeme ve küller yer yer 5 metre derinliğe ulaşıyordu .	Düşen küllerin yanı sıra pek çok ev de patlama biçiminde oluşan püskürmeler sonucu uzak yerlere fırlayan ateş parçacıkları nedeniyle ve hız kesmeden ilerleyen lav akıntıları ile yanarak yok oldu .	Şubat ayının başlarında , ağır malzeme ve kül çıkışı hızını kesmişti ; ancak bu kez de akan lavlar ciddi zararlara neden olmaya başladı .	Yarığın hemen kuzeyinde denizaltında gerçekleşen hareketlilikler adaya İzlanda anakarasından elektrik getirmekte olan bir kablo hattını ve su borularını kopardı ve lavlar adanın limanına doğru akmaya başladı .	Bunun üzerine hemen harekete geçildi ve adanın tek limanını kurtarmak için çalışmalar başlatıldı .
+Event	T0	Düşen	EVENT	117
+Event	T1	patlama	EVENT	156
+Event	T2	püskürmeler	EVENT	181
+Event	T4	akıntıları	EVENT	280
+Event	T5	oldu	EVENT	307
+Event	T6	çıkışı	EVENT	360
+Event	T7	kesmişti	EVENT	374
+Event	T8	hareketlilikler	EVENT	501
+Event	T9	kopardı	EVENT	605
+Event	T10	başladı	EVENT	652
+Event	T11	ulaşıyordu	EVENT	104
+Event	T12	yanarak	EVENT	295
+Event	T13	parçacıkları	EVENT	227
+Event	T3	lavlar	EVENT	406
+Event	T14	başladı	EVENT	442
+Event	T15	geçildi	EVENT	691
+Event	T16	başlatıldı	EVENT	748
+Relation	T2	T13	CauseEffect	true	püskürmeler	parçacıkları
+Relation	T13	T2	EffectCause	true	parçacıkları	püskürmeler
+Relation	T13	T12	CauseEffect	true	parçacıkları	yanarak
+Relation	T12	T13	EffectCause	true	yanarak	parçacıkları
+Relation	T4	T12	CauseEffect	true	akıntıları	yanarak
+Relation	T12	T4	EffectCause	true	yanarak	akıntıları
+Relation	T12	T5	CauseEffect	true	yanarak	oldu
+Relation	T5	T12	EffectCause	true	oldu	yanarak
+Relation	T3	T14	CauseEffect	true	lavlar	başladı
+Relation	T14	T3	EffectCause	true	başladı	lavlar
+Relation	T8	T9	CauseEffect	true	hareketlilikler	kopardı
+Relation	T9	T8	EffectCause	true	kopardı	hareketlilikler
+Relation	T10	T15	CauseEffect	true	başladı	geçildi
+Relation	T15	T10	EffectCause	true	geçildi	başladı
+Relation	T15	T16	CauseEffect	true	geçildi	başlatıldı
+Relation	T16	T15	EffectCause	true	başlatıldı	geçildi
+Relation	T0	T12	NoRel	true	Düşen	yanarak
+Relation	T0	T15	NoRel	true	Düşen	geçildi
+Relation	T0	T3	NoRel	true	Düşen	lavlar
+Relation	T0	T5	NoRel	true	Düşen	oldu
+Relation	T0	T6	NoRel	true	Düşen	çıkışı
+Relation	T0	T7	NoRel	true	Düşen	kesmişti
+Relation	T1	T0	NoRel	true	patlama	Düşen
+Relation	T1	T12	NoRel	true	patlama	yanarak
+Relation	T1	T13	NoRel	true	patlama	parçacıkları
+Relation	T1	T2	NoRel	true	patlama	püskürmeler
+Relation	T1	T4	NoRel	true	patlama	akıntıları
+Relation	T1	T5	NoRel	true	patlama	oldu
+Relation	T1	T8	NoRel	true	patlama	hareketlilikler
+Relation	T10	T11	NoRel	true	başladı	ulaşıyordu
+Relation	T10	T13	NoRel	true	başladı	parçacıkları
+Relation	T10	T5	NoRel	true	başladı	oldu
+Relation	T10	T6	NoRel	true	başladı	çıkışı
+Relation	T11	T10	NoRel	true	ulaşıyordu	başladı
+Relation	T11	T2	NoRel	true	ulaşıyordu	püskürmeler
+Relation	T11	T3	NoRel	true	ulaşıyordu	lavlar
+Relation	T11	T7	NoRel	true	ulaşıyordu	kesmişti
+Relation	T12	T10	NoRel	true	yanarak	başladı
+Relation	T12	T14	NoRel	true	yanarak	başladı
+Relation	T12	T3	NoRel	true	yanarak	lavlar
+Relation	T12	T9	NoRel	true	yanarak	kopardı
+Relation	T13	T0	NoRel	true	parçacıkları	Düşen
+Relation	T13	T4	NoRel	true	parçacıkları	akıntıları
+Relation	T13	T6	NoRel	true	parçacıkları	çıkışı
+Relation	T14	T0	NoRel	true	başladı	Düşen
+Relation	T14	T1	NoRel	true	başladı	patlama
+Relation	T14	T2	NoRel	true	başladı	püskürmeler
+Relation	T14	T5	NoRel	true	başladı	oldu
+Relation	T14	T6	NoRel	true	başladı	çıkışı
+Relation	T14	T9	NoRel	true	başladı	kopardı
+Relation	T15	T1	NoRel	true	geçildi	patlama
+Relation	T15	T3	NoRel	true	geçildi	lavlar
+Relation	T15	T5	NoRel	true	geçildi	oldu
+Relation	T15	T6	NoRel	true	geçildi	çıkışı
+Relation	T16	T11	NoRel	true	başlatıldı	ulaşıyordu
+Relation	T16	T3	NoRel	true	başlatıldı	lavlar
+Relation	T16	T6	NoRel	true	başlatıldı	çıkışı
+Relation	T2	T11	NoRel	true	püskürmeler	ulaşıyordu
+Relation	T2	T14	NoRel	true	püskürmeler	başladı
+Relation	T2	T4	NoRel	true	püskürmeler	akıntıları
+Relation	T2	T5	NoRel	true	püskürmeler	oldu
+Relation	T2	T7	NoRel	true	püskürmeler	kesmişti
+Relation	T3	T1	NoRel	true	lavlar	patlama
+Relation	T3	T11	NoRel	true	lavlar	ulaşıyordu
+Relation	T3	T15	NoRel	true	lavlar	geçildi
+Relation	T3	T2	NoRel	true	lavlar	püskürmeler
+Relation	T3	T4	NoRel	true	lavlar	akıntıları
+Relation	T3	T7	NoRel	true	lavlar	kesmişti
+Relation	T4	T0	NoRel	true	akıntıları	Düşen
+Relation	T4	T1	NoRel	true	akıntıları	patlama
+Relation	T4	T10	NoRel	true	akıntıları	başladı
+Relation	T4	T14	NoRel	true	akıntıları	başladı
+Relation	T4	T6	NoRel	true	akıntıları	çıkışı
+Relation	T4	T7	NoRel	true	akıntıları	kesmişti
+Relation	T4	T9	NoRel	true	akıntıları	kopardı
+Relation	T5	T10	NoRel	true	oldu	başladı
+Relation	T5	T13	NoRel	true	oldu	parçacıkları
+Relation	T5	T16	NoRel	true	oldu	başlatıldı
+Relation	T5	T9	NoRel	true	oldu	kopardı
+Relation	T6	T10	NoRel	true	çıkışı	başladı
+Relation	T6	T11	NoRel	true	çıkışı	ulaşıyordu
+Relation	T6	T13	NoRel	true	çıkışı	parçacıkları
+Relation	T6	T15	NoRel	true	çıkışı	geçildi
+Relation	T6	T16	NoRel	true	çıkışı	başlatıldı
+Relation	T6	T2	NoRel	true	çıkışı	püskürmeler
+Relation	T6	T4	NoRel	true	çıkışı	akıntıları
+Relation	T6	T5	NoRel	true	çıkışı	oldu
+Relation	T6	T8	NoRel	true	çıkışı	hareketlilikler
+Relation	T7	T0	NoRel	true	kesmişti	Düşen
+Relation	T7	T1	NoRel	true	kesmişti	patlama
+Relation	T7	T10	NoRel	true	kesmişti	başladı
+Relation	T7	T16	NoRel	true	kesmişti	başlatıldı
+Relation	T7	T2	NoRel	true	kesmişti	püskürmeler
+Relation	T7	T8	NoRel	true	kesmişti	hareketlilikler
+Relation	T8	T0	NoRel	true	hareketlilikler	Düşen
+Relation	T8	T15	NoRel	true	hareketlilikler	geçildi
+Relation	T8	T4	NoRel	true	hareketlilikler	akıntıları
+Relation	T8	T6	NoRel	true	hareketlilikler	çıkışı
+Relation	T9	T10	NoRel	true	kopardı	başladı
+Relation	T9	T16	NoRel	true	kopardı	başlatıldı
+Relation	T9	T2	NoRel	true	kopardı	püskürmeler

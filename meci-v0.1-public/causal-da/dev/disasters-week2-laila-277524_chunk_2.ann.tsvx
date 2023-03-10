@@ -1,0 +1,46 @@
+Text	thumb| 250 px | right | Winston Churchill besøger ruinerne af Coventry Cathedral i 1941	Angrebet 14. november 1940 blev udført af 515 tyske bombefly , 2/3 kom fra _ Luftflotte 3 _ og den resterende del fra pionererne _ kampfgruppe 100 _ .	Angrebets formål var at underminere byens muligheder for at agere leverandør til Royal Air Force og den britiske hær ved at ødelægge fabrikker samt byens industrielle infrastruktur , der kunne dog ikke være tvivl om at bombardementerne ville være ødelæggende både i forhold til bygninger , pladser og menneskelige tab .	Angrebet fik navnet _ Operation Moonlight Sonata _ .	Den startende angrebsbølge kl. 19.20 var begrænset til 13 Heinkel He 111 fra _ kampfgruppe 100 _ , der var udstyret med en særlig navigation der var i stand til at undgå den engelske radar , de smed markeringsbomber som de næste fly kunne præcisionsbombe efter .
+Event	T0	besøger	EVENT	42
+Event	T1	Angrebet	EVENT	88
+Event	T10	navigation	EVENT	742
+Event	T11	præcisionsbombe	EVENT	851
+Event	T2	udført	EVENT	120
+Event	T3	kom	EVENT	155
+Event	T4	Angrebets	EVENT	239
+Event	T5	underminere	EVENT	263
+Event	T6	ødelægge	EVENT	363
+Event	T9	udstyret	EVENT	719
+Relation	T5	T4	CauseEffect	true	underminere	Angrebets
+Relation	T4	T5	EffectCause	true	Angrebets	underminere
+Relation	T0	T10	NoRel	true	besøger	navigation
+Relation	T0	T11	NoRel	true	besøger	præcisionsbombe
+Relation	T0	T2	NoRel	true	besøger	udført
+Relation	T0	T9	NoRel	true	besøger	udstyret
+Relation	T1	T0	NoRel	true	Angrebet	besøger
+Relation	T1	T11	NoRel	true	Angrebet	præcisionsbombe
+Relation	T1	T2	NoRel	true	Angrebet	udført
+Relation	T1	T4	NoRel	true	Angrebet	Angrebets
+Relation	T10	T0	NoRel	true	navigation	besøger
+Relation	T10	T11	NoRel	true	navigation	præcisionsbombe
+Relation	T10	T5	NoRel	true	navigation	underminere
+Relation	T10	T6	NoRel	true	navigation	ødelægge
+Relation	T11	T0	NoRel	true	præcisionsbombe	besøger
+Relation	T11	T10	NoRel	true	præcisionsbombe	navigation
+Relation	T11	T2	NoRel	true	præcisionsbombe	udført
+Relation	T11	T9	NoRel	true	præcisionsbombe	udstyret
+Relation	T2	T0	NoRel	true	udført	besøger
+Relation	T2	T1	NoRel	true	udført	Angrebet
+Relation	T2	T5	NoRel	true	udført	underminere
+Relation	T2	T6	NoRel	true	udført	ødelægge
+Relation	T3	T1	NoRel	true	kom	Angrebet
+Relation	T3	T2	NoRel	true	kom	udført
+Relation	T3	T6	NoRel	true	kom	ødelægge
+Relation	T3	T9	NoRel	true	kom	udstyret
+Relation	T4	T0	NoRel	true	Angrebets	besøger
+Relation	T4	T10	NoRel	true	Angrebets	navigation
+Relation	T4	T9	NoRel	true	Angrebets	udstyret
+Relation	T5	T1	NoRel	true	underminere	Angrebet
+Relation	T5	T10	NoRel	true	underminere	navigation
+Relation	T5	T3	NoRel	true	underminere	kom
+Relation	T5	T6	NoRel	true	underminere	ødelægge
+Relation	T9	T2	NoRel	true	udstyret	udført
+Relation	T9	T6	NoRel	true	udstyret	ødelægge

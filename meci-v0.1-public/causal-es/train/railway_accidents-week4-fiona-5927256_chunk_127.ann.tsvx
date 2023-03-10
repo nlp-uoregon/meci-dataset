@@ -1,0 +1,118 @@
+Text	A la salida de Zaragoza , en la línea férrea que conduce a Barcelona por Caspe , un tren de viajeros arrolló a un camión en un paso a nivel con el resultado de un muerto y una treintena de heridos entre los ocupantes del convoy .	- 4 de enero de 2003 .	Un Talgo que cubría la relación Madrid –_____Cartagena descarrila en las cercanías de Tobarra ( Albacete ) al arrollar una traviesa de hormigón que se hallaba sobre la vía .	Murieron dos personas y otras 38 resultaron heridas .	- El 3 de junio de 2003 , accidente ferroviario de Chinchilla de 2003 , cuando un Talgo 200 colisionó con un tren de mercancías en Chinchilla de Monte-Aragón ( provincia de Albacete ) muriendo 19 personas y quedando otras 50 heridas .
+Event	T0	salida	EVENT	5
+Event	T1	arrolló	EVENT	101
+Event	T2	resultado	EVENT	147
+Event	T3	muerto	EVENT	163
+Event	T4	heridos	EVENT	189
+Event	T5	cubría	EVENT	266
+Event	T6	descarrila	EVENT	308
+Event	T7	arrollar	EVENT	363
+Event	T8	traviesa	EVENT	376
+Event	T9	hallaba	EVENT	404
+Event	T10	Murieron	EVENT	427
+Event	T11	heridas	EVENT	471
+Event	T12	accidente	EVENT	507
+Event	T13	colisionó	EVENT	573
+Event	T14	muriendo	EVENT	665
+Event	T15	quedando	EVENT	688
+Event	T16	heridas	EVENT	706
+Relation	T1	T3	CauseEffect	true	arrolló	muerto
+Relation	T3	T1	EffectCause	true	muerto	arrolló
+Relation	T1	T4	CauseEffect	true	arrolló	heridos
+Relation	T4	T1	EffectCause	true	heridos	arrolló
+Relation	T7	T6	CauseEffect	true	arrollar	descarrila
+Relation	T6	T7	EffectCause	true	descarrila	arrollar
+Relation	T6	T10	CauseEffect	true	descarrila	Murieron
+Relation	T10	T6	EffectCause	true	Murieron	descarrila
+Relation	T6	T11	CauseEffect	true	descarrila	heridas
+Relation	T11	T6	EffectCause	true	heridas	descarrila
+Relation	T13	T14	CauseEffect	true	colisionó	muriendo
+Relation	T14	T13	EffectCause	true	muriendo	colisionó
+Relation	T13	T16	CauseEffect	true	colisionó	heridas
+Relation	T16	T13	EffectCause	true	heridas	colisionó
+Relation	T0	T1	NoRel	true	salida	arrolló
+Relation	T0	T3	NoRel	true	salida	muerto
+Relation	T0	T6	NoRel	true	salida	descarrila
+Relation	T0	T7	NoRel	true	salida	arrollar
+Relation	T1	T10	NoRel	true	arrolló	Murieron
+Relation	T1	T5	NoRel	true	arrolló	cubría
+Relation	T1	T6	NoRel	true	arrolló	descarrila
+Relation	T1	T7	NoRel	true	arrolló	arrollar
+Relation	T10	T1	NoRel	true	Murieron	arrolló
+Relation	T10	T12	NoRel	true	Murieron	accidente
+Relation	T10	T13	NoRel	true	Murieron	colisionó
+Relation	T10	T14	NoRel	true	Murieron	muriendo
+Relation	T10	T2	NoRel	true	Murieron	resultado
+Relation	T10	T5	NoRel	true	Murieron	cubría
+Relation	T11	T0	NoRel	true	heridas	salida
+Relation	T11	T5	NoRel	true	heridas	cubría
+Relation	T11	T7	NoRel	true	heridas	arrollar
+Relation	T11	T8	NoRel	true	heridas	traviesa
+Relation	T12	T1	NoRel	true	accidente	arrolló
+Relation	T12	T10	NoRel	true	accidente	Murieron
+Relation	T12	T15	NoRel	true	accidente	quedando
+Relation	T12	T2	NoRel	true	accidente	resultado
+Relation	T12	T7	NoRel	true	accidente	arrollar
+Relation	T13	T10	NoRel	true	colisionó	Murieron
+Relation	T13	T11	NoRel	true	colisionó	heridas
+Relation	T13	T12	NoRel	true	colisionó	accidente
+Relation	T13	T3	NoRel	true	colisionó	muerto
+Relation	T13	T5	NoRel	true	colisionó	cubría
+Relation	T13	T6	NoRel	true	colisionó	descarrila
+Relation	T14	T0	NoRel	true	muriendo	salida
+Relation	T14	T6	NoRel	true	muriendo	descarrila
+Relation	T14	T8	NoRel	true	muriendo	traviesa
+Relation	T15	T10	NoRel	true	quedando	Murieron
+Relation	T15	T14	NoRel	true	quedando	muriendo
+Relation	T15	T4	NoRel	true	quedando	heridos
+Relation	T16	T10	NoRel	true	heridas	Murieron
+Relation	T16	T15	NoRel	true	heridas	quedando
+Relation	T16	T2	NoRel	true	heridas	resultado
+Relation	T16	T6	NoRel	true	heridas	descarrila
+Relation	T16	T7	NoRel	true	heridas	arrollar
+Relation	T16	T8	NoRel	true	heridas	traviesa
+Relation	T2	T0	NoRel	true	resultado	salida
+Relation	T2	T10	NoRel	true	resultado	Murieron
+Relation	T2	T11	NoRel	true	resultado	heridas
+Relation	T2	T14	NoRel	true	resultado	muriendo
+Relation	T2	T16	NoRel	true	resultado	heridas
+Relation	T2	T3	NoRel	true	resultado	muerto
+Relation	T2	T4	NoRel	true	resultado	heridos
+Relation	T2	T6	NoRel	true	resultado	descarrila
+Relation	T3	T10	NoRel	true	muerto	Murieron
+Relation	T3	T12	NoRel	true	muerto	accidente
+Relation	T3	T13	NoRel	true	muerto	colisionó
+Relation	T3	T15	NoRel	true	muerto	quedando
+Relation	T3	T16	NoRel	true	muerto	heridas
+Relation	T3	T5	NoRel	true	muerto	cubría
+Relation	T3	T6	NoRel	true	muerto	descarrila
+Relation	T3	T9	NoRel	true	muerto	hallaba
+Relation	T4	T14	NoRel	true	heridos	muriendo
+Relation	T4	T16	NoRel	true	heridos	heridas
+Relation	T4	T5	NoRel	true	heridos	cubría
+Relation	T4	T6	NoRel	true	heridos	descarrila
+Relation	T4	T7	NoRel	true	heridos	arrollar
+Relation	T4	T8	NoRel	true	heridos	traviesa
+Relation	T5	T12	NoRel	true	cubría	accidente
+Relation	T5	T13	NoRel	true	cubría	colisionó
+Relation	T5	T14	NoRel	true	cubría	muriendo
+Relation	T5	T15	NoRel	true	cubría	quedando
+Relation	T5	T16	NoRel	true	cubría	heridas
+Relation	T5	T2	NoRel	true	cubría	resultado
+Relation	T5	T3	NoRel	true	cubría	muerto
+Relation	T5	T4	NoRel	true	cubría	heridos
+Relation	T5	T8	NoRel	true	cubría	traviesa
+Relation	T6	T12	NoRel	true	descarrila	accidente
+Relation	T6	T16	NoRel	true	descarrila	heridas
+Relation	T6	T5	NoRel	true	descarrila	cubría
+Relation	T7	T14	NoRel	true	arrollar	muriendo
+Relation	T7	T15	NoRel	true	arrollar	quedando
+Relation	T7	T2	NoRel	true	arrollar	resultado
+Relation	T7	T9	NoRel	true	arrollar	hallaba
+Relation	T8	T10	NoRel	true	traviesa	Murieron
+Relation	T8	T2	NoRel	true	traviesa	resultado
+Relation	T8	T5	NoRel	true	traviesa	cubría
+Relation	T8	T7	NoRel	true	traviesa	arrollar
+Relation	T9	T13	NoRel	true	hallaba	colisionó
+Relation	T9	T4	NoRel	true	hallaba	heridos
+Relation	T9	T6	NoRel	true	hallaba	descarrila

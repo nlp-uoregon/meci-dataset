@@ -1,0 +1,77 @@
+Text	Yardımcı pilot ve biri çocuk 13 yolcu , toplam 14 kişi kurtuldu .	Yardımcı pilot ve bir yolcu ağır yaralıydı .	Kazanın ana nedeni yaklaşma kontrolörünün uçağın havalimanından uzaklığını yanlış bildirmesi ve bundan dolayı uçağın erken alçalmaya başlaması ve yaklaşma şemasının ihlal edilmesidir .	Uçağın bulutların içinde uçması ve dağı görememesi ve mürettebatın konumlarını teyit etmemeleri kazanın gerçekleşmesinde bir faktördür .	Kategori : 1970'te Özbekistan Kategori : Özbekistan SSC'deki havacılık kazaları ve olayları Kategori : 1970'te havacılık kazaları ve olayları Kategori : İlyuşin İl - 18 içeren kazalar ve olaylar Kategori : Aeroflot kazaları ve olayları Kategori : Hava trafik kontrolörü hatası nedeniyle gerçekleşen havacılık kazaları ve olayları Kategori : Kontrollü uçuşta yere çarpma
+Event	T0	kurtuldu	EVENT	55
+Event	T1	yaralıydı	EVENT	99
+Event	T2	Kazanın	EVENT	111
+Event	T3	bildirmesi	EVENT	193
+Event	T4	başlaması	EVENT	244
+Event	T6	uçması	EVENT	321
+Event	T7	görememesi	EVENT	336
+Event	T11	hatası	EVENT	703
+Event	T13	kazaları	EVENT	742
+Event	T14	olayları	EVENT	754
+Event	T16	ihlal	EVENT	276
+Event	T5	kazanın	EVENT	392
+Relation	T2	T1	CauseEffect	true	Kazanın	yaralıydı
+Relation	T1	T2	EffectCause	true	yaralıydı	Kazanın
+Relation	T3	T2	CauseEffect	true	bildirmesi	Kazanın
+Relation	T2	T3	EffectCause	true	Kazanın	bildirmesi
+Relation	T3	T4	CauseEffect	true	bildirmesi	başlaması
+Relation	T4	T3	EffectCause	true	başlaması	bildirmesi
+Relation	T4	T16	CauseEffect	true	başlaması	ihlal
+Relation	T16	T4	EffectCause	true	ihlal	başlaması
+Relation	T6	T7	CauseEffect	true	uçması	görememesi
+Relation	T7	T6	EffectCause	true	görememesi	uçması
+Relation	T7	T2	CauseEffect	true	görememesi	Kazanın
+Relation	T2	T7	EffectCause	true	Kazanın	görememesi
+Relation	T7	T5	CauseEffect	true	görememesi	kazanın
+Relation	T5	T7	EffectCause	true	kazanın	görememesi
+Relation	T3	T5	CauseEffect	true	bildirmesi	kazanın
+Relation	T5	T3	EffectCause	true	kazanın	bildirmesi
+Relation	T11	T13	CauseEffect	true	hatası	kazaları
+Relation	T13	T11	EffectCause	true	kazaları	hatası
+Relation	T11	T14	CauseEffect	true	hatası	olayları
+Relation	T14	T11	EffectCause	true	olayları	hatası
+Relation	T0	T11	NoRel	true	kurtuldu	hatası
+Relation	T0	T16	NoRel	true	kurtuldu	ihlal
+Relation	T0	T7	NoRel	true	kurtuldu	görememesi
+Relation	T1	T13	NoRel	true	yaralıydı	kazaları
+Relation	T1	T16	NoRel	true	yaralıydı	ihlal
+Relation	T1	T7	NoRel	true	yaralıydı	görememesi
+Relation	T11	T0	NoRel	true	hatası	kurtuldu
+Relation	T11	T2	NoRel	true	hatası	Kazanın
+Relation	T11	T6	NoRel	true	hatası	uçması
+Relation	T11	T7	NoRel	true	hatası	görememesi
+Relation	T13	T14	NoRel	true	kazaları	olayları
+Relation	T13	T2	NoRel	true	kazaları	Kazanın
+Relation	T13	T3	NoRel	true	kazaları	bildirmesi
+Relation	T13	T5	NoRel	true	kazaları	kazanın
+Relation	T14	T16	NoRel	true	olayları	ihlal
+Relation	T14	T2	NoRel	true	olayları	Kazanın
+Relation	T14	T3	NoRel	true	olayları	bildirmesi
+Relation	T14	T4	NoRel	true	olayları	başlaması
+Relation	T14	T5	NoRel	true	olayları	kazanın
+Relation	T14	T6	NoRel	true	olayları	uçması
+Relation	T16	T1	NoRel	true	ihlal	yaralıydı
+Relation	T16	T13	NoRel	true	ihlal	kazaları
+Relation	T2	T11	NoRel	true	Kazanın	hatası
+Relation	T2	T13	NoRel	true	Kazanın	kazaları
+Relation	T2	T14	NoRel	true	Kazanın	olayları
+Relation	T2	T5	NoRel	true	Kazanın	kazanın
+Relation	T2	T6	NoRel	true	Kazanın	uçması
+Relation	T3	T14	NoRel	true	bildirmesi	olayları
+Relation	T3	T16	NoRel	true	bildirmesi	ihlal
+Relation	T3	T6	NoRel	true	bildirmesi	uçması
+Relation	T3	T7	NoRel	true	bildirmesi	görememesi
+Relation	T4	T11	NoRel	true	başlaması	hatası
+Relation	T4	T13	NoRel	true	başlaması	kazaları
+Relation	T5	T0	NoRel	true	kazanın	kurtuldu
+Relation	T5	T1	NoRel	true	kazanın	yaralıydı
+Relation	T5	T13	NoRel	true	kazanın	kazaları
+Relation	T6	T0	NoRel	true	uçması	kurtuldu
+Relation	T6	T14	NoRel	true	uçması	olayları
+Relation	T6	T16	NoRel	true	uçması	ihlal
+Relation	T6	T2	NoRel	true	uçması	Kazanın
+Relation	T6	T3	NoRel	true	uçması	bildirmesi
+Relation	T7	T13	NoRel	true	görememesi	kazaları
+Relation	T7	T14	NoRel	true	görememesi	olayları
+Relation	T7	T3	NoRel	true	görememesi	bildirmesi

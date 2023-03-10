@@ -1,0 +1,120 @@
+Text	El VUELO 328 DE UNITED AIRLINES fue un vuelo nacional estadounidense programado desde Denver ( Colorado ) a Honolulu , ( Hawái ) el 20 de febrero de 2021 .	El Boeing 777-222 que operaba la ruta sufrió una falla en el motor aparentemente contenida poco después del despegue , lo que resultó en un campo de escombros al menos 1 milla ( 1,6 km ) de ancho sobre el Parque Commons circundante de Broomfield en Colorado y sus alrededores .	Los testigos registraron la caída de escombros del motor utilizando cámaras de teléfonos y una cámara para salpicadero .	El vuelo aterrizó de manera segura , sin reportar nadie herido de los que estaban en la aeronave o en tierra , pero la falla del motor resultó en un incendio del motor en vuelo , daños extensos a la góndola del motor y daños menores al fuselaje .	El motor averiado era un turbofan Pratt & Whitney modelo PW4077 .
+Event	T0	vuelo	EVENT	39
+Event	T1	programado	EVENT	69
+Event	T2	operaba	EVENT	178
+Event	T3	sufrió	EVENT	194
+Event	T4	falla	EVENT	205
+Event	T5	contenida	EVENT	237
+Event	T6	despegue	EVENT	264
+Event	T7	resultó	EVENT	282
+Event	T8	registraron	EVENT	447
+Event	T9	caída	EVENT	462
+Event	T10	aterrizó	EVENT	564
+Event	T11	reportar	EVENT	596
+Event	T12	herido	EVENT	611
+Event	T13	falla	EVENT	674
+Event	T14	incendio	EVENT	704
+Event	T15	vuelo	EVENT	726
+Event	T16	daños	EVENT	774
+Event	T17	averiado	EVENT	811
+Event	T18	daños	EVENT	734
+Relation	T13	T14	CauseEffect	true	falla	incendio
+Relation	T14	T13	EffectCause	true	incendio	falla
+Relation	T14	T18	CauseEffect	true	incendio	daños
+Relation	T18	T14	EffectCause	true	daños	incendio
+Relation	T14	T16	CauseEffect	true	incendio	daños
+Relation	T16	T14	EffectCause	true	daños	incendio
+Relation	T0	T1	NoRel	true	vuelo	programado
+Relation	T0	T14	NoRel	true	vuelo	incendio
+Relation	T0	T9	NoRel	true	vuelo	caída
+Relation	T1	T0	NoRel	true	programado	vuelo
+Relation	T1	T12	NoRel	true	programado	herido
+Relation	T1	T17	NoRel	true	programado	averiado
+Relation	T1	T3	NoRel	true	programado	sufrió
+Relation	T10	T1	NoRel	true	aterrizó	programado
+Relation	T10	T11	NoRel	true	aterrizó	reportar
+Relation	T10	T12	NoRel	true	aterrizó	herido
+Relation	T10	T15	NoRel	true	aterrizó	vuelo
+Relation	T10	T2	NoRel	true	aterrizó	operaba
+Relation	T10	T5	NoRel	true	aterrizó	contenida
+Relation	T10	T6	NoRel	true	aterrizó	despegue
+Relation	T10	T9	NoRel	true	aterrizó	caída
+Relation	T11	T14	NoRel	true	reportar	incendio
+Relation	T11	T15	NoRel	true	reportar	vuelo
+Relation	T11	T18	NoRel	true	reportar	daños
+Relation	T11	T2	NoRel	true	reportar	operaba
+Relation	T11	T3	NoRel	true	reportar	sufrió
+Relation	T11	T4	NoRel	true	reportar	falla
+Relation	T11	T5	NoRel	true	reportar	contenida
+Relation	T11	T6	NoRel	true	reportar	despegue
+Relation	T11	T7	NoRel	true	reportar	resultó
+Relation	T12	T0	NoRel	true	herido	vuelo
+Relation	T12	T1	NoRel	true	herido	programado
+Relation	T12	T10	NoRel	true	herido	aterrizó
+Relation	T12	T15	NoRel	true	herido	vuelo
+Relation	T12	T2	NoRel	true	herido	operaba
+Relation	T12	T3	NoRel	true	herido	sufrió
+Relation	T12	T5	NoRel	true	herido	contenida
+Relation	T12	T6	NoRel	true	herido	despegue
+Relation	T13	T0	NoRel	true	falla	vuelo
+Relation	T13	T1	NoRel	true	falla	programado
+Relation	T13	T17	NoRel	true	falla	averiado
+Relation	T13	T6	NoRel	true	falla	despegue
+Relation	T13	T7	NoRel	true	falla	resultó
+Relation	T14	T11	NoRel	true	incendio	reportar
+Relation	T14	T4	NoRel	true	incendio	falla
+Relation	T14	T9	NoRel	true	incendio	caída
+Relation	T15	T12	NoRel	true	vuelo	herido
+Relation	T15	T16	NoRel	true	vuelo	daños
+Relation	T15	T3	NoRel	true	vuelo	sufrió
+Relation	T15	T8	NoRel	true	vuelo	registraron
+Relation	T15	T9	NoRel	true	vuelo	caída
+Relation	T16	T1	NoRel	true	daños	programado
+Relation	T16	T11	NoRel	true	daños	reportar
+Relation	T16	T12	NoRel	true	daños	herido
+Relation	T16	T13	NoRel	true	daños	falla
+Relation	T16	T2	NoRel	true	daños	operaba
+Relation	T16	T7	NoRel	true	daños	resultó
+Relation	T17	T1	NoRel	true	averiado	programado
+Relation	T17	T5	NoRel	true	averiado	contenida
+Relation	T18	T1	NoRel	true	daños	programado
+Relation	T18	T13	NoRel	true	daños	falla
+Relation	T18	T17	NoRel	true	daños	averiado
+Relation	T18	T3	NoRel	true	daños	sufrió
+Relation	T18	T5	NoRel	true	daños	contenida
+Relation	T18	T9	NoRel	true	daños	caída
+Relation	T2	T4	NoRel	true	operaba	falla
+Relation	T2	T8	NoRel	true	operaba	registraron
+Relation	T3	T0	NoRel	true	sufrió	vuelo
+Relation	T3	T1	NoRel	true	sufrió	programado
+Relation	T3	T12	NoRel	true	sufrió	herido
+Relation	T3	T13	NoRel	true	sufrió	falla
+Relation	T3	T18	NoRel	true	sufrió	daños
+Relation	T3	T7	NoRel	true	sufrió	resultó
+Relation	T3	T8	NoRel	true	sufrió	registraron
+Relation	T4	T0	NoRel	true	falla	vuelo
+Relation	T5	T0	NoRel	true	contenida	vuelo
+Relation	T5	T11	NoRel	true	contenida	reportar
+Relation	T5	T12	NoRel	true	contenida	herido
+Relation	T5	T17	NoRel	true	contenida	averiado
+Relation	T5	T8	NoRel	true	contenida	registraron
+Relation	T6	T0	NoRel	true	despegue	vuelo
+Relation	T6	T1	NoRel	true	despegue	programado
+Relation	T6	T14	NoRel	true	despegue	incendio
+Relation	T6	T3	NoRel	true	despegue	sufrió
+Relation	T6	T4	NoRel	true	despegue	falla
+Relation	T6	T5	NoRel	true	despegue	contenida
+Relation	T6	T7	NoRel	true	despegue	resultó
+Relation	T7	T0	NoRel	true	resultó	vuelo
+Relation	T7	T15	NoRel	true	resultó	vuelo
+Relation	T7	T17	NoRel	true	resultó	averiado
+Relation	T7	T9	NoRel	true	resultó	caída
+Relation	T8	T1	NoRel	true	registraron	programado
+Relation	T8	T11	NoRel	true	registraron	reportar
+Relation	T8	T14	NoRel	true	registraron	incendio
+Relation	T8	T17	NoRel	true	registraron	averiado
+Relation	T8	T18	NoRel	true	registraron	daños
+Relation	T8	T6	NoRel	true	registraron	despegue
+Relation	T9	T18	NoRel	true	caída	daños
+Relation	T9	T2	NoRel	true	caída	operaba
+Relation	T9	T7	NoRel	true	caída	resultó

@@ -1,0 +1,44 @@
+Text	Folketingets partier blev den 7. maj enige om genåbningen af Danmark i den såkaldte fase 2 .	Partierne igangsatte følgende :	- Fuld åbning af detailhandel ( 11. maj ) - Restaurations- og caféliv og lign. påbegyndes ( 18. maj ) - 6.-10. klasser i gang ( 18. maj ) - Undervisning og eksamener med krav om fysisk fremmøde .	- Hjemmearbejde i private virksomheder - Professionel idræt uden tilskuere - Ind- og udlån på biblioteker ( 18. maj ) - Idræts- og foreningsliv — udendørs - Folkekirken og trossamfund i gang ( 18. maj ) - Afslutning af forløb på efterskoler ( 18. maj ) - Zoologiske anlæg , hvor gæsterne transporterer sig i bil , kan være åbne .	Derudover fortsatte den midlertidige grænsekontrol med indrejseforbud samt de skærpede rejsevejledninger frem til den 1. juni 2020 , såfremt regeringen ikke melder noget ud inden .
+Event	T0	enige	EVENT	37
+Event	T10	melder	EVENT	808
+Event	T2	Undervisning	EVENT	265
+Event	T3	eksamener	EVENT	281
+Event	T4	Afslutning	EVENT	526
+Event	T5	forløb	EVENT	540
+Event	T7	åbne	EVENT	644
+Event	T8	fortsatte	EVENT	661
+Event	T9	grænsekontrol	EVENT	688
+Relation	T0	T2	CauseEffect	true	enige	Undervisning
+Relation	T2	T0	EffectCause	true	Undervisning	enige
+Relation	T0	T3	CauseEffect	true	enige	eksamener
+Relation	T3	T0	EffectCause	true	eksamener	enige
+Relation	T0	T4	CauseEffect	true	enige	Afslutning
+Relation	T4	T0	EffectCause	true	Afslutning	enige
+Relation	T0	T7	CauseEffect	true	enige	åbne
+Relation	T7	T0	EffectCause	true	åbne	enige
+Relation	T0	T8	CauseEffect	true	enige	fortsatte
+Relation	T8	T0	EffectCause	true	fortsatte	enige
+Relation	T0	T9	CauseEffect	true	enige	grænsekontrol
+Relation	T9	T0	EffectCause	true	grænsekontrol	enige
+Relation	T0	T10	NoRel	true	enige	melder
+Relation	T0	T5	NoRel	true	enige	forløb
+Relation	T10	T4	NoRel	true	melder	Afslutning
+Relation	T10	T9	NoRel	true	melder	grænsekontrol
+Relation	T2	T7	NoRel	true	Undervisning	åbne
+Relation	T2	T9	NoRel	true	Undervisning	grænsekontrol
+Relation	T3	T8	NoRel	true	eksamener	fortsatte
+Relation	T4	T3	NoRel	true	Afslutning	eksamener
+Relation	T4	T8	NoRel	true	Afslutning	fortsatte
+Relation	T4	T9	NoRel	true	Afslutning	grænsekontrol
+Relation	T5	T10	NoRel	true	forløb	melder
+Relation	T5	T4	NoRel	true	forløb	Afslutning
+Relation	T5	T7	NoRel	true	forløb	åbne
+Relation	T7	T10	NoRel	true	åbne	melder
+Relation	T7	T5	NoRel	true	åbne	forløb
+Relation	T7	T8	NoRel	true	åbne	fortsatte
+Relation	T8	T10	NoRel	true	fortsatte	melder
+Relation	T8	T3	NoRel	true	fortsatte	eksamener
+Relation	T8	T7	NoRel	true	fortsatte	åbne
+Relation	T9	T4	NoRel	true	grænsekontrol	Afslutning
+Relation	T9	T5	NoRel	true	grænsekontrol	forløb
+Relation	T9	T8	NoRel	true	grænsekontrol	fortsatte

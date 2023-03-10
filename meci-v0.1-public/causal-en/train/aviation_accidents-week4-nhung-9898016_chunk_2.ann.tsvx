@@ -1,0 +1,126 @@
+Text	The aircraft , which left from Posadas and was due to land in Aeroparque Jorge Newbery , Buenos Aires , was forced to divert towards Fray Bentos to avoid a storm .	Examination of the aircraft 's flight data recorder ( FDR ) revealed that shortly after the diversion occurred , the aircraft airspeed indicator began to fall to an alarmingly low indicated airspeed .	Unknown to the pilots , this was caused not directly , by a loss of power , but by ice formed inside the pitot tube , which reads the airspeed for the indicator by measuring the pressure of inflow air .	The ice obstructing the pitot tube reduced the air inflow , thus giving an erroneously low indicated airspeed .	In response to what they interpreted as a loss of engine power , the pilots gradually increased power from the engines in order to maintain airspeed ; seeing no improvement , they contacted the control tower in Ezeiza Airport and requested clearance to descend to a lower altitude .
+Event	T0	left	EVENT	21
+Event	T1	land	EVENT	54
+Event	T2	forced	EVENT	108
+Event	T3	divert	EVENT	118
+Event	T4	storm	EVENT	156
+Event	T5	Examination	EVENT	164
+Event	T6	revealed	EVENT	224
+Event	T7	occurred	EVENT	266
+Event	T8	began	EVENT	309
+Event	T9	fall	EVENT	318
+Event	T10	caused	EVENT	398
+Event	T11	loss	EVENT	425
+Event	T12	formed	EVENT	452
+Event	T13	reads	EVENT	489
+Event	T14	measuring	EVENT	529
+Event	T15	obstructing	EVENT	576
+Event	T16	reduced	EVENT	603
+Event	T17	inflow	EVENT	619
+Event	T18	giving	EVENT	633
+Event	T19	response	EVENT	683
+Event	T20	interpreted	EVENT	705
+Event	T21	loss	EVENT	722
+Event	T22	seeing	EVENT	831
+Event	T23	improvement	EVENT	841
+Event	T24	contacted	EVENT	860
+Event	T25	clearance	EVENT	920
+Event	T26	descend	EVENT	933
+Event	T27	increased	EVENT	766
+Event	T28	maintain	EVENT	811
+Relation	T4	T3	CauseEffect	true	storm	divert
+Relation	T3	T4	EffectCause	true	divert	storm
+Relation	T5	T6	CauseEffect	true	Examination	revealed
+Relation	T6	T5	EffectCause	true	revealed	Examination
+Relation	T12	T10	CauseEffect	true	formed	caused
+Relation	T10	T12	EffectCause	true	caused	formed
+Relation	T16	T18	CauseEffect	true	reduced	giving
+Relation	T18	T16	EffectCause	true	giving	reduced
+Relation	T20	T27	CauseEffect	true	interpreted	increased
+Relation	T27	T20	EffectCause	true	increased	interpreted
+Relation	T27	T28	CauseEffect	true	increased	maintain
+Relation	T28	T27	EffectCause	true	maintain	increased
+Relation	T22	T24	CauseEffect	true	seeing	contacted
+Relation	T24	T22	EffectCause	true	contacted	seeing
+Relation	T22	T25	CauseEffect	true	seeing	clearance
+Relation	T25	T22	EffectCause	true	clearance	seeing
+Relation	T0	T11	NoRel	true	left	loss
+Relation	T0	T13	NoRel	true	left	reads
+Relation	T0	T19	NoRel	true	left	response
+Relation	T0	T28	NoRel	true	left	maintain
+Relation	T1	T15	NoRel	true	land	obstructing
+Relation	T1	T8	NoRel	true	land	began
+Relation	T10	T28	NoRel	true	caused	maintain
+Relation	T10	T3	NoRel	true	caused	divert
+Relation	T10	T4	NoRel	true	caused	storm
+Relation	T10	T7	NoRel	true	caused	occurred
+Relation	T11	T26	NoRel	true	loss	descend
+Relation	T11	T27	NoRel	true	loss	increased
+Relation	T11	T4	NoRel	true	loss	storm
+Relation	T12	T27	NoRel	true	formed	increased
+Relation	T13	T21	NoRel	true	reads	loss
+Relation	T14	T1	NoRel	true	measuring	land
+Relation	T14	T15	NoRel	true	measuring	obstructing
+Relation	T14	T21	NoRel	true	measuring	loss
+Relation	T16	T24	NoRel	true	reduced	contacted
+Relation	T17	T14	NoRel	true	inflow	measuring
+Relation	T17	T18	NoRel	true	inflow	giving
+Relation	T17	T24	NoRel	true	inflow	contacted
+Relation	T17	T27	NoRel	true	inflow	increased
+Relation	T17	T9	NoRel	true	inflow	fall
+Relation	T18	T5	NoRel	true	giving	Examination
+Relation	T18	T6	NoRel	true	giving	revealed
+Relation	T19	T0	NoRel	true	response	left
+Relation	T19	T1	NoRel	true	response	land
+Relation	T2	T13	NoRel	true	forced	reads
+Relation	T2	T9	NoRel	true	forced	fall
+Relation	T20	T12	NoRel	true	interpreted	formed
+Relation	T20	T13	NoRel	true	interpreted	reads
+Relation	T20	T2	NoRel	true	interpreted	forced
+Relation	T20	T3	NoRel	true	interpreted	divert
+Relation	T20	T5	NoRel	true	interpreted	Examination
+Relation	T21	T11	NoRel	true	loss	loss
+Relation	T21	T12	NoRel	true	loss	formed
+Relation	T21	T16	NoRel	true	loss	reduced
+Relation	T21	T8	NoRel	true	loss	began
+Relation	T22	T11	NoRel	true	seeing	loss
+Relation	T22	T21	NoRel	true	seeing	loss
+Relation	T22	T8	NoRel	true	seeing	began
+Relation	T23	T13	NoRel	true	improvement	reads
+Relation	T24	T11	NoRel	true	contacted	loss
+Relation	T24	T13	NoRel	true	contacted	reads
+Relation	T24	T25	NoRel	true	contacted	clearance
+Relation	T24	T9	NoRel	true	contacted	fall
+Relation	T25	T17	NoRel	true	clearance	inflow
+Relation	T25	T19	NoRel	true	clearance	response
+Relation	T25	T21	NoRel	true	clearance	loss
+Relation	T25	T28	NoRel	true	clearance	maintain
+Relation	T25	T6	NoRel	true	clearance	revealed
+Relation	T25	T9	NoRel	true	clearance	fall
+Relation	T26	T10	NoRel	true	descend	caused
+Relation	T26	T17	NoRel	true	descend	inflow
+Relation	T27	T12	NoRel	true	increased	formed
+Relation	T27	T2	NoRel	true	increased	forced
+Relation	T28	T10	NoRel	true	maintain	caused
+Relation	T28	T12	NoRel	true	maintain	formed
+Relation	T28	T16	NoRel	true	maintain	reduced
+Relation	T28	T2	NoRel	true	maintain	forced
+Relation	T28	T5	NoRel	true	maintain	Examination
+Relation	T3	T18	NoRel	true	divert	giving
+Relation	T3	T19	NoRel	true	divert	response
+Relation	T3	T6	NoRel	true	divert	revealed
+Relation	T4	T13	NoRel	true	storm	reads
+Relation	T4	T24	NoRel	true	storm	contacted
+Relation	T4	T8	NoRel	true	storm	began
+Relation	T5	T13	NoRel	true	Examination	reads
+Relation	T5	T2	NoRel	true	Examination	forced
+Relation	T6	T1	NoRel	true	revealed	land
+Relation	T6	T14	NoRel	true	revealed	measuring
+Relation	T7	T23	NoRel	true	occurred	improvement
+Relation	T7	T24	NoRel	true	occurred	contacted
+Relation	T8	T11	NoRel	true	began	loss
+Relation	T8	T20	NoRel	true	began	interpreted
+Relation	T8	T23	NoRel	true	began	improvement
+Relation	T8	T26	NoRel	true	began	descend
+Relation	T8	T7	NoRel	true	began	occurred
+Relation	T9	T23	NoRel	true	fall	improvement

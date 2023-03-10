@@ -1,0 +1,59 @@
+Text	TWA FLIGHT 541 was a domestic passenger flight hijacked in the United States by Robin Oswald in an attempt to free Garrett Brock Trapnell , who was a prisoner at the United States Penitentiary , Marion ( USP Marion ) .	The hijacking was successfully resolved when a Federal Bureau of Investigation ( F.B.I. ) negotiating team had her release the passengers and then surrender .	On January 29 , 1972 , Garrett B. Trapnell hijacked a TWA plane flying from Los Angeles to New York .	He demanded $ 306,800 ( ) , the release of the imprisoned Angela Davis and a conversation with President Nixon .	The hijacking was resolved when Trapnell was disarmed after being shot by an F.B.I. agent who pretended to be a negotiator .
+Event	T0	hijacked	EVENT	47
+Event	T1	attempt	EVENT	99
+Event	T2	free	EVENT	110
+Event	T3	hijacking	EVENT	223
+Event	T4	resolved	EVENT	250
+Event	T5	release	EVENT	334
+Event	T6	surrender	EVENT	366
+Event	T7	hijacked	EVENT	421
+Event	T8	flying	EVENT	442
+Event	T9	demanded	EVENT	483
+Event	T10	release	EVENT	512
+Event	T11	imprisoned	EVENT	527
+Event	T12	conversation	EVENT	557
+Event	T13	hijacking	EVENT	597
+Event	T14	resolved	EVENT	611
+Event	T15	disarmed	EVENT	638
+Event	T16	shot	EVENT	659
+Event	T17	pretended	EVENT	687
+Relation	T5	T4	CauseEffect	true	release	resolved
+Relation	T4	T5	EffectCause	true	resolved	release
+Relation	T2	T0	CauseEffect	true	free	hijacked
+Relation	T0	T2	EffectCause	true	hijacked	free
+Relation	T15	T14	CauseEffect	true	disarmed	resolved
+Relation	T14	T15	EffectCause	true	resolved	disarmed
+Relation	T16	T15	CauseEffect	true	shot	disarmed
+Relation	T15	T16	EffectCause	true	disarmed	shot
+Relation	T7	T9	CauseEffect	true	hijacked	demanded
+Relation	T9	T7	EffectCause	true	demanded	hijacked
+Relation	T7	T10	CauseEffect	true	hijacked	release
+Relation	T10	T7	EffectCause	true	release	hijacked
+Relation	T7	T12	CauseEffect	true	hijacked	conversation
+Relation	T12	T7	EffectCause	true	conversation	hijacked
+Relation	T0	T3	NoRel	true	hijacked	hijacking
+Relation	T0	T7	NoRel	true	hijacked	hijacked
+Relation	T1	T13	NoRel	true	attempt	hijacking
+Relation	T1	T15	NoRel	true	attempt	disarmed
+Relation	T10	T16	NoRel	true	release	shot
+Relation	T10	T4	NoRel	true	release	resolved
+Relation	T10	T8	NoRel	true	release	flying
+Relation	T11	T0	NoRel	true	imprisoned	hijacked
+Relation	T11	T6	NoRel	true	imprisoned	surrender
+Relation	T12	T16	NoRel	true	conversation	shot
+Relation	T14	T9	NoRel	true	resolved	demanded
+Relation	T17	T5	NoRel	true	pretended	release
+Relation	T2	T6	NoRel	true	free	surrender
+Relation	T2	T9	NoRel	true	free	demanded
+Relation	T3	T1	NoRel	true	hijacking	attempt
+Relation	T3	T10	NoRel	true	hijacking	release
+Relation	T3	T15	NoRel	true	hijacking	disarmed
+Relation	T4	T3	NoRel	true	resolved	hijacking
+Relation	T6	T2	NoRel	true	surrender	free
+Relation	T6	T4	NoRel	true	surrender	resolved
+Relation	T7	T11	NoRel	true	hijacked	imprisoned
+Relation	T7	T13	NoRel	true	hijacked	hijacking
+Relation	T7	T3	NoRel	true	hijacked	hijacking
+Relation	T8	T11	NoRel	true	flying	imprisoned
+Relation	T8	T12	NoRel	true	flying	conversation
+Relation	T8	T6	NoRel	true	flying	surrender

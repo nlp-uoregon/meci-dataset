@@ -1,0 +1,54 @@
+Text	var den sidste store japanske flådeoperation under Stillehavskrigen i 2. verdenskrig .	Operationen er også kendt som OPERATION _HEAVEN_ONE __( ) på engelsk og TEN-ICHI-GOU ( ) på japansk .	I april 1945 satte det japanske slagskib _ Yamato _ ( det største slagskib i verden ) , sammen med ni andre japanske krigsskibe , ud fra Japan i et bevidst selvmordstogt mod allierede styrker , der var i kamp i slaget om Okinawa .	Den japanske styrke blev angrebet , stoppet og næsten fuldstændigt nedkæmpet af amerikanske hangarskibsbaserede fly , før styrken nåede til Okinawa .	_ Yamato _ og fem andre japanske krigsskibe blev sænket .
+Event	T0	flådeoperation	EVENT	30
+Event	T1	Operationen	EVENT	87
+Event	T10	nåede	EVENT	550
+Event	T2	kendt	EVENT	107
+Event	T3	satte	EVENT	202
+Event	T5	kamp	EVENT	393
+Event	T6	slaget	EVENT	400
+Event	T7	angrebet	EVENT	445
+Event	T8	stoppet	EVENT	456
+Event	T9	nedkæmpet	EVENT	487
+Relation	T7	T8	CauseEffect	true	angrebet	stoppet
+Relation	T8	T7	EffectCause	true	stoppet	angrebet
+Relation	T8	T9	CauseEffect	true	stoppet	nedkæmpet
+Relation	T9	T8	EffectCause	true	nedkæmpet	stoppet
+Relation	T0	T1	NoRel	true	flådeoperation	Operationen
+Relation	T0	T2	NoRel	true	flådeoperation	kendt
+Relation	T0	T3	NoRel	true	flådeoperation	satte
+Relation	T0	T7	NoRel	true	flådeoperation	angrebet
+Relation	T0	T8	NoRel	true	flådeoperation	stoppet
+Relation	T1	T6	NoRel	true	Operationen	slaget
+Relation	T1	T8	NoRel	true	Operationen	stoppet
+Relation	T10	T3	NoRel	true	nåede	satte
+Relation	T10	T8	NoRel	true	nåede	stoppet
+Relation	T2	T10	NoRel	true	kendt	nåede
+Relation	T2	T3	NoRel	true	kendt	satte
+Relation	T3	T0	NoRel	true	satte	flådeoperation
+Relation	T3	T1	NoRel	true	satte	Operationen
+Relation	T3	T10	NoRel	true	satte	nåede
+Relation	T3	T2	NoRel	true	satte	kendt
+Relation	T3	T7	NoRel	true	satte	angrebet
+Relation	T5	T0	NoRel	true	kamp	flådeoperation
+Relation	T5	T2	NoRel	true	kamp	kendt
+Relation	T5	T3	NoRel	true	kamp	satte
+Relation	T5	T8	NoRel	true	kamp	stoppet
+Relation	T6	T10	NoRel	true	slaget	nåede
+Relation	T6	T3	NoRel	true	slaget	satte
+Relation	T6	T5	NoRel	true	slaget	kamp
+Relation	T6	T7	NoRel	true	slaget	angrebet
+Relation	T6	T9	NoRel	true	slaget	nedkæmpet
+Relation	T7	T0	NoRel	true	angrebet	flådeoperation
+Relation	T7	T1	NoRel	true	angrebet	Operationen
+Relation	T7	T3	NoRel	true	angrebet	satte
+Relation	T7	T5	NoRel	true	angrebet	kamp
+Relation	T7	T9	NoRel	true	angrebet	nedkæmpet
+Relation	T8	T0	NoRel	true	stoppet	flådeoperation
+Relation	T8	T1	NoRel	true	stoppet	Operationen
+Relation	T8	T10	NoRel	true	stoppet	nåede
+Relation	T8	T5	NoRel	true	stoppet	kamp
+Relation	T9	T0	NoRel	true	nedkæmpet	flådeoperation
+Relation	T9	T1	NoRel	true	nedkæmpet	Operationen
+Relation	T9	T2	NoRel	true	nedkæmpet	kendt
+Relation	T9	T6	NoRel	true	nedkæmpet	slaget
+Relation	T9	T7	NoRel	true	nedkæmpet	angrebet

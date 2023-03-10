@@ -1,0 +1,25 @@
+Text	ٹرین ریل حادثہ 20 نومبر 2016 کو پیش آیا جب بھارتی ریلوے کی اندور – راجندر نگر ایکسپریس 19321 ، ایک شیڈول ٹرین جو اندور سے پٹنہ جا رہی تھی ، پکھرایاں ، کانپور ، بھارت کے قریب پٹڑی سے اتر گئی ، جس کے نتیجے میں 145 افراد جاں بحق اور 150 سے زائد زخمی ہو گئے ۔	یہ اکیسویں صدی میں بھارتی تاریخ کا دوسرا بڑا ریل کا حادثہ ہے ۔	اسٹیشن پہنچ گئے روانہ کلومیٹر -------------------_--------------------_-------_---------	اندور جنکشن_________-____________________14 :00 0___..._________________...__________________..._____.. اورائی 00: 43 00: 45___668.5 ( پکھرایاں ) link=| alt=|17x17px کانپور مرکزی 04 : 00 04: 05___774.9___..._________________...__________________..._____... راجندر نگر ٹرمینل 17: 05 -_______1361.8	اندور – راجندر نگر ایکسپریس ہر دو ہفتوں میں اندور جنکشن ریلوے اسٹیشن اور راجندر نگر ٹرمینل ، پٹنہ کے درمیان سفر کرتی تھی ۔
+Event	T0	حادثہ	EVENT	9
+Event	T10	جاں بحق	EVENT	218
+Event	T2	زخمی	EVENT	242
+Event	T3	پہنچ	EVENT	326
+Event	T4	سفر	EVENT	813
+Event	T5	حادثہ	EVENT	308
+Event	T6	روانہ	EVENT	335
+Relation	T0	T10	CauseEffect	true	حادثہ	جاں بحق
+Relation	T10	T0	EffectCause	true	جاں بحق	حادثہ
+Relation	T0	T2	CauseEffect	true	حادثہ	زخمی
+Relation	T2	T0	EffectCause	true	زخمی	حادثہ
+Relation	T5	T2	CauseEffect	true	حادثہ	زخمی
+Relation	T2	T5	EffectCause	true	زخمی	حادثہ
+Relation	T5	T10	CauseEffect	true	حادثہ	جاں بحق
+Relation	T10	T5	EffectCause	true	جاں بحق	حادثہ
+Relation	T0	T4	NoRel	true	حادثہ	سفر
+Relation	T3	T0	NoRel	true	پہنچ	حادثہ
+Relation	T3	T10	NoRel	true	پہنچ	جاں بحق
+Relation	T3	T6	NoRel	true	پہنچ	روانہ
+Relation	T4	T5	NoRel	true	سفر	حادثہ
+Relation	T5	T0	NoRel	true	حادثہ	حادثہ
+Relation	T6	T0	NoRel	true	روانہ	حادثہ
+Relation	T6	T3	NoRel	true	روانہ	پہنچ
+Relation	T6	T5	NoRel	true	روانہ	حادثہ

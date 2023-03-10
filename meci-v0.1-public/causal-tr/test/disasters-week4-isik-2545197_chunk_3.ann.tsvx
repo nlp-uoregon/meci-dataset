@@ -1,0 +1,48 @@
+Text	Habertürk Ankara Temsilcisi Bülent Aydemir , Van’da 38 kişinin yaşamını yitirdiği çığ felaketleri hakkında konuşurken Cumhurbaşkanı Başdanışmanı Gülşen Orhan’ın “ çığ konusunda uyarıldığını ancak yine de bölgeye iş makinelerini alıp gittiğini ” öne sürdü .	Orhan ise iddiaları yalanladı , bölgeye ilk çığ düştüğünde Ankara’da olduğunu söyledi .	[ http : / / www. independent turkish . com / node / 128396 / haber / cumhurbaşkanı - danışmanı - çığ - konusunda - uyarılmıştı - iddiasına - gülşen - orhandan - yanıt .	“ Habertürk Ankara Temsilcisi Aydemir : Cumhurbaşkanı Danışmanı , Çığ Konusunda Uyarılmıştı .	” ] Independent Türkçe .
+Event	T0	yitirdiği	EVENT	72
+Event	T1	felaketleri	EVENT	86
+Event	T2	sürdü	EVENT	249
+Event	T3	yalanladı	EVENT	277
+Event	T4	söyledi	EVENT	335
+Event	T5	konuşurken	EVENT	107
+Event	T6	uyarılmıştı	EVENT	461
+Event	T7	iddiasına	EVENT	475
+Event	T8	yanıt	EVENT	507
+Relation	T1	T0	CauseEffect	true	felaketleri	yitirdiği
+Relation	T0	T1	EffectCause	true	yitirdiği	felaketleri
+Relation	T1	T5	CauseEffect	true	felaketleri	konuşurken
+Relation	T5	T1	EffectCause	true	konuşurken	felaketleri
+Relation	T5	T2	CauseEffect	true	konuşurken	sürdü
+Relation	T2	T5	EffectCause	true	sürdü	konuşurken
+Relation	T2	T3	CauseEffect	true	sürdü	yalanladı
+Relation	T3	T2	EffectCause	true	yalanladı	sürdü
+Relation	T7	T8	CauseEffect	true	iddiasına	yanıt
+Relation	T8	T7	EffectCause	true	yanıt	iddiasına
+Relation	T0	T4	NoRel	true	yitirdiği	söyledi
+Relation	T1	T4	NoRel	true	felaketleri	söyledi
+Relation	T1	T6	NoRel	true	felaketleri	uyarılmıştı
+Relation	T1	T7	NoRel	true	felaketleri	iddiasına
+Relation	T1	T8	NoRel	true	felaketleri	yanıt
+Relation	T2	T0	NoRel	true	sürdü	yitirdiği
+Relation	T2	T1	NoRel	true	sürdü	felaketleri
+Relation	T2	T4	NoRel	true	sürdü	söyledi
+Relation	T2	T7	NoRel	true	sürdü	iddiasına
+Relation	T2	T8	NoRel	true	sürdü	yanıt
+Relation	T3	T0	NoRel	true	yalanladı	yitirdiği
+Relation	T3	T8	NoRel	true	yalanladı	yanıt
+Relation	T4	T0	NoRel	true	söyledi	yitirdiği
+Relation	T4	T3	NoRel	true	söyledi	yalanladı
+Relation	T4	T5	NoRel	true	söyledi	konuşurken
+Relation	T4	T7	NoRel	true	söyledi	iddiasına
+Relation	T4	T8	NoRel	true	söyledi	yanıt
+Relation	T5	T3	NoRel	true	konuşurken	yalanladı
+Relation	T5	T4	NoRel	true	konuşurken	söyledi
+Relation	T5	T7	NoRel	true	konuşurken	iddiasına
+Relation	T6	T1	NoRel	true	uyarılmıştı	felaketleri
+Relation	T6	T4	NoRel	true	uyarılmıştı	söyledi
+Relation	T6	T8	NoRel	true	uyarılmıştı	yanıt
+Relation	T7	T1	NoRel	true	iddiasına	felaketleri
+Relation	T7	T2	NoRel	true	iddiasına	sürdü
+Relation	T8	T0	NoRel	true	yanıt	yitirdiği
+Relation	T8	T3	NoRel	true	yanıt	yalanladı
+Relation	T8	T4	NoRel	true	yanıt	söyledi

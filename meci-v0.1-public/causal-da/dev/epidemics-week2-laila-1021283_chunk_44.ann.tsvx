@@ -1,0 +1,46 @@
+Text	Fra den 12. marts begyndte man at teste ældre , personer der indlægges på hospitaler og sygehuspersonale .	Medio marts havde ca. 2000 forskere underskrevet en erklæring , der opfordrede regeringen til at indføre skrappe restriktioner .	---------------------------------------------------___Rød ( Fraråder alle rejser til ) Hele verden Orange ( Fraråder alle_ikke-nødvendige rejser til ) Gul ( Vær ekstra forsigtig ) ---------------------------------------------------	Udenrigsministeriets rejsevejledninger har ændret sig gennem tiden som følge af COVID-19-udbruddet .	Per 10. marts 2020 var rejsevejledningen " rød " for Hubei , hele Iran , de norditalienske regioner Piemonte , Lombardiet , Emilia-Romagna , Aostadalen , Veneto og Marche , det østrigske skisportssted Ischgl samt den sydkoreanske by Daegu og den sydkoreanske provins Gyeongbuk , hvilket vil sige , at Udenrigsministeriet frarådede alle rejser dertil .
+Event	T0	teste	EVENT	34
+Event	T1	indlægges	EVENT	61
+Event	T10	rejser	EVENT	905
+Event	T2	underskrevet	EVENT	143
+Event	T3	opfordrede	EVENT	175
+Event	T4	indføre	EVENT	204
+Event	T5	restriktioner	EVENT	220
+Event	T6	rejser	EVENT	310
+Event	T7	rejser	EVENT	374
+Event	T8	COVID-19-udbruddet	EVENT	548
+Event	T9	frarådede	EVENT	890
+Relation	T8	T9	CauseEffect	true	COVID-19-udbruddet	frarådede
+Relation	T9	T8	EffectCause	true	frarådede	COVID-19-udbruddet
+Relation	T8	T2	CauseEffect	true	COVID-19-udbruddet	underskrevet
+Relation	T2	T8	EffectCause	true	underskrevet	COVID-19-udbruddet
+Relation	T8	T5	CauseEffect	true	COVID-19-udbruddet	restriktioner
+Relation	T5	T8	EffectCause	true	restriktioner	COVID-19-udbruddet
+Relation	T8	T4	CauseEffect	true	COVID-19-udbruddet	indføre
+Relation	T4	T8	EffectCause	true	indføre	COVID-19-udbruddet
+Relation	T8	T0	CauseEffect	true	COVID-19-udbruddet	teste
+Relation	T0	T8	EffectCause	true	teste	COVID-19-udbruddet
+Relation	T0	T4	NoRel	true	teste	indføre
+Relation	T1	T4	NoRel	true	indlægges	indføre
+Relation	T1	T8	NoRel	true	indlægges	COVID-19-udbruddet
+Relation	T1	T9	NoRel	true	indlægges	frarådede
+Relation	T10	T2	NoRel	true	rejser	underskrevet
+Relation	T10	T4	NoRel	true	rejser	indføre
+Relation	T10	T5	NoRel	true	rejser	restriktioner
+Relation	T2	T3	NoRel	true	underskrevet	opfordrede
+Relation	T3	T0	NoRel	true	opfordrede	teste
+Relation	T3	T1	NoRel	true	opfordrede	indlægges
+Relation	T3	T7	NoRel	true	opfordrede	rejser
+Relation	T4	T10	NoRel	true	indføre	rejser
+Relation	T4	T6	NoRel	true	indføre	rejser
+Relation	T5	T2	NoRel	true	restriktioner	underskrevet
+Relation	T5	T9	NoRel	true	restriktioner	frarådede
+Relation	T6	T1	NoRel	true	rejser	indlægges
+Relation	T6	T4	NoRel	true	rejser	indføre
+Relation	T7	T10	NoRel	true	rejser	rejser
+Relation	T7	T6	NoRel	true	rejser	rejser
+Relation	T7	T8	NoRel	true	rejser	COVID-19-udbruddet
+Relation	T7	T9	NoRel	true	rejser	frarådede
+Relation	T8	T7	NoRel	true	COVID-19-udbruddet	rejser
+Relation	T9	T2	NoRel	true	frarådede	underskrevet
+Relation	T9	T7	NoRel	true	frarådede	rejser

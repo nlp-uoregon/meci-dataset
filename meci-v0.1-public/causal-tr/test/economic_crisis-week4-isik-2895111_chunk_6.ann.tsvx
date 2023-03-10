@@ -1,0 +1,21 @@
+Text	Bundan sonra [ avukatın ] yardımını reddettiler .	"	Nikolay ve Elena Çavuşesku'nun duruşması çok kısa ( yaklaşık bir saat ) sürdü .	Çavuşesku , mahkemenin 1965 Romanya Anayasasına aykırı olduğunu ve yalnızca Büyük Millet Meclisinin kendisini görevden alma yetkisine sahip olduğunu iddia ederek kendini savundu .	Bunun Sovyetler tarafından düzenlenen bir darbe olduğunu savundu .
+Event	T0	duruşması	EVENT	83
+Event	T1	sürdü	EVENT	124
+Event	T3	savundu	EVENT	302
+Event	T6	savundu	EVENT	369
+Event	T7	reddettiler	EVENT	36
+Event	T2	iddia	EVENT	281
+Relation	T2	T3	CauseEffect	true	iddia	savundu
+Relation	T3	T2	EffectCause	true	savundu	iddia
+Relation	T0	T7	NoRel	true	duruşması	reddettiler
+Relation	T1	T3	NoRel	true	sürdü	savundu
+Relation	T1	T7	NoRel	true	sürdü	reddettiler
+Relation	T2	T0	NoRel	true	iddia	duruşması
+Relation	T2	T1	NoRel	true	iddia	sürdü
+Relation	T3	T1	NoRel	true	savundu	sürdü
+Relation	T3	T7	NoRel	true	savundu	reddettiler
+Relation	T6	T0	NoRel	true	savundu	duruşması
+Relation	T6	T1	NoRel	true	savundu	sürdü
+Relation	T7	T0	NoRel	true	reddettiler	duruşması
+Relation	T7	T1	NoRel	true	reddettiler	sürdü
+Relation	T7	T2	NoRel	true	reddettiler	iddia

@@ -1,0 +1,74 @@
+Text	Ved kollisionen kom 9 passagerer lettere til skade .	DSB's havarigruppe konkluderede ifølge en senere pressemeddelelse , at is og sne i bremsesystemet var årsag til kollisionen .	Bremsevirkningen var nedsat på grund af sne mellem bremseskiver og bremsebakker ( men bremsesystemet fungerede altså ) .	Havarigruppen kunne ikke fastslå om uheldet kunne være undgået , hvis lokomotivføreren havde trukket bremsen an under kørsel mellem Sjælør og Ishøj , som det var foreskrevet i betjeningsvejledningen .	
+Event	T0	kom	EVENT	16
+Event	T1	skade	EVENT	45
+Event	T10	trukket	EVENT	393
+Event	T11	kørsel	EVENT	418
+Event	T12	foreskrevet	EVENT	462
+Event	T2	pressemeddelelse	EVENT	102
+Event	T3	kollisionen	EVENT	165
+Event	T4	Bremsevirkningen	EVENT	179
+Event	T5	sne	EVENT	219
+Event	T6	fungerede	EVENT	280
+Event	T7	fastslå	EVENT	325
+Event	T8	uheldet	EVENT	336
+Event	T9	undgået	EVENT	355
+Relation	T3	T1	CauseEffect	true	kollisionen	skade
+Relation	T1	T3	EffectCause	true	skade	kollisionen
+Relation	T5	T4	CauseEffect	true	sne	Bremsevirkningen
+Relation	T4	T5	EffectCause	true	Bremsevirkningen	sne
+Relation	T4	T3	CauseEffect	true	Bremsevirkningen	kollisionen
+Relation	T3	T4	EffectCause	true	kollisionen	Bremsevirkningen
+Relation	T0	T3	NoRel	true	kom	kollisionen
+Relation	T0	T5	NoRel	true	kom	sne
+Relation	T0	T7	NoRel	true	kom	fastslå
+Relation	T1	T11	NoRel	true	skade	kørsel
+Relation	T1	T12	NoRel	true	skade	foreskrevet
+Relation	T1	T2	NoRel	true	skade	pressemeddelelse
+Relation	T1	T4	NoRel	true	skade	Bremsevirkningen
+Relation	T1	T5	NoRel	true	skade	sne
+Relation	T1	T6	NoRel	true	skade	fungerede
+Relation	T1	T8	NoRel	true	skade	uheldet
+Relation	T10	T1	NoRel	true	trukket	skade
+Relation	T10	T2	NoRel	true	trukket	pressemeddelelse
+Relation	T10	T3	NoRel	true	trukket	kollisionen
+Relation	T10	T6	NoRel	true	trukket	fungerede
+Relation	T10	T8	NoRel	true	trukket	uheldet
+Relation	T11	T0	NoRel	true	kørsel	kom
+Relation	T11	T1	NoRel	true	kørsel	skade
+Relation	T11	T12	NoRel	true	kørsel	foreskrevet
+Relation	T11	T4	NoRel	true	kørsel	Bremsevirkningen
+Relation	T11	T9	NoRel	true	kørsel	undgået
+Relation	T12	T2	NoRel	true	foreskrevet	pressemeddelelse
+Relation	T12	T3	NoRel	true	foreskrevet	kollisionen
+Relation	T12	T6	NoRel	true	foreskrevet	fungerede
+Relation	T12	T9	NoRel	true	foreskrevet	undgået
+Relation	T2	T0	NoRel	true	pressemeddelelse	kom
+Relation	T2	T4	NoRel	true	pressemeddelelse	Bremsevirkningen
+Relation	T2	T6	NoRel	true	pressemeddelelse	fungerede
+Relation	T2	T7	NoRel	true	pressemeddelelse	fastslå
+Relation	T2	T8	NoRel	true	pressemeddelelse	uheldet
+Relation	T3	T12	NoRel	true	kollisionen	foreskrevet
+Relation	T3	T2	NoRel	true	kollisionen	pressemeddelelse
+Relation	T3	T6	NoRel	true	kollisionen	fungerede
+Relation	T3	T8	NoRel	true	kollisionen	uheldet
+Relation	T4	T6	NoRel	true	Bremsevirkningen	fungerede
+Relation	T4	T7	NoRel	true	Bremsevirkningen	fastslå
+Relation	T5	T10	NoRel	true	sne	trukket
+Relation	T5	T11	NoRel	true	sne	kørsel
+Relation	T5	T7	NoRel	true	sne	fastslå
+Relation	T5	T9	NoRel	true	sne	undgået
+Relation	T6	T2	NoRel	true	fungerede	pressemeddelelse
+Relation	T6	T5	NoRel	true	fungerede	sne
+Relation	T6	T7	NoRel	true	fungerede	fastslå
+Relation	T7	T0	NoRel	true	fastslå	kom
+Relation	T7	T1	NoRel	true	fastslå	skade
+Relation	T7	T10	NoRel	true	fastslå	trukket
+Relation	T7	T12	NoRel	true	fastslå	foreskrevet
+Relation	T7	T3	NoRel	true	fastslå	kollisionen
+Relation	T7	T9	NoRel	true	fastslå	undgået
+Relation	T8	T0	NoRel	true	uheldet	kom
+Relation	T8	T11	NoRel	true	uheldet	kørsel
+Relation	T8	T2	NoRel	true	uheldet	pressemeddelelse
+Relation	T8	T6	NoRel	true	uheldet	fungerede
+Relation	T9	T0	NoRel	true	undgået	kom
+Relation	T9	T12	NoRel	true	undgået	foreskrevet

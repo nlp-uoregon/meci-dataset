@@ -1,0 +1,50 @@
+Text	El maquinista de la locomotora del tren 11 a Pichilemu , José Pino González , señaló haber visualizado luz verde en la señal de entrada de la estación .	De la misma manera , la niebla le impidió notar la presencia del tren 3 detenido en la estación , pudiendo hacer nada para evitar la colisión .	A diferencia de accidentes anteriores y posteriores , los servicios hospitalarios llegaron al instante , dada la cercanía de la estación con el Hospital Parroquial de San Bernardo .	Debido a la gran cantidad de heridos , se enviaron en ambulancias al Hospital Barros Luco-Trudeau , Hospital Arriaran , Jose Joaquin Aguirre , Posta 2 y a la Posta Central de la Asistencia Pública .	También , llegaron para prestar su ayuda bomberos , carabineros , voluntarios de la Cruz Roja Chilena y soldados de la Escuela de Infantería .
+Event	T0	señaló	EVENT	78
+Event	T1	notar	EVENT	195
+Event	T2	presencia	EVENT	204
+Event	T3	detenido	EVENT	225
+Event	T4	hacer	EVENT	260
+Event	T5	colisión	EVENT	286
+Event	T6	accidentes	EVENT	313
+Event	T7	llegaron	EVENT	379
+Event	T8	heridos	EVENT	508
+Event	T9	prestar	EVENT	702
+Event	T10	ayuda	EVENT	713
+Event	T11	enviaron	EVENT	521
+Relation	T0	T3	NoRel	true	señaló	detenido
+Relation	T0	T5	NoRel	true	señaló	colisión
+Relation	T0	T9	NoRel	true	señaló	prestar
+Relation	T1	T11	NoRel	true	notar	enviaron
+Relation	T1	T6	NoRel	true	notar	accidentes
+Relation	T10	T1	NoRel	true	ayuda	notar
+Relation	T10	T4	NoRel	true	ayuda	hacer
+Relation	T10	T7	NoRel	true	ayuda	llegaron
+Relation	T11	T1	NoRel	true	enviaron	notar
+Relation	T11	T3	NoRel	true	enviaron	detenido
+Relation	T2	T10	NoRel	true	presencia	ayuda
+Relation	T2	T11	NoRel	true	presencia	enviaron
+Relation	T2	T3	NoRel	true	presencia	detenido
+Relation	T2	T5	NoRel	true	presencia	colisión
+Relation	T3	T4	NoRel	true	detenido	hacer
+Relation	T3	T5	NoRel	true	detenido	colisión
+Relation	T4	T0	NoRel	true	hacer	señaló
+Relation	T4	T11	NoRel	true	hacer	enviaron
+Relation	T4	T5	NoRel	true	hacer	colisión
+Relation	T4	T8	NoRel	true	hacer	heridos
+Relation	T5	T4	NoRel	true	colisión	hacer
+Relation	T5	T7	NoRel	true	colisión	llegaron
+Relation	T5	T8	NoRel	true	colisión	heridos
+Relation	T6	T3	NoRel	true	accidentes	detenido
+Relation	T6	T5	NoRel	true	accidentes	colisión
+Relation	T7	T1	NoRel	true	llegaron	notar
+Relation	T7	T10	NoRel	true	llegaron	ayuda
+Relation	T7	T3	NoRel	true	llegaron	detenido
+Relation	T7	T4	NoRel	true	llegaron	hacer
+Relation	T7	T6	NoRel	true	llegaron	accidentes
+Relation	T7	T8	NoRel	true	llegaron	heridos
+Relation	T8	T1	NoRel	true	heridos	notar
+Relation	T9	T10	NoRel	true	prestar	ayuda
+Relation	T9	T11	NoRel	true	prestar	enviaron
+Relation	T9	T2	NoRel	true	prestar	presencia
+Relation	T9	T3	NoRel	true	prestar	detenido
+Relation	T9	T4	NoRel	true	prestar	hacer

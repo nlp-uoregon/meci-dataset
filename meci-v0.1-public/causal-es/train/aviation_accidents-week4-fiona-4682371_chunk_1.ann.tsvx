@@ -1,0 +1,101 @@
+Text	Este aparato había sido fabricado por el constructor estadounidense Sikorsky Aircraft Corporation , en el año 1966 , con número de fabricante 61299 .	Se entregó a la compañía noruega Helikopter Service ese mismo año , que registró la aeronave con la matrícula _ LN-ORE _ .	En el año 1992 , esta aeronave fue transferida a Helicsa , identificándose en el registro de la Dirección General de Aviación Civil con la matrícula EC-FJJ .	Después del accidente , la Comisión de Investigación de Accidentes e Incidentes de Aviación Civil ( CIAIAC ) comenzó una investigación para determinar las causas que lo originaron .	En septiembre del 2009 , la CIAIAC , concluyó la investigación con un Informe en el que no se establecía ninguna causa ( ni siquiera probable ) del accidente .
+Event	T0	fabricado	EVENT	24
+Event	T1	entregó	EVENT	153
+Event	T2	registró	EVENT	222
+Event	T3	transferida	EVENT	308
+Event	T4	identificándose	EVENT	332
+Event	T5	accidente	EVENT	443
+Event	T6	Investigación	EVENT	470
+Event	T7	Incidentes	EVENT	500
+Event	T8	comenzó	EVENT	540
+Event	T9	investigación	EVENT	552
+Event	T10	determinar	EVENT	571
+Event	T11	originaron	EVENT	600
+Event	T12	concluyó	EVENT	650
+Event	T13	investigación	EVENT	662
+Event	T14	establecía	EVENT	707
+Event	T15	accidente	EVENT	761
+Relation	T5	T9	CauseEffect	true	accidente	investigación
+Relation	T9	T5	EffectCause	true	investigación	accidente
+Relation	T0	T10	NoRel	true	fabricado	determinar
+Relation	T0	T12	NoRel	true	fabricado	concluyó
+Relation	T0	T7	NoRel	true	fabricado	Incidentes
+Relation	T1	T11	NoRel	true	entregó	originaron
+Relation	T1	T14	NoRel	true	entregó	establecía
+Relation	T1	T3	NoRel	true	entregó	transferida
+Relation	T10	T1	NoRel	true	determinar	entregó
+Relation	T10	T13	NoRel	true	determinar	investigación
+Relation	T10	T14	NoRel	true	determinar	establecía
+Relation	T10	T15	NoRel	true	determinar	accidente
+Relation	T10	T4	NoRel	true	determinar	identificándose
+Relation	T10	T5	NoRel	true	determinar	accidente
+Relation	T10	T7	NoRel	true	determinar	Incidentes
+Relation	T10	T8	NoRel	true	determinar	comenzó
+Relation	T10	T9	NoRel	true	determinar	investigación
+Relation	T11	T0	NoRel	true	originaron	fabricado
+Relation	T11	T13	NoRel	true	originaron	investigación
+Relation	T11	T14	NoRel	true	originaron	establecía
+Relation	T11	T5	NoRel	true	originaron	accidente
+Relation	T11	T7	NoRel	true	originaron	Incidentes
+Relation	T11	T9	NoRel	true	originaron	investigación
+Relation	T12	T1	NoRel	true	concluyó	entregó
+Relation	T12	T7	NoRel	true	concluyó	Incidentes
+Relation	T13	T12	NoRel	true	investigación	concluyó
+Relation	T13	T14	NoRel	true	investigación	establecía
+Relation	T13	T3	NoRel	true	investigación	transferida
+Relation	T13	T4	NoRel	true	investigación	identificándose
+Relation	T13	T6	NoRel	true	investigación	Investigación
+Relation	T13	T7	NoRel	true	investigación	Incidentes
+Relation	T13	T9	NoRel	true	investigación	investigación
+Relation	T14	T0	NoRel	true	establecía	fabricado
+Relation	T14	T2	NoRel	true	establecía	registró
+Relation	T14	T5	NoRel	true	establecía	accidente
+Relation	T14	T7	NoRel	true	establecía	Incidentes
+Relation	T15	T1	NoRel	true	accidente	entregó
+Relation	T15	T12	NoRel	true	accidente	concluyó
+Relation	T15	T14	NoRel	true	accidente	establecía
+Relation	T15	T2	NoRel	true	accidente	registró
+Relation	T15	T4	NoRel	true	accidente	identificándose
+Relation	T2	T0	NoRel	true	registró	fabricado
+Relation	T2	T1	NoRel	true	registró	entregó
+Relation	T2	T10	NoRel	true	registró	determinar
+Relation	T2	T12	NoRel	true	registró	concluyó
+Relation	T2	T3	NoRel	true	registró	transferida
+Relation	T2	T4	NoRel	true	registró	identificándose
+Relation	T2	T8	NoRel	true	registró	comenzó
+Relation	T2	T9	NoRel	true	registró	investigación
+Relation	T3	T0	NoRel	true	transferida	fabricado
+Relation	T3	T1	NoRel	true	transferida	entregó
+Relation	T3	T11	NoRel	true	transferida	originaron
+Relation	T3	T8	NoRel	true	transferida	comenzó
+Relation	T3	T9	NoRel	true	transferida	investigación
+Relation	T4	T1	NoRel	true	identificándose	entregó
+Relation	T4	T10	NoRel	true	identificándose	determinar
+Relation	T4	T12	NoRel	true	identificándose	concluyó
+Relation	T4	T3	NoRel	true	identificándose	transferida
+Relation	T4	T5	NoRel	true	identificándose	accidente
+Relation	T4	T6	NoRel	true	identificándose	Investigación
+Relation	T4	T7	NoRel	true	identificándose	Incidentes
+Relation	T4	T8	NoRel	true	identificándose	comenzó
+Relation	T5	T1	NoRel	true	accidente	entregó
+Relation	T5	T10	NoRel	true	accidente	determinar
+Relation	T6	T10	NoRel	true	Investigación	determinar
+Relation	T6	T11	NoRel	true	Investigación	originaron
+Relation	T6	T15	NoRel	true	Investigación	accidente
+Relation	T6	T4	NoRel	true	Investigación	identificándose
+Relation	T6	T5	NoRel	true	Investigación	accidente
+Relation	T6	T7	NoRel	true	Investigación	Incidentes
+Relation	T7	T13	NoRel	true	Incidentes	investigación
+Relation	T7	T14	NoRel	true	Incidentes	establecía
+Relation	T7	T8	NoRel	true	Incidentes	comenzó
+Relation	T8	T1	NoRel	true	comenzó	entregó
+Relation	T8	T11	NoRel	true	comenzó	originaron
+Relation	T8	T5	NoRel	true	comenzó	accidente
+Relation	T8	T6	NoRel	true	comenzó	Investigación
+Relation	T9	T1	NoRel	true	investigación	entregó
+Relation	T9	T10	NoRel	true	investigación	determinar
+Relation	T9	T11	NoRel	true	investigación	originaron
+Relation	T9	T12	NoRel	true	investigación	concluyó
+Relation	T9	T4	NoRel	true	investigación	identificándose
+Relation	T9	T6	NoRel	true	investigación	Investigación
+Relation	T9	T7	NoRel	true	investigación	Incidentes

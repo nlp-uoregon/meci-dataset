@@ -1,0 +1,28 @@
+Text	1931 Zengezur Depremi , yaklaşık 120 km uzunluğundaki Sunik - Zanghezour kısmında yer aldı .	Deprem , Ermenistan'daki Sünik bölgesi ile Nahçıvan Özerk Cumhuriyeti , Azerbaycan arasındaki sınırın yakınında gerçekleşti .	2.890 kadar kişinin öldüğü bildirildi .	Ermenistan'da Sisian - Goris bölgesinde 57 köy , Azerbaycan'da Ordubad Rayonunda ise 46 köy yıkıldı veya ağır hasar gördü .	Bir başka kaynakta deprem sonucunda 254 köyün yok olduğu bildirildi .
+Event	T0	aldı	EVENT	86
+Event	T1	Deprem	EVENT	93
+Event	T2	gerçekleşti	EVENT	205
+Event	T3	bildirildi	EVENT	246
+Event	T4	yıkıldı	EVENT	351
+Event	T5	gördü	EVENT	375
+Event	T6	bildirildi	EVENT	440
+Event	T7	Depremi	EVENT	14
+Relation	T7	T3	CauseEffect	true	Depremi	bildirildi
+Relation	T3	T7	EffectCause	true	bildirildi	Depremi
+Relation	T7	T4	CauseEffect	true	Depremi	yıkıldı
+Relation	T4	T7	EffectCause	true	yıkıldı	Depremi
+Relation	T7	T5	CauseEffect	true	Depremi	gördü
+Relation	T5	T7	EffectCause	true	gördü	Depremi
+Relation	T7	T6	CauseEffect	true	Depremi	bildirildi
+Relation	T6	T7	EffectCause	true	bildirildi	Depremi
+Relation	T0	T4	NoRel	true	aldı	yıkıldı
+Relation	T0	T5	NoRel	true	aldı	gördü
+Relation	T0	T6	NoRel	true	aldı	bildirildi
+Relation	T1	T3	NoRel	true	Deprem	bildirildi
+Relation	T2	T1	NoRel	true	gerçekleşti	Deprem
+Relation	T2	T7	NoRel	true	gerçekleşti	Depremi
+Relation	T3	T2	NoRel	true	bildirildi	gerçekleşti
+Relation	T4	T3	NoRel	true	yıkıldı	bildirildi
+Relation	T5	T1	NoRel	true	gördü	Deprem
+Relation	T7	T0	NoRel	true	Depremi	aldı
+Relation	T7	T2	NoRel	true	Depremi	gerçekleşti

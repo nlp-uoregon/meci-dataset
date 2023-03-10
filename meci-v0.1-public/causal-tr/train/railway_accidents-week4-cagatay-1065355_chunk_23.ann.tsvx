@@ -1,0 +1,69 @@
+Text	Şans eseri orada ne ölü ne de yaralı oldu , tren düzinelerce kurtarma işçisinin yakınından geçmiş ve devrilmiş hurda tren ile çarpışmış olmasına rağmen ...	- 29 Temmuz , 2009 – Bir tren , Liucheng , Guangxi’de yerel saatle sabah 4: 22_de toprak kayması nedeniyle hattan dışarı çıktığında 4 kişi öldü ve 71 kişi yaralandı .	- 14 Ağustos , 2009 – Bir otobüs Scanteia ( Iasi county )’de demiryolu kavşak sinyaline aldırmadığında bir yarı hızlı trenle çarpıştı .	Geride 14 ölü ve 2 yaralı bıraktı .	- 28 Ağustos , 2009 – Akaryakıt taşıyan bir yük treni , Yaounde , Kamerun güneyinde raydan çıktı .
+Event	T0	geçmiş	EVENT	91
+Event	T1	çarpışmış	EVENT	126
+Event	T2	kayması	EVENT	245
+Event	T3	çıktığında	EVENT	277
+Event	T4	öldü	EVENT	295
+Event	T5	yaralandı	EVENT	311
+Event	T6	aldırmadığında	EVENT	411
+Event	T7	çarpıştı	EVENT	448
+Event	T8	ölü	EVENT	469
+Event	T10	çıktı	EVENT	586
+Event	T9	yaralı	EVENT	478
+Event	T11	taşıyan	EVENT	527
+Relation	T2	T3	CauseEffect	true	kayması	çıktığında
+Relation	T3	T2	EffectCause	true	çıktığında	kayması
+Relation	T3	T4	CauseEffect	true	çıktığında	öldü
+Relation	T4	T3	EffectCause	true	öldü	çıktığında
+Relation	T3	T5	CauseEffect	true	çıktığında	yaralandı
+Relation	T5	T3	EffectCause	true	yaralandı	çıktığında
+Relation	T6	T7	CauseEffect	true	aldırmadığında	çarpıştı
+Relation	T7	T6	EffectCause	true	çarpıştı	aldırmadığında
+Relation	T7	T8	CauseEffect	true	çarpıştı	ölü
+Relation	T8	T7	EffectCause	true	ölü	çarpıştı
+Relation	T7	T9	CauseEffect	true	çarpıştı	yaralı
+Relation	T9	T7	EffectCause	true	yaralı	çarpıştı
+Relation	T0	T2	NoRel	true	geçmiş	kayması
+Relation	T0	T4	NoRel	true	geçmiş	öldü
+Relation	T1	T10	NoRel	true	çarpışmış	çıktı
+Relation	T1	T6	NoRel	true	çarpışmış	aldırmadığında
+Relation	T10	T0	NoRel	true	çıktı	geçmiş
+Relation	T10	T1	NoRel	true	çıktı	çarpışmış
+Relation	T10	T2	NoRel	true	çıktı	kayması
+Relation	T10	T3	NoRel	true	çıktı	çıktığında
+Relation	T10	T5	NoRel	true	çıktı	yaralandı
+Relation	T10	T8	NoRel	true	çıktı	ölü
+Relation	T11	T1	NoRel	true	taşıyan	çarpışmış
+Relation	T11	T2	NoRel	true	taşıyan	kayması
+Relation	T11	T3	NoRel	true	taşıyan	çıktığında
+Relation	T11	T4	NoRel	true	taşıyan	öldü
+Relation	T11	T6	NoRel	true	taşıyan	aldırmadığında
+Relation	T11	T8	NoRel	true	taşıyan	ölü
+Relation	T2	T10	NoRel	true	kayması	çıktı
+Relation	T2	T11	NoRel	true	kayması	taşıyan
+Relation	T2	T6	NoRel	true	kayması	aldırmadığında
+Relation	T2	T7	NoRel	true	kayması	çarpıştı
+Relation	T3	T1	NoRel	true	çıktığında	çarpışmış
+Relation	T3	T11	NoRel	true	çıktığında	taşıyan
+Relation	T4	T2	NoRel	true	öldü	kayması
+Relation	T4	T9	NoRel	true	öldü	yaralı
+Relation	T5	T11	NoRel	true	yaralandı	taşıyan
+Relation	T5	T2	NoRel	true	yaralandı	kayması
+Relation	T5	T8	NoRel	true	yaralandı	ölü
+Relation	T5	T9	NoRel	true	yaralandı	yaralı
+Relation	T6	T0	NoRel	true	aldırmadığında	geçmiş
+Relation	T6	T1	NoRel	true	aldırmadığında	çarpışmış
+Relation	T6	T2	NoRel	true	aldırmadığında	kayması
+Relation	T6	T4	NoRel	true	aldırmadığında	öldü
+Relation	T6	T5	NoRel	true	aldırmadığında	yaralandı
+Relation	T7	T1	NoRel	true	çarpıştı	çarpışmış
+Relation	T7	T11	NoRel	true	çarpıştı	taşıyan
+Relation	T7	T5	NoRel	true	çarpıştı	yaralandı
+Relation	T8	T0	NoRel	true	ölü	geçmiş
+Relation	T8	T11	NoRel	true	ölü	taşıyan
+Relation	T8	T3	NoRel	true	ölü	çıktığında
+Relation	T8	T4	NoRel	true	ölü	öldü
+Relation	T8	T9	NoRel	true	ölü	yaralı
+Relation	T9	T0	NoRel	true	yaralı	geçmiş
+Relation	T9	T1	NoRel	true	yaralı	çarpışmış
+Relation	T9	T8	NoRel	true	yaralı	ölü

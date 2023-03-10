@@ -1,0 +1,41 @@
+Text	صاف کرنے کے پیچھے محرکات کے بارے میں تین متبادل قیاس آرائیاں ہیں : ایک حقیقی بدعنوانی کا خاتمہ ، پیسہ حاصل کرنے کا منصوبہ ، یا تاج سنبھالنے کی تیاری ۔	زیر حراست افراد کو ریاض کے رِٹز کارلٹن ہوٹل ( جس نے 24 اکتوبر 2017 کو منصوبہ بند شہر نیوم کے لئے اعلان کی میزبانی کی تھی ) میں قید تھا ، جس کے بعد انہوں نے نئی بکنگ قبول کرنا بند کردی اور مہمانوں کو وہاں سے چلے جانے کو کہا ۔	ملزمان کو ملک سے فرار ہونے سے روکنے کے لئے نجی جیٹ طیارے بھی بنائے گئے تھے ۔	ان گرفتاریوں کے نتیجے میں مرحوم شاہ عبداللہ کے دھڑے کو حتمی طور پر نظرانداز کیا گیا اور ایم بی ایس کی سکیورٹی فورسز کی تینوں شاخوں پر مکمل کنٹرول حاصل ہوا ، اس نے اپنے دادا ، پہلے بادشاہ ابن سعود کے بعد سعودی عرب کا سب سے طاقتور آدمی بنا دیا ۔	جھاڑو میں 500 کے قریب لوگوں کو پکڑ لیا گیا تھا ۔
+Event	T0	خاتمہ	EVENT	89
+Event	T1	تیاری	EVENT	143
+Event	T11	کنٹرول	EVENT	592
+Event	T2	اعلان	EVENT	248
+Event	T3	قید	EVENT	278
+Event	T4	قبول	EVENT	316
+Event	T6	کہا	EVENT	370
+Event	T7	فرار	EVENT	393
+Event	T8	روکنے	EVENT	406
+Event	T9	گرفتاریوں	EVENT	456
+Relation	T9	T11	CauseEffect	true	گرفتاریوں	کنٹرول
+Relation	T11	T9	EffectCause	true	کنٹرول	گرفتاریوں
+Relation	T4	T6	CauseEffect	true	قبول	کہا
+Relation	T6	T4	EffectCause	true	کہا	قبول
+Relation	T0	T3	NoRel	true	خاتمہ	قید
+Relation	T0	T7	NoRel	true	خاتمہ	فرار
+Relation	T0	T9	NoRel	true	خاتمہ	گرفتاریوں
+Relation	T1	T11	NoRel	true	تیاری	کنٹرول
+Relation	T1	T8	NoRel	true	تیاری	روکنے
+Relation	T11	T0	NoRel	true	کنٹرول	خاتمہ
+Relation	T11	T2	NoRel	true	کنٹرول	اعلان
+Relation	T11	T8	NoRel	true	کنٹرول	روکنے
+Relation	T2	T0	NoRel	true	اعلان	خاتمہ
+Relation	T3	T0	NoRel	true	قید	خاتمہ
+Relation	T3	T2	NoRel	true	قید	اعلان
+Relation	T3	T6	NoRel	true	قید	کہا
+Relation	T3	T8	NoRel	true	قید	روکنے
+Relation	T3	T9	NoRel	true	قید	گرفتاریوں
+Relation	T4	T1	NoRel	true	قبول	تیاری
+Relation	T4	T3	NoRel	true	قبول	قید
+Relation	T6	T0	NoRel	true	کہا	خاتمہ
+Relation	T6	T1	NoRel	true	کہا	تیاری
+Relation	T6	T9	NoRel	true	کہا	گرفتاریوں
+Relation	T7	T8	NoRel	true	فرار	روکنے
+Relation	T7	T9	NoRel	true	فرار	گرفتاریوں
+Relation	T8	T6	NoRel	true	روکنے	کہا
+Relation	T9	T1	NoRel	true	گرفتاریوں	تیاری
+Relation	T9	T2	NoRel	true	گرفتاریوں	اعلان
+Relation	T9	T7	NoRel	true	گرفتاریوں	فرار
+Relation	T9	T8	NoRel	true	گرفتاریوں	روکنے

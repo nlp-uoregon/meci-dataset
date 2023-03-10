@@ -1,0 +1,58 @@
+Text	Flight 1406 departed from Memphis International Airport at 3:42 am , en route to Logan International Airport , Boston , Massachusetts , with an estimated time of arrival ( ETA ) of 7:42 am .	At 5:42 am , Flight 1406 was cruising at above the state of New York when the _ Cabin Smoke Fire Alarm _ sounded in the cockpit .	Smoke detectors for several zones of the aircraft 's main deck cargo compartment alerted the pilots of suspected smoke , prompting the crew members and passengers to don their smoke masks .	Aircraft systems began to fail and the crew also noticed that smoke was entering the cockpit .	The crew informed Boston Air Traffic Control ( ATC ) about the fire situation ; ATC suggested that Flight 1406 could make an emergency landing at Albany County Airport , ahead , or to land at Stewart International Airport in New Windsor , behind .
+Event	T0	departed	EVENT	12
+Event	T1	arrival	EVENT	162
+Event	T2	cruising	EVENT	220
+Event	T3	sounded	EVENT	296
+Event	T4	alerted	EVENT	402
+Event	T5	smoke	EVENT	434
+Event	T6	prompting	EVENT	442
+Event	T7	began	EVENT	528
+Event	T8	fail	EVENT	537
+Event	T9	noticed	EVENT	560
+Event	T10	smoke	EVENT	573
+Event	T11	entering	EVENT	583
+Event	T12	informed	EVENT	615
+Event	T14	suggested	EVENT	690
+Event	T15	make	EVENT	723
+Event	T16	landing	EVENT	741
+Event	T17	land	EVENT	790
+Event	T13	fire	EVENT	669
+Relation	T5	T4	CauseEffect	true	smoke	alerted
+Relation	T4	T5	EffectCause	true	alerted	smoke
+Relation	T5	T6	CauseEffect	true	smoke	prompting
+Relation	T6	T5	EffectCause	true	prompting	smoke
+Relation	T13	T12	CauseEffect	true	fire	informed
+Relation	T12	T13	EffectCause	true	informed	fire
+Relation	T0	T10	NoRel	true	departed	smoke
+Relation	T0	T15	NoRel	true	departed	make
+Relation	T1	T0	NoRel	true	arrival	departed
+Relation	T1	T8	NoRel	true	arrival	fail
+Relation	T10	T13	NoRel	true	smoke	fire
+Relation	T11	T15	NoRel	true	entering	make
+Relation	T11	T16	NoRel	true	entering	landing
+Relation	T11	T6	NoRel	true	entering	prompting
+Relation	T11	T7	NoRel	true	entering	began
+Relation	T12	T11	NoRel	true	informed	entering
+Relation	T12	T14	NoRel	true	informed	suggested
+Relation	T12	T9	NoRel	true	informed	noticed
+Relation	T13	T1	NoRel	true	fire	arrival
+Relation	T13	T17	NoRel	true	fire	land
+Relation	T13	T6	NoRel	true	fire	prompting
+Relation	T13	T8	NoRel	true	fire	fail
+Relation	T14	T0	NoRel	true	suggested	departed
+Relation	T14	T11	NoRel	true	suggested	entering
+Relation	T15	T12	NoRel	true	make	informed
+Relation	T15	T13	NoRel	true	make	fire
+Relation	T15	T17	NoRel	true	make	land
+Relation	T2	T10	NoRel	true	cruising	smoke
+Relation	T3	T13	NoRel	true	sounded	fire
+Relation	T3	T4	NoRel	true	sounded	alerted
+Relation	T3	T8	NoRel	true	sounded	fail
+Relation	T4	T2	NoRel	true	alerted	cruising
+Relation	T5	T16	NoRel	true	smoke	landing
+Relation	T5	T3	NoRel	true	smoke	sounded
+Relation	T6	T10	NoRel	true	prompting	smoke
+Relation	T6	T4	NoRel	true	prompting	alerted
+Relation	T8	T13	NoRel	true	fail	fire
+Relation	T8	T14	NoRel	true	fail	suggested
+Relation	T8	T5	NoRel	true	fail	smoke

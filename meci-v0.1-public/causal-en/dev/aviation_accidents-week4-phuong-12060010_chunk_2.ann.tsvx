@@ -1,0 +1,55 @@
+Text	Next he came with an idea of flying around the world in PWS - 52 aircraft , but it was abandoned due to lack of funding .	From March 1933 he worked in Aviation Technical Research Institute in Warsaw as a test pilot .	On 11 September 1933 Józef Lewoniewski with Colonel Czesław Filipowicz , attempted at breaking world 's record of flight distance in tourist planes category , on Warsaw - Krasnoyarsk route , flying modified PZL. 19 plane .	After 8 and a half hours , the plane went into a spin due to an air turbulence , it was brought under control , but it was too low and it hit the ground near Kazan .	Lewoniewski was killed , while Filipowicz was slightly injured .
+Event	T0	came	EVENT	8
+Event	T1	idea	EVENT	21
+Event	T2	flying	EVENT	29
+Event	T3	worked	EVENT	141
+Event	T4	attempted	EVENT	290
+Event	T5	breaking	EVENT	303
+Event	T6	modified	EVENT	415
+Event	T7	turbulence	EVENT	508
+Event	T8	killed	EVENT	622
+Event	T9	injured	EVENT	661
+Event	T10	lack of funding	EVENT	104
+Event	T11	abandoned	EVENT	87
+Event	T12	spin	EVENT	489
+Event	T13	under control	EVENT	536
+Event	T14	too low	EVENT	563
+Event	T15	hit	EVENT	578
+Relation	T10	T11	CauseEffect	true	lack of funding	abandoned
+Relation	T11	T10	EffectCause	true	abandoned	lack of funding
+Relation	T7	T12	CauseEffect	true	turbulence	spin
+Relation	T12	T7	EffectCause	true	spin	turbulence
+Relation	T12	T13	CauseEffect	true	spin	under control
+Relation	T13	T12	EffectCause	true	under control	spin
+Relation	T14	T15	CauseEffect	true	too low	hit
+Relation	T15	T14	EffectCause	true	hit	too low
+Relation	T15	T8	CauseEffect	true	hit	killed
+Relation	T8	T15	EffectCause	true	killed	hit
+Relation	T15	T9	CauseEffect	true	hit	injured
+Relation	T9	T15	EffectCause	true	injured	hit
+Relation	T0	T9	NoRel	true	came	injured
+Relation	T10	T12	NoRel	true	lack of funding	spin
+Relation	T10	T13	NoRel	true	lack of funding	under control
+Relation	T10	T5	NoRel	true	lack of funding	breaking
+Relation	T10	T9	NoRel	true	lack of funding	injured
+Relation	T11	T13	NoRel	true	abandoned	under control
+Relation	T11	T3	NoRel	true	abandoned	worked
+Relation	T11	T7	NoRel	true	abandoned	turbulence
+Relation	T12	T4	NoRel	true	spin	attempted
+Relation	T12	T8	NoRel	true	spin	killed
+Relation	T13	T4	NoRel	true	under control	attempted
+Relation	T13	T9	NoRel	true	under control	injured
+Relation	T14	T1	NoRel	true	too low	idea
+Relation	T15	T6	NoRel	true	hit	modified
+Relation	T2	T1	NoRel	true	flying	idea
+Relation	T2	T10	NoRel	true	flying	lack of funding
+Relation	T2	T13	NoRel	true	flying	under control
+Relation	T3	T11	NoRel	true	worked	abandoned
+Relation	T3	T14	NoRel	true	worked	too low
+Relation	T4	T9	NoRel	true	attempted	injured
+Relation	T5	T1	NoRel	true	breaking	idea
+Relation	T5	T15	NoRel	true	breaking	hit
+Relation	T6	T11	NoRel	true	modified	abandoned
+Relation	T6	T14	NoRel	true	modified	too low
+Relation	T6	T5	NoRel	true	modified	breaking
+Relation	T9	T4	NoRel	true	injured	attempted

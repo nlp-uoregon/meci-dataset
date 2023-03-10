@@ -1,0 +1,94 @@
+Text	El 9 de marzo se capturó las villas de Kajla , Jabar Minkal , Gubar .	EE.UU. anuncia el envío de 1000 soldados para la operación en Raqa , así como el despliegue de tropas en Manbij para disuadir a las FSA de asaltar al ciudad .	El 10 de marzo se liberó las granjas de al-Hajaj y al-Wedyan en Bīr al-Hiba y la villa de Mashhouri cerca de Jazra , así como las villas de Mat'ab and Al-Hajjaj .	El 15 de marzo continua la lucha interna en las SDF se acusa a las PYD de dinamitar un centro de la KNC que es un grupo opositor .	El 16 de marzo se anuncia la captura de Hamad a 40km de Raqa mientras continua el avance siguiendo la carretera que conecta con Deir ez Zor .
+Event	T0	capturó	EVENT	17
+Event	T1	anuncia	EVENT	77
+Event	T2	envío	EVENT	88
+Event	T3	operación	EVENT	119
+Event	T4	despliegue	EVENT	151
+Event	T5	disuadir	EVENT	187
+Event	T6	asaltar	EVENT	209
+Event	T7	liberó	EVENT	247
+Event	T8	continua	EVENT	407
+Event	T9	acusa	EVENT	447
+Event	T10	dinamitar	EVENT	466
+Event	T11	anuncia	EVENT	541
+Event	T12	captura	EVENT	552
+Event	T13	continua	EVENT	593
+Event	T14	conecta	EVENT	639
+Relation	T3	T7	CauseEffect	true	operación	liberó
+Relation	T7	T3	EffectCause	true	liberó	operación
+Relation	T3	T0	CauseEffect	true	operación	capturó
+Relation	T0	T3	EffectCause	true	capturó	operación
+Relation	T0	T10	NoRel	true	capturó	dinamitar
+Relation	T0	T11	NoRel	true	capturó	anuncia
+Relation	T0	T6	NoRel	true	capturó	asaltar
+Relation	T0	T9	NoRel	true	capturó	acusa
+Relation	T1	T14	NoRel	true	anuncia	conecta
+Relation	T1	T2	NoRel	true	anuncia	envío
+Relation	T1	T3	NoRel	true	anuncia	operación
+Relation	T1	T5	NoRel	true	anuncia	disuadir
+Relation	T1	T8	NoRel	true	anuncia	continua
+Relation	T10	T1	NoRel	true	dinamitar	anuncia
+Relation	T10	T13	NoRel	true	dinamitar	continua
+Relation	T10	T14	NoRel	true	dinamitar	conecta
+Relation	T11	T0	NoRel	true	anuncia	capturó
+Relation	T11	T10	NoRel	true	anuncia	dinamitar
+Relation	T11	T12	NoRel	true	anuncia	captura
+Relation	T11	T6	NoRel	true	anuncia	asaltar
+Relation	T11	T9	NoRel	true	anuncia	acusa
+Relation	T12	T11	NoRel	true	captura	anuncia
+Relation	T12	T13	NoRel	true	captura	continua
+Relation	T12	T14	NoRel	true	captura	conecta
+Relation	T12	T2	NoRel	true	captura	envío
+Relation	T13	T0	NoRel	true	continua	capturó
+Relation	T13	T1	NoRel	true	continua	anuncia
+Relation	T13	T3	NoRel	true	continua	operación
+Relation	T13	T4	NoRel	true	continua	despliegue
+Relation	T13	T6	NoRel	true	continua	asaltar
+Relation	T13	T8	NoRel	true	continua	continua
+Relation	T13	T9	NoRel	true	continua	acusa
+Relation	T14	T10	NoRel	true	conecta	dinamitar
+Relation	T14	T11	NoRel	true	conecta	anuncia
+Relation	T14	T13	NoRel	true	conecta	continua
+Relation	T14	T3	NoRel	true	conecta	operación
+Relation	T14	T9	NoRel	true	conecta	acusa
+Relation	T2	T0	NoRel	true	envío	capturó
+Relation	T2	T1	NoRel	true	envío	anuncia
+Relation	T2	T11	NoRel	true	envío	anuncia
+Relation	T2	T12	NoRel	true	envío	captura
+Relation	T2	T14	NoRel	true	envío	conecta
+Relation	T2	T3	NoRel	true	envío	operación
+Relation	T2	T5	NoRel	true	envío	disuadir
+Relation	T2	T8	NoRel	true	envío	continua
+Relation	T3	T1	NoRel	true	operación	anuncia
+Relation	T3	T10	NoRel	true	operación	dinamitar
+Relation	T3	T11	NoRel	true	operación	anuncia
+Relation	T3	T13	NoRel	true	operación	continua
+Relation	T3	T2	NoRel	true	operación	envío
+Relation	T3	T8	NoRel	true	operación	continua
+Relation	T4	T1	NoRel	true	despliegue	anuncia
+Relation	T4	T12	NoRel	true	despliegue	captura
+Relation	T4	T3	NoRel	true	despliegue	operación
+Relation	T4	T6	NoRel	true	despliegue	asaltar
+Relation	T4	T8	NoRel	true	despliegue	continua
+Relation	T5	T1	NoRel	true	disuadir	anuncia
+Relation	T5	T3	NoRel	true	disuadir	operación
+Relation	T5	T4	NoRel	true	disuadir	despliegue
+Relation	T5	T9	NoRel	true	disuadir	acusa
+Relation	T6	T0	NoRel	true	asaltar	capturó
+Relation	T6	T2	NoRel	true	asaltar	envío
+Relation	T6	T7	NoRel	true	asaltar	liberó
+Relation	T6	T9	NoRel	true	asaltar	acusa
+Relation	T7	T0	NoRel	true	liberó	capturó
+Relation	T7	T10	NoRel	true	liberó	dinamitar
+Relation	T7	T11	NoRel	true	liberó	anuncia
+Relation	T7	T6	NoRel	true	liberó	asaltar
+Relation	T8	T11	NoRel	true	continua	anuncia
+Relation	T8	T3	NoRel	true	continua	operación
+Relation	T8	T6	NoRel	true	continua	asaltar
+Relation	T8	T9	NoRel	true	continua	acusa
+Relation	T9	T0	NoRel	true	acusa	capturó
+Relation	T9	T13	NoRel	true	acusa	continua
+Relation	T9	T14	NoRel	true	acusa	conecta
+Relation	T9	T2	NoRel	true	acusa	envío
+Relation	T9	T5	NoRel	true	acusa	disuadir
+Relation	T9	T8	NoRel	true	acusa	continua

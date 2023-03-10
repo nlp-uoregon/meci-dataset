@@ -1,0 +1,50 @@
+Text	ANTICYCLONE HARTMUT ( dubbed the _ BEAST FROM THE EAST_ ( ) ) was a storm that began on 22 February 2018 , and brought a cold wave to Great Britain and Ireland .	Anticyclone Hartmut also brought widespread unusually low temperatures and heavy snowfall to large areas .	The cold wave combined with Storm Emma , part of the 2017 – 18 European windstorm season , which made landfall in southwest England and the south of Ireland on 2 March .	In contrast to usual winter storms , Hartmut was not formed as a normal low pressure area along the jetstream .	The initial event was an Arctic outbreak caused by a disordered polar vortex into Central Europe , transporting not only cold air from Siberia to Europe , but due to the lake effect , sent much snow into Great Britain and Ireland .
+Event	T0	dubbed	EVENT	22
+Event	T1	storm	EVENT	68
+Event	T12	disordered	EVENT	604
+Event	T13	transporting	EVENT	650
+Event	T14	effect	EVENT	726
+Event	T15	sent	EVENT	735
+Event	T18	snowfall	EVENT	243
+Event	T2	began	EVENT	79
+Event	T3	brought	EVENT	111
+Event	T4	wave	EVENT	126
+Event	T5	combined	EVENT	283
+Event	T6	outbreak	EVENT	583
+Event	T7	landfall	EVENT	371
+Event	T8	storms	EVENT	467
+Event	T9	formed	EVENT	492
+Relation	T1	T18	CauseEffect	true	storm	snowfall
+Relation	T18	T1	EffectCause	true	snowfall	storm
+Relation	T1	T4	CauseEffect	true	storm	wave
+Relation	T4	T1	EffectCause	true	wave	storm
+Relation	T5	T7	CauseEffect	true	combined	landfall
+Relation	T7	T5	EffectCause	true	landfall	combined
+Relation	T8	T9	CauseEffect	true	storms	formed
+Relation	T9	T8	EffectCause	true	formed	storms
+Relation	T12	T6	CauseEffect	true	disordered	outbreak
+Relation	T6	T12	EffectCause	true	outbreak	disordered
+Relation	T0	T1	NoRel	true	dubbed	storm
+Relation	T13	T1	NoRel	true	transporting	storm
+Relation	T13	T4	NoRel	true	transporting	wave
+Relation	T14	T0	NoRel	true	effect	dubbed
+Relation	T14	T12	NoRel	true	effect	disordered
+Relation	T14	T2	NoRel	true	effect	began
+Relation	T15	T0	NoRel	true	sent	dubbed
+Relation	T15	T18	NoRel	true	sent	snowfall
+Relation	T15	T4	NoRel	true	sent	wave
+Relation	T18	T4	NoRel	true	snowfall	wave
+Relation	T3	T2	NoRel	true	brought	began
+Relation	T4	T14	NoRel	true	wave	effect
+Relation	T4	T18	NoRel	true	wave	snowfall
+Relation	T4	T7	NoRel	true	wave	landfall
+Relation	T5	T1	NoRel	true	combined	storm
+Relation	T5	T15	NoRel	true	combined	sent
+Relation	T6	T13	NoRel	true	outbreak	transporting
+Relation	T6	T5	NoRel	true	outbreak	combined
+Relation	T6	T9	NoRel	true	outbreak	formed
+Relation	T8	T1	NoRel	true	storms	storm
+Relation	T8	T12	NoRel	true	storms	disordered
+Relation	T8	T15	NoRel	true	storms	sent
+Relation	T8	T7	NoRel	true	storms	landfall
+Relation	T9	T6	NoRel	true	formed	outbreak

@@ -1,0 +1,57 @@
+Text	Dava , María Eugenia Capuchetti'nin mahkemesine düştü ve soruşturma , González García'yı prensipte " yetkiyi kötüye kullanmak " ile suçlayan savcı Eduardo Taiano'dan sorumlu .	Aynı şekilde Taiano , " bu olağandışı bir kurumsal ağırlığa sahip bir eylemdir , çünkü sadece bir kamu görevlisinin görevlerine uymamakla kalmaz , aynı zamanda daha büyük risk altında olduğu düşünülen ve aşılanması gereken bir kişinin de yapmasını engeller .	22 Şubat'ta polis ve yargı personeli , ihbar edilenleri doğrulamak ve daha fazla aşı olup olmadığını doğrulamak için Ulusal Sağlık Bakanlığı karargahına bir baskın düzenledi .	27 Şubat 2021'de , muhalefet tarafından çağrılan ve PRO başkanı Patricia Bullrich ve eski başkan adayı José Luis Espert gibi isimlerin de katılımıyla bir protesto düzenlendi .	Casa Rosada'nın önünde çok sayıda insan protesto etti .
+Event	T0	düştü	EVENT	48
+Event	T1	soruşturma	EVENT	57
+Event	T2	suçlayan	EVENT	132
+Event	T3	engeller	EVENT	424
+Event	T4	ihbar	EVENT	474
+Event	T5	düzenledi	EVENT	599
+Event	T6	çağrılan	EVENT	651
+Event	T7	düzenlendi	EVENT	774
+Event	T8	etti	EVENT	836
+Event	T9	Dava	EVENT	0
+Event	T10	kullanmak	EVENT	116
+Relation	T10	T2	CauseEffect	true	kullanmak	suçlayan
+Relation	T2	T10	EffectCause	true	suçlayan	kullanmak
+Relation	T2	T1	CauseEffect	true	suçlayan	soruşturma
+Relation	T1	T2	EffectCause	true	soruşturma	suçlayan
+Relation	T1	T9	CauseEffect	true	soruşturma	Dava
+Relation	T9	T1	EffectCause	true	Dava	soruşturma
+Relation	T4	T5	CauseEffect	true	ihbar	düzenledi
+Relation	T5	T4	EffectCause	true	düzenledi	ihbar
+Relation	T4	T9	CauseEffect	true	ihbar	Dava
+Relation	T9	T4	EffectCause	true	Dava	ihbar
+Relation	T0	T10	NoRel	true	düştü	kullanmak
+Relation	T0	T9	NoRel	true	düştü	Dava
+Relation	T1	T3	NoRel	true	soruşturma	engeller
+Relation	T1	T5	NoRel	true	soruşturma	düzenledi
+Relation	T1	T7	NoRel	true	soruşturma	düzenlendi
+Relation	T10	T1	NoRel	true	kullanmak	soruşturma
+Relation	T10	T5	NoRel	true	kullanmak	düzenledi
+Relation	T2	T6	NoRel	true	suçlayan	çağrılan
+Relation	T2	T9	NoRel	true	suçlayan	Dava
+Relation	T3	T2	NoRel	true	engeller	suçlayan
+Relation	T3	T4	NoRel	true	engeller	ihbar
+Relation	T3	T5	NoRel	true	engeller	düzenledi
+Relation	T3	T6	NoRel	true	engeller	çağrılan
+Relation	T4	T0	NoRel	true	ihbar	düştü
+Relation	T4	T10	NoRel	true	ihbar	kullanmak
+Relation	T4	T2	NoRel	true	ihbar	suçlayan
+Relation	T4	T3	NoRel	true	ihbar	engeller
+Relation	T5	T1	NoRel	true	düzenledi	soruşturma
+Relation	T5	T10	NoRel	true	düzenledi	kullanmak
+Relation	T5	T2	NoRel	true	düzenledi	suçlayan
+Relation	T5	T3	NoRel	true	düzenledi	engeller
+Relation	T5	T7	NoRel	true	düzenledi	düzenlendi
+Relation	T6	T0	NoRel	true	çağrılan	düştü
+Relation	T6	T1	NoRel	true	çağrılan	soruşturma
+Relation	T6	T9	NoRel	true	çağrılan	Dava
+Relation	T7	T1	NoRel	true	düzenlendi	soruşturma
+Relation	T7	T4	NoRel	true	düzenlendi	ihbar
+Relation	T7	T9	NoRel	true	düzenlendi	Dava
+Relation	T8	T0	NoRel	true	etti	düştü
+Relation	T8	T3	NoRel	true	etti	engeller
+Relation	T8	T4	NoRel	true	etti	ihbar
+Relation	T9	T0	NoRel	true	Dava	düştü
+Relation	T9	T2	NoRel	true	Dava	suçlayan
+Relation	T9	T5	NoRel	true	Dava	düzenledi
+Relation	T9	T6	NoRel	true	Dava	çağrılan

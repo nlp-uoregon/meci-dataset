@@ -1,0 +1,41 @@
+Text	[ Tract of trees near the Maitland River decimated by the tornado ]	Crossing Kings Highway 21 , the tornado moved into the easternmost residential areas of Goderich , north of Elgin Street .	More homes sustained significant damage here , with most of those affected receiving some form of roof or window damage .	Those with clapboard siding had pock marks and some of their paint stripped .	Other homes lost vast portions of their roofs and commercial buildings near Oxford Street and Maitland Road had partial roof removal and exterior wall damage .
+Event	T0	decimated	EVENT	41
+Event	T1	tornado	EVENT	58
+Event	T10	removal	EVENT	516
+Event	T11	damage	EVENT	542
+Event	T12	moved into	EVENT	108
+Event	T13	tornado	EVENT	100
+Event	T2	Crossing	EVENT	68
+Event	T3	sustained	EVENT	202
+Event	T4	damage	EVENT	224
+Event	T5	receiving	EVENT	266
+Event	T6	damage	EVENT	304
+Event	T7	siding	EVENT	334
+Event	T8	stripped	EVENT	380
+Event	T9	lost	EVENT	403
+Relation	T0	T1	CauseEffect	true	decimated	tornado
+Relation	T1	T0	EffectCause	true	tornado	decimated
+Relation	T13	T4	CauseEffect	true	tornado	damage
+Relation	T4	T13	EffectCause	true	damage	tornado
+Relation	T0	T5	NoRel	true	decimated	receiving
+Relation	T1	T13	NoRel	true	tornado	tornado
+Relation	T1	T5	NoRel	true	tornado	receiving
+Relation	T10	T9	NoRel	true	removal	lost
+Relation	T11	T0	NoRel	true	damage	decimated
+Relation	T11	T1	NoRel	true	damage	tornado
+Relation	T11	T5	NoRel	true	damage	receiving
+Relation	T12	T6	NoRel	true	moved into	damage
+Relation	T13	T0	NoRel	true	tornado	decimated
+Relation	T2	T8	NoRel	true	Crossing	stripped
+Relation	T2	T9	NoRel	true	Crossing	lost
+Relation	T3	T10	NoRel	true	sustained	removal
+Relation	T3	T7	NoRel	true	sustained	siding
+Relation	T4	T2	NoRel	true	damage	Crossing
+Relation	T4	T9	NoRel	true	damage	lost
+Relation	T5	T4	NoRel	true	receiving	damage
+Relation	T5	T8	NoRel	true	receiving	stripped
+Relation	T6	T0	NoRel	true	damage	decimated
+Relation	T6	T8	NoRel	true	damage	stripped
+Relation	T7	T10	NoRel	true	siding	removal
+Relation	T7	T3	NoRel	true	siding	sustained
+Relation	T8	T2	NoRel	true	stripped	Crossing

@@ -1,0 +1,26 @@
+Text	Según un funcionario de la oficina de búsqueda y rescate de Pangkal Pinang , la tripulación de vuelo había solicitado autorización para regresar al aeropuerto de origen en algún momento durante el vuelo .	El lugar del accidente fue localizado a 34 millas náuticas ( 63 km ) de la costa de la Regencia de Karawang , en la isla de Java .	A bordo de la aeronave viajaban 181 pasajeros , de los cuales tres eran menores , además de seis tripulantes de cabina y dos pilotos .	Lion Air identificó al capitán del vuelo como Bhavye Suneja , un piloto indio que había trabajado para la aerolínea durante siete años y contaba con aproximadamente 6000 horas de vuelo , y su copiloto indonesio que contaba con aproximadamente 5000 horas de vuelo .	Veinte empleados del Ministerio de Finanzas , siete miembros del Consejo del Representante Popular Regional de Bangka Belitung y tres jueces de tribunales superiores y nacionales se encontraban entre los pasajeros .
+Event	T10	vuelo	EVENT	728
+Event	T11	viajaban	EVENT	359
+Event	T4	vuelo	EVENT	197
+Event	T5	accidente	EVENT	218
+Event	T6	localizado	EVENT	232
+Event	T7	identificó	EVENT	480
+Event	T8	trabajado	EVENT	559
+Event	T9	vuelo	EVENT	650
+Relation	T10	T8	NoRel	true	vuelo	trabajado
+Relation	T11	T10	NoRel	true	viajaban	vuelo
+Relation	T11	T6	NoRel	true	viajaban	localizado
+Relation	T4	T8	NoRel	true	vuelo	trabajado
+Relation	T5	T10	NoRel	true	accidente	vuelo
+Relation	T5	T4	NoRel	true	accidente	vuelo
+Relation	T5	T8	NoRel	true	accidente	trabajado
+Relation	T6	T5	NoRel	true	localizado	accidente
+Relation	T7	T4	NoRel	true	identificó	vuelo
+Relation	T7	T5	NoRel	true	identificó	accidente
+Relation	T7	T6	NoRel	true	identificó	localizado
+Relation	T7	T8	NoRel	true	identificó	trabajado
+Relation	T7	T9	NoRel	true	identificó	vuelo
+Relation	T8	T10	NoRel	true	trabajado	vuelo
+Relation	T8	T7	NoRel	true	trabajado	identificó
+Relation	T8	T9	NoRel	true	trabajado	vuelo
+Relation	T9	T4	NoRel	true	vuelo	vuelo

@@ -1,0 +1,62 @@
+Text	]	Ajeno a esta tragedia , en sentido contrario , circulaba el tren de mercancías ( carbonero ) número 7742 que tenía previsto realizar el cruce con el tren correo en la estación de Torre del Bierzo ( debido al retraso que llevaba el correo 421 , ya que el cruce estaba inicialmente previsto en Bembibre ) .	Llevaba 27 vagones de carga y un furgón .	El choque había destrozado los cables que movían las señales , y se habían quedado en vía libre para este tren en la estación de Torre del Bierzo .	Por tanto , el fogonero echó más carbón en la máquina y el mercancías continuó su marcha .
+Event	T0	tragedia	EVENT	15
+Event	T1	circulaba	EVENT	49
+Event	T2	realizar	EVENT	126
+Event	T3	cruce	EVENT	138
+Event	T4	retraso	EVENT	210
+Event	T5	cruce	EVENT	256
+Event	T6	previsto	EVENT	282
+Event	T7	Llevaba	EVENT	307
+Event	T8	choque	EVENT	352
+Event	T9	destrozado	EVENT	365
+Event	T10	echó	EVENT	521
+Event	T11	continuó	EVENT	567
+Event	T12	marcha	EVENT	579
+Relation	T8	T9	CauseEffect	true	choque	destrozado
+Relation	T9	T8	EffectCause	true	destrozado	choque
+Relation	T0	T3	NoRel	true	tragedia	cruce
+Relation	T0	T9	NoRel	true	tragedia	destrozado
+Relation	T1	T12	NoRel	true	circulaba	marcha
+Relation	T1	T3	NoRel	true	circulaba	cruce
+Relation	T1	T4	NoRel	true	circulaba	retraso
+Relation	T1	T6	NoRel	true	circulaba	previsto
+Relation	T1	T9	NoRel	true	circulaba	destrozado
+Relation	T10	T0	NoRel	true	echó	tragedia
+Relation	T10	T1	NoRel	true	echó	circulaba
+Relation	T10	T3	NoRel	true	echó	cruce
+Relation	T11	T10	NoRel	true	continuó	echó
+Relation	T11	T12	NoRel	true	continuó	marcha
+Relation	T11	T6	NoRel	true	continuó	previsto
+Relation	T11	T8	NoRel	true	continuó	choque
+Relation	T11	T9	NoRel	true	continuó	destrozado
+Relation	T12	T2	NoRel	true	marcha	realizar
+Relation	T12	T3	NoRel	true	marcha	cruce
+Relation	T2	T10	NoRel	true	realizar	echó
+Relation	T2	T4	NoRel	true	realizar	retraso
+Relation	T2	T9	NoRel	true	realizar	destrozado
+Relation	T3	T1	NoRel	true	cruce	circulaba
+Relation	T3	T2	NoRel	true	cruce	realizar
+Relation	T3	T5	NoRel	true	cruce	cruce
+Relation	T3	T6	NoRel	true	cruce	previsto
+Relation	T4	T10	NoRel	true	retraso	echó
+Relation	T4	T5	NoRel	true	retraso	cruce
+Relation	T4	T6	NoRel	true	retraso	previsto
+Relation	T5	T0	NoRel	true	cruce	tragedia
+Relation	T5	T10	NoRel	true	cruce	echó
+Relation	T5	T11	NoRel	true	cruce	continuó
+Relation	T5	T12	NoRel	true	cruce	marcha
+Relation	T5	T6	NoRel	true	cruce	previsto
+Relation	T5	T8	NoRel	true	cruce	choque
+Relation	T6	T1	NoRel	true	previsto	circulaba
+Relation	T6	T11	NoRel	true	previsto	continuó
+Relation	T6	T2	NoRel	true	previsto	realizar
+Relation	T6	T4	NoRel	true	previsto	retraso
+Relation	T6	T8	NoRel	true	previsto	choque
+Relation	T7	T11	NoRel	true	Llevaba	continuó
+Relation	T7	T3	NoRel	true	Llevaba	cruce
+Relation	T7	T8	NoRel	true	Llevaba	choque
+Relation	T8	T0	NoRel	true	choque	tragedia
+Relation	T8	T11	NoRel	true	choque	continuó
+Relation	T8	T12	NoRel	true	choque	marcha
+Relation	T9	T11	NoRel	true	destrozado	continuó
+Relation	T9	T12	NoRel	true	destrozado	marcha

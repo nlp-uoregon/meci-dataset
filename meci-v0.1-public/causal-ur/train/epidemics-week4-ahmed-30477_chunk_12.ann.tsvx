@@ -1,0 +1,71 @@
+Text	-___" یہ بالکل واضح تھا کہ ( ہندوستان میں ) قحط سے نمٹنے کے لیے جس رقم کی ضرورت تھی وہ 1878 ء سے 1880ء کی افغانستان سے جنگ پر خرچ ہو رہی تھی ۔	"	-___" امریکی تاریخ دان میتھیو وائٹ نے ' دا گریٹ بُک آف ہاریبل تھنگز ' کے نام سے ایک کتاب لکھی ہے جس میں انھوں نے تاریخ کی ایک سو بدترین سفاکیوں کا جائزہ پیش کیا ہے جن کے دوران سب سے زیادہ انسانی جانیں ضائع ہوئیں ۔	اس کتاب میں تاریخ کی چوتھی بدترین سفاکی برطانوی دور میں ہندوستان میں آنے والے قحط ہیں جن میں وائٹ کے مطابق دو کروڑ 66 لاکھ ہندوستانیوں کی جانیں ضائع ہوئیں ۔	" اس تعداد میں وائٹ نے دوسری جنگِ عظیم کے دوران بنگال میں آنے والے قحط کو شمار نہیں کیا جس میں 30 سے 50 لاکھ کے قریب لوگ مارے گئے تھے ۔
+Event	T0	جنگ	EVENT	119
+Event	T1	لکھی	EVENT	234
+Event	T2	سفاکیوں	EVENT	281
+Event	T4	سفاکی	EVENT	393
+Event	T6	قحط	EVENT	437
+Event	T8	قحط	EVENT	583
+Event	T9	قحط	EVENT	44
+Event	T10	نمٹنے	EVENT	51
+Event	T11	خرچ	EVENT	126
+Event	T12	پیش	EVENT	298
+Event	T13	ضائع	EVENT	346
+Event	T3	ضائع	EVENT	503
+Event	T5	مارے	EVENT	637
+Relation	T2	T13	CauseEffect	true	سفاکیوں	ضائع
+Relation	T13	T2	EffectCause	true	ضائع	سفاکیوں
+Relation	T6	T3	CauseEffect	true	قحط	ضائع
+Relation	T3	T6	EffectCause	true	ضائع	قحط
+Relation	T8	T5	CauseEffect	true	قحط	مارے
+Relation	T5	T8	EffectCause	true	مارے	قحط
+Relation	T0	T12	NoRel	true	جنگ	پیش
+Relation	T0	T4	NoRel	true	جنگ	سفاکی
+Relation	T0	T8	NoRel	true	جنگ	قحط
+Relation	T1	T11	NoRel	true	لکھی	خرچ
+Relation	T1	T2	NoRel	true	لکھی	سفاکیوں
+Relation	T1	T6	NoRel	true	لکھی	قحط
+Relation	T1	T8	NoRel	true	لکھی	قحط
+Relation	T1	T9	NoRel	true	لکھی	قحط
+Relation	T10	T0	NoRel	true	نمٹنے	جنگ
+Relation	T10	T12	NoRel	true	نمٹنے	پیش
+Relation	T10	T13	NoRel	true	نمٹنے	ضائع
+Relation	T10	T5	NoRel	true	نمٹنے	مارے
+Relation	T11	T1	NoRel	true	خرچ	لکھی
+Relation	T11	T10	NoRel	true	خرچ	نمٹنے
+Relation	T11	T6	NoRel	true	خرچ	قحط
+Relation	T11	T8	NoRel	true	خرچ	قحط
+Relation	T12	T0	NoRel	true	پیش	جنگ
+Relation	T12	T1	NoRel	true	پیش	لکھی
+Relation	T12	T13	NoRel	true	پیش	ضائع
+Relation	T12	T6	NoRel	true	پیش	قحط
+Relation	T12	T9	NoRel	true	پیش	قحط
+Relation	T13	T10	NoRel	true	ضائع	نمٹنے
+Relation	T13	T6	NoRel	true	ضائع	قحط
+Relation	T13	T9	NoRel	true	ضائع	قحط
+Relation	T2	T5	NoRel	true	سفاکیوں	مارے
+Relation	T2	T9	NoRel	true	سفاکیوں	قحط
+Relation	T3	T0	NoRel	true	ضائع	جنگ
+Relation	T3	T10	NoRel	true	ضائع	نمٹنے
+Relation	T3	T13	NoRel	true	ضائع	ضائع
+Relation	T3	T2	NoRel	true	ضائع	سفاکیوں
+Relation	T3	T5	NoRel	true	ضائع	مارے
+Relation	T3	T9	NoRel	true	ضائع	قحط
+Relation	T4	T10	NoRel	true	سفاکی	نمٹنے
+Relation	T4	T11	NoRel	true	سفاکی	خرچ
+Relation	T4	T2	NoRel	true	سفاکی	سفاکیوں
+Relation	T4	T3	NoRel	true	سفاکی	ضائع
+Relation	T4	T5	NoRel	true	سفاکی	مارے
+Relation	T4	T6	NoRel	true	سفاکی	قحط
+Relation	T5	T0	NoRel	true	مارے	جنگ
+Relation	T5	T12	NoRel	true	مارے	پیش
+Relation	T5	T13	NoRel	true	مارے	ضائع
+Relation	T5	T9	NoRel	true	مارے	قحط
+Relation	T6	T10	NoRel	true	قحط	نمٹنے
+Relation	T6	T2	NoRel	true	قحط	سفاکیوں
+Relation	T6	T4	NoRel	true	قحط	سفاکی
+Relation	T6	T8	NoRel	true	قحط	قحط
+Relation	T6	T9	NoRel	true	قحط	قحط
+Relation	T8	T0	NoRel	true	قحط	جنگ
+Relation	T8	T2	NoRel	true	قحط	سفاکیوں
+Relation	T8	T4	NoRel	true	قحط	سفاکی
+Relation	T9	T11	NoRel	true	قحط	خرچ

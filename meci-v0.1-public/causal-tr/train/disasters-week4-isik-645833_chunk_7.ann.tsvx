@@ -1,0 +1,36 @@
+Text	Bu uyarılar tsunaminin dinmesinin ardından geri çekilmiştir .	Bir tsunami uyarısı da Japon Meteoroloji Dairesi tarafından 16 Ağustos Perşembe günü kamuoyuna açıklanmıştır .	Uyarı , boyları 20 santimetreyi bulan tsunamilerin Japonya'nın kuzey adalarından Hokkaidō'ya ulaşabileceği tahmininde bulunuyordu .	Tüm kaygılara karşın tsunami Peru sahillerinden öteye gidememiştir ancak Lima'daki Costa Verde otoyolu ve Pisco sahillerinin büyük kısmı dev dalgalar altında kalmıştır .	Pisco'ya komşu kentlerden Paracas'ın Lagunillas bölgesinde boyu 5 metreye varan tsunamiler görüldüğü bildirilmektedir .
+Event	T0	dinmesinin	EVENT	23
+Event	T1	çekilmiştir	EVENT	48
+Event	T2	uyarısı	EVENT	74
+Event	T3	açıklanmıştır	EVENT	157
+Event	T5	tsunami	EVENT	326
+Event	T7	bildirilmektedir	EVENT	576
+Event	T8	tsunamilerin	EVENT	211
+Event	T4	bulunuyordu	EVENT	291
+Event	T9	tsunamiler	EVENT	555
+Event	T6	kalmıştır	EVENT	463
+Relation	T5	T6	CauseEffect	true	tsunami	kalmıştır
+Relation	T6	T5	EffectCause	true	kalmıştır	tsunami
+Relation	T0	T2	NoRel	true	dinmesinin	uyarısı
+Relation	T0	T6	NoRel	true	dinmesinin	kalmıştır
+Relation	T1	T2	NoRel	true	çekilmiştir	uyarısı
+Relation	T2	T0	NoRel	true	uyarısı	dinmesinin
+Relation	T2	T3	NoRel	true	uyarısı	açıklanmıştır
+Relation	T3	T0	NoRel	true	açıklanmıştır	dinmesinin
+Relation	T4	T8	NoRel	true	bulunuyordu	tsunamilerin
+Relation	T5	T1	NoRel	true	tsunami	çekilmiştir
+Relation	T5	T4	NoRel	true	tsunami	bulunuyordu
+Relation	T6	T1	NoRel	true	kalmıştır	çekilmiştir
+Relation	T6	T4	NoRel	true	kalmıştır	bulunuyordu
+Relation	T7	T0	NoRel	true	bildirilmektedir	dinmesinin
+Relation	T7	T4	NoRel	true	bildirilmektedir	bulunuyordu
+Relation	T7	T5	NoRel	true	bildirilmektedir	tsunami
+Relation	T7	T9	NoRel	true	bildirilmektedir	tsunamiler
+Relation	T8	T0	NoRel	true	tsunamilerin	dinmesinin
+Relation	T8	T3	NoRel	true	tsunamilerin	açıklanmıştır
+Relation	T8	T4	NoRel	true	tsunamilerin	bulunuyordu
+Relation	T8	T6	NoRel	true	tsunamilerin	kalmıştır
+Relation	T8	T9	NoRel	true	tsunamilerin	tsunamiler
+Relation	T9	T1	NoRel	true	tsunamiler	çekilmiştir
+Relation	T9	T3	NoRel	true	tsunamiler	açıklanmıştır
+Relation	T9	T6	NoRel	true	tsunamiler	kalmıştır

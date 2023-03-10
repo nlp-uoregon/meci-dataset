@@ -1,0 +1,101 @@
+Text	Dos niños fueron arrastrados por un río en Santa Teresa , Carazo , mientras que otros tres miembros de su familia desaparecieron ; un sexto miembro de la familia fue rescatado .	Un deslizamiento de tierra mató a dos personas en Wiwilí de Jinotega y otra persona murió en Quilalí .	En Wiwilí , surgieron temores sobre la seguridad de los residentes que fueron evacuados a las montañas para escapar de las inundaciones debido a que ocurrieron numerosos deslizamientos de tierra en la región .	El 17 de noviembre , al menos 30 personas fueron enterradas en un deslizamiento de tierra en Macizo de Penas Blancas , y se encontró enterrado a un niño .	Al día siguiente , se recuperaron cuatro cuerpos más , incluido uno de un bebé .
+Event	T0	arrastrados	EVENT	17
+Event	T1	desaparecieron	EVENT	114
+Event	T10	deslizamientos	EVENT	451
+Event	T11	enterradas	EVENT	540
+Event	T12	deslizamiento	EVENT	557
+Event	T13	enterrado	EVENT	624
+Event	T14	recuperaron	EVENT	668
+Event	T2	rescatado	EVENT	166
+Event	T3	deslizamiento	EVENT	181
+Event	T4	mató	EVENT	205
+Event	T5	murió	EVENT	262
+Event	T6	temores	EVENT	303
+Event	T7	evacuados	EVENT	359
+Event	T8	escapar	EVENT	389
+Event	T9	inundaciones	EVENT	404
+Relation	T3	T4	CauseEffect	true	deslizamiento	mató
+Relation	T4	T3	EffectCause	true	mató	deslizamiento
+Relation	T9	T7	CauseEffect	true	inundaciones	evacuados
+Relation	T7	T9	EffectCause	true	evacuados	inundaciones
+Relation	T10	T6	CauseEffect	true	deslizamientos	temores
+Relation	T6	T10	EffectCause	true	temores	deslizamientos
+Relation	T12	T13	CauseEffect	true	deslizamiento	enterrado
+Relation	T13	T12	EffectCause	true	enterrado	deslizamiento
+Relation	T12	T11	CauseEffect	true	deslizamiento	enterradas
+Relation	T11	T12	EffectCause	true	enterradas	deslizamiento
+Relation	T3	T5	CauseEffect	true	deslizamiento	murió
+Relation	T5	T3	EffectCause	true	murió	deslizamiento
+Relation	T9	T10	CauseEffect	true	inundaciones	deslizamientos
+Relation	T10	T9	EffectCause	true	deslizamientos	inundaciones
+Relation	T0	T1	NoRel	true	arrastrados	desaparecieron
+Relation	T0	T13	NoRel	true	arrastrados	enterrado
+Relation	T0	T5	NoRel	true	arrastrados	murió
+Relation	T0	T6	NoRel	true	arrastrados	temores
+Relation	T1	T12	NoRel	true	desaparecieron	deslizamiento
+Relation	T1	T6	NoRel	true	desaparecieron	temores
+Relation	T1	T8	NoRel	true	desaparecieron	escapar
+Relation	T1	T9	NoRel	true	desaparecieron	inundaciones
+Relation	T10	T12	NoRel	true	deslizamientos	deslizamiento
+Relation	T10	T14	NoRel	true	deslizamientos	recuperaron
+Relation	T10	T8	NoRel	true	deslizamientos	escapar
+Relation	T11	T13	NoRel	true	enterradas	enterrado
+Relation	T11	T2	NoRel	true	enterradas	rescatado
+Relation	T11	T3	NoRel	true	enterradas	deslizamiento
+Relation	T11	T4	NoRel	true	enterradas	mató
+Relation	T11	T5	NoRel	true	enterradas	murió
+Relation	T11	T9	NoRel	true	enterradas	inundaciones
+Relation	T12	T1	NoRel	true	deslizamiento	desaparecieron
+Relation	T12	T14	NoRel	true	deslizamiento	recuperaron
+Relation	T12	T4	NoRel	true	deslizamiento	mató
+Relation	T12	T6	NoRel	true	deslizamiento	temores
+Relation	T12	T7	NoRel	true	deslizamiento	evacuados
+Relation	T12	T9	NoRel	true	deslizamiento	inundaciones
+Relation	T13	T1	NoRel	true	enterrado	desaparecieron
+Relation	T13	T7	NoRel	true	enterrado	evacuados
+Relation	T13	T8	NoRel	true	enterrado	escapar
+Relation	T13	T9	NoRel	true	enterrado	inundaciones
+Relation	T14	T0	NoRel	true	recuperaron	arrastrados
+Relation	T14	T11	NoRel	true	recuperaron	enterradas
+Relation	T14	T12	NoRel	true	recuperaron	deslizamiento
+Relation	T14	T2	NoRel	true	recuperaron	rescatado
+Relation	T14	T3	NoRel	true	recuperaron	deslizamiento
+Relation	T14	T4	NoRel	true	recuperaron	mató
+Relation	T14	T5	NoRel	true	recuperaron	murió
+Relation	T14	T6	NoRel	true	recuperaron	temores
+Relation	T14	T7	NoRel	true	recuperaron	evacuados
+Relation	T2	T0	NoRel	true	rescatado	arrastrados
+Relation	T2	T1	NoRel	true	rescatado	desaparecieron
+Relation	T2	T11	NoRel	true	rescatado	enterradas
+Relation	T2	T13	NoRel	true	rescatado	enterrado
+Relation	T2	T6	NoRel	true	rescatado	temores
+Relation	T3	T1	NoRel	true	deslizamiento	desaparecieron
+Relation	T3	T12	NoRel	true	deslizamiento	deslizamiento
+Relation	T3	T13	NoRel	true	deslizamiento	enterrado
+Relation	T3	T14	NoRel	true	deslizamiento	recuperaron
+Relation	T3	T2	NoRel	true	deslizamiento	rescatado
+Relation	T3	T9	NoRel	true	deslizamiento	inundaciones
+Relation	T4	T1	NoRel	true	mató	desaparecieron
+Relation	T5	T11	NoRel	true	murió	enterradas
+Relation	T5	T13	NoRel	true	murió	enterrado
+Relation	T5	T4	NoRel	true	murió	mató
+Relation	T5	T6	NoRel	true	murió	temores
+Relation	T5	T8	NoRel	true	murió	escapar
+Relation	T6	T11	NoRel	true	temores	enterradas
+Relation	T6	T7	NoRel	true	temores	evacuados
+Relation	T7	T0	NoRel	true	evacuados	arrastrados
+Relation	T7	T1	NoRel	true	evacuados	desaparecieron
+Relation	T7	T11	NoRel	true	evacuados	enterradas
+Relation	T7	T12	NoRel	true	evacuados	deslizamiento
+Relation	T7	T13	NoRel	true	evacuados	enterrado
+Relation	T7	T3	NoRel	true	evacuados	deslizamiento
+Relation	T7	T4	NoRel	true	evacuados	mató
+Relation	T7	T5	NoRel	true	evacuados	murió
+Relation	T8	T1	NoRel	true	escapar	desaparecieron
+Relation	T8	T10	NoRel	true	escapar	deslizamientos
+Relation	T8	T3	NoRel	true	escapar	deslizamiento
+Relation	T9	T0	NoRel	true	inundaciones	arrastrados
+Relation	T9	T2	NoRel	true	inundaciones	rescatado
+Relation	T9	T4	NoRel	true	inundaciones	mató
+Relation	T9	T6	NoRel	true	inundaciones	temores
+Relation	T9	T8	NoRel	true	inundaciones	escapar

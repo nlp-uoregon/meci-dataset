@@ -1,0 +1,22 @@
+Text	18 مارچ کو کورونا وائرس سے پہلے مریض فوت ہو گیا ۔	70 نئے کیس سامنے آئے ، کل مریضوں کی تعداد 307 ہو گئی ۔	-	19 مارچ کو کورونا وائرس سے متاثرہ مریضوں کی تعداد 454 ہو گئی ۔	صرف ایک دن میں 147 نئے کیس سامنے آئے ۔
+Event	T0	فوت	EVENT	37
+Event	T1	گیا	EVENT	44
+Event	T2	آئے	EVENT	67
+Event	T3	گئی	EVENT	99
+Event	T4	گئی	EVENT	164
+Event	T5	آئے	EVENT	203
+Relation	T2	T3	CauseEffect	true	آئے	گئی
+Relation	T3	T2	EffectCause	true	گئی	آئے
+Relation	T0	T2	NoRel	true	فوت	آئے
+Relation	T0	T3	NoRel	true	فوت	گئی
+Relation	T1	T5	NoRel	true	گیا	آئے
+Relation	T2	T0	NoRel	true	آئے	فوت
+Relation	T2	T5	NoRel	true	آئے	آئے
+Relation	T3	T0	NoRel	true	گئی	فوت
+Relation	T3	T1	NoRel	true	گئی	گیا
+Relation	T3	T4	NoRel	true	گئی	گئی
+Relation	T3	T5	NoRel	true	گئی	آئے
+Relation	T4	T1	NoRel	true	گئی	گیا
+Relation	T4	T5	NoRel	true	گئی	آئے
+Relation	T5	T0	NoRel	true	آئے	فوت
+Relation	T5	T1	NoRel	true	آئے	گیا

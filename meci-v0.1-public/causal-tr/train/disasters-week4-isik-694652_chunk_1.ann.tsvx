@@ -1,0 +1,18 @@
+Text	52 saniye sürmüştür .	Deprem nedeniyle Karadeniz kıyısındaki Fatsa'da tsunami yaşanmıştır .	Türkiye’nin birinci derece deprem bölgesinde bulunan Erzincan , Kuzey Anadolu deprem kuşağının çok etkin bir bölümü olan Erzincan Ovası içindedir .	Tarihi belgelere göre Erzincan son bin yılda 11 kez tümüyle yıkıma uğramıştır .	Yerleşmenin bulunduğu zemin , akarsu çökellerinden oluşmuştur .
+Event	T0	sürmüştür	EVENT	10
+Event	T1	Deprem	EVENT	22
+Event	T2	yaşanmıştır	EVENT	78
+Event	T3	uğramıştır	EVENT	307
+Event	T4	oluşmuştur	EVENT	371
+Relation	T1	T2	CauseEffect	true	Deprem	yaşanmıştır
+Relation	T2	T1	EffectCause	true	yaşanmıştır	Deprem
+Relation	T0	T2	NoRel	true	sürmüştür	yaşanmıştır
+Relation	T1	T0	NoRel	true	Deprem	sürmüştür
+Relation	T1	T3	NoRel	true	Deprem	uğramıştır
+Relation	T2	T0	NoRel	true	yaşanmıştır	sürmüştür
+Relation	T2	T3	NoRel	true	yaşanmıştır	uğramıştır
+Relation	T3	T0	NoRel	true	uğramıştır	sürmüştür
+Relation	T3	T1	NoRel	true	uğramıştır	Deprem
+Relation	T3	T2	NoRel	true	uğramıştır	yaşanmıştır
+Relation	T4	T2	NoRel	true	oluşmuştur	yaşanmıştır
+Relation	T4	T3	NoRel	true	oluşmuştur	uğramıştır

@@ -1,0 +1,59 @@
+Text	NATO ise ellerindeki verilerin Rus uçağının Türk hava sahasını ihlâl ettiği yönünde olduğunu açıkladı .	22 Haziran 2012 tarihinde Suriye tarafından ihtar yapılmadan Türk Hava Kuvvetleri'ne ait RF - 4E Phantom keşif uçağı düşürüldü .	Olay çerçevesinde Türk Silahlı Kuvvetleri , Suriye'ye karşı angajman kurallarını değiştirdi ve Suriye sınırı boyunca askeri hazırlık yaptı .	Yeni angajman kuralları gereği , Suriye tarafından sınıra yaklaşan her askeri unsur tehdit olarak değerlendirilerek askeri hedef muamelesi görmeye başladı .	Rusya , Suriye İç Savaşı'na doğrudan müdahil olan birkaç ülkeden biri olmakla birlikte , 30 Eylül 2015 tarihinden itibaren Suriye'de Esad hükûmetinin yanında , IŞİD ve hükûmet karşıtı gruplara karşı hava saldırısına başladı .
+Event	T0	açıkladı	EVENT	93
+Event	T1	ihtar	EVENT	148
+Event	T2	düşürüldü	EVENT	221
+Event	T3	Olay	EVENT	233
+Event	T4	değiştirdi	EVENT	314
+Event	T5	yaptı	EVENT	366
+Event	T6	tehdit	EVENT	458
+Event	T7	başladı	EVENT	521
+Event	T9	ihlâl	EVENT	63
+Event	T10	yaklaşan	EVENT	432
+Event	T11	değerlendirilerek	EVENT	472
+Event	T12	müdahil	EVENT	568
+Event	T8	saldırısına	EVENT	735
+Relation	T2	T4	CauseEffect	true	düşürüldü	değiştirdi
+Relation	T4	T2	EffectCause	true	değiştirdi	düşürüldü
+Relation	T3	T4	CauseEffect	true	Olay	değiştirdi
+Relation	T4	T3	EffectCause	true	değiştirdi	Olay
+Relation	T10	T6	CauseEffect	true	yaklaşan	tehdit
+Relation	T6	T10	EffectCause	true	tehdit	yaklaşan
+Relation	T0	T10	NoRel	true	açıkladı	yaklaşan
+Relation	T0	T12	NoRel	true	açıkladı	müdahil
+Relation	T0	T2	NoRel	true	açıkladı	düşürüldü
+Relation	T0	T9	NoRel	true	açıkladı	ihlâl
+Relation	T1	T10	NoRel	true	ihtar	yaklaşan
+Relation	T1	T11	NoRel	true	ihtar	değerlendirilerek
+Relation	T1	T3	NoRel	true	ihtar	Olay
+Relation	T1	T8	NoRel	true	ihtar	saldırısına
+Relation	T1	T9	NoRel	true	ihtar	ihlâl
+Relation	T10	T0	NoRel	true	yaklaşan	açıkladı
+Relation	T10	T3	NoRel	true	yaklaşan	Olay
+Relation	T10	T4	NoRel	true	yaklaşan	değiştirdi
+Relation	T11	T12	NoRel	true	değerlendirilerek	müdahil
+Relation	T11	T2	NoRel	true	değerlendirilerek	düşürüldü
+Relation	T11	T3	NoRel	true	değerlendirilerek	Olay
+Relation	T11	T5	NoRel	true	değerlendirilerek	yaptı
+Relation	T12	T8	NoRel	true	müdahil	saldırısına
+Relation	T12	T9	NoRel	true	müdahil	ihlâl
+Relation	T2	T10	NoRel	true	düşürüldü	yaklaşan
+Relation	T2	T3	NoRel	true	düşürüldü	Olay
+Relation	T2	T5	NoRel	true	düşürüldü	yaptı
+Relation	T2	T7	NoRel	true	düşürüldü	başladı
+Relation	T2	T8	NoRel	true	düşürüldü	saldırısına
+Relation	T2	T9	NoRel	true	düşürüldü	ihlâl
+Relation	T3	T7	NoRel	true	Olay	başladı
+Relation	T4	T12	NoRel	true	değiştirdi	müdahil
+Relation	T4	T7	NoRel	true	değiştirdi	başladı
+Relation	T5	T6	NoRel	true	yaptı	tehdit
+Relation	T5	T9	NoRel	true	yaptı	ihlâl
+Relation	T6	T1	NoRel	true	tehdit	ihtar
+Relation	T6	T3	NoRel	true	tehdit	Olay
+Relation	T7	T4	NoRel	true	başladı	değiştirdi
+Relation	T7	T5	NoRel	true	başladı	yaptı
+Relation	T7	T6	NoRel	true	başladı	tehdit
+Relation	T7	T9	NoRel	true	başladı	ihlâl
+Relation	T8	T7	NoRel	true	saldırısına	başladı
+Relation	T8	T9	NoRel	true	saldırısına	ihlâl
+Relation	T9	T2	NoRel	true	ihlâl	düşürüldü
+Relation	T9	T3	NoRel	true	ihlâl	Olay

@@ -1,0 +1,63 @@
+Text	1 ve 3 Ekim 1815'te Kalküta yakınındaki Hint Okyanusu'nda bir ponza yığını bulundu .	23 Nisan'da zirve hâlâ yoğun kül bulutuyla kaplı bir hâldeydi .	Patlama 15 Temmuz'da sona erdi ancak duman emisyonları 23 Ağustos'a kadar sürdü .	Patlamanın üzerinden dört yıl sonra Ağustos 1819'a kadar alev ve sarsıntılı gibi artçı olaylar yaşanmaya devam etti .	Orta büyüklükte bir tsunami , saat 10 civarında Sanggar'da 4 metreye kadar yükselerek 10 Nisan'da Endonezya takımadalarındaki çeşitli adaların kıyılarına çarptı .
+Event	T0	bulundu	EVENT	75
+Event	T1	zirve	EVENT	97
+Event	T2	Patlama	EVENT	149
+Event	T3	erdi	EVENT	175
+Event	T4	emisyonları	EVENT	192
+Event	T5	sürdü	EVENT	223
+Event	T6	Patlamanın	EVENT	231
+Event	T7	sarsıntılı	EVENT	296
+Event	T8	etti	EVENT	342
+Event	T9	tsunami	EVENT	369
+Event	T10	yükselerek	EVENT	424
+Event	T11	çarptı	EVENT	503
+Relation	T9	T10	CauseEffect	true	tsunami	yükselerek
+Relation	T10	T9	EffectCause	true	yükselerek	tsunami
+Relation	T10	T11	CauseEffect	true	yükselerek	çarptı
+Relation	T11	T10	EffectCause	true	çarptı	yükselerek
+Relation	T0	T1	NoRel	true	bulundu	zirve
+Relation	T0	T5	NoRel	true	bulundu	sürdü
+Relation	T0	T8	NoRel	true	bulundu	etti
+Relation	T0	T9	NoRel	true	bulundu	tsunami
+Relation	T1	T0	NoRel	true	zirve	bulundu
+Relation	T1	T11	NoRel	true	zirve	çarptı
+Relation	T1	T5	NoRel	true	zirve	sürdü
+Relation	T1	T8	NoRel	true	zirve	etti
+Relation	T10	T0	NoRel	true	yükselerek	bulundu
+Relation	T10	T5	NoRel	true	yükselerek	sürdü
+Relation	T10	T7	NoRel	true	yükselerek	sarsıntılı
+Relation	T11	T0	NoRel	true	çarptı	bulundu
+Relation	T11	T2	NoRel	true	çarptı	Patlama
+Relation	T2	T0	NoRel	true	Patlama	bulundu
+Relation	T2	T1	NoRel	true	Patlama	zirve
+Relation	T2	T5	NoRel	true	Patlama	sürdü
+Relation	T3	T1	NoRel	true	erdi	zirve
+Relation	T3	T5	NoRel	true	erdi	sürdü
+Relation	T3	T9	NoRel	true	erdi	tsunami
+Relation	T4	T3	NoRel	true	emisyonları	erdi
+Relation	T4	T5	NoRel	true	emisyonları	sürdü
+Relation	T4	T7	NoRel	true	emisyonları	sarsıntılı
+Relation	T4	T8	NoRel	true	emisyonları	etti
+Relation	T5	T0	NoRel	true	sürdü	bulundu
+Relation	T5	T1	NoRel	true	sürdü	zirve
+Relation	T5	T2	NoRel	true	sürdü	Patlama
+Relation	T5	T3	NoRel	true	sürdü	erdi
+Relation	T5	T4	NoRel	true	sürdü	emisyonları
+Relation	T5	T7	NoRel	true	sürdü	sarsıntılı
+Relation	T5	T8	NoRel	true	sürdü	etti
+Relation	T6	T0	NoRel	true	Patlamanın	bulundu
+Relation	T6	T1	NoRel	true	Patlamanın	zirve
+Relation	T6	T10	NoRel	true	Patlamanın	yükselerek
+Relation	T6	T11	NoRel	true	Patlamanın	çarptı
+Relation	T6	T5	NoRel	true	Patlamanın	sürdü
+Relation	T6	T8	NoRel	true	Patlamanın	etti
+Relation	T7	T11	NoRel	true	sarsıntılı	çarptı
+Relation	T7	T2	NoRel	true	sarsıntılı	Patlama
+Relation	T7	T5	NoRel	true	sarsıntılı	sürdü
+Relation	T7	T6	NoRel	true	sarsıntılı	Patlamanın
+Relation	T8	T7	NoRel	true	etti	sarsıntılı
+Relation	T9	T1	NoRel	true	tsunami	zirve
+Relation	T9	T3	NoRel	true	tsunami	erdi
+Relation	T9	T4	NoRel	true	tsunami	emisyonları
+Relation	T9	T5	NoRel	true	tsunami	sürdü
+Relation	T9	T6	NoRel	true	tsunami	Patlamanın

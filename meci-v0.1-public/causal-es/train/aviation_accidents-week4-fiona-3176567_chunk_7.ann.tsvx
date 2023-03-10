@@ -1,0 +1,57 @@
+Text	Pero el Representante Jane Harman ( D-Calif. ) , Presidente del House Homeland Security Subcommittee on Intelligence , Information Sharing , and Terrorism Risk Assessment , dijo el siguiente día a un oficial federal sobre " fuertes sugerencias de conexiones con Yemen-al Qaeda " con el sospechoso .	Abdulmutallab dijo que obtuvo el artefacto en Yemen , y las instrucciones de al-Qaeda de como usarlo y detonarlo cuando el avión se encontrase en tierra estadounidense .	A pesar de eso , las autoridades no lo confirmaron .	Sin embargo , él viajó recientemente a Yemen , lugar donde su madre vive .	Como medidas de seguridad debido al incidente del vuelo 253 , los principales aeropuertos europeos incrementaron las medidas de seguridad en los vuelos hacia los EE._UU. .
+Event	T0	dijo	EVENT	173
+Event	T1	sugerencias	EVENT	232
+Event	T2	conexiones	EVENT	247
+Event	T3	dijo	EVENT	313
+Event	T4	obtuvo	EVENT	322
+Event	T5	encontrase	EVENT	431
+Event	T6	viajó	EVENT	539
+Event	T7	incidente	EVENT	633
+Event	T8	vuelo	EVENT	647
+Event	T9	incrementaron	EVENT	696
+Event	T10	medidas	EVENT	714
+Event	T11	vuelos	EVENT	742
+Relation	T0	T8	NoRel	true	dijo	vuelo
+Relation	T1	T11	NoRel	true	sugerencias	vuelos
+Relation	T1	T9	NoRel	true	sugerencias	incrementaron
+Relation	T10	T0	NoRel	true	medidas	dijo
+Relation	T10	T7	NoRel	true	medidas	incidente
+Relation	T10	T9	NoRel	true	medidas	incrementaron
+Relation	T11	T1	NoRel	true	vuelos	sugerencias
+Relation	T11	T2	NoRel	true	vuelos	conexiones
+Relation	T11	T3	NoRel	true	vuelos	dijo
+Relation	T11	T4	NoRel	true	vuelos	obtuvo
+Relation	T11	T5	NoRel	true	vuelos	encontrase
+Relation	T11	T6	NoRel	true	vuelos	viajó
+Relation	T2	T10	NoRel	true	conexiones	medidas
+Relation	T2	T11	NoRel	true	conexiones	vuelos
+Relation	T2	T8	NoRel	true	conexiones	vuelo
+Relation	T2	T9	NoRel	true	conexiones	incrementaron
+Relation	T3	T10	NoRel	true	dijo	medidas
+Relation	T3	T2	NoRel	true	dijo	conexiones
+Relation	T4	T7	NoRel	true	obtuvo	incidente
+Relation	T4	T9	NoRel	true	obtuvo	incrementaron
+Relation	T5	T0	NoRel	true	encontrase	dijo
+Relation	T5	T2	NoRel	true	encontrase	conexiones
+Relation	T5	T3	NoRel	true	encontrase	dijo
+Relation	T5	T6	NoRel	true	encontrase	viajó
+Relation	T5	T8	NoRel	true	encontrase	vuelo
+Relation	T5	T9	NoRel	true	encontrase	incrementaron
+Relation	T6	T0	NoRel	true	viajó	dijo
+Relation	T6	T10	NoRel	true	viajó	medidas
+Relation	T6	T11	NoRel	true	viajó	vuelos
+Relation	T6	T7	NoRel	true	viajó	incidente
+Relation	T7	T1	NoRel	true	incidente	sugerencias
+Relation	T7	T11	NoRel	true	incidente	vuelos
+Relation	T7	T3	NoRel	true	incidente	dijo
+Relation	T7	T4	NoRel	true	incidente	obtuvo
+Relation	T7	T9	NoRel	true	incidente	incrementaron
+Relation	T8	T11	NoRel	true	vuelo	vuelos
+Relation	T8	T2	NoRel	true	vuelo	conexiones
+Relation	T8	T7	NoRel	true	vuelo	incidente
+Relation	T8	T9	NoRel	true	vuelo	incrementaron
+Relation	T9	T0	NoRel	true	incrementaron	dijo
+Relation	T9	T1	NoRel	true	incrementaron	sugerencias
+Relation	T9	T4	NoRel	true	incrementaron	obtuvo
+Relation	T9	T5	NoRel	true	incrementaron	encontrase
+Relation	T9	T8	NoRel	true	incrementaron	vuelo

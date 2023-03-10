@@ -1,0 +1,30 @@
+Text	Darbeciler kitle desteği ve siyasal meşrutiyet sağlamak için Sosyal Demokrat Hür Sendikalar lideri Carl Legien’den yardım istedi .	Hayatı boyunca uzlaşmacı bir çizgide kalan Legien kendinden beklenmedik bir şekilde bu teklifi reddedip bütün işçileri genel greve çağırdı .	İşçi sınıfı bu çağrıya olumlu cevap verdi .	15 Mart’ta başlayan grev bütün ülkeye yayıldı .	Grev başladıktan 4 gün sonra Darbeciler Berlin’den çekilmek zorunda kalacaktı .
+Event	T0	istedi	EVENT	122
+Event	T1	çağırdı	EVENT	262
+Event	T2	verdi	EVENT	308
+Event	T3	grev	EVENT	336
+Event	T4	yayıldı	EVENT	354
+Event	T6	reddedip	EVENT	226
+Event	T7	kalacaktı	EVENT	432
+Relation	T0	T6	CauseEffect	true	istedi	reddedip
+Relation	T6	T0	EffectCause	true	reddedip	istedi
+Relation	T6	T1	CauseEffect	true	reddedip	çağırdı
+Relation	T1	T6	EffectCause	true	çağırdı	reddedip
+Relation	T1	T2	CauseEffect	true	çağırdı	verdi
+Relation	T2	T1	EffectCause	true	verdi	çağırdı
+Relation	T2	T3	CauseEffect	true	verdi	grev
+Relation	T3	T2	EffectCause	true	grev	verdi
+Relation	T3	T4	CauseEffect	true	grev	yayıldı
+Relation	T4	T3	EffectCause	true	yayıldı	grev
+Relation	T3	T7	CauseEffect	true	grev	kalacaktı
+Relation	T7	T3	EffectCause	true	kalacaktı	grev
+Relation	T0	T2	NoRel	true	istedi	verdi
+Relation	T0	T3	NoRel	true	istedi	grev
+Relation	T2	T6	NoRel	true	verdi	reddedip
+Relation	T4	T1	NoRel	true	yayıldı	çağırdı
+Relation	T4	T2	NoRel	true	yayıldı	verdi
+Relation	T4	T7	NoRel	true	yayıldı	kalacaktı
+Relation	T7	T1	NoRel	true	kalacaktı	çağırdı
+Relation	T7	T2	NoRel	true	kalacaktı	verdi
+Relation	T7	T4	NoRel	true	kalacaktı	yayıldı
+Relation	T7	T6	NoRel	true	kalacaktı	reddedip

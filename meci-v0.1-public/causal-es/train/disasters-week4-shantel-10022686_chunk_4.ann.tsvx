@@ -1,0 +1,103 @@
+Text	Los pilotos de este vuelo anterior confirmaron que los controladores de tránsito aéreo transmitieron los informes de acción de frenado a la tripulación de vuelo del Delta 1086 ; Estos informes se basaron en los informes de los pilotos de otros dos vuelos que aterrizaron varios minutos antes del vuelo 1086 .	Ambos vuelos anteriores habían informado que la acción de frenado en la pista era " buena " .	Las declaraciones de los pilotos a la NTSB después del accidente revelaron que la pista parecía toda blanca ( cubierta de nieve ) cuando el avión descendió del cielo cubierto , segundos antes de aterrizar .	[ miniaturade imagen | Aeropuerto LaGuardia .	La pista 13 comienza en la parte inferior central de la foto y se extiende hacia la parte superior izquierda .
+Event	T0	vuelo	EVENT	20
+Event	T1	confirmaron	EVENT	35
+Event	T2	transmitieron	EVENT	87
+Event	T3	informes	EVENT	105
+Event	T6	informes	EVENT	184
+Event	T10	vuelo	EVENT	296
+Event	T11	informado	EVENT	340
+Event	T12	acción	EVENT	357
+Event	T13	frenado	EVENT	367
+Event	T14	declaraciones	EVENT	407
+Event	T15	revelaron	EVENT	468
+Event	T16	descendió	EVENT	549
+Event	T17	cubierto	EVENT	569
+Event	T18	aterrizar	EVENT	598
+Event	T4	vuelos	EVENT	248
+Event	T5	accidente	EVENT	458
+Relation	T4	T6	CauseEffect	true	vuelos	informes
+Relation	T6	T4	EffectCause	true	informes	vuelos
+Relation	T0	T1	NoRel	true	vuelo	confirmaron
+Relation	T0	T10	NoRel	true	vuelo	vuelo
+Relation	T0	T11	NoRel	true	vuelo	informado
+Relation	T0	T12	NoRel	true	vuelo	acción
+Relation	T0	T13	NoRel	true	vuelo	frenado
+Relation	T0	T17	NoRel	true	vuelo	cubierto
+Relation	T0	T2	NoRel	true	vuelo	transmitieron
+Relation	T0	T4	NoRel	true	vuelo	vuelos
+Relation	T1	T11	NoRel	true	confirmaron	informado
+Relation	T1	T4	NoRel	true	confirmaron	vuelos
+Relation	T10	T0	NoRel	true	vuelo	vuelo
+Relation	T10	T16	NoRel	true	vuelo	descendió
+Relation	T10	T5	NoRel	true	vuelo	accidente
+Relation	T11	T14	NoRel	true	informado	declaraciones
+Relation	T11	T17	NoRel	true	informado	cubierto
+Relation	T11	T18	NoRel	true	informado	aterrizar
+Relation	T11	T4	NoRel	true	informado	vuelos
+Relation	T11	T5	NoRel	true	informado	accidente
+Relation	T12	T0	NoRel	true	acción	vuelo
+Relation	T12	T10	NoRel	true	acción	vuelo
+Relation	T12	T11	NoRel	true	acción	informado
+Relation	T12	T13	NoRel	true	acción	frenado
+Relation	T12	T15	NoRel	true	acción	revelaron
+Relation	T12	T17	NoRel	true	acción	cubierto
+Relation	T12	T18	NoRel	true	acción	aterrizar
+Relation	T12	T2	NoRel	true	acción	transmitieron
+Relation	T12	T6	NoRel	true	acción	informes
+Relation	T13	T1	NoRel	true	frenado	confirmaron
+Relation	T13	T10	NoRel	true	frenado	vuelo
+Relation	T13	T12	NoRel	true	frenado	acción
+Relation	T13	T14	NoRel	true	frenado	declaraciones
+Relation	T13	T18	NoRel	true	frenado	aterrizar
+Relation	T14	T11	NoRel	true	declaraciones	informado
+Relation	T14	T15	NoRel	true	declaraciones	revelaron
+Relation	T14	T16	NoRel	true	declaraciones	descendió
+Relation	T14	T17	NoRel	true	declaraciones	cubierto
+Relation	T14	T4	NoRel	true	declaraciones	vuelos
+Relation	T14	T5	NoRel	true	declaraciones	accidente
+Relation	T14	T6	NoRel	true	declaraciones	informes
+Relation	T15	T0	NoRel	true	revelaron	vuelo
+Relation	T15	T11	NoRel	true	revelaron	informado
+Relation	T15	T14	NoRel	true	revelaron	declaraciones
+Relation	T15	T16	NoRel	true	revelaron	descendió
+Relation	T15	T2	NoRel	true	revelaron	transmitieron
+Relation	T15	T3	NoRel	true	revelaron	informes
+Relation	T15	T5	NoRel	true	revelaron	accidente
+Relation	T16	T0	NoRel	true	descendió	vuelo
+Relation	T16	T1	NoRel	true	descendió	confirmaron
+Relation	T16	T11	NoRel	true	descendió	informado
+Relation	T16	T14	NoRel	true	descendió	declaraciones
+Relation	T17	T0	NoRel	true	cubierto	vuelo
+Relation	T17	T12	NoRel	true	cubierto	acción
+Relation	T18	T10	NoRel	true	aterrizar	vuelo
+Relation	T18	T11	NoRel	true	aterrizar	informado
+Relation	T18	T13	NoRel	true	aterrizar	frenado
+Relation	T18	T15	NoRel	true	aterrizar	revelaron
+Relation	T18	T4	NoRel	true	aterrizar	vuelos
+Relation	T2	T0	NoRel	true	transmitieron	vuelo
+Relation	T2	T1	NoRel	true	transmitieron	confirmaron
+Relation	T2	T13	NoRel	true	transmitieron	frenado
+Relation	T2	T15	NoRel	true	transmitieron	revelaron
+Relation	T2	T3	NoRel	true	transmitieron	informes
+Relation	T3	T1	NoRel	true	informes	confirmaron
+Relation	T3	T10	NoRel	true	informes	vuelo
+Relation	T3	T13	NoRel	true	informes	frenado
+Relation	T3	T16	NoRel	true	informes	descendió
+Relation	T3	T17	NoRel	true	informes	cubierto
+Relation	T3	T5	NoRel	true	informes	accidente
+Relation	T4	T0	NoRel	true	vuelos	vuelo
+Relation	T4	T11	NoRel	true	vuelos	informado
+Relation	T4	T14	NoRel	true	vuelos	declaraciones
+Relation	T4	T16	NoRel	true	vuelos	descendió
+Relation	T4	T3	NoRel	true	vuelos	informes
+Relation	T5	T1	NoRel	true	accidente	confirmaron
+Relation	T5	T12	NoRel	true	accidente	acción
+Relation	T5	T18	NoRel	true	accidente	aterrizar
+Relation	T5	T6	NoRel	true	accidente	informes
+Relation	T6	T0	NoRel	true	informes	vuelo
+Relation	T6	T12	NoRel	true	informes	acción
+Relation	T6	T13	NoRel	true	informes	frenado
+Relation	T6	T14	NoRel	true	informes	declaraciones
+Relation	T6	T18	NoRel	true	informes	aterrizar
+Relation	T6	T2	NoRel	true	informes	transmitieron
+Relation	T6	T3	NoRel	true	informes	informes

@@ -1,0 +1,59 @@
+Text	Protestocular binaların pencerelerini kırdı ve vandallık yaptı .	Gare du Nord ve Place de la République yakınlarında çıkan huzursuzlukların çoğuyla benzer davranışlarda bulunulduktan sonra 15 Kasım gecesi Paris'te 49 kişi tutuklandı .	Aynı gece Rouen'de 21 kişi tutuklandı .	Ayaklanmaların " Gece Ayakta " olarak bilinen Nuit debout protestolarıyla zamanlaması dikkat çekmiştir .	Ülke genelinde süren protestolara karşı polis müdahalesi sürmüş , gösterici , polis ve medya mensupları sık sık karşı karşıya gelmiş , polis göstericilere sık sık biber gazı , göz yaşartıcı gaz , plastik mermi ve cop ile müdahalelerde bulunmaktadır .
+Event	T0	kırdı	EVENT	38
+Event	T1	yaptı	EVENT	57
+Event	T2	çıkan	EVENT	117
+Event	T3	tutuklandı	EVENT	222
+Event	T4	tutuklandı	EVENT	262
+Event	T5	çekmiştir	EVENT	368
+Event	T7	gelmiş	EVENT	506
+Event	T8	müdahalelerde	EVENT	601
+Event	T9	Ayaklanmaların	EVENT	275
+Event	T10	protestolarıyla	EVENT	333
+Event	T11	protestolara	EVENT	401
+Event	T12	müdahalesi	EVENT	426
+Relation	T12	T7	CauseEffect	true	müdahalesi	gelmiş
+Relation	T7	T12	EffectCause	true	gelmiş	müdahalesi
+Relation	T7	T8	CauseEffect	true	gelmiş	müdahalelerde
+Relation	T8	T7	EffectCause	true	müdahalelerde	gelmiş
+Relation	T12	T3	CauseEffect	true	müdahalesi	tutuklandı
+Relation	T3	T12	EffectCause	true	tutuklandı	müdahalesi
+Relation	T12	T4	CauseEffect	true	müdahalesi	tutuklandı
+Relation	T4	T12	EffectCause	true	tutuklandı	müdahalesi
+Relation	T0	T11	NoRel	true	kırdı	protestolara
+Relation	T0	T3	NoRel	true	kırdı	tutuklandı
+Relation	T0	T4	NoRel	true	kırdı	tutuklandı
+Relation	T1	T0	NoRel	true	yaptı	kırdı
+Relation	T1	T3	NoRel	true	yaptı	tutuklandı
+Relation	T1	T7	NoRel	true	yaptı	gelmiş
+Relation	T1	T8	NoRel	true	yaptı	müdahalelerde
+Relation	T1	T9	NoRel	true	yaptı	Ayaklanmaların
+Relation	T10	T1	NoRel	true	protestolarıyla	yaptı
+Relation	T10	T2	NoRel	true	protestolarıyla	çıkan
+Relation	T10	T3	NoRel	true	protestolarıyla	tutuklandı
+Relation	T10	T5	NoRel	true	protestolarıyla	çekmiştir
+Relation	T11	T0	NoRel	true	protestolara	kırdı
+Relation	T11	T1	NoRel	true	protestolara	yaptı
+Relation	T11	T10	NoRel	true	protestolara	protestolarıyla
+Relation	T11	T12	NoRel	true	protestolara	müdahalesi
+Relation	T11	T8	NoRel	true	protestolara	müdahalelerde
+Relation	T12	T5	NoRel	true	müdahalesi	çekmiştir
+Relation	T12	T8	NoRel	true	müdahalesi	müdahalelerde
+Relation	T2	T1	NoRel	true	çıkan	yaptı
+Relation	T2	T3	NoRel	true	çıkan	tutuklandı
+Relation	T2	T4	NoRel	true	çıkan	tutuklandı
+Relation	T3	T4	NoRel	true	tutuklandı	tutuklandı
+Relation	T3	T5	NoRel	true	tutuklandı	çekmiştir
+Relation	T3	T7	NoRel	true	tutuklandı	gelmiş
+Relation	T3	T8	NoRel	true	tutuklandı	müdahalelerde
+Relation	T4	T11	NoRel	true	tutuklandı	protestolara
+Relation	T4	T3	NoRel	true	tutuklandı	tutuklandı
+Relation	T4	T5	NoRel	true	tutuklandı	çekmiştir
+Relation	T5	T4	NoRel	true	çekmiştir	tutuklandı
+Relation	T7	T5	NoRel	true	gelmiş	çekmiştir
+Relation	T8	T0	NoRel	true	müdahalelerde	kırdı
+Relation	T8	T1	NoRel	true	müdahalelerde	yaptı
+Relation	T8	T2	NoRel	true	müdahalelerde	çıkan
+Relation	T8	T4	NoRel	true	müdahalelerde	tutuklandı
+Relation	T9	T10	NoRel	true	Ayaklanmaların	protestolarıyla
+Relation	T9	T11	NoRel	true	Ayaklanmaların	protestolara
+Relation	T9	T12	NoRel	true	Ayaklanmaların	müdahalesi

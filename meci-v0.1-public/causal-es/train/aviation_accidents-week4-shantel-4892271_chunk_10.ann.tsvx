@@ -1,0 +1,102 @@
+Text	- Un perro de trabajo militar estadounidense .	Los treinta estadounidenses muertos representan la mayor pérdida de vidas militares estadounidenses en un único incidente en la década de duración de la Guerra de Afganistán que comenzó en 2001 .	En ese mismo día por la tarde , una inundación repentina barrió la zona arrasando con partes de los restos .	Los primeros informes de los medios sugirieron que el ejército había tardado en recuperar las grabadoras de vuelo del Chinook derribado y , como consecuencia , las grabadoras habían sido arrastradas por la inundación .	Estos informes eran erróneos , pues la estructura del CH-47D no contiene cajas negras ( aunque el variante MH-47 tienen un registrador de datos de vuelo y voces de cabina ) .
+Event	T0	representan	EVENT	83
+Event	T1	pérdida	EVENT	104
+Event	T2	incidente	EVENT	159
+Event	T3	Guerra	EVENT	200
+Event	T4	comenzó	EVENT	225
+Event	T5	barrió	EVENT	300
+Event	T6	arrasando	EVENT	315
+Event	T7	informes	EVENT	365
+Event	T8	sugirieron	EVENT	388
+Event	T9	tardado	EVENT	421
+Event	T10	recuperar	EVENT	432
+Event	T11	vuelo	EVENT	460
+Event	T12	derribado	EVENT	478
+Event	T13	arrastradas	EVENT	539
+Event	T14	inundación	EVENT	558
+Event	T15	informes	EVENT	577
+Event	T16	inundación	EVENT	279
+Relation	T2	T1	CauseEffect	true	incidente	pérdida
+Relation	T1	T2	EffectCause	true	pérdida	incidente
+Relation	T16	T5	CauseEffect	true	inundación	barrió
+Relation	T5	T16	EffectCause	true	barrió	inundación
+Relation	T0	T12	NoRel	true	representan	derribado
+Relation	T0	T13	NoRel	true	representan	arrastradas
+Relation	T0	T6	NoRel	true	representan	arrasando
+Relation	T0	T8	NoRel	true	representan	sugirieron
+Relation	T0	T9	NoRel	true	representan	tardado
+Relation	T1	T13	NoRel	true	pérdida	arrastradas
+Relation	T1	T14	NoRel	true	pérdida	inundación
+Relation	T1	T5	NoRel	true	pérdida	barrió
+Relation	T1	T7	NoRel	true	pérdida	informes
+Relation	T1	T8	NoRel	true	pérdida	sugirieron
+Relation	T10	T5	NoRel	true	recuperar	barrió
+Relation	T10	T7	NoRel	true	recuperar	informes
+Relation	T10	T8	NoRel	true	recuperar	sugirieron
+Relation	T10	T9	NoRel	true	recuperar	tardado
+Relation	T11	T10	NoRel	true	vuelo	recuperar
+Relation	T11	T2	NoRel	true	vuelo	incidente
+Relation	T11	T3	NoRel	true	vuelo	Guerra
+Relation	T11	T4	NoRel	true	vuelo	comenzó
+Relation	T11	T5	NoRel	true	vuelo	barrió
+Relation	T11	T8	NoRel	true	vuelo	sugirieron
+Relation	T12	T0	NoRel	true	derribado	representan
+Relation	T12	T10	NoRel	true	derribado	recuperar
+Relation	T12	T11	NoRel	true	derribado	vuelo
+Relation	T12	T13	NoRel	true	derribado	arrastradas
+Relation	T12	T14	NoRel	true	derribado	inundación
+Relation	T12	T16	NoRel	true	derribado	inundación
+Relation	T12	T9	NoRel	true	derribado	tardado
+Relation	T13	T15	NoRel	true	arrastradas	informes
+Relation	T13	T4	NoRel	true	arrastradas	comenzó
+Relation	T13	T6	NoRel	true	arrastradas	arrasando
+Relation	T13	T9	NoRel	true	arrastradas	tardado
+Relation	T14	T15	NoRel	true	inundación	informes
+Relation	T14	T3	NoRel	true	inundación	Guerra
+Relation	T14	T6	NoRel	true	inundación	arrasando
+Relation	T14	T7	NoRel	true	inundación	informes
+Relation	T15	T0	NoRel	true	informes	representan
+Relation	T15	T10	NoRel	true	informes	recuperar
+Relation	T15	T4	NoRel	true	informes	comenzó
+Relation	T15	T5	NoRel	true	informes	barrió
+Relation	T15	T8	NoRel	true	informes	sugirieron
+Relation	T15	T9	NoRel	true	informes	tardado
+Relation	T16	T11	NoRel	true	inundación	vuelo
+Relation	T16	T4	NoRel	true	inundación	comenzó
+Relation	T2	T10	NoRel	true	incidente	recuperar
+Relation	T2	T14	NoRel	true	incidente	inundación
+Relation	T2	T16	NoRel	true	incidente	inundación
+Relation	T2	T4	NoRel	true	incidente	comenzó
+Relation	T2	T8	NoRel	true	incidente	sugirieron
+Relation	T2	T9	NoRel	true	incidente	tardado
+Relation	T3	T1	NoRel	true	Guerra	pérdida
+Relation	T3	T11	NoRel	true	Guerra	vuelo
+Relation	T3	T13	NoRel	true	Guerra	arrastradas
+Relation	T3	T15	NoRel	true	Guerra	informes
+Relation	T4	T11	NoRel	true	comenzó	vuelo
+Relation	T4	T12	NoRel	true	comenzó	derribado
+Relation	T4	T16	NoRel	true	comenzó	inundación
+Relation	T4	T2	NoRel	true	comenzó	incidente
+Relation	T4	T3	NoRel	true	comenzó	Guerra
+Relation	T4	T5	NoRel	true	comenzó	barrió
+Relation	T4	T7	NoRel	true	comenzó	informes
+Relation	T5	T4	NoRel	true	barrió	comenzó
+Relation	T5	T6	NoRel	true	barrió	arrasando
+Relation	T5	T7	NoRel	true	barrió	informes
+Relation	T5	T8	NoRel	true	barrió	sugirieron
+Relation	T6	T15	NoRel	true	arrasando	informes
+Relation	T7	T10	NoRel	true	informes	recuperar
+Relation	T7	T13	NoRel	true	informes	arrastradas
+Relation	T7	T14	NoRel	true	informes	inundación
+Relation	T7	T6	NoRel	true	informes	arrasando
+Relation	T8	T0	NoRel	true	sugirieron	representan
+Relation	T8	T1	NoRel	true	sugirieron	pérdida
+Relation	T8	T13	NoRel	true	sugirieron	arrastradas
+Relation	T9	T1	NoRel	true	tardado	pérdida
+Relation	T9	T11	NoRel	true	tardado	vuelo
+Relation	T9	T15	NoRel	true	tardado	informes
+Relation	T9	T16	NoRel	true	tardado	inundación
+Relation	T9	T2	NoRel	true	tardado	incidente
+Relation	T9	T4	NoRel	true	tardado	comenzó
+Relation	T9	T5	NoRel	true	tardado	barrió
+Relation	T9	T6	NoRel	true	tardado	arrasando

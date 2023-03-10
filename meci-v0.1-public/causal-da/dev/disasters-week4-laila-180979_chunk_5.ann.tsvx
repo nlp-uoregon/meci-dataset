@@ -1,0 +1,46 @@
+Text	Dog viste det sig , at det plutonium , man kunne fremstille i reaktorerne , ikke var af høj nok kvalitet .	Det var ikke nær så rent som det cyclotron-producerede plutonium , man havde anvendt i forsøg .	Selv om plutoniumet kun indeholdt 0,9 % af isotopen ²⁴⁰ Pu , var det ikke rent nok .	Pu-240-isotopen ville gøre plutoniumet for ustabilt , med en for høj grad af spontan neutronemission .	Dette ville få atombomben til at detonere for tidligt .
+Event	T0	viste	EVENT	4
+Event	T1	anvendt	EVENT	184
+Event	T2	forsøg	EVENT	194
+Event	T3	indeholdt	EVENT	227
+Event	T4	gøre	EVENT	310
+Event	T5	detonere	EVENT	424
+Event	T6	fremstille	EVENT	49
+Event	T7	kvalitet	EVENT	96
+Event	T8	rent	EVENT	127
+Event	T9	ustabilt	EVENT	331
+Relation	T3	T9	CauseEffect	true	indeholdt	ustabilt
+Relation	T9	T3	EffectCause	true	ustabilt	indeholdt
+Relation	T9	T5	CauseEffect	true	ustabilt	detonere
+Relation	T5	T9	EffectCause	true	detonere	ustabilt
+Relation	T0	T1	NoRel	true	viste	anvendt
+Relation	T0	T5	NoRel	true	viste	detonere
+Relation	T0	T7	NoRel	true	viste	kvalitet
+Relation	T1	T0	NoRel	true	anvendt	viste
+Relation	T1	T3	NoRel	true	anvendt	indeholdt
+Relation	T1	T5	NoRel	true	anvendt	detonere
+Relation	T1	T6	NoRel	true	anvendt	fremstille
+Relation	T1	T9	NoRel	true	anvendt	ustabilt
+Relation	T3	T0	NoRel	true	indeholdt	viste
+Relation	T3	T1	NoRel	true	indeholdt	anvendt
+Relation	T3	T4	NoRel	true	indeholdt	gøre
+Relation	T3	T6	NoRel	true	indeholdt	fremstille
+Relation	T3	T8	NoRel	true	indeholdt	rent
+Relation	T4	T2	NoRel	true	gøre	forsøg
+Relation	T4	T6	NoRel	true	gøre	fremstille
+Relation	T4	T7	NoRel	true	gøre	kvalitet
+Relation	T4	T8	NoRel	true	gøre	rent
+Relation	T5	T3	NoRel	true	detonere	indeholdt
+Relation	T5	T6	NoRel	true	detonere	fremstille
+Relation	T6	T0	NoRel	true	fremstille	viste
+Relation	T6	T8	NoRel	true	fremstille	rent
+Relation	T6	T9	NoRel	true	fremstille	ustabilt
+Relation	T7	T3	NoRel	true	kvalitet	indeholdt
+Relation	T7	T5	NoRel	true	kvalitet	detonere
+Relation	T7	T8	NoRel	true	kvalitet	rent
+Relation	T8	T0	NoRel	true	rent	viste
+Relation	T8	T4	NoRel	true	rent	gøre
+Relation	T8	T5	NoRel	true	rent	detonere
+Relation	T8	T9	NoRel	true	rent	ustabilt
+Relation	T9	T0	NoRel	true	ustabilt	viste
+Relation	T9	T8	NoRel	true	ustabilt	rent

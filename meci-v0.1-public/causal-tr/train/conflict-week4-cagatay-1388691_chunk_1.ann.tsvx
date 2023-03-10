@@ -1,0 +1,43 @@
+Text	Çatışmanın kökeni , 20. yüzyılın başlarında ortaya çıktı .	Sovyetler Birliği döneminde , Josef Stalin Dağlık Karabağ bölgesini , tarihsel olarak Ermeni ve çoğunluğu Ermeni nüfusu olan Sovyet Azerbaycan'da bir özerk oblast haline getirmeye karar verdi .	Mevcut çatışma , 1988'de Karabağ Ermenilerinin , Karabağ'ın Sovyet Azerbaycan'dan Sovyet Ermenistan'a devredilmesini talep ettiği zaman başladı .	Çatışma , 1990'lı yılların başlarında , geniş çaplı bir savaşa dönüştü .	1994 yılında imzalanan bir ateşkes , Bakü'nün statüko ile olan sıkıntılarını artırmasının yanı sıra , Erivan'ın sağlamlaştırma çabalarıyla çelişen yirmi yıllık göreceli istikrar sağladı .
+Event	T0	Çatışmanın	EVENT	0
+Event	T1	çıktı	EVENT	51
+Event	T3	çatışma	EVENT	260
+Event	T5	başladı	EVENT	389
+Event	T6	Çatışma	EVENT	399
+Event	T7	dönüştü	EVENT	462
+Event	T8	ateşkes	EVENT	499
+Event	T9	sağladı	EVENT	650
+Event	T2	karar verdi	EVENT	239
+Event	T4	talep ettiği	EVENT	370
+Relation	T4	T3	CauseEffect	true	talep ettiği	çatışma
+Relation	T3	T4	EffectCause	true	çatışma	talep ettiği
+Relation	T4	T0	CauseEffect	true	talep ettiği	Çatışmanın
+Relation	T0	T4	EffectCause	true	Çatışmanın	talep ettiği
+Relation	T4	T6	CauseEffect	true	talep ettiği	Çatışma
+Relation	T6	T4	EffectCause	true	Çatışma	talep ettiği
+Relation	T0	T8	NoRel	true	Çatışmanın	ateşkes
+Relation	T1	T8	NoRel	true	çıktı	ateşkes
+Relation	T2	T1	NoRel	true	karar verdi	çıktı
+Relation	T2	T3	NoRel	true	karar verdi	çatışma
+Relation	T2	T5	NoRel	true	karar verdi	başladı
+Relation	T2	T6	NoRel	true	karar verdi	Çatışma
+Relation	T3	T8	NoRel	true	çatışma	ateşkes
+Relation	T4	T2	NoRel	true	talep ettiği	karar verdi
+Relation	T4	T7	NoRel	true	talep ettiği	dönüştü
+Relation	T4	T8	NoRel	true	talep ettiği	ateşkes
+Relation	T4	T9	NoRel	true	talep ettiği	sağladı
+Relation	T5	T3	NoRel	true	başladı	çatışma
+Relation	T5	T8	NoRel	true	başladı	ateşkes
+Relation	T6	T8	NoRel	true	Çatışma	ateşkes
+Relation	T7	T0	NoRel	true	dönüştü	Çatışmanın
+Relation	T7	T4	NoRel	true	dönüştü	talep ettiği
+Relation	T7	T9	NoRel	true	dönüştü	sağladı
+Relation	T8	T1	NoRel	true	ateşkes	çıktı
+Relation	T8	T2	NoRel	true	ateşkes	karar verdi
+Relation	T8	T3	NoRel	true	ateşkes	çatışma
+Relation	T8	T4	NoRel	true	ateşkes	talep ettiği
+Relation	T8	T6	NoRel	true	ateşkes	Çatışma
+Relation	T8	T9	NoRel	true	ateşkes	sağladı
+Relation	T9	T3	NoRel	true	sağladı	çatışma
+Relation	T9	T4	NoRel	true	sağladı	talep ettiği
+Relation	T9	T6	NoRel	true	sağladı	Çatışma

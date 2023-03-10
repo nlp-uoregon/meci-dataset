@@ -1,0 +1,43 @@
+Text	_ SCHUTZSTAFFEL _ ( SS ; Armanen rünleri ile _ ᛋᛋ _ olarak stilize edilir ; ; " Koruma Timi " ) , Adolf Hitler ve Nasyonal Sosyalist Alman İşçi Partisi ( NSDAP ) altında Nazi Almanyası'nda ve daha sonra Alman işgali altındaki Avrupa'da önemli bir paramiliter örgüttü .	Örgüt , Münih'teki parti toplantılarına güvenlik sağlaması için NSDAP gönüllülerinden oluşan ve _ Saal - Schutz _ olarak bilinen küçük bir koruma birimi olarak başladı .	1925'te Heinrich Himmler birime katıldı , bu zamana kadar birim reforme edilmiş ve son adı verilmişti .	Himmler'in yönetimi ( 1929 - 1945 ) altında örgüt Weimar Cumhuriyeti içerisinde küçük bir paramiliter kuruluştan Nazi Almanyası'ndaki en güçlü örgütlerden birine dönüştü .	NSDAP'nin yükselmesinden 1945'te yönetimin çökmesine kadar , SS Almanya'nın ve Alman işgali altındaki Avrupa'nın en önemli güvenlik , gözetim ve terör organıydı .
+Event	T0	işgali	EVENT	209
+Event	T1	örgüttü	EVENT	259
+Event	T10	sağlaması	EVENT	318
+Event	T2	başladı	EVENT	429
+Event	T3	katıldı	EVENT	471
+Event	T4	verilmişti	EVENT	530
+Event	T5	dönüştü	EVENT	705
+Event	T6	yükselmesinden	EVENT	725
+Event	T7	çökmesine	EVENT	758
+Relation	T10	T1	CauseEffect	true	sağlaması	örgüttü
+Relation	T1	T10	EffectCause	true	örgüttü	sağlaması
+Relation	T10	T2	CauseEffect	true	sağlaması	başladı
+Relation	T2	T10	EffectCause	true	başladı	sağlaması
+Relation	T3	T5	CauseEffect	true	katıldı	dönüştü
+Relation	T5	T3	EffectCause	true	dönüştü	katıldı
+Relation	T0	T1	NoRel	true	işgali	örgüttü
+Relation	T0	T10	NoRel	true	işgali	sağlaması
+Relation	T0	T2	NoRel	true	işgali	başladı
+Relation	T1	T2	NoRel	true	örgüttü	başladı
+Relation	T10	T0	NoRel	true	sağlaması	işgali
+Relation	T10	T4	NoRel	true	sağlaması	verilmişti
+Relation	T10	T5	NoRel	true	sağlaması	dönüştü
+Relation	T10	T6	NoRel	true	sağlaması	yükselmesinden
+Relation	T10	T7	NoRel	true	sağlaması	çökmesine
+Relation	T3	T0	NoRel	true	katıldı	işgali
+Relation	T3	T10	NoRel	true	katıldı	sağlaması
+Relation	T3	T4	NoRel	true	katıldı	verilmişti
+Relation	T3	T6	NoRel	true	katıldı	yükselmesinden
+Relation	T3	T7	NoRel	true	katıldı	çökmesine
+Relation	T4	T0	NoRel	true	verilmişti	işgali
+Relation	T4	T3	NoRel	true	verilmişti	katıldı
+Relation	T4	T7	NoRel	true	verilmişti	çökmesine
+Relation	T5	T0	NoRel	true	dönüştü	işgali
+Relation	T5	T2	NoRel	true	dönüştü	başladı
+Relation	T6	T0	NoRel	true	yükselmesinden	işgali
+Relation	T6	T1	NoRel	true	yükselmesinden	örgüttü
+Relation	T6	T10	NoRel	true	yükselmesinden	sağlaması
+Relation	T6	T2	NoRel	true	yükselmesinden	başladı
+Relation	T6	T4	NoRel	true	yükselmesinden	verilmişti
+Relation	T6	T5	NoRel	true	yükselmesinden	dönüştü
+Relation	T6	T7	NoRel	true	yükselmesinden	çökmesine
+Relation	T7	T5	NoRel	true	çökmesine	dönüştü

@@ -1,0 +1,20 @@
+Text	زر کے بڑھ جانے سے پیدا ہوتی ہیں ۔	جب آپ کے ملک میں مقدار زر بڑھ جائے تو آپ کس طرح روپیہ واپس لائیں گے ۔	ہاٹرے Hawtrey اپنی کتاب کرنسی اور ادھار Currency and Credit میں لکھتا ہے کہ ’ جب مرکزی بینک ہی رائج الوقت سکہ کا واحد ذریعہ ہے تو یہ رسد زر کو اس طرح کم کر سکتا ہے کہ قرض دینے سے صاف انکار کر دے ۔	لیکن تجربہ سے یہ معلوم ہوا ہے کہ صاف انکار کرنا نہایت سخت روئیہ ہے ، اس لیے یہ تخفیف زر کا معقول ذریعہ نہیں بن سکتا ہے ۔	شرح مرکزی بینک کی حکمت عملی زیادہ شرح سود طلب کرکے صاف انکار کا ایک نعم البدل ہو سکتی ہے اور یہ شرح سود وقت کے تقاضے کے مطابق کم وبیش کی جاسکتی ہے ‘ ۔
+Event	T0	بڑھ	EVENT	60
+Event	T1	لکھتا	EVENT	168
+Event	T2	دینے	EVENT	275
+Event	T3	تجربہ	EVENT	306
+Event	T4	طلب	EVENT	464
+Event	T5	انکار	EVENT	477
+Relation	T4	T5	CauseEffect	true	طلب	انکار
+Relation	T5	T4	EffectCause	true	انکار	طلب
+Relation	T0	T2	NoRel	true	بڑھ	دینے
+Relation	T0	T3	NoRel	true	بڑھ	تجربہ
+Relation	T1	T2	NoRel	true	لکھتا	دینے
+Relation	T1	T5	NoRel	true	لکھتا	انکار
+Relation	T2	T1	NoRel	true	دینے	لکھتا
+Relation	T3	T0	NoRel	true	تجربہ	بڑھ
+Relation	T3	T4	NoRel	true	تجربہ	طلب
+Relation	T4	T0	NoRel	true	طلب	بڑھ
+Relation	T4	T1	NoRel	true	طلب	لکھتا
+Relation	T5	T1	NoRel	true	انکار	لکھتا
+Relation	T5	T2	NoRel	true	انکار	دینے

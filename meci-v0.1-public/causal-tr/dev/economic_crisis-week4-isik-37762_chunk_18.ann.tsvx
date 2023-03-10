@@ -1,0 +1,40 @@
+Text	SS , Hitler'e karşı olan her türlü direnişi bastırmak için Himmler'in kontrolündeki gizli devlet polisi ve güvenlik güçlerini kullanarak Nazi Almanya'sında bir polis devleti kurdu .	1933'te Prusya'nın Bakan Başkanı olan Hermann Göring _ Geheime Staatspolizei _ veya Gestapo olarak bilinen bir gizli polis teşkilatı kurdu ve başına Rudolf Diels'i atadı .	Daha sonra 20 Nisan 1934'te , Diels'in Gestapo'yu SA'nın gücüne karşı koymak için kullanmak için yeterince sert olmadığını düşünen Göring , Diels'in yetkilerini aldı ve Himmler'e devretti .	Aynı tarihte , kolluk kuvvetlerinin bir eyalet meselesi olduğu ve her eyaletin kolluk kuvvetlerini kendileri yönettiği Alman usülü polislik sisteminin değişitirilmesi ile , Hitler Himmler'i Prusya dışındaki tüm Alman polisinin başına atadı .	22 Nisan 1934'te Himmler mentorü ve vekili Reinhard Heydrich'i Gestapo'nun başına geçirdi .
+Event	T0	direnişi	EVENT	35
+Event	T1	kurdu	EVENT	174
+Event	T2	kurdu	EVENT	315
+Event	T3	atadı	EVENT	346
+Event	T5	aldı	EVENT	515
+Event	T6	devretti	EVENT	533
+Event	T7	değişitirilmesi	EVENT	695
+Event	T8	atadı	EVENT	778
+Event	T9	geçirdi	EVENT	868
+Event	T10	kullanarak	EVENT	126
+Relation	T0	T1	CauseEffect	true	direnişi	kurdu
+Relation	T1	T0	EffectCause	true	kurdu	direnişi
+Relation	T5	T6	CauseEffect	true	aldı	devretti
+Relation	T6	T5	EffectCause	true	devretti	aldı
+Relation	T6	T8	CauseEffect	true	devretti	atadı
+Relation	T8	T6	EffectCause	true	atadı	devretti
+Relation	T8	T9	CauseEffect	true	atadı	geçirdi
+Relation	T9	T8	EffectCause	true	geçirdi	atadı
+Relation	T2	T3	CauseEffect	true	kurdu	atadı
+Relation	T3	T2	EffectCause	true	atadı	kurdu
+Relation	T0	T2	NoRel	true	direnişi	kurdu
+Relation	T0	T7	NoRel	true	direnişi	değişitirilmesi
+Relation	T0	T9	NoRel	true	direnişi	geçirdi
+Relation	T1	T3	NoRel	true	kurdu	atadı
+Relation	T1	T5	NoRel	true	kurdu	aldı
+Relation	T1	T7	NoRel	true	kurdu	değişitirilmesi
+Relation	T10	T0	NoRel	true	kullanarak	direnişi
+Relation	T10	T6	NoRel	true	kullanarak	devretti
+Relation	T10	T7	NoRel	true	kullanarak	değişitirilmesi
+Relation	T2	T5	NoRel	true	kurdu	aldı
+Relation	T3	T5	NoRel	true	atadı	aldı
+Relation	T3	T6	NoRel	true	atadı	devretti
+Relation	T3	T7	NoRel	true	atadı	değişitirilmesi
+Relation	T5	T10	NoRel	true	aldı	kullanarak
+Relation	T5	T2	NoRel	true	aldı	kurdu
+Relation	T5	T3	NoRel	true	aldı	atadı
+Relation	T5	T9	NoRel	true	aldı	geçirdi
+Relation	T7	T1	NoRel	true	değişitirilmesi	kurdu
+Relation	T7	T10	NoRel	true	değişitirilmesi	kullanarak

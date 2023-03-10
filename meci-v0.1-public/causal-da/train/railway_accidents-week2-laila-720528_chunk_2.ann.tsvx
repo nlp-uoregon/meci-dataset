@@ -1,0 +1,40 @@
+Text	Undersøgelser af togets sorte boks viste efterfølgende , at lokomotivføreren fik tre advarselssignaler kl. 20.39 , 20.40 og 20.41 omkring det tidspunkt , hvor han talte i telefon med en togbetjent om , hvilken perron toget ville køre ind på senere på ruten .	Føreren bremsede op kl. 20.40 , da toget kørte med 195 km/t til trods for , at hastighedsgrænsen på den del af strækningen var 80 km/t .	Toget kørte med 192 km/t ganske kort tid inden afsporingen og forulykkede med en hastighed på 153 km/t .	Spanien har Europas mest omfattende højhastighedsjernbanenet på 2441 km og verdens tredjemest omfattende efter Kina og Japan .	Den første højhastighedsjernbane i Spanien åbnede i 1992 .
+Event	T0	Undersøgelser	EVENT	0
+Event	T1	viste	EVENT	35
+Event	T2	fik	EVENT	77
+Event	T3	talte	EVENT	163
+Event	T4	kørte	EVENT	300
+Event	T5	kørte	EVENT	402
+Event	T6	afsporingen	EVENT	443
+Event	T7	forulykkede	EVENT	458
+Event	T8	åbnede	EVENT	671
+Relation	T5	T6	CauseEffect	true	kørte	afsporingen
+Relation	T6	T5	EffectCause	true	afsporingen	kørte
+Relation	T6	T7	CauseEffect	true	afsporingen	forulykkede
+Relation	T7	T6	EffectCause	true	forulykkede	afsporingen
+Relation	T4	T6	CauseEffect	true	kørte	afsporingen
+Relation	T6	T4	EffectCause	true	afsporingen	kørte
+Relation	T4	T7	CauseEffect	true	kørte	forulykkede
+Relation	T7	T4	EffectCause	true	forulykkede	kørte
+Relation	T5	T7	CauseEffect	true	kørte	forulykkede
+Relation	T7	T5	EffectCause	true	forulykkede	kørte
+Relation	T1	T2	NoRel	true	viste	fik
+Relation	T1	T3	NoRel	true	viste	talte
+Relation	T1	T4	NoRel	true	viste	kørte
+Relation	T1	T8	NoRel	true	viste	åbnede
+Relation	T2	T3	NoRel	true	fik	talte
+Relation	T2	T4	NoRel	true	fik	kørte
+Relation	T2	T6	NoRel	true	fik	afsporingen
+Relation	T2	T8	NoRel	true	fik	åbnede
+Relation	T3	T8	NoRel	true	talte	åbnede
+Relation	T4	T8	NoRel	true	kørte	åbnede
+Relation	T5	T2	NoRel	true	kørte	fik
+Relation	T5	T4	NoRel	true	kørte	kørte
+Relation	T6	T0	NoRel	true	afsporingen	Undersøgelser
+Relation	T6	T8	NoRel	true	afsporingen	åbnede
+Relation	T7	T2	NoRel	true	forulykkede	fik
+Relation	T7	T3	NoRel	true	forulykkede	talte
+Relation	T8	T1	NoRel	true	åbnede	viste
+Relation	T8	T3	NoRel	true	åbnede	talte
+Relation	T8	T4	NoRel	true	åbnede	kørte
+Relation	T8	T7	NoRel	true	åbnede	forulykkede

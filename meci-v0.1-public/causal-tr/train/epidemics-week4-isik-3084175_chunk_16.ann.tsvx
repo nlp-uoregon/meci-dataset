@@ -1,0 +1,27 @@
+Text	Washington'un politikasının değişmesine katkıda bulunan birkaç olay vardı .	Birincisi , Washington karantina ve temizlik girişimlerinin hayati birliklerini sağlıklı ve savaş halinde tutmak için yeterli olmadığını kabul etti .	Ayrıca , sömürge toplumunun önde gelen birçok üyesi kendilerine ve ailelerine aşı yaptırıyordu .	Sonunda , George Washington'un karısı Martha Washington bile aşılandı .	Bundan kısa bir süre sonra Washington , Amerikan birliklerinin aşılanmasını başlattı .
+Event	T0	değişmesine	EVENT	28
+Event	T1	olay	EVENT	63
+Event	T2	etti	EVENT	219
+Event	T3	aşılandı	EVENT	384
+Event	T4	yaptırıyordu	EVENT	308
+Event	T5	başlattı	EVENT	471
+Relation	T1	T0	CauseEffect	true	olay	değişmesine
+Relation	T0	T1	EffectCause	true	değişmesine	olay
+Relation	T2	T0	CauseEffect	true	etti	değişmesine
+Relation	T0	T2	EffectCause	true	değişmesine	etti
+Relation	T5	T0	CauseEffect	true	başlattı	değişmesine
+Relation	T0	T5	EffectCause	true	değişmesine	başlattı
+Relation	T4	T3	CauseEffect	true	yaptırıyordu	aşılandı
+Relation	T3	T4	EffectCause	true	aşılandı	yaptırıyordu
+Relation	T3	T5	CauseEffect	true	aşılandı	başlattı
+Relation	T5	T3	EffectCause	true	başlattı	aşılandı
+Relation	T1	T2	NoRel	true	olay	etti
+Relation	T1	T5	NoRel	true	olay	başlattı
+Relation	T2	T1	NoRel	true	etti	olay
+Relation	T2	T4	NoRel	true	etti	yaptırıyordu
+Relation	T2	T5	NoRel	true	etti	başlattı
+Relation	T3	T1	NoRel	true	aşılandı	olay
+Relation	T3	T2	NoRel	true	aşılandı	etti
+Relation	T4	T1	NoRel	true	yaptırıyordu	olay
+Relation	T4	T2	NoRel	true	yaptırıyordu	etti
+Relation	T4	T5	NoRel	true	yaptırıyordu	başlattı

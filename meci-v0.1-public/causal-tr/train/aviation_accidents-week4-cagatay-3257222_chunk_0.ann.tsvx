@@ -1,0 +1,90 @@
+Text	24 Ocak 2022'de , Güney Çin Denizi'ndeki tatbikat sırasında USS Carl Vinson ( CVN - 35 ) uçak gemisinin güvertesine iniş yaparken Amerika Birleşik Devletleri Donanması'na ait F - 35C düştü ve pilotun dışında gemide görevli 6 mürettebat yaralandı .	Pilot kokpitten fırlatma koltuğu sayesinde güvenle çıktı ve kısa bir süre sonra denizden kurtarıldı .	Uçağın enkazı kısa bir süre sonra suya gömüldü .	Amerika Birleşik Devletleri Donanması'ndan yapılan açıklamaya göre " Carrier Air Wing ( CVW ) 2'ye atanmış USS Carl Vinson ( CVN 70 )'da görevli bir F - 35C Lightning II , rutin uçuş operasyonları sırasında iniş esnasında bir aksilik yaşadı ve ( geminin ) uçuş güvertesine zarar verdikten sonra denize düştü .	" Pilot ve diğer iki denizci Manila , Filipinler'deki bir sağlık tesisine kaldırıldılar ve dört denizci gemideki sağlık personeli tarafından tedavi edildi .
+Event	T0	tatbikat	EVENT	41
+Event	T2	düştü	EVENT	183
+Event	T3	yaralandı	EVENT	236
+Event	T5	çıktı	EVENT	299
+Event	T6	kurtarıldı	EVENT	337
+Event	T7	gömüldü	EVENT	389
+Event	T9	iniş	EVENT	606
+Event	T10	yaşadı	EVENT	633
+Event	T11	verdikten	EVENT	678
+Event	T12	düştü	EVENT	701
+Event	T13	edildi	EVENT	857
+Event	T1	iniş	EVENT	116
+Event	T4	uçuş	EVENT	577
+Event	T14	açıklamaya	EVENT	450
+Event	T8	kaldırıldılar	EVENT	783
+Relation	T2	T3	CauseEffect	true	düştü	yaralandı
+Relation	T3	T2	EffectCause	true	yaralandı	düştü
+Relation	T5	T6	CauseEffect	true	çıktı	kurtarıldı
+Relation	T6	T5	EffectCause	true	kurtarıldı	çıktı
+Relation	T2	T7	CauseEffect	true	düştü	gömüldü
+Relation	T7	T2	EffectCause	true	gömüldü	düştü
+Relation	T4	T9	CauseEffect	true	uçuş	iniş
+Relation	T9	T4	EffectCause	true	iniş	uçuş
+Relation	T4	T10	CauseEffect	true	uçuş	yaşadı
+Relation	T10	T4	EffectCause	true	yaşadı	uçuş
+Relation	T10	T12	CauseEffect	true	yaşadı	düştü
+Relation	T12	T10	EffectCause	true	düştü	yaşadı
+Relation	T10	T11	CauseEffect	true	yaşadı	verdikten
+Relation	T11	T10	EffectCause	true	verdikten	yaşadı
+Relation	T3	T8	CauseEffect	true	yaralandı	kaldırıldılar
+Relation	T8	T3	EffectCause	true	kaldırıldılar	yaralandı
+Relation	T3	T13	CauseEffect	true	yaralandı	edildi
+Relation	T13	T3	EffectCause	true	edildi	yaralandı
+Relation	T0	T11	NoRel	true	tatbikat	verdikten
+Relation	T0	T14	NoRel	true	tatbikat	açıklamaya
+Relation	T0	T2	NoRel	true	tatbikat	düştü
+Relation	T0	T3	NoRel	true	tatbikat	yaralandı
+Relation	T0	T4	NoRel	true	tatbikat	uçuş
+Relation	T0	T5	NoRel	true	tatbikat	çıktı
+Relation	T0	T6	NoRel	true	tatbikat	kurtarıldı
+Relation	T0	T8	NoRel	true	tatbikat	kaldırıldılar
+Relation	T0	T9	NoRel	true	tatbikat	iniş
+Relation	T1	T12	NoRel	true	iniş	düştü
+Relation	T1	T13	NoRel	true	iniş	edildi
+Relation	T1	T14	NoRel	true	iniş	açıklamaya
+Relation	T1	T9	NoRel	true	iniş	iniş
+Relation	T10	T0	NoRel	true	yaşadı	tatbikat
+Relation	T10	T2	NoRel	true	yaşadı	düştü
+Relation	T10	T5	NoRel	true	yaşadı	çıktı
+Relation	T10	T6	NoRel	true	yaşadı	kurtarıldı
+Relation	T10	T8	NoRel	true	yaşadı	kaldırıldılar
+Relation	T11	T12	NoRel	true	verdikten	düştü
+Relation	T11	T14	NoRel	true	verdikten	açıklamaya
+Relation	T11	T2	NoRel	true	verdikten	düştü
+Relation	T11	T7	NoRel	true	verdikten	gömüldü
+Relation	T12	T0	NoRel	true	düştü	tatbikat
+Relation	T12	T14	NoRel	true	düştü	açıklamaya
+Relation	T12	T6	NoRel	true	düştü	kurtarıldı
+Relation	T12	T7	NoRel	true	düştü	gömüldü
+Relation	T12	T9	NoRel	true	düştü	iniş
+Relation	T13	T11	NoRel	true	edildi	verdikten
+Relation	T13	T8	NoRel	true	edildi	kaldırıldılar
+Relation	T14	T12	NoRel	true	açıklamaya	düştü
+Relation	T14	T2	NoRel	true	açıklamaya	düştü
+Relation	T2	T0	NoRel	true	düştü	tatbikat
+Relation	T2	T1	NoRel	true	düştü	iniş
+Relation	T2	T10	NoRel	true	düştü	yaşadı
+Relation	T2	T14	NoRel	true	düştü	açıklamaya
+Relation	T2	T8	NoRel	true	düştü	kaldırıldılar
+Relation	T2	T9	NoRel	true	düştü	iniş
+Relation	T3	T14	NoRel	true	yaralandı	açıklamaya
+Relation	T4	T13	NoRel	true	uçuş	edildi
+Relation	T5	T11	NoRel	true	çıktı	verdikten
+Relation	T5	T13	NoRel	true	çıktı	edildi
+Relation	T6	T1	NoRel	true	kurtarıldı	iniş
+Relation	T6	T14	NoRel	true	kurtarıldı	açıklamaya
+Relation	T6	T7	NoRel	true	kurtarıldı	gömüldü
+Relation	T7	T10	NoRel	true	gömüldü	yaşadı
+Relation	T7	T12	NoRel	true	gömüldü	düştü
+Relation	T7	T13	NoRel	true	gömüldü	edildi
+Relation	T7	T9	NoRel	true	gömüldü	iniş
+Relation	T8	T0	NoRel	true	kaldırıldılar	tatbikat
+Relation	T8	T1	NoRel	true	kaldırıldılar	iniş
+Relation	T8	T14	NoRel	true	kaldırıldılar	açıklamaya
+Relation	T8	T9	NoRel	true	kaldırıldılar	iniş
+Relation	T9	T0	NoRel	true	iniş	tatbikat
+Relation	T9	T14	NoRel	true	iniş	açıklamaya
+Relation	T9	T2	NoRel	true	iniş	düştü
+Relation	T9	T7	NoRel	true	iniş	gömüldü

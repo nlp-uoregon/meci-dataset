@@ -1,0 +1,56 @@
+Text	En haitiansk dreng , får behandling	Jordskælvet ramte det mest befolkede område i landet .	Det internationale Røde Kors meddelte , at omkring 3 millioner mennesker var blevet ramt af jordskælvet .	Den 24. januar , bekræftede Haitis regering at antallet af døde var nået op på , over 150.000 i hovedstaden alene , inklusiv de mange tusinde døde i murbrokkerne og uden for hovedstaden Port-au-Prince .	De haitianske myndigheder har ligeledes vurderet , at 250.000 mennesker var ramt af skader , og flere millioner haitianere var blevet hjemløse .
+Event	T0	ramte	EVENT	48
+Event	T1	meddelte	EVENT	120
+Event	T2	ramt	EVENT	175
+Event	T3	jordskælvet	EVENT	183
+Event	T4	bekræftede	EVENT	214
+Event	T5	døde	EVENT	256
+Event	T6	døde	EVENT	339
+Event	T7	vurderet	EVENT	440
+Event	T8	ramt	EVENT	476
+Event	T9	skader	EVENT	484
+Relation	T3	T5	CauseEffect	true	jordskælvet	døde
+Relation	T5	T3	EffectCause	true	døde	jordskælvet
+Relation	T3	T6	CauseEffect	true	jordskælvet	døde
+Relation	T6	T3	EffectCause	true	døde	jordskælvet
+Relation	T3	T9	CauseEffect	true	jordskælvet	skader
+Relation	T9	T3	EffectCause	true	skader	jordskælvet
+Relation	T0	T1	CauseEffect	true	ramte	meddelte
+Relation	T1	T0	EffectCause	true	meddelte	ramte
+Relation	T0	T3	NoRel	true	ramte	jordskælvet
+Relation	T0	T4	NoRel	true	ramte	bekræftede
+Relation	T0	T6	NoRel	true	ramte	døde
+Relation	T1	T3	NoRel	true	meddelte	jordskælvet
+Relation	T1	T4	NoRel	true	meddelte	bekræftede
+Relation	T1	T5	NoRel	true	meddelte	døde
+Relation	T1	T6	NoRel	true	meddelte	døde
+Relation	T1	T7	NoRel	true	meddelte	vurderet
+Relation	T2	T0	NoRel	true	ramt	ramte
+Relation	T2	T4	NoRel	true	ramt	bekræftede
+Relation	T2	T5	NoRel	true	ramt	døde
+Relation	T2	T8	NoRel	true	ramt	ramt
+Relation	T3	T1	NoRel	true	jordskælvet	meddelte
+Relation	T3	T7	NoRel	true	jordskælvet	vurderet
+Relation	T4	T1	NoRel	true	bekræftede	meddelte
+Relation	T4	T3	NoRel	true	bekræftede	jordskælvet
+Relation	T4	T5	NoRel	true	bekræftede	døde
+Relation	T4	T6	NoRel	true	bekræftede	døde
+Relation	T5	T0	NoRel	true	døde	ramte
+Relation	T5	T2	NoRel	true	døde	ramt
+Relation	T5	T8	NoRel	true	døde	ramt
+Relation	T5	T9	NoRel	true	døde	skader
+Relation	T6	T1	NoRel	true	døde	meddelte
+Relation	T6	T9	NoRel	true	døde	skader
+Relation	T7	T0	NoRel	true	vurderet	ramte
+Relation	T7	T2	NoRel	true	vurderet	ramt
+Relation	T7	T3	NoRel	true	vurderet	jordskælvet
+Relation	T7	T4	NoRel	true	vurderet	bekræftede
+Relation	T7	T6	NoRel	true	vurderet	døde
+Relation	T7	T8	NoRel	true	vurderet	ramt
+Relation	T8	T0	NoRel	true	ramt	ramte
+Relation	T8	T2	NoRel	true	ramt	ramt
+Relation	T8	T9	NoRel	true	ramt	skader
+Relation	T9	T0	NoRel	true	skader	ramte
+Relation	T9	T2	NoRel	true	skader	ramt
+Relation	T9	T4	NoRel	true	skader	bekræftede
+Relation	T9	T5	NoRel	true	skader	døde

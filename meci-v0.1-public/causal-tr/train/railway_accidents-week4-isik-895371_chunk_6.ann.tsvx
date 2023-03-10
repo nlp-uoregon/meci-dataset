@@ -1,0 +1,24 @@
+Text	Yerel mahkeme eksikleri giderdi ve yine aynı cezalar verildi .	Yargıtay kararı tekrar bozdu .	Son duruşma 2 Aralık 2011’deydi .	Duruşmaya TCDD avukatı katılmadı .	5 kişinin talimatla alınması gereken ifadelerinin de alınmaması nedeniyle dava 7 Şubat 2012’ye ertelendi .
+Event	T0	giderdi	EVENT	24
+Event	T1	verildi	EVENT	53
+Event	T2	bozdu	EVENT	86
+Event	T3	duruşma	EVENT	98
+Event	T4	Duruşmaya	EVENT	128
+Event	T8	dava	EVENT	237
+Event	T9	ertelendi	EVENT	258
+Relation	T0	T1	CauseEffect	true	giderdi	verildi
+Relation	T1	T0	EffectCause	true	verildi	giderdi
+Relation	T0	T4	NoRel	true	giderdi	Duruşmaya
+Relation	T0	T9	NoRel	true	giderdi	ertelendi
+Relation	T1	T4	NoRel	true	verildi	Duruşmaya
+Relation	T2	T3	NoRel	true	bozdu	duruşma
+Relation	T3	T9	NoRel	true	duruşma	ertelendi
+Relation	T4	T1	NoRel	true	Duruşmaya	verildi
+Relation	T4	T2	NoRel	true	Duruşmaya	bozdu
+Relation	T4	T8	NoRel	true	Duruşmaya	dava
+Relation	T4	T9	NoRel	true	Duruşmaya	ertelendi
+Relation	T8	T1	NoRel	true	dava	verildi
+Relation	T8	T3	NoRel	true	dava	duruşma
+Relation	T9	T2	NoRel	true	ertelendi	bozdu
+Relation	T9	T4	NoRel	true	ertelendi	Duruşmaya
+Relation	T9	T8	NoRel	true	ertelendi	dava

@@ -1,0 +1,19 @@
+Text	Hem bilim adamı olarak hem de NIH'deki NIAID başkanı olarak HIV / AIDS araştırmalarına ve diğer immün yetmezliklere katkıda bulunmaktadır .	Fauci , New York'un Brooklyn kentinde , eczane sahibi Stephen A. Fauci ve Eugenia Abys Fauci oğlu olarak doğdu .	Babası , Columbia Üniversitesi'nde eğitim görmüş bir eczacıydı .	İşlettiği eczane Brooklyn'in Dyker Heights semtimde , oturdukları evin altındaydı .	Annesi ve kız kardeşi Denise eczanenin kasasında çalışmakta , Fauci ise reçeteleri teslim etmekteydi .
+Event	T0	doğdu	EVENT	245
+Event	T1	bulunmaktadır	EVENT	124
+Event	T2	araştırmalarına	EVENT	71
+Event	T3	görmüş	EVENT	295
+Event	T4	çalışmakta	EVENT	451
+Event	T5	etmekteydi	EVENT	492
+Relation	T2	T1	CauseEffect	true	araştırmalarına	bulunmaktadır
+Relation	T1	T2	EffectCause	true	bulunmaktadır	araştırmalarına
+Relation	T0	T1	NoRel	true	doğdu	bulunmaktadır
+Relation	T0	T3	NoRel	true	doğdu	görmüş
+Relation	T1	T4	NoRel	true	bulunmaktadır	çalışmakta
+Relation	T1	T5	NoRel	true	bulunmaktadır	etmekteydi
+Relation	T2	T0	NoRel	true	araştırmalarına	doğdu
+Relation	T3	T4	NoRel	true	görmüş	çalışmakta
+Relation	T4	T1	NoRel	true	çalışmakta	bulunmaktadır
+Relation	T4	T2	NoRel	true	çalışmakta	araştırmalarına
+Relation	T4	T5	NoRel	true	çalışmakta	etmekteydi
+Relation	T5	T0	NoRel	true	etmekteydi	doğdu

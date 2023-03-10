@@ -1,0 +1,38 @@
+Text	Çift 1894'te Weber’in Freiburg Üniversitesi'ne Ekonomi Profesörü olarak atanması üzerine , Freiburg'a gittiler .	Bundan iki yıl sonra , aynı görevle Heidelberg Üniversitesi atandı .	1 yıl sonra , oğluyla sert bir anlaşmazlığa düşmelerinden iki ay sonra baba Weber vefat etti .	Bu olayın ardından , Weber artarak uyku problemine ve sinirliliğe düçar oldu .	Bu durum , Weber'in profesörlük görevini sürdürmesini zorlaştırdı .
+Event	T0	atanması	EVENT	72
+Event	T1	atandı	EVENT	173
+Event	T2	düşmelerinden	EVENT	226
+Event	T3	etti	EVENT	270
+Event	T4	olayın	EVENT	280
+Event	T5	durum	EVENT	359
+Event	T6	zorlaştırdı	EVENT	410
+Event	T7	gittiler	EVENT	102
+Event	T8	oldu	EVENT	349
+Relation	T0	T7	CauseEffect	true	atanması	gittiler
+Relation	T7	T0	EffectCause	true	gittiler	atanması
+Relation	T2	T8	CauseEffect	true	düşmelerinden	oldu
+Relation	T8	T2	EffectCause	true	oldu	düşmelerinden
+Relation	T8	T6	CauseEffect	true	oldu	zorlaştırdı
+Relation	T6	T8	EffectCause	true	zorlaştırdı	oldu
+Relation	T2	T3	CauseEffect	true	düşmelerinden	etti
+Relation	T3	T2	EffectCause	true	etti	düşmelerinden
+Relation	T0	T3	NoRel	true	atanması	etti
+Relation	T1	T0	NoRel	true	atandı	atanması
+Relation	T1	T6	NoRel	true	atandı	zorlaştırdı
+Relation	T2	T0	NoRel	true	düşmelerinden	atanması
+Relation	T2	T1	NoRel	true	düşmelerinden	atandı
+Relation	T2	T6	NoRel	true	düşmelerinden	zorlaştırdı
+Relation	T3	T4	NoRel	true	etti	olayın
+Relation	T3	T5	NoRel	true	etti	durum
+Relation	T3	T7	NoRel	true	etti	gittiler
+Relation	T4	T0	NoRel	true	olayın	atanması
+Relation	T4	T6	NoRel	true	olayın	zorlaştırdı
+Relation	T5	T0	NoRel	true	durum	atanması
+Relation	T5	T8	NoRel	true	durum	oldu
+Relation	T6	T2	NoRel	true	zorlaştırdı	düşmelerinden
+Relation	T6	T4	NoRel	true	zorlaştırdı	olayın
+Relation	T6	T7	NoRel	true	zorlaştırdı	gittiler
+Relation	T7	T3	NoRel	true	gittiler	etti
+Relation	T7	T5	NoRel	true	gittiler	durum
+Relation	T7	T8	NoRel	true	gittiler	oldu
+Relation	T8	T7	NoRel	true	oldu	gittiler

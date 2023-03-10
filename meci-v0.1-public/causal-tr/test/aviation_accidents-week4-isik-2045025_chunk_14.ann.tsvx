@@ -1,0 +1,68 @@
+Text	İki Rus Mi- 8 helikopteri , Rus Sukhoi Su - 24M uçağındaki pilotları kurtarma ve arama çalışmaları kapsamında alana gönderildi .	Helikopterlerin ikisi de Suriye Türkmen Ordusu'na mensup muhalifler tarafından düşük yoğunluklu ateş altında kaldı ve bir Rus deniz piyadesi öldürüldü .	Tarafsız bölgeye iniş yapıldıktan sonra zarar gören helikopter terkedildi ve mürettebatın tamamı tahliye edildi .	Özgür Suriye Ordusu'na bağlı 1. Sahil Tümeni'ne mensup muhalifler tarafından ABD yapımı BGM - 71 TOW tanksavar füzesi ile imha edildi .	- ABD Devlet Başkanı Barack Obama , " Rusya'nın Suriye Muhalif ve Devrimci Güçler Ulusal Koalisyonu'nu değil , IŞİD’i hedef alması durumunda bu tür problemlerin olmayacağını ve Türkiye'nin kendi hava sahasını ve topraklarını korumaya hakkının bulunduğunu " söyledi .
+Event	T1	gönderildi	EVENT	116
+Event	T2	kaldı	EVENT	238
+Event	T3	öldürüldü	EVENT	270
+Event	T4	yapıldıktan	EVENT	304
+Event	T5	zarar	EVENT	322
+Event	T6	terkedildi	EVENT	345
+Event	T7	edildi	EVENT	387
+Event	T9	söyledi	EVENT	789
+Event	T10	çalışmaları	EVENT	87
+Event	T8	imha	EVENT	518
+Event	T11	füzesi	EVENT	507
+Relation	T10	T1	CauseEffect	true	çalışmaları	gönderildi
+Relation	T1	T10	EffectCause	true	gönderildi	çalışmaları
+Relation	T2	T3	CauseEffect	true	kaldı	öldürüldü
+Relation	T3	T2	EffectCause	true	öldürüldü	kaldı
+Relation	T2	T5	CauseEffect	true	kaldı	zarar
+Relation	T5	T2	EffectCause	true	zarar	kaldı
+Relation	T5	T4	CauseEffect	true	zarar	yapıldıktan
+Relation	T4	T5	EffectCause	true	yapıldıktan	zarar
+Relation	T5	T7	CauseEffect	true	zarar	edildi
+Relation	T7	T5	EffectCause	true	edildi	zarar
+Relation	T7	T6	CauseEffect	true	edildi	terkedildi
+Relation	T6	T7	EffectCause	true	terkedildi	edildi
+Relation	T11	T8	CauseEffect	true	füzesi	imha
+Relation	T8	T11	EffectCause	true	imha	füzesi
+Relation	T1	T11	NoRel	true	gönderildi	füzesi
+Relation	T1	T3	NoRel	true	gönderildi	öldürüldü
+Relation	T1	T5	NoRel	true	gönderildi	zarar
+Relation	T10	T5	NoRel	true	çalışmaları	zarar
+Relation	T10	T6	NoRel	true	çalışmaları	terkedildi
+Relation	T10	T7	NoRel	true	çalışmaları	edildi
+Relation	T11	T1	NoRel	true	füzesi	gönderildi
+Relation	T11	T2	NoRel	true	füzesi	kaldı
+Relation	T11	T3	NoRel	true	füzesi	öldürüldü
+Relation	T11	T9	NoRel	true	füzesi	söyledi
+Relation	T2	T1	NoRel	true	kaldı	gönderildi
+Relation	T2	T10	NoRel	true	kaldı	çalışmaları
+Relation	T2	T4	NoRel	true	kaldı	yapıldıktan
+Relation	T2	T9	NoRel	true	kaldı	söyledi
+Relation	T3	T10	NoRel	true	öldürüldü	çalışmaları
+Relation	T3	T4	NoRel	true	öldürüldü	yapıldıktan
+Relation	T3	T5	NoRel	true	öldürüldü	zarar
+Relation	T3	T8	NoRel	true	öldürüldü	imha
+Relation	T3	T9	NoRel	true	öldürüldü	söyledi
+Relation	T4	T10	NoRel	true	yapıldıktan	çalışmaları
+Relation	T4	T3	NoRel	true	yapıldıktan	öldürüldü
+Relation	T4	T7	NoRel	true	yapıldıktan	edildi
+Relation	T4	T9	NoRel	true	yapıldıktan	söyledi
+Relation	T5	T3	NoRel	true	zarar	öldürüldü
+Relation	T5	T9	NoRel	true	zarar	söyledi
+Relation	T6	T1	NoRel	true	terkedildi	gönderildi
+Relation	T6	T3	NoRel	true	terkedildi	öldürüldü
+Relation	T6	T8	NoRel	true	terkedildi	imha
+Relation	T7	T1	NoRel	true	edildi	gönderildi
+Relation	T7	T11	NoRel	true	edildi	füzesi
+Relation	T7	T3	NoRel	true	edildi	öldürüldü
+Relation	T7	T8	NoRel	true	edildi	imha
+Relation	T7	T9	NoRel	true	edildi	söyledi
+Relation	T8	T3	NoRel	true	imha	öldürüldü
+Relation	T8	T4	NoRel	true	imha	yapıldıktan
+Relation	T8	T7	NoRel	true	imha	edildi
+Relation	T8	T9	NoRel	true	imha	söyledi
+Relation	T9	T1	NoRel	true	söyledi	gönderildi
+Relation	T9	T10	NoRel	true	söyledi	çalışmaları
+Relation	T9	T11	NoRel	true	söyledi	füzesi
+Relation	T9	T6	NoRel	true	söyledi	terkedildi
+Relation	T9	T7	NoRel	true	söyledi	edildi

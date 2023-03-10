@@ -1,0 +1,80 @@
+Text	- 1869_____-___30 DE ENERO : descarrilamiento de un tren de viajeros procedente de Lisboa y con destino Oporto en las cercanías de Espinho .	El accidente fue causado por la acumulación de arena sobre la vía debido a la intensa lluvia que afectó a dicho punto de la línea en el momento en que pasaba el convoy .	- 1870_____-___4 DE DICIEMBRE : descarrilamiento de un tren correo a su paso por el puente de Reguengo a causa de haber sido levantados varios carriles de la línea .	- 4 DE DICIEMBRE : descarrilamiento de un tren de mercancías a su paso por el puente de Santa Anna debido a haber sido levantados varios carriles de la línea .	- 1871_____-___17 DE ENERO : descarrilamiento de un tren de mercancías a su paso por el puente de Asseca , en la línea del Norte .
+Event	T0	descarrilamiento	EVENT	29
+Event	T1	accidente	EVENT	144
+Event	T2	causado	EVENT	158
+Event	T3	acumulación	EVENT	173
+Event	T4	lluvia	EVENT	227
+Event	T5	afectó	EVENT	238
+Event	T6	pasaba	EVENT	292
+Event	T7	descarrilamiento	EVENT	343
+Event	T8	paso	EVENT	383
+Event	T9	levantados	EVENT	436
+Event	T10	descarrilamiento	EVENT	496
+Event	T11	paso	EVENT	543
+Event	T12	levantados	EVENT	596
+Event	T13	descarrilamiento	EVENT	666
+Event	T14	paso	EVENT	713
+Relation	T4	T3	CauseEffect	true	lluvia	acumulación
+Relation	T3	T4	EffectCause	true	acumulación	lluvia
+Relation	T3	T0	CauseEffect	true	acumulación	descarrilamiento
+Relation	T0	T3	EffectCause	true	descarrilamiento	acumulación
+Relation	T9	T7	CauseEffect	true	levantados	descarrilamiento
+Relation	T7	T9	EffectCause	true	descarrilamiento	levantados
+Relation	T0	T13	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T0	T2	NoRel	true	descarrilamiento	causado
+Relation	T0	T5	NoRel	true	descarrilamiento	afectó
+Relation	T0	T6	NoRel	true	descarrilamiento	pasaba
+Relation	T0	T7	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T0	T9	NoRel	true	descarrilamiento	levantados
+Relation	T1	T11	NoRel	true	accidente	paso
+Relation	T1	T2	NoRel	true	accidente	causado
+Relation	T1	T6	NoRel	true	accidente	pasaba
+Relation	T1	T9	NoRel	true	accidente	levantados
+Relation	T10	T0	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T11	T0	NoRel	true	paso	descarrilamiento
+Relation	T11	T1	NoRel	true	paso	accidente
+Relation	T11	T10	NoRel	true	paso	descarrilamiento
+Relation	T11	T12	NoRel	true	paso	levantados
+Relation	T11	T5	NoRel	true	paso	afectó
+Relation	T11	T6	NoRel	true	paso	pasaba
+Relation	T11	T8	NoRel	true	paso	paso
+Relation	T12	T1	NoRel	true	levantados	accidente
+Relation	T12	T7	NoRel	true	levantados	descarrilamiento
+Relation	T13	T0	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T13	T1	NoRel	true	descarrilamiento	accidente
+Relation	T13	T11	NoRel	true	descarrilamiento	paso
+Relation	T13	T12	NoRel	true	descarrilamiento	levantados
+Relation	T13	T14	NoRel	true	descarrilamiento	paso
+Relation	T13	T4	NoRel	true	descarrilamiento	lluvia
+Relation	T14	T10	NoRel	true	paso	descarrilamiento
+Relation	T14	T2	NoRel	true	paso	causado
+Relation	T14	T5	NoRel	true	paso	afectó
+Relation	T14	T6	NoRel	true	paso	pasaba
+Relation	T14	T9	NoRel	true	paso	levantados
+Relation	T2	T6	NoRel	true	causado	pasaba
+Relation	T2	T7	NoRel	true	causado	descarrilamiento
+Relation	T2	T8	NoRel	true	causado	paso
+Relation	T3	T1	NoRel	true	acumulación	accidente
+Relation	T3	T11	NoRel	true	acumulación	paso
+Relation	T3	T12	NoRel	true	acumulación	levantados
+Relation	T3	T14	NoRel	true	acumulación	paso
+Relation	T3	T2	NoRel	true	acumulación	causado
+Relation	T3	T6	NoRel	true	acumulación	pasaba
+Relation	T3	T8	NoRel	true	acumulación	paso
+Relation	T4	T10	NoRel	true	lluvia	descarrilamiento
+Relation	T4	T11	NoRel	true	lluvia	paso
+Relation	T4	T2	NoRel	true	lluvia	causado
+Relation	T4	T7	NoRel	true	lluvia	descarrilamiento
+Relation	T5	T10	NoRel	true	afectó	descarrilamiento
+Relation	T5	T3	NoRel	true	afectó	acumulación
+Relation	T6	T10	NoRel	true	pasaba	descarrilamiento
+Relation	T6	T13	NoRel	true	pasaba	descarrilamiento
+Relation	T7	T1	NoRel	true	descarrilamiento	accidente
+Relation	T7	T11	NoRel	true	descarrilamiento	paso
+Relation	T7	T4	NoRel	true	descarrilamiento	lluvia
+Relation	T8	T12	NoRel	true	paso	levantados
+Relation	T8	T3	NoRel	true	paso	acumulación
+Relation	T8	T5	NoRel	true	paso	afectó
+Relation	T9	T0	NoRel	true	levantados	descarrilamiento
+Relation	T9	T3	NoRel	true	levantados	acumulación
+Relation	T9	T8	NoRel	true	levantados	paso

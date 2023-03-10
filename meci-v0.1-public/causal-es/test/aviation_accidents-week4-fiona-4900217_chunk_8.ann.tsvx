@@ -1,0 +1,161 @@
+Text	Durante la secuencia del impacto , el ala izquierda y la cola se desprendieron a 33 km al sureste de Madang .	Durante la secuencia del impacto , sufrió graves daños al chocar con árboles y el suelo , y comenzó un intenso incendio alimentado por el combustible .	Los aldeanos que habían escuchado y presenciado la aeronave en las etapas finales de su descenso procedieron al lugar del accidente para encontrar el fuselaje severamente roto y envuelto en llamas .	Ayudaron a los cuatro supervivientes y los llevaron al puesto de primeros auxilios más cercano .	Los restos se detuvieron a 300 metros del punto de impacto inicial y fueron engullidos por el fuego .
+Event	T0	secuencia	EVENT	11
+Event	T1	impacto	EVENT	25
+Event	T2	desprendieron	EVENT	65
+Event	T3	secuencia	EVENT	121
+Event	T4	impacto	EVENT	135
+Event	T5	daños	EVENT	159
+Event	T6	chocar	EVENT	168
+Event	T7	comenzó	EVENT	202
+Event	T9	escuchado	EVENT	286
+Event	T10	presenciado	EVENT	298
+Event	T11	procedieron	EVENT	359
+Event	T12	accidente	EVENT	384
+Event	T13	encontrar	EVENT	399
+Event	T14	roto	EVENT	433
+Event	T15	envuelto	EVENT	440
+Event	T16	Ayudaron	EVENT	461
+Event	T17	llevaron	EVENT	504
+Event	T18	detuvieron	EVENT	572
+Event	T19	impacto	EVENT	609
+Event	T20	engullidos	EVENT	634
+Event	T21	fuego	EVENT	652
+Event	T8	incendio	EVENT	221
+Relation	T1	T2	CauseEffect	true	impacto	desprendieron
+Relation	T2	T1	EffectCause	true	desprendieron	impacto
+Relation	T4	T5	CauseEffect	true	impacto	daños
+Relation	T5	T4	EffectCause	true	daños	impacto
+Relation	T4	T8	CauseEffect	true	impacto	incendio
+Relation	T8	T4	EffectCause	true	incendio	impacto
+Relation	T0	T11	NoRel	true	secuencia	procedieron
+Relation	T0	T14	NoRel	true	secuencia	roto
+Relation	T0	T15	NoRel	true	secuencia	envuelto
+Relation	T0	T16	NoRel	true	secuencia	Ayudaron
+Relation	T0	T17	NoRel	true	secuencia	llevaron
+Relation	T0	T19	NoRel	true	secuencia	impacto
+Relation	T0	T2	NoRel	true	secuencia	desprendieron
+Relation	T1	T10	NoRel	true	impacto	presenciado
+Relation	T1	T11	NoRel	true	impacto	procedieron
+Relation	T1	T18	NoRel	true	impacto	detuvieron
+Relation	T1	T20	NoRel	true	impacto	engullidos
+Relation	T1	T4	NoRel	true	impacto	impacto
+Relation	T1	T7	NoRel	true	impacto	comenzó
+Relation	T10	T1	NoRel	true	presenciado	impacto
+Relation	T10	T16	NoRel	true	presenciado	Ayudaron
+Relation	T10	T17	NoRel	true	presenciado	llevaron
+Relation	T10	T21	NoRel	true	presenciado	fuego
+Relation	T10	T6	NoRel	true	presenciado	chocar
+Relation	T10	T7	NoRel	true	presenciado	comenzó
+Relation	T10	T8	NoRel	true	presenciado	incendio
+Relation	T11	T0	NoRel	true	procedieron	secuencia
+Relation	T11	T10	NoRel	true	procedieron	presenciado
+Relation	T11	T12	NoRel	true	procedieron	accidente
+Relation	T11	T14	NoRel	true	procedieron	roto
+Relation	T11	T2	NoRel	true	procedieron	desprendieron
+Relation	T11	T8	NoRel	true	procedieron	incendio
+Relation	T12	T0	NoRel	true	accidente	secuencia
+Relation	T12	T10	NoRel	true	accidente	presenciado
+Relation	T12	T13	NoRel	true	accidente	encontrar
+Relation	T12	T16	NoRel	true	accidente	Ayudaron
+Relation	T12	T19	NoRel	true	accidente	impacto
+Relation	T12	T8	NoRel	true	accidente	incendio
+Relation	T13	T1	NoRel	true	encontrar	impacto
+Relation	T13	T11	NoRel	true	encontrar	procedieron
+Relation	T13	T12	NoRel	true	encontrar	accidente
+Relation	T13	T14	NoRel	true	encontrar	roto
+Relation	T13	T15	NoRel	true	encontrar	envuelto
+Relation	T13	T17	NoRel	true	encontrar	llevaron
+Relation	T13	T2	NoRel	true	encontrar	desprendieron
+Relation	T13	T5	NoRel	true	encontrar	daños
+Relation	T13	T7	NoRel	true	encontrar	comenzó
+Relation	T13	T8	NoRel	true	encontrar	incendio
+Relation	T13	T9	NoRel	true	encontrar	escuchado
+Relation	T14	T12	NoRel	true	roto	accidente
+Relation	T14	T16	NoRel	true	roto	Ayudaron
+Relation	T14	T17	NoRel	true	roto	llevaron
+Relation	T14	T2	NoRel	true	roto	desprendieron
+Relation	T14	T6	NoRel	true	roto	chocar
+Relation	T14	T9	NoRel	true	roto	escuchado
+Relation	T15	T1	NoRel	true	envuelto	impacto
+Relation	T15	T10	NoRel	true	envuelto	presenciado
+Relation	T15	T13	NoRel	true	envuelto	encontrar
+Relation	T15	T2	NoRel	true	envuelto	desprendieron
+Relation	T15	T21	NoRel	true	envuelto	fuego
+Relation	T15	T4	NoRel	true	envuelto	impacto
+Relation	T15	T6	NoRel	true	envuelto	chocar
+Relation	T16	T0	NoRel	true	Ayudaron	secuencia
+Relation	T16	T11	NoRel	true	Ayudaron	procedieron
+Relation	T16	T20	NoRel	true	Ayudaron	engullidos
+Relation	T16	T21	NoRel	true	Ayudaron	fuego
+Relation	T17	T1	NoRel	true	llevaron	impacto
+Relation	T17	T13	NoRel	true	llevaron	encontrar
+Relation	T17	T18	NoRel	true	llevaron	detuvieron
+Relation	T17	T19	NoRel	true	llevaron	impacto
+Relation	T17	T2	NoRel	true	llevaron	desprendieron
+Relation	T17	T20	NoRel	true	llevaron	engullidos
+Relation	T17	T21	NoRel	true	llevaron	fuego
+Relation	T17	T3	NoRel	true	llevaron	secuencia
+Relation	T17	T5	NoRel	true	llevaron	daños
+Relation	T17	T6	NoRel	true	llevaron	chocar
+Relation	T18	T0	NoRel	true	detuvieron	secuencia
+Relation	T18	T10	NoRel	true	detuvieron	presenciado
+Relation	T18	T12	NoRel	true	detuvieron	accidente
+Relation	T18	T15	NoRel	true	detuvieron	envuelto
+Relation	T18	T16	NoRel	true	detuvieron	Ayudaron
+Relation	T18	T17	NoRel	true	detuvieron	llevaron
+Relation	T18	T19	NoRel	true	detuvieron	impacto
+Relation	T18	T2	NoRel	true	detuvieron	desprendieron
+Relation	T19	T1	NoRel	true	impacto	impacto
+Relation	T19	T13	NoRel	true	impacto	encontrar
+Relation	T19	T17	NoRel	true	impacto	llevaron
+Relation	T19	T21	NoRel	true	impacto	fuego
+Relation	T19	T3	NoRel	true	impacto	secuencia
+Relation	T19	T4	NoRel	true	impacto	impacto
+Relation	T2	T10	NoRel	true	desprendieron	presenciado
+Relation	T2	T14	NoRel	true	desprendieron	roto
+Relation	T2	T18	NoRel	true	desprendieron	detuvieron
+Relation	T2	T7	NoRel	true	desprendieron	comenzó
+Relation	T20	T2	NoRel	true	engullidos	desprendieron
+Relation	T20	T4	NoRel	true	engullidos	impacto
+Relation	T20	T5	NoRel	true	engullidos	daños
+Relation	T20	T8	NoRel	true	engullidos	incendio
+Relation	T21	T15	NoRel	true	fuego	envuelto
+Relation	T21	T17	NoRel	true	fuego	llevaron
+Relation	T3	T10	NoRel	true	secuencia	presenciado
+Relation	T3	T12	NoRel	true	secuencia	accidente
+Relation	T3	T18	NoRel	true	secuencia	detuvieron
+Relation	T3	T21	NoRel	true	secuencia	fuego
+Relation	T3	T7	NoRel	true	secuencia	comenzó
+Relation	T4	T0	NoRel	true	impacto	secuencia
+Relation	T4	T16	NoRel	true	impacto	Ayudaron
+Relation	T4	T3	NoRel	true	impacto	secuencia
+Relation	T5	T0	NoRel	true	daños	secuencia
+Relation	T5	T1	NoRel	true	daños	impacto
+Relation	T5	T17	NoRel	true	daños	llevaron
+Relation	T5	T19	NoRel	true	daños	impacto
+Relation	T5	T8	NoRel	true	daños	incendio
+Relation	T6	T1	NoRel	true	chocar	impacto
+Relation	T6	T11	NoRel	true	chocar	procedieron
+Relation	T6	T20	NoRel	true	chocar	engullidos
+Relation	T6	T4	NoRel	true	chocar	impacto
+Relation	T7	T1	NoRel	true	comenzó	impacto
+Relation	T7	T14	NoRel	true	comenzó	roto
+Relation	T7	T15	NoRel	true	comenzó	envuelto
+Relation	T7	T16	NoRel	true	comenzó	Ayudaron
+Relation	T7	T3	NoRel	true	comenzó	secuencia
+Relation	T7	T9	NoRel	true	comenzó	escuchado
+Relation	T8	T0	NoRel	true	incendio	secuencia
+Relation	T8	T10	NoRel	true	incendio	presenciado
+Relation	T8	T11	NoRel	true	incendio	procedieron
+Relation	T8	T3	NoRel	true	incendio	secuencia
+Relation	T8	T9	NoRel	true	incendio	escuchado
+Relation	T9	T12	NoRel	true	escuchado	accidente
+Relation	T9	T15	NoRel	true	escuchado	envuelto
+Relation	T9	T16	NoRel	true	escuchado	Ayudaron
+Relation	T9	T19	NoRel	true	escuchado	impacto
+Relation	T9	T20	NoRel	true	escuchado	engullidos
+Relation	T9	T21	NoRel	true	escuchado	fuego
+Relation	T9	T3	NoRel	true	escuchado	secuencia
+Relation	T9	T4	NoRel	true	escuchado	impacto
+Relation	T9	T5	NoRel	true	escuchado	daños
+Relation	T9	T6	NoRel	true	escuchado	chocar

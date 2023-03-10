@@ -1,0 +1,52 @@
+Text	The full load of fuel , which had caused the earlier delay , ignited immediately into a fireball that could not be subdued for several hours .	One of the 61 survivors of the Pan Am flight said that sitting in the nose of the plane probably saved his life : " We all settled back , and the next thing an explosion took place and the whole port side , left side of the plane , was just torn wide open . "	Captain Veldhuyzen van Zanten was KLM 's chief of flight training and one of their most senior pilots .	About two months before the accident , he had conducted the Boeing 747 qualification check on the co-pilot of Flight 4805 .	His photograph was used for publicity materials such as magazine advertisements , including the inflight magazine on board PH - BUF .
+Event	T0	caused	EVENT	34
+Event	T1	delay	EVENT	53
+Event	T2	ignited	EVENT	61
+Event	T3	subdued	EVENT	115
+Event	T4	said	EVENT	188
+Event	T5	sitting	EVENT	198
+Event	T6	saved	EVENT	240
+Event	T7	torn	EVENT	384
+Event	T8	accident	EVENT	535
+Event	T9	conducted	EVENT	553
+Event	T10	used	EVENT	650
+Event	T11	load	EVENT	9
+Event	T12	settled	EVENT	266
+Event	T13	explosion	EVENT	303
+Event	T14	training	EVENT	460
+Event	T15	check	EVENT	592
+Relation	T11	T1	CauseEffect	true	load	delay
+Relation	T1	T11	EffectCause	true	delay	load
+Relation	T11	T2	CauseEffect	true	load	ignited
+Relation	T2	T11	EffectCause	true	ignited	load
+Relation	T2	T3	CauseEffect	true	ignited	subdued
+Relation	T3	T2	EffectCause	true	subdued	ignited
+Relation	T5	T6	CauseEffect	true	sitting	saved
+Relation	T6	T5	EffectCause	true	saved	sitting
+Relation	T0	T12	NoRel	true	caused	settled
+Relation	T0	T3	NoRel	true	caused	subdued
+Relation	T0	T4	NoRel	true	caused	said
+Relation	T1	T5	NoRel	true	delay	sitting
+Relation	T10	T2	NoRel	true	used	ignited
+Relation	T11	T10	NoRel	true	load	used
+Relation	T11	T4	NoRel	true	load	said
+Relation	T11	T6	NoRel	true	load	saved
+Relation	T12	T6	NoRel	true	settled	saved
+Relation	T13	T5	NoRel	true	explosion	sitting
+Relation	T13	T6	NoRel	true	explosion	saved
+Relation	T14	T15	NoRel	true	training	check
+Relation	T14	T5	NoRel	true	training	sitting
+Relation	T15	T4	NoRel	true	check	said
+Relation	T2	T1	NoRel	true	ignited	delay
+Relation	T2	T14	NoRel	true	ignited	training
+Relation	T3	T15	NoRel	true	subdued	check
+Relation	T3	T6	NoRel	true	subdued	saved
+Relation	T5	T2	NoRel	true	sitting	ignited
+Relation	T5	T4	NoRel	true	sitting	said
+Relation	T6	T15	NoRel	true	saved	check
+Relation	T6	T4	NoRel	true	saved	said
+Relation	T7	T0	NoRel	true	torn	caused
+Relation	T8	T12	NoRel	true	accident	settled
+Relation	T8	T13	NoRel	true	accident	explosion
+Relation	T8	T6	NoRel	true	accident	saved
+Relation	T9	T7	NoRel	true	conducted	torn

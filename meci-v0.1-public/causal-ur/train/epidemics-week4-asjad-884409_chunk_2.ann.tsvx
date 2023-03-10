@@ -1,0 +1,24 @@
+Text	کسی متاثرہ شخص میں اس مرض کی علامتیں ظاہر ہونے کے لیے دو سے چودہ دن لگتے ہیں ۔	عمومی علامتوں میں بخار ، کھانسی اور نظام تنفس کی تکلیف قابل ذکر ہیں ۔	مرض شدت اختیار کر جائے تو مریض کو نمونیا اور سانس لینے میں خطرناک حد تک دشواری جیسے امراض لاحق ہو جاتے ہیں ۔	اب تک اس مرض کی کوئی ویکسین ایجاد ہوئی ہے اور نہ وائرس کش علاج دریافت ہو سکا ہے ۔	اطبا مریض میں ظاہر ہونے والی علامتوں کو دیکھ کر ابتدائی علاج تجویز کرتے ہیں ۔
+Event	T0	مرض	EVENT	22
+Event	T1	تکلیف	EVENT	128
+Event	T2	ذکر	EVENT	139
+Event	T3	اختیار	EVENT	157
+Event	T4	جائے	EVENT	167
+Event	T5	لینے	EVENT	199
+Event	T6	دریافت	EVENT	321
+Event	T7	دیکھ	EVENT	380
+Relation	T0	T5	CauseEffect	true	مرض	لینے
+Relation	T5	T0	EffectCause	true	لینے	مرض
+Relation	T0	T1	NoRel	true	مرض	تکلیف
+Relation	T0	T3	NoRel	true	مرض	اختیار
+Relation	T0	T6	NoRel	true	مرض	دریافت
+Relation	T1	T0	NoRel	true	تکلیف	مرض
+Relation	T1	T5	NoRel	true	تکلیف	لینے
+Relation	T1	T6	NoRel	true	تکلیف	دریافت
+Relation	T2	T4	NoRel	true	ذکر	جائے
+Relation	T4	T5	NoRel	true	جائے	لینے
+Relation	T4	T7	NoRel	true	جائے	دیکھ
+Relation	T5	T4	NoRel	true	لینے	جائے
+Relation	T6	T0	NoRel	true	دریافت	مرض
+Relation	T6	T5	NoRel	true	دریافت	لینے
+Relation	T7	T3	NoRel	true	دیکھ	اختیار

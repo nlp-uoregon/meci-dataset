@@ -1,0 +1,144 @@
+Text	La justificación de la entrega del premio rezaba " Este amerizaje y evacuación forzosos , sin pérdidas de vidas , fue un logro heroico y único en la historia de la aviación " .	El incidente fue calificado por la NTSB como " el amerizaje más exitoso de la historia de la aeronáutica " .	El avión había despegado del Aeropuerto LaGuardia a las 3:24 p.m. hora local con 150 pasajeros y cinco tripulantes .	A menos de dos minutos de vuelo y en plena maniobra de ascenso , a una altura de 850m , el Airbus A320 fue impactado de frente por una densa bandada de gansos canadienses dañando ambos motores y dejándolo sin propulsión .	El comandante Chesley Sullenberger y su copiloto Jeffrey Skiles mantuvieron la calma profesional y empezaron a analizar rápidamente la situación consultando los protocolos de emergencia .
+Event	T0	justificación	EVENT	3
+Event	T1	entrega	EVENT	23
+Event	T2	rezaba	EVENT	42
+Event	T3	amerizaje	EVENT	56
+Event	T4	evacuación	EVENT	68
+Event	T5	pérdidas	EVENT	94
+Event	T6	calificado	EVENT	194
+Event	T7	amerizaje	EVENT	227
+Event	T8	despegado	EVENT	301
+Event	T9	vuelo	EVENT	429
+Event	T10	maniobra	EVENT	446
+Event	T11	ascenso	EVENT	458
+Event	T12	impactado	EVENT	510
+Event	T13	bandada	EVENT	544
+Event	T14	dañando	EVENT	574
+Event	T15	calma	EVENT	704
+Event	T16	empezaron	EVENT	724
+Event	T17	analizar	EVENT	736
+Event	T18	consultando	EVENT	770
+Event	T19	emergencia	EVENT	800
+Event	T20	incidente	EVENT	180
+Relation	T12	T14	CauseEffect	true	impactado	dañando
+Relation	T14	T12	EffectCause	true	dañando	impactado
+Relation	T12	T16	CauseEffect	true	impactado	empezaron
+Relation	T16	T12	EffectCause	true	empezaron	impactado
+Relation	T0	T12	NoRel	true	justificación	impactado
+Relation	T0	T16	NoRel	true	justificación	empezaron
+Relation	T0	T3	NoRel	true	justificación	amerizaje
+Relation	T0	T4	NoRel	true	justificación	evacuación
+Relation	T0	T5	NoRel	true	justificación	pérdidas
+Relation	T0	T6	NoRel	true	justificación	calificado
+Relation	T1	T0	NoRel	true	entrega	justificación
+Relation	T1	T10	NoRel	true	entrega	maniobra
+Relation	T1	T11	NoRel	true	entrega	ascenso
+Relation	T1	T13	NoRel	true	entrega	bandada
+Relation	T1	T16	NoRel	true	entrega	empezaron
+Relation	T1	T18	NoRel	true	entrega	consultando
+Relation	T1	T2	NoRel	true	entrega	rezaba
+Relation	T1	T20	NoRel	true	entrega	incidente
+Relation	T10	T12	NoRel	true	maniobra	impactado
+Relation	T10	T17	NoRel	true	maniobra	analizar
+Relation	T10	T19	NoRel	true	maniobra	emergencia
+Relation	T10	T20	NoRel	true	maniobra	incidente
+Relation	T10	T4	NoRel	true	maniobra	evacuación
+Relation	T10	T7	NoRel	true	maniobra	amerizaje
+Relation	T12	T19	NoRel	true	impactado	emergencia
+Relation	T12	T8	NoRel	true	impactado	despegado
+Relation	T13	T0	NoRel	true	bandada	justificación
+Relation	T13	T12	NoRel	true	bandada	impactado
+Relation	T13	T14	NoRel	true	bandada	dañando
+Relation	T13	T5	NoRel	true	bandada	pérdidas
+Relation	T14	T0	NoRel	true	dañando	justificación
+Relation	T14	T10	NoRel	true	dañando	maniobra
+Relation	T14	T19	NoRel	true	dañando	emergencia
+Relation	T14	T3	NoRel	true	dañando	amerizaje
+Relation	T14	T4	NoRel	true	dañando	evacuación
+Relation	T15	T1	NoRel	true	calma	entrega
+Relation	T15	T13	NoRel	true	calma	bandada
+Relation	T15	T14	NoRel	true	calma	dañando
+Relation	T15	T17	NoRel	true	calma	analizar
+Relation	T15	T18	NoRel	true	calma	consultando
+Relation	T15	T19	NoRel	true	calma	emergencia
+Relation	T15	T20	NoRel	true	calma	incidente
+Relation	T15	T9	NoRel	true	calma	vuelo
+Relation	T16	T19	NoRel	true	empezaron	emergencia
+Relation	T16	T20	NoRel	true	empezaron	incidente
+Relation	T17	T11	NoRel	true	analizar	ascenso
+Relation	T17	T13	NoRel	true	analizar	bandada
+Relation	T17	T18	NoRel	true	analizar	consultando
+Relation	T17	T20	NoRel	true	analizar	incidente
+Relation	T17	T6	NoRel	true	analizar	calificado
+Relation	T18	T0	NoRel	true	consultando	justificación
+Relation	T18	T1	NoRel	true	consultando	entrega
+Relation	T18	T11	NoRel	true	consultando	ascenso
+Relation	T18	T17	NoRel	true	consultando	analizar
+Relation	T18	T19	NoRel	true	consultando	emergencia
+Relation	T18	T2	NoRel	true	consultando	rezaba
+Relation	T18	T4	NoRel	true	consultando	evacuación
+Relation	T18	T8	NoRel	true	consultando	despegado
+Relation	T19	T0	NoRel	true	emergencia	justificación
+Relation	T19	T10	NoRel	true	emergencia	maniobra
+Relation	T19	T11	NoRel	true	emergencia	ascenso
+Relation	T19	T13	NoRel	true	emergencia	bandada
+Relation	T19	T2	NoRel	true	emergencia	rezaba
+Relation	T19	T3	NoRel	true	emergencia	amerizaje
+Relation	T19	T5	NoRel	true	emergencia	pérdidas
+Relation	T19	T8	NoRel	true	emergencia	despegado
+Relation	T19	T9	NoRel	true	emergencia	vuelo
+Relation	T2	T14	NoRel	true	rezaba	dañando
+Relation	T2	T16	NoRel	true	rezaba	empezaron
+Relation	T2	T5	NoRel	true	rezaba	pérdidas
+Relation	T2	T9	NoRel	true	rezaba	vuelo
+Relation	T20	T1	NoRel	true	incidente	entrega
+Relation	T20	T11	NoRel	true	incidente	ascenso
+Relation	T20	T14	NoRel	true	incidente	dañando
+Relation	T20	T15	NoRel	true	incidente	calma
+Relation	T20	T17	NoRel	true	incidente	analizar
+Relation	T20	T19	NoRel	true	incidente	emergencia
+Relation	T20	T4	NoRel	true	incidente	evacuación
+Relation	T20	T5	NoRel	true	incidente	pérdidas
+Relation	T20	T6	NoRel	true	incidente	calificado
+Relation	T20	T8	NoRel	true	incidente	despegado
+Relation	T3	T0	NoRel	true	amerizaje	justificación
+Relation	T3	T18	NoRel	true	amerizaje	consultando
+Relation	T3	T19	NoRel	true	amerizaje	emergencia
+Relation	T3	T2	NoRel	true	amerizaje	rezaba
+Relation	T3	T5	NoRel	true	amerizaje	pérdidas
+Relation	T3	T7	NoRel	true	amerizaje	amerizaje
+Relation	T3	T9	NoRel	true	amerizaje	vuelo
+Relation	T4	T1	NoRel	true	evacuación	entrega
+Relation	T4	T10	NoRel	true	evacuación	maniobra
+Relation	T4	T11	NoRel	true	evacuación	ascenso
+Relation	T4	T12	NoRel	true	evacuación	impactado
+Relation	T4	T13	NoRel	true	evacuación	bandada
+Relation	T4	T17	NoRel	true	evacuación	analizar
+Relation	T4	T18	NoRel	true	evacuación	consultando
+Relation	T4	T2	NoRel	true	evacuación	rezaba
+Relation	T4	T3	NoRel	true	evacuación	amerizaje
+Relation	T4	T6	NoRel	true	evacuación	calificado
+Relation	T4	T9	NoRel	true	evacuación	vuelo
+Relation	T5	T0	NoRel	true	pérdidas	justificación
+Relation	T5	T10	NoRel	true	pérdidas	maniobra
+Relation	T5	T14	NoRel	true	pérdidas	dañando
+Relation	T5	T18	NoRel	true	pérdidas	consultando
+Relation	T5	T19	NoRel	true	pérdidas	emergencia
+Relation	T5	T8	NoRel	true	pérdidas	despegado
+Relation	T5	T9	NoRel	true	pérdidas	vuelo
+Relation	T6	T15	NoRel	true	calificado	calma
+Relation	T6	T18	NoRel	true	calificado	consultando
+Relation	T6	T9	NoRel	true	calificado	vuelo
+Relation	T7	T0	NoRel	true	amerizaje	justificación
+Relation	T7	T1	NoRel	true	amerizaje	entrega
+Relation	T7	T19	NoRel	true	amerizaje	emergencia
+Relation	T8	T0	NoRel	true	despegado	justificación
+Relation	T8	T10	NoRel	true	despegado	maniobra
+Relation	T8	T14	NoRel	true	despegado	dañando
+Relation	T8	T2	NoRel	true	despegado	rezaba
+Relation	T8	T7	NoRel	true	despegado	amerizaje
+Relation	T9	T0	NoRel	true	vuelo	justificación
+Relation	T9	T16	NoRel	true	vuelo	empezaron
+Relation	T9	T3	NoRel	true	vuelo	amerizaje
+Relation	T9	T5	NoRel	true	vuelo	pérdidas
+Relation	T9	T8	NoRel	true	vuelo	despegado

@@ -1,0 +1,25 @@
+Text	کم از کم 24 افراد ہلاک ہوئے جن میں زیادہ تر خواتین اور بچے تھے ۔	رہائشیوں کی ایک غیر_متعین تعداد منہدم عمارتوں کے ملبے تلے دب گئی ، جن کو زندہ بچ جانے والوں نے بچایا ۔	زخمیوں کی تعداد 300 ہے ، بلوچستان کے کئی ہسپتال مریضوں کی آمد سے بھر گئے ہیں ۔	دس زخمی افراد ، جن میں زیادہ تر مرد اور بزرگ تھے ، کو کوئٹہ منتقل کیا گیا ۔	تباہی کے اسی دن سہ پہر کو ، ان لوگوں کے جنازے ادا کیے گئے جو مر گئے تھے ۔
+Event	T0	گئی	EVENT	126
+Event	T1	جانے	EVENT	146
+Event	T2	بچایا	EVENT	160
+Event	T3	آمد	EVENT	226
+Event	T4	گئے	EVENT	237
+Event	T5	زخمی	EVENT	250
+Event	T6	تباہی	EVENT	323
+Relation	T1	T2	CauseEffect	true	جانے	بچایا
+Relation	T2	T1	EffectCause	true	بچایا	جانے
+Relation	T3	T4	CauseEffect	true	آمد	گئے
+Relation	T4	T3	EffectCause	true	گئے	آمد
+Relation	T0	T5	CauseEffect	true	گئی	زخمی
+Relation	T5	T0	EffectCause	true	زخمی	گئی
+Relation	T0	T6	CauseEffect	true	گئی	تباہی
+Relation	T6	T0	EffectCause	true	تباہی	گئی
+Relation	T0	T1	NoRel	true	گئی	جانے
+Relation	T0	T3	NoRel	true	گئی	آمد
+Relation	T1	T0	NoRel	true	جانے	گئی
+Relation	T3	T6	NoRel	true	آمد	تباہی
+Relation	T4	T2	NoRel	true	گئے	بچایا
+Relation	T4	T5	NoRel	true	گئے	زخمی
+Relation	T5	T3	NoRel	true	زخمی	آمد
+Relation	T6	T1	NoRel	true	تباہی	جانے
+Relation	T6	T4	NoRel	true	تباہی	گئے

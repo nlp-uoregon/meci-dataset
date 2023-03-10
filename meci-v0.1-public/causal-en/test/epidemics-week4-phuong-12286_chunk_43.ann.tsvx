@@ -1,0 +1,72 @@
+Text	[ Great Plague of London in 1665 ]	The plague in London largely affected the poor , as the rich were able to leave the city by either retiring to their country estates or residing with kin in other parts of the country .	The subsequent Great Fire of London ruined many city merchants and property owners .	As a result of these events , London was largely rebuilt and Parliament enacted the Rebuilding of London Act 1666 .	The street plan of the capital remained relatively unchanged , but some improvements were made : streets were widened , pavements were created , open sewers abolished , wooden buildings and overhanging gables forbidden , and the design and construction of buildings controlled .
+Event	T0	Plague	EVENT	8
+Event	T1	plague	EVENT	39
+Event	T2	affected	EVENT	64
+Event	T3	leave	EVENT	109
+Event	T4	retiring	EVENT	134
+Event	T5	residing	EVENT	171
+Event	T7	ruined	EVENT	257
+Event	T8	events	EVENT	327
+Event	T9	rebuilt	EVENT	355
+Event	T10	enacted	EVENT	378
+Event	T11	Rebuilding	EVENT	390
+Event	T12	remained	EVENT	453
+Event	T13	improvements	EVENT	494
+Event	T14	made	EVENT	512
+Event	T15	widened	EVENT	532
+Event	T16	created	EVENT	557
+Event	T17	abolished	EVENT	579
+Event	T18	forbidden	EVENT	631
+Event	T19	controlled	EVENT	688
+Event	T6	Great Fire of London	EVENT	236
+Relation	T1	T2	CauseEffect	true	plague	affected
+Relation	T2	T1	EffectCause	true	affected	plague
+Relation	T6	T7	CauseEffect	true	Great Fire of London	ruined
+Relation	T7	T6	EffectCause	true	ruined	Great Fire of London
+Relation	T7	T9	CauseEffect	true	ruined	rebuilt
+Relation	T9	T7	EffectCause	true	rebuilt	ruined
+Relation	T7	T10	CauseEffect	true	ruined	enacted
+Relation	T10	T7	EffectCause	true	enacted	ruined
+Relation	T0	T16	NoRel	true	Plague	created
+Relation	T1	T18	NoRel	true	plague	forbidden
+Relation	T1	T5	NoRel	true	plague	residing
+Relation	T1	T9	NoRel	true	plague	rebuilt
+Relation	T10	T13	NoRel	true	enacted	improvements
+Relation	T10	T5	NoRel	true	enacted	residing
+Relation	T11	T15	NoRel	true	Rebuilding	widened
+Relation	T11	T4	NoRel	true	Rebuilding	retiring
+Relation	T12	T13	NoRel	true	remained	improvements
+Relation	T13	T10	NoRel	true	improvements	enacted
+Relation	T13	T15	NoRel	true	improvements	widened
+Relation	T13	T19	NoRel	true	improvements	controlled
+Relation	T14	T13	NoRel	true	made	improvements
+Relation	T14	T3	NoRel	true	made	leave
+Relation	T15	T6	NoRel	true	widened	Great Fire of London
+Relation	T16	T12	NoRel	true	created	remained
+Relation	T16	T14	NoRel	true	created	made
+Relation	T17	T1	NoRel	true	abolished	plague
+Relation	T17	T13	NoRel	true	abolished	improvements
+Relation	T17	T9	NoRel	true	abolished	rebuilt
+Relation	T18	T11	NoRel	true	forbidden	Rebuilding
+Relation	T18	T16	NoRel	true	forbidden	created
+Relation	T18	T4	NoRel	true	forbidden	retiring
+Relation	T19	T16	NoRel	true	controlled	created
+Relation	T19	T7	NoRel	true	controlled	ruined
+Relation	T19	T9	NoRel	true	controlled	rebuilt
+Relation	T2	T15	NoRel	true	affected	widened
+Relation	T2	T19	NoRel	true	affected	controlled
+Relation	T3	T1	NoRel	true	leave	plague
+Relation	T3	T16	NoRel	true	leave	created
+Relation	T3	T5	NoRel	true	leave	residing
+Relation	T3	T7	NoRel	true	leave	ruined
+Relation	T4	T11	NoRel	true	retiring	Rebuilding
+Relation	T4	T7	NoRel	true	retiring	ruined
+Relation	T5	T10	NoRel	true	residing	enacted
+Relation	T6	T14	NoRel	true	Great Fire of London	made
+Relation	T6	T15	NoRel	true	Great Fire of London	widened
+Relation	T6	T19	NoRel	true	Great Fire of London	controlled
+Relation	T7	T0	NoRel	true	ruined	Plague
+Relation	T7	T18	NoRel	true	ruined	forbidden
+Relation	T7	T2	NoRel	true	ruined	affected
+Relation	T8	T18	NoRel	true	events	forbidden
+Relation	T9	T11	NoRel	true	rebuilt	Rebuilding

@@ -1,0 +1,91 @@
+Text	Seeing Spencer 's progress in subduing the terrorist , Alek , Anthony , and other passengers join the effort to try to further overwhelm the terrorist , finally knocking him out .	Spencer then stanches the bleeding by plugging the exit wound in Moogalian 's neck with his fingers .	The police at the next station enter the train fully armed , discovering that Spencer has subdued the terrorist , and the paramedics begin to treat his wounds and the more serious ones of the shot passenger .	Paramedics take Moogalian to the emergency room at a local hospital and he survives .	In a formal ceremony , Spencer , Alek and Anthony are recognized as heroes of France for their gallantry and bravery .
+Event	T0	Seeing	EVENT	0
+Event	T1	progress	EVENT	18
+Event	T10	wound	EVENT	236
+Event	T11	enter	EVENT	313
+Event	T12	armed	EVENT	335
+Event	T13	discovering	EVENT	343
+Event	T14	subdued	EVENT	372
+Event	T15	begin	EVENT	415
+Event	T16	treat	EVENT	424
+Event	T17	wounds	EVENT	434
+Event	T18	shot	EVENT	474
+Event	T19	take	EVENT	502
+Event	T2	subduing	EVENT	30
+Event	T20	survives	EVENT	566
+Event	T21	recognized	EVENT	631
+Event	T22	bravery	EVENT	686
+Event	T23	knocking	EVENT	161
+Event	T3	join	EVENT	93
+Event	T5	try	EVENT	112
+Event	T6	overwhelm	EVENT	127
+Event	T7	stanches	EVENT	193
+Event	T8	bleeding	EVENT	206
+Event	T9	plugging	EVENT	218
+Relation	T0	T3	CauseEffect	true	Seeing	join
+Relation	T3	T0	EffectCause	true	join	Seeing
+Relation	T6	T23	CauseEffect	true	overwhelm	knocking
+Relation	T23	T6	EffectCause	true	knocking	overwhelm
+Relation	T9	T7	CauseEffect	true	plugging	stanches
+Relation	T7	T9	EffectCause	true	stanches	plugging
+Relation	T11	T13	CauseEffect	true	enter	discovering
+Relation	T13	T11	EffectCause	true	discovering	enter
+Relation	T14	T13	CauseEffect	true	subdued	discovering
+Relation	T13	T14	EffectCause	true	discovering	subdued
+Relation	T19	T20	CauseEffect	true	take	survives
+Relation	T20	T19	EffectCause	true	survives	take
+Relation	T22	T21	CauseEffect	true	bravery	recognized
+Relation	T21	T22	EffectCause	true	recognized	bravery
+Relation	T0	T23	NoRel	true	Seeing	knocking
+Relation	T1	T19	NoRel	true	progress	take
+Relation	T1	T20	NoRel	true	progress	survives
+Relation	T1	T3	NoRel	true	progress	join
+Relation	T10	T1	NoRel	true	wound	progress
+Relation	T10	T3	NoRel	true	wound	join
+Relation	T11	T3	NoRel	true	enter	join
+Relation	T11	T6	NoRel	true	enter	overwhelm
+Relation	T11	T8	NoRel	true	enter	bleeding
+Relation	T11	T9	NoRel	true	enter	plugging
+Relation	T12	T1	NoRel	true	armed	progress
+Relation	T12	T15	NoRel	true	armed	begin
+Relation	T12	T5	NoRel	true	armed	try
+Relation	T13	T0	NoRel	true	discovering	Seeing
+Relation	T13	T15	NoRel	true	discovering	begin
+Relation	T13	T9	NoRel	true	discovering	plugging
+Relation	T14	T18	NoRel	true	subdued	shot
+Relation	T14	T19	NoRel	true	subdued	take
+Relation	T15	T13	NoRel	true	begin	discovering
+Relation	T16	T13	NoRel	true	treat	discovering
+Relation	T16	T9	NoRel	true	treat	plugging
+Relation	T17	T10	NoRel	true	wounds	wound
+Relation	T17	T16	NoRel	true	wounds	treat
+Relation	T17	T2	NoRel	true	wounds	subduing
+Relation	T18	T23	NoRel	true	shot	knocking
+Relation	T18	T3	NoRel	true	shot	join
+Relation	T19	T16	NoRel	true	take	treat
+Relation	T19	T8	NoRel	true	take	bleeding
+Relation	T2	T6	NoRel	true	subduing	overwhelm
+Relation	T20	T1	NoRel	true	survives	progress
+Relation	T21	T1	NoRel	true	recognized	progress
+Relation	T21	T14	NoRel	true	recognized	subdued
+Relation	T21	T16	NoRel	true	recognized	treat
+Relation	T21	T17	NoRel	true	recognized	wounds
+Relation	T21	T23	NoRel	true	recognized	knocking
+Relation	T23	T10	NoRel	true	knocking	wound
+Relation	T23	T13	NoRel	true	knocking	discovering
+Relation	T23	T20	NoRel	true	knocking	survives
+Relation	T23	T3	NoRel	true	knocking	join
+Relation	T23	T8	NoRel	true	knocking	bleeding
+Relation	T3	T11	NoRel	true	join	enter
+Relation	T5	T3	NoRel	true	try	join
+Relation	T6	T0	NoRel	true	overwhelm	Seeing
+Relation	T6	T5	NoRel	true	overwhelm	try
+Relation	T7	T19	NoRel	true	stanches	take
+Relation	T7	T6	NoRel	true	stanches	overwhelm
+Relation	T8	T12	NoRel	true	bleeding	armed
+Relation	T8	T15	NoRel	true	bleeding	begin
+Relation	T8	T16	NoRel	true	bleeding	treat
+Relation	T9	T19	NoRel	true	plugging	take
+Relation	T9	T22	NoRel	true	plugging	bravery
+Relation	T9	T6	NoRel	true	plugging	overwhelm
+Relation	T9	T8	NoRel	true	plugging	bleeding

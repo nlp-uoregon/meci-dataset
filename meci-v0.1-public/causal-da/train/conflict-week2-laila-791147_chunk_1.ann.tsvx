@@ -1,0 +1,72 @@
+Text	Ofte fremtræder hjælpekrydserne som almindelige handelsskibe og har skjult bevæbningen , hvilket gør det muligt at sejle tæt på fjendtlige handelsskibe .	Hjælpekrydsere er sjældent beskyttet med panser til forsvar for beskydning eller torpedoer .	Dette skyldes dels , at det er vanskeligt at udstyre handelsskibene med sådant panser , dels at hjælpekrydserne ikke er tiltænkt at komme i kamp med egentlige flådefartøjer , men alene at angribe ubevæbnede handelsfortøjer .	Ofte er hjælpekrydsere forberedt til opgaven , således at der under skibets bygning er taget hensyn til skibets muligheder for militær anvendelse , herunder muligheder for armering , hastighed m.v. , hvorfor skibets reder opnår en godtgørelse ved at opfylde disse specifikationer og at stille skibet til rådighed i krigssituationer .	thumb| Den tyske hjælpekrydser SMS _ Wolf _ ved Papua_Ny Guinea omkring 1917 .
+Event	T0	fremtræder	EVENT	5
+Event	T1	sejle	EVENT	115
+Event	T10	opnår	EVENT	694
+Event	T11	godtgørelse	EVENT	703
+Event	T12	opfylde	EVENT	722
+Event	T13	stille	EVENT	758
+Event	T2	beskyttet	EVENT	181
+Event	T3	beskydning	EVENT	218
+Event	T4	komme	EVENT	379
+Event	T5	kamp	EVENT	387
+Event	T6	angribe	EVENT	435
+Event	T7	forberedt	EVENT	495
+Event	T8	anvendelse	EVENT	607
+Event	T9	armering	EVENT	644
+Relation	T0	T1	CauseEffect	true	fremtræder	sejle
+Relation	T1	T0	EffectCause	true	sejle	fremtræder
+Relation	T13	T11	CauseEffect	true	stille	godtgørelse
+Relation	T11	T13	EffectCause	true	godtgørelse	stille
+Relation	T7	T11	CauseEffect	true	forberedt	godtgørelse
+Relation	T11	T7	EffectCause	true	godtgørelse	forberedt
+Relation	T0	T10	NoRel	true	fremtræder	opnår
+Relation	T0	T13	NoRel	true	fremtræder	stille
+Relation	T1	T10	NoRel	true	sejle	opnår
+Relation	T1	T11	NoRel	true	sejle	godtgørelse
+Relation	T1	T12	NoRel	true	sejle	opfylde
+Relation	T1	T4	NoRel	true	sejle	komme
+Relation	T1	T7	NoRel	true	sejle	forberedt
+Relation	T1	T8	NoRel	true	sejle	anvendelse
+Relation	T10	T0	NoRel	true	opnår	fremtræder
+Relation	T10	T11	NoRel	true	opnår	godtgørelse
+Relation	T10	T13	NoRel	true	opnår	stille
+Relation	T10	T2	NoRel	true	opnår	beskyttet
+Relation	T10	T6	NoRel	true	opnår	angribe
+Relation	T10	T8	NoRel	true	opnår	anvendelse
+Relation	T11	T10	NoRel	true	godtgørelse	opnår
+Relation	T11	T2	NoRel	true	godtgørelse	beskyttet
+Relation	T11	T4	NoRel	true	godtgørelse	komme
+Relation	T12	T0	NoRel	true	opfylde	fremtræder
+Relation	T12	T10	NoRel	true	opfylde	opnår
+Relation	T12	T11	NoRel	true	opfylde	godtgørelse
+Relation	T12	T13	NoRel	true	opfylde	stille
+Relation	T12	T8	NoRel	true	opfylde	anvendelse
+Relation	T13	T0	NoRel	true	stille	fremtræder
+Relation	T13	T1	NoRel	true	stille	sejle
+Relation	T13	T10	NoRel	true	stille	opnår
+Relation	T13	T8	NoRel	true	stille	anvendelse
+Relation	T2	T6	NoRel	true	beskyttet	angribe
+Relation	T2	T7	NoRel	true	beskyttet	forberedt
+Relation	T2	T8	NoRel	true	beskyttet	anvendelse
+Relation	T3	T4	NoRel	true	beskydning	komme
+Relation	T3	T9	NoRel	true	beskydning	armering
+Relation	T4	T11	NoRel	true	komme	godtgørelse
+Relation	T4	T12	NoRel	true	komme	opfylde
+Relation	T4	T7	NoRel	true	komme	forberedt
+Relation	T6	T1	NoRel	true	angribe	sejle
+Relation	T6	T13	NoRel	true	angribe	stille
+Relation	T6	T2	NoRel	true	angribe	beskyttet
+Relation	T6	T5	NoRel	true	angribe	kamp
+Relation	T7	T13	NoRel	true	forberedt	stille
+Relation	T7	T4	NoRel	true	forberedt	komme
+Relation	T7	T5	NoRel	true	forberedt	kamp
+Relation	T7	T6	NoRel	true	forberedt	angribe
+Relation	T8	T1	NoRel	true	anvendelse	sejle
+Relation	T8	T12	NoRel	true	anvendelse	opfylde
+Relation	T8	T3	NoRel	true	anvendelse	beskydning
+Relation	T8	T4	NoRel	true	anvendelse	komme
+Relation	T8	T5	NoRel	true	anvendelse	kamp
+Relation	T9	T0	NoRel	true	armering	fremtræder
+Relation	T9	T1	NoRel	true	armering	sejle
+Relation	T9	T10	NoRel	true	armering	opnår
+Relation	T9	T3	NoRel	true	armering	beskydning

@@ -1,0 +1,85 @@
+Text	EL VUELO 331 DE AMERICAN AIRLINES era un vuelo internacional regular entre el Aeropuerto Nacional Ronald Reagan en Washington , DC y el Aeropuerto Internacional Norman Manley en Kingston , Jamaica , con escala en Miami .	El 22 de diciembre de 2009 , el avión transportaba 148 pasajeros y seis tripulantes y , al aterrizar terminó saliendo de la pista , debido a la lluvia y el mal tiempo , continuando su rumbo hasta que se partió por la mitad .	Algunos de los factores que contribuyeron al accidente incluyen la alta velocidad de la aeronave después de que aterrizó y el aterrizaje del avión en el medio de la pista del aeropuerto .	La información atestigua que un Boeing 747 de Virgin Atlantic aterrizó con éxito en el mismo aeropuerto en condiciones climáticas muy similares , justo antes del vuelo 331 .	El vuelo se originó en el Aeropuerto Nacional Ronald Reagan , en Washington , DC , con escala en el Aeropuerto Internacional de Miami , en Miami , Florida .
+Event	T0	escala	EVENT	203
+Event	T1	transportaba	EVENT	259
+Event	T2	saliendo	EVENT	330
+Event	T3	lluvia	EVENT	365
+Event	T5	rumbo	EVENT	405
+Event	T6	partió	EVENT	424
+Event	T8	aterrizó	EVENT	558
+Event	T10	atestigua	EVENT	649
+Event	T11	aterrizó	EVENT	696
+Event	T12	vuelo	EVENT	796
+Event	T13	vuelo	EVENT	811
+Event	T14	originó	EVENT	820
+Event	T15	escala	EVENT	895
+Event	T16	VUELO	EVENT	3
+Event	T17	aterrizar	EVENT	312
+Event	T4	accidente	EVENT	491
+Relation	T2	T4	CauseEffect	true	saliendo	accidente
+Relation	T4	T2	EffectCause	true	accidente	saliendo
+Relation	T6	T4	CauseEffect	true	partió	accidente
+Relation	T4	T6	EffectCause	true	accidente	partió
+Relation	T0	T1	NoRel	true	escala	transportaba
+Relation	T0	T10	NoRel	true	escala	atestigua
+Relation	T0	T11	NoRel	true	escala	aterrizó
+Relation	T0	T2	NoRel	true	escala	saliendo
+Relation	T0	T3	NoRel	true	escala	lluvia
+Relation	T0	T4	NoRel	true	escala	accidente
+Relation	T0	T5	NoRel	true	escala	rumbo
+Relation	T0	T6	NoRel	true	escala	partió
+Relation	T1	T0	NoRel	true	transportaba	escala
+Relation	T1	T13	NoRel	true	transportaba	vuelo
+Relation	T1	T14	NoRel	true	transportaba	originó
+Relation	T1	T2	NoRel	true	transportaba	saliendo
+Relation	T1	T3	NoRel	true	transportaba	lluvia
+Relation	T1	T4	NoRel	true	transportaba	accidente
+Relation	T10	T0	NoRel	true	atestigua	escala
+Relation	T10	T12	NoRel	true	atestigua	vuelo
+Relation	T10	T14	NoRel	true	atestigua	originó
+Relation	T11	T10	NoRel	true	aterrizó	atestigua
+Relation	T11	T12	NoRel	true	aterrizó	vuelo
+Relation	T11	T13	NoRel	true	aterrizó	vuelo
+Relation	T11	T14	NoRel	true	aterrizó	originó
+Relation	T11	T15	NoRel	true	aterrizó	escala
+Relation	T11	T16	NoRel	true	aterrizó	VUELO
+Relation	T11	T17	NoRel	true	aterrizó	aterrizar
+Relation	T11	T2	NoRel	true	aterrizó	saliendo
+Relation	T11	T3	NoRel	true	aterrizó	lluvia
+Relation	T12	T11	NoRel	true	vuelo	aterrizó
+Relation	T12	T13	NoRel	true	vuelo	vuelo
+Relation	T12	T2	NoRel	true	vuelo	saliendo
+Relation	T12	T3	NoRel	true	vuelo	lluvia
+Relation	T13	T10	NoRel	true	vuelo	atestigua
+Relation	T13	T11	NoRel	true	vuelo	aterrizó
+Relation	T13	T16	NoRel	true	vuelo	VUELO
+Relation	T13	T3	NoRel	true	vuelo	lluvia
+Relation	T14	T15	NoRel	true	originó	escala
+Relation	T14	T16	NoRel	true	originó	VUELO
+Relation	T15	T6	NoRel	true	escala	partió
+Relation	T15	T8	NoRel	true	escala	aterrizó
+Relation	T16	T0	NoRel	true	VUELO	escala
+Relation	T16	T11	NoRel	true	VUELO	aterrizó
+Relation	T16	T15	NoRel	true	VUELO	escala
+Relation	T16	T17	NoRel	true	VUELO	aterrizar
+Relation	T16	T2	NoRel	true	VUELO	saliendo
+Relation	T16	T5	NoRel	true	VUELO	rumbo
+Relation	T17	T10	NoRel	true	aterrizar	atestigua
+Relation	T17	T13	NoRel	true	aterrizar	vuelo
+Relation	T17	T3	NoRel	true	aterrizar	lluvia
+Relation	T2	T11	NoRel	true	saliendo	aterrizó
+Relation	T2	T13	NoRel	true	saliendo	vuelo
+Relation	T2	T14	NoRel	true	saliendo	originó
+Relation	T2	T15	NoRel	true	saliendo	escala
+Relation	T2	T6	NoRel	true	saliendo	partió
+Relation	T4	T13	NoRel	true	accidente	vuelo
+Relation	T4	T3	NoRel	true	accidente	lluvia
+Relation	T4	T8	NoRel	true	accidente	aterrizó
+Relation	T5	T4	NoRel	true	rumbo	accidente
+Relation	T6	T15	NoRel	true	partió	escala
+Relation	T6	T3	NoRel	true	partió	lluvia
+Relation	T8	T1	NoRel	true	aterrizó	transportaba
+Relation	T8	T10	NoRel	true	aterrizó	atestigua
+Relation	T8	T12	NoRel	true	aterrizó	vuelo
+Relation	T8	T15	NoRel	true	aterrizó	escala
+Relation	T8	T4	NoRel	true	aterrizó	accidente
+Relation	T8	T5	NoRel	true	aterrizó	rumbo

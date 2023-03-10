@@ -1,0 +1,58 @@
+Text	Böylece Ali , 20.000 kişilik ordusu ile Aişe’nin karşısına çıktı .	Halife Osman’ın öldürülmesi ve yerine Ali’nin halife seçilmesi ile birlikte Emevî - Hâşimî mücadelesi yeniden başladı .	Şam Valisi Muaviye , öldürülen akrabası Halife Osman’ın kanını Ali’den talep ederek onun ölümünden Ali’yi mes'ul tuttu .	MUAVIYE , Ali halife seçildiğinde ilk iş olarak Osman zamanında tayin edilmiş olan valileri görevden aldı ve böylece valileri değiştirmede acele etmemesi kendisine tavsiye edilmiş olmasına rağmen bunu dikkate almamış oldu .	Görevden alınan ve çoğu Emevi sülalesinden olan valiler , yeni halifeye tepkilerini gösterdiler .
+Event	T0	çıktı	EVENT	59
+Event	T1	öldürülmesi	EVENT	83
+Event	T2	seçilmesi	EVENT	120
+Event	T4	başladı	EVENT	177
+Event	T5	öldürülen	EVENT	208
+Event	T8	tuttu	EVENT	300
+Event	T9	seçildiğinde	EVENT	329
+Event	T3	ederek	EVENT	264
+Event	T6	aldı	EVENT	409
+Event	T7	edilmiş	EVENT	378
+Event	T10	gösterdiler	EVENT	616
+Relation	T1	T2	CauseEffect	true	öldürülmesi	seçilmesi
+Relation	T2	T1	EffectCause	true	seçilmesi	öldürülmesi
+Relation	T2	T4	CauseEffect	true	seçilmesi	başladı
+Relation	T4	T2	EffectCause	true	başladı	seçilmesi
+Relation	T5	T8	CauseEffect	true	öldürülen	tuttu
+Relation	T8	T5	EffectCause	true	tuttu	öldürülen
+Relation	T8	T3	CauseEffect	true	tuttu	ederek
+Relation	T3	T8	EffectCause	true	ederek	tuttu
+Relation	T7	T6	CauseEffect	true	edilmiş	aldı
+Relation	T6	T7	EffectCause	true	aldı	edilmiş
+Relation	T9	T6	CauseEffect	true	seçildiğinde	aldı
+Relation	T6	T9	EffectCause	true	aldı	seçildiğinde
+Relation	T6	T10	CauseEffect	true	aldı	gösterdiler
+Relation	T10	T6	EffectCause	true	gösterdiler	aldı
+Relation	T0	T2	NoRel	true	çıktı	seçilmesi
+Relation	T0	T8	NoRel	true	çıktı	tuttu
+Relation	T0	T9	NoRel	true	çıktı	seçildiğinde
+Relation	T1	T0	NoRel	true	öldürülmesi	çıktı
+Relation	T1	T4	NoRel	true	öldürülmesi	başladı
+Relation	T1	T8	NoRel	true	öldürülmesi	tuttu
+Relation	T10	T7	NoRel	true	gösterdiler	edilmiş
+Relation	T2	T0	NoRel	true	seçilmesi	çıktı
+Relation	T2	T5	NoRel	true	seçilmesi	öldürülen
+Relation	T3	T6	NoRel	true	ederek	aldı
+Relation	T3	T9	NoRel	true	ederek	seçildiğinde
+Relation	T4	T10	NoRel	true	başladı	gösterdiler
+Relation	T4	T5	NoRel	true	başladı	öldürülen
+Relation	T4	T6	NoRel	true	başladı	aldı
+Relation	T4	T9	NoRel	true	başladı	seçildiğinde
+Relation	T5	T1	NoRel	true	öldürülen	öldürülmesi
+Relation	T5	T2	NoRel	true	öldürülen	seçilmesi
+Relation	T5	T4	NoRel	true	öldürülen	başladı
+Relation	T6	T3	NoRel	true	aldı	ederek
+Relation	T6	T4	NoRel	true	aldı	başladı
+Relation	T6	T5	NoRel	true	aldı	öldürülen
+Relation	T6	T8	NoRel	true	aldı	tuttu
+Relation	T7	T0	NoRel	true	edilmiş	çıktı
+Relation	T7	T2	NoRel	true	edilmiş	seçilmesi
+Relation	T7	T3	NoRel	true	edilmiş	ederek
+Relation	T7	T4	NoRel	true	edilmiş	başladı
+Relation	T7	T5	NoRel	true	edilmiş	öldürülen
+Relation	T7	T8	NoRel	true	edilmiş	tuttu
+Relation	T8	T1	NoRel	true	tuttu	öldürülmesi
+Relation	T8	T2	NoRel	true	tuttu	seçilmesi
+Relation	T9	T0	NoRel	true	seçildiğinde	çıktı
+Relation	T9	T8	NoRel	true	seçildiğinde	tuttu

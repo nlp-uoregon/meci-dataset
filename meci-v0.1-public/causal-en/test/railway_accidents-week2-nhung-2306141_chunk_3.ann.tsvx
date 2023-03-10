@@ -1,0 +1,63 @@
+Text	His fiancée , Fardosa Abdullah , was arrested on 4 October 2006 .	She was charged with assisting Omar in evading arrest and with failing to disclose information which could have led to Omar 's arrest or conviction " as soon as reasonably practicable " .	She was subsequently jailed for three years .	On 9 July 2007 , Yasin Hassan Omar was found guilty at Woolwich Crown Court of conspiracy to murder and sentenced to life imprisonment , with a minimum of 40 years before being considered for release .	In April 2008 , the court of appeal judges dismissed a challenge by Ibrahim , Omar , Mohammed and Osman to their convictions .
+Event	T0	arrested	EVENT	37
+Event	T1	charged	EVENT	74
+Event	T10	conspiracy	EVENT	379
+Event	T11	murder	EVENT	393
+Event	T12	imprisonment	EVENT	422
+Event	T14	release	EVENT	492
+Event	T15	dismissed	EVENT	545
+Event	T16	challenge	EVENT	557
+Event	T17	convictions	EVENT	615
+Event	T2	assisting	EVENT	87
+Event	T3	arrest	EVENT	113
+Event	T4	failing	EVENT	129
+Event	T5	disclose	EVENT	140
+Event	T6	arrest	EVENT	193
+Event	T7	conviction	EVENT	203
+Event	T8	jailed	EVENT	275
+Event	T9	guilty	EVENT	345
+Relation	T2	T1	CauseEffect	true	assisting	charged
+Relation	T1	T2	EffectCause	true	charged	assisting
+Relation	T4	T1	CauseEffect	true	failing	charged
+Relation	T1	T4	EffectCause	true	charged	failing
+Relation	T2	T8	CauseEffect	true	assisting	jailed
+Relation	T8	T2	EffectCause	true	jailed	assisting
+Relation	T6	T5	CauseEffect	true	arrest	disclose
+Relation	T5	T6	EffectCause	true	disclose	arrest
+Relation	T5	T7	CauseEffect	true	disclose	conviction
+Relation	T7	T5	EffectCause	true	conviction	disclose
+Relation	T4	T8	CauseEffect	true	failing	jailed
+Relation	T8	T4	EffectCause	true	jailed	failing
+Relation	T10	T9	CauseEffect	true	conspiracy	guilty
+Relation	T9	T10	EffectCause	true	guilty	conspiracy
+Relation	T9	T12	CauseEffect	true	guilty	imprisonment
+Relation	T12	T9	EffectCause	true	imprisonment	guilty
+Relation	T15	T17	CauseEffect	true	dismissed	convictions
+Relation	T17	T15	EffectCause	true	convictions	dismissed
+Relation	T0	T4	NoRel	true	arrested	failing
+Relation	T1	T10	NoRel	true	charged	conspiracy
+Relation	T1	T5	NoRel	true	charged	disclose
+Relation	T1	T7	NoRel	true	charged	conviction
+Relation	T10	T0	NoRel	true	conspiracy	arrested
+Relation	T10	T17	NoRel	true	conspiracy	convictions
+Relation	T11	T12	NoRel	true	murder	imprisonment
+Relation	T11	T7	NoRel	true	murder	conviction
+Relation	T12	T16	NoRel	true	imprisonment	challenge
+Relation	T12	T5	NoRel	true	imprisonment	disclose
+Relation	T14	T16	NoRel	true	release	challenge
+Relation	T14	T17	NoRel	true	release	convictions
+Relation	T14	T6	NoRel	true	release	arrest
+Relation	T15	T7	NoRel	true	dismissed	conviction
+Relation	T16	T12	NoRel	true	challenge	imprisonment
+Relation	T17	T1	NoRel	true	convictions	charged
+Relation	T2	T16	NoRel	true	assisting	challenge
+Relation	T4	T15	NoRel	true	failing	dismissed
+Relation	T5	T9	NoRel	true	disclose	guilty
+Relation	T6	T1	NoRel	true	arrest	charged
+Relation	T6	T7	NoRel	true	arrest	conviction
+Relation	T7	T1	NoRel	true	conviction	charged
+Relation	T7	T11	NoRel	true	conviction	murder
+Relation	T7	T14	NoRel	true	conviction	release
+Relation	T8	T14	NoRel	true	jailed	release
+Relation	T9	T0	NoRel	true	guilty	arrested
+Relation	T9	T3	NoRel	true	guilty	arrest

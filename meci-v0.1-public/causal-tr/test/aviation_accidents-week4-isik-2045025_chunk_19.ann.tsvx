@@ -1,0 +1,79 @@
+Text	Rusya Devlet Başkanı Vladimir Putin tarafından kararın onaylandığı duyuruldu .	Rusya Devlet Başkanlığı sözcüsü Dimitri Peskov da , Suriye - Türkiye sınırındaki Rus askeri faaliyetlerinin devam edeceğini söyledi .	_ Anadolu Ajansı_'nın belirttiğine göre olay sonrası Rus uçakları eşliğinde Esad hükûmeti ve muhalifler arasındaki çatışmalar , Kızıldağ'ın güney kesiminde kalan yerleşkelerde yoğunlaşmaya başladı .	Rusya Başbakanı Dimitri Medvedev , " Türkiye ile ortak ekonomik projelerin iptal edilebileceğini " ve " Türk şirketlerinin de Rusya ekonomik pazarındaki konumlarını kaybedebileceğini " belirtti .	Aynı zamanda " Gıda ithalatına yönelik Türkiye'ye kısıtlama getirilebileceğini , yatırım görüşmelerine son verilebileceğini ve gümrük vergileriyle ilgili ağırlaştırıcı düzenlemelere gidilebileceğini " söyledi .
+Event	T0	duyuruldu	EVENT	67
+Event	T1	söyledi	EVENT	203
+Event	T2	belirttiğine	EVENT	235
+Event	T3	olay	EVENT	253
+Event	T4	çatışmalar	EVENT	328
+Event	T5	başladı	EVENT	402
+Event	T6	iptal	EVENT	487
+Event	T7	kaybedebileceğini	EVENT	577
+Event	T8	belirtti	EVENT	597
+Event	T9	söyledi	EVENT	809
+Event	T10	kararın	EVENT	47
+Event	T11	devam	EVENT	187
+Event	T12	düzenlemelere	EVENT	776
+Event	T13	kısıtlama	EVENT	658
+Relation	T10	T0	CauseEffect	true	kararın	duyuruldu
+Relation	T0	T10	EffectCause	true	duyuruldu	kararın
+Relation	T10	T11	CauseEffect	true	kararın	devam
+Relation	T11	T10	EffectCause	true	devam	kararın
+Relation	T10	T1	CauseEffect	true	kararın	söyledi
+Relation	T1	T10	EffectCause	true	söyledi	kararın
+Relation	T0	T3	NoRel	true	duyuruldu	olay
+Relation	T0	T4	NoRel	true	duyuruldu	çatışmalar
+Relation	T0	T6	NoRel	true	duyuruldu	iptal
+Relation	T1	T0	NoRel	true	söyledi	duyuruldu
+Relation	T1	T12	NoRel	true	söyledi	düzenlemelere
+Relation	T1	T4	NoRel	true	söyledi	çatışmalar
+Relation	T1	T7	NoRel	true	söyledi	kaybedebileceğini
+Relation	T10	T13	NoRel	true	kararın	kısıtlama
+Relation	T10	T2	NoRel	true	kararın	belirttiğine
+Relation	T10	T5	NoRel	true	kararın	başladı
+Relation	T10	T7	NoRel	true	kararın	kaybedebileceğini
+Relation	T10	T9	NoRel	true	kararın	söyledi
+Relation	T11	T1	NoRel	true	devam	söyledi
+Relation	T11	T13	NoRel	true	devam	kısıtlama
+Relation	T11	T3	NoRel	true	devam	olay
+Relation	T11	T7	NoRel	true	devam	kaybedebileceğini
+Relation	T11	T8	NoRel	true	devam	belirtti
+Relation	T12	T0	NoRel	true	düzenlemelere	duyuruldu
+Relation	T12	T1	NoRel	true	düzenlemelere	söyledi
+Relation	T12	T11	NoRel	true	düzenlemelere	devam
+Relation	T12	T9	NoRel	true	düzenlemelere	söyledi
+Relation	T13	T1	NoRel	true	kısıtlama	söyledi
+Relation	T13	T6	NoRel	true	kısıtlama	iptal
+Relation	T2	T10	NoRel	true	belirttiğine	kararın
+Relation	T2	T12	NoRel	true	belirttiğine	düzenlemelere
+Relation	T2	T7	NoRel	true	belirttiğine	kaybedebileceğini
+Relation	T3	T12	NoRel	true	olay	düzenlemelere
+Relation	T3	T2	NoRel	true	olay	belirttiğine
+Relation	T4	T0	NoRel	true	çatışmalar	duyuruldu
+Relation	T4	T13	NoRel	true	çatışmalar	kısıtlama
+Relation	T4	T3	NoRel	true	çatışmalar	olay
+Relation	T4	T8	NoRel	true	çatışmalar	belirtti
+Relation	T5	T1	NoRel	true	başladı	söyledi
+Relation	T5	T10	NoRel	true	başladı	kararın
+Relation	T5	T11	NoRel	true	başladı	devam
+Relation	T5	T12	NoRel	true	başladı	düzenlemelere
+Relation	T5	T2	NoRel	true	başladı	belirttiğine
+Relation	T5	T7	NoRel	true	başladı	kaybedebileceğini
+Relation	T5	T8	NoRel	true	başladı	belirtti
+Relation	T5	T9	NoRel	true	başladı	söyledi
+Relation	T6	T11	NoRel	true	iptal	devam
+Relation	T6	T2	NoRel	true	iptal	belirttiğine
+Relation	T6	T3	NoRel	true	iptal	olay
+Relation	T6	T7	NoRel	true	iptal	kaybedebileceğini
+Relation	T6	T9	NoRel	true	iptal	söyledi
+Relation	T7	T0	NoRel	true	kaybedebileceğini	duyuruldu
+Relation	T7	T1	NoRel	true	kaybedebileceğini	söyledi
+Relation	T7	T13	NoRel	true	kaybedebileceğini	kısıtlama
+Relation	T7	T2	NoRel	true	kaybedebileceğini	belirttiğine
+Relation	T7	T4	NoRel	true	kaybedebileceğini	çatışmalar
+Relation	T8	T1	NoRel	true	belirtti	söyledi
+Relation	T8	T2	NoRel	true	belirtti	belirttiğine
+Relation	T8	T4	NoRel	true	belirtti	çatışmalar
+Relation	T8	T6	NoRel	true	belirtti	iptal
+Relation	T8	T7	NoRel	true	belirtti	kaybedebileceğini
+Relation	T9	T0	NoRel	true	söyledi	duyuruldu
+Relation	T9	T10	NoRel	true	söyledi	kararın
+Relation	T9	T6	NoRel	true	söyledi	iptal

@@ -1,0 +1,44 @@
+Text	Deprem Türkiye saatiyle 13: 59'da , Marmara Denizi'nde Silivri açıklarında 6, 99 km derinlikte , Kuzey Anadolu fay sisteminin Kumburgaz bölümünün batı ucunda yanal bileşenli bir hareket ile gerçekleşti .	Büyüklüğü farklı kaynaklarda 5.7 M _ ( w ) ve 5.8_ML olarak ölçüldü .	Depremin ardından okullar ve hastaneler boşaltıldı .	İstanbul Valisi Ali Yerlikaya okullarını gün boyu kapatıldığını bildirdi .	AFAD hasar görmüş binalara dönülmemesini önerdi .
+Event	T0	Deprem	EVENT	0
+Event	T1	hareket	EVENT	178
+Event	T2	gerçekleşti	EVENT	190
+Event	T3	ölçüldü	EVENT	264
+Event	T4	Depremin	EVENT	274
+Event	T5	boşaltıldı	EVENT	314
+Event	T6	bildirdi	EVENT	391
+Event	T7	önerdi	EVENT	443
+Event	T8	görmüş	EVENT	413
+Relation	T1	T0	CauseEffect	true	hareket	Deprem
+Relation	T0	T1	EffectCause	true	Deprem	hareket
+Relation	T0	T3	CauseEffect	true	Deprem	ölçüldü
+Relation	T3	T0	EffectCause	true	ölçüldü	Deprem
+Relation	T0	T5	CauseEffect	true	Deprem	boşaltıldı
+Relation	T5	T0	EffectCause	true	boşaltıldı	Deprem
+Relation	T0	T6	CauseEffect	true	Deprem	bildirdi
+Relation	T6	T0	EffectCause	true	bildirdi	Deprem
+Relation	T0	T7	CauseEffect	true	Deprem	önerdi
+Relation	T7	T0	EffectCause	true	önerdi	Deprem
+Relation	T8	T7	CauseEffect	true	görmüş	önerdi
+Relation	T7	T8	EffectCause	true	önerdi	görmüş
+Relation	T0	T8	CauseEffect	true	Deprem	görmüş
+Relation	T8	T0	EffectCause	true	görmüş	Deprem
+Relation	T1	T3	NoRel	true	hareket	ölçüldü
+Relation	T1	T4	NoRel	true	hareket	Depremin
+Relation	T1	T6	NoRel	true	hareket	bildirdi
+Relation	T2	T3	NoRel	true	gerçekleşti	ölçüldü
+Relation	T2	T5	NoRel	true	gerçekleşti	boşaltıldı
+Relation	T2	T8	NoRel	true	gerçekleşti	görmüş
+Relation	T3	T2	NoRel	true	ölçüldü	gerçekleşti
+Relation	T3	T4	NoRel	true	ölçüldü	Depremin
+Relation	T4	T5	NoRel	true	Depremin	boşaltıldı
+Relation	T4	T6	NoRel	true	Depremin	bildirdi
+Relation	T5	T1	NoRel	true	boşaltıldı	hareket
+Relation	T5	T8	NoRel	true	boşaltıldı	görmüş
+Relation	T6	T4	NoRel	true	bildirdi	Depremin
+Relation	T6	T7	NoRel	true	bildirdi	önerdi
+Relation	T7	T1	NoRel	true	önerdi	hareket
+Relation	T7	T2	NoRel	true	önerdi	gerçekleşti
+Relation	T7	T3	NoRel	true	önerdi	ölçüldü
+Relation	T7	T5	NoRel	true	önerdi	boşaltıldı
+Relation	T7	T6	NoRel	true	önerdi	bildirdi
+Relation	T8	T2	NoRel	true	görmüş	gerçekleşti

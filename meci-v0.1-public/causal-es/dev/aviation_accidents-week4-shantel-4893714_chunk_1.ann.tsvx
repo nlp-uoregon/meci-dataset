@@ -1,0 +1,84 @@
+Text	El vuelo 5007 de Angara Airlines despegó del aeropuerto de Tomsk a las 10:10 hora local , con destino a Surgut .	Una hora y 26 minutos de vuelo , cuando volaba a una altitud de crucero de 6000 m , la luz " chips in oil " del motor izquierdo se activó .	Los parámetros del motor se mantuvieron normales y la tripulación continuó el vuelo .	A las 10:44 , el capitán , sintiendo el olor a quemado en la cabina , informó a la tripulación sobre esto y decidió dirigirse al aeródromo alternativo Nizhnevartovsk .	Se autorizó el vuelo para descender a 4.800 my se puso el motor izquierdo en modo inactivo de vuelo .
+Event	T0	vuelo	EVENT	3
+Event	T1	despegó	EVENT	33
+Event	T2	vuelo	EVENT	138
+Event	T3	volaba	EVENT	153
+Event	T4	activó	EVENT	244
+Event	T5	continuó	EVENT	319
+Event	T6	vuelo	EVENT	331
+Event	T7	sintiendo	EVENT	366
+Event	T9	informó	EVENT	409
+Event	T10	dirigirse	EVENT	455
+Event	T11	autorizó	EVENT	510
+Event	T12	vuelo	EVENT	522
+Event	T13	descender	EVENT	533
+Event	T14	puso	EVENT	557
+Relation	T4	T10	CauseEffect	true	activó	dirigirse
+Relation	T10	T4	EffectCause	true	dirigirse	activó
+Relation	T0	T11	NoRel	true	vuelo	autorizó
+Relation	T0	T12	NoRel	true	vuelo	vuelo
+Relation	T0	T3	NoRel	true	vuelo	volaba
+Relation	T0	T4	NoRel	true	vuelo	activó
+Relation	T1	T0	NoRel	true	despegó	vuelo
+Relation	T1	T10	NoRel	true	despegó	dirigirse
+Relation	T1	T11	NoRel	true	despegó	autorizó
+Relation	T1	T12	NoRel	true	despegó	vuelo
+Relation	T1	T2	NoRel	true	despegó	vuelo
+Relation	T1	T3	NoRel	true	despegó	volaba
+Relation	T1	T7	NoRel	true	despegó	sintiendo
+Relation	T1	T9	NoRel	true	despegó	informó
+Relation	T10	T11	NoRel	true	dirigirse	autorizó
+Relation	T10	T12	NoRel	true	dirigirse	vuelo
+Relation	T10	T13	NoRel	true	dirigirse	descender
+Relation	T10	T6	NoRel	true	dirigirse	vuelo
+Relation	T10	T7	NoRel	true	dirigirse	sintiendo
+Relation	T11	T10	NoRel	true	autorizó	dirigirse
+Relation	T11	T3	NoRel	true	autorizó	volaba
+Relation	T11	T4	NoRel	true	autorizó	activó
+Relation	T11	T7	NoRel	true	autorizó	sintiendo
+Relation	T12	T1	NoRel	true	vuelo	despegó
+Relation	T12	T2	NoRel	true	vuelo	vuelo
+Relation	T12	T4	NoRel	true	vuelo	activó
+Relation	T12	T9	NoRel	true	vuelo	informó
+Relation	T13	T10	NoRel	true	descender	dirigirse
+Relation	T13	T14	NoRel	true	descender	puso
+Relation	T13	T2	NoRel	true	descender	vuelo
+Relation	T13	T6	NoRel	true	descender	vuelo
+Relation	T13	T7	NoRel	true	descender	sintiendo
+Relation	T14	T1	NoRel	true	puso	despegó
+Relation	T14	T13	NoRel	true	puso	descender
+Relation	T14	T3	NoRel	true	puso	volaba
+Relation	T14	T9	NoRel	true	puso	informó
+Relation	T2	T0	NoRel	true	vuelo	vuelo
+Relation	T2	T5	NoRel	true	vuelo	continuó
+Relation	T2	T6	NoRel	true	vuelo	vuelo
+Relation	T2	T9	NoRel	true	vuelo	informó
+Relation	T3	T1	NoRel	true	volaba	despegó
+Relation	T3	T10	NoRel	true	volaba	dirigirse
+Relation	T3	T11	NoRel	true	volaba	autorizó
+Relation	T3	T14	NoRel	true	volaba	puso
+Relation	T3	T2	NoRel	true	volaba	vuelo
+Relation	T3	T7	NoRel	true	volaba	sintiendo
+Relation	T4	T5	NoRel	true	activó	continuó
+Relation	T4	T6	NoRel	true	activó	vuelo
+Relation	T4	T9	NoRel	true	activó	informó
+Relation	T5	T1	NoRel	true	continuó	despegó
+Relation	T5	T6	NoRel	true	continuó	vuelo
+Relation	T5	T7	NoRel	true	continuó	sintiendo
+Relation	T5	T9	NoRel	true	continuó	informó
+Relation	T6	T1	NoRel	true	vuelo	despegó
+Relation	T6	T10	NoRel	true	vuelo	dirigirse
+Relation	T6	T11	NoRel	true	vuelo	autorizó
+Relation	T6	T12	NoRel	true	vuelo	vuelo
+Relation	T6	T14	NoRel	true	vuelo	puso
+Relation	T6	T2	NoRel	true	vuelo	vuelo
+Relation	T6	T3	NoRel	true	vuelo	volaba
+Relation	T7	T11	NoRel	true	sintiendo	autorizó
+Relation	T7	T12	NoRel	true	sintiendo	vuelo
+Relation	T7	T13	NoRel	true	sintiendo	descender
+Relation	T7	T14	NoRel	true	sintiendo	puso
+Relation	T7	T4	NoRel	true	sintiendo	activó
+Relation	T7	T6	NoRel	true	sintiendo	vuelo
+Relation	T9	T12	NoRel	true	informó	vuelo
+Relation	T9	T13	NoRel	true	informó	descender
+Relation	T9	T14	NoRel	true	informó	puso

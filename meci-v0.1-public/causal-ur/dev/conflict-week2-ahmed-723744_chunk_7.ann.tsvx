@@ -1,0 +1,83 @@
+Text	" By the end of the month , ISIL massacred 5, 000 Yazidi men ، with killings running in the hundreds in different villages .	In addition , during this latest offensive , the Islamic State advanced to within 30 km of the Iraqi Kurdish capital of اربیل in northern Iraq .	Prompted by the siege and killings of the Yazidis , on 7 اگست ، President Obama authorized targeted airstrikes in Iraq against ISIL ، along with airdrops of aid .	The UK offered the US assistance with surveillance and refuelling , and planned humanitarian airdrops to Iraqi refugees .	The US asserted that the systematic destruction of the Yazidi people by the Islamic State was genocide .
+Event	T0	massacred	EVENT	33
+Event	T1	advanced	EVENT	188
+Event	T10	surveillance	EVENT	471
+Event	T11	refuelling	EVENT	488
+Event	T13	airdrops	EVENT	526
+Event	T14	asserted	EVENT	562
+Event	T16	genocide	EVENT	649
+Event	T2	airdrops	EVENT	415
+Event	T3	offensive	EVENT	158
+Event	T4	Prompted	EVENT	270
+Event	T5	siege	EVENT	286
+Event	T6	killings	EVENT	296
+Event	T7	airstrikes	EVENT	370
+Event	T9	assistance	EVENT	455
+Relation	T3	T4	CauseEffect	true	offensive	Prompted
+Relation	T4	T3	EffectCause	true	Prompted	offensive
+Relation	T16	T14	CauseEffect	true	genocide	asserted
+Relation	T14	T16	EffectCause	true	asserted	genocide
+Relation	T4	T7	CauseEffect	true	Prompted	airstrikes
+Relation	T7	T4	EffectCause	true	airstrikes	Prompted
+Relation	T4	T2	CauseEffect	true	Prompted	airdrops
+Relation	T2	T4	EffectCause	true	airdrops	Prompted
+Relation	T0	T2	NoRel	true	massacred	airdrops
+Relation	T0	T4	NoRel	true	massacred	Prompted
+Relation	T0	T7	NoRel	true	massacred	airstrikes
+Relation	T1	T16	NoRel	true	advanced	genocide
+Relation	T10	T11	NoRel	true	surveillance	refuelling
+Relation	T10	T14	NoRel	true	surveillance	asserted
+Relation	T10	T4	NoRel	true	surveillance	Prompted
+Relation	T10	T9	NoRel	true	surveillance	assistance
+Relation	T11	T1	NoRel	true	refuelling	advanced
+Relation	T11	T4	NoRel	true	refuelling	Prompted
+Relation	T11	T5	NoRel	true	refuelling	siege
+Relation	T13	T1	NoRel	true	airdrops	advanced
+Relation	T13	T11	NoRel	true	airdrops	refuelling
+Relation	T13	T16	NoRel	true	airdrops	genocide
+Relation	T13	T5	NoRel	true	airdrops	siege
+Relation	T13	T6	NoRel	true	airdrops	killings
+Relation	T13	T7	NoRel	true	airdrops	airstrikes
+Relation	T13	T9	NoRel	true	airdrops	assistance
+Relation	T14	T0	NoRel	true	asserted	massacred
+Relation	T14	T1	NoRel	true	asserted	advanced
+Relation	T14	T10	NoRel	true	asserted	surveillance
+Relation	T14	T11	NoRel	true	asserted	refuelling
+Relation	T14	T13	NoRel	true	asserted	airdrops
+Relation	T14	T3	NoRel	true	asserted	offensive
+Relation	T16	T1	NoRel	true	genocide	advanced
+Relation	T16	T11	NoRel	true	genocide	refuelling
+Relation	T16	T13	NoRel	true	genocide	airdrops
+Relation	T16	T2	NoRel	true	genocide	airdrops
+Relation	T16	T4	NoRel	true	genocide	Prompted
+Relation	T16	T6	NoRel	true	genocide	killings
+Relation	T2	T0	NoRel	true	airdrops	massacred
+Relation	T2	T14	NoRel	true	airdrops	asserted
+Relation	T2	T3	NoRel	true	airdrops	offensive
+Relation	T2	T6	NoRel	true	airdrops	killings
+Relation	T3	T0	NoRel	true	offensive	massacred
+Relation	T3	T10	NoRel	true	offensive	surveillance
+Relation	T3	T14	NoRel	true	offensive	asserted
+Relation	T3	T6	NoRel	true	offensive	killings
+Relation	T3	T9	NoRel	true	offensive	assistance
+Relation	T4	T0	NoRel	true	Prompted	massacred
+Relation	T4	T10	NoRel	true	Prompted	surveillance
+Relation	T4	T6	NoRel	true	Prompted	killings
+Relation	T4	T9	NoRel	true	Prompted	assistance
+Relation	T5	T10	NoRel	true	siege	surveillance
+Relation	T5	T14	NoRel	true	siege	asserted
+Relation	T6	T0	NoRel	true	killings	massacred
+Relation	T6	T1	NoRel	true	killings	advanced
+Relation	T6	T11	NoRel	true	killings	refuelling
+Relation	T6	T16	NoRel	true	killings	genocide
+Relation	T6	T5	NoRel	true	killings	siege
+Relation	T7	T0	NoRel	true	airstrikes	massacred
+Relation	T7	T1	NoRel	true	airstrikes	advanced
+Relation	T7	T10	NoRel	true	airstrikes	surveillance
+Relation	T7	T13	NoRel	true	airstrikes	airdrops
+Relation	T7	T2	NoRel	true	airstrikes	airdrops
+Relation	T9	T10	NoRel	true	assistance	surveillance
+Relation	T9	T14	NoRel	true	assistance	asserted
+Relation	T9	T2	NoRel	true	assistance	airdrops
+Relation	T9	T3	NoRel	true	assistance	offensive
+Relation	T9	T4	NoRel	true	assistance	Prompted

@@ -1,0 +1,81 @@
+Text	Bu zamana kadar sadece sınırlı sayıda Saddam yanlısı tarafından yürütüldüğü düşünülen direnişin daha yaygın ve örgütlü olduğu ortaya çıkmıştır .	Ayrıca ABD’nin işgal döneminde yerel birliklere ve milislere güvenemeyeceği kanıtlanmıştır .	Muharebe sırasında çok sayıda sivil hayatını kaybedecek ve ABD’nin Irak halkına karşı tutumu sorgulanmaya başlanacaktır .	ABD’nin burada kullandığı fosforlu mermiler ve napalm bombaları da uluslararası kamuoyu tarafından eleştirilmiştir .	BBC tarafından ortaya çıkarılan olayda topçu birliklerinin uluslararası yasayı çiğneyerek yasadışı silahlar kullandığı ispatlanmıştır .
+Event	T0	direnişin	EVENT	86
+Event	T1	çıkmıştır	EVENT	133
+Event	T2	işgal	EVENT	160
+Event	T3	kanıtlanmıştır	EVENT	221
+Event	T4	kaybedecek	EVENT	283
+Event	T5	kullandığı	EVENT	375
+Event	T6	eleştirilmiştir	EVENT	459
+Event	T8	ispatlanmıştır	EVENT	596
+Event	T9	Muharebe	EVENT	238
+Event	T10	başlanacaktır	EVENT	344
+Event	T7	çıkarılan	EVENT	499
+Event	T11	olayda	EVENT	509
+Event	T12	kullandığı	EVENT	585
+Event	T13	çiğneyerek	EVENT	556
+Relation	T9	T4	CauseEffect	true	Muharebe	kaybedecek
+Relation	T4	T9	EffectCause	true	kaybedecek	Muharebe
+Relation	T4	T10	CauseEffect	true	kaybedecek	başlanacaktır
+Relation	T10	T4	EffectCause	true	başlanacaktır	kaybedecek
+Relation	T0	T9	CauseEffect	true	direnişin	Muharebe
+Relation	T9	T0	EffectCause	true	Muharebe	direnişin
+Relation	T2	T9	CauseEffect	true	işgal	Muharebe
+Relation	T9	T2	EffectCause	true	Muharebe	işgal
+Relation	T5	T10	CauseEffect	true	kullandığı	başlanacaktır
+Relation	T10	T5	EffectCause	true	başlanacaktır	kullandığı
+Relation	T5	T6	CauseEffect	true	kullandığı	eleştirilmiştir
+Relation	T6	T5	EffectCause	true	eleştirilmiştir	kullandığı
+Relation	T7	T8	CauseEffect	true	çıkarılan	ispatlanmıştır
+Relation	T8	T7	EffectCause	true	ispatlanmıştır	çıkarılan
+Relation	T12	T13	CauseEffect	true	kullandığı	çiğneyerek
+Relation	T13	T12	EffectCause	true	çiğneyerek	kullandığı
+Relation	T0	T10	NoRel	true	direnişin	başlanacaktır
+Relation	T0	T2	NoRel	true	direnişin	işgal
+Relation	T0	T3	NoRel	true	direnişin	kanıtlanmıştır
+Relation	T0	T5	NoRel	true	direnişin	kullandığı
+Relation	T1	T0	NoRel	true	çıkmıştır	direnişin
+Relation	T1	T12	NoRel	true	çıkmıştır	kullandığı
+Relation	T1	T4	NoRel	true	çıkmıştır	kaybedecek
+Relation	T10	T0	NoRel	true	başlanacaktır	direnişin
+Relation	T10	T2	NoRel	true	başlanacaktır	işgal
+Relation	T10	T7	NoRel	true	başlanacaktır	çıkarılan
+Relation	T11	T10	NoRel	true	olayda	başlanacaktır
+Relation	T11	T12	NoRel	true	olayda	kullandığı
+Relation	T11	T13	NoRel	true	olayda	çiğneyerek
+Relation	T11	T2	NoRel	true	olayda	işgal
+Relation	T11	T3	NoRel	true	olayda	kanıtlanmıştır
+Relation	T11	T8	NoRel	true	olayda	ispatlanmıştır
+Relation	T12	T3	NoRel	true	kullandığı	kanıtlanmıştır
+Relation	T12	T6	NoRel	true	kullandığı	eleştirilmiştir
+Relation	T12	T7	NoRel	true	kullandığı	çıkarılan
+Relation	T12	T9	NoRel	true	kullandığı	Muharebe
+Relation	T13	T0	NoRel	true	çiğneyerek	direnişin
+Relation	T13	T4	NoRel	true	çiğneyerek	kaybedecek
+Relation	T13	T5	NoRel	true	çiğneyerek	kullandığı
+Relation	T13	T6	NoRel	true	çiğneyerek	eleştirilmiştir
+Relation	T13	T8	NoRel	true	çiğneyerek	ispatlanmıştır
+Relation	T2	T0	NoRel	true	işgal	direnişin
+Relation	T2	T12	NoRel	true	işgal	kullandığı
+Relation	T2	T6	NoRel	true	işgal	eleştirilmiştir
+Relation	T3	T7	NoRel	true	kanıtlanmıştır	çıkarılan
+Relation	T3	T9	NoRel	true	kanıtlanmıştır	Muharebe
+Relation	T4	T11	NoRel	true	kaybedecek	olayda
+Relation	T4	T3	NoRel	true	kaybedecek	kanıtlanmıştır
+Relation	T4	T7	NoRel	true	kaybedecek	çıkarılan
+Relation	T5	T1	NoRel	true	kullandığı	çıkmıştır
+Relation	T5	T11	NoRel	true	kullandığı	olayda
+Relation	T5	T12	NoRel	true	kullandığı	kullandığı
+Relation	T5	T8	NoRel	true	kullandığı	ispatlanmıştır
+Relation	T5	T9	NoRel	true	kullandığı	Muharebe
+Relation	T6	T7	NoRel	true	eleştirilmiştir	çıkarılan
+Relation	T7	T0	NoRel	true	çıkarılan	direnişin
+Relation	T7	T12	NoRel	true	çıkarılan	kullandığı
+Relation	T7	T4	NoRel	true	çıkarılan	kaybedecek
+Relation	T7	T5	NoRel	true	çıkarılan	kullandığı
+Relation	T7	T9	NoRel	true	çıkarılan	Muharebe
+Relation	T8	T11	NoRel	true	ispatlanmıştır	olayda
+Relation	T8	T4	NoRel	true	ispatlanmıştır	kaybedecek
+Relation	T8	T5	NoRel	true	ispatlanmıştır	kullandığı
+Relation	T8	T6	NoRel	true	ispatlanmıştır	eleştirilmiştir
+Relation	T9	T13	NoRel	true	Muharebe	çiğneyerek
+Relation	T9	T8	NoRel	true	Muharebe	ispatlanmıştır

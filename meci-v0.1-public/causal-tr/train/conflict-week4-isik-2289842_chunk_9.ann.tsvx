@@ -1,0 +1,93 @@
+Text	Yeğeni Martina ile evlenip Konstantinopolis Patriki tarafından taçlandırıldıktan sonra , 35 yaşındaki Herakleios imparator olarak çalışmalarını sürdürmeye başladı .	Phocas'ın kardeşi Comentiolus'un , Orta Anadolu'da büyük bir güç emri altındaydı ancak Ermeni komutanı Justinus tarafından öldürüldü ve Herakleios'un hükümdarlığı için büyük bir tehdit ortadan kaldırıldı .	Yine de , Comentiolus'un komuta ettiği güçlerin transferi geciktirildi ve bu Perslerin Anadolu'da ilerlemesine yol açtı .	Herakleios gelirleri arttırmaya ve maliyetleri düşürmeye çalışırken , Konstantinopolis'teki devlet destekli kilisenin personel sayısını , imparatorluk hazinesinden yeni personel almayarak sınırladı .	Hanedanlığını meşrulaştırmak için törenler gerçekleştirdi ve adalet için kazandığı itibar ile iktidarını güçlendirmiştir .
+Event	T0	evlenip	EVENT	19
+Event	T1	öldürüldü	EVENT	288
+Event	T2	kaldırıldı	EVENT	358
+Event	T3	geciktirildi	EVENT	429
+Event	T4	açtı	EVENT	486
+Event	T5	sınırladı	EVENT	681
+Event	T6	meşrulaştırmak	EVENT	707
+Event	T7	gerçekleştirdi	EVENT	736
+Event	T8	güçlendirmiştir	EVENT	798
+Event	T9	taçlandırıldıktan	EVENT	63
+Event	T10	başladı	EVENT	155
+Event	T11	ettiği	EVENT	403
+Event	T12	ilerlemesine	EVENT	469
+Event	T13	arttırmaya	EVENT	514
+Event	T14	düşürmeye	EVENT	540
+Event	T15	çalışırken	EVENT	550
+Relation	T9	T10	CauseEffect	true	taçlandırıldıktan	başladı
+Relation	T10	T9	EffectCause	true	başladı	taçlandırıldıktan
+Relation	T1	T2	CauseEffect	true	öldürüldü	kaldırıldı
+Relation	T2	T1	EffectCause	true	kaldırıldı	öldürüldü
+Relation	T3	T12	CauseEffect	true	geciktirildi	ilerlemesine
+Relation	T12	T3	EffectCause	true	ilerlemesine	geciktirildi
+Relation	T14	T5	CauseEffect	true	düşürmeye	sınırladı
+Relation	T5	T14	EffectCause	true	sınırladı	düşürmeye
+Relation	T0	T11	NoRel	true	evlenip	ettiği
+Relation	T0	T13	NoRel	true	evlenip	arttırmaya
+Relation	T0	T4	NoRel	true	evlenip	açtı
+Relation	T0	T7	NoRel	true	evlenip	gerçekleştirdi
+Relation	T1	T12	NoRel	true	öldürüldü	ilerlemesine
+Relation	T1	T14	NoRel	true	öldürüldü	düşürmeye
+Relation	T1	T4	NoRel	true	öldürüldü	açtı
+Relation	T1	T7	NoRel	true	öldürüldü	gerçekleştirdi
+Relation	T10	T0	NoRel	true	başladı	evlenip
+Relation	T10	T12	NoRel	true	başladı	ilerlemesine
+Relation	T10	T14	NoRel	true	başladı	düşürmeye
+Relation	T10	T15	NoRel	true	başladı	çalışırken
+Relation	T10	T5	NoRel	true	başladı	sınırladı
+Relation	T11	T12	NoRel	true	ettiği	ilerlemesine
+Relation	T11	T2	NoRel	true	ettiği	kaldırıldı
+Relation	T11	T5	NoRel	true	ettiği	sınırladı
+Relation	T11	T8	NoRel	true	ettiği	güçlendirmiştir
+Relation	T12	T1	NoRel	true	ilerlemesine	öldürüldü
+Relation	T12	T10	NoRel	true	ilerlemesine	başladı
+Relation	T12	T11	NoRel	true	ilerlemesine	ettiği
+Relation	T12	T4	NoRel	true	ilerlemesine	açtı
+Relation	T12	T9	NoRel	true	ilerlemesine	taçlandırıldıktan
+Relation	T13	T1	NoRel	true	arttırmaya	öldürüldü
+Relation	T13	T15	NoRel	true	arttırmaya	çalışırken
+Relation	T13	T3	NoRel	true	arttırmaya	geciktirildi
+Relation	T13	T7	NoRel	true	arttırmaya	gerçekleştirdi
+Relation	T14	T10	NoRel	true	düşürmeye	başladı
+Relation	T14	T8	NoRel	true	düşürmeye	güçlendirmiştir
+Relation	T15	T11	NoRel	true	çalışırken	ettiği
+Relation	T15	T12	NoRel	true	çalışırken	ilerlemesine
+Relation	T15	T2	NoRel	true	çalışırken	kaldırıldı
+Relation	T15	T4	NoRel	true	çalışırken	açtı
+Relation	T15	T9	NoRel	true	çalışırken	taçlandırıldıktan
+Relation	T2	T0	NoRel	true	kaldırıldı	evlenip
+Relation	T2	T13	NoRel	true	kaldırıldı	arttırmaya
+Relation	T2	T14	NoRel	true	kaldırıldı	düşürmeye
+Relation	T2	T4	NoRel	true	kaldırıldı	açtı
+Relation	T3	T0	NoRel	true	geciktirildi	evlenip
+Relation	T3	T10	NoRel	true	geciktirildi	başladı
+Relation	T3	T14	NoRel	true	geciktirildi	düşürmeye
+Relation	T3	T15	NoRel	true	geciktirildi	çalışırken
+Relation	T3	T8	NoRel	true	geciktirildi	güçlendirmiştir
+Relation	T4	T15	NoRel	true	açtı	çalışırken
+Relation	T4	T2	NoRel	true	açtı	kaldırıldı
+Relation	T4	T3	NoRel	true	açtı	geciktirildi
+Relation	T4	T8	NoRel	true	açtı	güçlendirmiştir
+Relation	T5	T12	NoRel	true	sınırladı	ilerlemesine
+Relation	T5	T6	NoRel	true	sınırladı	meşrulaştırmak
+Relation	T6	T1	NoRel	true	meşrulaştırmak	öldürüldü
+Relation	T6	T13	NoRel	true	meşrulaştırmak	arttırmaya
+Relation	T6	T14	NoRel	true	meşrulaştırmak	düşürmeye
+Relation	T6	T3	NoRel	true	meşrulaştırmak	geciktirildi
+Relation	T6	T4	NoRel	true	meşrulaştırmak	açtı
+Relation	T7	T0	NoRel	true	gerçekleştirdi	evlenip
+Relation	T7	T10	NoRel	true	gerçekleştirdi	başladı
+Relation	T7	T4	NoRel	true	gerçekleştirdi	açtı
+Relation	T7	T5	NoRel	true	gerçekleştirdi	sınırladı
+Relation	T7	T8	NoRel	true	gerçekleştirdi	güçlendirmiştir
+Relation	T8	T11	NoRel	true	güçlendirmiştir	ettiği
+Relation	T8	T12	NoRel	true	güçlendirmiştir	ilerlemesine
+Relation	T8	T15	NoRel	true	güçlendirmiştir	çalışırken
+Relation	T8	T2	NoRel	true	güçlendirmiştir	kaldırıldı
+Relation	T8	T7	NoRel	true	güçlendirmiştir	gerçekleştirdi
+Relation	T9	T0	NoRel	true	taçlandırıldıktan	evlenip
+Relation	T9	T13	NoRel	true	taçlandırıldıktan	arttırmaya
+Relation	T9	T2	NoRel	true	taçlandırıldıktan	kaldırıldı
+Relation	T9	T4	NoRel	true	taçlandırıldıktan	açtı
+Relation	T9	T7	NoRel	true	taçlandırıldıktan	gerçekleştirdi

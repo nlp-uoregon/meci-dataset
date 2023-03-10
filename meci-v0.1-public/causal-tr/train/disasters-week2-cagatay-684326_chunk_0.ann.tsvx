@@ -1,0 +1,32 @@
+Text	2008 ÇEÇENISTAN DEPREMI , 11 Ekim 2008 tarihinde UTC saat dilimine göre , 09.06'da meydana gelmiş olup , büyüklüğü 5.8 M _ ( w ) olarak ölçülmüştür .	40 saniye süren deprem Çeçenistan ve Rusya'yı etkilemiştir .	Deprem Gürcistan ve Ermenistan'dan da hissedilmiştir .	Deprem meydana geldikten 16 dakika sonra 5.3'lük bir artçı - sarsıntı meydana gelmiştir .	Çeçenistan Cumhurbaşkanı pek çok bölgeden zarar bilgileri aldıklarını ve en kısa zamanda gerekli yardımın ihtiyaç duyulan bölgelere gönderileceğini bildirmiştir .
+Event	T1	ölçülmüştür	EVENT	136
+Event	T11	Deprem	EVENT	266
+Event	T2	deprem	EVENT	166
+Event	T3	etkilemiştir	EVENT	196
+Event	T4	Deprem	EVENT	211
+Event	T5	hissedilmiştir	EVENT	249
+Event	T7	aldıklarını	EVENT	414
+Event	T9	bildirmiştir	EVENT	504
+Relation	T11	T5	CauseEffect	true	Deprem	hissedilmiştir
+Relation	T5	T11	EffectCause	true	hissedilmiştir	Deprem
+Relation	T4	T5	CauseEffect	true	Deprem	hissedilmiştir
+Relation	T5	T4	EffectCause	true	hissedilmiştir	Deprem
+Relation	T2	T5	CauseEffect	true	deprem	hissedilmiştir
+Relation	T5	T2	EffectCause	true	hissedilmiştir	deprem
+Relation	T2	T1	CauseEffect	true	deprem	ölçülmüştür
+Relation	T1	T2	EffectCause	true	ölçülmüştür	deprem
+Relation	T7	T9	CauseEffect	true	aldıklarını	bildirmiştir
+Relation	T9	T7	EffectCause	true	bildirmiştir	aldıklarını
+Relation	T1	T11	NoRel	true	ölçülmüştür	Deprem
+Relation	T1	T7	NoRel	true	ölçülmüştür	aldıklarını
+Relation	T1	T9	NoRel	true	ölçülmüştür	bildirmiştir
+Relation	T2	T9	NoRel	true	deprem	bildirmiştir
+Relation	T3	T11	NoRel	true	etkilemiştir	Deprem
+Relation	T3	T2	NoRel	true	etkilemiştir	deprem
+Relation	T3	T5	NoRel	true	etkilemiştir	hissedilmiştir
+Relation	T4	T2	NoRel	true	Deprem	deprem
+Relation	T4	T3	NoRel	true	Deprem	etkilemiştir
+Relation	T5	T1	NoRel	true	hissedilmiştir	ölçülmüştür
+Relation	T7	T11	NoRel	true	aldıklarını	Deprem
+Relation	T9	T11	NoRel	true	bildirmiştir	Deprem
+Relation	T9	T3	NoRel	true	bildirmiştir	etkilemiştir

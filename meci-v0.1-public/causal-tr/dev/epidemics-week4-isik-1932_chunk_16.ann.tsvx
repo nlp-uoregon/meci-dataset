@@ -1,0 +1,29 @@
+Text	Üç ayı gecen serokonversiyon olayları çok çok nadirdir .	” - AIDS servislerinde ve laboratuvarlarında çalışan doktor ve virologlarin ( Dr. Sindy Paul , Evan M Cadoff , Eugene Martin ) yazdığı , " Rapid Diagnostic Testing for HIV – Clinical Implications " ( Business Briefing : Clinical Virology & Infectious Disease , 2004 ) adli makalede , pencere dönemi 30- 60 gün olarak veriliyor .	- San Fransisko AIDS Derneği , şöyle demektedir : " Üç aylık pencere dönemi , insanların tümü için normal süredir .	Bu insanların çoğu , üç ile dört hafta içinde saptanabilir düzeyde antikor üretir .	çok , çok nadir durumlarda , bir insanin antikor üretmesi altı ayı bulabilir .
+Event	T1	Testing	EVENT	213
+Event	T2	Briefing	EVENT	266
+Event	T3	veriliyor	EVENT	374
+Event	T4	üretir	EVENT	577
+Event	T6	serokonversiyon	EVENT	13
+Event	T8	makalede	EVENT	330
+Event	T5	bulabilir	EVENT	653
+Event	T7	durumlarda	EVENT	602
+Relation	T7	T5	CauseEffect	true	durumlarda	bulabilir
+Relation	T5	T7	EffectCause	true	bulabilir	durumlarda
+Relation	T1	T3	NoRel	true	Testing	veriliyor
+Relation	T1	T4	NoRel	true	Testing	üretir
+Relation	T1	T6	NoRel	true	Testing	serokonversiyon
+Relation	T2	T8	NoRel	true	Briefing	makalede
+Relation	T3	T1	NoRel	true	veriliyor	Testing
+Relation	T3	T4	NoRel	true	veriliyor	üretir
+Relation	T3	T7	NoRel	true	veriliyor	durumlarda
+Relation	T4	T1	NoRel	true	üretir	Testing
+Relation	T4	T3	NoRel	true	üretir	veriliyor
+Relation	T4	T6	NoRel	true	üretir	serokonversiyon
+Relation	T4	T8	NoRel	true	üretir	makalede
+Relation	T5	T1	NoRel	true	bulabilir	Testing
+Relation	T5	T8	NoRel	true	bulabilir	makalede
+Relation	T6	T2	NoRel	true	serokonversiyon	Briefing
+Relation	T6	T7	NoRel	true	serokonversiyon	durumlarda
+Relation	T7	T1	NoRel	true	durumlarda	Testing
+Relation	T7	T6	NoRel	true	durumlarda	serokonversiyon
+Relation	T8	T6	NoRel	true	makalede	serokonversiyon

@@ -1,0 +1,93 @@
+Text	" Hıyarcıklı veba " ( bubonik veba ) veba hastalığının en yaygın biçimidir .	Hastalığa _ Yersinia pestis _ adı verilen enterobakteri neden olur .	Bakteri vücuda girdikten sonra 3 ila 8 gün içinde etkisini gösterir .	Belirtileri , yüksek ateş , üşüme duygusu , başağrısı , ishal ve bubo adı verilen , lenf bezi şişmeleridir .	Deri altında ve iç organlarda kanama başladığı zaman da , akan kanın birikmesi sonucu ciltte siyah lekeler oluşur .
+Event	T0	girdikten	EVENT	161
+Event	T1	gösterir	EVENT	205
+Event	T2	üşüme	EVENT	244
+Event	T3	ishal	EVENT	272
+Event	T4	şişmeleridir	EVENT	310
+Event	T6	birikmesi	EVENT	394
+Event	T7	oluşur	EVENT	432
+Event	T8	veba	EVENT	13
+Event	T9	veba	EVENT	30
+Event	T10	ateş	EVENT	237
+Event	T11	başağrısı	EVENT	260
+Event	T5	kanama	EVENT	355
+Event	T12	enterobakteri	EVENT	119
+Event	T13	Hastalığa	EVENT	77
+Relation	T0	T1	CauseEffect	true	girdikten	gösterir
+Relation	T1	T0	EffectCause	true	gösterir	girdikten
+Relation	T1	T10	CauseEffect	true	gösterir	ateş
+Relation	T10	T1	EffectCause	true	ateş	gösterir
+Relation	T1	T2	CauseEffect	true	gösterir	üşüme
+Relation	T2	T1	EffectCause	true	üşüme	gösterir
+Relation	T1	T11	CauseEffect	true	gösterir	başağrısı
+Relation	T11	T1	EffectCause	true	başağrısı	gösterir
+Relation	T1	T3	CauseEffect	true	gösterir	ishal
+Relation	T3	T1	EffectCause	true	ishal	gösterir
+Relation	T1	T4	CauseEffect	true	gösterir	şişmeleridir
+Relation	T4	T1	EffectCause	true	şişmeleridir	gösterir
+Relation	T5	T6	CauseEffect	true	kanama	birikmesi
+Relation	T6	T5	EffectCause	true	birikmesi	kanama
+Relation	T6	T7	CauseEffect	true	birikmesi	oluşur
+Relation	T7	T6	EffectCause	true	oluşur	birikmesi
+Relation	T1	T7	CauseEffect	true	gösterir	oluşur
+Relation	T7	T1	EffectCause	true	oluşur	gösterir
+Relation	T12	T9	CauseEffect	true	enterobakteri	veba
+Relation	T9	T12	EffectCause	true	veba	enterobakteri
+Relation	T12	T8	CauseEffect	true	enterobakteri	veba
+Relation	T8	T12	EffectCause	true	veba	enterobakteri
+Relation	T12	T13	CauseEffect	true	enterobakteri	Hastalığa
+Relation	T13	T12	EffectCause	true	Hastalığa	enterobakteri
+Relation	T12	T0	CauseEffect	true	enterobakteri	girdikten
+Relation	T0	T12	EffectCause	true	girdikten	enterobakteri
+Relation	T0	T11	NoRel	true	girdikten	başağrısı
+Relation	T0	T13	NoRel	true	girdikten	Hastalığa
+Relation	T0	T5	NoRel	true	girdikten	kanama
+Relation	T0	T8	NoRel	true	girdikten	veba
+Relation	T10	T6	NoRel	true	ateş	birikmesi
+Relation	T10	T9	NoRel	true	ateş	veba
+Relation	T11	T6	NoRel	true	başağrısı	birikmesi
+Relation	T11	T7	NoRel	true	başağrısı	oluşur
+Relation	T12	T10	NoRel	true	enterobakteri	ateş
+Relation	T12	T11	NoRel	true	enterobakteri	başağrısı
+Relation	T12	T4	NoRel	true	enterobakteri	şişmeleridir
+Relation	T13	T11	NoRel	true	Hastalığa	başağrısı
+Relation	T13	T2	NoRel	true	Hastalığa	üşüme
+Relation	T13	T4	NoRel	true	Hastalığa	şişmeleridir
+Relation	T2	T10	NoRel	true	üşüme	ateş
+Relation	T2	T12	NoRel	true	üşüme	enterobakteri
+Relation	T2	T13	NoRel	true	üşüme	Hastalığa
+Relation	T2	T6	NoRel	true	üşüme	birikmesi
+Relation	T2	T8	NoRel	true	üşüme	veba
+Relation	T3	T0	NoRel	true	ishal	girdikten
+Relation	T3	T13	NoRel	true	ishal	Hastalığa
+Relation	T3	T8	NoRel	true	ishal	veba
+Relation	T4	T10	NoRel	true	şişmeleridir	ateş
+Relation	T4	T7	NoRel	true	şişmeleridir	oluşur
+Relation	T5	T0	NoRel	true	kanama	girdikten
+Relation	T5	T4	NoRel	true	kanama	şişmeleridir
+Relation	T5	T7	NoRel	true	kanama	oluşur
+Relation	T5	T8	NoRel	true	kanama	veba
+Relation	T6	T0	NoRel	true	birikmesi	girdikten
+Relation	T6	T1	NoRel	true	birikmesi	gösterir
+Relation	T6	T11	NoRel	true	birikmesi	başağrısı
+Relation	T6	T2	NoRel	true	birikmesi	üşüme
+Relation	T6	T3	NoRel	true	birikmesi	ishal
+Relation	T6	T8	NoRel	true	birikmesi	veba
+Relation	T6	T9	NoRel	true	birikmesi	veba
+Relation	T7	T10	NoRel	true	oluşur	ateş
+Relation	T7	T12	NoRel	true	oluşur	enterobakteri
+Relation	T7	T2	NoRel	true	oluşur	üşüme
+Relation	T7	T4	NoRel	true	oluşur	şişmeleridir
+Relation	T7	T8	NoRel	true	oluşur	veba
+Relation	T8	T0	NoRel	true	veba	girdikten
+Relation	T8	T1	NoRel	true	veba	gösterir
+Relation	T8	T2	NoRel	true	veba	üşüme
+Relation	T8	T3	NoRel	true	veba	ishal
+Relation	T8	T7	NoRel	true	veba	oluşur
+Relation	T8	T9	NoRel	true	veba	veba
+Relation	T9	T10	NoRel	true	veba	ateş
+Relation	T9	T11	NoRel	true	veba	başağrısı
+Relation	T9	T2	NoRel	true	veba	üşüme
+Relation	T9	T4	NoRel	true	veba	şişmeleridir
+Relation	T9	T5	NoRel	true	veba	kanama
+Relation	T9	T6	NoRel	true	veba	birikmesi

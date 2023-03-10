@@ -1,0 +1,36 @@
+Text	On 9 August , Beauchamp - Proctor was leading No. 84 Squadron on a patrol over their base at Bertangles , with Boudwin and six - foot - four tall , fellow South African Hugh Saunders as wingmen .	The threesome got involved in a heated engagement at 2:00 pm , that involved them in combat against Fokker D. VII fighters of JG I , led that day by the future Nazi _ Reichsmarschall _ Hermann Göring .	Unsuccessful at increasing his total that day , Beauchamp - Proctor would claim an additional 14 aircraft , and end the month with his claims list extended to 43 .	One memorable day was 22 August ; he attacked a line of six enemy balloon over the British 3rd Corps front .	He set the first one afire with his machine guns and forced the other five to the ground , the observers taking to their parachutes .
+Event	T0	leading	EVENT	38
+Event	T1	patrol	EVENT	67
+Event	T2	involved	EVENT	214
+Event	T3	engagement	EVENT	235
+Event	T4	involved	EVENT	264
+Event	T5	combat	EVENT	281
+Event	T6	led	EVENT	329
+Event	T7	Unsuccessful	EVENT	398
+Event	T8	increasing	EVENT	414
+Event	T10	claim	EVENT	472
+Event	T11	end	EVENT	510
+Event	T12	attacked	EVENT	599
+Event	T13	set	EVENT	674
+Event	T14	forced	EVENT	724
+Relation	T0	T1	CauseEffect	true	leading	patrol
+Relation	T1	T0	EffectCause	true	patrol	leading
+Relation	T0	T13	NoRel	true	leading	set
+Relation	T10	T4	NoRel	true	claim	involved
+Relation	T10	T5	NoRel	true	claim	combat
+Relation	T10	T6	NoRel	true	claim	led
+Relation	T11	T5	NoRel	true	end	combat
+Relation	T11	T8	NoRel	true	end	increasing
+Relation	T12	T14	NoRel	true	attacked	forced
+Relation	T13	T2	NoRel	true	set	involved
+Relation	T13	T5	NoRel	true	set	combat
+Relation	T2	T3	NoRel	true	involved	engagement
+Relation	T2	T4	NoRel	true	involved	involved
+Relation	T3	T13	NoRel	true	engagement	set
+Relation	T4	T10	NoRel	true	involved	claim
+Relation	T4	T12	NoRel	true	involved	attacked
+Relation	T5	T0	NoRel	true	combat	leading
+Relation	T5	T11	NoRel	true	combat	end
+Relation	T5	T12	NoRel	true	combat	attacked
+Relation	T7	T6	NoRel	true	Unsuccessful	led
+Relation	T8	T3	NoRel	true	increasing	engagement

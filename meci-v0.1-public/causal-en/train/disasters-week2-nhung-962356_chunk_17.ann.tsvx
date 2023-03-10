@@ -1,0 +1,87 @@
+Text	On March 8 , 1949 , the US Armed Forces sent an investigation team headed by Colonel James A. Casteel to Jeju to investigate the causes of the rebellion .	They summarized that the February 1948 Jeju general strike prior to the rebellion was caused by instigation by the South Korean Labor Party and hostility towards the police as a result of shootings .	They also described the strike as " communist inspired " but participated by both the left and right in response to the March 1 shootings .	By the spring of 1949 four South Korean Army battalions arrived and joined the local constabulary , police forces , and right - wing Northwest Youth Association partisans to brutally suppress protests .	The combined forces quickly destroyed or disabled most of the remaining rebel forces .
+Event	T0	sent	EVENT	40
+Event	T1	investigation	EVENT	48
+Event	T10	hostility	EVENT	299
+Event	T11	shootings	EVENT	343
+Event	T12	described	EVENT	365
+Event	T13	strike	EVENT	379
+Event	T14	inspired	EVENT	401
+Event	T15	participated	EVENT	416
+Event	T16	shootings	EVENT	483
+Event	T17	arrived	EVENT	551
+Event	T18	joined	EVENT	563
+Event	T19	protests	EVENT	687
+Event	T2	headed	EVENT	67
+Event	T20	destroyed	EVENT	726
+Event	T21	disabled	EVENT	739
+Event	T22	suppress	EVENT	678
+Event	T3	investigate	EVENT	113
+Event	T4	rebellion	EVENT	143
+Event	T5	summarized	EVENT	160
+Event	T6	strike	EVENT	207
+Event	T7	rebellion	EVENT	227
+Event	T8	caused	EVENT	241
+Event	T9	instigation	EVENT	251
+Relation	T4	T3	CauseEffect	true	rebellion	investigate
+Relation	T3	T4	EffectCause	true	investigate	rebellion
+Relation	T9	T6	CauseEffect	true	instigation	strike
+Relation	T6	T9	EffectCause	true	strike	instigation
+Relation	T10	T6	CauseEffect	true	hostility	strike
+Relation	T6	T10	EffectCause	true	strike	hostility
+Relation	T10	T11	CauseEffect	true	hostility	shootings
+Relation	T11	T10	EffectCause	true	shootings	hostility
+Relation	T14	T13	CauseEffect	true	inspired	strike
+Relation	T13	T14	EffectCause	true	strike	inspired
+Relation	T22	T20	CauseEffect	true	suppress	destroyed
+Relation	T20	T22	EffectCause	true	destroyed	suppress
+Relation	T22	T21	CauseEffect	true	suppress	disabled
+Relation	T21	T22	EffectCause	true	disabled	suppress
+Relation	T0	T12	NoRel	true	sent	described
+Relation	T0	T9	NoRel	true	sent	instigation
+Relation	T1	T12	NoRel	true	investigation	described
+Relation	T10	T3	NoRel	true	hostility	investigate
+Relation	T11	T14	NoRel	true	shootings	inspired
+Relation	T11	T18	NoRel	true	shootings	joined
+Relation	T11	T6	NoRel	true	shootings	strike
+Relation	T12	T2	NoRel	true	described	headed
+Relation	T12	T22	NoRel	true	described	suppress
+Relation	T13	T12	NoRel	true	strike	described
+Relation	T13	T15	NoRel	true	strike	participated
+Relation	T13	T3	NoRel	true	strike	investigate
+Relation	T14	T20	NoRel	true	inspired	destroyed
+Relation	T14	T5	NoRel	true	inspired	summarized
+Relation	T14	T6	NoRel	true	inspired	strike
+Relation	T14	T7	NoRel	true	inspired	rebellion
+Relation	T14	T9	NoRel	true	inspired	instigation
+Relation	T15	T4	NoRel	true	participated	rebellion
+Relation	T15	T6	NoRel	true	participated	strike
+Relation	T16	T19	NoRel	true	shootings	protests
+Relation	T18	T2	NoRel	true	joined	headed
+Relation	T19	T1	NoRel	true	protests	investigation
+Relation	T19	T12	NoRel	true	protests	described
+Relation	T19	T16	NoRel	true	protests	shootings
+Relation	T2	T15	NoRel	true	headed	participated
+Relation	T2	T16	NoRel	true	headed	shootings
+Relation	T2	T19	NoRel	true	headed	protests
+Relation	T2	T8	NoRel	true	headed	caused
+Relation	T21	T16	NoRel	true	disabled	shootings
+Relation	T22	T14	NoRel	true	suppress	inspired
+Relation	T22	T19	NoRel	true	suppress	protests
+Relation	T22	T2	NoRel	true	suppress	headed
+Relation	T4	T7	NoRel	true	rebellion	rebellion
+Relation	T5	T20	NoRel	true	summarized	destroyed
+Relation	T5	T21	NoRel	true	summarized	disabled
+Relation	T5	T9	NoRel	true	summarized	instigation
+Relation	T6	T0	NoRel	true	strike	sent
+Relation	T6	T11	NoRel	true	strike	shootings
+Relation	T6	T12	NoRel	true	strike	described
+Relation	T6	T22	NoRel	true	strike	suppress
+Relation	T8	T19	NoRel	true	caused	protests
+Relation	T8	T22	NoRel	true	caused	suppress
+Relation	T8	T4	NoRel	true	caused	rebellion
+Relation	T9	T10	NoRel	true	instigation	hostility
+Relation	T9	T11	NoRel	true	instigation	shootings
+Relation	T9	T15	NoRel	true	instigation	participated
+Relation	T9	T18	NoRel	true	instigation	joined
+Relation	T9	T2	NoRel	true	instigation	headed
+Relation	T9	T8	NoRel	true	instigation	caused

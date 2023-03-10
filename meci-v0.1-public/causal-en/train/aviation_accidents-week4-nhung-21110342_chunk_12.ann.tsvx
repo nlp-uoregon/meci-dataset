@@ -1,0 +1,54 @@
+Text	Seventy - eight people received medical treatment , mostly for minor injuries and hypothermia ; twenty - four passengers and two rescuers were treated at hospitals , with two passengers kept overnight .	One passenger now wears glasses because of eye damage from jet fuel .	No pets were being carried on the flight .	Each passenger later received a letter of apology , $ 5,000 in compensation for lost baggage ( and $ 5,000 more if they could demonstrate larger losses ) , and refund of their ticket price .	-___- In May 2009 , they received any belongings that had been recovered .
+Event	T0	treatment	EVENT	40
+Event	T1	injuries	EVENT	69
+Event	T2	treated	EVENT	143
+Event	T3	kept	EVENT	186
+Event	T4	wears	EVENT	221
+Event	T5	damage	EVENT	250
+Event	T6	flight	EVENT	307
+Event	T7	received	EVENT	337
+Event	T8	compensation	EVENT	379
+Event	T9	lost	EVENT	396
+Event	T10	demonstrate	EVENT	442
+Event	T11	losses	EVENT	461
+Event	T12	refund	EVENT	476
+Event	T13	received	EVENT	532
+Event	T14	recovered	EVENT	570
+Event	T15	apology	EVENT	358
+Relation	T1	T0	CauseEffect	true	injuries	treatment
+Relation	T0	T1	EffectCause	true	treatment	injuries
+Relation	T1	T2	CauseEffect	true	injuries	treated
+Relation	T2	T1	EffectCause	true	treated	injuries
+Relation	T1	T3	CauseEffect	true	injuries	kept
+Relation	T3	T1	EffectCause	true	kept	injuries
+Relation	T5	T4	CauseEffect	true	damage	wears
+Relation	T4	T5	EffectCause	true	wears	damage
+Relation	T14	T13	CauseEffect	true	recovered	received
+Relation	T13	T14	EffectCause	true	received	recovered
+Relation	T9	T8	CauseEffect	true	lost	compensation
+Relation	T8	T9	EffectCause	true	compensation	lost
+Relation	T9	T15	CauseEffect	true	lost	apology
+Relation	T15	T9	EffectCause	true	apology	lost
+Relation	T1	T8	NoRel	true	injuries	compensation
+Relation	T10	T6	NoRel	true	demonstrate	flight
+Relation	T11	T0	NoRel	true	losses	treatment
+Relation	T11	T4	NoRel	true	losses	wears
+Relation	T11	T9	NoRel	true	losses	lost
+Relation	T12	T6	NoRel	true	refund	flight
+Relation	T13	T7	NoRel	true	received	received
+Relation	T14	T1	NoRel	true	recovered	injuries
+Relation	T14	T15	NoRel	true	recovered	apology
+Relation	T15	T14	NoRel	true	apology	recovered
+Relation	T15	T2	NoRel	true	apology	treated
+Relation	T15	T6	NoRel	true	apology	flight
+Relation	T3	T2	NoRel	true	kept	treated
+Relation	T3	T9	NoRel	true	kept	lost
+Relation	T4	T0	NoRel	true	wears	treatment
+Relation	T4	T7	NoRel	true	wears	received
+Relation	T5	T10	NoRel	true	damage	demonstrate
+Relation	T5	T14	NoRel	true	damage	recovered
+Relation	T6	T11	NoRel	true	flight	losses
+Relation	T6	T12	NoRel	true	flight	refund
+Relation	T6	T13	NoRel	true	flight	received
+Relation	T7	T1	NoRel	true	received	injuries
+Relation	T9	T3	NoRel	true	lost	kept

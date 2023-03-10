@@ -1,0 +1,58 @@
+Text	1936'da inşa edilmiş köprünün onarımı 2011'de başladı .	Ilinden Bulvarı'nı Goce Delčev Bulvarı'na bağlayan Goce Delčev Köprüsü'nün onarımım 11 Nisan 2011'de başladı ve aynı yıl içinde tamamlandı .	Onarım sırasında altın renkli çitler ve 26 sokak lambası eklendi .	Proje 500bin avroya maloldu Köprünün her iki başına 2010'da dört aslan heykeli yerleştirilmişti .	Batı tarafındakiler Floransa'da dökülmüş ve 1,5milyon avorya malolmuştur .
+Event	T0	inşa	EVENT	8
+Event	T1	onarımı	EVENT	30
+Event	T2	başladı	EVENT	46
+Event	T3	onarımım	EVENT	131
+Event	T4	başladı	EVENT	157
+Event	T5	tamamlandı	EVENT	184
+Event	T6	Onarım	EVENT	197
+Event	T7	eklendi	EVENT	254
+Event	T8	yerleştirilmişti	EVENT	343
+Event	T9	dökülmüş	EVENT	394
+Event	T10	maloldu	EVENT	284
+Event	T11	malolmuştur	EVENT	423
+Relation	T6	T10	CauseEffect	true	Onarım	maloldu
+Relation	T10	T6	EffectCause	true	maloldu	Onarım
+Relation	T0	T4	NoRel	true	inşa	başladı
+Relation	T0	T5	NoRel	true	inşa	tamamlandı
+Relation	T0	T8	NoRel	true	inşa	yerleştirilmişti
+Relation	T1	T2	NoRel	true	onarımı	başladı
+Relation	T1	T5	NoRel	true	onarımı	tamamlandı
+Relation	T1	T6	NoRel	true	onarımı	Onarım
+Relation	T10	T0	NoRel	true	maloldu	inşa
+Relation	T10	T1	NoRel	true	maloldu	onarımı
+Relation	T10	T2	NoRel	true	maloldu	başladı
+Relation	T10	T3	NoRel	true	maloldu	onarımım
+Relation	T10	T4	NoRel	true	maloldu	başladı
+Relation	T10	T9	NoRel	true	maloldu	dökülmüş
+Relation	T11	T2	NoRel	true	malolmuştur	başladı
+Relation	T2	T10	NoRel	true	başladı	maloldu
+Relation	T2	T3	NoRel	true	başladı	onarımım
+Relation	T2	T4	NoRel	true	başladı	başladı
+Relation	T2	T7	NoRel	true	başladı	eklendi
+Relation	T2	T8	NoRel	true	başladı	yerleştirilmişti
+Relation	T3	T2	NoRel	true	onarımım	başladı
+Relation	T3	T5	NoRel	true	onarımım	tamamlandı
+Relation	T3	T9	NoRel	true	onarımım	dökülmüş
+Relation	T4	T1	NoRel	true	başladı	onarımı
+Relation	T4	T11	NoRel	true	başladı	malolmuştur
+Relation	T4	T3	NoRel	true	başladı	onarımım
+Relation	T4	T9	NoRel	true	başladı	dökülmüş
+Relation	T5	T3	NoRel	true	tamamlandı	onarımım
+Relation	T5	T4	NoRel	true	tamamlandı	başladı
+Relation	T5	T6	NoRel	true	tamamlandı	Onarım
+Relation	T6	T1	NoRel	true	Onarım	onarımı
+Relation	T6	T2	NoRel	true	Onarım	başladı
+Relation	T6	T3	NoRel	true	Onarım	onarımım
+Relation	T6	T9	NoRel	true	Onarım	dökülmüş
+Relation	T7	T10	NoRel	true	eklendi	maloldu
+Relation	T7	T11	NoRel	true	eklendi	malolmuştur
+Relation	T7	T3	NoRel	true	eklendi	onarımım
+Relation	T7	T8	NoRel	true	eklendi	yerleştirilmişti
+Relation	T8	T0	NoRel	true	yerleştirilmişti	inşa
+Relation	T8	T11	NoRel	true	yerleştirilmişti	malolmuştur
+Relation	T8	T3	NoRel	true	yerleştirilmişti	onarımım
+Relation	T8	T5	NoRel	true	yerleştirilmişti	tamamlandı
+Relation	T8	T7	NoRel	true	yerleştirilmişti	eklendi
+Relation	T9	T11	NoRel	true	dökülmüş	malolmuştur
+Relation	T9	T5	NoRel	true	dökülmüş	tamamlandı

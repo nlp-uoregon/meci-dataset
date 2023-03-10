@@ -1,0 +1,22 @@
+Text	İngilizce : PÉCROT RAIL_CRASH , PÉCROT DEMIRYOLU ÇARPIŞMASI bir demiryolu kazası olup , 27 Mart 2001 tarihinde Belçika , Pécrot köyünde iki yolcu trenin kafa kafaya çarpışması ile meydan gelmiştir .	- 08: 41 — Wavre tren istasyonu , bir sinyal memuru bir boş yolcu treninin kırmızı işaret sinyaline rağmen 4_ncü hattan Leuven’e doğru hareket ettiğinin farkına vardı .	- 08: 42 — Wavre sinyalcisi , Leuven sinyalcisine tren hakkında bilgi vermek için temas kurdu .	Mamafih , Leuven sinyalcisi Felemenkçe konuşurken ; Wavre sinyalcisi Fransızca konuşuyordu , bu nedenle daha sonra mesajı tam kapsamlı anlamadı .	- 08: 43 — Wavre sinyalcisi , yanlışlıkla hareket etmiş olan tren hattının üzerindeki havai hat elektriğini kesmeye çalıştı .
+Event	T1	kazası	EVENT	74
+Event	T10	konuşurken	EVENT	503
+Event	T11	konuşuyordu	EVENT	543
+Event	T2	çarpışması	EVENT	165
+Event	T6	kurdu	EVENT	456
+Event	T7	çalıştı	EVENT	726
+Event	T8	PÉCROT DEMIRYOLU ÇARPIŞMASI	EVENT	32
+Relation	T6	T10	CauseEffect	true	kurdu	konuşurken
+Relation	T10	T6	EffectCause	true	konuşurken	kurdu
+Relation	T6	T11	CauseEffect	true	kurdu	konuşuyordu
+Relation	T11	T6	EffectCause	true	konuşuyordu	kurdu
+Relation	T10	T7	CauseEffect	true	konuşurken	çalıştı
+Relation	T7	T10	EffectCause	true	çalıştı	konuşurken
+Relation	T10	T11	NoRel	true	konuşurken	konuşuyordu
+Relation	T11	T7	NoRel	true	konuşuyordu	çalıştı
+Relation	T2	T8	NoRel	true	çarpışması	PÉCROT DEMIRYOLU ÇARPIŞMASI
+Relation	T6	T2	NoRel	true	kurdu	çarpışması
+Relation	T6	T8	NoRel	true	kurdu	PÉCROT DEMIRYOLU ÇARPIŞMASI
+Relation	T7	T11	NoRel	true	çalıştı	konuşuyordu
+Relation	T7	T2	NoRel	true	çalıştı	çarpışması
+Relation	T8	T1	NoRel	true	PÉCROT DEMIRYOLU ÇARPIŞMASI	kazası

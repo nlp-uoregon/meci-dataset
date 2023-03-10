@@ -1,0 +1,47 @@
+Text	5 فروری کو ٹرانس ایشیا نے فلانٹ نمبر GE235 سے تبدیل کرکے GE2353 کرکے گوشہ نشین کردی	صدر تائیوان کے ترجمان نے بتایا کہ صدر ماینگ - جیو نے حادثے پر تشویش کا اظہار کیا ہے اور ایگزیکیٹو یوآن کو ریسکیو ٹیموں کو ہر ممکن مدد دینے کی ہدایت کی ہے -	ایگزیکیٹ یوآن ماؤ چی - کئو نے حادثے کے فوراﹰ بعد تائیوان کی وزارت نقل و حمل اور سول ایروناٹکس ایڈمنسٹریشن سے رابطہ کیا اور حادثے کی تحقیات کا کہا -	ایگزیکیٹیو نے مزید تائیوانی فوج اور وزارت دفاع سے رابطہ کیا جس میں ریسکیو آپریشن میں مدد کی ہدایت کی -	سول ایروناٹکس ایڈمنسٹریشن ٹرانس ایشیا ایئرویز کے 71 پائلٹس کو 7 سے 10 فروری کے دوران اضافی ٹریننگ دے گی جس کے نتیجے میں ٹرانس ایشیا کی 90 پروازیں منسوخ ہوئیں
+Event	T0	کرکے	EVENT	64
+Event	T1	بتایا	EVENT	109
+Event	T2	حادثے	EVENT	137
+Event	T3	تشویش	EVENT	146
+Event	T4	دینے	EVENT	218
+Event	T5	حادثے	EVENT	270
+Event	T6	حادثے	EVENT	363
+Event	T7	کہا	EVENT	382
+Event	T8	آپریشن	EVENT	462
+Relation	T3	T4	CauseEffect	true	تشویش	دینے
+Relation	T4	T3	EffectCause	true	دینے	تشویش
+Relation	T6	T7	CauseEffect	true	حادثے	کہا
+Relation	T7	T6	EffectCause	true	کہا	حادثے
+Relation	T5	T7	CauseEffect	true	حادثے	کہا
+Relation	T7	T5	EffectCause	true	کہا	حادثے
+Relation	T5	T8	CauseEffect	true	حادثے	آپریشن
+Relation	T8	T5	EffectCause	true	آپریشن	حادثے
+Relation	T0	T7	NoRel	true	کرکے	کہا
+Relation	T0	T8	NoRel	true	کرکے	آپریشن
+Relation	T1	T6	NoRel	true	بتایا	حادثے
+Relation	T1	T7	NoRel	true	بتایا	کہا
+Relation	T2	T5	NoRel	true	حادثے	حادثے
+Relation	T2	T7	NoRel	true	حادثے	کہا
+Relation	T2	T8	NoRel	true	حادثے	آپریشن
+Relation	T3	T0	NoRel	true	تشویش	کرکے
+Relation	T3	T1	NoRel	true	تشویش	بتایا
+Relation	T3	T2	NoRel	true	تشویش	حادثے
+Relation	T3	T5	NoRel	true	تشویش	حادثے
+Relation	T3	T6	NoRel	true	تشویش	حادثے
+Relation	T4	T1	NoRel	true	دینے	بتایا
+Relation	T4	T2	NoRel	true	دینے	حادثے
+Relation	T4	T6	NoRel	true	دینے	حادثے
+Relation	T4	T8	NoRel	true	دینے	آپریشن
+Relation	T5	T2	NoRel	true	حادثے	حادثے
+Relation	T5	T3	NoRel	true	حادثے	تشویش
+Relation	T5	T4	NoRel	true	حادثے	دینے
+Relation	T6	T1	NoRel	true	حادثے	بتایا
+Relation	T6	T4	NoRel	true	حادثے	دینے
+Relation	T7	T2	NoRel	true	کہا	حادثے
+Relation	T7	T8	NoRel	true	کہا	آپریشن
+Relation	T8	T0	NoRel	true	آپریشن	کرکے
+Relation	T8	T1	NoRel	true	آپریشن	بتایا
+Relation	T8	T2	NoRel	true	آپریشن	حادثے
+Relation	T8	T3	NoRel	true	آپریشن	تشویش
+Relation	T8	T4	NoRel	true	آپریشن	دینے
+Relation	T8	T7	NoRel	true	آپریشن	کہا

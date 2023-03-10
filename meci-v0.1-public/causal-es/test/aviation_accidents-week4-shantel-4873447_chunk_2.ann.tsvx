@@ -1,0 +1,105 @@
+Text	Los helicópteros llegaron al sitio del accidente a las 16:40 y se descubrió que ocho de las nueve personas que iban en la nave habían fallecido tras el impacto .	El único sobreviviente fue hallado alrededor de las 09:00 del 9 de septiembre , con una herida en la cabeza y contusiones graves y cinco costillas y un omóplato rotos .	El accidente fue oído por dos Pescadores , quienes informaron a las autoridades de la locación aproximada del impacto .	Se guardó un minuto de silencio en la Asamblea Legislativa Plurinacional de Bolivia en memoria de los fallecidos .	Se reportó que el radiofaro omnidireccional VHF del Aeropuerto de la ciudad de Trinidad estaba fuera de servicio desde el 20 de agosto y que se estaba intentando dar una señal de aproximación sin precisión al momento del accidente .
+Event	T0	llegaron	EVENT	17
+Event	T1	accidente	EVENT	39
+Event	T2	descubrió	EVENT	66
+Event	T3	fallecido	EVENT	134
+Event	T4	impacto	EVENT	152
+Event	T5	hallado	EVENT	189
+Event	T6	herida	EVENT	250
+Event	T8	oído	EVENT	348
+Event	T9	informaron	EVENT	382
+Event	T10	locación	EVENT	417
+Event	T11	impacto	EVENT	441
+Event	T12	guardó	EVENT	454
+Event	T13	fallecidos	EVENT	553
+Event	T14	reportó	EVENT	569
+Event	T15	dar	EVENT	728
+Event	T16	accidente	EVENT	787
+Relation	T1	T3	CauseEffect	true	accidente	fallecido
+Relation	T3	T1	EffectCause	true	fallecido	accidente
+Relation	T4	T3	CauseEffect	true	impacto	fallecido
+Relation	T3	T4	EffectCause	true	fallecido	impacto
+Relation	T8	T9	CauseEffect	true	oído	informaron
+Relation	T9	T8	EffectCause	true	informaron	oído
+Relation	T0	T12	NoRel	true	llegaron	guardó
+Relation	T0	T4	NoRel	true	llegaron	impacto
+Relation	T0	T8	NoRel	true	llegaron	oído
+Relation	T1	T11	NoRel	true	accidente	impacto
+Relation	T1	T12	NoRel	true	accidente	guardó
+Relation	T1	T2	NoRel	true	accidente	descubrió
+Relation	T1	T4	NoRel	true	accidente	impacto
+Relation	T1	T6	NoRel	true	accidente	herida
+Relation	T1	T8	NoRel	true	accidente	oído
+Relation	T10	T0	NoRel	true	locación	llegaron
+Relation	T10	T1	NoRel	true	locación	accidente
+Relation	T10	T13	NoRel	true	locación	fallecidos
+Relation	T10	T16	NoRel	true	locación	accidente
+Relation	T10	T3	NoRel	true	locación	fallecido
+Relation	T10	T9	NoRel	true	locación	informaron
+Relation	T11	T10	NoRel	true	impacto	locación
+Relation	T11	T5	NoRel	true	impacto	hallado
+Relation	T11	T6	NoRel	true	impacto	herida
+Relation	T12	T11	NoRel	true	guardó	impacto
+Relation	T12	T15	NoRel	true	guardó	dar
+Relation	T12	T4	NoRel	true	guardó	impacto
+Relation	T12	T5	NoRel	true	guardó	hallado
+Relation	T12	T6	NoRel	true	guardó	herida
+Relation	T13	T11	NoRel	true	fallecidos	impacto
+Relation	T13	T16	NoRel	true	fallecidos	accidente
+Relation	T13	T2	NoRel	true	fallecidos	descubrió
+Relation	T13	T4	NoRel	true	fallecidos	impacto
+Relation	T13	T6	NoRel	true	fallecidos	herida
+Relation	T14	T0	NoRel	true	reportó	llegaron
+Relation	T14	T11	NoRel	true	reportó	impacto
+Relation	T14	T15	NoRel	true	reportó	dar
+Relation	T14	T3	NoRel	true	reportó	fallecido
+Relation	T15	T3	NoRel	true	dar	fallecido
+Relation	T15	T5	NoRel	true	dar	hallado
+Relation	T15	T6	NoRel	true	dar	herida
+Relation	T15	T8	NoRel	true	dar	oído
+Relation	T15	T9	NoRel	true	dar	informaron
+Relation	T16	T11	NoRel	true	accidente	impacto
+Relation	T16	T14	NoRel	true	accidente	reportó
+Relation	T16	T6	NoRel	true	accidente	herida
+Relation	T2	T1	NoRel	true	descubrió	accidente
+Relation	T2	T10	NoRel	true	descubrió	locación
+Relation	T2	T16	NoRel	true	descubrió	accidente
+Relation	T2	T3	NoRel	true	descubrió	fallecido
+Relation	T2	T4	NoRel	true	descubrió	impacto
+Relation	T2	T5	NoRel	true	descubrió	hallado
+Relation	T2	T8	NoRel	true	descubrió	oído
+Relation	T2	T9	NoRel	true	descubrió	informaron
+Relation	T3	T0	NoRel	true	fallecido	llegaron
+Relation	T3	T10	NoRel	true	fallecido	locación
+Relation	T3	T11	NoRel	true	fallecido	impacto
+Relation	T3	T14	NoRel	true	fallecido	reportó
+Relation	T3	T15	NoRel	true	fallecido	dar
+Relation	T3	T16	NoRel	true	fallecido	accidente
+Relation	T4	T11	NoRel	true	impacto	impacto
+Relation	T4	T12	NoRel	true	impacto	guardó
+Relation	T5	T0	NoRel	true	hallado	llegaron
+Relation	T5	T1	NoRel	true	hallado	accidente
+Relation	T5	T11	NoRel	true	hallado	impacto
+Relation	T5	T13	NoRel	true	hallado	fallecidos
+Relation	T5	T15	NoRel	true	hallado	dar
+Relation	T5	T16	NoRel	true	hallado	accidente
+Relation	T5	T8	NoRel	true	hallado	oído
+Relation	T5	T9	NoRel	true	hallado	informaron
+Relation	T6	T1	NoRel	true	herida	accidente
+Relation	T6	T10	NoRel	true	herida	locación
+Relation	T6	T11	NoRel	true	herida	impacto
+Relation	T6	T12	NoRel	true	herida	guardó
+Relation	T6	T15	NoRel	true	herida	dar
+Relation	T6	T16	NoRel	true	herida	accidente
+Relation	T6	T8	NoRel	true	herida	oído
+Relation	T6	T9	NoRel	true	herida	informaron
+Relation	T8	T1	NoRel	true	oído	accidente
+Relation	T8	T10	NoRel	true	oído	locación
+Relation	T8	T2	NoRel	true	oído	descubrió
+Relation	T8	T3	NoRel	true	oído	fallecido
+Relation	T9	T10	NoRel	true	informaron	locación
+Relation	T9	T12	NoRel	true	informaron	guardó
+Relation	T9	T15	NoRel	true	informaron	dar
+Relation	T9	T16	NoRel	true	informaron	accidente
+Relation	T9	T2	NoRel	true	informaron	descubrió
+Relation	T9	T3	NoRel	true	informaron	fallecido

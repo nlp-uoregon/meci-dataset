@@ -1,0 +1,113 @@
+Text	The recovery is somewhat unusual in that the aircraft did not break up into small pieces .	On November 2 , the NTSB recovered both flight recorders as well as the aircraft 's fuselage and engines .	- US Airways Flight 1549 :_2009 Airbus A320 water landing after dual engine failure caused by a bird strike during initial climb - Garuda Indonesia Flight 421 :_2002 Boeing 737 - 300 forced landing in shallow water after both engines flamed out in hail and heavy rain	- Ethiopian Airlines Flight 961 :_1996 ditching after dual engine failure caused by Fuel exhaustion during a hijacking	- ALM Flight 980 :_1970 DC - 9 ditching after dual engine failure caused by fuel exhaustion after a diversion - 1963 Aeroflot Tupolev Tu - 124 Neva river ditching : dual engine failure caused by fuel exhaustion after a diversion
+Event	T0	recovery	EVENT	4
+Event	T1	recovered	EVENT	116
+Event	T2	landing	EVENT	248
+Event	T4	strike	EVENT	299
+Event	T5	climb	EVENT	321
+Event	T6	Flight	EVENT	346
+Event	T7	caused	EVENT	540
+Event	T8	exhaustion	EVENT	555
+Event	T9	Flight	EVENT	591
+Event	T10	ditching	EVENT	616
+Event	T11	caused	EVENT	651
+Event	T12	diversion	EVENT	685
+Event	T13	ditching	EVENT	739
+Event	T14	caused	EVENT	770
+Event	T15	exhaustion	EVENT	785
+Event	T16	break up	EVENT	62
+Event	T3	failure	EVENT	274
+Event	T17	landing	EVENT	388
+Event	T18	flamed	EVENT	432
+Event	T19	rain	EVENT	461
+Event	T20	hijacking	EVENT	575
+Event	T21	ditching	EVENT	505
+Event	T22	failure	EVENT	532
+Event	T23	failure	EVENT	643
+Event	T24	exhaustion	EVENT	666
+Event	T25	failure	EVENT	762
+Relation	T4	T3	CauseEffect	true	strike	failure
+Relation	T3	T4	EffectCause	true	failure	strike
+Relation	T18	T17	CauseEffect	true	flamed	landing
+Relation	T17	T18	EffectCause	true	landing	flamed
+Relation	T19	T17	CauseEffect	true	rain	landing
+Relation	T17	T19	EffectCause	true	landing	rain
+Relation	T20	T8	CauseEffect	true	hijacking	exhaustion
+Relation	T8	T20	EffectCause	true	exhaustion	hijacking
+Relation	T8	T22	CauseEffect	true	exhaustion	failure
+Relation	T22	T8	EffectCause	true	failure	exhaustion
+Relation	T22	T21	CauseEffect	true	failure	ditching
+Relation	T21	T22	EffectCause	true	ditching	failure
+Relation	T12	T24	CauseEffect	true	diversion	exhaustion
+Relation	T24	T12	EffectCause	true	exhaustion	diversion
+Relation	T24	T23	CauseEffect	true	exhaustion	failure
+Relation	T23	T24	EffectCause	true	failure	exhaustion
+Relation	T23	T10	CauseEffect	true	failure	ditching
+Relation	T10	T23	EffectCause	true	ditching	failure
+Relation	T15	T25	CauseEffect	true	exhaustion	failure
+Relation	T25	T15	EffectCause	true	failure	exhaustion
+Relation	T0	T17	NoRel	true	recovery	landing
+Relation	T0	T25	NoRel	true	recovery	failure
+Relation	T0	T7	NoRel	true	recovery	caused
+Relation	T0	T9	NoRel	true	recovery	Flight
+Relation	T1	T12	NoRel	true	recovered	diversion
+Relation	T1	T18	NoRel	true	recovered	flamed
+Relation	T1	T20	NoRel	true	recovered	hijacking
+Relation	T10	T17	NoRel	true	ditching	landing
+Relation	T10	T2	NoRel	true	ditching	landing
+Relation	T11	T25	NoRel	true	caused	failure
+Relation	T12	T0	NoRel	true	diversion	recovery
+Relation	T12	T13	NoRel	true	diversion	ditching
+Relation	T12	T16	NoRel	true	diversion	break up
+Relation	T12	T5	NoRel	true	diversion	climb
+Relation	T12	T9	NoRel	true	diversion	Flight
+Relation	T13	T12	NoRel	true	ditching	diversion
+Relation	T13	T21	NoRel	true	ditching	ditching
+Relation	T13	T7	NoRel	true	ditching	caused
+Relation	T14	T15	NoRel	true	caused	exhaustion
+Relation	T14	T24	NoRel	true	caused	exhaustion
+Relation	T14	T3	NoRel	true	caused	failure
+Relation	T15	T18	NoRel	true	exhaustion	flamed
+Relation	T15	T23	NoRel	true	exhaustion	failure
+Relation	T16	T10	NoRel	true	break up	ditching
+Relation	T16	T3	NoRel	true	break up	failure
+Relation	T16	T9	NoRel	true	break up	Flight
+Relation	T17	T10	NoRel	true	landing	ditching
+Relation	T17	T4	NoRel	true	landing	strike
+Relation	T17	T7	NoRel	true	landing	caused
+Relation	T18	T3	NoRel	true	flamed	failure
+Relation	T18	T7	NoRel	true	flamed	caused
+Relation	T18	T9	NoRel	true	flamed	Flight
+Relation	T19	T10	NoRel	true	rain	ditching
+Relation	T19	T12	NoRel	true	rain	diversion
+Relation	T2	T16	NoRel	true	landing	break up
+Relation	T2	T24	NoRel	true	landing	exhaustion
+Relation	T2	T6	NoRel	true	landing	Flight
+Relation	T20	T23	NoRel	true	hijacking	failure
+Relation	T21	T15	NoRel	true	ditching	exhaustion
+Relation	T21	T8	NoRel	true	ditching	exhaustion
+Relation	T24	T18	NoRel	true	exhaustion	flamed
+Relation	T24	T19	NoRel	true	exhaustion	rain
+Relation	T24	T7	NoRel	true	exhaustion	caused
+Relation	T25	T19	NoRel	true	failure	rain
+Relation	T25	T23	NoRel	true	failure	failure
+Relation	T25	T7	NoRel	true	failure	caused
+Relation	T3	T12	NoRel	true	failure	diversion
+Relation	T3	T14	NoRel	true	failure	caused
+Relation	T3	T7	NoRel	true	failure	caused
+Relation	T4	T0	NoRel	true	strike	recovery
+Relation	T5	T14	NoRel	true	climb	caused
+Relation	T5	T23	NoRel	true	climb	failure
+Relation	T5	T7	NoRel	true	climb	caused
+Relation	T6	T1	NoRel	true	Flight	recovered
+Relation	T6	T8	NoRel	true	Flight	exhaustion
+Relation	T7	T14	NoRel	true	caused	caused
+Relation	T7	T23	NoRel	true	caused	failure
+Relation	T7	T5	NoRel	true	caused	climb
+Relation	T7	T8	NoRel	true	caused	exhaustion
+Relation	T8	T12	NoRel	true	exhaustion	diversion
+Relation	T8	T13	NoRel	true	exhaustion	ditching
+Relation	T8	T17	NoRel	true	exhaustion	landing
+Relation	T8	T6	NoRel	true	exhaustion	Flight
+Relation	T8	T7	NoRel	true	exhaustion	caused
+Relation	T9	T15	NoRel	true	Flight	exhaustion
+Relation	T9	T16	NoRel	true	Flight	break up

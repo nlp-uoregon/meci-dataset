@@ -1,0 +1,75 @@
+Text	Esved cinayetinin 2007 yılında 23 Yezidi'nin öldürüldüğü Musul katliamını kıvılcımlandırdığı düşünülmektedir .	Esved'in öldürülmesi ve intikam saldırıları Uluslararası Af Örgütü ve Irak hükümetinden olayların araştırılmasını isteyen Yerel Kürt Yönetimi tarafından kınanmıştır .	Yetkililer Kuzey Irak'ta Aswad cinayeti ile ilgisi olan 4 kişiyi tutuklamıştır .	Taşlama olayının ayrıca Yezidi kasabaları olan Kahtaniye ve Cizre'de 800 kişinin öldüğü bombalı saldırıları da ateşlediği söylenmektedir .	.
+Event	T0	cinayetinin	EVENT	6
+Event	T1	öldürüldüğü	EVENT	45
+Event	T2	katliamını	EVENT	63
+Event	T3	düşünülmektedir	EVENT	93
+Event	T4	öldürülmesi	EVENT	120
+Event	T5	saldırıları	EVENT	143
+Event	T6	kınanmıştır	EVENT	264
+Event	T7	cinayeti	EVENT	309
+Event	T8	tutuklamıştır	EVENT	343
+Event	T10	öldüğü	EVENT	440
+Event	T11	saldırıları	EVENT	455
+Event	T12	söylenmektedir	EVENT	481
+Event	T9	Taşlama	EVENT	359
+Relation	T0	T2	CauseEffect	true	cinayetinin	katliamını
+Relation	T2	T0	EffectCause	true	katliamını	cinayetinin
+Relation	T4	T5	CauseEffect	true	öldürülmesi	saldırıları
+Relation	T5	T4	EffectCause	true	saldırıları	öldürülmesi
+Relation	T5	T6	CauseEffect	true	saldırıları	kınanmıştır
+Relation	T6	T5	EffectCause	true	kınanmıştır	saldırıları
+Relation	T7	T8	CauseEffect	true	cinayeti	tutuklamıştır
+Relation	T8	T7	EffectCause	true	tutuklamıştır	cinayeti
+Relation	T9	T11	CauseEffect	true	Taşlama	saldırıları
+Relation	T11	T9	EffectCause	true	saldırıları	Taşlama
+Relation	T11	T10	CauseEffect	true	saldırıları	öldüğü
+Relation	T10	T11	EffectCause	true	öldüğü	saldırıları
+Relation	T0	T11	NoRel	true	cinayetinin	saldırıları
+Relation	T0	T12	NoRel	true	cinayetinin	söylenmektedir
+Relation	T0	T5	NoRel	true	cinayetinin	saldırıları
+Relation	T0	T8	NoRel	true	cinayetinin	tutuklamıştır
+Relation	T0	T9	NoRel	true	cinayetinin	Taşlama
+Relation	T1	T11	NoRel	true	öldürüldüğü	saldırıları
+Relation	T1	T3	NoRel	true	öldürüldüğü	düşünülmektedir
+Relation	T1	T5	NoRel	true	öldürüldüğü	saldırıları
+Relation	T10	T1	NoRel	true	öldüğü	öldürüldüğü
+Relation	T10	T3	NoRel	true	öldüğü	düşünülmektedir
+Relation	T10	T5	NoRel	true	öldüğü	saldırıları
+Relation	T10	T6	NoRel	true	öldüğü	kınanmıştır
+Relation	T10	T8	NoRel	true	öldüğü	tutuklamıştır
+Relation	T11	T2	NoRel	true	saldırıları	katliamını
+Relation	T11	T3	NoRel	true	saldırıları	düşünülmektedir
+Relation	T11	T6	NoRel	true	saldırıları	kınanmıştır
+Relation	T12	T1	NoRel	true	söylenmektedir	öldürüldüğü
+Relation	T12	T11	NoRel	true	söylenmektedir	saldırıları
+Relation	T12	T2	NoRel	true	söylenmektedir	katliamını
+Relation	T12	T8	NoRel	true	söylenmektedir	tutuklamıştır
+Relation	T12	T9	NoRel	true	söylenmektedir	Taşlama
+Relation	T2	T1	NoRel	true	katliamını	öldürüldüğü
+Relation	T2	T3	NoRel	true	katliamını	düşünülmektedir
+Relation	T2	T7	NoRel	true	katliamını	cinayeti
+Relation	T3	T0	NoRel	true	düşünülmektedir	cinayetinin
+Relation	T3	T1	NoRel	true	düşünülmektedir	öldürüldüğü
+Relation	T3	T12	NoRel	true	düşünülmektedir	söylenmektedir
+Relation	T3	T8	NoRel	true	düşünülmektedir	tutuklamıştır
+Relation	T3	T9	NoRel	true	düşünülmektedir	Taşlama
+Relation	T4	T1	NoRel	true	öldürülmesi	öldürüldüğü
+Relation	T4	T11	NoRel	true	öldürülmesi	saldırıları
+Relation	T4	T9	NoRel	true	öldürülmesi	Taşlama
+Relation	T5	T2	NoRel	true	saldırıları	katliamını
+Relation	T5	T7	NoRel	true	saldırıları	cinayeti
+Relation	T5	T8	NoRel	true	saldırıları	tutuklamıştır
+Relation	T6	T0	NoRel	true	kınanmıştır	cinayetinin
+Relation	T6	T1	NoRel	true	kınanmıştır	öldürüldüğü
+Relation	T6	T7	NoRel	true	kınanmıştır	cinayeti
+Relation	T6	T8	NoRel	true	kınanmıştır	tutuklamıştır
+Relation	T7	T0	NoRel	true	cinayeti	cinayetinin
+Relation	T7	T1	NoRel	true	cinayeti	öldürüldüğü
+Relation	T7	T11	NoRel	true	cinayeti	saldırıları
+Relation	T7	T12	NoRel	true	cinayeti	söylenmektedir
+Relation	T7	T6	NoRel	true	cinayeti	kınanmıştır
+Relation	T8	T10	NoRel	true	tutuklamıştır	öldüğü
+Relation	T8	T2	NoRel	true	tutuklamıştır	katliamını
+Relation	T8	T6	NoRel	true	tutuklamıştır	kınanmıştır
+Relation	T9	T0	NoRel	true	Taşlama	cinayetinin
+Relation	T9	T5	NoRel	true	Taşlama	saldırıları

@@ -1,0 +1,60 @@
+Text	Reichskolonialbund'un maksadı , Almanya'nın , I. Dünya Savaşı'nın sonunda Versailles Barış Antlaşması'nın sonucu olarak kaybetmiş olduğu denizaşırı sömürgelerini geri almaktı .	Almanya'da Alman sömürgeci imparatorluğun tekrar kuruluşu için destek toplanması yönünde ilk gayretler , 1923'te izlenebilir .	Sonuç olarak birkaç destekçi - sömürgeci organizasyon muhafazakâr Almanlar tarafından milliyetçilere ek olarak desteklendi ve Almanya'nın farklı bölgelerinde kuruldu .	En önde geleni , Koloniale Reichsarbeitsgemeinschaft'tı ( KORAG ) , 1925'te kuruldu .	Bu organizasyon , diğer gruplarla beraber 1933'te Reichskolonialbund'un kuruluşuna götürdü .
+Event	T0	kaybetmiş	EVENT	120
+Event	T1	almaktı	EVENT	167
+Event	T2	izlenebilir	EVENT	290
+Event	T3	desteklendi	EVENT	415
+Event	T4	kuruldu	EVENT	462
+Event	T5	kuruldu	EVENT	548
+Event	T6	götürdü	EVENT	641
+Event	T7	I. Dünya Savaşı	EVENT	46
+Event	T8	Versailles Barış Antlaşması	EVENT	74
+Event	T9	kuruluşu	EVENT	226
+Event	T10	toplanması	EVENT	247
+Event	T11	gayretler	EVENT	270
+Relation	T8	T0	CauseEffect	true	Versailles Barış Antlaşması	kaybetmiş
+Relation	T0	T8	EffectCause	true	kaybetmiş	Versailles Barış Antlaşması
+Relation	T9	T10	CauseEffect	true	kuruluşu	toplanması
+Relation	T10	T9	EffectCause	true	toplanması	kuruluşu
+Relation	T11	T9	CauseEffect	true	gayretler	kuruluşu
+Relation	T9	T11	EffectCause	true	kuruluşu	gayretler
+Relation	T11	T3	CauseEffect	true	gayretler	desteklendi
+Relation	T3	T11	EffectCause	true	desteklendi	gayretler
+Relation	T3	T9	CauseEffect	true	desteklendi	kuruluşu
+Relation	T9	T3	EffectCause	true	kuruluşu	desteklendi
+Relation	T3	T4	CauseEffect	true	desteklendi	kuruldu
+Relation	T4	T3	EffectCause	true	kuruldu	desteklendi
+Relation	T0	T1	NoRel	true	kaybetmiş	almaktı
+Relation	T0	T9	NoRel	true	kaybetmiş	kuruluşu
+Relation	T1	T0	NoRel	true	almaktı	kaybetmiş
+Relation	T1	T10	NoRel	true	almaktı	toplanması
+Relation	T1	T11	NoRel	true	almaktı	gayretler
+Relation	T1	T2	NoRel	true	almaktı	izlenebilir
+Relation	T10	T2	NoRel	true	toplanması	izlenebilir
+Relation	T10	T5	NoRel	true	toplanması	kuruldu
+Relation	T10	T6	NoRel	true	toplanması	götürdü
+Relation	T11	T0	NoRel	true	gayretler	kaybetmiş
+Relation	T11	T10	NoRel	true	gayretler	toplanması
+Relation	T11	T4	NoRel	true	gayretler	kuruldu
+Relation	T11	T5	NoRel	true	gayretler	kuruldu
+Relation	T11	T6	NoRel	true	gayretler	götürdü
+Relation	T2	T1	NoRel	true	izlenebilir	almaktı
+Relation	T2	T9	NoRel	true	izlenebilir	kuruluşu
+Relation	T3	T1	NoRel	true	desteklendi	almaktı
+Relation	T3	T5	NoRel	true	desteklendi	kuruldu
+Relation	T3	T6	NoRel	true	desteklendi	götürdü
+Relation	T3	T8	NoRel	true	desteklendi	Versailles Barış Antlaşması
+Relation	T4	T2	NoRel	true	kuruldu	izlenebilir
+Relation	T4	T7	NoRel	true	kuruldu	I. Dünya Savaşı
+Relation	T4	T9	NoRel	true	kuruldu	kuruluşu
+Relation	T5	T1	NoRel	true	kuruldu	almaktı
+Relation	T5	T4	NoRel	true	kuruldu	kuruldu
+Relation	T5	T7	NoRel	true	kuruldu	I. Dünya Savaşı
+Relation	T5	T8	NoRel	true	kuruldu	Versailles Barış Antlaşması
+Relation	T6	T3	NoRel	true	götürdü	desteklendi
+Relation	T6	T4	NoRel	true	götürdü	kuruldu
+Relation	T7	T0	NoRel	true	I. Dünya Savaşı	kaybetmiş
+Relation	T7	T11	NoRel	true	I. Dünya Savaşı	gayretler
+Relation	T7	T4	NoRel	true	I. Dünya Savaşı	kuruldu
+Relation	T8	T2	NoRel	true	Versailles Barış Antlaşması	izlenebilir
+Relation	T9	T1	NoRel	true	kuruluşu	almaktı
+Relation	T9	T4	NoRel	true	kuruluşu	kuruldu

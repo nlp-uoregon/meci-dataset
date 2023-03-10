@@ -1,0 +1,46 @@
+Text	1863 anayasası federal sistem yanlılarının aşırılıklarının bir sonucu olarak liberal radikallerin iktidarda oldukları süre içerinden eleştirildi .	Yenilenme ve 1886 anayasasının oluşturulması sürecinde merkezi yönetim sadece siyasi sorunların şiddetlenmesine yardımcı oldu .	Bazı departmanlar çok geçmeden bu sorunlar hakkında merkezi hükûmete şikâyette bulunmaya başladı .	Ekonomik alanda zayıf siyasi kararlar ekonomik sorunların baş göstermesine yol açtı .	Savaşı başlatan esas faktör basitçe liberal ve muhafazakâr partilerin kendi aralarında oldukları kadar , birbirleri ile olan anlaşmazlıklarına dayanır .
+Event	T0	eleştirildi	EVENT	133
+Event	T1	Yenilenme	EVENT	147
+Event	T2	oluşturulması	EVENT	178
+Event	T3	açtı	EVENT	453
+Event	T4	oldu	EVENT	268
+Event	T5	başladı	EVENT	364
+Event	T6	kararlar	EVENT	403
+Event	T7	Savaşı	EVENT	460
+Event	T8	anlaşmazlıklarına	EVENT	585
+Relation	T2	T4	CauseEffect	true	oluşturulması	oldu
+Relation	T4	T2	EffectCause	true	oldu	oluşturulması
+Relation	T6	T3	CauseEffect	true	kararlar	açtı
+Relation	T3	T6	EffectCause	true	açtı	kararlar
+Relation	T8	T7	CauseEffect	true	anlaşmazlıklarına	Savaşı
+Relation	T7	T8	EffectCause	true	Savaşı	anlaşmazlıklarına
+Relation	T0	T1	NoRel	true	eleştirildi	Yenilenme
+Relation	T0	T2	NoRel	true	eleştirildi	oluşturulması
+Relation	T0	T3	NoRel	true	eleştirildi	açtı
+Relation	T0	T5	NoRel	true	eleştirildi	başladı
+Relation	T0	T6	NoRel	true	eleştirildi	kararlar
+Relation	T0	T8	NoRel	true	eleştirildi	anlaşmazlıklarına
+Relation	T1	T4	NoRel	true	Yenilenme	oldu
+Relation	T1	T5	NoRel	true	Yenilenme	başladı
+Relation	T2	T0	NoRel	true	oluşturulması	eleştirildi
+Relation	T2	T1	NoRel	true	oluşturulması	Yenilenme
+Relation	T3	T0	NoRel	true	açtı	eleştirildi
+Relation	T3	T4	NoRel	true	açtı	oldu
+Relation	T3	T5	NoRel	true	açtı	başladı
+Relation	T4	T5	NoRel	true	oldu	başladı
+Relation	T4	T7	NoRel	true	oldu	Savaşı
+Relation	T5	T1	NoRel	true	başladı	Yenilenme
+Relation	T5	T4	NoRel	true	başladı	oldu
+Relation	T5	T6	NoRel	true	başladı	kararlar
+Relation	T5	T8	NoRel	true	başladı	anlaşmazlıklarına
+Relation	T6	T0	NoRel	true	kararlar	eleştirildi
+Relation	T6	T5	NoRel	true	kararlar	başladı
+Relation	T6	T7	NoRel	true	kararlar	Savaşı
+Relation	T7	T0	NoRel	true	Savaşı	eleştirildi
+Relation	T7	T4	NoRel	true	Savaşı	oldu
+Relation	T7	T5	NoRel	true	Savaşı	başladı
+Relation	T8	T0	NoRel	true	anlaşmazlıklarına	eleştirildi
+Relation	T8	T1	NoRel	true	anlaşmazlıklarına	Yenilenme
+Relation	T8	T2	NoRel	true	anlaşmazlıklarına	oluşturulması
+Relation	T8	T5	NoRel	true	anlaşmazlıklarına	başladı
+Relation	T8	T6	NoRel	true	anlaşmazlıklarına	kararlar

@@ -1,0 +1,33 @@
+Text	I 1513 blev den fordoblet , og udover hvedetolden blev der indført en ny told på byg .	Eksporten var endda pålagt en dobbelt så høj told .	Ved springvis voksende udgifter lånte kommunen penge fra de velhavende familier .	Det skete fortrinsvis til finansiering af krige eller kornforsyning .	I starten var disse såkaldte _ Imprestiti __lån rent frivillige , men i 1207 blev det første tvangslån opkrævet .
+Event	T0	fordoblet	EVENT	16
+Event	T1	indført	EVENT	59
+Event	T2	told	EVENT	73
+Event	T3	pålagt	EVENT	107
+Event	T4	lånte	EVENT	171
+Event	T5	skete	EVENT	225
+Event	T6	finansiering	EVENT	247
+Event	T7	krige	EVENT	263
+Event	T8	opkrævet	EVENT	394
+Relation	T4	T6	CauseEffect	true	lånte	finansiering
+Relation	T6	T4	EffectCause	true	finansiering	lånte
+Relation	T0	T7	NoRel	true	fordoblet	krige
+Relation	T0	T8	NoRel	true	fordoblet	opkrævet
+Relation	T1	T2	NoRel	true	indført	told
+Relation	T1	T3	NoRel	true	indført	pålagt
+Relation	T1	T7	NoRel	true	indført	krige
+Relation	T1	T8	NoRel	true	indført	opkrævet
+Relation	T2	T0	NoRel	true	told	fordoblet
+Relation	T3	T1	NoRel	true	pålagt	indført
+Relation	T3	T2	NoRel	true	pålagt	told
+Relation	T3	T8	NoRel	true	pålagt	opkrævet
+Relation	T4	T2	NoRel	true	lånte	told
+Relation	T4	T3	NoRel	true	lånte	pålagt
+Relation	T4	T5	NoRel	true	lånte	skete
+Relation	T4	T8	NoRel	true	lånte	opkrævet
+Relation	T5	T3	NoRel	true	skete	pålagt
+Relation	T5	T7	NoRel	true	skete	krige
+Relation	T5	T8	NoRel	true	skete	opkrævet
+Relation	T6	T8	NoRel	true	finansiering	opkrævet
+Relation	T8	T0	NoRel	true	opkrævet	fordoblet
+Relation	T8	T1	NoRel	true	opkrævet	indført
+Relation	T8	T2	NoRel	true	opkrævet	told

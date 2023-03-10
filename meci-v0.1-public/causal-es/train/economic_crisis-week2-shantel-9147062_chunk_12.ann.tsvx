@@ -1,0 +1,89 @@
+Text	Veinte personas murieron en los combates .	Los gobiernos rivales se enfrentaron militarmente en Dachau el 18 de abril cuando los 8.000 soldados de Hoffman se encontraron con los 30.000 de la República Soviética .	Después de un golpe de estado de seis días en el régimen de Toller , la República Soviética ahora estaba liderada por tres emigrantes judíos rusos , incluido Eugen Leviné .	Las fuerzas BSR — encabezados por , de todas las personas , Ernst Toller — obtuvo la victoria en la primera batalla en Dachau , pero Hoffman llegaron a un acuerdo que le dio a los servicios de 20.000 hombres de los _ Frei korps _ bajo el Teniente General Burghard von Oven .	Oven y los _ Frie korps _ tomaron Dachau y rodearon Múnich , aterrorizados a Egilhofer , quien hizo ejecutar a los rehenes que mantenía , a pesar de los esfuerzos de Toller por evitarlo .
+Event	T0	murieron	EVENT	16
+Event	T1	combates	EVENT	32
+Event	T11	tomaron	EVENT	687
+Event	T12	rodearon	EVENT	704
+Event	T13	aterrorizados	EVENT	722
+Event	T14	ejecutar	EVENT	761
+Event	T15	esfuerzos	EVENT	814
+Event	T2	enfrentaron	EVENT	68
+Event	T3	encontraron	EVENT	158
+Event	T4	golpe	EVENT	227
+Event	T5	obtuvo	EVENT	461
+Event	T6	victoria	EVENT	471
+Event	T7	batalla	EVENT	494
+Event	T8	llegaron	EVENT	527
+Event	T9	acuerdo	EVENT	541
+Relation	T1	T0	CauseEffect	true	combates	murieron
+Relation	T0	T1	EffectCause	true	murieron	combates
+Relation	T7	T6	CauseEffect	true	batalla	victoria
+Relation	T6	T7	EffectCause	true	victoria	batalla
+Relation	T11	T14	CauseEffect	true	tomaron	ejecutar
+Relation	T14	T11	EffectCause	true	ejecutar	tomaron
+Relation	T0	T12	NoRel	true	murieron	rodearon
+Relation	T0	T2	NoRel	true	murieron	enfrentaron
+Relation	T0	T3	NoRel	true	murieron	encontraron
+Relation	T0	T6	NoRel	true	murieron	victoria
+Relation	T1	T2	NoRel	true	combates	enfrentaron
+Relation	T1	T7	NoRel	true	combates	batalla
+Relation	T1	T8	NoRel	true	combates	llegaron
+Relation	T11	T13	NoRel	true	tomaron	aterrorizados
+Relation	T11	T3	NoRel	true	tomaron	encontraron
+Relation	T11	T8	NoRel	true	tomaron	llegaron
+Relation	T11	T9	NoRel	true	tomaron	acuerdo
+Relation	T12	T3	NoRel	true	rodearon	encontraron
+Relation	T12	T4	NoRel	true	rodearon	golpe
+Relation	T12	T5	NoRel	true	rodearon	obtuvo
+Relation	T12	T7	NoRel	true	rodearon	batalla
+Relation	T12	T8	NoRel	true	rodearon	llegaron
+Relation	T13	T1	NoRel	true	aterrorizados	combates
+Relation	T13	T14	NoRel	true	aterrorizados	ejecutar
+Relation	T13	T2	NoRel	true	aterrorizados	enfrentaron
+Relation	T13	T3	NoRel	true	aterrorizados	encontraron
+Relation	T13	T8	NoRel	true	aterrorizados	llegaron
+Relation	T14	T12	NoRel	true	ejecutar	rodearon
+Relation	T14	T2	NoRel	true	ejecutar	enfrentaron
+Relation	T14	T5	NoRel	true	ejecutar	obtuvo
+Relation	T14	T7	NoRel	true	ejecutar	batalla
+Relation	T15	T11	NoRel	true	esfuerzos	tomaron
+Relation	T15	T13	NoRel	true	esfuerzos	aterrorizados
+Relation	T15	T3	NoRel	true	esfuerzos	encontraron
+Relation	T15	T4	NoRel	true	esfuerzos	golpe
+Relation	T15	T6	NoRel	true	esfuerzos	victoria
+Relation	T2	T0	NoRel	true	enfrentaron	murieron
+Relation	T2	T11	NoRel	true	enfrentaron	tomaron
+Relation	T2	T13	NoRel	true	enfrentaron	aterrorizados
+Relation	T2	T14	NoRel	true	enfrentaron	ejecutar
+Relation	T2	T4	NoRel	true	enfrentaron	golpe
+Relation	T2	T6	NoRel	true	enfrentaron	victoria
+Relation	T2	T9	NoRel	true	enfrentaron	acuerdo
+Relation	T3	T0	NoRel	true	encontraron	murieron
+Relation	T3	T12	NoRel	true	encontraron	rodearon
+Relation	T3	T6	NoRel	true	encontraron	victoria
+Relation	T4	T0	NoRel	true	golpe	murieron
+Relation	T4	T1	NoRel	true	golpe	combates
+Relation	T4	T11	NoRel	true	golpe	tomaron
+Relation	T4	T12	NoRel	true	golpe	rodearon
+Relation	T4	T2	NoRel	true	golpe	enfrentaron
+Relation	T4	T3	NoRel	true	golpe	encontraron
+Relation	T5	T12	NoRel	true	obtuvo	rodearon
+Relation	T5	T15	NoRel	true	obtuvo	esfuerzos
+Relation	T5	T2	NoRel	true	obtuvo	enfrentaron
+Relation	T5	T7	NoRel	true	obtuvo	batalla
+Relation	T5	T8	NoRel	true	obtuvo	llegaron
+Relation	T5	T9	NoRel	true	obtuvo	acuerdo
+Relation	T6	T1	NoRel	true	victoria	combates
+Relation	T6	T12	NoRel	true	victoria	rodearon
+Relation	T6	T14	NoRel	true	victoria	ejecutar
+Relation	T7	T1	NoRel	true	batalla	combates
+Relation	T7	T12	NoRel	true	batalla	rodearon
+Relation	T7	T15	NoRel	true	batalla	esfuerzos
+Relation	T7	T4	NoRel	true	batalla	golpe
+Relation	T8	T12	NoRel	true	llegaron	rodearon
+Relation	T8	T13	NoRel	true	llegaron	aterrorizados
+Relation	T8	T15	NoRel	true	llegaron	esfuerzos
+Relation	T9	T11	NoRel	true	acuerdo	tomaron
+Relation	T9	T15	NoRel	true	acuerdo	esfuerzos
+Relation	T9	T3	NoRel	true	acuerdo	encontraron
+Relation	T9	T4	NoRel	true	acuerdo	golpe
+Relation	T9	T7	NoRel	true	acuerdo	batalla

@@ -1,0 +1,95 @@
+Text	Por solicitud de su padre , fue trasladado a un hospital más cercano a su hogar , llegando a Alexandersbad el 25 de octubre .	Aún convaleciente , solicitó que se le permitiera inscribirse para entrenar como piloto , por lo que después de unas vacaciones navideñas con su familia , se reportó a Múnich .	Recibió adiestramiento básico de vuelo en las bases aéreas de Oberschleissheim y Lechfeld de marzo a junio de 1918 y entrenamiento avanzado en Valenciennes en Francia en octubre .	El 14 de octubre fue asignado al _ Jagdstaffel _ 35b , un escuadrón de combate bávaro equipado con biplanos Fokker D. VII .	No vio ninguna acción con el _ Jagdstaffel _ 35b , ya que la guerra terminó el 11 de noviembre , antes de que tuviera la oportunidad .
+Event	T0	solicitud	EVENT	4
+Event	T1	trasladado	EVENT	32
+Event	T10	avanzado	EVENT	434
+Event	T11	asignado	EVENT	504
+Event	T12	combate	EVENT	554
+Event	T13	equipado	EVENT	569
+Event	T15	acción	EVENT	622
+Event	T16	terminó	EVENT	675
+Event	T2	llegando	EVENT	82
+Event	T3	solicitó	EVENT	146
+Event	T4	inscribirse	EVENT	176
+Event	T5	entrenar	EVENT	193
+Event	T6	vacaciones	EVENT	243
+Event	T7	reportó	EVENT	284
+Event	T8	adiestramiento	EVENT	311
+Event	T9	vuelo	EVENT	336
+Relation	T0	T1	CauseEffect	true	solicitud	trasladado
+Relation	T1	T0	EffectCause	true	trasladado	solicitud
+Relation	T1	T2	CauseEffect	true	trasladado	llegando
+Relation	T2	T1	EffectCause	true	llegando	trasladado
+Relation	T8	T11	CauseEffect	true	adiestramiento	asignado
+Relation	T11	T8	EffectCause	true	asignado	adiestramiento
+Relation	T0	T15	NoRel	true	solicitud	acción
+Relation	T0	T6	NoRel	true	solicitud	vacaciones
+Relation	T0	T7	NoRel	true	solicitud	reportó
+Relation	T1	T10	NoRel	true	trasladado	avanzado
+Relation	T1	T16	NoRel	true	trasladado	terminó
+Relation	T1	T3	NoRel	true	trasladado	solicitó
+Relation	T1	T5	NoRel	true	trasladado	entrenar
+Relation	T10	T0	NoRel	true	avanzado	solicitud
+Relation	T10	T11	NoRel	true	avanzado	asignado
+Relation	T10	T16	NoRel	true	avanzado	terminó
+Relation	T10	T2	NoRel	true	avanzado	llegando
+Relation	T10	T4	NoRel	true	avanzado	inscribirse
+Relation	T10	T6	NoRel	true	avanzado	vacaciones
+Relation	T11	T10	NoRel	true	asignado	avanzado
+Relation	T11	T13	NoRel	true	asignado	equipado
+Relation	T11	T2	NoRel	true	asignado	llegando
+Relation	T11	T4	NoRel	true	asignado	inscribirse
+Relation	T11	T5	NoRel	true	asignado	entrenar
+Relation	T12	T0	NoRel	true	combate	solicitud
+Relation	T12	T10	NoRel	true	combate	avanzado
+Relation	T12	T11	NoRel	true	combate	asignado
+Relation	T12	T13	NoRel	true	combate	equipado
+Relation	T12	T5	NoRel	true	combate	entrenar
+Relation	T12	T6	NoRel	true	combate	vacaciones
+Relation	T12	T8	NoRel	true	combate	adiestramiento
+Relation	T12	T9	NoRel	true	combate	vuelo
+Relation	T13	T1	NoRel	true	equipado	trasladado
+Relation	T13	T10	NoRel	true	equipado	avanzado
+Relation	T13	T11	NoRel	true	equipado	asignado
+Relation	T13	T16	NoRel	true	equipado	terminó
+Relation	T13	T4	NoRel	true	equipado	inscribirse
+Relation	T13	T6	NoRel	true	equipado	vacaciones
+Relation	T15	T1	NoRel	true	acción	trasladado
+Relation	T15	T10	NoRel	true	acción	avanzado
+Relation	T15	T13	NoRel	true	acción	equipado
+Relation	T16	T0	NoRel	true	terminó	solicitud
+Relation	T16	T11	NoRel	true	terminó	asignado
+Relation	T16	T12	NoRel	true	terminó	combate
+Relation	T16	T3	NoRel	true	terminó	solicitó
+Relation	T16	T4	NoRel	true	terminó	inscribirse
+Relation	T16	T7	NoRel	true	terminó	reportó
+Relation	T2	T13	NoRel	true	llegando	equipado
+Relation	T2	T3	NoRel	true	llegando	solicitó
+Relation	T2	T4	NoRel	true	llegando	inscribirse
+Relation	T2	T5	NoRel	true	llegando	entrenar
+Relation	T2	T7	NoRel	true	llegando	reportó
+Relation	T2	T9	NoRel	true	llegando	vuelo
+Relation	T3	T0	NoRel	true	solicitó	solicitud
+Relation	T3	T1	NoRel	true	solicitó	trasladado
+Relation	T3	T8	NoRel	true	solicitó	adiestramiento
+Relation	T3	T9	NoRel	true	solicitó	vuelo
+Relation	T4	T10	NoRel	true	inscribirse	avanzado
+Relation	T4	T15	NoRel	true	inscribirse	acción
+Relation	T4	T9	NoRel	true	inscribirse	vuelo
+Relation	T5	T1	NoRel	true	entrenar	trasladado
+Relation	T5	T16	NoRel	true	entrenar	terminó
+Relation	T5	T2	NoRel	true	entrenar	llegando
+Relation	T5	T4	NoRel	true	entrenar	inscribirse
+Relation	T6	T12	NoRel	true	vacaciones	combate
+Relation	T6	T2	NoRel	true	vacaciones	llegando
+Relation	T6	T3	NoRel	true	vacaciones	solicitó
+Relation	T6	T7	NoRel	true	vacaciones	reportó
+Relation	T7	T16	NoRel	true	reportó	terminó
+Relation	T7	T5	NoRel	true	reportó	entrenar
+Relation	T7	T6	NoRel	true	reportó	vacaciones
+Relation	T7	T8	NoRel	true	reportó	adiestramiento
+Relation	T8	T9	NoRel	true	adiestramiento	vuelo
+Relation	T9	T12	NoRel	true	vuelo	combate
+Relation	T9	T13	NoRel	true	vuelo	equipado
+Relation	T9	T2	NoRel	true	vuelo	llegando
+Relation	T9	T6	NoRel	true	vuelo	vacaciones
+Relation	T9	T7	NoRel	true	vuelo	reportó

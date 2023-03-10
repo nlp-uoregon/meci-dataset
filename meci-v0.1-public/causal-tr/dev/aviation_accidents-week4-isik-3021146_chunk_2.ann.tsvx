@@ -1,0 +1,31 @@
+Text	Yaklaşma kontrolörü radar ekranını yanlış okudu ve uçak havalimanına aslında 42–44 km mesafede iken mürettebata 31 km mesafede olduklarını bildirdi .	Bu , uçağın bir dizi dağı geçmeden önce çok erken alçalmasına neden oldu .	Bulutların içinde alçalmaya devam eden uçak , 14.42.00'da 1. 500 metre irtifada 15-16 °'lik baş açısıyla karla kaplı bir dağ yamacına çarptı .	Uçak beş parçaya ayrıldı .	Kaza sonucunda uçakta bulunan 85 yolcu ve 7 mürettebat üyesi öldü .
+Event	T0	okudu	EVENT	42
+Event	T1	bildirdi	EVENT	139
+Event	T2	çarptı	EVENT	359
+Event	T3	ayrıldı	EVENT	385
+Event	T4	öldü	EVENT	456
+Event	T5	oldu	EVENT	218
+Event	T6	Kaza	EVENT	395
+Relation	T1	T5	CauseEffect	true	bildirdi	oldu
+Relation	T5	T1	EffectCause	true	oldu	bildirdi
+Relation	T5	T2	CauseEffect	true	oldu	çarptı
+Relation	T2	T5	EffectCause	true	çarptı	oldu
+Relation	T2	T3	CauseEffect	true	çarptı	ayrıldı
+Relation	T3	T2	EffectCause	true	ayrıldı	çarptı
+Relation	T2	T6	CauseEffect	true	çarptı	Kaza
+Relation	T6	T2	EffectCause	true	Kaza	çarptı
+Relation	T6	T4	CauseEffect	true	Kaza	öldü
+Relation	T4	T6	EffectCause	true	öldü	Kaza
+Relation	T3	T4	CauseEffect	true	ayrıldı	öldü
+Relation	T4	T3	EffectCause	true	öldü	ayrıldı
+Relation	T0	T4	NoRel	true	okudu	öldü
+Relation	T1	T0	NoRel	true	bildirdi	okudu
+Relation	T2	T4	NoRel	true	çarptı	öldü
+Relation	T4	T0	NoRel	true	öldü	okudu
+Relation	T4	T1	NoRel	true	öldü	bildirdi
+Relation	T4	T5	NoRel	true	öldü	oldu
+Relation	T5	T0	NoRel	true	oldu	okudu
+Relation	T5	T4	NoRel	true	oldu	öldü
+Relation	T5	T6	NoRel	true	oldu	Kaza
+Relation	T6	T0	NoRel	true	Kaza	okudu
+Relation	T6	T1	NoRel	true	Kaza	bildirdi

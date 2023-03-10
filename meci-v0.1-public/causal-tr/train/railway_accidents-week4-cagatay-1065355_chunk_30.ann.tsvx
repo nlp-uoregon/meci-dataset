@@ -1,0 +1,52 @@
+Text	Allama Iqbal Ekspresi makinisti Juma Goth İstasyonundaki trenin durmasını belirten işarete aldırış etmemiş ve aynı hatta Karaçi’den gelen diğer trenle çarpışmışması sonra en az 18 kişi öldü .	- 27 Kasım , 2009 – Moskova’dan Sankt - Peterburg_‘a bir seyahatte Bologoye’de Neva Express raydan çıkma_sı ile en az 27 ölü rapor edildi .	Lenta .ru Tren saatte yaklaşık 200 km hızla hareket ettiğinde yaklaşık 7 kilogram patlayıcı lokomotif altına konulmuştu .	Lokomotif ve çoğu vagon kayarak zarar gördü , fakat son üç vagon raydan çıktı .	İkinci bomba kutarma operasyonu sırasında patlatıldı .
+Event	T0	etmemiş	EVENT	99
+Event	T1	çarpışmışması	EVENT	151
+Event	T2	öldü	EVENT	185
+Event	T3	seyahatte	EVENT	249
+Event	T4	çıkma_sı	EVENT	291
+Event	T5	edildi	EVENT	323
+Event	T6	konulmuştu	EVENT	441
+Event	T7	gördü	EVENT	492
+Event	T8	çıktı	EVENT	526
+Event	T9	patlatıldı	EVENT	576
+Event	T10	ölü	EVENT	313
+Relation	T0	T1	CauseEffect	true	etmemiş	çarpışmışması
+Relation	T1	T0	EffectCause	true	çarpışmışması	etmemiş
+Relation	T1	T2	CauseEffect	true	çarpışmışması	öldü
+Relation	T2	T1	EffectCause	true	öldü	çarpışmışması
+Relation	T4	T10	CauseEffect	true	çıkma_sı	ölü
+Relation	T10	T4	EffectCause	true	ölü	çıkma_sı
+Relation	T6	T7	CauseEffect	true	konulmuştu	gördü
+Relation	T7	T6	EffectCause	true	gördü	konulmuştu
+Relation	T6	T8	CauseEffect	true	konulmuştu	çıktı
+Relation	T8	T6	EffectCause	true	çıktı	konulmuştu
+Relation	T0	T6	NoRel	true	etmemiş	konulmuştu
+Relation	T1	T5	NoRel	true	çarpışmışması	edildi
+Relation	T1	T6	NoRel	true	çarpışmışması	konulmuştu
+Relation	T1	T8	NoRel	true	çarpışmışması	çıktı
+Relation	T10	T5	NoRel	true	ölü	edildi
+Relation	T10	T6	NoRel	true	ölü	konulmuştu
+Relation	T10	T7	NoRel	true	ölü	gördü
+Relation	T2	T0	NoRel	true	öldü	etmemiş
+Relation	T2	T3	NoRel	true	öldü	seyahatte
+Relation	T2	T5	NoRel	true	öldü	edildi
+Relation	T2	T6	NoRel	true	öldü	konulmuştu
+Relation	T2	T9	NoRel	true	öldü	patlatıldı
+Relation	T3	T1	NoRel	true	seyahatte	çarpışmışması
+Relation	T3	T4	NoRel	true	seyahatte	çıkma_sı
+Relation	T3	T8	NoRel	true	seyahatte	çıktı
+Relation	T4	T5	NoRel	true	çıkma_sı	edildi
+Relation	T5	T1	NoRel	true	edildi	çarpışmışması
+Relation	T5	T4	NoRel	true	edildi	çıkma_sı
+Relation	T5	T7	NoRel	true	edildi	gördü
+Relation	T5	T8	NoRel	true	edildi	çıktı
+Relation	T6	T10	NoRel	true	konulmuştu	ölü
+Relation	T6	T2	NoRel	true	konulmuştu	öldü
+Relation	T8	T4	NoRel	true	çıktı	çıkma_sı
+Relation	T8	T5	NoRel	true	çıktı	edildi
+Relation	T8	T7	NoRel	true	çıktı	gördü
+Relation	T8	T9	NoRel	true	çıktı	patlatıldı
+Relation	T9	T10	NoRel	true	patlatıldı	ölü
+Relation	T9	T3	NoRel	true	patlatıldı	seyahatte
+Relation	T9	T5	NoRel	true	patlatıldı	edildi
+Relation	T9	T6	NoRel	true	patlatıldı	konulmuştu

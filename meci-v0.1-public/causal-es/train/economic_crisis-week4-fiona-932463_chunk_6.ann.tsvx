@@ -1,0 +1,64 @@
+Text	Por otro lado , la depreciación del peso cubano tras la crisis generó que aquellos que tuviesen familiares en el exterior , al enviar fondos , también tendrían más posibilidades de ingresos y solidez económica .	Las remesas , el turismo , la economía subterránea e informal , el subempleo y la necesidad de la relocalización de los procesos productivos por falta de recursos energéticos llevaron al gobierno cubano a tomar medidas profundas en la manera de planificar su economía y sus relaciones mercantiles .	Para atacar la crisis , se hicieron reformas a nivel constitucional en 1991 , que generarían principalmente dos sectores económicos emergentes y paralelos al sector estatal , así como un sistema bimonetario .	Por un lado , se reabrió el mercado interno mediante la moneda local y , por otro , el mercado de importaciones y fabricación nacional con moneda extranjera .	Durante el período especial se dio una transición de un modelo de planificación central socialista a un modelo socialista de mercado descentralizado .
+Event	T0	depreciación	EVENT	19
+Event	T1	generó	EVENT	63
+Event	T2	enviar	EVENT	127
+Event	T3	relocalización	EVENT	310
+Event	T4	llevaron	EVENT	387
+Event	T5	medidas	EVENT	423
+Event	T6	atacar	EVENT	516
+Event	T7	crisis	EVENT	526
+Event	T8	reformas	EVENT	547
+Event	T9	generarían	EVENT	593
+Event	T10	dio	EVENT	910
+Event	T11	transición	EVENT	918
+Relation	T7	T8	CauseEffect	true	crisis	reformas
+Relation	T8	T7	EffectCause	true	reformas	crisis
+Relation	T0	T1	NoRel	true	depreciación	generó
+Relation	T0	T11	NoRel	true	depreciación	transición
+Relation	T0	T4	NoRel	true	depreciación	llevaron
+Relation	T0	T5	NoRel	true	depreciación	medidas
+Relation	T0	T6	NoRel	true	depreciación	atacar
+Relation	T0	T8	NoRel	true	depreciación	reformas
+Relation	T1	T2	NoRel	true	generó	enviar
+Relation	T1	T4	NoRel	true	generó	llevaron
+Relation	T10	T1	NoRel	true	dio	generó
+Relation	T10	T11	NoRel	true	dio	transición
+Relation	T10	T2	NoRel	true	dio	enviar
+Relation	T10	T5	NoRel	true	dio	medidas
+Relation	T11	T1	NoRel	true	transición	generó
+Relation	T11	T10	NoRel	true	transición	dio
+Relation	T11	T5	NoRel	true	transición	medidas
+Relation	T11	T6	NoRel	true	transición	atacar
+Relation	T11	T7	NoRel	true	transición	crisis
+Relation	T2	T1	NoRel	true	enviar	generó
+Relation	T2	T4	NoRel	true	enviar	llevaron
+Relation	T2	T5	NoRel	true	enviar	medidas
+Relation	T2	T6	NoRel	true	enviar	atacar
+Relation	T2	T7	NoRel	true	enviar	crisis
+Relation	T2	T8	NoRel	true	enviar	reformas
+Relation	T2	T9	NoRel	true	enviar	generarían
+Relation	T3	T1	NoRel	true	relocalización	generó
+Relation	T3	T2	NoRel	true	relocalización	enviar
+Relation	T3	T5	NoRel	true	relocalización	medidas
+Relation	T3	T8	NoRel	true	relocalización	reformas
+Relation	T3	T9	NoRel	true	relocalización	generarían
+Relation	T4	T1	NoRel	true	llevaron	generó
+Relation	T4	T10	NoRel	true	llevaron	dio
+Relation	T4	T11	NoRel	true	llevaron	transición
+Relation	T4	T9	NoRel	true	llevaron	generarían
+Relation	T5	T3	NoRel	true	medidas	relocalización
+Relation	T5	T9	NoRel	true	medidas	generarían
+Relation	T6	T1	NoRel	true	atacar	generó
+Relation	T6	T11	NoRel	true	atacar	transición
+Relation	T6	T2	NoRel	true	atacar	enviar
+Relation	T7	T0	NoRel	true	crisis	depreciación
+Relation	T7	T1	NoRel	true	crisis	generó
+Relation	T7	T10	NoRel	true	crisis	dio
+Relation	T7	T11	NoRel	true	crisis	transición
+Relation	T7	T2	NoRel	true	crisis	enviar
+Relation	T7	T4	NoRel	true	crisis	llevaron
+Relation	T7	T5	NoRel	true	crisis	medidas
+Relation	T8	T10	NoRel	true	reformas	dio
+Relation	T8	T2	NoRel	true	reformas	enviar
+Relation	T8	T3	NoRel	true	reformas	relocalización
+Relation	T9	T7	NoRel	true	generarían	crisis

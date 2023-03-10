@@ -1,0 +1,83 @@
+Text	Det var ikke primært sammenstødet med flyene der bevirkede at tårnene styrtede sammen , men derimod den efterfølgende brand der underminerede bygningernes stålskelet evnen til at bære .	Men stål smelter ved 1.525 grader ( celsius ) , og jetbrændstof frigiver ved afbrænding kun 825 grader .	Dette anses som bevis på at sammenbruddet ikke kunne skyldes brand , men må skyldes sprængninger .	NIST bemærker at stålet havde mistet sin ildisolerende kappe ved sammenstødet og stod nøgen overfor ilden og varmen .	Bygningseksperter er enige i at det ikke er påkrævet at stålet smelter helt for at skabe de omstændigheder der bevirkede sammenstyrtningen .
+Event	T0	sammenstødet	EVENT	21
+Event	T10	sammenbruddet	EVENT	319
+Event	T11	sprængninger	EVENT	375
+Event	T13	mistet	EVENT	420
+Event	T14	sammenstødet	EVENT	455
+Event	T16	skabe	EVENT	591
+Event	T18	styrtede sammen	EVENT	70
+Event	T19	brand	EVENT	352
+Event	T2	brand	EVENT	118
+Event	T3	underminerede	EVENT	128
+Event	T4	bære	EVENT	179
+Event	T5	smelter	EVENT	195
+Event	T6	frigiver	EVENT	250
+Event	T7	afbrænding	EVENT	263
+Relation	T7	T6	CauseEffect	true	afbrænding	frigiver
+Relation	T6	T7	EffectCause	true	frigiver	afbrænding
+Relation	T11	T10	CauseEffect	true	sprængninger	sammenbruddet
+Relation	T10	T11	EffectCause	true	sammenbruddet	sprængninger
+Relation	T2	T18	CauseEffect	true	brand	styrtede sammen
+Relation	T18	T2	EffectCause	true	styrtede sammen	brand
+Relation	T14	T13	CauseEffect	true	sammenstødet	mistet
+Relation	T13	T14	EffectCause	true	mistet	sammenstødet
+Relation	T0	T13	NoRel	true	sammenstødet	mistet
+Relation	T0	T18	NoRel	true	sammenstødet	styrtede sammen
+Relation	T0	T2	NoRel	true	sammenstødet	brand
+Relation	T0	T3	NoRel	true	sammenstødet	underminerede
+Relation	T0	T4	NoRel	true	sammenstødet	bære
+Relation	T10	T18	NoRel	true	sammenbruddet	styrtede sammen
+Relation	T10	T19	NoRel	true	sammenbruddet	brand
+Relation	T10	T2	NoRel	true	sammenbruddet	brand
+Relation	T10	T5	NoRel	true	sammenbruddet	smelter
+Relation	T11	T18	NoRel	true	sprængninger	styrtede sammen
+Relation	T11	T19	NoRel	true	sprængninger	brand
+Relation	T11	T5	NoRel	true	sprængninger	smelter
+Relation	T11	T6	NoRel	true	sprængninger	frigiver
+Relation	T13	T11	NoRel	true	mistet	sprængninger
+Relation	T13	T6	NoRel	true	mistet	frigiver
+Relation	T14	T10	NoRel	true	sammenstødet	sammenbruddet
+Relation	T14	T18	NoRel	true	sammenstødet	styrtede sammen
+Relation	T14	T4	NoRel	true	sammenstødet	bære
+Relation	T14	T7	NoRel	true	sammenstødet	afbrænding
+Relation	T16	T11	NoRel	true	skabe	sprængninger
+Relation	T16	T13	NoRel	true	skabe	mistet
+Relation	T16	T14	NoRel	true	skabe	sammenstødet
+Relation	T16	T19	NoRel	true	skabe	brand
+Relation	T16	T4	NoRel	true	skabe	bære
+Relation	T16	T6	NoRel	true	skabe	frigiver
+Relation	T16	T7	NoRel	true	skabe	afbrænding
+Relation	T18	T10	NoRel	true	styrtede sammen	sammenbruddet
+Relation	T18	T13	NoRel	true	styrtede sammen	mistet
+Relation	T18	T16	NoRel	true	styrtede sammen	skabe
+Relation	T18	T19	NoRel	true	styrtede sammen	brand
+Relation	T18	T3	NoRel	true	styrtede sammen	underminerede
+Relation	T19	T13	NoRel	true	brand	mistet
+Relation	T19	T7	NoRel	true	brand	afbrænding
+Relation	T2	T11	NoRel	true	brand	sprængninger
+Relation	T2	T13	NoRel	true	brand	mistet
+Relation	T2	T16	NoRel	true	brand	skabe
+Relation	T2	T4	NoRel	true	brand	bære
+Relation	T2	T7	NoRel	true	brand	afbrænding
+Relation	T3	T0	NoRel	true	underminerede	sammenstødet
+Relation	T3	T11	NoRel	true	underminerede	sprængninger
+Relation	T3	T13	NoRel	true	underminerede	mistet
+Relation	T3	T14	NoRel	true	underminerede	sammenstødet
+Relation	T3	T16	NoRel	true	underminerede	skabe
+Relation	T3	T18	NoRel	true	underminerede	styrtede sammen
+Relation	T3	T19	NoRel	true	underminerede	brand
+Relation	T3	T5	NoRel	true	underminerede	smelter
+Relation	T3	T7	NoRel	true	underminerede	afbrænding
+Relation	T4	T0	NoRel	true	bære	sammenstødet
+Relation	T4	T18	NoRel	true	bære	styrtede sammen
+Relation	T4	T5	NoRel	true	bære	smelter
+Relation	T4	T6	NoRel	true	bære	frigiver
+Relation	T4	T7	NoRel	true	bære	afbrænding
+Relation	T5	T19	NoRel	true	smelter	brand
+Relation	T5	T2	NoRel	true	smelter	brand
+Relation	T6	T19	NoRel	true	frigiver	brand
+Relation	T6	T3	NoRel	true	frigiver	underminerede
+Relation	T7	T16	NoRel	true	afbrænding	skabe
+Relation	T7	T18	NoRel	true	afbrænding	styrtede sammen
+Relation	T7	T19	NoRel	true	afbrænding	brand
+Relation	T7	T5	NoRel	true	afbrænding	smelter

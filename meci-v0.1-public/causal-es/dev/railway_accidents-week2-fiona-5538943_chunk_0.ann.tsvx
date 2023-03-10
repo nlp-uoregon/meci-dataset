@@ -1,0 +1,81 @@
+Text	El INCIDENTE CSX 8888 ( conocido en Estados Unidos como " los ochos locos " ) se produjo por un tren de carga sin maquinista y fuera de control del CSX Transportation en el estado de Ohio , Estados Unidos , en 2001 .	El tren , remolcado por la locomotora N° 8888 , una EMD SD40-2 , que arrastraba un tren de 47 vagones , algunos de ellos cargados con productos químicos peligrosos , corrió fuera de control por dos horas a velocidades que alcanzaron los 82 km/h .	Fue finalmente detenido con la ayuda de los maquinistas de una segunda locomotora , la cual pudo alcanzar el tren fuera de control y acoplarse al último vagón .	El 15 de mayo de 2001 , aproximadamente a las 12:35 , un tren no tripulado de CSX , formado por la locomotora EMD SD-40-2 número 8888 , 22 vagones cargados y 25 vacíos que pesaba 2.898 toneladas en total , partió del Patio Stanley en Walbridge , Ohio .	El maquinista se bajó del tren para corregir un cambio de vías incorrecto y no pudo volver a subir .
+Event	T0	INCIDENTE	EVENT	3
+Event	T1	produjo	EVENT	81
+Event	T10	partió	EVENT	831
+Event	T11	bajó	EVENT	895
+Event	T12	corregir	EVENT	914
+Event	T13	cambio	EVENT	926
+Event	T14	subir	EVENT	971
+Event	T2	remolcado	EVENT	227
+Event	T3	arrastraba	EVENT	286
+Event	T4	cargados	EVENT	338
+Event	T5	alcanzaron	EVENT	439
+Event	T6	detenido	EVENT	479
+Event	T7	ayuda	EVENT	495
+Event	T8	alcanzar	EVENT	561
+Event	T9	acoplarse	EVENT	597
+Relation	T7	T6	CauseEffect	true	ayuda	detenido
+Relation	T6	T7	EffectCause	true	detenido	ayuda
+Relation	T0	T12	NoRel	true	INCIDENTE	corregir
+Relation	T0	T13	NoRel	true	INCIDENTE	cambio
+Relation	T0	T2	NoRel	true	INCIDENTE	remolcado
+Relation	T0	T4	NoRel	true	INCIDENTE	cargados
+Relation	T1	T0	NoRel	true	produjo	INCIDENTE
+Relation	T1	T11	NoRel	true	produjo	bajó
+Relation	T1	T12	NoRel	true	produjo	corregir
+Relation	T1	T13	NoRel	true	produjo	cambio
+Relation	T1	T2	NoRel	true	produjo	remolcado
+Relation	T1	T3	NoRel	true	produjo	arrastraba
+Relation	T10	T14	NoRel	true	partió	subir
+Relation	T10	T4	NoRel	true	partió	cargados
+Relation	T10	T5	NoRel	true	partió	alcanzaron
+Relation	T10	T6	NoRel	true	partió	detenido
+Relation	T10	T7	NoRel	true	partió	ayuda
+Relation	T11	T13	NoRel	true	bajó	cambio
+Relation	T11	T3	NoRel	true	bajó	arrastraba
+Relation	T11	T6	NoRel	true	bajó	detenido
+Relation	T11	T8	NoRel	true	bajó	alcanzar
+Relation	T12	T10	NoRel	true	corregir	partió
+Relation	T12	T11	NoRel	true	corregir	bajó
+Relation	T13	T3	NoRel	true	cambio	arrastraba
+Relation	T13	T5	NoRel	true	cambio	alcanzaron
+Relation	T14	T0	NoRel	true	subir	INCIDENTE
+Relation	T14	T1	NoRel	true	subir	produjo
+Relation	T14	T10	NoRel	true	subir	partió
+Relation	T14	T2	NoRel	true	subir	remolcado
+Relation	T14	T9	NoRel	true	subir	acoplarse
+Relation	T2	T13	NoRel	true	remolcado	cambio
+Relation	T2	T3	NoRel	true	remolcado	arrastraba
+Relation	T2	T6	NoRel	true	remolcado	detenido
+Relation	T2	T7	NoRel	true	remolcado	ayuda
+Relation	T2	T9	NoRel	true	remolcado	acoplarse
+Relation	T3	T11	NoRel	true	arrastraba	bajó
+Relation	T3	T12	NoRel	true	arrastraba	corregir
+Relation	T3	T5	NoRel	true	arrastraba	alcanzaron
+Relation	T3	T7	NoRel	true	arrastraba	ayuda
+Relation	T4	T1	NoRel	true	cargados	produjo
+Relation	T4	T11	NoRel	true	cargados	bajó
+Relation	T4	T12	NoRel	true	cargados	corregir
+Relation	T4	T13	NoRel	true	cargados	cambio
+Relation	T4	T3	NoRel	true	cargados	arrastraba
+Relation	T4	T5	NoRel	true	cargados	alcanzaron
+Relation	T4	T8	NoRel	true	cargados	alcanzar
+Relation	T5	T12	NoRel	true	alcanzaron	corregir
+Relation	T5	T4	NoRel	true	alcanzaron	cargados
+Relation	T5	T6	NoRel	true	alcanzaron	detenido
+Relation	T6	T2	NoRel	true	detenido	remolcado
+Relation	T6	T5	NoRel	true	detenido	alcanzaron
+Relation	T7	T10	NoRel	true	ayuda	partió
+Relation	T7	T14	NoRel	true	ayuda	subir
+Relation	T8	T0	NoRel	true	alcanzar	INCIDENTE
+Relation	T8	T1	NoRel	true	alcanzar	produjo
+Relation	T8	T11	NoRel	true	alcanzar	bajó
+Relation	T8	T13	NoRel	true	alcanzar	cambio
+Relation	T8	T4	NoRel	true	alcanzar	cargados
+Relation	T8	T5	NoRel	true	alcanzar	alcanzaron
+Relation	T8	T9	NoRel	true	alcanzar	acoplarse
+Relation	T9	T12	NoRel	true	acoplarse	corregir
+Relation	T9	T13	NoRel	true	acoplarse	cambio
+Relation	T9	T14	NoRel	true	acoplarse	subir
+Relation	T9	T6	NoRel	true	acoplarse	detenido
+Relation	T9	T8	NoRel	true	acoplarse	alcanzar

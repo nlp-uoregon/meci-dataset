@@ -1,0 +1,73 @@
+Text	Mozambiquiske civile var RENAMOs primære mål i krigen , selv om de også angreb styresmagtens installationer og økonomisk infrastruktur .	RENAMO var berygtet for brug af børnesoldater .	FRELIMO-administrationen ledet af præsident Machel blev økonomisk ruineret af RENAMOs oprør .	Den militære og diplomatiske entente med Sovjetunionen kunne ikke lette nationens økonomiske elendighed og tørke .	Resultatet var , at Machel signerede en ikke-aggressionspagt med Sydafrika , kendt som Nkomati-aftalen .
+Event	T0	krigen	EVENT	47
+Event	T1	angreb	EVENT	72
+Event	T2	berygtet	EVENT	148
+Event	T3	brug	EVENT	161
+Event	T4	ruineret	EVENT	251
+Event	T5	oprør	EVENT	271
+Event	T6	entente	EVENT	308
+Event	T7	elendighed	EVENT	372
+Event	T8	tørke	EVENT	386
+Event	T9	signerede	EVENT	421
+Event	T10	mål	EVENT	41
+Event	T11	økonomiske	EVENT	361
+Event	T12	lette	EVENT	345
+Relation	T3	T2	CauseEffect	true	brug	berygtet
+Relation	T2	T3	EffectCause	true	berygtet	brug
+Relation	T5	T4	CauseEffect	true	oprør	ruineret
+Relation	T4	T5	EffectCause	true	ruineret	oprør
+Relation	T12	T9	CauseEffect	true	lette	signerede
+Relation	T9	T12	EffectCause	true	signerede	lette
+Relation	T0	T10	NoRel	true	krigen	mål
+Relation	T0	T12	NoRel	true	krigen	lette
+Relation	T0	T3	NoRel	true	krigen	brug
+Relation	T0	T6	NoRel	true	krigen	entente
+Relation	T0	T7	NoRel	true	krigen	elendighed
+Relation	T0	T9	NoRel	true	krigen	signerede
+Relation	T1	T10	NoRel	true	angreb	mål
+Relation	T1	T12	NoRel	true	angreb	lette
+Relation	T1	T7	NoRel	true	angreb	elendighed
+Relation	T10	T0	NoRel	true	mål	krigen
+Relation	T10	T12	NoRel	true	mål	lette
+Relation	T10	T7	NoRel	true	mål	elendighed
+Relation	T10	T9	NoRel	true	mål	signerede
+Relation	T11	T10	NoRel	true	økonomiske	mål
+Relation	T11	T12	NoRel	true	økonomiske	lette
+Relation	T11	T2	NoRel	true	økonomiske	berygtet
+Relation	T11	T3	NoRel	true	økonomiske	brug
+Relation	T11	T6	NoRel	true	økonomiske	entente
+Relation	T11	T7	NoRel	true	økonomiske	elendighed
+Relation	T11	T9	NoRel	true	økonomiske	signerede
+Relation	T12	T0	NoRel	true	lette	krigen
+Relation	T12	T1	NoRel	true	lette	angreb
+Relation	T12	T10	NoRel	true	lette	mål
+Relation	T12	T11	NoRel	true	lette	økonomiske
+Relation	T12	T2	NoRel	true	lette	berygtet
+Relation	T12	T3	NoRel	true	lette	brug
+Relation	T12	T4	NoRel	true	lette	ruineret
+Relation	T12	T5	NoRel	true	lette	oprør
+Relation	T12	T6	NoRel	true	lette	entente
+Relation	T12	T7	NoRel	true	lette	elendighed
+Relation	T2	T1	NoRel	true	berygtet	angreb
+Relation	T2	T6	NoRel	true	berygtet	entente
+Relation	T2	T7	NoRel	true	berygtet	elendighed
+Relation	T3	T0	NoRel	true	brug	krigen
+Relation	T3	T4	NoRel	true	brug	ruineret
+Relation	T3	T8	NoRel	true	brug	tørke
+Relation	T4	T1	NoRel	true	ruineret	angreb
+Relation	T4	T3	NoRel	true	ruineret	brug
+Relation	T4	T6	NoRel	true	ruineret	entente
+Relation	T6	T3	NoRel	true	entente	brug
+Relation	T6	T7	NoRel	true	entente	elendighed
+Relation	T6	T9	NoRel	true	entente	signerede
+Relation	T7	T12	NoRel	true	elendighed	lette
+Relation	T7	T2	NoRel	true	elendighed	berygtet
+Relation	T7	T6	NoRel	true	elendighed	entente
+Relation	T8	T10	NoRel	true	tørke	mål
+Relation	T8	T2	NoRel	true	tørke	berygtet
+Relation	T8	T6	NoRel	true	tørke	entente
+Relation	T8	T7	NoRel	true	tørke	elendighed
+Relation	T9	T1	NoRel	true	signerede	angreb
+Relation	T9	T10	NoRel	true	signerede	mål
+Relation	T9	T6	NoRel	true	signerede	entente
+Relation	T9	T7	NoRel	true	signerede	elendighed

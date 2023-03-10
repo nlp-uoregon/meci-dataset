@@ -1,0 +1,67 @@
+Text	Uçak sağa 90 °'den daha büyük bir açıyla döndü , uçağın gövdesi parçalandı ve kokpit gövdeden ayrıldı .	Yere ilk dokunduğu noktadan yaklaşık 440 m mesafede , uçağın kokpiti tuğla bir eve çarptı .	Uçağın hareketi , kokpitin ayrıldığı yerden yaklaşık 60 m uzakta tamamen durdu .	Uçağın kuyruk bölümü ve bazı parçalar uçağın yere ilk dokunduğu noktadan yaklaşık 470 m uzakta bulundu .	Uçak tamamen parçalandı ve uçağın önemli bir kısmı yangın yüzünden hasar gördü .
+Event	T0	döndü	EVENT	41
+Event	T1	parçalandı	EVENT	64
+Event	T2	ayrıldı	EVENT	94
+Event	T3	çarptı	EVENT	187
+Event	T4	hareketi	EVENT	203
+Event	T5	durdu	EVENT	269
+Event	T6	bulundu	EVENT	372
+Event	T7	parçalandı	EVENT	395
+Event	T8	yangın	EVENT	433
+Event	T9	gördü	EVENT	455
+Event	T10	dokunduğu	EVENT	113
+Event	T11	dokunduğu	EVENT	331
+Event	T12	ayrıldığı	EVENT	223
+Relation	T8	T9	CauseEffect	true	yangın	gördü
+Relation	T9	T8	EffectCause	true	gördü	yangın
+Relation	T0	T1	CauseEffect	true	döndü	parçalandı
+Relation	T1	T0	EffectCause	true	parçalandı	döndü
+Relation	T1	T2	CauseEffect	true	parçalandı	ayrıldı
+Relation	T2	T1	EffectCause	true	ayrıldı	parçalandı
+Relation	T1	T6	CauseEffect	true	parçalandı	bulundu
+Relation	T6	T1	EffectCause	true	bulundu	parçalandı
+Relation	T0	T5	NoRel	true	döndü	durdu
+Relation	T0	T8	NoRel	true	döndü	yangın
+Relation	T0	T9	NoRel	true	döndü	gördü
+Relation	T1	T10	NoRel	true	parçalandı	dokunduğu
+Relation	T1	T9	NoRel	true	parçalandı	gördü
+Relation	T10	T0	NoRel	true	dokunduğu	döndü
+Relation	T10	T2	NoRel	true	dokunduğu	ayrıldı
+Relation	T10	T3	NoRel	true	dokunduğu	çarptı
+Relation	T10	T6	NoRel	true	dokunduğu	bulundu
+Relation	T11	T0	NoRel	true	dokunduğu	döndü
+Relation	T11	T5	NoRel	true	dokunduğu	durdu
+Relation	T11	T7	NoRel	true	dokunduğu	parçalandı
+Relation	T12	T5	NoRel	true	ayrıldığı	durdu
+Relation	T12	T6	NoRel	true	ayrıldığı	bulundu
+Relation	T2	T0	NoRel	true	ayrıldı	döndü
+Relation	T2	T10	NoRel	true	ayrıldı	dokunduğu
+Relation	T2	T3	NoRel	true	ayrıldı	çarptı
+Relation	T2	T4	NoRel	true	ayrıldı	hareketi
+Relation	T2	T8	NoRel	true	ayrıldı	yangın
+Relation	T3	T0	NoRel	true	çarptı	döndü
+Relation	T3	T11	NoRel	true	çarptı	dokunduğu
+Relation	T3	T12	NoRel	true	çarptı	ayrıldığı
+Relation	T4	T12	NoRel	true	hareketi	ayrıldığı
+Relation	T4	T3	NoRel	true	hareketi	çarptı
+Relation	T5	T11	NoRel	true	durdu	dokunduğu
+Relation	T5	T7	NoRel	true	durdu	parçalandı
+Relation	T5	T9	NoRel	true	durdu	gördü
+Relation	T6	T3	NoRel	true	bulundu	çarptı
+Relation	T6	T7	NoRel	true	bulundu	parçalandı
+Relation	T6	T8	NoRel	true	bulundu	yangın
+Relation	T7	T0	NoRel	true	parçalandı	döndü
+Relation	T7	T12	NoRel	true	parçalandı	ayrıldığı
+Relation	T7	T5	NoRel	true	parçalandı	durdu
+Relation	T8	T0	NoRel	true	yangın	döndü
+Relation	T8	T11	NoRel	true	yangın	dokunduğu
+Relation	T8	T12	NoRel	true	yangın	ayrıldığı
+Relation	T8	T3	NoRel	true	yangın	çarptı
+Relation	T8	T4	NoRel	true	yangın	hareketi
+Relation	T8	T5	NoRel	true	yangın	durdu
+Relation	T8	T6	NoRel	true	yangın	bulundu
+Relation	T8	T7	NoRel	true	yangın	parçalandı
+Relation	T9	T0	NoRel	true	gördü	döndü
+Relation	T9	T1	NoRel	true	gördü	parçalandı
+Relation	T9	T12	NoRel	true	gördü	ayrıldığı
+Relation	T9	T5	NoRel	true	gördü	durdu

@@ -1,0 +1,197 @@
+Text	El saldo final fue de doce muertos y 50 heridos de diversa consideración .	El acceso desde el sur a la estación de Pelequén tiene una pequeña pendiente , aunado a que el maquinista del tren de carga no vio la luz roja que está a 600 metros antes de la llegada a la estación .	Estos factores no le dieron la oportunidad de frenar la locomotora a tiempo , a pesar de las advertencias — haciendo sonar repetidamente el pito — que le hizo al Rápido de la Frontera y a que este último de tratara de reiniciar la marcha , a pesar del paso del otro convoy que venia en dirección contraria .	Los primeros en acudir al rescate fueron los lugareños cercanos a la estación , quienes se percataron del incidente cuando escucharon un sonido similar a una explosión .	Debido a la magnitud del hecho y a los precarios instrumentos de rescate que poseían , el Cuerpo de Bomberos de Pelequén solicitó ayuda a los cuerpos de bomberos de Rancagua , San Fernando , Rengo y Santiago .
+Event	T0	muertos	EVENT	27
+Event	T1	heridos	EVENT	40
+Event	T2	acceso	EVENT	78
+Event	T3	vio	EVENT	202
+Event	T4	llegada	EVENT	252
+Event	T5	frenar	EVENT	322
+Event	T6	advertencias	EVENT	369
+Event	T7	sonar	EVENT	393
+Event	T8	pito	EVENT	416
+Event	T9	hizo	EVENT	430
+Event	T10	tratara	EVENT	483
+Event	T11	reiniciar	EVENT	494
+Event	T12	marcha	EVENT	507
+Event	T13	paso	EVENT	528
+Event	T14	venia	EVENT	553
+Event	T15	acudir	EVENT	600
+Event	T16	rescate	EVENT	610
+Event	T17	percataron	EVENT	675
+Event	T18	incidente	EVENT	690
+Event	T19	escucharon	EVENT	707
+Event	T20	explosión	EVENT	742
+Event	T21	hecho	EVENT	779
+Event	T22	rescate	EVENT	819
+Event	T23	ayuda	EVENT	884
+Relation	T18	T0	CauseEffect	true	incidente	muertos
+Relation	T0	T18	EffectCause	true	muertos	incidente
+Relation	T18	T1	CauseEffect	true	incidente	heridos
+Relation	T1	T18	EffectCause	true	heridos	incidente
+Relation	T0	T13	NoRel	true	muertos	paso
+Relation	T0	T16	NoRel	true	muertos	rescate
+Relation	T0	T19	NoRel	true	muertos	escucharon
+Relation	T0	T2	NoRel	true	muertos	acceso
+Relation	T0	T23	NoRel	true	muertos	ayuda
+Relation	T0	T3	NoRel	true	muertos	vio
+Relation	T0	T6	NoRel	true	muertos	advertencias
+Relation	T0	T8	NoRel	true	muertos	pito
+Relation	T1	T0	NoRel	true	heridos	muertos
+Relation	T1	T10	NoRel	true	heridos	tratara
+Relation	T1	T16	NoRel	true	heridos	rescate
+Relation	T1	T2	NoRel	true	heridos	acceso
+Relation	T1	T3	NoRel	true	heridos	vio
+Relation	T10	T12	NoRel	true	tratara	marcha
+Relation	T10	T16	NoRel	true	tratara	rescate
+Relation	T11	T1	NoRel	true	reiniciar	heridos
+Relation	T11	T10	NoRel	true	reiniciar	tratara
+Relation	T11	T19	NoRel	true	reiniciar	escucharon
+Relation	T11	T9	NoRel	true	reiniciar	hizo
+Relation	T12	T13	NoRel	true	marcha	paso
+Relation	T12	T20	NoRel	true	marcha	explosión
+Relation	T12	T9	NoRel	true	marcha	hizo
+Relation	T13	T1	NoRel	true	paso	heridos
+Relation	T13	T20	NoRel	true	paso	explosión
+Relation	T13	T21	NoRel	true	paso	hecho
+Relation	T13	T3	NoRel	true	paso	vio
+Relation	T13	T4	NoRel	true	paso	llegada
+Relation	T14	T11	NoRel	true	venia	reiniciar
+Relation	T14	T15	NoRel	true	venia	acudir
+Relation	T14	T18	NoRel	true	venia	incidente
+Relation	T14	T6	NoRel	true	venia	advertencias
+Relation	T15	T0	NoRel	true	acudir	muertos
+Relation	T15	T14	NoRel	true	acudir	venia
+Relation	T15	T16	NoRel	true	acudir	rescate
+Relation	T15	T2	NoRel	true	acudir	acceso
+Relation	T15	T21	NoRel	true	acudir	hecho
+Relation	T15	T7	NoRel	true	acudir	sonar
+Relation	T16	T0	NoRel	true	rescate	muertos
+Relation	T16	T10	NoRel	true	rescate	tratara
+Relation	T16	T11	NoRel	true	rescate	reiniciar
+Relation	T16	T15	NoRel	true	rescate	acudir
+Relation	T16	T19	NoRel	true	rescate	escucharon
+Relation	T16	T21	NoRel	true	rescate	hecho
+Relation	T16	T22	NoRel	true	rescate	rescate
+Relation	T16	T9	NoRel	true	rescate	hizo
+Relation	T17	T1	NoRel	true	percataron	heridos
+Relation	T17	T11	NoRel	true	percataron	reiniciar
+Relation	T17	T13	NoRel	true	percataron	paso
+Relation	T17	T15	NoRel	true	percataron	acudir
+Relation	T17	T18	NoRel	true	percataron	incidente
+Relation	T17	T19	NoRel	true	percataron	escucharon
+Relation	T17	T21	NoRel	true	percataron	hecho
+Relation	T17	T22	NoRel	true	percataron	rescate
+Relation	T17	T3	NoRel	true	percataron	vio
+Relation	T17	T7	NoRel	true	percataron	sonar
+Relation	T17	T8	NoRel	true	percataron	pito
+Relation	T17	T9	NoRel	true	percataron	hizo
+Relation	T18	T10	NoRel	true	incidente	tratara
+Relation	T18	T14	NoRel	true	incidente	venia
+Relation	T18	T15	NoRel	true	incidente	acudir
+Relation	T18	T16	NoRel	true	incidente	rescate
+Relation	T18	T17	NoRel	true	incidente	percataron
+Relation	T18	T21	NoRel	true	incidente	hecho
+Relation	T18	T22	NoRel	true	incidente	rescate
+Relation	T18	T3	NoRel	true	incidente	vio
+Relation	T19	T0	NoRel	true	escucharon	muertos
+Relation	T19	T11	NoRel	true	escucharon	reiniciar
+Relation	T19	T15	NoRel	true	escucharon	acudir
+Relation	T19	T18	NoRel	true	escucharon	incidente
+Relation	T19	T20	NoRel	true	escucharon	explosión
+Relation	T19	T21	NoRel	true	escucharon	hecho
+Relation	T19	T3	NoRel	true	escucharon	vio
+Relation	T19	T5	NoRel	true	escucharon	frenar
+Relation	T19	T7	NoRel	true	escucharon	sonar
+Relation	T19	T8	NoRel	true	escucharon	pito
+Relation	T2	T1	NoRel	true	acceso	heridos
+Relation	T2	T13	NoRel	true	acceso	paso
+Relation	T2	T23	NoRel	true	acceso	ayuda
+Relation	T2	T6	NoRel	true	acceso	advertencias
+Relation	T2	T9	NoRel	true	acceso	hizo
+Relation	T20	T1	NoRel	true	explosión	heridos
+Relation	T20	T13	NoRel	true	explosión	paso
+Relation	T20	T15	NoRel	true	explosión	acudir
+Relation	T20	T16	NoRel	true	explosión	rescate
+Relation	T20	T17	NoRel	true	explosión	percataron
+Relation	T20	T21	NoRel	true	explosión	hecho
+Relation	T20	T23	NoRel	true	explosión	ayuda
+Relation	T20	T7	NoRel	true	explosión	sonar
+Relation	T21	T13	NoRel	true	hecho	paso
+Relation	T21	T14	NoRel	true	hecho	venia
+Relation	T21	T17	NoRel	true	hecho	percataron
+Relation	T21	T2	NoRel	true	hecho	acceso
+Relation	T21	T20	NoRel	true	hecho	explosión
+Relation	T21	T23	NoRel	true	hecho	ayuda
+Relation	T22	T0	NoRel	true	rescate	muertos
+Relation	T22	T10	NoRel	true	rescate	tratara
+Relation	T22	T11	NoRel	true	rescate	reiniciar
+Relation	T22	T17	NoRel	true	rescate	percataron
+Relation	T22	T2	NoRel	true	rescate	acceso
+Relation	T22	T23	NoRel	true	rescate	ayuda
+Relation	T22	T4	NoRel	true	rescate	llegada
+Relation	T22	T7	NoRel	true	rescate	sonar
+Relation	T23	T0	NoRel	true	ayuda	muertos
+Relation	T23	T16	NoRel	true	ayuda	rescate
+Relation	T23	T18	NoRel	true	ayuda	incidente
+Relation	T23	T20	NoRel	true	ayuda	explosión
+Relation	T23	T21	NoRel	true	ayuda	hecho
+Relation	T23	T4	NoRel	true	ayuda	llegada
+Relation	T23	T5	NoRel	true	ayuda	frenar
+Relation	T23	T9	NoRel	true	ayuda	hizo
+Relation	T3	T1	NoRel	true	vio	heridos
+Relation	T3	T10	NoRel	true	vio	tratara
+Relation	T3	T17	NoRel	true	vio	percataron
+Relation	T3	T18	NoRel	true	vio	incidente
+Relation	T3	T20	NoRel	true	vio	explosión
+Relation	T3	T22	NoRel	true	vio	rescate
+Relation	T3	T23	NoRel	true	vio	ayuda
+Relation	T3	T7	NoRel	true	vio	sonar
+Relation	T3	T9	NoRel	true	vio	hizo
+Relation	T4	T0	NoRel	true	llegada	muertos
+Relation	T4	T10	NoRel	true	llegada	tratara
+Relation	T4	T16	NoRel	true	llegada	rescate
+Relation	T4	T19	NoRel	true	llegada	escucharon
+Relation	T4	T21	NoRel	true	llegada	hecho
+Relation	T4	T22	NoRel	true	llegada	rescate
+Relation	T4	T6	NoRel	true	llegada	advertencias
+Relation	T4	T8	NoRel	true	llegada	pito
+Relation	T5	T1	NoRel	true	frenar	heridos
+Relation	T5	T13	NoRel	true	frenar	paso
+Relation	T5	T21	NoRel	true	frenar	hecho
+Relation	T5	T22	NoRel	true	frenar	rescate
+Relation	T5	T23	NoRel	true	frenar	ayuda
+Relation	T6	T1	NoRel	true	advertencias	heridos
+Relation	T6	T10	NoRel	true	advertencias	tratara
+Relation	T6	T13	NoRel	true	advertencias	paso
+Relation	T6	T15	NoRel	true	advertencias	acudir
+Relation	T6	T16	NoRel	true	advertencias	rescate
+Relation	T6	T17	NoRel	true	advertencias	percataron
+Relation	T6	T19	NoRel	true	advertencias	escucharon
+Relation	T6	T2	NoRel	true	advertencias	acceso
+Relation	T6	T21	NoRel	true	advertencias	hecho
+Relation	T6	T23	NoRel	true	advertencias	ayuda
+Relation	T6	T5	NoRel	true	advertencias	frenar
+Relation	T6	T9	NoRel	true	advertencias	hizo
+Relation	T7	T11	NoRel	true	sonar	reiniciar
+Relation	T7	T12	NoRel	true	sonar	marcha
+Relation	T7	T14	NoRel	true	sonar	venia
+Relation	T7	T17	NoRel	true	sonar	percataron
+Relation	T7	T18	NoRel	true	sonar	incidente
+Relation	T7	T2	NoRel	true	sonar	acceso
+Relation	T7	T22	NoRel	true	sonar	rescate
+Relation	T7	T23	NoRel	true	sonar	ayuda
+Relation	T7	T5	NoRel	true	sonar	frenar
+Relation	T8	T1	NoRel	true	pito	heridos
+Relation	T8	T10	NoRel	true	pito	tratara
+Relation	T8	T13	NoRel	true	pito	paso
+Relation	T8	T14	NoRel	true	pito	venia
+Relation	T8	T16	NoRel	true	pito	rescate
+Relation	T8	T17	NoRel	true	pito	percataron
+Relation	T8	T2	NoRel	true	pito	acceso
+Relation	T8	T21	NoRel	true	pito	hecho
+Relation	T8	T5	NoRel	true	pito	frenar
+Relation	T9	T0	NoRel	true	hizo	muertos
+Relation	T9	T11	NoRel	true	hizo	reiniciar
+Relation	T9	T15	NoRel	true	hizo	acudir
+Relation	T9	T17	NoRel	true	hizo	percataron
+Relation	T9	T19	NoRel	true	hizo	escucharon
+Relation	T9	T2	NoRel	true	hizo	acceso

@@ -1,0 +1,58 @@
+Text	- - Cumhurbaşkanı Abdullah Gül : " Ümit ederiz can kaybı ve zarar büyük olmaz .	Tabii afetin acısını bilen bir ülke olarak biz daima bu tip durumlarda ihtiyaç olduğunda karşılıklı yardımlaşmaya da önem veririz .	" Dışişleri Bakanı Ahmet Davutoğlu , özel birim olayları izlemek için kurulacak ve yardımlar için Japonya Dışişleri Bakanı Yukio Edano ile görüşeceğini bildirdi .	Türk Kızılayı yazılı bir açıklama ile deprem bölgesine bir ekip göndereceklerini açıkladı .	Kızılay açıklamasında Japonya , Tayvan , Endonezya , Filipinler , Rusya ve Hawaii'ye yardım göndermeye hazır olduğunu belirtti .
+Event	T0	kaybı	EVENT	51
+Event	T1	kurulacak	EVENT	282
+Event	T2	bildirdi	EVENT	364
+Event	T3	açıklama	EVENT	400
+Event	T4	açıkladı	EVENT	456
+Event	T5	belirtti	EVENT	585
+Event	T6	zarar	EVENT	60
+Event	T7	afetin	EVENT	86
+Event	T8	acısını	EVENT	93
+Event	T9	veririz	EVENT	202
+Event	T10	olayları	EVENT	260
+Event	T11	deprem	EVENT	413
+Relation	T7	T8	CauseEffect	true	afetin	acısını
+Relation	T8	T7	EffectCause	true	acısını	afetin
+Relation	T8	T9	CauseEffect	true	acısını	veririz
+Relation	T9	T8	EffectCause	true	veririz	acısını
+Relation	T11	T3	CauseEffect	true	deprem	açıklama
+Relation	T3	T11	EffectCause	true	açıklama	deprem
+Relation	T3	T5	CauseEffect	true	açıklama	belirtti
+Relation	T5	T3	EffectCause	true	belirtti	açıklama
+Relation	T3	T4	CauseEffect	true	açıklama	açıkladı
+Relation	T4	T3	EffectCause	true	açıkladı	açıklama
+Relation	T0	T10	NoRel	true	kaybı	olayları
+Relation	T0	T11	NoRel	true	kaybı	deprem
+Relation	T0	T2	NoRel	true	kaybı	bildirdi
+Relation	T0	T4	NoRel	true	kaybı	açıkladı
+Relation	T0	T6	NoRel	true	kaybı	zarar
+Relation	T0	T9	NoRel	true	kaybı	veririz
+Relation	T1	T7	NoRel	true	kurulacak	afetin
+Relation	T1	T8	NoRel	true	kurulacak	acısını
+Relation	T1	T9	NoRel	true	kurulacak	veririz
+Relation	T10	T0	NoRel	true	olayları	kaybı
+Relation	T11	T6	NoRel	true	deprem	zarar
+Relation	T2	T0	NoRel	true	bildirdi	kaybı
+Relation	T2	T10	NoRel	true	bildirdi	olayları
+Relation	T2	T6	NoRel	true	bildirdi	zarar
+Relation	T2	T9	NoRel	true	bildirdi	veririz
+Relation	T3	T0	NoRel	true	açıklama	kaybı
+Relation	T3	T2	NoRel	true	açıklama	bildirdi
+Relation	T3	T8	NoRel	true	açıklama	acısını
+Relation	T4	T1	NoRel	true	açıkladı	kurulacak
+Relation	T4	T7	NoRel	true	açıkladı	afetin
+Relation	T4	T8	NoRel	true	açıkladı	acısını
+Relation	T5	T1	NoRel	true	belirtti	kurulacak
+Relation	T5	T4	NoRel	true	belirtti	açıkladı
+Relation	T5	T6	NoRel	true	belirtti	zarar
+Relation	T6	T2	NoRel	true	zarar	bildirdi
+Relation	T6	T4	NoRel	true	zarar	açıkladı
+Relation	T6	T7	NoRel	true	zarar	afetin
+Relation	T6	T8	NoRel	true	zarar	acısını
+Relation	T7	T11	NoRel	true	afetin	deprem
+Relation	T7	T3	NoRel	true	afetin	açıklama
+Relation	T7	T4	NoRel	true	afetin	açıkladı
+Relation	T7	T6	NoRel	true	afetin	zarar
+Relation	T8	T4	NoRel	true	acısını	açıkladı
+Relation	T9	T1	NoRel	true	veririz	kurulacak
+Relation	T9	T2	NoRel	true	veririz	bildirdi

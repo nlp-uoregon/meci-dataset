@@ -1,0 +1,47 @@
+Text	Bazı bölge sakinlerine eşyaları duvara sabitlemeleri ve fırtına geçene kadar içeride kalmaları söylendi .	Tropikal fırtnanın küçük olması beklendiğinden , bölge boşaltılmadı .	Ocracoke Adası'nda hazırlık olarak gemiler uzaklaştırıldı .	Fırtına tehdidi yüzünden Atlas Okyanusu kıyısında yapılacak bir balık tutma yarışması iptal edildi ve bunun yerel ekonomiye etkisi oldu .	İlk başta meteorologlar , Gabrielle'in nereye gideceği hakkında emin değildiler .
+Event	T2	söylendi	EVENT	95
+Event	T3	beklendiğinden	EVENT	138
+Event	T4	boşaltılmadı	EVENT	161
+Event	T5	hazırlık	EVENT	195
+Event	T6	uzaklaştırıldı	EVENT	219
+Event	T9	etkisi	EVENT	360
+Event	T1	fırtına	EVENT	56
+Event	T10	fırtnanın	EVENT	115
+Event	T7	Fırtına	EVENT	236
+Event	T8	iptal edildi	EVENT	322
+Relation	T1	T2	CauseEffect	true	fırtına	söylendi
+Relation	T2	T1	EffectCause	true	söylendi	fırtına
+Relation	T3	T4	CauseEffect	true	beklendiğinden	boşaltılmadı
+Relation	T4	T3	EffectCause	true	boşaltılmadı	beklendiğinden
+Relation	T5	T6	CauseEffect	true	hazırlık	uzaklaştırıldı
+Relation	T6	T5	EffectCause	true	uzaklaştırıldı	hazırlık
+Relation	T10	T6	CauseEffect	true	fırtnanın	uzaklaştırıldı
+Relation	T6	T10	EffectCause	true	uzaklaştırıldı	fırtnanın
+Relation	T7	T8	CauseEffect	true	Fırtına	iptal edildi
+Relation	T8	T7	EffectCause	true	iptal edildi	Fırtına
+Relation	T8	T9	CauseEffect	true	iptal edildi	etkisi
+Relation	T9	T8	EffectCause	true	etkisi	iptal edildi
+Relation	T1	T10	NoRel	true	fırtına	fırtnanın
+Relation	T1	T3	NoRel	true	fırtına	beklendiğinden
+Relation	T1	T4	NoRel	true	fırtına	boşaltılmadı
+Relation	T1	T6	NoRel	true	fırtına	uzaklaştırıldı
+Relation	T1	T7	NoRel	true	fırtına	Fırtına
+Relation	T10	T4	NoRel	true	fırtnanın	boşaltılmadı
+Relation	T10	T9	NoRel	true	fırtnanın	etkisi
+Relation	T2	T6	NoRel	true	söylendi	uzaklaştırıldı
+Relation	T3	T1	NoRel	true	beklendiğinden	fırtına
+Relation	T3	T2	NoRel	true	beklendiğinden	söylendi
+Relation	T3	T5	NoRel	true	beklendiğinden	hazırlık
+Relation	T3	T7	NoRel	true	beklendiğinden	Fırtına
+Relation	T3	T8	NoRel	true	beklendiğinden	iptal edildi
+Relation	T4	T10	NoRel	true	boşaltılmadı	fırtnanın
+Relation	T4	T2	NoRel	true	boşaltılmadı	söylendi
+Relation	T4	T5	NoRel	true	boşaltılmadı	hazırlık
+Relation	T4	T8	NoRel	true	boşaltılmadı	iptal edildi
+Relation	T5	T3	NoRel	true	hazırlık	beklendiğinden
+Relation	T5	T8	NoRel	true	hazırlık	iptal edildi
+Relation	T5	T9	NoRel	true	hazırlık	etkisi
+Relation	T6	T8	NoRel	true	uzaklaştırıldı	iptal edildi
+Relation	T7	T9	NoRel	true	Fırtına	etkisi
+Relation	T8	T3	NoRel	true	iptal edildi	beklendiğinden
+Relation	T9	T3	NoRel	true	etkisi	beklendiğinden

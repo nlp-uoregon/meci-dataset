@@ -1,0 +1,82 @@
+Text	Koordinatlar : 2008 AKTÜTÜN SALDIRISI , 3 Ekim 2008'de PKK ile Türk Silahlı Kuvvetleri arasında Hakkâri'nin Şemdinli ilçesindeki Aktütün Karakolunda yaşanan çatışmadır .	Çatışma Irak sınıra 4 kilometre , İran sınırına ise 40 kilometre uzaklıkta bulunan 13. Jandarma Sınır Bölük Komutanlığında cereyan etmiştir , burası kamuoyu tarafından Aktütün Karakolu olarak bilinmektedir .	200 ila 400 PKK'lının ağır silahlarla Şemdinli Aktütün Karakoluna Kuzey Irak'tan ateş açmaları sonucu 15 Türk askeri ölmüş , ikisi ağır olmak üzere 20 askerin de yaralandığı saldırıda 23 PKK'lı da ölmüştür .	Çatışma sırasında iki askerle bağlantı kesilmiştir .	6 Ekim 2008 günü kaybolan iki askerin de öldüğü belirlenmiştir .
+Event	T1	çatışmadır	EVENT	157
+Event	T2	Çatışma	EVENT	170
+Event	T3	etmiştir	EVENT	301
+Event	T4	ölmüş	EVENT	495
+Event	T5	saldırıda	EVENT	552
+Event	T6	ölmüştür	EVENT	575
+Event	T7	Çatışma	EVENT	586
+Event	T8	kesilmiştir	EVENT	625
+Event	T9	kaybolan	EVENT	656
+Event	T10	belirlenmiştir	EVENT	687
+Event	T11	2008 AKTÜTÜN SALDIRIS	EVENT	15
+Event	T12	açmaları	EVENT	464
+Event	T13	yaralandığı	EVENT	540
+Relation	T12	T4	CauseEffect	true	açmaları	ölmüş
+Relation	T4	T12	EffectCause	true	ölmüş	açmaları
+Relation	T12	T11	CauseEffect	true	açmaları	2008 AKTÜTÜN SALDIRIS
+Relation	T11	T12	EffectCause	true	2008 AKTÜTÜN SALDIRIS	açmaları
+Relation	T12	T13	CauseEffect	true	açmaları	yaralandığı
+Relation	T13	T12	EffectCause	true	yaralandığı	açmaları
+Relation	T1	T6	CauseEffect	true	çatışmadır	ölmüştür
+Relation	T6	T1	EffectCause	true	ölmüştür	çatışmadır
+Relation	T7	T8	CauseEffect	true	Çatışma	kesilmiştir
+Relation	T8	T7	EffectCause	true	kesilmiştir	Çatışma
+Relation	T8	T10	CauseEffect	true	kesilmiştir	belirlenmiştir
+Relation	T10	T8	EffectCause	true	belirlenmiştir	kesilmiştir
+Relation	T1	T10	NoRel	true	çatışmadır	belirlenmiştir
+Relation	T1	T12	NoRel	true	çatışmadır	açmaları
+Relation	T1	T4	NoRel	true	çatışmadır	ölmüş
+Relation	T1	T7	NoRel	true	çatışmadır	Çatışma
+Relation	T10	T11	NoRel	true	belirlenmiştir	2008 AKTÜTÜN SALDIRIS
+Relation	T10	T4	NoRel	true	belirlenmiştir	ölmüş
+Relation	T10	T6	NoRel	true	belirlenmiştir	ölmüştür
+Relation	T10	T9	NoRel	true	belirlenmiştir	kaybolan
+Relation	T11	T1	NoRel	true	2008 AKTÜTÜN SALDIRIS	çatışmadır
+Relation	T11	T10	NoRel	true	2008 AKTÜTÜN SALDIRIS	belirlenmiştir
+Relation	T11	T13	NoRel	true	2008 AKTÜTÜN SALDIRIS	yaralandığı
+Relation	T11	T7	NoRel	true	2008 AKTÜTÜN SALDIRIS	Çatışma
+Relation	T11	T8	NoRel	true	2008 AKTÜTÜN SALDIRIS	kesilmiştir
+Relation	T12	T3	NoRel	true	açmaları	etmiştir
+Relation	T12	T5	NoRel	true	açmaları	saldırıda
+Relation	T12	T6	NoRel	true	açmaları	ölmüştür
+Relation	T12	T7	NoRel	true	açmaları	Çatışma
+Relation	T12	T8	NoRel	true	açmaları	kesilmiştir
+Relation	T13	T10	NoRel	true	yaralandığı	belirlenmiştir
+Relation	T13	T2	NoRel	true	yaralandığı	Çatışma
+Relation	T13	T5	NoRel	true	yaralandığı	saldırıda
+Relation	T13	T6	NoRel	true	yaralandığı	ölmüştür
+Relation	T13	T9	NoRel	true	yaralandığı	kaybolan
+Relation	T2	T3	NoRel	true	Çatışma	etmiştir
+Relation	T2	T5	NoRel	true	Çatışma	saldırıda
+Relation	T2	T6	NoRel	true	Çatışma	ölmüştür
+Relation	T2	T9	NoRel	true	Çatışma	kaybolan
+Relation	T3	T4	NoRel	true	etmiştir	ölmüş
+Relation	T4	T5	NoRel	true	ölmüş	saldırıda
+Relation	T4	T8	NoRel	true	ölmüş	kesilmiştir
+Relation	T5	T10	NoRel	true	saldırıda	belirlenmiştir
+Relation	T5	T11	NoRel	true	saldırıda	2008 AKTÜTÜN SALDIRIS
+Relation	T5	T6	NoRel	true	saldırıda	ölmüştür
+Relation	T5	T7	NoRel	true	saldırıda	Çatışma
+Relation	T5	T8	NoRel	true	saldırıda	kesilmiştir
+Relation	T6	T12	NoRel	true	ölmüştür	açmaları
+Relation	T6	T3	NoRel	true	ölmüştür	etmiştir
+Relation	T6	T7	NoRel	true	ölmüştür	Çatışma
+Relation	T6	T9	NoRel	true	ölmüştür	kaybolan
+Relation	T7	T1	NoRel	true	Çatışma	çatışmadır
+Relation	T7	T10	NoRel	true	Çatışma	belirlenmiştir
+Relation	T7	T11	NoRel	true	Çatışma	2008 AKTÜTÜN SALDIRIS
+Relation	T7	T2	NoRel	true	Çatışma	Çatışma
+Relation	T7	T3	NoRel	true	Çatışma	etmiştir
+Relation	T7	T5	NoRel	true	Çatışma	saldırıda
+Relation	T7	T6	NoRel	true	Çatışma	ölmüştür
+Relation	T8	T11	NoRel	true	kesilmiştir	2008 AKTÜTÜN SALDIRIS
+Relation	T8	T5	NoRel	true	kesilmiştir	saldırıda
+Relation	T8	T6	NoRel	true	kesilmiştir	ölmüştür
+Relation	T8	T9	NoRel	true	kesilmiştir	kaybolan
+Relation	T9	T1	NoRel	true	kaybolan	çatışmadır
+Relation	T9	T12	NoRel	true	kaybolan	açmaları
+Relation	T9	T13	NoRel	true	kaybolan	yaralandığı
+Relation	T9	T4	NoRel	true	kaybolan	ölmüş
+Relation	T9	T6	NoRel	true	kaybolan	ölmüştür
+Relation	T9	T8	NoRel	true	kaybolan	kesilmiştir

@@ -1,0 +1,147 @@
+Text	Deprem sebebiyle bazı binalarda hasar oluştuğu , bölgede bulunan iki caminin minaresinin yıkıldığı bildirildi .	Deprem bölgesinde bulunan ve panik yaşayan birçok vatandaş geceyi evlerinden dışarıda geçirdi .	20 Mayıs'ta da devam eden artçılar sebebiyle evlerine giremeyen ve bölgeden ayrılmak isteyen kişiler otogarlara yöneldi .	Cuma namazı vaktinde artçıların ve tehlikenin devam etmesi sebebiyle namaz , camiler yerine belirlenmiş meydanlarda kılındı .	Halkın yoğun olarak bulunduğu ve kentten ayrılmak için beklediği otogarda depremde hayatını kaybedenler için gıyabi cenaze namazı kılındı .
+Event	T0	Deprem	EVENT	0
+Event	T2	bildirildi	EVENT	99
+Event	T3	panik	EVENT	141
+Event	T4	geçirdi	EVENT	198
+Event	T5	artçılar	EVENT	234
+Event	T7	yöneldi	EVENT	320
+Event	T8	etmesi	EVENT	382
+Event	T10	kılındı	EVENT	446
+Event	T13	kılındı	EVENT	586
+Event	T1	oluştuğu	EVENT	38
+Event	T14	yıkıldığı	EVENT	89
+Event	T6	isteyen	EVENT	293
+Event	T15	giremeyen	EVENT	262
+Event	T16	artçıların	EVENT	351
+Event	T17	tehlikenin	EVENT	365
+Event	T9	beklediği	EVENT	511
+Event	T11	depremde	EVENT	530
+Event	T12	kaybedenler	EVENT	548
+Relation	T0	T2	CauseEffect	true	Deprem	bildirildi
+Relation	T2	T0	EffectCause	true	bildirildi	Deprem
+Relation	T0	T1	CauseEffect	true	Deprem	oluştuğu
+Relation	T1	T0	EffectCause	true	oluştuğu	Deprem
+Relation	T0	T14	CauseEffect	true	Deprem	yıkıldığı
+Relation	T14	T0	EffectCause	true	yıkıldığı	Deprem
+Relation	T0	T3	CauseEffect	true	Deprem	panik
+Relation	T3	T0	EffectCause	true	panik	Deprem
+Relation	T0	T5	CauseEffect	true	Deprem	artçılar
+Relation	T5	T0	EffectCause	true	artçılar	Deprem
+Relation	T5	T15	CauseEffect	true	artçılar	giremeyen
+Relation	T15	T5	EffectCause	true	giremeyen	artçılar
+Relation	T15	T6	CauseEffect	true	giremeyen	isteyen
+Relation	T6	T15	EffectCause	true	isteyen	giremeyen
+Relation	T6	T7	CauseEffect	true	isteyen	yöneldi
+Relation	T7	T6	EffectCause	true	yöneldi	isteyen
+Relation	T0	T16	CauseEffect	true	Deprem	artçıların
+Relation	T16	T0	EffectCause	true	artçıların	Deprem
+Relation	T0	T17	CauseEffect	true	Deprem	tehlikenin
+Relation	T17	T0	EffectCause	true	tehlikenin	Deprem
+Relation	T16	T8	CauseEffect	true	artçıların	etmesi
+Relation	T8	T16	EffectCause	true	etmesi	artçıların
+Relation	T17	T8	CauseEffect	true	tehlikenin	etmesi
+Relation	T8	T17	EffectCause	true	etmesi	tehlikenin
+Relation	T8	T10	CauseEffect	true	etmesi	kılındı
+Relation	T10	T8	EffectCause	true	kılındı	etmesi
+Relation	T7	T9	CauseEffect	true	yöneldi	beklediği
+Relation	T9	T7	EffectCause	true	beklediği	yöneldi
+Relation	T9	T13	CauseEffect	true	beklediği	kılındı
+Relation	T13	T9	EffectCause	true	kılındı	beklediği
+Relation	T11	T12	CauseEffect	true	depremde	kaybedenler
+Relation	T12	T11	EffectCause	true	kaybedenler	depremde
+Relation	T12	T13	CauseEffect	true	kaybedenler	kılındı
+Relation	T13	T12	EffectCause	true	kılındı	kaybedenler
+Relation	T0	T12	CauseEffect	true	Deprem	kaybedenler
+Relation	T12	T0	EffectCause	true	kaybedenler	Deprem
+Relation	T0	T10	NoRel	true	Deprem	kılındı
+Relation	T0	T11	NoRel	true	Deprem	depremde
+Relation	T0	T13	NoRel	true	Deprem	kılındı
+Relation	T0	T6	NoRel	true	Deprem	isteyen
+Relation	T0	T7	NoRel	true	Deprem	yöneldi
+Relation	T0	T9	NoRel	true	Deprem	beklediği
+Relation	T1	T13	NoRel	true	oluştuğu	kılındı
+Relation	T1	T15	NoRel	true	oluştuğu	giremeyen
+Relation	T1	T2	NoRel	true	oluştuğu	bildirildi
+Relation	T10	T11	NoRel	true	kılındı	depremde
+Relation	T10	T15	NoRel	true	kılındı	giremeyen
+Relation	T11	T13	NoRel	true	depremde	kılındı
+Relation	T11	T15	NoRel	true	depremde	giremeyen
+Relation	T11	T4	NoRel	true	depremde	geçirdi
+Relation	T11	T5	NoRel	true	depremde	artçılar
+Relation	T11	T6	NoRel	true	depremde	isteyen
+Relation	T11	T8	NoRel	true	depremde	etmesi
+Relation	T12	T1	NoRel	true	kaybedenler	oluştuğu
+Relation	T12	T15	NoRel	true	kaybedenler	giremeyen
+Relation	T12	T4	NoRel	true	kaybedenler	geçirdi
+Relation	T12	T8	NoRel	true	kaybedenler	etmesi
+Relation	T12	T9	NoRel	true	kaybedenler	beklediği
+Relation	T13	T0	NoRel	true	kılındı	Deprem
+Relation	T13	T1	NoRel	true	kılındı	oluştuğu
+Relation	T13	T15	NoRel	true	kılındı	giremeyen
+Relation	T13	T3	NoRel	true	kılındı	panik
+Relation	T13	T4	NoRel	true	kılındı	geçirdi
+Relation	T13	T5	NoRel	true	kılındı	artçılar
+Relation	T13	T6	NoRel	true	kılındı	isteyen
+Relation	T14	T10	NoRel	true	yıkıldığı	kılındı
+Relation	T14	T11	NoRel	true	yıkıldığı	depremde
+Relation	T14	T15	NoRel	true	yıkıldığı	giremeyen
+Relation	T14	T16	NoRel	true	yıkıldığı	artçıların
+Relation	T14	T17	NoRel	true	yıkıldığı	tehlikenin
+Relation	T14	T2	NoRel	true	yıkıldığı	bildirildi
+Relation	T14	T5	NoRel	true	yıkıldığı	artçılar
+Relation	T14	T6	NoRel	true	yıkıldığı	isteyen
+Relation	T14	T8	NoRel	true	yıkıldığı	etmesi
+Relation	T15	T12	NoRel	true	giremeyen	kaybedenler
+Relation	T15	T17	NoRel	true	giremeyen	tehlikenin
+Relation	T15	T2	NoRel	true	giremeyen	bildirildi
+Relation	T15	T3	NoRel	true	giremeyen	panik
+Relation	T15	T4	NoRel	true	giremeyen	geçirdi
+Relation	T15	T8	NoRel	true	giremeyen	etmesi
+Relation	T16	T1	NoRel	true	artçıların	oluştuğu
+Relation	T16	T11	NoRel	true	artçıların	depremde
+Relation	T16	T14	NoRel	true	artçıların	yıkıldığı
+Relation	T16	T15	NoRel	true	artçıların	giremeyen
+Relation	T16	T17	NoRel	true	artçıların	tehlikenin
+Relation	T16	T2	NoRel	true	artçıların	bildirildi
+Relation	T17	T13	NoRel	true	tehlikenin	kılındı
+Relation	T17	T7	NoRel	true	tehlikenin	yöneldi
+Relation	T2	T1	NoRel	true	bildirildi	oluştuğu
+Relation	T2	T12	NoRel	true	bildirildi	kaybedenler
+Relation	T2	T14	NoRel	true	bildirildi	yıkıldığı
+Relation	T2	T17	NoRel	true	bildirildi	tehlikenin
+Relation	T2	T4	NoRel	true	bildirildi	geçirdi
+Relation	T2	T7	NoRel	true	bildirildi	yöneldi
+Relation	T2	T9	NoRel	true	bildirildi	beklediği
+Relation	T3	T1	NoRel	true	panik	oluştuğu
+Relation	T3	T12	NoRel	true	panik	kaybedenler
+Relation	T3	T13	NoRel	true	panik	kılındı
+Relation	T4	T0	NoRel	true	geçirdi	Deprem
+Relation	T4	T10	NoRel	true	geçirdi	kılındı
+Relation	T4	T13	NoRel	true	geçirdi	kılındı
+Relation	T4	T17	NoRel	true	geçirdi	tehlikenin
+Relation	T4	T2	NoRel	true	geçirdi	bildirildi
+Relation	T4	T8	NoRel	true	geçirdi	etmesi
+Relation	T5	T11	NoRel	true	artçılar	depremde
+Relation	T5	T13	NoRel	true	artçılar	kılındı
+Relation	T5	T16	NoRel	true	artçılar	artçıların
+Relation	T5	T3	NoRel	true	artçılar	panik
+Relation	T5	T4	NoRel	true	artçılar	geçirdi
+Relation	T6	T1	NoRel	true	isteyen	oluştuğu
+Relation	T6	T2	NoRel	true	isteyen	bildirildi
+Relation	T6	T5	NoRel	true	isteyen	artçılar
+Relation	T6	T9	NoRel	true	isteyen	beklediği
+Relation	T7	T14	NoRel	true	yöneldi	yıkıldığı
+Relation	T7	T15	NoRel	true	yöneldi	giremeyen
+Relation	T7	T17	NoRel	true	yöneldi	tehlikenin
+Relation	T7	T2	NoRel	true	yöneldi	bildirildi
+Relation	T8	T0	NoRel	true	etmesi	Deprem
+Relation	T8	T1	NoRel	true	etmesi	oluştuğu
+Relation	T8	T11	NoRel	true	etmesi	depremde
+Relation	T8	T14	NoRel	true	etmesi	yıkıldığı
+Relation	T8	T3	NoRel	true	etmesi	panik
+Relation	T8	T7	NoRel	true	etmesi	yöneldi
+Relation	T9	T0	NoRel	true	beklediği	Deprem
+Relation	T9	T11	NoRel	true	beklediği	depremde
+Relation	T9	T12	NoRel	true	beklediği	kaybedenler
+Relation	T9	T15	NoRel	true	beklediği	giremeyen
+Relation	T9	T17	NoRel	true	beklediği	tehlikenin

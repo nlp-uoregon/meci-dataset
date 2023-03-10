@@ -1,0 +1,92 @@
+Text	Aşağıdakiler reddettiklerinde Sovyet askerleri tarafından kanala atılan benzin , pentaeritritol tetranitrat ve trinitrotoluen karışımının yol açtığı patlamada diri diri yakılarak öldürüldüler .	Kanalda saklanan insanlar ya askeriyeye sürülmelerini engellemek ya da Sovyet saldırılarından korktukları için saklanıyorlardı .	Katliamda çocuklar , yaşlılar ve savaşçılar dahil 105 kişi öldürüldü .	Kurbanların 61'i köylülerdi .	Yüzlerce Kızıl Ordu askeri , herhangi bir savaşçının köyü savunmak için müdahale edip etmeyeceğini görmek için köyde kaldı .
+Event	T0	reddettiklerinde	EVENT	13
+Event	T1	atılan	EVENT	65
+Event	T2	öldürüldüler	EVENT	179
+Event	T3	sürülmelerini	EVENT	234
+Event	T4	Katliamda	EVENT	323
+Event	T5	öldürüldü	EVENT	382
+Event	T6	müdahale	EVENT	496
+Event	T7	görmek	EVENT	523
+Event	T8	kaldı	EVENT	541
+Event	T9	patlamada	EVENT	149
+Event	T10	yakılarak	EVENT	169
+Event	T11	saklanan	EVENT	202
+Event	T12	saldırılarından	EVENT	272
+Event	T13	saklanıyorlardı	EVENT	305
+Event	T14	engellemek	EVENT	248
+Relation	T0	T1	CauseEffect	true	reddettiklerinde	atılan
+Relation	T1	T0	EffectCause	true	atılan	reddettiklerinde
+Relation	T1	T9	CauseEffect	true	atılan	patlamada
+Relation	T9	T1	EffectCause	true	patlamada	atılan
+Relation	T9	T10	CauseEffect	true	patlamada	yakılarak
+Relation	T10	T9	EffectCause	true	yakılarak	patlamada
+Relation	T10	T2	CauseEffect	true	yakılarak	öldürüldüler
+Relation	T2	T10	EffectCause	true	öldürüldüler	yakılarak
+Relation	T1	T4	CauseEffect	true	atılan	Katliamda
+Relation	T4	T1	EffectCause	true	Katliamda	atılan
+Relation	T4	T5	CauseEffect	true	Katliamda	öldürüldü
+Relation	T5	T4	EffectCause	true	öldürüldü	Katliamda
+Relation	T0	T3	NoRel	true	reddettiklerinde	sürülmelerini
+Relation	T0	T4	NoRel	true	reddettiklerinde	Katliamda
+Relation	T0	T5	NoRel	true	reddettiklerinde	öldürüldü
+Relation	T1	T13	NoRel	true	atılan	saklanıyorlardı
+Relation	T1	T2	NoRel	true	atılan	öldürüldüler
+Relation	T1	T3	NoRel	true	atılan	sürülmelerini
+Relation	T10	T13	NoRel	true	yakılarak	saklanıyorlardı
+Relation	T10	T5	NoRel	true	yakılarak	öldürüldü
+Relation	T10	T6	NoRel	true	yakılarak	müdahale
+Relation	T11	T14	NoRel	true	saklanan	engellemek
+Relation	T11	T3	NoRel	true	saklanan	sürülmelerini
+Relation	T11	T4	NoRel	true	saklanan	Katliamda
+Relation	T11	T7	NoRel	true	saklanan	görmek
+Relation	T11	T9	NoRel	true	saklanan	patlamada
+Relation	T12	T0	NoRel	true	saldırılarından	reddettiklerinde
+Relation	T12	T1	NoRel	true	saldırılarından	atılan
+Relation	T12	T13	NoRel	true	saldırılarından	saklanıyorlardı
+Relation	T12	T5	NoRel	true	saldırılarından	öldürüldü
+Relation	T12	T9	NoRel	true	saldırılarından	patlamada
+Relation	T13	T14	NoRel	true	saklanıyorlardı	engellemek
+Relation	T13	T8	NoRel	true	saklanıyorlardı	kaldı
+Relation	T13	T9	NoRel	true	saklanıyorlardı	patlamada
+Relation	T14	T13	NoRel	true	engellemek	saklanıyorlardı
+Relation	T14	T4	NoRel	true	engellemek	Katliamda
+Relation	T14	T6	NoRel	true	engellemek	müdahale
+Relation	T14	T8	NoRel	true	engellemek	kaldı
+Relation	T14	T9	NoRel	true	engellemek	patlamada
+Relation	T2	T0	NoRel	true	öldürüldüler	reddettiklerinde
+Relation	T2	T1	NoRel	true	öldürüldüler	atılan
+Relation	T2	T11	NoRel	true	öldürüldüler	saklanan
+Relation	T2	T12	NoRel	true	öldürüldüler	saldırılarından
+Relation	T2	T3	NoRel	true	öldürüldüler	sürülmelerini
+Relation	T2	T6	NoRel	true	öldürüldüler	müdahale
+Relation	T2	T7	NoRel	true	öldürüldüler	görmek
+Relation	T2	T8	NoRel	true	öldürüldüler	kaldı
+Relation	T2	T9	NoRel	true	öldürüldüler	patlamada
+Relation	T3	T10	NoRel	true	sürülmelerini	yakılarak
+Relation	T3	T5	NoRel	true	sürülmelerini	öldürüldü
+Relation	T3	T6	NoRel	true	sürülmelerini	müdahale
+Relation	T3	T8	NoRel	true	sürülmelerini	kaldı
+Relation	T3	T9	NoRel	true	sürülmelerini	patlamada
+Relation	T4	T0	NoRel	true	Katliamda	reddettiklerinde
+Relation	T4	T11	NoRel	true	Katliamda	saklanan
+Relation	T4	T14	NoRel	true	Katliamda	engellemek
+Relation	T4	T2	NoRel	true	Katliamda	öldürüldüler
+Relation	T5	T0	NoRel	true	öldürüldü	reddettiklerinde
+Relation	T5	T1	NoRel	true	öldürüldü	atılan
+Relation	T5	T13	NoRel	true	öldürüldü	saklanıyorlardı
+Relation	T5	T14	NoRel	true	öldürüldü	engellemek
+Relation	T5	T9	NoRel	true	öldürüldü	patlamada
+Relation	T7	T1	NoRel	true	görmek	atılan
+Relation	T7	T13	NoRel	true	görmek	saklanıyorlardı
+Relation	T7	T14	NoRel	true	görmek	engellemek
+Relation	T7	T4	NoRel	true	görmek	Katliamda
+Relation	T7	T5	NoRel	true	görmek	öldürüldü
+Relation	T7	T9	NoRel	true	görmek	patlamada
+Relation	T8	T12	NoRel	true	kaldı	saldırılarından
+Relation	T8	T5	NoRel	true	kaldı	öldürüldü
+Relation	T8	T6	NoRel	true	kaldı	müdahale
+Relation	T8	T7	NoRel	true	kaldı	görmek
+Relation	T9	T11	NoRel	true	patlamada	saklanan
+Relation	T9	T12	NoRel	true	patlamada	saldırılarından
+Relation	T9	T14	NoRel	true	patlamada	engellemek
+Relation	T9	T5	NoRel	true	patlamada	öldürüldü

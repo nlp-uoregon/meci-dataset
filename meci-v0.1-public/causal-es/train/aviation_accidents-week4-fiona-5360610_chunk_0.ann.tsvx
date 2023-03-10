@@ -1,0 +1,46 @@
+Text	El VUELO 1153 DE TUNINTER fue un vuelo de Tuninter Airlines desde el Aeropuerto Internacional de Bari en Bari , Italia , al Aeropuerto de Djerba-Zarzis en Djerba , Túnez .	El 6 de agosto de 2005 , el ATR 72 de Tuninter se precipitó sobre el Mar Mediterráneo a unas 18 millas ( 29 km ) de la ciudad de Palermo .	Dieciséis de las 39 personas a bordo murieron .	El accidente se produjo debido al agotamiento del combustible del motor a causa de la instalación de indicadores de cantidad de combustible para el ATR 42 , en el ATR 72 que es más largo .	El avión , un ATR 72 , había reemplazado su indicador de cantidad de combustible ( FQI ) la noche anterior al accidente , pero los técnicos habían instalado sin querer un FQI diseñado para el ATR 42 , un avión similar pero con tanques más pequeños .
+Event	T0	vuelo	EVENT	33
+Event	T1	precipitó	EVENT	222
+Event	T2	murieron	EVENT	348
+Event	T3	agotamiento	EVENT	393
+Event	T4	instalación	EVENT	445
+Event	T5	reemplazado	EVENT	577
+Event	T6	accidente	EVENT	658
+Event	T7	instalado	EVENT	695
+Event	T8	diseñado	EVENT	723
+Event	T9	accidente	EVENT	362
+Relation	T3	T9	CauseEffect	true	agotamiento	accidente
+Relation	T9	T3	EffectCause	true	accidente	agotamiento
+Relation	T9	T2	CauseEffect	true	accidente	murieron
+Relation	T2	T9	EffectCause	true	murieron	accidente
+Relation	T0	T6	NoRel	true	vuelo	accidente
+Relation	T0	T7	NoRel	true	vuelo	instalado
+Relation	T0	T9	NoRel	true	vuelo	accidente
+Relation	T1	T0	NoRel	true	precipitó	vuelo
+Relation	T1	T5	NoRel	true	precipitó	reemplazado
+Relation	T1	T7	NoRel	true	precipitó	instalado
+Relation	T1	T8	NoRel	true	precipitó	diseñado
+Relation	T2	T0	NoRel	true	murieron	vuelo
+Relation	T2	T3	NoRel	true	murieron	agotamiento
+Relation	T2	T6	NoRel	true	murieron	accidente
+Relation	T2	T8	NoRel	true	murieron	diseñado
+Relation	T3	T0	NoRel	true	agotamiento	vuelo
+Relation	T3	T2	NoRel	true	agotamiento	murieron
+Relation	T3	T4	NoRel	true	agotamiento	instalación
+Relation	T3	T5	NoRel	true	agotamiento	reemplazado
+Relation	T3	T6	NoRel	true	agotamiento	accidente
+Relation	T3	T7	NoRel	true	agotamiento	instalado
+Relation	T4	T0	NoRel	true	instalación	vuelo
+Relation	T4	T2	NoRel	true	instalación	murieron
+Relation	T4	T5	NoRel	true	instalación	reemplazado
+Relation	T5	T8	NoRel	true	reemplazado	diseñado
+Relation	T5	T9	NoRel	true	reemplazado	accidente
+Relation	T6	T7	NoRel	true	accidente	instalado
+Relation	T6	T8	NoRel	true	accidente	diseñado
+Relation	T6	T9	NoRel	true	accidente	accidente
+Relation	T7	T0	NoRel	true	instalado	vuelo
+Relation	T7	T4	NoRel	true	instalado	instalación
+Relation	T7	T6	NoRel	true	instalado	accidente
+Relation	T8	T0	NoRel	true	diseñado	vuelo
+Relation	T8	T6	NoRel	true	diseñado	accidente
+Relation	T9	T7	NoRel	true	accidente	instalado

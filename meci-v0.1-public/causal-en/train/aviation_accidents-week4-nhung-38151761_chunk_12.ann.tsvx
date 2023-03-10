@@ -1,0 +1,97 @@
+Text	A USAF Lockheed YMC - 130H Hercules , _ 74- 1683_ , c / n 4658 , outfitted with experimental JATO rockets for Operation Credible Sport , a planned second attempt to rescue American hostages held by Iran , is destroyed when the rockets misfire during a test landing at Wagner Field , Eglin Air Force Base , Florida , United States .	All crew members survive , but the rescue operation is deemed excessively risky and is cancelled .	31 October : Fifth prototype Mikoyan MiG - 29 ,__ samolet_ 908 , which first flew on 5 April 1979 is utilized for power plant testing after the loss of the third prototype .	It was lost on its 48th flight when a combustion chamber failed and the resulting fire burned through control runs , causing the aircraft to dive into the ground .	Pilot A._V. Fedotov attempted to eject while the aircraft was pulling negative G and received a spinal injury that hospitalized him for several months .
+Event	T0	outfitted	EVENT	65
+Event	T1	attempt	EVENT	154
+Event	T2	rescue	EVENT	165
+Event	T3	held	EVENT	190
+Event	T4	destroyed	EVENT	208
+Event	T5	misfire	EVENT	235
+Event	T6	landing	EVENT	257
+Event	T7	survive	EVENT	349
+Event	T8	operation	EVENT	374
+Event	T9	deemed	EVENT	387
+Event	T10	cancelled	EVENT	419
+Event	T11	flew	EVENT	508
+Event	T12	utilized	EVENT	532
+Event	T13	testing	EVENT	557
+Event	T14	loss	EVENT	575
+Event	T15	flight	EVENT	629
+Event	T16	failed	EVENT	662
+Event	T17	causing	EVENT	722
+Event	T18	attempted	EVENT	789
+Event	T19	eject	EVENT	802
+Event	T20	received	EVENT	854
+Event	T21	injury	EVENT	872
+Event	T22	hospitalized	EVENT	884
+Event	T23	burned	EVENT	692
+Event	T24	dive	EVENT	746
+Event	T25	pulling	EVENT	831
+Relation	T23	T24	CauseEffect	true	burned	dive
+Relation	T24	T23	EffectCause	true	dive	burned
+Relation	T6	T5	CauseEffect	true	landing	misfire
+Relation	T5	T6	EffectCause	true	misfire	landing
+Relation	T14	T13	CauseEffect	true	loss	testing
+Relation	T13	T14	EffectCause	true	testing	loss
+Relation	T0	T19	NoRel	true	outfitted	eject
+Relation	T0	T2	NoRel	true	outfitted	rescue
+Relation	T0	T21	NoRel	true	outfitted	injury
+Relation	T0	T23	NoRel	true	outfitted	burned
+Relation	T1	T6	NoRel	true	attempt	landing
+Relation	T11	T16	NoRel	true	flew	failed
+Relation	T11	T22	NoRel	true	flew	hospitalized
+Relation	T12	T14	NoRel	true	utilized	loss
+Relation	T12	T22	NoRel	true	utilized	hospitalized
+Relation	T12	T6	NoRel	true	utilized	landing
+Relation	T13	T10	NoRel	true	testing	cancelled
+Relation	T13	T24	NoRel	true	testing	dive
+Relation	T13	T7	NoRel	true	testing	survive
+Relation	T14	T0	NoRel	true	loss	outfitted
+Relation	T14	T18	NoRel	true	loss	attempted
+Relation	T14	T24	NoRel	true	loss	dive
+Relation	T15	T0	NoRel	true	flight	outfitted
+Relation	T15	T16	NoRel	true	flight	failed
+Relation	T15	T17	NoRel	true	flight	causing
+Relation	T15	T3	NoRel	true	flight	held
+Relation	T15	T9	NoRel	true	flight	deemed
+Relation	T16	T2	NoRel	true	failed	rescue
+Relation	T17	T0	NoRel	true	causing	outfitted
+Relation	T17	T10	NoRel	true	causing	cancelled
+Relation	T17	T24	NoRel	true	causing	dive
+Relation	T18	T10	NoRel	true	attempted	cancelled
+Relation	T18	T11	NoRel	true	attempted	flew
+Relation	T19	T1	NoRel	true	eject	attempt
+Relation	T19	T10	NoRel	true	eject	cancelled
+Relation	T19	T12	NoRel	true	eject	utilized
+Relation	T19	T3	NoRel	true	eject	held
+Relation	T2	T19	NoRel	true	rescue	eject
+Relation	T20	T11	NoRel	true	received	flew
+Relation	T20	T13	NoRel	true	received	testing
+Relation	T20	T14	NoRel	true	received	loss
+Relation	T20	T2	NoRel	true	received	rescue
+Relation	T20	T21	NoRel	true	received	injury
+Relation	T20	T22	NoRel	true	received	hospitalized
+Relation	T23	T0	NoRel	true	burned	outfitted
+Relation	T23	T20	NoRel	true	burned	received
+Relation	T24	T15	NoRel	true	dive	flight
+Relation	T24	T25	NoRel	true	dive	pulling
+Relation	T3	T10	NoRel	true	held	cancelled
+Relation	T3	T17	NoRel	true	held	causing
+Relation	T3	T18	NoRel	true	held	attempted
+Relation	T3	T23	NoRel	true	held	burned
+Relation	T3	T4	NoRel	true	held	destroyed
+Relation	T4	T13	NoRel	true	destroyed	testing
+Relation	T4	T23	NoRel	true	destroyed	burned
+Relation	T5	T13	NoRel	true	misfire	testing
+Relation	T5	T19	NoRel	true	misfire	eject
+Relation	T5	T23	NoRel	true	misfire	burned
+Relation	T5	T9	NoRel	true	misfire	deemed
+Relation	T6	T23	NoRel	true	landing	burned
+Relation	T6	T25	NoRel	true	landing	pulling
+Relation	T6	T4	NoRel	true	landing	destroyed
+Relation	T7	T24	NoRel	true	survive	dive
+Relation	T8	T12	NoRel	true	operation	utilized
+Relation	T8	T16	NoRel	true	operation	failed
+Relation	T8	T18	NoRel	true	operation	attempted
+Relation	T8	T23	NoRel	true	operation	burned
+Relation	T8	T7	NoRel	true	operation	survive
+Relation	T9	T12	NoRel	true	deemed	utilized
+Relation	T9	T22	NoRel	true	deemed	hospitalized

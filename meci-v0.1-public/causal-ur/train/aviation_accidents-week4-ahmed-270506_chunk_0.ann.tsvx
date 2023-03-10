@@ -1,0 +1,37 @@
+Text	انڈونیشیا ایئرایشیا پرواز 8501 کی ایک پرواز تھی جو انڈونیشیا کے شہر سورابایا سے سنگاپور روانگی کے دوران 28 دسمبر کو لاپتہ ہو گئی -	جہاز میں عملے کے 7 لوگوں اور 155 مسافروں کے ساتھ کل 162 لوگ سوار تھے -	جہاز سورابایا ایئرپورٹ سے مقامی وقت ( UTC+7 ) کے مطابق 5 : 35 am پر روانہ ہوئی اور 8 : 30 ( SGT ) پر سنگاپور میں لینڈ کرنا تھا -	جہاز نے 7 : 24 پر بحیرہ جاوا میں جاوا اور کالیمانتان کے درمیان ایئر ٹریفک کنٹرول سے رابطہ کھو دیا -	ایئر لائن کے آفیشل فیس بک اور ٹوئٹر پیج نے جہاز کو گمشدہ قرار دیا ہے -
+Event	T0	پرواز	EVENT	38
+Event	T1	روانگی	EVENT	88
+Event	T2	لاپتہ	EVENT	116
+Event	T3	سوار	EVENT	191
+Event	T8	روانہ	EVENT	270
+Event	T4	لینڈ	EVENT	315
+Event	T5	رابطہ	EVENT	415
+Event	T9	کھو	EVENT	421
+Event	T6	قرار	EVENT	488
+Relation	T2	T9	CauseEffect	true	لاپتہ	کھو
+Relation	T9	T2	EffectCause	true	کھو	لاپتہ
+Relation	T2	T6	CauseEffect	true	لاپتہ	قرار
+Relation	T6	T2	EffectCause	true	قرار	لاپتہ
+Relation	T0	T1	NoRel	true	پرواز	روانگی
+Relation	T0	T3	NoRel	true	پرواز	سوار
+Relation	T0	T4	NoRel	true	پرواز	لینڈ
+Relation	T1	T8	NoRel	true	روانگی	روانہ
+Relation	T2	T8	NoRel	true	لاپتہ	روانہ
+Relation	T3	T0	NoRel	true	سوار	پرواز
+Relation	T3	T4	NoRel	true	سوار	لینڈ
+Relation	T3	T6	NoRel	true	سوار	قرار
+Relation	T3	T8	NoRel	true	سوار	روانہ
+Relation	T4	T1	NoRel	true	لینڈ	روانگی
+Relation	T4	T5	NoRel	true	لینڈ	رابطہ
+Relation	T4	T8	NoRel	true	لینڈ	روانہ
+Relation	T5	T1	NoRel	true	رابطہ	روانگی
+Relation	T5	T4	NoRel	true	رابطہ	لینڈ
+Relation	T6	T0	NoRel	true	قرار	پرواز
+Relation	T6	T4	NoRel	true	قرار	لینڈ
+Relation	T6	T5	NoRel	true	قرار	رابطہ
+Relation	T8	T0	NoRel	true	روانہ	پرواز
+Relation	T8	T5	NoRel	true	روانہ	رابطہ
+Relation	T8	T6	NoRel	true	روانہ	قرار
+Relation	T9	T0	NoRel	true	کھو	پرواز
+Relation	T9	T4	NoRel	true	کھو	لینڈ
+Relation	T9	T5	NoRel	true	کھو	رابطہ

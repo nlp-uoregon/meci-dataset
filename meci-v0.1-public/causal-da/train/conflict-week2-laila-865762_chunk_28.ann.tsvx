@@ -1,0 +1,51 @@
+Text	Blot 10 dage senere blev El Salmana besat af osmanniske hærstyrker da de samledes til_slaget ved Romani .	I midten af juni indledte den 1. eskadrille fra Australian Flying Corps aktiv tjeneste med sin "B" Flight ved Suez og foretog rekognosceringsflyvninger .	Den 9 juli blev "A" Flight stationeret ved Sherika i Øvre Egypten mens " C" Flight fik base ved Qantara .	Slaget ved Romani fandt sted nær den egyptiske by af samme navn 37 km øst for Suez-kanalen fra kort efter midnat mellem den 3. og 4. august og indtil de angribende styrker trak sig tilbage omkring middag den 5. august .	Centralmagternes styrke af østrigere , tyskere og osmannere under Kress von Kressenstein forsøgte at stoppe den britiske generobring af egyptisk område på Sinaihalvøen og ville afskære Suez-kanalen ved at kunne udsætte den for artilleribeskydning .
+Event	T0	besat	EVENT	36
+Event	T10	forsøgte	EVENT	675
+Event	T11	stoppe	EVENT	687
+Event	T12	generobring	EVENT	707
+Event	T13	afskære	EVENT	763
+Event	T14	udsætte	EVENT	797
+Event	T15	artilleribeskydning	EVENT	813
+Event	T2	indledte	EVENT	123
+Event	T4	Flight	EVENT	205
+Event	T5	rekognosceringsflyvninger	EVENT	232
+Event	T6	stationeret	EVENT	287
+Event	T8	Slaget	EVENT	366
+Relation	T0	T2	NoRel	true	besat	indledte
+Relation	T0	T5	NoRel	true	besat	rekognosceringsflyvninger
+Relation	T10	T5	NoRel	true	forsøgte	rekognosceringsflyvninger
+Relation	T10	T6	NoRel	true	forsøgte	stationeret
+Relation	T11	T0	NoRel	true	stoppe	besat
+Relation	T11	T10	NoRel	true	stoppe	forsøgte
+Relation	T11	T13	NoRel	true	stoppe	afskære
+Relation	T11	T14	NoRel	true	stoppe	udsætte
+Relation	T12	T0	NoRel	true	generobring	besat
+Relation	T12	T10	NoRel	true	generobring	forsøgte
+Relation	T12	T13	NoRel	true	generobring	afskære
+Relation	T12	T4	NoRel	true	generobring	Flight
+Relation	T12	T6	NoRel	true	generobring	stationeret
+Relation	T13	T0	NoRel	true	afskære	besat
+Relation	T13	T14	NoRel	true	afskære	udsætte
+Relation	T13	T2	NoRel	true	afskære	indledte
+Relation	T13	T5	NoRel	true	afskære	rekognosceringsflyvninger
+Relation	T14	T0	NoRel	true	udsætte	besat
+Relation	T14	T2	NoRel	true	udsætte	indledte
+Relation	T14	T5	NoRel	true	udsætte	rekognosceringsflyvninger
+Relation	T14	T6	NoRel	true	udsætte	stationeret
+Relation	T15	T11	NoRel	true	artilleribeskydning	stoppe
+Relation	T15	T12	NoRel	true	artilleribeskydning	generobring
+Relation	T15	T13	NoRel	true	artilleribeskydning	afskære
+Relation	T15	T14	NoRel	true	artilleribeskydning	udsætte
+Relation	T15	T8	NoRel	true	artilleribeskydning	Slaget
+Relation	T2	T11	NoRel	true	indledte	stoppe
+Relation	T4	T13	NoRel	true	Flight	afskære
+Relation	T4	T14	NoRel	true	Flight	udsætte
+Relation	T4	T8	NoRel	true	Flight	Slaget
+Relation	T5	T0	NoRel	true	rekognosceringsflyvninger	besat
+Relation	T5	T11	NoRel	true	rekognosceringsflyvninger	stoppe
+Relation	T5	T8	NoRel	true	rekognosceringsflyvninger	Slaget
+Relation	T6	T10	NoRel	true	stationeret	forsøgte
+Relation	T6	T13	NoRel	true	stationeret	afskære
+Relation	T8	T10	NoRel	true	Slaget	forsøgte
+Relation	T8	T14	NoRel	true	Slaget	udsætte
+Relation	T8	T6	NoRel	true	Slaget	stationeret

@@ -1,0 +1,49 @@
+Text	The aircraft was scheduled to stop at Dharan in Saudi Arabia , Cairo and then Geneva before completing its journey to London .	As the aircraft was on final approach to Cairo International Airport , the pilot reported problems with the flaps ; shortly thereafter , the aircraft crashed southeast of the airport and broke up as it exploded into flames .	Six of the passengers were thrown clear of the wreckage , but everyone else on board was killed .	Among the dead was the Chinese aircraft designer Huang Zhiqian , who was chief designer of the fighter jet Shenyang J - 8 .	The aircraft was a Boeing 720 - 040B with the registration _ AP - AMH _ and manufacturer 's serial number 18379 ; it was first flown on 19 October 1962 and delivered to Pakistan International Airlines on 7 November 1962 .
+Event	T0	scheduled	EVENT	17
+Event	T1	stop	EVENT	30
+Event	T2	journey	EVENT	107
+Event	T3	approach	EVENT	156
+Event	T4	problems	EVENT	217
+Event	T5	flaps	EVENT	235
+Event	T6	crashed	EVENT	277
+Event	T7	flames	EVENT	343
+Event	T8	wreckage	EVENT	399
+Event	T9	killed	EVENT	441
+Event	T10	dead	EVENT	460
+Event	T11	flown	EVENT	701
+Event	T12	delivered	EVENT	730
+Event	T13	broke up	EVENT	314
+Event	T14	exploded	EVENT	329
+Event	T15	thrown	EVENT	379
+Relation	T6	T9	CauseEffect	true	crashed	killed
+Relation	T9	T6	EffectCause	true	killed	crashed
+Relation	T6	T15	CauseEffect	true	crashed	thrown
+Relation	T15	T6	EffectCause	true	thrown	crashed
+Relation	T1	T10	NoRel	true	stop	dead
+Relation	T1	T14	NoRel	true	stop	exploded
+Relation	T1	T15	NoRel	true	stop	thrown
+Relation	T10	T12	NoRel	true	dead	delivered
+Relation	T10	T8	NoRel	true	dead	wreckage
+Relation	T11	T0	NoRel	true	flown	scheduled
+Relation	T11	T5	NoRel	true	flown	flaps
+Relation	T11	T9	NoRel	true	flown	killed
+Relation	T12	T0	NoRel	true	delivered	scheduled
+Relation	T13	T6	NoRel	true	broke up	crashed
+Relation	T13	T7	NoRel	true	broke up	flames
+Relation	T14	T4	NoRel	true	exploded	problems
+Relation	T14	T5	NoRel	true	exploded	flaps
+Relation	T14	T7	NoRel	true	exploded	flames
+Relation	T15	T0	NoRel	true	thrown	scheduled
+Relation	T15	T10	NoRel	true	thrown	dead
+Relation	T15	T13	NoRel	true	thrown	broke up
+Relation	T15	T4	NoRel	true	thrown	problems
+Relation	T2	T15	NoRel	true	journey	thrown
+Relation	T4	T1	NoRel	true	problems	stop
+Relation	T4	T7	NoRel	true	problems	flames
+Relation	T6	T13	NoRel	true	crashed	broke up
+Relation	T6	T14	NoRel	true	crashed	exploded
+Relation	T7	T5	NoRel	true	flames	flaps
+Relation	T8	T1	NoRel	true	wreckage	stop
+Relation	T8	T14	NoRel	true	wreckage	exploded
+Relation	T8	T7	NoRel	true	wreckage	flames
+Relation	T9	T15	NoRel	true	killed	thrown

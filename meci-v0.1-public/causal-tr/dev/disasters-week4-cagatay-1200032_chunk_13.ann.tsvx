@@ -1,0 +1,34 @@
+Text	Depremin ardından depremin Metzamor Nükleer Santrali'nde bir etkisi olacağı kaygısı ortaya çıktı ; fakat Hilmi Güler ölçümlerde bir anormallik olmadığını söyledi .	Deprem sonrasında Doğal Afet Sigortaları Kurumu'nda 18 tane ilgili dosya oluşturuldu ve 29,542 TL ödendi .	Karabulak köyünden 132 kişi hak sahibi olmuş , Ağrı Bayındırlık ve İskan İl Müdürlüğü'nü başvurmuştur .	Bunlardan 39'unun ihalesi 2007 yılında yapılmıştır .	Yığınçal köyünde ise 7 konutun tekrar yapılması için müdürlüğe başvurulmuştur .
+Event	T0	Depremin	EVENT	0
+Event	T1	depremin	EVENT	18
+Event	T2	çıktı	EVENT	91
+Event	T3	söyledi	EVENT	154
+Event	T4	Deprem	EVENT	164
+Event	T5	oluşturuldu	EVENT	237
+Event	T6	ödendi	EVENT	262
+Event	T7	ihalesi	EVENT	393
+Event	T8	yapılması	EVENT	466
+Relation	T0	T2	CauseEffect	true	Depremin	çıktı
+Relation	T2	T0	EffectCause	true	çıktı	Depremin
+Relation	T0	T3	NoRel	true	Depremin	söyledi
+Relation	T0	T5	NoRel	true	Depremin	oluşturuldu
+Relation	T1	T0	NoRel	true	depremin	Depremin
+Relation	T1	T2	NoRel	true	depremin	çıktı
+Relation	T1	T4	NoRel	true	depremin	Deprem
+Relation	T2	T5	NoRel	true	çıktı	oluşturuldu
+Relation	T2	T6	NoRel	true	çıktı	ödendi
+Relation	T3	T2	NoRel	true	söyledi	çıktı
+Relation	T3	T6	NoRel	true	söyledi	ödendi
+Relation	T3	T7	NoRel	true	söyledi	ihalesi
+Relation	T4	T3	NoRel	true	Deprem	söyledi
+Relation	T4	T6	NoRel	true	Deprem	ödendi
+Relation	T5	T0	NoRel	true	oluşturuldu	Depremin
+Relation	T5	T2	NoRel	true	oluşturuldu	çıktı
+Relation	T5	T4	NoRel	true	oluşturuldu	Deprem
+Relation	T5	T6	NoRel	true	oluşturuldu	ödendi
+Relation	T5	T8	NoRel	true	oluşturuldu	yapılması
+Relation	T6	T3	NoRel	true	ödendi	söyledi
+Relation	T7	T4	NoRel	true	ihalesi	Deprem
+Relation	T7	T6	NoRel	true	ihalesi	ödendi
+Relation	T8	T1	NoRel	true	yapılması	depremin
+Relation	T8	T6	NoRel	true	yapılması	ödendi

@@ -1,0 +1,127 @@
+Text	Después de notar lo que el piloto describió más tarde como una " falla catastrófica del motor " mucho antes de la velocidad de despegue , la tripulación de vuelo abortó el despegue usando los frenos de la aeronave y ordenó la evacuación de la aeronave .	Los 170 pasajeros y la tripulación escaparon .	Diecinueve personas sufrieron heridas leves y una persona sufrió heridas graves .	Se cree que la aeronave alcanzó una velocidad de aproximadamente 90 millas por hora ( 78 kN ; 140 km_/_h ) cuando se tomó la decisión de abortar ; muy por debajo de la velocidad de decisión de despegue de la aeronave , que habría sido de al menos 139 millas por hora ( 121 kN ; 224 km_/_h ) .	Los servicios de emergencia del aeropuerto extinguieron el fuego en cinco minutos del la llamada de Mayday .
+Event	T0	notar	EVENT	11
+Event	T1	describió	EVENT	34
+Event	T2	catastrófica	EVENT	71
+Event	T3	despegue	EVENT	127
+Event	T4	abortó	EVENT	162
+Event	T5	ordenó	EVENT	216
+Event	T6	evacuación	EVENT	226
+Event	T7	escaparon	EVENT	289
+Event	T8	cree	EVENT	386
+Event	T9	alcanzó	EVENT	407
+Event	T10	tomó	EVENT	500
+Event	T11	decisión	EVENT	508
+Event	T12	abortar	EVENT	520
+Event	T13	decisión	EVENT	564
+Event	T14	despegue	EVENT	576
+Event	T15	extinguieron	EVENT	719
+Event	T16	fuego	EVENT	735
+Event	T17	llamada	EVENT	765
+Relation	T5	T7	CauseEffect	true	ordenó	escaparon
+Relation	T7	T5	EffectCause	true	escaparon	ordenó
+Relation	T0	T13	NoRel	true	notar	decisión
+Relation	T0	T15	NoRel	true	notar	extinguieron
+Relation	T0	T16	NoRel	true	notar	fuego
+Relation	T0	T2	NoRel	true	notar	catastrófica
+Relation	T0	T3	NoRel	true	notar	despegue
+Relation	T0	T7	NoRel	true	notar	escaparon
+Relation	T1	T16	NoRel	true	describió	fuego
+Relation	T1	T17	NoRel	true	describió	llamada
+Relation	T1	T3	NoRel	true	describió	despegue
+Relation	T1	T4	NoRel	true	describió	abortó
+Relation	T10	T1	NoRel	true	tomó	describió
+Relation	T10	T11	NoRel	true	tomó	decisión
+Relation	T10	T14	NoRel	true	tomó	despegue
+Relation	T10	T2	NoRel	true	tomó	catastrófica
+Relation	T10	T4	NoRel	true	tomó	abortó
+Relation	T10	T5	NoRel	true	tomó	ordenó
+Relation	T10	T8	NoRel	true	tomó	cree
+Relation	T10	T9	NoRel	true	tomó	alcanzó
+Relation	T11	T0	NoRel	true	decisión	notar
+Relation	T11	T1	NoRel	true	decisión	describió
+Relation	T11	T17	NoRel	true	decisión	llamada
+Relation	T11	T2	NoRel	true	decisión	catastrófica
+Relation	T11	T5	NoRel	true	decisión	ordenó
+Relation	T12	T10	NoRel	true	abortar	tomó
+Relation	T12	T11	NoRel	true	abortar	decisión
+Relation	T12	T4	NoRel	true	abortar	abortó
+Relation	T12	T7	NoRel	true	abortar	escaparon
+Relation	T12	T9	NoRel	true	abortar	alcanzó
+Relation	T13	T0	NoRel	true	decisión	notar
+Relation	T13	T1	NoRel	true	decisión	describió
+Relation	T13	T10	NoRel	true	decisión	tomó
+Relation	T13	T14	NoRel	true	decisión	despegue
+Relation	T13	T15	NoRel	true	decisión	extinguieron
+Relation	T13	T5	NoRel	true	decisión	ordenó
+Relation	T13	T6	NoRel	true	decisión	evacuación
+Relation	T13	T8	NoRel	true	decisión	cree
+Relation	T13	T9	NoRel	true	decisión	alcanzó
+Relation	T14	T0	NoRel	true	despegue	notar
+Relation	T14	T16	NoRel	true	despegue	fuego
+Relation	T14	T3	NoRel	true	despegue	despegue
+Relation	T14	T4	NoRel	true	despegue	abortó
+Relation	T14	T6	NoRel	true	despegue	evacuación
+Relation	T14	T7	NoRel	true	despegue	escaparon
+Relation	T14	T9	NoRel	true	despegue	alcanzó
+Relation	T15	T14	NoRel	true	extinguieron	despegue
+Relation	T15	T3	NoRel	true	extinguieron	despegue
+Relation	T15	T7	NoRel	true	extinguieron	escaparon
+Relation	T16	T5	NoRel	true	fuego	ordenó
+Relation	T16	T7	NoRel	true	fuego	escaparon
+Relation	T16	T8	NoRel	true	fuego	cree
+Relation	T17	T11	NoRel	true	llamada	decisión
+Relation	T17	T12	NoRel	true	llamada	abortar
+Relation	T17	T13	NoRel	true	llamada	decisión
+Relation	T17	T14	NoRel	true	llamada	despegue
+Relation	T17	T15	NoRel	true	llamada	extinguieron
+Relation	T17	T2	NoRel	true	llamada	catastrófica
+Relation	T17	T5	NoRel	true	llamada	ordenó
+Relation	T17	T6	NoRel	true	llamada	evacuación
+Relation	T17	T7	NoRel	true	llamada	escaparon
+Relation	T17	T8	NoRel	true	llamada	cree
+Relation	T2	T1	NoRel	true	catastrófica	describió
+Relation	T2	T12	NoRel	true	catastrófica	abortar
+Relation	T2	T13	NoRel	true	catastrófica	decisión
+Relation	T2	T4	NoRel	true	catastrófica	abortó
+Relation	T2	T6	NoRel	true	catastrófica	evacuación
+Relation	T3	T12	NoRel	true	despegue	abortar
+Relation	T3	T13	NoRel	true	despegue	decisión
+Relation	T3	T4	NoRel	true	despegue	abortó
+Relation	T3	T7	NoRel	true	despegue	escaparon
+Relation	T3	T9	NoRel	true	despegue	alcanzó
+Relation	T4	T1	NoRel	true	abortó	describió
+Relation	T4	T10	NoRel	true	abortó	tomó
+Relation	T4	T6	NoRel	true	abortó	evacuación
+Relation	T4	T7	NoRel	true	abortó	escaparon
+Relation	T4	T9	NoRel	true	abortó	alcanzó
+Relation	T5	T1	NoRel	true	ordenó	describió
+Relation	T5	T11	NoRel	true	ordenó	decisión
+Relation	T5	T14	NoRel	true	ordenó	despegue
+Relation	T5	T15	NoRel	true	ordenó	extinguieron
+Relation	T5	T2	NoRel	true	ordenó	catastrófica
+Relation	T5	T3	NoRel	true	ordenó	despegue
+Relation	T5	T9	NoRel	true	ordenó	alcanzó
+Relation	T6	T11	NoRel	true	evacuación	decisión
+Relation	T6	T12	NoRel	true	evacuación	abortar
+Relation	T6	T13	NoRel	true	evacuación	decisión
+Relation	T6	T14	NoRel	true	evacuación	despegue
+Relation	T6	T16	NoRel	true	evacuación	fuego
+Relation	T6	T3	NoRel	true	evacuación	despegue
+Relation	T6	T4	NoRel	true	evacuación	abortó
+Relation	T7	T0	NoRel	true	escaparon	notar
+Relation	T7	T1	NoRel	true	escaparon	describió
+Relation	T7	T11	NoRel	true	escaparon	decisión
+Relation	T7	T12	NoRel	true	escaparon	abortar
+Relation	T7	T15	NoRel	true	escaparon	extinguieron
+Relation	T7	T6	NoRel	true	escaparon	evacuación
+Relation	T8	T0	NoRel	true	cree	notar
+Relation	T8	T12	NoRel	true	cree	abortar
+Relation	T8	T15	NoRel	true	cree	extinguieron
+Relation	T8	T16	NoRel	true	cree	fuego
+Relation	T8	T3	NoRel	true	cree	despegue
+Relation	T8	T5	NoRel	true	cree	ordenó
+Relation	T9	T1	NoRel	true	alcanzó	describió
+Relation	T9	T2	NoRel	true	alcanzó	catastrófica
+Relation	T9	T4	NoRel	true	alcanzó	abortó
+Relation	T9	T5	NoRel	true	alcanzó	ordenó
+Relation	T9	T8	NoRel	true	alcanzó	cree

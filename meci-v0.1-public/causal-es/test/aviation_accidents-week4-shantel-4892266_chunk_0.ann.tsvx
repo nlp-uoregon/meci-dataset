@@ -1,0 +1,51 @@
+Text	El 5 de marzo de 2011 , un Antonov An-148 se estrelló en Garbuzovo , Región de Alxeevsky , Belgorod Oblast , Rusia , matando a los seis tripulantes que viajaban a bordo .	El avión estaba efectuando un vuelo de prueba antes de su entrega a la Fuerza Aérea de Myanmar .	Los testigos relataron que un ala se desprendió del avión en vuelo .	El avión accidentado fue un Antonov An-148-100E , c/n 41-03 , portando el registro de prueba 61708 .	El avión estaba operando su vuelo número 32 .
+Event	T0	estrelló	EVENT	45
+Event	T1	matando	EVENT	117
+Event	T2	efectuando	EVENT	187
+Event	T3	vuelo	EVENT	201
+Event	T6	relataron	EVENT	281
+Event	T7	desprendió	EVENT	305
+Event	T8	vuelo	EVENT	329
+Event	T9	accidentado	EVENT	346
+Event	T10	registro	EVENT	411
+Event	T11	operando	EVENT	454
+Event	T12	vuelo	EVENT	466
+Relation	T0	T1	CauseEffect	true	estrelló	matando
+Relation	T1	T0	EffectCause	true	matando	estrelló
+Relation	T7	T0	CauseEffect	true	desprendió	estrelló
+Relation	T0	T7	EffectCause	true	estrelló	desprendió
+Relation	T0	T6	NoRel	true	estrelló	relataron
+Relation	T1	T10	NoRel	true	matando	registro
+Relation	T1	T11	NoRel	true	matando	operando
+Relation	T1	T7	NoRel	true	matando	desprendió
+Relation	T1	T8	NoRel	true	matando	vuelo
+Relation	T10	T3	NoRel	true	registro	vuelo
+Relation	T10	T6	NoRel	true	registro	relataron
+Relation	T10	T7	NoRel	true	registro	desprendió
+Relation	T11	T1	NoRel	true	operando	matando
+Relation	T11	T10	NoRel	true	operando	registro
+Relation	T11	T12	NoRel	true	operando	vuelo
+Relation	T11	T7	NoRel	true	operando	desprendió
+Relation	T12	T0	NoRel	true	vuelo	estrelló
+Relation	T12	T10	NoRel	true	vuelo	registro
+Relation	T12	T2	NoRel	true	vuelo	efectuando
+Relation	T2	T11	NoRel	true	efectuando	operando
+Relation	T2	T6	NoRel	true	efectuando	relataron
+Relation	T2	T7	NoRel	true	efectuando	desprendió
+Relation	T2	T9	NoRel	true	efectuando	accidentado
+Relation	T3	T1	NoRel	true	vuelo	matando
+Relation	T3	T10	NoRel	true	vuelo	registro
+Relation	T3	T11	NoRel	true	vuelo	operando
+Relation	T3	T8	NoRel	true	vuelo	vuelo
+Relation	T6	T10	NoRel	true	relataron	registro
+Relation	T6	T11	NoRel	true	relataron	operando
+Relation	T6	T2	NoRel	true	relataron	efectuando
+Relation	T6	T3	NoRel	true	relataron	vuelo
+Relation	T6	T9	NoRel	true	relataron	accidentado
+Relation	T7	T3	NoRel	true	desprendió	vuelo
+Relation	T7	T6	NoRel	true	desprendió	relataron
+Relation	T8	T1	NoRel	true	vuelo	matando
+Relation	T8	T6	NoRel	true	vuelo	relataron
+Relation	T8	T9	NoRel	true	vuelo	accidentado
+Relation	T9	T1	NoRel	true	accidentado	matando
+Relation	T9	T3	NoRel	true	accidentado	vuelo

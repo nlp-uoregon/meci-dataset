@@ -1,0 +1,57 @@
+Text	PEGASUS HAVA YOLLARI'NIN 8622 SEFER SAYILI UÇUŞU , 14 Ocak 2018 tarihinde Pegasus Hava Yolları'na ait Boeing 737 - 86J tipi yolcu uçağının pistten çıkması ile sonuçlanan uçuştur .	Ankara - Trabzon seferini yapan ve Ankara Esenboğa Havalimanı'ndan kalkan uçak , Trabzon Havalimanı'na indikten sonra pistten çıkmış fakat uçakta bulunan kimse yaralanmamıştır .	Uçak Karadeniz'e 25 metre kala durmuştur .	Kullanılamaz hale gelen uçağın enkazı önce Trabzon’un Yomra ilçesine taşındı .	2021 yılında uçak enkazının pide salonuna çevrilmesi için çalışmalar başladı .
+Event	T0	UÇUŞU	EVENT	43
+Event	T1	çıkması	EVENT	147
+Event	T2	uçuştur	EVENT	170
+Event	T3	indikten	EVENT	283
+Event	T4	çıkmış	EVENT	306
+Event	T5	yaralanmamıştır	EVENT	340
+Event	T6	durmuştur	EVENT	389
+Event	T7	taşındı	EVENT	470
+Event	T8	çevrilmesi	EVENT	522
+Event	T9	başladı	EVENT	549
+Event	T10	gelen	EVENT	419
+Relation	T4	T10	CauseEffect	true	çıkmış	gelen
+Relation	T10	T4	EffectCause	true	gelen	çıkmış
+Relation	T10	T7	CauseEffect	true	gelen	taşındı
+Relation	T7	T10	EffectCause	true	taşındı	gelen
+Relation	T0	T10	NoRel	true	UÇUŞU	gelen
+Relation	T0	T8	NoRel	true	UÇUŞU	çevrilmesi
+Relation	T1	T0	NoRel	true	çıkması	UÇUŞU
+Relation	T1	T5	NoRel	true	çıkması	yaralanmamıştır
+Relation	T1	T6	NoRel	true	çıkması	durmuştur
+Relation	T10	T0	NoRel	true	gelen	UÇUŞU
+Relation	T10	T1	NoRel	true	gelen	çıkması
+Relation	T10	T2	NoRel	true	gelen	uçuştur
+Relation	T10	T8	NoRel	true	gelen	çevrilmesi
+Relation	T2	T0	NoRel	true	uçuştur	UÇUŞU
+Relation	T2	T10	NoRel	true	uçuştur	gelen
+Relation	T2	T3	NoRel	true	uçuştur	indikten
+Relation	T2	T5	NoRel	true	uçuştur	yaralanmamıştır
+Relation	T2	T7	NoRel	true	uçuştur	taşındı
+Relation	T2	T8	NoRel	true	uçuştur	çevrilmesi
+Relation	T2	T9	NoRel	true	uçuştur	başladı
+Relation	T3	T0	NoRel	true	indikten	UÇUŞU
+Relation	T3	T1	NoRel	true	indikten	çıkması
+Relation	T3	T2	NoRel	true	indikten	uçuştur
+Relation	T3	T5	NoRel	true	indikten	yaralanmamıştır
+Relation	T3	T7	NoRel	true	indikten	taşındı
+Relation	T3	T9	NoRel	true	indikten	başladı
+Relation	T4	T0	NoRel	true	çıkmış	UÇUŞU
+Relation	T4	T1	NoRel	true	çıkmış	çıkması
+Relation	T4	T2	NoRel	true	çıkmış	uçuştur
+Relation	T4	T5	NoRel	true	çıkmış	yaralanmamıştır
+Relation	T5	T10	NoRel	true	yaralanmamıştır	gelen
+Relation	T5	T3	NoRel	true	yaralanmamıştır	indikten
+Relation	T6	T0	NoRel	true	durmuştur	UÇUŞU
+Relation	T6	T1	NoRel	true	durmuştur	çıkması
+Relation	T7	T1	NoRel	true	taşındı	çıkması
+Relation	T7	T2	NoRel	true	taşındı	uçuştur
+Relation	T7	T3	NoRel	true	taşındı	indikten
+Relation	T7	T9	NoRel	true	taşındı	başladı
+Relation	T8	T0	NoRel	true	çevrilmesi	UÇUŞU
+Relation	T8	T6	NoRel	true	çevrilmesi	durmuştur
+Relation	T8	T7	NoRel	true	çevrilmesi	taşındı
+Relation	T9	T0	NoRel	true	başladı	UÇUŞU
+Relation	T9	T10	NoRel	true	başladı	gelen
+Relation	T9	T2	NoRel	true	başladı	uçuştur
+Relation	T9	T3	NoRel	true	başladı	indikten

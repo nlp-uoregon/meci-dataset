@@ -1,0 +1,62 @@
+Text	Fra København blev smitten spredt til provinsen , hvor 24 byer blev angrebet med 1.951 døde som resultat .	thumb| højkant |	Såkaldt " risvandsafføring " , typisk ved kolera .	Mange af de døde blev kørt på kærrer fra København op til Tårbæk .	Her byggede man et kapel og begravede de mange mennesker i en massegrav inde i Jægersborg Dyrehave .
+Event	T0	spredt	EVENT	27
+Event	T1	angrebet	EVENT	68
+Event	T2	døde	EVENT	87
+Event	T3	byggede	EVENT	246
+Event	T4	begravede	EVENT	270
+Event	T5	smitten	EVENT	19
+Event	T6	kolera	EVENT	166
+Event	T7	risvandsafføring	EVENT	134
+Event	T8	døde	EVENT	187
+Event	T9	kørt	EVENT	197
+Event	T10	massegrav	EVENT	304
+Relation	T0	T1	CauseEffect	true	spredt	angrebet
+Relation	T1	T0	EffectCause	true	angrebet	spredt
+Relation	T6	T7	CauseEffect	true	kolera	risvandsafføring
+Relation	T7	T6	EffectCause	true	risvandsafføring	kolera
+Relation	T6	T8	CauseEffect	true	kolera	døde
+Relation	T8	T6	EffectCause	true	døde	kolera
+Relation	T0	T10	NoRel	true	spredt	massegrav
+Relation	T0	T4	NoRel	true	spredt	begravede
+Relation	T1	T10	NoRel	true	angrebet	massegrav
+Relation	T1	T3	NoRel	true	angrebet	byggede
+Relation	T1	T5	NoRel	true	angrebet	smitten
+Relation	T1	T6	NoRel	true	angrebet	kolera
+Relation	T1	T7	NoRel	true	angrebet	risvandsafføring
+Relation	T1	T8	NoRel	true	angrebet	døde
+Relation	T1	T9	NoRel	true	angrebet	kørt
+Relation	T10	T0	NoRel	true	massegrav	spredt
+Relation	T10	T1	NoRel	true	massegrav	angrebet
+Relation	T10	T5	NoRel	true	massegrav	smitten
+Relation	T10	T6	NoRel	true	massegrav	kolera
+Relation	T2	T0	NoRel	true	døde	spredt
+Relation	T2	T1	NoRel	true	døde	angrebet
+Relation	T2	T5	NoRel	true	døde	smitten
+Relation	T2	T6	NoRel	true	døde	kolera
+Relation	T2	T7	NoRel	true	døde	risvandsafføring
+Relation	T3	T0	NoRel	true	byggede	spredt
+Relation	T3	T10	NoRel	true	byggede	massegrav
+Relation	T3	T4	NoRel	true	byggede	begravede
+Relation	T3	T6	NoRel	true	byggede	kolera
+Relation	T3	T9	NoRel	true	byggede	kørt
+Relation	T4	T0	NoRel	true	begravede	spredt
+Relation	T4	T3	NoRel	true	begravede	byggede
+Relation	T4	T5	NoRel	true	begravede	smitten
+Relation	T4	T9	NoRel	true	begravede	kørt
+Relation	T5	T1	NoRel	true	smitten	angrebet
+Relation	T5	T3	NoRel	true	smitten	byggede
+Relation	T5	T4	NoRel	true	smitten	begravede
+Relation	T5	T8	NoRel	true	smitten	døde
+Relation	T6	T2	NoRel	true	kolera	døde
+Relation	T6	T3	NoRel	true	kolera	byggede
+Relation	T6	T9	NoRel	true	kolera	kørt
+Relation	T7	T0	NoRel	true	risvandsafføring	spredt
+Relation	T7	T2	NoRel	true	risvandsafføring	døde
+Relation	T7	T3	NoRel	true	risvandsafføring	byggede
+Relation	T8	T1	NoRel	true	døde	angrebet
+Relation	T8	T2	NoRel	true	døde	døde
+Relation	T8	T7	NoRel	true	døde	risvandsafføring
+Relation	T8	T9	NoRel	true	døde	kørt
+Relation	T9	T2	NoRel	true	kørt	døde
+Relation	T9	T4	NoRel	true	kørt	begravede
+Relation	T9	T6	NoRel	true	kørt	kolera

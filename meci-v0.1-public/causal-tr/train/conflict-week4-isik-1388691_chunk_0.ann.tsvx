@@ -1,0 +1,21 @@
+Text	küçükresim | 370x370pik | 2020'deki savaş öncesi durum .	küçükresim | 370x370pik | 2020'deki savaşın sonrası .	DAĞLIK KARABAĞ SORUNU , Azerbaycan ile Ermenistan arasında , Dağlık Karabağ ve Dağlık Karabağ'ı çevreleyen Ermeni kontrolündeki Azerbaycan toprakları'ndaki etnik çatışma ve toprak anlaşmazlığıdır .	Bu anlaşmazlık , 27 Eylül 2020 tarihinde Azerbaycan ordusunun Karabağa yaptığı operasyon ile son bulmaya yaklaşmıştır .	Artsah Cumhuriyeti fiilen bağımsızdır , ancak Ermenistan dahil hiçbir ülke tarafından tanınmamış bir cumhuriyettir .
+Event	T0	savaş	EVENT	36
+Event	T2	çatışma	EVENT	273
+Event	T3	anlaşmazlığıdır	EVENT	291
+Event	T4	anlaşmazlık	EVENT	312
+Event	T5	operasyon	EVENT	388
+Event	T6	savaşın	EVENT	93
+Event	T7	DAĞLIK KARABAĞ SORUNU	EVENT	111
+Relation	T2	T7	CauseEffect	true	çatışma	DAĞLIK KARABAĞ SORUNU
+Relation	T7	T2	EffectCause	true	DAĞLIK KARABAĞ SORUNU	çatışma
+Relation	T3	T7	CauseEffect	true	anlaşmazlığıdır	DAĞLIK KARABAĞ SORUNU
+Relation	T7	T3	EffectCause	true	DAĞLIK KARABAĞ SORUNU	anlaşmazlığıdır
+Relation	T4	T5	CauseEffect	true	anlaşmazlık	operasyon
+Relation	T5	T4	EffectCause	true	operasyon	anlaşmazlık
+Relation	T0	T2	NoRel	true	savaş	çatışma
+Relation	T2	T4	NoRel	true	çatışma	anlaşmazlık
+Relation	T2	T5	NoRel	true	çatışma	operasyon
+Relation	T2	T6	NoRel	true	çatışma	savaşın
+Relation	T3	T6	NoRel	true	anlaşmazlığıdır	savaşın
+Relation	T7	T5	NoRel	true	DAĞLIK KARABAĞ SORUNU	operasyon
+Relation	T7	T6	NoRel	true	DAĞLIK KARABAĞ SORUNU	savaşın

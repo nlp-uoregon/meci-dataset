@@ -1,0 +1,133 @@
+Text	They found that if the propellers were reversed prior to take - off they would not , if the flag was not raised , be rotated automatically again in the air to produce forward thrust if full power was applied .	Tests performed by United Airlines showed that , if the propellers of just one engine were reversed and full power was applied to all four engines , then the aircraft would spiral into a dive .	If METO ( maximum except take - off ) power was applied to Nos. 1 , 2 and 3 engines , and full reverse thrust was applied to engine No. 4 , then the aircraft would become uncontrollable .	If full left aileron was applied , the aircraft could be recovered for a short period of time , but a violent turn to the right would continue , and the competing forces would cause the aircraft to stall , and violently roll and pitch down .	Flight tests , investigators said , accurately reproduced what happened to _ Mainliner Idaho _ during the accident sequence .
+Event	T0	found	EVENT	5
+Event	T1	reversed	EVENT	39
+Event	T2	raised	EVENT	105
+Event	T3	rotated	EVENT	117
+Event	T4	thrust	EVENT	175
+Event	T5	applied	EVENT	200
+Event	T6	performed	EVENT	216
+Event	T7	showed	EVENT	245
+Event	T8	reversed	EVENT	301
+Event	T9	applied	EVENT	329
+Event	T10	dive	EVENT	397
+Event	T11	thrust	EVENT	507
+Event	T12	applied	EVENT	518
+Event	T13	applied	EVENT	617
+Event	T14	recovered	EVENT	649
+Event	T15	turn	EVENT	702
+Event	T16	continue	EVENT	726
+Event	T17	competing	EVENT	745
+Event	T18	cause	EVENT	768
+Event	T19	stall	EVENT	790
+Event	T20	roll	EVENT	812
+Event	T21	tests	EVENT	841
+Event	T22	said	EVENT	863
+Event	T23	reproduced	EVENT	881
+Event	T24	happened	EVENT	897
+Event	T25	sequence	EVENT	949
+Event	T26	applied	EVENT	452
+Event	T27	spiral	EVENT	383
+Event	T28	uncontrollable	EVENT	575
+Relation	T8	T27	CauseEffect	true	reversed	spiral
+Relation	T27	T8	EffectCause	true	spiral	reversed
+Relation	T9	T27	CauseEffect	true	applied	spiral
+Relation	T27	T9	EffectCause	true	spiral	applied
+Relation	T26	T28	CauseEffect	true	applied	uncontrollable
+Relation	T28	T26	EffectCause	true	uncontrollable	applied
+Relation	T12	T28	CauseEffect	true	applied	uncontrollable
+Relation	T28	T12	EffectCause	true	uncontrollable	applied
+Relation	T13	T14	CauseEffect	true	applied	recovered
+Relation	T14	T13	EffectCause	true	recovered	applied
+Relation	T17	T18	CauseEffect	true	competing	cause
+Relation	T18	T17	EffectCause	true	cause	competing
+Relation	T17	T20	CauseEffect	true	competing	roll
+Relation	T20	T17	EffectCause	true	roll	competing
+Relation	T21	T23	CauseEffect	true	tests	reproduced
+Relation	T23	T21	EffectCause	true	reproduced	tests
+Relation	T0	T14	NoRel	true	found	recovered
+Relation	T0	T17	NoRel	true	found	competing
+Relation	T0	T18	NoRel	true	found	cause
+Relation	T0	T3	NoRel	true	found	rotated
+Relation	T1	T21	NoRel	true	reversed	tests
+Relation	T1	T26	NoRel	true	reversed	applied
+Relation	T1	T28	NoRel	true	reversed	uncontrollable
+Relation	T1	T5	NoRel	true	reversed	applied
+Relation	T1	T9	NoRel	true	reversed	applied
+Relation	T10	T21	NoRel	true	dive	tests
+Relation	T11	T12	NoRel	true	thrust	applied
+Relation	T12	T10	NoRel	true	applied	dive
+Relation	T12	T24	NoRel	true	applied	happened
+Relation	T13	T16	NoRel	true	applied	continue
+Relation	T13	T25	NoRel	true	applied	sequence
+Relation	T13	T9	NoRel	true	applied	applied
+Relation	T14	T10	NoRel	true	recovered	dive
+Relation	T14	T20	NoRel	true	recovered	roll
+Relation	T15	T10	NoRel	true	turn	dive
+Relation	T15	T18	NoRel	true	turn	cause
+Relation	T15	T22	NoRel	true	turn	said
+Relation	T16	T10	NoRel	true	continue	dive
+Relation	T16	T14	NoRel	true	continue	recovered
+Relation	T16	T20	NoRel	true	continue	roll
+Relation	T16	T22	NoRel	true	continue	said
+Relation	T16	T25	NoRel	true	continue	sequence
+Relation	T18	T25	NoRel	true	cause	sequence
+Relation	T18	T26	NoRel	true	cause	applied
+Relation	T19	T14	NoRel	true	stall	recovered
+Relation	T19	T17	NoRel	true	stall	competing
+Relation	T19	T21	NoRel	true	stall	tests
+Relation	T19	T23	NoRel	true	stall	reproduced
+Relation	T20	T1	NoRel	true	roll	reversed
+Relation	T20	T13	NoRel	true	roll	applied
+Relation	T20	T28	NoRel	true	roll	uncontrollable
+Relation	T21	T0	NoRel	true	tests	found
+Relation	T21	T14	NoRel	true	tests	recovered
+Relation	T21	T18	NoRel	true	tests	cause
+Relation	T21	T25	NoRel	true	tests	sequence
+Relation	T21	T8	NoRel	true	tests	reversed
+Relation	T22	T19	NoRel	true	said	stall
+Relation	T22	T8	NoRel	true	said	reversed
+Relation	T23	T0	NoRel	true	reproduced	found
+Relation	T23	T14	NoRel	true	reproduced	recovered
+Relation	T23	T22	NoRel	true	reproduced	said
+Relation	T24	T12	NoRel	true	happened	applied
+Relation	T24	T14	NoRel	true	happened	recovered
+Relation	T24	T16	NoRel	true	happened	continue
+Relation	T24	T3	NoRel	true	happened	rotated
+Relation	T24	T6	NoRel	true	happened	performed
+Relation	T24	T8	NoRel	true	happened	reversed
+Relation	T25	T5	NoRel	true	sequence	applied
+Relation	T25	T6	NoRel	true	sequence	performed
+Relation	T25	T7	NoRel	true	sequence	showed
+Relation	T26	T0	NoRel	true	applied	found
+Relation	T26	T11	NoRel	true	applied	thrust
+Relation	T26	T14	NoRel	true	applied	recovered
+Relation	T26	T18	NoRel	true	applied	cause
+Relation	T26	T24	NoRel	true	applied	happened
+Relation	T26	T8	NoRel	true	applied	reversed
+Relation	T27	T15	NoRel	true	spiral	turn
+Relation	T27	T21	NoRel	true	spiral	tests
+Relation	T27	T4	NoRel	true	spiral	thrust
+Relation	T28	T2	NoRel	true	uncontrollable	raised
+Relation	T28	T24	NoRel	true	uncontrollable	happened
+Relation	T28	T5	NoRel	true	uncontrollable	applied
+Relation	T3	T2	NoRel	true	rotated	raised
+Relation	T3	T22	NoRel	true	rotated	said
+Relation	T3	T23	NoRel	true	rotated	reproduced
+Relation	T4	T25	NoRel	true	thrust	sequence
+Relation	T5	T1	NoRel	true	applied	reversed
+Relation	T5	T11	NoRel	true	applied	thrust
+Relation	T5	T12	NoRel	true	applied	applied
+Relation	T5	T19	NoRel	true	applied	stall
+Relation	T6	T1	NoRel	true	performed	reversed
+Relation	T6	T12	NoRel	true	performed	applied
+Relation	T6	T14	NoRel	true	performed	recovered
+Relation	T6	T25	NoRel	true	performed	sequence
+Relation	T7	T18	NoRel	true	showed	cause
+Relation	T7	T28	NoRel	true	showed	uncontrollable
+Relation	T7	T5	NoRel	true	showed	applied
+Relation	T7	T8	NoRel	true	showed	reversed
+Relation	T8	T10	NoRel	true	reversed	dive
+Relation	T8	T22	NoRel	true	reversed	said
+Relation	T9	T18	NoRel	true	applied	cause
+Relation	T9	T19	NoRel	true	applied	stall
+Relation	T9	T2	NoRel	true	applied	raised

@@ -1,0 +1,66 @@
+Text	Cessna T - 37 Tweet trainer , flying locally , had rendezvoused with U - 2 and two crew could see pilot unconscious in the cockpit .	After landing , pilot revived sufficiently to shut down engine , but then , as he climbed out of the aircraft , accidentally caught the D ring of his ejection seat , which he had not safed , which fired , tossing him in a somersault , but suffered only a chipped tooth .	Airframe repaired for display at 9th Strategic Reconnaissance Wing headquarters , Beale AFB , California .	Pilot removed from U - 2 program on medical grounds .	19 February : Two crew are killed in the fiery crash of a McDonnell CF - 101B Voodoo ,__ 101055_ , c / n 602 , ( originally F - 101B - 100- MC ,__ 57-0424_; to CAF on 8 July 1971 ) on runway 25 at Ottawa International Airport , Ottawa , Ontario , Canada .
+Event	T0	flying	EVENT	30
+Event	T1	rendezvoused	EVENT	51
+Event	T2	see	EVENT	94
+Event	T3	landing	EVENT	139
+Event	T4	revived	EVENT	155
+Event	T5	caught	EVENT	258
+Event	T6	ejection	EVENT	283
+Event	T7	safed	EVENT	316
+Event	T8	fired	EVENT	330
+Event	T9	tossing	EVENT	338
+Event	T10	somersault	EVENT	355
+Event	T11	suffered	EVENT	372
+Event	T12	chipped	EVENT	388
+Event	T13	repaired	EVENT	413
+Event	T14	display	EVENT	426
+Event	T15	removed	EVENT	517
+Event	T16	crash	EVENT	612
+Event	T17	shut down	EVENT	179
+Event	T18	climbed	EVENT	215
+Event	T19	killed	EVENT	592
+Relation	T16	T19	CauseEffect	true	crash	killed
+Relation	T19	T16	EffectCause	true	killed	crash
+Relation	T4	T17	CauseEffect	true	revived	shut down
+Relation	T17	T4	EffectCause	true	shut down	revived
+Relation	T18	T5	CauseEffect	true	climbed	caught
+Relation	T5	T18	EffectCause	true	caught	climbed
+Relation	T18	T8	CauseEffect	true	climbed	fired
+Relation	T8	T18	EffectCause	true	fired	climbed
+Relation	T13	T14	CauseEffect	true	repaired	display
+Relation	T14	T13	EffectCause	true	display	repaired
+Relation	T8	T9	CauseEffect	true	fired	tossing
+Relation	T9	T8	EffectCause	true	tossing	fired
+Relation	T1	T0	NoRel	true	rendezvoused	flying
+Relation	T1	T10	NoRel	true	rendezvoused	somersault
+Relation	T1	T11	NoRel	true	rendezvoused	suffered
+Relation	T1	T12	NoRel	true	rendezvoused	chipped
+Relation	T11	T14	NoRel	true	suffered	display
+Relation	T11	T17	NoRel	true	suffered	shut down
+Relation	T12	T15	NoRel	true	chipped	removed
+Relation	T14	T1	NoRel	true	display	rendezvoused
+Relation	T14	T3	NoRel	true	display	landing
+Relation	T14	T6	NoRel	true	display	ejection
+Relation	T16	T17	NoRel	true	crash	shut down
+Relation	T17	T0	NoRel	true	shut down	flying
+Relation	T17	T10	NoRel	true	shut down	somersault
+Relation	T17	T14	NoRel	true	shut down	display
+Relation	T17	T2	NoRel	true	shut down	see
+Relation	T17	T5	NoRel	true	shut down	caught
+Relation	T17	T7	NoRel	true	shut down	safed
+Relation	T18	T12	NoRel	true	climbed	chipped
+Relation	T19	T13	NoRel	true	killed	repaired
+Relation	T19	T18	NoRel	true	killed	climbed
+Relation	T19	T8	NoRel	true	killed	fired
+Relation	T3	T2	NoRel	true	landing	see
+Relation	T4	T11	NoRel	true	revived	suffered
+Relation	T4	T14	NoRel	true	revived	display
+Relation	T4	T18	NoRel	true	revived	climbed
+Relation	T4	T2	NoRel	true	revived	see
+Relation	T4	T8	NoRel	true	revived	fired
+Relation	T5	T14	NoRel	true	caught	display
+Relation	T5	T17	NoRel	true	caught	shut down
+Relation	T7	T0	NoRel	true	safed	flying
+Relation	T8	T2	NoRel	true	fired	see
+Relation	T9	T12	NoRel	true	tossing	chipped
+Relation	T9	T13	NoRel	true	tossing	repaired

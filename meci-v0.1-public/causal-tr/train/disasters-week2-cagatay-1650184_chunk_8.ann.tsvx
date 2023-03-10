@@ -1,0 +1,40 @@
+Text	Yaşamlarını toplayıcılık , avcılık ve balıkçılıkla karşılamktaydılar .	Bunlardan Yana kabilesinin sözlü efsanesine göre " dünyanın merkezi " olan Wağanüpa , yanardağı yemekte ve ortaya çıkan karlar kanyonları ve mağaraları yaratmakta idi .	Bu kabilelerden arda kalanlar hala bu yanardağ eteklerinde yaşamaktadırlar ve bu yanardağın zirvesinde doğa üstü yaratıkların yaşadığına inanmaktadırlar .	1830'lu yıllarda Kaliforniya'ya Sacramento Vadisi'ne göç etmek isteyen Avrupalı arabalı göçmenlere kılavuzluk yapan Danimarkalı bir nalbant olan Peter Lassen kılavuzluk ettiği kafileleri Sacramento'ya götürmek için bu yanardağın kenarından geçen bir göçmen yolunu kullanmaktaydı .	Fakat volkanik faaliyet olduğu için bu yol tehlikeli görülüp çok kullanılmadı ve daha emniyetli olan William Nobles adlı bir kılavuzun bulduğu " Nobles Göçmen Patikası " adı verilen diğer bir yol kullanılmaya başlandı .
+Event	T1	yemekte	EVENT	167
+Event	T14	götürmek	EVENT	596
+Event	T15	kullanmaktaydı	EVENT	659
+Event	T16	faaliyet	EVENT	691
+Event	T18	bulduğu	EVENT	811
+Event	T2	göç	EVENT	448
+Event	T4	kullanılmadı	EVENT	741
+Event	T9	yaratmakta	EVENT	223
+Relation	T1	T9	CauseEffect	true	yemekte	yaratmakta
+Relation	T9	T1	EffectCause	true	yaratmakta	yemekte
+Relation	T14	T15	CauseEffect	true	götürmek	kullanmaktaydı
+Relation	T15	T14	EffectCause	true	kullanmaktaydı	götürmek
+Relation	T16	T4	CauseEffect	true	faaliyet	kullanılmadı
+Relation	T4	T16	EffectCause	true	kullanılmadı	faaliyet
+Relation	T4	T18	CauseEffect	true	kullanılmadı	bulduğu
+Relation	T18	T4	EffectCause	true	bulduğu	kullanılmadı
+Relation	T16	T18	CauseEffect	true	faaliyet	bulduğu
+Relation	T18	T16	EffectCause	true	bulduğu	faaliyet
+Relation	T1	T14	NoRel	true	yemekte	götürmek
+Relation	T1	T16	NoRel	true	yemekte	faaliyet
+Relation	T1	T18	NoRel	true	yemekte	bulduğu
+Relation	T1	T4	NoRel	true	yemekte	kullanılmadı
+Relation	T14	T1	NoRel	true	götürmek	yemekte
+Relation	T14	T18	NoRel	true	götürmek	bulduğu
+Relation	T14	T2	NoRel	true	götürmek	göç
+Relation	T14	T4	NoRel	true	götürmek	kullanılmadı
+Relation	T15	T9	NoRel	true	kullanmaktaydı	yaratmakta
+Relation	T16	T14	NoRel	true	faaliyet	götürmek
+Relation	T18	T14	NoRel	true	bulduğu	götürmek
+Relation	T18	T9	NoRel	true	bulduğu	yaratmakta
+Relation	T2	T1	NoRel	true	göç	yemekte
+Relation	T2	T14	NoRel	true	göç	götürmek
+Relation	T2	T15	NoRel	true	göç	kullanmaktaydı
+Relation	T2	T16	NoRel	true	göç	faaliyet
+Relation	T2	T9	NoRel	true	göç	yaratmakta
+Relation	T4	T14	NoRel	true	kullanılmadı	götürmek
+Relation	T4	T2	NoRel	true	kullanılmadı	göç
+Relation	T4	T9	NoRel	true	kullanılmadı	yaratmakta
+Relation	T9	T2	NoRel	true	yaratmakta	göç

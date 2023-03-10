@@ -1,0 +1,29 @@
+Text	SS birliklerini travmalardan korumak için genellikle mahkûmlar ve yardımcı personeller bu görevi yapmakla görevlendirilirdi .	Ordunun Sovyet partizanları ile başa çıkmakta zorlanması üzerine Temmuz 1942'de Hitler , anti - partizan operasyonlar düzenleme görevini polise devretti .	Bu , meseleyi Himmler'in yetki alanı içine soktu .	8 Temmuz 1941'de Hitler tüm Yahudilerin partizan olarak görülmesini emrettiği için , " anti - partizan operasyonlar " terimi direnişçilere karşı savaşmak için kullanılması ile birlikte Yahudilerin öldürülmesi için örtmece bir terim olarak da kullanılıyordu .	Temmuz 1942'de " partizan " teriminin artık kullanılmamasını ve Nazi işgaline direnen kişilerden bahsedilirken " haydut " denilmesini emretti .
+Event	T1	zorlanması	EVENT	172
+Event	T2	devretti	EVENT	270
+Event	T3	soktu	EVENT	324
+Event	T4	emrettiği	EVENT	400
+Event	T7	kullanılıyordu	EVENT	574
+Event	T8	emretti	EVENT	725
+Event	T9	görevlendirilirdi	EVENT	106
+Relation	T1	T2	CauseEffect	true	zorlanması	devretti
+Relation	T2	T1	EffectCause	true	devretti	zorlanması
+Relation	T2	T3	CauseEffect	true	devretti	soktu
+Relation	T3	T2	EffectCause	true	soktu	devretti
+Relation	T1	T4	NoRel	true	zorlanması	emrettiği
+Relation	T2	T9	NoRel	true	devretti	görevlendirilirdi
+Relation	T3	T4	NoRel	true	soktu	emrettiği
+Relation	T3	T7	NoRel	true	soktu	kullanılıyordu
+Relation	T3	T8	NoRel	true	soktu	emretti
+Relation	T4	T1	NoRel	true	emrettiği	zorlanması
+Relation	T4	T2	NoRel	true	emrettiği	devretti
+Relation	T4	T7	NoRel	true	emrettiği	kullanılıyordu
+Relation	T4	T9	NoRel	true	emrettiği	görevlendirilirdi
+Relation	T7	T1	NoRel	true	kullanılıyordu	zorlanması
+Relation	T7	T2	NoRel	true	kullanılıyordu	devretti
+Relation	T7	T3	NoRel	true	kullanılıyordu	soktu
+Relation	T8	T7	NoRel	true	emretti	kullanılıyordu
+Relation	T9	T2	NoRel	true	görevlendirilirdi	devretti
+Relation	T9	T3	NoRel	true	görevlendirilirdi	soktu
+Relation	T9	T4	NoRel	true	görevlendirilirdi	emrettiği
+Relation	T9	T8	NoRel	true	görevlendirilirdi	emretti

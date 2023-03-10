@@ -1,0 +1,34 @@
+Text	Su material de construcción a base de madera facilitó que ardieran rápidamente .	]	- 1 furgón de equipajes ; - 2 furgones de correo ; - 2 coches de 1. ªclase ( uno mixto de 1. ªclase y bar ) ; - 1 coche mixto de 1. ª y 2. ªclase ; - 5 coches de 3. ªclase ; - 1 « furgón pagador » , a la cola del convoy .	Teniendo en cuenta la composición del tren y asignando , debido a las fechas navideñas , una ocupación sobre las plazas de asiento del 105% en 1. ªclase , del 110% en 2. ª y del 130% en 3. ª , resultaría una cifra aproximada de cerca de 900 pasajeros , de ellos unos 780 en 3. ªclase .	Según testigos , la locomotora titular , la 4532 , no frenaba bien y se le había añadido expresamente la segunda locomotora , 240-2423 , para paliar este problema .
+Event	T0	construcción	EVENT	15
+Event	T1	facilitó	EVENT	45
+Event	T2	ardieran	EVENT	58
+Event	T3	asignando	EVENT	350
+Event	T4	ocupación	EVENT	398
+Event	T5	frenaba	EVENT	645
+Event	T6	añadido	EVENT	672
+Event	T7	paliar	EVENT	733
+Relation	T6	T7	CauseEffect	true	añadido	paliar
+Relation	T7	T6	EffectCause	true	paliar	añadido
+Relation	T0	T4	NoRel	true	construcción	ocupación
+Relation	T0	T7	NoRel	true	construcción	paliar
+Relation	T1	T0	NoRel	true	facilitó	construcción
+Relation	T1	T4	NoRel	true	facilitó	ocupación
+Relation	T1	T5	NoRel	true	facilitó	frenaba
+Relation	T1	T7	NoRel	true	facilitó	paliar
+Relation	T2	T3	NoRel	true	ardieran	asignando
+Relation	T2	T4	NoRel	true	ardieran	ocupación
+Relation	T2	T6	NoRel	true	ardieran	añadido
+Relation	T3	T0	NoRel	true	asignando	construcción
+Relation	T3	T6	NoRel	true	asignando	añadido
+Relation	T3	T7	NoRel	true	asignando	paliar
+Relation	T4	T0	NoRel	true	ocupación	construcción
+Relation	T4	T1	NoRel	true	ocupación	facilitó
+Relation	T4	T3	NoRel	true	ocupación	asignando
+Relation	T5	T0	NoRel	true	frenaba	construcción
+Relation	T5	T1	NoRel	true	frenaba	facilitó
+Relation	T5	T4	NoRel	true	frenaba	ocupación
+Relation	T5	T6	NoRel	true	frenaba	añadido
+Relation	T5	T7	NoRel	true	frenaba	paliar
+Relation	T6	T1	NoRel	true	añadido	facilitó
+Relation	T7	T3	NoRel	true	paliar	asignando
+Relation	T7	T5	NoRel	true	paliar	frenaba

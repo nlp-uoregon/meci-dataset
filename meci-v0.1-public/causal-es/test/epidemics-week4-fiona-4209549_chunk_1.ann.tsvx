@@ -1,0 +1,103 @@
+Text	El virus de la inmunodeficiencia humana ( VIH ) tiene su origen en el África ecuatorial , donde pasó a los humanos como una mutación del virus de inmunodeficiencia de los simios ( VIS ) , que ataca particularmente a los llamados monos verdes africanos y a los chimpancés .	Es probable que el VIH haya sido adquirido en Zaire por los profesores haitianos que acudieron a ese país a realizar labores de alfabetización poco después de que el antiguo Congo Belga obtuvo su independencia .	A la rápida difusión del VIH en Haití contribuyó no sólo la pobreza del país , sino su inestabilidad política .	En 1986 terminó la dictadura de François Duvalier ( Papa Doc ) , y el país fue gobernado por varias juntas militares hasta 1990 .	Durante ese período , el débil sistema de salud haitiano quedó destruido por la desatención y la carencia de recursos para sostenerlo .
+Event	T0	pasó	EVENT	96
+Event	T1	mutación	EVENT	124
+Event	T2	ataca	EVENT	192
+Event	T3	adquirido	EVENT	306
+Event	T4	acudieron	EVENT	358
+Event	T5	labores	EVENT	390
+Event	T6	alfabetización	EVENT	401
+Event	T7	obtuvo	EVENT	459
+Event	T8	independencia	EVENT	469
+Event	T9	difusión	EVENT	497
+Event	T10	contribuyó	EVENT	523
+Event	T11	terminó	EVENT	605
+Event	T12	dictadura	EVENT	616
+Event	T13	gobernado	EVENT	676
+Event	T14	destruido	EVENT	790
+Event	T15	desatención	EVENT	807
+Relation	T15	T14	CauseEffect	true	desatención	destruido
+Relation	T14	T15	EffectCause	true	destruido	desatención
+Relation	T0	T14	NoRel	true	pasó	destruido
+Relation	T0	T4	NoRel	true	pasó	acudieron
+Relation	T0	T5	NoRel	true	pasó	labores
+Relation	T0	T8	NoRel	true	pasó	independencia
+Relation	T1	T13	NoRel	true	mutación	gobernado
+Relation	T1	T15	NoRel	true	mutación	desatención
+Relation	T1	T2	NoRel	true	mutación	ataca
+Relation	T1	T4	NoRel	true	mutación	acudieron
+Relation	T1	T5	NoRel	true	mutación	labores
+Relation	T1	T7	NoRel	true	mutación	obtuvo
+Relation	T1	T8	NoRel	true	mutación	independencia
+Relation	T10	T15	NoRel	true	contribuyó	desatención
+Relation	T10	T2	NoRel	true	contribuyó	ataca
+Relation	T10	T6	NoRel	true	contribuyó	alfabetización
+Relation	T11	T1	NoRel	true	terminó	mutación
+Relation	T11	T10	NoRel	true	terminó	contribuyó
+Relation	T11	T2	NoRel	true	terminó	ataca
+Relation	T11	T3	NoRel	true	terminó	adquirido
+Relation	T11	T6	NoRel	true	terminó	alfabetización
+Relation	T12	T1	NoRel	true	dictadura	mutación
+Relation	T12	T10	NoRel	true	dictadura	contribuyó
+Relation	T12	T11	NoRel	true	dictadura	terminó
+Relation	T12	T15	NoRel	true	dictadura	desatención
+Relation	T12	T3	NoRel	true	dictadura	adquirido
+Relation	T12	T4	NoRel	true	dictadura	acudieron
+Relation	T12	T5	NoRel	true	dictadura	labores
+Relation	T12	T6	NoRel	true	dictadura	alfabetización
+Relation	T13	T0	NoRel	true	gobernado	pasó
+Relation	T13	T10	NoRel	true	gobernado	contribuyó
+Relation	T13	T11	NoRel	true	gobernado	terminó
+Relation	T13	T14	NoRel	true	gobernado	destruido
+Relation	T13	T2	NoRel	true	gobernado	ataca
+Relation	T13	T6	NoRel	true	gobernado	alfabetización
+Relation	T13	T8	NoRel	true	gobernado	independencia
+Relation	T14	T11	NoRel	true	destruido	terminó
+Relation	T14	T13	NoRel	true	destruido	gobernado
+Relation	T14	T2	NoRel	true	destruido	ataca
+Relation	T14	T6	NoRel	true	destruido	alfabetización
+Relation	T14	T7	NoRel	true	destruido	obtuvo
+Relation	T15	T10	NoRel	true	desatención	contribuyó
+Relation	T2	T10	NoRel	true	ataca	contribuyó
+Relation	T2	T14	NoRel	true	ataca	destruido
+Relation	T2	T15	NoRel	true	ataca	desatención
+Relation	T2	T3	NoRel	true	ataca	adquirido
+Relation	T2	T4	NoRel	true	ataca	acudieron
+Relation	T3	T0	NoRel	true	adquirido	pasó
+Relation	T3	T1	NoRel	true	adquirido	mutación
+Relation	T3	T12	NoRel	true	adquirido	dictadura
+Relation	T3	T13	NoRel	true	adquirido	gobernado
+Relation	T3	T2	NoRel	true	adquirido	ataca
+Relation	T3	T7	NoRel	true	adquirido	obtuvo
+Relation	T3	T8	NoRel	true	adquirido	independencia
+Relation	T4	T10	NoRel	true	acudieron	contribuyó
+Relation	T4	T11	NoRel	true	acudieron	terminó
+Relation	T4	T12	NoRel	true	acudieron	dictadura
+Relation	T4	T14	NoRel	true	acudieron	destruido
+Relation	T4	T15	NoRel	true	acudieron	desatención
+Relation	T5	T11	NoRel	true	labores	terminó
+Relation	T5	T12	NoRel	true	labores	dictadura
+Relation	T5	T3	NoRel	true	labores	adquirido
+Relation	T5	T9	NoRel	true	labores	difusión
+Relation	T6	T0	NoRel	true	alfabetización	pasó
+Relation	T6	T12	NoRel	true	alfabetización	dictadura
+Relation	T6	T13	NoRel	true	alfabetización	gobernado
+Relation	T6	T5	NoRel	true	alfabetización	labores
+Relation	T6	T9	NoRel	true	alfabetización	difusión
+Relation	T7	T1	NoRel	true	obtuvo	mutación
+Relation	T7	T13	NoRel	true	obtuvo	gobernado
+Relation	T7	T6	NoRel	true	obtuvo	alfabetización
+Relation	T7	T9	NoRel	true	obtuvo	difusión
+Relation	T8	T0	NoRel	true	independencia	pasó
+Relation	T8	T1	NoRel	true	independencia	mutación
+Relation	T8	T15	NoRel	true	independencia	desatención
+Relation	T8	T4	NoRel	true	independencia	acudieron
+Relation	T8	T6	NoRel	true	independencia	alfabetización
+Relation	T8	T7	NoRel	true	independencia	obtuvo
+Relation	T8	T9	NoRel	true	independencia	difusión
+Relation	T9	T0	NoRel	true	difusión	pasó
+Relation	T9	T12	NoRel	true	difusión	dictadura
+Relation	T9	T15	NoRel	true	difusión	desatención
+Relation	T9	T3	NoRel	true	difusión	adquirido
+Relation	T9	T4	NoRel	true	difusión	acudieron
+Relation	T9	T5	NoRel	true	difusión	labores
+Relation	T9	T7	NoRel	true	difusión	obtuvo

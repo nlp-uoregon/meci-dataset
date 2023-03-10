@@ -1,0 +1,65 @@
+Text	Deprem'de , Lizbon'daki binâların % 85'i harâp oldu .	Yıkılan yerlerin içerisinde , bâzı köşkler ve kütüphâneler de vardır .	16._yüzyılda Portekiz'de başlayan Manuelin tarzı mîmârinin örneğini teşkil eden birçok binâ bu depremde yıkıldı .	Depremden sağ çıkabilen bâzı binâlar ise ardından başlayan yangınlarla harâb oldu .	Lizbon'un altı ay önce hizmete açılmış olan opera binâsı Ópera do Tejo tamâmen yanarak yerle yeksân oldu .
+Event	T0	oldu	EVENT	47
+Event	T1	başlayan	EVENT	150
+Event	T2	yıkıldı	EVENT	229
+Event	T3	oldu	EVENT	316
+Event	T4	açılmış	EVENT	354
+Event	T5	yanarak	EVENT	402
+Event	T6	oldu	EVENT	423
+Event	T7	Deprem'de	EVENT	0
+Event	T8	Yıkılan	EVENT	54
+Event	T9	yangınlarla	EVENT	298
+Event	T10	Depremden	EVENT	239
+Relation	T7	T0	CauseEffect	true	Deprem'de	oldu
+Relation	T0	T7	EffectCause	true	oldu	Deprem'de
+Relation	T7	T8	CauseEffect	true	Deprem'de	Yıkılan
+Relation	T8	T7	EffectCause	true	Yıkılan	Deprem'de
+Relation	T7	T2	CauseEffect	true	Deprem'de	yıkıldı
+Relation	T2	T7	EffectCause	true	yıkıldı	Deprem'de
+Relation	T9	T3	CauseEffect	true	yangınlarla	oldu
+Relation	T3	T9	EffectCause	true	oldu	yangınlarla
+Relation	T10	T9	CauseEffect	true	Depremden	yangınlarla
+Relation	T9	T10	EffectCause	true	yangınlarla	Depremden
+Relation	T10	T5	CauseEffect	true	Depremden	yanarak
+Relation	T5	T10	EffectCause	true	yanarak	Depremden
+Relation	T5	T6	CauseEffect	true	yanarak	oldu
+Relation	T6	T5	EffectCause	true	oldu	yanarak
+Relation	T7	T9	CauseEffect	true	Deprem'de	yangınlarla
+Relation	T9	T7	EffectCause	true	yangınlarla	Deprem'de
+Relation	T7	T5	CauseEffect	true	Deprem'de	yanarak
+Relation	T5	T7	EffectCause	true	yanarak	Deprem'de
+Relation	T0	T10	NoRel	true	oldu	Depremden
+Relation	T0	T2	NoRel	true	oldu	yıkıldı
+Relation	T0	T3	NoRel	true	oldu	oldu
+Relation	T0	T4	NoRel	true	oldu	açılmış
+Relation	T0	T9	NoRel	true	oldu	yangınlarla
+Relation	T1	T10	NoRel	true	başlayan	Depremden
+Relation	T10	T0	NoRel	true	Depremden	oldu
+Relation	T10	T4	NoRel	true	Depremden	açılmış
+Relation	T2	T1	NoRel	true	yıkıldı	başlayan
+Relation	T2	T10	NoRel	true	yıkıldı	Depremden
+Relation	T2	T6	NoRel	true	yıkıldı	oldu
+Relation	T2	T8	NoRel	true	yıkıldı	Yıkılan
+Relation	T2	T9	NoRel	true	yıkıldı	yangınlarla
+Relation	T3	T5	NoRel	true	oldu	yanarak
+Relation	T4	T1	NoRel	true	açılmış	başlayan
+Relation	T4	T8	NoRel	true	açılmış	Yıkılan
+Relation	T5	T0	NoRel	true	yanarak	oldu
+Relation	T5	T1	NoRel	true	yanarak	başlayan
+Relation	T5	T2	NoRel	true	yanarak	yıkıldı
+Relation	T5	T3	NoRel	true	yanarak	oldu
+Relation	T5	T4	NoRel	true	yanarak	açılmış
+Relation	T5	T9	NoRel	true	yanarak	yangınlarla
+Relation	T6	T2	NoRel	true	oldu	yıkıldı
+Relation	T6	T3	NoRel	true	oldu	oldu
+Relation	T6	T4	NoRel	true	oldu	açılmış
+Relation	T6	T9	NoRel	true	oldu	yangınlarla
+Relation	T7	T10	NoRel	true	Deprem'de	Depremden
+Relation	T7	T3	NoRel	true	Deprem'de	oldu
+Relation	T7	T6	NoRel	true	Deprem'de	oldu
+Relation	T8	T1	NoRel	true	Yıkılan	başlayan
+Relation	T8	T10	NoRel	true	Yıkılan	Depremden
+Relation	T8	T3	NoRel	true	Yıkılan	oldu
+Relation	T8	T9	NoRel	true	Yıkılan	yangınlarla
+Relation	T9	T1	NoRel	true	yangınlarla	başlayan
+Relation	T9	T6	NoRel	true	yangınlarla	oldu

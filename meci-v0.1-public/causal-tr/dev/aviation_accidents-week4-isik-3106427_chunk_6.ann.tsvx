@@ -1,0 +1,68 @@
+Text	Kaydın yayılması basında büyük yer aldı .	Sovyetler Birliği uçağın düşürüldüğünü inkar etmeye devam etti .	Sovyetler Birliği'nin dağılmasının ardından Rusya Devlet Başkanı Boris Yeltsin , 1991'de mevcut bilgileri yayınlamaya başladı .	1992'de olayı araştırmak üzere ortak bir Amerikan / Rus komisyonu kuruldu .	Bu komisyonun kurulmasıyla Sovyet Hava Savunma Kuvvetleri arşivlerinde bulunan olayla ilgili bir takım belgelerin gizliliği kaldırılarak yayınladı .
+Event	T0	yayılması	EVENT	7
+Event	T1	aldı	EVENT	35
+Event	T2	inkar	EVENT	81
+Event	T3	etti	EVENT	100
+Event	T4	başladı	EVENT	225
+Event	T5	araştırmak	EVENT	249
+Event	T6	kuruldu	EVENT	301
+Event	T7	yayınladı	EVENT	448
+Event	T8	dağılmasının	EVENT	129
+Event	T9	olayı	EVENT	243
+Event	T10	kurulmasıyla	EVENT	325
+Event	T11	kaldırılarak	EVENT	435
+Relation	T5	T6	CauseEffect	true	araştırmak	kuruldu
+Relation	T6	T5	EffectCause	true	kuruldu	araştırmak
+Relation	T6	T11	CauseEffect	true	kuruldu	kaldırılarak
+Relation	T11	T6	EffectCause	true	kaldırılarak	kuruldu
+Relation	T11	T7	CauseEffect	true	kaldırılarak	yayınladı
+Relation	T7	T11	EffectCause	true	yayınladı	kaldırılarak
+Relation	T0	T1	NoRel	true	yayılması	aldı
+Relation	T0	T10	NoRel	true	yayılması	kurulmasıyla
+Relation	T0	T2	NoRel	true	yayılması	inkar
+Relation	T0	T4	NoRel	true	yayılması	başladı
+Relation	T0	T5	NoRel	true	yayılması	araştırmak
+Relation	T0	T6	NoRel	true	yayılması	kuruldu
+Relation	T1	T0	NoRel	true	aldı	yayılması
+Relation	T1	T11	NoRel	true	aldı	kaldırılarak
+Relation	T1	T7	NoRel	true	aldı	yayınladı
+Relation	T10	T0	NoRel	true	kurulmasıyla	yayılması
+Relation	T10	T1	NoRel	true	kurulmasıyla	aldı
+Relation	T10	T7	NoRel	true	kurulmasıyla	yayınladı
+Relation	T10	T8	NoRel	true	kurulmasıyla	dağılmasının
+Relation	T11	T1	NoRel	true	kaldırılarak	aldı
+Relation	T11	T10	NoRel	true	kaldırılarak	kurulmasıyla
+Relation	T11	T3	NoRel	true	kaldırılarak	etti
+Relation	T11	T5	NoRel	true	kaldırılarak	araştırmak
+Relation	T11	T8	NoRel	true	kaldırılarak	dağılmasının
+Relation	T11	T9	NoRel	true	kaldırılarak	olayı
+Relation	T2	T1	NoRel	true	inkar	aldı
+Relation	T2	T11	NoRel	true	inkar	kaldırılarak
+Relation	T2	T3	NoRel	true	inkar	etti
+Relation	T2	T5	NoRel	true	inkar	araştırmak
+Relation	T3	T1	NoRel	true	etti	aldı
+Relation	T3	T11	NoRel	true	etti	kaldırılarak
+Relation	T3	T6	NoRel	true	etti	kuruldu
+Relation	T3	T9	NoRel	true	etti	olayı
+Relation	T4	T0	NoRel	true	başladı	yayılması
+Relation	T4	T1	NoRel	true	başladı	aldı
+Relation	T4	T11	NoRel	true	başladı	kaldırılarak
+Relation	T4	T7	NoRel	true	başladı	yayınladı
+Relation	T5	T11	NoRel	true	araştırmak	kaldırılarak
+Relation	T5	T2	NoRel	true	araştırmak	inkar
+Relation	T6	T1	NoRel	true	kuruldu	aldı
+Relation	T6	T2	NoRel	true	kuruldu	inkar
+Relation	T6	T9	NoRel	true	kuruldu	olayı
+Relation	T7	T10	NoRel	true	yayınladı	kurulmasıyla
+Relation	T7	T4	NoRel	true	yayınladı	başladı
+Relation	T7	T5	NoRel	true	yayınladı	araştırmak
+Relation	T7	T6	NoRel	true	yayınladı	kuruldu
+Relation	T7	T9	NoRel	true	yayınladı	olayı
+Relation	T8	T0	NoRel	true	dağılmasının	yayılması
+Relation	T8	T1	NoRel	true	dağılmasının	aldı
+Relation	T8	T11	NoRel	true	dağılmasının	kaldırılarak
+Relation	T8	T6	NoRel	true	dağılmasının	kuruldu
+Relation	T8	T9	NoRel	true	dağılmasının	olayı
+Relation	T9	T2	NoRel	true	olayı	inkar
+Relation	T9	T5	NoRel	true	olayı	araştırmak
+Relation	T9	T7	NoRel	true	olayı	yayınladı

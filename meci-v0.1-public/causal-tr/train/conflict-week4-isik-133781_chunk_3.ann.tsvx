@@ -1,0 +1,69 @@
+Text	Haydar , Uzun Hasan’ın kızı Halime Begüm Âlemşah’la evlendi .	Bu evlilikten Şah İsmail dünyaya geldi .	Âkkoyunlularla akrabalık bağlarını pekiştirip gücünü arttıran Haydar , babasının öcünü almak için Şirvan hükümdarı Ferruh Yesar üzerine yürüdüyse de 1488’de yapılan savaşta öldürüldü .	Bundan bir müddet sonra hareketin başına geçen İsmail , Akkoyunlu Devleti’nin içinde bulunduğu karışıklıktan istifade ederek , çoğu Anadolu’da bulunan birçok Türkmen kabilesini etrafında topladı .	Karabağ ve Şirvan’ın bir kısmını ele geçirerek Azerbaycan üzerine yürüdü .
+Event	T0	evlendi	EVENT	52
+Event	T1	geldi	EVENT	95
+Event	T4	yürüdüyse	EVENT	239
+Event	T5	öldürüldü	EVENT	276
+Event	T7	istifade	EVENT	397
+Event	T8	topladı	EVENT	475
+Event	T9	yürüdü	EVENT	551
+Event	T2	arttıran	EVENT	156
+Event	T3	savaşta	EVENT	268
+Event	T6	geçen	EVENT	329
+Event	T10	karışıklıktan	EVENT	383
+Event	T11	geçirerek	EVENT	522
+Relation	T2	T4	CauseEffect	true	arttıran	yürüdüyse
+Relation	T4	T2	EffectCause	true	yürüdüyse	arttıran
+Relation	T4	T3	CauseEffect	true	yürüdüyse	savaşta
+Relation	T3	T4	EffectCause	true	savaşta	yürüdüyse
+Relation	T3	T5	CauseEffect	true	savaşta	öldürüldü
+Relation	T5	T3	EffectCause	true	öldürüldü	savaşta
+Relation	T10	T7	CauseEffect	true	karışıklıktan	istifade
+Relation	T7	T10	EffectCause	true	istifade	karışıklıktan
+Relation	T10	T8	CauseEffect	true	karışıklıktan	topladı
+Relation	T8	T10	EffectCause	true	topladı	karışıklıktan
+Relation	T6	T11	CauseEffect	true	geçen	geçirerek
+Relation	T11	T6	EffectCause	true	geçirerek	geçen
+Relation	T6	T9	CauseEffect	true	geçen	yürüdü
+Relation	T9	T6	EffectCause	true	yürüdü	geçen
+Relation	T0	T10	NoRel	true	evlendi	karışıklıktan
+Relation	T0	T2	NoRel	true	evlendi	arttıran
+Relation	T0	T4	NoRel	true	evlendi	yürüdüyse
+Relation	T0	T9	NoRel	true	evlendi	yürüdü
+Relation	T1	T2	NoRel	true	geldi	arttıran
+Relation	T1	T4	NoRel	true	geldi	yürüdüyse
+Relation	T1	T5	NoRel	true	geldi	öldürüldü
+Relation	T1	T6	NoRel	true	geldi	geçen
+Relation	T1	T9	NoRel	true	geldi	yürüdü
+Relation	T10	T1	NoRel	true	karışıklıktan	geldi
+Relation	T10	T11	NoRel	true	karışıklıktan	geçirerek
+Relation	T10	T9	NoRel	true	karışıklıktan	yürüdü
+Relation	T11	T10	NoRel	true	geçirerek	karışıklıktan
+Relation	T11	T4	NoRel	true	geçirerek	yürüdüyse
+Relation	T2	T10	NoRel	true	arttıran	karışıklıktan
+Relation	T3	T1	NoRel	true	savaşta	geldi
+Relation	T3	T11	NoRel	true	savaşta	geçirerek
+Relation	T3	T2	NoRel	true	savaşta	arttıran
+Relation	T3	T6	NoRel	true	savaşta	geçen
+Relation	T3	T7	NoRel	true	savaşta	istifade
+Relation	T3	T9	NoRel	true	savaşta	yürüdü
+Relation	T4	T11	NoRel	true	yürüdüyse	geçirerek
+Relation	T4	T5	NoRel	true	yürüdüyse	öldürüldü
+Relation	T4	T9	NoRel	true	yürüdüyse	yürüdü
+Relation	T5	T1	NoRel	true	öldürüldü	geldi
+Relation	T5	T10	NoRel	true	öldürüldü	karışıklıktan
+Relation	T5	T2	NoRel	true	öldürüldü	arttıran
+Relation	T5	T7	NoRel	true	öldürüldü	istifade
+Relation	T6	T0	NoRel	true	geçen	evlendi
+Relation	T6	T3	NoRel	true	geçen	savaşta
+Relation	T6	T4	NoRel	true	geçen	yürüdüyse
+Relation	T6	T8	NoRel	true	geçen	topladı
+Relation	T7	T1	NoRel	true	istifade	geldi
+Relation	T7	T6	NoRel	true	istifade	geçen
+Relation	T7	T8	NoRel	true	istifade	topladı
+Relation	T7	T9	NoRel	true	istifade	yürüdü
+Relation	T8	T4	NoRel	true	topladı	yürüdüyse
+Relation	T8	T6	NoRel	true	topladı	geçen
+Relation	T9	T0	NoRel	true	yürüdü	evlendi
+Relation	T9	T10	NoRel	true	yürüdü	karışıklıktan
+Relation	T9	T11	NoRel	true	yürüdü	geçirerek
+Relation	T9	T3	NoRel	true	yürüdü	savaşta

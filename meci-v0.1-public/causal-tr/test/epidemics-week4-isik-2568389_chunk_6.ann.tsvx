@@ -1,0 +1,60 @@
+Text	İlk ölüm de doğrulandı .	- İskoçya ilk vakasını doğruladı .	- Singapur dört vakayı daha doğrulayarak toplam sayısını 106'ya çıkardı .	- Güney Kore 376 vakayı daha doğrulayarak toplam sayısını 3.526'ya getirdi .	210 vaka , daha sonra bildirilen 18. ölümle doğrulandı ve toplam sayı 3.736'ya ulaştı .
+Event	T0	ölüm	EVENT	4
+Event	T1	doğrulandı	EVENT	12
+Event	T2	doğruladı	EVENT	48
+Event	T3	çıkardı	EVENT	124
+Event	T4	getirdi	EVENT	201
+Event	T5	bildirilen	EVENT	233
+Event	T6	doğrulandı	EVENT	255
+Event	T7	ulaştı	EVENT	290
+Event	T8	vakasını	EVENT	39
+Event	T9	doğrulayarak	EVENT	88
+Event	T10	doğrulayarak	EVENT	163
+Relation	T0	T1	CauseEffect	true	ölüm	doğrulandı
+Relation	T1	T0	EffectCause	true	doğrulandı	ölüm
+Relation	T8	T2	CauseEffect	true	vakasını	doğruladı
+Relation	T2	T8	EffectCause	true	doğruladı	vakasını
+Relation	T9	T3	CauseEffect	true	doğrulayarak	çıkardı
+Relation	T3	T9	EffectCause	true	çıkardı	doğrulayarak
+Relation	T10	T4	CauseEffect	true	doğrulayarak	getirdi
+Relation	T4	T10	EffectCause	true	getirdi	doğrulayarak
+Relation	T6	T7	CauseEffect	true	doğrulandı	ulaştı
+Relation	T7	T6	EffectCause	true	ulaştı	doğrulandı
+Relation	T5	T6	CauseEffect	true	bildirilen	doğrulandı
+Relation	T6	T5	EffectCause	true	doğrulandı	bildirilen
+Relation	T0	T3	NoRel	true	ölüm	çıkardı
+Relation	T0	T4	NoRel	true	ölüm	getirdi
+Relation	T0	T5	NoRel	true	ölüm	bildirilen
+Relation	T0	T9	NoRel	true	ölüm	doğrulayarak
+Relation	T1	T6	NoRel	true	doğrulandı	doğrulandı
+Relation	T1	T7	NoRel	true	doğrulandı	ulaştı
+Relation	T1	T8	NoRel	true	doğrulandı	vakasını
+Relation	T10	T0	NoRel	true	doğrulayarak	ölüm
+Relation	T10	T6	NoRel	true	doğrulayarak	doğrulandı
+Relation	T10	T7	NoRel	true	doğrulayarak	ulaştı
+Relation	T10	T8	NoRel	true	doğrulayarak	vakasını
+Relation	T10	T9	NoRel	true	doğrulayarak	doğrulayarak
+Relation	T2	T0	NoRel	true	doğruladı	ölüm
+Relation	T2	T6	NoRel	true	doğruladı	doğrulandı
+Relation	T3	T0	NoRel	true	çıkardı	ölüm
+Relation	T3	T5	NoRel	true	çıkardı	bildirilen
+Relation	T3	T7	NoRel	true	çıkardı	ulaştı
+Relation	T3	T8	NoRel	true	çıkardı	vakasını
+Relation	T4	T6	NoRel	true	getirdi	doğrulandı
+Relation	T4	T7	NoRel	true	getirdi	ulaştı
+Relation	T5	T0	NoRel	true	bildirilen	ölüm
+Relation	T5	T2	NoRel	true	bildirilen	doğruladı
+Relation	T5	T9	NoRel	true	bildirilen	doğrulayarak
+Relation	T6	T10	NoRel	true	doğrulandı	doğrulayarak
+Relation	T7	T2	NoRel	true	ulaştı	doğruladı
+Relation	T7	T3	NoRel	true	ulaştı	çıkardı
+Relation	T7	T4	NoRel	true	ulaştı	getirdi
+Relation	T7	T5	NoRel	true	ulaştı	bildirilen
+Relation	T7	T8	NoRel	true	ulaştı	vakasını
+Relation	T8	T0	NoRel	true	vakasını	ölüm
+Relation	T8	T4	NoRel	true	vakasını	getirdi
+Relation	T8	T5	NoRel	true	vakasını	bildirilen
+Relation	T8	T6	NoRel	true	vakasını	doğrulandı
+Relation	T9	T1	NoRel	true	doğrulayarak	doğrulandı
+Relation	T9	T4	NoRel	true	doğrulayarak	getirdi
+Relation	T9	T5	NoRel	true	doğrulayarak	bildirilen

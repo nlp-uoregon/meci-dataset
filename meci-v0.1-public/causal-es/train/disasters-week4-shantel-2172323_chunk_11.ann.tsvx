@@ -1,0 +1,39 @@
+Text	El Gobierno del presidente George W. Bush condenó a los responsables de las explosiones a bordo del Samjhauta Express .	En nombre del Gobierno de Estados Unidos , el portavoz de la Casa Blanca David Almacy declaró que :	Expresamos nuestro profundo pesar por esta tragedia y extendemos condolencias a las familias de las víctimas .	Apreciamos el liderazgo del Primer Ministro indio [ Mammohan ] Singh y del Presidente pakistaní [ Pervez ] Musharraf y condenamos a quienes tratan de socavar el progreso en las relaciones entre los dos países .	El 23 de febrero , un avión de transporte táctico C-130 de la Fuerza Aérea de Pakistán aterrizó , una vez que se le concedió permiso , en Nueva Delhi para evacuar a los pakistaníes heridos en el atentado .
+Event	T0	condenó	EVENT	42
+Event	T1	explosiones	EVENT	76
+Event	T2	declaró	EVENT	206
+Event	T4	tragedia	EVENT	263
+Event	T5	condenamos	EVENT	450
+Event	T6	tratan	EVENT	471
+Event	T7	socavar	EVENT	481
+Event	T8	aterrizó	EVENT	629
+Event	T9	evacuar	EVENT	697
+Event	T10	atentado	EVENT	737
+Relation	T1	T0	CauseEffect	true	explosiones	condenó
+Relation	T0	T1	EffectCause	true	condenó	explosiones
+Relation	T0	T2	NoRel	true	condenó	declaró
+Relation	T0	T5	NoRel	true	condenó	condenamos
+Relation	T1	T5	NoRel	true	explosiones	condenamos
+Relation	T10	T6	NoRel	true	atentado	tratan
+Relation	T2	T1	NoRel	true	declaró	explosiones
+Relation	T2	T9	NoRel	true	declaró	evacuar
+Relation	T4	T0	NoRel	true	tragedia	condenó
+Relation	T4	T10	NoRel	true	tragedia	atentado
+Relation	T4	T5	NoRel	true	tragedia	condenamos
+Relation	T4	T6	NoRel	true	tragedia	tratan
+Relation	T5	T2	NoRel	true	condenamos	declaró
+Relation	T5	T4	NoRel	true	condenamos	tragedia
+Relation	T6	T4	NoRel	true	tratan	tragedia
+Relation	T6	T5	NoRel	true	tratan	condenamos
+Relation	T6	T8	NoRel	true	tratan	aterrizó
+Relation	T6	T9	NoRel	true	tratan	evacuar
+Relation	T7	T0	NoRel	true	socavar	condenó
+Relation	T7	T10	NoRel	true	socavar	atentado
+Relation	T7	T2	NoRel	true	socavar	declaró
+Relation	T7	T4	NoRel	true	socavar	tragedia
+Relation	T7	T8	NoRel	true	socavar	aterrizó
+Relation	T8	T10	NoRel	true	aterrizó	atentado
+Relation	T9	T10	NoRel	true	evacuar	atentado
+Relation	T9	T4	NoRel	true	evacuar	tragedia
+Relation	T9	T6	NoRel	true	evacuar	tratan
+Relation	T9	T8	NoRel	true	evacuar	aterrizó

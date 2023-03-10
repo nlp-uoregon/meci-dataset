@@ -1,0 +1,62 @@
+Text	Los seis agentes que viajaban en la locomotora fueron arrastrados por la corriente , pereciendo cinco de ellos .	La locomotora acudía en auxilio de un tren de mercancías ascendente que había quedado detenido en el kilómetro 5 de la línea a causa de hallarse la vía inundada por la crecida del río Manzanares .	- 16 de septiembre de 1856 .	Una diligencia procedente de Andalucía que era transportada en un vagón del tren correo que cubría la relación Albacete_-_Madrid sufrió un incendio mientras el convoy circulaba entre las estaciones de Huerta de Valdecarábanos y Villasequilla de Yepes , tramo de la línea Madrid_-_Alicante enclavado en la provincia de Toledo .	Murieron cinco de los viajeros que ocupaban dicha diligencia y otro resultó gravemente herido .
+Event	T0	arrastrados	EVENT	54
+Event	T1	pereciendo	EVENT	85
+Event	T2	detenido	EVENT	199
+Event	T3	hallarse	EVENT	249
+Event	T4	inundada	EVENT	265
+Event	T5	crecida	EVENT	281
+Event	T6	transportada	EVENT	386
+Event	T7	sufrió	EVENT	468
+Event	T8	incendio	EVENT	478
+Event	T9	circulaba	EVENT	506
+Event	T10	Murieron	EVENT	666
+Event	T11	resultó	EVENT	734
+Event	T12	herido	EVENT	753
+Relation	T0	T1	CauseEffect	true	arrastrados	pereciendo
+Relation	T1	T0	EffectCause	true	pereciendo	arrastrados
+Relation	T8	T10	CauseEffect	true	incendio	Murieron
+Relation	T10	T8	EffectCause	true	Murieron	incendio
+Relation	T8	T12	CauseEffect	true	incendio	herido
+Relation	T12	T8	EffectCause	true	herido	incendio
+Relation	T0	T5	NoRel	true	arrastrados	crecida
+Relation	T0	T9	NoRel	true	arrastrados	circulaba
+Relation	T1	T3	NoRel	true	pereciendo	hallarse
+Relation	T1	T5	NoRel	true	pereciendo	crecida
+Relation	T1	T7	NoRel	true	pereciendo	sufrió
+Relation	T1	T8	NoRel	true	pereciendo	incendio
+Relation	T10	T2	NoRel	true	Murieron	detenido
+Relation	T11	T10	NoRel	true	resultó	Murieron
+Relation	T11	T12	NoRel	true	resultó	herido
+Relation	T11	T5	NoRel	true	resultó	crecida
+Relation	T11	T8	NoRel	true	resultó	incendio
+Relation	T11	T9	NoRel	true	resultó	circulaba
+Relation	T12	T1	NoRel	true	herido	pereciendo
+Relation	T12	T10	NoRel	true	herido	Murieron
+Relation	T12	T11	NoRel	true	herido	resultó
+Relation	T12	T4	NoRel	true	herido	inundada
+Relation	T12	T6	NoRel	true	herido	transportada
+Relation	T12	T9	NoRel	true	herido	circulaba
+Relation	T2	T1	NoRel	true	detenido	pereciendo
+Relation	T2	T12	NoRel	true	detenido	herido
+Relation	T2	T5	NoRel	true	detenido	crecida
+Relation	T2	T6	NoRel	true	detenido	transportada
+Relation	T3	T12	NoRel	true	hallarse	herido
+Relation	T3	T2	NoRel	true	hallarse	detenido
+Relation	T3	T5	NoRel	true	hallarse	crecida
+Relation	T3	T8	NoRel	true	hallarse	incendio
+Relation	T3	T9	NoRel	true	hallarse	circulaba
+Relation	T4	T10	NoRel	true	inundada	Murieron
+Relation	T4	T12	NoRel	true	inundada	herido
+Relation	T5	T1	NoRel	true	crecida	pereciendo
+Relation	T5	T3	NoRel	true	crecida	hallarse
+Relation	T5	T7	NoRel	true	crecida	sufrió
+Relation	T5	T9	NoRel	true	crecida	circulaba
+Relation	T6	T10	NoRel	true	transportada	Murieron
+Relation	T6	T2	NoRel	true	transportada	detenido
+Relation	T6	T5	NoRel	true	transportada	crecida
+Relation	T7	T4	NoRel	true	sufrió	inundada
+Relation	T7	T5	NoRel	true	sufrió	crecida
+Relation	T7	T6	NoRel	true	sufrió	transportada
+Relation	T8	T2	NoRel	true	incendio	detenido
+Relation	T9	T10	NoRel	true	circulaba	Murieron
+Relation	T9	T5	NoRel	true	circulaba	crecida

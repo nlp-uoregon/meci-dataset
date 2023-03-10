@@ -1,0 +1,193 @@
+Text	El capitán , en medio de una comunicación por radio , detuvo su transmisión e inmediatamente tomó el control de la aeronave , donde comenzó a realizar entradas de cabeceo en los controles de vuelo .	Durante este tiempo , la copiloto declaró un mayday y el controlador de tránsito aéreo ofreció todas las opciones a la tripulación para una aproximación o desvío .	Aunque la aeronave comenzó a ascender , el capitán sintió que sus crecientes esfuerzos en los controles de vuelo no parecían tener el efecto deseado .	La copiloto también aplicó entradas de morro hacia arriba , pero también percibió que la aeronave no respondía como se esperaba .	La pantalla de vuelo principal ( PFD ) mostraba advertencias de errores de ajuste de cabeceo y balanceo .
+Event	T0	comunicación	EVENT	29
+Event	T1	detuvo	EVENT	54
+Event	T2	transmisión	EVENT	64
+Event	T3	tomó	EVENT	93
+Event	T4	control	EVENT	101
+Event	T5	comenzó	EVENT	132
+Event	T6	entradas	EVENT	151
+Event	T7	controles	EVENT	178
+Event	T8	vuelo	EVENT	191
+Event	T9	declaró	EVENT	233
+Event	T10	ofreció	EVENT	286
+Event	T11	aproximación	EVENT	339
+Event	T12	desvío	EVENT	354
+Event	T13	comenzó	EVENT	382
+Event	T14	ascender	EVENT	392
+Event	T15	sintió	EVENT	414
+Event	T16	esfuerzos	EVENT	440
+Event	T17	controles	EVENT	457
+Event	T18	percibió	EVENT	587
+Event	T19	respondía	EVENT	615
+Event	T20	advertencias	EVENT	692
+Event	T21	errores	EVENT	708
+Event	T22	ajuste	EVENT	719
+Relation	T0	T10	NoRel	true	comunicación	ofreció
+Relation	T0	T12	NoRel	true	comunicación	desvío
+Relation	T0	T13	NoRel	true	comunicación	comenzó
+Relation	T0	T14	NoRel	true	comunicación	ascender
+Relation	T0	T17	NoRel	true	comunicación	controles
+Relation	T0	T22	NoRel	true	comunicación	ajuste
+Relation	T0	T6	NoRel	true	comunicación	entradas
+Relation	T0	T9	NoRel	true	comunicación	declaró
+Relation	T1	T10	NoRel	true	detuvo	ofreció
+Relation	T1	T11	NoRel	true	detuvo	aproximación
+Relation	T1	T12	NoRel	true	detuvo	desvío
+Relation	T1	T18	NoRel	true	detuvo	percibió
+Relation	T1	T20	NoRel	true	detuvo	advertencias
+Relation	T1	T22	NoRel	true	detuvo	ajuste
+Relation	T10	T1	NoRel	true	ofreció	detuvo
+Relation	T10	T16	NoRel	true	ofreció	esfuerzos
+Relation	T10	T22	NoRel	true	ofreció	ajuste
+Relation	T10	T3	NoRel	true	ofreció	tomó
+Relation	T10	T5	NoRel	true	ofreció	comenzó
+Relation	T10	T6	NoRel	true	ofreció	entradas
+Relation	T11	T0	NoRel	true	aproximación	comunicación
+Relation	T11	T17	NoRel	true	aproximación	controles
+Relation	T11	T18	NoRel	true	aproximación	percibió
+Relation	T11	T9	NoRel	true	aproximación	declaró
+Relation	T12	T11	NoRel	true	desvío	aproximación
+Relation	T12	T13	NoRel	true	desvío	comenzó
+Relation	T12	T14	NoRel	true	desvío	ascender
+Relation	T12	T17	NoRel	true	desvío	controles
+Relation	T12	T19	NoRel	true	desvío	respondía
+Relation	T12	T2	NoRel	true	desvío	transmisión
+Relation	T12	T8	NoRel	true	desvío	vuelo
+Relation	T13	T0	NoRel	true	comenzó	comunicación
+Relation	T13	T12	NoRel	true	comenzó	desvío
+Relation	T13	T19	NoRel	true	comenzó	respondía
+Relation	T13	T2	NoRel	true	comenzó	transmisión
+Relation	T13	T3	NoRel	true	comenzó	tomó
+Relation	T13	T4	NoRel	true	comenzó	control
+Relation	T13	T8	NoRel	true	comenzó	vuelo
+Relation	T14	T12	NoRel	true	ascender	desvío
+Relation	T14	T13	NoRel	true	ascender	comenzó
+Relation	T14	T15	NoRel	true	ascender	sintió
+Relation	T14	T18	NoRel	true	ascender	percibió
+Relation	T14	T19	NoRel	true	ascender	respondía
+Relation	T14	T4	NoRel	true	ascender	control
+Relation	T14	T9	NoRel	true	ascender	declaró
+Relation	T15	T11	NoRel	true	sintió	aproximación
+Relation	T15	T13	NoRel	true	sintió	comenzó
+Relation	T15	T14	NoRel	true	sintió	ascender
+Relation	T15	T17	NoRel	true	sintió	controles
+Relation	T15	T18	NoRel	true	sintió	percibió
+Relation	T15	T19	NoRel	true	sintió	respondía
+Relation	T15	T2	NoRel	true	sintió	transmisión
+Relation	T16	T10	NoRel	true	esfuerzos	ofreció
+Relation	T16	T15	NoRel	true	esfuerzos	sintió
+Relation	T16	T21	NoRel	true	esfuerzos	errores
+Relation	T16	T22	NoRel	true	esfuerzos	ajuste
+Relation	T16	T5	NoRel	true	esfuerzos	comenzó
+Relation	T17	T1	NoRel	true	controles	detuvo
+Relation	T17	T11	NoRel	true	controles	aproximación
+Relation	T17	T15	NoRel	true	controles	sintió
+Relation	T17	T19	NoRel	true	controles	respondía
+Relation	T17	T2	NoRel	true	controles	transmisión
+Relation	T17	T3	NoRel	true	controles	tomó
+Relation	T17	T4	NoRel	true	controles	control
+Relation	T17	T5	NoRel	true	controles	comenzó
+Relation	T17	T7	NoRel	true	controles	controles
+Relation	T17	T8	NoRel	true	controles	vuelo
+Relation	T18	T0	NoRel	true	percibió	comunicación
+Relation	T18	T13	NoRel	true	percibió	comenzó
+Relation	T18	T14	NoRel	true	percibió	ascender
+Relation	T18	T17	NoRel	true	percibió	controles
+Relation	T18	T19	NoRel	true	percibió	respondía
+Relation	T18	T20	NoRel	true	percibió	advertencias
+Relation	T18	T21	NoRel	true	percibió	errores
+Relation	T18	T4	NoRel	true	percibió	control
+Relation	T19	T12	NoRel	true	respondía	desvío
+Relation	T19	T20	NoRel	true	respondía	advertencias
+Relation	T19	T21	NoRel	true	respondía	errores
+Relation	T19	T5	NoRel	true	respondía	comenzó
+Relation	T19	T6	NoRel	true	respondía	entradas
+Relation	T19	T8	NoRel	true	respondía	vuelo
+Relation	T2	T11	NoRel	true	transmisión	aproximación
+Relation	T2	T14	NoRel	true	transmisión	ascender
+Relation	T2	T17	NoRel	true	transmisión	controles
+Relation	T2	T19	NoRel	true	transmisión	respondía
+Relation	T2	T4	NoRel	true	transmisión	control
+Relation	T2	T8	NoRel	true	transmisión	vuelo
+Relation	T2	T9	NoRel	true	transmisión	declaró
+Relation	T20	T1	NoRel	true	advertencias	detuvo
+Relation	T20	T10	NoRel	true	advertencias	ofreció
+Relation	T20	T12	NoRel	true	advertencias	desvío
+Relation	T20	T14	NoRel	true	advertencias	ascender
+Relation	T20	T15	NoRel	true	advertencias	sintió
+Relation	T20	T16	NoRel	true	advertencias	esfuerzos
+Relation	T20	T18	NoRel	true	advertencias	percibió
+Relation	T20	T2	NoRel	true	advertencias	transmisión
+Relation	T20	T22	NoRel	true	advertencias	ajuste
+Relation	T20	T8	NoRel	true	advertencias	vuelo
+Relation	T21	T0	NoRel	true	errores	comunicación
+Relation	T21	T10	NoRel	true	errores	ofreció
+Relation	T21	T11	NoRel	true	errores	aproximación
+Relation	T21	T15	NoRel	true	errores	sintió
+Relation	T21	T17	NoRel	true	errores	controles
+Relation	T21	T2	NoRel	true	errores	transmisión
+Relation	T21	T22	NoRel	true	errores	ajuste
+Relation	T21	T8	NoRel	true	errores	vuelo
+Relation	T21	T9	NoRel	true	errores	declaró
+Relation	T22	T0	NoRel	true	ajuste	comunicación
+Relation	T22	T10	NoRel	true	ajuste	ofreció
+Relation	T22	T13	NoRel	true	ajuste	comenzó
+Relation	T22	T15	NoRel	true	ajuste	sintió
+Relation	T22	T18	NoRel	true	ajuste	percibió
+Relation	T22	T2	NoRel	true	ajuste	transmisión
+Relation	T22	T4	NoRel	true	ajuste	control
+Relation	T22	T8	NoRel	true	ajuste	vuelo
+Relation	T22	T9	NoRel	true	ajuste	declaró
+Relation	T3	T1	NoRel	true	tomó	detuvo
+Relation	T3	T16	NoRel	true	tomó	esfuerzos
+Relation	T3	T18	NoRel	true	tomó	percibió
+Relation	T3	T19	NoRel	true	tomó	respondía
+Relation	T3	T2	NoRel	true	tomó	transmisión
+Relation	T3	T21	NoRel	true	tomó	errores
+Relation	T3	T22	NoRel	true	tomó	ajuste
+Relation	T4	T1	NoRel	true	control	detuvo
+Relation	T4	T11	NoRel	true	control	aproximación
+Relation	T4	T13	NoRel	true	control	comenzó
+Relation	T4	T15	NoRel	true	control	sintió
+Relation	T4	T18	NoRel	true	control	percibió
+Relation	T4	T20	NoRel	true	control	advertencias
+Relation	T4	T22	NoRel	true	control	ajuste
+Relation	T5	T10	NoRel	true	comenzó	ofreció
+Relation	T5	T17	NoRel	true	comenzó	controles
+Relation	T5	T19	NoRel	true	comenzó	respondía
+Relation	T5	T21	NoRel	true	comenzó	errores
+Relation	T5	T4	NoRel	true	comenzó	control
+Relation	T5	T6	NoRel	true	comenzó	entradas
+Relation	T5	T8	NoRel	true	comenzó	vuelo
+Relation	T6	T1	NoRel	true	entradas	detuvo
+Relation	T6	T11	NoRel	true	entradas	aproximación
+Relation	T6	T14	NoRel	true	entradas	ascender
+Relation	T6	T17	NoRel	true	entradas	controles
+Relation	T6	T7	NoRel	true	entradas	controles
+Relation	T7	T11	NoRel	true	controles	aproximación
+Relation	T7	T13	NoRel	true	controles	comenzó
+Relation	T7	T14	NoRel	true	controles	ascender
+Relation	T7	T2	NoRel	true	controles	transmisión
+Relation	T7	T21	NoRel	true	controles	errores
+Relation	T7	T22	NoRel	true	controles	ajuste
+Relation	T7	T3	NoRel	true	controles	tomó
+Relation	T7	T4	NoRel	true	controles	control
+Relation	T7	T8	NoRel	true	controles	vuelo
+Relation	T7	T9	NoRel	true	controles	declaró
+Relation	T8	T0	NoRel	true	vuelo	comunicación
+Relation	T8	T1	NoRel	true	vuelo	detuvo
+Relation	T8	T10	NoRel	true	vuelo	ofreció
+Relation	T8	T13	NoRel	true	vuelo	comenzó
+Relation	T8	T14	NoRel	true	vuelo	ascender
+Relation	T8	T17	NoRel	true	vuelo	controles
+Relation	T8	T19	NoRel	true	vuelo	respondía
+Relation	T8	T20	NoRel	true	vuelo	advertencias
+Relation	T8	T7	NoRel	true	vuelo	controles
+Relation	T9	T1	NoRel	true	declaró	detuvo
+Relation	T9	T10	NoRel	true	declaró	ofreció
+Relation	T9	T12	NoRel	true	declaró	desvío
+Relation	T9	T14	NoRel	true	declaró	ascender
+Relation	T9	T3	NoRel	true	declaró	tomó
+Relation	T9	T4	NoRel	true	declaró	control
+Relation	T9	T7	NoRel	true	declaró	controles
+Relation	T9	T8	NoRel	true	declaró	vuelo

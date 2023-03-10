@@ -1,0 +1,40 @@
+Text	Uçağın sağ tekerlekleri pist eşiğinden sonra yerle temas etti .	Sol tekerlekler 9 saniye , eşikten sonra yerle buluştu .	Ancak sol tekerlekler piste dokunduğunda yer rüzgarlıkları ve ters iticiler devreye girmeye başladı .	72 knota ( 133 km / sa ; 83 mph ) eşit veya daha fazla olmasıyla tetiklenen tekerlek frenleri , yaklaşık 4 saniye sonra çalışmaya başladı .	Kazanın ana nedeni , uçuş ekibinin yanlış kararları ve eylemleriydi .
+Event	T1	buluştu	EVENT	111
+Event	T2	tetiklenen	EVENT	288
+Event	T4	eylemleriydi	EVENT	418
+Event	T5	temas	EVENT	51
+Event	T6	dokunduğunda	EVENT	149
+Event	T7	girmeye	EVENT	205
+Event	T8	çalışmaya	EVENT	343
+Event	T3	Kazanın	EVENT	363
+Event	T9	kararları	EVENT	405
+Relation	T6	T7	CauseEffect	true	dokunduğunda	girmeye
+Relation	T7	T6	EffectCause	true	girmeye	dokunduğunda
+Relation	T2	T8	CauseEffect	true	tetiklenen	çalışmaya
+Relation	T8	T2	EffectCause	true	çalışmaya	tetiklenen
+Relation	T1	T5	NoRel	true	buluştu	temas
+Relation	T1	T6	NoRel	true	buluştu	dokunduğunda
+Relation	T2	T1	NoRel	true	tetiklenen	buluştu
+Relation	T3	T7	NoRel	true	Kazanın	girmeye
+Relation	T3	T8	NoRel	true	Kazanın	çalışmaya
+Relation	T4	T1	NoRel	true	eylemleriydi	buluştu
+Relation	T4	T6	NoRel	true	eylemleriydi	dokunduğunda
+Relation	T4	T9	NoRel	true	eylemleriydi	kararları
+Relation	T5	T1	NoRel	true	temas	buluştu
+Relation	T5	T3	NoRel	true	temas	Kazanın
+Relation	T5	T4	NoRel	true	temas	eylemleriydi
+Relation	T6	T1	NoRel	true	dokunduğunda	buluştu
+Relation	T6	T4	NoRel	true	dokunduğunda	eylemleriydi
+Relation	T6	T5	NoRel	true	dokunduğunda	temas
+Relation	T6	T8	NoRel	true	dokunduğunda	çalışmaya
+Relation	T6	T9	NoRel	true	dokunduğunda	kararları
+Relation	T7	T1	NoRel	true	girmeye	buluştu
+Relation	T7	T5	NoRel	true	girmeye	temas
+Relation	T7	T9	NoRel	true	girmeye	kararları
+Relation	T8	T1	NoRel	true	çalışmaya	buluştu
+Relation	T8	T3	NoRel	true	çalışmaya	Kazanın
+Relation	T8	T6	NoRel	true	çalışmaya	dokunduğunda
+Relation	T8	T9	NoRel	true	çalışmaya	kararları
+Relation	T9	T2	NoRel	true	kararları	tetiklenen
+Relation	T9	T3	NoRel	true	kararları	Kazanın
+Relation	T9	T6	NoRel	true	kararları	dokunduğunda

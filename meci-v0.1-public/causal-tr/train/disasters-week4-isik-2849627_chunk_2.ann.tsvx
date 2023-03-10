@@ -1,0 +1,43 @@
+Text	5 Ağustos'un başlarında , depresyon aniden kuzeybatıya daha yüksek bir rüzgâr makası alanına dönüştü ve bazı bilgisayar modellerinin depresyonun dağılacağını tahmin etmesine neden olurken diğerleri sürekli güçlenmeyi öngördü .	Fırtınanın varlığına yönelik ani tehdit , Ulusal Kasırga Merkezi ( NHC ) tahmincisi Lixion Avila tarafından " tropikal siklonların oluşumu hakkında ne kadar az şey biliyormuşuz " ifadeleriyle değerlendirildi .	Dokuzuncu Tropikal Depresyon , çevresindeki olumsuz koşullara ve zayıf yapılanmasına rağmen güçlenmeye devam ederek 7 Ağustos'ta Irene Kasırgası olarak adlandırıldı .	Kasırga , kuru hava ve yüksek makaslama yüklü bir ortamda olduğundan dolayı 8 Ağustos'ta tropikal bir depresyona doğru zayıfladı .	10 Ağustos sabahı , Küçük Antiller'in kuzeyinden geçtiği esnada neredeyse dağılmaktaydı .
+Event	T0	dönüştü	EVENT	93
+Event	T1	öngördü	EVENT	217
+Event	T2	tehdit	EVENT	260
+Event	T3	değerlendirildi	EVENT	419
+Event	T4	adlandırıldı	EVENT	589
+Event	T5	zayıfladı	EVENT	723
+Event	T6	geçtiği	EVENT	784
+Event	T7	dağılmaktaydı	EVENT	809
+Event	T8	ederek	EVENT	546
+Event	T9	Kasırgası	EVENT	572
+Relation	T2	T3	CauseEffect	true	tehdit	değerlendirildi
+Relation	T3	T2	EffectCause	true	değerlendirildi	tehdit
+Relation	T0	T6	NoRel	true	dönüştü	geçtiği
+Relation	T0	T7	NoRel	true	dönüştü	dağılmaktaydı
+Relation	T1	T7	NoRel	true	öngördü	dağılmaktaydı
+Relation	T1	T8	NoRel	true	öngördü	ederek
+Relation	T1	T9	NoRel	true	öngördü	Kasırgası
+Relation	T2	T0	NoRel	true	tehdit	dönüştü
+Relation	T2	T7	NoRel	true	tehdit	dağılmaktaydı
+Relation	T3	T4	NoRel	true	değerlendirildi	adlandırıldı
+Relation	T3	T5	NoRel	true	değerlendirildi	zayıfladı
+Relation	T3	T6	NoRel	true	değerlendirildi	geçtiği
+Relation	T3	T7	NoRel	true	değerlendirildi	dağılmaktaydı
+Relation	T4	T3	NoRel	true	adlandırıldı	değerlendirildi
+Relation	T4	T9	NoRel	true	adlandırıldı	Kasırgası
+Relation	T5	T0	NoRel	true	zayıfladı	dönüştü
+Relation	T6	T1	NoRel	true	geçtiği	öngördü
+Relation	T6	T2	NoRel	true	geçtiği	tehdit
+Relation	T6	T3	NoRel	true	geçtiği	değerlendirildi
+Relation	T6	T5	NoRel	true	geçtiği	zayıfladı
+Relation	T6	T9	NoRel	true	geçtiği	Kasırgası
+Relation	T7	T1	NoRel	true	dağılmaktaydı	öngördü
+Relation	T7	T5	NoRel	true	dağılmaktaydı	zayıfladı
+Relation	T8	T1	NoRel	true	ederek	öngördü
+Relation	T8	T2	NoRel	true	ederek	tehdit
+Relation	T8	T5	NoRel	true	ederek	zayıfladı
+Relation	T8	T6	NoRel	true	ederek	geçtiği
+Relation	T8	T7	NoRel	true	ederek	dağılmaktaydı
+Relation	T9	T0	NoRel	true	Kasırgası	dönüştü
+Relation	T9	T5	NoRel	true	Kasırgası	zayıfladı
+Relation	T9	T6	NoRel	true	Kasırgası	geçtiği
+Relation	T9	T7	NoRel	true	Kasırgası	dağılmaktaydı

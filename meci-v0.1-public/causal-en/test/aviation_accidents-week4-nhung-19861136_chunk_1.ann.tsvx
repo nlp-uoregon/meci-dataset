@@ -1,0 +1,42 @@
+Text	On 23 February 2008 , a B‑2 crashed on the runway shortly after take off from Andersen Air Force Base in Guam .	The crash of the _ Spirit of Kansas _ , _ 89-0127 _ , which had been operated by the 393rd Bomb Squadron , 509th Bomb Wing , Whiteman Air Force Base , Missouri , and which had logged 5,100 flight hours , was the first ever crash of a B‑2 .	The two - officer crew ( Major Ryan Link and Captain Justin Grieve ) attempted to control the bomber but were unable to do so , and as one of its wingtips made contact with the ground , they ejected and survived the crash .	The aircraft was destroyed , a total loss estimated at US $ 1.4 billion .	This is equivalent to $ in .
+Event	T0	crash	EVENT	116
+Event	T1	operated	EVENT	181
+Event	T2	logged	EVENT	288
+Event	T3	flight	EVENT	301
+Event	T4	crash	EVENT	335
+Event	T5	attempted	EVENT	421
+Event	T6	control	EVENT	434
+Event	T7	contact	EVENT	512
+Event	T8	ejected	EVENT	543
+Event	T9	survived	EVENT	555
+Event	T10	crash	EVENT	568
+Event	T11	destroyed	EVENT	593
+Event	T13	crashed	EVENT	28
+Event	T14	take off	EVENT	64
+Event	T12	loss	EVENT	613
+Relation	T7	T6	CauseEffect	true	contact	control
+Relation	T6	T7	EffectCause	true	control	contact
+Relation	T10	T9	CauseEffect	true	crash	survived
+Relation	T9	T10	EffectCause	true	survived	crash
+Relation	T11	T12	CauseEffect	true	destroyed	loss
+Relation	T12	T11	EffectCause	true	loss	destroyed
+Relation	T10	T8	CauseEffect	true	crash	ejected
+Relation	T8	T10	EffectCause	true	ejected	crash
+Relation	T0	T13	NoRel	true	crash	crashed
+Relation	T1	T0	NoRel	true	operated	crash
+Relation	T1	T12	NoRel	true	operated	loss
+Relation	T10	T3	NoRel	true	crash	flight
+Relation	T10	T5	NoRel	true	crash	attempted
+Relation	T11	T7	NoRel	true	destroyed	contact
+Relation	T12	T9	NoRel	true	loss	survived
+Relation	T13	T10	NoRel	true	crashed	crash
+Relation	T13	T7	NoRel	true	crashed	contact
+Relation	T14	T4	NoRel	true	take off	crash
+Relation	T2	T13	NoRel	true	logged	crashed
+Relation	T4	T9	NoRel	true	crash	survived
+Relation	T5	T11	NoRel	true	attempted	destroyed
+Relation	T5	T7	NoRel	true	attempted	contact
+Relation	T6	T12	NoRel	true	control	loss
+Relation	T6	T5	NoRel	true	control	attempted
+Relation	T7	T0	NoRel	true	contact	crash
+Relation	T9	T12	NoRel	true	survived	loss

@@ -1,0 +1,48 @@
+Text	CAMEROON AIRLINES FLIGHT 786 was a Boeing 737 - 2H7 C , registration TJ - CBD , operating as a scheduled domestic passenger flight from Douala International Airport , Cameroon ( ICAO : FKKD ) , to Garoua via Yaoundé .	On 30 August 1984 , as the aircraft was taxiing out for takeoff with 109 passengers and a crew of 7 on board , its number two engine suffered an uncontained compressor failure , which started a fire .	All occupants were able to evacuate the aircraft , but two passengers died due to fire outside the cabin .	The aircraft burned to the ground and was declared a total loss .	The cause of the engine failure has never been determined .
+Event	T0	operating	EVENT	80
+Event	T1	flight	EVENT	124
+Event	T2	takeoff	EVENT	274
+Event	T3	suffered	EVENT	351
+Event	T4	failure	EVENT	386
+Event	T5	started	EVENT	402
+Event	T6	fire	EVENT	412
+Event	T7	evacuate	EVENT	446
+Event	T8	fire	EVENT	501
+Event	T9	declared	EVENT	568
+Event	T10	loss	EVENT	585
+Event	T11	failure	EVENT	616
+Event	T12	determined	EVENT	639
+Event	T13	taxiing	EVENT	258
+Event	T14	died	EVENT	489
+Event	T15	burned	EVENT	539
+Relation	T4	T5	CauseEffect	true	failure	started
+Relation	T5	T4	EffectCause	true	started	failure
+Relation	T6	T7	CauseEffect	true	fire	evacuate
+Relation	T7	T6	EffectCause	true	evacuate	fire
+Relation	T8	T14	CauseEffect	true	fire	died
+Relation	T14	T8	EffectCause	true	died	fire
+Relation	T15	T10	CauseEffect	true	burned	loss
+Relation	T10	T15	EffectCause	true	loss	burned
+Relation	T0	T1	NoRel	true	operating	flight
+Relation	T0	T2	NoRel	true	operating	takeoff
+Relation	T1	T10	NoRel	true	flight	loss
+Relation	T10	T12	NoRel	true	loss	determined
+Relation	T12	T0	NoRel	true	determined	operating
+Relation	T13	T7	NoRel	true	taxiing	evacuate
+Relation	T14	T5	NoRel	true	died	started
+Relation	T15	T14	NoRel	true	burned	died
+Relation	T15	T6	NoRel	true	burned	fire
+Relation	T2	T10	NoRel	true	takeoff	loss
+Relation	T2	T8	NoRel	true	takeoff	fire
+Relation	T3	T13	NoRel	true	suffered	taxiing
+Relation	T3	T5	NoRel	true	suffered	started
+Relation	T4	T11	NoRel	true	failure	failure
+Relation	T4	T15	NoRel	true	failure	burned
+Relation	T4	T7	NoRel	true	failure	evacuate
+Relation	T5	T11	NoRel	true	started	failure
+Relation	T6	T3	NoRel	true	fire	suffered
+Relation	T6	T5	NoRel	true	fire	started
+Relation	T7	T3	NoRel	true	evacuate	suffered
+Relation	T7	T8	NoRel	true	evacuate	fire
+Relation	T8	T10	NoRel	true	fire	loss
+Relation	T9	T12	NoRel	true	declared	determined

@@ -1,0 +1,72 @@
+Text	Bu dönemdeki ender olumlu gelişme olarak göze çarpan ise , savaş koşullarında artan stratejik maden talebi sonucu madencilik , elektrik , gaz ve su hasılalarında bir miktar artış olmasıdır .	Savaş dönemi boyunca hasıla gerilemesine rağmen tasarruf düzeyi önemli ölçüde artmıştır .	Yine bu tarihte Türkiye Cumhuriyeti tarihindeki ilk devalüasyon gerçekleşmiştir .	7 EYLÜL 1946 TARIHLI DEVALÜASYON ile 1 dolar = 1, 29 TL olan resmi dolar / TL paritesi ; 1 DOLAR = 2, 80 TL olarak değiştirilmiştir .	Bu devalüasyon ile ithalat üstündeki kısıtlamalar kaldırılmış ancak politika ithalatın ihracattaki gelişmeyi çok aşan bir oranda büyümesine yol açmıştır .
+Event	T0	gelişme	EVENT	26
+Event	T3	talebi	EVENT	100
+Event	T5	Savaş	EVENT	191
+Event	T6	gerilemesine	EVENT	219
+Event	T7	gerçekleşmiştir	EVENT	345
+Event	T8	değiştirilmiştir	EVENT	478
+Event	T9	devalüasyon	EVENT	500
+Event	T10	kaldırılmış	EVENT	547
+Event	T11	açmıştır	EVENT	641
+Event	T1	koşullarında	EVENT	65
+Event	T2	olmasıdır	EVENT	179
+Event	T4	artmıştır	EVENT	269
+Event	T12	DEVALÜASYON	EVENT	384
+Relation	T1	T3	CauseEffect	true	koşullarında	talebi
+Relation	T3	T1	EffectCause	true	talebi	koşullarında
+Relation	T3	T2	CauseEffect	true	talebi	olmasıdır
+Relation	T2	T3	EffectCause	true	olmasıdır	talebi
+Relation	T5	T6	CauseEffect	true	Savaş	gerilemesine
+Relation	T6	T5	EffectCause	true	gerilemesine	Savaş
+Relation	T5	T4	CauseEffect	true	Savaş	artmıştır
+Relation	T4	T5	EffectCause	true	artmıştır	Savaş
+Relation	T12	T8	CauseEffect	true	DEVALÜASYON	değiştirilmiştir
+Relation	T8	T12	EffectCause	true	değiştirilmiştir	DEVALÜASYON
+Relation	T9	T10	CauseEffect	true	devalüasyon	kaldırılmış
+Relation	T10	T9	EffectCause	true	kaldırılmış	devalüasyon
+Relation	T10	T11	CauseEffect	true	kaldırılmış	açmıştır
+Relation	T11	T10	EffectCause	true	açmıştır	kaldırılmış
+Relation	T0	T12	NoRel	true	gelişme	DEVALÜASYON
+Relation	T0	T4	NoRel	true	gelişme	artmıştır
+Relation	T0	T8	NoRel	true	gelişme	değiştirilmiştir
+Relation	T1	T0	NoRel	true	koşullarında	gelişme
+Relation	T1	T12	NoRel	true	koşullarında	DEVALÜASYON
+Relation	T1	T6	NoRel	true	koşullarında	gerilemesine
+Relation	T1	T7	NoRel	true	koşullarında	gerçekleşmiştir
+Relation	T1	T8	NoRel	true	koşullarında	değiştirilmiştir
+Relation	T10	T2	NoRel	true	kaldırılmış	olmasıdır
+Relation	T10	T5	NoRel	true	kaldırılmış	Savaş
+Relation	T11	T12	NoRel	true	açmıştır	DEVALÜASYON
+Relation	T12	T0	NoRel	true	DEVALÜASYON	gelişme
+Relation	T12	T4	NoRel	true	DEVALÜASYON	artmıştır
+Relation	T12	T5	NoRel	true	DEVALÜASYON	Savaş
+Relation	T2	T10	NoRel	true	olmasıdır	kaldırılmış
+Relation	T2	T12	NoRel	true	olmasıdır	DEVALÜASYON
+Relation	T2	T8	NoRel	true	olmasıdır	değiştirilmiştir
+Relation	T3	T11	NoRel	true	talebi	açmıştır
+Relation	T3	T8	NoRel	true	talebi	değiştirilmiştir
+Relation	T4	T0	NoRel	true	artmıştır	gelişme
+Relation	T4	T1	NoRel	true	artmıştır	koşullarında
+Relation	T4	T10	NoRel	true	artmıştır	kaldırılmış
+Relation	T4	T11	NoRel	true	artmıştır	açmıştır
+Relation	T4	T12	NoRel	true	artmıştır	DEVALÜASYON
+Relation	T5	T10	NoRel	true	Savaş	kaldırılmış
+Relation	T5	T2	NoRel	true	Savaş	olmasıdır
+Relation	T5	T8	NoRel	true	Savaş	değiştirilmiştir
+Relation	T6	T0	NoRel	true	gerilemesine	gelişme
+Relation	T6	T1	NoRel	true	gerilemesine	koşullarında
+Relation	T6	T2	NoRel	true	gerilemesine	olmasıdır
+Relation	T6	T3	NoRel	true	gerilemesine	talebi
+Relation	T6	T7	NoRel	true	gerilemesine	gerçekleşmiştir
+Relation	T7	T4	NoRel	true	gerçekleşmiştir	artmıştır
+Relation	T8	T1	NoRel	true	değiştirilmiştir	koşullarında
+Relation	T8	T11	NoRel	true	değiştirilmiştir	açmıştır
+Relation	T8	T3	NoRel	true	değiştirilmiştir	talebi
+Relation	T8	T4	NoRel	true	değiştirilmiştir	artmıştır
+Relation	T8	T6	NoRel	true	değiştirilmiştir	gerilemesine
+Relation	T8	T7	NoRel	true	değiştirilmiştir	gerçekleşmiştir
+Relation	T9	T1	NoRel	true	devalüasyon	koşullarında
+Relation	T9	T2	NoRel	true	devalüasyon	olmasıdır
+Relation	T9	T4	NoRel	true	devalüasyon	artmıştır
+Relation	T9	T5	NoRel	true	devalüasyon	Savaş
+Relation	T9	T8	NoRel	true	devalüasyon	değiştirilmiştir

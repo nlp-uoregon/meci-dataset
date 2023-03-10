@@ -1,0 +1,82 @@
+Text	Buradan Karabağ ve Şirvan taraflarını yağmalamak için akıncı kollarını gönderen Şah Abbas , kendisi de Kars’a gidip kaleyle şehirdeki camileri yakıp yıktı .	Şehri harabeye çevirdi .	Tebriz’den sonra Nahcivan ve Revan’ın da ( Erivan ) Safevi hakimiyetine geçmesi , doğudaki Osmanlı nüfuzunun sarsılmasına sebep oldu .	Kürt beylerinden sonra Karabağ ve Şirvan’daki Türkmen oymaklarıyla Gürcistan prensleri de Osmanlı hakimiyetinden çıkıp Safevilere katıldılar .	Bu olaylar üzerine İran üzerine serdar tayin edilerek 15 Haziran 1604'te İstanbul’dan yola çıkan Çağalazade Sinan Paşa , kış mevsimi sebebiyle ileri gidemeyerek Van’a , oradan da Erzurum’a çekildi .
+Event	T0	yıktı	EVENT	149
+Event	T1	çevirdi	EVENT	172
+Event	T2	geçmesi	EVENT	254
+Event	T3	olaylar	EVENT	463
+Event	T4	tayin	EVENT	499
+Event	T5	çekildi	EVENT	649
+Event	T6	gönderen	EVENT	71
+Event	T7	yağmalamak	EVENT	38
+Event	T8	oldu	EVENT	310
+Event	T9	çıkıp	EVENT	430
+Event	T10	sarsılmasına	EVENT	291
+Event	T11	katıldılar	EVENT	447
+Event	T12	çıkan	EVENT	551
+Relation	T6	T7	CauseEffect	true	gönderen	yağmalamak
+Relation	T7	T6	EffectCause	true	yağmalamak	gönderen
+Relation	T0	T1	CauseEffect	true	yıktı	çevirdi
+Relation	T1	T0	EffectCause	true	çevirdi	yıktı
+Relation	T2	T8	CauseEffect	true	geçmesi	oldu
+Relation	T8	T2	EffectCause	true	oldu	geçmesi
+Relation	T2	T10	CauseEffect	true	geçmesi	sarsılmasına
+Relation	T10	T2	EffectCause	true	sarsılmasına	geçmesi
+Relation	T10	T9	CauseEffect	true	sarsılmasına	çıkıp
+Relation	T9	T10	EffectCause	true	çıkıp	sarsılmasına
+Relation	T10	T11	CauseEffect	true	sarsılmasına	katıldılar
+Relation	T11	T10	EffectCause	true	katıldılar	sarsılmasına
+Relation	T11	T4	CauseEffect	true	katıldılar	tayin
+Relation	T4	T11	EffectCause	true	tayin	katıldılar
+Relation	T10	T4	CauseEffect	true	sarsılmasına	tayin
+Relation	T4	T10	EffectCause	true	tayin	sarsılmasına
+Relation	T4	T12	CauseEffect	true	tayin	çıkan
+Relation	T12	T4	EffectCause	true	çıkan	tayin
+Relation	T0	T2	NoRel	true	yıktı	geçmesi
+Relation	T0	T3	NoRel	true	yıktı	olaylar
+Relation	T0	T9	NoRel	true	yıktı	çıkıp
+Relation	T1	T10	NoRel	true	çevirdi	sarsılmasına
+Relation	T1	T12	NoRel	true	çevirdi	çıkan
+Relation	T1	T2	NoRel	true	çevirdi	geçmesi
+Relation	T1	T3	NoRel	true	çevirdi	olaylar
+Relation	T10	T0	NoRel	true	sarsılmasına	yıktı
+Relation	T10	T6	NoRel	true	sarsılmasına	gönderen
+Relation	T10	T8	NoRel	true	sarsılmasına	oldu
+Relation	T11	T2	NoRel	true	katıldılar	geçmesi
+Relation	T11	T5	NoRel	true	katıldılar	çekildi
+Relation	T11	T6	NoRel	true	katıldılar	gönderen
+Relation	T11	T9	NoRel	true	katıldılar	çıkıp
+Relation	T12	T1	NoRel	true	çıkan	çevirdi
+Relation	T12	T10	NoRel	true	çıkan	sarsılmasına
+Relation	T12	T8	NoRel	true	çıkan	oldu
+Relation	T12	T9	NoRel	true	çıkan	çıkıp
+Relation	T2	T3	NoRel	true	geçmesi	olaylar
+Relation	T2	T4	NoRel	true	geçmesi	tayin
+Relation	T2	T7	NoRel	true	geçmesi	yağmalamak
+Relation	T3	T0	NoRel	true	olaylar	yıktı
+Relation	T3	T10	NoRel	true	olaylar	sarsılmasına
+Relation	T3	T11	NoRel	true	olaylar	katıldılar
+Relation	T3	T12	NoRel	true	olaylar	çıkan
+Relation	T3	T2	NoRel	true	olaylar	geçmesi
+Relation	T3	T5	NoRel	true	olaylar	çekildi
+Relation	T3	T8	NoRel	true	olaylar	oldu
+Relation	T4	T1	NoRel	true	tayin	çevirdi
+Relation	T4	T3	NoRel	true	tayin	olaylar
+Relation	T4	T7	NoRel	true	tayin	yağmalamak
+Relation	T5	T10	NoRel	true	çekildi	sarsılmasına
+Relation	T5	T12	NoRel	true	çekildi	çıkan
+Relation	T5	T8	NoRel	true	çekildi	oldu
+Relation	T6	T0	NoRel	true	gönderen	yıktı
+Relation	T6	T11	NoRel	true	gönderen	katıldılar
+Relation	T6	T12	NoRel	true	gönderen	çıkan
+Relation	T6	T3	NoRel	true	gönderen	olaylar
+Relation	T6	T5	NoRel	true	gönderen	çekildi
+Relation	T6	T9	NoRel	true	gönderen	çıkıp
+Relation	T7	T1	NoRel	true	yağmalamak	çevirdi
+Relation	T7	T11	NoRel	true	yağmalamak	katıldılar
+Relation	T8	T10	NoRel	true	oldu	sarsılmasına
+Relation	T8	T12	NoRel	true	oldu	çıkan
+Relation	T8	T3	NoRel	true	oldu	olaylar
+Relation	T8	T7	NoRel	true	oldu	yağmalamak
+Relation	T9	T1	NoRel	true	çıkıp	çevirdi
+Relation	T9	T5	NoRel	true	çıkıp	çekildi
+Relation	T9	T6	NoRel	true	çıkıp	gönderen
+Relation	T9	T8	NoRel	true	çıkıp	oldu

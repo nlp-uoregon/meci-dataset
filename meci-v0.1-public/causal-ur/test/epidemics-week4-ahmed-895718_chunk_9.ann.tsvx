@@ -1,0 +1,52 @@
+Text	چین میں مقیم چار پاکستانی طالب علموں میں کورونا وائرس کی تشخیص ہوئی ۔	حکومت پاکستان نے چین سے کورونا وائرس کی پیشرفت پر مستقل رابطہ قائم کیا ۔	12 فروری 2020 کو چین میں مقیم وائرس کا شکار ہونے والے چاروں پاکستانی طالب علم صحتیاب ہو گئے ۔	14 فروری 2020 کو چین میں مقیم وائرس کا شکار مزید 2 پاکستانی طالب علم صحت یاب ہو گئے جبکہ ایک طالب علم زیر علاج رہا ۔	23 فروری 2020 کو وفاقی وزیر صحت ڈاکٹر ظفر مرزا نے ایران کے شہر قم میں کورونا وائرس سے ہونے والی ہلاکتوں پر تشویش کا اظہار کیا ۔
+Event	T1	پیشرفت	EVENT	110
+Event	T2	شکار	EVENT	182
+Event	T4	شکار	EVENT	276
+Event	T7	ہلاکتوں	EVENT	450
+Event	T8	تشویش	EVENT	461
+Event	T9	تشخیص	EVENT	57
+Event	T10	رابطہ	EVENT	126
+Event	T11	صحتیاب	EVENT	221
+Event	T12	زیر علاج	EVENT	339
+Event	T13	صحت یاب	EVENT	306
+Relation	T4	T12	CauseEffect	true	شکار	زیر علاج
+Relation	T12	T4	EffectCause	true	زیر علاج	شکار
+Relation	T7	T8	CauseEffect	true	ہلاکتوں	تشویش
+Relation	T8	T7	EffectCause	true	تشویش	ہلاکتوں
+Relation	T1	T12	NoRel	true	پیشرفت	زیر علاج
+Relation	T1	T4	NoRel	true	پیشرفت	شکار
+Relation	T10	T11	NoRel	true	رابطہ	صحتیاب
+Relation	T10	T4	NoRel	true	رابطہ	شکار
+Relation	T10	T7	NoRel	true	رابطہ	ہلاکتوں
+Relation	T10	T8	NoRel	true	رابطہ	تشویش
+Relation	T10	T9	NoRel	true	رابطہ	تشخیص
+Relation	T11	T10	NoRel	true	صحتیاب	رابطہ
+Relation	T11	T2	NoRel	true	صحتیاب	شکار
+Relation	T12	T11	NoRel	true	زیر علاج	صحتیاب
+Relation	T12	T13	NoRel	true	زیر علاج	صحت یاب
+Relation	T12	T2	NoRel	true	زیر علاج	شکار
+Relation	T12	T9	NoRel	true	زیر علاج	تشخیص
+Relation	T13	T1	NoRel	true	صحت یاب	پیشرفت
+Relation	T13	T2	NoRel	true	صحت یاب	شکار
+Relation	T13	T7	NoRel	true	صحت یاب	ہلاکتوں
+Relation	T13	T8	NoRel	true	صحت یاب	تشویش
+Relation	T2	T11	NoRel	true	شکار	صحتیاب
+Relation	T2	T12	NoRel	true	شکار	زیر علاج
+Relation	T2	T7	NoRel	true	شکار	ہلاکتوں
+Relation	T2	T9	NoRel	true	شکار	تشخیص
+Relation	T4	T10	NoRel	true	شکار	رابطہ
+Relation	T4	T13	NoRel	true	شکار	صحت یاب
+Relation	T4	T7	NoRel	true	شکار	ہلاکتوں
+Relation	T4	T8	NoRel	true	شکار	تشویش
+Relation	T7	T1	NoRel	true	ہلاکتوں	پیشرفت
+Relation	T7	T13	NoRel	true	ہلاکتوں	صحت یاب
+Relation	T7	T4	NoRel	true	ہلاکتوں	شکار
+Relation	T8	T1	NoRel	true	تشویش	پیشرفت
+Relation	T8	T12	NoRel	true	تشویش	زیر علاج
+Relation	T8	T4	NoRel	true	تشویش	شکار
+Relation	T9	T10	NoRel	true	تشخیص	رابطہ
+Relation	T9	T11	NoRel	true	تشخیص	صحتیاب
+Relation	T9	T12	NoRel	true	تشخیص	زیر علاج
+Relation	T9	T2	NoRel	true	تشخیص	شکار
+Relation	T9	T4	NoRel	true	تشخیص	شکار
+Relation	T9	T8	NoRel	true	تشخیص	تشویش

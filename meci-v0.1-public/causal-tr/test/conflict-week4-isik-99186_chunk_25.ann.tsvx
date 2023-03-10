@@ -1,0 +1,119 @@
+Text	- " İstanbul'dan Ankara'ya Deniz Gezmiş için Bağımsızlık Yürüyüşü " , Yurtsever Cephe önderliğinde 1 Mayıs 2007'de İstanbul'dan başlamıştır .	Deniz Gezmişlerin 1972'de idam edildiği Ankara'da , Karşıyaka Mezarlığı'nda sona eren yürüyüşe katılanlar çeşitli duraklarda durarak amaçlarını anlatan şenlikler düzenlediler .	Yürüyüş öncesinde Çanakkale Sulh Mahkemesi , afişlerin üzerinde resimleri yer alan kişilerin idam hükmü giymiş mahkûmlar olduğu gerekçesiyle söz konusu afişlerin toplatılmasına karar verdi .	Cumhuriyet yazarı Uğur Mumcu , 12 Eylül Darbesi'nden sonra 17 Eylül 1980 günü yayımladığı yazısında , 12 Mart dönemini değerlendirerek Deniz Gezmiş , Mahir Çayan gibi isimlerin gerçekleştirdikleri banka soyma , adam kaçırma , fidye isteme gibi eylemleri _ " bireysel terör " _ olarak tanımladı ve silahlı eylemlere karşı çıkılması gerektiğini ifade etti :	_ " Solun başvuracağı tek yöntem yasal çizgiler , anayasal çerçevelerdir .
+Event	T0	Yürüyüşü	EVENT	57
+Event	T1	başlamıştır	EVENT	128
+Event	T3	yürüyüşe	EVENT	228
+Event	T4	düzenlediler	EVENT	304
+Event	T5	Yürüyüş	EVENT	319
+Event	T6	verdi	EVENT	502
+Event	T7	yayımladığı	EVENT	588
+Event	T9	isteme	EVENT	742
+Event	T10	tanımladı	EVENT	794
+Event	T11	eylemlere	EVENT	815
+Event	T12	etti	EVENT	859
+Event	T2	idam	EVENT	168
+Event	T13	12 Eylül Darbesi'nden	EVENT	541
+Event	T8	soyma	EVENT	713
+Event	T14	kaçırma	EVENT	726
+Event	T15	eylemleri	EVENT	754
+Event	T16	çıkılması	EVENT	831
+Relation	T2	T0	CauseEffect	true	idam	Yürüyüşü
+Relation	T0	T2	EffectCause	true	Yürüyüşü	idam
+Relation	T7	T12	CauseEffect	true	yayımladığı	etti
+Relation	T12	T7	EffectCause	true	etti	yayımladığı
+Relation	T8	T10	CauseEffect	true	soyma	tanımladı
+Relation	T10	T8	EffectCause	true	tanımladı	soyma
+Relation	T14	T10	CauseEffect	true	kaçırma	tanımladı
+Relation	T10	T14	EffectCause	true	tanımladı	kaçırma
+Relation	T9	T10	CauseEffect	true	isteme	tanımladı
+Relation	T10	T9	EffectCause	true	tanımladı	isteme
+Relation	T0	T11	NoRel	true	Yürüyüşü	eylemlere
+Relation	T0	T13	NoRel	true	Yürüyüşü	12 Eylül Darbesi'nden
+Relation	T0	T3	NoRel	true	Yürüyüşü	yürüyüşe
+Relation	T1	T10	NoRel	true	başlamıştır	tanımladı
+Relation	T1	T11	NoRel	true	başlamıştır	eylemlere
+Relation	T1	T15	NoRel	true	başlamıştır	eylemleri
+Relation	T1	T16	NoRel	true	başlamıştır	çıkılması
+Relation	T1	T2	NoRel	true	başlamıştır	idam
+Relation	T1	T3	NoRel	true	başlamıştır	yürüyüşe
+Relation	T1	T6	NoRel	true	başlamıştır	verdi
+Relation	T1	T9	NoRel	true	başlamıştır	isteme
+Relation	T10	T1	NoRel	true	tanımladı	başlamıştır
+Relation	T10	T6	NoRel	true	tanımladı	verdi
+Relation	T11	T13	NoRel	true	eylemlere	12 Eylül Darbesi'nden
+Relation	T11	T16	NoRel	true	eylemlere	çıkılması
+Relation	T11	T5	NoRel	true	eylemlere	Yürüyüş
+Relation	T11	T8	NoRel	true	eylemlere	soyma
+Relation	T12	T0	NoRel	true	etti	Yürüyüşü
+Relation	T12	T10	NoRel	true	etti	tanımladı
+Relation	T12	T16	NoRel	true	etti	çıkılması
+Relation	T12	T5	NoRel	true	etti	Yürüyüş
+Relation	T13	T0	NoRel	true	12 Eylül Darbesi'nden	Yürüyüşü
+Relation	T13	T1	NoRel	true	12 Eylül Darbesi'nden	başlamıştır
+Relation	T13	T11	NoRel	true	12 Eylül Darbesi'nden	eylemlere
+Relation	T13	T12	NoRel	true	12 Eylül Darbesi'nden	etti
+Relation	T13	T15	NoRel	true	12 Eylül Darbesi'nden	eylemleri
+Relation	T13	T16	NoRel	true	12 Eylül Darbesi'nden	çıkılması
+Relation	T13	T7	NoRel	true	12 Eylül Darbesi'nden	yayımladığı
+Relation	T14	T15	NoRel	true	kaçırma	eylemleri
+Relation	T14	T4	NoRel	true	kaçırma	düzenlediler
+Relation	T14	T8	NoRel	true	kaçırma	soyma
+Relation	T15	T1	NoRel	true	eylemleri	başlamıştır
+Relation	T15	T10	NoRel	true	eylemleri	tanımladı
+Relation	T15	T13	NoRel	true	eylemleri	12 Eylül Darbesi'nden
+Relation	T15	T3	NoRel	true	eylemleri	yürüyüşe
+Relation	T15	T7	NoRel	true	eylemleri	yayımladığı
+Relation	T15	T8	NoRel	true	eylemleri	soyma
+Relation	T15	T9	NoRel	true	eylemleri	isteme
+Relation	T16	T10	NoRel	true	çıkılması	tanımladı
+Relation	T16	T11	NoRel	true	çıkılması	eylemlere
+Relation	T16	T13	NoRel	true	çıkılması	12 Eylül Darbesi'nden
+Relation	T16	T14	NoRel	true	çıkılması	kaçırma
+Relation	T16	T15	NoRel	true	çıkılması	eylemleri
+Relation	T16	T2	NoRel	true	çıkılması	idam
+Relation	T16	T3	NoRel	true	çıkılması	yürüyüşe
+Relation	T16	T8	NoRel	true	çıkılması	soyma
+Relation	T2	T1	NoRel	true	idam	başlamıştır
+Relation	T2	T10	NoRel	true	idam	tanımladı
+Relation	T2	T15	NoRel	true	idam	eylemleri
+Relation	T2	T4	NoRel	true	idam	düzenlediler
+Relation	T3	T0	NoRel	true	yürüyüşe	Yürüyüşü
+Relation	T3	T14	NoRel	true	yürüyüşe	kaçırma
+Relation	T3	T15	NoRel	true	yürüyüşe	eylemleri
+Relation	T3	T2	NoRel	true	yürüyüşe	idam
+Relation	T3	T6	NoRel	true	yürüyüşe	verdi
+Relation	T4	T0	NoRel	true	düzenlediler	Yürüyüşü
+Relation	T4	T1	NoRel	true	düzenlediler	başlamıştır
+Relation	T4	T12	NoRel	true	düzenlediler	etti
+Relation	T4	T13	NoRel	true	düzenlediler	12 Eylül Darbesi'nden
+Relation	T4	T15	NoRel	true	düzenlediler	eylemleri
+Relation	T4	T3	NoRel	true	düzenlediler	yürüyüşe
+Relation	T4	T6	NoRel	true	düzenlediler	verdi
+Relation	T4	T8	NoRel	true	düzenlediler	soyma
+Relation	T5	T12	NoRel	true	Yürüyüş	etti
+Relation	T5	T14	NoRel	true	Yürüyüş	kaçırma
+Relation	T5	T4	NoRel	true	Yürüyüş	düzenlediler
+Relation	T5	T6	NoRel	true	Yürüyüş	verdi
+Relation	T5	T9	NoRel	true	Yürüyüş	isteme
+Relation	T6	T1	NoRel	true	verdi	başlamıştır
+Relation	T6	T12	NoRel	true	verdi	etti
+Relation	T6	T14	NoRel	true	verdi	kaçırma
+Relation	T6	T5	NoRel	true	verdi	Yürüyüş
+Relation	T6	T9	NoRel	true	verdi	isteme
+Relation	T7	T0	NoRel	true	yayımladığı	Yürüyüşü
+Relation	T7	T10	NoRel	true	yayımladığı	tanımladı
+Relation	T7	T13	NoRel	true	yayımladığı	12 Eylül Darbesi'nden
+Relation	T7	T14	NoRel	true	yayımladığı	kaçırma
+Relation	T7	T3	NoRel	true	yayımladığı	yürüyüşe
+Relation	T8	T11	NoRel	true	soyma	eylemlere
+Relation	T8	T2	NoRel	true	soyma	idam
+Relation	T8	T3	NoRel	true	soyma	yürüyüşe
+Relation	T8	T4	NoRel	true	soyma	düzenlediler
+Relation	T8	T5	NoRel	true	soyma	Yürüyüş
+Relation	T9	T0	NoRel	true	isteme	Yürüyüşü
+Relation	T9	T1	NoRel	true	isteme	başlamıştır
+Relation	T9	T11	NoRel	true	isteme	eylemlere
+Relation	T9	T13	NoRel	true	isteme	12 Eylül Darbesi'nden
+Relation	T9	T14	NoRel	true	isteme	kaçırma
+Relation	T9	T15	NoRel	true	isteme	eylemleri
+Relation	T9	T2	NoRel	true	isteme	idam
+Relation	T9	T5	NoRel	true	isteme	Yürüyüş

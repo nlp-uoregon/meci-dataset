@@ -1,0 +1,33 @@
+Text	2 Aralık 2011'de Singapore Airlines Cargo tarafından işletildiği sıralarda uçak bir kaza yaptı .	Singapur Changi Havalimanı'na indikten sonra pistten taksi yoluna dönerken çim araziye çıktı .	İniş takımları , fren sistemlerinin bir kısmı ve 3 numaralı motorun fan kanatları zarar gördü .	Singapur Hava Kazası Araştırma Bürosunun yaptığı araştırma sonucunda , uçağın taksi yoluna dönmesi için yeterince yavaşlamadığı anlaşıldı .	Kargo uçuşu olması nedeniyle uçakta sadece 4 mürettebat bulunuyordu .
+Event	T0	işletildiği	EVENT	53
+Event	T2	indikten	EVENT	127
+Event	T3	dönerken	EVENT	163
+Event	T4	çıktı	EVENT	184
+Event	T5	gördü	EVENT	280
+Event	T6	araştırma	EVENT	337
+Event	T7	dönmesi	EVENT	379
+Event	T8	anlaşıldı	EVENT	416
+Event	T1	kaza	EVENT	84
+Relation	T4	T1	CauseEffect	true	çıktı	kaza
+Relation	T1	T4	EffectCause	true	kaza	çıktı
+Relation	T4	T5	CauseEffect	true	çıktı	gördü
+Relation	T5	T4	EffectCause	true	gördü	çıktı
+Relation	T6	T8	CauseEffect	true	araştırma	anlaşıldı
+Relation	T8	T6	EffectCause	true	anlaşıldı	araştırma
+Relation	T1	T6	CauseEffect	true	kaza	araştırma
+Relation	T6	T1	EffectCause	true	araştırma	kaza
+Relation	T0	T2	NoRel	true	işletildiği	indikten
+Relation	T0	T5	NoRel	true	işletildiği	gördü
+Relation	T0	T8	NoRel	true	işletildiği	anlaşıldı
+Relation	T1	T2	NoRel	true	kaza	indikten
+Relation	T2	T3	NoRel	true	indikten	dönerken
+Relation	T2	T5	NoRel	true	indikten	gördü
+Relation	T2	T7	NoRel	true	indikten	dönmesi
+Relation	T2	T8	NoRel	true	indikten	anlaşıldı
+Relation	T3	T8	NoRel	true	dönerken	anlaşıldı
+Relation	T4	T0	NoRel	true	çıktı	işletildiği
+Relation	T4	T2	NoRel	true	çıktı	indikten
+Relation	T6	T2	NoRel	true	araştırma	indikten
+Relation	T7	T3	NoRel	true	dönmesi	dönerken
+Relation	T7	T4	NoRel	true	dönmesi	çıktı
+Relation	T7	T5	NoRel	true	dönmesi	gördü

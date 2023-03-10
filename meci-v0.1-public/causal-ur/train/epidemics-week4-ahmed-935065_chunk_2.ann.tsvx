@@ -1,0 +1,46 @@
+Text	اس کے مقابلے میں ، یہ تعداد دوسرے پڑوسی ممالک جیسے کہ پاکستان میں 703 ، بھارت میں 602 ) قریب دو ماہ کے تعطل کے بعد ، سری لنکا میں عام زندگی اور نجی کاروبار اور سرکاری دفاتر دوبارہ کھل گئے ۔	انتظامیہ نے کہا ہے کہ کوڈ۔19 کو کنٹرول میں لایا گیا ہے ۔	تقریباً 2._2.15 کروڑ آبادی والے ملک میں ، صرف 960 معاملات میں کورونا کی تصدیق ہوئی اور نو افراد کی موت واقع ہوئی ۔	اس وبا سے نمٹنے میں اس کامیابی کے پیچھے بہت ساری وجوہات ہیں ، بڑے پیمانے پر ٹرائل پہلے ہیں ۔	30 اپریل تک ، ملک کے 10 لاکھ میں سے 930 افراد کی جانچ کی جارہی تھی ۔
+Event	T0	تعطل	EVENT	103
+Event	T2	کہا	EVENT	202
+Event	T3	کنٹرول	EVENT	222
+Event	T6	نمٹنے	EVENT	372
+Event	T7	کامیابی	EVENT	385
+Event	T8	جانچ	EVENT	504
+Event	T9	کھل	EVENT	180
+Event	T1	معاملات	EVENT	297
+Event	T10	تصدیق	EVENT	319
+Event	T4	موت	EVENT	346
+Event	T5	وبا	EVENT	365
+Relation	T3	T2	CauseEffect	true	کنٹرول	کہا
+Relation	T2	T3	EffectCause	true	کہا	کنٹرول
+Relation	T6	T7	CauseEffect	true	نمٹنے	کامیابی
+Relation	T7	T6	EffectCause	true	کامیابی	نمٹنے
+Relation	T0	T3	NoRel	true	تعطل	کنٹرول
+Relation	T0	T4	NoRel	true	تعطل	موت
+Relation	T0	T6	NoRel	true	تعطل	نمٹنے
+Relation	T0	T7	NoRel	true	تعطل	کامیابی
+Relation	T1	T10	NoRel	true	معاملات	تصدیق
+Relation	T1	T5	NoRel	true	معاملات	وبا
+Relation	T1	T7	NoRel	true	معاملات	کامیابی
+Relation	T10	T2	NoRel	true	تصدیق	کہا
+Relation	T10	T3	NoRel	true	تصدیق	کنٹرول
+Relation	T10	T9	NoRel	true	تصدیق	کھل
+Relation	T2	T1	NoRel	true	کہا	معاملات
+Relation	T2	T4	NoRel	true	کہا	موت
+Relation	T2	T6	NoRel	true	کہا	نمٹنے
+Relation	T2	T7	NoRel	true	کہا	کامیابی
+Relation	T2	T8	NoRel	true	کہا	جانچ
+Relation	T2	T9	NoRel	true	کہا	کھل
+Relation	T3	T1	NoRel	true	کنٹرول	معاملات
+Relation	T3	T6	NoRel	true	کنٹرول	نمٹنے
+Relation	T3	T8	NoRel	true	کنٹرول	جانچ
+Relation	T4	T1	NoRel	true	موت	معاملات
+Relation	T4	T5	NoRel	true	موت	وبا
+Relation	T5	T4	NoRel	true	وبا	موت
+Relation	T5	T7	NoRel	true	وبا	کامیابی
+Relation	T5	T9	NoRel	true	وبا	کھل
+Relation	T6	T9	NoRel	true	نمٹنے	کھل
+Relation	T7	T0	NoRel	true	کامیابی	تعطل
+Relation	T7	T5	NoRel	true	کامیابی	وبا
+Relation	T8	T4	NoRel	true	جانچ	موت
+Relation	T8	T7	NoRel	true	جانچ	کامیابی
+Relation	T9	T3	NoRel	true	کھل	کنٹرول

@@ -1,0 +1,86 @@
+Text	Sin embargo hay muchas más víctimas que se desconoce la causa de su deceso .	El 9 de enero el número de muertos por el terremoto ascendió a 15 , después de que se encontraran los cadáveres de diez personas el viernes 9 de enero de la madrugada en la zona del epicentro del sismo .	Socorristas de la Cruz Roja Costarricense trabajaron buscando víctimas en la zona más devastada cercana a San José , durante toda la noche .	A las 04:30 AM ( hora local ) , una patrulla confirmó que en el sector de Cataratas había diez personas muertas , dijo un portavoz de la entidad .	El gobierno costarricense también activó un programa de emergencia para evacuar a los turistas que se encontraban en la zona de Vara Blanca y otras del centro del país golpeadas por el temblor , aunque no se reportaron hasta ahora personas muertes o heridas sufridas por algún turista en el terremoto .
+Event	T0	deceso	EVENT	68
+Event	T1	muertos	EVENT	104
+Event	T3	encontraran	EVENT	163
+Event	T4	cadáveres	EVENT	179
+Event	T5	sismo	EVENT	273
+Event	T6	devastada	EVENT	367
+Event	T7	confirmó	EVENT	467
+Event	T8	muertas	EVENT	526
+Event	T9	dijo	EVENT	536
+Event	T10	activó	EVENT	603
+Event	T12	evacuar	EVENT	641
+Event	T13	golpeadas	EVENT	737
+Event	T14	temblor	EVENT	754
+Event	T18	terremoto	EVENT	860
+Event	T19	terremoto	EVENT	119
+Event	T2	programa	EVENT	613
+Relation	T19	T1	CauseEffect	true	terremoto	muertos
+Relation	T1	T19	EffectCause	true	muertos	terremoto
+Relation	T0	T12	NoRel	true	deceso	evacuar
+Relation	T0	T19	NoRel	true	deceso	terremoto
+Relation	T0	T3	NoRel	true	deceso	encontraran
+Relation	T0	T6	NoRel	true	deceso	devastada
+Relation	T0	T8	NoRel	true	deceso	muertas
+Relation	T1	T10	NoRel	true	muertos	activó
+Relation	T1	T18	NoRel	true	muertos	terremoto
+Relation	T1	T8	NoRel	true	muertos	muertas
+Relation	T1	T9	NoRel	true	muertos	dijo
+Relation	T10	T0	NoRel	true	activó	deceso
+Relation	T12	T10	NoRel	true	evacuar	activó
+Relation	T12	T14	NoRel	true	evacuar	temblor
+Relation	T12	T4	NoRel	true	evacuar	cadáveres
+Relation	T12	T7	NoRel	true	evacuar	confirmó
+Relation	T12	T8	NoRel	true	evacuar	muertas
+Relation	T12	T9	NoRel	true	evacuar	dijo
+Relation	T13	T14	NoRel	true	golpeadas	temblor
+Relation	T13	T18	NoRel	true	golpeadas	terremoto
+Relation	T13	T2	NoRel	true	golpeadas	programa
+Relation	T13	T3	NoRel	true	golpeadas	encontraran
+Relation	T13	T5	NoRel	true	golpeadas	sismo
+Relation	T13	T8	NoRel	true	golpeadas	muertas
+Relation	T14	T4	NoRel	true	temblor	cadáveres
+Relation	T14	T7	NoRel	true	temblor	confirmó
+Relation	T14	T8	NoRel	true	temblor	muertas
+Relation	T14	T9	NoRel	true	temblor	dijo
+Relation	T18	T1	NoRel	true	terremoto	muertos
+Relation	T18	T12	NoRel	true	terremoto	evacuar
+Relation	T18	T4	NoRel	true	terremoto	cadáveres
+Relation	T18	T7	NoRel	true	terremoto	confirmó
+Relation	T18	T9	NoRel	true	terremoto	dijo
+Relation	T19	T18	NoRel	true	terremoto	terremoto
+Relation	T19	T4	NoRel	true	terremoto	cadáveres
+Relation	T2	T12	NoRel	true	programa	evacuar
+Relation	T2	T19	NoRel	true	programa	terremoto
+Relation	T2	T7	NoRel	true	programa	confirmó
+Relation	T2	T9	NoRel	true	programa	dijo
+Relation	T3	T13	NoRel	true	encontraran	golpeadas
+Relation	T3	T14	NoRel	true	encontraran	temblor
+Relation	T3	T2	NoRel	true	encontraran	programa
+Relation	T3	T4	NoRel	true	encontraran	cadáveres
+Relation	T3	T6	NoRel	true	encontraran	devastada
+Relation	T3	T7	NoRel	true	encontraran	confirmó
+Relation	T3	T8	NoRel	true	encontraran	muertas
+Relation	T4	T10	NoRel	true	cadáveres	activó
+Relation	T4	T8	NoRel	true	cadáveres	muertas
+Relation	T5	T10	NoRel	true	sismo	activó
+Relation	T5	T13	NoRel	true	sismo	golpeadas
+Relation	T5	T14	NoRel	true	sismo	temblor
+Relation	T5	T6	NoRel	true	sismo	devastada
+Relation	T6	T10	NoRel	true	devastada	activó
+Relation	T6	T12	NoRel	true	devastada	evacuar
+Relation	T6	T18	NoRel	true	devastada	terremoto
+Relation	T6	T8	NoRel	true	devastada	muertas
+Relation	T7	T0	NoRel	true	confirmó	deceso
+Relation	T7	T1	NoRel	true	confirmó	muertos
+Relation	T7	T10	NoRel	true	confirmó	activó
+Relation	T7	T18	NoRel	true	confirmó	terremoto
+Relation	T7	T19	NoRel	true	confirmó	terremoto
+Relation	T7	T4	NoRel	true	confirmó	cadáveres
+Relation	T7	T5	NoRel	true	confirmó	sismo
+Relation	T8	T13	NoRel	true	muertas	golpeadas
+Relation	T8	T5	NoRel	true	muertas	sismo
+Relation	T9	T0	NoRel	true	dijo	deceso
+Relation	T9	T4	NoRel	true	dijo	cadáveres
+Relation	T9	T6	NoRel	true	dijo	devastada
+Relation	T9	T7	NoRel	true	dijo	confirmó

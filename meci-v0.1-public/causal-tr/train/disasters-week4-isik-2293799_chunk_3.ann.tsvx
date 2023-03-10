@@ -1,0 +1,36 @@
+Text	Deprem , İran ve Irak'ın yanı sıra Azerbaycan , Birleşik Arap Emirlikleri , İsrail , Kuveyt , Suriye , Suudi Arabistan ve Türkiye'de hissedildi .	Depremin nispeten derinde meydana gelmesi ve ters fay niteliğinde olmasının geniş bir coğrafyada hissedilmesine neden olduğu kaydedildi .	Deprem sonucunda 620 kişi hayatını kaybetti , 8000'den fazla kişi ise yaralandı .	Birçok şehirde elektrik kesintileri yaşandı .	Depremin ardından 70.000 kişi evsiz kaldı .
+Event	T0	Deprem	EVENT	0
+Event	T1	hissedildi	EVENT	133
+Event	T2	gelmesi	EVENT	180
+Event	T3	kaydedildi	EVENT	271
+Event	T4	kaybetti	EVENT	319
+Event	T5	yaralandı	EVENT	354
+Event	T6	yaşandı	EVENT	402
+Event	T7	Depremin	EVENT	412
+Event	T8	kaldı	EVENT	448
+Relation	T0	T1	CauseEffect	true	Deprem	hissedildi
+Relation	T1	T0	EffectCause	true	hissedildi	Deprem
+Relation	T0	T3	CauseEffect	true	Deprem	kaydedildi
+Relation	T3	T0	EffectCause	true	kaydedildi	Deprem
+Relation	T0	T4	CauseEffect	true	Deprem	kaybetti
+Relation	T4	T0	EffectCause	true	kaybetti	Deprem
+Relation	T0	T5	CauseEffect	true	Deprem	yaralandı
+Relation	T5	T0	EffectCause	true	yaralandı	Deprem
+Relation	T0	T6	CauseEffect	true	Deprem	yaşandı
+Relation	T6	T0	EffectCause	true	yaşandı	Deprem
+Relation	T0	T8	CauseEffect	true	Deprem	kaldı
+Relation	T8	T0	EffectCause	true	kaldı	Deprem
+Relation	T0	T2	NoRel	true	Deprem	gelmesi
+Relation	T0	T7	NoRel	true	Deprem	Depremin
+Relation	T1	T3	NoRel	true	hissedildi	kaydedildi
+Relation	T1	T6	NoRel	true	hissedildi	yaşandı
+Relation	T2	T0	NoRel	true	gelmesi	Deprem
+Relation	T2	T8	NoRel	true	gelmesi	kaldı
+Relation	T3	T2	NoRel	true	kaydedildi	gelmesi
+Relation	T5	T4	NoRel	true	yaralandı	kaybetti
+Relation	T6	T3	NoRel	true	yaşandı	kaydedildi
+Relation	T6	T7	NoRel	true	yaşandı	Depremin
+Relation	T7	T0	NoRel	true	Depremin	Deprem
+Relation	T7	T3	NoRel	true	Depremin	kaydedildi
+Relation	T8	T5	NoRel	true	kaldı	yaralandı
+Relation	T8	T7	NoRel	true	kaldı	Depremin

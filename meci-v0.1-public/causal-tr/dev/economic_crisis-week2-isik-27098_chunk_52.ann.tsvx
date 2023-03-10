@@ -1,0 +1,40 @@
+Text	1 Aralık 1933'te çıkarılan kanun ile Nasyonal Sosyalist Alman İşçi Partisi dışındaki tüm partiler kapatıldı .	Nasyonal sosyalist devrim , NSDAP yöneticilerinin ve sivil nasyonal sosyalist Almanların desteği ile sürdü ve 1933- 1934 yılları içerisinde , hızlı bir süreç halinde gerçekleşti .	Toplum , bireylerin çoğunun desteklediği ve yürürlüğe girmesini beklediği nasyonal sosyalist sisteme kendisini adapte etti .	Devlet kurumları nasyonal sosyalist sistemin ön gördüğü şekilde düzenlendi .	Ulusal semboller ve bayrak değiştirildi .
+Event	T0	kapatıldı	EVENT	98
+Event	T1	devrim	EVENT	129
+Event	T10	desteklediği	EVENT	318
+Event	T2	sürdü	EVENT	211
+Event	T4	gerçekleşti	EVENT	276
+Event	T6	düzenlendi	EVENT	479
+Event	T7	değiştirildi	EVENT	519
+Event	T8	çıkarılan	EVENT	17
+Event	T9	desteği	EVENT	199
+Relation	T8	T0	CauseEffect	true	çıkarılan	kapatıldı
+Relation	T0	T8	EffectCause	true	kapatıldı	çıkarılan
+Relation	T9	T2	CauseEffect	true	desteği	sürdü
+Relation	T2	T9	EffectCause	true	sürdü	desteği
+Relation	T9	T4	CauseEffect	true	desteği	gerçekleşti
+Relation	T4	T9	EffectCause	true	gerçekleşti	desteği
+Relation	T10	T4	CauseEffect	true	desteklediği	gerçekleşti
+Relation	T4	T10	EffectCause	true	gerçekleşti	desteklediği
+Relation	T6	T7	CauseEffect	true	düzenlendi	değiştirildi
+Relation	T7	T6	EffectCause	true	değiştirildi	düzenlendi
+Relation	T0	T1	NoRel	true	kapatıldı	devrim
+Relation	T0	T10	NoRel	true	kapatıldı	desteklediği
+Relation	T1	T10	NoRel	true	devrim	desteklediği
+Relation	T1	T4	NoRel	true	devrim	gerçekleşti
+Relation	T1	T6	NoRel	true	devrim	düzenlendi
+Relation	T10	T0	NoRel	true	desteklediği	kapatıldı
+Relation	T10	T1	NoRel	true	desteklediği	devrim
+Relation	T10	T9	NoRel	true	desteklediği	desteği
+Relation	T2	T7	NoRel	true	sürdü	değiştirildi
+Relation	T4	T1	NoRel	true	gerçekleşti	devrim
+Relation	T4	T2	NoRel	true	gerçekleşti	sürdü
+Relation	T4	T6	NoRel	true	gerçekleşti	düzenlendi
+Relation	T4	T7	NoRel	true	gerçekleşti	değiştirildi
+Relation	T6	T8	NoRel	true	düzenlendi	çıkarılan
+Relation	T6	T9	NoRel	true	düzenlendi	desteği
+Relation	T7	T0	NoRel	true	değiştirildi	kapatıldı
+Relation	T8	T2	NoRel	true	çıkarılan	sürdü
+Relation	T8	T6	NoRel	true	çıkarılan	düzenlendi
+Relation	T8	T9	NoRel	true	çıkarılan	desteği
+Relation	T9	T6	NoRel	true	desteği	düzenlendi

@@ -1,0 +1,74 @@
+Text	Information later emerged that a third pilot was on the flight to Jakarta and told the crew to cut power to the stabilizer trim motors which fixed the problem .	This method is a standard memory item in the 737 checklist .	Subsequently , the National Transportation Safety Committee confirmed the presence of an off - duty Boeing 737 MAX 8 qualified pilot in the cockpit but did not confirm the role of the pilot in fixing the problem , and denied that there was any recording of the previous flight in the CVR of Lion Air Flight 610 .	The erratic nature of the flight path led Indonesian aviation expert Gerry Soejatman to speculate that the pitot tubes , used in the air speed indication system , may have played a role in the crash .	They have contributed to previous crashes .
+Event	T0	emerged	EVENT	18
+Event	T1	flight	EVENT	56
+Event	T2	told	EVENT	78
+Event	T3	fixed	EVENT	141
+Event	T4	problem	EVENT	151
+Event	T5	confirmed	EVENT	282
+Event	T6	presence	EVENT	296
+Event	T7	confirm	EVENT	382
+Event	T8	fixing	EVENT	415
+Event	T9	problem	EVENT	426
+Event	T10	denied	EVENT	440
+Event	T11	recording	EVENT	466
+Event	T12	flight	EVENT	492
+Event	T13	CVR	EVENT	506
+Event	T14	led	EVENT	573
+Event	T15	speculate	EVENT	623
+Event	T16	used	EVENT	656
+Event	T17	played	EVENT	707
+Event	T18	crash	EVENT	728
+Event	T19	contributed	EVENT	746
+Event	T20	crashes	EVENT	770
+Event	T21	cut	EVENT	95
+Relation	T21	T3	CauseEffect	true	cut	fixed
+Relation	T3	T21	EffectCause	true	fixed	cut
+Relation	T14	T15	CauseEffect	true	led	speculate
+Relation	T15	T14	EffectCause	true	speculate	led
+Relation	T0	T11	NoRel	true	emerged	recording
+Relation	T1	T13	NoRel	true	flight	CVR
+Relation	T10	T11	NoRel	true	denied	recording
+Relation	T10	T14	NoRel	true	denied	led
+Relation	T11	T5	NoRel	true	recording	confirmed
+Relation	T12	T7	NoRel	true	flight	confirm
+Relation	T13	T0	NoRel	true	CVR	emerged
+Relation	T13	T21	NoRel	true	CVR	cut
+Relation	T13	T4	NoRel	true	CVR	problem
+Relation	T14	T20	NoRel	true	led	crashes
+Relation	T14	T3	NoRel	true	led	fixed
+Relation	T15	T11	NoRel	true	speculate	recording
+Relation	T16	T11	NoRel	true	used	recording
+Relation	T16	T18	NoRel	true	used	crash
+Relation	T16	T20	NoRel	true	used	crashes
+Relation	T16	T3	NoRel	true	used	fixed
+Relation	T16	T9	NoRel	true	used	problem
+Relation	T17	T19	NoRel	true	played	contributed
+Relation	T17	T8	NoRel	true	played	fixing
+Relation	T17	T9	NoRel	true	played	problem
+Relation	T18	T2	NoRel	true	crash	told
+Relation	T19	T10	NoRel	true	contributed	denied
+Relation	T2	T0	NoRel	true	told	emerged
+Relation	T2	T11	NoRel	true	told	recording
+Relation	T2	T12	NoRel	true	told	flight
+Relation	T20	T1	NoRel	true	crashes	flight
+Relation	T20	T9	NoRel	true	crashes	problem
+Relation	T21	T16	NoRel	true	cut	used
+Relation	T3	T10	NoRel	true	fixed	denied
+Relation	T3	T14	NoRel	true	fixed	led
+Relation	T3	T15	NoRel	true	fixed	speculate
+Relation	T3	T16	NoRel	true	fixed	used
+Relation	T3	T20	NoRel	true	fixed	crashes
+Relation	T3	T5	NoRel	true	fixed	confirmed
+Relation	T4	T16	NoRel	true	problem	used
+Relation	T4	T19	NoRel	true	problem	contributed
+Relation	T4	T2	NoRel	true	problem	told
+Relation	T5	T15	NoRel	true	confirmed	speculate
+Relation	T6	T20	NoRel	true	presence	crashes
+Relation	T7	T21	NoRel	true	confirm	cut
+Relation	T7	T8	NoRel	true	confirm	fixing
+Relation	T8	T0	NoRel	true	fixing	emerged
+Relation	T8	T15	NoRel	true	fixing	speculate
+Relation	T8	T21	NoRel	true	fixing	cut
+Relation	T9	T0	NoRel	true	problem	emerged
+Relation	T9	T14	NoRel	true	problem	led
+Relation	T9	T7	NoRel	true	problem	confirm

@@ -1,0 +1,57 @@
+Text	Büyükelçi Tansuğ Bleda'nın görüştüğü Dışişleri Bakanlığı Genel Sekreteri Kamuran Gürün , Bolu'dan bir komando timinin Yüksekova'ya getirildiğini , İran hükûmeti sokağa hakim olamazsa , Büyükelçiliğin talebi halinde " Türkiye'nin güvenliğinin sağlanacağını " söyledi .	Sekiz saat süren gösteri , İran polisinin göz yaşartıcı gaz kullanmak suretiyle kalabalığı dağıtmasıyla son buldu .	Olayın ardından İran Hükümeti , Türk Büyükelçiliği'nin etrafına ordu birlikleri yerleştirdi ve makineli tüfek yuvaları kurmak üzere siperler kazdı .		
+Event	T0	görüştüğü	EVENT	27
+Event	T1	talebi	EVENT	200
+Event	T2	söyledi	EVENT	258
+Event	T3	gösteri	EVENT	285
+Event	T4	kullanmak	EVENT	328
+Event	T5	buldu	EVENT	376
+Event	T6	Olayın	EVENT	384
+Event	T7	yerleştirdi	EVENT	464
+Event	T8	kazdı	EVENT	525
+Event	T9	getirildiğini	EVENT	131
+Event	T10	dağıtmasıyla	EVENT	359
+Event	T11	kurmak	EVENT	503
+Relation	T3	T4	CauseEffect	true	gösteri	kullanmak
+Relation	T4	T3	EffectCause	true	kullanmak	gösteri
+Relation	T4	T10	CauseEffect	true	kullanmak	dağıtmasıyla
+Relation	T10	T4	EffectCause	true	dağıtmasıyla	kullanmak
+Relation	T6	T7	CauseEffect	true	Olayın	yerleştirdi
+Relation	T7	T6	EffectCause	true	yerleştirdi	Olayın
+Relation	T3	T7	CauseEffect	true	gösteri	yerleştirdi
+Relation	T7	T3	EffectCause	true	yerleştirdi	gösteri
+Relation	T3	T8	CauseEffect	true	gösteri	kazdı
+Relation	T8	T3	EffectCause	true	kazdı	gösteri
+Relation	T6	T8	CauseEffect	true	Olayın	kazdı
+Relation	T8	T6	EffectCause	true	kazdı	Olayın
+Relation	T0	T11	NoRel	true	görüştüğü	kurmak
+Relation	T0	T5	NoRel	true	görüştüğü	buldu
+Relation	T1	T7	NoRel	true	talebi	yerleştirdi
+Relation	T1	T8	NoRel	true	talebi	kazdı
+Relation	T10	T1	NoRel	true	dağıtmasıyla	talebi
+Relation	T10	T11	NoRel	true	dağıtmasıyla	kurmak
+Relation	T10	T7	NoRel	true	dağıtmasıyla	yerleştirdi
+Relation	T10	T8	NoRel	true	dağıtmasıyla	kazdı
+Relation	T11	T0	NoRel	true	kurmak	görüştüğü
+Relation	T11	T4	NoRel	true	kurmak	kullanmak
+Relation	T2	T7	NoRel	true	söyledi	yerleştirdi
+Relation	T3	T1	NoRel	true	gösteri	talebi
+Relation	T3	T10	NoRel	true	gösteri	dağıtmasıyla
+Relation	T3	T11	NoRel	true	gösteri	kurmak
+Relation	T3	T5	NoRel	true	gösteri	buldu
+Relation	T4	T7	NoRel	true	kullanmak	yerleştirdi
+Relation	T4	T9	NoRel	true	kullanmak	getirildiğini
+Relation	T5	T0	NoRel	true	buldu	görüştüğü
+Relation	T5	T1	NoRel	true	buldu	talebi
+Relation	T5	T9	NoRel	true	buldu	getirildiğini
+Relation	T6	T1	NoRel	true	Olayın	talebi
+Relation	T6	T10	NoRel	true	Olayın	dağıtmasıyla
+Relation	T6	T11	NoRel	true	Olayın	kurmak
+Relation	T7	T0	NoRel	true	yerleştirdi	görüştüğü
+Relation	T7	T1	NoRel	true	yerleştirdi	talebi
+Relation	T7	T5	NoRel	true	yerleştirdi	buldu
+Relation	T7	T8	NoRel	true	yerleştirdi	kazdı
+Relation	T8	T10	NoRel	true	kazdı	dağıtmasıyla
+Relation	T8	T2	NoRel	true	kazdı	söyledi
+Relation	T8	T5	NoRel	true	kazdı	buldu
+Relation	T9	T11	NoRel	true	getirildiğini	kurmak
+Relation	T9	T7	NoRel	true	getirildiğini	yerleştirdi

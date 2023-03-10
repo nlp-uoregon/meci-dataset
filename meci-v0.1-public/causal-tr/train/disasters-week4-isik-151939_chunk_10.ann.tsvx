@@ -1,0 +1,82 @@
+Text	küçükresim | Depremden sonra şehirdeki yıkımı tasvir eden bir gravür , 16. yüzyıl Sultan II. Bayezid on gün boyunca saray bahçesi olan Gülhane Parkı'nda kurulan çadırda kaldıktan sonra 23 Ekim 1509'da İstanbul'dan eski başkent Edirne'ye gitti .	Burada Dîvân -ı Hümâyunu toplayarak depremden sonra afetin etkilerinin azaltılmasına yönelik kararlar aldı .	Sultan , deprem sonrası yeniden inşa ile bakım ve onarım işleri için Anadolu'dan 37 bin , Rumeli'den 29 bin işçi ve 3000 usta görevlendirdi .	Ayrıca her yirmi evden bir kişi işçi olarak alındı ve hane başına 22 akçe geçici vergi toplandı .	Tüm çalışmalar Mimar Hayreddin'in nezaretinde gerçekleştirildi .
+Event	T0	Depremden	EVENT	13
+Event	T3	kurulan	EVENT	153
+Event	T4	gitti	EVENT	237
+Event	T5	aldı	EVENT	347
+Event	T6	deprem	EVENT	363
+Event	T8	görevlendirdi	EVENT	480
+Event	T9	alındı	EVENT	540
+Event	T10	toplandı	EVENT	583
+Event	T11	çalışmalar	EVENT	598
+Event	T12	gerçekleştirildi	EVENT	640
+Event	T13	kaldıktan	EVENT	169
+Event	T1	yıkımı	EVENT	39
+Event	T2	toplayarak	EVENT	270
+Event	T14	depremden	EVENT	281
+Relation	T0	T1	CauseEffect	true	Depremden	yıkımı
+Relation	T1	T0	EffectCause	true	yıkımı	Depremden
+Relation	T14	T2	CauseEffect	true	depremden	toplayarak
+Relation	T2	T14	EffectCause	true	toplayarak	depremden
+Relation	T2	T5	CauseEffect	true	toplayarak	aldı
+Relation	T5	T2	EffectCause	true	aldı	toplayarak
+Relation	T6	T8	CauseEffect	true	deprem	görevlendirdi
+Relation	T8	T6	EffectCause	true	görevlendirdi	deprem
+Relation	T6	T9	CauseEffect	true	deprem	alındı
+Relation	T9	T6	EffectCause	true	alındı	deprem
+Relation	T6	T10	CauseEffect	true	deprem	toplandı
+Relation	T10	T6	EffectCause	true	toplandı	deprem
+Relation	T0	T13	NoRel	true	Depremden	kaldıktan
+Relation	T0	T4	NoRel	true	Depremden	gitti
+Relation	T0	T6	NoRel	true	Depremden	deprem
+Relation	T1	T4	NoRel	true	yıkımı	gitti
+Relation	T1	T9	NoRel	true	yıkımı	alındı
+Relation	T10	T0	NoRel	true	toplandı	Depremden
+Relation	T10	T1	NoRel	true	toplandı	yıkımı
+Relation	T10	T11	NoRel	true	toplandı	çalışmalar
+Relation	T10	T13	NoRel	true	toplandı	kaldıktan
+Relation	T10	T14	NoRel	true	toplandı	depremden
+Relation	T10	T3	NoRel	true	toplandı	kurulan
+Relation	T10	T8	NoRel	true	toplandı	görevlendirdi
+Relation	T10	T9	NoRel	true	toplandı	alındı
+Relation	T11	T0	NoRel	true	çalışmalar	Depremden
+Relation	T11	T1	NoRel	true	çalışmalar	yıkımı
+Relation	T11	T10	NoRel	true	çalışmalar	toplandı
+Relation	T11	T2	NoRel	true	çalışmalar	toplayarak
+Relation	T11	T8	NoRel	true	çalışmalar	görevlendirdi
+Relation	T12	T10	NoRel	true	gerçekleştirildi	toplandı
+Relation	T12	T11	NoRel	true	gerçekleştirildi	çalışmalar
+Relation	T12	T2	NoRel	true	gerçekleştirildi	toplayarak
+Relation	T12	T4	NoRel	true	gerçekleştirildi	gitti
+Relation	T12	T9	NoRel	true	gerçekleştirildi	alındı
+Relation	T13	T14	NoRel	true	kaldıktan	depremden
+Relation	T13	T2	NoRel	true	kaldıktan	toplayarak
+Relation	T13	T5	NoRel	true	kaldıktan	aldı
+Relation	T13	T9	NoRel	true	kaldıktan	alındı
+Relation	T14	T1	NoRel	true	depremden	yıkımı
+Relation	T14	T11	NoRel	true	depremden	çalışmalar
+Relation	T14	T13	NoRel	true	depremden	kaldıktan
+Relation	T14	T6	NoRel	true	depremden	deprem
+Relation	T14	T8	NoRel	true	depremden	görevlendirdi
+Relation	T14	T9	NoRel	true	depremden	alındı
+Relation	T2	T13	NoRel	true	toplayarak	kaldıktan
+Relation	T2	T4	NoRel	true	toplayarak	gitti
+Relation	T3	T1	NoRel	true	kurulan	yıkımı
+Relation	T3	T11	NoRel	true	kurulan	çalışmalar
+Relation	T3	T12	NoRel	true	kurulan	gerçekleştirildi
+Relation	T3	T13	NoRel	true	kurulan	kaldıktan
+Relation	T3	T14	NoRel	true	kurulan	depremden
+Relation	T3	T5	NoRel	true	kurulan	aldı
+Relation	T3	T8	NoRel	true	kurulan	görevlendirdi
+Relation	T4	T14	NoRel	true	gitti	depremden
+Relation	T5	T14	NoRel	true	aldı	depremden
+Relation	T6	T1	NoRel	true	deprem	yıkımı
+Relation	T6	T11	NoRel	true	deprem	çalışmalar
+Relation	T6	T12	NoRel	true	deprem	gerçekleştirildi
+Relation	T6	T4	NoRel	true	deprem	gitti
+Relation	T6	T5	NoRel	true	deprem	aldı
+Relation	T8	T1	NoRel	true	görevlendirdi	yıkımı
+Relation	T8	T5	NoRel	true	görevlendirdi	aldı
+Relation	T9	T0	NoRel	true	alındı	Depremden
+Relation	T9	T1	NoRel	true	alındı	yıkımı
+Relation	T9	T10	NoRel	true	alındı	toplandı
+Relation	T9	T2	NoRel	true	alındı	toplayarak

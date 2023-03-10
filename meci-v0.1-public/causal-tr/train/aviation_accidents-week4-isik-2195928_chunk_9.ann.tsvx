@@ -1,0 +1,51 @@
+Text	01.03'te mürettebat alçalma talep etti , kontrolör irtifanın altına inilmeyecek şekilde alçalmaya izin verdi .	01.10'da kontrolör hava durumunu bildirdi : " rüzgâr sakin , görüş mesafesi 50 m , pist görüş mesafesi 300 m , dondurucu sis mevcut , dikey görüş mesafesi 160_ft " ve mürettebatın yaklaşıma devam edip etmeyeceğini sordu .	Mürettebat yaklaşıma devam edeceklerini bildirdi .	Mürettebat , standart yaklaşma çizelgesine uygun olarak 26 numaralı piste yaklaşma gerçekleştirdi .	01.11'de kontrolör mürettebatı bilgilendirdi : " … geçiş seviyesi altı sıfır ve ILS , 26 numaralı piste yaklaşım için hazır .
+Event	T0	etti	EVENT	34
+Event	T1	verdi	EVENT	103
+Event	T2	bildirdi	EVENT	144
+Event	T3	sordu	EVENT	325
+Event	T4	bildirdi	EVENT	373
+Event	T5	gerçekleştirdi	EVENT	467
+Event	T6	bilgilendirdi	EVENT	515
+Event	T7	geçiş	EVENT	535
+Event	T8	alçalma	EVENT	20
+Event	T9	sis	EVENT	232
+Relation	T0	T1	CauseEffect	true	etti	verdi
+Relation	T1	T0	EffectCause	true	verdi	etti
+Relation	T8	T2	CauseEffect	true	alçalma	bildirdi
+Relation	T2	T8	EffectCause	true	bildirdi	alçalma
+Relation	T3	T4	CauseEffect	true	sordu	bildirdi
+Relation	T4	T3	EffectCause	true	bildirdi	sordu
+Relation	T8	T5	CauseEffect	true	alçalma	gerçekleştirdi
+Relation	T5	T8	EffectCause	true	gerçekleştirdi	alçalma
+Relation	T4	T6	CauseEffect	true	bildirdi	bilgilendirdi
+Relation	T6	T4	EffectCause	true	bilgilendirdi	bildirdi
+Relation	T0	T2	NoRel	true	etti	bildirdi
+Relation	T0	T4	NoRel	true	etti	bildirdi
+Relation	T0	T5	NoRel	true	etti	gerçekleştirdi
+Relation	T0	T7	NoRel	true	etti	geçiş
+Relation	T0	T9	NoRel	true	etti	sis
+Relation	T1	T4	NoRel	true	verdi	bildirdi
+Relation	T1	T8	NoRel	true	verdi	alçalma
+Relation	T1	T9	NoRel	true	verdi	sis
+Relation	T2	T1	NoRel	true	bildirdi	verdi
+Relation	T2	T3	NoRel	true	bildirdi	sordu
+Relation	T2	T7	NoRel	true	bildirdi	geçiş
+Relation	T3	T2	NoRel	true	sordu	bildirdi
+Relation	T3	T5	NoRel	true	sordu	gerçekleştirdi
+Relation	T3	T6	NoRel	true	sordu	bilgilendirdi
+Relation	T3	T7	NoRel	true	sordu	geçiş
+Relation	T4	T5	NoRel	true	bildirdi	gerçekleştirdi
+Relation	T5	T3	NoRel	true	gerçekleştirdi	sordu
+Relation	T5	T7	NoRel	true	gerçekleştirdi	geçiş
+Relation	T5	T9	NoRel	true	gerçekleştirdi	sis
+Relation	T6	T0	NoRel	true	bilgilendirdi	etti
+Relation	T6	T1	NoRel	true	bilgilendirdi	verdi
+Relation	T6	T2	NoRel	true	bilgilendirdi	bildirdi
+Relation	T6	T9	NoRel	true	bilgilendirdi	sis
+Relation	T7	T2	NoRel	true	geçiş	bildirdi
+Relation	T7	T5	NoRel	true	geçiş	gerçekleştirdi
+Relation	T7	T9	NoRel	true	geçiş	sis
+Relation	T8	T3	NoRel	true	alçalma	sordu
+Relation	T9	T3	NoRel	true	sis	sordu
+Relation	T9	T6	NoRel	true	sis	bilgilendirdi
+Relation	T9	T8	NoRel	true	sis	alçalma

@@ -1,0 +1,78 @@
+Text	250px | küçükresim | Büyük Britanya'da kömürle çalışan bir buharlı makine örneği .	Buharlı makineler Sanayi Devrimi'nde önemli rol oynamışlardır .	SANAYI DEVRIMI ya da ENDÜSTRI DEVRIMI , Avrupa'da 18. ve 19. yüzyıllarda yeni buluşların üretime olan etkisi ve buhar gücüyle çalışan makinelerin makineleşmiş endüstriyi doğurması , bu gelişmelerin de Avrupa'daki sermaye birikimini arttırmasına denir .	Sanayi Devrimi , ilk olarak Birleşik Krallık ' Manchester'da ortaya çıkmış , ardından Batı Avrupa , Kuzey Amerika ve Japonya'ya sıçramış ve bütün dünyaya yayılmıştır .	- Hızlı nüfus artışı , 16. yüzyıldan başlayarak Avrupa'nın nüfusu hızla arttı .
+Event	T0	çalışan	EVENT	47
+Event	T1	oynamışlardır	EVENT	131
+Event	T3	etkisi	EVENT	249
+Event	T4	doğurması	EVENT	317
+Event	T5	gelişmelerin	EVENT	332
+Event	T8	çıkmış	EVENT	468
+Event	T9	sıçramış	EVENT	528
+Event	T10	yayılmıştır	EVENT	554
+Event	T11	arttı	EVENT	640
+Event	T2	SANAYI DEVRIMI	EVENT	147
+Event	T12	ENDÜSTRI DEVRIMI	EVENT	168
+Event	T13	buluşların	EVENT	225
+Event	T6	arttırmasına	EVENT	379
+Event	T7	Sanayi Devrimi	EVENT	400
+Relation	T13	T3	CauseEffect	true	buluşların	etkisi
+Relation	T3	T13	EffectCause	true	etkisi	buluşların
+Relation	T5	T6	CauseEffect	true	gelişmelerin	arttırmasına
+Relation	T6	T5	EffectCause	true	arttırmasına	gelişmelerin
+Relation	T6	T2	CauseEffect	true	arttırmasına	SANAYI DEVRIMI
+Relation	T2	T6	EffectCause	true	SANAYI DEVRIMI	arttırmasına
+Relation	T6	T12	CauseEffect	true	arttırmasına	ENDÜSTRI DEVRIMI
+Relation	T12	T6	EffectCause	true	ENDÜSTRI DEVRIMI	arttırmasına
+Relation	T0	T10	NoRel	true	çalışan	yayılmıştır
+Relation	T0	T12	NoRel	true	çalışan	ENDÜSTRI DEVRIMI
+Relation	T0	T6	NoRel	true	çalışan	arttırmasına
+Relation	T1	T10	NoRel	true	oynamışlardır	yayılmıştır
+Relation	T1	T13	NoRel	true	oynamışlardır	buluşların
+Relation	T1	T2	NoRel	true	oynamışlardır	SANAYI DEVRIMI
+Relation	T10	T0	NoRel	true	yayılmıştır	çalışan
+Relation	T10	T12	NoRel	true	yayılmıştır	ENDÜSTRI DEVRIMI
+Relation	T10	T2	NoRel	true	yayılmıştır	SANAYI DEVRIMI
+Relation	T10	T3	NoRel	true	yayılmıştır	etkisi
+Relation	T10	T9	NoRel	true	yayılmıştır	sıçramış
+Relation	T11	T1	NoRel	true	arttı	oynamışlardır
+Relation	T11	T3	NoRel	true	arttı	etkisi
+Relation	T11	T5	NoRel	true	arttı	gelişmelerin
+Relation	T11	T6	NoRel	true	arttı	arttırmasına
+Relation	T11	T8	NoRel	true	arttı	çıkmış
+Relation	T11	T9	NoRel	true	arttı	sıçramış
+Relation	T12	T4	NoRel	true	ENDÜSTRI DEVRIMI	doğurması
+Relation	T12	T7	NoRel	true	ENDÜSTRI DEVRIMI	Sanayi Devrimi
+Relation	T12	T8	NoRel	true	ENDÜSTRI DEVRIMI	çıkmış
+Relation	T13	T1	NoRel	true	buluşların	oynamışlardır
+Relation	T13	T11	NoRel	true	buluşların	arttı
+Relation	T13	T2	NoRel	true	buluşların	SANAYI DEVRIMI
+Relation	T13	T8	NoRel	true	buluşların	çıkmış
+Relation	T2	T1	NoRel	true	SANAYI DEVRIMI	oynamışlardır
+Relation	T2	T3	NoRel	true	SANAYI DEVRIMI	etkisi
+Relation	T2	T5	NoRel	true	SANAYI DEVRIMI	gelişmelerin
+Relation	T2	T8	NoRel	true	SANAYI DEVRIMI	çıkmış
+Relation	T3	T2	NoRel	true	etkisi	SANAYI DEVRIMI
+Relation	T3	T4	NoRel	true	etkisi	doğurması
+Relation	T3	T8	NoRel	true	etkisi	çıkmış
+Relation	T4	T12	NoRel	true	doğurması	ENDÜSTRI DEVRIMI
+Relation	T4	T3	NoRel	true	doğurması	etkisi
+Relation	T4	T6	NoRel	true	doğurması	arttırmasına
+Relation	T4	T7	NoRel	true	doğurması	Sanayi Devrimi
+Relation	T4	T9	NoRel	true	doğurması	sıçramış
+Relation	T5	T0	NoRel	true	gelişmelerin	çalışan
+Relation	T5	T1	NoRel	true	gelişmelerin	oynamışlardır
+Relation	T5	T4	NoRel	true	gelişmelerin	doğurması
+Relation	T5	T9	NoRel	true	gelişmelerin	sıçramış
+Relation	T6	T10	NoRel	true	arttırmasına	yayılmıştır
+Relation	T6	T4	NoRel	true	arttırmasına	doğurması
+Relation	T6	T7	NoRel	true	arttırmasına	Sanayi Devrimi
+Relation	T7	T0	NoRel	true	Sanayi Devrimi	çalışan
+Relation	T7	T2	NoRel	true	Sanayi Devrimi	SANAYI DEVRIMI
+Relation	T7	T3	NoRel	true	Sanayi Devrimi	etkisi
+Relation	T7	T5	NoRel	true	Sanayi Devrimi	gelişmelerin
+Relation	T7	T9	NoRel	true	Sanayi Devrimi	sıçramış
+Relation	T8	T4	NoRel	true	çıkmış	doğurması
+Relation	T8	T5	NoRel	true	çıkmış	gelişmelerin
+Relation	T8	T9	NoRel	true	çıkmış	sıçramış
+Relation	T9	T10	NoRel	true	sıçramış	yayılmıştır
+Relation	T9	T12	NoRel	true	sıçramış	ENDÜSTRI DEVRIMI
+Relation	T9	T13	NoRel	true	sıçramış	buluşların
+Relation	T9	T6	NoRel	true	sıçramış	arttırmasına

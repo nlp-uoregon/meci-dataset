@@ -1,0 +1,82 @@
+Text	En Calcuta , vientos dañinos de hasta 112 km/h ( 70 mph ) volcaron vehículos y rompieron árboles .	Miles de casas de barro fueron dañadas en el vecino distrito de Hooghly .	Al menos 72 personas murieron en Bengala Occidental , 15 en Calcuta misma ; la mayoría de las muertes se debieron a electrocución o al colapso de viviendas .	Cientos de casas fueron destruidas en el sur de 24 Parganas y los terraplenes quebrados provocaron la inundación de aldeas y franjas de tierras de cultivo .	El daño allí fue más extenso que en el ciclón Aila en 2009 .
+Event	T0	volcaron	EVENT	58
+Event	T1	rompieron	EVENT	79
+Event	T2	dañadas	EVENT	130
+Event	T3	murieron	EVENT	194
+Event	T4	muertes	EVENT	267
+Event	T5	electrocución	EVENT	289
+Event	T6	colapso	EVENT	308
+Event	T7	destruidas	EVENT	355
+Event	T8	provocaron	EVENT	419
+Event	T9	inundación	EVENT	433
+Event	T10	daño	EVENT	491
+Event	T11	ciclón	EVENT	527
+Event	T12	vientos	EVENT	13
+Relation	T12	T0	CauseEffect	true	vientos	volcaron
+Relation	T0	T12	EffectCause	true	volcaron	vientos
+Relation	T12	T1	CauseEffect	true	vientos	rompieron
+Relation	T1	T12	EffectCause	true	rompieron	vientos
+Relation	T12	T2	CauseEffect	true	vientos	dañadas
+Relation	T2	T12	EffectCause	true	dañadas	vientos
+Relation	T12	T3	CauseEffect	true	vientos	murieron
+Relation	T3	T12	EffectCause	true	murieron	vientos
+Relation	T5	T4	CauseEffect	true	electrocución	muertes
+Relation	T4	T5	EffectCause	true	muertes	electrocución
+Relation	T6	T4	CauseEffect	true	colapso	muertes
+Relation	T4	T6	EffectCause	true	muertes	colapso
+Relation	T0	T1	NoRel	true	volcaron	rompieron
+Relation	T0	T2	NoRel	true	volcaron	dañadas
+Relation	T0	T3	NoRel	true	volcaron	murieron
+Relation	T0	T4	NoRel	true	volcaron	muertes
+Relation	T0	T6	NoRel	true	volcaron	colapso
+Relation	T0	T7	NoRel	true	volcaron	destruidas
+Relation	T1	T10	NoRel	true	rompieron	daño
+Relation	T1	T3	NoRel	true	rompieron	murieron
+Relation	T1	T4	NoRel	true	rompieron	muertes
+Relation	T1	T5	NoRel	true	rompieron	electrocución
+Relation	T1	T9	NoRel	true	rompieron	inundación
+Relation	T10	T1	NoRel	true	daño	rompieron
+Relation	T10	T11	NoRel	true	daño	ciclón
+Relation	T10	T12	NoRel	true	daño	vientos
+Relation	T10	T2	NoRel	true	daño	dañadas
+Relation	T10	T3	NoRel	true	daño	murieron
+Relation	T10	T4	NoRel	true	daño	muertes
+Relation	T10	T6	NoRel	true	daño	colapso
+Relation	T10	T9	NoRel	true	daño	inundación
+Relation	T11	T7	NoRel	true	ciclón	destruidas
+Relation	T11	T8	NoRel	true	ciclón	provocaron
+Relation	T11	T9	NoRel	true	ciclón	inundación
+Relation	T12	T5	NoRel	true	vientos	electrocución
+Relation	T12	T7	NoRel	true	vientos	destruidas
+Relation	T2	T0	NoRel	true	dañadas	volcaron
+Relation	T2	T4	NoRel	true	dañadas	muertes
+Relation	T2	T6	NoRel	true	dañadas	colapso
+Relation	T2	T9	NoRel	true	dañadas	inundación
+Relation	T3	T0	NoRel	true	murieron	volcaron
+Relation	T3	T1	NoRel	true	murieron	rompieron
+Relation	T3	T11	NoRel	true	murieron	ciclón
+Relation	T3	T2	NoRel	true	murieron	dañadas
+Relation	T3	T6	NoRel	true	murieron	colapso
+Relation	T3	T8	NoRel	true	murieron	provocaron
+Relation	T4	T0	NoRel	true	muertes	volcaron
+Relation	T4	T9	NoRel	true	muertes	inundación
+Relation	T5	T10	NoRel	true	electrocución	daño
+Relation	T5	T11	NoRel	true	electrocución	ciclón
+Relation	T5	T12	NoRel	true	electrocución	vientos
+Relation	T5	T2	NoRel	true	electrocución	dañadas
+Relation	T5	T3	NoRel	true	electrocución	murieron
+Relation	T5	T6	NoRel	true	electrocución	colapso
+Relation	T6	T3	NoRel	true	colapso	murieron
+Relation	T7	T10	NoRel	true	destruidas	daño
+Relation	T7	T2	NoRel	true	destruidas	dañadas
+Relation	T7	T5	NoRel	true	destruidas	electrocución
+Relation	T8	T0	NoRel	true	provocaron	volcaron
+Relation	T8	T1	NoRel	true	provocaron	rompieron
+Relation	T8	T10	NoRel	true	provocaron	daño
+Relation	T8	T2	NoRel	true	provocaron	dañadas
+Relation	T8	T4	NoRel	true	provocaron	muertes
+Relation	T8	T5	NoRel	true	provocaron	electrocución
+Relation	T8	T6	NoRel	true	provocaron	colapso
+Relation	T9	T10	NoRel	true	inundación	daño
+Relation	T9	T4	NoRel	true	inundación	muertes
+Relation	T9	T7	NoRel	true	inundación	destruidas

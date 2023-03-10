@@ -1,0 +1,88 @@
+Text	TO PERSONTOG KOLLIDERET FRONTALT VED REGSTRUP 6. januar 1998 ca. kl 08:00 ca. 120 meter udenfor Regstrup stations nordøstlige stationsgrænse .	Ved kollisionen blev 3 personer alvorligt kvæstet og 23 personer lettere kvæstet og der opstod betydelig materiel skade .	Lokomotivføreren på toget fra Kalundborg undlod at standse på stationen og indledte bremsning så sent , at toget passerede udkørselssignalet mod Holbæk .	Toget fra Holbæk standsede omkring 120 meter før Regstrups stationsgrænse , men blev alligevel ramt af toget , der havde bremset for sent .	Kollisionen skete med en hastighed på ca. 33 km/t.
+Event	T0	kollisionen	EVENT	147
+Event	T1	kvæstet	EVENT	185
+Event	T10	ramt	EVENT	514
+Event	T11	bremset	EVENT	540
+Event	T12	skete	EVENT	571
+Event	T13	KOLLIDERET	EVENT	13
+Event	T2	kvæstet	EVENT	216
+Event	T3	opstod	EVENT	231
+Event	T4	skade	EVENT	257
+Event	T5	undlod	EVENT	306
+Event	T6	standse	EVENT	316
+Event	T7	bremsning	EVENT	349
+Event	T8	passerede	EVENT	378
+Event	T9	standsede	EVENT	436
+Relation	T0	T1	CauseEffect	true	kollisionen	kvæstet
+Relation	T1	T0	EffectCause	true	kvæstet	kollisionen
+Relation	T0	T2	CauseEffect	true	kollisionen	kvæstet
+Relation	T2	T0	EffectCause	true	kvæstet	kollisionen
+Relation	T0	T3	CauseEffect	true	kollisionen	opstod
+Relation	T3	T0	EffectCause	true	opstod	kollisionen
+Relation	T0	T4	CauseEffect	true	kollisionen	skade
+Relation	T4	T0	EffectCause	true	skade	kollisionen
+Relation	T6	T0	CauseEffect	true	standse	kollisionen
+Relation	T0	T6	EffectCause	true	kollisionen	standse
+Relation	T7	T8	CauseEffect	true	bremsning	passerede
+Relation	T8	T7	EffectCause	true	passerede	bremsning
+Relation	T8	T0	CauseEffect	true	passerede	kollisionen
+Relation	T0	T8	EffectCause	true	kollisionen	passerede
+Relation	T8	T10	CauseEffect	true	passerede	ramt
+Relation	T10	T8	EffectCause	true	ramt	passerede
+Relation	T11	T10	CauseEffect	true	bremset	ramt
+Relation	T10	T11	EffectCause	true	ramt	bremset
+Relation	T0	T12	NoRel	true	kollisionen	skete
+Relation	T0	T9	NoRel	true	kollisionen	standsede
+Relation	T1	T10	NoRel	true	kvæstet	ramt
+Relation	T1	T13	NoRel	true	kvæstet	KOLLIDERET
+Relation	T1	T2	NoRel	true	kvæstet	kvæstet
+Relation	T1	T3	NoRel	true	kvæstet	opstod
+Relation	T1	T6	NoRel	true	kvæstet	standse
+Relation	T1	T8	NoRel	true	kvæstet	passerede
+Relation	T10	T0	NoRel	true	ramt	kollisionen
+Relation	T10	T13	NoRel	true	ramt	KOLLIDERET
+Relation	T10	T6	NoRel	true	ramt	standse
+Relation	T11	T13	NoRel	true	bremset	KOLLIDERET
+Relation	T11	T7	NoRel	true	bremset	bremsning
+Relation	T11	T8	NoRel	true	bremset	passerede
+Relation	T12	T10	NoRel	true	skete	ramt
+Relation	T12	T3	NoRel	true	skete	opstod
+Relation	T12	T6	NoRel	true	skete	standse
+Relation	T12	T7	NoRel	true	skete	bremsning
+Relation	T13	T0	NoRel	true	KOLLIDERET	kollisionen
+Relation	T13	T11	NoRel	true	KOLLIDERET	bremset
+Relation	T2	T11	NoRel	true	kvæstet	bremset
+Relation	T2	T9	NoRel	true	kvæstet	standsede
+Relation	T3	T11	NoRel	true	opstod	bremset
+Relation	T3	T12	NoRel	true	opstod	skete
+Relation	T3	T2	NoRel	true	opstod	kvæstet
+Relation	T3	T7	NoRel	true	opstod	bremsning
+Relation	T3	T8	NoRel	true	opstod	passerede
+Relation	T4	T11	NoRel	true	skade	bremset
+Relation	T4	T2	NoRel	true	skade	kvæstet
+Relation	T4	T5	NoRel	true	skade	undlod
+Relation	T4	T9	NoRel	true	skade	standsede
+Relation	T5	T0	NoRel	true	undlod	kollisionen
+Relation	T5	T1	NoRel	true	undlod	kvæstet
+Relation	T5	T10	NoRel	true	undlod	ramt
+Relation	T5	T11	NoRel	true	undlod	bremset
+Relation	T5	T12	NoRel	true	undlod	skete
+Relation	T5	T3	NoRel	true	undlod	opstod
+Relation	T5	T6	NoRel	true	undlod	standse
+Relation	T5	T8	NoRel	true	undlod	passerede
+Relation	T5	T9	NoRel	true	undlod	standsede
+Relation	T6	T1	NoRel	true	standse	kvæstet
+Relation	T6	T12	NoRel	true	standse	skete
+Relation	T6	T4	NoRel	true	standse	skade
+Relation	T6	T8	NoRel	true	standse	passerede
+Relation	T7	T1	NoRel	true	bremsning	kvæstet
+Relation	T7	T13	NoRel	true	bremsning	KOLLIDERET
+Relation	T7	T4	NoRel	true	bremsning	skade
+Relation	T7	T5	NoRel	true	bremsning	undlod
+Relation	T8	T11	NoRel	true	passerede	bremset
+Relation	T8	T6	NoRel	true	passerede	standse
+Relation	T8	T9	NoRel	true	passerede	standsede
+Relation	T9	T2	NoRel	true	standsede	kvæstet
+Relation	T9	T4	NoRel	true	standsede	skade
+Relation	T9	T5	NoRel	true	standsede	undlod
+Relation	T9	T8	NoRel	true	standsede	passerede

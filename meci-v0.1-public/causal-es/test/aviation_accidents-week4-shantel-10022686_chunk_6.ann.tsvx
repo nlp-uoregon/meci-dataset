@@ -1,0 +1,25 @@
+Text	Luego fue forzado a regresar a un rumbo paralelo a la pista 13 , y continuó deslizándose en esta dirección por otros largo de la cerca perimetral , antes de detenerse a unos desde el extremo de aproximación de la pista 13 , con el morro de la aeronave colgando sobre la berma .	El ala izquierda de la aeronave destruyó aproximadamente del cerco perimetral del aeropuerto .	La aeronave sufrió daños estructurales importantes .	Hubo daños importantes en el borde de ataque del ala izquierda , los Slats , los flaps y los spoilers .	El tanque de combustible del ala izquierda se rompió cerca del extremo exterior de las aletas exteriores .
+Event	T0	forzado	EVENT	10
+Event	T1	regresar	EVENT	20
+Event	T2	deslizándose	EVENT	76
+Event	T3	detenerse	EVENT	157
+Event	T5	colgando	EVENT	252
+Event	T6	destruyó	EVENT	310
+Event	T8	rompió	EVENT	576
+Event	T4	sufrió	EVENT	385
+Relation	T2	T6	CauseEffect	true	deslizándose	destruyó
+Relation	T6	T2	EffectCause	true	destruyó	deslizándose
+Relation	T2	T4	CauseEffect	true	deslizándose	sufrió
+Relation	T4	T2	EffectCause	true	sufrió	deslizándose
+Relation	T0	T1	NoRel	true	forzado	regresar
+Relation	T1	T0	NoRel	true	regresar	forzado
+Relation	T1	T2	NoRel	true	regresar	deslizándose
+Relation	T1	T3	NoRel	true	regresar	detenerse
+Relation	T1	T5	NoRel	true	regresar	colgando
+Relation	T2	T5	NoRel	true	deslizándose	colgando
+Relation	T2	T8	NoRel	true	deslizándose	rompió
+Relation	T3	T0	NoRel	true	detenerse	forzado
+Relation	T5	T4	NoRel	true	colgando	sufrió
+Relation	T6	T4	NoRel	true	destruyó	sufrió
+Relation	T8	T1	NoRel	true	rompió	regresar
+Relation	T8	T2	NoRel	true	rompió	deslizándose

@@ -1,0 +1,30 @@
+Text	29 Aralık 2020 tarihinde 12.20'de CET ( 11.20 UTC ) , M _ ( w ) 6.4 büyüklüğünde bir deprem Hırvatistan'ın Petrinja şehrinin yaklaşık 3 km WSW'sini vurdu .	Deprem , kuzey Hırvatistan'ın yanı sıra Slovenya , Avusturya , Bosna - Hersek ve Sırbistan'ın ve hatta İtalya'nın büyük bölümlerinde hissedildi .	İlk raporlara göre Petrinja'da birçok binanın yıkıldığı belirtildi .	Depremin merkez_üssü Strašnik'teydi .	Maksimum yoğunluk , Avrupa Makrosismik ölçeğine göre 8 ( ağır şekilde zarar verici ) ila 9 ( " yıkıcı " ) olarak tahmin edildi .
+Event	T0	deprem	EVENT	85
+Event	T1	vurdu	EVENT	148
+Event	T2	Deprem	EVENT	156
+Event	T3	hissedildi	EVENT	289
+Event	T4	belirtildi	EVENT	358
+Event	T5	Depremin	EVENT	371
+Event	T6	edildi	EVENT	529
+Relation	T0	T3	CauseEffect	true	deprem	hissedildi
+Relation	T3	T0	EffectCause	true	hissedildi	deprem
+Relation	T0	T4	CauseEffect	true	deprem	belirtildi
+Relation	T4	T0	EffectCause	true	belirtildi	deprem
+Relation	T2	T3	CauseEffect	true	Deprem	hissedildi
+Relation	T3	T2	EffectCause	true	hissedildi	Deprem
+Relation	T0	T1	NoRel	true	deprem	vurdu
+Relation	T0	T2	NoRel	true	deprem	Deprem
+Relation	T0	T6	NoRel	true	deprem	edildi
+Relation	T1	T3	NoRel	true	vurdu	hissedildi
+Relation	T1	T5	NoRel	true	vurdu	Depremin
+Relation	T2	T5	NoRel	true	Deprem	Depremin
+Relation	T3	T1	NoRel	true	hissedildi	vurdu
+Relation	T3	T4	NoRel	true	hissedildi	belirtildi
+Relation	T4	T5	NoRel	true	belirtildi	Depremin
+Relation	T4	T6	NoRel	true	belirtildi	edildi
+Relation	T5	T0	NoRel	true	Depremin	deprem
+Relation	T5	T1	NoRel	true	Depremin	vurdu
+Relation	T5	T4	NoRel	true	Depremin	belirtildi
+Relation	T5	T6	NoRel	true	Depremin	edildi
+Relation	T6	T0	NoRel	true	edildi	deprem
+Relation	T6	T5	NoRel	true	edildi	Depremin

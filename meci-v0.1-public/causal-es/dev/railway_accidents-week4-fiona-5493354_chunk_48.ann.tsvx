@@ -1,0 +1,37 @@
+Text	- 10 DE JULIO : un tren de viajeros descarrila entre las estaciones de Alfarelos y Vila Nova de Ancos , resultando heridas once personas .	El accidente se atribuyó a un sabotaje .	- 7 DE SEPTIEMBRE : Un tren correo descarrila en la estación portuense de Campanhã .	El accidente deja como balance varias personas heridas .	- [ miniaturade imagen | derecha | Destrozos del comboi después la explosión de 1919 .
+Event	T0	descarrila	EVENT	36
+Event	T1	heridas	EVENT	115
+Event	T2	accidente	EVENT	142
+Event	T3	atribuyó	EVENT	155
+Event	T4	sabotaje	EVENT	169
+Event	T5	descarrila	EVENT	215
+Event	T6	deja	EVENT	278
+Event	T7	heridas	EVENT	312
+Event	T8	Destrozos	EVENT	357
+Event	T9	explosión	EVENT	389
+Relation	T5	T7	CauseEffect	true	descarrila	heridas
+Relation	T7	T5	EffectCause	true	heridas	descarrila
+Relation	T4	T2	CauseEffect	true	sabotaje	accidente
+Relation	T2	T4	EffectCause	true	accidente	sabotaje
+Relation	T0	T2	NoRel	true	descarrila	accidente
+Relation	T0	T3	NoRel	true	descarrila	atribuyó
+Relation	T0	T8	NoRel	true	descarrila	Destrozos
+Relation	T1	T3	NoRel	true	heridas	atribuyó
+Relation	T1	T4	NoRel	true	heridas	sabotaje
+Relation	T1	T8	NoRel	true	heridas	Destrozos
+Relation	T2	T1	NoRel	true	accidente	heridas
+Relation	T2	T3	NoRel	true	accidente	atribuyó
+Relation	T2	T5	NoRel	true	accidente	descarrila
+Relation	T3	T0	NoRel	true	atribuyó	descarrila
+Relation	T3	T1	NoRel	true	atribuyó	heridas
+Relation	T3	T7	NoRel	true	atribuyó	heridas
+Relation	T4	T0	NoRel	true	sabotaje	descarrila
+Relation	T5	T1	NoRel	true	descarrila	heridas
+Relation	T5	T4	NoRel	true	descarrila	sabotaje
+Relation	T6	T2	NoRel	true	deja	accidente
+Relation	T6	T5	NoRel	true	deja	descarrila
+Relation	T7	T3	NoRel	true	heridas	atribuyó
+Relation	T8	T0	NoRel	true	Destrozos	descarrila
+Relation	T8	T3	NoRel	true	Destrozos	atribuyó
+Relation	T9	T5	NoRel	true	explosión	descarrila
+Relation	T9	T6	NoRel	true	explosión	deja

@@ -1,0 +1,55 @@
+Text	Dropping the façade , Wendy reveals that she had been to the lake before , where the murderer slaughtered all of her friends , leaving her as the only survivor .	She notes that the police did not believe her when she said that the killer could be in two places at once .	Wendy then tells Joey that she lured all three of them to the woods to use as bait , so that she can find and kill the Glitch .	As the two talk , the Glitch walks up behind Joey and slits his throat .	Wendy runs away , luring the Glitch into a pit trap , then into a bear trap , which traps it momentarily .
+Event	T0	Dropping	EVENT	0
+Event	T1	reveals	EVENT	28
+Event	T10	find	EVENT	372
+Event	T11	kill	EVENT	381
+Event	T12	talk	EVENT	410
+Event	T13	slits	EVENT	453
+Event	T14	luring	EVENT	490
+Event	T15	traps	EVENT	556
+Event	T18	runs away	EVENT	478
+Event	T2	slaughtered	EVENT	94
+Event	T3	leaving	EVENT	127
+Event	T4	notes	EVENT	166
+Event	T5	believe	EVENT	196
+Event	T6	said	EVENT	217
+Event	T7	tells	EVENT	282
+Event	T8	lured	EVENT	302
+Event	T9	use	EVENT	342
+Relation	T6	T5	CauseEffect	true	said	believe
+Relation	T5	T6	EffectCause	true	believe	said
+Relation	T9	T8	CauseEffect	true	use	lured
+Relation	T8	T9	EffectCause	true	lured	use
+Relation	T14	T15	CauseEffect	true	luring	traps
+Relation	T15	T14	EffectCause	true	traps	luring
+Relation	T0	T12	NoRel	true	Dropping	talk
+Relation	T0	T14	NoRel	true	Dropping	luring
+Relation	T0	T5	NoRel	true	Dropping	believe
+Relation	T0	T7	NoRel	true	Dropping	tells
+Relation	T1	T0	NoRel	true	reveals	Dropping
+Relation	T1	T18	NoRel	true	reveals	runs away
+Relation	T10	T1	NoRel	true	find	reveals
+Relation	T11	T14	NoRel	true	kill	luring
+Relation	T11	T15	NoRel	true	kill	traps
+Relation	T11	T7	NoRel	true	kill	tells
+Relation	T12	T10	NoRel	true	talk	find
+Relation	T13	T1	NoRel	true	slits	reveals
+Relation	T13	T4	NoRel	true	slits	notes
+Relation	T14	T0	NoRel	true	luring	Dropping
+Relation	T14	T5	NoRel	true	luring	believe
+Relation	T15	T0	NoRel	true	traps	Dropping
+Relation	T18	T1	NoRel	true	runs away	reveals
+Relation	T18	T6	NoRel	true	runs away	said
+Relation	T3	T0	NoRel	true	leaving	Dropping
+Relation	T3	T14	NoRel	true	leaving	luring
+Relation	T3	T5	NoRel	true	leaving	believe
+Relation	T3	T9	NoRel	true	leaving	use
+Relation	T5	T8	NoRel	true	believe	lured
+Relation	T6	T0	NoRel	true	said	Dropping
+Relation	T6	T11	NoRel	true	said	kill
+Relation	T7	T10	NoRel	true	tells	find
+Relation	T7	T12	NoRel	true	tells	talk
+Relation	T8	T10	NoRel	true	lured	find
+Relation	T9	T10	NoRel	true	use	find
+Relation	T9	T13	NoRel	true	use	slits
+Relation	T9	T2	NoRel	true	use	slaughtered

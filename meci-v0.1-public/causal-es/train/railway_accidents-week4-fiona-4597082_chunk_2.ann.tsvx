@@ -1,0 +1,151 @@
+Text	En este momento el maquinista aceleró para poder superar una cuesta que se encontraba más adelante , pero no se percató de que el último de los vagones aún no había atravesado la curva .	La aceleración , sumada a la cantidad excesiva de personas en los carros , hizo que el último de estos inclinara hacia la izquierda y se saliera de las vías , arrastrando a su vez a los dos carros que lo precedían y que no habían llegado al puente .	El último vagón quedó sobre un pastizal al lado de las vías del tren , en cambio los otros dos corrieron peor suerte : el penúltimo carro se ladeó por completo y cayó una altura de sesenta metros en la barranca norte del cañón del río Virilla , matando instantáneamente a todos los pasajeros que se encontraban en su interior .	El antepenúltimo vagón chocó contra la estructura del puente y se dobló por la mitad , quedando una parte sobre el puente y la otra colgada sobre el precipicio .	Inmediatamente después del accidente , la máquina y los tres vagones que se encontraban a salvo siguieron su camino con el objetivo de informar lo antes posible la emergencia .
+Event	T0	aceleró	EVENT	30
+Event	T1	superar	EVENT	49
+Event	T2	atravesado	EVENT	165
+Event	T3	aceleración	EVENT	190
+Event	T4	hizo	EVENT	262
+Event	T5	inclinara	EVENT	290
+Event	T6	saliera	EVENT	324
+Event	T7	arrastrando	EVENT	346
+Event	T8	llegado	EVENT	417
+Event	T9	quedó	EVENT	453
+Event	T10	ladeó	EVENT	578
+Event	T11	cayó	EVENT	599
+Event	T12	matando	EVENT	682
+Event	T13	chocó	EVENT	788
+Event	T14	dobló	EVENT	831
+Event	T15	colgada	EVENT	897
+Event	T16	accidente	EVENT	954
+Event	T17	siguieron	EVENT	1023
+Event	T18	informar	EVENT	1062
+Event	T19	emergencia	EVENT	1091
+Relation	T3	T6	CauseEffect	true	aceleración	saliera
+Relation	T6	T3	EffectCause	true	saliera	aceleración
+Relation	T13	T14	CauseEffect	true	chocó	dobló
+Relation	T14	T13	EffectCause	true	dobló	chocó
+Relation	T0	T1	NoRel	true	aceleró	superar
+Relation	T0	T10	NoRel	true	aceleró	ladeó
+Relation	T0	T11	NoRel	true	aceleró	cayó
+Relation	T0	T12	NoRel	true	aceleró	matando
+Relation	T0	T14	NoRel	true	aceleró	dobló
+Relation	T0	T16	NoRel	true	aceleró	accidente
+Relation	T0	T18	NoRel	true	aceleró	informar
+Relation	T0	T4	NoRel	true	aceleró	hizo
+Relation	T0	T6	NoRel	true	aceleró	saliera
+Relation	T0	T8	NoRel	true	aceleró	llegado
+Relation	T0	T9	NoRel	true	aceleró	quedó
+Relation	T1	T10	NoRel	true	superar	ladeó
+Relation	T1	T13	NoRel	true	superar	chocó
+Relation	T1	T15	NoRel	true	superar	colgada
+Relation	T1	T8	NoRel	true	superar	llegado
+Relation	T1	T9	NoRel	true	superar	quedó
+Relation	T10	T0	NoRel	true	ladeó	aceleró
+Relation	T10	T11	NoRel	true	ladeó	cayó
+Relation	T10	T4	NoRel	true	ladeó	hizo
+Relation	T10	T7	NoRel	true	ladeó	arrastrando
+Relation	T10	T9	NoRel	true	ladeó	quedó
+Relation	T11	T0	NoRel	true	cayó	aceleró
+Relation	T11	T1	NoRel	true	cayó	superar
+Relation	T11	T14	NoRel	true	cayó	dobló
+Relation	T11	T16	NoRel	true	cayó	accidente
+Relation	T11	T3	NoRel	true	cayó	aceleración
+Relation	T11	T4	NoRel	true	cayó	hizo
+Relation	T11	T9	NoRel	true	cayó	quedó
+Relation	T12	T13	NoRel	true	matando	chocó
+Relation	T12	T16	NoRel	true	matando	accidente
+Relation	T12	T19	NoRel	true	matando	emergencia
+Relation	T12	T2	NoRel	true	matando	atravesado
+Relation	T12	T4	NoRel	true	matando	hizo
+Relation	T12	T5	NoRel	true	matando	inclinara
+Relation	T12	T6	NoRel	true	matando	saliera
+Relation	T12	T9	NoRel	true	matando	quedó
+Relation	T13	T0	NoRel	true	chocó	aceleró
+Relation	T13	T19	NoRel	true	chocó	emergencia
+Relation	T13	T6	NoRel	true	chocó	saliera
+Relation	T14	T0	NoRel	true	dobló	aceleró
+Relation	T14	T1	NoRel	true	dobló	superar
+Relation	T14	T15	NoRel	true	dobló	colgada
+Relation	T14	T17	NoRel	true	dobló	siguieron
+Relation	T14	T2	NoRel	true	dobló	atravesado
+Relation	T14	T3	NoRel	true	dobló	aceleración
+Relation	T14	T4	NoRel	true	dobló	hizo
+Relation	T14	T6	NoRel	true	dobló	saliera
+Relation	T15	T1	NoRel	true	colgada	superar
+Relation	T15	T11	NoRel	true	colgada	cayó
+Relation	T15	T16	NoRel	true	colgada	accidente
+Relation	T15	T18	NoRel	true	colgada	informar
+Relation	T15	T19	NoRel	true	colgada	emergencia
+Relation	T15	T5	NoRel	true	colgada	inclinara
+Relation	T15	T6	NoRel	true	colgada	saliera
+Relation	T15	T8	NoRel	true	colgada	llegado
+Relation	T15	T9	NoRel	true	colgada	quedó
+Relation	T16	T0	NoRel	true	accidente	aceleró
+Relation	T16	T12	NoRel	true	accidente	matando
+Relation	T16	T14	NoRel	true	accidente	dobló
+Relation	T16	T4	NoRel	true	accidente	hizo
+Relation	T16	T8	NoRel	true	accidente	llegado
+Relation	T17	T0	NoRel	true	siguieron	aceleró
+Relation	T17	T11	NoRel	true	siguieron	cayó
+Relation	T17	T12	NoRel	true	siguieron	matando
+Relation	T17	T14	NoRel	true	siguieron	dobló
+Relation	T17	T15	NoRel	true	siguieron	colgada
+Relation	T17	T2	NoRel	true	siguieron	atravesado
+Relation	T17	T7	NoRel	true	siguieron	arrastrando
+Relation	T17	T9	NoRel	true	siguieron	quedó
+Relation	T18	T11	NoRel	true	informar	cayó
+Relation	T18	T13	NoRel	true	informar	chocó
+Relation	T18	T15	NoRel	true	informar	colgada
+Relation	T18	T2	NoRel	true	informar	atravesado
+Relation	T18	T7	NoRel	true	informar	arrastrando
+Relation	T18	T8	NoRel	true	informar	llegado
+Relation	T19	T1	NoRel	true	emergencia	superar
+Relation	T19	T12	NoRel	true	emergencia	matando
+Relation	T19	T14	NoRel	true	emergencia	dobló
+Relation	T19	T15	NoRel	true	emergencia	colgada
+Relation	T19	T16	NoRel	true	emergencia	accidente
+Relation	T19	T18	NoRel	true	emergencia	informar
+Relation	T19	T2	NoRel	true	emergencia	atravesado
+Relation	T19	T4	NoRel	true	emergencia	hizo
+Relation	T2	T1	NoRel	true	atravesado	superar
+Relation	T2	T14	NoRel	true	atravesado	dobló
+Relation	T2	T16	NoRel	true	atravesado	accidente
+Relation	T2	T17	NoRel	true	atravesado	siguieron
+Relation	T2	T18	NoRel	true	atravesado	informar
+Relation	T2	T6	NoRel	true	atravesado	saliera
+Relation	T2	T9	NoRel	true	atravesado	quedó
+Relation	T3	T10	NoRel	true	aceleración	ladeó
+Relation	T3	T14	NoRel	true	aceleración	dobló
+Relation	T3	T15	NoRel	true	aceleración	colgada
+Relation	T3	T18	NoRel	true	aceleración	informar
+Relation	T3	T2	NoRel	true	aceleración	atravesado
+Relation	T3	T4	NoRel	true	aceleración	hizo
+Relation	T3	T5	NoRel	true	aceleración	inclinara
+Relation	T3	T8	NoRel	true	aceleración	llegado
+Relation	T4	T18	NoRel	true	hizo	informar
+Relation	T4	T3	NoRel	true	hizo	aceleración
+Relation	T4	T8	NoRel	true	hizo	llegado
+Relation	T5	T14	NoRel	true	inclinara	dobló
+Relation	T5	T16	NoRel	true	inclinara	accidente
+Relation	T5	T17	NoRel	true	inclinara	siguieron
+Relation	T5	T3	NoRel	true	inclinara	aceleración
+Relation	T6	T10	NoRel	true	saliera	ladeó
+Relation	T6	T15	NoRel	true	saliera	colgada
+Relation	T6	T17	NoRel	true	saliera	siguieron
+Relation	T6	T4	NoRel	true	saliera	hizo
+Relation	T7	T12	NoRel	true	arrastrando	matando
+Relation	T7	T15	NoRel	true	arrastrando	colgada
+Relation	T7	T16	NoRel	true	arrastrando	accidente
+Relation	T7	T17	NoRel	true	arrastrando	siguieron
+Relation	T7	T6	NoRel	true	arrastrando	saliera
+Relation	T7	T8	NoRel	true	arrastrando	llegado
+Relation	T8	T12	NoRel	true	llegado	matando
+Relation	T8	T15	NoRel	true	llegado	colgada
+Relation	T8	T19	NoRel	true	llegado	emergencia
+Relation	T8	T2	NoRel	true	llegado	atravesado
+Relation	T8	T7	NoRel	true	llegado	arrastrando
+Relation	T9	T1	NoRel	true	quedó	superar
+Relation	T9	T10	NoRel	true	quedó	ladeó
+Relation	T9	T12	NoRel	true	quedó	matando
+Relation	T9	T15	NoRel	true	quedó	colgada
+Relation	T9	T2	NoRel	true	quedó	atravesado
+Relation	T9	T6	NoRel	true	quedó	saliera

@@ -1,0 +1,28 @@
+Text	Deprem dalgaları bazalt zeminde yüksek frekansta ve düşük dalga boyunda hareket eder .	Köydeki tek katlı yapılar da bu frekansa yakın bir salınıma sahiptir .	Bu sebeple kötü inşa edilmiş olan binalar fazla hasar gördü .	Deprem , Doğu Anadolu Bölgesi ve Güneydoğu Anadolu Bölgesi'nde bulunan deprem istasyonları başta olmak üzere Türkiye çapında istasyonlar tarafından kaydedildi .	Depremin en şiddetli kaydedildiği yerler arasında Ağrı , Kars ve Varto yer almaktadır .
+Event	T0	gördü	EVENT	212
+Event	T1	Deprem	EVENT	220
+Event	T2	kaydedildi	EVENT	368
+Event	T3	Depremin	EVENT	381
+Event	T4	kaydedildiği	EVENT	402
+Event	T5	Deprem	EVENT	0
+Event	T6	inşa edilmiş	EVENT	174
+Relation	T5	T0	CauseEffect	true	Deprem	gördü
+Relation	T0	T5	EffectCause	true	gördü	Deprem
+Relation	T6	T0	CauseEffect	true	inşa edilmiş	gördü
+Relation	T0	T6	EffectCause	true	gördü	inşa edilmiş
+Relation	T0	T2	NoRel	true	gördü	kaydedildi
+Relation	T1	T2	NoRel	true	Deprem	kaydedildi
+Relation	T1	T3	NoRel	true	Deprem	Depremin
+Relation	T1	T5	NoRel	true	Deprem	Deprem
+Relation	T1	T6	NoRel	true	Deprem	inşa edilmiş
+Relation	T2	T5	NoRel	true	kaydedildi	Deprem
+Relation	T3	T0	NoRel	true	Depremin	gördü
+Relation	T3	T6	NoRel	true	Depremin	inşa edilmiş
+Relation	T4	T0	NoRel	true	kaydedildiği	gördü
+Relation	T4	T1	NoRel	true	kaydedildiği	Deprem
+Relation	T4	T2	NoRel	true	kaydedildiği	kaydedildi
+Relation	T5	T2	NoRel	true	Deprem	kaydedildi
+Relation	T5	T3	NoRel	true	Deprem	Depremin
+Relation	T6	T2	NoRel	true	inşa edilmiş	kaydedildi
+Relation	T6	T3	NoRel	true	inşa edilmiş	Depremin
+Relation	T6	T5	NoRel	true	inşa edilmiş	Deprem

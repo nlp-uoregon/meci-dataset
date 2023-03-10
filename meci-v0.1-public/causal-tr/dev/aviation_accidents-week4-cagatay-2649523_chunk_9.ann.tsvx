@@ -1,0 +1,66 @@
+Text	Ancak uçak üreticisi Tupolev tarafından yapılan bir değerlendirmeden sonra Alrosa , uçağı tamir etmeye ve hizmete döndürmeye karar verdi .	Uçağın üç motorundan ikisi değiştirildikten sonra , Tu - 154 tüm gereksiz ağırlıklardan arındırıldı ve minimum miktarda yakıtla dolduruldu .	Sivil havacılık Rusya Devlet Bilimsel Araştırma Enstitüsü tarafından uçağı havalimanından götürmek için test pilotları seçildi .	küçükresim | RA - 85684 , Mayıs 2018 Kazadan altı ay sonra 24 Mart 2011'de uçak , onarılması için Samara Havalimanı'na başarıyla götürüldü .	Tu - 154'ün kalkması için normalde pistin yaklaşık 2.500 m uzun olması gerekmesine rağmen , RA - 85684 ; Izhma'nın 1.300 m uzunluğundaki pistinden sadece 800 m sonra kalkmayı başardı .
+Event	T0	tamir	EVENT	90
+Event	T1	verdi	EVENT	131
+Event	T2	değiştirildikten	EVENT	166
+Event	T3	arındırıldı	EVENT	227
+Event	T4	dolduruldu	EVENT	267
+Event	T6	seçildi	EVENT	399
+Event	T7	götürüldü	EVENT	538
+Event	T8	kalkması	EVENT	562
+Event	T9	başardı	EVENT	725
+Event	T10	değerlendirmeden	EVENT	52
+Event	T11	döndürmeye	EVENT	114
+Event	T5	onarılması	EVENT	491
+Relation	T10	T0	CauseEffect	true	değerlendirmeden	tamir
+Relation	T0	T10	EffectCause	true	tamir	değerlendirmeden
+Relation	T10	T11	CauseEffect	true	değerlendirmeden	döndürmeye
+Relation	T11	T10	EffectCause	true	döndürmeye	değerlendirmeden
+Relation	T5	T7	CauseEffect	true	onarılması	götürüldü
+Relation	T7	T5	EffectCause	true	götürüldü	onarılması
+Relation	T0	T3	NoRel	true	tamir	arındırıldı
+Relation	T0	T4	NoRel	true	tamir	dolduruldu
+Relation	T0	T6	NoRel	true	tamir	seçildi
+Relation	T0	T8	NoRel	true	tamir	kalkması
+Relation	T0	T9	NoRel	true	tamir	başardı
+Relation	T1	T0	NoRel	true	verdi	tamir
+Relation	T1	T10	NoRel	true	verdi	değerlendirmeden
+Relation	T1	T11	NoRel	true	verdi	döndürmeye
+Relation	T1	T2	NoRel	true	verdi	değiştirildikten
+Relation	T1	T4	NoRel	true	verdi	dolduruldu
+Relation	T1	T6	NoRel	true	verdi	seçildi
+Relation	T1	T9	NoRel	true	verdi	başardı
+Relation	T10	T4	NoRel	true	değerlendirmeden	dolduruldu
+Relation	T10	T5	NoRel	true	değerlendirmeden	onarılması
+Relation	T10	T6	NoRel	true	değerlendirmeden	seçildi
+Relation	T10	T9	NoRel	true	değerlendirmeden	başardı
+Relation	T11	T3	NoRel	true	döndürmeye	arındırıldı
+Relation	T11	T6	NoRel	true	döndürmeye	seçildi
+Relation	T11	T8	NoRel	true	döndürmeye	kalkması
+Relation	T11	T9	NoRel	true	döndürmeye	başardı
+Relation	T2	T10	NoRel	true	değiştirildikten	değerlendirmeden
+Relation	T3	T10	NoRel	true	arındırıldı	değerlendirmeden
+Relation	T3	T5	NoRel	true	arındırıldı	onarılması
+Relation	T3	T8	NoRel	true	arındırıldı	kalkması
+Relation	T3	T9	NoRel	true	arındırıldı	başardı
+Relation	T4	T1	NoRel	true	dolduruldu	verdi
+Relation	T4	T10	NoRel	true	dolduruldu	değerlendirmeden
+Relation	T4	T11	NoRel	true	dolduruldu	döndürmeye
+Relation	T4	T2	NoRel	true	dolduruldu	değiştirildikten
+Relation	T4	T3	NoRel	true	dolduruldu	arındırıldı
+Relation	T4	T9	NoRel	true	dolduruldu	başardı
+Relation	T5	T11	NoRel	true	onarılması	döndürmeye
+Relation	T5	T2	NoRel	true	onarılması	değiştirildikten
+Relation	T5	T4	NoRel	true	onarılması	dolduruldu
+Relation	T5	T6	NoRel	true	onarılması	seçildi
+Relation	T6	T0	NoRel	true	seçildi	tamir
+Relation	T6	T11	NoRel	true	seçildi	döndürmeye
+Relation	T6	T2	NoRel	true	seçildi	değiştirildikten
+Relation	T6	T3	NoRel	true	seçildi	arındırıldı
+Relation	T6	T8	NoRel	true	seçildi	kalkması
+Relation	T8	T10	NoRel	true	kalkması	değerlendirmeden
+Relation	T8	T3	NoRel	true	kalkması	arındırıldı
+Relation	T8	T6	NoRel	true	kalkması	seçildi
+Relation	T9	T11	NoRel	true	başardı	döndürmeye
+Relation	T9	T3	NoRel	true	başardı	arındırıldı
+Relation	T9	T5	NoRel	true	başardı	onarılması
+Relation	T9	T6	NoRel	true	başardı	seçildi

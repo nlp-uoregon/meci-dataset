@@ -1,0 +1,24 @@
+Text	" Çin kadar büyük bir ülkede ciddi bir salgın , hem Çin hem de dünya ekonomilerini önemli ölçüde etkileyebilir .	Hükümetin HIV / AIDS'e karşı gösterdiği temel tepki önleyici müdahaledir .	Şubat 2009'da yayımlanan resmi bir rapor , 2008'de HIV / AIDS'in bulaşıcı hastalıklar arasında ilk kez Çin'deki önde gelen ölüm nedenini oluşturduğunu belirtti .	2008'in ilk dokuz ayı boyunca neredeyse 7.000 kişi bozukluktan dolayı öldü .	" The real extent of the tragedy remains unknown , and HIV estimates range from below 150,000_( MOH ) to above one million ( Dr. Gao Yaojie ) " United Nations report ( MOH = Ministry of Health of China )
+Event	T0	salgın	EVENT	39
+Event	T1	etkileyebilir	EVENT	97
+Event	T3	müdahaledir	EVENT	174
+Event	T5	belirtti	EVENT	339
+Event	T6	öldü	EVENT	420
+Event	T2	ölüm	EVENT	311
+Event	T4	bozukluktan	EVENT	401
+Relation	T0	T1	CauseEffect	true	salgın	etkileyebilir
+Relation	T1	T0	EffectCause	true	etkileyebilir	salgın
+Relation	T4	T6	CauseEffect	true	bozukluktan	öldü
+Relation	T6	T4	EffectCause	true	öldü	bozukluktan
+Relation	T0	T3	NoRel	true	salgın	müdahaledir
+Relation	T0	T5	NoRel	true	salgın	belirtti
+Relation	T1	T4	NoRel	true	etkileyebilir	bozukluktan
+Relation	T2	T3	NoRel	true	ölüm	müdahaledir
+Relation	T2	T6	NoRel	true	ölüm	öldü
+Relation	T3	T0	NoRel	true	müdahaledir	salgın
+Relation	T4	T1	NoRel	true	bozukluktan	etkileyebilir
+Relation	T4	T2	NoRel	true	bozukluktan	ölüm
+Relation	T4	T5	NoRel	true	bozukluktan	belirtti
+Relation	T5	T0	NoRel	true	belirtti	salgın
+Relation	T5	T6	NoRel	true	belirtti	öldü
+Relation	T6	T5	NoRel	true	öldü	belirtti

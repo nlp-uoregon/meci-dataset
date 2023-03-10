@@ -1,0 +1,14 @@
+Text	thumb|	Den 20. januar 2020 bekræftede de kinesiske myndigheder og WHO , at virussen kan smitte fra menneske til menneske .	Den 22. januar havde virussen spredt sig til Bangkok , Tokyo , Sydkorea , Beijing , Shanghai , Guangdong-provinsen , Taiwan og staten Washington i USA ; dødstallet var på 9 døde og over 400 smittede .	Den 15. februar havde virussen spredt sig til 28 lande Thailand , Japan , Australien , Tyskland , USA , Frankrig , Canada , Italien , Spanien , Egypten , Belgien , Finland , Sydkorea , Singapore , Taiwan , Vietnam , Storbritannien , Macau , Indien , Filippinerne og Rusland .	Kina havde samme dag 66.492 registrerede smittede , og 1500 mennesker havde mistet livet på globalt plan .
+Event	T0	bekræftede	EVENT	27
+Event	T1	smitte	EVENT	88
+Event	T2	dødstallet	EVENT	276
+Event	T3	døde	EVENT	296
+Event	T4	smittede	EVENT	313
+Relation	T1	T3	CauseEffect	true	smitte	døde
+Relation	T3	T1	EffectCause	true	døde	smitte
+Relation	T1	T4	CauseEffect	true	smitte	smittede
+Relation	T4	T1	EffectCause	true	smittede	smitte
+Relation	T0	T2	NoRel	true	bekræftede	dødstallet
+Relation	T2	T1	NoRel	true	dødstallet	smitte
+Relation	T3	T2	NoRel	true	døde	dødstallet
+Relation	T4	T2	NoRel	true	smittede	dødstallet

@@ -1,0 +1,181 @@
+Text	El mecánico desactivó la calefacción del sensor extrayendo el disyuntor Z-29 porque la lista de equipamiento mínimo MEL ( _ Minimum Equipment List _ ) permitía que estuviera inoperativa , si no se preveía engelamiento .	El 22 de agosto , los investigadores entrevistaron al mecánico ; y Spanair defendió que la desactivación era un procedimiento aceptado y no estaba relacionada con el accidente .	El informe final de la CIAIAC considera que el personal de mantenimiento hizo un análisis incompleto de la avería , que no permitió localizar el fallo , y que fue incorrecto desactivar la sonda RAT para poder aplicar la MEL y despachar el avión .	La lista solamente contemplaba el caso de que la calefacción no funcionase en vuelo , pero no indicaba nada en el caso de que se activase en tierra .	No obstante , el informe también señala que la apertura del disyuntor Z-29 no afecta al funcionamiento del TOWS .
+Event	T0	desactivó	EVENT	12
+Event	T1	calefacción	EVENT	25
+Event	T2	extrayendo	EVENT	48
+Event	T3	engelamiento	EVENT	205
+Event	T4	entrevistaron	EVENT	257
+Event	T5	defendió	EVENT	295
+Event	T6	desactivación	EVENT	311
+Event	T7	aceptado	EVENT	346
+Event	T8	accidente	EVENT	386
+Event	T9	informe	EVENT	401
+Event	T10	considera	EVENT	428
+Event	T11	hizo	EVENT	471
+Event	T12	avería	EVENT	505
+Event	T13	fallo	EVENT	543
+Event	T14	desactivar	EVENT	572
+Event	T15	aplicar	EVENT	607
+Event	T17	despachar	EVENT	624
+Event	T18	contemplaba	EVENT	664
+Event	T21	señala	EVENT	828
+Event	T22	apertura	EVENT	842
+Event	T23	afecta	EVENT	873
+Relation	T13	T8	CauseEffect	true	fallo	accidente
+Relation	T8	T13	EffectCause	true	accidente	fallo
+Relation	T0	T1	NoRel	true	desactivó	calefacción
+Relation	T0	T12	NoRel	true	desactivó	avería
+Relation	T0	T13	NoRel	true	desactivó	fallo
+Relation	T0	T17	NoRel	true	desactivó	despachar
+Relation	T0	T22	NoRel	true	desactivó	apertura
+Relation	T0	T3	NoRel	true	desactivó	engelamiento
+Relation	T0	T5	NoRel	true	desactivó	defendió
+Relation	T1	T11	NoRel	true	calefacción	hizo
+Relation	T1	T3	NoRel	true	calefacción	engelamiento
+Relation	T1	T5	NoRel	true	calefacción	defendió
+Relation	T1	T7	NoRel	true	calefacción	aceptado
+Relation	T1	T8	NoRel	true	calefacción	accidente
+Relation	T10	T1	NoRel	true	considera	calefacción
+Relation	T10	T11	NoRel	true	considera	hizo
+Relation	T10	T2	NoRel	true	considera	extrayendo
+Relation	T10	T23	NoRel	true	considera	afecta
+Relation	T10	T4	NoRel	true	considera	entrevistaron
+Relation	T10	T6	NoRel	true	considera	desactivación
+Relation	T10	T8	NoRel	true	considera	accidente
+Relation	T10	T9	NoRel	true	considera	informe
+Relation	T11	T12	NoRel	true	hizo	avería
+Relation	T11	T17	NoRel	true	hizo	despachar
+Relation	T11	T2	NoRel	true	hizo	extrayendo
+Relation	T11	T23	NoRel	true	hizo	afecta
+Relation	T11	T4	NoRel	true	hizo	entrevistaron
+Relation	T11	T7	NoRel	true	hizo	aceptado
+Relation	T11	T8	NoRel	true	hizo	accidente
+Relation	T12	T1	NoRel	true	avería	calefacción
+Relation	T12	T11	NoRel	true	avería	hizo
+Relation	T12	T18	NoRel	true	avería	contemplaba
+Relation	T12	T2	NoRel	true	avería	extrayendo
+Relation	T12	T22	NoRel	true	avería	apertura
+Relation	T12	T23	NoRel	true	avería	afecta
+Relation	T12	T3	NoRel	true	avería	engelamiento
+Relation	T12	T7	NoRel	true	avería	aceptado
+Relation	T13	T0	NoRel	true	fallo	desactivó
+Relation	T13	T15	NoRel	true	fallo	aplicar
+Relation	T13	T17	NoRel	true	fallo	despachar
+Relation	T13	T5	NoRel	true	fallo	defendió
+Relation	T13	T9	NoRel	true	fallo	informe
+Relation	T14	T10	NoRel	true	desactivar	considera
+Relation	T14	T11	NoRel	true	desactivar	hizo
+Relation	T14	T12	NoRel	true	desactivar	avería
+Relation	T14	T15	NoRel	true	desactivar	aplicar
+Relation	T14	T18	NoRel	true	desactivar	contemplaba
+Relation	T14	T21	NoRel	true	desactivar	señala
+Relation	T14	T3	NoRel	true	desactivar	engelamiento
+Relation	T14	T4	NoRel	true	desactivar	entrevistaron
+Relation	T14	T7	NoRel	true	desactivar	aceptado
+Relation	T15	T11	NoRel	true	aplicar	hizo
+Relation	T15	T12	NoRel	true	aplicar	avería
+Relation	T15	T17	NoRel	true	aplicar	despachar
+Relation	T15	T18	NoRel	true	aplicar	contemplaba
+Relation	T15	T2	NoRel	true	aplicar	extrayendo
+Relation	T15	T22	NoRel	true	aplicar	apertura
+Relation	T15	T4	NoRel	true	aplicar	entrevistaron
+Relation	T15	T6	NoRel	true	aplicar	desactivación
+Relation	T17	T1	NoRel	true	despachar	calefacción
+Relation	T17	T11	NoRel	true	despachar	hizo
+Relation	T17	T12	NoRel	true	despachar	avería
+Relation	T17	T21	NoRel	true	despachar	señala
+Relation	T17	T22	NoRel	true	despachar	apertura
+Relation	T17	T23	NoRel	true	despachar	afecta
+Relation	T17	T3	NoRel	true	despachar	engelamiento
+Relation	T17	T6	NoRel	true	despachar	desactivación
+Relation	T17	T7	NoRel	true	despachar	aceptado
+Relation	T17	T8	NoRel	true	despachar	accidente
+Relation	T18	T11	NoRel	true	contemplaba	hizo
+Relation	T18	T12	NoRel	true	contemplaba	avería
+Relation	T18	T14	NoRel	true	contemplaba	desactivar
+Relation	T18	T2	NoRel	true	contemplaba	extrayendo
+Relation	T18	T23	NoRel	true	contemplaba	afecta
+Relation	T18	T6	NoRel	true	contemplaba	desactivación
+Relation	T2	T10	NoRel	true	extrayendo	considera
+Relation	T2	T15	NoRel	true	extrayendo	aplicar
+Relation	T2	T21	NoRel	true	extrayendo	señala
+Relation	T2	T4	NoRel	true	extrayendo	entrevistaron
+Relation	T2	T5	NoRel	true	extrayendo	defendió
+Relation	T2	T6	NoRel	true	extrayendo	desactivación
+Relation	T2	T8	NoRel	true	extrayendo	accidente
+Relation	T21	T1	NoRel	true	señala	calefacción
+Relation	T21	T10	NoRel	true	señala	considera
+Relation	T21	T12	NoRel	true	señala	avería
+Relation	T21	T17	NoRel	true	señala	despachar
+Relation	T21	T2	NoRel	true	señala	extrayendo
+Relation	T21	T22	NoRel	true	señala	apertura
+Relation	T21	T3	NoRel	true	señala	engelamiento
+Relation	T21	T5	NoRel	true	señala	defendió
+Relation	T21	T7	NoRel	true	señala	aceptado
+Relation	T22	T11	NoRel	true	apertura	hizo
+Relation	T22	T14	NoRel	true	apertura	desactivar
+Relation	T22	T15	NoRel	true	apertura	aplicar
+Relation	T22	T17	NoRel	true	apertura	despachar
+Relation	T22	T18	NoRel	true	apertura	contemplaba
+Relation	T22	T2	NoRel	true	apertura	extrayendo
+Relation	T22	T5	NoRel	true	apertura	defendió
+Relation	T22	T9	NoRel	true	apertura	informe
+Relation	T23	T12	NoRel	true	afecta	avería
+Relation	T23	T15	NoRel	true	afecta	aplicar
+Relation	T23	T21	NoRel	true	afecta	señala
+Relation	T23	T5	NoRel	true	afecta	defendió
+Relation	T23	T7	NoRel	true	afecta	aceptado
+Relation	T3	T11	NoRel	true	engelamiento	hizo
+Relation	T3	T12	NoRel	true	engelamiento	avería
+Relation	T3	T13	NoRel	true	engelamiento	fallo
+Relation	T3	T14	NoRel	true	engelamiento	desactivar
+Relation	T3	T17	NoRel	true	engelamiento	despachar
+Relation	T3	T23	NoRel	true	engelamiento	afecta
+Relation	T3	T4	NoRel	true	engelamiento	entrevistaron
+Relation	T3	T8	NoRel	true	engelamiento	accidente
+Relation	T4	T0	NoRel	true	entrevistaron	desactivó
+Relation	T4	T1	NoRel	true	entrevistaron	calefacción
+Relation	T4	T11	NoRel	true	entrevistaron	hizo
+Relation	T4	T15	NoRel	true	entrevistaron	aplicar
+Relation	T4	T18	NoRel	true	entrevistaron	contemplaba
+Relation	T4	T2	NoRel	true	entrevistaron	extrayendo
+Relation	T4	T3	NoRel	true	entrevistaron	engelamiento
+Relation	T4	T8	NoRel	true	entrevistaron	accidente
+Relation	T4	T9	NoRel	true	entrevistaron	informe
+Relation	T5	T0	NoRel	true	defendió	desactivó
+Relation	T5	T1	NoRel	true	defendió	calefacción
+Relation	T5	T13	NoRel	true	defendió	fallo
+Relation	T5	T18	NoRel	true	defendió	contemplaba
+Relation	T5	T2	NoRel	true	defendió	extrayendo
+Relation	T5	T22	NoRel	true	defendió	apertura
+Relation	T5	T6	NoRel	true	defendió	desactivación
+Relation	T5	T7	NoRel	true	defendió	aceptado
+Relation	T5	T9	NoRel	true	defendió	informe
+Relation	T6	T0	NoRel	true	desactivación	desactivó
+Relation	T6	T1	NoRel	true	desactivación	calefacción
+Relation	T6	T10	NoRel	true	desactivación	considera
+Relation	T6	T11	NoRel	true	desactivación	hizo
+Relation	T6	T2	NoRel	true	desactivación	extrayendo
+Relation	T6	T3	NoRel	true	desactivación	engelamiento
+Relation	T6	T5	NoRel	true	desactivación	defendió
+Relation	T6	T9	NoRel	true	desactivación	informe
+Relation	T7	T10	NoRel	true	aceptado	considera
+Relation	T7	T13	NoRel	true	aceptado	fallo
+Relation	T7	T14	NoRel	true	aceptado	desactivar
+Relation	T7	T17	NoRel	true	aceptado	despachar
+Relation	T7	T18	NoRel	true	aceptado	contemplaba
+Relation	T7	T21	NoRel	true	aceptado	señala
+Relation	T7	T6	NoRel	true	aceptado	desactivación
+Relation	T8	T11	NoRel	true	accidente	hizo
+Relation	T8	T14	NoRel	true	accidente	desactivar
+Relation	T8	T15	NoRel	true	accidente	aplicar
+Relation	T8	T17	NoRel	true	accidente	despachar
+Relation	T8	T18	NoRel	true	accidente	contemplaba
+Relation	T8	T5	NoRel	true	accidente	defendió
+Relation	T9	T0	NoRel	true	informe	desactivó
+Relation	T9	T13	NoRel	true	informe	fallo
+Relation	T9	T14	NoRel	true	informe	desactivar
+Relation	T9	T15	NoRel	true	informe	aplicar
+Relation	T9	T17	NoRel	true	informe	despachar
+Relation	T9	T21	NoRel	true	informe	señala
+Relation	T9	T5	NoRel	true	informe	defendió
+Relation	T9	T6	NoRel	true	informe	desactivación

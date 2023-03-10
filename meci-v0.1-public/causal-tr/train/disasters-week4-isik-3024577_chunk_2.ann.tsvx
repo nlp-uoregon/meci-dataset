@@ -1,0 +1,148 @@
+Text	Alman yetkililerinin açıklamalarına göre Almanya'da 150 kişi hayatını kaybetmişken , Belçika'da 27 kişi yaşamını yitirmiştir .	Özellikle taşkın durumuna geçen ırmaklar evleri ve arabaları yıkıma uğratmıştır , bu yüzden 1300 kişinin de kayıp olduğu Alman basınında yer alırken iletişim güçlükleri nedeniyle bu durumun yaşanmış olabileceği de aktarılmaktadır .	Bunun yanı sıra afet bölgelerinde alt yapı da büyük zarar görmüştür , iletişim ve internet hatlarının yok olması nedeniyle iletişim zora girmiştir .	Almanya cumhurbaşkanı Walter Steinmeier kaybın büyük olduğunu ve insanların maddi ve manevi olarak felaketten etkilendiklerini söylemiştir , ayrıca felaketin bilançosunun hafta içinde netleşeceğini açıklamıştır .	Almanya şansölyesi Angela Merkel pazar günü afet merkezi olan Rheinland eyaleti Schuld kasabasında yapılan kurtarma çalışmalarını yerinde ziyaret etmiştir .
+Event	T0	açıklamalarına	EVENT	21
+Event	T1	kaybetmişken	EVENT	70
+Event	T2	yitirmiştir	EVENT	113
+Event	T4	uğratmıştır	EVENT	195
+Event	T5	kayıp	EVENT	235
+Event	T6	aktarılmaktadır	EVENT	341
+Event	T7	girmiştir	EVENT	496
+Event	T9	söylemiştir	EVENT	635
+Event	T10	felaketin	EVENT	656
+Event	T11	açıklamıştır	EVENT	706
+Event	T12	etmiştir	EVENT	867
+Event	T3	taşkın	EVENT	137
+Event	T13	alırken	EVENT	268
+Event	T14	görmüştür	EVENT	417
+Event	T15	afet	EVENT	375
+Event	T16	olması	EVENT	465
+Event	T8	afet	EVENT	765
+Event	T17	çalışmalarını	EVENT	837
+Relation	T3	T4	CauseEffect	true	taşkın	uğratmıştır
+Relation	T4	T3	EffectCause	true	uğratmıştır	taşkın
+Relation	T3	T13	CauseEffect	true	taşkın	alırken
+Relation	T13	T3	EffectCause	true	alırken	taşkın
+Relation	T4	T5	CauseEffect	true	uğratmıştır	kayıp
+Relation	T5	T4	EffectCause	true	kayıp	uğratmıştır
+Relation	T5	T13	CauseEffect	true	kayıp	alırken
+Relation	T13	T5	EffectCause	true	alırken	kayıp
+Relation	T15	T14	CauseEffect	true	afet	görmüştür
+Relation	T14	T15	EffectCause	true	görmüştür	afet
+Relation	T15	T16	CauseEffect	true	afet	olması
+Relation	T16	T15	EffectCause	true	olması	afet
+Relation	T16	T7	CauseEffect	true	olması	girmiştir
+Relation	T7	T16	EffectCause	true	girmiştir	olması
+Relation	T8	T17	CauseEffect	true	afet	çalışmalarını
+Relation	T17	T8	EffectCause	true	çalışmalarını	afet
+Relation	T17	T12	CauseEffect	true	çalışmalarını	etmiştir
+Relation	T12	T17	EffectCause	true	etmiştir	çalışmalarını
+Relation	T15	T9	CauseEffect	true	afet	söylemiştir
+Relation	T9	T15	EffectCause	true	söylemiştir	afet
+Relation	T15	T11	CauseEffect	true	afet	açıklamıştır
+Relation	T11	T15	EffectCause	true	açıklamıştır	afet
+Relation	T15	T0	CauseEffect	true	afet	açıklamalarına
+Relation	T0	T15	EffectCause	true	açıklamalarına	afet
+Relation	T15	T1	CauseEffect	true	afet	kaybetmişken
+Relation	T1	T15	EffectCause	true	kaybetmişken	afet
+Relation	T15	T2	CauseEffect	true	afet	yitirmiştir
+Relation	T2	T15	EffectCause	true	yitirmiştir	afet
+Relation	T0	T10	NoRel	true	açıklamalarına	felaketin
+Relation	T0	T12	NoRel	true	açıklamalarına	etmiştir
+Relation	T0	T13	NoRel	true	açıklamalarına	alırken
+Relation	T0	T14	NoRel	true	açıklamalarına	görmüştür
+Relation	T0	T2	NoRel	true	açıklamalarına	yitirmiştir
+Relation	T0	T4	NoRel	true	açıklamalarına	uğratmıştır
+Relation	T0	T6	NoRel	true	açıklamalarına	aktarılmaktadır
+Relation	T0	T7	NoRel	true	açıklamalarına	girmiştir
+Relation	T1	T11	NoRel	true	kaybetmişken	açıklamıştır
+Relation	T1	T12	NoRel	true	kaybetmişken	etmiştir
+Relation	T1	T17	NoRel	true	kaybetmişken	çalışmalarını
+Relation	T1	T7	NoRel	true	kaybetmişken	girmiştir
+Relation	T1	T9	NoRel	true	kaybetmişken	söylemiştir
+Relation	T10	T0	NoRel	true	felaketin	açıklamalarına
+Relation	T10	T13	NoRel	true	felaketin	alırken
+Relation	T10	T15	NoRel	true	felaketin	afet
+Relation	T10	T2	NoRel	true	felaketin	yitirmiştir
+Relation	T10	T3	NoRel	true	felaketin	taşkın
+Relation	T10	T7	NoRel	true	felaketin	girmiştir
+Relation	T11	T1	NoRel	true	açıklamıştır	kaybetmişken
+Relation	T11	T10	NoRel	true	açıklamıştır	felaketin
+Relation	T11	T12	NoRel	true	açıklamıştır	etmiştir
+Relation	T11	T13	NoRel	true	açıklamıştır	alırken
+Relation	T11	T14	NoRel	true	açıklamıştır	görmüştür
+Relation	T11	T17	NoRel	true	açıklamıştır	çalışmalarını
+Relation	T11	T7	NoRel	true	açıklamıştır	girmiştir
+Relation	T12	T0	NoRel	true	etmiştir	açıklamalarına
+Relation	T12	T13	NoRel	true	etmiştir	alırken
+Relation	T12	T2	NoRel	true	etmiştir	yitirmiştir
+Relation	T12	T5	NoRel	true	etmiştir	kayıp
+Relation	T12	T6	NoRel	true	etmiştir	aktarılmaktadır
+Relation	T12	T7	NoRel	true	etmiştir	girmiştir
+Relation	T13	T12	NoRel	true	alırken	etmiştir
+Relation	T13	T4	NoRel	true	alırken	uğratmıştır
+Relation	T13	T8	NoRel	true	alırken	afet
+Relation	T14	T16	NoRel	true	görmüştür	olması
+Relation	T14	T17	NoRel	true	görmüştür	çalışmalarını
+Relation	T14	T3	NoRel	true	görmüştür	taşkın
+Relation	T15	T10	NoRel	true	afet	felaketin
+Relation	T15	T3	NoRel	true	afet	taşkın
+Relation	T15	T4	NoRel	true	afet	uğratmıştır
+Relation	T15	T5	NoRel	true	afet	kayıp
+Relation	T15	T7	NoRel	true	afet	girmiştir
+Relation	T15	T8	NoRel	true	afet	afet
+Relation	T16	T1	NoRel	true	olması	kaybetmişken
+Relation	T16	T17	NoRel	true	olması	çalışmalarını
+Relation	T16	T3	NoRel	true	olması	taşkın
+Relation	T16	T8	NoRel	true	olması	afet
+Relation	T17	T0	NoRel	true	çalışmalarını	açıklamalarına
+Relation	T17	T11	NoRel	true	çalışmalarını	açıklamıştır
+Relation	T17	T15	NoRel	true	çalışmalarını	afet
+Relation	T17	T2	NoRel	true	çalışmalarını	yitirmiştir
+Relation	T17	T4	NoRel	true	çalışmalarını	uğratmıştır
+Relation	T17	T7	NoRel	true	çalışmalarını	girmiştir
+Relation	T2	T0	NoRel	true	yitirmiştir	açıklamalarına
+Relation	T2	T10	NoRel	true	yitirmiştir	felaketin
+Relation	T2	T11	NoRel	true	yitirmiştir	açıklamıştır
+Relation	T2	T14	NoRel	true	yitirmiştir	görmüştür
+Relation	T2	T4	NoRel	true	yitirmiştir	uğratmıştır
+Relation	T2	T9	NoRel	true	yitirmiştir	söylemiştir
+Relation	T3	T1	NoRel	true	taşkın	kaybetmişken
+Relation	T3	T10	NoRel	true	taşkın	felaketin
+Relation	T3	T12	NoRel	true	taşkın	etmiştir
+Relation	T3	T6	NoRel	true	taşkın	aktarılmaktadır
+Relation	T3	T9	NoRel	true	taşkın	söylemiştir
+Relation	T4	T0	NoRel	true	uğratmıştır	açıklamalarına
+Relation	T4	T12	NoRel	true	uğratmıştır	etmiştir
+Relation	T4	T13	NoRel	true	uğratmıştır	alırken
+Relation	T4	T14	NoRel	true	uğratmıştır	görmüştür
+Relation	T4	T6	NoRel	true	uğratmıştır	aktarılmaktadır
+Relation	T4	T8	NoRel	true	uğratmıştır	afet
+Relation	T4	T9	NoRel	true	uğratmıştır	söylemiştir
+Relation	T5	T0	NoRel	true	kayıp	açıklamalarına
+Relation	T5	T10	NoRel	true	kayıp	felaketin
+Relation	T5	T11	NoRel	true	kayıp	açıklamıştır
+Relation	T5	T17	NoRel	true	kayıp	çalışmalarını
+Relation	T5	T2	NoRel	true	kayıp	yitirmiştir
+Relation	T5	T3	NoRel	true	kayıp	taşkın
+Relation	T5	T7	NoRel	true	kayıp	girmiştir
+Relation	T6	T13	NoRel	true	aktarılmaktadır	alırken
+Relation	T6	T16	NoRel	true	aktarılmaktadır	olması
+Relation	T6	T17	NoRel	true	aktarılmaktadır	çalışmalarını
+Relation	T6	T4	NoRel	true	aktarılmaktadır	uğratmıştır
+Relation	T6	T5	NoRel	true	aktarılmaktadır	kayıp
+Relation	T7	T0	NoRel	true	girmiştir	açıklamalarına
+Relation	T7	T12	NoRel	true	girmiştir	etmiştir
+Relation	T7	T15	NoRel	true	girmiştir	afet
+Relation	T7	T6	NoRel	true	girmiştir	aktarılmaktadır
+Relation	T8	T16	NoRel	true	afet	olması
+Relation	T8	T4	NoRel	true	afet	uğratmıştır
+Relation	T8	T6	NoRel	true	afet	aktarılmaktadır
+Relation	T8	T9	NoRel	true	afet	söylemiştir
+Relation	T9	T0	NoRel	true	söylemiştir	açıklamalarına
+Relation	T9	T1	NoRel	true	söylemiştir	kaybetmişken
+Relation	T9	T10	NoRel	true	söylemiştir	felaketin
+Relation	T9	T13	NoRel	true	söylemiştir	alırken
+Relation	T9	T14	NoRel	true	söylemiştir	görmüştür
+Relation	T9	T16	NoRel	true	söylemiştir	olması
+Relation	T9	T5	NoRel	true	söylemiştir	kayıp
+Relation	T9	T6	NoRel	true	söylemiştir	aktarılmaktadır
+Relation	T9	T7	NoRel	true	söylemiştir	girmiştir

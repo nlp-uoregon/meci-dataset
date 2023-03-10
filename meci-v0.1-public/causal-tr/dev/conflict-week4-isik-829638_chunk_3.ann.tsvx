@@ -1,0 +1,58 @@
+Text	İki taraf da Fırat Nehri’nin karşılıklı yakalarında 6 hafta hareketsiz beklediler .	6. haftanın sonunda Pers - Bizans kuvvetleri nehri geçerek hücuma kalkmak üzere harekâta başladı .	Halid , düşmanının nehri geçmesi için bir süre bekledi .	Pers - Bizans birleşik kuvvetleri Fırat'ı geçtikleri anda Halid , Mazar Savaşı'nda uyguladığı taktiğin bir benzerini kullanarak , askerlerine nehri henüz arkalarına almış Pers - Bizans kuvvetlerine karşı harekete geçmeleri emrini verdi .	Müslümanlar eş zamanlı olarak ani bir hamle ile nehir üzerindeki köprüyü işgal etmeyi başararak Pers - Bizans kuvvetlerini kıskaca aldı .
+Event	T0	beklediler	EVENT	71
+Event	T2	başladı	EVENT	173
+Event	T4	bekledi	EVENT	230
+Event	T5	geçtikleri	EVENT	282
+Event	T6	kullanarak	EVENT	357
+Event	T7	verdi	EVENT	470
+Event	T8	hamle	EVENT	516
+Event	T10	aldı	EVENT	609
+Event	T11	geçerek	EVENT	135
+Event	T1	Mazar Savaşı'nda	EVENT	306
+Event	T3	başararak	EVENT	564
+Relation	T11	T2	CauseEffect	true	geçerek	başladı
+Relation	T2	T11	EffectCause	true	başladı	geçerek
+Relation	T2	T4	CauseEffect	true	başladı	bekledi
+Relation	T4	T2	EffectCause	true	bekledi	başladı
+Relation	T4	T7	CauseEffect	true	bekledi	verdi
+Relation	T7	T4	EffectCause	true	verdi	bekledi
+Relation	T7	T8	CauseEffect	true	verdi	hamle
+Relation	T8	T7	EffectCause	true	hamle	verdi
+Relation	T8	T3	CauseEffect	true	hamle	başararak
+Relation	T3	T8	EffectCause	true	başararak	hamle
+Relation	T3	T10	CauseEffect	true	başararak	aldı
+Relation	T10	T3	EffectCause	true	aldı	başararak
+Relation	T7	T10	CauseEffect	true	verdi	aldı
+Relation	T10	T7	EffectCause	true	aldı	verdi
+Relation	T0	T2	NoRel	true	beklediler	başladı
+Relation	T0	T6	NoRel	true	beklediler	kullanarak
+Relation	T1	T4	NoRel	true	Mazar Savaşı'nda	bekledi
+Relation	T10	T0	NoRel	true	aldı	beklediler
+Relation	T10	T11	NoRel	true	aldı	geçerek
+Relation	T10	T4	NoRel	true	aldı	bekledi
+Relation	T10	T5	NoRel	true	aldı	geçtikleri
+Relation	T10	T8	NoRel	true	aldı	hamle
+Relation	T11	T4	NoRel	true	geçerek	bekledi
+Relation	T11	T6	NoRel	true	geçerek	kullanarak
+Relation	T2	T0	NoRel	true	başladı	beklediler
+Relation	T2	T3	NoRel	true	başladı	başararak
+Relation	T2	T8	NoRel	true	başladı	hamle
+Relation	T3	T6	NoRel	true	başararak	kullanarak
+Relation	T3	T7	NoRel	true	başararak	verdi
+Relation	T4	T0	NoRel	true	bekledi	beklediler
+Relation	T4	T10	NoRel	true	bekledi	aldı
+Relation	T4	T5	NoRel	true	bekledi	geçtikleri
+Relation	T4	T6	NoRel	true	bekledi	kullanarak
+Relation	T4	T8	NoRel	true	bekledi	hamle
+Relation	T5	T8	NoRel	true	geçtikleri	hamle
+Relation	T6	T11	NoRel	true	kullanarak	geçerek
+Relation	T6	T4	NoRel	true	kullanarak	bekledi
+Relation	T6	T8	NoRel	true	kullanarak	hamle
+Relation	T7	T1	NoRel	true	verdi	Mazar Savaşı'nda
+Relation	T7	T11	NoRel	true	verdi	geçerek
+Relation	T7	T5	NoRel	true	verdi	geçtikleri
+Relation	T7	T6	NoRel	true	verdi	kullanarak
+Relation	T8	T0	NoRel	true	hamle	beklediler
+Relation	T8	T11	NoRel	true	hamle	geçerek
+Relation	T8	T2	NoRel	true	hamle	başladı
+Relation	T8	T6	NoRel	true	hamle	kullanarak

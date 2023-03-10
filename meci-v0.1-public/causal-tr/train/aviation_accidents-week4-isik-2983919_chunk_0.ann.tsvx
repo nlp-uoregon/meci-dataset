@@ -1,0 +1,61 @@
+Text	9 Kasım 2020'de Rus Mil Mi - 24 helikopteri 2020 Dağlık Karabağ Savaşı sırasında Azerbaycan Silahlı Kuvvetleri tarafından düşürüldü .	Helikopter taşınabilir hava savunma sisteminin ateşi sonucu Ermenistan sınırları içinde , Nahçıvan Özerk Cumhuriyeti'nin yakınlarına düştü .	Saldırı sonucunda mürettebattan ikisi öldü , biri yaralandı .	Azerbaycanlı yetkililer kısa süre sonra bir özür bildirisi yayınlayarak saldırının yanlışlıkla gerçekleştiğini belirttiler .	Helikopterin düşürülmesi olayı Ermenistan tarafından desteklenen _ de facto _ Dağlık Karabağ Cumhuriyeti , _ de jure _ olarak Azerbaycan yönetiminde olan tartışmalı Dağlık Karabağ bölgesinde gerçekleşti .
+Event	T0	Savaşı	EVENT	64
+Event	T1	düşürüldü	EVENT	122
+Event	T2	düştü	EVENT	267
+Event	T3	öldü	EVENT	313
+Event	T4	yaralandı	EVENT	325
+Event	T5	saldırının	EVENT	409
+Event	T6	belirttiler	EVENT	448
+Event	T7	olayı	EVENT	487
+Event	T8	gerçekleşti	EVENT	653
+Event	T9	ateşi	EVENT	181
+Event	T10	Saldırı	EVENT	275
+Event	T11	yayınlayarak	EVENT	396
+Relation	T0	T1	CauseEffect	true	Savaşı	düşürüldü
+Relation	T1	T0	EffectCause	true	düşürüldü	Savaşı
+Relation	T9	T2	CauseEffect	true	ateşi	düştü
+Relation	T2	T9	EffectCause	true	düştü	ateşi
+Relation	T10	T3	CauseEffect	true	Saldırı	öldü
+Relation	T3	T10	EffectCause	true	öldü	Saldırı
+Relation	T10	T4	CauseEffect	true	Saldırı	yaralandı
+Relation	T4	T10	EffectCause	true	yaralandı	Saldırı
+Relation	T5	T11	CauseEffect	true	saldırının	yayınlayarak
+Relation	T11	T5	EffectCause	true	yayınlayarak	saldırının
+Relation	T10	T11	CauseEffect	true	Saldırı	yayınlayarak
+Relation	T11	T10	EffectCause	true	yayınlayarak	Saldırı
+Relation	T0	T2	NoRel	true	Savaşı	düştü
+Relation	T1	T11	NoRel	true	düşürüldü	yayınlayarak
+Relation	T1	T2	NoRel	true	düşürüldü	düştü
+Relation	T1	T3	NoRel	true	düşürüldü	öldü
+Relation	T1	T7	NoRel	true	düşürüldü	olayı
+Relation	T10	T2	NoRel	true	Saldırı	düştü
+Relation	T10	T7	NoRel	true	Saldırı	olayı
+Relation	T10	T9	NoRel	true	Saldırı	ateşi
+Relation	T11	T6	NoRel	true	yayınlayarak	belirttiler
+Relation	T2	T11	NoRel	true	düştü	yayınlayarak
+Relation	T2	T3	NoRel	true	düştü	öldü
+Relation	T2	T6	NoRel	true	düştü	belirttiler
+Relation	T3	T1	NoRel	true	öldü	düşürüldü
+Relation	T3	T5	NoRel	true	öldü	saldırının
+Relation	T3	T8	NoRel	true	öldü	gerçekleşti
+Relation	T3	T9	NoRel	true	öldü	ateşi
+Relation	T4	T2	NoRel	true	yaralandı	düştü
+Relation	T4	T8	NoRel	true	yaralandı	gerçekleşti
+Relation	T4	T9	NoRel	true	yaralandı	ateşi
+Relation	T5	T2	NoRel	true	saldırının	düştü
+Relation	T5	T8	NoRel	true	saldırının	gerçekleşti
+Relation	T6	T11	NoRel	true	belirttiler	yayınlayarak
+Relation	T6	T2	NoRel	true	belirttiler	düştü
+Relation	T6	T5	NoRel	true	belirttiler	saldırının
+Relation	T7	T2	NoRel	true	olayı	düştü
+Relation	T7	T3	NoRel	true	olayı	öldü
+Relation	T7	T4	NoRel	true	olayı	yaralandı
+Relation	T8	T2	NoRel	true	gerçekleşti	düştü
+Relation	T8	T3	NoRel	true	gerçekleşti	öldü
+Relation	T8	T5	NoRel	true	gerçekleşti	saldırının
+Relation	T8	T7	NoRel	true	gerçekleşti	olayı
+Relation	T9	T0	NoRel	true	ateşi	Savaşı
+Relation	T9	T11	NoRel	true	ateşi	yayınlayarak
+Relation	T9	T4	NoRel	true	ateşi	yaralandı
+Relation	T9	T5	NoRel	true	ateşi	saldırının
+Relation	T9	T7	NoRel	true	ateşi	olayı

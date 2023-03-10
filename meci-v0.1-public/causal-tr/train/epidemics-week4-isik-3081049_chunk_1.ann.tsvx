@@ -1,0 +1,38 @@
+Text	32'si Gua Musang Hastanesi'nde , 11'i Kuala Krai Hastanesi'nde ve diğer üçü Orang Asli sağlık evinde tedavi gördü , ayrıca otuz yedi köylü ayakta tedavi gördü .	16 Haziran'da başka bir hastanın ölümüyle birlikte toplam ölü sayısı 15'e yükseldi .	Köylülerden biri , ölümlerin köyün yakınında bulunan madencilik faaliyetinden kaynaklandığını iddia etti .	İki kızının günlerdir nefes darlığı çektiğini ve geceleri uyuyamadıklarını ; komşularının da aynı hastalıktan muzdarip olup , bazılarının öldüğünü açıkladı .	Başka bir köylü , yakınlardaki maden faaliyetlerinin su kaynaklarının kirlenmesine neden olduğunu bilmesine rağmen , suyu günlük faaliyetleri için kullanmaktan başka seçeneklerinin olmadığını iddia etti .
+Event	T0	gördü	EVENT	108
+Event	T1	gördü	EVENT	153
+Event	T2	ölümüyle	EVENT	194
+Event	T3	yükseldi	EVENT	235
+Event	T4	ölümlerin	EVENT	265
+Event	T5	etti	EVENT	346
+Event	T6	çektiğini	EVENT	389
+Event	T8	açıkladı	EVENT	500
+Event	T9	etti	EVENT	709
+Relation	T2	T3	CauseEffect	true	ölümüyle	yükseldi
+Relation	T3	T2	EffectCause	true	yükseldi	ölümüyle
+Relation	T0	T2	NoRel	true	gördü	ölümüyle
+Relation	T0	T3	NoRel	true	gördü	yükseldi
+Relation	T1	T0	NoRel	true	gördü	gördü
+Relation	T1	T3	NoRel	true	gördü	yükseldi
+Relation	T1	T4	NoRel	true	gördü	ölümlerin
+Relation	T1	T9	NoRel	true	gördü	etti
+Relation	T2	T1	NoRel	true	ölümüyle	gördü
+Relation	T2	T4	NoRel	true	ölümüyle	ölümlerin
+Relation	T3	T4	NoRel	true	yükseldi	ölümlerin
+Relation	T3	T6	NoRel	true	yükseldi	çektiğini
+Relation	T4	T0	NoRel	true	ölümlerin	gördü
+Relation	T5	T0	NoRel	true	etti	gördü
+Relation	T5	T4	NoRel	true	etti	ölümlerin
+Relation	T5	T8	NoRel	true	etti	açıkladı
+Relation	T5	T9	NoRel	true	etti	etti
+Relation	T6	T1	NoRel	true	çektiğini	gördü
+Relation	T6	T3	NoRel	true	çektiğini	yükseldi
+Relation	T6	T4	NoRel	true	çektiğini	ölümlerin
+Relation	T6	T9	NoRel	true	çektiğini	etti
+Relation	T8	T0	NoRel	true	açıkladı	gördü
+Relation	T8	T1	NoRel	true	açıkladı	gördü
+Relation	T8	T2	NoRel	true	açıkladı	ölümüyle
+Relation	T8	T6	NoRel	true	açıkladı	çektiğini
+Relation	T8	T9	NoRel	true	açıkladı	etti
+Relation	T9	T0	NoRel	true	etti	gördü
+Relation	T9	T5	NoRel	true	etti	etti

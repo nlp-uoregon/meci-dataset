@@ -1,0 +1,103 @@
+Text	Horas más tarde , se encontró al último superviviente del accidente , el futbolista Neto , rescatado a las 05:40 hora local .	De los 77 ocupantes , 71 murieron en el desastre ; al principio se pensó que eran 75 los fallecidos , pero más tarde se reveló que 4 pasajeros no abordaron el vuelo .	De ellos , tres no lo hicieron por problemas de agenda : el alcalde de Chapecó — Luciano Buligon — , el presidente del consejo de esa ciudad — Plinio Nes Filho — y Gelson Merisio , diputado de Santa Catarina .	El periodista y conductor radial Iván Carlos Agnoletto no abordó el avión porque , al tener un documento de identidad vencido , podía tener problemas al hacer migración en Colombia .	Rescate de Policía al vuelo 2933_-_02 .jpg Rescate de Policía al vuelo 2933_-_05 .jpg Rescate de Policía al vuelo 2933_-_06 .jpg
+Event	T0	encontró	EVENT	21
+Event	T1	accidente	EVENT	58
+Event	T2	rescatado	EVENT	91
+Event	T3	murieron	EVENT	151
+Event	T4	desastre	EVENT	166
+Event	T5	pensó	EVENT	193
+Event	T6	fallecidos	EVENT	215
+Event	T7	reveló	EVENT	246
+Event	T8	abordaron	EVENT	272
+Event	T9	vuelo	EVENT	285
+Event	T10	vencido	EVENT	621
+Event	T11	migración	EVENT	662
+Event	T12	Rescate	EVENT	686
+Event	T13	vuelo	EVENT	708
+Event	T14	Rescate	EVENT	729
+Event	T15	vuelo	EVENT	794
+Relation	T1	T3	CauseEffect	true	accidente	murieron
+Relation	T3	T1	EffectCause	true	murieron	accidente
+Relation	T0	T11	NoRel	true	encontró	migración
+Relation	T0	T13	NoRel	true	encontró	vuelo
+Relation	T0	T3	NoRel	true	encontró	murieron
+Relation	T0	T8	NoRel	true	encontró	abordaron
+Relation	T1	T10	NoRel	true	accidente	vencido
+Relation	T1	T12	NoRel	true	accidente	Rescate
+Relation	T1	T15	NoRel	true	accidente	vuelo
+Relation	T1	T6	NoRel	true	accidente	fallecidos
+Relation	T1	T7	NoRel	true	accidente	reveló
+Relation	T10	T1	NoRel	true	vencido	accidente
+Relation	T10	T13	NoRel	true	vencido	vuelo
+Relation	T11	T0	NoRel	true	migración	encontró
+Relation	T11	T10	NoRel	true	migración	vencido
+Relation	T11	T12	NoRel	true	migración	Rescate
+Relation	T11	T14	NoRel	true	migración	Rescate
+Relation	T11	T15	NoRel	true	migración	vuelo
+Relation	T11	T3	NoRel	true	migración	murieron
+Relation	T11	T6	NoRel	true	migración	fallecidos
+Relation	T11	T7	NoRel	true	migración	reveló
+Relation	T11	T8	NoRel	true	migración	abordaron
+Relation	T12	T15	NoRel	true	Rescate	vuelo
+Relation	T12	T3	NoRel	true	Rescate	murieron
+Relation	T12	T6	NoRel	true	Rescate	fallecidos
+Relation	T12	T7	NoRel	true	Rescate	reveló
+Relation	T12	T9	NoRel	true	Rescate	vuelo
+Relation	T13	T11	NoRel	true	vuelo	migración
+Relation	T13	T3	NoRel	true	vuelo	murieron
+Relation	T13	T4	NoRel	true	vuelo	desastre
+Relation	T13	T8	NoRel	true	vuelo	abordaron
+Relation	T14	T1	NoRel	true	Rescate	accidente
+Relation	T14	T12	NoRel	true	Rescate	Rescate
+Relation	T14	T13	NoRel	true	Rescate	vuelo
+Relation	T14	T15	NoRel	true	Rescate	vuelo
+Relation	T14	T2	NoRel	true	Rescate	rescatado
+Relation	T14	T4	NoRel	true	Rescate	desastre
+Relation	T14	T8	NoRel	true	Rescate	abordaron
+Relation	T15	T1	NoRel	true	vuelo	accidente
+Relation	T15	T12	NoRel	true	vuelo	Rescate
+Relation	T15	T13	NoRel	true	vuelo	vuelo
+Relation	T15	T3	NoRel	true	vuelo	murieron
+Relation	T15	T6	NoRel	true	vuelo	fallecidos
+Relation	T2	T10	NoRel	true	rescatado	vencido
+Relation	T2	T11	NoRel	true	rescatado	migración
+Relation	T2	T13	NoRel	true	rescatado	vuelo
+Relation	T2	T3	NoRel	true	rescatado	murieron
+Relation	T2	T6	NoRel	true	rescatado	fallecidos
+Relation	T2	T8	NoRel	true	rescatado	abordaron
+Relation	T2	T9	NoRel	true	rescatado	vuelo
+Relation	T3	T13	NoRel	true	murieron	vuelo
+Relation	T3	T2	NoRel	true	murieron	rescatado
+Relation	T3	T8	NoRel	true	murieron	abordaron
+Relation	T4	T11	NoRel	true	desastre	migración
+Relation	T4	T12	NoRel	true	desastre	Rescate
+Relation	T4	T14	NoRel	true	desastre	Rescate
+Relation	T4	T8	NoRel	true	desastre	abordaron
+Relation	T5	T0	NoRel	true	pensó	encontró
+Relation	T5	T2	NoRel	true	pensó	rescatado
+Relation	T5	T3	NoRel	true	pensó	murieron
+Relation	T5	T6	NoRel	true	pensó	fallecidos
+Relation	T5	T8	NoRel	true	pensó	abordaron
+Relation	T5	T9	NoRel	true	pensó	vuelo
+Relation	T6	T0	NoRel	true	fallecidos	encontró
+Relation	T6	T1	NoRel	true	fallecidos	accidente
+Relation	T6	T11	NoRel	true	fallecidos	migración
+Relation	T6	T9	NoRel	true	fallecidos	vuelo
+Relation	T7	T0	NoRel	true	reveló	encontró
+Relation	T7	T1	NoRel	true	reveló	accidente
+Relation	T7	T13	NoRel	true	reveló	vuelo
+Relation	T7	T3	NoRel	true	reveló	murieron
+Relation	T7	T5	NoRel	true	reveló	pensó
+Relation	T8	T1	NoRel	true	abordaron	accidente
+Relation	T8	T13	NoRel	true	abordaron	vuelo
+Relation	T8	T15	NoRel	true	abordaron	vuelo
+Relation	T8	T2	NoRel	true	abordaron	rescatado
+Relation	T8	T6	NoRel	true	abordaron	fallecidos
+Relation	T9	T0	NoRel	true	vuelo	encontró
+Relation	T9	T1	NoRel	true	vuelo	accidente
+Relation	T9	T12	NoRel	true	vuelo	Rescate
+Relation	T9	T13	NoRel	true	vuelo	vuelo
+Relation	T9	T14	NoRel	true	vuelo	Rescate
+Relation	T9	T15	NoRel	true	vuelo	vuelo
+Relation	T9	T3	NoRel	true	vuelo	murieron
+Relation	T9	T5	NoRel	true	vuelo	pensó
+Relation	T9	T6	NoRel	true	vuelo	fallecidos

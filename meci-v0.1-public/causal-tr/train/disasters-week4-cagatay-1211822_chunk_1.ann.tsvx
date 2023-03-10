@@ -1,0 +1,85 @@
+Text	Deprem sonrasında bölgede yüksekliği 37,9 metreye varan tsunami dalgaları meydana geldi .	Tsunami ülkede çok büyük zarara yol açtı .	Depremde 15.900 kişi hayatını kaybetti ve 2.531 kişi hâlen kayıp olarak belirtiliyor .	Kara ve demiryolları ağır hasar gördü , çeşitli yerlerde yangınlar çıktı ve bir baraj yıkılarak bölgeyi su basmasına neden oldu .	Kuzeydoğu Japonya'da 4,4 milyon ev elektriksiz , 1,5 milyon ev ise susuz kaldı , deprem sonucu gıda sıkıntısı da meydana geldi .
+Event	T0	Deprem	EVENT	0
+Event	T2	Tsunami	EVENT	90
+Event	T4	Depremde	EVENT	133
+Event	T5	kaybetti	EVENT	163
+Event	T6	kayıp	EVENT	192
+Event	T7	belirtiliyor	EVENT	205
+Event	T8	gördü	EVENT	252
+Event	T10	yıkılarak	EVENT	306
+Event	T12	sıkıntısı	EVENT	450
+Event	T14	tsunami	EVENT	56
+Event	T1	zarara	EVENT	115
+Event	T3	yangınlar	EVENT	277
+Event	T9	basmasına	EVENT	327
+Event	T11	deprem	EVENT	431
+Relation	T0	T14	CauseEffect	true	Deprem	tsunami
+Relation	T14	T0	EffectCause	true	tsunami	Deprem
+Relation	T2	T1	CauseEffect	true	Tsunami	zarara
+Relation	T1	T2	EffectCause	true	zarara	Tsunami
+Relation	T4	T5	CauseEffect	true	Depremde	kaybetti
+Relation	T5	T4	EffectCause	true	kaybetti	Depremde
+Relation	T4	T6	CauseEffect	true	Depremde	kayıp
+Relation	T6	T4	EffectCause	true	kayıp	Depremde
+Relation	T4	T8	CauseEffect	true	Depremde	gördü
+Relation	T8	T4	EffectCause	true	gördü	Depremde
+Relation	T2	T8	CauseEffect	true	Tsunami	gördü
+Relation	T8	T2	EffectCause	true	gördü	Tsunami
+Relation	T4	T3	CauseEffect	true	Depremde	yangınlar
+Relation	T3	T4	EffectCause	true	yangınlar	Depremde
+Relation	T4	T10	CauseEffect	true	Depremde	yıkılarak
+Relation	T10	T4	EffectCause	true	yıkılarak	Depremde
+Relation	T10	T9	CauseEffect	true	yıkılarak	basmasına
+Relation	T9	T10	EffectCause	true	basmasına	yıkılarak
+Relation	T4	T12	CauseEffect	true	Depremde	sıkıntısı
+Relation	T12	T4	EffectCause	true	sıkıntısı	Depremde
+Relation	T2	T12	CauseEffect	true	Tsunami	sıkıntısı
+Relation	T12	T2	EffectCause	true	sıkıntısı	Tsunami
+Relation	T0	T4	NoRel	true	Deprem	Depremde
+Relation	T0	T9	NoRel	true	Deprem	basmasına
+Relation	T1	T11	NoRel	true	zarara	deprem
+Relation	T1	T12	NoRel	true	zarara	sıkıntısı
+Relation	T1	T3	NoRel	true	zarara	yangınlar
+Relation	T1	T6	NoRel	true	zarara	kayıp
+Relation	T1	T8	NoRel	true	zarara	gördü
+Relation	T10	T1	NoRel	true	yıkılarak	zarara
+Relation	T10	T11	NoRel	true	yıkılarak	deprem
+Relation	T10	T12	NoRel	true	yıkılarak	sıkıntısı
+Relation	T10	T7	NoRel	true	yıkılarak	belirtiliyor
+Relation	T11	T1	NoRel	true	deprem	zarara
+Relation	T11	T12	NoRel	true	deprem	sıkıntısı
+Relation	T11	T14	NoRel	true	deprem	tsunami
+Relation	T11	T3	NoRel	true	deprem	yangınlar
+Relation	T11	T4	NoRel	true	deprem	Depremde
+Relation	T11	T5	NoRel	true	deprem	kaybetti
+Relation	T11	T7	NoRel	true	deprem	belirtiliyor
+Relation	T12	T10	NoRel	true	sıkıntısı	yıkılarak
+Relation	T14	T2	NoRel	true	tsunami	Tsunami
+Relation	T14	T4	NoRel	true	tsunami	Depremde
+Relation	T14	T5	NoRel	true	tsunami	kaybetti
+Relation	T2	T11	NoRel	true	Tsunami	deprem
+Relation	T2	T7	NoRel	true	Tsunami	belirtiliyor
+Relation	T3	T1	NoRel	true	yangınlar	zarara
+Relation	T3	T10	NoRel	true	yangınlar	yıkılarak
+Relation	T3	T11	NoRel	true	yangınlar	deprem
+Relation	T3	T14	NoRel	true	yangınlar	tsunami
+Relation	T3	T5	NoRel	true	yangınlar	kaybetti
+Relation	T4	T0	NoRel	true	Depremde	Deprem
+Relation	T4	T1	NoRel	true	Depremde	zarara
+Relation	T4	T11	NoRel	true	Depremde	deprem
+Relation	T5	T14	NoRel	true	kaybetti	tsunami
+Relation	T5	T2	NoRel	true	kaybetti	Tsunami
+Relation	T5	T7	NoRel	true	kaybetti	belirtiliyor
+Relation	T6	T5	NoRel	true	kayıp	kaybetti
+Relation	T6	T9	NoRel	true	kayıp	basmasına
+Relation	T7	T10	NoRel	true	belirtiliyor	yıkılarak
+Relation	T7	T14	NoRel	true	belirtiliyor	tsunami
+Relation	T7	T4	NoRel	true	belirtiliyor	Depremde
+Relation	T7	T6	NoRel	true	belirtiliyor	kayıp
+Relation	T8	T11	NoRel	true	gördü	deprem
+Relation	T8	T12	NoRel	true	gördü	sıkıntısı
+Relation	T8	T6	NoRel	true	gördü	kayıp
+Relation	T8	T7	NoRel	true	gördü	belirtiliyor
+Relation	T9	T11	NoRel	true	basmasına	deprem
+Relation	T9	T5	NoRel	true	basmasına	kaybetti
+Relation	T9	T6	NoRel	true	basmasına	kayıp

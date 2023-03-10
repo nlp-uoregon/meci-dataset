@@ -1,0 +1,116 @@
+Text	When the epidemic broke out from the _ Emily B. Souder _ in May , roughly 40,000 residents that represent 20 % of the city population fled the city , many of whom fled via the new railroads systems constructed during the Reconstruction period after the American Civil War , which further spread the virus across the Lower Mississippi Valley .	The city saw roughly 20,000 total infections during the epidemic with 5,000 resulting in deaths , and saw a loss of more than $ 15 million due to the disruptions in trade from the epidemic .	Due to the struggles of the remaining citizens , numerous organizations formed relief committees that relied heavily on aid from the federal government in the form of relief rations and money donations from unaffected cities in the Northern United States .	The federal relief came with heavy restrictions , as they were only allowed to be given to households that had yellow fever and could provide proof via a doctor 's certificate or given to people considered " destitute . "	These restrictions led to many citizens having to go without federal aid , resulting in roughly 10,000 people receiving aid despite there being 20,000 cases of yellow fever alone .
+Event	T0	fled	EVENT	134
+Event	T1	fled	EVENT	163
+Event	T10	saw	EVENT	445
+Event	T11	loss	EVENT	451
+Event	T12	disruptions	EVENT	493
+Event	T13	trade	EVENT	508
+Event	T14	epidemic	EVENT	523
+Event	T15	struggles	EVENT	545
+Event	T16	relied	EVENT	636
+Event	T17	came	EVENT	810
+Event	T18	restrictions	EVENT	826
+Event	T19	allowed	EVENT	859
+Event	T2	formed	EVENT	606
+Event	T20	given	EVENT	873
+Event	T21	fever	EVENT	909
+Event	T22	given	EVENT	970
+Event	T23	receiving	EVENT	1123
+Event	T24	led	EVENT	1032
+Event	T27	resulting	EVENT	1088
+Event	T29	broke out	EVENT	18
+Event	T3	spread	EVENT	288
+Event	T4	virus	EVENT	299
+Event	T5	saw	EVENT	352
+Event	T6	infections	EVENT	377
+Event	T7	epidemic	EVENT	399
+Event	T8	resulting	EVENT	419
+Event	T9	deaths	EVENT	432
+Relation	T29	T0	CauseEffect	true	broke out	fled
+Relation	T0	T29	EffectCause	true	fled	broke out
+Relation	T1	T3	CauseEffect	true	fled	spread
+Relation	T3	T1	EffectCause	true	spread	fled
+Relation	T7	T6	CauseEffect	true	epidemic	infections
+Relation	T6	T7	EffectCause	true	infections	epidemic
+Relation	T7	T9	CauseEffect	true	epidemic	deaths
+Relation	T9	T7	EffectCause	true	deaths	epidemic
+Relation	T12	T11	CauseEffect	true	disruptions	loss
+Relation	T11	T12	EffectCause	true	loss	disruptions
+Relation	T14	T11	CauseEffect	true	epidemic	loss
+Relation	T11	T14	EffectCause	true	loss	epidemic
+Relation	T2	T15	CauseEffect	true	formed	struggles
+Relation	T15	T2	EffectCause	true	struggles	formed
+Relation	T21	T19	CauseEffect	true	fever	allowed
+Relation	T19	T21	EffectCause	true	allowed	fever
+Relation	T22	T19	CauseEffect	true	given	allowed
+Relation	T19	T22	EffectCause	true	allowed	given
+Relation	T24	T23	CauseEffect	true	led	receiving
+Relation	T23	T24	EffectCause	true	receiving	led
+Relation	T0	T20	NoRel	true	fled	given
+Relation	T0	T9	NoRel	true	fled	deaths
+Relation	T1	T18	NoRel	true	fled	restrictions
+Relation	T1	T24	NoRel	true	fled	led
+Relation	T1	T6	NoRel	true	fled	infections
+Relation	T10	T17	NoRel	true	saw	came
+Relation	T10	T20	NoRel	true	saw	given
+Relation	T10	T23	NoRel	true	saw	receiving
+Relation	T11	T0	NoRel	true	loss	fled
+Relation	T11	T1	NoRel	true	loss	fled
+Relation	T11	T22	NoRel	true	loss	given
+Relation	T11	T29	NoRel	true	loss	broke out
+Relation	T11	T6	NoRel	true	loss	infections
+Relation	T11	T9	NoRel	true	loss	deaths
+Relation	T12	T15	NoRel	true	disruptions	struggles
+Relation	T12	T23	NoRel	true	disruptions	receiving
+Relation	T13	T9	NoRel	true	trade	deaths
+Relation	T14	T12	NoRel	true	epidemic	disruptions
+Relation	T14	T15	NoRel	true	epidemic	struggles
+Relation	T14	T17	NoRel	true	epidemic	came
+Relation	T14	T18	NoRel	true	epidemic	restrictions
+Relation	T14	T29	NoRel	true	epidemic	broke out
+Relation	T15	T19	NoRel	true	struggles	allowed
+Relation	T16	T27	NoRel	true	relied	resulting
+Relation	T17	T14	NoRel	true	came	epidemic
+Relation	T17	T21	NoRel	true	came	fever
+Relation	T17	T23	NoRel	true	came	receiving
+Relation	T17	T8	NoRel	true	came	resulting
+Relation	T18	T15	NoRel	true	restrictions	struggles
+Relation	T18	T17	NoRel	true	restrictions	came
+Relation	T18	T20	NoRel	true	restrictions	given
+Relation	T19	T27	NoRel	true	allowed	resulting
+Relation	T19	T9	NoRel	true	allowed	deaths
+Relation	T2	T23	NoRel	true	formed	receiving
+Relation	T2	T6	NoRel	true	formed	infections
+Relation	T20	T0	NoRel	true	given	fled
+Relation	T20	T8	NoRel	true	given	resulting
+Relation	T21	T23	NoRel	true	fever	receiving
+Relation	T21	T6	NoRel	true	fever	infections
+Relation	T22	T23	NoRel	true	given	receiving
+Relation	T23	T16	NoRel	true	receiving	relied
+Relation	T23	T19	NoRel	true	receiving	allowed
+Relation	T23	T5	NoRel	true	receiving	saw
+Relation	T24	T16	NoRel	true	led	relied
+Relation	T24	T2	NoRel	true	led	formed
+Relation	T24	T22	NoRel	true	led	given
+Relation	T24	T6	NoRel	true	led	infections
+Relation	T27	T12	NoRel	true	resulting	disruptions
+Relation	T29	T12	NoRel	true	broke out	disruptions
+Relation	T29	T14	NoRel	true	broke out	epidemic
+Relation	T3	T14	NoRel	true	spread	epidemic
+Relation	T3	T16	NoRel	true	spread	relied
+Relation	T3	T22	NoRel	true	spread	given
+Relation	T3	T8	NoRel	true	spread	resulting
+Relation	T4	T22	NoRel	true	virus	given
+Relation	T4	T23	NoRel	true	virus	receiving
+Relation	T6	T15	NoRel	true	infections	struggles
+Relation	T6	T17	NoRel	true	infections	came
+Relation	T6	T18	NoRel	true	infections	restrictions
+Relation	T6	T9	NoRel	true	infections	deaths
+Relation	T7	T0	NoRel	true	epidemic	fled
+Relation	T7	T3	NoRel	true	epidemic	spread
+Relation	T8	T14	NoRel	true	resulting	epidemic
+Relation	T8	T22	NoRel	true	resulting	given
+Relation	T8	T29	NoRel	true	resulting	broke out
+Relation	T8	T6	NoRel	true	resulting	infections
+Relation	T9	T14	NoRel	true	deaths	epidemic
+Relation	T9	T24	NoRel	true	deaths	led

@@ -1,0 +1,50 @@
+Text	- El 8 de junio de 1981 , 6 personas fallecieron al embestir un tren una furgoneta en un paso a nivel con barreras cerca de Segovia .	- 10 de julio de 1981 .	Cerca de Lérida un turismo es arrollado por un tren muriendo sus cuatro ocupantes .	- El 9 de noviembre de 1981 , 11 muertos y 35 heridos fue el balance de un choque entre un ferrobús y un camión remolque en un paso a nivel donde este había quedado detenido en Vicién , localidad cercana a Huesca .	- 5 de mayo de 1982 .
+Event	T0	fallecieron	EVENT	37
+Event	T1	embestir	EVENT	52
+Event	T2	arrollado	EVENT	188
+Event	T3	muriendo	EVENT	210
+Event	T4	muertos	EVENT	275
+Event	T5	fue	EVENT	296
+Event	T6	balance	EVENT	303
+Event	T7	choque	EVENT	317
+Event	T8	paso	EVENT	369
+Event	T9	detenido	EVENT	407
+Event	T10	heridos	EVENT	288
+Relation	T1	T0	CauseEffect	true	embestir	fallecieron
+Relation	T0	T1	EffectCause	true	fallecieron	embestir
+Relation	T2	T3	CauseEffect	true	arrollado	muriendo
+Relation	T3	T2	EffectCause	true	muriendo	arrollado
+Relation	T7	T4	CauseEffect	true	choque	muertos
+Relation	T4	T7	EffectCause	true	muertos	choque
+Relation	T7	T10	CauseEffect	true	choque	heridos
+Relation	T10	T7	EffectCause	true	heridos	choque
+Relation	T0	T7	NoRel	true	fallecieron	choque
+Relation	T1	T4	NoRel	true	embestir	muertos
+Relation	T1	T8	NoRel	true	embestir	paso
+Relation	T10	T3	NoRel	true	heridos	muriendo
+Relation	T10	T4	NoRel	true	heridos	muertos
+Relation	T10	T8	NoRel	true	heridos	paso
+Relation	T2	T10	NoRel	true	arrollado	heridos
+Relation	T3	T1	NoRel	true	muriendo	embestir
+Relation	T3	T10	NoRel	true	muriendo	heridos
+Relation	T3	T6	NoRel	true	muriendo	balance
+Relation	T3	T9	NoRel	true	muriendo	detenido
+Relation	T4	T0	NoRel	true	muertos	fallecieron
+Relation	T4	T2	NoRel	true	muertos	arrollado
+Relation	T4	T3	NoRel	true	muertos	muriendo
+Relation	T4	T9	NoRel	true	muertos	detenido
+Relation	T5	T2	NoRel	true	fue	arrollado
+Relation	T5	T3	NoRel	true	fue	muriendo
+Relation	T5	T4	NoRel	true	fue	muertos
+Relation	T5	T7	NoRel	true	fue	choque
+Relation	T5	T8	NoRel	true	fue	paso
+Relation	T6	T0	NoRel	true	balance	fallecieron
+Relation	T6	T1	NoRel	true	balance	embestir
+Relation	T6	T2	NoRel	true	balance	arrollado
+Relation	T7	T0	NoRel	true	choque	fallecieron
+Relation	T7	T1	NoRel	true	choque	embestir
+Relation	T7	T8	NoRel	true	choque	paso
+Relation	T8	T2	NoRel	true	paso	arrollado
+Relation	T9	T10	NoRel	true	detenido	heridos
+Relation	T9	T2	NoRel	true	detenido	arrollado
+Relation	T9	T4	NoRel	true	detenido	muertos

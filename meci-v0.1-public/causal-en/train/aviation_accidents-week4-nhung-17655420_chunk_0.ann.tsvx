@@ -1,0 +1,50 @@
+Text	AMERICAN AIRLINES FLIGHT 11 was a domestic passenger flight that was hijacked by five al - Qaeda terrorists on September 11 , 2001 , as part of the September &nbsp; 11 attacks .	Lead hijacker Mohamed Atta deliberately crashed the plane into the North Tower of the World Trade Center in New York City , killing all 92 people aboard and ensuring the deaths of 1,402 people at and above the aircraft 's impact zone .	The aircraft involved , a Boeing 767 - 223ER , registration was flying American Airlines ' daily scheduled morning transcontinental service from Logan International Airport in Boston to Los Angeles International Airport in Los Angeles .	Fifteen minutes into the flight , the hijackers injured at least three people ( possibly killing one ) , forcibly breached the cockpit , and overpowered the captain and first officer .	Atta , an al - Qaeda member and licensed commercial pilot , took over the controls .
+Event	T0	flight	EVENT	53
+Event	T1	hijacked	EVENT	69
+Event	T2	attacks	EVENT	168
+Event	T3	crashed	EVENT	218
+Event	T4	killing	EVENT	302
+Event	T5	ensuring	EVENT	335
+Event	T6	deaths	EVENT	348
+Event	T7	impact	EVENT	400
+Event	T8	involved	EVENT	427
+Event	T9	flying	EVENT	478
+Event	T10	scheduled	EVENT	511
+Event	T11	service	EVENT	546
+Event	T12	flight	EVENT	676
+Event	T13	injured	EVENT	699
+Event	T14	killing	EVENT	740
+Event	T15	breached	EVENT	765
+Event	T16	overpowered	EVENT	792
+Event	T17	controls	EVENT	910
+Relation	T3	T4	CauseEffect	true	crashed	killing
+Relation	T4	T3	EffectCause	true	killing	crashed
+Relation	T3	T6	CauseEffect	true	crashed	deaths
+Relation	T6	T3	EffectCause	true	deaths	crashed
+Relation	T0	T14	NoRel	true	flight	killing
+Relation	T1	T5	NoRel	true	hijacked	ensuring
+Relation	T10	T16	NoRel	true	scheduled	overpowered
+Relation	T11	T1	NoRel	true	service	hijacked
+Relation	T11	T3	NoRel	true	service	crashed
+Relation	T11	T8	NoRel	true	service	involved
+Relation	T12	T7	NoRel	true	flight	impact
+Relation	T13	T4	NoRel	true	injured	killing
+Relation	T14	T1	NoRel	true	killing	hijacked
+Relation	T15	T12	NoRel	true	breached	flight
+Relation	T15	T13	NoRel	true	breached	injured
+Relation	T15	T3	NoRel	true	breached	crashed
+Relation	T16	T0	NoRel	true	overpowered	flight
+Relation	T16	T10	NoRel	true	overpowered	scheduled
+Relation	T16	T11	NoRel	true	overpowered	service
+Relation	T17	T0	NoRel	true	controls	flight
+Relation	T3	T11	NoRel	true	crashed	service
+Relation	T4	T10	NoRel	true	killing	scheduled
+Relation	T4	T12	NoRel	true	killing	flight
+Relation	T5	T6	NoRel	true	ensuring	deaths
+Relation	T6	T0	NoRel	true	deaths	flight
+Relation	T7	T11	NoRel	true	impact	service
+Relation	T8	T5	NoRel	true	involved	ensuring
+Relation	T9	T1	NoRel	true	flying	hijacked
+Relation	T9	T10	NoRel	true	flying	scheduled
+Relation	T9	T12	NoRel	true	flying	flight
+Relation	T9	T13	NoRel	true	flying	injured

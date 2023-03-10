@@ -1,0 +1,94 @@
+Text	Boeing dejó de fabricar el 777 con motores de la serie P & W PW4000 en 2013 , y el motor ya no está en producción activa .	El Boeing 777 es un avión bimotor de fuselaje ancho y largo alcance .	En el momento del incidente , tenía una tasa de mortalidad por accidentes relativamente baja .	Los únicos dos accidentes con pérdida total de aeronaves , pasajeros y tripulación son los vuelos MH17 de Malaysia Airlines que fue derribado sobre Ucrania en julio de 2014 y MH 370 que desapareció sobre el Océano Índico en marzo de 2014 .	Los otros accidentes fatales , el vuelo 521 de Emirates y el vuelo 214 de Asiana Airlines , se atribuyeron a errores del piloto .
+Event	T0	dejó	EVENT	7
+Event	T1	fabricar	EVENT	15
+Event	T2	incidente	EVENT	211
+Event	T3	mortalidad	EVENT	241
+Event	T4	accidentes	EVENT	256
+Event	T5	accidentes	EVENT	303
+Event	T6	vuelos	EVENT	379
+Event	T7	derribado	EVENT	420
+Event	T8	desapareció	EVENT	474
+Event	T9	fatales	EVENT	549
+Event	T10	vuelo	EVENT	562
+Event	T11	atribuyeron	EVENT	623
+Event	T12	errores	EVENT	637
+Event	T13	accidentes	EVENT	538
+Relation	T12	T13	CauseEffect	true	errores	accidentes
+Relation	T13	T12	EffectCause	true	accidentes	errores
+Relation	T0	T10	NoRel	true	dejó	vuelo
+Relation	T0	T11	NoRel	true	dejó	atribuyeron
+Relation	T0	T12	NoRel	true	dejó	errores
+Relation	T0	T13	NoRel	true	dejó	accidentes
+Relation	T0	T2	NoRel	true	dejó	incidente
+Relation	T0	T3	NoRel	true	dejó	mortalidad
+Relation	T0	T5	NoRel	true	dejó	accidentes
+Relation	T0	T6	NoRel	true	dejó	vuelos
+Relation	T0	T9	NoRel	true	dejó	fatales
+Relation	T1	T12	NoRel	true	fabricar	errores
+Relation	T1	T3	NoRel	true	fabricar	mortalidad
+Relation	T1	T4	NoRel	true	fabricar	accidentes
+Relation	T1	T6	NoRel	true	fabricar	vuelos
+Relation	T1	T7	NoRel	true	fabricar	derribado
+Relation	T1	T8	NoRel	true	fabricar	desapareció
+Relation	T10	T1	NoRel	true	vuelo	fabricar
+Relation	T10	T2	NoRel	true	vuelo	incidente
+Relation	T10	T3	NoRel	true	vuelo	mortalidad
+Relation	T10	T4	NoRel	true	vuelo	accidentes
+Relation	T10	T5	NoRel	true	vuelo	accidentes
+Relation	T10	T6	NoRel	true	vuelo	vuelos
+Relation	T10	T7	NoRel	true	vuelo	derribado
+Relation	T10	T8	NoRel	true	vuelo	desapareció
+Relation	T11	T12	NoRel	true	atribuyeron	errores
+Relation	T11	T2	NoRel	true	atribuyeron	incidente
+Relation	T11	T3	NoRel	true	atribuyeron	mortalidad
+Relation	T11	T8	NoRel	true	atribuyeron	desapareció
+Relation	T12	T11	NoRel	true	errores	atribuyeron
+Relation	T12	T4	NoRel	true	errores	accidentes
+Relation	T12	T9	NoRel	true	errores	fatales
+Relation	T13	T10	NoRel	true	accidentes	vuelo
+Relation	T13	T3	NoRel	true	accidentes	mortalidad
+Relation	T13	T6	NoRel	true	accidentes	vuelos
+Relation	T13	T7	NoRel	true	accidentes	derribado
+Relation	T13	T8	NoRel	true	accidentes	desapareció
+Relation	T2	T10	NoRel	true	incidente	vuelo
+Relation	T2	T11	NoRel	true	incidente	atribuyeron
+Relation	T2	T12	NoRel	true	incidente	errores
+Relation	T2	T5	NoRel	true	incidente	accidentes
+Relation	T2	T7	NoRel	true	incidente	derribado
+Relation	T3	T0	NoRel	true	mortalidad	dejó
+Relation	T3	T1	NoRel	true	mortalidad	fabricar
+Relation	T3	T10	NoRel	true	mortalidad	vuelo
+Relation	T3	T11	NoRel	true	mortalidad	atribuyeron
+Relation	T3	T12	NoRel	true	mortalidad	errores
+Relation	T3	T6	NoRel	true	mortalidad	vuelos
+Relation	T3	T7	NoRel	true	mortalidad	derribado
+Relation	T4	T0	NoRel	true	accidentes	dejó
+Relation	T4	T11	NoRel	true	accidentes	atribuyeron
+Relation	T4	T12	NoRel	true	accidentes	errores
+Relation	T4	T3	NoRel	true	accidentes	mortalidad
+Relation	T4	T7	NoRel	true	accidentes	derribado
+Relation	T4	T9	NoRel	true	accidentes	fatales
+Relation	T5	T0	NoRel	true	accidentes	dejó
+Relation	T5	T1	NoRel	true	accidentes	fabricar
+Relation	T5	T13	NoRel	true	accidentes	accidentes
+Relation	T5	T6	NoRel	true	accidentes	vuelos
+Relation	T6	T12	NoRel	true	vuelos	errores
+Relation	T6	T2	NoRel	true	vuelos	incidente
+Relation	T6	T3	NoRel	true	vuelos	mortalidad
+Relation	T6	T7	NoRel	true	vuelos	derribado
+Relation	T7	T0	NoRel	true	derribado	dejó
+Relation	T7	T11	NoRel	true	derribado	atribuyeron
+Relation	T7	T12	NoRel	true	derribado	errores
+Relation	T7	T2	NoRel	true	derribado	incidente
+Relation	T7	T6	NoRel	true	derribado	vuelos
+Relation	T7	T9	NoRel	true	derribado	fatales
+Relation	T8	T0	NoRel	true	desapareció	dejó
+Relation	T8	T12	NoRel	true	desapareció	errores
+Relation	T8	T5	NoRel	true	desapareció	accidentes
+Relation	T8	T9	NoRel	true	desapareció	fatales
+Relation	T9	T11	NoRel	true	fatales	atribuyeron
+Relation	T9	T12	NoRel	true	fatales	errores
+Relation	T9	T2	NoRel	true	fatales	incidente
+Relation	T9	T3	NoRel	true	fatales	mortalidad
+Relation	T9	T6	NoRel	true	fatales	vuelos
+Relation	T9	T8	NoRel	true	fatales	desapareció

@@ -1,0 +1,47 @@
+Text	Med en brændstofkapacitet på 91.000 liter blev hvert fly en flyvende brandbombe .	- Klokken 8:46:40 om morgenen lokal tid ( 14:46:40 dansk tid ) stødte American Airlines' flynummer 11 ( Boeing 767 ) ind i nordsiden af World Trade Centers nordlige tårn .	- Klokken 9:03:11 ( 15:03:11 dansk tid ) stødte United Airlines' flynummer 175 ( Boeing 767 ) ind i det sydlige tårn , hvilket blev sendt direkte i fjernsynet af Tv-selskaberne , der var ankommet for at filme det nordlige tårn .	- American Airlines' flynummer 77 ( Boeing 757 ) styrtede ned i det amerikanske forsvarsministeriums hovedkvarter Pentagon klokken 9:37:46 om morgenen lokal tid ( 15:37:46 dansk tid ) .	- Det fjerde kaprede fly , United Airlines' fly nummer 93 ( Boeing 757 ) , styrtede ned på en mark i det sydvestlige Pennsylvania klokken 10:03:11 ( 16:03:11 dansk tid ) , og vragdele blev fundet op til 5 kilometer væk .
+Event	T0	stødte	EVENT	145
+Event	T1	stødte	EVENT	295
+Event	T2	ankommet	EVENT	441
+Event	T3	filme	EVENT	457
+Event	T4	kaprede	EVENT	682
+Event	T5	blev	EVENT	42
+Event	T6	sendt	EVENT	386
+Event	T7	styrtede ned	EVENT	532
+Event	T8	styrtede ned	EVENT	744
+Event	T9	fundet	EVENT	858
+Event	T10	brandbombe	EVENT	69
+Relation	T5	T10	CauseEffect	true	blev	brandbombe
+Relation	T10	T5	EffectCause	true	brandbombe	blev
+Relation	T0	T9	NoRel	true	stødte	fundet
+Relation	T1	T2	NoRel	true	stødte	ankommet
+Relation	T1	T3	NoRel	true	stødte	filme
+Relation	T1	T8	NoRel	true	stødte	styrtede ned
+Relation	T1	T9	NoRel	true	stødte	fundet
+Relation	T10	T4	NoRel	true	brandbombe	kaprede
+Relation	T2	T10	NoRel	true	ankommet	brandbombe
+Relation	T2	T5	NoRel	true	ankommet	blev
+Relation	T2	T8	NoRel	true	ankommet	styrtede ned
+Relation	T3	T1	NoRel	true	filme	stødte
+Relation	T3	T10	NoRel	true	filme	brandbombe
+Relation	T3	T2	NoRel	true	filme	ankommet
+Relation	T3	T5	NoRel	true	filme	blev
+Relation	T3	T6	NoRel	true	filme	sendt
+Relation	T3	T7	NoRel	true	filme	styrtede ned
+Relation	T4	T1	NoRel	true	kaprede	stødte
+Relation	T4	T6	NoRel	true	kaprede	sendt
+Relation	T4	T7	NoRel	true	kaprede	styrtede ned
+Relation	T4	T8	NoRel	true	kaprede	styrtede ned
+Relation	T5	T1	NoRel	true	blev	stødte
+Relation	T5	T3	NoRel	true	blev	filme
+Relation	T5	T4	NoRel	true	blev	kaprede
+Relation	T6	T1	NoRel	true	sendt	stødte
+Relation	T6	T3	NoRel	true	sendt	filme
+Relation	T6	T5	NoRel	true	sendt	blev
+Relation	T7	T10	NoRel	true	styrtede ned	brandbombe
+Relation	T7	T2	NoRel	true	styrtede ned	ankommet
+Relation	T7	T5	NoRel	true	styrtede ned	blev
+Relation	T7	T6	NoRel	true	styrtede ned	sendt
+Relation	T8	T0	NoRel	true	styrtede ned	stødte
+Relation	T8	T10	NoRel	true	styrtede ned	brandbombe
+Relation	T9	T1	NoRel	true	fundet	stødte
+Relation	T9	T7	NoRel	true	fundet	styrtede ned

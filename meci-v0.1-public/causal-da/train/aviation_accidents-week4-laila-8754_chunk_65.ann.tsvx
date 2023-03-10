@@ -1,0 +1,67 @@
+Text	Skaderne på Pentagon blev repareret inden for et år .	En midlertidig World_Trade_Center PATH station åbnede i slutningen af 2003 og den endelig station åbnede i 2016 .	Opførelsen af det nye World Trade Center nr. 7 blev afsluttet i 2006 .	Arbejdet med at genopbygge selve World Trade_Center komplekset kom først i gang i slutningen af 2006 pga. en strid om finansieringen .	Opførelsen af One World Trade Center begyndte den 27. april 2006 og bygningen nåede sin endelige højde på 541 meter ( 1776 fod ) den 20. maj 2013 og blev derved den højeste bygning i Nordamerika .
+Event	T0	Skaderne	EVENT	0
+Event	T1	repareret	EVENT	26
+Event	T2	åbnede	EVENT	101
+Event	T3	åbnede	EVENT	152
+Event	T4	Opførelsen	EVENT	168
+Event	T5	afsluttet	EVENT	220
+Event	T6	Arbejdet	EVENT	239
+Event	T7	genopbygge	EVENT	255
+Event	T8	kom	EVENT	302
+Event	T9	Opførelsen	EVENT	374
+Event	T10	begyndte	EVENT	411
+Event	T11	nåede	EVENT	452
+Event	T12	strid	EVENT	348
+Event	T13	blev	EVENT	523
+Relation	T11	T13	CauseEffect	true	nåede	blev
+Relation	T13	T11	EffectCause	true	blev	nåede
+Relation	T12	T8	CauseEffect	true	strid	kom
+Relation	T8	T12	EffectCause	true	kom	strid
+Relation	T0	T1	NoRel	true	Skaderne	repareret
+Relation	T1	T11	NoRel	true	repareret	nåede
+Relation	T1	T13	NoRel	true	repareret	blev
+Relation	T1	T2	NoRel	true	repareret	åbnede
+Relation	T1	T3	NoRel	true	repareret	åbnede
+Relation	T1	T8	NoRel	true	repareret	kom
+Relation	T1	T9	NoRel	true	repareret	Opførelsen
+Relation	T10	T13	NoRel	true	begyndte	blev
+Relation	T10	T3	NoRel	true	begyndte	åbnede
+Relation	T10	T4	NoRel	true	begyndte	Opførelsen
+Relation	T10	T5	NoRel	true	begyndte	afsluttet
+Relation	T11	T3	NoRel	true	nåede	åbnede
+Relation	T11	T7	NoRel	true	nåede	genopbygge
+Relation	T11	T8	NoRel	true	nåede	kom
+Relation	T12	T10	NoRel	true	strid	begyndte
+Relation	T12	T11	NoRel	true	strid	nåede
+Relation	T12	T6	NoRel	true	strid	Arbejdet
+Relation	T12	T9	NoRel	true	strid	Opførelsen
+Relation	T13	T1	NoRel	true	blev	repareret
+Relation	T2	T6	NoRel	true	åbnede	Arbejdet
+Relation	T3	T0	NoRel	true	åbnede	Skaderne
+Relation	T3	T13	NoRel	true	åbnede	blev
+Relation	T3	T5	NoRel	true	åbnede	afsluttet
+Relation	T4	T1	NoRel	true	Opførelsen	repareret
+Relation	T4	T11	NoRel	true	Opførelsen	nåede
+Relation	T4	T6	NoRel	true	Opførelsen	Arbejdet
+Relation	T5	T10	NoRel	true	afsluttet	begyndte
+Relation	T5	T11	NoRel	true	afsluttet	nåede
+Relation	T5	T12	NoRel	true	afsluttet	strid
+Relation	T5	T13	NoRel	true	afsluttet	blev
+Relation	T5	T9	NoRel	true	afsluttet	Opførelsen
+Relation	T6	T0	NoRel	true	Arbejdet	Skaderne
+Relation	T6	T4	NoRel	true	Arbejdet	Opførelsen
+Relation	T6	T5	NoRel	true	Arbejdet	afsluttet
+Relation	T6	T9	NoRel	true	Arbejdet	Opførelsen
+Relation	T7	T0	NoRel	true	genopbygge	Skaderne
+Relation	T7	T12	NoRel	true	genopbygge	strid
+Relation	T7	T13	NoRel	true	genopbygge	blev
+Relation	T7	T6	NoRel	true	genopbygge	Arbejdet
+Relation	T7	T9	NoRel	true	genopbygge	Opførelsen
+Relation	T8	T1	NoRel	true	kom	repareret
+Relation	T8	T10	NoRel	true	kom	begyndte
+Relation	T8	T3	NoRel	true	kom	åbnede
+Relation	T8	T6	NoRel	true	kom	Arbejdet
+Relation	T8	T9	NoRel	true	kom	Opførelsen
+Relation	T9	T0	NoRel	true	Opførelsen	Skaderne
+Relation	T9	T13	NoRel	true	Opførelsen	blev
+Relation	T9	T2	NoRel	true	Opførelsen	åbnede

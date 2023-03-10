@@ -1,0 +1,73 @@
+Text	Kommissionsrapporten konkluderer :	" Vidt omtalte påstande om insider trading før 11/9 bygger generelt på beretninger om usædvanlige før-11/9 handelsaktivitet med aktier i selskaber hvis aktieværdi styrtdykkede efter angrebne .	Rent faktisk blev der gjort nogle usædvanlige handler .	Eksempelvis steg volumen af put options – aktiehandler der kun er profitable når aktien falder i pris – i United Airlines holdingselskab den 6. september , og i American Airlines den 10. september – på overfladen særdeles mistænksomme handler .	I midlertid har videre undersøgelser vist at handlerne ingen som helst forbindelse til 11/9 .
+Event	T0	konkluderer	EVENT	21
+Event	T1	påstande	EVENT	50
+Event	T2	trading	EVENT	70
+Event	T3	bygger	EVENT	87
+Event	T4	beretninger	EVENT	106
+Event	T5	handelsaktivitet	EVENT	142
+Event	T6	styrtdykkede	EVENT	198
+Event	T7	angrebne	EVENT	217
+Event	T8	gjort	EVENT	250
+Event	T9	handler	EVENT	274
+Event	T10	falder	EVENT	372
+Event	T11	handler	EVENT	519
+Event	T12	vist	EVENT	566
+Relation	T2	T6	CauseEffect	true	trading	styrtdykkede
+Relation	T6	T2	EffectCause	true	styrtdykkede	trading
+Relation	T7	T6	CauseEffect	true	angrebne	styrtdykkede
+Relation	T6	T7	EffectCause	true	styrtdykkede	angrebne
+Relation	T0	T12	CauseEffect	true	konkluderer	vist
+Relation	T12	T0	EffectCause	true	vist	konkluderer
+Relation	T0	T11	NoRel	true	konkluderer	handler
+Relation	T0	T3	NoRel	true	konkluderer	bygger
+Relation	T0	T8	NoRel	true	konkluderer	gjort
+Relation	T1	T0	NoRel	true	påstande	konkluderer
+Relation	T1	T11	NoRel	true	påstande	handler
+Relation	T1	T2	NoRel	true	påstande	trading
+Relation	T1	T5	NoRel	true	påstande	handelsaktivitet
+Relation	T1	T7	NoRel	true	påstande	angrebne
+Relation	T1	T9	NoRel	true	påstande	handler
+Relation	T10	T6	NoRel	true	falder	styrtdykkede
+Relation	T11	T2	NoRel	true	handler	trading
+Relation	T11	T5	NoRel	true	handler	handelsaktivitet
+Relation	T11	T8	NoRel	true	handler	gjort
+Relation	T12	T10	NoRel	true	vist	falder
+Relation	T12	T2	NoRel	true	vist	trading
+Relation	T12	T5	NoRel	true	vist	handelsaktivitet
+Relation	T12	T7	NoRel	true	vist	angrebne
+Relation	T2	T0	NoRel	true	trading	konkluderer
+Relation	T2	T10	NoRel	true	trading	falder
+Relation	T2	T11	NoRel	true	trading	handler
+Relation	T2	T5	NoRel	true	trading	handelsaktivitet
+Relation	T2	T7	NoRel	true	trading	angrebne
+Relation	T2	T8	NoRel	true	trading	gjort
+Relation	T2	T9	NoRel	true	trading	handler
+Relation	T3	T0	NoRel	true	bygger	konkluderer
+Relation	T3	T11	NoRel	true	bygger	handler
+Relation	T3	T4	NoRel	true	bygger	beretninger
+Relation	T3	T6	NoRel	true	bygger	styrtdykkede
+Relation	T3	T7	NoRel	true	bygger	angrebne
+Relation	T3	T8	NoRel	true	bygger	gjort
+Relation	T4	T1	NoRel	true	beretninger	påstande
+Relation	T4	T12	NoRel	true	beretninger	vist
+Relation	T4	T2	NoRel	true	beretninger	trading
+Relation	T4	T3	NoRel	true	beretninger	bygger
+Relation	T4	T5	NoRel	true	beretninger	handelsaktivitet
+Relation	T4	T7	NoRel	true	beretninger	angrebne
+Relation	T4	T9	NoRel	true	beretninger	handler
+Relation	T5	T11	NoRel	true	handelsaktivitet	handler
+Relation	T5	T12	NoRel	true	handelsaktivitet	vist
+Relation	T5	T2	NoRel	true	handelsaktivitet	trading
+Relation	T6	T0	NoRel	true	styrtdykkede	konkluderer
+Relation	T6	T11	NoRel	true	styrtdykkede	handler
+Relation	T6	T3	NoRel	true	styrtdykkede	bygger
+Relation	T7	T11	NoRel	true	angrebne	handler
+Relation	T7	T12	NoRel	true	angrebne	vist
+Relation	T8	T0	NoRel	true	gjort	konkluderer
+Relation	T8	T3	NoRel	true	gjort	bygger
+Relation	T8	T6	NoRel	true	gjort	styrtdykkede
+Relation	T8	T7	NoRel	true	gjort	angrebne
+Relation	T9	T0	NoRel	true	handler	konkluderer
+Relation	T9	T10	NoRel	true	handler	falder
+Relation	T9	T3	NoRel	true	handler	bygger
+Relation	T9	T6	NoRel	true	handler	styrtdykkede

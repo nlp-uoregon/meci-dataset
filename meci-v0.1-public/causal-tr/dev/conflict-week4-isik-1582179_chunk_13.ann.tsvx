@@ -1,0 +1,46 @@
+Text	1808 yılından sonra bölgede Mumirimina kabilesinden eser kalmamıştır .	Cape Grim Katliamı ( İng. _ Cape Grim massacre _ ) : Van Diemen's Land'ın ( günümüzdeki Tasmanya'nın ) kuzeybatı ucundaki Cape Grim burnunda 10 şubat 1828 günü misket tüfeği olan dört Beyaz çoban tarafından North West boyunun Pennemukeer kabilesinden yerlilere yapılan katliam .	Pusuya düşürdükleri yerlilere tüfekle ateş açan çobanlar 30 yerliyi öldürüp cesetlerini 60 m yükseklikteki kayalık uçurumdan denize atmışlardır .	Kurtulanların sayısı bilinmiyor ve çobanlar katliam yaptıkları tepeyi daha sonra « Zafer Tepesi / Dağı » ( _ Victory Hill / Mount Victory _ ) olarak adlandırmışlardır .	Bu katliam , _ Van Diemen's Land Company _ tarafından yapılan son şiddet olaydır .
+Event	T2	katliam	EVENT	340
+Event	T3	düşürdükleri	EVENT	357
+Event	T4	açan	EVENT	393
+Event	T6	katliam	EVENT	668
+Event	T8	Cape Grim Katliamı	EVENT	71
+Event	T9	Cape Grim massacre	EVENT	99
+Event	T1	öldürüp	EVENT	418
+Event	T10	atmışlardır	EVENT	482
+Event	T5	katliam	EVENT	540
+Event	T11	olaydır	EVENT	738
+Relation	T3	T4	CauseEffect	true	düşürdükleri	açan
+Relation	T4	T3	EffectCause	true	açan	düşürdükleri
+Relation	T4	T1	CauseEffect	true	açan	öldürüp
+Relation	T1	T4	EffectCause	true	öldürüp	açan
+Relation	T1	T10	CauseEffect	true	öldürüp	atmışlardır
+Relation	T10	T1	EffectCause	true	atmışlardır	öldürüp
+Relation	T1	T3	NoRel	true	öldürüp	düşürdükleri
+Relation	T1	T5	NoRel	true	öldürüp	katliam
+Relation	T1	T6	NoRel	true	öldürüp	katliam
+Relation	T10	T11	NoRel	true	atmışlardır	olaydır
+Relation	T10	T3	NoRel	true	atmışlardır	düşürdükleri
+Relation	T10	T6	NoRel	true	atmışlardır	katliam
+Relation	T11	T10	NoRel	true	olaydır	atmışlardır
+Relation	T11	T3	NoRel	true	olaydır	düşürdükleri
+Relation	T11	T9	NoRel	true	olaydır	Cape Grim massacre
+Relation	T2	T1	NoRel	true	katliam	öldürüp
+Relation	T3	T1	NoRel	true	düşürdükleri	öldürüp
+Relation	T3	T2	NoRel	true	düşürdükleri	katliam
+Relation	T3	T9	NoRel	true	düşürdükleri	Cape Grim massacre
+Relation	T4	T11	NoRel	true	açan	olaydır
+Relation	T4	T2	NoRel	true	açan	katliam
+Relation	T4	T5	NoRel	true	açan	katliam
+Relation	T5	T10	NoRel	true	katliam	atmışlardır
+Relation	T5	T6	NoRel	true	katliam	katliam
+Relation	T5	T9	NoRel	true	katliam	Cape Grim massacre
+Relation	T6	T11	NoRel	true	katliam	olaydır
+Relation	T6	T4	NoRel	true	katliam	açan
+Relation	T8	T2	NoRel	true	Cape Grim Katliamı	katliam
+Relation	T8	T3	NoRel	true	Cape Grim Katliamı	düşürdükleri
+Relation	T8	T9	NoRel	true	Cape Grim Katliamı	Cape Grim massacre
+Relation	T9	T1	NoRel	true	Cape Grim massacre	öldürüp
+Relation	T9	T2	NoRel	true	Cape Grim massacre	katliam
+Relation	T9	T5	NoRel	true	Cape Grim massacre	katliam
+Relation	T9	T6	NoRel	true	Cape Grim massacre	katliam
+Relation	T9	T8	NoRel	true	Cape Grim massacre	Cape Grim Katliamı

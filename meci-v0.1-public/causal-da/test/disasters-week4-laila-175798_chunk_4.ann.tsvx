@@ -1,0 +1,93 @@
+Text	For de vestallierede var koncentrationen af deres militær rettet mod Ruhrområdet .	Det var naturligt for de allierede at udnytte den overlegenhed , de besad i luftrummet til at forberede den militære indmarch på landjorden .	Angrebene var rettet mod militær- og infrastruktur og mod_forvaltningsenheder samt produktionssteder for at ødelægge moralen blandt befolkning og politikere .	Talrige store som små tyske byer blev derfor udsat for bombardementer i marts og april 1945 .	Fra sommeren 1944 havde den britiske _ Bomber Command _ planlagt at rette et angreb for at stække den tyske befolkning udholdenhed og modstandsdygtighed endeligt .	
+Event	T0	koncentrationen	EVENT	25
+Event	T1	udnytte	EVENT	121
+Event	T2	besad	EVENT	151
+Event	T3	forberede	EVENT	177
+Event	T4	indmarch	EVENT	200
+Event	T5	Angrebene	EVENT	225
+Event	T6	rettet	EVENT	239
+Event	T7	ødelægge	EVENT	333
+Event	T8	udsat	EVENT	429
+Event	T9	bombardementer	EVENT	439
+Event	T10	rette	EVENT	546
+Event	T11	angreb	EVENT	555
+Event	T12	stække	EVENT	569
+Event	T13	rettet	EVENT	58
+Event	T14	planlagt	EVENT	534
+Relation	T2	T1	CauseEffect	true	besad	udnytte
+Relation	T1	T2	EffectCause	true	udnytte	besad
+Relation	T7	T8	CauseEffect	true	ødelægge	udsat
+Relation	T8	T7	EffectCause	true	udsat	ødelægge
+Relation	T14	T12	CauseEffect	true	planlagt	stække
+Relation	T12	T14	EffectCause	true	stække	planlagt
+Relation	T0	T1	NoRel	true	koncentrationen	udnytte
+Relation	T0	T12	NoRel	true	koncentrationen	stække
+Relation	T0	T2	NoRel	true	koncentrationen	besad
+Relation	T0	T4	NoRel	true	koncentrationen	indmarch
+Relation	T0	T9	NoRel	true	koncentrationen	bombardementer
+Relation	T1	T12	NoRel	true	udnytte	stække
+Relation	T1	T14	NoRel	true	udnytte	planlagt
+Relation	T1	T3	NoRel	true	udnytte	forberede
+Relation	T1	T4	NoRel	true	udnytte	indmarch
+Relation	T1	T7	NoRel	true	udnytte	ødelægge
+Relation	T10	T12	NoRel	true	rette	stække
+Relation	T10	T2	NoRel	true	rette	besad
+Relation	T10	T3	NoRel	true	rette	forberede
+Relation	T10	T5	NoRel	true	rette	Angrebene
+Relation	T10	T6	NoRel	true	rette	rettet
+Relation	T11	T0	NoRel	true	angreb	koncentrationen
+Relation	T11	T3	NoRel	true	angreb	forberede
+Relation	T11	T5	NoRel	true	angreb	Angrebene
+Relation	T11	T6	NoRel	true	angreb	rettet
+Relation	T11	T7	NoRel	true	angreb	ødelægge
+Relation	T11	T9	NoRel	true	angreb	bombardementer
+Relation	T12	T2	NoRel	true	stække	besad
+Relation	T12	T3	NoRel	true	stække	forberede
+Relation	T12	T6	NoRel	true	stække	rettet
+Relation	T12	T7	NoRel	true	stække	ødelægge
+Relation	T12	T8	NoRel	true	stække	udsat
+Relation	T13	T0	NoRel	true	rettet	koncentrationen
+Relation	T13	T10	NoRel	true	rettet	rette
+Relation	T13	T12	NoRel	true	rettet	stække
+Relation	T13	T3	NoRel	true	rettet	forberede
+Relation	T13	T4	NoRel	true	rettet	indmarch
+Relation	T13	T6	NoRel	true	rettet	rettet
+Relation	T13	T8	NoRel	true	rettet	udsat
+Relation	T14	T2	NoRel	true	planlagt	besad
+Relation	T14	T4	NoRel	true	planlagt	indmarch
+Relation	T2	T14	NoRel	true	besad	planlagt
+Relation	T2	T3	NoRel	true	besad	forberede
+Relation	T2	T4	NoRel	true	besad	indmarch
+Relation	T2	T8	NoRel	true	besad	udsat
+Relation	T3	T0	NoRel	true	forberede	koncentrationen
+Relation	T3	T11	NoRel	true	forberede	angreb
+Relation	T3	T12	NoRel	true	forberede	stække
+Relation	T3	T14	NoRel	true	forberede	planlagt
+Relation	T3	T6	NoRel	true	forberede	rettet
+Relation	T4	T11	NoRel	true	indmarch	angreb
+Relation	T4	T12	NoRel	true	indmarch	stække
+Relation	T4	T2	NoRel	true	indmarch	besad
+Relation	T4	T3	NoRel	true	indmarch	forberede
+Relation	T5	T11	NoRel	true	Angrebene	angreb
+Relation	T5	T14	NoRel	true	Angrebene	planlagt
+Relation	T5	T8	NoRel	true	Angrebene	udsat
+Relation	T6	T0	NoRel	true	rettet	koncentrationen
+Relation	T6	T1	NoRel	true	rettet	udnytte
+Relation	T6	T13	NoRel	true	rettet	rettet
+Relation	T6	T2	NoRel	true	rettet	besad
+Relation	T6	T4	NoRel	true	rettet	indmarch
+Relation	T6	T7	NoRel	true	rettet	ødelægge
+Relation	T6	T8	NoRel	true	rettet	udsat
+Relation	T6	T9	NoRel	true	rettet	bombardementer
+Relation	T7	T10	NoRel	true	ødelægge	rette
+Relation	T7	T4	NoRel	true	ødelægge	indmarch
+Relation	T7	T6	NoRel	true	ødelægge	rettet
+Relation	T8	T0	NoRel	true	udsat	koncentrationen
+Relation	T8	T11	NoRel	true	udsat	angreb
+Relation	T8	T2	NoRel	true	udsat	besad
+Relation	T8	T5	NoRel	true	udsat	Angrebene
+Relation	T9	T1	NoRel	true	bombardementer	udnytte
+Relation	T9	T10	NoRel	true	bombardementer	rette
+Relation	T9	T2	NoRel	true	bombardementer	besad
+Relation	T9	T3	NoRel	true	bombardementer	forberede
+Relation	T9	T4	NoRel	true	bombardementer	indmarch

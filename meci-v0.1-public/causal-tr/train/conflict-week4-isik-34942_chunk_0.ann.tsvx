@@ -1,0 +1,54 @@
+Text	küçükresim | 300px | Üstte : Kiliselerin tahrip edilmesi .	Ortada : Yahudilerin başlarının kesilmesi .	Altta : Şövalyelerin Hristiyan bölgelerini yağmalaması HAÇLI SEFERLERI ya da HAÇLI AKINLARI , 1096 - 1272 yılları arasında , Avrupalı Katolik Hristiyanların , Papa'nın isteği ve çeşitli vaatleri üzerine , genellikle Müslümanların elindeki Orta Doğu toprakları ( Kutsal Topraklar kabul edilir ) üzerinde askeri ve siyasi kontrol kurmak için düzenledikleri akınlar bütünüdür .	Haçlı Seferleri’nin fikir babası aslında İspanya ve Portekiz’den Müslümanların atılması için başlatılan Reconquista ( Yeniden Fetih ) hareketidir .	Müslümanlar İspanya ve Sicilya’da hakimiyet kurmuşlardı .
+Event	T0	edilmesi	EVENT	48
+Event	T1	kesilmesi	EVENT	91
+Event	T2	yağmalaması	EVENT	146
+Event	T4	isteği	EVENT	271
+Event	T5	atılması	EVENT	557
+Event	T6	hareketidir	EVENT	612
+Event	T7	HAÇLI SEFERLERI	EVENT	158
+Event	T3	HAÇLI AKINLARI	EVENT	180
+Event	T8	akınlar	EVENT	458
+Event	T9	Haçlı Seferleri’nin	EVENT	478
+Event	T10	kurmuşlardı	EVENT	670
+Relation	T4	T7	CauseEffect	true	isteği	HAÇLI SEFERLERI
+Relation	T7	T4	EffectCause	true	HAÇLI SEFERLERI	isteği
+Relation	T4	T3	CauseEffect	true	isteği	HAÇLI AKINLARI
+Relation	T3	T4	EffectCause	true	HAÇLI AKINLARI	isteği
+Relation	T6	T9	CauseEffect	true	hareketidir	Haçlı Seferleri’nin
+Relation	T9	T6	EffectCause	true	Haçlı Seferleri’nin	hareketidir
+Relation	T10	T6	CauseEffect	true	kurmuşlardı	hareketidir
+Relation	T6	T10	EffectCause	true	hareketidir	kurmuşlardı
+Relation	T0	T1	NoRel	true	edilmesi	kesilmesi
+Relation	T0	T4	NoRel	true	edilmesi	isteği
+Relation	T0	T6	NoRel	true	edilmesi	hareketidir
+Relation	T1	T10	NoRel	true	kesilmesi	kurmuşlardı
+Relation	T1	T6	NoRel	true	kesilmesi	hareketidir
+Relation	T1	T8	NoRel	true	kesilmesi	akınlar
+Relation	T10	T4	NoRel	true	kurmuşlardı	isteği
+Relation	T10	T5	NoRel	true	kurmuşlardı	atılması
+Relation	T2	T10	NoRel	true	yağmalaması	kurmuşlardı
+Relation	T2	T4	NoRel	true	yağmalaması	isteği
+Relation	T2	T7	NoRel	true	yağmalaması	HAÇLI SEFERLERI
+Relation	T2	T8	NoRel	true	yağmalaması	akınlar
+Relation	T3	T0	NoRel	true	HAÇLI AKINLARI	edilmesi
+Relation	T3	T10	NoRel	true	HAÇLI AKINLARI	kurmuşlardı
+Relation	T3	T6	NoRel	true	HAÇLI AKINLARI	hareketidir
+Relation	T3	T8	NoRel	true	HAÇLI AKINLARI	akınlar
+Relation	T4	T0	NoRel	true	isteği	edilmesi
+Relation	T4	T6	NoRel	true	isteği	hareketidir
+Relation	T5	T1	NoRel	true	atılması	kesilmesi
+Relation	T5	T10	NoRel	true	atılması	kurmuşlardı
+Relation	T5	T2	NoRel	true	atılması	yağmalaması
+Relation	T5	T3	NoRel	true	atılması	HAÇLI AKINLARI
+Relation	T5	T8	NoRel	true	atılması	akınlar
+Relation	T6	T2	NoRel	true	hareketidir	yağmalaması
+Relation	T6	T3	NoRel	true	hareketidir	HAÇLI AKINLARI
+Relation	T6	T5	NoRel	true	hareketidir	atılması
+Relation	T7	T1	NoRel	true	HAÇLI SEFERLERI	kesilmesi
+Relation	T7	T3	NoRel	true	HAÇLI SEFERLERI	HAÇLI AKINLARI
+Relation	T7	T5	NoRel	true	HAÇLI SEFERLERI	atılması
+Relation	T8	T3	NoRel	true	akınlar	HAÇLI AKINLARI
+Relation	T8	T5	NoRel	true	akınlar	atılması
+Relation	T8	T9	NoRel	true	akınlar	Haçlı Seferleri’nin
+Relation	T9	T0	NoRel	true	Haçlı Seferleri’nin	edilmesi
+Relation	T9	T5	NoRel	true	Haçlı Seferleri’nin	atılması

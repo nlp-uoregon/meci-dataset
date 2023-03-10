@@ -1,0 +1,35 @@
+Text	Krizle mücadele kapsamında Türkiye yabancı sermayeye yatırım yapılmasını ve 2002 Avrupa Birliği ile müzakereleri hızlandırma çabasına girdi .	Türkiye'nin yabancı sermaye yatırımını yapabileceği en iyi yer ; coğrafi yakınlık ve 1995'te aday ülke konumuna girmiş olması sebebiyle Avrupa Birliği'ydi .	Avrupa Birliği üyeliğine kabul edilirse yabancı sermayeye yatırım yapmayı düşündü .	Avrupa Birliği , Türkiye için bu dönemlerde gümrük birliği açısından önemliydi .	2001 yılında Milli Güvenlik Kurulu toplantısında yapılan görüşme ile piyasadaki sorunun daha derinlere gidecek bir ekonomik kriz yaşandı .
+Event	T0	mücadele	EVENT	7
+Event	T1	girdi	EVENT	134
+Event	T2	girmiş	EVENT	254
+Event	T4	düşündü	EVENT	373
+Event	T5	görüşme	EVENT	521
+Event	T6	yaşandı	EVENT	593
+Event	T7	Krizle	EVENT	0
+Event	T8	yapılmasını	EVENT	61
+Relation	T7	T0	CauseEffect	true	Krizle	mücadele
+Relation	T0	T7	EffectCause	true	mücadele	Krizle
+Relation	T0	T1	CauseEffect	true	mücadele	girdi
+Relation	T1	T0	EffectCause	true	girdi	mücadele
+Relation	T0	T8	CauseEffect	true	mücadele	yapılmasını
+Relation	T8	T0	EffectCause	true	yapılmasını	mücadele
+Relation	T5	T6	CauseEffect	true	görüşme	yaşandı
+Relation	T6	T5	EffectCause	true	yaşandı	görüşme
+Relation	T0	T2	NoRel	true	mücadele	girmiş
+Relation	T0	T5	NoRel	true	mücadele	görüşme
+Relation	T1	T2	NoRel	true	girdi	girmiş
+Relation	T1	T5	NoRel	true	girdi	görüşme
+Relation	T1	T7	NoRel	true	girdi	Krizle
+Relation	T1	T8	NoRel	true	girdi	yapılmasını
+Relation	T2	T4	NoRel	true	girmiş	düşündü
+Relation	T2	T6	NoRel	true	girmiş	yaşandı
+Relation	T2	T7	NoRel	true	girmiş	Krizle
+Relation	T2	T8	NoRel	true	girmiş	yapılmasını
+Relation	T4	T1	NoRel	true	düşündü	girdi
+Relation	T4	T7	NoRel	true	düşündü	Krizle
+Relation	T5	T0	NoRel	true	görüşme	mücadele
+Relation	T5	T1	NoRel	true	görüşme	girdi
+Relation	T5	T4	NoRel	true	görüşme	düşündü
+Relation	T5	T7	NoRel	true	görüşme	Krizle
+Relation	T7	T1	NoRel	true	Krizle	girdi
+Relation	T7	T6	NoRel	true	Krizle	yaşandı

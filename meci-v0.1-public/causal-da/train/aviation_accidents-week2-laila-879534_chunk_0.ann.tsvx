@@ -1,0 +1,27 @@
+Text	thumb|	Flyets rute og nedstyrtningssted EGYPTAIR FLIGHT 804 ( MS804 /MSR804 ) var en international passagerflyvning fra Charles de Gaulle Airport til Cairo International Airport , fløjet af EgyptAir , der forsvandt fra radaren , mens flyet befandt sig over Middelhavet den 19. maj 2016 kl. 02:45 lokal tid ( UTC+2 ) .	Der var 66 personer om bord : 56 passagerer , 7 besætningsmedlemmer og 3 sikkerhedsvagter .	Alle ombordværende er omkommet .	Ifølge græsk militærradar , afveg Flight 804 fra den lagte kurs kort efter flyet nåede den overvågningszone , der er undergivet egyptisk flykontrol ( FIR ) .
+Event	T0	passagerflyvning	EVENT	99
+Event	T1	fløjet	EVENT	180
+Event	T2	forsvandt	EVENT	205
+Event	T3	befandt	EVENT	240
+Event	T4	omkommet	EVENT	432
+Event	T5	afveg	EVENT	471
+Event	T6	nåede	EVENT	524
+Event	T7	undergivet	EVENT	560
+Relation	T5	T2	CauseEffect	true	afveg	forsvandt
+Relation	T2	T5	EffectCause	true	forsvandt	afveg
+Relation	T2	T4	CauseEffect	true	forsvandt	omkommet
+Relation	T4	T2	EffectCause	true	omkommet	forsvandt
+Relation	T0	T3	NoRel	true	passagerflyvning	befandt
+Relation	T0	T6	NoRel	true	passagerflyvning	nåede
+Relation	T1	T6	NoRel	true	fløjet	nåede
+Relation	T2	T6	NoRel	true	forsvandt	nåede
+Relation	T3	T5	NoRel	true	befandt	afveg
+Relation	T3	T7	NoRel	true	befandt	undergivet
+Relation	T4	T0	NoRel	true	omkommet	passagerflyvning
+Relation	T4	T6	NoRel	true	omkommet	nåede
+Relation	T4	T7	NoRel	true	omkommet	undergivet
+Relation	T5	T1	NoRel	true	afveg	fløjet
+Relation	T5	T3	NoRel	true	afveg	befandt
+Relation	T5	T4	NoRel	true	afveg	omkommet
+Relation	T6	T2	NoRel	true	nåede	forsvandt
+Relation	T7	T0	NoRel	true	undergivet	passagerflyvning

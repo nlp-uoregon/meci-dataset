@@ -1,0 +1,66 @@
+Text	On June 6 , 2009 , delegates at the Federation of Canadian Municipalities conference passed a resolution that would potentially shut out U.S. bidders from Canadian city contracts , in order to help show support for Prime Minister Stephen Harper 's opposition to the " Buy American " provision .	Sherbrooke Mayor Jean Perrault , president of the federation , stated , " This U.S. protectionist policy is hurting Canadian firms , costing Canadian jobs and damaging Canadian efforts to grow in the world - wide recession . "	On February 16 , 2010 , the United States and Canada agreed on exempting Canadian companies from Buy American provisions , which would have hurt the Canadian economy .	[ President Barack Obama announces the creation of the Economic Recovery Advisory Board on February 6 , 2009 . ]	Economists such as Martin Feldstein , Daron Acemoğlu , National Economic Council director Larry Summers , and Nobel Memorial Prize in Economic Sciences winners Joseph Stiglitz and Paul Krugman favored a larger economic stimulus to counter the economic downturn .
+Event	T0	passed	EVENT	85
+Event	T1	resolution	EVENT	94
+Event	T10	exempting	EVENT	585
+Event	T11	hurt	EVENT	662
+Event	T12	announces	EVENT	715
+Event	T13	creation	EVENT	729
+Event	T14	favored	EVENT	996
+Event	T15	stimulus	EVENT	1022
+Event	T16	counter	EVENT	1034
+Event	T17	downturn	EVENT	1055
+Event	T18	shut out	EVENT	128
+Event	T19	support	EVENT	203
+Event	T2	opposition	EVENT	248
+Event	T3	stated	EVENT	358
+Event	T4	hurting	EVENT	403
+Event	T5	costing	EVENT	428
+Event	T6	damaging	EVENT	454
+Event	T7	grow	EVENT	483
+Event	T8	recession	EVENT	508
+Event	T9	agreed	EVENT	575
+Relation	T1	T18	CauseEffect	true	resolution	shut out
+Relation	T18	T1	EffectCause	true	shut out	resolution
+Relation	T1	T19	CauseEffect	true	resolution	support
+Relation	T19	T1	EffectCause	true	support	resolution
+Relation	T1	T4	CauseEffect	true	resolution	hurting
+Relation	T4	T1	EffectCause	true	hurting	resolution
+Relation	T10	T11	CauseEffect	true	exempting	hurt
+Relation	T11	T10	EffectCause	true	hurt	exempting
+Relation	T15	T14	CauseEffect	true	stimulus	favored
+Relation	T14	T15	EffectCause	true	favored	stimulus
+Relation	T17	T15	CauseEffect	true	downturn	stimulus
+Relation	T15	T17	EffectCause	true	stimulus	downturn
+Relation	T0	T16	NoRel	true	passed	counter
+Relation	T10	T16	NoRel	true	exempting	counter
+Relation	T10	T18	NoRel	true	exempting	shut out
+Relation	T12	T17	NoRel	true	announces	downturn
+Relation	T13	T1	NoRel	true	creation	resolution
+Relation	T13	T6	NoRel	true	creation	damaging
+Relation	T13	T7	NoRel	true	creation	grow
+Relation	T13	T8	NoRel	true	creation	recession
+Relation	T14	T10	NoRel	true	favored	exempting
+Relation	T14	T18	NoRel	true	favored	shut out
+Relation	T14	T8	NoRel	true	favored	recession
+Relation	T17	T16	NoRel	true	downturn	counter
+Relation	T17	T7	NoRel	true	downturn	grow
+Relation	T18	T13	NoRel	true	shut out	creation
+Relation	T18	T3	NoRel	true	shut out	stated
+Relation	T19	T6	NoRel	true	support	damaging
+Relation	T19	T7	NoRel	true	support	grow
+Relation	T2	T16	NoRel	true	opposition	counter
+Relation	T2	T19	NoRel	true	opposition	support
+Relation	T4	T10	NoRel	true	hurting	exempting
+Relation	T4	T13	NoRel	true	hurting	creation
+Relation	T5	T19	NoRel	true	costing	support
+Relation	T6	T12	NoRel	true	damaging	announces
+Relation	T6	T9	NoRel	true	damaging	agreed
+Relation	T7	T2	NoRel	true	grow	opposition
+Relation	T7	T6	NoRel	true	grow	damaging
+Relation	T8	T11	NoRel	true	recession	hurt
+Relation	T8	T18	NoRel	true	recession	shut out
+Relation	T8	T19	NoRel	true	recession	support
+Relation	T8	T3	NoRel	true	recession	stated
+Relation	T9	T16	NoRel	true	agreed	counter
+Relation	T9	T19	NoRel	true	agreed	support
+Relation	T9	T3	NoRel	true	agreed	stated

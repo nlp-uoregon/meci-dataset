@@ -1,0 +1,61 @@
+Text	Most of the victims were killed by gunshots , but the cause of death proved hard to establish for eight victims whose bodies were severely burned .	A couple was bound with chains and burned alive , two women were killed using axes or similar sharp objects , one of them by several axe blows to her head .	Another couple was beheaded and their heads were placed in bags .	The Serb civilian who attempted to protect the others was also beaten , tortured using lighted cigarettes and heated chains , and then flayed .	At 3:00 a.m. , the paramilitaries demolished the Roman Catholic church of the Pilgrimage to the Blessed Virgin Mary in Voćin .
+Event	T0	killed	EVENT	25
+Event	T1	gunshots	EVENT	35
+Event	T2	proved	EVENT	69
+Event	T3	establish	EVENT	84
+Event	T4	burned	EVENT	139
+Event	T5	bound	EVENT	161
+Event	T6	using	EVENT	220
+Event	T7	blows	EVENT	285
+Event	T8	beheaded	EVENT	324
+Event	T9	placed	EVENT	354
+Event	T10	attempted	EVENT	393
+Event	T11	protect	EVENT	406
+Event	T12	beaten	EVENT	434
+Event	T13	heated	EVENT	481
+Event	T14	flayed	EVENT	506
+Event	T15	demolished	EVENT	549
+Event	T16	Pilgrimage	EVENT	593
+Event	T17	killed	EVENT	213
+Event	T18	burned	EVENT	183
+Event	T19	tortured	EVENT	443
+Relation	T1	T0	CauseEffect	true	gunshots	killed
+Relation	T0	T1	EffectCause	true	killed	gunshots
+Relation	T4	T2	CauseEffect	true	burned	proved
+Relation	T2	T4	EffectCause	true	proved	burned
+Relation	T12	T11	CauseEffect	true	beaten	protect
+Relation	T11	T12	EffectCause	true	protect	beaten
+Relation	T11	T14	CauseEffect	true	protect	flayed
+Relation	T14	T11	EffectCause	true	flayed	protect
+Relation	T19	T11	CauseEffect	true	tortured	protect
+Relation	T11	T19	EffectCause	true	protect	tortured
+Relation	T0	T3	NoRel	true	killed	establish
+Relation	T0	T7	NoRel	true	killed	blows
+Relation	T1	T11	NoRel	true	gunshots	protect
+Relation	T1	T4	NoRel	true	gunshots	burned
+Relation	T1	T6	NoRel	true	gunshots	using
+Relation	T10	T12	NoRel	true	attempted	beaten
+Relation	T10	T16	NoRel	true	attempted	Pilgrimage
+Relation	T11	T5	NoRel	true	protect	bound
+Relation	T12	T14	NoRel	true	beaten	flayed
+Relation	T12	T9	NoRel	true	beaten	placed
+Relation	T14	T10	NoRel	true	flayed	attempted
+Relation	T14	T9	NoRel	true	flayed	placed
+Relation	T15	T16	NoRel	true	demolished	Pilgrimage
+Relation	T15	T2	NoRel	true	demolished	proved
+Relation	T15	T5	NoRel	true	demolished	bound
+Relation	T16	T3	NoRel	true	Pilgrimage	establish
+Relation	T19	T12	NoRel	true	tortured	beaten
+Relation	T19	T14	NoRel	true	tortured	flayed
+Relation	T19	T16	NoRel	true	tortured	Pilgrimage
+Relation	T19	T3	NoRel	true	tortured	establish
+Relation	T2	T12	NoRel	true	proved	beaten
+Relation	T2	T19	NoRel	true	proved	tortured
+Relation	T3	T16	NoRel	true	establish	Pilgrimage
+Relation	T4	T6	NoRel	true	burned	using
+Relation	T5	T17	NoRel	true	bound	killed
+Relation	T6	T10	NoRel	true	using	attempted
+Relation	T7	T14	NoRel	true	blows	flayed
+Relation	T7	T18	NoRel	true	blows	burned
+Relation	T7	T8	NoRel	true	blows	beheaded
+Relation	T9	T15	NoRel	true	placed	demolished

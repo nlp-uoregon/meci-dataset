@@ -1,0 +1,80 @@
+Text	ESCHEDE-ULYKKEN , der var en af de alvorligste jernbaneulykker i Tyskland nogensinde , indtraf den 3. juni 1998 , da ICE_884 _ Wilhelm Conrad Röntgen _ afsporedes ved Eschede .	101 personer omkom , og 88 blev alvorligt kvæstet .	Onsdag den 3. juni 1998 var ICE_884 _ Wilhelm Conrad Röntgen _ på vej fra München til Hamburg .	Ved Eschede var hastigheden omkring 200 km/t .	Cirka 2 km før Eschede brød en defekt hjulring på forreste_vogns tredje aksel sammen , og ved et efterfølgende sporskifte ved indkørslen til Eschede afsporedes toget kl. 10.49 .
+Event	T0	jernbaneulykker	EVENT	47
+Event	T1	indtraf	EVENT	87
+Event	T2	afsporedes	EVENT	152
+Event	T3	omkom	EVENT	190
+Event	T4	kvæstet	EVENT	219
+Event	T5	brød	EVENT	395
+Event	T6	hjulring	EVENT	410
+Event	T7	sporskifte	EVENT	483
+Event	T8	indkørslen	EVENT	498
+Event	T9	afsporedes	EVENT	521
+Event	T10	ESCHEDE-ULYKKEN	EVENT	0
+Event	T11	hastigheden	EVENT	341
+Event	T12	på vej	EVENT	292
+Relation	T5	T9	CauseEffect	true	brød	afsporedes
+Relation	T9	T5	EffectCause	true	afsporedes	brød
+Relation	T9	T10	CauseEffect	true	afsporedes	ESCHEDE-ULYKKEN
+Relation	T10	T9	EffectCause	true	ESCHEDE-ULYKKEN	afsporedes
+Relation	T9	T0	CauseEffect	true	afsporedes	jernbaneulykker
+Relation	T0	T9	EffectCause	true	jernbaneulykker	afsporedes
+Relation	T2	T0	CauseEffect	true	afsporedes	jernbaneulykker
+Relation	T0	T2	EffectCause	true	jernbaneulykker	afsporedes
+Relation	T10	T3	CauseEffect	true	ESCHEDE-ULYKKEN	omkom
+Relation	T3	T10	EffectCause	true	omkom	ESCHEDE-ULYKKEN
+Relation	T10	T4	CauseEffect	true	ESCHEDE-ULYKKEN	kvæstet
+Relation	T4	T10	EffectCause	true	kvæstet	ESCHEDE-ULYKKEN
+Relation	T3	T0	CauseEffect	true	omkom	jernbaneulykker
+Relation	T0	T3	EffectCause	true	jernbaneulykker	omkom
+Relation	T4	T0	CauseEffect	true	kvæstet	jernbaneulykker
+Relation	T0	T4	EffectCause	true	jernbaneulykker	kvæstet
+Relation	T0	T6	NoRel	true	jernbaneulykker	hjulring
+Relation	T0	T8	NoRel	true	jernbaneulykker	indkørslen
+Relation	T1	T12	NoRel	true	indtraf	på vej
+Relation	T1	T3	NoRel	true	indtraf	omkom
+Relation	T1	T4	NoRel	true	indtraf	kvæstet
+Relation	T1	T5	NoRel	true	indtraf	brød
+Relation	T1	T8	NoRel	true	indtraf	indkørslen
+Relation	T10	T1	NoRel	true	ESCHEDE-ULYKKEN	indtraf
+Relation	T10	T12	NoRel	true	ESCHEDE-ULYKKEN	på vej
+Relation	T10	T2	NoRel	true	ESCHEDE-ULYKKEN	afsporedes
+Relation	T10	T5	NoRel	true	ESCHEDE-ULYKKEN	brød
+Relation	T10	T7	NoRel	true	ESCHEDE-ULYKKEN	sporskifte
+Relation	T11	T0	NoRel	true	hastigheden	jernbaneulykker
+Relation	T11	T12	NoRel	true	hastigheden	på vej
+Relation	T11	T3	NoRel	true	hastigheden	omkom
+Relation	T11	T5	NoRel	true	hastigheden	brød
+Relation	T11	T8	NoRel	true	hastigheden	indkørslen
+Relation	T12	T10	NoRel	true	på vej	ESCHEDE-ULYKKEN
+Relation	T12	T11	NoRel	true	på vej	hastigheden
+Relation	T12	T2	NoRel	true	på vej	afsporedes
+Relation	T12	T6	NoRel	true	på vej	hjulring
+Relation	T2	T11	NoRel	true	afsporedes	hastigheden
+Relation	T2	T4	NoRel	true	afsporedes	kvæstet
+Relation	T2	T5	NoRel	true	afsporedes	brød
+Relation	T2	T7	NoRel	true	afsporedes	sporskifte
+Relation	T3	T11	NoRel	true	omkom	hastigheden
+Relation	T3	T4	NoRel	true	omkom	kvæstet
+Relation	T3	T5	NoRel	true	omkom	brød
+Relation	T3	T8	NoRel	true	omkom	indkørslen
+Relation	T4	T1	NoRel	true	kvæstet	indtraf
+Relation	T4	T7	NoRel	true	kvæstet	sporskifte
+Relation	T4	T9	NoRel	true	kvæstet	afsporedes
+Relation	T5	T0	NoRel	true	brød	jernbaneulykker
+Relation	T5	T12	NoRel	true	brød	på vej
+Relation	T5	T4	NoRel	true	brød	kvæstet
+Relation	T5	T6	NoRel	true	brød	hjulring
+Relation	T5	T7	NoRel	true	brød	sporskifte
+Relation	T6	T4	NoRel	true	hjulring	kvæstet
+Relation	T6	T5	NoRel	true	hjulring	brød
+Relation	T6	T7	NoRel	true	hjulring	sporskifte
+Relation	T6	T8	NoRel	true	hjulring	indkørslen
+Relation	T7	T3	NoRel	true	sporskifte	omkom
+Relation	T7	T5	NoRel	true	sporskifte	brød
+Relation	T7	T8	NoRel	true	sporskifte	indkørslen
+Relation	T7	T9	NoRel	true	sporskifte	afsporedes
+Relation	T8	T11	NoRel	true	indkørslen	hastigheden
+Relation	T8	T3	NoRel	true	indkørslen	omkom
+Relation	T8	T6	NoRel	true	indkørslen	hjulring
+Relation	T9	T1	NoRel	true	afsporedes	indtraf
+Relation	T9	T6	NoRel	true	afsporedes	hjulring

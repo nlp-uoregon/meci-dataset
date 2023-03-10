@@ -1,0 +1,54 @@
+Text	Se estableció una moratoria de tres meses para la independencia de Croacia por lo que la declaración tuvo efecto el 8 de octubre de 1991 .	La Guardia Nacional Croata ( - ZNG ) se formó en mayo de 1991 debido a que el Ejército Popular Yugoslavo ( _ Jugoslavenska Narodna Armija _ - _ JNA _ ) apoyó cada vez más a la SAO Krajina y la Policía Croata no pudo hacer frente a la situación .	En noviembre del mismo año , el ZNG pasó a denominarse Ejército Croata ( , HV ) .	El establecimiento de la Fuerza Militar de Croacia se vio obstaculizada por un embargo de armas de las Naciones Unidas que se estableció en septiembre de 1991 .	Los últimos meses de 1991 vieron la lucha más feroz de la guerra , que culminó en la Batalla de los Cuarteles , el Asedio de Dubrovnik y la Batalla de Vukovar .
+Event	T0	estableció	EVENT	3
+Event	T1	moratoria	EVENT	18
+Event	T10	lucha	EVENT	664
+Event	T11	guerra	EVENT	686
+Event	T12	culminó	EVENT	699
+Event	T3	formó	EVENT	179
+Event	T4	apoyó	EVENT	291
+Event	T5	establecimiento	EVENT	470
+Event	T6	obstaculizada	EVENT	525
+Event	T7	embargo	EVENT	546
+Event	T8	estableció	EVENT	593
+Relation	T7	T6	CauseEffect	true	embargo	obstaculizada
+Relation	T6	T7	EffectCause	true	obstaculizada	embargo
+Relation	T5	T6	CauseEffect	true	establecimiento	obstaculizada
+Relation	T6	T5	EffectCause	true	obstaculizada	establecimiento
+Relation	T4	T3	CauseEffect	true	apoyó	formó
+Relation	T3	T4	EffectCause	true	formó	apoyó
+Relation	T0	T1	NoRel	true	estableció	moratoria
+Relation	T0	T11	NoRel	true	estableció	guerra
+Relation	T1	T10	NoRel	true	moratoria	lucha
+Relation	T1	T12	NoRel	true	moratoria	culminó
+Relation	T1	T3	NoRel	true	moratoria	formó
+Relation	T1	T8	NoRel	true	moratoria	estableció
+Relation	T10	T8	NoRel	true	lucha	estableció
+Relation	T11	T12	NoRel	true	guerra	culminó
+Relation	T11	T4	NoRel	true	guerra	apoyó
+Relation	T11	T5	NoRel	true	guerra	establecimiento
+Relation	T12	T10	NoRel	true	culminó	lucha
+Relation	T12	T4	NoRel	true	culminó	apoyó
+Relation	T12	T5	NoRel	true	culminó	establecimiento
+Relation	T12	T8	NoRel	true	culminó	estableció
+Relation	T3	T0	NoRel	true	formó	estableció
+Relation	T3	T1	NoRel	true	formó	moratoria
+Relation	T3	T11	NoRel	true	formó	guerra
+Relation	T3	T6	NoRel	true	formó	obstaculizada
+Relation	T3	T7	NoRel	true	formó	embargo
+Relation	T3	T8	NoRel	true	formó	estableció
+Relation	T4	T10	NoRel	true	apoyó	lucha
+Relation	T4	T11	NoRel	true	apoyó	guerra
+Relation	T4	T7	NoRel	true	apoyó	embargo
+Relation	T5	T0	NoRel	true	establecimiento	estableció
+Relation	T5	T11	NoRel	true	establecimiento	guerra
+Relation	T5	T12	NoRel	true	establecimiento	culminó
+Relation	T5	T3	NoRel	true	establecimiento	formó
+Relation	T5	T7	NoRel	true	establecimiento	embargo
+Relation	T5	T8	NoRel	true	establecimiento	estableció
+Relation	T6	T3	NoRel	true	obstaculizada	formó
+Relation	T6	T8	NoRel	true	obstaculizada	estableció
+Relation	T7	T1	NoRel	true	embargo	moratoria
+Relation	T7	T3	NoRel	true	embargo	formó
+Relation	T8	T1	NoRel	true	estableció	moratoria
+Relation	T8	T3	NoRel	true	estableció	formó
+Relation	T8	T4	NoRel	true	estableció	apoyó

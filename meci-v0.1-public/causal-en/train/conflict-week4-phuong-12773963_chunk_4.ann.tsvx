@@ -1,0 +1,54 @@
+Text	In October or November 615 BC , the Medes , another ancient enemy of Assyria , under King Cyaxares entered Assyria and conquered the region around the city Arrapha in preparation for a great final campaign against Sinsharishkun .	In July or August of 614 BC , the Medes mounted attacks on the cities of Kalhu and Nineveh and successfully conquered the city Tarbisu .	They then besieged Assur .	This siege was successful and the Medes captured the ancient heart of Assyria , plundering it and killing many of its inhabitants .	Nabopolassar only arrived at Assur after the plunder had already begun and met with Cyaxares , allying with him and signing an anti-Assyrian pact .
+Event	T0	entered	EVENT	99
+Event	T1	conquered	EVENT	119
+Event	T2	preparation	EVENT	167
+Event	T3	campaign	EVENT	197
+Event	T4	attacks	EVENT	278
+Event	T5	conquered	EVENT	338
+Event	T6	besieged	EVENT	377
+Event	T7	siege	EVENT	399
+Event	T8	successful	EVENT	409
+Event	T9	captured	EVENT	434
+Event	T10	plundering	EVENT	474
+Event	T11	killing	EVENT	492
+Event	T12	arrived	EVENT	544
+Event	T13	plunder	EVENT	571
+Event	T14	begun	EVENT	591
+Event	T15	met	EVENT	601
+Event	T16	allying	EVENT	621
+Event	T17	signing	EVENT	642
+Event	T18	pact	EVENT	667
+Relation	T2	T1	CauseEffect	true	preparation	conquered
+Relation	T1	T2	EffectCause	true	conquered	preparation
+Relation	T4	T5	CauseEffect	true	attacks	conquered
+Relation	T5	T4	EffectCause	true	conquered	attacks
+Relation	T5	T6	CauseEffect	true	conquered	besieged
+Relation	T6	T5	EffectCause	true	besieged	conquered
+Relation	T6	T8	CauseEffect	true	besieged	successful
+Relation	T8	T6	EffectCause	true	successful	besieged
+Relation	T15	T12	CauseEffect	true	met	arrived
+Relation	T12	T15	EffectCause	true	arrived	met
+Relation	T0	T11	NoRel	true	entered	killing
+Relation	T1	T18	NoRel	true	conquered	pact
+Relation	T10	T14	NoRel	true	plundering	begun
+Relation	T10	T8	NoRel	true	plundering	successful
+Relation	T12	T11	NoRel	true	arrived	killing
+Relation	T13	T6	NoRel	true	plunder	besieged
+Relation	T15	T9	NoRel	true	met	captured
+Relation	T16	T14	NoRel	true	allying	begun
+Relation	T17	T13	NoRel	true	signing	plunder
+Relation	T17	T4	NoRel	true	signing	attacks
+Relation	T18	T4	NoRel	true	pact	attacks
+Relation	T2	T3	NoRel	true	preparation	campaign
+Relation	T2	T7	NoRel	true	preparation	siege
+Relation	T3	T0	NoRel	true	campaign	entered
+Relation	T3	T18	NoRel	true	campaign	pact
+Relation	T5	T12	NoRel	true	conquered	arrived
+Relation	T5	T17	NoRel	true	conquered	signing
+Relation	T5	T18	NoRel	true	conquered	pact
+Relation	T6	T0	NoRel	true	besieged	entered
+Relation	T6	T17	NoRel	true	besieged	signing
+Relation	T7	T5	NoRel	true	siege	conquered
+Relation	T8	T16	NoRel	true	successful	allying
+Relation	T9	T3	NoRel	true	captured	campaign
+Relation	T9	T5	NoRel	true	captured	conquered

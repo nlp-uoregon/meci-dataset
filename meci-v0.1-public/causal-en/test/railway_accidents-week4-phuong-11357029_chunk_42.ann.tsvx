@@ -1,0 +1,52 @@
+Text	- 3 January 2011 – Goods train derailment at Dadri area of Ghaziabad district .	- 7 July 2011 – A Mathura – Chhapra Express hit a bus at an unmanned level crossing in Thanagaon , Kanshiram Nagar district , Uttar Pradesh , killing 38 and injuring 30 .	- 10 July 2011 – The Fatehpur derailment occurred when the Kalka Mail derailed near Fatehpur , Uttar Pradesh , killing 70 people and injuring more than 300 .	- 10 July 2011 – The Guwahati – Puri Express derailed in Nalbari district , Assam , with the engine and four coaches rolling over in a rivulet , injuring more than 100 .	The derailment was determined to have been the result of a bomb attack by local militants .
+Event	T0	derailment	EVENT	31
+Event	T1	hit	EVENT	124
+Event	T2	crossing	EVENT	155
+Event	T3	killing	EVENT	222
+Event	T4	injuring	EVENT	237
+Event	T6	derailed	EVENT	321
+Event	T7	killing	EVENT	362
+Event	T8	injuring	EVENT	384
+Event	T9	derailed	EVENT	454
+Event	T10	rivulet	EVENT	544
+Event	T11	injuring	EVENT	554
+Event	T12	derailment	EVENT	583
+Event	T13	determined	EVENT	598
+Event	T5	Fatehpur derailment	EVENT	272
+Event	T14	bomb attack	EVENT	638
+Relation	T1	T3	CauseEffect	true	hit	killing
+Relation	T3	T1	EffectCause	true	killing	hit
+Relation	T1	T4	CauseEffect	true	hit	injuring
+Relation	T4	T1	EffectCause	true	injuring	hit
+Relation	T6	T7	CauseEffect	true	derailed	killing
+Relation	T7	T6	EffectCause	true	killing	derailed
+Relation	T6	T8	CauseEffect	true	derailed	injuring
+Relation	T8	T6	EffectCause	true	injuring	derailed
+Relation	T9	T11	CauseEffect	true	derailed	injuring
+Relation	T11	T9	EffectCause	true	injuring	derailed
+Relation	T14	T12	CauseEffect	true	bomb attack	derailment
+Relation	T12	T14	EffectCause	true	derailment	bomb attack
+Relation	T0	T11	NoRel	true	derailment	injuring
+Relation	T0	T8	NoRel	true	derailment	injuring
+Relation	T1	T12	NoRel	true	hit	derailment
+Relation	T10	T3	NoRel	true	rivulet	killing
+Relation	T10	T5	NoRel	true	rivulet	Fatehpur derailment
+Relation	T11	T5	NoRel	true	injuring	Fatehpur derailment
+Relation	T11	T7	NoRel	true	injuring	killing
+Relation	T12	T5	NoRel	true	derailment	Fatehpur derailment
+Relation	T13	T7	NoRel	true	determined	killing
+Relation	T2	T12	NoRel	true	crossing	derailment
+Relation	T2	T13	NoRel	true	crossing	determined
+Relation	T3	T11	NoRel	true	killing	injuring
+Relation	T3	T6	NoRel	true	killing	derailed
+Relation	T3	T8	NoRel	true	killing	injuring
+Relation	T4	T2	NoRel	true	injuring	crossing
+Relation	T4	T5	NoRel	true	injuring	Fatehpur derailment
+Relation	T5	T10	NoRel	true	Fatehpur derailment	rivulet
+Relation	T5	T12	NoRel	true	Fatehpur derailment	derailment
+Relation	T5	T9	NoRel	true	Fatehpur derailment	derailed
+Relation	T6	T12	NoRel	true	derailed	derailment
+Relation	T8	T1	NoRel	true	injuring	hit
+Relation	T9	T14	NoRel	true	derailed	bomb attack
+Relation	T9	T3	NoRel	true	derailed	killing
+Relation	T9	T4	NoRel	true	derailed	injuring

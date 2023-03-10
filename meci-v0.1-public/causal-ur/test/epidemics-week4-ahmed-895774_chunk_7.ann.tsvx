@@ -1,0 +1,46 @@
+Text	البتہ یہ تینوں مریض اب صحت یاب ہو چکے ہیں اور انہیں انفیکشن سے نجات مل چکی ہے ۔	-	2 مارچ کو وزارت صحت و خاندانی بہبود ، حکومت ہند نے دو مزید مریضوں کی خبر دی :	ایک 45 سال کا شخص دہلی کا تھا جس نے اطالیہ کا سفر کیا تھا اور دوسرا حیدرآباد ، دکن کا 24 سالہ انجینئر تھا جو متحدہ عرب امارات سے لوٹا تھا ۔	اس کے معاً بعد جے پور میں ایک اطالوی سیاح جو پہلے کورونا ٹیسٹ میں منفی پایا گیا تھا بعد میں مثبت پایا گیا اور اس طرح بھارت میں کل 6 معاملے سامنے آئے ۔
+Event	T0	انفیکشن	EVENT	52
+Event	T1	لوٹا	EVENT	289
+Event	T2	ٹیسٹ	EVENT	357
+Event	T6	ہو	EVENT	31
+Event	T7	نجات	EVENT	63
+Event	T8	خبر	EVENT	151
+Event	T9	سفر	EVENT	206
+Event	T10	منفی	EVENT	366
+Event	T3	مثبت	EVENT	392
+Event	T4	معاملے	EVENT	432
+Event	T5	سامنے	EVENT	439
+Relation	T3	T5	CauseEffect	true	مثبت	سامنے
+Relation	T5	T3	EffectCause	true	سامنے	مثبت
+Relation	T0	T2	NoRel	true	انفیکشن	ٹیسٹ
+Relation	T0	T4	NoRel	true	انفیکشن	معاملے
+Relation	T0	T6	NoRel	true	انفیکشن	ہو
+Relation	T1	T2	NoRel	true	لوٹا	ٹیسٹ
+Relation	T1	T6	NoRel	true	لوٹا	ہو
+Relation	T10	T5	NoRel	true	منفی	سامنے
+Relation	T2	T10	NoRel	true	ٹیسٹ	منفی
+Relation	T2	T4	NoRel	true	ٹیسٹ	معاملے
+Relation	T2	T5	NoRel	true	ٹیسٹ	سامنے
+Relation	T2	T6	NoRel	true	ٹیسٹ	ہو
+Relation	T3	T0	NoRel	true	مثبت	انفیکشن
+Relation	T3	T4	NoRel	true	مثبت	معاملے
+Relation	T3	T7	NoRel	true	مثبت	نجات
+Relation	T3	T8	NoRel	true	مثبت	خبر
+Relation	T4	T1	NoRel	true	معاملے	لوٹا
+Relation	T4	T10	NoRel	true	معاملے	منفی
+Relation	T4	T3	NoRel	true	معاملے	مثبت
+Relation	T4	T7	NoRel	true	معاملے	نجات
+Relation	T5	T0	NoRel	true	سامنے	انفیکشن
+Relation	T5	T6	NoRel	true	سامنے	ہو
+Relation	T5	T9	NoRel	true	سامنے	سفر
+Relation	T6	T2	NoRel	true	ہو	ٹیسٹ
+Relation	T6	T9	NoRel	true	ہو	سفر
+Relation	T7	T1	NoRel	true	نجات	لوٹا
+Relation	T7	T9	NoRel	true	نجات	سفر
+Relation	T8	T1	NoRel	true	خبر	لوٹا
+Relation	T8	T2	NoRel	true	خبر	ٹیسٹ
+Relation	T8	T4	NoRel	true	خبر	معاملے
+Relation	T9	T0	NoRel	true	سفر	انفیکشن
+Relation	T9	T3	NoRel	true	سفر	مثبت
+Relation	T9	T5	NoRel	true	سفر	سامنے
+Relation	T9	T8	NoRel	true	سفر	خبر

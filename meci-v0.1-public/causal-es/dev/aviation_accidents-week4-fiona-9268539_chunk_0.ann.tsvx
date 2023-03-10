@@ -1,0 +1,82 @@
+Text	El ACCIDENTE AÉREO DEL SIKORSKY S-76 fue un suceso que ocurrió en la mañana del 26 de enero de 2020 , que cobró notoriedad mundial debido a que entre los nueve pasajeros que abordaron el helicóptero Sikorsky S-76 Spirit se encontraban el baloncestista estadounidense Kobe Bryant de 41 años , junto a su segunda hija Gianna Bryant .	El helicóptero se estrelló en la localidad de Calabasas ( California ) , muriendo todos los ocupantes .	Las causas del accidente aún se siguen investigando , aunque según los indicios la más barajada es debido al mal tiempo ( niebla ) .	Las actualizaciones de investigación publicadas por la Junta Nacional de Seguridad en el Transporte durante la investigación del accidente afirman que :	- El helicóptero no estaba equipado con un registrador de datos de vuelo ( FDR ) o un registrador de voz de cabina ( CVR ) ni se requería que lo tuviera .
+Event	T0	AÉREO	EVENT	13
+Event	T1	suceso	EVENT	44
+Event	T2	ocurrió	EVENT	55
+Event	T3	abordaron	EVENT	174
+Event	T4	estrelló	EVENT	350
+Event	T5	muriendo	EVENT	405
+Event	T6	accidente	EVENT	451
+Event	T7	investigando	EVENT	475
+Event	T8	barajada	EVENT	523
+Event	T9	actualizaciones	EVENT	573
+Event	T10	publicadas	EVENT	606
+Event	T11	investigación	EVENT	680
+Event	T12	afirman	EVENT	708
+Event	T13	requería	EVENT	851
+Relation	T4	T5	CauseEffect	true	estrelló	muriendo
+Relation	T5	T4	EffectCause	true	muriendo	estrelló
+Relation	T0	T1	NoRel	true	AÉREO	suceso
+Relation	T0	T10	NoRel	true	AÉREO	publicadas
+Relation	T0	T2	NoRel	true	AÉREO	ocurrió
+Relation	T0	T3	NoRel	true	AÉREO	abordaron
+Relation	T0	T8	NoRel	true	AÉREO	barajada
+Relation	T0	T9	NoRel	true	AÉREO	actualizaciones
+Relation	T1	T0	NoRel	true	suceso	AÉREO
+Relation	T1	T10	NoRel	true	suceso	publicadas
+Relation	T1	T11	NoRel	true	suceso	investigación
+Relation	T1	T2	NoRel	true	suceso	ocurrió
+Relation	T1	T3	NoRel	true	suceso	abordaron
+Relation	T1	T6	NoRel	true	suceso	accidente
+Relation	T1	T8	NoRel	true	suceso	barajada
+Relation	T10	T4	NoRel	true	publicadas	estrelló
+Relation	T10	T7	NoRel	true	publicadas	investigando
+Relation	T11	T10	NoRel	true	investigación	publicadas
+Relation	T11	T12	NoRel	true	investigación	afirman
+Relation	T11	T13	NoRel	true	investigación	requería
+Relation	T11	T2	NoRel	true	investigación	ocurrió
+Relation	T11	T3	NoRel	true	investigación	abordaron
+Relation	T11	T4	NoRel	true	investigación	estrelló
+Relation	T11	T5	NoRel	true	investigación	muriendo
+Relation	T12	T10	NoRel	true	afirman	publicadas
+Relation	T12	T4	NoRel	true	afirman	estrelló
+Relation	T12	T7	NoRel	true	afirman	investigando
+Relation	T12	T8	NoRel	true	afirman	barajada
+Relation	T13	T0	NoRel	true	requería	AÉREO
+Relation	T13	T3	NoRel	true	requería	abordaron
+Relation	T13	T4	NoRel	true	requería	estrelló
+Relation	T13	T6	NoRel	true	requería	accidente
+Relation	T13	T8	NoRel	true	requería	barajada
+Relation	T2	T0	NoRel	true	ocurrió	AÉREO
+Relation	T2	T1	NoRel	true	ocurrió	suceso
+Relation	T2	T10	NoRel	true	ocurrió	publicadas
+Relation	T2	T12	NoRel	true	ocurrió	afirman
+Relation	T2	T13	NoRel	true	ocurrió	requería
+Relation	T2	T3	NoRel	true	ocurrió	abordaron
+Relation	T2	T7	NoRel	true	ocurrió	investigando
+Relation	T2	T8	NoRel	true	ocurrió	barajada
+Relation	T3	T0	NoRel	true	abordaron	AÉREO
+Relation	T3	T2	NoRel	true	abordaron	ocurrió
+Relation	T3	T5	NoRel	true	abordaron	muriendo
+Relation	T3	T8	NoRel	true	abordaron	barajada
+Relation	T4	T0	NoRel	true	estrelló	AÉREO
+Relation	T4	T1	NoRel	true	estrelló	suceso
+Relation	T4	T10	NoRel	true	estrelló	publicadas
+Relation	T4	T6	NoRel	true	estrelló	accidente
+Relation	T4	T8	NoRel	true	estrelló	barajada
+Relation	T5	T1	NoRel	true	muriendo	suceso
+Relation	T5	T12	NoRel	true	muriendo	afirman
+Relation	T5	T9	NoRel	true	muriendo	actualizaciones
+Relation	T6	T10	NoRel	true	accidente	publicadas
+Relation	T6	T3	NoRel	true	accidente	abordaron
+Relation	T6	T4	NoRel	true	accidente	estrelló
+Relation	T6	T7	NoRel	true	accidente	investigando
+Relation	T7	T2	NoRel	true	investigando	ocurrió
+Relation	T7	T5	NoRel	true	investigando	muriendo
+Relation	T8	T11	NoRel	true	barajada	investigación
+Relation	T8	T3	NoRel	true	barajada	abordaron
+Relation	T9	T0	NoRel	true	actualizaciones	AÉREO
+Relation	T9	T13	NoRel	true	actualizaciones	requería
+Relation	T9	T2	NoRel	true	actualizaciones	ocurrió
+Relation	T9	T3	NoRel	true	actualizaciones	abordaron
+Relation	T9	T4	NoRel	true	actualizaciones	estrelló
+Relation	T9	T8	NoRel	true	actualizaciones	barajada

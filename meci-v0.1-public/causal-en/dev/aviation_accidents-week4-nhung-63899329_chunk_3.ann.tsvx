@@ -1,0 +1,61 @@
+Text	Captain Kashin asked his flight engineer to investigate the situation in the cabin , and after Nikitin realised that there were hijackers on board , he immediately shouted the information to the flight crew and shut the door from the outside .	The flight engineer tried to defuse one of the hijackers ( Romanov ) , however , he was injured by Zhalnin .	One of the passengers ( Vladimir Gaponenko ) attempted to defuse Bondarev , but he lost his balance from the aircraft pitching , and as a result got injured .	In the flight deck Kashin sent a distress signal to air traffic control .	Meanwhile , the attackers managed to break the lock on the cockpit door and entered the flight deck .
+Event	T0	asked	EVENT	15
+Event	T1	investigate	EVENT	44
+Event	T2	situation	EVENT	60
+Event	T3	realised	EVENT	103
+Event	T4	hijackers	EVENT	128
+Event	T5	shouted	EVENT	164
+Event	T6	shut	EVENT	211
+Event	T7	tried	EVENT	264
+Event	T8	defuse	EVENT	273
+Event	T9	injured	EVENT	332
+Event	T10	attempted	EVENT	398
+Event	T11	defuse	EVENT	411
+Event	T12	lost	EVENT	436
+Event	T13	pitching	EVENT	471
+Event	T14	injured	EVENT	502
+Event	T15	sent	EVENT	538
+Event	T16	managed	EVENT	612
+Event	T17	break	EVENT	623
+Event	T18	entered	EVENT	662
+Event	T19	control	EVENT	576
+Relation	T0	T1	CauseEffect	true	asked	investigate
+Relation	T1	T0	EffectCause	true	investigate	asked
+Relation	T3	T5	CauseEffect	true	realised	shouted
+Relation	T5	T3	EffectCause	true	shouted	realised
+Relation	T13	T12	CauseEffect	true	pitching	lost
+Relation	T12	T13	EffectCause	true	lost	pitching
+Relation	T12	T14	CauseEffect	true	lost	injured
+Relation	T14	T12	EffectCause	true	injured	lost
+Relation	T0	T12	NoRel	true	asked	lost
+Relation	T10	T0	NoRel	true	attempted	asked
+Relation	T10	T13	NoRel	true	attempted	pitching
+Relation	T10	T2	NoRel	true	attempted	situation
+Relation	T11	T0	NoRel	true	defuse	asked
+Relation	T12	T1	NoRel	true	lost	investigate
+Relation	T12	T11	NoRel	true	lost	defuse
+Relation	T12	T7	NoRel	true	lost	tried
+Relation	T14	T13	NoRel	true	injured	pitching
+Relation	T15	T11	NoRel	true	sent	defuse
+Relation	T15	T12	NoRel	true	sent	lost
+Relation	T15	T17	NoRel	true	sent	break
+Relation	T16	T0	NoRel	true	managed	asked
+Relation	T17	T10	NoRel	true	break	attempted
+Relation	T17	T18	NoRel	true	break	entered
+Relation	T18	T14	NoRel	true	entered	injured
+Relation	T18	T3	NoRel	true	entered	realised
+Relation	T19	T3	NoRel	true	control	realised
+Relation	T2	T9	NoRel	true	situation	injured
+Relation	T3	T15	NoRel	true	realised	sent
+Relation	T4	T10	NoRel	true	hijackers	attempted
+Relation	T4	T12	NoRel	true	hijackers	lost
+Relation	T5	T8	NoRel	true	shouted	defuse
+Relation	T6	T11	NoRel	true	shut	defuse
+Relation	T7	T10	NoRel	true	tried	attempted
+Relation	T7	T15	NoRel	true	tried	sent
+Relation	T7	T19	NoRel	true	tried	control
+Relation	T8	T12	NoRel	true	defuse	lost
+Relation	T8	T13	NoRel	true	defuse	pitching
+Relation	T8	T16	NoRel	true	defuse	managed
+Relation	T8	T3	NoRel	true	defuse	realised
+Relation	T9	T17	NoRel	true	injured	break

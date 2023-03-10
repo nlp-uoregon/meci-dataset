@@ -1,0 +1,121 @@
+Text	Un pasajero informó de que el sospechoso , aunque se había quemado " algo grave " en la pierna , parecía " muy tranquilo " y como una " persona normal " .	Cuando el ataque sucedió , una luz indicando fuego se activó en la cabina , por lo que el piloto pidió rescate y refuerzos .	El incidente fue inicialmente declarado como una emergencia en vuelo , antes de ser considerada como un intento de ataque terrorista .	El avión hizo un aterrizaje de emergencia en el Aeropuerto Metropolitano del Condado de Wayne en Detroit , Romulus , Míchigan ( un suburbio de Detroit ) justo antes de la 1 p.m. hora local .	Umar Farouk Abdulmutallab , licenciado en ingeniería en Londres , donde vivió en un apartamento de un barrio residencial , fue acusado el 26 de diciembre de 2009 formalmente de introducir un artefacto explosivo en el vuelo que recorría la ruta Ámsterdam-Detroit y de tratar de hacer explotar el aparato .
+Event	T0	informó	EVENT	12
+Event	T1	quemado	EVENT	59
+Event	T2	sucedió	EVENT	172
+Event	T3	activó	EVENT	209
+Event	T4	rescate	EVENT	258
+Event	T5	incidente	EVENT	283
+Event	T6	declarado	EVENT	310
+Event	T7	emergencia	EVENT	329
+Event	T8	considerada	EVENT	364
+Event	T9	intento	EVENT	384
+Event	T11	hizo	EVENT	424
+Event	T12	aterrizaje	EVENT	432
+Event	T14	acusado	EVENT	733
+Event	T15	introducir	EVENT	783
+Event	T17	vuelo	EVENT	823
+Event	T18	recorría	EVENT	833
+Event	T19	tratar	EVENT	873
+Relation	T9	T14	CauseEffect	true	intento	acusado
+Relation	T14	T9	EffectCause	true	acusado	intento
+Relation	T9	T12	CauseEffect	true	intento	aterrizaje
+Relation	T12	T9	EffectCause	true	aterrizaje	intento
+Relation	T15	T9	CauseEffect	true	introducir	intento
+Relation	T9	T15	EffectCause	true	intento	introducir
+Relation	T2	T3	CauseEffect	true	sucedió	activó
+Relation	T3	T2	EffectCause	true	activó	sucedió
+Relation	T3	T4	CauseEffect	true	activó	rescate
+Relation	T4	T3	EffectCause	true	rescate	activó
+Relation	T0	T12	NoRel	true	informó	aterrizaje
+Relation	T0	T14	NoRel	true	informó	acusado
+Relation	T0	T17	NoRel	true	informó	vuelo
+Relation	T0	T5	NoRel	true	informó	incidente
+Relation	T0	T6	NoRel	true	informó	declarado
+Relation	T0	T7	NoRel	true	informó	emergencia
+Relation	T0	T8	NoRel	true	informó	considerada
+Relation	T1	T11	NoRel	true	quemado	hizo
+Relation	T1	T12	NoRel	true	quemado	aterrizaje
+Relation	T1	T14	NoRel	true	quemado	acusado
+Relation	T1	T15	NoRel	true	quemado	introducir
+Relation	T1	T17	NoRel	true	quemado	vuelo
+Relation	T1	T3	NoRel	true	quemado	activó
+Relation	T1	T5	NoRel	true	quemado	incidente
+Relation	T11	T0	NoRel	true	hizo	informó
+Relation	T11	T12	NoRel	true	hizo	aterrizaje
+Relation	T11	T18	NoRel	true	hizo	recorría
+Relation	T11	T3	NoRel	true	hizo	activó
+Relation	T11	T7	NoRel	true	hizo	emergencia
+Relation	T12	T1	NoRel	true	aterrizaje	quemado
+Relation	T12	T15	NoRel	true	aterrizaje	introducir
+Relation	T12	T17	NoRel	true	aterrizaje	vuelo
+Relation	T12	T18	NoRel	true	aterrizaje	recorría
+Relation	T12	T19	NoRel	true	aterrizaje	tratar
+Relation	T14	T0	NoRel	true	acusado	informó
+Relation	T14	T15	NoRel	true	acusado	introducir
+Relation	T14	T2	NoRel	true	acusado	sucedió
+Relation	T14	T6	NoRel	true	acusado	declarado
+Relation	T15	T0	NoRel	true	introducir	informó
+Relation	T15	T12	NoRel	true	introducir	aterrizaje
+Relation	T15	T14	NoRel	true	introducir	acusado
+Relation	T15	T7	NoRel	true	introducir	emergencia
+Relation	T17	T2	NoRel	true	vuelo	sucedió
+Relation	T17	T5	NoRel	true	vuelo	incidente
+Relation	T18	T1	NoRel	true	recorría	quemado
+Relation	T18	T12	NoRel	true	recorría	aterrizaje
+Relation	T18	T14	NoRel	true	recorría	acusado
+Relation	T18	T19	NoRel	true	recorría	tratar
+Relation	T18	T3	NoRel	true	recorría	activó
+Relation	T18	T4	NoRel	true	recorría	rescate
+Relation	T18	T8	NoRel	true	recorría	considerada
+Relation	T19	T15	NoRel	true	tratar	introducir
+Relation	T19	T17	NoRel	true	tratar	vuelo
+Relation	T19	T3	NoRel	true	tratar	activó
+Relation	T2	T0	NoRel	true	sucedió	informó
+Relation	T2	T12	NoRel	true	sucedió	aterrizaje
+Relation	T2	T19	NoRel	true	sucedió	tratar
+Relation	T2	T6	NoRel	true	sucedió	declarado
+Relation	T2	T8	NoRel	true	sucedió	considerada
+Relation	T2	T9	NoRel	true	sucedió	intento
+Relation	T3	T1	NoRel	true	activó	quemado
+Relation	T3	T15	NoRel	true	activó	introducir
+Relation	T3	T18	NoRel	true	activó	recorría
+Relation	T3	T19	NoRel	true	activó	tratar
+Relation	T3	T5	NoRel	true	activó	incidente
+Relation	T4	T0	NoRel	true	rescate	informó
+Relation	T4	T11	NoRel	true	rescate	hizo
+Relation	T4	T19	NoRel	true	rescate	tratar
+Relation	T4	T5	NoRel	true	rescate	incidente
+Relation	T4	T8	NoRel	true	rescate	considerada
+Relation	T4	T9	NoRel	true	rescate	intento
+Relation	T5	T0	NoRel	true	incidente	informó
+Relation	T5	T1	NoRel	true	incidente	quemado
+Relation	T5	T17	NoRel	true	incidente	vuelo
+Relation	T5	T19	NoRel	true	incidente	tratar
+Relation	T5	T3	NoRel	true	incidente	activó
+Relation	T5	T7	NoRel	true	incidente	emergencia
+Relation	T5	T9	NoRel	true	incidente	intento
+Relation	T6	T12	NoRel	true	declarado	aterrizaje
+Relation	T6	T14	NoRel	true	declarado	acusado
+Relation	T6	T19	NoRel	true	declarado	tratar
+Relation	T6	T4	NoRel	true	declarado	rescate
+Relation	T6	T9	NoRel	true	declarado	intento
+Relation	T7	T14	NoRel	true	emergencia	acusado
+Relation	T7	T15	NoRel	true	emergencia	introducir
+Relation	T7	T4	NoRel	true	emergencia	rescate
+Relation	T7	T6	NoRel	true	emergencia	declarado
+Relation	T7	T8	NoRel	true	emergencia	considerada
+Relation	T8	T1	NoRel	true	considerada	quemado
+Relation	T8	T12	NoRel	true	considerada	aterrizaje
+Relation	T8	T15	NoRel	true	considerada	introducir
+Relation	T8	T2	NoRel	true	considerada	sucedió
+Relation	T8	T3	NoRel	true	considerada	activó
+Relation	T8	T5	NoRel	true	considerada	incidente
+Relation	T8	T9	NoRel	true	considerada	intento
+Relation	T9	T11	NoRel	true	intento	hizo
+Relation	T9	T17	NoRel	true	intento	vuelo
+Relation	T9	T18	NoRel	true	intento	recorría
+Relation	T9	T19	NoRel	true	intento	tratar
+Relation	T9	T4	NoRel	true	intento	rescate
+Relation	T9	T5	NoRel	true	intento	incidente
+Relation	T9	T6	NoRel	true	intento	declarado
+Relation	T9	T7	NoRel	true	intento	emergencia

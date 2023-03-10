@@ -1,0 +1,63 @@
+Text	Se encarga del edificio de administración situado delante de la estación .	En 1863 envía desde su estudio de París los planos hasta que pocos meses después fallece , situación que prolonga las obras de los edificios administrativos debido a un litigio con los herederos del arquitecto parisino .	El gobierno español interviene en la gestión de la compañía MZA solicitando un mayor servicio en la línea Madrid-Zaragoza .	El 15 de mayo de 1863 se promulga una real orden instando a la compañía a presentar en un plazo determinado la nueva estación con un proyecto descriptivo de estación .	Los problemas de la nueva estación se agravan con un incendio que destruyó gran parte de su estructura en la noche del 24 al 25 de febrero de 1864 , sobre todo en la cubierta del andén donde abundaba la construcción en madera .
+Event	T0	encarga	EVENT	3
+Event	T1	envía	EVENT	83
+Event	T10	solicitando	EVENT	360
+Event	T14	problemas	EVENT	592
+Event	T15	agravan	EVENT	626
+Event	T16	incendio	EVENT	641
+Event	T17	destruyó	EVENT	654
+Event	T18	abundaba	EVENT	779
+Event	T3	fallece	EVENT	156
+Event	T6	obras	EVENT	193
+Event	T7	litigio	EVENT	244
+Event	T8	interviene	EVENT	316
+Relation	T8	T10	CauseEffect	true	interviene	solicitando
+Relation	T10	T8	EffectCause	true	solicitando	interviene
+Relation	T16	T17	CauseEffect	true	incendio	destruyó
+Relation	T17	T16	EffectCause	true	destruyó	incendio
+Relation	T0	T10	NoRel	true	encarga	solicitando
+Relation	T0	T15	NoRel	true	encarga	agravan
+Relation	T0	T3	NoRel	true	encarga	fallece
+Relation	T0	T7	NoRel	true	encarga	litigio
+Relation	T1	T18	NoRel	true	envía	abundaba
+Relation	T1	T3	NoRel	true	envía	fallece
+Relation	T1	T7	NoRel	true	envía	litigio
+Relation	T1	T8	NoRel	true	envía	interviene
+Relation	T10	T0	NoRel	true	solicitando	encarga
+Relation	T10	T1	NoRel	true	solicitando	envía
+Relation	T10	T15	NoRel	true	solicitando	agravan
+Relation	T10	T16	NoRel	true	solicitando	incendio
+Relation	T10	T17	NoRel	true	solicitando	destruyó
+Relation	T10	T18	NoRel	true	solicitando	abundaba
+Relation	T14	T10	NoRel	true	problemas	solicitando
+Relation	T14	T16	NoRel	true	problemas	incendio
+Relation	T14	T17	NoRel	true	problemas	destruyó
+Relation	T14	T7	NoRel	true	problemas	litigio
+Relation	T15	T16	NoRel	true	agravan	incendio
+Relation	T15	T17	NoRel	true	agravan	destruyó
+Relation	T15	T18	NoRel	true	agravan	abundaba
+Relation	T15	T3	NoRel	true	agravan	fallece
+Relation	T15	T7	NoRel	true	agravan	litigio
+Relation	T16	T1	NoRel	true	incendio	envía
+Relation	T16	T10	NoRel	true	incendio	solicitando
+Relation	T16	T7	NoRel	true	incendio	litigio
+Relation	T16	T8	NoRel	true	incendio	interviene
+Relation	T17	T15	NoRel	true	destruyó	agravan
+Relation	T18	T10	NoRel	true	abundaba	solicitando
+Relation	T18	T15	NoRel	true	abundaba	agravan
+Relation	T18	T16	NoRel	true	abundaba	incendio
+Relation	T3	T10	NoRel	true	fallece	solicitando
+Relation	T3	T15	NoRel	true	fallece	agravan
+Relation	T3	T16	NoRel	true	fallece	incendio
+Relation	T6	T1	NoRel	true	obras	envía
+Relation	T6	T17	NoRel	true	obras	destruyó
+Relation	T6	T18	NoRel	true	obras	abundaba
+Relation	T6	T8	NoRel	true	obras	interviene
+Relation	T7	T0	NoRel	true	litigio	encarga
+Relation	T7	T1	NoRel	true	litigio	envía
+Relation	T7	T10	NoRel	true	litigio	solicitando
+Relation	T7	T3	NoRel	true	litigio	fallece
+Relation	T8	T1	NoRel	true	interviene	envía
+Relation	T8	T16	NoRel	true	interviene	incendio
+Relation	T8	T17	NoRel	true	interviene	destruyó
+Relation	T8	T18	NoRel	true	interviene	abundaba

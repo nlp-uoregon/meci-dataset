@@ -1,0 +1,77 @@
+Text	اِنمارسَیٹ نامی سیٹلائٹ کمپنی نے بھی تصدیق کیا کہ ان کے نیٹورک پر جہاز کا سگنل وصول کیا گیا ۔	11 مارچ پر فوجی ریڈار کے سابق ڈاٹا کے تجزیے سے معلوم ہوا کہ شہری ریڈار سے رابطہ منقطع کرنے کے بعد ، جہاز نے مغرب کو نازک موڑ لی اور آبنائے ملاکا کی طرف سفر کرنے لگا اور مزید ستر_منٹ کے لیے جہاز ملیشیائی فوجی ریڈار پر نمودار رہا ۔	جہاز نے ملیشیا کی خشکی پار کی اور پُولاؤُ پیراک کے نزدیک فوجی ریڈار سے غائب ہو گیا ۔	یہ مقام شہری ریڈار سے غائب ہونے کے مقام سے 500 کلومیٹر دور تھا ۔	نیو یارک ٹائمز اور روٹرز نے بیان کیا کہ راستے میں تبدیلی دلالت کرتی ہے کہ جہاز اس وقت پائلٹ کے قابو میں تھا ۔
+Event	T0	وصول	EVENT	79
+Event	T1	تجزیے	EVENT	132
+Event	T7	غائب	EVENT	395
+Event	T9	غائب	EVENT	431
+Event	T10	تصدیق	EVENT	37
+Event	T11	معلوم	EVENT	141
+Event	T2	منقطع	EVENT	174
+Event	T3	موڑ	EVENT	215
+Event	T4	سفر	EVENT	246
+Event	T5	نمودار	EVENT	311
+Event	T6	بیان	EVENT	502
+Event	T8	قابو	EVENT	569
+Event	T12	تبدیلی	EVENT	524
+Relation	T1	T11	CauseEffect	true	تجزیے	معلوم
+Relation	T11	T1	EffectCause	true	معلوم	تجزیے
+Relation	T0	T10	CauseEffect	true	وصول	تصدیق
+Relation	T10	T0	EffectCause	true	تصدیق	وصول
+Relation	T8	T12	CauseEffect	true	قابو	تبدیلی
+Relation	T12	T8	EffectCause	true	تبدیلی	قابو
+Relation	T0	T11	NoRel	true	وصول	معلوم
+Relation	T0	T2	NoRel	true	وصول	منقطع
+Relation	T0	T3	NoRel	true	وصول	موڑ
+Relation	T0	T4	NoRel	true	وصول	سفر
+Relation	T0	T5	NoRel	true	وصول	نمودار
+Relation	T1	T0	NoRel	true	تجزیے	وصول
+Relation	T1	T10	NoRel	true	تجزیے	تصدیق
+Relation	T1	T3	NoRel	true	تجزیے	موڑ
+Relation	T1	T5	NoRel	true	تجزیے	نمودار
+Relation	T1	T6	NoRel	true	تجزیے	بیان
+Relation	T1	T7	NoRel	true	تجزیے	غائب
+Relation	T1	T9	NoRel	true	تجزیے	غائب
+Relation	T10	T7	NoRel	true	تصدیق	غائب
+Relation	T10	T8	NoRel	true	تصدیق	قابو
+Relation	T11	T0	NoRel	true	معلوم	وصول
+Relation	T11	T2	NoRel	true	معلوم	منقطع
+Relation	T11	T4	NoRel	true	معلوم	سفر
+Relation	T11	T9	NoRel	true	معلوم	غائب
+Relation	T12	T10	NoRel	true	تبدیلی	تصدیق
+Relation	T12	T2	NoRel	true	تبدیلی	منقطع
+Relation	T12	T3	NoRel	true	تبدیلی	موڑ
+Relation	T2	T0	NoRel	true	منقطع	وصول
+Relation	T2	T12	NoRel	true	منقطع	تبدیلی
+Relation	T3	T1	NoRel	true	موڑ	تجزیے
+Relation	T3	T4	NoRel	true	موڑ	سفر
+Relation	T3	T5	NoRel	true	موڑ	نمودار
+Relation	T3	T7	NoRel	true	موڑ	غائب
+Relation	T4	T1	NoRel	true	سفر	تجزیے
+Relation	T4	T10	NoRel	true	سفر	تصدیق
+Relation	T4	T11	NoRel	true	سفر	معلوم
+Relation	T4	T3	NoRel	true	سفر	موڑ
+Relation	T4	T8	NoRel	true	سفر	قابو
+Relation	T5	T0	NoRel	true	نمودار	وصول
+Relation	T5	T1	NoRel	true	نمودار	تجزیے
+Relation	T5	T11	NoRel	true	نمودار	معلوم
+Relation	T5	T12	NoRel	true	نمودار	تبدیلی
+Relation	T5	T2	NoRel	true	نمودار	منقطع
+Relation	T5	T6	NoRel	true	نمودار	بیان
+Relation	T5	T8	NoRel	true	نمودار	قابو
+Relation	T6	T0	NoRel	true	بیان	وصول
+Relation	T6	T5	NoRel	true	بیان	نمودار
+Relation	T7	T11	NoRel	true	غائب	معلوم
+Relation	T7	T12	NoRel	true	غائب	تبدیلی
+Relation	T7	T2	NoRel	true	غائب	منقطع
+Relation	T7	T3	NoRel	true	غائب	موڑ
+Relation	T7	T6	NoRel	true	غائب	بیان
+Relation	T7	T9	NoRel	true	غائب	غائب
+Relation	T8	T0	NoRel	true	قابو	وصول
+Relation	T8	T1	NoRel	true	قابو	تجزیے
+Relation	T8	T11	NoRel	true	قابو	معلوم
+Relation	T8	T2	NoRel	true	قابو	منقطع
+Relation	T8	T3	NoRel	true	قابو	موڑ
+Relation	T8	T4	NoRel	true	قابو	سفر
+Relation	T8	T6	NoRel	true	قابو	بیان
+Relation	T8	T9	NoRel	true	قابو	غائب
+Relation	T9	T10	NoRel	true	غائب	تصدیق
+Relation	T9	T3	NoRel	true	غائب	موڑ

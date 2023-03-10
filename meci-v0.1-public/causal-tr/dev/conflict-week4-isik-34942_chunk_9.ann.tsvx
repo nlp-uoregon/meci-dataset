@@ -1,0 +1,45 @@
+Text	Haziran ayının sonunda Haçlı ordusu Kudüs'e gitmek için yürüyüşe başladı .	Fransız soylu asillerinden Blois kontu Stephen karısına gönderebildiği nadir bir mektupta bu geçişin 5 hafta süreceğini belirtmişti .	Ancak bu geçiş 2 yıl sürdü .	10 Nisan'da Haçlılar yürüyüşe başlayıp önce Anadolu Selçuklu Devleti başkenti İznik'i kuşattılar .	Anadolu Selçuklu Sultanı I. Kılıç Arslan Haçlılar’ın ciddi bir tehlike olabileceğini hesap edememiş ve 1097 ilkbaharında bütün ordusu ile Ermeni Gabriel’in elindeki Malatya’yı kuşatmaya gitmişti .
+Event	T0	gitmek	EVENT	44
+Event	T1	başladı	EVENT	65
+Event	T2	geçişin	EVENT	168
+Event	T3	belirtmişti	EVENT	195
+Event	T4	geçiş	EVENT	218
+Event	T5	sürdü	EVENT	230
+Event	T6	kuşattılar	EVENT	324
+Event	T8	başlayıp	EVENT	268
+Event	T7	gitmişti	EVENT	523
+Event	T9	edememiş	EVENT	428
+Relation	T8	T6	CauseEffect	true	başlayıp	kuşattılar
+Relation	T6	T8	EffectCause	true	kuşattılar	başlayıp
+Relation	T9	T7	CauseEffect	true	edememiş	gitmişti
+Relation	T7	T9	EffectCause	true	gitmişti	edememiş
+Relation	T0	T5	NoRel	true	gitmek	sürdü
+Relation	T0	T6	NoRel	true	gitmek	kuşattılar
+Relation	T0	T7	NoRel	true	gitmek	gitmişti
+Relation	T0	T8	NoRel	true	gitmek	başlayıp
+Relation	T1	T0	NoRel	true	başladı	gitmek
+Relation	T1	T4	NoRel	true	başladı	geçiş
+Relation	T1	T5	NoRel	true	başladı	sürdü
+Relation	T2	T1	NoRel	true	geçişin	başladı
+Relation	T2	T6	NoRel	true	geçişin	kuşattılar
+Relation	T2	T8	NoRel	true	geçişin	başlayıp
+Relation	T3	T5	NoRel	true	belirtmişti	sürdü
+Relation	T3	T8	NoRel	true	belirtmişti	başlayıp
+Relation	T3	T9	NoRel	true	belirtmişti	edememiş
+Relation	T4	T2	NoRel	true	geçiş	geçişin
+Relation	T4	T3	NoRel	true	geçiş	belirtmişti
+Relation	T4	T8	NoRel	true	geçiş	başlayıp
+Relation	T5	T3	NoRel	true	sürdü	belirtmişti
+Relation	T5	T4	NoRel	true	sürdü	geçiş
+Relation	T6	T7	NoRel	true	kuşattılar	gitmişti
+Relation	T6	T9	NoRel	true	kuşattılar	edememiş
+Relation	T7	T3	NoRel	true	gitmişti	belirtmişti
+Relation	T7	T4	NoRel	true	gitmişti	geçiş
+Relation	T7	T5	NoRel	true	gitmişti	sürdü
+Relation	T7	T6	NoRel	true	gitmişti	kuşattılar
+Relation	T8	T0	NoRel	true	başlayıp	gitmek
+Relation	T8	T1	NoRel	true	başlayıp	başladı
+Relation	T8	T2	NoRel	true	başlayıp	geçişin
+Relation	T8	T3	NoRel	true	başlayıp	belirtmişti
+Relation	T9	T5	NoRel	true	edememiş	sürdü
+Relation	T9	T6	NoRel	true	edememiş	kuşattılar

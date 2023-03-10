@@ -1,0 +1,83 @@
+Text	Deprem sonucu 32 kişi de yaralandı .	Köyün 800 sakininin 700'ünün deprem anında yaylada olması fazla can kaybını önledi .	Depremin en büyük zararı verdiği Yığınçal köyünün dışında Kutlubulak , Kucak , Sağlıksuyu , Subeşiği , Bozkurt ve Günyolu köylerinde de hasar meydana geldi .	Kandilli Rasathanesi , deprem sonucunda bin binanın hasar gördüğünü belirtti .	Orta büyüklükteki bir depremde bu kadar binanın zarar görmesinin sebebi , binaların moloz taştan örülü yığma yapılar olarak yapılmış olmalarıdır .
+Event	T0	yaralandı	EVENT	25
+Event	T1	deprem	EVENT	66
+Event	T2	önledi	EVENT	113
+Event	T3	Depremin	EVENT	122
+Event	T5	geldi	EVENT	272
+Event	T6	deprem	EVENT	303
+Event	T7	belirtti	EVENT	348
+Event	T8	depremde	EVENT	381
+Event	T10	yapılmış	EVENT	483
+Event	T11	Deprem	EVENT	0
+Event	T12	olması	EVENT	88
+Event	T4	hasar	EVENT	258
+Event	T13	zararı	EVENT	140
+Event	T9	zarar	EVENT	407
+Relation	T12	T2	CauseEffect	true	olması	önledi
+Relation	T2	T12	EffectCause	true	önledi	olması
+Relation	T3	T13	CauseEffect	true	Depremin	zararı
+Relation	T13	T3	EffectCause	true	zararı	Depremin
+Relation	T6	T7	CauseEffect	true	deprem	belirtti
+Relation	T7	T6	EffectCause	true	belirtti	deprem
+Relation	T10	T9	CauseEffect	true	yapılmış	zarar
+Relation	T9	T10	EffectCause	true	zarar	yapılmış
+Relation	T8	T9	CauseEffect	true	depremde	zarar
+Relation	T9	T8	EffectCause	true	zarar	depremde
+Relation	T0	T1	NoRel	true	yaralandı	deprem
+Relation	T0	T10	NoRel	true	yaralandı	yapılmış
+Relation	T0	T5	NoRel	true	yaralandı	geldi
+Relation	T0	T8	NoRel	true	yaralandı	depremde
+Relation	T1	T11	NoRel	true	deprem	Deprem
+Relation	T1	T13	NoRel	true	deprem	zararı
+Relation	T1	T3	NoRel	true	deprem	Depremin
+Relation	T1	T5	NoRel	true	deprem	geldi
+Relation	T10	T11	NoRel	true	yapılmış	Deprem
+Relation	T10	T3	NoRel	true	yapılmış	Depremin
+Relation	T10	T4	NoRel	true	yapılmış	hasar
+Relation	T10	T5	NoRel	true	yapılmış	geldi
+Relation	T10	T6	NoRel	true	yapılmış	deprem
+Relation	T11	T2	NoRel	true	Deprem	önledi
+Relation	T11	T5	NoRel	true	Deprem	geldi
+Relation	T11	T6	NoRel	true	Deprem	deprem
+Relation	T11	T9	NoRel	true	Deprem	zarar
+Relation	T12	T1	NoRel	true	olması	deprem
+Relation	T12	T10	NoRel	true	olması	yapılmış
+Relation	T13	T12	NoRel	true	zararı	olması
+Relation	T13	T4	NoRel	true	zararı	hasar
+Relation	T2	T0	NoRel	true	önledi	yaralandı
+Relation	T2	T3	NoRel	true	önledi	Depremin
+Relation	T2	T4	NoRel	true	önledi	hasar
+Relation	T2	T7	NoRel	true	önledi	belirtti
+Relation	T2	T8	NoRel	true	önledi	depremde
+Relation	T2	T9	NoRel	true	önledi	zarar
+Relation	T3	T2	NoRel	true	Depremin	önledi
+Relation	T3	T5	NoRel	true	Depremin	geldi
+Relation	T3	T7	NoRel	true	Depremin	belirtti
+Relation	T3	T8	NoRel	true	Depremin	depremde
+Relation	T4	T13	NoRel	true	hasar	zararı
+Relation	T4	T2	NoRel	true	hasar	önledi
+Relation	T4	T3	NoRel	true	hasar	Depremin
+Relation	T4	T6	NoRel	true	hasar	deprem
+Relation	T4	T7	NoRel	true	hasar	belirtti
+Relation	T4	T8	NoRel	true	hasar	depremde
+Relation	T5	T10	NoRel	true	geldi	yapılmış
+Relation	T5	T12	NoRel	true	geldi	olması
+Relation	T5	T3	NoRel	true	geldi	Depremin
+Relation	T5	T6	NoRel	true	geldi	deprem
+Relation	T5	T7	NoRel	true	geldi	belirtti
+Relation	T6	T1	NoRel	true	deprem	deprem
+Relation	T6	T10	NoRel	true	deprem	yapılmış
+Relation	T6	T12	NoRel	true	deprem	olması
+Relation	T6	T3	NoRel	true	deprem	Depremin
+Relation	T6	T4	NoRel	true	deprem	hasar
+Relation	T6	T8	NoRel	true	deprem	depremde
+Relation	T6	T9	NoRel	true	deprem	zarar
+Relation	T7	T13	NoRel	true	belirtti	zararı
+Relation	T7	T8	NoRel	true	belirtti	depremde
+Relation	T8	T1	NoRel	true	depremde	deprem
+Relation	T8	T12	NoRel	true	depremde	olması
+Relation	T8	T4	NoRel	true	depremde	hasar
+Relation	T8	T6	NoRel	true	depremde	deprem
+Relation	T9	T11	NoRel	true	zarar	Deprem
+Relation	T9	T13	NoRel	true	zarar	zararı
+Relation	T9	T2	NoRel	true	zarar	önledi

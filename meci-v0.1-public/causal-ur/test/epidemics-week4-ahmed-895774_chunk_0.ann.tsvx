@@ -1,0 +1,37 @@
+Text	| total_ili_=_| website =_}} بھارت میں کورونا وائرس کی وبا ، 2019ء - 2020ء کا پہلا مریض 30 جنوری 2020ء کو سامنے آیا ۔	یہ بیماری چین سے ساری دنیا میں پھیلی ہے ۔	بھارت میں وزارت صحت و خاندانی بہبود ، حکومت ہند اس کی مکمل نگرانی کر رہی ہے اور وقتا فوقتا ہدایات جاری کر رہی ہے ۔	وزارت صحت کی ویب سائٹ کے مطابق 26 جون 2020ء تک کل 490,401 لوگ کورونا سے متاثر پائے گئے ہیں اور 15,301 کی موت ہو چکی ہے ۔	285,636 لوگ صحتیاب ہو چکے ہیں
+Event	T1	بیماری	EVENT	121
+Event	T2	پھیلی	EVENT	149
+Event	T3	نگرانی	EVENT	219
+Event	T4	جاری	EVENT	258
+Event	T6	وبا	EVENT	55
+Event	T7	سامنے	EVENT	106
+Event	T8	متاثر	EVENT	347
+Event	T5	صحتیاب	EVENT	408
+Relation	T1	T2	CauseEffect	true	بیماری	پھیلی
+Relation	T2	T1	EffectCause	true	پھیلی	بیماری
+Relation	T6	T3	CauseEffect	true	وبا	نگرانی
+Relation	T3	T6	EffectCause	true	نگرانی	وبا
+Relation	T6	T8	CauseEffect	true	وبا	متاثر
+Relation	T8	T6	EffectCause	true	متاثر	وبا
+Relation	T1	T6	NoRel	true	بیماری	وبا
+Relation	T2	T3	NoRel	true	پھیلی	نگرانی
+Relation	T2	T7	NoRel	true	پھیلی	سامنے
+Relation	T3	T4	NoRel	true	نگرانی	جاری
+Relation	T3	T5	NoRel	true	نگرانی	صحتیاب
+Relation	T3	T7	NoRel	true	نگرانی	سامنے
+Relation	T3	T8	NoRel	true	نگرانی	متاثر
+Relation	T4	T1	NoRel	true	جاری	بیماری
+Relation	T4	T2	NoRel	true	جاری	پھیلی
+Relation	T4	T5	NoRel	true	جاری	صحتیاب
+Relation	T4	T6	NoRel	true	جاری	وبا
+Relation	T5	T2	NoRel	true	صحتیاب	پھیلی
+Relation	T5	T3	NoRel	true	صحتیاب	نگرانی
+Relation	T5	T6	NoRel	true	صحتیاب	وبا
+Relation	T5	T8	NoRel	true	صحتیاب	متاثر
+Relation	T6	T5	NoRel	true	وبا	صحتیاب
+Relation	T6	T7	NoRel	true	وبا	سامنے
+Relation	T7	T3	NoRel	true	سامنے	نگرانی
+Relation	T7	T6	NoRel	true	سامنے	وبا
+Relation	T7	T8	NoRel	true	سامنے	متاثر
+Relation	T8	T4	NoRel	true	متاثر	جاری
+Relation	T8	T5	NoRel	true	متاثر	صحتیاب

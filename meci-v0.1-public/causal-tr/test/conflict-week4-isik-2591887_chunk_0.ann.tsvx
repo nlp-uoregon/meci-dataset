@@ -1,0 +1,52 @@
+Text	NÜRNBERG SALDIRISI , İkinci Dünya Savaşı'nda Kraliyet Hava Kuvvetleri'nin Almanya'nın Nürnberg şehrine yönelik yaptığı ve tarihteki en ağır uçak kaybı ile sonuçlanan hava saldırısıdır .	Nürnberg Almanya için önemli bir elektronik fabrika şehri idi .	Şehirde elektronik malzemeler üreten fabrikalar ve silah yapımında kullanılan madenler çıkarılıyordu .	Şehir Naziler için ideolojik başkent idi zira Adolf Hitler en kalabalık mitinglerini bu şehirde yapmıştır .	Şehirde 350.000 kişi yaşıyordu .
+Event	T1	yaptığı	EVENT	111
+Event	T2	kaybı	EVENT	145
+Event	T3	saldırısıdır	EVENT	171
+Event	T4	mitinglerini	EVENT	425
+Event	T5	yapmıştır	EVENT	449
+Event	T6	yaşıyordu	EVENT	482
+Event	T7	NÜRNBERG SALDIRISI	EVENT	0
+Event	T8	İkinci Dünya Savaşı'nda	EVENT	21
+Event	T9	üreten	EVENT	280
+Event	T10	çıkarılıyordu	EVENT	337
+Event	T11	kullanılan	EVENT	317
+Relation	T7	T2	CauseEffect	true	NÜRNBERG SALDIRISI	kaybı
+Relation	T2	T7	EffectCause	true	kaybı	NÜRNBERG SALDIRISI
+Relation	T1	T10	NoRel	true	yaptığı	çıkarılıyordu
+Relation	T1	T11	NoRel	true	yaptığı	kullanılan
+Relation	T1	T2	NoRel	true	yaptığı	kaybı
+Relation	T1	T5	NoRel	true	yaptığı	yapmıştır
+Relation	T1	T6	NoRel	true	yaptığı	yaşıyordu
+Relation	T10	T11	NoRel	true	çıkarılıyordu	kullanılan
+Relation	T10	T7	NoRel	true	çıkarılıyordu	NÜRNBERG SALDIRISI
+Relation	T11	T2	NoRel	true	kullanılan	kaybı
+Relation	T11	T5	NoRel	true	kullanılan	yapmıştır
+Relation	T11	T9	NoRel	true	kullanılan	üreten
+Relation	T2	T1	NoRel	true	kaybı	yaptığı
+Relation	T2	T5	NoRel	true	kaybı	yapmıştır
+Relation	T2	T6	NoRel	true	kaybı	yaşıyordu
+Relation	T2	T8	NoRel	true	kaybı	İkinci Dünya Savaşı'nda
+Relation	T3	T1	NoRel	true	saldırısıdır	yaptığı
+Relation	T3	T10	NoRel	true	saldırısıdır	çıkarılıyordu
+Relation	T3	T11	NoRel	true	saldırısıdır	kullanılan
+Relation	T3	T4	NoRel	true	saldırısıdır	mitinglerini
+Relation	T3	T9	NoRel	true	saldırısıdır	üreten
+Relation	T4	T11	NoRel	true	mitinglerini	kullanılan
+Relation	T4	T2	NoRel	true	mitinglerini	kaybı
+Relation	T4	T5	NoRel	true	mitinglerini	yapmıştır
+Relation	T4	T9	NoRel	true	mitinglerini	üreten
+Relation	T5	T2	NoRel	true	yapmıştır	kaybı
+Relation	T5	T8	NoRel	true	yapmıştır	İkinci Dünya Savaşı'nda
+Relation	T6	T1	NoRel	true	yaşıyordu	yaptığı
+Relation	T6	T10	NoRel	true	yaşıyordu	çıkarılıyordu
+Relation	T6	T4	NoRel	true	yaşıyordu	mitinglerini
+Relation	T7	T10	NoRel	true	NÜRNBERG SALDIRISI	çıkarılıyordu
+Relation	T7	T6	NoRel	true	NÜRNBERG SALDIRISI	yaşıyordu
+Relation	T7	T9	NoRel	true	NÜRNBERG SALDIRISI	üreten
+Relation	T8	T3	NoRel	true	İkinci Dünya Savaşı'nda	saldırısıdır
+Relation	T8	T7	NoRel	true	İkinci Dünya Savaşı'nda	NÜRNBERG SALDIRISI
+Relation	T9	T1	NoRel	true	üreten	yaptığı
+Relation	T9	T2	NoRel	true	üreten	kaybı
+Relation	T9	T3	NoRel	true	üreten	saldırısıdır
+Relation	T9	T5	NoRel	true	üreten	yapmıştır
+Relation	T9	T7	NoRel	true	üreten	NÜRNBERG SALDIRISI

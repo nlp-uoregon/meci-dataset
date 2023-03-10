@@ -1,0 +1,65 @@
+Text	BIN GÜN SAVAŞI ( 1899- 1902 ) yeni kurulan Kolombiya Cumhuriyeti’nde liberal ve muhafazakâr parti ile radikal gruplar arasında gerçekleşen bir iç savaştır .	1899 yılında iktidardaki muhafazakârlar iktadrı korumak için seçimlere hile karıştırmakla suçlanıyordu .	Durum uluslararası piyasalarda kahve fiyatlarının düşmesi nedeniyle gerçekleşen ekonomik kriz yüzünden daha da kötüleşti ve liberal parti karşıtları iktidarı kaybetti .	19. yüzyıl boyunca Kolambiya 1886’daki savaşın gerçekleşmesinin ana nedeni olan siyasal dengesizliklerle mücadele ediyordu .	Aynı yıl 1863 anayasası değiştirilerek yerini daha mufazakar ve enternalist bir yapı ile değiştirdi .
+Event	T1	gerçekleşen	EVENT	127
+Event	T2	savaştır	EVENT	146
+Event	T3	suçlanıyordu	EVENT	247
+Event	T4	düşmesi	EVENT	312
+Event	T6	kriz	EVENT	351
+Event	T7	kötüleşti	EVENT	373
+Event	T8	kaybetti	EVENT	420
+Event	T10	ediyordu	EVENT	545
+Event	T11	değiştirilerek	EVENT	580
+Event	T12	değiştirdi	EVENT	645
+Event	T13	BIN GÜN SAVAŞI	EVENT	0
+Event	T14	kurulan	EVENT	35
+Event	T5	savaşın	EVENT	470
+Relation	T4	T6	CauseEffect	true	düşmesi	kriz
+Relation	T6	T4	EffectCause	true	kriz	düşmesi
+Relation	T6	T7	CauseEffect	true	kriz	kötüleşti
+Relation	T7	T6	EffectCause	true	kötüleşti	kriz
+Relation	T7	T8	CauseEffect	true	kötüleşti	kaybetti
+Relation	T8	T7	EffectCause	true	kaybetti	kötüleşti
+Relation	T11	T12	CauseEffect	true	değiştirilerek	değiştirdi
+Relation	T12	T11	EffectCause	true	değiştirdi	değiştirilerek
+Relation	T1	T10	NoRel	true	gerçekleşen	ediyordu
+Relation	T1	T6	NoRel	true	gerçekleşen	kriz
+Relation	T1	T8	NoRel	true	gerçekleşen	kaybetti
+Relation	T10	T13	NoRel	true	ediyordu	BIN GÜN SAVAŞI
+Relation	T10	T5	NoRel	true	ediyordu	savaşın
+Relation	T10	T6	NoRel	true	ediyordu	kriz
+Relation	T11	T13	NoRel	true	değiştirilerek	BIN GÜN SAVAŞI
+Relation	T11	T2	NoRel	true	değiştirilerek	savaştır
+Relation	T11	T4	NoRel	true	değiştirilerek	düşmesi
+Relation	T11	T6	NoRel	true	değiştirilerek	kriz
+Relation	T12	T3	NoRel	true	değiştirdi	suçlanıyordu
+Relation	T13	T12	NoRel	true	BIN GÜN SAVAŞI	değiştirdi
+Relation	T13	T2	NoRel	true	BIN GÜN SAVAŞI	savaştır
+Relation	T13	T4	NoRel	true	BIN GÜN SAVAŞI	düşmesi
+Relation	T13	T8	NoRel	true	BIN GÜN SAVAŞI	kaybetti
+Relation	T14	T10	NoRel	true	kurulan	ediyordu
+Relation	T14	T11	NoRel	true	kurulan	değiştirilerek
+Relation	T14	T12	NoRel	true	kurulan	değiştirdi
+Relation	T14	T8	NoRel	true	kurulan	kaybetti
+Relation	T2	T1	NoRel	true	savaştır	gerçekleşen
+Relation	T2	T13	NoRel	true	savaştır	BIN GÜN SAVAŞI
+Relation	T2	T7	NoRel	true	savaştır	kötüleşti
+Relation	T3	T12	NoRel	true	suçlanıyordu	değiştirdi
+Relation	T4	T1	NoRel	true	düşmesi	gerçekleşen
+Relation	T4	T11	NoRel	true	düşmesi	değiştirilerek
+Relation	T4	T13	NoRel	true	düşmesi	BIN GÜN SAVAŞI
+Relation	T4	T5	NoRel	true	düşmesi	savaşın
+Relation	T4	T7	NoRel	true	düşmesi	kötüleşti
+Relation	T5	T1	NoRel	true	savaşın	gerçekleşen
+Relation	T5	T11	NoRel	true	savaşın	değiştirilerek
+Relation	T5	T12	NoRel	true	savaşın	değiştirdi
+Relation	T5	T14	NoRel	true	savaşın	kurulan
+Relation	T5	T7	NoRel	true	savaşın	kötüleşti
+Relation	T6	T10	NoRel	true	kriz	ediyordu
+Relation	T6	T12	NoRel	true	kriz	değiştirdi
+Relation	T6	T3	NoRel	true	kriz	suçlanıyordu
+Relation	T7	T11	NoRel	true	kötüleşti	değiştirilerek
+Relation	T7	T12	NoRel	true	kötüleşti	değiştirdi
+Relation	T8	T13	NoRel	true	kaybetti	BIN GÜN SAVAŞI
+Relation	T8	T14	NoRel	true	kaybetti	kurulan
+Relation	T8	T2	NoRel	true	kaybetti	savaştır
+Relation	T8	T3	NoRel	true	kaybetti	suçlanıyordu
+Relation	T8	T5	NoRel	true	kaybetti	savaşın

@@ -1,0 +1,52 @@
+Text	RUDOLF LÜTERS ( 10 de mayo de 1883 - 24 de diciembre de 1945 ) fue un general alemán quien sirvió en la Wehrmacht durante la Segunda Guerra Mundial .	Se unió al ejército el 2 de noviembre de 1902 como Fahnenjunker y participó en la Primera Guerra Mundial donde fue herido dos veces , en septiembre de 1914 y en octubre de 1915 .	Durante la Segunda Guerra Mundial , fue seleccionado como comandante de la 223ª división de infantería el 6 de mayo de 1941 , participando con esta unidad en la invasión de la Unión Soviética hasta el 19 de octubre .	El 1 de noviembre de 1942 , fue seleccionado como comandante de las tropas alemanas en Croacia .	Fue promovido a General de Infantería el 1 de febrero de 1943 y se convirtió en el primer comandante del recién creado XV Cuerpo de Montaña el 25 de agosto .
+Event	T0	sirvió	EVENT	91
+Event	T1	unió	EVENT	153
+Event	T2	participó	EVENT	216
+Event	T3	Guerra	EVENT	240
+Event	T4	herido	EVENT	265
+Event	T5	seleccionado	EVENT	369
+Event	T6	participando	EVENT	455
+Event	T7	invasión	EVENT	490
+Event	T8	seleccionado	EVENT	578
+Event	T9	promovido	EVENT	647
+Event	T10	convirtió	EVENT	710
+Event	T11	creado	EVENT	755
+Relation	T2	T4	CauseEffect	true	participó	herido
+Relation	T4	T2	EffectCause	true	herido	participó
+Relation	T0	T4	NoRel	true	sirvió	herido
+Relation	T0	T5	NoRel	true	sirvió	seleccionado
+Relation	T0	T7	NoRel	true	sirvió	invasión
+Relation	T1	T11	NoRel	true	unió	creado
+Relation	T1	T4	NoRel	true	unió	herido
+Relation	T1	T7	NoRel	true	unió	invasión
+Relation	T10	T1	NoRel	true	convirtió	unió
+Relation	T10	T7	NoRel	true	convirtió	invasión
+Relation	T11	T1	NoRel	true	creado	unió
+Relation	T11	T10	NoRel	true	creado	convirtió
+Relation	T11	T5	NoRel	true	creado	seleccionado
+Relation	T11	T6	NoRel	true	creado	participando
+Relation	T11	T8	NoRel	true	creado	seleccionado
+Relation	T11	T9	NoRel	true	creado	promovido
+Relation	T2	T0	NoRel	true	participó	sirvió
+Relation	T2	T10	NoRel	true	participó	convirtió
+Relation	T2	T3	NoRel	true	participó	Guerra
+Relation	T2	T7	NoRel	true	participó	invasión
+Relation	T3	T10	NoRel	true	Guerra	convirtió
+Relation	T3	T6	NoRel	true	Guerra	participando
+Relation	T3	T9	NoRel	true	Guerra	promovido
+Relation	T4	T10	NoRel	true	herido	convirtió
+Relation	T4	T8	NoRel	true	herido	seleccionado
+Relation	T4	T9	NoRel	true	herido	promovido
+Relation	T5	T10	NoRel	true	seleccionado	convirtió
+Relation	T5	T3	NoRel	true	seleccionado	Guerra
+Relation	T6	T2	NoRel	true	participando	participó
+Relation	T6	T5	NoRel	true	participando	seleccionado
+Relation	T7	T2	NoRel	true	invasión	participó
+Relation	T8	T10	NoRel	true	seleccionado	convirtió
+Relation	T8	T11	NoRel	true	seleccionado	creado
+Relation	T8	T7	NoRel	true	seleccionado	invasión
+Relation	T8	T9	NoRel	true	seleccionado	promovido
+Relation	T9	T3	NoRel	true	promovido	Guerra
+Relation	T9	T5	NoRel	true	promovido	seleccionado
+Relation	T9	T6	NoRel	true	promovido	participando
+Relation	T9	T8	NoRel	true	promovido	seleccionado

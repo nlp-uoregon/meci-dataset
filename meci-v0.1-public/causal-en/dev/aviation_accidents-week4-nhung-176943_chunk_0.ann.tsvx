@@ -1,0 +1,57 @@
+Text	RICHARD COLVIN REID ( born 12 August 1973 ) , also known as the " SHOE BOMBER " , is a British terrorist who attempted to detonate a shoe bomb on a transatlantic flight in 2001 .	Born to a father who was a career criminal , Reid converted to Islam as a young man in prison after years as a petty criminal .	Later he became radicalized and went to Pakistan and Afghanistan , where he trained and became a member of al - Qaeda .	On 22 December 2001 , Reid boarded American Airlines Flight 63 between Paris and Miami , wearing shoes packed with explosives , which he unsuccessfully tried to detonate .	Passengers subdued him on the plane , which landed at Logan International Airport in Boston , the closest US airport .
+Event	T0	attempted	EVENT	109
+Event	T1	detonate	EVENT	122
+Event	T2	bomb	EVENT	138
+Event	T3	flight	EVENT	162
+Event	T4	Born	EVENT	179
+Event	T5	radicalized	EVENT	323
+Event	T6	went	EVENT	339
+Event	T7	trained	EVENT	383
+Event	T8	boarded	EVENT	454
+Event	T9	wearing	EVENT	516
+Event	T10	packed	EVENT	530
+Event	T11	explosives	EVENT	542
+Event	T12	tried	EVENT	579
+Event	T13	detonate	EVENT	588
+Event	T14	subdued	EVENT	610
+Event	T15	landed	EVENT	643
+Event	T16	converted	EVENT	229
+Event	T17	prison	EVENT	266
+Event	T18	became	EVENT	395
+Relation	T5	T18	CauseEffect	true	radicalized	became
+Relation	T18	T5	EffectCause	true	became	radicalized
+Relation	T9	T12	CauseEffect	true	wearing	tried
+Relation	T12	T9	EffectCause	true	tried	wearing
+Relation	T0	T6	NoRel	true	attempted	went
+Relation	T0	T8	NoRel	true	attempted	boarded
+Relation	T1	T13	NoRel	true	detonate	detonate
+Relation	T10	T8	NoRel	true	packed	boarded
+Relation	T11	T13	NoRel	true	explosives	detonate
+Relation	T11	T5	NoRel	true	explosives	radicalized
+Relation	T12	T0	NoRel	true	tried	attempted
+Relation	T13	T0	NoRel	true	detonate	attempted
+Relation	T14	T0	NoRel	true	subdued	attempted
+Relation	T15	T14	NoRel	true	landed	subdued
+Relation	T15	T6	NoRel	true	landed	went
+Relation	T15	T9	NoRel	true	landed	wearing
+Relation	T16	T18	NoRel	true	converted	became
+Relation	T16	T3	NoRel	true	converted	flight
+Relation	T16	T9	NoRel	true	converted	wearing
+Relation	T17	T16	NoRel	true	prison	converted
+Relation	T17	T8	NoRel	true	prison	boarded
+Relation	T18	T13	NoRel	true	became	detonate
+Relation	T2	T15	NoRel	true	bomb	landed
+Relation	T2	T6	NoRel	true	bomb	went
+Relation	T2	T7	NoRel	true	bomb	trained
+Relation	T3	T6	NoRel	true	flight	went
+Relation	T3	T9	NoRel	true	flight	wearing
+Relation	T4	T1	NoRel	true	Born	detonate
+Relation	T4	T16	NoRel	true	Born	converted
+Relation	T4	T3	NoRel	true	Born	flight
+Relation	T5	T14	NoRel	true	radicalized	subdued
+Relation	T7	T8	NoRel	true	trained	boarded
+Relation	T8	T10	NoRel	true	boarded	packed
+Relation	T8	T12	NoRel	true	boarded	tried
+Relation	T8	T16	NoRel	true	boarded	converted
+Relation	T8	T2	NoRel	true	boarded	bomb
+Relation	T9	T3	NoRel	true	wearing	flight

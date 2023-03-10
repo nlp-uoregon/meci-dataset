@@ -1,0 +1,55 @@
+Text	He left the service in 1952 to join the Republic Aviation Corporation .	Ardery became an experimental and production test pilot for Republic Aviation , eventually being assigned to the F - 105 Thunderchief project as one of the principal test pilots for the fighter - bomber from its maiden flight in 1955 .	As the design was improved , he flew the newer variants , including the advanced D - model , specializing in checkout flights " on the sophisticated electronic units which make the jet literally ' automatic ' . "	In early 1960 , he successfully completed a 300 - mile roundtrip flight with " hands - off " or all on instruments except for take - off and landing .	" It was the longest instrument - controlled flight of the F - 105 D to date . "
+Event	T0	left	EVENT	3
+Event	T1	service	EVENT	12
+Event	T2	join	EVENT	31
+Event	T3	became	EVENT	79
+Event	T4	flight	EVENT	291
+Event	T5	design	EVENT	315
+Event	T6	improved	EVENT	326
+Event	T7	flew	EVENT	340
+Event	T8	specializing	EVENT	401
+Event	T9	flights	EVENT	426
+Event	T10	completed	EVENT	553
+Event	T11	flight	EVENT	586
+Event	T12	landing	EVENT	662
+Event	T13	flight	EVENT	717
+Event	T14	assigned	EVENT	169
+Event	T15	make	EVENT	480
+Event	T16	take - off	EVENT	647
+Relation	T0	T2	CauseEffect	true	left	join
+Relation	T2	T0	EffectCause	true	join	left
+Relation	T6	T7	CauseEffect	true	improved	flew
+Relation	T7	T6	EffectCause	true	flew	improved
+Relation	T0	T13	NoRel	true	left	flight
+Relation	T0	T5	NoRel	true	left	design
+Relation	T1	T14	NoRel	true	service	assigned
+Relation	T10	T4	NoRel	true	completed	flight
+Relation	T11	T13	NoRel	true	flight	flight
+Relation	T11	T14	NoRel	true	flight	assigned
+Relation	T11	T7	NoRel	true	flight	flew
+Relation	T11	T8	NoRel	true	flight	specializing
+Relation	T12	T10	NoRel	true	landing	completed
+Relation	T12	T13	NoRel	true	landing	flight
+Relation	T12	T4	NoRel	true	landing	flight
+Relation	T12	T8	NoRel	true	landing	specializing
+Relation	T13	T1	NoRel	true	flight	service
+Relation	T13	T15	NoRel	true	flight	make
+Relation	T14	T13	NoRel	true	assigned	flight
+Relation	T14	T4	NoRel	true	assigned	flight
+Relation	T14	T6	NoRel	true	assigned	improved
+Relation	T15	T3	NoRel	true	make	became
+Relation	T15	T9	NoRel	true	make	flights
+Relation	T16	T12	NoRel	true	take - off	landing
+Relation	T16	T6	NoRel	true	take - off	improved
+Relation	T16	T7	NoRel	true	take - off	flew
+Relation	T2	T1	NoRel	true	join	service
+Relation	T2	T9	NoRel	true	join	flights
+Relation	T4	T2	NoRel	true	flight	join
+Relation	T5	T0	NoRel	true	design	left
+Relation	T5	T16	NoRel	true	design	take - off
+Relation	T6	T0	NoRel	true	improved	left
+Relation	T6	T2	NoRel	true	improved	join
+Relation	T7	T4	NoRel	true	flew	flight
+Relation	T7	T8	NoRel	true	flew	specializing
+Relation	T8	T9	NoRel	true	specializing	flights
+Relation	T9	T8	NoRel	true	flights	specializing

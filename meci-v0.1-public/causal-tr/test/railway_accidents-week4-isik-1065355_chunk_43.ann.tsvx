@@ -1,0 +1,59 @@
+Text	cnn. com / 2001 / WORLD / asiapcf / southeast / 09 / 02 / crash . indon / index .html Forty dead in Indonesian train crash CNN tarih =2 Eylül , 2001 giriş tarihi= 24 Şubat , 2007	http : / / bellona . org / english _ import _ area / international / russia / nuke _ industry / siberia / zheleznogorsk / 22270 Spent nuclear fuel arrived at Zheleznogorsk Bellona 24 Şubat, 2007	http : / / news . bbc . co . uk / 1 / hi / world / europe / 1717133 . stm Passengers rescued from Greek train tarih=18 Aralık , 2001 giriş tarihi=24 Şubat , 2007	http : / / www.ntsb.gov / publictn / 2004 / RAR0401.htm % 7Ctitle= Accident report , RAR - 04 / 01 National Transportation Safety Board 24 Şubat, 2007	http : / / www. rediff. com / news / 2003 / jan / 03train1 .htm Secunderabad - Manmad Express derails , 18 ölü , 41 yaralı rediff . com 3 Ocak , 2003 Jafri , Syed Amin | giriş tarihi = 31 Mart , 2008
+Event	T0	crash	EVENT	58
+Event	T1	dead	EVENT	92
+Event	T2	crash	EVENT	117
+Event	T3	giriş	EVENT	149
+Event	T4	arrived	EVENT	326
+Event	T5	rescued	EVENT	459
+Event	T6	giriş	EVENT	507
+Event	T7	derails	EVENT	781
+Event	T8	ölü	EVENT	794
+Event	T9	yaralı	EVENT	803
+Event	T10	Accident	EVENT	603
+Event	T11	giriş	EVENT	857
+Relation	T2	T1	CauseEffect	true	crash	dead
+Relation	T1	T2	EffectCause	true	dead	crash
+Relation	T7	T8	CauseEffect	true	derails	ölü
+Relation	T8	T7	EffectCause	true	ölü	derails
+Relation	T7	T9	CauseEffect	true	derails	yaralı
+Relation	T9	T7	EffectCause	true	yaralı	derails
+Relation	T0	T3	NoRel	true	crash	giriş
+Relation	T0	T5	NoRel	true	crash	rescued
+Relation	T0	T6	NoRel	true	crash	giriş
+Relation	T0	T7	NoRel	true	crash	derails
+Relation	T1	T0	NoRel	true	dead	crash
+Relation	T1	T8	NoRel	true	dead	ölü
+Relation	T10	T0	NoRel	true	Accident	crash
+Relation	T10	T1	NoRel	true	Accident	dead
+Relation	T10	T4	NoRel	true	Accident	arrived
+Relation	T10	T5	NoRel	true	Accident	rescued
+Relation	T11	T10	NoRel	true	giriş	Accident
+Relation	T11	T2	NoRel	true	giriş	crash
+Relation	T11	T8	NoRel	true	giriş	ölü
+Relation	T2	T11	NoRel	true	crash	giriş
+Relation	T2	T3	NoRel	true	crash	giriş
+Relation	T2	T8	NoRel	true	crash	ölü
+Relation	T2	T9	NoRel	true	crash	yaralı
+Relation	T3	T0	NoRel	true	giriş	crash
+Relation	T3	T10	NoRel	true	giriş	Accident
+Relation	T3	T11	NoRel	true	giriş	giriş
+Relation	T3	T9	NoRel	true	giriş	yaralı
+Relation	T4	T2	NoRel	true	arrived	crash
+Relation	T4	T6	NoRel	true	arrived	giriş
+Relation	T4	T7	NoRel	true	arrived	derails
+Relation	T5	T0	NoRel	true	rescued	crash
+Relation	T5	T1	NoRel	true	rescued	dead
+Relation	T5	T2	NoRel	true	rescued	crash
+Relation	T5	T9	NoRel	true	rescued	yaralı
+Relation	T6	T1	NoRel	true	giriş	dead
+Relation	T6	T3	NoRel	true	giriş	giriş
+Relation	T6	T4	NoRel	true	giriş	arrived
+Relation	T6	T7	NoRel	true	giriş	derails
+Relation	T7	T6	NoRel	true	derails	giriş
+Relation	T8	T10	NoRel	true	ölü	Accident
+Relation	T8	T4	NoRel	true	ölü	arrived
+Relation	T8	T5	NoRel	true	ölü	rescued
+Relation	T8	T6	NoRel	true	ölü	giriş
+Relation	T9	T1	NoRel	true	yaralı	dead
+Relation	T9	T2	NoRel	true	yaralı	crash
+Relation	T9	T3	NoRel	true	yaralı	giriş

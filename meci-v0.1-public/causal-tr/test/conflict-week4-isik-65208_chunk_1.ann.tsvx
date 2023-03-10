@@ -1,0 +1,34 @@
+Text	52 kişi öldü .	Saldırıların ardından İngiliz hükûmeti terörle mücadele yasalarında bir dizi değişikliğe gitmek istedi .	Ancak bu değişiklik istekleri insan hakları ve diğer temel haklar çerçevesinde direnişle karşılaştı .	Saldırılardan sonra Londra'da İngiliz polisi de yanlışlıkla Brezilyalı bir elektrikçiyi metroda trene binerken vurdu .	- " Uluslararası Yeni Terör " Doç. Dr. Bülent Aras - Londra saldırısı neyi değiştirecek ?
+Event	T0	öldü	EVENT	8
+Event	T1	Saldırıların	EVENT	15
+Event	T2	istedi	EVENT	111
+Event	T3	karşılaştı	EVENT	209
+Event	T4	Saldırılardan	EVENT	222
+Event	T5	vurdu	EVENT	333
+Event	T6	saldırısı	EVENT	401
+Event	T7	değiştirecek	EVENT	416
+Relation	T2	T3	CauseEffect	true	istedi	karşılaştı
+Relation	T3	T2	EffectCause	true	karşılaştı	istedi
+Relation	T1	T5	CauseEffect	true	Saldırıların	vurdu
+Relation	T5	T1	EffectCause	true	vurdu	Saldırıların
+Relation	T0	T4	NoRel	true	öldü	Saldırılardan
+Relation	T0	T7	NoRel	true	öldü	değiştirecek
+Relation	T1	T0	NoRel	true	Saldırıların	öldü
+Relation	T1	T2	NoRel	true	Saldırıların	istedi
+Relation	T1	T4	NoRel	true	Saldırıların	Saldırılardan
+Relation	T1	T6	NoRel	true	Saldırıların	saldırısı
+Relation	T2	T0	NoRel	true	istedi	öldü
+Relation	T2	T5	NoRel	true	istedi	vurdu
+Relation	T3	T0	NoRel	true	karşılaştı	öldü
+Relation	T3	T4	NoRel	true	karşılaştı	Saldırılardan
+Relation	T3	T5	NoRel	true	karşılaştı	vurdu
+Relation	T3	T6	NoRel	true	karşılaştı	saldırısı
+Relation	T3	T7	NoRel	true	karşılaştı	değiştirecek
+Relation	T4	T1	NoRel	true	Saldırılardan	Saldırıların
+Relation	T4	T6	NoRel	true	Saldırılardan	saldırısı
+Relation	T5	T7	NoRel	true	vurdu	değiştirecek
+Relation	T6	T0	NoRel	true	saldırısı	öldü
+Relation	T6	T3	NoRel	true	saldırısı	karşılaştı
+Relation	T6	T4	NoRel	true	saldırısı	Saldırılardan
+Relation	T7	T0	NoRel	true	değiştirecek	öldü
+Relation	T7	T3	NoRel	true	değiştirecek	karşılaştı

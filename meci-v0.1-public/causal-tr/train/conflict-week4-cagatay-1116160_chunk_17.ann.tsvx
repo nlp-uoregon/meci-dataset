@@ -1,0 +1,45 @@
+Text	Korunmasız kırsal bölgenin yağmalandığını ancak kalelerin ve surlarla çevrili şehirlerin hasar görmediğini gören Macarlar sadece sınır bölgelerine değil her bölgeye kaleler inşa etmeye başlarlar .	İlerleyen dönemlerde Macar kralları kale yapmaları ve güvenliğini sağlamaları karşılığında feodal prenslere toprak vereceklerdir .	sağ | küçükresim | 250px | Moğolların mağlubiyete uğradığı Hırvat Klis Kalesi sağ | küçükresim | 250px | Moğollardan kaçan kral IV. Béla Moğol istilaları döneminde Hırvatistan Macaristan Krallığına bağlıydı ve kralı IV. Béla idi .	1241 yılında Moğollara yenilen Macar kralı IV. Béla Hırvatistan’daki Zagreb’e kaçar .	Savunması zayıf olan şehir Moğollara direnemez ve yerle bir edilir .
+Event	T0	yağmalandığını	EVENT	27
+Event	T1	uğradığı	EVENT	378
+Event	T2	kaçar	EVENT	637
+Event	T3	edilir	EVENT	705
+Event	T4	inşa	EVENT	173
+Event	T5	gören	EVENT	107
+Event	T6	yapmaları	EVENT	238
+Event	T7	sağlamaları	EVENT	263
+Event	T8	vereceklerdir	EVENT	312
+Event	T9	yenilen	EVENT	582
+Relation	T5	T4	CauseEffect	true	gören	inşa
+Relation	T4	T5	EffectCause	true	inşa	gören
+Relation	T6	T8	CauseEffect	true	yapmaları	vereceklerdir
+Relation	T8	T6	EffectCause	true	vereceklerdir	yapmaları
+Relation	T7	T8	CauseEffect	true	sağlamaları	vereceklerdir
+Relation	T8	T7	EffectCause	true	vereceklerdir	sağlamaları
+Relation	T9	T2	CauseEffect	true	yenilen	kaçar
+Relation	T2	T9	EffectCause	true	kaçar	yenilen
+Relation	T1	T3	NoRel	true	uğradığı	edilir
+Relation	T1	T4	NoRel	true	uğradığı	inşa
+Relation	T1	T9	NoRel	true	uğradığı	yenilen
+Relation	T2	T0	NoRel	true	kaçar	yağmalandığını
+Relation	T2	T3	NoRel	true	kaçar	edilir
+Relation	T2	T5	NoRel	true	kaçar	gören
+Relation	T2	T6	NoRel	true	kaçar	yapmaları
+Relation	T3	T1	NoRel	true	edilir	uğradığı
+Relation	T3	T5	NoRel	true	edilir	gören
+Relation	T3	T7	NoRel	true	edilir	sağlamaları
+Relation	T3	T8	NoRel	true	edilir	vereceklerdir
+Relation	T4	T1	NoRel	true	inşa	uğradığı
+Relation	T4	T7	NoRel	true	inşa	sağlamaları
+Relation	T5	T6	NoRel	true	gören	yapmaları
+Relation	T5	T8	NoRel	true	gören	vereceklerdir
+Relation	T5	T9	NoRel	true	gören	yenilen
+Relation	T6	T3	NoRel	true	yapmaları	edilir
+Relation	T6	T9	NoRel	true	yapmaları	yenilen
+Relation	T7	T0	NoRel	true	sağlamaları	yağmalandığını
+Relation	T7	T1	NoRel	true	sağlamaları	uğradığı
+Relation	T7	T5	NoRel	true	sağlamaları	gören
+Relation	T8	T2	NoRel	true	vereceklerdir	kaçar
+Relation	T8	T3	NoRel	true	vereceklerdir	edilir
+Relation	T8	T9	NoRel	true	vereceklerdir	yenilen
+Relation	T9	T4	NoRel	true	yenilen	inşa
+Relation	T9	T6	NoRel	true	yenilen	yapmaları

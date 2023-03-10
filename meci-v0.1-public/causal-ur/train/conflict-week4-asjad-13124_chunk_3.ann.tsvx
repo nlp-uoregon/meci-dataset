@@ -1,0 +1,53 @@
+Text	امریکی تاجروں کا درینہ مطالبہ تھا کہ ان قدیم تہذیبوں کے نوادرات کو عراق سے باہر لے جانے اور ان کی تجارت پر صدر صدام حسین کی لگائی گئی پابندی ختم ہونی چاہیے ۔	قبضہ کے بعد پوری پوری فیکٹریاں اکھاڑ کر لوہا ، تانبا اور دوسری معدنیات ٹرکوں کے ذریعہ عراق سے چوری کر کے اردن کے راستے باہر بھیج دی گئیں ، جس کی اقوام متحدہ نے تصدیق کی ۔	قیمتی یورینیم 550 میٹرک ٹن 2008ء میں چوری کر کے انٹاریو پہنچایا گیا ۔	امریکی حملے کے نتیجے میں ہلاک ہونے والے عراقیوں کی تعداد کا تخمینہ ساڑھے سات ( 7.5 ) لاکھ لگایا گیا ہے ۔	اس کے علاوہ اسی ( 80 ) لاکھ افراد زندگی کی بنیادی سہولتوں سے محروم ہو گئے ہیں ۔
+Event	T0	مطالبہ	EVENT	23
+Event	T1	تجارت	EVENT	98
+Event	T2	لگائی	EVENT	124
+Event	T3	ختم	EVENT	141
+Event	T4	قبضہ	EVENT	158
+Event	T5	اکھاڑ	EVENT	189
+Event	T6	چوری	EVENT	252
+Event	T7	چوری	EVENT	366
+Event	T8	حملے	EVENT	406
+Event	T9	لگایا	EVENT	489
+Event	T10	گئے	EVENT	574
+Relation	T8	T9	CauseEffect	true	حملے	لگایا
+Relation	T9	T8	EffectCause	true	لگایا	حملے
+Relation	T8	T10	CauseEffect	true	حملے	گئے
+Relation	T10	T8	EffectCause	true	گئے	حملے
+Relation	T0	T10	NoRel	true	مطالبہ	گئے
+Relation	T0	T3	NoRel	true	مطالبہ	ختم
+Relation	T0	T8	NoRel	true	مطالبہ	حملے
+Relation	T1	T2	NoRel	true	تجارت	لگائی
+Relation	T1	T4	NoRel	true	تجارت	قبضہ
+Relation	T1	T8	NoRel	true	تجارت	حملے
+Relation	T1	T9	NoRel	true	تجارت	لگایا
+Relation	T10	T1	NoRel	true	گئے	تجارت
+Relation	T10	T3	NoRel	true	گئے	ختم
+Relation	T10	T5	NoRel	true	گئے	اکھاڑ
+Relation	T2	T1	NoRel	true	لگائی	تجارت
+Relation	T2	T10	NoRel	true	لگائی	گئے
+Relation	T2	T3	NoRel	true	لگائی	ختم
+Relation	T2	T4	NoRel	true	لگائی	قبضہ
+Relation	T2	T5	NoRel	true	لگائی	اکھاڑ
+Relation	T2	T7	NoRel	true	لگائی	چوری
+Relation	T3	T1	NoRel	true	ختم	تجارت
+Relation	T3	T2	NoRel	true	ختم	لگائی
+Relation	T3	T4	NoRel	true	ختم	قبضہ
+Relation	T3	T6	NoRel	true	ختم	چوری
+Relation	T4	T1	NoRel	true	قبضہ	تجارت
+Relation	T4	T2	NoRel	true	قبضہ	لگائی
+Relation	T4	T7	NoRel	true	قبضہ	چوری
+Relation	T4	T8	NoRel	true	قبضہ	حملے
+Relation	T5	T0	NoRel	true	اکھاڑ	مطالبہ
+Relation	T5	T10	NoRel	true	اکھاڑ	گئے
+Relation	T6	T1	NoRel	true	چوری	تجارت
+Relation	T6	T10	NoRel	true	چوری	گئے
+Relation	T6	T5	NoRel	true	چوری	اکھاڑ
+Relation	T6	T7	NoRel	true	چوری	چوری
+Relation	T6	T8	NoRel	true	چوری	حملے
+Relation	T6	T9	NoRel	true	چوری	لگایا
+Relation	T7	T0	NoRel	true	چوری	مطالبہ
+Relation	T8	T1	NoRel	true	حملے	تجارت
+Relation	T8	T2	NoRel	true	حملے	لگائی
+Relation	T8	T7	NoRel	true	حملے	چوری
+Relation	T9	T5	NoRel	true	لگایا	اکھاڑ

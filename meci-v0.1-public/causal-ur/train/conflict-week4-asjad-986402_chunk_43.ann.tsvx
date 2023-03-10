@@ -1,0 +1,33 @@
+Text	ترکوں نے کچھ پہاڑی چوٹیوں پر قبضہ کیا اور دوسروں کو کھو دیا ، جبکہ کچھ کھو گئے اور کئی بار دوبارہ قبضہ کر لیا ۔	پھر بھی ترکوں کو مردوں کا تحفظ کرنا پڑا ، کیونکہ یونانیوں کو عددی فائدہ حاصل تھا ۔	وہ اہم لمحہ آیا جب یونانی فوج نے ہیمانا کو لینے کی کوشش کی ۔	انقرہ کے جنوب میں ، لیکن ترکوں کو باہر رکھا گیا ۔	اناتولیا میں یونانی پیش رفت نے ان کی فراہمی اور مواصلات کی لائنوں کو لمبا کر دیا تھا اور ان کے پاس گولہ بارود ختم ہو رہا تھا ۔
+Event	T0	قبضہ	EVENT	98
+Event	T1	تحفظ	EVENT	138
+Event	T2	پڑا	EVENT	148
+Event	T3	آیا	EVENT	207
+Event	T4	لینے	EVENT	238
+Event	T5	رفت	EVENT	330
+Event	T6	فراہمی	EVENT	343
+Event	T7	ختم	EVENT	416
+Relation	T0	T1	CauseEffect	true	قبضہ	تحفظ
+Relation	T1	T0	EffectCause	true	تحفظ	قبضہ
+Relation	T0	T4	NoRel	true	قبضہ	لینے
+Relation	T0	T7	NoRel	true	قبضہ	ختم
+Relation	T1	T5	NoRel	true	تحفظ	رفت
+Relation	T2	T0	NoRel	true	پڑا	قبضہ
+Relation	T2	T1	NoRel	true	پڑا	تحفظ
+Relation	T2	T4	NoRel	true	پڑا	لینے
+Relation	T2	T5	NoRel	true	پڑا	رفت
+Relation	T2	T6	NoRel	true	پڑا	فراہمی
+Relation	T2	T7	NoRel	true	پڑا	ختم
+Relation	T3	T1	NoRel	true	آیا	تحفظ
+Relation	T3	T2	NoRel	true	آیا	پڑا
+Relation	T3	T4	NoRel	true	آیا	لینے
+Relation	T3	T5	NoRel	true	آیا	رفت
+Relation	T3	T6	NoRel	true	آیا	فراہمی
+Relation	T4	T5	NoRel	true	لینے	رفت
+Relation	T4	T7	NoRel	true	لینے	ختم
+Relation	T5	T3	NoRel	true	رفت	آیا
+Relation	T6	T3	NoRel	true	فراہمی	آیا
+Relation	T6	T7	NoRel	true	فراہمی	ختم
+Relation	T7	T0	NoRel	true	ختم	قبضہ
+Relation	T7	T2	NoRel	true	ختم	پڑا
+Relation	T7	T4	NoRel	true	ختم	لینے

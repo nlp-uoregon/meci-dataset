@@ -1,0 +1,34 @@
+Text	Bunlar Müslümanların beytülmalından istedikleri kadar para alıp harcayabiliyorlardı .	Zaten üçüncü halife Osman bin Affan’ın öldürülmesine sebeplerden biri de buydu .	Mesela Suriye eyalet valisi Muaviye bin Ebu Süfyan , yıllardan beri Suriye’de Müslümanların malını sömürüyor , bu işine rağmen birkaç defa halife Osman’a şikayet geldiyse de Muaviye , yine de yaptığını yapıyordu .	Bir başka örnek , Kûfe Valisi Velîd bin Ukbe içkili hâldeyken birkaç defa namaz kıldırmıştı .	Yeni halife seçilen Ali , bunları göze alarak Ümeyye Oğulları’nı devlet idaresinden uzaklaştırmakla meşguldü ki Mekke'de Aişe'nin kıyam haberini aldı .
+Event	T0	öldürülmesine	EVENT	125
+Event	T1	sömürüyor	EVENT	266
+Event	T2	meşguldü	EVENT	575
+Event	T3	kıyam	EVENT	605
+Event	T4	aldı	EVENT	620
+Event	T5	harcayabiliyorlardı	EVENT	64
+Event	T6	geldiyse	EVENT	329
+Event	T7	kıldırmıştı	EVENT	461
+Relation	T1	T6	CauseEffect	true	sömürüyor	geldiyse
+Relation	T6	T1	EffectCause	true	geldiyse	sömürüyor
+Relation	T5	T0	CauseEffect	true	harcayabiliyorlardı	öldürülmesine
+Relation	T0	T5	EffectCause	true	öldürülmesine	harcayabiliyorlardı
+Relation	T1	T0	CauseEffect	true	sömürüyor	öldürülmesine
+Relation	T0	T1	EffectCause	true	öldürülmesine	sömürüyor
+Relation	T3	T4	CauseEffect	true	kıyam	aldı
+Relation	T4	T3	EffectCause	true	aldı	kıyam
+Relation	T0	T2	NoRel	true	öldürülmesine	meşguldü
+Relation	T0	T7	NoRel	true	öldürülmesine	kıldırmıştı
+Relation	T1	T5	NoRel	true	sömürüyor	harcayabiliyorlardı
+Relation	T2	T1	NoRel	true	meşguldü	sömürüyor
+Relation	T2	T5	NoRel	true	meşguldü	harcayabiliyorlardı
+Relation	T2	T6	NoRel	true	meşguldü	geldiyse
+Relation	T2	T7	NoRel	true	meşguldü	kıldırmıştı
+Relation	T3	T2	NoRel	true	kıyam	meşguldü
+Relation	T3	T5	NoRel	true	kıyam	harcayabiliyorlardı
+Relation	T4	T0	NoRel	true	aldı	öldürülmesine
+Relation	T4	T5	NoRel	true	aldı	harcayabiliyorlardı
+Relation	T5	T1	NoRel	true	harcayabiliyorlardı	sömürüyor
+Relation	T5	T4	NoRel	true	harcayabiliyorlardı	aldı
+Relation	T5	T7	NoRel	true	harcayabiliyorlardı	kıldırmıştı
+Relation	T6	T7	NoRel	true	geldiyse	kıldırmıştı
+Relation	T7	T2	NoRel	true	kıldırmıştı	meşguldü
+Relation	T7	T4	NoRel	true	kıldırmıştı	aldı

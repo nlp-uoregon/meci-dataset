@@ -1,0 +1,35 @@
+Text	- Fas ilk vakanın doğrulandığını gördü .	- Hollanda sekiz yeni vakayı dağrulayarak toplam sayısını 18'e çıkardı .	- Portekiz , biri İtalya'dan diğeri İspanya'dan dönen ilk iki vakasını doğruladı .	- Katar dört yeni vakayı onaylayarak toplamlarını 7'ye çıkardı .	- Rusya ek bir vakayı doğruladı ve toplamlarını 6'ya çıkardı .
+Event	T0	gördü	EVENT	33
+Event	T1	çıkardı	EVENT	104
+Event	T2	doğruladı	EVENT	185
+Event	T3	çıkardı	EVENT	252
+Event	T4	doğruladı	EVENT	284
+Event	T5	çıkardı	EVENT	315
+Event	T6	dağrulayarak	EVENT	70
+Event	T7	vakasını	EVENT	176
+Event	T8	onaylayarak	EVENT	222
+Relation	T6	T1	CauseEffect	true	dağrulayarak	çıkardı
+Relation	T1	T6	EffectCause	true	çıkardı	dağrulayarak
+Relation	T7	T2	CauseEffect	true	vakasını	doğruladı
+Relation	T2	T7	EffectCause	true	doğruladı	vakasını
+Relation	T8	T3	CauseEffect	true	onaylayarak	çıkardı
+Relation	T3	T8	EffectCause	true	çıkardı	onaylayarak
+Relation	T4	T5	CauseEffect	true	doğruladı	çıkardı
+Relation	T5	T4	EffectCause	true	çıkardı	doğruladı
+Relation	T0	T5	NoRel	true	gördü	çıkardı
+Relation	T1	T7	NoRel	true	çıkardı	vakasını
+Relation	T2	T5	NoRel	true	doğruladı	çıkardı
+Relation	T2	T8	NoRel	true	doğruladı	onaylayarak
+Relation	T3	T2	NoRel	true	çıkardı	doğruladı
+Relation	T3	T4	NoRel	true	çıkardı	doğruladı
+Relation	T3	T5	NoRel	true	çıkardı	çıkardı
+Relation	T3	T7	NoRel	true	çıkardı	vakasını
+Relation	T4	T0	NoRel	true	doğruladı	gördü
+Relation	T4	T3	NoRel	true	doğruladı	çıkardı
+Relation	T4	T6	NoRel	true	doğruladı	dağrulayarak
+Relation	T5	T1	NoRel	true	çıkardı	çıkardı
+Relation	T5	T3	NoRel	true	çıkardı	çıkardı
+Relation	T5	T8	NoRel	true	çıkardı	onaylayarak
+Relation	T6	T0	NoRel	true	dağrulayarak	gördü
+Relation	T7	T1	NoRel	true	vakasını	çıkardı
+Relation	T7	T5	NoRel	true	vakasını	çıkardı

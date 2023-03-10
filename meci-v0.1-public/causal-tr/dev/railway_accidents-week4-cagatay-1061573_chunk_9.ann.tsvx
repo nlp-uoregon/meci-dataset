@@ -1,0 +1,45 @@
+Text	- 12 Haziran , 1985 - Moshav Habonim hemzemin geçit felaketi – Bir yolcu treni , okul çocuklarını taşıyan bir otobüsle çarpıştı .	En az yirmi iki kişi öldü ve on yedi kişi yaralandı .	- 17 Ağustos , 2000 - Kisumu’de altı ölü , bir yük treninin sabahın işlek saatinde hareketli hemzemin geçitte tıka basa dolu bir otobüsle çarpışma sonrası .	- 1975 - Cuautitlan hemzemin geçit kazası — Bir Meksiko - Ciudad Juárez yolcu treni , bir ekspres otobüse çarptı .	En az yirmi dokuz kişi öldü ve otuz iki kişi yaralandı , 8 Şubat , 1975 .
+Event	T0	felaketi	EVENT	52
+Event	T1	çarpıştı	EVENT	119
+Event	T2	öldü	EVENT	151
+Event	T3	yaralandı	EVENT	172
+Event	T4	ölü	EVENT	221
+Event	T5	kazası	EVENT	376
+Event	T6	çarptı	EVENT	447
+Event	T7	öldü	EVENT	479
+Event	T8	yaralandı	EVENT	501
+Event	T9	çarpışma	EVENT	322
+Relation	T1	T2	CauseEffect	true	çarpıştı	öldü
+Relation	T2	T1	EffectCause	true	öldü	çarpıştı
+Relation	T1	T3	CauseEffect	true	çarpıştı	yaralandı
+Relation	T3	T1	EffectCause	true	yaralandı	çarpıştı
+Relation	T9	T4	CauseEffect	true	çarpışma	ölü
+Relation	T4	T9	EffectCause	true	ölü	çarpışma
+Relation	T6	T8	CauseEffect	true	çarptı	yaralandı
+Relation	T8	T6	EffectCause	true	yaralandı	çarptı
+Relation	T6	T7	CauseEffect	true	çarptı	öldü
+Relation	T7	T6	EffectCause	true	öldü	çarptı
+Relation	T0	T2	NoRel	true	felaketi	öldü
+Relation	T0	T4	NoRel	true	felaketi	ölü
+Relation	T0	T6	NoRel	true	felaketi	çarptı
+Relation	T1	T0	NoRel	true	çarpıştı	felaketi
+Relation	T1	T8	NoRel	true	çarpıştı	yaralandı
+Relation	T1	T9	NoRel	true	çarpıştı	çarpışma
+Relation	T2	T0	NoRel	true	öldü	felaketi
+Relation	T2	T9	NoRel	true	öldü	çarpışma
+Relation	T3	T0	NoRel	true	yaralandı	felaketi
+Relation	T3	T9	NoRel	true	yaralandı	çarpışma
+Relation	T4	T2	NoRel	true	ölü	öldü
+Relation	T4	T7	NoRel	true	ölü	öldü
+Relation	T4	T8	NoRel	true	ölü	yaralandı
+Relation	T5	T0	NoRel	true	kazası	felaketi
+Relation	T5	T1	NoRel	true	kazası	çarpıştı
+Relation	T5	T2	NoRel	true	kazası	öldü
+Relation	T5	T3	NoRel	true	kazası	yaralandı
+Relation	T5	T4	NoRel	true	kazası	ölü
+Relation	T5	T9	NoRel	true	kazası	çarpışma
+Relation	T7	T2	NoRel	true	öldü	öldü
+Relation	T7	T4	NoRel	true	öldü	ölü
+Relation	T7	T9	NoRel	true	öldü	çarpışma
+Relation	T8	T0	NoRel	true	yaralandı	felaketi
+Relation	T8	T1	NoRel	true	yaralandı	çarpıştı

@@ -1,0 +1,70 @@
+Text	Rusya otoriteleri kazayla ilgili soruşturma başlattı .	Kazadan 10 gün sonra bir ön raporun yayınlanması bekleniyordu .	14 Eylül 2010'da yayınlanan rapor , bataryaların kendi kendine ısındığını ve ısı kaçağı olduğunu gösterdi .	Bu arıza , ; tüm elektrik sistemini , navigasyon sistemini ve radyo sistemini etkiledi .	Uçağın pistten çıkması sonucunda önemli ölçüde zarar gördü .
+Event	T1	kaçağı	EVENT	200
+Event	T2	gösterdi	EVENT	216
+Event	T3	arıza	EVENT	230
+Event	T4	etkiledi	EVENT	305
+Event	T5	çıkması	EVENT	331
+Event	T6	gördü	EVENT	369
+Event	T7	Kazadan	EVENT	55
+Event	T8	soruşturma	EVENT	33
+Event	T9	kazayla	EVENT	18
+Event	T10	yayınlanması	EVENT	91
+Event	T11	yayınlanan	EVENT	136
+Event	T12	ısındığını	EVENT	182
+Relation	T3	T4	CauseEffect	true	arıza	etkiledi
+Relation	T4	T3	EffectCause	true	etkiledi	arıza
+Relation	T3	T7	CauseEffect	true	arıza	Kazadan
+Relation	T7	T3	EffectCause	true	Kazadan	arıza
+Relation	T3	T9	CauseEffect	true	arıza	kazayla
+Relation	T9	T3	EffectCause	true	kazayla	arıza
+Relation	T9	T8	CauseEffect	true	kazayla	soruşturma
+Relation	T8	T9	EffectCause	true	soruşturma	kazayla
+Relation	T7	T8	CauseEffect	true	Kazadan	soruşturma
+Relation	T8	T7	EffectCause	true	soruşturma	Kazadan
+Relation	T5	T6	CauseEffect	true	çıkması	gördü
+Relation	T6	T5	EffectCause	true	gördü	çıkması
+Relation	T1	T4	NoRel	true	kaçağı	etkiledi
+Relation	T1	T6	NoRel	true	kaçağı	gördü
+Relation	T1	T8	NoRel	true	kaçağı	soruşturma
+Relation	T10	T11	NoRel	true	yayınlanması	yayınlanan
+Relation	T10	T12	NoRel	true	yayınlanması	ısındığını
+Relation	T10	T6	NoRel	true	yayınlanması	gördü
+Relation	T10	T7	NoRel	true	yayınlanması	Kazadan
+Relation	T10	T8	NoRel	true	yayınlanması	soruşturma
+Relation	T10	T9	NoRel	true	yayınlanması	kazayla
+Relation	T11	T1	NoRel	true	yayınlanan	kaçağı
+Relation	T11	T12	NoRel	true	yayınlanan	ısındığını
+Relation	T11	T2	NoRel	true	yayınlanan	gösterdi
+Relation	T11	T3	NoRel	true	yayınlanan	arıza
+Relation	T11	T5	NoRel	true	yayınlanan	çıkması
+Relation	T11	T6	NoRel	true	yayınlanan	gördü
+Relation	T11	T7	NoRel	true	yayınlanan	Kazadan
+Relation	T11	T8	NoRel	true	yayınlanan	soruşturma
+Relation	T12	T2	NoRel	true	ısındığını	gösterdi
+Relation	T12	T5	NoRel	true	ısındığını	çıkması
+Relation	T12	T9	NoRel	true	ısındığını	kazayla
+Relation	T2	T4	NoRel	true	gösterdi	etkiledi
+Relation	T2	T6	NoRel	true	gösterdi	gördü
+Relation	T2	T8	NoRel	true	gösterdi	soruşturma
+Relation	T3	T10	NoRel	true	arıza	yayınlanması
+Relation	T3	T11	NoRel	true	arıza	yayınlanan
+Relation	T3	T2	NoRel	true	arıza	gösterdi
+Relation	T4	T11	NoRel	true	etkiledi	yayınlanan
+Relation	T5	T1	NoRel	true	çıkması	kaçağı
+Relation	T5	T11	NoRel	true	çıkması	yayınlanan
+Relation	T5	T2	NoRel	true	çıkması	gösterdi
+Relation	T5	T3	NoRel	true	çıkması	arıza
+Relation	T6	T11	NoRel	true	gördü	yayınlanan
+Relation	T6	T3	NoRel	true	gördü	arıza
+Relation	T6	T9	NoRel	true	gördü	kazayla
+Relation	T7	T10	NoRel	true	Kazadan	yayınlanması
+Relation	T7	T11	NoRel	true	Kazadan	yayınlanan
+Relation	T7	T2	NoRel	true	Kazadan	gösterdi
+Relation	T7	T5	NoRel	true	Kazadan	çıkması
+Relation	T7	T9	NoRel	true	Kazadan	kazayla
+Relation	T8	T10	NoRel	true	soruşturma	yayınlanması
+Relation	T8	T12	NoRel	true	soruşturma	ısındığını
+Relation	T8	T2	NoRel	true	soruşturma	gösterdi
+Relation	T8	T4	NoRel	true	soruşturma	etkiledi
+Relation	T9	T1	NoRel	true	kazayla	kaçağı
+Relation	T9	T10	NoRel	true	kazayla	yayınlanması

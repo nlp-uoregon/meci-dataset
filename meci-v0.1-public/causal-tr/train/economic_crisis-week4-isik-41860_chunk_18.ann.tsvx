@@ -1,0 +1,36 @@
+Text	küçükresim | sağ | 200px | Bükreşliler Bucur - Obor'da kuyrukta beklerken , 1986 Yükselen totaliter yönetimine rağmen , Çavuşesku’nun Sovyetler Birliği’nden bağımsız politikası ve 1968’deki Çekoslovakya'nın İşgaline karşı protestosu , onun yaramaz anti - Sovyetçi biri olduğuna inanan ve onu fonlayarak ( ona parasal destek sağlayarak ) Varşova Paktı’ında bir hizip yaratmayı uman Batılı güçlerin ilgisini çekti .	Çavuşesku fonlamanın daima yararına olmadığının farkına varmadı .	Ekonomik Kalkınma Programı’nın finansmanında kullanmak üzere 13 milyar USD gibi ağır bir borcun altına girdi .	Ancak bu krediler ülkenin finansmanında heba oldu .	Bunu düzeltme çabası olarak , dış borçları geri ödemeye karar verdi .
+Event	T0	politikası	EVENT	166
+Event	T1	protestosu	EVENT	222
+Event	T2	çekti	EVENT	406
+Event	T4	girdi	EVENT	583
+Event	T5	verdi	EVENT	705
+Event	T6	beklerken	EVENT	64
+Event	T7	İşgaline	EVENT	207
+Event	T3	Programı’nın	EVENT	498
+Event	T8	oldu	EVENT	636
+Relation	T7	T1	CauseEffect	true	İşgaline	protestosu
+Relation	T1	T7	EffectCause	true	protestosu	İşgaline
+Relation	T3	T4	CauseEffect	true	Programı’nın	girdi
+Relation	T4	T3	EffectCause	true	girdi	Programı’nın
+Relation	T4	T8	CauseEffect	true	girdi	oldu
+Relation	T8	T4	EffectCause	true	oldu	girdi
+Relation	T8	T5	CauseEffect	true	oldu	verdi
+Relation	T5	T8	EffectCause	true	verdi	oldu
+Relation	T0	T6	NoRel	true	politikası	beklerken
+Relation	T0	T7	NoRel	true	politikası	İşgaline
+Relation	T1	T3	NoRel	true	protestosu	Programı’nın
+Relation	T1	T6	NoRel	true	protestosu	beklerken
+Relation	T1	T8	NoRel	true	protestosu	oldu
+Relation	T2	T0	NoRel	true	çekti	politikası
+Relation	T2	T3	NoRel	true	çekti	Programı’nın
+Relation	T2	T5	NoRel	true	çekti	verdi
+Relation	T3	T7	NoRel	true	Programı’nın	İşgaline
+Relation	T4	T5	NoRel	true	girdi	verdi
+Relation	T5	T2	NoRel	true	verdi	çekti
+Relation	T5	T3	NoRel	true	verdi	Programı’nın
+Relation	T5	T7	NoRel	true	verdi	İşgaline
+Relation	T6	T0	NoRel	true	beklerken	politikası
+Relation	T6	T5	NoRel	true	beklerken	verdi
+Relation	T7	T4	NoRel	true	İşgaline	girdi
+Relation	T8	T0	NoRel	true	oldu	politikası
+Relation	T8	T7	NoRel	true	oldu	İşgaline

@@ -1,0 +1,28 @@
+Text	El VUELO 292 DE JET BLUE AIRWAYS fue un vuelo regular desde el aeropuerto Bob Hope ( BUR ) en Burbank , California al Aeropuerto Internacional John F. Kennedy ( JFK ) en New York .	El 21 de septiembre de 2005 , el vuelo 292 ejecutó un aterrizaje de emergencia en el Aeropuerto Internacional de Los Ángeles ( LAX ) después de que las ruedas de morro se quedasen bloqueadas en una posición anormal .	Nadie resultó herido .	Transportando a 140 pasajeros y seis tripulantes , el Airbus A320-232 partió de Burbank a las 3:17 p._m. PDT ( UTC-7 ) .	El avión , construido en 2002 , portaba el registro N536JB y el nombre " Canyon Blue " .
+Event	T0	ejecutó	EVENT	224
+Event	T1	aterrizaje	EVENT	235
+Event	T2	emergencia	EVENT	249
+Event	T3	bloqueadas	EVENT	361
+Event	T4	Transportando	EVENT	421
+Event	T5	partió	EVENT	491
+Event	T6	construido	EVENT	553
+Event	T7	portaba	EVENT	574
+Relation	T3	T1	CauseEffect	true	bloqueadas	aterrizaje
+Relation	T1	T3	EffectCause	true	aterrizaje	bloqueadas
+Relation	T0	T1	NoRel	true	ejecutó	aterrizaje
+Relation	T0	T7	NoRel	true	ejecutó	portaba
+Relation	T1	T2	NoRel	true	aterrizaje	emergencia
+Relation	T1	T6	NoRel	true	aterrizaje	construido
+Relation	T1	T7	NoRel	true	aterrizaje	portaba
+Relation	T2	T3	NoRel	true	emergencia	bloqueadas
+Relation	T2	T4	NoRel	true	emergencia	Transportando
+Relation	T2	T5	NoRel	true	emergencia	partió
+Relation	T3	T0	NoRel	true	bloqueadas	ejecutó
+Relation	T4	T0	NoRel	true	Transportando	ejecutó
+Relation	T4	T6	NoRel	true	Transportando	construido
+Relation	T5	T2	NoRel	true	partió	emergencia
+Relation	T6	T2	NoRel	true	construido	emergencia
+Relation	T6	T4	NoRel	true	construido	Transportando
+Relation	T6	T5	NoRel	true	construido	partió
+Relation	T6	T7	NoRel	true	construido	portaba
+Relation	T7	T0	NoRel	true	portaba	ejecutó

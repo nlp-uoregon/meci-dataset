@@ -1,0 +1,33 @@
+Text	Bir referandum düzenleyerek , Romanya’nın gelecekte yabancı borç almasını engelleyecek şekilde anayasayı değiştirmeyi başardı .	Referandum neredeyse tamama yakın çoğunlukla kabul edilmişti .	1980’lerde , ülke tarım ve endüstriyel üretiminin çoğunun borçların ödenebilmesi için ihraç edilmesi emri verdi .	Bunun sonucunda oluşan iç_kıtlık , yiyecek maddelerinin vesikaya bağlanması , ısınma , gaz ve elektrik kesintilerinin genel bir durum halini alması , Rumenlerin günlük hayatlarını sürdürebilme kavgası içine girmelerine neden oldu .	1980’ler boyunca , özellikle dükkanlardaki genel ve yiyecek maddelerinin erişilebilirliği ve kalitesindeki olumsuzluklarla , hayat standardında düzenli bir düşüş yaşandı .
+Event	T0	başardı	EVENT	118
+Event	T1	Referandum	EVENT	128
+Event	T3	verdi	EVENT	297
+Event	T8	oldu	EVENT	530
+Event	T9	yaşandı	EVENT	699
+Event	T10	referandum	EVENT	4
+Event	T11	edilmişti	EVENT	179
+Event	T2	iç_kıtlık	EVENT	328
+Relation	T10	T0	CauseEffect	true	referandum	başardı
+Relation	T0	T10	EffectCause	true	başardı	referandum
+Relation	T1	T11	CauseEffect	true	Referandum	edilmişti
+Relation	T11	T1	EffectCause	true	edilmişti	Referandum
+Relation	T11	T0	CauseEffect	true	edilmişti	başardı
+Relation	T0	T11	EffectCause	true	başardı	edilmişti
+Relation	T3	T2	CauseEffect	true	verdi	iç_kıtlık
+Relation	T2	T3	EffectCause	true	iç_kıtlık	verdi
+Relation	T2	T8	CauseEffect	true	iç_kıtlık	oldu
+Relation	T8	T2	EffectCause	true	oldu	iç_kıtlık
+Relation	T0	T2	NoRel	true	başardı	iç_kıtlık
+Relation	T0	T8	NoRel	true	başardı	oldu
+Relation	T1	T9	NoRel	true	Referandum	yaşandı
+Relation	T11	T2	NoRel	true	edilmişti	iç_kıtlık
+Relation	T11	T8	NoRel	true	edilmişti	oldu
+Relation	T11	T9	NoRel	true	edilmişti	yaşandı
+Relation	T2	T1	NoRel	true	iç_kıtlık	Referandum
+Relation	T2	T10	NoRel	true	iç_kıtlık	referandum
+Relation	T3	T0	NoRel	true	verdi	başardı
+Relation	T3	T10	NoRel	true	verdi	referandum
+Relation	T8	T11	NoRel	true	oldu	edilmişti
+Relation	T9	T10	NoRel	true	yaşandı	referandum
+Relation	T9	T11	NoRel	true	yaşandı	edilmişti
+Relation	T9	T8	NoRel	true	yaşandı	oldu

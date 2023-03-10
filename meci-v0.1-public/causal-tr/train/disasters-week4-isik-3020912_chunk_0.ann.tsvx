@@ -1,0 +1,80 @@
+Text	2021 RIZE SELI , 13 Temmuz 2021 tarihinde , Meteoroloji Genel Müdürlüğü'nün Doğu Karadeniz bölgesinde beklenen kuvvetli sağanak yağışı uyarısında bulunmasından sonra , 14 Temmuz 2021 tarihinde gerçekleşmiş sel felaketidir .	14 Temmuz 2021 tarihinde Rize'de etkisini gösteren kuvvetli sağanak yağış sonrasında Ardeşen , Pazar , Çayeli ve Güneysu ilçelerinde bazı köylerin yolları heyelan nedeniyle kapandı .	Muradiye'de çöken bir evde 3 kişi göçük altında kaldı , 1 kişi sele kapılarak kayboldu .	Cumhurbaşkanı Recep Tayyip Erdoğan'ın verdiği talimatla ; Çevre ve Şehircilik bakanı Murat Kurum , İçişleri bakanı Süleyman Soylu ve Ulaştırma ve Altyapı bakanı Adil Karaismailoğlu'nun olay yerine gideceği açıklandı .	
+Event	T0	bulunmasından	EVENT	146
+Event	T1	felaketidir	EVENT	210
+Event	T2	yağış	EVENT	292
+Event	T3	heyelan	EVENT	379
+Event	T4	kapandı	EVENT	397
+Event	T5	çöken	EVENT	419
+Event	T6	kaldı	EVENT	455
+Event	T7	kayboldu	EVENT	485
+Event	T10	açıklandı	EVENT	702
+Event	T11	SELI	EVENT	10
+Event	T12	yağışı	EVENT	128
+Event	T13	kapılarak	EVENT	475
+Event	T8	talimatla	EVENT	542
+Relation	T12	T11	CauseEffect	true	yağışı	SELI
+Relation	T11	T12	EffectCause	true	SELI	yağışı
+Relation	T2	T11	CauseEffect	true	yağış	SELI
+Relation	T11	T2	EffectCause	true	SELI	yağış
+Relation	T2	T3	CauseEffect	true	yağış	heyelan
+Relation	T3	T2	EffectCause	true	heyelan	yağış
+Relation	T3	T4	CauseEffect	true	heyelan	kapandı
+Relation	T4	T3	EffectCause	true	kapandı	heyelan
+Relation	T11	T5	CauseEffect	true	SELI	çöken
+Relation	T5	T11	EffectCause	true	çöken	SELI
+Relation	T5	T6	CauseEffect	true	çöken	kaldı
+Relation	T6	T5	EffectCause	true	kaldı	çöken
+Relation	T11	T13	CauseEffect	true	SELI	kapılarak
+Relation	T13	T11	EffectCause	true	kapılarak	SELI
+Relation	T13	T7	CauseEffect	true	kapılarak	kayboldu
+Relation	T7	T13	EffectCause	true	kayboldu	kapılarak
+Relation	T11	T8	CauseEffect	true	SELI	talimatla
+Relation	T8	T11	EffectCause	true	talimatla	SELI
+Relation	T8	T10	CauseEffect	true	talimatla	açıklandı
+Relation	T10	T8	EffectCause	true	açıklandı	talimatla
+Relation	T0	T11	NoRel	true	bulunmasından	SELI
+Relation	T0	T13	NoRel	true	bulunmasından	kapılarak
+Relation	T0	T2	NoRel	true	bulunmasından	yağış
+Relation	T0	T4	NoRel	true	bulunmasından	kapandı
+Relation	T0	T5	NoRel	true	bulunmasından	çöken
+Relation	T0	T6	NoRel	true	bulunmasından	kaldı
+Relation	T0	T7	NoRel	true	bulunmasından	kayboldu
+Relation	T1	T12	NoRel	true	felaketidir	yağışı
+Relation	T1	T4	NoRel	true	felaketidir	kapandı
+Relation	T1	T5	NoRel	true	felaketidir	çöken
+Relation	T1	T7	NoRel	true	felaketidir	kayboldu
+Relation	T10	T2	NoRel	true	açıklandı	yağış
+Relation	T10	T4	NoRel	true	açıklandı	kapandı
+Relation	T10	T6	NoRel	true	açıklandı	kaldı
+Relation	T10	T7	NoRel	true	açıklandı	kayboldu
+Relation	T11	T3	NoRel	true	SELI	heyelan
+Relation	T11	T4	NoRel	true	SELI	kapandı
+Relation	T12	T0	NoRel	true	yağışı	bulunmasından
+Relation	T12	T10	NoRel	true	yağışı	açıklandı
+Relation	T12	T2	NoRel	true	yağışı	yağış
+Relation	T12	T8	NoRel	true	yağışı	talimatla
+Relation	T13	T0	NoRel	true	kapılarak	bulunmasından
+Relation	T13	T4	NoRel	true	kapılarak	kapandı
+Relation	T13	T5	NoRel	true	kapılarak	çöken
+Relation	T13	T8	NoRel	true	kapılarak	talimatla
+Relation	T2	T0	NoRel	true	yağış	bulunmasından
+Relation	T2	T1	NoRel	true	yağış	felaketidir
+Relation	T3	T12	NoRel	true	heyelan	yağışı
+Relation	T3	T13	NoRel	true	heyelan	kapılarak
+Relation	T3	T7	NoRel	true	heyelan	kayboldu
+Relation	T4	T12	NoRel	true	kapandı	yağışı
+Relation	T4	T7	NoRel	true	kapandı	kayboldu
+Relation	T5	T0	NoRel	true	çöken	bulunmasından
+Relation	T5	T13	NoRel	true	çöken	kapılarak
+Relation	T5	T4	NoRel	true	çöken	kapandı
+Relation	T6	T0	NoRel	true	kaldı	bulunmasından
+Relation	T6	T1	NoRel	true	kaldı	felaketidir
+Relation	T6	T11	NoRel	true	kaldı	SELI
+Relation	T6	T12	NoRel	true	kaldı	yağışı
+Relation	T6	T7	NoRel	true	kaldı	kayboldu
+Relation	T7	T11	NoRel	true	kayboldu	SELI
+Relation	T7	T2	NoRel	true	kayboldu	yağış
+Relation	T7	T6	NoRel	true	kayboldu	kaldı
+Relation	T7	T8	NoRel	true	kayboldu	talimatla
+Relation	T8	T13	NoRel	true	talimatla	kapılarak
+Relation	T8	T3	NoRel	true	talimatla	heyelan

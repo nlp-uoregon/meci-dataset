@@ -1,0 +1,17 @@
+Text	Adil bir dövüş için gücü kullanmamasına rağmen Pre Vizsla'yı öldürür ve siyah ışın kılıcının sahibi olur .	Darth Sidious Darth Maul'un yaşadığını hissedince onu öldürmek için Mandalore'ye gitti .	Öldürmek istemesinin tek nedeni ise Sith Düzenidir .	Bir öğrenci bir çırak olması gereklidir .	Onun için Darth Maul ölmelidir .
+Event	T0	dövüş	EVENT	9
+Event	T1	öldürür	EVENT	61
+Event	T2	hissedince	EVENT	146
+Event	T4	gitti	EVENT	188
+Event	T5	istemesinin	EVENT	205
+Event	T6	ölmelidir	EVENT	312
+Relation	T2	T4	CauseEffect	true	hissedince	gitti
+Relation	T4	T2	EffectCause	true	gitti	hissedince
+Relation	T0	T2	NoRel	true	dövüş	hissedince
+Relation	T2	T5	NoRel	true	hissedince	istemesinin
+Relation	T4	T0	NoRel	true	gitti	dövüş
+Relation	T4	T1	NoRel	true	gitti	öldürür
+Relation	T5	T0	NoRel	true	istemesinin	dövüş
+Relation	T5	T1	NoRel	true	istemesinin	öldürür
+Relation	T6	T0	NoRel	true	ölmelidir	dövüş
+Relation	T6	T1	NoRel	true	ölmelidir	öldürür

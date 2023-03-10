@@ -1,0 +1,78 @@
+Text	Kollisionen skete med en samlet hastighed på ca. 205 km/t.	Ved kollisionen blev den forreste vogn i Thames Train 0806 fra Paddington til Bedwyn , Wiltshire fuldstændig knust .	Togets dieseloliebeholdning blev antændt og forårsagede flere brande i vragene , især i den forreste vogn i det modkørende tog .	Vognen udbrændte fuldstændigt .	Som den umiddelbare årsag til ulykken blev det fastslået , at lokomotivføreren på Thames Train 0806 blot 563 meter før kollisionen passerede signal SN109 , mens dette viste rødt lys ( " stop " ) .
+Event	T1	knust	EVENT	168
+Event	T2	antændt	EVENT	209
+Event	T3	forårsagede	EVENT	220
+Event	T4	brande	EVENT	238
+Event	T5	ulykken	EVENT	367
+Event	T6	fastslået	EVENT	384
+Event	T7	viste	EVENT	504
+Event	T8	kollisionen	EVENT	63
+Event	T9	udbrændte	EVENT	312
+Event	T10	kollisionen	EVENT	456
+Event	T11	stop	EVENT	523
+Event	T12	passerede	EVENT	468
+Event	T13	Kollisionen	EVENT	0
+Relation	T12	T5	CauseEffect	true	passerede	ulykken
+Relation	T5	T12	EffectCause	true	ulykken	passerede
+Relation	T5	T9	CauseEffect	true	ulykken	udbrændte
+Relation	T9	T5	EffectCause	true	udbrændte	ulykken
+Relation	T8	T1	CauseEffect	true	kollisionen	knust
+Relation	T1	T8	EffectCause	true	knust	kollisionen
+Relation	T2	T4	CauseEffect	true	antændt	brande
+Relation	T4	T2	EffectCause	true	brande	antændt
+Relation	T4	T9	CauseEffect	true	brande	udbrændte
+Relation	T9	T4	EffectCause	true	udbrændte	brande
+Relation	T8	T2	CauseEffect	true	kollisionen	antændt
+Relation	T2	T8	EffectCause	true	antændt	kollisionen
+Relation	T13	T2	CauseEffect	true	Kollisionen	antændt
+Relation	T2	T13	EffectCause	true	antændt	Kollisionen
+Relation	T1	T12	NoRel	true	knust	passerede
+Relation	T1	T2	NoRel	true	knust	antændt
+Relation	T1	T4	NoRel	true	knust	brande
+Relation	T1	T5	NoRel	true	knust	ulykken
+Relation	T1	T7	NoRel	true	knust	viste
+Relation	T1	T9	NoRel	true	knust	udbrændte
+Relation	T10	T11	NoRel	true	kollisionen	stop
+Relation	T10	T2	NoRel	true	kollisionen	antændt
+Relation	T10	T6	NoRel	true	kollisionen	fastslået
+Relation	T10	T8	NoRel	true	kollisionen	kollisionen
+Relation	T10	T9	NoRel	true	kollisionen	udbrændte
+Relation	T11	T10	NoRel	true	stop	kollisionen
+Relation	T11	T4	NoRel	true	stop	brande
+Relation	T11	T5	NoRel	true	stop	ulykken
+Relation	T11	T6	NoRel	true	stop	fastslået
+Relation	T11	T8	NoRel	true	stop	kollisionen
+Relation	T12	T1	NoRel	true	passerede	knust
+Relation	T12	T11	NoRel	true	passerede	stop
+Relation	T12	T13	NoRel	true	passerede	Kollisionen
+Relation	T12	T3	NoRel	true	passerede	forårsagede
+Relation	T12	T4	NoRel	true	passerede	brande
+Relation	T12	T8	NoRel	true	passerede	kollisionen
+Relation	T13	T11	NoRel	true	Kollisionen	stop
+Relation	T13	T6	NoRel	true	Kollisionen	fastslået
+Relation	T13	T8	NoRel	true	Kollisionen	kollisionen
+Relation	T2	T1	NoRel	true	antændt	knust
+Relation	T2	T11	NoRel	true	antændt	stop
+Relation	T2	T5	NoRel	true	antændt	ulykken
+Relation	T3	T1	NoRel	true	forårsagede	knust
+Relation	T3	T10	NoRel	true	forårsagede	kollisionen
+Relation	T3	T12	NoRel	true	forårsagede	passerede
+Relation	T3	T2	NoRel	true	forårsagede	antændt
+Relation	T3	T5	NoRel	true	forårsagede	ulykken
+Relation	T3	T9	NoRel	true	forårsagede	udbrændte
+Relation	T4	T1	NoRel	true	brande	knust
+Relation	T4	T13	NoRel	true	brande	Kollisionen
+Relation	T4	T3	NoRel	true	brande	forårsagede
+Relation	T4	T6	NoRel	true	brande	fastslået
+Relation	T5	T8	NoRel	true	ulykken	kollisionen
+Relation	T6	T1	NoRel	true	fastslået	knust
+Relation	T6	T12	NoRel	true	fastslået	passerede
+Relation	T6	T13	NoRel	true	fastslået	Kollisionen
+Relation	T6	T2	NoRel	true	fastslået	antændt
+Relation	T6	T5	NoRel	true	fastslået	ulykken
+Relation	T7	T2	NoRel	true	viste	antændt
+Relation	T7	T8	NoRel	true	viste	kollisionen
+Relation	T8	T11	NoRel	true	kollisionen	stop
+Relation	T8	T12	NoRel	true	kollisionen	passerede
+Relation	T8	T6	NoRel	true	kollisionen	fastslået
+Relation	T9	T7	NoRel	true	udbrændte	viste

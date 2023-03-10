@@ -1,0 +1,63 @@
+Text	Organizations such as the Knights of Labor had little power in confronting owners .	Miners demanding better working conditions or wage increases were often fired .	When local unions sought such changes , they were easily driven out of the mining districts .	During the 1896 - 97 strike of the Cloud City Miners ' Union in Leadville , Colorado , mine owners formed a secret verbal agreement among themselves that none of them would recognize the union or negotiate with it , an arrangement later revealed in a report by the Colorado State Legislature .	Mine owners went a step further and formed a Mine Owners ' Association in response to union organizing in the mining district of Coeur d' Alene , Idaho during the 1880s .
+Event	T0	confronting	EVENT	63
+Event	T1	demanding	EVENT	91
+Event	T2	increases	EVENT	135
+Event	T3	fired	EVENT	156
+Event	T4	sought	EVENT	182
+Event	T5	changes	EVENT	194
+Event	T6	strike	EVENT	279
+Event	T7	formed	EVENT	357
+Event	T8	agreement	EVENT	380
+Event	T9	negotiate	EVENT	454
+Event	T10	arrangement	EVENT	477
+Event	T11	revealed	EVENT	495
+Event	T12	report	EVENT	509
+Event	T13	went	EVENT	564
+Event	T14	formed	EVENT	588
+Event	T15	response	EVENT	626
+Event	T16	organizing	EVENT	644
+Event	T17	driven out	EVENT	221
+Relation	T1	T3	CauseEffect	true	demanding	fired
+Relation	T3	T1	EffectCause	true	fired	demanding
+Relation	T4	T17	CauseEffect	true	sought	driven out
+Relation	T17	T4	EffectCause	true	driven out	sought
+Relation	T14	T16	CauseEffect	true	formed	organizing
+Relation	T16	T14	EffectCause	true	organizing	formed
+Relation	T0	T12	NoRel	true	confronting	report
+Relation	T0	T13	NoRel	true	confronting	went
+Relation	T0	T2	NoRel	true	confronting	increases
+Relation	T0	T4	NoRel	true	confronting	sought
+Relation	T0	T6	NoRel	true	confronting	strike
+Relation	T10	T13	NoRel	true	arrangement	went
+Relation	T10	T15	NoRel	true	arrangement	response
+Relation	T11	T4	NoRel	true	revealed	sought
+Relation	T12	T14	NoRel	true	report	formed
+Relation	T12	T16	NoRel	true	report	organizing
+Relation	T12	T4	NoRel	true	report	sought
+Relation	T13	T15	NoRel	true	went	response
+Relation	T14	T9	NoRel	true	formed	negotiate
+Relation	T15	T10	NoRel	true	response	arrangement
+Relation	T15	T17	NoRel	true	response	driven out
+Relation	T15	T2	NoRel	true	response	increases
+Relation	T16	T6	NoRel	true	organizing	strike
+Relation	T17	T16	NoRel	true	driven out	organizing
+Relation	T17	T6	NoRel	true	driven out	strike
+Relation	T2	T0	NoRel	true	increases	confronting
+Relation	T2	T12	NoRel	true	increases	report
+Relation	T2	T16	NoRel	true	increases	organizing
+Relation	T2	T8	NoRel	true	increases	agreement
+Relation	T3	T11	NoRel	true	fired	revealed
+Relation	T3	T17	NoRel	true	fired	driven out
+Relation	T3	T4	NoRel	true	fired	sought
+Relation	T3	T6	NoRel	true	fired	strike
+Relation	T4	T10	NoRel	true	sought	arrangement
+Relation	T4	T2	NoRel	true	sought	increases
+Relation	T5	T10	NoRel	true	changes	arrangement
+Relation	T6	T0	NoRel	true	strike	confronting
+Relation	T6	T11	NoRel	true	strike	revealed
+Relation	T6	T8	NoRel	true	strike	agreement
+Relation	T7	T2	NoRel	true	formed	increases
+Relation	T8	T11	NoRel	true	agreement	revealed
+Relation	T8	T14	NoRel	true	agreement	formed
+Relation	T8	T4	NoRel	true	agreement	sought
+Relation	T9	T7	NoRel	true	negotiate	formed

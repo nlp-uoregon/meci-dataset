@@ -1,0 +1,65 @@
+Text	BULGAR DIRENIŞ HAREKETI , Bulgaristan'ın müttefiki Nazi Almanyası'nın Sovyetler Birliği'ni işgal etmesine tepki gösteren komünistlerin oluşturduğu direniş hareketi .	Bazı bölgelerde Rus göçmenlerde bu harekete katıldı .	Almanların Avrupa'da etkisi arttıkça ülkelerde faşist hükûmetler kuruluyordu .	Bunun bir örneği Bulgaristan'da olmuş ve Çar III. Boris , 1940 başlarında faşistlerden oluşan bir hükûmet kurup başkanlığına da Alman hayranı Prof. Bogdan Filov'u getirmiştir .	Kurulan yeni hükûmet halka yönelik anti - demokratik önlemler almaya başladı .
+Event	T1	tepki	EVENT	106
+Event	T2	hareketi	EVENT	155
+Event	T3	katıldı	EVENT	210
+Event	T4	etkisi	EVENT	241
+Event	T5	kuruluyordu	EVENT	285
+Event	T6	başladı	EVENT	545
+Event	T7	BULGAR DIRENIŞ HAREKETI	EVENT	0
+Event	T8	işgal	EVENT	91
+Event	T9	arttıkça	EVENT	248
+Event	T10	kurup	EVENT	405
+Event	T11	getirmiştir	EVENT	462
+Event	T12	Kurulan	EVENT	476
+Relation	T8	T1	CauseEffect	true	işgal	tepki
+Relation	T1	T8	EffectCause	true	tepki	işgal
+Relation	T8	T2	CauseEffect	true	işgal	hareketi
+Relation	T2	T8	EffectCause	true	hareketi	işgal
+Relation	T8	T7	CauseEffect	true	işgal	BULGAR DIRENIŞ HAREKETI
+Relation	T7	T8	EffectCause	true	BULGAR DIRENIŞ HAREKETI	işgal
+Relation	T7	T3	CauseEffect	true	BULGAR DIRENIŞ HAREKETI	katıldı
+Relation	T3	T7	EffectCause	true	katıldı	BULGAR DIRENIŞ HAREKETI
+Relation	T9	T5	CauseEffect	true	arttıkça	kuruluyordu
+Relation	T5	T9	EffectCause	true	kuruluyordu	arttıkça
+Relation	T9	T11	CauseEffect	true	arttıkça	getirmiştir
+Relation	T11	T9	EffectCause	true	getirmiştir	arttıkça
+Relation	T9	T10	CauseEffect	true	arttıkça	kurup
+Relation	T10	T9	EffectCause	true	kurup	arttıkça
+Relation	T1	T2	NoRel	true	tepki	hareketi
+Relation	T1	T4	NoRel	true	tepki	etkisi
+Relation	T10	T4	NoRel	true	kurup	etkisi
+Relation	T10	T5	NoRel	true	kurup	kuruluyordu
+Relation	T10	T6	NoRel	true	kurup	başladı
+Relation	T10	T8	NoRel	true	kurup	işgal
+Relation	T11	T12	NoRel	true	getirmiştir	Kurulan
+Relation	T11	T4	NoRel	true	getirmiştir	etkisi
+Relation	T11	T5	NoRel	true	getirmiştir	kuruluyordu
+Relation	T11	T7	NoRel	true	getirmiştir	BULGAR DIRENIŞ HAREKETI
+Relation	T12	T11	NoRel	true	Kurulan	getirmiştir
+Relation	T12	T2	NoRel	true	Kurulan	hareketi
+Relation	T12	T6	NoRel	true	Kurulan	başladı
+Relation	T2	T11	NoRel	true	hareketi	getirmiştir
+Relation	T3	T5	NoRel	true	katıldı	kuruluyordu
+Relation	T4	T1	NoRel	true	etkisi	tepki
+Relation	T4	T10	NoRel	true	etkisi	kurup
+Relation	T4	T12	NoRel	true	etkisi	Kurulan
+Relation	T4	T6	NoRel	true	etkisi	başladı
+Relation	T4	T9	NoRel	true	etkisi	arttıkça
+Relation	T5	T4	NoRel	true	kuruluyordu	etkisi
+Relation	T5	T6	NoRel	true	kuruluyordu	başladı
+Relation	T5	T7	NoRel	true	kuruluyordu	BULGAR DIRENIŞ HAREKETI
+Relation	T6	T11	NoRel	true	başladı	getirmiştir
+Relation	T6	T12	NoRel	true	başladı	Kurulan
+Relation	T6	T5	NoRel	true	başladı	kuruluyordu
+Relation	T7	T1	NoRel	true	BULGAR DIRENIŞ HAREKETI	tepki
+Relation	T7	T10	NoRel	true	BULGAR DIRENIŞ HAREKETI	kurup
+Relation	T7	T11	NoRel	true	BULGAR DIRENIŞ HAREKETI	getirmiştir
+Relation	T7	T2	NoRel	true	BULGAR DIRENIŞ HAREKETI	hareketi
+Relation	T7	T6	NoRel	true	BULGAR DIRENIŞ HAREKETI	başladı
+Relation	T8	T10	NoRel	true	işgal	kurup
+Relation	T8	T12	NoRel	true	işgal	Kurulan
+Relation	T9	T1	NoRel	true	arttıkça	tepki
+Relation	T9	T2	NoRel	true	arttıkça	hareketi
+Relation	T9	T6	NoRel	true	arttıkça	başladı
+Relation	T9	T7	NoRel	true	arttıkça	BULGAR DIRENIŞ HAREKETI
+Relation	T9	T8	NoRel	true	arttıkça	işgal

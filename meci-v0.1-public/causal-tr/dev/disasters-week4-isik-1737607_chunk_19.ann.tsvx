@@ -1,0 +1,39 @@
+Text	50 m²'lik alanları ile bomba bir kilometre uzaklıktaki yamaçlara düştü .	Patlama başladı 51 saat sonra kül Finlandiya'da görüldi .	Bu süre içinde patlama yerinden 2860 km uzakta olan Helsinki'ye kül düştü .	Patlama ilk 30 dakika içinde volkanın üretim oranı sonraki yarım saat boyunca 22.000 m³ - 1 bırakarak , 75.000 m³ - 1 idi .	İlk aşama kara ve deniz 3.130 km²'lik katı kaya 4,5 × 107m3 , denk , volkanın 0, 18 km³'lük üretti .
+Event	T0	düştü	EVENT	65
+Event	T1	başladı	EVENT	81
+Event	T2	görüldi	EVENT	121
+Event	T3	patlama	EVENT	146
+Event	T4	düştü	EVENT	199
+Event	T5	Patlama	EVENT	207
+Event	T6	üretim	EVENT	245
+Event	T7	üretti	EVENT	423
+Event	T8	bomba	EVENT	23
+Relation	T1	T2	CauseEffect	true	başladı	görüldi
+Relation	T2	T1	EffectCause	true	görüldi	başladı
+Relation	T3	T4	CauseEffect	true	patlama	düştü
+Relation	T4	T3	EffectCause	true	düştü	patlama
+Relation	T0	T2	NoRel	true	düştü	görüldi
+Relation	T0	T4	NoRel	true	düştü	düştü
+Relation	T1	T0	NoRel	true	başladı	düştü
+Relation	T1	T6	NoRel	true	başladı	üretim
+Relation	T1	T7	NoRel	true	başladı	üretti
+Relation	T2	T3	NoRel	true	görüldi	patlama
+Relation	T2	T4	NoRel	true	görüldi	düştü
+Relation	T2	T5	NoRel	true	görüldi	Patlama
+Relation	T3	T1	NoRel	true	patlama	başladı
+Relation	T3	T5	NoRel	true	patlama	Patlama
+Relation	T3	T7	NoRel	true	patlama	üretti
+Relation	T4	T0	NoRel	true	düştü	düştü
+Relation	T4	T1	NoRel	true	düştü	başladı
+Relation	T5	T1	NoRel	true	Patlama	başladı
+Relation	T5	T6	NoRel	true	Patlama	üretim
+Relation	T5	T7	NoRel	true	Patlama	üretti
+Relation	T6	T1	NoRel	true	üretim	başladı
+Relation	T6	T2	NoRel	true	üretim	görüldi
+Relation	T6	T4	NoRel	true	üretim	düştü
+Relation	T6	T5	NoRel	true	üretim	Patlama
+Relation	T7	T3	NoRel	true	üretti	patlama
+Relation	T7	T4	NoRel	true	üretti	düştü
+Relation	T8	T2	NoRel	true	bomba	görüldi
+Relation	T8	T4	NoRel	true	bomba	düştü
+Relation	T8	T5	NoRel	true	bomba	Patlama

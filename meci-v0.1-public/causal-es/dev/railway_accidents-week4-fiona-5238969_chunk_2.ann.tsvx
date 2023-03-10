@@ -1,0 +1,36 @@
+Text	Los depósitos de combustible de las locomotoras , cada uno de ellos con varios miles de litros de combustible diésel , se rompieron en el impacto .	Esto resultó en un derrame de combustible y un gran incendio .	Perecieron 47 personas , de las cuales 42 eran pasajeros , muchos por ahogamiento , otros por la inhalación de humo / fuego .	Otros 103 resultaron heridos .	Los 4 tripulantes del remolcador resultaron ilesos .
+Event	T0	rompieron	EVENT	122
+Event	T1	impacto	EVENT	138
+Event	T2	resultó	EVENT	153
+Event	T3	derrame	EVENT	167
+Event	T4	incendio	EVENT	200
+Event	T5	Perecieron	EVENT	211
+Event	T6	ahogamiento	EVENT	281
+Event	T7	inhalación	EVENT	308
+Event	T8	heridos	EVENT	358
+Relation	T7	T6	CauseEffect	true	inhalación	ahogamiento
+Relation	T6	T7	EffectCause	true	ahogamiento	inhalación
+Relation	T4	T5	CauseEffect	true	incendio	Perecieron
+Relation	T5	T4	EffectCause	true	Perecieron	incendio
+Relation	T0	T2	NoRel	true	rompieron	resultó
+Relation	T0	T3	NoRel	true	rompieron	derrame
+Relation	T0	T4	NoRel	true	rompieron	incendio
+Relation	T1	T0	NoRel	true	impacto	rompieron
+Relation	T1	T6	NoRel	true	impacto	ahogamiento
+Relation	T2	T1	NoRel	true	resultó	impacto
+Relation	T2	T3	NoRel	true	resultó	derrame
+Relation	T2	T4	NoRel	true	resultó	incendio
+Relation	T2	T6	NoRel	true	resultó	ahogamiento
+Relation	T2	T8	NoRel	true	resultó	heridos
+Relation	T3	T1	NoRel	true	derrame	impacto
+Relation	T5	T1	NoRel	true	Perecieron	impacto
+Relation	T5	T8	NoRel	true	Perecieron	heridos
+Relation	T6	T0	NoRel	true	ahogamiento	rompieron
+Relation	T7	T0	NoRel	true	inhalación	rompieron
+Relation	T7	T1	NoRel	true	inhalación	impacto
+Relation	T7	T2	NoRel	true	inhalación	resultó
+Relation	T7	T3	NoRel	true	inhalación	derrame
+Relation	T7	T8	NoRel	true	inhalación	heridos
+Relation	T8	T1	NoRel	true	heridos	impacto
+Relation	T8	T4	NoRel	true	heridos	incendio
+Relation	T8	T5	NoRel	true	heridos	Perecieron

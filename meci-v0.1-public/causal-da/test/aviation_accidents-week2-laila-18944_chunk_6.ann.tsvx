@@ -1,0 +1,58 @@
+Text	Det oprindelige formål var at kæmpe mod den sovjetiske okkupation af Afghanistan , og de modtog støtte fra Inter-Services Intelligence og senere også fra CIA .	Han var med i kampene mod besættelsesmagten og oprettede træningslejre , som bl.a. blev finansieret af amerikanske økonomiske midler .	Her bevæbnede han arabiske frivillige og finansierede deres rejse til Afghanistan .	Det var i denne periode , han formodes at have opbygget forbindelser til arabiske bevægelser i dele af den muslimske verden .	I 1994 mistede bin Laden sit statsborgerskab i Saudi-Arabien og blev desuden formelt udstødt af familien .
+Event	T0	kæmpe	EVENT	30
+Event	T1	okkupation	EVENT	55
+Event	T10	oprettede	EVENT	207
+Event	T11	opbygget	EVENT	426
+Event	T3	finansieret	EVENT	248
+Event	T4	bevæbnede	EVENT	299
+Event	T5	finansierede	EVENT	336
+Event	T6	rejse	EVENT	355
+Event	T7	mistede	EVENT	512
+Event	T8	udstødt	EVENT	590
+Event	T9	kampene	EVENT	174
+Relation	T1	T0	CauseEffect	true	okkupation	kæmpe
+Relation	T0	T1	EffectCause	true	kæmpe	okkupation
+Relation	T10	T4	CauseEffect	true	oprettede	bevæbnede
+Relation	T4	T10	EffectCause	true	bevæbnede	oprettede
+Relation	T10	T5	CauseEffect	true	oprettede	finansierede
+Relation	T5	T10	EffectCause	true	finansierede	oprettede
+Relation	T9	T10	CauseEffect	true	kampene	oprettede
+Relation	T10	T9	EffectCause	true	oprettede	kampene
+Relation	T0	T3	NoRel	true	kæmpe	finansieret
+Relation	T0	T6	NoRel	true	kæmpe	rejse
+Relation	T0	T7	NoRel	true	kæmpe	mistede
+Relation	T0	T9	NoRel	true	kæmpe	kampene
+Relation	T10	T1	NoRel	true	oprettede	okkupation
+Relation	T10	T6	NoRel	true	oprettede	rejse
+Relation	T11	T1	NoRel	true	opbygget	okkupation
+Relation	T11	T3	NoRel	true	opbygget	finansieret
+Relation	T3	T0	NoRel	true	finansieret	kæmpe
+Relation	T3	T10	NoRel	true	finansieret	oprettede
+Relation	T3	T4	NoRel	true	finansieret	bevæbnede
+Relation	T3	T5	NoRel	true	finansieret	finansierede
+Relation	T3	T6	NoRel	true	finansieret	rejse
+Relation	T3	T7	NoRel	true	finansieret	mistede
+Relation	T3	T8	NoRel	true	finansieret	udstødt
+Relation	T4	T0	NoRel	true	bevæbnede	kæmpe
+Relation	T4	T11	NoRel	true	bevæbnede	opbygget
+Relation	T4	T8	NoRel	true	bevæbnede	udstødt
+Relation	T5	T3	NoRel	true	finansierede	finansieret
+Relation	T6	T11	NoRel	true	rejse	opbygget
+Relation	T6	T5	NoRel	true	rejse	finansierede
+Relation	T6	T9	NoRel	true	rejse	kampene
+Relation	T7	T10	NoRel	true	mistede	oprettede
+Relation	T7	T3	NoRel	true	mistede	finansieret
+Relation	T7	T5	NoRel	true	mistede	finansierede
+Relation	T7	T6	NoRel	true	mistede	rejse
+Relation	T7	T9	NoRel	true	mistede	kampene
+Relation	T8	T0	NoRel	true	udstødt	kæmpe
+Relation	T8	T10	NoRel	true	udstødt	oprettede
+Relation	T8	T3	NoRel	true	udstødt	finansieret
+Relation	T8	T5	NoRel	true	udstødt	finansierede
+Relation	T9	T0	NoRel	true	kampene	kæmpe
+Relation	T9	T3	NoRel	true	kampene	finansieret
+Relation	T9	T4	NoRel	true	kampene	bevæbnede
+Relation	T9	T5	NoRel	true	kampene	finansierede
+Relation	T9	T6	NoRel	true	kampene	rejse
+Relation	T9	T7	NoRel	true	kampene	mistede
+Relation	T9	T8	NoRel	true	kampene	udstødt

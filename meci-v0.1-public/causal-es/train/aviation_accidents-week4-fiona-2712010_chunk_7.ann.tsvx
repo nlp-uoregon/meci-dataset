@@ -1,0 +1,172 @@
+Text	Estaría encabezada por el viceprimer ministro Armen Gevorgyan .	Los funcionarios iraníes culparon del accidente a razones técnicas .	Se alegó que el motivo principal del accidente fue un fallo de motor y destrucción por impacto de un pájaro , lo que resultó en un incendio que provocó la pérdida de control y la caída del avión .	El 23 de diciembre de 2014 se publicó una cronología de eventos : Durante el ascenso a la altitud de 9.700 metros ( 31.800 pies ) , la tripulación envió un mensaje sobre un incendio en el motor número uno .	La subida se detuvo a 8.700 metros ( 28.500 pies ) .
+Event	T0	encabezada	EVENT	8
+Event	T1	culparon	EVENT	89
+Event	T2	accidente	EVENT	102
+Event	T3	alegó	EVENT	136
+Event	T4	accidente	EVENT	170
+Event	T5	fallo	EVENT	187
+Event	T6	destrucción	EVENT	204
+Event	T7	impacto	EVENT	220
+Event	T8	resultó	EVENT	250
+Event	T9	incendio	EVENT	264
+Event	T10	provocó	EVENT	277
+Event	T11	pérdida	EVENT	288
+Event	T12	caída	EVENT	312
+Event	T13	publicó	EVENT	360
+Event	T14	eventos	EVENT	386
+Event	T15	ascenso	EVENT	407
+Event	T16	envió	EVENT	477
+Event	T17	mensaje	EVENT	486
+Event	T18	incendio	EVENT	503
+Event	T19	subida	EVENT	540
+Event	T20	detuvo	EVENT	550
+Relation	T5	T4	CauseEffect	true	fallo	accidente
+Relation	T4	T5	EffectCause	true	accidente	fallo
+Relation	T7	T6	CauseEffect	true	impacto	destrucción
+Relation	T6	T7	EffectCause	true	destrucción	impacto
+Relation	T6	T9	CauseEffect	true	destrucción	incendio
+Relation	T9	T6	EffectCause	true	incendio	destrucción
+Relation	T7	T11	CauseEffect	true	impacto	pérdida
+Relation	T11	T7	EffectCause	true	pérdida	impacto
+Relation	T11	T12	CauseEffect	true	pérdida	caída
+Relation	T12	T11	EffectCause	true	caída	pérdida
+Relation	T0	T11	NoRel	true	encabezada	pérdida
+Relation	T0	T13	NoRel	true	encabezada	publicó
+Relation	T0	T14	NoRel	true	encabezada	eventos
+Relation	T0	T6	NoRel	true	encabezada	destrucción
+Relation	T0	T7	NoRel	true	encabezada	impacto
+Relation	T0	T8	NoRel	true	encabezada	resultó
+Relation	T1	T11	NoRel	true	culparon	pérdida
+Relation	T1	T12	NoRel	true	culparon	caída
+Relation	T1	T17	NoRel	true	culparon	mensaje
+Relation	T1	T2	NoRel	true	culparon	accidente
+Relation	T1	T5	NoRel	true	culparon	fallo
+Relation	T1	T6	NoRel	true	culparon	destrucción
+Relation	T1	T7	NoRel	true	culparon	impacto
+Relation	T1	T8	NoRel	true	culparon	resultó
+Relation	T10	T11	NoRel	true	provocó	pérdida
+Relation	T10	T15	NoRel	true	provocó	ascenso
+Relation	T10	T16	NoRel	true	provocó	envió
+Relation	T10	T17	NoRel	true	provocó	mensaje
+Relation	T10	T19	NoRel	true	provocó	subida
+Relation	T10	T5	NoRel	true	provocó	fallo
+Relation	T10	T6	NoRel	true	provocó	destrucción
+Relation	T10	T9	NoRel	true	provocó	incendio
+Relation	T11	T1	NoRel	true	pérdida	culparon
+Relation	T11	T15	NoRel	true	pérdida	ascenso
+Relation	T11	T17	NoRel	true	pérdida	mensaje
+Relation	T11	T2	NoRel	true	pérdida	accidente
+Relation	T11	T4	NoRel	true	pérdida	accidente
+Relation	T11	T8	NoRel	true	pérdida	resultó
+Relation	T12	T0	NoRel	true	caída	encabezada
+Relation	T12	T1	NoRel	true	caída	culparon
+Relation	T12	T15	NoRel	true	caída	ascenso
+Relation	T12	T16	NoRel	true	caída	envió
+Relation	T12	T18	NoRel	true	caída	incendio
+Relation	T12	T3	NoRel	true	caída	alegó
+Relation	T12	T7	NoRel	true	caída	impacto
+Relation	T12	T8	NoRel	true	caída	resultó
+Relation	T13	T10	NoRel	true	publicó	provocó
+Relation	T13	T15	NoRel	true	publicó	ascenso
+Relation	T13	T19	NoRel	true	publicó	subida
+Relation	T13	T2	NoRel	true	publicó	accidente
+Relation	T13	T3	NoRel	true	publicó	alegó
+Relation	T14	T13	NoRel	true	eventos	publicó
+Relation	T14	T15	NoRel	true	eventos	ascenso
+Relation	T14	T18	NoRel	true	eventos	incendio
+Relation	T14	T2	NoRel	true	eventos	accidente
+Relation	T14	T5	NoRel	true	eventos	fallo
+Relation	T14	T6	NoRel	true	eventos	destrucción
+Relation	T14	T9	NoRel	true	eventos	incendio
+Relation	T15	T10	NoRel	true	ascenso	provocó
+Relation	T15	T13	NoRel	true	ascenso	publicó
+Relation	T15	T16	NoRel	true	ascenso	envió
+Relation	T15	T17	NoRel	true	ascenso	mensaje
+Relation	T15	T2	NoRel	true	ascenso	accidente
+Relation	T15	T4	NoRel	true	ascenso	accidente
+Relation	T15	T6	NoRel	true	ascenso	destrucción
+Relation	T15	T9	NoRel	true	ascenso	incendio
+Relation	T16	T10	NoRel	true	envió	provocó
+Relation	T16	T11	NoRel	true	envió	pérdida
+Relation	T16	T13	NoRel	true	envió	publicó
+Relation	T16	T14	NoRel	true	envió	eventos
+Relation	T16	T5	NoRel	true	envió	fallo
+Relation	T16	T6	NoRel	true	envió	destrucción
+Relation	T17	T14	NoRel	true	mensaje	eventos
+Relation	T17	T16	NoRel	true	mensaje	envió
+Relation	T17	T18	NoRel	true	mensaje	incendio
+Relation	T17	T19	NoRel	true	mensaje	subida
+Relation	T17	T2	NoRel	true	mensaje	accidente
+Relation	T17	T20	NoRel	true	mensaje	detuvo
+Relation	T17	T5	NoRel	true	mensaje	fallo
+Relation	T17	T8	NoRel	true	mensaje	resultó
+Relation	T17	T9	NoRel	true	mensaje	incendio
+Relation	T18	T1	NoRel	true	incendio	culparon
+Relation	T18	T11	NoRel	true	incendio	pérdida
+Relation	T18	T14	NoRel	true	incendio	eventos
+Relation	T18	T2	NoRel	true	incendio	accidente
+Relation	T18	T4	NoRel	true	incendio	accidente
+Relation	T18	T8	NoRel	true	incendio	resultó
+Relation	T19	T0	NoRel	true	subida	encabezada
+Relation	T19	T1	NoRel	true	subida	culparon
+Relation	T19	T13	NoRel	true	subida	publicó
+Relation	T19	T16	NoRel	true	subida	envió
+Relation	T19	T18	NoRel	true	subida	incendio
+Relation	T2	T0	NoRel	true	accidente	encabezada
+Relation	T2	T12	NoRel	true	accidente	caída
+Relation	T2	T13	NoRel	true	accidente	publicó
+Relation	T2	T15	NoRel	true	accidente	ascenso
+Relation	T2	T17	NoRel	true	accidente	mensaje
+Relation	T2	T4	NoRel	true	accidente	accidente
+Relation	T2	T5	NoRel	true	accidente	fallo
+Relation	T2	T9	NoRel	true	accidente	incendio
+Relation	T20	T0	NoRel	true	detuvo	encabezada
+Relation	T20	T14	NoRel	true	detuvo	eventos
+Relation	T20	T17	NoRel	true	detuvo	mensaje
+Relation	T20	T18	NoRel	true	detuvo	incendio
+Relation	T20	T19	NoRel	true	detuvo	subida
+Relation	T20	T6	NoRel	true	detuvo	destrucción
+Relation	T3	T0	NoRel	true	alegó	encabezada
+Relation	T3	T17	NoRel	true	alegó	mensaje
+Relation	T3	T18	NoRel	true	alegó	incendio
+Relation	T3	T20	NoRel	true	alegó	detuvo
+Relation	T3	T8	NoRel	true	alegó	resultó
+Relation	T4	T13	NoRel	true	accidente	publicó
+Relation	T4	T14	NoRel	true	accidente	eventos
+Relation	T4	T16	NoRel	true	accidente	envió
+Relation	T4	T20	NoRel	true	accidente	detuvo
+Relation	T4	T6	NoRel	true	accidente	destrucción
+Relation	T4	T7	NoRel	true	accidente	impacto
+Relation	T5	T11	NoRel	true	fallo	pérdida
+Relation	T5	T2	NoRel	true	fallo	accidente
+Relation	T5	T20	NoRel	true	fallo	detuvo
+Relation	T5	T8	NoRel	true	fallo	resultó
+Relation	T6	T10	NoRel	true	destrucción	provocó
+Relation	T6	T12	NoRel	true	destrucción	caída
+Relation	T6	T16	NoRel	true	destrucción	envió
+Relation	T6	T17	NoRel	true	destrucción	mensaje
+Relation	T6	T19	NoRel	true	destrucción	subida
+Relation	T6	T2	NoRel	true	destrucción	accidente
+Relation	T6	T5	NoRel	true	destrucción	fallo
+Relation	T6	T8	NoRel	true	destrucción	resultó
+Relation	T7	T12	NoRel	true	impacto	caída
+Relation	T7	T14	NoRel	true	impacto	eventos
+Relation	T7	T4	NoRel	true	impacto	accidente
+Relation	T7	T5	NoRel	true	impacto	fallo
+Relation	T7	T9	NoRel	true	impacto	incendio
+Relation	T8	T1	NoRel	true	resultó	culparon
+Relation	T8	T12	NoRel	true	resultó	caída
+Relation	T8	T14	NoRel	true	resultó	eventos
+Relation	T8	T15	NoRel	true	resultó	ascenso
+Relation	T8	T18	NoRel	true	resultó	incendio
+Relation	T8	T19	NoRel	true	resultó	subida
+Relation	T8	T6	NoRel	true	resultó	destrucción
+Relation	T8	T7	NoRel	true	resultó	impacto
+Relation	T8	T9	NoRel	true	resultó	incendio
+Relation	T9	T10	NoRel	true	incendio	provocó
+Relation	T9	T12	NoRel	true	incendio	caída
+Relation	T9	T18	NoRel	true	incendio	incendio
+Relation	T9	T19	NoRel	true	incendio	subida
+Relation	T9	T20	NoRel	true	incendio	detuvo
+Relation	T9	T4	NoRel	true	incendio	accidente
+Relation	T9	T8	NoRel	true	incendio	resultó

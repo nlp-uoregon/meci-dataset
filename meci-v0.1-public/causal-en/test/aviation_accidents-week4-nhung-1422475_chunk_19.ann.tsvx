@@ -1,0 +1,46 @@
+Text	On December 23 , 1940 , around 1:25 pm , Eddie was killed in an accident at Floyd Bennett Field at age 29 , while training George Wilson Herzog ( 1903 – 1940 ) .	They were flying at about 600 feet , about to land , when United States Navy Reserve pilot Kenneth A. Kuehner , age 25 , of Minster , Ohio struck the tail assembly of Eddie 's plane with his Boeing - Stearman Model 75 .	Eddie 's plane went into a spin and crashed into Deep Creek , just off of Flatbush Avenue .	Both Herzog and Schneider were dead at the scene of impact .	The bodies were taken to King 's County Hospital , and Eddie 's cause of death was listed as " crushed chest & abdomen ; hemothorax & hemoperitoneum in aeroplane crash " .
+Event	T0	accident	EVENT	64
+Event	T1	training	EVENT	114
+Event	T2	flying	EVENT	172
+Event	T3	land	EVENT	208
+Event	T4	struck	EVENT	301
+Event	T5	spin	EVENT	409
+Event	T6	dead	EVENT	505
+Event	T7	impact	EVENT	526
+Event	T8	death	EVENT	608
+Event	T9	listed	EVENT	618
+Event	T10	crushed	EVENT	630
+Event	T11	crash	EVENT	697
+Event	T12	killed	EVENT	51
+Event	T13	crashed	EVENT	418
+Event	T14	taken	EVENT	551
+Relation	T0	T12	CauseEffect	true	accident	killed
+Relation	T12	T0	EffectCause	true	killed	accident
+Relation	T7	T6	CauseEffect	true	impact	dead
+Relation	T6	T7	EffectCause	true	dead	impact
+Relation	T10	T8	CauseEffect	true	crushed	death
+Relation	T8	T10	EffectCause	true	death	crushed
+Relation	T11	T8	CauseEffect	true	crash	death
+Relation	T8	T11	EffectCause	true	death	crash
+Relation	T0	T10	NoRel	true	accident	crushed
+Relation	T0	T5	NoRel	true	accident	spin
+Relation	T1	T5	NoRel	true	training	spin
+Relation	T1	T6	NoRel	true	training	dead
+Relation	T1	T8	NoRel	true	training	death
+Relation	T10	T14	NoRel	true	crushed	taken
+Relation	T10	T5	NoRel	true	crushed	spin
+Relation	T11	T1	NoRel	true	crash	training
+Relation	T11	T12	NoRel	true	crash	killed
+Relation	T11	T3	NoRel	true	crash	land
+Relation	T12	T13	NoRel	true	killed	crashed
+Relation	T13	T11	NoRel	true	crashed	crash
+Relation	T2	T9	NoRel	true	flying	listed
+Relation	T3	T1	NoRel	true	land	training
+Relation	T3	T6	NoRel	true	land	dead
+Relation	T3	T9	NoRel	true	land	listed
+Relation	T4	T8	NoRel	true	struck	death
+Relation	T6	T13	NoRel	true	dead	crashed
+Relation	T6	T4	NoRel	true	dead	struck
+Relation	T7	T2	NoRel	true	impact	flying
+Relation	T8	T1	NoRel	true	death	training
+Relation	T8	T6	NoRel	true	death	dead

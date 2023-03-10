@@ -1,0 +1,31 @@
+Text	Gabrielle bir tropikal depresyon düzeyine indi , ve Gulf_Stream'i geçerken etrafında gök gürültülü fırtınalar bulundurmaya devam etti .	11 eylül öğle civarında , Gabrielle Kasırgası , Kanada'nın güneyinde sona erdi .	Ertesi gün Gabrielle'in kalıntıları başka bir soğuk hava kütlesi tarafından emildi .	Gabrielle bir tropikal fırtına haline geldiğinde , Ulusal Kasırga Merkezi , Edisto Beach'ten Kuzey Karolina'daki Oregon Inlet'e bir kasırga izleyicisi gönderdi .	Fırtına kıyıya yaklaştığında , Fear Burnu'nun güneyindeki kasırga izleyicileri geri çağrıldı .
+Event	T0	indi	EVENT	42
+Event	T1	etti	EVENT	129
+Event	T2	erdi	EVENT	210
+Event	T3	emildi	EVENT	293
+Event	T4	gönderdi	EVENT	453
+Event	T5	çağrıldı	EVENT	548
+Event	T6	fırtına	EVENT	325
+Event	T7	Fırtına	EVENT	464
+Event	T8	yaklaştığında	EVENT	479
+Relation	T6	T4	CauseEffect	true	fırtına	gönderdi
+Relation	T4	T6	EffectCause	true	gönderdi	fırtına
+Relation	T8	T5	CauseEffect	true	yaklaştığında	çağrıldı
+Relation	T5	T8	EffectCause	true	çağrıldı	yaklaştığında
+Relation	T0	T3	NoRel	true	indi	emildi
+Relation	T0	T7	NoRel	true	indi	Fırtına
+Relation	T1	T2	NoRel	true	etti	erdi
+Relation	T1	T5	NoRel	true	etti	çağrıldı
+Relation	T2	T7	NoRel	true	erdi	Fırtına
+Relation	T2	T8	NoRel	true	erdi	yaklaştığında
+Relation	T3	T5	NoRel	true	emildi	çağrıldı
+Relation	T3	T8	NoRel	true	emildi	yaklaştığında
+Relation	T4	T0	NoRel	true	gönderdi	indi
+Relation	T4	T1	NoRel	true	gönderdi	etti
+Relation	T4	T3	NoRel	true	gönderdi	emildi
+Relation	T5	T3	NoRel	true	çağrıldı	emildi
+Relation	T5	T6	NoRel	true	çağrıldı	fırtına
+Relation	T5	T7	NoRel	true	çağrıldı	Fırtına
+Relation	T6	T5	NoRel	true	fırtına	çağrıldı
+Relation	T7	T0	NoRel	true	Fırtına	indi
+Relation	T7	T2	NoRel	true	Fırtına	erdi

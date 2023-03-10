@@ -1,0 +1,29 @@
+Text	Sakarya 2. Ağır Ceza Mahkemesi’nde görülen davada ilk olarak 1 Şubat 2008’de 1. makinist Fikret Karabalut 2 yıl 6 ay hapis cezasına çarptırıldı .	İkinci makinist Recep Sönmez’e ise 1 yıl 3 ay hapis cezası verildi .	Tren şefi Köksal Coşkun ise beraat etti .	Dosya Yargıtay’a taşındı .	Yargıtay 2. Ceza Dairesi dosyadaki tebligat eksiklikleri nedeniyle kararı bozdu .
+Event	T0	davada	EVENT	43
+Event	T1	çarptırıldı	EVENT	132
+Event	T2	verildi	EVENT	205
+Event	T3	etti	EVENT	250
+Event	T4	taşındı	EVENT	274
+Event	T5	bozdu	EVENT	358
+Event	T6	eksiklikleri	EVENT	328
+Relation	T0	T1	CauseEffect	true	davada	çarptırıldı
+Relation	T1	T0	EffectCause	true	çarptırıldı	davada
+Relation	T0	T2	CauseEffect	true	davada	verildi
+Relation	T2	T0	EffectCause	true	verildi	davada
+Relation	T0	T3	CauseEffect	true	davada	etti
+Relation	T3	T0	EffectCause	true	etti	davada
+Relation	T4	T5	CauseEffect	true	taşındı	bozdu
+Relation	T5	T4	EffectCause	true	bozdu	taşındı
+Relation	T6	T5	CauseEffect	true	eksiklikleri	bozdu
+Relation	T5	T6	EffectCause	true	bozdu	eksiklikleri
+Relation	T0	T6	NoRel	true	davada	eksiklikleri
+Relation	T1	T2	NoRel	true	çarptırıldı	verildi
+Relation	T2	T1	NoRel	true	verildi	çarptırıldı
+Relation	T2	T5	NoRel	true	verildi	bozdu
+Relation	T3	T1	NoRel	true	etti	çarptırıldı
+Relation	T4	T3	NoRel	true	taşındı	etti
+Relation	T5	T0	NoRel	true	bozdu	davada
+Relation	T5	T1	NoRel	true	bozdu	çarptırıldı
+Relation	T5	T3	NoRel	true	bozdu	etti
+Relation	T6	T2	NoRel	true	eksiklikleri	verildi
+Relation	T6	T4	NoRel	true	eksiklikleri	taşındı

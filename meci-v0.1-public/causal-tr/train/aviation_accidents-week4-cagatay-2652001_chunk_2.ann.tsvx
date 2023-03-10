@@ -1,0 +1,30 @@
+Text	Uçak saatte 265 – 270 km hıza çıkınca , ekip dört motoru da kapattı .	Motorlar kapatıldığında 655 m pist kalmıştı .	Sert frenleme girişimleri başarısız oldu ve uçak pistten saatte 200 km hızla çıktı .	Durmadan önce 397 metre daha gitti .	Kaza sonucunda uçağın üç iniş takımı kırıldı ve gövde üçe ayrıldı .
+Event	T0	çıkınca	EVENT	30
+Event	T1	kapattı	EVENT	60
+Event	T2	oldu	EVENT	152
+Event	T3	çıktı	EVENT	193
+Event	T4	gitti	EVENT	230
+Event	T5	kırıldı	EVENT	275
+Event	T6	ayrıldı	EVENT	296
+Event	T7	girişimleri	EVENT	130
+Relation	T0	T1	CauseEffect	true	çıkınca	kapattı
+Relation	T1	T0	EffectCause	true	kapattı	çıkınca
+Relation	T2	T3	CauseEffect	true	oldu	çıktı
+Relation	T3	T2	EffectCause	true	çıktı	oldu
+Relation	T3	T4	CauseEffect	true	çıktı	gitti
+Relation	T4	T3	EffectCause	true	gitti	çıktı
+Relation	T4	T5	CauseEffect	true	gitti	kırıldı
+Relation	T5	T4	EffectCause	true	kırıldı	gitti
+Relation	T4	T6	CauseEffect	true	gitti	ayrıldı
+Relation	T6	T4	EffectCause	true	ayrıldı	gitti
+Relation	T0	T3	NoRel	true	çıkınca	çıktı
+Relation	T1	T3	NoRel	true	kapattı	çıktı
+Relation	T2	T1	NoRel	true	oldu	kapattı
+Relation	T3	T1	NoRel	true	çıktı	kapattı
+Relation	T4	T0	NoRel	true	gitti	çıkınca
+Relation	T4	T1	NoRel	true	gitti	kapattı
+Relation	T5	T1	NoRel	true	kırıldı	kapattı
+Relation	T5	T6	NoRel	true	kırıldı	ayrıldı
+Relation	T6	T0	NoRel	true	ayrıldı	çıkınca
+Relation	T7	T0	NoRel	true	girişimleri	çıkınca
+Relation	T7	T4	NoRel	true	girişimleri	gitti

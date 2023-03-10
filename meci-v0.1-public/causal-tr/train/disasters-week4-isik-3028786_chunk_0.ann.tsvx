@@ -1,0 +1,51 @@
+Text	Yunanistan | devdalga = | öncüşok = | artçışok = | sonuçları = 73 ölü En az 275 yaralı En az 2200 hasarlı bina } } 6 Ekim 1944'te yerel saatle 05.34'te ( UTC+2 ) , Edremit Körfezi merkezli bir deprem gerçekleşti .	6,8 M _ ( s ) büyüklüğünde olan ve 20-25 saniye kadar süren deprem ; Akhisar , Manisa , Tekirdağ , Gönen , Midilli ve İzmir'i kapsayan yaklaşık 250 km çapındaki bir bölgeyi etkiledi .	73 ölü ile en az 275 yaralı ile sonuçlanan depremde 2200'den fazla bina hasar aldı .		
+Event	T1	deprem	EVENT	274
+Event	T2	etkiledi	EVENT	387
+Event	T3	ölü	EVENT	401
+Event	T4	depremde	EVENT	441
+Event	T5	aldı	EVENT	476
+Event	T6	ölü	EVENT	66
+Event	T7	yaralı	EVENT	80
+Event	T8	hasarlı	EVENT	98
+Event	T9	deprem	EVENT	193
+Event	T10	yaralı	EVENT	419
+Relation	T1	T2	CauseEffect	true	deprem	etkiledi
+Relation	T2	T1	EffectCause	true	etkiledi	deprem
+Relation	T9	T2	CauseEffect	true	deprem	etkiledi
+Relation	T2	T9	EffectCause	true	etkiledi	deprem
+Relation	T1	T3	CauseEffect	true	deprem	ölü
+Relation	T3	T1	EffectCause	true	ölü	deprem
+Relation	T1	T10	CauseEffect	true	deprem	yaralı
+Relation	T10	T1	EffectCause	true	yaralı	deprem
+Relation	T1	T5	CauseEffect	true	deprem	aldı
+Relation	T5	T1	EffectCause	true	aldı	deprem
+Relation	T9	T3	CauseEffect	true	deprem	ölü
+Relation	T3	T9	EffectCause	true	ölü	deprem
+Relation	T9	T10	CauseEffect	true	deprem	yaralı
+Relation	T10	T9	EffectCause	true	yaralı	deprem
+Relation	T9	T5	CauseEffect	true	deprem	aldı
+Relation	T5	T9	EffectCause	true	aldı	deprem
+Relation	T1	T6	NoRel	true	deprem	ölü
+Relation	T10	T5	NoRel	true	yaralı	aldı
+Relation	T10	T7	NoRel	true	yaralı	yaralı
+Relation	T2	T4	NoRel	true	etkiledi	depremde
+Relation	T2	T6	NoRel	true	etkiledi	ölü
+Relation	T3	T10	NoRel	true	ölü	yaralı
+Relation	T3	T4	NoRel	true	ölü	depremde
+Relation	T3	T5	NoRel	true	ölü	aldı
+Relation	T3	T8	NoRel	true	ölü	hasarlı
+Relation	T4	T2	NoRel	true	depremde	etkiledi
+Relation	T4	T6	NoRel	true	depremde	ölü
+Relation	T5	T4	NoRel	true	aldı	depremde
+Relation	T5	T6	NoRel	true	aldı	ölü
+Relation	T5	T7	NoRel	true	aldı	yaralı
+Relation	T6	T3	NoRel	true	ölü	ölü
+Relation	T6	T4	NoRel	true	ölü	depremde
+Relation	T6	T5	NoRel	true	ölü	aldı
+Relation	T6	T9	NoRel	true	ölü	deprem
+Relation	T7	T6	NoRel	true	yaralı	ölü
+Relation	T7	T9	NoRel	true	yaralı	deprem
+Relation	T8	T3	NoRel	true	hasarlı	ölü
+Relation	T8	T5	NoRel	true	hasarlı	aldı
+Relation	T8	T9	NoRel	true	hasarlı	deprem
+Relation	T9	T1	NoRel	true	deprem	deprem

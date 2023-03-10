@@ -1,0 +1,176 @@
+Text	Pero en 2008 , el incremento de los precios de estas materias primas — particularmente , del precio del petróleo y de la comida — aumentó tanto que comenzó a causar verdaderos daños económicos , amenazando con problemas sociales en los países que se encuentran en vías de desarrollo , la estanflación y el estancamiento de la globalización .	Aunque es difícil poner una fecha de inicio a una crisis económica porque suele ser consecuencia de varios factores que no tienen por qué darse a la vez , se podría decir que la crisis se inició a principios de agosto de 2007 cuando quebró la primera " víctima " : el banco de inversión estadounidense American Home Mortgage .	Esta quiebra provocó turbulencias en los mercados financieros de todo el mundo e hizo intervenir a bancos centrales y gobiernos .	Así se consideraba años después .	En enero de 2008 , el precio del petróleo superó los 100 dólares el barril por primera vez en su historia , y alcanzó los 147 dólares por barril en julio debido a fenómenos especulativos de alta volatilidad que condujeron a un fuerte descenso durante el mes de agosto .
+Event	T0	incremento	EVENT	18
+Event	T1	aumentó	EVENT	130
+Event	T2	comenzó	EVENT	148
+Event	T3	causar	EVENT	158
+Event	T4	daños	EVENT	176
+Event	T5	amenazando	EVENT	195
+Event	T6	estanflación	EVENT	288
+Event	T7	estancamiento	EVENT	306
+Event	T8	crisis	EVENT	392
+Event	T9	decir	EVENT	507
+Event	T10	crisis	EVENT	520
+Event	T11	inició	EVENT	530
+Event	T12	quebró	EVENT	575
+Event	T13	turbulencias	EVENT	690
+Event	T14	intervenir	EVENT	755
+Event	T15	consideraba	EVENT	806
+Event	T16	superó	EVENT	875
+Event	T17	alcanzó	EVENT	943
+Event	T18	especulativos	EVENT	1006
+Event	T19	condujeron	EVENT	1044
+Event	T20	descenso	EVENT	1067
+Relation	T0	T4	CauseEffect	true	incremento	daños
+Relation	T4	T0	EffectCause	true	daños	incremento
+Relation	T12	T10	CauseEffect	true	quebró	crisis
+Relation	T10	T12	EffectCause	true	crisis	quebró
+Relation	T18	T17	CauseEffect	true	especulativos	alcanzó
+Relation	T17	T18	EffectCause	true	alcanzó	especulativos
+Relation	T0	T1	NoRel	true	incremento	aumentó
+Relation	T0	T12	NoRel	true	incremento	quebró
+Relation	T0	T15	NoRel	true	incremento	consideraba
+Relation	T0	T16	NoRel	true	incremento	superó
+Relation	T0	T17	NoRel	true	incremento	alcanzó
+Relation	T0	T7	NoRel	true	incremento	estancamiento
+Relation	T0	T8	NoRel	true	incremento	crisis
+Relation	T0	T9	NoRel	true	incremento	decir
+Relation	T1	T13	NoRel	true	aumentó	turbulencias
+Relation	T1	T14	NoRel	true	aumentó	intervenir
+Relation	T1	T20	NoRel	true	aumentó	descenso
+Relation	T1	T3	NoRel	true	aumentó	causar
+Relation	T10	T0	NoRel	true	crisis	incremento
+Relation	T10	T11	NoRel	true	crisis	inició
+Relation	T10	T14	NoRel	true	crisis	intervenir
+Relation	T10	T17	NoRel	true	crisis	alcanzó
+Relation	T10	T19	NoRel	true	crisis	condujeron
+Relation	T10	T2	NoRel	true	crisis	comenzó
+Relation	T10	T4	NoRel	true	crisis	daños
+Relation	T10	T7	NoRel	true	crisis	estancamiento
+Relation	T11	T1	NoRel	true	inició	aumentó
+Relation	T11	T12	NoRel	true	inició	quebró
+Relation	T11	T13	NoRel	true	inició	turbulencias
+Relation	T11	T16	NoRel	true	inició	superó
+Relation	T11	T2	NoRel	true	inició	comenzó
+Relation	T11	T20	NoRel	true	inició	descenso
+Relation	T11	T4	NoRel	true	inició	daños
+Relation	T11	T5	NoRel	true	inició	amenazando
+Relation	T11	T7	NoRel	true	inició	estancamiento
+Relation	T11	T8	NoRel	true	inició	crisis
+Relation	T11	T9	NoRel	true	inició	decir
+Relation	T12	T15	NoRel	true	quebró	consideraba
+Relation	T12	T16	NoRel	true	quebró	superó
+Relation	T12	T18	NoRel	true	quebró	especulativos
+Relation	T12	T2	NoRel	true	quebró	comenzó
+Relation	T12	T20	NoRel	true	quebró	descenso
+Relation	T12	T3	NoRel	true	quebró	causar
+Relation	T12	T5	NoRel	true	quebró	amenazando
+Relation	T12	T9	NoRel	true	quebró	decir
+Relation	T13	T1	NoRel	true	turbulencias	aumentó
+Relation	T13	T11	NoRel	true	turbulencias	inició
+Relation	T13	T19	NoRel	true	turbulencias	condujeron
+Relation	T13	T3	NoRel	true	turbulencias	causar
+Relation	T13	T4	NoRel	true	turbulencias	daños
+Relation	T13	T8	NoRel	true	turbulencias	crisis
+Relation	T13	T9	NoRel	true	turbulencias	decir
+Relation	T14	T12	NoRel	true	intervenir	quebró
+Relation	T14	T15	NoRel	true	intervenir	consideraba
+Relation	T14	T17	NoRel	true	intervenir	alcanzó
+Relation	T14	T18	NoRel	true	intervenir	especulativos
+Relation	T14	T19	NoRel	true	intervenir	condujeron
+Relation	T14	T6	NoRel	true	intervenir	estanflación
+Relation	T14	T7	NoRel	true	intervenir	estancamiento
+Relation	T14	T9	NoRel	true	intervenir	decir
+Relation	T15	T1	NoRel	true	consideraba	aumentó
+Relation	T15	T11	NoRel	true	consideraba	inició
+Relation	T15	T13	NoRel	true	consideraba	turbulencias
+Relation	T15	T14	NoRel	true	consideraba	intervenir
+Relation	T15	T6	NoRel	true	consideraba	estanflación
+Relation	T15	T8	NoRel	true	consideraba	crisis
+Relation	T16	T0	NoRel	true	superó	incremento
+Relation	T16	T11	NoRel	true	superó	inició
+Relation	T16	T12	NoRel	true	superó	quebró
+Relation	T16	T20	NoRel	true	superó	descenso
+Relation	T16	T5	NoRel	true	superó	amenazando
+Relation	T16	T8	NoRel	true	superó	crisis
+Relation	T17	T0	NoRel	true	alcanzó	incremento
+Relation	T17	T16	NoRel	true	alcanzó	superó
+Relation	T17	T19	NoRel	true	alcanzó	condujeron
+Relation	T17	T4	NoRel	true	alcanzó	daños
+Relation	T17	T9	NoRel	true	alcanzó	decir
+Relation	T18	T0	NoRel	true	especulativos	incremento
+Relation	T18	T12	NoRel	true	especulativos	quebró
+Relation	T18	T13	NoRel	true	especulativos	turbulencias
+Relation	T18	T14	NoRel	true	especulativos	intervenir
+Relation	T18	T20	NoRel	true	especulativos	descenso
+Relation	T18	T3	NoRel	true	especulativos	causar
+Relation	T18	T4	NoRel	true	especulativos	daños
+Relation	T18	T6	NoRel	true	especulativos	estanflación
+Relation	T18	T9	NoRel	true	especulativos	decir
+Relation	T19	T0	NoRel	true	condujeron	incremento
+Relation	T19	T10	NoRel	true	condujeron	crisis
+Relation	T19	T15	NoRel	true	condujeron	consideraba
+Relation	T19	T17	NoRel	true	condujeron	alcanzó
+Relation	T19	T8	NoRel	true	condujeron	crisis
+Relation	T2	T0	NoRel	true	comenzó	incremento
+Relation	T2	T1	NoRel	true	comenzó	aumentó
+Relation	T2	T15	NoRel	true	comenzó	consideraba
+Relation	T2	T16	NoRel	true	comenzó	superó
+Relation	T2	T17	NoRel	true	comenzó	alcanzó
+Relation	T2	T3	NoRel	true	comenzó	causar
+Relation	T2	T6	NoRel	true	comenzó	estanflación
+Relation	T2	T7	NoRel	true	comenzó	estancamiento
+Relation	T2	T9	NoRel	true	comenzó	decir
+Relation	T20	T0	NoRel	true	descenso	incremento
+Relation	T20	T1	NoRel	true	descenso	aumentó
+Relation	T20	T10	NoRel	true	descenso	crisis
+Relation	T20	T12	NoRel	true	descenso	quebró
+Relation	T20	T13	NoRel	true	descenso	turbulencias
+Relation	T20	T14	NoRel	true	descenso	intervenir
+Relation	T20	T16	NoRel	true	descenso	superó
+Relation	T20	T7	NoRel	true	descenso	estancamiento
+Relation	T20	T9	NoRel	true	descenso	decir
+Relation	T3	T0	NoRel	true	causar	incremento
+Relation	T3	T10	NoRel	true	causar	crisis
+Relation	T3	T17	NoRel	true	causar	alcanzó
+Relation	T3	T19	NoRel	true	causar	condujeron
+Relation	T3	T2	NoRel	true	causar	comenzó
+Relation	T4	T11	NoRel	true	daños	inició
+Relation	T4	T14	NoRel	true	daños	intervenir
+Relation	T4	T17	NoRel	true	daños	alcanzó
+Relation	T4	T18	NoRel	true	daños	especulativos
+Relation	T4	T2	NoRel	true	daños	comenzó
+Relation	T4	T5	NoRel	true	daños	amenazando
+Relation	T4	T8	NoRel	true	daños	crisis
+Relation	T5	T0	NoRel	true	amenazando	incremento
+Relation	T5	T11	NoRel	true	amenazando	inició
+Relation	T5	T12	NoRel	true	amenazando	quebró
+Relation	T5	T14	NoRel	true	amenazando	intervenir
+Relation	T5	T16	NoRel	true	amenazando	superó
+Relation	T5	T2	NoRel	true	amenazando	comenzó
+Relation	T5	T20	NoRel	true	amenazando	descenso
+Relation	T5	T3	NoRel	true	amenazando	causar
+Relation	T5	T4	NoRel	true	amenazando	daños
+Relation	T6	T0	NoRel	true	estanflación	incremento
+Relation	T6	T1	NoRel	true	estanflación	aumentó
+Relation	T6	T10	NoRel	true	estanflación	crisis
+Relation	T6	T12	NoRel	true	estanflación	quebró
+Relation	T6	T14	NoRel	true	estanflación	intervenir
+Relation	T6	T17	NoRel	true	estanflación	alcanzó
+Relation	T7	T1	NoRel	true	estancamiento	aumentó
+Relation	T7	T11	NoRel	true	estancamiento	inició
+Relation	T7	T12	NoRel	true	estancamiento	quebró
+Relation	T7	T16	NoRel	true	estancamiento	superó
+Relation	T7	T20	NoRel	true	estancamiento	descenso
+Relation	T8	T0	NoRel	true	crisis	incremento
+Relation	T8	T1	NoRel	true	crisis	aumentó
+Relation	T8	T15	NoRel	true	crisis	consideraba
+Relation	T8	T18	NoRel	true	crisis	especulativos
+Relation	T8	T2	NoRel	true	crisis	comenzó
+Relation	T8	T3	NoRel	true	crisis	causar
+Relation	T8	T9	NoRel	true	crisis	decir
+Relation	T9	T1	NoRel	true	decir	aumentó
+Relation	T9	T10	NoRel	true	decir	crisis
+Relation	T9	T14	NoRel	true	decir	intervenir
+Relation	T9	T18	NoRel	true	decir	especulativos
+Relation	T9	T7	NoRel	true	decir	estancamiento
+Relation	T9	T8	NoRel	true	decir	crisis

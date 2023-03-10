@@ -1,0 +1,118 @@
+Text	La CIAIAC no pudo determinar fehacientemente cuál fue el modo de fallo exacto del TOWS .	Una teoría inicial de las causas del accidente era que el sistema de reversa del motor n.º 2 ( lado derecho ) se pudiera haber activado durante el ascenso , haciendo que el avión virara bruscamente hacia la derecha .	Esta teoría surgió debido a que en los restos del accidente se encontró uno de los motores con el sistema de reversa desplegado .	Estos inversores de empuje se emplean normalmente justo después del aterrizaje para reducir las distancias de frenado .	Sin embargo , como el MD-82 tiene los motores instalados en la cola , bastante cerca uno del otro y cerca del eje longitudinal del avión , la activación de un inversor no habría producido un viraje incontrolable .
+Event	T0	determinar	EVENT	18
+Event	T1	fallo	EVENT	65
+Event	T2	accidente	EVENT	126
+Event	T3	activado	EVENT	216
+Event	T4	ascenso	EVENT	236
+Event	T5	haciendo	EVENT	246
+Event	T6	virara	EVENT	268
+Event	T7	restos	EVENT	345
+Event	T8	accidente	EVENT	356
+Event	T9	encontró	EVENT	369
+Event	T10	desplegado	EVENT	423
+Event	T11	emplean	EVENT	466
+Event	T12	aterrizaje	EVENT	504
+Event	T13	frenado	EVENT	546
+Event	T14	instalados	EVENT	602
+Event	T15	activación	EVENT	698
+Event	T16	producido	EVENT	734
+Relation	T3	T2	CauseEffect	true	activado	accidente
+Relation	T2	T3	EffectCause	true	accidente	activado
+Relation	T0	T1	NoRel	true	determinar	fallo
+Relation	T0	T10	NoRel	true	determinar	desplegado
+Relation	T0	T11	NoRel	true	determinar	emplean
+Relation	T0	T12	NoRel	true	determinar	aterrizaje
+Relation	T0	T13	NoRel	true	determinar	frenado
+Relation	T0	T14	NoRel	true	determinar	instalados
+Relation	T0	T3	NoRel	true	determinar	activado
+Relation	T0	T8	NoRel	true	determinar	accidente
+Relation	T1	T0	NoRel	true	fallo	determinar
+Relation	T1	T12	NoRel	true	fallo	aterrizaje
+Relation	T10	T0	NoRel	true	desplegado	determinar
+Relation	T10	T13	NoRel	true	desplegado	frenado
+Relation	T10	T15	NoRel	true	desplegado	activación
+Relation	T10	T3	NoRel	true	desplegado	activado
+Relation	T10	T4	NoRel	true	desplegado	ascenso
+Relation	T10	T5	NoRel	true	desplegado	haciendo
+Relation	T10	T6	NoRel	true	desplegado	virara
+Relation	T11	T0	NoRel	true	emplean	determinar
+Relation	T11	T1	NoRel	true	emplean	fallo
+Relation	T11	T10	NoRel	true	emplean	desplegado
+Relation	T11	T12	NoRel	true	emplean	aterrizaje
+Relation	T11	T9	NoRel	true	emplean	encontró
+Relation	T12	T1	NoRel	true	aterrizaje	fallo
+Relation	T12	T13	NoRel	true	aterrizaje	frenado
+Relation	T12	T5	NoRel	true	aterrizaje	haciendo
+Relation	T13	T14	NoRel	true	frenado	instalados
+Relation	T13	T16	NoRel	true	frenado	producido
+Relation	T13	T5	NoRel	true	frenado	haciendo
+Relation	T13	T9	NoRel	true	frenado	encontró
+Relation	T14	T1	NoRel	true	instalados	fallo
+Relation	T14	T2	NoRel	true	instalados	accidente
+Relation	T14	T3	NoRel	true	instalados	activado
+Relation	T14	T8	NoRel	true	instalados	accidente
+Relation	T15	T0	NoRel	true	activación	determinar
+Relation	T15	T10	NoRel	true	activación	desplegado
+Relation	T15	T14	NoRel	true	activación	instalados
+Relation	T15	T16	NoRel	true	activación	producido
+Relation	T15	T2	NoRel	true	activación	accidente
+Relation	T15	T3	NoRel	true	activación	activado
+Relation	T15	T4	NoRel	true	activación	ascenso
+Relation	T15	T5	NoRel	true	activación	haciendo
+Relation	T15	T6	NoRel	true	activación	virara
+Relation	T15	T7	NoRel	true	activación	restos
+Relation	T15	T8	NoRel	true	activación	accidente
+Relation	T16	T0	NoRel	true	producido	determinar
+Relation	T16	T15	NoRel	true	producido	activación
+Relation	T16	T3	NoRel	true	producido	activado
+Relation	T16	T4	NoRel	true	producido	ascenso
+Relation	T16	T5	NoRel	true	producido	haciendo
+Relation	T16	T7	NoRel	true	producido	restos
+Relation	T16	T9	NoRel	true	producido	encontró
+Relation	T2	T10	NoRel	true	accidente	desplegado
+Relation	T2	T15	NoRel	true	accidente	activación
+Relation	T2	T4	NoRel	true	accidente	ascenso
+Relation	T2	T6	NoRel	true	accidente	virara
+Relation	T2	T9	NoRel	true	accidente	encontró
+Relation	T3	T1	NoRel	true	activado	fallo
+Relation	T3	T12	NoRel	true	activado	aterrizaje
+Relation	T3	T16	NoRel	true	activado	producido
+Relation	T3	T5	NoRel	true	activado	haciendo
+Relation	T3	T6	NoRel	true	activado	virara
+Relation	T3	T8	NoRel	true	activado	accidente
+Relation	T4	T12	NoRel	true	ascenso	aterrizaje
+Relation	T4	T13	NoRel	true	ascenso	frenado
+Relation	T4	T16	NoRel	true	ascenso	producido
+Relation	T4	T5	NoRel	true	ascenso	haciendo
+Relation	T5	T11	NoRel	true	haciendo	emplean
+Relation	T5	T12	NoRel	true	haciendo	aterrizaje
+Relation	T5	T14	NoRel	true	haciendo	instalados
+Relation	T5	T2	NoRel	true	haciendo	accidente
+Relation	T5	T7	NoRel	true	haciendo	restos
+Relation	T6	T0	NoRel	true	virara	determinar
+Relation	T6	T1	NoRel	true	virara	fallo
+Relation	T6	T10	NoRel	true	virara	desplegado
+Relation	T6	T12	NoRel	true	virara	aterrizaje
+Relation	T6	T15	NoRel	true	virara	activación
+Relation	T6	T8	NoRel	true	virara	accidente
+Relation	T7	T1	NoRel	true	restos	fallo
+Relation	T7	T11	NoRel	true	restos	emplean
+Relation	T7	T12	NoRel	true	restos	aterrizaje
+Relation	T7	T13	NoRel	true	restos	frenado
+Relation	T7	T2	NoRel	true	restos	accidente
+Relation	T7	T3	NoRel	true	restos	activado
+Relation	T7	T6	NoRel	true	restos	virara
+Relation	T8	T1	NoRel	true	accidente	fallo
+Relation	T8	T12	NoRel	true	accidente	aterrizaje
+Relation	T8	T14	NoRel	true	accidente	instalados
+Relation	T8	T3	NoRel	true	accidente	activado
+Relation	T8	T5	NoRel	true	accidente	haciendo
+Relation	T8	T7	NoRel	true	accidente	restos
+Relation	T9	T11	NoRel	true	encontró	emplean
+Relation	T9	T13	NoRel	true	encontró	frenado
+Relation	T9	T14	NoRel	true	encontró	instalados
+Relation	T9	T16	NoRel	true	encontró	producido
+Relation	T9	T2	NoRel	true	encontró	accidente
+Relation	T9	T3	NoRel	true	encontró	activado
+Relation	T9	T5	NoRel	true	encontró	haciendo
+Relation	T9	T8	NoRel	true	encontró	accidente

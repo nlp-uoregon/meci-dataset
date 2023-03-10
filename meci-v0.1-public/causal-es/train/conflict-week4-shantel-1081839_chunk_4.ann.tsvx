@@ -1,0 +1,129 @@
+Text	No obstante , durante el viaje fue capturado por un navío de guerra inglés .	Hecho prisionero de guerra , no sería liberado hasta 1801 .	A su regreso Napoleón le asciende a comandante de París y contrae matrimonio con Laura Permon .	Sin embargo , sus desavenencias con el cónsul Bonaparte son cada vez más acuciantes y llegan a su clímax tras la proclamación del Imperio en 1804 , ya que Napoleón le niega el ascenso a mariscal que sí concede a otros militares , como Berthier y Murat .	Tras un enfrentamiento , Napoleón le destituye y le envía a Arras a reclutar e instruir un nuevo cuerpo de granaderos .
+Event	T0	capturado	EVENT	35
+Event	T2	liberado	EVENT	115
+Event	T3	regreso	EVENT	142
+Event	T4	asciende	EVENT	162
+Event	T5	desavenencias	EVENT	251
+Event	T6	llegan	EVENT	319
+Event	T7	clímax	EVENT	331
+Event	T8	proclamación	EVENT	346
+Event	T9	niega	EVENT	400
+Event	T10	ascenso	EVENT	409
+Event	T11	concede	EVENT	435
+Event	T12	enfrentamiento	EVENT	495
+Event	T13	destituye	EVENT	524
+Event	T14	envía	EVENT	539
+Event	T15	reclutar	EVENT	555
+Event	T16	instruir	EVENT	566
+Event	T1	Hecho	EVENT	77
+Event	T17	matrimonio	EVENT	203
+Relation	T0	T1	CauseEffect	true	capturado	Hecho
+Relation	T1	T0	EffectCause	true	Hecho	capturado
+Relation	T12	T13	CauseEffect	true	enfrentamiento	destituye
+Relation	T13	T12	EffectCause	true	destituye	enfrentamiento
+Relation	T0	T13	NoRel	true	capturado	destituye
+Relation	T0	T17	NoRel	true	capturado	matrimonio
+Relation	T0	T3	NoRel	true	capturado	regreso
+Relation	T0	T5	NoRel	true	capturado	desavenencias
+Relation	T0	T9	NoRel	true	capturado	niega
+Relation	T1	T10	NoRel	true	Hecho	ascenso
+Relation	T1	T12	NoRel	true	Hecho	enfrentamiento
+Relation	T1	T14	NoRel	true	Hecho	envía
+Relation	T1	T15	NoRel	true	Hecho	reclutar
+Relation	T1	T16	NoRel	true	Hecho	instruir
+Relation	T1	T6	NoRel	true	Hecho	llegan
+Relation	T1	T7	NoRel	true	Hecho	clímax
+Relation	T1	T8	NoRel	true	Hecho	proclamación
+Relation	T1	T9	NoRel	true	Hecho	niega
+Relation	T10	T0	NoRel	true	ascenso	capturado
+Relation	T10	T12	NoRel	true	ascenso	enfrentamiento
+Relation	T10	T15	NoRel	true	ascenso	reclutar
+Relation	T10	T3	NoRel	true	ascenso	regreso
+Relation	T10	T6	NoRel	true	ascenso	llegan
+Relation	T11	T10	NoRel	true	concede	ascenso
+Relation	T11	T14	NoRel	true	concede	envía
+Relation	T11	T15	NoRel	true	concede	reclutar
+Relation	T11	T16	NoRel	true	concede	instruir
+Relation	T11	T2	NoRel	true	concede	liberado
+Relation	T11	T6	NoRel	true	concede	llegan
+Relation	T11	T7	NoRel	true	concede	clímax
+Relation	T11	T8	NoRel	true	concede	proclamación
+Relation	T12	T0	NoRel	true	enfrentamiento	capturado
+Relation	T12	T14	NoRel	true	enfrentamiento	envía
+Relation	T12	T2	NoRel	true	enfrentamiento	liberado
+Relation	T12	T9	NoRel	true	enfrentamiento	niega
+Relation	T13	T0	NoRel	true	destituye	capturado
+Relation	T13	T1	NoRel	true	destituye	Hecho
+Relation	T13	T16	NoRel	true	destituye	instruir
+Relation	T13	T2	NoRel	true	destituye	liberado
+Relation	T13	T8	NoRel	true	destituye	proclamación
+Relation	T13	T9	NoRel	true	destituye	niega
+Relation	T14	T0	NoRel	true	envía	capturado
+Relation	T14	T12	NoRel	true	envía	enfrentamiento
+Relation	T14	T4	NoRel	true	envía	asciende
+Relation	T14	T5	NoRel	true	envía	desavenencias
+Relation	T14	T9	NoRel	true	envía	niega
+Relation	T15	T12	NoRel	true	reclutar	enfrentamiento
+Relation	T15	T17	NoRel	true	reclutar	matrimonio
+Relation	T15	T8	NoRel	true	reclutar	proclamación
+Relation	T16	T11	NoRel	true	instruir	concede
+Relation	T16	T12	NoRel	true	instruir	enfrentamiento
+Relation	T16	T13	NoRel	true	instruir	destituye
+Relation	T16	T14	NoRel	true	instruir	envía
+Relation	T16	T17	NoRel	true	instruir	matrimonio
+Relation	T16	T3	NoRel	true	instruir	regreso
+Relation	T16	T7	NoRel	true	instruir	clímax
+Relation	T17	T0	NoRel	true	matrimonio	capturado
+Relation	T17	T13	NoRel	true	matrimonio	destituye
+Relation	T17	T14	NoRel	true	matrimonio	envía
+Relation	T17	T15	NoRel	true	matrimonio	reclutar
+Relation	T17	T5	NoRel	true	matrimonio	desavenencias
+Relation	T17	T8	NoRel	true	matrimonio	proclamación
+Relation	T2	T1	NoRel	true	liberado	Hecho
+Relation	T2	T15	NoRel	true	liberado	reclutar
+Relation	T2	T3	NoRel	true	liberado	regreso
+Relation	T2	T4	NoRel	true	liberado	asciende
+Relation	T2	T5	NoRel	true	liberado	desavenencias
+Relation	T2	T6	NoRel	true	liberado	llegan
+Relation	T2	T9	NoRel	true	liberado	niega
+Relation	T3	T12	NoRel	true	regreso	enfrentamiento
+Relation	T3	T14	NoRel	true	regreso	envía
+Relation	T3	T7	NoRel	true	regreso	clímax
+Relation	T4	T1	NoRel	true	asciende	Hecho
+Relation	T4	T12	NoRel	true	asciende	enfrentamiento
+Relation	T4	T13	NoRel	true	asciende	destituye
+Relation	T4	T6	NoRel	true	asciende	llegan
+Relation	T4	T7	NoRel	true	asciende	clímax
+Relation	T5	T1	NoRel	true	desavenencias	Hecho
+Relation	T5	T11	NoRel	true	desavenencias	concede
+Relation	T5	T12	NoRel	true	desavenencias	enfrentamiento
+Relation	T5	T13	NoRel	true	desavenencias	destituye
+Relation	T5	T15	NoRel	true	desavenencias	reclutar
+Relation	T5	T16	NoRel	true	desavenencias	instruir
+Relation	T5	T8	NoRel	true	desavenencias	proclamación
+Relation	T6	T0	NoRel	true	llegan	capturado
+Relation	T6	T1	NoRel	true	llegan	Hecho
+Relation	T6	T11	NoRel	true	llegan	concede
+Relation	T6	T13	NoRel	true	llegan	destituye
+Relation	T6	T14	NoRel	true	llegan	envía
+Relation	T6	T15	NoRel	true	llegan	reclutar
+Relation	T6	T3	NoRel	true	llegan	regreso
+Relation	T6	T5	NoRel	true	llegan	desavenencias
+Relation	T7	T0	NoRel	true	clímax	capturado
+Relation	T7	T12	NoRel	true	clímax	enfrentamiento
+Relation	T7	T13	NoRel	true	clímax	destituye
+Relation	T7	T16	NoRel	true	clímax	instruir
+Relation	T7	T2	NoRel	true	clímax	liberado
+Relation	T7	T9	NoRel	true	clímax	niega
+Relation	T8	T10	NoRel	true	proclamación	ascenso
+Relation	T8	T11	NoRel	true	proclamación	concede
+Relation	T8	T16	NoRel	true	proclamación	instruir
+Relation	T8	T6	NoRel	true	proclamación	llegan
+Relation	T8	T7	NoRel	true	proclamación	clímax
+Relation	T9	T0	NoRel	true	niega	capturado
+Relation	T9	T10	NoRel	true	niega	ascenso
+Relation	T9	T11	NoRel	true	niega	concede
+Relation	T9	T12	NoRel	true	niega	enfrentamiento
+Relation	T9	T13	NoRel	true	niega	destituye
+Relation	T9	T2	NoRel	true	niega	liberado
+Relation	T9	T4	NoRel	true	niega	asciende

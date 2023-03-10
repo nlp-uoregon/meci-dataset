@@ -1,0 +1,36 @@
+Text	AEROFLOT'UN 337 SEFER SAYILI UÇUŞU , 1 Eylül 1985'te CCCP - 01789 kayıt numaralı Antonov An - 2P uçağıyla gerçekleştirilen ve Verhoyansk Havalimanı'ndan Yunkyur Havaalanı'na giden bir Aeroflot uçağının Yunkyur Havaalanı yakınlarında düşmesi olayıdır .	Kaza sonucunda uçaktaki 12 kişiden ölen olmamış , 5 kişi yaralanmıştır .	1G107 - 36 seri numaralı An - 2P , Polonya'da bulunan PZL - Mielec Russian tarafından üretildi .	1969 yılında , Aeroflot'a satıldı ve CCCP - 01789 kuyruk numarasını aldı .	Toplam 3329 uçuş saati vardır .
+Event	T0	UÇUŞU	EVENT	29
+Event	T1	gerçekleştirilen	EVENT	106
+Event	T2	giden	EVENT	174
+Event	T4	yaralanmıştır	EVENT	309
+Event	T5	üretildi	EVENT	411
+Event	T6	satıldı	EVENT	448
+Event	T7	aldı	EVENT	490
+Event	T8	düşmesi	EVENT	233
+Event	T3	Kaza	EVENT	252
+Relation	T8	T3	CauseEffect	true	düşmesi	Kaza
+Relation	T3	T8	EffectCause	true	Kaza	düşmesi
+Relation	T3	T4	CauseEffect	true	Kaza	yaralanmıştır
+Relation	T4	T3	EffectCause	true	yaralanmıştır	Kaza
+Relation	T0	T3	NoRel	true	UÇUŞU	Kaza
+Relation	T0	T6	NoRel	true	UÇUŞU	satıldı
+Relation	T1	T0	NoRel	true	gerçekleştirilen	UÇUŞU
+Relation	T1	T2	NoRel	true	gerçekleştirilen	giden
+Relation	T1	T8	NoRel	true	gerçekleştirilen	düşmesi
+Relation	T2	T0	NoRel	true	giden	UÇUŞU
+Relation	T2	T1	NoRel	true	giden	gerçekleştirilen
+Relation	T2	T3	NoRel	true	giden	Kaza
+Relation	T2	T4	NoRel	true	giden	yaralanmıştır
+Relation	T3	T5	NoRel	true	Kaza	üretildi
+Relation	T3	T6	NoRel	true	Kaza	satıldı
+Relation	T4	T1	NoRel	true	yaralanmıştır	gerçekleştirilen
+Relation	T4	T6	NoRel	true	yaralanmıştır	satıldı
+Relation	T5	T4	NoRel	true	üretildi	yaralanmıştır
+Relation	T5	T6	NoRel	true	üretildi	satıldı
+Relation	T5	T7	NoRel	true	üretildi	aldı
+Relation	T6	T3	NoRel	true	satıldı	Kaza
+Relation	T6	T7	NoRel	true	satıldı	aldı
+Relation	T7	T5	NoRel	true	aldı	üretildi
+Relation	T7	T8	NoRel	true	aldı	düşmesi
+Relation	T8	T1	NoRel	true	düşmesi	gerçekleştirilen
+Relation	T8	T6	NoRel	true	düşmesi	satıldı

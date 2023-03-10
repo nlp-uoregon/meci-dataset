@@ -1,0 +1,47 @@
+Text	küçükresim | Nasdaq Composite'de Dot - com balonu DOT - COM BALONU 2000 yılının Mart ayında teknoloji firmalarını yer aldığı borsa endeksi olan NASDAQ'daki senetlerin büyük değer kaybı yaşamasıyla sönen ekonomik balon .	Söz konusu kriz , gelişen bilgisayar ve Internet teknolojilerine yatırım yapan risk sermayesi şirketlerinin yatırımlarının geri dönüşünü sağlayamamaları sonucunda bu sektörlerden çekilmeleri sonucu yaşanmıştır .	Yatırımlardaki bu azalma yüzünden hisse senetleri büyük oranda değer yitirmiştir .	Kategori : Elektronik ticaret Kategori : Ekonomik balonlar Kategori : Bilişim teknolojileri yönetimi Kategori : Amerika Birleşik Devletleri'ndeki ekonomik krizler Kategori : Amerika Birleşik Devletleri tarihi ( 1991 - bugün ) Kategori : 1990'larda ekonomi Kategori : 2000'lerde ekonomi	
+Event	T0	sönen	EVENT	197
+Event	T1	kriz	EVENT	231
+Event	T2	sağlayamamaları	EVENT	357
+Event	T4	azalma	EVENT	450
+Event	T5	yitirmiştir	EVENT	501
+Event	T6	kaybı	EVENT	179
+Event	T7	com balonu DOT	EVENT	39
+Event	T8	yatırım	EVENT	285
+Event	T9	dönüşünü	EVENT	348
+Event	T10	çekilmeleri	EVENT	399
+Relation	T6	T0	CauseEffect	true	kaybı	sönen
+Relation	T0	T6	EffectCause	true	sönen	kaybı
+Relation	T2	T10	CauseEffect	true	sağlayamamaları	çekilmeleri
+Relation	T10	T2	EffectCause	true	çekilmeleri	sağlayamamaları
+Relation	T10	T1	CauseEffect	true	çekilmeleri	kriz
+Relation	T1	T10	EffectCause	true	kriz	çekilmeleri
+Relation	T10	T7	CauseEffect	true	çekilmeleri	com balonu DOT
+Relation	T7	T10	EffectCause	true	com balonu DOT	çekilmeleri
+Relation	T4	T5	CauseEffect	true	azalma	yitirmiştir
+Relation	T5	T4	EffectCause	true	yitirmiştir	azalma
+Relation	T10	T5	CauseEffect	true	çekilmeleri	yitirmiştir
+Relation	T5	T10	EffectCause	true	yitirmiştir	çekilmeleri
+Relation	T5	T1	CauseEffect	true	yitirmiştir	kriz
+Relation	T1	T5	EffectCause	true	kriz	yitirmiştir
+Relation	T5	T7	CauseEffect	true	yitirmiştir	com balonu DOT
+Relation	T7	T5	EffectCause	true	com balonu DOT	yitirmiştir
+Relation	T0	T1	NoRel	true	sönen	kriz
+Relation	T0	T8	NoRel	true	sönen	yatırım
+Relation	T0	T9	NoRel	true	sönen	dönüşünü
+Relation	T1	T4	NoRel	true	kriz	azalma
+Relation	T1	T6	NoRel	true	kriz	kaybı
+Relation	T10	T8	NoRel	true	çekilmeleri	yatırım
+Relation	T10	T9	NoRel	true	çekilmeleri	dönüşünü
+Relation	T2	T0	NoRel	true	sağlayamamaları	sönen
+Relation	T2	T7	NoRel	true	sağlayamamaları	com balonu DOT
+Relation	T2	T8	NoRel	true	sağlayamamaları	yatırım
+Relation	T6	T4	NoRel	true	kaybı	azalma
+Relation	T6	T5	NoRel	true	kaybı	yitirmiştir
+Relation	T6	T9	NoRel	true	kaybı	dönüşünü
+Relation	T7	T1	NoRel	true	com balonu DOT	kriz
+Relation	T7	T6	NoRel	true	com balonu DOT	kaybı
+Relation	T8	T10	NoRel	true	yatırım	çekilmeleri
+Relation	T8	T4	NoRel	true	yatırım	azalma
+Relation	T9	T4	NoRel	true	dönüşünü	azalma
+Relation	T9	T6	NoRel	true	dönüşünü	kaybı
+Relation	T9	T7	NoRel	true	dönüşünü	com balonu DOT

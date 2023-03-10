@@ -1,0 +1,49 @@
+Text	Dette skabte en stor udenlandsk efterspørgsel på jernvarer , særlig blev det Russiske Kejserrige en af de store kunder .	Fabrikken udvidedes og de mange nye arbejdere som skulle bo nær fabrikken krævede også opførelsen af nye arbejderboliger .	Desuden byggede man en skole i bebyggelsen til arbejdernes børn .	Den Russiske revolution i 1917 stoppede eventyret , og efter nogle års nedgang blev firmaet sat i likvidation i 1921 .	Af resterne dannede man selskabet A/S Scania-Vabis og Raadvaddam , som styrede driften af værket gennem datterselskabet A/S Raadvad Knivfabrik .
+Event	T0	skabte	EVENT	6
+Event	T1	efterspørgsel	EVENT	32
+Event	T10	dannede	EVENT	441
+Event	T2	udvidedes	EVENT	131
+Event	T3	krævede	EVENT	195
+Event	T4	opførelsen	EVENT	208
+Event	T5	byggede	EVENT	252
+Event	T6	revolution	EVENT	323
+Event	T8	nedgang	EVENT	381
+Event	T9	likvidation	EVENT	408
+Relation	T2	T3	CauseEffect	true	udvidedes	krævede
+Relation	T3	T2	EffectCause	true	krævede	udvidedes
+Relation	T2	T4	CauseEffect	true	udvidedes	opførelsen
+Relation	T4	T2	EffectCause	true	opførelsen	udvidedes
+Relation	T1	T2	CauseEffect	true	efterspørgsel	udvidedes
+Relation	T2	T1	EffectCause	true	udvidedes	efterspørgsel
+Relation	T2	T5	CauseEffect	true	udvidedes	byggede
+Relation	T5	T2	EffectCause	true	byggede	udvidedes
+Relation	T6	T8	CauseEffect	true	revolution	nedgang
+Relation	T8	T6	EffectCause	true	nedgang	revolution
+Relation	T8	T9	CauseEffect	true	nedgang	likvidation
+Relation	T9	T8	EffectCause	true	likvidation	nedgang
+Relation	T0	T6	NoRel	true	skabte	revolution
+Relation	T0	T8	NoRel	true	skabte	nedgang
+Relation	T1	T10	NoRel	true	efterspørgsel	dannede
+Relation	T1	T5	NoRel	true	efterspørgsel	byggede
+Relation	T1	T8	NoRel	true	efterspørgsel	nedgang
+Relation	T10	T5	NoRel	true	dannede	byggede
+Relation	T10	T8	NoRel	true	dannede	nedgang
+Relation	T2	T6	NoRel	true	udvidedes	revolution
+Relation	T2	T8	NoRel	true	udvidedes	nedgang
+Relation	T3	T0	NoRel	true	krævede	skabte
+Relation	T3	T6	NoRel	true	krævede	revolution
+Relation	T3	T8	NoRel	true	krævede	nedgang
+Relation	T3	T9	NoRel	true	krævede	likvidation
+Relation	T4	T5	NoRel	true	opførelsen	byggede
+Relation	T4	T9	NoRel	true	opførelsen	likvidation
+Relation	T5	T10	NoRel	true	byggede	dannede
+Relation	T5	T4	NoRel	true	byggede	opførelsen
+Relation	T6	T1	NoRel	true	revolution	efterspørgsel
+Relation	T6	T4	NoRel	true	revolution	opførelsen
+Relation	T6	T5	NoRel	true	revolution	byggede
+Relation	T6	T9	NoRel	true	revolution	likvidation
+Relation	T8	T1	NoRel	true	nedgang	efterspørgsel
+Relation	T8	T2	NoRel	true	nedgang	udvidedes
+Relation	T8	T3	NoRel	true	nedgang	krævede
+Relation	T8	T4	NoRel	true	nedgang	opførelsen
+Relation	T9	T4	NoRel	true	likvidation	opførelsen

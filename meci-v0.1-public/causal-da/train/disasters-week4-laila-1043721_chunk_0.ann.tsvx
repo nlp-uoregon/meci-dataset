@@ -1,0 +1,21 @@
+Text	Jordskælvet ved Thy 2020 var et jordskælv , der fandt sted 30. september 2020 kl. 06.58 lokal tid .	Skælvet havde en styrke på 3,4 på Richterskalaen og havde sit epicenter i den østlige del af Nordsøen , ud fra kysten ved Thyborøn .	Det kunne mærkes i det sydlige Thy .		
+Event	T0	Jordskælvet	EVENT	0
+Event	T1	jordskælv	EVENT	32
+Event	T2	styrke	EVENT	117
+Event	T3	mærkes	EVENT	243
+Event	T4	Skælvet	EVENT	100
+Event	T5	epicenter	EVENT	162
+Relation	T2	T3	CauseEffect	true	styrke	mærkes
+Relation	T3	T2	EffectCause	true	mærkes	styrke
+Relation	T5	T3	CauseEffect	true	epicenter	mærkes
+Relation	T3	T5	EffectCause	true	mærkes	epicenter
+Relation	T0	T1	NoRel	true	Jordskælvet	jordskælv
+Relation	T0	T2	NoRel	true	Jordskælvet	styrke
+Relation	T1	T0	NoRel	true	jordskælv	Jordskælvet
+Relation	T1	T3	NoRel	true	jordskælv	mærkes
+Relation	T1	T4	NoRel	true	jordskælv	Skælvet
+Relation	T2	T1	NoRel	true	styrke	jordskælv
+Relation	T2	T4	NoRel	true	styrke	Skælvet
+Relation	T3	T4	NoRel	true	mærkes	Skælvet
+Relation	T5	T0	NoRel	true	epicenter	Jordskælvet
+Relation	T5	T1	NoRel	true	epicenter	jordskælv

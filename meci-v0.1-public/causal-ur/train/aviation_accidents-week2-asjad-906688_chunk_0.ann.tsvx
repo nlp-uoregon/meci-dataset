@@ -1,0 +1,41 @@
+Text	22 مئی 2020ء کو پاکستان انٹرنیشنل ایئر لائنز کی پرواز 8303 ، جو لاہور سے کراچی جا رہی تھی ، کراچی کے جناح بین الاقوامی ہوائی اڈ_ے کے قریب ماڈل کالونی رہائشی علاقے میں داخل ہونے کے بعد وہیں گر کر تباہ ہو گئی ۔	یہ حادثہ پاکستان کے معیاری وقت 14 : 45 پر اس وقت پیش آیا جب ہوائی ٹریفک کنٹرولرز کا طیارے سے رابطہ ختم ہو گیا ۔	حادثے کا شکار طیارہ ایئربس اے 320 -214 تھا اور 2004ء میں تیار کیا گیا تھا ۔	یہ طیارہ 2004 ء سے 2014ء کے درمیان میں چائنا ایسٹرن ائیرلائنز کے زیر استعمال تھا ۔	پھر اسے جی ای کیپیٹل ایوی ایشن سروسز نے 31 اکتوبر 2014 کو پاکستان انٹرنیشنل ایئر لائنز ( پی آئی اے ) کو اے پی - بی ایل ڈی رجسٹریشن کے ساتھ لیز پر دے دیا تھا ۔
+Event	T1	گر	EVENT	189
+Event	T12	جا رہی	EVENT	79
+Event	T13	داخل	EVENT	167
+Event	T14	تباہ	EVENT	195
+Event	T2	استعمال	EVENT	466
+Event	T3	حادثہ	EVENT	212
+Event	T4	لیز	EVENT	619
+Event	T5	ختم	EVENT	308
+Event	T7	حادثے	EVENT	321
+Event	T9	تیار	EVENT	378
+Relation	T1	T14	CauseEffect	true	گر	تباہ
+Relation	T14	T1	EffectCause	true	تباہ	گر
+Relation	T1	T13	NoRel	true	گر	داخل
+Relation	T12	T14	NoRel	true	جا رہی	تباہ
+Relation	T12	T5	NoRel	true	جا رہی	ختم
+Relation	T13	T1	NoRel	true	داخل	گر
+Relation	T13	T5	NoRel	true	داخل	ختم
+Relation	T14	T13	NoRel	true	تباہ	داخل
+Relation	T14	T7	NoRel	true	تباہ	حادثے
+Relation	T2	T1	NoRel	true	استعمال	گر
+Relation	T2	T12	NoRel	true	استعمال	جا رہی
+Relation	T2	T13	NoRel	true	استعمال	داخل
+Relation	T2	T14	NoRel	true	استعمال	تباہ
+Relation	T3	T5	NoRel	true	حادثہ	ختم
+Relation	T3	T9	NoRel	true	حادثہ	تیار
+Relation	T4	T1	NoRel	true	لیز	گر
+Relation	T4	T13	NoRel	true	لیز	داخل
+Relation	T4	T14	NoRel	true	لیز	تباہ
+Relation	T4	T3	NoRel	true	لیز	حادثہ
+Relation	T5	T1	NoRel	true	ختم	گر
+Relation	T5	T14	NoRel	true	ختم	تباہ
+Relation	T5	T9	NoRel	true	ختم	تیار
+Relation	T7	T1	NoRel	true	حادثے	گر
+Relation	T7	T12	NoRel	true	حادثے	جا رہی
+Relation	T7	T14	NoRel	true	حادثے	تباہ
+Relation	T7	T3	NoRel	true	حادثے	حادثہ
+Relation	T9	T12	NoRel	true	تیار	جا رہی
+Relation	T9	T14	NoRel	true	تیار	تباہ
+Relation	T9	T4	NoRel	true	تیار	لیز
+Relation	T9	T7	NoRel	true	تیار	حادثے

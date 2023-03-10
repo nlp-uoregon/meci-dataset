@@ -1,0 +1,90 @@
+Text	45 ölü , bu aynı zamanda Alman tarihinde en kötü otobüs kazasıydı .	- 30 Ocak , 1973 - Helvecia hemzemin geçit felaketi – Her gün ev ile işyeri arasında çalışan bir tren , düzenli hat otobüsüyle çarpıştı .	En az otuz yedi kişi öldü ve on sekiz kişi yaralandı .	- 8 Mayıs , 2003 - Lake Balaton hemzemin geçit felaketi – Almanya’dan bir çift katlı otobüs , Budapeşte - Nagykanizsa ekspres treniyle çarpıştı , en az otuz dört kişi öldü ve kırk iki kişi yaralandı .	- 9 Aralık , 1964 - Deoria hemzemin geçit felaketi — Bir otobüs Uttar Pradeş’de bir yolcu treniyle çarpıştı , en az yirmi dokuz kişi öldü ve yetmiş iki kişi yaralandı .
+Event	T0	ölü	EVENT	3
+Event	T1	kazasıydı	EVENT	56
+Event	T2	felaketi	EVENT	111
+Event	T3	çarpıştı	EVENT	195
+Event	T4	öldü	EVENT	227
+Event	T5	yaralandı	EVENT	249
+Event	T6	felaketi	EVENT	308
+Event	T7	çarpıştı	EVENT	396
+Event	T8	öldü	EVENT	428
+Event	T9	yaralandı	EVENT	450
+Event	T10	felaketi	EVENT	504
+Event	T11	çarpıştı	EVENT	561
+Event	T12	öldü	EVENT	595
+Event	T13	yaralandı	EVENT	619
+Relation	T1	T0	CauseEffect	true	kazasıydı	ölü
+Relation	T0	T1	EffectCause	true	ölü	kazasıydı
+Relation	T3	T4	CauseEffect	true	çarpıştı	öldü
+Relation	T4	T3	EffectCause	true	öldü	çarpıştı
+Relation	T3	T5	CauseEffect	true	çarpıştı	yaralandı
+Relation	T5	T3	EffectCause	true	yaralandı	çarpıştı
+Relation	T7	T8	CauseEffect	true	çarpıştı	öldü
+Relation	T8	T7	EffectCause	true	öldü	çarpıştı
+Relation	T7	T9	CauseEffect	true	çarpıştı	yaralandı
+Relation	T9	T7	EffectCause	true	yaralandı	çarpıştı
+Relation	T11	T12	CauseEffect	true	çarpıştı	öldü
+Relation	T12	T11	EffectCause	true	öldü	çarpıştı
+Relation	T11	T13	CauseEffect	true	çarpıştı	yaralandı
+Relation	T13	T11	EffectCause	true	yaralandı	çarpıştı
+Relation	T0	T11	NoRel	true	ölü	çarpıştı
+Relation	T0	T3	NoRel	true	ölü	çarpıştı
+Relation	T0	T4	NoRel	true	ölü	öldü
+Relation	T1	T3	NoRel	true	kazasıydı	çarpıştı
+Relation	T1	T7	NoRel	true	kazasıydı	çarpıştı
+Relation	T1	T9	NoRel	true	kazasıydı	yaralandı
+Relation	T10	T3	NoRel	true	felaketi	çarpıştı
+Relation	T10	T5	NoRel	true	felaketi	yaralandı
+Relation	T11	T4	NoRel	true	çarpıştı	öldü
+Relation	T11	T7	NoRel	true	çarpıştı	çarpıştı
+Relation	T11	T9	NoRel	true	çarpıştı	yaralandı
+Relation	T12	T3	NoRel	true	öldü	çarpıştı
+Relation	T12	T5	NoRel	true	öldü	yaralandı
+Relation	T12	T8	NoRel	true	öldü	öldü
+Relation	T13	T0	NoRel	true	yaralandı	ölü
+Relation	T13	T1	NoRel	true	yaralandı	kazasıydı
+Relation	T13	T12	NoRel	true	yaralandı	öldü
+Relation	T13	T3	NoRel	true	yaralandı	çarpıştı
+Relation	T13	T8	NoRel	true	yaralandı	öldü
+Relation	T2	T1	NoRel	true	felaketi	kazasıydı
+Relation	T2	T10	NoRel	true	felaketi	felaketi
+Relation	T2	T12	NoRel	true	felaketi	öldü
+Relation	T2	T4	NoRel	true	felaketi	öldü
+Relation	T2	T5	NoRel	true	felaketi	yaralandı
+Relation	T2	T8	NoRel	true	felaketi	öldü
+Relation	T3	T0	NoRel	true	çarpıştı	ölü
+Relation	T3	T10	NoRel	true	çarpıştı	felaketi
+Relation	T3	T12	NoRel	true	çarpıştı	öldü
+Relation	T3	T2	NoRel	true	çarpıştı	felaketi
+Relation	T3	T6	NoRel	true	çarpıştı	felaketi
+Relation	T4	T11	NoRel	true	öldü	çarpıştı
+Relation	T4	T12	NoRel	true	öldü	öldü
+Relation	T4	T7	NoRel	true	öldü	çarpıştı
+Relation	T4	T9	NoRel	true	öldü	yaralandı
+Relation	T5	T1	NoRel	true	yaralandı	kazasıydı
+Relation	T5	T13	NoRel	true	yaralandı	yaralandı
+Relation	T5	T4	NoRel	true	yaralandı	öldü
+Relation	T5	T7	NoRel	true	yaralandı	çarpıştı
+Relation	T5	T8	NoRel	true	yaralandı	öldü
+Relation	T5	T9	NoRel	true	yaralandı	yaralandı
+Relation	T6	T1	NoRel	true	felaketi	kazasıydı
+Relation	T6	T2	NoRel	true	felaketi	felaketi
+Relation	T6	T3	NoRel	true	felaketi	çarpıştı
+Relation	T7	T0	NoRel	true	çarpıştı	ölü
+Relation	T7	T1	NoRel	true	çarpıştı	kazasıydı
+Relation	T7	T10	NoRel	true	çarpıştı	felaketi
+Relation	T7	T4	NoRel	true	çarpıştı	öldü
+Relation	T7	T5	NoRel	true	çarpıştı	yaralandı
+Relation	T7	T6	NoRel	true	çarpıştı	felaketi
+Relation	T8	T1	NoRel	true	öldü	kazasıydı
+Relation	T8	T10	NoRel	true	öldü	felaketi
+Relation	T8	T12	NoRel	true	öldü	öldü
+Relation	T8	T13	NoRel	true	öldü	yaralandı
+Relation	T8	T2	NoRel	true	öldü	felaketi
+Relation	T8	T4	NoRel	true	öldü	öldü
+Relation	T8	T6	NoRel	true	öldü	felaketi
+Relation	T8	T9	NoRel	true	öldü	yaralandı
+Relation	T9	T12	NoRel	true	yaralandı	öldü
+Relation	T9	T3	NoRel	true	yaralandı	çarpıştı
+Relation	T9	T4	NoRel	true	yaralandı	öldü
+Relation	T9	T8	NoRel	true	yaralandı	öldü

@@ -1,0 +1,69 @@
+Text	I omkring 1.500 meters højde ramte flyet en bjergside .	Den franske anklagemyndighed konkluderede på grundlag af de foretagne undersøgelser , at flystyrtet var resultatet af en bevidst handling fra andenpilotens side .	Målt på antallet af omkomne er ulykken den tredje værste flyulykke , der har fundet sted i Frankrig , efter flyulykker den 1. december 1981 på Korsika ( 180 omkomne ) og den 3. marts 1974 ( Turkish Airlines Flight 981 , 346 omkomne ) .	Flight 9525 lettede fra bane 07R i Barcelona–El Prat Lufthavn omkring klokken 10:01 CET med forventet ankomst i Flughafen Düsseldorf International klokken 11:39 CET .	Kl. 10:27 nåede flyet sin cruise højde ved 38.000 fod ( cirka 10 km ) ca. 55 km sydøst for Marseille .
+Event	T0	ramte	EVENT	29
+Event	T1	konkluderede	EVENT	85
+Event	T2	undersøgelser	EVENT	126
+Event	T3	flystyrtet	EVENT	145
+Event	T4	handling	EVENT	185
+Event	T5	ulykken	EVENT	250
+Event	T6	flyulykke	EVENT	276
+Event	T7	flyulykker	EVENT	327
+Event	T8	omkomne	EVENT	443
+Event	T9	lettede	EVENT	467
+Event	T10	ankomst	EVENT	557
+Event	T11	nåede	EVENT	632
+Event	T12	resultatet	EVENT	160
+Event	T13	omkomne	EVENT	239
+Relation	T4	T3	CauseEffect	true	handling	flystyrtet
+Relation	T3	T4	EffectCause	true	flystyrtet	handling
+Relation	T0	T12	NoRel	true	ramte	resultatet
+Relation	T0	T2	NoRel	true	ramte	undersøgelser
+Relation	T0	T3	NoRel	true	ramte	flystyrtet
+Relation	T1	T10	NoRel	true	konkluderede	ankomst
+Relation	T1	T13	NoRel	true	konkluderede	omkomne
+Relation	T1	T6	NoRel	true	konkluderede	flyulykke
+Relation	T1	T7	NoRel	true	konkluderede	flyulykker
+Relation	T10	T0	NoRel	true	ankomst	ramte
+Relation	T10	T3	NoRel	true	ankomst	flystyrtet
+Relation	T10	T4	NoRel	true	ankomst	handling
+Relation	T11	T10	NoRel	true	nåede	ankomst
+Relation	T11	T13	NoRel	true	nåede	omkomne
+Relation	T11	T2	NoRel	true	nåede	undersøgelser
+Relation	T11	T8	NoRel	true	nåede	omkomne
+Relation	T11	T9	NoRel	true	nåede	lettede
+Relation	T12	T0	NoRel	true	resultatet	ramte
+Relation	T12	T1	NoRel	true	resultatet	konkluderede
+Relation	T12	T6	NoRel	true	resultatet	flyulykke
+Relation	T12	T7	NoRel	true	resultatet	flyulykker
+Relation	T12	T8	NoRel	true	resultatet	omkomne
+Relation	T13	T5	NoRel	true	omkomne	ulykken
+Relation	T13	T7	NoRel	true	omkomne	flyulykker
+Relation	T13	T9	NoRel	true	omkomne	lettede
+Relation	T2	T0	NoRel	true	undersøgelser	ramte
+Relation	T2	T7	NoRel	true	undersøgelser	flyulykker
+Relation	T2	T8	NoRel	true	undersøgelser	omkomne
+Relation	T3	T0	NoRel	true	flystyrtet	ramte
+Relation	T3	T10	NoRel	true	flystyrtet	ankomst
+Relation	T3	T2	NoRel	true	flystyrtet	undersøgelser
+Relation	T3	T9	NoRel	true	flystyrtet	lettede
+Relation	T4	T0	NoRel	true	handling	ramte
+Relation	T4	T10	NoRel	true	handling	ankomst
+Relation	T4	T2	NoRel	true	handling	undersøgelser
+Relation	T5	T10	NoRel	true	ulykken	ankomst
+Relation	T5	T11	NoRel	true	ulykken	nåede
+Relation	T5	T6	NoRel	true	ulykken	flyulykke
+Relation	T6	T13	NoRel	true	flyulykke	omkomne
+Relation	T6	T5	NoRel	true	flyulykke	ulykken
+Relation	T6	T8	NoRel	true	flyulykke	omkomne
+Relation	T7	T0	NoRel	true	flyulykker	ramte
+Relation	T7	T8	NoRel	true	flyulykker	omkomne
+Relation	T8	T0	NoRel	true	omkomne	ramte
+Relation	T8	T12	NoRel	true	omkomne	resultatet
+Relation	T8	T2	NoRel	true	omkomne	undersøgelser
+Relation	T8	T4	NoRel	true	omkomne	handling
+Relation	T8	T6	NoRel	true	omkomne	flyulykke
+Relation	T9	T0	NoRel	true	lettede	ramte
+Relation	T9	T1	NoRel	true	lettede	konkluderede
+Relation	T9	T10	NoRel	true	lettede	ankomst
+Relation	T9	T12	NoRel	true	lettede	resultatet
+Relation	T9	T13	NoRel	true	lettede	omkomne
+Relation	T9	T4	NoRel	true	lettede	handling

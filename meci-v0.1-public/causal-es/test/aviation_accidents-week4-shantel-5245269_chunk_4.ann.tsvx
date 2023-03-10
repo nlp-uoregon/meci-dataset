@@ -1,0 +1,59 @@
+Text	Derribó la estructura y los soportes del transmisor ILS Localizer , rompió el muro perimetral del aeropuerto .	El avión cruzó Giffard Road , chocó con una minivan Mercedes-Benz TN 207 y mató a las diez personas a bordo .	Arrancó un árbol al lado de la carretera antes de detenerse finalmente en un espacio abierto cerca del estadio deportivo El-Wak .	El lado derecho de un taxi en la carretera fue rozado por escombros voladores de las estructuras del transmisor localizador transportadas por el ala derecha de la aeronave .	El borde de ataque del ala sufrió graves daños .
+Event	T0	Derribó	EVENT	0
+Event	T1	rompió	EVENT	68
+Event	T2	cruzó	EVENT	120
+Event	T3	chocó	EVENT	141
+Event	T4	mató	EVENT	186
+Event	T5	Arrancó	EVENT	221
+Event	T6	detenerse	EVENT	271
+Event	T7	rozado	EVENT	398
+Event	T8	transportadas	EVENT	475
+Event	T9	ataque	EVENT	537
+Event	T10	daños	EVENT	566
+Relation	T3	T4	CauseEffect	true	chocó	mató
+Relation	T4	T3	EffectCause	true	mató	chocó
+Relation	T2	T3	CauseEffect	true	cruzó	chocó
+Relation	T3	T2	EffectCause	true	chocó	cruzó
+Relation	T0	T3	NoRel	true	Derribó	chocó
+Relation	T0	T5	NoRel	true	Derribó	Arrancó
+Relation	T0	T6	NoRel	true	Derribó	detenerse
+Relation	T0	T9	NoRel	true	Derribó	ataque
+Relation	T1	T6	NoRel	true	rompió	detenerse
+Relation	T10	T0	NoRel	true	daños	Derribó
+Relation	T10	T1	NoRel	true	daños	rompió
+Relation	T10	T5	NoRel	true	daños	Arrancó
+Relation	T10	T8	NoRel	true	daños	transportadas
+Relation	T2	T0	NoRel	true	cruzó	Derribó
+Relation	T2	T6	NoRel	true	cruzó	detenerse
+Relation	T2	T9	NoRel	true	cruzó	ataque
+Relation	T3	T0	NoRel	true	chocó	Derribó
+Relation	T3	T1	NoRel	true	chocó	rompió
+Relation	T3	T7	NoRel	true	chocó	rozado
+Relation	T3	T8	NoRel	true	chocó	transportadas
+Relation	T3	T9	NoRel	true	chocó	ataque
+Relation	T4	T5	NoRel	true	mató	Arrancó
+Relation	T4	T6	NoRel	true	mató	detenerse
+Relation	T4	T7	NoRel	true	mató	rozado
+Relation	T5	T0	NoRel	true	Arrancó	Derribó
+Relation	T5	T1	NoRel	true	Arrancó	rompió
+Relation	T5	T4	NoRel	true	Arrancó	mató
+Relation	T5	T6	NoRel	true	Arrancó	detenerse
+Relation	T6	T0	NoRel	true	detenerse	Derribó
+Relation	T6	T1	NoRel	true	detenerse	rompió
+Relation	T6	T3	NoRel	true	detenerse	chocó
+Relation	T6	T5	NoRel	true	detenerse	Arrancó
+Relation	T6	T8	NoRel	true	detenerse	transportadas
+Relation	T7	T2	NoRel	true	rozado	cruzó
+Relation	T7	T5	NoRel	true	rozado	Arrancó
+Relation	T7	T8	NoRel	true	rozado	transportadas
+Relation	T7	T9	NoRel	true	rozado	ataque
+Relation	T8	T10	NoRel	true	transportadas	daños
+Relation	T8	T2	NoRel	true	transportadas	cruzó
+Relation	T8	T6	NoRel	true	transportadas	detenerse
+Relation	T8	T7	NoRel	true	transportadas	rozado
+Relation	T9	T0	NoRel	true	ataque	Derribó
+Relation	T9	T1	NoRel	true	ataque	rompió
+Relation	T9	T2	NoRel	true	ataque	cruzó
+Relation	T9	T4	NoRel	true	ataque	mató
+Relation	T9	T6	NoRel	true	ataque	detenerse
+Relation	T9	T7	NoRel	true	ataque	rozado

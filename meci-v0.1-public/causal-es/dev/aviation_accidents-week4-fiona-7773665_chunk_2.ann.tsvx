@@ -1,0 +1,46 @@
+Text	Cuando el avión se volvió de nuevo para unirse a la final de la pista 18R a su aeropuerto de destino , el Boeing 767 impacta en una zona boscosa en una hora local 11:40 en la colina , se rompió y se incendió .	Las condiciones meteorológicas eran normales , con llovizna y la visibilidad en el área de 4000 metros .	Entre los 166 pasajeros y la tripulación , 128 personas murieron y 37 sobrevivieron , entre ellos el capitán .	- Accidente de aviación - Anexo : Accidentes más graves de aviación ( 1943 - presente ) - Anexo : Accidentes e incidentes notables en la aviación civil	- Vuelo 202 de Airblue - Vuelo 148 de Air Inter - Vuelo 965 de American Airlines - Vuelo 967 de Armavia - Vuelo 605 de Indian Airlines - Vuelo 8303 de Pakistan International Airlines
+Event	T0	volvió	EVENT	19
+Event	T1	unirse	EVENT	40
+Event	T2	impacta	EVENT	117
+Event	T3	rompió	EVENT	187
+Event	T4	incendió	EVENT	199
+Event	T5	murieron	EVENT	371
+Event	T6	sobrevivieron	EVENT	385
+Event	T7	Accidente	EVENT	428
+Event	T8	Accidentes	EVENT	460
+Event	T9	Accidentes	EVENT	524
+Relation	T2	T3	CauseEffect	true	impacta	rompió
+Relation	T3	T2	EffectCause	true	rompió	impacta
+Relation	T2	T4	CauseEffect	true	impacta	incendió
+Relation	T4	T2	EffectCause	true	incendió	impacta
+Relation	T2	T5	CauseEffect	true	impacta	murieron
+Relation	T5	T2	EffectCause	true	murieron	impacta
+Relation	T0	T1	NoRel	true	volvió	unirse
+Relation	T0	T4	NoRel	true	volvió	incendió
+Relation	T0	T7	NoRel	true	volvió	Accidente
+Relation	T0	T8	NoRel	true	volvió	Accidentes
+Relation	T1	T0	NoRel	true	unirse	volvió
+Relation	T1	T3	NoRel	true	unirse	rompió
+Relation	T1	T6	NoRel	true	unirse	sobrevivieron
+Relation	T1	T7	NoRel	true	unirse	Accidente
+Relation	T1	T9	NoRel	true	unirse	Accidentes
+Relation	T3	T0	NoRel	true	rompió	volvió
+Relation	T3	T8	NoRel	true	rompió	Accidentes
+Relation	T4	T0	NoRel	true	incendió	volvió
+Relation	T4	T1	NoRel	true	incendió	unirse
+Relation	T4	T8	NoRel	true	incendió	Accidentes
+Relation	T4	T9	NoRel	true	incendió	Accidentes
+Relation	T5	T0	NoRel	true	murieron	volvió
+Relation	T5	T3	NoRel	true	murieron	rompió
+Relation	T5	T7	NoRel	true	murieron	Accidente
+Relation	T5	T9	NoRel	true	murieron	Accidentes
+Relation	T6	T1	NoRel	true	sobrevivieron	unirse
+Relation	T6	T3	NoRel	true	sobrevivieron	rompió
+Relation	T6	T8	NoRel	true	sobrevivieron	Accidentes
+Relation	T7	T3	NoRel	true	Accidente	rompió
+Relation	T7	T4	NoRel	true	Accidente	incendió
+Relation	T7	T8	NoRel	true	Accidente	Accidentes
+Relation	T8	T2	NoRel	true	Accidentes	impacta
+Relation	T8	T7	NoRel	true	Accidentes	Accidente
+Relation	T9	T4	NoRel	true	Accidentes	incendió
+Relation	T9	T5	NoRel	true	Accidentes	murieron

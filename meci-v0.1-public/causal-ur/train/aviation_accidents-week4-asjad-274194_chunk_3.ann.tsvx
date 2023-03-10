@@ -1,0 +1,20 @@
+Text	جہاز آگے کی طرف چلتے ہوئے دریا میں جاگرا-	ٹیکسی میں موجود 2 افراد بھی اس حادثے میں زخمی ہوئے -	حادثے کے وقت کوئی منفی موسمی مظاہر مشاہدے میں نہیں آئے -	11 بجے سونگشان کے اوپر بادل 1300 فٹ کی بلندی پر تھے ، حد نگاہ لامحدود تھی ، ہوا 8 ناٹس ( 15 کلومیٹر فی گھنٹا ) کی رفتار سے چل رہی تھی جبکہ درجہ حرارت 16℃ تھا -	کریش کے فوراﹰ بعد ہی تائیوان کی پولیس اور فائر ڈیپارٹمنٹ کو درجنوں کالز عینی شاہدین کی جانب سے موصول ہوئیں کہ ایک جہاز کیلنگ دریا میں گرگیا ہے -
+Event	T0	چلتے	EVENT	16
+Event	T1	حادثے	EVENT	73
+Event	T2	ہوئے	EVENT	88
+Event	T3	حادثے	EVENT	95
+Event	T4	آئے	EVENT	146
+Event	T5	گرگیا	EVENT	446
+Relation	T1	T2	CauseEffect	true	حادثے	ہوئے
+Relation	T2	T1	EffectCause	true	ہوئے	حادثے
+Relation	T3	T2	CauseEffect	true	حادثے	ہوئے
+Relation	T2	T3	EffectCause	true	ہوئے	حادثے
+Relation	T0	T2	NoRel	true	چلتے	ہوئے
+Relation	T0	T4	NoRel	true	چلتے	آئے
+Relation	T1	T4	NoRel	true	حادثے	آئے
+Relation	T2	T0	NoRel	true	ہوئے	چلتے
+Relation	T2	T5	NoRel	true	ہوئے	گرگیا
+Relation	T3	T0	NoRel	true	حادثے	چلتے
+Relation	T3	T1	NoRel	true	حادثے	حادثے
+Relation	T5	T0	NoRel	true	گرگیا	چلتے
+Relation	T5	T2	NoRel	true	گرگیا	ہوئے

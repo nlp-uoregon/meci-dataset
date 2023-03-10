@@ -1,0 +1,54 @@
+Text	Kaptan düşmeden birkaç saniye önce uçağın düşmek üzere olduğunu gördü ve yerle çarpışmayı önlemeye çalıştı .	Uçak saat 21.01'de saatte 300 kilometre hızla pistin 210 metre ( 690_ft ) sağına düştü .	İniş takımı koptu ve sağ kanatlar uçağın geri kalanından ayrıldı .	Sol kanat ile gövde birkaç parçaya bölündü ve enkaz yanmaya başladı .	Kaza sonucunda radyo operatörü , iki uçuş görevlisi ve altısı çocuk 61 yolcu öldü .
+Event	T0	düşmeden	EVENT	7
+Event	T1	düşmek	EVENT	42
+Event	T2	gördü	EVENT	64
+Event	T3	çalıştı	EVENT	99
+Event	T4	düştü	EVENT	190
+Event	T5	koptu	EVENT	210
+Event	T6	ayrıldı	EVENT	255
+Event	T7	bölündü	EVENT	300
+Event	T8	başladı	EVENT	325
+Event	T9	öldü	EVENT	412
+Event	T10	Kaza	EVENT	335
+Relation	T2	T3	CauseEffect	true	gördü	çalıştı
+Relation	T3	T2	EffectCause	true	çalıştı	gördü
+Relation	T8	T9	CauseEffect	true	başladı	öldü
+Relation	T9	T8	EffectCause	true	öldü	başladı
+Relation	T0	T5	NoRel	true	düşmeden	koptu
+Relation	T0	T8	NoRel	true	düşmeden	başladı
+Relation	T0	T9	NoRel	true	düşmeden	öldü
+Relation	T1	T6	NoRel	true	düşmek	ayrıldı
+Relation	T1	T7	NoRel	true	düşmek	bölündü
+Relation	T10	T2	NoRel	true	Kaza	gördü
+Relation	T10	T6	NoRel	true	Kaza	ayrıldı
+Relation	T10	T9	NoRel	true	Kaza	öldü
+Relation	T2	T10	NoRel	true	gördü	Kaza
+Relation	T2	T7	NoRel	true	gördü	bölündü
+Relation	T3	T0	NoRel	true	çalıştı	düşmeden
+Relation	T3	T10	NoRel	true	çalıştı	Kaza
+Relation	T3	T4	NoRel	true	çalıştı	düştü
+Relation	T3	T7	NoRel	true	çalıştı	bölündü
+Relation	T3	T8	NoRel	true	çalıştı	başladı
+Relation	T3	T9	NoRel	true	çalıştı	öldü
+Relation	T4	T5	NoRel	true	düştü	koptu
+Relation	T4	T6	NoRel	true	düştü	ayrıldı
+Relation	T4	T8	NoRel	true	düştü	başladı
+Relation	T5	T0	NoRel	true	koptu	düşmeden
+Relation	T5	T1	NoRel	true	koptu	düşmek
+Relation	T5	T3	NoRel	true	koptu	çalıştı
+Relation	T5	T4	NoRel	true	koptu	düştü
+Relation	T6	T10	NoRel	true	ayrıldı	Kaza
+Relation	T6	T2	NoRel	true	ayrıldı	gördü
+Relation	T6	T3	NoRel	true	ayrıldı	çalıştı
+Relation	T6	T4	NoRel	true	ayrıldı	düştü
+Relation	T6	T7	NoRel	true	ayrıldı	bölündü
+Relation	T6	T8	NoRel	true	ayrıldı	başladı
+Relation	T7	T1	NoRel	true	bölündü	düşmek
+Relation	T7	T5	NoRel	true	bölündü	koptu
+Relation	T7	T6	NoRel	true	bölündü	ayrıldı
+Relation	T7	T8	NoRel	true	bölündü	başladı
+Relation	T8	T1	NoRel	true	başladı	düşmek
+Relation	T8	T6	NoRel	true	başladı	ayrıldı
+Relation	T9	T1	NoRel	true	öldü	düşmek
+Relation	T9	T5	NoRel	true	öldü	koptu
+Relation	T9	T7	NoRel	true	öldü	bölündü

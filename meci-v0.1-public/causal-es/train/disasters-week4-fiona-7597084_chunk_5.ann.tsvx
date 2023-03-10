@@ -1,0 +1,91 @@
+Text	El fenómeno natural ocasionó serias inundaciones , arroyos y oleajes .	El fenómeno también causó que se tuvieran que evacuar varios pueblos , quedando en su mayoría abandonados .	7 vuelos de la aerolínea Avianca que se dirigían hacia La Guajira y la Costa Norte en general fueron cancelados debido al coletazo del huracán .	La aerolínea LATAM presentó retraso en sus vuelos generando congestión en Aeropuerto Internacional el Dorado de Bogotá .	En un principio el gobierno emitió alerta por tormenta tropical , que en ese entonces Matthew no era un huracán .
+Event	T0	inundaciones	EVENT	36
+Event	T1	oleajes	EVENT	61
+Event	T2	fenómeno	EVENT	74
+Event	T3	causó	EVENT	91
+Event	T4	tuvieran	EVENT	104
+Event	T5	evacuar	EVENT	117
+Event	T6	quedando	EVENT	142
+Event	T7	vuelos	EVENT	181
+Event	T8	dirigían	EVENT	219
+Event	T9	coletazo	EVENT	301
+Event	T10	huracán	EVENT	314
+Event	T11	retraso	EVENT	352
+Event	T12	congestión	EVENT	384
+Event	T13	alerta	EVENT	480
+Event	T14	huracán	EVENT	549
+Relation	T2	T5	CauseEffect	true	fenómeno	evacuar
+Relation	T5	T2	EffectCause	true	evacuar	fenómeno
+Relation	T0	T5	NoRel	true	inundaciones	evacuar
+Relation	T0	T7	NoRel	true	inundaciones	vuelos
+Relation	T0	T9	NoRel	true	inundaciones	coletazo
+Relation	T1	T13	NoRel	true	oleajes	alerta
+Relation	T1	T2	NoRel	true	oleajes	fenómeno
+Relation	T1	T4	NoRel	true	oleajes	tuvieran
+Relation	T1	T5	NoRel	true	oleajes	evacuar
+Relation	T1	T7	NoRel	true	oleajes	vuelos
+Relation	T10	T11	NoRel	true	huracán	retraso
+Relation	T10	T12	NoRel	true	huracán	congestión
+Relation	T10	T2	NoRel	true	huracán	fenómeno
+Relation	T10	T5	NoRel	true	huracán	evacuar
+Relation	T10	T8	NoRel	true	huracán	dirigían
+Relation	T11	T1	NoRel	true	retraso	oleajes
+Relation	T11	T12	NoRel	true	retraso	congestión
+Relation	T11	T2	NoRel	true	retraso	fenómeno
+Relation	T11	T4	NoRel	true	retraso	tuvieran
+Relation	T11	T6	NoRel	true	retraso	quedando
+Relation	T11	T7	NoRel	true	retraso	vuelos
+Relation	T11	T9	NoRel	true	retraso	coletazo
+Relation	T12	T4	NoRel	true	congestión	tuvieran
+Relation	T12	T6	NoRel	true	congestión	quedando
+Relation	T12	T7	NoRel	true	congestión	vuelos
+Relation	T12	T8	NoRel	true	congestión	dirigían
+Relation	T12	T9	NoRel	true	congestión	coletazo
+Relation	T13	T12	NoRel	true	alerta	congestión
+Relation	T13	T14	NoRel	true	alerta	huracán
+Relation	T13	T3	NoRel	true	alerta	causó
+Relation	T13	T4	NoRel	true	alerta	tuvieran
+Relation	T13	T6	NoRel	true	alerta	quedando
+Relation	T13	T7	NoRel	true	alerta	vuelos
+Relation	T14	T2	NoRel	true	huracán	fenómeno
+Relation	T14	T7	NoRel	true	huracán	vuelos
+Relation	T2	T10	NoRel	true	fenómeno	huracán
+Relation	T2	T14	NoRel	true	fenómeno	huracán
+Relation	T2	T3	NoRel	true	fenómeno	causó
+Relation	T2	T7	NoRel	true	fenómeno	vuelos
+Relation	T2	T8	NoRel	true	fenómeno	dirigían
+Relation	T2	T9	NoRel	true	fenómeno	coletazo
+Relation	T3	T13	NoRel	true	causó	alerta
+Relation	T3	T4	NoRel	true	causó	tuvieran
+Relation	T3	T5	NoRel	true	causó	evacuar
+Relation	T4	T11	NoRel	true	tuvieran	retraso
+Relation	T4	T13	NoRel	true	tuvieran	alerta
+Relation	T4	T14	NoRel	true	tuvieran	huracán
+Relation	T4	T2	NoRel	true	tuvieran	fenómeno
+Relation	T4	T5	NoRel	true	tuvieran	evacuar
+Relation	T4	T8	NoRel	true	tuvieran	dirigían
+Relation	T4	T9	NoRel	true	tuvieran	coletazo
+Relation	T5	T10	NoRel	true	evacuar	huracán
+Relation	T5	T13	NoRel	true	evacuar	alerta
+Relation	T5	T14	NoRel	true	evacuar	huracán
+Relation	T5	T7	NoRel	true	evacuar	vuelos
+Relation	T5	T8	NoRel	true	evacuar	dirigían
+Relation	T6	T5	NoRel	true	quedando	evacuar
+Relation	T7	T1	NoRel	true	vuelos	oleajes
+Relation	T7	T10	NoRel	true	vuelos	huracán
+Relation	T7	T11	NoRel	true	vuelos	retraso
+Relation	T7	T4	NoRel	true	vuelos	tuvieran
+Relation	T7	T5	NoRel	true	vuelos	evacuar
+Relation	T7	T6	NoRel	true	vuelos	quedando
+Relation	T7	T8	NoRel	true	vuelos	dirigían
+Relation	T8	T0	NoRel	true	dirigían	inundaciones
+Relation	T8	T10	NoRel	true	dirigían	huracán
+Relation	T8	T2	NoRel	true	dirigían	fenómeno
+Relation	T8	T9	NoRel	true	dirigían	coletazo
+Relation	T9	T0	NoRel	true	coletazo	inundaciones
+Relation	T9	T10	NoRel	true	coletazo	huracán
+Relation	T9	T12	NoRel	true	coletazo	congestión
+Relation	T9	T14	NoRel	true	coletazo	huracán
+Relation	T9	T3	NoRel	true	coletazo	causó
+Relation	T9	T7	NoRel	true	coletazo	vuelos
+Relation	T9	T8	NoRel	true	coletazo	dirigían

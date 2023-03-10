@@ -1,0 +1,26 @@
+Text	Mülk zararı ise hesaplanamayacak kadar büyüktür , iç Çin'in tüm bir bölgesi yok olmuştur ve bölgenin nüfusunun yaklaşık % 60'ı ölmüştür .	Zararın maliyeti , eksiksiz bir nükleer silahın patlamasının açacağı yıkıma eşit olurdu ( yan etkileri hariç ) .	Ancak 1556 Şensi Depremi , Çin tarihinin en kötü felaketi değildir .	Örneğin , 1959 ile 1961 yılları arasında Doğal Felaketlerin Üç Yılı'nda on milyonlarca Çinli ölmüştür .	- _ Annals of China _ quoted from p._100 of _ 30_Years ' Review of China's Science and Technology , 1949 - 79 _ as seen on Google Print
+Event	T0	zararı	EVENT	5
+Event	T1	ölmüştür	EVENT	127
+Event	T2	Depremi	EVENT	268
+Event	T3	felaketi	EVENT	300
+Event	T4	ölmüştür	EVENT	413
+Event	T7	olmuştur	EVENT	80
+Event	T8	Felaketlerin	EVENT	367
+Relation	T2	T0	CauseEffect	true	Depremi	zararı
+Relation	T0	T2	EffectCause	true	zararı	Depremi
+Relation	T2	T7	CauseEffect	true	Depremi	olmuştur
+Relation	T7	T2	EffectCause	true	olmuştur	Depremi
+Relation	T2	T1	CauseEffect	true	Depremi	ölmüştür
+Relation	T1	T2	EffectCause	true	ölmüştür	Depremi
+Relation	T8	T4	CauseEffect	true	Felaketlerin	ölmüştür
+Relation	T4	T8	EffectCause	true	ölmüştür	Felaketlerin
+Relation	T0	T7	NoRel	true	zararı	olmuştur
+Relation	T1	T3	NoRel	true	ölmüştür	felaketi
+Relation	T2	T3	NoRel	true	Depremi	felaketi
+Relation	T2	T8	NoRel	true	Depremi	Felaketlerin
+Relation	T3	T2	NoRel	true	felaketi	Depremi
+Relation	T3	T4	NoRel	true	felaketi	ölmüştür
+Relation	T3	T7	NoRel	true	felaketi	olmuştur
+Relation	T3	T8	NoRel	true	felaketi	Felaketlerin
+Relation	T4	T1	NoRel	true	ölmüştür	ölmüştür
+Relation	T7	T0	NoRel	true	olmuştur	zararı

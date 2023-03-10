@@ -1,0 +1,78 @@
+Text	Pony 1'in çarptığı Pony 2 ise daha pilotu hiçbir şey yapamadan sert bir şekilde yere çarptı .	Çarpmanın etkisiyle pilotu yanan bir alev topu içinde kaldı ve vahşice canını verdi .	Ayrıca Pony 10 yere çarpmasıyla beraber patlama yaptı ve yakın seyircilere zarar verirken uzak seyircilere dehşeti tam anlamıyla yaşattı .	Kaza anından iki dakika sonra itfaiye ekipleri oraya vardı .	İtfaiye ekiplerinden hemen sonraysa ilk ambulans ve ilk ambulans helikopter seyircilere ulaştırıldı .
+Event	T0	çarptığı	EVENT	10
+Event	T1	çarptı	EVENT	85
+Event	T2	yanan	EVENT	121
+Event	T3	kaldı	EVENT	148
+Event	T4	verdi	EVENT	172
+Event	T5	çarpmasıyla	EVENT	200
+Event	T6	yaptı	EVENT	228
+Event	T7	zarar	EVENT	255
+Event	T8	yaşattı	EVENT	309
+Event	T9	Kaza	EVENT	319
+Event	T10	ulaştırıldı	EVENT	468
+Event	T11	Çarpmanın	EVENT	94
+Event	T12	vardı	EVENT	372
+Relation	T11	T2	CauseEffect	true	Çarpmanın	yanan
+Relation	T2	T11	EffectCause	true	yanan	Çarpmanın
+Relation	T2	T3	CauseEffect	true	yanan	kaldı
+Relation	T3	T2	EffectCause	true	kaldı	yanan
+Relation	T3	T4	CauseEffect	true	kaldı	verdi
+Relation	T4	T3	EffectCause	true	verdi	kaldı
+Relation	T5	T6	CauseEffect	true	çarpmasıyla	yaptı
+Relation	T6	T5	EffectCause	true	yaptı	çarpmasıyla
+Relation	T6	T7	CauseEffect	true	yaptı	zarar
+Relation	T7	T6	EffectCause	true	zarar	yaptı
+Relation	T7	T8	CauseEffect	true	zarar	yaşattı
+Relation	T8	T7	EffectCause	true	yaşattı	zarar
+Relation	T0	T1	NoRel	true	çarptığı	çarptı
+Relation	T0	T11	NoRel	true	çarptığı	Çarpmanın
+Relation	T0	T2	NoRel	true	çarptığı	yanan
+Relation	T0	T5	NoRel	true	çarptığı	çarpmasıyla
+Relation	T0	T6	NoRel	true	çarptığı	yaptı
+Relation	T0	T7	NoRel	true	çarptığı	zarar
+Relation	T1	T11	NoRel	true	çarptı	Çarpmanın
+Relation	T1	T2	NoRel	true	çarptı	yanan
+Relation	T1	T3	NoRel	true	çarptı	kaldı
+Relation	T1	T4	NoRel	true	çarptı	verdi
+Relation	T1	T5	NoRel	true	çarptı	çarpmasıyla
+Relation	T10	T0	NoRel	true	ulaştırıldı	çarptığı
+Relation	T10	T1	NoRel	true	ulaştırıldı	çarptı
+Relation	T10	T12	NoRel	true	ulaştırıldı	vardı
+Relation	T10	T2	NoRel	true	ulaştırıldı	yanan
+Relation	T10	T4	NoRel	true	ulaştırıldı	verdi
+Relation	T11	T6	NoRel	true	Çarpmanın	yaptı
+Relation	T11	T7	NoRel	true	Çarpmanın	zarar
+Relation	T12	T11	NoRel	true	vardı	Çarpmanın
+Relation	T12	T2	NoRel	true	vardı	yanan
+Relation	T12	T4	NoRel	true	vardı	verdi
+Relation	T12	T7	NoRel	true	vardı	zarar
+Relation	T12	T9	NoRel	true	vardı	Kaza
+Relation	T2	T0	NoRel	true	yanan	çarptığı
+Relation	T2	T5	NoRel	true	yanan	çarpmasıyla
+Relation	T2	T6	NoRel	true	yanan	yaptı
+Relation	T3	T6	NoRel	true	kaldı	yaptı
+Relation	T3	T8	NoRel	true	kaldı	yaşattı
+Relation	T4	T10	NoRel	true	verdi	ulaştırıldı
+Relation	T4	T11	NoRel	true	verdi	Çarpmanın
+Relation	T4	T5	NoRel	true	verdi	çarpmasıyla
+Relation	T4	T9	NoRel	true	verdi	Kaza
+Relation	T5	T11	NoRel	true	çarpmasıyla	Çarpmanın
+Relation	T5	T12	NoRel	true	çarpmasıyla	vardı
+Relation	T5	T4	NoRel	true	çarpmasıyla	verdi
+Relation	T5	T9	NoRel	true	çarpmasıyla	Kaza
+Relation	T6	T10	NoRel	true	yaptı	ulaştırıldı
+Relation	T6	T11	NoRel	true	yaptı	Çarpmanın
+Relation	T6	T4	NoRel	true	yaptı	verdi
+Relation	T6	T9	NoRel	true	yaptı	Kaza
+Relation	T7	T0	NoRel	true	zarar	çarptığı
+Relation	T7	T10	NoRel	true	zarar	ulaştırıldı
+Relation	T7	T12	NoRel	true	zarar	vardı
+Relation	T7	T4	NoRel	true	zarar	verdi
+Relation	T8	T1	NoRel	true	yaşattı	çarptı
+Relation	T8	T10	NoRel	true	yaşattı	ulaştırıldı
+Relation	T8	T3	NoRel	true	yaşattı	kaldı
+Relation	T9	T1	NoRel	true	Kaza	çarptı
+Relation	T9	T11	NoRel	true	Kaza	Çarpmanın
+Relation	T9	T2	NoRel	true	Kaza	yanan
+Relation	T9	T6	NoRel	true	Kaza	yaptı
+Relation	T9	T7	NoRel	true	Kaza	zarar

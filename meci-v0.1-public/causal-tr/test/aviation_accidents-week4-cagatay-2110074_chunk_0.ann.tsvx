@@ -1,0 +1,45 @@
+Text	EGYPTAIR 804 ( MS804 / MSR804 ) sefer sayılı uçuş , Paris'ten Kahire'ye giden , EgyptAir firmasına ait Airbus A320 - 232 model yolcu uçağının düşmesi ile sonuçlanmıştır .	Uçak 19 Mayıs 2016 günü , Mısır saatine göre ( UTC+2 ) saat 02: 30'da Akdeniz'e içindeki 56 yolcu ve 10 mürettebatıyla ile birlikte düşmüştür .	Yunan Radyo Televizyonu uçak enkazının Kerte Adası'nda bulunduğunu açıklamıştır .	Fransa Sivil Havacılık Kurumu uçağın düşmeden önce yangın şüphesiyle duman alarmı verdiğini doğrulamıştır .	Uçağın düşmesiyle alakalı olarak bomba şüphesi iddiaları da vardır .
+Event	T0	uçuş	EVENT	45
+Event	T1	düşmesi	EVENT	142
+Event	T3	düşmüştür	EVENT	303
+Event	T4	açıklamıştır	EVENT	382
+Event	T5	düşmeden	EVENT	434
+Event	T6	doğrulamıştır	EVENT	489
+Event	T7	giden	EVENT	72
+Event	T2	bulunduğunu	EVENT	370
+Event	T9	alarmı	EVENT	472
+Event	T10	şüphesiyle	EVENT	455
+Relation	T10	T9	CauseEffect	true	şüphesiyle	alarmı
+Relation	T9	T10	EffectCause	true	alarmı	şüphesiyle
+Relation	T0	T1	NoRel	true	uçuş	düşmesi
+Relation	T0	T10	NoRel	true	uçuş	şüphesiyle
+Relation	T0	T6	NoRel	true	uçuş	doğrulamıştır
+Relation	T1	T0	NoRel	true	düşmesi	uçuş
+Relation	T1	T2	NoRel	true	düşmesi	bulunduğunu
+Relation	T1	T4	NoRel	true	düşmesi	açıklamıştır
+Relation	T1	T5	NoRel	true	düşmesi	düşmeden
+Relation	T10	T0	NoRel	true	şüphesiyle	uçuş
+Relation	T10	T4	NoRel	true	şüphesiyle	açıklamıştır
+Relation	T10	T7	NoRel	true	şüphesiyle	giden
+Relation	T2	T0	NoRel	true	bulunduğunu	uçuş
+Relation	T2	T1	NoRel	true	bulunduğunu	düşmesi
+Relation	T2	T3	NoRel	true	bulunduğunu	düşmüştür
+Relation	T2	T6	NoRel	true	bulunduğunu	doğrulamıştır
+Relation	T2	T7	NoRel	true	bulunduğunu	giden
+Relation	T3	T0	NoRel	true	düşmüştür	uçuş
+Relation	T3	T4	NoRel	true	düşmüştür	açıklamıştır
+Relation	T3	T6	NoRel	true	düşmüştür	doğrulamıştır
+Relation	T4	T0	NoRel	true	açıklamıştır	uçuş
+Relation	T4	T10	NoRel	true	açıklamıştır	şüphesiyle
+Relation	T4	T2	NoRel	true	açıklamıştır	bulunduğunu
+Relation	T4	T7	NoRel	true	açıklamıştır	giden
+Relation	T5	T0	NoRel	true	düşmeden	uçuş
+Relation	T5	T4	NoRel	true	düşmeden	açıklamıştır
+Relation	T5	T7	NoRel	true	düşmeden	giden
+Relation	T5	T9	NoRel	true	düşmeden	alarmı
+Relation	T6	T0	NoRel	true	doğrulamıştır	uçuş
+Relation	T7	T10	NoRel	true	giden	şüphesiyle
+Relation	T7	T4	NoRel	true	giden	açıklamıştır
+Relation	T9	T3	NoRel	true	alarmı	düşmüştür
+Relation	T9	T4	NoRel	true	alarmı	açıklamıştır
+Relation	T9	T7	NoRel	true	alarmı	giden

@@ -1,0 +1,83 @@
+Text	The Soyuz 1 launch was rushed due to implicit political pressures and despite Gagarin 's protests that additional safety precautions were necessary .	Gagarin accompanied Komarov to the rocket before launch and relayed instructions to Komarov from ground control following multiple system failures aboard the spacecraft .	Despite their best efforts , Soyuz 1 crash landed after its parachutes failed to open , killing Komarov instantly .	After the Soyuz 1 crash , Gagarin was permanently banned from training for and participating in further spaceflights .	He was also grounded from flying aircraft solo , a demotion he worked hard to lift .
+Event	T0	launch	EVENT	12
+Event	T1	pressures	EVENT	56
+Event	T2	protests	EVENT	89
+Event	T3	accompanied	EVENT	158
+Event	T4	launch	EVENT	199
+Event	T5	failures	EVENT	288
+Event	T6	efforts	EVENT	340
+Event	T7	landed	EVENT	364
+Event	T8	open	EVENT	402
+Event	T9	killing	EVENT	409
+Event	T10	crash	EVENT	455
+Event	T11	banned	EVENT	487
+Event	T12	spaceflights	EVENT	541
+Event	T13	grounded	EVENT	568
+Event	T14	flying	EVENT	582
+Event	T15	demotion	EVENT	607
+Event	T16	lift	EVENT	634
+Event	T17	rushed	EVENT	23
+Event	T18	failed	EVENT	392
+Event	T19	training	EVENT	499
+Event	T20	participating	EVENT	516
+Event	T21	relayed	EVENT	210
+Relation	T18	T7	CauseEffect	true	failed	landed
+Relation	T7	T18	EffectCause	true	landed	failed
+Relation	T7	T9	CauseEffect	true	landed	killing
+Relation	T9	T7	EffectCause	true	killing	landed
+Relation	T10	T11	CauseEffect	true	crash	banned
+Relation	T11	T10	EffectCause	true	banned	crash
+Relation	T10	T13	CauseEffect	true	crash	grounded
+Relation	T13	T10	EffectCause	true	grounded	crash
+Relation	T0	T3	NoRel	true	launch	accompanied
+Relation	T1	T0	NoRel	true	pressures	launch
+Relation	T1	T10	NoRel	true	pressures	crash
+Relation	T1	T15	NoRel	true	pressures	demotion
+Relation	T10	T17	NoRel	true	crash	rushed
+Relation	T10	T8	NoRel	true	crash	open
+Relation	T11	T2	NoRel	true	banned	protests
+Relation	T11	T20	NoRel	true	banned	participating
+Relation	T11	T5	NoRel	true	banned	failures
+Relation	T12	T19	NoRel	true	spaceflights	training
+Relation	T12	T5	NoRel	true	spaceflights	failures
+Relation	T13	T15	NoRel	true	grounded	demotion
+Relation	T13	T17	NoRel	true	grounded	rushed
+Relation	T13	T9	NoRel	true	grounded	killing
+Relation	T14	T11	NoRel	true	flying	banned
+Relation	T14	T12	NoRel	true	flying	spaceflights
+Relation	T15	T6	NoRel	true	demotion	efforts
+Relation	T16	T1	NoRel	true	lift	pressures
+Relation	T16	T12	NoRel	true	lift	spaceflights
+Relation	T16	T3	NoRel	true	lift	accompanied
+Relation	T17	T0	NoRel	true	rushed	launch
+Relation	T17	T1	NoRel	true	rushed	pressures
+Relation	T17	T10	NoRel	true	rushed	crash
+Relation	T17	T11	NoRel	true	rushed	banned
+Relation	T17	T8	NoRel	true	rushed	open
+Relation	T18	T10	NoRel	true	failed	crash
+Relation	T18	T6	NoRel	true	failed	efforts
+Relation	T19	T3	NoRel	true	training	accompanied
+Relation	T19	T8	NoRel	true	training	open
+Relation	T19	T9	NoRel	true	training	killing
+Relation	T2	T0	NoRel	true	protests	launch
+Relation	T2	T14	NoRel	true	protests	flying
+Relation	T2	T18	NoRel	true	protests	failed
+Relation	T20	T10	NoRel	true	participating	crash
+Relation	T21	T1	NoRel	true	relayed	pressures
+Relation	T21	T19	NoRel	true	relayed	training
+Relation	T21	T8	NoRel	true	relayed	open
+Relation	T3	T1	NoRel	true	accompanied	pressures
+Relation	T3	T4	NoRel	true	accompanied	launch
+Relation	T4	T18	NoRel	true	launch	failed
+Relation	T4	T9	NoRel	true	launch	killing
+Relation	T5	T18	NoRel	true	failures	failed
+Relation	T6	T0	NoRel	true	efforts	launch
+Relation	T6	T1	NoRel	true	efforts	pressures
+Relation	T6	T14	NoRel	true	efforts	flying
+Relation	T6	T8	NoRel	true	efforts	open
+Relation	T8	T14	NoRel	true	open	flying
+Relation	T8	T16	NoRel	true	open	lift
+Relation	T8	T3	NoRel	true	open	accompanied
+Relation	T9	T16	NoRel	true	killing	lift
+Relation	T9	T18	NoRel	true	killing	failed
+Relation	T9	T2	NoRel	true	killing	protests

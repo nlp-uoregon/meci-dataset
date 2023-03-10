@@ -1,0 +1,64 @@
+Text	Arregui 10 gün boyunca Emniyet Genel Müdürlüğü'nde _ ( Dirección Genelral de Seguridad ) _ tutulmuş ve kimseyle görüştürülmemişti .	Bunu , Bask bölgesinde genel bir grev ve Kongrede muhalif parlamento grupları arasında acımasız bir tartışma izledi .	Hükûmet daha sonra çeşitli polis şeflerini görevden alırken , İçişleri Bakanlığı'nda işkencecilerle dayanışma kapsamında istifa edenler oldu .	_ El Alcázar _ gazetesi hükûmetin eylemlerini durdurulması gereken bir zayıflık olarak değerlendirdi .	Bu olağanüstü arka plana karşı , 18 Şubat'ta Calvo Sotelo kabine önerisini sundu , ancak ayın 20'sindeki kongre oylamasında başbakan seçilebilmesi için gerekli çoğunluğa ulaşamadı , bu nedenle 23'üne yeni bir oylama planlandı : komplocuların darbe girişimi için seçtiği gün .
+Event	T0	tutulmuş	EVENT	91
+Event	T1	grev	EVENT	165
+Event	T11	girişimi	EVENT	744
+Event	T13	tartışma	EVENT	232
+Event	T2	eylemlerini	EVENT	427
+Event	T3	alırken	EVENT	302
+Event	T4	dayanışma	EVENT	350
+Event	T5	istifa	EVENT	371
+Event	T7	değerlendirdi	EVENT	480
+Event	T8	sundu	EVENT	571
+Event	T9	oylamasında	EVENT	608
+Relation	T4	T5	CauseEffect	true	dayanışma	istifa
+Relation	T5	T4	EffectCause	true	istifa	dayanışma
+Relation	T4	T3	CauseEffect	true	dayanışma	alırken
+Relation	T3	T4	EffectCause	true	alırken	dayanışma
+Relation	T0	T1	CauseEffect	true	tutulmuş	grev
+Relation	T1	T0	EffectCause	true	grev	tutulmuş
+Relation	T0	T13	CauseEffect	true	tutulmuş	tartışma
+Relation	T13	T0	EffectCause	true	tartışma	tutulmuş
+Relation	T8	T3	CauseEffect	true	sundu	alırken
+Relation	T3	T8	EffectCause	true	alırken	sundu
+Relation	T8	T5	CauseEffect	true	sundu	istifa
+Relation	T5	T8	EffectCause	true	istifa	sundu
+Relation	T0	T3	CauseEffect	true	tutulmuş	alırken
+Relation	T3	T0	EffectCause	true	alırken	tutulmuş
+Relation	T2	T11	CauseEffect	true	eylemlerini	girişimi
+Relation	T11	T2	EffectCause	true	girişimi	eylemlerini
+Relation	T0	T7	NoRel	true	tutulmuş	değerlendirdi
+Relation	T0	T9	NoRel	true	tutulmuş	oylamasında
+Relation	T1	T11	NoRel	true	grev	girişimi
+Relation	T1	T13	NoRel	true	grev	tartışma
+Relation	T1	T2	NoRel	true	grev	eylemlerini
+Relation	T1	T3	NoRel	true	grev	alırken
+Relation	T1	T4	NoRel	true	grev	dayanışma
+Relation	T1	T5	NoRel	true	grev	istifa
+Relation	T1	T8	NoRel	true	grev	sundu
+Relation	T11	T0	NoRel	true	girişimi	tutulmuş
+Relation	T11	T1	NoRel	true	girişimi	grev
+Relation	T11	T13	NoRel	true	girişimi	tartışma
+Relation	T13	T1	NoRel	true	tartışma	grev
+Relation	T13	T2	NoRel	true	tartışma	eylemlerini
+Relation	T13	T7	NoRel	true	tartışma	değerlendirdi
+Relation	T13	T8	NoRel	true	tartışma	sundu
+Relation	T2	T0	NoRel	true	eylemlerini	tutulmuş
+Relation	T2	T1	NoRel	true	eylemlerini	grev
+Relation	T2	T4	NoRel	true	eylemlerini	dayanışma
+Relation	T2	T5	NoRel	true	eylemlerini	istifa
+Relation	T2	T7	NoRel	true	eylemlerini	değerlendirdi
+Relation	T2	T9	NoRel	true	eylemlerini	oylamasında
+Relation	T3	T11	NoRel	true	alırken	girişimi
+Relation	T3	T13	NoRel	true	alırken	tartışma
+Relation	T3	T9	NoRel	true	alırken	oylamasında
+Relation	T4	T0	NoRel	true	dayanışma	tutulmuş
+Relation	T4	T1	NoRel	true	dayanışma	grev
+Relation	T4	T8	NoRel	true	dayanışma	sundu
+Relation	T5	T9	NoRel	true	istifa	oylamasında
+Relation	T7	T0	NoRel	true	değerlendirdi	tutulmuş
+Relation	T7	T9	NoRel	true	değerlendirdi	oylamasında
+Relation	T8	T13	NoRel	true	sundu	tartışma
+Relation	T8	T2	NoRel	true	sundu	eylemlerini
+Relation	T8	T9	NoRel	true	sundu	oylamasında
+Relation	T9	T5	NoRel	true	oylamasında	istifa
+Relation	T9	T7	NoRel	true	oylamasında	değerlendirdi

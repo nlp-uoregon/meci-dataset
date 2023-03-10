@@ -1,0 +1,63 @@
+Text	The failure of these seals allowed a flame thrower - like flare to impinge upon one of two aft SRB attach struts , which eventually failed , freeing the booster to pivot about its remaining attachment points .	The forward part of the booster cylinder struck the external tank inter-tank area , leading to a structural failure of the Space Shuttle external tank ( ET ) – the core structural component of the entire stack .	A rapid burning of liberated propellants ensued .	With the structural " backbone " of the stack compromised and breaking up , the SRBs flew off on their own , as did the orbiter , which rapidly disintegrated due to overwhelming aerodynamic forces .	The launch had been approved despite a predicted ambient temperature of , well below the qualification limit of major components such as the SRBs , which had been certified for use only at temperatures above .
+Event	T0	failure	EVENT	4
+Event	T1	allowed	EVENT	27
+Event	T2	flare	EVENT	58
+Event	T3	failed	EVENT	132
+Event	T4	freeing	EVENT	141
+Event	T5	pivot	EVENT	164
+Event	T6	struck	EVENT	251
+Event	T7	failure	EVENT	318
+Event	T8	burning	EVENT	430
+Event	T10	ensued	EVENT	463
+Event	T11	compromised	EVENT	518
+Event	T12	forces	EVENT	662
+Event	T13	launch	EVENT	675
+Event	T14	approved	EVENT	691
+Event	T15	predicted	EVENT	710
+Event	T16	certified	EVENT	834
+Event	T17	impinge	EVENT	67
+Event	T9	breaking up	EVENT	534
+Event	T18	disintegrated	EVENT	616
+Relation	T0	T1	CauseEffect	true	failure	allowed
+Relation	T1	T0	EffectCause	true	allowed	failure
+Relation	T3	T4	CauseEffect	true	failed	freeing
+Relation	T4	T3	EffectCause	true	freeing	failed
+Relation	T6	T7	CauseEffect	true	struck	failure
+Relation	T7	T6	EffectCause	true	failure	struck
+Relation	T8	T10	CauseEffect	true	burning	ensued
+Relation	T10	T8	EffectCause	true	ensued	burning
+Relation	T12	T18	CauseEffect	true	forces	disintegrated
+Relation	T18	T12	EffectCause	true	disintegrated	forces
+Relation	T1	T3	NoRel	true	allowed	failed
+Relation	T1	T6	NoRel	true	allowed	struck
+Relation	T1	T8	NoRel	true	allowed	burning
+Relation	T10	T13	NoRel	true	ensued	launch
+Relation	T10	T17	NoRel	true	ensued	impinge
+Relation	T11	T2	NoRel	true	compromised	flare
+Relation	T11	T9	NoRel	true	compromised	breaking up
+Relation	T12	T6	NoRel	true	forces	struck
+Relation	T13	T0	NoRel	true	launch	failure
+Relation	T13	T4	NoRel	true	launch	freeing
+Relation	T13	T5	NoRel	true	launch	pivot
+Relation	T13	T6	NoRel	true	launch	struck
+Relation	T13	T9	NoRel	true	launch	breaking up
+Relation	T14	T10	NoRel	true	approved	ensued
+Relation	T15	T6	NoRel	true	predicted	struck
+Relation	T16	T12	NoRel	true	certified	forces
+Relation	T18	T1	NoRel	true	disintegrated	allowed
+Relation	T2	T12	NoRel	true	flare	forces
+Relation	T2	T14	NoRel	true	flare	approved
+Relation	T2	T3	NoRel	true	flare	failed
+Relation	T3	T10	NoRel	true	failed	ensued
+Relation	T3	T14	NoRel	true	failed	approved
+Relation	T3	T15	NoRel	true	failed	predicted
+Relation	T4	T18	NoRel	true	freeing	disintegrated
+Relation	T4	T6	NoRel	true	freeing	struck
+Relation	T5	T1	NoRel	true	pivot	allowed
+Relation	T5	T15	NoRel	true	pivot	predicted
+Relation	T5	T17	NoRel	true	pivot	impinge
+Relation	T5	T8	NoRel	true	pivot	burning
+Relation	T6	T17	NoRel	true	struck	impinge
+Relation	T8	T13	NoRel	true	burning	launch
+Relation	T8	T14	NoRel	true	burning	approved
+Relation	T9	T8	NoRel	true	breaking up	burning

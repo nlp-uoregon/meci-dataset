@@ -1,0 +1,36 @@
+Text	WILHELM ADALBERT HOSENFELD SUO ( ; 2 Mayıs 189513 Ağustos 1952 ) , İkinci Dünya Harbi'nde _ Hauptmann _ ( Yüzbaşı ) rütbesine kadar yükselen , asıl mesleği ortaokul öğretmenliği olan bir Alman subaydı .	Alman işgali altındaki Polonya'da görev yaptığı süre boyunca Yahudilere sempati duyup , birçok Yahudi'nin Nazi zulmünden korunmasına ve kurtarılmasına yardım etmişti .	Bu davranışından ötürü Yad Vaşem'de İsrail tarafından Uluslararası Dürüstler Madalyası ile 2008'de onurlandırıldı .	Özellikle 1944'ün son aylarında ölü şehir Varşova'nın yıkıntıları içinde yaşama tutunan ünlü Yahudi piyanist ve besteci Władek Szpilman'a olan hayat kurtarıcı yardımları nedeniyle tanındı .	Szpilman'ın kendi yaşamını anlattığı kitabı _ Śmierć Miasta _'da hakkında " Hayatımı kurtaran Alman " olarak bahsettiği Hosenfeld , bu kitapla birlikte Thomas Kretschmann tarafından canlandırıldığı 2002 _ Piyanist _ sinema filmine konu oldu .
+Event	T0	işgali	EVENT	209
+Event	T1	zulmünden	EVENT	314
+Event	T10	yükselen	EVENT	132
+Event	T17	bahsettiği	EVENT	786
+Event	T2	onurlandırıldı	EVENT	470
+Event	T4	yardımları	EVENT	646
+Event	T5	tanındı	EVENT	667
+Event	T6	anlattığı	EVENT	704
+Event	T7	canlandırıldığı	EVENT	859
+Relation	T4	T2	CauseEffect	true	yardımları	onurlandırıldı
+Relation	T2	T4	EffectCause	true	onurlandırıldı	yardımları
+Relation	T17	T7	CauseEffect	true	bahsettiği	canlandırıldığı
+Relation	T7	T17	EffectCause	true	canlandırıldığı	bahsettiği
+Relation	T6	T17	CauseEffect	true	anlattığı	bahsettiği
+Relation	T17	T6	EffectCause	true	bahsettiği	anlattığı
+Relation	T4	T5	CauseEffect	true	yardımları	tanındı
+Relation	T5	T4	EffectCause	true	tanındı	yardımları
+Relation	T4	T17	CauseEffect	true	yardımları	bahsettiği
+Relation	T17	T4	EffectCause	true	bahsettiği	yardımları
+Relation	T0	T1	NoRel	true	işgali	zulmünden
+Relation	T0	T6	NoRel	true	işgali	anlattığı
+Relation	T1	T17	NoRel	true	zulmünden	bahsettiği
+Relation	T1	T5	NoRel	true	zulmünden	tanındı
+Relation	T1	T6	NoRel	true	zulmünden	anlattığı
+Relation	T10	T6	NoRel	true	yükselen	anlattığı
+Relation	T10	T7	NoRel	true	yükselen	canlandırıldığı
+Relation	T2	T6	NoRel	true	onurlandırıldı	anlattığı
+Relation	T2	T7	NoRel	true	onurlandırıldı	canlandırıldığı
+Relation	T4	T0	NoRel	true	yardımları	işgali
+Relation	T4	T7	NoRel	true	yardımları	canlandırıldığı
+Relation	T5	T10	NoRel	true	tanındı	yükselen
+Relation	T5	T17	NoRel	true	tanındı	bahsettiği
+Relation	T5	T7	NoRel	true	tanındı	canlandırıldığı
+Relation	T6	T4	NoRel	true	anlattığı	yardımları
+Relation	T7	T2	NoRel	true	canlandırıldığı	onurlandırıldı

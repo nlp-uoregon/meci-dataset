@@ -1,0 +1,18 @@
+Text	1763 yılında 350.000 olan Kabardey nüfusu 1817’de sadece 37.000 kadardı .	1786 - 1790 arasında Rus ordusu Kuban nehrini geçerek birçok Çerkes köyüne saldırdı .	General Bibikov’un ordusu Çerkeslere yenildi .	Osmanlı - Rus savaşı ( 1787 -1792 ) sırasında Ruslar üç kere Çerkes topraklarını geçerek Anapa'yı ele geçirmeye çalıştı .	Bu , Çerkesler tarafından yok edilen Rus orduları için bir kabusa dönüştü .
+Event	T0	saldırdı	EVENT	149
+Event	T1	yenildi	EVENT	197
+Event	T2	savaşı	EVENT	221
+Event	T3	geçerek	EVENT	288
+Event	T4	çalıştı	EVENT	319
+Event	T6	dönüştü	EVENT	395
+Relation	T0	T1	CauseEffect	true	saldırdı	yenildi
+Relation	T1	T0	EffectCause	true	yenildi	saldırdı
+Relation	T0	T4	NoRel	true	saldırdı	çalıştı
+Relation	T1	T3	NoRel	true	yenildi	geçerek
+Relation	T1	T4	NoRel	true	yenildi	çalıştı
+Relation	T1	T6	NoRel	true	yenildi	dönüştü
+Relation	T2	T1	NoRel	true	savaşı	yenildi
+Relation	T2	T4	NoRel	true	savaşı	çalıştı
+Relation	T3	T6	NoRel	true	geçerek	dönüştü
+Relation	T4	T2	NoRel	true	çalıştı	savaşı
+Relation	T4	T6	NoRel	true	çalıştı	dönüştü

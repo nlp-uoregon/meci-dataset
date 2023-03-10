@@ -1,0 +1,37 @@
+Text	Hemeroteca digital del diario ABC	« Cuatro muertos y más de cuarenta heridos en un accidente ferroviario cerca de Lisboa » , artículo en _ ABC _ , edición Madrid , 14 de agosto de 1976 , página 55 .	Hemeroteca digital del diario ABC	Choque a 30 km/n atrassou a vida na " Linha " y Circulaçao normalizada na linha do Estoril , artículos en el _ Diario de Lisboa _ , 22 de septiembre de 1977 , portada y página 5 , en Archivo digital de la Fundación Mario Soares ( en portugués ) .	Deficiencia de Frenagem causa 59 feridos , artículo en el Diario de Lisboa , 16 de noviembre de 1977 , página 5 , en Archivo digital de la Fundación Mario Soares ( en portugués ) .
+Event	T0	muertos	EVENT	43
+Event	T1	heridos	EVENT	69
+Event	T2	accidente	EVENT	83
+Event	T3	Choque	EVENT	233
+Event	T4	normalizada	EVENT	292
+Event	T5	Deficiencia	EVENT	480
+Event	T6	causa	EVENT	504
+Event	T7	feridos	EVENT	513
+Relation	T2	T1	CauseEffect	true	accidente	heridos
+Relation	T1	T2	EffectCause	true	heridos	accidente
+Relation	T2	T0	CauseEffect	true	accidente	muertos
+Relation	T0	T2	EffectCause	true	muertos	accidente
+Relation	T0	T3	NoRel	true	muertos	Choque
+Relation	T1	T0	NoRel	true	heridos	muertos
+Relation	T1	T7	NoRel	true	heridos	feridos
+Relation	T2	T4	NoRel	true	accidente	normalizada
+Relation	T2	T6	NoRel	true	accidente	causa
+Relation	T2	T7	NoRel	true	accidente	feridos
+Relation	T3	T0	NoRel	true	Choque	muertos
+Relation	T4	T0	NoRel	true	normalizada	muertos
+Relation	T4	T1	NoRel	true	normalizada	heridos
+Relation	T4	T3	NoRel	true	normalizada	Choque
+Relation	T4	T6	NoRel	true	normalizada	causa
+Relation	T4	T7	NoRel	true	normalizada	feridos
+Relation	T5	T2	NoRel	true	Deficiencia	accidente
+Relation	T5	T3	NoRel	true	Deficiencia	Choque
+Relation	T5	T4	NoRel	true	Deficiencia	normalizada
+Relation	T5	T6	NoRel	true	Deficiencia	causa
+Relation	T5	T7	NoRel	true	Deficiencia	feridos
+Relation	T6	T3	NoRel	true	causa	Choque
+Relation	T6	T5	NoRel	true	causa	Deficiencia
+Relation	T6	T7	NoRel	true	causa	feridos
+Relation	T7	T1	NoRel	true	feridos	heridos
+Relation	T7	T2	NoRel	true	feridos	accidente
+Relation	T7	T5	NoRel	true	feridos	Deficiencia
+Relation	T7	T6	NoRel	true	feridos	causa

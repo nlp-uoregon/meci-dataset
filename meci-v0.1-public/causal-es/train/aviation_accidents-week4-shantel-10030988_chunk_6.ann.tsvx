@@ -1,0 +1,68 @@
+Text	Normalmente , un vuelo a lo largo de esta ruta dura aproximadamente una hora y media .	La noticia sobre el desastre fue recibida por el Ministerio de Situaciones de Emergencia a las 23:15 hora local ( 18:15 hora de Moscú ) .	El avión cayó a unos cuatro kilómetros del pueblo de Kazachinskoye , desde una altura baja en una isla cerca de un río y en condiciones de densa niebla .	Según datos preliminares , el aparato hizo un segundo círculo en el momento de la caída , intentando aterrizar en condiciones de mala visibilidad .	La Fiscalía de Transportes de Rusia inició una investigación sobre el desastre .
+Event	T0	vuelo	EVENT	17
+Event	T1	noticia	EVENT	90
+Event	T2	desastre	EVENT	107
+Event	T3	recibida	EVENT	120
+Event	T4	cayó	EVENT	234
+Event	T5	hizo	EVENT	417
+Event	T6	círculo	EVENT	433
+Event	T7	caída	EVENT	461
+Event	T8	aterrizar	EVENT	480
+Event	T9	inició	EVENT	563
+Event	T10	investigación	EVENT	574
+Event	T11	desastre	EVENT	597
+Relation	T4	T2	CauseEffect	true	cayó	desastre
+Relation	T2	T4	EffectCause	true	desastre	cayó
+Relation	T7	T2	CauseEffect	true	caída	desastre
+Relation	T2	T7	EffectCause	true	desastre	caída
+Relation	T0	T6	NoRel	true	vuelo	círculo
+Relation	T0	T8	NoRel	true	vuelo	aterrizar
+Relation	T0	T9	NoRel	true	vuelo	inició
+Relation	T1	T10	NoRel	true	noticia	investigación
+Relation	T1	T2	NoRel	true	noticia	desastre
+Relation	T1	T3	NoRel	true	noticia	recibida
+Relation	T1	T7	NoRel	true	noticia	caída
+Relation	T1	T8	NoRel	true	noticia	aterrizar
+Relation	T1	T9	NoRel	true	noticia	inició
+Relation	T10	T1	NoRel	true	investigación	noticia
+Relation	T10	T3	NoRel	true	investigación	recibida
+Relation	T10	T5	NoRel	true	investigación	hizo
+Relation	T10	T6	NoRel	true	investigación	círculo
+Relation	T11	T3	NoRel	true	desastre	recibida
+Relation	T11	T4	NoRel	true	desastre	cayó
+Relation	T11	T5	NoRel	true	desastre	hizo
+Relation	T11	T8	NoRel	true	desastre	aterrizar
+Relation	T11	T9	NoRel	true	desastre	inició
+Relation	T2	T0	NoRel	true	desastre	vuelo
+Relation	T2	T11	NoRel	true	desastre	desastre
+Relation	T2	T3	NoRel	true	desastre	recibida
+Relation	T2	T5	NoRel	true	desastre	hizo
+Relation	T3	T10	NoRel	true	recibida	investigación
+Relation	T3	T7	NoRel	true	recibida	caída
+Relation	T3	T8	NoRel	true	recibida	aterrizar
+Relation	T4	T0	NoRel	true	cayó	vuelo
+Relation	T4	T11	NoRel	true	cayó	desastre
+Relation	T4	T7	NoRel	true	cayó	caída
+Relation	T4	T8	NoRel	true	cayó	aterrizar
+Relation	T5	T11	NoRel	true	hizo	desastre
+Relation	T5	T2	NoRel	true	hizo	desastre
+Relation	T5	T8	NoRel	true	hizo	aterrizar
+Relation	T5	T9	NoRel	true	hizo	inició
+Relation	T6	T1	NoRel	true	círculo	noticia
+Relation	T6	T4	NoRel	true	círculo	cayó
+Relation	T6	T9	NoRel	true	círculo	inició
+Relation	T7	T1	NoRel	true	caída	noticia
+Relation	T7	T10	NoRel	true	caída	investigación
+Relation	T7	T11	NoRel	true	caída	desastre
+Relation	T7	T4	NoRel	true	caída	cayó
+Relation	T7	T5	NoRel	true	caída	hizo
+Relation	T7	T6	NoRel	true	caída	círculo
+Relation	T7	T8	NoRel	true	caída	aterrizar
+Relation	T8	T2	NoRel	true	aterrizar	desastre
+Relation	T8	T3	NoRel	true	aterrizar	recibida
+Relation	T8	T4	NoRel	true	aterrizar	cayó
+Relation	T8	T7	NoRel	true	aterrizar	caída
+Relation	T9	T1	NoRel	true	inició	noticia
+Relation	T9	T5	NoRel	true	inició	hizo
+Relation	T9	T7	NoRel	true	inició	caída
+Relation	T9	T8	NoRel	true	inició	aterrizar

@@ -1,0 +1,68 @@
+Text	Bu yer ayrıca 1966 yılında daha kuzeyde meydana gelen 8.2 büyüklüğündeki deprem ve 2001 yılında Arequipa yakınlarında meydana gelen 2001 güney Peru depreminin güneyinde oluşmuştur .	Peru'da kaydedilen en şiddetli deprem 1868 yılında meydana gelen 9.0 büyüklüğündeki sarsıntıdır .	Bu deprem , Güney Amerika kıyısında büyük bir tsunamiye neden olmuş ve Hawaii'de çeşitli zararlara yol açmıştır .	Sahil kenti Callao'nun bir bölümü boşaltılmış olmasına karşın Peru , Ekvador , Şili , Kolombiya ve Hawaii için tsunami uyarısı yapılmış ve birkaç gün içinde geri alınmıştır .	Panama ve Kosta Rika için de tsunami uyarısında bulunulmuş , Nikaragua , Guatemala , El Salvador , Meksika ve Honduras'ta tsunami gözlemciliği yapılması istenmiştir .
+Event	T0	deprem	EVENT	73
+Event	T1	oluşmuştur	EVENT	169
+Event	T2	kaydedilen	EVENT	190
+Event	T3	deprem	EVENT	213
+Event	T4	sarsıntıdır	EVENT	266
+Event	T5	deprem	EVENT	283
+Event	T6	olmuş	EVENT	342
+Event	T7	açmıştır	EVENT	383
+Event	T8	boşaltılmış	EVENT	428
+Event	T9	yapılmış	EVENT	521
+Event	T10	alınmıştır	EVENT	556
+Event	T11	istenmiştir	EVENT	722
+Event	T12	bulunulmuş	EVENT	617
+Relation	T5	T6	CauseEffect	true	deprem	olmuş
+Relation	T6	T5	EffectCause	true	olmuş	deprem
+Relation	T5	T7	CauseEffect	true	deprem	açmıştır
+Relation	T7	T5	EffectCause	true	açmıştır	deprem
+Relation	T5	T8	CauseEffect	true	deprem	boşaltılmış
+Relation	T8	T5	EffectCause	true	boşaltılmış	deprem
+Relation	T5	T9	CauseEffect	true	deprem	yapılmış
+Relation	T9	T5	EffectCause	true	yapılmış	deprem
+Relation	T5	T12	CauseEffect	true	deprem	bulunulmuş
+Relation	T12	T5	EffectCause	true	bulunulmuş	deprem
+Relation	T5	T11	CauseEffect	true	deprem	istenmiştir
+Relation	T11	T5	EffectCause	true	istenmiştir	deprem
+Relation	T0	T1	NoRel	true	deprem	oluşmuştur
+Relation	T0	T12	NoRel	true	deprem	bulunulmuş
+Relation	T0	T7	NoRel	true	deprem	açmıştır
+Relation	T1	T0	NoRel	true	oluşmuştur	deprem
+Relation	T1	T11	NoRel	true	oluşmuştur	istenmiştir
+Relation	T1	T4	NoRel	true	oluşmuştur	sarsıntıdır
+Relation	T1	T7	NoRel	true	oluşmuştur	açmıştır
+Relation	T10	T1	NoRel	true	alınmıştır	oluşmuştur
+Relation	T10	T3	NoRel	true	alınmıştır	deprem
+Relation	T10	T4	NoRel	true	alınmıştır	sarsıntıdır
+Relation	T10	T5	NoRel	true	alınmıştır	deprem
+Relation	T10	T7	NoRel	true	alınmıştır	açmıştır
+Relation	T10	T8	NoRel	true	alınmıştır	boşaltılmış
+Relation	T11	T2	NoRel	true	istenmiştir	kaydedilen
+Relation	T11	T3	NoRel	true	istenmiştir	deprem
+Relation	T11	T8	NoRel	true	istenmiştir	boşaltılmış
+Relation	T12	T0	NoRel	true	bulunulmuş	deprem
+Relation	T12	T11	NoRel	true	bulunulmuş	istenmiştir
+Relation	T12	T2	NoRel	true	bulunulmuş	kaydedilen
+Relation	T12	T6	NoRel	true	bulunulmuş	olmuş
+Relation	T12	T8	NoRel	true	bulunulmuş	boşaltılmış
+Relation	T2	T11	NoRel	true	kaydedilen	istenmiştir
+Relation	T2	T12	NoRel	true	kaydedilen	bulunulmuş
+Relation	T3	T10	NoRel	true	deprem	alınmıştır
+Relation	T3	T5	NoRel	true	deprem	deprem
+Relation	T3	T7	NoRel	true	deprem	açmıştır
+Relation	T3	T9	NoRel	true	deprem	yapılmış
+Relation	T4	T5	NoRel	true	sarsıntıdır	deprem
+Relation	T4	T7	NoRel	true	sarsıntıdır	açmıştır
+Relation	T4	T8	NoRel	true	sarsıntıdır	boşaltılmış
+Relation	T4	T9	NoRel	true	sarsıntıdır	yapılmış
+Relation	T6	T7	NoRel	true	olmuş	açmıştır
+Relation	T7	T0	NoRel	true	açmıştır	deprem
+Relation	T7	T1	NoRel	true	açmıştır	oluşmuştur
+Relation	T7	T12	NoRel	true	açmıştır	bulunulmuş
+Relation	T7	T4	NoRel	true	açmıştır	sarsıntıdır
+Relation	T8	T0	NoRel	true	boşaltılmış	deprem
+Relation	T8	T1	NoRel	true	boşaltılmış	oluşmuştur
+Relation	T8	T11	NoRel	true	boşaltılmış	istenmiştir
+Relation	T8	T7	NoRel	true	boşaltılmış	açmıştır
+Relation	T9	T11	NoRel	true	yapılmış	istenmiştir
+Relation	T9	T7	NoRel	true	yapılmış	açmıştır

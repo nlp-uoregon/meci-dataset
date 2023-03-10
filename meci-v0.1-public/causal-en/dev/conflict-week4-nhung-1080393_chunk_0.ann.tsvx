@@ -1,0 +1,46 @@
+Text	THE BATTLE OF GLENMALURE ( ) took place in Ireland on 25 August 1580 during the Desmond Rebellions .	An Irish Catholic force made up of the Gaelic clans from the Wicklow Mountains led by Fiach MacHugh O'Byrne and James Eustace , 3rd Viscount Baltinglass of the Pale , defeated an English army under Arthur Grey , 14th Baron Grey de Wilton , at the O'Byrnes ' mountain stronghold of Glenmalure .	Grey had landed in Ireland with reinforcements from England to put down the rebellion .	His strategy was to meet O'Byrne 's threat to the English heartland of Dublin and the Pale by attacking through the highlands to the south of the city .	Against the advice of veteran commanders , he chose to lead his army ( around 3,000 strong ) through lowland Kildare and into the Wicklow Mountains , with the aim of taking the fastness at Balinacor in the Glenmalure Valley .
+Event	T0	BATTLE	EVENT	4
+Event	T1	Rebellions	EVENT	88
+Event	T2	led	EVENT	180
+Event	T3	defeated	EVENT	268
+Event	T4	landed	EVENT	404
+Event	T5	reinforcements	EVENT	427
+Event	T6	rebellion	EVENT	471
+Event	T7	meet	EVENT	503
+Event	T8	threat	EVENT	519
+Event	T9	attacking	EVENT	577
+Event	T10	chose	EVENT	682
+Event	T11	lead	EVENT	691
+Event	T12	taking	EVENT	802
+Event	T13	fastness	EVENT	813
+Event	T14	took place	EVENT	29
+Event	T15	put down	EVENT	458
+Relation	T5	T4	CauseEffect	true	reinforcements	landed
+Relation	T4	T5	EffectCause	true	landed	reinforcements
+Relation	T4	T15	CauseEffect	true	landed	put down
+Relation	T15	T4	EffectCause	true	put down	landed
+Relation	T9	T7	CauseEffect	true	attacking	meet
+Relation	T7	T9	EffectCause	true	meet	attacking
+Relation	T1	T4	NoRel	true	Rebellions	landed
+Relation	T10	T4	NoRel	true	chose	landed
+Relation	T11	T6	NoRel	true	lead	rebellion
+Relation	T11	T7	NoRel	true	lead	meet
+Relation	T12	T15	NoRel	true	taking	put down
+Relation	T13	T0	NoRel	true	fastness	BATTLE
+Relation	T14	T6	NoRel	true	took place	rebellion
+Relation	T14	T9	NoRel	true	took place	attacking
+Relation	T2	T1	NoRel	true	led	Rebellions
+Relation	T2	T3	NoRel	true	led	defeated
+Relation	T3	T10	NoRel	true	defeated	chose
+Relation	T3	T15	NoRel	true	defeated	put down
+Relation	T3	T8	NoRel	true	defeated	threat
+Relation	T5	T1	NoRel	true	reinforcements	Rebellions
+Relation	T5	T8	NoRel	true	reinforcements	threat
+Relation	T6	T11	NoRel	true	rebellion	lead
+Relation	T6	T14	NoRel	true	rebellion	took place
+Relation	T7	T2	NoRel	true	meet	led
+Relation	T8	T11	NoRel	true	threat	lead
+Relation	T8	T3	NoRel	true	threat	defeated
+Relation	T8	T7	NoRel	true	threat	meet
+Relation	T9	T10	NoRel	true	attacking	chose
+Relation	T9	T8	NoRel	true	attacking	threat

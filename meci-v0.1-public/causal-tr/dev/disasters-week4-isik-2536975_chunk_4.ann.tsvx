@@ -1,0 +1,89 @@
+Text	AFAD'ın son açıklamasında , enkaz altından 40 kişinin sağ olarak kurtarıldığı bildirildi .	Elazığ'da 655 , Malatya'da 226 , Diyarbakır'da 32 , Adıyaman'da 25 , Batman'da 6 , Kahramanmaraş'ta 37 , Şanlıurfa'da 50 olmak üzere toplamda 1.103 kişi hastaneye başvurduğu belirtildi .	AFAD , Elazığ'da meydana gelen depremde 41 kişinin hayatını kaybettiğini , enkazdan sağ kurtarılan kişi sayısının 45 olduğunu , 1.607 kişinin ise hastanelere başvurduğunu açıkladı .	Kahramanmaraş'ta bir kişi , Adıyaman'da bir kişi ve Diyarbakır'ın Bismil ilçesinde bir kişi deprem sebebiyle kalp krizi sonucu öldü .	Çevre_ve Şehircilik Bakanı Murat Kurum'un açıklamalarına göre Elazığ'da 5 , Malatya'da 25 bina yıkıldı .
+Event	T0	açıklamasında	EVENT	12
+Event	T1	enkaz	EVENT	28
+Event	T2	bildirildi	EVENT	78
+Event	T3	belirtildi	EVENT	265
+Event	T4	depremde	EVENT	309
+Event	T5	kaybettiğini	EVENT	338
+Event	T6	kurtarılan	EVENT	366
+Event	T7	açıkladı	EVENT	449
+Event	T8	deprem	EVENT	552
+Event	T9	öldü	EVENT	587
+Event	T10	yıkıldı	EVENT	689
+Event	T11	olduğunu	EVENT	395
+Event	T12	başvurduğunu	EVENT	436
+Event	T13	açıklamalarına	EVENT	636
+Relation	T0	T2	CauseEffect	true	açıklamasında	bildirildi
+Relation	T2	T0	EffectCause	true	bildirildi	açıklamasında
+Relation	T0	T3	CauseEffect	true	açıklamasında	belirtildi
+Relation	T3	T0	EffectCause	true	belirtildi	açıklamasında
+Relation	T4	T0	CauseEffect	true	depremde	açıklamasında
+Relation	T0	T4	EffectCause	true	açıklamasında	depremde
+Relation	T0	T7	CauseEffect	true	açıklamasında	açıkladı
+Relation	T7	T0	EffectCause	true	açıkladı	açıklamasında
+Relation	T8	T9	CauseEffect	true	deprem	öldü
+Relation	T9	T8	EffectCause	true	öldü	deprem
+Relation	T8	T13	CauseEffect	true	deprem	açıklamalarına
+Relation	T13	T8	EffectCause	true	açıklamalarına	deprem
+Relation	T8	T10	CauseEffect	true	deprem	yıkıldı
+Relation	T10	T8	EffectCause	true	yıkıldı	deprem
+Relation	T0	T12	NoRel	true	açıklamasında	başvurduğunu
+Relation	T0	T13	NoRel	true	açıklamasında	açıklamalarına
+Relation	T0	T5	NoRel	true	açıklamasında	kaybettiğini
+Relation	T0	T6	NoRel	true	açıklamasında	kurtarılan
+Relation	T1	T10	NoRel	true	enkaz	yıkıldı
+Relation	T1	T2	NoRel	true	enkaz	bildirildi
+Relation	T1	T4	NoRel	true	enkaz	depremde
+Relation	T1	T5	NoRel	true	enkaz	kaybettiğini
+Relation	T1	T8	NoRel	true	enkaz	deprem
+Relation	T10	T1	NoRel	true	yıkıldı	enkaz
+Relation	T10	T12	NoRel	true	yıkıldı	başvurduğunu
+Relation	T10	T13	NoRel	true	yıkıldı	açıklamalarına
+Relation	T10	T2	NoRel	true	yıkıldı	bildirildi
+Relation	T10	T6	NoRel	true	yıkıldı	kurtarılan
+Relation	T10	T9	NoRel	true	yıkıldı	öldü
+Relation	T11	T1	NoRel	true	olduğunu	enkaz
+Relation	T11	T5	NoRel	true	olduğunu	kaybettiğini
+Relation	T11	T6	NoRel	true	olduğunu	kurtarılan
+Relation	T12	T11	NoRel	true	başvurduğunu	olduğunu
+Relation	T12	T3	NoRel	true	başvurduğunu	belirtildi
+Relation	T13	T10	NoRel	true	açıklamalarına	yıkıldı
+Relation	T13	T11	NoRel	true	açıklamalarına	olduğunu
+Relation	T13	T4	NoRel	true	açıklamalarına	depremde
+Relation	T13	T5	NoRel	true	açıklamalarına	kaybettiğini
+Relation	T13	T7	NoRel	true	açıklamalarına	açıkladı
+Relation	T13	T9	NoRel	true	açıklamalarına	öldü
+Relation	T2	T1	NoRel	true	bildirildi	enkaz
+Relation	T2	T13	NoRel	true	bildirildi	açıklamalarına
+Relation	T2	T6	NoRel	true	bildirildi	kurtarılan
+Relation	T2	T7	NoRel	true	bildirildi	açıkladı
+Relation	T3	T1	NoRel	true	belirtildi	enkaz
+Relation	T3	T12	NoRel	true	belirtildi	başvurduğunu
+Relation	T3	T5	NoRel	true	belirtildi	kaybettiğini
+Relation	T3	T8	NoRel	true	belirtildi	deprem
+Relation	T3	T9	NoRel	true	belirtildi	öldü
+Relation	T4	T10	NoRel	true	depremde	yıkıldı
+Relation	T4	T11	NoRel	true	depremde	olduğunu
+Relation	T4	T13	NoRel	true	depremde	açıklamalarına
+Relation	T4	T6	NoRel	true	depremde	kurtarılan
+Relation	T4	T8	NoRel	true	depremde	deprem
+Relation	T4	T9	NoRel	true	depremde	öldü
+Relation	T5	T1	NoRel	true	kaybettiğini	enkaz
+Relation	T5	T2	NoRel	true	kaybettiğini	bildirildi
+Relation	T5	T4	NoRel	true	kaybettiğini	depremde
+Relation	T5	T6	NoRel	true	kaybettiğini	kurtarılan
+Relation	T5	T8	NoRel	true	kaybettiğini	deprem
+Relation	T5	T9	NoRel	true	kaybettiğini	öldü
+Relation	T6	T10	NoRel	true	kurtarılan	yıkıldı
+Relation	T6	T5	NoRel	true	kurtarılan	kaybettiğini
+Relation	T6	T8	NoRel	true	kurtarılan	deprem
+Relation	T7	T1	NoRel	true	açıkladı	enkaz
+Relation	T7	T4	NoRel	true	açıkladı	depremde
+Relation	T7	T6	NoRel	true	açıkladı	kurtarılan
+Relation	T8	T0	NoRel	true	deprem	açıklamasında
+Relation	T8	T11	NoRel	true	deprem	olduğunu
+Relation	T8	T3	NoRel	true	deprem	belirtildi
+Relation	T8	T4	NoRel	true	deprem	depremde
+Relation	T8	T5	NoRel	true	deprem	kaybettiğini
+Relation	T9	T2	NoRel	true	öldü	bildirildi
+Relation	T9	T7	NoRel	true	öldü	açıkladı

@@ -1,0 +1,41 @@
+Text	Bu sırada , o civarda dağınık halde bulunan müfrezelerimize hücum ederek Viranşehir’i işgal ettiler .	Haberleşme ve bağlantımıza engel olmak üzere de , o bölgedeki bütün telgraf hatlarını kestiler .	” Viranşehir’i işgal eden asiler devlete bağlı olan Karakeçili Aşireti mensuplarını öldürdükleri gibi , askerlerin , subayların mallarını da yağma ettiler .	Asilerin temizlenmesi için 13. Kolordu’dan Beşinci Tümen görevlendirildi .	Devlete bağlı vatansever aşiretlerin de desteği ile isyancılar yenilerek güneye çöl tarafından ( Suriye’ye ) kaçtılar .
+Event	T0	kestiler	EVENT	188
+Event	T1	öldürdükleri	EVENT	283
+Event	T2	ettiler	EVENT	346
+Event	T4	görevlendirildi	EVENT	413
+Event	T5	yenilerek	EVENT	494
+Event	T6	kaçtılar	EVENT	540
+Event	T7	ederek	EVENT	66
+Event	T8	ettiler	EVENT	92
+Event	T9	desteği	EVENT	471
+Relation	T7	T8	CauseEffect	true	ederek	ettiler
+Relation	T8	T7	EffectCause	true	ettiler	ederek
+Relation	T8	T0	CauseEffect	true	ettiler	kestiler
+Relation	T0	T8	EffectCause	true	kestiler	ettiler
+Relation	T8	T1	CauseEffect	true	ettiler	öldürdükleri
+Relation	T1	T8	EffectCause	true	öldürdükleri	ettiler
+Relation	T8	T2	CauseEffect	true	ettiler	ettiler
+Relation	T2	T8	EffectCause	true	ettiler	ettiler
+Relation	T8	T4	CauseEffect	true	ettiler	görevlendirildi
+Relation	T4	T8	EffectCause	true	görevlendirildi	ettiler
+Relation	T4	T5	CauseEffect	true	görevlendirildi	yenilerek
+Relation	T5	T4	EffectCause	true	yenilerek	görevlendirildi
+Relation	T9	T5	CauseEffect	true	desteği	yenilerek
+Relation	T5	T9	EffectCause	true	yenilerek	desteği
+Relation	T5	T6	CauseEffect	true	yenilerek	kaçtılar
+Relation	T6	T5	EffectCause	true	kaçtılar	yenilerek
+Relation	T0	T1	NoRel	true	kestiler	öldürdükleri
+Relation	T1	T2	NoRel	true	öldürdükleri	ettiler
+Relation	T1	T9	NoRel	true	öldürdükleri	desteği
+Relation	T2	T1	NoRel	true	ettiler	öldürdükleri
+Relation	T2	T4	NoRel	true	ettiler	görevlendirildi
+Relation	T4	T7	NoRel	true	görevlendirildi	ederek
+Relation	T4	T9	NoRel	true	görevlendirildi	desteği
+Relation	T5	T8	NoRel	true	yenilerek	ettiler
+Relation	T6	T0	NoRel	true	kaçtılar	kestiler
+Relation	T6	T2	NoRel	true	kaçtılar	ettiler
+Relation	T7	T0	NoRel	true	ederek	kestiler
+Relation	T7	T2	NoRel	true	ederek	ettiler
+Relation	T7	T4	NoRel	true	ederek	görevlendirildi
+Relation	T9	T0	NoRel	true	desteği	kestiler
+Relation	T9	T8	NoRel	true	desteği	ettiler

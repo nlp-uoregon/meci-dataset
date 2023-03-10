@@ -1,0 +1,41 @@
+Text	BOLDERSLEV -ULYKKEN er en jernbaneulykke som fandt sted ved Bolderslev Station på den Østjyske længdebane den 14. oktober 1956 .	Søndag den 14. oktober 1956 forlod et udflugtstog Tinglev Station kl. 07.40 for at køre til København .	På den næste station efter Tinglev , Bolderslev Station , skulle toget kl. 08.00 krydse et godstog , som holdt på hovedsporet .	Under indkørsel på krydsningssporet blev et sporskifte omstillet med det resultat at udflugtstogets sidste vogn kom til at køre med et hjulsæt på hvert spor .	Vognen blev afsporet og væltede .
+Event	T0	jernbaneulykke	EVENT	26
+Event	T1	køre	EVENT	212
+Event	T2	krydse	EVENT	314
+Event	T3	holdt	EVENT	338
+Event	T4	indkørsel	EVENT	367
+Event	T5	omstillet	EVENT	416
+Event	T6	køre	EVENT	484
+Event	T7	afsporet	EVENT	532
+Event	T8	væltede	EVENT	544
+Relation	T5	T7	CauseEffect	true	omstillet	afsporet
+Relation	T7	T5	EffectCause	true	afsporet	omstillet
+Relation	T5	T6	CauseEffect	true	omstillet	køre
+Relation	T6	T5	EffectCause	true	køre	omstillet
+Relation	T6	T7	CauseEffect	true	køre	afsporet
+Relation	T7	T6	EffectCause	true	afsporet	køre
+Relation	T7	T0	CauseEffect	true	afsporet	jernbaneulykke
+Relation	T0	T7	EffectCause	true	jernbaneulykke	afsporet
+Relation	T8	T0	CauseEffect	true	væltede	jernbaneulykke
+Relation	T0	T8	EffectCause	true	jernbaneulykke	væltede
+Relation	T0	T2	NoRel	true	jernbaneulykke	krydse
+Relation	T0	T3	NoRel	true	jernbaneulykke	holdt
+Relation	T0	T4	NoRel	true	jernbaneulykke	indkørsel
+Relation	T1	T7	NoRel	true	køre	afsporet
+Relation	T1	T8	NoRel	true	køre	væltede
+Relation	T2	T4	NoRel	true	krydse	indkørsel
+Relation	T2	T7	NoRel	true	krydse	afsporet
+Relation	T3	T0	NoRel	true	holdt	jernbaneulykke
+Relation	T3	T2	NoRel	true	holdt	krydse
+Relation	T3	T5	NoRel	true	holdt	omstillet
+Relation	T3	T8	NoRel	true	holdt	væltede
+Relation	T4	T0	NoRel	true	indkørsel	jernbaneulykke
+Relation	T4	T1	NoRel	true	indkørsel	køre
+Relation	T4	T8	NoRel	true	indkørsel	væltede
+Relation	T5	T1	NoRel	true	omstillet	køre
+Relation	T5	T8	NoRel	true	omstillet	væltede
+Relation	T6	T2	NoRel	true	køre	krydse
+Relation	T6	T3	NoRel	true	køre	holdt
+Relation	T8	T3	NoRel	true	væltede	holdt
+Relation	T8	T6	NoRel	true	væltede	køre
+Relation	T8	T7	NoRel	true	væltede	afsporet

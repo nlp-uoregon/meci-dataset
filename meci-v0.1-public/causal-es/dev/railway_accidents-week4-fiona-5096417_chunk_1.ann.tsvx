@@ -1,0 +1,165 @@
+Text	El tren número 1016 que viajaba desde Tucumán había partido con destino a Retiro a las 20:00 del día anterior y llevaba en el momento del accidente 48 minutos de atraso .	El choque se produjo con el tren número 3832 que había partido de Zárate a las 18:50 y llevaba más de 40 minutos detenido mientras el maquinista y el mecánico trataban de reparar el inconveniente .	La locomotora del tren 1016 se incrustó en el último Coche del tren 3832 destrozándolo casi totalmente y elevándolo sobre la cabina de motores .	Como consecuencia del violento impacto no solamente descarrilaron locomotoras y vagones , sino que además el penúltimo y antepenúltimo vagón del tren que se encontraba detenido solo detuvieron su marcha , separados del que quedó unido con la locomotora , a unos 80 m del lugar del accidente .	- Accidente ferroviario de Sa Pereira de 1978 - Accidente ferroviario de Once de 2012 - Estación Benavídez
+Event	T0	partido	EVENT	52
+Event	T1	accidente	EVENT	138
+Event	T2	choque	EVENT	174
+Event	T3	produjo	EVENT	184
+Event	T4	partido	EVENT	226
+Event	T5	detenido	EVENT	284
+Event	T6	trataban	EVENT	330
+Event	T7	reparar	EVENT	342
+Event	T8	inconveniente	EVENT	353
+Event	T9	incrustó	EVENT	400
+Event	T10	destrozándolo	EVENT	442
+Event	T11	elevándolo	EVENT	474
+Event	T12	impacto	EVENT	545
+Event	T13	descarrilaron	EVENT	566
+Event	T14	detenido	EVENT	682
+Event	T15	detuvieron	EVENT	696
+Event	T16	marcha	EVENT	710
+Event	T17	separados	EVENT	719
+Event	T18	accidente	EVENT	795
+Event	T19	Accidente	EVENT	809
+Event	T20	Accidente	EVENT	855
+Relation	T9	T10	CauseEffect	true	incrustó	destrozándolo
+Relation	T10	T9	EffectCause	true	destrozándolo	incrustó
+Relation	T9	T11	CauseEffect	true	incrustó	elevándolo
+Relation	T11	T9	EffectCause	true	elevándolo	incrustó
+Relation	T0	T10	NoRel	true	partido	destrozándolo
+Relation	T0	T11	NoRel	true	partido	elevándolo
+Relation	T0	T12	NoRel	true	partido	impacto
+Relation	T0	T13	NoRel	true	partido	descarrilaron
+Relation	T0	T15	NoRel	true	partido	detuvieron
+Relation	T0	T17	NoRel	true	partido	separados
+Relation	T0	T19	NoRel	true	partido	Accidente
+Relation	T0	T5	NoRel	true	partido	detenido
+Relation	T0	T6	NoRel	true	partido	trataban
+Relation	T0	T8	NoRel	true	partido	inconveniente
+Relation	T1	T14	NoRel	true	accidente	detenido
+Relation	T1	T18	NoRel	true	accidente	accidente
+Relation	T1	T2	NoRel	true	accidente	choque
+Relation	T1	T7	NoRel	true	accidente	reparar
+Relation	T1	T9	NoRel	true	accidente	incrustó
+Relation	T10	T0	NoRel	true	destrozándolo	partido
+Relation	T10	T1	NoRel	true	destrozándolo	accidente
+Relation	T10	T15	NoRel	true	destrozándolo	detuvieron
+Relation	T10	T16	NoRel	true	destrozándolo	marcha
+Relation	T10	T18	NoRel	true	destrozándolo	accidente
+Relation	T10	T19	NoRel	true	destrozándolo	Accidente
+Relation	T11	T10	NoRel	true	elevándolo	destrozándolo
+Relation	T11	T12	NoRel	true	elevándolo	impacto
+Relation	T11	T3	NoRel	true	elevándolo	produjo
+Relation	T11	T4	NoRel	true	elevándolo	partido
+Relation	T11	T5	NoRel	true	elevándolo	detenido
+Relation	T11	T7	NoRel	true	elevándolo	reparar
+Relation	T11	T8	NoRel	true	elevándolo	inconveniente
+Relation	T12	T10	NoRel	true	impacto	destrozándolo
+Relation	T12	T11	NoRel	true	impacto	elevándolo
+Relation	T12	T14	NoRel	true	impacto	detenido
+Relation	T12	T20	NoRel	true	impacto	Accidente
+Relation	T12	T5	NoRel	true	impacto	detenido
+Relation	T12	T8	NoRel	true	impacto	inconveniente
+Relation	T12	T9	NoRel	true	impacto	incrustó
+Relation	T13	T0	NoRel	true	descarrilaron	partido
+Relation	T13	T12	NoRel	true	descarrilaron	impacto
+Relation	T13	T15	NoRel	true	descarrilaron	detuvieron
+Relation	T13	T16	NoRel	true	descarrilaron	marcha
+Relation	T13	T18	NoRel	true	descarrilaron	accidente
+Relation	T13	T2	NoRel	true	descarrilaron	choque
+Relation	T13	T20	NoRel	true	descarrilaron	Accidente
+Relation	T13	T3	NoRel	true	descarrilaron	produjo
+Relation	T13	T4	NoRel	true	descarrilaron	partido
+Relation	T13	T6	NoRel	true	descarrilaron	trataban
+Relation	T13	T7	NoRel	true	descarrilaron	reparar
+Relation	T13	T9	NoRel	true	descarrilaron	incrustó
+Relation	T14	T10	NoRel	true	detenido	destrozándolo
+Relation	T14	T12	NoRel	true	detenido	impacto
+Relation	T14	T3	NoRel	true	detenido	produjo
+Relation	T14	T6	NoRel	true	detenido	trataban
+Relation	T14	T8	NoRel	true	detenido	inconveniente
+Relation	T15	T0	NoRel	true	detuvieron	partido
+Relation	T15	T16	NoRel	true	detuvieron	marcha
+Relation	T15	T18	NoRel	true	detuvieron	accidente
+Relation	T15	T4	NoRel	true	detuvieron	partido
+Relation	T15	T5	NoRel	true	detuvieron	detenido
+Relation	T15	T9	NoRel	true	detuvieron	incrustó
+Relation	T16	T0	NoRel	true	marcha	partido
+Relation	T16	T1	NoRel	true	marcha	accidente
+Relation	T16	T10	NoRel	true	marcha	destrozándolo
+Relation	T16	T14	NoRel	true	marcha	detenido
+Relation	T16	T15	NoRel	true	marcha	detuvieron
+Relation	T16	T2	NoRel	true	marcha	choque
+Relation	T16	T3	NoRel	true	marcha	produjo
+Relation	T16	T5	NoRel	true	marcha	detenido
+Relation	T16	T6	NoRel	true	marcha	trataban
+Relation	T16	T7	NoRel	true	marcha	reparar
+Relation	T17	T0	NoRel	true	separados	partido
+Relation	T17	T15	NoRel	true	separados	detuvieron
+Relation	T17	T18	NoRel	true	separados	accidente
+Relation	T17	T2	NoRel	true	separados	choque
+Relation	T17	T4	NoRel	true	separados	partido
+Relation	T18	T1	NoRel	true	accidente	accidente
+Relation	T18	T10	NoRel	true	accidente	destrozándolo
+Relation	T18	T12	NoRel	true	accidente	impacto
+Relation	T18	T20	NoRel	true	accidente	Accidente
+Relation	T18	T5	NoRel	true	accidente	detenido
+Relation	T18	T9	NoRel	true	accidente	incrustó
+Relation	T19	T0	NoRel	true	Accidente	partido
+Relation	T19	T17	NoRel	true	Accidente	separados
+Relation	T19	T2	NoRel	true	Accidente	choque
+Relation	T19	T3	NoRel	true	Accidente	produjo
+Relation	T19	T4	NoRel	true	Accidente	partido
+Relation	T19	T8	NoRel	true	Accidente	inconveniente
+Relation	T2	T11	NoRel	true	choque	elevándolo
+Relation	T2	T12	NoRel	true	choque	impacto
+Relation	T2	T16	NoRel	true	choque	marcha
+Relation	T2	T18	NoRel	true	choque	accidente
+Relation	T2	T3	NoRel	true	choque	produjo
+Relation	T2	T4	NoRel	true	choque	partido
+Relation	T2	T6	NoRel	true	choque	trataban
+Relation	T20	T10	NoRel	true	Accidente	destrozándolo
+Relation	T20	T11	NoRel	true	Accidente	elevándolo
+Relation	T20	T16	NoRel	true	Accidente	marcha
+Relation	T20	T5	NoRel	true	Accidente	detenido
+Relation	T20	T6	NoRel	true	Accidente	trataban
+Relation	T3	T1	NoRel	true	produjo	accidente
+Relation	T3	T12	NoRel	true	produjo	impacto
+Relation	T3	T17	NoRel	true	produjo	separados
+Relation	T3	T8	NoRel	true	produjo	inconveniente
+Relation	T3	T9	NoRel	true	produjo	incrustó
+Relation	T4	T0	NoRel	true	partido	partido
+Relation	T4	T12	NoRel	true	partido	impacto
+Relation	T4	T18	NoRel	true	partido	accidente
+Relation	T4	T7	NoRel	true	partido	reparar
+Relation	T4	T9	NoRel	true	partido	incrustó
+Relation	T5	T1	NoRel	true	detenido	accidente
+Relation	T5	T15	NoRel	true	detenido	detuvieron
+Relation	T5	T16	NoRel	true	detenido	marcha
+Relation	T5	T19	NoRel	true	detenido	Accidente
+Relation	T5	T2	NoRel	true	detenido	choque
+Relation	T6	T1	NoRel	true	trataban	accidente
+Relation	T6	T11	NoRel	true	trataban	elevándolo
+Relation	T6	T14	NoRel	true	trataban	detenido
+Relation	T6	T16	NoRel	true	trataban	marcha
+Relation	T6	T18	NoRel	true	trataban	accidente
+Relation	T6	T2	NoRel	true	trataban	choque
+Relation	T7	T1	NoRel	true	reparar	accidente
+Relation	T7	T12	NoRel	true	reparar	impacto
+Relation	T7	T16	NoRel	true	reparar	marcha
+Relation	T7	T17	NoRel	true	reparar	separados
+Relation	T7	T2	NoRel	true	reparar	choque
+Relation	T7	T4	NoRel	true	reparar	partido
+Relation	T7	T6	NoRel	true	reparar	trataban
+Relation	T7	T8	NoRel	true	reparar	inconveniente
+Relation	T7	T9	NoRel	true	reparar	incrustó
+Relation	T8	T10	NoRel	true	inconveniente	destrozándolo
+Relation	T8	T11	NoRel	true	inconveniente	elevándolo
+Relation	T8	T12	NoRel	true	inconveniente	impacto
+Relation	T8	T13	NoRel	true	inconveniente	descarrilaron
+Relation	T8	T14	NoRel	true	inconveniente	detenido
+Relation	T8	T17	NoRel	true	inconveniente	separados
+Relation	T8	T2	NoRel	true	inconveniente	choque
+Relation	T8	T20	NoRel	true	inconveniente	Accidente
+Relation	T8	T3	NoRel	true	inconveniente	produjo
+Relation	T8	T6	NoRel	true	inconveniente	trataban
+Relation	T9	T17	NoRel	true	incrustó	separados
+Relation	T9	T4	NoRel	true	incrustó	partido

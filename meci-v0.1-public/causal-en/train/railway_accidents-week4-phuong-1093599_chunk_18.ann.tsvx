@@ -1,0 +1,55 @@
+Text	In extreme situations these lateral forces may be enough to produce derailment .	A special case of train handling problems is OVERSPEED ON SHARP CURVES .	This generally arises when a driver fails to slow the train for a sharp curved section in a route that otherwise has higher speed conditions .	In the extreme this results in the train entering a curve at a speed at which it cannot negotiate the curve , and gross derailment takes place .	The specific mechanism of this may involve bodily tipping ( rotation ) but is likely to involve disruption of the track structure and derailment as the primary failure event , followed by overturning .
+Event	T0	derailment	EVENT	68
+Event	T1	arises	EVENT	169
+Event	T2	fails	EVENT	190
+Event	T3	slow	EVENT	199
+Event	T4	results	EVENT	317
+Event	T5	entering	EVENT	338
+Event	T6	curve	EVENT	349
+Event	T7	negotiate	EVENT	385
+Event	T8	tipping	EVENT	492
+Event	T9	rotation	EVENT	502
+Event	T10	disruption	EVENT	538
+Event	T11	derailment	EVENT	576
+Event	T12	event	EVENT	610
+Event	T13	followed	EVENT	618
+Event	T14	overturning	EVENT	630
+Event	T15	lateral forces	EVENT	28
+Event	T16	OVERSPEED ON SHARP CURVES	EVENT	126
+Event	T17	gross derailment	EVENT	411
+Event	T18	specific mechanism	EVENT	446
+Relation	T15	T0	CauseEffect	true	lateral forces	derailment
+Relation	T0	T15	EffectCause	true	derailment	lateral forces
+Relation	T2	T16	CauseEffect	true	fails	OVERSPEED ON SHARP CURVES
+Relation	T16	T2	EffectCause	true	OVERSPEED ON SHARP CURVES	fails
+Relation	T2	T5	CauseEffect	true	fails	entering
+Relation	T5	T2	EffectCause	true	entering	fails
+Relation	T2	T17	CauseEffect	true	fails	gross derailment
+Relation	T17	T2	EffectCause	true	gross derailment	fails
+Relation	T1	T12	NoRel	true	arises	event
+Relation	T1	T14	NoRel	true	arises	overturning
+Relation	T1	T2	NoRel	true	arises	fails
+Relation	T1	T4	NoRel	true	arises	results
+Relation	T10	T17	NoRel	true	disruption	gross derailment
+Relation	T10	T2	NoRel	true	disruption	fails
+Relation	T10	T3	NoRel	true	disruption	slow
+Relation	T11	T0	NoRel	true	derailment	derailment
+Relation	T11	T5	NoRel	true	derailment	entering
+Relation	T12	T0	NoRel	true	event	derailment
+Relation	T12	T10	NoRel	true	event	disruption
+Relation	T13	T14	NoRel	true	followed	overturning
+Relation	T13	T2	NoRel	true	followed	fails
+Relation	T16	T11	NoRel	true	OVERSPEED ON SHARP CURVES	derailment
+Relation	T17	T16	NoRel	true	gross derailment	OVERSPEED ON SHARP CURVES
+Relation	T18	T13	NoRel	true	specific mechanism	followed
+Relation	T18	T16	NoRel	true	specific mechanism	OVERSPEED ON SHARP CURVES
+Relation	T18	T9	NoRel	true	specific mechanism	rotation
+Relation	T2	T13	NoRel	true	fails	followed
+Relation	T3	T7	NoRel	true	slow	negotiate
+Relation	T4	T5	NoRel	true	results	entering
+Relation	T5	T1	NoRel	true	entering	arises
+Relation	T5	T10	NoRel	true	entering	disruption
+Relation	T5	T11	NoRel	true	entering	derailment
+Relation	T6	T11	NoRel	true	curve	derailment
+Relation	T7	T0	NoRel	true	negotiate	derailment
+Relation	T8	T1	NoRel	true	tipping	arises

@@ -1,0 +1,54 @@
+Text	Sidst på efteråret begyndte dødstallet at falde .	Først i februar 1666 var det sikkert for kongen og hans følge at vende tilbage til byen .	På det tidspunkt havde handelen med det europæiske kontinent spredt pestsmitten til Frankrig , hvor den ebbede ud den følgende vinter .	Pesttilfældene fortsatte i moderat tempo til september 1666 .	Den 2. og 3. september ødelagde den store brand i London mange af byens mest befolkede beboelses- og forretningskvarterer .
+Event	T0	dødstallet	EVENT	28
+Event	T1	falde	EVENT	42
+Event	T2	vende	EVENT	115
+Event	T3	pestsmitten	EVENT	208
+Event	T4	fortsatte	EVENT	291
+Event	T5	ødelagde	EVENT	361
+Event	T6	sikkert	EVENT	79
+Event	T7	handelen	EVENT	163
+Event	T8	ebbede ud	EVENT	244
+Event	T9	Pesttilfældene	EVENT	276
+Event	T10	brand	EVENT	380
+Event	T11	spredt	EVENT	201
+Relation	T10	T5	CauseEffect	true	brand	ødelagde
+Relation	T5	T10	EffectCause	true	ødelagde	brand
+Relation	T7	T11	CauseEffect	true	handelen	spredt
+Relation	T11	T7	EffectCause	true	spredt	handelen
+Relation	T1	T6	CauseEffect	true	falde	sikkert
+Relation	T6	T1	EffectCause	true	sikkert	falde
+Relation	T0	T1	NoRel	true	dødstallet	falde
+Relation	T0	T3	NoRel	true	dødstallet	pestsmitten
+Relation	T0	T4	NoRel	true	dødstallet	fortsatte
+Relation	T0	T7	NoRel	true	dødstallet	handelen
+Relation	T1	T7	NoRel	true	falde	handelen
+Relation	T1	T9	NoRel	true	falde	Pesttilfældene
+Relation	T10	T1	NoRel	true	brand	falde
+Relation	T10	T7	NoRel	true	brand	handelen
+Relation	T11	T0	NoRel	true	spredt	dødstallet
+Relation	T2	T0	NoRel	true	vende	dødstallet
+Relation	T2	T4	NoRel	true	vende	fortsatte
+Relation	T2	T5	NoRel	true	vende	ødelagde
+Relation	T2	T7	NoRel	true	vende	handelen
+Relation	T4	T0	NoRel	true	fortsatte	dødstallet
+Relation	T4	T5	NoRel	true	fortsatte	ødelagde
+Relation	T4	T9	NoRel	true	fortsatte	Pesttilfældene
+Relation	T5	T1	NoRel	true	ødelagde	falde
+Relation	T5	T4	NoRel	true	ødelagde	fortsatte
+Relation	T6	T7	NoRel	true	sikkert	handelen
+Relation	T6	T8	NoRel	true	sikkert	ebbede ud
+Relation	T6	T9	NoRel	true	sikkert	Pesttilfældene
+Relation	T7	T0	NoRel	true	handelen	dødstallet
+Relation	T7	T2	NoRel	true	handelen	vende
+Relation	T7	T3	NoRel	true	handelen	pestsmitten
+Relation	T7	T8	NoRel	true	handelen	ebbede ud
+Relation	T7	T9	NoRel	true	handelen	Pesttilfældene
+Relation	T8	T11	NoRel	true	ebbede ud	spredt
+Relation	T8	T4	NoRel	true	ebbede ud	fortsatte
+Relation	T8	T7	NoRel	true	ebbede ud	handelen
+Relation	T9	T1	NoRel	true	Pesttilfældene	falde
+Relation	T9	T10	NoRel	true	Pesttilfældene	brand
+Relation	T9	T2	NoRel	true	Pesttilfældene	vende
+Relation	T9	T5	NoRel	true	Pesttilfældene	ødelagde
+Relation	T9	T7	NoRel	true	Pesttilfældene	handelen
+Relation	T9	T8	NoRel	true	Pesttilfældene	ebbede ud

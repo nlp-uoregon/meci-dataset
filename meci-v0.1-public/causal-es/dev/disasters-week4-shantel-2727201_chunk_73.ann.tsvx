@@ -1,0 +1,75 @@
+Text	Página Web oficial del periódico Mexicano El Universal " Suplementos . Brote se propaga " Gráfico consultado el 26-04-2009	Página Web oficial del periódico Mexicano El Universal " Querétaro detecta tres casos de influenza porcina " Nota consultada el 27.04.2009	Página Web oficial del periódico Mexicano mexico no fue tan afectdo El Universal " Costa Rica confirma primer caso de gripe porcina " Nota consultada el 28-04-2009	Página Web oficial del periódico Costarricense La Nación " Muere primer tico contagiado de gripe AH1N1 " Nota consultada el 09-05-2009	_ Como resultado de la nueva directriz las estadísticas de infectados y casos probables ya no reflejará el total de personas infectadas ya que las pruebas para detectar el virus solo se realizarán en los casos con factores de riesgo y los casos críticos _ .
+Event	T0	propaga	EVENT	80
+Event	T1	consultado	EVENT	98
+Event	T2	influenza	EVENT	212
+Event	T3	consultada	EVENT	237
+Event	T4	gripe	EVENT	380
+Event	T5	consultada	EVENT	401
+Event	T6	Muere	EVENT	485
+Event	T7	contagiado	EVENT	503
+Event	T8	consultada	EVENT	536
+Event	T9	infectados	EVENT	620
+Event	T10	infectadas	EVENT	686
+Event	T11	pruebas	EVENT	708
+Event	T12	detectar	EVENT	721
+Event	T13	realizarán	EVENT	747
+Relation	T7	T6	CauseEffect	true	contagiado	Muere
+Relation	T6	T7	EffectCause	true	Muere	contagiado
+Relation	T0	T1	NoRel	true	propaga	consultado
+Relation	T0	T10	NoRel	true	propaga	infectadas
+Relation	T0	T12	NoRel	true	propaga	detectar
+Relation	T0	T2	NoRel	true	propaga	influenza
+Relation	T0	T7	NoRel	true	propaga	contagiado
+Relation	T0	T8	NoRel	true	propaga	consultada
+Relation	T1	T0	NoRel	true	consultado	propaga
+Relation	T1	T2	NoRel	true	consultado	influenza
+Relation	T1	T4	NoRel	true	consultado	gripe
+Relation	T1	T6	NoRel	true	consultado	Muere
+Relation	T1	T8	NoRel	true	consultado	consultada
+Relation	T10	T0	NoRel	true	infectadas	propaga
+Relation	T10	T12	NoRel	true	infectadas	detectar
+Relation	T10	T2	NoRel	true	infectadas	influenza
+Relation	T10	T8	NoRel	true	infectadas	consultada
+Relation	T11	T0	NoRel	true	pruebas	propaga
+Relation	T11	T10	NoRel	true	pruebas	infectadas
+Relation	T11	T4	NoRel	true	pruebas	gripe
+Relation	T11	T7	NoRel	true	pruebas	contagiado
+Relation	T12	T11	NoRel	true	detectar	pruebas
+Relation	T12	T2	NoRel	true	detectar	influenza
+Relation	T12	T5	NoRel	true	detectar	consultada
+Relation	T13	T0	NoRel	true	realizarán	propaga
+Relation	T13	T3	NoRel	true	realizarán	consultada
+Relation	T13	T9	NoRel	true	realizarán	infectados
+Relation	T2	T11	NoRel	true	influenza	pruebas
+Relation	T2	T12	NoRel	true	influenza	detectar
+Relation	T2	T3	NoRel	true	influenza	consultada
+Relation	T3	T1	NoRel	true	consultada	consultado
+Relation	T3	T10	NoRel	true	consultada	infectadas
+Relation	T3	T12	NoRel	true	consultada	detectar
+Relation	T3	T13	NoRel	true	consultada	realizarán
+Relation	T3	T6	NoRel	true	consultada	Muere
+Relation	T4	T13	NoRel	true	gripe	realizarán
+Relation	T4	T3	NoRel	true	gripe	consultada
+Relation	T4	T5	NoRel	true	gripe	consultada
+Relation	T4	T8	NoRel	true	gripe	consultada
+Relation	T5	T1	NoRel	true	consultada	consultado
+Relation	T5	T2	NoRel	true	consultada	influenza
+Relation	T5	T4	NoRel	true	consultada	gripe
+Relation	T5	T8	NoRel	true	consultada	consultada
+Relation	T6	T11	NoRel	true	Muere	pruebas
+Relation	T6	T2	NoRel	true	Muere	influenza
+Relation	T6	T3	NoRel	true	Muere	consultada
+Relation	T6	T5	NoRel	true	Muere	consultada
+Relation	T6	T8	NoRel	true	Muere	consultada
+Relation	T7	T0	NoRel	true	contagiado	propaga
+Relation	T8	T0	NoRel	true	consultada	propaga
+Relation	T8	T11	NoRel	true	consultada	pruebas
+Relation	T8	T12	NoRel	true	consultada	detectar
+Relation	T8	T3	NoRel	true	consultada	consultada
+Relation	T8	T9	NoRel	true	consultada	infectados
+Relation	T9	T10	NoRel	true	infectados	infectadas
+Relation	T9	T11	NoRel	true	infectados	pruebas
+Relation	T9	T13	NoRel	true	infectados	realizarán
+Relation	T9	T2	NoRel	true	infectados	influenza
+Relation	T9	T3	NoRel	true	infectados	consultada
+Relation	T9	T5	NoRel	true	infectados	consultada

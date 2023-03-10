@@ -1,0 +1,83 @@
+Text	En la ruta del Caporetto , el futuro Malaparte no ve la cobardía de los soldados , sino la incompetencia de los altos mandos y la rebelión de las tropas ante una guerra mal conducida , que hasta ese momento había costado la vida a 350.000 italianos .	Caporetto , por tanto , según Malaparte , debe considerarse como el comienzo de una revolución italiana , similar a la rusa , que sin embargo se extinguió inmediatamente por falta de líderes que supieran dirigirla .	En el libro , Malaparte argumentó que la vieja clase dominante debería ser reemplazada por la generación más joven de la burguesía , " esos buenos oficiales de las trincheras , los franciscanos , los pastores del pueblo " , que después de la guerra en gran medida se adhirieron al fascismo , como por otra parte hará el propio Malaparte .	- " Los precursores e iniciadores del fascismo son los mismos , republicanos y sindicalistas , que primero habían levantado al pueblo contra el socialismo deprimente y repudiado y habían querido e implementado , con Filippo Corridoni , las huelgas generales de 1912 y 1913 " .	- « No se puede pintar el retrato de Mussolini sin retratar al pueblo italiano .
+Event	T0	ve	EVENT	50
+Event	T1	incompetencia	EVENT	91
+Event	T2	rebelión	EVENT	130
+Event	T3	guerra	EVENT	162
+Event	T4	conducida	EVENT	173
+Event	T5	costado	EVENT	213
+Event	T6	extinguió	EVENT	396
+Event	T7	reemplazada	EVENT	542
+Event	T8	guerra	EVENT	709
+Event	T9	adhirieron	EVENT	734
+Event	T10	levantado	EVENT	920
+Event	T11	repudiado	EVENT	974
+Event	T12	querido	EVENT	993
+Event	T13	implementado	EVENT	1003
+Event	T14	vida	EVENT	224
+Relation	T3	T14	CauseEffect	true	guerra	vida
+Relation	T14	T3	EffectCause	true	vida	guerra
+Relation	T0	T13	NoRel	true	ve	implementado
+Relation	T0	T14	NoRel	true	ve	vida
+Relation	T0	T2	NoRel	true	ve	rebelión
+Relation	T0	T4	NoRel	true	ve	conducida
+Relation	T0	T6	NoRel	true	ve	extinguió
+Relation	T0	T7	NoRel	true	ve	reemplazada
+Relation	T0	T8	NoRel	true	ve	guerra
+Relation	T1	T10	NoRel	true	incompetencia	levantado
+Relation	T1	T13	NoRel	true	incompetencia	implementado
+Relation	T1	T2	NoRel	true	incompetencia	rebelión
+Relation	T1	T3	NoRel	true	incompetencia	guerra
+Relation	T1	T6	NoRel	true	incompetencia	extinguió
+Relation	T10	T0	NoRel	true	levantado	ve
+Relation	T10	T1	NoRel	true	levantado	incompetencia
+Relation	T10	T13	NoRel	true	levantado	implementado
+Relation	T10	T5	NoRel	true	levantado	costado
+Relation	T10	T9	NoRel	true	levantado	adhirieron
+Relation	T11	T14	NoRel	true	repudiado	vida
+Relation	T11	T4	NoRel	true	repudiado	conducida
+Relation	T12	T13	NoRel	true	querido	implementado
+Relation	T12	T14	NoRel	true	querido	vida
+Relation	T12	T3	NoRel	true	querido	guerra
+Relation	T12	T9	NoRel	true	querido	adhirieron
+Relation	T13	T0	NoRel	true	implementado	ve
+Relation	T13	T3	NoRel	true	implementado	guerra
+Relation	T13	T5	NoRel	true	implementado	costado
+Relation	T13	T7	NoRel	true	implementado	reemplazada
+Relation	T13	T8	NoRel	true	implementado	guerra
+Relation	T14	T12	NoRel	true	vida	querido
+Relation	T14	T2	NoRel	true	vida	rebelión
+Relation	T2	T0	NoRel	true	rebelión	ve
+Relation	T2	T3	NoRel	true	rebelión	guerra
+Relation	T2	T4	NoRel	true	rebelión	conducida
+Relation	T2	T6	NoRel	true	rebelión	extinguió
+Relation	T2	T7	NoRel	true	rebelión	reemplazada
+Relation	T2	T8	NoRel	true	rebelión	guerra
+Relation	T3	T0	NoRel	true	guerra	ve
+Relation	T3	T10	NoRel	true	guerra	levantado
+Relation	T3	T12	NoRel	true	guerra	querido
+Relation	T3	T13	NoRel	true	guerra	implementado
+Relation	T3	T4	NoRel	true	guerra	conducida
+Relation	T4	T10	NoRel	true	conducida	levantado
+Relation	T4	T11	NoRel	true	conducida	repudiado
+Relation	T4	T14	NoRel	true	conducida	vida
+Relation	T4	T3	NoRel	true	conducida	guerra
+Relation	T4	T7	NoRel	true	conducida	reemplazada
+Relation	T4	T8	NoRel	true	conducida	guerra
+Relation	T5	T11	NoRel	true	costado	repudiado
+Relation	T5	T2	NoRel	true	costado	rebelión
+Relation	T6	T10	NoRel	true	extinguió	levantado
+Relation	T6	T2	NoRel	true	extinguió	rebelión
+Relation	T6	T4	NoRel	true	extinguió	conducida
+Relation	T6	T5	NoRel	true	extinguió	costado
+Relation	T6	T7	NoRel	true	extinguió	reemplazada
+Relation	T6	T8	NoRel	true	extinguió	guerra
+Relation	T7	T0	NoRel	true	reemplazada	ve
+Relation	T7	T11	NoRel	true	reemplazada	repudiado
+Relation	T7	T13	NoRel	true	reemplazada	implementado
+Relation	T8	T12	NoRel	true	guerra	querido
+Relation	T8	T14	NoRel	true	guerra	vida
+Relation	T8	T3	NoRel	true	guerra	guerra
+Relation	T8	T6	NoRel	true	guerra	extinguió
+Relation	T8	T7	NoRel	true	guerra	reemplazada
+Relation	T9	T12	NoRel	true	adhirieron	querido
+Relation	T9	T7	NoRel	true	adhirieron	reemplazada

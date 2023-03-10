@@ -1,0 +1,49 @@
+Text	اس سے پہلے کہ پہلی ٹرین کے مسئلے کو حل کیا جاتا ، لینڈ آپریٹر کی شفٹ تبدیل ہو گئی ۔	اسی وقت دوسری ٹرین نے اپنے سفر کو شروع کرنے کی اجازت مانگی تو لینڈ آپریٹر نے منظوری دے دی ۔	دوسری ٹرین نے پوری رفتار کے ساتھ پہلی ٹرین کو پیچھے سے ٹکر مار دی ۔	تصادم کے نتیجے میں چار بوگیاں اتر گئیں ، جن میں سے دو کو آگ لگ گئی ۔	دونوں بوگیوں میں موجود چوالیس افراد اور عملہ جاں بحق اور سو سے زائد زخمی قرار دے دیے گئے تھے ۔
+Event	T0	مسئلے	EVENT	27
+Event	T10	زخمی	EVENT	381
+Event	T12	ٹکر	EVENT	231
+Event	T13	جاں بحق	EVENT	358
+Event	T2	تبدیل	EVENT	69
+Event	T3	منظوری	EVENT	161
+Event	T4	سفر	EVENT	111
+Event	T5	شروع	EVENT	118
+Event	T6	مانگی	EVENT	137
+Event	T8	تصادم	EVENT	244
+Event	T9	آگ	EVENT	301
+Relation	T6	T3	CauseEffect	true	مانگی	منظوری
+Relation	T3	T6	EffectCause	true	منظوری	مانگی
+Relation	T8	T9	CauseEffect	true	تصادم	آگ
+Relation	T9	T8	EffectCause	true	آگ	تصادم
+Relation	T9	T13	CauseEffect	true	آگ	جاں بحق
+Relation	T13	T9	EffectCause	true	جاں بحق	آگ
+Relation	T9	T10	CauseEffect	true	آگ	زخمی
+Relation	T10	T9	EffectCause	true	زخمی	آگ
+Relation	T3	T12	CauseEffect	true	منظوری	ٹکر
+Relation	T12	T3	EffectCause	true	ٹکر	منظوری
+Relation	T0	T3	NoRel	true	مسئلے	منظوری
+Relation	T0	T8	NoRel	true	مسئلے	تصادم
+Relation	T10	T12	NoRel	true	زخمی	ٹکر
+Relation	T10	T6	NoRel	true	زخمی	مانگی
+Relation	T12	T0	NoRel	true	ٹکر	مسئلے
+Relation	T12	T2	NoRel	true	ٹکر	تبدیل
+Relation	T12	T5	NoRel	true	ٹکر	شروع
+Relation	T13	T12	NoRel	true	جاں بحق	ٹکر
+Relation	T13	T4	NoRel	true	جاں بحق	سفر
+Relation	T13	T5	NoRel	true	جاں بحق	شروع
+Relation	T13	T6	NoRel	true	جاں بحق	مانگی
+Relation	T2	T4	NoRel	true	تبدیل	سفر
+Relation	T2	T8	NoRel	true	تبدیل	تصادم
+Relation	T3	T10	NoRel	true	منظوری	زخمی
+Relation	T3	T13	NoRel	true	منظوری	جاں بحق
+Relation	T3	T2	NoRel	true	منظوری	تبدیل
+Relation	T4	T0	NoRel	true	سفر	مسئلے
+Relation	T4	T2	NoRel	true	سفر	تبدیل
+Relation	T4	T3	NoRel	true	سفر	منظوری
+Relation	T5	T13	NoRel	true	شروع	جاں بحق
+Relation	T6	T0	NoRel	true	مانگی	مسئلے
+Relation	T6	T8	NoRel	true	مانگی	تصادم
+Relation	T8	T0	NoRel	true	تصادم	مسئلے
+Relation	T8	T10	NoRel	true	تصادم	زخمی
+Relation	T8	T13	NoRel	true	تصادم	جاں بحق
+Relation	T8	T5	NoRel	true	تصادم	شروع
+Relation	T9	T3	NoRel	true	آگ	منظوری

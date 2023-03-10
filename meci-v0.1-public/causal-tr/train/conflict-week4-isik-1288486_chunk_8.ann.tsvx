@@ -1,0 +1,24 @@
+Text	Nisan 1917’de silah sanayisinde çalışan 200.000’den fazla işçi ekmek karnelerindeki kısıtlamalara karşı greve çıktı .	Bu grevin ardından Almanya’nın ilk İşçi Konseyi ( _ Arbeiterrat _ ) kuruldu .	Var olan sendikaların , işçilerin kendi taleplerini ve ihtiyaçlarını dile getirmekten çok uzakta kalması , işçilerin kendi inisiyatifleriyle öz örgütlüklerini oluşturmaya girişmesine sebep oldu .	Berlin'de bir cephane fabrikasında çalışan 10.000 işçi doğrudan seçim yoluyla , ikisi metal işçisi üçü USPD üyesi olan 5 kişilik bir konsey seçtiler .	Konseyler , ekonomik taleplerinin yanında , savaşa ilhaksız son verilmesi , sansürün son bulması , siyasi tutukluların serbest bırakılması ve seçimlerin yapılması gibi siyasi taleplerde de bulunuyorlardı .
+Event	T1	grevin	EVENT	121
+Event	T2	kuruldu	EVENT	186
+Event	T3	seçim	EVENT	456
+Event	T4	seçtiler	EVENT	532
+Event	T6	kısıtlamalara	EVENT	84
+Event	T7	greve	EVENT	104
+Event	T5	taleplerde	EVENT	718
+Relation	T6	T7	CauseEffect	true	kısıtlamalara	greve
+Relation	T7	T6	EffectCause	true	greve	kısıtlamalara
+Relation	T4	T5	CauseEffect	true	seçtiler	taleplerde
+Relation	T5	T4	EffectCause	true	taleplerde	seçtiler
+Relation	T2	T5	CauseEffect	true	kuruldu	taleplerde
+Relation	T5	T2	EffectCause	true	taleplerde	kuruldu
+Relation	T1	T2	NoRel	true	grevin	kuruldu
+Relation	T1	T4	NoRel	true	grevin	seçtiler
+Relation	T1	T5	NoRel	true	grevin	taleplerde
+Relation	T1	T7	NoRel	true	grevin	greve
+Relation	T2	T3	NoRel	true	kuruldu	seçim
+Relation	T2	T6	NoRel	true	kuruldu	kısıtlamalara
+Relation	T3	T5	NoRel	true	seçim	taleplerde
+Relation	T4	T2	NoRel	true	seçtiler	kuruldu
+Relation	T5	T1	NoRel	true	taleplerde	grevin
+Relation	T5	T6	NoRel	true	taleplerde	kısıtlamalara

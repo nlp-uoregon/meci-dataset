@@ -1,0 +1,72 @@
+Text	El descarrilamiento es el peor accidente de tren en Taiwán desde 1991 , cuando 30 personas murieron en una colisión cerca de Miaoli .	Según un comunicado de prensa de la Administración de Ferrocarriles de Taiwán el 21 de octubre , la causa del accidente es aún desconocida .	El tren involucrado en el accidente fue construido por la compañía japonesa Nippon Sharyo en 2011 , y se sometió a importantes trabajos de mantenimiento en 2017 .	Al menos 18 personas murieron en el accidente , y otras 187 resultaron heridas , todas a bordo .	Al parecer , seis de las víctimas fallecidas eran menores de 18 años .
+Event	T0	descarrilamiento	EVENT	3
+Event	T1	accidente	EVENT	31
+Event	T2	murieron	EVENT	91
+Event	T3	colisión	EVENT	107
+Event	T4	comunicado	EVENT	143
+Event	T5	accidente	EVENT	244
+Event	T6	involucrado	EVENT	283
+Event	T7	accidente	EVENT	301
+Event	T8	construido	EVENT	315
+Event	T9	trabajos	EVENT	402
+Event	T10	murieron	EVENT	459
+Event	T11	accidente	EVENT	474
+Event	T12	heridas	EVENT	509
+Event	T13	fallecidas	EVENT	569
+Relation	T3	T0	CauseEffect	true	colisión	descarrilamiento
+Relation	T0	T3	EffectCause	true	descarrilamiento	colisión
+Relation	T0	T2	CauseEffect	true	descarrilamiento	murieron
+Relation	T2	T0	EffectCause	true	murieron	descarrilamiento
+Relation	T11	T10	CauseEffect	true	accidente	murieron
+Relation	T10	T11	EffectCause	true	murieron	accidente
+Relation	T11	T12	CauseEffect	true	accidente	heridas
+Relation	T12	T11	EffectCause	true	heridas	accidente
+Relation	T0	T12	NoRel	true	descarrilamiento	heridas
+Relation	T0	T4	NoRel	true	descarrilamiento	comunicado
+Relation	T0	T7	NoRel	true	descarrilamiento	accidente
+Relation	T0	T8	NoRel	true	descarrilamiento	construido
+Relation	T1	T11	NoRel	true	accidente	accidente
+Relation	T1	T3	NoRel	true	accidente	colisión
+Relation	T10	T1	NoRel	true	murieron	accidente
+Relation	T10	T13	NoRel	true	murieron	fallecidas
+Relation	T10	T3	NoRel	true	murieron	colisión
+Relation	T11	T1	NoRel	true	accidente	accidente
+Relation	T11	T13	NoRel	true	accidente	fallecidas
+Relation	T11	T2	NoRel	true	accidente	murieron
+Relation	T11	T3	NoRel	true	accidente	colisión
+Relation	T11	T7	NoRel	true	accidente	accidente
+Relation	T11	T8	NoRel	true	accidente	construido
+Relation	T11	T9	NoRel	true	accidente	trabajos
+Relation	T12	T3	NoRel	true	heridas	colisión
+Relation	T12	T9	NoRel	true	heridas	trabajos
+Relation	T13	T2	NoRel	true	fallecidas	murieron
+Relation	T2	T4	NoRel	true	murieron	comunicado
+Relation	T2	T7	NoRel	true	murieron	accidente
+Relation	T3	T10	NoRel	true	colisión	murieron
+Relation	T3	T13	NoRel	true	colisión	fallecidas
+Relation	T3	T9	NoRel	true	colisión	trabajos
+Relation	T4	T1	NoRel	true	comunicado	accidente
+Relation	T4	T12	NoRel	true	comunicado	heridas
+Relation	T4	T6	NoRel	true	comunicado	involucrado
+Relation	T4	T7	NoRel	true	comunicado	accidente
+Relation	T5	T0	NoRel	true	accidente	descarrilamiento
+Relation	T5	T2	NoRel	true	accidente	murieron
+Relation	T5	T4	NoRel	true	accidente	comunicado
+Relation	T6	T1	NoRel	true	involucrado	accidente
+Relation	T6	T10	NoRel	true	involucrado	murieron
+Relation	T7	T0	NoRel	true	accidente	descarrilamiento
+Relation	T7	T1	NoRel	true	accidente	accidente
+Relation	T7	T11	NoRel	true	accidente	accidente
+Relation	T7	T13	NoRel	true	accidente	fallecidas
+Relation	T7	T3	NoRel	true	accidente	colisión
+Relation	T7	T4	NoRel	true	accidente	comunicado
+Relation	T7	T5	NoRel	true	accidente	accidente
+Relation	T7	T8	NoRel	true	accidente	construido
+Relation	T8	T1	NoRel	true	construido	accidente
+Relation	T8	T12	NoRel	true	construido	heridas
+Relation	T8	T2	NoRel	true	construido	murieron
+Relation	T8	T7	NoRel	true	construido	accidente
+Relation	T9	T13	NoRel	true	trabajos	fallecidas
+Relation	T9	T2	NoRel	true	trabajos	murieron
+Relation	T9	T4	NoRel	true	trabajos	comunicado
+Relation	T9	T7	NoRel	true	trabajos	accidente

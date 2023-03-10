@@ -1,0 +1,59 @@
+Text	Bu arada , kaçırılmasının ardından sanayici Luis Suñer hakkında bir daha haber alınamadı .	Bu gerilimin tırmandığı bu atmosferde Suárez'in halefini seçme süreci başladı .	6 ve 9 Şubat tarihleri_arasında Mayorka'daki 2. UCD kongresi partinin çözülme sürecinde olduğunu açıkça ortaya koydu ve Agustín Rodríguez Sahagún geçici başbakan seçildi .	10 Şubat'ta Leopoldo Calvo Sotelo başbakanlığa aday gösterildi .	Gerginlik Bask milliyetçi hareketi ETA'nın üyesi Jose Ignacio Arregui'nin Carabanchel mahallesinde işkence görüp öldüğü haberinin gelmesi ile 13 Şubat günü zirveye ulaştı .
+Event	T1	tırmandığı	EVENT	104
+Event	T2	başladı	EVENT	161
+Event	T3	çözülme	EVENT	241
+Event	T4	koydu	EVENT	282
+Event	T5	seçildi	EVENT	333
+Event	T6	gösterildi	EVENT	395
+Event	T7	Gerginlik	EVENT	408
+Event	T8	gelmesi	EVENT	538
+Event	T9	ulaştı	EVENT	572
+Event	T10	kaçırılmasının	EVENT	11
+Event	T11	işkence	EVENT	507
+Event	T12	öldüğü	EVENT	521
+Relation	T8	T7	CauseEffect	true	gelmesi	Gerginlik
+Relation	T7	T8	EffectCause	true	Gerginlik	gelmesi
+Relation	T11	T12	CauseEffect	true	işkence	öldüğü
+Relation	T12	T11	EffectCause	true	öldüğü	işkence
+Relation	T12	T8	CauseEffect	true	öldüğü	gelmesi
+Relation	T8	T12	EffectCause	true	gelmesi	öldüğü
+Relation	T8	T9	CauseEffect	true	gelmesi	ulaştı
+Relation	T9	T8	EffectCause	true	ulaştı	gelmesi
+Relation	T1	T2	NoRel	true	tırmandığı	başladı
+Relation	T1	T4	NoRel	true	tırmandığı	koydu
+Relation	T1	T5	NoRel	true	tırmandığı	seçildi
+Relation	T10	T12	NoRel	true	kaçırılmasının	öldüğü
+Relation	T10	T4	NoRel	true	kaçırılmasının	koydu
+Relation	T10	T7	NoRel	true	kaçırılmasının	Gerginlik
+Relation	T11	T2	NoRel	true	işkence	başladı
+Relation	T11	T4	NoRel	true	işkence	koydu
+Relation	T11	T9	NoRel	true	işkence	ulaştı
+Relation	T12	T1	NoRel	true	öldüğü	tırmandığı
+Relation	T12	T3	NoRel	true	öldüğü	çözülme
+Relation	T12	T5	NoRel	true	öldüğü	seçildi
+Relation	T2	T10	NoRel	true	başladı	kaçırılmasının
+Relation	T2	T4	NoRel	true	başladı	koydu
+Relation	T2	T8	NoRel	true	başladı	gelmesi
+Relation	T3	T10	NoRel	true	çözülme	kaçırılmasının
+Relation	T4	T10	NoRel	true	koydu	kaçırılmasının
+Relation	T4	T12	NoRel	true	koydu	öldüğü
+Relation	T4	T6	NoRel	true	koydu	gösterildi
+Relation	T4	T8	NoRel	true	koydu	gelmesi
+Relation	T4	T9	NoRel	true	koydu	ulaştı
+Relation	T6	T3	NoRel	true	gösterildi	çözülme
+Relation	T6	T4	NoRel	true	gösterildi	koydu
+Relation	T6	T7	NoRel	true	gösterildi	Gerginlik
+Relation	T7	T1	NoRel	true	Gerginlik	tırmandığı
+Relation	T7	T10	NoRel	true	Gerginlik	kaçırılmasının
+Relation	T7	T11	NoRel	true	Gerginlik	işkence
+Relation	T7	T3	NoRel	true	Gerginlik	çözülme
+Relation	T7	T4	NoRel	true	Gerginlik	koydu
+Relation	T7	T6	NoRel	true	Gerginlik	gösterildi
+Relation	T8	T2	NoRel	true	gelmesi	başladı
+Relation	T8	T3	NoRel	true	gelmesi	çözülme
+Relation	T9	T1	NoRel	true	ulaştı	tırmandığı
+Relation	T9	T10	NoRel	true	ulaştı	kaçırılmasının
+Relation	T9	T11	NoRel	true	ulaştı	işkence
+Relation	T9	T12	NoRel	true	ulaştı	öldüğü
+Relation	T9	T4	NoRel	true	ulaştı	koydu
+Relation	T9	T5	NoRel	true	ulaştı	seçildi

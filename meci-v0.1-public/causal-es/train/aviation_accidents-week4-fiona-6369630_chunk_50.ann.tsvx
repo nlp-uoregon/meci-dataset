@@ -1,0 +1,109 @@
+Text	- — El presidente de Ucrania , Petró Poroshenko , calificó de « atentado terrorista » el derribo del avión .	Ciudadanos ucranianos marcharon y colocaron flores en apoyo a los fallecidos en las embajadas de Malasia y los Países Bajos en Kiev .	El presidente ucraniano dijo en una entrevista a Christiane Amanpour , de _ CNN _ , que no vio « ninguna diferencia entre los ataques del 11 de septiembre de 2001 en Nueva York , el bombardeo de Lockerbie y el ataque al vuelo 17 » .	También pidió la « solidaridad internacional » en contra de los prorrusos .	- — El consejo de Seguridad de la ONU anunció la celebración de una reunión con carácter de emergencia el 18 de julio para abordar la situación en Ucrania .
+Event	T0	calificó	EVENT	50
+Event	T1	atentado	EVENT	64
+Event	T2	derribo	EVENT	89
+Event	T3	marcharon	EVENT	131
+Event	T4	colocaron	EVENT	143
+Event	T5	fallecidos	EVENT	175
+Event	T6	dijo	EVENT	267
+Event	T7	entrevista	EVENT	279
+Event	T8	ataques	EVENT	369
+Event	T9	bombardeo	EVENT	425
+Event	T10	ataque	EVENT	453
+Event	T11	anunció	EVENT	590
+Event	T12	celebración	EVENT	601
+Event	T13	reunión	EVENT	620
+Event	T14	emergencia	EVENT	644
+Event	T15	abordar	EVENT	675
+Relation	T2	T5	CauseEffect	true	derribo	fallecidos
+Relation	T5	T2	EffectCause	true	fallecidos	derribo
+Relation	T0	T14	NoRel	true	calificó	emergencia
+Relation	T0	T5	NoRel	true	calificó	fallecidos
+Relation	T0	T6	NoRel	true	calificó	dijo
+Relation	T0	T8	NoRel	true	calificó	ataques
+Relation	T1	T0	NoRel	true	atentado	calificó
+Relation	T1	T11	NoRel	true	atentado	anunció
+Relation	T1	T15	NoRel	true	atentado	abordar
+Relation	T1	T4	NoRel	true	atentado	colocaron
+Relation	T1	T7	NoRel	true	atentado	entrevista
+Relation	T1	T8	NoRel	true	atentado	ataques
+Relation	T1	T9	NoRel	true	atentado	bombardeo
+Relation	T10	T5	NoRel	true	ataque	fallecidos
+Relation	T10	T7	NoRel	true	ataque	entrevista
+Relation	T10	T8	NoRel	true	ataque	ataques
+Relation	T10	T9	NoRel	true	ataque	bombardeo
+Relation	T11	T1	NoRel	true	anunció	atentado
+Relation	T11	T12	NoRel	true	anunció	celebración
+Relation	T11	T13	NoRel	true	anunció	reunión
+Relation	T11	T2	NoRel	true	anunció	derribo
+Relation	T11	T4	NoRel	true	anunció	colocaron
+Relation	T11	T5	NoRel	true	anunció	fallecidos
+Relation	T11	T8	NoRel	true	anunció	ataques
+Relation	T11	T9	NoRel	true	anunció	bombardeo
+Relation	T12	T1	NoRel	true	celebración	atentado
+Relation	T12	T11	NoRel	true	celebración	anunció
+Relation	T12	T14	NoRel	true	celebración	emergencia
+Relation	T12	T4	NoRel	true	celebración	colocaron
+Relation	T13	T0	NoRel	true	reunión	calificó
+Relation	T13	T11	NoRel	true	reunión	anunció
+Relation	T13	T12	NoRel	true	reunión	celebración
+Relation	T13	T14	NoRel	true	reunión	emergencia
+Relation	T13	T15	NoRel	true	reunión	abordar
+Relation	T13	T2	NoRel	true	reunión	derribo
+Relation	T13	T4	NoRel	true	reunión	colocaron
+Relation	T14	T2	NoRel	true	emergencia	derribo
+Relation	T14	T3	NoRel	true	emergencia	marcharon
+Relation	T14	T7	NoRel	true	emergencia	entrevista
+Relation	T15	T0	NoRel	true	abordar	calificó
+Relation	T15	T13	NoRel	true	abordar	reunión
+Relation	T15	T14	NoRel	true	abordar	emergencia
+Relation	T15	T2	NoRel	true	abordar	derribo
+Relation	T15	T7	NoRel	true	abordar	entrevista
+Relation	T15	T9	NoRel	true	abordar	bombardeo
+Relation	T2	T1	NoRel	true	derribo	atentado
+Relation	T2	T13	NoRel	true	derribo	reunión
+Relation	T2	T14	NoRel	true	derribo	emergencia
+Relation	T2	T6	NoRel	true	derribo	dijo
+Relation	T2	T8	NoRel	true	derribo	ataques
+Relation	T2	T9	NoRel	true	derribo	bombardeo
+Relation	T3	T0	NoRel	true	marcharon	calificó
+Relation	T3	T1	NoRel	true	marcharon	atentado
+Relation	T3	T15	NoRel	true	marcharon	abordar
+Relation	T3	T9	NoRel	true	marcharon	bombardeo
+Relation	T4	T10	NoRel	true	colocaron	ataque
+Relation	T4	T13	NoRel	true	colocaron	reunión
+Relation	T4	T14	NoRel	true	colocaron	emergencia
+Relation	T4	T2	NoRel	true	colocaron	derribo
+Relation	T4	T5	NoRel	true	colocaron	fallecidos
+Relation	T4	T8	NoRel	true	colocaron	ataques
+Relation	T4	T9	NoRel	true	colocaron	bombardeo
+Relation	T5	T1	NoRel	true	fallecidos	atentado
+Relation	T5	T13	NoRel	true	fallecidos	reunión
+Relation	T5	T4	NoRel	true	fallecidos	colocaron
+Relation	T5	T6	NoRel	true	fallecidos	dijo
+Relation	T5	T7	NoRel	true	fallecidos	entrevista
+Relation	T5	T8	NoRel	true	fallecidos	ataques
+Relation	T6	T0	NoRel	true	dijo	calificó
+Relation	T6	T4	NoRel	true	dijo	colocaron
+Relation	T6	T5	NoRel	true	dijo	fallecidos
+Relation	T6	T9	NoRel	true	dijo	bombardeo
+Relation	T7	T0	NoRel	true	entrevista	calificó
+Relation	T7	T11	NoRel	true	entrevista	anunció
+Relation	T7	T12	NoRel	true	entrevista	celebración
+Relation	T7	T13	NoRel	true	entrevista	reunión
+Relation	T7	T14	NoRel	true	entrevista	emergencia
+Relation	T7	T3	NoRel	true	entrevista	marcharon
+Relation	T8	T11	NoRel	true	ataques	anunció
+Relation	T8	T9	NoRel	true	ataques	bombardeo
+Relation	T9	T0	NoRel	true	bombardeo	calificó
+Relation	T9	T1	NoRel	true	bombardeo	atentado
+Relation	T9	T10	NoRel	true	bombardeo	ataque
+Relation	T9	T11	NoRel	true	bombardeo	anunció
+Relation	T9	T12	NoRel	true	bombardeo	celebración
+Relation	T9	T14	NoRel	true	bombardeo	emergencia
+Relation	T9	T15	NoRel	true	bombardeo	abordar
+Relation	T9	T2	NoRel	true	bombardeo	derribo
+Relation	T9	T3	NoRel	true	bombardeo	marcharon
+Relation	T9	T5	NoRel	true	bombardeo	fallecidos
+Relation	T9	T6	NoRel	true	bombardeo	dijo
+Relation	T9	T7	NoRel	true	bombardeo	entrevista

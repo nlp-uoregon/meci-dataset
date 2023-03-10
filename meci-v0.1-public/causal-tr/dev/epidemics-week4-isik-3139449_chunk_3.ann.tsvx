@@ -1,0 +1,31 @@
+Text	Bir elma ile yumurta büyüklüğü arasında olan bu yumrulara _ gavoccioli ( Baloncuk ) _ adını verdiler .	Ve vücudun bu iki bölümünde ortaya çıkan ölümcül gavoccioli vücuda , çok kısa bir süre içinde , gelişi güzel bir şekilde yayılmaya başladı ; daha sonra hastalığın semptomları kollarda , uyluklarda ve vücudun geri kalan her yerinde siyah ve mor lekelere dönüştü - bazıları büyük iken bazıları küçük ve yayılmış şekildeydi .	Ve gavoccioli yaklaşan ölümün kesin bir habercisi olduğu gibi , onlarla temas edenler için de aynı anlama geldi .	Ne bir doktorun takviyesi ne de tıbbın gücü bu hastalığı tedavi etmek için bir şey yapamaz ; ya hastalığın doğası hiç bir tedavi sağlanamayacak şekildeydi ya da doktorlar cahilliklerinden hastalığın çaresini bulamadılar .	Her halükarda hastaların çok azı bu hastalığı atlattı ve hemen hemen hepsi önceden açıkladığım semptomların ortaya çıkmasından yaklaşık üç gün sonra öldü .
+Event	T1	başladı	EVENT	234
+Event	T2	dönüştü	EVENT	356
+Event	T3	yayılmış	EVENT	404
+Event	T4	atlattı	EVENT	808
+Event	T6	öldü	EVENT	911
+Event	T7	çıkan	EVENT	138
+Event	T8	ölümün	EVENT	449
+Event	T5	çıkmasından	EVENT	877
+Relation	T4	T6	CauseEffect	true	atlattı	öldü
+Relation	T6	T4	EffectCause	true	öldü	atlattı
+Relation	T1	T3	NoRel	true	başladı	yayılmış
+Relation	T1	T4	NoRel	true	başladı	atlattı
+Relation	T1	T8	NoRel	true	başladı	ölümün
+Relation	T2	T4	NoRel	true	dönüştü	atlattı
+Relation	T2	T7	NoRel	true	dönüştü	çıkan
+Relation	T3	T2	NoRel	true	yayılmış	dönüştü
+Relation	T3	T6	NoRel	true	yayılmış	öldü
+Relation	T3	T7	NoRel	true	yayılmış	çıkan
+Relation	T3	T8	NoRel	true	yayılmış	ölümün
+Relation	T4	T2	NoRel	true	atlattı	dönüştü
+Relation	T4	T5	NoRel	true	atlattı	çıkmasından
+Relation	T4	T7	NoRel	true	atlattı	çıkan
+Relation	T6	T1	NoRel	true	öldü	başladı
+Relation	T6	T2	NoRel	true	öldü	dönüştü
+Relation	T7	T4	NoRel	true	çıkan	atlattı
+Relation	T7	T6	NoRel	true	çıkan	öldü
+Relation	T8	T1	NoRel	true	ölümün	başladı
+Relation	T8	T2	NoRel	true	ölümün	dönüştü
+Relation	T8	T3	NoRel	true	ölümün	yayılmış
+Relation	T8	T6	NoRel	true	ölümün	öldü

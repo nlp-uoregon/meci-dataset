@@ -1,0 +1,52 @@
+Text	Özellikle köylerdeki yapı malzemesinin kerpiç olması ölü sayısının artmasına sebep oldu .	Depremin ardından ulaşım yetersizlikleri nedeniyle kırsal bölgelere yardımların ulaştırılması gecikti .	Deprem sonucu Lice , Hani , Hazro , Kulp , Dicle , Silvan , Ergani ve Diyarbakır çevresindeki yapıların 8.159’u ağır , 4.550’si orta ve 7.283’ü hafif hasar gördü ve ölümler meydana geldi .	Elazığ , Şanlıurfa , Mardin , Muş , Siirt'te maddi hasar meydana geldi .	Dönemin başbakanı Süleyman Demirel ve Cumhuriyet Halk Partisi başkanı Bülent Ecevit afet bölgesini ziyaret etti .
+Event	T0	ölü	EVENT	53
+Event	T1	Depremin	EVENT	90
+Event	T2	gecikti	EVENT	184
+Event	T3	gördü	EVENT	350
+Event	T5	hasar	EVENT	434
+Event	T8	artmasına	EVENT	67
+Event	T9	Deprem	EVENT	194
+Event	T4	ölümler	EVENT	359
+Event	T6	ziyaret etti	EVENT	555
+Relation	T1	T0	CauseEffect	true	Depremin	ölü
+Relation	T0	T1	EffectCause	true	ölü	Depremin
+Relation	T1	T4	CauseEffect	true	Depremin	ölümler
+Relation	T4	T1	EffectCause	true	ölümler	Depremin
+Relation	T1	T3	CauseEffect	true	Depremin	gördü
+Relation	T3	T1	EffectCause	true	gördü	Depremin
+Relation	T1	T5	CauseEffect	true	Depremin	hasar
+Relation	T5	T1	EffectCause	true	hasar	Depremin
+Relation	T1	T6	CauseEffect	true	Depremin	ziyaret etti
+Relation	T6	T1	EffectCause	true	ziyaret etti	Depremin
+Relation	T0	T2	NoRel	true	ölü	gecikti
+Relation	T0	T3	NoRel	true	ölü	gördü
+Relation	T0	T4	NoRel	true	ölü	ölümler
+Relation	T0	T5	NoRel	true	ölü	hasar
+Relation	T0	T6	NoRel	true	ölü	ziyaret etti
+Relation	T0	T8	NoRel	true	ölü	artmasına
+Relation	T1	T8	NoRel	true	Depremin	artmasına
+Relation	T1	T9	NoRel	true	Depremin	Deprem
+Relation	T2	T5	NoRel	true	gecikti	hasar
+Relation	T2	T6	NoRel	true	gecikti	ziyaret etti
+Relation	T2	T8	NoRel	true	gecikti	artmasına
+Relation	T2	T9	NoRel	true	gecikti	Deprem
+Relation	T3	T4	NoRel	true	gördü	ölümler
+Relation	T3	T5	NoRel	true	gördü	hasar
+Relation	T4	T0	NoRel	true	ölümler	ölü
+Relation	T4	T5	NoRel	true	ölümler	hasar
+Relation	T4	T9	NoRel	true	ölümler	Deprem
+Relation	T5	T6	NoRel	true	hasar	ziyaret etti
+Relation	T5	T8	NoRel	true	hasar	artmasına
+Relation	T6	T2	NoRel	true	ziyaret etti	gecikti
+Relation	T6	T3	NoRel	true	ziyaret etti	gördü
+Relation	T6	T4	NoRel	true	ziyaret etti	ölümler
+Relation	T6	T8	NoRel	true	ziyaret etti	artmasına
+Relation	T6	T9	NoRel	true	ziyaret etti	Deprem
+Relation	T8	T1	NoRel	true	artmasına	Depremin
+Relation	T8	T4	NoRel	true	artmasına	ölümler
+Relation	T8	T5	NoRel	true	artmasına	hasar
+Relation	T8	T6	NoRel	true	artmasına	ziyaret etti
+Relation	T9	T3	NoRel	true	Deprem	gördü
+Relation	T9	T4	NoRel	true	Deprem	ölümler
+Relation	T9	T6	NoRel	true	Deprem	ziyaret etti
+Relation	T9	T8	NoRel	true	Deprem	artmasına

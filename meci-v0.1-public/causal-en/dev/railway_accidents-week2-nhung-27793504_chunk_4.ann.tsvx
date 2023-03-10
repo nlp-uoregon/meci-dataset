@@ -1,0 +1,86 @@
+Text	One misunderstanding that contributed in large part to the disaster was that Takoma Park station was closed between 6:30 pm and 6:30 am each day , when no signals would have been displayed ; in these circumstances the previous block ( controlled by signals at Silver Spring ) extends beyond Terra Cotta .	No. 2120 had received a clear signal from Silver Spring , so the engineer believed he was cleared through to University .	Further inquiries also revealed that the engineer had been on almost continuous duty for 33 hours and had not had a full night 's sleep for 57 hours .	Four men were charged with manslaughter — the engineer , conductor , brakeman and fireman of train 2120 — but after a lengthy trial all were found not guilty due to lack of evidence .	Nonetheless , the Interstate Commerce Commission blamed them , claiming all were negligent .
+Event	T0	misunderstanding	EVENT	4
+Event	T1	contributed	EVENT	26
+Event	T10	inquiries	EVENT	435
+Event	T11	revealed	EVENT	450
+Event	T12	sleep	EVENT	557
+Event	T13	charged	EVENT	592
+Event	T14	manslaughter	EVENT	605
+Event	T15	trial	EVENT	704
+Event	T16	blamed	EVENT	811
+Event	T17	claiming	EVENT	825
+Event	T18	negligent	EVENT	843
+Event	T19	cleared	EVENT	395
+Event	T2	disaster	EVENT	59
+Event	T20	duty	EVENT	507
+Event	T21	lack	EVENT	743
+Event	T3	closed	EVENT	101
+Event	T4	displayed	EVENT	179
+Event	T5	controlled	EVENT	235
+Event	T6	extends	EVENT	276
+Event	T7	received	EVENT	318
+Event	T8	signal	EVENT	335
+Event	T9	believed	EVENT	379
+Relation	T0	T2	CauseEffect	true	misunderstanding	disaster
+Relation	T2	T0	EffectCause	true	disaster	misunderstanding
+Relation	T3	T2	CauseEffect	true	closed	disaster
+Relation	T2	T3	EffectCause	true	disaster	closed
+Relation	T4	T6	CauseEffect	true	displayed	extends
+Relation	T6	T4	EffectCause	true	extends	displayed
+Relation	T7	T9	CauseEffect	true	received	believed
+Relation	T9	T7	EffectCause	true	believed	received
+Relation	T19	T9	CauseEffect	true	cleared	believed
+Relation	T9	T19	EffectCause	true	believed	cleared
+Relation	T20	T12	CauseEffect	true	duty	sleep
+Relation	T12	T20	EffectCause	true	sleep	duty
+Relation	T13	T15	CauseEffect	true	charged	trial
+Relation	T15	T13	EffectCause	true	trial	charged
+Relation	T18	T16	CauseEffect	true	negligent	blamed
+Relation	T16	T18	EffectCause	true	blamed	negligent
+Relation	T0	T1	NoRel	true	misunderstanding	contributed
+Relation	T0	T8	NoRel	true	misunderstanding	signal
+Relation	T10	T0	NoRel	true	inquiries	misunderstanding
+Relation	T10	T14	NoRel	true	inquiries	manslaughter
+Relation	T10	T17	NoRel	true	inquiries	claiming
+Relation	T10	T8	NoRel	true	inquiries	signal
+Relation	T11	T0	NoRel	true	revealed	misunderstanding
+Relation	T12	T18	NoRel	true	sleep	negligent
+Relation	T12	T9	NoRel	true	sleep	believed
+Relation	T13	T14	NoRel	true	charged	manslaughter
+Relation	T13	T2	NoRel	true	charged	disaster
+Relation	T13	T21	NoRel	true	charged	lack
+Relation	T13	T8	NoRel	true	charged	signal
+Relation	T14	T10	NoRel	true	manslaughter	inquiries
+Relation	T14	T13	NoRel	true	manslaughter	charged
+Relation	T14	T18	NoRel	true	manslaughter	negligent
+Relation	T14	T5	NoRel	true	manslaughter	controlled
+Relation	T14	T9	NoRel	true	manslaughter	believed
+Relation	T15	T20	NoRel	true	trial	duty
+Relation	T15	T5	NoRel	true	trial	controlled
+Relation	T15	T6	NoRel	true	trial	extends
+Relation	T16	T4	NoRel	true	blamed	displayed
+Relation	T16	T5	NoRel	true	blamed	controlled
+Relation	T17	T11	NoRel	true	claiming	revealed
+Relation	T17	T16	NoRel	true	claiming	blamed
+Relation	T17	T18	NoRel	true	claiming	negligent
+Relation	T17	T2	NoRel	true	claiming	disaster
+Relation	T17	T20	NoRel	true	claiming	duty
+Relation	T19	T4	NoRel	true	cleared	displayed
+Relation	T2	T4	NoRel	true	disaster	displayed
+Relation	T20	T13	NoRel	true	duty	charged
+Relation	T20	T15	NoRel	true	duty	trial
+Relation	T20	T17	NoRel	true	duty	claiming
+Relation	T20	T9	NoRel	true	duty	believed
+Relation	T21	T0	NoRel	true	lack	misunderstanding
+Relation	T21	T2	NoRel	true	lack	disaster
+Relation	T21	T7	NoRel	true	lack	received
+Relation	T3	T6	NoRel	true	closed	extends
+Relation	T3	T9	NoRel	true	closed	believed
+Relation	T4	T10	NoRel	true	displayed	inquiries
+Relation	T5	T4	NoRel	true	controlled	displayed
+Relation	T6	T0	NoRel	true	extends	misunderstanding
+Relation	T6	T2	NoRel	true	extends	disaster
+Relation	T7	T3	NoRel	true	received	closed
+Relation	T7	T8	NoRel	true	received	signal
+Relation	T8	T19	NoRel	true	signal	cleared
+Relation	T9	T0	NoRel	true	believed	misunderstanding

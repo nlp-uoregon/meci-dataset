@@ -1,0 +1,51 @@
+Text	Uçaktaki herkes ölmüştü .	Sorumlu pilotun bulutların içinde tırmanırken muhtemelen uzaysal oryantasyon bozukluğu yaşadığı belirlendi .	Uçak bunun ardından dalışa girdi .	Mürettebat dalıştan kurtulmaya çalışırken , uçağın gövdesi aşırı yüklendi ve sağ kanadın kopmasına neden oldu .	Kategori : 1948'de Kazakistan Kategori : Kazakistan SSC'deki havacılık kazaları ve olayları Kategori : 1948'de havacılık kazaları ve olayları Kategori : Lisunov Li - 2 içeren kazalar ve olaylar Kategori : Aeroflot kazaları ve olayları
+Event	T0	ölmüştü	EVENT	16
+Event	T1	tırmanırken	EVENT	60
+Event	T2	belirlendi	EVENT	122
+Event	T3	girdi	EVENT	162
+Event	T4	yüklendi	EVENT	235
+Event	T9	bozukluğu	EVENT	103
+Event	T10	dalıştan	EVENT	181
+Event	T11	kurtulmaya	EVENT	190
+Event	T12	çalışırken	EVENT	201
+Event	T13	kopmasına	EVENT	259
+Relation	T9	T3	CauseEffect	true	bozukluğu	girdi
+Relation	T3	T9	EffectCause	true	girdi	bozukluğu
+Relation	T12	T4	CauseEffect	true	çalışırken	yüklendi
+Relation	T4	T12	EffectCause	true	yüklendi	çalışırken
+Relation	T4	T13	CauseEffect	true	yüklendi	kopmasına
+Relation	T13	T4	EffectCause	true	kopmasına	yüklendi
+Relation	T13	T0	CauseEffect	true	kopmasına	ölmüştü
+Relation	T0	T13	EffectCause	true	ölmüştü	kopmasına
+Relation	T0	T11	NoRel	true	ölmüştü	kurtulmaya
+Relation	T0	T2	NoRel	true	ölmüştü	belirlendi
+Relation	T0	T4	NoRel	true	ölmüştü	yüklendi
+Relation	T0	T9	NoRel	true	ölmüştü	bozukluğu
+Relation	T1	T2	NoRel	true	tırmanırken	belirlendi
+Relation	T1	T3	NoRel	true	tırmanırken	girdi
+Relation	T1	T4	NoRel	true	tırmanırken	yüklendi
+Relation	T1	T9	NoRel	true	tırmanırken	bozukluğu
+Relation	T10	T1	NoRel	true	dalıştan	tırmanırken
+Relation	T10	T11	NoRel	true	dalıştan	kurtulmaya
+Relation	T10	T13	NoRel	true	dalıştan	kopmasına
+Relation	T10	T4	NoRel	true	dalıştan	yüklendi
+Relation	T10	T9	NoRel	true	dalıştan	bozukluğu
+Relation	T11	T0	NoRel	true	kurtulmaya	ölmüştü
+Relation	T11	T13	NoRel	true	kurtulmaya	kopmasına
+Relation	T11	T2	NoRel	true	kurtulmaya	belirlendi
+Relation	T11	T4	NoRel	true	kurtulmaya	yüklendi
+Relation	T11	T9	NoRel	true	kurtulmaya	bozukluğu
+Relation	T12	T0	NoRel	true	çalışırken	ölmüştü
+Relation	T12	T10	NoRel	true	çalışırken	dalıştan
+Relation	T12	T3	NoRel	true	çalışırken	girdi
+Relation	T13	T1	NoRel	true	kopmasına	tırmanırken
+Relation	T13	T2	NoRel	true	kopmasına	belirlendi
+Relation	T2	T12	NoRel	true	belirlendi	çalışırken
+Relation	T2	T13	NoRel	true	belirlendi	kopmasına
+Relation	T2	T3	NoRel	true	belirlendi	girdi
+Relation	T3	T12	NoRel	true	girdi	çalışırken
+Relation	T3	T4	NoRel	true	girdi	yüklendi
+Relation	T4	T10	NoRel	true	yüklendi	dalıştan
+Relation	T4	T11	NoRel	true	yüklendi	kurtulmaya
+Relation	T9	T11	NoRel	true	bozukluğu	kurtulmaya
+Relation	T9	T4	NoRel	true	bozukluğu	yüklendi

@@ -1,0 +1,78 @@
+Text	Buraya gelen kişiler İskandinavya'dan batıda olduklarından adalara bunu anlatan Vestmann adını verdiler .	Tarihi boyunca içme suyu yokluğu ile mücadele etmesine ve sık sık korsanların saldırılarına maruz kalmasına rağmen Heimaey , kısa zamanda balıkçılığın hızla gelişmesiyle kalkındı ve İzlanda'da bu sektörün en önemli merkezi hâline geldi .	Ülkenin güneyindeki iyi birkaç limandan biri buraya kuruldu ve büyük oranlarda balık sağlayarak daha çok kazanç sağladı .	Takımadada ilk yerleşimin gerçekleşiği tarihten başlayarak 1963'e dek bilinen hiçbir volkanik püskürme olmamıştır .	Heimaey'in 20 kilometre güneybatısında başlayarak 4 yıl boyunca süren ve sonunda Surtsey Adası'nı oluşturan hareketlenme bölgede bilinen ilk patlamadır .
+Event	T2	kalkındı	EVENT	276
+Event	T3	geldi	EVENT	336
+Event	T4	sağladı	EVENT	456
+Event	T5	gerçekleşiği	EVENT	492
+Event	T6	püskürme	EVENT	560
+Event	T7	hareketlenme	EVENT	690
+Event	T8	patlamadır	EVENT	723
+Event	T1	yokluğu	EVENT	131
+Event	T9	etmesine	EVENT	152
+Event	T10	kalmasına	EVENT	204
+Event	T11	gelişmesiyle	EVENT	263
+Event	T12	kuruldu	EVENT	396
+Event	T13	sağlayarak	EVENT	429
+Relation	T1	T9	CauseEffect	true	yokluğu	etmesine
+Relation	T9	T1	EffectCause	true	etmesine	yokluğu
+Relation	T11	T2	CauseEffect	true	gelişmesiyle	kalkındı
+Relation	T2	T11	EffectCause	true	kalkındı	gelişmesiyle
+Relation	T2	T3	CauseEffect	true	kalkındı	geldi
+Relation	T3	T2	EffectCause	true	geldi	kalkındı
+Relation	T3	T12	CauseEffect	true	geldi	kuruldu
+Relation	T12	T3	EffectCause	true	kuruldu	geldi
+Relation	T13	T4	CauseEffect	true	sağlayarak	sağladı
+Relation	T4	T13	EffectCause	true	sağladı	sağlayarak
+Relation	T12	T13	CauseEffect	true	kuruldu	sağlayarak
+Relation	T13	T12	EffectCause	true	sağlayarak	kuruldu
+Relation	T1	T12	NoRel	true	yokluğu	kuruldu
+Relation	T1	T13	NoRel	true	yokluğu	sağlayarak
+Relation	T1	T2	NoRel	true	yokluğu	kalkındı
+Relation	T1	T3	NoRel	true	yokluğu	geldi
+Relation	T1	T5	NoRel	true	yokluğu	gerçekleşiği
+Relation	T1	T8	NoRel	true	yokluğu	patlamadır
+Relation	T10	T2	NoRel	true	kalmasına	kalkındı
+Relation	T10	T5	NoRel	true	kalmasına	gerçekleşiği
+Relation	T11	T10	NoRel	true	gelişmesiyle	kalmasına
+Relation	T11	T4	NoRel	true	gelişmesiyle	sağladı
+Relation	T11	T5	NoRel	true	gelişmesiyle	gerçekleşiği
+Relation	T11	T6	NoRel	true	gelişmesiyle	püskürme
+Relation	T11	T7	NoRel	true	gelişmesiyle	hareketlenme
+Relation	T12	T1	NoRel	true	kuruldu	yokluğu
+Relation	T12	T10	NoRel	true	kuruldu	kalmasına
+Relation	T12	T4	NoRel	true	kuruldu	sağladı
+Relation	T12	T6	NoRel	true	kuruldu	püskürme
+Relation	T13	T10	NoRel	true	sağlayarak	kalmasına
+Relation	T13	T11	NoRel	true	sağlayarak	gelişmesiyle
+Relation	T2	T1	NoRel	true	kalkındı	yokluğu
+Relation	T2	T12	NoRel	true	kalkındı	kuruldu
+Relation	T2	T6	NoRel	true	kalkındı	püskürme
+Relation	T2	T7	NoRel	true	kalkındı	hareketlenme
+Relation	T2	T9	NoRel	true	kalkındı	etmesine
+Relation	T3	T1	NoRel	true	geldi	yokluğu
+Relation	T3	T10	NoRel	true	geldi	kalmasına
+Relation	T3	T11	NoRel	true	geldi	gelişmesiyle
+Relation	T3	T6	NoRel	true	geldi	püskürme
+Relation	T3	T8	NoRel	true	geldi	patlamadır
+Relation	T3	T9	NoRel	true	geldi	etmesine
+Relation	T4	T11	NoRel	true	sağladı	gelişmesiyle
+Relation	T4	T2	NoRel	true	sağladı	kalkındı
+Relation	T4	T5	NoRel	true	sağladı	gerçekleşiği
+Relation	T5	T1	NoRel	true	gerçekleşiği	yokluğu
+Relation	T5	T12	NoRel	true	gerçekleşiği	kuruldu
+Relation	T5	T2	NoRel	true	gerçekleşiği	kalkındı
+Relation	T5	T6	NoRel	true	gerçekleşiği	püskürme
+Relation	T5	T8	NoRel	true	gerçekleşiği	patlamadır
+Relation	T6	T11	NoRel	true	püskürme	gelişmesiyle
+Relation	T6	T5	NoRel	true	püskürme	gerçekleşiği
+Relation	T6	T7	NoRel	true	püskürme	hareketlenme
+Relation	T6	T8	NoRel	true	püskürme	patlamadır
+Relation	T7	T2	NoRel	true	hareketlenme	kalkındı
+Relation	T7	T3	NoRel	true	hareketlenme	geldi
+Relation	T8	T12	NoRel	true	patlamadır	kuruldu
+Relation	T8	T3	NoRel	true	patlamadır	geldi
+Relation	T8	T5	NoRel	true	patlamadır	gerçekleşiği
+Relation	T9	T12	NoRel	true	etmesine	kuruldu
+Relation	T9	T5	NoRel	true	etmesine	gerçekleşiği
+Relation	T9	T6	NoRel	true	etmesine	püskürme
+Relation	T9	T7	NoRel	true	etmesine	hareketlenme
+Relation	T9	T8	NoRel	true	etmesine	patlamadır

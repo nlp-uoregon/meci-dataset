@@ -1,0 +1,60 @@
+Text	] [ Liceo Italia de Chaitén destruido por el desborde del río Blanco .	] Una vez iniciada la erupción , Sernageomin estableció alerta volcánica roja , y activó la preparación de equipamiento para monitoreo sísmico y la movilización de personal del Observatorio Vulcanológico de los Andes del Sur , desde Temuco a Chaitén .	El organismo técnico sugirió una zona de exclusión total en un radio de 30 kilómetros en torno al macizo .	En tanto , a las 02:00 hora local del 2 de mayo de 2008 , las autoridades regionales de la Onemi decretaron alerta roja administrativa e iniciaron la evacuación de los sectores más afectados por las cenizas .	En 24 horas , más de cuatro mil personas fueron evacuadas exitosamente desde las zonas de riesgo .
+Event	T0	destruido	EVENT	28
+Event	T1	desborde	EVENT	45
+Event	T2	iniciada	EVENT	81
+Event	T3	erupción	EVENT	93
+Event	T4	activó	EVENT	153
+Event	T5	preparación	EVENT	163
+Event	T6	movilización	EVENT	219
+Event	T7	sugirió	EVENT	344
+Event	T8	iniciaron	EVENT	567
+Event	T9	evacuación	EVENT	580
+Event	T10	afectados	EVENT	611
+Event	T11	cenizas	EVENT	629
+Event	T12	evacuadas	EVENT	687
+Relation	T1	T0	CauseEffect	true	desborde	destruido
+Relation	T0	T1	EffectCause	true	destruido	desborde
+Relation	T0	T11	NoRel	true	destruido	cenizas
+Relation	T0	T5	NoRel	true	destruido	preparación
+Relation	T0	T7	NoRel	true	destruido	sugirió
+Relation	T0	T9	NoRel	true	destruido	evacuación
+Relation	T1	T10	NoRel	true	desborde	afectados
+Relation	T1	T2	NoRel	true	desborde	iniciada
+Relation	T1	T3	NoRel	true	desborde	erupción
+Relation	T1	T8	NoRel	true	desborde	iniciaron
+Relation	T10	T0	NoRel	true	afectados	destruido
+Relation	T10	T7	NoRel	true	afectados	sugirió
+Relation	T11	T0	NoRel	true	cenizas	destruido
+Relation	T11	T12	NoRel	true	cenizas	evacuadas
+Relation	T11	T2	NoRel	true	cenizas	iniciada
+Relation	T11	T4	NoRel	true	cenizas	activó
+Relation	T11	T6	NoRel	true	cenizas	movilización
+Relation	T11	T7	NoRel	true	cenizas	sugirió
+Relation	T11	T9	NoRel	true	cenizas	evacuación
+Relation	T12	T1	NoRel	true	evacuadas	desborde
+Relation	T12	T3	NoRel	true	evacuadas	erupción
+Relation	T12	T8	NoRel	true	evacuadas	iniciaron
+Relation	T2	T3	NoRel	true	iniciada	erupción
+Relation	T3	T11	NoRel	true	erupción	cenizas
+Relation	T3	T2	NoRel	true	erupción	iniciada
+Relation	T4	T11	NoRel	true	activó	cenizas
+Relation	T4	T12	NoRel	true	activó	evacuadas
+Relation	T4	T2	NoRel	true	activó	iniciada
+Relation	T4	T5	NoRel	true	activó	preparación
+Relation	T4	T8	NoRel	true	activó	iniciaron
+Relation	T5	T11	NoRel	true	preparación	cenizas
+Relation	T5	T6	NoRel	true	preparación	movilización
+Relation	T6	T1	NoRel	true	movilización	desborde
+Relation	T6	T3	NoRel	true	movilización	erupción
+Relation	T7	T1	NoRel	true	sugirió	desborde
+Relation	T7	T10	NoRel	true	sugirió	afectados
+Relation	T7	T12	NoRel	true	sugirió	evacuadas
+Relation	T7	T5	NoRel	true	sugirió	preparación
+Relation	T7	T9	NoRel	true	sugirió	evacuación
+Relation	T8	T10	NoRel	true	iniciaron	afectados
+Relation	T8	T12	NoRel	true	iniciaron	evacuadas
+Relation	T8	T3	NoRel	true	iniciaron	erupción
+Relation	T8	T4	NoRel	true	iniciaron	activó
+Relation	T9	T0	NoRel	true	evacuación	destruido
+Relation	T9	T1	NoRel	true	evacuación	desborde
+Relation	T9	T8	NoRel	true	evacuación	iniciaron

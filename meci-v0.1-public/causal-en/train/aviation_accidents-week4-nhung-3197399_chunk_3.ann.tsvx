@@ -1,0 +1,43 @@
+Text	Barnwell was killed in an aircraft crash in 1938 , piloting a small aircraft he had designed and had constructed privately , the Barnwell B.S.W. .	He was thrown into the air when he struck a bump when taking off from Bristol ( Whitchurch ) Airport and then stalled , crashing onto a nearby road	Frank and Marjorie ( née Sandes ) Barnwell had three sons who all lost their lives in the second world war :	- Pilot Officer David Usher Barnwell DFC , RAFVR , of No. 607 Squadron RAF died aged 19 on 14 October 1941 .	- Flight Lieutenant Richard Antony Barnwell , RAF of No. 102 Squadron RAF died aged 24 on 29 October 1940 .
+Event	T0	killed	EVENT	13
+Event	T1	crash	EVENT	35
+Event	T2	piloting	EVENT	51
+Event	T3	designed	EVENT	84
+Event	T4	constructed	EVENT	101
+Event	T5	struck	EVENT	182
+Event	T6	bump	EVENT	191
+Event	T7	stalled	EVENT	257
+Event	T8	lost	EVENT	361
+Event	T9	lives	EVENT	372
+Event	T10	thrown	EVENT	154
+Event	T11	taking off	EVENT	201
+Event	T12	crashing	EVENT	267
+Event	T13	second world war	EVENT	385
+Event	T14	died	EVENT	479
+Event	T15	died	EVENT	587
+Relation	T1	T0	CauseEffect	true	crash	killed
+Relation	T0	T1	EffectCause	true	killed	crash
+Relation	T13	T8	CauseEffect	true	second world war	lost
+Relation	T8	T13	EffectCause	true	lost	second world war
+Relation	T0	T13	NoRel	true	killed	second world war
+Relation	T1	T6	NoRel	true	crash	bump
+Relation	T10	T2	NoRel	true	thrown	piloting
+Relation	T10	T8	NoRel	true	thrown	lost
+Relation	T11	T10	NoRel	true	taking off	thrown
+Relation	T12	T7	NoRel	true	crashing	stalled
+Relation	T14	T3	NoRel	true	died	designed
+Relation	T14	T4	NoRel	true	died	constructed
+Relation	T14	T9	NoRel	true	died	lives
+Relation	T15	T8	NoRel	true	died	lost
+Relation	T3	T0	NoRel	true	designed	killed
+Relation	T3	T9	NoRel	true	designed	lives
+Relation	T5	T12	NoRel	true	struck	crashing
+Relation	T5	T6	NoRel	true	struck	bump
+Relation	T5	T7	NoRel	true	struck	stalled
+Relation	T6	T9	NoRel	true	bump	lives
+Relation	T7	T10	NoRel	true	stalled	thrown
+Relation	T8	T15	NoRel	true	lost	died
+Relation	T8	T3	NoRel	true	lost	designed
+Relation	T8	T4	NoRel	true	lost	constructed
+Relation	T8	T9	NoRel	true	lost	lives
+Relation	T9	T14	NoRel	true	lives	died

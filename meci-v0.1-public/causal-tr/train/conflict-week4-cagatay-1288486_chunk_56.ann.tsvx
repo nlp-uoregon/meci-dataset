@@ -1,0 +1,57 @@
+Text	21 Ekim’de Saksonya İşyeri konseyleri , 140 fabrika konseyi , 120 sendika şubesi , 79 kontrol komitesi , 66 parti şubesi ve SPD’linde dahil olduğu 498 delegeyle bir toplantı gerçekleştirdi .	SPD’nin genel grev ve ayaklanmadan yana olmadığı ortaya çıkınca işçilerin büyük çoğunluğu KPD’den yana olmasına rağmen , KPD tek başına grev çağrısı yapmaya cesaret edemedi .	Saksonya ve Thüringen’deki “ işçi hükûmetleri ” mücadele edilmeksizin yıkıldı .	Sadece merkezin kararırından haberi olmayan KPD’nin Hamburg örgütü 23 Ekim’de ayaklandı .	İşçi sınıfından kopuk girişilen bu ayaklanma başarısızlıkla sonuçlandı .
+Event	T1	grev	EVENT	205
+Event	T2	ayaklanmadan	EVENT	213
+Event	T3	mücadele	EVENT	414
+Event	T4	yıkıldı	EVENT	436
+Event	T5	ayaklandı	EVENT	524
+Event	T6	girişilen	EVENT	558
+Event	T8	toplantı	EVENT	165
+Event	T9	çağrısı	EVENT	332
+Event	T10	kararırından	EVENT	462
+Event	T11	ayaklanma	EVENT	571
+Event	T7	başarısızlıkla	EVENT	581
+Event	T12	ortaya çıkınca	EVENT	240
+Relation	T6	T7	CauseEffect	true	girişilen	başarısızlıkla
+Relation	T7	T6	EffectCause	true	başarısızlıkla	girişilen
+Relation	T1	T11	NoRel	true	grev	ayaklanma
+Relation	T1	T7	NoRel	true	grev	başarısızlıkla
+Relation	T10	T3	NoRel	true	kararırından	mücadele
+Relation	T10	T4	NoRel	true	kararırından	yıkıldı
+Relation	T10	T5	NoRel	true	kararırından	ayaklandı
+Relation	T10	T7	NoRel	true	kararırından	başarısızlıkla
+Relation	T10	T9	NoRel	true	kararırından	çağrısı
+Relation	T11	T12	NoRel	true	ayaklanma	ortaya çıkınca
+Relation	T11	T3	NoRel	true	ayaklanma	mücadele
+Relation	T11	T4	NoRel	true	ayaklanma	yıkıldı
+Relation	T11	T7	NoRel	true	ayaklanma	başarısızlıkla
+Relation	T12	T1	NoRel	true	ortaya çıkınca	grev
+Relation	T12	T2	NoRel	true	ortaya çıkınca	ayaklanmadan
+Relation	T12	T6	NoRel	true	ortaya çıkınca	girişilen
+Relation	T12	T9	NoRel	true	ortaya çıkınca	çağrısı
+Relation	T2	T3	NoRel	true	ayaklanmadan	mücadele
+Relation	T2	T7	NoRel	true	ayaklanmadan	başarısızlıkla
+Relation	T2	T8	NoRel	true	ayaklanmadan	toplantı
+Relation	T2	T9	NoRel	true	ayaklanmadan	çağrısı
+Relation	T3	T10	NoRel	true	mücadele	kararırından
+Relation	T3	T12	NoRel	true	mücadele	ortaya çıkınca
+Relation	T3	T5	NoRel	true	mücadele	ayaklandı
+Relation	T4	T2	NoRel	true	yıkıldı	ayaklanmadan
+Relation	T4	T5	NoRel	true	yıkıldı	ayaklandı
+Relation	T4	T7	NoRel	true	yıkıldı	başarısızlıkla
+Relation	T5	T11	NoRel	true	ayaklandı	ayaklanma
+Relation	T5	T7	NoRel	true	ayaklandı	başarısızlıkla
+Relation	T5	T8	NoRel	true	ayaklandı	toplantı
+Relation	T5	T9	NoRel	true	ayaklandı	çağrısı
+Relation	T6	T11	NoRel	true	girişilen	ayaklanma
+Relation	T6	T3	NoRel	true	girişilen	mücadele
+Relation	T6	T4	NoRel	true	girişilen	yıkıldı
+Relation	T6	T5	NoRel	true	girişilen	ayaklandı
+Relation	T7	T3	NoRel	true	başarısızlıkla	mücadele
+Relation	T7	T4	NoRel	true	başarısızlıkla	yıkıldı
+Relation	T7	T5	NoRel	true	başarısızlıkla	ayaklandı
+Relation	T8	T11	NoRel	true	toplantı	ayaklanma
+Relation	T8	T12	NoRel	true	toplantı	ortaya çıkınca
+Relation	T8	T9	NoRel	true	toplantı	çağrısı
+Relation	T9	T1	NoRel	true	çağrısı	grev
+Relation	T9	T5	NoRel	true	çağrısı	ayaklandı
+Relation	T9	T7	NoRel	true	çağrısı	başarısızlıkla

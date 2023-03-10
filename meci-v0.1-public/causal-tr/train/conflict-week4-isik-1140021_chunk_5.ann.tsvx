@@ -1,0 +1,47 @@
+Text	Ancak Küba askerleri uçak pistine barikat kurmuşlardır .	Mason arkadaşları için kendini feda edip uçaktan atlar ve barikatı bir uçaksavar yardımıyla yok eder .	Bu sırada Lev Kravchenko ve bir Kübalı asker tarafından yakalanıp bayıltılır .	Uyandığında ise karşısında Fidel Castro , Sovyet komutan Tümgeneral Nikita Dragovich ve onun sağ kolu Albay Lev Kravchenko belirir .	Mason Castro'ya onu öldürdüklerini söyler ancak Castro sadece dublörünü öldürdürdüğünü , planlarını bildiklerini söyler .
+Event	T0	eder	EVENT	153
+Event	T1	bayıltılır	EVENT	226
+Event	T2	belirir	EVENT	362
+Event	T3	söyler	EVENT	407
+Event	T4	öldürdürdüğünü	EVENT	444
+Event	T5	söyler	EVENT	485
+Event	T6	kurmuşlardır	EVENT	42
+Event	T7	atlar	EVENT	106
+Event	T8	yakalanıp	EVENT	216
+Event	T9	Uyandığında	EVENT	239
+Event	T10	öldürdüklerini	EVENT	392
+Relation	T8	T1	CauseEffect	true	yakalanıp	bayıltılır
+Relation	T1	T8	EffectCause	true	bayıltılır	yakalanıp
+Relation	T0	T1	NoRel	true	eder	bayıltılır
+Relation	T0	T10	NoRel	true	eder	öldürdüklerini
+Relation	T0	T2	NoRel	true	eder	belirir
+Relation	T0	T5	NoRel	true	eder	söyler
+Relation	T0	T9	NoRel	true	eder	Uyandığında
+Relation	T1	T3	NoRel	true	bayıltılır	söyler
+Relation	T1	T4	NoRel	true	bayıltılır	öldürdürdüğünü
+Relation	T1	T5	NoRel	true	bayıltılır	söyler
+Relation	T1	T7	NoRel	true	bayıltılır	atlar
+Relation	T10	T2	NoRel	true	öldürdüklerini	belirir
+Relation	T2	T0	NoRel	true	belirir	eder
+Relation	T2	T1	NoRel	true	belirir	bayıltılır
+Relation	T2	T5	NoRel	true	belirir	söyler
+Relation	T3	T10	NoRel	true	söyler	öldürdüklerini
+Relation	T3	T4	NoRel	true	söyler	öldürdürdüğünü
+Relation	T3	T5	NoRel	true	söyler	söyler
+Relation	T3	T8	NoRel	true	söyler	yakalanıp
+Relation	T4	T0	NoRel	true	öldürdürdüğünü	eder
+Relation	T4	T8	NoRel	true	öldürdürdüğünü	yakalanıp
+Relation	T5	T1	NoRel	true	söyler	bayıltılır
+Relation	T5	T2	NoRel	true	söyler	belirir
+Relation	T5	T8	NoRel	true	söyler	yakalanıp
+Relation	T6	T7	NoRel	true	kurmuşlardır	atlar
+Relation	T6	T8	NoRel	true	kurmuşlardır	yakalanıp
+Relation	T7	T5	NoRel	true	atlar	söyler
+Relation	T7	T9	NoRel	true	atlar	Uyandığında
+Relation	T8	T3	NoRel	true	yakalanıp	söyler
+Relation	T8	T4	NoRel	true	yakalanıp	öldürdürdüğünü
+Relation	T8	T6	NoRel	true	yakalanıp	kurmuşlardır
+Relation	T9	T0	NoRel	true	Uyandığında	eder
+Relation	T9	T10	NoRel	true	Uyandığında	öldürdüklerini
+Relation	T9	T3	NoRel	true	Uyandığında	söyler
+Relation	T9	T6	NoRel	true	Uyandığında	kurmuşlardır

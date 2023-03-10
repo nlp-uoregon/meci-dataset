@@ -1,0 +1,55 @@
+Text	Yani bu , HIV ile enfekte olmuş yüz kişiden varsayalım ki % 45'inin , 35. günde ; % 25'inin 50. günde ; % 15'inin 65. günde ; % 10'unun 75. günde ; % 5'inin de 90. günde yeterli antikor seviyesine ulaşacağı anlamına gelir ( Oranlar tamamen kurgusaldır ) .	O halde belirlenmiş olan " üç ay " sınırı , ' en geç antikor üreten bünyeyi '_de hesaba katarak düşünülmüş ' maksimum ' sınırdır .	CDC ( Center of Disease Control - USA ) gibi bazı büyük sağlık örgütleri , testin altıncı ayda tekrarlanması gerektiğini savunmaktadır .	Antikor oluşturma ( serokonversiyon ) süreci üç ayı geçen çok nadir bazı vakalar rapor edilmişse de bunlar o kadar nadirdir ki , tıp makalelerine konu olur .	Birçok sağlık örgütü eğer çok kesin bir risk yoksa , ' altıncı ay ' testini gereksiz bulmakta ve CDC'yi tutucu olmakla eleştirmektedir .
+Event	T4	eleştirmektedir	EVENT	801
+Event	T5	olmuş	EVENT	26
+Event	T6	gelir	EVENT	216
+Event	T7	belirlenmiş	EVENT	264
+Event	T8	düşünülmüş	EVENT	352
+Event	T9	savunmaktadır	EVENT	508
+Event	T3	edilmişse	EVENT	611
+Event	T2	vakalar	EVENT	597
+Event	T1	olur	EVENT	675
+Event	T10	testini	EVENT	750
+Relation	T5	T6	CauseEffect	true	olmuş	gelir
+Relation	T6	T5	EffectCause	true	gelir	olmuş
+Relation	T8	T7	CauseEffect	true	düşünülmüş	belirlenmiş
+Relation	T7	T8	EffectCause	true	belirlenmiş	düşünülmüş
+Relation	T2	T3	CauseEffect	true	vakalar	edilmişse
+Relation	T3	T2	EffectCause	true	edilmişse	vakalar
+Relation	T3	T1	CauseEffect	true	edilmişse	olur
+Relation	T1	T3	EffectCause	true	olur	edilmişse
+Relation	T3	T9	CauseEffect	true	edilmişse	savunmaktadır
+Relation	T9	T3	EffectCause	true	savunmaktadır	edilmişse
+Relation	T3	T10	CauseEffect	true	edilmişse	testini
+Relation	T10	T3	EffectCause	true	testini	edilmişse
+Relation	T10	T4	CauseEffect	true	testini	eleştirmektedir
+Relation	T4	T10	EffectCause	true	eleştirmektedir	testini
+Relation	T1	T4	NoRel	true	olur	eleştirmektedir
+Relation	T1	T9	NoRel	true	olur	savunmaktadır
+Relation	T10	T1	NoRel	true	testini	olur
+Relation	T10	T6	NoRel	true	testini	gelir
+Relation	T10	T7	NoRel	true	testini	belirlenmiş
+Relation	T2	T4	NoRel	true	vakalar	eleştirmektedir
+Relation	T3	T5	NoRel	true	edilmişse	olmuş
+Relation	T3	T6	NoRel	true	edilmişse	gelir
+Relation	T3	T7	NoRel	true	edilmişse	belirlenmiş
+Relation	T4	T1	NoRel	true	eleştirmektedir	olur
+Relation	T4	T3	NoRel	true	eleştirmektedir	edilmişse
+Relation	T4	T5	NoRel	true	eleştirmektedir	olmuş
+Relation	T4	T6	NoRel	true	eleştirmektedir	gelir
+Relation	T4	T9	NoRel	true	eleştirmektedir	savunmaktadır
+Relation	T5	T4	NoRel	true	olmuş	eleştirmektedir
+Relation	T5	T8	NoRel	true	olmuş	düşünülmüş
+Relation	T5	T9	NoRel	true	olmuş	savunmaktadır
+Relation	T6	T10	NoRel	true	gelir	testini
+Relation	T6	T7	NoRel	true	gelir	belirlenmiş
+Relation	T6	T8	NoRel	true	gelir	düşünülmüş
+Relation	T7	T10	NoRel	true	belirlenmiş	testini
+Relation	T7	T9	NoRel	true	belirlenmiş	savunmaktadır
+Relation	T8	T1	NoRel	true	düşünülmüş	olur
+Relation	T8	T2	NoRel	true	düşünülmüş	vakalar
+Relation	T8	T5	NoRel	true	düşünülmüş	olmuş
+Relation	T8	T6	NoRel	true	düşünülmüş	gelir
+Relation	T8	T9	NoRel	true	düşünülmüş	savunmaktadır
+Relation	T9	T1	NoRel	true	savunmaktadır	olur
+Relation	T9	T5	NoRel	true	savunmaktadır	olmuş
+Relation	T9	T7	NoRel	true	savunmaktadır	belirlenmiş

@@ -1,0 +1,93 @@
+Text	Some small soot marks and damage was seen on the surface of the radome , and although there was heat damage inside , there were no holes .	The APU exhaust was damaged with sections of molten metal , but no further damage to the aircraft was revealed .	Tests and inspections of the elevator and autopilot control systems did not reveal any abnormalities .	Examination of meteorological information revealed that the aircraft had been struck by triggered lightning , a phenomenon in which an aircraft accumulating a negative charge during flight triggers a strike when approaching a positively charged region in a thunderstorm cell .	The Met Office ’s lightning detection system observed a lightning strike at the aircraft ’s recorded position at 19:10:20 .
+Event	T0	damage	EVENT	26
+Event	T1	seen	EVENT	37
+Event	T2	damage	EVENT	101
+Event	T3	damaged	EVENT	159
+Event	T4	damage	EVENT	214
+Event	T5	revealed	EVENT	241
+Event	T6	Tests	EVENT	252
+Event	T7	inspections	EVENT	262
+Event	T8	reveal	EVENT	328
+Event	T9	Examination	EVENT	355
+Event	T10	revealed	EVENT	397
+Event	T11	struck	EVENT	433
+Event	T12	lightning	EVENT	453
+Event	T13	phenomenon	EVENT	467
+Event	T14	accumulating	EVENT	499
+Event	T15	charge	EVENT	523
+Event	T16	triggers	EVENT	544
+Event	T17	strike	EVENT	555
+Event	T18	approaching	EVENT	567
+Event	T19	charged	EVENT	592
+Event	T20	thunderstorm	EVENT	612
+Event	T21	detection	EVENT	660
+Event	T22	observed	EVENT	677
+Event	T23	strike	EVENT	698
+Relation	T9	T10	CauseEffect	true	Examination	revealed
+Relation	T10	T9	EffectCause	true	revealed	Examination
+Relation	T12	T11	CauseEffect	true	lightning	struck
+Relation	T11	T12	EffectCause	true	struck	lightning
+Relation	T0	T17	NoRel	true	damage	strike
+Relation	T0	T20	NoRel	true	damage	thunderstorm
+Relation	T1	T16	NoRel	true	seen	triggers
+Relation	T1	T18	NoRel	true	seen	approaching
+Relation	T1	T22	NoRel	true	seen	observed
+Relation	T1	T3	NoRel	true	seen	damaged
+Relation	T10	T23	NoRel	true	revealed	strike
+Relation	T11	T22	NoRel	true	struck	observed
+Relation	T11	T9	NoRel	true	struck	Examination
+Relation	T12	T0	NoRel	true	lightning	damage
+Relation	T12	T1	NoRel	true	lightning	seen
+Relation	T12	T10	NoRel	true	lightning	revealed
+Relation	T13	T0	NoRel	true	phenomenon	damage
+Relation	T14	T10	NoRel	true	accumulating	revealed
+Relation	T14	T20	NoRel	true	accumulating	thunderstorm
+Relation	T14	T3	NoRel	true	accumulating	damaged
+Relation	T14	T6	NoRel	true	accumulating	Tests
+Relation	T14	T8	NoRel	true	accumulating	reveal
+Relation	T15	T0	NoRel	true	charge	damage
+Relation	T16	T12	NoRel	true	triggers	lightning
+Relation	T16	T15	NoRel	true	triggers	charge
+Relation	T16	T4	NoRel	true	triggers	damage
+Relation	T17	T12	NoRel	true	strike	lightning
+Relation	T17	T7	NoRel	true	strike	inspections
+Relation	T18	T17	NoRel	true	approaching	strike
+Relation	T2	T14	NoRel	true	damage	accumulating
+Relation	T2	T16	NoRel	true	damage	triggers
+Relation	T2	T18	NoRel	true	damage	approaching
+Relation	T2	T6	NoRel	true	damage	Tests
+Relation	T20	T2	NoRel	true	thunderstorm	damage
+Relation	T20	T6	NoRel	true	thunderstorm	Tests
+Relation	T21	T2	NoRel	true	detection	damage
+Relation	T21	T20	NoRel	true	detection	thunderstorm
+Relation	T21	T9	NoRel	true	detection	Examination
+Relation	T22	T14	NoRel	true	observed	accumulating
+Relation	T22	T16	NoRel	true	observed	triggers
+Relation	T22	T3	NoRel	true	observed	damaged
+Relation	T22	T6	NoRel	true	observed	Tests
+Relation	T23	T13	NoRel	true	strike	phenomenon
+Relation	T23	T19	NoRel	true	strike	charged
+Relation	T3	T1	NoRel	true	damaged	seen
+Relation	T3	T22	NoRel	true	damaged	observed
+Relation	T3	T4	NoRel	true	damaged	damage
+Relation	T3	T6	NoRel	true	damaged	Tests
+Relation	T4	T19	NoRel	true	damage	charged
+Relation	T5	T0	NoRel	true	revealed	damage
+Relation	T5	T17	NoRel	true	revealed	strike
+Relation	T5	T23	NoRel	true	revealed	strike
+Relation	T5	T7	NoRel	true	revealed	inspections
+Relation	T6	T1	NoRel	true	Tests	seen
+Relation	T6	T15	NoRel	true	Tests	charge
+Relation	T6	T17	NoRel	true	Tests	strike
+Relation	T7	T17	NoRel	true	inspections	strike
+Relation	T7	T19	NoRel	true	inspections	charged
+Relation	T7	T2	NoRel	true	inspections	damage
+Relation	T7	T6	NoRel	true	inspections	Tests
+Relation	T8	T1	NoRel	true	reveal	seen
+Relation	T8	T13	NoRel	true	reveal	phenomenon
+Relation	T8	T2	NoRel	true	reveal	damage
+Relation	T8	T4	NoRel	true	reveal	damage
+Relation	T9	T16	NoRel	true	Examination	triggers
+Relation	T9	T19	NoRel	true	Examination	charged
+Relation	T9	T21	NoRel	true	Examination	detection
+Relation	T9	T6	NoRel	true	Examination	Tests

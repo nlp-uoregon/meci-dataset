@@ -1,0 +1,20 @@
+Text	سیڑھی چڑھنے والوں کی طرف سے کی جانے والی سب سے عام چوٹ سیڑھی کے گرنے سے ہو رہی ہے ، لیکن ہڈیوں کا ٹوٹنا عام ہے اور اس کے حادثے کی نوعیت کے مطابق ، سر میں چوٹ لگنے کا بھی امکان ہے ۔	سیڑھی ناقص بیس پیڈ کی وجہ سے پیچھے کی طرف پھسل سکتی ہے جو عام طور پر سیڑھی کے داغوں میں فٹ ہوجاتی ہیں ۔	اگر بری طرح پہنا ہوا ہے تو ، وہ ایلومینیم کو پلاسٹک یا ربڑ کی بجائے زمین سے رابطہ کرنے کی اجازت دے سکتے ہیں ، اور اس طرح زمین سے رگڑ کو کم کرسکتے ہیں ۔	سیڑھی کے اسٹیبلائزر دستیاب ہیں جو زمین پر سیڑھی کی گرفت کو بڑھا دیتے ہیں ۔	پہلی سیڑھی اسٹیبلائزر یا سیڑھی کے پاؤں میں سے ایک کو 1936 میں پیش کیا گیا تھا اور آج وہ زیادہ تر بڑی سیڑھیوں پر معیاری سامان ہیں ۔
+Event	T0	جانے	EVENT	31
+Event	T1	گرنے	EVENT	64
+Event	T2	حادثے	EVENT	121
+Event	T3	لگنے	EVENT	158
+Event	T4	پہنا	EVENT	297
+Event	T5	گرفت	EVENT	488
+Relation	T2	T3	CauseEffect	true	حادثے	لگنے
+Relation	T3	T2	EffectCause	true	لگنے	حادثے
+Relation	T0	T1	NoRel	true	جانے	گرنے
+Relation	T0	T5	NoRel	true	جانے	گرفت
+Relation	T1	T0	NoRel	true	گرنے	جانے
+Relation	T1	T4	NoRel	true	گرنے	پہنا
+Relation	T1	T5	NoRel	true	گرنے	گرفت
+Relation	T2	T0	NoRel	true	حادثے	جانے
+Relation	T2	T1	NoRel	true	حادثے	گرنے
+Relation	T2	T5	NoRel	true	حادثے	گرفت
+Relation	T3	T0	NoRel	true	لگنے	جانے
+Relation	T4	T1	NoRel	true	پہنا	گرنے
+Relation	T5	T1	NoRel	true	گرفت	گرنے

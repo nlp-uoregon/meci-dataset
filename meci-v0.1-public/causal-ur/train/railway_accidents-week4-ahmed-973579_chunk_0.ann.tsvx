@@ -1,0 +1,104 @@
+Text	7 جون 2021ء کو صبح ہونے سے قبل پاکستان کے جنوبی صوبہ سندھ کے ضلع گھوٹکی کے ڈھرکی کے قریب دو ٹرینیں آپس میں ٹکرا گئیں ، جس میں کم از کم 65 افراد ہلاک اور 150 کے قریب زخمی ہو گئے ۔	سرگودھا آنے والی ملت ایکسپریس کی بوگیاں پٹری سے اتر کر ڈاؤن ٹریک پر جا گریں جو راولپنڈی سے آنے والی سرسید ایکسپریس سے ٹکرا گئی ۔	تقریباً چھ سے آٹھ بوگیاں " مکمل طور پر تباہ " ہوگئیں ۔	مقامی لوگوں نے زندہ بچ جانے والوں کو بچانے کے لئے اندھیرے میں ہی حادثے والے مقام پر پہنچے ۔	پاک فوج ، نیم فوجی ادارہ پاکستان رینجرز اور ہیلی کاپٹر نے حادثے سے متعلق امدادی سرگرمیوں میں شامل ہوئے ۔
+Event	T1	ہلاک	EVENT	144
+Event	T2	زخمی	EVENT	165
+Event	T4	آنے	EVENT	187
+Event	T5	گریں	EVENT	250
+Event	T7	تباہ	EVENT	347
+Event	T9	بچانے	EVENT	400
+Event	T10	حادثے	EVENT	428
+Event	T11	پہنچے	EVENT	447
+Event	T12	حادثے	EVENT	513
+Event	T13	سرگرمیوں	EVENT	535
+Event	T15	ٹکرا	EVENT	107
+Event	T3	اتر	EVENT	227
+Event	T16	ٹکرا	EVENT	297
+Event	T6	بچ	EVENT	383
+Event	T8	شامل	EVENT	548
+Relation	T15	T1	CauseEffect	true	ٹکرا	ہلاک
+Relation	T1	T15	EffectCause	true	ہلاک	ٹکرا
+Relation	T15	T2	CauseEffect	true	ٹکرا	زخمی
+Relation	T2	T15	EffectCause	true	زخمی	ٹکرا
+Relation	T5	T16	CauseEffect	true	گریں	ٹکرا
+Relation	T16	T5	EffectCause	true	ٹکرا	گریں
+Relation	T16	T7	CauseEffect	true	ٹکرا	تباہ
+Relation	T7	T16	EffectCause	true	تباہ	ٹکرا
+Relation	T9	T11	CauseEffect	true	بچانے	پہنچے
+Relation	T11	T9	EffectCause	true	پہنچے	بچانے
+Relation	T12	T13	CauseEffect	true	حادثے	سرگرمیوں
+Relation	T13	T12	EffectCause	true	سرگرمیوں	حادثے
+Relation	T1	T12	NoRel	true	ہلاک	حادثے
+Relation	T1	T2	NoRel	true	ہلاک	زخمی
+Relation	T1	T3	NoRel	true	ہلاک	اتر
+Relation	T1	T4	NoRel	true	ہلاک	آنے
+Relation	T1	T8	NoRel	true	ہلاک	شامل
+Relation	T10	T11	NoRel	true	حادثے	پہنچے
+Relation	T10	T16	NoRel	true	حادثے	ٹکرا
+Relation	T10	T2	NoRel	true	حادثے	زخمی
+Relation	T10	T4	NoRel	true	حادثے	آنے
+Relation	T10	T8	NoRel	true	حادثے	شامل
+Relation	T10	T9	NoRel	true	حادثے	بچانے
+Relation	T11	T12	NoRel	true	پہنچے	حادثے
+Relation	T11	T16	NoRel	true	پہنچے	ٹکرا
+Relation	T11	T2	NoRel	true	پہنچے	زخمی
+Relation	T11	T4	NoRel	true	پہنچے	آنے
+Relation	T11	T8	NoRel	true	پہنچے	شامل
+Relation	T12	T10	NoRel	true	حادثے	حادثے
+Relation	T12	T16	NoRel	true	حادثے	ٹکرا
+Relation	T12	T2	NoRel	true	حادثے	زخمی
+Relation	T12	T5	NoRel	true	حادثے	گریں
+Relation	T12	T9	NoRel	true	حادثے	بچانے
+Relation	T13	T10	NoRel	true	سرگرمیوں	حادثے
+Relation	T13	T11	NoRel	true	سرگرمیوں	پہنچے
+Relation	T13	T15	NoRel	true	سرگرمیوں	ٹکرا
+Relation	T13	T16	NoRel	true	سرگرمیوں	ٹکرا
+Relation	T13	T3	NoRel	true	سرگرمیوں	اتر
+Relation	T13	T5	NoRel	true	سرگرمیوں	گریں
+Relation	T13	T8	NoRel	true	سرگرمیوں	شامل
+Relation	T15	T12	NoRel	true	ٹکرا	حادثے
+Relation	T15	T3	NoRel	true	ٹکرا	اتر
+Relation	T16	T10	NoRel	true	ٹکرا	حادثے
+Relation	T16	T11	NoRel	true	ٹکرا	پہنچے
+Relation	T16	T4	NoRel	true	ٹکرا	آنے
+Relation	T2	T10	NoRel	true	زخمی	حادثے
+Relation	T2	T11	NoRel	true	زخمی	پہنچے
+Relation	T2	T16	NoRel	true	زخمی	ٹکرا
+Relation	T2	T5	NoRel	true	زخمی	گریں
+Relation	T2	T6	NoRel	true	زخمی	بچ
+Relation	T2	T8	NoRel	true	زخمی	شامل
+Relation	T2	T9	NoRel	true	زخمی	بچانے
+Relation	T3	T11	NoRel	true	اتر	پہنچے
+Relation	T3	T2	NoRel	true	اتر	زخمی
+Relation	T3	T5	NoRel	true	اتر	گریں
+Relation	T3	T6	NoRel	true	اتر	بچ
+Relation	T4	T10	NoRel	true	آنے	حادثے
+Relation	T4	T11	NoRel	true	آنے	پہنچے
+Relation	T4	T12	NoRel	true	آنے	حادثے
+Relation	T4	T15	NoRel	true	آنے	ٹکرا
+Relation	T4	T16	NoRel	true	آنے	ٹکرا
+Relation	T4	T3	NoRel	true	آنے	اتر
+Relation	T4	T8	NoRel	true	آنے	شامل
+Relation	T5	T12	NoRel	true	گریں	حادثے
+Relation	T5	T15	NoRel	true	گریں	ٹکرا
+Relation	T5	T2	NoRel	true	گریں	زخمی
+Relation	T5	T3	NoRel	true	گریں	اتر
+Relation	T6	T11	NoRel	true	بچ	پہنچے
+Relation	T6	T13	NoRel	true	بچ	سرگرمیوں
+Relation	T6	T16	NoRel	true	بچ	ٹکرا
+Relation	T6	T3	NoRel	true	بچ	اتر
+Relation	T7	T10	NoRel	true	تباہ	حادثے
+Relation	T7	T5	NoRel	true	تباہ	گریں
+Relation	T7	T9	NoRel	true	تباہ	بچانے
+Relation	T8	T10	NoRel	true	شامل	حادثے
+Relation	T8	T13	NoRel	true	شامل	سرگرمیوں
+Relation	T8	T2	NoRel	true	شامل	زخمی
+Relation	T8	T3	NoRel	true	شامل	اتر
+Relation	T8	T5	NoRel	true	شامل	گریں
+Relation	T8	T6	NoRel	true	شامل	بچ
+Relation	T9	T10	NoRel	true	بچانے	حادثے
+Relation	T9	T13	NoRel	true	بچانے	سرگرمیوں
+Relation	T9	T15	NoRel	true	بچانے	ٹکرا
+Relation	T9	T16	NoRel	true	بچانے	ٹکرا
+Relation	T9	T3	NoRel	true	بچانے	اتر
+Relation	T9	T4	NoRel	true	بچانے	آنے
+Relation	T9	T6	NoRel	true	بچانے	بچ
+Relation	T9	T8	NoRel	true	بچانے	شامل

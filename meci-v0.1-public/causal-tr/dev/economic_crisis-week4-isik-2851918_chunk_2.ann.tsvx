@@ -1,0 +1,67 @@
+Text	1933'ten önce veya 1933'ten önce Parti'nin hizmetinde ağır yaralanmış ; daha sonra , 1934 Şubat Ayaklanması veya Temmuz Darbesi'ne katılan veya Nazi faaliyetleri nedeniyle önemli ölçüde hapis cezası veya yaralanan Avusturya Nazi Partisi üyelerine verilmiştir .	Ayrıca bu nişan Adolf Hitler'in takdirine bağlı olarak son kez Reinhard Heydrich ( ölümünden sonra ) gibi bazı diğer kişilere de verildi .	Bu müteakip madalyalar 1500'ün üzerinde seri numaraları ile % 80 gümüşle basıldı ve Tip I madalyaların yaptığı gibi üreticinin adını ( J. FUESS MÜNCHEN ) taşımadı .	Bu madalyanın sahibi partiden ayrılırsa , madalyayı iade etmesi gerekiyordu .	İkisi Altreich'den ( Eleonore Baur ve Emma Schneider ) ve 14'ü Avusturya'dan olmak üzere toplam 16 kadın bu nişanı aldı .
+Event	T0	yaralanmış	EVENT	59
+Event	T1	faaliyetleri	EVENT	149
+Event	T2	cezası	EVENT	192
+Event	T3	yaralanan	EVENT	204
+Event	T4	verilmiştir	EVENT	247
+Event	T5	verildi	EVENT	390
+Event	T6	basıldı	EVENT	473
+Event	T8	aldı	EVENT	758
+Event	T9	Ayaklanması	EVENT	96
+Event	T10	Darbesi'ne	EVENT	120
+Event	T11	madalyalar	EVENT	412
+Event	T7	gerekiyordu	EVENT	629
+Event	T12	katılan	EVENT	131
+Relation	T1	T2	CauseEffect	true	faaliyetleri	cezası
+Relation	T2	T1	EffectCause	true	cezası	faaliyetleri
+Relation	T1	T3	CauseEffect	true	faaliyetleri	yaralanan
+Relation	T3	T1	EffectCause	true	yaralanan	faaliyetleri
+Relation	T0	T11	CauseEffect	true	yaralanmış	madalyalar
+Relation	T11	T0	EffectCause	true	madalyalar	yaralanmış
+Relation	T12	T11	CauseEffect	true	katılan	madalyalar
+Relation	T11	T12	EffectCause	true	madalyalar	katılan
+Relation	T2	T11	CauseEffect	true	cezası	madalyalar
+Relation	T11	T2	EffectCause	true	madalyalar	cezası
+Relation	T3	T11	CauseEffect	true	yaralanan	madalyalar
+Relation	T11	T3	EffectCause	true	madalyalar	yaralanan
+Relation	T0	T1	NoRel	true	yaralanmış	faaliyetleri
+Relation	T0	T10	NoRel	true	yaralanmış	Darbesi'ne
+Relation	T0	T2	NoRel	true	yaralanmış	cezası
+Relation	T0	T8	NoRel	true	yaralanmış	aldı
+Relation	T0	T9	NoRel	true	yaralanmış	Ayaklanması
+Relation	T1	T11	NoRel	true	faaliyetleri	madalyalar
+Relation	T1	T12	NoRel	true	faaliyetleri	katılan
+Relation	T1	T5	NoRel	true	faaliyetleri	verildi
+Relation	T1	T6	NoRel	true	faaliyetleri	basıldı
+Relation	T1	T9	NoRel	true	faaliyetleri	Ayaklanması
+Relation	T10	T12	NoRel	true	Darbesi'ne	katılan
+Relation	T10	T2	NoRel	true	Darbesi'ne	cezası
+Relation	T10	T4	NoRel	true	Darbesi'ne	verilmiştir
+Relation	T10	T7	NoRel	true	Darbesi'ne	gerekiyordu
+Relation	T10	T9	NoRel	true	Darbesi'ne	Ayaklanması
+Relation	T11	T10	NoRel	true	madalyalar	Darbesi'ne
+Relation	T11	T5	NoRel	true	madalyalar	verildi
+Relation	T11	T6	NoRel	true	madalyalar	basıldı
+Relation	T11	T8	NoRel	true	madalyalar	aldı
+Relation	T12	T1	NoRel	true	katılan	faaliyetleri
+Relation	T12	T9	NoRel	true	katılan	Ayaklanması
+Relation	T3	T12	NoRel	true	yaralanan	katılan
+Relation	T3	T6	NoRel	true	yaralanan	basıldı
+Relation	T4	T1	NoRel	true	verilmiştir	faaliyetleri
+Relation	T4	T10	NoRel	true	verilmiştir	Darbesi'ne
+Relation	T4	T2	NoRel	true	verilmiştir	cezası
+Relation	T4	T3	NoRel	true	verilmiştir	yaralanan
+Relation	T5	T1	NoRel	true	verildi	faaliyetleri
+Relation	T5	T11	NoRel	true	verildi	madalyalar
+Relation	T5	T4	NoRel	true	verildi	verilmiştir
+Relation	T6	T10	NoRel	true	basıldı	Darbesi'ne
+Relation	T6	T8	NoRel	true	basıldı	aldı
+Relation	T6	T9	NoRel	true	basıldı	Ayaklanması
+Relation	T7	T1	NoRel	true	gerekiyordu	faaliyetleri
+Relation	T7	T11	NoRel	true	gerekiyordu	madalyalar
+Relation	T8	T10	NoRel	true	aldı	Darbesi'ne
+Relation	T8	T12	NoRel	true	aldı	katılan
+Relation	T8	T2	NoRel	true	aldı	cezası
+Relation	T8	T6	NoRel	true	aldı	basıldı
+Relation	T9	T1	NoRel	true	Ayaklanması	faaliyetleri
+Relation	T9	T6	NoRel	true	Ayaklanması	basıldı

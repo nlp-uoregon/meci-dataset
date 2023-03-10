@@ -1,0 +1,95 @@
+Text	Tras el fallo de motor , el Capitán solicitó un aterrizaje de emergencia en Palermo , Sicilia .	La tripulación intentó repetidamente pero sin éxito reiniciar los motores mientras volaban a Palermo .	El ATR planeó durante dieciséis minutos , pero fue incapaz de alcanzar la pista y el avión se vio obligado a tomar en el mar 23 millas náuticas ( 43 kilómetros ) al noreste del aeropuerto internacional de Palermo .	El avión se quebró en tres partes tras el impacto .	Todo el avión flotó durante algún tiempo tras el accidente , pero solo la sección central del fuselaje y las alas se mantuvieron a flote y fueron recuperados inmediatamente .
+Event	T0	fallo	EVENT	8
+Event	T1	solicitó	EVENT	36
+Event	T2	aterrizaje	EVENT	48
+Event	T3	intentó	EVENT	111
+Event	T4	reiniciar	EVENT	148
+Event	T5	volaban	EVENT	179
+Event	T6	planeó	EVENT	206
+Event	T7	alcanzar	EVENT	261
+Event	T8	obligado	EVENT	297
+Event	T9	quebró	EVENT	426
+Event	T10	impacto	EVENT	456
+Event	T11	flotó	EVENT	480
+Event	T12	accidente	EVENT	515
+Event	T13	recuperados	EVENT	612
+Event	T14	mantuvieron	EVENT	583
+Relation	T0	T1	CauseEffect	true	fallo	solicitó
+Relation	T1	T0	EffectCause	true	solicitó	fallo
+Relation	T10	T9	CauseEffect	true	impacto	quebró
+Relation	T9	T10	EffectCause	true	quebró	impacto
+Relation	T14	T13	CauseEffect	true	mantuvieron	recuperados
+Relation	T13	T14	EffectCause	true	recuperados	mantuvieron
+Relation	T0	T11	NoRel	true	fallo	flotó
+Relation	T0	T12	NoRel	true	fallo	accidente
+Relation	T0	T3	NoRel	true	fallo	intentó
+Relation	T0	T7	NoRel	true	fallo	alcanzar
+Relation	T0	T8	NoRel	true	fallo	obligado
+Relation	T0	T9	NoRel	true	fallo	quebró
+Relation	T1	T14	NoRel	true	solicitó	mantuvieron
+Relation	T1	T2	NoRel	true	solicitó	aterrizaje
+Relation	T1	T3	NoRel	true	solicitó	intentó
+Relation	T1	T4	NoRel	true	solicitó	reiniciar
+Relation	T1	T9	NoRel	true	solicitó	quebró
+Relation	T10	T11	NoRel	true	impacto	flotó
+Relation	T11	T10	NoRel	true	flotó	impacto
+Relation	T11	T14	NoRel	true	flotó	mantuvieron
+Relation	T11	T5	NoRel	true	flotó	volaban
+Relation	T11	T7	NoRel	true	flotó	alcanzar
+Relation	T11	T8	NoRel	true	flotó	obligado
+Relation	T11	T9	NoRel	true	flotó	quebró
+Relation	T12	T0	NoRel	true	accidente	fallo
+Relation	T12	T13	NoRel	true	accidente	recuperados
+Relation	T12	T2	NoRel	true	accidente	aterrizaje
+Relation	T12	T5	NoRel	true	accidente	volaban
+Relation	T12	T6	NoRel	true	accidente	planeó
+Relation	T12	T9	NoRel	true	accidente	quebró
+Relation	T13	T10	NoRel	true	recuperados	impacto
+Relation	T13	T12	NoRel	true	recuperados	accidente
+Relation	T13	T3	NoRel	true	recuperados	intentó
+Relation	T13	T4	NoRel	true	recuperados	reiniciar
+Relation	T14	T0	NoRel	true	mantuvieron	fallo
+Relation	T14	T4	NoRel	true	mantuvieron	reiniciar
+Relation	T2	T1	NoRel	true	aterrizaje	solicitó
+Relation	T2	T14	NoRel	true	aterrizaje	mantuvieron
+Relation	T2	T3	NoRel	true	aterrizaje	intentó
+Relation	T3	T0	NoRel	true	intentó	fallo
+Relation	T3	T13	NoRel	true	intentó	recuperados
+Relation	T3	T14	NoRel	true	intentó	mantuvieron
+Relation	T3	T5	NoRel	true	intentó	volaban
+Relation	T3	T6	NoRel	true	intentó	planeó
+Relation	T3	T7	NoRel	true	intentó	alcanzar
+Relation	T3	T8	NoRel	true	intentó	obligado
+Relation	T3	T9	NoRel	true	intentó	quebró
+Relation	T4	T10	NoRel	true	reiniciar	impacto
+Relation	T4	T13	NoRel	true	reiniciar	recuperados
+Relation	T4	T5	NoRel	true	reiniciar	volaban
+Relation	T4	T6	NoRel	true	reiniciar	planeó
+Relation	T4	T9	NoRel	true	reiniciar	quebró
+Relation	T5	T13	NoRel	true	volaban	recuperados
+Relation	T5	T6	NoRel	true	volaban	planeó
+Relation	T5	T7	NoRel	true	volaban	alcanzar
+Relation	T6	T1	NoRel	true	planeó	solicitó
+Relation	T6	T10	NoRel	true	planeó	impacto
+Relation	T6	T11	NoRel	true	planeó	flotó
+Relation	T6	T13	NoRel	true	planeó	recuperados
+Relation	T6	T14	NoRel	true	planeó	mantuvieron
+Relation	T6	T2	NoRel	true	planeó	aterrizaje
+Relation	T7	T10	NoRel	true	alcanzar	impacto
+Relation	T7	T12	NoRel	true	alcanzar	accidente
+Relation	T7	T14	NoRel	true	alcanzar	mantuvieron
+Relation	T7	T5	NoRel	true	alcanzar	volaban
+Relation	T7	T6	NoRel	true	alcanzar	planeó
+Relation	T7	T8	NoRel	true	alcanzar	obligado
+Relation	T7	T9	NoRel	true	alcanzar	quebró
+Relation	T8	T11	NoRel	true	obligado	flotó
+Relation	T8	T12	NoRel	true	obligado	accidente
+Relation	T8	T2	NoRel	true	obligado	aterrizaje
+Relation	T8	T5	NoRel	true	obligado	volaban
+Relation	T8	T7	NoRel	true	obligado	alcanzar
+Relation	T9	T1	NoRel	true	quebró	solicitó
+Relation	T9	T11	NoRel	true	quebró	flotó
+Relation	T9	T2	NoRel	true	quebró	aterrizaje
+Relation	T9	T3	NoRel	true	quebró	intentó
+Relation	T9	T5	NoRel	true	quebró	volaban
+Relation	T9	T6	NoRel	true	quebró	planeó

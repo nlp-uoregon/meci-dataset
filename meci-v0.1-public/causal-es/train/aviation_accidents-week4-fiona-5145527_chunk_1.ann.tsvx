@@ -1,0 +1,86 @@
+Text	Debido al daño en el ala izquierda y la pérdida de combustible , el ingeniero de vuelo tenía que vigilar los motores cuidadosamente .	Puesto que el flujo de combustible se había perdido en el lado izquierdo , había que alimentar combustible desde el tanque derecho para mantener el empuje .	La supervivencia del equipo dependía del control de potencia exacta de cada motor .	Gennotte y Michielsen fijaron la aproximación final en la pista 33R , pero el avión derivaba a la derecha del rumbo previsto , así que Gennotte decidió utilizar la pista de aterrizaje 33L , más corta .	La visibilidad era excelente y los pilotos lograron un descenso controlado .
+Event	T0	daño	EVENT	10
+Event	T1	pérdida	EVENT	40
+Event	T2	vigilar	EVENT	97
+Event	T3	flujo	EVENT	148
+Event	T4	perdido	EVENT	178
+Event	T5	alimentar	EVENT	219
+Event	T6	empuje	EVENT	282
+Event	T7	supervivencia	EVENT	294
+Event	T8	dependía	EVENT	319
+Event	T9	control	EVENT	332
+Event	T10	fijaron	EVENT	397
+Event	T11	derivaba	EVENT	459
+Event	T12	utilizar	EVENT	527
+Event	T13	aterrizaje	EVENT	548
+Event	T14	lograron	EVENT	620
+Event	T15	controlado	EVENT	641
+Relation	T0	T1	NoRel	true	daño	pérdida
+Relation	T0	T10	NoRel	true	daño	fijaron
+Relation	T0	T11	NoRel	true	daño	derivaba
+Relation	T0	T12	NoRel	true	daño	utilizar
+Relation	T0	T13	NoRel	true	daño	aterrizaje
+Relation	T0	T2	NoRel	true	daño	vigilar
+Relation	T0	T4	NoRel	true	daño	perdido
+Relation	T0	T6	NoRel	true	daño	empuje
+Relation	T0	T8	NoRel	true	daño	dependía
+Relation	T1	T13	NoRel	true	pérdida	aterrizaje
+Relation	T1	T5	NoRel	true	pérdida	alimentar
+Relation	T10	T0	NoRel	true	fijaron	daño
+Relation	T10	T7	NoRel	true	fijaron	supervivencia
+Relation	T11	T15	NoRel	true	derivaba	controlado
+Relation	T11	T3	NoRel	true	derivaba	flujo
+Relation	T11	T4	NoRel	true	derivaba	perdido
+Relation	T11	T6	NoRel	true	derivaba	empuje
+Relation	T11	T7	NoRel	true	derivaba	supervivencia
+Relation	T11	T8	NoRel	true	derivaba	dependía
+Relation	T12	T14	NoRel	true	utilizar	lograron
+Relation	T12	T15	NoRel	true	utilizar	controlado
+Relation	T12	T4	NoRel	true	utilizar	perdido
+Relation	T13	T10	NoRel	true	aterrizaje	fijaron
+Relation	T13	T12	NoRel	true	aterrizaje	utilizar
+Relation	T13	T14	NoRel	true	aterrizaje	lograron
+Relation	T13	T15	NoRel	true	aterrizaje	controlado
+Relation	T13	T5	NoRel	true	aterrizaje	alimentar
+Relation	T13	T8	NoRel	true	aterrizaje	dependía
+Relation	T13	T9	NoRel	true	aterrizaje	control
+Relation	T14	T0	NoRel	true	lograron	daño
+Relation	T14	T13	NoRel	true	lograron	aterrizaje
+Relation	T14	T6	NoRel	true	lograron	empuje
+Relation	T15	T0	NoRel	true	controlado	daño
+Relation	T15	T2	NoRel	true	controlado	vigilar
+Relation	T2	T0	NoRel	true	vigilar	daño
+Relation	T2	T11	NoRel	true	vigilar	derivaba
+Relation	T2	T15	NoRel	true	vigilar	controlado
+Relation	T2	T7	NoRel	true	vigilar	supervivencia
+Relation	T2	T8	NoRel	true	vigilar	dependía
+Relation	T3	T0	NoRel	true	flujo	daño
+Relation	T3	T1	NoRel	true	flujo	pérdida
+Relation	T3	T5	NoRel	true	flujo	alimentar
+Relation	T3	T6	NoRel	true	flujo	empuje
+Relation	T4	T11	NoRel	true	perdido	derivaba
+Relation	T4	T13	NoRel	true	perdido	aterrizaje
+Relation	T4	T14	NoRel	true	perdido	lograron
+Relation	T4	T2	NoRel	true	perdido	vigilar
+Relation	T4	T6	NoRel	true	perdido	empuje
+Relation	T4	T8	NoRel	true	perdido	dependía
+Relation	T5	T0	NoRel	true	alimentar	daño
+Relation	T5	T12	NoRel	true	alimentar	utilizar
+Relation	T5	T2	NoRel	true	alimentar	vigilar
+Relation	T5	T8	NoRel	true	alimentar	dependía
+Relation	T6	T11	NoRel	true	empuje	derivaba
+Relation	T6	T14	NoRel	true	empuje	lograron
+Relation	T6	T15	NoRel	true	empuje	controlado
+Relation	T7	T0	NoRel	true	supervivencia	daño
+Relation	T7	T1	NoRel	true	supervivencia	pérdida
+Relation	T7	T10	NoRel	true	supervivencia	fijaron
+Relation	T7	T13	NoRel	true	supervivencia	aterrizaje
+Relation	T7	T5	NoRel	true	supervivencia	alimentar
+Relation	T8	T10	NoRel	true	dependía	fijaron
+Relation	T8	T11	NoRel	true	dependía	derivaba
+Relation	T8	T14	NoRel	true	dependía	lograron
+Relation	T8	T5	NoRel	true	dependía	alimentar
+Relation	T8	T9	NoRel	true	dependía	control
+Relation	T9	T1	NoRel	true	control	pérdida
+Relation	T9	T12	NoRel	true	control	utilizar
+Relation	T9	T4	NoRel	true	control	perdido

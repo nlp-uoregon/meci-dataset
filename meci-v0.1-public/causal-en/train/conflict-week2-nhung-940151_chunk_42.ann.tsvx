@@ -1,0 +1,75 @@
+Text	In only a span of 80 hours , Barksdale B - 52s and support personnel deployed forward to Andersen Air Force Base , Guam , carried out the strike against Iraqi targets and returned to Guam .	Fourteen months later , in November 1997 , personnel and aircraft deployed from Barksdale to the British island of Diego Garcia in the Indian Ocean by order of the president .	They joined forces already in the region in response to a renewed bout of provocations and threats made by Saddam Hussein .	Remaining at Diego Garcia until June 1998 , Barksdale 's forces bolstered the ability to defend the security of the region against possible aggression by Iraq and to accomplish specific military objectives if a diplomatic solution to the confrontation could not be achieved .	Six B - 52s and personnel from Barksdale were again deployed to Diego Garcia in November 1998 becoming part of the 2d Air Expeditionary Group .
+Event	T0	strike	EVENT	138
+Event	T1	deployed	EVENT	256
+Event	T10	accomplish	EVENT	656
+Event	T11	solution	EVENT	712
+Event	T12	confrontation	EVENT	728
+Event	T13	achieved	EVENT	755
+Event	T14	deployed	EVENT	818
+Event	T15	becoming	EVENT	860
+Event	T16	carried out	EVENT	122
+Event	T17	returned	EVENT	171
+Event	T18	deployed	EVENT	69
+Event	T19	joined	EVENT	371
+Event	T2	order	EVENT	341
+Event	T20	threats	EVENT	457
+Event	T4	provocations	EVENT	440
+Event	T6	Remaining	EVENT	490
+Event	T7	bolstered	EVENT	554
+Event	T8	defend	EVENT	579
+Event	T9	aggression	EVENT	630
+Relation	T16	T17	CauseEffect	true	carried out	returned
+Relation	T17	T16	EffectCause	true	returned	carried out
+Relation	T17	T0	CauseEffect	true	returned	strike
+Relation	T0	T17	EffectCause	true	strike	returned
+Relation	T1	T2	CauseEffect	true	deployed	order
+Relation	T2	T1	EffectCause	true	order	deployed
+Relation	T19	T4	CauseEffect	true	joined	provocations
+Relation	T4	T19	EffectCause	true	provocations	joined
+Relation	T19	T20	CauseEffect	true	joined	threats
+Relation	T20	T19	EffectCause	true	threats	joined
+Relation	T13	T10	CauseEffect	true	achieved	accomplish
+Relation	T10	T13	EffectCause	true	accomplish	achieved
+Relation	T15	T14	CauseEffect	true	becoming	deployed
+Relation	T14	T15	EffectCause	true	deployed	becoming
+Relation	T9	T8	CauseEffect	true	aggression	defend
+Relation	T8	T9	EffectCause	true	defend	aggression
+Relation	T1	T13	NoRel	true	deployed	achieved
+Relation	T1	T14	NoRel	true	deployed	deployed
+Relation	T1	T19	NoRel	true	deployed	joined
+Relation	T1	T7	NoRel	true	deployed	bolstered
+Relation	T10	T6	NoRel	true	accomplish	Remaining
+Relation	T11	T0	NoRel	true	solution	strike
+Relation	T12	T0	NoRel	true	confrontation	strike
+Relation	T12	T10	NoRel	true	confrontation	accomplish
+Relation	T12	T20	NoRel	true	confrontation	threats
+Relation	T12	T8	NoRel	true	confrontation	defend
+Relation	T12	T9	NoRel	true	confrontation	aggression
+Relation	T14	T10	NoRel	true	deployed	accomplish
+Relation	T14	T13	NoRel	true	deployed	achieved
+Relation	T15	T10	NoRel	true	becoming	accomplish
+Relation	T15	T17	NoRel	true	becoming	returned
+Relation	T15	T2	NoRel	true	becoming	order
+Relation	T15	T8	NoRel	true	becoming	defend
+Relation	T16	T18	NoRel	true	carried out	deployed
+Relation	T18	T16	NoRel	true	deployed	carried out
+Relation	T18	T6	NoRel	true	deployed	Remaining
+Relation	T19	T13	NoRel	true	joined	achieved
+Relation	T19	T16	NoRel	true	joined	carried out
+Relation	T2	T6	NoRel	true	order	Remaining
+Relation	T2	T9	NoRel	true	order	aggression
+Relation	T4	T10	NoRel	true	provocations	accomplish
+Relation	T4	T11	NoRel	true	provocations	solution
+Relation	T4	T15	NoRel	true	provocations	becoming
+Relation	T4	T17	NoRel	true	provocations	returned
+Relation	T4	T2	NoRel	true	provocations	order
+Relation	T4	T9	NoRel	true	provocations	aggression
+Relation	T6	T0	NoRel	true	Remaining	strike
+Relation	T6	T8	NoRel	true	Remaining	defend
+Relation	T7	T1	NoRel	true	bolstered	deployed
+Relation	T8	T11	NoRel	true	defend	solution
+Relation	T8	T19	NoRel	true	defend	joined
+Relation	T9	T10	NoRel	true	aggression	accomplish
+Relation	T9	T14	NoRel	true	aggression	deployed
+Relation	T9	T20	NoRel	true	aggression	threats
+Relation	T9	T6	NoRel	true	aggression	Remaining

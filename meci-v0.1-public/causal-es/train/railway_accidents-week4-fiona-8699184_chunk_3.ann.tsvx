@@ -1,0 +1,101 @@
+Text	La noche del 19 de octubre , se habían descubierto 50 cadáveres y al menos 50 personas habían ingresado en un hospital cercano , mientras que los otros nueve cadáveres se encontraron al día siguiente .	Debido a la fuerza del impacto del tren , muchas víctimas fueron desmembradas o mutiladas más allá del reconocimiento , lo que retrasó la identificación del cuerpos .	Un funcionario local dijo que la mayoría de las víctimas eran trabajadores migratorios y sus familias de los estados de Uttar Pradesh y Bihar que vivían en el área .	El primer ministro de Punjab , Singh , visitó a algunos de los sobrevivientes y familiares de los muertos en un hospital local , el 20 de octubre .	Durante su visita , dos mujeres se reunieron con él y , según los informes , habían perdido a todas sus familias , incluidos niños , esposos e incluso suegros .
+Event	T0	descubierto	EVENT	39
+Event	T1	ingresado	EVENT	94
+Event	T2	encontraron	EVENT	171
+Event	T3	impacto	EVENT	225
+Event	T4	desmembradas	EVENT	267
+Event	T5	mutiladas	EVENT	282
+Event	T6	reconocimiento	EVENT	305
+Event	T7	retrasó	EVENT	329
+Event	T8	identificación	EVENT	340
+Event	T9	dijo	EVENT	390
+Event	T10	visitó	EVENT	574
+Event	T11	muertos	EVENT	633
+Event	T12	visita	EVENT	694
+Event	T13	reunieron	EVENT	718
+Event	T14	perdido	EVENT	767
+Relation	T3	T4	CauseEffect	true	impacto	desmembradas
+Relation	T4	T3	EffectCause	true	desmembradas	impacto
+Relation	T3	T5	CauseEffect	true	impacto	mutiladas
+Relation	T5	T3	EffectCause	true	mutiladas	impacto
+Relation	T0	T12	NoRel	true	descubierto	visita
+Relation	T0	T2	NoRel	true	descubierto	encontraron
+Relation	T0	T6	NoRel	true	descubierto	reconocimiento
+Relation	T0	T7	NoRel	true	descubierto	retrasó
+Relation	T0	T9	NoRel	true	descubierto	dijo
+Relation	T1	T11	NoRel	true	ingresado	muertos
+Relation	T1	T12	NoRel	true	ingresado	visita
+Relation	T1	T13	NoRel	true	ingresado	reunieron
+Relation	T1	T2	NoRel	true	ingresado	encontraron
+Relation	T1	T3	NoRel	true	ingresado	impacto
+Relation	T1	T4	NoRel	true	ingresado	desmembradas
+Relation	T1	T7	NoRel	true	ingresado	retrasó
+Relation	T10	T1	NoRel	true	visitó	ingresado
+Relation	T10	T12	NoRel	true	visitó	visita
+Relation	T10	T5	NoRel	true	visitó	mutiladas
+Relation	T10	T6	NoRel	true	visitó	reconocimiento
+Relation	T10	T7	NoRel	true	visitó	retrasó
+Relation	T10	T8	NoRel	true	visitó	identificación
+Relation	T10	T9	NoRel	true	visitó	dijo
+Relation	T11	T12	NoRel	true	muertos	visita
+Relation	T11	T14	NoRel	true	muertos	perdido
+Relation	T11	T2	NoRel	true	muertos	encontraron
+Relation	T11	T4	NoRel	true	muertos	desmembradas
+Relation	T11	T5	NoRel	true	muertos	mutiladas
+Relation	T11	T7	NoRel	true	muertos	retrasó
+Relation	T11	T8	NoRel	true	muertos	identificación
+Relation	T11	T9	NoRel	true	muertos	dijo
+Relation	T12	T0	NoRel	true	visita	descubierto
+Relation	T12	T1	NoRel	true	visita	ingresado
+Relation	T12	T10	NoRel	true	visita	visitó
+Relation	T12	T7	NoRel	true	visita	retrasó
+Relation	T12	T8	NoRel	true	visita	identificación
+Relation	T13	T0	NoRel	true	reunieron	descubierto
+Relation	T13	T14	NoRel	true	reunieron	perdido
+Relation	T13	T3	NoRel	true	reunieron	impacto
+Relation	T13	T7	NoRel	true	reunieron	retrasó
+Relation	T14	T11	NoRel	true	perdido	muertos
+Relation	T14	T13	NoRel	true	perdido	reunieron
+Relation	T14	T2	NoRel	true	perdido	encontraron
+Relation	T14	T4	NoRel	true	perdido	desmembradas
+Relation	T14	T7	NoRel	true	perdido	retrasó
+Relation	T2	T0	NoRel	true	encontraron	descubierto
+Relation	T2	T1	NoRel	true	encontraron	ingresado
+Relation	T2	T11	NoRel	true	encontraron	muertos
+Relation	T2	T13	NoRel	true	encontraron	reunieron
+Relation	T2	T4	NoRel	true	encontraron	desmembradas
+Relation	T2	T6	NoRel	true	encontraron	reconocimiento
+Relation	T2	T9	NoRel	true	encontraron	dijo
+Relation	T3	T10	NoRel	true	impacto	visitó
+Relation	T3	T13	NoRel	true	impacto	reunieron
+Relation	T3	T6	NoRel	true	impacto	reconocimiento
+Relation	T4	T1	NoRel	true	desmembradas	ingresado
+Relation	T4	T12	NoRel	true	desmembradas	visita
+Relation	T4	T14	NoRel	true	desmembradas	perdido
+Relation	T4	T2	NoRel	true	desmembradas	encontraron
+Relation	T4	T7	NoRel	true	desmembradas	retrasó
+Relation	T5	T4	NoRel	true	mutiladas	desmembradas
+Relation	T5	T7	NoRel	true	mutiladas	retrasó
+Relation	T6	T10	NoRel	true	reconocimiento	visitó
+Relation	T6	T13	NoRel	true	reconocimiento	reunieron
+Relation	T6	T14	NoRel	true	reconocimiento	perdido
+Relation	T6	T3	NoRel	true	reconocimiento	impacto
+Relation	T6	T5	NoRel	true	reconocimiento	mutiladas
+Relation	T6	T7	NoRel	true	reconocimiento	retrasó
+Relation	T6	T8	NoRel	true	reconocimiento	identificación
+Relation	T6	T9	NoRel	true	reconocimiento	dijo
+Relation	T7	T10	NoRel	true	retrasó	visitó
+Relation	T7	T11	NoRel	true	retrasó	muertos
+Relation	T7	T5	NoRel	true	retrasó	mutiladas
+Relation	T7	T6	NoRel	true	retrasó	reconocimiento
+Relation	T7	T9	NoRel	true	retrasó	dijo
+Relation	T8	T10	NoRel	true	identificación	visitó
+Relation	T8	T12	NoRel	true	identificación	visita
+Relation	T8	T3	NoRel	true	identificación	impacto
+Relation	T8	T6	NoRel	true	identificación	reconocimiento
+Relation	T9	T14	NoRel	true	dijo	perdido
+Relation	T9	T2	NoRel	true	dijo	encontraron
+Relation	T9	T3	NoRel	true	dijo	impacto
+Relation	T9	T5	NoRel	true	dijo	mutiladas
+Relation	T9	T6	NoRel	true	dijo	reconocimiento
+Relation	T9	T7	NoRel	true	dijo	retrasó

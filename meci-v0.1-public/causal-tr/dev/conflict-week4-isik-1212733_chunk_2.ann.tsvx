@@ -1,0 +1,68 @@
+Text	Galipler oyunlardan 13. Mıntıka'ya kaçırılırlar .	12. Mıntıka'nın bombalanması üzerine ailesiyle beraber 13. Mıntıka'da yaşamaya başlar .	Başkent Capitol'e yapılan isyan hareketlerine katılır ve Capitol'de , savaşa sağlık görevlisi olarak katılan kız kardeşini kaybeder .	Daha sonra isyan hareketlerini sonlanınca 12. Mıntıka'ya geri dönerek Peeta'yla evlenir ve biri erkek biri kız iki çocukları olur .	23 Mart 2012'de vizyona giren _ Açlık Oyunları _ adlı filmde Katniss karakterini Jennifer Lawrence canlandırdı .
+Event	T0	kaçırılırlar	EVENT	35
+Event	T1	bombalanması	EVENT	66
+Event	T2	katılır	EVENT	184
+Event	T3	kaybeder	EVENT	261
+Event	T4	sonlanınca	EVENT	303
+Event	T5	giren	EVENT	428
+Event	T6	Oyunları	EVENT	442
+Event	T7	canlandırdı	EVENT	503
+Event	T8	başlar	EVENT	129
+Event	T9	savaşa	EVENT	208
+Event	T10	katılan	EVENT	239
+Event	T11	dönerek	EVENT	334
+Event	T12	evlenir	EVENT	352
+Relation	T1	T8	CauseEffect	true	bombalanması	başlar
+Relation	T8	T1	EffectCause	true	başlar	bombalanması
+Relation	T9	T10	CauseEffect	true	savaşa	katılan
+Relation	T10	T9	EffectCause	true	katılan	savaşa
+Relation	T9	T3	CauseEffect	true	savaşa	kaybeder
+Relation	T3	T9	EffectCause	true	kaybeder	savaşa
+Relation	T4	T11	CauseEffect	true	sonlanınca	dönerek
+Relation	T11	T4	EffectCause	true	dönerek	sonlanınca
+Relation	T0	T10	NoRel	true	kaçırılırlar	katılan
+Relation	T0	T11	NoRel	true	kaçırılırlar	dönerek
+Relation	T0	T12	NoRel	true	kaçırılırlar	evlenir
+Relation	T0	T2	NoRel	true	kaçırılırlar	katılır
+Relation	T0	T3	NoRel	true	kaçırılırlar	kaybeder
+Relation	T0	T6	NoRel	true	kaçırılırlar	Oyunları
+Relation	T1	T4	NoRel	true	bombalanması	sonlanınca
+Relation	T1	T6	NoRel	true	bombalanması	Oyunları
+Relation	T1	T7	NoRel	true	bombalanması	canlandırdı
+Relation	T10	T11	NoRel	true	katılan	dönerek
+Relation	T10	T4	NoRel	true	katılan	sonlanınca
+Relation	T10	T5	NoRel	true	katılan	giren
+Relation	T11	T1	NoRel	true	dönerek	bombalanması
+Relation	T11	T2	NoRel	true	dönerek	katılır
+Relation	T11	T7	NoRel	true	dönerek	canlandırdı
+Relation	T11	T8	NoRel	true	dönerek	başlar
+Relation	T11	T9	NoRel	true	dönerek	savaşa
+Relation	T12	T10	NoRel	true	evlenir	katılan
+Relation	T12	T5	NoRel	true	evlenir	giren
+Relation	T2	T1	NoRel	true	katılır	bombalanması
+Relation	T2	T7	NoRel	true	katılır	canlandırdı
+Relation	T3	T0	NoRel	true	kaybeder	kaçırılırlar
+Relation	T3	T11	NoRel	true	kaybeder	dönerek
+Relation	T3	T7	NoRel	true	kaybeder	canlandırdı
+Relation	T4	T0	NoRel	true	sonlanınca	kaçırılırlar
+Relation	T4	T1	NoRel	true	sonlanınca	bombalanması
+Relation	T4	T10	NoRel	true	sonlanınca	katılan
+Relation	T4	T3	NoRel	true	sonlanınca	kaybeder
+Relation	T4	T5	NoRel	true	sonlanınca	giren
+Relation	T4	T6	NoRel	true	sonlanınca	Oyunları
+Relation	T4	T9	NoRel	true	sonlanınca	savaşa
+Relation	T5	T1	NoRel	true	giren	bombalanması
+Relation	T5	T11	NoRel	true	giren	dönerek
+Relation	T5	T12	NoRel	true	giren	evlenir
+Relation	T5	T7	NoRel	true	giren	canlandırdı
+Relation	T5	T9	NoRel	true	giren	savaşa
+Relation	T6	T11	NoRel	true	Oyunları	dönerek
+Relation	T6	T4	NoRel	true	Oyunları	sonlanınca
+Relation	T6	T9	NoRel	true	Oyunları	savaşa
+Relation	T7	T0	NoRel	true	canlandırdı	kaçırılırlar
+Relation	T7	T12	NoRel	true	canlandırdı	evlenir
+Relation	T8	T0	NoRel	true	başlar	kaçırılırlar
+Relation	T8	T10	NoRel	true	başlar	katılan
+Relation	T8	T6	NoRel	true	başlar	Oyunları
+Relation	T8	T7	NoRel	true	başlar	canlandırdı
+Relation	T9	T2	NoRel	true	savaşa	katılır

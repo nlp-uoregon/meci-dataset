@@ -1,0 +1,69 @@
+Text	Firefighters across North America protested that it was insensitive to make a film about fallen firefighters while their children were still young , and Worcester Fire Fighters IAFF Local 1009 wrote to other firefighters asking them not to participate in the movie 's production .	This resulted in the production company being unable to procure agreements in the United States or Canada to allow the use of firefighter insignia , while Canadian firefighters refused to act as extras and fire departments in the Toronto metropolitan area refused to lease firetrucks to the company .	In late April 2004 , Warner Bros. and Image Entertainment , the production company , issued a joint statement saying that the making of a film the size and scope of _ Worcester Cold Storage _ was " a complex process that needed the support of various groups and individuals , including firefighters .	Due to circumstances beyond our control , we no longer have such support .	We have therefore decided not to move ahead with this project at this time . "
+Event	T0	protested	EVENT	34
+Event	T1	make	EVENT	71
+Event	T10	refused	EVENT	458
+Event	T11	act	EVENT	469
+Event	T12	refused	EVENT	537
+Event	T13	issued	EVENT	667
+Event	T14	saying	EVENT	692
+Event	T15	making	EVENT	708
+Event	T16	needed	EVENT	803
+Event	T17	support	EVENT	814
+Event	T18	decided	EVENT	976
+Event	T2	fallen	EVENT	89
+Event	T20	control	EVENT	915
+Event	T21	support	EVENT	948
+Event	T3	wrote	EVENT	193
+Event	T4	asking	EVENT	221
+Event	T5	participate	EVENT	240
+Event	T6	production	EVENT	268
+Event	T7	resulted	EVENT	286
+Event	T8	agreements	EVENT	345
+Event	T9	use	EVENT	400
+Relation	T0	T1	CauseEffect	true	protested	make
+Relation	T1	T0	EffectCause	true	make	protested
+Relation	T1	T8	CauseEffect	true	make	agreements
+Relation	T8	T1	EffectCause	true	agreements	make
+Relation	T8	T12	CauseEffect	true	agreements	refused
+Relation	T12	T8	EffectCause	true	refused	agreements
+Relation	T8	T10	CauseEffect	true	agreements	refused
+Relation	T10	T8	EffectCause	true	refused	agreements
+Relation	T17	T15	CauseEffect	true	support	making
+Relation	T15	T17	EffectCause	true	making	support
+Relation	T21	T18	CauseEffect	true	support	decided
+Relation	T18	T21	EffectCause	true	decided	support
+Relation	T0	T12	NoRel	true	protested	refused
+Relation	T1	T4	NoRel	true	make	asking
+Relation	T11	T10	NoRel	true	act	refused
+Relation	T11	T6	NoRel	true	act	production
+Relation	T12	T2	NoRel	true	refused	fallen
+Relation	T12	T20	NoRel	true	refused	control
+Relation	T12	T4	NoRel	true	refused	asking
+Relation	T15	T1	NoRel	true	making	make
+Relation	T16	T11	NoRel	true	needed	act
+Relation	T16	T12	NoRel	true	needed	refused
+Relation	T16	T9	NoRel	true	needed	use
+Relation	T17	T1	NoRel	true	support	make
+Relation	T17	T21	NoRel	true	support	support
+Relation	T18	T14	NoRel	true	decided	saying
+Relation	T2	T11	NoRel	true	fallen	act
+Relation	T2	T3	NoRel	true	fallen	wrote
+Relation	T2	T5	NoRel	true	fallen	participate
+Relation	T2	T8	NoRel	true	fallen	agreements
+Relation	T20	T1	NoRel	true	control	make
+Relation	T20	T10	NoRel	true	control	refused
+Relation	T21	T14	NoRel	true	support	saying
+Relation	T3	T17	NoRel	true	wrote	support
+Relation	T4	T11	NoRel	true	asking	act
+Relation	T4	T17	NoRel	true	asking	support
+Relation	T4	T18	NoRel	true	asking	decided
+Relation	T5	T12	NoRel	true	participate	refused
+Relation	T5	T2	NoRel	true	participate	fallen
+Relation	T6	T20	NoRel	true	production	control
+Relation	T6	T3	NoRel	true	production	wrote
+Relation	T6	T4	NoRel	true	production	asking
+Relation	T7	T15	NoRel	true	resulted	making
+Relation	T7	T5	NoRel	true	resulted	participate
+Relation	T8	T7	NoRel	true	agreements	resulted
+Relation	T9	T16	NoRel	true	use	needed
+Relation	T9	T5	NoRel	true	use	participate

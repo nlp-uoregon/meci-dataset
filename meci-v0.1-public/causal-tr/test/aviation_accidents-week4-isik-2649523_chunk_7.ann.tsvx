@@ -1,0 +1,22 @@
+Text	Ayrıca cesaretliliklerinden dolayı mürettebatı parayla ödüllendirdi .	küçükresim | 16 Kasım 2010'da Kremlin'de Rusya Başkanı Dmitry Medvedev ( ortada ) 514 sefer sayılı uçuşun mürettebatıyla 514 sefer sayılı uçuşun pilotları , kaptan pilot Yevgeny Novoselov ve yardımcı pilot Andrei Lamanov , Rusya Federasyonu Kahramanı ilan edildi .	Diğer yedi mürettebat üyesine ise Cesaret Nişanı verildi .	Nişan verme emri Rusya Devlet Başkanı Dmitry Medvedev tarafından imzalandı .	İniş başarılı olabildi çünkü havalimanının sorumlusu Sergey Sotnikov , havalimanı pistinin 2003 yılında trafiğe kapatılmasından sonra bile pist uçlarındaki ağaç ve çalılıkları temizliyordu .
+Event	T0	ödüllendirdi	EVENT	55
+Event	T1	edildi	EVENT	326
+Event	T2	verildi	EVENT	384
+Event	T3	emri	EVENT	406
+Event	T4	imzalandı	EVENT	459
+Event	T5	temizliyordu	EVENT	647
+Event	T6	İniş	EVENT	471
+Relation	T3	T2	CauseEffect	true	emri	verildi
+Relation	T2	T3	EffectCause	true	verildi	emri
+Relation	T0	T2	NoRel	true	ödüllendirdi	verildi
+Relation	T1	T0	NoRel	true	edildi	ödüllendirdi
+Relation	T1	T2	NoRel	true	edildi	verildi
+Relation	T1	T6	NoRel	true	edildi	İniş
+Relation	T3	T0	NoRel	true	emri	ödüllendirdi
+Relation	T3	T4	NoRel	true	emri	imzalandı
+Relation	T4	T0	NoRel	true	imzalandı	ödüllendirdi
+Relation	T4	T5	NoRel	true	imzalandı	temizliyordu
+Relation	T5	T1	NoRel	true	temizliyordu	edildi
+Relation	T5	T3	NoRel	true	temizliyordu	emri
+Relation	T6	T0	NoRel	true	İniş	ödüllendirdi
+Relation	T6	T1	NoRel	true	İniş	edildi

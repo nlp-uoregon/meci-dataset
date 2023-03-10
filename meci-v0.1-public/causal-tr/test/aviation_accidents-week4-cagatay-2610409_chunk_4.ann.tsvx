@@ -1,0 +1,145 @@
+Text	Raporun hazırlanması için ABD Ulusal Ulaşım Güvenlik Kurulu'ndan nihai rapor beklendiği belirtildi .	Kuruldan henüz daha son rapor çıkmadı .	Kazadan sonra olayla ilgili konuşan pilot normal bir şekilde indirdikleri uçağı durduramadığını belirtti .	Uçağın kaza yapmasının nedeni olarak iniş sırasında uçağı kontrol eden ikinci pilotun yaptığı bir hata olduğu düşünülüyor .	İniş sırasında ikinci pilot İrfan Yavuz'un kazara " Pas geçme " sistemini açtığı için uçak indikten sonra uçağın tekrar havalanmaya çalıştığı için uçağın durdurulamadı .
+Event	T0	hazırlanması	EVENT	8
+Event	T1	belirtildi	EVENT	88
+Event	T2	çıkmadı	EVENT	131
+Event	T3	belirtti	EVENT	237
+Event	T4	iniş	EVENT	285
+Event	T5	kontrol	EVENT	306
+Event	T6	yaptığı	EVENT	334
+Event	T7	hata	EVENT	346
+Event	T8	düşünülüyor	EVENT	358
+Event	T9	İniş	EVENT	372
+Event	T10	kazara	EVENT	415
+Event	T12	açtığı	EVENT	446
+Event	T13	indikten	EVENT	463
+Event	T14	çalıştığı	EVENT	504
+Event	T15	durdurulamadı	EVENT	526
+Event	T16	Kazadan	EVENT	141
+Event	T17	konuşan	EVENT	169
+Event	T18	indirdikleri	EVENT	202
+Event	T19	kaza	EVENT	255
+Relation	T7	T19	CauseEffect	true	hata	kaza
+Relation	T19	T7	EffectCause	true	kaza	hata
+Relation	T3	T8	CauseEffect	true	belirtti	düşünülüyor
+Relation	T8	T3	EffectCause	true	düşünülüyor	belirtti
+Relation	T12	T14	CauseEffect	true	açtığı	çalıştığı
+Relation	T14	T12	EffectCause	true	çalıştığı	açtığı
+Relation	T14	T15	CauseEffect	true	çalıştığı	durdurulamadı
+Relation	T15	T14	EffectCause	true	durdurulamadı	çalıştığı
+Relation	T0	T10	NoRel	true	hazırlanması	kazara
+Relation	T0	T14	NoRel	true	hazırlanması	çalıştığı
+Relation	T0	T15	NoRel	true	hazırlanması	durdurulamadı
+Relation	T0	T19	NoRel	true	hazırlanması	kaza
+Relation	T0	T8	NoRel	true	hazırlanması	düşünülüyor
+Relation	T1	T0	NoRel	true	belirtildi	hazırlanması
+Relation	T1	T14	NoRel	true	belirtildi	çalıştığı
+Relation	T1	T15	NoRel	true	belirtildi	durdurulamadı
+Relation	T1	T17	NoRel	true	belirtildi	konuşan
+Relation	T1	T18	NoRel	true	belirtildi	indirdikleri
+Relation	T1	T19	NoRel	true	belirtildi	kaza
+Relation	T1	T3	NoRel	true	belirtildi	belirtti
+Relation	T1	T6	NoRel	true	belirtildi	yaptığı
+Relation	T10	T1	NoRel	true	kazara	belirtildi
+Relation	T10	T12	NoRel	true	kazara	açtığı
+Relation	T10	T2	NoRel	true	kazara	çıkmadı
+Relation	T10	T6	NoRel	true	kazara	yaptığı
+Relation	T12	T1	NoRel	true	açtığı	belirtildi
+Relation	T12	T18	NoRel	true	açtığı	indirdikleri
+Relation	T12	T19	NoRel	true	açtığı	kaza
+Relation	T12	T3	NoRel	true	açtığı	belirtti
+Relation	T12	T6	NoRel	true	açtığı	yaptığı
+Relation	T12	T7	NoRel	true	açtığı	hata
+Relation	T13	T0	NoRel	true	indikten	hazırlanması
+Relation	T13	T10	NoRel	true	indikten	kazara
+Relation	T13	T12	NoRel	true	indikten	açtığı
+Relation	T13	T18	NoRel	true	indikten	indirdikleri
+Relation	T13	T19	NoRel	true	indikten	kaza
+Relation	T13	T7	NoRel	true	indikten	hata
+Relation	T14	T19	NoRel	true	çalıştığı	kaza
+Relation	T14	T2	NoRel	true	çalıştığı	çıkmadı
+Relation	T14	T3	NoRel	true	çalıştığı	belirtti
+Relation	T14	T7	NoRel	true	çalıştığı	hata
+Relation	T15	T10	NoRel	true	durdurulamadı	kazara
+Relation	T15	T18	NoRel	true	durdurulamadı	indirdikleri
+Relation	T15	T19	NoRel	true	durdurulamadı	kaza
+Relation	T15	T7	NoRel	true	durdurulamadı	hata
+Relation	T15	T9	NoRel	true	durdurulamadı	İniş
+Relation	T16	T1	NoRel	true	Kazadan	belirtildi
+Relation	T16	T10	NoRel	true	Kazadan	kazara
+Relation	T16	T12	NoRel	true	Kazadan	açtığı
+Relation	T16	T17	NoRel	true	Kazadan	konuşan
+Relation	T16	T2	NoRel	true	Kazadan	çıkmadı
+Relation	T17	T0	NoRel	true	konuşan	hazırlanması
+Relation	T17	T1	NoRel	true	konuşan	belirtildi
+Relation	T17	T16	NoRel	true	konuşan	Kazadan
+Relation	T17	T19	NoRel	true	konuşan	kaza
+Relation	T17	T4	NoRel	true	konuşan	iniş
+Relation	T17	T6	NoRel	true	konuşan	yaptığı
+Relation	T18	T10	NoRel	true	indirdikleri	kazara
+Relation	T18	T13	NoRel	true	indirdikleri	indikten
+Relation	T18	T14	NoRel	true	indirdikleri	çalıştığı
+Relation	T18	T19	NoRel	true	indirdikleri	kaza
+Relation	T18	T4	NoRel	true	indirdikleri	iniş
+Relation	T18	T5	NoRel	true	indirdikleri	kontrol
+Relation	T18	T6	NoRel	true	indirdikleri	yaptığı
+Relation	T19	T1	NoRel	true	kaza	belirtildi
+Relation	T19	T10	NoRel	true	kaza	kazara
+Relation	T19	T12	NoRel	true	kaza	açtığı
+Relation	T19	T14	NoRel	true	kaza	çalıştığı
+Relation	T19	T15	NoRel	true	kaza	durdurulamadı
+Relation	T19	T17	NoRel	true	kaza	konuşan
+Relation	T19	T18	NoRel	true	kaza	indirdikleri
+Relation	T19	T6	NoRel	true	kaza	yaptığı
+Relation	T2	T12	NoRel	true	çıkmadı	açtığı
+Relation	T2	T13	NoRel	true	çıkmadı	indikten
+Relation	T2	T16	NoRel	true	çıkmadı	Kazadan
+Relation	T2	T17	NoRel	true	çıkmadı	konuşan
+Relation	T2	T4	NoRel	true	çıkmadı	iniş
+Relation	T2	T5	NoRel	true	çıkmadı	kontrol
+Relation	T2	T6	NoRel	true	çıkmadı	yaptığı
+Relation	T3	T0	NoRel	true	belirtti	hazırlanması
+Relation	T3	T13	NoRel	true	belirtti	indikten
+Relation	T3	T16	NoRel	true	belirtti	Kazadan
+Relation	T3	T17	NoRel	true	belirtti	konuşan
+Relation	T3	T2	NoRel	true	belirtti	çıkmadı
+Relation	T3	T4	NoRel	true	belirtti	iniş
+Relation	T3	T5	NoRel	true	belirtti	kontrol
+Relation	T3	T7	NoRel	true	belirtti	hata
+Relation	T4	T0	NoRel	true	iniş	hazırlanması
+Relation	T4	T1	NoRel	true	iniş	belirtildi
+Relation	T4	T16	NoRel	true	iniş	Kazadan
+Relation	T4	T17	NoRel	true	iniş	konuşan
+Relation	T4	T2	NoRel	true	iniş	çıkmadı
+Relation	T4	T5	NoRel	true	iniş	kontrol
+Relation	T5	T10	NoRel	true	kontrol	kazara
+Relation	T5	T15	NoRel	true	kontrol	durdurulamadı
+Relation	T5	T19	NoRel	true	kontrol	kaza
+Relation	T5	T2	NoRel	true	kontrol	çıkmadı
+Relation	T5	T3	NoRel	true	kontrol	belirtti
+Relation	T5	T4	NoRel	true	kontrol	iniş
+Relation	T5	T7	NoRel	true	kontrol	hata
+Relation	T5	T9	NoRel	true	kontrol	İniş
+Relation	T6	T10	NoRel	true	yaptığı	kazara
+Relation	T6	T12	NoRel	true	yaptığı	açtığı
+Relation	T6	T15	NoRel	true	yaptığı	durdurulamadı
+Relation	T6	T17	NoRel	true	yaptığı	konuşan
+Relation	T6	T7	NoRel	true	yaptığı	hata
+Relation	T7	T10	NoRel	true	hata	kazara
+Relation	T7	T14	NoRel	true	hata	çalıştığı
+Relation	T7	T15	NoRel	true	hata	durdurulamadı
+Relation	T7	T17	NoRel	true	hata	konuşan
+Relation	T8	T1	NoRel	true	düşünülüyor	belirtildi
+Relation	T8	T12	NoRel	true	düşünülüyor	açtığı
+Relation	T8	T18	NoRel	true	düşünülüyor	indirdikleri
+Relation	T8	T19	NoRel	true	düşünülüyor	kaza
+Relation	T8	T2	NoRel	true	düşünülüyor	çıkmadı
+Relation	T8	T4	NoRel	true	düşünülüyor	iniş
+Relation	T8	T6	NoRel	true	düşünülüyor	yaptığı
+Relation	T9	T0	NoRel	true	İniş	hazırlanması
+Relation	T9	T1	NoRel	true	İniş	belirtildi
+Relation	T9	T12	NoRel	true	İniş	açtığı
+Relation	T9	T14	NoRel	true	İniş	çalıştığı
+Relation	T9	T16	NoRel	true	İniş	Kazadan
+Relation	T9	T17	NoRel	true	İniş	konuşan
+Relation	T9	T2	NoRel	true	İniş	çıkmadı
+Relation	T9	T7	NoRel	true	İniş	hata

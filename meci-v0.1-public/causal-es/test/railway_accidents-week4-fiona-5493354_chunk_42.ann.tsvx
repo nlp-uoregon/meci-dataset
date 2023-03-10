@@ -1,0 +1,80 @@
+Text	- 11 DE NOVIEMBRE : El correo de Lisboa a Madrid choca en la estación de Assumar con otro tren que circulaba en sentido contrario .	Como consecuencia del accidente se porduce un número indeterminado de heridos .	- 22 DE NOVIEMBRE : un tren arrolla a siete trabajadores qeue se hallaban realizando trabajos de mantenimiento de las vías en el túnel de acceso a la estación de Rossio , en Lisboa .	Dos de ellos murieron en el acto y los otros cinco sufrieron heridas graves .	- 17 DE DICIEMBRE : En Oporto el descarrilamiento de un tranvía provoca un muerto y veinticinco heridos , siete de ellos graves
+Event	T0	choca	EVENT	49
+Event	T1	circulaba	EVENT	99
+Event	T2	accidente	EVENT	154
+Event	T3	porduce	EVENT	167
+Event	T4	heridos	EVENT	202
+Event	T5	arrolla	EVENT	240
+Event	T6	trabajos	EVENT	297
+Event	T7	murieron	EVENT	408
+Event	T8	acto	EVENT	423
+Event	T9	descarrilamiento	EVENT	506
+Event	T10	provoca	EVENT	537
+Event	T11	muerto	EVENT	548
+Event	T12	heridos	EVENT	569
+Event	T13	heridas	EVENT	456
+Relation	T1	T0	CauseEffect	true	circulaba	choca
+Relation	T0	T1	EffectCause	true	choca	circulaba
+Relation	T2	T4	CauseEffect	true	accidente	heridos
+Relation	T4	T2	EffectCause	true	heridos	accidente
+Relation	T5	T7	CauseEffect	true	arrolla	murieron
+Relation	T7	T5	EffectCause	true	murieron	arrolla
+Relation	T5	T13	CauseEffect	true	arrolla	heridas
+Relation	T13	T5	EffectCause	true	heridas	arrolla
+Relation	T9	T11	CauseEffect	true	descarrilamiento	muerto
+Relation	T11	T9	EffectCause	true	muerto	descarrilamiento
+Relation	T9	T12	CauseEffect	true	descarrilamiento	heridos
+Relation	T12	T9	EffectCause	true	heridos	descarrilamiento
+Relation	T0	T13	NoRel	true	choca	heridas
+Relation	T0	T2	NoRel	true	choca	accidente
+Relation	T0	T4	NoRel	true	choca	heridos
+Relation	T0	T7	NoRel	true	choca	murieron
+Relation	T0	T8	NoRel	true	choca	acto
+Relation	T1	T11	NoRel	true	circulaba	muerto
+Relation	T1	T2	NoRel	true	circulaba	accidente
+Relation	T1	T4	NoRel	true	circulaba	heridos
+Relation	T1	T5	NoRel	true	circulaba	arrolla
+Relation	T1	T8	NoRel	true	circulaba	acto
+Relation	T1	T9	NoRel	true	circulaba	descarrilamiento
+Relation	T10	T0	NoRel	true	provoca	choca
+Relation	T10	T7	NoRel	true	provoca	murieron
+Relation	T10	T8	NoRel	true	provoca	acto
+Relation	T11	T0	NoRel	true	muerto	choca
+Relation	T11	T1	NoRel	true	muerto	circulaba
+Relation	T11	T10	NoRel	true	muerto	provoca
+Relation	T11	T13	NoRel	true	muerto	heridas
+Relation	T11	T4	NoRel	true	muerto	heridos
+Relation	T12	T4	NoRel	true	heridos	heridos
+Relation	T2	T1	NoRel	true	accidente	circulaba
+Relation	T2	T10	NoRel	true	accidente	provoca
+Relation	T2	T8	NoRel	true	accidente	acto
+Relation	T2	T9	NoRel	true	accidente	descarrilamiento
+Relation	T3	T1	NoRel	true	porduce	circulaba
+Relation	T3	T10	NoRel	true	porduce	provoca
+Relation	T3	T2	NoRel	true	porduce	accidente
+Relation	T3	T5	NoRel	true	porduce	arrolla
+Relation	T3	T9	NoRel	true	porduce	descarrilamiento
+Relation	T4	T0	NoRel	true	heridos	choca
+Relation	T4	T1	NoRel	true	heridos	circulaba
+Relation	T4	T10	NoRel	true	heridos	provoca
+Relation	T4	T12	NoRel	true	heridos	heridos
+Relation	T4	T3	NoRel	true	heridos	porduce
+Relation	T4	T6	NoRel	true	heridos	trabajos
+Relation	T4	T8	NoRel	true	heridos	acto
+Relation	T4	T9	NoRel	true	heridos	descarrilamiento
+Relation	T5	T10	NoRel	true	arrolla	provoca
+Relation	T5	T11	NoRel	true	arrolla	muerto
+Relation	T6	T0	NoRel	true	trabajos	choca
+Relation	T6	T11	NoRel	true	trabajos	muerto
+Relation	T6	T12	NoRel	true	trabajos	heridos
+Relation	T6	T7	NoRel	true	trabajos	murieron
+Relation	T6	T9	NoRel	true	trabajos	descarrilamiento
+Relation	T7	T10	NoRel	true	murieron	provoca
+Relation	T7	T11	NoRel	true	murieron	muerto
+Relation	T7	T8	NoRel	true	murieron	acto
+Relation	T8	T11	NoRel	true	acto	muerto
+Relation	T9	T13	NoRel	true	descarrilamiento	heridas
+Relation	T9	T2	NoRel	true	descarrilamiento	accidente
+Relation	T9	T5	NoRel	true	descarrilamiento	arrolla
+Relation	T9	T7	NoRel	true	descarrilamiento	murieron
+Relation	T9	T8	NoRel	true	descarrilamiento	acto

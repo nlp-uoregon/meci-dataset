@@ -1,0 +1,30 @@
+Text	Örgüt sadece bu kişilere hizmet ve lojistik destek sağlamakla kalmaz , bünyesinde çalışanları da eşcinsel , transseksüel veya HIV / AIDS'li kişiler arasından seçer .	Yönetim kurulunu oluşturan altı kişi de HIV'lidir .	Udaan Trust mali yönden HIV virüsü ile yaşayan yaklaşık 1500 kişilik bir ağın desteği ve diğer kişilerin bağışları ile ayakta kalmaktadır .	Mumbai , Pune , Jalgaon , Nashik , Ahmednagar , Thane ve Raigad ilçelerinde ofisleri vardır .	Udaan Trust , ABD ve Hindistan hükûmetlerinin bir ortak bir kuruluşu olan Avert Society çerçevesinde çalışır .
+Event	T0	seçer	EVENT	158
+Event	T2	çalışır	EVENT	553
+Event	T3	hizmet	EVENT	25
+Event	T4	destek	EVENT	44
+Event	T5	çalışanları	EVENT	82
+Event	T1	yaşayan	EVENT	257
+Event	T6	bağışları	EVENT	323
+Event	T7	kalmaktadır	EVENT	344
+Event	T8	desteği	EVENT	296
+Relation	T8	T7	CauseEffect	true	desteği	kalmaktadır
+Relation	T7	T8	EffectCause	true	kalmaktadır	desteği
+Relation	T6	T7	CauseEffect	true	bağışları	kalmaktadır
+Relation	T7	T6	EffectCause	true	kalmaktadır	bağışları
+Relation	T0	T2	NoRel	true	seçer	çalışır
+Relation	T0	T8	NoRel	true	seçer	desteği
+Relation	T1	T2	NoRel	true	yaşayan	çalışır
+Relation	T1	T3	NoRel	true	yaşayan	hizmet
+Relation	T1	T4	NoRel	true	yaşayan	destek
+Relation	T2	T7	NoRel	true	çalışır	kalmaktadır
+Relation	T3	T6	NoRel	true	hizmet	bağışları
+Relation	T4	T6	NoRel	true	destek	bağışları
+Relation	T4	T8	NoRel	true	destek	desteği
+Relation	T5	T0	NoRel	true	çalışanları	seçer
+Relation	T6	T0	NoRel	true	bağışları	seçer
+Relation	T6	T2	NoRel	true	bağışları	çalışır
+Relation	T6	T4	NoRel	true	bağışları	destek
+Relation	T7	T2	NoRel	true	kalmaktadır	çalışır
+Relation	T7	T3	NoRel	true	kalmaktadır	hizmet
+Relation	T8	T6	NoRel	true	desteği	bağışları

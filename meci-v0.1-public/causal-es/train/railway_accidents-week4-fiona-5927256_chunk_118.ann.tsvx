@@ -1,0 +1,47 @@
+Text	- El 3 de julio de 1990 el choque de un tren Intercity que unía Zaragoza con la capital de España con una viga metálica desprendida de un tren de mercancías que circulaba en sentido contrario se saldó con 6 personas muertas y otras 8 heridas .	Los hechos sucedieron entre Alcalá de Henares y Torrejón , cerca de Madrid .	- 26 de julio de 1992 .	Mueren tres jóvenes arrollados por un tren de viajeros de FEVE en el interior de un túnel de la línea Ferrol_-_____Gijón situado en la localidad asturiana de Perlora .	- El 2 de agosto de 1993 , en un túnel próximo a la localidad asturiana de Vega de Anzo dos trenes de FEVE colisionan falleciendo 12 personas .
+Event	T0	choque	EVENT	27
+Event	T1	desprendida	EVENT	120
+Event	T2	circulaba	EVENT	161
+Event	T3	muertas	EVENT	216
+Event	T4	heridas	EVENT	234
+Event	T5	sucedieron	EVENT	255
+Event	T6	Mueren	EVENT	345
+Event	T7	arrollados	EVENT	365
+Event	T8	falleciendo	EVENT	631
+Event	T9	colisionan	EVENT	620
+Relation	T0	T3	CauseEffect	true	choque	muertas
+Relation	T3	T0	EffectCause	true	muertas	choque
+Relation	T0	T4	CauseEffect	true	choque	heridas
+Relation	T4	T0	EffectCause	true	heridas	choque
+Relation	T7	T6	CauseEffect	true	arrollados	Mueren
+Relation	T6	T7	EffectCause	true	Mueren	arrollados
+Relation	T9	T8	CauseEffect	true	colisionan	falleciendo
+Relation	T8	T9	EffectCause	true	falleciendo	colisionan
+Relation	T1	T4	NoRel	true	desprendida	heridas
+Relation	T1	T5	NoRel	true	desprendida	sucedieron
+Relation	T2	T4	NoRel	true	circulaba	heridas
+Relation	T2	T5	NoRel	true	circulaba	sucedieron
+Relation	T2	T6	NoRel	true	circulaba	Mueren
+Relation	T2	T9	NoRel	true	circulaba	colisionan
+Relation	T3	T5	NoRel	true	muertas	sucedieron
+Relation	T3	T6	NoRel	true	muertas	Mueren
+Relation	T3	T9	NoRel	true	muertas	colisionan
+Relation	T4	T3	NoRel	true	heridas	muertas
+Relation	T4	T6	NoRel	true	heridas	Mueren
+Relation	T4	T7	NoRel	true	heridas	arrollados
+Relation	T4	T8	NoRel	true	heridas	falleciendo
+Relation	T5	T1	NoRel	true	sucedieron	desprendida
+Relation	T5	T4	NoRel	true	sucedieron	heridas
+Relation	T6	T5	NoRel	true	Mueren	sucedieron
+Relation	T6	T8	NoRel	true	Mueren	falleciendo
+Relation	T6	T9	NoRel	true	Mueren	colisionan
+Relation	T7	T4	NoRel	true	arrollados	heridas
+Relation	T7	T5	NoRel	true	arrollados	sucedieron
+Relation	T7	T9	NoRel	true	arrollados	colisionan
+Relation	T8	T0	NoRel	true	falleciendo	choque
+Relation	T8	T2	NoRel	true	falleciendo	circulaba
+Relation	T8	T4	NoRel	true	falleciendo	heridas
+Relation	T9	T1	NoRel	true	colisionan	desprendida
+Relation	T9	T4	NoRel	true	colisionan	heridas
+Relation	T9	T5	NoRel	true	colisionan	sucedieron
+Relation	T9	T7	NoRel	true	colisionan	arrollados

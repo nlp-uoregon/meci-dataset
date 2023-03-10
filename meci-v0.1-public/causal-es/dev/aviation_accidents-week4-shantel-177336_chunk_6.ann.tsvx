@@ -1,0 +1,130 @@
+Text	El capitán observa la reducción de la potencia del motor , pero no se dio cuenta el origen del problema .	Por lo tanto , él comenzó un rápido descenso como medida de precaución .	En ese momento , la velocidad del aire ya estaba cerca de la velocidad de pérdida , y el piloto automático había mantenido una actitud de nariz arriba para mantener una altura constante .	Fue entonces cuando el avión fue golpeado por una repentina corriente de aire ascendente que lo hizo entrar en pérdida .	Aunque en la caja negra se escucha al primer oficial advirtiendo de la entrada en pérdida e intentó dos veces comunicárselo al capitán , él estaba confundido por el comportamiento inusual de los motores , debido al sistema anti-hielo y probablemente la interrupción del flujo de aire causado por la corriente ascendente .
+Event	T0	observa	EVENT	11
+Event	T1	reducción	EVENT	22
+Event	T2	comenzó	EVENT	124
+Event	T3	descenso	EVENT	142
+Event	T4	pérdida	EVENT	253
+Event	T5	mantenido	EVENT	292
+Event	T6	actitud	EVENT	306
+Event	T7	golpeado	EVENT	400
+Event	T8	corriente	EVENT	427
+Event	T9	pérdida	EVENT	478
+Event	T10	escucha	EVENT	515
+Event	T11	advirtiendo	EVENT	541
+Event	T12	pérdida	EVENT	570
+Event	T13	intentó	EVENT	580
+Event	T14	confundido	EVENT	635
+Event	T15	interrupción	EVENT	741
+Event	T16	flujo	EVENT	758
+Event	T17	causado	EVENT	772
+Relation	T7	T9	CauseEffect	true	golpeado	pérdida
+Relation	T9	T7	EffectCause	true	pérdida	golpeado
+Relation	T0	T1	NoRel	true	observa	reducción
+Relation	T0	T10	NoRel	true	observa	escucha
+Relation	T0	T16	NoRel	true	observa	flujo
+Relation	T0	T3	NoRel	true	observa	descenso
+Relation	T0	T5	NoRel	true	observa	mantenido
+Relation	T0	T9	NoRel	true	observa	pérdida
+Relation	T1	T10	NoRel	true	reducción	escucha
+Relation	T1	T12	NoRel	true	reducción	pérdida
+Relation	T1	T14	NoRel	true	reducción	confundido
+Relation	T1	T15	NoRel	true	reducción	interrupción
+Relation	T1	T2	NoRel	true	reducción	comenzó
+Relation	T1	T3	NoRel	true	reducción	descenso
+Relation	T1	T4	NoRel	true	reducción	pérdida
+Relation	T1	T5	NoRel	true	reducción	mantenido
+Relation	T10	T0	NoRel	true	escucha	observa
+Relation	T10	T11	NoRel	true	escucha	advirtiendo
+Relation	T10	T2	NoRel	true	escucha	comenzó
+Relation	T10	T6	NoRel	true	escucha	actitud
+Relation	T11	T1	NoRel	true	advirtiendo	reducción
+Relation	T11	T14	NoRel	true	advirtiendo	confundido
+Relation	T11	T16	NoRel	true	advirtiendo	flujo
+Relation	T11	T4	NoRel	true	advirtiendo	pérdida
+Relation	T11	T5	NoRel	true	advirtiendo	mantenido
+Relation	T12	T0	NoRel	true	pérdida	observa
+Relation	T12	T10	NoRel	true	pérdida	escucha
+Relation	T12	T16	NoRel	true	pérdida	flujo
+Relation	T12	T17	NoRel	true	pérdida	causado
+Relation	T12	T3	NoRel	true	pérdida	descenso
+Relation	T12	T5	NoRel	true	pérdida	mantenido
+Relation	T12	T6	NoRel	true	pérdida	actitud
+Relation	T13	T10	NoRel	true	intentó	escucha
+Relation	T13	T12	NoRel	true	intentó	pérdida
+Relation	T13	T16	NoRel	true	intentó	flujo
+Relation	T13	T3	NoRel	true	intentó	descenso
+Relation	T13	T5	NoRel	true	intentó	mantenido
+Relation	T13	T7	NoRel	true	intentó	golpeado
+Relation	T13	T8	NoRel	true	intentó	corriente
+Relation	T14	T11	NoRel	true	confundido	advirtiendo
+Relation	T14	T15	NoRel	true	confundido	interrupción
+Relation	T14	T16	NoRel	true	confundido	flujo
+Relation	T14	T3	NoRel	true	confundido	descenso
+Relation	T14	T6	NoRel	true	confundido	actitud
+Relation	T14	T7	NoRel	true	confundido	golpeado
+Relation	T15	T11	NoRel	true	interrupción	advirtiendo
+Relation	T15	T16	NoRel	true	interrupción	flujo
+Relation	T15	T17	NoRel	true	interrupción	causado
+Relation	T15	T2	NoRel	true	interrupción	comenzó
+Relation	T15	T3	NoRel	true	interrupción	descenso
+Relation	T15	T7	NoRel	true	interrupción	golpeado
+Relation	T15	T9	NoRel	true	interrupción	pérdida
+Relation	T16	T0	NoRel	true	flujo	observa
+Relation	T16	T11	NoRel	true	flujo	advirtiendo
+Relation	T16	T14	NoRel	true	flujo	confundido
+Relation	T16	T3	NoRel	true	flujo	descenso
+Relation	T16	T4	NoRel	true	flujo	pérdida
+Relation	T16	T5	NoRel	true	flujo	mantenido
+Relation	T16	T6	NoRel	true	flujo	actitud
+Relation	T16	T7	NoRel	true	flujo	golpeado
+Relation	T16	T9	NoRel	true	flujo	pérdida
+Relation	T17	T13	NoRel	true	causado	intentó
+Relation	T17	T2	NoRel	true	causado	comenzó
+Relation	T17	T3	NoRel	true	causado	descenso
+Relation	T17	T4	NoRel	true	causado	pérdida
+Relation	T17	T6	NoRel	true	causado	actitud
+Relation	T17	T7	NoRel	true	causado	golpeado
+Relation	T17	T9	NoRel	true	causado	pérdida
+Relation	T2	T11	NoRel	true	comenzó	advirtiendo
+Relation	T2	T12	NoRel	true	comenzó	pérdida
+Relation	T2	T13	NoRel	true	comenzó	intentó
+Relation	T2	T15	NoRel	true	comenzó	interrupción
+Relation	T2	T17	NoRel	true	comenzó	causado
+Relation	T2	T7	NoRel	true	comenzó	golpeado
+Relation	T3	T0	NoRel	true	descenso	observa
+Relation	T3	T14	NoRel	true	descenso	confundido
+Relation	T3	T15	NoRel	true	descenso	interrupción
+Relation	T3	T2	NoRel	true	descenso	comenzó
+Relation	T3	T9	NoRel	true	descenso	pérdida
+Relation	T4	T0	NoRel	true	pérdida	observa
+Relation	T4	T10	NoRel	true	pérdida	escucha
+Relation	T4	T12	NoRel	true	pérdida	pérdida
+Relation	T4	T3	NoRel	true	pérdida	descenso
+Relation	T4	T6	NoRel	true	pérdida	actitud
+Relation	T4	T7	NoRel	true	pérdida	golpeado
+Relation	T4	T9	NoRel	true	pérdida	pérdida
+Relation	T5	T0	NoRel	true	mantenido	observa
+Relation	T5	T1	NoRel	true	mantenido	reducción
+Relation	T5	T14	NoRel	true	mantenido	confundido
+Relation	T5	T4	NoRel	true	mantenido	pérdida
+Relation	T5	T7	NoRel	true	mantenido	golpeado
+Relation	T6	T12	NoRel	true	actitud	pérdida
+Relation	T6	T13	NoRel	true	actitud	intentó
+Relation	T6	T14	NoRel	true	actitud	confundido
+Relation	T6	T2	NoRel	true	actitud	comenzó
+Relation	T6	T9	NoRel	true	actitud	pérdida
+Relation	T7	T10	NoRel	true	golpeado	escucha
+Relation	T7	T4	NoRel	true	golpeado	pérdida
+Relation	T7	T6	NoRel	true	golpeado	actitud
+Relation	T8	T0	NoRel	true	corriente	observa
+Relation	T8	T13	NoRel	true	corriente	intentó
+Relation	T8	T16	NoRel	true	corriente	flujo
+Relation	T8	T4	NoRel	true	corriente	pérdida
+Relation	T8	T5	NoRel	true	corriente	mantenido
+Relation	T8	T6	NoRel	true	corriente	actitud
+Relation	T8	T9	NoRel	true	corriente	pérdida
+Relation	T9	T10	NoRel	true	pérdida	escucha
+Relation	T9	T13	NoRel	true	pérdida	intentó
+Relation	T9	T17	NoRel	true	pérdida	causado
+Relation	T9	T4	NoRel	true	pérdida	pérdida
+Relation	T9	T8	NoRel	true	pérdida	corriente

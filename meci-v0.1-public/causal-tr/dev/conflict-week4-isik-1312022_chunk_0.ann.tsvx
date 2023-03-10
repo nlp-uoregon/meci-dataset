@@ -1,0 +1,47 @@
+Text	DOGGER BANK MUHAREBESI 10 Şubat 1916 tarihinde Alman İmparatorluğu ve Birleşik Krallık arasında yaşanan çatışma .	Üç Alman torpil gemisinin Kuzey Denizi'ne girmesi ve 15. Britanya mayın temizleyici filosuyla karşılaşması çatışmayı tetiklemiştir .	Düşmana saldırıp saldırmama konusunda ilk anda kararsız kalan Almanlar , İngiliz birliklerinin mayın temizleyici şalopalardan oluştuğunu fark edince ilerlemeye başlamıştır .	_ HMS Arabis _ { { ' } } in batırıldığı muharebe Alman İmparatorluğu lehine sonuçlanmıştır .	
+Event	T0	çatışma	EVENT	104
+Event	T1	girmesi	EVENT	156
+Event	T2	tetiklemiştir	EVENT	231
+Event	T5	muharebe	EVENT	461
+Event	T6	sonuçlanmıştır	EVENT	497
+Event	T7	DOGGER BANK MUHAREBESI	EVENT	0
+Event	T8	karşılaşması	EVENT	208
+Event	T3	başlamıştır	EVENT	407
+Event	T4	edince	EVENT	389
+Event	T9	batırıldığı	EVENT	449
+Relation	T1	T8	CauseEffect	true	girmesi	karşılaşması
+Relation	T8	T1	EffectCause	true	karşılaşması	girmesi
+Relation	T8	T2	CauseEffect	true	karşılaşması	tetiklemiştir
+Relation	T2	T8	EffectCause	true	tetiklemiştir	karşılaşması
+Relation	T2	T0	CauseEffect	true	tetiklemiştir	çatışma
+Relation	T0	T2	EffectCause	true	çatışma	tetiklemiştir
+Relation	T2	T7	CauseEffect	true	tetiklemiştir	DOGGER BANK MUHAREBESI
+Relation	T7	T2	EffectCause	true	DOGGER BANK MUHAREBESI	tetiklemiştir
+Relation	T4	T3	CauseEffect	true	edince	başlamıştır
+Relation	T3	T4	EffectCause	true	başlamıştır	edince
+Relation	T0	T7	NoRel	true	çatışma	DOGGER BANK MUHAREBESI
+Relation	T0	T8	NoRel	true	çatışma	karşılaşması
+Relation	T1	T0	NoRel	true	girmesi	çatışma
+Relation	T2	T4	NoRel	true	tetiklemiştir	edince
+Relation	T2	T5	NoRel	true	tetiklemiştir	muharebe
+Relation	T2	T9	NoRel	true	tetiklemiştir	batırıldığı
+Relation	T3	T6	NoRel	true	başlamıştır	sonuçlanmıştır
+Relation	T4	T2	NoRel	true	edince	tetiklemiştir
+Relation	T4	T5	NoRel	true	edince	muharebe
+Relation	T4	T8	NoRel	true	edince	karşılaşması
+Relation	T5	T1	NoRel	true	muharebe	girmesi
+Relation	T5	T3	NoRel	true	muharebe	başlamıştır
+Relation	T5	T6	NoRel	true	muharebe	sonuçlanmıştır
+Relation	T5	T8	NoRel	true	muharebe	karşılaşması
+Relation	T6	T0	NoRel	true	sonuçlanmıştır	çatışma
+Relation	T6	T9	NoRel	true	sonuçlanmıştır	batırıldığı
+Relation	T7	T1	NoRel	true	DOGGER BANK MUHAREBESI	girmesi
+Relation	T7	T3	NoRel	true	DOGGER BANK MUHAREBESI	başlamıştır
+Relation	T7	T4	NoRel	true	DOGGER BANK MUHAREBESI	edince
+Relation	T7	T6	NoRel	true	DOGGER BANK MUHAREBESI	sonuçlanmıştır
+Relation	T7	T9	NoRel	true	DOGGER BANK MUHAREBESI	batırıldığı
+Relation	T8	T3	NoRel	true	karşılaşması	başlamıştır
+Relation	T8	T5	NoRel	true	karşılaşması	muharebe
+Relation	T8	T6	NoRel	true	karşılaşması	sonuçlanmıştır
+Relation	T8	T9	NoRel	true	karşılaşması	batırıldığı
+Relation	T9	T4	NoRel	true	batırıldığı	edince

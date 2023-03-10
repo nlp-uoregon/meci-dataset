@@ -1,0 +1,78 @@
+Text	ایک ٹرین تصادم سمنان اور دامغان ، ایران کی مین لائن کے درمیان ، 25 نومبر 2016ء کو پیش آیا جب دو ریل گاڑیاں ایران کے صوبے صوبہ سمنان میں ایک دوسرے سے ٹکرا گئیں ۔	جس کے نتیجے میں کم از کم 45 افراد ہلاک اور 103 کے قریب زخمی ہو گئے ۔	ہیلی کاپٹروں اور ایمبولینسوں کو تعینات کیا گیا تھا ; تاہم ، وہاں ریسکیو آپریشن میں کچھ مشکلات ہو رہی تھیں کیونکہ حادثے کی جگہ قریبی سٹیشن سے 4 کلومیٹر دور تھی ۔	حادثہ تب ہوا جب ایک ایکسپریس ٹرین جو تبریز سے مشہد جا رہی تھی کچھ تکنیکی خرابی ( سمنان اور دامغان کے درمیان میں سرد موسم کے باعث ) رک گئی ۔	دوسری ایکسپریس ٹرین جو اسی ریل سے سمنان سے مشہد جا رہی تھی کو لینڈ آپریٹر کی جانب رک جانے کا حکم دیا گیا اور روشنی کو سرخ کر دیا گیاتھا ۔
+Event	T0	تصادم	EVENT	9
+Event	T10	مشکلات	EVENT	317
+Event	T11	حادثے	EVENT	343
+Event	T12	حادثہ	EVENT	391
+Event	T13	رک	EVENT	613
+Event	T14	سرخ	EVENT	649
+Event	T3	جس	EVENT	161
+Event	T4	جا	EVENT	579
+Event	T5	ہلاک	EVENT	195
+Event	T6	زخمی	EVENT	216
+Event	T7	حکم	EVENT	624
+Event	T8	تعینات	EVENT	262
+Event	T9	آپریشن	EVENT	302
+Relation	T0	T5	CauseEffect	true	تصادم	ہلاک
+Relation	T5	T0	EffectCause	true	ہلاک	تصادم
+Relation	T0	T6	CauseEffect	true	تصادم	زخمی
+Relation	T6	T0	EffectCause	true	زخمی	تصادم
+Relation	T10	T8	CauseEffect	true	مشکلات	تعینات
+Relation	T8	T10	EffectCause	true	تعینات	مشکلات
+Relation	T11	T9	CauseEffect	true	حادثے	آپریشن
+Relation	T9	T11	EffectCause	true	آپریشن	حادثے
+Relation	T7	T13	CauseEffect	true	حکم	رک
+Relation	T13	T7	EffectCause	true	رک	حکم
+Relation	T3	T5	CauseEffect	true	جس	ہلاک
+Relation	T5	T3	EffectCause	true	ہلاک	جس
+Relation	T3	T6	CauseEffect	true	جس	زخمی
+Relation	T6	T3	EffectCause	true	زخمی	جس
+Relation	T0	T10	NoRel	true	تصادم	مشکلات
+Relation	T0	T12	NoRel	true	تصادم	حادثہ
+Relation	T0	T14	NoRel	true	تصادم	سرخ
+Relation	T0	T7	NoRel	true	تصادم	حکم
+Relation	T0	T9	NoRel	true	تصادم	آپریشن
+Relation	T10	T0	NoRel	true	مشکلات	تصادم
+Relation	T10	T12	NoRel	true	مشکلات	حادثہ
+Relation	T10	T3	NoRel	true	مشکلات	جس
+Relation	T10	T5	NoRel	true	مشکلات	ہلاک
+Relation	T10	T9	NoRel	true	مشکلات	آپریشن
+Relation	T11	T12	NoRel	true	حادثے	حادثہ
+Relation	T12	T0	NoRel	true	حادثہ	تصادم
+Relation	T12	T10	NoRel	true	حادثہ	مشکلات
+Relation	T12	T14	NoRel	true	حادثہ	سرخ
+Relation	T12	T4	NoRel	true	حادثہ	جا
+Relation	T12	T5	NoRel	true	حادثہ	ہلاک
+Relation	T12	T6	NoRel	true	حادثہ	زخمی
+Relation	T13	T0	NoRel	true	رک	تصادم
+Relation	T13	T11	NoRel	true	رک	حادثے
+Relation	T13	T12	NoRel	true	رک	حادثہ
+Relation	T13	T5	NoRel	true	رک	ہلاک
+Relation	T13	T6	NoRel	true	رک	زخمی
+Relation	T14	T0	NoRel	true	سرخ	تصادم
+Relation	T14	T10	NoRel	true	سرخ	مشکلات
+Relation	T14	T13	NoRel	true	سرخ	رک
+Relation	T14	T3	NoRel	true	سرخ	جس
+Relation	T14	T5	NoRel	true	سرخ	ہلاک
+Relation	T14	T6	NoRel	true	سرخ	زخمی
+Relation	T14	T9	NoRel	true	سرخ	آپریشن
+Relation	T3	T10	NoRel	true	جس	مشکلات
+Relation	T3	T14	NoRel	true	جس	سرخ
+Relation	T4	T0	NoRel	true	جا	تصادم
+Relation	T4	T13	NoRel	true	جا	رک
+Relation	T4	T8	NoRel	true	جا	تعینات
+Relation	T6	T10	NoRel	true	زخمی	مشکلات
+Relation	T6	T12	NoRel	true	زخمی	حادثہ
+Relation	T6	T14	NoRel	true	زخمی	سرخ
+Relation	T6	T4	NoRel	true	زخمی	جا
+Relation	T6	T8	NoRel	true	زخمی	تعینات
+Relation	T7	T0	NoRel	true	حکم	تصادم
+Relation	T7	T10	NoRel	true	حکم	مشکلات
+Relation	T7	T11	NoRel	true	حکم	حادثے
+Relation	T7	T12	NoRel	true	حکم	حادثہ
+Relation	T8	T6	NoRel	true	تعینات	زخمی
+Relation	T8	T9	NoRel	true	تعینات	آپریشن
+Relation	T9	T0	NoRel	true	آپریشن	تصادم
+Relation	T9	T10	NoRel	true	آپریشن	مشکلات
+Relation	T9	T3	NoRel	true	آپریشن	جس
+Relation	T9	T5	NoRel	true	آپریشن	ہلاک
+Relation	T9	T7	NoRel	true	آپریشن	حکم

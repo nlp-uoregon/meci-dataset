@@ -1,0 +1,66 @@
+Text	Ayrıca Cumhuriyet Savcılığının TCDD Genel Müdürü Süleyman Karaman hakkında soruşturma açılması talebi Ulaştırma Bakanı Binali Yıldırım tarafından reddedilecektir .	Sadece iki makinistin küçük cezalar aldığı davada , bilirkişinin yarı yarıya kusurlu bulduğu raylarla ilgili sorumluların soruşturulmasına izin verilmedi .	Bilirkişi raporlarıyla facianın ardında eski raylarla yapılan hızlı tren denemesinin olduğu ortaya çıktı .	Kazayla ilgili Sakarya 2’inci Ağır Ceza Mahkemesi’nde kamu davası açıldı .	Bilirkişi raporunda , birinci makinist 8’de 3 , ikinci makinist 8’de 1 ve demiryolu 8’de 4 kusurlu bulundu .
+Event	T0	talebi	EVENT	95
+Event	T1	reddedilecektir	EVENT	146
+Event	T2	davada	EVENT	207
+Event	T3	bulduğu	EVENT	249
+Event	T4	facianın	EVENT	343
+Event	T5	çıktı	EVENT	419
+Event	T6	açıldı	EVENT	493
+Event	T7	bulundu	EVENT	601
+Event	T8	verilmedi	EVENT	308
+Event	T9	Kazayla	EVENT	427
+Event	T10	raporunda	EVENT	512
+Relation	T0	T1	CauseEffect	true	talebi	reddedilecektir
+Relation	T1	T0	EffectCause	true	reddedilecektir	talebi
+Relation	T2	T3	CauseEffect	true	davada	bulduğu
+Relation	T3	T2	EffectCause	true	bulduğu	davada
+Relation	T2	T8	CauseEffect	true	davada	verilmedi
+Relation	T8	T2	EffectCause	true	verilmedi	davada
+Relation	T4	T5	CauseEffect	true	facianın	çıktı
+Relation	T5	T4	EffectCause	true	çıktı	facianın
+Relation	T4	T6	CauseEffect	true	facianın	açıldı
+Relation	T6	T4	EffectCause	true	açıldı	facianın
+Relation	T9	T6	CauseEffect	true	Kazayla	açıldı
+Relation	T6	T9	EffectCause	true	açıldı	Kazayla
+Relation	T6	T3	CauseEffect	true	açıldı	bulduğu
+Relation	T3	T6	EffectCause	true	bulduğu	açıldı
+Relation	T6	T10	CauseEffect	true	açıldı	raporunda
+Relation	T10	T6	EffectCause	true	raporunda	açıldı
+Relation	T10	T7	CauseEffect	true	raporunda	bulundu
+Relation	T7	T10	EffectCause	true	bulundu	raporunda
+Relation	T0	T5	NoRel	true	talebi	çıktı
+Relation	T0	T7	NoRel	true	talebi	bulundu
+Relation	T0	T9	NoRel	true	talebi	Kazayla
+Relation	T1	T10	NoRel	true	reddedilecektir	raporunda
+Relation	T1	T2	NoRel	true	reddedilecektir	davada
+Relation	T1	T3	NoRel	true	reddedilecektir	bulduğu
+Relation	T1	T4	NoRel	true	reddedilecektir	facianın
+Relation	T10	T0	NoRel	true	raporunda	talebi
+Relation	T10	T3	NoRel	true	raporunda	bulduğu
+Relation	T10	T4	NoRel	true	raporunda	facianın
+Relation	T10	T5	NoRel	true	raporunda	çıktı
+Relation	T2	T7	NoRel	true	davada	bulundu
+Relation	T2	T9	NoRel	true	davada	Kazayla
+Relation	T3	T1	NoRel	true	bulduğu	reddedilecektir
+Relation	T3	T4	NoRel	true	bulduğu	facianın
+Relation	T3	T8	NoRel	true	bulduğu	verilmedi
+Relation	T3	T9	NoRel	true	bulduğu	Kazayla
+Relation	T4	T1	NoRel	true	facianın	reddedilecektir
+Relation	T4	T10	NoRel	true	facianın	raporunda
+Relation	T4	T3	NoRel	true	facianın	bulduğu
+Relation	T4	T7	NoRel	true	facianın	bulundu
+Relation	T4	T9	NoRel	true	facianın	Kazayla
+Relation	T5	T0	NoRel	true	çıktı	talebi
+Relation	T5	T10	NoRel	true	çıktı	raporunda
+Relation	T5	T9	NoRel	true	çıktı	Kazayla
+Relation	T6	T2	NoRel	true	açıldı	davada
+Relation	T6	T5	NoRel	true	açıldı	çıktı
+Relation	T6	T8	NoRel	true	açıldı	verilmedi
+Relation	T7	T6	NoRel	true	bulundu	açıldı
+Relation	T7	T9	NoRel	true	bulundu	Kazayla
+Relation	T8	T0	NoRel	true	verilmedi	talebi
+Relation	T8	T7	NoRel	true	verilmedi	bulundu
+Relation	T9	T10	NoRel	true	Kazayla	raporunda
+Relation	T9	T2	NoRel	true	Kazayla	davada
+Relation	T9	T3	NoRel	true	Kazayla	bulduğu
+Relation	T9	T7	NoRel	true	Kazayla	bulundu

@@ -1,0 +1,51 @@
+Text	Kurbanları için çok daha fazla pişmanlık gösterir ( Leo veya James Earl Cash'in aksine ) .	İlk infazından sonra kusması buna ispat olarak gösterilebilir .	Ayrıca bazı noktalarda Leo'ya karşı öfkeyi ifade eder : Örneğin , bir seviyede birçok Watchdogs ajanlarını öldürdükten sonra , öldürmekten bıktığını iddia ederek silahını atar .	Ne var ki , oyun ilerledikçe , öldürmeye daha fazla bağımlı hale gelir - Leo'nun Daniel'ın zihnini ele geçirdiğine dair bir işaret - Dr. Whyte'ı oyunun sonunda anılarını temizlemeye zorlar .	Ailesinin uğruna bir deney için gönüllü olduğunu hatırlar .
+Event	T0	infazından	EVENT	95
+Event	T1	kusması	EVENT	112
+Event	T2	öldürdükten	EVENT	262
+Event	T3	iddia	EVENT	304
+Event	T4	atar	EVENT	326
+Event	T5	gelir	EVENT	398
+Event	T6	işaret	EVENT	457
+Event	T7	zorlar	EVENT	515
+Event	T8	deney	EVENT	545
+Event	T9	hatırlar	EVENT	573
+Relation	T0	T1	CauseEffect	true	infazından	kusması
+Relation	T1	T0	EffectCause	true	kusması	infazından
+Relation	T3	T4	CauseEffect	true	iddia	atar
+Relation	T4	T3	EffectCause	true	atar	iddia
+Relation	T7	T9	CauseEffect	true	zorlar	hatırlar
+Relation	T9	T7	EffectCause	true	hatırlar	zorlar
+Relation	T0	T7	NoRel	true	infazından	zorlar
+Relation	T1	T2	NoRel	true	kusması	öldürdükten
+Relation	T1	T3	NoRel	true	kusması	iddia
+Relation	T1	T7	NoRel	true	kusması	zorlar
+Relation	T2	T0	NoRel	true	öldürdükten	infazından
+Relation	T2	T3	NoRel	true	öldürdükten	iddia
+Relation	T2	T6	NoRel	true	öldürdükten	işaret
+Relation	T2	T7	NoRel	true	öldürdükten	zorlar
+Relation	T3	T1	NoRel	true	iddia	kusması
+Relation	T3	T2	NoRel	true	iddia	öldürdükten
+Relation	T3	T6	NoRel	true	iddia	işaret
+Relation	T3	T8	NoRel	true	iddia	deney
+Relation	T3	T9	NoRel	true	iddia	hatırlar
+Relation	T4	T1	NoRel	true	atar	kusması
+Relation	T4	T5	NoRel	true	atar	gelir
+Relation	T5	T4	NoRel	true	gelir	atar
+Relation	T5	T6	NoRel	true	gelir	işaret
+Relation	T6	T1	NoRel	true	işaret	kusması
+Relation	T6	T4	NoRel	true	işaret	atar
+Relation	T6	T7	NoRel	true	işaret	zorlar
+Relation	T6	T9	NoRel	true	işaret	hatırlar
+Relation	T7	T1	NoRel	true	zorlar	kusması
+Relation	T7	T4	NoRel	true	zorlar	atar
+Relation	T7	T5	NoRel	true	zorlar	gelir
+Relation	T7	T6	NoRel	true	zorlar	işaret
+Relation	T8	T0	NoRel	true	deney	infazından
+Relation	T8	T1	NoRel	true	deney	kusması
+Relation	T8	T4	NoRel	true	deney	atar
+Relation	T8	T5	NoRel	true	deney	gelir
+Relation	T8	T7	NoRel	true	deney	zorlar
+Relation	T9	T0	NoRel	true	hatırlar	infazından
+Relation	T9	T2	NoRel	true	hatırlar	öldürdükten
+Relation	T9	T3	NoRel	true	hatırlar	iddia
+Relation	T9	T5	NoRel	true	hatırlar	gelir

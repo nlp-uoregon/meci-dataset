@@ -1,0 +1,78 @@
+Text	The British and Canadians were able to link up and resume the drive on Caen the following day , but three days into the invasion , the advance was halted .	On 7 June , Operation Perch , a pincer attack by the 51st ( Highland ) Infantry Division and XXX Corps was launched to encircle Caen from the east and west flanks .	The 21st Panzer Division halted the 51st Division advance and the XXX Corps attack resulted in the Battle of Villers - Bocage and the withdrawal of the leading elements of the 7th Armoured Division soon after .	The next offensive , codenamed Operation Epsom , was launched by VIII Corps on 26 June , to envelope Caen from the west .	German forces managed to contain the offensive but to do so , they were obliged to commit all their available strength .
+Event	T0	resume	EVENT	51
+Event	T1	drive	EVENT	62
+Event	T2	invasion	EVENT	120
+Event	T3	advance	EVENT	135
+Event	T4	halted	EVENT	147
+Event	T6	attack	EVENT	195
+Event	T7	launched	EVENT	263
+Event	T8	encircle	EVENT	275
+Event	T9	halted	EVENT	346
+Event	T10	advance	EVENT	371
+Event	T11	resulted	EVENT	404
+Event	T12	Battle	EVENT	420
+Event	T13	withdrawal	EVENT	455
+Event	T14	offensive	EVENT	541
+Event	T15	Operation	EVENT	563
+Event	T16	launched	EVENT	585
+Event	T17	envelope	EVENT	624
+Event	T18	managed	EVENT	668
+Event	T19	contain	EVENT	679
+Event	T20	offensive	EVENT	691
+Event	T21	obliged	EVENT	726
+Event	T22	commit	EVENT	737
+Event	T23	link up	EVENT	39
+Event	T5	attack	EVENT	397
+Relation	T2	T4	CauseEffect	true	invasion	halted
+Relation	T4	T2	EffectCause	true	halted	invasion
+Relation	T7	T8	CauseEffect	true	launched	encircle
+Relation	T8	T7	EffectCause	true	encircle	launched
+Relation	T5	T12	CauseEffect	true	attack	Battle
+Relation	T12	T5	EffectCause	true	Battle	attack
+Relation	T5	T13	CauseEffect	true	attack	withdrawal
+Relation	T13	T5	EffectCause	true	withdrawal	attack
+Relation	T16	T17	CauseEffect	true	launched	envelope
+Relation	T17	T16	EffectCause	true	envelope	launched
+Relation	T21	T19	CauseEffect	true	obliged	contain
+Relation	T19	T21	EffectCause	true	contain	obliged
+Relation	T0	T14	NoRel	true	resume	offensive
+Relation	T0	T16	NoRel	true	resume	launched
+Relation	T0	T21	NoRel	true	resume	obliged
+Relation	T0	T6	NoRel	true	resume	attack
+Relation	T1	T17	NoRel	true	drive	envelope
+Relation	T1	T21	NoRel	true	drive	obliged
+Relation	T1	T5	NoRel	true	drive	attack
+Relation	T11	T16	NoRel	true	resulted	launched
+Relation	T11	T20	NoRel	true	resulted	offensive
+Relation	T12	T7	NoRel	true	Battle	launched
+Relation	T13	T12	NoRel	true	withdrawal	Battle
+Relation	T15	T14	NoRel	true	Operation	offensive
+Relation	T15	T20	NoRel	true	Operation	offensive
+Relation	T16	T1	NoRel	true	launched	drive
+Relation	T17	T0	NoRel	true	envelope	resume
+Relation	T17	T22	NoRel	true	envelope	commit
+Relation	T17	T4	NoRel	true	envelope	halted
+Relation	T19	T13	NoRel	true	contain	withdrawal
+Relation	T19	T3	NoRel	true	contain	advance
+Relation	T2	T18	NoRel	true	invasion	managed
+Relation	T2	T5	NoRel	true	invasion	attack
+Relation	T20	T6	NoRel	true	offensive	attack
+Relation	T20	T7	NoRel	true	offensive	launched
+Relation	T21	T18	NoRel	true	obliged	managed
+Relation	T21	T2	NoRel	true	obliged	invasion
+Relation	T21	T4	NoRel	true	obliged	halted
+Relation	T21	T9	NoRel	true	obliged	halted
+Relation	T22	T0	NoRel	true	commit	resume
+Relation	T22	T15	NoRel	true	commit	Operation
+Relation	T22	T23	NoRel	true	commit	link up
+Relation	T23	T20	NoRel	true	link up	offensive
+Relation	T23	T21	NoRel	true	link up	obliged
+Relation	T4	T17	NoRel	true	halted	envelope
+Relation	T5	T10	NoRel	true	attack	advance
+Relation	T5	T17	NoRel	true	attack	envelope
+Relation	T5	T23	NoRel	true	attack	link up
+Relation	T5	T7	NoRel	true	attack	launched
+Relation	T7	T16	NoRel	true	launched	launched
+Relation	T8	T3	NoRel	true	encircle	advance
+Relation	T9	T17	NoRel	true	halted	envelope
+Relation	T9	T18	NoRel	true	halted	managed

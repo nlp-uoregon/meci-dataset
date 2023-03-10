@@ -1,0 +1,98 @@
+Text	[ miniaturade imagen | Comercios cerrados en Madrid ( 29 de marzo ) ] Las medidas de confinamiento frente a la pandemia , según la ministra de Trabajo , Yolanda Díaz , provocaron la destrucción de empleos entre el 12 de marzo y el 12 de mayo , 1,14 millones si se consideran los dos últimos meses completos .	Además , a finales de abril unos 3,38 millones de trabajadores se habían visto afectados por un ERTE .	El Consejo de Ministros aprobó el 29 de mayo el Ingreso Mínimo Vital , una prestación no contributiva de la Seguridad Social para mejorar la economía de aquellas familias que no lleguen a unos umbrales mínimos de renta debido a la crisis del coronavirus .	El Servicio Público de Empleo Estatal desembolsó en mayo unos millones de euros , un 236,2% más que el año anterior , para pagar prestaciones por desempleo .	La creación de empresas se desplomó un 73,4_% en abril , su mayor caída desde 1995 .
+Event	T0	cerrados	EVENT	33
+Event	T1	medidas	EVENT	74
+Event	T2	confinamiento	EVENT	85
+Event	T3	pandemia	EVENT	111
+Event	T4	provocaron	EVENT	168
+Event	T5	destrucción	EVENT	182
+Event	T6	consideran	EVENT	264
+Event	T7	afectados	EVENT	388
+Event	T8	aprobó	EVENT	436
+Event	T9	lleguen	EVENT	590
+Event	T10	crisis	EVENT	643
+Event	T11	coronavirus	EVENT	654
+Event	T12	desembolsó	EVENT	706
+Event	T13	creación	EVENT	829
+Event	T14	desplomó	EVENT	853
+Event	T15	caída	EVENT	892
+Relation	T3	T5	CauseEffect	true	pandemia	destrucción
+Relation	T5	T3	EffectCause	true	destrucción	pandemia
+Relation	T3	T14	CauseEffect	true	pandemia	desplomó
+Relation	T14	T3	EffectCause	true	desplomó	pandemia
+Relation	T0	T1	NoRel	true	cerrados	medidas
+Relation	T0	T15	NoRel	true	cerrados	caída
+Relation	T1	T10	NoRel	true	medidas	crisis
+Relation	T1	T15	NoRel	true	medidas	caída
+Relation	T1	T3	NoRel	true	medidas	pandemia
+Relation	T1	T6	NoRel	true	medidas	consideran
+Relation	T1	T8	NoRel	true	medidas	aprobó
+Relation	T1	T9	NoRel	true	medidas	lleguen
+Relation	T10	T12	NoRel	true	crisis	desembolsó
+Relation	T10	T15	NoRel	true	crisis	caída
+Relation	T10	T3	NoRel	true	crisis	pandemia
+Relation	T10	T7	NoRel	true	crisis	afectados
+Relation	T11	T13	NoRel	true	coronavirus	creación
+Relation	T11	T15	NoRel	true	coronavirus	caída
+Relation	T11	T3	NoRel	true	coronavirus	pandemia
+Relation	T11	T5	NoRel	true	coronavirus	destrucción
+Relation	T11	T8	NoRel	true	coronavirus	aprobó
+Relation	T11	T9	NoRel	true	coronavirus	lleguen
+Relation	T13	T0	NoRel	true	creación	cerrados
+Relation	T13	T15	NoRel	true	creación	caída
+Relation	T13	T2	NoRel	true	creación	confinamiento
+Relation	T13	T3	NoRel	true	creación	pandemia
+Relation	T13	T4	NoRel	true	creación	provocaron
+Relation	T14	T0	NoRel	true	desplomó	cerrados
+Relation	T14	T11	NoRel	true	desplomó	coronavirus
+Relation	T14	T12	NoRel	true	desplomó	desembolsó
+Relation	T14	T5	NoRel	true	desplomó	destrucción
+Relation	T14	T6	NoRel	true	desplomó	consideran
+Relation	T14	T9	NoRel	true	desplomó	lleguen
+Relation	T15	T10	NoRel	true	caída	crisis
+Relation	T15	T11	NoRel	true	caída	coronavirus
+Relation	T15	T12	NoRel	true	caída	desembolsó
+Relation	T15	T5	NoRel	true	caída	destrucción
+Relation	T15	T6	NoRel	true	caída	consideran
+Relation	T15	T7	NoRel	true	caída	afectados
+Relation	T2	T0	NoRel	true	confinamiento	cerrados
+Relation	T2	T1	NoRel	true	confinamiento	medidas
+Relation	T2	T10	NoRel	true	confinamiento	crisis
+Relation	T2	T7	NoRel	true	confinamiento	afectados
+Relation	T2	T8	NoRel	true	confinamiento	aprobó
+Relation	T3	T0	NoRel	true	pandemia	cerrados
+Relation	T3	T10	NoRel	true	pandemia	crisis
+Relation	T3	T12	NoRel	true	pandemia	desembolsó
+Relation	T3	T6	NoRel	true	pandemia	consideran
+Relation	T3	T7	NoRel	true	pandemia	afectados
+Relation	T3	T9	NoRel	true	pandemia	lleguen
+Relation	T4	T1	NoRel	true	provocaron	medidas
+Relation	T4	T10	NoRel	true	provocaron	crisis
+Relation	T4	T13	NoRel	true	provocaron	creación
+Relation	T4	T2	NoRel	true	provocaron	confinamiento
+Relation	T4	T3	NoRel	true	provocaron	pandemia
+Relation	T4	T6	NoRel	true	provocaron	consideran
+Relation	T4	T7	NoRel	true	provocaron	afectados
+Relation	T4	T9	NoRel	true	provocaron	lleguen
+Relation	T5	T1	NoRel	true	destrucción	medidas
+Relation	T5	T10	NoRel	true	destrucción	crisis
+Relation	T5	T13	NoRel	true	destrucción	creación
+Relation	T5	T2	NoRel	true	destrucción	confinamiento
+Relation	T5	T7	NoRel	true	destrucción	afectados
+Relation	T5	T9	NoRel	true	destrucción	lleguen
+Relation	T6	T13	NoRel	true	consideran	creación
+Relation	T6	T14	NoRel	true	consideran	desplomó
+Relation	T6	T15	NoRel	true	consideran	caída
+Relation	T6	T5	NoRel	true	consideran	destrucción
+Relation	T6	T8	NoRel	true	consideran	aprobó
+Relation	T7	T15	NoRel	true	afectados	caída
+Relation	T7	T3	NoRel	true	afectados	pandemia
+Relation	T7	T8	NoRel	true	afectados	aprobó
+Relation	T8	T0	NoRel	true	aprobó	cerrados
+Relation	T8	T12	NoRel	true	aprobó	desembolsó
+Relation	T8	T14	NoRel	true	aprobó	desplomó
+Relation	T8	T3	NoRel	true	aprobó	pandemia
+Relation	T8	T5	NoRel	true	aprobó	destrucción
+Relation	T9	T11	NoRel	true	lleguen	coronavirus
+Relation	T9	T14	NoRel	true	lleguen	desplomó
+Relation	T9	T5	NoRel	true	lleguen	destrucción
+Relation	T9	T6	NoRel	true	lleguen	consideran

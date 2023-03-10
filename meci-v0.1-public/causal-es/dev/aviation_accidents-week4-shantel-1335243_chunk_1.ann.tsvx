@@ -1,0 +1,105 @@
+Text	El avión se estrelló contra el suelo , arrastrando sus restos contra aviones estacionados y espectadores .	Ambos pilotos sobrevivieron con heridas leves y aterrizaron muy cerca del lugar del accidente .	Los reportes iniciales indicaban como posibles causas del accidente el impacto de pájaros contra la aeronave y fallo en el motor .	En algunos videos del accidente se puede escuchar cómo justo antes del accidente los motores del avión se silencian de repente .	Otros videos , sin embargo , muestran los motores encendidos en todo momento .
+Event	T0	estrelló	EVENT	12
+Event	T1	arrastrando	EVENT	39
+Event	T2	restos	EVENT	55
+Event	T3	sobrevivieron	EVENT	121
+Event	T4	aterrizaron	EVENT	155
+Event	T5	accidente	EVENT	191
+Event	T6	reportes	EVENT	207
+Event	T7	indicaban	EVENT	226
+Event	T8	accidente	EVENT	261
+Event	T9	impacto	EVENT	274
+Event	T10	fallo	EVENT	314
+Event	T11	accidente	EVENT	356
+Event	T12	escuchar	EVENT	375
+Event	T13	accidente	EVENT	405
+Event	T14	silencian	EVENT	440
+Event	T15	muestran	EVENT	492
+Event	T16	encendidos	EVENT	513
+Relation	T0	T2	CauseEffect	true	estrelló	restos
+Relation	T2	T0	EffectCause	true	restos	estrelló
+Relation	T9	T5	CauseEffect	true	impacto	accidente
+Relation	T5	T9	EffectCause	true	accidente	impacto
+Relation	T0	T13	NoRel	true	estrelló	accidente
+Relation	T0	T14	NoRel	true	estrelló	silencian
+Relation	T0	T16	NoRel	true	estrelló	encendidos
+Relation	T1	T0	NoRel	true	arrastrando	estrelló
+Relation	T1	T12	NoRel	true	arrastrando	escuchar
+Relation	T1	T15	NoRel	true	arrastrando	muestran
+Relation	T1	T2	NoRel	true	arrastrando	restos
+Relation	T1	T3	NoRel	true	arrastrando	sobrevivieron
+Relation	T1	T7	NoRel	true	arrastrando	indicaban
+Relation	T1	T8	NoRel	true	arrastrando	accidente
+Relation	T10	T1	NoRel	true	fallo	arrastrando
+Relation	T10	T13	NoRel	true	fallo	accidente
+Relation	T10	T16	NoRel	true	fallo	encendidos
+Relation	T10	T2	NoRel	true	fallo	restos
+Relation	T10	T4	NoRel	true	fallo	aterrizaron
+Relation	T10	T7	NoRel	true	fallo	indicaban
+Relation	T10	T9	NoRel	true	fallo	impacto
+Relation	T11	T10	NoRel	true	accidente	fallo
+Relation	T11	T15	NoRel	true	accidente	muestran
+Relation	T11	T3	NoRel	true	accidente	sobrevivieron
+Relation	T11	T7	NoRel	true	accidente	indicaban
+Relation	T11	T9	NoRel	true	accidente	impacto
+Relation	T12	T0	NoRel	true	escuchar	estrelló
+Relation	T12	T16	NoRel	true	escuchar	encendidos
+Relation	T12	T6	NoRel	true	escuchar	reportes
+Relation	T12	T8	NoRel	true	escuchar	accidente
+Relation	T13	T11	NoRel	true	accidente	accidente
+Relation	T13	T15	NoRel	true	accidente	muestran
+Relation	T13	T5	NoRel	true	accidente	accidente
+Relation	T14	T11	NoRel	true	silencian	accidente
+Relation	T14	T2	NoRel	true	silencian	restos
+Relation	T14	T3	NoRel	true	silencian	sobrevivieron
+Relation	T14	T5	NoRel	true	silencian	accidente
+Relation	T14	T6	NoRel	true	silencian	reportes
+Relation	T15	T0	NoRel	true	muestran	estrelló
+Relation	T15	T11	NoRel	true	muestran	accidente
+Relation	T15	T16	NoRel	true	muestran	encendidos
+Relation	T15	T2	NoRel	true	muestran	restos
+Relation	T15	T3	NoRel	true	muestran	sobrevivieron
+Relation	T15	T4	NoRel	true	muestran	aterrizaron
+Relation	T15	T6	NoRel	true	muestran	reportes
+Relation	T15	T7	NoRel	true	muestran	indicaban
+Relation	T16	T10	NoRel	true	encendidos	fallo
+Relation	T16	T11	NoRel	true	encendidos	accidente
+Relation	T16	T12	NoRel	true	encendidos	escuchar
+Relation	T16	T14	NoRel	true	encendidos	silencian
+Relation	T16	T15	NoRel	true	encendidos	muestran
+Relation	T16	T2	NoRel	true	encendidos	restos
+Relation	T2	T1	NoRel	true	restos	arrastrando
+Relation	T2	T3	NoRel	true	restos	sobrevivieron
+Relation	T2	T9	NoRel	true	restos	impacto
+Relation	T3	T0	NoRel	true	sobrevivieron	estrelló
+Relation	T3	T14	NoRel	true	sobrevivieron	silencian
+Relation	T3	T16	NoRel	true	sobrevivieron	encendidos
+Relation	T3	T4	NoRel	true	sobrevivieron	aterrizaron
+Relation	T3	T5	NoRel	true	sobrevivieron	accidente
+Relation	T3	T6	NoRel	true	sobrevivieron	reportes
+Relation	T4	T16	NoRel	true	aterrizaron	encendidos
+Relation	T4	T5	NoRel	true	aterrizaron	accidente
+Relation	T4	T8	NoRel	true	aterrizaron	accidente
+Relation	T5	T11	NoRel	true	accidente	accidente
+Relation	T5	T14	NoRel	true	accidente	silencian
+Relation	T5	T15	NoRel	true	accidente	muestran
+Relation	T5	T16	NoRel	true	accidente	encendidos
+Relation	T5	T7	NoRel	true	accidente	indicaban
+Relation	T6	T10	NoRel	true	reportes	fallo
+Relation	T6	T14	NoRel	true	reportes	silencian
+Relation	T6	T2	NoRel	true	reportes	restos
+Relation	T6	T5	NoRel	true	reportes	accidente
+Relation	T6	T7	NoRel	true	reportes	indicaban
+Relation	T7	T0	NoRel	true	indicaban	estrelló
+Relation	T7	T11	NoRel	true	indicaban	accidente
+Relation	T7	T4	NoRel	true	indicaban	aterrizaron
+Relation	T7	T5	NoRel	true	indicaban	accidente
+Relation	T7	T8	NoRel	true	indicaban	accidente
+Relation	T8	T10	NoRel	true	accidente	fallo
+Relation	T8	T13	NoRel	true	accidente	accidente
+Relation	T8	T14	NoRel	true	accidente	silencian
+Relation	T8	T2	NoRel	true	accidente	restos
+Relation	T8	T4	NoRel	true	accidente	aterrizaron
+Relation	T8	T6	NoRel	true	accidente	reportes
+Relation	T8	T9	NoRel	true	accidente	impacto
+Relation	T9	T1	NoRel	true	impacto	arrastrando

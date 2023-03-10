@@ -1,0 +1,145 @@
+Text	Halid Şeyh Muhammed'e komplo kurmak , sivillere saldırmak , kamu malına saldırmak , kasıtlı olarak adam yaralamak , savaş hukukuna aykırı cinayet işlemek , savaş hukukuna aykırı olacak şekilde mülke zarar vermek , hava veya deniz taşıtı kaçırmak , terörizm ve terörizme malzeme desteği sağlamak suçları yöneltilirken , sanıkların tamamı ölüm cezasıyla yargılanacaktı .	Bush , 11 Nisan 2008'de yaptığı açıklamayla Ulusal Güvenlik Konseyi Yöneticiler Komitesinin terörizm şüphelilerine sert sorgulama yöntemleri uygulandığı konusunda görüşmeler yaptığını , bu yöntemlerin kullanılmasının onaylandığı hakkında bilgi sahibi olduğunu ve 2006 yılına kadar bu yöntemlerin CIA tarafından kullanıldığını kabul etti .	Bu yöntemlerin Muhammed'e de uygulanmış olmasını destekleyen Bush , " Bunları gerçekleştirmek için önümüzde yasal seçenekler vardı .	Hayır , Halid Şeyh Muhammed'in bildiklerini öğrenmek için yaptıklarımız konusunda herhangi bir sorunum yok ...	Bence Amerikan halkının Halid Şeyh Muhammed'in kim olduğunu anlaması konusu çok önemli .
+Event	T0	yaralamak	EVENT	104
+Event	T2	yöneltilirken	EVENT	303
+Event	T3	yargılanacaktı	EVENT	352
+Event	T4	sorgulama	EVENT	489
+Event	T5	uygulandığı	EVENT	510
+Event	T7	uygulanmış	EVENT	737
+Event	T8	komplo	EVENT	22
+Event	T9	saldırmak	EVENT	48
+Event	T10	saldırmak	EVENT	72
+Event	T1	cinayet	EVENT	138
+Event	T11	zarar vermek	EVENT	199
+Event	T12	kaçırmak	EVENT	237
+Event	T13	terörizm	EVENT	248
+Event	T14	desteği	EVENT	278
+Event	T15	terörizm	EVENT	461
+Event	T16	onaylandığı	EVENT	586
+Event	T6	kabul etti	EVENT	695
+Event	T17	destekleyen	EVENT	757
+Event	T18	öğrenmek	EVENT	885
+Event	T19	anlaması	EVENT	1012
+Relation	T2	T3	CauseEffect	true	yöneltilirken	yargılanacaktı
+Relation	T3	T2	EffectCause	true	yargılanacaktı	yöneltilirken
+Relation	T15	T3	CauseEffect	true	terörizm	yargılanacaktı
+Relation	T3	T15	EffectCause	true	yargılanacaktı	terörizm
+Relation	T15	T4	CauseEffect	true	terörizm	sorgulama
+Relation	T4	T15	EffectCause	true	sorgulama	terörizm
+Relation	T15	T5	CauseEffect	true	terörizm	uygulandığı
+Relation	T5	T15	EffectCause	true	uygulandığı	terörizm
+Relation	T19	T7	CauseEffect	true	anlaması	uygulanmış
+Relation	T7	T19	EffectCause	true	uygulanmış	anlaması
+Relation	T19	T16	CauseEffect	true	anlaması	onaylandığı
+Relation	T16	T19	EffectCause	true	onaylandığı	anlaması
+Relation	T0	T1	NoRel	true	yaralamak	cinayet
+Relation	T0	T10	NoRel	true	yaralamak	saldırmak
+Relation	T0	T11	NoRel	true	yaralamak	zarar vermek
+Relation	T0	T18	NoRel	true	yaralamak	öğrenmek
+Relation	T0	T19	NoRel	true	yaralamak	anlaması
+Relation	T0	T2	NoRel	true	yaralamak	yöneltilirken
+Relation	T0	T3	NoRel	true	yaralamak	yargılanacaktı
+Relation	T0	T6	NoRel	true	yaralamak	kabul etti
+Relation	T0	T8	NoRel	true	yaralamak	komplo
+Relation	T1	T0	NoRel	true	cinayet	yaralamak
+Relation	T1	T14	NoRel	true	cinayet	desteği
+Relation	T1	T15	NoRel	true	cinayet	terörizm
+Relation	T1	T17	NoRel	true	cinayet	destekleyen
+Relation	T1	T9	NoRel	true	cinayet	saldırmak
+Relation	T10	T0	NoRel	true	saldırmak	yaralamak
+Relation	T10	T1	NoRel	true	saldırmak	cinayet
+Relation	T10	T15	NoRel	true	saldırmak	terörizm
+Relation	T10	T3	NoRel	true	saldırmak	yargılanacaktı
+Relation	T10	T4	NoRel	true	saldırmak	sorgulama
+Relation	T10	T7	NoRel	true	saldırmak	uygulanmış
+Relation	T11	T16	NoRel	true	zarar vermek	onaylandığı
+Relation	T11	T2	NoRel	true	zarar vermek	yöneltilirken
+Relation	T11	T4	NoRel	true	zarar vermek	sorgulama
+Relation	T11	T6	NoRel	true	zarar vermek	kabul etti
+Relation	T12	T0	NoRel	true	kaçırmak	yaralamak
+Relation	T12	T13	NoRel	true	kaçırmak	terörizm
+Relation	T12	T7	NoRel	true	kaçırmak	uygulanmış
+Relation	T12	T9	NoRel	true	kaçırmak	saldırmak
+Relation	T13	T0	NoRel	true	terörizm	yaralamak
+Relation	T13	T10	NoRel	true	terörizm	saldırmak
+Relation	T13	T11	NoRel	true	terörizm	zarar vermek
+Relation	T13	T14	NoRel	true	terörizm	desteği
+Relation	T13	T17	NoRel	true	terörizm	destekleyen
+Relation	T13	T18	NoRel	true	terörizm	öğrenmek
+Relation	T13	T9	NoRel	true	terörizm	saldırmak
+Relation	T14	T18	NoRel	true	desteği	öğrenmek
+Relation	T14	T3	NoRel	true	desteği	yargılanacaktı
+Relation	T15	T1	NoRel	true	terörizm	cinayet
+Relation	T15	T10	NoRel	true	terörizm	saldırmak
+Relation	T15	T13	NoRel	true	terörizm	terörizm
+Relation	T15	T16	NoRel	true	terörizm	onaylandığı
+Relation	T15	T8	NoRel	true	terörizm	komplo
+Relation	T16	T10	NoRel	true	onaylandığı	saldırmak
+Relation	T16	T11	NoRel	true	onaylandığı	zarar vermek
+Relation	T16	T13	NoRel	true	onaylandığı	terörizm
+Relation	T16	T18	NoRel	true	onaylandığı	öğrenmek
+Relation	T16	T4	NoRel	true	onaylandığı	sorgulama
+Relation	T16	T7	NoRel	true	onaylandığı	uygulanmış
+Relation	T16	T8	NoRel	true	onaylandığı	komplo
+Relation	T17	T19	NoRel	true	destekleyen	anlaması
+Relation	T17	T3	NoRel	true	destekleyen	yargılanacaktı
+Relation	T17	T5	NoRel	true	destekleyen	uygulandığı
+Relation	T17	T8	NoRel	true	destekleyen	komplo
+Relation	T18	T10	NoRel	true	öğrenmek	saldırmak
+Relation	T18	T14	NoRel	true	öğrenmek	desteği
+Relation	T18	T19	NoRel	true	öğrenmek	anlaması
+Relation	T18	T6	NoRel	true	öğrenmek	kabul etti
+Relation	T19	T0	NoRel	true	anlaması	yaralamak
+Relation	T19	T1	NoRel	true	anlaması	cinayet
+Relation	T19	T12	NoRel	true	anlaması	kaçırmak
+Relation	T19	T13	NoRel	true	anlaması	terörizm
+Relation	T19	T18	NoRel	true	anlaması	öğrenmek
+Relation	T19	T2	NoRel	true	anlaması	yöneltilirken
+Relation	T19	T3	NoRel	true	anlaması	yargılanacaktı
+Relation	T19	T5	NoRel	true	anlaması	uygulandığı
+Relation	T19	T6	NoRel	true	anlaması	kabul etti
+Relation	T2	T10	NoRel	true	yöneltilirken	saldırmak
+Relation	T2	T12	NoRel	true	yöneltilirken	kaçırmak
+Relation	T2	T14	NoRel	true	yöneltilirken	desteği
+Relation	T2	T15	NoRel	true	yöneltilirken	terörizm
+Relation	T2	T19	NoRel	true	yöneltilirken	anlaması
+Relation	T2	T4	NoRel	true	yöneltilirken	sorgulama
+Relation	T2	T5	NoRel	true	yöneltilirken	uygulandığı
+Relation	T2	T6	NoRel	true	yöneltilirken	kabul etti
+Relation	T2	T8	NoRel	true	yöneltilirken	komplo
+Relation	T2	T9	NoRel	true	yöneltilirken	saldırmak
+Relation	T3	T13	NoRel	true	yargılanacaktı	terörizm
+Relation	T3	T16	NoRel	true	yargılanacaktı	onaylandığı
+Relation	T3	T17	NoRel	true	yargılanacaktı	destekleyen
+Relation	T3	T18	NoRel	true	yargılanacaktı	öğrenmek
+Relation	T3	T4	NoRel	true	yargılanacaktı	sorgulama
+Relation	T3	T8	NoRel	true	yargılanacaktı	komplo
+Relation	T3	T9	NoRel	true	yargılanacaktı	saldırmak
+Relation	T4	T13	NoRel	true	sorgulama	terörizm
+Relation	T4	T16	NoRel	true	sorgulama	onaylandığı
+Relation	T4	T18	NoRel	true	sorgulama	öğrenmek
+Relation	T4	T3	NoRel	true	sorgulama	yargılanacaktı
+Relation	T4	T9	NoRel	true	sorgulama	saldırmak
+Relation	T5	T1	NoRel	true	uygulandığı	cinayet
+Relation	T5	T11	NoRel	true	uygulandığı	zarar vermek
+Relation	T5	T17	NoRel	true	uygulandığı	destekleyen
+Relation	T5	T19	NoRel	true	uygulandığı	anlaması
+Relation	T5	T7	NoRel	true	uygulandığı	uygulanmış
+Relation	T6	T11	NoRel	true	kabul etti	zarar vermek
+Relation	T6	T12	NoRel	true	kabul etti	kaçırmak
+Relation	T6	T14	NoRel	true	kabul etti	desteği
+Relation	T6	T15	NoRel	true	kabul etti	terörizm
+Relation	T6	T16	NoRel	true	kabul etti	onaylandığı
+Relation	T6	T5	NoRel	true	kabul etti	uygulandığı
+Relation	T6	T8	NoRel	true	kabul etti	komplo
+Relation	T7	T0	NoRel	true	uygulanmış	yaralamak
+Relation	T7	T14	NoRel	true	uygulanmış	desteği
+Relation	T7	T8	NoRel	true	uygulanmış	komplo
+Relation	T7	T9	NoRel	true	uygulanmış	saldırmak
+Relation	T8	T11	NoRel	true	komplo	zarar vermek
+Relation	T8	T4	NoRel	true	komplo	sorgulama
+Relation	T8	T5	NoRel	true	komplo	uygulandığı
+Relation	T9	T1	NoRel	true	saldırmak	cinayet
+Relation	T9	T10	NoRel	true	saldırmak	saldırmak
+Relation	T9	T11	NoRel	true	saldırmak	zarar vermek
+Relation	T9	T3	NoRel	true	saldırmak	yargılanacaktı
+Relation	T9	T6	NoRel	true	saldırmak	kabul etti

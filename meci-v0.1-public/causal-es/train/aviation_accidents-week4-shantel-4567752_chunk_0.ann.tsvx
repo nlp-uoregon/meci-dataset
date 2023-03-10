@@ -1,0 +1,76 @@
+Text	El vUELO 348 DE KOLAVIA fue un vuelo regular de pasajeros desde el aeropuerto Internacional de Surgut , al aeropuerto internacional Domodedovo , Moscú , Rusia .	El sábado 1 de enero de 2011 el avión que operaba el vuelo comenzó a arder mientras rodaba para efectuar el despegue desde Surgut .	Tres personas murieron , y 43 resultaron heridas , cuatro de ellas de gravedad .	El avión quedó destruido en el incendio .	[ izquierda | miniaturade imagen | La aeronave meses antes del accidente ] El avión implicado fue un TupoLev Tu-154B-2 , registro RA-85588 , con número de serie 588 .
+Event	T0	vuelo	EVENT	31
+Event	T1	operaba	EVENT	203
+Event	T2	arder	EVENT	230
+Event	T3	rodaba	EVENT	245
+Event	T4	efectuar	EVENT	257
+Event	T5	despegue	EVENT	269
+Event	T6	murieron	EVENT	307
+Event	T7	heridas	EVENT	334
+Event	T8	incendio	EVENT	405
+Event	T9	accidente	EVENT	479
+Event	T10	implicado	EVENT	500
+Event	T11	registro	EVENT	537
+Event	T12	vUELO	EVENT	3
+Relation	T2	T6	CauseEffect	true	arder	murieron
+Relation	T6	T2	EffectCause	true	murieron	arder
+Relation	T2	T7	CauseEffect	true	arder	heridas
+Relation	T7	T2	EffectCause	true	heridas	arder
+Relation	T0	T11	NoRel	true	vuelo	registro
+Relation	T0	T4	NoRel	true	vuelo	efectuar
+Relation	T0	T7	NoRel	true	vuelo	heridas
+Relation	T0	T8	NoRel	true	vuelo	incendio
+Relation	T0	T9	NoRel	true	vuelo	accidente
+Relation	T1	T11	NoRel	true	operaba	registro
+Relation	T1	T2	NoRel	true	operaba	arder
+Relation	T1	T3	NoRel	true	operaba	rodaba
+Relation	T1	T7	NoRel	true	operaba	heridas
+Relation	T10	T1	NoRel	true	implicado	operaba
+Relation	T10	T6	NoRel	true	implicado	murieron
+Relation	T10	T7	NoRel	true	implicado	heridas
+Relation	T10	T8	NoRel	true	implicado	incendio
+Relation	T10	T9	NoRel	true	implicado	accidente
+Relation	T11	T0	NoRel	true	registro	vuelo
+Relation	T11	T1	NoRel	true	registro	operaba
+Relation	T11	T10	NoRel	true	registro	implicado
+Relation	T11	T5	NoRel	true	registro	despegue
+Relation	T12	T2	NoRel	true	vUELO	arder
+Relation	T12	T5	NoRel	true	vUELO	despegue
+Relation	T12	T9	NoRel	true	vUELO	accidente
+Relation	T2	T1	NoRel	true	arder	operaba
+Relation	T2	T10	NoRel	true	arder	implicado
+Relation	T2	T11	NoRel	true	arder	registro
+Relation	T2	T4	NoRel	true	arder	efectuar
+Relation	T2	T5	NoRel	true	arder	despegue
+Relation	T3	T0	NoRel	true	rodaba	vuelo
+Relation	T3	T10	NoRel	true	rodaba	implicado
+Relation	T3	T11	NoRel	true	rodaba	registro
+Relation	T3	T7	NoRel	true	rodaba	heridas
+Relation	T4	T0	NoRel	true	efectuar	vuelo
+Relation	T4	T1	NoRel	true	efectuar	operaba
+Relation	T4	T10	NoRel	true	efectuar	implicado
+Relation	T4	T11	NoRel	true	efectuar	registro
+Relation	T4	T2	NoRel	true	efectuar	arder
+Relation	T4	T5	NoRel	true	efectuar	despegue
+Relation	T4	T6	NoRel	true	efectuar	murieron
+Relation	T4	T8	NoRel	true	efectuar	incendio
+Relation	T5	T1	NoRel	true	despegue	operaba
+Relation	T5	T10	NoRel	true	despegue	implicado
+Relation	T5	T3	NoRel	true	despegue	rodaba
+Relation	T5	T7	NoRel	true	despegue	heridas
+Relation	T6	T1	NoRel	true	murieron	operaba
+Relation	T6	T3	NoRel	true	murieron	rodaba
+Relation	T6	T4	NoRel	true	murieron	efectuar
+Relation	T6	T7	NoRel	true	murieron	heridas
+Relation	T7	T0	NoRel	true	heridas	vuelo
+Relation	T7	T3	NoRel	true	heridas	rodaba
+Relation	T7	T5	NoRel	true	heridas	despegue
+Relation	T8	T1	NoRel	true	incendio	operaba
+Relation	T8	T11	NoRel	true	incendio	registro
+Relation	T9	T0	NoRel	true	accidente	vuelo
+Relation	T9	T10	NoRel	true	accidente	implicado
+Relation	T9	T11	NoRel	true	accidente	registro
+Relation	T9	T3	NoRel	true	accidente	rodaba
+Relation	T9	T4	NoRel	true	accidente	efectuar
+Relation	T9	T6	NoRel	true	accidente	murieron
+Relation	T9	T8	NoRel	true	accidente	incendio

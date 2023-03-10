@@ -1,0 +1,13 @@
+Text	Flyets sidste " over-night " servicecheck var færdiggjort den 2. marts , 2015 i Tampa , Florida .	Pr. marts , 2015 , opererede Delta Air_Lines 117 MD-88s .	Gennemsnits_alderen af disse fly var 24.2 år , og de var den ældste flytype i Delta's flyflåde .		
+Event	T0	servicecheck	EVENT	29
+Event	T1	færdiggjort	EVENT	46
+Event	T2	opererede	EVENT	117
+Event	T3	var	EVENT	189
+Event	T4	ældste	EVENT	217
+Relation	T0	T2	NoRel	true	servicecheck	opererede
+Relation	T1	T2	NoRel	true	færdiggjort	opererede
+Relation	T1	T4	NoRel	true	færdiggjort	ældste
+Relation	T2	T1	NoRel	true	opererede	færdiggjort
+Relation	T2	T3	NoRel	true	opererede	var
+Relation	T3	T0	NoRel	true	var	servicecheck
+Relation	T3	T1	NoRel	true	var	færdiggjort

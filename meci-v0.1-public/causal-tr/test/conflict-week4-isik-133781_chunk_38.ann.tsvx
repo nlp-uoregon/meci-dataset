@@ -1,0 +1,46 @@
+Text	Bu arada İstanbul’daki karışıklıkları ve Anadolu’da çıkan isyanları bastırmakla meşgul olan IV. Murad , Bağdad’la ilgilenemedi .	Bu mes’ eleleri hallettikten sonra sadrazam yaptığı Hafız Ahmed Paşa’yı serdar tayin ederek , Bağdad’a gönderdi .	5 Mayıs 1625'te Diyarbakır - Cülek ordugahına çıkan Hafız Ahmed Paşa , hazırlıklarını tamamladıktan sonra yola çıkıp Kasım’ın ortalarında Bağdad yakınlarına geldi .	Bağdad’ın yakınlarındaki İmam-ı A’ zam Ebu Hanife'nin mezarının bulunduğu Âzamiyye kasabasını ele geçirdi ve Bağdad’ı kuşattı .	Hafız Ahmed Paşa 100.000 kişilik bir orduyla Bağdad’a gelmesine rağmen , yeterli top getirmediği için şehrin iyice tahkim edilmiş olması gibi sebeplerden dolayı iki aydan fazla uğraştığı halde kaleyi düşüremedi .
+Event	T0	karışıklıkları	EVENT	23
+Event	T2	gönderdi	EVENT	232
+Event	T3	geldi	EVENT	400
+Event	T4	geçirdi	EVENT	506
+Event	T5	kuşattı	EVENT	526
+Event	T6	uğraştığı	EVENT	713
+Event	T8	isyanları	EVENT	58
+Event	T1	tayin	EVENT	208
+Event	T9	çıkan	EVENT	289
+Event	T10	çıkıp	EVENT	354
+Relation	T1	T2	CauseEffect	true	tayin	gönderdi
+Relation	T2	T1	EffectCause	true	gönderdi	tayin
+Relation	T2	T9	CauseEffect	true	gönderdi	çıkan
+Relation	T9	T2	EffectCause	true	çıkan	gönderdi
+Relation	T2	T3	CauseEffect	true	gönderdi	geldi
+Relation	T3	T2	EffectCause	true	geldi	gönderdi
+Relation	T2	T4	CauseEffect	true	gönderdi	geçirdi
+Relation	T4	T2	EffectCause	true	geçirdi	gönderdi
+Relation	T2	T5	CauseEffect	true	gönderdi	kuşattı
+Relation	T5	T2	EffectCause	true	kuşattı	gönderdi
+Relation	T2	T10	CauseEffect	true	gönderdi	çıkıp
+Relation	T10	T2	EffectCause	true	çıkıp	gönderdi
+Relation	T2	T6	CauseEffect	true	gönderdi	uğraştığı
+Relation	T6	T2	EffectCause	true	uğraştığı	gönderdi
+Relation	T0	T1	NoRel	true	karışıklıkları	tayin
+Relation	T0	T2	NoRel	true	karışıklıkları	gönderdi
+Relation	T0	T3	NoRel	true	karışıklıkları	geldi
+Relation	T0	T4	NoRel	true	karışıklıkları	geçirdi
+Relation	T1	T0	NoRel	true	tayin	karışıklıkları
+Relation	T1	T10	NoRel	true	tayin	çıkıp
+Relation	T1	T5	NoRel	true	tayin	kuşattı
+Relation	T10	T5	NoRel	true	çıkıp	kuşattı
+Relation	T10	T9	NoRel	true	çıkıp	çıkan
+Relation	T2	T0	NoRel	true	gönderdi	karışıklıkları
+Relation	T3	T1	NoRel	true	geldi	tayin
+Relation	T4	T3	NoRel	true	geçirdi	geldi
+Relation	T4	T6	NoRel	true	geçirdi	uğraştığı
+Relation	T4	T9	NoRel	true	geçirdi	çıkan
+Relation	T5	T10	NoRel	true	kuşattı	çıkıp
+Relation	T6	T10	NoRel	true	uğraştığı	çıkıp
+Relation	T8	T1	NoRel	true	isyanları	tayin
+Relation	T8	T10	NoRel	true	isyanları	çıkıp
+Relation	T8	T2	NoRel	true	isyanları	gönderdi
+Relation	T8	T9	NoRel	true	isyanları	çıkan
+Relation	T9	T6	NoRel	true	çıkan	uğraştığı

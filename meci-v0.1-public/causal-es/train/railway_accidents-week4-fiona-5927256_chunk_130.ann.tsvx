@@ -1,0 +1,70 @@
+Text	En la estación de Puerta del Ángel del Metro de Madrid chocan dos trenes de mantenimiento , con el saldo de dos muertos y dos heridos .	- El 3 de julio de 2006 , tuvo lugar el accidente de Metrovalencia de 2006 cuando entre las estaciones de Jesús y Plaza de España del metro valenciano descarriló un convoy .	Fallecieron 43 personas y otras 47 quedaron heridas .	- El 21 de agosto de 2006 , ocurre el accidente ferroviario de Villada al descarrilar en la citada localidad de la provincia de Palencia el Intercity que cubría el trayecto La Coruña -Hendaya , muriendo 7 personas y quedando otras 36 heridas .	- 25 de abril de 2007 .
+Event	T0	chocan	EVENT	55
+Event	T1	saldo	EVENT	99
+Event	T2	muertos	EVENT	112
+Event	T3	heridos	EVENT	126
+Event	T4	accidente	EVENT	176
+Event	T5	descarriló	EVENT	287
+Event	T6	Fallecieron	EVENT	310
+Event	T7	heridas	EVENT	354
+Event	T8	ocurre	EVENT	392
+Event	T9	descarrilar	EVENT	438
+Event	T10	muriendo	EVENT	558
+Event	T11	heridas	EVENT	598
+Relation	T0	T2	CauseEffect	true	chocan	muertos
+Relation	T2	T0	EffectCause	true	muertos	chocan
+Relation	T0	T3	CauseEffect	true	chocan	heridos
+Relation	T3	T0	EffectCause	true	heridos	chocan
+Relation	T5	T6	CauseEffect	true	descarriló	Fallecieron
+Relation	T6	T5	EffectCause	true	Fallecieron	descarriló
+Relation	T5	T7	CauseEffect	true	descarriló	heridas
+Relation	T7	T5	EffectCause	true	heridas	descarriló
+Relation	T9	T10	CauseEffect	true	descarrilar	muriendo
+Relation	T10	T9	EffectCause	true	muriendo	descarrilar
+Relation	T9	T11	CauseEffect	true	descarrilar	heridas
+Relation	T11	T9	EffectCause	true	heridas	descarrilar
+Relation	T0	T1	NoRel	true	chocan	saldo
+Relation	T0	T10	NoRel	true	chocan	muriendo
+Relation	T0	T6	NoRel	true	chocan	Fallecieron
+Relation	T1	T2	NoRel	true	saldo	muertos
+Relation	T1	T6	NoRel	true	saldo	Fallecieron
+Relation	T1	T8	NoRel	true	saldo	ocurre
+Relation	T10	T1	NoRel	true	muriendo	saldo
+Relation	T10	T11	NoRel	true	muriendo	heridas
+Relation	T10	T8	NoRel	true	muriendo	ocurre
+Relation	T11	T3	NoRel	true	heridas	heridos
+Relation	T2	T1	NoRel	true	muertos	saldo
+Relation	T2	T11	NoRel	true	muertos	heridas
+Relation	T2	T8	NoRel	true	muertos	ocurre
+Relation	T2	T9	NoRel	true	muertos	descarrilar
+Relation	T3	T10	NoRel	true	heridos	muriendo
+Relation	T3	T7	NoRel	true	heridos	heridas
+Relation	T3	T8	NoRel	true	heridos	ocurre
+Relation	T3	T9	NoRel	true	heridos	descarrilar
+Relation	T4	T2	NoRel	true	accidente	muertos
+Relation	T4	T8	NoRel	true	accidente	ocurre
+Relation	T4	T9	NoRel	true	accidente	descarrilar
+Relation	T5	T0	NoRel	true	descarriló	chocan
+Relation	T5	T1	NoRel	true	descarriló	saldo
+Relation	T5	T2	NoRel	true	descarriló	muertos
+Relation	T6	T1	NoRel	true	Fallecieron	saldo
+Relation	T6	T10	NoRel	true	Fallecieron	muriendo
+Relation	T6	T11	NoRel	true	Fallecieron	heridas
+Relation	T6	T2	NoRel	true	Fallecieron	muertos
+Relation	T6	T8	NoRel	true	Fallecieron	ocurre
+Relation	T7	T0	NoRel	true	heridas	chocan
+Relation	T7	T1	NoRel	true	heridas	saldo
+Relation	T7	T11	NoRel	true	heridas	heridas
+Relation	T7	T3	NoRel	true	heridas	heridos
+Relation	T7	T4	NoRel	true	heridas	accidente
+Relation	T7	T8	NoRel	true	heridas	ocurre
+Relation	T7	T9	NoRel	true	heridas	descarrilar
+Relation	T8	T0	NoRel	true	ocurre	chocan
+Relation	T8	T2	NoRel	true	ocurre	muertos
+Relation	T8	T5	NoRel	true	ocurre	descarriló
+Relation	T8	T7	NoRel	true	ocurre	heridas
+Relation	T9	T0	NoRel	true	descarrilar	chocan
+Relation	T9	T2	NoRel	true	descarrilar	muertos
+Relation	T9	T3	NoRel	true	descarrilar	heridos
+Relation	T9	T5	NoRel	true	descarrilar	descarriló
+Relation	T9	T7	NoRel	true	descarrilar	heridas

@@ -1,0 +1,34 @@
+Text	Bu baskın sırasında Demirci Efe'nin bazı kuvvetleri Isparta'ya kadar olan bölgedeki köylere dağılmıştı .	Harekâtın devamı bu çetelerin bulundukları köylerin basılması ve kaçakların ele geçirilmesi şeklinde sürmüştür .	Demirci Efe ise emrindeki 80 kişilik bir kuvvetle Uluborlu yönünde çekilmiştir .	18 Aralık 1920 tarihinde Demirci Efe'nin 700 adamı teslim alınmıştır .	Bu kişilerden yaşları uygun olanlar birliklerine sevk edilmek üzere yollandılar .
+Event	T0	baskın	EVENT	3
+Event	T1	dağılmıştı	EVENT	92
+Event	T2	devamı	EVENT	115
+Event	T3	basılması	EVENT	157
+Event	T4	geçirilmesi	EVENT	185
+Event	T5	sürmüştür	EVENT	206
+Event	T6	çekilmiştir	EVENT	285
+Event	T7	yollandılar	EVENT	438
+Event	T8	teslim alınmıştır	EVENT	350
+Relation	T0	T1	NoRel	true	baskın	dağılmıştı
+Relation	T0	T3	NoRel	true	baskın	basılması
+Relation	T0	T4	NoRel	true	baskın	geçirilmesi
+Relation	T1	T2	NoRel	true	dağılmıştı	devamı
+Relation	T1	T8	NoRel	true	dağılmıştı	teslim alınmıştır
+Relation	T2	T3	NoRel	true	devamı	basılması
+Relation	T2	T5	NoRel	true	devamı	sürmüştür
+Relation	T3	T0	NoRel	true	basılması	baskın
+Relation	T3	T2	NoRel	true	basılması	devamı
+Relation	T3	T7	NoRel	true	basılması	yollandılar
+Relation	T3	T8	NoRel	true	basılması	teslim alınmıştır
+Relation	T4	T1	NoRel	true	geçirilmesi	dağılmıştı
+Relation	T4	T3	NoRel	true	geçirilmesi	basılması
+Relation	T4	T6	NoRel	true	geçirilmesi	çekilmiştir
+Relation	T4	T8	NoRel	true	geçirilmesi	teslim alınmıştır
+Relation	T5	T0	NoRel	true	sürmüştür	baskın
+Relation	T5	T1	NoRel	true	sürmüştür	dağılmıştı
+Relation	T5	T6	NoRel	true	sürmüştür	çekilmiştir
+Relation	T5	T7	NoRel	true	sürmüştür	yollandılar
+Relation	T6	T0	NoRel	true	çekilmiştir	baskın
+Relation	T7	T3	NoRel	true	yollandılar	basılması
+Relation	T7	T4	NoRel	true	yollandılar	geçirilmesi
+Relation	T8	T0	NoRel	true	teslim alınmıştır	baskın
+Relation	T8	T7	NoRel	true	teslim alınmıştır	yollandılar

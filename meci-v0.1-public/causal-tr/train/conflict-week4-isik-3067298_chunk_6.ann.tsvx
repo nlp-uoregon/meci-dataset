@@ -1,0 +1,46 @@
+Text	Facebook ayrıca , Taliban'ın bilgilerini not etmesini önlemek için Afganların hesaplarını kilitlemelerine izin veren bir özelliği devreye soktu .	Taliban bu tür yasakları kınadı ve bunun onların ifade özgürlüğünü ihlal ettiğini savundu .	Düşüşten sonraki günlerde , grubu yasaklamayan birkaç sosyal medya şirketinden biri olan Twitter'da Taliban yanlısı yeni hesapların oluşturulmasında bir artış olduğu bildirildi .	küçükresim | Siviller Kabil Havalimanı'ndan havalanmaya hazırlanıyor , 18 Ağustos 2021 Birkaç yorumcu , Kabil ve İslam Cumhuriyeti'nin düşüşünden sonra Taliban'dan kaçan mültecilerde bir artış beklediklerini ve birkaç batılı hükûmet ise , düşüşü takip eden günlerde bir dizi mülteciyi kabul etme planlarını açıkladı .	Kabil'in ele geçirilmesinden sonra , ABD için çalışan 300.000'den fazla Afgan sivil , Taliban'ın misilleme riskiyle karşı karşıya kaldı .
+Event	T1	soktu	EVENT	138
+Event	T2	kınadı	EVENT	171
+Event	T3	savundu	EVENT	228
+Event	T4	Düşüşten	EVENT	238
+Event	T6	bildirildi	EVENT	404
+Event	T7	hazırlanıyor	EVENT	473
+Event	T8	düşüşünden	EVENT	552
+Event	T11	açıkladı	EVENT	724
+Event	T12	geçirilmesinden	EVENT	748
+Event	T13	kaldı	EVENT	865
+Event	T5	artış	EVENT	604
+Relation	T1	T2	CauseEffect	true	soktu	kınadı
+Relation	T2	T1	EffectCause	true	kınadı	soktu
+Relation	T1	T3	CauseEffect	true	soktu	savundu
+Relation	T3	T1	EffectCause	true	savundu	soktu
+Relation	T4	T6	CauseEffect	true	Düşüşten	bildirildi
+Relation	T6	T4	EffectCause	true	bildirildi	Düşüşten
+Relation	T12	T13	CauseEffect	true	geçirilmesinden	kaldı
+Relation	T13	T12	EffectCause	true	kaldı	geçirilmesinden
+Relation	T1	T7	NoRel	true	soktu	hazırlanıyor
+Relation	T1	T8	NoRel	true	soktu	düşüşünden
+Relation	T11	T1	NoRel	true	açıkladı	soktu
+Relation	T11	T13	NoRel	true	açıkladı	kaldı
+Relation	T11	T7	NoRel	true	açıkladı	hazırlanıyor
+Relation	T12	T11	NoRel	true	geçirilmesinden	açıkladı
+Relation	T12	T3	NoRel	true	geçirilmesinden	savundu
+Relation	T12	T4	NoRel	true	geçirilmesinden	Düşüşten
+Relation	T13	T3	NoRel	true	kaldı	savundu
+Relation	T2	T3	NoRel	true	kınadı	savundu
+Relation	T2	T5	NoRel	true	kınadı	artış
+Relation	T2	T8	NoRel	true	kınadı	düşüşünden
+Relation	T3	T13	NoRel	true	savundu	kaldı
+Relation	T4	T13	NoRel	true	Düşüşten	kaldı
+Relation	T4	T3	NoRel	true	Düşüşten	savundu
+Relation	T4	T7	NoRel	true	Düşüşten	hazırlanıyor
+Relation	T4	T8	NoRel	true	Düşüşten	düşüşünden
+Relation	T5	T1	NoRel	true	artış	soktu
+Relation	T5	T7	NoRel	true	artış	hazırlanıyor
+Relation	T5	T8	NoRel	true	artış	düşüşünden
+Relation	T6	T2	NoRel	true	bildirildi	kınadı
+Relation	T6	T3	NoRel	true	bildirildi	savundu
+Relation	T7	T5	NoRel	true	hazırlanıyor	artış
+Relation	T8	T1	NoRel	true	düşüşünden	soktu
+Relation	T8	T13	NoRel	true	düşüşünden	kaldı
+Relation	T8	T4	NoRel	true	düşüşünden	Düşüşten

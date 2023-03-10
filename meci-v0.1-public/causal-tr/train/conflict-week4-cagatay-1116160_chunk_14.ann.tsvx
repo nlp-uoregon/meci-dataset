@@ -1,0 +1,38 @@
+Text	Moğollar Macaristan’da Büyük Kağan adına para bastırarak hakimiyetlerini ilan ederler .	Bölge Batu Han tarafından Orda Han’ın denetimine verilir .	İstilacı ordunun yağma ve katliamlarının yanı sıra salgın hastalıklardan dolayı Macar halkı çok büyük kayıplar verir .	Bölgedeki hâkimiyetlerine rağmen Moğollar kaleli şehirleri ele geçiremezler .	Saldırıya uğrayan ancak ele geçirilemeyen şehirler arasında Fehérvár , Esztergom , Veszprém , Tihany , Győr , Pannonhalma , Moson , Sopron , Vasvár , Újhely , Zala , Lockenhaus , Bratislava , Nitra , Komárom , Fiľakovo ve Abaújvár sayılabilir .
+Event	T0	verilir	EVENT	137
+Event	T1	yağma	EVENT	164
+Event	T2	katliamlarının	EVENT	173
+Event	T3	verir	EVENT	258
+Event	T5	sayılabilir	EVENT	575
+Event	T6	bastırarak	EVENT	46
+Event	T7	ilan	EVENT	73
+Event	T8	salgın	EVENT	198
+Event	T9	Saldırıya uğrayan	EVENT	344
+Relation	T1	T3	CauseEffect	true	yağma	verir
+Relation	T3	T1	EffectCause	true	verir	yağma
+Relation	T2	T3	CauseEffect	true	katliamlarının	verir
+Relation	T3	T2	EffectCause	true	verir	katliamlarının
+Relation	T8	T3	CauseEffect	true	salgın	verir
+Relation	T3	T8	EffectCause	true	verir	salgın
+Relation	T1	T5	NoRel	true	yağma	sayılabilir
+Relation	T1	T9	NoRel	true	yağma	Saldırıya uğrayan
+Relation	T2	T6	NoRel	true	katliamlarının	bastırarak
+Relation	T5	T0	NoRel	true	sayılabilir	verilir
+Relation	T5	T1	NoRel	true	sayılabilir	yağma
+Relation	T5	T6	NoRel	true	sayılabilir	bastırarak
+Relation	T5	T7	NoRel	true	sayılabilir	ilan
+Relation	T6	T1	NoRel	true	bastırarak	yağma
+Relation	T6	T8	NoRel	true	bastırarak	salgın
+Relation	T7	T0	NoRel	true	ilan	verilir
+Relation	T7	T1	NoRel	true	ilan	yağma
+Relation	T7	T3	NoRel	true	ilan	verir
+Relation	T7	T5	NoRel	true	ilan	sayılabilir
+Relation	T7	T6	NoRel	true	ilan	bastırarak
+Relation	T7	T9	NoRel	true	ilan	Saldırıya uğrayan
+Relation	T8	T0	NoRel	true	salgın	verilir
+Relation	T8	T2	NoRel	true	salgın	katliamlarının
+Relation	T8	T5	NoRel	true	salgın	sayılabilir
+Relation	T9	T0	NoRel	true	Saldırıya uğrayan	verilir
+Relation	T9	T5	NoRel	true	Saldırıya uğrayan	sayılabilir
+Relation	T9	T7	NoRel	true	Saldırıya uğrayan	ilan
+Relation	T9	T8	NoRel	true	Saldırıya uğrayan	salgın

@@ -1,0 +1,13 @@
+Text	ہرنائی کے ضلعی ہسپتال میں 15 لاشیں اور کئی شدید زخمی بچے پہنچائے گئے ۔	بہت سے مریضوں کا اسپتال کی عمارت کے باہر زیادہ گنجائش نہ ہونے کی وجہ سے علاج کیا گیا ۔	چار ہلاکتیں کوئلے کے کان گرنے سسے ہوہیں ۔	بلوچستان میں کوئلے کی کانوں میں درجنوں لوگ لاپتہ ہیں ، جو ممکنہ طور پر پھنسے ہوئے ہیں ۔	زلزلے کے بعد پاک فوج کے دستے ہرنائی میں امدادی کاموں میں مدد کے لیے روانہ کیے گئے ۔
+Event	T0	گئے	EVENT	65
+Event	T1	ہلاکتیں	EVENT	162
+Event	T2	لاپتہ	EVENT	243
+Event	T3	پھنسے	EVENT	271
+Event	T4	زلزلے	EVENT	288
+Relation	T4	T1	CauseEffect	true	زلزلے	ہلاکتیں
+Relation	T1	T4	EffectCause	true	ہلاکتیں	زلزلے
+Relation	T4	T2	CauseEffect	true	زلزلے	لاپتہ
+Relation	T2	T4	EffectCause	true	لاپتہ	زلزلے
+Relation	T1	T0	NoRel	true	ہلاکتیں	گئے
+Relation	T1	T3	NoRel	true	ہلاکتیں	پھنسے
+Relation	T2	T1	NoRel	true	لاپتہ	ہلاکتیں

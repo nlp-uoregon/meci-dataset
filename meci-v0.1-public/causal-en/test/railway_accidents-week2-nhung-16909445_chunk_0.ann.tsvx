@@ -1,0 +1,30 @@
+Text	__NOTOC __	The COTON HILL RAIL_CRASH was a train crash which occurred on 11 January 1965 , at Coton Hill , near Shrewsbury in Shropshire , England .	It happened when a heavily loaded freight train ran out of control on the 1 in 100 Hencote incline , and was derailed on a set of trap points , eventually demolishing a signal box .	The signalman on duty was killed , and the driver of the train seriously injured .	At approximately 05:50 , the 03:56 Saltney to Pontypool Road freight train , formed of Class 47 diesel locomotive D1734 with 46 wagons , weighing a total of 775 tons , was approaching Coton Hill .
+Event	T0	RAIL_CRASH	EVENT	26
+Event	T1	occurred	EVENT	61
+Event	T10	approaching	EVENT	586
+Event	T2	happened	EVENT	152
+Event	T3	loaded	EVENT	176
+Event	T4	derailed	EVENT	258
+Event	T5	set	EVENT	272
+Event	T6	demolishing	EVENT	304
+Event	T7	killed	EVENT	357
+Event	T8	injured	EVENT	404
+Event	T9	formed	EVENT	491
+Relation	T0	T8	CauseEffect	true	RAIL_CRASH	injured
+Relation	T8	T0	EffectCause	true	injured	RAIL_CRASH
+Relation	T0	T7	CauseEffect	true	RAIL_CRASH	killed
+Relation	T7	T0	EffectCause	true	killed	RAIL_CRASH
+Relation	T3	T0	CauseEffect	true	loaded	RAIL_CRASH
+Relation	T0	T3	EffectCause	true	RAIL_CRASH	loaded
+Relation	T0	T10	NoRel	true	RAIL_CRASH	approaching
+Relation	T10	T6	NoRel	true	approaching	demolishing
+Relation	T10	T9	NoRel	true	approaching	formed
+Relation	T2	T0	NoRel	true	happened	RAIL_CRASH
+Relation	T2	T7	NoRel	true	happened	killed
+Relation	T3	T10	NoRel	true	loaded	approaching
+Relation	T4	T9	NoRel	true	derailed	formed
+Relation	T5	T1	NoRel	true	set	occurred
+Relation	T6	T3	NoRel	true	demolishing	loaded
+Relation	T6	T4	NoRel	true	demolishing	derailed
+Relation	T7	T4	NoRel	true	killed	derailed
+Relation	T9	T10	NoRel	true	formed	approaching

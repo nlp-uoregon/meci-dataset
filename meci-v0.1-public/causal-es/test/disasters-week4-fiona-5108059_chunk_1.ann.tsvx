@@ -1,0 +1,92 @@
+Text	La colisión se ha producido por el choque de un tren que comunicaba Varsovia con Cracovia con otro convoy que ya se encontraba en la vía .	La fiscalía ha abierto diligencias contra el regulador de tráfico por posible error humano e intentar falsificar el parte de guardia .	A la escena del accidente se han trasladado 19 ambulancias , _ Todo lo que tenemos _ , lamentó el director del Servicio de Emergencias Regional , Artur Borowicz .	Dos helicópteros fueron enviados desde Varsovia y la localidad de Wroclaw para el traslado de heridos .	En las operaciones de rescate participaron 450 bomberos y más de un centenar de policías , aunque los primeros en asistir a los heridos fueron varios vecinos al lugar del accidente .
+Event	T0	producido	EVENT	18
+Event	T1	choque	EVENT	35
+Event	T2	comunicaba	EVENT	57
+Event	T3	diligencias	EVENT	162
+Event	T4	falsificar	EVENT	241
+Event	T5	accidente	EVENT	290
+Event	T6	trasladado	EVENT	307
+Event	T7	enviados	EVENT	461
+Event	T8	traslado	EVENT	519
+Event	T9	heridos	EVENT	531
+Event	T10	operaciones	EVENT	548
+Event	T11	participaron	EVENT	571
+Event	T12	asistir	EVENT	655
+Event	T13	heridos	EVENT	669
+Event	T14	accidente	EVENT	712
+Event	T15	colisión	EVENT	3
+Relation	T5	T9	CauseEffect	true	accidente	heridos
+Relation	T9	T5	EffectCause	true	heridos	accidente
+Relation	T0	T11	NoRel	true	producido	participaron
+Relation	T0	T13	NoRel	true	producido	heridos
+Relation	T0	T4	NoRel	true	producido	falsificar
+Relation	T0	T7	NoRel	true	producido	enviados
+Relation	T1	T13	NoRel	true	choque	heridos
+Relation	T1	T14	NoRel	true	choque	accidente
+Relation	T1	T3	NoRel	true	choque	diligencias
+Relation	T1	T7	NoRel	true	choque	enviados
+Relation	T1	T8	NoRel	true	choque	traslado
+Relation	T1	T9	NoRel	true	choque	heridos
+Relation	T10	T1	NoRel	true	operaciones	choque
+Relation	T10	T11	NoRel	true	operaciones	participaron
+Relation	T10	T15	NoRel	true	operaciones	colisión
+Relation	T10	T6	NoRel	true	operaciones	trasladado
+Relation	T10	T7	NoRel	true	operaciones	enviados
+Relation	T10	T8	NoRel	true	operaciones	traslado
+Relation	T11	T0	NoRel	true	participaron	producido
+Relation	T11	T1	NoRel	true	participaron	choque
+Relation	T11	T15	NoRel	true	participaron	colisión
+Relation	T11	T3	NoRel	true	participaron	diligencias
+Relation	T11	T6	NoRel	true	participaron	trasladado
+Relation	T11	T7	NoRel	true	participaron	enviados
+Relation	T11	T8	NoRel	true	participaron	traslado
+Relation	T11	T9	NoRel	true	participaron	heridos
+Relation	T12	T10	NoRel	true	asistir	operaciones
+Relation	T12	T11	NoRel	true	asistir	participaron
+Relation	T12	T13	NoRel	true	asistir	heridos
+Relation	T12	T3	NoRel	true	asistir	diligencias
+Relation	T12	T4	NoRel	true	asistir	falsificar
+Relation	T12	T5	NoRel	true	asistir	accidente
+Relation	T13	T0	NoRel	true	heridos	producido
+Relation	T13	T1	NoRel	true	heridos	choque
+Relation	T13	T2	NoRel	true	heridos	comunicaba
+Relation	T13	T9	NoRel	true	heridos	heridos
+Relation	T14	T1	NoRel	true	accidente	choque
+Relation	T14	T4	NoRel	true	accidente	falsificar
+Relation	T15	T11	NoRel	true	colisión	participaron
+Relation	T15	T9	NoRel	true	colisión	heridos
+Relation	T2	T0	NoRel	true	comunicaba	producido
+Relation	T2	T10	NoRel	true	comunicaba	operaciones
+Relation	T2	T12	NoRel	true	comunicaba	asistir
+Relation	T2	T13	NoRel	true	comunicaba	heridos
+Relation	T2	T6	NoRel	true	comunicaba	trasladado
+Relation	T3	T11	NoRel	true	diligencias	participaron
+Relation	T3	T15	NoRel	true	diligencias	colisión
+Relation	T3	T7	NoRel	true	diligencias	enviados
+Relation	T3	T8	NoRel	true	diligencias	traslado
+Relation	T4	T10	NoRel	true	falsificar	operaciones
+Relation	T4	T15	NoRel	true	falsificar	colisión
+Relation	T4	T6	NoRel	true	falsificar	trasladado
+Relation	T5	T11	NoRel	true	accidente	participaron
+Relation	T5	T14	NoRel	true	accidente	accidente
+Relation	T5	T2	NoRel	true	accidente	comunicaba
+Relation	T6	T11	NoRel	true	trasladado	participaron
+Relation	T6	T13	NoRel	true	trasladado	heridos
+Relation	T6	T3	NoRel	true	trasladado	diligencias
+Relation	T6	T7	NoRel	true	trasladado	enviados
+Relation	T6	T8	NoRel	true	trasladado	traslado
+Relation	T6	T9	NoRel	true	trasladado	heridos
+Relation	T7	T0	NoRel	true	enviados	producido
+Relation	T7	T12	NoRel	true	enviados	asistir
+Relation	T7	T13	NoRel	true	enviados	heridos
+Relation	T7	T14	NoRel	true	enviados	accidente
+Relation	T7	T3	NoRel	true	enviados	diligencias
+Relation	T7	T4	NoRel	true	enviados	falsificar
+Relation	T8	T10	NoRel	true	traslado	operaciones
+Relation	T8	T11	NoRel	true	traslado	participaron
+Relation	T8	T13	NoRel	true	traslado	heridos
+Relation	T8	T5	NoRel	true	traslado	accidente
+Relation	T8	T6	NoRel	true	traslado	trasladado
+Relation	T8	T7	NoRel	true	traslado	enviados
+Relation	T9	T15	NoRel	true	heridos	colisión
+Relation	T9	T3	NoRel	true	heridos	diligencias

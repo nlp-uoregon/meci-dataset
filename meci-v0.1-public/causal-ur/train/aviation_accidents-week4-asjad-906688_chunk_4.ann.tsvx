@@ -1,0 +1,21 @@
+Text	جب کہ بعد میں سرکار نے اعلان کیا کہ کم از کم دو افراد زندہ بچے ہیں ۔	خبر رساں ادارے ، اے اف پی کے مطابق 97 افراد ہلاک ہو گئے ۔	زندہ بچنے والوں کی تعداد صرف 2 ہے ۔	زندہ بچ جانے والوں میں ایک ظفر مسعود ہیں جو کے بنک آف پنجاب کے سی ای او ہیں ۔	ماڈل زارا عابد اپنے چچا کی وفات پر کراچی سے لاہور تعزیت کے لیے آئی ہوئیں تھیں ۔
+Event	T0	ہلاک	EVENT	113
+Event	T1	گئے	EVENT	121
+Event	T2	بچنے	EVENT	132
+Event	T3	وفات	EVENT	268
+Event	T4	تعزیت	EVENT	291
+Event	T5	آئی	EVENT	304
+Relation	T3	T4	CauseEffect	true	وفات	تعزیت
+Relation	T4	T3	EffectCause	true	تعزیت	وفات
+Relation	T0	T3	NoRel	true	ہلاک	وفات
+Relation	T0	T4	NoRel	true	ہلاک	تعزیت
+Relation	T1	T3	NoRel	true	گئے	وفات
+Relation	T1	T4	NoRel	true	گئے	تعزیت
+Relation	T2	T0	NoRel	true	بچنے	ہلاک
+Relation	T2	T1	NoRel	true	بچنے	گئے
+Relation	T3	T1	NoRel	true	وفات	گئے
+Relation	T3	T2	NoRel	true	وفات	بچنے
+Relation	T3	T5	NoRel	true	وفات	آئی
+Relation	T4	T1	NoRel	true	تعزیت	گئے
+Relation	T4	T2	NoRel	true	تعزیت	بچنے
+Relation	T5	T2	NoRel	true	آئی	بچنے

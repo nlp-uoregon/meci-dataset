@@ -1,0 +1,67 @@
+Text	Araçlar sel sularında sürüklendi .	Dere kenarındaki iki yüksek katlı bina kısmen yıkıldı .	İçişleri Bakanı Süleyman Soylu , selin ilk anlarında ilçe merkezinin yukarısında bulunan tomruk deposundan gelen ağaç ve kütük parçalarının barajlanma etkisi ile Ezine çayı üzerindeki köprüyü tıkadığı , suyun geçişinin engellenmesiyle birlikte biriken sel sularının taşarak ilçeye yayıldığını açıkladı .	Sinop'un Ayancık ilçesi Bozkurt'tan sonra en çok etkilenen yerleşim yeri olurken , ilçede 15 kişi yaşamını yitirdi .	Debisi yükselen Ayancık Çayı ilçe merkezine taşarken , burada bulunan bir kereste deposundaki ağaçların köprüyü tıkaması nedeniyle afetin boyutları büyüdü .
+Event	T0	sürüklendi	EVENT	22
+Event	T1	yıkıldı	EVENT	81
+Event	T2	selin	EVENT	124
+Event	T4	tıkadığı	EVENT	283
+Event	T5	taşarak	EVENT	357
+Event	T6	açıkladı	EVENT	384
+Event	T7	yitirdi	EVENT	502
+Event	T8	taşarken	EVENT	556
+Event	T9	tıkaması	EVENT	624
+Event	T10	büyüdü	EVENT	660
+Event	T11	gelen	EVENT	198
+Event	T3	yayıldığını	EVENT	372
+Relation	T2	T0	CauseEffect	true	selin	sürüklendi
+Relation	T0	T2	EffectCause	true	sürüklendi	selin
+Relation	T2	T1	CauseEffect	true	selin	yıkıldı
+Relation	T1	T2	EffectCause	true	yıkıldı	selin
+Relation	T4	T5	CauseEffect	true	tıkadığı	taşarak
+Relation	T5	T4	EffectCause	true	taşarak	tıkadığı
+Relation	T2	T11	CauseEffect	true	selin	gelen
+Relation	T11	T2	EffectCause	true	gelen	selin
+Relation	T11	T4	CauseEffect	true	gelen	tıkadığı
+Relation	T4	T11	EffectCause	true	tıkadığı	gelen
+Relation	T5	T3	CauseEffect	true	taşarak	yayıldığını
+Relation	T3	T5	EffectCause	true	yayıldığını	taşarak
+Relation	T2	T7	CauseEffect	true	selin	yitirdi
+Relation	T7	T2	EffectCause	true	yitirdi	selin
+Relation	T2	T8	CauseEffect	true	selin	taşarken
+Relation	T8	T2	EffectCause	true	taşarken	selin
+Relation	T8	T9	CauseEffect	true	taşarken	tıkaması
+Relation	T9	T8	EffectCause	true	tıkaması	taşarken
+Relation	T9	T10	CauseEffect	true	tıkaması	büyüdü
+Relation	T10	T9	EffectCause	true	büyüdü	tıkaması
+Relation	T0	T1	NoRel	true	sürüklendi	yıkıldı
+Relation	T0	T6	NoRel	true	sürüklendi	açıkladı
+Relation	T0	T8	NoRel	true	sürüklendi	taşarken
+Relation	T10	T11	NoRel	true	büyüdü	gelen
+Relation	T10	T5	NoRel	true	büyüdü	taşarak
+Relation	T10	T6	NoRel	true	büyüdü	açıkladı
+Relation	T10	T8	NoRel	true	büyüdü	taşarken
+Relation	T11	T0	NoRel	true	gelen	sürüklendi
+Relation	T11	T1	NoRel	true	gelen	yıkıldı
+Relation	T11	T6	NoRel	true	gelen	açıkladı
+Relation	T11	T7	NoRel	true	gelen	yitirdi
+Relation	T11	T8	NoRel	true	gelen	taşarken
+Relation	T2	T9	NoRel	true	selin	tıkaması
+Relation	T3	T1	NoRel	true	yayıldığını	yıkıldı
+Relation	T3	T11	NoRel	true	yayıldığını	gelen
+Relation	T3	T4	NoRel	true	yayıldığını	tıkadığı
+Relation	T3	T8	NoRel	true	yayıldığını	taşarken
+Relation	T4	T9	NoRel	true	tıkadığı	tıkaması
+Relation	T5	T1	NoRel	true	taşarak	yıkıldı
+Relation	T5	T11	NoRel	true	taşarak	gelen
+Relation	T5	T8	NoRel	true	taşarak	taşarken
+Relation	T6	T0	NoRel	true	açıkladı	sürüklendi
+Relation	T6	T10	NoRel	true	açıkladı	büyüdü
+Relation	T6	T11	NoRel	true	açıkladı	gelen
+Relation	T6	T9	NoRel	true	açıkladı	tıkaması
+Relation	T7	T0	NoRel	true	yitirdi	sürüklendi
+Relation	T7	T1	NoRel	true	yitirdi	yıkıldı
+Relation	T7	T8	NoRel	true	yitirdi	taşarken
+Relation	T7	T9	NoRel	true	yitirdi	tıkaması
+Relation	T8	T1	NoRel	true	taşarken	yıkıldı
+Relation	T8	T6	NoRel	true	taşarken	açıkladı
+Relation	T9	T1	NoRel	true	tıkaması	yıkıldı
+Relation	T9	T3	NoRel	true	tıkaması	yayıldığını
+Relation	T9	T4	NoRel	true	tıkaması	tıkadığı

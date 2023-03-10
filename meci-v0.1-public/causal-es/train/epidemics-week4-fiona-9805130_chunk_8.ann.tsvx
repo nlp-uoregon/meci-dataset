@@ -1,0 +1,115 @@
+Text	Se promulgaron severas sanciones , incluida la pena capital , contra aquellos que no reportaron casos a las autoridades , y tres hombres fueron ahorcados como ejemplo .	Durante la epidemia , algunos que robaron artículos de casas pertenecientes a personas que habían muerto también fueron ahorcados .	El 26 de febrero , el Gran Maestro Nicolás Cotoner y el comité se reunieron y decidieron aumentar las medidas que se estaban tomando .	El movimiento de personas estaba restringido desde el 24 de marzo , y todos los casos sospechosos estaban aislados .	A los residentes de zonas de La Valeta con altas tasas de infección , incluyendo el Manderaggio , _ Arċipierku _ y French Street , se les prohibió salir de sus hogares y se les proporcionó comida .
+Event	T0	promulgaron	EVENT	3
+Event	T1	sanciones	EVENT	23
+Event	T2	pena	EVENT	47
+Event	T3	ahorcados	EVENT	144
+Event	T4	epidemia	EVENT	180
+Event	T5	robaron	EVENT	203
+Event	T6	muerto	EVENT	267
+Event	T7	ahorcados	EVENT	289
+Event	T8	reunieron	EVENT	367
+Event	T9	aumentar	EVENT	390
+Event	T10	tomando	EVENT	426
+Event	T11	movimiento	EVENT	439
+Event	T12	restringido	EVENT	469
+Event	T13	infección	EVENT	611
+Event	T14	salir	EVENT	700
+Event	T15	comida	EVENT	742
+Event	T16	no reportaron	EVENT	82
+Relation	T5	T7	CauseEffect	true	robaron	ahorcados
+Relation	T7	T5	EffectCause	true	ahorcados	robaron
+Relation	T16	T3	CauseEffect	true	no reportaron	ahorcados
+Relation	T3	T16	EffectCause	true	ahorcados	no reportaron
+Relation	T0	T1	NoRel	true	promulgaron	sanciones
+Relation	T0	T15	NoRel	true	promulgaron	comida
+Relation	T0	T16	NoRel	true	promulgaron	no reportaron
+Relation	T0	T6	NoRel	true	promulgaron	muerto
+Relation	T1	T11	NoRel	true	sanciones	movimiento
+Relation	T1	T16	NoRel	true	sanciones	no reportaron
+Relation	T1	T3	NoRel	true	sanciones	ahorcados
+Relation	T1	T8	NoRel	true	sanciones	reunieron
+Relation	T10	T0	NoRel	true	tomando	promulgaron
+Relation	T10	T3	NoRel	true	tomando	ahorcados
+Relation	T10	T4	NoRel	true	tomando	epidemia
+Relation	T10	T8	NoRel	true	tomando	reunieron
+Relation	T10	T9	NoRel	true	tomando	aumentar
+Relation	T11	T1	NoRel	true	movimiento	sanciones
+Relation	T11	T10	NoRel	true	movimiento	tomando
+Relation	T11	T12	NoRel	true	movimiento	restringido
+Relation	T11	T7	NoRel	true	movimiento	ahorcados
+Relation	T11	T8	NoRel	true	movimiento	reunieron
+Relation	T12	T1	NoRel	true	restringido	sanciones
+Relation	T12	T11	NoRel	true	restringido	movimiento
+Relation	T12	T13	NoRel	true	restringido	infección
+Relation	T12	T14	NoRel	true	restringido	salir
+Relation	T12	T15	NoRel	true	restringido	comida
+Relation	T12	T2	NoRel	true	restringido	pena
+Relation	T12	T5	NoRel	true	restringido	robaron
+Relation	T12	T7	NoRel	true	restringido	ahorcados
+Relation	T12	T8	NoRel	true	restringido	reunieron
+Relation	T13	T15	NoRel	true	infección	comida
+Relation	T13	T4	NoRel	true	infección	epidemia
+Relation	T13	T8	NoRel	true	infección	reunieron
+Relation	T14	T1	NoRel	true	salir	sanciones
+Relation	T14	T12	NoRel	true	salir	restringido
+Relation	T14	T15	NoRel	true	salir	comida
+Relation	T14	T2	NoRel	true	salir	pena
+Relation	T14	T3	NoRel	true	salir	ahorcados
+Relation	T14	T4	NoRel	true	salir	epidemia
+Relation	T14	T7	NoRel	true	salir	ahorcados
+Relation	T14	T9	NoRel	true	salir	aumentar
+Relation	T15	T0	NoRel	true	comida	promulgaron
+Relation	T15	T11	NoRel	true	comida	movimiento
+Relation	T15	T14	NoRel	true	comida	salir
+Relation	T15	T4	NoRel	true	comida	epidemia
+Relation	T15	T5	NoRel	true	comida	robaron
+Relation	T15	T8	NoRel	true	comida	reunieron
+Relation	T15	T9	NoRel	true	comida	aumentar
+Relation	T16	T0	NoRel	true	no reportaron	promulgaron
+Relation	T16	T10	NoRel	true	no reportaron	tomando
+Relation	T16	T2	NoRel	true	no reportaron	pena
+Relation	T16	T4	NoRel	true	no reportaron	epidemia
+Relation	T16	T9	NoRel	true	no reportaron	aumentar
+Relation	T2	T1	NoRel	true	pena	sanciones
+Relation	T2	T11	NoRel	true	pena	movimiento
+Relation	T2	T5	NoRel	true	pena	robaron
+Relation	T2	T7	NoRel	true	pena	ahorcados
+Relation	T2	T8	NoRel	true	pena	reunieron
+Relation	T3	T1	NoRel	true	ahorcados	sanciones
+Relation	T3	T12	NoRel	true	ahorcados	restringido
+Relation	T3	T14	NoRel	true	ahorcados	salir
+Relation	T3	T4	NoRel	true	ahorcados	epidemia
+Relation	T3	T7	NoRel	true	ahorcados	ahorcados
+Relation	T4	T0	NoRel	true	epidemia	promulgaron
+Relation	T4	T1	NoRel	true	epidemia	sanciones
+Relation	T4	T10	NoRel	true	epidemia	tomando
+Relation	T4	T11	NoRel	true	epidemia	movimiento
+Relation	T4	T12	NoRel	true	epidemia	restringido
+Relation	T4	T13	NoRel	true	epidemia	infección
+Relation	T4	T14	NoRel	true	epidemia	salir
+Relation	T4	T5	NoRel	true	epidemia	robaron
+Relation	T5	T1	NoRel	true	robaron	sanciones
+Relation	T5	T12	NoRel	true	robaron	restringido
+Relation	T5	T13	NoRel	true	robaron	infección
+Relation	T5	T4	NoRel	true	robaron	epidemia
+Relation	T6	T0	NoRel	true	muerto	promulgaron
+Relation	T6	T11	NoRel	true	muerto	movimiento
+Relation	T6	T4	NoRel	true	muerto	epidemia
+Relation	T7	T1	NoRel	true	ahorcados	sanciones
+Relation	T7	T12	NoRel	true	ahorcados	restringido
+Relation	T7	T14	NoRel	true	ahorcados	salir
+Relation	T7	T16	NoRel	true	ahorcados	no reportaron
+Relation	T7	T9	NoRel	true	ahorcados	aumentar
+Relation	T8	T0	NoRel	true	reunieron	promulgaron
+Relation	T8	T10	NoRel	true	reunieron	tomando
+Relation	T8	T12	NoRel	true	reunieron	restringido
+Relation	T8	T14	NoRel	true	reunieron	salir
+Relation	T8	T15	NoRel	true	reunieron	comida
+Relation	T8	T16	NoRel	true	reunieron	no reportaron
+Relation	T8	T3	NoRel	true	reunieron	ahorcados
+Relation	T9	T0	NoRel	true	aumentar	promulgaron
+Relation	T9	T11	NoRel	true	aumentar	movimiento
+Relation	T9	T13	NoRel	true	aumentar	infección
+Relation	T9	T14	NoRel	true	aumentar	salir
+Relation	T9	T16	NoRel	true	aumentar	no reportaron
+Relation	T9	T6	NoRel	true	aumentar	muerto

@@ -1,0 +1,65 @@
+Text	Şah , Nahcivan taraflarında olmasına rağmen , Osmanlı ordusunun üzerine gelmediğinden , başka çarpışma olmadı .	1617’de Kırım hanı II . Canibek Giray 40.000 kişilik süvarisi ile Gence ve Nahcivan üzerine akın düzenleyip kışı yeni serdar sadrazam Halil Paşa ile beraber Diyarbakır’da geçirdi .	1618 Eylül ayında hızlı bir yürüyüşle Erdebil ile Tebriz arasında bulunan Pul - Şikeste mevkiine gelen Osmanlı kuvvetleri , yorgunluğunu üzerinden atamadan İran ordusunun pususuna düşünce , büyük kayıplar vererek yenildi .	Toplanan savaş meclisinde geri çekilmenin çok kötü sonuç vereceği düşünülerek , ordunun Erdebil üzerine yürümesi kararlaştırıldı .	Bu durumdan endişelenip sulh teklif eden Şah Abbas’la Erdebil surları önünde yapılan görüşmeler sonunda antlaşma imzalandı .
+Event	T0	çarpışma	EVENT	94
+Event	T2	geçirdi	EVENT	283
+Event	T3	düşünce	EVENT	473
+Event	T4	yenildi	EVENT	506
+Event	T5	savaş	EVENT	525
+Event	T6	çekilmenin	EVENT	547
+Event	T7	kararlaştırıldı	EVENT	629
+Event	T8	teklif	EVENT	676
+Event	T9	görüşmeler	EVENT	732
+Event	T10	imzalandı	EVENT	760
+Event	T1	akın	EVENT	204
+Event	T11	yürüyüşle	EVENT	321
+Event	T12	gelen	EVENT	390
+Event	T13	endişelenip	EVENT	659
+Relation	T3	T4	CauseEffect	true	düşünce	yenildi
+Relation	T4	T3	EffectCause	true	yenildi	düşünce
+Relation	T13	T8	CauseEffect	true	endişelenip	teklif
+Relation	T8	T13	EffectCause	true	teklif	endişelenip
+Relation	T8	T9	CauseEffect	true	teklif	görüşmeler
+Relation	T9	T8	EffectCause	true	görüşmeler	teklif
+Relation	T9	T10	CauseEffect	true	görüşmeler	imzalandı
+Relation	T10	T9	EffectCause	true	imzalandı	görüşmeler
+Relation	T7	T13	CauseEffect	true	kararlaştırıldı	endişelenip
+Relation	T13	T7	EffectCause	true	endişelenip	kararlaştırıldı
+Relation	T0	T10	NoRel	true	çarpışma	imzalandı
+Relation	T0	T12	NoRel	true	çarpışma	gelen
+Relation	T0	T5	NoRel	true	çarpışma	savaş
+Relation	T0	T6	NoRel	true	çarpışma	çekilmenin
+Relation	T1	T0	NoRel	true	akın	çarpışma
+Relation	T10	T6	NoRel	true	imzalandı	çekilmenin
+Relation	T10	T8	NoRel	true	imzalandı	teklif
+Relation	T11	T12	NoRel	true	yürüyüşle	gelen
+Relation	T11	T7	NoRel	true	yürüyüşle	kararlaştırıldı
+Relation	T11	T8	NoRel	true	yürüyüşle	teklif
+Relation	T12	T10	NoRel	true	gelen	imzalandı
+Relation	T12	T4	NoRel	true	gelen	yenildi
+Relation	T12	T5	NoRel	true	gelen	savaş
+Relation	T13	T12	NoRel	true	endişelenip	gelen
+Relation	T13	T4	NoRel	true	endişelenip	yenildi
+Relation	T2	T12	NoRel	true	geçirdi	gelen
+Relation	T2	T13	NoRel	true	geçirdi	endişelenip
+Relation	T2	T4	NoRel	true	geçirdi	yenildi
+Relation	T3	T1	NoRel	true	düşünce	akın
+Relation	T3	T10	NoRel	true	düşünce	imzalandı
+Relation	T3	T2	NoRel	true	düşünce	geçirdi
+Relation	T4	T10	NoRel	true	yenildi	imzalandı
+Relation	T4	T12	NoRel	true	yenildi	gelen
+Relation	T4	T6	NoRel	true	yenildi	çekilmenin
+Relation	T5	T10	NoRel	true	savaş	imzalandı
+Relation	T5	T4	NoRel	true	savaş	yenildi
+Relation	T5	T7	NoRel	true	savaş	kararlaştırıldı
+Relation	T6	T7	NoRel	true	çekilmenin	kararlaştırıldı
+Relation	T7	T4	NoRel	true	kararlaştırıldı	yenildi
+Relation	T7	T5	NoRel	true	kararlaştırıldı	savaş
+Relation	T8	T1	NoRel	true	teklif	akın
+Relation	T8	T11	NoRel	true	teklif	yürüyüşle
+Relation	T8	T12	NoRel	true	teklif	gelen
+Relation	T8	T2	NoRel	true	teklif	geçirdi
+Relation	T8	T3	NoRel	true	teklif	düşünce
+Relation	T8	T7	NoRel	true	teklif	kararlaştırıldı
+Relation	T9	T11	NoRel	true	görüşmeler	yürüyüşle
+Relation	T9	T13	NoRel	true	görüşmeler	endişelenip
+Relation	T9	T5	NoRel	true	görüşmeler	savaş
+Relation	T9	T7	NoRel	true	görüşmeler	kararlaştırıldı

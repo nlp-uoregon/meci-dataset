@@ -1,0 +1,87 @@
+Text	Yardımcı pilot Kazım Öndül ise kazanın gerçekleştiği gün 59 yaşındaydı .	Pilotluk eğitimini 30 Ağustos 1980'de Hava Harp Okulunda tamamlayan Öndül'ün 1.758 saati Boeing 747'de olmak üzere toplam 5.894 uçuş saati vardı .	Kazadan önceki son bir ay içerisindeki uçuş saati 32 saat 33 dakikaydı .	1 Mart 2010'da kaptan pilot İbrahim Gürcan Dirancı'nın komuta ettiği ACT Havayolları Airbus A300 TC - ACB kargo uçuşunda Bagram Havalimanı'na inişte uçağın sol ana iniş takımı açıldığında yerine kilitlenmedi .	İniş sırasında sol ana iniş takımı kırıldı , uçak 03 pistinden sapmaya başladı ve pistten çıktı .
+Event	T1	eğitimini	EVENT	82
+Event	T2	Kazadan	EVENT	220
+Event	T3	uçuş	EVENT	259
+Event	T4	uçuşunda	EVENT	405
+Event	T5	açıldığında	EVENT	469
+Event	T6	kilitlenmedi	EVENT	488
+Event	T7	İniş	EVENT	503
+Event	T8	kırıldı	EVENT	538
+Event	T9	başladı	EVENT	574
+Event	T10	çıktı	EVENT	593
+Event	T11	tamamlayan	EVENT	130
+Event	T12	komuta	EVENT	348
+Event	T13	inişte	EVENT	435
+Event	T14	kazanın	EVENT	31
+Relation	T13	T5	CauseEffect	true	inişte	açıldığında
+Relation	T5	T13	EffectCause	true	açıldığında	inişte
+Relation	T6	T8	CauseEffect	true	kilitlenmedi	kırıldı
+Relation	T8	T6	EffectCause	true	kırıldı	kilitlenmedi
+Relation	T8	T9	CauseEffect	true	kırıldı	başladı
+Relation	T9	T8	EffectCause	true	başladı	kırıldı
+Relation	T9	T10	CauseEffect	true	başladı	çıktı
+Relation	T10	T9	EffectCause	true	çıktı	başladı
+Relation	T10	T14	CauseEffect	true	çıktı	kazanın
+Relation	T14	T10	EffectCause	true	kazanın	çıktı
+Relation	T1	T14	NoRel	true	eğitimini	kazanın
+Relation	T1	T6	NoRel	true	eğitimini	kilitlenmedi
+Relation	T1	T9	NoRel	true	eğitimini	başladı
+Relation	T10	T1	NoRel	true	çıktı	eğitimini
+Relation	T10	T3	NoRel	true	çıktı	uçuş
+Relation	T10	T5	NoRel	true	çıktı	açıldığında
+Relation	T11	T1	NoRel	true	tamamlayan	eğitimini
+Relation	T11	T12	NoRel	true	tamamlayan	komuta
+Relation	T11	T14	NoRel	true	tamamlayan	kazanın
+Relation	T11	T3	NoRel	true	tamamlayan	uçuş
+Relation	T11	T4	NoRel	true	tamamlayan	uçuşunda
+Relation	T11	T6	NoRel	true	tamamlayan	kilitlenmedi
+Relation	T11	T7	NoRel	true	tamamlayan	İniş
+Relation	T11	T8	NoRel	true	tamamlayan	kırıldı
+Relation	T11	T9	NoRel	true	tamamlayan	başladı
+Relation	T12	T13	NoRel	true	komuta	inişte
+Relation	T12	T2	NoRel	true	komuta	Kazadan
+Relation	T12	T5	NoRel	true	komuta	açıldığında
+Relation	T13	T2	NoRel	true	inişte	Kazadan
+Relation	T14	T1	NoRel	true	kazanın	eğitimini
+Relation	T14	T11	NoRel	true	kazanın	tamamlayan
+Relation	T14	T12	NoRel	true	kazanın	komuta
+Relation	T14	T13	NoRel	true	kazanın	inişte
+Relation	T14	T3	NoRel	true	kazanın	uçuş
+Relation	T14	T6	NoRel	true	kazanın	kilitlenmedi
+Relation	T14	T9	NoRel	true	kazanın	başladı
+Relation	T2	T10	NoRel	true	Kazadan	çıktı
+Relation	T2	T11	NoRel	true	Kazadan	tamamlayan
+Relation	T2	T12	NoRel	true	Kazadan	komuta
+Relation	T2	T6	NoRel	true	Kazadan	kilitlenmedi
+Relation	T3	T1	NoRel	true	uçuş	eğitimini
+Relation	T3	T13	NoRel	true	uçuş	inişte
+Relation	T3	T14	NoRel	true	uçuş	kazanın
+Relation	T3	T2	NoRel	true	uçuş	Kazadan
+Relation	T3	T6	NoRel	true	uçuş	kilitlenmedi
+Relation	T3	T8	NoRel	true	uçuş	kırıldı
+Relation	T4	T11	NoRel	true	uçuşunda	tamamlayan
+Relation	T4	T12	NoRel	true	uçuşunda	komuta
+Relation	T4	T13	NoRel	true	uçuşunda	inişte
+Relation	T4	T14	NoRel	true	uçuşunda	kazanın
+Relation	T4	T2	NoRel	true	uçuşunda	Kazadan
+Relation	T4	T8	NoRel	true	uçuşunda	kırıldı
+Relation	T5	T10	NoRel	true	açıldığında	çıktı
+Relation	T5	T11	NoRel	true	açıldığında	tamamlayan
+Relation	T5	T3	NoRel	true	açıldığında	uçuş
+Relation	T5	T4	NoRel	true	açıldığında	uçuşunda
+Relation	T6	T1	NoRel	true	kilitlenmedi	eğitimini
+Relation	T6	T10	NoRel	true	kilitlenmedi	çıktı
+Relation	T6	T12	NoRel	true	kilitlenmedi	komuta
+Relation	T6	T14	NoRel	true	kilitlenmedi	kazanın
+Relation	T6	T2	NoRel	true	kilitlenmedi	Kazadan
+Relation	T6	T7	NoRel	true	kilitlenmedi	İniş
+Relation	T7	T1	NoRel	true	İniş	eğitimini
+Relation	T7	T12	NoRel	true	İniş	komuta
+Relation	T7	T2	NoRel	true	İniş	Kazadan
+Relation	T7	T4	NoRel	true	İniş	uçuşunda
+Relation	T8	T1	NoRel	true	kırıldı	eğitimini
+Relation	T8	T11	NoRel	true	kırıldı	tamamlayan
+Relation	T8	T3	NoRel	true	kırıldı	uçuş
+Relation	T8	T5	NoRel	true	kırıldı	açıldığında
+Relation	T8	T7	NoRel	true	kırıldı	İniş
+Relation	T9	T14	NoRel	true	başladı	kazanın

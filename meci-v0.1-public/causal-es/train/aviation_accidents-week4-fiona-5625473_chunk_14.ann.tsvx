@@ -1,0 +1,131 @@
+Text	Este fue el primer accidente de Southwest Airlines en los 35 años de historia de la compañía que resultó en una muerte .	El incidente principal anterior fue en 2000 , cuando el vuelo 1455 de Southwest Airlines se desbordó en una pista de aterrizaje en Burbank , California , hiriendo a 43 personas y evitando por poco una catástrofe ; el avión terminó frente a una gasolinera Chevron .	Como resultado directo del accidente , la Administración Federal de Aviación de EE._UU_. Creó el Comité de reglamentación de la aviación para la evaluación del desempeño de despegue y aterrizaje .	( ARCO TALPA ) .	En 2016 , con base en las recomendaciones de TALPA ARC , la FAA implementó un nuevo Código numérico de condición de pista para comunicar las condiciones de la pista entre la administración del aeropuerto a los miembros de la tripulación de vuelo .
+Event	T0	accidente	EVENT	19
+Event	T1	resultó	EVENT	97
+Event	T2	muerte	EVENT	112
+Event	T3	desbordó	EVENT	213
+Event	T4	aterrizaje	EVENT	238
+Event	T5	hiriendo	EVENT	275
+Event	T6	evitando	EVENT	300
+Event	T7	catástrofe	EVENT	322
+Event	T8	terminó	EVENT	344
+Event	T9	accidente	EVENT	413
+Event	T10	evaluación	EVENT	531
+Event	T11	desempeño	EVENT	546
+Event	T12	despegue	EVENT	559
+Event	T13	aterrizaje	EVENT	570
+Event	T14	recomendaciones	EVENT	626
+Event	T15	implementó	EVENT	664
+Event	T16	comunicar	EVENT	727
+Event	T17	Creó	EVENT	475
+Relation	T0	T2	CauseEffect	true	accidente	muerte
+Relation	T2	T0	EffectCause	true	muerte	accidente
+Relation	T0	T10	NoRel	true	accidente	evaluación
+Relation	T0	T12	NoRel	true	accidente	despegue
+Relation	T0	T13	NoRel	true	accidente	aterrizaje
+Relation	T0	T14	NoRel	true	accidente	recomendaciones
+Relation	T0	T15	NoRel	true	accidente	implementó
+Relation	T0	T17	NoRel	true	accidente	Creó
+Relation	T0	T6	NoRel	true	accidente	evitando
+Relation	T1	T0	NoRel	true	resultó	accidente
+Relation	T1	T17	NoRel	true	resultó	Creó
+Relation	T1	T4	NoRel	true	resultó	aterrizaje
+Relation	T1	T7	NoRel	true	resultó	catástrofe
+Relation	T1	T8	NoRel	true	resultó	terminó
+Relation	T10	T0	NoRel	true	evaluación	accidente
+Relation	T10	T16	NoRel	true	evaluación	comunicar
+Relation	T10	T3	NoRel	true	evaluación	desbordó
+Relation	T10	T5	NoRel	true	evaluación	hiriendo
+Relation	T10	T6	NoRel	true	evaluación	evitando
+Relation	T10	T7	NoRel	true	evaluación	catástrofe
+Relation	T10	T8	NoRel	true	evaluación	terminó
+Relation	T11	T10	NoRel	true	desempeño	evaluación
+Relation	T11	T12	NoRel	true	desempeño	despegue
+Relation	T11	T17	NoRel	true	desempeño	Creó
+Relation	T11	T2	NoRel	true	desempeño	muerte
+Relation	T11	T3	NoRel	true	desempeño	desbordó
+Relation	T11	T5	NoRel	true	desempeño	hiriendo
+Relation	T11	T6	NoRel	true	desempeño	evitando
+Relation	T11	T7	NoRel	true	desempeño	catástrofe
+Relation	T11	T8	NoRel	true	desempeño	terminó
+Relation	T12	T10	NoRel	true	despegue	evaluación
+Relation	T12	T13	NoRel	true	despegue	aterrizaje
+Relation	T12	T15	NoRel	true	despegue	implementó
+Relation	T12	T16	NoRel	true	despegue	comunicar
+Relation	T12	T2	NoRel	true	despegue	muerte
+Relation	T12	T4	NoRel	true	despegue	aterrizaje
+Relation	T13	T12	NoRel	true	aterrizaje	despegue
+Relation	T13	T14	NoRel	true	aterrizaje	recomendaciones
+Relation	T13	T2	NoRel	true	aterrizaje	muerte
+Relation	T13	T9	NoRel	true	aterrizaje	accidente
+Relation	T14	T1	NoRel	true	recomendaciones	resultó
+Relation	T14	T10	NoRel	true	recomendaciones	evaluación
+Relation	T14	T11	NoRel	true	recomendaciones	desempeño
+Relation	T14	T12	NoRel	true	recomendaciones	despegue
+Relation	T14	T15	NoRel	true	recomendaciones	implementó
+Relation	T14	T5	NoRel	true	recomendaciones	hiriendo
+Relation	T14	T6	NoRel	true	recomendaciones	evitando
+Relation	T14	T9	NoRel	true	recomendaciones	accidente
+Relation	T15	T0	NoRel	true	implementó	accidente
+Relation	T15	T1	NoRel	true	implementó	resultó
+Relation	T15	T11	NoRel	true	implementó	desempeño
+Relation	T15	T17	NoRel	true	implementó	Creó
+Relation	T15	T2	NoRel	true	implementó	muerte
+Relation	T15	T4	NoRel	true	implementó	aterrizaje
+Relation	T15	T5	NoRel	true	implementó	hiriendo
+Relation	T15	T7	NoRel	true	implementó	catástrofe
+Relation	T16	T11	NoRel	true	comunicar	desempeño
+Relation	T16	T5	NoRel	true	comunicar	hiriendo
+Relation	T16	T9	NoRel	true	comunicar	accidente
+Relation	T17	T0	NoRel	true	Creó	accidente
+Relation	T17	T10	NoRel	true	Creó	evaluación
+Relation	T17	T11	NoRel	true	Creó	desempeño
+Relation	T17	T12	NoRel	true	Creó	despegue
+Relation	T17	T13	NoRel	true	Creó	aterrizaje
+Relation	T17	T15	NoRel	true	Creó	implementó
+Relation	T17	T2	NoRel	true	Creó	muerte
+Relation	T17	T5	NoRel	true	Creó	hiriendo
+Relation	T17	T7	NoRel	true	Creó	catástrofe
+Relation	T2	T15	NoRel	true	muerte	implementó
+Relation	T2	T3	NoRel	true	muerte	desbordó
+Relation	T3	T11	NoRel	true	desbordó	desempeño
+Relation	T3	T13	NoRel	true	desbordó	aterrizaje
+Relation	T3	T14	NoRel	true	desbordó	recomendaciones
+Relation	T3	T16	NoRel	true	desbordó	comunicar
+Relation	T3	T6	NoRel	true	desbordó	evitando
+Relation	T3	T7	NoRel	true	desbordó	catástrofe
+Relation	T3	T8	NoRel	true	desbordó	terminó
+Relation	T3	T9	NoRel	true	desbordó	accidente
+Relation	T4	T1	NoRel	true	aterrizaje	resultó
+Relation	T4	T13	NoRel	true	aterrizaje	aterrizaje
+Relation	T4	T2	NoRel	true	aterrizaje	muerte
+Relation	T4	T3	NoRel	true	aterrizaje	desbordó
+Relation	T4	T5	NoRel	true	aterrizaje	hiriendo
+Relation	T4	T6	NoRel	true	aterrizaje	evitando
+Relation	T4	T8	NoRel	true	aterrizaje	terminó
+Relation	T4	T9	NoRel	true	aterrizaje	accidente
+Relation	T5	T13	NoRel	true	hiriendo	aterrizaje
+Relation	T5	T14	NoRel	true	hiriendo	recomendaciones
+Relation	T5	T16	NoRel	true	hiriendo	comunicar
+Relation	T5	T6	NoRel	true	hiriendo	evitando
+Relation	T6	T1	NoRel	true	evitando	resultó
+Relation	T6	T10	NoRel	true	evitando	evaluación
+Relation	T6	T13	NoRel	true	evitando	aterrizaje
+Relation	T6	T2	NoRel	true	evitando	muerte
+Relation	T6	T3	NoRel	true	evitando	desbordó
+Relation	T7	T10	NoRel	true	catástrofe	evaluación
+Relation	T7	T13	NoRel	true	catástrofe	aterrizaje
+Relation	T7	T14	NoRel	true	catástrofe	recomendaciones
+Relation	T7	T15	NoRel	true	catástrofe	implementó
+Relation	T7	T6	NoRel	true	catástrofe	evitando
+Relation	T8	T11	NoRel	true	terminó	desempeño
+Relation	T8	T14	NoRel	true	terminó	recomendaciones
+Relation	T8	T3	NoRel	true	terminó	desbordó
+Relation	T8	T6	NoRel	true	terminó	evitando
+Relation	T9	T11	NoRel	true	accidente	desempeño
+Relation	T9	T12	NoRel	true	accidente	despegue
+Relation	T9	T13	NoRel	true	accidente	aterrizaje
+Relation	T9	T14	NoRel	true	accidente	recomendaciones
+Relation	T9	T17	NoRel	true	accidente	Creó
+Relation	T9	T2	NoRel	true	accidente	muerte
+Relation	T9	T5	NoRel	true	accidente	hiriendo
+Relation	T9	T6	NoRel	true	accidente	evitando

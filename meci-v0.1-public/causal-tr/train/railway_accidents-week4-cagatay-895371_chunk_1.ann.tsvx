@@ -1,0 +1,36 @@
+Text	Ancak demiryolları kara taşımacılığında otoyollar kadar yatırım almıyordu .	küçükresim | 250px | 23.07. 2004 tarihli Milliyet gazetesi ilk sayfası | alt = | sol	Kazadan sonra Prof. Dr. Sıddık Binboğa Yarman başkanlığında oluşturulan Bilim Kurulu raporuna göre kaza şu şekilde gerçekleşmiştir : Tren Mekece İstasyonu'nu geçtikten sonra 345 metre yarıçapındaki dönemece 132 kilometre / saat hızla girmiştir .	Dönemeçte uyulması gereken hız limiti 80 km’dir .	Aşırı hız yüzünden trenin ikinci yolcu vagonunun sol tekerleği raydan çıkmış , bu vagona bağlı vagonların da raydan çıkması sonucu trenin dengesi bozularak hızla sürüklenerek yana yatmıştır .
+Event	T0	gerçekleşmiştir	EVENT	276
+Event	T1	geçtikten	EVENT	319
+Event	T2	girmiştir	EVENT	395
+Event	T3	çıkmış	EVENT	527
+Event	T4	çıkması	EVENT	573
+Event	T5	bozularak	EVENT	603
+Event	T6	yatmıştır	EVENT	637
+Event	T7	kaza	EVENT	260
+Relation	T3	T5	CauseEffect	true	çıkmış	bozularak
+Relation	T5	T3	EffectCause	true	bozularak	çıkmış
+Relation	T2	T3	CauseEffect	true	girmiştir	çıkmış
+Relation	T3	T2	EffectCause	true	çıkmış	girmiştir
+Relation	T5	T6	CauseEffect	true	bozularak	yatmıştır
+Relation	T6	T5	EffectCause	true	yatmıştır	bozularak
+Relation	T4	T5	CauseEffect	true	çıkması	bozularak
+Relation	T5	T4	EffectCause	true	bozularak	çıkması
+Relation	T0	T2	NoRel	true	gerçekleşmiştir	girmiştir
+Relation	T0	T5	NoRel	true	gerçekleşmiştir	bozularak
+Relation	T1	T4	NoRel	true	geçtikten	çıkması
+Relation	T2	T0	NoRel	true	girmiştir	gerçekleşmiştir
+Relation	T2	T1	NoRel	true	girmiştir	geçtikten
+Relation	T2	T5	NoRel	true	girmiştir	bozularak
+Relation	T3	T1	NoRel	true	çıkmış	geçtikten
+Relation	T3	T6	NoRel	true	çıkmış	yatmıştır
+Relation	T4	T0	NoRel	true	çıkması	gerçekleşmiştir
+Relation	T4	T2	NoRel	true	çıkması	girmiştir
+Relation	T4	T6	NoRel	true	çıkması	yatmıştır
+Relation	T4	T7	NoRel	true	çıkması	kaza
+Relation	T5	T1	NoRel	true	bozularak	geçtikten
+Relation	T6	T3	NoRel	true	yatmıştır	çıkmış
+Relation	T6	T4	NoRel	true	yatmıştır	çıkması
+Relation	T6	T7	NoRel	true	yatmıştır	kaza
+Relation	T7	T1	NoRel	true	kaza	geçtikten
+Relation	T7	T5	NoRel	true	kaza	bozularak
+Relation	T7	T6	NoRel	true	kaza	yatmıştır

@@ -1,0 +1,97 @@
+Text	When announcing the distance remaining to Maputo the navigator was apparently referring to the Doppler navigation system , which was not accurate , rather than the DME equipment available on board which correctly displayed the distance to the Maputo DME beacon .	The crew were criticized for failing to perform any checklist items or navigational aid identification , as well as for the distractions and non-essential conversations in the cockpit during the descent into Maputo .	As a consequence of not announcing to the other crew members which navigational aids were being used , or the frequencies being set , mistakes could not be corrected by others through " cross-checking " .	Regarding it essential that the relatively large crew in the cockpit work as a well - integrated team , the board concluded that " demonstrably they had not " .	The board found that use of non-standard phraseology between the Maputo controller and the crew led to confusion about the status of the ILS signal and whether the runway lights were on .
+Event	T0	announcing	EVENT	5
+Event	T1	remaining	EVENT	29
+Event	T2	referring	EVENT	78
+Event	T3	displayed	EVENT	213
+Event	T4	criticized	EVENT	277
+Event	T5	failing	EVENT	292
+Event	T6	perform	EVENT	303
+Event	T7	distractions	EVENT	387
+Event	T8	conversations	EVENT	418
+Event	T9	descent	EVENT	458
+Event	T10	announcing	EVENT	504
+Event	T11	used	EVENT	576
+Event	T12	set	EVENT	608
+Event	T13	mistakes	EVENT	614
+Event	T14	corrected	EVENT	636
+Event	T15	Regarding	EVENT	685
+Event	T16	work	EVENT	754
+Event	T17	concluded	EVENT	799
+Event	T18	found	EVENT	856
+Event	T19	use	EVENT	867
+Event	T20	confusion	EVENT	949
+Event	T21	signal	EVENT	987
+Event	T22	cross-checking	EVENT	666
+Relation	T5	T4	CauseEffect	true	failing	criticized
+Relation	T4	T5	EffectCause	true	criticized	failing
+Relation	T7	T4	CauseEffect	true	distractions	criticized
+Relation	T4	T7	EffectCause	true	criticized	distractions
+Relation	T7	T5	CauseEffect	true	distractions	failing
+Relation	T5	T7	EffectCause	true	failing	distractions
+Relation	T8	T5	CauseEffect	true	conversations	failing
+Relation	T5	T8	EffectCause	true	failing	conversations
+Relation	T8	T4	CauseEffect	true	conversations	criticized
+Relation	T4	T8	EffectCause	true	criticized	conversations
+Relation	T22	T13	CauseEffect	true	cross-checking	mistakes
+Relation	T13	T22	EffectCause	true	mistakes	cross-checking
+Relation	T16	T17	CauseEffect	true	work	concluded
+Relation	T17	T16	EffectCause	true	concluded	work
+Relation	T19	T20	CauseEffect	true	use	confusion
+Relation	T20	T19	EffectCause	true	confusion	use
+Relation	T0	T10	NoRel	true	announcing	announcing
+Relation	T0	T15	NoRel	true	announcing	Regarding
+Relation	T1	T11	NoRel	true	remaining	used
+Relation	T1	T13	NoRel	true	remaining	mistakes
+Relation	T1	T2	NoRel	true	remaining	referring
+Relation	T1	T8	NoRel	true	remaining	conversations
+Relation	T10	T11	NoRel	true	announcing	used
+Relation	T10	T12	NoRel	true	announcing	set
+Relation	T10	T16	NoRel	true	announcing	work
+Relation	T10	T6	NoRel	true	announcing	perform
+Relation	T11	T4	NoRel	true	used	criticized
+Relation	T11	T9	NoRel	true	used	descent
+Relation	T12	T19	NoRel	true	set	use
+Relation	T12	T21	NoRel	true	set	signal
+Relation	T12	T22	NoRel	true	set	cross-checking
+Relation	T13	T10	NoRel	true	mistakes	announcing
+Relation	T13	T3	NoRel	true	mistakes	displayed
+Relation	T14	T19	NoRel	true	corrected	use
+Relation	T14	T20	NoRel	true	corrected	confusion
+Relation	T14	T6	NoRel	true	corrected	perform
+Relation	T15	T14	NoRel	true	Regarding	corrected
+Relation	T15	T4	NoRel	true	Regarding	criticized
+Relation	T15	T9	NoRel	true	Regarding	descent
+Relation	T16	T12	NoRel	true	work	set
+Relation	T16	T15	NoRel	true	work	Regarding
+Relation	T16	T8	NoRel	true	work	conversations
+Relation	T17	T14	NoRel	true	concluded	corrected
+Relation	T17	T8	NoRel	true	concluded	conversations
+Relation	T18	T0	NoRel	true	found	announcing
+Relation	T19	T0	NoRel	true	use	announcing
+Relation	T19	T5	NoRel	true	use	failing
+Relation	T2	T17	NoRel	true	referring	concluded
+Relation	T2	T19	NoRel	true	referring	use
+Relation	T2	T9	NoRel	true	referring	descent
+Relation	T20	T17	NoRel	true	confusion	concluded
+Relation	T21	T16	NoRel	true	signal	work
+Relation	T21	T4	NoRel	true	signal	criticized
+Relation	T22	T14	NoRel	true	cross-checking	corrected
+Relation	T22	T16	NoRel	true	cross-checking	work
+Relation	T3	T13	NoRel	true	displayed	mistakes
+Relation	T3	T22	NoRel	true	displayed	cross-checking
+Relation	T3	T6	NoRel	true	displayed	perform
+Relation	T4	T12	NoRel	true	criticized	set
+Relation	T5	T14	NoRel	true	failing	corrected
+Relation	T5	T15	NoRel	true	failing	Regarding
+Relation	T5	T17	NoRel	true	failing	concluded
+Relation	T5	T3	NoRel	true	failing	displayed
+Relation	T5	T9	NoRel	true	failing	descent
+Relation	T6	T1	NoRel	true	perform	remaining
+Relation	T6	T12	NoRel	true	perform	set
+Relation	T6	T13	NoRel	true	perform	mistakes
+Relation	T8	T0	NoRel	true	conversations	announcing
+Relation	T8	T1	NoRel	true	conversations	remaining
+Relation	T8	T10	NoRel	true	conversations	announcing
+Relation	T8	T15	NoRel	true	conversations	Regarding
+Relation	T8	T16	NoRel	true	conversations	work
+Relation	T9	T21	NoRel	true	descent	signal

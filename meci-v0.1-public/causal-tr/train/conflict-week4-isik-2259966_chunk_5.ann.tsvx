@@ -1,0 +1,70 @@
+Text	İki yıllık bu süre zarfında , İtalyan kuvvetleri , Sirenayka'nın kuzeyindeki düzlükleri de ele geçirmişlerdi .	Ancak Cebel - i Ahtar'ın ormanlık tepelerini işgal etme girişiminde bulunan İtalyan kuvvetleri , geniş çaplı gerilla direnişiyle karşılandı .	Direniş , Senusi lider Ömer Muhtar tarafından yönetiliyordu .	İtalyanlar , işgal ve bastırma harekâtına , Sirte çölünü hızla işgal ederek başladılar .	Hava ve kara araçlarının etkin şekilde kullanıldığı , iyi organize edilmiş bir lojik desteğiyle , İtalyanlar beş ay içinde 150, 000 km² alanı ele geçirdi .
+Event	T0	girişiminde	EVENT	167
+Event	T1	karşılandı	EVENT	240
+Event	T2	Direniş	EVENT	253
+Event	T3	işgal	EVENT	328
+Event	T4	kullanıldığı	EVENT	443
+Event	T5	geçirdi	EVENT	550
+Event	T6	geçirmişlerdi	EVENT	95
+Event	T7	direnişiyle	EVENT	228
+Event	T8	yönetiliyordu	EVENT	299
+Event	T9	harekâtına	EVENT	346
+Event	T10	başladılar	EVENT	391
+Event	T11	edilmiş	EVENT	471
+Relation	T0	T7	CauseEffect	true	girişiminde	direnişiyle
+Relation	T7	T0	EffectCause	true	direnişiyle	girişiminde
+Relation	T4	T5	CauseEffect	true	kullanıldığı	geçirdi
+Relation	T5	T4	EffectCause	true	geçirdi	kullanıldığı
+Relation	T11	T5	CauseEffect	true	edilmiş	geçirdi
+Relation	T5	T11	EffectCause	true	geçirdi	edilmiş
+Relation	T9	T4	CauseEffect	true	harekâtına	kullanıldığı
+Relation	T4	T9	EffectCause	true	kullanıldığı	harekâtına
+Relation	T9	T11	CauseEffect	true	harekâtına	edilmiş
+Relation	T11	T9	EffectCause	true	edilmiş	harekâtına
+Relation	T0	T4	CauseEffect	true	girişiminde	kullanıldığı
+Relation	T4	T0	EffectCause	true	kullanıldığı	girişiminde
+Relation	T0	T11	CauseEffect	true	girişiminde	edilmiş
+Relation	T11	T0	EffectCause	true	edilmiş	girişiminde
+Relation	T0	T10	NoRel	true	girişiminde	başladılar
+Relation	T0	T3	NoRel	true	girişiminde	işgal
+Relation	T0	T8	NoRel	true	girişiminde	yönetiliyordu
+Relation	T1	T0	NoRel	true	karşılandı	girişiminde
+Relation	T1	T5	NoRel	true	karşılandı	geçirdi
+Relation	T1	T6	NoRel	true	karşılandı	geçirmişlerdi
+Relation	T10	T2	NoRel	true	başladılar	Direniş
+Relation	T10	T5	NoRel	true	başladılar	geçirdi
+Relation	T10	T7	NoRel	true	başladılar	direnişiyle
+Relation	T11	T2	NoRel	true	edilmiş	Direniş
+Relation	T11	T7	NoRel	true	edilmiş	direnişiyle
+Relation	T2	T10	NoRel	true	Direniş	başladılar
+Relation	T2	T11	NoRel	true	Direniş	edilmiş
+Relation	T2	T4	NoRel	true	Direniş	kullanıldığı
+Relation	T2	T5	NoRel	true	Direniş	geçirdi
+Relation	T2	T7	NoRel	true	Direniş	direnişiyle
+Relation	T2	T8	NoRel	true	Direniş	yönetiliyordu
+Relation	T2	T9	NoRel	true	Direniş	harekâtına
+Relation	T3	T11	NoRel	true	işgal	edilmiş
+Relation	T3	T2	NoRel	true	işgal	Direniş
+Relation	T3	T8	NoRel	true	işgal	yönetiliyordu
+Relation	T4	T10	NoRel	true	kullanıldığı	başladılar
+Relation	T4	T11	NoRel	true	kullanıldığı	edilmiş
+Relation	T4	T7	NoRel	true	kullanıldığı	direnişiyle
+Relation	T4	T8	NoRel	true	kullanıldığı	yönetiliyordu
+Relation	T5	T2	NoRel	true	geçirdi	Direniş
+Relation	T6	T3	NoRel	true	geçirmişlerdi	işgal
+Relation	T6	T4	NoRel	true	geçirmişlerdi	kullanıldığı
+Relation	T6	T5	NoRel	true	geçirmişlerdi	geçirdi
+Relation	T7	T10	NoRel	true	direnişiyle	başladılar
+Relation	T7	T5	NoRel	true	direnişiyle	geçirdi
+Relation	T7	T6	NoRel	true	direnişiyle	geçirmişlerdi
+Relation	T8	T1	NoRel	true	yönetiliyordu	karşılandı
+Relation	T8	T2	NoRel	true	yönetiliyordu	Direniş
+Relation	T8	T3	NoRel	true	yönetiliyordu	işgal
+Relation	T8	T4	NoRel	true	yönetiliyordu	kullanıldığı
+Relation	T8	T6	NoRel	true	yönetiliyordu	geçirmişlerdi
+Relation	T8	T7	NoRel	true	yönetiliyordu	direnişiyle
+Relation	T9	T1	NoRel	true	harekâtına	karşılandı
+Relation	T9	T10	NoRel	true	harekâtına	başladılar
+Relation	T9	T2	NoRel	true	harekâtına	Direniş
+Relation	T9	T6	NoRel	true	harekâtına	geçirmişlerdi
+Relation	T9	T7	NoRel	true	harekâtına	direnişiyle

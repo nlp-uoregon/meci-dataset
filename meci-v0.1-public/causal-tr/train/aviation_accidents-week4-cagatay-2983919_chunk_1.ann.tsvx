@@ -1,0 +1,76 @@
+Text	8 Kasım 2020'de Azerbaycan kuvvetleri , dört günlük bir muharebenin ardından Şuşa'nın kontrolünü ele geçirdi .	Saldırı ; Azerbaycan Silahlı Kuvvetleri tarafında taşınabilir hava savunma sisteminin çalıştırılması sonucu Nahçıvan Özerk Cumhuriyeti'nin yakınlarında , Dağlık Karabağ sınırından 70 kilometre uzakta gerçekleşti .	Helikopter , Gümrü'deki Rusya 102. Askerî Üssü konvoyuna eşlik ediyordu .	Kısa süre sonra Azerbaycan Dışişleri Bakanlığı saldırının kaza sonucu gerçekleştiğini belirterek , Rusya'dan özür diledi ve tazminat ödemeye hazır olduklarını belirterek saldırının sorumluluğunu üstlendi .	Azerbaycan'a göre , Rus helikopteri karanlıkta , alçak irtifada ve Azerbaycan hava savunma radarlarının tespit bölgesinin dışında uçuyordu .
+Event	T0	muharebenin	EVENT	56
+Event	T1	geçirdi	EVENT	101
+Event	T2	Saldırı	EVENT	111
+Event	T3	çalıştırılması	EVENT	197
+Event	T5	ediyordu	EVENT	388
+Event	T6	belirterek	EVENT	485
+Event	T7	diledi	EVENT	513
+Event	T8	üstlendi	EVENT	594
+Event	T9	uçuyordu	EVENT	735
+Event	T4	kaza	EVENT	457
+Event	T10	saldırının	EVENT	569
+Event	T11	ödemeye	EVENT	532
+Event	T12	hazır	EVENT	540
+Relation	T0	T1	CauseEffect	true	muharebenin	geçirdi
+Relation	T1	T0	EffectCause	true	geçirdi	muharebenin
+Relation	T4	T7	CauseEffect	true	kaza	diledi
+Relation	T7	T4	EffectCause	true	diledi	kaza
+Relation	T7	T11	CauseEffect	true	diledi	ödemeye
+Relation	T11	T7	EffectCause	true	ödemeye	diledi
+Relation	T10	T8	CauseEffect	true	saldırının	üstlendi
+Relation	T8	T10	EffectCause	true	üstlendi	saldırının
+Relation	T9	T4	CauseEffect	true	uçuyordu	kaza
+Relation	T4	T9	EffectCause	true	kaza	uçuyordu
+Relation	T0	T10	NoRel	true	muharebenin	saldırının
+Relation	T0	T3	NoRel	true	muharebenin	çalıştırılması
+Relation	T0	T6	NoRel	true	muharebenin	belirterek
+Relation	T0	T9	NoRel	true	muharebenin	uçuyordu
+Relation	T1	T10	NoRel	true	geçirdi	saldırının
+Relation	T1	T2	NoRel	true	geçirdi	Saldırı
+Relation	T1	T7	NoRel	true	geçirdi	diledi
+Relation	T10	T12	NoRel	true	saldırının	hazır
+Relation	T10	T3	NoRel	true	saldırının	çalıştırılması
+Relation	T10	T4	NoRel	true	saldırının	kaza
+Relation	T10	T6	NoRel	true	saldırının	belirterek
+Relation	T11	T0	NoRel	true	ödemeye	muharebenin
+Relation	T11	T12	NoRel	true	ödemeye	hazır
+Relation	T11	T3	NoRel	true	ödemeye	çalıştırılması
+Relation	T11	T8	NoRel	true	ödemeye	üstlendi
+Relation	T12	T0	NoRel	true	hazır	muharebenin
+Relation	T12	T10	NoRel	true	hazır	saldırının
+Relation	T12	T4	NoRel	true	hazır	kaza
+Relation	T12	T6	NoRel	true	hazır	belirterek
+Relation	T12	T8	NoRel	true	hazır	üstlendi
+Relation	T12	T9	NoRel	true	hazır	uçuyordu
+Relation	T2	T12	NoRel	true	Saldırı	hazır
+Relation	T2	T4	NoRel	true	Saldırı	kaza
+Relation	T2	T7	NoRel	true	Saldırı	diledi
+Relation	T3	T0	NoRel	true	çalıştırılması	muharebenin
+Relation	T3	T1	NoRel	true	çalıştırılması	geçirdi
+Relation	T3	T10	NoRel	true	çalıştırılması	saldırının
+Relation	T3	T12	NoRel	true	çalıştırılması	hazır
+Relation	T3	T6	NoRel	true	çalıştırılması	belirterek
+Relation	T3	T9	NoRel	true	çalıştırılması	uçuyordu
+Relation	T4	T0	NoRel	true	kaza	muharebenin
+Relation	T4	T12	NoRel	true	kaza	hazır
+Relation	T4	T2	NoRel	true	kaza	Saldırı
+Relation	T4	T6	NoRel	true	kaza	belirterek
+Relation	T5	T1	NoRel	true	ediyordu	geçirdi
+Relation	T5	T10	NoRel	true	ediyordu	saldırının
+Relation	T5	T2	NoRel	true	ediyordu	Saldırı
+Relation	T5	T4	NoRel	true	ediyordu	kaza
+Relation	T6	T2	NoRel	true	belirterek	Saldırı
+Relation	T6	T3	NoRel	true	belirterek	çalıştırılması
+Relation	T7	T10	NoRel	true	diledi	saldırının
+Relation	T7	T12	NoRel	true	diledi	hazır
+Relation	T7	T3	NoRel	true	diledi	çalıştırılması
+Relation	T7	T5	NoRel	true	diledi	ediyordu
+Relation	T7	T6	NoRel	true	diledi	belirterek
+Relation	T8	T0	NoRel	true	üstlendi	muharebenin
+Relation	T8	T12	NoRel	true	üstlendi	hazır
+Relation	T8	T5	NoRel	true	üstlendi	ediyordu
+Relation	T9	T1	NoRel	true	uçuyordu	geçirdi
+Relation	T9	T10	NoRel	true	uçuyordu	saldırının
+Relation	T9	T12	NoRel	true	uçuyordu	hazır
+Relation	T9	T6	NoRel	true	uçuyordu	belirterek

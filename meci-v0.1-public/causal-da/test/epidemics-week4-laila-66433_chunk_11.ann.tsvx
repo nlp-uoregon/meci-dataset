@@ -1,0 +1,124 @@
+Text	En læge i Bergen fortalte rystet , at han selv i epidemiens sidste måneder ret ofte blev spurgt , om sygdommen virkelig var smitsom .	Som sygdomsforebyggelse fik man anbefalet at stikke en glødende strikkepind i en kop tjære og inhalere røgen .	Det var under forbudstiden i Norge , og nogen fattede mistanke til alkohol som sygdommens virkelige årsag .	En læge havde udskrevet 8.895 recepter på cognac og blev af den grund stillet for retten ( han blev frikendt ) .	Det blev foreslået , at giftgas anvendt under verdenskrigen kunne have forgiftet luften også i det fjerntliggende Norge og angrebet folks lunger .
+Event	T0	rystet	EVENT	26
+Event	T1	epidemiens	EVENT	49
+Event	T2	spurgt	EVENT	89
+Event	T3	sygdommen	EVENT	101
+Event	T4	anbefalet	EVENT	166
+Event	T5	stikke	EVENT	179
+Event	T6	mistanke	EVENT	299
+Event	T7	udskrevet	EVENT	367
+Event	T8	stillet	EVENT	423
+Event	T9	frikendt	EVENT	453
+Event	T10	foreslået	EVENT	475
+Event	T11	anvendt	EVENT	498
+Event	T12	forgiftet	EVENT	537
+Event	T13	angrebet	EVENT	589
+Event	T14	sygdommens	EVENT	324
+Event	T15	sygdomsforebyggelse	EVENT	138
+Event	T16	inhalere	EVENT	228
+Event	T17	årsag	EVENT	345
+Relation	T7	T8	CauseEffect	true	udskrevet	stillet
+Relation	T8	T7	EffectCause	true	stillet	udskrevet
+Relation	T11	T13	CauseEffect	true	anvendt	angrebet
+Relation	T13	T11	EffectCause	true	angrebet	anvendt
+Relation	T6	T8	CauseEffect	true	mistanke	stillet
+Relation	T8	T6	EffectCause	true	stillet	mistanke
+Relation	T0	T12	NoRel	true	rystet	forgiftet
+Relation	T0	T14	NoRel	true	rystet	sygdommens
+Relation	T0	T16	NoRel	true	rystet	inhalere
+Relation	T0	T17	NoRel	true	rystet	årsag
+Relation	T0	T5	NoRel	true	rystet	stikke
+Relation	T0	T6	NoRel	true	rystet	mistanke
+Relation	T1	T11	NoRel	true	epidemiens	anvendt
+Relation	T1	T12	NoRel	true	epidemiens	forgiftet
+Relation	T1	T13	NoRel	true	epidemiens	angrebet
+Relation	T1	T4	NoRel	true	epidemiens	anbefalet
+Relation	T1	T6	NoRel	true	epidemiens	mistanke
+Relation	T1	T7	NoRel	true	epidemiens	udskrevet
+Relation	T10	T0	NoRel	true	foreslået	rystet
+Relation	T10	T12	NoRel	true	foreslået	forgiftet
+Relation	T10	T14	NoRel	true	foreslået	sygdommens
+Relation	T10	T2	NoRel	true	foreslået	spurgt
+Relation	T10	T6	NoRel	true	foreslået	mistanke
+Relation	T10	T7	NoRel	true	foreslået	udskrevet
+Relation	T10	T8	NoRel	true	foreslået	stillet
+Relation	T11	T14	NoRel	true	anvendt	sygdommens
+Relation	T11	T16	NoRel	true	anvendt	inhalere
+Relation	T11	T2	NoRel	true	anvendt	spurgt
+Relation	T11	T4	NoRel	true	anvendt	anbefalet
+Relation	T11	T5	NoRel	true	anvendt	stikke
+Relation	T12	T11	NoRel	true	forgiftet	anvendt
+Relation	T12	T13	NoRel	true	forgiftet	angrebet
+Relation	T12	T14	NoRel	true	forgiftet	sygdommens
+Relation	T12	T16	NoRel	true	forgiftet	inhalere
+Relation	T12	T2	NoRel	true	forgiftet	spurgt
+Relation	T12	T4	NoRel	true	forgiftet	anbefalet
+Relation	T12	T6	NoRel	true	forgiftet	mistanke
+Relation	T13	T14	NoRel	true	angrebet	sygdommens
+Relation	T13	T15	NoRel	true	angrebet	sygdomsforebyggelse
+Relation	T13	T16	NoRel	true	angrebet	inhalere
+Relation	T13	T4	NoRel	true	angrebet	anbefalet
+Relation	T13	T8	NoRel	true	angrebet	stillet
+Relation	T13	T9	NoRel	true	angrebet	frikendt
+Relation	T14	T1	NoRel	true	sygdommens	epidemiens
+Relation	T14	T12	NoRel	true	sygdommens	forgiftet
+Relation	T14	T2	NoRel	true	sygdommens	spurgt
+Relation	T15	T1	NoRel	true	sygdomsforebyggelse	epidemiens
+Relation	T15	T11	NoRel	true	sygdomsforebyggelse	anvendt
+Relation	T15	T13	NoRel	true	sygdomsforebyggelse	angrebet
+Relation	T15	T2	NoRel	true	sygdomsforebyggelse	spurgt
+Relation	T15	T3	NoRel	true	sygdomsforebyggelse	sygdommen
+Relation	T15	T4	NoRel	true	sygdomsforebyggelse	anbefalet
+Relation	T15	T5	NoRel	true	sygdomsforebyggelse	stikke
+Relation	T15	T6	NoRel	true	sygdomsforebyggelse	mistanke
+Relation	T15	T8	NoRel	true	sygdomsforebyggelse	stillet
+Relation	T15	T9	NoRel	true	sygdomsforebyggelse	frikendt
+Relation	T16	T0	NoRel	true	inhalere	rystet
+Relation	T16	T1	NoRel	true	inhalere	epidemiens
+Relation	T16	T10	NoRel	true	inhalere	foreslået
+Relation	T16	T14	NoRel	true	inhalere	sygdommens
+Relation	T16	T9	NoRel	true	inhalere	frikendt
+Relation	T17	T1	NoRel	true	årsag	epidemiens
+Relation	T17	T11	NoRel	true	årsag	anvendt
+Relation	T17	T16	NoRel	true	årsag	inhalere
+Relation	T17	T6	NoRel	true	årsag	mistanke
+Relation	T17	T8	NoRel	true	årsag	stillet
+Relation	T2	T0	NoRel	true	spurgt	rystet
+Relation	T2	T13	NoRel	true	spurgt	angrebet
+Relation	T2	T16	NoRel	true	spurgt	inhalere
+Relation	T2	T4	NoRel	true	spurgt	anbefalet
+Relation	T2	T8	NoRel	true	spurgt	stillet
+Relation	T3	T0	NoRel	true	sygdommen	rystet
+Relation	T3	T15	NoRel	true	sygdommen	sygdomsforebyggelse
+Relation	T3	T5	NoRel	true	sygdommen	stikke
+Relation	T3	T6	NoRel	true	sygdommen	mistanke
+Relation	T4	T13	NoRel	true	anbefalet	angrebet
+Relation	T4	T14	NoRel	true	anbefalet	sygdommens
+Relation	T4	T5	NoRel	true	anbefalet	stikke
+Relation	T4	T6	NoRel	true	anbefalet	mistanke
+Relation	T4	T7	NoRel	true	anbefalet	udskrevet
+Relation	T4	T8	NoRel	true	anbefalet	stillet
+Relation	T5	T0	NoRel	true	stikke	rystet
+Relation	T5	T1	NoRel	true	stikke	epidemiens
+Relation	T5	T10	NoRel	true	stikke	foreslået
+Relation	T5	T12	NoRel	true	stikke	forgiftet
+Relation	T5	T17	NoRel	true	stikke	årsag
+Relation	T5	T9	NoRel	true	stikke	frikendt
+Relation	T6	T1	NoRel	true	mistanke	epidemiens
+Relation	T6	T10	NoRel	true	mistanke	foreslået
+Relation	T6	T14	NoRel	true	mistanke	sygdommens
+Relation	T6	T15	NoRel	true	mistanke	sygdomsforebyggelse
+Relation	T6	T17	NoRel	true	mistanke	årsag
+Relation	T6	T7	NoRel	true	mistanke	udskrevet
+Relation	T7	T0	NoRel	true	udskrevet	rystet
+Relation	T7	T11	NoRel	true	udskrevet	anvendt
+Relation	T7	T12	NoRel	true	udskrevet	forgiftet
+Relation	T7	T13	NoRel	true	udskrevet	angrebet
+Relation	T8	T14	NoRel	true	stillet	sygdommens
+Relation	T8	T2	NoRel	true	stillet	spurgt
+Relation	T8	T4	NoRel	true	stillet	anbefalet
+Relation	T9	T10	NoRel	true	frikendt	foreslået
+Relation	T9	T11	NoRel	true	frikendt	anvendt
+Relation	T9	T2	NoRel	true	frikendt	spurgt
+Relation	T9	T4	NoRel	true	frikendt	anbefalet
+Relation	T9	T7	NoRel	true	frikendt	udskrevet

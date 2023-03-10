@@ -1,0 +1,120 @@
+Text	El Boeing 777 tiene una buena reputación por su seguridad .	Este fue su primer accidente con consecuencias fatales , el segundo accidente ( después del Vuelo 38 de British Airways ) , y la tercera pérdida total desde que el 777 comenzó a operar comercialmente en 1995 .	Pasadas las ( hora del Pacífico ) del 6 de julio de 2013 , se informó que el vuelo 214 de Asiana Airlines se había estrellado al intentar realizar su aterrizaje en una de las pistas del Aeropuerto Internacional de San Francisco .	Según la investigación preliminar , el avión habría aterrizado antes del umbral de la pista , haciendo que la cola de la aeronave se estrellara contra el suelo y causase una explosión .	El humo del incendio pudo divisarse desde varios kilómetros .
+Event	T0	accidente	EVENT	79
+Event	T1	accidente	EVENT	128
+Event	T2	Vuelo	EVENT	152
+Event	T3	pérdida	EVENT	197
+Event	T4	comenzó	EVENT	228
+Event	T5	operar	EVENT	238
+Event	T6	informó	EVENT	332
+Event	T7	estrellado	EVENT	385
+Event	T8	realizar	EVENT	408
+Event	T9	aterrizaje	EVENT	420
+Event	T10	investigación	EVENT	509
+Event	T11	aterrizado	EVENT	552
+Event	T12	haciendo	EVENT	594
+Event	T13	estrellara	EVENT	633
+Event	T14	causase	EVENT	662
+Event	T15	explosión	EVENT	674
+Event	T16	humo	EVENT	689
+Event	T17	divisarse	EVENT	712
+Relation	T13	T15	CauseEffect	true	estrellara	explosión
+Relation	T15	T13	EffectCause	true	explosión	estrellara
+Relation	T0	T10	NoRel	true	accidente	investigación
+Relation	T0	T15	NoRel	true	accidente	explosión
+Relation	T0	T2	NoRel	true	accidente	Vuelo
+Relation	T0	T5	NoRel	true	accidente	operar
+Relation	T0	T6	NoRel	true	accidente	informó
+Relation	T1	T0	NoRel	true	accidente	accidente
+Relation	T1	T10	NoRel	true	accidente	investigación
+Relation	T1	T11	NoRel	true	accidente	aterrizado
+Relation	T1	T12	NoRel	true	accidente	haciendo
+Relation	T1	T14	NoRel	true	accidente	causase
+Relation	T1	T16	NoRel	true	accidente	humo
+Relation	T1	T3	NoRel	true	accidente	pérdida
+Relation	T1	T6	NoRel	true	accidente	informó
+Relation	T1	T7	NoRel	true	accidente	estrellado
+Relation	T10	T0	NoRel	true	investigación	accidente
+Relation	T10	T1	NoRel	true	investigación	accidente
+Relation	T10	T12	NoRel	true	investigación	haciendo
+Relation	T10	T14	NoRel	true	investigación	causase
+Relation	T10	T15	NoRel	true	investigación	explosión
+Relation	T10	T16	NoRel	true	investigación	humo
+Relation	T10	T17	NoRel	true	investigación	divisarse
+Relation	T10	T2	NoRel	true	investigación	Vuelo
+Relation	T11	T13	NoRel	true	aterrizado	estrellara
+Relation	T11	T14	NoRel	true	aterrizado	causase
+Relation	T11	T16	NoRel	true	aterrizado	humo
+Relation	T11	T17	NoRel	true	aterrizado	divisarse
+Relation	T11	T2	NoRel	true	aterrizado	Vuelo
+Relation	T11	T3	NoRel	true	aterrizado	pérdida
+Relation	T11	T5	NoRel	true	aterrizado	operar
+Relation	T11	T6	NoRel	true	aterrizado	informó
+Relation	T12	T10	NoRel	true	haciendo	investigación
+Relation	T12	T14	NoRel	true	haciendo	causase
+Relation	T12	T6	NoRel	true	haciendo	informó
+Relation	T13	T11	NoRel	true	estrellara	aterrizado
+Relation	T13	T17	NoRel	true	estrellara	divisarse
+Relation	T13	T3	NoRel	true	estrellara	pérdida
+Relation	T13	T5	NoRel	true	estrellara	operar
+Relation	T13	T7	NoRel	true	estrellara	estrellado
+Relation	T13	T8	NoRel	true	estrellara	realizar
+Relation	T13	T9	NoRel	true	estrellara	aterrizaje
+Relation	T14	T0	NoRel	true	causase	accidente
+Relation	T14	T11	NoRel	true	causase	aterrizado
+Relation	T14	T15	NoRel	true	causase	explosión
+Relation	T14	T3	NoRel	true	causase	pérdida
+Relation	T14	T8	NoRel	true	causase	realizar
+Relation	T15	T10	NoRel	true	explosión	investigación
+Relation	T15	T11	NoRel	true	explosión	aterrizado
+Relation	T15	T14	NoRel	true	explosión	causase
+Relation	T15	T3	NoRel	true	explosión	pérdida
+Relation	T16	T0	NoRel	true	humo	accidente
+Relation	T16	T10	NoRel	true	humo	investigación
+Relation	T16	T12	NoRel	true	humo	haciendo
+Relation	T16	T15	NoRel	true	humo	explosión
+Relation	T16	T2	NoRel	true	humo	Vuelo
+Relation	T16	T4	NoRel	true	humo	comenzó
+Relation	T16	T8	NoRel	true	humo	realizar
+Relation	T17	T0	NoRel	true	divisarse	accidente
+Relation	T17	T13	NoRel	true	divisarse	estrellara
+Relation	T17	T14	NoRel	true	divisarse	causase
+Relation	T17	T16	NoRel	true	divisarse	humo
+Relation	T17	T8	NoRel	true	divisarse	realizar
+Relation	T17	T9	NoRel	true	divisarse	aterrizaje
+Relation	T2	T13	NoRel	true	Vuelo	estrellara
+Relation	T3	T1	NoRel	true	pérdida	accidente
+Relation	T3	T11	NoRel	true	pérdida	aterrizado
+Relation	T3	T2	NoRel	true	pérdida	Vuelo
+Relation	T3	T5	NoRel	true	pérdida	operar
+Relation	T3	T8	NoRel	true	pérdida	realizar
+Relation	T3	T9	NoRel	true	pérdida	aterrizaje
+Relation	T4	T11	NoRel	true	comenzó	aterrizado
+Relation	T4	T14	NoRel	true	comenzó	causase
+Relation	T4	T17	NoRel	true	comenzó	divisarse
+Relation	T4	T3	NoRel	true	comenzó	pérdida
+Relation	T4	T5	NoRel	true	comenzó	operar
+Relation	T5	T0	NoRel	true	operar	accidente
+Relation	T5	T1	NoRel	true	operar	accidente
+Relation	T5	T10	NoRel	true	operar	investigación
+Relation	T5	T12	NoRel	true	operar	haciendo
+Relation	T5	T16	NoRel	true	operar	humo
+Relation	T5	T3	NoRel	true	operar	pérdida
+Relation	T5	T7	NoRel	true	operar	estrellado
+Relation	T5	T8	NoRel	true	operar	realizar
+Relation	T6	T0	NoRel	true	informó	accidente
+Relation	T6	T1	NoRel	true	informó	accidente
+Relation	T6	T10	NoRel	true	informó	investigación
+Relation	T6	T2	NoRel	true	informó	Vuelo
+Relation	T6	T9	NoRel	true	informó	aterrizaje
+Relation	T7	T12	NoRel	true	estrellado	haciendo
+Relation	T7	T15	NoRel	true	estrellado	explosión
+Relation	T7	T16	NoRel	true	estrellado	humo
+Relation	T7	T3	NoRel	true	estrellado	pérdida
+Relation	T7	T4	NoRel	true	estrellado	comenzó
+Relation	T8	T11	NoRel	true	realizar	aterrizado
+Relation	T8	T14	NoRel	true	realizar	causase
+Relation	T9	T0	NoRel	true	aterrizaje	accidente
+Relation	T9	T11	NoRel	true	aterrizaje	aterrizado
+Relation	T9	T12	NoRel	true	aterrizaje	haciendo
+Relation	T9	T13	NoRel	true	aterrizaje	estrellara
+Relation	T9	T17	NoRel	true	aterrizaje	divisarse

@@ -1,0 +1,59 @@
+Text	Kazadan sonra Türkiye Dışişleri Bakanlığı Suriye'nin Ankara Büyükelçisi'ne nota vererek Suriye'den tazminat ve ayrıntılı açıklama talep etti .	Suriye yetkilileri ilk başta uçağın Suriye sınırı ihlal ederek Suriye hava sahasına girdiğini söylediler .	17 Kasım 1989'da Türkiye , yaşanan olay için Suriye'den 14 milyon 651 bin Amerikan doları tutarında tazminat talep etti .	8 Aralık 1989'da Suriyeli yetkililer olayın sorumlusu iki pilot ile bir yer sorumlusunun tutuklandığını açıkladılar .	Kazadan yaklaşık bir yıl sonra , 17 Ekim 1990 günü , Suriye Türkiye ile imzaladığı bir protokolle 3 milyon 430 bin dolar tazminat ödemeyi kabul etti .
+Event	T0	Kazadan	EVENT	0
+Event	T1	etti	EVENT	136
+Event	T2	ihlal	EVENT	193
+Event	T3	olay	EVENT	285
+Event	T4	etti	EVENT	365
+Event	T5	olayın	EVENT	409
+Event	T6	Kazadan	EVENT	490
+Event	T7	etti	EVENT	634
+Event	T8	vererek	EVENT	80
+Event	T9	söylediler	EVENT	237
+Event	T10	açıkladılar	EVENT	476
+Event	T11	tutuklandığını	EVENT	461
+Event	T12	imzaladığı	EVENT	562
+Relation	T1	T9	CauseEffect	true	etti	söylediler
+Relation	T9	T1	EffectCause	true	söylediler	etti
+Relation	T11	T10	CauseEffect	true	tutuklandığını	açıkladılar
+Relation	T10	T11	EffectCause	true	açıkladılar	tutuklandığını
+Relation	T4	T7	CauseEffect	true	etti	etti
+Relation	T7	T4	EffectCause	true	etti	etti
+Relation	T7	T12	CauseEffect	true	etti	imzaladığı
+Relation	T12	T7	EffectCause	true	imzaladığı	etti
+Relation	T0	T10	NoRel	true	Kazadan	açıkladılar
+Relation	T0	T2	NoRel	true	Kazadan	ihlal
+Relation	T0	T3	NoRel	true	Kazadan	olay
+Relation	T0	T8	NoRel	true	Kazadan	vererek
+Relation	T1	T0	NoRel	true	etti	Kazadan
+Relation	T1	T2	NoRel	true	etti	ihlal
+Relation	T1	T3	NoRel	true	etti	olay
+Relation	T1	T6	NoRel	true	etti	Kazadan
+Relation	T10	T0	NoRel	true	açıkladılar	Kazadan
+Relation	T10	T2	NoRel	true	açıkladılar	ihlal
+Relation	T10	T4	NoRel	true	açıkladılar	etti
+Relation	T10	T9	NoRel	true	açıkladılar	söylediler
+Relation	T11	T8	NoRel	true	tutuklandığını	vererek
+Relation	T12	T0	NoRel	true	imzaladığı	Kazadan
+Relation	T12	T2	NoRel	true	imzaladığı	ihlal
+Relation	T12	T3	NoRel	true	imzaladığı	olay
+Relation	T2	T10	NoRel	true	ihlal	açıkladılar
+Relation	T2	T12	NoRel	true	ihlal	imzaladığı
+Relation	T2	T7	NoRel	true	ihlal	etti
+Relation	T3	T11	NoRel	true	olay	tutuklandığını
+Relation	T3	T7	NoRel	true	olay	etti
+Relation	T4	T5	NoRel	true	etti	olayın
+Relation	T5	T0	NoRel	true	olayın	Kazadan
+Relation	T5	T10	NoRel	true	olayın	açıkladılar
+Relation	T5	T7	NoRel	true	olayın	etti
+Relation	T5	T8	NoRel	true	olayın	vererek
+Relation	T6	T0	NoRel	true	Kazadan	Kazadan
+Relation	T6	T11	NoRel	true	Kazadan	tutuklandığını
+Relation	T6	T3	NoRel	true	Kazadan	olay
+Relation	T6	T4	NoRel	true	Kazadan	etti
+Relation	T7	T5	NoRel	true	etti	olayın
+Relation	T7	T9	NoRel	true	etti	söylediler
+Relation	T8	T11	NoRel	true	vererek	tutuklandığını
+Relation	T8	T12	NoRel	true	vererek	imzaladığı
+Relation	T8	T2	NoRel	true	vererek	ihlal
+Relation	T8	T3	NoRel	true	vererek	olay
+Relation	T9	T8	NoRel	true	söylediler	vererek

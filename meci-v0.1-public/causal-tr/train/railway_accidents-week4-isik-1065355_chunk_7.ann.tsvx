@@ -1,0 +1,152 @@
+Text	Çarpışma sonucu pek çok kişi yaralanır .	Bazısı erimiş tehlikeli Fenol asid_‘i içeren 47 vagon taşıyan bir CSX yük treni , üzerinde makinisti olmadan Toledo’da kaçmaktadır .	Tren , üzerine çıkmayı başaran bir demiryolu işçisi tarafından dudurulmadan önce Kenton , Ohio_‘ya doğru gitmekteydi ...	- 18 Temmuz , 2001 – Howard Street Tünel yangını , Baltimore , Maryland , Birleşik Devletler : Kimyasallar ve ağaç ürünleri taşıyan bir 60 - vagonlu dakikada 1, 7 km hızla giden CSX treni Baltimore altındaki uzun tünelde raydan çıkarak altı gün yanarak su kirlenmesine ve yangına sebep olur ..	- 19 Ağustos , 2001 – Kurunegala tren çarpışması , Sri_Lanka : Bir tren hız ve fazla kalabalık oluşu nedeniyle raydan çıktığında 13 kişi ölür .
+Event	T0	yaralanır	EVENT	29
+Event	T1	kaçmaktadır	EVENT	160
+Event	T2	gitmekteydi	EVENT	279
+Event	T3	yangını	EVENT	336
+Event	T4	yanarak	EVENT	540
+Event	T5	kirlenmesine	EVENT	551
+Event	T6	çarpışması	EVENT	627
+Event	T7	ölür	EVENT	726
+Event	T8	Çarpışma	EVENT	0
+Event	T9	erimiş	EVENT	48
+Event	T10	taşıyan	EVENT	95
+Event	T11	çıkmayı	EVENT	189
+Event	T12	dudurulmadan	EVENT	237
+Event	T13	giden	EVENT	467
+Event	T14	çıkarak	EVENT	523
+Event	T15	yangına	EVENT	567
+Event	T16	olur	EVENT	581
+Event	T17	taşıyan	EVENT	419
+Event	T18	çıktığında	EVENT	707
+Relation	T8	T0	CauseEffect	true	Çarpışma	yaralanır
+Relation	T0	T8	EffectCause	true	yaralanır	Çarpışma
+Relation	T11	T12	CauseEffect	true	çıkmayı	dudurulmadan
+Relation	T12	T11	EffectCause	true	dudurulmadan	çıkmayı
+Relation	T14	T3	CauseEffect	true	çıkarak	yangını
+Relation	T3	T14	EffectCause	true	yangını	çıkarak
+Relation	T14	T4	CauseEffect	true	çıkarak	yanarak
+Relation	T4	T14	EffectCause	true	yanarak	çıkarak
+Relation	T4	T5	CauseEffect	true	yanarak	kirlenmesine
+Relation	T5	T4	EffectCause	true	kirlenmesine	yanarak
+Relation	T18	T6	CauseEffect	true	çıktığında	çarpışması
+Relation	T6	T18	EffectCause	true	çarpışması	çıktığında
+Relation	T6	T7	CauseEffect	true	çarpışması	ölür
+Relation	T7	T6	EffectCause	true	ölür	çarpışması
+Relation	T0	T11	NoRel	true	yaralanır	çıkmayı
+Relation	T0	T12	NoRel	true	yaralanır	dudurulmadan
+Relation	T0	T18	NoRel	true	yaralanır	çıktığında
+Relation	T0	T7	NoRel	true	yaralanır	ölür
+Relation	T1	T0	NoRel	true	kaçmaktadır	yaralanır
+Relation	T1	T10	NoRel	true	kaçmaktadır	taşıyan
+Relation	T1	T11	NoRel	true	kaçmaktadır	çıkmayı
+Relation	T1	T16	NoRel	true	kaçmaktadır	olur
+Relation	T1	T18	NoRel	true	kaçmaktadır	çıktığında
+Relation	T1	T3	NoRel	true	kaçmaktadır	yangını
+Relation	T1	T4	NoRel	true	kaçmaktadır	yanarak
+Relation	T1	T5	NoRel	true	kaçmaktadır	kirlenmesine
+Relation	T1	T7	NoRel	true	kaçmaktadır	ölür
+Relation	T1	T8	NoRel	true	kaçmaktadır	Çarpışma
+Relation	T10	T11	NoRel	true	taşıyan	çıkmayı
+Relation	T10	T12	NoRel	true	taşıyan	dudurulmadan
+Relation	T10	T13	NoRel	true	taşıyan	giden
+Relation	T10	T18	NoRel	true	taşıyan	çıktığında
+Relation	T10	T4	NoRel	true	taşıyan	yanarak
+Relation	T10	T9	NoRel	true	taşıyan	erimiş
+Relation	T11	T0	NoRel	true	çıkmayı	yaralanır
+Relation	T11	T1	NoRel	true	çıkmayı	kaçmaktadır
+Relation	T11	T4	NoRel	true	çıkmayı	yanarak
+Relation	T11	T7	NoRel	true	çıkmayı	ölür
+Relation	T12	T16	NoRel	true	dudurulmadan	olur
+Relation	T12	T5	NoRel	true	dudurulmadan	kirlenmesine
+Relation	T12	T8	NoRel	true	dudurulmadan	Çarpışma
+Relation	T13	T0	NoRel	true	giden	yaralanır
+Relation	T13	T14	NoRel	true	giden	çıkarak
+Relation	T13	T15	NoRel	true	giden	yangına
+Relation	T13	T17	NoRel	true	giden	taşıyan
+Relation	T13	T2	NoRel	true	giden	gitmekteydi
+Relation	T13	T3	NoRel	true	giden	yangını
+Relation	T13	T4	NoRel	true	giden	yanarak
+Relation	T14	T11	NoRel	true	çıkarak	çıkmayı
+Relation	T14	T7	NoRel	true	çıkarak	ölür
+Relation	T14	T9	NoRel	true	çıkarak	erimiş
+Relation	T15	T1	NoRel	true	yangına	kaçmaktadır
+Relation	T15	T14	NoRel	true	yangına	çıkarak
+Relation	T15	T18	NoRel	true	yangına	çıktığında
+Relation	T15	T2	NoRel	true	yangına	gitmekteydi
+Relation	T15	T4	NoRel	true	yangına	yanarak
+Relation	T15	T7	NoRel	true	yangına	ölür
+Relation	T15	T8	NoRel	true	yangına	Çarpışma
+Relation	T15	T9	NoRel	true	yangına	erimiş
+Relation	T16	T10	NoRel	true	olur	taşıyan
+Relation	T16	T13	NoRel	true	olur	giden
+Relation	T16	T15	NoRel	true	olur	yangına
+Relation	T16	T17	NoRel	true	olur	taşıyan
+Relation	T16	T4	NoRel	true	olur	yanarak
+Relation	T16	T6	NoRel	true	olur	çarpışması
+Relation	T16	T7	NoRel	true	olur	ölür
+Relation	T17	T1	NoRel	true	taşıyan	kaçmaktadır
+Relation	T17	T10	NoRel	true	taşıyan	taşıyan
+Relation	T17	T11	NoRel	true	taşıyan	çıkmayı
+Relation	T17	T13	NoRel	true	taşıyan	giden
+Relation	T17	T2	NoRel	true	taşıyan	gitmekteydi
+Relation	T17	T3	NoRel	true	taşıyan	yangını
+Relation	T17	T4	NoRel	true	taşıyan	yanarak
+Relation	T18	T10	NoRel	true	çıktığında	taşıyan
+Relation	T18	T11	NoRel	true	çıktığında	çıkmayı
+Relation	T18	T17	NoRel	true	çıktığında	taşıyan
+Relation	T18	T4	NoRel	true	çıktığında	yanarak
+Relation	T18	T7	NoRel	true	çıktığında	ölür
+Relation	T18	T8	NoRel	true	çıktığında	Çarpışma
+Relation	T2	T1	NoRel	true	gitmekteydi	kaçmaktadır
+Relation	T2	T14	NoRel	true	gitmekteydi	çıkarak
+Relation	T2	T15	NoRel	true	gitmekteydi	yangına
+Relation	T2	T16	NoRel	true	gitmekteydi	olur
+Relation	T2	T18	NoRel	true	gitmekteydi	çıktığında
+Relation	T2	T4	NoRel	true	gitmekteydi	yanarak
+Relation	T2	T5	NoRel	true	gitmekteydi	kirlenmesine
+Relation	T2	T8	NoRel	true	gitmekteydi	Çarpışma
+Relation	T2	T9	NoRel	true	gitmekteydi	erimiş
+Relation	T3	T1	NoRel	true	yangını	kaçmaktadır
+Relation	T3	T11	NoRel	true	yangını	çıkmayı
+Relation	T3	T12	NoRel	true	yangını	dudurulmadan
+Relation	T3	T15	NoRel	true	yangını	yangına
+Relation	T3	T17	NoRel	true	yangını	taşıyan
+Relation	T3	T18	NoRel	true	yangını	çıktığında
+Relation	T3	T4	NoRel	true	yangını	yanarak
+Relation	T3	T5	NoRel	true	yangını	kirlenmesine
+Relation	T3	T8	NoRel	true	yangını	Çarpışma
+Relation	T3	T9	NoRel	true	yangını	erimiş
+Relation	T4	T1	NoRel	true	yanarak	kaçmaktadır
+Relation	T4	T10	NoRel	true	yanarak	taşıyan
+Relation	T4	T16	NoRel	true	yanarak	olur
+Relation	T4	T2	NoRel	true	yanarak	gitmekteydi
+Relation	T4	T9	NoRel	true	yanarak	erimiş
+Relation	T5	T1	NoRel	true	kirlenmesine	kaçmaktadır
+Relation	T5	T11	NoRel	true	kirlenmesine	çıkmayı
+Relation	T5	T14	NoRel	true	kirlenmesine	çıkarak
+Relation	T5	T6	NoRel	true	kirlenmesine	çarpışması
+Relation	T5	T8	NoRel	true	kirlenmesine	Çarpışma
+Relation	T6	T0	NoRel	true	çarpışması	yaralanır
+Relation	T6	T1	NoRel	true	çarpışması	kaçmaktadır
+Relation	T6	T12	NoRel	true	çarpışması	dudurulmadan
+Relation	T6	T13	NoRel	true	çarpışması	giden
+Relation	T6	T15	NoRel	true	çarpışması	yangına
+Relation	T6	T3	NoRel	true	çarpışması	yangını
+Relation	T6	T8	NoRel	true	çarpışması	Çarpışma
+Relation	T7	T0	NoRel	true	ölür	yaralanır
+Relation	T7	T11	NoRel	true	ölür	çıkmayı
+Relation	T7	T15	NoRel	true	ölür	yangına
+Relation	T7	T16	NoRel	true	ölür	olur
+Relation	T7	T17	NoRel	true	ölür	taşıyan
+Relation	T7	T2	NoRel	true	ölür	gitmekteydi
+Relation	T7	T8	NoRel	true	ölür	Çarpışma
+Relation	T8	T10	NoRel	true	Çarpışma	taşıyan
+Relation	T8	T14	NoRel	true	Çarpışma	çıkarak
+Relation	T8	T7	NoRel	true	Çarpışma	ölür
+Relation	T8	T9	NoRel	true	Çarpışma	erimiş
+Relation	T9	T0	NoRel	true	erimiş	yaralanır
+Relation	T9	T10	NoRel	true	erimiş	taşıyan
+Relation	T9	T11	NoRel	true	erimiş	çıkmayı
+Relation	T9	T12	NoRel	true	erimiş	dudurulmadan
+Relation	T9	T4	NoRel	true	erimiş	yanarak
+Relation	T9	T5	NoRel	true	erimiş	kirlenmesine

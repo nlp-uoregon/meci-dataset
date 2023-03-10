@@ -1,0 +1,29 @@
+Text	Depremde 7 kişi öldü , en az 20 kişi ise yaralandı .	Petrinja belediye başkanı , şehrin yarısının yıkıldığını söyledi .	Merkez_üssü , Kupa / Sava alüvyon ovasının hemen güneyinde , Zrinska gora dağı ve güneyde Dinar Alpleri'nin geri kalanıyla tepelik bir bölgede yer almaktadır .	Kupa nehri vadisinde Mercalli şiddet ölçeğine göre VIII ( yıkıcı ) olarak meydana gelen en bilinen depremler 1909/ 1910 yıllarındaydı .	Hırvatistan topraklarında 6.2 şiddetinde olan son deprem , 1962'de Makarska bölgesini vuran bir depremdi .
+Event	T0	Depremde	EVENT	0
+Event	T1	öldü	EVENT	16
+Event	T2	yaralandı	EVENT	41
+Event	T3	söyledi	EVENT	110
+Event	T5	depremler	EVENT	379
+Event	T6	deprem	EVENT	466
+Event	T7	vuran	EVENT	502
+Event	T8	depremdi	EVENT	512
+Relation	T0	T1	CauseEffect	true	Depremde	öldü
+Relation	T1	T0	EffectCause	true	öldü	Depremde
+Relation	T0	T2	CauseEffect	true	Depremde	yaralandı
+Relation	T2	T0	EffectCause	true	yaralandı	Depremde
+Relation	T0	T3	CauseEffect	true	Depremde	söyledi
+Relation	T3	T0	EffectCause	true	söyledi	Depremde
+Relation	T0	T7	NoRel	true	Depremde	vuran
+Relation	T1	T6	NoRel	true	öldü	deprem
+Relation	T2	T3	NoRel	true	yaralandı	söyledi
+Relation	T3	T1	NoRel	true	söyledi	öldü
+Relation	T3	T8	NoRel	true	söyledi	depremdi
+Relation	T5	T2	NoRel	true	depremler	yaralandı
+Relation	T5	T6	NoRel	true	depremler	deprem
+Relation	T5	T7	NoRel	true	depremler	vuran
+Relation	T6	T0	NoRel	true	deprem	Depremde
+Relation	T6	T1	NoRel	true	deprem	öldü
+Relation	T7	T0	NoRel	true	vuran	Depremde
+Relation	T7	T3	NoRel	true	vuran	söyledi
+Relation	T8	T0	NoRel	true	depremdi	Depremde
+Relation	T8	T2	NoRel	true	depremdi	yaralandı

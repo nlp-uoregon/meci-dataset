@@ -1,0 +1,26 @@
+Text	Ama 1929 - 1932 yılları arasında tüm dünyayı etkisi altına alan Büyük Buhran Almanya'yı büyük ölçüde sarstı .	Sonunda % 20'leri bulan işsizlik nasyonal sosyalist ülkülerin yeniden canlanmasını sağladı ve Nasyonal Sosyalist Alman İşçi Partisi ilk büyük başarısını 1930 seçimlerinde kazandı .	Ama iktidara gelmelerini sağlayacak yeterli oyu henüz alamamışlardı .	1932 seçimlerinde Nasyonal Sosyalist Alman İşçi Partisi'nin aldığı oylar biraz gerilediyse de nasyonal sosyalist olmayan bazı milliyetçi önderler Hitler'i denetleyebileceklerini düşünerek başbakan olmasında anlaştılar .	Böylece Alman Cumhurbaşkanı Paul von Hindenburg , 30 Ocak 1933 tarihinde Hitler'i başbakan olarak atadı .
+Event	T0	sarstı	EVENT	101
+Event	T1	işsizlik	EVENT	134
+Event	T2	sağladı	EVENT	193
+Event	T3	kazandı	EVENT	281
+Event	T5	gerilediyse	EVENT	440
+Event	T6	atadı	EVENT	679
+Event	T7	Buhran	EVENT	70
+Event	T8	anlaştılar	EVENT	568
+Relation	T7	T0	CauseEffect	true	Buhran	sarstı
+Relation	T0	T7	EffectCause	true	sarstı	Buhran
+Relation	T1	T2	CauseEffect	true	işsizlik	sağladı
+Relation	T2	T1	EffectCause	true	sağladı	işsizlik
+Relation	T2	T3	CauseEffect	true	sağladı	kazandı
+Relation	T3	T2	EffectCause	true	kazandı	sağladı
+Relation	T8	T6	CauseEffect	true	anlaştılar	atadı
+Relation	T6	T8	EffectCause	true	atadı	anlaştılar
+Relation	T0	T1	NoRel	true	sarstı	işsizlik
+Relation	T1	T6	NoRel	true	işsizlik	atadı
+Relation	T1	T8	NoRel	true	işsizlik	anlaştılar
+Relation	T2	T5	NoRel	true	sağladı	gerilediyse
+Relation	T3	T0	NoRel	true	kazandı	sarstı
+Relation	T5	T0	NoRel	true	gerilediyse	sarstı
+Relation	T6	T3	NoRel	true	atadı	kazandı
+Relation	T7	T5	NoRel	true	Buhran	gerilediyse
+Relation	T8	T7	NoRel	true	anlaştılar	Buhran

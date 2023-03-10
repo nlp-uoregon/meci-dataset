@@ -1,0 +1,29 @@
+Text	امریکی صدر بارک اوبامہ نے سابقہ صدور کلنٹن اور بُش کی زیر صدارت انجمن بنائی جو امدادی پیسے اکٹھے کرے گی ۔	امریکا نے 5000 فوجی امدادی کارروائیوں کے لیے روانہ کیے ۔	نظام مواصلات کی تباہی کے باوجود ابتدائی دنوں میں امریکا نے فضا سے خوراک گرانے سے انکار کر دیا کیونکہ ان کا کہنا تھا کہ اس سے افراتفری پھیلے گی ۔	پورٹ_اؤ پرنس کے ہوائی اڈا پر امریکیوں نے قبضہ کر لیا ۔	بظاہر امداد کے لیے گئے امریکی فوج اس انداز میں کارروائی کر رہی ہے کہ ہیٹی کے سابقہ استعماری آقا فرانس کے وزیر نے اسے امریکی " قبضہ " جانا اور اقوام متحدہ سے امریکی کردار کی وضاحت طلب کی ۔
+Event	T11	کارروائی	EVENT	410
+Event	T2	کارروائیوں	EVENT	133
+Event	T4	تباہی	EVENT	179
+Event	T5	گرانے	EVENT	235
+Event	T6	انکار	EVENT	244
+Event	T7	کہنا	EVENT	270
+Event	T9	قبضہ	EVENT	349
+Relation	T4	T2	CauseEffect	true	تباہی	کارروائیوں
+Relation	T2	T4	EffectCause	true	کارروائیوں	تباہی
+Relation	T2	T9	CauseEffect	true	کارروائیوں	قبضہ
+Relation	T9	T2	EffectCause	true	قبضہ	کارروائیوں
+Relation	T11	T4	NoRel	true	کارروائی	تباہی
+Relation	T11	T6	NoRel	true	کارروائی	انکار
+Relation	T11	T7	NoRel	true	کارروائی	کہنا
+Relation	T11	T9	NoRel	true	کارروائی	قبضہ
+Relation	T2	T11	NoRel	true	کارروائیوں	کارروائی
+Relation	T2	T6	NoRel	true	کارروائیوں	انکار
+Relation	T2	T7	NoRel	true	کارروائیوں	کہنا
+Relation	T4	T11	NoRel	true	تباہی	کارروائی
+Relation	T4	T9	NoRel	true	تباہی	قبضہ
+Relation	T5	T9	NoRel	true	گرانے	قبضہ
+Relation	T6	T11	NoRel	true	انکار	کارروائی
+Relation	T7	T2	NoRel	true	کہنا	کارروائیوں
+Relation	T7	T5	NoRel	true	کہنا	گرانے
+Relation	T9	T11	NoRel	true	قبضہ	کارروائی
+Relation	T9	T4	NoRel	true	قبضہ	تباہی
+Relation	T9	T5	NoRel	true	قبضہ	گرانے
+Relation	T9	T6	NoRel	true	قبضہ	انکار

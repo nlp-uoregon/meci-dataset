@@ -1,0 +1,27 @@
+Text	Bir gün derste Yahudiler için iyi bir kelime kullanılınca hemen derse müdahale etti ve tam tersine Yahudileri kötüleyen uzun bir nutuk çekti .	Bu sırada Yahudiler üzerine çektiği nutuktan üstleri çok memnun kaldılar ve onu Münih alayına _ Bildungsoffizier _ ( eğitim subayı ) tayin ettiler .	Başlıca görevi , tehlikeli fikirlerle , barışçılıkla , sosyalizmle ve demokrasi ile savaşmaktı .	Böylece Hitler , söz söyleme yeteneğini denemek fırsatını elde etti .	Çünkü söz söylemek , kendi görüşüne göre , başarılı politikacılığın ilk şartıydı .
+Event	T0	etti	EVENT	79
+Event	T2	çekti	EVENT	135
+Event	T5	etti	EVENT	452
+Event	T6	kullanılınca	EVENT	45
+Event	T1	kaldılar	EVENT	207
+Event	T3	ettiler	EVENT	282
+Relation	T6	T0	CauseEffect	true	kullanılınca	etti
+Relation	T0	T6	EffectCause	true	etti	kullanılınca
+Relation	T0	T2	CauseEffect	true	etti	çekti
+Relation	T2	T0	EffectCause	true	çekti	etti
+Relation	T2	T1	CauseEffect	true	çekti	kaldılar
+Relation	T1	T2	EffectCause	true	kaldılar	çekti
+Relation	T1	T3	CauseEffect	true	kaldılar	ettiler
+Relation	T3	T1	EffectCause	true	ettiler	kaldılar
+Relation	T3	T5	CauseEffect	true	ettiler	etti
+Relation	T5	T3	EffectCause	true	etti	ettiler
+Relation	T0	T1	NoRel	true	etti	kaldılar
+Relation	T1	T0	NoRel	true	kaldılar	etti
+Relation	T1	T6	NoRel	true	kaldılar	kullanılınca
+Relation	T2	T6	NoRel	true	çekti	kullanılınca
+Relation	T3	T0	NoRel	true	ettiler	etti
+Relation	T3	T6	NoRel	true	ettiler	kullanılınca
+Relation	T5	T0	NoRel	true	etti	etti
+Relation	T5	T2	NoRel	true	etti	çekti
+Relation	T6	T1	NoRel	true	kullanılınca	kaldılar
+Relation	T6	T5	NoRel	true	kullanılınca	etti

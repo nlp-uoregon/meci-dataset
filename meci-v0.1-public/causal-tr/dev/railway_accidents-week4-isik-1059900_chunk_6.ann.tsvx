@@ -1,0 +1,51 @@
+Text	Kaza Lucknow - Sultanpur Harihar Nath Express’inin Haidergah polis istasyon bölgesi altında Barha demiryolu kavşağında bir arabaya çarpmasıyla meydana geldi .	Araba içindeki iki kişi o noktada öldü ve ağır şekilde yaralanan diğer dört kişi Lucknow’daki Travma Merkezine göderildi .	Kazadan sonra bu yol üzerinde tren trafiği yaklaşık iki saat durduruldu .	Bu , benzer tren kazaların beşinci serisiydi .	- 22 Ocak 2010 .
+Event	T0	Kaza	EVENT	0
+Event	T1	geldi	EVENT	151
+Event	T2	öldü	EVENT	193
+Event	T3	yaralanan	EVENT	214
+Event	T4	göderildi	EVENT	270
+Event	T5	Kazadan	EVENT	282
+Event	T7	durduruldu	EVENT	343
+Event	T9	çarpmasıyla	EVENT	131
+Event	T6	kazaların	EVENT	373
+Relation	T9	T0	CauseEffect	true	çarpmasıyla	Kaza
+Relation	T0	T9	EffectCause	true	Kaza	çarpmasıyla
+Relation	T0	T2	CauseEffect	true	Kaza	öldü
+Relation	T2	T0	EffectCause	true	öldü	Kaza
+Relation	T0	T3	CauseEffect	true	Kaza	yaralanan
+Relation	T3	T0	EffectCause	true	yaralanan	Kaza
+Relation	T3	T4	CauseEffect	true	yaralanan	göderildi
+Relation	T4	T3	EffectCause	true	göderildi	yaralanan
+Relation	T0	T7	CauseEffect	true	Kaza	durduruldu
+Relation	T7	T0	EffectCause	true	durduruldu	Kaza
+Relation	T5	T7	CauseEffect	true	Kazadan	durduruldu
+Relation	T7	T5	EffectCause	true	durduruldu	Kazadan
+Relation	T0	T4	NoRel	true	Kaza	göderildi
+Relation	T0	T6	NoRel	true	Kaza	kazaların
+Relation	T1	T3	NoRel	true	geldi	yaralanan
+Relation	T1	T5	NoRel	true	geldi	Kazadan
+Relation	T1	T6	NoRel	true	geldi	kazaların
+Relation	T2	T4	NoRel	true	öldü	göderildi
+Relation	T2	T7	NoRel	true	öldü	durduruldu
+Relation	T2	T9	NoRel	true	öldü	çarpmasıyla
+Relation	T3	T1	NoRel	true	yaralanan	geldi
+Relation	T3	T2	NoRel	true	yaralanan	öldü
+Relation	T3	T5	NoRel	true	yaralanan	Kazadan
+Relation	T3	T7	NoRel	true	yaralanan	durduruldu
+Relation	T4	T0	NoRel	true	göderildi	Kaza
+Relation	T4	T6	NoRel	true	göderildi	kazaların
+Relation	T4	T9	NoRel	true	göderildi	çarpmasıyla
+Relation	T5	T4	NoRel	true	Kazadan	göderildi
+Relation	T6	T0	NoRel	true	kazaların	Kaza
+Relation	T6	T2	NoRel	true	kazaların	öldü
+Relation	T6	T3	NoRel	true	kazaların	yaralanan
+Relation	T6	T4	NoRel	true	kazaların	göderildi
+Relation	T6	T5	NoRel	true	kazaların	Kazadan
+Relation	T6	T7	NoRel	true	kazaların	durduruldu
+Relation	T7	T1	NoRel	true	durduruldu	geldi
+Relation	T7	T4	NoRel	true	durduruldu	göderildi
+Relation	T7	T6	NoRel	true	durduruldu	kazaların
+Relation	T7	T9	NoRel	true	durduruldu	çarpmasıyla
+Relation	T9	T2	NoRel	true	çarpmasıyla	öldü
+Relation	T9	T4	NoRel	true	çarpmasıyla	göderildi
+Relation	T9	T7	NoRel	true	çarpmasıyla	durduruldu

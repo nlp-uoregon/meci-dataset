@@ -1,0 +1,86 @@
+Text	The investigation carried out by the USAF found the root cause of the crash to be pilot s error following an engine malfunction .	During the takeoff roll , engine number 1 ( the left outboard engine ) experienced performance fluctuations which went unnoticed until after takeoff .	The engine power dropped from nearly to under 300 , causing the aircraft to pull to the left , nearly departing the runway .	The investigation found that the takeoff should have been aborted but was not .	Furthermore , the investigation determined that the flight crew had failed to adequately prepare for emergency actions , and the maintenance technicians failed to properly diagnose and repair the malfunctioning engine before flight .
+Event	T0	found	EVENT	42
+Event	T1	crash	EVENT	70
+Event	T2	malfunction	EVENT	116
+Event	T3	roll	EVENT	149
+Event	T4	unnoticed	EVENT	249
+Event	T5	takeoff	EVENT	271
+Event	T6	dropped	EVENT	298
+Event	T7	causing	EVENT	333
+Event	T8	departing	EVENT	383
+Event	T9	found	EVENT	424
+Event	T10	takeoff	EVENT	439
+Event	T11	aborted	EVENT	464
+Event	T12	determined	EVENT	518
+Event	T13	failed	EVENT	554
+Event	T14	prepare	EVENT	575
+Event	T15	actions	EVENT	597
+Event	T16	failed	EVENT	639
+Event	T17	diagnose	EVENT	658
+Event	T18	repair	EVENT	671
+Event	T19	malfunctioning	EVENT	682
+Event	T20	flight	EVENT	711
+Event	T21	carried out	EVENT	18
+Event	T22	pull	EVENT	357
+Relation	T1	T21	CauseEffect	true	crash	carried out
+Relation	T21	T1	EffectCause	true	carried out	crash
+Relation	T2	T1	CauseEffect	true	malfunction	crash
+Relation	T1	T2	EffectCause	true	crash	malfunction
+Relation	T6	T7	CauseEffect	true	dropped	causing
+Relation	T7	T6	EffectCause	true	causing	dropped
+Relation	T0	T10	NoRel	true	found	takeoff
+Relation	T0	T15	NoRel	true	found	actions
+Relation	T0	T16	NoRel	true	found	failed
+Relation	T1	T3	NoRel	true	crash	roll
+Relation	T10	T21	NoRel	true	takeoff	carried out
+Relation	T11	T19	NoRel	true	aborted	malfunctioning
+Relation	T12	T10	NoRel	true	determined	takeoff
+Relation	T12	T11	NoRel	true	determined	aborted
+Relation	T13	T11	NoRel	true	failed	aborted
+Relation	T13	T15	NoRel	true	failed	actions
+Relation	T13	T22	NoRel	true	failed	pull
+Relation	T14	T1	NoRel	true	prepare	crash
+Relation	T14	T13	NoRel	true	prepare	failed
+Relation	T14	T4	NoRel	true	prepare	unnoticed
+Relation	T14	T6	NoRel	true	prepare	dropped
+Relation	T14	T9	NoRel	true	prepare	found
+Relation	T15	T0	NoRel	true	actions	found
+Relation	T15	T2	NoRel	true	actions	malfunction
+Relation	T15	T5	NoRel	true	actions	takeoff
+Relation	T16	T11	NoRel	true	failed	aborted
+Relation	T16	T12	NoRel	true	failed	determined
+Relation	T17	T0	NoRel	true	diagnose	found
+Relation	T17	T16	NoRel	true	diagnose	failed
+Relation	T17	T3	NoRel	true	diagnose	roll
+Relation	T17	T5	NoRel	true	diagnose	takeoff
+Relation	T17	T6	NoRel	true	diagnose	dropped
+Relation	T18	T0	NoRel	true	repair	found
+Relation	T18	T13	NoRel	true	repair	failed
+Relation	T18	T15	NoRel	true	repair	actions
+Relation	T18	T16	NoRel	true	repair	failed
+Relation	T19	T11	NoRel	true	malfunctioning	aborted
+Relation	T2	T20	NoRel	true	malfunction	flight
+Relation	T20	T10	NoRel	true	flight	takeoff
+Relation	T20	T21	NoRel	true	flight	carried out
+Relation	T20	T4	NoRel	true	flight	unnoticed
+Relation	T20	T5	NoRel	true	flight	takeoff
+Relation	T21	T14	NoRel	true	carried out	prepare
+Relation	T22	T12	NoRel	true	pull	determined
+Relation	T22	T13	NoRel	true	pull	failed
+Relation	T22	T17	NoRel	true	pull	diagnose
+Relation	T22	T18	NoRel	true	pull	repair
+Relation	T3	T1	NoRel	true	roll	crash
+Relation	T3	T10	NoRel	true	roll	takeoff
+Relation	T3	T17	NoRel	true	roll	diagnose
+Relation	T3	T5	NoRel	true	roll	takeoff
+Relation	T5	T11	NoRel	true	takeoff	aborted
+Relation	T5	T13	NoRel	true	takeoff	failed
+Relation	T5	T17	NoRel	true	takeoff	diagnose
+Relation	T5	T6	NoRel	true	takeoff	dropped
+Relation	T5	T8	NoRel	true	takeoff	departing
+Relation	T6	T3	NoRel	true	dropped	roll
+Relation	T7	T12	NoRel	true	causing	determined
+Relation	T7	T21	NoRel	true	causing	carried out
+Relation	T7	T22	NoRel	true	causing	pull
+Relation	T8	T0	NoRel	true	departing	found
+Relation	T9	T21	NoRel	true	found	carried out

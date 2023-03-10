@@ -1,0 +1,44 @@
+Text	31 Temmuz 2020 yerel saatle sabah 08.27 civarında , bir de Havilland DHC - 2 Beaver ile bir Piper PA - 12 Super Cruiser ; Alaska'daki Kenai Yarımadası üzerinde çarpıştı .	Beaver'da bulunan altı kişi de kaza anında öldü .	Beşi kaza sırasında öldü , altıncı kişi hastaneye götürülürken yaralarından dolayı öldü .	Soldotna Aircraft & Equipment Leasing LLC'den kiralanarak High Adventure Air Charter tarafından işletilen 64 yaşındaki Beaver Longmere Gölü'nden Cook Inlet'e gidiyordu .	Kategori : 2020'de havacılık kazaları ve olayları Kategori : Temmuz 2020'de olaylar Kategori : Amerika Birleşik Devletleri'ndeki havacılık kazaları ve olayları Kategori : Hava aracı çarpışmaları
+Event	T0	çarpıştı	EVENT	160
+Event	T1	kaza	EVENT	202
+Event	T2	öldü	EVENT	214
+Event	T3	kaza	EVENT	226
+Event	T4	öldü	EVENT	241
+Event	T5	öldü	EVENT	304
+Event	T6	işletilen	EVENT	407
+Event	T7	gidiyordu	EVENT	469
+Event	T11	yaralarından	EVENT	284
+Event	T8	çarpışmaları	EVENT	663
+Relation	T1	T2	CauseEffect	true	kaza	öldü
+Relation	T2	T1	EffectCause	true	öldü	kaza
+Relation	T3	T4	CauseEffect	true	kaza	öldü
+Relation	T4	T3	EffectCause	true	öldü	kaza
+Relation	T1	T4	CauseEffect	true	kaza	öldü
+Relation	T4	T1	EffectCause	true	öldü	kaza
+Relation	T1	T11	CauseEffect	true	kaza	yaralarından
+Relation	T11	T1	EffectCause	true	yaralarından	kaza
+Relation	T3	T11	CauseEffect	true	kaza	yaralarından
+Relation	T11	T3	EffectCause	true	yaralarından	kaza
+Relation	T11	T5	CauseEffect	true	yaralarından	öldü
+Relation	T5	T11	EffectCause	true	öldü	yaralarından
+Relation	T0	T2	NoRel	true	çarpıştı	öldü
+Relation	T0	T4	NoRel	true	çarpıştı	öldü
+Relation	T1	T7	NoRel	true	kaza	gidiyordu
+Relation	T1	T8	NoRel	true	kaza	çarpışmaları
+Relation	T11	T0	NoRel	true	yaralarından	çarpıştı
+Relation	T11	T6	NoRel	true	yaralarından	işletilen
+Relation	T2	T11	NoRel	true	öldü	yaralarından
+Relation	T3	T5	NoRel	true	kaza	öldü
+Relation	T3	T7	NoRel	true	kaza	gidiyordu
+Relation	T3	T8	NoRel	true	kaza	çarpışmaları
+Relation	T4	T0	NoRel	true	öldü	çarpıştı
+Relation	T4	T11	NoRel	true	öldü	yaralarından
+Relation	T4	T8	NoRel	true	öldü	çarpışmaları
+Relation	T5	T4	NoRel	true	öldü	öldü
+Relation	T6	T0	NoRel	true	işletilen	çarpıştı
+Relation	T6	T1	NoRel	true	işletilen	kaza
+Relation	T6	T5	NoRel	true	işletilen	öldü
+Relation	T7	T2	NoRel	true	gidiyordu	öldü
+Relation	T7	T8	NoRel	true	gidiyordu	çarpışmaları
+Relation	T8	T5	NoRel	true	çarpışmaları	öldü
+Relation	T8	T7	NoRel	true	çarpışmaları	gidiyordu

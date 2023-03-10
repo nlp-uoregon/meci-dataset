@@ -1,0 +1,46 @@
+Text	İşçi konseylerini ağırlıklı olarak orta sınıf “ temsil ediyordu ” .	Kongre tüm yasama ve yürütme yetkilerini Halk Temsilcileri Konseyine devretti .	Seçtiği merkez konseyin görevi ise Halk Temsilcileri Konseyi denetlemekti .	Bu durumu olumsuz karşılayan USPD merkez konseyden çekildi .	Berlin’de savaş sırasında donanmaya alınan işçilerin oluşturduğu Halk Donanma Birliği’nin ( _ Volksmarinedivision _ ) SPD’nin işçi ve asker konseylerin etkisizleştirme politikası çerçevesinde maaşları kesilince 23 Aralık’ta şehir kumandanı Otto Wels’i esir alarak şehir sarayına kapandılar .
+Event	T0	devretti	EVENT	137
+Event	T1	Seçtiği	EVENT	148
+Event	T2	çekildi	EVENT	275
+Event	T3	savaş	EVENT	295
+Event	T4	alınan	EVENT	321
+Event	T5	kesilince	EVENT	486
+Event	T6	kapandılar	EVENT	564
+Event	T7	karşılayan	EVENT	242
+Event	T8	politikası	EVENT	453
+Event	T9	alarak	EVENT	542
+Relation	T7	T2	CauseEffect	true	karşılayan	çekildi
+Relation	T2	T7	EffectCause	true	çekildi	karşılayan
+Relation	T3	T4	CauseEffect	true	savaş	alınan
+Relation	T4	T3	EffectCause	true	alınan	savaş
+Relation	T8	T5	CauseEffect	true	politikası	kesilince
+Relation	T5	T8	EffectCause	true	kesilince	politikası
+Relation	T5	T9	CauseEffect	true	kesilince	alarak
+Relation	T9	T5	EffectCause	true	alarak	kesilince
+Relation	T9	T6	CauseEffect	true	alarak	kapandılar
+Relation	T6	T9	EffectCause	true	kapandılar	alarak
+Relation	T0	T2	NoRel	true	devretti	çekildi
+Relation	T0	T5	NoRel	true	devretti	kesilince
+Relation	T0	T7	NoRel	true	devretti	karşılayan
+Relation	T1	T3	NoRel	true	Seçtiği	savaş
+Relation	T1	T4	NoRel	true	Seçtiği	alınan
+Relation	T1	T9	NoRel	true	Seçtiği	alarak
+Relation	T2	T0	NoRel	true	çekildi	devretti
+Relation	T2	T1	NoRel	true	çekildi	Seçtiği
+Relation	T2	T4	NoRel	true	çekildi	alınan
+Relation	T3	T0	NoRel	true	savaş	devretti
+Relation	T3	T1	NoRel	true	savaş	Seçtiği
+Relation	T3	T2	NoRel	true	savaş	çekildi
+Relation	T3	T7	NoRel	true	savaş	karşılayan
+Relation	T3	T9	NoRel	true	savaş	alarak
+Relation	T4	T2	NoRel	true	alınan	çekildi
+Relation	T4	T9	NoRel	true	alınan	alarak
+Relation	T5	T6	NoRel	true	kesilince	kapandılar
+Relation	T5	T7	NoRel	true	kesilince	karşılayan
+Relation	T6	T1	NoRel	true	kapandılar	Seçtiği
+Relation	T6	T2	NoRel	true	kapandılar	çekildi
+Relation	T6	T7	NoRel	true	kapandılar	karşılayan
+Relation	T8	T4	NoRel	true	politikası	alınan
+Relation	T8	T6	NoRel	true	politikası	kapandılar
+Relation	T9	T0	NoRel	true	alarak	devretti
+Relation	T9	T2	NoRel	true	alarak	çekildi

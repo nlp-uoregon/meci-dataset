@@ -1,0 +1,45 @@
+Text	لہذا انڈونیشیا اور ایتھوپیا میں دو واقعات ، کئی کمپنیوں اور ممالک جنھوں نے طیارے کا استعمال کرتے ہوئے اسے منع کیا .	12 مارچ کو کمپنی ، 2019 میں چین اور انڈونیشیا ، میں تمام کمپنیوں میں شامل ہیں ایرولیناس ارجنٹیناس ، Yrvmkzykv ، کیمین ایئر_ویز ، حبشی ایئر لائنز ، ڈاج ایئر نقل و حمل ، میات Mvngvlyn ایئر لائنز ، مراکش کے رائل ایئر لائنز ، اور کیمرائر ( جنوبی افریقہ ) .	کیا گیا ہے	اس کے علاوہ ، ایتھوپیا کے ہوائی اڈے کے واقعے کے بعد ، امریکہ کے صدر ، ٹرمپ اور بڑے پیمانے پر احتجاج کے بعد ، امریکی کانگریس کے دباؤ کے تحت ، اس واقعہ کو صاف کرنے تک بوئنگ سے امریکہ کے تمام پروازوں کو معطل کرنے کا حکم دیا .	ان واقعات کے بعد ، ایرانی سول ایوی ایشن آرگنائزیشن نے آسمان سے تمام ایرانی طیاروں پر پابندی لگا دی ہے .
+Event	T0	واقعات	EVENT	35
+Event	T1	استعمال	EVENT	84
+Event	T2	گیا	EVENT	373
+Event	T3	واقعے	EVENT	419
+Event	T4	احتجاج	EVENT	473
+Event	T5	دباؤ	EVENT	507
+Event	T6	واقعہ	EVENT	524
+Event	T7	دیا	EVENT	597
+Event	T8	واقعات	EVENT	606
+Event	T9	دی	EVENT	699
+Relation	T0	T1	CauseEffect	true	واقعات	استعمال
+Relation	T1	T0	EffectCause	true	استعمال	واقعات
+Relation	T3	T4	CauseEffect	true	واقعے	احتجاج
+Relation	T4	T3	EffectCause	true	احتجاج	واقعے
+Relation	T4	T5	CauseEffect	true	احتجاج	دباؤ
+Relation	T5	T4	EffectCause	true	دباؤ	احتجاج
+Relation	T5	T7	CauseEffect	true	دباؤ	دیا
+Relation	T7	T5	EffectCause	true	دیا	دباؤ
+Relation	T8	T9	CauseEffect	true	واقعات	دی
+Relation	T9	T8	EffectCause	true	دی	واقعات
+Relation	T0	T7	NoRel	true	واقعات	دیا
+Relation	T1	T6	NoRel	true	استعمال	واقعہ
+Relation	T1	T7	NoRel	true	استعمال	دیا
+Relation	T1	T8	NoRel	true	استعمال	واقعات
+Relation	T1	T9	NoRel	true	استعمال	دی
+Relation	T2	T0	NoRel	true	گیا	واقعات
+Relation	T2	T8	NoRel	true	گیا	واقعات
+Relation	T2	T9	NoRel	true	گیا	دی
+Relation	T3	T8	NoRel	true	واقعے	واقعات
+Relation	T4	T1	NoRel	true	احتجاج	استعمال
+Relation	T4	T6	NoRel	true	احتجاج	واقعہ
+Relation	T4	T7	NoRel	true	احتجاج	دیا
+Relation	T4	T8	NoRel	true	احتجاج	واقعات
+Relation	T5	T0	NoRel	true	دباؤ	واقعات
+Relation	T5	T1	NoRel	true	دباؤ	استعمال
+Relation	T6	T1	NoRel	true	واقعہ	استعمال
+Relation	T6	T8	NoRel	true	واقعہ	واقعات
+Relation	T7	T2	NoRel	true	دیا	گیا
+Relation	T7	T6	NoRel	true	دیا	واقعہ
+Relation	T8	T2	NoRel	true	واقعات	گیا
+Relation	T8	T7	NoRel	true	واقعات	دیا
+Relation	T9	T0	NoRel	true	دی	واقعات
+Relation	T9	T1	NoRel	true	دی	استعمال
+Relation	T9	T3	NoRel	true	دی	واقعے

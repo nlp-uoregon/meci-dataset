@@ -1,0 +1,239 @@
+Text	thumb|	En sporvognskonduktør i Seattle i 1918 nægter passagerer adgang , fordi de ikke har maske på .	Den spanske syge smittede som alle influenzatyper gennem dråber , aerosoler , fra nys , hoste etc. , men var særligt tilbøjelig til at fremkalde ondartet lungebetændelse med blødning i lungevævet , svær åndenød , ophostning af blodig slim og endelig svigt af lungefunktionen , så de syge på grund af lav iltmætning i blodet i slutstadiet fik en mørkeblå til sort kulør .	Der fandtes ingen helbredende behandling , hverken for virusinfektionen eller den komplicerede lungebetændelse .	Der blev alene givet generelle antibakterielle midler og - for at dæmpe symptomerne - febernedsættende , hostestillende , smertestillende , beroligende og alment stimulerende medicin .
+Event	T0	nægter	EVENT	46
+Event	T1	smittede	EVENT	119
+Event	T2	hoste	EVENT	190
+Event	T3	blødning	EVENT	276
+Event	T4	åndenød	EVENT	305
+Event	T5	ophostning	EVENT	315
+Event	T6	svigt	EVENT	352
+Event	T7	fik	EVENT	440
+Event	T8	fandtes	EVENT	477
+Event	T9	behandling	EVENT	503
+Event	T10	givet	EVENT	601
+Event	T11	dæmpe	EVENT	652
+Event	T12	spanske syge	EVENT	106
+Event	T13	nys	EVENT	184
+Event	T14	lungebetændelse	EVENT	256
+Event	T15	syge	EVENT	385
+Event	T16	lav iltmætning	EVENT	402
+Event	T17	virusinfektionen	EVENT	528
+Event	T18	lungebetændelse	EVENT	568
+Event	T19	febernedsættende	EVENT	672
+Event	T20	hostestillende	EVENT	691
+Event	T21	smertestillende	EVENT	708
+Event	T22	beroligende	EVENT	726
+Event	T23	stimulerende	EVENT	748
+Event	T24	har	EVENT	87
+Event	T25	fremkalde	EVENT	237
+Relation	T24	T0	CauseEffect	true	har	nægter
+Relation	T0	T24	EffectCause	true	nægter	har
+Relation	T13	T1	CauseEffect	true	nys	smittede
+Relation	T1	T13	EffectCause	true	smittede	nys
+Relation	T12	T25	CauseEffect	true	spanske syge	fremkalde
+Relation	T25	T12	EffectCause	true	fremkalde	spanske syge
+Relation	T16	T7	CauseEffect	true	lav iltmætning	fik
+Relation	T7	T16	EffectCause	true	fik	lav iltmætning
+Relation	T8	T10	CauseEffect	true	fandtes	givet
+Relation	T10	T8	EffectCause	true	givet	fandtes
+Relation	T0	T12	NoRel	true	nægter	spanske syge
+Relation	T0	T15	NoRel	true	nægter	syge
+Relation	T0	T20	NoRel	true	nægter	hostestillende
+Relation	T0	T23	NoRel	true	nægter	stimulerende
+Relation	T0	T25	NoRel	true	nægter	fremkalde
+Relation	T0	T5	NoRel	true	nægter	ophostning
+Relation	T0	T9	NoRel	true	nægter	behandling
+Relation	T1	T12	NoRel	true	smittede	spanske syge
+Relation	T1	T2	NoRel	true	smittede	hoste
+Relation	T1	T23	NoRel	true	smittede	stimulerende
+Relation	T1	T25	NoRel	true	smittede	fremkalde
+Relation	T1	T4	NoRel	true	smittede	åndenød
+Relation	T1	T5	NoRel	true	smittede	ophostning
+Relation	T1	T6	NoRel	true	smittede	svigt
+Relation	T1	T9	NoRel	true	smittede	behandling
+Relation	T10	T12	NoRel	true	givet	spanske syge
+Relation	T10	T13	NoRel	true	givet	nys
+Relation	T10	T14	NoRel	true	givet	lungebetændelse
+Relation	T10	T17	NoRel	true	givet	virusinfektionen
+Relation	T10	T18	NoRel	true	givet	lungebetændelse
+Relation	T10	T19	NoRel	true	givet	febernedsættende
+Relation	T10	T23	NoRel	true	givet	stimulerende
+Relation	T10	T24	NoRel	true	givet	har
+Relation	T10	T3	NoRel	true	givet	blødning
+Relation	T10	T4	NoRel	true	givet	åndenød
+Relation	T10	T9	NoRel	true	givet	behandling
+Relation	T11	T1	NoRel	true	dæmpe	smittede
+Relation	T11	T10	NoRel	true	dæmpe	givet
+Relation	T11	T19	NoRel	true	dæmpe	febernedsættende
+Relation	T11	T2	NoRel	true	dæmpe	hoste
+Relation	T11	T21	NoRel	true	dæmpe	smertestillende
+Relation	T11	T24	NoRel	true	dæmpe	har
+Relation	T11	T25	NoRel	true	dæmpe	fremkalde
+Relation	T11	T4	NoRel	true	dæmpe	åndenød
+Relation	T11	T5	NoRel	true	dæmpe	ophostning
+Relation	T12	T11	NoRel	true	spanske syge	dæmpe
+Relation	T12	T16	NoRel	true	spanske syge	lav iltmætning
+Relation	T12	T19	NoRel	true	spanske syge	febernedsættende
+Relation	T12	T20	NoRel	true	spanske syge	hostestillende
+Relation	T12	T21	NoRel	true	spanske syge	smertestillende
+Relation	T12	T22	NoRel	true	spanske syge	beroligende
+Relation	T12	T3	NoRel	true	spanske syge	blødning
+Relation	T12	T5	NoRel	true	spanske syge	ophostning
+Relation	T12	T7	NoRel	true	spanske syge	fik
+Relation	T12	T8	NoRel	true	spanske syge	fandtes
+Relation	T12	T9	NoRel	true	spanske syge	behandling
+Relation	T13	T10	NoRel	true	nys	givet
+Relation	T13	T22	NoRel	true	nys	beroligende
+Relation	T13	T23	NoRel	true	nys	stimulerende
+Relation	T13	T24	NoRel	true	nys	har
+Relation	T13	T3	NoRel	true	nys	blødning
+Relation	T13	T8	NoRel	true	nys	fandtes
+Relation	T14	T17	NoRel	true	lungebetændelse	virusinfektionen
+Relation	T14	T19	NoRel	true	lungebetændelse	febernedsættende
+Relation	T14	T2	NoRel	true	lungebetændelse	hoste
+Relation	T14	T20	NoRel	true	lungebetændelse	hostestillende
+Relation	T14	T22	NoRel	true	lungebetændelse	beroligende
+Relation	T14	T25	NoRel	true	lungebetændelse	fremkalde
+Relation	T14	T3	NoRel	true	lungebetændelse	blødning
+Relation	T14	T4	NoRel	true	lungebetændelse	åndenød
+Relation	T14	T5	NoRel	true	lungebetændelse	ophostning
+Relation	T14	T6	NoRel	true	lungebetændelse	svigt
+Relation	T14	T8	NoRel	true	lungebetændelse	fandtes
+Relation	T15	T13	NoRel	true	syge	nys
+Relation	T15	T21	NoRel	true	syge	smertestillende
+Relation	T15	T5	NoRel	true	syge	ophostning
+Relation	T16	T0	NoRel	true	lav iltmætning	nægter
+Relation	T16	T12	NoRel	true	lav iltmætning	spanske syge
+Relation	T16	T14	NoRel	true	lav iltmætning	lungebetændelse
+Relation	T16	T17	NoRel	true	lav iltmætning	virusinfektionen
+Relation	T16	T18	NoRel	true	lav iltmætning	lungebetændelse
+Relation	T16	T19	NoRel	true	lav iltmætning	febernedsættende
+Relation	T16	T2	NoRel	true	lav iltmætning	hoste
+Relation	T16	T21	NoRel	true	lav iltmætning	smertestillende
+Relation	T16	T22	NoRel	true	lav iltmætning	beroligende
+Relation	T16	T5	NoRel	true	lav iltmætning	ophostning
+Relation	T17	T12	NoRel	true	virusinfektionen	spanske syge
+Relation	T17	T13	NoRel	true	virusinfektionen	nys
+Relation	T17	T14	NoRel	true	virusinfektionen	lungebetændelse
+Relation	T17	T19	NoRel	true	virusinfektionen	febernedsættende
+Relation	T17	T2	NoRel	true	virusinfektionen	hoste
+Relation	T17	T20	NoRel	true	virusinfektionen	hostestillende
+Relation	T17	T22	NoRel	true	virusinfektionen	beroligende
+Relation	T17	T25	NoRel	true	virusinfektionen	fremkalde
+Relation	T17	T8	NoRel	true	virusinfektionen	fandtes
+Relation	T18	T0	NoRel	true	lungebetændelse	nægter
+Relation	T18	T11	NoRel	true	lungebetændelse	dæmpe
+Relation	T18	T14	NoRel	true	lungebetændelse	lungebetændelse
+Relation	T18	T24	NoRel	true	lungebetændelse	har
+Relation	T18	T25	NoRel	true	lungebetændelse	fremkalde
+Relation	T18	T5	NoRel	true	lungebetændelse	ophostning
+Relation	T18	T8	NoRel	true	lungebetændelse	fandtes
+Relation	T19	T11	NoRel	true	febernedsættende	dæmpe
+Relation	T19	T12	NoRel	true	febernedsættende	spanske syge
+Relation	T19	T13	NoRel	true	febernedsættende	nys
+Relation	T19	T2	NoRel	true	febernedsættende	hoste
+Relation	T19	T20	NoRel	true	febernedsættende	hostestillende
+Relation	T19	T5	NoRel	true	febernedsættende	ophostning
+Relation	T19	T8	NoRel	true	febernedsættende	fandtes
+Relation	T2	T10	NoRel	true	hoste	givet
+Relation	T2	T12	NoRel	true	hoste	spanske syge
+Relation	T2	T14	NoRel	true	hoste	lungebetændelse
+Relation	T2	T19	NoRel	true	hoste	febernedsættende
+Relation	T2	T24	NoRel	true	hoste	har
+Relation	T2	T4	NoRel	true	hoste	åndenød
+Relation	T2	T8	NoRel	true	hoste	fandtes
+Relation	T20	T1	NoRel	true	hostestillende	smittede
+Relation	T20	T10	NoRel	true	hostestillende	givet
+Relation	T20	T16	NoRel	true	hostestillende	lav iltmætning
+Relation	T20	T19	NoRel	true	hostestillende	febernedsættende
+Relation	T20	T22	NoRel	true	hostestillende	beroligende
+Relation	T20	T24	NoRel	true	hostestillende	har
+Relation	T20	T25	NoRel	true	hostestillende	fremkalde
+Relation	T20	T7	NoRel	true	hostestillende	fik
+Relation	T21	T0	NoRel	true	smertestillende	nægter
+Relation	T21	T10	NoRel	true	smertestillende	givet
+Relation	T21	T11	NoRel	true	smertestillende	dæmpe
+Relation	T21	T13	NoRel	true	smertestillende	nys
+Relation	T21	T14	NoRel	true	smertestillende	lungebetændelse
+Relation	T21	T2	NoRel	true	smertestillende	hoste
+Relation	T21	T22	NoRel	true	smertestillende	beroligende
+Relation	T21	T24	NoRel	true	smertestillende	har
+Relation	T21	T3	NoRel	true	smertestillende	blødning
+Relation	T22	T16	NoRel	true	beroligende	lav iltmætning
+Relation	T22	T17	NoRel	true	beroligende	virusinfektionen
+Relation	T22	T19	NoRel	true	beroligende	febernedsættende
+Relation	T22	T24	NoRel	true	beroligende	har
+Relation	T22	T25	NoRel	true	beroligende	fremkalde
+Relation	T22	T3	NoRel	true	beroligende	blødning
+Relation	T22	T9	NoRel	true	beroligende	behandling
+Relation	T23	T1	NoRel	true	stimulerende	smittede
+Relation	T23	T16	NoRel	true	stimulerende	lav iltmætning
+Relation	T23	T18	NoRel	true	stimulerende	lungebetændelse
+Relation	T23	T19	NoRel	true	stimulerende	febernedsættende
+Relation	T23	T2	NoRel	true	stimulerende	hoste
+Relation	T23	T25	NoRel	true	stimulerende	fremkalde
+Relation	T23	T3	NoRel	true	stimulerende	blødning
+Relation	T23	T8	NoRel	true	stimulerende	fandtes
+Relation	T23	T9	NoRel	true	stimulerende	behandling
+Relation	T24	T12	NoRel	true	har	spanske syge
+Relation	T24	T16	NoRel	true	har	lav iltmætning
+Relation	T24	T17	NoRel	true	har	virusinfektionen
+Relation	T24	T19	NoRel	true	har	febernedsættende
+Relation	T24	T2	NoRel	true	har	hoste
+Relation	T24	T20	NoRel	true	har	hostestillende
+Relation	T24	T4	NoRel	true	har	åndenød
+Relation	T25	T10	NoRel	true	fremkalde	givet
+Relation	T25	T16	NoRel	true	fremkalde	lav iltmætning
+Relation	T25	T17	NoRel	true	fremkalde	virusinfektionen
+Relation	T25	T18	NoRel	true	fremkalde	lungebetændelse
+Relation	T25	T22	NoRel	true	fremkalde	beroligende
+Relation	T25	T6	NoRel	true	fremkalde	svigt
+Relation	T25	T9	NoRel	true	fremkalde	behandling
+Relation	T3	T10	NoRel	true	blødning	givet
+Relation	T3	T11	NoRel	true	blødning	dæmpe
+Relation	T3	T17	NoRel	true	blødning	virusinfektionen
+Relation	T3	T20	NoRel	true	blødning	hostestillende
+Relation	T3	T21	NoRel	true	blødning	smertestillende
+Relation	T3	T25	NoRel	true	blødning	fremkalde
+Relation	T3	T5	NoRel	true	blødning	ophostning
+Relation	T4	T10	NoRel	true	åndenød	givet
+Relation	T4	T12	NoRel	true	åndenød	spanske syge
+Relation	T4	T13	NoRel	true	åndenød	nys
+Relation	T4	T14	NoRel	true	åndenød	lungebetændelse
+Relation	T4	T2	NoRel	true	åndenød	hoste
+Relation	T4	T20	NoRel	true	åndenød	hostestillende
+Relation	T4	T24	NoRel	true	åndenød	har
+Relation	T4	T5	NoRel	true	åndenød	ophostning
+Relation	T5	T1	NoRel	true	ophostning	smittede
+Relation	T5	T12	NoRel	true	ophostning	spanske syge
+Relation	T5	T17	NoRel	true	ophostning	virusinfektionen
+Relation	T5	T19	NoRel	true	ophostning	febernedsættende
+Relation	T5	T2	NoRel	true	ophostning	hoste
+Relation	T5	T22	NoRel	true	ophostning	beroligende
+Relation	T5	T25	NoRel	true	ophostning	fremkalde
+Relation	T5	T7	NoRel	true	ophostning	fik
+Relation	T6	T0	NoRel	true	svigt	nægter
+Relation	T6	T10	NoRel	true	svigt	givet
+Relation	T6	T11	NoRel	true	svigt	dæmpe
+Relation	T6	T14	NoRel	true	svigt	lungebetændelse
+Relation	T6	T4	NoRel	true	svigt	åndenød
+Relation	T6	T5	NoRel	true	svigt	ophostning
+Relation	T6	T7	NoRel	true	svigt	fik
+Relation	T7	T0	NoRel	true	fik	nægter
+Relation	T7	T1	NoRel	true	fik	smittede
+Relation	T7	T11	NoRel	true	fik	dæmpe
+Relation	T7	T14	NoRel	true	fik	lungebetændelse
+Relation	T7	T24	NoRel	true	fik	har
+Relation	T7	T4	NoRel	true	fik	åndenød
+Relation	T8	T11	NoRel	true	fandtes	dæmpe
+Relation	T8	T14	NoRel	true	fandtes	lungebetændelse
+Relation	T8	T16	NoRel	true	fandtes	lav iltmætning
+Relation	T8	T25	NoRel	true	fandtes	fremkalde
+Relation	T8	T5	NoRel	true	fandtes	ophostning
+Relation	T9	T10	NoRel	true	behandling	givet
+Relation	T9	T11	NoRel	true	behandling	dæmpe
+Relation	T9	T12	NoRel	true	behandling	spanske syge
+Relation	T9	T18	NoRel	true	behandling	lungebetændelse
+Relation	T9	T20	NoRel	true	behandling	hostestillende
+Relation	T9	T21	NoRel	true	behandling	smertestillende
+Relation	T9	T22	NoRel	true	behandling	beroligende
+Relation	T9	T7	NoRel	true	behandling	fik

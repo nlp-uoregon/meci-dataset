@@ -1,0 +1,56 @@
+Text	thumb| 300 px | Kanonslag under eksplosion	Et KANONSLAG er en kraftig pap/papirbeholder med krudt .	Det er cirka 10 til 15 centimeter langt , ofte sort og har en cirka 4 til 5 centimeter lang lunte .	Når kanonslaget antændes , brænder krudtet inde i røret , og det kraftige tryk får beholderen til at eksplodere .	Der lyder et meget højt knald , som når en kanon affyres .
+Event	T0	antændes	EVENT	216
+Event	T1	får	EVENT	279
+Event	T2	eksplodere	EVENT	301
+Event	T3	lyder	EVENT	318
+Event	T4	knald	EVENT	338
+Event	T5	affyres	EVENT	363
+Event	T6	Kanonslag	EVENT	16
+Event	T7	eksplosion	EVENT	32
+Event	T8	KANONSLAG	EVENT	46
+Event	T9	kanonslaget	EVENT	204
+Event	T10	brænder	EVENT	227
+Event	T11	tryk	EVENT	274
+Relation	T11	T2	CauseEffect	true	tryk	eksplodere
+Relation	T2	T11	EffectCause	true	eksplodere	tryk
+Relation	T0	T10	CauseEffect	true	antændes	brænder
+Relation	T10	T0	EffectCause	true	brænder	antændes
+Relation	T2	T4	CauseEffect	true	eksplodere	knald
+Relation	T4	T2	EffectCause	true	knald	eksplodere
+Relation	T0	T11	NoRel	true	antændes	tryk
+Relation	T0	T3	NoRel	true	antændes	lyder
+Relation	T0	T5	NoRel	true	antændes	affyres
+Relation	T0	T7	NoRel	true	antændes	eksplosion
+Relation	T0	T8	NoRel	true	antændes	KANONSLAG
+Relation	T0	T9	NoRel	true	antændes	kanonslaget
+Relation	T1	T2	NoRel	true	får	eksplodere
+Relation	T10	T2	NoRel	true	brænder	eksplodere
+Relation	T10	T6	NoRel	true	brænder	Kanonslag
+Relation	T11	T0	NoRel	true	tryk	antændes
+Relation	T11	T7	NoRel	true	tryk	eksplosion
+Relation	T2	T6	NoRel	true	eksplodere	Kanonslag
+Relation	T2	T8	NoRel	true	eksplodere	KANONSLAG
+Relation	T2	T9	NoRel	true	eksplodere	kanonslaget
+Relation	T3	T5	NoRel	true	lyder	affyres
+Relation	T3	T8	NoRel	true	lyder	KANONSLAG
+Relation	T4	T0	NoRel	true	knald	antændes
+Relation	T4	T8	NoRel	true	knald	KANONSLAG
+Relation	T5	T0	NoRel	true	affyres	antændes
+Relation	T5	T1	NoRel	true	affyres	får
+Relation	T5	T10	NoRel	true	affyres	brænder
+Relation	T5	T3	NoRel	true	affyres	lyder
+Relation	T5	T6	NoRel	true	affyres	Kanonslag
+Relation	T6	T10	NoRel	true	Kanonslag	brænder
+Relation	T6	T4	NoRel	true	Kanonslag	knald
+Relation	T6	T5	NoRel	true	Kanonslag	affyres
+Relation	T6	T7	NoRel	true	Kanonslag	eksplosion
+Relation	T7	T0	NoRel	true	eksplosion	antændes
+Relation	T7	T10	NoRel	true	eksplosion	brænder
+Relation	T7	T3	NoRel	true	eksplosion	lyder
+Relation	T7	T8	NoRel	true	eksplosion	KANONSLAG
+Relation	T8	T3	NoRel	true	KANONSLAG	lyder
+Relation	T8	T4	NoRel	true	KANONSLAG	knald
+Relation	T8	T9	NoRel	true	KANONSLAG	kanonslaget
+Relation	T9	T1	NoRel	true	kanonslaget	får
+Relation	T9	T6	NoRel	true	kanonslaget	Kanonslag
+Relation	T9	T7	NoRel	true	kanonslaget	eksplosion

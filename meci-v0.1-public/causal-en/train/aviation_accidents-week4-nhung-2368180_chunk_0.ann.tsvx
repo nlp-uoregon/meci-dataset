@@ -1,0 +1,75 @@
+Text	DELMART " MIKE " VREELAND ( born March 20 , 1966 in Mason , Michigan ) became notable for claiming to predict the events of September 11 , 2001 .	Vreeland , wanted by police in eight Michigan jurisdictions for the crimes of fraud and burglary was arrested in Iowa 's Franklin County on October 20 , 2004 .	According to Sheriff 's Deputies , Vreeland ran an identity theft ring in the Detroit area for a few years and had felony convictions for breaking and entering and receiving stolen property .	Shortly after the September 11 attacks , Vreeland apparently claimed that he wrote a note that foreshadowed those events while he was in prison .	Vreeland is reported to be a folk hero among conspiracy theorists who believe he is a spy for the Office of Naval Intelligence .
+Event	T0	claiming	EVENT	90
+Event	T1	predict	EVENT	102
+Event	T2	events	EVENT	114
+Event	T3	wanted	EVENT	157
+Event	T4	crimes	EVENT	214
+Event	T5	fraud	EVENT	224
+Event	T6	burglary	EVENT	234
+Event	T7	arrested	EVENT	247
+Event	T8	ran	EVENT	350
+Event	T9	ring	EVENT	372
+Event	T10	convictions	EVENT	428
+Event	T11	breaking	EVENT	444
+Event	T12	entering	EVENT	457
+Event	T13	stolen	EVENT	480
+Event	T14	attacks	EVENT	529
+Event	T15	claimed	EVENT	559
+Event	T16	wrote	EVENT	575
+Event	T17	foreshadowed	EVENT	593
+Event	T18	events	EVENT	612
+Event	T19	reported	EVENT	656
+Event	T20	believe	EVENT	714
+Relation	T4	T3	CauseEffect	true	crimes	wanted
+Relation	T3	T4	EffectCause	true	wanted	crimes
+Relation	T6	T3	CauseEffect	true	burglary	wanted
+Relation	T3	T6	EffectCause	true	wanted	burglary
+Relation	T11	T10	CauseEffect	true	breaking	convictions
+Relation	T10	T11	EffectCause	true	convictions	breaking
+Relation	T12	T10	CauseEffect	true	entering	convictions
+Relation	T10	T12	EffectCause	true	convictions	entering
+Relation	T13	T10	CauseEffect	true	stolen	convictions
+Relation	T10	T13	EffectCause	true	convictions	stolen
+Relation	T16	T17	CauseEffect	true	wrote	foreshadowed
+Relation	T17	T16	EffectCause	true	foreshadowed	wrote
+Relation	T0	T10	NoRel	true	claiming	convictions
+Relation	T0	T6	NoRel	true	claiming	burglary
+Relation	T0	T7	NoRel	true	claiming	arrested
+Relation	T1	T5	NoRel	true	predict	fraud
+Relation	T11	T16	NoRel	true	breaking	wrote
+Relation	T12	T18	NoRel	true	entering	events
+Relation	T13	T3	NoRel	true	stolen	wanted
+Relation	T14	T1	NoRel	true	attacks	predict
+Relation	T14	T19	NoRel	true	attacks	reported
+Relation	T14	T20	NoRel	true	attacks	believe
+Relation	T14	T3	NoRel	true	attacks	wanted
+Relation	T14	T5	NoRel	true	attacks	fraud
+Relation	T14	T7	NoRel	true	attacks	arrested
+Relation	T15	T1	NoRel	true	claimed	predict
+Relation	T16	T11	NoRel	true	wrote	breaking
+Relation	T16	T12	NoRel	true	wrote	entering
+Relation	T16	T15	NoRel	true	wrote	claimed
+Relation	T16	T9	NoRel	true	wrote	ring
+Relation	T17	T6	NoRel	true	foreshadowed	burglary
+Relation	T18	T19	NoRel	true	events	reported
+Relation	T18	T20	NoRel	true	events	believe
+Relation	T18	T8	NoRel	true	events	ran
+Relation	T19	T16	NoRel	true	reported	wrote
+Relation	T19	T2	NoRel	true	reported	events
+Relation	T20	T14	NoRel	true	believe	attacks
+Relation	T3	T10	NoRel	true	wanted	convictions
+Relation	T3	T14	NoRel	true	wanted	attacks
+Relation	T3	T5	NoRel	true	wanted	fraud
+Relation	T3	T8	NoRel	true	wanted	ran
+Relation	T4	T17	NoRel	true	crimes	foreshadowed
+Relation	T4	T18	NoRel	true	crimes	events
+Relation	T4	T2	NoRel	true	crimes	events
+Relation	T4	T5	NoRel	true	crimes	fraud
+Relation	T5	T1	NoRel	true	fraud	predict
+Relation	T5	T12	NoRel	true	fraud	entering
+Relation	T6	T15	NoRel	true	burglary	claimed
+Relation	T6	T19	NoRel	true	burglary	reported
+Relation	T7	T17	NoRel	true	arrested	foreshadowed
+Relation	T7	T2	NoRel	true	arrested	events
+Relation	T9	T18	NoRel	true	ring	events
+Relation	T9	T8	NoRel	true	ring	ran

@@ -1,0 +1,69 @@
+Text	Sebep , yük treninin bir tehlike sinyalinde geçmesi ve tuzak noktalarda iyi düşünülmüş şekilde raydan çıkması .	- 16 Ocak 2010 .	16 Ocak 2010 Cumartesi günü , Hindistan’ın kuzey eyaleti Utar Pradesh’de kalın bir sis içinde iki ekspres treninin ( The Kalindi Express ve Shram Shakti Express ) çarpışması sonucu üç kişi öldü ve yaklaşık bir düzine insan yaralandı .	Kaza Agra’dan 25 kilometre uzaklıktaki Tundla yakınında meydana geldiğinde , trenlerden birinin sürücüsü açıkça bir sinyale karşılık vermedi , trenini aynı hat üzerindeki diğer tren üzerine çarptırdı .	- 17 Ocak 2010. Pazar günü ikindi zamanı Barabanki bölgesi’nde isimsiz bir kavşakta bir tren arabalarına çarptığında iki kişi öldü ve diğer dört kişi ise yaralandı .
+Event	T0	geçmesi	EVENT	44
+Event	T1	çıkması	EVENT	102
+Event	T2	öldü	EVENT	318
+Event	T3	yaralandı	EVENT	352
+Event	T4	Kaza	EVENT	364
+Event	T6	vermedi	EVENT	497
+Event	T7	çarptırdı	EVENT	554
+Event	T8	çarptığında	EVENT	671
+Event	T9	öldü	EVENT	692
+Event	T10	yaralandı	EVENT	720
+Event	T11	sis	EVENT	212
+Event	T12	çarpışması	EVENT	292
+Relation	T0	T1	CauseEffect	true	geçmesi	çıkması
+Relation	T1	T0	EffectCause	true	çıkması	geçmesi
+Relation	T11	T12	CauseEffect	true	sis	çarpışması
+Relation	T12	T11	EffectCause	true	çarpışması	sis
+Relation	T12	T2	CauseEffect	true	çarpışması	öldü
+Relation	T2	T12	EffectCause	true	öldü	çarpışması
+Relation	T12	T3	CauseEffect	true	çarpışması	yaralandı
+Relation	T3	T12	EffectCause	true	yaralandı	çarpışması
+Relation	T6	T7	CauseEffect	true	vermedi	çarptırdı
+Relation	T7	T6	EffectCause	true	çarptırdı	vermedi
+Relation	T7	T4	CauseEffect	true	çarptırdı	Kaza
+Relation	T4	T7	EffectCause	true	Kaza	çarptırdı
+Relation	T8	T9	CauseEffect	true	çarptığında	öldü
+Relation	T9	T8	EffectCause	true	öldü	çarptığında
+Relation	T8	T10	CauseEffect	true	çarptığında	yaralandı
+Relation	T10	T8	EffectCause	true	yaralandı	çarptığında
+Relation	T0	T10	NoRel	true	geçmesi	yaralandı
+Relation	T0	T3	NoRel	true	geçmesi	yaralandı
+Relation	T0	T4	NoRel	true	geçmesi	Kaza
+Relation	T0	T6	NoRel	true	geçmesi	vermedi
+Relation	T0	T7	NoRel	true	geçmesi	çarptırdı
+Relation	T0	T8	NoRel	true	geçmesi	çarptığında
+Relation	T1	T3	NoRel	true	çıkması	yaralandı
+Relation	T1	T4	NoRel	true	çıkması	Kaza
+Relation	T10	T1	NoRel	true	yaralandı	çıkması
+Relation	T10	T2	NoRel	true	yaralandı	öldü
+Relation	T11	T0	NoRel	true	sis	geçmesi
+Relation	T11	T1	NoRel	true	sis	çıkması
+Relation	T11	T4	NoRel	true	sis	Kaza
+Relation	T11	T9	NoRel	true	sis	öldü
+Relation	T12	T10	NoRel	true	çarpışması	yaralandı
+Relation	T12	T4	NoRel	true	çarpışması	Kaza
+Relation	T2	T10	NoRel	true	öldü	yaralandı
+Relation	T2	T3	NoRel	true	öldü	yaralandı
+Relation	T2	T4	NoRel	true	öldü	Kaza
+Relation	T3	T4	NoRel	true	yaralandı	Kaza
+Relation	T3	T9	NoRel	true	yaralandı	öldü
+Relation	T4	T0	NoRel	true	Kaza	geçmesi
+Relation	T4	T3	NoRel	true	Kaza	yaralandı
+Relation	T4	T6	NoRel	true	Kaza	vermedi
+Relation	T4	T8	NoRel	true	Kaza	çarptığında
+Relation	T6	T1	NoRel	true	vermedi	çıkması
+Relation	T6	T12	NoRel	true	vermedi	çarpışması
+Relation	T6	T4	NoRel	true	vermedi	Kaza
+Relation	T6	T8	NoRel	true	vermedi	çarptığında
+Relation	T7	T1	NoRel	true	çarptırdı	çıkması
+Relation	T7	T10	NoRel	true	çarptırdı	yaralandı
+Relation	T7	T11	NoRel	true	çarptırdı	sis
+Relation	T7	T12	NoRel	true	çarptırdı	çarpışması
+Relation	T7	T2	NoRel	true	çarptırdı	öldü
+Relation	T8	T12	NoRel	true	çarptığında	çarpışması
+Relation	T8	T2	NoRel	true	çarptığında	öldü
+Relation	T8	T3	NoRel	true	çarptığında	yaralandı
+Relation	T8	T7	NoRel	true	çarptığında	çarptırdı
+Relation	T9	T1	NoRel	true	öldü	çıkması
+Relation	T9	T12	NoRel	true	öldü	çarpışması

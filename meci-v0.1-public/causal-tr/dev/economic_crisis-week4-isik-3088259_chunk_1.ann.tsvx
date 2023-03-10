@@ -1,0 +1,24 @@
+Text	Buna karşın açıklanan kararlar günümüzde devalüasyon olarak nitelendirilir .	1950'de iktidara gelen Demokrat Parti hükûmetleri ile birlikte Türk ekonomisi dışa açılarak dış kredilerle büyüme eğilimine girdi .	Üretim kapasitesi ithal ürünlere daha çok ihtiyaç duymaya başladı ve zamanla döviz sıkıntısının yaşanacağı bir süreç başladı .	1956'da hükûmet borçlarını ödeyemeyeceğini duyurdu ve borçların yeniden yapılandırılması şartıyla borç ertelemesi yapıldı .	Dünya Bankası , IMF gibi finans kuruluşlarından da beklenen kredilerin alınamaması nedeniyle hükûmet ilk olarak daha önce 1940'da Cumhuriyet Halk Partisi'nin çıkardığı Millî Korunma Kanunu'nu yeniden uygulamaya geçti .
+Event	T1	girdi	EVENT	201
+Event	T2	başladı	EVENT	326
+Event	T3	duyurdu	EVENT	379
+Event	T4	yapıldı	EVENT	450
+Event	T5	geçti	EVENT	671
+Event	T7	açılarak	EVENT	160
+Event	T8	başladı	EVENT	267
+Relation	T7	T1	CauseEffect	true	açılarak	girdi
+Relation	T1	T7	EffectCause	true	girdi	açılarak
+Relation	T8	T2	CauseEffect	true	başladı	başladı
+Relation	T2	T8	EffectCause	true	başladı	başladı
+Relation	T2	T3	CauseEffect	true	başladı	duyurdu
+Relation	T3	T2	EffectCause	true	duyurdu	başladı
+Relation	T1	T8	CauseEffect	true	girdi	başladı
+Relation	T8	T1	EffectCause	true	başladı	girdi
+Relation	T3	T4	CauseEffect	true	duyurdu	yapıldı
+Relation	T4	T3	EffectCause	true	yapıldı	duyurdu
+Relation	T2	T7	NoRel	true	başladı	açılarak
+Relation	T4	T5	NoRel	true	yapıldı	geçti
+Relation	T4	T7	NoRel	true	yapıldı	açılarak
+Relation	T7	T3	NoRel	true	açılarak	duyurdu
+Relation	T7	T5	NoRel	true	açılarak	geçti
+Relation	T8	T4	NoRel	true	başladı	yapıldı

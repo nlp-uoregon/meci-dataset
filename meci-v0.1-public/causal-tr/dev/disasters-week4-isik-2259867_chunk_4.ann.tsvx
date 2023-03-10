@@ -1,0 +1,84 @@
+Text	Deprem sonrası Kos Adası'nda iki kişi öldü , 300'den fazla kişi yaralandı .	Bodrum'da deprem sırasında elektrikler kesildi , eski binalarda ufak çatlaklar oluştu , Devlet Hastanesi hasar gördü ve hastane boşaltıldı .	Bir caminin minaresi zarara uğradı , yollarda çökmeler ve toprak kaymaları oldu .	Burada can kaybı olmazken , onlarca kişi deprem sırasında balkonlardan veya pencerelerden atlayıp hafif bir şekilde yaralandı .	Datça ve köylerinde ise 15 ev hasar gördü .
+Event	T0	öldü	EVENT	38
+Event	T1	yaralandı	EVENT	64
+Event	T2	deprem	EVENT	86
+Event	T3	kesildi	EVENT	115
+Event	T4	oluştu	EVENT	155
+Event	T5	gördü	EVENT	187
+Event	T6	boşaltıldı	EVENT	204
+Event	T7	uğradı	EVENT	245
+Event	T9	oldu	EVENT	292
+Event	T10	kaybı	EVENT	310
+Event	T11	deprem	EVENT	340
+Event	T12	yaralandı	EVENT	415
+Event	T13	gördü	EVENT	463
+Event	T14	Deprem	EVENT	0
+Relation	T14	T0	CauseEffect	true	Deprem	öldü
+Relation	T0	T14	EffectCause	true	öldü	Deprem
+Relation	T14	T1	CauseEffect	true	Deprem	yaralandı
+Relation	T1	T14	EffectCause	true	yaralandı	Deprem
+Relation	T14	T3	CauseEffect	true	Deprem	kesildi
+Relation	T3	T14	EffectCause	true	kesildi	Deprem
+Relation	T14	T4	CauseEffect	true	Deprem	oluştu
+Relation	T4	T14	EffectCause	true	oluştu	Deprem
+Relation	T14	T5	CauseEffect	true	Deprem	gördü
+Relation	T5	T14	EffectCause	true	gördü	Deprem
+Relation	T5	T6	CauseEffect	true	gördü	boşaltıldı
+Relation	T6	T5	EffectCause	true	boşaltıldı	gördü
+Relation	T14	T7	CauseEffect	true	Deprem	uğradı
+Relation	T7	T14	EffectCause	true	uğradı	Deprem
+Relation	T14	T9	CauseEffect	true	Deprem	oldu
+Relation	T9	T14	EffectCause	true	oldu	Deprem
+Relation	T14	T12	CauseEffect	true	Deprem	yaralandı
+Relation	T12	T14	EffectCause	true	yaralandı	Deprem
+Relation	T14	T13	CauseEffect	true	Deprem	gördü
+Relation	T13	T14	EffectCause	true	gördü	Deprem
+Relation	T0	T12	NoRel	true	öldü	yaralandı
+Relation	T0	T4	NoRel	true	öldü	oluştu
+Relation	T1	T0	NoRel	true	yaralandı	öldü
+Relation	T1	T11	NoRel	true	yaralandı	deprem
+Relation	T1	T12	NoRel	true	yaralandı	yaralandı
+Relation	T1	T4	NoRel	true	yaralandı	oluştu
+Relation	T1	T9	NoRel	true	yaralandı	oldu
+Relation	T10	T0	NoRel	true	kaybı	öldü
+Relation	T10	T12	NoRel	true	kaybı	yaralandı
+Relation	T10	T13	NoRel	true	kaybı	gördü
+Relation	T10	T4	NoRel	true	kaybı	oluştu
+Relation	T10	T5	NoRel	true	kaybı	gördü
+Relation	T10	T7	NoRel	true	kaybı	uğradı
+Relation	T10	T9	NoRel	true	kaybı	oldu
+Relation	T11	T1	NoRel	true	deprem	yaralandı
+Relation	T11	T13	NoRel	true	deprem	gördü
+Relation	T12	T1	NoRel	true	yaralandı	yaralandı
+Relation	T12	T10	NoRel	true	yaralandı	kaybı
+Relation	T12	T13	NoRel	true	yaralandı	gördü
+Relation	T12	T6	NoRel	true	yaralandı	boşaltıldı
+Relation	T12	T9	NoRel	true	yaralandı	oldu
+Relation	T13	T10	NoRel	true	gördü	kaybı
+Relation	T13	T2	NoRel	true	gördü	deprem
+Relation	T13	T4	NoRel	true	gördü	oluştu
+Relation	T13	T7	NoRel	true	gördü	uğradı
+Relation	T14	T10	NoRel	true	Deprem	kaybı
+Relation	T14	T2	NoRel	true	Deprem	deprem
+Relation	T14	T6	NoRel	true	Deprem	boşaltıldı
+Relation	T2	T12	NoRel	true	deprem	yaralandı
+Relation	T2	T13	NoRel	true	deprem	gördü
+Relation	T2	T14	NoRel	true	deprem	Deprem
+Relation	T2	T4	NoRel	true	deprem	oluştu
+Relation	T2	T6	NoRel	true	deprem	boşaltıldı
+Relation	T2	T7	NoRel	true	deprem	uğradı
+Relation	T3	T5	NoRel	true	kesildi	gördü
+Relation	T3	T7	NoRel	true	kesildi	uğradı
+Relation	T4	T2	NoRel	true	oluştu	deprem
+Relation	T5	T0	NoRel	true	gördü	öldü
+Relation	T6	T10	NoRel	true	boşaltıldı	kaybı
+Relation	T6	T12	NoRel	true	boşaltıldı	yaralandı
+Relation	T6	T9	NoRel	true	boşaltıldı	oldu
+Relation	T7	T0	NoRel	true	uğradı	öldü
+Relation	T7	T1	NoRel	true	uğradı	yaralandı
+Relation	T7	T12	NoRel	true	uğradı	yaralandı
+Relation	T7	T13	NoRel	true	uğradı	gördü
+Relation	T7	T6	NoRel	true	uğradı	boşaltıldı
+Relation	T9	T0	NoRel	true	oldu	öldü
+Relation	T9	T1	NoRel	true	oldu	yaralandı
+Relation	T9	T13	NoRel	true	oldu	gördü

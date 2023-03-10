@@ -1,0 +1,30 @@
+Text	STANLEY PRAIMNATH ( d. 1956 ) , Dünya Ticaret Merkezi'ne düzenlenen 11 Eylül saldırılarından sağ kurtulan Guyana asıllı Amerikalı bir bankacıdır .	Güney Kulesi'nin 81. katında Fuji Bank'te yönetici olarak çalıştı .	Uçağın çarptığı bölgede hayatta kalan yalnızca 18 kişiden biriydi .	Birinci uçağın Kuzey Kulesi'ne çarpmasından hemen sonra Praimnath , birkaç iş arkadaşı ile birlikte binayı terketmeye başladı .	Ancak daha sonradan güvenlik görevlileri tarafından binanın güvenli olduğu söylendi .
+Event	T0	düzenlenen	EVENT	57
+Event	T1	çalıştı	EVENT	205
+Event	T2	çarptığı	EVENT	222
+Event	T3	çarpmasından	EVENT	314
+Event	T4	söylendi	EVENT	486
+Event	T5	saldırılarından	EVENT	77
+Event	T6	hayatta kalan	EVENT	239
+Event	T7	terketmeye	EVENT	390
+Relation	T3	T7	CauseEffect	true	çarpmasından	terketmeye
+Relation	T7	T3	EffectCause	true	terketmeye	çarpmasından
+Relation	T2	T7	CauseEffect	true	çarptığı	terketmeye
+Relation	T7	T2	EffectCause	true	terketmeye	çarptığı
+Relation	T0	T1	NoRel	true	düzenlenen	çalıştı
+Relation	T0	T3	NoRel	true	düzenlenen	çarpmasından
+Relation	T0	T6	NoRel	true	düzenlenen	hayatta kalan
+Relation	T0	T7	NoRel	true	düzenlenen	terketmeye
+Relation	T1	T0	NoRel	true	çalıştı	düzenlenen
+Relation	T1	T6	NoRel	true	çalıştı	hayatta kalan
+Relation	T1	T7	NoRel	true	çalıştı	terketmeye
+Relation	T2	T1	NoRel	true	çarptığı	çalıştı
+Relation	T2	T5	NoRel	true	çarptığı	saldırılarından
+Relation	T3	T1	NoRel	true	çarpmasından	çalıştı
+Relation	T3	T4	NoRel	true	çarpmasından	söylendi
+Relation	T3	T5	NoRel	true	çarpmasından	saldırılarından
+Relation	T3	T6	NoRel	true	çarpmasından	hayatta kalan
+Relation	T5	T0	NoRel	true	saldırılarından	düzenlenen
+Relation	T5	T4	NoRel	true	saldırılarından	söylendi
+Relation	T7	T1	NoRel	true	terketmeye	çalıştı
+Relation	T7	T5	NoRel	true	terketmeye	saldırılarından

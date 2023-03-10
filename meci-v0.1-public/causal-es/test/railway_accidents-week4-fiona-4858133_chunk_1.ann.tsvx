@@ -1,0 +1,75 @@
+Text	Varios metros más adelante se encontraban la locomotora , que quedó tumbada sobre el terraplén , y varios vagones , uno de ellos quedó abierto al medio al chocar con la locomotora y los otros dos vagones quedaron descarrilados en forma de acordeón a varios metros de las vías , las cuales , también se produjeron daños .	Finalmente en la tragedia murieron 18 personas y 65 quedaron heridas , convirtiéndose en uno de los peores desastres en Argentina que involucran a un tren y a un vehículo de transporte automotor .	Los chóferes del ómnibus quedaron detenidos por homicidio con dolo eventual y lesiones graves , aunque al poco tiempo fueron puestos en libertad .	- http : / / edant. clarin. com / diario / 2008 / 03 /09 / um / m -01624698 .htm - https : / / web.archive.	org / web / 20160312163248 / http : / / puntal .
+Event	T0	tumbada	EVENT	68
+Event	T1	abierto	EVENT	135
+Event	T2	chocar	EVENT	155
+Event	T3	descarrilados	EVENT	213
+Event	T4	daños	EVENT	313
+Event	T5	murieron	EVENT	347
+Event	T6	heridas	EVENT	382
+Event	T7	desastres	EVENT	428
+Event	T8	involucran	EVENT	455
+Event	T9	detenidos	EVENT	552
+Event	T10	homicidio	EVENT	566
+Event	T11	libertad	EVENT	654
+Event	T12	tragedia	EVENT	338
+Relation	T2	T1	CauseEffect	true	chocar	abierto
+Relation	T1	T2	EffectCause	true	abierto	chocar
+Relation	T12	T5	CauseEffect	true	tragedia	murieron
+Relation	T5	T12	EffectCause	true	murieron	tragedia
+Relation	T12	T6	CauseEffect	true	tragedia	heridas
+Relation	T6	T12	EffectCause	true	heridas	tragedia
+Relation	T0	T10	NoRel	true	tumbada	homicidio
+Relation	T0	T2	NoRel	true	tumbada	chocar
+Relation	T0	T3	NoRel	true	tumbada	descarrilados
+Relation	T0	T6	NoRel	true	tumbada	heridas
+Relation	T0	T7	NoRel	true	tumbada	desastres
+Relation	T1	T10	NoRel	true	abierto	homicidio
+Relation	T1	T11	NoRel	true	abierto	libertad
+Relation	T1	T3	NoRel	true	abierto	descarrilados
+Relation	T1	T8	NoRel	true	abierto	involucran
+Relation	T10	T1	NoRel	true	homicidio	abierto
+Relation	T10	T11	NoRel	true	homicidio	libertad
+Relation	T10	T12	NoRel	true	homicidio	tragedia
+Relation	T10	T5	NoRel	true	homicidio	murieron
+Relation	T10	T7	NoRel	true	homicidio	desastres
+Relation	T11	T1	NoRel	true	libertad	abierto
+Relation	T11	T6	NoRel	true	libertad	heridas
+Relation	T11	T7	NoRel	true	libertad	desastres
+Relation	T11	T8	NoRel	true	libertad	involucran
+Relation	T12	T0	NoRel	true	tragedia	tumbada
+Relation	T12	T1	NoRel	true	tragedia	abierto
+Relation	T12	T10	NoRel	true	tragedia	homicidio
+Relation	T12	T11	NoRel	true	tragedia	libertad
+Relation	T12	T9	NoRel	true	tragedia	detenidos
+Relation	T2	T11	NoRel	true	chocar	libertad
+Relation	T2	T4	NoRel	true	chocar	daños
+Relation	T2	T5	NoRel	true	chocar	murieron
+Relation	T2	T8	NoRel	true	chocar	involucran
+Relation	T3	T1	NoRel	true	descarrilados	abierto
+Relation	T3	T10	NoRel	true	descarrilados	homicidio
+Relation	T3	T12	NoRel	true	descarrilados	tragedia
+Relation	T3	T2	NoRel	true	descarrilados	chocar
+Relation	T3	T5	NoRel	true	descarrilados	murieron
+Relation	T3	T8	NoRel	true	descarrilados	involucran
+Relation	T4	T0	NoRel	true	daños	tumbada
+Relation	T4	T10	NoRel	true	daños	homicidio
+Relation	T4	T11	NoRel	true	daños	libertad
+Relation	T4	T12	NoRel	true	daños	tragedia
+Relation	T4	T3	NoRel	true	daños	descarrilados
+Relation	T4	T6	NoRel	true	daños	heridas
+Relation	T4	T7	NoRel	true	daños	desastres
+Relation	T4	T8	NoRel	true	daños	involucran
+Relation	T5	T1	NoRel	true	murieron	abierto
+Relation	T5	T4	NoRel	true	murieron	daños
+Relation	T5	T6	NoRel	true	murieron	heridas
+Relation	T5	T8	NoRel	true	murieron	involucran
+Relation	T7	T1	NoRel	true	desastres	abierto
+Relation	T7	T11	NoRel	true	desastres	libertad
+Relation	T7	T2	NoRel	true	desastres	chocar
+Relation	T7	T3	NoRel	true	desastres	descarrilados
+Relation	T7	T5	NoRel	true	desastres	murieron
+Relation	T7	T8	NoRel	true	desastres	involucran
+Relation	T8	T6	NoRel	true	involucran	heridas
+Relation	T8	T9	NoRel	true	involucran	detenidos
+Relation	T9	T0	NoRel	true	detenidos	tumbada
+Relation	T9	T8	NoRel	true	detenidos	involucran

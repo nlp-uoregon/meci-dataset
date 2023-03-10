@@ -1,0 +1,79 @@
+Text	- Ukrayna , İtalya'dan Romanya üzerinden seyahat eden bir kişi ile ilk vakasını doğruladı .	- Birleşik Krallık 12 yeni vakayı doğrulayarak toplam sayısını 51'e çıkardı .	- ABD üç ölümü daha doğruladı ve toplamı 9'a getirdi .	Kuzey Carolina'daki ilk koronavirüs vakası , Washington eyaletindeki virüsten ilk ölümlerden sorumlu bakımevinden geldiğini bildirdi .	Florida'daki bir başka vakanın , toplam Florid vakası sayısını üçe çıkardığı varsayımıyla pozitif olarak doğrulandı .
+Event	T0	seyahat	EVENT	41
+Event	T1	doğruladı	EVENT	80
+Event	T2	çıkardı	EVENT	160
+Event	T3	ölümü	EVENT	179
+Event	T4	doğruladı	EVENT	190
+Event	T5	getirdi	EVENT	215
+Event	T6	vakası	EVENT	261
+Event	T7	bildirdi	EVENT	349
+Event	T9	doğrulandı	EVENT	465
+Event	T10	vakasını	EVENT	71
+Event	T11	doğrulayarak	EVENT	126
+Event	T12	vakayı	EVENT	119
+Event	T8	varsayımıyla	EVENT	437
+Relation	T0	T10	CauseEffect	true	seyahat	vakasını
+Relation	T10	T0	EffectCause	true	vakasını	seyahat
+Relation	T10	T1	CauseEffect	true	vakasını	doğruladı
+Relation	T1	T10	EffectCause	true	doğruladı	vakasını
+Relation	T11	T2	CauseEffect	true	doğrulayarak	çıkardı
+Relation	T2	T11	EffectCause	true	çıkardı	doğrulayarak
+Relation	T3	T4	CauseEffect	true	ölümü	doğruladı
+Relation	T4	T3	EffectCause	true	doğruladı	ölümü
+Relation	T4	T5	CauseEffect	true	doğruladı	getirdi
+Relation	T5	T4	EffectCause	true	getirdi	doğruladı
+Relation	T12	T11	CauseEffect	true	vakayı	doğrulayarak
+Relation	T11	T12	EffectCause	true	doğrulayarak	vakayı
+Relation	T6	T7	CauseEffect	true	vakası	bildirdi
+Relation	T7	T6	EffectCause	true	bildirdi	vakası
+Relation	T8	T9	CauseEffect	true	varsayımıyla	doğrulandı
+Relation	T9	T8	EffectCause	true	doğrulandı	varsayımıyla
+Relation	T0	T11	NoRel	true	seyahat	doğrulayarak
+Relation	T1	T5	NoRel	true	doğruladı	getirdi
+Relation	T1	T6	NoRel	true	doğruladı	vakası
+Relation	T1	T8	NoRel	true	doğruladı	varsayımıyla
+Relation	T10	T11	NoRel	true	vakasını	doğrulayarak
+Relation	T10	T5	NoRel	true	vakasını	getirdi
+Relation	T10	T9	NoRel	true	vakasını	doğrulandı
+Relation	T11	T0	NoRel	true	doğrulayarak	seyahat
+Relation	T11	T4	NoRel	true	doğrulayarak	doğruladı
+Relation	T11	T5	NoRel	true	doğrulayarak	getirdi
+Relation	T11	T6	NoRel	true	doğrulayarak	vakası
+Relation	T11	T9	NoRel	true	doğrulayarak	doğrulandı
+Relation	T12	T0	NoRel	true	vakayı	seyahat
+Relation	T12	T5	NoRel	true	vakayı	getirdi
+Relation	T2	T10	NoRel	true	çıkardı	vakasını
+Relation	T2	T12	NoRel	true	çıkardı	vakayı
+Relation	T2	T8	NoRel	true	çıkardı	varsayımıyla
+Relation	T3	T10	NoRel	true	ölümü	vakasını
+Relation	T3	T12	NoRel	true	ölümü	vakayı
+Relation	T3	T2	NoRel	true	ölümü	çıkardı
+Relation	T3	T6	NoRel	true	ölümü	vakası
+Relation	T3	T7	NoRel	true	ölümü	bildirdi
+Relation	T3	T8	NoRel	true	ölümü	varsayımıyla
+Relation	T4	T10	NoRel	true	doğruladı	vakasını
+Relation	T4	T11	NoRel	true	doğruladı	doğrulayarak
+Relation	T4	T12	NoRel	true	doğruladı	vakayı
+Relation	T4	T2	NoRel	true	doğruladı	çıkardı
+Relation	T4	T9	NoRel	true	doğruladı	doğrulandı
+Relation	T5	T1	NoRel	true	getirdi	doğruladı
+Relation	T5	T12	NoRel	true	getirdi	vakayı
+Relation	T5	T3	NoRel	true	getirdi	ölümü
+Relation	T5	T8	NoRel	true	getirdi	varsayımıyla
+Relation	T6	T1	NoRel	true	vakası	doğruladı
+Relation	T6	T12	NoRel	true	vakası	vakayı
+Relation	T6	T2	NoRel	true	vakası	çıkardı
+Relation	T6	T4	NoRel	true	vakası	doğruladı
+Relation	T7	T12	NoRel	true	bildirdi	vakayı
+Relation	T7	T2	NoRel	true	bildirdi	çıkardı
+Relation	T7	T4	NoRel	true	bildirdi	doğruladı
+Relation	T7	T5	NoRel	true	bildirdi	getirdi
+Relation	T8	T10	NoRel	true	varsayımıyla	vakasını
+Relation	T8	T11	NoRel	true	varsayımıyla	doğrulayarak
+Relation	T8	T7	NoRel	true	varsayımıyla	bildirdi
+Relation	T9	T0	NoRel	true	doğrulandı	seyahat
+Relation	T9	T1	NoRel	true	doğrulandı	doğruladı
+Relation	T9	T12	NoRel	true	doğrulandı	vakayı
+Relation	T9	T2	NoRel	true	doğrulandı	çıkardı
+Relation	T9	T3	NoRel	true	doğrulandı	ölümü
+Relation	T9	T6	NoRel	true	doğrulandı	vakası

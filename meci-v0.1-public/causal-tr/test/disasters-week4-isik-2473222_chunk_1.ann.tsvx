@@ -1,0 +1,55 @@
+Text	Davao City'deki üç alışveriş merkezi , depremin ardından hasar bildirdi .	General Santos’da , Gaisano Alışveriş Merkezi , depremin tetiklediği bir yangının ardından tahliye edildi .	143 bina hasar gördü , biri yıkıldı .	Zarar görmüş binaların 40'ının ev , 70'inin okul , 7'sinin sağlık tesisi , 10'unun ticari bina ve 2'sinin ibadet yeri olduğu bildirildi .	Sabah saat 09.04'te 6.6 büyüklüğünde bir deprem Filipinler'de Mindanao adasını vurdu .
+Event	T0	depremin	EVENT	39
+Event	T1	bildirdi	EVENT	63
+Event	T3	edildi	EVENT	173
+Event	T4	gördü	EVENT	197
+Event	T5	yıkıldı	EVENT	210
+Event	T6	görmüş	EVENT	226
+Event	T7	bildirildi	EVENT	345
+Event	T8	deprem	EVENT	399
+Event	T9	vurdu	EVENT	437
+Event	T10	yangının	EVENT	147
+Event	T11	depremin	EVENT	122
+Relation	T0	T1	CauseEffect	true	depremin	bildirdi
+Relation	T1	T0	EffectCause	true	bildirdi	depremin
+Relation	T11	T10	CauseEffect	true	depremin	yangının
+Relation	T10	T11	EffectCause	true	yangının	depremin
+Relation	T10	T3	CauseEffect	true	yangının	edildi
+Relation	T3	T10	EffectCause	true	edildi	yangının
+Relation	T0	T10	CauseEffect	true	depremin	yangının
+Relation	T10	T0	EffectCause	true	yangının	depremin
+Relation	T0	T4	CauseEffect	true	depremin	gördü
+Relation	T4	T0	EffectCause	true	gördü	depremin
+Relation	T4	T5	CauseEffect	true	gördü	yıkıldı
+Relation	T5	T4	EffectCause	true	yıkıldı	gördü
+Relation	T4	T7	CauseEffect	true	gördü	bildirildi
+Relation	T7	T4	EffectCause	true	bildirildi	gördü
+Relation	T0	T11	NoRel	true	depremin	depremin
+Relation	T0	T9	NoRel	true	depremin	vurdu
+Relation	T1	T10	NoRel	true	bildirdi	yangının
+Relation	T1	T5	NoRel	true	bildirdi	yıkıldı
+Relation	T1	T7	NoRel	true	bildirdi	bildirildi
+Relation	T10	T5	NoRel	true	yangının	yıkıldı
+Relation	T11	T1	NoRel	true	depremin	bildirdi
+Relation	T11	T7	NoRel	true	depremin	bildirildi
+Relation	T3	T1	NoRel	true	edildi	bildirdi
+Relation	T4	T1	NoRel	true	gördü	bildirdi
+Relation	T4	T10	NoRel	true	gördü	yangının
+Relation	T4	T3	NoRel	true	gördü	edildi
+Relation	T4	T9	NoRel	true	gördü	vurdu
+Relation	T5	T11	NoRel	true	yıkıldı	depremin
+Relation	T5	T3	NoRel	true	yıkıldı	edildi
+Relation	T6	T3	NoRel	true	görmüş	edildi
+Relation	T6	T9	NoRel	true	görmüş	vurdu
+Relation	T7	T5	NoRel	true	bildirildi	yıkıldı
+Relation	T7	T9	NoRel	true	bildirildi	vurdu
+Relation	T8	T0	NoRel	true	deprem	depremin
+Relation	T8	T1	NoRel	true	deprem	bildirdi
+Relation	T8	T10	NoRel	true	deprem	yangının
+Relation	T8	T5	NoRel	true	deprem	yıkıldı
+Relation	T8	T7	NoRel	true	deprem	bildirildi
+Relation	T9	T10	NoRel	true	vurdu	yangının
+Relation	T9	T11	NoRel	true	vurdu	depremin
+Relation	T9	T4	NoRel	true	vurdu	gördü
+Relation	T9	T6	NoRel	true	vurdu	görmüş
+Relation	T9	T8	NoRel	true	vurdu	deprem

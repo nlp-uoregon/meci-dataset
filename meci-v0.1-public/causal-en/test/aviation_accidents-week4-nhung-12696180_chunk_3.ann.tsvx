@@ -1,0 +1,50 @@
+Text	Shortly thereafter , he was promoted to Commander .	Assuming command of _ Santee _ on her commissioning , he was awarded a letter of commendation for service during Operation Torch ; the invasion of North Africa .	Captain Sample assumed command of on April 19 , 1944 .	In May 1944 , he was transferred to serve as Commanding Officer of and in the ensuing months participated in the Battle of the Philippine Sea and a strike against the Volcano Islands .	In late summer 1944 , Sample was promoted to rear admiral , planting his flag aboard the escort carrier as Commander , Carrier Division 27 ( CarDiv 27 ) , for the invasion of Palau .
+Event	T0	promoted	EVENT	28
+Event	T1	command	EVENT	61
+Event	T2	commissioning	EVENT	90
+Event	T3	awarded	EVENT	113
+Event	T4	commendation	EVENT	133
+Event	T5	service	EVENT	150
+Event	T6	Operation	EVENT	165
+Event	T7	invasion	EVENT	187
+Event	T8	command	EVENT	237
+Event	T9	transferred	EVENT	290
+Event	T10	serve	EVENT	305
+Event	T11	participated	EVENT	362
+Event	T12	Battle	EVENT	382
+Event	T13	strike	EVENT	417
+Event	T14	promoted	EVENT	487
+Event	T15	planting	EVENT	514
+Event	T16	invasion	EVENT	617
+Relation	T0	T7	NoRel	true	promoted	invasion
+Relation	T1	T11	NoRel	true	command	participated
+Relation	T1	T4	NoRel	true	command	commendation
+Relation	T1	T8	NoRel	true	command	command
+Relation	T10	T8	NoRel	true	serve	command
+Relation	T11	T15	NoRel	true	participated	planting
+Relation	T12	T2	NoRel	true	Battle	commissioning
+Relation	T13	T10	NoRel	true	strike	serve
+Relation	T13	T4	NoRel	true	strike	commendation
+Relation	T14	T10	NoRel	true	promoted	serve
+Relation	T14	T8	NoRel	true	promoted	command
+Relation	T15	T13	NoRel	true	planting	strike
+Relation	T16	T4	NoRel	true	invasion	commendation
+Relation	T2	T15	NoRel	true	commissioning	planting
+Relation	T2	T16	NoRel	true	commissioning	invasion
+Relation	T3	T2	NoRel	true	awarded	commissioning
+Relation	T3	T4	NoRel	true	awarded	commendation
+Relation	T3	T5	NoRel	true	awarded	service
+Relation	T4	T2	NoRel	true	commendation	commissioning
+Relation	T5	T6	NoRel	true	service	Operation
+Relation	T6	T13	NoRel	true	Operation	strike
+Relation	T6	T14	NoRel	true	Operation	promoted
+Relation	T6	T3	NoRel	true	Operation	awarded
+Relation	T6	T9	NoRel	true	Operation	transferred
+Relation	T7	T10	NoRel	true	invasion	serve
+Relation	T7	T6	NoRel	true	invasion	Operation
+Relation	T7	T8	NoRel	true	invasion	command
+Relation	T8	T2	NoRel	true	command	commissioning
+Relation	T8	T9	NoRel	true	command	transferred
+Relation	T9	T12	NoRel	true	transferred	Battle
+Relation	T9	T5	NoRel	true	transferred	service
+Relation	T9	T6	NoRel	true	transferred	Operation

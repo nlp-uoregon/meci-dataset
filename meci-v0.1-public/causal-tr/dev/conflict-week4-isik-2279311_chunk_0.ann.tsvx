@@ -1,0 +1,51 @@
+Text	Geniş bir hazırlık süreci sonuncu başlayan kuşatma öncesi Fedâle bin Ubeyd kumandasında öncü olarak gönderilerek 668 kışını Kalkedon'da geçiren ordu ertesi yıl Halife Muaviye'nin oğlu Yezid'in kumandayı almasıyla Konstantinopolis önlerine gelerek 669 sonbaharında kuşatmaya başlamıştır .	Süfyân bin Avf tarafından da desteklenen ordu kışın bastırmasıyla oluşan iaşe_kıtlığı ve salgın hastalıklar gibi sebeplerle büyük zayiat vermiş , kuşatma bu nedenle kaldırılmıştır .			
+Event	T0	kuşatma	EVENT	43
+Event	T1	gönderilerek	EVENT	100
+Event	T2	geçiren	EVENT	136
+Event	T3	başlamıştır	EVENT	274
+Event	T4	vermiş	EVENT	425
+Event	T5	kuşatma	EVENT	434
+Event	T6	kaldırılmıştır	EVENT	453
+Event	T7	almasıyla	EVENT	203
+Event	T8	hastalıklar	EVENT	384
+Event	T9	bastırmasıyla	EVENT	340
+Relation	T8	T4	CauseEffect	true	hastalıklar	vermiş
+Relation	T4	T8	EffectCause	true	vermiş	hastalıklar
+Relation	T9	T8	CauseEffect	true	bastırmasıyla	hastalıklar
+Relation	T8	T9	EffectCause	true	hastalıklar	bastırmasıyla
+Relation	T4	T6	CauseEffect	true	vermiş	kaldırılmıştır
+Relation	T6	T4	EffectCause	true	kaldırılmıştır	vermiş
+Relation	T0	T2	NoRel	true	kuşatma	geçiren
+Relation	T0	T6	NoRel	true	kuşatma	kaldırılmıştır
+Relation	T1	T2	NoRel	true	gönderilerek	geçiren
+Relation	T1	T3	NoRel	true	gönderilerek	başlamıştır
+Relation	T1	T4	NoRel	true	gönderilerek	vermiş
+Relation	T1	T6	NoRel	true	gönderilerek	kaldırılmıştır
+Relation	T2	T0	NoRel	true	geçiren	kuşatma
+Relation	T2	T4	NoRel	true	geçiren	vermiş
+Relation	T2	T5	NoRel	true	geçiren	kuşatma
+Relation	T2	T7	NoRel	true	geçiren	almasıyla
+Relation	T3	T2	NoRel	true	başlamıştır	geçiren
+Relation	T3	T4	NoRel	true	başlamıştır	vermiş
+Relation	T3	T6	NoRel	true	başlamıştır	kaldırılmıştır
+Relation	T3	T7	NoRel	true	başlamıştır	almasıyla
+Relation	T3	T8	NoRel	true	başlamıştır	hastalıklar
+Relation	T3	T9	NoRel	true	başlamıştır	bastırmasıyla
+Relation	T4	T1	NoRel	true	vermiş	gönderilerek
+Relation	T4	T2	NoRel	true	vermiş	geçiren
+Relation	T4	T3	NoRel	true	vermiş	başlamıştır
+Relation	T4	T5	NoRel	true	vermiş	kuşatma
+Relation	T4	T9	NoRel	true	vermiş	bastırmasıyla
+Relation	T5	T2	NoRel	true	kuşatma	geçiren
+Relation	T5	T3	NoRel	true	kuşatma	başlamıştır
+Relation	T5	T6	NoRel	true	kuşatma	kaldırılmıştır
+Relation	T5	T7	NoRel	true	kuşatma	almasıyla
+Relation	T5	T9	NoRel	true	kuşatma	bastırmasıyla
+Relation	T6	T2	NoRel	true	kaldırılmıştır	geçiren
+Relation	T6	T7	NoRel	true	kaldırılmıştır	almasıyla
+Relation	T7	T1	NoRel	true	almasıyla	gönderilerek
+Relation	T7	T4	NoRel	true	almasıyla	vermiş
+Relation	T7	T8	NoRel	true	almasıyla	hastalıklar
+Relation	T8	T6	NoRel	true	hastalıklar	kaldırılmıştır
+Relation	T9	T4	NoRel	true	bastırmasıyla	vermiş
+Relation	T9	T5	NoRel	true	bastırmasıyla	kuşatma

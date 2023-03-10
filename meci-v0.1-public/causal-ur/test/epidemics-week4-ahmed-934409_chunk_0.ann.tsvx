@@ -1,0 +1,172 @@
+Text	بھوٹان میں کورونا وائرس کی وبا کا خطرہ اور معاملات اس وقت آشکارا ہوئے جب کوویت سے بھوٹان آئی ایک خاتون کے ذریعے کی گئی مسافرت سے کورونا وائرس انفیکشن پھیلنے کا اندازہ لگایا گیا ۔	سرکار نے ملک کی لگ بھگ 750,000 کی آبادی کے لیے گھر پر رہنے کا حکم جاری کیا ۔	ملک میں سبھی اسکول ، دفاتر اور عوامی مقامات بند کر دیے گئے ۔	سرکاری بیان کے مطانق یہ لاکڈاؤن پانچ سے 21 دنوں کے لیے متاثرہ مریضوں کی پہچان کرکے انہیں علاج فراہم کرنے کے لیے لاگو کیا گیا ہے ۔	لاکڈاؤن کا مقصد انفیکشن کے فروغ کے خدشے کو فوری طور پر دور کرنا تھا ۔۔
+Event	T0	خطرہ	EVENT	34
+Event	T1	معاملات	EVENT	43
+Event	T2	آشکارا	EVENT	58
+Event	T3	مسافرت	EVENT	119
+Event	T4	پھیلنے	EVENT	150
+Event	T5	بند	EVENT	300
+Event	T6	بیان	EVENT	324
+Event	T7	پہچان	EVENT	389
+Event	T8	انفیکشن	EVENT	463
+Event	T9	فروغ	EVENT	474
+Event	T10	خدشے	EVENT	482
+Event	T11	وبا	EVENT	27
+Event	T12	آئی	EVENT	89
+Event	T13	انفیکشن	EVENT	142
+Event	T14	حکم	EVENT	241
+Event	T15	لاکڈاؤن	EVENT	341
+Event	T16	متاثرہ	EVENT	372
+Event	T17	علاج	EVENT	406
+Event	T18	لاگو	EVENT	429
+Event	T19	لاکڈاؤن	EVENT	447
+Event	T20	کرنا	EVENT	506
+Relation	T12	T4	CauseEffect	true	آئی	پھیلنے
+Relation	T4	T12	EffectCause	true	پھیلنے	آئی
+Relation	T4	T2	CauseEffect	true	پھیلنے	آشکارا
+Relation	T2	T4	EffectCause	true	آشکارا	پھیلنے
+Relation	T11	T14	CauseEffect	true	وبا	حکم
+Relation	T14	T11	EffectCause	true	حکم	وبا
+Relation	T11	T5	CauseEffect	true	وبا	بند
+Relation	T5	T11	EffectCause	true	بند	وبا
+Relation	T11	T16	CauseEffect	true	وبا	متاثرہ
+Relation	T16	T11	EffectCause	true	متاثرہ	وبا
+Relation	T11	T15	CauseEffect	true	وبا	لاکڈاؤن
+Relation	T15	T11	EffectCause	true	لاکڈاؤن	وبا
+Relation	T8	T9	CauseEffect	true	انفیکشن	فروغ
+Relation	T9	T8	EffectCause	true	فروغ	انفیکشن
+Relation	T10	T19	CauseEffect	true	خدشے	لاکڈاؤن
+Relation	T19	T10	EffectCause	true	لاکڈاؤن	خدشے
+Relation	T0	T1	NoRel	true	خطرہ	معاملات
+Relation	T0	T10	NoRel	true	خطرہ	خدشے
+Relation	T0	T15	NoRel	true	خطرہ	لاکڈاؤن
+Relation	T0	T19	NoRel	true	خطرہ	لاکڈاؤن
+Relation	T0	T2	NoRel	true	خطرہ	آشکارا
+Relation	T0	T7	NoRel	true	خطرہ	پہچان
+Relation	T0	T9	NoRel	true	خطرہ	فروغ
+Relation	T1	T0	NoRel	true	معاملات	خطرہ
+Relation	T1	T16	NoRel	true	معاملات	متاثرہ
+Relation	T1	T20	NoRel	true	معاملات	کرنا
+Relation	T10	T11	NoRel	true	خدشے	وبا
+Relation	T10	T12	NoRel	true	خدشے	آئی
+Relation	T10	T13	NoRel	true	خدشے	انفیکشن
+Relation	T10	T18	NoRel	true	خدشے	لاگو
+Relation	T10	T20	NoRel	true	خدشے	کرنا
+Relation	T10	T4	NoRel	true	خدشے	پھیلنے
+Relation	T10	T6	NoRel	true	خدشے	بیان
+Relation	T10	T7	NoRel	true	خدشے	پہچان
+Relation	T10	T8	NoRel	true	خدشے	انفیکشن
+Relation	T10	T9	NoRel	true	خدشے	فروغ
+Relation	T11	T1	NoRel	true	وبا	معاملات
+Relation	T11	T17	NoRel	true	وبا	علاج
+Relation	T11	T18	NoRel	true	وبا	لاگو
+Relation	T11	T3	NoRel	true	وبا	مسافرت
+Relation	T11	T7	NoRel	true	وبا	پہچان
+Relation	T11	T8	NoRel	true	وبا	انفیکشن
+Relation	T11	T9	NoRel	true	وبا	فروغ
+Relation	T12	T10	NoRel	true	آئی	خدشے
+Relation	T12	T13	NoRel	true	آئی	انفیکشن
+Relation	T12	T17	NoRel	true	آئی	علاج
+Relation	T12	T19	NoRel	true	آئی	لاکڈاؤن
+Relation	T12	T2	NoRel	true	آئی	آشکارا
+Relation	T12	T20	NoRel	true	آئی	کرنا
+Relation	T12	T6	NoRel	true	آئی	بیان
+Relation	T12	T8	NoRel	true	آئی	انفیکشن
+Relation	T13	T10	NoRel	true	انفیکشن	خدشے
+Relation	T13	T12	NoRel	true	انفیکشن	آئی
+Relation	T13	T14	NoRel	true	انفیکشن	حکم
+Relation	T13	T16	NoRel	true	انفیکشن	متاثرہ
+Relation	T13	T17	NoRel	true	انفیکشن	علاج
+Relation	T13	T18	NoRel	true	انفیکشن	لاگو
+Relation	T13	T20	NoRel	true	انفیکشن	کرنا
+Relation	T13	T5	NoRel	true	انفیکشن	بند
+Relation	T13	T6	NoRel	true	انفیکشن	بیان
+Relation	T13	T7	NoRel	true	انفیکشن	پہچان
+Relation	T13	T8	NoRel	true	انفیکشن	انفیکشن
+Relation	T14	T10	NoRel	true	حکم	خدشے
+Relation	T14	T13	NoRel	true	حکم	انفیکشن
+Relation	T14	T4	NoRel	true	حکم	پھیلنے
+Relation	T14	T8	NoRel	true	حکم	انفیکشن
+Relation	T15	T12	NoRel	true	لاکڈاؤن	آئی
+Relation	T15	T13	NoRel	true	لاکڈاؤن	انفیکشن
+Relation	T15	T18	NoRel	true	لاکڈاؤن	لاگو
+Relation	T15	T19	NoRel	true	لاکڈاؤن	لاکڈاؤن
+Relation	T15	T2	NoRel	true	لاکڈاؤن	آشکارا
+Relation	T15	T7	NoRel	true	لاکڈاؤن	پہچان
+Relation	T16	T10	NoRel	true	متاثرہ	خدشے
+Relation	T16	T19	NoRel	true	متاثرہ	لاکڈاؤن
+Relation	T16	T20	NoRel	true	متاثرہ	کرنا
+Relation	T16	T3	NoRel	true	متاثرہ	مسافرت
+Relation	T16	T4	NoRel	true	متاثرہ	پھیلنے
+Relation	T16	T5	NoRel	true	متاثرہ	بند
+Relation	T16	T6	NoRel	true	متاثرہ	بیان
+Relation	T16	T8	NoRel	true	متاثرہ	انفیکشن
+Relation	T17	T10	NoRel	true	علاج	خدشے
+Relation	T17	T11	NoRel	true	علاج	وبا
+Relation	T17	T12	NoRel	true	علاج	آئی
+Relation	T17	T15	NoRel	true	علاج	لاکڈاؤن
+Relation	T17	T18	NoRel	true	علاج	لاگو
+Relation	T17	T19	NoRel	true	علاج	لاکڈاؤن
+Relation	T17	T20	NoRel	true	علاج	کرنا
+Relation	T17	T4	NoRel	true	علاج	پھیلنے
+Relation	T17	T5	NoRel	true	علاج	بند
+Relation	T17	T7	NoRel	true	علاج	پہچان
+Relation	T18	T1	NoRel	true	لاگو	معاملات
+Relation	T18	T11	NoRel	true	لاگو	وبا
+Relation	T18	T15	NoRel	true	لاگو	لاکڈاؤن
+Relation	T18	T9	NoRel	true	لاگو	فروغ
+Relation	T19	T1	NoRel	true	لاکڈاؤن	معاملات
+Relation	T19	T17	NoRel	true	لاکڈاؤن	علاج
+Relation	T19	T4	NoRel	true	لاکڈاؤن	پھیلنے
+Relation	T19	T5	NoRel	true	لاکڈاؤن	بند
+Relation	T19	T8	NoRel	true	لاکڈاؤن	انفیکشن
+Relation	T2	T0	NoRel	true	آشکارا	خطرہ
+Relation	T2	T16	NoRel	true	آشکارا	متاثرہ
+Relation	T2	T17	NoRel	true	آشکارا	علاج
+Relation	T2	T20	NoRel	true	آشکارا	کرنا
+Relation	T2	T5	NoRel	true	آشکارا	بند
+Relation	T20	T1	NoRel	true	کرنا	معاملات
+Relation	T20	T11	NoRel	true	کرنا	وبا
+Relation	T20	T17	NoRel	true	کرنا	علاج
+Relation	T20	T3	NoRel	true	کرنا	مسافرت
+Relation	T20	T4	NoRel	true	کرنا	پھیلنے
+Relation	T20	T8	NoRel	true	کرنا	انفیکشن
+Relation	T3	T11	NoRel	true	مسافرت	وبا
+Relation	T3	T15	NoRel	true	مسافرت	لاکڈاؤن
+Relation	T3	T17	NoRel	true	مسافرت	علاج
+Relation	T3	T4	NoRel	true	مسافرت	پھیلنے
+Relation	T4	T0	NoRel	true	پھیلنے	خطرہ
+Relation	T4	T1	NoRel	true	پھیلنے	معاملات
+Relation	T4	T15	NoRel	true	پھیلنے	لاکڈاؤن
+Relation	T4	T18	NoRel	true	پھیلنے	لاگو
+Relation	T4	T20	NoRel	true	پھیلنے	کرنا
+Relation	T4	T6	NoRel	true	پھیلنے	بیان
+Relation	T4	T9	NoRel	true	پھیلنے	فروغ
+Relation	T5	T0	NoRel	true	بند	خطرہ
+Relation	T5	T1	NoRel	true	بند	معاملات
+Relation	T5	T13	NoRel	true	بند	انفیکشن
+Relation	T5	T14	NoRel	true	بند	حکم
+Relation	T5	T15	NoRel	true	بند	لاکڈاؤن
+Relation	T5	T19	NoRel	true	بند	لاکڈاؤن
+Relation	T5	T7	NoRel	true	بند	پہچان
+Relation	T6	T0	NoRel	true	بیان	خطرہ
+Relation	T6	T1	NoRel	true	بیان	معاملات
+Relation	T6	T13	NoRel	true	بیان	انفیکشن
+Relation	T6	T16	NoRel	true	بیان	متاثرہ
+Relation	T7	T10	NoRel	true	پہچان	خدشے
+Relation	T7	T13	NoRel	true	پہچان	انفیکشن
+Relation	T7	T17	NoRel	true	پہچان	علاج
+Relation	T7	T18	NoRel	true	پہچان	لاگو
+Relation	T7	T8	NoRel	true	پہچان	انفیکشن
+Relation	T8	T0	NoRel	true	انفیکشن	خطرہ
+Relation	T8	T12	NoRel	true	انفیکشن	آئی
+Relation	T8	T13	NoRel	true	انفیکشن	انفیکشن
+Relation	T8	T14	NoRel	true	انفیکشن	حکم
+Relation	T8	T20	NoRel	true	انفیکشن	کرنا
+Relation	T8	T3	NoRel	true	انفیکشن	مسافرت
+Relation	T8	T5	NoRel	true	انفیکشن	بند
+Relation	T9	T0	NoRel	true	فروغ	خطرہ
+Relation	T9	T15	NoRel	true	فروغ	لاکڈاؤن
+Relation	T9	T19	NoRel	true	فروغ	لاکڈاؤن
+Relation	T9	T2	NoRel	true	فروغ	آشکارا
+Relation	T9	T6	NoRel	true	فروغ	بیان
+Relation	T9	T7	NoRel	true	فروغ	پہچان

@@ -1,0 +1,34 @@
+Text	La Empresa Municipal de Transportes de Madrid , estaba a cargo de la línea 31 era Westinghouse Rail Systems .	Se puso en duda que el mantenimiento de los vehículos fuera el adecuado .	El propio tranvía afectado , el 135 , ya se había sometido a diversas operaciones de mantenimiento específicos de los frenos hidráulicos .	Una de las consecuencias políticas del suceso fue la destitución del alcalde de Madrid José Moreno Torres , así como del director de la recientemente creada Empresa Municipal de Transportes de Madrid por responsabilidad civil en el accidente .	30 de mayo de 1952 , _ Diario de ABC _ , Ayer fueron inhumadas catorce de las víctimas del accidente tranviario del Puente de Toledo , Madrid
+Event	T0	afectado	EVENT	202
+Event	T1	operaciones	EVENT	254
+Event	T2	suceso	EVENT	362
+Event	T3	destitución	EVENT	376
+Event	T4	creada	EVENT	473
+Event	T5	accidente	EVENT	555
+Event	T6	inhumadas	EVENT	620
+Event	T7	víctimas	EVENT	645
+Event	T8	accidente	EVENT	658
+Relation	T0	T1	NoRel	true	afectado	operaciones
+Relation	T0	T4	NoRel	true	afectado	creada
+Relation	T0	T5	NoRel	true	afectado	accidente
+Relation	T0	T8	NoRel	true	afectado	accidente
+Relation	T1	T2	NoRel	true	operaciones	suceso
+Relation	T1	T3	NoRel	true	operaciones	destitución
+Relation	T2	T0	NoRel	true	suceso	afectado
+Relation	T2	T1	NoRel	true	suceso	operaciones
+Relation	T2	T3	NoRel	true	suceso	destitución
+Relation	T2	T5	NoRel	true	suceso	accidente
+Relation	T2	T6	NoRel	true	suceso	inhumadas
+Relation	T3	T0	NoRel	true	destitución	afectado
+Relation	T3	T8	NoRel	true	destitución	accidente
+Relation	T4	T0	NoRel	true	creada	afectado
+Relation	T5	T0	NoRel	true	accidente	afectado
+Relation	T5	T2	NoRel	true	accidente	suceso
+Relation	T5	T6	NoRel	true	accidente	inhumadas
+Relation	T6	T7	NoRel	true	inhumadas	víctimas
+Relation	T7	T1	NoRel	true	víctimas	operaciones
+Relation	T8	T0	NoRel	true	accidente	afectado
+Relation	T8	T2	NoRel	true	accidente	suceso
+Relation	T8	T5	NoRel	true	accidente	accidente
+Relation	T8	T6	NoRel	true	accidente	inhumadas
+Relation	T8	T7	NoRel	true	accidente	víctimas

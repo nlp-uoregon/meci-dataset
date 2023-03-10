@@ -1,0 +1,38 @@
+Text	His body was not recovered .	6 September : A United States Air Force Northrop T - 38A -75- NO Talon , _ 68-8182_ , ' 1 ' , of the Thunderbirds display team crashed on take - off at Cleveland , Ohio , United States following a bird strike .	The team leader , Lt. Col. David L. Smith , was killed and the teams displays for the rest of the year are cancelled .	17 September : Near Sardinia , Italy , a USMC Sikorsky CH - 53C Sea Stallion helicopter crashed while attempting to land aboard during training exercises , killing all five crewmen .	17 September : At Strassberg , Germany , a mid-air collision with a USAF Rockwell OV - 10A Bronco ( 66-13553 ) and a German Army Aviation Aérospatiale Alouette II Helicopter ( 75+29 ) during NATO exercise " Scharfe Klinge " .
+Event	T0	recovered	EVENT	17
+Event	T1	following	EVENT	214
+Event	T2	strike	EVENT	231
+Event	T3	killed	EVENT	288
+Event	T4	displays	EVENT	309
+Event	T5	cancelled	EVENT	347
+Event	T6	crashed	EVENT	447
+Event	T7	attempting	EVENT	461
+Event	T8	exercises	EVENT	503
+Event	T9	killing	EVENT	515
+Event	T10	collision	EVENT	593
+Event	T11	exercise	EVENT	738
+Event	T12	crashed	EVENT	156
+Event	T13	land	EVENT	475
+Relation	T12	T3	CauseEffect	true	crashed	killed
+Relation	T3	T12	EffectCause	true	killed	crashed
+Relation	T12	T5	CauseEffect	true	crashed	cancelled
+Relation	T5	T12	EffectCause	true	cancelled	crashed
+Relation	T6	T9	CauseEffect	true	crashed	killing
+Relation	T9	T6	EffectCause	true	killing	crashed
+Relation	T0	T1	NoRel	true	recovered	following
+Relation	T1	T7	NoRel	true	following	attempting
+Relation	T10	T1	NoRel	true	collision	following
+Relation	T10	T3	NoRel	true	collision	killed
+Relation	T10	T4	NoRel	true	collision	displays
+Relation	T12	T0	NoRel	true	crashed	recovered
+Relation	T12	T10	NoRel	true	crashed	collision
+Relation	T2	T0	NoRel	true	strike	recovered
+Relation	T2	T10	NoRel	true	strike	collision
+Relation	T3	T11	NoRel	true	killed	exercise
+Relation	T4	T1	NoRel	true	displays	following
+Relation	T4	T3	NoRel	true	displays	killed
+Relation	T5	T11	NoRel	true	cancelled	exercise
+Relation	T5	T4	NoRel	true	cancelled	displays
+Relation	T7	T12	NoRel	true	attempting	crashed
+Relation	T9	T10	NoRel	true	killing	collision
+Relation	T9	T2	NoRel	true	killing	strike

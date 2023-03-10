@@ -1,0 +1,81 @@
+Text	- 23 Ekim 2021'de , Suriye'de Kobani ( Ayn el Arab ) - Halep yolunda Kuzey ve Doğu Suriye Özerk Yönetimi çalışanlarının bulunduğu bir aracın TSK'ya ait bir insansız hava aracı ile bombalandığı ve bombalama sonucunda araçtaki üç kişinin hayatını kaybettiği haberleştirildi .	24 Ekim'de , SDF , bu üç kişinin bünyesinde bulundurduğu militanlar olduğunu duyurdu .	- 24 Ekim'de , PKK haber kaynakları 10 Ekim 2021'de Irak'ın kuzeyinde yer alan Avaşin bölgesinde yaşamını yitiren dört PKK militanının kimlik bilgilerini paylaştı .	- 25 Ekim 2021'de , Milli Savunma Bakanlığı resmi Twitter hesabında , Irak Kürdistan Bölgesel Yönetimi kontrolünde yer alan Avaşin - Basyan bölgesinde yaşanan çatışma sonucu Osmaniye , Düziçi nüfusuna kayıtlı _ Yunus Emre Yalman _ isimli bir piyade uzman çavuşun yaşamını yitirdiği ; rütbesi açıklanmayan bir askerin de yaralandığı duyuruldu .	Aynı gün , Irak Kürdistan Bölgesel Yönetimi kontrolünde yer alan Erbil'in Sidekan nahiyesindeki Bolê dağında PKK'ya ait bir takım karargahların hava bombardımanı ile vurulduğuna dair görüntü ve açıklamalar bölge medyası tarafından paylaşıldı .
+Event	T0	bombalandığı	EVENT	180
+Event	T1	haberleştirildi	EVENT	256
+Event	T2	duyurdu	EVENT	351
+Event	T3	yitiren	EVENT	467
+Event	T4	paylaştı	EVENT	515
+Event	T5	yitirdiği	EVENT	798
+Event	T6	duyuruldu	EVENT	858
+Event	T7	bombardımanı	EVENT	1019
+Event	T8	görüntü	EVENT	1053
+Event	T9	paylaşıldı	EVENT	1101
+Event	T10	kaybettiği	EVENT	245
+Event	T11	çatışma	EVENT	685
+Event	T12	yaralandığı	EVENT	846
+Event	T13	açıklamalar	EVENT	1064
+Relation	T0	T10	CauseEffect	true	bombalandığı	kaybettiği
+Relation	T10	T0	EffectCause	true	kaybettiği	bombalandığı
+Relation	T11	T5	CauseEffect	true	çatışma	yitirdiği
+Relation	T5	T11	EffectCause	true	yitirdiği	çatışma
+Relation	T11	T12	CauseEffect	true	çatışma	yaralandığı
+Relation	T12	T11	EffectCause	true	yaralandığı	çatışma
+Relation	T0	T1	NoRel	true	bombalandığı	haberleştirildi
+Relation	T0	T11	NoRel	true	bombalandığı	çatışma
+Relation	T0	T13	NoRel	true	bombalandığı	açıklamalar
+Relation	T0	T7	NoRel	true	bombalandığı	bombardımanı
+Relation	T0	T8	NoRel	true	bombalandığı	görüntü
+Relation	T1	T3	NoRel	true	haberleştirildi	yitiren
+Relation	T1	T5	NoRel	true	haberleştirildi	yitirdiği
+Relation	T1	T6	NoRel	true	haberleştirildi	duyuruldu
+Relation	T10	T1	NoRel	true	kaybettiği	haberleştirildi
+Relation	T10	T11	NoRel	true	kaybettiği	çatışma
+Relation	T10	T2	NoRel	true	kaybettiği	duyurdu
+Relation	T10	T7	NoRel	true	kaybettiği	bombardımanı
+Relation	T10	T8	NoRel	true	kaybettiği	görüntü
+Relation	T11	T1	NoRel	true	çatışma	haberleştirildi
+Relation	T11	T2	NoRel	true	çatışma	duyurdu
+Relation	T11	T4	NoRel	true	çatışma	paylaştı
+Relation	T11	T9	NoRel	true	çatışma	paylaşıldı
+Relation	T12	T0	NoRel	true	yaralandığı	bombalandığı
+Relation	T12	T10	NoRel	true	yaralandığı	kaybettiği
+Relation	T12	T2	NoRel	true	yaralandığı	duyurdu
+Relation	T12	T4	NoRel	true	yaralandığı	paylaştı
+Relation	T12	T9	NoRel	true	yaralandığı	paylaşıldı
+Relation	T13	T1	NoRel	true	açıklamalar	haberleştirildi
+Relation	T13	T10	NoRel	true	açıklamalar	kaybettiği
+Relation	T13	T5	NoRel	true	açıklamalar	yitirdiği
+Relation	T2	T12	NoRel	true	duyurdu	yaralandığı
+Relation	T2	T6	NoRel	true	duyurdu	duyuruldu
+Relation	T2	T7	NoRel	true	duyurdu	bombardımanı
+Relation	T2	T9	NoRel	true	duyurdu	paylaşıldı
+Relation	T3	T12	NoRel	true	yitiren	yaralandığı
+Relation	T3	T2	NoRel	true	yitiren	duyurdu
+Relation	T3	T4	NoRel	true	yitiren	paylaştı
+Relation	T3	T6	NoRel	true	yitiren	duyuruldu
+Relation	T3	T8	NoRel	true	yitiren	görüntü
+Relation	T4	T3	NoRel	true	paylaştı	yitiren
+Relation	T4	T6	NoRel	true	paylaştı	duyuruldu
+Relation	T5	T0	NoRel	true	yitirdiği	bombalandığı
+Relation	T5	T10	NoRel	true	yitirdiği	kaybettiği
+Relation	T5	T6	NoRel	true	yitirdiği	duyuruldu
+Relation	T5	T9	NoRel	true	yitirdiği	paylaşıldı
+Relation	T6	T11	NoRel	true	duyuruldu	çatışma
+Relation	T6	T2	NoRel	true	duyuruldu	duyurdu
+Relation	T6	T3	NoRel	true	duyuruldu	yitiren
+Relation	T6	T7	NoRel	true	duyuruldu	bombardımanı
+Relation	T6	T8	NoRel	true	duyuruldu	görüntü
+Relation	T7	T10	NoRel	true	bombardımanı	kaybettiği
+Relation	T7	T12	NoRel	true	bombardımanı	yaralandığı
+Relation	T7	T2	NoRel	true	bombardımanı	duyurdu
+Relation	T7	T5	NoRel	true	bombardımanı	yitirdiği
+Relation	T7	T8	NoRel	true	bombardımanı	görüntü
+Relation	T8	T10	NoRel	true	görüntü	kaybettiği
+Relation	T8	T11	NoRel	true	görüntü	çatışma
+Relation	T8	T12	NoRel	true	görüntü	yaralandığı
+Relation	T8	T7	NoRel	true	görüntü	bombardımanı
+Relation	T8	T9	NoRel	true	görüntü	paylaşıldı
+Relation	T9	T10	NoRel	true	paylaşıldı	kaybettiği
+Relation	T9	T11	NoRel	true	paylaşıldı	çatışma
+Relation	T9	T3	NoRel	true	paylaşıldı	yitiren
+Relation	T9	T5	NoRel	true	paylaşıldı	yitirdiği
+Relation	T9	T7	NoRel	true	paylaşıldı	bombardımanı

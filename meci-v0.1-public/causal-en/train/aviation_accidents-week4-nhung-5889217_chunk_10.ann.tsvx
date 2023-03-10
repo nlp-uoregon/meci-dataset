@@ -1,0 +1,47 @@
+Text	A flight attendant was suspended by her seatbelts as the floor beneath her was destroyed .	When she unfastened her seatbelts , she fell to the ground and received severe burn injuries .	The forward entry door was destroyed shortly after the fire .	The left central door could not be opened as an intense fire was burning right below it .	The right rear door and a flight attendant , who was sitting near it , were blocked by metal food containers that had fallen as a result of the airplane 's collision with the barriers .
+Event	T0	suspended	EVENT	23
+Event	T1	destroyed	EVENT	79
+Event	T2	unfastened	EVENT	100
+Event	T3	injuries	EVENT	175
+Event	T4	destroyed	EVENT	213
+Event	T5	fire	EVENT	241
+Event	T6	opened	EVENT	283
+Event	T7	fire	EVENT	304
+Event	T8	burning	EVENT	313
+Event	T9	sitting	EVENT	391
+Event	T10	blocked	EVENT	414
+Event	T11	fallen	EVENT	456
+Event	T12	collision	EVENT	494
+Event	T13	fell	EVENT	131
+Relation	T1	T0	CauseEffect	true	destroyed	suspended
+Relation	T0	T1	EffectCause	true	suspended	destroyed
+Relation	T13	T3	CauseEffect	true	fell	injuries
+Relation	T3	T13	EffectCause	true	injuries	fell
+Relation	T1	T3	CauseEffect	true	destroyed	injuries
+Relation	T3	T1	EffectCause	true	injuries	destroyed
+Relation	T7	T6	CauseEffect	true	fire	opened
+Relation	T6	T7	EffectCause	true	opened	fire
+Relation	T12	T11	CauseEffect	true	collision	fallen
+Relation	T11	T12	EffectCause	true	fallen	collision
+Relation	T11	T10	CauseEffect	true	fallen	blocked
+Relation	T10	T11	EffectCause	true	blocked	fallen
+Relation	T0	T10	NoRel	true	suspended	blocked
+Relation	T1	T10	NoRel	true	destroyed	blocked
+Relation	T1	T4	NoRel	true	destroyed	destroyed
+Relation	T1	T8	NoRel	true	destroyed	burning
+Relation	T10	T6	NoRel	true	blocked	opened
+Relation	T10	T7	NoRel	true	blocked	fire
+Relation	T11	T0	NoRel	true	fallen	suspended
+Relation	T11	T2	NoRel	true	fallen	unfastened
+Relation	T12	T13	NoRel	true	collision	fell
+Relation	T13	T10	NoRel	true	fell	blocked
+Relation	T13	T9	NoRel	true	fell	sitting
+Relation	T2	T13	NoRel	true	unfastened	fell
+Relation	T4	T1	NoRel	true	destroyed	destroyed
+Relation	T4	T7	NoRel	true	destroyed	fire
+Relation	T6	T13	NoRel	true	opened	fell
+Relation	T7	T13	NoRel	true	fire	fell
+Relation	T7	T8	NoRel	true	fire	burning
+Relation	T7	T9	NoRel	true	fire	sitting
+Relation	T8	T2	NoRel	true	burning	unfastened
+Relation	T8	T7	NoRel	true	burning	fire

@@ -1,0 +1,74 @@
+Text	İranlı yetkililer 536 köyde hasar meydana geldiğini , 12 bin binanın tamamen yıkıldığını , 30 binden fazla evin hasar gördüğünü ve iki köyün ise haritadan silindiğini açıkladı .	Fars Haber Ajansı , Serpol Zehab'taki tek hastanenin depremde yıkıldığını , kentin tamamında elektriklerin kesildiğini duyurdu .	Bölgede yıkılan evlerin çoğunun dar gelirliler için İran eski Cumhurbaşkanı Mahmud Ahmedinejad döneminde yapılan toplu konutlar olduğu belirtildi .	İranlı yetkililer ülkede meydana gelen maddi zararın 5 milyar Euro olduğunu tahmin ettiklerini açıkladı .	Kirmanşah eyaleti valiliği deprem nedeniyle eyalette üç gün ulusal yas ilan edildiğini duyurdu .
+Event	T1	yıkıldığını	EVENT	77
+Event	T2	gördüğünü	EVENT	118
+Event	T3	açıkladı	EVENT	167
+Event	T4	yıkıldığını	EVENT	240
+Event	T5	duyurdu	EVENT	297
+Event	T6	yıkılan	EVENT	315
+Event	T7	belirtildi	EVENT	442
+Event	T8	zararın	EVENT	500
+Event	T10	açıkladı	EVENT	550
+Event	T11	deprem	EVENT	588
+Event	T12	duyurdu	EVENT	648
+Event	T13	hasar	EVENT	28
+Event	T14	silindiğini	EVENT	155
+Relation	T11	T3	CauseEffect	true	deprem	açıkladı
+Relation	T3	T11	EffectCause	true	açıkladı	deprem
+Relation	T11	T5	CauseEffect	true	deprem	duyurdu
+Relation	T5	T11	EffectCause	true	duyurdu	deprem
+Relation	T11	T7	CauseEffect	true	deprem	belirtildi
+Relation	T7	T11	EffectCause	true	belirtildi	deprem
+Relation	T11	T10	CauseEffect	true	deprem	açıkladı
+Relation	T10	T11	EffectCause	true	açıkladı	deprem
+Relation	T11	T12	CauseEffect	true	deprem	duyurdu
+Relation	T12	T11	EffectCause	true	duyurdu	deprem
+Relation	T1	T10	NoRel	true	yıkıldığını	açıkladı
+Relation	T1	T11	NoRel	true	yıkıldığını	deprem
+Relation	T10	T2	NoRel	true	açıkladı	gördüğünü
+Relation	T10	T3	NoRel	true	açıkladı	açıkladı
+Relation	T10	T5	NoRel	true	açıkladı	duyurdu
+Relation	T10	T8	NoRel	true	açıkladı	zararın
+Relation	T12	T1	NoRel	true	duyurdu	yıkıldığını
+Relation	T12	T10	NoRel	true	duyurdu	açıkladı
+Relation	T12	T13	NoRel	true	duyurdu	hasar
+Relation	T12	T4	NoRel	true	duyurdu	yıkıldığını
+Relation	T12	T7	NoRel	true	duyurdu	belirtildi
+Relation	T13	T11	NoRel	true	hasar	deprem
+Relation	T13	T14	NoRel	true	hasar	silindiğini
+Relation	T13	T2	NoRel	true	hasar	gördüğünü
+Relation	T13	T4	NoRel	true	hasar	yıkıldığını
+Relation	T13	T5	NoRel	true	hasar	duyurdu
+Relation	T13	T8	NoRel	true	hasar	zararın
+Relation	T14	T10	NoRel	true	silindiğini	açıkladı
+Relation	T14	T11	NoRel	true	silindiğini	deprem
+Relation	T14	T2	NoRel	true	silindiğini	gördüğünü
+Relation	T2	T11	NoRel	true	gördüğünü	deprem
+Relation	T2	T4	NoRel	true	gördüğünü	yıkıldığını
+Relation	T3	T12	NoRel	true	açıkladı	duyurdu
+Relation	T3	T13	NoRel	true	açıkladı	hasar
+Relation	T3	T14	NoRel	true	açıkladı	silindiğini
+Relation	T3	T5	NoRel	true	açıkladı	duyurdu
+Relation	T3	T8	NoRel	true	açıkladı	zararın
+Relation	T4	T11	NoRel	true	yıkıldığını	deprem
+Relation	T4	T12	NoRel	true	yıkıldığını	duyurdu
+Relation	T4	T3	NoRel	true	yıkıldığını	açıkladı
+Relation	T4	T6	NoRel	true	yıkıldığını	yıkılan
+Relation	T5	T10	NoRel	true	duyurdu	açıkladı
+Relation	T5	T3	NoRel	true	duyurdu	açıkladı
+Relation	T5	T6	NoRel	true	duyurdu	yıkılan
+Relation	T5	T7	NoRel	true	duyurdu	belirtildi
+Relation	T5	T8	NoRel	true	duyurdu	zararın
+Relation	T6	T12	NoRel	true	yıkılan	duyurdu
+Relation	T6	T2	NoRel	true	yıkılan	gördüğünü
+Relation	T6	T3	NoRel	true	yıkılan	açıkladı
+Relation	T6	T4	NoRel	true	yıkılan	yıkıldığını
+Relation	T6	T7	NoRel	true	yıkılan	belirtildi
+Relation	T7	T10	NoRel	true	belirtildi	açıkladı
+Relation	T7	T13	NoRel	true	belirtildi	hasar
+Relation	T7	T14	NoRel	true	belirtildi	silindiğini
+Relation	T7	T4	NoRel	true	belirtildi	yıkıldığını
+Relation	T7	T6	NoRel	true	belirtildi	yıkılan
+Relation	T8	T13	NoRel	true	zararın	hasar
+Relation	T8	T2	NoRel	true	zararın	gördüğünü
+Relation	T8	T3	NoRel	true	zararın	açıkladı
+Relation	T8	T5	NoRel	true	zararın	duyurdu

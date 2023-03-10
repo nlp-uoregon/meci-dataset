@@ -1,0 +1,63 @@
+Text	Those tests established that the damage to the wing 's leading edge and retraction of the slats increased the stall speed of the left wing from to .	The DC - 10 incorporates two warning devices that might have alerted the pilots to the impending stall : the slat disagreement warning light , which should have illuminated after the uncommanded retraction of the slats , and the stick shaker on the captain 's control column , which activates close to the stall speed .	Both of these warning devices were powered by an electric generator driven by the number - one engine .	Both systems became inoperative after the loss of that engine .	The first officer 's control column was not equipped with a stick shaker ; the device was offered by McDonnell Douglas as an option for the first officer , but American Airlines chose not to have it installed on its DC - 10 fleet .
+Event	T0	established	EVENT	12
+Event	T1	damage	EVENT	33
+Event	T2	retraction	EVENT	72
+Event	T3	increased	EVENT	96
+Event	T4	incorporates	EVENT	161
+Event	T5	warning	EVENT	178
+Event	T6	alerted	EVENT	210
+Event	T7	stall	EVENT	246
+Event	T8	illuminated	EVENT	310
+Event	T9	retraction	EVENT	344
+Event	T10	powered	EVENT	504
+Event	T11	driven	EVENT	537
+Event	T12	loss	EVENT	615
+Event	T13	equipped	EVENT	681
+Event	T14	offered	EVENT	727
+Event	T15	chose	EVENT	815
+Event	T16	installed	EVENT	836
+Event	T17	activates	EVENT	432
+Event	T18	inoperative	EVENT	593
+Relation	T1	T3	CauseEffect	true	damage	increased
+Relation	T3	T1	EffectCause	true	increased	damage
+Relation	T2	T3	CauseEffect	true	retraction	increased
+Relation	T3	T2	EffectCause	true	increased	retraction
+Relation	T12	T18	CauseEffect	true	loss	inoperative
+Relation	T18	T12	EffectCause	true	inoperative	loss
+Relation	T0	T2	NoRel	true	established	retraction
+Relation	T1	T10	NoRel	true	damage	powered
+Relation	T1	T13	NoRel	true	damage	equipped
+Relation	T11	T7	NoRel	true	driven	stall
+Relation	T11	T9	NoRel	true	driven	retraction
+Relation	T13	T10	NoRel	true	equipped	powered
+Relation	T13	T4	NoRel	true	equipped	incorporates
+Relation	T13	T9	NoRel	true	equipped	retraction
+Relation	T14	T1	NoRel	true	offered	damage
+Relation	T14	T13	NoRel	true	offered	equipped
+Relation	T15	T13	NoRel	true	chose	equipped
+Relation	T15	T6	NoRel	true	chose	alerted
+Relation	T16	T13	NoRel	true	installed	equipped
+Relation	T16	T5	NoRel	true	installed	warning
+Relation	T17	T3	NoRel	true	activates	increased
+Relation	T17	T9	NoRel	true	activates	retraction
+Relation	T18	T17	NoRel	true	inoperative	activates
+Relation	T18	T5	NoRel	true	inoperative	warning
+Relation	T18	T6	NoRel	true	inoperative	alerted
+Relation	T2	T7	NoRel	true	retraction	stall
+Relation	T3	T10	NoRel	true	increased	powered
+Relation	T3	T14	NoRel	true	increased	offered
+Relation	T5	T13	NoRel	true	warning	equipped
+Relation	T5	T16	NoRel	true	warning	installed
+Relation	T5	T17	NoRel	true	warning	activates
+Relation	T6	T11	NoRel	true	alerted	driven
+Relation	T6	T13	NoRel	true	alerted	equipped
+Relation	T6	T15	NoRel	true	alerted	chose
+Relation	T6	T3	NoRel	true	alerted	increased
+Relation	T6	T4	NoRel	true	alerted	incorporates
+Relation	T6	T7	NoRel	true	alerted	stall
+Relation	T8	T1	NoRel	true	illuminated	damage
+Relation	T8	T13	NoRel	true	illuminated	equipped
+Relation	T8	T16	NoRel	true	illuminated	installed
+Relation	T8	T3	NoRel	true	illuminated	increased
+Relation	T8	T7	NoRel	true	illuminated	stall
+Relation	T9	T12	NoRel	true	retraction	loss

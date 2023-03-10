@@ -1,0 +1,24 @@
+Text	ORKANEN ISABEL var en kæmpe kategori 5-orkan. i Atlanterhavet i september 2003 , den ramte land på østkysten af USA som en kategori 2 orkan torsdag eftermiddag den 18. september .	Centrum af orkanen ramte land lidt syd for Cape Hatteras i North Carolina omkring klokken 13.00 lokal tid .	Isabel var på størrelse med staten Colorado , og den havde en ødelæggende effekt på et temmelig stort område .	Totalt blev der rapporteret over 4,3 millioner mennesker uden strøm .	Heraf 525.000 i North Carolina , 1.250.000 i Maryland , 78.000 i District of Columbia , 160.000 i New Jersey , 500.000 i Pennsylvania , 50.000 i Delaware , 21.000 i West Virginia .
+Event	T0	ramte	EVENT	85
+Event	T1	ramte	EVENT	199
+Event	T2	effekt	EVENT	362
+Event	T3	rapporteret	EVENT	415
+Event	T4	ORKANEN	EVENT	0
+Event	T5	kategori 5-orkan	EVENT	28
+Event	T6	størrelse	EVENT	302
+Relation	T6	T2	CauseEffect	true	størrelse	effekt
+Relation	T2	T6	EffectCause	true	effekt	størrelse
+Relation	T0	T1	NoRel	true	ramte	ramte
+Relation	T0	T5	NoRel	true	ramte	kategori 5-orkan
+Relation	T1	T2	NoRel	true	ramte	effekt
+Relation	T1	T3	NoRel	true	ramte	rapporteret
+Relation	T2	T1	NoRel	true	effekt	ramte
+Relation	T2	T3	NoRel	true	effekt	rapporteret
+Relation	T3	T0	NoRel	true	rapporteret	ramte
+Relation	T3	T1	NoRel	true	rapporteret	ramte
+Relation	T3	T2	NoRel	true	rapporteret	effekt
+Relation	T3	T5	NoRel	true	rapporteret	kategori 5-orkan
+Relation	T4	T0	NoRel	true	ORKANEN	ramte
+Relation	T4	T6	NoRel	true	ORKANEN	størrelse
+Relation	T6	T0	NoRel	true	størrelse	ramte
+Relation	T6	T3	NoRel	true	størrelse	rapporteret

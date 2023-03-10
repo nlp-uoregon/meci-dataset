@@ -1,0 +1,25 @@
+Text	Big Boy 4005 jumps at a switch track at 50 mph ( 80 km / h ) and derails in southern Wyoming .	- June 24 , 1953 –__ French Indochina __– COL DES NUAGES DERAILMENT : " About 100 or more " people are killed when a passenger train plunges 15 m ( 50 feet ) through a sabotaged viaduct .	Two locomotives and 18 cars crashed down in a ravine at Col des Nuages ( now the Hai Van Pass ) on the route between the ancient capital of Huế and the port of Tourane ( Da Nang ) .	The pass had frequently been the scene of attacks by the Communist - led Viet Minh rebels .	Officials said that a strong charge exploded just as the train arrived at the viaduct , tumbling a 7.5 m ( 25 - foot ) span into the ravine .
+Event	T0	jumps	EVENT	13
+Event	T1	derails	EVENT	65
+Event	T10	arrived	EVENT	620
+Event	T11	tumbling	EVENT	645
+Event	T3	killed	EVENT	198
+Event	T4	plunges	EVENT	228
+Event	T5	sabotaged	EVENT	263
+Event	T6	attacks	EVENT	507
+Event	T8	said	EVENT	567
+Event	T9	exploded	EVENT	593
+Relation	T1	T3	CauseEffect	true	derails	killed
+Relation	T3	T1	EffectCause	true	killed	derails
+Relation	T4	T3	CauseEffect	true	plunges	killed
+Relation	T3	T4	EffectCause	true	killed	plunges
+Relation	T10	T3	NoRel	true	arrived	killed
+Relation	T10	T8	NoRel	true	arrived	said
+Relation	T10	T9	NoRel	true	arrived	exploded
+Relation	T11	T8	NoRel	true	tumbling	said
+Relation	T3	T8	NoRel	true	killed	said
+Relation	T5	T10	NoRel	true	sabotaged	arrived
+Relation	T5	T6	NoRel	true	sabotaged	attacks
+Relation	T8	T11	NoRel	true	said	tumbling
+Relation	T8	T5	NoRel	true	said	sabotaged
+Relation	T9	T5	NoRel	true	exploded	sabotaged

@@ -1,0 +1,81 @@
+Text	En la grabación de la caja negra se escucha al copiloto que pregunta : « ¿ Fallo de motor ? » y el comandante dice : « Vuela el avión . Me cagüen la mar . Vuélalo » .	El avión se desvió a la derecha , perdió altitud y se estrelló en las inmediaciones de la pista , partiéndose en varios pedazos que fueron destrozados por la posterior explosión .	De las 172 personas que viajaban a bordo , 154 murieron en el choque o inmediatamente después en el violento incendio , incluyendo los 6 tripulantes .	Entre los fallecidos , 135 eran españoles y 19 eran de otras doce nacionalidades , entre ellas : Alemania , Francia , Mauritania , Turquía , Bulgaria , Gambia , Italia , Indonesia y Brasil .	Sobrevivieron al accidente 18 personas aunque con lesiones graves , 16 de ellos de nacionalidad española .
+Event	T0	grabación	EVENT	6
+Event	T1	escucha	EVENT	36
+Event	T2	pregunta	EVENT	60
+Event	T3	desvió	EVENT	179
+Event	T4	estrelló	EVENT	221
+Event	T5	partiéndose	EVENT	265
+Event	T6	destrozados	EVENT	306
+Event	T7	explosión	EVENT	335
+Event	T8	murieron	EVENT	394
+Event	T9	choque	EVENT	409
+Event	T10	incendio	EVENT	456
+Event	T11	fallecidos	EVENT	508
+Event	T12	Sobrevivieron	EVENT	689
+Event	T13	accidente	EVENT	706
+Event	T14	perdió	EVENT	201
+Relation	T14	T4	CauseEffect	true	perdió	estrelló
+Relation	T4	T14	EffectCause	true	estrelló	perdió
+Relation	T4	T5	CauseEffect	true	estrelló	partiéndose
+Relation	T5	T4	EffectCause	true	partiéndose	estrelló
+Relation	T9	T8	CauseEffect	true	choque	murieron
+Relation	T8	T9	EffectCause	true	murieron	choque
+Relation	T10	T8	CauseEffect	true	incendio	murieron
+Relation	T8	T10	EffectCause	true	murieron	incendio
+Relation	T7	T6	CauseEffect	true	explosión	destrozados
+Relation	T6	T7	EffectCause	true	destrozados	explosión
+Relation	T0	T3	NoRel	true	grabación	desvió
+Relation	T0	T5	NoRel	true	grabación	partiéndose
+Relation	T0	T6	NoRel	true	grabación	destrozados
+Relation	T0	T8	NoRel	true	grabación	murieron
+Relation	T0	T9	NoRel	true	grabación	choque
+Relation	T1	T12	NoRel	true	escucha	Sobrevivieron
+Relation	T1	T14	NoRel	true	escucha	perdió
+Relation	T1	T4	NoRel	true	escucha	estrelló
+Relation	T1	T5	NoRel	true	escucha	partiéndose
+Relation	T10	T11	NoRel	true	incendio	fallecidos
+Relation	T10	T12	NoRel	true	incendio	Sobrevivieron
+Relation	T10	T4	NoRel	true	incendio	estrelló
+Relation	T11	T10	NoRel	true	fallecidos	incendio
+Relation	T11	T2	NoRel	true	fallecidos	pregunta
+Relation	T11	T3	NoRel	true	fallecidos	desvió
+Relation	T11	T7	NoRel	true	fallecidos	explosión
+Relation	T12	T11	NoRel	true	Sobrevivieron	fallecidos
+Relation	T12	T13	NoRel	true	Sobrevivieron	accidente
+Relation	T12	T4	NoRel	true	Sobrevivieron	estrelló
+Relation	T12	T5	NoRel	true	Sobrevivieron	partiéndose
+Relation	T12	T6	NoRel	true	Sobrevivieron	destrozados
+Relation	T12	T9	NoRel	true	Sobrevivieron	choque
+Relation	T13	T3	NoRel	true	accidente	desvió
+Relation	T13	T5	NoRel	true	accidente	partiéndose
+Relation	T13	T6	NoRel	true	accidente	destrozados
+Relation	T14	T10	NoRel	true	perdió	incendio
+Relation	T14	T13	NoRel	true	perdió	accidente
+Relation	T14	T2	NoRel	true	perdió	pregunta
+Relation	T14	T5	NoRel	true	perdió	partiéndose
+Relation	T14	T6	NoRel	true	perdió	destrozados
+Relation	T14	T7	NoRel	true	perdió	explosión
+Relation	T14	T9	NoRel	true	perdió	choque
+Relation	T2	T12	NoRel	true	pregunta	Sobrevivieron
+Relation	T2	T14	NoRel	true	pregunta	perdió
+Relation	T3	T0	NoRel	true	desvió	grabación
+Relation	T3	T12	NoRel	true	desvió	Sobrevivieron
+Relation	T3	T14	NoRel	true	desvió	perdió
+Relation	T3	T2	NoRel	true	desvió	pregunta
+Relation	T4	T0	NoRel	true	estrelló	grabación
+Relation	T4	T2	NoRel	true	estrelló	pregunta
+Relation	T5	T10	NoRel	true	partiéndose	incendio
+Relation	T5	T2	NoRel	true	partiéndose	pregunta
+Relation	T6	T0	NoRel	true	destrozados	grabación
+Relation	T6	T11	NoRel	true	destrozados	fallecidos
+Relation	T7	T11	NoRel	true	explosión	fallecidos
+Relation	T7	T12	NoRel	true	explosión	Sobrevivieron
+Relation	T7	T14	NoRel	true	explosión	perdió
+Relation	T7	T3	NoRel	true	explosión	desvió
+Relation	T8	T11	NoRel	true	murieron	fallecidos
+Relation	T8	T2	NoRel	true	murieron	pregunta
+Relation	T9	T10	NoRel	true	choque	incendio
+Relation	T9	T11	NoRel	true	choque	fallecidos
+Relation	T9	T13	NoRel	true	choque	accidente
+Relation	T9	T3	NoRel	true	choque	desvió
+Relation	T9	T7	NoRel	true	choque	explosión

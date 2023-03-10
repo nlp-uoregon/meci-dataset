@@ -1,0 +1,56 @@
+Text	AZERBAYCAN HAVA YOLLARI'NIN 217 SEFER SAYILI UÇUŞU , 23 Aralık 2005 tarihinde yerel saatle 22.40'da Bakü , Azerbaycan'dan Aktau , Kazakistan'a giderken Hazar Gölü'ne düşmüştür .	Uçuş bir Antonov An - 140 ile gerçekleştiriliyordu .	Gece vakti , Bakü Havalimanı'ndan kalktıktan yaklaşık beş dakika sonra mürettebat bir sistem arızası bildirdi .	Uçuş aletleri olmadan gece vakti Hazar Denizi üzerinde gitmek mürettebatın uçuş parametrelerini doğruluğunu yargılamasını zorlaştırdı .	Bakü'ye geri dönmeye çalışırken , uçak kısa bir süre sonra Hazar Denizi kıyısında düştü .
+Event	T0	UÇUŞU	EVENT	45
+Event	T1	düşmüştür	EVENT	166
+Event	T2	Uçuş	EVENT	178
+Event	T3	gerçekleştiriliyordu	EVENT	208
+Event	T4	bildirdi	EVENT	332
+Event	T5	gitmek	EVENT	398
+Event	T6	uçuş	EVENT	418
+Event	T7	zorlaştırdı	EVENT	465
+Event	T8	düştü	EVENT	561
+Event	T9	kalktıktan	EVENT	265
+Event	T10	arızası	EVENT	324
+Relation	T10	T4	CauseEffect	true	arızası	bildirdi
+Relation	T4	T10	EffectCause	true	bildirdi	arızası
+Relation	T5	T7	CauseEffect	true	gitmek	zorlaştırdı
+Relation	T7	T5	EffectCause	true	zorlaştırdı	gitmek
+Relation	T0	T5	NoRel	true	UÇUŞU	gitmek
+Relation	T0	T7	NoRel	true	UÇUŞU	zorlaştırdı
+Relation	T0	T8	NoRel	true	UÇUŞU	düştü
+Relation	T0	T9	NoRel	true	UÇUŞU	kalktıktan
+Relation	T1	T2	NoRel	true	düşmüştür	Uçuş
+Relation	T1	T5	NoRel	true	düşmüştür	gitmek
+Relation	T10	T0	NoRel	true	arızası	UÇUŞU
+Relation	T10	T1	NoRel	true	arızası	düşmüştür
+Relation	T10	T5	NoRel	true	arızası	gitmek
+Relation	T10	T7	NoRel	true	arızası	zorlaştırdı
+Relation	T10	T8	NoRel	true	arızası	düştü
+Relation	T10	T9	NoRel	true	arızası	kalktıktan
+Relation	T2	T0	NoRel	true	Uçuş	UÇUŞU
+Relation	T2	T1	NoRel	true	Uçuş	düşmüştür
+Relation	T2	T10	NoRel	true	Uçuş	arızası
+Relation	T2	T8	NoRel	true	Uçuş	düştü
+Relation	T2	T9	NoRel	true	Uçuş	kalktıktan
+Relation	T3	T2	NoRel	true	gerçekleştiriliyordu	Uçuş
+Relation	T4	T1	NoRel	true	bildirdi	düşmüştür
+Relation	T4	T2	NoRel	true	bildirdi	Uçuş
+Relation	T4	T6	NoRel	true	bildirdi	uçuş
+Relation	T5	T0	NoRel	true	gitmek	UÇUŞU
+Relation	T5	T3	NoRel	true	gitmek	gerçekleştiriliyordu
+Relation	T5	T4	NoRel	true	gitmek	bildirdi
+Relation	T5	T8	NoRel	true	gitmek	düştü
+Relation	T6	T0	NoRel	true	uçuş	UÇUŞU
+Relation	T6	T4	NoRel	true	uçuş	bildirdi
+Relation	T6	T7	NoRel	true	uçuş	zorlaştırdı
+Relation	T6	T8	NoRel	true	uçuş	düştü
+Relation	T7	T10	NoRel	true	zorlaştırdı	arızası
+Relation	T7	T3	NoRel	true	zorlaştırdı	gerçekleştiriliyordu
+Relation	T7	T4	NoRel	true	zorlaştırdı	bildirdi
+Relation	T7	T8	NoRel	true	zorlaştırdı	düştü
+Relation	T8	T0	NoRel	true	düştü	UÇUŞU
+Relation	T8	T3	NoRel	true	düştü	gerçekleştiriliyordu
+Relation	T8	T5	NoRel	true	düştü	gitmek
+Relation	T9	T1	NoRel	true	kalktıktan	düşmüştür
+Relation	T9	T10	NoRel	true	kalktıktan	arızası
+Relation	T9	T6	NoRel	true	kalktıktan	uçuş
+Relation	T9	T8	NoRel	true	kalktıktan	düştü

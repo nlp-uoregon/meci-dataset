@@ -1,0 +1,57 @@
+Text	He sent word to the waiting Swedish force begging them to retreat upon meeting , but Mardefelt , having been unaware of the treaty , interpreted the plea as a trick of battle .	As a result of poor communication , and to Augustus ' dismay , the Battle of Kalisz did occur .	At the time , king Augustus of Poland , also the Electorate of Saxony , had in secret negotiated a peace treaty with the swedes .	This because after five years of marching , war and burning , the swedes had attacked Augustus where it hurt ; his own electorate .	Thus , the main Swedish army was at the time in Saxony .
+Event	T0	waiting	EVENT	20
+Event	T1	begging	EVENT	42
+Event	T10	Battle	EVENT	244
+Event	T11	occur	EVENT	265
+Event	T12	negotiated	EVENT	359
+Event	T13	treaty	EVENT	378
+Event	T14	marching	EVENT	436
+Event	T15	war	EVENT	447
+Event	T16	burning	EVENT	455
+Event	T17	attacked	EVENT	480
+Event	T18	hurt	EVENT	507
+Event	T2	retreat	EVENT	58
+Event	T3	meeting	EVENT	71
+Event	T4	interpreted	EVENT	133
+Event	T5	plea	EVENT	149
+Event	T6	trick	EVENT	159
+Event	T7	battle	EVENT	168
+Event	T9	dismay	EVENT	231
+Relation	T1	T2	CauseEffect	true	begging	retreat
+Relation	T2	T1	EffectCause	true	retreat	begging
+Relation	T9	T11	CauseEffect	true	dismay	occur
+Relation	T11	T9	EffectCause	true	occur	dismay
+Relation	T13	T17	CauseEffect	true	treaty	attacked
+Relation	T17	T13	EffectCause	true	attacked	treaty
+Relation	T1	T14	NoRel	true	begging	marching
+Relation	T1	T18	NoRel	true	begging	hurt
+Relation	T1	T4	NoRel	true	begging	interpreted
+Relation	T1	T6	NoRel	true	begging	trick
+Relation	T1	T7	NoRel	true	begging	battle
+Relation	T10	T11	NoRel	true	Battle	occur
+Relation	T10	T18	NoRel	true	Battle	hurt
+Relation	T10	T2	NoRel	true	Battle	retreat
+Relation	T11	T4	NoRel	true	occur	interpreted
+Relation	T12	T3	NoRel	true	negotiated	meeting
+Relation	T13	T14	NoRel	true	treaty	marching
+Relation	T13	T18	NoRel	true	treaty	hurt
+Relation	T13	T5	NoRel	true	treaty	plea
+Relation	T13	T6	NoRel	true	treaty	trick
+Relation	T13	T7	NoRel	true	treaty	battle
+Relation	T14	T0	NoRel	true	marching	waiting
+Relation	T14	T12	NoRel	true	marching	negotiated
+Relation	T16	T12	NoRel	true	burning	negotiated
+Relation	T16	T18	NoRel	true	burning	hurt
+Relation	T16	T4	NoRel	true	burning	interpreted
+Relation	T17	T11	NoRel	true	attacked	occur
+Relation	T17	T5	NoRel	true	attacked	plea
+Relation	T2	T10	NoRel	true	retreat	Battle
+Relation	T2	T12	NoRel	true	retreat	negotiated
+Relation	T2	T9	NoRel	true	retreat	dismay
+Relation	T3	T15	NoRel	true	meeting	war
+Relation	T3	T9	NoRel	true	meeting	dismay
+Relation	T4	T2	NoRel	true	interpreted	retreat
+Relation	T5	T16	NoRel	true	plea	burning
+Relation	T6	T1	NoRel	true	trick	begging
+Relation	T7	T6	NoRel	true	battle	trick
+Relation	T9	T18	NoRel	true	dismay	hurt

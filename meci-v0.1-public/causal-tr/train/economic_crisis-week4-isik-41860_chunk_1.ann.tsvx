@@ -1,0 +1,33 @@
+Text	Kendisi ve karısı , askeri bir mahkemenin televizyonda iki saat boyunca yayınlanan yargılaması sonucu kurşuna dizildi .	200px | sağ | küçükresim | Çavuşesku ve ailesi ( 1968 )	Olt ili'nin Scorniceşti kasabasında , çiftçilik yapan fakir bir köylü ailede doğan Çavuşesku'nun babası Andruță , 3 hektarlık ( 7,4 dönüm ) tarım arazisine ve birkaç koyuna sahipti ve Nicolae , büyük ailesinin gelirini terzilikle destekledi .	Son derece küfürcü ve katı olan babası yüzünden fabrikalarda çalışmak için Bükreş'e kaçıncaya ve 11 yaşına kadar köy okulunda okudu .	Başlangıçta kız kardeşi Niculina Rusescu ile birlikte yaşadı ve ardından bir kunduracıda çırak oldu .
+Event	T0	dizildi	EVENT	110
+Event	T1	destekledi	EVENT	406
+Event	T3	okudu	EVENT	545
+Event	T4	yaşadı	EVENT	607
+Event	T5	oldu	EVENT	648
+Event	T6	yargılaması	EVENT	83
+Event	T2	küfürcü	EVENT	430
+Event	T7	kaçıncaya	EVENT	503
+Relation	T6	T0	CauseEffect	true	yargılaması	dizildi
+Relation	T0	T6	EffectCause	true	dizildi	yargılaması
+Relation	T2	T7	CauseEffect	true	küfürcü	kaçıncaya
+Relation	T7	T2	EffectCause	true	kaçıncaya	küfürcü
+Relation	T7	T4	CauseEffect	true	kaçıncaya	yaşadı
+Relation	T4	T7	EffectCause	true	yaşadı	kaçıncaya
+Relation	T7	T5	CauseEffect	true	kaçıncaya	oldu
+Relation	T5	T7	EffectCause	true	oldu	kaçıncaya
+Relation	T0	T3	NoRel	true	dizildi	okudu
+Relation	T0	T4	NoRel	true	dizildi	yaşadı
+Relation	T0	T7	NoRel	true	dizildi	kaçıncaya
+Relation	T1	T4	NoRel	true	destekledi	yaşadı
+Relation	T3	T5	NoRel	true	okudu	oldu
+Relation	T3	T6	NoRel	true	okudu	yargılaması
+Relation	T3	T7	NoRel	true	okudu	kaçıncaya
+Relation	T4	T0	NoRel	true	yaşadı	dizildi
+Relation	T4	T2	NoRel	true	yaşadı	küfürcü
+Relation	T4	T3	NoRel	true	yaşadı	okudu
+Relation	T5	T1	NoRel	true	oldu	destekledi
+Relation	T5	T4	NoRel	true	oldu	yaşadı
+Relation	T6	T2	NoRel	true	yargılaması	küfürcü
+Relation	T6	T3	NoRel	true	yargılaması	okudu
+Relation	T6	T5	NoRel	true	yargılaması	oldu
+Relation	T7	T3	NoRel	true	kaçıncaya	okudu

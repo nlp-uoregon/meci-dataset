@@ -1,0 +1,21 @@
+Text	جگہ جگہ طبی معائنے کے جارہے ہیں ۔	17 مارچ کو حکومت ہند نے تمام ریاستوں کو سماجی دوری بنانے کی ہدایات جاری کی ہیں ۔	شہریوں سے اپیل کی ہیکہ 31 مارچ تک بھیڑ میں جانے سے بچیں ۔	-____' 30 جنوری _' کو کورونا وائرس کی بیماری کا پہلا معاملہ سامنے آیا ۔	یہ کیرلا کا ایک طالب علم تھا جو ووہان یونیورسٹی سے لوٹا اور اس بیماری سے متاثر پایا گیا ۔
+Event	T0	معائنے	EVENT	12
+Event	T2	بنانے	EVENT	85
+Event	T3	جانے	EVENT	158
+Event	T4	بیماری	EVENT	211
+Event	T6	لوٹا	EVENT	296
+Event	T7	بیماری	EVENT	308
+Relation	T6	T7	CauseEffect	true	لوٹا	بیماری
+Relation	T7	T6	EffectCause	true	بیماری	لوٹا
+Relation	T4	T0	CauseEffect	true	بیماری	معائنے
+Relation	T0	T4	EffectCause	true	معائنے	بیماری
+Relation	T4	T3	CauseEffect	true	بیماری	جانے
+Relation	T3	T4	EffectCause	true	جانے	بیماری
+Relation	T4	T2	CauseEffect	true	بیماری	بنانے
+Relation	T2	T4	EffectCause	true	بنانے	بیماری
+Relation	T0	T7	NoRel	true	معائنے	بیماری
+Relation	T2	T7	NoRel	true	بنانے	بیماری
+Relation	T3	T0	NoRel	true	جانے	معائنے
+Relation	T3	T7	NoRel	true	جانے	بیماری
+Relation	T6	T0	NoRel	true	لوٹا	معائنے
+Relation	T7	T2	NoRel	true	بیماری	بنانے

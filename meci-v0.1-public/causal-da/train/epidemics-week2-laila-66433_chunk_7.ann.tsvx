@@ -1,0 +1,35 @@
+Text	Den spanske syge kom til Danmark i tre bølger .	Første bølge kom til Danmark via udlandet i juli 1918 , og den klingede af i september 1918 .	Den var ret mild , men synes at have ramt militærforlægninger særligt hårdt .	Der blev anmeldt 80.000 tilfælde af de behandlende læger , hvoraf en del anså den som " Pfeiffer's bacille " snarere end virus , og behandlinger hjalp ikke .	Landlæger var begrænset af benzinrationering .
+Event	T0	kom	EVENT	17
+Event	T1	bølger	EVENT	39
+Event	T2	kom	EVENT	61
+Event	T3	synes	EVENT	165
+Event	T5	anmeldt	EVENT	229
+Event	T6	tilfælde	EVENT	244
+Event	T7	anså	EVENT	293
+Event	T8	hjalp	EVENT	365
+Event	T9	benzinrationering	EVENT	405
+Relation	T0	T1	NoRel	true	kom	bølger
+Relation	T0	T2	NoRel	true	kom	kom
+Relation	T0	T3	NoRel	true	kom	synes
+Relation	T0	T5	NoRel	true	kom	anmeldt
+Relation	T0	T6	NoRel	true	kom	tilfælde
+Relation	T1	T3	NoRel	true	bølger	synes
+Relation	T1	T8	NoRel	true	bølger	hjalp
+Relation	T2	T1	NoRel	true	kom	bølger
+Relation	T2	T8	NoRel	true	kom	hjalp
+Relation	T2	T9	NoRel	true	kom	benzinrationering
+Relation	T3	T0	NoRel	true	synes	kom
+Relation	T3	T2	NoRel	true	synes	kom
+Relation	T3	T7	NoRel	true	synes	anså
+Relation	T3	T8	NoRel	true	synes	hjalp
+Relation	T5	T0	NoRel	true	anmeldt	kom
+Relation	T5	T1	NoRel	true	anmeldt	bølger
+Relation	T6	T1	NoRel	true	tilfælde	bølger
+Relation	T7	T9	NoRel	true	anså	benzinrationering
+Relation	T8	T0	NoRel	true	hjalp	kom
+Relation	T8	T6	NoRel	true	hjalp	tilfælde
+Relation	T8	T7	NoRel	true	hjalp	anså
+Relation	T8	T9	NoRel	true	hjalp	benzinrationering
+Relation	T9	T0	NoRel	true	benzinrationering	kom
+Relation	T9	T3	NoRel	true	benzinrationering	synes
+Relation	T9	T8	NoRel	true	benzinrationering	hjalp

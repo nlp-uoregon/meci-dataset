@@ -1,0 +1,85 @@
+Text	GODSTOGSAFSPORINGEN I FARRIS 2012 fandt sted 29. november 2012 , da et godstog fra Hector Rail afsporede under udkørsel fra Farris mod Sommersted og ødelagde 6-7 km spor på Vamdrup-Padborg-banen .	Den enkeltsporede strækning var lukket til 19. december .	Lukningen af strækningen havde væsentlig betydning for den internationale jernbanegodstrafik mellem Danmark/Sverige/Norge og Tyskland , der normalt benytter denne strækning .	Der blev meget hurtigt skabt mulighed for at sende godstogene via Bramming-Tønder , men strækningen havde ikke kapacitet nok til alle planlagte godstog , og desuden måtte persontogstrafikken mellem Bramming og Tønder indstilles for at frigøre kapacitet til godstogene .	Efter krydsning med et modkørende persontog kørte godstoget fra spor 2 gennem sporskiftet i stationens sydlige ende .
+Event	T0	udkørsel	EVENT	111
+Event	T1	ødelagde	EVENT	149
+Event	T3	lukket	EVENT	229
+Event	T4	Lukningen	EVENT	255
+Event	T5	benytter	EVENT	403
+Event	T6	sende	EVENT	475
+Event	T7	indstilles	EVENT	647
+Event	T8	krydsning	EVENT	706
+Event	T9	kørte	EVENT	744
+Event	T10	GODSTOGSAFSPORINGEN	EVENT	0
+Event	T11	afsporede	EVENT	95
+Event	T2	skabt	EVENT	453
+Event	T12	kapacitet	EVENT	541
+Event	T13	betydning	EVENT	296
+Relation	T11	T1	CauseEffect	true	afsporede	ødelagde
+Relation	T1	T11	EffectCause	true	ødelagde	afsporede
+Relation	T10	T3	CauseEffect	true	GODSTOGSAFSPORINGEN	lukket
+Relation	T3	T10	EffectCause	true	lukket	GODSTOGSAFSPORINGEN
+Relation	T11	T3	CauseEffect	true	afsporede	lukket
+Relation	T3	T11	EffectCause	true	lukket	afsporede
+Relation	T4	T13	CauseEffect	true	Lukningen	betydning
+Relation	T13	T4	EffectCause	true	betydning	Lukningen
+Relation	T12	T7	CauseEffect	true	kapacitet	indstilles
+Relation	T7	T12	EffectCause	true	indstilles	kapacitet
+Relation	T0	T1	NoRel	true	udkørsel	ødelagde
+Relation	T0	T3	NoRel	true	udkørsel	lukket
+Relation	T0	T5	NoRel	true	udkørsel	benytter
+Relation	T1	T13	NoRel	true	ødelagde	betydning
+Relation	T1	T6	NoRel	true	ødelagde	sende
+Relation	T1	T8	NoRel	true	ødelagde	krydsning
+Relation	T10	T12	NoRel	true	GODSTOGSAFSPORINGEN	kapacitet
+Relation	T10	T2	NoRel	true	GODSTOGSAFSPORINGEN	skabt
+Relation	T10	T6	NoRel	true	GODSTOGSAFSPORINGEN	sende
+Relation	T10	T7	NoRel	true	GODSTOGSAFSPORINGEN	indstilles
+Relation	T10	T8	NoRel	true	GODSTOGSAFSPORINGEN	krydsning
+Relation	T11	T0	NoRel	true	afsporede	udkørsel
+Relation	T11	T13	NoRel	true	afsporede	betydning
+Relation	T11	T7	NoRel	true	afsporede	indstilles
+Relation	T11	T9	NoRel	true	afsporede	kørte
+Relation	T12	T0	NoRel	true	kapacitet	udkørsel
+Relation	T13	T0	NoRel	true	betydning	udkørsel
+Relation	T13	T10	NoRel	true	betydning	GODSTOGSAFSPORINGEN
+Relation	T13	T11	NoRel	true	betydning	afsporede
+Relation	T13	T2	NoRel	true	betydning	skabt
+Relation	T13	T8	NoRel	true	betydning	krydsning
+Relation	T2	T6	NoRel	true	skabt	sende
+Relation	T3	T0	NoRel	true	lukket	udkørsel
+Relation	T3	T1	NoRel	true	lukket	ødelagde
+Relation	T3	T12	NoRel	true	lukket	kapacitet
+Relation	T3	T13	NoRel	true	lukket	betydning
+Relation	T3	T6	NoRel	true	lukket	sende
+Relation	T3	T9	NoRel	true	lukket	kørte
+Relation	T4	T10	NoRel	true	Lukningen	GODSTOGSAFSPORINGEN
+Relation	T4	T12	NoRel	true	Lukningen	kapacitet
+Relation	T4	T8	NoRel	true	Lukningen	krydsning
+Relation	T5	T1	NoRel	true	benytter	ødelagde
+Relation	T5	T10	NoRel	true	benytter	GODSTOGSAFSPORINGEN
+Relation	T5	T11	NoRel	true	benytter	afsporede
+Relation	T5	T12	NoRel	true	benytter	kapacitet
+Relation	T5	T13	NoRel	true	benytter	betydning
+Relation	T5	T4	NoRel	true	benytter	Lukningen
+Relation	T5	T8	NoRel	true	benytter	krydsning
+Relation	T6	T1	NoRel	true	sende	ødelagde
+Relation	T6	T12	NoRel	true	sende	kapacitet
+Relation	T6	T2	NoRel	true	sende	skabt
+Relation	T6	T3	NoRel	true	sende	lukket
+Relation	T6	T4	NoRel	true	sende	Lukningen
+Relation	T6	T7	NoRel	true	sende	indstilles
+Relation	T7	T0	NoRel	true	indstilles	udkørsel
+Relation	T7	T11	NoRel	true	indstilles	afsporede
+Relation	T7	T2	NoRel	true	indstilles	skabt
+Relation	T7	T9	NoRel	true	indstilles	kørte
+Relation	T8	T0	NoRel	true	krydsning	udkørsel
+Relation	T8	T10	NoRel	true	krydsning	GODSTOGSAFSPORINGEN
+Relation	T8	T11	NoRel	true	krydsning	afsporede
+Relation	T8	T3	NoRel	true	krydsning	lukket
+Relation	T8	T5	NoRel	true	krydsning	benytter
+Relation	T8	T7	NoRel	true	krydsning	indstilles
+Relation	T8	T9	NoRel	true	krydsning	kørte
+Relation	T9	T10	NoRel	true	kørte	GODSTOGSAFSPORINGEN
+Relation	T9	T12	NoRel	true	kørte	kapacitet
+Relation	T9	T2	NoRel	true	kørte	skabt
+Relation	T9	T5	NoRel	true	kørte	benytter
+Relation	T9	T7	NoRel	true	kørte	indstilles

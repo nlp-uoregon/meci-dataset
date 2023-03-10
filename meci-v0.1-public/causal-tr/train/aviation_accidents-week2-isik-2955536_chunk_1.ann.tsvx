@@ -1,0 +1,49 @@
+Text	Praimnath , bunun üzerine karar değiştirerek 81. kattaki ofisine geri döndü .	Geri döndükten kısa bir süre sonra United Airlines'ın 175 sefer sayılı uçuşu , Güney Kulesi'nin 78 - 84. katları arasına binanın güneydoğu yönünden çarptı .	Ofisi binanın güneybatı yönünde olan Praimnath , çarpmadan sağ kurtulmuş ancak mahsur kalmıştı .	Uçağın çarpmasıyla birlikte Praimnath'ın ofisinden merdivenlere giden yol tamamen enkaz ile tıkandı .	Praimnath , yardım çığlıkları attı ve bu çığlıklar , 84._kattan merdivenler yoluyla inmekte olan Brian Clark tarafından duyuldu .
+Event	T1	döndükten	EVENT	83
+Event	T10	döndü	EVENT	70
+Event	T11	mahsur	EVENT	314
+Event	T2	uçuşu	EVENT	149
+Event	T3	çarptı	EVENT	226
+Event	T4	kurtulmuş	EVENT	298
+Event	T5	çarpmasıyla	EVENT	339
+Event	T6	tıkandı	EVENT	424
+Event	T7	çığlıkları	EVENT	453
+Event	T8	duyuldu	EVENT	554
+Event	T9	değiştirerek	EVENT	32
+Relation	T9	T10	CauseEffect	true	değiştirerek	döndü
+Relation	T10	T9	EffectCause	true	döndü	değiştirerek
+Relation	T5	T6	CauseEffect	true	çarpmasıyla	tıkandı
+Relation	T6	T5	EffectCause	true	tıkandı	çarpmasıyla
+Relation	T6	T11	CauseEffect	true	tıkandı	mahsur
+Relation	T11	T6	EffectCause	true	mahsur	tıkandı
+Relation	T11	T7	CauseEffect	true	mahsur	çığlıkları
+Relation	T7	T11	EffectCause	true	çığlıkları	mahsur
+Relation	T7	T8	CauseEffect	true	çığlıkları	duyuldu
+Relation	T8	T7	EffectCause	true	duyuldu	çığlıkları
+Relation	T5	T11	CauseEffect	true	çarpmasıyla	mahsur
+Relation	T11	T5	EffectCause	true	mahsur	çarpmasıyla
+Relation	T1	T11	NoRel	true	döndükten	mahsur
+Relation	T1	T6	NoRel	true	döndükten	tıkandı
+Relation	T1	T9	NoRel	true	döndükten	değiştirerek
+Relation	T10	T1	NoRel	true	döndü	döndükten
+Relation	T10	T2	NoRel	true	döndü	uçuşu
+Relation	T10	T4	NoRel	true	döndü	kurtulmuş
+Relation	T10	T7	NoRel	true	döndü	çığlıkları
+Relation	T11	T10	NoRel	true	mahsur	döndü
+Relation	T11	T9	NoRel	true	mahsur	değiştirerek
+Relation	T2	T10	NoRel	true	uçuşu	döndü
+Relation	T2	T11	NoRel	true	uçuşu	mahsur
+Relation	T2	T7	NoRel	true	uçuşu	çığlıkları
+Relation	T3	T8	NoRel	true	çarptı	duyuldu
+Relation	T4	T8	NoRel	true	kurtulmuş	duyuldu
+Relation	T5	T1	NoRel	true	çarpmasıyla	döndükten
+Relation	T5	T2	NoRel	true	çarpmasıyla	uçuşu
+Relation	T5	T9	NoRel	true	çarpmasıyla	değiştirerek
+Relation	T6	T1	NoRel	true	tıkandı	döndükten
+Relation	T6	T7	NoRel	true	tıkandı	çığlıkları
+Relation	T6	T8	NoRel	true	tıkandı	duyuldu
+Relation	T8	T5	NoRel	true	duyuldu	çarpmasıyla
+Relation	T9	T11	NoRel	true	değiştirerek	mahsur
+Relation	T9	T2	NoRel	true	değiştirerek	uçuşu
+Relation	T9	T5	NoRel	true	değiştirerek	çarpmasıyla
+Relation	T9	T6	NoRel	true	değiştirerek	tıkandı

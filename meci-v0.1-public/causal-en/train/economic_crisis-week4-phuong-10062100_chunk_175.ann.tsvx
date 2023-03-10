@@ -1,0 +1,63 @@
+Text	The Dodd - Frank Act addressed these elements , but stopped short of breaking up the largest banks , which grew larger due to mergers of investment banks at the core of the crisis with depository banks ( e.g. , JP Morgan Chase acquired Bear Stearns and Bank of America acquired Merrill Lynch in 2008 ) .	Assets of five largest banks as a share of total commercial banking assets rose then stabilized in the wake of the crisis .	During 2013 , Senators John McCain ( Republican ) and Elizabeth Warren ( Democratic ) proposed a bill to separate investment and depository banking , to insulate depository banks from higher risk activities .	These were separated prior to the 1999 repeal of the Glass - Steagall Act .	Significant law enforcement action and litigation resulted from the crisis .
+Event	T0	addressed	EVENT	21
+Event	T1	stopped	EVENT	52
+Event	T2	mergers	EVENT	126
+Event	T3	crisis	EVENT	173
+Event	T4	acquired	EVENT	227
+Event	T5	acquired	EVENT	269
+Event	T6	rose	EVENT	379
+Event	T7	stabilized	EVENT	389
+Event	T8	crisis	EVENT	419
+Event	T9	proposed	EVENT	514
+Event	T10	bill	EVENT	525
+Event	T11	insulate	EVENT	581
+Event	T12	separated	EVENT	648
+Event	T13	repeal	EVENT	676
+Event	T14	action	EVENT	741
+Event	T15	resulted	EVENT	763
+Event	T16	crisis	EVENT	781
+Event	T17	grew larger	EVENT	107
+Event	T18	litigation	EVENT	752
+Relation	T2	T17	CauseEffect	true	mergers	grew larger
+Relation	T17	T2	EffectCause	true	grew larger	mergers
+Relation	T8	T6	CauseEffect	true	crisis	rose
+Relation	T6	T8	EffectCause	true	rose	crisis
+Relation	T11	T10	CauseEffect	true	insulate	bill
+Relation	T10	T11	EffectCause	true	bill	insulate
+Relation	T12	T13	CauseEffect	true	separated	repeal
+Relation	T13	T12	EffectCause	true	repeal	separated
+Relation	T16	T18	CauseEffect	true	crisis	litigation
+Relation	T18	T16	EffectCause	true	litigation	crisis
+Relation	T16	T14	CauseEffect	true	crisis	action
+Relation	T14	T16	EffectCause	true	action	crisis
+Relation	T1	T0	NoRel	true	stopped	addressed
+Relation	T1	T3	NoRel	true	stopped	crisis
+Relation	T10	T2	NoRel	true	bill	mergers
+Relation	T10	T9	NoRel	true	bill	proposed
+Relation	T11	T1	NoRel	true	insulate	stopped
+Relation	T12	T18	NoRel	true	separated	litigation
+Relation	T12	T7	NoRel	true	separated	stabilized
+Relation	T13	T3	NoRel	true	repeal	crisis
+Relation	T14	T0	NoRel	true	action	addressed
+Relation	T14	T12	NoRel	true	action	separated
+Relation	T14	T3	NoRel	true	action	crisis
+Relation	T14	T8	NoRel	true	action	crisis
+Relation	T15	T18	NoRel	true	resulted	litigation
+Relation	T16	T1	NoRel	true	crisis	stopped
+Relation	T16	T17	NoRel	true	crisis	grew larger
+Relation	T17	T11	NoRel	true	grew larger	insulate
+Relation	T17	T13	NoRel	true	grew larger	repeal
+Relation	T17	T7	NoRel	true	grew larger	stabilized
+Relation	T18	T1	NoRel	true	litigation	stopped
+Relation	T18	T3	NoRel	true	litigation	crisis
+Relation	T3	T0	NoRel	true	crisis	addressed
+Relation	T3	T11	NoRel	true	crisis	insulate
+Relation	T4	T1	NoRel	true	acquired	stopped
+Relation	T4	T18	NoRel	true	acquired	litigation
+Relation	T4	T2	NoRel	true	acquired	mergers
+Relation	T6	T14	NoRel	true	rose	action
+Relation	T7	T11	NoRel	true	stabilized	insulate
+Relation	T7	T8	NoRel	true	stabilized	crisis
+Relation	T9	T1	NoRel	true	proposed	stopped
+Relation	T9	T12	NoRel	true	proposed	separated
+Relation	T9	T4	NoRel	true	proposed	acquired

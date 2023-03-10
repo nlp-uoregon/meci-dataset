@@ -1,0 +1,52 @@
+Text	Collett pulled an on - base transfer to join No. 32 Squadron RFC on 1 March 1916 ; however , he was then posted to No. 18 Squadron RFC on 9 March 1916 as a Vickers FB. 5 pilot .	After a month 's service , he was admitted to hospital on 18 April with a broken nose , and returned to Home Establishment in England via the merchant ship _ Delta _ .	On 13 June 1916 , he was posted to the Royal Flying Corps ' Experimental Station at Orfordness , Suffolk as a test pilot .	His duties there included undertaking the British military 's first parachute jump from an aeroplane , a Royal Aircraft Factory BE. 2 c , from a height of on 13 January 1917 using a parachute designed by Everard Calthrop .	He successfully repeated the experiment several days later .
+Event	T0	pulled	EVENT	8
+Event	T1	transfer	EVENT	28
+Event	T2	join	EVENT	40
+Event	T3	posted	EVENT	105
+Event	T4	service	EVENT	195
+Event	T5	returned	EVENT	270
+Event	T6	posted	EVENT	371
+Event	T7	test	EVENT	456
+Event	T8	duties	EVENT	473
+Event	T9	undertaking	EVENT	495
+Event	T10	jump	EVENT	547
+Event	T11	using	EVENT	643
+Event	T12	designed	EVENT	661
+Event	T13	repeated	EVENT	708
+Event	T14	experiment	EVENT	721
+Event	T15	broken	EVENT	252
+Relation	T0	T2	CauseEffect	true	pulled	join
+Relation	T2	T0	EffectCause	true	join	pulled
+Relation	T4	T15	CauseEffect	true	service	broken
+Relation	T15	T4	EffectCause	true	broken	service
+Relation	T15	T5	CauseEffect	true	broken	returned
+Relation	T5	T15	EffectCause	true	returned	broken
+Relation	T0	T11	NoRel	true	pulled	using
+Relation	T0	T15	NoRel	true	pulled	broken
+Relation	T0	T8	NoRel	true	pulled	duties
+Relation	T10	T4	NoRel	true	jump	service
+Relation	T11	T10	NoRel	true	using	jump
+Relation	T11	T9	NoRel	true	using	undertaking
+Relation	T12	T1	NoRel	true	designed	transfer
+Relation	T12	T7	NoRel	true	designed	test
+Relation	T13	T3	NoRel	true	repeated	posted
+Relation	T14	T1	NoRel	true	experiment	transfer
+Relation	T14	T10	NoRel	true	experiment	jump
+Relation	T14	T15	NoRel	true	experiment	broken
+Relation	T14	T5	NoRel	true	experiment	returned
+Relation	T14	T6	NoRel	true	experiment	posted
+Relation	T14	T7	NoRel	true	experiment	test
+Relation	T14	T9	NoRel	true	experiment	undertaking
+Relation	T2	T13	NoRel	true	join	repeated
+Relation	T2	T14	NoRel	true	join	experiment
+Relation	T3	T15	NoRel	true	posted	broken
+Relation	T3	T4	NoRel	true	posted	service
+Relation	T4	T1	NoRel	true	service	transfer
+Relation	T4	T11	NoRel	true	service	using
+Relation	T4	T12	NoRel	true	service	designed
+Relation	T4	T8	NoRel	true	service	duties
+Relation	T7	T14	NoRel	true	test	experiment
+Relation	T7	T2	NoRel	true	test	join
+Relation	T8	T6	NoRel	true	duties	posted
+Relation	T9	T2	NoRel	true	undertaking	join
+Relation	T9	T7	NoRel	true	undertaking	test

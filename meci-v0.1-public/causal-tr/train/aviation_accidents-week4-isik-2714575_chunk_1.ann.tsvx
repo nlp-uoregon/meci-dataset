@@ -1,0 +1,29 @@
+Text	Kaptan pilot A. İ. Solovyov'un Tupolev TB - 3'te uçuş tecrübesi olmamasına ve bu nedenle yolcu olarak kokpitte oturmasına rağmen ; üstlerin talimatıyla uçak , yardımcı pilot G. S. Tupçiy tarafından uçuruldu .	Uçakta toplam 34 kişi vardı ve yakıt depolarında 3,2 ton yakıt doldurulmuştu .	Kalkış ağırlığı yaklaşık bir ton aşıldı .	Hava tahminlerine göre , Bakanas ilçesinde sis olmalıydı ama aslında sis , Almatı ilçesinde başlamıştı .	Buna rağmen sivil hava filosu departmanı başkanı A. Y. Gatuşkin uçağın kalkmasına karar verdi .
+Event	T0	uçuruldu	EVENT	198
+Event	T1	Kalkış	EVENT	288
+Event	T2	aşıldı	EVENT	321
+Event	T3	sis	EVENT	373
+Event	T4	sis	EVENT	399
+Event	T5	verdi	EVENT	523
+Event	T6	talimatıyla	EVENT	140
+Event	T7	doldurulmuştu	EVENT	272
+Relation	T7	T2	CauseEffect	true	doldurulmuştu	aşıldı
+Relation	T2	T7	EffectCause	true	aşıldı	doldurulmuştu
+Relation	T5	T0	CauseEffect	true	verdi	uçuruldu
+Relation	T0	T5	EffectCause	true	uçuruldu	verdi
+Relation	T6	T0	CauseEffect	true	talimatıyla	uçuruldu
+Relation	T0	T6	EffectCause	true	uçuruldu	talimatıyla
+Relation	T1	T0	NoRel	true	Kalkış	uçuruldu
+Relation	T1	T3	NoRel	true	Kalkış	sis
+Relation	T3	T6	NoRel	true	sis	talimatıyla
+Relation	T4	T0	NoRel	true	sis	uçuruldu
+Relation	T4	T5	NoRel	true	sis	verdi
+Relation	T5	T2	NoRel	true	verdi	aşıldı
+Relation	T5	T3	NoRel	true	verdi	sis
+Relation	T6	T1	NoRel	true	talimatıyla	Kalkış
+Relation	T6	T3	NoRel	true	talimatıyla	sis
+Relation	T6	T5	NoRel	true	talimatıyla	verdi
+Relation	T6	T7	NoRel	true	talimatıyla	doldurulmuştu
+Relation	T7	T1	NoRel	true	doldurulmuştu	Kalkış
+Relation	T7	T3	NoRel	true	doldurulmuştu	sis
+Relation	T7	T6	NoRel	true	doldurulmuştu	talimatıyla

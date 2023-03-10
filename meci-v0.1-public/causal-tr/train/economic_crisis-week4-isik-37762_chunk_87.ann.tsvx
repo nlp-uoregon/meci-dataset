@@ -1,0 +1,44 @@
+Text	Tarihçi Karl Dietrich Bracher bu mahkeme sistemini , nesnel yasal prosedürleri ortadan kaldırarak vatandaşları " SS terörünün yerinde adaletine " karşı savunmasız bıraktığı için totaliter Nazi polis devletinin yaratılmasında bir faktör olarak tanımlıyor .	1933'te Hitler'in gücü ele geçirmesinden sonra kısa süre içerisinde ülkedeki binicilik derneklerinin çoğu SS ve SA tarafından devralındı .	Bu derneklerin üyeleri , _ Reiter - SS _'de ( SS Süvari Birlikleri ) hizmet etmek için savaş eğitimi aldı .	Eylül 1939'ta ilk SS süvari alayı kuruldu ve _ SS - Totenkopf Reitstandarte 1 _ olarak adlandırıldı .	O zamanlar SS - _ Standartenführer _ Hermann Fegelein tarafından komuta edilen birim Polonya'da göreve atandı ve burada Polonya entelijan siyasının imhasında yer aldı .
+Event	T0	bıraktığı	EVENT	163
+Event	T1	tanımlıyor	EVENT	243
+Event	T2	geçirmesinden	EVENT	283
+Event	T3	devralındı	EVENT	382
+Event	T4	aldı	EVENT	496
+Event	T5	kuruldu	EVENT	537
+Event	T6	adlandırıldı	EVENT	590
+Event	T7	aldı	EVENT	767
+Event	T8	atandı	EVENT	708
+Relation	T2	T3	CauseEffect	true	geçirmesinden	devralındı
+Relation	T3	T2	EffectCause	true	devralındı	geçirmesinden
+Relation	T3	T4	CauseEffect	true	devralındı	aldı
+Relation	T4	T3	EffectCause	true	aldı	devralındı
+Relation	T4	T5	CauseEffect	true	aldı	kuruldu
+Relation	T5	T4	EffectCause	true	kuruldu	aldı
+Relation	T5	T8	CauseEffect	true	kuruldu	atandı
+Relation	T8	T5	EffectCause	true	atandı	kuruldu
+Relation	T8	T7	CauseEffect	true	atandı	aldı
+Relation	T7	T8	EffectCause	true	aldı	atandı
+Relation	T0	T1	NoRel	true	bıraktığı	tanımlıyor
+Relation	T0	T2	NoRel	true	bıraktığı	geçirmesinden
+Relation	T0	T8	NoRel	true	bıraktığı	atandı
+Relation	T2	T5	NoRel	true	geçirmesinden	kuruldu
+Relation	T2	T8	NoRel	true	geçirmesinden	atandı
+Relation	T3	T0	NoRel	true	devralındı	bıraktığı
+Relation	T3	T5	NoRel	true	devralındı	kuruldu
+Relation	T3	T7	NoRel	true	devralındı	aldı
+Relation	T3	T8	NoRel	true	devralındı	atandı
+Relation	T4	T0	NoRel	true	aldı	bıraktığı
+Relation	T4	T1	NoRel	true	aldı	tanımlıyor
+Relation	T4	T6	NoRel	true	aldı	adlandırıldı
+Relation	T4	T8	NoRel	true	aldı	atandı
+Relation	T5	T0	NoRel	true	kuruldu	bıraktığı
+Relation	T5	T2	NoRel	true	kuruldu	geçirmesinden
+Relation	T6	T2	NoRel	true	adlandırıldı	geçirmesinden
+Relation	T6	T7	NoRel	true	adlandırıldı	aldı
+Relation	T7	T0	NoRel	true	aldı	bıraktığı
+Relation	T7	T3	NoRel	true	aldı	devralındı
+Relation	T7	T5	NoRel	true	aldı	kuruldu
+Relation	T8	T0	NoRel	true	atandı	bıraktığı
+Relation	T8	T1	NoRel	true	atandı	tanımlıyor
+Relation	T8	T3	NoRel	true	atandı	devralındı
+Relation	T8	T6	NoRel	true	atandı	adlandırıldı

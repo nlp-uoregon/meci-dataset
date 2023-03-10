@@ -1,0 +1,54 @@
+Text	Det var umuligt for efterforskerne at fastslå , om nogen af ofrene var døde , inden flyet styrtede ned .	På dødsattesterne for de 40 ofre er dødsårsagen anført som drab , og dødsårsagen for de fire flykaprere som selvmord .	Ligdelene og de personlige effekter fra ofrene blev overgivet til deres familier .	Ligdelene fra flykaprerne blev identificeret ved udelukkelsesmetoden og blev overladt til FBI som bevis .	Efterforskere fandt også en kniv camoufleret som lighter .
+Event	T0	fastslå	EVENT	38
+Event	T1	døde	EVENT	71
+Event	T2	dødsattesterne	EVENT	108
+Event	T3	anført	EVENT	153
+Event	T4	drab	EVENT	164
+Event	T5	selvmord	EVENT	213
+Event	T6	overgivet	EVENT	276
+Event	T7	identificeret	EVENT	338
+Event	T8	udelukkelsesmetoden	EVENT	356
+Event	T9	fandt	EVENT	427
+Event	T10	camoufleret	EVENT	446
+Relation	T1	T2	CauseEffect	true	døde	dødsattesterne
+Relation	T2	T1	EffectCause	true	dødsattesterne	døde
+Relation	T1	T6	CauseEffect	true	døde	overgivet
+Relation	T6	T1	EffectCause	true	overgivet	døde
+Relation	T0	T10	NoRel	true	fastslå	camoufleret
+Relation	T0	T2	NoRel	true	fastslå	dødsattesterne
+Relation	T0	T4	NoRel	true	fastslå	drab
+Relation	T0	T7	NoRel	true	fastslå	identificeret
+Relation	T1	T0	NoRel	true	døde	fastslå
+Relation	T1	T4	NoRel	true	døde	drab
+Relation	T1	T9	NoRel	true	døde	fandt
+Relation	T10	T1	NoRel	true	camoufleret	døde
+Relation	T10	T8	NoRel	true	camoufleret	udelukkelsesmetoden
+Relation	T2	T7	NoRel	true	dødsattesterne	identificeret
+Relation	T3	T10	NoRel	true	anført	camoufleret
+Relation	T3	T4	NoRel	true	anført	drab
+Relation	T3	T5	NoRel	true	anført	selvmord
+Relation	T3	T6	NoRel	true	anført	overgivet
+Relation	T3	T9	NoRel	true	anført	fandt
+Relation	T4	T10	NoRel	true	drab	camoufleret
+Relation	T5	T0	NoRel	true	selvmord	fastslå
+Relation	T5	T1	NoRel	true	selvmord	døde
+Relation	T5	T2	NoRel	true	selvmord	dødsattesterne
+Relation	T5	T3	NoRel	true	selvmord	anført
+Relation	T5	T7	NoRel	true	selvmord	identificeret
+Relation	T6	T2	NoRel	true	overgivet	dødsattesterne
+Relation	T6	T3	NoRel	true	overgivet	anført
+Relation	T6	T5	NoRel	true	overgivet	selvmord
+Relation	T6	T7	NoRel	true	overgivet	identificeret
+Relation	T6	T9	NoRel	true	overgivet	fandt
+Relation	T7	T0	NoRel	true	identificeret	fastslå
+Relation	T7	T10	NoRel	true	identificeret	camoufleret
+Relation	T7	T3	NoRel	true	identificeret	anført
+Relation	T7	T6	NoRel	true	identificeret	overgivet
+Relation	T8	T0	NoRel	true	udelukkelsesmetoden	fastslå
+Relation	T8	T2	NoRel	true	udelukkelsesmetoden	dødsattesterne
+Relation	T8	T4	NoRel	true	udelukkelsesmetoden	drab
+Relation	T8	T6	NoRel	true	udelukkelsesmetoden	overgivet
+Relation	T8	T7	NoRel	true	udelukkelsesmetoden	identificeret
+Relation	T9	T1	NoRel	true	fandt	døde
+Relation	T9	T5	NoRel	true	fandt	selvmord
+Relation	T9	T6	NoRel	true	fandt	overgivet

@@ -1,0 +1,109 @@
+Text	El 22 de noviembre de 2003 , poco después de despegar de Bagdad , Irak , un Airbus A300B4-200F carguero , registrado OO-DLL y propiedad de European Air Transport fue golpeado en la punta del ala izquierda por un misil tierra-aire durante un vuelo programado a Muharraq .	El daño sufrido por el ala resultó en un incendio y en la pérdida completa de los sistemas hidráulicos .	Al regresar a Bagdad , la tripulación de tres personas realizó un aterrizaje sin más daños del A300 , utilizando el empuje diferencial de los motores como la única manera posible de controlar la aeronave .	Esto resultó en una velocidad de aterrizaje mayor a la segura , haciendo que se saliera de la pista hacia un terreno no preparado .	La tripulación constaba de tres personas : el capitán Eric Gennotte y el primer oficial Steeve Michielsen , ambos belgas , y el ingeniero de vuelo escocés Mario Rofail .
+Event	T0	despegar	EVENT	45
+Event	T1	registrado	EVENT	106
+Event	T2	golpeado	EVENT	166
+Event	T6	incendio	EVENT	312
+Event	T7	regresar	EVENT	379
+Event	T8	realizó	EVENT	431
+Event	T9	aterrizaje	EVENT	442
+Event	T10	daños	EVENT	461
+Event	T11	utilizando	EVENT	478
+Event	T13	resultó	EVENT	587
+Event	T14	aterrizaje	EVENT	615
+Event	T15	haciendo	EVENT	646
+Event	T16	saliera	EVENT	662
+Event	T17	constaba	EVENT	729
+Event	T3	vuelo	EVENT	241
+Event	T4	daño	EVENT	274
+Relation	T4	T6	CauseEffect	true	daño	incendio
+Relation	T6	T4	EffectCause	true	incendio	daño
+Relation	T0	T10	NoRel	true	despegar	daños
+Relation	T0	T14	NoRel	true	despegar	aterrizaje
+Relation	T0	T15	NoRel	true	despegar	haciendo
+Relation	T0	T7	NoRel	true	despegar	regresar
+Relation	T1	T10	NoRel	true	registrado	daños
+Relation	T1	T13	NoRel	true	registrado	resultó
+Relation	T1	T2	NoRel	true	registrado	golpeado
+Relation	T1	T4	NoRel	true	registrado	daño
+Relation	T1	T7	NoRel	true	registrado	regresar
+Relation	T10	T14	NoRel	true	daños	aterrizaje
+Relation	T10	T17	NoRel	true	daños	constaba
+Relation	T10	T4	NoRel	true	daños	daño
+Relation	T11	T0	NoRel	true	utilizando	despegar
+Relation	T11	T1	NoRel	true	utilizando	registrado
+Relation	T11	T13	NoRel	true	utilizando	resultó
+Relation	T11	T3	NoRel	true	utilizando	vuelo
+Relation	T11	T6	NoRel	true	utilizando	incendio
+Relation	T13	T0	NoRel	true	resultó	despegar
+Relation	T13	T11	NoRel	true	resultó	utilizando
+Relation	T13	T16	NoRel	true	resultó	saliera
+Relation	T13	T3	NoRel	true	resultó	vuelo
+Relation	T13	T6	NoRel	true	resultó	incendio
+Relation	T13	T7	NoRel	true	resultó	regresar
+Relation	T13	T8	NoRel	true	resultó	realizó
+Relation	T14	T13	NoRel	true	aterrizaje	resultó
+Relation	T14	T16	NoRel	true	aterrizaje	saliera
+Relation	T14	T3	NoRel	true	aterrizaje	vuelo
+Relation	T14	T7	NoRel	true	aterrizaje	regresar
+Relation	T14	T8	NoRel	true	aterrizaje	realizó
+Relation	T15	T0	NoRel	true	haciendo	despegar
+Relation	T15	T10	NoRel	true	haciendo	daños
+Relation	T15	T11	NoRel	true	haciendo	utilizando
+Relation	T15	T13	NoRel	true	haciendo	resultó
+Relation	T15	T14	NoRel	true	haciendo	aterrizaje
+Relation	T15	T7	NoRel	true	haciendo	regresar
+Relation	T15	T9	NoRel	true	haciendo	aterrizaje
+Relation	T16	T0	NoRel	true	saliera	despegar
+Relation	T16	T14	NoRel	true	saliera	aterrizaje
+Relation	T16	T15	NoRel	true	saliera	haciendo
+Relation	T16	T2	NoRel	true	saliera	golpeado
+Relation	T16	T3	NoRel	true	saliera	vuelo
+Relation	T16	T8	NoRel	true	saliera	realizó
+Relation	T17	T0	NoRel	true	constaba	despegar
+Relation	T17	T1	NoRel	true	constaba	registrado
+Relation	T17	T10	NoRel	true	constaba	daños
+Relation	T17	T13	NoRel	true	constaba	resultó
+Relation	T17	T14	NoRel	true	constaba	aterrizaje
+Relation	T17	T15	NoRel	true	constaba	haciendo
+Relation	T17	T7	NoRel	true	constaba	regresar
+Relation	T2	T0	NoRel	true	golpeado	despegar
+Relation	T2	T10	NoRel	true	golpeado	daños
+Relation	T2	T16	NoRel	true	golpeado	saliera
+Relation	T2	T6	NoRel	true	golpeado	incendio
+Relation	T2	T8	NoRel	true	golpeado	realizó
+Relation	T3	T0	NoRel	true	vuelo	despegar
+Relation	T3	T1	NoRel	true	vuelo	registrado
+Relation	T3	T11	NoRel	true	vuelo	utilizando
+Relation	T3	T13	NoRel	true	vuelo	resultó
+Relation	T3	T14	NoRel	true	vuelo	aterrizaje
+Relation	T3	T15	NoRel	true	vuelo	haciendo
+Relation	T3	T17	NoRel	true	vuelo	constaba
+Relation	T3	T2	NoRel	true	vuelo	golpeado
+Relation	T3	T7	NoRel	true	vuelo	regresar
+Relation	T4	T0	NoRel	true	daño	despegar
+Relation	T4	T10	NoRel	true	daño	daños
+Relation	T4	T11	NoRel	true	daño	utilizando
+Relation	T4	T13	NoRel	true	daño	resultó
+Relation	T4	T14	NoRel	true	daño	aterrizaje
+Relation	T4	T17	NoRel	true	daño	constaba
+Relation	T4	T3	NoRel	true	daño	vuelo
+Relation	T6	T1	NoRel	true	incendio	registrado
+Relation	T6	T10	NoRel	true	incendio	daños
+Relation	T6	T11	NoRel	true	incendio	utilizando
+Relation	T6	T14	NoRel	true	incendio	aterrizaje
+Relation	T6	T16	NoRel	true	incendio	saliera
+Relation	T6	T7	NoRel	true	incendio	regresar
+Relation	T7	T0	NoRel	true	regresar	despegar
+Relation	T7	T2	NoRel	true	regresar	golpeado
+Relation	T7	T3	NoRel	true	regresar	vuelo
+Relation	T7	T4	NoRel	true	regresar	daño
+Relation	T7	T9	NoRel	true	regresar	aterrizaje
+Relation	T8	T10	NoRel	true	realizó	daños
+Relation	T8	T14	NoRel	true	realizó	aterrizaje
+Relation	T8	T17	NoRel	true	realizó	constaba
+Relation	T8	T2	NoRel	true	realizó	golpeado
+Relation	T8	T6	NoRel	true	realizó	incendio
+Relation	T8	T7	NoRel	true	realizó	regresar
+Relation	T9	T0	NoRel	true	aterrizaje	despegar
+Relation	T9	T14	NoRel	true	aterrizaje	aterrizaje
+Relation	T9	T4	NoRel	true	aterrizaje	daño

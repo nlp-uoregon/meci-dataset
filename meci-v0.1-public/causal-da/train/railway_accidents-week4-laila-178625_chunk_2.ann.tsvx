@@ -1,0 +1,11 @@
+Text	Pellerin måtte betale en bøde på 50 Franc og blev desuden fængslet i 2 måneder , medens Mariette betalte en bøde på 25 franc .				
+Event	T0	betale	EVENT	15
+Event	T1	bøde	EVENT	25
+Event	T2	fængslet	EVENT	58
+Event	T3	betalte	EVENT	97
+Event	T4	bøde	EVENT	108
+Relation	T0	T1	NoRel	true	betale	bøde
+Relation	T2	T3	NoRel	true	fængslet	betalte
+Relation	T3	T2	NoRel	true	betalte	fængslet
+Relation	T4	T0	NoRel	true	bøde	betale
+Relation	T4	T2	NoRel	true	bøde	fængslet

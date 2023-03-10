@@ -1,0 +1,64 @@
+Text	During evaluation flight , landing gear extension system fails with gear only partly deployed when in - cockpit crank handle breaks off .	Through a series of violent maneuvers , test pilot Lt. Harrison Crocker managed to get the gear retracted and was planning to attempt a belly - landing , but upon orders from the ground , sent aloft written on the sides of Boeing P- 12D And Douglas O- 25C aircraft , he bails out .	Four Y1P - 24 pre-production models cancelled due to Detroit Aircraft 's shaky financial situation .	Two will be built as Consolidated Y1P- 25s after Detroit 's chief designer Robert Wood joins that firm .	Second Y1P - 25 completed with a supercharger as Y1A - 11 .
+Event	T0	flight	EVENT	18
+Event	T1	landing	EVENT	27
+Event	T2	fails	EVENT	57
+Event	T3	deployed	EVENT	85
+Event	T4	series	EVENT	148
+Event	T5	maneuvers	EVENT	166
+Event	T6	managed	EVENT	210
+Event	T7	get	EVENT	221
+Event	T8	retracted	EVENT	234
+Event	T9	planning	EVENT	252
+Event	T10	attempt	EVENT	264
+Event	T11	landing	EVENT	282
+Event	T12	orders	EVENT	301
+Event	T13	sent	EVENT	326
+Event	T14	written	EVENT	337
+Event	T15	built	EVENT	533
+Event	T16	joins	EVENT	608
+Event	T17	completed	EVENT	642
+Event	T18	breaks off	EVENT	125
+Event	T19	bails out	EVENT	408
+Event	T20	cancelled	EVENT	456
+Relation	T4	T6	CauseEffect	true	series	managed
+Relation	T6	T4	EffectCause	true	managed	series
+Relation	T4	T9	CauseEffect	true	series	planning
+Relation	T9	T4	EffectCause	true	planning	series
+Relation	T0	T11	NoRel	true	flight	landing
+Relation	T0	T17	NoRel	true	flight	completed
+Relation	T0	T8	NoRel	true	flight	retracted
+Relation	T1	T14	NoRel	true	landing	written
+Relation	T10	T12	NoRel	true	attempt	orders
+Relation	T10	T3	NoRel	true	attempt	deployed
+Relation	T12	T1	NoRel	true	orders	landing
+Relation	T12	T20	NoRel	true	orders	cancelled
+Relation	T13	T2	NoRel	true	sent	fails
+Relation	T14	T12	NoRel	true	written	orders
+Relation	T14	T13	NoRel	true	written	sent
+Relation	T14	T16	NoRel	true	written	joins
+Relation	T14	T17	NoRel	true	written	completed
+Relation	T14	T19	NoRel	true	written	bails out
+Relation	T14	T7	NoRel	true	written	get
+Relation	T16	T1	NoRel	true	joins	landing
+Relation	T16	T7	NoRel	true	joins	get
+Relation	T17	T11	NoRel	true	completed	landing
+Relation	T17	T14	NoRel	true	completed	written
+Relation	T17	T19	NoRel	true	completed	bails out
+Relation	T17	T4	NoRel	true	completed	series
+Relation	T17	T5	NoRel	true	completed	maneuvers
+Relation	T18	T8	NoRel	true	breaks off	retracted
+Relation	T19	T9	NoRel	true	bails out	planning
+Relation	T2	T1	NoRel	true	fails	landing
+Relation	T2	T19	NoRel	true	fails	bails out
+Relation	T2	T3	NoRel	true	fails	deployed
+Relation	T20	T0	NoRel	true	cancelled	flight
+Relation	T20	T11	NoRel	true	cancelled	landing
+Relation	T3	T0	NoRel	true	deployed	flight
+Relation	T5	T8	NoRel	true	maneuvers	retracted
+Relation	T6	T14	NoRel	true	managed	written
+Relation	T7	T1	NoRel	true	get	landing
+Relation	T7	T17	NoRel	true	get	completed
+Relation	T7	T2	NoRel	true	get	fails
+Relation	T7	T20	NoRel	true	get	cancelled
+Relation	T7	T5	NoRel	true	get	maneuvers
+Relation	T8	T3	NoRel	true	retracted	deployed

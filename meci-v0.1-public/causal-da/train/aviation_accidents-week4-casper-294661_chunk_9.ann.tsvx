@@ -1,0 +1,10 @@
+Text	- Flyets maksimale højde er 12 meter , næsen er 18 ° i vejret og styrbord vinge hælder 32 ° .	- Kl. 14:24:23 Halekonusen og styrbord vingespids rammer jorden 60 meter øst for startbanen og flyet kurer 1.093 meter .	-	Vingernes integraltanke rives op og 10.130 liter flybrændstof antændes .	
+Event	T0	hælder	EVENT	80
+Event	T1	kurer	EVENT	195
+Event	T2	antændes	EVENT	279
+Event	T3	rives op	EVENT	241
+Relation	T3	T2	CauseEffect	true	rives op	antændes
+Relation	T2	T3	EffectCause	true	antændes	rives op
+Relation	T0	T3	NoRel	true	hælder	rives op
+Relation	T1	T2	NoRel	true	kurer	antændes
+Relation	T3	T1	NoRel	true	rives op	kurer

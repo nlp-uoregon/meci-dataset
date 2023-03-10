@@ -1,0 +1,40 @@
+Text	O desastre ferroviario que se verificou esta madrugada no Vale de Santarem , artículo en el _ Diario de Lisboa _ , 22 de agosto de 1965 , páginas 10 y última , en Archivo digital de la Fundación Mario Soares ( en portugués ) .	« Veintidos muertos y una treintena de heridos al chocar un tren de pasajeros con un mercancías cerca de Lisboa » , artículo en _ ABC _ , edición Madrid , 21 de diciembre de 1965 , página 69 .	Hemeroteca digital del diario ABC	Acidente na linha de Sintra_-_1965 , articulo dedicado al accidente en el blog Algueirão-Mem Martins ( En Portugués ) .	Outro choque de comboios , uno deles com emigrantes , na Praia do Ribatejo , artículo en el _ Diario de Lisboa _ , 21 de diciembre de 1965 , página 16 , en Archivo digital de la Fundación Mario Soares ( en portugués ) .
+Event	T0	desastre	EVENT	2
+Event	T1	verificou	EVENT	30
+Event	T2	muertos	EVENT	239
+Event	T3	heridos	EVENT	266
+Event	T4	chocar	EVENT	277
+Event	T5	Acidente	EVENT	454
+Event	T6	dedicado	EVENT	500
+Event	T7	accidente	EVENT	512
+Event	T8	choque	EVENT	580
+Relation	T4	T3	CauseEffect	true	chocar	heridos
+Relation	T3	T4	EffectCause	true	heridos	chocar
+Relation	T4	T2	CauseEffect	true	chocar	muertos
+Relation	T2	T4	EffectCause	true	muertos	chocar
+Relation	T0	T5	NoRel	true	desastre	Acidente
+Relation	T0	T6	NoRel	true	desastre	dedicado
+Relation	T1	T2	NoRel	true	verificou	muertos
+Relation	T1	T3	NoRel	true	verificou	heridos
+Relation	T1	T4	NoRel	true	verificou	chocar
+Relation	T1	T6	NoRel	true	verificou	dedicado
+Relation	T2	T1	NoRel	true	muertos	verificou
+Relation	T2	T5	NoRel	true	muertos	Acidente
+Relation	T2	T6	NoRel	true	muertos	dedicado
+Relation	T2	T7	NoRel	true	muertos	accidente
+Relation	T2	T8	NoRel	true	muertos	choque
+Relation	T3	T0	NoRel	true	heridos	desastre
+Relation	T3	T1	NoRel	true	heridos	verificou
+Relation	T3	T7	NoRel	true	heridos	accidente
+Relation	T4	T5	NoRel	true	chocar	Acidente
+Relation	T5	T0	NoRel	true	Acidente	desastre
+Relation	T5	T4	NoRel	true	Acidente	chocar
+Relation	T6	T3	NoRel	true	dedicado	heridos
+Relation	T6	T5	NoRel	true	dedicado	Acidente
+Relation	T7	T1	NoRel	true	accidente	verificou
+Relation	T7	T5	NoRel	true	accidente	Acidente
+Relation	T7	T6	NoRel	true	accidente	dedicado
+Relation	T8	T2	NoRel	true	choque	muertos
+Relation	T8	T5	NoRel	true	choque	Acidente
+Relation	T8	T6	NoRel	true	choque	dedicado
+Relation	T8	T7	NoRel	true	choque	accidente

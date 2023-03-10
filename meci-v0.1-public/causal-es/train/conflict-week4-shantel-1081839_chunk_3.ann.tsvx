@@ -1,0 +1,135 @@
+Text	Napoleón no pareció dar mucha importancia a estos cambios de carácter y otorgó a Junot el honor de acudir al Directorio con las banderas capturadas al enemigo , haciendo oficial la victoria francesa , así como promoviendo su ascenso a coronel .	Napoleón solicita nuevamente sus servicios para la Campaña de Egipto ( 1798 - 1801 ) , ascendiéndole a general de brigada .	Pero pronto Junot comenzó a perder méritos ante su gran valedor .	Su carácter impetuoso le hace batirse en un duelo de honor en el que quedó gravemente herido .	Fue dado de baja en la milicia egipcia y se dispuso su retorno a Francia .
+Event	T0	cambios	EVENT	50
+Event	T1	otorgó	EVENT	72
+Event	T2	acudir	EVENT	99
+Event	T3	capturadas	EVENT	137
+Event	T4	haciendo	EVENT	161
+Event	T5	victoria	EVENT	181
+Event	T6	promoviendo	EVENT	210
+Event	T7	ascenso	EVENT	225
+Event	T8	solicita	EVENT	254
+Event	T9	ascendiéndole	EVENT	332
+Event	T10	comenzó	EVENT	387
+Event	T11	batirse	EVENT	465
+Event	T12	duelo	EVENT	479
+Event	T13	quedó	EVENT	504
+Event	T14	herido	EVENT	521
+Event	T15	dispuso	EVENT	574
+Event	T16	retorno	EVENT	585
+Event	T17	Campaña de Egipto	EVENT	296
+Event	T18	baja	EVENT	542
+Relation	T12	T14	CauseEffect	true	duelo	herido
+Relation	T14	T12	EffectCause	true	herido	duelo
+Relation	T14	T18	CauseEffect	true	herido	baja
+Relation	T18	T14	EffectCause	true	baja	herido
+Relation	T18	T16	CauseEffect	true	baja	retorno
+Relation	T16	T18	EffectCause	true	retorno	baja
+Relation	T0	T10	NoRel	true	cambios	comenzó
+Relation	T0	T12	NoRel	true	cambios	duelo
+Relation	T0	T13	NoRel	true	cambios	quedó
+Relation	T0	T3	NoRel	true	cambios	capturadas
+Relation	T0	T6	NoRel	true	cambios	promoviendo
+Relation	T0	T7	NoRel	true	cambios	ascenso
+Relation	T0	T8	NoRel	true	cambios	solicita
+Relation	T0	T9	NoRel	true	cambios	ascendiéndole
+Relation	T1	T10	NoRel	true	otorgó	comenzó
+Relation	T1	T11	NoRel	true	otorgó	batirse
+Relation	T1	T4	NoRel	true	otorgó	haciendo
+Relation	T1	T8	NoRel	true	otorgó	solicita
+Relation	T10	T0	NoRel	true	comenzó	cambios
+Relation	T10	T12	NoRel	true	comenzó	duelo
+Relation	T10	T13	NoRel	true	comenzó	quedó
+Relation	T10	T14	NoRel	true	comenzó	herido
+Relation	T10	T6	NoRel	true	comenzó	promoviendo
+Relation	T10	T7	NoRel	true	comenzó	ascenso
+Relation	T10	T8	NoRel	true	comenzó	solicita
+Relation	T10	T9	NoRel	true	comenzó	ascendiéndole
+Relation	T11	T1	NoRel	true	batirse	otorgó
+Relation	T11	T10	NoRel	true	batirse	comenzó
+Relation	T11	T12	NoRel	true	batirse	duelo
+Relation	T11	T15	NoRel	true	batirse	dispuso
+Relation	T11	T18	NoRel	true	batirse	baja
+Relation	T11	T2	NoRel	true	batirse	acudir
+Relation	T11	T3	NoRel	true	batirse	capturadas
+Relation	T11	T4	NoRel	true	batirse	haciendo
+Relation	T11	T7	NoRel	true	batirse	ascenso
+Relation	T11	T8	NoRel	true	batirse	solicita
+Relation	T11	T9	NoRel	true	batirse	ascendiéndole
+Relation	T12	T11	NoRel	true	duelo	batirse
+Relation	T12	T16	NoRel	true	duelo	retorno
+Relation	T12	T17	NoRel	true	duelo	Campaña de Egipto
+Relation	T12	T5	NoRel	true	duelo	victoria
+Relation	T12	T6	NoRel	true	duelo	promoviendo
+Relation	T12	T7	NoRel	true	duelo	ascenso
+Relation	T13	T1	NoRel	true	quedó	otorgó
+Relation	T13	T11	NoRel	true	quedó	batirse
+Relation	T13	T2	NoRel	true	quedó	acudir
+Relation	T13	T6	NoRel	true	quedó	promoviendo
+Relation	T13	T9	NoRel	true	quedó	ascendiéndole
+Relation	T14	T0	NoRel	true	herido	cambios
+Relation	T14	T4	NoRel	true	herido	haciendo
+Relation	T14	T5	NoRel	true	herido	victoria
+Relation	T14	T6	NoRel	true	herido	promoviendo
+Relation	T14	T7	NoRel	true	herido	ascenso
+Relation	T14	T8	NoRel	true	herido	solicita
+Relation	T14	T9	NoRel	true	herido	ascendiéndole
+Relation	T15	T0	NoRel	true	dispuso	cambios
+Relation	T15	T1	NoRel	true	dispuso	otorgó
+Relation	T15	T11	NoRel	true	dispuso	batirse
+Relation	T15	T14	NoRel	true	dispuso	herido
+Relation	T15	T16	NoRel	true	dispuso	retorno
+Relation	T15	T17	NoRel	true	dispuso	Campaña de Egipto
+Relation	T15	T3	NoRel	true	dispuso	capturadas
+Relation	T15	T4	NoRel	true	dispuso	haciendo
+Relation	T15	T5	NoRel	true	dispuso	victoria
+Relation	T15	T6	NoRel	true	dispuso	promoviendo
+Relation	T15	T9	NoRel	true	dispuso	ascendiéndole
+Relation	T16	T1	NoRel	true	retorno	otorgó
+Relation	T16	T14	NoRel	true	retorno	herido
+Relation	T16	T2	NoRel	true	retorno	acudir
+Relation	T16	T6	NoRel	true	retorno	promoviendo
+Relation	T17	T1	NoRel	true	Campaña de Egipto	otorgó
+Relation	T17	T12	NoRel	true	Campaña de Egipto	duelo
+Relation	T17	T14	NoRel	true	Campaña de Egipto	herido
+Relation	T17	T15	NoRel	true	Campaña de Egipto	dispuso
+Relation	T17	T18	NoRel	true	Campaña de Egipto	baja
+Relation	T17	T9	NoRel	true	Campaña de Egipto	ascendiéndole
+Relation	T18	T0	NoRel	true	baja	cambios
+Relation	T18	T17	NoRel	true	baja	Campaña de Egipto
+Relation	T18	T2	NoRel	true	baja	acudir
+Relation	T18	T5	NoRel	true	baja	victoria
+Relation	T18	T6	NoRel	true	baja	promoviendo
+Relation	T2	T10	NoRel	true	acudir	comenzó
+Relation	T2	T15	NoRel	true	acudir	dispuso
+Relation	T2	T9	NoRel	true	acudir	ascendiéndole
+Relation	T3	T14	NoRel	true	capturadas	herido
+Relation	T3	T15	NoRel	true	capturadas	dispuso
+Relation	T3	T16	NoRel	true	capturadas	retorno
+Relation	T3	T2	NoRel	true	capturadas	acudir
+Relation	T3	T7	NoRel	true	capturadas	ascenso
+Relation	T3	T8	NoRel	true	capturadas	solicita
+Relation	T4	T11	NoRel	true	haciendo	batirse
+Relation	T4	T12	NoRel	true	haciendo	duelo
+Relation	T4	T16	NoRel	true	haciendo	retorno
+Relation	T4	T17	NoRel	true	haciendo	Campaña de Egipto
+Relation	T4	T5	NoRel	true	haciendo	victoria
+Relation	T5	T13	NoRel	true	victoria	quedó
+Relation	T5	T7	NoRel	true	victoria	ascenso
+Relation	T5	T9	NoRel	true	victoria	ascendiéndole
+Relation	T6	T10	NoRel	true	promoviendo	comenzó
+Relation	T6	T12	NoRel	true	promoviendo	duelo
+Relation	T6	T14	NoRel	true	promoviendo	herido
+Relation	T6	T9	NoRel	true	promoviendo	ascendiéndole
+Relation	T7	T10	NoRel	true	ascenso	comenzó
+Relation	T7	T13	NoRel	true	ascenso	quedó
+Relation	T7	T14	NoRel	true	ascenso	herido
+Relation	T7	T2	NoRel	true	ascenso	acudir
+Relation	T8	T0	NoRel	true	solicita	cambios
+Relation	T8	T17	NoRel	true	solicita	Campaña de Egipto
+Relation	T8	T18	NoRel	true	solicita	baja
+Relation	T8	T2	NoRel	true	solicita	acudir
+Relation	T8	T7	NoRel	true	solicita	ascenso
+Relation	T9	T1	NoRel	true	ascendiéndole	otorgó
+Relation	T9	T10	NoRel	true	ascendiéndole	comenzó
+Relation	T9	T18	NoRel	true	ascendiéndole	baja
+Relation	T9	T2	NoRel	true	ascendiéndole	acudir

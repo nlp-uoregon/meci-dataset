@@ -1,0 +1,48 @@
+Text	[ Unos guantes de látex , y una botella de agua , en el piso de la estación , que utilizaban los rescatistas para socorrer a las víctimas y trasladarlos .	]	El siniestro ocurrió a las 8:33 ( hora local ) en el primer día laboral de la semana luego de los feriados por el Carnaval , y fue en pleno horario pico , por lo cual los coches de pasajeros estaban atestados de personas , que en su mayoría eran trabajadores en rumbo a sus empleos .	La totalidad de las víctimas fatales se encontraban en el primer y segundo coche .	El impacto causó 51 víctimas fatales de las cuales 3 eran niñas y 789 heridos de distintas gravedades , de los cuales 200 fueron trasladados a 13 hospitales de la ciudad de Buenos Aires .
+Event	T0	socorrer	EVENT	114
+Event	T1	ocurrió	EVENT	170
+Event	T2	feriados	EVENT	255
+Event	T3	atestados	EVENT	356
+Event	T4	fatales	EVENT	470
+Event	T6	fatales	EVENT	553
+Event	T7	heridos	EVENT	594
+Event	T8	trasladados	EVENT	653
+Event	T9	siniestro	EVENT	160
+Event	T10	impacto	EVENT	527
+Relation	T9	T4	CauseEffect	true	siniestro	fatales
+Relation	T4	T9	EffectCause	true	fatales	siniestro
+Relation	T10	T6	CauseEffect	true	impacto	fatales
+Relation	T6	T10	EffectCause	true	fatales	impacto
+Relation	T10	T7	CauseEffect	true	impacto	heridos
+Relation	T7	T10	EffectCause	true	heridos	impacto
+Relation	T0	T1	NoRel	true	socorrer	ocurrió
+Relation	T0	T4	NoRel	true	socorrer	fatales
+Relation	T1	T10	NoRel	true	ocurrió	impacto
+Relation	T1	T3	NoRel	true	ocurrió	atestados
+Relation	T1	T4	NoRel	true	ocurrió	fatales
+Relation	T1	T6	NoRel	true	ocurrió	fatales
+Relation	T10	T1	NoRel	true	impacto	ocurrió
+Relation	T10	T3	NoRel	true	impacto	atestados
+Relation	T10	T8	NoRel	true	impacto	trasladados
+Relation	T2	T0	NoRel	true	feriados	socorrer
+Relation	T2	T1	NoRel	true	feriados	ocurrió
+Relation	T2	T7	NoRel	true	feriados	heridos
+Relation	T2	T8	NoRel	true	feriados	trasladados
+Relation	T3	T10	NoRel	true	atestados	impacto
+Relation	T3	T4	NoRel	true	atestados	fatales
+Relation	T3	T6	NoRel	true	atestados	fatales
+Relation	T4	T0	NoRel	true	fatales	socorrer
+Relation	T4	T1	NoRel	true	fatales	ocurrió
+Relation	T4	T2	NoRel	true	fatales	feriados
+Relation	T4	T3	NoRel	true	fatales	atestados
+Relation	T4	T7	NoRel	true	fatales	heridos
+Relation	T4	T8	NoRel	true	fatales	trasladados
+Relation	T6	T2	NoRel	true	fatales	feriados
+Relation	T6	T8	NoRel	true	fatales	trasladados
+Relation	T7	T0	NoRel	true	heridos	socorrer
+Relation	T7	T4	NoRel	true	heridos	fatales
+Relation	T7	T9	NoRel	true	heridos	siniestro
+Relation	T8	T1	NoRel	true	trasladados	ocurrió
+Relation	T8	T6	NoRel	true	trasladados	fatales
+Relation	T9	T1	NoRel	true	siniestro	ocurrió
+Relation	T9	T10	NoRel	true	siniestro	impacto

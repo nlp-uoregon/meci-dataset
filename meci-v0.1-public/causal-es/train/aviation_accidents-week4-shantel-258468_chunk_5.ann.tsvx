@@ -1,0 +1,45 @@
+Text	Pasaban de las 14.00 ( hora española ) cuando embarcaban en el avión , que les transportaría hacía España .	Su avión , de fabricación rusa y de compañía y tripulación ucraniana , era un Yakovlev Yak-42D fabricado veinte años atrás con matrícula UR-42352 .	Los 53 militares españoles desaparecidos iniciaron el viaje sobrevolando las altísimas cordilleras afganas , hasta que llegaron al aeropuerto de Manás en la capital de Kirguistán , a las 16:00 , hora española .	En esa nueva escala , embarcarían los otros nueve militares que llevaban otros cuatro meses de misión Libertad Duradera , de apoyo aéreo al despliegue de sus compañeros en Kabul .	Iba a ser una breve escala , pero fueron 6 horas y media tensas de espera , por una mala planificación del vuelo .
+Event	T0	transportaría	EVENT	79
+Event	T1	fabricado	EVENT	203
+Event	T2	iniciaron	EVENT	297
+Event	T3	sobrevolando	EVENT	316
+Event	T4	llegaron	EVENT	375
+Event	T5	despliegue	EVENT	607
+Event	T6	escala	EVENT	667
+Event	T7	espera	EVENT	714
+Event	T8	vuelo	EVENT	754
+Event	T9	embarcaban	EVENT	46
+Event	T10	desaparecidos	EVENT	283
+Relation	T0	T2	NoRel	true	transportaría	iniciaron
+Relation	T0	T9	NoRel	true	transportaría	embarcaban
+Relation	T1	T10	NoRel	true	fabricado	desaparecidos
+Relation	T1	T4	NoRel	true	fabricado	llegaron
+Relation	T1	T6	NoRel	true	fabricado	escala
+Relation	T1	T7	NoRel	true	fabricado	espera
+Relation	T10	T1	NoRel	true	desaparecidos	fabricado
+Relation	T10	T2	NoRel	true	desaparecidos	iniciaron
+Relation	T10	T3	NoRel	true	desaparecidos	sobrevolando
+Relation	T10	T4	NoRel	true	desaparecidos	llegaron
+Relation	T10	T5	NoRel	true	desaparecidos	despliegue
+Relation	T10	T6	NoRel	true	desaparecidos	escala
+Relation	T2	T1	NoRel	true	iniciaron	fabricado
+Relation	T2	T10	NoRel	true	iniciaron	desaparecidos
+Relation	T2	T5	NoRel	true	iniciaron	despliegue
+Relation	T3	T8	NoRel	true	sobrevolando	vuelo
+Relation	T4	T5	NoRel	true	llegaron	despliegue
+Relation	T5	T1	NoRel	true	despliegue	fabricado
+Relation	T5	T6	NoRel	true	despliegue	escala
+Relation	T5	T9	NoRel	true	despliegue	embarcaban
+Relation	T6	T1	NoRel	true	escala	fabricado
+Relation	T6	T5	NoRel	true	escala	despliegue
+Relation	T7	T0	NoRel	true	espera	transportaría
+Relation	T7	T1	NoRel	true	espera	fabricado
+Relation	T8	T0	NoRel	true	vuelo	transportaría
+Relation	T8	T1	NoRel	true	vuelo	fabricado
+Relation	T8	T3	NoRel	true	vuelo	sobrevolando
+Relation	T8	T6	NoRel	true	vuelo	escala
+Relation	T9	T2	NoRel	true	embarcaban	iniciaron
+Relation	T9	T3	NoRel	true	embarcaban	sobrevolando
+Relation	T9	T4	NoRel	true	embarcaban	llegaron
+Relation	T9	T7	NoRel	true	embarcaban	espera
+Relation	T9	T8	NoRel	true	embarcaban	vuelo

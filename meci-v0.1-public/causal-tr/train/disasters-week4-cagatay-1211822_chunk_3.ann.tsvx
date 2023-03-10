@@ -1,0 +1,53 @@
+Text	Depremden önce büyük sayıda öncü deprem ve depremden sonra yüzlerce artçı deprem meydana geldi .	İlk öncü deprem 9 Mart günü 7,2 M _ ( W ) büyüklüğünde , ana depremin meydana geldiği yerden 40 km uzakta meydana geldi .	6 , 0 büyüklüğünü geçen üç öncü deprem daha 11 Mart günü oldu .	Depremden sonra saat JSİ saat 15.06'da 7, 0 M _ ( W ) , JSİ 15: 15'te 7 , 4 ve JSİ 15.26'da 7 , 2 büyüklüğünde artçı şoklar meydana geldi .	Ana depremden beridir büyülüğü 4, 5'in üzerinde olan 800'den fazla artçı şok meydana geldi .
+Event	T0	deprem	EVENT	33
+Event	T1	depremden	EVENT	43
+Event	T3	deprem	EVENT	106
+Event	T5	deprem	EVENT	251
+Event	T6	Depremden	EVENT	283
+Event	T2	depremin	EVENT	158
+Event	T4	şoklar	EVENT	400
+Event	T10	depremden	EVENT	427
+Event	T11	şok	EVENT	496
+Event	T7	artçı deprem	EVENT	68
+Relation	T0	T7	CauseEffect	true	deprem	artçı deprem
+Relation	T7	T0	EffectCause	true	artçı deprem	deprem
+Relation	T10	T11	CauseEffect	true	depremden	şok
+Relation	T11	T10	EffectCause	true	şok	depremden
+Relation	T6	T4	CauseEffect	true	Depremden	şoklar
+Relation	T4	T6	EffectCause	true	şoklar	Depremden
+Relation	T0	T10	NoRel	true	deprem	depremden
+Relation	T0	T3	NoRel	true	deprem	deprem
+Relation	T0	T4	NoRel	true	deprem	şoklar
+Relation	T0	T6	NoRel	true	deprem	Depremden
+Relation	T1	T10	NoRel	true	depremden	depremden
+Relation	T1	T4	NoRel	true	depremden	şoklar
+Relation	T1	T6	NoRel	true	depremden	Depremden
+Relation	T10	T2	NoRel	true	depremden	depremin
+Relation	T10	T4	NoRel	true	depremden	şoklar
+Relation	T10	T7	NoRel	true	depremden	artçı deprem
+Relation	T11	T0	NoRel	true	şok	deprem
+Relation	T11	T1	NoRel	true	şok	depremden
+Relation	T11	T2	NoRel	true	şok	depremin
+Relation	T11	T6	NoRel	true	şok	Depremden
+Relation	T11	T7	NoRel	true	şok	artçı deprem
+Relation	T2	T11	NoRel	true	depremin	şok
+Relation	T2	T5	NoRel	true	depremin	deprem
+Relation	T3	T0	NoRel	true	deprem	deprem
+Relation	T3	T1	NoRel	true	deprem	depremden
+Relation	T3	T11	NoRel	true	deprem	şok
+Relation	T3	T5	NoRel	true	deprem	deprem
+Relation	T3	T6	NoRel	true	deprem	Depremden
+Relation	T4	T0	NoRel	true	şoklar	deprem
+Relation	T4	T11	NoRel	true	şoklar	şok
+Relation	T4	T3	NoRel	true	şoklar	deprem
+Relation	T5	T10	NoRel	true	deprem	depremden
+Relation	T5	T11	NoRel	true	deprem	şok
+Relation	T5	T6	NoRel	true	deprem	Depremden
+Relation	T6	T1	NoRel	true	Depremden	depremden
+Relation	T6	T2	NoRel	true	Depremden	depremin
+Relation	T6	T3	NoRel	true	Depremden	deprem
+Relation	T6	T5	NoRel	true	Depremden	deprem
+Relation	T6	T7	NoRel	true	Depremden	artçı deprem
+Relation	T7	T10	NoRel	true	artçı deprem	depremden
+Relation	T7	T11	NoRel	true	artçı deprem	şok
+Relation	T7	T5	NoRel	true	artçı deprem	deprem

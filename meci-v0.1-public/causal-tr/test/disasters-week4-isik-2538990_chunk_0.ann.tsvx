@@ -1,0 +1,60 @@
+Text	2020 JAMAIKA DEPREMI , 28 Ocak'ta Jamaika ve Küba arasında gerçekleşen 7,7 M _ ( w ) büyüklüğünde deprem .	Depremin merkez üssü Montego Bay'in 83 mil kuzeyindeydi .	Pasifik Tsunami Uyarı Merkezi tarafından bir tsunami uyarısı verildi ancak bu uyarı daha sonra geri çekildi .	Meksika'daki Yucatán Yarımadası'nda da hafif sarsıntı hissedildiği bildirildi .	Bu deprem , 1946'dan beri Karayipler'de gerçekleşen en büyük deprem oldu .
+Event	T0	gerçekleşen	EVENT	59
+Event	T1	deprem	EVENT	98
+Event	T2	Depremin	EVENT	107
+Event	T3	verildi	EVENT	226
+Event	T4	uyarı	EVENT	243
+Event	T5	çekildi	EVENT	265
+Event	T6	bildirildi	EVENT	342
+Event	T7	deprem	EVENT	358
+Event	T8	gerçekleşen	EVENT	395
+Event	T9	deprem	EVENT	416
+Event	T10	DEPREMI	EVENT	13
+Event	T11	tsunami	EVENT	210
+Relation	T10	T3	CauseEffect	true	DEPREMI	verildi
+Relation	T3	T10	EffectCause	true	verildi	DEPREMI
+Relation	T3	T5	CauseEffect	true	verildi	çekildi
+Relation	T5	T3	EffectCause	true	çekildi	verildi
+Relation	T10	T6	CauseEffect	true	DEPREMI	bildirildi
+Relation	T6	T10	EffectCause	true	bildirildi	DEPREMI
+Relation	T0	T11	NoRel	true	gerçekleşen	tsunami
+Relation	T0	T2	NoRel	true	gerçekleşen	Depremin
+Relation	T0	T5	NoRel	true	gerçekleşen	çekildi
+Relation	T0	T6	NoRel	true	gerçekleşen	bildirildi
+Relation	T0	T9	NoRel	true	gerçekleşen	deprem
+Relation	T1	T10	NoRel	true	deprem	DEPREMI
+Relation	T1	T2	NoRel	true	deprem	Depremin
+Relation	T1	T3	NoRel	true	deprem	verildi
+Relation	T10	T0	NoRel	true	DEPREMI	gerçekleşen
+Relation	T10	T2	NoRel	true	DEPREMI	Depremin
+Relation	T10	T7	NoRel	true	DEPREMI	deprem
+Relation	T11	T0	NoRel	true	tsunami	gerçekleşen
+Relation	T11	T5	NoRel	true	tsunami	çekildi
+Relation	T11	T6	NoRel	true	tsunami	bildirildi
+Relation	T11	T7	NoRel	true	tsunami	deprem
+Relation	T2	T0	NoRel	true	Depremin	gerçekleşen
+Relation	T2	T8	NoRel	true	Depremin	gerçekleşen
+Relation	T3	T2	NoRel	true	verildi	Depremin
+Relation	T3	T6	NoRel	true	verildi	bildirildi
+Relation	T3	T8	NoRel	true	verildi	gerçekleşen
+Relation	T3	T9	NoRel	true	verildi	deprem
+Relation	T4	T10	NoRel	true	uyarı	DEPREMI
+Relation	T4	T2	NoRel	true	uyarı	Depremin
+Relation	T5	T1	NoRel	true	çekildi	deprem
+Relation	T5	T10	NoRel	true	çekildi	DEPREMI
+Relation	T5	T11	NoRel	true	çekildi	tsunami
+Relation	T5	T2	NoRel	true	çekildi	Depremin
+Relation	T5	T9	NoRel	true	çekildi	deprem
+Relation	T6	T0	NoRel	true	bildirildi	gerçekleşen
+Relation	T6	T4	NoRel	true	bildirildi	uyarı
+Relation	T6	T8	NoRel	true	bildirildi	gerçekleşen
+Relation	T7	T10	NoRel	true	deprem	DEPREMI
+Relation	T7	T2	NoRel	true	deprem	Depremin
+Relation	T7	T8	NoRel	true	deprem	gerçekleşen
+Relation	T7	T9	NoRel	true	deprem	deprem
+Relation	T8	T1	NoRel	true	gerçekleşen	deprem
+Relation	T8	T2	NoRel	true	gerçekleşen	Depremin
+Relation	T9	T10	NoRel	true	deprem	DEPREMI
+Relation	T9	T11	NoRel	true	deprem	tsunami
+Relation	T9	T2	NoRel	true	deprem	Depremin
+Relation	T9	T3	NoRel	true	deprem	verildi

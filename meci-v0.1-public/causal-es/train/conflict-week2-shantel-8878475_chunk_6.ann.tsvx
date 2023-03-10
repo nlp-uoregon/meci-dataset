@@ -1,0 +1,88 @@
+Text	Siwiec fue censurado de las fotografías oficiales de la Agencia Central de Fotografía ( Centralna Agencja Fotograficzna ) , que tenía el monopolio de la emisión de fotografías para la prensa en la era de la Polonia comunista .	Su acto fue capturado en una película de 7 segundos por una cámara de cine de la _ Polish Film Chronicle _ , pero los noticiarios ( _ newsreels _ o noticieros de cine ) oficiales del festival omitieron cualquier mención del incidente .	Sin embargo , estas imágenes sobrevivieron , mal etiquetadas por accidente o por propósito , hasta que fueron redescubiertas más de veinte años después .	La policía secreta polaca ( Służba Bezpieczeństwa ) realizó una investigación de rutina que terminó rápidamente debido a la " muerte del culpable " , seguida de una vigilancia rutinaria de bajo perfil de sus amigos y familiares , durante la cual interceptó la última carta de Siwiec a su esposa ( entregada décadas más tarde ) .	En general , las autoridades no tuvieron problemas para suprimir el evento , ya que ninguno de los pocos testigos mostró deseo alguno de hacer que el suceso fuera conocido .
+Event	T0	censurado	EVENT	11
+Event	T1	emisión	EVENT	153
+Event	T11	investigación	EVENT	681
+Event	T13	muerte	EVENT	743
+Event	T15	vigilancia	EVENT	782
+Event	T16	interceptó	EVENT	863
+Event	T18	suprimir	EVENT	1002
+Event	T2	capturado	EVENT	239
+Event	T20	suceso	EVENT	1096
+Event	T3	omitieron	EVENT	419
+Event	T4	entregada	EVENT	914
+Event	T5	incidente	EVENT	451
+Event	T6	sobrevivieron	EVENT	492
+Event	T9	redescubiertas	EVENT	573
+Relation	T5	T2	CauseEffect	true	incidente	capturado
+Relation	T2	T5	EffectCause	true	capturado	incidente
+Relation	T5	T6	CauseEffect	true	incidente	sobrevivieron
+Relation	T6	T5	EffectCause	true	sobrevivieron	incidente
+Relation	T6	T9	CauseEffect	true	sobrevivieron	redescubiertas
+Relation	T9	T6	EffectCause	true	redescubiertas	sobrevivieron
+Relation	T5	T11	CauseEffect	true	incidente	investigación
+Relation	T11	T5	EffectCause	true	investigación	incidente
+Relation	T11	T16	CauseEffect	true	investigación	interceptó
+Relation	T16	T11	EffectCause	true	interceptó	investigación
+Relation	T0	T1	NoRel	true	censurado	emisión
+Relation	T0	T13	NoRel	true	censurado	muerte
+Relation	T0	T15	NoRel	true	censurado	vigilancia
+Relation	T0	T16	NoRel	true	censurado	interceptó
+Relation	T0	T18	NoRel	true	censurado	suprimir
+Relation	T0	T20	NoRel	true	censurado	suceso
+Relation	T0	T6	NoRel	true	censurado	sobrevivieron
+Relation	T0	T9	NoRel	true	censurado	redescubiertas
+Relation	T1	T0	NoRel	true	emisión	censurado
+Relation	T1	T15	NoRel	true	emisión	vigilancia
+Relation	T1	T2	NoRel	true	emisión	capturado
+Relation	T1	T6	NoRel	true	emisión	sobrevivieron
+Relation	T1	T9	NoRel	true	emisión	redescubiertas
+Relation	T11	T0	NoRel	true	investigación	censurado
+Relation	T11	T1	NoRel	true	investigación	emisión
+Relation	T11	T13	NoRel	true	investigación	muerte
+Relation	T11	T15	NoRel	true	investigación	vigilancia
+Relation	T13	T1	NoRel	true	muerte	emisión
+Relation	T13	T11	NoRel	true	muerte	investigación
+Relation	T13	T15	NoRel	true	muerte	vigilancia
+Relation	T13	T2	NoRel	true	muerte	capturado
+Relation	T13	T5	NoRel	true	muerte	incidente
+Relation	T15	T13	NoRel	true	vigilancia	muerte
+Relation	T15	T18	NoRel	true	vigilancia	suprimir
+Relation	T15	T6	NoRel	true	vigilancia	sobrevivieron
+Relation	T15	T9	NoRel	true	vigilancia	redescubiertas
+Relation	T16	T13	NoRel	true	interceptó	muerte
+Relation	T16	T15	NoRel	true	interceptó	vigilancia
+Relation	T16	T18	NoRel	true	interceptó	suprimir
+Relation	T16	T4	NoRel	true	interceptó	entregada
+Relation	T16	T5	NoRel	true	interceptó	incidente
+Relation	T18	T1	NoRel	true	suprimir	emisión
+Relation	T18	T13	NoRel	true	suprimir	muerte
+Relation	T18	T3	NoRel	true	suprimir	omitieron
+Relation	T18	T9	NoRel	true	suprimir	redescubiertas
+Relation	T2	T0	NoRel	true	capturado	censurado
+Relation	T2	T13	NoRel	true	capturado	muerte
+Relation	T2	T16	NoRel	true	capturado	interceptó
+Relation	T2	T6	NoRel	true	capturado	sobrevivieron
+Relation	T2	T9	NoRel	true	capturado	redescubiertas
+Relation	T20	T0	NoRel	true	suceso	censurado
+Relation	T20	T15	NoRel	true	suceso	vigilancia
+Relation	T20	T2	NoRel	true	suceso	capturado
+Relation	T20	T4	NoRel	true	suceso	entregada
+Relation	T20	T5	NoRel	true	suceso	incidente
+Relation	T3	T0	NoRel	true	omitieron	censurado
+Relation	T3	T11	NoRel	true	omitieron	investigación
+Relation	T3	T15	NoRel	true	omitieron	vigilancia
+Relation	T3	T16	NoRel	true	omitieron	interceptó
+Relation	T3	T2	NoRel	true	omitieron	capturado
+Relation	T4	T11	NoRel	true	entregada	investigación
+Relation	T4	T13	NoRel	true	entregada	muerte
+Relation	T4	T3	NoRel	true	entregada	omitieron
+Relation	T4	T9	NoRel	true	entregada	redescubiertas
+Relation	T5	T0	NoRel	true	incidente	censurado
+Relation	T5	T15	NoRel	true	incidente	vigilancia
+Relation	T5	T3	NoRel	true	incidente	omitieron
+Relation	T5	T9	NoRel	true	incidente	redescubiertas
+Relation	T6	T3	NoRel	true	sobrevivieron	omitieron
+Relation	T6	T4	NoRel	true	sobrevivieron	entregada
+Relation	T9	T1	NoRel	true	redescubiertas	emisión
+Relation	T9	T15	NoRel	true	redescubiertas	vigilancia
+Relation	T9	T2	NoRel	true	redescubiertas	capturado

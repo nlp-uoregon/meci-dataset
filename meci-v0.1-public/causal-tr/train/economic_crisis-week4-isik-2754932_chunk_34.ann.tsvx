@@ -1,0 +1,99 @@
+Text	Rotfront tarafında birçok ölümle birlikte kayıpları arttı ve 1931'in sonunda SA'da 47 ölüm gerçekleşti ve Rotfront kendisinden de yaklaşık 80 kişinin öldüğünü kaydetti .	1932 yılının Şubat ve Nisan ayları boyunca sokak kavgaları ve ölümlerle sonuçlanan bir ahane savaşları , Adolf Hitler'in anıtsal olarak popüler Hindenburg'la karşı karşıya gelmesine neden olan başkanlık seçimlerindeki rekabetin zemininde gerçekleşti .	13 Mart'taki ilk turda , Hitler 11 milyondan fazla oy almıştı ama yine de Hindenburg'un gerisindeydi .	İkinci ve son tur 10 Nisan'da gerçekleşti : Hitler ( % 36 , 8 - 13 , 418 ,547 oy ) Paul von Hindenburg'a ( % 53 , 0 - 19,359 , 983 oy ) yenilirken , KPD adayı Ernst Thälmann oyların düşük bir yüzdesini ( % 10 , 2 - 3 , 706 , 759 oy ) kazandı .	O anda Nazi Partisi'nin 800. 000'den fazla üyesi vardı .
+Event	T0	arttı	EVENT	52
+Event	T1	gerçekleşti	EVENT	91
+Event	T2	kaydetti	EVENT	159
+Event	T3	kavgaları	EVENT	219
+Event	T5	savaşları	EVENT	263
+Event	T7	gerçekleşti	EVENT	408
+Event	T8	almıştı	EVENT	476
+Event	T9	tur	EVENT	539
+Event	T10	gerçekleşti	EVENT	555
+Event	T11	yenilirken	EVENT	661
+Event	T12	kazandı	EVENT	759
+Event	T13	ölümlerle	EVENT	232
+Event	T4	rekabetin	EVENT	388
+Event	T6	gerisindeydi	EVENT	510
+Event	T14	turda	EVENT	439
+Event	T15	seçimlerindeki	EVENT	373
+Relation	T5	T3	CauseEffect	true	savaşları	kavgaları
+Relation	T3	T5	EffectCause	true	kavgaları	savaşları
+Relation	T3	T13	CauseEffect	true	kavgaları	ölümlerle
+Relation	T13	T3	EffectCause	true	ölümlerle	kavgaları
+Relation	T4	T5	CauseEffect	true	rekabetin	savaşları
+Relation	T5	T4	EffectCause	true	savaşları	rekabetin
+Relation	T15	T14	CauseEffect	true	seçimlerindeki	turda
+Relation	T14	T15	EffectCause	true	turda	seçimlerindeki
+Relation	T14	T6	CauseEffect	true	turda	gerisindeydi
+Relation	T6	T14	EffectCause	true	gerisindeydi	turda
+Relation	T15	T9	CauseEffect	true	seçimlerindeki	tur
+Relation	T9	T15	EffectCause	true	tur	seçimlerindeki
+Relation	T14	T8	CauseEffect	true	turda	almıştı
+Relation	T8	T14	EffectCause	true	almıştı	turda
+Relation	T9	T11	CauseEffect	true	tur	yenilirken
+Relation	T11	T9	EffectCause	true	yenilirken	tur
+Relation	T9	T12	CauseEffect	true	tur	kazandı
+Relation	T12	T9	EffectCause	true	kazandı	tur
+Relation	T0	T12	NoRel	true	arttı	kazandı
+Relation	T0	T3	NoRel	true	arttı	kavgaları
+Relation	T0	T4	NoRel	true	arttı	rekabetin
+Relation	T0	T6	NoRel	true	arttı	gerisindeydi
+Relation	T0	T8	NoRel	true	arttı	almıştı
+Relation	T0	T9	NoRel	true	arttı	tur
+Relation	T1	T10	NoRel	true	gerçekleşti	gerçekleşti
+Relation	T1	T11	NoRel	true	gerçekleşti	yenilirken
+Relation	T1	T15	NoRel	true	gerçekleşti	seçimlerindeki
+Relation	T1	T6	NoRel	true	gerçekleşti	gerisindeydi
+Relation	T10	T0	NoRel	true	gerçekleşti	arttı
+Relation	T10	T15	NoRel	true	gerçekleşti	seçimlerindeki
+Relation	T11	T0	NoRel	true	yenilirken	arttı
+Relation	T11	T10	NoRel	true	yenilirken	gerçekleşti
+Relation	T11	T12	NoRel	true	yenilirken	kazandı
+Relation	T11	T3	NoRel	true	yenilirken	kavgaları
+Relation	T12	T13	NoRel	true	kazandı	ölümlerle
+Relation	T12	T14	NoRel	true	kazandı	turda
+Relation	T12	T3	NoRel	true	kazandı	kavgaları
+Relation	T12	T5	NoRel	true	kazandı	savaşları
+Relation	T12	T7	NoRel	true	kazandı	gerçekleşti
+Relation	T12	T8	NoRel	true	kazandı	almıştı
+Relation	T13	T10	NoRel	true	ölümlerle	gerçekleşti
+Relation	T13	T12	NoRel	true	ölümlerle	kazandı
+Relation	T13	T14	NoRel	true	ölümlerle	turda
+Relation	T13	T2	NoRel	true	ölümlerle	kaydetti
+Relation	T13	T6	NoRel	true	ölümlerle	gerisindeydi
+Relation	T14	T0	NoRel	true	turda	arttı
+Relation	T14	T10	NoRel	true	turda	gerçekleşti
+Relation	T14	T3	NoRel	true	turda	kavgaları
+Relation	T14	T5	NoRel	true	turda	savaşları
+Relation	T15	T13	NoRel	true	seçimlerindeki	ölümlerle
+Relation	T15	T7	NoRel	true	seçimlerindeki	gerçekleşti
+Relation	T2	T11	NoRel	true	kaydetti	yenilirken
+Relation	T2	T3	NoRel	true	kaydetti	kavgaları
+Relation	T2	T4	NoRel	true	kaydetti	rekabetin
+Relation	T2	T5	NoRel	true	kaydetti	savaşları
+Relation	T2	T8	NoRel	true	kaydetti	almıştı
+Relation	T3	T10	NoRel	true	kavgaları	gerçekleşti
+Relation	T3	T11	NoRel	true	kavgaları	yenilirken
+Relation	T3	T2	NoRel	true	kavgaları	kaydetti
+Relation	T4	T15	NoRel	true	rekabetin	seçimlerindeki
+Relation	T4	T2	NoRel	true	rekabetin	kaydetti
+Relation	T4	T7	NoRel	true	rekabetin	gerçekleşti
+Relation	T5	T13	NoRel	true	savaşları	ölümlerle
+Relation	T5	T15	NoRel	true	savaşları	seçimlerindeki
+Relation	T5	T2	NoRel	true	savaşları	kaydetti
+Relation	T6	T12	NoRel	true	gerisindeydi	kazandı
+Relation	T6	T15	NoRel	true	gerisindeydi	seçimlerindeki
+Relation	T6	T3	NoRel	true	gerisindeydi	kavgaları
+Relation	T6	T4	NoRel	true	gerisindeydi	rekabetin
+Relation	T6	T5	NoRel	true	gerisindeydi	savaşları
+Relation	T6	T7	NoRel	true	gerisindeydi	gerçekleşti
+Relation	T6	T9	NoRel	true	gerisindeydi	tur
+Relation	T7	T15	NoRel	true	gerçekleşti	seçimlerindeki
+Relation	T7	T2	NoRel	true	gerçekleşti	kaydetti
+Relation	T7	T3	NoRel	true	gerçekleşti	kavgaları
+Relation	T7	T4	NoRel	true	gerçekleşti	rekabetin
+Relation	T7	T9	NoRel	true	gerçekleşti	tur
+Relation	T8	T9	NoRel	true	almıştı	tur
+Relation	T9	T0	NoRel	true	tur	arttı
+Relation	T9	T14	NoRel	true	tur	turda
+Relation	T9	T3	NoRel	true	tur	kavgaları
+Relation	T9	T5	NoRel	true	tur	savaşları

@@ -1,0 +1,41 @@
+Text	Deprem , Bingöl'ün yanı sıra Erzincan'ın bazı köylerinde de yıkımlara ve ölümlere yol açtı .	Bu depremden 10 gün önce 1971 Burdur Depremi yaşanmıştı .	Burdur ve Bingöl depremleri için düzenlenen yardım kampanyalarıyla 12 milyon 397 bin TL dış , 2_milyon 14 bin TL ülke içinden bağış toplandı .		
+Event	T0	Deprem	EVENT	0
+Event	T1	yıkımlara	EVENT	60
+Event	T3	depremden	EVENT	96
+Event	T5	depremleri	EVENT	168
+Event	T6	yardım kampanyalarıyla	EVENT	195
+Event	T7	toplandı	EVENT	283
+Event	T8	ölümlere	EVENT	73
+Event	T2	1971 Burdur Depremi	EVENT	118
+Relation	T0	T1	CauseEffect	true	Deprem	yıkımlara
+Relation	T1	T0	EffectCause	true	yıkımlara	Deprem
+Relation	T0	T8	CauseEffect	true	Deprem	ölümlere
+Relation	T8	T0	EffectCause	true	ölümlere	Deprem
+Relation	T3	T1	CauseEffect	true	depremden	yıkımlara
+Relation	T1	T3	EffectCause	true	yıkımlara	depremden
+Relation	T3	T8	CauseEffect	true	depremden	ölümlere
+Relation	T8	T3	EffectCause	true	ölümlere	depremden
+Relation	T2	T6	CauseEffect	true	1971 Burdur Depremi	yardım kampanyalarıyla
+Relation	T6	T2	EffectCause	true	yardım kampanyalarıyla	1971 Burdur Depremi
+Relation	T5	T6	CauseEffect	true	depremleri	yardım kampanyalarıyla
+Relation	T6	T5	EffectCause	true	yardım kampanyalarıyla	depremleri
+Relation	T6	T7	CauseEffect	true	yardım kampanyalarıyla	toplandı
+Relation	T7	T6	EffectCause	true	toplandı	yardım kampanyalarıyla
+Relation	T0	T6	NoRel	true	Deprem	yardım kampanyalarıyla
+Relation	T1	T5	NoRel	true	yıkımlara	depremleri
+Relation	T1	T7	NoRel	true	yıkımlara	toplandı
+Relation	T2	T0	NoRel	true	1971 Burdur Depremi	Deprem
+Relation	T2	T1	NoRel	true	1971 Burdur Depremi	yıkımlara
+Relation	T2	T3	NoRel	true	1971 Burdur Depremi	depremden
+Relation	T2	T5	NoRel	true	1971 Burdur Depremi	depremleri
+Relation	T3	T2	NoRel	true	depremden	1971 Burdur Depremi
+Relation	T5	T0	NoRel	true	depremleri	Deprem
+Relation	T5	T1	NoRel	true	depremleri	yıkımlara
+Relation	T5	T2	NoRel	true	depremleri	1971 Burdur Depremi
+Relation	T5	T7	NoRel	true	depremleri	toplandı
+Relation	T7	T0	NoRel	true	toplandı	Deprem
+Relation	T7	T3	NoRel	true	toplandı	depremden
+Relation	T7	T5	NoRel	true	toplandı	depremleri
+Relation	T8	T1	NoRel	true	ölümlere	yıkımlara
+Relation	T8	T2	NoRel	true	ölümlere	1971 Burdur Depremi
+Relation	T8	T5	NoRel	true	ölümlere	depremleri

@@ -1,0 +1,108 @@
+Text	2010 ELÂZIĞ DEPREMI , 8 Mart 2010 tarihinde Türkiye saati ile 04.32'de , Elazığ'ın Karakoçan ilçesinde 6,0 büyüklüğünde meydana gelen deprem .	Depremde ilk belirlemelere göre en çok hasar , Kovancılar ilçesine bağlı üç köyde meydana gelmiştir .	Bölgede incelemelerde bulunan dönemin Sağlık Bakanı Recep Akdağ , 51 kişinin hayatını kaybettiğini ve 34 kişinin yaralı olduğunu açıklamıştır .	Dönemin başbakanı Recep Tayyip Erdoğan açıklamasında , depremdeki can kaybının asıl sorumlusunun kerpiç evler olduğunu ve bu evler yüzünden vatandaşların hayatını kaybettiğini söylemiştir .	Daha sonra ölen 10 kişinin iki kez sayıldığı açıklanmış ve ölü sayısı 41 olarak duyurulmuştur .
+Event	T1	deprem	EVENT	134
+Event	T2	hasar	EVENT	182
+Event	T3	gelmiştir	EVENT	233
+Event	T4	kaybettiğini	EVENT	331
+Event	T5	yaralı	EVENT	358
+Event	T6	açıklamıştır	EVENT	374
+Event	T7	söylemiştir	EVENT	565
+Event	T8	ölen	EVENT	590
+Event	T9	açıklanmış	EVENT	624
+Event	T10	duyurulmuştur	EVENT	659
+Event	T11	2010 ELÂZIĞ DEPREMI	EVENT	0
+Event	T12	Depremde	EVENT	143
+Event	T13	incelemelerde	EVENT	253
+Event	T14	açıklamasında	EVENT	428
+Event	T15	sayıldığı	EVENT	614
+Relation	T12	T2	CauseEffect	true	Depremde	hasar
+Relation	T2	T12	EffectCause	true	hasar	Depremde
+Relation	T3	T13	CauseEffect	true	gelmiştir	incelemelerde
+Relation	T13	T3	EffectCause	true	incelemelerde	gelmiştir
+Relation	T13	T6	CauseEffect	true	incelemelerde	açıklamıştır
+Relation	T6	T13	EffectCause	true	açıklamıştır	incelemelerde
+Relation	T14	T7	CauseEffect	true	açıklamasında	söylemiştir
+Relation	T7	T14	EffectCause	true	söylemiştir	açıklamasında
+Relation	T9	T10	CauseEffect	true	açıklanmış	duyurulmuştur
+Relation	T10	T9	EffectCause	true	duyurulmuştur	açıklanmış
+Relation	T15	T9	CauseEffect	true	sayıldığı	açıklanmış
+Relation	T9	T15	EffectCause	true	açıklanmış	sayıldığı
+Relation	T8	T15	CauseEffect	true	ölen	sayıldığı
+Relation	T15	T8	EffectCause	true	sayıldığı	ölen
+Relation	T1	T10	NoRel	true	deprem	duyurulmuştur
+Relation	T1	T11	NoRel	true	deprem	2010 ELÂZIĞ DEPREMI
+Relation	T1	T13	NoRel	true	deprem	incelemelerde
+Relation	T1	T6	NoRel	true	deprem	açıklamıştır
+Relation	T1	T7	NoRel	true	deprem	söylemiştir
+Relation	T1	T8	NoRel	true	deprem	ölen
+Relation	T1	T9	NoRel	true	deprem	açıklanmış
+Relation	T10	T12	NoRel	true	duyurulmuştur	Depremde
+Relation	T10	T14	NoRel	true	duyurulmuştur	açıklamasında
+Relation	T10	T2	NoRel	true	duyurulmuştur	hasar
+Relation	T10	T3	NoRel	true	duyurulmuştur	gelmiştir
+Relation	T10	T8	NoRel	true	duyurulmuştur	ölen
+Relation	T11	T1	NoRel	true	2010 ELÂZIĞ DEPREMI	deprem
+Relation	T11	T10	NoRel	true	2010 ELÂZIĞ DEPREMI	duyurulmuştur
+Relation	T11	T13	NoRel	true	2010 ELÂZIĞ DEPREMI	incelemelerde
+Relation	T11	T14	NoRel	true	2010 ELÂZIĞ DEPREMI	açıklamasında
+Relation	T11	T15	NoRel	true	2010 ELÂZIĞ DEPREMI	sayıldığı
+Relation	T11	T3	NoRel	true	2010 ELÂZIĞ DEPREMI	gelmiştir
+Relation	T11	T4	NoRel	true	2010 ELÂZIĞ DEPREMI	kaybettiğini
+Relation	T11	T5	NoRel	true	2010 ELÂZIĞ DEPREMI	yaralı
+Relation	T12	T13	NoRel	true	Depremde	incelemelerde
+Relation	T12	T4	NoRel	true	Depremde	kaybettiğini
+Relation	T12	T7	NoRel	true	Depremde	söylemiştir
+Relation	T12	T8	NoRel	true	Depremde	ölen
+Relation	T13	T10	NoRel	true	incelemelerde	duyurulmuştur
+Relation	T13	T11	NoRel	true	incelemelerde	2010 ELÂZIĞ DEPREMI
+Relation	T13	T14	NoRel	true	incelemelerde	açıklamasında
+Relation	T13	T8	NoRel	true	incelemelerde	ölen
+Relation	T13	T9	NoRel	true	incelemelerde	açıklanmış
+Relation	T14	T10	NoRel	true	açıklamasında	duyurulmuştur
+Relation	T14	T15	NoRel	true	açıklamasında	sayıldığı
+Relation	T14	T2	NoRel	true	açıklamasında	hasar
+Relation	T14	T3	NoRel	true	açıklamasında	gelmiştir
+Relation	T14	T4	NoRel	true	açıklamasında	kaybettiğini
+Relation	T15	T1	NoRel	true	sayıldığı	deprem
+Relation	T15	T12	NoRel	true	sayıldığı	Depremde
+Relation	T15	T6	NoRel	true	sayıldığı	açıklamıştır
+Relation	T2	T10	NoRel	true	hasar	duyurulmuştur
+Relation	T2	T14	NoRel	true	hasar	açıklamasında
+Relation	T2	T15	NoRel	true	hasar	sayıldığı
+Relation	T2	T4	NoRel	true	hasar	kaybettiğini
+Relation	T2	T6	NoRel	true	hasar	açıklamıştır
+Relation	T2	T8	NoRel	true	hasar	ölen
+Relation	T2	T9	NoRel	true	hasar	açıklanmış
+Relation	T3	T10	NoRel	true	gelmiştir	duyurulmuştur
+Relation	T3	T11	NoRel	true	gelmiştir	2010 ELÂZIĞ DEPREMI
+Relation	T3	T14	NoRel	true	gelmiştir	açıklamasında
+Relation	T3	T15	NoRel	true	gelmiştir	sayıldığı
+Relation	T3	T7	NoRel	true	gelmiştir	söylemiştir
+Relation	T3	T9	NoRel	true	gelmiştir	açıklanmış
+Relation	T4	T3	NoRel	true	kaybettiğini	gelmiştir
+Relation	T4	T8	NoRel	true	kaybettiğini	ölen
+Relation	T4	T9	NoRel	true	kaybettiğini	açıklanmış
+Relation	T5	T10	NoRel	true	yaralı	duyurulmuştur
+Relation	T5	T11	NoRel	true	yaralı	2010 ELÂZIĞ DEPREMI
+Relation	T5	T13	NoRel	true	yaralı	incelemelerde
+Relation	T5	T15	NoRel	true	yaralı	sayıldığı
+Relation	T5	T2	NoRel	true	yaralı	hasar
+Relation	T5	T4	NoRel	true	yaralı	kaybettiğini
+Relation	T5	T7	NoRel	true	yaralı	söylemiştir
+Relation	T5	T8	NoRel	true	yaralı	ölen
+Relation	T6	T2	NoRel	true	açıklamıştır	hasar
+Relation	T6	T4	NoRel	true	açıklamıştır	kaybettiğini
+Relation	T6	T5	NoRel	true	açıklamıştır	yaralı
+Relation	T7	T12	NoRel	true	söylemiştir	Depremde
+Relation	T7	T13	NoRel	true	söylemiştir	incelemelerde
+Relation	T7	T8	NoRel	true	söylemiştir	ölen
+Relation	T8	T1	NoRel	true	ölen	deprem
+Relation	T8	T10	NoRel	true	ölen	duyurulmuştur
+Relation	T8	T11	NoRel	true	ölen	2010 ELÂZIĞ DEPREMI
+Relation	T8	T12	NoRel	true	ölen	Depremde
+Relation	T8	T13	NoRel	true	ölen	incelemelerde
+Relation	T8	T2	NoRel	true	ölen	hasar
+Relation	T8	T3	NoRel	true	ölen	gelmiştir
+Relation	T8	T4	NoRel	true	ölen	kaybettiğini
+Relation	T9	T12	NoRel	true	açıklanmış	Depremde
+Relation	T9	T5	NoRel	true	açıklanmış	yaralı
+Relation	T9	T8	NoRel	true	açıklanmış	ölen

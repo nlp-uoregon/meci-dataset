@@ -1,0 +1,58 @@
+Text	BUIZINGEN TREN_KAZASI veya HALLE TREN_KAZASI ( Felemenkçe : TREINONGEVAL BIJ BUIZINGEN ; Fransızca : ACCIDENT FERROVIAIRE DE BUIZINGEN iki tren arasında 15 Şubat 2010 tarihinde Belçika , Halle , Belçika , Flaman Brabant belediyesi olan Buizingen'de meydana gelen bir tren çarpışmasıdır .	Bu olay Belçika’nın elli yıldan fazla bir zamandan sonra en kötü demiryolu kazasıdır .	250 - 300 yolcu taşıyan tren , karlı bir günün sabah trafiğin yoğun olduğu saatte çarpıştı .	Çarpışma , Belçika başkentinden yaklaşık 14 kilometres ( 9 miles ) uzakta , Brüksel – Mons ( line 96 ) hattı üzerinde meydana geldi .	NMBS / SNCB ( Belçika ulusal demiryolu şirketi ) ve Infrabel ( Belçika’nın demiryolu altyapısından sorumlu şirketi ) ortak açıklamasına göre , trenlerin Brüksel ( kuzey ) yolu üzerinde Halle tren istasyonu çıkışında demiryolu makasında ‘ ’ geç bir şekilde ’ ’ çarpıştığı görülür .
+Event	T0	ACCIDENT	EVENT	101
+Event	T1	taşıyan	EVENT	391
+Event	T10	BUIZINGEN TREN_KAZASI	EVENT	0
+Event	T11	HALLE TREN_KAZASI	EVENT	27
+Event	T2	çarpışmasıdır	EVENT	272
+Event	T3	olay	EVENT	291
+Event	T4	kazasıdır	EVENT	363
+Event	T5	çarpıştı	EVENT	457
+Event	T6	Çarpışma	EVENT	468
+Event	T8	açıklamasına	EVENT	725
+Event	T9	görülür	EVENT	873
+Relation	T2	T10	CauseEffect	true	çarpışmasıdır	BUIZINGEN TREN_KAZASI
+Relation	T10	T2	EffectCause	true	BUIZINGEN TREN_KAZASI	çarpışmasıdır
+Relation	T2	T11	CauseEffect	true	çarpışmasıdır	HALLE TREN_KAZASI
+Relation	T11	T2	EffectCause	true	HALLE TREN_KAZASI	çarpışmasıdır
+Relation	T1	T4	CauseEffect	true	taşıyan	kazasıdır
+Relation	T4	T1	EffectCause	true	kazasıdır	taşıyan
+Relation	T5	T4	CauseEffect	true	çarpıştı	kazasıdır
+Relation	T4	T5	EffectCause	true	kazasıdır	çarpıştı
+Relation	T6	T8	CauseEffect	true	Çarpışma	açıklamasına
+Relation	T8	T6	EffectCause	true	açıklamasına	Çarpışma
+Relation	T11	T8	CauseEffect	true	HALLE TREN_KAZASI	açıklamasına
+Relation	T8	T11	EffectCause	true	açıklamasına	HALLE TREN_KAZASI
+Relation	T0	T1	NoRel	true	ACCIDENT	taşıyan
+Relation	T0	T10	NoRel	true	ACCIDENT	BUIZINGEN TREN_KAZASI
+Relation	T0	T11	NoRel	true	ACCIDENT	HALLE TREN_KAZASI
+Relation	T0	T4	NoRel	true	ACCIDENT	kazasıdır
+Relation	T0	T6	NoRel	true	ACCIDENT	Çarpışma
+Relation	T1	T2	NoRel	true	taşıyan	çarpışmasıdır
+Relation	T1	T8	NoRel	true	taşıyan	açıklamasına
+Relation	T10	T0	NoRel	true	BUIZINGEN TREN_KAZASI	ACCIDENT
+Relation	T10	T1	NoRel	true	BUIZINGEN TREN_KAZASI	taşıyan
+Relation	T10	T11	NoRel	true	BUIZINGEN TREN_KAZASI	HALLE TREN_KAZASI
+Relation	T10	T3	NoRel	true	BUIZINGEN TREN_KAZASI	olay
+Relation	T10	T4	NoRel	true	BUIZINGEN TREN_KAZASI	kazasıdır
+Relation	T10	T6	NoRel	true	BUIZINGEN TREN_KAZASI	Çarpışma
+Relation	T10	T9	NoRel	true	BUIZINGEN TREN_KAZASI	görülür
+Relation	T11	T1	NoRel	true	HALLE TREN_KAZASI	taşıyan
+Relation	T11	T10	NoRel	true	HALLE TREN_KAZASI	BUIZINGEN TREN_KAZASI
+Relation	T11	T3	NoRel	true	HALLE TREN_KAZASI	olay
+Relation	T11	T5	NoRel	true	HALLE TREN_KAZASI	çarpıştı
+Relation	T2	T3	NoRel	true	çarpışmasıdır	olay
+Relation	T3	T4	NoRel	true	olay	kazasıdır
+Relation	T3	T5	NoRel	true	olay	çarpıştı
+Relation	T3	T6	NoRel	true	olay	Çarpışma
+Relation	T4	T2	NoRel	true	kazasıdır	çarpışmasıdır
+Relation	T4	T9	NoRel	true	kazasıdır	görülür
+Relation	T5	T1	NoRel	true	çarpıştı	taşıyan
+Relation	T5	T11	NoRel	true	çarpıştı	HALLE TREN_KAZASI
+Relation	T5	T2	NoRel	true	çarpıştı	çarpışmasıdır
+Relation	T6	T10	NoRel	true	Çarpışma	BUIZINGEN TREN_KAZASI
+Relation	T6	T3	NoRel	true	Çarpışma	olay
+Relation	T6	T5	NoRel	true	Çarpışma	çarpıştı
+Relation	T8	T0	NoRel	true	açıklamasına	ACCIDENT
+Relation	T8	T2	NoRel	true	açıklamasına	çarpışmasıdır
+Relation	T9	T2	NoRel	true	görülür	çarpışmasıdır
+Relation	T9	T8	NoRel	true	görülür	açıklamasına

@@ -1,0 +1,48 @@
+Text	küçükresim | Roma vebası sırasında ölüm meleği kapıyı çalarken ; Jules - Elie Delaunay tarafından çizilmiş ve Levasseur tarafından işlenmiştir .	ANTONINUS VEBASI , ayrıca bilinen diğer adıyla GALEN'IN VEBASI ( adını Roma İmparatorluğunda yaşayan Yunan doktorun isminden almıştır ) , MS 165 - 180 yılları arasında yaşandığı tahmin edilen , Yakın Doğu'daki seferlerden Roma İmparatorluğu'na dönen askerler tarafından getirilmiş salgın bir hastalıktır .	Akademisyenler bunun çiçek hastalığı ya da kızamık olduğundan şüphelenmiştir , ancak gerçek sebebi belirsizliğini korumaktadır .	Salgın , Roma imparatoru Lucius Verus'un ( ö. 169 ) hayatını kaybetmesine sebep olmuştur .	Verus , Marcus Aurelius Antoninus'un kral naibiydi .
+Event	T0	vebası	EVENT	18
+Event	T1	ANTONINUS VEBASI	EVENT	145
+Event	T10	dönen	EVENT	389
+Event	T11	getirilmiş	EVENT	415
+Event	T2	çalarken	EVENT	54
+Event	T3	çizilmiş	EVENT	98
+Event	T4	işlenmiştir	EVENT	131
+Event	T7	Salgın	EVENT	580
+Event	T8	GALEN'IN VEBASI	EVENT	192
+Event	T9	almıştır	EVENT	270
+Relation	T10	T11	CauseEffect	true	dönen	getirilmiş
+Relation	T11	T10	EffectCause	true	getirilmiş	dönen
+Relation	T11	T7	CauseEffect	true	getirilmiş	Salgın
+Relation	T7	T11	EffectCause	true	Salgın	getirilmiş
+Relation	T0	T2	CauseEffect	true	vebası	çalarken
+Relation	T2	T0	EffectCause	true	çalarken	vebası
+Relation	T11	T8	CauseEffect	true	getirilmiş	GALEN'IN VEBASI
+Relation	T8	T11	EffectCause	true	GALEN'IN VEBASI	getirilmiş
+Relation	T11	T1	CauseEffect	true	getirilmiş	ANTONINUS VEBASI
+Relation	T1	T11	EffectCause	true	ANTONINUS VEBASI	getirilmiş
+Relation	T0	T10	NoRel	true	vebası	dönen
+Relation	T0	T11	NoRel	true	vebası	getirilmiş
+Relation	T0	T3	NoRel	true	vebası	çizilmiş
+Relation	T1	T10	NoRel	true	ANTONINUS VEBASI	dönen
+Relation	T1	T3	NoRel	true	ANTONINUS VEBASI	çizilmiş
+Relation	T1	T7	NoRel	true	ANTONINUS VEBASI	Salgın
+Relation	T10	T0	NoRel	true	dönen	vebası
+Relation	T10	T3	NoRel	true	dönen	çizilmiş
+Relation	T11	T0	NoRel	true	getirilmiş	vebası
+Relation	T11	T2	NoRel	true	getirilmiş	çalarken
+Relation	T11	T3	NoRel	true	getirilmiş	çizilmiş
+Relation	T11	T4	NoRel	true	getirilmiş	işlenmiştir
+Relation	T11	T9	NoRel	true	getirilmiş	almıştır
+Relation	T2	T11	NoRel	true	çalarken	getirilmiş
+Relation	T2	T8	NoRel	true	çalarken	GALEN'IN VEBASI
+Relation	T3	T0	NoRel	true	çizilmiş	vebası
+Relation	T3	T10	NoRel	true	çizilmiş	dönen
+Relation	T4	T0	NoRel	true	işlenmiştir	vebası
+Relation	T4	T11	NoRel	true	işlenmiştir	getirilmiş
+Relation	T4	T3	NoRel	true	işlenmiştir	çizilmiş
+Relation	T4	T7	NoRel	true	işlenmiştir	Salgın
+Relation	T4	T8	NoRel	true	işlenmiştir	GALEN'IN VEBASI
+Relation	T8	T0	NoRel	true	GALEN'IN VEBASI	vebası
+Relation	T8	T3	NoRel	true	GALEN'IN VEBASI	çizilmiş
+Relation	T9	T10	NoRel	true	almıştır	dönen
+Relation	T9	T2	NoRel	true	almıştır	çalarken
+Relation	T9	T8	NoRel	true	almıştır	GALEN'IN VEBASI

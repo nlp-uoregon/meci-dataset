@@ -1,0 +1,33 @@
+Text	Yerel saatle 00.39 civarında 4225 sefer sayılı uçuş Kazakistan SSC'deki Alma - Ata Havalimanı'ndan kalktı .	Kalkıştan sadece birkaç saniye sonra , uçak 500 fit ( 152,4_m ) irtifaya ulaştı .	Uçak bir sıcak hava bölgesine ulaştı .	Bundan dolayı hava sürati önemli ölçüde düştü .	Tupolev durdu ve Alma - Ata banliyölerinin yakınındaki bir çiftliğe düştü .
+Event	T0	uçuş	EVENT	47
+Event	T1	kalktı	EVENT	99
+Event	T2	Kalkıştan	EVENT	108
+Event	T3	ulaştı	EVENT	181
+Event	T4	ulaştı	EVENT	220
+Event	T5	düştü	EVENT	269
+Event	T6	durdu	EVENT	285
+Event	T7	düştü	EVENT	345
+Relation	T4	T5	CauseEffect	true	ulaştı	düştü
+Relation	T5	T4	EffectCause	true	düştü	ulaştı
+Relation	T5	T6	CauseEffect	true	düştü	durdu
+Relation	T6	T5	EffectCause	true	durdu	düştü
+Relation	T6	T7	CauseEffect	true	durdu	düştü
+Relation	T7	T6	EffectCause	true	düştü	durdu
+Relation	T0	T1	NoRel	true	uçuş	kalktı
+Relation	T0	T4	NoRel	true	uçuş	ulaştı
+Relation	T0	T5	NoRel	true	uçuş	düştü
+Relation	T0	T6	NoRel	true	uçuş	durdu
+Relation	T0	T7	NoRel	true	uçuş	düştü
+Relation	T1	T7	NoRel	true	kalktı	düştü
+Relation	T2	T1	NoRel	true	Kalkıştan	kalktı
+Relation	T2	T6	NoRel	true	Kalkıştan	durdu
+Relation	T3	T1	NoRel	true	ulaştı	kalktı
+Relation	T3	T5	NoRel	true	ulaştı	düştü
+Relation	T4	T0	NoRel	true	ulaştı	uçuş
+Relation	T4	T1	NoRel	true	ulaştı	kalktı
+Relation	T4	T6	NoRel	true	ulaştı	durdu
+Relation	T5	T1	NoRel	true	düştü	kalktı
+Relation	T5	T2	NoRel	true	düştü	Kalkıştan
+Relation	T5	T3	NoRel	true	düştü	ulaştı
+Relation	T6	T1	NoRel	true	durdu	kalktı
+Relation	T6	T3	NoRel	true	durdu	ulaştı

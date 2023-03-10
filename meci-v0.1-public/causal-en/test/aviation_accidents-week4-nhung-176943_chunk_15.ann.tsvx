@@ -1,0 +1,61 @@
+Text	He is serving his sentence at United States Penitentiary , Florence ADX , in Colorado , a supermax facility that holds the most dangerous prisoners in the federal system .	Although Reid had insisted that he had acted alone and had built the bombs himself , forensic evidence included material from another person .	In 2005 , a British man , Saajid Badat from Gloucester , admitted that he had conspired with Richard Reid and a Tunisian man ( Nizar Trabelsi , who is in prison in Belgium ) , in a plot to blow up two airliners bound for the United States , using their shoe bombs .	Badat has said that he had been instructed to board a flight from Amsterdam to the United States .	Badat never boarded and withdrew from his part of the conspiracy .
+Event	T0	serving	EVENT	6
+Event	T1	sentence	EVENT	18
+Event	T2	holds	EVENT	113
+Event	T3	insisted	EVENT	190
+Event	T4	acted	EVENT	211
+Event	T5	built	EVENT	231
+Event	T6	included	EVENT	275
+Event	T7	admitted	EVENT	372
+Event	T8	conspired	EVENT	393
+Event	T9	plot	EVENT	496
+Event	T10	using	EVENT	556
+Event	T11	said	EVENT	591
+Event	T12	instructed	EVENT	613
+Event	T13	board	EVENT	627
+Event	T14	flight	EVENT	635
+Event	T15	boarded	EVENT	692
+Event	T16	withdrew	EVENT	704
+Event	T17	conspiracy	EVENT	734
+Event	T18	blow up	EVENT	504
+Relation	T8	T18	CauseEffect	true	conspired	blow up
+Relation	T18	T8	EffectCause	true	blow up	conspired
+Relation	T10	T18	CauseEffect	true	using	blow up
+Relation	T18	T10	EffectCause	true	blow up	using
+Relation	T0	T15	NoRel	true	serving	boarded
+Relation	T0	T9	NoRel	true	serving	plot
+Relation	T1	T3	NoRel	true	sentence	insisted
+Relation	T10	T17	NoRel	true	using	conspiracy
+Relation	T10	T3	NoRel	true	using	insisted
+Relation	T10	T7	NoRel	true	using	admitted
+Relation	T10	T9	NoRel	true	using	plot
+Relation	T11	T15	NoRel	true	said	boarded
+Relation	T11	T16	NoRel	true	said	withdrew
+Relation	T12	T11	NoRel	true	instructed	said
+Relation	T12	T17	NoRel	true	instructed	conspiracy
+Relation	T12	T8	NoRel	true	instructed	conspired
+Relation	T13	T3	NoRel	true	board	insisted
+Relation	T13	T8	NoRel	true	board	conspired
+Relation	T14	T0	NoRel	true	flight	serving
+Relation	T14	T15	NoRel	true	flight	boarded
+Relation	T15	T4	NoRel	true	boarded	acted
+Relation	T15	T6	NoRel	true	boarded	included
+Relation	T16	T0	NoRel	true	withdrew	serving
+Relation	T16	T7	NoRel	true	withdrew	admitted
+Relation	T17	T6	NoRel	true	conspiracy	included
+Relation	T17	T9	NoRel	true	conspiracy	plot
+Relation	T18	T2	NoRel	true	blow up	holds
+Relation	T18	T6	NoRel	true	blow up	included
+Relation	T2	T8	NoRel	true	holds	conspired
+Relation	T3	T15	NoRel	true	insisted	boarded
+Relation	T3	T17	NoRel	true	insisted	conspiracy
+Relation	T3	T6	NoRel	true	insisted	included
+Relation	T4	T18	NoRel	true	acted	blow up
+Relation	T5	T15	NoRel	true	built	boarded
+Relation	T5	T3	NoRel	true	built	insisted
+Relation	T6	T15	NoRel	true	included	boarded
+Relation	T6	T7	NoRel	true	included	admitted
+Relation	T7	T0	NoRel	true	admitted	serving
+Relation	T7	T4	NoRel	true	admitted	acted
+Relation	T8	T12	NoRel	true	conspired	instructed
+Relation	T9	T3	NoRel	true	plot	insisted

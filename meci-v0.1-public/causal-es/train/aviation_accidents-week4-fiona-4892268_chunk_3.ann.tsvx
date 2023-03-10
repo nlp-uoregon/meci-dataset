@@ -1,0 +1,150 @@
+Text	El Comité de Aviación Interestatal de la Alianza de Estados Independientes abrió una investigación del accidente .	Como resultado del siniestro , la operación de los Antonov An-12 dentro de Rusia fue prohibida hasta haberse completado el programa de estudio de riesgo .	- La pérdida de control lateral debido a la pérdida de propiedades de apoyo del ala izquierda del avión y una posible violación de la integridad del control .	varilla de cableado del alerón izquierdo , lo que provocó una intensa rotación del avión con un vuelco hacia la izquierda y la colisión con la ladera de la montaña .	- La causa de la pérdida de las propiedades de apoyo del ala izquierda del avión y una posible violación de la integridad del cableado de la varilla de control del alerón izquierdo fue un incendio , surgido en vuelo en el compartimiento de popa de la góndola del motor n° 1 que se extendió a la ala .
+Event	T0	abrió	EVENT	75
+Event	T1	investigación	EVENT	85
+Event	T2	accidente	EVENT	103
+Event	T3	siniestro	EVENT	134
+Event	T4	operación	EVENT	149
+Event	T5	prohibida	EVENT	200
+Event	T6	completado	EVENT	224
+Event	T7	estudio	EVENT	250
+Event	T8	pérdida	EVENT	275
+Event	T9	pérdida	EVENT	314
+Event	T10	violación	EVENT	388
+Event	T11	provocó	EVENT	479
+Event	T12	rotación	EVENT	499
+Event	T13	vuelco	EVENT	525
+Event	T14	colisión	EVENT	556
+Event	T15	pérdida	EVENT	612
+Event	T16	violación	EVENT	690
+Event	T17	incendio	EVENT	783
+Event	T18	vuelo	EVENT	805
+Event	T19	extendió	EVENT	876
+Relation	T9	T14	CauseEffect	true	pérdida	colisión
+Relation	T14	T9	EffectCause	true	colisión	pérdida
+Relation	T17	T15	CauseEffect	true	incendio	pérdida
+Relation	T15	T17	EffectCause	true	pérdida	incendio
+Relation	T0	T15	NoRel	true	abrió	pérdida
+Relation	T0	T2	NoRel	true	abrió	accidente
+Relation	T0	T4	NoRel	true	abrió	operación
+Relation	T1	T14	NoRel	true	investigación	colisión
+Relation	T1	T16	NoRel	true	investigación	violación
+Relation	T1	T17	NoRel	true	investigación	incendio
+Relation	T1	T18	NoRel	true	investigación	vuelo
+Relation	T1	T2	NoRel	true	investigación	accidente
+Relation	T1	T4	NoRel	true	investigación	operación
+Relation	T1	T5	NoRel	true	investigación	prohibida
+Relation	T1	T6	NoRel	true	investigación	completado
+Relation	T1	T8	NoRel	true	investigación	pérdida
+Relation	T10	T1	NoRel	true	violación	investigación
+Relation	T10	T14	NoRel	true	violación	colisión
+Relation	T10	T18	NoRel	true	violación	vuelo
+Relation	T10	T2	NoRel	true	violación	accidente
+Relation	T10	T5	NoRel	true	violación	prohibida
+Relation	T10	T9	NoRel	true	violación	pérdida
+Relation	T11	T17	NoRel	true	provocó	incendio
+Relation	T11	T19	NoRel	true	provocó	extendió
+Relation	T11	T5	NoRel	true	provocó	prohibida
+Relation	T11	T6	NoRel	true	provocó	completado
+Relation	T12	T1	NoRel	true	rotación	investigación
+Relation	T12	T10	NoRel	true	rotación	violación
+Relation	T12	T11	NoRel	true	rotación	provocó
+Relation	T12	T14	NoRel	true	rotación	colisión
+Relation	T12	T4	NoRel	true	rotación	operación
+Relation	T12	T7	NoRel	true	rotación	estudio
+Relation	T13	T0	NoRel	true	vuelco	abrió
+Relation	T13	T1	NoRel	true	vuelco	investigación
+Relation	T13	T2	NoRel	true	vuelco	accidente
+Relation	T13	T7	NoRel	true	vuelco	estudio
+Relation	T14	T15	NoRel	true	colisión	pérdida
+Relation	T14	T17	NoRel	true	colisión	incendio
+Relation	T14	T19	NoRel	true	colisión	extendió
+Relation	T14	T6	NoRel	true	colisión	completado
+Relation	T14	T7	NoRel	true	colisión	estudio
+Relation	T14	T8	NoRel	true	colisión	pérdida
+Relation	T15	T12	NoRel	true	pérdida	rotación
+Relation	T15	T2	NoRel	true	pérdida	accidente
+Relation	T15	T6	NoRel	true	pérdida	completado
+Relation	T16	T11	NoRel	true	violación	provocó
+Relation	T16	T12	NoRel	true	violación	rotación
+Relation	T16	T14	NoRel	true	violación	colisión
+Relation	T16	T4	NoRel	true	violación	operación
+Relation	T16	T5	NoRel	true	violación	prohibida
+Relation	T16	T6	NoRel	true	violación	completado
+Relation	T17	T11	NoRel	true	incendio	provocó
+Relation	T17	T13	NoRel	true	incendio	vuelco
+Relation	T17	T14	NoRel	true	incendio	colisión
+Relation	T17	T16	NoRel	true	incendio	violación
+Relation	T17	T18	NoRel	true	incendio	vuelo
+Relation	T17	T4	NoRel	true	incendio	operación
+Relation	T17	T5	NoRel	true	incendio	prohibida
+Relation	T17	T9	NoRel	true	incendio	pérdida
+Relation	T18	T14	NoRel	true	vuelo	colisión
+Relation	T18	T15	NoRel	true	vuelo	pérdida
+Relation	T18	T16	NoRel	true	vuelo	violación
+Relation	T18	T2	NoRel	true	vuelo	accidente
+Relation	T18	T3	NoRel	true	vuelo	siniestro
+Relation	T18	T9	NoRel	true	vuelo	pérdida
+Relation	T19	T10	NoRel	true	extendió	violación
+Relation	T19	T11	NoRel	true	extendió	provocó
+Relation	T19	T17	NoRel	true	extendió	incendio
+Relation	T19	T18	NoRel	true	extendió	vuelo
+Relation	T19	T4	NoRel	true	extendió	operación
+Relation	T19	T5	NoRel	true	extendió	prohibida
+Relation	T19	T9	NoRel	true	extendió	pérdida
+Relation	T2	T1	NoRel	true	accidente	investigación
+Relation	T2	T12	NoRel	true	accidente	rotación
+Relation	T2	T14	NoRel	true	accidente	colisión
+Relation	T2	T3	NoRel	true	accidente	siniestro
+Relation	T2	T6	NoRel	true	accidente	completado
+Relation	T2	T8	NoRel	true	accidente	pérdida
+Relation	T3	T12	NoRel	true	siniestro	rotación
+Relation	T3	T13	NoRel	true	siniestro	vuelco
+Relation	T3	T15	NoRel	true	siniestro	pérdida
+Relation	T3	T19	NoRel	true	siniestro	extendió
+Relation	T3	T4	NoRel	true	siniestro	operación
+Relation	T3	T5	NoRel	true	siniestro	prohibida
+Relation	T3	T8	NoRel	true	siniestro	pérdida
+Relation	T4	T0	NoRel	true	operación	abrió
+Relation	T4	T13	NoRel	true	operación	vuelco
+Relation	T4	T15	NoRel	true	operación	pérdida
+Relation	T4	T17	NoRel	true	operación	incendio
+Relation	T4	T18	NoRel	true	operación	vuelo
+Relation	T4	T19	NoRel	true	operación	extendió
+Relation	T4	T5	NoRel	true	operación	prohibida
+Relation	T4	T7	NoRel	true	operación	estudio
+Relation	T4	T9	NoRel	true	operación	pérdida
+Relation	T5	T0	NoRel	true	prohibida	abrió
+Relation	T5	T1	NoRel	true	prohibida	investigación
+Relation	T5	T13	NoRel	true	prohibida	vuelco
+Relation	T5	T16	NoRel	true	prohibida	violación
+Relation	T5	T3	NoRel	true	prohibida	siniestro
+Relation	T5	T4	NoRel	true	prohibida	operación
+Relation	T5	T7	NoRel	true	prohibida	estudio
+Relation	T5	T9	NoRel	true	prohibida	pérdida
+Relation	T6	T0	NoRel	true	completado	abrió
+Relation	T6	T10	NoRel	true	completado	violación
+Relation	T6	T11	NoRel	true	completado	provocó
+Relation	T6	T14	NoRel	true	completado	colisión
+Relation	T6	T16	NoRel	true	completado	violación
+Relation	T6	T18	NoRel	true	completado	vuelo
+Relation	T6	T3	NoRel	true	completado	siniestro
+Relation	T6	T7	NoRel	true	completado	estudio
+Relation	T6	T9	NoRel	true	completado	pérdida
+Relation	T7	T1	NoRel	true	estudio	investigación
+Relation	T7	T11	NoRel	true	estudio	provocó
+Relation	T7	T13	NoRel	true	estudio	vuelco
+Relation	T7	T14	NoRel	true	estudio	colisión
+Relation	T7	T19	NoRel	true	estudio	extendió
+Relation	T7	T2	NoRel	true	estudio	accidente
+Relation	T7	T8	NoRel	true	estudio	pérdida
+Relation	T8	T18	NoRel	true	pérdida	vuelo
+Relation	T8	T19	NoRel	true	pérdida	extendió
+Relation	T8	T7	NoRel	true	pérdida	estudio
+Relation	T9	T0	NoRel	true	pérdida	abrió
+Relation	T9	T10	NoRel	true	pérdida	violación
+Relation	T9	T12	NoRel	true	pérdida	rotación
+Relation	T9	T15	NoRel	true	pérdida	pérdida
+Relation	T9	T16	NoRel	true	pérdida	violación
+Relation	T9	T17	NoRel	true	pérdida	incendio
+Relation	T9	T2	NoRel	true	pérdida	accidente
+Relation	T9	T4	NoRel	true	pérdida	operación

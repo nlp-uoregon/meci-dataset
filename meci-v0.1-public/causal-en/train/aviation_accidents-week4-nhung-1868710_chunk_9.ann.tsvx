@@ -1,0 +1,115 @@
+Text	Italian world bronze medalist Carlo Fassi was another international coach who relocated from overseas to help rebuild the U.S. Figure Skating program .	The disaster prompted U.S. Figure Skating executives to issue a mandate that still applies today : No team traveling to an international competition would ever be allowed to fly together again .	The Belgian Government immediately ordered a full inquiry into the cause of the accident , and an investigation was conducted by the Belgian National authorities , the United States Federal Aviation Administration ( FAA ) , and the International Civil Aviation Organization ( ICAO ) , who spent several months combing through the evidence .	There was much speculation about what may have happened ; the FBI even reportedly considered the possibility of terrorism .	The exact cause of the crash was never fully determined , but the authorities eventually agreed that the most likely explanation was a mechanical failure of one of the flight control mechanisms , probably a malfunction of either the wing spoilers or the tail stabilizers .
+Event	T0	relocated	EVENT	78
+Event	T1	rebuild	EVENT	110
+Event	T2	Skating	EVENT	134
+Event	T3	prompted	EVENT	165
+Event	T4	issue	EVENT	208
+Event	T5	mandate	EVENT	216
+Event	T6	applies	EVENT	235
+Event	T7	traveling	EVENT	259
+Event	T8	competition	EVENT	289
+Event	T9	allowed	EVENT	315
+Event	T10	ordered	EVENT	382
+Event	T11	inquiry	EVENT	397
+Event	T12	accident	EVENT	427
+Event	T13	investigation	EVENT	445
+Event	T14	conducted	EVENT	463
+Event	T15	spent	EVENT	636
+Event	T16	speculation	EVENT	703
+Event	T17	happened	EVENT	735
+Event	T18	considered	EVENT	770
+Event	T19	terrorism	EVENT	800
+Event	T20	crash	EVENT	835
+Event	T21	determined	EVENT	857
+Event	T22	agreed	EVENT	901
+Event	T23	failure	EVENT	958
+Event	T24	malfunction	EVENT	1019
+Event	T25	disaster	EVENT	156
+Event	T26	combing	EVENT	657
+Relation	T0	T1	CauseEffect	true	relocated	rebuild
+Relation	T1	T0	EffectCause	true	rebuild	relocated
+Relation	T25	T4	CauseEffect	true	disaster	issue
+Relation	T4	T25	EffectCause	true	issue	disaster
+Relation	T12	T13	CauseEffect	true	accident	investigation
+Relation	T13	T12	EffectCause	true	investigation	accident
+Relation	T12	T10	CauseEffect	true	accident	ordered
+Relation	T10	T12	EffectCause	true	ordered	accident
+Relation	T12	T26	CauseEffect	true	accident	combing
+Relation	T26	T12	EffectCause	true	combing	accident
+Relation	T23	T20	CauseEffect	true	failure	crash
+Relation	T20	T23	EffectCause	true	crash	failure
+Relation	T24	T20	CauseEffect	true	malfunction	crash
+Relation	T20	T24	EffectCause	true	crash	malfunction
+Relation	T0	T14	NoRel	true	relocated	conducted
+Relation	T0	T26	NoRel	true	relocated	combing
+Relation	T0	T3	NoRel	true	relocated	prompted
+Relation	T0	T9	NoRel	true	relocated	allowed
+Relation	T1	T6	NoRel	true	rebuild	applies
+Relation	T10	T1	NoRel	true	ordered	rebuild
+Relation	T10	T17	NoRel	true	ordered	happened
+Relation	T10	T18	NoRel	true	ordered	considered
+Relation	T11	T19	NoRel	true	inquiry	terrorism
+Relation	T11	T20	NoRel	true	inquiry	crash
+Relation	T11	T3	NoRel	true	inquiry	prompted
+Relation	T11	T6	NoRel	true	inquiry	applies
+Relation	T12	T11	NoRel	true	accident	inquiry
+Relation	T12	T17	NoRel	true	accident	happened
+Relation	T12	T2	NoRel	true	accident	Skating
+Relation	T12	T21	NoRel	true	accident	determined
+Relation	T12	T4	NoRel	true	accident	issue
+Relation	T13	T0	NoRel	true	investigation	relocated
+Relation	T13	T2	NoRel	true	investigation	Skating
+Relation	T13	T3	NoRel	true	investigation	prompted
+Relation	T14	T25	NoRel	true	conducted	disaster
+Relation	T14	T7	NoRel	true	conducted	traveling
+Relation	T16	T0	NoRel	true	speculation	relocated
+Relation	T16	T26	NoRel	true	speculation	combing
+Relation	T17	T11	NoRel	true	happened	inquiry
+Relation	T17	T24	NoRel	true	happened	malfunction
+Relation	T17	T3	NoRel	true	happened	prompted
+Relation	T17	T4	NoRel	true	happened	issue
+Relation	T17	T8	NoRel	true	happened	competition
+Relation	T18	T0	NoRel	true	considered	relocated
+Relation	T18	T1	NoRel	true	considered	rebuild
+Relation	T18	T15	NoRel	true	considered	spent
+Relation	T18	T8	NoRel	true	considered	competition
+Relation	T19	T16	NoRel	true	terrorism	speculation
+Relation	T19	T17	NoRel	true	terrorism	happened
+Relation	T19	T18	NoRel	true	terrorism	considered
+Relation	T2	T1	NoRel	true	Skating	rebuild
+Relation	T2	T17	NoRel	true	Skating	happened
+Relation	T2	T18	NoRel	true	Skating	considered
+Relation	T2	T19	NoRel	true	Skating	terrorism
+Relation	T2	T24	NoRel	true	Skating	malfunction
+Relation	T2	T8	NoRel	true	Skating	competition
+Relation	T20	T17	NoRel	true	crash	happened
+Relation	T21	T17	NoRel	true	determined	happened
+Relation	T21	T6	NoRel	true	determined	applies
+Relation	T22	T21	NoRel	true	agreed	determined
+Relation	T22	T24	NoRel	true	agreed	malfunction
+Relation	T22	T7	NoRel	true	agreed	traveling
+Relation	T25	T12	NoRel	true	disaster	accident
+Relation	T25	T20	NoRel	true	disaster	crash
+Relation	T25	T22	NoRel	true	disaster	agreed
+Relation	T26	T0	NoRel	true	combing	relocated
+Relation	T26	T13	NoRel	true	combing	investigation
+Relation	T26	T17	NoRel	true	combing	happened
+Relation	T26	T2	NoRel	true	combing	Skating
+Relation	T3	T21	NoRel	true	prompted	determined
+Relation	T4	T10	NoRel	true	issue	ordered
+Relation	T4	T16	NoRel	true	issue	speculation
+Relation	T5	T0	NoRel	true	mandate	relocated
+Relation	T5	T25	NoRel	true	mandate	disaster
+Relation	T5	T26	NoRel	true	mandate	combing
+Relation	T5	T6	NoRel	true	mandate	applies
+Relation	T6	T15	NoRel	true	applies	spent
+Relation	T6	T3	NoRel	true	applies	prompted
+Relation	T6	T5	NoRel	true	applies	mandate
+Relation	T7	T10	NoRel	true	traveling	ordered
+Relation	T7	T20	NoRel	true	traveling	crash
+Relation	T7	T23	NoRel	true	traveling	failure
+Relation	T7	T9	NoRel	true	traveling	allowed
+Relation	T8	T20	NoRel	true	competition	crash
+Relation	T9	T16	NoRel	true	allowed	speculation
+Relation	T9	T23	NoRel	true	allowed	failure
+Relation	T9	T25	NoRel	true	allowed	disaster

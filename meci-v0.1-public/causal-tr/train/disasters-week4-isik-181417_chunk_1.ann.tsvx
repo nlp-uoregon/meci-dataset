@@ -1,0 +1,80 @@
+Text	1991 yılında Agustos'dan Ekim'e kadar olan patlamada 2 –6 km³ kayaç havaya püskürtülmüş .	Buzul parçaları erimiş , böylelikle oluşan çamur çığı ( lahar ) vadilere doldurmuştur .	Yöre halkının patlama öncesinde bölgeyi boşaltmış olması olası bir kaybın olmasını engellemiştir .	Patlama sırasında püskürtülen küller büyük bir alana , Şili , Arjantin üzerinde Falkland Adaları'na kadar , yağmıştır .	Devasa patlama , neredeyse aynı zamana denk gelen Filipinler'deki Pinatubo Yanardağı'nın patlaması sebebiyle pek bilinmez .
+Event	T0	patlamada	EVENT	43
+Event	T1	püskürtülmüş	EVENT	75
+Event	T2	erimiş	EVENT	106
+Event	T3	oluşan	EVENT	126
+Event	T4	doldurmuştur	EVENT	163
+Event	T5	patlama	EVENT	192
+Event	T6	boşaltmış	EVENT	218
+Event	T7	kaybın	EVENT	245
+Event	T8	Patlama	EVENT	277
+Event	T9	yağmıştır	EVENT	385
+Event	T10	patlama	EVENT	404
+Event	T11	patlaması	EVENT	486
+Event	T12	küller	EVENT	307
+Relation	T0	T1	CauseEffect	true	patlamada	püskürtülmüş
+Relation	T1	T0	EffectCause	true	püskürtülmüş	patlamada
+Relation	T1	T2	CauseEffect	true	püskürtülmüş	erimiş
+Relation	T2	T1	EffectCause	true	erimiş	püskürtülmüş
+Relation	T2	T3	CauseEffect	true	erimiş	oluşan
+Relation	T3	T2	EffectCause	true	oluşan	erimiş
+Relation	T3	T4	CauseEffect	true	oluşan	doldurmuştur
+Relation	T4	T3	EffectCause	true	doldurmuştur	oluşan
+Relation	T0	T12	CauseEffect	true	patlamada	küller
+Relation	T12	T0	EffectCause	true	küller	patlamada
+Relation	T8	T12	CauseEffect	true	Patlama	küller
+Relation	T12	T8	EffectCause	true	küller	Patlama
+Relation	T12	T9	CauseEffect	true	küller	yağmıştır
+Relation	T9	T12	EffectCause	true	yağmıştır	küller
+Relation	T0	T2	NoRel	true	patlamada	erimiş
+Relation	T0	T3	NoRel	true	patlamada	oluşan
+Relation	T0	T4	NoRel	true	patlamada	doldurmuştur
+Relation	T0	T6	NoRel	true	patlamada	boşaltmış
+Relation	T1	T10	NoRel	true	püskürtülmüş	patlama
+Relation	T1	T11	NoRel	true	püskürtülmüş	patlaması
+Relation	T1	T6	NoRel	true	püskürtülmüş	boşaltmış
+Relation	T1	T8	NoRel	true	püskürtülmüş	Patlama
+Relation	T10	T1	NoRel	true	patlama	püskürtülmüş
+Relation	T10	T4	NoRel	true	patlama	doldurmuştur
+Relation	T10	T7	NoRel	true	patlama	kaybın
+Relation	T10	T8	NoRel	true	patlama	Patlama
+Relation	T10	T9	NoRel	true	patlama	yağmıştır
+Relation	T11	T0	NoRel	true	patlaması	patlamada
+Relation	T11	T6	NoRel	true	patlaması	boşaltmış
+Relation	T11	T7	NoRel	true	patlaması	kaybın
+Relation	T11	T8	NoRel	true	patlaması	Patlama
+Relation	T11	T9	NoRel	true	patlaması	yağmıştır
+Relation	T12	T1	NoRel	true	küller	püskürtülmüş
+Relation	T12	T10	NoRel	true	küller	patlama
+Relation	T12	T5	NoRel	true	küller	patlama
+Relation	T12	T7	NoRel	true	küller	kaybın
+Relation	T2	T10	NoRel	true	erimiş	patlama
+Relation	T2	T11	NoRel	true	erimiş	patlaması
+Relation	T2	T5	NoRel	true	erimiş	patlama
+Relation	T2	T6	NoRel	true	erimiş	boşaltmış
+Relation	T2	T8	NoRel	true	erimiş	Patlama
+Relation	T3	T8	NoRel	true	oluşan	Patlama
+Relation	T4	T1	NoRel	true	doldurmuştur	püskürtülmüş
+Relation	T4	T11	NoRel	true	doldurmuştur	patlaması
+Relation	T4	T5	NoRel	true	doldurmuştur	patlama
+Relation	T4	T8	NoRel	true	doldurmuştur	Patlama
+Relation	T5	T11	NoRel	true	patlama	patlaması
+Relation	T5	T3	NoRel	true	patlama	oluşan
+Relation	T5	T4	NoRel	true	patlama	doldurmuştur
+Relation	T5	T9	NoRel	true	patlama	yağmıştır
+Relation	T6	T1	NoRel	true	boşaltmış	püskürtülmüş
+Relation	T6	T11	NoRel	true	boşaltmış	patlaması
+Relation	T6	T12	NoRel	true	boşaltmış	küller
+Relation	T6	T2	NoRel	true	boşaltmış	erimiş
+Relation	T6	T8	NoRel	true	boşaltmış	Patlama
+Relation	T7	T0	NoRel	true	kaybın	patlamada
+Relation	T7	T1	NoRel	true	kaybın	püskürtülmüş
+Relation	T7	T2	NoRel	true	kaybın	erimiş
+Relation	T7	T3	NoRel	true	kaybın	oluşan
+Relation	T7	T5	NoRel	true	kaybın	patlama
+Relation	T7	T8	NoRel	true	kaybın	Patlama
+Relation	T8	T10	NoRel	true	Patlama	patlama
+Relation	T8	T6	NoRel	true	Patlama	boşaltmış
+Relation	T8	T9	NoRel	true	Patlama	yağmıştır
+Relation	T9	T1	NoRel	true	yağmıştır	püskürtülmüş
+Relation	T9	T7	NoRel	true	yağmıştır	kaybın

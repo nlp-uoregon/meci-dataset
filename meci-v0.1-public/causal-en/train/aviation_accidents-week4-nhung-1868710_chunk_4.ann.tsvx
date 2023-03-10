@@ -1,0 +1,75 @@
+Text	Father Joseph Cuyt , a local priest who had been observing the airplane as it came in to land , rushed to the scene but was driven back by the intense heat of the fire .	Airport rescue vehicles arrived at the crash site almost immediately but the plane was already a blazing fire .	Baudouin I , King of the Belgians , and his consort , Queen Fabiola , travelled to the scene of the disaster to provide comfort to the bereaved families .	They donated oak coffins bearing the royal seal to transport the bodies back home .	All eighteen members of the 1961 U.S. Figure Skating team lost their lives , as well as sixteen other people who were accompanying them , including family members , professional coaches , and skating officials .
+Event	T0	observing	EVENT	49
+Event	T1	heat	EVENT	151
+Event	T2	fire	EVENT	163
+Event	T3	rescue	EVENT	178
+Event	T4	arrived	EVENT	194
+Event	T5	crash	EVENT	209
+Event	T6	travelled	EVENT	352
+Event	T7	disaster	EVENT	382
+Event	T8	bereaved	EVENT	417
+Event	T9	donated	EVENT	442
+Event	T10	bearing	EVENT	462
+Event	T11	transport	EVENT	488
+Event	T12	lost	EVENT	579
+Event	T13	accompanying	EVENT	639
+Event	T14	land	EVENT	89
+Event	T15	rushed	EVENT	96
+Event	T16	driven back	EVENT	124
+Event	T17	blazing	EVENT	267
+Event	T18	provide	EVENT	394
+Relation	T1	T16	CauseEffect	true	heat	driven back
+Relation	T16	T1	EffectCause	true	driven back	heat
+Relation	T5	T4	CauseEffect	true	crash	arrived
+Relation	T4	T5	EffectCause	true	arrived	crash
+Relation	T5	T17	CauseEffect	true	crash	blazing
+Relation	T17	T5	EffectCause	true	blazing	crash
+Relation	T7	T6	CauseEffect	true	disaster	travelled
+Relation	T6	T7	EffectCause	true	travelled	disaster
+Relation	T6	T18	CauseEffect	true	travelled	provide
+Relation	T18	T6	EffectCause	true	provide	travelled
+Relation	T7	T8	CauseEffect	true	disaster	bereaved
+Relation	T8	T7	EffectCause	true	bereaved	disaster
+Relation	T9	T11	CauseEffect	true	donated	transport
+Relation	T11	T9	EffectCause	true	transport	donated
+Relation	T7	T12	CauseEffect	true	disaster	lost
+Relation	T12	T7	EffectCause	true	lost	disaster
+Relation	T0	T16	NoRel	true	observing	driven back
+Relation	T0	T18	NoRel	true	observing	provide
+Relation	T0	T6	NoRel	true	observing	travelled
+Relation	T1	T12	NoRel	true	heat	lost
+Relation	T1	T13	NoRel	true	heat	accompanying
+Relation	T1	T7	NoRel	true	heat	disaster
+Relation	T11	T1	NoRel	true	transport	heat
+Relation	T11	T18	NoRel	true	transport	provide
+Relation	T13	T4	NoRel	true	accompanying	arrived
+Relation	T13	T9	NoRel	true	accompanying	donated
+Relation	T14	T13	NoRel	true	land	accompanying
+Relation	T14	T17	NoRel	true	land	blazing
+Relation	T14	T3	NoRel	true	land	rescue
+Relation	T15	T1	NoRel	true	rushed	heat
+Relation	T15	T17	NoRel	true	rushed	blazing
+Relation	T15	T5	NoRel	true	rushed	crash
+Relation	T15	T7	NoRel	true	rushed	disaster
+Relation	T16	T9	NoRel	true	driven back	donated
+Relation	T17	T13	NoRel	true	blazing	accompanying
+Relation	T17	T15	NoRel	true	blazing	rushed
+Relation	T17	T2	NoRel	true	blazing	fire
+Relation	T17	T6	NoRel	true	blazing	travelled
+Relation	T17	T9	NoRel	true	blazing	donated
+Relation	T18	T14	NoRel	true	provide	land
+Relation	T2	T6	NoRel	true	fire	travelled
+Relation	T4	T1	NoRel	true	arrived	heat
+Relation	T5	T14	NoRel	true	crash	land
+Relation	T5	T15	NoRel	true	crash	rushed
+Relation	T5	T18	NoRel	true	crash	provide
+Relation	T6	T2	NoRel	true	travelled	fire
+Relation	T7	T14	NoRel	true	disaster	land
+Relation	T7	T2	NoRel	true	disaster	fire
+Relation	T8	T0	NoRel	true	bereaved	observing
+Relation	T8	T15	NoRel	true	bereaved	rushed
+Relation	T8	T16	NoRel	true	bereaved	driven back
+Relation	T8	T9	NoRel	true	bereaved	donated
+Relation	T9	T1	NoRel	true	donated	heat
+Relation	T9	T5	NoRel	true	donated	crash
+Relation	T9	T7	NoRel	true	donated	disaster

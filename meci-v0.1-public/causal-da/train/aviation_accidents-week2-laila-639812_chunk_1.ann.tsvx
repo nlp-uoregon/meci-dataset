@@ -1,0 +1,27 @@
+Text	Flyet fløj fra Pokhara Airport til Jomsom Airport , med 18 passagerer , to piloter og en stewardesse om bord .	Klokken 09:30 lokaltid ( 03:45 UTC ) , blev det første landingsforsøg afbrudt af piloterne .	Under en af de efterfølgende go-around , ramte en af vingerne en klippe , og flyet styrtede ned .	+--------------+-----------+------------+-------------+ | Nationalitet | Dødsfald | Overlevede | Total | + ==============+= ==========+============+= ============+ | Passagerer | Besætning | Passagerer | Besætning | +--------------+-----------+------------+-------------+ | Nepal | 0 | 2 | 0 | +--------------+-----------+------------+-------------+ | Indien | 13 |_-__________| 3 | +--------------+-----------+------------+-------------+ | Danmark | 0_________|_-__________| 2___________| +--------------+-----------+------------+-------------+	Et dansk par , som var på trekkingtur og som sad bagest i flyet , Andreas Rasch og Emilie Frijs Jørgensen , overlevede det dramatiske styrt .
+Event	T0	fløj	EVENT	6
+Event	T1	afbrudt	EVENT	181
+Event	T2	go-around	EVENT	233
+Event	T3	ramte	EVENT	245
+Event	T4	Dødsfald	EVENT	375
+Event	T5	trekkingtur	EVENT	874
+Event	T6	sad	EVENT	893
+Event	T7	overlevede	EVENT	956
+Relation	T1	T2	CauseEffect	true	afbrudt	go-around
+Relation	T2	T1	EffectCause	true	go-around	afbrudt
+Relation	T6	T7	CauseEffect	true	sad	overlevede
+Relation	T7	T6	EffectCause	true	overlevede	sad
+Relation	T0	T3	NoRel	true	fløj	ramte
+Relation	T1	T0	NoRel	true	afbrudt	fløj
+Relation	T1	T4	NoRel	true	afbrudt	Dødsfald
+Relation	T1	T6	NoRel	true	afbrudt	sad
+Relation	T2	T0	NoRel	true	go-around	fløj
+Relation	T2	T6	NoRel	true	go-around	sad
+Relation	T3	T0	NoRel	true	ramte	fløj
+Relation	T3	T7	NoRel	true	ramte	overlevede
+Relation	T4	T7	NoRel	true	Dødsfald	overlevede
+Relation	T5	T0	NoRel	true	trekkingtur	fløj
+Relation	T5	T1	NoRel	true	trekkingtur	afbrudt
+Relation	T5	T2	NoRel	true	trekkingtur	go-around
+Relation	T6	T0	NoRel	true	sad	fløj
+Relation	T6	T3	NoRel	true	sad	ramte

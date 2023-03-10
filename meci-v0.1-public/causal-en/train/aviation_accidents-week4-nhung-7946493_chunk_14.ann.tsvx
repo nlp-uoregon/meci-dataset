@@ -1,0 +1,57 @@
+Text	Further investigation by the NTSB revealed a design flaw in the ejector seat and canopy assemblies of the fighter plane whereby the pilot would probably not be able to eject if the radar intercept officer ejected first .	Since the specific design of ejector seats installed in the F - 4 B were not intended to be fired through the aircraft 's canopy , a circuit breaker kept the seat from ejecting if the canopy was in place .	Once the canopy was manually unlocked , the ejector seat circuit was completed and could be fired .	This specific design of ejector seat , however , had a tendency of being unable to complete the circuit in the pilot 's ejector seat if the aft ejector seat was fired first .	The F - 4 B aircraft were in the process of being modified with a newly designed canopy when the collision occurred .
+Event	T0	investigation	EVENT	8
+Event	T1	revealed	EVENT	34
+Event	T2	flaw	EVENT	52
+Event	T3	eject	EVENT	168
+Event	T4	ejected	EVENT	205
+Event	T5	design	EVENT	240
+Event	T6	installed	EVENT	264
+Event	T7	fired	EVENT	313
+Event	T8	kept	EVENT	370
+Event	T9	ejecting	EVENT	389
+Event	T10	unlocked	EVENT	456
+Event	T11	completed	EVENT	496
+Event	T12	fired	EVENT	519
+Event	T13	design	EVENT	541
+Event	T14	complete	EVENT	610
+Event	T15	fired	EVENT	688
+Event	T16	modified	EVENT	752
+Event	T17	designed	EVENT	774
+Event	T18	occurred	EVENT	809
+Relation	T4	T3	CauseEffect	true	ejected	eject
+Relation	T3	T4	EffectCause	true	eject	ejected
+Relation	T5	T8	CauseEffect	true	design	kept
+Relation	T8	T5	EffectCause	true	kept	design
+Relation	T10	T11	CauseEffect	true	unlocked	completed
+Relation	T11	T10	EffectCause	true	completed	unlocked
+Relation	T11	T12	CauseEffect	true	completed	fired
+Relation	T12	T11	EffectCause	true	fired	completed
+Relation	T18	T16	CauseEffect	true	occurred	modified
+Relation	T16	T18	EffectCause	true	modified	occurred
+Relation	T0	T1	NoRel	true	investigation	revealed
+Relation	T0	T18	NoRel	true	investigation	occurred
+Relation	T0	T7	NoRel	true	investigation	fired
+Relation	T1	T2	NoRel	true	revealed	flaw
+Relation	T1	T9	NoRel	true	revealed	ejecting
+Relation	T10	T5	NoRel	true	unlocked	design
+Relation	T11	T14	NoRel	true	completed	complete
+Relation	T12	T3	NoRel	true	fired	eject
+Relation	T12	T5	NoRel	true	fired	design
+Relation	T13	T9	NoRel	true	design	ejecting
+Relation	T16	T13	NoRel	true	modified	design
+Relation	T16	T9	NoRel	true	modified	ejecting
+Relation	T17	T6	NoRel	true	designed	installed
+Relation	T2	T16	NoRel	true	flaw	modified
+Relation	T2	T17	NoRel	true	flaw	designed
+Relation	T2	T7	NoRel	true	flaw	fired
+Relation	T2	T8	NoRel	true	flaw	kept
+Relation	T3	T10	NoRel	true	eject	unlocked
+Relation	T3	T17	NoRel	true	eject	designed
+Relation	T4	T10	NoRel	true	ejected	unlocked
+Relation	T4	T13	NoRel	true	ejected	design
+Relation	T4	T2	NoRel	true	ejected	flaw
+Relation	T5	T17	NoRel	true	design	designed
+Relation	T7	T14	NoRel	true	fired	complete
+Relation	T8	T1	NoRel	true	kept	revealed
+Relation	T8	T3	NoRel	true	kept	eject
+Relation	T9	T0	NoRel	true	ejecting	investigation

@@ -1,0 +1,72 @@
+Text	Erkeklere yönelik şiddet hem erkekler hem de kadınlar tarafından gerçekleştirilirken , ABD Adalet İstatistikleri Bürosu verilerine göre erkeklerin erkekleri öldürdüğü cinayetler , toplam cinayetlerin % 65 ,3'ünü oluşturmaktadır .	Sosyal tutumlar üzerine yapılan araştırmalar , mağdurun ve failin cinsiyetine bağlı olarak şiddetin az ya da çok ciddi olarak algılandığını göstermektedir .	_ Aggressive Behavior _ adlı yayında yer alan bir araştırmaya göre , kadına yönelik şiddetin , saldırganın cinsiyeti ne olursa olsun , üçüncü şahıslar tarafından polise bildirilme olasılığı yaklaşık üçte bir daha yüksekti .	Aynı araştırmaya göre en çok polise bildirilen cinsiyet kombinasyonu erkek fail ve kadın mağdurdu .	Uluslararası hukuk uzmanı Solange Mouthaan'ın iddiasına göre , çatışma senaryolarında erkeklere yönelik cinsel şiddet , kadınlara ve çocuklara yönelik cinsel şiddete odaklanmak adına göz ardı edilmektedir .
+Event	T0	şiddet	EVENT	18
+Event	T1	cinayetler	EVENT	167
+Event	T2	göstermektedir	EVENT	370
+Event	T3	şiddetin	EVENT	471
+Event	T5	iddiasına	EVENT	757
+Event	T6	çatışma	EVENT	774
+Event	T7	şiddet	EVENT	822
+Event	T8	araştırmalar	EVENT	262
+Event	T9	tutumlar	EVENT	237
+Event	T10	Behavior	EVENT	400
+Event	T11	araştırmaya	EVENT	616
+Event	T4	şiddete	EVENT	869
+Event	T12	edilmektedir	EVENT	903
+Relation	T9	T8	CauseEffect	true	tutumlar	araştırmalar
+Relation	T8	T9	EffectCause	true	araştırmalar	tutumlar
+Relation	T8	T2	CauseEffect	true	araştırmalar	göstermektedir
+Relation	T2	T8	EffectCause	true	göstermektedir	araştırmalar
+Relation	T0	T1	NoRel	true	şiddet	cinayetler
+Relation	T0	T12	NoRel	true	şiddet	edilmektedir
+Relation	T0	T2	NoRel	true	şiddet	göstermektedir
+Relation	T0	T6	NoRel	true	şiddet	çatışma
+Relation	T0	T7	NoRel	true	şiddet	şiddet
+Relation	T0	T9	NoRel	true	şiddet	tutumlar
+Relation	T1	T10	NoRel	true	cinayetler	Behavior
+Relation	T1	T12	NoRel	true	cinayetler	edilmektedir
+Relation	T1	T4	NoRel	true	cinayetler	şiddete
+Relation	T1	T5	NoRel	true	cinayetler	iddiasına
+Relation	T10	T2	NoRel	true	Behavior	göstermektedir
+Relation	T10	T3	NoRel	true	Behavior	şiddetin
+Relation	T10	T4	NoRel	true	Behavior	şiddete
+Relation	T10	T5	NoRel	true	Behavior	iddiasına
+Relation	T10	T6	NoRel	true	Behavior	çatışma
+Relation	T10	T7	NoRel	true	Behavior	şiddet
+Relation	T11	T0	NoRel	true	araştırmaya	şiddet
+Relation	T11	T4	NoRel	true	araştırmaya	şiddete
+Relation	T11	T5	NoRel	true	araştırmaya	iddiasına
+Relation	T11	T7	NoRel	true	araştırmaya	şiddet
+Relation	T12	T0	NoRel	true	edilmektedir	şiddet
+Relation	T12	T4	NoRel	true	edilmektedir	şiddete
+Relation	T2	T1	NoRel	true	göstermektedir	cinayetler
+Relation	T2	T10	NoRel	true	göstermektedir	Behavior
+Relation	T2	T3	NoRel	true	göstermektedir	şiddetin
+Relation	T3	T1	NoRel	true	şiddetin	cinayetler
+Relation	T3	T10	NoRel	true	şiddetin	Behavior
+Relation	T3	T11	NoRel	true	şiddetin	araştırmaya
+Relation	T3	T12	NoRel	true	şiddetin	edilmektedir
+Relation	T3	T8	NoRel	true	şiddetin	araştırmalar
+Relation	T3	T9	NoRel	true	şiddetin	tutumlar
+Relation	T4	T10	NoRel	true	şiddete	Behavior
+Relation	T4	T11	NoRel	true	şiddete	araştırmaya
+Relation	T4	T6	NoRel	true	şiddete	çatışma
+Relation	T4	T7	NoRel	true	şiddete	şiddet
+Relation	T4	T8	NoRel	true	şiddete	araştırmalar
+Relation	T4	T9	NoRel	true	şiddete	tutumlar
+Relation	T5	T0	NoRel	true	iddiasına	şiddet
+Relation	T5	T1	NoRel	true	iddiasına	cinayetler
+Relation	T5	T11	NoRel	true	iddiasına	araştırmaya
+Relation	T5	T2	NoRel	true	iddiasına	göstermektedir
+Relation	T6	T1	NoRel	true	çatışma	cinayetler
+Relation	T6	T11	NoRel	true	çatışma	araştırmaya
+Relation	T6	T3	NoRel	true	çatışma	şiddetin
+Relation	T6	T7	NoRel	true	çatışma	şiddet
+Relation	T7	T11	NoRel	true	şiddet	araştırmaya
+Relation	T7	T5	NoRel	true	şiddet	iddiasına
+Relation	T7	T9	NoRel	true	şiddet	tutumlar
+Relation	T8	T10	NoRel	true	araştırmalar	Behavior
+Relation	T8	T11	NoRel	true	araştırmalar	araştırmaya
+Relation	T9	T0	NoRel	true	tutumlar	şiddet
+Relation	T9	T10	NoRel	true	tutumlar	Behavior
+Relation	T9	T12	NoRel	true	tutumlar	edilmektedir
+Relation	T9	T2	NoRel	true	tutumlar	göstermektedir

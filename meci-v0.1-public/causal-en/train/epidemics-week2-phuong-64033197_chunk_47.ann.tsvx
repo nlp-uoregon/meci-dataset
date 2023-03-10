@@ -1,0 +1,69 @@
+Text	The law applies to Hong Kong permanent residents as well as non-residents , and those outside Hong Kong who violate the law .	It has six chapters and a total of 66 articles , published in the Hong Kong Government Gazette solely in Chinese .	These cover the four crimes ( secession , subversion , terrorism , collusion ) , which are all punishable with a maximum sentence of life in prison .	The minimum sentence for " active participants " is set at 3 years , and under 3 years of detention or restriction for other participants or those that voluntarily surrender .	The areas of treason , sedition and theft of state secrets are not covered by the new law , and remain to be implemented by the Hong Kong legislature .
+Event	T0	applies	EVENT	8
+Event	T1	violate	EVENT	108
+Event	T10	set	EVENT	443
+Event	T11	detention	EVENT	481
+Event	T12	restriction	EVENT	494
+Event	T13	surrender	EVENT	555
+Event	T14	treason	EVENT	580
+Event	T15	sedition	EVENT	590
+Event	T16	theft	EVENT	603
+Event	T17	covered	EVENT	634
+Event	T18	implemented	EVENT	676
+Event	T2	published	EVENT	175
+Event	T20	crimes	EVENT	262
+Event	T3	cover	EVENT	247
+Event	T4	secession	EVENT	271
+Event	T5	subversion	EVENT	283
+Event	T6	collusion	EVENT	308
+Event	T7	punishable	EVENT	336
+Event	T8	sentence	EVENT	362
+Event	T9	sentence	EVENT	403
+Relation	T1	T0	CauseEffect	true	violate	applies
+Relation	T0	T1	EffectCause	true	applies	violate
+Relation	T20	T7	CauseEffect	true	crimes	punishable
+Relation	T7	T20	EffectCause	true	punishable	crimes
+Relation	T20	T8	CauseEffect	true	crimes	sentence
+Relation	T8	T20	EffectCause	true	sentence	crimes
+Relation	T13	T11	CauseEffect	true	surrender	detention
+Relation	T11	T13	EffectCause	true	detention	surrender
+Relation	T13	T12	CauseEffect	true	surrender	restriction
+Relation	T12	T13	EffectCause	true	restriction	surrender
+Relation	T14	T18	CauseEffect	true	treason	implemented
+Relation	T18	T14	EffectCause	true	implemented	treason
+Relation	T15	T18	CauseEffect	true	sedition	implemented
+Relation	T18	T15	EffectCause	true	implemented	sedition
+Relation	T16	T18	CauseEffect	true	theft	implemented
+Relation	T18	T16	EffectCause	true	implemented	theft
+Relation	T0	T17	NoRel	true	applies	covered
+Relation	T0	T2	NoRel	true	applies	published
+Relation	T11	T2	NoRel	true	detention	published
+Relation	T12	T11	NoRel	true	restriction	detention
+Relation	T12	T18	NoRel	true	restriction	implemented
+Relation	T12	T20	NoRel	true	restriction	crimes
+Relation	T13	T20	NoRel	true	surrender	crimes
+Relation	T14	T16	NoRel	true	treason	theft
+Relation	T14	T4	NoRel	true	treason	secession
+Relation	T15	T9	NoRel	true	sedition	sentence
+Relation	T17	T10	NoRel	true	covered	set
+Relation	T17	T11	NoRel	true	covered	detention
+Relation	T18	T10	NoRel	true	implemented	set
+Relation	T18	T12	NoRel	true	implemented	restriction
+Relation	T18	T13	NoRel	true	implemented	surrender
+Relation	T18	T4	NoRel	true	implemented	secession
+Relation	T2	T12	NoRel	true	published	restriction
+Relation	T2	T4	NoRel	true	published	secession
+Relation	T20	T16	NoRel	true	crimes	theft
+Relation	T20	T18	NoRel	true	crimes	implemented
+Relation	T3	T16	NoRel	true	cover	theft
+Relation	T3	T18	NoRel	true	cover	implemented
+Relation	T4	T5	NoRel	true	secession	subversion
+Relation	T4	T8	NoRel	true	secession	sentence
+Relation	T5	T14	NoRel	true	subversion	treason
+Relation	T6	T11	NoRel	true	collusion	detention
+Relation	T6	T12	NoRel	true	collusion	restriction
+Relation	T6	T16	NoRel	true	collusion	theft
+Relation	T6	T4	NoRel	true	collusion	secession
+Relation	T8	T6	NoRel	true	sentence	collusion
+Relation	T9	T15	NoRel	true	sentence	sedition
+Relation	T9	T8	NoRel	true	sentence	sentence

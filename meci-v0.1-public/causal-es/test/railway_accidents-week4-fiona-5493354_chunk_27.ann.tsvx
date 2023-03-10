@@ -1,0 +1,105 @@
+Text	- 1890 - 3 DE ENERO : El descarrilamiento de un tren de viajeros que realizaba el trayecto de Lisboa a Oporto entre las estaciones de Vermoil y Albergaria dos Doze deja un balance de tres muertos y treinta heridos .	- 7 DE ENERO : Descarrilamiento en la línea de Cascais de un tren que transportaba piedra con destino a obras que se ejecutaban en el puerto de Lisboa .	Un guardafrenos resultó herido .	- 28 DE ENERO : se produce el descarrilamiento de un tren de mercancías que efectuaba su salida de la estación de Santa Apolonia , en Lisboa .	El acciente arroja solamente daños materiales .
+Event	T0	descarrilamiento	EVENT	25
+Event	T1	realizaba	EVENT	69
+Event	T2	trayecto	EVENT	82
+Event	T3	deja	EVENT	164
+Event	T4	balance	EVENT	172
+Event	T5	muertos	EVENT	188
+Event	T6	heridos	EVENT	206
+Event	T7	Descarrilamiento	EVENT	231
+Event	T8	transportaba	EVENT	286
+Event	T9	ejecutaban	EVENT	333
+Event	T10	herido	EVENT	393
+Event	T11	produce	EVENT	421
+Event	T12	descarrilamiento	EVENT	432
+Event	T13	efectuaba	EVENT	478
+Event	T14	salida	EVENT	491
+Event	T15	arroja	EVENT	557
+Relation	T0	T5	CauseEffect	true	descarrilamiento	muertos
+Relation	T5	T0	EffectCause	true	muertos	descarrilamiento
+Relation	T0	T6	CauseEffect	true	descarrilamiento	heridos
+Relation	T6	T0	EffectCause	true	heridos	descarrilamiento
+Relation	T0	T10	NoRel	true	descarrilamiento	herido
+Relation	T0	T15	NoRel	true	descarrilamiento	arroja
+Relation	T0	T2	NoRel	true	descarrilamiento	trayecto
+Relation	T0	T3	NoRel	true	descarrilamiento	deja
+Relation	T0	T4	NoRel	true	descarrilamiento	balance
+Relation	T0	T9	NoRel	true	descarrilamiento	ejecutaban
+Relation	T1	T0	NoRel	true	realizaba	descarrilamiento
+Relation	T1	T10	NoRel	true	realizaba	herido
+Relation	T1	T12	NoRel	true	realizaba	descarrilamiento
+Relation	T1	T14	NoRel	true	realizaba	salida
+Relation	T1	T15	NoRel	true	realizaba	arroja
+Relation	T1	T2	NoRel	true	realizaba	trayecto
+Relation	T1	T6	NoRel	true	realizaba	heridos
+Relation	T1	T8	NoRel	true	realizaba	transportaba
+Relation	T10	T1	NoRel	true	herido	realizaba
+Relation	T10	T12	NoRel	true	herido	descarrilamiento
+Relation	T10	T14	NoRel	true	herido	salida
+Relation	T10	T5	NoRel	true	herido	muertos
+Relation	T10	T6	NoRel	true	herido	heridos
+Relation	T10	T8	NoRel	true	herido	transportaba
+Relation	T10	T9	NoRel	true	herido	ejecutaban
+Relation	T11	T10	NoRel	true	produce	herido
+Relation	T11	T13	NoRel	true	produce	efectuaba
+Relation	T11	T7	NoRel	true	produce	Descarrilamiento
+Relation	T11	T8	NoRel	true	produce	transportaba
+Relation	T12	T0	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T12	T11	NoRel	true	descarrilamiento	produce
+Relation	T12	T14	NoRel	true	descarrilamiento	salida
+Relation	T12	T15	NoRel	true	descarrilamiento	arroja
+Relation	T12	T7	NoRel	true	descarrilamiento	Descarrilamiento
+Relation	T13	T10	NoRel	true	efectuaba	herido
+Relation	T13	T11	NoRel	true	efectuaba	produce
+Relation	T13	T15	NoRel	true	efectuaba	arroja
+Relation	T13	T5	NoRel	true	efectuaba	muertos
+Relation	T13	T6	NoRel	true	efectuaba	heridos
+Relation	T14	T1	NoRel	true	salida	realizaba
+Relation	T14	T11	NoRel	true	salida	produce
+Relation	T14	T12	NoRel	true	salida	descarrilamiento
+Relation	T14	T2	NoRel	true	salida	trayecto
+Relation	T14	T5	NoRel	true	salida	muertos
+Relation	T14	T8	NoRel	true	salida	transportaba
+Relation	T14	T9	NoRel	true	salida	ejecutaban
+Relation	T15	T11	NoRel	true	arroja	produce
+Relation	T15	T14	NoRel	true	arroja	salida
+Relation	T15	T5	NoRel	true	arroja	muertos
+Relation	T15	T9	NoRel	true	arroja	ejecutaban
+Relation	T2	T1	NoRel	true	trayecto	realizaba
+Relation	T2	T11	NoRel	true	trayecto	produce
+Relation	T2	T12	NoRel	true	trayecto	descarrilamiento
+Relation	T2	T13	NoRel	true	trayecto	efectuaba
+Relation	T2	T15	NoRel	true	trayecto	arroja
+Relation	T2	T5	NoRel	true	trayecto	muertos
+Relation	T2	T6	NoRel	true	trayecto	heridos
+Relation	T2	T9	NoRel	true	trayecto	ejecutaban
+Relation	T3	T0	NoRel	true	deja	descarrilamiento
+Relation	T3	T10	NoRel	true	deja	herido
+Relation	T3	T13	NoRel	true	deja	efectuaba
+Relation	T3	T8	NoRel	true	deja	transportaba
+Relation	T4	T1	NoRel	true	balance	realizaba
+Relation	T4	T11	NoRel	true	balance	produce
+Relation	T4	T12	NoRel	true	balance	descarrilamiento
+Relation	T4	T6	NoRel	true	balance	heridos
+Relation	T5	T1	NoRel	true	muertos	realizaba
+Relation	T5	T11	NoRel	true	muertos	produce
+Relation	T5	T14	NoRel	true	muertos	salida
+Relation	T5	T15	NoRel	true	muertos	arroja
+Relation	T5	T4	NoRel	true	muertos	balance
+Relation	T5	T6	NoRel	true	muertos	heridos
+Relation	T6	T14	NoRel	true	heridos	salida
+Relation	T6	T4	NoRel	true	heridos	balance
+Relation	T6	T5	NoRel	true	heridos	muertos
+Relation	T7	T11	NoRel	true	Descarrilamiento	produce
+Relation	T7	T13	NoRel	true	Descarrilamiento	efectuaba
+Relation	T7	T2	NoRel	true	Descarrilamiento	trayecto
+Relation	T7	T4	NoRel	true	Descarrilamiento	balance
+Relation	T7	T5	NoRel	true	Descarrilamiento	muertos
+Relation	T7	T6	NoRel	true	Descarrilamiento	heridos
+Relation	T7	T9	NoRel	true	Descarrilamiento	ejecutaban
+Relation	T8	T3	NoRel	true	transportaba	deja
+Relation	T8	T7	NoRel	true	transportaba	Descarrilamiento
+Relation	T8	T9	NoRel	true	transportaba	ejecutaban
+Relation	T9	T13	NoRel	true	ejecutaban	efectuaba
+Relation	T9	T15	NoRel	true	ejecutaban	arroja
+Relation	T9	T8	NoRel	true	ejecutaban	transportaba

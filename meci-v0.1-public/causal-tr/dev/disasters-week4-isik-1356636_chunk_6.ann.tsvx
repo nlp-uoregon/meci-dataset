@@ -1,0 +1,37 @@
+Text	Van M Tipi Cezaevi'nden 160 mahkûm firar etti .	Mahkûmlardan 74'ü güvenlik güçlerinin yaptığı çalışmalar neticesinde cezaevine geri döndü .	Dönmeyen mahkûmların ise aileleriyle görüşülerek ikna edilmelerinin sağlanmasına çalışıldı .	Yapılan son açıklamada ; 5 Kasım günü TSİ 09: 00 itibarıyla 604 ölü olduğu belirtildi .	Daha önceki açıklamalarda belirtilen 4152 yaralı sayısı ise değişmedi .
+Event	T0	etti	EVENT	41
+Event	T1	çalışmalar	EVENT	94
+Event	T2	döndü	EVENT	132
+Event	T3	Dönmeyen	EVENT	140
+Event	T4	çalışıldı	EVENT	221
+Event	T5	belirtildi	EVENT	308
+Event	T6	değişmedi	EVENT	381
+Event	T7	açıklamada	EVENT	245
+Relation	T1	T2	CauseEffect	true	çalışmalar	döndü
+Relation	T2	T1	EffectCause	true	döndü	çalışmalar
+Relation	T0	T1	CauseEffect	true	etti	çalışmalar
+Relation	T1	T0	EffectCause	true	çalışmalar	etti
+Relation	T1	T4	CauseEffect	true	çalışmalar	çalışıldı
+Relation	T4	T1	EffectCause	true	çalışıldı	çalışmalar
+Relation	T7	T5	CauseEffect	true	açıklamada	belirtildi
+Relation	T5	T7	EffectCause	true	belirtildi	açıklamada
+Relation	T7	T6	CauseEffect	true	açıklamada	değişmedi
+Relation	T6	T7	EffectCause	true	değişmedi	açıklamada
+Relation	T0	T3	NoRel	true	etti	Dönmeyen
+Relation	T0	T5	NoRel	true	etti	belirtildi
+Relation	T1	T6	NoRel	true	çalışmalar	değişmedi
+Relation	T2	T4	NoRel	true	döndü	çalışıldı
+Relation	T2	T6	NoRel	true	döndü	değişmedi
+Relation	T3	T2	NoRel	true	Dönmeyen	döndü
+Relation	T3	T5	NoRel	true	Dönmeyen	belirtildi
+Relation	T3	T6	NoRel	true	Dönmeyen	değişmedi
+Relation	T4	T3	NoRel	true	çalışıldı	Dönmeyen
+Relation	T4	T5	NoRel	true	çalışıldı	belirtildi
+Relation	T4	T6	NoRel	true	çalışıldı	değişmedi
+Relation	T5	T4	NoRel	true	belirtildi	çalışıldı
+Relation	T5	T6	NoRel	true	belirtildi	değişmedi
+Relation	T6	T2	NoRel	true	değişmedi	döndü
+Relation	T6	T5	NoRel	true	değişmedi	belirtildi
+Relation	T7	T0	NoRel	true	açıklamada	etti
+Relation	T7	T3	NoRel	true	açıklamada	Dönmeyen
+Relation	T7	T4	NoRel	true	açıklamada	çalışıldı

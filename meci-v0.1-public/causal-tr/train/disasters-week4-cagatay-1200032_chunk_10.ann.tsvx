@@ -1,0 +1,115 @@
+Text	Depremden iki saat kadar sonra deprem , Kandilli Rasathanesi'nin bölgede orta şiddette bir deprem olduğuna ilişkin açıklaması üzerine basına yansıdı .	Depremden iki buçuk saat kadar sonra ölü sayısı Doğubayazıt kaymakamı Nurullah Çakır tarafından 16 olarak açıklandı .	Ölü sayısına dair ilk açıklamadan yaklaşık üç saat sonra ise ölü sayısı 18'e yükseltildi ve yaralı sayısının 21 olduğu açıklandı .	Saat 09: 00 civarında Kandilli Rsathanesi depremden sonra artçı şokların meydana gelebileceğini belirten yazılı bir açıklama yaptı .	Yine saat 09: 00'dan sonra bölgede ölenler için mezarlar kazılmaya başlandı .
+Event	T0	Depremden	EVENT	0
+Event	T1	deprem	EVENT	31
+Event	T2	açıklaması	EVENT	115
+Event	T3	yansıdı	EVENT	141
+Event	T4	Depremden	EVENT	151
+Event	T5	ölü	EVENT	188
+Event	T6	açıklandı	EVENT	257
+Event	T7	Ölü	EVENT	269
+Event	T8	yükseltildi	EVENT	346
+Event	T9	açıklandı	EVENT	388
+Event	T10	depremden	EVENT	442
+Event	T11	belirten	EVENT	496
+Event	T12	yaptı	EVENT	525
+Event	T13	başlandı	EVENT	600
+Event	T14	deprem	EVENT	91
+Event	T15	yaralı	EVENT	361
+Event	T16	ölü	EVENT	330
+Relation	T0	T5	CauseEffect	true	Depremden	ölü
+Relation	T5	T0	EffectCause	true	ölü	Depremden
+Relation	T0	T7	CauseEffect	true	Depremden	Ölü
+Relation	T7	T0	EffectCause	true	Ölü	Depremden
+Relation	T0	T15	CauseEffect	true	Depremden	yaralı
+Relation	T15	T0	EffectCause	true	yaralı	Depremden
+Relation	T0	T10	NoRel	true	Depremden	depremden
+Relation	T0	T11	NoRel	true	Depremden	belirten
+Relation	T0	T13	NoRel	true	Depremden	başlandı
+Relation	T0	T14	NoRel	true	Depremden	deprem
+Relation	T0	T16	NoRel	true	Depremden	ölü
+Relation	T0	T3	NoRel	true	Depremden	yansıdı
+Relation	T0	T6	NoRel	true	Depremden	açıklandı
+Relation	T1	T0	NoRel	true	deprem	Depremden
+Relation	T1	T12	NoRel	true	deprem	yaptı
+Relation	T1	T2	NoRel	true	deprem	açıklaması
+Relation	T1	T8	NoRel	true	deprem	yükseltildi
+Relation	T10	T1	NoRel	true	depremden	deprem
+Relation	T10	T11	NoRel	true	depremden	belirten
+Relation	T10	T15	NoRel	true	depremden	yaralı
+Relation	T10	T3	NoRel	true	depremden	yansıdı
+Relation	T10	T5	NoRel	true	depremden	ölü
+Relation	T11	T0	NoRel	true	belirten	Depremden
+Relation	T11	T1	NoRel	true	belirten	deprem
+Relation	T11	T13	NoRel	true	belirten	başlandı
+Relation	T11	T14	NoRel	true	belirten	deprem
+Relation	T11	T15	NoRel	true	belirten	yaralı
+Relation	T12	T0	NoRel	true	yaptı	Depremden
+Relation	T12	T10	NoRel	true	yaptı	depremden
+Relation	T12	T11	NoRel	true	yaptı	belirten
+Relation	T12	T3	NoRel	true	yaptı	yansıdı
+Relation	T12	T7	NoRel	true	yaptı	Ölü
+Relation	T13	T0	NoRel	true	başlandı	Depremden
+Relation	T13	T1	NoRel	true	başlandı	deprem
+Relation	T13	T10	NoRel	true	başlandı	depremden
+Relation	T13	T11	NoRel	true	başlandı	belirten
+Relation	T13	T12	NoRel	true	başlandı	yaptı
+Relation	T13	T14	NoRel	true	başlandı	deprem
+Relation	T13	T15	NoRel	true	başlandı	yaralı
+Relation	T13	T6	NoRel	true	başlandı	açıklandı
+Relation	T13	T9	NoRel	true	başlandı	açıklandı
+Relation	T14	T1	NoRel	true	deprem	deprem
+Relation	T14	T15	NoRel	true	deprem	yaralı
+Relation	T14	T3	NoRel	true	deprem	yansıdı
+Relation	T14	T9	NoRel	true	deprem	açıklandı
+Relation	T15	T6	NoRel	true	yaralı	açıklandı
+Relation	T16	T1	NoRel	true	ölü	deprem
+Relation	T16	T13	NoRel	true	ölü	başlandı
+Relation	T16	T14	NoRel	true	ölü	deprem
+Relation	T16	T2	NoRel	true	ölü	açıklaması
+Relation	T16	T5	NoRel	true	ölü	ölü
+Relation	T16	T8	NoRel	true	ölü	yükseltildi
+Relation	T16	T9	NoRel	true	ölü	açıklandı
+Relation	T2	T1	NoRel	true	açıklaması	deprem
+Relation	T2	T10	NoRel	true	açıklaması	depremden
+Relation	T2	T16	NoRel	true	açıklaması	ölü
+Relation	T3	T0	NoRel	true	yansıdı	Depremden
+Relation	T3	T1	NoRel	true	yansıdı	deprem
+Relation	T3	T10	NoRel	true	yansıdı	depremden
+Relation	T3	T11	NoRel	true	yansıdı	belirten
+Relation	T3	T13	NoRel	true	yansıdı	başlandı
+Relation	T3	T4	NoRel	true	yansıdı	Depremden
+Relation	T3	T6	NoRel	true	yansıdı	açıklandı
+Relation	T3	T9	NoRel	true	yansıdı	açıklandı
+Relation	T4	T12	NoRel	true	Depremden	yaptı
+Relation	T4	T13	NoRel	true	Depremden	başlandı
+Relation	T4	T16	NoRel	true	Depremden	ölü
+Relation	T4	T2	NoRel	true	Depremden	açıklaması
+Relation	T4	T8	NoRel	true	Depremden	yükseltildi
+Relation	T4	T9	NoRel	true	Depremden	açıklandı
+Relation	T5	T12	NoRel	true	ölü	yaptı
+Relation	T5	T14	NoRel	true	ölü	deprem
+Relation	T5	T2	NoRel	true	ölü	açıklaması
+Relation	T5	T3	NoRel	true	ölü	yansıdı
+Relation	T5	T4	NoRel	true	ölü	Depremden
+Relation	T5	T7	NoRel	true	ölü	Ölü
+Relation	T6	T13	NoRel	true	açıklandı	başlandı
+Relation	T6	T14	NoRel	true	açıklandı	deprem
+Relation	T6	T16	NoRel	true	açıklandı	ölü
+Relation	T6	T2	NoRel	true	açıklandı	açıklaması
+Relation	T6	T3	NoRel	true	açıklandı	yansıdı
+Relation	T6	T4	NoRel	true	açıklandı	Depremden
+Relation	T6	T9	NoRel	true	açıklandı	açıklandı
+Relation	T7	T1	NoRel	true	Ölü	deprem
+Relation	T7	T11	NoRel	true	Ölü	belirten
+Relation	T7	T12	NoRel	true	Ölü	yaptı
+Relation	T7	T13	NoRel	true	Ölü	başlandı
+Relation	T7	T15	NoRel	true	Ölü	yaralı
+Relation	T7	T4	NoRel	true	Ölü	Depremden
+Relation	T7	T5	NoRel	true	Ölü	ölü
+Relation	T7	T9	NoRel	true	Ölü	açıklandı
+Relation	T8	T14	NoRel	true	yükseltildi	deprem
+Relation	T8	T15	NoRel	true	yükseltildi	yaralı
+Relation	T8	T16	NoRel	true	yükseltildi	ölü
+Relation	T8	T9	NoRel	true	yükseltildi	açıklandı
+Relation	T9	T15	NoRel	true	açıklandı	yaralı
+Relation	T9	T2	NoRel	true	açıklandı	açıklaması

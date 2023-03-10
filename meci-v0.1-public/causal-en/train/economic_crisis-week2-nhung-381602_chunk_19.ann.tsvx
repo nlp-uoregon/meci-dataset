@@ -1,0 +1,90 @@
+Text	With an agent and an innocent bystander dead and four more severely wounded , including two more innocent bystanders , as well as the complete escape of the Dillinger gang , the FBI came under severe criticism , with calls for director J. Edgar Hoover 's resignation and a widely circulated petition demanding Purvis ' suspension .	At the time of the Little Bohemia shootout , Nelson 's identity as a member of the Dillinger gang had been known to the FBI for two weeks .	Following the killing of Baum , Nelson became nationally notorious and was made a high - priority target of the Bureau .	The focus on him and the murdered agent served to deflect some of the intense criticism directed at Hoover and Purvis following the Little Bohemia debacle .	A day after the Little Bohemia raid , Dillinger , Hamilton , and Van Meter ran through a police roadblock near Hastings , Minnesota , drawing fire from officers there .
+Event	T0	dead	EVENT	40
+Event	T1	wounded	EVENT	68
+Event	T10	killing	EVENT	486
+Event	T11	became	EVENT	511
+Event	T12	made	EVENT	547
+Event	T13	focus	EVENT	597
+Event	T14	murdered	EVENT	618
+Event	T15	served	EVENT	633
+Event	T16	deflect	EVENT	643
+Event	T17	criticism	EVENT	671
+Event	T18	debacle	EVENT	740
+Event	T19	raid	EVENT	781
+Event	T2	escape	EVENT	143
+Event	T20	ran	EVENT	825
+Event	T21	drawing	EVENT	884
+Event	T3	criticism	EVENT	200
+Event	T4	calls	EVENT	217
+Event	T5	resignation	EVENT	255
+Event	T6	demanding	EVENT	300
+Event	T7	suspension	EVENT	319
+Event	T8	shootout	EVENT	366
+Event	T9	known	EVENT	439
+Relation	T0	T3	CauseEffect	true	dead	criticism
+Relation	T3	T0	EffectCause	true	criticism	dead
+Relation	T1	T3	CauseEffect	true	wounded	criticism
+Relation	T3	T1	EffectCause	true	criticism	wounded
+Relation	T2	T3	CauseEffect	true	escape	criticism
+Relation	T3	T2	EffectCause	true	criticism	escape
+Relation	T8	T10	CauseEffect	true	shootout	killing
+Relation	T10	T8	EffectCause	true	killing	shootout
+Relation	T10	T11	CauseEffect	true	killing	became
+Relation	T11	T10	EffectCause	true	became	killing
+Relation	T10	T12	CauseEffect	true	killing	made
+Relation	T12	T10	EffectCause	true	made	killing
+Relation	T13	T17	CauseEffect	true	focus	criticism
+Relation	T17	T13	EffectCause	true	criticism	focus
+Relation	T14	T17	CauseEffect	true	murdered	criticism
+Relation	T17	T14	EffectCause	true	criticism	murdered
+Relation	T0	T21	NoRel	true	dead	drawing
+Relation	T0	T6	NoRel	true	dead	demanding
+Relation	T1	T13	NoRel	true	wounded	focus
+Relation	T1	T16	NoRel	true	wounded	deflect
+Relation	T1	T6	NoRel	true	wounded	demanding
+Relation	T10	T1	NoRel	true	killing	wounded
+Relation	T10	T14	NoRel	true	killing	murdered
+Relation	T11	T20	NoRel	true	became	ran
+Relation	T11	T4	NoRel	true	became	calls
+Relation	T11	T6	NoRel	true	became	demanding
+Relation	T12	T20	NoRel	true	made	ran
+Relation	T13	T1	NoRel	true	focus	wounded
+Relation	T14	T0	NoRel	true	murdered	dead
+Relation	T14	T15	NoRel	true	murdered	served
+Relation	T14	T19	NoRel	true	murdered	raid
+Relation	T14	T20	NoRel	true	murdered	ran
+Relation	T14	T4	NoRel	true	murdered	calls
+Relation	T15	T2	NoRel	true	served	escape
+Relation	T16	T11	NoRel	true	deflect	became
+Relation	T16	T19	NoRel	true	deflect	raid
+Relation	T16	T2	NoRel	true	deflect	escape
+Relation	T17	T1	NoRel	true	criticism	wounded
+Relation	T17	T15	NoRel	true	criticism	served
+Relation	T17	T20	NoRel	true	criticism	ran
+Relation	T17	T21	NoRel	true	criticism	drawing
+Relation	T17	T6	NoRel	true	criticism	demanding
+Relation	T18	T17	NoRel	true	debacle	criticism
+Relation	T18	T6	NoRel	true	debacle	demanding
+Relation	T19	T2	NoRel	true	raid	escape
+Relation	T19	T6	NoRel	true	raid	demanding
+Relation	T2	T0	NoRel	true	escape	dead
+Relation	T2	T12	NoRel	true	escape	made
+Relation	T2	T19	NoRel	true	escape	raid
+Relation	T20	T10	NoRel	true	ran	killing
+Relation	T20	T13	NoRel	true	ran	focus
+Relation	T20	T17	NoRel	true	ran	criticism
+Relation	T21	T17	NoRel	true	drawing	criticism
+Relation	T3	T15	NoRel	true	criticism	served
+Relation	T4	T2	NoRel	true	calls	escape
+Relation	T4	T6	NoRel	true	calls	demanding
+Relation	T6	T10	NoRel	true	demanding	killing
+Relation	T6	T13	NoRel	true	demanding	focus
+Relation	T6	T14	NoRel	true	demanding	murdered
+Relation	T6	T15	NoRel	true	demanding	served
+Relation	T7	T0	NoRel	true	suspension	dead
+Relation	T7	T11	NoRel	true	suspension	became
+Relation	T8	T0	NoRel	true	shootout	dead
+Relation	T8	T13	NoRel	true	shootout	focus
+Relation	T9	T11	NoRel	true	known	became
+Relation	T9	T14	NoRel	true	known	murdered
+Relation	T9	T8	NoRel	true	known	shootout

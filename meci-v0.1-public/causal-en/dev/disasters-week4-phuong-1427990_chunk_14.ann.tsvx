@@ -1,0 +1,68 @@
+Text	Due to timely reports and warnings , the storm was reportedly forecast with " exceptional accuracy " .	In Florida , damage was minor , amounting to uprooted trees , broken windows , moderate crop damage , and downed power lines .	A few flimsy structures and small watercraft also sustained damage .	Along the Florida Panhandle , the storm 's winds impacted power , telephone , and telegraph lines , and inflicted $ 2,000 worth of damage to a dock warehouse .	A man in Cedar Key , Florida , drowned after rough surf overturned his rowboat , and at least two other people suffered minor storm - related injuries .
+Event	T0	reports	EVENT	14
+Event	T1	warnings	EVENT	26
+Event	T2	storm	EVENT	41
+Event	T3	forecast	EVENT	62
+Event	T4	damage	EVENT	116
+Event	T5	uprooted	EVENT	148
+Event	T6	broken	EVENT	165
+Event	T8	damage	EVENT	290
+Event	T9	storm	EVENT	333
+Event	T10	inflicted	EVENT	403
+Event	T11	damage	EVENT	430
+Event	T12	drowned	EVENT	490
+Event	T13	overturned	EVENT	515
+Event	T14	suffered	EVENT	570
+Event	T15	injuries	EVENT	601
+Event	T7	crop damage	EVENT	191
+Event	T16	downed	EVENT	209
+Event	T17	winds	EVENT	342
+Relation	T0	T3	CauseEffect	true	reports	forecast
+Relation	T3	T0	EffectCause	true	forecast	reports
+Relation	T1	T3	CauseEffect	true	warnings	forecast
+Relation	T3	T1	EffectCause	true	forecast	warnings
+Relation	T4	T16	CauseEffect	true	damage	downed
+Relation	T16	T4	EffectCause	true	downed	damage
+Relation	T2	T4	CauseEffect	true	storm	damage
+Relation	T4	T2	EffectCause	true	damage	storm
+Relation	T2	T8	CauseEffect	true	storm	damage
+Relation	T8	T2	EffectCause	true	damage	storm
+Relation	T17	T11	CauseEffect	true	winds	damage
+Relation	T11	T17	EffectCause	true	damage	winds
+Relation	T9	T13	CauseEffect	true	storm	overturned
+Relation	T13	T9	EffectCause	true	overturned	storm
+Relation	T13	T12	CauseEffect	true	overturned	drowned
+Relation	T12	T13	EffectCause	true	drowned	overturned
+Relation	T9	T15	CauseEffect	true	storm	injuries
+Relation	T15	T9	EffectCause	true	injuries	storm
+Relation	T0	T11	NoRel	true	reports	damage
+Relation	T1	T5	NoRel	true	warnings	uprooted
+Relation	T12	T4	NoRel	true	drowned	damage
+Relation	T12	T7	NoRel	true	drowned	crop damage
+Relation	T13	T15	NoRel	true	overturned	injuries
+Relation	T13	T17	NoRel	true	overturned	winds
+Relation	T14	T0	NoRel	true	suffered	reports
+Relation	T14	T5	NoRel	true	suffered	uprooted
+Relation	T14	T7	NoRel	true	suffered	crop damage
+Relation	T14	T8	NoRel	true	suffered	damage
+Relation	T15	T10	NoRel	true	injuries	inflicted
+Relation	T15	T4	NoRel	true	injuries	damage
+Relation	T16	T3	NoRel	true	downed	forecast
+Relation	T16	T7	NoRel	true	downed	crop damage
+Relation	T17	T14	NoRel	true	winds	suffered
+Relation	T17	T16	NoRel	true	winds	downed
+Relation	T3	T12	NoRel	true	forecast	drowned
+Relation	T3	T2	NoRel	true	forecast	storm
+Relation	T3	T5	NoRel	true	forecast	uprooted
+Relation	T3	T6	NoRel	true	forecast	broken
+Relation	T4	T12	NoRel	true	damage	drowned
+Relation	T4	T7	NoRel	true	damage	crop damage
+Relation	T5	T8	NoRel	true	uprooted	damage
+Relation	T6	T8	NoRel	true	broken	damage
+Relation	T7	T0	NoRel	true	crop damage	reports
+Relation	T7	T10	NoRel	true	crop damage	inflicted
+Relation	T7	T4	NoRel	true	crop damage	damage
+Relation	T8	T10	NoRel	true	damage	inflicted
+Relation	T8	T5	NoRel	true	damage	uprooted
+Relation	T8	T7	NoRel	true	damage	crop damage
+Relation	T9	T1	NoRel	true	storm	warnings

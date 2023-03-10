@@ -1,0 +1,119 @@
+Text	Alrededor de las 6:00 p._m. Lacava le pide a los dirigentes oficialistas en otro audio « rematar el carreteo de gente » para incrementar la participación .	El gobernador oficialista del estado Yaracuy , Julio León Heredia , llamó la atención a su equipo de trabajo y les ordenó buscar a quienes no hubiesen votado para llevarlos a los centros de votación aplicando cualquier método , ya que « en este momento la abstención está muy elevada » .	Durante las elecciones Leocenis García , líder del partido Prociudadanos , informó que atropelló a una mujer al salir de un centro de votación en La Florida , Caracas .	Explicó que la acompañó a la clínica La Florida y aseguró que no fue herida de gravedad .	Representantes del Partido Comunista de Venezuela denunciaron el allanamiento de la sede de su comando de campaña en el estado Zulia por funcionarios de la Guardia Nacional y la policía , sin mostrar orden de allanamiento , y de la detención de cuatro miembros del partido .
+Event	T0	pide	EVENT	38
+Event	T1	incrementar	EVENT	125
+Event	T2	participación	EVENT	140
+Event	T3	buscar	EVENT	278
+Event	T4	votado	EVENT	307
+Event	T5	abstención	EVENT	412
+Event	T6	elecciones	EVENT	456
+Event	T7	informó	EVENT	519
+Event	T8	atropelló	EVENT	531
+Event	T9	salir	EVENT	556
+Event	T10	votación	EVENT	578
+Event	T11	Explicó	EVENT	613
+Event	T12	acompañó	EVENT	628
+Event	T13	aseguró	EVENT	663
+Event	T14	herida	EVENT	682
+Event	T15	denunciaron	EVENT	753
+Event	T16	allanamiento	EVENT	768
+Event	T17	detención	EVENT	935
+Relation	T16	T15	CauseEffect	true	allanamiento	denunciaron
+Relation	T15	T16	EffectCause	true	denunciaron	allanamiento
+Relation	T17	T15	CauseEffect	true	detención	denunciaron
+Relation	T15	T17	EffectCause	true	denunciaron	detención
+Relation	T0	T10	NoRel	true	pide	votación
+Relation	T0	T14	NoRel	true	pide	herida
+Relation	T0	T16	NoRel	true	pide	allanamiento
+Relation	T0	T3	NoRel	true	pide	buscar
+Relation	T1	T10	NoRel	true	incrementar	votación
+Relation	T1	T16	NoRel	true	incrementar	allanamiento
+Relation	T1	T17	NoRel	true	incrementar	detención
+Relation	T1	T3	NoRel	true	incrementar	buscar
+Relation	T1	T6	NoRel	true	incrementar	elecciones
+Relation	T1	T9	NoRel	true	incrementar	salir
+Relation	T10	T0	NoRel	true	votación	pide
+Relation	T10	T17	NoRel	true	votación	detención
+Relation	T10	T2	NoRel	true	votación	participación
+Relation	T10	T3	NoRel	true	votación	buscar
+Relation	T10	T6	NoRel	true	votación	elecciones
+Relation	T11	T1	NoRel	true	Explicó	incrementar
+Relation	T11	T13	NoRel	true	Explicó	aseguró
+Relation	T11	T16	NoRel	true	Explicó	allanamiento
+Relation	T11	T3	NoRel	true	Explicó	buscar
+Relation	T11	T6	NoRel	true	Explicó	elecciones
+Relation	T11	T9	NoRel	true	Explicó	salir
+Relation	T12	T1	NoRel	true	acompañó	incrementar
+Relation	T12	T11	NoRel	true	acompañó	Explicó
+Relation	T12	T14	NoRel	true	acompañó	herida
+Relation	T12	T17	NoRel	true	acompañó	detención
+Relation	T12	T2	NoRel	true	acompañó	participación
+Relation	T12	T7	NoRel	true	acompañó	informó
+Relation	T13	T11	NoRel	true	aseguró	Explicó
+Relation	T13	T12	NoRel	true	aseguró	acompañó
+Relation	T13	T15	NoRel	true	aseguró	denunciaron
+Relation	T13	T16	NoRel	true	aseguró	allanamiento
+Relation	T13	T3	NoRel	true	aseguró	buscar
+Relation	T13	T6	NoRel	true	aseguró	elecciones
+Relation	T13	T9	NoRel	true	aseguró	salir
+Relation	T14	T0	NoRel	true	herida	pide
+Relation	T14	T12	NoRel	true	herida	acompañó
+Relation	T14	T13	NoRel	true	herida	aseguró
+Relation	T14	T15	NoRel	true	herida	denunciaron
+Relation	T14	T2	NoRel	true	herida	participación
+Relation	T14	T5	NoRel	true	herida	abstención
+Relation	T14	T6	NoRel	true	herida	elecciones
+Relation	T15	T10	NoRel	true	denunciaron	votación
+Relation	T15	T13	NoRel	true	denunciaron	aseguró
+Relation	T15	T14	NoRel	true	denunciaron	herida
+Relation	T15	T3	NoRel	true	denunciaron	buscar
+Relation	T16	T14	NoRel	true	allanamiento	herida
+Relation	T16	T17	NoRel	true	allanamiento	detención
+Relation	T16	T2	NoRel	true	allanamiento	participación
+Relation	T16	T4	NoRel	true	allanamiento	votado
+Relation	T16	T9	NoRel	true	allanamiento	salir
+Relation	T17	T1	NoRel	true	detención	incrementar
+Relation	T17	T11	NoRel	true	detención	Explicó
+Relation	T17	T12	NoRel	true	detención	acompañó
+Relation	T17	T3	NoRel	true	detención	buscar
+Relation	T17	T5	NoRel	true	detención	abstención
+Relation	T17	T6	NoRel	true	detención	elecciones
+Relation	T2	T10	NoRel	true	participación	votación
+Relation	T2	T12	NoRel	true	participación	acompañó
+Relation	T2	T14	NoRel	true	participación	herida
+Relation	T2	T5	NoRel	true	participación	abstención
+Relation	T2	T8	NoRel	true	participación	atropelló
+Relation	T2	T9	NoRel	true	participación	salir
+Relation	T3	T1	NoRel	true	buscar	incrementar
+Relation	T3	T11	NoRel	true	buscar	Explicó
+Relation	T3	T13	NoRel	true	buscar	aseguró
+Relation	T3	T2	NoRel	true	buscar	participación
+Relation	T3	T5	NoRel	true	buscar	abstención
+Relation	T3	T7	NoRel	true	buscar	informó
+Relation	T3	T9	NoRel	true	buscar	salir
+Relation	T4	T10	NoRel	true	votado	votación
+Relation	T4	T11	NoRel	true	votado	Explicó
+Relation	T4	T16	NoRel	true	votado	allanamiento
+Relation	T4	T3	NoRel	true	votado	buscar
+Relation	T5	T0	NoRel	true	abstención	pide
+Relation	T5	T10	NoRel	true	abstención	votación
+Relation	T5	T11	NoRel	true	abstención	Explicó
+Relation	T5	T12	NoRel	true	abstención	acompañó
+Relation	T6	T0	NoRel	true	elecciones	pide
+Relation	T6	T11	NoRel	true	elecciones	Explicó
+Relation	T6	T12	NoRel	true	elecciones	acompañó
+Relation	T6	T14	NoRel	true	elecciones	herida
+Relation	T6	T4	NoRel	true	elecciones	votado
+Relation	T6	T9	NoRel	true	elecciones	salir
+Relation	T7	T1	NoRel	true	informó	incrementar
+Relation	T7	T12	NoRel	true	informó	acompañó
+Relation	T7	T15	NoRel	true	informó	denunciaron
+Relation	T7	T2	NoRel	true	informó	participación
+Relation	T7	T6	NoRel	true	informó	elecciones
+Relation	T8	T14	NoRel	true	atropelló	herida
+Relation	T8	T3	NoRel	true	atropelló	buscar
+Relation	T9	T11	NoRel	true	salir	Explicó
+Relation	T9	T15	NoRel	true	salir	denunciaron
+Relation	T9	T16	NoRel	true	salir	allanamiento
+Relation	T9	T3	NoRel	true	salir	buscar
+Relation	T9	T4	NoRel	true	salir	votado
+Relation	T9	T8	NoRel	true	salir	atropelló

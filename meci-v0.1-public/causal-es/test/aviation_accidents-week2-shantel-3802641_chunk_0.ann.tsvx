@@ -1,0 +1,47 @@
+Text	El choque del VUELO 812 DE AIR INDIA EXPRESS fue un accidente aéreo ocurrido el 22 de mayo de 2010 en el Aeropuerto Internacional de Mangalore en Mangalore , India .	Un Boeing 737-800 con matrícula VT-AXV de Air India Express se salió de la pista del aeropuerto indio al aterrizar procedente del Aeropuerto Internacional de Dubái de Dubái , Emiratos Árabes Unidos .	158 de sus ocupantes fallecieron en el accidente y ha sido catalogado como la mayor tragedia aérea en India de la década .	[ Restos del siniestro . ] El vuelo 812 de Air India Express partió como se tenía previsto del Aeropuerto Internacional de Dubái el sábado 22 de mayo de 2010 a la 01:35 AM ( GTM+4 ) .	Tras tres horas de vuelo , el avión tocó tierra en la pista 22 del Aeropuerto Internacional de Mangalore a las 06:30 AM ( GTM +5:50 ) ; al aterrizar , el avión no se detuvo y se salió de la pista .
+Event	T0	choque	EVENT	3
+Event	T10	aterrizar	EVENT	812
+Event	T12	salió	EVENT	851
+Event	T2	salió	EVENT	229
+Event	T3	accidente	EVENT	405
+Event	T4	catalogado	EVENT	425
+Event	T6	siniestro	EVENT	502
+Event	T7	vuelo	EVENT	519
+Event	T8	partió	EVENT	550
+Event	T9	vuelo	EVENT	692
+Event	T1	aterrizar	EVENT	271
+Event	T5	fallecieron	EVENT	387
+Relation	T3	T5	CauseEffect	true	accidente	fallecieron
+Relation	T5	T3	EffectCause	true	fallecieron	accidente
+Relation	T0	T1	NoRel	true	choque	aterrizar
+Relation	T0	T3	NoRel	true	choque	accidente
+Relation	T0	T4	NoRel	true	choque	catalogado
+Relation	T0	T7	NoRel	true	choque	vuelo
+Relation	T0	T8	NoRel	true	choque	partió
+Relation	T0	T9	NoRel	true	choque	vuelo
+Relation	T1	T4	NoRel	true	aterrizar	catalogado
+Relation	T10	T4	NoRel	true	aterrizar	catalogado
+Relation	T10	T6	NoRel	true	aterrizar	siniestro
+Relation	T2	T0	NoRel	true	salió	choque
+Relation	T2	T1	NoRel	true	salió	aterrizar
+Relation	T2	T10	NoRel	true	salió	aterrizar
+Relation	T2	T6	NoRel	true	salió	siniestro
+Relation	T2	T7	NoRel	true	salió	vuelo
+Relation	T2	T9	NoRel	true	salió	vuelo
+Relation	T3	T1	NoRel	true	accidente	aterrizar
+Relation	T3	T2	NoRel	true	accidente	salió
+Relation	T3	T9	NoRel	true	accidente	vuelo
+Relation	T4	T0	NoRel	true	catalogado	choque
+Relation	T5	T0	NoRel	true	fallecieron	choque
+Relation	T6	T0	NoRel	true	siniestro	choque
+Relation	T6	T5	NoRel	true	siniestro	fallecieron
+Relation	T7	T10	NoRel	true	vuelo	aterrizar
+Relation	T7	T3	NoRel	true	vuelo	accidente
+Relation	T7	T4	NoRel	true	vuelo	catalogado
+Relation	T8	T0	NoRel	true	partió	choque
+Relation	T8	T3	NoRel	true	partió	accidente
+Relation	T8	T5	NoRel	true	partió	fallecieron
+Relation	T8	T7	NoRel	true	partió	vuelo
+Relation	T9	T2	NoRel	true	vuelo	salió
+Relation	T9	T5	NoRel	true	vuelo	fallecieron
+Relation	T9	T7	NoRel	true	vuelo	vuelo

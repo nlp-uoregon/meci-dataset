@@ -1,0 +1,44 @@
+Text	28 Haziran 1981 ( İran takvimine göre 7 Tir 1360 ( HEFT - I_TIR - هفت تیر ) ) tarihinde , İran İslami Cumhuriyet Partisi'nin ( İCP ) liderleri , partinin Tahran'daki genel merkezinde toplantı halindeyken çok güçlü bir patlama meydana geldi .	Aralarında İran yargı sisteminin başında bulunan ve o dönem Ayetullah Humeyni'den sonra İran İslam Devrimi'nin en güçlü kişisi olarak gösterilen Ayetullah Muhammed Beheşti'nin de aralarında bulunduğu , parti ileri gelenlerinden 73 kişi hayatını kaybetti .	Saldırının sorumlusunun Halkın Mücahitleri Örgütü olduğu düşünülmekteydi .	İran Devrimi'nden sonra Ayetullah Humeyni'nin başında olduğu yeni kurulan teokratik hükümet , diğer muhalif grupları teker teker tasfiye ederek , tüm siyasal gücü konsolide etmekteydi .	Tasfiye edilemeye çalışılan gruplar arasında Halkın Mücahitleri Örgütü ( HMÖ ) gibi , İslami sosyalist örgütler de vardı .
+Event	T0	geldi	EVENT	234
+Event	T1	kaybetti	EVENT	487
+Event	T2	etmekteydi	EVENT	746
+Event	T3	Tasfiye	EVENT	759
+Event	T4	toplantı	EVENT	183
+Event	T5	patlama	EVENT	218
+Event	T6	Saldırının	EVENT	498
+Event	T7	kurulan	EVENT	639
+Event	T8	ederek	EVENT	710
+Event	T9	Devrimi'nden	EVENT	578
+Relation	T5	T1	CauseEffect	true	patlama	kaybetti
+Relation	T1	T5	EffectCause	true	kaybetti	patlama
+Relation	T9	T7	CauseEffect	true	Devrimi'nden	kurulan
+Relation	T7	T9	EffectCause	true	kurulan	Devrimi'nden
+Relation	T8	T2	CauseEffect	true	ederek	etmekteydi
+Relation	T2	T8	EffectCause	true	etmekteydi	ederek
+Relation	T0	T1	NoRel	true	geldi	kaybetti
+Relation	T0	T4	NoRel	true	geldi	toplantı
+Relation	T0	T7	NoRel	true	geldi	kurulan
+Relation	T0	T9	NoRel	true	geldi	Devrimi'nden
+Relation	T1	T4	NoRel	true	kaybetti	toplantı
+Relation	T2	T0	NoRel	true	etmekteydi	geldi
+Relation	T2	T1	NoRel	true	etmekteydi	kaybetti
+Relation	T2	T6	NoRel	true	etmekteydi	Saldırının
+Relation	T3	T4	NoRel	true	Tasfiye	toplantı
+Relation	T3	T7	NoRel	true	Tasfiye	kurulan
+Relation	T4	T0	NoRel	true	toplantı	geldi
+Relation	T4	T1	NoRel	true	toplantı	kaybetti
+Relation	T5	T9	NoRel	true	patlama	Devrimi'nden
+Relation	T6	T4	NoRel	true	Saldırının	toplantı
+Relation	T6	T5	NoRel	true	Saldırının	patlama
+Relation	T6	T7	NoRel	true	Saldırının	kurulan
+Relation	T7	T0	NoRel	true	kurulan	geldi
+Relation	T7	T2	NoRel	true	kurulan	etmekteydi
+Relation	T7	T4	NoRel	true	kurulan	toplantı
+Relation	T7	T5	NoRel	true	kurulan	patlama
+Relation	T7	T8	NoRel	true	kurulan	ederek
+Relation	T8	T6	NoRel	true	ederek	Saldırının
+Relation	T8	T7	NoRel	true	ederek	kurulan
+Relation	T9	T1	NoRel	true	Devrimi'nden	kaybetti
+Relation	T9	T2	NoRel	true	Devrimi'nden	etmekteydi
+Relation	T9	T5	NoRel	true	Devrimi'nden	patlama
+Relation	T9	T8	NoRel	true	Devrimi'nden	ederek

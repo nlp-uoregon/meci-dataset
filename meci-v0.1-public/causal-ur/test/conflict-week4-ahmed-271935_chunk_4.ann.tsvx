@@ -1,0 +1,100 @@
+Text	-___- دسمبر 31 ، پاک سیکیورٹی آفیسرز معمول کی فلیگ میٹنگ کے سلسلے بھارتی سیکیورٹی آفیسرز سے ملنے جا رہے تھے کہ بھارتی سیکیورٹی اہلکاروں نے پاکستان رینجرز سے دونوں آفیسرز پر فائر کھول دیا ۔	جس کے سبب دونوں آفیسرز ہلاک ہو گئے ۔	جبکہ بھارتی حکام نے پاکستان پر فائر بندی کی خلاف ورزی کا الزام لگاتے ہوئے اپنے ایک فوجی کی ہلاکت کا دعویٰ کیا ۔	-___- جنوری 2 ، سیالکوٹ کے شکرگڑھ سیکٹر پے بھارتی گولہ باری سے ایک تیرہ سالہ بچی ہلاک جبکہ پانچ سالہ بچہ شدید زخمی ہوا ۔	-___- جنوری 2 ، پاکستانی فوج کی گولی ماری سے 2 بھارتی سپاہی ، 1 بھارتی شہری لڑکی ہلاک اور 11 زخمی ہوئے ۔
+Event	T0	میٹنگ	EVENT	51
+Event	T1	ملنے	EVENT	92
+Event	T3	ہلاک	EVENT	212
+Event	T5	بندی	EVENT	262
+Event	T7	ہلاکت	EVENT	317
+Event	T8	باری	EVENT	393
+Event	T9	ہلاک	EVENT	419
+Event	T11	ماری	EVENT	496
+Event	T12	ہلاک	EVENT	540
+Event	T14	فائر	EVENT	173
+Event	T2	ورزی	EVENT	275
+Event	T4	الزام	EVENT	283
+Event	T6	دعویٰ	EVENT	326
+Event	T15	زخمی	EVENT	448
+Event	T10	زخمی	EVENT	552
+Relation	T14	T3	CauseEffect	true	فائر	ہلاک
+Relation	T3	T14	EffectCause	true	ہلاک	فائر
+Relation	T2	T4	CauseEffect	true	ورزی	الزام
+Relation	T4	T2	EffectCause	true	الزام	ورزی
+Relation	T8	T9	CauseEffect	true	باری	ہلاک
+Relation	T9	T8	EffectCause	true	ہلاک	باری
+Relation	T8	T15	CauseEffect	true	باری	زخمی
+Relation	T15	T8	EffectCause	true	زخمی	باری
+Relation	T11	T12	CauseEffect	true	ماری	ہلاک
+Relation	T12	T11	EffectCause	true	ہلاک	ماری
+Relation	T11	T10	CauseEffect	true	ماری	زخمی
+Relation	T10	T11	EffectCause	true	زخمی	ماری
+Relation	T0	T1	NoRel	true	میٹنگ	ملنے
+Relation	T0	T12	NoRel	true	میٹنگ	ہلاک
+Relation	T0	T5	NoRel	true	میٹنگ	بندی
+Relation	T0	T8	NoRel	true	میٹنگ	باری
+Relation	T0	T9	NoRel	true	میٹنگ	ہلاک
+Relation	T1	T15	NoRel	true	ملنے	زخمی
+Relation	T1	T2	NoRel	true	ملنے	ورزی
+Relation	T1	T5	NoRel	true	ملنے	بندی
+Relation	T1	T7	NoRel	true	ملنے	ہلاکت
+Relation	T10	T0	NoRel	true	زخمی	میٹنگ
+Relation	T10	T1	NoRel	true	زخمی	ملنے
+Relation	T10	T3	NoRel	true	زخمی	ہلاک
+Relation	T10	T8	NoRel	true	زخمی	باری
+Relation	T11	T0	NoRel	true	ماری	میٹنگ
+Relation	T11	T14	NoRel	true	ماری	فائر
+Relation	T11	T2	NoRel	true	ماری	ورزی
+Relation	T11	T4	NoRel	true	ماری	الزام
+Relation	T12	T14	NoRel	true	ہلاک	فائر
+Relation	T12	T4	NoRel	true	ہلاک	الزام
+Relation	T12	T6	NoRel	true	ہلاک	دعویٰ
+Relation	T12	T8	NoRel	true	ہلاک	باری
+Relation	T14	T11	NoRel	true	فائر	ماری
+Relation	T14	T15	NoRel	true	فائر	زخمی
+Relation	T14	T6	NoRel	true	فائر	دعویٰ
+Relation	T14	T8	NoRel	true	فائر	باری
+Relation	T14	T9	NoRel	true	فائر	ہلاک
+Relation	T15	T10	NoRel	true	زخمی	زخمی
+Relation	T15	T3	NoRel	true	زخمی	ہلاک
+Relation	T15	T5	NoRel	true	زخمی	بندی
+Relation	T15	T6	NoRel	true	زخمی	دعویٰ
+Relation	T15	T7	NoRel	true	زخمی	ہلاکت
+Relation	T2	T0	NoRel	true	ورزی	میٹنگ
+Relation	T2	T11	NoRel	true	ورزی	ماری
+Relation	T2	T6	NoRel	true	ورزی	دعویٰ
+Relation	T3	T0	NoRel	true	ہلاک	میٹنگ
+Relation	T3	T15	NoRel	true	ہلاک	زخمی
+Relation	T3	T2	NoRel	true	ہلاک	ورزی
+Relation	T3	T5	NoRel	true	ہلاک	بندی
+Relation	T3	T6	NoRel	true	ہلاک	دعویٰ
+Relation	T3	T7	NoRel	true	ہلاک	ہلاکت
+Relation	T4	T1	NoRel	true	الزام	ملنے
+Relation	T4	T10	NoRel	true	الزام	زخمی
+Relation	T4	T11	NoRel	true	الزام	ماری
+Relation	T4	T6	NoRel	true	الزام	دعویٰ
+Relation	T4	T7	NoRel	true	الزام	ہلاکت
+Relation	T4	T8	NoRel	true	الزام	باری
+Relation	T5	T0	NoRel	true	بندی	میٹنگ
+Relation	T5	T11	NoRel	true	بندی	ماری
+Relation	T5	T15	NoRel	true	بندی	زخمی
+Relation	T5	T2	NoRel	true	بندی	ورزی
+Relation	T5	T3	NoRel	true	بندی	ہلاک
+Relation	T5	T9	NoRel	true	بندی	ہلاک
+Relation	T6	T0	NoRel	true	دعویٰ	میٹنگ
+Relation	T6	T1	NoRel	true	دعویٰ	ملنے
+Relation	T6	T11	NoRel	true	دعویٰ	ماری
+Relation	T7	T0	NoRel	true	ہلاکت	میٹنگ
+Relation	T7	T10	NoRel	true	ہلاکت	زخمی
+Relation	T7	T14	NoRel	true	ہلاکت	فائر
+Relation	T7	T3	NoRel	true	ہلاکت	ہلاک
+Relation	T7	T4	NoRel	true	ہلاکت	الزام
+Relation	T7	T5	NoRel	true	ہلاکت	بندی
+Relation	T8	T0	NoRel	true	باری	میٹنگ
+Relation	T8	T1	NoRel	true	باری	ملنے
+Relation	T8	T10	NoRel	true	باری	زخمی
+Relation	T8	T12	NoRel	true	باری	ہلاک
+Relation	T8	T2	NoRel	true	باری	ورزی
+Relation	T8	T4	NoRel	true	باری	الزام
+Relation	T8	T5	NoRel	true	باری	بندی
+Relation	T8	T6	NoRel	true	باری	دعویٰ
+Relation	T9	T0	NoRel	true	ہلاک	میٹنگ
+Relation	T9	T14	NoRel	true	ہلاک	فائر
+Relation	T9	T3	NoRel	true	ہلاک	ہلاک

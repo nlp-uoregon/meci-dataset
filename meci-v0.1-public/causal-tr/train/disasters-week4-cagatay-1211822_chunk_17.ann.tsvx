@@ -1,0 +1,45 @@
+Text	küçükresim | sol | NOAA'nın tsunaminin yayılımına ilişkin animasyonu Bu veriler , JMA'nın Japonya kıyısı boyunca bulunan kayıt istasyonlarından elde edildi .	Pek çok bölge ayrıca 1 ila 3 metre uzunluğunda olan tsunami dalgalarından etkilendi ve JMA raporu " Bazı yerlerde dalgaların yüksekliği bu verilerden daha yüksek olabilir " diye bir not içermekteydi .	İlk kaydedilen tsunami dalgası verilerinin zamanları 15.12 ila 15.21 arasında değişmekteydi , bu da depremden 26 ila 35 dakika sonraydı .	Rapor ayrıca tsunami gözlem detaylarını ve dalgalardan etkilenen kıyıların ayrıntılı haritalarını içermekteydi .	23 Mart 2011'de , Liman ve Havalimanları Araştırma Enstitüsü , telemetri ile aşağıdaki verileri elde etti :
+Event	T0	animasyonu	EVENT	58
+Event	T1	kayıt	EVENT	121
+Event	T2	edildi	EVENT	149
+Event	T3	etkilendi	EVENT	232
+Event	T5	tsunami	EVENT	510
+Event	T6	içermekteydi	EVENT	595
+Event	T4	depremden	EVENT	459
+Event	T8	tsunaminin	EVENT	28
+Event	T9	gözlem	EVENT	518
+Event	T7	elde etti	EVENT	706
+Relation	T4	T8	CauseEffect	true	depremden	tsunaminin
+Relation	T8	T4	EffectCause	true	tsunaminin	depremden
+Relation	T8	T3	CauseEffect	true	tsunaminin	etkilendi
+Relation	T3	T8	EffectCause	true	etkilendi	tsunaminin
+Relation	T0	T5	NoRel	true	animasyonu	tsunami
+Relation	T0	T6	NoRel	true	animasyonu	içermekteydi
+Relation	T1	T0	NoRel	true	kayıt	animasyonu
+Relation	T1	T2	NoRel	true	kayıt	edildi
+Relation	T1	T4	NoRel	true	kayıt	depremden
+Relation	T1	T5	NoRel	true	kayıt	tsunami
+Relation	T1	T7	NoRel	true	kayıt	elde etti
+Relation	T1	T8	NoRel	true	kayıt	tsunaminin
+Relation	T1	T9	NoRel	true	kayıt	gözlem
+Relation	T2	T1	NoRel	true	edildi	kayıt
+Relation	T2	T8	NoRel	true	edildi	tsunaminin
+Relation	T2	T9	NoRel	true	edildi	gözlem
+Relation	T3	T0	NoRel	true	etkilendi	animasyonu
+Relation	T3	T1	NoRel	true	etkilendi	kayıt
+Relation	T3	T2	NoRel	true	etkilendi	edildi
+Relation	T3	T6	NoRel	true	etkilendi	içermekteydi
+Relation	T4	T0	NoRel	true	depremden	animasyonu
+Relation	T4	T7	NoRel	true	depremden	elde etti
+Relation	T5	T1	NoRel	true	tsunami	kayıt
+Relation	T5	T7	NoRel	true	tsunami	elde etti
+Relation	T6	T0	NoRel	true	içermekteydi	animasyonu
+Relation	T6	T3	NoRel	true	içermekteydi	etkilendi
+Relation	T6	T7	NoRel	true	içermekteydi	elde etti
+Relation	T6	T8	NoRel	true	içermekteydi	tsunaminin
+Relation	T6	T9	NoRel	true	içermekteydi	gözlem
+Relation	T7	T3	NoRel	true	elde etti	etkilendi
+Relation	T8	T2	NoRel	true	tsunaminin	edildi
+Relation	T9	T2	NoRel	true	gözlem	edildi
+Relation	T9	T6	NoRel	true	gözlem	içermekteydi
+Relation	T9	T8	NoRel	true	gözlem	tsunaminin

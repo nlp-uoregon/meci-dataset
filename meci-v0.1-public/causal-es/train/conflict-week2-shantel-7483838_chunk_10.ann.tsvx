@@ -1,0 +1,51 @@
+Text	A fin de prepararse mejor para el rol , Seyfried leyó los libros de Lovlace , y estudió sus videos y su forma de hablar .	Además miró el film en cuestión _ DEEP THROAT _ y se sometió a un entrenamiento de acento neoyorkino .	Además dijo lo siguiente sobre Linda Lovelace : « Ella fue una persona muy diferente a lo que nos esperamos .	Es una muy buena historia para contar , y estoy muy , muy emocionada con respecto a ello » .	Adam Brody por su parte también recurrió a las entrevistas de Reems para preparar su papel , y agregó , ante el hecho de que el arresto y la acusación de Reems bajo cargos federales por conspiración en la distribución de materiales obscenos por distintos estados no se ann mostrados en la película , que ésta no profundiza en esos temas .
+Event	T12	arresto	EVENT	556
+Event	T13	acusación	EVENT	569
+Event	T15	conspiración	EVENT	614
+Event	T16	distribución	EVENT	633
+Event	T4	entrenamiento	EVENT	188
+Event	T7	recurrió	EVENT	460
+Event	T8	entrevistas	EVENT	475
+Event	T9	preparar	EVENT	501
+Event	T1	estudió	EVENT	80
+Event	T2	leyó	EVENT	49
+Event	T3	dijo	EVENT	232
+Relation	T7	T9	CauseEffect	true	recurrió	preparar
+Relation	T9	T7	EffectCause	true	preparar	recurrió
+Relation	T16	T12	CauseEffect	true	distribución	arresto
+Relation	T12	T16	EffectCause	true	arresto	distribución
+Relation	T15	T12	CauseEffect	true	conspiración	arresto
+Relation	T12	T15	EffectCause	true	arresto	conspiración
+Relation	T13	T12	CauseEffect	true	acusación	arresto
+Relation	T12	T13	EffectCause	true	arresto	acusación
+Relation	T1	T2	NoRel	true	estudió	leyó
+Relation	T1	T8	NoRel	true	estudió	entrevistas
+Relation	T13	T16	NoRel	true	acusación	distribución
+Relation	T13	T4	NoRel	true	acusación	entrenamiento
+Relation	T13	T8	NoRel	true	acusación	entrevistas
+Relation	T15	T16	NoRel	true	conspiración	distribución
+Relation	T16	T13	NoRel	true	distribución	acusación
+Relation	T16	T15	NoRel	true	distribución	conspiración
+Relation	T16	T7	NoRel	true	distribución	recurrió
+Relation	T2	T12	NoRel	true	leyó	arresto
+Relation	T2	T16	NoRel	true	leyó	distribución
+Relation	T2	T3	NoRel	true	leyó	dijo
+Relation	T2	T4	NoRel	true	leyó	entrenamiento
+Relation	T2	T7	NoRel	true	leyó	recurrió
+Relation	T3	T1	NoRel	true	dijo	estudió
+Relation	T3	T15	NoRel	true	dijo	conspiración
+Relation	T3	T7	NoRel	true	dijo	recurrió
+Relation	T3	T8	NoRel	true	dijo	entrevistas
+Relation	T3	T9	NoRel	true	dijo	preparar
+Relation	T4	T13	NoRel	true	entrenamiento	acusación
+Relation	T4	T15	NoRel	true	entrenamiento	conspiración
+Relation	T4	T3	NoRel	true	entrenamiento	dijo
+Relation	T4	T9	NoRel	true	entrenamiento	preparar
+Relation	T7	T1	NoRel	true	recurrió	estudió
+Relation	T7	T8	NoRel	true	recurrió	entrevistas
+Relation	T8	T15	NoRel	true	entrevistas	conspiración
+Relation	T8	T16	NoRel	true	entrevistas	distribución
+Relation	T8	T4	NoRel	true	entrevistas	entrenamiento
+Relation	T9	T1	NoRel	true	preparar	estudió
+Relation	T9	T2	NoRel	true	preparar	leyó
+Relation	T9	T8	NoRel	true	preparar	entrevistas

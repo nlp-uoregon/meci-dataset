@@ -1,0 +1,37 @@
+Text	Un día después del accidente , la NTSB recuperó los datos de vuelo y las grabadoras de voz de cabina del avión .	Las grabadoras sufrieron daños por el fuego y los investigadores las recuperaron de los restos y los transportaron al Laboratorio de registradores de vehículos de la NTSB en Washington , DC .	El avión estaba equipado con un CVR de estado sólido Honeywell y un FDR de cinta Honeywell .	Ambos registradores mostraron signos de daño térmico externo .	El medio interno del CVR estaba generalmente intacto , sin embargo , el medio interno del FDR presentaba signos de daño .
+Event	T0	accidente	EVENT	19
+Event	T1	recuperó	EVENT	39
+Event	T2	vuelo	EVENT	61
+Event	T3	daños	EVENT	138
+Event	T4	fuego	EVENT	151
+Event	T5	recuperaron	EVENT	182
+Event	T6	transportaron	EVENT	214
+Event	T7	equipado	EVENT	321
+Event	T8	signos	EVENT	566
+Event	T9	daño	EVENT	576
+Relation	T4	T3	CauseEffect	true	fuego	daños
+Relation	T3	T4	EffectCause	true	daños	fuego
+Relation	T1	T5	NoRel	true	recuperó	recuperaron
+Relation	T2	T0	NoRel	true	vuelo	accidente
+Relation	T2	T1	NoRel	true	vuelo	recuperó
+Relation	T2	T3	NoRel	true	vuelo	daños
+Relation	T2	T4	NoRel	true	vuelo	fuego
+Relation	T2	T8	NoRel	true	vuelo	signos
+Relation	T3	T5	NoRel	true	daños	recuperaron
+Relation	T3	T6	NoRel	true	daños	transportaron
+Relation	T4	T5	NoRel	true	fuego	recuperaron
+Relation	T4	T6	NoRel	true	fuego	transportaron
+Relation	T4	T8	NoRel	true	fuego	signos
+Relation	T5	T0	NoRel	true	recuperaron	accidente
+Relation	T5	T1	NoRel	true	recuperaron	recuperó
+Relation	T5	T9	NoRel	true	recuperaron	daño
+Relation	T6	T5	NoRel	true	transportaron	recuperaron
+Relation	T6	T8	NoRel	true	transportaron	signos
+Relation	T7	T5	NoRel	true	equipado	recuperaron
+Relation	T7	T9	NoRel	true	equipado	daño
+Relation	T8	T2	NoRel	true	signos	vuelo
+Relation	T8	T7	NoRel	true	signos	equipado
+Relation	T8	T9	NoRel	true	signos	daño
+Relation	T9	T1	NoRel	true	daño	recuperó
+Relation	T9	T4	NoRel	true	daño	fuego
+Relation	T9	T5	NoRel	true	daño	recuperaron

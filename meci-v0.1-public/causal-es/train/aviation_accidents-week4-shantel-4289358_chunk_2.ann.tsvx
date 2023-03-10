@@ -1,0 +1,89 @@
+Text	Fue el último vuelo que salió del aeropuerto de Santiago de Cuba antes de que se cerrara debido a la aproximación del huracán Tomás	A las 17:42 , la aeronave se estrelló cerca de la aldea de Guasimal en la provincia de Sancti Spíritus , a unas 210 millas ( 340 km ) al sureste de La Habana , luego de emitir una llamada de socorro .	Testigos dijeron que el avión " volaba bajo y parecía inestable ... derramando humo y fuego " , antes de escuchar una explosión .	Las instalaciones médicas de Guasimal se pusieron en alerta para prepararse para los pacientes de emergencia .	Sin embargo , a la medianoche se les dijo que se retiraran porque no se esperaban supervivientes .
+Event	T0	vuelo	EVENT	14
+Event	T1	salió	EVENT	24
+Event	T2	aproximación	EVENT	101
+Event	T3	huracán	EVENT	118
+Event	T4	estrelló	EVENT	161
+Event	T5	emitir	EVENT	301
+Event	T6	llamada	EVENT	312
+Event	T7	socorro	EVENT	323
+Event	T8	dijeron	EVENT	342
+Event	T9	volaba	EVENT	365
+Event	T10	derramando	EVENT	401
+Event	T11	escuchar	EVENT	438
+Event	T12	explosión	EVENT	451
+Event	T13	alerta	EVENT	516
+Event	T14	dijo	EVENT	611
+Event	T15	retiraran	EVENT	623
+Relation	T12	T13	CauseEffect	true	explosión	alerta
+Relation	T13	T12	EffectCause	true	alerta	explosión
+Relation	T4	T12	CauseEffect	true	estrelló	explosión
+Relation	T12	T4	EffectCause	true	explosión	estrelló
+Relation	T0	T1	NoRel	true	vuelo	salió
+Relation	T0	T10	NoRel	true	vuelo	derramando
+Relation	T0	T15	NoRel	true	vuelo	retiraran
+Relation	T0	T4	NoRel	true	vuelo	estrelló
+Relation	T0	T6	NoRel	true	vuelo	llamada
+Relation	T1	T0	NoRel	true	salió	vuelo
+Relation	T1	T11	NoRel	true	salió	escuchar
+Relation	T1	T14	NoRel	true	salió	dijo
+Relation	T1	T2	NoRel	true	salió	aproximación
+Relation	T1	T4	NoRel	true	salió	estrelló
+Relation	T10	T0	NoRel	true	derramando	vuelo
+Relation	T10	T1	NoRel	true	derramando	salió
+Relation	T10	T2	NoRel	true	derramando	aproximación
+Relation	T10	T7	NoRel	true	derramando	socorro
+Relation	T11	T10	NoRel	true	escuchar	derramando
+Relation	T11	T15	NoRel	true	escuchar	retiraran
+Relation	T11	T5	NoRel	true	escuchar	emitir
+Relation	T12	T10	NoRel	true	explosión	derramando
+Relation	T12	T6	NoRel	true	explosión	llamada
+Relation	T12	T7	NoRel	true	explosión	socorro
+Relation	T13	T2	NoRel	true	alerta	aproximación
+Relation	T13	T3	NoRel	true	alerta	huracán
+Relation	T13	T6	NoRel	true	alerta	llamada
+Relation	T14	T4	NoRel	true	dijo	estrelló
+Relation	T14	T9	NoRel	true	dijo	volaba
+Relation	T15	T1	NoRel	true	retiraran	salió
+Relation	T15	T10	NoRel	true	retiraran	derramando
+Relation	T15	T11	NoRel	true	retiraran	escuchar
+Relation	T15	T14	NoRel	true	retiraran	dijo
+Relation	T15	T5	NoRel	true	retiraran	emitir
+Relation	T15	T6	NoRel	true	retiraran	llamada
+Relation	T2	T1	NoRel	true	aproximación	salió
+Relation	T2	T13	NoRel	true	aproximación	alerta
+Relation	T2	T4	NoRel	true	aproximación	estrelló
+Relation	T3	T10	NoRel	true	huracán	derramando
+Relation	T3	T11	NoRel	true	huracán	escuchar
+Relation	T3	T13	NoRel	true	huracán	alerta
+Relation	T3	T15	NoRel	true	huracán	retiraran
+Relation	T3	T2	NoRel	true	huracán	aproximación
+Relation	T3	T5	NoRel	true	huracán	emitir
+Relation	T3	T9	NoRel	true	huracán	volaba
+Relation	T4	T0	NoRel	true	estrelló	vuelo
+Relation	T4	T14	NoRel	true	estrelló	dijo
+Relation	T4	T2	NoRel	true	estrelló	aproximación
+Relation	T4	T9	NoRel	true	estrelló	volaba
+Relation	T5	T0	NoRel	true	emitir	vuelo
+Relation	T5	T1	NoRel	true	emitir	salió
+Relation	T5	T11	NoRel	true	emitir	escuchar
+Relation	T5	T12	NoRel	true	emitir	explosión
+Relation	T5	T15	NoRel	true	emitir	retiraran
+Relation	T5	T2	NoRel	true	emitir	aproximación
+Relation	T5	T3	NoRel	true	emitir	huracán
+Relation	T6	T1	NoRel	true	llamada	salió
+Relation	T6	T10	NoRel	true	llamada	derramando
+Relation	T6	T13	NoRel	true	llamada	alerta
+Relation	T6	T15	NoRel	true	llamada	retiraran
+Relation	T7	T12	NoRel	true	socorro	explosión
+Relation	T7	T13	NoRel	true	socorro	alerta
+Relation	T7	T3	NoRel	true	socorro	huracán
+Relation	T7	T4	NoRel	true	socorro	estrelló
+Relation	T8	T0	NoRel	true	dijeron	vuelo
+Relation	T8	T11	NoRel	true	dijeron	escuchar
+Relation	T8	T12	NoRel	true	dijeron	explosión
+Relation	T8	T13	NoRel	true	dijeron	alerta
+Relation	T8	T3	NoRel	true	dijeron	huracán
+Relation	T8	T6	NoRel	true	dijeron	llamada
+Relation	T9	T11	NoRel	true	volaba	escuchar
+Relation	T9	T3	NoRel	true	volaba	huracán

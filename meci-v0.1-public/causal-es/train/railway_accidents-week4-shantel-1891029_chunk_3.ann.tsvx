@@ -1,0 +1,133 @@
+Text	Sin embargo , la Junta Nacional de Seguridad en el Transporte ( NTSB ) y un sindicato que representa a los empleados ferroviarios dijeron que era demasiado temprano para hacer conclusiones sobre la causa del choque .	La mañana del lunes , Denise Tyrrell - la vocera - anunció su renuncia .	Los investigadores también están examinando reportes que afirman que el maquinista pudo haber estado distraído por mensajes de texto minutos antes de la tragedia , informó la NTSB .	La emisora CBS2 reportó que el ingeniero pudo haber estado enviado textos a un amigo poco antes del choque , aunque los investigadores de la NTSB dijeron que establecer la causa de la colisión podría tardar hasta un año .	Un entusiasta de trenes de 15 años de edad le dijo a la estación que recibió un mensaje de texto del maquinista aproximadamente un minuto antes del accidente .
+Event	T0	dijeron	EVENT	130
+Event	T1	conclusiones	EVENT	176
+Event	T2	choque	EVENT	208
+Event	T3	anunció	EVENT	268
+Event	T4	renuncia	EVENT	279
+Event	T5	reportes	EVENT	334
+Event	T6	afirman	EVENT	347
+Event	T7	distraído	EVENT	391
+Event	T8	tragedia	EVENT	443
+Event	T9	informó	EVENT	454
+Event	T10	reportó	EVENT	488
+Event	T11	choque	EVENT	572
+Event	T12	dijeron	EVENT	618
+Event	T13	establecer	EVENT	630
+Event	T14	colisión	EVENT	656
+Event	T15	dijo	EVENT	740
+Event	T16	recibió	EVENT	763
+Event	T17	mensaje	EVENT	774
+Event	T18	accidente	EVENT	842
+Relation	T2	T4	CauseEffect	true	choque	renuncia
+Relation	T4	T2	EffectCause	true	renuncia	choque
+Relation	T0	T13	NoRel	true	dijeron	establecer
+Relation	T0	T15	NoRel	true	dijeron	dijo
+Relation	T0	T16	NoRel	true	dijeron	recibió
+Relation	T0	T3	NoRel	true	dijeron	anunció
+Relation	T0	T8	NoRel	true	dijeron	tragedia
+Relation	T1	T12	NoRel	true	conclusiones	dijeron
+Relation	T1	T13	NoRel	true	conclusiones	establecer
+Relation	T1	T15	NoRel	true	conclusiones	dijo
+Relation	T1	T17	NoRel	true	conclusiones	mensaje
+Relation	T10	T0	NoRel	true	reportó	dijeron
+Relation	T10	T1	NoRel	true	reportó	conclusiones
+Relation	T10	T11	NoRel	true	reportó	choque
+Relation	T10	T13	NoRel	true	reportó	establecer
+Relation	T10	T4	NoRel	true	reportó	renuncia
+Relation	T10	T6	NoRel	true	reportó	afirman
+Relation	T10	T8	NoRel	true	reportó	tragedia
+Relation	T11	T15	NoRel	true	choque	dijo
+Relation	T11	T3	NoRel	true	choque	anunció
+Relation	T12	T0	NoRel	true	dijeron	dijeron
+Relation	T12	T11	NoRel	true	dijeron	choque
+Relation	T12	T15	NoRel	true	dijeron	dijo
+Relation	T12	T16	NoRel	true	dijeron	recibió
+Relation	T12	T17	NoRel	true	dijeron	mensaje
+Relation	T12	T18	NoRel	true	dijeron	accidente
+Relation	T12	T6	NoRel	true	dijeron	afirman
+Relation	T13	T12	NoRel	true	establecer	dijeron
+Relation	T13	T14	NoRel	true	establecer	colisión
+Relation	T13	T16	NoRel	true	establecer	recibió
+Relation	T13	T17	NoRel	true	establecer	mensaje
+Relation	T13	T2	NoRel	true	establecer	choque
+Relation	T13	T3	NoRel	true	establecer	anunció
+Relation	T14	T18	NoRel	true	colisión	accidente
+Relation	T15	T0	NoRel	true	dijo	dijeron
+Relation	T15	T1	NoRel	true	dijo	conclusiones
+Relation	T15	T11	NoRel	true	dijo	choque
+Relation	T15	T13	NoRel	true	dijo	establecer
+Relation	T15	T16	NoRel	true	dijo	recibió
+Relation	T15	T17	NoRel	true	dijo	mensaje
+Relation	T15	T6	NoRel	true	dijo	afirman
+Relation	T15	T7	NoRel	true	dijo	distraído
+Relation	T16	T0	NoRel	true	recibió	dijeron
+Relation	T16	T11	NoRel	true	recibió	choque
+Relation	T16	T18	NoRel	true	recibió	accidente
+Relation	T16	T2	NoRel	true	recibió	choque
+Relation	T16	T3	NoRel	true	recibió	anunció
+Relation	T16	T4	NoRel	true	recibió	renuncia
+Relation	T16	T6	NoRel	true	recibió	afirman
+Relation	T16	T8	NoRel	true	recibió	tragedia
+Relation	T16	T9	NoRel	true	recibió	informó
+Relation	T17	T11	NoRel	true	mensaje	choque
+Relation	T17	T12	NoRel	true	mensaje	dijeron
+Relation	T17	T16	NoRel	true	mensaje	recibió
+Relation	T17	T3	NoRel	true	mensaje	anunció
+Relation	T17	T6	NoRel	true	mensaje	afirman
+Relation	T17	T8	NoRel	true	mensaje	tragedia
+Relation	T18	T11	NoRel	true	accidente	choque
+Relation	T18	T14	NoRel	true	accidente	colisión
+Relation	T18	T15	NoRel	true	accidente	dijo
+Relation	T2	T0	NoRel	true	choque	dijeron
+Relation	T2	T12	NoRel	true	choque	dijeron
+Relation	T2	T14	NoRel	true	choque	colisión
+Relation	T2	T15	NoRel	true	choque	dijo
+Relation	T3	T0	NoRel	true	anunció	dijeron
+Relation	T3	T1	NoRel	true	anunció	conclusiones
+Relation	T3	T10	NoRel	true	anunció	reportó
+Relation	T3	T13	NoRel	true	anunció	establecer
+Relation	T3	T15	NoRel	true	anunció	dijo
+Relation	T3	T18	NoRel	true	anunció	accidente
+Relation	T3	T2	NoRel	true	anunció	choque
+Relation	T3	T4	NoRel	true	anunció	renuncia
+Relation	T3	T9	NoRel	true	anunció	informó
+Relation	T4	T1	NoRel	true	renuncia	conclusiones
+Relation	T4	T11	NoRel	true	renuncia	choque
+Relation	T4	T13	NoRel	true	renuncia	establecer
+Relation	T4	T14	NoRel	true	renuncia	colisión
+Relation	T4	T5	NoRel	true	renuncia	reportes
+Relation	T5	T0	NoRel	true	reportes	dijeron
+Relation	T5	T15	NoRel	true	reportes	dijo
+Relation	T5	T16	NoRel	true	reportes	recibió
+Relation	T5	T3	NoRel	true	reportes	anunció
+Relation	T5	T4	NoRel	true	reportes	renuncia
+Relation	T5	T7	NoRel	true	reportes	distraído
+Relation	T5	T8	NoRel	true	reportes	tragedia
+Relation	T6	T0	NoRel	true	afirman	dijeron
+Relation	T6	T1	NoRel	true	afirman	conclusiones
+Relation	T6	T14	NoRel	true	afirman	colisión
+Relation	T6	T16	NoRel	true	afirman	recibió
+Relation	T6	T2	NoRel	true	afirman	choque
+Relation	T6	T3	NoRel	true	afirman	anunció
+Relation	T6	T9	NoRel	true	afirman	informó
+Relation	T7	T11	NoRel	true	distraído	choque
+Relation	T7	T12	NoRel	true	distraído	dijeron
+Relation	T7	T14	NoRel	true	distraído	colisión
+Relation	T7	T18	NoRel	true	distraído	accidente
+Relation	T7	T2	NoRel	true	distraído	choque
+Relation	T7	T5	NoRel	true	distraído	reportes
+Relation	T7	T6	NoRel	true	distraído	afirman
+Relation	T7	T8	NoRel	true	distraído	tragedia
+Relation	T8	T13	NoRel	true	tragedia	establecer
+Relation	T8	T15	NoRel	true	tragedia	dijo
+Relation	T8	T4	NoRel	true	tragedia	renuncia
+Relation	T8	T6	NoRel	true	tragedia	afirman
+Relation	T8	T7	NoRel	true	tragedia	distraído
+Relation	T8	T9	NoRel	true	tragedia	informó
+Relation	T9	T0	NoRel	true	informó	dijeron
+Relation	T9	T10	NoRel	true	informó	reportó
+Relation	T9	T12	NoRel	true	informó	dijeron
+Relation	T9	T13	NoRel	true	informó	establecer
+Relation	T9	T15	NoRel	true	informó	dijo
+Relation	T9	T18	NoRel	true	informó	accidente
+Relation	T9	T6	NoRel	true	informó	afirman

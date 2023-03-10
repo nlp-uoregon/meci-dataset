@@ -1,0 +1,28 @@
+Text	The engine thrust reverser doors deployed , and the pilot decreased flaps from 40 ° to 15 ° .	The landing gear remained locked in the down position .	Six seconds before impact , when the aircraft was 4000 feet from the runway threshold , the aircraft climbed , then banked steeply to the left from a height of 300 to 400 feet , and crashed to the left of the runway .	The aircraft was destroyed by impact and fire .	The crash investigation was conducted by the Aviation Safety Investigation Division of Transport Canada and audited by the Aircraft Accident Review Board .
+Event	T0	deployed	EVENT	33
+Event	T1	flaps	EVENT	68
+Event	T10	investigation	EVENT	426
+Event	T12	audited	EVENT	524
+Event	T2	locked	EVENT	120
+Event	T3	impact	EVENT	169
+Event	T4	climbed	EVENT	251
+Event	T5	banked	EVENT	266
+Event	T6	crashed	EVENT	332
+Event	T7	destroyed	EVENT	385
+Event	T8	impact	EVENT	398
+Event	T9	fire	EVENT	409
+Relation	T5	T6	CauseEffect	true	banked	crashed
+Relation	T6	T5	EffectCause	true	crashed	banked
+Relation	T9	T7	CauseEffect	true	fire	destroyed
+Relation	T7	T9	EffectCause	true	destroyed	fire
+Relation	T8	T7	CauseEffect	true	impact	destroyed
+Relation	T7	T8	EffectCause	true	destroyed	impact
+Relation	T0	T12	NoRel	true	deployed	audited
+Relation	T0	T3	NoRel	true	deployed	impact
+Relation	T1	T9	NoRel	true	flaps	fire
+Relation	T12	T5	NoRel	true	audited	banked
+Relation	T2	T4	NoRel	true	locked	climbed
+Relation	T4	T1	NoRel	true	climbed	flaps
+Relation	T5	T9	NoRel	true	banked	fire
+Relation	T8	T9	NoRel	true	impact	fire
+Relation	T9	T6	NoRel	true	fire	crashed

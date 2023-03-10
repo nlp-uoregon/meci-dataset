@@ -1,0 +1,20 @@
+Text	230px | küçükresim | Eski Sing Sing cezaevinde az kullanılan elektrikli sandalye Vücuda elektrik akımı verilerek öldürme veya diğer anlamıyla ELEKTRIKLI SANDALYE .	Mahkûm , özel olarak hazırlanmış tahta bir sandalyeye oturtulduktan sonra baş bölgesine elektrotlar bağlanır .	Yaygın kanının aksine , elektrik akımı hiçbir şekilde sandalyeden gelmemektedir .	Sandalye sadece mahkûmun oturması içindir .	Bu idam yöntemi ilk olarak 1880'li yıllarda Thomas Edison ile George Westinghouse arasındaki doğru akım , alternatif akım tartışması yüzünden ortaya atılmıştır .
+Event	T0	öldürme	EVENT	113
+Event	T1	bağlanır	EVENT	264
+Event	T3	idam	EVENT	404
+Event	T4	tartışması	EVENT	523
+Event	T5	verilerek	EVENT	103
+Event	T6	oturtulduktan	EVENT	218
+Relation	T5	T0	CauseEffect	true	verilerek	öldürme
+Relation	T0	T5	EffectCause	true	öldürme	verilerek
+Relation	T0	T1	NoRel	true	öldürme	bağlanır
+Relation	T0	T3	NoRel	true	öldürme	idam
+Relation	T1	T3	NoRel	true	bağlanır	idam
+Relation	T1	T4	NoRel	true	bağlanır	tartışması
+Relation	T3	T1	NoRel	true	idam	bağlanır
+Relation	T3	T4	NoRel	true	idam	tartışması
+Relation	T3	T5	NoRel	true	idam	verilerek
+Relation	T4	T0	NoRel	true	tartışması	öldürme
+Relation	T4	T5	NoRel	true	tartışması	verilerek
+Relation	T4	T6	NoRel	true	tartışması	oturtulduktan
+Relation	T6	T0	NoRel	true	oturtulduktan	öldürme

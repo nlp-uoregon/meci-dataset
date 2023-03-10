@@ -1,0 +1,94 @@
+Text	Al salir a batear después de su pérdida , recibió una ovación de pie .	[ Memorial de Tangiwai que muestra una réplica de la placa con el número de la locomotora del tren , KA 949 ] Después de que el tren se estrelló , un transeúnte informó al guardia del tren William Inglis sobre lo que había pasado .	Los dos entraron en el sexto vagón , que entonces estaba en precario equilibrio sobre el borde del puente , en un intento de salvar a los pasajeros .	El vagón luego cayó .	De los 24 ocupantes , sólo falleció una niña que fue atrapada en su asiento y se ahogó .
+Event	T0	salir	EVENT	3
+Event	T1	batear	EVENT	11
+Event	T2	pérdida	EVENT	32
+Event	T3	recibió	EVENT	42
+Event	T4	ovación	EVENT	54
+Event	T5	muestra	EVENT	98
+Event	T6	estrelló	EVENT	207
+Event	T7	informó	EVENT	232
+Event	T8	pasado	EVENT	294
+Event	T9	entraron	EVENT	311
+Event	T10	equilibrio	EVENT	372
+Event	T11	intento	EVENT	417
+Event	T12	salvar	EVENT	428
+Event	T13	cayó	EVENT	468
+Event	T14	falleció	EVENT	502
+Event	T15	atrapada	EVENT	528
+Event	T16	ahogó	EVENT	556
+Relation	T15	T16	CauseEffect	true	atrapada	ahogó
+Relation	T16	T15	EffectCause	true	ahogó	atrapada
+Relation	T0	T11	NoRel	true	salir	intento
+Relation	T0	T5	NoRel	true	salir	muestra
+Relation	T0	T6	NoRel	true	salir	estrelló
+Relation	T0	T7	NoRel	true	salir	informó
+Relation	T0	T8	NoRel	true	salir	pasado
+Relation	T1	T11	NoRel	true	batear	intento
+Relation	T1	T16	NoRel	true	batear	ahogó
+Relation	T10	T1	NoRel	true	equilibrio	batear
+Relation	T10	T11	NoRel	true	equilibrio	intento
+Relation	T10	T14	NoRel	true	equilibrio	falleció
+Relation	T10	T3	NoRel	true	equilibrio	recibió
+Relation	T10	T9	NoRel	true	equilibrio	entraron
+Relation	T11	T1	NoRel	true	intento	batear
+Relation	T11	T10	NoRel	true	intento	equilibrio
+Relation	T11	T13	NoRel	true	intento	cayó
+Relation	T11	T14	NoRel	true	intento	falleció
+Relation	T11	T2	NoRel	true	intento	pérdida
+Relation	T11	T4	NoRel	true	intento	ovación
+Relation	T11	T5	NoRel	true	intento	muestra
+Relation	T12	T10	NoRel	true	salvar	equilibrio
+Relation	T12	T11	NoRel	true	salvar	intento
+Relation	T12	T9	NoRel	true	salvar	entraron
+Relation	T13	T0	NoRel	true	cayó	salir
+Relation	T13	T4	NoRel	true	cayó	ovación
+Relation	T13	T5	NoRel	true	cayó	muestra
+Relation	T14	T1	NoRel	true	falleció	batear
+Relation	T14	T13	NoRel	true	falleció	cayó
+Relation	T14	T2	NoRel	true	falleció	pérdida
+Relation	T14	T3	NoRel	true	falleció	recibió
+Relation	T14	T9	NoRel	true	falleció	entraron
+Relation	T15	T3	NoRel	true	atrapada	recibió
+Relation	T15	T7	NoRel	true	atrapada	informó
+Relation	T16	T5	NoRel	true	ahogó	muestra
+Relation	T16	T7	NoRel	true	ahogó	informó
+Relation	T16	T9	NoRel	true	ahogó	entraron
+Relation	T2	T14	NoRel	true	pérdida	falleció
+Relation	T2	T15	NoRel	true	pérdida	atrapada
+Relation	T2	T3	NoRel	true	pérdida	recibió
+Relation	T3	T0	NoRel	true	recibió	salir
+Relation	T3	T5	NoRel	true	recibió	muestra
+Relation	T3	T6	NoRel	true	recibió	estrelló
+Relation	T4	T0	NoRel	true	ovación	salir
+Relation	T4	T3	NoRel	true	ovación	recibió
+Relation	T4	T5	NoRel	true	ovación	muestra
+Relation	T4	T6	NoRel	true	ovación	estrelló
+Relation	T4	T7	NoRel	true	ovación	informó
+Relation	T5	T0	NoRel	true	muestra	salir
+Relation	T5	T1	NoRel	true	muestra	batear
+Relation	T5	T12	NoRel	true	muestra	salvar
+Relation	T5	T13	NoRel	true	muestra	cayó
+Relation	T5	T14	NoRel	true	muestra	falleció
+Relation	T5	T16	NoRel	true	muestra	ahogó
+Relation	T5	T2	NoRel	true	muestra	pérdida
+Relation	T6	T10	NoRel	true	estrelló	equilibrio
+Relation	T6	T13	NoRel	true	estrelló	cayó
+Relation	T6	T14	NoRel	true	estrelló	falleció
+Relation	T6	T15	NoRel	true	estrelló	atrapada
+Relation	T6	T4	NoRel	true	estrelló	ovación
+Relation	T6	T5	NoRel	true	estrelló	muestra
+Relation	T6	T7	NoRel	true	estrelló	informó
+Relation	T7	T11	NoRel	true	informó	intento
+Relation	T7	T13	NoRel	true	informó	cayó
+Relation	T7	T15	NoRel	true	informó	atrapada
+Relation	T7	T2	NoRel	true	informó	pérdida
+Relation	T8	T1	NoRel	true	pasado	batear
+Relation	T8	T11	NoRel	true	pasado	intento
+Relation	T8	T2	NoRel	true	pasado	pérdida
+Relation	T8	T6	NoRel	true	pasado	estrelló
+Relation	T8	T7	NoRel	true	pasado	informó
+Relation	T9	T12	NoRel	true	entraron	salvar
+Relation	T9	T13	NoRel	true	entraron	cayó
+Relation	T9	T14	NoRel	true	entraron	falleció
+Relation	T9	T7	NoRel	true	entraron	informó
+Relation	T9	T8	NoRel	true	entraron	pasado

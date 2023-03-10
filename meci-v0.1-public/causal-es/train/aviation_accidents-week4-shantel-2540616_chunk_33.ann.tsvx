@@ -1,0 +1,82 @@
+Text	Un juez del Tribunal Superior de París , se encargó de la investigación penal por homicidio iniciada el 5 de junio de 2009 .	El juez trabajó con la asistencia de la Gendarmería Nacional ( gendarmería de transporte aéreo ) 10 ;	- La otra fue una investigación técnica , para la prevención de accidentes en el futuro .	Como el accidente se produjo en aguas internacionales , la investigación técnica estuvo a cargo de las autoridades de aviación del país de matrícula de la aeronave , es decir , la Oficina de Investigación y Análisis ( BEA ) , de Francia .	El 12 de marzo de 2010 , un tribunal en Río de Janeiro fue el primero en condenar a Air France a pagar una indemnización .
+Event	T0	encargó	EVENT	44
+Event	T1	iniciada	EVENT	92
+Event	T2	trabajó	EVENT	133
+Event	T3	asistencia	EVENT	148
+Event	T4	investigación	EVENT	245
+Event	T5	accidentes	EVENT	291
+Event	T6	accidente	EVENT	325
+Event	T7	produjo	EVENT	338
+Event	T8	investigación	EVENT	376
+Event	T9	estuvo	EVENT	398
+Event	T10	condenar	EVENT	629
+Event	T11	pagar	EVENT	653
+Event	T12	indemnización	EVENT	663
+Event	T13	investigación	EVENT	58
+Relation	T6	T8	CauseEffect	true	accidente	investigación
+Relation	T8	T6	EffectCause	true	investigación	accidente
+Relation	T6	T10	CauseEffect	true	accidente	condenar
+Relation	T10	T6	EffectCause	true	condenar	accidente
+Relation	T0	T11	NoRel	true	encargó	pagar
+Relation	T0	T13	NoRel	true	encargó	investigación
+Relation	T0	T3	NoRel	true	encargó	asistencia
+Relation	T0	T8	NoRel	true	encargó	investigación
+Relation	T1	T0	NoRel	true	iniciada	encargó
+Relation	T1	T10	NoRel	true	iniciada	condenar
+Relation	T1	T11	NoRel	true	iniciada	pagar
+Relation	T1	T12	NoRel	true	iniciada	indemnización
+Relation	T1	T4	NoRel	true	iniciada	investigación
+Relation	T1	T5	NoRel	true	iniciada	accidentes
+Relation	T1	T8	NoRel	true	iniciada	investigación
+Relation	T10	T0	NoRel	true	condenar	encargó
+Relation	T10	T7	NoRel	true	condenar	produjo
+Relation	T10	T9	NoRel	true	condenar	estuvo
+Relation	T11	T10	NoRel	true	pagar	condenar
+Relation	T11	T12	NoRel	true	pagar	indemnización
+Relation	T11	T2	NoRel	true	pagar	trabajó
+Relation	T12	T4	NoRel	true	indemnización	investigación
+Relation	T12	T6	NoRel	true	indemnización	accidente
+Relation	T12	T7	NoRel	true	indemnización	produjo
+Relation	T12	T8	NoRel	true	indemnización	investigación
+Relation	T13	T3	NoRel	true	investigación	asistencia
+Relation	T13	T4	NoRel	true	investigación	investigación
+Relation	T13	T8	NoRel	true	investigación	investigación
+Relation	T2	T3	NoRel	true	trabajó	asistencia
+Relation	T2	T5	NoRel	true	trabajó	accidentes
+Relation	T2	T9	NoRel	true	trabajó	estuvo
+Relation	T3	T0	NoRel	true	asistencia	encargó
+Relation	T3	T1	NoRel	true	asistencia	iniciada
+Relation	T3	T10	NoRel	true	asistencia	condenar
+Relation	T3	T12	NoRel	true	asistencia	indemnización
+Relation	T3	T13	NoRel	true	asistencia	investigación
+Relation	T3	T5	NoRel	true	asistencia	accidentes
+Relation	T4	T1	NoRel	true	investigación	iniciada
+Relation	T4	T2	NoRel	true	investigación	trabajó
+Relation	T4	T3	NoRel	true	investigación	asistencia
+Relation	T4	T6	NoRel	true	investigación	accidente
+Relation	T4	T7	NoRel	true	investigación	produjo
+Relation	T4	T9	NoRel	true	investigación	estuvo
+Relation	T5	T11	NoRel	true	accidentes	pagar
+Relation	T5	T13	NoRel	true	accidentes	investigación
+Relation	T5	T8	NoRel	true	accidentes	investigación
+Relation	T6	T1	NoRel	true	accidente	iniciada
+Relation	T6	T11	NoRel	true	accidente	pagar
+Relation	T6	T3	NoRel	true	accidente	asistencia
+Relation	T6	T4	NoRel	true	accidente	investigación
+Relation	T6	T9	NoRel	true	accidente	estuvo
+Relation	T7	T1	NoRel	true	produjo	iniciada
+Relation	T7	T11	NoRel	true	produjo	pagar
+Relation	T7	T12	NoRel	true	produjo	indemnización
+Relation	T7	T2	NoRel	true	produjo	trabajó
+Relation	T7	T8	NoRel	true	produjo	investigación
+Relation	T7	T9	NoRel	true	produjo	estuvo
+Relation	T8	T0	NoRel	true	investigación	encargó
+Relation	T8	T11	NoRel	true	investigación	pagar
+Relation	T8	T13	NoRel	true	investigación	investigación
+Relation	T8	T2	NoRel	true	investigación	trabajó
+Relation	T8	T3	NoRel	true	investigación	asistencia
+Relation	T8	T5	NoRel	true	investigación	accidentes
+Relation	T8	T9	NoRel	true	investigación	estuvo
+Relation	T9	T10	NoRel	true	estuvo	condenar
+Relation	T9	T12	NoRel	true	estuvo	indemnización
+Relation	T9	T8	NoRel	true	estuvo	investigación

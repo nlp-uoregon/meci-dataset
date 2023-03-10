@@ -1,0 +1,73 @@
+Text	Sin embargo , no solo será la joven abogada la enemiga de Rocío , sino que también será Eliana .	A pesar de lo cercanas que se volvieron ( ya que la mujer ha fingido ser una gran cuñada y amiga para Rocío ) , Eliana en el fondo planea vengarse de ella y hundirla en la más profunda miseria , ya que considera a Rocío como una de las mayores enemigas de Leonardo y una de las responsables de su muerte .	El principal plan es ejecutado por ella : persuade a la abogada para que acepte la decisión de Rafael de someterse a una eutanasia para cuando su enfermedad empeore .	Al final , el proceso se lleva a cabo y Rocío viaja junto a Rafael a Holanda , con el pretexto de un viaje común , pero en realidad iban a un centro médico del país europeo en donde le aplicarían la eutanasia a Rafael ; esto solo lo sabían él , Rocío y Eliana .	Una vez muerto Rafael tras la eutanasia , Eliana culpa a Rocío de la muerte de su marido para que así nadie confíe en ella y esté lo más vulnerable posible para que sea más fácil destruirla .
+Event	T1	fingido	EVENT	158
+Event	T10	decisión	EVENT	486
+Event	T13	proceso	EVENT	584
+Event	T14	viaja	EVENT	616
+Event	T15	viaje	EVENT	671
+Event	T18	muerto	EVENT	840
+Event	T19	eutanasia	EVENT	862
+Event	T20	culpa	EVENT	881
+Event	T21	muerte	EVENT	901
+Event	T5	considera	EVENT	299
+Event	T6	muerte	EVENT	394
+Event	T7	ejecutado	EVENT	424
+Event	T8	persuade	EVENT	445
+Event	T9	acepte	EVENT	476
+Relation	T19	T18	CauseEffect	true	eutanasia	muerto
+Relation	T18	T19	EffectCause	true	muerto	eutanasia
+Relation	T1	T14	NoRel	true	fingido	viaja
+Relation	T1	T18	NoRel	true	fingido	muerto
+Relation	T1	T6	NoRel	true	fingido	muerte
+Relation	T1	T7	NoRel	true	fingido	ejecutado
+Relation	T1	T9	NoRel	true	fingido	acepte
+Relation	T10	T19	NoRel	true	decisión	eutanasia
+Relation	T10	T5	NoRel	true	decisión	considera
+Relation	T13	T19	NoRel	true	proceso	eutanasia
+Relation	T13	T21	NoRel	true	proceso	muerte
+Relation	T13	T6	NoRel	true	proceso	muerte
+Relation	T13	T8	NoRel	true	proceso	persuade
+Relation	T14	T10	NoRel	true	viaja	decisión
+Relation	T14	T13	NoRel	true	viaja	proceso
+Relation	T14	T20	NoRel	true	viaja	culpa
+Relation	T14	T7	NoRel	true	viaja	ejecutado
+Relation	T14	T8	NoRel	true	viaja	persuade
+Relation	T15	T1	NoRel	true	viaje	fingido
+Relation	T15	T14	NoRel	true	viaje	viaja
+Relation	T15	T19	NoRel	true	viaje	eutanasia
+Relation	T15	T20	NoRel	true	viaje	culpa
+Relation	T15	T6	NoRel	true	viaje	muerte
+Relation	T18	T10	NoRel	true	muerto	decisión
+Relation	T18	T13	NoRel	true	muerto	proceso
+Relation	T18	T14	NoRel	true	muerto	viaja
+Relation	T18	T15	NoRel	true	muerto	viaje
+Relation	T18	T5	NoRel	true	muerto	considera
+Relation	T19	T10	NoRel	true	eutanasia	decisión
+Relation	T19	T13	NoRel	true	eutanasia	proceso
+Relation	T19	T15	NoRel	true	eutanasia	viaje
+Relation	T19	T5	NoRel	true	eutanasia	considera
+Relation	T19	T6	NoRel	true	eutanasia	muerte
+Relation	T19	T7	NoRel	true	eutanasia	ejecutado
+Relation	T19	T9	NoRel	true	eutanasia	acepte
+Relation	T20	T1	NoRel	true	culpa	fingido
+Relation	T20	T13	NoRel	true	culpa	proceso
+Relation	T20	T15	NoRel	true	culpa	viaje
+Relation	T20	T19	NoRel	true	culpa	eutanasia
+Relation	T21	T10	NoRel	true	muerte	decisión
+Relation	T21	T19	NoRel	true	muerte	eutanasia
+Relation	T21	T20	NoRel	true	muerte	culpa
+Relation	T21	T5	NoRel	true	muerte	considera
+Relation	T21	T7	NoRel	true	muerte	ejecutado
+Relation	T21	T9	NoRel	true	muerte	acepte
+Relation	T5	T1	NoRel	true	considera	fingido
+Relation	T5	T10	NoRel	true	considera	decisión
+Relation	T5	T6	NoRel	true	considera	muerte
+Relation	T6	T14	NoRel	true	muerte	viaja
+Relation	T6	T5	NoRel	true	muerte	considera
+Relation	T6	T9	NoRel	true	muerte	acepte
+Relation	T7	T15	NoRel	true	ejecutado	viaje
+Relation	T7	T20	NoRel	true	ejecutado	culpa
+Relation	T7	T6	NoRel	true	ejecutado	muerte
+Relation	T7	T8	NoRel	true	ejecutado	persuade
+Relation	T7	T9	NoRel	true	ejecutado	acepte
+Relation	T8	T18	NoRel	true	persuade	muerto
+Relation	T9	T7	NoRel	true	acepte	ejecutado

@@ -1,0 +1,38 @@
+Text	Manteniendo las luces indicadoras a su izquierda , los pilotos aterrizaron en la pista de rodaje Z de 23 metros de ancho a las 18:31 EDT .	El Boeing 757 , con una envergadura de 47 metros , tocó suelo a 240 Km/h cerca de la intersección de las pistas de rodaje Z y R , desaceleró y se detuvo sin incidentes .	El avión entonces carreteó a la puerta donde todos los pasajeros descendieron .	Según la FAA , todos los sistemas de iluminación asociados con la pista 29 y la calle de rodaje Z estaban funcionando normalmente en ese momento .	La pista 29 , la pista de aterrizaje prevista , tiene 46 metros de ancho y 2.100 metros de largo .
+Event	T0	aterrizaron	EVENT	63
+Event	T1	rodaje	EVENT	90
+Event	T2	intersección	EVENT	224
+Event	T3	desaceleró	EVENT	269
+Event	T4	detuvo	EVENT	285
+Event	T5	incidentes	EVENT	296
+Event	T6	carreteó	EVENT	327
+Event	T7	descendieron	EVENT	374
+Event	T8	funcionando	EVENT	495
+Relation	T3	T4	CauseEffect	true	desaceleró	detuvo
+Relation	T4	T3	EffectCause	true	detuvo	desaceleró
+Relation	T0	T1	NoRel	true	aterrizaron	rodaje
+Relation	T0	T3	NoRel	true	aterrizaron	desaceleró
+Relation	T0	T4	NoRel	true	aterrizaron	detuvo
+Relation	T1	T4	NoRel	true	rodaje	detuvo
+Relation	T1	T8	NoRel	true	rodaje	funcionando
+Relation	T2	T4	NoRel	true	intersección	detuvo
+Relation	T2	T5	NoRel	true	intersección	incidentes
+Relation	T2	T8	NoRel	true	intersección	funcionando
+Relation	T3	T2	NoRel	true	desaceleró	intersección
+Relation	T3	T5	NoRel	true	desaceleró	incidentes
+Relation	T3	T6	NoRel	true	desaceleró	carreteó
+Relation	T3	T8	NoRel	true	desaceleró	funcionando
+Relation	T4	T2	NoRel	true	detuvo	intersección
+Relation	T4	T7	NoRel	true	detuvo	descendieron
+Relation	T5	T3	NoRel	true	incidentes	desaceleró
+Relation	T6	T0	NoRel	true	carreteó	aterrizaron
+Relation	T6	T1	NoRel	true	carreteó	rodaje
+Relation	T6	T4	NoRel	true	carreteó	detuvo
+Relation	T6	T8	NoRel	true	carreteó	funcionando
+Relation	T7	T4	NoRel	true	descendieron	detuvo
+Relation	T7	T8	NoRel	true	descendieron	funcionando
+Relation	T8	T1	NoRel	true	funcionando	rodaje
+Relation	T8	T4	NoRel	true	funcionando	detuvo
+Relation	T8	T5	NoRel	true	funcionando	incidentes
+Relation	T8	T6	NoRel	true	funcionando	carreteó
+Relation	T8	T7	NoRel	true	funcionando	descendieron

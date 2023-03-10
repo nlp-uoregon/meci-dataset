@@ -1,0 +1,175 @@
+Text	Este accede a pagar sus deudas pero , irritado , le envía a Parma a reprimir una insurrección provocada por el nuevo sistema de servicio militar impuesto en la zona .	A las órdenes del gobernador Huges Nardon soluciona eficazmente el problema , por lo que Napoleón vuelve a darle otra oportunidad y le restituye en el cargo de comandante de París .	Pero Junot volverá a las andadas : su ritmo de vida le suponía unos gastos que no podía asumir y se ve envuelto , además , en numerosas peleas y conflictos , haciendo gala de un carácter cada vez más desequilibrado .	Por si fuese poco , mientras Napoleón y el Gran Ejército luchaban en Polonia , Junot hace la corte a Carolina Bonaparte , hermana del emperador y esposa del mariscal Murat , convirtiéndose en su amante .	Al regreso del Ejército a Francia , un indignado Murat reta a Junot a un duelo , pero este nunca llegará a celebrarse por prohibición expresa de Napoleón .
+Event	T0	accede	EVENT	5
+Event	T1	pagar	EVENT	14
+Event	T2	deudas	EVENT	24
+Event	T3	irritado	EVENT	38
+Event	T4	envía	EVENT	52
+Event	T5	reprimir	EVENT	68
+Event	T6	provocada	EVENT	94
+Event	T7	impuesto	EVENT	145
+Event	T8	soluciona	EVENT	209
+Event	T9	vuelve	EVENT	265
+Event	T10	restituye	EVENT	302
+Event	T11	volverá	EVENT	360
+Event	T12	gastos	EVENT	417
+Event	T13	envuelto	EVENT	452
+Event	T14	peleas	EVENT	485
+Event	T15	conflictos	EVENT	494
+Event	T16	luchaban	EVENT	623
+Event	T17	hace	EVENT	651
+Event	T18	corte	EVENT	659
+Event	T19	convirtiéndose	EVENT	740
+Event	T20	reta	EVENT	825
+Event	T23	prohibición	EVENT	892
+Relation	T8	T9	CauseEffect	true	soluciona	vuelve
+Relation	T9	T8	EffectCause	true	vuelve	soluciona
+Relation	T8	T10	CauseEffect	true	soluciona	restituye
+Relation	T10	T8	EffectCause	true	restituye	soluciona
+Relation	T12	T13	CauseEffect	true	gastos	envuelto
+Relation	T13	T12	EffectCause	true	envuelto	gastos
+Relation	T19	T20	CauseEffect	true	convirtiéndose	reta
+Relation	T20	T19	EffectCause	true	reta	convirtiéndose
+Relation	T0	T17	NoRel	true	accede	hace
+Relation	T0	T2	NoRel	true	accede	deudas
+Relation	T0	T23	NoRel	true	accede	prohibición
+Relation	T0	T6	NoRel	true	accede	provocada
+Relation	T0	T9	NoRel	true	accede	vuelve
+Relation	T1	T12	NoRel	true	pagar	gastos
+Relation	T1	T15	NoRel	true	pagar	conflictos
+Relation	T1	T17	NoRel	true	pagar	hace
+Relation	T1	T18	NoRel	true	pagar	corte
+Relation	T1	T19	NoRel	true	pagar	convirtiéndose
+Relation	T1	T23	NoRel	true	pagar	prohibición
+Relation	T1	T6	NoRel	true	pagar	provocada
+Relation	T10	T13	NoRel	true	restituye	envuelto
+Relation	T10	T15	NoRel	true	restituye	conflictos
+Relation	T10	T16	NoRel	true	restituye	luchaban
+Relation	T10	T17	NoRel	true	restituye	hace
+Relation	T10	T3	NoRel	true	restituye	irritado
+Relation	T10	T6	NoRel	true	restituye	provocada
+Relation	T10	T9	NoRel	true	restituye	vuelve
+Relation	T11	T0	NoRel	true	volverá	accede
+Relation	T11	T10	NoRel	true	volverá	restituye
+Relation	T11	T13	NoRel	true	volverá	envuelto
+Relation	T11	T15	NoRel	true	volverá	conflictos
+Relation	T11	T19	NoRel	true	volverá	convirtiéndose
+Relation	T11	T5	NoRel	true	volverá	reprimir
+Relation	T11	T9	NoRel	true	volverá	vuelve
+Relation	T12	T0	NoRel	true	gastos	accede
+Relation	T12	T1	NoRel	true	gastos	pagar
+Relation	T12	T10	NoRel	true	gastos	restituye
+Relation	T12	T11	NoRel	true	gastos	volverá
+Relation	T12	T17	NoRel	true	gastos	hace
+Relation	T12	T9	NoRel	true	gastos	vuelve
+Relation	T13	T10	NoRel	true	envuelto	restituye
+Relation	T13	T16	NoRel	true	envuelto	luchaban
+Relation	T13	T17	NoRel	true	envuelto	hace
+Relation	T13	T2	NoRel	true	envuelto	deudas
+Relation	T13	T3	NoRel	true	envuelto	irritado
+Relation	T13	T6	NoRel	true	envuelto	provocada
+Relation	T13	T7	NoRel	true	envuelto	impuesto
+Relation	T14	T12	NoRel	true	peleas	gastos
+Relation	T14	T13	NoRel	true	peleas	envuelto
+Relation	T14	T16	NoRel	true	peleas	luchaban
+Relation	T14	T18	NoRel	true	peleas	corte
+Relation	T14	T19	NoRel	true	peleas	convirtiéndose
+Relation	T14	T3	NoRel	true	peleas	irritado
+Relation	T14	T5	NoRel	true	peleas	reprimir
+Relation	T14	T7	NoRel	true	peleas	impuesto
+Relation	T15	T1	NoRel	true	conflictos	pagar
+Relation	T15	T17	NoRel	true	conflictos	hace
+Relation	T15	T18	NoRel	true	conflictos	corte
+Relation	T15	T19	NoRel	true	conflictos	convirtiéndose
+Relation	T15	T20	NoRel	true	conflictos	reta
+Relation	T16	T0	NoRel	true	luchaban	accede
+Relation	T16	T13	NoRel	true	luchaban	envuelto
+Relation	T16	T15	NoRel	true	luchaban	conflictos
+Relation	T16	T17	NoRel	true	luchaban	hace
+Relation	T16	T2	NoRel	true	luchaban	deudas
+Relation	T16	T20	NoRel	true	luchaban	reta
+Relation	T16	T23	NoRel	true	luchaban	prohibición
+Relation	T16	T6	NoRel	true	luchaban	provocada
+Relation	T16	T9	NoRel	true	luchaban	vuelve
+Relation	T17	T10	NoRel	true	hace	restituye
+Relation	T17	T11	NoRel	true	hace	volverá
+Relation	T17	T14	NoRel	true	hace	peleas
+Relation	T17	T15	NoRel	true	hace	conflictos
+Relation	T17	T23	NoRel	true	hace	prohibición
+Relation	T17	T4	NoRel	true	hace	envía
+Relation	T17	T5	NoRel	true	hace	reprimir
+Relation	T17	T6	NoRel	true	hace	provocada
+Relation	T18	T10	NoRel	true	corte	restituye
+Relation	T18	T14	NoRel	true	corte	peleas
+Relation	T18	T2	NoRel	true	corte	deudas
+Relation	T18	T20	NoRel	true	corte	reta
+Relation	T18	T5	NoRel	true	corte	reprimir
+Relation	T19	T23	NoRel	true	convirtiéndose	prohibición
+Relation	T2	T10	NoRel	true	deudas	restituye
+Relation	T2	T11	NoRel	true	deudas	volverá
+Relation	T2	T15	NoRel	true	deudas	conflictos
+Relation	T2	T18	NoRel	true	deudas	corte
+Relation	T2	T5	NoRel	true	deudas	reprimir
+Relation	T2	T6	NoRel	true	deudas	provocada
+Relation	T2	T8	NoRel	true	deudas	soluciona
+Relation	T20	T1	NoRel	true	reta	pagar
+Relation	T20	T15	NoRel	true	reta	conflictos
+Relation	T20	T5	NoRel	true	reta	reprimir
+Relation	T20	T6	NoRel	true	reta	provocada
+Relation	T23	T1	NoRel	true	prohibición	pagar
+Relation	T23	T10	NoRel	true	prohibición	restituye
+Relation	T23	T13	NoRel	true	prohibición	envuelto
+Relation	T23	T15	NoRel	true	prohibición	conflictos
+Relation	T23	T2	NoRel	true	prohibición	deudas
+Relation	T23	T4	NoRel	true	prohibición	envía
+Relation	T3	T0	NoRel	true	irritado	accede
+Relation	T3	T10	NoRel	true	irritado	restituye
+Relation	T3	T12	NoRel	true	irritado	gastos
+Relation	T3	T15	NoRel	true	irritado	conflictos
+Relation	T3	T17	NoRel	true	irritado	hace
+Relation	T3	T19	NoRel	true	irritado	convirtiéndose
+Relation	T3	T2	NoRel	true	irritado	deudas
+Relation	T3	T9	NoRel	true	irritado	vuelve
+Relation	T4	T0	NoRel	true	envía	accede
+Relation	T4	T14	NoRel	true	envía	peleas
+Relation	T4	T15	NoRel	true	envía	conflictos
+Relation	T4	T16	NoRel	true	envía	luchaban
+Relation	T4	T18	NoRel	true	envía	corte
+Relation	T4	T23	NoRel	true	envía	prohibición
+Relation	T4	T3	NoRel	true	envía	irritado
+Relation	T5	T0	NoRel	true	reprimir	accede
+Relation	T5	T13	NoRel	true	reprimir	envuelto
+Relation	T5	T17	NoRel	true	reprimir	hace
+Relation	T5	T4	NoRel	true	reprimir	envía
+Relation	T5	T9	NoRel	true	reprimir	vuelve
+Relation	T6	T11	NoRel	true	provocada	volverá
+Relation	T6	T12	NoRel	true	provocada	gastos
+Relation	T6	T14	NoRel	true	provocada	peleas
+Relation	T6	T15	NoRel	true	provocada	conflictos
+Relation	T6	T20	NoRel	true	provocada	reta
+Relation	T6	T23	NoRel	true	provocada	prohibición
+Relation	T6	T5	NoRel	true	provocada	reprimir
+Relation	T6	T7	NoRel	true	provocada	impuesto
+Relation	T6	T9	NoRel	true	provocada	vuelve
+Relation	T7	T1	NoRel	true	impuesto	pagar
+Relation	T7	T10	NoRel	true	impuesto	restituye
+Relation	T7	T11	NoRel	true	impuesto	volverá
+Relation	T7	T13	NoRel	true	impuesto	envuelto
+Relation	T7	T15	NoRel	true	impuesto	conflictos
+Relation	T7	T2	NoRel	true	impuesto	deudas
+Relation	T7	T20	NoRel	true	impuesto	reta
+Relation	T7	T5	NoRel	true	impuesto	reprimir
+Relation	T8	T12	NoRel	true	soluciona	gastos
+Relation	T8	T15	NoRel	true	soluciona	conflictos
+Relation	T8	T2	NoRel	true	soluciona	deudas
+Relation	T8	T20	NoRel	true	soluciona	reta
+Relation	T8	T5	NoRel	true	soluciona	reprimir
+Relation	T9	T0	NoRel	true	vuelve	accede
+Relation	T9	T1	NoRel	true	vuelve	pagar
+Relation	T9	T13	NoRel	true	vuelve	envuelto
+Relation	T9	T15	NoRel	true	vuelve	conflictos
+Relation	T9	T17	NoRel	true	vuelve	hace
+Relation	T9	T18	NoRel	true	vuelve	corte
+Relation	T9	T23	NoRel	true	vuelve	prohibición
+Relation	T9	T3	NoRel	true	vuelve	irritado
+Relation	T9	T4	NoRel	true	vuelve	envía
+Relation	T9	T6	NoRel	true	vuelve	provocada

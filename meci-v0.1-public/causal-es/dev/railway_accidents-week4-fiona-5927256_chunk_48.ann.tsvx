@@ -1,0 +1,139 @@
+Text	Apenas existe información acerca del accidente .	Parece que se produjo a primera hora de la noche , que llovía fuertemente y que la estación donde se produjo el siniestro se había quedado sin electricidad .	Los dos trenes que colisionaron habrían sido un mercancías procedente de Sant Vicenç de Calders y uno de viajeros que desde Barcelona se dirigía a Vilafranca del Penedès , el primero de los cuales iría ocupado por gran cantidad de personas , principalmente soldados y gente que huía del avance del ejército franquista .	No se conoce con exactitud las causas que provocaron el siniestro ; algunas fuentes se refieren a la falta de visibilidad debido a intensa lluvia ; otras a un fallo de las señales .	Tampoco se conoce el número exacto de víctimas resultantes del accidente , ofreciendo los medios de prensa anteriormente citados cifras de fallecidos que varían entre 30 y 65 , mientras que las de heridos oscilan entre 30 y 200
+Event	T0	accidente	EVENT	37
+Event	T1	produjo	EVENT	63
+Event	T2	llovía	EVENT	104
+Event	T3	produjo	EVENT	150
+Event	T4	siniestro	EVENT	161
+Event	T5	colisionaron	EVENT	226
+Event	T6	dirigía	EVENT	344
+Event	T7	ocupado	EVENT	409
+Event	T8	huía	EVENT	485
+Event	T9	avance	EVENT	494
+Event	T10	provocaron	EVENT	569
+Event	T11	siniestro	EVENT	583
+Event	T12	refieren	EVENT	614
+Event	T13	lluvia	EVENT	666
+Event	T14	fallo	EVENT	686
+Event	T15	accidente	EVENT	772
+Event	T16	ofreciendo	EVENT	784
+Event	T17	cifras	EVENT	838
+Event	T18	fallecidos	EVENT	848
+Relation	T5	T4	CauseEffect	true	colisionaron	siniestro
+Relation	T4	T5	EffectCause	true	siniestro	colisionaron
+Relation	T0	T10	NoRel	true	accidente	provocaron
+Relation	T0	T13	NoRel	true	accidente	lluvia
+Relation	T0	T14	NoRel	true	accidente	fallo
+Relation	T0	T17	NoRel	true	accidente	cifras
+Relation	T0	T3	NoRel	true	accidente	produjo
+Relation	T0	T4	NoRel	true	accidente	siniestro
+Relation	T0	T7	NoRel	true	accidente	ocupado
+Relation	T0	T8	NoRel	true	accidente	huía
+Relation	T1	T11	NoRel	true	produjo	siniestro
+Relation	T1	T18	NoRel	true	produjo	fallecidos
+Relation	T1	T3	NoRel	true	produjo	produjo
+Relation	T1	T9	NoRel	true	produjo	avance
+Relation	T10	T1	NoRel	true	provocaron	produjo
+Relation	T10	T11	NoRel	true	provocaron	siniestro
+Relation	T10	T13	NoRel	true	provocaron	lluvia
+Relation	T10	T14	NoRel	true	provocaron	fallo
+Relation	T10	T18	NoRel	true	provocaron	fallecidos
+Relation	T11	T10	NoRel	true	siniestro	provocaron
+Relation	T11	T12	NoRel	true	siniestro	refieren
+Relation	T11	T13	NoRel	true	siniestro	lluvia
+Relation	T11	T3	NoRel	true	siniestro	produjo
+Relation	T11	T4	NoRel	true	siniestro	siniestro
+Relation	T12	T16	NoRel	true	refieren	ofreciendo
+Relation	T12	T17	NoRel	true	refieren	cifras
+Relation	T12	T18	NoRel	true	refieren	fallecidos
+Relation	T12	T2	NoRel	true	refieren	llovía
+Relation	T12	T4	NoRel	true	refieren	siniestro
+Relation	T12	T5	NoRel	true	refieren	colisionaron
+Relation	T12	T8	NoRel	true	refieren	huía
+Relation	T12	T9	NoRel	true	refieren	avance
+Relation	T13	T10	NoRel	true	lluvia	provocaron
+Relation	T13	T12	NoRel	true	lluvia	refieren
+Relation	T13	T18	NoRel	true	lluvia	fallecidos
+Relation	T13	T4	NoRel	true	lluvia	siniestro
+Relation	T14	T13	NoRel	true	fallo	lluvia
+Relation	T14	T16	NoRel	true	fallo	ofreciendo
+Relation	T14	T17	NoRel	true	fallo	cifras
+Relation	T14	T2	NoRel	true	fallo	llovía
+Relation	T14	T8	NoRel	true	fallo	huía
+Relation	T15	T13	NoRel	true	accidente	lluvia
+Relation	T15	T14	NoRel	true	accidente	fallo
+Relation	T15	T5	NoRel	true	accidente	colisionaron
+Relation	T15	T6	NoRel	true	accidente	dirigía
+Relation	T15	T7	NoRel	true	accidente	ocupado
+Relation	T15	T8	NoRel	true	accidente	huía
+Relation	T15	T9	NoRel	true	accidente	avance
+Relation	T16	T11	NoRel	true	ofreciendo	siniestro
+Relation	T16	T7	NoRel	true	ofreciendo	ocupado
+Relation	T17	T10	NoRel	true	cifras	provocaron
+Relation	T17	T14	NoRel	true	cifras	fallo
+Relation	T17	T18	NoRel	true	cifras	fallecidos
+Relation	T17	T4	NoRel	true	cifras	siniestro
+Relation	T17	T5	NoRel	true	cifras	colisionaron
+Relation	T17	T9	NoRel	true	cifras	avance
+Relation	T18	T1	NoRel	true	fallecidos	produjo
+Relation	T18	T10	NoRel	true	fallecidos	provocaron
+Relation	T18	T14	NoRel	true	fallecidos	fallo
+Relation	T18	T17	NoRel	true	fallecidos	cifras
+Relation	T18	T2	NoRel	true	fallecidos	llovía
+Relation	T18	T5	NoRel	true	fallecidos	colisionaron
+Relation	T2	T0	NoRel	true	llovía	accidente
+Relation	T2	T1	NoRel	true	llovía	produjo
+Relation	T2	T11	NoRel	true	llovía	siniestro
+Relation	T2	T13	NoRel	true	llovía	lluvia
+Relation	T2	T14	NoRel	true	llovía	fallo
+Relation	T2	T15	NoRel	true	llovía	accidente
+Relation	T2	T18	NoRel	true	llovía	fallecidos
+Relation	T2	T4	NoRel	true	llovía	siniestro
+Relation	T2	T6	NoRel	true	llovía	dirigía
+Relation	T2	T9	NoRel	true	llovía	avance
+Relation	T3	T10	NoRel	true	produjo	provocaron
+Relation	T3	T11	NoRel	true	produjo	siniestro
+Relation	T3	T13	NoRel	true	produjo	lluvia
+Relation	T3	T18	NoRel	true	produjo	fallecidos
+Relation	T3	T2	NoRel	true	produjo	llovía
+Relation	T3	T4	NoRel	true	produjo	siniestro
+Relation	T3	T5	NoRel	true	produjo	colisionaron
+Relation	T3	T8	NoRel	true	produjo	huía
+Relation	T4	T1	NoRel	true	siniestro	produjo
+Relation	T4	T13	NoRel	true	siniestro	lluvia
+Relation	T4	T18	NoRel	true	siniestro	fallecidos
+Relation	T5	T1	NoRel	true	colisionaron	produjo
+Relation	T5	T12	NoRel	true	colisionaron	refieren
+Relation	T5	T13	NoRel	true	colisionaron	lluvia
+Relation	T5	T16	NoRel	true	colisionaron	ofreciendo
+Relation	T5	T17	NoRel	true	colisionaron	cifras
+Relation	T5	T3	NoRel	true	colisionaron	produjo
+Relation	T5	T7	NoRel	true	colisionaron	ocupado
+Relation	T5	T8	NoRel	true	colisionaron	huía
+Relation	T6	T0	NoRel	true	dirigía	accidente
+Relation	T6	T12	NoRel	true	dirigía	refieren
+Relation	T6	T14	NoRel	true	dirigía	fallo
+Relation	T6	T17	NoRel	true	dirigía	cifras
+Relation	T6	T18	NoRel	true	dirigía	fallecidos
+Relation	T6	T3	NoRel	true	dirigía	produjo
+Relation	T6	T8	NoRel	true	dirigía	huía
+Relation	T7	T1	NoRel	true	ocupado	produjo
+Relation	T7	T15	NoRel	true	ocupado	accidente
+Relation	T7	T16	NoRel	true	ocupado	ofreciendo
+Relation	T7	T17	NoRel	true	ocupado	cifras
+Relation	T7	T3	NoRel	true	ocupado	produjo
+Relation	T7	T5	NoRel	true	ocupado	colisionaron
+Relation	T7	T6	NoRel	true	ocupado	dirigía
+Relation	T7	T8	NoRel	true	ocupado	huía
+Relation	T7	T9	NoRel	true	ocupado	avance
+Relation	T8	T10	NoRel	true	huía	provocaron
+Relation	T8	T11	NoRel	true	huía	siniestro
+Relation	T8	T14	NoRel	true	huía	fallo
+Relation	T8	T15	NoRel	true	huía	accidente
+Relation	T8	T18	NoRel	true	huía	fallecidos
+Relation	T8	T2	NoRel	true	huía	llovía
+Relation	T8	T4	NoRel	true	huía	siniestro
+Relation	T9	T16	NoRel	true	avance	ofreciendo
+Relation	T9	T17	NoRel	true	avance	cifras
+Relation	T9	T6	NoRel	true	avance	dirigía
+Relation	T9	T7	NoRel	true	avance	ocupado
+Relation	T9	T8	NoRel	true	avance	huía

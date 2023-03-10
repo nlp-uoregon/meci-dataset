@@ -1,0 +1,83 @@
+Text	El VUELO 102 DE NATIONAL AIRLINES fue un vuelo de carga entre la base militar británica Camp Bastion en Afganistán y el aeropuerto Al Maktoum en Dubái , con una parada de repostaje en la Base Aérea de Bagram en Afganistán .	El 29 de abril de 2013 , el Boeing 747-400 que operaba el vuelo se estrelló momentos después de despegar desde Bagram , matando a las siete personas a bordo .	El avión implicado fue un Boeing 747-428BCF , matrícula N 949CA , número de serie 25630 .	Fue fabricado en 1993 como un avión de pasajeros y más tarde convertido para su servicio como carguero antes de ser vendido a la compañía National Airlines .	En el momento del accidente , el avión volaba a través del Mando de Movilidad Aérea de la USAF .
+Event	T0	VUELO	EVENT	3
+Event	T1	vuelo	EVENT	41
+Event	T2	parada	EVENT	161
+Event	T3	repostaje	EVENT	171
+Event	T4	operaba	EVENT	271
+Event	T5	vuelo	EVENT	282
+Event	T6	estrelló	EVENT	291
+Event	T7	despegar	EVENT	320
+Event	T8	matando	EVENT	344
+Event	T9	implicado	EVENT	392
+Event	T10	fabricado	EVENT	477
+Event	T11	convertido	EVENT	534
+Event	T12	vendido	EVENT	589
+Event	T13	accidente	EVENT	649
+Event	T14	volaba	EVENT	670
+Relation	T0	T2	NoRel	true	VUELO	parada
+Relation	T0	T3	NoRel	true	VUELO	repostaje
+Relation	T0	T4	NoRel	true	VUELO	operaba
+Relation	T0	T9	NoRel	true	VUELO	implicado
+Relation	T10	T11	NoRel	true	fabricado	convertido
+Relation	T10	T14	NoRel	true	fabricado	volaba
+Relation	T10	T8	NoRel	true	fabricado	matando
+Relation	T10	T9	NoRel	true	fabricado	implicado
+Relation	T11	T0	NoRel	true	convertido	VUELO
+Relation	T11	T10	NoRel	true	convertido	fabricado
+Relation	T11	T12	NoRel	true	convertido	vendido
+Relation	T11	T2	NoRel	true	convertido	parada
+Relation	T11	T3	NoRel	true	convertido	repostaje
+Relation	T11	T5	NoRel	true	convertido	vuelo
+Relation	T11	T6	NoRel	true	convertido	estrelló
+Relation	T11	T8	NoRel	true	convertido	matando
+Relation	T12	T0	NoRel	true	vendido	VUELO
+Relation	T12	T10	NoRel	true	vendido	fabricado
+Relation	T12	T13	NoRel	true	vendido	accidente
+Relation	T12	T2	NoRel	true	vendido	parada
+Relation	T12	T6	NoRel	true	vendido	estrelló
+Relation	T13	T0	NoRel	true	accidente	VUELO
+Relation	T13	T11	NoRel	true	accidente	convertido
+Relation	T13	T3	NoRel	true	accidente	repostaje
+Relation	T13	T5	NoRel	true	accidente	vuelo
+Relation	T13	T9	NoRel	true	accidente	implicado
+Relation	T14	T1	NoRel	true	volaba	vuelo
+Relation	T14	T3	NoRel	true	volaba	repostaje
+Relation	T14	T8	NoRel	true	volaba	matando
+Relation	T2	T1	NoRel	true	parada	vuelo
+Relation	T2	T10	NoRel	true	parada	fabricado
+Relation	T2	T14	NoRel	true	parada	volaba
+Relation	T2	T6	NoRel	true	parada	estrelló
+Relation	T2	T8	NoRel	true	parada	matando
+Relation	T3	T11	NoRel	true	repostaje	convertido
+Relation	T3	T12	NoRel	true	repostaje	vendido
+Relation	T3	T13	NoRel	true	repostaje	accidente
+Relation	T3	T6	NoRel	true	repostaje	estrelló
+Relation	T3	T9	NoRel	true	repostaje	implicado
+Relation	T4	T3	NoRel	true	operaba	repostaje
+Relation	T5	T10	NoRel	true	vuelo	fabricado
+Relation	T5	T13	NoRel	true	vuelo	accidente
+Relation	T5	T14	NoRel	true	vuelo	volaba
+Relation	T5	T9	NoRel	true	vuelo	implicado
+Relation	T6	T0	NoRel	true	estrelló	VUELO
+Relation	T6	T11	NoRel	true	estrelló	convertido
+Relation	T6	T13	NoRel	true	estrelló	accidente
+Relation	T6	T5	NoRel	true	estrelló	vuelo
+Relation	T6	T7	NoRel	true	estrelló	despegar
+Relation	T7	T0	NoRel	true	despegar	VUELO
+Relation	T7	T1	NoRel	true	despegar	vuelo
+Relation	T7	T13	NoRel	true	despegar	accidente
+Relation	T7	T14	NoRel	true	despegar	volaba
+Relation	T7	T3	NoRel	true	despegar	repostaje
+Relation	T7	T5	NoRel	true	despegar	vuelo
+Relation	T7	T8	NoRel	true	despegar	matando
+Relation	T8	T1	NoRel	true	matando	vuelo
+Relation	T8	T10	NoRel	true	matando	fabricado
+Relation	T8	T6	NoRel	true	matando	estrelló
+Relation	T8	T7	NoRel	true	matando	despegar
+Relation	T8	T9	NoRel	true	matando	implicado
+Relation	T9	T0	NoRel	true	implicado	VUELO
+Relation	T9	T1	NoRel	true	implicado	vuelo
+Relation	T9	T10	NoRel	true	implicado	fabricado
+Relation	T9	T13	NoRel	true	implicado	accidente
+Relation	T9	T6	NoRel	true	implicado	estrelló
+Relation	T9	T7	NoRel	true	implicado	despegar

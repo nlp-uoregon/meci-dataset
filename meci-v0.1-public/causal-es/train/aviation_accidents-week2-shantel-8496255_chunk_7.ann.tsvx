@@ -1,0 +1,31 @@
+Text	El choque fue causado por la falla de dos motores del avión , específicamente el motor número 4 y el motor número 1 .	El motor número 4 sufrió un aumento irrecuperable durante la rotación .	El avión luego luchó por ascender .	Como la tripulación de vuelo estaban llevando a cabo el procedimiento de emergencia , el motor número 1 de alguna manera falló .	Con dos motores funcionando mal , la aeronave no pudo mantener el vuelo .
+Event	T0	choque	EVENT	3
+Event	T10	funcionando	EVENT	371
+Event	T2	falla	EVENT	29
+Event	T3	sufrió	EVENT	136
+Event	T4	rotación	EVENT	179
+Event	T5	luchó	EVENT	205
+Event	T7	procedimiento	EVENT	282
+Event	T9	falló	EVENT	347
+Relation	T2	T0	CauseEffect	true	falla	choque
+Relation	T0	T2	EffectCause	true	choque	falla
+Relation	T2	T5	CauseEffect	true	falla	luchó
+Relation	T5	T2	EffectCause	true	luchó	falla
+Relation	T0	T4	NoRel	true	choque	rotación
+Relation	T0	T5	NoRel	true	choque	luchó
+Relation	T3	T10	NoRel	true	sufrió	funcionando
+Relation	T3	T7	NoRel	true	sufrió	procedimiento
+Relation	T3	T9	NoRel	true	sufrió	falló
+Relation	T4	T2	NoRel	true	rotación	falla
+Relation	T4	T3	NoRel	true	rotación	sufrió
+Relation	T5	T0	NoRel	true	luchó	choque
+Relation	T5	T10	NoRel	true	luchó	funcionando
+Relation	T5	T9	NoRel	true	luchó	falló
+Relation	T7	T0	NoRel	true	procedimiento	choque
+Relation	T7	T10	NoRel	true	procedimiento	funcionando
+Relation	T7	T2	NoRel	true	procedimiento	falla
+Relation	T7	T3	NoRel	true	procedimiento	sufrió
+Relation	T7	T4	NoRel	true	procedimiento	rotación
+Relation	T7	T5	NoRel	true	procedimiento	luchó
+Relation	T7	T9	NoRel	true	procedimiento	falló
+Relation	T9	T5	NoRel	true	falló	luchó

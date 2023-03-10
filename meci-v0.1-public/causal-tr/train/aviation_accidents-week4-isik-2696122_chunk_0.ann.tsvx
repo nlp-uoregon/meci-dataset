@@ -1,0 +1,67 @@
+Text	SCAT AIRLINES'IN 760 SEFER SAYILI UÇUŞU , çift motorlu bir Bombardier CRJ200 kullanılarak Kökşetau'dan Almatı'ya giden bir tarifeli yolcu uçuşunun 29 Ocak 2013'te düşmesi olayıdır .	Uçakta bulunan 16 yolcu ve 5 mürettebatın tamamı kaza sonucunda ölmüştür .	Soruşturma , uçağın burnunu indirdikten sonra aniden indiğini belirlemiştir , ancak ani manevranın nedenini belirleyememiştir .	Kazaya karışan ( kuyruk numarası : UP - CJ006 , seri numarası : 7413 ) , 2000'de üretilmiştir .	İki General Electric CF34 - 3B1 turbofan motoru ile donatılmıştır .
+Event	T0	UÇUŞU	EVENT	34
+Event	T1	uçuşunun	EVENT	138
+Event	T2	olayıdır	EVENT	171
+Event	T3	kaza	EVENT	231
+Event	T4	ölmüştür	EVENT	246
+Event	T5	indirdikten	EVENT	285
+Event	T6	belirlemiştir	EVENT	319
+Event	T7	karışan	EVENT	392
+Event	T8	üretilmiştir	EVENT	466
+Event	T9	donatılmıştır	EVENT	533
+Event	T10	düşmesi	EVENT	163
+Event	T11	Soruşturma	EVENT	257
+Relation	T10	T4	CauseEffect	true	düşmesi	ölmüştür
+Relation	T4	T10	EffectCause	true	ölmüştür	düşmesi
+Relation	T11	T6	CauseEffect	true	Soruşturma	belirlemiştir
+Relation	T6	T11	EffectCause	true	belirlemiştir	Soruşturma
+Relation	T0	T1	NoRel	true	UÇUŞU	uçuşunun
+Relation	T0	T7	NoRel	true	UÇUŞU	karışan
+Relation	T0	T8	NoRel	true	UÇUŞU	üretilmiştir
+Relation	T0	T9	NoRel	true	UÇUŞU	donatılmıştır
+Relation	T1	T0	NoRel	true	uçuşunun	UÇUŞU
+Relation	T1	T4	NoRel	true	uçuşunun	ölmüştür
+Relation	T1	T6	NoRel	true	uçuşunun	belirlemiştir
+Relation	T1	T7	NoRel	true	uçuşunun	karışan
+Relation	T1	T8	NoRel	true	uçuşunun	üretilmiştir
+Relation	T10	T1	NoRel	true	düşmesi	uçuşunun
+Relation	T10	T11	NoRel	true	düşmesi	Soruşturma
+Relation	T10	T2	NoRel	true	düşmesi	olayıdır
+Relation	T10	T6	NoRel	true	düşmesi	belirlemiştir
+Relation	T10	T8	NoRel	true	düşmesi	üretilmiştir
+Relation	T10	T9	NoRel	true	düşmesi	donatılmıştır
+Relation	T11	T1	NoRel	true	Soruşturma	uçuşunun
+Relation	T11	T10	NoRel	true	Soruşturma	düşmesi
+Relation	T11	T2	NoRel	true	Soruşturma	olayıdır
+Relation	T11	T7	NoRel	true	Soruşturma	karışan
+Relation	T11	T8	NoRel	true	Soruşturma	üretilmiştir
+Relation	T11	T9	NoRel	true	Soruşturma	donatılmıştır
+Relation	T2	T1	NoRel	true	olayıdır	uçuşunun
+Relation	T2	T5	NoRel	true	olayıdır	indirdikten
+Relation	T3	T0	NoRel	true	kaza	UÇUŞU
+Relation	T3	T1	NoRel	true	kaza	uçuşunun
+Relation	T3	T4	NoRel	true	kaza	ölmüştür
+Relation	T3	T8	NoRel	true	kaza	üretilmiştir
+Relation	T4	T1	NoRel	true	ölmüştür	uçuşunun
+Relation	T4	T2	NoRel	true	ölmüştür	olayıdır
+Relation	T4	T5	NoRel	true	ölmüştür	indirdikten
+Relation	T5	T3	NoRel	true	indirdikten	kaza
+Relation	T5	T4	NoRel	true	indirdikten	ölmüştür
+Relation	T5	T7	NoRel	true	indirdikten	karışan
+Relation	T5	T9	NoRel	true	indirdikten	donatılmıştır
+Relation	T6	T1	NoRel	true	belirlemiştir	uçuşunun
+Relation	T7	T0	NoRel	true	karışan	UÇUŞU
+Relation	T7	T1	NoRel	true	karışan	uçuşunun
+Relation	T7	T10	NoRel	true	karışan	düşmesi
+Relation	T7	T11	NoRel	true	karışan	Soruşturma
+Relation	T7	T8	NoRel	true	karışan	üretilmiştir
+Relation	T7	T9	NoRel	true	karışan	donatılmıştır
+Relation	T8	T3	NoRel	true	üretilmiştir	kaza
+Relation	T8	T5	NoRel	true	üretilmiştir	indirdikten
+Relation	T8	T7	NoRel	true	üretilmiştir	karışan
+Relation	T8	T9	NoRel	true	üretilmiştir	donatılmıştır
+Relation	T9	T11	NoRel	true	donatılmıştır	Soruşturma
+Relation	T9	T2	NoRel	true	donatılmıştır	olayıdır
+Relation	T9	T3	NoRel	true	donatılmıştır	kaza
+Relation	T9	T7	NoRel	true	donatılmıştır	karışan
+Relation	T9	T8	NoRel	true	donatılmıştır	üretilmiştir

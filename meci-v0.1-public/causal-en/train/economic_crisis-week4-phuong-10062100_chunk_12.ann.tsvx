@@ -1,0 +1,123 @@
+Text	These institutions as well as certain regulated banks had also assumed significant debt burdens while providing the loans described above and did not have a financial cushion sufficient to absorb large loan defaults or MBS losses .	The losses experienced by financial institutions on their mortgage - related securities impacted their ability to lend , slowing economic activity .	Interbank lending dried - up initially and then loans to non-financial firms were affected .	Concerns regarding the stability of key financial institutions drove central banks to take action to provide funds to encourage lending and to restore faith in the commercial paper markets , which are integral to funding business operations .	Governments also bailed out key financial institutions , assuming significant additional financial commitments .
+Event	T0	assumed	EVENT	63
+Event	T2	providing	EVENT	102
+Event	T3	described	EVENT	122
+Event	T4	absorb	EVENT	189
+Event	T5	defaults	EVENT	207
+Event	T6	losses	EVENT	223
+Event	T7	experienced	EVENT	243
+Event	T8	impacted	EVENT	320
+Event	T9	lend	EVENT	346
+Event	T10	loans	EVENT	429
+Event	T11	affected	EVENT	463
+Event	T12	Concerns	EVENT	474
+Event	T13	drove	EVENT	537
+Event	T14	action	EVENT	565
+Event	T15	provide	EVENT	575
+Event	T16	lending	EVENT	602
+Event	T17	funding	EVENT	687
+Event	T18	assuming	EVENT	774
+Event	T1	debt burdens	EVENT	83
+Event	T19	losses	EVENT	236
+Event	T20	mortgage - related securities	EVENT	290
+Event	T21	slowing	EVENT	353
+Event	T22	dried - up	EVENT	399
+Event	T23	encourage	EVENT	592
+Event	T24	restore	EVENT	617
+Event	T25	bailed out	EVENT	734
+Relation	T2	T1	CauseEffect	true	providing	debt burdens
+Relation	T1	T2	EffectCause	true	debt burdens	providing
+Relation	T20	T19	CauseEffect	true	mortgage - related securities	losses
+Relation	T19	T20	EffectCause	true	losses	mortgage - related securities
+Relation	T19	T8	CauseEffect	true	losses	impacted
+Relation	T8	T19	EffectCause	true	impacted	losses
+Relation	T8	T21	CauseEffect	true	impacted	slowing
+Relation	T21	T8	EffectCause	true	slowing	impacted
+Relation	T22	T11	CauseEffect	true	dried - up	affected
+Relation	T11	T22	EffectCause	true	affected	dried - up
+Relation	T12	T13	CauseEffect	true	Concerns	drove
+Relation	T13	T12	EffectCause	true	drove	Concerns
+Relation	T23	T15	CauseEffect	true	encourage	provide
+Relation	T15	T23	EffectCause	true	provide	encourage
+Relation	T24	T15	CauseEffect	true	restore	provide
+Relation	T15	T24	EffectCause	true	provide	restore
+Relation	T0	T10	NoRel	true	assumed	loans
+Relation	T0	T14	NoRel	true	assumed	action
+Relation	T0	T20	NoRel	true	assumed	mortgage - related securities
+Relation	T0	T21	NoRel	true	assumed	slowing
+Relation	T0	T8	NoRel	true	assumed	impacted
+Relation	T1	T20	NoRel	true	debt burdens	mortgage - related securities
+Relation	T10	T17	NoRel	true	loans	funding
+Relation	T10	T4	NoRel	true	loans	absorb
+Relation	T10	T8	NoRel	true	loans	impacted
+Relation	T11	T0	NoRel	true	affected	assumed
+Relation	T11	T13	NoRel	true	affected	drove
+Relation	T12	T2	NoRel	true	Concerns	providing
+Relation	T12	T23	NoRel	true	Concerns	encourage
+Relation	T13	T0	NoRel	true	drove	assumed
+Relation	T13	T15	NoRel	true	drove	provide
+Relation	T13	T22	NoRel	true	drove	dried - up
+Relation	T13	T3	NoRel	true	drove	described
+Relation	T13	T8	NoRel	true	drove	impacted
+Relation	T13	T9	NoRel	true	drove	lend
+Relation	T14	T19	NoRel	true	action	losses
+Relation	T14	T4	NoRel	true	action	absorb
+Relation	T14	T8	NoRel	true	action	impacted
+Relation	T15	T19	NoRel	true	provide	losses
+Relation	T15	T20	NoRel	true	provide	mortgage - related securities
+Relation	T16	T20	NoRel	true	lending	mortgage - related securities
+Relation	T16	T23	NoRel	true	lending	encourage
+Relation	T16	T3	NoRel	true	lending	described
+Relation	T16	T6	NoRel	true	lending	losses
+Relation	T17	T1	NoRel	true	funding	debt burdens
+Relation	T17	T12	NoRel	true	funding	Concerns
+Relation	T17	T16	NoRel	true	funding	lending
+Relation	T17	T5	NoRel	true	funding	defaults
+Relation	T17	T6	NoRel	true	funding	losses
+Relation	T18	T10	NoRel	true	assuming	loans
+Relation	T18	T2	NoRel	true	assuming	providing
+Relation	T18	T22	NoRel	true	assuming	dried - up
+Relation	T18	T24	NoRel	true	assuming	restore
+Relation	T18	T9	NoRel	true	assuming	lend
+Relation	T19	T12	NoRel	true	losses	Concerns
+Relation	T19	T18	NoRel	true	losses	assuming
+Relation	T19	T24	NoRel	true	losses	restore
+Relation	T19	T4	NoRel	true	losses	absorb
+Relation	T2	T22	NoRel	true	providing	dried - up
+Relation	T2	T4	NoRel	true	providing	absorb
+Relation	T2	T7	NoRel	true	providing	experienced
+Relation	T20	T18	NoRel	true	mortgage - related securities	assuming
+Relation	T20	T22	NoRel	true	mortgage - related securities	dried - up
+Relation	T20	T24	NoRel	true	mortgage - related securities	restore
+Relation	T21	T23	NoRel	true	slowing	encourage
+Relation	T21	T4	NoRel	true	slowing	absorb
+Relation	T22	T12	NoRel	true	dried - up	Concerns
+Relation	T22	T16	NoRel	true	dried - up	lending
+Relation	T22	T19	NoRel	true	dried - up	losses
+Relation	T22	T7	NoRel	true	dried - up	experienced
+Relation	T23	T10	NoRel	true	encourage	loans
+Relation	T23	T25	NoRel	true	encourage	bailed out
+Relation	T23	T3	NoRel	true	encourage	described
+Relation	T23	T9	NoRel	true	encourage	lend
+Relation	T24	T0	NoRel	true	restore	assumed
+Relation	T24	T12	NoRel	true	restore	Concerns
+Relation	T24	T8	NoRel	true	restore	impacted
+Relation	T24	T9	NoRel	true	restore	lend
+Relation	T25	T3	NoRel	true	bailed out	described
+Relation	T3	T11	NoRel	true	described	affected
+Relation	T3	T12	NoRel	true	described	Concerns
+Relation	T3	T2	NoRel	true	described	providing
+Relation	T3	T21	NoRel	true	described	slowing
+Relation	T3	T24	NoRel	true	described	restore
+Relation	T4	T8	NoRel	true	absorb	impacted
+Relation	T5	T14	NoRel	true	defaults	action
+Relation	T5	T21	NoRel	true	defaults	slowing
+Relation	T5	T7	NoRel	true	defaults	experienced
+Relation	T6	T2	NoRel	true	losses	providing
+Relation	T6	T25	NoRel	true	losses	bailed out
+Relation	T6	T8	NoRel	true	losses	impacted
+Relation	T7	T1	NoRel	true	experienced	debt burdens
+Relation	T7	T14	NoRel	true	experienced	action
+Relation	T7	T16	NoRel	true	experienced	lending
+Relation	T7	T4	NoRel	true	experienced	absorb
+Relation	T8	T6	NoRel	true	impacted	losses

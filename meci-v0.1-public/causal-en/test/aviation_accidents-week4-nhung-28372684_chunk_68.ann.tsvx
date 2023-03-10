@@ -1,0 +1,23 @@
+Text	June : Lockheed Y1C- 25 ,__ 32-393_ , Altair Model 8 A c / n 153 ,__ NR119W _ .	First Lockheed to be equipped with fully retractable landing gear .	Struck off charge after belly landing at Wright Field , Ohio .	Hulk destroyed in tests of bottled carbon dioxide fire extinguishers at Wright Field , 27 September 1932 .	15 July : Sole prototype low - wing monoplane Vickers Type 171 Jockey , _ J9122 _ , is lost during spinning trials at Martlesham Heath when it enters a flat spin , crashing at Woodbridge , Suffolk , pilot successfully bailing out at 5,000 feet .
+Event	T0	equipped	EVENT	101
+Event	T2	landing	EVENT	178
+Event	T3	tests	EVENT	229
+Event	T4	lost	EVENT	405
+Event	T5	trials	EVENT	426
+Event	T6	enters	EVENT	461
+Event	T7	spin	EVENT	475
+Event	T8	crashing	EVENT	482
+Event	T1	Struck off	EVENT	148
+Event	T9	destroyed	EVENT	216
+Event	T10	bailing	EVENT	536
+Relation	T5	T4	CauseEffect	true	trials	lost
+Relation	T4	T5	EffectCause	true	lost	trials
+Relation	T10	T1	NoRel	true	bailing	Struck off
+Relation	T10	T9	NoRel	true	bailing	destroyed
+Relation	T2	T10	NoRel	true	landing	bailing
+Relation	T3	T5	NoRel	true	tests	trials
+Relation	T4	T2	NoRel	true	lost	landing
+Relation	T4	T7	NoRel	true	lost	spin
+Relation	T6	T5	NoRel	true	enters	trials
+Relation	T8	T5	NoRel	true	crashing	trials
+Relation	T9	T3	NoRel	true	destroyed	tests

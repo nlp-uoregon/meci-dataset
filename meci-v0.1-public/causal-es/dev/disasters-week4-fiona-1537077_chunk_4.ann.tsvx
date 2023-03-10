@@ -1,0 +1,320 @@
+Text	- Cecilia Espinoza Delgado - Beatriz Fierro Valderas - Ana María Sánchez - Lucía Valenzuela - Lucinda Villalobos - Pabla Zúñiga Poblete	La investigación por parte de la Dirección General de Aeronáutica Civil ( D. G. A. C ) determinó causas mecánicas y humanas en el accidente , siendo la primera una falla en el sistema de magnetos que proporciona energía a las bujías , derivando esto en una falla del motor , evento que sucedió alrededor de 3 minutos después del despegue desde Tobalaba .	Sumado a esto , se explicita la mala maniobra del piloto que , ante una falta de potencia , intentó seguir ascendiendo y en última instancia decidió virar para volver a la pista , lo que derivó en un _ stall _ y en la pérdida de control de la aeronave con la posterior colisión .	El 26 de noviembre de 2015 la Corte Suprema condenó al fisco a pagar una indemnización de 355 millones de pesos a la isapre Cruz Blanca por el tratamiento médico de Beatriz Fierro , quien sufrió la pérdida de una pierna y graves quemaduras .	La sentencia determinó que el Estado es responsable por la falta de personal cometida por el piloto , quien realizó una mala maniobra provocando la caída de la aeronave .
+Event	T0	investigación	EVENT	139
+Event	T1	accidente	EVENT	266
+Event	T2	falla	EVENT	300
+Event	T3	derivando	EVENT	371
+Event	T4	falla	EVENT	393
+Event	T5	evento	EVENT	411
+Event	T6	sucedió	EVENT	422
+Event	T7	despegue	EVENT	465
+Event	T8	explicita	EVENT	510
+Event	T9	maniobra	EVENT	528
+Event	T10	ascendiendo	EVENT	598
+Event	T11	virar	EVENT	640
+Event	T12	volver	EVENT	651
+Event	T13	derivó	EVENT	678
+Event	T14	stall	EVENT	693
+Event	T15	pérdida	EVENT	709
+Event	T16	control	EVENT	720
+Event	T17	colisión	EVENT	760
+Event	T18	condenó	EVENT	815
+Event	T19	pagar	EVENT	834
+Event	T20	indemnización	EVENT	844
+Event	T21	tratamiento	EVENT	914
+Event	T22	sufrió	EVENT	959
+Event	T23	pérdida	EVENT	969
+Event	T24	quemaduras	EVENT	1000
+Event	T25	determinó	EVENT	1026
+Event	T26	cometida	EVENT	1090
+Event	T27	realizó	EVENT	1121
+Event	T28	provocando	EVENT	1147
+Event	T29	caída	EVENT	1161
+Relation	T2	T1	CauseEffect	true	falla	accidente
+Relation	T1	T2	EffectCause	true	accidente	falla
+Relation	T18	T20	CauseEffect	true	condenó	indemnización
+Relation	T20	T18	EffectCause	true	indemnización	condenó
+Relation	T15	T17	CauseEffect	true	pérdida	colisión
+Relation	T17	T15	EffectCause	true	colisión	pérdida
+Relation	T14	T17	CauseEffect	true	stall	colisión
+Relation	T17	T14	EffectCause	true	colisión	stall
+Relation	T0	T11	NoRel	true	investigación	virar
+Relation	T0	T12	NoRel	true	investigación	volver
+Relation	T0	T13	NoRel	true	investigación	derivó
+Relation	T0	T14	NoRel	true	investigación	stall
+Relation	T0	T15	NoRel	true	investigación	pérdida
+Relation	T0	T16	NoRel	true	investigación	control
+Relation	T0	T17	NoRel	true	investigación	colisión
+Relation	T0	T18	NoRel	true	investigación	condenó
+Relation	T0	T19	NoRel	true	investigación	pagar
+Relation	T0	T2	NoRel	true	investigación	falla
+Relation	T0	T20	NoRel	true	investigación	indemnización
+Relation	T0	T21	NoRel	true	investigación	tratamiento
+Relation	T0	T29	NoRel	true	investigación	caída
+Relation	T0	T3	NoRel	true	investigación	derivando
+Relation	T0	T5	NoRel	true	investigación	evento
+Relation	T0	T7	NoRel	true	investigación	despegue
+Relation	T0	T8	NoRel	true	investigación	explicita
+Relation	T0	T9	NoRel	true	investigación	maniobra
+Relation	T1	T13	NoRel	true	accidente	derivó
+Relation	T1	T14	NoRel	true	accidente	stall
+Relation	T1	T15	NoRel	true	accidente	pérdida
+Relation	T1	T23	NoRel	true	accidente	pérdida
+Relation	T1	T25	NoRel	true	accidente	determinó
+Relation	T1	T3	NoRel	true	accidente	derivando
+Relation	T10	T16	NoRel	true	ascendiendo	control
+Relation	T10	T18	NoRel	true	ascendiendo	condenó
+Relation	T10	T2	NoRel	true	ascendiendo	falla
+Relation	T10	T20	NoRel	true	ascendiendo	indemnización
+Relation	T10	T21	NoRel	true	ascendiendo	tratamiento
+Relation	T10	T22	NoRel	true	ascendiendo	sufrió
+Relation	T10	T23	NoRel	true	ascendiendo	pérdida
+Relation	T10	T26	NoRel	true	ascendiendo	cometida
+Relation	T10	T29	NoRel	true	ascendiendo	caída
+Relation	T10	T4	NoRel	true	ascendiendo	falla
+Relation	T10	T6	NoRel	true	ascendiendo	sucedió
+Relation	T10	T7	NoRel	true	ascendiendo	despegue
+Relation	T10	T8	NoRel	true	ascendiendo	explicita
+Relation	T11	T1	NoRel	true	virar	accidente
+Relation	T11	T12	NoRel	true	virar	volver
+Relation	T11	T13	NoRel	true	virar	derivó
+Relation	T11	T14	NoRel	true	virar	stall
+Relation	T11	T17	NoRel	true	virar	colisión
+Relation	T11	T2	NoRel	true	virar	falla
+Relation	T11	T21	NoRel	true	virar	tratamiento
+Relation	T11	T23	NoRel	true	virar	pérdida
+Relation	T11	T25	NoRel	true	virar	determinó
+Relation	T11	T27	NoRel	true	virar	realizó
+Relation	T11	T28	NoRel	true	virar	provocando
+Relation	T11	T3	NoRel	true	virar	derivando
+Relation	T11	T4	NoRel	true	virar	falla
+Relation	T11	T6	NoRel	true	virar	sucedió
+Relation	T11	T8	NoRel	true	virar	explicita
+Relation	T12	T1	NoRel	true	volver	accidente
+Relation	T12	T10	NoRel	true	volver	ascendiendo
+Relation	T12	T11	NoRel	true	volver	virar
+Relation	T12	T15	NoRel	true	volver	pérdida
+Relation	T12	T16	NoRel	true	volver	control
+Relation	T12	T2	NoRel	true	volver	falla
+Relation	T12	T22	NoRel	true	volver	sufrió
+Relation	T12	T26	NoRel	true	volver	cometida
+Relation	T12	T29	NoRel	true	volver	caída
+Relation	T12	T7	NoRel	true	volver	despegue
+Relation	T12	T8	NoRel	true	volver	explicita
+Relation	T13	T0	NoRel	true	derivó	investigación
+Relation	T13	T10	NoRel	true	derivó	ascendiendo
+Relation	T13	T12	NoRel	true	derivó	volver
+Relation	T13	T2	NoRel	true	derivó	falla
+Relation	T13	T22	NoRel	true	derivó	sufrió
+Relation	T13	T26	NoRel	true	derivó	cometida
+Relation	T13	T27	NoRel	true	derivó	realizó
+Relation	T13	T3	NoRel	true	derivó	derivando
+Relation	T13	T4	NoRel	true	derivó	falla
+Relation	T13	T5	NoRel	true	derivó	evento
+Relation	T13	T8	NoRel	true	derivó	explicita
+Relation	T14	T1	NoRel	true	stall	accidente
+Relation	T14	T11	NoRel	true	stall	virar
+Relation	T14	T18	NoRel	true	stall	condenó
+Relation	T14	T2	NoRel	true	stall	falla
+Relation	T14	T25	NoRel	true	stall	determinó
+Relation	T14	T26	NoRel	true	stall	cometida
+Relation	T14	T29	NoRel	true	stall	caída
+Relation	T14	T5	NoRel	true	stall	evento
+Relation	T14	T6	NoRel	true	stall	sucedió
+Relation	T14	T7	NoRel	true	stall	despegue
+Relation	T14	T9	NoRel	true	stall	maniobra
+Relation	T15	T0	NoRel	true	pérdida	investigación
+Relation	T15	T16	NoRel	true	pérdida	control
+Relation	T15	T19	NoRel	true	pérdida	pagar
+Relation	T15	T20	NoRel	true	pérdida	indemnización
+Relation	T15	T22	NoRel	true	pérdida	sufrió
+Relation	T15	T23	NoRel	true	pérdida	pérdida
+Relation	T15	T24	NoRel	true	pérdida	quemaduras
+Relation	T15	T27	NoRel	true	pérdida	realizó
+Relation	T15	T4	NoRel	true	pérdida	falla
+Relation	T15	T7	NoRel	true	pérdida	despegue
+Relation	T15	T8	NoRel	true	pérdida	explicita
+Relation	T15	T9	NoRel	true	pérdida	maniobra
+Relation	T16	T14	NoRel	true	control	stall
+Relation	T16	T19	NoRel	true	control	pagar
+Relation	T16	T24	NoRel	true	control	quemaduras
+Relation	T16	T25	NoRel	true	control	determinó
+Relation	T16	T3	NoRel	true	control	derivando
+Relation	T16	T5	NoRel	true	control	evento
+Relation	T16	T6	NoRel	true	control	sucedió
+Relation	T17	T10	NoRel	true	colisión	ascendiendo
+Relation	T17	T12	NoRel	true	colisión	volver
+Relation	T17	T16	NoRel	true	colisión	control
+Relation	T17	T25	NoRel	true	colisión	determinó
+Relation	T17	T27	NoRel	true	colisión	realizó
+Relation	T17	T8	NoRel	true	colisión	explicita
+Relation	T18	T10	NoRel	true	condenó	ascendiendo
+Relation	T18	T17	NoRel	true	condenó	colisión
+Relation	T18	T2	NoRel	true	condenó	falla
+Relation	T18	T25	NoRel	true	condenó	determinó
+Relation	T18	T29	NoRel	true	condenó	caída
+Relation	T18	T3	NoRel	true	condenó	derivando
+Relation	T19	T11	NoRel	true	pagar	virar
+Relation	T19	T12	NoRel	true	pagar	volver
+Relation	T19	T16	NoRel	true	pagar	control
+Relation	T19	T17	NoRel	true	pagar	colisión
+Relation	T19	T18	NoRel	true	pagar	condenó
+Relation	T19	T25	NoRel	true	pagar	determinó
+Relation	T19	T26	NoRel	true	pagar	cometida
+Relation	T19	T7	NoRel	true	pagar	despegue
+Relation	T19	T9	NoRel	true	pagar	maniobra
+Relation	T2	T12	NoRel	true	falla	volver
+Relation	T2	T15	NoRel	true	falla	pérdida
+Relation	T2	T16	NoRel	true	falla	control
+Relation	T2	T27	NoRel	true	falla	realizó
+Relation	T2	T28	NoRel	true	falla	provocando
+Relation	T2	T3	NoRel	true	falla	derivando
+Relation	T2	T4	NoRel	true	falla	falla
+Relation	T2	T6	NoRel	true	falla	sucedió
+Relation	T2	T7	NoRel	true	falla	despegue
+Relation	T2	T9	NoRel	true	falla	maniobra
+Relation	T20	T11	NoRel	true	indemnización	virar
+Relation	T20	T12	NoRel	true	indemnización	volver
+Relation	T20	T13	NoRel	true	indemnización	derivó
+Relation	T20	T17	NoRel	true	indemnización	colisión
+Relation	T20	T19	NoRel	true	indemnización	pagar
+Relation	T20	T2	NoRel	true	indemnización	falla
+Relation	T20	T26	NoRel	true	indemnización	cometida
+Relation	T20	T28	NoRel	true	indemnización	provocando
+Relation	T20	T5	NoRel	true	indemnización	evento
+Relation	T21	T0	NoRel	true	tratamiento	investigación
+Relation	T21	T1	NoRel	true	tratamiento	accidente
+Relation	T21	T11	NoRel	true	tratamiento	virar
+Relation	T21	T12	NoRel	true	tratamiento	volver
+Relation	T21	T13	NoRel	true	tratamiento	derivó
+Relation	T21	T15	NoRel	true	tratamiento	pérdida
+Relation	T21	T16	NoRel	true	tratamiento	control
+Relation	T21	T20	NoRel	true	tratamiento	indemnización
+Relation	T21	T22	NoRel	true	tratamiento	sufrió
+Relation	T21	T5	NoRel	true	tratamiento	evento
+Relation	T22	T0	NoRel	true	sufrió	investigación
+Relation	T22	T15	NoRel	true	sufrió	pérdida
+Relation	T22	T18	NoRel	true	sufrió	condenó
+Relation	T22	T2	NoRel	true	sufrió	falla
+Relation	T22	T20	NoRel	true	sufrió	indemnización
+Relation	T22	T21	NoRel	true	sufrió	tratamiento
+Relation	T22	T24	NoRel	true	sufrió	quemaduras
+Relation	T22	T28	NoRel	true	sufrió	provocando
+Relation	T22	T6	NoRel	true	sufrió	sucedió
+Relation	T22	T9	NoRel	true	sufrió	maniobra
+Relation	T23	T1	NoRel	true	pérdida	accidente
+Relation	T23	T10	NoRel	true	pérdida	ascendiendo
+Relation	T23	T14	NoRel	true	pérdida	stall
+Relation	T23	T18	NoRel	true	pérdida	condenó
+Relation	T23	T20	NoRel	true	pérdida	indemnización
+Relation	T23	T5	NoRel	true	pérdida	evento
+Relation	T23	T7	NoRel	true	pérdida	despegue
+Relation	T23	T8	NoRel	true	pérdida	explicita
+Relation	T23	T9	NoRel	true	pérdida	maniobra
+Relation	T24	T10	NoRel	true	quemaduras	ascendiendo
+Relation	T24	T14	NoRel	true	quemaduras	stall
+Relation	T24	T15	NoRel	true	quemaduras	pérdida
+Relation	T24	T19	NoRel	true	quemaduras	pagar
+Relation	T24	T2	NoRel	true	quemaduras	falla
+Relation	T24	T23	NoRel	true	quemaduras	pérdida
+Relation	T24	T4	NoRel	true	quemaduras	falla
+Relation	T24	T5	NoRel	true	quemaduras	evento
+Relation	T24	T6	NoRel	true	quemaduras	sucedió
+Relation	T25	T14	NoRel	true	determinó	stall
+Relation	T25	T15	NoRel	true	determinó	pérdida
+Relation	T25	T16	NoRel	true	determinó	control
+Relation	T25	T2	NoRel	true	determinó	falla
+Relation	T25	T22	NoRel	true	determinó	sufrió
+Relation	T25	T24	NoRel	true	determinó	quemaduras
+Relation	T25	T26	NoRel	true	determinó	cometida
+Relation	T25	T5	NoRel	true	determinó	evento
+Relation	T26	T0	NoRel	true	cometida	investigación
+Relation	T26	T1	NoRel	true	cometida	accidente
+Relation	T26	T11	NoRel	true	cometida	virar
+Relation	T26	T13	NoRel	true	cometida	derivó
+Relation	T26	T19	NoRel	true	cometida	pagar
+Relation	T26	T22	NoRel	true	cometida	sufrió
+Relation	T26	T27	NoRel	true	cometida	realizó
+Relation	T26	T5	NoRel	true	cometida	evento
+Relation	T27	T1	NoRel	true	realizó	accidente
+Relation	T27	T10	NoRel	true	realizó	ascendiendo
+Relation	T27	T12	NoRel	true	realizó	volver
+Relation	T27	T16	NoRel	true	realizó	control
+Relation	T27	T2	NoRel	true	realizó	falla
+Relation	T27	T22	NoRel	true	realizó	sufrió
+Relation	T27	T23	NoRel	true	realizó	pérdida
+Relation	T27	T25	NoRel	true	realizó	determinó
+Relation	T27	T7	NoRel	true	realizó	despegue
+Relation	T28	T0	NoRel	true	provocando	investigación
+Relation	T28	T11	NoRel	true	provocando	virar
+Relation	T28	T12	NoRel	true	provocando	volver
+Relation	T28	T17	NoRel	true	provocando	colisión
+Relation	T28	T19	NoRel	true	provocando	pagar
+Relation	T28	T21	NoRel	true	provocando	tratamiento
+Relation	T28	T23	NoRel	true	provocando	pérdida
+Relation	T28	T26	NoRel	true	provocando	cometida
+Relation	T28	T27	NoRel	true	provocando	realizó
+Relation	T28	T5	NoRel	true	provocando	evento
+Relation	T28	T7	NoRel	true	provocando	despegue
+Relation	T29	T12	NoRel	true	caída	volver
+Relation	T29	T13	NoRel	true	caída	derivó
+Relation	T29	T18	NoRel	true	caída	condenó
+Relation	T29	T26	NoRel	true	caída	cometida
+Relation	T29	T6	NoRel	true	caída	sucedió
+Relation	T29	T9	NoRel	true	caída	maniobra
+Relation	T3	T10	NoRel	true	derivando	ascendiendo
+Relation	T3	T12	NoRel	true	derivando	volver
+Relation	T3	T14	NoRel	true	derivando	stall
+Relation	T3	T17	NoRel	true	derivando	colisión
+Relation	T3	T2	NoRel	true	derivando	falla
+Relation	T3	T24	NoRel	true	derivando	quemaduras
+Relation	T3	T29	NoRel	true	derivando	caída
+Relation	T3	T4	NoRel	true	derivando	falla
+Relation	T3	T5	NoRel	true	derivando	evento
+Relation	T3	T8	NoRel	true	derivando	explicita
+Relation	T4	T15	NoRel	true	falla	pérdida
+Relation	T4	T17	NoRel	true	falla	colisión
+Relation	T4	T2	NoRel	true	falla	falla
+Relation	T4	T21	NoRel	true	falla	tratamiento
+Relation	T4	T5	NoRel	true	falla	evento
+Relation	T4	T6	NoRel	true	falla	sucedió
+Relation	T5	T11	NoRel	true	evento	virar
+Relation	T5	T17	NoRel	true	evento	colisión
+Relation	T5	T18	NoRel	true	evento	condenó
+Relation	T5	T19	NoRel	true	evento	pagar
+Relation	T5	T20	NoRel	true	evento	indemnización
+Relation	T5	T25	NoRel	true	evento	determinó
+Relation	T5	T6	NoRel	true	evento	sucedió
+Relation	T5	T8	NoRel	true	evento	explicita
+Relation	T6	T1	NoRel	true	sucedió	accidente
+Relation	T6	T10	NoRel	true	sucedió	ascendiendo
+Relation	T6	T11	NoRel	true	sucedió	virar
+Relation	T6	T13	NoRel	true	sucedió	derivó
+Relation	T6	T15	NoRel	true	sucedió	pérdida
+Relation	T6	T2	NoRel	true	sucedió	falla
+Relation	T6	T29	NoRel	true	sucedió	caída
+Relation	T6	T5	NoRel	true	sucedió	evento
+Relation	T6	T7	NoRel	true	sucedió	despegue
+Relation	T7	T10	NoRel	true	despegue	ascendiendo
+Relation	T7	T11	NoRel	true	despegue	virar
+Relation	T7	T14	NoRel	true	despegue	stall
+Relation	T7	T15	NoRel	true	despegue	pérdida
+Relation	T7	T22	NoRel	true	despegue	sufrió
+Relation	T7	T23	NoRel	true	despegue	pérdida
+Relation	T7	T26	NoRel	true	despegue	cometida
+Relation	T7	T27	NoRel	true	despegue	realizó
+Relation	T7	T28	NoRel	true	despegue	provocando
+Relation	T8	T0	NoRel	true	explicita	investigación
+Relation	T8	T1	NoRel	true	explicita	accidente
+Relation	T8	T12	NoRel	true	explicita	volver
+Relation	T8	T14	NoRel	true	explicita	stall
+Relation	T8	T16	NoRel	true	explicita	control
+Relation	T8	T28	NoRel	true	explicita	provocando
+Relation	T8	T3	NoRel	true	explicita	derivando
+Relation	T9	T0	NoRel	true	maniobra	investigación
+Relation	T9	T13	NoRel	true	maniobra	derivó
+Relation	T9	T17	NoRel	true	maniobra	colisión
+Relation	T9	T2	NoRel	true	maniobra	falla
+Relation	T9	T22	NoRel	true	maniobra	sufrió
+Relation	T9	T26	NoRel	true	maniobra	cometida
+Relation	T9	T27	NoRel	true	maniobra	realizó
+Relation	T9	T4	NoRel	true	maniobra	falla

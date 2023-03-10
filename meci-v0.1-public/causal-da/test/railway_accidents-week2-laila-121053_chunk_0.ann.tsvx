@@ -1,0 +1,33 @@
+Text	Under rangering på Næstved station påkørte et rangerende godstog en sporstopper i sydenden af stationen omkring kl. 05.40 .	Da kørslen fortsatte afsporedes og væltede en række af de bageste vogne ud over hovedsporene .	Her blev de ramt af et sydfra indkørende regionaltog med ca. 100 km/t .	De 4 forreste vogne – herunder styrevognen – afsporedes .	Rangertrækket bestod af 9 tomme , åbne godsvogne – fladvogne – der blev skubbet af et My-lokomotiv .
+Event	T0	rangering	EVENT	6
+Event	T1	påkørte	EVENT	35
+Event	T2	afsporedes	EVENT	145
+Event	T3	væltede	EVENT	159
+Event	T4	ramt	EVENT	231
+Event	T5	bestod	EVENT	363
+Event	T6	skubbet	EVENT	421
+Relation	T1	T2	CauseEffect	true	påkørte	afsporedes
+Relation	T2	T1	EffectCause	true	afsporedes	påkørte
+Relation	T1	T3	CauseEffect	true	påkørte	væltede
+Relation	T3	T1	EffectCause	true	væltede	påkørte
+Relation	T2	T4	CauseEffect	true	afsporedes	ramt
+Relation	T4	T2	EffectCause	true	ramt	afsporedes
+Relation	T3	T4	CauseEffect	true	væltede	ramt
+Relation	T4	T3	EffectCause	true	ramt	væltede
+Relation	T0	T2	NoRel	true	rangering	afsporedes
+Relation	T0	T3	NoRel	true	rangering	væltede
+Relation	T0	T5	NoRel	true	rangering	bestod
+Relation	T1	T4	NoRel	true	påkørte	ramt
+Relation	T1	T5	NoRel	true	påkørte	bestod
+Relation	T1	T6	NoRel	true	påkørte	skubbet
+Relation	T2	T3	NoRel	true	afsporedes	væltede
+Relation	T3	T0	NoRel	true	væltede	rangering
+Relation	T3	T5	NoRel	true	væltede	bestod
+Relation	T4	T1	NoRel	true	ramt	påkørte
+Relation	T4	T5	NoRel	true	ramt	bestod
+Relation	T5	T0	NoRel	true	bestod	rangering
+Relation	T5	T1	NoRel	true	bestod	påkørte
+Relation	T5	T3	NoRel	true	bestod	væltede
+Relation	T6	T0	NoRel	true	skubbet	rangering
+Relation	T6	T1	NoRel	true	skubbet	påkørte
+Relation	T6	T2	NoRel	true	skubbet	afsporedes

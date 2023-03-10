@@ -1,0 +1,46 @@
+Text	Savaşın bitiminden sonra başlangıçta Papa'nın konuğu ve diplomatik bir üyesi olarak eşi ile Vatikan'da kaldı .	1946 yılına kadar Almanya'ya dönmedi .	25 Temmuz 1947 tarihinde tutuklandı .	İnsanlığa karşı işlenen suçlar olarak , Auschwitz'e Fransız Yahudilerin sınır dışı edilerek gönderilmesi ile etkin işbirliği yapmasıyla suçlandı .	Weizsäcker'in ( oğlu Richard von Weizsäcker duruşma sırasında bir hukuk öğrencisi idi ) oğlu onun savunma avukatı olarak ortaya çıktı .
+Event	T0	kaldı	EVENT	103
+Event	T1	dönmedi	EVENT	140
+Event	T2	tutuklandı	EVENT	175
+Event	T3	işlenen	EVENT	204
+Event	T4	gönderilmesi	EVENT	280
+Event	T5	işbirliği	EVENT	303
+Event	T6	suçlandı	EVENT	324
+Event	T7	duruşma	EVENT	379
+Event	T8	çıktı	EVENT	463
+Event	T9	Savaşın	EVENT	0
+Relation	T5	T2	CauseEffect	true	işbirliği	tutuklandı
+Relation	T2	T5	EffectCause	true	tutuklandı	işbirliği
+Relation	T0	T2	NoRel	true	kaldı	tutuklandı
+Relation	T0	T4	NoRel	true	kaldı	gönderilmesi
+Relation	T0	T5	NoRel	true	kaldı	işbirliği
+Relation	T1	T4	NoRel	true	dönmedi	gönderilmesi
+Relation	T1	T6	NoRel	true	dönmedi	suçlandı
+Relation	T1	T8	NoRel	true	dönmedi	çıktı
+Relation	T2	T0	NoRel	true	tutuklandı	kaldı
+Relation	T2	T1	NoRel	true	tutuklandı	dönmedi
+Relation	T2	T3	NoRel	true	tutuklandı	işlenen
+Relation	T2	T7	NoRel	true	tutuklandı	duruşma
+Relation	T2	T8	NoRel	true	tutuklandı	çıktı
+Relation	T3	T0	NoRel	true	işlenen	kaldı
+Relation	T3	T1	NoRel	true	işlenen	dönmedi
+Relation	T4	T1	NoRel	true	gönderilmesi	dönmedi
+Relation	T4	T5	NoRel	true	gönderilmesi	işbirliği
+Relation	T4	T6	NoRel	true	gönderilmesi	suçlandı
+Relation	T4	T7	NoRel	true	gönderilmesi	duruşma
+Relation	T4	T9	NoRel	true	gönderilmesi	Savaşın
+Relation	T6	T0	NoRel	true	suçlandı	kaldı
+Relation	T6	T2	NoRel	true	suçlandı	tutuklandı
+Relation	T6	T3	NoRel	true	suçlandı	işlenen
+Relation	T6	T5	NoRel	true	suçlandı	işbirliği
+Relation	T6	T7	NoRel	true	suçlandı	duruşma
+Relation	T7	T0	NoRel	true	duruşma	kaldı
+Relation	T7	T3	NoRel	true	duruşma	işlenen
+Relation	T7	T5	NoRel	true	duruşma	işbirliği
+Relation	T7	T6	NoRel	true	duruşma	suçlandı
+Relation	T7	T9	NoRel	true	duruşma	Savaşın
+Relation	T8	T3	NoRel	true	çıktı	işlenen
+Relation	T8	T4	NoRel	true	çıktı	gönderilmesi
+Relation	T9	T3	NoRel	true	Savaşın	işlenen
+Relation	T9	T4	NoRel	true	Savaşın	gönderilmesi
+Relation	T9	T7	NoRel	true	Savaşın	duruşma

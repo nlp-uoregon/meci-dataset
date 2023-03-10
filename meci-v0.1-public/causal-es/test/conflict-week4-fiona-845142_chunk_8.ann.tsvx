@@ -1,0 +1,89 @@
+Text	- Sujeción a la vigilancia y orientación permanente de un delegado por el tiempo fijada para la medida , debiendo cumplir las normas de conducta e instrucciones que este le imparta .	- Ejercer una profesión , oficio o empleo .	- Satisfacer indemnización civil , costas y multas impuestas por la sentencia ( el tribunal puede obviar esta obligación en caso de impedimento justificado ) .	- Reparar , en proporción racional , los daños causados por el delito ( el tribunal puede establer una regulación prudencial de pago ) .	- Por orden del tribunal ante quebrantamiento de alguna de las condiciones impuestas por el tribunal o desobediencia grave o reiterada de las normas de conducta e instrucciones impartidas por el delegado .
+Event	T0	Sujeción	EVENT	2
+Event	T1	vigilancia	EVENT	16
+Event	T2	imparta	EVENT	173
+Event	T3	indemnización	EVENT	240
+Event	T4	impuestas	EVENT	278
+Event	T5	sentencia	EVENT	295
+Event	T6	Reparar	EVENT	389
+Event	T7	causados	EVENT	434
+Event	T8	delito	EVENT	450
+Event	T9	establer	EVENT	477
+Event	T10	regulación	EVENT	490
+Event	T11	pago	EVENT	515
+Event	T12	quebrantamiento	EVENT	554
+Event	T13	impuestas	EVENT	599
+Event	T14	impartidas	EVENT	701
+Relation	T8	T3	CauseEffect	true	delito	indemnización
+Relation	T3	T8	EffectCause	true	indemnización	delito
+Relation	T0	T10	NoRel	true	Sujeción	regulación
+Relation	T0	T2	NoRel	true	Sujeción	imparta
+Relation	T0	T5	NoRel	true	Sujeción	sentencia
+Relation	T0	T6	NoRel	true	Sujeción	Reparar
+Relation	T0	T9	NoRel	true	Sujeción	establer
+Relation	T1	T11	NoRel	true	vigilancia	pago
+Relation	T1	T3	NoRel	true	vigilancia	indemnización
+Relation	T1	T4	NoRel	true	vigilancia	impuestas
+Relation	T1	T8	NoRel	true	vigilancia	delito
+Relation	T10	T1	NoRel	true	regulación	vigilancia
+Relation	T10	T12	NoRel	true	regulación	quebrantamiento
+Relation	T10	T13	NoRel	true	regulación	impuestas
+Relation	T10	T14	NoRel	true	regulación	impartidas
+Relation	T10	T6	NoRel	true	regulación	Reparar
+Relation	T10	T7	NoRel	true	regulación	causados
+Relation	T11	T1	NoRel	true	pago	vigilancia
+Relation	T11	T10	NoRel	true	pago	regulación
+Relation	T11	T13	NoRel	true	pago	impuestas
+Relation	T11	T3	NoRel	true	pago	indemnización
+Relation	T11	T5	NoRel	true	pago	sentencia
+Relation	T11	T7	NoRel	true	pago	causados
+Relation	T11	T8	NoRel	true	pago	delito
+Relation	T12	T0	NoRel	true	quebrantamiento	Sujeción
+Relation	T12	T10	NoRel	true	quebrantamiento	regulación
+Relation	T12	T11	NoRel	true	quebrantamiento	pago
+Relation	T12	T14	NoRel	true	quebrantamiento	impartidas
+Relation	T12	T3	NoRel	true	quebrantamiento	indemnización
+Relation	T12	T7	NoRel	true	quebrantamiento	causados
+Relation	T13	T10	NoRel	true	impuestas	regulación
+Relation	T13	T11	NoRel	true	impuestas	pago
+Relation	T14	T11	NoRel	true	impartidas	pago
+Relation	T14	T12	NoRel	true	impartidas	quebrantamiento
+Relation	T14	T5	NoRel	true	impartidas	sentencia
+Relation	T14	T8	NoRel	true	impartidas	delito
+Relation	T2	T1	NoRel	true	imparta	vigilancia
+Relation	T2	T10	NoRel	true	imparta	regulación
+Relation	T2	T11	NoRel	true	imparta	pago
+Relation	T2	T12	NoRel	true	imparta	quebrantamiento
+Relation	T2	T13	NoRel	true	imparta	impuestas
+Relation	T2	T3	NoRel	true	imparta	indemnización
+Relation	T2	T8	NoRel	true	imparta	delito
+Relation	T2	T9	NoRel	true	imparta	establer
+Relation	T3	T10	NoRel	true	indemnización	regulación
+Relation	T3	T11	NoRel	true	indemnización	pago
+Relation	T3	T12	NoRel	true	indemnización	quebrantamiento
+Relation	T3	T13	NoRel	true	indemnización	impuestas
+Relation	T3	T14	NoRel	true	indemnización	impartidas
+Relation	T3	T2	NoRel	true	indemnización	imparta
+Relation	T3	T6	NoRel	true	indemnización	Reparar
+Relation	T4	T11	NoRel	true	impuestas	pago
+Relation	T4	T3	NoRel	true	impuestas	indemnización
+Relation	T4	T7	NoRel	true	impuestas	causados
+Relation	T4	T8	NoRel	true	impuestas	delito
+Relation	T4	T9	NoRel	true	impuestas	establer
+Relation	T5	T0	NoRel	true	sentencia	Sujeción
+Relation	T5	T10	NoRel	true	sentencia	regulación
+Relation	T5	T8	NoRel	true	sentencia	delito
+Relation	T5	T9	NoRel	true	sentencia	establer
+Relation	T6	T2	NoRel	true	Reparar	imparta
+Relation	T6	T7	NoRel	true	Reparar	causados
+Relation	T6	T8	NoRel	true	Reparar	delito
+Relation	T7	T1	NoRel	true	causados	vigilancia
+Relation	T7	T3	NoRel	true	causados	indemnización
+Relation	T7	T4	NoRel	true	causados	impuestas
+Relation	T7	T5	NoRel	true	causados	sentencia
+Relation	T8	T0	NoRel	true	delito	Sujeción
+Relation	T8	T2	NoRel	true	delito	imparta
+Relation	T8	T7	NoRel	true	delito	causados
+Relation	T8	T9	NoRel	true	delito	establer
+Relation	T9	T1	NoRel	true	establer	vigilancia
+Relation	T9	T4	NoRel	true	establer	impuestas

@@ -1,0 +1,92 @@
+Text	Deprem sonrası padişah tarafından çıkarılan ferman ile dolgu zeminler üzerine yapı yasağı getirildi ve başkentte inşa edilecek tüm yapıların ahşap - karkas malzemeden olması emredildi .	II. Bayezid'in çıkardığı bu ferman aynı zamanda Türkiye’de yapı tipi ve kullanılacak yapı malzemelerine dair kurallar getiren ilk yasal düzenleme olarak kabul edilmektedir .	23 Mart 1510'da başlayan yeniden inşa ve onarım çalışmaları iki ay gibi kısa bir sürede bitirilerek 1 Haziran 1510'da tamamlandı .	Şehrin surları , köprüler , Rumeli ve Anadolu Hisarlarının tahrip olan yerleri , Kız Kulesi , evler , camiler , medreseler , hanlar , çeşmeler yeniden inşa edildi ve tadilattan geçirildi .	Bitmek bilmeyen artçı sarsıntılar ve depremin yarattığı tahribat ve kayıp nedeniyle Osmanlı tarihçileri ile halk başa gelen felaketi _ Kıyamet - i Suğra _ yani " Küçük Kıyamet " olarak nitelendirdiler .
+Event	T0	Deprem	EVENT	0
+Event	T1	getirildi	EVENT	90
+Event	T3	emredildi	EVENT	174
+Event	T7	çalışmaları	EVENT	408
+Event	T8	tamamlandı	EVENT	478
+Event	T10	edildi	EVENT	647
+Event	T11	geçirildi	EVENT	668
+Event	T12	sarsıntılar	EVENT	702
+Event	T13	tahribat	EVENT	736
+Event	T14	kayıp	EVENT	748
+Event	T15	felaketi	EVENT	804
+Event	T16	nitelendirdiler	EVENT	865
+Event	T17	ferman	EVENT	44
+Event	T2	ferman	EVENT	214
+Relation	T17	T1	CauseEffect	true	ferman	getirildi
+Relation	T1	T17	EffectCause	true	getirildi	ferman
+Relation	T17	T3	CauseEffect	true	ferman	emredildi
+Relation	T3	T17	EffectCause	true	emredildi	ferman
+Relation	T17	T7	CauseEffect	true	ferman	çalışmaları
+Relation	T7	T17	EffectCause	true	çalışmaları	ferman
+Relation	T7	T10	CauseEffect	true	çalışmaları	edildi
+Relation	T10	T7	EffectCause	true	edildi	çalışmaları
+Relation	T7	T11	CauseEffect	true	çalışmaları	geçirildi
+Relation	T11	T7	EffectCause	true	geçirildi	çalışmaları
+Relation	T10	T8	CauseEffect	true	edildi	tamamlandı
+Relation	T8	T10	EffectCause	true	tamamlandı	edildi
+Relation	T11	T8	CauseEffect	true	geçirildi	tamamlandı
+Relation	T8	T11	EffectCause	true	tamamlandı	geçirildi
+Relation	T13	T17	CauseEffect	true	tahribat	ferman
+Relation	T17	T13	EffectCause	true	ferman	tahribat
+Relation	T12	T16	CauseEffect	true	sarsıntılar	nitelendirdiler
+Relation	T16	T12	EffectCause	true	nitelendirdiler	sarsıntılar
+Relation	T13	T16	CauseEffect	true	tahribat	nitelendirdiler
+Relation	T16	T13	EffectCause	true	nitelendirdiler	tahribat
+Relation	T14	T16	CauseEffect	true	kayıp	nitelendirdiler
+Relation	T16	T14	EffectCause	true	nitelendirdiler	kayıp
+Relation	T0	T13	NoRel	true	Deprem	tahribat
+Relation	T0	T3	NoRel	true	Deprem	emredildi
+Relation	T1	T0	NoRel	true	getirildi	Deprem
+Relation	T1	T10	NoRel	true	getirildi	edildi
+Relation	T1	T11	NoRel	true	getirildi	geçirildi
+Relation	T1	T12	NoRel	true	getirildi	sarsıntılar
+Relation	T1	T14	NoRel	true	getirildi	kayıp
+Relation	T1	T15	NoRel	true	getirildi	felaketi
+Relation	T1	T16	NoRel	true	getirildi	nitelendirdiler
+Relation	T1	T7	NoRel	true	getirildi	çalışmaları
+Relation	T1	T8	NoRel	true	getirildi	tamamlandı
+Relation	T10	T0	NoRel	true	edildi	Deprem
+Relation	T10	T15	NoRel	true	edildi	felaketi
+Relation	T10	T16	NoRel	true	edildi	nitelendirdiler
+Relation	T10	T3	NoRel	true	edildi	emredildi
+Relation	T11	T0	NoRel	true	geçirildi	Deprem
+Relation	T11	T16	NoRel	true	geçirildi	nitelendirdiler
+Relation	T11	T17	NoRel	true	geçirildi	ferman
+Relation	T12	T0	NoRel	true	sarsıntılar	Deprem
+Relation	T12	T1	NoRel	true	sarsıntılar	getirildi
+Relation	T12	T14	NoRel	true	sarsıntılar	kayıp
+Relation	T12	T3	NoRel	true	sarsıntılar	emredildi
+Relation	T12	T8	NoRel	true	sarsıntılar	tamamlandı
+Relation	T13	T14	NoRel	true	tahribat	kayıp
+Relation	T14	T1	NoRel	true	kayıp	getirildi
+Relation	T14	T11	NoRel	true	kayıp	geçirildi
+Relation	T14	T8	NoRel	true	kayıp	tamamlandı
+Relation	T15	T1	NoRel	true	felaketi	getirildi
+Relation	T15	T10	NoRel	true	felaketi	edildi
+Relation	T15	T13	NoRel	true	felaketi	tahribat
+Relation	T15	T14	NoRel	true	felaketi	kayıp
+Relation	T15	T2	NoRel	true	felaketi	ferman
+Relation	T15	T3	NoRel	true	felaketi	emredildi
+Relation	T16	T15	NoRel	true	nitelendirdiler	felaketi
+Relation	T16	T17	NoRel	true	nitelendirdiler	ferman
+Relation	T16	T2	NoRel	true	nitelendirdiler	ferman
+Relation	T16	T8	NoRel	true	nitelendirdiler	tamamlandı
+Relation	T17	T15	NoRel	true	ferman	felaketi
+Relation	T17	T2	NoRel	true	ferman	ferman
+Relation	T17	T8	NoRel	true	ferman	tamamlandı
+Relation	T2	T12	NoRel	true	ferman	sarsıntılar
+Relation	T2	T13	NoRel	true	ferman	tahribat
+Relation	T2	T15	NoRel	true	ferman	felaketi
+Relation	T2	T3	NoRel	true	ferman	emredildi
+Relation	T3	T0	NoRel	true	emredildi	Deprem
+Relation	T3	T10	NoRel	true	emredildi	edildi
+Relation	T3	T13	NoRel	true	emredildi	tahribat
+Relation	T3	T7	NoRel	true	emredildi	çalışmaları
+Relation	T3	T8	NoRel	true	emredildi	tamamlandı
+Relation	T7	T0	NoRel	true	çalışmaları	Deprem
+Relation	T7	T16	NoRel	true	çalışmaları	nitelendirdiler
+Relation	T7	T2	NoRel	true	çalışmaları	ferman
+Relation	T7	T3	NoRel	true	çalışmaları	emredildi
+Relation	T8	T14	NoRel	true	tamamlandı	kayıp
+Relation	T8	T3	NoRel	true	tamamlandı	emredildi

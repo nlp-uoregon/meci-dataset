@@ -1,0 +1,30 @@
+Text	La aeronave involucrada en el accidente era un helicóptero AgustaWestland AW169 , con registro G-VSKP , c/n 69018 , manufacturado en 2016 .	Tenía una capacidad de 10 personas sentadas y un peso aproximado de 4.5 toneladas .	Era alimentado por dos motores Pratt & Whitney Canada PW200 .	La AAIB ( Air Accidents Investigation Branch ) abrió una investigación para este accidente .	La caja negra fue recuperada el 28 de octubre con severos daños debido al fuego .
+Event	T0	involucrada	EVENT	12
+Event	T1	accidente	EVENT	30
+Event	T2	manufacturado	EVENT	116
+Event	T3	alimentado	EVENT	228
+Event	T4	abrió	EVENT	333
+Event	T5	investigación	EVENT	343
+Event	T6	accidente	EVENT	367
+Event	T7	recuperada	EVENT	397
+Event	T8	fuego	EVENT	453
+Relation	T0	T1	NoRel	true	involucrada	accidente
+Relation	T0	T4	NoRel	true	involucrada	abrió
+Relation	T0	T7	NoRel	true	involucrada	recuperada
+Relation	T1	T0	NoRel	true	accidente	involucrada
+Relation	T1	T2	NoRel	true	accidente	manufacturado
+Relation	T2	T1	NoRel	true	manufacturado	accidente
+Relation	T3	T2	NoRel	true	alimentado	manufacturado
+Relation	T4	T0	NoRel	true	abrió	involucrada
+Relation	T4	T1	NoRel	true	abrió	accidente
+Relation	T5	T7	NoRel	true	investigación	recuperada
+Relation	T5	T8	NoRel	true	investigación	fuego
+Relation	T6	T5	NoRel	true	accidente	investigación
+Relation	T6	T7	NoRel	true	accidente	recuperada
+Relation	T6	T8	NoRel	true	accidente	fuego
+Relation	T7	T2	NoRel	true	recuperada	manufacturado
+Relation	T8	T0	NoRel	true	fuego	involucrada
+Relation	T8	T1	NoRel	true	fuego	accidente
+Relation	T8	T4	NoRel	true	fuego	abrió
+Relation	T8	T5	NoRel	true	fuego	investigación
+Relation	T8	T7	NoRel	true	fuego	recuperada

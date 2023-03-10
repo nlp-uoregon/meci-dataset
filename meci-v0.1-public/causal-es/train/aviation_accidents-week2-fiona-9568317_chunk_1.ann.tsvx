@@ -1,0 +1,62 @@
+Text	El vuelo 4226 es el accidente de aviación más mortal que involucra a un BAC One-Eleven .	La investigación posterior realizada por las autoridades nigerianas concluyó que el accidente fue causado por un error del piloto .	El vuelo 4226 llevaba 69 pasajeros y 8 miembros de la tripulación en el momento del accidente , contrariamente a los informes iniciales que afirmaban que el avión transportaba a 105 pasajeros .	17 pasajeros abordaron el avión en Kano .	La mayoría de los pasajeros eran nigerianos , y se confirmó que un libanés estaba a bordo del vuelo 4226 .
+Event	T0	vuelo	EVENT	3
+Event	T1	accidente	EVENT	20
+Event	T12	abordaron	EVENT	428
+Event	T13	confirmó	EVENT	508
+Event	T14	vuelo	EVENT	551
+Event	T3	realizada	EVENT	116
+Event	T4	concluyó	EVENT	157
+Event	T5	accidente	EVENT	173
+Event	T6	causado	EVENT	187
+Event	T7	error	EVENT	202
+Event	T8	accidente	EVENT	305
+Event	T9	informes	EVENT	338
+Relation	T7	T5	CauseEffect	true	error	accidente
+Relation	T5	T7	EffectCause	true	accidente	error
+Relation	T0	T14	NoRel	true	vuelo	vuelo
+Relation	T0	T4	NoRel	true	vuelo	concluyó
+Relation	T0	T7	NoRel	true	vuelo	error
+Relation	T1	T12	NoRel	true	accidente	abordaron
+Relation	T1	T4	NoRel	true	accidente	concluyó
+Relation	T1	T5	NoRel	true	accidente	accidente
+Relation	T12	T0	NoRel	true	abordaron	vuelo
+Relation	T12	T1	NoRel	true	abordaron	accidente
+Relation	T12	T4	NoRel	true	abordaron	concluyó
+Relation	T13	T7	NoRel	true	confirmó	error
+Relation	T14	T12	NoRel	true	vuelo	abordaron
+Relation	T14	T3	NoRel	true	vuelo	realizada
+Relation	T14	T4	NoRel	true	vuelo	concluyó
+Relation	T14	T5	NoRel	true	vuelo	accidente
+Relation	T14	T8	NoRel	true	vuelo	accidente
+Relation	T14	T9	NoRel	true	vuelo	informes
+Relation	T3	T1	NoRel	true	realizada	accidente
+Relation	T3	T12	NoRel	true	realizada	abordaron
+Relation	T3	T4	NoRel	true	realizada	concluyó
+Relation	T3	T5	NoRel	true	realizada	accidente
+Relation	T3	T6	NoRel	true	realizada	causado
+Relation	T3	T8	NoRel	true	realizada	accidente
+Relation	T4	T13	NoRel	true	concluyó	confirmó
+Relation	T4	T14	NoRel	true	concluyó	vuelo
+Relation	T4	T6	NoRel	true	concluyó	causado
+Relation	T4	T9	NoRel	true	concluyó	informes
+Relation	T5	T0	NoRel	true	accidente	vuelo
+Relation	T5	T12	NoRel	true	accidente	abordaron
+Relation	T5	T14	NoRel	true	accidente	vuelo
+Relation	T6	T12	NoRel	true	causado	abordaron
+Relation	T6	T3	NoRel	true	causado	realizada
+Relation	T6	T5	NoRel	true	causado	accidente
+Relation	T6	T7	NoRel	true	causado	error
+Relation	T6	T9	NoRel	true	causado	informes
+Relation	T7	T0	NoRel	true	error	vuelo
+Relation	T7	T14	NoRel	true	error	vuelo
+Relation	T7	T3	NoRel	true	error	realizada
+Relation	T7	T4	NoRel	true	error	concluyó
+Relation	T7	T6	NoRel	true	error	causado
+Relation	T8	T0	NoRel	true	accidente	vuelo
+Relation	T8	T12	NoRel	true	accidente	abordaron
+Relation	T8	T13	NoRel	true	accidente	confirmó
+Relation	T8	T3	NoRel	true	accidente	realizada
+Relation	T9	T1	NoRel	true	informes	accidente
+Relation	T9	T12	NoRel	true	informes	abordaron
+Relation	T9	T14	NoRel	true	informes	vuelo
+Relation	T9	T8	NoRel	true	informes	accidente

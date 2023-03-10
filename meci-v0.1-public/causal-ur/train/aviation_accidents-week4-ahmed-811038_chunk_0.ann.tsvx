@@ -1,0 +1,26 @@
+Text	لائن ایئر فلائٹ 610 ایک مسافر بردار طیارہ تھا ، جسے انڈونیشیائی ایئر لائن کمپنی لائن ایئر آپریٹ کرتی تھی ۔	یہ طیارہ عموماً سوکارنو - ہاتا بین الاقوامی ہوائی اڈا ، جکارتا سے دیپتی امیر ہوائی اڈا ، پانگکل پینانگ کی طرف اڑان بھرتا تھا ۔	29 اکتوبر ، 2018ء کو طیارہ اڑان بھرنے کے 13 منٹ بعد تباہ ہو گیا ۔	جہاز کا ملبہ بحیرہ جاوا سے ملا ۔	سرکاری طور پر یہ بتایا گیا کہ تمام 189 مسافر اور عملہ اس حادثے میں مر چکے ہیں ۔
+Event	T3	تباہ	EVENT	286
+Event	T5	ملا	EVENT	327
+Event	T6	حادثے	EVENT	390
+Event	T7	آپریٹ	EVENT	90
+Event	T4	اڑان	EVENT	217
+Event	T1	اڑان	EVENT	261
+Event	T2	مر	EVENT	400
+Relation	T3	T5	CauseEffect	true	تباہ	ملا
+Relation	T5	T3	EffectCause	true	ملا	تباہ
+Relation	T7	T4	CauseEffect	true	آپریٹ	اڑان
+Relation	T4	T7	EffectCause	true	اڑان	آپریٹ
+Relation	T7	T1	CauseEffect	true	آپریٹ	اڑان
+Relation	T1	T7	EffectCause	true	اڑان	آپریٹ
+Relation	T6	T2	CauseEffect	true	حادثے	مر
+Relation	T2	T6	EffectCause	true	مر	حادثے
+Relation	T2	T3	NoRel	true	مر	تباہ
+Relation	T2	T7	NoRel	true	مر	آپریٹ
+Relation	T3	T1	NoRel	true	تباہ	اڑان
+Relation	T3	T6	NoRel	true	تباہ	حادثے
+Relation	T4	T1	NoRel	true	اڑان	اڑان
+Relation	T4	T2	NoRel	true	اڑان	مر
+Relation	T4	T3	NoRel	true	اڑان	تباہ
+Relation	T5	T2	NoRel	true	ملا	مر
+Relation	T5	T4	NoRel	true	ملا	اڑان
+Relation	T6	T7	NoRel	true	حادثے	آپریٹ

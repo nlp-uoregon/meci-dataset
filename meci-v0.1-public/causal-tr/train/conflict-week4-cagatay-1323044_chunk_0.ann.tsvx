@@ -1,0 +1,40 @@
+Text	SIPER SAVAŞI ya da MEVZI HARBI , büyük bölümü askerî birliklerin , düşmanın hafif silahlarla açtığı ateşle yüz yüze kaldığı ve toplarından korunduğu siperlerde geçen savaş türüdür .	Hareket harbinin tersine , düşman güçlerinin zamanla eridiği yıpratma savaşının temel ögesidir .	I. Dünya Savaşı , cepheler arasında kazılan ve dikenli tellerle korunan geniş siperlere tanıklık etmiştir .	Karşılıklı siperler arasında kalan alan ( tarafsız bölge ) ise iki tarafın topları tarafından dövülmüştür .	
+Event	T0	açtığı	EVENT	93
+Event	T1	kaldığı	EVENT	116
+Event	T3	dövülmüştür	EVENT	481
+Event	T4	korunduğu	EVENT	139
+Event	T5	savaş	EVENT	166
+Event	T6	yıpratma	EVENT	243
+Event	T7	I. Dünya Savaşı	EVENT	279
+Event	T8	kazılan	EVENT	315
+Event	T9	korunan	EVENT	343
+Event	T2	tanıklık etmiştir	EVENT	367
+Relation	T0	T3	NoRel	true	açtığı	dövülmüştür
+Relation	T0	T6	NoRel	true	açtığı	yıpratma
+Relation	T0	T8	NoRel	true	açtığı	kazılan
+Relation	T1	T0	NoRel	true	kaldığı	açtığı
+Relation	T1	T3	NoRel	true	kaldığı	dövülmüştür
+Relation	T1	T5	NoRel	true	kaldığı	savaş
+Relation	T1	T8	NoRel	true	kaldığı	kazılan
+Relation	T1	T9	NoRel	true	kaldığı	korunan
+Relation	T2	T0	NoRel	true	tanıklık etmiştir	açtığı
+Relation	T2	T3	NoRel	true	tanıklık etmiştir	dövülmüştür
+Relation	T2	T9	NoRel	true	tanıklık etmiştir	korunan
+Relation	T3	T0	NoRel	true	dövülmüştür	açtığı
+Relation	T3	T2	NoRel	true	dövülmüştür	tanıklık etmiştir
+Relation	T3	T8	NoRel	true	dövülmüştür	kazılan
+Relation	T3	T9	NoRel	true	dövülmüştür	korunan
+Relation	T4	T1	NoRel	true	korunduğu	kaldığı
+Relation	T4	T3	NoRel	true	korunduğu	dövülmüştür
+Relation	T5	T0	NoRel	true	savaş	açtığı
+Relation	T6	T0	NoRel	true	yıpratma	açtığı
+Relation	T6	T1	NoRel	true	yıpratma	kaldığı
+Relation	T6	T2	NoRel	true	yıpratma	tanıklık etmiştir
+Relation	T6	T3	NoRel	true	yıpratma	dövülmüştür
+Relation	T6	T4	NoRel	true	yıpratma	korunduğu
+Relation	T6	T7	NoRel	true	yıpratma	I. Dünya Savaşı
+Relation	T7	T6	NoRel	true	I. Dünya Savaşı	yıpratma
+Relation	T8	T0	NoRel	true	kazılan	açtığı
+Relation	T8	T5	NoRel	true	kazılan	savaş
+Relation	T8	T9	NoRel	true	kazılan	korunan
+Relation	T9	T5	NoRel	true	korunan	savaş

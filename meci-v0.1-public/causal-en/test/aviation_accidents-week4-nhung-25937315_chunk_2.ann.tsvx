@@ -1,0 +1,33 @@
+Text	He was far less experienced than the captain , having worked for Ethiopian Airlines for only a year and having 673 flight hours , 350 of them on the Boeing 737 .	The Boeing 737 took off from runway 21 at Beirut – Rafic Hariri International Airport in stormy weather , with 82 passengers and eight crew members on board .	The METAR data indicated wind speeds of from varying directions , with thunderstorms in the vicinity of the airport .	The aircraft climbed erratically to , stalled and entered a spiral dive to the left .	Radar contact was lost a few seconds before it crashed into the Mediterranean Sea at 02:41 local time ( UTC +2 / EET ) , four or five minutes after take off .
+Event	T0	worked	EVENT	54
+Event	T1	flight	EVENT	115
+Event	T3	thunderstorms	EVENT	392
+Event	T4	stalled	EVENT	477
+Event	T5	entered	EVENT	489
+Event	T6	dive	EVENT	506
+Event	T7	contact	EVENT	531
+Event	T8	lost	EVENT	543
+Event	T9	took off	EVENT	177
+Event	T10	stormy	EVENT	251
+Event	T11	climbed	EVENT	452
+Event	T12	crashed	EVENT	572
+Event	T13	take off	EVENT	673
+Event	T2	indicated	EVENT	336
+Relation	T12	T8	CauseEffect	true	crashed	lost
+Relation	T8	T12	EffectCause	true	lost	crashed
+Relation	T0	T1	NoRel	true	worked	flight
+Relation	T0	T9	NoRel	true	worked	took off
+Relation	T1	T12	NoRel	true	flight	crashed
+Relation	T10	T13	NoRel	true	stormy	take off
+Relation	T12	T7	NoRel	true	crashed	contact
+Relation	T13	T9	NoRel	true	take off	took off
+Relation	T2	T6	NoRel	true	indicated	dive
+Relation	T2	T9	NoRel	true	indicated	took off
+Relation	T3	T0	NoRel	true	thunderstorms	worked
+Relation	T4	T1	NoRel	true	stalled	flight
+Relation	T4	T12	NoRel	true	stalled	crashed
+Relation	T6	T1	NoRel	true	dive	flight
+Relation	T7	T2	NoRel	true	contact	indicated
+Relation	T7	T3	NoRel	true	contact	thunderstorms
+Relation	T7	T8	NoRel	true	contact	lost
+Relation	T7	T9	NoRel	true	contact	took off

@@ -1,0 +1,57 @@
+Text	6 yolcu öldü ve 55 kişi yaralandı onların 13_ü çiddi yaralı .	Kazaya demiryolu üzerinde kullanılmasına uygun olmayan retardant sepep oldu .	Bu madde kazadan tajminen 10 dakika önce demiryolu üzerine püskürtülmüştü .	Bu madde ray üzerinde kayganlık yarattığından frenlemeyi imkânsızlaştırıyordu ..	Çarpışmadan 30 dakika sonra , kurtarma operasyonunda , bir kurtarma treni aynı problemle karşılaşıyor ve çok eşit noktada raydan çıkıyordu .
+Event	T0	öldü	EVENT	8
+Event	T1	oldu	EVENT	133
+Event	T2	püskürtülmüştü	EVENT	199
+Event	T3	operasyonunda	EVENT	336
+Event	T4	karşılaşıyor	EVENT	386
+Event	T5	çıkıyordu	EVENT	426
+Event	T6	yaralandı	EVENT	24
+Event	T7	yaralı	EVENT	53
+Event	T8	retardant	EVENT	117
+Event	T9	Kazaya	EVENT	62
+Event	T10	imkânsızlaştırıyordu	EVENT	273
+Relation	T9	T0	CauseEffect	true	Kazaya	öldü
+Relation	T0	T9	EffectCause	true	öldü	Kazaya
+Relation	T9	T6	CauseEffect	true	Kazaya	yaralandı
+Relation	T6	T9	EffectCause	true	yaralandı	Kazaya
+Relation	T9	T7	CauseEffect	true	Kazaya	yaralı
+Relation	T7	T9	EffectCause	true	yaralı	Kazaya
+Relation	T8	T2	CauseEffect	true	retardant	püskürtülmüştü
+Relation	T2	T8	EffectCause	true	püskürtülmüştü	retardant
+Relation	T8	T10	CauseEffect	true	retardant	imkânsızlaştırıyordu
+Relation	T10	T8	EffectCause	true	imkânsızlaştırıyordu	retardant
+Relation	T9	T3	CauseEffect	true	Kazaya	operasyonunda
+Relation	T3	T9	EffectCause	true	operasyonunda	Kazaya
+Relation	T3	T4	CauseEffect	true	operasyonunda	karşılaşıyor
+Relation	T4	T3	EffectCause	true	karşılaşıyor	operasyonunda
+Relation	T10	T9	CauseEffect	true	imkânsızlaştırıyordu	Kazaya
+Relation	T9	T10	EffectCause	true	Kazaya	imkânsızlaştırıyordu
+Relation	T10	T4	CauseEffect	true	imkânsızlaştırıyordu	karşılaşıyor
+Relation	T4	T10	EffectCause	true	karşılaşıyor	imkânsızlaştırıyordu
+Relation	T4	T5	CauseEffect	true	karşılaşıyor	çıkıyordu
+Relation	T5	T4	EffectCause	true	çıkıyordu	karşılaşıyor
+Relation	T0	T5	NoRel	true	öldü	çıkıyordu
+Relation	T1	T2	NoRel	true	oldu	püskürtülmüştü
+Relation	T1	T3	NoRel	true	oldu	operasyonunda
+Relation	T1	T5	NoRel	true	oldu	çıkıyordu
+Relation	T1	T8	NoRel	true	oldu	retardant
+Relation	T10	T3	NoRel	true	imkânsızlaştırıyordu	operasyonunda
+Relation	T2	T0	NoRel	true	püskürtülmüştü	öldü
+Relation	T2	T4	NoRel	true	püskürtülmüştü	karşılaşıyor
+Relation	T2	T5	NoRel	true	püskürtülmüştü	çıkıyordu
+Relation	T2	T6	NoRel	true	püskürtülmüştü	yaralandı
+Relation	T3	T6	NoRel	true	operasyonunda	yaralandı
+Relation	T3	T8	NoRel	true	operasyonunda	retardant
+Relation	T4	T8	NoRel	true	karşılaşıyor	retardant
+Relation	T5	T10	NoRel	true	çıkıyordu	imkânsızlaştırıyordu
+Relation	T5	T7	NoRel	true	çıkıyordu	yaralı
+Relation	T6	T0	NoRel	true	yaralandı	öldü
+Relation	T6	T1	NoRel	true	yaralandı	oldu
+Relation	T6	T10	NoRel	true	yaralandı	imkânsızlaştırıyordu
+Relation	T6	T3	NoRel	true	yaralandı	operasyonunda
+Relation	T7	T4	NoRel	true	yaralı	karşılaşıyor
+Relation	T7	T8	NoRel	true	yaralı	retardant
+Relation	T8	T0	NoRel	true	retardant	öldü
+Relation	T8	T7	NoRel	true	retardant	yaralı
+Relation	T9	T1	NoRel	true	Kazaya	oldu
+Relation	T9	T2	NoRel	true	Kazaya	püskürtülmüştü

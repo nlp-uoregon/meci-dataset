@@ -1,0 +1,42 @@
+Text	انگریز سارا غلہ دوسرے ممالک میں اپنی بر سر پیکار فوجوں کو بھیج رہے تھے جس کی وجہ سے غلے کی قلت ہو گئی تھی ۔	انگریزوں کو یہ خطرہ بھی تھا کہ جاپانی برما کی طرف سے ہندوستان میں نہ داخل ہو جائیں اس لیے انہوں نے بنگال کا سارا اناج برآمد کر دیا کہ جاپانی فوج کو غلہ نہ مل سکے ۔	اس قحط میں 30 لاکھ لوگ مر گئے ۔	-	ٹائمز آف انڈیا اخبار نے 16 نومبر 1943 ء کو لکھا :
+Event	T0	قلت	EVENT	91
+Event	T1	خطرہ	EVENT	123
+Event	T2	برآمد	EVENT	226
+Event	T3	قحط	EVENT	275
+Event	T5	لکھا	EVENT	349
+Event	T6	بھیج	EVENT	58
+Event	T7	پیکار	EVENT	43
+Event	T8	داخل	EVENT	177
+Event	T9	مل	EVENT	263
+Event	T10	مر	EVENT	295
+Relation	T6	T0	CauseEffect	true	بھیج	قلت
+Relation	T0	T6	EffectCause	true	قلت	بھیج
+Relation	T2	T9	CauseEffect	true	برآمد	مل
+Relation	T9	T2	EffectCause	true	مل	برآمد
+Relation	T1	T2	CauseEffect	true	خطرہ	برآمد
+Relation	T2	T1	EffectCause	true	برآمد	خطرہ
+Relation	T3	T10	CauseEffect	true	قحط	مر
+Relation	T10	T3	EffectCause	true	مر	قحط
+Relation	T0	T1	NoRel	true	قلت	خطرہ
+Relation	T1	T3	NoRel	true	خطرہ	قحط
+Relation	T1	T7	NoRel	true	خطرہ	پیکار
+Relation	T10	T5	NoRel	true	مر	لکھا
+Relation	T10	T7	NoRel	true	مر	پیکار
+Relation	T10	T8	NoRel	true	مر	داخل
+Relation	T2	T6	NoRel	true	برآمد	بھیج
+Relation	T2	T8	NoRel	true	برآمد	داخل
+Relation	T3	T6	NoRel	true	قحط	بھیج
+Relation	T5	T1	NoRel	true	لکھا	خطرہ
+Relation	T5	T10	NoRel	true	لکھا	مر
+Relation	T5	T2	NoRel	true	لکھا	برآمد
+Relation	T5	T3	NoRel	true	لکھا	قحط
+Relation	T5	T8	NoRel	true	لکھا	داخل
+Relation	T5	T9	NoRel	true	لکھا	مل
+Relation	T6	T8	NoRel	true	بھیج	داخل
+Relation	T7	T5	NoRel	true	پیکار	لکھا
+Relation	T7	T6	NoRel	true	پیکار	بھیج
+Relation	T8	T2	NoRel	true	داخل	برآمد
+Relation	T9	T1	NoRel	true	مل	خطرہ
+Relation	T9	T10	NoRel	true	مل	مر
+Relation	T9	T5	NoRel	true	مل	لکھا
+Relation	T9	T6	NoRel	true	مل	بھیج

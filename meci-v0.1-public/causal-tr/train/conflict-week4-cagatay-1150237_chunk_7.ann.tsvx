@@ -1,0 +1,100 @@
+Text	Ayrıca halktan Blackwater ölümleriyle ilgili sorumluların ortaya çıkartılmasına dair işbirliği yapması istenir .	Şehirde çıkan çatışmalar sonrasında 6 Nisan günü askeri kaynaklar şehirde denetimin tam anlamıyla sağlanamayabileceği gerçeğini kabul etmeye başlarlar .	Bu sırada şehir nüfusunun üçte biri çatışmalardan kaçarak şehri terk etmiştir .	Muharebe sırasında şehirdeki iki büyük hastane kapatılmak zorunda kalır .	Felluce’de yoğun yaşanan çarpışmalar sırasında Irak Direnişinin diğer unsurları farklı bölgelerde ABD hedeflerine saldırı yapma fırsatı yakalar .
+Event	T0	ölümleriyle	EVENT	26
+Event	T1	çatışmalar	EVENT	127
+Event	T2	kabul	EVENT	241
+Event	T3	etmiştir	EVENT	335
+Event	T4	Muharebe	EVENT	346
+Event	T5	kapatılmak	EVENT	393
+Event	T6	çarpışmalar	EVENT	445
+Event	T7	yakalar	EVENT	556
+Event	T8	çıkartılmasına	EVENT	65
+Event	T9	işbirliği	EVENT	85
+Event	T10	istenir	EVENT	103
+Event	T11	denetimin	EVENT	187
+Event	T12	kaçarak	EVENT	316
+Event	T13	çatışmalardan	EVENT	302
+Event	T14	saldırı	EVENT	534
+Relation	T1	T2	CauseEffect	true	çatışmalar	kabul
+Relation	T2	T1	EffectCause	true	kabul	çatışmalar
+Relation	T1	T12	CauseEffect	true	çatışmalar	kaçarak
+Relation	T12	T1	EffectCause	true	kaçarak	çatışmalar
+Relation	T13	T12	CauseEffect	true	çatışmalardan	kaçarak
+Relation	T12	T13	EffectCause	true	kaçarak	çatışmalardan
+Relation	T4	T5	CauseEffect	true	Muharebe	kapatılmak
+Relation	T5	T4	EffectCause	true	kapatılmak	Muharebe
+Relation	T0	T11	NoRel	true	ölümleriyle	denetimin
+Relation	T0	T14	NoRel	true	ölümleriyle	saldırı
+Relation	T0	T2	NoRel	true	ölümleriyle	kabul
+Relation	T0	T3	NoRel	true	ölümleriyle	etmiştir
+Relation	T0	T4	NoRel	true	ölümleriyle	Muharebe
+Relation	T0	T8	NoRel	true	ölümleriyle	çıkartılmasına
+Relation	T0	T9	NoRel	true	ölümleriyle	işbirliği
+Relation	T1	T13	NoRel	true	çatışmalar	çatışmalardan
+Relation	T1	T4	NoRel	true	çatışmalar	Muharebe
+Relation	T1	T8	NoRel	true	çatışmalar	çıkartılmasına
+Relation	T1	T9	NoRel	true	çatışmalar	işbirliği
+Relation	T10	T0	NoRel	true	istenir	ölümleriyle
+Relation	T10	T1	NoRel	true	istenir	çatışmalar
+Relation	T10	T13	NoRel	true	istenir	çatışmalardan
+Relation	T10	T2	NoRel	true	istenir	kabul
+Relation	T10	T4	NoRel	true	istenir	Muharebe
+Relation	T10	T5	NoRel	true	istenir	kapatılmak
+Relation	T10	T9	NoRel	true	istenir	işbirliği
+Relation	T11	T1	NoRel	true	denetimin	çatışmalar
+Relation	T11	T10	NoRel	true	denetimin	istenir
+Relation	T11	T2	NoRel	true	denetimin	kabul
+Relation	T11	T3	NoRel	true	denetimin	etmiştir
+Relation	T11	T4	NoRel	true	denetimin	Muharebe
+Relation	T11	T5	NoRel	true	denetimin	kapatılmak
+Relation	T11	T6	NoRel	true	denetimin	çarpışmalar
+Relation	T13	T0	NoRel	true	çatışmalardan	ölümleriyle
+Relation	T13	T10	NoRel	true	çatışmalardan	istenir
+Relation	T13	T14	NoRel	true	çatışmalardan	saldırı
+Relation	T13	T2	NoRel	true	çatışmalardan	kabul
+Relation	T13	T5	NoRel	true	çatışmalardan	kapatılmak
+Relation	T13	T6	NoRel	true	çatışmalardan	çarpışmalar
+Relation	T13	T7	NoRel	true	çatışmalardan	yakalar
+Relation	T13	T8	NoRel	true	çatışmalardan	çıkartılmasına
+Relation	T14	T0	NoRel	true	saldırı	ölümleriyle
+Relation	T14	T1	NoRel	true	saldırı	çatışmalar
+Relation	T14	T12	NoRel	true	saldırı	kaçarak
+Relation	T14	T6	NoRel	true	saldırı	çarpışmalar
+Relation	T14	T7	NoRel	true	saldırı	yakalar
+Relation	T2	T0	NoRel	true	kabul	ölümleriyle
+Relation	T2	T14	NoRel	true	kabul	saldırı
+Relation	T2	T3	NoRel	true	kabul	etmiştir
+Relation	T2	T4	NoRel	true	kabul	Muharebe
+Relation	T2	T8	NoRel	true	kabul	çıkartılmasına
+Relation	T3	T11	NoRel	true	etmiştir	denetimin
+Relation	T3	T14	NoRel	true	etmiştir	saldırı
+Relation	T3	T4	NoRel	true	etmiştir	Muharebe
+Relation	T4	T13	NoRel	true	Muharebe	çatışmalardan
+Relation	T4	T6	NoRel	true	Muharebe	çarpışmalar
+Relation	T5	T3	NoRel	true	kapatılmak	etmiştir
+Relation	T5	T6	NoRel	true	kapatılmak	çarpışmalar
+Relation	T5	T7	NoRel	true	kapatılmak	yakalar
+Relation	T5	T8	NoRel	true	kapatılmak	çıkartılmasına
+Relation	T6	T13	NoRel	true	çarpışmalar	çatışmalardan
+Relation	T6	T3	NoRel	true	çarpışmalar	etmiştir
+Relation	T6	T5	NoRel	true	çarpışmalar	kapatılmak
+Relation	T6	T9	NoRel	true	çarpışmalar	işbirliği
+Relation	T7	T0	NoRel	true	yakalar	ölümleriyle
+Relation	T7	T1	NoRel	true	yakalar	çatışmalar
+Relation	T7	T12	NoRel	true	yakalar	kaçarak
+Relation	T7	T13	NoRel	true	yakalar	çatışmalardan
+Relation	T7	T14	NoRel	true	yakalar	saldırı
+Relation	T7	T2	NoRel	true	yakalar	kabul
+Relation	T7	T3	NoRel	true	yakalar	etmiştir
+Relation	T7	T5	NoRel	true	yakalar	kapatılmak
+Relation	T8	T0	NoRel	true	çıkartılmasına	ölümleriyle
+Relation	T8	T1	NoRel	true	çıkartılmasına	çatışmalar
+Relation	T8	T11	NoRel	true	çıkartılmasına	denetimin
+Relation	T8	T12	NoRel	true	çıkartılmasına	kaçarak
+Relation	T8	T13	NoRel	true	çıkartılmasına	çatışmalardan
+Relation	T8	T5	NoRel	true	çıkartılmasına	kapatılmak
+Relation	T8	T9	NoRel	true	çıkartılmasına	işbirliği
+Relation	T9	T0	NoRel	true	işbirliği	ölümleriyle
+Relation	T9	T2	NoRel	true	işbirliği	kabul
+Relation	T9	T4	NoRel	true	işbirliği	Muharebe
+Relation	T9	T5	NoRel	true	işbirliği	kapatılmak
+Relation	T9	T7	NoRel	true	işbirliği	yakalar

@@ -1,0 +1,59 @@
+Text	LOS INCENDIOS FORESTALES DE ARGELIA 2021 son incendios forestales que comenzaron desde principios de julio de 2021 .	El este de Argelia fue testigo de grandes incendios que devoraron decenas de hectáreas , especialmente en la región de Aures , y múltiples incendios forestales en Argelia hasta la noche del 11 de agosto de 2021 mataron a 69 personas , incluidos 28 soldados y 41 civiles .	Al menos otras 12 personas resultaron heridas , además de la quema de decenas de casas y la quema de olivares , fuente de sustento para la gente de Tizi Ouzou .	Una segunda ola estalló el lunes 9 de agosto de 2021 con un total de 71 incendios ( o más de 100 ) en 18 estados del país .	- 4 de julio de 2021 , estallan incendios en las montañas de Aurés .
+Event	T0	incendios	EVENT	45
+Event	T1	comenzaron	EVENT	70
+Event	T2	testigo	EVENT	140
+Event	T3	incendios	EVENT	159
+Event	T4	devoraron	EVENT	173
+Event	T5	mataron	EVENT	328
+Event	T6	heridas	EVENT	427
+Event	T7	quema	EVENT	450
+Event	T8	quema	EVENT	481
+Event	T9	estalló	EVENT	566
+Event	T10	incendios	EVENT	622
+Event	T11	incendios	EVENT	706
+Relation	T3	T5	CauseEffect	true	incendios	mataron
+Relation	T5	T3	EffectCause	true	mataron	incendios
+Relation	T0	T3	NoRel	true	incendios	incendios
+Relation	T0	T5	NoRel	true	incendios	mataron
+Relation	T0	T6	NoRel	true	incendios	heridas
+Relation	T1	T2	NoRel	true	comenzaron	testigo
+Relation	T1	T3	NoRel	true	comenzaron	incendios
+Relation	T10	T2	NoRel	true	incendios	testigo
+Relation	T10	T4	NoRel	true	incendios	devoraron
+Relation	T11	T1	NoRel	true	incendios	comenzaron
+Relation	T11	T2	NoRel	true	incendios	testigo
+Relation	T11	T3	NoRel	true	incendios	incendios
+Relation	T11	T6	NoRel	true	incendios	heridas
+Relation	T2	T0	NoRel	true	testigo	incendios
+Relation	T2	T1	NoRel	true	testigo	comenzaron
+Relation	T2	T3	NoRel	true	testigo	incendios
+Relation	T2	T4	NoRel	true	testigo	devoraron
+Relation	T2	T6	NoRel	true	testigo	heridas
+Relation	T2	T8	NoRel	true	testigo	quema
+Relation	T3	T1	NoRel	true	incendios	comenzaron
+Relation	T3	T7	NoRel	true	incendios	quema
+Relation	T3	T9	NoRel	true	incendios	estalló
+Relation	T4	T0	NoRel	true	devoraron	incendios
+Relation	T4	T1	NoRel	true	devoraron	comenzaron
+Relation	T4	T2	NoRel	true	devoraron	testigo
+Relation	T4	T3	NoRel	true	devoraron	incendios
+Relation	T4	T7	NoRel	true	devoraron	quema
+Relation	T4	T8	NoRel	true	devoraron	quema
+Relation	T5	T1	NoRel	true	mataron	comenzaron
+Relation	T5	T2	NoRel	true	mataron	testigo
+Relation	T5	T7	NoRel	true	mataron	quema
+Relation	T5	T9	NoRel	true	mataron	estalló
+Relation	T6	T10	NoRel	true	heridas	incendios
+Relation	T6	T2	NoRel	true	heridas	testigo
+Relation	T6	T8	NoRel	true	heridas	quema
+Relation	T6	T9	NoRel	true	heridas	estalló
+Relation	T7	T11	NoRel	true	quema	incendios
+Relation	T7	T3	NoRel	true	quema	incendios
+Relation	T8	T10	NoRel	true	quema	incendios
+Relation	T8	T2	NoRel	true	quema	testigo
+Relation	T8	T4	NoRel	true	quema	devoraron
+Relation	T9	T0	NoRel	true	estalló	incendios
+Relation	T9	T1	NoRel	true	estalló	comenzaron
+Relation	T9	T10	NoRel	true	estalló	incendios
+Relation	T9	T3	NoRel	true	estalló	incendios
+Relation	T9	T5	NoRel	true	estalló	mataron

@@ -1,0 +1,109 @@
+Text	El 20 de noviembre de 2016 , GCAA dijo que la investigación completa podría continuar hasta 2019 .	La GCAA emitió una declaración provisional en agosto de 2017 .	Después del accidente , el aeropuerto estuvo cerrado durante 5 horas y media ; varios vuelos fueron desviados a aeropuertos cercanos , como el Aeropuerto Internacional de Abu Dabi , el aeropuerto internacional de Sharjah y el aeropuerto internacional Al Maktoum .	El cierre llevó a Emirates y Flydubai a cancelar varios de sus vuelos , y también afectó a 23,000 pasajeros en el aeropuerto .	El Aeropuerto Internacional de Dubái reanudó sus operaciones a las 18:30 hora local , a capacidad restringida , utilizando solo una pista y maximizando el uso de las pistas en el Aeropuerto Internacional Al Maktoum .
+Event	T0	dijo	EVENT	34
+Event	T1	investigación	EVENT	46
+Event	T2	continuar	EVENT	76
+Event	T3	emitió	EVENT	107
+Event	T4	accidente	EVENT	174
+Event	T5	cerrado	EVENT	207
+Event	T6	desviados	EVENT	262
+Event	T7	llevó	EVENT	436
+Event	T8	cancelar	EVENT	466
+Event	T9	vuelos	EVENT	489
+Event	T10	afectó	EVENT	508
+Event	T11	reanudó	EVENT	590
+Event	T12	operaciones	EVENT	602
+Event	T13	utilizando	EVENT	665
+Event	T14	maximizando	EVENT	693
+Event	T15	uso	EVENT	708
+Event	T16	cierre	EVENT	429
+Relation	T16	T8	CauseEffect	true	cierre	cancelar
+Relation	T8	T16	EffectCause	true	cancelar	cierre
+Relation	T16	T10	CauseEffect	true	cierre	afectó
+Relation	T10	T16	EffectCause	true	afectó	cierre
+Relation	T0	T10	NoRel	true	dijo	afectó
+Relation	T0	T14	NoRel	true	dijo	maximizando
+Relation	T0	T6	NoRel	true	dijo	desviados
+Relation	T0	T9	NoRel	true	dijo	vuelos
+Relation	T1	T0	NoRel	true	investigación	dijo
+Relation	T1	T13	NoRel	true	investigación	utilizando
+Relation	T1	T14	NoRel	true	investigación	maximizando
+Relation	T1	T15	NoRel	true	investigación	uso
+Relation	T1	T16	NoRel	true	investigación	cierre
+Relation	T10	T0	NoRel	true	afectó	dijo
+Relation	T10	T1	NoRel	true	afectó	investigación
+Relation	T10	T12	NoRel	true	afectó	operaciones
+Relation	T10	T15	NoRel	true	afectó	uso
+Relation	T10	T4	NoRel	true	afectó	accidente
+Relation	T10	T6	NoRel	true	afectó	desviados
+Relation	T10	T7	NoRel	true	afectó	llevó
+Relation	T10	T9	NoRel	true	afectó	vuelos
+Relation	T11	T1	NoRel	true	reanudó	investigación
+Relation	T11	T14	NoRel	true	reanudó	maximizando
+Relation	T11	T15	NoRel	true	reanudó	uso
+Relation	T11	T2	NoRel	true	reanudó	continuar
+Relation	T11	T3	NoRel	true	reanudó	emitió
+Relation	T11	T6	NoRel	true	reanudó	desviados
+Relation	T11	T8	NoRel	true	reanudó	cancelar
+Relation	T11	T9	NoRel	true	reanudó	vuelos
+Relation	T12	T15	NoRel	true	operaciones	uso
+Relation	T12	T16	NoRel	true	operaciones	cierre
+Relation	T12	T4	NoRel	true	operaciones	accidente
+Relation	T12	T8	NoRel	true	operaciones	cancelar
+Relation	T12	T9	NoRel	true	operaciones	vuelos
+Relation	T13	T2	NoRel	true	utilizando	continuar
+Relation	T13	T3	NoRel	true	utilizando	emitió
+Relation	T13	T4	NoRel	true	utilizando	accidente
+Relation	T13	T5	NoRel	true	utilizando	cerrado
+Relation	T14	T0	NoRel	true	maximizando	dijo
+Relation	T14	T10	NoRel	true	maximizando	afectó
+Relation	T14	T12	NoRel	true	maximizando	operaciones
+Relation	T14	T6	NoRel	true	maximizando	desviados
+Relation	T14	T8	NoRel	true	maximizando	cancelar
+Relation	T15	T0	NoRel	true	uso	dijo
+Relation	T15	T12	NoRel	true	uso	operaciones
+Relation	T15	T4	NoRel	true	uso	accidente
+Relation	T15	T5	NoRel	true	uso	cerrado
+Relation	T16	T1	NoRel	true	cierre	investigación
+Relation	T16	T11	NoRel	true	cierre	reanudó
+Relation	T16	T2	NoRel	true	cierre	continuar
+Relation	T16	T4	NoRel	true	cierre	accidente
+Relation	T2	T11	NoRel	true	continuar	reanudó
+Relation	T2	T16	NoRel	true	continuar	cierre
+Relation	T2	T4	NoRel	true	continuar	accidente
+Relation	T2	T6	NoRel	true	continuar	desviados
+Relation	T2	T9	NoRel	true	continuar	vuelos
+Relation	T3	T11	NoRel	true	emitió	reanudó
+Relation	T3	T4	NoRel	true	emitió	accidente
+Relation	T3	T5	NoRel	true	emitió	cerrado
+Relation	T3	T7	NoRel	true	emitió	llevó
+Relation	T4	T0	NoRel	true	accidente	dijo
+Relation	T4	T10	NoRel	true	accidente	afectó
+Relation	T4	T11	NoRel	true	accidente	reanudó
+Relation	T4	T15	NoRel	true	accidente	uso
+Relation	T4	T3	NoRel	true	accidente	emitió
+Relation	T4	T5	NoRel	true	accidente	cerrado
+Relation	T5	T10	NoRel	true	cerrado	afectó
+Relation	T5	T14	NoRel	true	cerrado	maximizando
+Relation	T5	T6	NoRel	true	cerrado	desviados
+Relation	T5	T8	NoRel	true	cerrado	cancelar
+Relation	T6	T0	NoRel	true	desviados	dijo
+Relation	T6	T11	NoRel	true	desviados	reanudó
+Relation	T6	T12	NoRel	true	desviados	operaciones
+Relation	T6	T13	NoRel	true	desviados	utilizando
+Relation	T6	T16	NoRel	true	desviados	cierre
+Relation	T7	T11	NoRel	true	llevó	reanudó
+Relation	T7	T13	NoRel	true	llevó	utilizando
+Relation	T7	T14	NoRel	true	llevó	maximizando
+Relation	T7	T3	NoRel	true	llevó	emitió
+Relation	T7	T6	NoRel	true	llevó	desviados
+Relation	T7	T8	NoRel	true	llevó	cancelar
+Relation	T8	T10	NoRel	true	cancelar	afectó
+Relation	T8	T12	NoRel	true	cancelar	operaciones
+Relation	T8	T13	NoRel	true	cancelar	utilizando
+Relation	T8	T9	NoRel	true	cancelar	vuelos
+Relation	T9	T1	NoRel	true	vuelos	investigación
+Relation	T9	T11	NoRel	true	vuelos	reanudó
+Relation	T9	T12	NoRel	true	vuelos	operaciones
+Relation	T9	T13	NoRel	true	vuelos	utilizando
+Relation	T9	T15	NoRel	true	vuelos	uso
+Relation	T9	T8	NoRel	true	vuelos	cancelar

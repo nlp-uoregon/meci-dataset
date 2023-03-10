@@ -1,0 +1,83 @@
+Text	1975 LICE DEPREMI , 6 Eylül 1975 tarihinde yerel saatle 12: 20'de ( UTC : 09: 20 ) Diyarbakır'ın Lice ilçesi ve köylerinde oluşan 23 saniye süren şiddetli yer sarsıntısı .	Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü depremin büyüklüğünü 6,6 M _ ( s ) olarak açıkladı .	2385 kişi öldü , 8149 bina hasar gördü veya yıkıldı .	Bazıları maddi hasarlara sebep olan 3 -4 ay süresince artçı sarsıntılar devam etti .	Yüzey dalgası büyüklüğü 6.6 olarak belirlenen deprem sonucunda Diyarbakır merkezde , Lice’de ve çevre köylerde 2.385 kişi yaşamını kaybetmiştir .
+Event	T0	oluşan	EVENT	123
+Event	T1	sarsıntısı	EVENT	159
+Event	T2	açıkladı	EVENT	265
+Event	T3	öldü	EVENT	286
+Event	T4	gördü	EVENT	309
+Event	T5	yıkıldı	EVENT	320
+Event	T6	etti	EVENT	408
+Event	T7	deprem	EVENT	461
+Event	T8	kaybetmiştir	EVENT	546
+Event	T9	1975 LICE DEPREMI	EVENT	0
+Event	T10	süren	EVENT	140
+Event	T11	hasarlara	EVENT	345
+Event	T12	sarsıntılar	EVENT	390
+Event	T13	belirlenen	EVENT	450
+Relation	T12	T11	CauseEffect	true	sarsıntılar	hasarlara
+Relation	T11	T12	EffectCause	true	hasarlara	sarsıntılar
+Relation	T6	T11	CauseEffect	true	etti	hasarlara
+Relation	T11	T6	EffectCause	true	hasarlara	etti
+Relation	T7	T8	CauseEffect	true	deprem	kaybetmiştir
+Relation	T8	T7	EffectCause	true	kaybetmiştir	deprem
+Relation	T0	T10	NoRel	true	oluşan	süren
+Relation	T0	T11	NoRel	true	oluşan	hasarlara
+Relation	T0	T12	NoRel	true	oluşan	sarsıntılar
+Relation	T0	T2	NoRel	true	oluşan	açıkladı
+Relation	T1	T2	NoRel	true	sarsıntısı	açıkladı
+Relation	T1	T7	NoRel	true	sarsıntısı	deprem
+Relation	T1	T8	NoRel	true	sarsıntısı	kaybetmiştir
+Relation	T1	T9	NoRel	true	sarsıntısı	1975 LICE DEPREMI
+Relation	T10	T2	NoRel	true	süren	açıkladı
+Relation	T10	T3	NoRel	true	süren	öldü
+Relation	T10	T4	NoRel	true	süren	gördü
+Relation	T10	T5	NoRel	true	süren	yıkıldı
+Relation	T10	T7	NoRel	true	süren	deprem
+Relation	T10	T8	NoRel	true	süren	kaybetmiştir
+Relation	T11	T10	NoRel	true	hasarlara	süren
+Relation	T11	T2	NoRel	true	hasarlara	açıkladı
+Relation	T11	T5	NoRel	true	hasarlara	yıkıldı
+Relation	T12	T0	NoRel	true	sarsıntılar	oluşan
+Relation	T12	T3	NoRel	true	sarsıntılar	öldü
+Relation	T12	T4	NoRel	true	sarsıntılar	gördü
+Relation	T13	T0	NoRel	true	belirlenen	oluşan
+Relation	T13	T1	NoRel	true	belirlenen	sarsıntısı
+Relation	T13	T10	NoRel	true	belirlenen	süren
+Relation	T13	T11	NoRel	true	belirlenen	hasarlara
+Relation	T13	T2	NoRel	true	belirlenen	açıkladı
+Relation	T13	T5	NoRel	true	belirlenen	yıkıldı
+Relation	T13	T7	NoRel	true	belirlenen	deprem
+Relation	T13	T9	NoRel	true	belirlenen	1975 LICE DEPREMI
+Relation	T2	T11	NoRel	true	açıkladı	hasarlara
+Relation	T2	T3	NoRel	true	açıkladı	öldü
+Relation	T2	T9	NoRel	true	açıkladı	1975 LICE DEPREMI
+Relation	T3	T1	NoRel	true	öldü	sarsıntısı
+Relation	T3	T11	NoRel	true	öldü	hasarlara
+Relation	T3	T13	NoRel	true	öldü	belirlenen
+Relation	T3	T2	NoRel	true	öldü	açıkladı
+Relation	T3	T6	NoRel	true	öldü	etti
+Relation	T3	T7	NoRel	true	öldü	deprem
+Relation	T3	T9	NoRel	true	öldü	1975 LICE DEPREMI
+Relation	T4	T11	NoRel	true	gördü	hasarlara
+Relation	T4	T12	NoRel	true	gördü	sarsıntılar
+Relation	T4	T2	NoRel	true	gördü	açıkladı
+Relation	T4	T5	NoRel	true	gördü	yıkıldı
+Relation	T4	T6	NoRel	true	gördü	etti
+Relation	T5	T2	NoRel	true	yıkıldı	açıkladı
+Relation	T5	T3	NoRel	true	yıkıldı	öldü
+Relation	T5	T6	NoRel	true	yıkıldı	etti
+Relation	T5	T7	NoRel	true	yıkıldı	deprem
+Relation	T5	T8	NoRel	true	yıkıldı	kaybetmiştir
+Relation	T6	T0	NoRel	true	etti	oluşan
+Relation	T6	T10	NoRel	true	etti	süren
+Relation	T6	T4	NoRel	true	etti	gördü
+Relation	T6	T8	NoRel	true	etti	kaybetmiştir
+Relation	T6	T9	NoRel	true	etti	1975 LICE DEPREMI
+Relation	T7	T1	NoRel	true	deprem	sarsıntısı
+Relation	T7	T6	NoRel	true	deprem	etti
+Relation	T8	T0	NoRel	true	kaybetmiştir	oluşan
+Relation	T8	T1	NoRel	true	kaybetmiştir	sarsıntısı
+Relation	T8	T9	NoRel	true	kaybetmiştir	1975 LICE DEPREMI
+Relation	T9	T1	NoRel	true	1975 LICE DEPREMI	sarsıntısı
+Relation	T9	T12	NoRel	true	1975 LICE DEPREMI	sarsıntılar
+Relation	T9	T13	NoRel	true	1975 LICE DEPREMI	belirlenen
+Relation	T9	T7	NoRel	true	1975 LICE DEPREMI	deprem

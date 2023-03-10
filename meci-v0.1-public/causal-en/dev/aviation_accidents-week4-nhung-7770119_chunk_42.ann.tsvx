@@ -1,0 +1,64 @@
+Text	Macri 's lungs were filled with dust when the towers collapsed and he later spent two months working on the site .	The long hours on the site gave him vomiting spells and he was diagnosed with an already rapidly progressing stage four cancer only one year after the attack , despite being a non-smoker and cancer free before the attacks .	In 2011 , a lower court ruled that 9/11 toxins were the likely cause of Macri 's death .	In 2012 , the New York Supreme Court ruled that Macri 's widow is entitled to line - of - duty death benefits of his full salary .	On December 12 , 2017 , NYPD Captain Douglas Greenwood took his own life after a long battle with lung disease , brought on by deadly chemicals in the air while working alongside other officers at Ground Zero .
+Event	T0	filled	EVENT	20
+Event	T1	dust	EVENT	32
+Event	T2	collapsed	EVENT	53
+Event	T3	spent	EVENT	76
+Event	T4	gave	EVENT	142
+Event	T5	spells	EVENT	160
+Event	T6	diagnosed	EVENT	178
+Event	T7	cancer	EVENT	235
+Event	T8	attack	EVENT	266
+Event	T9	attacks	EVENT	329
+Event	T10	ruled	EVENT	363
+Event	T11	death	EVENT	420
+Event	T12	ruled	EVENT	465
+Event	T13	took	EVENT	614
+Event	T14	battle	EVENT	645
+Event	T15	disease	EVENT	662
+Event	T16	working	EVENT	720
+Event	T17	working	EVENT	93
+Event	T18	benefits	EVENT	529
+Relation	T2	T0	CauseEffect	true	collapsed	filled
+Relation	T0	T2	EffectCause	true	filled	collapsed
+Relation	T17	T5	CauseEffect	true	working	spells
+Relation	T5	T17	EffectCause	true	spells	working
+Relation	T9	T11	CauseEffect	true	attacks	death
+Relation	T11	T9	EffectCause	true	death	attacks
+Relation	T16	T15	CauseEffect	true	working	disease
+Relation	T15	T16	EffectCause	true	disease	working
+Relation	T0	T16	NoRel	true	filled	working
+Relation	T0	T3	NoRel	true	filled	spent
+Relation	T0	T6	NoRel	true	filled	diagnosed
+Relation	T0	T8	NoRel	true	filled	attack
+Relation	T1	T11	NoRel	true	dust	death
+Relation	T1	T15	NoRel	true	dust	disease
+Relation	T1	T9	NoRel	true	dust	attacks
+Relation	T10	T15	NoRel	true	ruled	disease
+Relation	T11	T12	NoRel	true	death	ruled
+Relation	T12	T0	NoRel	true	ruled	filled
+Relation	T12	T1	NoRel	true	ruled	dust
+Relation	T12	T5	NoRel	true	ruled	spells
+Relation	T13	T12	NoRel	true	took	ruled
+Relation	T13	T17	NoRel	true	took	working
+Relation	T13	T8	NoRel	true	took	attack
+Relation	T14	T9	NoRel	true	battle	attacks
+Relation	T15	T0	NoRel	true	disease	filled
+Relation	T15	T2	NoRel	true	disease	collapsed
+Relation	T16	T10	NoRel	true	working	ruled
+Relation	T16	T11	NoRel	true	working	death
+Relation	T16	T4	NoRel	true	working	gave
+Relation	T17	T10	NoRel	true	working	ruled
+Relation	T17	T14	NoRel	true	working	battle
+Relation	T18	T8	NoRel	true	benefits	attack
+Relation	T3	T2	NoRel	true	spent	collapsed
+Relation	T3	T9	NoRel	true	spent	attacks
+Relation	T4	T15	NoRel	true	gave	disease
+Relation	T4	T16	NoRel	true	gave	working
+Relation	T4	T9	NoRel	true	gave	attacks
+Relation	T6	T10	NoRel	true	diagnosed	ruled
+Relation	T6	T17	NoRel	true	diagnosed	working
+Relation	T7	T1	NoRel	true	cancer	dust
+Relation	T7	T2	NoRel	true	cancer	collapsed
+Relation	T8	T12	NoRel	true	attack	ruled
+Relation	T9	T15	NoRel	true	attacks	disease
+Relation	T9	T6	NoRel	true	attacks	diagnosed

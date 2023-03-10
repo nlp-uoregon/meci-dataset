@@ -1,0 +1,51 @@
+Text	It then traveled in a ballistic arc , reaching the highest point ( apogee ) of approximately 25 seconds after the explosion .	At the time of separation , the maximum acceleration is estimated to have been between 12 and 20 times that of gravity ( g ) ; within two seconds it had dropped below 4 g , and within ten seconds the cabin was in free fall .	The forces involved at this stage were probably insufficient to cause major injury to the crew .	At least some of the crew were alive and at least briefly conscious after the breakup , as the Personal Egress Air Packs ( PEAPs ) were activated for Smith and two unidentified crewmembers , but not for Scobee .	The PEAPs were not intended for in - flight use , and the astronauts never trained with them for an in - flight emergency .
+Event	T0	traveled	EVENT	8
+Event	T1	reaching	EVENT	38
+Event	T2	explosion	EVENT	114
+Event	T3	separation	EVENT	141
+Event	T4	acceleration	EVENT	166
+Event	T5	estimated	EVENT	182
+Event	T6	dropped	EVENT	279
+Event	T7	fall	EVENT	344
+Event	T8	cause	EVENT	415
+Event	T9	injury	EVENT	427
+Event	T10	breakup	EVENT	526
+Event	T11	activated	EVENT	584
+Event	T12	intended	EVENT	679
+Event	T13	trained	EVENT	735
+Event	T14	emergency	EVENT	772
+Event	T15	involved	EVENT	362
+Event	T16	alive	EVENT	479
+Relation	T2	T0	CauseEffect	true	explosion	traveled
+Relation	T0	T2	EffectCause	true	traveled	explosion
+Relation	T1	T15	NoRel	true	reaching	involved
+Relation	T10	T15	NoRel	true	breakup	involved
+Relation	T10	T8	NoRel	true	breakup	cause
+Relation	T11	T5	NoRel	true	activated	estimated
+Relation	T12	T16	NoRel	true	intended	alive
+Relation	T12	T2	NoRel	true	intended	explosion
+Relation	T12	T3	NoRel	true	intended	separation
+Relation	T12	T8	NoRel	true	intended	cause
+Relation	T12	T9	NoRel	true	intended	injury
+Relation	T13	T0	NoRel	true	trained	traveled
+Relation	T13	T3	NoRel	true	trained	separation
+Relation	T13	T6	NoRel	true	trained	dropped
+Relation	T14	T13	NoRel	true	emergency	trained
+Relation	T14	T16	NoRel	true	emergency	alive
+Relation	T14	T2	NoRel	true	emergency	explosion
+Relation	T14	T4	NoRel	true	emergency	acceleration
+Relation	T14	T7	NoRel	true	emergency	fall
+Relation	T14	T8	NoRel	true	emergency	cause
+Relation	T15	T8	NoRel	true	involved	cause
+Relation	T16	T1	NoRel	true	alive	reaching
+Relation	T16	T13	NoRel	true	alive	trained
+Relation	T3	T1	NoRel	true	separation	reaching
+Relation	T3	T8	NoRel	true	separation	cause
+Relation	T4	T0	NoRel	true	acceleration	traveled
+Relation	T4	T8	NoRel	true	acceleration	cause
+Relation	T4	T9	NoRel	true	acceleration	injury
+Relation	T5	T15	NoRel	true	estimated	involved
+Relation	T6	T15	NoRel	true	dropped	involved
+Relation	T9	T0	NoRel	true	injury	traveled
+Relation	T9	T11	NoRel	true	injury	activated
+Relation	T9	T8	NoRel	true	injury	cause

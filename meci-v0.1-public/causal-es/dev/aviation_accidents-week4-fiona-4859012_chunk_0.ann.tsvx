@@ -1,0 +1,98 @@
+Text	El ACCIDENTE EN LAS CARRERAS AÉREAS DE RENO DE 2011 , fue un accidente aéreo que tuvo lugar el 16 de septiembre de 2011 .	El avión , un North American P-51D Mustang , matriculado _ NX79111 _ y conocido como _ Galloping Ghost _ , había despegado del Aeropuerto de Reno-Stead , en Reno , Nevada , para participar en las Carreras Aéreas de Reno .	El siniestro se produjo después de que el piloto Jimmy Leeward , una vez completada una vuelta al circuito , dio señal de mayday retirándose de la carrera .	La aeronave acabó impactando contra una zona donde se sentaban los espectadores , situada cerca de la pista de aterrizaje .	Debido a la gravedad del accidente , la organización decidió cancelar el evento durante el fin de semana .
+Event	T0	ACCIDENTE	EVENT	3
+Event	T1	accidente	EVENT	61
+Event	T2	despegado	EVENT	235
+Event	T3	participar	EVENT	300
+Event	T4	Carreras	EVENT	318
+Event	T5	completada	EVENT	417
+Event	T6	vuelta	EVENT	432
+Event	T7	retirándose	EVENT	473
+Event	T8	carrera	EVENT	491
+Event	T9	impactando	EVENT	519
+Event	T10	sentaban	EVENT	555
+Event	T11	aterrizaje	EVENT	612
+Event	T12	accidente	EVENT	650
+Event	T13	cancelar	EVENT	686
+Event	T14	evento	EVENT	698
+Relation	T12	T13	CauseEffect	true	accidente	cancelar
+Relation	T13	T12	EffectCause	true	cancelar	accidente
+Relation	T9	T1	CauseEffect	true	impactando	accidente
+Relation	T1	T9	EffectCause	true	accidente	impactando
+Relation	T0	T10	NoRel	true	ACCIDENTE	sentaban
+Relation	T0	T11	NoRel	true	ACCIDENTE	aterrizaje
+Relation	T0	T12	NoRel	true	ACCIDENTE	accidente
+Relation	T0	T6	NoRel	true	ACCIDENTE	vuelta
+Relation	T0	T7	NoRel	true	ACCIDENTE	retirándose
+Relation	T1	T10	NoRel	true	accidente	sentaban
+Relation	T1	T2	NoRel	true	accidente	despegado
+Relation	T1	T3	NoRel	true	accidente	participar
+Relation	T1	T7	NoRel	true	accidente	retirándose
+Relation	T10	T11	NoRel	true	sentaban	aterrizaje
+Relation	T10	T12	NoRel	true	sentaban	accidente
+Relation	T10	T14	NoRel	true	sentaban	evento
+Relation	T10	T5	NoRel	true	sentaban	completada
+Relation	T10	T6	NoRel	true	sentaban	vuelta
+Relation	T10	T8	NoRel	true	sentaban	carrera
+Relation	T11	T0	NoRel	true	aterrizaje	ACCIDENTE
+Relation	T11	T1	NoRel	true	aterrizaje	accidente
+Relation	T11	T14	NoRel	true	aterrizaje	evento
+Relation	T11	T3	NoRel	true	aterrizaje	participar
+Relation	T11	T4	NoRel	true	aterrizaje	Carreras
+Relation	T11	T5	NoRel	true	aterrizaje	completada
+Relation	T11	T7	NoRel	true	aterrizaje	retirándose
+Relation	T11	T9	NoRel	true	aterrizaje	impactando
+Relation	T12	T0	NoRel	true	accidente	ACCIDENTE
+Relation	T12	T1	NoRel	true	accidente	accidente
+Relation	T12	T14	NoRel	true	accidente	evento
+Relation	T12	T3	NoRel	true	accidente	participar
+Relation	T12	T7	NoRel	true	accidente	retirándose
+Relation	T12	T9	NoRel	true	accidente	impactando
+Relation	T13	T11	NoRel	true	cancelar	aterrizaje
+Relation	T13	T2	NoRel	true	cancelar	despegado
+Relation	T13	T7	NoRel	true	cancelar	retirándose
+Relation	T14	T1	NoRel	true	evento	accidente
+Relation	T14	T12	NoRel	true	evento	accidente
+Relation	T14	T4	NoRel	true	evento	Carreras
+Relation	T14	T8	NoRel	true	evento	carrera
+Relation	T2	T3	NoRel	true	despegado	participar
+Relation	T2	T4	NoRel	true	despegado	Carreras
+Relation	T2	T8	NoRel	true	despegado	carrera
+Relation	T2	T9	NoRel	true	despegado	impactando
+Relation	T3	T0	NoRel	true	participar	ACCIDENTE
+Relation	T3	T1	NoRel	true	participar	accidente
+Relation	T3	T10	NoRel	true	participar	sentaban
+Relation	T3	T11	NoRel	true	participar	aterrizaje
+Relation	T3	T13	NoRel	true	participar	cancelar
+Relation	T3	T2	NoRel	true	participar	despegado
+Relation	T3	T5	NoRel	true	participar	completada
+Relation	T4	T1	NoRel	true	Carreras	accidente
+Relation	T4	T13	NoRel	true	Carreras	cancelar
+Relation	T4	T2	NoRel	true	Carreras	despegado
+Relation	T4	T5	NoRel	true	Carreras	completada
+Relation	T4	T7	NoRel	true	Carreras	retirándose
+Relation	T4	T8	NoRel	true	Carreras	carrera
+Relation	T5	T11	NoRel	true	completada	aterrizaje
+Relation	T5	T3	NoRel	true	completada	participar
+Relation	T5	T4	NoRel	true	completada	Carreras
+Relation	T5	T6	NoRel	true	completada	vuelta
+Relation	T5	T7	NoRel	true	completada	retirándose
+Relation	T6	T1	NoRel	true	vuelta	accidente
+Relation	T6	T14	NoRel	true	vuelta	evento
+Relation	T6	T7	NoRel	true	vuelta	retirándose
+Relation	T7	T12	NoRel	true	retirándose	accidente
+Relation	T7	T4	NoRel	true	retirándose	Carreras
+Relation	T7	T5	NoRel	true	retirándose	completada
+Relation	T7	T6	NoRel	true	retirándose	vuelta
+Relation	T8	T11	NoRel	true	carrera	aterrizaje
+Relation	T8	T14	NoRel	true	carrera	evento
+Relation	T8	T2	NoRel	true	carrera	despegado
+Relation	T8	T3	NoRel	true	carrera	participar
+Relation	T8	T4	NoRel	true	carrera	Carreras
+Relation	T8	T6	NoRel	true	carrera	vuelta
+Relation	T8	T9	NoRel	true	carrera	impactando
+Relation	T9	T10	NoRel	true	impactando	sentaban
+Relation	T9	T13	NoRel	true	impactando	cancelar
+Relation	T9	T14	NoRel	true	impactando	evento
+Relation	T9	T3	NoRel	true	impactando	participar
+Relation	T9	T5	NoRel	true	impactando	completada
+Relation	T9	T6	NoRel	true	impactando	vuelta

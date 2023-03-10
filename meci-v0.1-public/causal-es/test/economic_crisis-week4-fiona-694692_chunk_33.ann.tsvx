@@ -1,0 +1,116 @@
+Text	En el transcurso de la batalla el _ Derfflinger _ recibió el impacto de 17 proyectiles de grueso calibre y fue nueve veces tocado por salvas de baterías secundarias .	Permaneció en el dique para reparaciones hasta el 15 de octubre .	Por el contrario , disparó 385 proyectiles de su batería principal , 235 de las secundarias y un torpedo .	Su tripulación sufrió 157 muertos y 26 heridos , la mayor cantidad de bajas en cualquier buque no hundido durante la batalla .	Debido a su extraordinaria resistencia en Jutlandia , los británicos bautizaron al poderoso crucero de batalla alemán como « Perro de Hierro » .
+Event	T0	transcurso	EVENT	6
+Event	T1	batalla	EVENT	23
+Event	T2	recibió	EVENT	50
+Event	T3	impacto	EVENT	61
+Event	T4	tocado	EVENT	123
+Event	T5	salvas	EVENT	134
+Event	T6	Permaneció	EVENT	167
+Event	T7	reparaciones	EVENT	195
+Event	T8	disparó	EVENT	252
+Event	T9	torpedo	EVENT	330
+Event	T10	sufrió	EVENT	355
+Event	T11	muertos	EVENT	366
+Event	T12	heridos	EVENT	379
+Event	T13	bajas	EVENT	410
+Event	T14	hundido	EVENT	438
+Event	T15	batalla	EVENT	457
+Event	T16	resistencia	EVENT	494
+Event	T17	bautizaron	EVENT	536
+Relation	T3	T7	CauseEffect	true	impacto	reparaciones
+Relation	T7	T3	EffectCause	true	reparaciones	impacto
+Relation	T15	T11	CauseEffect	true	batalla	muertos
+Relation	T11	T15	EffectCause	true	muertos	batalla
+Relation	T15	T12	CauseEffect	true	batalla	heridos
+Relation	T12	T15	EffectCause	true	heridos	batalla
+Relation	T0	T11	NoRel	true	transcurso	muertos
+Relation	T0	T12	NoRel	true	transcurso	heridos
+Relation	T0	T17	NoRel	true	transcurso	bautizaron
+Relation	T0	T7	NoRel	true	transcurso	reparaciones
+Relation	T1	T11	NoRel	true	batalla	muertos
+Relation	T1	T15	NoRel	true	batalla	batalla
+Relation	T1	T17	NoRel	true	batalla	bautizaron
+Relation	T1	T8	NoRel	true	batalla	disparó
+Relation	T10	T11	NoRel	true	sufrió	muertos
+Relation	T10	T13	NoRel	true	sufrió	bajas
+Relation	T10	T2	NoRel	true	sufrió	recibió
+Relation	T10	T6	NoRel	true	sufrió	Permaneció
+Relation	T10	T7	NoRel	true	sufrió	reparaciones
+Relation	T10	T8	NoRel	true	sufrió	disparó
+Relation	T10	T9	NoRel	true	sufrió	torpedo
+Relation	T11	T12	NoRel	true	muertos	heridos
+Relation	T11	T13	NoRel	true	muertos	bajas
+Relation	T11	T4	NoRel	true	muertos	tocado
+Relation	T11	T6	NoRel	true	muertos	Permaneció
+Relation	T11	T7	NoRel	true	muertos	reparaciones
+Relation	T11	T9	NoRel	true	muertos	torpedo
+Relation	T12	T13	NoRel	true	heridos	bajas
+Relation	T12	T7	NoRel	true	heridos	reparaciones
+Relation	T13	T1	NoRel	true	bajas	batalla
+Relation	T13	T12	NoRel	true	bajas	heridos
+Relation	T13	T16	NoRel	true	bajas	resistencia
+Relation	T13	T3	NoRel	true	bajas	impacto
+Relation	T13	T4	NoRel	true	bajas	tocado
+Relation	T13	T6	NoRel	true	bajas	Permaneció
+Relation	T13	T7	NoRel	true	bajas	reparaciones
+Relation	T14	T12	NoRel	true	hundido	heridos
+Relation	T14	T3	NoRel	true	hundido	impacto
+Relation	T14	T4	NoRel	true	hundido	tocado
+Relation	T14	T5	NoRel	true	hundido	salvas
+Relation	T14	T9	NoRel	true	hundido	torpedo
+Relation	T15	T1	NoRel	true	batalla	batalla
+Relation	T16	T0	NoRel	true	resistencia	transcurso
+Relation	T16	T11	NoRel	true	resistencia	muertos
+Relation	T16	T2	NoRel	true	resistencia	recibió
+Relation	T16	T5	NoRel	true	resistencia	salvas
+Relation	T16	T6	NoRel	true	resistencia	Permaneció
+Relation	T17	T0	NoRel	true	bautizaron	transcurso
+Relation	T17	T1	NoRel	true	bautizaron	batalla
+Relation	T17	T15	NoRel	true	bautizaron	batalla
+Relation	T17	T16	NoRel	true	bautizaron	resistencia
+Relation	T17	T5	NoRel	true	bautizaron	salvas
+Relation	T17	T7	NoRel	true	bautizaron	reparaciones
+Relation	T17	T8	NoRel	true	bautizaron	disparó
+Relation	T2	T12	NoRel	true	recibió	heridos
+Relation	T2	T14	NoRel	true	recibió	hundido
+Relation	T2	T16	NoRel	true	recibió	resistencia
+Relation	T2	T17	NoRel	true	recibió	bautizaron
+Relation	T2	T3	NoRel	true	recibió	impacto
+Relation	T2	T5	NoRel	true	recibió	salvas
+Relation	T2	T7	NoRel	true	recibió	reparaciones
+Relation	T2	T8	NoRel	true	recibió	disparó
+Relation	T3	T13	NoRel	true	impacto	bajas
+Relation	T3	T17	NoRel	true	impacto	bautizaron
+Relation	T3	T8	NoRel	true	impacto	disparó
+Relation	T4	T10	NoRel	true	tocado	sufrió
+Relation	T4	T3	NoRel	true	tocado	impacto
+Relation	T4	T6	NoRel	true	tocado	Permaneció
+Relation	T4	T8	NoRel	true	tocado	disparó
+Relation	T5	T10	NoRel	true	salvas	sufrió
+Relation	T5	T11	NoRel	true	salvas	muertos
+Relation	T5	T15	NoRel	true	salvas	batalla
+Relation	T5	T3	NoRel	true	salvas	impacto
+Relation	T5	T4	NoRel	true	salvas	tocado
+Relation	T5	T6	NoRel	true	salvas	Permaneció
+Relation	T5	T7	NoRel	true	salvas	reparaciones
+Relation	T6	T11	NoRel	true	Permaneció	muertos
+Relation	T6	T12	NoRel	true	Permaneció	heridos
+Relation	T6	T13	NoRel	true	Permaneció	bajas
+Relation	T6	T14	NoRel	true	Permaneció	hundido
+Relation	T6	T17	NoRel	true	Permaneció	bautizaron
+Relation	T6	T5	NoRel	true	Permaneció	salvas
+Relation	T6	T7	NoRel	true	Permaneció	reparaciones
+Relation	T6	T9	NoRel	true	Permaneció	torpedo
+Relation	T7	T17	NoRel	true	reparaciones	bautizaron
+Relation	T7	T2	NoRel	true	reparaciones	recibió
+Relation	T7	T4	NoRel	true	reparaciones	tocado
+Relation	T7	T5	NoRel	true	reparaciones	salvas
+Relation	T8	T12	NoRel	true	disparó	heridos
+Relation	T8	T14	NoRel	true	disparó	hundido
+Relation	T8	T17	NoRel	true	disparó	bautizaron
+Relation	T8	T5	NoRel	true	disparó	salvas
+Relation	T8	T6	NoRel	true	disparó	Permaneció
+Relation	T8	T7	NoRel	true	disparó	reparaciones
+Relation	T9	T11	NoRel	true	torpedo	muertos
+Relation	T9	T13	NoRel	true	torpedo	bajas
+Relation	T9	T3	NoRel	true	torpedo	impacto

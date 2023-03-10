@@ -1,0 +1,25 @@
+Text	Belirtilere göre HIV olup olmadığı anlaşılamaz .	HIV enfekte olmuş kişi ayrıca hiç belirti görmeyedebilir .	HIV vücuda girdiğinden itibaren , vücutta bununla savaşmak için özel antikorlar oluşur .	Kandaki bu antikorların ELISA testi ( indirekt tanı methodu ) veya direkt virüsün proteinlerini tespit eden PCR testi ( Direkt Tanı Metodu ) gibi tarama yöntemleriyle saptanma çalışmalarıdır .	Anti - HIV antikorların ELISA yöntemiyle ölçülebilecek düzeye ulaşması için en az 3 aylık bir süreye ( pencere dönemi ) ihtiyaç vardır .
+Event	T0	girdiğinden	EVENT	119
+Event	T1	oluşur	EVENT	188
+Event	T2	tespit	EVENT	293
+Event	T3	tarama	EVENT	343
+Event	T4	çalışmalarıdır	EVENT	373
+Event	T5	saptanma	EVENT	364
+Event	T6	ulaşması	EVENT	452
+Relation	T0	T1	CauseEffect	true	girdiğinden	oluşur
+Relation	T1	T0	EffectCause	true	oluşur	girdiğinden
+Relation	T0	T5	NoRel	true	girdiğinden	saptanma
+Relation	T1	T3	NoRel	true	oluşur	tarama
+Relation	T2	T1	NoRel	true	tespit	oluşur
+Relation	T2	T3	NoRel	true	tespit	tarama
+Relation	T2	T4	NoRel	true	tespit	çalışmalarıdır
+Relation	T2	T6	NoRel	true	tespit	ulaşması
+Relation	T3	T2	NoRel	true	tarama	tespit
+Relation	T4	T1	NoRel	true	çalışmalarıdır	oluşur
+Relation	T4	T5	NoRel	true	çalışmalarıdır	saptanma
+Relation	T5	T0	NoRel	true	saptanma	girdiğinden
+Relation	T5	T2	NoRel	true	saptanma	tespit
+Relation	T5	T4	NoRel	true	saptanma	çalışmalarıdır
+Relation	T5	T6	NoRel	true	saptanma	ulaşması
+Relation	T6	T3	NoRel	true	ulaşması	tarama
+Relation	T6	T5	NoRel	true	ulaşması	saptanma

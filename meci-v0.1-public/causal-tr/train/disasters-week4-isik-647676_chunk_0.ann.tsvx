@@ -1,0 +1,123 @@
+Text	2008 GÜNEY ÇIN SU TAŞKINLARI 26 Mayıs 2008'de başladı .	Dört dalga halinde yağan sağanak yağmur 20 gün sürdü ve toprak kaymaları ve su taşkınlarına neden oldu .	Yağış , Çin'in güney ve doğu kesimindeki 15 eyaleti etkilemiştir .	İlk su taşkını dalgası on iki eyaleti etkilemiş ve 30 Mayıs itibarıyla 93 kişinin ölümüne yol açmıştır .	İkinci su taşkını dalgası 6 Haziran'da başladı ve dokuz eyalette 55 kişinin ölümüne ve 6 kişinin kaybolmasına neden oldu .
+Event	T0	başladı	EVENT	46
+Event	T1	yağmur	EVENT	89
+Event	T2	sürdü	EVENT	103
+Event	T3	kaymaları	EVENT	119
+Event	T4	oldu	EVENT	154
+Event	T5	Yağış	EVENT	161
+Event	T6	etkilemiştir	EVENT	213
+Event	T7	dalgası	EVENT	243
+Event	T8	etkilemiş	EVENT	266
+Event	T9	açmıştır	EVENT	322
+Event	T10	dalgası	EVENT	351
+Event	T11	başladı	EVENT	372
+Event	T12	ölümüne	EVENT	409
+Event	T13	oldu	EVENT	449
+Event	T14	TAŞKINLARI	EVENT	18
+Event	T15	taşkınlarına	EVENT	135
+Event	T16	kaybolmasına	EVENT	430
+Relation	T1	T3	CauseEffect	true	yağmur	kaymaları
+Relation	T3	T1	EffectCause	true	kaymaları	yağmur
+Relation	T1	T14	CauseEffect	true	yağmur	TAŞKINLARI
+Relation	T14	T1	EffectCause	true	TAŞKINLARI	yağmur
+Relation	T1	T4	CauseEffect	true	yağmur	oldu
+Relation	T4	T1	EffectCause	true	oldu	yağmur
+Relation	T1	T15	CauseEffect	true	yağmur	taşkınlarına
+Relation	T15	T1	EffectCause	true	taşkınlarına	yağmur
+Relation	T5	T6	CauseEffect	true	Yağış	etkilemiştir
+Relation	T6	T5	EffectCause	true	etkilemiştir	Yağış
+Relation	T7	T8	CauseEffect	true	dalgası	etkilemiş
+Relation	T8	T7	EffectCause	true	etkilemiş	dalgası
+Relation	T8	T9	CauseEffect	true	etkilemiş	açmıştır
+Relation	T9	T8	EffectCause	true	açmıştır	etkilemiş
+Relation	T14	T7	CauseEffect	true	TAŞKINLARI	dalgası
+Relation	T7	T14	EffectCause	true	dalgası	TAŞKINLARI
+Relation	T14	T10	CauseEffect	true	TAŞKINLARI	dalgası
+Relation	T10	T14	EffectCause	true	dalgası	TAŞKINLARI
+Relation	T10	T13	CauseEffect	true	dalgası	oldu
+Relation	T13	T10	EffectCause	true	oldu	dalgası
+Relation	T0	T13	NoRel	true	başladı	oldu
+Relation	T0	T16	NoRel	true	başladı	kaybolmasına
+Relation	T0	T2	NoRel	true	başladı	sürdü
+Relation	T0	T6	NoRel	true	başladı	etkilemiştir
+Relation	T1	T0	NoRel	true	yağmur	başladı
+Relation	T1	T10	NoRel	true	yağmur	dalgası
+Relation	T1	T11	NoRel	true	yağmur	başladı
+Relation	T1	T16	NoRel	true	yağmur	kaybolmasına
+Relation	T1	T9	NoRel	true	yağmur	açmıştır
+Relation	T10	T2	NoRel	true	dalgası	sürdü
+Relation	T10	T3	NoRel	true	dalgası	kaymaları
+Relation	T10	T6	NoRel	true	dalgası	etkilemiştir
+Relation	T10	T9	NoRel	true	dalgası	açmıştır
+Relation	T11	T10	NoRel	true	başladı	dalgası
+Relation	T11	T15	NoRel	true	başladı	taşkınlarına
+Relation	T11	T2	NoRel	true	başladı	sürdü
+Relation	T11	T4	NoRel	true	başladı	oldu
+Relation	T11	T5	NoRel	true	başladı	Yağış
+Relation	T11	T9	NoRel	true	başladı	açmıştır
+Relation	T12	T10	NoRel	true	ölümüne	dalgası
+Relation	T12	T13	NoRel	true	ölümüne	oldu
+Relation	T12	T14	NoRel	true	ölümüne	TAŞKINLARI
+Relation	T12	T8	NoRel	true	ölümüne	etkilemiş
+Relation	T13	T0	NoRel	true	oldu	başladı
+Relation	T13	T12	NoRel	true	oldu	ölümüne
+Relation	T13	T15	NoRel	true	oldu	taşkınlarına
+Relation	T13	T16	NoRel	true	oldu	kaybolmasına
+Relation	T13	T3	NoRel	true	oldu	kaymaları
+Relation	T13	T6	NoRel	true	oldu	etkilemiştir
+Relation	T14	T3	NoRel	true	TAŞKINLARI	kaymaları
+Relation	T14	T8	NoRel	true	TAŞKINLARI	etkilemiş
+Relation	T15	T10	NoRel	true	taşkınlarına	dalgası
+Relation	T15	T11	NoRel	true	taşkınlarına	başladı
+Relation	T15	T14	NoRel	true	taşkınlarına	TAŞKINLARI
+Relation	T15	T3	NoRel	true	taşkınlarına	kaymaları
+Relation	T15	T5	NoRel	true	taşkınlarına	Yağış
+Relation	T16	T12	NoRel	true	kaybolmasına	ölümüne
+Relation	T16	T14	NoRel	true	kaybolmasına	TAŞKINLARI
+Relation	T16	T2	NoRel	true	kaybolmasına	sürdü
+Relation	T16	T4	NoRel	true	kaybolmasına	oldu
+Relation	T16	T6	NoRel	true	kaybolmasına	etkilemiştir
+Relation	T16	T7	NoRel	true	kaybolmasına	dalgası
+Relation	T16	T9	NoRel	true	kaybolmasına	açmıştır
+Relation	T2	T1	NoRel	true	sürdü	yağmur
+Relation	T2	T11	NoRel	true	sürdü	başladı
+Relation	T2	T12	NoRel	true	sürdü	ölümüne
+Relation	T2	T6	NoRel	true	sürdü	etkilemiştir
+Relation	T2	T9	NoRel	true	sürdü	açmıştır
+Relation	T3	T14	NoRel	true	kaymaları	TAŞKINLARI
+Relation	T3	T15	NoRel	true	kaymaları	taşkınlarına
+Relation	T3	T16	NoRel	true	kaymaları	kaybolmasına
+Relation	T3	T5	NoRel	true	kaymaları	Yağış
+Relation	T3	T6	NoRel	true	kaymaları	etkilemiştir
+Relation	T3	T8	NoRel	true	kaymaları	etkilemiş
+Relation	T4	T0	NoRel	true	oldu	başladı
+Relation	T4	T11	NoRel	true	oldu	başladı
+Relation	T4	T14	NoRel	true	oldu	TAŞKINLARI
+Relation	T4	T3	NoRel	true	oldu	kaymaları
+Relation	T4	T5	NoRel	true	oldu	Yağış
+Relation	T5	T0	NoRel	true	Yağış	başladı
+Relation	T5	T12	NoRel	true	Yağış	ölümüne
+Relation	T5	T14	NoRel	true	Yağış	TAŞKINLARI
+Relation	T5	T15	NoRel	true	Yağış	taşkınlarına
+Relation	T5	T2	NoRel	true	Yağış	sürdü
+Relation	T5	T3	NoRel	true	Yağış	kaymaları
+Relation	T5	T7	NoRel	true	Yağış	dalgası
+Relation	T5	T9	NoRel	true	Yağış	açmıştır
+Relation	T6	T1	NoRel	true	etkilemiştir	yağmur
+Relation	T6	T10	NoRel	true	etkilemiştir	dalgası
+Relation	T6	T11	NoRel	true	etkilemiştir	başladı
+Relation	T6	T16	NoRel	true	etkilemiştir	kaybolmasına
+Relation	T6	T8	NoRel	true	etkilemiştir	etkilemiş
+Relation	T6	T9	NoRel	true	etkilemiştir	açmıştır
+Relation	T7	T10	NoRel	true	dalgası	dalgası
+Relation	T7	T3	NoRel	true	dalgası	kaymaları
+Relation	T7	T9	NoRel	true	dalgası	açmıştır
+Relation	T8	T12	NoRel	true	etkilemiş	ölümüne
+Relation	T8	T15	NoRel	true	etkilemiş	taşkınlarına
+Relation	T8	T3	NoRel	true	etkilemiş	kaymaları
+Relation	T9	T0	NoRel	true	açmıştır	başladı
+Relation	T9	T12	NoRel	true	açmıştır	ölümüne
+Relation	T9	T14	NoRel	true	açmıştır	TAŞKINLARI
+Relation	T9	T16	NoRel	true	açmıştır	kaybolmasına
+Relation	T9	T2	NoRel	true	açmıştır	sürdü
+Relation	T9	T5	NoRel	true	açmıştır	Yağış

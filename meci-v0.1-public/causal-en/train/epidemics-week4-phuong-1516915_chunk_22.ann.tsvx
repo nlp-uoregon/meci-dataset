@@ -1,0 +1,142 @@
+Text	The transmission from swine to humans is believed to occur mainly in swine farms , where farmers are in close contact with live pigs .	Although strains of swine influenza are usually not able to infect humans , it may occasionally happen , so farmers and veterinarians are encouraged to use face masks when dealing with infected animals .	The use of vaccines on swine to prevent their infection is a major method of limiting swine - to - human transmission .	Risk factors that may contribute to the swine - to - human transmission include smoking and , especially , not wearing gloves when working with sick animals , thereby increasing the likelihood of subsequent hand - to - eye , hand - to - nose , or hand - to - mouth transmission .	Influenza spreads between humans when infected people cough or sneeze , then other people breathe in the virus or touch something with the virus on it and then touch their own face . " Avoid touching your eyes , nose or mouth .
+Event	T0	transmission	EVENT	4
+Event	T1	believed	EVENT	41
+Event	T2	occur	EVENT	53
+Event	T3	strains	EVENT	144
+Event	T4	influenza	EVENT	161
+Event	T5	infect	EVENT	195
+Event	T6	happen	EVENT	231
+Event	T7	encouraged	EVENT	273
+Event	T8	use	EVENT	287
+Event	T9	dealing	EVENT	307
+Event	T10	infected	EVENT	320
+Event	T11	use	EVENT	343
+Event	T12	infection	EVENT	385
+Event	T13	limiting	EVENT	416
+Event	T14	transmission	EVENT	444
+Event	T15	transmission	EVENT	518
+Event	T16	smoking	EVENT	539
+Event	T17	working	EVENT	590
+Event	T18	increasing	EVENT	626
+Event	T19	transmission	EVENT	724
+Event	T20	spreads	EVENT	749
+Event	T21	infected	EVENT	777
+Event	T22	cough	EVENT	793
+Event	T23	sneeze	EVENT	802
+Event	T24	touch	EVENT	853
+Event	T25	touch	EVENT	899
+Event	T26	touching	EVENT	930
+Event	T27	close contact	EVENT	104
+Event	T28	vaccines	EVENT	350
+Event	T29	Risk factors	EVENT	459
+Event	T30	not wearing gloves	EVENT	566
+Event	T31	breathe in	EVENT	829
+Relation	T27	T0	CauseEffect	true	close contact	transmission
+Relation	T0	T27	EffectCause	true	transmission	close contact
+Relation	T5	T8	CauseEffect	true	infect	use
+Relation	T8	T5	EffectCause	true	use	infect
+Relation	T9	T8	CauseEffect	true	dealing	use
+Relation	T8	T9	EffectCause	true	use	dealing
+Relation	T13	T28	CauseEffect	true	limiting	vaccines
+Relation	T28	T13	EffectCause	true	vaccines	limiting
+Relation	T14	T13	CauseEffect	true	transmission	limiting
+Relation	T13	T14	EffectCause	true	limiting	transmission
+Relation	T29	T15	CauseEffect	true	Risk factors	transmission
+Relation	T15	T29	EffectCause	true	transmission	Risk factors
+Relation	T29	T18	CauseEffect	true	Risk factors	increasing
+Relation	T18	T29	EffectCause	true	increasing	Risk factors
+Relation	T22	T20	CauseEffect	true	cough	spreads
+Relation	T20	T22	EffectCause	true	spreads	cough
+Relation	T23	T20	CauseEffect	true	sneeze	spreads
+Relation	T20	T23	EffectCause	true	spreads	sneeze
+Relation	T0	T2	NoRel	true	transmission	occur
+Relation	T0	T26	NoRel	true	transmission	touching
+Relation	T0	T7	NoRel	true	transmission	encouraged
+Relation	T1	T0	NoRel	true	believed	transmission
+Relation	T1	T29	NoRel	true	believed	Risk factors
+Relation	T10	T17	NoRel	true	infected	working
+Relation	T11	T12	NoRel	true	use	infection
+Relation	T11	T2	NoRel	true	use	occur
+Relation	T11	T8	NoRel	true	use	use
+Relation	T12	T15	NoRel	true	infection	transmission
+Relation	T12	T22	NoRel	true	infection	cough
+Relation	T12	T26	NoRel	true	infection	touching
+Relation	T13	T15	NoRel	true	limiting	transmission
+Relation	T13	T17	NoRel	true	limiting	working
+Relation	T13	T20	NoRel	true	limiting	spreads
+Relation	T13	T31	NoRel	true	limiting	breathe in
+Relation	T13	T5	NoRel	true	limiting	infect
+Relation	T14	T16	NoRel	true	transmission	smoking
+Relation	T14	T21	NoRel	true	transmission	infected
+Relation	T14	T3	NoRel	true	transmission	strains
+Relation	T15	T1	NoRel	true	transmission	believed
+Relation	T15	T17	NoRel	true	transmission	working
+Relation	T15	T2	NoRel	true	transmission	occur
+Relation	T15	T26	NoRel	true	transmission	touching
+Relation	T15	T27	NoRel	true	transmission	close contact
+Relation	T15	T4	NoRel	true	transmission	influenza
+Relation	T16	T19	NoRel	true	smoking	transmission
+Relation	T16	T24	NoRel	true	smoking	touch
+Relation	T17	T4	NoRel	true	working	influenza
+Relation	T17	T6	NoRel	true	working	happen
+Relation	T18	T14	NoRel	true	increasing	transmission
+Relation	T18	T25	NoRel	true	increasing	touch
+Relation	T18	T9	NoRel	true	increasing	dealing
+Relation	T19	T6	NoRel	true	transmission	happen
+Relation	T19	T8	NoRel	true	transmission	use
+Relation	T2	T11	NoRel	true	occur	use
+Relation	T2	T12	NoRel	true	occur	infection
+Relation	T2	T15	NoRel	true	occur	transmission
+Relation	T2	T21	NoRel	true	occur	infected
+Relation	T20	T13	NoRel	true	spreads	limiting
+Relation	T21	T23	NoRel	true	infected	sneeze
+Relation	T21	T30	NoRel	true	infected	not wearing gloves
+Relation	T22	T7	NoRel	true	cough	encouraged
+Relation	T23	T28	NoRel	true	sneeze	vaccines
+Relation	T23	T30	NoRel	true	sneeze	not wearing gloves
+Relation	T24	T20	NoRel	true	touch	spreads
+Relation	T25	T1	NoRel	true	touch	believed
+Relation	T25	T17	NoRel	true	touch	working
+Relation	T25	T27	NoRel	true	touch	close contact
+Relation	T25	T5	NoRel	true	touch	infect
+Relation	T25	T6	NoRel	true	touch	happen
+Relation	T26	T0	NoRel	true	touching	transmission
+Relation	T26	T11	NoRel	true	touching	use
+Relation	T26	T23	NoRel	true	touching	sneeze
+Relation	T27	T9	NoRel	true	close contact	dealing
+Relation	T28	T12	NoRel	true	vaccines	infection
+Relation	T28	T19	NoRel	true	vaccines	transmission
+Relation	T29	T12	NoRel	true	Risk factors	infection
+Relation	T29	T14	NoRel	true	Risk factors	transmission
+Relation	T29	T25	NoRel	true	Risk factors	touch
+Relation	T29	T5	NoRel	true	Risk factors	infect
+Relation	T3	T11	NoRel	true	strains	use
+Relation	T3	T18	NoRel	true	strains	increasing
+Relation	T3	T2	NoRel	true	strains	occur
+Relation	T3	T28	NoRel	true	strains	vaccines
+Relation	T3	T9	NoRel	true	strains	dealing
+Relation	T30	T18	NoRel	true	not wearing gloves	increasing
+Relation	T30	T5	NoRel	true	not wearing gloves	infect
+Relation	T30	T7	NoRel	true	not wearing gloves	encouraged
+Relation	T31	T21	NoRel	true	breathe in	infected
+Relation	T31	T23	NoRel	true	breathe in	sneeze
+Relation	T31	T7	NoRel	true	breathe in	encouraged
+Relation	T4	T23	NoRel	true	influenza	sneeze
+Relation	T4	T26	NoRel	true	influenza	touching
+Relation	T4	T29	NoRel	true	influenza	Risk factors
+Relation	T5	T26	NoRel	true	infect	touching
+Relation	T6	T12	NoRel	true	happen	infection
+Relation	T6	T27	NoRel	true	happen	close contact
+Relation	T6	T7	NoRel	true	happen	encouraged
+Relation	T6	T9	NoRel	true	happen	dealing
+Relation	T7	T18	NoRel	true	encouraged	increasing
+Relation	T7	T2	NoRel	true	encouraged	occur
+Relation	T7	T26	NoRel	true	encouraged	touching
+Relation	T7	T29	NoRel	true	encouraged	Risk factors
+Relation	T7	T30	NoRel	true	encouraged	not wearing gloves
+Relation	T8	T14	NoRel	true	use	transmission
+Relation	T8	T16	NoRel	true	use	smoking
+Relation	T8	T19	NoRel	true	use	transmission
+Relation	T8	T31	NoRel	true	use	breathe in
+Relation	T9	T13	NoRel	true	dealing	limiting
+Relation	T9	T3	NoRel	true	dealing	strains

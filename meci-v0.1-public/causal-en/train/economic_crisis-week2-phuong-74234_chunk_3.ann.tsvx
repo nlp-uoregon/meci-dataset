@@ -1,0 +1,87 @@
+Text	The founders of the scheme engaged in insider trading , by using their advance knowledge of the timings of national debt consolidations to make large profits from purchasing debt in advance .	Huge bribes were given to politicians to support the Acts of Parliament necessary for the scheme .	Company money was used to deal in its own shares , and selected individuals purchasing shares were given cash loans backed by those same shares to spend on purchasing more shares .	The expectation of profits from trade with South America was talked up to encourage the public to purchase shares , but the bubble prices reached far beyond what the actual profits of the business ( namely the slave trade ) could justify .	A parliamentary inquiry was held after the bursting of the bubble to discover its causes .
+Event	T0	engaged	EVENT	27
+Event	T1	trading	EVENT	46
+Event	T10	backed	EVENT	407
+Event	T11	spend	EVENT	438
+Event	T12	purchasing	EVENT	447
+Event	T13	justify	EVENT	702
+Event	T14	trade	EVENT	504
+Event	T15	encourage	EVENT	546
+Event	T16	reached	EVENT	610
+Event	T18	held	EVENT	740
+Event	T19	bursting	EVENT	755
+Event	T2	using	EVENT	59
+Event	T20	bubble	EVENT	771
+Event	T21	discover	EVENT	781
+Event	T22	purchasing	EVENT	163
+Event	T23	support	EVENT	233
+Event	T24	purchase	EVENT	570
+Event	T3	consolidations	EVENT	121
+Event	T4	make	EVENT	139
+Event	T5	given	EVENT	209
+Event	T6	used	EVENT	309
+Event	T7	deal	EVENT	317
+Event	T8	purchasing	EVENT	367
+Event	T9	given	EVENT	390
+Relation	T2	T4	CauseEffect	true	using	make
+Relation	T4	T2	EffectCause	true	make	using
+Relation	T7	T6	CauseEffect	true	deal	used
+Relation	T6	T7	EffectCause	true	used	deal
+Relation	T14	T24	CauseEffect	true	trade	purchase
+Relation	T24	T14	EffectCause	true	purchase	trade
+Relation	T14	T15	CauseEffect	true	trade	encourage
+Relation	T15	T14	EffectCause	true	encourage	trade
+Relation	T19	T18	CauseEffect	true	bursting	held
+Relation	T18	T19	EffectCause	true	held	bursting
+Relation	T21	T18	CauseEffect	true	discover	held
+Relation	T18	T21	EffectCause	true	held	discover
+Relation	T8	T9	CauseEffect	true	purchasing	given
+Relation	T9	T8	EffectCause	true	given	purchasing
+Relation	T1	T0	CauseEffect	true	trading	engaged
+Relation	T0	T1	EffectCause	true	engaged	trading
+Relation	T1	T2	CauseEffect	true	trading	using
+Relation	T2	T1	EffectCause	true	using	trading
+Relation	T16	T13	CauseEffect	true	reached	justify
+Relation	T13	T16	EffectCause	true	justify	reached
+Relation	T1	T6	NoRel	true	trading	used
+Relation	T10	T12	NoRel	true	backed	purchasing
+Relation	T10	T24	NoRel	true	backed	purchase
+Relation	T10	T6	NoRel	true	backed	used
+Relation	T11	T24	NoRel	true	spend	purchase
+Relation	T12	T13	NoRel	true	purchasing	justify
+Relation	T13	T0	NoRel	true	justify	engaged
+Relation	T13	T4	NoRel	true	justify	make
+Relation	T15	T21	NoRel	true	encourage	discover
+Relation	T16	T1	NoRel	true	reached	trading
+Relation	T18	T10	NoRel	true	held	backed
+Relation	T18	T22	NoRel	true	held	purchasing
+Relation	T18	T24	NoRel	true	held	purchase
+Relation	T19	T2	NoRel	true	bursting	using
+Relation	T19	T20	NoRel	true	bursting	bubble
+Relation	T19	T6	NoRel	true	bursting	used
+Relation	T20	T11	NoRel	true	bubble	spend
+Relation	T20	T15	NoRel	true	bubble	encourage
+Relation	T21	T12	NoRel	true	discover	purchasing
+Relation	T21	T22	NoRel	true	discover	purchasing
+Relation	T22	T6	NoRel	true	purchasing	used
+Relation	T23	T1	NoRel	true	support	trading
+Relation	T24	T12	NoRel	true	purchase	purchasing
+Relation	T24	T9	NoRel	true	purchase	given
+Relation	T3	T0	NoRel	true	consolidations	engaged
+Relation	T3	T12	NoRel	true	consolidations	purchasing
+Relation	T3	T2	NoRel	true	consolidations	using
+Relation	T3	T9	NoRel	true	consolidations	given
+Relation	T4	T14	NoRel	true	make	trade
+Relation	T4	T19	NoRel	true	make	bursting
+Relation	T4	T21	NoRel	true	make	discover
+Relation	T4	T9	NoRel	true	make	given
+Relation	T6	T23	NoRel	true	used	support
+Relation	T7	T12	NoRel	true	deal	purchasing
+Relation	T7	T13	NoRel	true	deal	justify
+Relation	T7	T24	NoRel	true	deal	purchase
+Relation	T7	T8	NoRel	true	deal	purchasing
+Relation	T8	T0	NoRel	true	purchasing	engaged
+Relation	T8	T2	NoRel	true	purchasing	using
+Relation	T9	T12	NoRel	true	given	purchasing
+Relation	T9	T24	NoRel	true	given	purchase
+Relation	T9	T7	NoRel	true	given	deal

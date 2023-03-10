@@ -1,0 +1,34 @@
+Text	Fransa Kralı IX. Louis kardeşinin kışkırtmalarıyla son Haçlı Seferine çıktı .	O sırada Tunus'tan kalkan Arap korsanları doğuya giden Hristiyan gemilerine zarar veriyordu .	Bu yüzden Tunus'a sefer düzenleyen IX. Louis ve ordusunun yarısı veba salgını nedeniyle öldü .	Sonradan İngiltere Kralı olacak olan Prens Edward ve Fransa Kralı IX. Louis Tunus'a karşı Sekizinci Haçlı seferine girişmiş ve bu sefer salgın sebebiyle sonuçsuz kalmıştır .	IX. Louis Kendi komutanlığı altında Haçlı Seferi yapmaya yemin etmişti .
+Event	T0	çıktı	EVENT	70
+Event	T1	veriyordu	EVENT	160
+Event	T2	düzenleyen	EVENT	196
+Event	T3	salgını	EVENT	242
+Event	T4	öldü	EVENT	260
+Event	T5	girişmiş	EVENT	382
+Event	T6	salgın	EVENT	403
+Event	T7	etmişti	EVENT	504
+Relation	T3	T4	CauseEffect	true	salgını	öldü
+Relation	T4	T3	EffectCause	true	öldü	salgını
+Relation	T1	T2	CauseEffect	true	veriyordu	düzenleyen
+Relation	T2	T1	EffectCause	true	düzenleyen	veriyordu
+Relation	T0	T3	NoRel	true	çıktı	salgını
+Relation	T0	T4	NoRel	true	çıktı	öldü
+Relation	T0	T6	NoRel	true	çıktı	salgın
+Relation	T0	T7	NoRel	true	çıktı	etmişti
+Relation	T1	T0	NoRel	true	veriyordu	çıktı
+Relation	T1	T7	NoRel	true	veriyordu	etmişti
+Relation	T2	T0	NoRel	true	düzenleyen	çıktı
+Relation	T2	T3	NoRel	true	düzenleyen	salgını
+Relation	T2	T6	NoRel	true	düzenleyen	salgın
+Relation	T3	T1	NoRel	true	salgını	veriyordu
+Relation	T3	T6	NoRel	true	salgını	salgın
+Relation	T4	T7	NoRel	true	öldü	etmişti
+Relation	T5	T1	NoRel	true	girişmiş	veriyordu
+Relation	T5	T3	NoRel	true	girişmiş	salgını
+Relation	T5	T4	NoRel	true	girişmiş	öldü
+Relation	T5	T6	NoRel	true	girişmiş	salgın
+Relation	T5	T7	NoRel	true	girişmiş	etmişti
+Relation	T6	T7	NoRel	true	salgın	etmişti
+Relation	T7	T3	NoRel	true	etmişti	salgını
+Relation	T7	T4	NoRel	true	etmişti	öldü
+Relation	T7	T5	NoRel	true	etmişti	girişmiş

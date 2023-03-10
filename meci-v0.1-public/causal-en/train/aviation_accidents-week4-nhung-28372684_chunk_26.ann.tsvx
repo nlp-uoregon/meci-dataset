@@ -1,0 +1,60 @@
+Text	8 December : Prototype Curtiss XB - 2 Condor , _ 26 - 211_ , assigned to Wright Field , Ohio in October 1927 , crashes at Buffalo , New York after having logged only 58 hours , 55 minutes flying time .	13 February : Sole prototype Blackburn F. 1 Turcock , the firm 's first fighter project in some eight years , an attempt to produce an aircraft equally suited as a land - based interceptor and as a ship - borne fighter , found no interest from the Air Ministry , but Blackburn built one as a private venture .	It first flew ( without guns ) on 14 November 1927 , piloted by Flt. Lt. Arthur George Loton , AFC , and having been purchased by the Turkish government was named the Turcock .	Allocated the British registration _ G - EBVP _ for test and delivery purposes , it was destroyed in a flying accident this date .	No other models of the type were built .
+Event	T0	assigned	EVENT	61
+Event	T1	crashes	EVENT	111
+Event	T2	logged	EVENT	154
+Event	T3	project	EVENT	282
+Event	T4	attempt	EVENT	315
+Event	T5	produce	EVENT	326
+Event	T6	suited	EVENT	354
+Event	T7	found	EVENT	423
+Event	T8	interest	EVENT	432
+Event	T9	built	EVENT	479
+Event	T10	venture	EVENT	502
+Event	T11	flew	EVENT	521
+Event	T12	piloted	EVENT	565
+Event	T13	purchased	EVENT	629
+Event	T14	named	EVENT	669
+Event	T15	Allocated	EVENT	689
+Event	T16	test	EVENT	741
+Event	T17	destroyed	EVENT	777
+Event	T18	accident	EVENT	799
+Event	T19	built	EVENT	853
+Relation	T2	T1	CauseEffect	true	logged	crashes
+Relation	T1	T2	EffectCause	true	crashes	logged
+Relation	T18	T17	CauseEffect	true	accident	destroyed
+Relation	T17	T18	EffectCause	true	destroyed	accident
+Relation	T0	T10	NoRel	true	assigned	venture
+Relation	T0	T17	NoRel	true	assigned	destroyed
+Relation	T0	T18	NoRel	true	assigned	accident
+Relation	T1	T4	NoRel	true	crashes	attempt
+Relation	T10	T3	NoRel	true	venture	project
+Relation	T10	T8	NoRel	true	venture	interest
+Relation	T11	T15	NoRel	true	flew	Allocated
+Relation	T12	T0	NoRel	true	piloted	assigned
+Relation	T12	T2	NoRel	true	piloted	logged
+Relation	T12	T7	NoRel	true	piloted	found
+Relation	T14	T16	NoRel	true	named	test
+Relation	T16	T19	NoRel	true	test	built
+Relation	T17	T12	NoRel	true	destroyed	piloted
+Relation	T18	T15	NoRel	true	accident	Allocated
+Relation	T18	T4	NoRel	true	accident	attempt
+Relation	T19	T0	NoRel	true	built	assigned
+Relation	T19	T15	NoRel	true	built	Allocated
+Relation	T19	T3	NoRel	true	built	project
+Relation	T2	T11	NoRel	true	logged	flew
+Relation	T2	T17	NoRel	true	logged	destroyed
+Relation	T2	T3	NoRel	true	logged	project
+Relation	T2	T5	NoRel	true	logged	produce
+Relation	T3	T0	NoRel	true	project	assigned
+Relation	T3	T13	NoRel	true	project	purchased
+Relation	T3	T15	NoRel	true	project	Allocated
+Relation	T3	T4	NoRel	true	project	attempt
+Relation	T4	T0	NoRel	true	attempt	assigned
+Relation	T4	T5	NoRel	true	attempt	produce
+Relation	T5	T12	NoRel	true	produce	piloted
+Relation	T5	T17	NoRel	true	produce	destroyed
+Relation	T5	T8	NoRel	true	produce	interest
+Relation	T7	T12	NoRel	true	found	piloted
+Relation	T8	T0	NoRel	true	interest	assigned
+Relation	T9	T18	NoRel	true	built	accident
+Relation	T9	T3	NoRel	true	built	project

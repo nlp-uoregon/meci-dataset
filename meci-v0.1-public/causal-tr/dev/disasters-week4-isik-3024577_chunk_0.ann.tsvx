@@ -1,0 +1,94 @@
+Text	2021 AVRUPA SELLERI , 12 Temmuz 2021'den itibaren başta Almanya olmak üzere Avusturya , Belçika , Fransa , İtalya , Hollanda ve İsviçre gibi kıta Avrupa'sı ülkelerini ve Birleşik Krallık'ı etkileyen bir felakete dönüşen geniş çaplı meteorolojik olaydır .	Avrupa genelinde can kaybı sayısı şimdilik 180 olarak belirlenmiş ve afet bölgelerinde büyük yıkımın yaşandığı kayda geçmiştir .	12 Temmuz 2021 günü Orta Avrupa'da kısa sürede doğu ve batı yönlerindeki yüksek basınç alanları arasında bir alçak basınç alanı oluşmuştur .	Bu alçak basınç bölgesi Akdeniz'den nemli hava kütlesini yoğunlaştırıp iki üç gün süren bir fırtınaya neden olmuştur .	Almanya'nın kuzeybatısı özellikle bu hava olayından çok fazla etkilenmiştir , çünkü Köln istasyonu kayıtları 24 saatte 150 mm'lik bir yağış yüksekliği kaydetmiştir .
+Event	T0	etkileyen	EVENT	189
+Event	T1	olaydır	EVENT	245
+Event	T3	belirlenmiş	EVENT	309
+Event	T4	afet	EVENT	324
+Event	T5	oluşmuştur	EVENT	512
+Event	T6	basınç	EVENT	534
+Event	T7	etkilenmiştir	EVENT	706
+Event	T8	kaydetmiştir	EVENT	795
+Event	T9	SELLERI	EVENT	12
+Event	T10	dönüşen	EVENT	212
+Event	T2	geçmiştir	EVENT	372
+Event	T11	yoğunlaştırıp	EVENT	582
+Event	T12	olmuştur	EVENT	633
+Event	T13	olayından	EVENT	686
+Relation	T0	T10	CauseEffect	true	etkileyen	dönüşen
+Relation	T10	T0	EffectCause	true	dönüşen	etkileyen
+Relation	T9	T0	CauseEffect	true	SELLERI	etkileyen
+Relation	T0	T9	EffectCause	true	etkileyen	SELLERI
+Relation	T9	T3	CauseEffect	true	SELLERI	belirlenmiş
+Relation	T3	T9	EffectCause	true	belirlenmiş	SELLERI
+Relation	T9	T2	CauseEffect	true	SELLERI	geçmiştir
+Relation	T2	T9	EffectCause	true	geçmiştir	SELLERI
+Relation	T4	T2	CauseEffect	true	afet	geçmiştir
+Relation	T2	T4	EffectCause	true	geçmiştir	afet
+Relation	T6	T11	CauseEffect	true	basınç	yoğunlaştırıp
+Relation	T11	T6	EffectCause	true	yoğunlaştırıp	basınç
+Relation	T11	T12	CauseEffect	true	yoğunlaştırıp	olmuştur
+Relation	T12	T11	EffectCause	true	olmuştur	yoğunlaştırıp
+Relation	T12	T7	CauseEffect	true	olmuştur	etkilenmiştir
+Relation	T7	T12	EffectCause	true	etkilenmiştir	olmuştur
+Relation	T13	T7	CauseEffect	true	olayından	etkilenmiştir
+Relation	T7	T13	EffectCause	true	etkilenmiştir	olayından
+Relation	T12	T8	CauseEffect	true	olmuştur	kaydetmiştir
+Relation	T8	T12	EffectCause	true	kaydetmiştir	olmuştur
+Relation	T0	T11	NoRel	true	etkileyen	yoğunlaştırıp
+Relation	T0	T2	NoRel	true	etkileyen	geçmiştir
+Relation	T0	T6	NoRel	true	etkileyen	basınç
+Relation	T1	T0	NoRel	true	olaydır	etkileyen
+Relation	T1	T10	NoRel	true	olaydır	dönüşen
+Relation	T1	T5	NoRel	true	olaydır	oluşmuştur
+Relation	T1	T8	NoRel	true	olaydır	kaydetmiştir
+Relation	T10	T1	NoRel	true	dönüşen	olaydır
+Relation	T10	T12	NoRel	true	dönüşen	olmuştur
+Relation	T10	T2	NoRel	true	dönüşen	geçmiştir
+Relation	T10	T3	NoRel	true	dönüşen	belirlenmiş
+Relation	T10	T8	NoRel	true	dönüşen	kaydetmiştir
+Relation	T11	T13	NoRel	true	yoğunlaştırıp	olayından
+Relation	T11	T3	NoRel	true	yoğunlaştırıp	belirlenmiş
+Relation	T11	T4	NoRel	true	yoğunlaştırıp	afet
+Relation	T11	T5	NoRel	true	yoğunlaştırıp	oluşmuştur
+Relation	T11	T7	NoRel	true	yoğunlaştırıp	etkilenmiştir
+Relation	T11	T8	NoRel	true	yoğunlaştırıp	kaydetmiştir
+Relation	T12	T0	NoRel	true	olmuştur	etkileyen
+Relation	T12	T2	NoRel	true	olmuştur	geçmiştir
+Relation	T12	T9	NoRel	true	olmuştur	SELLERI
+Relation	T13	T1	NoRel	true	olayından	olaydır
+Relation	T13	T11	NoRel	true	olayından	yoğunlaştırıp
+Relation	T13	T3	NoRel	true	olayından	belirlenmiş
+Relation	T13	T8	NoRel	true	olayından	kaydetmiştir
+Relation	T2	T0	NoRel	true	geçmiştir	etkileyen
+Relation	T2	T1	NoRel	true	geçmiştir	olaydır
+Relation	T2	T10	NoRel	true	geçmiştir	dönüşen
+Relation	T2	T12	NoRel	true	geçmiştir	olmuştur
+Relation	T2	T8	NoRel	true	geçmiştir	kaydetmiştir
+Relation	T3	T10	NoRel	true	belirlenmiş	dönüşen
+Relation	T3	T11	NoRel	true	belirlenmiş	yoğunlaştırıp
+Relation	T3	T12	NoRel	true	belirlenmiş	olmuştur
+Relation	T3	T5	NoRel	true	belirlenmiş	oluşmuştur
+Relation	T3	T7	NoRel	true	belirlenmiş	etkilenmiştir
+Relation	T4	T10	NoRel	true	afet	dönüşen
+Relation	T4	T12	NoRel	true	afet	olmuştur
+Relation	T4	T5	NoRel	true	afet	oluşmuştur
+Relation	T5	T2	NoRel	true	oluşmuştur	geçmiştir
+Relation	T5	T4	NoRel	true	oluşmuştur	afet
+Relation	T5	T6	NoRel	true	oluşmuştur	basınç
+Relation	T6	T0	NoRel	true	basınç	etkileyen
+Relation	T6	T13	NoRel	true	basınç	olayından
+Relation	T6	T5	NoRel	true	basınç	oluşmuştur
+Relation	T6	T9	NoRel	true	basınç	SELLERI
+Relation	T7	T0	NoRel	true	etkilenmiştir	etkileyen
+Relation	T7	T10	NoRel	true	etkilenmiştir	dönüşen
+Relation	T7	T3	NoRel	true	etkilenmiştir	belirlenmiş
+Relation	T7	T5	NoRel	true	etkilenmiştir	oluşmuştur
+Relation	T7	T8	NoRel	true	etkilenmiştir	kaydetmiştir
+Relation	T8	T11	NoRel	true	kaydetmiştir	yoğunlaştırıp
+Relation	T8	T13	NoRel	true	kaydetmiştir	olayından
+Relation	T8	T3	NoRel	true	kaydetmiştir	belirlenmiş
+Relation	T8	T4	NoRel	true	kaydetmiştir	afet
+Relation	T8	T6	NoRel	true	kaydetmiştir	basınç
+Relation	T8	T7	NoRel	true	kaydetmiştir	etkilenmiştir
+Relation	T9	T10	NoRel	true	SELLERI	dönüşen
+Relation	T9	T11	NoRel	true	SELLERI	yoğunlaştırıp
+Relation	T9	T12	NoRel	true	SELLERI	olmuştur

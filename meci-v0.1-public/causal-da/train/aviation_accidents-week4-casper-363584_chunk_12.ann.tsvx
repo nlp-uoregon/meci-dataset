@@ -1,0 +1,28 @@
+Text	Den 29. april fandt den fjernstyrede Remora 6000-ubåd ( navngivet efter _ Echeneidae _ ; sugefisk ) fra _ Phoenix International _ den orange kasse til den ene 'sorte ' boks _ Flight Data_Recorder _ ( FDR ) .	Kassen manglede dog lagerenheden CSMU ( _ Crash Survivable Memory Unit _ ) og først d. 1. maj blev den fundet og bjærget til moderskibet _ Île de Sein .	_	Den 3. maj blev den anden sorte boks ; _ Cockpit Voice Recorder _ ( CVR ) der optager lyde fra cockpittet , herunder radiokommunikationen , bjærget til _ Île de Sein .	_ Boksene sejles til Frankrig , hvor de skal aflæses af BEA .
+Event	T0	fandt	EVENT	14
+Event	T1	fjernstyrede	EVENT	24
+Event	T2	manglede	EVENT	215
+Event	T3	fundet	EVENT	311
+Event	T4	bjærget	EVENT	321
+Event	T5	optager	EVENT	441
+Event	T6	bjærget	EVENT	503
+Event	T7	sejles	EVENT	541
+Relation	T2	T3	CauseEffect	true	manglede	fundet
+Relation	T3	T2	EffectCause	true	fundet	manglede
+Relation	T3	T4	CauseEffect	true	fundet	bjærget
+Relation	T4	T3	EffectCause	true	bjærget	fundet
+Relation	T4	T7	CauseEffect	true	bjærget	sejles
+Relation	T7	T4	EffectCause	true	sejles	bjærget
+Relation	T0	T5	NoRel	true	fandt	optager
+Relation	T1	T4	NoRel	true	fjernstyrede	bjærget
+Relation	T2	T5	NoRel	true	manglede	optager
+Relation	T3	T1	NoRel	true	fundet	fjernstyrede
+Relation	T3	T5	NoRel	true	fundet	optager
+Relation	T3	T7	NoRel	true	fundet	sejles
+Relation	T4	T0	NoRel	true	bjærget	fandt
+Relation	T5	T2	NoRel	true	optager	manglede
+Relation	T5	T6	NoRel	true	optager	bjærget
+Relation	T5	T7	NoRel	true	optager	sejles
+Relation	T6	T4	NoRel	true	bjærget	bjærget
+Relation	T7	T1	NoRel	true	sejles	fjernstyrede
+Relation	T7	T3	NoRel	true	sejles	fundet

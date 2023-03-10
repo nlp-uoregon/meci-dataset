@@ -1,0 +1,57 @@
+Text	- A RUNAWAY SPAR ( formerly _ Category D SPAD_ ) is where an unattended train or vehicles not attached to a traction unit run away past a signal at danger .	Note that where this was the fault of the driver , this will be classed as a SPAD .	SPADs arising on starting from stations - typically those informally termed ' ding - ding right - aways ' , where the driver has inadvertently acted on a guard or dispatcher 's indication without reading the signal - can be classified further :	- SAS SPAD – " Starting against signal " SPAD , where the train was standing at a danger signal and the driver moved past it .	- SOY SPAD – " Starting on yellow " SPAD , where the train left on a caution signal and the driver did not appreciate that the next signal might be at danger .
+Event	T0	signal	EVENT	138
+Event	T1	fault	EVENT	186
+Event	T2	classed	EVENT	221
+Event	T3	SPAD	EVENT	234
+Event	T4	starting	EVENT	258
+Event	T5	termed	EVENT	310
+Event	T6	ding	EVENT	319
+Event	T7	indication	EVENT	418
+Event	T8	reading	EVENT	437
+Event	T9	signal	EVENT	449
+Event	T10	classified	EVENT	465
+Event	T11	Starting	EVENT	501
+Event	T12	standing	EVENT	554
+Event	T13	signal	EVENT	575
+Event	T14	moved	EVENT	597
+Event	T15	signal	EVENT	745
+Event	T16	arising	EVENT	247
+Event	T17	inadvertently acted	EVENT	370
+Relation	T4	T16	CauseEffect	true	starting	arising
+Relation	T16	T4	EffectCause	true	arising	starting
+Relation	T17	T16	CauseEffect	true	inadvertently acted	arising
+Relation	T16	T17	EffectCause	true	arising	inadvertently acted
+Relation	T1	T15	NoRel	true	fault	signal
+Relation	T1	T4	NoRel	true	fault	starting
+Relation	T1	T6	NoRel	true	fault	ding
+Relation	T1	T7	NoRel	true	fault	indication
+Relation	T10	T13	NoRel	true	classified	signal
+Relation	T10	T14	NoRel	true	classified	moved
+Relation	T10	T8	NoRel	true	classified	reading
+Relation	T10	T9	NoRel	true	classified	signal
+Relation	T11	T8	NoRel	true	Starting	reading
+Relation	T12	T16	NoRel	true	standing	arising
+Relation	T13	T10	NoRel	true	signal	classified
+Relation	T13	T12	NoRel	true	signal	standing
+Relation	T13	T15	NoRel	true	signal	signal
+Relation	T14	T1	NoRel	true	moved	fault
+Relation	T14	T17	NoRel	true	moved	inadvertently acted
+Relation	T16	T9	NoRel	true	arising	signal
+Relation	T17	T2	NoRel	true	inadvertently acted	classed
+Relation	T17	T3	NoRel	true	inadvertently acted	SPAD
+Relation	T17	T6	NoRel	true	inadvertently acted	ding
+Relation	T17	T8	NoRel	true	inadvertently acted	reading
+Relation	T2	T12	NoRel	true	classed	standing
+Relation	T2	T4	NoRel	true	classed	starting
+Relation	T3	T11	NoRel	true	SPAD	Starting
+Relation	T3	T13	NoRel	true	SPAD	signal
+Relation	T3	T4	NoRel	true	SPAD	starting
+Relation	T3	T9	NoRel	true	SPAD	signal
+Relation	T4	T3	NoRel	true	starting	SPAD
+Relation	T4	T5	NoRel	true	starting	termed
+Relation	T5	T10	NoRel	true	termed	classified
+Relation	T7	T16	NoRel	true	indication	arising
+Relation	T7	T4	NoRel	true	indication	starting
+Relation	T8	T10	NoRel	true	reading	classified
+Relation	T8	T3	NoRel	true	reading	SPAD
+Relation	T9	T1	NoRel	true	signal	fault

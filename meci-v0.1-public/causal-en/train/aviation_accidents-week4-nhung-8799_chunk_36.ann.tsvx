@@ -1,0 +1,100 @@
+Text	Evidence suggested that Cooper was knowledgeable about flying technique , aircraft , and the terrain .	He demanded four parachutes to force the assumption that he might compel one or more hostages to jump with him , thus ensuring he would not be deliberately supplied with sabotaged equipment .	He chose a 727 - 100 aircraft because it was ideal for a bail - out escape , owing not only to its aft airstair but also to the high , aftward placement of all three engines , which allowed a reasonably safe jump despite the proximity of the engine exhaust .	It had " single - point fueling " capability , a then - recent innovation that allowed all tanks to be refueled rapidly through a single fuel port .	It also had the ability ( unusual for a commercial jet airliner ) to remain in slow , low - altitude flight without stalling , and Cooper knew how to control its airspeed and altitude without entering the cockpit , where he could have been overpowered by the three pilots .
+Event	T0	suggested	EVENT	9
+Event	T1	demanded	EVENT	106
+Event	T2	force	EVENT	134
+Event	T3	assumption	EVENT	144
+Event	T4	compel	EVENT	169
+Event	T5	jump	EVENT	200
+Event	T6	ensuring	EVENT	221
+Event	T7	supplied	EVENT	259
+Event	T8	sabotaged	EVENT	273
+Event	T9	chose	EVENT	298
+Event	T10	escape	EVENT	363
+Event	T11	placement	EVENT	438
+Event	T12	allowed	EVENT	477
+Event	T13	jump	EVENT	503
+Event	T14	fueling	EVENT	578
+Event	T15	innovation	EVENT	617
+Event	T16	allowed	EVENT	633
+Event	T17	refueled	EVENT	657
+Event	T18	flight	EVENT	804
+Event	T19	stalling	EVENT	819
+Event	T20	knew	EVENT	841
+Event	T21	control	EVENT	853
+Event	T22	entering	EVENT	895
+Event	T23	overpowered	EVENT	943
+Event	T24	remain	EVENT	772
+Relation	T1	T2	CauseEffect	true	demanded	force
+Relation	T2	T1	EffectCause	true	force	demanded
+Relation	T4	T5	CauseEffect	true	compel	jump
+Relation	T5	T4	EffectCause	true	jump	compel
+Relation	T4	T6	CauseEffect	true	compel	ensuring
+Relation	T6	T4	EffectCause	true	ensuring	compel
+Relation	T9	T10	CauseEffect	true	chose	escape
+Relation	T10	T9	EffectCause	true	escape	chose
+Relation	T9	T12	CauseEffect	true	chose	allowed
+Relation	T12	T9	EffectCause	true	allowed	chose
+Relation	T14	T16	CauseEffect	true	fueling	allowed
+Relation	T16	T14	EffectCause	true	allowed	fueling
+Relation	T15	T16	CauseEffect	true	innovation	allowed
+Relation	T16	T15	EffectCause	true	allowed	innovation
+Relation	T0	T13	NoRel	true	suggested	jump
+Relation	T0	T16	NoRel	true	suggested	allowed
+Relation	T0	T9	NoRel	true	suggested	chose
+Relation	T1	T12	NoRel	true	demanded	allowed
+Relation	T1	T4	NoRel	true	demanded	compel
+Relation	T1	T8	NoRel	true	demanded	sabotaged
+Relation	T10	T1	NoRel	true	escape	demanded
+Relation	T10	T19	NoRel	true	escape	stalling
+Relation	T10	T21	NoRel	true	escape	control
+Relation	T11	T18	NoRel	true	placement	flight
+Relation	T11	T23	NoRel	true	placement	overpowered
+Relation	T12	T13	NoRel	true	allowed	jump
+Relation	T12	T21	NoRel	true	allowed	control
+Relation	T12	T5	NoRel	true	allowed	jump
+Relation	T13	T12	NoRel	true	jump	allowed
+Relation	T13	T20	NoRel	true	jump	knew
+Relation	T13	T5	NoRel	true	jump	jump
+Relation	T14	T2	NoRel	true	fueling	force
+Relation	T14	T5	NoRel	true	fueling	jump
+Relation	T14	T6	NoRel	true	fueling	ensuring
+Relation	T15	T12	NoRel	true	innovation	allowed
+Relation	T15	T20	NoRel	true	innovation	knew
+Relation	T15	T23	NoRel	true	innovation	overpowered
+Relation	T16	T4	NoRel	true	allowed	compel
+Relation	T17	T0	NoRel	true	refueled	suggested
+Relation	T17	T1	NoRel	true	refueled	demanded
+Relation	T17	T13	NoRel	true	refueled	jump
+Relation	T17	T22	NoRel	true	refueled	entering
+Relation	T17	T7	NoRel	true	refueled	supplied
+Relation	T18	T2	NoRel	true	flight	force
+Relation	T18	T22	NoRel	true	flight	entering
+Relation	T19	T12	NoRel	true	stalling	allowed
+Relation	T19	T21	NoRel	true	stalling	control
+Relation	T19	T7	NoRel	true	stalling	supplied
+Relation	T2	T10	NoRel	true	force	escape
+Relation	T2	T15	NoRel	true	force	innovation
+Relation	T2	T16	NoRel	true	force	allowed
+Relation	T2	T20	NoRel	true	force	knew
+Relation	T2	T22	NoRel	true	force	entering
+Relation	T2	T3	NoRel	true	force	assumption
+Relation	T20	T17	NoRel	true	knew	refueled
+Relation	T21	T1	NoRel	true	control	demanded
+Relation	T21	T18	NoRel	true	control	flight
+Relation	T22	T13	NoRel	true	entering	jump
+Relation	T22	T23	NoRel	true	entering	overpowered
+Relation	T24	T1	NoRel	true	remain	demanded
+Relation	T24	T14	NoRel	true	remain	fueling
+Relation	T24	T17	NoRel	true	remain	refueled
+Relation	T24	T21	NoRel	true	remain	control
+Relation	T3	T11	NoRel	true	assumption	placement
+Relation	T3	T19	NoRel	true	assumption	stalling
+Relation	T4	T10	NoRel	true	compel	escape
+Relation	T5	T19	NoRel	true	jump	stalling
+Relation	T6	T10	NoRel	true	ensuring	escape
+Relation	T6	T13	NoRel	true	ensuring	jump
+Relation	T7	T17	NoRel	true	supplied	refueled
+Relation	T7	T2	NoRel	true	supplied	force
+Relation	T7	T23	NoRel	true	supplied	overpowered
+Relation	T9	T0	NoRel	true	chose	suggested
+Relation	T9	T21	NoRel	true	chose	control

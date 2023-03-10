@@ -1,0 +1,62 @@
+Text	Since the plane was so close to the ground , the suddenness of the bank and dive meant the flight crew had no chance to recover the aircraft before impact .	In the aftermath of the accident , the Civil Aeronautics Administration ( CAA ) issued an Airworthiness Directive ordering all DC - 6 and DC - 6 B aircraft to be fitted with a manual device which could prevent the inadvertent reversal of the propeller blades .	United Airlines also stated they had begun installing reverse thrust indicator lights in the cockpits of their DC - 6 aircraft , which would warn pilots when a propeller had reversed .	On April 4 , 1955 , a United Airlines check captain , Stanley C. Hoyt , age 45 , was carrying out instrument rating checks on two of the airline 's pilots .	Hoyt had been employed by United Airlines since 1937 , and had 9,763 flying hours experience , 549 of which were in a DC - 6 .
+Event	T0	meant	EVENT	81
+Event	T1	chance	EVENT	110
+Event	T2	recover	EVENT	120
+Event	T3	impact	EVENT	148
+Event	T4	accident	EVENT	181
+Event	T5	issued	EVENT	237
+Event	T6	ordering	EVENT	271
+Event	T7	fitted	EVENT	319
+Event	T8	reversal	EVENT	383
+Event	T9	stated	EVENT	439
+Event	T10	thrust	EVENT	480
+Event	T11	warn	EVENT	559
+Event	T12	reversed	EVENT	592
+Event	T13	employed	EVENT	774
+Event	T14	flying	EVENT	829
+Event	T15	close	EVENT	23
+Event	T16	prevent	EVENT	359
+Event	T17	begun	EVENT	455
+Event	T18	check	EVENT	641
+Event	T19	carrying out	EVENT	688
+Relation	T4	T5	CauseEffect	true	accident	issued
+Relation	T5	T4	EffectCause	true	issued	accident
+Relation	T5	T6	CauseEffect	true	issued	ordering
+Relation	T6	T5	EffectCause	true	ordering	issued
+Relation	T6	T7	CauseEffect	true	ordering	fitted
+Relation	T7	T6	EffectCause	true	fitted	ordering
+Relation	T7	T16	CauseEffect	true	fitted	prevent
+Relation	T16	T7	EffectCause	true	prevent	fitted
+Relation	T17	T11	CauseEffect	true	begun	warn
+Relation	T11	T17	EffectCause	true	warn	begun
+Relation	T1	T0	NoRel	true	chance	meant
+Relation	T1	T13	NoRel	true	chance	employed
+Relation	T10	T14	NoRel	true	thrust	flying
+Relation	T11	T12	NoRel	true	warn	reversed
+Relation	T12	T4	NoRel	true	reversed	accident
+Relation	T12	T9	NoRel	true	reversed	stated
+Relation	T13	T16	NoRel	true	employed	prevent
+Relation	T14	T6	NoRel	true	flying	ordering
+Relation	T15	T10	NoRel	true	close	thrust
+Relation	T15	T16	NoRel	true	close	prevent
+Relation	T16	T13	NoRel	true	prevent	employed
+Relation	T17	T13	NoRel	true	begun	employed
+Relation	T17	T16	NoRel	true	begun	prevent
+Relation	T17	T3	NoRel	true	begun	impact
+Relation	T19	T18	NoRel	true	carrying out	check
+Relation	T2	T5	NoRel	true	recover	issued
+Relation	T3	T10	NoRel	true	impact	thrust
+Relation	T3	T2	NoRel	true	impact	recover
+Relation	T3	T4	NoRel	true	impact	accident
+Relation	T3	T7	NoRel	true	impact	fitted
+Relation	T4	T12	NoRel	true	accident	reversed
+Relation	T4	T17	NoRel	true	accident	begun
+Relation	T5	T1	NoRel	true	issued	chance
+Relation	T5	T2	NoRel	true	issued	recover
+Relation	T7	T19	NoRel	true	fitted	carrying out
+Relation	T7	T8	NoRel	true	fitted	reversal
+Relation	T8	T17	NoRel	true	reversal	begun
+Relation	T8	T6	NoRel	true	reversal	ordering
+Relation	T8	T7	NoRel	true	reversal	fitted
+Relation	T9	T15	NoRel	true	stated	close
+Relation	T9	T16	NoRel	true	stated	prevent

@@ -1,0 +1,31 @@
+Text	ALROSA'NIN 514 SEFER SAYILI UÇUŞU 7 Eylül 2010'de bir Tupolev Tu - 154M ( RA - 85684 ) ile gerçekleştirilen ve Udaçni'den Moskova'ya yapılan bir iç hat uçuşu sırasında elektrik arızası yaşanmasıyla acil iniş gerçekleştirmiştir .	Uçaktaki 81 kişiden yaralanan veya ölen olmadı .	Yakıt sistemini ve tüm navigasyon ve radyo sistemlerini devre dışı kalmasını sağlayan arıza meydana geldiğinde Tupolev seyir irtifasında seyrediyordu , yani uçak varış noktasına ulaşamazdı .	Mürettebat , kullanılmayan Izhma Havalimanı'na acil iniş yapmaya karar verdi .	Uçak , pisti aşarak pistin sonundaki bitki örtüsünde durdu .
+Event	T0	UÇUŞU	EVENT	28
+Event	T10	durdu	EVENT	601
+Event	T12	iniş	EVENT	203
+Event	T15	arıza	EVENT	364
+Event	T17	iniş	EVENT	521
+Event	T2	uçuşu	EVENT	152
+Event	T7	seyrediyordu	EVENT	415
+Event	T9	aşarak	EVENT	561
+Relation	T12	T9	CauseEffect	true	iniş	aşarak
+Relation	T9	T12	EffectCause	true	aşarak	iniş
+Relation	T9	T10	CauseEffect	true	aşarak	durdu
+Relation	T10	T9	EffectCause	true	durdu	aşarak
+Relation	T0	T10	NoRel	true	UÇUŞU	durdu
+Relation	T0	T17	NoRel	true	UÇUŞU	iniş
+Relation	T10	T17	NoRel	true	durdu	iniş
+Relation	T10	T2	NoRel	true	durdu	uçuşu
+Relation	T12	T2	NoRel	true	iniş	uçuşu
+Relation	T12	T7	NoRel	true	iniş	seyrediyordu
+Relation	T15	T12	NoRel	true	arıza	iniş
+Relation	T15	T17	NoRel	true	arıza	iniş
+Relation	T15	T2	NoRel	true	arıza	uçuşu
+Relation	T15	T7	NoRel	true	arıza	seyrediyordu
+Relation	T17	T10	NoRel	true	iniş	durdu
+Relation	T2	T12	NoRel	true	uçuşu	iniş
+Relation	T2	T15	NoRel	true	uçuşu	arıza
+Relation	T2	T7	NoRel	true	uçuşu	seyrediyordu
+Relation	T7	T0	NoRel	true	seyrediyordu	UÇUŞU
+Relation	T7	T17	NoRel	true	seyrediyordu	iniş
+Relation	T9	T2	NoRel	true	aşarak	uçuşu
+Relation	T9	T7	NoRel	true	aşarak	seyrediyordu

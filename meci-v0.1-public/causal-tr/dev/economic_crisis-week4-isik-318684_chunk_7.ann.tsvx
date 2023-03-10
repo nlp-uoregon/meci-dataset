@@ -1,0 +1,20 @@
+Text	Bu amaç doğrultusunda devrimi engellemek adına yeni Genelkurmay Başkanı Wilhelm Groener ile gizli bir antlaşma yaptı .	Bu esnada ülkede birçok çatışmalar meydana geliyordu .	Bu çatışmaların sonunda ise toplumsal devrim bastırılmış oldu .	1919 yılının ocak ayında seçimler yapıldı .	Şubatta , seçimleri kazanan Siyah - Kırmızı - Altın Koalisyonu’na dayanan yeni bir hükûmet kuruldu ve koalisyonun cumhurbaşkanlığına Ebert seçildi .
+Event	T0	yaptı	EVENT	111
+Event	T2	yapıldı	EVENT	272
+Event	T3	kuruldu	EVENT	373
+Event	T4	seçildi	EVENT	421
+Event	T5	geliyordu	EVENT	162
+Event	T1	oldu	EVENT	231
+Relation	T5	T1	CauseEffect	true	geliyordu	oldu
+Relation	T1	T5	EffectCause	true	oldu	geliyordu
+Relation	T2	T3	CauseEffect	true	yapıldı	kuruldu
+Relation	T3	T2	EffectCause	true	kuruldu	yapıldı
+Relation	T3	T4	CauseEffect	true	kuruldu	seçildi
+Relation	T4	T3	EffectCause	true	seçildi	kuruldu
+Relation	T0	T3	NoRel	true	yaptı	kuruldu
+Relation	T1	T3	NoRel	true	oldu	kuruldu
+Relation	T1	T4	NoRel	true	oldu	seçildi
+Relation	T3	T0	NoRel	true	kuruldu	yaptı
+Relation	T3	T5	NoRel	true	kuruldu	geliyordu
+Relation	T4	T0	NoRel	true	seçildi	yaptı
+Relation	T4	T2	NoRel	true	seçildi	yapıldı

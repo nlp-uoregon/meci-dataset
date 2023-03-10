@@ -1,0 +1,98 @@
+Text	19 اکتوبر 2018ء کو بھارتی پنجاب کے شہر امرتسر کے قریب جوڑا پھاٹک کے ریلوے ٹریک پر دسہرے کے تہوار کے موقع پر راون کا پتلا جلایا جا رہا تھا اور لوگ بڑی تعداد میں پٹڑی پر بھی بیٹھے ہوئے تھے کہ تیز رفتار ٹرین آ گئی ۔	حادثہ شام کے وقت ہوا اور کم از کم 60 افراد ہلاک اور 100 سے زائد زخمی ہوئے ۔	ایک سرکاری عہدیدار نے رپورٹروں کو بتایا کہ منتخب شدہ عہدیداروں نے کم از کم 59 افراد کی ہلاکتوں کی تصدیق کی اور 19 اکتوبر کی شام کو کچھ 30 لاشیں حادثہ کی جگہ سے اٹھائی گئی تھیں ۔	ایک اور نے بتایا کہ 50 لاشیں ملیں اور کم از کم 50 افراد کو قریبی ہسپتال میں داخل کیا جا چکا تھا ۔	ٹرین کی تیز رفتار ٹکر سے کئی متاثرین کے ٹکڑے ٹکڑے یا کچھ حصہ کٹ گئے ، جس کی وجہ سے لاشوں کی شناخت بروقت نہ ہو سکی ۔
+Event	T0	تہوار	EVENT	91
+Event	T1	جلایا	EVENT	121
+Event	T10	حادثہ	EVENT	433
+Event	T11	بتایا	EVENT	478
+Event	T12	ملیں	EVENT	496
+Event	T13	داخل	EVENT	543
+Event	T14	ٹکر	EVENT	583
+Event	T17	آ گئی	EVENT	205
+Event	T2	بیٹھے	EVENT	172
+Event	T3	زخمی	EVENT	277
+Event	T4	حادثہ	EVENT	213
+Event	T5	تصدیق	EVENT	387
+Event	T6	ہلاک	EVENT	256
+Event	T7	اٹھائی	EVENT	449
+Event	T8	بتایا	EVENT	323
+Event	T9	ہلاکتوں	EVENT	376
+Relation	T4	T6	CauseEffect	true	حادثہ	ہلاک
+Relation	T6	T4	EffectCause	true	ہلاک	حادثہ
+Relation	T4	T3	CauseEffect	true	حادثہ	زخمی
+Relation	T3	T4	EffectCause	true	زخمی	حادثہ
+Relation	T17	T4	CauseEffect	true	آ گئی	حادثہ
+Relation	T4	T17	EffectCause	true	حادثہ	آ گئی
+Relation	T10	T9	CauseEffect	true	حادثہ	ہلاکتوں
+Relation	T9	T10	EffectCause	true	ہلاکتوں	حادثہ
+Relation	T9	T5	CauseEffect	true	ہلاکتوں	تصدیق
+Relation	T5	T9	EffectCause	true	تصدیق	ہلاکتوں
+Relation	T14	T10	CauseEffect	true	ٹکر	حادثہ
+Relation	T10	T14	EffectCause	true	حادثہ	ٹکر
+Relation	T9	T12	CauseEffect	true	ہلاکتوں	ملیں
+Relation	T12	T9	EffectCause	true	ملیں	ہلاکتوں
+Relation	T0	T12	NoRel	true	تہوار	ملیں
+Relation	T0	T14	NoRel	true	تہوار	ٹکر
+Relation	T0	T2	NoRel	true	تہوار	بیٹھے
+Relation	T0	T6	NoRel	true	تہوار	ہلاک
+Relation	T0	T7	NoRel	true	تہوار	اٹھائی
+Relation	T10	T1	NoRel	true	حادثہ	جلایا
+Relation	T10	T17	NoRel	true	حادثہ	آ گئی
+Relation	T10	T3	NoRel	true	حادثہ	زخمی
+Relation	T10	T5	NoRel	true	حادثہ	تصدیق
+Relation	T10	T7	NoRel	true	حادثہ	اٹھائی
+Relation	T10	T8	NoRel	true	حادثہ	بتایا
+Relation	T11	T10	NoRel	true	بتایا	حادثہ
+Relation	T11	T14	NoRel	true	بتایا	ٹکر
+Relation	T11	T2	NoRel	true	بتایا	بیٹھے
+Relation	T11	T5	NoRel	true	بتایا	تصدیق
+Relation	T12	T1	NoRel	true	ملیں	جلایا
+Relation	T12	T11	NoRel	true	ملیں	بتایا
+Relation	T12	T2	NoRel	true	ملیں	بیٹھے
+Relation	T12	T3	NoRel	true	ملیں	زخمی
+Relation	T12	T6	NoRel	true	ملیں	ہلاک
+Relation	T12	T8	NoRel	true	ملیں	بتایا
+Relation	T13	T11	NoRel	true	داخل	بتایا
+Relation	T13	T12	NoRel	true	داخل	ملیں
+Relation	T13	T14	NoRel	true	داخل	ٹکر
+Relation	T13	T17	NoRel	true	داخل	آ گئی
+Relation	T13	T2	NoRel	true	داخل	بیٹھے
+Relation	T13	T4	NoRel	true	داخل	حادثہ
+Relation	T14	T12	NoRel	true	ٹکر	ملیں
+Relation	T14	T13	NoRel	true	ٹکر	داخل
+Relation	T14	T17	NoRel	true	ٹکر	آ گئی
+Relation	T17	T0	NoRel	true	آ گئی	تہوار
+Relation	T17	T1	NoRel	true	آ گئی	جلایا
+Relation	T17	T10	NoRel	true	آ گئی	حادثہ
+Relation	T17	T2	NoRel	true	آ گئی	بیٹھے
+Relation	T17	T5	NoRel	true	آ گئی	تصدیق
+Relation	T17	T7	NoRel	true	آ گئی	اٹھائی
+Relation	T17	T8	NoRel	true	آ گئی	بتایا
+Relation	T2	T10	NoRel	true	بیٹھے	حادثہ
+Relation	T2	T13	NoRel	true	بیٹھے	داخل
+Relation	T2	T3	NoRel	true	بیٹھے	زخمی
+Relation	T3	T11	NoRel	true	زخمی	بتایا
+Relation	T3	T12	NoRel	true	زخمی	ملیں
+Relation	T3	T13	NoRel	true	زخمی	داخل
+Relation	T3	T5	NoRel	true	زخمی	تصدیق
+Relation	T3	T8	NoRel	true	زخمی	بتایا
+Relation	T4	T0	NoRel	true	حادثہ	تہوار
+Relation	T4	T1	NoRel	true	حادثہ	جلایا
+Relation	T5	T2	NoRel	true	تصدیق	بیٹھے
+Relation	T5	T4	NoRel	true	تصدیق	حادثہ
+Relation	T6	T0	NoRel	true	ہلاک	تہوار
+Relation	T6	T11	NoRel	true	ہلاک	بتایا
+Relation	T6	T2	NoRel	true	ہلاک	بیٹھے
+Relation	T6	T3	NoRel	true	ہلاک	زخمی
+Relation	T6	T7	NoRel	true	ہلاک	اٹھائی
+Relation	T6	T8	NoRel	true	ہلاک	بتایا
+Relation	T7	T1	NoRel	true	اٹھائی	جلایا
+Relation	T7	T10	NoRel	true	اٹھائی	حادثہ
+Relation	T7	T14	NoRel	true	اٹھائی	ٹکر
+Relation	T7	T4	NoRel	true	اٹھائی	حادثہ
+Relation	T8	T14	NoRel	true	بتایا	ٹکر
+Relation	T8	T17	NoRel	true	بتایا	آ گئی
+Relation	T8	T2	NoRel	true	بتایا	بیٹھے
+Relation	T8	T6	NoRel	true	بتایا	ہلاک
+Relation	T8	T9	NoRel	true	بتایا	ہلاکتوں
+Relation	T9	T13	NoRel	true	ہلاکتوں	داخل
+Relation	T9	T2	NoRel	true	ہلاکتوں	بیٹھے
+Relation	T9	T3	NoRel	true	ہلاکتوں	زخمی

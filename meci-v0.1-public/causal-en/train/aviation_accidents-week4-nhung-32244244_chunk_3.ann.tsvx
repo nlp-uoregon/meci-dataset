@@ -1,0 +1,59 @@
+Text	- June 25 : An Indian Airlines Douglas C - 47A ( registration VT - COJ ) crashed near Mohanbari while on a Mohanbari - Damroh supply drop mission due to loss of control after the left wing grazed a hillside , killing five of seven on board .	- July 9 : An Indian Airlines Douglas C - 47A ( registration VT - CYM ) broke apart in mid-air and crashed near Dhaka while on an Agartala - Dhaka cargo service , killing all three crew .	- July 13 : Five Quebecair aircraft ( four Douglas C - 47A's and a Douglas C - 48 ) were destroyed in a hangar fire while parked at Rimouski Airport ; there were no casualties .	- August 12 : Argentine Air Force Douglas C - 47B _ T - 19 _ struck terrain after take off from Trelew Airport and crashed , killing all 12 on board .	- August 12 : All Nippon Airways Flight 025 ( a Douglas C - 53 , registration JA 5045 ) crashed off the Izu Islands en route to Nagoya from Tokyo , killing all 33 on board .
+Event	T0	crashed	EVENT	73
+Event	T1	loss	EVENT	153
+Event	T2	grazed	EVENT	189
+Event	T3	killing	EVENT	209
+Event	T4	crashed	EVENT	341
+Event	T5	service	EVENT	395
+Event	T6	killing	EVENT	405
+Event	T7	destroyed	EVENT	519
+Event	T8	fire	EVENT	541
+Event	T9	parked	EVENT	552
+Event	T10	casualties	EVENT	595
+Event	T11	crashed	EVENT	723
+Event	T12	killing	EVENT	733
+Event	T14	killing	EVENT	907
+Event	T15	broke	EVENT	314
+Event	T16	struck	EVENT	669
+Event	T17	take off	EVENT	690
+Event	T18	crashed	EVENT	847
+Relation	T1	T0	CauseEffect	true	loss	crashed
+Relation	T0	T1	EffectCause	true	crashed	loss
+Relation	T0	T3	CauseEffect	true	crashed	killing
+Relation	T3	T0	EffectCause	true	killing	crashed
+Relation	T4	T6	CauseEffect	true	crashed	killing
+Relation	T6	T4	EffectCause	true	killing	crashed
+Relation	T8	T7	CauseEffect	true	fire	destroyed
+Relation	T7	T8	EffectCause	true	destroyed	fire
+Relation	T11	T12	CauseEffect	true	crashed	killing
+Relation	T12	T11	EffectCause	true	killing	crashed
+Relation	T18	T14	CauseEffect	true	crashed	killing
+Relation	T14	T18	EffectCause	true	killing	crashed
+Relation	T0	T16	NoRel	true	crashed	struck
+Relation	T0	T5	NoRel	true	crashed	service
+Relation	T1	T10	NoRel	true	loss	casualties
+Relation	T1	T12	NoRel	true	loss	killing
+Relation	T1	T2	NoRel	true	loss	grazed
+Relation	T1	T3	NoRel	true	loss	killing
+Relation	T1	T4	NoRel	true	loss	crashed
+Relation	T10	T0	NoRel	true	casualties	crashed
+Relation	T10	T11	NoRel	true	casualties	crashed
+Relation	T10	T17	NoRel	true	casualties	take off
+Relation	T10	T9	NoRel	true	casualties	parked
+Relation	T11	T0	NoRel	true	crashed	crashed
+Relation	T11	T6	NoRel	true	crashed	killing
+Relation	T11	T9	NoRel	true	crashed	parked
+Relation	T12	T14	NoRel	true	killing	killing
+Relation	T15	T1	NoRel	true	broke	loss
+Relation	T16	T4	NoRel	true	struck	crashed
+Relation	T17	T14	NoRel	true	take off	killing
+Relation	T17	T3	NoRel	true	take off	killing
+Relation	T2	T1	NoRel	true	grazed	loss
+Relation	T3	T14	NoRel	true	killing	killing
+Relation	T5	T14	NoRel	true	service	killing
+Relation	T6	T16	NoRel	true	killing	struck
+Relation	T6	T9	NoRel	true	killing	parked
+Relation	T7	T3	NoRel	true	destroyed	killing
+Relation	T7	T5	NoRel	true	destroyed	service
+Relation	T8	T11	NoRel	true	fire	crashed
+Relation	T8	T12	NoRel	true	fire	killing

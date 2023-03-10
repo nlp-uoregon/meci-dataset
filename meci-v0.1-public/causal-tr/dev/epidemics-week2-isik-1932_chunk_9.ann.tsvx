@@ -1,0 +1,41 @@
+Text	Gerekli araştırma testleri yapılmamış organ , kan ve kan ürünleri nakli yoluyla da HIV bulaşabilir .	Bu durumun engellenmesi için her türlü organ , doku , kan ve kan ürünleri nakli öncesi nakle engel hastalıklar yönünden alınan materyaller kabul eden merkezler tarafından dikkatle kontrol edilir .	Araştırma testlerinin pencere döneminde bulunan hastalarda yalancı negatif sonuç vermesi halinde , bulaşma gerçekleşebilir .	HIV bulaş gerçekleştikten sonra 2- 4 hafta aralığında yüksek ateş , boğaz ağrısı , lenf bezlerinde şişlikler halsizlik grip benzeri belirtiler verir sonrasında kendiliğinden geçer .	HIV'in kendine özgü belirtileri bulunmadığından belirtilerin HIV e ait olduğu ancak ELISA testi aracılığıyla belli olur .
+Event	T0	nakli	EVENT	66
+Event	T1	nakli	EVENT	175
+Event	T10	geçer	EVENT	597
+Event	T16	şişlikler	EVENT	522
+Event	T17	halsizlik	EVENT	532
+Event	T4	vermesi	EVENT	379
+Event	T6	ateş	EVENT	484
+Event	T7	ağrısı	EVENT	497
+Relation	T0	T6	CauseEffect	true	nakli	ateş
+Relation	T6	T0	EffectCause	true	ateş	nakli
+Relation	T0	T7	CauseEffect	true	nakli	ağrısı
+Relation	T7	T0	EffectCause	true	ağrısı	nakli
+Relation	T0	T16	CauseEffect	true	nakli	şişlikler
+Relation	T16	T0	EffectCause	true	şişlikler	nakli
+Relation	T0	T17	CauseEffect	true	nakli	halsizlik
+Relation	T17	T0	EffectCause	true	halsizlik	nakli
+Relation	T1	T4	CauseEffect	true	nakli	vermesi
+Relation	T4	T1	EffectCause	true	vermesi	nakli
+Relation	T4	T6	CauseEffect	true	vermesi	ateş
+Relation	T6	T4	EffectCause	true	ateş	vermesi
+Relation	T4	T7	CauseEffect	true	vermesi	ağrısı
+Relation	T7	T4	EffectCause	true	ağrısı	vermesi
+Relation	T4	T16	CauseEffect	true	vermesi	şişlikler
+Relation	T16	T4	EffectCause	true	şişlikler	vermesi
+Relation	T4	T17	CauseEffect	true	vermesi	halsizlik
+Relation	T17	T4	EffectCause	true	halsizlik	vermesi
+Relation	T0	T1	NoRel	true	nakli	nakli
+Relation	T1	T0	NoRel	true	nakli	nakli
+Relation	T1	T16	NoRel	true	nakli	şişlikler
+Relation	T1	T6	NoRel	true	nakli	ateş
+Relation	T10	T0	NoRel	true	geçer	nakli
+Relation	T10	T7	NoRel	true	geçer	ağrısı
+Relation	T16	T10	NoRel	true	şişlikler	geçer
+Relation	T16	T17	NoRel	true	şişlikler	halsizlik
+Relation	T17	T16	NoRel	true	halsizlik	şişlikler
+Relation	T17	T6	NoRel	true	halsizlik	ateş
+Relation	T17	T7	NoRel	true	halsizlik	ağrısı
+Relation	T6	T1	NoRel	true	ateş	nakli
+Relation	T7	T1	NoRel	true	ağrısı	nakli
+Relation	T7	T17	NoRel	true	ağrısı	halsizlik

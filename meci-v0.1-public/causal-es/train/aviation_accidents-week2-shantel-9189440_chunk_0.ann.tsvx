@@ -1,0 +1,54 @@
+Text	El 25 de noviembre de 2019 , dos helicópteros militares franceses , que eran parte de la Operación Barkhane , se estrellaron en el norte de Malí y murieron 13 soldados .	Fue el incidente más mortal que involucró al ejército francés desde el atentado contra los cuarteles en Beirut en 1983 .	Un helicóptero de ataque francés Eurocopter Tiger chocó con un helicóptero de transporte militar Eurocopter AS532 Cougar a baja altitud durante la noche , mientras viajaba cerca de la ciudad de Ménaka , en el norte de Malí .	Los helicópteros estaban en medio de una persecución a fuerzas militantes en vehículos y motocicletas , después de que las fuerzas terrestres pidieran apoyo aéreo .	Por razones desconocidas , los dos helicópteros chocaron y se estrellaron matando a todos a bordo .
+Event	T0	estrellaron	EVENT	113
+Event	T1	murieron	EVENT	147
+Event	T10	persecución	EVENT	557
+Event	T11	chocaron	EVENT	729
+Event	T12	matando	EVENT	755
+Event	T3	incidente	EVENT	177
+Event	T5	involucró	EVENT	202
+Event	T6	atentado	EVENT	241
+Event	T7	ataque	EVENT	309
+Event	T8	chocó	EVENT	341
+Event	T9	viajaba	EVENT	455
+Relation	T0	T1	CauseEffect	true	estrellaron	murieron
+Relation	T1	T0	EffectCause	true	murieron	estrellaron
+Relation	T11	T12	CauseEffect	true	chocaron	matando
+Relation	T12	T11	EffectCause	true	matando	chocaron
+Relation	T0	T11	NoRel	true	estrellaron	chocaron
+Relation	T0	T6	NoRel	true	estrellaron	atentado
+Relation	T0	T8	NoRel	true	estrellaron	chocó
+Relation	T1	T10	NoRel	true	murieron	persecución
+Relation	T1	T3	NoRel	true	murieron	incidente
+Relation	T1	T7	NoRel	true	murieron	ataque
+Relation	T10	T0	NoRel	true	persecución	estrellaron
+Relation	T10	T11	NoRel	true	persecución	chocaron
+Relation	T10	T3	NoRel	true	persecución	incidente
+Relation	T10	T9	NoRel	true	persecución	viajaba
+Relation	T11	T6	NoRel	true	chocaron	atentado
+Relation	T11	T7	NoRel	true	chocaron	ataque
+Relation	T12	T10	NoRel	true	matando	persecución
+Relation	T12	T8	NoRel	true	matando	chocó
+Relation	T3	T0	NoRel	true	incidente	estrellaron
+Relation	T3	T1	NoRel	true	incidente	murieron
+Relation	T3	T5	NoRel	true	incidente	involucró
+Relation	T3	T9	NoRel	true	incidente	viajaba
+Relation	T5	T3	NoRel	true	involucró	incidente
+Relation	T5	T6	NoRel	true	involucró	atentado
+Relation	T5	T7	NoRel	true	involucró	ataque
+Relation	T5	T8	NoRel	true	involucró	chocó
+Relation	T6	T0	NoRel	true	atentado	estrellaron
+Relation	T6	T3	NoRel	true	atentado	incidente
+Relation	T6	T5	NoRel	true	atentado	involucró
+Relation	T6	T7	NoRel	true	atentado	ataque
+Relation	T7	T0	NoRel	true	ataque	estrellaron
+Relation	T7	T12	NoRel	true	ataque	matando
+Relation	T7	T5	NoRel	true	ataque	involucró
+Relation	T7	T8	NoRel	true	ataque	chocó
+Relation	T8	T11	NoRel	true	chocó	chocaron
+Relation	T8	T9	NoRel	true	chocó	viajaba
+Relation	T9	T0	NoRel	true	viajaba	estrellaron
+Relation	T9	T10	NoRel	true	viajaba	persecución
+Relation	T9	T11	NoRel	true	viajaba	chocaron
+Relation	T9	T12	NoRel	true	viajaba	matando
+Relation	T9	T3	NoRel	true	viajaba	incidente
+Relation	T9	T6	NoRel	true	viajaba	atentado

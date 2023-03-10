@@ -1,0 +1,38 @@
+Text	Desuden er alt fyrværkeri købt i udlandet ulovligt at bruge i Danmark .	Visse fyrværkerityper må kun håndteres af professionelle fyrværkere .	Krysantemumbomber og kanonslag er generelt ulovlige i Danmark .	I Danmark er det lovligt at købe fyrværkeri fra 15. december til 31. december , og at afskyde det fra den 27. december til og med 1. januar året efter .	- Fyrværkeriulykken i Seest_- Krysantemumbombe -___Krudt_-___Netto Eksplosivstof Mængde_-___Nytår
+Event	T0	købt	EVENT	26
+Event	T1	købe	EVENT	234
+Event	T2	Fyrværkeriulykken	EVENT	361
+Event	T3	ulovligt	EVENT	42
+Event	T4	håndteres	EVENT	101
+Event	T5	fyrværkerityper	EVENT	78
+Event	T6	ulovlige	EVENT	185
+Event	T7	lovligt	EVENT	223
+Event	T8	afskyde	EVENT	292
+Relation	T0	T3	CauseEffect	true	købt	ulovligt
+Relation	T3	T0	EffectCause	true	ulovligt	købt
+Relation	T0	T4	NoRel	true	købt	håndteres
+Relation	T0	T5	NoRel	true	købt	fyrværkerityper
+Relation	T0	T6	NoRel	true	købt	ulovlige
+Relation	T0	T8	NoRel	true	købt	afskyde
+Relation	T1	T3	NoRel	true	købe	ulovligt
+Relation	T1	T6	NoRel	true	købe	ulovlige
+Relation	T2	T1	NoRel	true	Fyrværkeriulykken	købe
+Relation	T2	T8	NoRel	true	Fyrværkeriulykken	afskyde
+Relation	T3	T2	NoRel	true	ulovligt	Fyrværkeriulykken
+Relation	T3	T4	NoRel	true	ulovligt	håndteres
+Relation	T3	T5	NoRel	true	ulovligt	fyrværkerityper
+Relation	T4	T5	NoRel	true	håndteres	fyrværkerityper
+Relation	T4	T6	NoRel	true	håndteres	ulovlige
+Relation	T5	T0	NoRel	true	fyrværkerityper	købt
+Relation	T5	T2	NoRel	true	fyrværkerityper	Fyrværkeriulykken
+Relation	T5	T3	NoRel	true	fyrværkerityper	ulovligt
+Relation	T5	T6	NoRel	true	fyrværkerityper	ulovlige
+Relation	T5	T7	NoRel	true	fyrværkerityper	lovligt
+Relation	T6	T7	NoRel	true	ulovlige	lovligt
+Relation	T6	T8	NoRel	true	ulovlige	afskyde
+Relation	T7	T0	NoRel	true	lovligt	købt
+Relation	T7	T5	NoRel	true	lovligt	fyrværkerityper
+Relation	T7	T8	NoRel	true	lovligt	afskyde
+Relation	T8	T1	NoRel	true	afskyde	købe
+Relation	T8	T4	NoRel	true	afskyde	håndteres
+Relation	T8	T6	NoRel	true	afskyde	ulovlige

@@ -1,0 +1,34 @@
+Text	The two men ( Joseph Loomis and his accomplice , fellow Coast Guardsman Raymond Bornman Jr. ) were sentenced to federal prison terms for the crime .	- October 10 , 1992 -__ South Africa __–	A steam passenger train running during the Lady Grey Spring Festival derails at high speed killing the engine driver and 5 passengers .	- November 15 , 1992 –__ Germany __– eleven people die and fifty - two are injured when the wreckage of a derailed freight train is hit by an express train near Northeim .	- November 30 , 1992 –__ Netherlands __– HOOFDDORP TRAIN ACCIDENT : An Intercity train , travelling from Amsterdam to Vlissingen derails near Hoofddorp .
+Event	T0	crime	EVENT	141
+Event	T1	running	EVENT	214
+Event	T10	travelling	EVENT	587
+Event	T11	derails	EVENT	627
+Event	T12	sentenced	EVENT	99
+Event	T2	derails	EVENT	259
+Event	T3	killing	EVENT	281
+Event	T4	die	EVENT	377
+Event	T5	injured	EVENT	401
+Event	T6	wreckage	EVENT	418
+Event	T7	derailed	EVENT	432
+Event	T8	hit	EVENT	458
+Relation	T0	T12	CauseEffect	true	crime	sentenced
+Relation	T12	T0	EffectCause	true	sentenced	crime
+Relation	T2	T1	CauseEffect	true	derails	running
+Relation	T1	T2	EffectCause	true	running	derails
+Relation	T2	T3	CauseEffect	true	derails	killing
+Relation	T3	T2	EffectCause	true	killing	derails
+Relation	T8	T4	CauseEffect	true	hit	die
+Relation	T4	T8	EffectCause	true	die	hit
+Relation	T8	T5	CauseEffect	true	hit	injured
+Relation	T5	T8	EffectCause	true	injured	hit
+Relation	T1	T8	NoRel	true	running	hit
+Relation	T11	T10	NoRel	true	derails	travelling
+Relation	T11	T5	NoRel	true	derails	injured
+Relation	T12	T1	NoRel	true	sentenced	running
+Relation	T2	T11	NoRel	true	derails	derails
+Relation	T3	T0	NoRel	true	killing	crime
+Relation	T3	T5	NoRel	true	killing	injured
+Relation	T4	T3	NoRel	true	die	killing
+Relation	T5	T2	NoRel	true	injured	derails
+Relation	T7	T0	NoRel	true	derailed	crime
+Relation	T8	T1	NoRel	true	hit	running

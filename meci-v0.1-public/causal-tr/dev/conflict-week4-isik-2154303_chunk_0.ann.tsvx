@@ -1,0 +1,48 @@
+Text	BERAT KUŞATMASI , Temmuz 1455 tarihinde Osmanlı İmparatorluğu'nun elindeki Berat'ın Leş Birliği tarafından kuşatılmasıdır .	İskender Bey Berat Kalesi'ni aylarca kuşatmış ve Osmanlı garnizon komutanıyla teslim şartları üzerinde anlaşmıştır .	Bundan sonra İskender Bey kuşatmayı gevşetti ve bölgeden ayrıldı .	Osmanlılar kuşatmanın zayıflatıldığını görünce İsa Bey Evrenos komutasında bir destek süvari birliği gönderdi .	Bu taktik hata sonrasında Arnavut kuşatmacıların neredeyse tamamı öldürülmüştür .
+Event	T0	kuşatılmasıdır	EVENT	107
+Event	T1	kuşatmış	EVENT	161
+Event	T2	anlaşmıştır	EVENT	227
+Event	T3	gevşetti	EVENT	277
+Event	T4	ayrıldı	EVENT	298
+Event	T6	gönderdi	EVENT	409
+Event	T8	öldürülmüştür	EVENT	486
+Event	T9	BERAT KUŞATMASI	EVENT	0
+Event	T10	kuşatmanın	EVENT	319
+Relation	T2	T3	CauseEffect	true	anlaşmıştır	gevşetti
+Relation	T3	T2	EffectCause	true	gevşetti	anlaşmıştır
+Relation	T2	T4	CauseEffect	true	anlaşmıştır	ayrıldı
+Relation	T4	T2	EffectCause	true	ayrıldı	anlaşmıştır
+Relation	T3	T6	CauseEffect	true	gevşetti	gönderdi
+Relation	T6	T3	EffectCause	true	gönderdi	gevşetti
+Relation	T6	T8	CauseEffect	true	gönderdi	öldürülmüştür
+Relation	T8	T6	EffectCause	true	öldürülmüştür	gönderdi
+Relation	T0	T10	NoRel	true	kuşatılmasıdır	kuşatmanın
+Relation	T0	T2	NoRel	true	kuşatılmasıdır	anlaşmıştır
+Relation	T0	T4	NoRel	true	kuşatılmasıdır	ayrıldı
+Relation	T0	T6	NoRel	true	kuşatılmasıdır	gönderdi
+Relation	T1	T0	NoRel	true	kuşatmış	kuşatılmasıdır
+Relation	T1	T10	NoRel	true	kuşatmış	kuşatmanın
+Relation	T1	T4	NoRel	true	kuşatmış	ayrıldı
+Relation	T1	T6	NoRel	true	kuşatmış	gönderdi
+Relation	T1	T8	NoRel	true	kuşatmış	öldürülmüştür
+Relation	T10	T0	NoRel	true	kuşatmanın	kuşatılmasıdır
+Relation	T10	T1	NoRel	true	kuşatmanın	kuşatmış
+Relation	T10	T6	NoRel	true	kuşatmanın	gönderdi
+Relation	T2	T0	NoRel	true	anlaşmıştır	kuşatılmasıdır
+Relation	T2	T1	NoRel	true	anlaşmıştır	kuşatmış
+Relation	T2	T10	NoRel	true	anlaşmıştır	kuşatmanın
+Relation	T3	T0	NoRel	true	gevşetti	kuşatılmasıdır
+Relation	T3	T10	NoRel	true	gevşetti	kuşatmanın
+Relation	T3	T4	NoRel	true	gevşetti	ayrıldı
+Relation	T3	T8	NoRel	true	gevşetti	öldürülmüştür
+Relation	T3	T9	NoRel	true	gevşetti	BERAT KUŞATMASI
+Relation	T4	T0	NoRel	true	ayrıldı	kuşatılmasıdır
+Relation	T4	T1	NoRel	true	ayrıldı	kuşatmış
+Relation	T4	T3	NoRel	true	ayrıldı	gevşetti
+Relation	T4	T9	NoRel	true	ayrıldı	BERAT KUŞATMASI
+Relation	T8	T2	NoRel	true	öldürülmüştür	anlaşmıştır
+Relation	T8	T3	NoRel	true	öldürülmüştür	gevşetti
+Relation	T8	T4	NoRel	true	öldürülmüştür	ayrıldı
+Relation	T9	T10	NoRel	true	BERAT KUŞATMASI	kuşatmanın
+Relation	T9	T3	NoRel	true	BERAT KUŞATMASI	gevşetti
+Relation	T9	T8	NoRel	true	BERAT KUŞATMASI	öldürülmüştür

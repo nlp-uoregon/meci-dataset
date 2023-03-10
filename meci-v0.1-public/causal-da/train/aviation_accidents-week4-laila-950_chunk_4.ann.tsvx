@@ -1,0 +1,53 @@
+Text	Til at bidrage til at stimulere byfornyelse foreslog David Rockefeller , at havnemyndigheden skulle bygge et såkaldt World Trade Center i Lower Manhattan .	De oprindelige planer blev officielt offentliggjort i 1961 , hvori man besluttede at bygningerne skulle stå et sted langs East River .	Havnemyndigheden krævede godkendelse fra både guvernørerne i New York og New Jersey til at gennemføre byggeprojektet .	New Jerseys guvernør , Robert B. Meyner , meddelte New York , at han ville godkende projektet til et beløb af 335 millioner dollars .	Antallet af passagerer ved Port Authority Trans-Hudson og Manhattan Railroad faldt væsentligt fra 113 millioner i 1927 til 26 millioner i 1958 efter opførelsen af nye biltunneller og broer over Hudson River .
+Event	T0	stimulere	EVENT	22
+Event	T1	bygge	EVENT	100
+Event	T2	offentliggjort	EVENT	193
+Event	T3	besluttede	EVENT	227
+Event	T4	godkendelse	EVENT	316
+Event	T5	byggeprojektet	EVENT	393
+Event	T6	meddelte	EVENT	452
+Event	T7	godkende	EVENT	485
+Event	T8	faldt	EVENT	621
+Event	T9	opførelsen	EVENT	693
+Event	T10	foreslog	EVENT	44
+Event	T11	stå	EVENT	260
+Relation	T9	T8	CauseEffect	true	opførelsen	faldt
+Relation	T8	T9	EffectCause	true	faldt	opførelsen
+Relation	T0	T10	CauseEffect	true	stimulere	foreslog
+Relation	T10	T0	EffectCause	true	foreslog	stimulere
+Relation	T0	T2	NoRel	true	stimulere	offentliggjort
+Relation	T0	T3	NoRel	true	stimulere	besluttede
+Relation	T0	T9	NoRel	true	stimulere	opførelsen
+Relation	T1	T0	NoRel	true	bygge	stimulere
+Relation	T1	T2	NoRel	true	bygge	offentliggjort
+Relation	T1	T3	NoRel	true	bygge	besluttede
+Relation	T1	T5	NoRel	true	bygge	byggeprojektet
+Relation	T1	T7	NoRel	true	bygge	godkende
+Relation	T1	T8	NoRel	true	bygge	faldt
+Relation	T10	T1	NoRel	true	foreslog	bygge
+Relation	T10	T11	NoRel	true	foreslog	stå
+Relation	T10	T4	NoRel	true	foreslog	godkendelse
+Relation	T10	T7	NoRel	true	foreslog	godkende
+Relation	T11	T2	NoRel	true	stå	offentliggjort
+Relation	T11	T3	NoRel	true	stå	besluttede
+Relation	T11	T7	NoRel	true	stå	godkende
+Relation	T11	T9	NoRel	true	stå	opførelsen
+Relation	T2	T9	NoRel	true	offentliggjort	opførelsen
+Relation	T3	T1	NoRel	true	besluttede	bygge
+Relation	T3	T2	NoRel	true	besluttede	offentliggjort
+Relation	T3	T7	NoRel	true	besluttede	godkende
+Relation	T5	T0	NoRel	true	byggeprojektet	stimulere
+Relation	T5	T2	NoRel	true	byggeprojektet	offentliggjort
+Relation	T5	T9	NoRel	true	byggeprojektet	opførelsen
+Relation	T6	T2	NoRel	true	meddelte	offentliggjort
+Relation	T6	T7	NoRel	true	meddelte	godkende
+Relation	T7	T11	NoRel	true	godkende	stå
+Relation	T7	T5	NoRel	true	godkende	byggeprojektet
+Relation	T7	T6	NoRel	true	godkende	meddelte
+Relation	T7	T9	NoRel	true	godkende	opførelsen
+Relation	T8	T10	NoRel	true	faldt	foreslog
+Relation	T8	T4	NoRel	true	faldt	godkendelse
+Relation	T8	T7	NoRel	true	faldt	godkende
+Relation	T9	T0	NoRel	true	opførelsen	stimulere
+Relation	T9	T1	NoRel	true	opførelsen	bygge
+Relation	T9	T3	NoRel	true	opførelsen	besluttede

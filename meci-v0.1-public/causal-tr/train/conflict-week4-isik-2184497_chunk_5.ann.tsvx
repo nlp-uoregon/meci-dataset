@@ -1,0 +1,54 @@
+Text	Saldırının ardından kimi siyasiler ve sivil toplum kuruluşları yaptıkları açıklamada saldırıyı lanetlediler .	Saldırıdan bir gün sonra ilçede bir protesto yürüyüşü yapıldı .	- Saldırıdan kısa bir süre sonra açıklama yapan Başbakan Binali Yıldırım , " Allah'tan alınan tedbirler , bariyerler vesilesiyle çok çok büyük bir patlayıcı olmasına rağmen , tabii yaralananlar oldu çok sayıda .	30 civarında yaralımız var .	Maalesef şu ana kadar teyit edilen şekliyle 1 polis , 2 vatandaş olmak üzere 3 vefatımız var .
+Event	T0	Saldırının	EVENT	0
+Event	T1	lanetlediler	EVENT	95
+Event	T2	Saldırıdan	EVENT	110
+Event	T3	yapıldı	EVENT	164
+Event	T4	Saldırıdan	EVENT	176
+Event	T5	patlayıcı	EVENT	321
+Event	T6	açıklamada	EVENT	74
+Event	T7	açıklama	EVENT	207
+Event	T8	vefatımız	EVENT	494
+Event	T9	yaralananlar	EVENT	355
+Event	T10	yaralımız	EVENT	399
+Relation	T0	T6	CauseEffect	true	Saldırının	açıklamada
+Relation	T6	T0	EffectCause	true	açıklamada	Saldırının
+Relation	T2	T3	CauseEffect	true	Saldırıdan	yapıldı
+Relation	T3	T2	EffectCause	true	yapıldı	Saldırıdan
+Relation	T4	T7	CauseEffect	true	Saldırıdan	açıklama
+Relation	T7	T4	EffectCause	true	açıklama	Saldırıdan
+Relation	T4	T8	CauseEffect	true	Saldırıdan	vefatımız
+Relation	T8	T4	EffectCause	true	vefatımız	Saldırıdan
+Relation	T4	T10	CauseEffect	true	Saldırıdan	yaralımız
+Relation	T10	T4	EffectCause	true	yaralımız	Saldırıdan
+Relation	T0	T7	NoRel	true	Saldırının	açıklama
+Relation	T1	T0	NoRel	true	lanetlediler	Saldırının
+Relation	T1	T10	NoRel	true	lanetlediler	yaralımız
+Relation	T10	T1	NoRel	true	yaralımız	lanetlediler
+Relation	T10	T2	NoRel	true	yaralımız	Saldırıdan
+Relation	T10	T5	NoRel	true	yaralımız	patlayıcı
+Relation	T10	T6	NoRel	true	yaralımız	açıklamada
+Relation	T10	T9	NoRel	true	yaralımız	yaralananlar
+Relation	T2	T5	NoRel	true	Saldırıdan	patlayıcı
+Relation	T2	T7	NoRel	true	Saldırıdan	açıklama
+Relation	T3	T0	NoRel	true	yapıldı	Saldırının
+Relation	T3	T1	NoRel	true	yapıldı	lanetlediler
+Relation	T4	T3	NoRel	true	Saldırıdan	yapıldı
+Relation	T5	T0	NoRel	true	patlayıcı	Saldırının
+Relation	T5	T10	NoRel	true	patlayıcı	yaralımız
+Relation	T5	T7	NoRel	true	patlayıcı	açıklama
+Relation	T6	T1	NoRel	true	açıklamada	lanetlediler
+Relation	T6	T10	NoRel	true	açıklamada	yaralımız
+Relation	T6	T2	NoRel	true	açıklamada	Saldırıdan
+Relation	T6	T3	NoRel	true	açıklamada	yapıldı
+Relation	T6	T5	NoRel	true	açıklamada	patlayıcı
+Relation	T7	T0	NoRel	true	açıklama	Saldırının
+Relation	T7	T5	NoRel	true	açıklama	patlayıcı
+Relation	T7	T8	NoRel	true	açıklama	vefatımız
+Relation	T8	T0	NoRel	true	vefatımız	Saldırının
+Relation	T8	T10	NoRel	true	vefatımız	yaralımız
+Relation	T8	T2	NoRel	true	vefatımız	Saldırıdan
+Relation	T9	T1	NoRel	true	yaralananlar	lanetlediler
+Relation	T9	T2	NoRel	true	yaralananlar	Saldırıdan
+Relation	T9	T5	NoRel	true	yaralananlar	patlayıcı
+Relation	T9	T7	NoRel	true	yaralananlar	açıklama
+Relation	T9	T8	NoRel	true	yaralananlar	vefatımız

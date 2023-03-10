@@ -1,0 +1,65 @@
+Text	FLYVEPLADS FREDERIKSHAVN var en flyveplads , anlagt af tyskerne under besættelsen , umiddelbart vest for Frederikshavn .	Arbejdet med at anlægge flyvepladsen gik i gang få uger efter at Danmark blev besat .	Flyvepladsen blev anlagt som en del af _ Forsvarsområde Frederikshavn _ der desuden dækkede modstandsreden _ Frederikshavn Havn _ , støttepunktsgrupperne _ Frederikshavn Syd _ og _ Frederikshavn Nord _ samt sperriegelet _ Frederikshavn _ ( i alt blev der anlagt lidt over 100 bunkere i Frederikshavnsområdet ) .	Det tyske luftvåben Luftwaffe havde oprindeligt tiltænkt flyvepladsen som en satellit-plads for den langt_støre plads ved Aalborg .	Valget ved hovedgården Knivholt havde flere grunde : Terrænet var fladt , der var skov og infrastruktur på stedet ( veje og elektricitet ) .
+Event	T0	anlagt	EVENT	45
+Event	T1	Arbejdet	EVENT	121
+Event	T2	anlægge	EVENT	137
+Event	T3	besat	EVENT	199
+Event	T4	anlagt	EVENT	225
+Event	T5	dækkede	EVENT	291
+Event	T6	anlagt	EVENT	462
+Event	T7	tiltænkt	EVENT	567
+Event	T8	Valget	EVENT	651
+Event	T9	satellit-plads	EVENT	596
+Event	T10	infrastruktur	EVENT	741
+Event	T11	fladt	EVENT	717
+Event	T12	skov	EVENT	733
+Event	T13	grunde	EVENT	695
+Relation	T11	T13	CauseEffect	true	fladt	grunde
+Relation	T13	T11	EffectCause	true	grunde	fladt
+Relation	T12	T13	CauseEffect	true	skov	grunde
+Relation	T13	T12	EffectCause	true	grunde	skov
+Relation	T10	T13	CauseEffect	true	infrastruktur	grunde
+Relation	T13	T10	EffectCause	true	grunde	infrastruktur
+Relation	T0	T12	NoRel	true	anlagt	skov
+Relation	T0	T13	NoRel	true	anlagt	grunde
+Relation	T0	T5	NoRel	true	anlagt	dækkede
+Relation	T0	T6	NoRel	true	anlagt	anlagt
+Relation	T0	T7	NoRel	true	anlagt	tiltænkt
+Relation	T1	T0	NoRel	true	Arbejdet	anlagt
+Relation	T1	T11	NoRel	true	Arbejdet	fladt
+Relation	T1	T5	NoRel	true	Arbejdet	dækkede
+Relation	T1	T8	NoRel	true	Arbejdet	Valget
+Relation	T1	T9	NoRel	true	Arbejdet	satellit-plads
+Relation	T10	T1	NoRel	true	infrastruktur	Arbejdet
+Relation	T10	T12	NoRel	true	infrastruktur	skov
+Relation	T10	T2	NoRel	true	infrastruktur	anlægge
+Relation	T11	T12	NoRel	true	fladt	skov
+Relation	T11	T5	NoRel	true	fladt	dækkede
+Relation	T11	T9	NoRel	true	fladt	satellit-plads
+Relation	T12	T7	NoRel	true	skov	tiltænkt
+Relation	T12	T8	NoRel	true	skov	Valget
+Relation	T12	T9	NoRel	true	skov	satellit-plads
+Relation	T13	T4	NoRel	true	grunde	anlagt
+Relation	T13	T5	NoRel	true	grunde	dækkede
+Relation	T13	T8	NoRel	true	grunde	Valget
+Relation	T2	T11	NoRel	true	anlægge	fladt
+Relation	T2	T13	NoRel	true	anlægge	grunde
+Relation	T2	T9	NoRel	true	anlægge	satellit-plads
+Relation	T3	T4	NoRel	true	besat	anlagt
+Relation	T3	T6	NoRel	true	besat	anlagt
+Relation	T4	T1	NoRel	true	anlagt	Arbejdet
+Relation	T4	T12	NoRel	true	anlagt	skov
+Relation	T4	T8	NoRel	true	anlagt	Valget
+Relation	T5	T10	NoRel	true	dækkede	infrastruktur
+Relation	T5	T7	NoRel	true	dækkede	tiltænkt
+Relation	T6	T0	NoRel	true	anlagt	anlagt
+Relation	T6	T12	NoRel	true	anlagt	skov
+Relation	T6	T2	NoRel	true	anlagt	anlægge
+Relation	T6	T7	NoRel	true	anlagt	tiltænkt
+Relation	T7	T1	NoRel	true	tiltænkt	Arbejdet
+Relation	T7	T10	NoRel	true	tiltænkt	infrastruktur
+Relation	T7	T11	NoRel	true	tiltænkt	fladt
+Relation	T7	T12	NoRel	true	tiltænkt	skov
+Relation	T8	T4	NoRel	true	Valget	anlagt
+Relation	T9	T1	NoRel	true	satellit-plads	Arbejdet
+Relation	T9	T11	NoRel	true	satellit-plads	fladt
+Relation	T9	T5	NoRel	true	satellit-plads	dækkede

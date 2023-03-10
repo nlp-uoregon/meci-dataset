@@ -1,0 +1,100 @@
+Text	Many protesters argued for monetary relief from the countries slumping economy after weeks of the lockdown .	At least one demonstrator died after soldiers used tear gas , batons , and live bullets to disperse a protesters in Tripoli who were throwing molotov cocktails .	Protesters also congregated in Beirut outside the central bank and threw rocks at the building , and took over major roads as they claimed there wasn't enough done to protect the economy and those that would suffer the most economically .	On 31 July 2021 , hundreds of protesters attempted to gather in Merdeka Square , Kuala Lumpur , calling for the resignation of Prime Minister Muhyiddin Yassin over his and the Malaysian government 's handling of the COVID - 19 pandemic .	The protests took place despite Movement Control Order ( MCO ) restrictions being in place , and Malaysian police blocking access to Merdeka Square itself .
+Event	T0	argued	EVENT	16
+Event	T1	relief	EVENT	36
+Event	T10	claimed	EVENT	402
+Event	T11	done	EVENT	430
+Event	T12	protect	EVENT	438
+Event	T13	suffer	EVENT	479
+Event	T14	attempted	EVENT	551
+Event	T15	gather	EVENT	564
+Event	T16	calling	EVENT	606
+Event	T17	resignation	EVENT	622
+Event	T18	handling	EVENT	710
+Event	T19	pandemic	EVENT	737
+Event	T2	slumping	EVENT	62
+Event	T20	live	EVENT	184
+Event	T21	threw	EVENT	338
+Event	T3	lockdown	EVENT	98
+Event	T4	died	EVENT	135
+Event	T5	used	EVENT	155
+Event	T6	disperse	EVENT	200
+Event	T7	throwing	EVENT	242
+Event	T8	congregated	EVENT	287
+Event	T9	took over	EVENT	372
+Relation	T3	T2	CauseEffect	true	lockdown	slumping
+Relation	T2	T3	EffectCause	true	slumping	lockdown
+Relation	T5	T4	CauseEffect	true	used	died
+Relation	T4	T5	EffectCause	true	died	used
+Relation	T6	T20	CauseEffect	true	disperse	live
+Relation	T20	T6	EffectCause	true	live	disperse
+Relation	T7	T20	CauseEffect	true	throwing	live
+Relation	T20	T7	EffectCause	true	live	throwing
+Relation	T10	T8	CauseEffect	true	claimed	congregated
+Relation	T8	T10	EffectCause	true	congregated	claimed
+Relation	T11	T10	CauseEffect	true	done	claimed
+Relation	T10	T11	EffectCause	true	claimed	done
+Relation	T17	T15	CauseEffect	true	resignation	gather
+Relation	T15	T17	EffectCause	true	gather	resignation
+Relation	T12	T10	CauseEffect	true	protect	claimed
+Relation	T10	T12	EffectCause	true	claimed	protect
+Relation	T16	T15	CauseEffect	true	calling	gather
+Relation	T15	T16	EffectCause	true	gather	calling
+Relation	T18	T17	CauseEffect	true	handling	resignation
+Relation	T17	T18	EffectCause	true	resignation	handling
+Relation	T19	T17	CauseEffect	true	pandemic	resignation
+Relation	T17	T19	EffectCause	true	resignation	pandemic
+Relation	T9	T10	CauseEffect	true	took over	claimed
+Relation	T10	T9	EffectCause	true	claimed	took over
+Relation	T10	T21	CauseEffect	true	claimed	threw
+Relation	T21	T10	EffectCause	true	threw	claimed
+Relation	T1	T11	NoRel	true	relief	done
+Relation	T1	T20	NoRel	true	relief	live
+Relation	T10	T18	NoRel	true	claimed	handling
+Relation	T11	T1	NoRel	true	done	relief
+Relation	T11	T5	NoRel	true	done	used
+Relation	T11	T6	NoRel	true	done	disperse
+Relation	T12	T16	NoRel	true	protect	calling
+Relation	T12	T5	NoRel	true	protect	used
+Relation	T13	T10	NoRel	true	suffer	claimed
+Relation	T13	T18	NoRel	true	suffer	handling
+Relation	T13	T3	NoRel	true	suffer	lockdown
+Relation	T14	T12	NoRel	true	attempted	protect
+Relation	T14	T2	NoRel	true	attempted	slumping
+Relation	T14	T4	NoRel	true	attempted	died
+Relation	T15	T11	NoRel	true	gather	done
+Relation	T15	T2	NoRel	true	gather	slumping
+Relation	T15	T21	NoRel	true	gather	threw
+Relation	T15	T8	NoRel	true	gather	congregated
+Relation	T16	T14	NoRel	true	calling	attempted
+Relation	T16	T19	NoRel	true	calling	pandemic
+Relation	T16	T7	NoRel	true	calling	throwing
+Relation	T17	T12	NoRel	true	resignation	protect
+Relation	T17	T5	NoRel	true	resignation	used
+Relation	T18	T13	NoRel	true	handling	suffer
+Relation	T18	T2	NoRel	true	handling	slumping
+Relation	T19	T1	NoRel	true	pandemic	relief
+Relation	T19	T11	NoRel	true	pandemic	done
+Relation	T2	T11	NoRel	true	slumping	done
+Relation	T2	T19	NoRel	true	slumping	pandemic
+Relation	T2	T4	NoRel	true	slumping	died
+Relation	T20	T1	NoRel	true	live	relief
+Relation	T20	T13	NoRel	true	live	suffer
+Relation	T20	T16	NoRel	true	live	calling
+Relation	T21	T1	NoRel	true	threw	relief
+Relation	T21	T14	NoRel	true	threw	attempted
+Relation	T21	T18	NoRel	true	threw	handling
+Relation	T3	T0	NoRel	true	lockdown	argued
+Relation	T3	T14	NoRel	true	lockdown	attempted
+Relation	T3	T6	NoRel	true	lockdown	disperse
+Relation	T4	T7	NoRel	true	died	throwing
+Relation	T5	T15	NoRel	true	used	gather
+Relation	T6	T18	NoRel	true	disperse	handling
+Relation	T6	T8	NoRel	true	disperse	congregated
+Relation	T7	T14	NoRel	true	throwing	attempted
+Relation	T7	T18	NoRel	true	throwing	handling
+Relation	T7	T2	NoRel	true	throwing	slumping
+Relation	T8	T17	NoRel	true	congregated	resignation
+Relation	T9	T12	NoRel	true	took over	protect
+Relation	T9	T13	NoRel	true	took over	suffer
+Relation	T9	T2	NoRel	true	took over	slumping
+Relation	T9	T3	NoRel	true	took over	lockdown

@@ -1,0 +1,89 @@
+Text	Some issues of contention were divisions over the advisability of committing more troops versus complete withdrawal , the ' winnability ' of the Iraq War regardless of a surge , and framing of the issue .	_ The New York Times _ reported that former Massachusetts Governor Mitt Romney and former New York City Mayor Rudolph Giuliani backed Bush on the troop increase .	McCain did the same , saying on January 12 that " The presence of additional coalition forces would allow the Iraqi government to do what it cannot accomplish today on its own : impose its rule throughout the country . "	Immediately following Bush 's January 10 speech announcing the plan , Democratic politicians , including Ted Kennedy , Harry Reid and Dennis Kucinich , called on Congress to reject the surge .	Senator Dick Durbin issued the Democratic response which called upon Iraqis to " disband the militias and death squads . "
+Event	T0	contention	EVENT	15
+Event	T1	divisions	EVENT	31
+Event	T10	rule	EVENT	557
+Event	T11	announcing	EVENT	637
+Event	T12	reject	EVENT	763
+Event	T13	surge	EVENT	774
+Event	T14	issued	EVENT	802
+Event	T15	response	EVENT	824
+Event	T16	called	EVENT	839
+Event	T17	disband	EVENT	863
+Event	T18	death	EVENT	888
+Event	T19	allow	EVENT	468
+Event	T2	committing	EVENT	66
+Event	T20	presence	EVENT	422
+Event	T21	impose	EVENT	546
+Event	T22	speech	EVENT	630
+Event	T3	withdrawal	EVENT	105
+Event	T4	surge	EVENT	170
+Event	T5	framing	EVENT	182
+Event	T6	reported	EVENT	228
+Event	T7	backed	EVENT	332
+Event	T8	increase	EVENT	357
+Event	T9	saying	EVENT	390
+Relation	T1	T0	CauseEffect	true	divisions	contention
+Relation	T0	T1	EffectCause	true	contention	divisions
+Relation	T2	T1	CauseEffect	true	committing	divisions
+Relation	T1	T2	EffectCause	true	divisions	committing
+Relation	T8	T7	CauseEffect	true	increase	backed
+Relation	T7	T8	EffectCause	true	backed	increase
+Relation	T5	T0	CauseEffect	true	framing	contention
+Relation	T0	T5	EffectCause	true	contention	framing
+Relation	T21	T20	CauseEffect	true	impose	presence
+Relation	T20	T21	EffectCause	true	presence	impose
+Relation	T15	T17	CauseEffect	true	response	disband
+Relation	T17	T15	EffectCause	true	disband	response
+Relation	T0	T12	NoRel	true	contention	reject
+Relation	T1	T22	NoRel	true	divisions	speech
+Relation	T10	T15	NoRel	true	rule	response
+Relation	T10	T4	NoRel	true	rule	surge
+Relation	T11	T12	NoRel	true	announcing	reject
+Relation	T11	T2	NoRel	true	announcing	committing
+Relation	T11	T6	NoRel	true	announcing	reported
+Relation	T12	T13	NoRel	true	reject	surge
+Relation	T12	T15	NoRel	true	reject	response
+Relation	T13	T2	NoRel	true	surge	committing
+Relation	T13	T5	NoRel	true	surge	framing
+Relation	T14	T12	NoRel	true	issued	reject
+Relation	T14	T16	NoRel	true	issued	called
+Relation	T14	T18	NoRel	true	issued	death
+Relation	T14	T3	NoRel	true	issued	withdrawal
+Relation	T14	T4	NoRel	true	issued	surge
+Relation	T15	T13	NoRel	true	response	surge
+Relation	T15	T4	NoRel	true	response	surge
+Relation	T15	T9	NoRel	true	response	saying
+Relation	T16	T10	NoRel	true	called	rule
+Relation	T16	T13	NoRel	true	called	surge
+Relation	T17	T0	NoRel	true	disband	contention
+Relation	T17	T11	NoRel	true	disband	announcing
+Relation	T18	T8	NoRel	true	death	increase
+Relation	T19	T21	NoRel	true	allow	impose
+Relation	T2	T10	NoRel	true	committing	rule
+Relation	T2	T12	NoRel	true	committing	reject
+Relation	T2	T16	NoRel	true	committing	called
+Relation	T2	T19	NoRel	true	committing	allow
+Relation	T2	T22	NoRel	true	committing	speech
+Relation	T20	T15	NoRel	true	presence	response
+Relation	T20	T8	NoRel	true	presence	increase
+Relation	T21	T1	NoRel	true	impose	divisions
+Relation	T21	T18	NoRel	true	impose	death
+Relation	T21	T22	NoRel	true	impose	speech
+Relation	T22	T1	NoRel	true	speech	divisions
+Relation	T22	T3	NoRel	true	speech	withdrawal
+Relation	T3	T15	NoRel	true	withdrawal	response
+Relation	T4	T18	NoRel	true	surge	death
+Relation	T5	T12	NoRel	true	framing	reject
+Relation	T5	T13	NoRel	true	framing	surge
+Relation	T5	T9	NoRel	true	framing	saying
+Relation	T6	T1	NoRel	true	reported	divisions
+Relation	T6	T10	NoRel	true	reported	rule
+Relation	T6	T9	NoRel	true	reported	saying
+Relation	T7	T11	NoRel	true	backed	announcing
+Relation	T7	T16	NoRel	true	backed	called
+Relation	T7	T21	NoRel	true	backed	impose
+Relation	T8	T18	NoRel	true	increase	death
+Relation	T8	T19	NoRel	true	increase	allow
+Relation	T8	T21	NoRel	true	increase	impose
+Relation	T9	T14	NoRel	true	saying	issued
+Relation	T9	T2	NoRel	true	saying	committing

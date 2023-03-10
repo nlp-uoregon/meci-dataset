@@ -1,0 +1,33 @@
+Text	14 Haziran itibarıyla evlerini terkeden kişi sayısı 1.3 milyona ulaşmıştır .	Çin Ulusal Meteoroloji Merkezi etkili yağışın bir süre daha süreceğini ve Guizhou , Sichuan ve Yunnan'da geçen yıla göre % 30 ila 70 daha fazla yağış görüleceğini bildirdi .	China Daily sağanak yağışların Mayıs ayı içinde ülkenin güney kesiminde 64 kişinin ölümüne neden olduğunu bildirmiştir .	Sel Denetimi ve Kuraklığı Engelleme merkezleri su taşkınlarının bugüne kadar 59 kişinin canına mal olduğunu öne sürmektedir .	Guangdong'un bazı bölgelerinde 28 Mayıs - 2 Haziran tarihleri_arasında şiddetli yağışlar görüldü .
+Event	T0	terkeden	EVENT	31
+Event	T1	yağışın	EVENT	115
+Event	T2	bildirdi	EVENT	240
+Event	T3	bildirmiştir	EVENT	357
+Event	T4	taşkınlarının	EVENT	422
+Event	T5	sürmektedir	EVENT	484
+Event	T6	görüldü	EVENT	587
+Event	T7	ulaşmıştır	EVENT	64
+Event	T8	yağışların	EVENT	271
+Relation	T1	T2	CauseEffect	true	yağışın	bildirdi
+Relation	T2	T1	EffectCause	true	bildirdi	yağışın
+Relation	T8	T3	CauseEffect	true	yağışların	bildirmiştir
+Relation	T3	T8	EffectCause	true	bildirmiştir	yağışların
+Relation	T8	T4	CauseEffect	true	yağışların	taşkınlarının
+Relation	T4	T8	EffectCause	true	taşkınlarının	yağışların
+Relation	T4	T5	CauseEffect	true	taşkınlarının	sürmektedir
+Relation	T5	T4	EffectCause	true	sürmektedir	taşkınlarının
+Relation	T1	T7	CauseEffect	true	yağışın	ulaşmıştır
+Relation	T7	T1	EffectCause	true	ulaşmıştır	yağışın
+Relation	T0	T1	NoRel	true	terkeden	yağışın
+Relation	T0	T7	NoRel	true	terkeden	ulaşmıştır
+Relation	T1	T0	NoRel	true	yağışın	terkeden
+Relation	T1	T4	NoRel	true	yağışın	taşkınlarının
+Relation	T2	T5	NoRel	true	bildirdi	sürmektedir
+Relation	T3	T4	NoRel	true	bildirmiştir	taşkınlarının
+Relation	T4	T0	NoRel	true	taşkınlarının	terkeden
+Relation	T4	T6	NoRel	true	taşkınlarının	görüldü
+Relation	T5	T1	NoRel	true	sürmektedir	yağışın
+Relation	T6	T1	NoRel	true	görüldü	yağışın
+Relation	T7	T2	NoRel	true	ulaşmıştır	bildirdi
+Relation	T7	T4	NoRel	true	ulaşmıştır	taşkınlarının
+Relation	T8	T2	NoRel	true	yağışların	bildirdi

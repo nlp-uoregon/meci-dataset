@@ -1,0 +1,192 @@
+Text	Tras el despegue del avión el piloto expresó a los controladores de tráfico aéreo que regresaría a Coari debido a las malas condiciones climáticas , pero cerca de las 13.50 hora local impactó la copa de un árbol antes de caer en picada al río Manacapuru .	Aunque la en la lista oficial de pasajeros se incluían a 20 personas , el portavoz de la compañía aérea que operaba el avión , Manaus Aerotáxi , indicó que en el avión viajaban 24 pasajeros incluyendo a la tripulación , cifra que finalmente aumentó a 26 tras esclarecerse los hechos .	Posteriormente un sobreviviente declararía a medios locales que uno de los motores del avión falló durante el vuelo , y se investiga la relación de este hecho con el mal clima reportado por el piloto .	El Centro de Investigación y Prevención de Accidentes Aeronáuticos ( Cenipa ) de Brasil llegó hasta el lugar del accidente con el objeto de investigar las causas de este .	Se han señalado como posibles detonantes de la caída del avión el sobrepeso , la falta de combustible o el uso de queroseno en malas condiciones .
+Event	T0	despegue	EVENT	8
+Event	T1	expresó	EVENT	37
+Event	T2	regresaría	EVENT	86
+Event	T3	impactó	EVENT	184
+Event	T4	picada	EVENT	229
+Event	T5	operaba	EVENT	364
+Event	T6	indicó	EVENT	401
+Event	T7	viajaban	EVENT	424
+Event	T8	aumentó	EVENT	497
+Event	T9	esclarecerse	EVENT	515
+Event	T10	hechos	EVENT	532
+Event	T11	declararía	EVENT	573
+Event	T12	falló	EVENT	634
+Event	T13	vuelo	EVENT	651
+Event	T14	investiga	EVENT	664
+Event	T15	hecho	EVENT	694
+Event	T16	reportado	EVENT	717
+Event	T17	llegó	EVENT	831
+Event	T18	accidente	EVENT	856
+Event	T19	investigar	EVENT	883
+Event	T20	señalado	EVENT	922
+Event	T21	caída	EVENT	962
+Event	T22	uso	EVENT	1022
+Relation	T16	T12	CauseEffect	true	reportado	falló
+Relation	T12	T16	EffectCause	true	falló	reportado
+Relation	T12	T18	CauseEffect	true	falló	accidente
+Relation	T18	T12	EffectCause	true	accidente	falló
+Relation	T0	T1	NoRel	true	despegue	expresó
+Relation	T0	T13	NoRel	true	despegue	vuelo
+Relation	T0	T15	NoRel	true	despegue	hecho
+Relation	T0	T17	NoRel	true	despegue	llegó
+Relation	T0	T18	NoRel	true	despegue	accidente
+Relation	T0	T19	NoRel	true	despegue	investigar
+Relation	T0	T2	NoRel	true	despegue	regresaría
+Relation	T0	T3	NoRel	true	despegue	impactó
+Relation	T1	T11	NoRel	true	expresó	declararía
+Relation	T1	T13	NoRel	true	expresó	vuelo
+Relation	T1	T15	NoRel	true	expresó	hecho
+Relation	T1	T17	NoRel	true	expresó	llegó
+Relation	T1	T19	NoRel	true	expresó	investigar
+Relation	T1	T21	NoRel	true	expresó	caída
+Relation	T10	T1	NoRel	true	hechos	expresó
+Relation	T10	T12	NoRel	true	hechos	falló
+Relation	T10	T14	NoRel	true	hechos	investiga
+Relation	T10	T16	NoRel	true	hechos	reportado
+Relation	T10	T18	NoRel	true	hechos	accidente
+Relation	T10	T19	NoRel	true	hechos	investigar
+Relation	T10	T20	NoRel	true	hechos	señalado
+Relation	T10	T21	NoRel	true	hechos	caída
+Relation	T10	T8	NoRel	true	hechos	aumentó
+Relation	T11	T1	NoRel	true	declararía	expresó
+Relation	T11	T12	NoRel	true	declararía	falló
+Relation	T11	T17	NoRel	true	declararía	llegó
+Relation	T11	T20	NoRel	true	declararía	señalado
+Relation	T11	T3	NoRel	true	declararía	impactó
+Relation	T11	T7	NoRel	true	declararía	viajaban
+Relation	T11	T8	NoRel	true	declararía	aumentó
+Relation	T12	T11	NoRel	true	falló	declararía
+Relation	T12	T13	NoRel	true	falló	vuelo
+Relation	T12	T14	NoRel	true	falló	investiga
+Relation	T12	T17	NoRel	true	falló	llegó
+Relation	T12	T22	NoRel	true	falló	uso
+Relation	T12	T6	NoRel	true	falló	indicó
+Relation	T12	T8	NoRel	true	falló	aumentó
+Relation	T13	T1	NoRel	true	vuelo	expresó
+Relation	T13	T11	NoRel	true	vuelo	declararía
+Relation	T13	T16	NoRel	true	vuelo	reportado
+Relation	T13	T17	NoRel	true	vuelo	llegó
+Relation	T13	T2	NoRel	true	vuelo	regresaría
+Relation	T13	T9	NoRel	true	vuelo	esclarecerse
+Relation	T14	T12	NoRel	true	investiga	falló
+Relation	T14	T22	NoRel	true	investiga	uso
+Relation	T14	T4	NoRel	true	investiga	picada
+Relation	T14	T6	NoRel	true	investiga	indicó
+Relation	T14	T7	NoRel	true	investiga	viajaban
+Relation	T15	T0	NoRel	true	hecho	despegue
+Relation	T15	T19	NoRel	true	hecho	investigar
+Relation	T15	T20	NoRel	true	hecho	señalado
+Relation	T15	T3	NoRel	true	hecho	impactó
+Relation	T15	T4	NoRel	true	hecho	picada
+Relation	T15	T7	NoRel	true	hecho	viajaban
+Relation	T15	T8	NoRel	true	hecho	aumentó
+Relation	T16	T0	NoRel	true	reportado	despegue
+Relation	T16	T13	NoRel	true	reportado	vuelo
+Relation	T16	T18	NoRel	true	reportado	accidente
+Relation	T16	T20	NoRel	true	reportado	señalado
+Relation	T16	T22	NoRel	true	reportado	uso
+Relation	T16	T6	NoRel	true	reportado	indicó
+Relation	T17	T14	NoRel	true	llegó	investiga
+Relation	T17	T21	NoRel	true	llegó	caída
+Relation	T17	T22	NoRel	true	llegó	uso
+Relation	T17	T4	NoRel	true	llegó	picada
+Relation	T17	T5	NoRel	true	llegó	operaba
+Relation	T17	T6	NoRel	true	llegó	indicó
+Relation	T18	T11	NoRel	true	accidente	declararía
+Relation	T18	T16	NoRel	true	accidente	reportado
+Relation	T18	T17	NoRel	true	accidente	llegó
+Relation	T18	T20	NoRel	true	accidente	señalado
+Relation	T18	T22	NoRel	true	accidente	uso
+Relation	T18	T4	NoRel	true	accidente	picada
+Relation	T18	T5	NoRel	true	accidente	operaba
+Relation	T18	T8	NoRel	true	accidente	aumentó
+Relation	T18	T9	NoRel	true	accidente	esclarecerse
+Relation	T19	T14	NoRel	true	investigar	investiga
+Relation	T19	T18	NoRel	true	investigar	accidente
+Relation	T19	T2	NoRel	true	investigar	regresaría
+Relation	T19	T20	NoRel	true	investigar	señalado
+Relation	T19	T21	NoRel	true	investigar	caída
+Relation	T19	T4	NoRel	true	investigar	picada
+Relation	T19	T5	NoRel	true	investigar	operaba
+Relation	T2	T12	NoRel	true	regresaría	falló
+Relation	T2	T18	NoRel	true	regresaría	accidente
+Relation	T2	T21	NoRel	true	regresaría	caída
+Relation	T2	T22	NoRel	true	regresaría	uso
+Relation	T2	T5	NoRel	true	regresaría	operaba
+Relation	T2	T6	NoRel	true	regresaría	indicó
+Relation	T2	T9	NoRel	true	regresaría	esclarecerse
+Relation	T20	T0	NoRel	true	señalado	despegue
+Relation	T20	T14	NoRel	true	señalado	investiga
+Relation	T20	T15	NoRel	true	señalado	hecho
+Relation	T20	T16	NoRel	true	señalado	reportado
+Relation	T20	T17	NoRel	true	señalado	llegó
+Relation	T20	T19	NoRel	true	señalado	investigar
+Relation	T20	T4	NoRel	true	señalado	picada
+Relation	T20	T5	NoRel	true	señalado	operaba
+Relation	T20	T8	NoRel	true	señalado	aumentó
+Relation	T20	T9	NoRel	true	señalado	esclarecerse
+Relation	T21	T1	NoRel	true	caída	expresó
+Relation	T21	T10	NoRel	true	caída	hechos
+Relation	T21	T14	NoRel	true	caída	investiga
+Relation	T21	T16	NoRel	true	caída	reportado
+Relation	T21	T18	NoRel	true	caída	accidente
+Relation	T22	T13	NoRel	true	uso	vuelo
+Relation	T22	T2	NoRel	true	uso	regresaría
+Relation	T22	T4	NoRel	true	uso	picada
+Relation	T22	T7	NoRel	true	uso	viajaban
+Relation	T22	T8	NoRel	true	uso	aumentó
+Relation	T22	T9	NoRel	true	uso	esclarecerse
+Relation	T3	T0	NoRel	true	impactó	despegue
+Relation	T3	T10	NoRel	true	impactó	hechos
+Relation	T3	T20	NoRel	true	impactó	señalado
+Relation	T3	T22	NoRel	true	impactó	uso
+Relation	T3	T5	NoRel	true	impactó	operaba
+Relation	T3	T7	NoRel	true	impactó	viajaban
+Relation	T3	T8	NoRel	true	impactó	aumentó
+Relation	T4	T13	NoRel	true	picada	vuelo
+Relation	T4	T14	NoRel	true	picada	investiga
+Relation	T4	T15	NoRel	true	picada	hecho
+Relation	T4	T16	NoRel	true	picada	reportado
+Relation	T4	T17	NoRel	true	picada	llegó
+Relation	T4	T18	NoRel	true	picada	accidente
+Relation	T4	T7	NoRel	true	picada	viajaban
+Relation	T5	T0	NoRel	true	operaba	despegue
+Relation	T5	T10	NoRel	true	operaba	hechos
+Relation	T5	T11	NoRel	true	operaba	declararía
+Relation	T5	T13	NoRel	true	operaba	vuelo
+Relation	T5	T19	NoRel	true	operaba	investigar
+Relation	T5	T20	NoRel	true	operaba	señalado
+Relation	T5	T21	NoRel	true	operaba	caída
+Relation	T5	T22	NoRel	true	operaba	uso
+Relation	T5	T7	NoRel	true	operaba	viajaban
+Relation	T5	T8	NoRel	true	operaba	aumentó
+Relation	T6	T14	NoRel	true	indicó	investiga
+Relation	T6	T17	NoRel	true	indicó	llegó
+Relation	T6	T22	NoRel	true	indicó	uso
+Relation	T6	T7	NoRel	true	indicó	viajaban
+Relation	T7	T0	NoRel	true	viajaban	despegue
+Relation	T7	T11	NoRel	true	viajaban	declararía
+Relation	T7	T12	NoRel	true	viajaban	falló
+Relation	T7	T15	NoRel	true	viajaban	hecho
+Relation	T7	T17	NoRel	true	viajaban	llegó
+Relation	T7	T3	NoRel	true	viajaban	impactó
+Relation	T7	T5	NoRel	true	viajaban	operaba
+Relation	T7	T9	NoRel	true	viajaban	esclarecerse
+Relation	T8	T12	NoRel	true	aumentó	falló
+Relation	T8	T17	NoRel	true	aumentó	llegó
+Relation	T8	T18	NoRel	true	aumentó	accidente
+Relation	T8	T19	NoRel	true	aumentó	investigar
+Relation	T8	T21	NoRel	true	aumentó	caída
+Relation	T8	T22	NoRel	true	aumentó	uso
+Relation	T8	T4	NoRel	true	aumentó	picada
+Relation	T8	T6	NoRel	true	aumentó	indicó
+Relation	T8	T9	NoRel	true	aumentó	esclarecerse
+Relation	T9	T10	NoRel	true	esclarecerse	hechos
+Relation	T9	T12	NoRel	true	esclarecerse	falló
+Relation	T9	T14	NoRel	true	esclarecerse	investiga
+Relation	T9	T16	NoRel	true	esclarecerse	reportado
+Relation	T9	T18	NoRel	true	esclarecerse	accidente
+Relation	T9	T19	NoRel	true	esclarecerse	investigar
+Relation	T9	T4	NoRel	true	esclarecerse	picada
+Relation	T9	T7	NoRel	true	esclarecerse	viajaban

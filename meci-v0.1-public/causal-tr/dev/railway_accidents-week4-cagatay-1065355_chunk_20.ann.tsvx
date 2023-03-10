@@ -1,0 +1,20 @@
+Text	- 29 Haziran , 2009 – İki yolcu treni çarpıştı yerel zaman 2: 34 sabaha karşı .	Chenzhou demiryolu istasyonu , Hunan Bölgesi , 3 kiş öldü ve 63 kişi yaralandı .	The accident was allegedly caused by a brake failure .	Fakat bu tartışmalıdır .	- 9 Temmuz , 2009 – Bir Amtrak yolcu treni Detroit yakını Canton Township , Michigan_‘da bir araca çarptı .
+Event	T0	çarpıştı	EVENT	38
+Event	T1	öldü	EVENT	133
+Event	T2	yaralandı	EVENT	149
+Event	T3	accident	EVENT	165
+Event	T5	failure	EVENT	206
+Event	T6	çarptı	EVENT	340
+Relation	T0	T1	CauseEffect	true	çarpıştı	öldü
+Relation	T1	T0	EffectCause	true	öldü	çarpıştı
+Relation	T0	T2	CauseEffect	true	çarpıştı	yaralandı
+Relation	T2	T0	EffectCause	true	yaralandı	çarpıştı
+Relation	T5	T3	CauseEffect	true	failure	accident
+Relation	T3	T5	EffectCause	true	accident	failure
+Relation	T0	T3	NoRel	true	çarpıştı	accident
+Relation	T0	T5	NoRel	true	çarpıştı	failure
+Relation	T0	T6	NoRel	true	çarpıştı	çarptı
+Relation	T2	T3	NoRel	true	yaralandı	accident
+Relation	T2	T5	NoRel	true	yaralandı	failure
+Relation	T3	T2	NoRel	true	accident	yaralandı
+Relation	T5	T1	NoRel	true	failure	öldü

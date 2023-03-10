@@ -1,0 +1,86 @@
+Text	1998 yılında Asya ekonomilerinde meydana gelen ekonomik kriz , IMF'nin önlemleriyle bir küresel krize dönüşmemiş olsa da yine de dünya ekonomisinde söz sahibi olan Çin , Japonya ve Rusya'yı derinden etkiledi .	Türkiye de bu krizden nasibini aldı ve ülkeyi Uzakdoğu sermayeli şirketler birer birer terk etmeye başladı .	Aynı yılın sonlarına doğru Rusya'daki ekonomik bunalımın yerel bir krize dönüşmesiyle Türkiye ; en önemli ihracat ve turizm partnerlerinden birini kaybetti .	Bavul ticareti azaldı ve ülkenin cari gelirlerinde gözle görülür bir düşme meydana geldi .	Türkiye ekonomisi her ne kadar 1999 yılına Avrupa Birliği tarafından verilen resmi adaylık statüsünün ılık rüzgarlarına girmiş olsa da aynı yılın ortalarında meydana gelen iki depremle yıkılmanın eşiğine geldi .
+Event	T1	kriz	EVENT	56
+Event	T3	etkiledi	EVENT	199
+Event	T4	aldı	EVENT	241
+Event	T5	bunalımın	EVENT	366
+Event	T6	dönüşmesiyle	EVENT	392
+Event	T7	kaybetti	EVENT	466
+Event	T8	azaldı	EVENT	492
+Event	T9	geldi	EVENT	560
+Event	T10	girmiş	EVENT	688
+Event	T12	geldi	EVENT	772
+Event	T2	başladı	EVENT	309
+Event	T13	statüsünün	EVENT	659
+Event	T14	depremle	EVENT	744
+Relation	T1	T3	CauseEffect	true	kriz	etkiledi
+Relation	T3	T1	EffectCause	true	etkiledi	kriz
+Relation	T1	T2	CauseEffect	true	kriz	başladı
+Relation	T2	T1	EffectCause	true	başladı	kriz
+Relation	T1	T4	CauseEffect	true	kriz	aldı
+Relation	T4	T1	EffectCause	true	aldı	kriz
+Relation	T3	T5	CauseEffect	true	etkiledi	bunalımın
+Relation	T5	T3	EffectCause	true	bunalımın	etkiledi
+Relation	T5	T6	CauseEffect	true	bunalımın	dönüşmesiyle
+Relation	T6	T5	EffectCause	true	dönüşmesiyle	bunalımın
+Relation	T6	T7	CauseEffect	true	dönüşmesiyle	kaybetti
+Relation	T7	T6	EffectCause	true	kaybetti	dönüşmesiyle
+Relation	T6	T8	CauseEffect	true	dönüşmesiyle	azaldı
+Relation	T8	T6	EffectCause	true	azaldı	dönüşmesiyle
+Relation	T6	T9	CauseEffect	true	dönüşmesiyle	geldi
+Relation	T9	T6	EffectCause	true	geldi	dönüşmesiyle
+Relation	T8	T9	CauseEffect	true	azaldı	geldi
+Relation	T9	T8	EffectCause	true	geldi	azaldı
+Relation	T7	T9	CauseEffect	true	kaybetti	geldi
+Relation	T9	T7	EffectCause	true	geldi	kaybetti
+Relation	T13	T10	CauseEffect	true	statüsünün	girmiş
+Relation	T10	T13	EffectCause	true	girmiş	statüsünün
+Relation	T14	T12	CauseEffect	true	depremle	geldi
+Relation	T12	T14	EffectCause	true	geldi	depremle
+Relation	T1	T5	NoRel	true	kriz	bunalımın
+Relation	T1	T7	NoRel	true	kriz	kaybetti
+Relation	T1	T8	NoRel	true	kriz	azaldı
+Relation	T10	T1	NoRel	true	girmiş	kriz
+Relation	T10	T14	NoRel	true	girmiş	depremle
+Relation	T12	T10	NoRel	true	geldi	girmiş
+Relation	T12	T13	NoRel	true	geldi	statüsünün
+Relation	T12	T2	NoRel	true	geldi	başladı
+Relation	T12	T5	NoRel	true	geldi	bunalımın
+Relation	T12	T7	NoRel	true	geldi	kaybetti
+Relation	T12	T9	NoRel	true	geldi	geldi
+Relation	T13	T3	NoRel	true	statüsünün	etkiledi
+Relation	T13	T6	NoRel	true	statüsünün	dönüşmesiyle
+Relation	T13	T8	NoRel	true	statüsünün	azaldı
+Relation	T14	T2	NoRel	true	depremle	başladı
+Relation	T14	T4	NoRel	true	depremle	aldı
+Relation	T14	T6	NoRel	true	depremle	dönüşmesiyle
+Relation	T14	T8	NoRel	true	depremle	azaldı
+Relation	T14	T9	NoRel	true	depremle	geldi
+Relation	T2	T12	NoRel	true	başladı	geldi
+Relation	T2	T4	NoRel	true	başladı	aldı
+Relation	T2	T6	NoRel	true	başladı	dönüşmesiyle
+Relation	T2	T9	NoRel	true	başladı	geldi
+Relation	T3	T10	NoRel	true	etkiledi	girmiş
+Relation	T3	T12	NoRel	true	etkiledi	geldi
+Relation	T3	T2	NoRel	true	etkiledi	başladı
+Relation	T3	T4	NoRel	true	etkiledi	aldı
+Relation	T4	T12	NoRel	true	aldı	geldi
+Relation	T4	T14	NoRel	true	aldı	depremle
+Relation	T4	T6	NoRel	true	aldı	dönüşmesiyle
+Relation	T4	T9	NoRel	true	aldı	geldi
+Relation	T5	T2	NoRel	true	bunalımın	başladı
+Relation	T5	T4	NoRel	true	bunalımın	aldı
+Relation	T5	T7	NoRel	true	bunalımın	kaybetti
+Relation	T5	T8	NoRel	true	bunalımın	azaldı
+Relation	T5	T9	NoRel	true	bunalımın	geldi
+Relation	T6	T3	NoRel	true	dönüşmesiyle	etkiledi
+Relation	T6	T4	NoRel	true	dönüşmesiyle	aldı
+Relation	T7	T1	NoRel	true	kaybetti	kriz
+Relation	T7	T12	NoRel	true	kaybetti	geldi
+Relation	T7	T2	NoRel	true	kaybetti	başladı
+Relation	T8	T1	NoRel	true	azaldı	kriz
+Relation	T8	T10	NoRel	true	azaldı	girmiş
+Relation	T8	T2	NoRel	true	azaldı	başladı
+Relation	T8	T7	NoRel	true	azaldı	kaybetti
+Relation	T9	T2	NoRel	true	geldi	başladı
+Relation	T9	T4	NoRel	true	geldi	aldı
+Relation	T9	T5	NoRel	true	geldi	bunalımın

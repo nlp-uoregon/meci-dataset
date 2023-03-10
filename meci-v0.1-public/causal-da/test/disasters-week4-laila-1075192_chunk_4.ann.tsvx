@@ -1,0 +1,45 @@
+Text	I en anden bølge skulle områdebombningen ( area bombing ) finde sted .	Som før Lybæk og Rostock skulle nu det indre Flensborg ødelægges af en ildebrand .	Men byen blev skånet .	Bombeflyene blev drevet nordpå på grund af vinddrift og markerede et forkert målområde på halvøen Sundeved mellem Aabenraa og Sønderborg , hvor hovedparten af bomberne faldt på åben mark .	Så sent som den 23. april 1945 var 148 Lancaster-bombere igen lettet for at bombardere den indre by omkring stationen og havneområdet .
+Event	T0	bombing	EVENT	48
+Event	T1	ødelægges	EVENT	126
+Event	T2	ildebrand	EVENT	142
+Event	T3	skånet	EVENT	168
+Event	T4	drevet	EVENT	194
+Event	T5	vinddrift	EVENT	220
+Event	T6	markerede	EVENT	233
+Event	T7	faldt	EVENT	345
+Event	T8	lettet	EVENT	428
+Event	T9	bombardere	EVENT	442
+Relation	T5	T6	CauseEffect	true	vinddrift	markerede
+Relation	T6	T5	EffectCause	true	markerede	vinddrift
+Relation	T6	T7	CauseEffect	true	markerede	faldt
+Relation	T7	T6	EffectCause	true	faldt	markerede
+Relation	T0	T1	NoRel	true	bombing	ødelægges
+Relation	T0	T7	NoRel	true	bombing	faldt
+Relation	T0	T8	NoRel	true	bombing	lettet
+Relation	T1	T4	NoRel	true	ødelægges	drevet
+Relation	T1	T5	NoRel	true	ødelægges	vinddrift
+Relation	T1	T6	NoRel	true	ødelægges	markerede
+Relation	T1	T7	NoRel	true	ødelægges	faldt
+Relation	T2	T1	NoRel	true	ildebrand	ødelægges
+Relation	T2	T4	NoRel	true	ildebrand	drevet
+Relation	T2	T7	NoRel	true	ildebrand	faldt
+Relation	T2	T8	NoRel	true	ildebrand	lettet
+Relation	T3	T1	NoRel	true	skånet	ødelægges
+Relation	T3	T4	NoRel	true	skånet	drevet
+Relation	T3	T5	NoRel	true	skånet	vinddrift
+Relation	T3	T7	NoRel	true	skånet	faldt
+Relation	T4	T6	NoRel	true	drevet	markerede
+Relation	T4	T7	NoRel	true	drevet	faldt
+Relation	T5	T2	NoRel	true	vinddrift	ildebrand
+Relation	T6	T4	NoRel	true	markerede	drevet
+Relation	T6	T8	NoRel	true	markerede	lettet
+Relation	T7	T0	NoRel	true	faldt	bombing
+Relation	T7	T2	NoRel	true	faldt	ildebrand
+Relation	T7	T4	NoRel	true	faldt	drevet
+Relation	T8	T0	NoRel	true	lettet	bombing
+Relation	T8	T3	NoRel	true	lettet	skånet
+Relation	T8	T7	NoRel	true	lettet	faldt
+Relation	T9	T4	NoRel	true	bombardere	drevet
+Relation	T9	T6	NoRel	true	bombardere	markerede
+Relation	T9	T7	NoRel	true	bombardere	faldt
+Relation	T9	T8	NoRel	true	bombardere	lettet

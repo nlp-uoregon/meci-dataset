@@ -1,0 +1,51 @@
+Text	Pilot Richard Ogg was the first recipient of the Civilian Airmanship Awards presented by the Order of Daedalians .	An investigation report summarized the incident : " An initial mechanical failure which precluded feathering the No. 1 propeller and a subsequent mechanical failure which resulted in a complete loss of power from the no. 4 engine , the effects of which necessitated a ditching . "	- Captain Richard N. Ogg , age 43 - First Officer George L. Haaker , age 40 - Navigator Richard L. Brown , age 31 - Flight Engineer Frank Garcia Jr. , age 30	- [ Describes the ditching of _ Sovereign of the Skies _ and the rescue of its passengers and crew by the crew of USCGC__Pontchartrain _ . ]	- 1963 Aeroflot Tupolev Tu - 124 Neva river ditching - List of accidents and incidents involving commercial aircraft - US Airways Flight 1549 - Pan Am Flight 7
+Event	T0	presented	EVENT	76
+Event	T1	summarized	EVENT	139
+Event	T2	incident	EVENT	154
+Event	T3	feathering	EVENT	213
+Event	T4	resulted	EVENT	286
+Event	T5	loss	EVENT	309
+Event	T6	effects	EVENT	351
+Event	T7	necessitated	EVENT	368
+Event	T8	ditching	EVENT	383
+Event	T9	Describes	EVENT	558
+Event	T10	ditching	EVENT	572
+Event	T11	rescue	EVENT	619
+Event	T12	ditching	EVENT	739
+Event	T13	accidents	EVENT	758
+Event	T14	Flight	EVENT	846
+Event	T15	mechanical failure	EVENT	178
+Event	T16	subsequent mechanical failure	EVENT	250
+Relation	T15	T5	CauseEffect	true	mechanical failure	loss
+Relation	T5	T15	EffectCause	true	loss	mechanical failure
+Relation	T16	T5	CauseEffect	true	subsequent mechanical failure	loss
+Relation	T5	T16	EffectCause	true	loss	subsequent mechanical failure
+Relation	T6	T8	CauseEffect	true	effects	ditching
+Relation	T8	T6	EffectCause	true	ditching	effects
+Relation	T0	T1	NoRel	true	presented	summarized
+Relation	T0	T14	NoRel	true	presented	Flight
+Relation	T10	T14	NoRel	true	ditching	Flight
+Relation	T11	T4	NoRel	true	rescue	resulted
+Relation	T11	T9	NoRel	true	rescue	Describes
+Relation	T12	T1	NoRel	true	ditching	summarized
+Relation	T12	T9	NoRel	true	ditching	Describes
+Relation	T13	T1	NoRel	true	accidents	summarized
+Relation	T13	T3	NoRel	true	accidents	feathering
+Relation	T2	T13	NoRel	true	incident	accidents
+Relation	T2	T3	NoRel	true	incident	feathering
+Relation	T3	T14	NoRel	true	feathering	Flight
+Relation	T3	T2	NoRel	true	feathering	incident
+Relation	T3	T4	NoRel	true	feathering	resulted
+Relation	T3	T5	NoRel	true	feathering	loss
+Relation	T4	T12	NoRel	true	resulted	ditching
+Relation	T5	T14	NoRel	true	loss	Flight
+Relation	T6	T1	NoRel	true	effects	summarized
+Relation	T6	T11	NoRel	true	effects	rescue
+Relation	T6	T13	NoRel	true	effects	accidents
+Relation	T6	T9	NoRel	true	effects	Describes
+Relation	T8	T7	NoRel	true	ditching	necessitated
+Relation	T9	T1	NoRel	true	Describes	summarized
+Relation	T9	T12	NoRel	true	Describes	ditching
+Relation	T9	T3	NoRel	true	Describes	feathering
+Relation	T9	T4	NoRel	true	Describes	resulted
+Relation	T9	T8	NoRel	true	Describes	ditching

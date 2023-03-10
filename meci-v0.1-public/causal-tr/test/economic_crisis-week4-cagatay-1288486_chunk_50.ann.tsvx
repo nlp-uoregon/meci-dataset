@@ -1,0 +1,28 @@
+Text	1922 yılında işçi sınıfı içinde hala güçlü olan SPD 1923’lere gelindiğinde bu gücün büyük bir kısmını yitirmişti .	1923’te KPD işçi sınıfı içinde gücünü iyiden iyiye arttırdı .	Aralık 1922’de Komitern’in IV. Kongresinde alınan komünistlerin sol kanat sosyal demokratlarla beraber “ işçi hükûmetlerine ” katılma kararına uygun olarak KPD , SPD ve sendikalarla beraber “ işçi hükûmeti ” kurmak istiyordu .	Komünistler bu ekonomik duruma karşı tepkisini ortaya koymaya başladı .	Komünistler , örgütsel gücü olan konseyleri tekrar kuruyor , KPD’nin öncülüğünde nasyonal sosyalistlerin saldırılarına karşı işyeri savunma grupları oluşturuyordu .
+Event	T0	yitirmişti	EVENT	102
+Event	T1	arttırdı	EVENT	166
+Event	T2	katılma	EVENT	303
+Event	T4	kuruyor	EVENT	527
+Event	T5	saldırılarına	EVENT	581
+Event	T6	oluşturuyordu	EVENT	625
+Event	T7	istiyordu	EVENT	392
+Event	T3	koymaya	EVENT	458
+Relation	T1	T7	CauseEffect	true	arttırdı	istiyordu
+Relation	T7	T1	EffectCause	true	istiyordu	arttırdı
+Relation	T3	T4	CauseEffect	true	koymaya	kuruyor
+Relation	T4	T3	EffectCause	true	kuruyor	koymaya
+Relation	T5	T6	CauseEffect	true	saldırılarına	oluşturuyordu
+Relation	T6	T5	EffectCause	true	oluşturuyordu	saldırılarına
+Relation	T0	T5	NoRel	true	yitirmişti	saldırılarına
+Relation	T0	T7	NoRel	true	yitirmişti	istiyordu
+Relation	T1	T0	NoRel	true	arttırdı	yitirmişti
+Relation	T1	T3	NoRel	true	arttırdı	koymaya
+Relation	T1	T4	NoRel	true	arttırdı	kuruyor
+Relation	T2	T1	NoRel	true	katılma	arttırdı
+Relation	T3	T7	NoRel	true	koymaya	istiyordu
+Relation	T4	T0	NoRel	true	kuruyor	yitirmişti
+Relation	T4	T1	NoRel	true	kuruyor	arttırdı
+Relation	T5	T2	NoRel	true	saldırılarına	katılma
+Relation	T5	T3	NoRel	true	saldırılarına	koymaya
+Relation	T7	T5	NoRel	true	istiyordu	saldırılarına
+Relation	T7	T6	NoRel	true	istiyordu	oluşturuyordu

@@ -1,0 +1,84 @@
+Text	پائلٹ نے لینڈنگ کا سگنل بھی دے دیا تھا ۔	لیکن طیارے کا لینڈنگ سے ایک منٹ قبل کنٹرول روم سے رابطہ منقطع ہو گیا اور ماڈل کالونی کی آبادی میں گر کر تباہ ہو گیا ۔	ماڈل کالونی کے رہائشی بھی حادثے کا شکار ہوئے ۔	حادثے کے بعد موقع پر پہنچ کر میڈیا سے بات کرتے ہوئے وزیر صحت سندھ عذرا پیچوہو کا کہنا تھا کہ گھروں پر طیارہ گرنے سے زخمیوں کی تعداد زیادہ ہے ۔	کراچی کے مئیر وسیم اختر کا کہنا تھا کہ اس سانحہ میں کوئی بھی افراد نہیں بچا ۔
+Event	T0	لینڈنگ	EVENT	9
+Event	T1	لینڈنگ	EVENT	55
+Event	T2	منقطع	EVENT	97
+Event	T3	گیا	EVENT	106
+Event	T4	گر	EVENT	139
+Event	T5	گیا	EVENT	153
+Event	T6	حادثے	EVENT	185
+Event	T7	ہوئے	EVENT	199
+Event	T8	حادثے	EVENT	206
+Event	T9	بات	EVENT	244
+Event	T10	کہنا	EVENT	287
+Event	T11	گرنے	EVENT	314
+Event	T12	کہنا	EVENT	376
+Event	T13	سانحہ	EVENT	391
+Event	T14	بچا	EVENT	421
+Relation	T4	T5	CauseEffect	true	گر	گیا
+Relation	T5	T4	EffectCause	true	گیا	گر
+Relation	T6	T7	CauseEffect	true	حادثے	ہوئے
+Relation	T7	T6	EffectCause	true	ہوئے	حادثے
+Relation	T8	T7	CauseEffect	true	حادثے	ہوئے
+Relation	T7	T8	EffectCause	true	ہوئے	حادثے
+Relation	T0	T11	NoRel	true	لینڈنگ	گرنے
+Relation	T0	T14	NoRel	true	لینڈنگ	بچا
+Relation	T0	T5	NoRel	true	لینڈنگ	گیا
+Relation	T0	T6	NoRel	true	لینڈنگ	حادثے
+Relation	T0	T7	NoRel	true	لینڈنگ	ہوئے
+Relation	T1	T0	NoRel	true	لینڈنگ	لینڈنگ
+Relation	T1	T11	NoRel	true	لینڈنگ	گرنے
+Relation	T1	T12	NoRel	true	لینڈنگ	کہنا
+Relation	T1	T14	NoRel	true	لینڈنگ	بچا
+Relation	T1	T3	NoRel	true	لینڈنگ	گیا
+Relation	T1	T4	NoRel	true	لینڈنگ	گر
+Relation	T1	T5	NoRel	true	لینڈنگ	گیا
+Relation	T1	T6	NoRel	true	لینڈنگ	حادثے
+Relation	T1	T9	NoRel	true	لینڈنگ	بات
+Relation	T10	T1	NoRel	true	کہنا	لینڈنگ
+Relation	T10	T12	NoRel	true	کہنا	کہنا
+Relation	T10	T13	NoRel	true	کہنا	سانحہ
+Relation	T10	T14	NoRel	true	کہنا	بچا
+Relation	T10	T2	NoRel	true	کہنا	منقطع
+Relation	T10	T6	NoRel	true	کہنا	حادثے
+Relation	T10	T7	NoRel	true	کہنا	ہوئے
+Relation	T11	T1	NoRel	true	گرنے	لینڈنگ
+Relation	T11	T14	NoRel	true	گرنے	بچا
+Relation	T11	T8	NoRel	true	گرنے	حادثے
+Relation	T12	T10	NoRel	true	کہنا	کہنا
+Relation	T12	T7	NoRel	true	کہنا	ہوئے
+Relation	T13	T0	NoRel	true	سانحہ	لینڈنگ
+Relation	T13	T1	NoRel	true	سانحہ	لینڈنگ
+Relation	T13	T10	NoRel	true	سانحہ	کہنا
+Relation	T14	T4	NoRel	true	بچا	گر
+Relation	T14	T6	NoRel	true	بچا	حادثے
+Relation	T14	T9	NoRel	true	بچا	بات
+Relation	T2	T11	NoRel	true	منقطع	گرنے
+Relation	T3	T0	NoRel	true	گیا	لینڈنگ
+Relation	T3	T10	NoRel	true	گیا	کہنا
+Relation	T3	T12	NoRel	true	گیا	کہنا
+Relation	T3	T13	NoRel	true	گیا	سانحہ
+Relation	T3	T2	NoRel	true	گیا	منقطع
+Relation	T3	T4	NoRel	true	گیا	گر
+Relation	T3	T7	NoRel	true	گیا	ہوئے
+Relation	T4	T7	NoRel	true	گر	ہوئے
+Relation	T4	T8	NoRel	true	گر	حادثے
+Relation	T5	T1	NoRel	true	گیا	لینڈنگ
+Relation	T5	T2	NoRel	true	گیا	منقطع
+Relation	T5	T3	NoRel	true	گیا	گیا
+Relation	T5	T7	NoRel	true	گیا	ہوئے
+Relation	T6	T10	NoRel	true	حادثے	کہنا
+Relation	T6	T13	NoRel	true	حادثے	سانحہ
+Relation	T7	T11	NoRel	true	ہوئے	گرنے
+Relation	T7	T13	NoRel	true	ہوئے	سانحہ
+Relation	T7	T14	NoRel	true	ہوئے	بچا
+Relation	T7	T3	NoRel	true	ہوئے	گیا
+Relation	T7	T4	NoRel	true	ہوئے	گر
+Relation	T8	T0	NoRel	true	حادثے	لینڈنگ
+Relation	T8	T1	NoRel	true	حادثے	لینڈنگ
+Relation	T8	T12	NoRel	true	حادثے	کہنا
+Relation	T8	T13	NoRel	true	حادثے	سانحہ
+Relation	T9	T0	NoRel	true	بات	لینڈنگ
+Relation	T9	T1	NoRel	true	بات	لینڈنگ
+Relation	T9	T2	NoRel	true	بات	منقطع
+Relation	T9	T4	NoRel	true	بات	گر
+Relation	T9	T5	NoRel	true	بات	گیا

@@ -1,0 +1,33 @@
+Text	Ekip tarafından rüzgar makası ile ilgili yanlış ve eksik bilgiler alındı .	Rüzgar kesmesi , rüzgar parametrelerinin yoğun değişiminin yanı sıra pistin kendisinde şiddetli yağmurun eşlik ettiği cephenin havaalanının üzerinden geçmesiyle ortaya çıktı .	Ek bir neden de kuledeki mevcut rüzgar bilgilerinin eksikliğiydi .	Bu nedenle mürettebata güncel rüzgar bilgisi iletilemedi .	Ters itme sisteminin ve rüzgarlıkların yalnızca iniş durumunda etkinleştirilmesini sağlamak için , sistemler havada seçilse bile yazılımın uçağın yerde olduğundan emin olması gerekir .
+Event	T0	alındı	EVENT	66
+Event	T1	kesmesi	EVENT	82
+Event	T2	değişiminin	EVENT	122
+Event	T3	çıktı	EVENT	243
+Event	T4	itme	EVENT	382
+Event	T5	iniş	EVENT	425
+Event	T6	yağmurun	EVENT	171
+Event	T7	sağlamak	EVENT	460
+Event	T8	emin olması	EVENT	540
+Relation	T2	T1	CauseEffect	true	değişiminin	kesmesi
+Relation	T1	T2	EffectCause	true	kesmesi	değişiminin
+Relation	T0	T4	NoRel	true	alındı	itme
+Relation	T1	T3	NoRel	true	kesmesi	çıktı
+Relation	T1	T4	NoRel	true	kesmesi	itme
+Relation	T1	T5	NoRel	true	kesmesi	iniş
+Relation	T1	T7	NoRel	true	kesmesi	sağlamak
+Relation	T2	T5	NoRel	true	değişiminin	iniş
+Relation	T3	T4	NoRel	true	çıktı	itme
+Relation	T3	T6	NoRel	true	çıktı	yağmurun
+Relation	T4	T0	NoRel	true	itme	alındı
+Relation	T4	T1	NoRel	true	itme	kesmesi
+Relation	T4	T2	NoRel	true	itme	değişiminin
+Relation	T4	T5	NoRel	true	itme	iniş
+Relation	T4	T7	NoRel	true	itme	sağlamak
+Relation	T5	T3	NoRel	true	iniş	çıktı
+Relation	T6	T5	NoRel	true	yağmurun	iniş
+Relation	T7	T0	NoRel	true	sağlamak	alındı
+Relation	T7	T1	NoRel	true	sağlamak	kesmesi
+Relation	T7	T6	NoRel	true	sağlamak	yağmurun
+Relation	T7	T8	NoRel	true	sağlamak	emin olması
+Relation	T8	T2	NoRel	true	emin olması	değişiminin
+Relation	T8	T3	NoRel	true	emin olması	çıktı

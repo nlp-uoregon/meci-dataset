@@ -1,0 +1,54 @@
+Text	El VUELO 358 DE AIR FRANCE se hizo conocido por salirse de pista el día 2 de agosto de 2005 en el Aeropuerto Internacional Toronto Pearson en Canadá .	Se trataba de un vuelo desde París , Francia , a Toronto , Canadá , haciendo uso de un avión comercial Airbus A340 que despegó de París sin problemas a las 11:53 UTC del 2 de agosto de 2005 y aterrizó después en la pista 24L-06R del Aeropuerto Internacional Toronto Pearson a las 20:01 UTC ( 16:01 hora local ) .	El avión fue incapaz de detenerse en pista y cayó en un pequeño barranco cercano , donde consiguió pararse , comenzando a arder , a unos 300 metros del final de pista .	El Airbus A340-313X llevaba 309 personas a bordo ( 295 pasajeros , más dos niños y doce miembros de la tripulación ) .	Todos ellos sobrevivieron .
+Event	T0	conocido	EVENT	35
+Event	T1	vuelo	EVENT	168
+Event	T2	despegó	EVENT	270
+Event	T3	aterrizó	EVENT	343
+Event	T5	pararse	EVENT	563
+Event	T6	comenzando	EVENT	573
+Event	T7	arder	EVENT	586
+Event	T8	sobrevivieron	EVENT	764
+Event	T9	salirse	EVENT	48
+Event	T10	llevaba	EVENT	653
+Event	T4	cayó	EVENT	509
+Relation	T2	T3	CauseEffect	true	despegó	aterrizó
+Relation	T3	T2	EffectCause	true	aterrizó	despegó
+Relation	T0	T1	NoRel	true	conocido	vuelo
+Relation	T0	T3	NoRel	true	conocido	aterrizó
+Relation	T0	T4	NoRel	true	conocido	cayó
+Relation	T0	T5	NoRel	true	conocido	pararse
+Relation	T0	T8	NoRel	true	conocido	sobrevivieron
+Relation	T1	T4	NoRel	true	vuelo	cayó
+Relation	T1	T8	NoRel	true	vuelo	sobrevivieron
+Relation	T10	T1	NoRel	true	llevaba	vuelo
+Relation	T10	T8	NoRel	true	llevaba	sobrevivieron
+Relation	T2	T1	NoRel	true	despegó	vuelo
+Relation	T2	T9	NoRel	true	despegó	salirse
+Relation	T3	T10	NoRel	true	aterrizó	llevaba
+Relation	T4	T2	NoRel	true	cayó	despegó
+Relation	T4	T6	NoRel	true	cayó	comenzando
+Relation	T5	T1	NoRel	true	pararse	vuelo
+Relation	T5	T6	NoRel	true	pararse	comenzando
+Relation	T5	T7	NoRel	true	pararse	arder
+Relation	T5	T9	NoRel	true	pararse	salirse
+Relation	T6	T0	NoRel	true	comenzando	conocido
+Relation	T6	T10	NoRel	true	comenzando	llevaba
+Relation	T6	T2	NoRel	true	comenzando	despegó
+Relation	T6	T3	NoRel	true	comenzando	aterrizó
+Relation	T6	T4	NoRel	true	comenzando	cayó
+Relation	T6	T7	NoRel	true	comenzando	arder
+Relation	T6	T9	NoRel	true	comenzando	salirse
+Relation	T7	T0	NoRel	true	arder	conocido
+Relation	T7	T3	NoRel	true	arder	aterrizó
+Relation	T7	T6	NoRel	true	arder	comenzando
+Relation	T8	T1	NoRel	true	sobrevivieron	vuelo
+Relation	T8	T10	NoRel	true	sobrevivieron	llevaba
+Relation	T8	T2	NoRel	true	sobrevivieron	despegó
+Relation	T8	T3	NoRel	true	sobrevivieron	aterrizó
+Relation	T8	T5	NoRel	true	sobrevivieron	pararse
+Relation	T8	T6	NoRel	true	sobrevivieron	comenzando
+Relation	T8	T9	NoRel	true	sobrevivieron	salirse
+Relation	T9	T4	NoRel	true	salirse	cayó
+Relation	T9	T5	NoRel	true	salirse	pararse
+Relation	T9	T6	NoRel	true	salirse	comenzando
+Relation	T9	T7	NoRel	true	salirse	arder
+Relation	T9	T8	NoRel	true	salirse	sobrevivieron

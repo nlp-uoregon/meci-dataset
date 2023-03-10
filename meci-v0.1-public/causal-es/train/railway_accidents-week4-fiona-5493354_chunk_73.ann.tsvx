@@ -1,0 +1,129 @@
+Text	El accidente se salda con veintitrés muertos y una treintena de heridos .	- 20 DE DICIEMBRE : Un tren regional que realizaba el servicio Entroncamento_-_Elvas chocó con un tren especial de emigrantes que se hallaba detenido en la estación de Praia do Ribatejo debido a un error de cambio de agujas .	Como consecuencia del accidente resultaron heridos once viajeros de ambos trenes .	- 1966 -___20 DE ENERO : debido a un corrimiento de la vía causado por una intensa lluvia descarrila un tren mixto en el ramal de Aveiro de la línea del Vouga entre las estaciones de Mourisca do Vouga y Águeda .	La locomotora del convoy y tres coches caen por un terraplén , produciéndose tres muertes y más de treinta heridos .
+Event	T0	accidente	EVENT	3
+Event	T1	salda	EVENT	16
+Event	T2	muertos	EVENT	37
+Event	T3	heridos	EVENT	64
+Event	T4	chocó	EVENT	159
+Event	T5	detenido	EVENT	215
+Event	T6	error	EVENT	272
+Event	T7	cambio	EVENT	281
+Event	T8	heridos	EVENT	343
+Event	T9	corrimiento	EVENT	420
+Event	T10	causado	EVENT	442
+Event	T11	descarrila	EVENT	473
+Event	T12	caen	EVENT	634
+Event	T13	produciéndose	EVENT	658
+Event	T14	muertes	EVENT	677
+Event	T15	heridos	EVENT	702
+Event	T16	lluvia	EVENT	466
+Relation	T12	T14	CauseEffect	true	caen	muertes
+Relation	T14	T12	EffectCause	true	muertes	caen
+Relation	T12	T15	CauseEffect	true	caen	heridos
+Relation	T15	T12	EffectCause	true	heridos	caen
+Relation	T16	T9	CauseEffect	true	lluvia	corrimiento
+Relation	T9	T16	EffectCause	true	corrimiento	lluvia
+Relation	T9	T11	CauseEffect	true	corrimiento	descarrila
+Relation	T11	T9	EffectCause	true	descarrila	corrimiento
+Relation	T0	T2	CauseEffect	true	accidente	muertos
+Relation	T2	T0	EffectCause	true	muertos	accidente
+Relation	T0	T3	CauseEffect	true	accidente	heridos
+Relation	T3	T0	EffectCause	true	heridos	accidente
+Relation	T0	T10	NoRel	true	accidente	causado
+Relation	T0	T12	NoRel	true	accidente	caen
+Relation	T0	T7	NoRel	true	accidente	cambio
+Relation	T1	T0	NoRel	true	salda	accidente
+Relation	T1	T16	NoRel	true	salda	lluvia
+Relation	T1	T4	NoRel	true	salda	chocó
+Relation	T10	T12	NoRel	true	causado	caen
+Relation	T10	T13	NoRel	true	causado	produciéndose
+Relation	T10	T14	NoRel	true	causado	muertes
+Relation	T10	T15	NoRel	true	causado	heridos
+Relation	T10	T5	NoRel	true	causado	detenido
+Relation	T10	T6	NoRel	true	causado	error
+Relation	T10	T7	NoRel	true	causado	cambio
+Relation	T10	T9	NoRel	true	causado	corrimiento
+Relation	T11	T10	NoRel	true	descarrila	causado
+Relation	T11	T14	NoRel	true	descarrila	muertes
+Relation	T11	T2	NoRel	true	descarrila	muertos
+Relation	T11	T3	NoRel	true	descarrila	heridos
+Relation	T11	T4	NoRel	true	descarrila	chocó
+Relation	T12	T1	NoRel	true	caen	salda
+Relation	T12	T10	NoRel	true	caen	causado
+Relation	T12	T11	NoRel	true	caen	descarrila
+Relation	T12	T13	NoRel	true	caen	produciéndose
+Relation	T12	T5	NoRel	true	caen	detenido
+Relation	T12	T8	NoRel	true	caen	heridos
+Relation	T13	T12	NoRel	true	produciéndose	caen
+Relation	T13	T14	NoRel	true	produciéndose	muertes
+Relation	T13	T2	NoRel	true	produciéndose	muertos
+Relation	T13	T5	NoRel	true	produciéndose	detenido
+Relation	T13	T8	NoRel	true	produciéndose	heridos
+Relation	T14	T0	NoRel	true	muertes	accidente
+Relation	T14	T11	NoRel	true	muertes	descarrila
+Relation	T14	T13	NoRel	true	muertes	produciéndose
+Relation	T14	T15	NoRel	true	muertes	heridos
+Relation	T14	T16	NoRel	true	muertes	lluvia
+Relation	T14	T4	NoRel	true	muertes	chocó
+Relation	T14	T6	NoRel	true	muertes	error
+Relation	T14	T7	NoRel	true	muertes	cambio
+Relation	T14	T8	NoRel	true	muertes	heridos
+Relation	T15	T0	NoRel	true	heridos	accidente
+Relation	T15	T13	NoRel	true	heridos	produciéndose
+Relation	T15	T14	NoRel	true	heridos	muertes
+Relation	T15	T16	NoRel	true	heridos	lluvia
+Relation	T15	T6	NoRel	true	heridos	error
+Relation	T15	T8	NoRel	true	heridos	heridos
+Relation	T15	T9	NoRel	true	heridos	corrimiento
+Relation	T16	T10	NoRel	true	lluvia	causado
+Relation	T16	T12	NoRel	true	lluvia	caen
+Relation	T16	T2	NoRel	true	lluvia	muertos
+Relation	T16	T6	NoRel	true	lluvia	error
+Relation	T16	T8	NoRel	true	lluvia	heridos
+Relation	T2	T15	NoRel	true	muertos	heridos
+Relation	T2	T16	NoRel	true	muertos	lluvia
+Relation	T2	T3	NoRel	true	muertos	heridos
+Relation	T2	T4	NoRel	true	muertos	chocó
+Relation	T2	T5	NoRel	true	muertos	detenido
+Relation	T2	T6	NoRel	true	muertos	error
+Relation	T2	T9	NoRel	true	muertos	corrimiento
+Relation	T3	T13	NoRel	true	heridos	produciéndose
+Relation	T3	T15	NoRel	true	heridos	heridos
+Relation	T3	T16	NoRel	true	heridos	lluvia
+Relation	T3	T8	NoRel	true	heridos	heridos
+Relation	T3	T9	NoRel	true	heridos	corrimiento
+Relation	T4	T0	NoRel	true	chocó	accidente
+Relation	T4	T1	NoRel	true	chocó	salda
+Relation	T4	T10	NoRel	true	chocó	causado
+Relation	T4	T11	NoRel	true	chocó	descarrila
+Relation	T4	T16	NoRel	true	chocó	lluvia
+Relation	T4	T6	NoRel	true	chocó	error
+Relation	T5	T0	NoRel	true	detenido	accidente
+Relation	T5	T1	NoRel	true	detenido	salda
+Relation	T5	T11	NoRel	true	detenido	descarrila
+Relation	T5	T6	NoRel	true	detenido	error
+Relation	T5	T7	NoRel	true	detenido	cambio
+Relation	T5	T8	NoRel	true	detenido	heridos
+Relation	T6	T1	NoRel	true	error	salda
+Relation	T6	T11	NoRel	true	error	descarrila
+Relation	T6	T12	NoRel	true	error	caen
+Relation	T6	T14	NoRel	true	error	muertes
+Relation	T6	T16	NoRel	true	error	lluvia
+Relation	T6	T2	NoRel	true	error	muertos
+Relation	T6	T7	NoRel	true	error	cambio
+Relation	T7	T12	NoRel	true	cambio	caen
+Relation	T7	T15	NoRel	true	cambio	heridos
+Relation	T7	T3	NoRel	true	cambio	heridos
+Relation	T7	T4	NoRel	true	cambio	chocó
+Relation	T7	T8	NoRel	true	cambio	heridos
+Relation	T8	T0	NoRel	true	heridos	accidente
+Relation	T8	T10	NoRel	true	heridos	causado
+Relation	T8	T11	NoRel	true	heridos	descarrila
+Relation	T8	T12	NoRel	true	heridos	caen
+Relation	T8	T14	NoRel	true	heridos	muertes
+Relation	T8	T2	NoRel	true	heridos	muertos
+Relation	T8	T3	NoRel	true	heridos	heridos
+Relation	T8	T4	NoRel	true	heridos	chocó
+Relation	T8	T9	NoRel	true	heridos	corrimiento
+Relation	T9	T12	NoRel	true	corrimiento	caen
+Relation	T9	T3	NoRel	true	corrimiento	heridos
+Relation	T9	T5	NoRel	true	corrimiento	detenido

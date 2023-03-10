@@ -1,0 +1,44 @@
+Text	Sampson , Kıbrıslı Rum ve Kıbrıslı Türkler arasındaki şiddetli çatışmalarda Rum silahlı gruplara liderlik etti .	Küçük Kaymaklı'daki çatışmalardan sonra Nikos Sampson , Kıbrıslı Türkler tarafından " Küçük Kaymaklı'nın Kasabı " olarak adlandırıldı .	Küçük Kaymaklı'dan sonra Kıbrıs Türk toplumundan yaklaşık 800 kadın ve çocuk savaş alanından çıkarıldı , daha sonra Kızılhaç'a teslim edilmek üzere bir Rum okuluna yerleştirildi .	Türk tarafına göre kadın ve çocuklar rehin tutuldu .	Sampson müfrezesinin Omorfita'daki eylemi , Rum ve Kıbrıs basını tarafından kendisinin ve adamlarının yüceltilmesiyle sonuçlandı .
+Event	T0	etti	EVENT	106
+Event	T1	adlandırıldı	EVENT	234
+Event	T2	çıkarıldı	EVENT	342
+Event	T3	yerleştirildi	EVENT	413
+Event	T4	tutuldu	EVENT	472
+Event	T5	eylemi	EVENT	517
+Event	T6	sonuçlandı	EVENT	600
+Event	T7	çatışmalarda	EVENT	63
+Event	T8	çatışmalardan	EVENT	133
+Relation	T7	T0	CauseEffect	true	çatışmalarda	etti
+Relation	T0	T7	EffectCause	true	etti	çatışmalarda
+Relation	T8	T1	CauseEffect	true	çatışmalardan	adlandırıldı
+Relation	T1	T8	EffectCause	true	adlandırıldı	çatışmalardan
+Relation	T8	T2	CauseEffect	true	çatışmalardan	çıkarıldı
+Relation	T2	T8	EffectCause	true	çıkarıldı	çatışmalardan
+Relation	T2	T3	CauseEffect	true	çıkarıldı	yerleştirildi
+Relation	T3	T2	EffectCause	true	yerleştirildi	çıkarıldı
+Relation	T8	T4	CauseEffect	true	çatışmalardan	tutuldu
+Relation	T4	T8	EffectCause	true	tutuldu	çatışmalardan
+Relation	T5	T6	CauseEffect	true	eylemi	sonuçlandı
+Relation	T6	T5	EffectCause	true	sonuçlandı	eylemi
+Relation	T0	T6	NoRel	true	etti	sonuçlandı
+Relation	T1	T0	NoRel	true	adlandırıldı	etti
+Relation	T1	T3	NoRel	true	adlandırıldı	yerleştirildi
+Relation	T1	T5	NoRel	true	adlandırıldı	eylemi
+Relation	T2	T4	NoRel	true	çıkarıldı	tutuldu
+Relation	T2	T5	NoRel	true	çıkarıldı	eylemi
+Relation	T2	T6	NoRel	true	çıkarıldı	sonuçlandı
+Relation	T3	T5	NoRel	true	yerleştirildi	eylemi
+Relation	T3	T8	NoRel	true	yerleştirildi	çatışmalardan
+Relation	T4	T1	NoRel	true	tutuldu	adlandırıldı
+Relation	T4	T2	NoRel	true	tutuldu	çıkarıldı
+Relation	T5	T3	NoRel	true	eylemi	yerleştirildi
+Relation	T5	T4	NoRel	true	eylemi	tutuldu
+Relation	T6	T0	NoRel	true	sonuçlandı	etti
+Relation	T6	T2	NoRel	true	sonuçlandı	çıkarıldı
+Relation	T7	T1	NoRel	true	çatışmalarda	adlandırıldı
+Relation	T7	T2	NoRel	true	çatışmalarda	çıkarıldı
+Relation	T7	T5	NoRel	true	çatışmalarda	eylemi
+Relation	T7	T8	NoRel	true	çatışmalarda	çatışmalardan
+Relation	T8	T0	NoRel	true	çatışmalardan	etti
+Relation	T8	T6	NoRel	true	çatışmalardan	sonuçlandı
+Relation	T8	T7	NoRel	true	çatışmalardan	çatışmalarda

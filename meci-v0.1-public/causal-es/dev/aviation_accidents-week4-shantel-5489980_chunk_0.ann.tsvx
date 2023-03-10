@@ -1,0 +1,217 @@
+Text	El VUELO 32 DE QANTAS fue un vuelo de pasajeros de Qantas que sufrió un fallo del motor el 4 de noviembre de 2010 y realizó un aterrizaje de emergencia en el Aeropuerto Internacional Changi de Singapur , sin víctimas .	La habilidad de los pilotos en tomar las acciones en forma rápida y acertada condujo a que no se transformara en una tragedia .	El incidente fue el primero de su tipo para el Airbus A380 , el avión de pasajeros más grande del mundo .	En la inspección se encontró que el motor N.° 2 del avión ( en el puerto más cercano lateral del fuselaje ) , un Rolls-Royce Trent 900 , tenía un disco de turbina que faltaba y otro dilatado por el calor producido por el aceite vertido desde un caño roto debido a defectos en su fabricación .	El disco se calentó hasta explotar , produciendo daños graves en la góndola , el ala , el sistema de combustible , el tren de aterrizaje , los mandos de vuelo , los controles para el motor N.º1 y un fuego desapercibido en el tanque de combustible del ala interior izquierda que eventualmente se auto-extinguió .
+Event	T0	vuelo	EVENT	29
+Event	T1	fallo	EVENT	72
+Event	T2	realizó	EVENT	116
+Event	T3	aterrizaje	EVENT	127
+Event	T4	emergencia	EVENT	141
+Event	T6	tomar	EVENT	250
+Event	T7	acciones	EVENT	260
+Event	T8	condujo	EVENT	296
+Event	T11	incidente	EVENT	350
+Event	T12	inspección	EVENT	459
+Event	T13	encontró	EVENT	473
+Event	T14	dilatado	EVENT	635
+Event	T15	producido	EVENT	657
+Event	T16	vertido	EVENT	681
+Event	T17	defectos	EVENT	717
+Event	T18	fabricación	EVENT	732
+Event	T19	calentó	EVENT	758
+Event	T20	explotar	EVENT	772
+Event	T21	aterrizaje	EVENT	872
+Event	T22	vuelo	EVENT	899
+Event	T23	controles	EVENT	911
+Event	T24	desapercibido	EVENT	951
+Event	T25	auto-extinguió	EVENT	1041
+Relation	T1	T3	CauseEffect	true	fallo	aterrizaje
+Relation	T3	T1	EffectCause	true	aterrizaje	fallo
+Relation	T19	T20	CauseEffect	true	calentó	explotar
+Relation	T20	T19	EffectCause	true	explotar	calentó
+Relation	T0	T1	NoRel	true	vuelo	fallo
+Relation	T0	T13	NoRel	true	vuelo	encontró
+Relation	T0	T14	NoRel	true	vuelo	dilatado
+Relation	T0	T15	NoRel	true	vuelo	producido
+Relation	T0	T20	NoRel	true	vuelo	explotar
+Relation	T0	T22	NoRel	true	vuelo	vuelo
+Relation	T0	T24	NoRel	true	vuelo	desapercibido
+Relation	T0	T6	NoRel	true	vuelo	tomar
+Relation	T0	T8	NoRel	true	vuelo	condujo
+Relation	T1	T12	NoRel	true	fallo	inspección
+Relation	T1	T14	NoRel	true	fallo	dilatado
+Relation	T1	T15	NoRel	true	fallo	producido
+Relation	T1	T19	NoRel	true	fallo	calentó
+Relation	T1	T2	NoRel	true	fallo	realizó
+Relation	T1	T22	NoRel	true	fallo	vuelo
+Relation	T1	T4	NoRel	true	fallo	emergencia
+Relation	T1	T7	NoRel	true	fallo	acciones
+Relation	T11	T16	NoRel	true	incidente	vertido
+Relation	T11	T19	NoRel	true	incidente	calentó
+Relation	T11	T22	NoRel	true	incidente	vuelo
+Relation	T11	T24	NoRel	true	incidente	desapercibido
+Relation	T11	T25	NoRel	true	incidente	auto-extinguió
+Relation	T11	T3	NoRel	true	incidente	aterrizaje
+Relation	T11	T7	NoRel	true	incidente	acciones
+Relation	T12	T1	NoRel	true	inspección	fallo
+Relation	T12	T13	NoRel	true	inspección	encontró
+Relation	T12	T15	NoRel	true	inspección	producido
+Relation	T12	T19	NoRel	true	inspección	calentó
+Relation	T12	T2	NoRel	true	inspección	realizó
+Relation	T12	T20	NoRel	true	inspección	explotar
+Relation	T12	T21	NoRel	true	inspección	aterrizaje
+Relation	T12	T22	NoRel	true	inspección	vuelo
+Relation	T12	T24	NoRel	true	inspección	desapercibido
+Relation	T12	T4	NoRel	true	inspección	emergencia
+Relation	T13	T0	NoRel	true	encontró	vuelo
+Relation	T13	T1	NoRel	true	encontró	fallo
+Relation	T13	T11	NoRel	true	encontró	incidente
+Relation	T13	T14	NoRel	true	encontró	dilatado
+Relation	T13	T17	NoRel	true	encontró	defectos
+Relation	T13	T19	NoRel	true	encontró	calentó
+Relation	T13	T2	NoRel	true	encontró	realizó
+Relation	T13	T21	NoRel	true	encontró	aterrizaje
+Relation	T13	T23	NoRel	true	encontró	controles
+Relation	T13	T3	NoRel	true	encontró	aterrizaje
+Relation	T13	T4	NoRel	true	encontró	emergencia
+Relation	T14	T0	NoRel	true	dilatado	vuelo
+Relation	T14	T13	NoRel	true	dilatado	encontró
+Relation	T14	T18	NoRel	true	dilatado	fabricación
+Relation	T14	T19	NoRel	true	dilatado	calentó
+Relation	T14	T25	NoRel	true	dilatado	auto-extinguió
+Relation	T14	T3	NoRel	true	dilatado	aterrizaje
+Relation	T15	T11	NoRel	true	producido	incidente
+Relation	T15	T12	NoRel	true	producido	inspección
+Relation	T15	T13	NoRel	true	producido	encontró
+Relation	T15	T16	NoRel	true	producido	vertido
+Relation	T15	T17	NoRel	true	producido	defectos
+Relation	T15	T19	NoRel	true	producido	calentó
+Relation	T15	T3	NoRel	true	producido	aterrizaje
+Relation	T15	T8	NoRel	true	producido	condujo
+Relation	T16	T1	NoRel	true	vertido	fallo
+Relation	T16	T15	NoRel	true	vertido	producido
+Relation	T16	T18	NoRel	true	vertido	fabricación
+Relation	T16	T20	NoRel	true	vertido	explotar
+Relation	T16	T21	NoRel	true	vertido	aterrizaje
+Relation	T16	T22	NoRel	true	vertido	vuelo
+Relation	T17	T0	NoRel	true	defectos	vuelo
+Relation	T17	T11	NoRel	true	defectos	incidente
+Relation	T17	T12	NoRel	true	defectos	inspección
+Relation	T17	T14	NoRel	true	defectos	dilatado
+Relation	T17	T2	NoRel	true	defectos	realizó
+Relation	T17	T20	NoRel	true	defectos	explotar
+Relation	T17	T23	NoRel	true	defectos	controles
+Relation	T17	T24	NoRel	true	defectos	desapercibido
+Relation	T17	T25	NoRel	true	defectos	auto-extinguió
+Relation	T17	T4	NoRel	true	defectos	emergencia
+Relation	T17	T8	NoRel	true	defectos	condujo
+Relation	T18	T1	NoRel	true	fabricación	fallo
+Relation	T18	T2	NoRel	true	fabricación	realizó
+Relation	T18	T23	NoRel	true	fabricación	controles
+Relation	T18	T24	NoRel	true	fabricación	desapercibido
+Relation	T18	T3	NoRel	true	fabricación	aterrizaje
+Relation	T18	T7	NoRel	true	fabricación	acciones
+Relation	T18	T8	NoRel	true	fabricación	condujo
+Relation	T19	T16	NoRel	true	calentó	vertido
+Relation	T19	T21	NoRel	true	calentó	aterrizaje
+Relation	T19	T22	NoRel	true	calentó	vuelo
+Relation	T19	T23	NoRel	true	calentó	controles
+Relation	T19	T6	NoRel	true	calentó	tomar
+Relation	T2	T0	NoRel	true	realizó	vuelo
+Relation	T2	T11	NoRel	true	realizó	incidente
+Relation	T2	T14	NoRel	true	realizó	dilatado
+Relation	T2	T19	NoRel	true	realizó	calentó
+Relation	T2	T24	NoRel	true	realizó	desapercibido
+Relation	T2	T25	NoRel	true	realizó	auto-extinguió
+Relation	T2	T4	NoRel	true	realizó	emergencia
+Relation	T2	T6	NoRel	true	realizó	tomar
+Relation	T2	T7	NoRel	true	realizó	acciones
+Relation	T2	T8	NoRel	true	realizó	condujo
+Relation	T20	T13	NoRel	true	explotar	encontró
+Relation	T20	T14	NoRel	true	explotar	dilatado
+Relation	T20	T7	NoRel	true	explotar	acciones
+Relation	T20	T8	NoRel	true	explotar	condujo
+Relation	T21	T12	NoRel	true	aterrizaje	inspección
+Relation	T21	T13	NoRel	true	aterrizaje	encontró
+Relation	T21	T14	NoRel	true	aterrizaje	dilatado
+Relation	T21	T15	NoRel	true	aterrizaje	producido
+Relation	T21	T16	NoRel	true	aterrizaje	vertido
+Relation	T21	T18	NoRel	true	aterrizaje	fabricación
+Relation	T21	T19	NoRel	true	aterrizaje	calentó
+Relation	T21	T20	NoRel	true	aterrizaje	explotar
+Relation	T21	T22	NoRel	true	aterrizaje	vuelo
+Relation	T21	T24	NoRel	true	aterrizaje	desapercibido
+Relation	T21	T3	NoRel	true	aterrizaje	aterrizaje
+Relation	T21	T6	NoRel	true	aterrizaje	tomar
+Relation	T22	T13	NoRel	true	vuelo	encontró
+Relation	T22	T2	NoRel	true	vuelo	realizó
+Relation	T22	T21	NoRel	true	vuelo	aterrizaje
+Relation	T22	T25	NoRel	true	vuelo	auto-extinguió
+Relation	T22	T8	NoRel	true	vuelo	condujo
+Relation	T23	T12	NoRel	true	controles	inspección
+Relation	T23	T15	NoRel	true	controles	producido
+Relation	T23	T16	NoRel	true	controles	vertido
+Relation	T23	T20	NoRel	true	controles	explotar
+Relation	T23	T22	NoRel	true	controles	vuelo
+Relation	T23	T24	NoRel	true	controles	desapercibido
+Relation	T23	T7	NoRel	true	controles	acciones
+Relation	T24	T13	NoRel	true	desapercibido	encontró
+Relation	T24	T15	NoRel	true	desapercibido	producido
+Relation	T24	T17	NoRel	true	desapercibido	defectos
+Relation	T24	T18	NoRel	true	desapercibido	fabricación
+Relation	T24	T2	NoRel	true	desapercibido	realizó
+Relation	T24	T21	NoRel	true	desapercibido	aterrizaje
+Relation	T24	T23	NoRel	true	desapercibido	controles
+Relation	T24	T4	NoRel	true	desapercibido	emergencia
+Relation	T24	T7	NoRel	true	desapercibido	acciones
+Relation	T24	T8	NoRel	true	desapercibido	condujo
+Relation	T25	T0	NoRel	true	auto-extinguió	vuelo
+Relation	T25	T1	NoRel	true	auto-extinguió	fallo
+Relation	T25	T11	NoRel	true	auto-extinguió	incidente
+Relation	T25	T14	NoRel	true	auto-extinguió	dilatado
+Relation	T25	T18	NoRel	true	auto-extinguió	fabricación
+Relation	T25	T20	NoRel	true	auto-extinguió	explotar
+Relation	T25	T21	NoRel	true	auto-extinguió	aterrizaje
+Relation	T25	T4	NoRel	true	auto-extinguió	emergencia
+Relation	T3	T0	NoRel	true	aterrizaje	vuelo
+Relation	T3	T14	NoRel	true	aterrizaje	dilatado
+Relation	T3	T17	NoRel	true	aterrizaje	defectos
+Relation	T3	T18	NoRel	true	aterrizaje	fabricación
+Relation	T3	T22	NoRel	true	aterrizaje	vuelo
+Relation	T3	T23	NoRel	true	aterrizaje	controles
+Relation	T3	T24	NoRel	true	aterrizaje	desapercibido
+Relation	T3	T25	NoRel	true	aterrizaje	auto-extinguió
+Relation	T3	T4	NoRel	true	aterrizaje	emergencia
+Relation	T3	T6	NoRel	true	aterrizaje	tomar
+Relation	T3	T7	NoRel	true	aterrizaje	acciones
+Relation	T4	T11	NoRel	true	emergencia	incidente
+Relation	T4	T12	NoRel	true	emergencia	inspección
+Relation	T4	T13	NoRel	true	emergencia	encontró
+Relation	T4	T20	NoRel	true	emergencia	explotar
+Relation	T4	T21	NoRel	true	emergencia	aterrizaje
+Relation	T4	T6	NoRel	true	emergencia	tomar
+Relation	T4	T7	NoRel	true	emergencia	acciones
+Relation	T6	T15	NoRel	true	tomar	producido
+Relation	T6	T17	NoRel	true	tomar	defectos
+Relation	T6	T18	NoRel	true	tomar	fabricación
+Relation	T6	T20	NoRel	true	tomar	explotar
+Relation	T6	T22	NoRel	true	tomar	vuelo
+Relation	T6	T23	NoRel	true	tomar	controles
+Relation	T6	T24	NoRel	true	tomar	desapercibido
+Relation	T6	T4	NoRel	true	tomar	emergencia
+Relation	T6	T7	NoRel	true	tomar	acciones
+Relation	T7	T14	NoRel	true	acciones	dilatado
+Relation	T7	T15	NoRel	true	acciones	producido
+Relation	T7	T17	NoRel	true	acciones	defectos
+Relation	T7	T19	NoRel	true	acciones	calentó
+Relation	T7	T21	NoRel	true	acciones	aterrizaje
+Relation	T7	T22	NoRel	true	acciones	vuelo
+Relation	T7	T23	NoRel	true	acciones	controles
+Relation	T7	T25	NoRel	true	acciones	auto-extinguió
+Relation	T7	T4	NoRel	true	acciones	emergencia
+Relation	T7	T8	NoRel	true	acciones	condujo
+Relation	T8	T0	NoRel	true	condujo	vuelo
+Relation	T8	T1	NoRel	true	condujo	fallo
+Relation	T8	T11	NoRel	true	condujo	incidente
+Relation	T8	T16	NoRel	true	condujo	vertido
+Relation	T8	T19	NoRel	true	condujo	calentó
+Relation	T8	T22	NoRel	true	condujo	vuelo
+Relation	T8	T4	NoRel	true	condujo	emergencia
+Relation	T8	T7	NoRel	true	condujo	acciones

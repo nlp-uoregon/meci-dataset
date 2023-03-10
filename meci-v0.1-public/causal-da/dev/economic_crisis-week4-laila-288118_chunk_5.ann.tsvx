@@ -1,0 +1,35 @@
+Text	- M20 : Modellen blev lanceret i 1920/21 og bragte for alvor Nilfisken ud i de danske hjem .	Motorstørrelsen var cirka 130 Watt .	- R40 : En opdatering af M20 , som fik indført fjederbelastede hægter mellem motorstykke og opsamlingsspand , som lettede tømning .	Motorstørrelsen blev øget lidt til 160 Watt , og modellen fik slange med gevindkobling af en type , som sætter ny standard og genbruges på den næste model .	- S50 /S55 : Det er den mest kendte af alle gamle Nilfisk modeller .
+Event	T0	lanceret	EVENT	22
+Event	T1	bragte	EVENT	44
+Event	T2	opdatering	EVENT	141
+Event	T3	indført	EVENT	169
+Event	T4	tømning	EVENT	252
+Event	T5	øget	EVENT	283
+Event	T6	fik	EVENT	320
+Event	T7	sætter	EVENT	366
+Event	T8	kendte	EVENT	448
+Relation	T3	T4	CauseEffect	true	indført	tømning
+Relation	T4	T3	EffectCause	true	tømning	indført
+Relation	T0	T5	NoRel	true	lanceret	øget
+Relation	T0	T6	NoRel	true	lanceret	fik
+Relation	T1	T3	NoRel	true	bragte	indført
+Relation	T2	T4	NoRel	true	opdatering	tømning
+Relation	T2	T5	NoRel	true	opdatering	øget
+Relation	T2	T7	NoRel	true	opdatering	sætter
+Relation	T3	T2	NoRel	true	indført	opdatering
+Relation	T3	T6	NoRel	true	indført	fik
+Relation	T3	T8	NoRel	true	indført	kendte
+Relation	T4	T1	NoRel	true	tømning	bragte
+Relation	T4	T5	NoRel	true	tømning	øget
+Relation	T4	T7	NoRel	true	tømning	sætter
+Relation	T5	T0	NoRel	true	øget	lanceret
+Relation	T5	T2	NoRel	true	øget	opdatering
+Relation	T5	T6	NoRel	true	øget	fik
+Relation	T5	T7	NoRel	true	øget	sætter
+Relation	T6	T0	NoRel	true	fik	lanceret
+Relation	T6	T2	NoRel	true	fik	opdatering
+Relation	T7	T3	NoRel	true	sætter	indført
+Relation	T7	T5	NoRel	true	sætter	øget
+Relation	T8	T2	NoRel	true	kendte	opdatering
+Relation	T8	T5	NoRel	true	kendte	øget
+Relation	T8	T7	NoRel	true	kendte	sætter

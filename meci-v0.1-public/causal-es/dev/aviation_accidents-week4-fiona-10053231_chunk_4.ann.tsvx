@@ -1,0 +1,90 @@
+Text	El capitán indicó que el sistema de freno automático estaba en modo de despegue rechazado ( RTO ) y aplicó el frenado máximo de las ruedas .	El avión sobrevoló el final de la pista , atravesó la cerca perimetral del aeropuerto , atravesó líneas eléctricas y se detuvo en un campo adyacente al aeropuerto a unos 1.400 pies del final de la pista .	El capitán ordenó al primer oficial que " saliera " y el primer oficial salió de la cabina de vuelo para ayudar con la evacuación de los pasajeros .	La tripulación de vuelo indicó que confirmaron que todos los pasajeros estaban fuera del avión antes de salir del avión .	Luego estalló en llamas cuando se detuvo .
+Event	T0	indicó	EVENT	11
+Event	T1	rechazado	EVENT	80
+Event	T2	aplicó	EVENT	100
+Event	T3	frenado	EVENT	110
+Event	T4	sobrevoló	EVENT	150
+Event	T5	atravesó	EVENT	183
+Event	T6	atravesó	EVENT	229
+Event	T7	detuvo	EVENT	261
+Event	T8	salió	EVENT	418
+Event	T9	ayudar	EVENT	451
+Event	T10	evacuación	EVENT	465
+Event	T11	indicó	EVENT	519
+Event	T12	confirmaron	EVENT	530
+Event	T13	salir	EVENT	599
+Event	T14	estalló	EVENT	623
+Event	T15	detuvo	EVENT	651
+Relation	T1	T2	CauseEffect	true	rechazado	aplicó
+Relation	T2	T1	EffectCause	true	aplicó	rechazado
+Relation	T8	T9	CauseEffect	true	salió	ayudar
+Relation	T9	T8	EffectCause	true	ayudar	salió
+Relation	T0	T10	NoRel	true	indicó	evacuación
+Relation	T0	T11	NoRel	true	indicó	indicó
+Relation	T0	T15	NoRel	true	indicó	detuvo
+Relation	T0	T3	NoRel	true	indicó	frenado
+Relation	T1	T10	NoRel	true	rechazado	evacuación
+Relation	T1	T5	NoRel	true	rechazado	atravesó
+Relation	T10	T11	NoRel	true	evacuación	indicó
+Relation	T10	T14	NoRel	true	evacuación	estalló
+Relation	T10	T15	NoRel	true	evacuación	detuvo
+Relation	T10	T2	NoRel	true	evacuación	aplicó
+Relation	T10	T3	NoRel	true	evacuación	frenado
+Relation	T10	T9	NoRel	true	evacuación	ayudar
+Relation	T11	T10	NoRel	true	indicó	evacuación
+Relation	T11	T2	NoRel	true	indicó	aplicó
+Relation	T11	T9	NoRel	true	indicó	ayudar
+Relation	T12	T14	NoRel	true	confirmaron	estalló
+Relation	T12	T2	NoRel	true	confirmaron	aplicó
+Relation	T12	T7	NoRel	true	confirmaron	detuvo
+Relation	T13	T1	NoRel	true	salir	rechazado
+Relation	T13	T12	NoRel	true	salir	confirmaron
+Relation	T13	T7	NoRel	true	salir	detuvo
+Relation	T13	T9	NoRel	true	salir	ayudar
+Relation	T14	T1	NoRel	true	estalló	rechazado
+Relation	T14	T12	NoRel	true	estalló	confirmaron
+Relation	T14	T13	NoRel	true	estalló	salir
+Relation	T14	T4	NoRel	true	estalló	sobrevoló
+Relation	T15	T13	NoRel	true	detuvo	salir
+Relation	T15	T5	NoRel	true	detuvo	atravesó
+Relation	T15	T8	NoRel	true	detuvo	salió
+Relation	T2	T0	NoRel	true	aplicó	indicó
+Relation	T2	T11	NoRel	true	aplicó	indicó
+Relation	T2	T3	NoRel	true	aplicó	frenado
+Relation	T2	T5	NoRel	true	aplicó	atravesó
+Relation	T2	T8	NoRel	true	aplicó	salió
+Relation	T3	T0	NoRel	true	frenado	indicó
+Relation	T3	T2	NoRel	true	frenado	aplicó
+Relation	T3	T8	NoRel	true	frenado	salió
+Relation	T3	T9	NoRel	true	frenado	ayudar
+Relation	T4	T10	NoRel	true	sobrevoló	evacuación
+Relation	T4	T9	NoRel	true	sobrevoló	ayudar
+Relation	T5	T0	NoRel	true	atravesó	indicó
+Relation	T5	T10	NoRel	true	atravesó	evacuación
+Relation	T5	T13	NoRel	true	atravesó	salir
+Relation	T5	T2	NoRel	true	atravesó	aplicó
+Relation	T5	T4	NoRel	true	atravesó	sobrevoló
+Relation	T5	T6	NoRel	true	atravesó	atravesó
+Relation	T5	T7	NoRel	true	atravesó	detuvo
+Relation	T5	T8	NoRel	true	atravesó	salió
+Relation	T6	T0	NoRel	true	atravesó	indicó
+Relation	T6	T12	NoRel	true	atravesó	confirmaron
+Relation	T6	T8	NoRel	true	atravesó	salió
+Relation	T7	T1	NoRel	true	detuvo	rechazado
+Relation	T7	T10	NoRel	true	detuvo	evacuación
+Relation	T7	T14	NoRel	true	detuvo	estalló
+Relation	T7	T15	NoRel	true	detuvo	detuvo
+Relation	T7	T3	NoRel	true	detuvo	frenado
+Relation	T7	T5	NoRel	true	detuvo	atravesó
+Relation	T7	T8	NoRel	true	detuvo	salió
+Relation	T7	T9	NoRel	true	detuvo	ayudar
+Relation	T8	T12	NoRel	true	salió	confirmaron
+Relation	T8	T2	NoRel	true	salió	aplicó
+Relation	T8	T3	NoRel	true	salió	frenado
+Relation	T8	T4	NoRel	true	salió	sobrevoló
+Relation	T8	T7	NoRel	true	salió	detuvo
+Relation	T9	T11	NoRel	true	ayudar	indicó
+Relation	T9	T15	NoRel	true	ayudar	detuvo
+Relation	T9	T5	NoRel	true	ayudar	atravesó
+Relation	T9	T6	NoRel	true	ayudar	atravesó
+Relation	T9	T7	NoRel	true	ayudar	detuvo

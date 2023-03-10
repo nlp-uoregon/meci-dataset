@@ -1,0 +1,33 @@
+Text	Haziran 1101 sonunda Konstantinopolis'ten ayrılan , Nevers Kontu Giyom'un komutasında bulunan bu Haçlı seferi ordusunun askerleri ve asker olmayan kamp takipçileri Anadolu'da Ankara , Konya üzerinden Ereğli'ye ilerlemeye başladı .	Bu Haçlı ordusu çok geçmeden bu yolu takip etmenin bir hata olduğunu anladı .	Çünkü önceki _ Baronlar Haçlı seferi _ yol etrafına sanki kıran getirmişti ve bu ordu iaşe ve hayvan yemi bulamamaktan bitik bir hale düştü .	Selçuklu Sultanı I. Kılıç Arslan ve Danişmend Gazi süvari ordularıyla Merzifon'dan Ağustos sonunda ayrılıp Ankara'ya gelip Konya üzerine ilerleyen Haçlılar ordusunun önü sıra geri çekilmekte idi .	Konya üzerinden ilerleyen Haçlılar Eylül ayı başında Ereğli yakınlarına gelmişlerdi ki Selçuklu ve Danişmend Gazi süvari orduları onları orada pusuda beklemekteydi .
+Event	T0	başladı	EVENT	221
+Event	T3	anladı	EVENT	300
+Event	T4	seferi	EVENT	339
+Event	T5	getirmişti	EVENT	373
+Event	T6	düştü	EVENT	443
+Event	T7	çekilmekte	EVENT	631
+Event	T8	beklemekteydi	EVENT	798
+Event	T1	gelmişlerdi	EVENT	720
+Relation	T6	T3	CauseEffect	true	düştü	anladı
+Relation	T3	T6	EffectCause	true	anladı	düştü
+Relation	T5	T3	CauseEffect	true	getirmişti	anladı
+Relation	T3	T5	EffectCause	true	anladı	getirmişti
+Relation	T0	T1	CauseEffect	true	başladı	gelmişlerdi
+Relation	T1	T0	EffectCause	true	gelmişlerdi	başladı
+Relation	T7	T8	CauseEffect	true	çekilmekte	beklemekteydi
+Relation	T8	T7	EffectCause	true	beklemekteydi	çekilmekte
+Relation	T0	T6	NoRel	true	başladı	düştü
+Relation	T0	T8	NoRel	true	başladı	beklemekteydi
+Relation	T1	T3	NoRel	true	gelmişlerdi	anladı
+Relation	T1	T4	NoRel	true	gelmişlerdi	seferi
+Relation	T1	T5	NoRel	true	gelmişlerdi	getirmişti
+Relation	T1	T8	NoRel	true	gelmişlerdi	beklemekteydi
+Relation	T4	T3	NoRel	true	seferi	anladı
+Relation	T4	T5	NoRel	true	seferi	getirmişti
+Relation	T5	T6	NoRel	true	getirmişti	düştü
+Relation	T5	T8	NoRel	true	getirmişti	beklemekteydi
+Relation	T6	T1	NoRel	true	düştü	gelmişlerdi
+Relation	T6	T8	NoRel	true	düştü	beklemekteydi
+Relation	T7	T1	NoRel	true	çekilmekte	gelmişlerdi
+Relation	T7	T3	NoRel	true	çekilmekte	anladı
+Relation	T7	T4	NoRel	true	çekilmekte	seferi
+Relation	T8	T6	NoRel	true	beklemekteydi	düştü

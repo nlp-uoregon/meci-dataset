@@ -1,0 +1,51 @@
+Text	Daha sonra araştırmada kanıtlandı ki sinyal sistemi yumuşatılmıştı .	Goa ekspresi , durmakta olan Mewar Ekpresinin sonuncu gezi otobüsüne çarpmıştı .	- 24 Ekim , 2009 – Bir yolcu treni , Giza bölgesi al Ayyat’da su mandasına çarpması sonrası durdu .	Aynı yönde seyretmekte olan diğer yolcu treni , daha sonra durmakta olan trene akadan çarpması sonucunda en az 18 kişi öldü .	- 4 Kasım , 2009 – Pakistan , Karaçi şehrinin dış mahallesinde bir yolcu treni Allama Iqbal Ekspres , bir yük treniyle kafa kafaya çarpıştı .
+Event	T0	kanıtlandı	EVENT	23
+Event	T1	yumuşatılmıştı	EVENT	52
+Event	T2	çarpması	EVENT	225
+Event	T3	çarpmıştı	EVENT	138
+Event	T4	durdu	EVENT	242
+Event	T5	çarpması	EVENT	336
+Event	T6	öldü	EVENT	369
+Event	T7	çarpıştı	EVENT	507
+Event	T8	araştırmada	EVENT	11
+Event	T9	seyretmekte	EVENT	261
+Relation	T8	T0	CauseEffect	true	araştırmada	kanıtlandı
+Relation	T0	T8	EffectCause	true	kanıtlandı	araştırmada
+Relation	T1	T3	CauseEffect	true	yumuşatılmıştı	çarpmıştı
+Relation	T3	T1	EffectCause	true	çarpmıştı	yumuşatılmıştı
+Relation	T2	T4	CauseEffect	true	çarpması	durdu
+Relation	T4	T2	EffectCause	true	durdu	çarpması
+Relation	T9	T5	CauseEffect	true	seyretmekte	çarpması
+Relation	T5	T9	EffectCause	true	çarpması	seyretmekte
+Relation	T5	T6	CauseEffect	true	çarpması	öldü
+Relation	T6	T5	EffectCause	true	öldü	çarpması
+Relation	T0	T1	NoRel	true	kanıtlandı	yumuşatılmıştı
+Relation	T0	T6	NoRel	true	kanıtlandı	öldü
+Relation	T0	T7	NoRel	true	kanıtlandı	çarpıştı
+Relation	T1	T7	NoRel	true	yumuşatılmıştı	çarpıştı
+Relation	T1	T8	NoRel	true	yumuşatılmıştı	araştırmada
+Relation	T2	T0	NoRel	true	çarpması	kanıtlandı
+Relation	T2	T1	NoRel	true	çarpması	yumuşatılmıştı
+Relation	T2	T6	NoRel	true	çarpması	öldü
+Relation	T3	T2	NoRel	true	çarpmıştı	çarpması
+Relation	T3	T5	NoRel	true	çarpmıştı	çarpması
+Relation	T3	T8	NoRel	true	çarpmıştı	araştırmada
+Relation	T4	T6	NoRel	true	durdu	öldü
+Relation	T4	T8	NoRel	true	durdu	araştırmada
+Relation	T5	T8	NoRel	true	çarpması	araştırmada
+Relation	T6	T2	NoRel	true	öldü	çarpması
+Relation	T6	T3	NoRel	true	öldü	çarpmıştı
+Relation	T6	T7	NoRel	true	öldü	çarpıştı
+Relation	T7	T0	NoRel	true	çarpıştı	kanıtlandı
+Relation	T7	T1	NoRel	true	çarpıştı	yumuşatılmıştı
+Relation	T7	T3	NoRel	true	çarpıştı	çarpmıştı
+Relation	T7	T5	NoRel	true	çarpıştı	çarpması
+Relation	T7	T9	NoRel	true	çarpıştı	seyretmekte
+Relation	T8	T1	NoRel	true	araştırmada	yumuşatılmıştı
+Relation	T8	T4	NoRel	true	araştırmada	durdu
+Relation	T8	T5	NoRel	true	araştırmada	çarpması
+Relation	T8	T6	NoRel	true	araştırmada	öldü
+Relation	T8	T7	NoRel	true	araştırmada	çarpıştı
+Relation	T9	T1	NoRel	true	seyretmekte	yumuşatılmıştı
+Relation	T9	T6	NoRel	true	seyretmekte	öldü
+Relation	T9	T7	NoRel	true	seyretmekte	çarpıştı

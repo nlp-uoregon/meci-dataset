@@ -1,0 +1,85 @@
+Text	Aynı raporda kaza mahalinde makinistler için uyarıcı işaret ve tabela bulunmadığı , toplam yolculuk için verilen 5 saat 15 dakikanın yeterli olmadığı ve uygun olmayan altyapının da kazayı etkileyen faktörlerden olduğu belirtilmiştir .	Sakarya 2. Ağır Ceza Mahkemesi'nde görülen davada sanıkların avukatı Salih Ekizler , kaza sırasında vagonlardan savrulan parçaların kazadan hemen sonra TCDD yetkilileri tarafından bulundukları yerlerden alınarak yol kenarına öbeklendiğini ve bu şekilde delillerin karartıldığını iddia edecektir .	Dava , Sakarya 2. Ağır Ceza Mahkemesi'nde görüldü .	Davanın sonuçlanmasıyla beraber 1. makinist Fikret Karabulut 2 yıl 6 ay hapis ve 100 YTL para cezasına , 2. makinist Recep Sönmez 1 yıl 3 ay hapis ile 333 YTL para cezasına çarptırılır .	Tren Şefi Köksal Coşkun ise beraat eder .
+Event	T0	kaza	EVENT	13
+Event	T1	yolculuk	EVENT	91
+Event	T2	etkileyen	EVENT	188
+Event	T3	belirtilmiştir	EVENT	218
+Event	T4	davada	EVENT	278
+Event	T5	kaza	EVENT	320
+Event	T6	savrulan	EVENT	347
+Event	T7	öbeklendiğini	EVENT	460
+Event	T8	edecektir	EVENT	520
+Event	T9	Dava	EVENT	532
+Event	T10	görüldü	EVENT	574
+Event	T11	çarptırılır	EVENT	757
+Event	T12	eder	EVENT	806
+Event	T13	verilen	EVENT	105
+Event	T14	karartıldığını	EVENT	499
+Relation	T13	T0	CauseEffect	true	verilen	kaza
+Relation	T0	T13	EffectCause	true	kaza	verilen
+Relation	T5	T6	CauseEffect	true	kaza	savrulan
+Relation	T6	T5	EffectCause	true	savrulan	kaza
+Relation	T7	T14	CauseEffect	true	öbeklendiğini	karartıldığını
+Relation	T14	T7	EffectCause	true	karartıldığını	öbeklendiğini
+Relation	T9	T11	CauseEffect	true	Dava	çarptırılır
+Relation	T11	T9	EffectCause	true	çarptırılır	Dava
+Relation	T0	T14	NoRel	true	kaza	karartıldığını
+Relation	T0	T5	NoRel	true	kaza	kaza
+Relation	T0	T8	NoRel	true	kaza	edecektir
+Relation	T1	T13	NoRel	true	yolculuk	verilen
+Relation	T1	T3	NoRel	true	yolculuk	belirtilmiştir
+Relation	T1	T4	NoRel	true	yolculuk	davada
+Relation	T1	T6	NoRel	true	yolculuk	savrulan
+Relation	T10	T11	NoRel	true	görüldü	çarptırılır
+Relation	T10	T2	NoRel	true	görüldü	etkileyen
+Relation	T10	T4	NoRel	true	görüldü	davada
+Relation	T10	T8	NoRel	true	görüldü	edecektir
+Relation	T11	T10	NoRel	true	çarptırılır	görüldü
+Relation	T11	T12	NoRel	true	çarptırılır	eder
+Relation	T11	T13	NoRel	true	çarptırılır	verilen
+Relation	T11	T14	NoRel	true	çarptırılır	karartıldığını
+Relation	T11	T7	NoRel	true	çarptırılır	öbeklendiğini
+Relation	T12	T11	NoRel	true	eder	çarptırılır
+Relation	T12	T6	NoRel	true	eder	savrulan
+Relation	T12	T7	NoRel	true	eder	öbeklendiğini
+Relation	T13	T10	NoRel	true	verilen	görüldü
+Relation	T13	T14	NoRel	true	verilen	karartıldığını
+Relation	T13	T3	NoRel	true	verilen	belirtilmiştir
+Relation	T14	T0	NoRel	true	karartıldığını	kaza
+Relation	T14	T3	NoRel	true	karartıldığını	belirtilmiştir
+Relation	T14	T9	NoRel	true	karartıldığını	Dava
+Relation	T2	T1	NoRel	true	etkileyen	yolculuk
+Relation	T2	T11	NoRel	true	etkileyen	çarptırılır
+Relation	T2	T13	NoRel	true	etkileyen	verilen
+Relation	T2	T4	NoRel	true	etkileyen	davada
+Relation	T2	T6	NoRel	true	etkileyen	savrulan
+Relation	T3	T10	NoRel	true	belirtilmiştir	görüldü
+Relation	T3	T4	NoRel	true	belirtilmiştir	davada
+Relation	T3	T7	NoRel	true	belirtilmiştir	öbeklendiğini
+Relation	T4	T1	NoRel	true	davada	yolculuk
+Relation	T4	T11	NoRel	true	davada	çarptırılır
+Relation	T4	T2	NoRel	true	davada	etkileyen
+Relation	T4	T6	NoRel	true	davada	savrulan
+Relation	T4	T9	NoRel	true	davada	Dava
+Relation	T5	T1	NoRel	true	kaza	yolculuk
+Relation	T5	T10	NoRel	true	kaza	görüldü
+Relation	T5	T14	NoRel	true	kaza	karartıldığını
+Relation	T5	T4	NoRel	true	kaza	davada
+Relation	T5	T7	NoRel	true	kaza	öbeklendiğini
+Relation	T5	T9	NoRel	true	kaza	Dava
+Relation	T6	T10	NoRel	true	savrulan	görüldü
+Relation	T6	T11	NoRel	true	savrulan	çarptırılır
+Relation	T6	T3	NoRel	true	savrulan	belirtilmiştir
+Relation	T7	T0	NoRel	true	öbeklendiğini	kaza
+Relation	T7	T10	NoRel	true	öbeklendiğini	görüldü
+Relation	T7	T11	NoRel	true	öbeklendiğini	çarptırılır
+Relation	T7	T12	NoRel	true	öbeklendiğini	eder
+Relation	T7	T5	NoRel	true	öbeklendiğini	kaza
+Relation	T7	T6	NoRel	true	öbeklendiğini	savrulan
+Relation	T7	T8	NoRel	true	öbeklendiğini	edecektir
+Relation	T8	T1	NoRel	true	edecektir	yolculuk
+Relation	T8	T4	NoRel	true	edecektir	davada
+Relation	T8	T7	NoRel	true	edecektir	öbeklendiğini
+Relation	T9	T12	NoRel	true	Dava	eder
+Relation	T9	T14	NoRel	true	Dava	karartıldığını
+Relation	T9	T3	NoRel	true	Dava	belirtilmiştir
+Relation	T9	T6	NoRel	true	Dava	savrulan

@@ -1,0 +1,93 @@
+Text	- ¿ 28? DE SEPTIEMBRE : Se produce el choque de dos trenes en la estación de Praia do Ribatejo con el balance de dos heridos .	- ¿ 28 ? DE OCTUBRE : el tren correo procedente de Badajoz descarrila cerca de Lisboa , saldándose el accidente con varios heridos .	- 30 DE OCTUBRE : un tren procedente de Oporto descarrila en la línea de circunvalación de Lisboa .	El accidente arroja un saldo de varios heridos .	- 5 DE NOVIEMBRE : Dos trenes chocan en la estación de Famalicão , línea del Miño , resultando heridas varias personas .
+Event	T0	produce	EVENT	27
+Event	T1	choque	EVENT	38
+Event	T2	balance	EVENT	102
+Event	T3	heridos	EVENT	117
+Event	T4	descarrila	EVENT	186
+Event	T5	saldándose	EVENT	215
+Event	T6	accidente	EVENT	229
+Event	T7	heridos	EVENT	250
+Event	T8	descarrila	EVENT	307
+Event	T9	arroja	EVENT	373
+Event	T10	saldo	EVENT	383
+Event	T11	heridos	EVENT	399
+Event	T12	chocan	EVENT	439
+Event	T13	heridas	EVENT	504
+Event	T14	accidente	EVENT	363
+Relation	T1	T3	CauseEffect	true	choque	heridos
+Relation	T3	T1	EffectCause	true	heridos	choque
+Relation	T12	T13	CauseEffect	true	chocan	heridas
+Relation	T13	T12	EffectCause	true	heridas	chocan
+Relation	T14	T11	CauseEffect	true	accidente	heridos
+Relation	T11	T14	EffectCause	true	heridos	accidente
+Relation	T0	T1	NoRel	true	produce	choque
+Relation	T0	T11	NoRel	true	produce	heridos
+Relation	T0	T6	NoRel	true	produce	accidente
+Relation	T0	T9	NoRel	true	produce	arroja
+Relation	T1	T0	NoRel	true	choque	produce
+Relation	T1	T10	NoRel	true	choque	saldo
+Relation	T1	T11	NoRel	true	choque	heridos
+Relation	T1	T4	NoRel	true	choque	descarrila
+Relation	T1	T6	NoRel	true	choque	accidente
+Relation	T1	T7	NoRel	true	choque	heridos
+Relation	T10	T0	NoRel	true	saldo	produce
+Relation	T10	T1	NoRel	true	saldo	choque
+Relation	T10	T11	NoRel	true	saldo	heridos
+Relation	T10	T13	NoRel	true	saldo	heridas
+Relation	T10	T3	NoRel	true	saldo	heridos
+Relation	T10	T5	NoRel	true	saldo	saldándose
+Relation	T10	T6	NoRel	true	saldo	accidente
+Relation	T11	T10	NoRel	true	heridos	saldo
+Relation	T11	T3	NoRel	true	heridos	heridos
+Relation	T11	T6	NoRel	true	heridos	accidente
+Relation	T12	T10	NoRel	true	chocan	saldo
+Relation	T12	T11	NoRel	true	chocan	heridos
+Relation	T12	T3	NoRel	true	chocan	heridos
+Relation	T12	T4	NoRel	true	chocan	descarrila
+Relation	T12	T5	NoRel	true	chocan	saldándose
+Relation	T12	T7	NoRel	true	chocan	heridos
+Relation	T13	T0	NoRel	true	heridas	produce
+Relation	T13	T2	NoRel	true	heridas	balance
+Relation	T13	T9	NoRel	true	heridas	arroja
+Relation	T14	T0	NoRel	true	accidente	produce
+Relation	T14	T1	NoRel	true	accidente	choque
+Relation	T14	T3	NoRel	true	accidente	heridos
+Relation	T14	T8	NoRel	true	accidente	descarrila
+Relation	T2	T11	NoRel	true	balance	heridos
+Relation	T2	T13	NoRel	true	balance	heridas
+Relation	T2	T14	NoRel	true	balance	accidente
+Relation	T2	T7	NoRel	true	balance	heridos
+Relation	T2	T8	NoRel	true	balance	descarrila
+Relation	T3	T13	NoRel	true	heridos	heridas
+Relation	T3	T14	NoRel	true	heridos	accidente
+Relation	T3	T5	NoRel	true	heridos	saldándose
+Relation	T4	T0	NoRel	true	descarrila	produce
+Relation	T4	T11	NoRel	true	descarrila	heridos
+Relation	T4	T12	NoRel	true	descarrila	chocan
+Relation	T4	T2	NoRel	true	descarrila	balance
+Relation	T4	T3	NoRel	true	descarrila	heridos
+Relation	T4	T7	NoRel	true	descarrila	heridos
+Relation	T4	T8	NoRel	true	descarrila	descarrila
+Relation	T5	T1	NoRel	true	saldándose	choque
+Relation	T5	T10	NoRel	true	saldándose	saldo
+Relation	T5	T11	NoRel	true	saldándose	heridos
+Relation	T5	T13	NoRel	true	saldándose	heridas
+Relation	T5	T14	NoRel	true	saldándose	accidente
+Relation	T5	T4	NoRel	true	saldándose	descarrila
+Relation	T5	T9	NoRel	true	saldándose	arroja
+Relation	T6	T13	NoRel	true	accidente	heridas
+Relation	T6	T4	NoRel	true	accidente	descarrila
+Relation	T6	T5	NoRel	true	accidente	saldándose
+Relation	T7	T1	NoRel	true	heridos	choque
+Relation	T7	T12	NoRel	true	heridos	chocan
+Relation	T7	T14	NoRel	true	heridos	accidente
+Relation	T7	T4	NoRel	true	heridos	descarrila
+Relation	T7	T9	NoRel	true	heridos	arroja
+Relation	T8	T14	NoRel	true	descarrila	accidente
+Relation	T8	T2	NoRel	true	descarrila	balance
+Relation	T8	T4	NoRel	true	descarrila	descarrila
+Relation	T8	T5	NoRel	true	descarrila	saldándose
+Relation	T9	T0	NoRel	true	arroja	produce
+Relation	T9	T1	NoRel	true	arroja	choque
+Relation	T9	T10	NoRel	true	arroja	saldo
+Relation	T9	T2	NoRel	true	arroja	balance

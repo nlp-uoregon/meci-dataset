@@ -1,0 +1,57 @@
+Text	El VUELO 821 DE AEROFLOT , operado por la aerolínea Aeroflot-Nord , se estrelló el durante su aproximación al aeropuerto Bolshoe Savino de la ciudad de Perm , Rusia .	Este desastre aéreo provocó el cambio de marca de Aeroflot-Nord en Nordavia , efectivo el 1 de diciembre de 2009 .	Todos los 83 pasajeros y 5 miembros de la tripulación fallecieron .	La aeronave , un Boeing 737 con registro VP-BKO , despegó del aeropuerto de Moscú-Sheremetyevo con destino a la ciudad de Perm , al pie de los montes Urales .	La causa principal del accidente fue que ambos pilotos habían perdido la orientación espacial debido a su inexperiencia con el tipo de indicador de actitud occidental en el avión .
+Event	T0	operado	EVENT	27
+Event	T1	estrelló	EVENT	71
+Event	T2	aproximación	EVENT	94
+Event	T4	cambio	EVENT	198
+Event	T5	fallecieron	EVENT	336
+Event	T6	registro	EVENT	382
+Event	T7	despegó	EVENT	400
+Event	T8	accidente	EVENT	532
+Event	T9	perdido	EVENT	571
+Event	T10	inexperiencia	EVENT	615
+Event	T11	desastre	EVENT	172
+Relation	T11	T4	CauseEffect	true	desastre	cambio
+Relation	T4	T11	EffectCause	true	cambio	desastre
+Relation	T1	T5	CauseEffect	true	estrelló	fallecieron
+Relation	T5	T1	EffectCause	true	fallecieron	estrelló
+Relation	T9	T8	CauseEffect	true	perdido	accidente
+Relation	T8	T9	EffectCause	true	accidente	perdido
+Relation	T10	T9	CauseEffect	true	inexperiencia	perdido
+Relation	T9	T10	EffectCause	true	perdido	inexperiencia
+Relation	T0	T2	NoRel	true	operado	aproximación
+Relation	T0	T5	NoRel	true	operado	fallecieron
+Relation	T0	T7	NoRel	true	operado	despegó
+Relation	T0	T9	NoRel	true	operado	perdido
+Relation	T1	T2	NoRel	true	estrelló	aproximación
+Relation	T1	T6	NoRel	true	estrelló	registro
+Relation	T1	T8	NoRel	true	estrelló	accidente
+Relation	T10	T0	NoRel	true	inexperiencia	operado
+Relation	T10	T1	NoRel	true	inexperiencia	estrelló
+Relation	T10	T11	NoRel	true	inexperiencia	desastre
+Relation	T10	T7	NoRel	true	inexperiencia	despegó
+Relation	T10	T8	NoRel	true	inexperiencia	accidente
+Relation	T11	T0	NoRel	true	desastre	operado
+Relation	T11	T7	NoRel	true	desastre	despegó
+Relation	T2	T1	NoRel	true	aproximación	estrelló
+Relation	T2	T10	NoRel	true	aproximación	inexperiencia
+Relation	T2	T6	NoRel	true	aproximación	registro
+Relation	T2	T7	NoRel	true	aproximación	despegó
+Relation	T2	T8	NoRel	true	aproximación	accidente
+Relation	T4	T1	NoRel	true	cambio	estrelló
+Relation	T4	T2	NoRel	true	cambio	aproximación
+Relation	T4	T5	NoRel	true	cambio	fallecieron
+Relation	T5	T2	NoRel	true	fallecieron	aproximación
+Relation	T5	T6	NoRel	true	fallecieron	registro
+Relation	T5	T9	NoRel	true	fallecieron	perdido
+Relation	T6	T0	NoRel	true	registro	operado
+Relation	T6	T11	NoRel	true	registro	desastre
+Relation	T7	T0	NoRel	true	despegó	operado
+Relation	T7	T4	NoRel	true	despegó	cambio
+Relation	T7	T6	NoRel	true	despegó	registro
+Relation	T7	T9	NoRel	true	despegó	perdido
+Relation	T8	T10	NoRel	true	accidente	inexperiencia
+Relation	T8	T5	NoRel	true	accidente	fallecieron
+Relation	T9	T1	NoRel	true	perdido	estrelló
+Relation	T9	T11	NoRel	true	perdido	desastre
+Relation	T9	T4	NoRel	true	perdido	cambio
+Relation	T9	T7	NoRel	true	perdido	despegó

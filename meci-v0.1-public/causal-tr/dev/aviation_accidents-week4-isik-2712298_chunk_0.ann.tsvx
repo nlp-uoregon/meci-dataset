@@ -1,0 +1,63 @@
+Text	AEROFLOT'UN 20 SEFER SAYILI UÇUŞU _ ( , ) 4 Ocak 1965'te Moskova'dan Almatı'ya yapılan bir tarifeli uçuş sırasında düşük görüş mesafesi koşullarında düşerek uçaktaki 103 kişiden 64'ünün ölmesiyle sonuçlanan bir Aeroflot uçuşudur .	Kaza yapan uçak , Kazakistan Sivil Havacılık Müdürlüğü Aeroflot'a ait bir İlyuşin İl - 18B CCCP - 75685 idi .	Uçak kaza yaptığında 6.802 uçuş saatine sahipti .	- Kaptan pilot Konstantin Sergeviç Artamonov - Gözetmen kaptan ve Kazakistan Sivil Havacılık Dairesi Başkanı Rishat Nurmukhametoviç Azakov - Yardımcı pilot Nikolay Aleksandroviç Slamikhin - Uçuş mühendisi Anatoliy Galiyeviç Şakirov - Seyrüseferci Vladimir Vasiliyeviç Pristavka - Radyo operatörü Nikolay Nikolayeviç Safonov	Uçuşun 4 Ocak'ta saat 07.30'da Domodedovo Havalimanı'ndan kalkması planlanmıştı ancak motor onarımları gerekmesi nedeniyle uçuş ertelendi .
+Event	T0	UÇUŞU	EVENT	28
+Event	T2	uçuş	EVENT	100
+Event	T3	düşerek	EVENT	149
+Event	T5	uçuşudur	EVENT	220
+Event	T7	uçuş	EVENT	368
+Event	T8	Uçuşun	EVENT	715
+Event	T9	planlanmıştı	EVENT	782
+Event	T10	ertelendi	EVENT	843
+Event	T1	ölmesiyle	EVENT	186
+Event	T4	Kaza	EVENT	231
+Event	T6	kaza	EVENT	346
+Event	T11	onarımları	EVENT	807
+Relation	T3	T1	CauseEffect	true	düşerek	ölmesiyle
+Relation	T1	T3	EffectCause	true	ölmesiyle	düşerek
+Relation	T11	T10	CauseEffect	true	onarımları	ertelendi
+Relation	T10	T11	EffectCause	true	ertelendi	onarımları
+Relation	T4	T1	CauseEffect	true	Kaza	ölmesiyle
+Relation	T1	T4	EffectCause	true	ölmesiyle	Kaza
+Relation	T0	T7	NoRel	true	UÇUŞU	uçuş
+Relation	T0	T9	NoRel	true	UÇUŞU	planlanmıştı
+Relation	T1	T10	NoRel	true	ölmesiyle	ertelendi
+Relation	T1	T6	NoRel	true	ölmesiyle	kaza
+Relation	T1	T7	NoRel	true	ölmesiyle	uçuş
+Relation	T1	T8	NoRel	true	ölmesiyle	Uçuşun
+Relation	T1	T9	NoRel	true	ölmesiyle	planlanmıştı
+Relation	T10	T0	NoRel	true	ertelendi	UÇUŞU
+Relation	T10	T1	NoRel	true	ertelendi	ölmesiyle
+Relation	T10	T3	NoRel	true	ertelendi	düşerek
+Relation	T10	T4	NoRel	true	ertelendi	Kaza
+Relation	T10	T8	NoRel	true	ertelendi	Uçuşun
+Relation	T11	T1	NoRel	true	onarımları	ölmesiyle
+Relation	T11	T6	NoRel	true	onarımları	kaza
+Relation	T11	T8	NoRel	true	onarımları	Uçuşun
+Relation	T11	T9	NoRel	true	onarımları	planlanmıştı
+Relation	T2	T0	NoRel	true	uçuş	UÇUŞU
+Relation	T2	T1	NoRel	true	uçuş	ölmesiyle
+Relation	T2	T3	NoRel	true	uçuş	düşerek
+Relation	T2	T4	NoRel	true	uçuş	Kaza
+Relation	T2	T9	NoRel	true	uçuş	planlanmıştı
+Relation	T3	T0	NoRel	true	düşerek	UÇUŞU
+Relation	T3	T7	NoRel	true	düşerek	uçuş
+Relation	T3	T8	NoRel	true	düşerek	Uçuşun
+Relation	T4	T10	NoRel	true	Kaza	ertelendi
+Relation	T4	T2	NoRel	true	Kaza	uçuş
+Relation	T4	T5	NoRel	true	Kaza	uçuşudur
+Relation	T5	T0	NoRel	true	uçuşudur	UÇUŞU
+Relation	T5	T1	NoRel	true	uçuşudur	ölmesiyle
+Relation	T5	T10	NoRel	true	uçuşudur	ertelendi
+Relation	T5	T2	NoRel	true	uçuşudur	uçuş
+Relation	T5	T3	NoRel	true	uçuşudur	düşerek
+Relation	T6	T1	NoRel	true	kaza	ölmesiyle
+Relation	T6	T5	NoRel	true	kaza	uçuşudur
+Relation	T6	T7	NoRel	true	kaza	uçuş
+Relation	T7	T1	NoRel	true	uçuş	ölmesiyle
+Relation	T7	T5	NoRel	true	uçuş	uçuşudur
+Relation	T8	T0	NoRel	true	Uçuşun	UÇUŞU
+Relation	T8	T5	NoRel	true	Uçuşun	uçuşudur
+Relation	T8	T9	NoRel	true	Uçuşun	planlanmıştı
+Relation	T9	T1	NoRel	true	planlanmıştı	ölmesiyle
+Relation	T9	T2	NoRel	true	planlanmıştı	uçuş
+Relation	T9	T6	NoRel	true	planlanmıştı	kaza
+Relation	T9	T8	NoRel	true	planlanmıştı	Uçuşun

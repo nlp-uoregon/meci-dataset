@@ -1,0 +1,66 @@
+Text	En forudsætning for lånet var , at landet gennemførte økonomiske stramninger , strukturreformer og privatiseringer .	Allerede året efter var recessionen forværret , samtidig med at den græske regering ikke i forventet omfang havde gennemført de aftalte stramninger .	Der var behov for at tilføre yderligere 130 mia. EUR , medregnet en kapitaltilførsel på 48 mia. EUR til de private banker .	Samtidig måtte private kreditorer indgå en aftale , der indebar forlængelse af løbetiderne , lavere renter og en nedskrivning af den nominelle gæld med 53,3 % .	Det samlede program blev vedtaget og underskrevet i februar 2012 .
+Event	T0	lånet	EVENT	20
+Event	T1	gennemførte	EVENT	42
+Event	T10	nedskrivning	EVENT	504
+Event	T11	vedtaget	EVENT	577
+Event	T12	underskrevet	EVENT	589
+Event	T3	privatiseringer	EVENT	99
+Event	T4	forværret	EVENT	153
+Event	T5	gennemført	EVENT	231
+Event	T6	stramninger	EVENT	253
+Event	T7	indgå	EVENT	425
+Event	T8	aftale	EVENT	434
+Event	T9	forlængelse	EVENT	455
+Relation	T1	T0	CauseEffect	true	gennemførte	lånet
+Relation	T0	T1	EffectCause	true	lånet	gennemførte
+Relation	T3	T0	CauseEffect	true	privatiseringer	lånet
+Relation	T0	T3	EffectCause	true	lånet	privatiseringer
+Relation	T4	T8	CauseEffect	true	forværret	aftale
+Relation	T8	T4	EffectCause	true	aftale	forværret
+Relation	T11	T8	CauseEffect	true	vedtaget	aftale
+Relation	T8	T11	EffectCause	true	aftale	vedtaget
+Relation	T0	T4	NoRel	true	lånet	forværret
+Relation	T1	T12	NoRel	true	gennemførte	underskrevet
+Relation	T1	T3	NoRel	true	gennemførte	privatiseringer
+Relation	T1	T6	NoRel	true	gennemførte	stramninger
+Relation	T1	T7	NoRel	true	gennemførte	indgå
+Relation	T1	T8	NoRel	true	gennemførte	aftale
+Relation	T10	T11	NoRel	true	nedskrivning	vedtaget
+Relation	T10	T4	NoRel	true	nedskrivning	forværret
+Relation	T10	T8	NoRel	true	nedskrivning	aftale
+Relation	T11	T10	NoRel	true	vedtaget	nedskrivning
+Relation	T11	T12	NoRel	true	vedtaget	underskrevet
+Relation	T11	T5	NoRel	true	vedtaget	gennemført
+Relation	T12	T10	NoRel	true	underskrevet	nedskrivning
+Relation	T12	T11	NoRel	true	underskrevet	vedtaget
+Relation	T12	T6	NoRel	true	underskrevet	stramninger
+Relation	T12	T9	NoRel	true	underskrevet	forlængelse
+Relation	T3	T1	NoRel	true	privatiseringer	gennemførte
+Relation	T3	T5	NoRel	true	privatiseringer	gennemført
+Relation	T3	T8	NoRel	true	privatiseringer	aftale
+Relation	T3	T9	NoRel	true	privatiseringer	forlængelse
+Relation	T4	T11	NoRel	true	forværret	vedtaget
+Relation	T4	T12	NoRel	true	forværret	underskrevet
+Relation	T4	T3	NoRel	true	forværret	privatiseringer
+Relation	T5	T0	NoRel	true	gennemført	lånet
+Relation	T5	T12	NoRel	true	gennemført	underskrevet
+Relation	T5	T3	NoRel	true	gennemført	privatiseringer
+Relation	T6	T0	NoRel	true	stramninger	lånet
+Relation	T6	T10	NoRel	true	stramninger	nedskrivning
+Relation	T6	T11	NoRel	true	stramninger	vedtaget
+Relation	T6	T7	NoRel	true	stramninger	indgå
+Relation	T6	T8	NoRel	true	stramninger	aftale
+Relation	T6	T9	NoRel	true	stramninger	forlængelse
+Relation	T7	T12	NoRel	true	indgå	underskrevet
+Relation	T7	T3	NoRel	true	indgå	privatiseringer
+Relation	T7	T9	NoRel	true	indgå	forlængelse
+Relation	T8	T12	NoRel	true	aftale	underskrevet
+Relation	T8	T3	NoRel	true	aftale	privatiseringer
+Relation	T8	T7	NoRel	true	aftale	indgå
+Relation	T8	T9	NoRel	true	aftale	forlængelse
+Relation	T9	T0	NoRel	true	forlængelse	lånet
+Relation	T9	T1	NoRel	true	forlængelse	gennemførte
+Relation	T9	T11	NoRel	true	forlængelse	vedtaget
+Relation	T9	T12	NoRel	true	forlængelse	underskrevet
+Relation	T9	T6	NoRel	true	forlængelse	stramninger
+Relation	T9	T8	NoRel	true	forlængelse	aftale

@@ -1,0 +1,119 @@
+Text	Tailandia entra a la fase 5 de su reapertura : abre escuelas y locales de alto riesgo , y permite el ingreso controlado de extranjeros .	Jair Bolsonaro , presidente de Brasil da positivo al coronavirus , convirtiéndose en el tercer presidente de América contagiado con el virus .	Los casos positivos superan la cantidad de 12 millones , con 4.5_% de fallecidos y 58_% de recuperados , según worldometers.info .	México supera a Italia en cantidad de fallecidos , convirtiéndose en el cuarto país con más muertes por COVID-19 .	Brasil superó los 3 millones de casos y se convirtió en el segundo país en registrar 100.000 muertos por COVID-19 .
+Event	T0	entra	EVENT	10
+Event	T1	fase	EVENT	21
+Event	T2	reapertura	EVENT	34
+Event	T3	abre	EVENT	47
+Event	T4	convirtiéndose	EVENT	204
+Event	T5	contagiado	EVENT	254
+Event	T6	virus	EVENT	272
+Event	T7	superan	EVENT	300
+Event	T8	fallecidos	EVENT	350
+Event	T9	recuperados	EVENT	371
+Event	T10	supera	EVENT	418
+Event	T11	fallecidos	EVENT	449
+Event	T12	convirtiéndose	EVENT	462
+Event	T13	muertes	EVENT	503
+Event	T14	superó	EVENT	533
+Event	T15	casos	EVENT	558
+Event	T16	registrar	EVENT	601
+Event	T17	muertos	EVENT	619
+Relation	T0	T10	NoRel	true	entra	supera
+Relation	T0	T12	NoRel	true	entra	convirtiéndose
+Relation	T0	T13	NoRel	true	entra	muertes
+Relation	T0	T3	NoRel	true	entra	abre
+Relation	T0	T5	NoRel	true	entra	contagiado
+Relation	T1	T0	NoRel	true	fase	entra
+Relation	T1	T10	NoRel	true	fase	supera
+Relation	T1	T15	NoRel	true	fase	casos
+Relation	T1	T17	NoRel	true	fase	muertos
+Relation	T1	T4	NoRel	true	fase	convirtiéndose
+Relation	T1	T7	NoRel	true	fase	superan
+Relation	T1	T8	NoRel	true	fase	fallecidos
+Relation	T10	T1	NoRel	true	supera	fase
+Relation	T10	T9	NoRel	true	supera	recuperados
+Relation	T11	T12	NoRel	true	fallecidos	convirtiéndose
+Relation	T11	T13	NoRel	true	fallecidos	muertes
+Relation	T11	T15	NoRel	true	fallecidos	casos
+Relation	T11	T5	NoRel	true	fallecidos	contagiado
+Relation	T11	T6	NoRel	true	fallecidos	virus
+Relation	T11	T9	NoRel	true	fallecidos	recuperados
+Relation	T12	T0	NoRel	true	convirtiéndose	entra
+Relation	T12	T14	NoRel	true	convirtiéndose	superó
+Relation	T12	T15	NoRel	true	convirtiéndose	casos
+Relation	T12	T16	NoRel	true	convirtiéndose	registrar
+Relation	T12	T4	NoRel	true	convirtiéndose	convirtiéndose
+Relation	T12	T6	NoRel	true	convirtiéndose	virus
+Relation	T13	T0	NoRel	true	muertes	entra
+Relation	T13	T11	NoRel	true	muertes	fallecidos
+Relation	T13	T12	NoRel	true	muertes	convirtiéndose
+Relation	T13	T14	NoRel	true	muertes	superó
+Relation	T13	T15	NoRel	true	muertes	casos
+Relation	T13	T4	NoRel	true	muertes	convirtiéndose
+Relation	T13	T7	NoRel	true	muertes	superan
+Relation	T13	T8	NoRel	true	muertes	fallecidos
+Relation	T14	T0	NoRel	true	superó	entra
+Relation	T14	T1	NoRel	true	superó	fase
+Relation	T14	T12	NoRel	true	superó	convirtiéndose
+Relation	T14	T17	NoRel	true	superó	muertos
+Relation	T14	T2	NoRel	true	superó	reapertura
+Relation	T14	T9	NoRel	true	superó	recuperados
+Relation	T15	T0	NoRel	true	casos	entra
+Relation	T15	T1	NoRel	true	casos	fase
+Relation	T15	T11	NoRel	true	casos	fallecidos
+Relation	T15	T12	NoRel	true	casos	convirtiéndose
+Relation	T15	T16	NoRel	true	casos	registrar
+Relation	T15	T6	NoRel	true	casos	virus
+Relation	T15	T7	NoRel	true	casos	superan
+Relation	T15	T8	NoRel	true	casos	fallecidos
+Relation	T15	T9	NoRel	true	casos	recuperados
+Relation	T16	T12	NoRel	true	registrar	convirtiéndose
+Relation	T16	T14	NoRel	true	registrar	superó
+Relation	T16	T6	NoRel	true	registrar	virus
+Relation	T16	T7	NoRel	true	registrar	superan
+Relation	T17	T10	NoRel	true	muertos	supera
+Relation	T17	T13	NoRel	true	muertos	muertes
+Relation	T17	T4	NoRel	true	muertos	convirtiéndose
+Relation	T17	T7	NoRel	true	muertos	superan
+Relation	T17	T8	NoRel	true	muertos	fallecidos
+Relation	T2	T1	NoRel	true	reapertura	fase
+Relation	T2	T13	NoRel	true	reapertura	muertes
+Relation	T2	T15	NoRel	true	reapertura	casos
+Relation	T2	T3	NoRel	true	reapertura	abre
+Relation	T2	T4	NoRel	true	reapertura	convirtiéndose
+Relation	T2	T7	NoRel	true	reapertura	superan
+Relation	T3	T11	NoRel	true	abre	fallecidos
+Relation	T3	T12	NoRel	true	abre	convirtiéndose
+Relation	T3	T13	NoRel	true	abre	muertes
+Relation	T3	T14	NoRel	true	abre	superó
+Relation	T3	T15	NoRel	true	abre	casos
+Relation	T3	T5	NoRel	true	abre	contagiado
+Relation	T3	T7	NoRel	true	abre	superan
+Relation	T3	T8	NoRel	true	abre	fallecidos
+Relation	T3	T9	NoRel	true	abre	recuperados
+Relation	T4	T0	NoRel	true	convirtiéndose	entra
+Relation	T4	T1	NoRel	true	convirtiéndose	fase
+Relation	T4	T14	NoRel	true	convirtiéndose	superó
+Relation	T4	T15	NoRel	true	convirtiéndose	casos
+Relation	T4	T16	NoRel	true	convirtiéndose	registrar
+Relation	T4	T3	NoRel	true	convirtiéndose	abre
+Relation	T4	T9	NoRel	true	convirtiéndose	recuperados
+Relation	T5	T10	NoRel	true	contagiado	supera
+Relation	T5	T14	NoRel	true	contagiado	superó
+Relation	T5	T15	NoRel	true	contagiado	casos
+Relation	T5	T7	NoRel	true	contagiado	superan
+Relation	T6	T4	NoRel	true	virus	convirtiéndose
+Relation	T6	T5	NoRel	true	virus	contagiado
+Relation	T7	T1	NoRel	true	superan	fase
+Relation	T7	T13	NoRel	true	superan	muertes
+Relation	T7	T14	NoRel	true	superan	superó
+Relation	T7	T15	NoRel	true	superan	casos
+Relation	T7	T3	NoRel	true	superan	abre
+Relation	T7	T4	NoRel	true	superan	convirtiéndose
+Relation	T8	T16	NoRel	true	fallecidos	registrar
+Relation	T8	T17	NoRel	true	fallecidos	muertos
+Relation	T8	T6	NoRel	true	fallecidos	virus
+Relation	T9	T0	NoRel	true	recuperados	entra
+Relation	T9	T14	NoRel	true	recuperados	superó
+Relation	T9	T17	NoRel	true	recuperados	muertos
+Relation	T9	T2	NoRel	true	recuperados	reapertura
+Relation	T9	T7	NoRel	true	recuperados	superan

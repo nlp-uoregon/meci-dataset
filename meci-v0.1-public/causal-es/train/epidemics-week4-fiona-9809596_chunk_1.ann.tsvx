@@ -1,0 +1,154 @@
+Text	Algunos de sus tripulantes habían contraído la enfermedad y habían muerto , y aunque la embarcación y la tripulación estaban en cuarentena , la enfermedad se extendió a la población local desde que la carga infectada de la embarcación fue robada y vendida en La Valeta .	La enfermedad apareció en la ciudad a mediados de abril , y el brote fue grave a mediados de mayo .	El gobierno colonial británico tomó medidas estrictas para contener la plaga , aunque esto se hizo demasiado tarde para evitar que el brote se propagara en sus primeras etapas .	El área urbana alrededor del Gran Puerto estaba aislada del resto de la isla , y los asentamientos con altas tasas de mortalidad fueron acordonados .	Las violaciones de estas regulaciones fueron recibidas con duras penas , incluida la muerte , y varias personas fueron ejecutadas por ocultar su infección .
+Event	T0	contraído	EVENT	34
+Event	T1	enfermedad	EVENT	47
+Event	T2	muerto	EVENT	67
+Event	T3	extendió	EVENT	158
+Event	T4	infectada	EVENT	207
+Event	T5	robada	EVENT	239
+Event	T6	vendida	EVENT	248
+Event	T7	apareció	EVENT	285
+Event	T8	grave	EVENT	344
+Event	T9	contener	EVENT	430
+Event	T10	plaga	EVENT	442
+Event	T11	hizo	EVENT	465
+Event	T12	brote	EVENT	505
+Event	T13	propagara	EVENT	514
+Event	T14	acordonados	EVENT	685
+Event	T15	violaciones	EVENT	703
+Event	T16	recibidas	EVENT	744
+Event	T17	muerte	EVENT	784
+Event	T18	ejecutadas	EVENT	818
+Event	T19	ocultar	EVENT	833
+Event	T20	infección	EVENT	844
+Relation	T0	T2	CauseEffect	true	contraído	muerto
+Relation	T2	T0	EffectCause	true	muerto	contraído
+Relation	T15	T17	CauseEffect	true	violaciones	muerte
+Relation	T17	T15	EffectCause	true	muerte	violaciones
+Relation	T19	T18	CauseEffect	true	ocultar	ejecutadas
+Relation	T18	T19	EffectCause	true	ejecutadas	ocultar
+Relation	T0	T1	NoRel	true	contraído	enfermedad
+Relation	T0	T18	NoRel	true	contraído	ejecutadas
+Relation	T0	T5	NoRel	true	contraído	robada
+Relation	T0	T9	NoRel	true	contraído	contener
+Relation	T1	T0	NoRel	true	enfermedad	contraído
+Relation	T1	T12	NoRel	true	enfermedad	brote
+Relation	T1	T13	NoRel	true	enfermedad	propagara
+Relation	T1	T14	NoRel	true	enfermedad	acordonados
+Relation	T1	T17	NoRel	true	enfermedad	muerte
+Relation	T1	T3	NoRel	true	enfermedad	extendió
+Relation	T1	T4	NoRel	true	enfermedad	infectada
+Relation	T1	T6	NoRel	true	enfermedad	vendida
+Relation	T10	T11	NoRel	true	plaga	hizo
+Relation	T10	T12	NoRel	true	plaga	brote
+Relation	T10	T19	NoRel	true	plaga	ocultar
+Relation	T10	T20	NoRel	true	plaga	infección
+Relation	T10	T4	NoRel	true	plaga	infectada
+Relation	T10	T5	NoRel	true	plaga	robada
+Relation	T11	T1	NoRel	true	hizo	enfermedad
+Relation	T11	T12	NoRel	true	hizo	brote
+Relation	T11	T20	NoRel	true	hizo	infección
+Relation	T11	T5	NoRel	true	hizo	robada
+Relation	T11	T7	NoRel	true	hizo	apareció
+Relation	T12	T18	NoRel	true	brote	ejecutadas
+Relation	T12	T2	NoRel	true	brote	muerto
+Relation	T12	T3	NoRel	true	brote	extendió
+Relation	T12	T4	NoRel	true	brote	infectada
+Relation	T12	T7	NoRel	true	brote	apareció
+Relation	T13	T12	NoRel	true	propagara	brote
+Relation	T13	T15	NoRel	true	propagara	violaciones
+Relation	T13	T3	NoRel	true	propagara	extendió
+Relation	T13	T4	NoRel	true	propagara	infectada
+Relation	T13	T7	NoRel	true	propagara	apareció
+Relation	T13	T9	NoRel	true	propagara	contener
+Relation	T14	T0	NoRel	true	acordonados	contraído
+Relation	T14	T11	NoRel	true	acordonados	hizo
+Relation	T14	T12	NoRel	true	acordonados	brote
+Relation	T14	T18	NoRel	true	acordonados	ejecutadas
+Relation	T14	T2	NoRel	true	acordonados	muerto
+Relation	T14	T20	NoRel	true	acordonados	infección
+Relation	T14	T3	NoRel	true	acordonados	extendió
+Relation	T14	T4	NoRel	true	acordonados	infectada
+Relation	T14	T5	NoRel	true	acordonados	robada
+Relation	T14	T6	NoRel	true	acordonados	vendida
+Relation	T14	T8	NoRel	true	acordonados	grave
+Relation	T15	T1	NoRel	true	violaciones	enfermedad
+Relation	T15	T10	NoRel	true	violaciones	plaga
+Relation	T15	T13	NoRel	true	violaciones	propagara
+Relation	T15	T14	NoRel	true	violaciones	acordonados
+Relation	T15	T19	NoRel	true	violaciones	ocultar
+Relation	T15	T5	NoRel	true	violaciones	robada
+Relation	T15	T8	NoRel	true	violaciones	grave
+Relation	T16	T1	NoRel	true	recibidas	enfermedad
+Relation	T16	T11	NoRel	true	recibidas	hizo
+Relation	T16	T13	NoRel	true	recibidas	propagara
+Relation	T16	T20	NoRel	true	recibidas	infección
+Relation	T16	T4	NoRel	true	recibidas	infectada
+Relation	T16	T5	NoRel	true	recibidas	robada
+Relation	T17	T0	NoRel	true	muerte	contraído
+Relation	T17	T1	NoRel	true	muerte	enfermedad
+Relation	T17	T10	NoRel	true	muerte	plaga
+Relation	T17	T11	NoRel	true	muerte	hizo
+Relation	T17	T7	NoRel	true	muerte	apareció
+Relation	T17	T9	NoRel	true	muerte	contener
+Relation	T18	T0	NoRel	true	ejecutadas	contraído
+Relation	T18	T10	NoRel	true	ejecutadas	plaga
+Relation	T18	T13	NoRel	true	ejecutadas	propagara
+Relation	T18	T16	NoRel	true	ejecutadas	recibidas
+Relation	T18	T17	NoRel	true	ejecutadas	muerte
+Relation	T18	T2	NoRel	true	ejecutadas	muerto
+Relation	T18	T20	NoRel	true	ejecutadas	infección
+Relation	T18	T8	NoRel	true	ejecutadas	grave
+Relation	T19	T0	NoRel	true	ocultar	contraído
+Relation	T19	T10	NoRel	true	ocultar	plaga
+Relation	T19	T16	NoRel	true	ocultar	recibidas
+Relation	T19	T6	NoRel	true	ocultar	vendida
+Relation	T19	T8	NoRel	true	ocultar	grave
+Relation	T2	T14	NoRel	true	muerto	acordonados
+Relation	T2	T16	NoRel	true	muerto	recibidas
+Relation	T2	T18	NoRel	true	muerto	ejecutadas
+Relation	T20	T10	NoRel	true	infección	plaga
+Relation	T20	T11	NoRel	true	infección	hizo
+Relation	T3	T0	NoRel	true	extendió	contraído
+Relation	T3	T12	NoRel	true	extendió	brote
+Relation	T3	T18	NoRel	true	extendió	ejecutadas
+Relation	T3	T7	NoRel	true	extendió	apareció
+Relation	T3	T8	NoRel	true	extendió	grave
+Relation	T4	T1	NoRel	true	infectada	enfermedad
+Relation	T4	T10	NoRel	true	infectada	plaga
+Relation	T4	T13	NoRel	true	infectada	propagara
+Relation	T4	T17	NoRel	true	infectada	muerte
+Relation	T4	T18	NoRel	true	infectada	ejecutadas
+Relation	T4	T2	NoRel	true	infectada	muerto
+Relation	T4	T6	NoRel	true	infectada	vendida
+Relation	T4	T8	NoRel	true	infectada	grave
+Relation	T4	T9	NoRel	true	infectada	contener
+Relation	T5	T1	NoRel	true	robada	enfermedad
+Relation	T5	T20	NoRel	true	robada	infección
+Relation	T5	T7	NoRel	true	robada	apareció
+Relation	T5	T8	NoRel	true	robada	grave
+Relation	T6	T0	NoRel	true	vendida	contraído
+Relation	T6	T12	NoRel	true	vendida	brote
+Relation	T6	T14	NoRel	true	vendida	acordonados
+Relation	T6	T20	NoRel	true	vendida	infección
+Relation	T6	T7	NoRel	true	vendida	apareció
+Relation	T6	T9	NoRel	true	vendida	contener
+Relation	T7	T10	NoRel	true	apareció	plaga
+Relation	T7	T14	NoRel	true	apareció	acordonados
+Relation	T7	T19	NoRel	true	apareció	ocultar
+Relation	T7	T20	NoRel	true	apareció	infección
+Relation	T8	T1	NoRel	true	grave	enfermedad
+Relation	T8	T10	NoRel	true	grave	plaga
+Relation	T8	T16	NoRel	true	grave	recibidas
+Relation	T8	T19	NoRel	true	grave	ocultar
+Relation	T8	T2	NoRel	true	grave	muerto
+Relation	T8	T20	NoRel	true	grave	infección
+Relation	T8	T5	NoRel	true	grave	robada
+Relation	T9	T1	NoRel	true	contener	enfermedad
+Relation	T9	T11	NoRel	true	contener	hizo
+Relation	T9	T13	NoRel	true	contener	propagara
+Relation	T9	T14	NoRel	true	contener	acordonados
+Relation	T9	T19	NoRel	true	contener	ocultar
+Relation	T9	T3	NoRel	true	contener	extendió
+Relation	T9	T4	NoRel	true	contener	infectada
+Relation	T9	T5	NoRel	true	contener	robada
+Relation	T9	T8	NoRel	true	contener	grave

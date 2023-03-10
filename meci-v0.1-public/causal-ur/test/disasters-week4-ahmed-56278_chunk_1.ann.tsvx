@@ -1,0 +1,44 @@
+Text	سیلاب دریاؤں میں بھی برپا ہو سکتے ہیں ۔	جب پانی کا بہاؤ دریا کی قدرتی گنجائش سے بڑھ جائے اور خاص طور پر دریا کے موڑ یا نشیبی علاقوں میں اس کا پانی کناروں سے بہہ نکلے تو ایسی صورت کو تکنیکی لحاظ سے سیلاب کہا جاتا ہے ۔	سیلاب اکثر آبادیوں ، زرعی املاک اور جنگلات کو نقصان پہنچاتا ہے ۔	سیلاب کی وجہ سے ہونے والے جانی نقصانات سے بچنے کا ایک طریقہ یہ ہے کہ دریا کے ساتھ ساتھ تمام نشیبی علاقوں سے دور رہا جائے ۔	چونکہ انسانی تہذیبوں میں یہ بات عام ہے کہ کاروبار ، سہولیات اور سستی اور بروقت مواصلات کی وجہ سے دریاؤں کے نشیبی علاقوں میں آباد کاریاں کی جاتی ہیں ، اس لیے انسانی آبادیوں کو وقت کے ساتھ ساتھ سیلاب کی وجہ سے درپیش خطرات میں اضافہ ہوا ہے ۔
+Event	T0	سیلاب	EVENT	0
+Event	T1	برپا	EVENT	21
+Event	T2	بہاؤ	EVENT	51
+Event	T3	نکلے	EVENT	161
+Event	T4	کہا	EVENT	203
+Event	T5	سیلاب	EVENT	217
+Event	T6	پہنچاتا	EVENT	269
+Event	T7	سیلاب	EVENT	282
+Event	T8	سیلاب	EVENT	597
+Event	T9	ہوا	EVENT	635
+Relation	T5	T6	CauseEffect	true	سیلاب	پہنچاتا
+Relation	T6	T5	EffectCause	true	پہنچاتا	سیلاب
+Relation	T0	T1	NoRel	true	سیلاب	برپا
+Relation	T0	T5	NoRel	true	سیلاب	سیلاب
+Relation	T0	T8	NoRel	true	سیلاب	سیلاب
+Relation	T1	T2	NoRel	true	برپا	بہاؤ
+Relation	T1	T9	NoRel	true	برپا	ہوا
+Relation	T2	T3	NoRel	true	بہاؤ	نکلے
+Relation	T2	T9	NoRel	true	بہاؤ	ہوا
+Relation	T3	T0	NoRel	true	نکلے	سیلاب
+Relation	T3	T6	NoRel	true	نکلے	پہنچاتا
+Relation	T3	T7	NoRel	true	نکلے	سیلاب
+Relation	T3	T8	NoRel	true	نکلے	سیلاب
+Relation	T3	T9	NoRel	true	نکلے	ہوا
+Relation	T4	T0	NoRel	true	کہا	سیلاب
+Relation	T4	T3	NoRel	true	کہا	نکلے
+Relation	T4	T6	NoRel	true	کہا	پہنچاتا
+Relation	T4	T7	NoRel	true	کہا	سیلاب
+Relation	T5	T0	NoRel	true	سیلاب	سیلاب
+Relation	T5	T2	NoRel	true	سیلاب	بہاؤ
+Relation	T5	T4	NoRel	true	سیلاب	کہا
+Relation	T6	T3	NoRel	true	پہنچاتا	نکلے
+Relation	T6	T8	NoRel	true	پہنچاتا	سیلاب
+Relation	T7	T2	NoRel	true	سیلاب	بہاؤ
+Relation	T7	T6	NoRel	true	سیلاب	پہنچاتا
+Relation	T7	T8	NoRel	true	سیلاب	سیلاب
+Relation	T8	T0	NoRel	true	سیلاب	سیلاب
+Relation	T8	T4	NoRel	true	سیلاب	کہا
+Relation	T8	T5	NoRel	true	سیلاب	سیلاب
+Relation	T8	T6	NoRel	true	سیلاب	پہنچاتا
+Relation	T9	T0	NoRel	true	ہوا	سیلاب
+Relation	T9	T1	NoRel	true	ہوا	برپا
+Relation	T9	T8	NoRel	true	ہوا	سیلاب

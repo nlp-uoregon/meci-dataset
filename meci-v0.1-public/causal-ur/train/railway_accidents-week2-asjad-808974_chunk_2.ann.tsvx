@@ -1,0 +1,47 @@
+Text	جس ٹرین میں حادثہ ہوا ، اسے سنہ 2011ء میں نپون شاریو نامی جاپانی کمپبی نے بنایا تھا ۔	کم از کم اٹھارہ مسافر ہلاک اور 187 زخمی ہوئے ۔	خبروں کے مطابق زخمی ہونے والوں میں سے ایک امریکی شہری تھا ۔	تائیوان کی صدر سائی_انگ وین نے حادثے کو ” المناک واقعہ “ قرار دیا اور حکومت و فوج کو امدادی کارروائیاں تیز کرنے کی ہدایت دی ۔	صدر نے حادثے کی تحقیقات کا حکم دیا کہ ” پورے حادثے کے وقت اور محل وقوع کو یقینی بنایا جائے “
+Event	T1	بنایا	EVENT	74
+Event	T10	حادثے	EVENT	364
+Event	T11	وقوع	EVENT	385
+Event	T2	ہلاک	EVENT	108
+Event	T4	زخمی	EVENT	148
+Event	T5	حادثے	EVENT	224
+Event	T6	واقعہ	EVENT	242
+Event	T7	حادثے	EVENT	326
+Event	T8	تحقیقات	EVENT	335
+Relation	T5	T2	CauseEffect	true	حادثے	ہلاک
+Relation	T2	T5	EffectCause	true	ہلاک	حادثے
+Relation	T5	T4	CauseEffect	true	حادثے	زخمی
+Relation	T4	T5	EffectCause	true	زخمی	حادثے
+Relation	T7	T8	CauseEffect	true	حادثے	تحقیقات
+Relation	T8	T7	EffectCause	true	تحقیقات	حادثے
+Relation	T10	T4	CauseEffect	true	حادثے	زخمی
+Relation	T4	T10	EffectCause	true	زخمی	حادثے
+Relation	T10	T2	CauseEffect	true	حادثے	ہلاک
+Relation	T2	T10	EffectCause	true	ہلاک	حادثے
+Relation	T1	T2	NoRel	true	بنایا	ہلاک
+Relation	T1	T4	NoRel	true	بنایا	زخمی
+Relation	T10	T1	NoRel	true	حادثے	بنایا
+Relation	T10	T7	NoRel	true	حادثے	حادثے
+Relation	T2	T1	NoRel	true	ہلاک	بنایا
+Relation	T4	T1	NoRel	true	زخمی	بنایا
+Relation	T4	T11	NoRel	true	زخمی	وقوع
+Relation	T4	T6	NoRel	true	زخمی	واقعہ
+Relation	T4	T8	NoRel	true	زخمی	تحقیقات
+Relation	T5	T1	NoRel	true	حادثے	بنایا
+Relation	T5	T10	NoRel	true	حادثے	حادثے
+Relation	T5	T11	NoRel	true	حادثے	وقوع
+Relation	T5	T7	NoRel	true	حادثے	حادثے
+Relation	T6	T10	NoRel	true	واقعہ	حادثے
+Relation	T6	T11	NoRel	true	واقعہ	وقوع
+Relation	T6	T2	NoRel	true	واقعہ	ہلاک
+Relation	T6	T4	NoRel	true	واقعہ	زخمی
+Relation	T6	T7	NoRel	true	واقعہ	حادثے
+Relation	T7	T1	NoRel	true	حادثے	بنایا
+Relation	T7	T10	NoRel	true	حادثے	حادثے
+Relation	T7	T11	NoRel	true	حادثے	وقوع
+Relation	T7	T5	NoRel	true	حادثے	حادثے
+Relation	T7	T6	NoRel	true	حادثے	واقعہ
+Relation	T8	T10	NoRel	true	تحقیقات	حادثے
+Relation	T8	T11	NoRel	true	تحقیقات	وقوع
+Relation	T8	T4	NoRel	true	تحقیقات	زخمی
+Relation	T8	T5	NoRel	true	تحقیقات	حادثے

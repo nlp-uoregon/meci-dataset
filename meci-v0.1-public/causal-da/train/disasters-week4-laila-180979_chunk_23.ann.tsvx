@@ -1,0 +1,35 @@
+Text	right | thumb | Oppenheimer og general Groves poserer ved resterne af det tårn , Trinity blev detoneret i , et par uger efter testen .	Denne model var ikke blevet testet , men den simple teknik , bomben var baseret på , gjorde forskerne sikre på , den ville virke .	Desuden var der kun U-235 nok til én bombe .	Den anden bombe , Fat Man , der blev kastet tre dage senere mod Nagasaki , var af samme type som Trinity .	Det var en plutoniumbombe , der baserede sig på ” implosions-designet ” .
+Event	T0	poserer	EVENT	46
+Event	T1	detoneret	EVENT	94
+Event	T2	testen	EVENT	126
+Event	T3	testet	EVENT	163
+Event	T4	gjorde	EVENT	220
+Event	T5	virke	EVENT	258
+Event	T6	kastet	EVENT	348
+Event	T7	baserede	EVENT	450
+Event	T8	teknik	EVENT	187
+Event	T9	sikre	EVENT	237
+Relation	T8	T9	CauseEffect	true	teknik	sikre
+Relation	T9	T8	EffectCause	true	sikre	teknik
+Relation	T0	T4	NoRel	true	poserer	gjorde
+Relation	T0	T8	NoRel	true	poserer	teknik
+Relation	T1	T4	NoRel	true	detoneret	gjorde
+Relation	T1	T5	NoRel	true	detoneret	virke
+Relation	T2	T0	NoRel	true	testen	poserer
+Relation	T3	T6	NoRel	true	testet	kastet
+Relation	T3	T8	NoRel	true	testet	teknik
+Relation	T4	T1	NoRel	true	gjorde	detoneret
+Relation	T4	T3	NoRel	true	gjorde	testet
+Relation	T4	T9	NoRel	true	gjorde	sikre
+Relation	T5	T4	NoRel	true	virke	gjorde
+Relation	T5	T8	NoRel	true	virke	teknik
+Relation	T6	T0	NoRel	true	kastet	poserer
+Relation	T6	T3	NoRel	true	kastet	testet
+Relation	T6	T4	NoRel	true	kastet	gjorde
+Relation	T7	T0	NoRel	true	baserede	poserer
+Relation	T7	T1	NoRel	true	baserede	detoneret
+Relation	T7	T5	NoRel	true	baserede	virke
+Relation	T8	T1	NoRel	true	teknik	detoneret
+Relation	T8	T2	NoRel	true	teknik	testen
+Relation	T8	T3	NoRel	true	teknik	testet
+Relation	T8	T6	NoRel	true	teknik	kastet

@@ -1,0 +1,55 @@
+Text	Rodaron hasta la pista 35 para la salida a las 09:48 y se les autorizó el despegue dos minutos más tarde .	Durante el despegue , cerca de V1 , falló el motor número uno .	El despegue continuó pero la velocidad disminuyó .	El avión se ladeó a la derecha y giró 135 grados .	Descendió en posición invertida , en un ángulo de 40 grados y se estrelló contra árboles , ubicados a unos 113 m del umbral de la pista 17 .
+Event	T0	Rodaron	EVENT	0
+Event	T1	salida	EVENT	34
+Event	T2	autorizó	EVENT	62
+Event	T3	despegue	EVENT	74
+Event	T4	despegue	EVENT	118
+Event	T5	falló	EVENT	143
+Event	T6	continuó	EVENT	183
+Event	T7	disminuyó	EVENT	210
+Event	T8	ladeó	EVENT	234
+Event	T9	giró	EVENT	255
+Event	T10	Descendió	EVENT	273
+Event	T11	estrelló	EVENT	338
+Relation	T10	T11	CauseEffect	true	Descendió	estrelló
+Relation	T11	T10	EffectCause	true	estrelló	Descendió
+Relation	T0	T1	NoRel	true	Rodaron	salida
+Relation	T0	T10	NoRel	true	Rodaron	Descendió
+Relation	T0	T4	NoRel	true	Rodaron	despegue
+Relation	T0	T7	NoRel	true	Rodaron	disminuyó
+Relation	T1	T2	NoRel	true	salida	autorizó
+Relation	T1	T4	NoRel	true	salida	despegue
+Relation	T1	T6	NoRel	true	salida	continuó
+Relation	T1	T7	NoRel	true	salida	disminuyó
+Relation	T10	T2	NoRel	true	Descendió	autorizó
+Relation	T10	T3	NoRel	true	Descendió	despegue
+Relation	T10	T5	NoRel	true	Descendió	falló
+Relation	T11	T2	NoRel	true	estrelló	autorizó
+Relation	T11	T4	NoRel	true	estrelló	despegue
+Relation	T11	T5	NoRel	true	estrelló	falló
+Relation	T11	T7	NoRel	true	estrelló	disminuyó
+Relation	T2	T3	NoRel	true	autorizó	despegue
+Relation	T2	T4	NoRel	true	autorizó	despegue
+Relation	T2	T5	NoRel	true	autorizó	falló
+Relation	T2	T6	NoRel	true	autorizó	continuó
+Relation	T2	T9	NoRel	true	autorizó	giró
+Relation	T3	T6	NoRel	true	despegue	continuó
+Relation	T3	T7	NoRel	true	despegue	disminuyó
+Relation	T3	T8	NoRel	true	despegue	ladeó
+Relation	T4	T5	NoRel	true	despegue	falló
+Relation	T4	T6	NoRel	true	despegue	continuó
+Relation	T5	T1	NoRel	true	falló	salida
+Relation	T5	T11	NoRel	true	falló	estrelló
+Relation	T5	T4	NoRel	true	falló	despegue
+Relation	T6	T0	NoRel	true	continuó	Rodaron
+Relation	T6	T1	NoRel	true	continuó	salida
+Relation	T6	T5	NoRel	true	continuó	falló
+Relation	T7	T0	NoRel	true	disminuyó	Rodaron
+Relation	T7	T1	NoRel	true	disminuyó	salida
+Relation	T7	T2	NoRel	true	disminuyó	autorizó
+Relation	T7	T4	NoRel	true	disminuyó	despegue
+Relation	T7	T6	NoRel	true	disminuyó	continuó
+Relation	T7	T8	NoRel	true	disminuyó	ladeó
+Relation	T8	T10	NoRel	true	ladeó	Descendió
+Relation	T8	T9	NoRel	true	ladeó	giró
+Relation	T9	T4	NoRel	true	giró	despegue

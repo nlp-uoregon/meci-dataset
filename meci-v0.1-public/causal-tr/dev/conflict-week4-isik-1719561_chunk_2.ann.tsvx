@@ -1,0 +1,39 @@
+Text	Okuldaki öğretmenlerden Rahip Mac , Patrick'e okul tuvaletinde tecavüz eder .	Patrick ise durumu bir günah çıkarma sırasında , başka kimseye söylememesi şartıyla başka bir rahibe itiraf eder .	Fakat bu itiraf Mac'in kulağına gidince , Mac çocuğu soğuk suyun altına sokup daha sonra da ıslak elbiselerini üzerine giymekle cezalandırır .	Diğer çocuk 636 Liam Mercier ( John Travers ) ise okulda okuyup yazmayı bilen az sayıdaki öğrencilerden biridir .	Franklin Liam ile arkadaşlık kurar ve onu şiire yönlendirir .
+Event	T0	eder	EVENT	71
+Event	T1	eder	EVENT	186
+Event	T2	itiraf	EVENT	202
+Event	T3	cezalandırır	EVENT	321
+Event	T4	kurar	EVENT	479
+Event	T5	yönlendirir	EVENT	498
+Event	T6	çıkarma	EVENT	107
+Event	T7	sokup	EVENT	265
+Event	T8	gidince	EVENT	225
+Relation	T6	T1	CauseEffect	true	çıkarma	eder
+Relation	T1	T6	EffectCause	true	eder	çıkarma
+Relation	T1	T8	CauseEffect	true	eder	gidince
+Relation	T8	T1	EffectCause	true	gidince	eder
+Relation	T0	T1	CauseEffect	true	eder	eder
+Relation	T1	T0	EffectCause	true	eder	eder
+Relation	T8	T7	CauseEffect	true	gidince	sokup
+Relation	T7	T8	EffectCause	true	sokup	gidince
+Relation	T8	T3	CauseEffect	true	gidince	cezalandırır
+Relation	T3	T8	EffectCause	true	cezalandırır	gidince
+Relation	T0	T4	NoRel	true	eder	kurar
+Relation	T0	T6	NoRel	true	eder	çıkarma
+Relation	T1	T4	NoRel	true	eder	kurar
+Relation	T2	T4	NoRel	true	itiraf	kurar
+Relation	T2	T6	NoRel	true	itiraf	çıkarma
+Relation	T3	T4	NoRel	true	cezalandırır	kurar
+Relation	T3	T7	NoRel	true	cezalandırır	sokup
+Relation	T4	T0	NoRel	true	kurar	eder
+Relation	T4	T2	NoRel	true	kurar	itiraf
+Relation	T4	T5	NoRel	true	kurar	yönlendirir
+Relation	T5	T0	NoRel	true	yönlendirir	eder
+Relation	T5	T2	NoRel	true	yönlendirir	itiraf
+Relation	T5	T6	NoRel	true	yönlendirir	çıkarma
+Relation	T5	T7	NoRel	true	yönlendirir	sokup
+Relation	T6	T4	NoRel	true	çıkarma	kurar
+Relation	T6	T7	NoRel	true	çıkarma	sokup
+Relation	T7	T2	NoRel	true	sokup	itiraf
+Relation	T7	T3	NoRel	true	sokup	cezalandırır
+Relation	T7	T4	NoRel	true	sokup	kurar

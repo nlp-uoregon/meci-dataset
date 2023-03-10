@@ -1,0 +1,23 @@
+Text	رقمی وصولی میں ان افراد کی تنخواہوں اور ٹول پھاٹک کے مختصر دفتر کے رواں اخراجات کا بھی احاطہ کیا جاتا ہے ۔	جب یہ طے ہو جاتا ہے کہ سبھی مطلوبہ اخراجات وصول ہو چکے ہیں ، تو یہ ٹول وصولی کا عمل ختم ہو جاتا ہے ۔	ستمبر ، 2019ء کی اطلاع کے مطابق اس رواں سے پنجاب ، پاکستان کے 11 نئے ٹول ٹیکس پوائنٹ پر اب روڈ ٹیکس وصول کیا جائے گا ۔	گوجرانوالہ سے سیالکوٹ جانیوالے بائی پاس پر ٹول ٹیکس دیں گے ،	وزیرآباد بائی پاس استعمال کرنے والے اب ٹول ٹیکس اداکریں گے ،
+Event	T1	طے	EVENT	113
+Event	T2	وصولی	EVENT	178
+Event	T3	وصولی	EVENT	5
+Event	T4	ختم	EVENT	191
+Event	T5	اطلاع	EVENT	225
+Event	T6	وصول	EVENT	308
+Event	T7	دیں	EVENT	379
+Relation	T1	T4	CauseEffect	true	طے	ختم
+Relation	T4	T1	EffectCause	true	ختم	طے
+Relation	T1	T2	NoRel	true	طے	وصولی
+Relation	T2	T3	NoRel	true	وصولی	وصولی
+Relation	T2	T7	NoRel	true	وصولی	دیں
+Relation	T3	T5	NoRel	true	وصولی	اطلاع
+Relation	T4	T6	NoRel	true	ختم	وصول
+Relation	T5	T2	NoRel	true	اطلاع	وصولی
+Relation	T6	T2	NoRel	true	وصول	وصولی
+Relation	T6	T3	NoRel	true	وصول	وصولی
+Relation	T6	T5	NoRel	true	وصول	اطلاع
+Relation	T6	T7	NoRel	true	وصول	دیں
+Relation	T7	T1	NoRel	true	دیں	طے
+Relation	T7	T4	NoRel	true	دیں	ختم
+Relation	T7	T6	NoRel	true	دیں	وصول

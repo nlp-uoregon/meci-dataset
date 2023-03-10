@@ -1,0 +1,29 @@
+Text	- 2 Eylül , 2001 – Cirebon , Endonezya : Bir yolcu treni ve lokomotif çarpışır , 40 ölü ve 37 ağır yaralı .	- 8 Kasım , 2001 – Rusya : Bulgaristan’dan bir nükleer atık treni gece yarısı Trans - Siberian demiryolu hattında Krasnoyarsk ve Kemerovo arasında çarpışır .	20 tanker vagonun 14_ü raydan çıkar ve demiryolu hattı yaklaşık 12 saat kapalı kalır .	Hattın 1 km_lik bölümü zarar görür .	gece yarısı
+Event	T0	çarpışır	EVENT	70
+Event	T1	ölü	EVENT	84
+Event	T2	yaralı	EVENT	99
+Event	T3	çarpışır	EVENT	255
+Event	T4	çıkar	EVENT	296
+Event	T5	görür	EVENT	382
+Event	T6	kalır	EVENT	345
+Relation	T0	T1	CauseEffect	true	çarpışır	ölü
+Relation	T1	T0	EffectCause	true	ölü	çarpışır
+Relation	T0	T2	CauseEffect	true	çarpışır	yaralı
+Relation	T2	T0	EffectCause	true	yaralı	çarpışır
+Relation	T3	T4	CauseEffect	true	çarpışır	çıkar
+Relation	T4	T3	EffectCause	true	çıkar	çarpışır
+Relation	T4	T6	CauseEffect	true	çıkar	kalır
+Relation	T6	T4	EffectCause	true	kalır	çıkar
+Relation	T3	T5	CauseEffect	true	çarpışır	görür
+Relation	T5	T3	EffectCause	true	görür	çarpışır
+Relation	T1	T2	NoRel	true	ölü	yaralı
+Relation	T1	T3	NoRel	true	ölü	çarpışır
+Relation	T1	T6	NoRel	true	ölü	kalır
+Relation	T2	T1	NoRel	true	yaralı	ölü
+Relation	T3	T2	NoRel	true	çarpışır	yaralı
+Relation	T4	T0	NoRel	true	çıkar	çarpışır
+Relation	T4	T5	NoRel	true	çıkar	görür
+Relation	T5	T1	NoRel	true	görür	ölü
+Relation	T5	T4	NoRel	true	görür	çıkar
+Relation	T6	T1	NoRel	true	kalır	ölü
+Relation	T6	T3	NoRel	true	kalır	çarpışır

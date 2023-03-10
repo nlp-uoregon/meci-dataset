@@ -1,0 +1,81 @@
+Text	- 19 DE AGOSTO : el choque de dos trenes en la línea de Lisboa a Cascais se salda con seis muertos y un importante número de heridos .	- 19 DE SEPTIEMBRE : Un tren ómnibus choca con otro de mercancías en la línea del Duero a la salida del túnel de Don Luis , proximidades de la estación de Caíde , con el resultado de trece personas heridas , tres de ellas gravemente .	- 1926 -___24 DE ABRIL : en la estación portuense de Campanhã se produce el choque entre un corte de vagones desprendidos de un tren de mercancías y una locomotora .	Se producen varios heridos , tres de ellos graves .	- 1928 -___23 DE ENERO : Descarrila un tren rápido en la estación de Contumil .
+Event	T0	choque	EVENT	20
+Event	T1	muertos	EVENT	91
+Event	T2	heridos	EVENT	125
+Event	T3	choca	EVENT	172
+Event	T4	salida	EVENT	228
+Event	T5	resultado	EVENT	305
+Event	T6	heridas	EVENT	333
+Event	T7	produce	EVENT	435
+Event	T8	choque	EVENT	446
+Event	T9	corte	EVENT	462
+Event	T10	desprendidos	EVENT	479
+Event	T11	producen	EVENT	539
+Event	T12	heridos	EVENT	555
+Event	T13	Descarrila	EVENT	613
+Relation	T0	T1	CauseEffect	true	choque	muertos
+Relation	T1	T0	EffectCause	true	muertos	choque
+Relation	T0	T2	CauseEffect	true	choque	heridos
+Relation	T2	T0	EffectCause	true	heridos	choque
+Relation	T3	T6	CauseEffect	true	choca	heridas
+Relation	T6	T3	EffectCause	true	heridas	choca
+Relation	T8	T12	CauseEffect	true	choque	heridos
+Relation	T12	T8	EffectCause	true	heridos	choque
+Relation	T0	T3	NoRel	true	choque	choca
+Relation	T0	T4	NoRel	true	choque	salida
+Relation	T0	T5	NoRel	true	choque	resultado
+Relation	T0	T7	NoRel	true	choque	produce
+Relation	T1	T11	NoRel	true	muertos	producen
+Relation	T1	T12	NoRel	true	muertos	heridos
+Relation	T1	T13	NoRel	true	muertos	Descarrila
+Relation	T1	T5	NoRel	true	muertos	resultado
+Relation	T10	T11	NoRel	true	desprendidos	producen
+Relation	T10	T13	NoRel	true	desprendidos	Descarrila
+Relation	T10	T2	NoRel	true	desprendidos	heridos
+Relation	T10	T4	NoRel	true	desprendidos	salida
+Relation	T10	T6	NoRel	true	desprendidos	heridas
+Relation	T10	T7	NoRel	true	desprendidos	produce
+Relation	T10	T8	NoRel	true	desprendidos	choque
+Relation	T10	T9	NoRel	true	desprendidos	corte
+Relation	T11	T10	NoRel	true	producen	desprendidos
+Relation	T11	T3	NoRel	true	producen	choca
+Relation	T11	T4	NoRel	true	producen	salida
+Relation	T11	T5	NoRel	true	producen	resultado
+Relation	T12	T11	NoRel	true	heridos	producen
+Relation	T12	T13	NoRel	true	heridos	Descarrila
+Relation	T12	T4	NoRel	true	heridos	salida
+Relation	T12	T5	NoRel	true	heridos	resultado
+Relation	T12	T6	NoRel	true	heridos	heridas
+Relation	T12	T7	NoRel	true	heridos	produce
+Relation	T12	T9	NoRel	true	heridos	corte
+Relation	T13	T12	NoRel	true	Descarrila	heridos
+Relation	T2	T3	NoRel	true	heridos	choca
+Relation	T2	T4	NoRel	true	heridos	salida
+Relation	T2	T7	NoRel	true	heridos	produce
+Relation	T3	T0	NoRel	true	choca	choque
+Relation	T3	T10	NoRel	true	choca	desprendidos
+Relation	T3	T13	NoRel	true	choca	Descarrila
+Relation	T3	T4	NoRel	true	choca	salida
+Relation	T3	T7	NoRel	true	choca	produce
+Relation	T3	T9	NoRel	true	choca	corte
+Relation	T4	T1	NoRel	true	salida	muertos
+Relation	T4	T10	NoRel	true	salida	desprendidos
+Relation	T4	T12	NoRel	true	salida	heridos
+Relation	T4	T2	NoRel	true	salida	heridos
+Relation	T4	T5	NoRel	true	salida	resultado
+Relation	T5	T11	NoRel	true	resultado	producen
+Relation	T5	T8	NoRel	true	resultado	choque
+Relation	T6	T4	NoRel	true	heridas	salida
+Relation	T6	T5	NoRel	true	heridas	resultado
+Relation	T6	T8	NoRel	true	heridas	choque
+Relation	T7	T0	NoRel	true	produce	choque
+Relation	T7	T13	NoRel	true	produce	Descarrila
+Relation	T7	T2	NoRel	true	produce	heridos
+Relation	T7	T5	NoRel	true	produce	resultado
+Relation	T7	T8	NoRel	true	produce	choque
+Relation	T7	T9	NoRel	true	produce	corte
+Relation	T8	T0	NoRel	true	choque	choque
+Relation	T8	T5	NoRel	true	choque	resultado
+Relation	T8	T7	NoRel	true	choque	produce
+Relation	T9	T3	NoRel	true	corte	choca
+Relation	T9	T7	NoRel	true	corte	produce

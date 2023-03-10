@@ -1,0 +1,97 @@
+Text	One conclusion determined that both the captain and the first officer were fatigued at the time of the accident , but the NTSB could not determine how much it degraded their performance .	Among those conclusions were the fact that both the captain and the first officer responded to the stall warning in a manner contrary to their training .	The NTSB could not explain why the first officer retracted the flaps and suggested that the landing gear should also be retracted , though it did find that the current approach - stall training was not adequate :	NTSB Chairman Deborah Hersman , while concurring , made it clear that she considered fatigue to be a contributing factor .	She compared the 20 years that fatigue had remained on the NTSB 's Most Wanted List of transportation safety improvements , during which no meaningful action was taken by regulators in response , to the changes in tolerance for alcohol over the same period , noting that the impact on performance from fatigue and alcohol were similar .
+Event	T0	determined	EVENT	15
+Event	T1	fatigued	EVENT	75
+Event	T2	accident	EVENT	103
+Event	T3	degraded	EVENT	159
+Event	T4	performance	EVENT	174
+Event	T5	warning	EVENT	293
+Event	T6	training	EVENT	331
+Event	T7	retracted	EVENT	391
+Event	T8	suggested	EVENT	415
+Event	T9	retracted	EVENT	462
+Event	T10	find	EVENT	488
+Event	T11	training	EVENT	527
+Event	T12	concurring	EVENT	593
+Event	T13	made	EVENT	606
+Event	T14	compared	EVENT	682
+Event	T15	fatigue	EVENT	709
+Event	T16	remained	EVENT	721
+Event	T17	improvements	EVENT	787
+Event	T18	action	EVENT	829
+Event	T19	taken	EVENT	840
+Event	T20	changes	EVENT	881
+Event	T21	noting	EVENT	937
+Event	T22	impact	EVENT	953
+Event	T23	performance	EVENT	963
+Event	T24	fatigue	EVENT	980
+Event	T25	responded	EVENT	270
+Event	T26	fatigue	EVENT	640
+Relation	T1	T2	CauseEffect	true	fatigued	accident
+Relation	T2	T1	EffectCause	true	accident	fatigued
+Relation	T1	T3	CauseEffect	true	fatigued	degraded
+Relation	T3	T1	EffectCause	true	degraded	fatigued
+Relation	T15	T18	CauseEffect	true	fatigue	action
+Relation	T18	T15	EffectCause	true	action	fatigue
+Relation	T0	T2	NoRel	true	determined	accident
+Relation	T0	T7	NoRel	true	determined	retracted
+Relation	T1	T0	NoRel	true	fatigued	determined
+Relation	T1	T16	NoRel	true	fatigued	remained
+Relation	T1	T17	NoRel	true	fatigued	improvements
+Relation	T1	T20	NoRel	true	fatigued	changes
+Relation	T1	T5	NoRel	true	fatigued	warning
+Relation	T10	T14	NoRel	true	find	compared
+Relation	T10	T4	NoRel	true	find	performance
+Relation	T10	T7	NoRel	true	find	retracted
+Relation	T11	T10	NoRel	true	training	find
+Relation	T11	T4	NoRel	true	training	performance
+Relation	T12	T0	NoRel	true	concurring	determined
+Relation	T12	T10	NoRel	true	concurring	find
+Relation	T12	T3	NoRel	true	concurring	degraded
+Relation	T13	T16	NoRel	true	made	remained
+Relation	T13	T4	NoRel	true	made	performance
+Relation	T14	T23	NoRel	true	compared	performance
+Relation	T15	T0	NoRel	true	fatigue	determined
+Relation	T15	T11	NoRel	true	fatigue	training
+Relation	T15	T3	NoRel	true	fatigue	degraded
+Relation	T16	T17	NoRel	true	remained	improvements
+Relation	T16	T22	NoRel	true	remained	impact
+Relation	T17	T13	NoRel	true	improvements	made
+Relation	T17	T15	NoRel	true	improvements	fatigue
+Relation	T17	T2	NoRel	true	improvements	accident
+Relation	T17	T25	NoRel	true	improvements	responded
+Relation	T17	T9	NoRel	true	improvements	retracted
+Relation	T2	T12	NoRel	true	accident	concurring
+Relation	T2	T16	NoRel	true	accident	remained
+Relation	T2	T21	NoRel	true	accident	noting
+Relation	T2	T23	NoRel	true	accident	performance
+Relation	T2	T3	NoRel	true	accident	degraded
+Relation	T20	T12	NoRel	true	changes	concurring
+Relation	T21	T22	NoRel	true	noting	impact
+Relation	T22	T0	NoRel	true	impact	determined
+Relation	T22	T19	NoRel	true	impact	taken
+Relation	T22	T9	NoRel	true	impact	retracted
+Relation	T23	T15	NoRel	true	performance	fatigue
+Relation	T24	T2	NoRel	true	fatigue	accident
+Relation	T25	T14	NoRel	true	responded	compared
+Relation	T25	T2	NoRel	true	responded	accident
+Relation	T25	T24	NoRel	true	responded	fatigue
+Relation	T25	T9	NoRel	true	responded	retracted
+Relation	T26	T10	NoRel	true	fatigue	find
+Relation	T26	T17	NoRel	true	fatigue	improvements
+Relation	T26	T9	NoRel	true	fatigue	retracted
+Relation	T3	T15	NoRel	true	degraded	fatigue
+Relation	T3	T5	NoRel	true	degraded	warning
+Relation	T4	T1	NoRel	true	performance	fatigued
+Relation	T4	T12	NoRel	true	performance	concurring
+Relation	T4	T24	NoRel	true	performance	fatigue
+Relation	T4	T8	NoRel	true	performance	suggested
+Relation	T5	T10	NoRel	true	warning	find
+Relation	T5	T15	NoRel	true	warning	fatigue
+Relation	T5	T16	NoRel	true	warning	remained
+Relation	T6	T23	NoRel	true	training	performance
+Relation	T7	T26	NoRel	true	retracted	fatigue
+Relation	T8	T2	NoRel	true	suggested	accident
+Relation	T8	T21	NoRel	true	suggested	noting
+Relation	T8	T9	NoRel	true	suggested	retracted
+Relation	T9	T2	NoRel	true	retracted	accident
+Relation	T9	T6	NoRel	true	retracted	training

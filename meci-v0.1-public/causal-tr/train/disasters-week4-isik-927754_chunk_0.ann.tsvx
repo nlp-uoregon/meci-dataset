@@ -1,0 +1,52 @@
+Text	1989 LOMA PRIETA DEPREMI ya da bilinen diğer adıyla 89 SARSINTISI , 17 Ekim 1989'da Amerika Birleşik Devletleri'nin Kaliforniya Eyaleti San Francisco Körfez Bölgesi'ni yerel saate göre 17: 04'te vuran depremdir .	Depremin sebebi San Andreas Fay Hattı'dır .	Deprem 15 saniye sürerken Moment magnitüd ölçeği'ne göre şiddeti 6,9 olmuştur .	Deprem nedeniyle 63 kişi hayatını kaybetmiş ve 3.757 kişi yaralanmıştır .	Deprem sonucunda yaklaşık 12.000 insan evsiz kalmıştır .
+Event	T0	DEPREMI	EVENT	17
+Event	T1	depremdir	EVENT	201
+Event	T2	Deprem	EVENT	257
+Event	T3	Deprem	EVENT	337
+Event	T4	kaybetmiş	EVENT	371
+Event	T5	yaralanmıştır	EVENT	395
+Event	T6	Deprem	EVENT	411
+Event	T7	kalmıştır	EVENT	456
+Event	T8	SARSINTISI	EVENT	55
+Event	T9	Hattı'dır	EVENT	245
+Relation	T9	T0	CauseEffect	true	Hattı'dır	DEPREMI
+Relation	T0	T9	EffectCause	true	DEPREMI	Hattı'dır
+Relation	T9	T8	CauseEffect	true	Hattı'dır	SARSINTISI
+Relation	T8	T9	EffectCause	true	SARSINTISI	Hattı'dır
+Relation	T0	T4	CauseEffect	true	DEPREMI	kaybetmiş
+Relation	T4	T0	EffectCause	true	kaybetmiş	DEPREMI
+Relation	T0	T5	CauseEffect	true	DEPREMI	yaralanmıştır
+Relation	T5	T0	EffectCause	true	yaralanmıştır	DEPREMI
+Relation	T8	T4	CauseEffect	true	SARSINTISI	kaybetmiş
+Relation	T4	T8	EffectCause	true	kaybetmiş	SARSINTISI
+Relation	T8	T5	CauseEffect	true	SARSINTISI	yaralanmıştır
+Relation	T5	T8	EffectCause	true	yaralanmıştır	SARSINTISI
+Relation	T0	T7	CauseEffect	true	DEPREMI	kalmıştır
+Relation	T7	T0	EffectCause	true	kalmıştır	DEPREMI
+Relation	T8	T7	CauseEffect	true	SARSINTISI	kalmıştır
+Relation	T7	T8	EffectCause	true	kalmıştır	SARSINTISI
+Relation	T0	T3	NoRel	true	DEPREMI	Deprem
+Relation	T0	T8	NoRel	true	DEPREMI	SARSINTISI
+Relation	T1	T4	NoRel	true	depremdir	kaybetmiş
+Relation	T2	T1	NoRel	true	Deprem	depremdir
+Relation	T2	T3	NoRel	true	Deprem	Deprem
+Relation	T3	T2	NoRel	true	Deprem	Deprem
+Relation	T3	T7	NoRel	true	Deprem	kalmıştır
+Relation	T3	T8	NoRel	true	Deprem	SARSINTISI
+Relation	T4	T6	NoRel	true	kaybetmiş	Deprem
+Relation	T4	T7	NoRel	true	kaybetmiş	kalmıştır
+Relation	T5	T1	NoRel	true	yaralanmıştır	depremdir
+Relation	T5	T3	NoRel	true	yaralanmıştır	Deprem
+Relation	T5	T6	NoRel	true	yaralanmıştır	Deprem
+Relation	T5	T7	NoRel	true	yaralanmıştır	kalmıştır
+Relation	T5	T9	NoRel	true	yaralanmıştır	Hattı'dır
+Relation	T6	T0	NoRel	true	Deprem	DEPREMI
+Relation	T6	T1	NoRel	true	Deprem	depremdir
+Relation	T6	T5	NoRel	true	Deprem	yaralanmıştır
+Relation	T7	T1	NoRel	true	kalmıştır	depremdir
+Relation	T7	T9	NoRel	true	kalmıştır	Hattı'dır
+Relation	T8	T1	NoRel	true	SARSINTISI	depremdir
+Relation	T8	T2	NoRel	true	SARSINTISI	Deprem
+Relation	T9	T4	NoRel	true	Hattı'dır	kaybetmiş
+Relation	T9	T5	NoRel	true	Hattı'dır	yaralanmıştır
+Relation	T9	T6	NoRel	true	Hattı'dır	Deprem

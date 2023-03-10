@@ -1,0 +1,56 @@
+Text	Kritikere af konspirationsteorien indvender at det at holde præsidenten i allerede sikrede omgivelser var lige præcis det mest sikre under omstændighederne , og at han ville " projicere styrke og ro " og ikke bidrage til panikken ved at flygte fra rummet over hals og hovedet .	Efterfølgende terrorangrebne cirkulerede der nogle rygter ifølge hvilke der skulle havde været en del finansielle uregelmæssigheder på de internationale aktiemarkeder i tiden op til angrebne .	Nogle bemærkelsesværdige store handler bl.a. med luftfartsaktier der efter angrebet , da kursen på disse aktier faldt dramatisk , resulterede i særdeles profitable forretninger , og det angiveligt skulle være bevis for at disse havde haft forhåndskendskab til angrebne .	Den 6. september 2001 viste Bloombergs statistiske materiale at der blev handlet put optioner i United Airliness holdingselskab i et antal 100 gange det normale ; 2.000 imod 27 den foregående dag .	Den 6. og 7. september håndterede børsen i Chicago 4.744 put_optioner ( 474.000 aktier ) , mod kun 396 call_optioner ( 39.600 aktier ) .
+Event	T0	indvender	EVENT	34
+Event	T1	panikken	EVENT	221
+Event	T2	flygte	EVENT	237
+Event	T3	cirkulerede	EVENT	307
+Event	T4	angrebne	EVENT	460
+Event	T5	handler	EVENT	502
+Event	T6	angrebet	EVENT	546
+Event	T7	resulterede	EVENT	601
+Event	T8	angrebne	EVENT	731
+Event	T9	viste	EVENT	764
+Event	T10	materiale	EVENT	793
+Event	T11	håndterede	EVENT	963
+Relation	T5	T4	CauseEffect	true	handler	angrebne
+Relation	T4	T5	EffectCause	true	angrebne	handler
+Relation	T8	T7	CauseEffect	true	angrebne	resulterede
+Relation	T7	T8	EffectCause	true	resulterede	angrebne
+Relation	T9	T5	CauseEffect	true	viste	handler
+Relation	T5	T9	EffectCause	true	handler	viste
+Relation	T0	T7	NoRel	true	indvender	resulterede
+Relation	T1	T0	NoRel	true	panikken	indvender
+Relation	T1	T11	NoRel	true	panikken	håndterede
+Relation	T1	T4	NoRel	true	panikken	angrebne
+Relation	T1	T5	NoRel	true	panikken	handler
+Relation	T10	T1	NoRel	true	materiale	panikken
+Relation	T10	T11	NoRel	true	materiale	håndterede
+Relation	T10	T4	NoRel	true	materiale	angrebne
+Relation	T10	T9	NoRel	true	materiale	viste
+Relation	T11	T0	NoRel	true	håndterede	indvender
+Relation	T11	T10	NoRel	true	håndterede	materiale
+Relation	T11	T3	NoRel	true	håndterede	cirkulerede
+Relation	T11	T7	NoRel	true	håndterede	resulterede
+Relation	T2	T11	NoRel	true	flygte	håndterede
+Relation	T2	T3	NoRel	true	flygte	cirkulerede
+Relation	T2	T6	NoRel	true	flygte	angrebet
+Relation	T2	T8	NoRel	true	flygte	angrebne
+Relation	T2	T9	NoRel	true	flygte	viste
+Relation	T3	T1	NoRel	true	cirkulerede	panikken
+Relation	T3	T10	NoRel	true	cirkulerede	materiale
+Relation	T3	T5	NoRel	true	cirkulerede	handler
+Relation	T4	T8	NoRel	true	angrebne	angrebne
+Relation	T5	T0	NoRel	true	handler	indvender
+Relation	T5	T11	NoRel	true	handler	håndterede
+Relation	T6	T1	NoRel	true	angrebet	panikken
+Relation	T6	T4	NoRel	true	angrebet	angrebne
+Relation	T7	T1	NoRel	true	resulterede	panikken
+Relation	T7	T3	NoRel	true	resulterede	cirkulerede
+Relation	T7	T5	NoRel	true	resulterede	handler
+Relation	T7	T9	NoRel	true	resulterede	viste
+Relation	T8	T0	NoRel	true	angrebne	indvender
+Relation	T8	T11	NoRel	true	angrebne	håndterede
+Relation	T8	T4	NoRel	true	angrebne	angrebne
+Relation	T8	T5	NoRel	true	angrebne	handler
+Relation	T9	T0	NoRel	true	viste	indvender
+Relation	T9	T3	NoRel	true	viste	cirkulerede
+Relation	T9	T4	NoRel	true	viste	angrebne

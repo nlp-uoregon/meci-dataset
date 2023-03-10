@@ -1,0 +1,60 @@
+Text	El coche de primera clase estuvo al borde del puente antes de que su acoplamiento con el resto del tren se rompiera y cayó al río .	Los restantes tres vagones de primera clase , el furgón de equipajes , y una furgoneta de correos permanecieron en las vías .	El número de muertos de 151 consistía en 148 pasajeros de segunda clase , un pasajero de primera clase , el conductor de la locomotora y un bombero .	Veinte de los cuerpos nunca fueron encontrados y se presume fueron llevados 120 kilómetros río abajo hasta el océano .	Entre los muertos se encontraba Nerissa Love , la novia del jugador de cricket Bob Blair , que estaba jugando en un partido de prueba en Sudáfrica en el momento .
+Event	T0	estuvo	EVENT	26
+Event	T1	rompiera	EVENT	107
+Event	T2	cayó	EVENT	118
+Event	T3	permanecieron	EVENT	230
+Event	T4	muertos	EVENT	271
+Event	T5	encontrados	EVENT	443
+Event	T6	llevados	EVENT	475
+Event	T7	muertos	EVENT	537
+Event	T8	jugando	EVENT	629
+Event	T9	partido	EVENT	643
+Event	T10	prueba	EVENT	654
+Relation	T1	T2	CauseEffect	true	rompiera	cayó
+Relation	T2	T1	EffectCause	true	cayó	rompiera
+Relation	T2	T4	CauseEffect	true	cayó	muertos
+Relation	T4	T2	EffectCause	true	muertos	cayó
+Relation	T0	T2	NoRel	true	estuvo	cayó
+Relation	T0	T6	NoRel	true	estuvo	llevados
+Relation	T0	T7	NoRel	true	estuvo	muertos
+Relation	T0	T8	NoRel	true	estuvo	jugando
+Relation	T1	T0	NoRel	true	rompiera	estuvo
+Relation	T1	T5	NoRel	true	rompiera	encontrados
+Relation	T1	T8	NoRel	true	rompiera	jugando
+Relation	T10	T1	NoRel	true	prueba	rompiera
+Relation	T10	T3	NoRel	true	prueba	permanecieron
+Relation	T10	T6	NoRel	true	prueba	llevados
+Relation	T10	T7	NoRel	true	prueba	muertos
+Relation	T10	T9	NoRel	true	prueba	partido
+Relation	T2	T0	NoRel	true	cayó	estuvo
+Relation	T2	T10	NoRel	true	cayó	prueba
+Relation	T2	T3	NoRel	true	cayó	permanecieron
+Relation	T2	T5	NoRel	true	cayó	encontrados
+Relation	T2	T8	NoRel	true	cayó	jugando
+Relation	T3	T10	NoRel	true	permanecieron	prueba
+Relation	T3	T5	NoRel	true	permanecieron	encontrados
+Relation	T4	T10	NoRel	true	muertos	prueba
+Relation	T4	T8	NoRel	true	muertos	jugando
+Relation	T4	T9	NoRel	true	muertos	partido
+Relation	T5	T0	NoRel	true	encontrados	estuvo
+Relation	T5	T2	NoRel	true	encontrados	cayó
+Relation	T5	T3	NoRel	true	encontrados	permanecieron
+Relation	T5	T4	NoRel	true	encontrados	muertos
+Relation	T5	T8	NoRel	true	encontrados	jugando
+Relation	T6	T1	NoRel	true	llevados	rompiera
+Relation	T6	T2	NoRel	true	llevados	cayó
+Relation	T6	T3	NoRel	true	llevados	permanecieron
+Relation	T7	T2	NoRel	true	muertos	cayó
+Relation	T7	T3	NoRel	true	muertos	permanecieron
+Relation	T7	T4	NoRel	true	muertos	muertos
+Relation	T7	T5	NoRel	true	muertos	encontrados
+Relation	T7	T9	NoRel	true	muertos	partido
+Relation	T8	T1	NoRel	true	jugando	rompiera
+Relation	T8	T2	NoRel	true	jugando	cayó
+Relation	T8	T3	NoRel	true	jugando	permanecieron
+Relation	T8	T6	NoRel	true	jugando	llevados
+Relation	T8	T7	NoRel	true	jugando	muertos
+Relation	T9	T1	NoRel	true	partido	rompiera
+Relation	T9	T3	NoRel	true	partido	permanecieron
+Relation	T9	T5	NoRel	true	partido	encontrados
+Relation	T9	T8	NoRel	true	partido	jugando

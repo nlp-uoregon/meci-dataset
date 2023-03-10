@@ -1,0 +1,71 @@
+Text	Uçağın tespit edilmesinden 11 dakika sonra ilk Sovyet savaş uçağı önleme amacıyla havalandı ; bu uçak havalanacak üç Sovyet uçağından ilkiydi .	Uçak tespit edildikten 24 dakika sonra doğuya döndü ve Sovyet hava sahasına girdi .	Uçağın Sovyet hava sahasına girmesinin ardından Sovyet kontrolörler iki MiG- 17 avcı uçağını daha hemen C- 130'a yönlendirdi .	Yönlendirmeden 8 dakika sonra C - 130 , Erivan'ın 55 kilometre kuzeybatısında , irtifada seyrederken Sovyet MiG- 17'ler tarafından düşürüldü .	küçükresim | Düşürülen uçağın enkazı Uçağın istihbarat görevi gerçekleştirdiğini itiraf etmek istemeyen Amerika Birleşik Devletleri , 6 Eylül'e dek Sovyetler Birliği ile görüşmedi .
+Event	T0	tespit	EVENT	7
+Event	T1	havalandı	EVENT	82
+Event	T2	döndü	EVENT	190
+Event	T3	girdi	EVENT	220
+Event	T4	girmesinin	EVENT	256
+Event	T5	yönlendirdi	EVENT	341
+Event	T6	Yönlendirmeden	EVENT	355
+Event	T7	seyrederken	EVENT	444
+Event	T8	düşürüldü	EVENT	486
+Event	T9	Düşürülen	EVENT	511
+Event	T10	itiraf	EVENT	579
+Event	T11	görüşmedi	EVENT	668
+Event	T12	enkazı	EVENT	528
+Relation	T0	T1	CauseEffect	true	tespit	havalandı
+Relation	T1	T0	EffectCause	true	havalandı	tespit
+Relation	T2	T3	CauseEffect	true	döndü	girdi
+Relation	T3	T2	EffectCause	true	girdi	döndü
+Relation	T3	T5	CauseEffect	true	girdi	yönlendirdi
+Relation	T5	T3	EffectCause	true	yönlendirdi	girdi
+Relation	T4	T5	CauseEffect	true	girmesinin	yönlendirdi
+Relation	T5	T4	EffectCause	true	yönlendirdi	girmesinin
+Relation	T3	T8	CauseEffect	true	girdi	düşürüldü
+Relation	T8	T3	EffectCause	true	düşürüldü	girdi
+Relation	T5	T8	CauseEffect	true	yönlendirdi	düşürüldü
+Relation	T8	T5	EffectCause	true	düşürüldü	yönlendirdi
+Relation	T9	T12	CauseEffect	true	Düşürülen	enkazı
+Relation	T12	T9	EffectCause	true	enkazı	Düşürülen
+Relation	T0	T10	NoRel	true	tespit	itiraf
+Relation	T0	T3	NoRel	true	tespit	girdi
+Relation	T0	T6	NoRel	true	tespit	Yönlendirmeden
+Relation	T1	T5	NoRel	true	havalandı	yönlendirdi
+Relation	T1	T8	NoRel	true	havalandı	düşürüldü
+Relation	T1	T9	NoRel	true	havalandı	Düşürülen
+Relation	T10	T0	NoRel	true	itiraf	tespit
+Relation	T10	T5	NoRel	true	itiraf	yönlendirdi
+Relation	T10	T7	NoRel	true	itiraf	seyrederken
+Relation	T10	T8	NoRel	true	itiraf	düşürüldü
+Relation	T11	T2	NoRel	true	görüşmedi	döndü
+Relation	T12	T3	NoRel	true	enkazı	girdi
+Relation	T12	T6	NoRel	true	enkazı	Yönlendirmeden
+Relation	T2	T0	NoRel	true	döndü	tespit
+Relation	T2	T1	NoRel	true	döndü	havalandı
+Relation	T2	T11	NoRel	true	döndü	görüşmedi
+Relation	T2	T12	NoRel	true	döndü	enkazı
+Relation	T2	T9	NoRel	true	döndü	Düşürülen
+Relation	T3	T10	NoRel	true	girdi	itiraf
+Relation	T3	T6	NoRel	true	girdi	Yönlendirmeden
+Relation	T3	T9	NoRel	true	girdi	Düşürülen
+Relation	T4	T11	NoRel	true	girmesinin	görüşmedi
+Relation	T4	T12	NoRel	true	girmesinin	enkazı
+Relation	T4	T2	NoRel	true	girmesinin	döndü
+Relation	T4	T6	NoRel	true	girmesinin	Yönlendirmeden
+Relation	T4	T8	NoRel	true	girmesinin	düşürüldü
+Relation	T5	T11	NoRel	true	yönlendirdi	görüşmedi
+Relation	T5	T6	NoRel	true	yönlendirdi	Yönlendirmeden
+Relation	T6	T7	NoRel	true	Yönlendirmeden	seyrederken
+Relation	T6	T9	NoRel	true	Yönlendirmeden	Düşürülen
+Relation	T7	T0	NoRel	true	seyrederken	tespit
+Relation	T7	T1	NoRel	true	seyrederken	havalandı
+Relation	T7	T2	NoRel	true	seyrederken	döndü
+Relation	T7	T8	NoRel	true	seyrederken	düşürüldü
+Relation	T8	T0	NoRel	true	düşürüldü	tespit
+Relation	T8	T1	NoRel	true	düşürüldü	havalandı
+Relation	T8	T4	NoRel	true	düşürüldü	girmesinin
+Relation	T9	T0	NoRel	true	Düşürülen	tespit
+Relation	T9	T11	NoRel	true	Düşürülen	görüşmedi
+Relation	T9	T2	NoRel	true	Düşürülen	döndü
+Relation	T9	T3	NoRel	true	Düşürülen	girdi
+Relation	T9	T5	NoRel	true	Düşürülen	yönlendirdi
+Relation	T9	T6	NoRel	true	Düşürülen	Yönlendirmeden

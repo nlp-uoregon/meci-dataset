@@ -1,0 +1,72 @@
+Text	دسمبر 2019ء میں چینی صوبہ ہوبئی کے شہر ووہان میں وبا کا ظہور ہوا اور اس برق رفتاری سے پھیلا کہ چند ہی مہینوں کے بعد 11 مارچ 2020ء کو عالمی ادارہ صحت ( WHO ) نے اسے عالمی وبا قرار دے دیا ۔	27 مارچ تک 190 ملکوں کے مختلف خطوں میں اس وبا کے 5 لاکھ انچاس ہزار سے زائد متاثرین کی اطلاع آچکی ہے جن میں سے 24 ہزار ایک سو افراد اس مرض سے جانبر نہ ہو سکے اور لقمہ اجل بن گئے ، جبکہ 1 لاکھ اٹھائیس ہزار متاثرین کے صحت یاب ہونے کی اطلاع ہے ۔	کووڈ -19 کا یہ وائرس خصوصاً کھانسی یا چھینک کے دوران میں ایک شخص سے دوسرے شخص میں منتقل ہوتا ہے ۔	عموماً کسی شخص کو یہ وائرس اس وقت لاحق ہوتا ہے جب وہ کسی متاثرہ شخص کے انتہائی قریب رہے لیکن اگر مریض کسی چیز کو چھوتا ہے اور بعد ازاں کسی شخص نے اسے چھو کر اپنے چہرے کو ہاتھ لگا لیا تو یہ وائرس اس کے اندر بھی منتقل ہو جائے گا ۔	اس بیماری کے پھیلنے کا خطرہ اس وقت اور بھی بڑھ جاتا ہے جب کسی شخص میں اس کی علامتیں ظاہر ہو جائیں ۔
+Event	T0	ہوا	EVENT	61
+Event	T1	پھیلا	EVENT	86
+Event	T2	دیا	EVENT	182
+Event	T3	آچکی	EVENT	280
+Event	T4	مرض	EVENT	322
+Event	T5	اطلاع	EVENT	419
+Event	T6	چھینک	EVENT	468
+Event	T7	چھو	EVENT	678
+Event	T8	منتقل	EVENT	738
+Event	T9	بیماری	EVENT	760
+Event	T10	پھیلنے	EVENT	770
+Event	T11	خطرہ	EVENT	780
+Event	T12	بڑھ	EVENT	800
+Event	T13	ظاہر	EVENT	841
+Relation	T1	T2	CauseEffect	true	پھیلا	دیا
+Relation	T2	T1	EffectCause	true	دیا	پھیلا
+Relation	T0	T11	NoRel	true	ہوا	خطرہ
+Relation	T0	T7	NoRel	true	ہوا	چھو
+Relation	T1	T11	NoRel	true	پھیلا	خطرہ
+Relation	T1	T13	NoRel	true	پھیلا	ظاہر
+Relation	T1	T6	NoRel	true	پھیلا	چھینک
+Relation	T1	T8	NoRel	true	پھیلا	منتقل
+Relation	T10	T2	NoRel	true	پھیلنے	دیا
+Relation	T10	T3	NoRel	true	پھیلنے	آچکی
+Relation	T10	T5	NoRel	true	پھیلنے	اطلاع
+Relation	T10	T6	NoRel	true	پھیلنے	چھینک
+Relation	T10	T9	NoRel	true	پھیلنے	بیماری
+Relation	T11	T2	NoRel	true	خطرہ	دیا
+Relation	T11	T7	NoRel	true	خطرہ	چھو
+Relation	T12	T0	NoRel	true	بڑھ	ہوا
+Relation	T12	T13	NoRel	true	بڑھ	ظاہر
+Relation	T12	T8	NoRel	true	بڑھ	منتقل
+Relation	T12	T9	NoRel	true	بڑھ	بیماری
+Relation	T13	T0	NoRel	true	ظاہر	ہوا
+Relation	T13	T10	NoRel	true	ظاہر	پھیلنے
+Relation	T13	T7	NoRel	true	ظاہر	چھو
+Relation	T13	T8	NoRel	true	ظاہر	منتقل
+Relation	T13	T9	NoRel	true	ظاہر	بیماری
+Relation	T2	T5	NoRel	true	دیا	اطلاع
+Relation	T2	T7	NoRel	true	دیا	چھو
+Relation	T2	T9	NoRel	true	دیا	بیماری
+Relation	T3	T1	NoRel	true	آچکی	پھیلا
+Relation	T3	T12	NoRel	true	آچکی	بڑھ
+Relation	T3	T2	NoRel	true	آچکی	دیا
+Relation	T3	T7	NoRel	true	آچکی	چھو
+Relation	T3	T8	NoRel	true	آچکی	منتقل
+Relation	T4	T0	NoRel	true	مرض	ہوا
+Relation	T4	T1	NoRel	true	مرض	پھیلا
+Relation	T4	T13	NoRel	true	مرض	ظاہر
+Relation	T4	T7	NoRel	true	مرض	چھو
+Relation	T5	T1	NoRel	true	اطلاع	پھیلا
+Relation	T5	T12	NoRel	true	اطلاع	بڑھ
+Relation	T5	T3	NoRel	true	اطلاع	آچکی
+Relation	T5	T7	NoRel	true	اطلاع	چھو
+Relation	T5	T9	NoRel	true	اطلاع	بیماری
+Relation	T6	T0	NoRel	true	چھینک	ہوا
+Relation	T6	T1	NoRel	true	چھینک	پھیلا
+Relation	T6	T11	NoRel	true	چھینک	خطرہ
+Relation	T6	T5	NoRel	true	چھینک	اطلاع
+Relation	T6	T7	NoRel	true	چھینک	چھو
+Relation	T7	T1	NoRel	true	چھو	پھیلا
+Relation	T7	T12	NoRel	true	چھو	بڑھ
+Relation	T7	T2	NoRel	true	چھو	دیا
+Relation	T8	T1	NoRel	true	منتقل	پھیلا
+Relation	T8	T4	NoRel	true	منتقل	مرض
+Relation	T9	T0	NoRel	true	بیماری	ہوا
+Relation	T9	T11	NoRel	true	بیماری	خطرہ
+Relation	T9	T13	NoRel	true	بیماری	ظاہر
+Relation	T9	T2	NoRel	true	بیماری	دیا
+Relation	T9	T4	NoRel	true	بیماری	مرض
+Relation	T9	T5	NoRel	true	بیماری	اطلاع

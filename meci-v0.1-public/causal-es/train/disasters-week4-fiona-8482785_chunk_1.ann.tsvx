@@ -1,0 +1,161 @@
+Text	Diecinueve personas resultaron heridas ; el piloto y el copiloto sufrieron daños en el cuello y la nariz , y varias personas fueron llevadas al hospital .	La mayoría de las heridas se produjeron durante la evacuación de emergencia .	El Aeropuerto de Bancasi se mantuvo cerrado por al menos 1 día , tiempo durante el que las autoridades de transporte del aire evaluaron la capacidad del aeropuerto de continuar gestionando vuelos .	Se cree que la causa del accidente fue un error del piloto .	Según las declaraciones de los testigos , el avión comenzó el aterrizaje una vez pasada la zona inicial de touchdown de la pista , lo que supuso que quedara una parte inadecuada e insuficiente para que el avión fuera capaz de desacelerar , causando que el avión se saliera de la pista .
+Event	T0	heridas	EVENT	31
+Event	T1	daños	EVENT	75
+Event	T2	llevadas	EVENT	132
+Event	T3	heridas	EVENT	173
+Event	T4	produjeron	EVENT	184
+Event	T5	evacuación	EVENT	206
+Event	T6	cerrado	EVENT	269
+Event	T7	evaluaron	EVENT	359
+Event	T8	vuelos	EVENT	422
+Event	T9	cree	EVENT	434
+Event	T10	accidente	EVENT	456
+Event	T11	error	EVENT	473
+Event	T12	declaraciones	EVENT	502
+Event	T13	comenzó	EVENT	543
+Event	T14	aterrizaje	EVENT	554
+Event	T15	pasada	EVENT	573
+Event	T16	touchdown	EVENT	599
+Event	T17	supuso	EVENT	630
+Event	T18	desacelerar	EVENT	718
+Event	T19	causando	EVENT	732
+Event	T20	saliera	EVENT	757
+Relation	T5	T3	CauseEffect	true	evacuación	heridas
+Relation	T3	T5	EffectCause	true	heridas	evacuación
+Relation	T11	T10	CauseEffect	true	error	accidente
+Relation	T10	T11	EffectCause	true	accidente	error
+Relation	T0	T1	NoRel	true	heridas	daños
+Relation	T0	T11	NoRel	true	heridas	error
+Relation	T0	T13	NoRel	true	heridas	comenzó
+Relation	T0	T15	NoRel	true	heridas	pasada
+Relation	T0	T17	NoRel	true	heridas	supuso
+Relation	T0	T19	NoRel	true	heridas	causando
+Relation	T0	T4	NoRel	true	heridas	produjeron
+Relation	T0	T5	NoRel	true	heridas	evacuación
+Relation	T1	T0	NoRel	true	daños	heridas
+Relation	T1	T12	NoRel	true	daños	declaraciones
+Relation	T1	T15	NoRel	true	daños	pasada
+Relation	T1	T19	NoRel	true	daños	causando
+Relation	T1	T20	NoRel	true	daños	saliera
+Relation	T1	T3	NoRel	true	daños	heridas
+Relation	T1	T9	NoRel	true	daños	cree
+Relation	T10	T0	NoRel	true	accidente	heridas
+Relation	T10	T15	NoRel	true	accidente	pasada
+Relation	T10	T16	NoRel	true	accidente	touchdown
+Relation	T10	T18	NoRel	true	accidente	desacelerar
+Relation	T10	T19	NoRel	true	accidente	causando
+Relation	T10	T2	NoRel	true	accidente	llevadas
+Relation	T11	T16	NoRel	true	error	touchdown
+Relation	T11	T18	NoRel	true	error	desacelerar
+Relation	T11	T19	NoRel	true	error	causando
+Relation	T11	T20	NoRel	true	error	saliera
+Relation	T11	T8	NoRel	true	error	vuelos
+Relation	T12	T0	NoRel	true	declaraciones	heridas
+Relation	T12	T10	NoRel	true	declaraciones	accidente
+Relation	T12	T13	NoRel	true	declaraciones	comenzó
+Relation	T12	T2	NoRel	true	declaraciones	llevadas
+Relation	T12	T20	NoRel	true	declaraciones	saliera
+Relation	T12	T3	NoRel	true	declaraciones	heridas
+Relation	T12	T7	NoRel	true	declaraciones	evaluaron
+Relation	T12	T9	NoRel	true	declaraciones	cree
+Relation	T13	T12	NoRel	true	comenzó	declaraciones
+Relation	T13	T15	NoRel	true	comenzó	pasada
+Relation	T13	T16	NoRel	true	comenzó	touchdown
+Relation	T13	T5	NoRel	true	comenzó	evacuación
+Relation	T13	T8	NoRel	true	comenzó	vuelos
+Relation	T14	T13	NoRel	true	aterrizaje	comenzó
+Relation	T14	T16	NoRel	true	aterrizaje	touchdown
+Relation	T14	T18	NoRel	true	aterrizaje	desacelerar
+Relation	T14	T3	NoRel	true	aterrizaje	heridas
+Relation	T14	T4	NoRel	true	aterrizaje	produjeron
+Relation	T14	T8	NoRel	true	aterrizaje	vuelos
+Relation	T14	T9	NoRel	true	aterrizaje	cree
+Relation	T15	T16	NoRel	true	pasada	touchdown
+Relation	T15	T18	NoRel	true	pasada	desacelerar
+Relation	T15	T20	NoRel	true	pasada	saliera
+Relation	T15	T5	NoRel	true	pasada	evacuación
+Relation	T15	T6	NoRel	true	pasada	cerrado
+Relation	T15	T7	NoRel	true	pasada	evaluaron
+Relation	T15	T8	NoRel	true	pasada	vuelos
+Relation	T16	T10	NoRel	true	touchdown	accidente
+Relation	T16	T14	NoRel	true	touchdown	aterrizaje
+Relation	T16	T19	NoRel	true	touchdown	causando
+Relation	T16	T2	NoRel	true	touchdown	llevadas
+Relation	T16	T5	NoRel	true	touchdown	evacuación
+Relation	T16	T6	NoRel	true	touchdown	cerrado
+Relation	T16	T9	NoRel	true	touchdown	cree
+Relation	T17	T0	NoRel	true	supuso	heridas
+Relation	T17	T1	NoRel	true	supuso	daños
+Relation	T17	T10	NoRel	true	supuso	accidente
+Relation	T17	T13	NoRel	true	supuso	comenzó
+Relation	T17	T14	NoRel	true	supuso	aterrizaje
+Relation	T17	T2	NoRel	true	supuso	llevadas
+Relation	T17	T4	NoRel	true	supuso	produjeron
+Relation	T17	T5	NoRel	true	supuso	evacuación
+Relation	T18	T0	NoRel	true	desacelerar	heridas
+Relation	T18	T1	NoRel	true	desacelerar	daños
+Relation	T18	T10	NoRel	true	desacelerar	accidente
+Relation	T18	T11	NoRel	true	desacelerar	error
+Relation	T18	T12	NoRel	true	desacelerar	declaraciones
+Relation	T18	T16	NoRel	true	desacelerar	touchdown
+Relation	T18	T6	NoRel	true	desacelerar	cerrado
+Relation	T19	T11	NoRel	true	causando	error
+Relation	T19	T16	NoRel	true	causando	touchdown
+Relation	T19	T17	NoRel	true	causando	supuso
+Relation	T19	T20	NoRel	true	causando	saliera
+Relation	T19	T3	NoRel	true	causando	heridas
+Relation	T19	T7	NoRel	true	causando	evaluaron
+Relation	T19	T9	NoRel	true	causando	cree
+Relation	T2	T10	NoRel	true	llevadas	accidente
+Relation	T2	T12	NoRel	true	llevadas	declaraciones
+Relation	T2	T15	NoRel	true	llevadas	pasada
+Relation	T2	T17	NoRel	true	llevadas	supuso
+Relation	T2	T20	NoRel	true	llevadas	saliera
+Relation	T2	T4	NoRel	true	llevadas	produjeron
+Relation	T2	T5	NoRel	true	llevadas	evacuación
+Relation	T2	T6	NoRel	true	llevadas	cerrado
+Relation	T2	T7	NoRel	true	llevadas	evaluaron
+Relation	T20	T10	NoRel	true	saliera	accidente
+Relation	T20	T12	NoRel	true	saliera	declaraciones
+Relation	T20	T4	NoRel	true	saliera	produjeron
+Relation	T20	T7	NoRel	true	saliera	evaluaron
+Relation	T3	T0	NoRel	true	heridas	heridas
+Relation	T3	T12	NoRel	true	heridas	declaraciones
+Relation	T3	T14	NoRel	true	heridas	aterrizaje
+Relation	T3	T17	NoRel	true	heridas	supuso
+Relation	T3	T20	NoRel	true	heridas	saliera
+Relation	T3	T7	NoRel	true	heridas	evaluaron
+Relation	T4	T1	NoRel	true	produjeron	daños
+Relation	T4	T10	NoRel	true	produjeron	accidente
+Relation	T4	T14	NoRel	true	produjeron	aterrizaje
+Relation	T4	T15	NoRel	true	produjeron	pasada
+Relation	T4	T17	NoRel	true	produjeron	supuso
+Relation	T5	T1	NoRel	true	evacuación	daños
+Relation	T5	T19	NoRel	true	evacuación	causando
+Relation	T5	T6	NoRel	true	evacuación	cerrado
+Relation	T5	T8	NoRel	true	evacuación	vuelos
+Relation	T5	T9	NoRel	true	evacuación	cree
+Relation	T6	T0	NoRel	true	cerrado	heridas
+Relation	T6	T1	NoRel	true	cerrado	daños
+Relation	T6	T10	NoRel	true	cerrado	accidente
+Relation	T6	T12	NoRel	true	cerrado	declaraciones
+Relation	T6	T14	NoRel	true	cerrado	aterrizaje
+Relation	T6	T16	NoRel	true	cerrado	touchdown
+Relation	T6	T17	NoRel	true	cerrado	supuso
+Relation	T6	T2	NoRel	true	cerrado	llevadas
+Relation	T6	T4	NoRel	true	cerrado	produjeron
+Relation	T6	T8	NoRel	true	cerrado	vuelos
+Relation	T6	T9	NoRel	true	cerrado	cree
+Relation	T7	T0	NoRel	true	evaluaron	heridas
+Relation	T7	T1	NoRel	true	evaluaron	daños
+Relation	T7	T10	NoRel	true	evaluaron	accidente
+Relation	T7	T6	NoRel	true	evaluaron	cerrado
+Relation	T8	T19	NoRel	true	vuelos	causando
+Relation	T8	T3	NoRel	true	vuelos	heridas
+Relation	T8	T5	NoRel	true	vuelos	evacuación
+Relation	T9	T15	NoRel	true	cree	pasada
+Relation	T9	T16	NoRel	true	cree	touchdown
+Relation	T9	T17	NoRel	true	cree	supuso
+Relation	T9	T2	NoRel	true	cree	llevadas
+Relation	T9	T20	NoRel	true	cree	saliera
+Relation	T9	T6	NoRel	true	cree	cerrado

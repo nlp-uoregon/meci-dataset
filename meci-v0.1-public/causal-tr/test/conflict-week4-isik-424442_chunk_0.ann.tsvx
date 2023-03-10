@@ -1,0 +1,42 @@
+Text	CADE İSYANI , 1450 yılında İngiltere'de Yüz Yıl Savaşları'nın ardından çıkmış , ekonomik kökenli isyan .	Yüz Yıl Savaşları'nın İngiltere üzerindeki yıkıcı etkisinin göstergesi olarak , John Mortimer adını alan ve kendisini York dükü Richard'ın yeğenlerinden biri ilan eden Jack Cade küçük mal sahiplerinin yer aldığı iyi planlanmış bir isyanı başlattı .	Daha düşük vergi isteyen isyancılar kral VI .	Henry'nin bazı bakanları görevden alması , sürgünde olan Richard'ın geri çağrılması gibi tavizler vermesine rağmen durmadılar .	Cade'nin askerleri , 18 Haziran 1450'de Sevenoaks'da İngiliz Kraliyet Ordusunu mağlup ettiler .
+Event	T1	isyan	EVENT	97
+Event	T3	başlattı	EVENT	343
+Event	T4	alması	EVENT	434
+Event	T6	ettiler	EVENT	614
+Event	T7	CADE İSYANI	EVENT	0
+Event	T8	Yüz Yıl Savaşları'nın	EVENT	40
+Event	T9	Yüz Yıl Savaşları'nın	EVENT	105
+Event	T2	eden	EVENT	268
+Event	T10	sürgünde	EVENT	443
+Event	T11	çağrılması	EVENT	473
+Relation	T8	T7	CauseEffect	true	Yüz Yıl Savaşları'nın	CADE İSYANI
+Relation	T7	T8	EffectCause	true	CADE İSYANI	Yüz Yıl Savaşları'nın
+Relation	T8	T1	CauseEffect	true	Yüz Yıl Savaşları'nın	isyan
+Relation	T1	T8	EffectCause	true	isyan	Yüz Yıl Savaşları'nın
+Relation	T10	T11	CauseEffect	true	sürgünde	çağrılması
+Relation	T11	T10	EffectCause	true	çağrılması	sürgünde
+Relation	T1	T7	NoRel	true	isyan	CADE İSYANI
+Relation	T10	T1	NoRel	true	sürgünde	isyan
+Relation	T10	T6	NoRel	true	sürgünde	ettiler
+Relation	T10	T7	NoRel	true	sürgünde	CADE İSYANI
+Relation	T10	T8	NoRel	true	sürgünde	Yüz Yıl Savaşları'nın
+Relation	T11	T1	NoRel	true	çağrılması	isyan
+Relation	T11	T6	NoRel	true	çağrılması	ettiler
+Relation	T2	T10	NoRel	true	eden	sürgünde
+Relation	T3	T1	NoRel	true	başlattı	isyan
+Relation	T3	T11	NoRel	true	başlattı	çağrılması
+Relation	T3	T2	NoRel	true	başlattı	eden
+Relation	T3	T8	NoRel	true	başlattı	Yüz Yıl Savaşları'nın
+Relation	T3	T9	NoRel	true	başlattı	Yüz Yıl Savaşları'nın
+Relation	T4	T2	NoRel	true	alması	eden
+Relation	T6	T10	NoRel	true	ettiler	sürgünde
+Relation	T6	T2	NoRel	true	ettiler	eden
+Relation	T6	T3	NoRel	true	ettiler	başlattı
+Relation	T6	T7	NoRel	true	ettiler	CADE İSYANI
+Relation	T7	T4	NoRel	true	CADE İSYANI	alması
+Relation	T7	T6	NoRel	true	CADE İSYANI	ettiler
+Relation	T7	T9	NoRel	true	CADE İSYANI	Yüz Yıl Savaşları'nın
+Relation	T9	T2	NoRel	true	Yüz Yıl Savaşları'nın	eden
+Relation	T9	T3	NoRel	true	Yüz Yıl Savaşları'nın	başlattı
+Relation	T9	T4	NoRel	true	Yüz Yıl Savaşları'nın	alması
+Relation	T9	T8	NoRel	true	Yüz Yıl Savaşları'nın	Yüz Yıl Savaşları'nın

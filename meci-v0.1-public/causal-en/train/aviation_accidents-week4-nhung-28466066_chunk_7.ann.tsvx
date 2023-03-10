@@ -1,0 +1,60 @@
+Text	On 5 September , Anne 's brothers , Earl Mexborough and the Honorable George Savile , announced that they believed their sister had died at sea along with Captain Hamilton and Colonel Minchin .	Despite no signs of the _ Saint Raphael _ or its crew , it is presumed that Anne , Hamilton , and Minchin perished on 31 August 1927 in the North Atlantic Ocean near Labrador and Newfoundland .	Savile family friend Princess Blucher von Wahlstatt told the United Press that " [ Anne 's ] brothers did their best to dissuade her from the unnecessary adventure , but she was bent on going and refused to be dissuaded . "	At the time of her death , Anne was the second woman to disappear in an attempted transoceanic flight in nearly two weeks ; the first was Mildred Doran , who had been participating in the Dole Air Race from Oakland , California , to Hawaii .	In 1928 , the Ontario Surveyor General named a number of lakes in the northwest of the province to honour aviators who had perished during 1927 , mainly in attempting oceanic flights .
+Event	T0	announced	EVENT	86
+Event	T1	believed	EVENT	106
+Event	T2	died	EVENT	132
+Event	T3	signs	EVENT	205
+Event	T4	presumed	EVENT	256
+Event	T5	perished	EVENT	300
+Event	T6	told	EVENT	440
+Event	T7	dissuade	EVENT	508
+Event	T8	adventure	EVENT	542
+Event	T9	refused	EVENT	584
+Event	T10	dissuaded	EVENT	598
+Event	T11	death	EVENT	631
+Event	T12	disappear	EVENT	668
+Event	T13	flight	EVENT	707
+Event	T14	participating	EVENT	779
+Event	T15	Race	EVENT	809
+Event	T16	named	EVENT	893
+Event	T17	honour	EVENT	953
+Event	T18	perished	EVENT	977
+Event	T19	flights	EVENT	1029
+Relation	T13	T11	CauseEffect	true	flight	death
+Relation	T11	T13	EffectCause	true	death	flight
+Relation	T16	T17	CauseEffect	true	named	honour
+Relation	T17	T16	EffectCause	true	honour	named
+Relation	T18	T17	CauseEffect	true	perished	honour
+Relation	T17	T18	EffectCause	true	honour	perished
+Relation	T0	T6	NoRel	true	announced	told
+Relation	T1	T14	NoRel	true	believed	participating
+Relation	T1	T5	NoRel	true	believed	perished
+Relation	T10	T16	NoRel	true	dissuaded	named
+Relation	T10	T18	NoRel	true	dissuaded	perished
+Relation	T11	T14	NoRel	true	death	participating
+Relation	T12	T0	NoRel	true	disappear	announced
+Relation	T12	T10	NoRel	true	disappear	dissuaded
+Relation	T13	T12	NoRel	true	flight	disappear
+Relation	T13	T5	NoRel	true	flight	perished
+Relation	T15	T6	NoRel	true	Race	told
+Relation	T15	T8	NoRel	true	Race	adventure
+Relation	T17	T14	NoRel	true	honour	participating
+Relation	T17	T4	NoRel	true	honour	presumed
+Relation	T18	T16	NoRel	true	perished	named
+Relation	T18	T7	NoRel	true	perished	dissuade
+Relation	T19	T8	NoRel	true	flights	adventure
+Relation	T2	T15	NoRel	true	died	Race
+Relation	T2	T4	NoRel	true	died	presumed
+Relation	T2	T7	NoRel	true	died	dissuade
+Relation	T3	T14	NoRel	true	signs	participating
+Relation	T3	T9	NoRel	true	signs	refused
+Relation	T4	T11	NoRel	true	presumed	death
+Relation	T5	T0	NoRel	true	perished	announced
+Relation	T5	T10	NoRel	true	perished	dissuaded
+Relation	T5	T2	NoRel	true	perished	died
+Relation	T5	T3	NoRel	true	perished	signs
+Relation	T5	T6	NoRel	true	perished	told
+Relation	T6	T11	NoRel	true	told	death
+Relation	T6	T13	NoRel	true	told	flight
+Relation	T7	T9	NoRel	true	dissuade	refused
+Relation	T8	T15	NoRel	true	adventure	Race
+Relation	T9	T10	NoRel	true	refused	dissuaded

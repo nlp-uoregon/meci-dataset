@@ -1,0 +1,40 @@
+Text	His companions , clad in heavy flying suits and weakened by exposure , could not help him . "	McDermott , " 23 , battled side by side witht [_sic_ ] his companions , Lieut. J._H. Rothrock and Lieut. W._S. Pocock , for five hours on the ice - covered wings of the plane before he died , the sixth to lose his life in connection with preparations for the army to fly the mail .	Once , in the almost super-human struggle of the three to cut loose the craft 's motors and keep afloat , he fell into the choppy sea .	Doggedly , he swam back to where his companions could pull him aboard again .	The could [_sic_] was intense and a stiff wind whipped the waves high .
+Event	T0	clad	EVENT	17
+Event	T1	flying	EVENT	31
+Event	T2	weakened	EVENT	48
+Event	T3	exposure	EVENT	60
+Event	T4	battled	EVENT	113
+Event	T5	covered	EVENT	242
+Event	T6	died	EVENT	279
+Event	T7	lose	EVENT	299
+Event	T8	preparations	EVENT	332
+Event	T9	struggle	EVENT	409
+Event	T10	whipped	EVENT	637
+Event	T11	fly	EVENT	361
+Event	T12	cut	EVENT	434
+Event	T13	keep	EVENT	468
+Event	T14	fell into	EVENT	485
+Event	T15	swam	EVENT	526
+Event	T16	pull	EVENT	566
+Relation	T3	T2	CauseEffect	true	exposure	weakened
+Relation	T2	T3	EffectCause	true	weakened	exposure
+Relation	T8	T11	CauseEffect	true	preparations	fly
+Relation	T11	T8	EffectCause	true	fly	preparations
+Relation	T15	T16	CauseEffect	true	swam	pull
+Relation	T16	T15	EffectCause	true	pull	swam
+Relation	T0	T11	NoRel	true	clad	fly
+Relation	T1	T4	NoRel	true	flying	battled
+Relation	T10	T11	NoRel	true	whipped	fly
+Relation	T10	T4	NoRel	true	whipped	battled
+Relation	T10	T5	NoRel	true	whipped	covered
+Relation	T11	T3	NoRel	true	fly	exposure
+Relation	T12	T0	NoRel	true	cut	clad
+Relation	T14	T9	NoRel	true	fell into	struggle
+Relation	T15	T9	NoRel	true	swam	struggle
+Relation	T2	T0	NoRel	true	weakened	clad
+Relation	T4	T16	NoRel	true	battled	pull
+Relation	T5	T3	NoRel	true	covered	exposure
+Relation	T6	T1	NoRel	true	died	flying
+Relation	T6	T16	NoRel	true	died	pull
+Relation	T7	T4	NoRel	true	lose	battled
+Relation	T7	T9	NoRel	true	lose	struggle

@@ -1,0 +1,105 @@
+Text	Cuando todo había terminado , descubrieron cuarenta fallecidos en el túnel — tres de los cuales eran del equipo de rescate — y otros 260 cadáveres en el interior del tren calcinado .	La mayoría de las víctimas habían fallecido debido a intoxicación por monóxido de carbono , aunque algunos de los que se encontraban en el cuarto vagón pudieron haber sido aplastados mientras trataban de escapar .	La mayoría de los supervivientes estaban montados en el primer y segundo vagón , los más próximos a la estación de Narimanov .	La opción preliminar de un atentado quedó descartada en la investigación final .	El incendio de Bakú es el peor accidente en la historia del metro como sistema de transporte , con un saldo oficial de 289 fallecidos y 270 heridos .
+Event	T0	terminado	EVENT	18
+Event	T1	descubrieron	EVENT	30
+Event	T2	fallecidos	EVENT	52
+Event	T3	rescate	EVENT	115
+Event	T4	calcinado	EVENT	171
+Event	T5	intoxicación	EVENT	236
+Event	T6	aplastados	EVENT	355
+Event	T7	trataban	EVENT	375
+Event	T8	escapar	EVENT	387
+Event	T9	montados	EVENT	438
+Event	T10	descartada	EVENT	566
+Event	T11	incendio	EVENT	608
+Event	T12	accidente	EVENT	636
+Event	T13	saldo	EVENT	707
+Event	T14	fallecidos	EVENT	728
+Event	T15	heridos	EVENT	745
+Relation	T5	T2	CauseEffect	true	intoxicación	fallecidos
+Relation	T2	T5	EffectCause	true	fallecidos	intoxicación
+Relation	T11	T4	CauseEffect	true	incendio	calcinado
+Relation	T4	T11	EffectCause	true	calcinado	incendio
+Relation	T12	T14	CauseEffect	true	accidente	fallecidos
+Relation	T14	T12	EffectCause	true	fallecidos	accidente
+Relation	T12	T15	CauseEffect	true	accidente	heridos
+Relation	T15	T12	EffectCause	true	heridos	accidente
+Relation	T0	T1	NoRel	true	terminado	descubrieron
+Relation	T0	T2	NoRel	true	terminado	fallecidos
+Relation	T0	T3	NoRel	true	terminado	rescate
+Relation	T0	T5	NoRel	true	terminado	intoxicación
+Relation	T0	T7	NoRel	true	terminado	trataban
+Relation	T1	T0	NoRel	true	descubrieron	terminado
+Relation	T1	T10	NoRel	true	descubrieron	descartada
+Relation	T1	T11	NoRel	true	descubrieron	incendio
+Relation	T1	T13	NoRel	true	descubrieron	saldo
+Relation	T1	T15	NoRel	true	descubrieron	heridos
+Relation	T1	T3	NoRel	true	descubrieron	rescate
+Relation	T1	T9	NoRel	true	descubrieron	montados
+Relation	T10	T14	NoRel	true	descartada	fallecidos
+Relation	T10	T15	NoRel	true	descartada	heridos
+Relation	T10	T6	NoRel	true	descartada	aplastados
+Relation	T10	T9	NoRel	true	descartada	montados
+Relation	T11	T0	NoRel	true	incendio	terminado
+Relation	T11	T10	NoRel	true	incendio	descartada
+Relation	T11	T13	NoRel	true	incendio	saldo
+Relation	T11	T15	NoRel	true	incendio	heridos
+Relation	T11	T8	NoRel	true	incendio	escapar
+Relation	T11	T9	NoRel	true	incendio	montados
+Relation	T12	T1	NoRel	true	accidente	descubrieron
+Relation	T12	T2	NoRel	true	accidente	fallecidos
+Relation	T12	T3	NoRel	true	accidente	rescate
+Relation	T12	T4	NoRel	true	accidente	calcinado
+Relation	T12	T7	NoRel	true	accidente	trataban
+Relation	T13	T10	NoRel	true	saldo	descartada
+Relation	T13	T11	NoRel	true	saldo	incendio
+Relation	T13	T14	NoRel	true	saldo	fallecidos
+Relation	T13	T15	NoRel	true	saldo	heridos
+Relation	T13	T4	NoRel	true	saldo	calcinado
+Relation	T13	T6	NoRel	true	saldo	aplastados
+Relation	T13	T8	NoRel	true	saldo	escapar
+Relation	T13	T9	NoRel	true	saldo	montados
+Relation	T14	T1	NoRel	true	fallecidos	descubrieron
+Relation	T14	T13	NoRel	true	fallecidos	saldo
+Relation	T14	T2	NoRel	true	fallecidos	fallecidos
+Relation	T14	T3	NoRel	true	fallecidos	rescate
+Relation	T14	T6	NoRel	true	fallecidos	aplastados
+Relation	T14	T9	NoRel	true	fallecidos	montados
+Relation	T15	T1	NoRel	true	heridos	descubrieron
+Relation	T15	T14	NoRel	true	heridos	fallecidos
+Relation	T15	T3	NoRel	true	heridos	rescate
+Relation	T2	T11	NoRel	true	fallecidos	incendio
+Relation	T2	T12	NoRel	true	fallecidos	accidente
+Relation	T2	T14	NoRel	true	fallecidos	fallecidos
+Relation	T2	T15	NoRel	true	fallecidos	heridos
+Relation	T2	T3	NoRel	true	fallecidos	rescate
+Relation	T2	T6	NoRel	true	fallecidos	aplastados
+Relation	T3	T0	NoRel	true	rescate	terminado
+Relation	T3	T11	NoRel	true	rescate	incendio
+Relation	T3	T13	NoRel	true	rescate	saldo
+Relation	T3	T9	NoRel	true	rescate	montados
+Relation	T4	T1	NoRel	true	calcinado	descubrieron
+Relation	T4	T14	NoRel	true	calcinado	fallecidos
+Relation	T4	T2	NoRel	true	calcinado	fallecidos
+Relation	T4	T6	NoRel	true	calcinado	aplastados
+Relation	T4	T8	NoRel	true	calcinado	escapar
+Relation	T4	T9	NoRel	true	calcinado	montados
+Relation	T5	T15	NoRel	true	intoxicación	heridos
+Relation	T5	T4	NoRel	true	intoxicación	calcinado
+Relation	T5	T6	NoRel	true	intoxicación	aplastados
+Relation	T5	T7	NoRel	true	intoxicación	trataban
+Relation	T5	T8	NoRel	true	intoxicación	escapar
+Relation	T5	T9	NoRel	true	intoxicación	montados
+Relation	T6	T11	NoRel	true	aplastados	incendio
+Relation	T6	T2	NoRel	true	aplastados	fallecidos
+Relation	T6	T4	NoRel	true	aplastados	calcinado
+Relation	T6	T7	NoRel	true	aplastados	trataban
+Relation	T6	T8	NoRel	true	aplastados	escapar
+Relation	T7	T1	NoRel	true	trataban	descubrieron
+Relation	T7	T5	NoRel	true	trataban	intoxicación
+Relation	T8	T15	NoRel	true	escapar	heridos
+Relation	T8	T7	NoRel	true	escapar	trataban
+Relation	T8	T9	NoRel	true	escapar	montados
+Relation	T9	T1	NoRel	true	montados	descubrieron
+Relation	T9	T10	NoRel	true	montados	descartada
+Relation	T9	T14	NoRel	true	montados	fallecidos
+Relation	T9	T8	NoRel	true	montados	escapar

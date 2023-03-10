@@ -1,0 +1,34 @@
+Text	El vuelo se dirigía hacia el aeropuerto de Van Nuys , en los Ángeles , con escalas en Truckee , un pequeño pueblo del condado de Nevada en el estado de California y después a Thermal en el condado de Riverside del mismo estado .	Según FlightAware , se iba a demorar aproximadamente una hora con 38 minutos ( a las 13:23 ) para llegar a la primera escala , Truckee .	Conforme a los registros , la ruta del vuelo fue normal .	Sin embargo , cuando se aproximaba a Truckee de acuerdo con grabaciones de la torre de control en el sitio de internet _ LiveATC.net _ , el piloto del avión le dijo a los controladores que necesitaban dar una vuelta a la pista después de intentar aterrizar a las 13:14 .	“ Esperamos verlos pronto ” fue lo que el piloto le dijo a los controladores después de recibir instrucciones para reportar pista a la vista , la cual es una solicitud usual de una aproximación visual o VFR .
+Event	T0	vuelo	EVENT	3
+Event	T11	aterrizar	EVENT	671
+Event	T2	escalas	EVENT	75
+Event	T3	llegar	EVENT	327
+Event	T4	registros	EVENT	381
+Event	T5	vuelo	EVENT	405
+Event	T6	aproximaba	EVENT	448
+Event	T7	grabaciones	EVENT	484
+Event	T8	dijo	EVENT	584
+Relation	T0	T11	NoRel	true	vuelo	aterrizar
+Relation	T0	T4	NoRel	true	vuelo	registros
+Relation	T11	T4	NoRel	true	aterrizar	registros
+Relation	T11	T6	NoRel	true	aterrizar	aproximaba
+Relation	T2	T6	NoRel	true	escalas	aproximaba
+Relation	T2	T8	NoRel	true	escalas	dijo
+Relation	T3	T11	NoRel	true	llegar	aterrizar
+Relation	T3	T5	NoRel	true	llegar	vuelo
+Relation	T4	T0	NoRel	true	registros	vuelo
+Relation	T4	T11	NoRel	true	registros	aterrizar
+Relation	T4	T2	NoRel	true	registros	escalas
+Relation	T4	T5	NoRel	true	registros	vuelo
+Relation	T4	T6	NoRel	true	registros	aproximaba
+Relation	T5	T0	NoRel	true	vuelo	vuelo
+Relation	T5	T11	NoRel	true	vuelo	aterrizar
+Relation	T5	T2	NoRel	true	vuelo	escalas
+Relation	T5	T8	NoRel	true	vuelo	dijo
+Relation	T6	T2	NoRel	true	aproximaba	escalas
+Relation	T6	T8	NoRel	true	aproximaba	dijo
+Relation	T7	T11	NoRel	true	grabaciones	aterrizar
+Relation	T7	T4	NoRel	true	grabaciones	registros
+Relation	T8	T0	NoRel	true	dijo	vuelo
+Relation	T8	T2	NoRel	true	dijo	escalas
+Relation	T8	T7	NoRel	true	dijo	grabaciones

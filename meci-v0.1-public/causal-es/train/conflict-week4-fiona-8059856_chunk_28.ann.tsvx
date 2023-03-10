@@ -1,0 +1,64 @@
+Text	El 8 de marzo , las SDF tomaron el control de la colina Menxer en el campo oriental , mientras elementos de 11.º Unidad Expedicionaria de Marines fue desplegada al norte de Siria , junto con una batería de artillería M777 Howitzers para apoyar el ataque en Raqa .	Entretanto , aproximadamente 150 militantes de Daesh de Hama y Deir ez-Zor fueron movilizados para reforzar Raqa , a pesar del asedio parcial que había sido impuesto a la ciudad .	El 9 de marzo , las SDF capturaron la colina de Menxer , junto con tres villas en los dos frentes cerca de Raqa .	244 insurgentes árabes del campo de Raqa se unieron a las SDF .	Al siguiente día , las SDF avanzaron desde Abu Khashab , capturando tres villas .
+Event	T0	control	EVENT	35
+Event	T1	desplegada	EVENT	150
+Event	T2	apoyar	EVENT	237
+Event	T3	ataque	EVENT	247
+Event	T4	movilizados	EVENT	346
+Event	T5	reforzar	EVENT	363
+Event	T6	parcial	EVENT	398
+Event	T7	impuesto	EVENT	421
+Event	T8	capturaron	EVENT	468
+Event	T9	unieron	EVENT	602
+Event	T10	avanzaron	EVENT	649
+Event	T11	capturando	EVENT	679
+Relation	T4	T5	CauseEffect	true	movilizados	reforzar
+Relation	T5	T4	EffectCause	true	reforzar	movilizados
+Relation	T0	T1	NoRel	true	control	desplegada
+Relation	T0	T11	NoRel	true	control	capturando
+Relation	T0	T2	NoRel	true	control	apoyar
+Relation	T0	T3	NoRel	true	control	ataque
+Relation	T0	T4	NoRel	true	control	movilizados
+Relation	T0	T6	NoRel	true	control	parcial
+Relation	T0	T7	NoRel	true	control	impuesto
+Relation	T1	T2	NoRel	true	desplegada	apoyar
+Relation	T1	T4	NoRel	true	desplegada	movilizados
+Relation	T1	T8	NoRel	true	desplegada	capturaron
+Relation	T1	T9	NoRel	true	desplegada	unieron
+Relation	T10	T0	NoRel	true	avanzaron	control
+Relation	T10	T2	NoRel	true	avanzaron	apoyar
+Relation	T10	T4	NoRel	true	avanzaron	movilizados
+Relation	T10	T5	NoRel	true	avanzaron	reforzar
+Relation	T11	T4	NoRel	true	capturando	movilizados
+Relation	T11	T6	NoRel	true	capturando	parcial
+Relation	T11	T7	NoRel	true	capturando	impuesto
+Relation	T2	T1	NoRel	true	apoyar	desplegada
+Relation	T2	T10	NoRel	true	apoyar	avanzaron
+Relation	T2	T5	NoRel	true	apoyar	reforzar
+Relation	T2	T8	NoRel	true	apoyar	capturaron
+Relation	T3	T0	NoRel	true	ataque	control
+Relation	T3	T1	NoRel	true	ataque	desplegada
+Relation	T3	T10	NoRel	true	ataque	avanzaron
+Relation	T3	T8	NoRel	true	ataque	capturaron
+Relation	T4	T0	NoRel	true	movilizados	control
+Relation	T4	T1	NoRel	true	movilizados	desplegada
+Relation	T4	T11	NoRel	true	movilizados	capturando
+Relation	T4	T6	NoRel	true	movilizados	parcial
+Relation	T4	T9	NoRel	true	movilizados	unieron
+Relation	T5	T10	NoRel	true	reforzar	avanzaron
+Relation	T5	T11	NoRel	true	reforzar	capturando
+Relation	T5	T2	NoRel	true	reforzar	apoyar
+Relation	T5	T8	NoRel	true	reforzar	capturaron
+Relation	T6	T0	NoRel	true	parcial	control
+Relation	T6	T10	NoRel	true	parcial	avanzaron
+Relation	T6	T3	NoRel	true	parcial	ataque
+Relation	T6	T5	NoRel	true	parcial	reforzar
+Relation	T6	T8	NoRel	true	parcial	capturaron
+Relation	T6	T9	NoRel	true	parcial	unieron
+Relation	T7	T0	NoRel	true	impuesto	control
+Relation	T7	T1	NoRel	true	impuesto	desplegada
+Relation	T7	T9	NoRel	true	impuesto	unieron
+Relation	T8	T0	NoRel	true	capturaron	control
+Relation	T8	T11	NoRel	true	capturaron	capturando
+Relation	T9	T1	NoRel	true	unieron	desplegada
+Relation	T9	T10	NoRel	true	unieron	avanzaron
+Relation	T9	T2	NoRel	true	unieron	apoyar

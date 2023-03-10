@@ -1,0 +1,85 @@
+Text	The recruit fell ill on September 1 and died of pneumonia on September 10 .	Dell Children 's Medical Center in Austin , Texas , erected two tents in its parking lot to handle emergency room visits , and hospitals around Colorado Springs recorded a 30 percent spike in flu visits .	As pediatric cases were increasing , the Dept. of Health and Human Services released 300,000 courses of children 's liquid Tamiflu from the national pandemic stockpile in late September , with the first batches sent to Texas and Colorado .	In late September , the disease centers reported that 936 had died of flu symptoms or of flu - associated pneumonia since August 30 , when it began a new count of deaths , including some without laboratory - confirmed swine flu .	The Agriculture Department reported on October 16 that three pigs at the Minnesota State Fair , in St. Paul , were tested positive in late August for H1N1 virus , which were the first cases in the country , although infected pigs had been found in eight other countries .
+Event	T0	ill	EVENT	17
+Event	T1	died	EVENT	40
+Event	T10	released	EVENT	357
+Event	T12	sent	EVENT	492
+Event	T13	reported	EVENT	561
+Event	T14	died	EVENT	583
+Event	T15	pneumonia	EVENT	627
+Event	T16	began	EVENT	663
+Event	T17	count	EVENT	675
+Event	T18	deaths	EVENT	684
+Event	T19	flu	EVENT	745
+Event	T2	pneumonia	EVENT	48
+Event	T20	reported	EVENT	778
+Event	T21	cases	EVENT	935
+Event	T22	infected	EVENT	967
+Event	T23	found	EVENT	990
+Event	T24	handle	EVENT	168
+Event	T3	erected	EVENT	128
+Event	T4	flu visits	EVENT	268
+Event	T5	recorded	EVENT	237
+Event	T6	spike	EVENT	259
+Event	T8	cases	EVENT	294
+Event	T9	increasing	EVENT	305
+Relation	T24	T3	CauseEffect	true	handle	erected
+Relation	T3	T24	EffectCause	true	erected	handle
+Relation	T4	T5	CauseEffect	true	flu visits	recorded
+Relation	T5	T4	EffectCause	true	recorded	flu visits
+Relation	T9	T10	CauseEffect	true	increasing	released
+Relation	T10	T9	EffectCause	true	released	increasing
+Relation	T14	T13	CauseEffect	true	died	reported
+Relation	T13	T14	EffectCause	true	reported	died
+Relation	T16	T18	CauseEffect	true	began	deaths
+Relation	T18	T16	EffectCause	true	deaths	began
+Relation	T19	T18	CauseEffect	true	flu	deaths
+Relation	T18	T19	EffectCause	true	deaths	flu
+Relation	T22	T23	CauseEffect	true	infected	found
+Relation	T23	T22	EffectCause	true	found	infected
+Relation	T10	T12	CauseEffect	true	released	sent
+Relation	T12	T10	EffectCause	true	sent	released
+Relation	T21	T20	CauseEffect	true	cases	reported
+Relation	T20	T21	EffectCause	true	reported	cases
+Relation	T0	T3	NoRel	true	ill	erected
+Relation	T1	T13	NoRel	true	died	reported
+Relation	T10	T2	NoRel	true	released	pneumonia
+Relation	T10	T8	NoRel	true	released	cases
+Relation	T12	T23	NoRel	true	sent	found
+Relation	T13	T0	NoRel	true	reported	ill
+Relation	T13	T24	NoRel	true	reported	handle
+Relation	T15	T1	NoRel	true	pneumonia	died
+Relation	T15	T14	NoRel	true	pneumonia	died
+Relation	T15	T16	NoRel	true	pneumonia	began
+Relation	T16	T24	NoRel	true	began	handle
+Relation	T16	T3	NoRel	true	began	erected
+Relation	T16	T8	NoRel	true	began	cases
+Relation	T17	T1	NoRel	true	count	died
+Relation	T18	T15	NoRel	true	deaths	pneumonia
+Relation	T18	T6	NoRel	true	deaths	spike
+Relation	T19	T22	NoRel	true	flu	infected
+Relation	T19	T23	NoRel	true	flu	found
+Relation	T2	T1	NoRel	true	pneumonia	died
+Relation	T2	T17	NoRel	true	pneumonia	count
+Relation	T2	T24	NoRel	true	pneumonia	handle
+Relation	T2	T4	NoRel	true	pneumonia	flu visits
+Relation	T20	T10	NoRel	true	reported	released
+Relation	T21	T12	NoRel	true	cases	sent
+Relation	T21	T24	NoRel	true	cases	handle
+Relation	T22	T10	NoRel	true	infected	released
+Relation	T22	T9	NoRel	true	infected	increasing
+Relation	T23	T1	NoRel	true	found	died
+Relation	T23	T24	NoRel	true	found	handle
+Relation	T24	T16	NoRel	true	handle	began
+Relation	T3	T13	NoRel	true	erected	reported
+Relation	T3	T6	NoRel	true	erected	spike
+Relation	T4	T14	NoRel	true	flu visits	died
+Relation	T4	T17	NoRel	true	flu visits	count
+Relation	T4	T3	NoRel	true	flu visits	erected
+Relation	T5	T13	NoRel	true	recorded	reported
+Relation	T5	T2	NoRel	true	recorded	pneumonia
+Relation	T5	T22	NoRel	true	recorded	infected
+Relation	T6	T10	NoRel	true	spike	released
+Relation	T6	T18	NoRel	true	spike	deaths
+Relation	T6	T19	NoRel	true	spike	flu
+Relation	T8	T19	NoRel	true	cases	flu
+Relation	T8	T21	NoRel	true	cases	cases

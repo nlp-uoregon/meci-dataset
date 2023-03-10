@@ -1,0 +1,57 @@
+Text	Osmanlı Devleti’nin Güney Kafkasya’yı elinde tutmak ve Hazar Denizi'ni sınır tutmak için Batı İran’ı feda etmesine rağmen antlaşma pek uzun sürmedi .	Bir yıl sonra Nadir Han’ın Erbil’e taarruzuyla harb yeniden başladı .	Erbil’i aldıktan sonra büyük bir orduyla 12 Ocak 1733’de Bağdad’ı kuşatan Nadir Han , yedi ay uğraştıysa da şehri alamadı .	19 Temmuz 1733’de 80.000 kişilik orduyla Bağdad’a gelen vezir Topal Osman Paşa , on sekizinci asrın bütün dünyada en büyük askeri bilinen Nadir Han’ı , dokuz saatlik bir meydan savaşından sonra hezimete uğrattı .	Canını zor kurtaran Nadir Han , bütün ağırlıklarını bırakarak kaçtı .
+Event	T0	etmesine	EVENT	106
+Event	T1	antlaşma	EVENT	122
+Event	T3	başladı	EVENT	210
+Event	T4	aldıktan	EVENT	228
+Event	T5	kuşatan	EVENT	286
+Event	T6	uğraştıysa	EVENT	314
+Event	T8	savaşından	EVENT	521
+Event	T9	uğrattı	EVENT	547
+Event	T10	kaçtı	EVENT	619
+Event	T2	taarruzuyla	EVENT	185
+Event	T7	gelen	EVENT	394
+Relation	T2	T3	CauseEffect	true	taarruzuyla	başladı
+Relation	T3	T2	EffectCause	true	başladı	taarruzuyla
+Relation	T3	T4	CauseEffect	true	başladı	aldıktan
+Relation	T4	T3	EffectCause	true	aldıktan	başladı
+Relation	T3	T5	CauseEffect	true	başladı	kuşatan
+Relation	T5	T3	EffectCause	true	kuşatan	başladı
+Relation	T5	T6	CauseEffect	true	kuşatan	uğraştıysa
+Relation	T6	T5	EffectCause	true	uğraştıysa	kuşatan
+Relation	T5	T7	CauseEffect	true	kuşatan	gelen
+Relation	T7	T5	EffectCause	true	gelen	kuşatan
+Relation	T7	T8	CauseEffect	true	gelen	savaşından
+Relation	T8	T7	EffectCause	true	savaşından	gelen
+Relation	T5	T8	CauseEffect	true	kuşatan	savaşından
+Relation	T8	T5	EffectCause	true	savaşından	kuşatan
+Relation	T8	T9	CauseEffect	true	savaşından	uğrattı
+Relation	T9	T8	EffectCause	true	uğrattı	savaşından
+Relation	T9	T10	CauseEffect	true	uğrattı	kaçtı
+Relation	T10	T9	EffectCause	true	kaçtı	uğrattı
+Relation	T0	T10	NoRel	true	etmesine	kaçtı
+Relation	T0	T3	NoRel	true	etmesine	başladı
+Relation	T0	T7	NoRel	true	etmesine	gelen
+Relation	T1	T0	NoRel	true	antlaşma	etmesine
+Relation	T1	T10	NoRel	true	antlaşma	kaçtı
+Relation	T1	T4	NoRel	true	antlaşma	aldıktan
+Relation	T1	T5	NoRel	true	antlaşma	kuşatan
+Relation	T1	T6	NoRel	true	antlaşma	uğraştıysa
+Relation	T1	T7	NoRel	true	antlaşma	gelen
+Relation	T10	T3	NoRel	true	kaçtı	başladı
+Relation	T2	T4	NoRel	true	taarruzuyla	aldıktan
+Relation	T2	T6	NoRel	true	taarruzuyla	uğraştıysa
+Relation	T2	T9	NoRel	true	taarruzuyla	uğrattı
+Relation	T4	T0	NoRel	true	aldıktan	etmesine
+Relation	T4	T6	NoRel	true	aldıktan	uğraştıysa
+Relation	T5	T2	NoRel	true	kuşatan	taarruzuyla
+Relation	T6	T3	NoRel	true	uğraştıysa	başladı
+Relation	T6	T4	NoRel	true	uğraştıysa	aldıktan
+Relation	T6	T7	NoRel	true	uğraştıysa	gelen
+Relation	T6	T8	NoRel	true	uğraştıysa	savaşından
+Relation	T6	T9	NoRel	true	uğraştıysa	uğrattı
+Relation	T7	T10	NoRel	true	gelen	kaçtı
+Relation	T7	T3	NoRel	true	gelen	başladı
+Relation	T7	T4	NoRel	true	gelen	aldıktan
+Relation	T8	T0	NoRel	true	savaşından	etmesine
+Relation	T8	T1	NoRel	true	savaşından	antlaşma
+Relation	T9	T2	NoRel	true	uğrattı	taarruzuyla

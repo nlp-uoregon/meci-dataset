@@ -1,0 +1,38 @@
+Text	1921 MASSAVA DEPREMI , 14 Ağustos 1921 günü , günümüzde Eritre'de bulunan Massava yakınlarında , denizde meydana gelmiş olan bir depremdi .	Depremden sonraki ilk artçı şok da ana depreme yakın bir büyüklükteydi .	Massava limanında büyük hasar meydana geldi , çok sayıda kişi öldü .	Artçı şoklar Asmara ve Dekemhare kadar uzakta hissedildi .	Limanın tamamıyla tamir edilmesi ancak 1928 yılında mümkün olabildi .
+Event	T1	depremdi	EVENT	129
+Event	T2	Depremden	EVENT	140
+Event	T3	şok	EVENT	168
+Event	T4	geldi	EVENT	251
+Event	T5	öldü	EVENT	275
+Event	T6	şoklar	EVENT	288
+Event	T7	hissedildi	EVENT	328
+Event	T9	1921 MASSAVA DEPREMI	EVENT	0
+Event	T8	olabildi	EVENT	400
+Relation	T4	T5	CauseEffect	true	geldi	öldü
+Relation	T5	T4	EffectCause	true	öldü	geldi
+Relation	T4	T8	CauseEffect	true	geldi	olabildi
+Relation	T8	T4	EffectCause	true	olabildi	geldi
+Relation	T6	T7	CauseEffect	true	şoklar	hissedildi
+Relation	T7	T6	EffectCause	true	hissedildi	şoklar
+Relation	T1	T5	NoRel	true	depremdi	öldü
+Relation	T1	T6	NoRel	true	depremdi	şoklar
+Relation	T1	T7	NoRel	true	depremdi	hissedildi
+Relation	T2	T6	NoRel	true	Depremden	şoklar
+Relation	T2	T7	NoRel	true	Depremden	hissedildi
+Relation	T3	T2	NoRel	true	şok	Depremden
+Relation	T3	T4	NoRel	true	şok	geldi
+Relation	T3	T5	NoRel	true	şok	öldü
+Relation	T4	T1	NoRel	true	geldi	depremdi
+Relation	T4	T6	NoRel	true	geldi	şoklar
+Relation	T5	T6	NoRel	true	öldü	şoklar
+Relation	T5	T7	NoRel	true	öldü	hissedildi
+Relation	T5	T9	NoRel	true	öldü	1921 MASSAVA DEPREMI
+Relation	T6	T2	NoRel	true	şoklar	Depremden
+Relation	T6	T5	NoRel	true	şoklar	öldü
+Relation	T6	T9	NoRel	true	şoklar	1921 MASSAVA DEPREMI
+Relation	T7	T1	NoRel	true	hissedildi	depremdi
+Relation	T7	T9	NoRel	true	hissedildi	1921 MASSAVA DEPREMI
+Relation	T8	T3	NoRel	true	olabildi	şok
+Relation	T8	T5	NoRel	true	olabildi	öldü
+Relation	T8	T7	NoRel	true	olabildi	hissedildi
+Relation	T9	T1	NoRel	true	1921 MASSAVA DEPREMI	depremdi

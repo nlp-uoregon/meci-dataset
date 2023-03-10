@@ -1,0 +1,76 @@
+Text	Con un presupuesto estimado de $ 365 millones , es la segunda película más costosa de la historia .	_ Avengers : Age of Ultron _ tuvo su premier en Los Ángeles el 13 de abril de 2015 , y se estrenó el 1 de mayo de 2015 en Estados Unidos , en 3D y IMAX 3D .	La película recibió reseñas generalmente positivas de los críticos y recaudó más de $ 1400 millones mundialmente , convirtiéndose en la cuarta película más taquillera de 2015 y la quinta más taquillera de la historia .	Dos secuelas , tituladas _ Avengers : Infinity War _ y _ Avengers : Endgame _ , se estrenaron en abril de 2018 y 2019 , respectivamente .	En un país de Europa del Este llamado Sokovia , Los Vengadores conformados por Tony Stark , Steve Rogers , Thor , Bruce Banner , Natasha Romanoff y Clint Barton atacan una fortaleza de HYDRA , con la misión de recuperar el Cetro de Loki de manos del Barón Wolfgang Von Strucker , quien ha estado experimentando con humanos usando su poder .
+Event	T0	tuvo	EVENT	129
+Event	T1	premier	EVENT	137
+Event	T2	estrenó	EVENT	190
+Event	T3	reseñas	EVENT	277
+Event	T4	recaudó	EVENT	326
+Event	T5	convirtiéndose	EVENT	372
+Event	T6	secuelas	EVENT	480
+Event	T7	tituladas	EVENT	491
+Event	T8	estrenaron	EVENT	559
+Event	T9	atacan	EVENT	775
+Event	T10	misión	EVENT	814
+Event	T11	recuperar	EVENT	824
+Event	T12	experimentando	EVENT	910
+Event	T13	usando	EVENT	937
+Relation	T4	T5	CauseEffect	true	recaudó	convirtiéndose
+Relation	T5	T4	EffectCause	true	convirtiéndose	recaudó
+Relation	T0	T2	NoRel	true	tuvo	estrenó
+Relation	T0	T4	NoRel	true	tuvo	recaudó
+Relation	T0	T6	NoRel	true	tuvo	secuelas
+Relation	T0	T7	NoRel	true	tuvo	tituladas
+Relation	T0	T8	NoRel	true	tuvo	estrenaron
+Relation	T1	T0	NoRel	true	premier	tuvo
+Relation	T1	T7	NoRel	true	premier	tituladas
+Relation	T1	T9	NoRel	true	premier	atacan
+Relation	T10	T1	NoRel	true	misión	premier
+Relation	T10	T13	NoRel	true	misión	usando
+Relation	T10	T2	NoRel	true	misión	estrenó
+Relation	T10	T8	NoRel	true	misión	estrenaron
+Relation	T11	T0	NoRel	true	recuperar	tuvo
+Relation	T11	T1	NoRel	true	recuperar	premier
+Relation	T11	T12	NoRel	true	recuperar	experimentando
+Relation	T11	T4	NoRel	true	recuperar	recaudó
+Relation	T12	T1	NoRel	true	experimentando	premier
+Relation	T12	T5	NoRel	true	experimentando	convirtiéndose
+Relation	T13	T1	NoRel	true	usando	premier
+Relation	T13	T12	NoRel	true	usando	experimentando
+Relation	T13	T5	NoRel	true	usando	convirtiéndose
+Relation	T13	T7	NoRel	true	usando	tituladas
+Relation	T2	T12	NoRel	true	estrenó	experimentando
+Relation	T2	T4	NoRel	true	estrenó	recaudó
+Relation	T2	T7	NoRel	true	estrenó	tituladas
+Relation	T3	T12	NoRel	true	reseñas	experimentando
+Relation	T3	T13	NoRel	true	reseñas	usando
+Relation	T3	T5	NoRel	true	reseñas	convirtiéndose
+Relation	T3	T7	NoRel	true	reseñas	tituladas
+Relation	T3	T8	NoRel	true	reseñas	estrenaron
+Relation	T3	T9	NoRel	true	reseñas	atacan
+Relation	T4	T1	NoRel	true	recaudó	premier
+Relation	T4	T2	NoRel	true	recaudó	estrenó
+Relation	T4	T9	NoRel	true	recaudó	atacan
+Relation	T5	T2	NoRel	true	convirtiéndose	estrenó
+Relation	T5	T3	NoRel	true	convirtiéndose	reseñas
+Relation	T5	T6	NoRel	true	convirtiéndose	secuelas
+Relation	T5	T7	NoRel	true	convirtiéndose	tituladas
+Relation	T6	T2	NoRel	true	secuelas	estrenó
+Relation	T6	T3	NoRel	true	secuelas	reseñas
+Relation	T6	T4	NoRel	true	secuelas	recaudó
+Relation	T6	T8	NoRel	true	secuelas	estrenaron
+Relation	T7	T0	NoRel	true	tituladas	tuvo
+Relation	T7	T12	NoRel	true	tituladas	experimentando
+Relation	T7	T4	NoRel	true	tituladas	recaudó
+Relation	T7	T5	NoRel	true	tituladas	convirtiéndose
+Relation	T7	T8	NoRel	true	tituladas	estrenaron
+Relation	T7	T9	NoRel	true	tituladas	atacan
+Relation	T8	T0	NoRel	true	estrenaron	tuvo
+Relation	T8	T10	NoRel	true	estrenaron	misión
+Relation	T8	T11	NoRel	true	estrenaron	recuperar
+Relation	T8	T12	NoRel	true	estrenaron	experimentando
+Relation	T8	T13	NoRel	true	estrenaron	usando
+Relation	T8	T3	NoRel	true	estrenaron	reseñas
+Relation	T8	T4	NoRel	true	estrenaron	recaudó
+Relation	T8	T7	NoRel	true	estrenaron	tituladas
+Relation	T9	T0	NoRel	true	atacan	tuvo
+Relation	T9	T3	NoRel	true	atacan	reseñas
+Relation	T9	T5	NoRel	true	atacan	convirtiéndose

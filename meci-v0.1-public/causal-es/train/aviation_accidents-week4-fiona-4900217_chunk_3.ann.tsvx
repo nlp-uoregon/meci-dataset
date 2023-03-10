@@ -1,0 +1,246 @@
+Text	La ruta planificada requería un descenso pronunciado hacia Madang y , aunque la aeronave descendía abruptamente , las hélices dejaron su configuración de crucero de 900 rpm , lo que provocó un aumento de la velocidad del aire .	Ninguno de los pilotos notó que la velocidad aerodinámica aumentaba hacia la velocidad máxima de operación ( VMO ) ya que estaban " distraídos por el clima " .	Cuando la aeronave alcanzó el VMO al pasar a través de 10.500 pies , con una velocidad de descenso de entre 3.500 y 4.200 pies por minuto , sonó la advertencia de exceso de velocidad del VMO .	El capitán le pidió a al copiloto que aumentara la velocidad de la hélice a 1.050 rpm para reducir la velocidad del avión .	Él evantó el morro de la aeronave en respuesta a la advertencia y esto redujo la velocidad de descenso a aproximadamente 2,000 pies por minuto , sin embargo , la advertencia de exceso de velocidad del VMO siguió sonando .
+Event	T0	requería	EVENT	20
+Event	T1	pronunciado	EVENT	41
+Event	T2	descendía	EVENT	89
+Event	T3	dejaron	EVENT	126
+Event	T4	configuración	EVENT	137
+Event	T5	provocó	EVENT	182
+Event	T6	aumento	EVENT	193
+Event	T7	notó	EVENT	251
+Event	T8	aumentaba	EVENT	286
+Event	T9	operación	EVENT	325
+Event	T10	distraídos	EVENT	360
+Event	T11	alcanzó	EVENT	407
+Event	T12	pasar	EVENT	425
+Event	T13	descenso	EVENT	478
+Event	T14	sonó	EVENT	528
+Event	T15	advertencia	EVENT	536
+Event	T16	exceso	EVENT	551
+Event	T17	pidió	EVENT	595
+Event	T18	aumentara	EVENT	619
+Event	T19	evantó	EVENT	708
+Event	T20	morro	EVENT	718
+Event	T21	advertencia	EVENT	757
+Event	T22	redujo	EVENT	776
+Event	T23	descenso	EVENT	799
+Event	T24	advertencia	EVENT	867
+Event	T25	sonando	EVENT	917
+Relation	T17	T19	CauseEffect	true	pidió	evantó
+Relation	T19	T17	EffectCause	true	evantó	pidió
+Relation	T14	T17	CauseEffect	true	sonó	pidió
+Relation	T17	T14	EffectCause	true	pidió	sonó
+Relation	T0	T11	NoRel	true	requería	alcanzó
+Relation	T0	T13	NoRel	true	requería	descenso
+Relation	T0	T15	NoRel	true	requería	advertencia
+Relation	T0	T18	NoRel	true	requería	aumentara
+Relation	T0	T19	NoRel	true	requería	evantó
+Relation	T0	T3	NoRel	true	requería	dejaron
+Relation	T0	T6	NoRel	true	requería	aumento
+Relation	T0	T7	NoRel	true	requería	notó
+Relation	T0	T8	NoRel	true	requería	aumentaba
+Relation	T1	T10	NoRel	true	pronunciado	distraídos
+Relation	T1	T15	NoRel	true	pronunciado	advertencia
+Relation	T1	T18	NoRel	true	pronunciado	aumentara
+Relation	T1	T20	NoRel	true	pronunciado	morro
+Relation	T1	T5	NoRel	true	pronunciado	provocó
+Relation	T10	T11	NoRel	true	distraídos	alcanzó
+Relation	T10	T19	NoRel	true	distraídos	evantó
+Relation	T10	T3	NoRel	true	distraídos	dejaron
+Relation	T10	T9	NoRel	true	distraídos	operación
+Relation	T11	T15	NoRel	true	alcanzó	advertencia
+Relation	T11	T18	NoRel	true	alcanzó	aumentara
+Relation	T11	T19	NoRel	true	alcanzó	evantó
+Relation	T11	T2	NoRel	true	alcanzó	descendía
+Relation	T11	T22	NoRel	true	alcanzó	redujo
+Relation	T11	T24	NoRel	true	alcanzó	advertencia
+Relation	T11	T4	NoRel	true	alcanzó	configuración
+Relation	T12	T0	NoRel	true	pasar	requería
+Relation	T12	T15	NoRel	true	pasar	advertencia
+Relation	T12	T16	NoRel	true	pasar	exceso
+Relation	T12	T18	NoRel	true	pasar	aumentara
+Relation	T12	T20	NoRel	true	pasar	morro
+Relation	T12	T21	NoRel	true	pasar	advertencia
+Relation	T12	T22	NoRel	true	pasar	redujo
+Relation	T12	T23	NoRel	true	pasar	descenso
+Relation	T12	T24	NoRel	true	pasar	advertencia
+Relation	T12	T5	NoRel	true	pasar	provocó
+Relation	T12	T8	NoRel	true	pasar	aumentaba
+Relation	T13	T1	NoRel	true	descenso	pronunciado
+Relation	T13	T11	NoRel	true	descenso	alcanzó
+Relation	T13	T15	NoRel	true	descenso	advertencia
+Relation	T13	T18	NoRel	true	descenso	aumentara
+Relation	T13	T2	NoRel	true	descenso	descendía
+Relation	T13	T21	NoRel	true	descenso	advertencia
+Relation	T13	T25	NoRel	true	descenso	sonando
+Relation	T13	T6	NoRel	true	descenso	aumento
+Relation	T13	T7	NoRel	true	descenso	notó
+Relation	T14	T1	NoRel	true	sonó	pronunciado
+Relation	T14	T12	NoRel	true	sonó	pasar
+Relation	T14	T4	NoRel	true	sonó	configuración
+Relation	T15	T17	NoRel	true	advertencia	pidió
+Relation	T15	T19	NoRel	true	advertencia	evantó
+Relation	T15	T23	NoRel	true	advertencia	descenso
+Relation	T15	T7	NoRel	true	advertencia	notó
+Relation	T16	T14	NoRel	true	exceso	sonó
+Relation	T16	T17	NoRel	true	exceso	pidió
+Relation	T16	T2	NoRel	true	exceso	descendía
+Relation	T16	T3	NoRel	true	exceso	dejaron
+Relation	T16	T6	NoRel	true	exceso	aumento
+Relation	T16	T8	NoRel	true	exceso	aumentaba
+Relation	T17	T0	NoRel	true	pidió	requería
+Relation	T17	T1	NoRel	true	pidió	pronunciado
+Relation	T17	T10	NoRel	true	pidió	distraídos
+Relation	T17	T13	NoRel	true	pidió	descenso
+Relation	T17	T15	NoRel	true	pidió	advertencia
+Relation	T17	T16	NoRel	true	pidió	exceso
+Relation	T17	T2	NoRel	true	pidió	descendía
+Relation	T17	T21	NoRel	true	pidió	advertencia
+Relation	T17	T24	NoRel	true	pidió	advertencia
+Relation	T17	T25	NoRel	true	pidió	sonando
+Relation	T17	T8	NoRel	true	pidió	aumentaba
+Relation	T17	T9	NoRel	true	pidió	operación
+Relation	T18	T1	NoRel	true	aumentara	pronunciado
+Relation	T18	T11	NoRel	true	aumentara	alcanzó
+Relation	T18	T12	NoRel	true	aumentara	pasar
+Relation	T18	T13	NoRel	true	aumentara	descenso
+Relation	T18	T16	NoRel	true	aumentara	exceso
+Relation	T18	T17	NoRel	true	aumentara	pidió
+Relation	T18	T19	NoRel	true	aumentara	evantó
+Relation	T18	T20	NoRel	true	aumentara	morro
+Relation	T18	T22	NoRel	true	aumentara	redujo
+Relation	T18	T24	NoRel	true	aumentara	advertencia
+Relation	T18	T3	NoRel	true	aumentara	dejaron
+Relation	T18	T4	NoRel	true	aumentara	configuración
+Relation	T18	T8	NoRel	true	aumentara	aumentaba
+Relation	T19	T10	NoRel	true	evantó	distraídos
+Relation	T19	T12	NoRel	true	evantó	pasar
+Relation	T19	T13	NoRel	true	evantó	descenso
+Relation	T19	T18	NoRel	true	evantó	aumentara
+Relation	T19	T20	NoRel	true	evantó	morro
+Relation	T19	T22	NoRel	true	evantó	redujo
+Relation	T19	T25	NoRel	true	evantó	sonando
+Relation	T19	T4	NoRel	true	evantó	configuración
+Relation	T19	T5	NoRel	true	evantó	provocó
+Relation	T19	T7	NoRel	true	evantó	notó
+Relation	T2	T0	NoRel	true	descendía	requería
+Relation	T2	T10	NoRel	true	descendía	distraídos
+Relation	T2	T13	NoRel	true	descendía	descenso
+Relation	T2	T16	NoRel	true	descendía	exceso
+Relation	T2	T25	NoRel	true	descendía	sonando
+Relation	T2	T3	NoRel	true	descendía	dejaron
+Relation	T2	T6	NoRel	true	descendía	aumento
+Relation	T2	T8	NoRel	true	descendía	aumentaba
+Relation	T2	T9	NoRel	true	descendía	operación
+Relation	T20	T0	NoRel	true	morro	requería
+Relation	T20	T12	NoRel	true	morro	pasar
+Relation	T20	T14	NoRel	true	morro	sonó
+Relation	T20	T15	NoRel	true	morro	advertencia
+Relation	T20	T19	NoRel	true	morro	evantó
+Relation	T20	T2	NoRel	true	morro	descendía
+Relation	T20	T23	NoRel	true	morro	descenso
+Relation	T20	T24	NoRel	true	morro	advertencia
+Relation	T20	T4	NoRel	true	morro	configuración
+Relation	T20	T5	NoRel	true	morro	provocó
+Relation	T20	T7	NoRel	true	morro	notó
+Relation	T20	T8	NoRel	true	morro	aumentaba
+Relation	T21	T1	NoRel	true	advertencia	pronunciado
+Relation	T21	T11	NoRel	true	advertencia	alcanzó
+Relation	T21	T15	NoRel	true	advertencia	advertencia
+Relation	T21	T2	NoRel	true	advertencia	descendía
+Relation	T21	T24	NoRel	true	advertencia	advertencia
+Relation	T21	T7	NoRel	true	advertencia	notó
+Relation	T22	T17	NoRel	true	redujo	pidió
+Relation	T22	T19	NoRel	true	redujo	evantó
+Relation	T22	T20	NoRel	true	redujo	morro
+Relation	T22	T21	NoRel	true	redujo	advertencia
+Relation	T22	T25	NoRel	true	redujo	sonando
+Relation	T22	T4	NoRel	true	redujo	configuración
+Relation	T22	T5	NoRel	true	redujo	provocó
+Relation	T22	T6	NoRel	true	redujo	aumento
+Relation	T22	T7	NoRel	true	redujo	notó
+Relation	T23	T20	NoRel	true	descenso	morro
+Relation	T23	T22	NoRel	true	descenso	redujo
+Relation	T23	T24	NoRel	true	descenso	advertencia
+Relation	T23	T25	NoRel	true	descenso	sonando
+Relation	T23	T6	NoRel	true	descenso	aumento
+Relation	T23	T8	NoRel	true	descenso	aumentaba
+Relation	T24	T0	NoRel	true	advertencia	requería
+Relation	T24	T2	NoRel	true	advertencia	descendía
+Relation	T24	T20	NoRel	true	advertencia	morro
+Relation	T24	T21	NoRel	true	advertencia	advertencia
+Relation	T24	T3	NoRel	true	advertencia	dejaron
+Relation	T24	T4	NoRel	true	advertencia	configuración
+Relation	T24	T6	NoRel	true	advertencia	aumento
+Relation	T24	T7	NoRel	true	advertencia	notó
+Relation	T25	T0	NoRel	true	sonando	requería
+Relation	T25	T1	NoRel	true	sonando	pronunciado
+Relation	T25	T11	NoRel	true	sonando	alcanzó
+Relation	T25	T13	NoRel	true	sonando	descenso
+Relation	T25	T14	NoRel	true	sonando	sonó
+Relation	T25	T17	NoRel	true	sonando	pidió
+Relation	T25	T21	NoRel	true	sonando	advertencia
+Relation	T25	T24	NoRel	true	sonando	advertencia
+Relation	T25	T4	NoRel	true	sonando	configuración
+Relation	T25	T7	NoRel	true	sonando	notó
+Relation	T3	T1	NoRel	true	dejaron	pronunciado
+Relation	T3	T15	NoRel	true	dejaron	advertencia
+Relation	T3	T20	NoRel	true	dejaron	morro
+Relation	T3	T22	NoRel	true	dejaron	redujo
+Relation	T3	T24	NoRel	true	dejaron	advertencia
+Relation	T3	T5	NoRel	true	dejaron	provocó
+Relation	T3	T7	NoRel	true	dejaron	notó
+Relation	T4	T11	NoRel	true	configuración	alcanzó
+Relation	T4	T12	NoRel	true	configuración	pasar
+Relation	T4	T19	NoRel	true	configuración	evantó
+Relation	T4	T21	NoRel	true	configuración	advertencia
+Relation	T4	T23	NoRel	true	configuración	descenso
+Relation	T4	T6	NoRel	true	configuración	aumento
+Relation	T5	T0	NoRel	true	provocó	requería
+Relation	T5	T12	NoRel	true	provocó	pasar
+Relation	T5	T13	NoRel	true	provocó	descenso
+Relation	T5	T15	NoRel	true	provocó	advertencia
+Relation	T5	T16	NoRel	true	provocó	exceso
+Relation	T5	T18	NoRel	true	provocó	aumentara
+Relation	T5	T19	NoRel	true	provocó	evantó
+Relation	T5	T2	NoRel	true	provocó	descendía
+Relation	T5	T23	NoRel	true	provocó	descenso
+Relation	T5	T24	NoRel	true	provocó	advertencia
+Relation	T5	T7	NoRel	true	provocó	notó
+Relation	T6	T0	NoRel	true	aumento	requería
+Relation	T6	T1	NoRel	true	aumento	pronunciado
+Relation	T6	T13	NoRel	true	aumento	descenso
+Relation	T6	T14	NoRel	true	aumento	sonó
+Relation	T6	T18	NoRel	true	aumento	aumentara
+Relation	T6	T5	NoRel	true	aumento	provocó
+Relation	T6	T7	NoRel	true	aumento	notó
+Relation	T6	T8	NoRel	true	aumento	aumentaba
+Relation	T7	T11	NoRel	true	notó	alcanzó
+Relation	T7	T16	NoRel	true	notó	exceso
+Relation	T7	T17	NoRel	true	notó	pidió
+Relation	T7	T20	NoRel	true	notó	morro
+Relation	T7	T23	NoRel	true	notó	descenso
+Relation	T7	T24	NoRel	true	notó	advertencia
+Relation	T7	T25	NoRel	true	notó	sonando
+Relation	T7	T4	NoRel	true	notó	configuración
+Relation	T7	T5	NoRel	true	notó	provocó
+Relation	T7	T9	NoRel	true	notó	operación
+Relation	T8	T0	NoRel	true	aumentaba	requería
+Relation	T8	T1	NoRel	true	aumentaba	pronunciado
+Relation	T8	T12	NoRel	true	aumentaba	pasar
+Relation	T8	T13	NoRel	true	aumentaba	descenso
+Relation	T8	T15	NoRel	true	aumentaba	advertencia
+Relation	T8	T17	NoRel	true	aumentaba	pidió
+Relation	T8	T21	NoRel	true	aumentaba	advertencia
+Relation	T8	T6	NoRel	true	aumentaba	aumento
+Relation	T8	T9	NoRel	true	aumentaba	operación
+Relation	T9	T1	NoRel	true	operación	pronunciado
+Relation	T9	T10	NoRel	true	operación	distraídos
+Relation	T9	T13	NoRel	true	operación	descenso
+Relation	T9	T14	NoRel	true	operación	sonó
+Relation	T9	T15	NoRel	true	operación	advertencia
+Relation	T9	T16	NoRel	true	operación	exceso
+Relation	T9	T18	NoRel	true	operación	aumentara
+Relation	T9	T20	NoRel	true	operación	morro
+Relation	T9	T22	NoRel	true	operación	redujo
+Relation	T9	T4	NoRel	true	operación	configuración
+Relation	T9	T8	NoRel	true	operación	aumentaba

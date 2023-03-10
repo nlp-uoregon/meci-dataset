@@ -1,0 +1,34 @@
+Text	جہاز جو 3, 300 فٹ کی بلندی پر پرواز کر رہا تھا ، یک دم ہی ہزار فٹ کی بلندی سے نیچے آگیا ۔	منزل پر پہنچنے سے قبل ہی جہاز ایک وسیع میدان میں گر کر تباہ ہو گیا ۔	عینی شاہدین کے مطابق جہاز کی نوکیلا حصہ زمین کی سطح سے 700 میٹر بلند پڑا ہوا نظر آیا تھا اور باقی ماندہ جہاز کے حصے 2, 300 فٹ دور گرے پائے گئے ۔	جہاز پر سوار سوار 11 عملے کے ارکان سمیت 50 مسافر جاں بحق ہوئے ۔	طیارے کے سوار افراد میں کوئی بھی زندہ نہیں پایا گیا ۔
+Event	T0	پرواز	EVENT	30
+Event	T1	آگیا	EVENT	83
+Event	T2	پہنچنے	EVENT	98
+Event	T3	گر	EVENT	139
+Event	T4	تباہ	EVENT	145
+Event	T5	گیا	EVENT	153
+Event	T6	آیا	EVENT	240
+Event	T7	ہوئے	EVENT	361
+Event	T8	پایا	EVENT	411
+Relation	T3	T4	CauseEffect	true	گر	تباہ
+Relation	T4	T3	EffectCause	true	تباہ	گر
+Relation	T0	T4	NoRel	true	پرواز	تباہ
+Relation	T0	T7	NoRel	true	پرواز	ہوئے
+Relation	T1	T4	NoRel	true	آگیا	تباہ
+Relation	T1	T8	NoRel	true	آگیا	پایا
+Relation	T2	T1	NoRel	true	پہنچنے	آگیا
+Relation	T2	T6	NoRel	true	پہنچنے	آیا
+Relation	T3	T5	NoRel	true	گر	گیا
+Relation	T3	T7	NoRel	true	گر	ہوئے
+Relation	T3	T8	NoRel	true	گر	پایا
+Relation	T4	T1	NoRel	true	تباہ	آگیا
+Relation	T4	T6	NoRel	true	تباہ	آیا
+Relation	T4	T7	NoRel	true	تباہ	ہوئے
+Relation	T4	T8	NoRel	true	تباہ	پایا
+Relation	T5	T2	NoRel	true	گیا	پہنچنے
+Relation	T5	T6	NoRel	true	گیا	آیا
+Relation	T6	T2	NoRel	true	آیا	پہنچنے
+Relation	T7	T2	NoRel	true	ہوئے	پہنچنے
+Relation	T7	T5	NoRel	true	ہوئے	گیا
+Relation	T8	T2	NoRel	true	پایا	پہنچنے
+Relation	T8	T3	NoRel	true	پایا	گر
+Relation	T8	T5	NoRel	true	پایا	گیا
+Relation	T8	T7	NoRel	true	پایا	ہوئے

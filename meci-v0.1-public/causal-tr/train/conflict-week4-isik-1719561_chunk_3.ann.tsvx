@@ -1,0 +1,30 @@
+Text	Liam ve Franklin aynı zamanda Rahip John'ın otoritesinin de karşısında dururlar .	Bunun karşısında John , liam'ı her fırsatta döver .	En sonunda Franklin Liam'ın cesedini yemekhanede bulur .	Bunun üzerine Franklin John'a saldırarak onu cinayetle suçlar .	Liam'ın cenazesinde de diğer çocuklara bunun bir cinayet olduğunu söyler .
+Event	T0	döver	EVENT	126
+Event	T1	cesedini	EVENT	162
+Event	T2	bulur	EVENT	183
+Event	T3	saldırarak	EVENT	221
+Event	T4	suçlar	EVENT	246
+Event	T5	cinayet	EVENT	304
+Event	T6	söyler	EVENT	321
+Event	T7	dururlar	EVENT	71
+Relation	T2	T3	CauseEffect	true	bulur	saldırarak
+Relation	T3	T2	EffectCause	true	saldırarak	bulur
+Relation	T2	T4	CauseEffect	true	bulur	suçlar
+Relation	T4	T2	EffectCause	true	suçlar	bulur
+Relation	T2	T6	CauseEffect	true	bulur	söyler
+Relation	T6	T2	EffectCause	true	söyler	bulur
+Relation	T7	T0	CauseEffect	true	dururlar	döver
+Relation	T0	T7	EffectCause	true	döver	dururlar
+Relation	T0	T1	NoRel	true	döver	cesedini
+Relation	T1	T4	NoRel	true	cesedini	suçlar
+Relation	T1	T5	NoRel	true	cesedini	cinayet
+Relation	T3	T1	NoRel	true	saldırarak	cesedini
+Relation	T3	T4	NoRel	true	saldırarak	suçlar
+Relation	T3	T5	NoRel	true	saldırarak	cinayet
+Relation	T4	T7	NoRel	true	suçlar	dururlar
+Relation	T5	T3	NoRel	true	cinayet	saldırarak
+Relation	T5	T6	NoRel	true	cinayet	söyler
+Relation	T5	T7	NoRel	true	cinayet	dururlar
+Relation	T6	T0	NoRel	true	söyler	döver
+Relation	T6	T4	NoRel	true	söyler	suçlar
+Relation	T7	T3	NoRel	true	dururlar	saldırarak

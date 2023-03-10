@@ -1,0 +1,78 @@
+Text	Mientras permanece detenido , se acerca a la estación el tren número 11 ORDINARIO ALAMEDA-PICHILEMU , encabezado por la locomotora a vapor Tipo 80 n°_842 .	Debido a una densa neblina , el conductor no se percata de que su tren no contaba con autorización para entrar a la estación , por lo que impacta de lleno los dos últimos vagones de tercera clase de madera , matando a 35 personas de forma instantánea , sumando otras 10 que fallecieron mientras recibían atención médica .	Sobrevivieron sólo tres personas dentro de uno de los vagones siniestrados .	Las posibles consecuencias de la tragedia se atenuaron ya que , debido a la larga detención del tren 3 , muchos pasajeros descendieron para esperar en los andenes , lo que produjo que la cantidad de víctimas fuera menor .	La densa neblina presente en la mañana de invierno fue primordial para que no fuera posible evitar la tragedia .
+Event	T0	detenido	EVENT	19
+Event	T1	acerca	EVENT	33
+Event	T2	percata	EVENT	204
+Event	T3	impacta	EVENT	294
+Event	T4	matando	EVENT	364
+Event	T5	sumando	EVENT	409
+Event	T6	fallecieron	EVENT	430
+Event	T7	Sobrevivieron	EVENT	478
+Event	T8	tragedia	EVENT	588
+Event	T9	atenuaron	EVENT	600
+Event	T10	detención	EVENT	637
+Event	T11	descendieron	EVENT	677
+Event	T12	esperar	EVENT	695
+Event	T13	produjo	EVENT	727
+Event	T14	tragedia	EVENT	879
+Relation	T3	T4	CauseEffect	true	impacta	matando
+Relation	T4	T3	EffectCause	true	matando	impacta
+Relation	T0	T14	NoRel	true	detenido	tragedia
+Relation	T0	T5	NoRel	true	detenido	sumando
+Relation	T0	T6	NoRel	true	detenido	fallecieron
+Relation	T1	T10	NoRel	true	acerca	detención
+Relation	T1	T11	NoRel	true	acerca	descendieron
+Relation	T1	T14	NoRel	true	acerca	tragedia
+Relation	T10	T11	NoRel	true	detención	descendieron
+Relation	T10	T2	NoRel	true	detención	percata
+Relation	T10	T5	NoRel	true	detención	sumando
+Relation	T10	T7	NoRel	true	detención	Sobrevivieron
+Relation	T11	T1	NoRel	true	descendieron	acerca
+Relation	T11	T14	NoRel	true	descendieron	tragedia
+Relation	T11	T3	NoRel	true	descendieron	impacta
+Relation	T11	T6	NoRel	true	descendieron	fallecieron
+Relation	T11	T9	NoRel	true	descendieron	atenuaron
+Relation	T12	T0	NoRel	true	esperar	detenido
+Relation	T12	T11	NoRel	true	esperar	descendieron
+Relation	T12	T14	NoRel	true	esperar	tragedia
+Relation	T12	T3	NoRel	true	esperar	impacta
+Relation	T12	T5	NoRel	true	esperar	sumando
+Relation	T12	T6	NoRel	true	esperar	fallecieron
+Relation	T13	T10	NoRel	true	produjo	detención
+Relation	T13	T3	NoRel	true	produjo	impacta
+Relation	T13	T5	NoRel	true	produjo	sumando
+Relation	T13	T6	NoRel	true	produjo	fallecieron
+Relation	T13	T7	NoRel	true	produjo	Sobrevivieron
+Relation	T14	T0	NoRel	true	tragedia	detenido
+Relation	T14	T12	NoRel	true	tragedia	esperar
+Relation	T14	T2	NoRel	true	tragedia	percata
+Relation	T14	T6	NoRel	true	tragedia	fallecieron
+Relation	T14	T9	NoRel	true	tragedia	atenuaron
+Relation	T2	T11	NoRel	true	percata	descendieron
+Relation	T2	T12	NoRel	true	percata	esperar
+Relation	T2	T4	NoRel	true	percata	matando
+Relation	T2	T6	NoRel	true	percata	fallecieron
+Relation	T2	T7	NoRel	true	percata	Sobrevivieron
+Relation	T2	T9	NoRel	true	percata	atenuaron
+Relation	T3	T14	NoRel	true	impacta	tragedia
+Relation	T3	T2	NoRel	true	impacta	percata
+Relation	T3	T7	NoRel	true	impacta	Sobrevivieron
+Relation	T4	T11	NoRel	true	matando	descendieron
+Relation	T4	T8	NoRel	true	matando	tragedia
+Relation	T5	T0	NoRel	true	sumando	detenido
+Relation	T5	T10	NoRel	true	sumando	detención
+Relation	T5	T11	NoRel	true	sumando	descendieron
+Relation	T6	T0	NoRel	true	fallecieron	detenido
+Relation	T6	T1	NoRel	true	fallecieron	acerca
+Relation	T6	T10	NoRel	true	fallecieron	detención
+Relation	T6	T13	NoRel	true	fallecieron	produjo
+Relation	T7	T12	NoRel	true	Sobrevivieron	esperar
+Relation	T7	T13	NoRel	true	Sobrevivieron	produjo
+Relation	T7	T2	NoRel	true	Sobrevivieron	percata
+Relation	T7	T3	NoRel	true	Sobrevivieron	impacta
+Relation	T7	T6	NoRel	true	Sobrevivieron	fallecieron
+Relation	T7	T8	NoRel	true	Sobrevivieron	tragedia
+Relation	T8	T10	NoRel	true	tragedia	detención
+Relation	T8	T6	NoRel	true	tragedia	fallecieron
+Relation	T9	T3	NoRel	true	atenuaron	impacta
+Relation	T9	T5	NoRel	true	atenuaron	sumando
+Relation	T9	T7	NoRel	true	atenuaron	Sobrevivieron

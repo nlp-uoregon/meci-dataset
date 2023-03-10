@@ -1,0 +1,85 @@
+Text	Many financial institutions , investment banks in particular , issued large amounts of debt during 2004 – 07 , and invested the proceeds in mortgage - backed securities ( MBS ) , essentially betting that house prices would continue to rise , and that households would continue to make their mortgage payments .	Borrowing at a lower interest rate and investing the proceeds at a higher interest rate is a form of financial leverage .	This is analogous to an individual taking out a second mortgage on his residence to invest in the stock market .	This strategy proved profitable during the housing boom , but resulted in large losses when house prices began to decline and mortgages began to default .	Beginning in 2007 , financial institutions and individual investors holding MBS also suffered significant losses from mortgage payment defaults and the resulting decline in the value of MBS .
+Event	T0	issued	EVENT	63
+Event	T1	invested	EVENT	115
+Event	T2	betting	EVENT	191
+Event	T3	rise	EVENT	235
+Event	T4	make	EVENT	280
+Event	T5	payments	EVENT	300
+Event	T6	Borrowing	EVENT	311
+Event	T7	investing	EVENT	350
+Event	T8	leverage	EVENT	422
+Event	T9	invest	EVENT	517
+Event	T10	boom	EVENT	597
+Event	T11	resulted	EVENT	608
+Event	T12	losses	EVENT	626
+Event	T13	began	EVENT	651
+Event	T14	decline	EVENT	660
+Event	T15	began	EVENT	682
+Event	T16	default	EVENT	691
+Event	T17	Beginning	EVENT	701
+Event	T18	holding	EVENT	769
+Event	T19	suffered	EVENT	786
+Event	T20	losses	EVENT	807
+Event	T21	defaults	EVENT	836
+Event	T22	decline	EVENT	863
+Event	T23	second mortgage	EVENT	481
+Event	T24	profitable	EVENT	567
+Relation	T5	T0	CauseEffect	true	payments	issued
+Relation	T0	T5	EffectCause	true	issued	payments
+Relation	T3	T0	CauseEffect	true	rise	issued
+Relation	T0	T3	EffectCause	true	issued	rise
+Relation	T23	T9	CauseEffect	true	second mortgage	invest
+Relation	T9	T23	EffectCause	true	invest	second mortgage
+Relation	T10	T24	CauseEffect	true	boom	profitable
+Relation	T24	T10	EffectCause	true	profitable	boom
+Relation	T9	T24	CauseEffect	true	invest	profitable
+Relation	T24	T9	EffectCause	true	profitable	invest
+Relation	T14	T12	CauseEffect	true	decline	losses
+Relation	T12	T14	EffectCause	true	losses	decline
+Relation	T21	T20	CauseEffect	true	defaults	losses
+Relation	T20	T21	EffectCause	true	losses	defaults
+Relation	T21	T22	CauseEffect	true	defaults	decline
+Relation	T22	T21	EffectCause	true	decline	defaults
+Relation	T0	T11	NoRel	true	issued	resulted
+Relation	T0	T6	NoRel	true	issued	Borrowing
+Relation	T1	T13	NoRel	true	invested	began
+Relation	T10	T16	NoRel	true	boom	default
+Relation	T11	T13	NoRel	true	resulted	began
+Relation	T11	T21	NoRel	true	resulted	defaults
+Relation	T11	T23	NoRel	true	resulted	second mortgage
+Relation	T13	T14	NoRel	true	began	decline
+Relation	T14	T1	NoRel	true	decline	invested
+Relation	T14	T16	NoRel	true	decline	default
+Relation	T14	T20	NoRel	true	decline	losses
+Relation	T14	T9	NoRel	true	decline	invest
+Relation	T15	T2	NoRel	true	began	betting
+Relation	T16	T2	NoRel	true	default	betting
+Relation	T16	T21	NoRel	true	default	defaults
+Relation	T16	T22	NoRel	true	default	decline
+Relation	T16	T6	NoRel	true	default	Borrowing
+Relation	T16	T7	NoRel	true	default	investing
+Relation	T17	T1	NoRel	true	Beginning	invested
+Relation	T17	T15	NoRel	true	Beginning	began
+Relation	T18	T1	NoRel	true	holding	invested
+Relation	T18	T6	NoRel	true	holding	Borrowing
+Relation	T18	T7	NoRel	true	holding	investing
+Relation	T2	T0	NoRel	true	betting	issued
+Relation	T2	T20	NoRel	true	betting	losses
+Relation	T2	T6	NoRel	true	betting	Borrowing
+Relation	T21	T5	NoRel	true	defaults	payments
+Relation	T22	T14	NoRel	true	decline	decline
+Relation	T22	T19	NoRel	true	decline	suffered
+Relation	T22	T6	NoRel	true	decline	Borrowing
+Relation	T23	T5	NoRel	true	second mortgage	payments
+Relation	T24	T5	NoRel	true	profitable	payments
+Relation	T4	T13	NoRel	true	make	began
+Relation	T4	T16	NoRel	true	make	default
+Relation	T4	T21	NoRel	true	make	defaults
+Relation	T4	T23	NoRel	true	make	second mortgage
+Relation	T5	T11	NoRel	true	payments	resulted
+Relation	T5	T19	NoRel	true	payments	suffered
+Relation	T6	T1	NoRel	true	Borrowing	invested
+Relation	T6	T10	NoRel	true	Borrowing	boom
+Relation	T6	T14	NoRel	true	Borrowing	decline
+Relation	T7	T5	NoRel	true	investing	payments
+Relation	T8	T11	NoRel	true	leverage	resulted

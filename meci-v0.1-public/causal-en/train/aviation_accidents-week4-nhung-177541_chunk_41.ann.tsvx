@@ -1,0 +1,52 @@
+Text	All evidence indicated that crew error was in no way responsible for the disintegration of the orbiter , and they had acted correctly and according to procedure at the first indication of trouble .	Although some of the crew were not wearing gloves or helmets during reentry and some were not properly restrained in their seats , doing these things would have added nothing to their survival chances other than perhaps keeping them alive and conscious for another 30 seconds or so .	[ President George W. Bush 's address on the _ Columbia_{{'} } disaster , February 1 , 2003 ]	At 14:04 EST ( 19:04 UTC ) , President George W. Bush said in a televised address to the nation , " My fellow Americans , this day has brought terrible news , and great sadness to our country .	At 9 o'clock this morning , Mission Control in Houston lost contact with our Space Shuttle _ Columbia _ .
+Event	T0	indicated	EVENT	13
+Event	T1	error	EVENT	33
+Event	T2	disintegration	EVENT	73
+Event	T3	acted	EVENT	118
+Event	T4	procedure	EVENT	151
+Event	T5	indication	EVENT	174
+Event	T6	trouble	EVENT	188
+Event	T7	reentry	EVENT	266
+Event	T8	restrained	EVENT	301
+Event	T9	doing	EVENT	329
+Event	T10	added	EVENT	359
+Event	T11	keeping	EVENT	418
+Event	T12	disaster	EVENT	545
+Event	T13	said	EVENT	630
+Event	T14	brought	EVENT	711
+Event	T15	sadness	EVENT	745
+Event	T16	lost	EVENT	825
+Relation	T9	T10	CauseEffect	true	doing	added
+Relation	T10	T9	EffectCause	true	added	doing
+Relation	T9	T11	CauseEffect	true	doing	keeping
+Relation	T11	T9	EffectCause	true	keeping	doing
+Relation	T12	T14	CauseEffect	true	disaster	brought
+Relation	T14	T12	EffectCause	true	brought	disaster
+Relation	T12	T15	CauseEffect	true	disaster	sadness
+Relation	T15	T12	EffectCause	true	sadness	disaster
+Relation	T0	T15	NoRel	true	indicated	sadness
+Relation	T0	T16	NoRel	true	indicated	lost
+Relation	T0	T3	NoRel	true	indicated	acted
+Relation	T0	T5	NoRel	true	indicated	indication
+Relation	T1	T0	NoRel	true	error	indicated
+Relation	T1	T11	NoRel	true	error	keeping
+Relation	T1	T4	NoRel	true	error	procedure
+Relation	T10	T16	NoRel	true	added	lost
+Relation	T12	T5	NoRel	true	disaster	indication
+Relation	T14	T5	NoRel	true	brought	indication
+Relation	T15	T14	NoRel	true	sadness	brought
+Relation	T15	T7	NoRel	true	sadness	reentry
+Relation	T2	T10	NoRel	true	disintegration	added
+Relation	T2	T4	NoRel	true	disintegration	procedure
+Relation	T2	T7	NoRel	true	disintegration	reentry
+Relation	T4	T13	NoRel	true	procedure	said
+Relation	T4	T16	NoRel	true	procedure	lost
+Relation	T4	T8	NoRel	true	procedure	restrained
+Relation	T5	T1	NoRel	true	indication	error
+Relation	T6	T1	NoRel	true	trouble	error
+Relation	T6	T7	NoRel	true	trouble	reentry
+Relation	T7	T1	NoRel	true	reentry	error
+Relation	T7	T10	NoRel	true	reentry	added
+Relation	T7	T11	NoRel	true	reentry	keeping
+Relation	T8	T1	NoRel	true	restrained	error
+Relation	T9	T12	NoRel	true	doing	disaster

@@ -1,0 +1,73 @@
+Text	El fuselaje y los motores fueron inspeccionado por última vez el 28 de noviembre de 2013 , un día antes del accidente .	El avión se desplazaba a una altitud de 38.000 pies ( 11.582 m ) , sobre el espacio aéreo de Botsuana a medio camino entre Maputo y Luanda , cuando bruscamente comenzó a perder altura .	El avión descendió rápidamente a una velocidad de cerca de 100 pies ( 30 m ) , por segundo mientras estaba siendo rastreado por el radar .	El rastro de la aeronave se perdió de las pantallas a 3.000 pies ( 914 m ) , sobre el nivel del mar .	El último contacto con el control de tráfico aéreo se realizó a las 13:30 CAT ( 11:30 UTC ) sobre el norte de Namibia durante fuertes lluvias que azotaban la ruta del aparato siniestrado .
+Event	T0	inspeccionado	EVENT	33
+Event	T1	accidente	EVENT	108
+Event	T2	desplazaba	EVENT	132
+Event	T3	comenzó	EVENT	280
+Event	T4	descendió	EVENT	315
+Event	T5	rastreado	EVENT	420
+Event	T6	rastro	EVENT	448
+Event	T7	perdió	EVENT	473
+Event	T8	contacto	EVENT	557
+Event	T9	realizó	EVENT	601
+Event	T10	lluvias	EVENT	681
+Event	T11	azotaban	EVENT	693
+Event	T12	siniestrado	EVENT	722
+Relation	T3	T4	CauseEffect	true	comenzó	descendió
+Relation	T4	T3	EffectCause	true	descendió	comenzó
+Relation	T0	T11	NoRel	true	inspeccionado	azotaban
+Relation	T0	T6	NoRel	true	inspeccionado	rastro
+Relation	T1	T10	NoRel	true	accidente	lluvias
+Relation	T1	T4	NoRel	true	accidente	descendió
+Relation	T1	T6	NoRel	true	accidente	rastro
+Relation	T10	T1	NoRel	true	lluvias	accidente
+Relation	T10	T7	NoRel	true	lluvias	perdió
+Relation	T10	T8	NoRel	true	lluvias	contacto
+Relation	T11	T1	NoRel	true	azotaban	accidente
+Relation	T11	T12	NoRel	true	azotaban	siniestrado
+Relation	T11	T2	NoRel	true	azotaban	desplazaba
+Relation	T11	T6	NoRel	true	azotaban	rastro
+Relation	T12	T0	NoRel	true	siniestrado	inspeccionado
+Relation	T12	T2	NoRel	true	siniestrado	desplazaba
+Relation	T12	T6	NoRel	true	siniestrado	rastro
+Relation	T2	T0	NoRel	true	desplazaba	inspeccionado
+Relation	T2	T1	NoRel	true	desplazaba	accidente
+Relation	T2	T3	NoRel	true	desplazaba	comenzó
+Relation	T2	T5	NoRel	true	desplazaba	rastreado
+Relation	T2	T6	NoRel	true	desplazaba	rastro
+Relation	T2	T9	NoRel	true	desplazaba	realizó
+Relation	T3	T0	NoRel	true	comenzó	inspeccionado
+Relation	T3	T10	NoRel	true	comenzó	lluvias
+Relation	T3	T12	NoRel	true	comenzó	siniestrado
+Relation	T3	T7	NoRel	true	comenzó	perdió
+Relation	T3	T8	NoRel	true	comenzó	contacto
+Relation	T3	T9	NoRel	true	comenzó	realizó
+Relation	T4	T0	NoRel	true	descendió	inspeccionado
+Relation	T4	T7	NoRel	true	descendió	perdió
+Relation	T4	T8	NoRel	true	descendió	contacto
+Relation	T5	T0	NoRel	true	rastreado	inspeccionado
+Relation	T5	T11	NoRel	true	rastreado	azotaban
+Relation	T5	T12	NoRel	true	rastreado	siniestrado
+Relation	T5	T2	NoRel	true	rastreado	desplazaba
+Relation	T5	T6	NoRel	true	rastreado	rastro
+Relation	T6	T0	NoRel	true	rastro	inspeccionado
+Relation	T6	T12	NoRel	true	rastro	siniestrado
+Relation	T6	T2	NoRel	true	rastro	desplazaba
+Relation	T6	T4	NoRel	true	rastro	descendió
+Relation	T6	T5	NoRel	true	rastro	rastreado
+Relation	T6	T8	NoRel	true	rastro	contacto
+Relation	T6	T9	NoRel	true	rastro	realizó
+Relation	T7	T10	NoRel	true	perdió	lluvias
+Relation	T7	T12	NoRel	true	perdió	siniestrado
+Relation	T7	T2	NoRel	true	perdió	desplazaba
+Relation	T7	T4	NoRel	true	perdió	descendió
+Relation	T7	T6	NoRel	true	perdió	rastro
+Relation	T7	T8	NoRel	true	perdió	contacto
+Relation	T8	T10	NoRel	true	contacto	lluvias
+Relation	T8	T2	NoRel	true	contacto	desplazaba
+Relation	T8	T3	NoRel	true	contacto	comenzó
+Relation	T8	T4	NoRel	true	contacto	descendió
+Relation	T8	T5	NoRel	true	contacto	rastreado
+Relation	T9	T0	NoRel	true	realizó	inspeccionado
+Relation	T9	T1	NoRel	true	realizó	accidente
+Relation	T9	T11	NoRel	true	realizó	azotaban
+Relation	T9	T7	NoRel	true	realizó	perdió

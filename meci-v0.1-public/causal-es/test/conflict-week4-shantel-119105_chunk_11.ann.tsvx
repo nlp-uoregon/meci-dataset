@@ -1,0 +1,101 @@
+Text	Los heridos fueron repasados y otros prisioneros , fusilados .	Los comandantes chilenos ordenaron prender fuego a los depósitos de alcohol para evitar mayores desmanes de la tropa , pero , en el caos general , aquella orden no fue totalmente cumplida .	En Miraflores , el subteniente chileno Byssivinger fue muerto por sus soldados cuando defendía la vida de un oficial peruano prisionero .	El teniente coronel Baldomero Dublé Almeyda , que intentó imponer el orden a los soldados dispersos , fue herido por una bala extraviada .	Los chilenos muertos fueron enterrados en tumbas cavadas por prisioneros peruanos en los cementerios que existían en el pueblo .
+Event	T0	heridos	EVENT	4
+Event	T1	repasados	EVENT	19
+Event	T2	fusilados	EVENT	51
+Event	T3	desmanes	EVENT	159
+Event	T4	caos	EVENT	195
+Event	T5	orden	EVENT	218
+Event	T7	muerto	EVENT	308
+Event	T8	defendía	EVENT	339
+Event	T9	imponer	EVENT	449
+Event	T10	herido	EVENT	497
+Event	T11	extraviada	EVENT	517
+Event	T12	muertos	EVENT	543
+Event	T13	enterrados	EVENT	558
+Event	T14	cavadas	EVENT	579
+Event	T15	ordenaron	EVENT	88
+Relation	T11	T10	CauseEffect	true	extraviada	herido
+Relation	T10	T11	EffectCause	true	herido	extraviada
+Relation	T0	T11	NoRel	true	heridos	extraviada
+Relation	T0	T15	NoRel	true	heridos	ordenaron
+Relation	T0	T3	NoRel	true	heridos	desmanes
+Relation	T0	T8	NoRel	true	heridos	defendía
+Relation	T1	T10	NoRel	true	repasados	herido
+Relation	T1	T13	NoRel	true	repasados	enterrados
+Relation	T1	T4	NoRel	true	repasados	caos
+Relation	T10	T1	NoRel	true	herido	repasados
+Relation	T10	T12	NoRel	true	herido	muertos
+Relation	T10	T3	NoRel	true	herido	desmanes
+Relation	T10	T5	NoRel	true	herido	orden
+Relation	T10	T7	NoRel	true	herido	muerto
+Relation	T11	T0	NoRel	true	extraviada	heridos
+Relation	T11	T1	NoRel	true	extraviada	repasados
+Relation	T11	T12	NoRel	true	extraviada	muertos
+Relation	T11	T13	NoRel	true	extraviada	enterrados
+Relation	T11	T15	NoRel	true	extraviada	ordenaron
+Relation	T11	T3	NoRel	true	extraviada	desmanes
+Relation	T11	T5	NoRel	true	extraviada	orden
+Relation	T12	T0	NoRel	true	muertos	heridos
+Relation	T12	T1	NoRel	true	muertos	repasados
+Relation	T12	T10	NoRel	true	muertos	herido
+Relation	T12	T15	NoRel	true	muertos	ordenaron
+Relation	T12	T3	NoRel	true	muertos	desmanes
+Relation	T12	T9	NoRel	true	muertos	imponer
+Relation	T13	T1	NoRel	true	enterrados	repasados
+Relation	T13	T10	NoRel	true	enterrados	herido
+Relation	T13	T11	NoRel	true	enterrados	extraviada
+Relation	T13	T15	NoRel	true	enterrados	ordenaron
+Relation	T13	T5	NoRel	true	enterrados	orden
+Relation	T14	T1	NoRel	true	cavadas	repasados
+Relation	T14	T10	NoRel	true	cavadas	herido
+Relation	T14	T12	NoRel	true	cavadas	muertos
+Relation	T14	T2	NoRel	true	cavadas	fusilados
+Relation	T14	T4	NoRel	true	cavadas	caos
+Relation	T14	T5	NoRel	true	cavadas	orden
+Relation	T14	T8	NoRel	true	cavadas	defendía
+Relation	T14	T9	NoRel	true	cavadas	imponer
+Relation	T15	T0	NoRel	true	ordenaron	heridos
+Relation	T15	T12	NoRel	true	ordenaron	muertos
+Relation	T15	T3	NoRel	true	ordenaron	desmanes
+Relation	T15	T5	NoRel	true	ordenaron	orden
+Relation	T15	T7	NoRel	true	ordenaron	muerto
+Relation	T2	T10	NoRel	true	fusilados	herido
+Relation	T2	T11	NoRel	true	fusilados	extraviada
+Relation	T2	T15	NoRel	true	fusilados	ordenaron
+Relation	T2	T5	NoRel	true	fusilados	orden
+Relation	T2	T7	NoRel	true	fusilados	muerto
+Relation	T2	T8	NoRel	true	fusilados	defendía
+Relation	T3	T0	NoRel	true	desmanes	heridos
+Relation	T3	T10	NoRel	true	desmanes	herido
+Relation	T3	T12	NoRel	true	desmanes	muertos
+Relation	T3	T13	NoRel	true	desmanes	enterrados
+Relation	T3	T15	NoRel	true	desmanes	ordenaron
+Relation	T3	T9	NoRel	true	desmanes	imponer
+Relation	T4	T13	NoRel	true	caos	enterrados
+Relation	T4	T9	NoRel	true	caos	imponer
+Relation	T5	T0	NoRel	true	orden	heridos
+Relation	T5	T11	NoRel	true	orden	extraviada
+Relation	T5	T14	NoRel	true	orden	cavadas
+Relation	T5	T15	NoRel	true	orden	ordenaron
+Relation	T5	T8	NoRel	true	orden	defendía
+Relation	T5	T9	NoRel	true	orden	imponer
+Relation	T7	T13	NoRel	true	muerto	enterrados
+Relation	T7	T15	NoRel	true	muerto	ordenaron
+Relation	T7	T5	NoRel	true	muerto	orden
+Relation	T8	T0	NoRel	true	defendía	heridos
+Relation	T8	T10	NoRel	true	defendía	herido
+Relation	T8	T11	NoRel	true	defendía	extraviada
+Relation	T8	T13	NoRel	true	defendía	enterrados
+Relation	T8	T14	NoRel	true	defendía	cavadas
+Relation	T8	T15	NoRel	true	defendía	ordenaron
+Relation	T8	T4	NoRel	true	defendía	caos
+Relation	T8	T5	NoRel	true	defendía	orden
+Relation	T8	T7	NoRel	true	defendía	muerto
+Relation	T8	T9	NoRel	true	defendía	imponer
+Relation	T9	T10	NoRel	true	imponer	herido
+Relation	T9	T11	NoRel	true	imponer	extraviada
+Relation	T9	T12	NoRel	true	imponer	muertos
+Relation	T9	T14	NoRel	true	imponer	cavadas
+Relation	T9	T15	NoRel	true	imponer	ordenaron
+Relation	T9	T3	NoRel	true	imponer	desmanes
+Relation	T9	T8	NoRel	true	imponer	defendía

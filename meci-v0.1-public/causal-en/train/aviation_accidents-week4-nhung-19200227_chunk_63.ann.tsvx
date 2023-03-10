@@ -1,0 +1,35 @@
+Text	The plane suffered an engine failure , stalled during a turn back towards the airport and impacted Lake Juurusvesi .	6 October : A United States Navy Douglas C - 118B Liftmaster , BuNo__ 131618 _ , assigned to Fleet Logistics Support Squadron 52 ( VR - 52 ) crashes into a fog - shrouded hill 35 km south of Santiago de Chile , Chile .	All 18 people on board are killed .	19 October : A USAF Boeing B - 52D Stratofortress , _ 56-0594 _ , of the 22d Bomb Wing , crashes at 0730 hrs. in light fog in a plowed field ~ 2.5 miles SE of March AFB , near the rural community of Sunnymead , California , shortly after take - off .	Five crew killed , but one is able to escape the burning wreckage and was reported in stable condition at the base hospital .
+Event	T0	suffered	EVENT	10
+Event	T1	failure	EVENT	29
+Event	T2	stalled	EVENT	39
+Event	T3	impacted	EVENT	90
+Event	T4	assigned	EVENT	198
+Event	T6	killed	EVENT	363
+Event	T7	crashes	EVENT	461
+Event	T8	fog	EVENT	491
+Event	T10	killed	EVENT	633
+Event	T11	escape	EVENT	661
+Event	T12	wreckage	EVENT	680
+Event	T13	turn back	EVENT	56
+Event	T14	crashes	EVENT	258
+Event	T5	take - off	EVENT	610
+Relation	T1	T2	CauseEffect	true	failure	stalled
+Relation	T2	T1	EffectCause	true	stalled	failure
+Relation	T1	T3	CauseEffect	true	failure	impacted
+Relation	T3	T1	EffectCause	true	impacted	failure
+Relation	T14	T6	CauseEffect	true	crashes	killed
+Relation	T6	T14	EffectCause	true	killed	crashes
+Relation	T7	T10	CauseEffect	true	crashes	killed
+Relation	T10	T7	EffectCause	true	killed	crashes
+Relation	T7	T11	CauseEffect	true	crashes	escape
+Relation	T11	T7	EffectCause	true	escape	crashes
+Relation	T0	T11	NoRel	true	suffered	escape
+Relation	T0	T14	NoRel	true	suffered	crashes
+Relation	T0	T4	NoRel	true	suffered	assigned
+Relation	T13	T11	NoRel	true	turn back	escape
+Relation	T14	T11	NoRel	true	crashes	escape
+Relation	T2	T5	NoRel	true	stalled	take - off
+Relation	T4	T11	NoRel	true	assigned	escape
+Relation	T4	T3	NoRel	true	assigned	impacted
+Relation	T5	T14	NoRel	true	take - off	crashes
+Relation	T8	T14	NoRel	true	fog	crashes

@@ -1,0 +1,32 @@
+Text	Kendisi doğuştan Avusturya vatandaşıydı ve daha sonra Almanya'yı evi olarak kabul etti ve Münih Üniversitesi'ne kaydoldu .	Bir Alman milliyetçisi ve bir aristokrat olarak , bir monarşist ve annesinin Yahudi soyundan gelmesine rağmen anti - semitist olarak görülen Anton , Almanya'nın Bavyera Bağımsız Sosyal Demokrat Partisi'nin Yahudi lideri ve Bavyera Halk Devleti'nin başbakanı Kurt Eisner'den nefret etti .	Arco - Valley , kısmen Yahudi kökenli olduğu için aşırı milliyetçi bir grup olan Thule Cemiyeti'ne üyeliği reddedildikten sonra Eisner'ı " layık " olduğunu kanıtlamak için öldürmeye karar verebilirdi .	21 Şubat 1919'da , bir Münih caddesinde , von Arco - Valley , tek başına hareket ederek , Eisner'ı vurdu .	Eisner'ın öldürülmesi onu birçok Bavyeralı için üstün niteliklere sahip kimse olarak görüldü .
+Event	T0	kaydoldu	EVENT	112
+Event	T1	etti	EVENT	404
+Event	T2	reddedildikten	EVENT	518
+Event	T4	verebilirdi	EVENT	599
+Event	T6	vurdu	EVENT	712
+Event	T8	görüldü	EVENT	805
+Event	T9	etti	EVENT	82
+Event	T10	kökenli	EVENT	441
+Relation	T10	T2	CauseEffect	true	kökenli	reddedildikten
+Relation	T2	T10	EffectCause	true	reddedildikten	kökenli
+Relation	T1	T4	CauseEffect	true	etti	verebilirdi
+Relation	T4	T1	EffectCause	true	verebilirdi	etti
+Relation	T2	T4	CauseEffect	true	reddedildikten	verebilirdi
+Relation	T4	T2	EffectCause	true	verebilirdi	reddedildikten
+Relation	T4	T6	CauseEffect	true	verebilirdi	vurdu
+Relation	T6	T4	EffectCause	true	vurdu	verebilirdi
+Relation	T6	T8	CauseEffect	true	vurdu	görüldü
+Relation	T8	T6	EffectCause	true	görüldü	vurdu
+Relation	T0	T1	NoRel	true	kaydoldu	etti
+Relation	T0	T6	NoRel	true	kaydoldu	vurdu
+Relation	T0	T8	NoRel	true	kaydoldu	görüldü
+Relation	T0	T9	NoRel	true	kaydoldu	etti
+Relation	T1	T2	NoRel	true	etti	reddedildikten
+Relation	T1	T8	NoRel	true	etti	görüldü
+Relation	T10	T8	NoRel	true	kökenli	görüldü
+Relation	T10	T9	NoRel	true	kökenli	etti
+Relation	T6	T10	NoRel	true	vurdu	kökenli
+Relation	T8	T2	NoRel	true	görüldü	reddedildikten
+Relation	T8	T4	NoRel	true	görüldü	verebilirdi
+Relation	T8	T9	NoRel	true	görüldü	etti
+Relation	T9	T4	NoRel	true	etti	verebilirdi

@@ -1,0 +1,98 @@
+Text	I USA fik virussen senere fat end i Europa .	Men i slutningen af marts annoncerede Donald Trump , der tidligere havde betegnet sygdommen som en " almindelig influenza " , omfattende restriktioner på baggrund af en stærkt stigende kurve for antallet af dødsfald .	I begyndelsen af april var USA for første gang det land , der havde flest rapporterede døde , jf. de daglige rapporter fra Johns Hopkins University .	Pr. 26. oktober 2020 var der i alt over 8 millioner smittede , og 226.000 døde i USA .	Den 26. december 2020 var antallet af smittede i USA steget til 19.433.847 og antallet af personer i USA , der var døde med COVID-19 var 339.921 .
+Event	T0	virussen	EVENT	10
+Event	T1	fat	EVENT	26
+Event	T2	annoncerede	EVENT	71
+Event	T3	sygdommen	EVENT	127
+Event	T4	restriktioner	EVENT	182
+Event	T5	kurve	EVENT	230
+Event	T6	dødsfald	EVENT	252
+Event	T7	døde	EVENT	350
+Event	T8	rapporter	EVENT	372
+Event	T9	smittede	EVENT	465
+Event	T10	døde	EVENT	487
+Event	T11	smittede	EVENT	538
+Event	T12	steget	EVENT	553
+Event	T13	døde	EVENT	615
+Event	T14	influenza	EVENT	157
+Event	T15	COVID-19	EVENT	624
+Relation	T5	T4	CauseEffect	true	kurve	restriktioner
+Relation	T4	T5	EffectCause	true	restriktioner	kurve
+Relation	T0	T9	CauseEffect	true	virussen	smittede
+Relation	T9	T0	EffectCause	true	smittede	virussen
+Relation	T0	T10	CauseEffect	true	virussen	døde
+Relation	T10	T0	EffectCause	true	døde	virussen
+Relation	T0	T3	NoRel	true	virussen	sygdommen
+Relation	T0	T7	NoRel	true	virussen	døde
+Relation	T1	T14	NoRel	true	fat	influenza
+Relation	T1	T4	NoRel	true	fat	restriktioner
+Relation	T1	T9	NoRel	true	fat	smittede
+Relation	T10	T12	NoRel	true	døde	steget
+Relation	T10	T13	NoRel	true	døde	døde
+Relation	T10	T15	NoRel	true	døde	COVID-19
+Relation	T11	T0	NoRel	true	smittede	virussen
+Relation	T11	T10	NoRel	true	smittede	døde
+Relation	T11	T13	NoRel	true	smittede	døde
+Relation	T11	T15	NoRel	true	smittede	COVID-19
+Relation	T11	T3	NoRel	true	smittede	sygdommen
+Relation	T11	T5	NoRel	true	smittede	kurve
+Relation	T11	T8	NoRel	true	smittede	rapporter
+Relation	T12	T0	NoRel	true	steget	virussen
+Relation	T12	T1	NoRel	true	steget	fat
+Relation	T12	T14	NoRel	true	steget	influenza
+Relation	T12	T3	NoRel	true	steget	sygdommen
+Relation	T12	T9	NoRel	true	steget	smittede
+Relation	T13	T1	NoRel	true	døde	fat
+Relation	T13	T10	NoRel	true	døde	døde
+Relation	T13	T12	NoRel	true	døde	steget
+Relation	T13	T2	NoRel	true	døde	annoncerede
+Relation	T13	T4	NoRel	true	døde	restriktioner
+Relation	T13	T5	NoRel	true	døde	kurve
+Relation	T14	T2	NoRel	true	influenza	annoncerede
+Relation	T14	T4	NoRel	true	influenza	restriktioner
+Relation	T14	T7	NoRel	true	influenza	døde
+Relation	T15	T10	NoRel	true	COVID-19	døde
+Relation	T15	T12	NoRel	true	COVID-19	steget
+Relation	T15	T5	NoRel	true	COVID-19	kurve
+Relation	T2	T0	NoRel	true	annoncerede	virussen
+Relation	T2	T3	NoRel	true	annoncerede	sygdommen
+Relation	T2	T4	NoRel	true	annoncerede	restriktioner
+Relation	T2	T5	NoRel	true	annoncerede	kurve
+Relation	T2	T6	NoRel	true	annoncerede	dødsfald
+Relation	T3	T1	NoRel	true	sygdommen	fat
+Relation	T3	T13	NoRel	true	sygdommen	døde
+Relation	T3	T14	NoRel	true	sygdommen	influenza
+Relation	T3	T15	NoRel	true	sygdommen	COVID-19
+Relation	T3	T2	NoRel	true	sygdommen	annoncerede
+Relation	T3	T6	NoRel	true	sygdommen	dødsfald
+Relation	T3	T7	NoRel	true	sygdommen	døde
+Relation	T4	T1	NoRel	true	restriktioner	fat
+Relation	T4	T12	NoRel	true	restriktioner	steget
+Relation	T4	T15	NoRel	true	restriktioner	COVID-19
+Relation	T4	T2	NoRel	true	restriktioner	annoncerede
+Relation	T4	T8	NoRel	true	restriktioner	rapporter
+Relation	T4	T9	NoRel	true	restriktioner	smittede
+Relation	T5	T10	NoRel	true	kurve	døde
+Relation	T5	T2	NoRel	true	kurve	annoncerede
+Relation	T5	T6	NoRel	true	kurve	dødsfald
+Relation	T5	T7	NoRel	true	kurve	døde
+Relation	T6	T1	NoRel	true	dødsfald	fat
+Relation	T6	T10	NoRel	true	dødsfald	døde
+Relation	T6	T5	NoRel	true	dødsfald	kurve
+Relation	T6	T7	NoRel	true	dødsfald	døde
+Relation	T7	T0	NoRel	true	døde	virussen
+Relation	T7	T1	NoRel	true	døde	fat
+Relation	T7	T10	NoRel	true	døde	døde
+Relation	T7	T14	NoRel	true	døde	influenza
+Relation	T7	T15	NoRel	true	døde	COVID-19
+Relation	T7	T5	NoRel	true	døde	kurve
+Relation	T8	T0	NoRel	true	rapporter	virussen
+Relation	T8	T1	NoRel	true	rapporter	fat
+Relation	T8	T15	NoRel	true	rapporter	COVID-19
+Relation	T8	T3	NoRel	true	rapporter	sygdommen
+Relation	T8	T4	NoRel	true	rapporter	restriktioner
+Relation	T8	T9	NoRel	true	rapporter	smittede
+Relation	T9	T10	NoRel	true	smittede	døde
+Relation	T9	T12	NoRel	true	smittede	steget
+Relation	T9	T2	NoRel	true	smittede	annoncerede
+Relation	T9	T4	NoRel	true	smittede	restriktioner
+Relation	T9	T5	NoRel	true	smittede	kurve

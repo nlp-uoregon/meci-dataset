@@ -1,0 +1,79 @@
+Text	og _ The New York Times _ ,	- Sveriges statsminister Stefan Löfven skrev på sin officielle Twitter-profil : " _ Forfærdelig togulykke på Storebæltsbroen i Danmark som følge af stormen Alfrida .	Vores tanker er hos de sårede og hos de dødes familier og slægtninge ._ "	- Norgess statsminister Erna Solberg skrev på sin officielle Twitter-profil : " _ Min dybeste medfølelse til de etterlatte og alle som er ramt af den tragiske ulykke på Storebæltsbroen ._ "	- Formand for EU-Kommissionen Jean-Claude Juncker skrev på sin officielle Twitter-profil : _ På vegne af Europa_Kommissionen vil jeg gerne udtrykke min dybeste kondolence til familie og venner til de omkomne _
+Event	T0	skrev	EVENT	67
+Event	T1	togulykke	EVENT	124
+Event	T2	stormen	EVENT	176
+Event	T3	sårede	EVENT	217
+Event	T4	skrev	EVENT	305
+Event	T5	ramt	EVENT	406
+Event	T6	ulykke	EVENT	427
+Event	T7	skrev	EVENT	508
+Event	T8	udtrykke	EVENT	597
+Event	T9	omkomne	EVENT	658
+Event	T10	tanker	EVENT	200
+Event	T11	dødes	EVENT	234
+Event	T12	etterlatte	EVENT	380
+Relation	T2	T1	CauseEffect	true	stormen	togulykke
+Relation	T1	T2	EffectCause	true	togulykke	stormen
+Relation	T1	T11	CauseEffect	true	togulykke	dødes
+Relation	T11	T1	EffectCause	true	dødes	togulykke
+Relation	T1	T12	CauseEffect	true	togulykke	etterlatte
+Relation	T12	T1	EffectCause	true	etterlatte	togulykke
+Relation	T6	T12	CauseEffect	true	ulykke	etterlatte
+Relation	T12	T6	EffectCause	true	etterlatte	ulykke
+Relation	T0	T11	NoRel	true	skrev	dødes
+Relation	T0	T12	NoRel	true	skrev	etterlatte
+Relation	T0	T3	NoRel	true	skrev	sårede
+Relation	T0	T4	NoRel	true	skrev	skrev
+Relation	T0	T5	NoRel	true	skrev	ramt
+Relation	T0	T7	NoRel	true	skrev	skrev
+Relation	T0	T9	NoRel	true	skrev	omkomne
+Relation	T1	T3	NoRel	true	togulykke	sårede
+Relation	T1	T4	NoRel	true	togulykke	skrev
+Relation	T1	T5	NoRel	true	togulykke	ramt
+Relation	T10	T2	NoRel	true	tanker	stormen
+Relation	T10	T3	NoRel	true	tanker	sårede
+Relation	T11	T0	NoRel	true	dødes	skrev
+Relation	T11	T3	NoRel	true	dødes	sårede
+Relation	T11	T6	NoRel	true	dødes	ulykke
+Relation	T11	T7	NoRel	true	dødes	skrev
+Relation	T11	T9	NoRel	true	dødes	omkomne
+Relation	T12	T0	NoRel	true	etterlatte	skrev
+Relation	T12	T10	NoRel	true	etterlatte	tanker
+Relation	T12	T3	NoRel	true	etterlatte	sårede
+Relation	T12	T8	NoRel	true	etterlatte	udtrykke
+Relation	T2	T10	NoRel	true	stormen	tanker
+Relation	T2	T12	NoRel	true	stormen	etterlatte
+Relation	T2	T3	NoRel	true	stormen	sårede
+Relation	T2	T4	NoRel	true	stormen	skrev
+Relation	T2	T5	NoRel	true	stormen	ramt
+Relation	T3	T2	NoRel	true	sårede	stormen
+Relation	T3	T4	NoRel	true	sårede	skrev
+Relation	T4	T0	NoRel	true	skrev	skrev
+Relation	T4	T1	NoRel	true	skrev	togulykke
+Relation	T4	T10	NoRel	true	skrev	tanker
+Relation	T4	T11	NoRel	true	skrev	dødes
+Relation	T4	T5	NoRel	true	skrev	ramt
+Relation	T4	T7	NoRel	true	skrev	skrev
+Relation	T4	T9	NoRel	true	skrev	omkomne
+Relation	T5	T0	NoRel	true	ramt	skrev
+Relation	T5	T1	NoRel	true	ramt	togulykke
+Relation	T5	T10	NoRel	true	ramt	tanker
+Relation	T5	T11	NoRel	true	ramt	dødes
+Relation	T5	T2	NoRel	true	ramt	stormen
+Relation	T5	T9	NoRel	true	ramt	omkomne
+Relation	T6	T0	NoRel	true	ulykke	skrev
+Relation	T6	T10	NoRel	true	ulykke	tanker
+Relation	T6	T2	NoRel	true	ulykke	stormen
+Relation	T6	T8	NoRel	true	ulykke	udtrykke
+Relation	T7	T0	NoRel	true	skrev	skrev
+Relation	T7	T4	NoRel	true	skrev	skrev
+Relation	T8	T11	NoRel	true	udtrykke	dødes
+Relation	T8	T12	NoRel	true	udtrykke	etterlatte
+Relation	T8	T2	NoRel	true	udtrykke	stormen
+Relation	T8	T6	NoRel	true	udtrykke	ulykke
+Relation	T8	T9	NoRel	true	udtrykke	omkomne
+Relation	T9	T10	NoRel	true	omkomne	tanker
+Relation	T9	T12	NoRel	true	omkomne	etterlatte
+Relation	T9	T4	NoRel	true	omkomne	skrev
+Relation	T9	T6	NoRel	true	omkomne	ulykke
+Relation	T9	T8	NoRel	true	omkomne	udtrykke

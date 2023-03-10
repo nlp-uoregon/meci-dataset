@@ -1,0 +1,50 @@
+Text	حادثے کی وجہ معلوم کرنے کے لئے سرکاری تحقیقات کا حکم دیا گیا ۔	اس حادثے میں کم از کم 65 افراد ہلاک اور 150 کے قریب زخمی ہوئے ۔	ہلاک ہونے والوں میں ریلوے کے چار ملازمین بھی شامل ہیں ۔	گھوٹکی ضلع پولیس کے سربراہ عمر طفیل نے بتایا کہ تقریباً 25 افراد ملبے میں پھنسے رہے ۔	سرکار نے اعلان کیا ہے کہ حادثہ میں ہلاک ہونے والے افراد کے گھر والوں کو 15 لاکھ کی ​​امداد کی جائے گی ، جبکہ زخمی ہونے والے افراد کو ان کی چوٹ کی بنیاد پر 100000 سے 300000 کی امداد کی جائے گی ۔
+Event	T0	حادثے	EVENT	0
+Event	T1	تحقیقات	EVENT	38
+Event	T10	زخمی	EVENT	378
+Event	T2	حادثے	EVENT	66
+Event	T3	ہلاک	EVENT	94
+Event	T6	بتایا	EVENT	222
+Event	T7	پھنسے	EVENT	257
+Event	T8	حادثہ	EVENT	294
+Event	T9	ہلاک	EVENT	304
+Relation	T0	T1	CauseEffect	true	حادثے	تحقیقات
+Relation	T1	T0	EffectCause	true	تحقیقات	حادثے
+Relation	T2	T3	CauseEffect	true	حادثے	ہلاک
+Relation	T3	T2	EffectCause	true	ہلاک	حادثے
+Relation	T2	T7	CauseEffect	true	حادثے	پھنسے
+Relation	T7	T2	EffectCause	true	پھنسے	حادثے
+Relation	T8	T9	CauseEffect	true	حادثہ	ہلاک
+Relation	T9	T8	EffectCause	true	ہلاک	حادثہ
+Relation	T8	T10	CauseEffect	true	حادثہ	زخمی
+Relation	T10	T8	EffectCause	true	زخمی	حادثہ
+Relation	T0	T3	CauseEffect	true	حادثے	ہلاک
+Relation	T3	T0	EffectCause	true	ہلاک	حادثے
+Relation	T2	T1	CauseEffect	true	حادثے	تحقیقات
+Relation	T1	T2	EffectCause	true	تحقیقات	حادثے
+Relation	T0	T7	CauseEffect	true	حادثے	پھنسے
+Relation	T7	T0	EffectCause	true	پھنسے	حادثے
+Relation	T0	T9	CauseEffect	true	حادثے	ہلاک
+Relation	T9	T0	EffectCause	true	ہلاک	حادثے
+Relation	T2	T9	CauseEffect	true	حادثے	ہلاک
+Relation	T9	T2	EffectCause	true	ہلاک	حادثے
+Relation	T0	T10	CauseEffect	true	حادثے	زخمی
+Relation	T10	T0	EffectCause	true	زخمی	حادثے
+Relation	T2	T10	CauseEffect	true	حادثے	زخمی
+Relation	T10	T2	EffectCause	true	زخمی	حادثے
+Relation	T8	T7	CauseEffect	true	حادثہ	پھنسے
+Relation	T7	T8	EffectCause	true	پھنسے	حادثہ
+Relation	T8	T3	CauseEffect	true	حادثہ	ہلاک
+Relation	T3	T8	EffectCause	true	ہلاک	حادثہ
+Relation	T8	T1	CauseEffect	true	حادثہ	تحقیقات
+Relation	T1	T8	EffectCause	true	تحقیقات	حادثہ
+Relation	T0	T6	NoRel	true	حادثے	بتایا
+Relation	T1	T10	NoRel	true	تحقیقات	زخمی
+Relation	T10	T1	NoRel	true	زخمی	تحقیقات
+Relation	T2	T0	NoRel	true	حادثے	حادثے
+Relation	T2	T6	NoRel	true	حادثے	بتایا
+Relation	T3	T1	NoRel	true	ہلاک	تحقیقات
+Relation	T6	T1	NoRel	true	بتایا	تحقیقات
+Relation	T6	T9	NoRel	true	بتایا	ہلاک
+Relation	T8	T2	NoRel	true	حادثہ	حادثے
+Relation	T9	T1	NoRel	true	ہلاک	تحقیقات

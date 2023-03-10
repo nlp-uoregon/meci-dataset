@@ -1,0 +1,60 @@
+Text	Lassen Zirvesi 27.000 yıl faaliyet göstermeden sönmüş bir volkan görünüşunde iken 30 Mayıs 1914'te bir istim patlaması gösterek aktif faaliyete geçti .	En çok volkanik faaliyet gösterdiği bir dönem böylece başladı ve bu büyük faaliyet 7 yıl kadar sürdü .	1915 Mayıs ortasına kadar tüm sayısı 180'e varan istim infilakı ile Lessen Zirvesi'nde 300 m genişliğinde bir krater açılmış oldu .	22 Mayıs 1916'de meydana gelen büyük volkanik infilak etrafına volkanik kul , istim , erimiş kar suyu ile karışık kül , tüf ve kaya parçacıkları ve akar sıvı halinde lahar yayıp 20. yüzyılda ancak 1980'de St Helena Dağı'nın infilakına kadar ABD'de görülmeyen büyük volkanik faaliyet gösterdi .	Sonra bu faaliyet hafifledi ama günümüzde de Lessan Zirvesi etrafında kaynayan çamur kazanları , duman saçan fümeroller , kaynar sular havuzları ve çamur gayzerleri bulunmaktadır .
+Event	T0	geçti	EVENT	144
+Event	T2	başladı	EVENT	206
+Event	T3	faaliyet	EVENT	226
+Event	T4	sürdü	EVENT	247
+Event	T7	yayıp	EVENT	559
+Event	T8	gösterdi	EVENT	670
+Event	T9	hafifledi	EVENT	699
+Event	T10	patlaması	EVENT	109
+Event	T1	infilakı	EVENT	310
+Event	T5	oldu	EVENT	380
+Event	T6	bulunmaktadır	EVENT	846
+Relation	T10	T0	CauseEffect	true	patlaması	geçti
+Relation	T0	T10	EffectCause	true	geçti	patlaması
+Relation	T0	T4	CauseEffect	true	geçti	sürdü
+Relation	T4	T0	EffectCause	true	sürdü	geçti
+Relation	T0	T5	CauseEffect	true	geçti	oldu
+Relation	T5	T0	EffectCause	true	oldu	geçti
+Relation	T1	T5	CauseEffect	true	infilakı	oldu
+Relation	T5	T1	EffectCause	true	oldu	infilakı
+Relation	T0	T7	CauseEffect	true	geçti	yayıp
+Relation	T7	T0	EffectCause	true	yayıp	geçti
+Relation	T7	T8	CauseEffect	true	yayıp	gösterdi
+Relation	T8	T7	EffectCause	true	gösterdi	yayıp
+Relation	T4	T9	CauseEffect	true	sürdü	hafifledi
+Relation	T9	T4	EffectCause	true	hafifledi	sürdü
+Relation	T0	T1	NoRel	true	geçti	infilakı
+Relation	T0	T6	NoRel	true	geçti	bulunmaktadır
+Relation	T1	T2	NoRel	true	infilakı	başladı
+Relation	T1	T3	NoRel	true	infilakı	faaliyet
+Relation	T1	T6	NoRel	true	infilakı	bulunmaktadır
+Relation	T1	T8	NoRel	true	infilakı	gösterdi
+Relation	T1	T9	NoRel	true	infilakı	hafifledi
+Relation	T10	T4	NoRel	true	patlaması	sürdü
+Relation	T10	T7	NoRel	true	patlaması	yayıp
+Relation	T2	T0	NoRel	true	başladı	geçti
+Relation	T2	T4	NoRel	true	başladı	sürdü
+Relation	T2	T7	NoRel	true	başladı	yayıp
+Relation	T3	T10	NoRel	true	faaliyet	patlaması
+Relation	T3	T2	NoRel	true	faaliyet	başladı
+Relation	T3	T6	NoRel	true	faaliyet	bulunmaktadır
+Relation	T3	T7	NoRel	true	faaliyet	yayıp
+Relation	T3	T8	NoRel	true	faaliyet	gösterdi
+Relation	T4	T2	NoRel	true	sürdü	başladı
+Relation	T4	T5	NoRel	true	sürdü	oldu
+Relation	T4	T6	NoRel	true	sürdü	bulunmaktadır
+Relation	T4	T8	NoRel	true	sürdü	gösterdi
+Relation	T5	T2	NoRel	true	oldu	başladı
+Relation	T5	T6	NoRel	true	oldu	bulunmaktadır
+Relation	T5	T7	NoRel	true	oldu	yayıp
+Relation	T5	T8	NoRel	true	oldu	gösterdi
+Relation	T5	T9	NoRel	true	oldu	hafifledi
+Relation	T7	T4	NoRel	true	yayıp	sürdü
+Relation	T7	T6	NoRel	true	yayıp	bulunmaktadır
+Relation	T7	T9	NoRel	true	yayıp	hafifledi
+Relation	T8	T2	NoRel	true	gösterdi	başladı
+Relation	T9	T1	NoRel	true	hafifledi	infilakı
+Relation	T9	T5	NoRel	true	hafifledi	oldu
+Relation	T9	T7	NoRel	true	hafifledi	yayıp
+Relation	T9	T8	NoRel	true	hafifledi	gösterdi

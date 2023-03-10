@@ -1,0 +1,30 @@
+Text	De fandt computeren med flyets data 13. september og den sorte boks dagen efter .	Computeren blev fundet begravet otte meter nede i krateret .	FBI ønskede først ikke at frigive lydoptagelserne fra flyets sorte boks , skønt dette var blevet forlangt af kongresmedlemmet Ellen Tauscher samt familiemedlemmer til passagererne om bord .	Senere gav FBI de pårørende lov til at lytte til optagelserne ved et lukket møde den 18. april 2002 .	Den 12. april 2006 blev optagelserne så officielt frigivet .
+Event	T0	fandt	EVENT	3
+Event	T1	begravet	EVENT	105
+Event	T2	ønskede	EVENT	147
+Event	T3	forlangt	EVENT	240
+Event	T4	gav	EVENT	340
+Event	T5	møde	EVENT	409
+Event	T6	optagelserne	EVENT	459
+Event	T7	frigivet	EVENT	485
+Relation	T1	T0	CauseEffect	true	begravet	fandt
+Relation	T0	T1	EffectCause	true	fandt	begravet
+Relation	T3	T4	CauseEffect	true	forlangt	gav
+Relation	T4	T3	EffectCause	true	gav	forlangt
+Relation	T0	T7	NoRel	true	fandt	frigivet
+Relation	T1	T2	NoRel	true	begravet	ønskede
+Relation	T2	T1	NoRel	true	ønskede	begravet
+Relation	T2	T3	NoRel	true	ønskede	forlangt
+Relation	T2	T5	NoRel	true	ønskede	møde
+Relation	T2	T7	NoRel	true	ønskede	frigivet
+Relation	T3	T0	NoRel	true	forlangt	fandt
+Relation	T3	T6	NoRel	true	forlangt	optagelserne
+Relation	T4	T2	NoRel	true	gav	ønskede
+Relation	T4	T6	NoRel	true	gav	optagelserne
+Relation	T5	T1	NoRel	true	møde	begravet
+Relation	T5	T3	NoRel	true	møde	forlangt
+Relation	T5	T7	NoRel	true	møde	frigivet
+Relation	T6	T5	NoRel	true	optagelserne	møde
+Relation	T7	T3	NoRel	true	frigivet	forlangt
+Relation	T7	T5	NoRel	true	frigivet	møde
+Relation	T7	T6	NoRel	true	frigivet	optagelserne

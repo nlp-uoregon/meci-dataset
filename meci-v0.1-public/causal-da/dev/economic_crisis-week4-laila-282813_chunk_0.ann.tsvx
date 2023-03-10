@@ -1,0 +1,41 @@
+Text	NØRRESUNDBY BANK A/S var en dansk lokalbank med hovedsæde i Nørresundby .	Banken fusionerede med Nordjyske Bank den 1. april 2015 .	Banken havde inden sammenlægningen 13 afdelinger i og omkring Aalborg og ca. 65.000 kunder ( 2012 ) .	Nørresundby Bank blev stiftet 29. december 1897 som _ Banken for Nørresundby og Omegn _ og første afdeling åbnede 3. juni 1898 .	Den 10. oktober 2014 offentliggjorde bestyrelsen , at der var indgået aftale med bestyrelsen i Nordjyske Bank om en fusion af de to pengeinstitutter under navnet Nordbank A/S med Nordjyske Bank som fortsættende selskab .
+Event	T0	fusionerede	EVENT	81
+Event	T1	stiftet	EVENT	256
+Event	T2	åbnede	EVENT	341
+Event	T3	offentliggjorde	EVENT	384
+Event	T4	aftale	EVENT	433
+Event	T5	fusion	EVENT	479
+Event	T6	fortsættende	EVENT	561
+Event	T7	under	EVENT	512
+Event	T8	sammenlægningen	EVENT	151
+Event	T9	hovedsæde	EVENT	48
+Relation	T4	T5	CauseEffect	true	aftale	fusion
+Relation	T5	T4	EffectCause	true	fusion	aftale
+Relation	T0	T3	NoRel	true	fusionerede	offentliggjorde
+Relation	T0	T5	NoRel	true	fusionerede	fusion
+Relation	T0	T7	NoRel	true	fusionerede	under
+Relation	T0	T9	NoRel	true	fusionerede	hovedsæde
+Relation	T1	T4	NoRel	true	stiftet	aftale
+Relation	T2	T5	NoRel	true	åbnede	fusion
+Relation	T2	T9	NoRel	true	åbnede	hovedsæde
+Relation	T3	T1	NoRel	true	offentliggjorde	stiftet
+Relation	T3	T5	NoRel	true	offentliggjorde	fusion
+Relation	T3	T8	NoRel	true	offentliggjorde	sammenlægningen
+Relation	T4	T2	NoRel	true	aftale	åbnede
+Relation	T4	T8	NoRel	true	aftale	sammenlægningen
+Relation	T4	T9	NoRel	true	aftale	hovedsæde
+Relation	T5	T6	NoRel	true	fusion	fortsættende
+Relation	T5	T8	NoRel	true	fusion	sammenlægningen
+Relation	T6	T0	NoRel	true	fortsættende	fusionerede
+Relation	T6	T1	NoRel	true	fortsættende	stiftet
+Relation	T6	T5	NoRel	true	fortsættende	fusion
+Relation	T6	T8	NoRel	true	fortsættende	sammenlægningen
+Relation	T6	T9	NoRel	true	fortsættende	hovedsæde
+Relation	T7	T0	NoRel	true	under	fusionerede
+Relation	T7	T2	NoRel	true	under	åbnede
+Relation	T7	T9	NoRel	true	under	hovedsæde
+Relation	T8	T2	NoRel	true	sammenlægningen	åbnede
+Relation	T8	T6	NoRel	true	sammenlægningen	fortsættende
+Relation	T9	T1	NoRel	true	hovedsæde	stiftet
+Relation	T9	T3	NoRel	true	hovedsæde	offentliggjorde
+Relation	T9	T4	NoRel	true	hovedsæde	aftale

@@ -1,0 +1,45 @@
+Text	Later that day , it struck the east coast of Florida near Stuart , and crossed the state in around 15 hours .	After weakening to a tropical storm , it quickly re-strengthened upon emerging into the Gulf of Mexico , and made another landfall near Apalachicola , Florida , on August 13 .	Over land , the cyclone slowed considerably and quickly deteriorated .	By August 14 , the storm had weakened to a tropical depression as it drifted through Alabama .	The depression turned to the northeast , and remained a tropical depression until it dissipated just offshore New Jersey on August 20 .
+Event	T0	struck	EVENT	20
+Event	T1	crossed	EVENT	71
+Event	T2	storm	EVENT	140
+Event	T3	re-strengthened	EVENT	159
+Event	T4	made	EVENT	219
+Event	T5	landfall	EVENT	232
+Event	T6	slowed	EVENT	310
+Event	T7	deteriorated	EVENT	342
+Event	T8	storm	EVENT	376
+Event	T9	depression	EVENT	409
+Event	T10	drifted	EVENT	426
+Event	T11	remained	EVENT	497
+Event	T12	depression	EVENT	517
+Event	T13	dissipated	EVENT	537
+Event	T14	weakening	EVENT	116
+Relation	T14	T3	CauseEffect	true	weakening	re-strengthened
+Relation	T3	T14	EffectCause	true	re-strengthened	weakening
+Relation	T3	T5	CauseEffect	true	re-strengthened	landfall
+Relation	T5	T3	EffectCause	true	landfall	re-strengthened
+Relation	T6	T7	CauseEffect	true	slowed	deteriorated
+Relation	T7	T6	EffectCause	true	deteriorated	slowed
+Relation	T10	T9	CauseEffect	true	drifted	depression
+Relation	T9	T10	EffectCause	true	depression	drifted
+Relation	T0	T7	NoRel	true	struck	deteriorated
+Relation	T1	T14	NoRel	true	crossed	weakening
+Relation	T1	T3	NoRel	true	crossed	re-strengthened
+Relation	T1	T9	NoRel	true	crossed	depression
+Relation	T10	T4	NoRel	true	drifted	made
+Relation	T11	T12	NoRel	true	remained	depression
+Relation	T13	T14	NoRel	true	dissipated	weakening
+Relation	T14	T2	NoRel	true	weakening	storm
+Relation	T2	T10	NoRel	true	storm	drifted
+Relation	T3	T12	NoRel	true	re-strengthened	depression
+Relation	T3	T13	NoRel	true	re-strengthened	dissipated
+Relation	T3	T6	NoRel	true	re-strengthened	slowed
+Relation	T4	T7	NoRel	true	made	deteriorated
+Relation	T5	T4	NoRel	true	landfall	made
+Relation	T5	T6	NoRel	true	landfall	slowed
+Relation	T6	T0	NoRel	true	slowed	struck
+Relation	T6	T5	NoRel	true	slowed	landfall
+Relation	T7	T10	NoRel	true	deteriorated	drifted
+Relation	T7	T13	NoRel	true	deteriorated	dissipated
+Relation	T7	T2	NoRel	true	deteriorated	storm
+Relation	T7	T4	NoRel	true	deteriorated	made

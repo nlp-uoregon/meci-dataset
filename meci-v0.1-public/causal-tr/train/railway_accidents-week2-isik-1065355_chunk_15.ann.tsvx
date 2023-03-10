@@ -1,0 +1,34 @@
+Text	- 6 Ocak , 2006 – Possum Point , Virginia , Amerika Birleşik Devletleri : - Bir kırk CSX demiryolu sepep olur VRE Tren # 304 Possum Point’de raydan çıkmasına .	Altı vagonun son üç vagonu hattan kurtulur fakat üzerine düşmez .	NTSB , CSX’in hız sınırlamaları ve tamiri sağlamadığını bulur .	Sadece hafif yaralanmalar vardır .	- Ocak , 2007 – Hatay , Türkiye : Bir yük treni , Türkiye’de Hatay bölgesinde çiftlik işçilerini taşıyan bir kamyona çarpar ; 7 ölü ve 19 yaralı .
+Event	T0	çıkmasına	EVENT	148
+Event	T1	kurtulur	EVENT	194
+Event	T2	taşıyan	EVENT	422
+Event	T3	bulur	EVENT	282
+Event	T4	yaralanmalar	EVENT	303
+Event	T5	çarpar	EVENT	442
+Event	T6	ölü	EVENT	453
+Event	T8	yaralı	EVENT	463
+Relation	T1	T4	CauseEffect	true	kurtulur	yaralanmalar
+Relation	T4	T1	EffectCause	true	yaralanmalar	kurtulur
+Relation	T0	T1	CauseEffect	true	çıkmasına	kurtulur
+Relation	T1	T0	EffectCause	true	kurtulur	çıkmasına
+Relation	T0	T5	NoRel	true	çıkmasına	çarpar
+Relation	T1	T3	NoRel	true	kurtulur	bulur
+Relation	T1	T8	NoRel	true	kurtulur	yaralı
+Relation	T2	T0	NoRel	true	taşıyan	çıkmasına
+Relation	T2	T1	NoRel	true	taşıyan	kurtulur
+Relation	T2	T6	NoRel	true	taşıyan	ölü
+Relation	T3	T0	NoRel	true	bulur	çıkmasına
+Relation	T3	T2	NoRel	true	bulur	taşıyan
+Relation	T3	T4	NoRel	true	bulur	yaralanmalar
+Relation	T3	T5	NoRel	true	bulur	çarpar
+Relation	T5	T0	NoRel	true	çarpar	çıkmasına
+Relation	T5	T1	NoRel	true	çarpar	kurtulur
+Relation	T5	T3	NoRel	true	çarpar	bulur
+Relation	T5	T6	NoRel	true	çarpar	ölü
+Relation	T5	T8	NoRel	true	çarpar	yaralı
+Relation	T6	T2	NoRel	true	ölü	taşıyan
+Relation	T6	T5	NoRel	true	ölü	çarpar
+Relation	T6	T8	NoRel	true	ölü	yaralı
+Relation	T8	T2	NoRel	true	yaralı	taşıyan
+Relation	T8	T4	NoRel	true	yaralı	yaralanmalar
+Relation	T8	T6	NoRel	true	yaralı	ölü

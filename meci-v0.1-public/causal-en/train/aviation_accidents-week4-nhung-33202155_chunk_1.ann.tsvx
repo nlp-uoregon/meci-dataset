@@ -1,0 +1,37 @@
+Text	Air traffic controllers and members of the investigation team claim the reason for the crash was pilot error .	The sixteen passengers included ten Indian nationals , one Japanese , two Americans and three Nepalese .	All but one of the passengers and the three crew died at the scene of the accident ; one Nepalese passenger was rescued but died on the way to hospital .	Category : Aviation accidents and incidents in 2011 Category : Accidents and incidents involving the Beechcraft 1900	Category : Aviation accidents and incidents in Nepal
+Event	T0	investigation	EVENT	43
+Event	T1	claim	EVENT	62
+Event	T2	crash	EVENT	87
+Event	T3	error	EVENT	103
+Event	T4	included	EVENT	134
+Event	T5	died	EVENT	265
+Event	T6	accident	EVENT	290
+Event	T7	rescued	EVENT	328
+Event	T8	accidents	EVENT	390
+Event	T9	incidents	EVENT	404
+Event	T10	Accidents	EVENT	433
+Event	T11	accidents	EVENT	507
+Event	T12	incidents	EVENT	521
+Event	T13	died	EVENT	340
+Event	T14	incidents	EVENT	447
+Relation	T3	T2	CauseEffect	true	error	crash
+Relation	T2	T3	EffectCause	true	crash	error
+Relation	T6	T5	CauseEffect	true	accident	died
+Relation	T5	T6	EffectCause	true	died	accident
+Relation	T6	T7	CauseEffect	true	accident	rescued
+Relation	T7	T6	EffectCause	true	rescued	accident
+Relation	T0	T11	NoRel	true	investigation	accidents
+Relation	T0	T14	NoRel	true	investigation	incidents
+Relation	T0	T6	NoRel	true	investigation	accident
+Relation	T1	T2	NoRel	true	claim	crash
+Relation	T1	T8	NoRel	true	claim	accidents
+Relation	T10	T13	NoRel	true	Accidents	died
+Relation	T10	T8	NoRel	true	Accidents	accidents
+Relation	T13	T6	NoRel	true	died	accident
+Relation	T14	T13	NoRel	true	incidents	died
+Relation	T3	T13	NoRel	true	error	died
+Relation	T4	T0	NoRel	true	included	investigation
+Relation	T4	T14	NoRel	true	included	incidents
+Relation	T6	T8	NoRel	true	accident	accidents
+Relation	T9	T13	NoRel	true	incidents	died
+Relation	T9	T7	NoRel	true	incidents	rescued

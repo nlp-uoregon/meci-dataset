@@ -1,0 +1,61 @@
+Text	31 دسمبر 2019ء کو ، وائرس کی وجہ سے صوبہ ہوبئی کے دارالحکومت ووہان میں ، محکمہ صحت کے حکام کو نامعلوم نمونیا کے واقعات کی اطلاع ملی تھی ، اور اس بیماری کی تحقیقات اگلے مہینے کے اوائل میں شروع ہوگئیں ۔	ان متاثرہ افراد کی زیادہ تعداد کا تعلق ، سمندری جانوروں کے ایک بازار سے تھا ، جہاں زندہ جانوروں کا کاروبار ہوتا ہے ، اس ہی وجہ سے یہ کہا جا رہا ہے کہ وائرس کی وجہ زونوٹک ( zoonotic ) ہے ۔	ابتدائی مراحل کے دوران میں ، ہر سات دنوں میں متاثرہ افراد کی تعداد دگنی ہوتی رہی ۔	2020 کے اوائل اور وسط جنوری میں ، چینی کے دوسرے صوبوں میں بھی یہ وائرس پھیل گیا ، اور اس میں نئے چینی سال کی آمد نے اہم کردار ادا کیا ، ووہان چین میں نقل و حمل کا مرکز اور ریلوے کا ایک اہم مقام ہے ، جس وجہ سے متاثرہ افراد تیزی سے پورے ملک میں پھیل گئے ۔	20 جنوری کو ، چین نے ایک ہی دن میں ، 140 نئے متاثرہ افراد کی تصدیق کی ، جن میں سے ایک بیجنگ کا اور دوسرا شینزین کا تھا ۔
+Event	T0	نمونیا	EVENT	102
+Event	T1	واقعات	EVENT	112
+Event	T2	ملی	EVENT	128
+Event	T3	بیماری	EVENT	145
+Event	T4	تحقیقات	EVENT	155
+Event	T5	ہوگئیں	EVENT	192
+Event	T6	کاروبار	EVENT	300
+Event	T7	کہا	EVENT	334
+Event	T8	وائرس	EVENT	351
+Event	T9	گیا	EVENT	548
+Event	T10	آمد	EVENT	581
+Event	T11	گئے	EVENT	720
+Relation	T3	T4	CauseEffect	true	بیماری	تحقیقات
+Relation	T4	T3	EffectCause	true	تحقیقات	بیماری
+Relation	T0	T1	NoRel	true	نمونیا	واقعات
+Relation	T0	T2	NoRel	true	نمونیا	ملی
+Relation	T0	T3	NoRel	true	نمونیا	بیماری
+Relation	T0	T5	NoRel	true	نمونیا	ہوگئیں
+Relation	T0	T7	NoRel	true	نمونیا	کہا
+Relation	T1	T2	NoRel	true	واقعات	ملی
+Relation	T1	T3	NoRel	true	واقعات	بیماری
+Relation	T1	T5	NoRel	true	واقعات	ہوگئیں
+Relation	T1	T7	NoRel	true	واقعات	کہا
+Relation	T10	T0	NoRel	true	آمد	نمونیا
+Relation	T10	T2	NoRel	true	آمد	ملی
+Relation	T10	T3	NoRel	true	آمد	بیماری
+Relation	T10	T4	NoRel	true	آمد	تحقیقات
+Relation	T11	T3	NoRel	true	گئے	بیماری
+Relation	T2	T3	NoRel	true	ملی	بیماری
+Relation	T2	T6	NoRel	true	ملی	کاروبار
+Relation	T2	T8	NoRel	true	ملی	وائرس
+Relation	T3	T10	NoRel	true	بیماری	آمد
+Relation	T3	T11	NoRel	true	بیماری	گئے
+Relation	T4	T1	NoRel	true	تحقیقات	واقعات
+Relation	T4	T11	NoRel	true	تحقیقات	گئے
+Relation	T4	T2	NoRel	true	تحقیقات	ملی
+Relation	T4	T6	NoRel	true	تحقیقات	کاروبار
+Relation	T4	T7	NoRel	true	تحقیقات	کہا
+Relation	T4	T9	NoRel	true	تحقیقات	گیا
+Relation	T5	T1	NoRel	true	ہوگئیں	واقعات
+Relation	T5	T10	NoRel	true	ہوگئیں	آمد
+Relation	T5	T2	NoRel	true	ہوگئیں	ملی
+Relation	T5	T4	NoRel	true	ہوگئیں	تحقیقات
+Relation	T5	T8	NoRel	true	ہوگئیں	وائرس
+Relation	T6	T1	NoRel	true	کاروبار	واقعات
+Relation	T6	T3	NoRel	true	کاروبار	بیماری
+Relation	T6	T5	NoRel	true	کاروبار	ہوگئیں
+Relation	T7	T0	NoRel	true	کہا	نمونیا
+Relation	T7	T5	NoRel	true	کہا	ہوگئیں
+Relation	T7	T6	NoRel	true	کہا	کاروبار
+Relation	T7	T8	NoRel	true	کہا	وائرس
+Relation	T8	T0	NoRel	true	وائرس	نمونیا
+Relation	T8	T1	NoRel	true	وائرس	واقعات
+Relation	T8	T10	NoRel	true	وائرس	آمد
+Relation	T8	T7	NoRel	true	وائرس	کہا
+Relation	T8	T9	NoRel	true	وائرس	گیا
+Relation	T9	T0	NoRel	true	گیا	نمونیا
+Relation	T9	T1	NoRel	true	گیا	واقعات
+Relation	T9	T5	NoRel	true	گیا	ہوگئیں
+Relation	T9	T6	NoRel	true	گیا	کاروبار

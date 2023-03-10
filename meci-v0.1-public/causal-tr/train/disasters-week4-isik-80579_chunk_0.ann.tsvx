@@ -1,0 +1,35 @@
+Text	1780 BÜYÜK KASIRGASI Atlantik'in gelmiş geçmiş en ölümcül tropikal kasırgası olarak kabul edilir .	Fırtınanın Küçük Antiller'den Barbados , Martinik ve Sint Eustatius'u 10 Ekim - 16 Ekim 1 tarihleri arasında vurması sonucu yaklaşık 22.000 kişi ölmüştür .	Binlerce ölü kıyıdan uzakta ortaya çıkmıştır .	Mitch Kasırgası ise 1998 Atlantik kasırgası sezonunda Honduras ve çevresinde 11.000 -18.000 kişinin ölümüne yol açmıştır .	1780 fırtınasındaki ölü sayısı yalnız başına , diğer tüm Atlantik kasırgalarının 10 yıllık zaman aralıklarındaki toplamlarından daha fazladır .
+Event	T0	edilir	EVENT	90
+Event	T1	ölmüştür	EVENT	244
+Event	T2	ölü	EVENT	264
+Event	T3	çıkmıştır	EVENT	290
+Event	T4	Kasırgası	EVENT	308
+Event	T5	kasırgası	EVENT	336
+Event	T6	açmıştır	EVENT	414
+Event	T7	ölü	EVENT	445
+Event	T8	KASIRGASI	EVENT	11
+Relation	T8	T1	CauseEffect	true	KASIRGASI	ölmüştür
+Relation	T1	T8	EffectCause	true	ölmüştür	KASIRGASI
+Relation	T8	T3	CauseEffect	true	KASIRGASI	çıkmıştır
+Relation	T3	T8	EffectCause	true	çıkmıştır	KASIRGASI
+Relation	T4	T6	CauseEffect	true	Kasırgası	açmıştır
+Relation	T6	T4	EffectCause	true	açmıştır	Kasırgası
+Relation	T0	T1	NoRel	true	edilir	ölmüştür
+Relation	T0	T4	NoRel	true	edilir	Kasırgası
+Relation	T0	T8	NoRel	true	edilir	KASIRGASI
+Relation	T1	T2	NoRel	true	ölmüştür	ölü
+Relation	T2	T1	NoRel	true	ölü	ölmüştür
+Relation	T2	T3	NoRel	true	ölü	çıkmıştır
+Relation	T2	T6	NoRel	true	ölü	açmıştır
+Relation	T2	T7	NoRel	true	ölü	ölü
+Relation	T2	T8	NoRel	true	ölü	KASIRGASI
+Relation	T4	T7	NoRel	true	Kasırgası	ölü
+Relation	T5	T1	NoRel	true	kasırgası	ölmüştür
+Relation	T5	T6	NoRel	true	kasırgası	açmıştır
+Relation	T6	T3	NoRel	true	açmıştır	çıkmıştır
+Relation	T6	T7	NoRel	true	açmıştır	ölü
+Relation	T7	T2	NoRel	true	ölü	ölü
+Relation	T7	T3	NoRel	true	ölü	çıkmıştır
+Relation	T7	T5	NoRel	true	ölü	kasırgası
+Relation	T8	T6	NoRel	true	KASIRGASI	açmıştır
+Relation	T8	T7	NoRel	true	KASIRGASI	ölü

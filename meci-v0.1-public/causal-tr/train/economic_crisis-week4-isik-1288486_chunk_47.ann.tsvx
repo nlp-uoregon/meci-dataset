@@ -1,0 +1,29 @@
+Text	KPD , Kapp Darbesi sırasında ikircikli kalan tutumunun tekrar yaşanmasından korkarak güvenlik güçlerinin saldırısını beklemeden saldırıya geçme kararı aldı .	KPD Berlin’deki günlük yayını olan Kızıl Bayrak ( _ Rote Fahne _ ) gazetesi işçilere genel grev ve ayaklanma çağrısı yaparak , işçilerin silahlanması yönünde çalışma yürütmeye başladı .	KPD’nin bu çağrısı işçiler tarafından bir karşılık bulamadı .	KPD’nin ayaklanma yolundaki bütün çabaları bir şeye yaramadı .	Hükûmet bile bu ayaklanma girişimini pek ciddiye almayıp yerel bir durum olarak görüyordu .
+Event	T3	aldı	EVENT	151
+Event	T6	başladı	EVENT	334
+Event	T7	çağrısı	EVENT	355
+Event	T8	ayaklanma	EVENT	414
+Event	T9	Kapp Darbesi	EVENT	6
+Event	T1	korkarak	EVENT	76
+Event	T2	çağrısı	EVENT	267
+Event	T4	bulamadı	EVENT	395
+Relation	T9	T1	CauseEffect	true	Kapp Darbesi	korkarak
+Relation	T1	T9	EffectCause	true	korkarak	Kapp Darbesi
+Relation	T1	T3	CauseEffect	true	korkarak	aldı
+Relation	T3	T1	EffectCause	true	aldı	korkarak
+Relation	T2	T6	CauseEffect	true	çağrısı	başladı
+Relation	T6	T2	EffectCause	true	başladı	çağrısı
+Relation	T6	T4	CauseEffect	true	başladı	bulamadı
+Relation	T4	T6	EffectCause	true	bulamadı	başladı
+Relation	T1	T4	NoRel	true	korkarak	bulamadı
+Relation	T2	T8	NoRel	true	çağrısı	ayaklanma
+Relation	T3	T4	NoRel	true	aldı	bulamadı
+Relation	T3	T8	NoRel	true	aldı	ayaklanma
+Relation	T6	T9	NoRel	true	başladı	Kapp Darbesi
+Relation	T7	T3	NoRel	true	çağrısı	aldı
+Relation	T7	T6	NoRel	true	çağrısı	başladı
+Relation	T8	T1	NoRel	true	ayaklanma	korkarak
+Relation	T8	T7	NoRel	true	ayaklanma	çağrısı
+Relation	T9	T2	NoRel	true	Kapp Darbesi	çağrısı
+Relation	T9	T3	NoRel	true	Kapp Darbesi	aldı
+Relation	T9	T8	NoRel	true	Kapp Darbesi	ayaklanma

@@ -1,0 +1,109 @@
+Text	El 24 de septiembre de 1676 , el fin de la epidemia se celebró con el despeje de barricadas , disparos de armas , el zumbido de campanas y procesiones .	La peste es causada por microbios en ratas , que se propagan a los seres humanos a través de pulgas infectadas de las ratas .	Las pulgas también pueden transmitir la enfermedad entre las personas .	La epidemia consistía principalmente en peste bubónica , pero algunos casos también eran neumónicos o septicémicos .	Los síntomas incluían fiebre , dolores de cabeza y bubones .
+Event	T0	fin	EVENT	33
+Event	T1	epidemia	EVENT	43
+Event	T10	infectadas	EVENT	253
+Event	T11	transmitir	EVENT	305
+Event	T12	enfermedad	EVENT	319
+Event	T13	consistía	EVENT	363
+Event	T14	peste	EVENT	391
+Event	T15	fiebre	EVENT	490
+Event	T16	dolores	EVENT	499
+Event	T2	celebró	EVENT	55
+Event	T3	despeje	EVENT	70
+Event	T4	disparos	EVENT	94
+Event	T5	zumbido	EVENT	117
+Event	T6	procesiones	EVENT	139
+Event	T7	peste	EVENT	156
+Event	T8	causada	EVENT	165
+Event	T9	propagan	EVENT	205
+Relation	T10	T9	CauseEffect	true	infectadas	propagan
+Relation	T9	T10	EffectCause	true	propagan	infectadas
+Relation	T0	T2	CauseEffect	true	fin	celebró
+Relation	T2	T0	EffectCause	true	celebró	fin
+Relation	T0	T11	NoRel	true	fin	transmitir
+Relation	T0	T3	NoRel	true	fin	despeje
+Relation	T0	T6	NoRel	true	fin	procesiones
+Relation	T0	T8	NoRel	true	fin	causada
+Relation	T1	T10	NoRel	true	epidemia	infectadas
+Relation	T1	T11	NoRel	true	epidemia	transmitir
+Relation	T1	T13	NoRel	true	epidemia	consistía
+Relation	T1	T16	NoRel	true	epidemia	dolores
+Relation	T1	T2	NoRel	true	epidemia	celebró
+Relation	T1	T3	NoRel	true	epidemia	despeje
+Relation	T1	T4	NoRel	true	epidemia	disparos
+Relation	T1	T6	NoRel	true	epidemia	procesiones
+Relation	T10	T0	NoRel	true	infectadas	fin
+Relation	T10	T11	NoRel	true	infectadas	transmitir
+Relation	T10	T13	NoRel	true	infectadas	consistía
+Relation	T10	T14	NoRel	true	infectadas	peste
+Relation	T10	T3	NoRel	true	infectadas	despeje
+Relation	T10	T4	NoRel	true	infectadas	disparos
+Relation	T10	T7	NoRel	true	infectadas	peste
+Relation	T10	T8	NoRel	true	infectadas	causada
+Relation	T11	T13	NoRel	true	transmitir	consistía
+Relation	T11	T15	NoRel	true	transmitir	fiebre
+Relation	T11	T5	NoRel	true	transmitir	zumbido
+Relation	T12	T10	NoRel	true	enfermedad	infectadas
+Relation	T12	T13	NoRel	true	enfermedad	consistía
+Relation	T12	T7	NoRel	true	enfermedad	peste
+Relation	T12	T8	NoRel	true	enfermedad	causada
+Relation	T13	T11	NoRel	true	consistía	transmitir
+Relation	T13	T12	NoRel	true	consistía	enfermedad
+Relation	T13	T2	NoRel	true	consistía	celebró
+Relation	T13	T4	NoRel	true	consistía	disparos
+Relation	T13	T6	NoRel	true	consistía	procesiones
+Relation	T13	T7	NoRel	true	consistía	peste
+Relation	T14	T12	NoRel	true	peste	enfermedad
+Relation	T14	T4	NoRel	true	peste	disparos
+Relation	T14	T8	NoRel	true	peste	causada
+Relation	T14	T9	NoRel	true	peste	propagan
+Relation	T15	T0	NoRel	true	fiebre	fin
+Relation	T15	T12	NoRel	true	fiebre	enfermedad
+Relation	T15	T13	NoRel	true	fiebre	consistía
+Relation	T15	T14	NoRel	true	fiebre	peste
+Relation	T15	T3	NoRel	true	fiebre	despeje
+Relation	T15	T6	NoRel	true	fiebre	procesiones
+Relation	T15	T9	NoRel	true	fiebre	propagan
+Relation	T16	T1	NoRel	true	dolores	epidemia
+Relation	T16	T10	NoRel	true	dolores	infectadas
+Relation	T16	T11	NoRel	true	dolores	transmitir
+Relation	T16	T12	NoRel	true	dolores	enfermedad
+Relation	T16	T15	NoRel	true	dolores	fiebre
+Relation	T16	T5	NoRel	true	dolores	zumbido
+Relation	T16	T7	NoRel	true	dolores	peste
+Relation	T2	T15	NoRel	true	celebró	fiebre
+Relation	T3	T0	NoRel	true	despeje	fin
+Relation	T3	T11	NoRel	true	despeje	transmitir
+Relation	T3	T15	NoRel	true	despeje	fiebre
+Relation	T3	T4	NoRel	true	despeje	disparos
+Relation	T3	T8	NoRel	true	despeje	causada
+Relation	T4	T0	NoRel	true	disparos	fin
+Relation	T4	T13	NoRel	true	disparos	consistía
+Relation	T4	T15	NoRel	true	disparos	fiebre
+Relation	T4	T2	NoRel	true	disparos	celebró
+Relation	T4	T6	NoRel	true	disparos	procesiones
+Relation	T5	T13	NoRel	true	zumbido	consistía
+Relation	T5	T16	NoRel	true	zumbido	dolores
+Relation	T5	T7	NoRel	true	zumbido	peste
+Relation	T6	T1	NoRel	true	procesiones	epidemia
+Relation	T6	T13	NoRel	true	procesiones	consistía
+Relation	T6	T16	NoRel	true	procesiones	dolores
+Relation	T6	T3	NoRel	true	procesiones	despeje
+Relation	T7	T14	NoRel	true	peste	peste
+Relation	T7	T15	NoRel	true	peste	fiebre
+Relation	T7	T2	NoRel	true	peste	celebró
+Relation	T7	T3	NoRel	true	peste	despeje
+Relation	T7	T6	NoRel	true	peste	procesiones
+Relation	T7	T9	NoRel	true	peste	propagan
+Relation	T8	T1	NoRel	true	causada	epidemia
+Relation	T8	T10	NoRel	true	causada	infectadas
+Relation	T8	T15	NoRel	true	causada	fiebre
+Relation	T8	T3	NoRel	true	causada	despeje
+Relation	T8	T7	NoRel	true	causada	peste
+Relation	T9	T0	NoRel	true	propagan	fin
+Relation	T9	T1	NoRel	true	propagan	epidemia
+Relation	T9	T11	NoRel	true	propagan	transmitir
+Relation	T9	T12	NoRel	true	propagan	enfermedad
+Relation	T9	T13	NoRel	true	propagan	consistía
+Relation	T9	T15	NoRel	true	propagan	fiebre
+Relation	T9	T4	NoRel	true	propagan	disparos

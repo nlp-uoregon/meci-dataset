@@ -1,0 +1,117 @@
+Text	Además , según el juez , el avión estaría en modo vuelo , deshabilitando así el sistema de alarma de los flaps , algo que los técnicos de mantenimiento no advirtieron .	Por esa razón , imputó por homicidio al jefe técnico y a los dos técnicos de Spanair que revisaron el avión antes del vuelo .	En diciembre de 2011 , el juez concluyó la investigación del accidente llevando a juicio a los dos técnicos de mantenimiento que revisaron el avión acusados de 154 delitos de homicidio imprudente y 18 delitos de lesiones imprudentes .	El juez archivó el procedimiento respecto a los otros tres imputados : el jefe de mantenimiento de Spanair , el jefe de la división de mantenimiento en línea de Spanair y el jefe de la división de calidad de Spanair .	En septiembre de 2012 , la Audiencia Provincial de Madrid archivó la causa penal contra los dos técnicos de mantenimiento al considerar que la responsabilidad final del accidente fue de los pilotos .
+Event	T0	deshabilitando	EVENT	58
+Event	T1	flaps	EVENT	105
+Event	T3	imputó	EVENT	185
+Event	T4	homicidio	EVENT	196
+Event	T5	revisaron	EVENT	258
+Event	T6	vuelo	EVENT	287
+Event	T7	concluyó	EVENT	326
+Event	T8	investigación	EVENT	338
+Event	T9	juicio	EVENT	377
+Event	T10	revisaron	EVENT	424
+Event	T11	acusados	EVENT	443
+Event	T13	procedimiento	EVENT	549
+Event	T14	archivó	EVENT	806
+Event	T16	considerar	EVENT	873
+Event	T17	accidente	EVENT	917
+Event	T18	accidente	EVENT	356
+Event	T2	archivó	EVENT	538
+Event	T12	homicidio	EVENT	470
+Relation	T17	T9	CauseEffect	true	accidente	juicio
+Relation	T9	T17	EffectCause	true	juicio	accidente
+Relation	T17	T8	CauseEffect	true	accidente	investigación
+Relation	T8	T17	EffectCause	true	investigación	accidente
+Relation	T9	T11	CauseEffect	true	juicio	acusados
+Relation	T11	T9	EffectCause	true	acusados	juicio
+Relation	T18	T9	CauseEffect	true	accidente	juicio
+Relation	T9	T18	EffectCause	true	juicio	accidente
+Relation	T0	T1	NoRel	true	deshabilitando	flaps
+Relation	T0	T10	NoRel	true	deshabilitando	revisaron
+Relation	T0	T12	NoRel	true	deshabilitando	homicidio
+Relation	T0	T18	NoRel	true	deshabilitando	accidente
+Relation	T0	T8	NoRel	true	deshabilitando	investigación
+Relation	T1	T0	NoRel	true	flaps	deshabilitando
+Relation	T1	T12	NoRel	true	flaps	homicidio
+Relation	T1	T16	NoRel	true	flaps	considerar
+Relation	T1	T4	NoRel	true	flaps	homicidio
+Relation	T1	T6	NoRel	true	flaps	vuelo
+Relation	T1	T9	NoRel	true	flaps	juicio
+Relation	T10	T12	NoRel	true	revisaron	homicidio
+Relation	T10	T13	NoRel	true	revisaron	procedimiento
+Relation	T10	T17	NoRel	true	revisaron	accidente
+Relation	T10	T4	NoRel	true	revisaron	homicidio
+Relation	T11	T0	NoRel	true	acusados	deshabilitando
+Relation	T11	T10	NoRel	true	acusados	revisaron
+Relation	T11	T12	NoRel	true	acusados	homicidio
+Relation	T11	T4	NoRel	true	acusados	homicidio
+Relation	T11	T7	NoRel	true	acusados	concluyó
+Relation	T12	T0	NoRel	true	homicidio	deshabilitando
+Relation	T12	T10	NoRel	true	homicidio	revisaron
+Relation	T12	T13	NoRel	true	homicidio	procedimiento
+Relation	T12	T16	NoRel	true	homicidio	considerar
+Relation	T12	T2	NoRel	true	homicidio	archivó
+Relation	T12	T3	NoRel	true	homicidio	imputó
+Relation	T12	T6	NoRel	true	homicidio	vuelo
+Relation	T13	T0	NoRel	true	procedimiento	deshabilitando
+Relation	T13	T10	NoRel	true	procedimiento	revisaron
+Relation	T13	T3	NoRel	true	procedimiento	imputó
+Relation	T13	T5	NoRel	true	procedimiento	revisaron
+Relation	T13	T8	NoRel	true	procedimiento	investigación
+Relation	T13	T9	NoRel	true	procedimiento	juicio
+Relation	T14	T18	NoRel	true	archivó	accidente
+Relation	T14	T3	NoRel	true	archivó	imputó
+Relation	T16	T14	NoRel	true	considerar	archivó
+Relation	T16	T6	NoRel	true	considerar	vuelo
+Relation	T16	T8	NoRel	true	considerar	investigación
+Relation	T16	T9	NoRel	true	considerar	juicio
+Relation	T17	T0	NoRel	true	accidente	deshabilitando
+Relation	T17	T12	NoRel	true	accidente	homicidio
+Relation	T17	T2	NoRel	true	accidente	archivó
+Relation	T17	T3	NoRel	true	accidente	imputó
+Relation	T17	T4	NoRel	true	accidente	homicidio
+Relation	T18	T1	NoRel	true	accidente	flaps
+Relation	T18	T10	NoRel	true	accidente	revisaron
+Relation	T18	T13	NoRel	true	accidente	procedimiento
+Relation	T2	T1	NoRel	true	archivó	flaps
+Relation	T2	T10	NoRel	true	archivó	revisaron
+Relation	T2	T14	NoRel	true	archivó	archivó
+Relation	T2	T16	NoRel	true	archivó	considerar
+Relation	T2	T17	NoRel	true	archivó	accidente
+Relation	T2	T8	NoRel	true	archivó	investigación
+Relation	T3	T1	NoRel	true	imputó	flaps
+Relation	T3	T10	NoRel	true	imputó	revisaron
+Relation	T3	T12	NoRel	true	imputó	homicidio
+Relation	T3	T17	NoRel	true	imputó	accidente
+Relation	T3	T6	NoRel	true	imputó	vuelo
+Relation	T3	T7	NoRel	true	imputó	concluyó
+Relation	T3	T9	NoRel	true	imputó	juicio
+Relation	T4	T12	NoRel	true	homicidio	homicidio
+Relation	T4	T16	NoRel	true	homicidio	considerar
+Relation	T4	T18	NoRel	true	homicidio	accidente
+Relation	T4	T5	NoRel	true	homicidio	revisaron
+Relation	T4	T7	NoRel	true	homicidio	concluyó
+Relation	T5	T1	NoRel	true	revisaron	flaps
+Relation	T5	T17	NoRel	true	revisaron	accidente
+Relation	T5	T18	NoRel	true	revisaron	accidente
+Relation	T5	T2	NoRel	true	revisaron	archivó
+Relation	T5	T6	NoRel	true	revisaron	vuelo
+Relation	T5	T8	NoRel	true	revisaron	investigación
+Relation	T6	T0	NoRel	true	vuelo	deshabilitando
+Relation	T6	T1	NoRel	true	vuelo	flaps
+Relation	T6	T10	NoRel	true	vuelo	revisaron
+Relation	T6	T11	NoRel	true	vuelo	acusados
+Relation	T6	T4	NoRel	true	vuelo	homicidio
+Relation	T6	T9	NoRel	true	vuelo	juicio
+Relation	T7	T0	NoRel	true	concluyó	deshabilitando
+Relation	T7	T10	NoRel	true	concluyó	revisaron
+Relation	T7	T12	NoRel	true	concluyó	homicidio
+Relation	T7	T4	NoRel	true	concluyó	homicidio
+Relation	T7	T5	NoRel	true	concluyó	revisaron
+Relation	T7	T6	NoRel	true	concluyó	vuelo
+Relation	T8	T14	NoRel	true	investigación	archivó
+Relation	T8	T9	NoRel	true	investigación	juicio
+Relation	T9	T1	NoRel	true	juicio	flaps
+Relation	T9	T12	NoRel	true	juicio	homicidio
+Relation	T9	T14	NoRel	true	juicio	archivó
+Relation	T9	T3	NoRel	true	juicio	imputó
+Relation	T9	T8	NoRel	true	juicio	investigación

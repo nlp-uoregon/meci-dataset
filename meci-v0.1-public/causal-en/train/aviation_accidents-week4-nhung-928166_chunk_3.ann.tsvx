@@ -1,0 +1,132 @@
+Text	A monument to the victims was built in Ben Shemen forest in Israel .	Occurring less than a month after the September 11 attacks in the United States , the crash was initially suspected by Russian officials to be an act of terrorism , and they denied American reports that it was caused by an S - 200 missile .	Later , the Moscow - based Interstate Aviation Committee ruled that the crash was caused by an accidental Ukrainian S - 200 missile strike during military training exercises staged off Cape Opuk in Crimea .	Initial private assessments by American military officials determined that the crash was caused by a S - 200 missile that had overshot its target drone — which had been destroyed successfully by an S - 300 fired at the same time — and instead of self - destructing , locked on the passenger plane about further away and detonated over the plane .	Russian officials dismissed the American claim as " unworthy of attention , " and Russian president Vladimir Putin told the press the next day that " the weapons used in those exercises had such characteristics that make it impossible for them to reach the air corridor through which the plane was moving . "
+Event	T0	built	EVENT	30
+Event	T1	Occurring	EVENT	69
+Event	T2	attacks	EVENT	120
+Event	T3	crash	EVENT	155
+Event	T4	suspected	EVENT	175
+Event	T5	act	EVENT	215
+Event	T6	denied	EVENT	243
+Event	T7	reports	EVENT	259
+Event	T8	caused	EVENT	279
+Event	T9	ruled	EVENT	367
+Event	T10	crash	EVENT	382
+Event	T11	caused	EVENT	392
+Event	T13	strike	EVENT	442
+Event	T14	assessments	EVENT	533
+Event	T15	determined	EVENT	576
+Event	T16	crash	EVENT	596
+Event	T17	caused	EVENT	606
+Event	T18	overshot	EVENT	643
+Event	T19	destroyed	EVENT	686
+Event	T20	fired	EVENT	723
+Event	T22	dismissed	EVENT	882
+Event	T23	claim	EVENT	905
+Event	T24	told	EVENT	979
+Event	T25	used	EVENT	1026
+Event	T26	exercises	EVENT	1040
+Event	T27	reach	EVENT	1111
+Event	T28	moving	EVENT	1162
+Event	T29	make	EVENT	1080
+Event	T12	self - destructing	EVENT	763
+Relation	T18	T16	CauseEffect	true	overshot	crash
+Relation	T16	T18	EffectCause	true	crash	overshot
+Relation	T23	T22	CauseEffect	true	claim	dismissed
+Relation	T22	T23	EffectCause	true	dismissed	claim
+Relation	T2	T0	CauseEffect	true	attacks	built
+Relation	T0	T2	EffectCause	true	built	attacks
+Relation	T5	T3	CauseEffect	true	act	crash
+Relation	T3	T5	EffectCause	true	crash	act
+Relation	T7	T6	CauseEffect	true	reports	denied
+Relation	T6	T7	EffectCause	true	denied	reports
+Relation	T13	T10	CauseEffect	true	strike	crash
+Relation	T10	T13	EffectCause	true	crash	strike
+Relation	T25	T29	CauseEffect	true	used	make
+Relation	T29	T25	EffectCause	true	make	used
+Relation	T28	T27	CauseEffect	true	moving	reach
+Relation	T27	T28	EffectCause	true	reach	moving
+Relation	T0	T17	NoRel	true	built	caused
+Relation	T1	T11	NoRel	true	Occurring	caused
+Relation	T1	T13	NoRel	true	Occurring	strike
+Relation	T1	T15	NoRel	true	Occurring	determined
+Relation	T1	T6	NoRel	true	Occurring	denied
+Relation	T10	T14	NoRel	true	crash	assessments
+Relation	T10	T17	NoRel	true	crash	caused
+Relation	T10	T7	NoRel	true	crash	reports
+Relation	T11	T25	NoRel	true	caused	used
+Relation	T11	T27	NoRel	true	caused	reach
+Relation	T11	T4	NoRel	true	caused	suspected
+Relation	T11	T8	NoRel	true	caused	caused
+Relation	T12	T15	NoRel	true	self - destructing	determined
+Relation	T12	T24	NoRel	true	self - destructing	told
+Relation	T12	T29	NoRel	true	self - destructing	make
+Relation	T12	T6	NoRel	true	self - destructing	denied
+Relation	T13	T16	NoRel	true	strike	crash
+Relation	T13	T4	NoRel	true	strike	suspected
+Relation	T14	T0	NoRel	true	assessments	built
+Relation	T14	T1	NoRel	true	assessments	Occurring
+Relation	T14	T10	NoRel	true	assessments	crash
+Relation	T14	T24	NoRel	true	assessments	told
+Relation	T15	T1	NoRel	true	determined	Occurring
+Relation	T15	T17	NoRel	true	determined	caused
+Relation	T15	T22	NoRel	true	determined	dismissed
+Relation	T15	T27	NoRel	true	determined	reach
+Relation	T16	T15	NoRel	true	crash	determined
+Relation	T16	T24	NoRel	true	crash	told
+Relation	T17	T16	NoRel	true	caused	crash
+Relation	T17	T2	NoRel	true	caused	attacks
+Relation	T17	T25	NoRel	true	caused	used
+Relation	T18	T10	NoRel	true	overshot	crash
+Relation	T18	T12	NoRel	true	overshot	self - destructing
+Relation	T18	T15	NoRel	true	overshot	determined
+Relation	T18	T6	NoRel	true	overshot	denied
+Relation	T18	T8	NoRel	true	overshot	caused
+Relation	T19	T18	NoRel	true	destroyed	overshot
+Relation	T2	T13	NoRel	true	attacks	strike
+Relation	T2	T20	NoRel	true	attacks	fired
+Relation	T23	T0	NoRel	true	claim	built
+Relation	T23	T16	NoRel	true	claim	crash
+Relation	T23	T17	NoRel	true	claim	caused
+Relation	T23	T19	NoRel	true	claim	destroyed
+Relation	T23	T26	NoRel	true	claim	exercises
+Relation	T23	T29	NoRel	true	claim	make
+Relation	T24	T17	NoRel	true	told	caused
+Relation	T24	T28	NoRel	true	told	moving
+Relation	T24	T7	NoRel	true	told	reports
+Relation	T25	T2	NoRel	true	used	attacks
+Relation	T26	T0	NoRel	true	exercises	built
+Relation	T26	T1	NoRel	true	exercises	Occurring
+Relation	T26	T14	NoRel	true	exercises	assessments
+Relation	T26	T23	NoRel	true	exercises	claim
+Relation	T26	T3	NoRel	true	exercises	crash
+Relation	T27	T12	NoRel	true	reach	self - destructing
+Relation	T27	T14	NoRel	true	reach	assessments
+Relation	T27	T16	NoRel	true	reach	crash
+Relation	T27	T26	NoRel	true	reach	exercises
+Relation	T28	T11	NoRel	true	moving	caused
+Relation	T28	T19	NoRel	true	moving	destroyed
+Relation	T28	T4	NoRel	true	moving	suspected
+Relation	T29	T0	NoRel	true	make	built
+Relation	T29	T9	NoRel	true	make	ruled
+Relation	T3	T0	NoRel	true	crash	built
+Relation	T3	T1	NoRel	true	crash	Occurring
+Relation	T3	T24	NoRel	true	crash	told
+Relation	T3	T29	NoRel	true	crash	make
+Relation	T3	T9	NoRel	true	crash	ruled
+Relation	T4	T0	NoRel	true	suspected	built
+Relation	T4	T14	NoRel	true	suspected	assessments
+Relation	T4	T2	NoRel	true	suspected	attacks
+Relation	T5	T12	NoRel	true	act	self - destructing
+Relation	T5	T13	NoRel	true	act	strike
+Relation	T6	T13	NoRel	true	denied	strike
+Relation	T6	T2	NoRel	true	denied	attacks
+Relation	T6	T3	NoRel	true	denied	crash
+Relation	T7	T16	NoRel	true	reports	crash
+Relation	T7	T2	NoRel	true	reports	attacks
+Relation	T7	T22	NoRel	true	reports	dismissed
+Relation	T7	T24	NoRel	true	reports	told
+Relation	T8	T0	NoRel	true	caused	built
+Relation	T8	T11	NoRel	true	caused	caused
+Relation	T8	T12	NoRel	true	caused	self - destructing
+Relation	T8	T17	NoRel	true	caused	caused
+Relation	T8	T2	NoRel	true	caused	attacks
+Relation	T8	T29	NoRel	true	caused	make

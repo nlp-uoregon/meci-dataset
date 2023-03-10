@@ -1,0 +1,82 @@
+Text	Commentators such as Johnson point out that this action was illegal , and that in deferring the investigation to the ICAO , the Reagan administration effectively precluded any politically or militarily sensitive information from being subpoenaed that might have embarrassed the administration or contradicted its version of events .	Unlike the NTSB , ICAO can subpoena neither persons nor documents and is dependent on the governments involved — in this incident , the United States , the Soviet Union , Japan , and South Korea — to supply evidence voluntarily .	The International Civil Aviation Organization ( ICAO ) had only one experience of investigation of an air disaster prior to the KAL 007 shootdown .	This was the incident of February 21 , 1973 , when Libyan Arab Airlines Flight 114 was shot down by Israeli F - 4 jets over the Sinai Peninsula .	ICAO convention required the state in whose territory the accident had taken place ( the Soviet Union ) to conduct an investigation together with the country of registration ( South Korea ) , the country whose air traffic control the aircraft was flying under ( Japan ) , as well as the country of the aircraft 's manufacturer ( USA ) .
+Event	T0	action	EVENT	49
+Event	T1	deferring	EVENT	82
+Event	T2	investigation	EVENT	96
+Event	T3	precluded	EVENT	162
+Event	T4	subpoenaed	EVENT	235
+Event	T5	embarrassed	EVENT	262
+Event	T6	contradicted	EVENT	296
+Event	T7	events	EVENT	324
+Event	T8	subpoena	EVENT	360
+Event	T9	incident	EVENT	454
+Event	T10	supply	EVENT	533
+Event	T11	experience	EVENT	631
+Event	T12	investigation	EVENT	645
+Event	T13	disaster	EVENT	669
+Event	T14	shootdown	EVENT	699
+Event	T15	incident	EVENT	724
+Event	T16	required	EVENT	873
+Event	T17	accident	EVENT	915
+Event	T18	conduct	EVENT	964
+Event	T19	investigation	EVENT	975
+Event	T20	control	EVENT	1079
+Event	T21	flying	EVENT	1104
+Event	T22	shot down	EVENT	798
+Relation	T3	T1	CauseEffect	true	precluded	deferring
+Relation	T1	T3	EffectCause	true	deferring	precluded
+Relation	T4	T5	CauseEffect	true	subpoenaed	embarrassed
+Relation	T5	T4	EffectCause	true	embarrassed	subpoenaed
+Relation	T4	T6	CauseEffect	true	subpoenaed	contradicted
+Relation	T6	T4	EffectCause	true	contradicted	subpoenaed
+Relation	T17	T18	CauseEffect	true	accident	conduct
+Relation	T18	T17	EffectCause	true	conduct	accident
+Relation	T0	T15	NoRel	true	action	incident
+Relation	T0	T16	NoRel	true	action	required
+Relation	T0	T17	NoRel	true	action	accident
+Relation	T0	T5	NoRel	true	action	embarrassed
+Relation	T1	T17	NoRel	true	deferring	accident
+Relation	T1	T18	NoRel	true	deferring	conduct
+Relation	T1	T8	NoRel	true	deferring	subpoena
+Relation	T11	T13	NoRel	true	experience	disaster
+Relation	T11	T18	NoRel	true	experience	conduct
+Relation	T11	T21	NoRel	true	experience	flying
+Relation	T12	T16	NoRel	true	investigation	required
+Relation	T12	T7	NoRel	true	investigation	events
+Relation	T14	T21	NoRel	true	shootdown	flying
+Relation	T15	T17	NoRel	true	incident	accident
+Relation	T15	T9	NoRel	true	incident	incident
+Relation	T16	T17	NoRel	true	required	accident
+Relation	T16	T6	NoRel	true	required	contradicted
+Relation	T18	T14	NoRel	true	conduct	shootdown
+Relation	T18	T16	NoRel	true	conduct	required
+Relation	T18	T7	NoRel	true	conduct	events
+Relation	T19	T0	NoRel	true	investigation	action
+Relation	T19	T20	NoRel	true	investigation	control
+Relation	T19	T21	NoRel	true	investigation	flying
+Relation	T2	T21	NoRel	true	investigation	flying
+Relation	T20	T14	NoRel	true	control	shootdown
+Relation	T20	T18	NoRel	true	control	conduct
+Relation	T20	T5	NoRel	true	control	embarrassed
+Relation	T21	T9	NoRel	true	flying	incident
+Relation	T22	T3	NoRel	true	shot down	precluded
+Relation	T3	T11	NoRel	true	precluded	experience
+Relation	T3	T19	NoRel	true	precluded	investigation
+Relation	T3	T9	NoRel	true	precluded	incident
+Relation	T4	T1	NoRel	true	subpoenaed	deferring
+Relation	T5	T12	NoRel	true	embarrassed	investigation
+Relation	T5	T18	NoRel	true	embarrassed	conduct
+Relation	T5	T9	NoRel	true	embarrassed	incident
+Relation	T6	T11	NoRel	true	contradicted	experience
+Relation	T6	T20	NoRel	true	contradicted	control
+Relation	T6	T21	NoRel	true	contradicted	flying
+Relation	T6	T9	NoRel	true	contradicted	incident
+Relation	T7	T1	NoRel	true	events	deferring
+Relation	T7	T12	NoRel	true	events	investigation
+Relation	T7	T14	NoRel	true	events	shootdown
+Relation	T7	T19	NoRel	true	events	investigation
+Relation	T8	T2	NoRel	true	subpoena	investigation
+Relation	T8	T21	NoRel	true	subpoena	flying
+Relation	T9	T10	NoRel	true	incident	supply
+Relation	T9	T20	NoRel	true	incident	control
+Relation	T9	T4	NoRel	true	incident	subpoenaed
+Relation	T9	T5	NoRel	true	incident	embarrassed

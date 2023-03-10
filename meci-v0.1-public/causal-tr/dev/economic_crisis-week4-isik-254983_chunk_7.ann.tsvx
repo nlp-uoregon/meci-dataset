@@ -1,0 +1,47 @@
+Text	Hindenburg , 2 Ağustos 1934'te Doğu Prusya'nın Neudeck kentindeki evinde akciğer kanserinden 86 yaşında ölene kadar görevde kaldı .	Bir gün önce Hitler , Hindenburg'un ölüm döşeğinde olduğu haberini aldı .	Daha sonra bakanlar kabinesi , Hindenburg'un ölümü üzerine başkanlık makamının kaldırılacağını ve yetkilerinin _ Şansölye ve Führer und Reichskanzler _ unvanı altında birleştirileceğini öngören " Reich'in En Yüksek Eyalet Dairesi Hakkında Kanun "_u meclisten geçirdi .	Hindenburg'un ölümünden iki saat sonra , bu yasanın bir sonucu olarak , Hitler'in artık hem Almanya'nın devlet başkanı hem de hükûmet başkanı olduğu ve böylece yasal olarak görevden alınabileceği son çarenin ortadan kaldırıldığı ve mutlak diktatör statüsünü pekiştirdiği açıklandı .	Hitler , cumhurbaşkanlığının Hindenburg ile " ayrılmaz bir şekilde birleştiğini " ve bu unvanın bir daha kullanılmasının uygun olmayacağını kamuoyuna duyurdu .
+Event	T0	kanserinden	EVENT	81
+Event	T1	ölene	EVENT	104
+Event	T2	kaldı	EVENT	124
+Event	T3	ölüm	EVENT	168
+Event	T4	aldı	EVENT	199
+Event	T5	ölümü	EVENT	251
+Event	T6	geçirdi	EVENT	465
+Event	T7	ölümünden	EVENT	489
+Event	T8	kaldırıldığı	EVENT	691
+Event	T9	açıklandı	EVENT	746
+Event	T10	duyurdu	EVENT	908
+Relation	T0	T1	CauseEffect	true	kanserinden	ölene
+Relation	T1	T0	EffectCause	true	ölene	kanserinden
+Relation	T5	T6	CauseEffect	true	ölümü	geçirdi
+Relation	T6	T5	EffectCause	true	geçirdi	ölümü
+Relation	T6	T8	CauseEffect	true	geçirdi	kaldırıldığı
+Relation	T8	T6	EffectCause	true	kaldırıldığı	geçirdi
+Relation	T0	T6	NoRel	true	kanserinden	geçirdi
+Relation	T0	T9	NoRel	true	kanserinden	açıklandı
+Relation	T1	T2	NoRel	true	ölene	kaldı
+Relation	T1	T4	NoRel	true	ölene	aldı
+Relation	T1	T6	NoRel	true	ölene	geçirdi
+Relation	T10	T0	NoRel	true	duyurdu	kanserinden
+Relation	T10	T2	NoRel	true	duyurdu	kaldı
+Relation	T10	T3	NoRel	true	duyurdu	ölüm
+Relation	T10	T8	NoRel	true	duyurdu	kaldırıldığı
+Relation	T2	T0	NoRel	true	kaldı	kanserinden
+Relation	T2	T10	NoRel	true	kaldı	duyurdu
+Relation	T3	T10	NoRel	true	ölüm	duyurdu
+Relation	T3	T5	NoRel	true	ölüm	ölümü
+Relation	T3	T9	NoRel	true	ölüm	açıklandı
+Relation	T4	T7	NoRel	true	aldı	ölümünden
+Relation	T4	T8	NoRel	true	aldı	kaldırıldığı
+Relation	T5	T7	NoRel	true	ölümü	ölümünden
+Relation	T5	T8	NoRel	true	ölümü	kaldırıldığı
+Relation	T5	T9	NoRel	true	ölümü	açıklandı
+Relation	T6	T0	NoRel	true	geçirdi	kanserinden
+Relation	T6	T1	NoRel	true	geçirdi	ölene
+Relation	T6	T4	NoRel	true	geçirdi	aldı
+Relation	T7	T0	NoRel	true	ölümünden	kanserinden
+Relation	T7	T10	NoRel	true	ölümünden	duyurdu
+Relation	T7	T2	NoRel	true	ölümünden	kaldı
+Relation	T7	T4	NoRel	true	ölümünden	aldı
+Relation	T8	T10	NoRel	true	kaldırıldığı	duyurdu
+Relation	T9	T4	NoRel	true	açıklandı	aldı
+Relation	T9	T7	NoRel	true	açıklandı	ölümünden

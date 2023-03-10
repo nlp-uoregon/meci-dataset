@@ -1,0 +1,79 @@
+Text	Ana sel bölgesi , Hırvatistan ile Bosna - Hersek arasında sınırı teşkil eden ve Sırbistan'ın başkenti Belgrad'da Tuna Nehri ile birleşen Sava Nehri ile Bosna - Sırbistan sınırının bir bölümünü oluşturan Drina Nehri bölgesi oldu .	14 Mayıs günü , yoğun yağış dağlık bölgelerde toprağın suya doymasına , derelerin taşmasına ve birçok heyelan zincirinin oluşmasına neden oldu .	15 Mayıs perşembe günü Sava nehri ve birkaç kolunun su seviyesi ani ve kontrolsüzce yükseldi ve nehir kıyısındaki köy ve kasabalarda su baskınları ve taşkınların meydana gelmesine neden oldu .	17 Mayıs pazar günü , yağış bir miktar azaldı ve yardım ve kurtarma çalışmalarının kolaylaşmasını sağladı .	18 Mayıs'ta siklon kuzeybatıya yöneldi .
+Event	T0	yağış	EVENT	252
+Event	T1	doymasına	EVENT	290
+Event	T2	taşmasına	EVENT	312
+Event	T3	oldu	EVENT	368
+Event	T4	yükseldi	EVENT	459
+Event	T5	baskınları	EVENT	511
+Event	T6	oldu	EVENT	561
+Event	T7	yağış	EVENT	590
+Event	T8	azaldı	EVENT	607
+Event	T11	sağladı	EVENT	666
+Event	T12	yöneldi	EVENT	707
+Event	T13	oluşmasına	EVENT	351
+Event	T14	taşkınların	EVENT	525
+Relation	T0	T3	CauseEffect	true	yağış	oldu
+Relation	T3	T0	EffectCause	true	oldu	yağış
+Relation	T0	T4	CauseEffect	true	yağış	yükseldi
+Relation	T4	T0	EffectCause	true	yükseldi	yağış
+Relation	T8	T11	CauseEffect	true	azaldı	sağladı
+Relation	T11	T8	EffectCause	true	sağladı	azaldı
+Relation	T0	T13	NoRel	true	yağış	oluşmasına
+Relation	T0	T14	NoRel	true	yağış	taşkınların
+Relation	T0	T5	NoRel	true	yağış	baskınları
+Relation	T0	T8	NoRel	true	yağış	azaldı
+Relation	T1	T0	NoRel	true	doymasına	yağış
+Relation	T1	T12	NoRel	true	doymasına	yöneldi
+Relation	T1	T13	NoRel	true	doymasına	oluşmasına
+Relation	T1	T2	NoRel	true	doymasına	taşmasına
+Relation	T1	T6	NoRel	true	doymasına	oldu
+Relation	T1	T8	NoRel	true	doymasına	azaldı
+Relation	T11	T2	NoRel	true	sağladı	taşmasına
+Relation	T11	T5	NoRel	true	sağladı	baskınları
+Relation	T12	T0	NoRel	true	yöneldi	yağış
+Relation	T12	T1	NoRel	true	yöneldi	doymasına
+Relation	T12	T11	NoRel	true	yöneldi	sağladı
+Relation	T12	T14	NoRel	true	yöneldi	taşkınların
+Relation	T12	T4	NoRel	true	yöneldi	yükseldi
+Relation	T12	T5	NoRel	true	yöneldi	baskınları
+Relation	T13	T11	NoRel	true	oluşmasına	sağladı
+Relation	T13	T12	NoRel	true	oluşmasına	yöneldi
+Relation	T13	T8	NoRel	true	oluşmasına	azaldı
+Relation	T14	T0	NoRel	true	taşkınların	yağış
+Relation	T14	T1	NoRel	true	taşkınların	doymasına
+Relation	T14	T11	NoRel	true	taşkınların	sağladı
+Relation	T14	T13	NoRel	true	taşkınların	oluşmasına
+Relation	T14	T4	NoRel	true	taşkınların	yükseldi
+Relation	T14	T5	NoRel	true	taşkınların	baskınları
+Relation	T14	T6	NoRel	true	taşkınların	oldu
+Relation	T14	T7	NoRel	true	taşkınların	yağış
+Relation	T2	T1	NoRel	true	taşmasına	doymasına
+Relation	T2	T13	NoRel	true	taşmasına	oluşmasına
+Relation	T3	T1	NoRel	true	oldu	doymasına
+Relation	T3	T12	NoRel	true	oldu	yöneldi
+Relation	T3	T2	NoRel	true	oldu	taşmasına
+Relation	T3	T4	NoRel	true	oldu	yükseldi
+Relation	T3	T5	NoRel	true	oldu	baskınları
+Relation	T3	T6	NoRel	true	oldu	oldu
+Relation	T3	T7	NoRel	true	oldu	yağış
+Relation	T3	T8	NoRel	true	oldu	azaldı
+Relation	T4	T12	NoRel	true	yükseldi	yöneldi
+Relation	T4	T2	NoRel	true	yükseldi	taşmasına
+Relation	T4	T5	NoRel	true	yükseldi	baskınları
+Relation	T4	T8	NoRel	true	yükseldi	azaldı
+Relation	T5	T3	NoRel	true	baskınları	oldu
+Relation	T5	T6	NoRel	true	baskınları	oldu
+Relation	T6	T13	NoRel	true	oldu	oluşmasına
+Relation	T6	T14	NoRel	true	oldu	taşkınların
+Relation	T6	T5	NoRel	true	oldu	baskınları
+Relation	T6	T7	NoRel	true	oldu	yağış
+Relation	T7	T1	NoRel	true	yağış	doymasına
+Relation	T7	T12	NoRel	true	yağış	yöneldi
+Relation	T7	T2	NoRel	true	yağış	taşmasına
+Relation	T7	T4	NoRel	true	yağış	yükseldi
+Relation	T7	T5	NoRel	true	yağış	baskınları
+Relation	T7	T6	NoRel	true	yağış	oldu
+Relation	T8	T1	NoRel	true	azaldı	doymasına
+Relation	T8	T12	NoRel	true	azaldı	yöneldi
+Relation	T8	T2	NoRel	true	azaldı	taşmasına
+Relation	T8	T3	NoRel	true	azaldı	oldu

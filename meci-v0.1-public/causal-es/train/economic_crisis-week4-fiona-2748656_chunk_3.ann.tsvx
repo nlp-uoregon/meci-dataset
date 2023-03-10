@@ -1,0 +1,97 @@
+Text	Al aumentar la demanda de la divisa estadounidense , el peso se devaluó .	En diciembre de 2008 la depreciación del peso mexicano alcanzó 26,70% , con una cotización de 14 pesos por dólar .	La situación llegó al extremo que el Congreso de la Unión solicitó a Guillermo Ortiz , gobernador del Banco de México ( Banxico ) , aclarar el modo en que se pretendía enfrentar la devaluación de la moneda nacional .	Como una medida precautoria , el Banco de México había venido " inyectando " fuertes cantidades de dólares al mercado cambiario con el propósito de contener la devaluación del peso .	Hacia febrero de 2009 , la reserva de dólares de Banxico había perdido 20 mil 62 millones de dólares , que fueron destinados a aminorar la presión sobre el peso .
+Event	T0	aumentar	EVENT	3
+Event	T1	demanda	EVENT	15
+Event	T2	devaluó	EVENT	64
+Event	T3	depreciación	EVENT	98
+Event	T4	alcanzó	EVENT	129
+Event	T5	cotización	EVENT	154
+Event	T6	llegó	EVENT	202
+Event	T7	enfrentar	EVENT	357
+Event	T8	devaluación	EVENT	370
+Event	T9	inyectando	EVENT	470
+Event	T10	contener	EVENT	554
+Event	T11	devaluación	EVENT	566
+Event	T12	perdido	EVENT	652
+Event	T13	destinados	EVENT	703
+Event	T14	aminorar	EVENT	716
+Event	T15	presión	EVENT	728
+Relation	T0	T2	CauseEffect	true	aumentar	devaluó
+Relation	T2	T0	EffectCause	true	devaluó	aumentar
+Relation	T9	T10	CauseEffect	true	inyectando	contener
+Relation	T10	T9	EffectCause	true	contener	inyectando
+Relation	T0	T4	NoRel	true	aumentar	alcanzó
+Relation	T1	T15	NoRel	true	demanda	presión
+Relation	T1	T3	NoRel	true	demanda	depreciación
+Relation	T1	T5	NoRel	true	demanda	cotización
+Relation	T1	T6	NoRel	true	demanda	llegó
+Relation	T1	T7	NoRel	true	demanda	enfrentar
+Relation	T10	T11	NoRel	true	contener	devaluación
+Relation	T10	T12	NoRel	true	contener	perdido
+Relation	T10	T2	NoRel	true	contener	devaluó
+Relation	T10	T4	NoRel	true	contener	alcanzó
+Relation	T10	T5	NoRel	true	contener	cotización
+Relation	T11	T3	NoRel	true	devaluación	depreciación
+Relation	T11	T5	NoRel	true	devaluación	cotización
+Relation	T11	T7	NoRel	true	devaluación	enfrentar
+Relation	T12	T1	NoRel	true	perdido	demanda
+Relation	T12	T11	NoRel	true	perdido	devaluación
+Relation	T12	T14	NoRel	true	perdido	aminorar
+Relation	T12	T15	NoRel	true	perdido	presión
+Relation	T12	T4	NoRel	true	perdido	alcanzó
+Relation	T12	T5	NoRel	true	perdido	cotización
+Relation	T12	T7	NoRel	true	perdido	enfrentar
+Relation	T12	T8	NoRel	true	perdido	devaluación
+Relation	T12	T9	NoRel	true	perdido	inyectando
+Relation	T13	T1	NoRel	true	destinados	demanda
+Relation	T13	T12	NoRel	true	destinados	perdido
+Relation	T13	T3	NoRel	true	destinados	depreciación
+Relation	T13	T7	NoRel	true	destinados	enfrentar
+Relation	T14	T1	NoRel	true	aminorar	demanda
+Relation	T14	T11	NoRel	true	aminorar	devaluación
+Relation	T14	T4	NoRel	true	aminorar	alcanzó
+Relation	T14	T6	NoRel	true	aminorar	llegó
+Relation	T14	T8	NoRel	true	aminorar	devaluación
+Relation	T14	T9	NoRel	true	aminorar	inyectando
+Relation	T15	T10	NoRel	true	presión	contener
+Relation	T15	T11	NoRel	true	presión	devaluación
+Relation	T15	T3	NoRel	true	presión	depreciación
+Relation	T15	T4	NoRel	true	presión	alcanzó
+Relation	T15	T5	NoRel	true	presión	cotización
+Relation	T15	T9	NoRel	true	presión	inyectando
+Relation	T2	T10	NoRel	true	devaluó	contener
+Relation	T2	T3	NoRel	true	devaluó	depreciación
+Relation	T2	T6	NoRel	true	devaluó	llegó
+Relation	T2	T7	NoRel	true	devaluó	enfrentar
+Relation	T3	T15	NoRel	true	depreciación	presión
+Relation	T3	T2	NoRel	true	depreciación	devaluó
+Relation	T3	T4	NoRel	true	depreciación	alcanzó
+Relation	T3	T6	NoRel	true	depreciación	llegó
+Relation	T3	T8	NoRel	true	depreciación	devaluación
+Relation	T4	T11	NoRel	true	alcanzó	devaluación
+Relation	T4	T2	NoRel	true	alcanzó	devaluó
+Relation	T4	T6	NoRel	true	alcanzó	llegó
+Relation	T4	T9	NoRel	true	alcanzó	inyectando
+Relation	T5	T10	NoRel	true	cotización	contener
+Relation	T5	T13	NoRel	true	cotización	destinados
+Relation	T5	T7	NoRel	true	cotización	enfrentar
+Relation	T6	T1	NoRel	true	llegó	demanda
+Relation	T6	T10	NoRel	true	llegó	contener
+Relation	T6	T9	NoRel	true	llegó	inyectando
+Relation	T7	T1	NoRel	true	enfrentar	demanda
+Relation	T7	T11	NoRel	true	enfrentar	devaluación
+Relation	T7	T12	NoRel	true	enfrentar	perdido
+Relation	T7	T5	NoRel	true	enfrentar	cotización
+Relation	T7	T8	NoRel	true	enfrentar	devaluación
+Relation	T7	T9	NoRel	true	enfrentar	inyectando
+Relation	T8	T1	NoRel	true	devaluación	demanda
+Relation	T8	T10	NoRel	true	devaluación	contener
+Relation	T8	T12	NoRel	true	devaluación	perdido
+Relation	T8	T14	NoRel	true	devaluación	aminorar
+Relation	T8	T5	NoRel	true	devaluación	cotización
+Relation	T8	T9	NoRel	true	devaluación	inyectando
+Relation	T9	T1	NoRel	true	inyectando	demanda
+Relation	T9	T15	NoRel	true	inyectando	presión
+Relation	T9	T2	NoRel	true	inyectando	devaluó
+Relation	T9	T4	NoRel	true	inyectando	alcanzó
+Relation	T9	T7	NoRel	true	inyectando	enfrentar
+Relation	T9	T8	NoRel	true	inyectando	devaluación

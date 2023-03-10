@@ -1,0 +1,185 @@
+Text	Devlet tarafından yayınlanan haberler , sel felaketinin Gülistan'da 70 köyde ve Mazanderan'da 200'den fazla köyde taşkınlara neden olduğunu belirtti .	İran Enerji Bakanı ayrıca , Gülistan'da 360 köyün ve Mazanderan'da 193 köyün de sel nedeniyle elektrik bağlantılarını kaybettiğini bildirdi .	küçükresim | Şiraz'da sel hasarı 25 Mart'ta , Güneybatı İran'da Şiraz şehri yakınlarında şiddetli yağışların ardından meydana gelen sel baskınları 19 kişiyi öldürdü ve 200'den fazla kişiyi yaraladı .	Nevruz tatili için pek çok seyahat eden insan arabalarının sellere kapılmasıyla yaralandı ya da öldü .	Kısa ama şiddetli olan yağmur , her biri yaklaşık 15 dakika süren iki dalgada yağdı ve yağmurun yarattığı zararlar yoğun trafik nedeniyle daha da şiddetlendi .
+Event	T0	felaketinin	EVENT	44
+Event	T2	belirtti	EVENT	140
+Event	T3	sel	EVENT	231
+Event	T4	bildirdi	EVENT	282
+Event	T5	hasarı	EVENT	319
+Event	T6	yağışların	EVENT	391
+Event	T7	baskınları	EVENT	429
+Event	T8	öldürdü	EVENT	450
+Event	T9	yaraladı	EVENT	482
+Event	T11	yaralandı	EVENT	573
+Event	T12	öldü	EVENT	589
+Event	T13	yağmur	EVENT	619
+Event	T14	yağdı	EVENT	674
+Event	T15	zararlar	EVENT	702
+Event	T16	şiddetlendi	EVENT	742
+Event	T1	taşkınlara	EVENT	114
+Event	T17	yayınlanan	EVENT	18
+Event	T18	sel	EVENT	315
+Event	T10	eden	EVENT	528
+Event	T19	Nevruz	EVENT	493
+Event	T20	kapılmasıyla	EVENT	560
+Event	T21	trafik	EVENT	717
+Relation	T0	T2	CauseEffect	true	felaketinin	belirtti
+Relation	T2	T0	EffectCause	true	belirtti	felaketinin
+Relation	T3	T4	CauseEffect	true	sel	bildirdi
+Relation	T4	T3	EffectCause	true	bildirdi	sel
+Relation	T18	T5	CauseEffect	true	sel	hasarı
+Relation	T5	T18	EffectCause	true	hasarı	sel
+Relation	T6	T7	CauseEffect	true	yağışların	baskınları
+Relation	T7	T6	EffectCause	true	baskınları	yağışların
+Relation	T7	T8	CauseEffect	true	baskınları	öldürdü
+Relation	T8	T7	EffectCause	true	öldürdü	baskınları
+Relation	T7	T9	CauseEffect	true	baskınları	yaraladı
+Relation	T9	T7	EffectCause	true	yaraladı	baskınları
+Relation	T19	T10	CauseEffect	true	Nevruz	eden
+Relation	T10	T19	EffectCause	true	eden	Nevruz
+Relation	T10	T20	CauseEffect	true	eden	kapılmasıyla
+Relation	T20	T10	EffectCause	true	kapılmasıyla	eden
+Relation	T20	T11	CauseEffect	true	kapılmasıyla	yaralandı
+Relation	T11	T20	EffectCause	true	yaralandı	kapılmasıyla
+Relation	T20	T12	CauseEffect	true	kapılmasıyla	öldü
+Relation	T12	T20	EffectCause	true	öldü	kapılmasıyla
+Relation	T21	T16	CauseEffect	true	trafik	şiddetlendi
+Relation	T16	T21	EffectCause	true	şiddetlendi	trafik
+Relation	T13	T16	CauseEffect	true	yağmur	şiddetlendi
+Relation	T16	T13	EffectCause	true	şiddetlendi	yağmur
+Relation	T0	T13	NoRel	true	felaketinin	yağmur
+Relation	T0	T15	NoRel	true	felaketinin	zararlar
+Relation	T0	T16	NoRel	true	felaketinin	şiddetlendi
+Relation	T0	T20	NoRel	true	felaketinin	kapılmasıyla
+Relation	T0	T21	NoRel	true	felaketinin	trafik
+Relation	T0	T3	NoRel	true	felaketinin	sel
+Relation	T0	T4	NoRel	true	felaketinin	bildirdi
+Relation	T0	T7	NoRel	true	felaketinin	baskınları
+Relation	T0	T8	NoRel	true	felaketinin	öldürdü
+Relation	T1	T0	NoRel	true	taşkınlara	felaketinin
+Relation	T1	T18	NoRel	true	taşkınlara	sel
+Relation	T1	T21	NoRel	true	taşkınlara	trafik
+Relation	T1	T5	NoRel	true	taşkınlara	hasarı
+Relation	T10	T1	NoRel	true	eden	taşkınlara
+Relation	T10	T11	NoRel	true	eden	yaralandı
+Relation	T10	T3	NoRel	true	eden	sel
+Relation	T10	T6	NoRel	true	eden	yağışların
+Relation	T10	T7	NoRel	true	eden	baskınları
+Relation	T10	T8	NoRel	true	eden	öldürdü
+Relation	T10	T9	NoRel	true	eden	yaraladı
+Relation	T11	T0	NoRel	true	yaralandı	felaketinin
+Relation	T11	T1	NoRel	true	yaralandı	taşkınlara
+Relation	T11	T10	NoRel	true	yaralandı	eden
+Relation	T11	T12	NoRel	true	yaralandı	öldü
+Relation	T11	T14	NoRel	true	yaralandı	yağdı
+Relation	T11	T16	NoRel	true	yaralandı	şiddetlendi
+Relation	T11	T17	NoRel	true	yaralandı	yayınlanan
+Relation	T11	T21	NoRel	true	yaralandı	trafik
+Relation	T11	T4	NoRel	true	yaralandı	bildirdi
+Relation	T11	T6	NoRel	true	yaralandı	yağışların
+Relation	T12	T10	NoRel	true	öldü	eden
+Relation	T12	T15	NoRel	true	öldü	zararlar
+Relation	T12	T2	NoRel	true	öldü	belirtti
+Relation	T12	T6	NoRel	true	öldü	yağışların
+Relation	T12	T7	NoRel	true	öldü	baskınları
+Relation	T12	T9	NoRel	true	öldü	yaraladı
+Relation	T13	T11	NoRel	true	yağmur	yaralandı
+Relation	T13	T12	NoRel	true	yağmur	öldü
+Relation	T13	T15	NoRel	true	yağmur	zararlar
+Relation	T13	T20	NoRel	true	yağmur	kapılmasıyla
+Relation	T13	T21	NoRel	true	yağmur	trafik
+Relation	T13	T9	NoRel	true	yağmur	yaraladı
+Relation	T14	T10	NoRel	true	yağdı	eden
+Relation	T14	T11	NoRel	true	yağdı	yaralandı
+Relation	T14	T12	NoRel	true	yağdı	öldü
+Relation	T14	T15	NoRel	true	yağdı	zararlar
+Relation	T14	T16	NoRel	true	yağdı	şiddetlendi
+Relation	T14	T18	NoRel	true	yağdı	sel
+Relation	T14	T7	NoRel	true	yağdı	baskınları
+Relation	T15	T10	NoRel	true	zararlar	eden
+Relation	T15	T12	NoRel	true	zararlar	öldü
+Relation	T15	T17	NoRel	true	zararlar	yayınlanan
+Relation	T15	T2	NoRel	true	zararlar	belirtti
+Relation	T15	T3	NoRel	true	zararlar	sel
+Relation	T15	T4	NoRel	true	zararlar	bildirdi
+Relation	T15	T7	NoRel	true	zararlar	baskınları
+Relation	T15	T8	NoRel	true	zararlar	öldürdü
+Relation	T16	T0	NoRel	true	şiddetlendi	felaketinin
+Relation	T16	T1	NoRel	true	şiddetlendi	taşkınlara
+Relation	T16	T18	NoRel	true	şiddetlendi	sel
+Relation	T16	T2	NoRel	true	şiddetlendi	belirtti
+Relation	T16	T4	NoRel	true	şiddetlendi	bildirdi
+Relation	T16	T7	NoRel	true	şiddetlendi	baskınları
+Relation	T16	T8	NoRel	true	şiddetlendi	öldürdü
+Relation	T17	T11	NoRel	true	yayınlanan	yaralandı
+Relation	T17	T14	NoRel	true	yayınlanan	yağdı
+Relation	T17	T19	NoRel	true	yayınlanan	Nevruz
+Relation	T17	T8	NoRel	true	yayınlanan	öldürdü
+Relation	T17	T9	NoRel	true	yayınlanan	yaraladı
+Relation	T18	T15	NoRel	true	sel	zararlar
+Relation	T18	T19	NoRel	true	sel	Nevruz
+Relation	T18	T20	NoRel	true	sel	kapılmasıyla
+Relation	T18	T21	NoRel	true	sel	trafik
+Relation	T18	T7	NoRel	true	sel	baskınları
+Relation	T18	T9	NoRel	true	sel	yaraladı
+Relation	T19	T0	NoRel	true	Nevruz	felaketinin
+Relation	T19	T2	NoRel	true	Nevruz	belirtti
+Relation	T19	T21	NoRel	true	Nevruz	trafik
+Relation	T19	T4	NoRel	true	Nevruz	bildirdi
+Relation	T19	T6	NoRel	true	Nevruz	yağışların
+Relation	T2	T10	NoRel	true	belirtti	eden
+Relation	T2	T12	NoRel	true	belirtti	öldü
+Relation	T2	T19	NoRel	true	belirtti	Nevruz
+Relation	T2	T5	NoRel	true	belirtti	hasarı
+Relation	T2	T7	NoRel	true	belirtti	baskınları
+Relation	T20	T0	NoRel	true	kapılmasıyla	felaketinin
+Relation	T20	T14	NoRel	true	kapılmasıyla	yağdı
+Relation	T20	T16	NoRel	true	kapılmasıyla	şiddetlendi
+Relation	T20	T17	NoRel	true	kapılmasıyla	yayınlanan
+Relation	T20	T21	NoRel	true	kapılmasıyla	trafik
+Relation	T20	T3	NoRel	true	kapılmasıyla	sel
+Relation	T20	T6	NoRel	true	kapılmasıyla	yağışların
+Relation	T21	T1	NoRel	true	trafik	taşkınlara
+Relation	T21	T10	NoRel	true	trafik	eden
+Relation	T21	T14	NoRel	true	trafik	yağdı
+Relation	T21	T17	NoRel	true	trafik	yayınlanan
+Relation	T21	T2	NoRel	true	trafik	belirtti
+Relation	T21	T7	NoRel	true	trafik	baskınları
+Relation	T3	T10	NoRel	true	sel	eden
+Relation	T3	T11	NoRel	true	sel	yaralandı
+Relation	T3	T13	NoRel	true	sel	yağmur
+Relation	T3	T17	NoRel	true	sel	yayınlanan
+Relation	T3	T21	NoRel	true	sel	trafik
+Relation	T3	T5	NoRel	true	sel	hasarı
+Relation	T3	T7	NoRel	true	sel	baskınları
+Relation	T3	T8	NoRel	true	sel	öldürdü
+Relation	T4	T12	NoRel	true	bildirdi	öldü
+Relation	T4	T14	NoRel	true	bildirdi	yağdı
+Relation	T4	T15	NoRel	true	bildirdi	zararlar
+Relation	T4	T2	NoRel	true	bildirdi	belirtti
+Relation	T4	T8	NoRel	true	bildirdi	öldürdü
+Relation	T5	T13	NoRel	true	hasarı	yağmur
+Relation	T5	T2	NoRel	true	hasarı	belirtti
+Relation	T6	T10	NoRel	true	yağışların	eden
+Relation	T6	T11	NoRel	true	yağışların	yaralandı
+Relation	T6	T12	NoRel	true	yağışların	öldü
+Relation	T6	T13	NoRel	true	yağışların	yağmur
+Relation	T6	T18	NoRel	true	yağışların	sel
+Relation	T6	T2	NoRel	true	yağışların	belirtti
+Relation	T6	T20	NoRel	true	yağışların	kapılmasıyla
+Relation	T6	T3	NoRel	true	yağışların	sel
+Relation	T6	T4	NoRel	true	yağışların	bildirdi
+Relation	T7	T0	NoRel	true	baskınları	felaketinin
+Relation	T7	T1	NoRel	true	baskınları	taşkınlara
+Relation	T7	T15	NoRel	true	baskınları	zararlar
+Relation	T7	T3	NoRel	true	baskınları	sel
+Relation	T8	T13	NoRel	true	öldürdü	yağmur
+Relation	T8	T15	NoRel	true	öldürdü	zararlar
+Relation	T8	T16	NoRel	true	öldürdü	şiddetlendi
+Relation	T8	T4	NoRel	true	öldürdü	bildirdi
+Relation	T9	T12	NoRel	true	yaraladı	öldü
+Relation	T9	T13	NoRel	true	yaraladı	yağmur
+Relation	T9	T14	NoRel	true	yaraladı	yağdı
+Relation	T9	T16	NoRel	true	yaraladı	şiddetlendi
+Relation	T9	T17	NoRel	true	yaraladı	yayınlanan
+Relation	T9	T18	NoRel	true	yaraladı	sel
+Relation	T9	T5	NoRel	true	yaraladı	hasarı
+Relation	T9	T6	NoRel	true	yaraladı	yağışların

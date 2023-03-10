@@ -1,0 +1,82 @@
+Text	Acosta Arévalo presented many excoriations in the arms , little sensitivity in the hands , extreme inflammation in the feet , traces of blood in the nails , and injuries in the torso .	Acosta Arévalo was also unable to move his hands or feet , to get up or to speak , with the exception of accepting the appointment of his defender and asking his lawyer for help .	The judge ordered that Acosta Arévalo be transferred to the Army Military Hospital Dr. Vicente Salias Sanoja , located in Fort Tiuna in Caracas , upon observing his critical physical condition and his presentation hearing was postponed .	Later , the judge of the case reported that Acosta Arévalo had died at night in the hospital .	After news of Acosta Arévalo 's death and the circumstances surrounding it were made public , it was reported that " DGCIM " could not be entered as a hashtag on Twitter , reportedly having been blocked .
+Event	T0	presented	EVENT	15
+Event	T1	excoriations	EVENT	30
+Event	T10	transferred	EVENT	406
+Event	T11	observing	EVENT	516
+Event	T12	hearing	EVENT	579
+Event	T13	postponed	EVENT	591
+Event	T14	reported	EVENT	633
+Event	T15	died	EVENT	666
+Event	T16	public	EVENT	783
+Event	T17	death	EVENT	730
+Event	T18	reported	EVENT	799
+Event	T19	entered	EVENT	836
+Event	T2	inflammation	EVENT	99
+Event	T20	blocked	EVENT	893
+Event	T22	get up	EVENT	247
+Event	T23	speak	EVENT	260
+Event	T3	traces	EVENT	126
+Event	T4	injuries	EVENT	161
+Event	T5	move	EVENT	219
+Event	T6	accepting	EVENT	290
+Event	T7	appointment	EVENT	304
+Event	T8	asking	EVENT	336
+Event	T9	ordered	EVENT	375
+Relation	T11	T9	CauseEffect	true	observing	ordered
+Relation	T9	T11	EffectCause	true	ordered	observing
+Relation	T9	T10	CauseEffect	true	ordered	transferred
+Relation	T10	T9	EffectCause	true	transferred	ordered
+Relation	T15	T14	CauseEffect	true	died	reported
+Relation	T14	T15	EffectCause	true	reported	died
+Relation	T17	T16	CauseEffect	true	death	public
+Relation	T16	T17	EffectCause	true	public	death
+Relation	T20	T19	CauseEffect	true	blocked	entered
+Relation	T19	T20	EffectCause	true	entered	blocked
+Relation	T0	T18	NoRel	true	presented	reported
+Relation	T0	T8	NoRel	true	presented	asking
+Relation	T1	T2	NoRel	true	excoriations	inflammation
+Relation	T1	T3	NoRel	true	excoriations	traces
+Relation	T1	T4	NoRel	true	excoriations	injuries
+Relation	T1	T6	NoRel	true	excoriations	accepting
+Relation	T11	T3	NoRel	true	observing	traces
+Relation	T12	T18	NoRel	true	hearing	reported
+Relation	T12	T8	NoRel	true	hearing	asking
+Relation	T13	T17	NoRel	true	postponed	death
+Relation	T13	T18	NoRel	true	postponed	reported
+Relation	T14	T1	NoRel	true	reported	excoriations
+Relation	T15	T1	NoRel	true	died	excoriations
+Relation	T16	T10	NoRel	true	public	transferred
+Relation	T16	T14	NoRel	true	public	reported
+Relation	T16	T15	NoRel	true	public	died
+Relation	T16	T22	NoRel	true	public	get up
+Relation	T17	T13	NoRel	true	death	postponed
+Relation	T17	T19	NoRel	true	death	entered
+Relation	T17	T2	NoRel	true	death	inflammation
+Relation	T17	T23	NoRel	true	death	speak
+Relation	T18	T17	NoRel	true	reported	death
+Relation	T19	T7	NoRel	true	entered	appointment
+Relation	T2	T11	NoRel	true	inflammation	observing
+Relation	T2	T22	NoRel	true	inflammation	get up
+Relation	T2	T23	NoRel	true	inflammation	speak
+Relation	T2	T5	NoRel	true	inflammation	move
+Relation	T2	T7	NoRel	true	inflammation	appointment
+Relation	T20	T18	NoRel	true	blocked	reported
+Relation	T20	T4	NoRel	true	blocked	injuries
+Relation	T22	T2	NoRel	true	get up	inflammation
+Relation	T23	T10	NoRel	true	speak	transferred
+Relation	T23	T17	NoRel	true	speak	death
+Relation	T3	T22	NoRel	true	traces	get up
+Relation	T3	T7	NoRel	true	traces	appointment
+Relation	T4	T1	NoRel	true	injuries	excoriations
+Relation	T4	T19	NoRel	true	injuries	entered
+Relation	T4	T7	NoRel	true	injuries	appointment
+Relation	T5	T13	NoRel	true	move	postponed
+Relation	T5	T14	NoRel	true	move	reported
+Relation	T6	T19	NoRel	true	accepting	entered
+Relation	T8	T18	NoRel	true	asking	reported
+Relation	T8	T22	NoRel	true	asking	get up
+Relation	T8	T4	NoRel	true	asking	injuries
+Relation	T8	T5	NoRel	true	asking	move
+Relation	T9	T13	NoRel	true	ordered	postponed
+Relation	T9	T15	NoRel	true	ordered	died
+Relation	T9	T16	NoRel	true	ordered	public

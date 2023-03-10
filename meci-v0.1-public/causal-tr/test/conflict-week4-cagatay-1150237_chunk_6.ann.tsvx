@@ -1,0 +1,39 @@
+Text	Şehirde görev yapan askerler ise geniş çaplı bir harekâta karşı çıkmalarına rağmen emirlere uyarlar .	4 Nisan gecesi başlayan harekâtta şehir 2 bin askerle kuşatılır .	Dört ev hava saldırısı sonucu vurulduğu sırada şehide yer yer çatışmalar çıkar .	5 Nisan sabahı abluka altındaki şehre giriş çıkışlar tamamen kesilir .	Radyo istasyonunu ele geçiren ABD askerleri halktan evlerinden çıkmamalarını isteyen Arapça bildiriler dağıtır .
+Event	T0	harekâtta	EVENT	126
+Event	T1	kuşatılır	EVENT	156
+Event	T2	vurulduğu	EVENT	198
+Event	T3	çıkar	EVENT	241
+Event	T4	abluka	EVENT	264
+Event	T5	kesilir	EVENT	310
+Event	T6	dağıtır	EVENT	423
+Event	T7	harekâta	EVENT	49
+Event	T8	uyarlar	EVENT	92
+Relation	T8	T0	CauseEffect	true	uyarlar	harekâtta
+Relation	T0	T8	EffectCause	true	harekâtta	uyarlar
+Relation	T0	T2	NoRel	true	harekâtta	vurulduğu
+Relation	T0	T4	NoRel	true	harekâtta	abluka
+Relation	T0	T7	NoRel	true	harekâtta	harekâta
+Relation	T1	T2	NoRel	true	kuşatılır	vurulduğu
+Relation	T1	T5	NoRel	true	kuşatılır	kesilir
+Relation	T2	T0	NoRel	true	vurulduğu	harekâtta
+Relation	T2	T1	NoRel	true	vurulduğu	kuşatılır
+Relation	T2	T4	NoRel	true	vurulduğu	abluka
+Relation	T2	T5	NoRel	true	vurulduğu	kesilir
+Relation	T3	T0	NoRel	true	çıkar	harekâtta
+Relation	T3	T1	NoRel	true	çıkar	kuşatılır
+Relation	T3	T2	NoRel	true	çıkar	vurulduğu
+Relation	T3	T5	NoRel	true	çıkar	kesilir
+Relation	T3	T6	NoRel	true	çıkar	dağıtır
+Relation	T3	T8	NoRel	true	çıkar	uyarlar
+Relation	T5	T2	NoRel	true	kesilir	vurulduğu
+Relation	T5	T3	NoRel	true	kesilir	çıkar
+Relation	T5	T4	NoRel	true	kesilir	abluka
+Relation	T6	T1	NoRel	true	dağıtır	kuşatılır
+Relation	T6	T2	NoRel	true	dağıtır	vurulduğu
+Relation	T6	T3	NoRel	true	dağıtır	çıkar
+Relation	T6	T4	NoRel	true	dağıtır	abluka
+Relation	T6	T5	NoRel	true	dağıtır	kesilir
+Relation	T6	T7	NoRel	true	dağıtır	harekâta
+Relation	T6	T8	NoRel	true	dağıtır	uyarlar
+Relation	T7	T2	NoRel	true	harekâta	vurulduğu
+Relation	T7	T5	NoRel	true	harekâta	kesilir

@@ -1,0 +1,54 @@
+Text	Debido a las malas condiciones meteorológicas la búsqueda fue suspendida en horas de la tarde siendo reprogramado su inicio para la mañana del día siguiente .	En paralelo , el Alto Mando de la FAP había dispuesto el inmediato traslado de un avión con personal de Fuerzas Especiales calificado en búsqueda y rescate con destino a Amazonas para intensificar las labores de búsqueda .	[ miniaturade imagen | Honores fúnebres de la Fuerza Aérea del Perú a los fallecidos en el accidente .	] La tripulación de la aeronave estaba conformada por el Comandante FAP Luis Manuel Humberto Flores Muñoz , Capitán FAP Bryan Steve Calleja Martins , Técnico de 1ra FAP Ronal Wilton Cortéz Miñope y Técnico de 2da FAP Nicolás Estrada Orejón .	Con ellos además viajaban Elmer Herrera Chuquimes , Reu Wisum Piitug y Sabino Shawit Najamtai .
+Event	T0	suspendida	EVENT	62
+Event	T1	reprogramado	EVENT	101
+Event	T2	inicio	EVENT	117
+Event	T3	dispuesto	EVENT	203
+Event	T4	traslado	EVENT	226
+Event	T5	búsqueda	EVENT	296
+Event	T6	rescate	EVENT	307
+Event	T7	intensificar	EVENT	343
+Event	T8	labores	EVENT	360
+Event	T9	búsqueda	EVENT	371
+Event	T10	fallecidos	EVENT	456
+Event	T11	accidente	EVENT	473
+Relation	T11	T10	CauseEffect	true	accidente	fallecidos
+Relation	T10	T11	EffectCause	true	fallecidos	accidente
+Relation	T0	T2	NoRel	true	suspendida	inicio
+Relation	T0	T9	NoRel	true	suspendida	búsqueda
+Relation	T1	T11	NoRel	true	reprogramado	accidente
+Relation	T1	T2	NoRel	true	reprogramado	inicio
+Relation	T1	T5	NoRel	true	reprogramado	búsqueda
+Relation	T1	T6	NoRel	true	reprogramado	rescate
+Relation	T10	T0	NoRel	true	fallecidos	suspendida
+Relation	T10	T4	NoRel	true	fallecidos	traslado
+Relation	T10	T5	NoRel	true	fallecidos	búsqueda
+Relation	T10	T6	NoRel	true	fallecidos	rescate
+Relation	T10	T9	NoRel	true	fallecidos	búsqueda
+Relation	T11	T1	NoRel	true	accidente	reprogramado
+Relation	T11	T2	NoRel	true	accidente	inicio
+Relation	T2	T1	NoRel	true	inicio	reprogramado
+Relation	T2	T6	NoRel	true	inicio	rescate
+Relation	T3	T11	NoRel	true	dispuesto	accidente
+Relation	T3	T8	NoRel	true	dispuesto	labores
+Relation	T4	T0	NoRel	true	traslado	suspendida
+Relation	T4	T8	NoRel	true	traslado	labores
+Relation	T5	T0	NoRel	true	búsqueda	suspendida
+Relation	T5	T1	NoRel	true	búsqueda	reprogramado
+Relation	T5	T10	NoRel	true	búsqueda	fallecidos
+Relation	T5	T6	NoRel	true	búsqueda	rescate
+Relation	T5	T9	NoRel	true	búsqueda	búsqueda
+Relation	T6	T1	NoRel	true	rescate	reprogramado
+Relation	T6	T2	NoRel	true	rescate	inicio
+Relation	T6	T3	NoRel	true	rescate	dispuesto
+Relation	T6	T4	NoRel	true	rescate	traslado
+Relation	T6	T9	NoRel	true	rescate	búsqueda
+Relation	T7	T11	NoRel	true	intensificar	accidente
+Relation	T7	T2	NoRel	true	intensificar	inicio
+Relation	T7	T5	NoRel	true	intensificar	búsqueda
+Relation	T8	T1	NoRel	true	labores	reprogramado
+Relation	T8	T11	NoRel	true	labores	accidente
+Relation	T8	T2	NoRel	true	labores	inicio
+Relation	T8	T3	NoRel	true	labores	dispuesto
+Relation	T9	T11	NoRel	true	búsqueda	accidente
+Relation	T9	T3	NoRel	true	búsqueda	dispuesto
+Relation	T9	T5	NoRel	true	búsqueda	búsqueda

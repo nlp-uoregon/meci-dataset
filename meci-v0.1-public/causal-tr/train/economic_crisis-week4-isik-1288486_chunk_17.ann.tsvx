@@ -1,0 +1,43 @@
+Text	Rosa Luxemburg da dahil olmak üzere siyasi tutuklular serbest bırakıldı .	SPD kitlelerin hareketi büyünce hareketi destekliyor gibi görünmek için hükûmetten çekildi .	Bu işçi sınıfı üzerinde egemenliğini sağlama almak için yapılan bir politik manevraydı .	Liebknecht’in imparatorluk sarayından işçi ve askerlerin sosyalist cumhuriyetini ilan ettiği sıra SPD önderi Scheidemann cumhuriyeti ilan ederek devrimci hareketi engelliyordu .	SPD , USPD’yi anayasa hazırlanasıya kadar devrimci hükûmet kurmaya razı etti 10 Kasım’da 3 SPD’li ve 3 USPD’linin yer aldığı Halk Temsilcileri Konseyi ( _ Rat der Volksbeauftragten _ ) kuruldu .
+Event	T0	bırakıldı	EVENT	62
+Event	T1	çekildi	EVENT	157
+Event	T2	manevraydı	EVENT	243
+Event	T3	ettiği	EVENT	342
+Event	T4	engelliyordu	EVENT	419
+Event	T6	etti	EVENT	506
+Event	T7	kuruldu	EVENT	619
+Event	T8	büyünce	EVENT	98
+Event	T9	ederek	EVENT	394
+Relation	T8	T1	CauseEffect	true	büyünce	çekildi
+Relation	T1	T8	EffectCause	true	çekildi	büyünce
+Relation	T3	T9	CauseEffect	true	ettiği	ederek
+Relation	T9	T3	EffectCause	true	ederek	ettiği
+Relation	T9	T4	CauseEffect	true	ederek	engelliyordu
+Relation	T4	T9	EffectCause	true	engelliyordu	ederek
+Relation	T6	T7	CauseEffect	true	etti	kuruldu
+Relation	T7	T6	EffectCause	true	kuruldu	etti
+Relation	T0	T3	NoRel	true	bırakıldı	ettiği
+Relation	T0	T7	NoRel	true	bırakıldı	kuruldu
+Relation	T1	T3	NoRel	true	çekildi	ettiği
+Relation	T1	T7	NoRel	true	çekildi	kuruldu
+Relation	T2	T1	NoRel	true	manevraydı	çekildi
+Relation	T3	T1	NoRel	true	ettiği	çekildi
+Relation	T4	T0	NoRel	true	engelliyordu	bırakıldı
+Relation	T4	T2	NoRel	true	engelliyordu	manevraydı
+Relation	T4	T3	NoRel	true	engelliyordu	ettiği
+Relation	T4	T6	NoRel	true	engelliyordu	etti
+Relation	T4	T8	NoRel	true	engelliyordu	büyünce
+Relation	T6	T1	NoRel	true	etti	çekildi
+Relation	T6	T2	NoRel	true	etti	manevraydı
+Relation	T6	T8	NoRel	true	etti	büyünce
+Relation	T7	T2	NoRel	true	kuruldu	manevraydı
+Relation	T7	T3	NoRel	true	kuruldu	ettiği
+Relation	T7	T4	NoRel	true	kuruldu	engelliyordu
+Relation	T8	T2	NoRel	true	büyünce	manevraydı
+Relation	T8	T3	NoRel	true	büyünce	ettiği
+Relation	T8	T4	NoRel	true	büyünce	engelliyordu
+Relation	T8	T7	NoRel	true	büyünce	kuruldu
+Relation	T8	T9	NoRel	true	büyünce	ederek
+Relation	T9	T1	NoRel	true	ederek	çekildi
+Relation	T9	T2	NoRel	true	ederek	manevraydı
+Relation	T9	T6	NoRel	true	ederek	etti

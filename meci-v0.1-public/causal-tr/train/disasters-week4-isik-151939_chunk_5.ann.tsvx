@@ -1,0 +1,53 @@
+Text	Depremin , İmparatorluğun Rumeli Eyaleti'ne bağlı Edirne , Çorlu , Gelibolu ve II. Bayezid'in doğum yeri olan ve günümüzde Yunanistan sınırları içinde kalan Dimetoka'da dahi hasara yol açtığına dair raporlar bildirildi .	Aynı dönemde Kahire'de bulunan tarihçi Muhammed İbn İyas ( 1448 -1522 ) , vaka - i namesinde 1509 depreminin Memlûk Devletindeki etkisine dair bir kayıt bırakmıştır .	küçükresim | Orijinali Topkapı Sarayı Müzesinde , görüntüsü de Osmanlı Arşivleri'nin _ TS . MAD . 9567 _ numarada bulunan ve Türkiye deprem tarihinin ilk ve en eski deprem raporu .	Belgede 1509 depreminde hasar gören camilerin listesi yer almaktadır Toplam nüfusunun 160 - 200 bin kişi olduğu tahmin edilen İstanbul ve Galata'da bazı kayıtlara göre en az 4000 , farklı kaynaklara göre ise 13.000'den fazla insan hayatını kaybetti , 10 binden fazla kişi ise yaralandı .	Nüfus oranlaması ile şehir halkının yaklaşık % 10'u deprem sonucunda hayatını kaybetti ya da yaralandı .
+Event	T0	Depremin	EVENT	0
+Event	T1	bildirildi	EVENT	208
+Event	T2	raporu	EVENT	560
+Event	T3	gören	EVENT	599
+Event	T4	kaybetti	EVENT	809
+Event	T5	yaralandı	EVENT	845
+Event	T6	oranlaması	EVENT	863
+Event	T7	deprem	EVENT	909
+Event	T8	kaybetti	EVENT	935
+Event	T9	yaralandı	EVENT	950
+Event	T10	depreminde	EVENT	582
+Relation	T10	T4	CauseEffect	true	depreminde	kaybetti
+Relation	T4	T10	EffectCause	true	kaybetti	depreminde
+Relation	T10	T5	CauseEffect	true	depreminde	yaralandı
+Relation	T5	T10	EffectCause	true	yaralandı	depreminde
+Relation	T7	T8	CauseEffect	true	deprem	kaybetti
+Relation	T8	T7	EffectCause	true	kaybetti	deprem
+Relation	T7	T9	CauseEffect	true	deprem	yaralandı
+Relation	T9	T7	EffectCause	true	yaralandı	deprem
+Relation	T0	T1	NoRel	true	Depremin	bildirildi
+Relation	T0	T2	NoRel	true	Depremin	raporu
+Relation	T0	T4	NoRel	true	Depremin	kaybetti
+Relation	T0	T6	NoRel	true	Depremin	oranlaması
+Relation	T0	T8	NoRel	true	Depremin	kaybetti
+Relation	T0	T9	NoRel	true	Depremin	yaralandı
+Relation	T1	T0	NoRel	true	bildirildi	Depremin
+Relation	T1	T8	NoRel	true	bildirildi	kaybetti
+Relation	T10	T0	NoRel	true	depreminde	Depremin
+Relation	T10	T1	NoRel	true	depreminde	bildirildi
+Relation	T10	T2	NoRel	true	depreminde	raporu
+Relation	T10	T6	NoRel	true	depreminde	oranlaması
+Relation	T10	T8	NoRel	true	depreminde	kaybetti
+Relation	T10	T9	NoRel	true	depreminde	yaralandı
+Relation	T3	T7	NoRel	true	gören	deprem
+Relation	T4	T1	NoRel	true	kaybetti	bildirildi
+Relation	T4	T3	NoRel	true	kaybetti	gören
+Relation	T4	T8	NoRel	true	kaybetti	kaybetti
+Relation	T5	T0	NoRel	true	yaralandı	Depremin
+Relation	T5	T1	NoRel	true	yaralandı	bildirildi
+Relation	T6	T0	NoRel	true	oranlaması	Depremin
+Relation	T6	T7	NoRel	true	oranlaması	deprem
+Relation	T6	T9	NoRel	true	oranlaması	yaralandı
+Relation	T7	T0	NoRel	true	deprem	Depremin
+Relation	T7	T1	NoRel	true	deprem	bildirildi
+Relation	T7	T2	NoRel	true	deprem	raporu
+Relation	T7	T4	NoRel	true	deprem	kaybetti
+Relation	T8	T10	NoRel	true	kaybetti	depreminde
+Relation	T9	T0	NoRel	true	yaralandı	Depremin
+Relation	T9	T3	NoRel	true	yaralandı	gören
+Relation	T9	T4	NoRel	true	yaralandı	kaybetti
+Relation	T9	T5	NoRel	true	yaralandı	yaralandı
+Relation	T9	T8	NoRel	true	yaralandı	kaybetti

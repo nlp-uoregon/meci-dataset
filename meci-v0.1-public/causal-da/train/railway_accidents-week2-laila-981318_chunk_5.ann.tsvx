@@ -1,0 +1,41 @@
+Text	I timerne efter ulykken var Storebæltsbroen spærret for al trafik .	Togtrafikken mellem Fyn og Sjælland blev indstillet til kl. 10.00 det efterfølgende døgn .	Passagerer på lyntoget , der ikke var dræbt eller kvæstede , blev transporteret i bus til et oprettet krisecenter i Nyborg , hvor de blev tilbudt krisehjælp .	I et interview publiceret i Berlingskes netavis dagen efter ulykken genfortalte lokomotivførerens bisidder , advokat Torben Koch , hvordan lokomotivføreren havde oplevet ulykken .	Ifølge advokaten var lokomotivføreren allerede før kollisionen urolig for kørselsforholdene på Storebæltsforbindelsen .
+Event	T0	ulykken	EVENT	16
+Event	T1	spærret	EVENT	44
+Event	T2	indstillet	EVENT	109
+Event	T3	dræbt	EVENT	197
+Event	T4	kvæstede	EVENT	209
+Event	T5	transporteret	EVENT	225
+Event	T6	publiceret	EVENT	333
+Event	T7	genfortalte	EVENT	386
+Event	T8	ulykken	EVENT	488
+Relation	T0	T1	CauseEffect	true	ulykken	spærret
+Relation	T1	T0	EffectCause	true	spærret	ulykken
+Relation	T0	T2	CauseEffect	true	ulykken	indstillet
+Relation	T2	T0	EffectCause	true	indstillet	ulykken
+Relation	T0	T5	NoRel	true	ulykken	transporteret
+Relation	T0	T8	NoRel	true	ulykken	ulykken
+Relation	T1	T2	NoRel	true	spærret	indstillet
+Relation	T1	T6	NoRel	true	spærret	publiceret
+Relation	T1	T7	NoRel	true	spærret	genfortalte
+Relation	T1	T8	NoRel	true	spærret	ulykken
+Relation	T2	T3	NoRel	true	indstillet	dræbt
+Relation	T2	T4	NoRel	true	indstillet	kvæstede
+Relation	T2	T5	NoRel	true	indstillet	transporteret
+Relation	T2	T8	NoRel	true	indstillet	ulykken
+Relation	T3	T1	NoRel	true	dræbt	spærret
+Relation	T3	T5	NoRel	true	dræbt	transporteret
+Relation	T3	T8	NoRel	true	dræbt	ulykken
+Relation	T4	T8	NoRel	true	kvæstede	ulykken
+Relation	T5	T7	NoRel	true	transporteret	genfortalte
+Relation	T6	T3	NoRel	true	publiceret	dræbt
+Relation	T6	T5	NoRel	true	publiceret	transporteret
+Relation	T6	T7	NoRel	true	publiceret	genfortalte
+Relation	T7	T0	NoRel	true	genfortalte	ulykken
+Relation	T7	T2	NoRel	true	genfortalte	indstillet
+Relation	T7	T4	NoRel	true	genfortalte	kvæstede
+Relation	T7	T6	NoRel	true	genfortalte	publiceret
+Relation	T8	T1	NoRel	true	ulykken	spærret
+Relation	T8	T2	NoRel	true	ulykken	indstillet
+Relation	T8	T3	NoRel	true	ulykken	dræbt
+Relation	T8	T5	NoRel	true	ulykken	transporteret
+Relation	T8	T6	NoRel	true	ulykken	publiceret

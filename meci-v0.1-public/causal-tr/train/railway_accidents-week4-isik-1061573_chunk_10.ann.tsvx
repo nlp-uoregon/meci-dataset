@@ -1,0 +1,40 @@
+Text	- 17 Ocak , 1977 - Tianepantla hemzemin geçit kazası — Bir yolcu treni , yerel bir otobüse çarptı .	En az kırk iki kişi öldü .	- 15 Ağustos , 1982 - Tula hemzemin geçit felaketi — bir ekspres otobüs , Nuevo Laredo - Mexico City yolcu treniyle çarpıştı .	En az yirmi üç kişi öldü ve otuz iki kişi yaralandı .	- 25 Şubat , 1989 - Saltillo hemzemin geçit felaketi — Bir yolcu treni yerel bir otobüse çarptı .
+Event	T0	kazası	EVENT	46
+Event	T1	çarptı	EVENT	91
+Event	T2	öldü	EVENT	120
+Event	T3	felaketi	EVENT	169
+Event	T4	çarpıştı	EVENT	243
+Event	T5	öldü	EVENT	274
+Event	T6	yaralandı	EVENT	296
+Event	T7	felaketi	EVENT	352
+Event	T8	çarptı	EVENT	397
+Relation	T1	T0	CauseEffect	true	çarptı	kazası
+Relation	T0	T1	EffectCause	true	kazası	çarptı
+Relation	T0	T2	CauseEffect	true	kazası	öldü
+Relation	T2	T0	EffectCause	true	öldü	kazası
+Relation	T4	T3	CauseEffect	true	çarpıştı	felaketi
+Relation	T3	T4	EffectCause	true	felaketi	çarpıştı
+Relation	T3	T5	CauseEffect	true	felaketi	öldü
+Relation	T5	T3	EffectCause	true	öldü	felaketi
+Relation	T3	T6	CauseEffect	true	felaketi	yaralandı
+Relation	T6	T3	EffectCause	true	yaralandı	felaketi
+Relation	T8	T7	CauseEffect	true	çarptı	felaketi
+Relation	T7	T8	EffectCause	true	felaketi	çarptı
+Relation	T1	T4	NoRel	true	çarptı	çarpıştı
+Relation	T1	T5	NoRel	true	çarptı	öldü
+Relation	T1	T7	NoRel	true	çarptı	felaketi
+Relation	T2	T7	NoRel	true	öldü	felaketi
+Relation	T2	T8	NoRel	true	öldü	çarptı
+Relation	T3	T1	NoRel	true	felaketi	çarptı
+Relation	T3	T2	NoRel	true	felaketi	öldü
+Relation	T3	T8	NoRel	true	felaketi	çarptı
+Relation	T4	T2	NoRel	true	çarpıştı	öldü
+Relation	T4	T6	NoRel	true	çarpıştı	yaralandı
+Relation	T4	T7	NoRel	true	çarpıştı	felaketi
+Relation	T5	T1	NoRel	true	öldü	çarptı
+Relation	T6	T4	NoRel	true	yaralandı	çarpıştı
+Relation	T7	T0	NoRel	true	felaketi	kazası
+Relation	T7	T3	NoRel	true	felaketi	felaketi
+Relation	T7	T6	NoRel	true	felaketi	yaralandı
+Relation	T8	T1	NoRel	true	çarptı	çarptı
+Relation	T8	T3	NoRel	true	çarptı	felaketi

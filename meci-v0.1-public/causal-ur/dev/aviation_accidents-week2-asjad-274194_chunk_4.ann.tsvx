@@ -1,0 +1,51 @@
+Text	تائی ‌پے فائر ڈیپارٹمنٹ اور واؤلنٹری ریسکیو ورکر منٹوں میں ہی جائے حادثہ پر پہنچ گئے اور نیم ڈوبے ہوئے جہاز سے لوگوں کو نکال کر کشتیوں کی مدد سے کناروں تک پہنچانا شروع کر دیا -	غوطہ خور بھی ریسکیو مشن میں شامل تھے لیکن ملبہ اور پانی میں کم حدنگاہ ان کے آڑے آ رہی تھی -	ریسکیو ورکرز کے بیان کے مطابق جہاز کا کیبن مکمل طور پر تباہ ہو چکا تھا ، سیٹ بیلٹس خاص کر اگلے حصے میں جڑ چکی تھیں مسافروں کو نکالنے کے لیے انہیں کاٹا گیا -	بچنے والوں میں سے زیادہ تر پچھلے حصے میں سوار تھے -	جہاز کا فلائٹ رکارڈر اسی دن رات8 بجے ڈھونڈ لیا گیا تھا -
+Event	T1	ڈوبے	EVENT	93
+Event	T12	جڑ	EVENT	372
+Event	T13	آڑے آ رہی	EVENT	253
+Event	T14	سوار	EVENT	467
+Event	T2	نکال	EVENT	120
+Event	T3	شامل	EVENT	205
+Event	T4	بیان	EVENT	285
+Event	T5	تباہ	EVENT	324
+Event	T6	پہنچانا	EVENT	155
+Event	T7	نکالنے	EVENT	395
+Event	T9	مدد	EVENT	138
+Relation	T5	T12	CauseEffect	true	تباہ	جڑ
+Relation	T12	T5	EffectCause	true	جڑ	تباہ
+Relation	T1	T2	NoRel	true	ڈوبے	نکال
+Relation	T1	T3	NoRel	true	ڈوبے	شامل
+Relation	T1	T7	NoRel	true	ڈوبے	نکالنے
+Relation	T1	T9	NoRel	true	ڈوبے	مدد
+Relation	T12	T13	NoRel	true	جڑ	آڑے آ رہی
+Relation	T12	T2	NoRel	true	جڑ	نکال
+Relation	T12	T3	NoRel	true	جڑ	شامل
+Relation	T12	T9	NoRel	true	جڑ	مدد
+Relation	T13	T3	NoRel	true	آڑے آ رہی	شامل
+Relation	T13	T4	NoRel	true	آڑے آ رہی	بیان
+Relation	T13	T5	NoRel	true	آڑے آ رہی	تباہ
+Relation	T13	T6	NoRel	true	آڑے آ رہی	پہنچانا
+Relation	T14	T13	NoRel	true	سوار	آڑے آ رہی
+Relation	T14	T2	NoRel	true	سوار	نکال
+Relation	T14	T4	NoRel	true	سوار	بیان
+Relation	T14	T5	NoRel	true	سوار	تباہ
+Relation	T2	T12	NoRel	true	نکال	جڑ
+Relation	T2	T14	NoRel	true	نکال	سوار
+Relation	T2	T6	NoRel	true	نکال	پہنچانا
+Relation	T3	T12	NoRel	true	شامل	جڑ
+Relation	T3	T13	NoRel	true	شامل	آڑے آ رہی
+Relation	T3	T6	NoRel	true	شامل	پہنچانا
+Relation	T3	T7	NoRel	true	شامل	نکالنے
+Relation	T3	T9	NoRel	true	شامل	مدد
+Relation	T4	T1	NoRel	true	بیان	ڈوبے
+Relation	T4	T5	NoRel	true	بیان	تباہ
+Relation	T5	T1	NoRel	true	تباہ	ڈوبے
+Relation	T5	T14	NoRel	true	تباہ	سوار
+Relation	T5	T6	NoRel	true	تباہ	پہنچانا
+Relation	T6	T1	NoRel	true	پہنچانا	ڈوبے
+Relation	T6	T13	NoRel	true	پہنچانا	آڑے آ رہی
+Relation	T6	T3	NoRel	true	پہنچانا	شامل
+Relation	T7	T9	NoRel	true	نکالنے	مدد
+Relation	T9	T1	NoRel	true	مدد	ڈوبے
+Relation	T9	T13	NoRel	true	مدد	آڑے آ رہی
+Relation	T9	T14	NoRel	true	مدد	سوار
+Relation	T9	T5	NoRel	true	مدد	تباہ

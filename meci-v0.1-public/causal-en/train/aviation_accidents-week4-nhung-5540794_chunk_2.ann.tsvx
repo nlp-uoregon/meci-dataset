@@ -1,0 +1,64 @@
+Text	Jafari acquired radar lock on an object at a range of 27 nautical miles ( ≈ 50 KM. ) , its size described as a Boeing KC - 135 Stratotanker .	As he approached the light , which Jafari described as “ flashing with intense red , green , orange and blue lights so bright that I was not able to see its body ” , its communications system shut off .	As he attempted to fire an AIM - 9 Sidewinder infrared guided missile , he said his equipment shut down and only returned to normal after his jet moved away from the object .	Jafari said he was " startled by a round object which came out of the primary object and started coming straight toward me at a high rate of speed , almost as if it were a missile " , but as he attempted to fire " Suddenly , nothing was working .	The weapons control panel was out , and I lost all the instruments , and the radio " .
+Event	T0	acquired	EVENT	7
+Event	T1	described	EVENT	96
+Event	T2	approached	EVENT	148
+Event	T3	described	EVENT	184
+Event	T4	flashing	EVENT	199
+Event	T5	attempted	EVENT	351
+Event	T6	fire	EVENT	364
+Event	T7	said	EVENT	420
+Event	T8	said	EVENT	527
+Event	T9	startled	EVENT	541
+Event	T10	attempted	EVENT	714
+Event	T11	fire	EVENT	727
+Event	T12	working	EVENT	757
+Event	T13	out	EVENT	797
+Event	T14	lost	EVENT	809
+Event	T15	shut off	EVENT	334
+Event	T16	shut down	EVENT	439
+Event	T17	returned	EVENT	458
+Event	T18	moved	EVENT	491
+Event	T19	came	EVENT	574
+Event	T20	started	EVENT	609
+Relation	T0	T13	NoRel	true	acquired	out
+Relation	T0	T9	NoRel	true	acquired	startled
+Relation	T1	T14	NoRel	true	described	lost
+Relation	T1	T9	NoRel	true	described	startled
+Relation	T10	T9	NoRel	true	attempted	startled
+Relation	T11	T16	NoRel	true	fire	shut down
+Relation	T11	T4	NoRel	true	fire	flashing
+Relation	T11	T5	NoRel	true	fire	attempted
+Relation	T11	T7	NoRel	true	fire	said
+Relation	T12	T0	NoRel	true	working	acquired
+Relation	T12	T10	NoRel	true	working	attempted
+Relation	T12	T11	NoRel	true	working	fire
+Relation	T12	T15	NoRel	true	working	shut off
+Relation	T12	T3	NoRel	true	working	described
+Relation	T12	T4	NoRel	true	working	flashing
+Relation	T13	T6	NoRel	true	out	fire
+Relation	T14	T6	NoRel	true	lost	fire
+Relation	T15	T12	NoRel	true	shut off	working
+Relation	T15	T17	NoRel	true	shut off	returned
+Relation	T16	T19	NoRel	true	shut down	came
+Relation	T17	T11	NoRel	true	returned	fire
+Relation	T17	T19	NoRel	true	returned	came
+Relation	T17	T2	NoRel	true	returned	approached
+Relation	T18	T13	NoRel	true	moved	out
+Relation	T18	T20	NoRel	true	moved	started
+Relation	T19	T1	NoRel	true	came	described
+Relation	T19	T13	NoRel	true	came	out
+Relation	T19	T3	NoRel	true	came	described
+Relation	T2	T11	NoRel	true	approached	fire
+Relation	T2	T16	NoRel	true	approached	shut down
+Relation	T3	T6	NoRel	true	described	fire
+Relation	T5	T2	NoRel	true	attempted	approached
+Relation	T6	T3	NoRel	true	fire	described
+Relation	T7	T18	NoRel	true	said	moved
+Relation	T7	T5	NoRel	true	said	attempted
+Relation	T8	T12	NoRel	true	said	working
+Relation	T8	T2	NoRel	true	said	approached
+Relation	T8	T20	NoRel	true	said	started
+Relation	T8	T3	NoRel	true	said	described
+Relation	T8	T4	NoRel	true	said	flashing
+Relation	T9	T20	NoRel	true	startled	started
+Relation	T9	T8	NoRel	true	startled	said

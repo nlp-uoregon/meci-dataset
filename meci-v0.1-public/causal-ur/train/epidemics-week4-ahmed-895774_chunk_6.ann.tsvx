@@ -1,0 +1,25 @@
+Text	-	2 فروری کو دوسرا معاملہ سامنے آیا ، یہ بھی کیرلا میں تھا ۔	یہ مریض بھارت اور چین کا سفر کرتا رہتا تھا اور وہاں سے لوٹا تو اسے کورونا وائرس کی بیماری لگ چکی تھی ۔	-____' 3 فروری_' کو بھارت میں تیسرا مریض ملا جو کاسرگوڈ ، کیرلا کا تھا ۔	اس نے ووہوان کا سفر کیا تھا ۔
+Event	T1	سفر	EVENT	86
+Event	T2	لوٹا	EVENT	116
+Event	T3	ملا	EVENT	205
+Event	T4	معاملہ	EVENT	19
+Event	T5	سامنے	EVENT	26
+Event	T6	لگ	EVENT	151
+Event	T7	سفر	EVENT	253
+Relation	T2	T6	CauseEffect	true	لوٹا	لگ
+Relation	T6	T2	EffectCause	true	لگ	لوٹا
+Relation	T7	T3	CauseEffect	true	سفر	ملا
+Relation	T3	T7	EffectCause	true	ملا	سفر
+Relation	T1	T3	NoRel	true	سفر	ملا
+Relation	T3	T1	NoRel	true	ملا	سفر
+Relation	T3	T2	NoRel	true	ملا	لوٹا
+Relation	T3	T4	NoRel	true	ملا	معاملہ
+Relation	T4	T5	NoRel	true	معاملہ	سامنے
+Relation	T5	T1	NoRel	true	سامنے	سفر
+Relation	T5	T4	NoRel	true	سامنے	معاملہ
+Relation	T5	T6	NoRel	true	سامنے	لگ
+Relation	T5	T7	NoRel	true	سامنے	سفر
+Relation	T6	T1	NoRel	true	لگ	سفر
+Relation	T6	T7	NoRel	true	لگ	سفر
+Relation	T7	T2	NoRel	true	سفر	لوٹا
+Relation	T7	T5	NoRel	true	سفر	سامنے

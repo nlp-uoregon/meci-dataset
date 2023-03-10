@@ -1,0 +1,53 @@
+Text	Men de her gnister var længere nede .	Gnisterne kom fra skinnerne , og lokomotivføreren vidste derfor , at der var noget galt .	Fra førerhuset så han nu , hvordan noget stort hang ud fra godstogets anden vogn på vej i modsatte retning .	Og et splitsekund efter hørte han braget " _ .	Ifølge Torben Koch var det lokomotivførerens fornemmelse , at trykket som opstod , da IC4-toget mødte godstoget fik traileren til at rive sig fri .
+Event	T0	kom	EVENT	48
+Event	T1	vidste	EVENT	88
+Event	T2	hørte	EVENT	261
+Event	T3	braget	EVENT	271
+Event	T4	trykket	EVENT	346
+Event	T5	opstod	EVENT	358
+Event	T6	mødte	EVENT	380
+Event	T7	fik	EVENT	396
+Event	T8	var	EVENT	19
+Event	T9	hang	EVENT	175
+Event	T10	rive	EVENT	417
+Relation	T0	T1	CauseEffect	true	kom	vidste
+Relation	T1	T0	EffectCause	true	vidste	kom
+Relation	T4	T10	CauseEffect	true	trykket	rive
+Relation	T10	T4	EffectCause	true	rive	trykket
+Relation	T6	T5	CauseEffect	true	mødte	opstod
+Relation	T5	T6	EffectCause	true	opstod	mødte
+Relation	T9	T3	CauseEffect	true	hang	braget
+Relation	T3	T9	EffectCause	true	braget	hang
+Relation	T0	T6	NoRel	true	kom	mødte
+Relation	T0	T9	NoRel	true	kom	hang
+Relation	T1	T4	NoRel	true	vidste	trykket
+Relation	T1	T5	NoRel	true	vidste	opstod
+Relation	T1	T9	NoRel	true	vidste	hang
+Relation	T10	T0	NoRel	true	rive	kom
+Relation	T10	T3	NoRel	true	rive	braget
+Relation	T2	T0	NoRel	true	hørte	kom
+Relation	T2	T10	NoRel	true	hørte	rive
+Relation	T2	T3	NoRel	true	hørte	braget
+Relation	T2	T8	NoRel	true	hørte	var
+Relation	T2	T9	NoRel	true	hørte	hang
+Relation	T3	T4	NoRel	true	braget	trykket
+Relation	T4	T1	NoRel	true	trykket	vidste
+Relation	T4	T6	NoRel	true	trykket	mødte
+Relation	T4	T8	NoRel	true	trykket	var
+Relation	T5	T3	NoRel	true	opstod	braget
+Relation	T5	T4	NoRel	true	opstod	trykket
+Relation	T5	T9	NoRel	true	opstod	hang
+Relation	T6	T2	NoRel	true	mødte	hørte
+Relation	T6	T8	NoRel	true	mødte	var
+Relation	T7	T2	NoRel	true	fik	hørte
+Relation	T7	T4	NoRel	true	fik	trykket
+Relation	T7	T5	NoRel	true	fik	opstod
+Relation	T7	T8	NoRel	true	fik	var
+Relation	T7	T9	NoRel	true	fik	hang
+Relation	T8	T1	NoRel	true	var	vidste
+Relation	T8	T10	NoRel	true	var	rive
+Relation	T8	T4	NoRel	true	var	trykket
+Relation	T9	T1	NoRel	true	hang	vidste
+Relation	T9	T2	NoRel	true	hang	hørte
+Relation	T9	T6	NoRel	true	hang	mødte
+Relation	T9	T7	NoRel	true	hang	fik

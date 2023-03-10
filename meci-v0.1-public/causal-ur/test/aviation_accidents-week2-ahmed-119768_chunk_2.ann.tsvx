@@ -1,0 +1,60 @@
+Text	مسز ایلی رافیل اور بریگیڈیئر جنرل ویسم کی بیوہ دونوں کو امریکی تفتیش کاروں کی طرف سے بتایا گیا کہ حادثے کی وجہ سی 130 کے ساتھ ایک عام میکانیکی مسئلہ تھا ۔	طیارے کے حادثے کے تناظر میں بہت سی کہانیاں گردش کرتی رہیں ۔	“ جنرل محمد ضیاء الحق “ کے بیٹے اعجاز الحق ان لوگوں کی تلاش میں سرگرداں رہے جنہیں وہ کھل کر سبوتاژ اور سیاسی قتل کا ذمہ دار سمجھتے رہے ۔	جس میں پاکستان اور امریکا کے اعلیٰ سویلین اور فوجی حکام بھی ہلاک ہوئے ۔	طیارے کے حادثے کے چند ہفتوں بعد پاکستانی حکام نے 365 صفحات پرمشتمل خفیہ رپورٹ کی 27 صفحات پر مشتمل خلاصہ پیش کیا ، جس میں تفتیش کاروں نے طیارے کے میکانیکی نظام میں ممکنہ خرابیوں کے شواہد کا اظہار کیا تھا لیکن ملکی اور غیر ملکی ذرائع ابلاغ میں اس کے سازش ہونے کی کہانیوں کی کبھی کمی نہیں رہی ۔
+Event	T1	حادثے	EVENT	98
+Event	T10	خرابیوں	EVENT	594
+Event	T11	قتل	EVENT	324
+Event	T12	سبوتاژ	EVENT	307
+Event	T13	ہلاک	EVENT	412
+Event	T14	اظہار	EVENT	614
+Event	T2	حادثے	EVENT	164
+Event	T3	گردش	EVENT	198
+Event	T4	تلاش	EVENT	270
+Event	T8	حادثے	EVENT	433
+Event	T9	مسئلہ	EVENT	143
+Relation	T9	T1	CauseEffect	true	مسئلہ	حادثے
+Relation	T1	T9	EffectCause	true	حادثے	مسئلہ
+Relation	T2	T3	CauseEffect	true	حادثے	گردش
+Relation	T3	T2	EffectCause	true	گردش	حادثے
+Relation	T1	T4	CauseEffect	true	حادثے	تلاش
+Relation	T4	T1	EffectCause	true	تلاش	حادثے
+Relation	T1	T13	CauseEffect	true	حادثے	ہلاک
+Relation	T13	T1	EffectCause	true	ہلاک	حادثے
+Relation	T10	T8	CauseEffect	true	خرابیوں	حادثے
+Relation	T8	T10	EffectCause	true	حادثے	خرابیوں
+Relation	T10	T2	CauseEffect	true	خرابیوں	حادثے
+Relation	T2	T10	EffectCause	true	حادثے	خرابیوں
+Relation	T10	T1	CauseEffect	true	خرابیوں	حادثے
+Relation	T1	T10	EffectCause	true	حادثے	خرابیوں
+Relation	T1	T2	NoRel	true	حادثے	حادثے
+Relation	T1	T8	NoRel	true	حادثے	حادثے
+Relation	T10	T11	NoRel	true	خرابیوں	قتل
+Relation	T10	T12	NoRel	true	خرابیوں	سبوتاژ
+Relation	T11	T12	NoRel	true	قتل	سبوتاژ
+Relation	T11	T13	NoRel	true	قتل	ہلاک
+Relation	T11	T4	NoRel	true	قتل	تلاش
+Relation	T12	T2	NoRel	true	سبوتاژ	حادثے
+Relation	T12	T4	NoRel	true	سبوتاژ	تلاش
+Relation	T13	T11	NoRel	true	ہلاک	قتل
+Relation	T13	T12	NoRel	true	ہلاک	سبوتاژ
+Relation	T13	T14	NoRel	true	ہلاک	اظہار
+Relation	T13	T2	NoRel	true	ہلاک	حادثے
+Relation	T13	T4	NoRel	true	ہلاک	تلاش
+Relation	T13	T8	NoRel	true	ہلاک	حادثے
+Relation	T14	T10	NoRel	true	اظہار	خرابیوں
+Relation	T14	T4	NoRel	true	اظہار	تلاش
+Relation	T2	T12	NoRel	true	حادثے	سبوتاژ
+Relation	T2	T13	NoRel	true	حادثے	ہلاک
+Relation	T2	T4	NoRel	true	حادثے	تلاش
+Relation	T2	T8	NoRel	true	حادثے	حادثے
+Relation	T3	T1	NoRel	true	گردش	حادثے
+Relation	T3	T13	NoRel	true	گردش	ہلاک
+Relation	T3	T4	NoRel	true	گردش	تلاش
+Relation	T4	T13	NoRel	true	تلاش	ہلاک
+Relation	T4	T3	NoRel	true	تلاش	گردش
+Relation	T4	T8	NoRel	true	تلاش	حادثے
+Relation	T8	T12	NoRel	true	حادثے	سبوتاژ
+Relation	T8	T13	NoRel	true	حادثے	ہلاک
+Relation	T8	T3	NoRel	true	حادثے	گردش
+Relation	T8	T9	NoRel	true	حادثے	مسئلہ
+Relation	T9	T11	NoRel	true	مسئلہ	قتل
+Relation	T9	T12	NoRel	true	مسئلہ	سبوتاژ
+Relation	T9	T14	NoRel	true	مسئلہ	اظہار

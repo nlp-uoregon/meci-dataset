@@ -1,0 +1,80 @@
+Text	First , St. Louis had one of the lowest death rates from flu in the country .	Compared to Philadelphia which permitted a Philadelphia Liberty Loans Parade of 200,000 during the start of the flu pandemic there , St. Louis had half the per capita death rate .	Second , Starkloff 's intervention served to " flatten the curve . "	In comparison to Boston 's incidence of the flu , which peaked with a death rate of about 160 per 100,000 about two weeks after the first cases , St. Louis had a peak less than 60 per 100,000 about six weeks after the first cases were reported .	After a decade - long chronic illness , Starkloff died at home of a subsequent bout of pyelonephritis on January 15 , 1942 .
+Event	T0	death	EVENT	40
+Event	T1	Compared	EVENT	78
+Event	T10	cases	EVENT	465
+Event	T11	peak	EVENT	489
+Event	T12	cases	EVENT	551
+Event	T13	reported	EVENT	562
+Event	T14	illness	EVENT	603
+Event	T15	died	EVENT	623
+Event	T16	bout	EVENT	652
+Event	T17	flu	EVENT	57
+Event	T18	death	EVENT	245
+Event	T19	death	EVENT	397
+Event	T2	permitted	EVENT	109
+Event	T3	flatten	EVENT	305
+Event	T4	start	EVENT	177
+Event	T5	pandemic	EVENT	194
+Event	T6	intervention	EVENT	280
+Event	T7	incidence	EVENT	354
+Event	T8	flu	EVENT	371
+Event	T9	peaked	EVENT	383
+Relation	T17	T0	CauseEffect	true	flu	death
+Relation	T0	T17	EffectCause	true	death	flu
+Relation	T5	T18	CauseEffect	true	pandemic	death
+Relation	T18	T5	EffectCause	true	death	pandemic
+Relation	T6	T3	CauseEffect	true	intervention	flatten
+Relation	T3	T6	EffectCause	true	flatten	intervention
+Relation	T8	T19	CauseEffect	true	flu	death
+Relation	T19	T8	EffectCause	true	death	flu
+Relation	T14	T15	CauseEffect	true	illness	died
+Relation	T15	T14	EffectCause	true	died	illness
+Relation	T12	T13	CauseEffect	true	cases	reported
+Relation	T13	T12	EffectCause	true	reported	cases
+Relation	T0	T14	NoRel	true	death	illness
+Relation	T0	T3	NoRel	true	death	flatten
+Relation	T0	T6	NoRel	true	death	intervention
+Relation	T1	T11	NoRel	true	Compared	peak
+Relation	T1	T15	NoRel	true	Compared	died
+Relation	T1	T17	NoRel	true	Compared	flu
+Relation	T1	T2	NoRel	true	Compared	permitted
+Relation	T11	T1	NoRel	true	peak	Compared
+Relation	T12	T17	NoRel	true	cases	flu
+Relation	T13	T14	NoRel	true	reported	illness
+Relation	T13	T16	NoRel	true	reported	bout
+Relation	T13	T9	NoRel	true	reported	peaked
+Relation	T14	T12	NoRel	true	illness	cases
+Relation	T14	T13	NoRel	true	illness	reported
+Relation	T14	T6	NoRel	true	illness	intervention
+Relation	T15	T3	NoRel	true	died	flatten
+Relation	T16	T0	NoRel	true	bout	death
+Relation	T16	T15	NoRel	true	bout	died
+Relation	T16	T18	NoRel	true	bout	death
+Relation	T16	T6	NoRel	true	bout	intervention
+Relation	T17	T12	NoRel	true	flu	cases
+Relation	T17	T9	NoRel	true	flu	peaked
+Relation	T18	T9	NoRel	true	death	peaked
+Relation	T19	T10	NoRel	true	death	cases
+Relation	T19	T11	NoRel	true	death	peak
+Relation	T19	T17	NoRel	true	death	flu
+Relation	T19	T3	NoRel	true	death	flatten
+Relation	T19	T6	NoRel	true	death	intervention
+Relation	T4	T5	NoRel	true	start	pandemic
+Relation	T4	T8	NoRel	true	start	flu
+Relation	T5	T14	NoRel	true	pandemic	illness
+Relation	T5	T15	NoRel	true	pandemic	died
+Relation	T5	T8	NoRel	true	pandemic	flu
+Relation	T6	T15	NoRel	true	intervention	died
+Relation	T6	T18	NoRel	true	intervention	death
+Relation	T6	T2	NoRel	true	intervention	permitted
+Relation	T7	T0	NoRel	true	incidence	death
+Relation	T8	T1	NoRel	true	flu	Compared
+Relation	T8	T10	NoRel	true	flu	cases
+Relation	T8	T11	NoRel	true	flu	peak
+Relation	T8	T16	NoRel	true	flu	bout
+Relation	T8	T2	NoRel	true	flu	permitted
+Relation	T8	T6	NoRel	true	flu	intervention
+Relation	T9	T16	NoRel	true	peaked	bout
+Relation	T9	T19	NoRel	true	peaked	death
+Relation	T9	T7	NoRel	true	peaked	incidence
+Relation	T9	T8	NoRel	true	peaked	flu

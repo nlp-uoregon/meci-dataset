@@ -1,0 +1,73 @@
+Text	The NTSB further found that an incorrect maintenance procedure , which was implemented by Emery Worldwide Airlines , introduced an incorrect torque - loading on the bolts that were supposed to connect the control rod .	The NTSB released its final report in 2003 , three years after the accident .	The report stated that the crash of Flight 17 was caused by the detachment of the right elevator control tab .	The disconnection was caused by the failure to properly secure and inspect the attachment bolt .	The NTSB then added : " The safety issues discussed in this report include DC - 8 elevator position indicator installation and usage , adequacy of DC - 8 maintenance work cards ( required inspection items ) , and DC - 8 elevator control tab design .
+Event	T0	found	EVENT	17
+Event	T1	procedure	EVENT	53
+Event	T2	implemented	EVENT	75
+Event	T3	introduced	EVENT	117
+Event	T4	connect	EVENT	193
+Event	T5	released	EVENT	228
+Event	T6	report	EVENT	247
+Event	T7	accident	EVENT	286
+Event	T8	stated	EVENT	308
+Event	T9	crash	EVENT	324
+Event	T10	caused	EVENT	347
+Event	T11	detachment	EVENT	361
+Event	T12	disconnection	EVENT	412
+Event	T13	caused	EVENT	430
+Event	T14	failure	EVENT	444
+Event	T15	secure	EVENT	464
+Event	T16	inspect	EVENT	475
+Event	T17	added	EVENT	519
+Event	T18	discussed	EVENT	547
+Event	T19	usage	EVENT	632
+Event	T20	inspection	EVENT	693
+Event	T21	design	EVENT	746
+Relation	T11	T9	CauseEffect	true	detachment	crash
+Relation	T9	T11	EffectCause	true	crash	detachment
+Relation	T14	T12	CauseEffect	true	failure	disconnection
+Relation	T12	T14	EffectCause	true	disconnection	failure
+Relation	T3	T4	CauseEffect	true	introduced	connect
+Relation	T4	T3	EffectCause	true	connect	introduced
+Relation	T0	T21	NoRel	true	found	design
+Relation	T10	T19	NoRel	true	caused	usage
+Relation	T10	T8	NoRel	true	caused	stated
+Relation	T11	T2	NoRel	true	detachment	implemented
+Relation	T11	T8	NoRel	true	detachment	stated
+Relation	T12	T17	NoRel	true	disconnection	added
+Relation	T12	T2	NoRel	true	disconnection	implemented
+Relation	T13	T15	NoRel	true	caused	secure
+Relation	T13	T21	NoRel	true	caused	design
+Relation	T14	T0	NoRel	true	failure	found
+Relation	T15	T21	NoRel	true	secure	design
+Relation	T15	T4	NoRel	true	secure	connect
+Relation	T15	T5	NoRel	true	secure	released
+Relation	T15	T6	NoRel	true	secure	report
+Relation	T16	T20	NoRel	true	inspect	inspection
+Relation	T16	T4	NoRel	true	inspect	connect
+Relation	T17	T14	NoRel	true	added	failure
+Relation	T18	T14	NoRel	true	discussed	failure
+Relation	T18	T20	NoRel	true	discussed	inspection
+Relation	T18	T21	NoRel	true	discussed	design
+Relation	T19	T16	NoRel	true	usage	inspect
+Relation	T19	T4	NoRel	true	usage	connect
+Relation	T20	T13	NoRel	true	inspection	caused
+Relation	T21	T10	NoRel	true	design	caused
+Relation	T21	T12	NoRel	true	design	disconnection
+Relation	T21	T13	NoRel	true	design	caused
+Relation	T21	T20	NoRel	true	design	inspection
+Relation	T21	T5	NoRel	true	design	released
+Relation	T21	T6	NoRel	true	design	report
+Relation	T3	T0	NoRel	true	introduced	found
+Relation	T3	T1	NoRel	true	introduced	procedure
+Relation	T3	T17	NoRel	true	introduced	added
+Relation	T3	T20	NoRel	true	introduced	inspection
+Relation	T3	T21	NoRel	true	introduced	design
+Relation	T4	T10	NoRel	true	connect	caused
+Relation	T4	T8	NoRel	true	connect	stated
+Relation	T5	T20	NoRel	true	released	inspection
+Relation	T6	T21	NoRel	true	report	design
+Relation	T7	T9	NoRel	true	accident	crash
+Relation	T8	T16	NoRel	true	stated	inspect
+Relation	T8	T5	NoRel	true	stated	released
+Relation	T8	T7	NoRel	true	stated	accident
+Relation	T9	T20	NoRel	true	crash	inspection
+Relation	T9	T21	NoRel	true	crash	design

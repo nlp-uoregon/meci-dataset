@@ -1,0 +1,90 @@
+Text	- Mediodía : 102.136 contagiados , 9.053 muertos y 22.647 recuperados .	- Se ha recaudado en donaciones 8,5 millones de euros en la web de la Comunidad de Madrid para sanidad .	- Aumenta la violencia hacia menores y el juego de póquer y casinos en línea debido al confinamiento .	- Fallece el agente José Luis Gómez , primer policía nacional víctima del coronavirus .	- Nica , una mujer de 103 años recibe el alta tras superar el coronavirus .
+Event	T0	contagiados	EVENT	21
+Event	T1	muertos	EVENT	41
+Event	T10	víctima	EVENT	342
+Event	T11	coronavirus	EVENT	354
+Event	T12	recibe	EVENT	399
+Event	T13	alta	EVENT	409
+Event	T14	superar	EVENT	419
+Event	T15	coronavirus	EVENT	430
+Event	T2	recuperados	EVENT	58
+Event	T3	recaudado	EVENT	80
+Event	T4	donaciones	EVENT	93
+Event	T6	violencia	EVENT	190
+Event	T7	juego	EVENT	219
+Event	T8	confinamiento	EVENT	264
+Event	T9	Fallece	EVENT	282
+Relation	T4	T3	CauseEffect	true	donaciones	recaudado
+Relation	T3	T4	EffectCause	true	recaudado	donaciones
+Relation	T8	T6	CauseEffect	true	confinamiento	violencia
+Relation	T6	T8	EffectCause	true	violencia	confinamiento
+Relation	T11	T9	CauseEffect	true	coronavirus	Fallece
+Relation	T9	T11	EffectCause	true	Fallece	coronavirus
+Relation	T0	T10	NoRel	true	contagiados	víctima
+Relation	T0	T13	NoRel	true	contagiados	alta
+Relation	T0	T15	NoRel	true	contagiados	coronavirus
+Relation	T0	T3	NoRel	true	contagiados	recaudado
+Relation	T0	T9	NoRel	true	contagiados	Fallece
+Relation	T1	T11	NoRel	true	muertos	coronavirus
+Relation	T1	T15	NoRel	true	muertos	coronavirus
+Relation	T1	T2	NoRel	true	muertos	recuperados
+Relation	T1	T4	NoRel	true	muertos	donaciones
+Relation	T1	T8	NoRel	true	muertos	confinamiento
+Relation	T10	T1	NoRel	true	víctima	muertos
+Relation	T10	T2	NoRel	true	víctima	recuperados
+Relation	T10	T4	NoRel	true	víctima	donaciones
+Relation	T10	T6	NoRel	true	víctima	violencia
+Relation	T10	T7	NoRel	true	víctima	juego
+Relation	T10	T8	NoRel	true	víctima	confinamiento
+Relation	T10	T9	NoRel	true	víctima	Fallece
+Relation	T11	T1	NoRel	true	coronavirus	muertos
+Relation	T11	T4	NoRel	true	coronavirus	donaciones
+Relation	T11	T7	NoRel	true	coronavirus	juego
+Relation	T12	T0	NoRel	true	recibe	contagiados
+Relation	T12	T10	NoRel	true	recibe	víctima
+Relation	T12	T15	NoRel	true	recibe	coronavirus
+Relation	T13	T1	NoRel	true	alta	muertos
+Relation	T13	T11	NoRel	true	alta	coronavirus
+Relation	T13	T14	NoRel	true	alta	superar
+Relation	T13	T9	NoRel	true	alta	Fallece
+Relation	T14	T0	NoRel	true	superar	contagiados
+Relation	T14	T12	NoRel	true	superar	recibe
+Relation	T14	T15	NoRel	true	superar	coronavirus
+Relation	T14	T4	NoRel	true	superar	donaciones
+Relation	T14	T6	NoRel	true	superar	violencia
+Relation	T15	T12	NoRel	true	coronavirus	recibe
+Relation	T15	T14	NoRel	true	coronavirus	superar
+Relation	T15	T3	NoRel	true	coronavirus	recaudado
+Relation	T15	T4	NoRel	true	coronavirus	donaciones
+Relation	T15	T7	NoRel	true	coronavirus	juego
+Relation	T2	T0	NoRel	true	recuperados	contagiados
+Relation	T2	T1	NoRel	true	recuperados	muertos
+Relation	T2	T10	NoRel	true	recuperados	víctima
+Relation	T2	T14	NoRel	true	recuperados	superar
+Relation	T2	T4	NoRel	true	recuperados	donaciones
+Relation	T2	T9	NoRel	true	recuperados	Fallece
+Relation	T3	T10	NoRel	true	recaudado	víctima
+Relation	T3	T14	NoRel	true	recaudado	superar
+Relation	T4	T11	NoRel	true	donaciones	coronavirus
+Relation	T4	T12	NoRel	true	donaciones	recibe
+Relation	T4	T13	NoRel	true	donaciones	alta
+Relation	T4	T15	NoRel	true	donaciones	coronavirus
+Relation	T4	T6	NoRel	true	donaciones	violencia
+Relation	T4	T8	NoRel	true	donaciones	confinamiento
+Relation	T4	T9	NoRel	true	donaciones	Fallece
+Relation	T6	T1	NoRel	true	violencia	muertos
+Relation	T6	T15	NoRel	true	violencia	coronavirus
+Relation	T6	T4	NoRel	true	violencia	donaciones
+Relation	T6	T7	NoRel	true	violencia	juego
+Relation	T7	T1	NoRel	true	juego	muertos
+Relation	T7	T11	NoRel	true	juego	coronavirus
+Relation	T7	T15	NoRel	true	juego	coronavirus
+Relation	T7	T2	NoRel	true	juego	recuperados
+Relation	T7	T3	NoRel	true	juego	recaudado
+Relation	T8	T10	NoRel	true	confinamiento	víctima
+Relation	T8	T2	NoRel	true	confinamiento	recuperados
+Relation	T9	T0	NoRel	true	Fallece	contagiados
+Relation	T9	T10	NoRel	true	Fallece	víctima
+Relation	T9	T13	NoRel	true	Fallece	alta
+Relation	T9	T14	NoRel	true	Fallece	superar
+Relation	T9	T4	NoRel	true	Fallece	donaciones

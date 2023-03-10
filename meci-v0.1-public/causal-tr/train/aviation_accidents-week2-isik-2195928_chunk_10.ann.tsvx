@@ -1,0 +1,38 @@
+Text	" 01.15'te mürettebat kontrol kulesiyle iletişime geçti .	Kule kontrolörü 26 numaralı pisti inmeleri için boşalttı ve hava durumunu bildirdi .	Uçak , 26 numaralı pistin eşiğine planlanan irtifadan çok daha yüksek bir irtifada yaklaştı .	İnmeye devam eden uçak , pistin tüm uzunluğu boyunca uçtu ve pistin en uzak ucundan yaklaşık 900 m mesafede yere değdi .	20 m hareket ettikten sonra uçak , havalimanının dış beton bariyerine ve pistin ilerisindeki Daça - Su adlı yerleşim yerinde bulunan binalarına çarptı .
+Event	T1	inmeleri	EVENT	92
+Event	T2	boşalttı	EVENT	106
+Event	T3	bildirdi	EVENT	132
+Event	T4	yaklaştı	EVENT	226
+Event	T5	uçtu	EVENT	290
+Event	T6	değdi	EVENT	350
+Event	T7	hareket	EVENT	363
+Event	T8	çarptı	EVENT	502
+Event	T9	iletişime	EVENT	40
+Relation	T9	T2	CauseEffect	true	iletişime	boşalttı
+Relation	T2	T9	EffectCause	true	boşalttı	iletişime
+Relation	T9	T3	CauseEffect	true	iletişime	bildirdi
+Relation	T3	T9	EffectCause	true	bildirdi	iletişime
+Relation	T4	T5	CauseEffect	true	yaklaştı	uçtu
+Relation	T5	T4	EffectCause	true	uçtu	yaklaştı
+Relation	T5	T6	CauseEffect	true	uçtu	değdi
+Relation	T6	T5	EffectCause	true	değdi	uçtu
+Relation	T6	T8	CauseEffect	true	değdi	çarptı
+Relation	T8	T6	EffectCause	true	çarptı	değdi
+Relation	T1	T2	CauseEffect	true	inmeleri	boşalttı
+Relation	T2	T1	EffectCause	true	boşalttı	inmeleri
+Relation	T1	T3	CauseEffect	true	inmeleri	bildirdi
+Relation	T3	T1	EffectCause	true	bildirdi	inmeleri
+Relation	T1	T4	NoRel	true	inmeleri	yaklaştı
+Relation	T1	T6	NoRel	true	inmeleri	değdi
+Relation	T1	T8	NoRel	true	inmeleri	çarptı
+Relation	T2	T3	NoRel	true	boşalttı	bildirdi
+Relation	T2	T5	NoRel	true	boşalttı	uçtu
+Relation	T4	T9	NoRel	true	yaklaştı	iletişime
+Relation	T7	T1	NoRel	true	hareket	inmeleri
+Relation	T7	T2	NoRel	true	hareket	boşalttı
+Relation	T7	T4	NoRel	true	hareket	yaklaştı
+Relation	T7	T9	NoRel	true	hareket	iletişime
+Relation	T8	T1	NoRel	true	çarptı	inmeleri
+Relation	T8	T9	NoRel	true	çarptı	iletişime
+Relation	T9	T6	NoRel	true	iletişime	değdi
+Relation	T9	T8	NoRel	true	iletişime	çarptı

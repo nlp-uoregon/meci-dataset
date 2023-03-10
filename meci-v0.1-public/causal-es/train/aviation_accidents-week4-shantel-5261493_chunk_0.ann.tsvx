@@ -1,0 +1,81 @@
+Text	El VUELO 120 DE TAME fue un Boeing 727-134 , con registro HC-BLF , con nombre _ El Oro _ operando un vuelo de pasajeros entre Quito , Ecuador y Cali , Colombia , con escala en Tulcán .	La aeronave se estrelló en el intento de aterrizaje al Aeropuerto Internacional Teniente Luis Mantilla en Tulcán el 28 de enero de 2002 .	El piloto , en el aterrizaje , reportó brumosas condiciones y voló contra el Volcán Cumbal , localizado cerca de Ipiales , Colombia , a las 10:23 de la mañana .	Todos los pasajeros y tripulación murieron en el accidente .	El Boeing 727-100 partió de Quito a las 10:03 hora local , despegando de la Pista 17 .
+Event	T0	registro	EVENT	49
+Event	T1	operando	EVENT	89
+Event	T2	vuelo	EVENT	101
+Event	T3	escala	EVENT	166
+Event	T4	intento	EVENT	215
+Event	T5	aterrizaje	EVENT	226
+Event	T6	aterrizaje	EVENT	341
+Event	T7	voló	EVENT	385
+Event	T8	murieron	EVENT	518
+Event	T9	accidente	EVENT	533
+Event	T10	partió	EVENT	563
+Event	T11	despegando	EVENT	604
+Event	T12	VUELO	EVENT	3
+Event	T13	estrelló	EVENT	200
+Relation	T9	T8	CauseEffect	true	accidente	murieron
+Relation	T8	T9	EffectCause	true	murieron	accidente
+Relation	T0	T10	NoRel	true	registro	partió
+Relation	T0	T3	NoRel	true	registro	escala
+Relation	T0	T4	NoRel	true	registro	intento
+Relation	T0	T5	NoRel	true	registro	aterrizaje
+Relation	T0	T6	NoRel	true	registro	aterrizaje
+Relation	T0	T9	NoRel	true	registro	accidente
+Relation	T1	T10	NoRel	true	operando	partió
+Relation	T1	T12	NoRel	true	operando	VUELO
+Relation	T1	T3	NoRel	true	operando	escala
+Relation	T1	T5	NoRel	true	operando	aterrizaje
+Relation	T10	T0	NoRel	true	partió	registro
+Relation	T10	T12	NoRel	true	partió	VUELO
+Relation	T10	T2	NoRel	true	partió	vuelo
+Relation	T10	T8	NoRel	true	partió	murieron
+Relation	T10	T9	NoRel	true	partió	accidente
+Relation	T11	T12	NoRel	true	despegando	VUELO
+Relation	T11	T5	NoRel	true	despegando	aterrizaje
+Relation	T11	T6	NoRel	true	despegando	aterrizaje
+Relation	T11	T7	NoRel	true	despegando	voló
+Relation	T12	T10	NoRel	true	VUELO	partió
+Relation	T12	T3	NoRel	true	VUELO	escala
+Relation	T12	T5	NoRel	true	VUELO	aterrizaje
+Relation	T12	T8	NoRel	true	VUELO	murieron
+Relation	T13	T1	NoRel	true	estrelló	operando
+Relation	T13	T11	NoRel	true	estrelló	despegando
+Relation	T13	T2	NoRel	true	estrelló	vuelo
+Relation	T13	T3	NoRel	true	estrelló	escala
+Relation	T13	T6	NoRel	true	estrelló	aterrizaje
+Relation	T13	T8	NoRel	true	estrelló	murieron
+Relation	T13	T9	NoRel	true	estrelló	accidente
+Relation	T2	T1	NoRel	true	vuelo	operando
+Relation	T2	T11	NoRel	true	vuelo	despegando
+Relation	T2	T13	NoRel	true	vuelo	estrelló
+Relation	T2	T7	NoRel	true	vuelo	voló
+Relation	T3	T0	NoRel	true	escala	registro
+Relation	T3	T10	NoRel	true	escala	partió
+Relation	T3	T12	NoRel	true	escala	VUELO
+Relation	T3	T6	NoRel	true	escala	aterrizaje
+Relation	T3	T8	NoRel	true	escala	murieron
+Relation	T4	T12	NoRel	true	intento	VUELO
+Relation	T4	T5	NoRel	true	intento	aterrizaje
+Relation	T4	T9	NoRel	true	intento	accidente
+Relation	T5	T10	NoRel	true	aterrizaje	partió
+Relation	T5	T13	NoRel	true	aterrizaje	estrelló
+Relation	T5	T4	NoRel	true	aterrizaje	intento
+Relation	T5	T6	NoRel	true	aterrizaje	aterrizaje
+Relation	T6	T13	NoRel	true	aterrizaje	estrelló
+Relation	T6	T2	NoRel	true	aterrizaje	vuelo
+Relation	T6	T3	NoRel	true	aterrizaje	escala
+Relation	T6	T9	NoRel	true	aterrizaje	accidente
+Relation	T7	T11	NoRel	true	voló	despegando
+Relation	T7	T12	NoRel	true	voló	VUELO
+Relation	T7	T13	NoRel	true	voló	estrelló
+Relation	T7	T2	NoRel	true	voló	vuelo
+Relation	T7	T4	NoRel	true	voló	intento
+Relation	T7	T5	NoRel	true	voló	aterrizaje
+Relation	T8	T0	NoRel	true	murieron	registro
+Relation	T8	T1	NoRel	true	murieron	operando
+Relation	T8	T10	NoRel	true	murieron	partió
+Relation	T8	T4	NoRel	true	murieron	intento
+Relation	T8	T6	NoRel	true	murieron	aterrizaje
+Relation	T9	T1	NoRel	true	accidente	operando
+Relation	T9	T3	NoRel	true	accidente	escala
+Relation	T9	T5	NoRel	true	accidente	aterrizaje

@@ -1,0 +1,57 @@
+Text	Bu tutukluluğu 18 yıl sürecektir .	Bütün II. Dünya Savaşı dönemini hapiste geçiren Tokuda , Japonya’nın savaştan yenik ayrılması üzerine adaya çıkan müttefik kuvvetlerinin genel direktifleri sonucu 10 Ekim 1945 günü diğer komünistlerle beraber salıverildi .	Tokuda , Nisan 1945'te parti liderliğine seçilmişti .	1946 yılında yapılan genel seçimlere Japon Komünist Partisi adayı olarak katıldı ve 2 yoldaşıyla beraber Tokyo milletvekili olarak seçildi .	Aynı yıl Tatsu Kanehara ile evlendi .
+Event	T0	tutukluluğu	EVENT	3
+Event	T1	geçiren	EVENT	75
+Event	T2	ayrılması	EVENT	119
+Event	T3	salıverildi	EVENT	244
+Event	T4	seçilmişti	EVENT	299
+Event	T5	katıldı	EVENT	385
+Event	T6	seçildi	EVENT	443
+Event	T7	evlendi	EVENT	481
+Event	T8	II. Dünya Savaşı	EVENT	41
+Event	T9	çıkan	EVENT	143
+Event	T10	direktifleri	EVENT	178
+Event	T11	seçimlere	EVENT	339
+Relation	T2	T9	CauseEffect	true	ayrılması	çıkan
+Relation	T9	T2	EffectCause	true	çıkan	ayrılması
+Relation	T8	T2	CauseEffect	true	II. Dünya Savaşı	ayrılması
+Relation	T2	T8	EffectCause	true	ayrılması	II. Dünya Savaşı
+Relation	T9	T10	CauseEffect	true	çıkan	direktifleri
+Relation	T10	T9	EffectCause	true	direktifleri	çıkan
+Relation	T10	T3	CauseEffect	true	direktifleri	salıverildi
+Relation	T3	T10	EffectCause	true	salıverildi	direktifleri
+Relation	T11	T5	CauseEffect	true	seçimlere	katıldı
+Relation	T5	T11	EffectCause	true	katıldı	seçimlere
+Relation	T5	T6	CauseEffect	true	katıldı	seçildi
+Relation	T6	T5	EffectCause	true	seçildi	katıldı
+Relation	T0	T1	NoRel	true	tutukluluğu	geçiren
+Relation	T0	T5	NoRel	true	tutukluluğu	katıldı
+Relation	T0	T8	NoRel	true	tutukluluğu	II. Dünya Savaşı
+Relation	T1	T5	NoRel	true	geçiren	katıldı
+Relation	T1	T8	NoRel	true	geçiren	II. Dünya Savaşı
+Relation	T10	T11	NoRel	true	direktifleri	seçimlere
+Relation	T10	T6	NoRel	true	direktifleri	seçildi
+Relation	T11	T10	NoRel	true	seçimlere	direktifleri
+Relation	T11	T4	NoRel	true	seçimlere	seçilmişti
+Relation	T11	T6	NoRel	true	seçimlere	seçildi
+Relation	T11	T7	NoRel	true	seçimlere	evlendi
+Relation	T11	T8	NoRel	true	seçimlere	II. Dünya Savaşı
+Relation	T11	T9	NoRel	true	seçimlere	çıkan
+Relation	T2	T1	NoRel	true	ayrılması	geçiren
+Relation	T2	T4	NoRel	true	ayrılması	seçilmişti
+Relation	T3	T0	NoRel	true	salıverildi	tutukluluğu
+Relation	T3	T4	NoRel	true	salıverildi	seçilmişti
+Relation	T3	T6	NoRel	true	salıverildi	seçildi
+Relation	T4	T0	NoRel	true	seçilmişti	tutukluluğu
+Relation	T4	T10	NoRel	true	seçilmişti	direktifleri
+Relation	T4	T3	NoRel	true	seçilmişti	salıverildi
+Relation	T4	T9	NoRel	true	seçilmişti	çıkan
+Relation	T5	T0	NoRel	true	katıldı	tutukluluğu
+Relation	T5	T2	NoRel	true	katıldı	ayrılması
+Relation	T6	T0	NoRel	true	seçildi	tutukluluğu
+Relation	T6	T3	NoRel	true	seçildi	salıverildi
+Relation	T7	T10	NoRel	true	evlendi	direktifleri
+Relation	T8	T1	NoRel	true	II. Dünya Savaşı	geçiren
+Relation	T8	T11	NoRel	true	II. Dünya Savaşı	seçimlere
+Relation	T8	T3	NoRel	true	II. Dünya Savaşı	salıverildi
+Relation	T9	T11	NoRel	true	çıkan	seçimlere
+Relation	T9	T4	NoRel	true	çıkan	seçilmişti

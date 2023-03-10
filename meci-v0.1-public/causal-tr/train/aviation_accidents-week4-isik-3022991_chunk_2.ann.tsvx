@@ -1,0 +1,21 @@
+Text	Saat 9 ( MSK ) civarında hava durumunun uçuşa elverişli olmasıyla mürettebata uçuş izni verildi .	Mürettebat 09.43'te Balkaş Havalimanı'ndan kalkış yaptı .	Mürettebat hava trafik kontrolörünün ifadesine göre " Uçakta her şey yolunda " dedi ve rutin olarak başka bir hava trafik kontrolörüne geçiş için izin istedi .	Uçakla bir daha iletişim kurulamadı .	Uçağın enkazı 10 Ekim 1948 günü 06: 30'da ( MSK ) Balkaş Havalimanı'nın 39 km güneybatısında kayalık bir arazide bulundu .
+Event	T0	verildi	EVENT	88
+Event	T1	yaptı	EVENT	148
+Event	T2	ifadesine	EVENT	193
+Event	T3	geçiş	EVENT	291
+Event	T4	istedi	EVENT	307
+Event	T5	bulundu	EVENT	467
+Event	T6	enkazı	EVENT	361
+Relation	T0	T1	CauseEffect	true	verildi	yaptı
+Relation	T1	T0	EffectCause	true	yaptı	verildi
+Relation	T2	T5	NoRel	true	ifadesine	bulundu
+Relation	T3	T0	NoRel	true	geçiş	verildi
+Relation	T3	T5	NoRel	true	geçiş	bulundu
+Relation	T4	T0	NoRel	true	istedi	verildi
+Relation	T4	T2	NoRel	true	istedi	ifadesine
+Relation	T4	T3	NoRel	true	istedi	geçiş
+Relation	T4	T5	NoRel	true	istedi	bulundu
+Relation	T4	T6	NoRel	true	istedi	enkazı
+Relation	T5	T3	NoRel	true	bulundu	geçiş
+Relation	T6	T2	NoRel	true	enkazı	ifadesine
+Relation	T6	T4	NoRel	true	enkazı	istedi

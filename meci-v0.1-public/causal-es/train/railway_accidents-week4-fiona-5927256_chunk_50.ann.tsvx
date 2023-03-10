@@ -1,0 +1,51 @@
+Text	La cifra de víctimas parece que pudo ser de siete muertos y alrededor de 50 heridos .	- 1 de enero de 1939 .	Cerca de Valencia se produce en un paso a nivel el choque de un tren de la línea de Paterna con un tranvía , con el resultado de siete muertos y dieciséis heridos ._.	- 1 de enero de 1939 . Descarrila un tren de viajeros cerca de Castro Urdiales ( Cantabria ) .	Siete muertos y veinte heridos . .
+Event	T0	muertos	EVENT	50
+Event	T1	heridos	EVENT	76
+Event	T2	produce	EVENT	130
+Event	T3	choque	EVENT	160
+Event	T4	resultado	EVENT	225
+Event	T5	muertos	EVENT	244
+Event	T6	heridos	EVENT	264
+Event	T7	Descarrila	EVENT	299
+Event	T8	muertos	EVENT	377
+Event	T9	heridos	EVENT	394
+Relation	T3	T0	CauseEffect	true	choque	muertos
+Relation	T0	T3	EffectCause	true	muertos	choque
+Relation	T3	T1	CauseEffect	true	choque	heridos
+Relation	T1	T3	EffectCause	true	heridos	choque
+Relation	T7	T8	CauseEffect	true	Descarrila	muertos
+Relation	T8	T7	EffectCause	true	muertos	Descarrila
+Relation	T7	T9	CauseEffect	true	Descarrila	heridos
+Relation	T9	T7	EffectCause	true	heridos	Descarrila
+Relation	T1	T0	NoRel	true	heridos	muertos
+Relation	T1	T4	NoRel	true	heridos	resultado
+Relation	T1	T6	NoRel	true	heridos	heridos
+Relation	T1	T7	NoRel	true	heridos	Descarrila
+Relation	T1	T8	NoRel	true	heridos	muertos
+Relation	T2	T0	NoRel	true	produce	muertos
+Relation	T2	T3	NoRel	true	produce	choque
+Relation	T2	T6	NoRel	true	produce	heridos
+Relation	T2	T7	NoRel	true	produce	Descarrila
+Relation	T2	T9	NoRel	true	produce	heridos
+Relation	T3	T4	NoRel	true	choque	resultado
+Relation	T3	T6	NoRel	true	choque	heridos
+Relation	T3	T7	NoRel	true	choque	Descarrila
+Relation	T4	T0	NoRel	true	resultado	muertos
+Relation	T4	T2	NoRel	true	resultado	produce
+Relation	T4	T7	NoRel	true	resultado	Descarrila
+Relation	T4	T8	NoRel	true	resultado	muertos
+Relation	T5	T0	NoRel	true	muertos	muertos
+Relation	T5	T2	NoRel	true	muertos	produce
+Relation	T5	T3	NoRel	true	muertos	choque
+Relation	T6	T0	NoRel	true	heridos	muertos
+Relation	T6	T1	NoRel	true	heridos	heridos
+Relation	T6	T3	NoRel	true	heridos	choque
+Relation	T6	T4	NoRel	true	heridos	resultado
+Relation	T7	T4	NoRel	true	Descarrila	resultado
+Relation	T7	T5	NoRel	true	Descarrila	muertos
+Relation	T8	T1	NoRel	true	muertos	heridos
+Relation	T8	T2	NoRel	true	muertos	produce
+Relation	T8	T5	NoRel	true	muertos	muertos
+Relation	T8	T6	NoRel	true	muertos	heridos
+Relation	T9	T1	NoRel	true	heridos	heridos
+Relation	T9	T4	NoRel	true	heridos	resultado

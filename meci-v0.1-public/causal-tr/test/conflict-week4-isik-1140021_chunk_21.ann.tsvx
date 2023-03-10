@@ -1,0 +1,41 @@
+Text	O sırada karargâh yukarıdan bombalanmaya başlıyor .	Zor da olsa karargahtan ayrılıyoruz .	Mason ve ekibimiz , Viet Cong tarafından kontrol edilen bir bölgede Nova gazı taşıyan düşmüş bir Sovyet kargo uçağını ele geçirmek için harekete geçer .	Bir nehir içinde askeri botla hareket eden ekip , hem Spetsnaz hem de Viet Cong tarafından ciddi bir direnişe maruz kalır .	Buna rağmen uçağa güç bela ulaşırlar .
+Event	T0	başlıyor	EVENT	41
+Event	T1	düşmüş	EVENT	176
+Event	T2	geçirmek	EVENT	212
+Event	T3	geçer	EVENT	235
+Event	T4	hareket	EVENT	273
+Event	T5	kalır	EVENT	359
+Event	T6	ayrılıyoruz	EVENT	76
+Event	T7	taşıyan	EVENT	168
+Event	T8	direnişe	EVENT	344
+Event	T9	ulaşırlar	EVENT	394
+Relation	T0	T6	CauseEffect	true	başlıyor	ayrılıyoruz
+Relation	T6	T0	EffectCause	true	ayrılıyoruz	başlıyor
+Relation	T0	T3	NoRel	true	başlıyor	geçer
+Relation	T0	T4	NoRel	true	başlıyor	hareket
+Relation	T0	T9	NoRel	true	başlıyor	ulaşırlar
+Relation	T1	T2	NoRel	true	düşmüş	geçirmek
+Relation	T1	T3	NoRel	true	düşmüş	geçer
+Relation	T1	T4	NoRel	true	düşmüş	hareket
+Relation	T1	T8	NoRel	true	düşmüş	direnişe
+Relation	T2	T0	NoRel	true	geçirmek	başlıyor
+Relation	T2	T4	NoRel	true	geçirmek	hareket
+Relation	T2	T6	NoRel	true	geçirmek	ayrılıyoruz
+Relation	T2	T8	NoRel	true	geçirmek	direnişe
+Relation	T3	T0	NoRel	true	geçer	başlıyor
+Relation	T3	T4	NoRel	true	geçer	hareket
+Relation	T3	T9	NoRel	true	geçer	ulaşırlar
+Relation	T4	T2	NoRel	true	hareket	geçirmek
+Relation	T4	T7	NoRel	true	hareket	taşıyan
+Relation	T4	T9	NoRel	true	hareket	ulaşırlar
+Relation	T5	T2	NoRel	true	kalır	geçirmek
+Relation	T5	T3	NoRel	true	kalır	geçer
+Relation	T6	T5	NoRel	true	ayrılıyoruz	kalır
+Relation	T6	T7	NoRel	true	ayrılıyoruz	taşıyan
+Relation	T8	T0	NoRel	true	direnişe	başlıyor
+Relation	T8	T5	NoRel	true	direnişe	kalır
+Relation	T8	T6	NoRel	true	direnişe	ayrılıyoruz
+Relation	T9	T0	NoRel	true	ulaşırlar	başlıyor
+Relation	T9	T2	NoRel	true	ulaşırlar	geçirmek
+Relation	T9	T5	NoRel	true	ulaşırlar	kalır
+Relation	T9	T7	NoRel	true	ulaşırlar	taşıyan

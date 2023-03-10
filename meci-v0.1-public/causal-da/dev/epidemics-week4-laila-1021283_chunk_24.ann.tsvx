@@ -1,0 +1,78 @@
+Text	Her var det første tilfælde den 13. december .	Franske læger ved Albert Schweitzer-hospitalet i Colmar i Alsace har ved analyse af røntgenbilleder fundet , at det første tilfælde i Europa muligvis allerede var til stede den 16. november 2019 .	Dette førte i første omgang ikke til registrerede sygdomstilfælde .	Her hed det sig først , at en 61-årig mand var død af lungebetændelse i Wuhan som følge at en ny virus .	Yderligere 41 personer var smittet , og 739 var i karantæne , og der ikke var flere smittede siden den 3. januar ifølge de kinesiske sundhedsmyndigheder .
+Event	T0	tilfælde	EVENT	19
+Event	T1	analyse	EVENT	120
+Event	T2	fundet	EVENT	147
+Event	T3	tilfælde	EVENT	170
+Event	T4	stede	EVENT	214
+Event	T5	førte	EVENT	250
+Event	T6	hed	EVENT	316
+Event	T7	død	EVENT	359
+Event	T8	lungebetændelse	EVENT	366
+Event	T9	virus	EVENT	409
+Event	T10	smittet	EVENT	444
+Event	T11	karantæne	EVENT	467
+Event	T12	smittede	EVENT	501
+Event	T13	sygdomstilfælde	EVENT	294
+Relation	T1	T2	CauseEffect	true	analyse	fundet
+Relation	T2	T1	EffectCause	true	fundet	analyse
+Relation	T8	T7	CauseEffect	true	lungebetændelse	død
+Relation	T7	T8	EffectCause	true	død	lungebetændelse
+Relation	T9	T8	CauseEffect	true	virus	lungebetændelse
+Relation	T8	T9	EffectCause	true	lungebetændelse	virus
+Relation	T0	T1	NoRel	true	tilfælde	analyse
+Relation	T0	T12	NoRel	true	tilfælde	smittede
+Relation	T0	T13	NoRel	true	tilfælde	sygdomstilfælde
+Relation	T0	T5	NoRel	true	tilfælde	førte
+Relation	T1	T0	NoRel	true	analyse	tilfælde
+Relation	T1	T10	NoRel	true	analyse	smittet
+Relation	T1	T11	NoRel	true	analyse	karantæne
+Relation	T1	T4	NoRel	true	analyse	stede
+Relation	T1	T6	NoRel	true	analyse	hed
+Relation	T1	T8	NoRel	true	analyse	lungebetændelse
+Relation	T10	T1	NoRel	true	smittet	analyse
+Relation	T10	T11	NoRel	true	smittet	karantæne
+Relation	T10	T12	NoRel	true	smittet	smittede
+Relation	T10	T13	NoRel	true	smittet	sygdomstilfælde
+Relation	T10	T7	NoRel	true	smittet	død
+Relation	T11	T1	NoRel	true	karantæne	analyse
+Relation	T11	T13	NoRel	true	karantæne	sygdomstilfælde
+Relation	T11	T9	NoRel	true	karantæne	virus
+Relation	T12	T0	NoRel	true	smittede	tilfælde
+Relation	T12	T10	NoRel	true	smittede	smittet
+Relation	T12	T13	NoRel	true	smittede	sygdomstilfælde
+Relation	T12	T4	NoRel	true	smittede	stede
+Relation	T12	T6	NoRel	true	smittede	hed
+Relation	T13	T7	NoRel	true	sygdomstilfælde	død
+Relation	T13	T9	NoRel	true	sygdomstilfælde	virus
+Relation	T2	T0	NoRel	true	fundet	tilfælde
+Relation	T2	T5	NoRel	true	fundet	førte
+Relation	T2	T6	NoRel	true	fundet	hed
+Relation	T3	T0	NoRel	true	tilfælde	tilfælde
+Relation	T3	T2	NoRel	true	tilfælde	fundet
+Relation	T3	T5	NoRel	true	tilfælde	førte
+Relation	T3	T6	NoRel	true	tilfælde	hed
+Relation	T3	T8	NoRel	true	tilfælde	lungebetændelse
+Relation	T4	T10	NoRel	true	stede	smittet
+Relation	T4	T8	NoRel	true	stede	lungebetændelse
+Relation	T5	T0	NoRel	true	førte	tilfælde
+Relation	T5	T11	NoRel	true	førte	karantæne
+Relation	T5	T12	NoRel	true	førte	smittede
+Relation	T5	T3	NoRel	true	førte	tilfælde
+Relation	T5	T9	NoRel	true	førte	virus
+Relation	T6	T0	NoRel	true	hed	tilfælde
+Relation	T6	T11	NoRel	true	hed	karantæne
+Relation	T6	T12	NoRel	true	hed	smittede
+Relation	T6	T4	NoRel	true	hed	stede
+Relation	T6	T7	NoRel	true	hed	død
+Relation	T6	T8	NoRel	true	hed	lungebetændelse
+Relation	T7	T0	NoRel	true	død	tilfælde
+Relation	T7	T3	NoRel	true	død	tilfælde
+Relation	T8	T12	NoRel	true	lungebetændelse	smittede
+Relation	T8	T4	NoRel	true	lungebetændelse	stede
+Relation	T8	T5	NoRel	true	lungebetændelse	førte
+Relation	T8	T6	NoRel	true	lungebetændelse	hed
+Relation	T9	T11	NoRel	true	virus	karantæne
+Relation	T9	T3	NoRel	true	virus	tilfælde
+Relation	T9	T4	NoRel	true	virus	stede
+Relation	T9	T6	NoRel	true	virus	hed
+Relation	T9	T7	NoRel	true	virus	død

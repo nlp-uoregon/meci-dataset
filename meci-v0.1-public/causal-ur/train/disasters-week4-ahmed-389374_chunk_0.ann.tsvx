@@ -1,0 +1,22 @@
+Text	پس زلزلہ یا آفٹر شاک ( Aftershock ) وہ چھوٹا زلزلہ ہوتا ہے جو مین شاک یا بڑے زلزلے کے بعد اسی علاقے میں آتا ہے ۔	اگر آفٹر شاک کا علاقہ مین شاک کے علاقے سے بڑا ہو تو اصطلاح میں آفٹر شاک کو مین شاک کہا جائے گا اور پچھلا مین شاک ، فور شاک میں تبدیل ہو جائے گا ۔	مین شاک کی وجہ سے زمین مختلف مقامات سے ہٹ جاتی ہے جس کے بعد قشر ارض ( Earth Crust ) خود کو ایڈجسٹ کرتا ہے جس کی وجہ سے آفٹر شاک پیدا ہوتے ہیں ۔		
+Event	T0	زلزلہ	EVENT	3
+Event	T1	Aftershock	EVENT	23
+Event	T2	زلزلے	EVENT	77
+Event	T3	آتا	EVENT	104
+Event	T4	کہا	EVENT	196
+Event	T5	تبدیل	EVENT	240
+Event	T6	جاتی	EVENT	301
+Relation	T0	T1	CauseEffect	true	زلزلہ	Aftershock
+Relation	T1	T0	EffectCause	true	Aftershock	زلزلہ
+Relation	T0	T2	NoRel	true	زلزلہ	زلزلے
+Relation	T0	T5	NoRel	true	زلزلہ	تبدیل
+Relation	T3	T0	NoRel	true	آتا	زلزلہ
+Relation	T3	T4	NoRel	true	آتا	کہا
+Relation	T4	T1	NoRel	true	کہا	Aftershock
+Relation	T4	T3	NoRel	true	کہا	آتا
+Relation	T4	T5	NoRel	true	کہا	تبدیل
+Relation	T5	T4	NoRel	true	تبدیل	کہا
+Relation	T5	T6	NoRel	true	تبدیل	جاتی
+Relation	T6	T0	NoRel	true	جاتی	زلزلہ
+Relation	T6	T2	NoRel	true	جاتی	زلزلے
+Relation	T6	T3	NoRel	true	جاتی	آتا

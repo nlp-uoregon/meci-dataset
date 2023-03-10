@@ -1,0 +1,39 @@
+Text	Klokken 09:35:09 satte Ziad Jarrah autopiloten til at flyve mod øst .	Flyet steg nu til 12.400 meters højde , og flykontrollen sendte straks besked til andre fly om at komme væk fra flynummer 93's nye rute .	Senere kunne man høre en stewardesse i cockpittet sige : " Jeg vil ikke dø , jeg vil ikke dø " , hvorefter en af flykaprerne svarede tilbage på arabisk : " Alt er fint , jeg er færdig . "	Klokken 9:39 hørte flyvelederne en sidste besked fra Ziad Jarrah : " Hallo , dette er kaptajnen .	Jeg vil gerne have , at alle bliver siddende .
+Event	T0	satte	EVENT	17
+Event	T1	flyve	EVENT	54
+Event	T2	steg	EVENT	76
+Event	T3	sendte	EVENT	127
+Event	T4	besked	EVENT	141
+Event	T5	høre	EVENT	225
+Event	T6	sige	EVENT	258
+Event	T7	dø	EVENT	298
+Event	T8	hørte	EVENT	409
+Event	T9	besked	EVENT	438
+Relation	T0	T2	CauseEffect	true	satte	steg
+Relation	T2	T0	EffectCause	true	steg	satte
+Relation	T0	T3	NoRel	true	satte	sendte
+Relation	T1	T3	NoRel	true	flyve	sendte
+Relation	T1	T4	NoRel	true	flyve	besked
+Relation	T1	T9	NoRel	true	flyve	besked
+Relation	T2	T1	NoRel	true	steg	flyve
+Relation	T2	T9	NoRel	true	steg	besked
+Relation	T3	T0	NoRel	true	sendte	satte
+Relation	T3	T1	NoRel	true	sendte	flyve
+Relation	T3	T4	NoRel	true	sendte	besked
+Relation	T4	T1	NoRel	true	besked	flyve
+Relation	T4	T5	NoRel	true	besked	høre
+Relation	T5	T0	NoRel	true	høre	satte
+Relation	T5	T1	NoRel	true	høre	flyve
+Relation	T5	T2	NoRel	true	høre	steg
+Relation	T5	T4	NoRel	true	høre	besked
+Relation	T5	T6	NoRel	true	høre	sige
+Relation	T5	T9	NoRel	true	høre	besked
+Relation	T6	T2	NoRel	true	sige	steg
+Relation	T6	T5	NoRel	true	sige	høre
+Relation	T6	T7	NoRel	true	sige	dø
+Relation	T7	T3	NoRel	true	dø	sendte
+Relation	T7	T4	NoRel	true	dø	besked
+Relation	T7	T6	NoRel	true	dø	sige
+Relation	T7	T8	NoRel	true	dø	hørte
+Relation	T7	T9	NoRel	true	dø	besked
+Relation	T9	T4	NoRel	true	besked	besked

@@ -1,0 +1,27 @@
+Text	Atlantic City'de 3 , Cape May'de 2.5 inçlik kar kalınlığı ölçüldü .	küçükresim | Manhattan'da fırtınanın etkileri Fırtına sırasında New York şehrine 19 inçlik kar yağdı .	Bunun sonucu olarak da , şehrin tarihinde dokuzuncu kez tüm okullar tatil edildi .	Havalimanları da kapatıldı .	27 Ocak günü öğleden sonra havalimanları tekrar açıldı .
+Event	T0	ölçüldü	EVENT	58
+Event	T1	yağdı	EVENT	163
+Event	T2	edildi	EVENT	245
+Event	T3	kapatıldı	EVENT	271
+Event	T4	açıldı	EVENT	331
+Event	T5	kar	EVENT	44
+Event	T6	Fırtına	EVENT	114
+Relation	T5	T0	CauseEffect	true	kar	ölçüldü
+Relation	T0	T5	EffectCause	true	ölçüldü	kar
+Relation	T6	T1	CauseEffect	true	Fırtına	yağdı
+Relation	T1	T6	EffectCause	true	yağdı	Fırtına
+Relation	T1	T2	CauseEffect	true	yağdı	edildi
+Relation	T2	T1	EffectCause	true	edildi	yağdı
+Relation	T1	T3	CauseEffect	true	yağdı	kapatıldı
+Relation	T3	T1	EffectCause	true	kapatıldı	yağdı
+Relation	T3	T4	CauseEffect	true	kapatıldı	açıldı
+Relation	T4	T3	EffectCause	true	açıldı	kapatıldı
+Relation	T1	T0	CauseEffect	true	yağdı	ölçüldü
+Relation	T0	T1	EffectCause	true	ölçüldü	yağdı
+Relation	T0	T2	NoRel	true	ölçüldü	edildi
+Relation	T1	T4	NoRel	true	yağdı	açıldı
+Relation	T3	T2	NoRel	true	kapatıldı	edildi
+Relation	T4	T1	NoRel	true	açıldı	yağdı
+Relation	T4	T5	NoRel	true	açıldı	kar
+Relation	T4	T6	NoRel	true	açıldı	Fırtına
+Relation	T5	T2	NoRel	true	kar	edildi

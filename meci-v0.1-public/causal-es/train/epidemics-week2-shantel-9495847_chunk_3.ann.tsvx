@@ -1,0 +1,42 @@
+Text	A medida que se extendió la epidemia , se desalentó el uso del saludo de choque de codos a medida que se ampliaron los consejos sobre el distanciamiento físico , como mantenerse al menos a 2 metros de distancia de otras personas , como una forma de disminuir el riesgo de contraer o propagar la enfermedad .	El Director General de la Organización Mundial de la Salud , Tedros Adhanom Ghebreyesus , informó que un choque de codos era demasiado arriesgado porque coloca a las personas demasiado cerca unas de otras ; recomendó usar un saludo sin contacto , como poner la mano sobre el corazón , desde una distancia de separación de al menos un metro .	En 2009 , los médicos universitarios y el galardonado con el Premio Nobel Peter Agre aprobaron el choque de codos .	La Asociación Americana para el Avance de la Ciencia se unió a la Organización Mundial de la Salud para respaldar el saludo .	Sin embargo , algunas de estas recomendaciones estaban destinadas tanto a generar buen humor como a una buena higiene .
+Event	T0	extendió	EVENT	16
+Event	T1	epidemia	EVENT	28
+Event	T11	enfermedad	EVENT	295
+Event	T12	informó	EVENT	398
+Event	T15	recomendó	EVENT	515
+Event	T18	aprobaron	EVENT	735
+Event	T2	desalentó	EVENT	42
+Event	T20	unió	EVENT	822
+Event	T21	respaldar	EVENT	870
+Event	T7	consejos	EVENT	119
+Relation	T1	T7	CauseEffect	true	epidemia	consejos
+Relation	T7	T1	EffectCause	true	consejos	epidemia
+Relation	T1	T15	CauseEffect	true	epidemia	recomendó
+Relation	T15	T1	EffectCause	true	recomendó	epidemia
+Relation	T7	T18	CauseEffect	true	consejos	aprobaron
+Relation	T18	T7	EffectCause	true	aprobaron	consejos
+Relation	T7	T20	CauseEffect	true	consejos	unió
+Relation	T20	T7	EffectCause	true	unió	consejos
+Relation	T0	T11	NoRel	true	extendió	enfermedad
+Relation	T0	T2	NoRel	true	extendió	desalentó
+Relation	T0	T20	NoRel	true	extendió	unió
+Relation	T1	T12	NoRel	true	epidemia	informó
+Relation	T1	T18	NoRel	true	epidemia	aprobaron
+Relation	T11	T12	NoRel	true	enfermedad	informó
+Relation	T11	T21	NoRel	true	enfermedad	respaldar
+Relation	T12	T0	NoRel	true	informó	extendió
+Relation	T12	T21	NoRel	true	informó	respaldar
+Relation	T15	T0	NoRel	true	recomendó	extendió
+Relation	T15	T12	NoRel	true	recomendó	informó
+Relation	T15	T18	NoRel	true	recomendó	aprobaron
+Relation	T15	T2	NoRel	true	recomendó	desalentó
+Relation	T15	T21	NoRel	true	recomendó	respaldar
+Relation	T18	T15	NoRel	true	aprobaron	recomendó
+Relation	T18	T20	NoRel	true	aprobaron	unió
+Relation	T2	T1	NoRel	true	desalentó	epidemia
+Relation	T20	T2	NoRel	true	unió	desalentó
+Relation	T21	T15	NoRel	true	respaldar	recomendó
+Relation	T21	T18	NoRel	true	respaldar	aprobaron
+Relation	T7	T11	NoRel	true	consejos	enfermedad
+Relation	T7	T12	NoRel	true	consejos	informó
+Relation	T7	T15	NoRel	true	consejos	recomendó

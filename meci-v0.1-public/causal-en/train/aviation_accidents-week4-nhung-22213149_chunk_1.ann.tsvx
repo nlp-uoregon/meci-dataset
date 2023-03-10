@@ -1,0 +1,38 @@
+Text	Following the plane 's departure from Tashkent on the previous flight segment , one of its inertial navigation units ( INUs ) had partially failed , providing erroneous roll data to the captain 's attitude director indicator ( ADI or artificial horizon ) .	The first officer 's ADI and a backup ADI were correct , a comparator alarm called attention to the discrepancy , and in daylight the erroneous indication was easily identified .	The ADI 's input selector was switched to the other INU and the correct indications returned .	At Stansted , the engineers who attempted to repair the ADI did not have the correct Fault Isolation Manual available and did not think of replacing the INU .	One of them identified and repaired a damaged connecting plug on the ADI .
+Event	T0	Following	EVENT	0
+Event	T1	departure	EVENT	23
+Event	T2	segment	EVENT	70
+Event	T3	failed	EVENT	140
+Event	T4	roll	EVENT	169
+Event	T5	correct	EVENT	304
+Event	T6	indication	EVENT	401
+Event	T7	identified	EVENT	423
+Event	T8	returned	EVENT	520
+Event	T9	attempted	EVENT	563
+Event	T10	repair	EVENT	576
+Event	T11	replacing	EVENT	670
+Event	T12	identified	EVENT	702
+Event	T13	repaired	EVENT	717
+Event	T14	called	EVENT	333
+Event	T15	switched	EVENT	466
+Event	T16	damaged	EVENT	728
+Relation	T16	T12	CauseEffect	true	damaged	identified
+Relation	T12	T16	EffectCause	true	identified	damaged
+Relation	T16	T13	CauseEffect	true	damaged	repaired
+Relation	T13	T16	EffectCause	true	repaired	damaged
+Relation	T11	T14	NoRel	true	replacing	called
+Relation	T11	T16	NoRel	true	replacing	damaged
+Relation	T13	T14	NoRel	true	repaired	called
+Relation	T14	T8	NoRel	true	called	returned
+Relation	T15	T13	NoRel	true	switched	repaired
+Relation	T16	T1	NoRel	true	damaged	departure
+Relation	T16	T2	NoRel	true	damaged	segment
+Relation	T2	T16	NoRel	true	segment	damaged
+Relation	T5	T14	NoRel	true	correct	called
+Relation	T6	T12	NoRel	true	indication	identified
+Relation	T7	T1	NoRel	true	identified	departure
+Relation	T7	T12	NoRel	true	identified	identified
+Relation	T8	T14	NoRel	true	returned	called
+Relation	T8	T15	NoRel	true	returned	switched
+Relation	T9	T15	NoRel	true	attempted	switched
+Relation	T9	T2	NoRel	true	attempted	segment

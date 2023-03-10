@@ -1,0 +1,37 @@
+Text	Yılın 300 günü dağdan dumanların yükseldiği gözlemlenmesine rağmen , birkaç kez faliyete geçip ölümlere sebep oldu .	1994 yılında yaşanan patlama sonrası , yanardağın batısında çoğunukla Muntilan şehrinde , zehirli gazdan 43 kişi hayatını kaybetti .	Yogyakarta depreminden kısa süre önce 2006'da diğer büyük patlama yaşandı .	Merapi , güney Java'nın en genç yanardağlarından biridir .	Hint - Avustralya Levhası'nın Avrasya Levhası'nun altına doğru kaydığı bir dalım bölgesinde bulunur .
+Event	T0	gözlemlenmesine	EVENT	44
+Event	T1	oldu	EVENT	110
+Event	T2	patlama	EVENT	138
+Event	T3	kaybetti	EVENT	239
+Event	T4	depreminden	EVENT	261
+Event	T5	yaşandı	EVENT	316
+Event	T6	kaydığı	EVENT	448
+Event	T7	geçip	EVENT	89
+Event	T8	gazdan	EVENT	215
+Relation	T7	T1	CauseEffect	true	geçip	oldu
+Relation	T1	T7	EffectCause	true	oldu	geçip
+Relation	T2	T8	CauseEffect	true	patlama	gazdan
+Relation	T8	T2	EffectCause	true	gazdan	patlama
+Relation	T8	T3	CauseEffect	true	gazdan	kaybetti
+Relation	T3	T8	EffectCause	true	kaybetti	gazdan
+Relation	T1	T5	NoRel	true	oldu	yaşandı
+Relation	T1	T6	NoRel	true	oldu	kaydığı
+Relation	T1	T8	NoRel	true	oldu	gazdan
+Relation	T2	T4	NoRel	true	patlama	depreminden
+Relation	T3	T1	NoRel	true	kaybetti	oldu
+Relation	T3	T2	NoRel	true	kaybetti	patlama
+Relation	T4	T1	NoRel	true	depreminden	oldu
+Relation	T4	T2	NoRel	true	depreminden	patlama
+Relation	T4	T3	NoRel	true	depreminden	kaybetti
+Relation	T4	T5	NoRel	true	depreminden	yaşandı
+Relation	T4	T8	NoRel	true	depreminden	gazdan
+Relation	T5	T4	NoRel	true	yaşandı	depreminden
+Relation	T5	T8	NoRel	true	yaşandı	gazdan
+Relation	T6	T0	NoRel	true	kaydığı	gözlemlenmesine
+Relation	T6	T3	NoRel	true	kaydığı	kaybetti
+Relation	T6	T7	NoRel	true	kaydığı	geçip
+Relation	T6	T8	NoRel	true	kaydığı	gazdan
+Relation	T7	T8	NoRel	true	geçip	gazdan
+Relation	T8	T0	NoRel	true	gazdan	gözlemlenmesine
+Relation	T8	T1	NoRel	true	gazdan	oldu
+Relation	T8	T4	NoRel	true	gazdan	depreminden

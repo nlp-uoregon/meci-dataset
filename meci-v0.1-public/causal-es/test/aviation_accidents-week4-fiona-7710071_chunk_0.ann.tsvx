@@ -1,0 +1,54 @@
+Text	El VUELO 157 DE AEROSUCRE era un vuelo de carga que operaba un Boeing 727 de esa aerolínea entre los aeropuertos colombianos Germán Olano de Puerto Carreño y El Dorado de Bogotá , que se estrelló el 20 de diciembre de 2016 a 8 km del aeropuerto de salida .	En el accidente fallecieron 5 de los 6 tripulantes , quedando el restante en estado crítico .	En los minutos previos a la salida prevista , un avión de pasajeros Cessna 208 y un Embraer ERJ-170 despegaron de la pista 07 .	El viento en ese momento era de unos 010 grados a 8 nudos .	Posteriormente , el Boeing 727 rodó hacia la pista , retrocediendo hasta el umbral de la pista 25 .
+Event	T0	vuelo	EVENT	33
+Event	T1	operaba	EVENT	52
+Event	T2	estrelló	EVENT	187
+Event	T3	salida	EVENT	248
+Event	T4	fallecieron	EVENT	273
+Event	T5	quedando	EVENT	310
+Event	T6	prevista	EVENT	386
+Event	T7	despegaron	EVENT	451
+Event	T8	viento	EVENT	482
+Event	T9	rodó	EVENT	570
+Event	T10	retrocediendo	EVENT	592
+Relation	T2	T4	CauseEffect	true	estrelló	fallecieron
+Relation	T4	T2	EffectCause	true	fallecieron	estrelló
+Relation	T0	T4	NoRel	true	vuelo	fallecieron
+Relation	T0	T9	NoRel	true	vuelo	rodó
+Relation	T1	T0	NoRel	true	operaba	vuelo
+Relation	T1	T3	NoRel	true	operaba	salida
+Relation	T1	T4	NoRel	true	operaba	fallecieron
+Relation	T1	T6	NoRel	true	operaba	prevista
+Relation	T1	T8	NoRel	true	operaba	viento
+Relation	T10	T0	NoRel	true	retrocediendo	vuelo
+Relation	T10	T2	NoRel	true	retrocediendo	estrelló
+Relation	T10	T5	NoRel	true	retrocediendo	quedando
+Relation	T10	T9	NoRel	true	retrocediendo	rodó
+Relation	T2	T0	NoRel	true	estrelló	vuelo
+Relation	T2	T3	NoRel	true	estrelló	salida
+Relation	T2	T5	NoRel	true	estrelló	quedando
+Relation	T3	T1	NoRel	true	salida	operaba
+Relation	T3	T10	NoRel	true	salida	retrocediendo
+Relation	T3	T2	NoRel	true	salida	estrelló
+Relation	T3	T4	NoRel	true	salida	fallecieron
+Relation	T3	T9	NoRel	true	salida	rodó
+Relation	T4	T6	NoRel	true	fallecieron	prevista
+Relation	T5	T0	NoRel	true	quedando	vuelo
+Relation	T5	T1	NoRel	true	quedando	operaba
+Relation	T5	T3	NoRel	true	quedando	salida
+Relation	T5	T4	NoRel	true	quedando	fallecieron
+Relation	T5	T6	NoRel	true	quedando	prevista
+Relation	T5	T8	NoRel	true	quedando	viento
+Relation	T6	T1	NoRel	true	prevista	operaba
+Relation	T6	T4	NoRel	true	prevista	fallecieron
+Relation	T6	T7	NoRel	true	prevista	despegaron
+Relation	T6	T8	NoRel	true	prevista	viento
+Relation	T7	T10	NoRel	true	despegaron	retrocediendo
+Relation	T7	T2	NoRel	true	despegaron	estrelló
+Relation	T7	T3	NoRel	true	despegaron	salida
+Relation	T7	T6	NoRel	true	despegaron	prevista
+Relation	T7	T9	NoRel	true	despegaron	rodó
+Relation	T8	T10	NoRel	true	viento	retrocediendo
+Relation	T8	T6	NoRel	true	viento	prevista
+Relation	T9	T10	NoRel	true	rodó	retrocediendo
+Relation	T9	T3	NoRel	true	rodó	salida
+Relation	T9	T4	NoRel	true	rodó	fallecieron

@@ -1,0 +1,27 @@
+Text	Kompleks , New York'un Finans Bölgesinde bulunmakta ve 1.240.000m² ofis alanı içermektedir .	11 Eylül 2001'de El - Kaide American Airlines Flight 11'i kaçırdı ve onu Kuzey Kulesi'nin kuzey cephesine sabah 8: 46 : 40'ta düşürdü ; uçak 93. ve 99. katlar arasında çarptı .	On yedi dakika sonra , sabah 9: 03 : 11'de , ikinci bir grup benzer şekilde kaçırılan United Airlines Flight'i Güney Kule'nin güney cephesinde , 77. ve 85. katlar arasına çarptı .	Usame bin Ladin liderliğindeki terör örgütü El - Kaide Amerika Birleşik Devletleri'nin İsrail'e desteği ve Suudi Arabistan'daki ABD birliklerinin varlığı başta olmak üzere Amerikan dış politikasının belirli yönlerine misilleme olarak saldırıları gerçekleştirdi .	Saldırılarda yaklaşık 2996 sivil hayatını kaybetti .
+Event	T0	kaçırdı	EVENT	151
+Event	T1	düşürdü	EVENT	219
+Event	T2	çarptı	EVENT	261
+Event	T3	kaçırılan	EVENT	346
+Event	T4	çarptı	EVENT	441
+Event	T6	Saldırılarda	EVENT	713
+Event	T7	kaybetti	EVENT	755
+Relation	T0	T1	CauseEffect	true	kaçırdı	düşürdü
+Relation	T1	T0	EffectCause	true	düşürdü	kaçırdı
+Relation	T1	T2	CauseEffect	true	düşürdü	çarptı
+Relation	T2	T1	EffectCause	true	çarptı	düşürdü
+Relation	T3	T4	CauseEffect	true	kaçırılan	çarptı
+Relation	T4	T3	EffectCause	true	çarptı	kaçırılan
+Relation	T2	T7	CauseEffect	true	çarptı	kaybetti
+Relation	T7	T2	EffectCause	true	kaybetti	çarptı
+Relation	T4	T7	CauseEffect	true	çarptı	kaybetti
+Relation	T7	T4	EffectCause	true	kaybetti	çarptı
+Relation	T6	T7	CauseEffect	true	Saldırılarda	kaybetti
+Relation	T7	T6	EffectCause	true	kaybetti	Saldırılarda
+Relation	T0	T3	NoRel	true	kaçırdı	kaçırılan
+Relation	T1	T3	NoRel	true	düşürdü	kaçırılan
+Relation	T2	T0	NoRel	true	çarptı	kaçırdı
+Relation	T2	T6	NoRel	true	çarptı	Saldırılarda
+Relation	T6	T2	NoRel	true	Saldırılarda	çarptı
+Relation	T6	T3	NoRel	true	Saldırılarda	kaçırılan
+Relation	T7	T3	NoRel	true	kaybetti	kaçırılan

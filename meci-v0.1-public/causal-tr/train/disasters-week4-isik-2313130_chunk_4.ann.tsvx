@@ -1,0 +1,43 @@
+Text	küçükresim | sol | Bir arama - kurtarma faaliyeti Aralarında Çin'in de bulunduğu birkaç ülke depremden sonra yardımda bulunmayı teklif etse de , Tayvan hükümeti ülkenin yardım görevlisi ve malzemesi bakımından eksiklik taşımadığını , bu yüzden yardım tekliflerini kibarca reddettiğini açıkladı .	Fakat , Tayvanlı yetkililerin sahip olmadığı bir teknoloji olan vücut ısısı algılama donanımına sahip oldukları için bir Japon birliğinin kabul edilmesine karar verildi .	Japonya özel kurtarma ekibi , arama çalışmalarına yardım sağlamak için 9 Şubat'ta bölgeye geldi ve Tayvan'a ulaşan ilk uluslararası arama - kurtarma ekibi oldu .	Singapur , Hava Kuvvetleri Komutanlığına ait C - 130 Hercules vasıtasıyla Tayvan'a 103.000 dolar insanî yardım malzemesi gönderdi .	Aralarında Tayvan ile resmî diplomatik ilişkisi bulunan 18 ülkenin de olduğu 63 ülke ile Avrupa Birliği , Doğu Karayip Devletleri Örgütü , Orta Amerika Parlamentosu ve Orta Amerika Ortak Pazarı Tayvan hükûmetine başsağlığı mesajı gönderdi .
+Event	T0	faaliyeti	EVENT	40
+Event	T1	etse	EVENT	135
+Event	T2	açıkladı	EVENT	285
+Event	T3	verildi	EVENT	457
+Event	T5	geldi	EVENT	557
+Event	T6	oldu	EVENT	622
+Event	T7	gönderdi	EVENT	750
+Event	T8	gönderdi	EVENT	991
+Event	T9	depremden	EVENT	93
+Relation	T9	T1	CauseEffect	true	depremden	etse
+Relation	T1	T9	EffectCause	true	etse	depremden
+Relation	T3	T5	CauseEffect	true	verildi	geldi
+Relation	T5	T3	EffectCause	true	geldi	verildi
+Relation	T9	T3	CauseEffect	true	depremden	verildi
+Relation	T3	T9	EffectCause	true	verildi	depremden
+Relation	T9	T2	CauseEffect	true	depremden	açıkladı
+Relation	T2	T9	EffectCause	true	açıkladı	depremden
+Relation	T9	T7	CauseEffect	true	depremden	gönderdi
+Relation	T7	T9	EffectCause	true	gönderdi	depremden
+Relation	T9	T8	CauseEffect	true	depremden	gönderdi
+Relation	T8	T9	EffectCause	true	gönderdi	depremden
+Relation	T0	T3	NoRel	true	faaliyeti	verildi
+Relation	T0	T5	NoRel	true	faaliyeti	geldi
+Relation	T0	T6	NoRel	true	faaliyeti	oldu
+Relation	T1	T0	NoRel	true	etse	faaliyeti
+Relation	T1	T2	NoRel	true	etse	açıkladı
+Relation	T1	T5	NoRel	true	etse	geldi
+Relation	T1	T7	NoRel	true	etse	gönderdi
+Relation	T2	T5	NoRel	true	açıkladı	geldi
+Relation	T2	T6	NoRel	true	açıkladı	oldu
+Relation	T2	T8	NoRel	true	açıkladı	gönderdi
+Relation	T3	T6	NoRel	true	verildi	oldu
+Relation	T5	T1	NoRel	true	geldi	etse
+Relation	T5	T6	NoRel	true	geldi	oldu
+Relation	T5	T8	NoRel	true	geldi	gönderdi
+Relation	T6	T3	NoRel	true	oldu	verildi
+Relation	T6	T5	NoRel	true	oldu	geldi
+Relation	T6	T7	NoRel	true	oldu	gönderdi
+Relation	T7	T3	NoRel	true	gönderdi	verildi
+Relation	T7	T5	NoRel	true	gönderdi	geldi
+Relation	T8	T5	NoRel	true	gönderdi	geldi
+Relation	T9	T6	NoRel	true	depremden	oldu

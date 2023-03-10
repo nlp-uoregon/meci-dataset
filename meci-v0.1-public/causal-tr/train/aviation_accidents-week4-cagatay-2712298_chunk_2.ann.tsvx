@@ -1,0 +1,50 @@
+Text	Saat 19.30'da Omsk'tan Almatı'ya doğru yola çıktı ve 7.000 m ( 23.000_ft ) seyir irtifasında gitti .	20.15'te Almatı'da 3. 000 metre ( 9. 800_ft ) görüş mesafesi olduğu , rüzgarın zayıf estiği ve atmosfer basıncının 710 ,5 mmHg olduğu bildirildi .	20.32'de , CCCP - 75689 kuyruk numaralı farklı bir İl - 18 , Almatı pistini iki kez pas geçmek zorunda kaldıktan sonra piste indi .	İndikten sonra havalimanında taksi yapmaya başlayan İl - 18'e kontrolör hava koşullarının iniş yapacak başka bir İl - 18 için güvenli olup olmadığını sordu .	Pilot , herhangi bir İl - 18'in mevcut koşullara güvenli bir şekilde inebileceğini kategorik olarak reddederek cevap verdi .
+Event	T0	çıktı	EVENT	44
+Event	T1	seyir	EVENT	75
+Event	T2	gitti	EVENT	93
+Event	T3	estiği	EVENT	186
+Event	T4	bildirildi	EVENT	235
+Event	T5	geçmek	EVENT	336
+Event	T6	indi	EVENT	373
+Event	T7	sordu	EVENT	530
+Event	T8	verdi	EVENT	655
+Event	T9	yapmaya	EVENT	415
+Event	T10	reddederek	EVENT	638
+Relation	T7	T10	CauseEffect	true	sordu	reddederek
+Relation	T10	T7	EffectCause	true	reddederek	sordu
+Relation	T0	T1	NoRel	true	çıktı	seyir
+Relation	T0	T2	NoRel	true	çıktı	gitti
+Relation	T0	T5	NoRel	true	çıktı	geçmek
+Relation	T1	T3	NoRel	true	seyir	estiği
+Relation	T1	T6	NoRel	true	seyir	indi
+Relation	T1	T7	NoRel	true	seyir	sordu
+Relation	T10	T0	NoRel	true	reddederek	çıktı
+Relation	T10	T1	NoRel	true	reddederek	seyir
+Relation	T10	T3	NoRel	true	reddederek	estiği
+Relation	T10	T4	NoRel	true	reddederek	bildirildi
+Relation	T2	T0	NoRel	true	gitti	çıktı
+Relation	T2	T4	NoRel	true	gitti	bildirildi
+Relation	T2	T6	NoRel	true	gitti	indi
+Relation	T2	T8	NoRel	true	gitti	verdi
+Relation	T2	T9	NoRel	true	gitti	yapmaya
+Relation	T3	T10	NoRel	true	estiği	reddederek
+Relation	T3	T2	NoRel	true	estiği	gitti
+Relation	T3	T5	NoRel	true	estiği	geçmek
+Relation	T3	T7	NoRel	true	estiği	sordu
+Relation	T3	T9	NoRel	true	estiği	yapmaya
+Relation	T4	T2	NoRel	true	bildirildi	gitti
+Relation	T4	T7	NoRel	true	bildirildi	sordu
+Relation	T5	T0	NoRel	true	geçmek	çıktı
+Relation	T5	T1	NoRel	true	geçmek	seyir
+Relation	T5	T10	NoRel	true	geçmek	reddederek
+Relation	T5	T2	NoRel	true	geçmek	gitti
+Relation	T5	T3	NoRel	true	geçmek	estiği
+Relation	T5	T6	NoRel	true	geçmek	indi
+Relation	T5	T8	NoRel	true	geçmek	verdi
+Relation	T6	T1	NoRel	true	indi	seyir
+Relation	T7	T1	NoRel	true	sordu	seyir
+Relation	T7	T2	NoRel	true	sordu	gitti
+Relation	T7	T9	NoRel	true	sordu	yapmaya
+Relation	T8	T0	NoRel	true	verdi	çıktı
+Relation	T8	T4	NoRel	true	verdi	bildirildi
+Relation	T9	T1	NoRel	true	yapmaya	seyir

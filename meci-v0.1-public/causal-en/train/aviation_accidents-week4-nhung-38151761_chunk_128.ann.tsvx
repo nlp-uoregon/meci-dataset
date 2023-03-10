@@ -1,0 +1,56 @@
+Text	Vietnamese Navy ship ( described by Joe Baugher as a fishing vessel ) picks up three American crew , two men and one woman , said a spokesman at the Vietnamese embassy in Bangkok on 15 July , and took them to Vietnam where they were being " treated very kindly " .	Arrangements would be made to repatriate the crew .	At this time the United States and Vietnam had not yet reestablished diplomatic relations .	13 July : US Marine Corps McDonnell - Douglas AV - 8B - 3 Harrier II , Bu No _ 161582_ , c / n 512014/14 , of VMAT - 203 , crashed at MCAS Cherry Point , North Carolina .	10 August : US Navy Kaman SH - 2F Seasprite , BuNo__ 161910 _ , assigned to HSL - 35 NAS North Island , suffers tail structure failure and loss of directional control and crashes into ocean approximately off Point Loma while returning from weapons training exercise at NALF San Clemente Island .
+Event	T0	described	EVENT	23
+Event	T1	said	EVENT	125
+Event	T2	took	EVENT	196
+Event	T3	treated	EVENT	241
+Event	T4	made	EVENT	287
+Event	T5	repatriate	EVENT	295
+Event	T6	reestablished	EVENT	372
+Event	T7	relations	EVENT	397
+Event	T8	crashed	EVENT	532
+Event	T9	failure	EVENT	707
+Event	T10	loss	EVENT	719
+Event	T11	returning	EVENT	805
+Event	T12	exercise	EVENT	837
+Event	T13	picks up	EVENT	70
+Event	T14	Arrangements	EVENT	265
+Event	T15	assigned	EVENT	644
+Event	T16	suffers	EVENT	684
+Event	T17	crashes	EVENT	751
+Relation	T14	T5	CauseEffect	true	Arrangements	repatriate
+Relation	T5	T14	EffectCause	true	repatriate	Arrangements
+Relation	T9	T17	CauseEffect	true	failure	crashes
+Relation	T17	T9	EffectCause	true	crashes	failure
+Relation	T10	T17	CauseEffect	true	loss	crashes
+Relation	T17	T10	EffectCause	true	crashes	loss
+Relation	T0	T16	NoRel	true	described	suffers
+Relation	T0	T9	NoRel	true	described	failure
+Relation	T1	T16	NoRel	true	said	suffers
+Relation	T10	T15	NoRel	true	loss	assigned
+Relation	T10	T6	NoRel	true	loss	reestablished
+Relation	T11	T4	NoRel	true	returning	made
+Relation	T11	T9	NoRel	true	returning	failure
+Relation	T12	T14	NoRel	true	exercise	Arrangements
+Relation	T13	T10	NoRel	true	picks up	loss
+Relation	T13	T8	NoRel	true	picks up	crashed
+Relation	T14	T15	NoRel	true	Arrangements	assigned
+Relation	T14	T7	NoRel	true	Arrangements	relations
+Relation	T15	T10	NoRel	true	assigned	loss
+Relation	T15	T12	NoRel	true	assigned	exercise
+Relation	T16	T6	NoRel	true	suffers	reestablished
+Relation	T17	T5	NoRel	true	crashes	repatriate
+Relation	T17	T7	NoRel	true	crashes	relations
+Relation	T2	T1	NoRel	true	took	said
+Relation	T2	T6	NoRel	true	took	reestablished
+Relation	T4	T10	NoRel	true	made	loss
+Relation	T4	T16	NoRel	true	made	suffers
+Relation	T5	T1	NoRel	true	repatriate	said
+Relation	T6	T2	NoRel	true	reestablished	took
+Relation	T6	T8	NoRel	true	reestablished	crashed
+Relation	T6	T9	NoRel	true	reestablished	failure
+Relation	T7	T16	NoRel	true	relations	suffers
+Relation	T8	T7	NoRel	true	crashed	relations
+Relation	T9	T10	NoRel	true	failure	loss
+Relation	T9	T13	NoRel	true	failure	picks up
+Relation	T9	T2	NoRel	true	failure	took
+Relation	T9	T3	NoRel	true	failure	treated

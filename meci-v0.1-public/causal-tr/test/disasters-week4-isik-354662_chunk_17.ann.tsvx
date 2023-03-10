@@ -1,0 +1,14 @@
+Text	Lavları soğutmak için kullanılan su yavaş ve azdı ancak elde edilebilecek en iyi sonuçlar alınmaktaydı .	Lavları suyla durdurmanın başarılı olduğu görüldüğü andan itibaren , lav akıntılarını durdurmak için sarf edilen çabalar da arttı .	Çalışmalar süresince kullanılan su kapasitesi Mart ayına gelindiğinde arttırıldı .	Aynı zamanda Eldfell'in doruğundan da büyük bir parça toprak kopmuştu ve akan lavlar ile birlikte kasabanın limanına doğru taşınmaktaydı .	Bu toprak de kütlesi eğer limana ulaşsaydı limanı kullanılmaz hâle getirecekti .
+Event	T0	soğutmak	EVENT	8
+Event	T1	görüldüğü	EVENT	147
+Event	T2	arttı	EVENT	229
+Event	T3	arttırıldı	EVENT	307
+Event	T4	kopmuştu	EVENT	381
+Relation	T1	T2	CauseEffect	true	görüldüğü	arttı
+Relation	T2	T1	EffectCause	true	arttı	görüldüğü
+Relation	T2	T3	CauseEffect	true	arttı	arttırıldı
+Relation	T3	T2	EffectCause	true	arttırıldı	arttı
+Relation	T1	T4	NoRel	true	görüldüğü	kopmuştu
+Relation	T2	T0	NoRel	true	arttı	soğutmak
+Relation	T3	T0	NoRel	true	arttırıldı	soğutmak
+Relation	T3	T1	NoRel	true	arttırıldı	görüldüğü

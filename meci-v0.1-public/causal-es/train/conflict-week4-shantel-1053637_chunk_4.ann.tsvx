@@ -1,0 +1,68 @@
+Text	- Se deben revisar que las pestañas de los empaques tetra pack no tengan residuos de pegamento	- Las etiquetas deben estar en buen estado , al frotarse no deben soltar tinta .	- La estampilla de la tapa , debe tener el mismo nombre del licor de la etiqueta .	- Se debe revisar el contenido a contraluz : no debe tener objetos extraños , ni partículas en suspensión .	El consumo de este puede ocasionar síntomas como : dolor de cabeza , mareo , náuseas , vómitos , daño grave en nervio óptico ( ceguera o pérdida de la visión ) , daños al hígado , cirrosis e incluso puede llevar a la muerte prematura .
+Event	T0	revisar	EVENT	11
+Event	T1	soltar	EVENT	161
+Event	T2	revisar	EVENT	269
+Event	T3	consumo	EVENT	370
+Event	T4	síntomas	EVENT	402
+Event	T5	dolor	EVENT	418
+Event	T6	mareo	EVENT	436
+Event	T7	náuseas	EVENT	444
+Event	T8	ceguera	EVENT	494
+Event	T9	pérdida	EVENT	504
+Event	T10	daños	EVENT	529
+Event	T11	cirrosis	EVENT	547
+Event	T12	muerte	EVENT	584
+Relation	T3	T4	CauseEffect	true	consumo	síntomas
+Relation	T4	T3	EffectCause	true	síntomas	consumo
+Relation	T3	T5	CauseEffect	true	consumo	dolor
+Relation	T5	T3	EffectCause	true	dolor	consumo
+Relation	T0	T11	NoRel	true	revisar	cirrosis
+Relation	T0	T2	NoRel	true	revisar	revisar
+Relation	T0	T4	NoRel	true	revisar	síntomas
+Relation	T0	T5	NoRel	true	revisar	dolor
+Relation	T0	T6	NoRel	true	revisar	mareo
+Relation	T0	T7	NoRel	true	revisar	náuseas
+Relation	T0	T9	NoRel	true	revisar	pérdida
+Relation	T1	T10	NoRel	true	soltar	daños
+Relation	T1	T12	NoRel	true	soltar	muerte
+Relation	T1	T5	NoRel	true	soltar	dolor
+Relation	T1	T7	NoRel	true	soltar	náuseas
+Relation	T10	T1	NoRel	true	daños	soltar
+Relation	T10	T12	NoRel	true	daños	muerte
+Relation	T10	T6	NoRel	true	daños	mareo
+Relation	T10	T8	NoRel	true	daños	ceguera
+Relation	T10	T9	NoRel	true	daños	pérdida
+Relation	T11	T1	NoRel	true	cirrosis	soltar
+Relation	T11	T2	NoRel	true	cirrosis	revisar
+Relation	T11	T4	NoRel	true	cirrosis	síntomas
+Relation	T11	T5	NoRel	true	cirrosis	dolor
+Relation	T11	T8	NoRel	true	cirrosis	ceguera
+Relation	T12	T7	NoRel	true	muerte	náuseas
+Relation	T12	T8	NoRel	true	muerte	ceguera
+Relation	T2	T1	NoRel	true	revisar	soltar
+Relation	T2	T10	NoRel	true	revisar	daños
+Relation	T2	T11	NoRel	true	revisar	cirrosis
+Relation	T2	T12	NoRel	true	revisar	muerte
+Relation	T2	T6	NoRel	true	revisar	mareo
+Relation	T2	T9	NoRel	true	revisar	pérdida
+Relation	T3	T12	NoRel	true	consumo	muerte
+Relation	T3	T2	NoRel	true	consumo	revisar
+Relation	T3	T8	NoRel	true	consumo	ceguera
+Relation	T4	T0	NoRel	true	síntomas	revisar
+Relation	T4	T10	NoRel	true	síntomas	daños
+Relation	T4	T2	NoRel	true	síntomas	revisar
+Relation	T5	T11	NoRel	true	dolor	cirrosis
+Relation	T6	T0	NoRel	true	mareo	revisar
+Relation	T6	T1	NoRel	true	mareo	soltar
+Relation	T6	T12	NoRel	true	mareo	muerte
+Relation	T6	T5	NoRel	true	mareo	dolor
+Relation	T7	T5	NoRel	true	náuseas	dolor
+Relation	T7	T6	NoRel	true	náuseas	mareo
+Relation	T7	T8	NoRel	true	náuseas	ceguera
+Relation	T7	T9	NoRel	true	náuseas	pérdida
+Relation	T8	T10	NoRel	true	ceguera	daños
+Relation	T8	T11	NoRel	true	ceguera	cirrosis
+Relation	T8	T6	NoRel	true	ceguera	mareo
+Relation	T9	T11	NoRel	true	pérdida	cirrosis
+Relation	T9	T3	NoRel	true	pérdida	consumo
+Relation	T9	T4	NoRel	true	pérdida	síntomas

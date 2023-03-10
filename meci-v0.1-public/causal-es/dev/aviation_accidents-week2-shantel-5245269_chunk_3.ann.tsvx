@@ -1,0 +1,22 @@
+Text	Normalmente , desplegar los inversores de empuje o aplicar los frenos haría bajar la rueda de morro .	Sin embargo , se mantuvo el tren de morro .	Los frenos de velocidad no se activaron .	La tripulación informó haber visto luces rojas corriendo hacia ellos poco después de que las ruedas principales tocaron el suelo para el aterrizaje .	La aeronave invadió la pista y destruyó las luces de umbral y las luces de aproximación en la pista 03 .
+Event	T10	invadió	EVENT	350
+Event	T11	destruyó	EVENT	369
+Event	T3	mantuvo	EVENT	119
+Event	T5	informó	EVENT	203
+Event	T7	corriendo	EVENT	235
+Event	T8	tocaron	EVENT	300
+Event	T9	aterrizaje	EVENT	325
+Relation	T10	T11	CauseEffect	true	invadió	destruyó
+Relation	T11	T10	EffectCause	true	destruyó	invadió
+Relation	T10	T9	NoRel	true	invadió	aterrizaje
+Relation	T11	T8	NoRel	true	destruyó	tocaron
+Relation	T5	T9	NoRel	true	informó	aterrizaje
+Relation	T7	T10	NoRel	true	corriendo	invadió
+Relation	T7	T11	NoRel	true	corriendo	destruyó
+Relation	T7	T3	NoRel	true	corriendo	mantuvo
+Relation	T7	T5	NoRel	true	corriendo	informó
+Relation	T8	T3	NoRel	true	tocaron	mantuvo
+Relation	T8	T7	NoRel	true	tocaron	corriendo
+Relation	T9	T10	NoRel	true	aterrizaje	invadió
+Relation	T9	T11	NoRel	true	aterrizaje	destruyó
+Relation	T9	T5	NoRel	true	aterrizaje	informó

@@ -1,0 +1,60 @@
+Text	Beauchamp - Proctor was killed on 21 June 1921 in a training accident flying a Sopwith Snipe , in preparation for an air show at the RAF Hendon .	His aircraft went into a vicious spin after performing a slow loop , and he was killed in the ensuing crash .	At least one observer remarked that the loss of control and subsequent crash of the aircraft could have been linked to Proctor 's diminutive size .	He was originally buried at Upavon , Wiltshire , but in August 1921 his body was returned to South Africa where he was given a state funeral .	There still exists confusion over Beauchamp - Proctor 's given name .
+Event	T0	killed	EVENT	24
+Event	T1	flying	EVENT	70
+Event	T2	show	EVENT	121
+Event	T3	spin	EVENT	179
+Event	T4	performing	EVENT	190
+Event	T5	loop	EVENT	208
+Event	T6	killed	EVENT	226
+Event	T7	crash	EVENT	248
+Event	T8	remarked	EVENT	278
+Event	T9	loss	EVENT	296
+Event	T10	crash	EVENT	327
+Event	T11	linked	EVENT	365
+Event	T12	buried	EVENT	422
+Event	T13	returned	EVENT	485
+Event	T14	given	EVENT	523
+Event	T15	funeral	EVENT	537
+Event	T16	confusion	EVENT	566
+Relation	T1	T0	CauseEffect	true	flying	killed
+Relation	T0	T1	EffectCause	true	killed	flying
+Relation	T7	T6	CauseEffect	true	crash	killed
+Relation	T6	T7	EffectCause	true	killed	crash
+Relation	T9	T11	CauseEffect	true	loss	linked
+Relation	T11	T9	EffectCause	true	linked	loss
+Relation	T10	T11	CauseEffect	true	crash	linked
+Relation	T11	T10	EffectCause	true	linked	crash
+Relation	T6	T12	CauseEffect	true	killed	buried
+Relation	T12	T6	EffectCause	true	buried	killed
+Relation	T0	T10	NoRel	true	killed	crash
+Relation	T0	T2	NoRel	true	killed	show
+Relation	T0	T3	NoRel	true	killed	spin
+Relation	T1	T12	NoRel	true	flying	buried
+Relation	T1	T13	NoRel	true	flying	returned
+Relation	T1	T15	NoRel	true	flying	funeral
+Relation	T1	T4	NoRel	true	flying	performing
+Relation	T1	T5	NoRel	true	flying	loop
+Relation	T1	T7	NoRel	true	flying	crash
+Relation	T1	T8	NoRel	true	flying	remarked
+Relation	T11	T1	NoRel	true	linked	flying
+Relation	T12	T1	NoRel	true	buried	flying
+Relation	T12	T3	NoRel	true	buried	spin
+Relation	T13	T15	NoRel	true	returned	funeral
+Relation	T13	T2	NoRel	true	returned	show
+Relation	T13	T9	NoRel	true	returned	loss
+Relation	T14	T5	NoRel	true	given	loop
+Relation	T2	T15	NoRel	true	show	funeral
+Relation	T2	T4	NoRel	true	show	performing
+Relation	T2	T8	NoRel	true	show	remarked
+Relation	T3	T13	NoRel	true	spin	returned
+Relation	T5	T7	NoRel	true	loop	crash
+Relation	T5	T8	NoRel	true	loop	remarked
+Relation	T5	T9	NoRel	true	loop	loss
+Relation	T6	T0	NoRel	true	killed	killed
+Relation	T6	T4	NoRel	true	killed	performing
+Relation	T6	T8	NoRel	true	killed	remarked
+Relation	T7	T14	NoRel	true	crash	given
+Relation	T7	T3	NoRel	true	crash	spin
+Relation	T8	T10	NoRel	true	remarked	crash
+Relation	T9	T0	NoRel	true	loss	killed
+Relation	T9	T15	NoRel	true	loss	funeral

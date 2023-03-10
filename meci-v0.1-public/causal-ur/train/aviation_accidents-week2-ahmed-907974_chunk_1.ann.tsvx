@@ -1,0 +1,49 @@
+Text	یہ واقعہ اس وقت شروع ہوا جب طیارہ پرواز کررہا تھا ، جہاز کے عملے کے 5 ممبروں کے ساتھ 33 مسافر سوار تھے ۔	کراچی جانے والی پی آئی اے فوکر ایئرکرافٹ ، فلائٹ پی کے 554 ، کو 25 مئی 1998 کو شام 5 بج کر 35 منٹ پر گوادر سے روانہ ہونے کے فورا بعد ہی ہائی جیک کر لیا گیا ۔	طیارہ رات گئے حیدرآباد پہنچا ۔	ہوائی اڈے کے منیجر نے حیدرآباد کی لائٹس اور نشانات بند کردیئے تھے ۔	بعد ازاں رات کے وقت ، ہائی جیکرز نے اڑان کے انجینئر سجاد چوہدری کو بھارت سے نئی دہلی جانے والے طیارے میں ایندھن کے لئے حکام سے بات کرنے کے لئے رہا کیا ۔
+Event	T0	واقعہ	EVENT	3
+Event	T1	شروع	EVENT	16
+Event	T10	ہائی جیک	EVENT	241
+Event	T2	سوار	EVENT	94
+Event	T3	جانے	EVENT	111
+Event	T4	بند	EVENT	345
+Event	T5	پہنچا	EVENT	286
+Event	T6	رہا	EVENT	505
+Event	T7	بات	EVENT	489
+Event	T8	پرواز	EVENT	34
+Event	T9	روانہ	EVENT	215
+Relation	T7	T6	CauseEffect	true	بات	رہا
+Relation	T6	T7	EffectCause	true	رہا	بات
+Relation	T0	T10	NoRel	true	واقعہ	ہائی جیک
+Relation	T0	T2	NoRel	true	واقعہ	سوار
+Relation	T0	T5	NoRel	true	واقعہ	پہنچا
+Relation	T1	T2	NoRel	true	شروع	سوار
+Relation	T10	T3	NoRel	true	ہائی جیک	جانے
+Relation	T10	T4	NoRel	true	ہائی جیک	بند
+Relation	T10	T5	NoRel	true	ہائی جیک	پہنچا
+Relation	T10	T7	NoRel	true	ہائی جیک	بات
+Relation	T10	T8	NoRel	true	ہائی جیک	پرواز
+Relation	T10	T9	NoRel	true	ہائی جیک	روانہ
+Relation	T2	T4	NoRel	true	سوار	بند
+Relation	T3	T1	NoRel	true	جانے	شروع
+Relation	T3	T2	NoRel	true	جانے	سوار
+Relation	T3	T7	NoRel	true	جانے	بات
+Relation	T4	T0	NoRel	true	بند	واقعہ
+Relation	T4	T1	NoRel	true	بند	شروع
+Relation	T4	T5	NoRel	true	بند	پہنچا
+Relation	T4	T8	NoRel	true	بند	پرواز
+Relation	T5	T1	NoRel	true	پہنچا	شروع
+Relation	T5	T3	NoRel	true	پہنچا	جانے
+Relation	T5	T6	NoRel	true	پہنچا	رہا
+Relation	T5	T7	NoRel	true	پہنچا	بات
+Relation	T5	T9	NoRel	true	پہنچا	روانہ
+Relation	T6	T4	NoRel	true	رہا	بند
+Relation	T7	T10	NoRel	true	بات	ہائی جیک
+Relation	T7	T5	NoRel	true	بات	پہنچا
+Relation	T7	T8	NoRel	true	بات	پرواز
+Relation	T8	T0	NoRel	true	پرواز	واقعہ
+Relation	T8	T10	NoRel	true	پرواز	ہائی جیک
+Relation	T8	T3	NoRel	true	پرواز	جانے
+Relation	T8	T5	NoRel	true	پرواز	پہنچا
+Relation	T8	T6	NoRel	true	پرواز	رہا
+Relation	T9	T2	NoRel	true	روانہ	سوار
+Relation	T9	T5	NoRel	true	روانہ	پہنچا
+Relation	T9	T7	NoRel	true	روانہ	بات

@@ -1,0 +1,23 @@
+Text	1903 MALAZGIRT DEPREMI , 28 Nisan 1903 veya 29 Nisan 1903'de Muş ilinin Malazgirt ilçesinde 6.7 M _ ( S ) büyüklüğünde meydana gelen deprem .	Depremde Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü'nde göre 600 kişi yaşamını yitirmiş , 450 bina da hasar görmüştür .	Birçok kaynağa göre ise , depremde 2626 kişi yaşamını yitirmiştir .		
+Event	T1	deprem	EVENT	133
+Event	T2	Depremde	EVENT	142
+Event	T3	yitirmiş	EVENT	251
+Event	T4	görmüştür	EVENT	280
+Event	T5	depremde	EVENT	318
+Event	T6	yitirmiştir	EVENT	346
+Event	T7	1903 MALAZGIRT DEPREMI	EVENT	0
+Relation	T4	T3	CauseEffect	true	görmüştür	yitirmiş
+Relation	T3	T4	EffectCause	true	yitirmiş	görmüştür
+Relation	T1	T3	NoRel	true	deprem	yitirmiş
+Relation	T1	T4	NoRel	true	deprem	görmüştür
+Relation	T1	T5	NoRel	true	deprem	depremde
+Relation	T2	T1	NoRel	true	Depremde	deprem
+Relation	T2	T3	NoRel	true	Depremde	yitirmiş
+Relation	T4	T5	NoRel	true	görmüştür	depremde
+Relation	T5	T3	NoRel	true	depremde	yitirmiş
+Relation	T5	T6	NoRel	true	depremde	yitirmiştir
+Relation	T6	T2	NoRel	true	yitirmiştir	Depremde
+Relation	T6	T5	NoRel	true	yitirmiştir	depremde
+Relation	T6	T7	NoRel	true	yitirmiştir	1903 MALAZGIRT DEPREMI
+Relation	T7	T3	NoRel	true	1903 MALAZGIRT DEPREMI	yitirmiş
+Relation	T7	T4	NoRel	true	1903 MALAZGIRT DEPREMI	görmüştür

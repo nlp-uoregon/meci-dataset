@@ -1,0 +1,55 @@
+Text	Det første fly , American Airlines Flight 11 , ramte det nordlige tårn klokken 08:46 ( lokal tid ) .	Sytten minutter senere styrede et andet hold terrorister United Airliens Flight 175 ind mellem den 77. og 85. etage i det sydlige tårn .	Skaderne i det nordlige tårn førte til ødelæggelse af de mulige flugtveje fra området .	Omkring 1.344 personer i det nordlige tårn blev fanget og havde kun få muligheder til at slippe ud af tårnet .	Nogle personer valgte at blive på deres kontorer og vente på hjælp , mens andre valgte at begå selvmord ved at knuse vinduerne i bygningerne og hoppe ud .
+Event	T0	ramte	EVENT	47
+Event	T1	styrede	EVENT	124
+Event	T2	Skaderne	EVENT	238
+Event	T4	ødelæggelse	EVENT	277
+Event	T5	fanget	EVENT	374
+Event	T6	valgte	EVENT	452
+Event	T7	hjælp	EVENT	498
+Event	T8	valgte	EVENT	517
+Event	T9	selvmord	EVENT	532
+Event	T10	knuse	EVENT	548
+Event	T11	slippe ud	EVENT	415
+Relation	T2	T4	CauseEffect	true	Skaderne	ødelæggelse
+Relation	T4	T2	EffectCause	true	ødelæggelse	Skaderne
+Relation	T0	T2	CauseEffect	true	ramte	Skaderne
+Relation	T2	T0	EffectCause	true	Skaderne	ramte
+Relation	T4	T5	CauseEffect	true	ødelæggelse	fanget
+Relation	T5	T4	EffectCause	true	fanget	ødelæggelse
+Relation	T5	T9	CauseEffect	true	fanget	selvmord
+Relation	T9	T5	EffectCause	true	selvmord	fanget
+Relation	T0	T4	NoRel	true	ramte	ødelæggelse
+Relation	T0	T8	NoRel	true	ramte	valgte
+Relation	T1	T11	NoRel	true	styrede	slippe ud
+Relation	T1	T5	NoRel	true	styrede	fanget
+Relation	T1	T9	NoRel	true	styrede	selvmord
+Relation	T10	T0	NoRel	true	knuse	ramte
+Relation	T10	T1	NoRel	true	knuse	styrede
+Relation	T10	T11	NoRel	true	knuse	slippe ud
+Relation	T10	T5	NoRel	true	knuse	fanget
+Relation	T11	T8	NoRel	true	slippe ud	valgte
+Relation	T2	T1	NoRel	true	Skaderne	styrede
+Relation	T2	T11	NoRel	true	Skaderne	slippe ud
+Relation	T2	T5	NoRel	true	Skaderne	fanget
+Relation	T2	T9	NoRel	true	Skaderne	selvmord
+Relation	T4	T11	NoRel	true	ødelæggelse	slippe ud
+Relation	T4	T8	NoRel	true	ødelæggelse	valgte
+Relation	T4	T9	NoRel	true	ødelæggelse	selvmord
+Relation	T5	T0	NoRel	true	fanget	ramte
+Relation	T5	T6	NoRel	true	fanget	valgte
+Relation	T5	T8	NoRel	true	fanget	valgte
+Relation	T6	T0	NoRel	true	valgte	ramte
+Relation	T6	T10	NoRel	true	valgte	knuse
+Relation	T6	T11	NoRel	true	valgte	slippe ud
+Relation	T6	T8	NoRel	true	valgte	valgte
+Relation	T7	T0	NoRel	true	hjælp	ramte
+Relation	T7	T10	NoRel	true	hjælp	knuse
+Relation	T7	T11	NoRel	true	hjælp	slippe ud
+Relation	T7	T4	NoRel	true	hjælp	ødelæggelse
+Relation	T7	T9	NoRel	true	hjælp	selvmord
+Relation	T8	T0	NoRel	true	valgte	ramte
+Relation	T8	T1	NoRel	true	valgte	styrede
+Relation	T9	T1	NoRel	true	selvmord	styrede
+Relation	T9	T2	NoRel	true	selvmord	Skaderne
+Relation	T9	T4	NoRel	true	selvmord	ødelæggelse
+Relation	T9	T6	NoRel	true	selvmord	valgte

@@ -1,0 +1,31 @@
+Text	- 24 Eylül , 2009 – İki yük treni Barendrecht yakınındaki A15 otobanındaki bir viyadükün altında kafa kafaya kazaya bulaştı ve bir trenin makinisti öldü .	Devrilen kısımlar , yaklaşmakta olan bir yolcu trenine paralel hat üzerine yere indiler .	Yolcu trenindeki birkaç yolcu hafif yaralandı .	- 30 Eylül , 2009 – 13 yaşındaki Norveçli bir çocuk Uddevalla’da resim çekmek için park etmiş olan bir lokomotifin üzerine çıktı .	Çocuk havai hattaki elektrik nedeniyle öldü .
+Event	T0	bulaştı	EVENT	116
+Event	T1	öldü	EVENT	148
+Event	T2	yaralandı	EVENT	281
+Event	T3	çekmek	EVENT	364
+Event	T4	çıktı	EVENT	416
+Event	T5	öldü	EVENT	463
+Event	T6	Devrilen	EVENT	155
+Event	T7	kazaya	EVENT	109
+Event	T8	indiler	EVENT	235
+Relation	T7	T1	CauseEffect	true	kazaya	öldü
+Relation	T1	T7	EffectCause	true	öldü	kazaya
+Relation	T7	T2	CauseEffect	true	kazaya	yaralandı
+Relation	T2	T7	EffectCause	true	yaralandı	kazaya
+Relation	T4	T5	CauseEffect	true	çıktı	öldü
+Relation	T5	T4	EffectCause	true	öldü	çıktı
+Relation	T0	T2	NoRel	true	bulaştı	yaralandı
+Relation	T0	T4	NoRel	true	bulaştı	çıktı
+Relation	T1	T2	NoRel	true	öldü	yaralandı
+Relation	T1	T3	NoRel	true	öldü	çekmek
+Relation	T2	T1	NoRel	true	yaralandı	öldü
+Relation	T2	T8	NoRel	true	yaralandı	indiler
+Relation	T3	T5	NoRel	true	çekmek	öldü
+Relation	T4	T0	NoRel	true	çıktı	bulaştı
+Relation	T4	T6	NoRel	true	çıktı	Devrilen
+Relation	T5	T6	NoRel	true	öldü	Devrilen
+Relation	T6	T4	NoRel	true	Devrilen	çıktı
+Relation	T6	T5	NoRel	true	Devrilen	öldü
+Relation	T8	T0	NoRel	true	indiler	bulaştı
+Relation	T8	T1	NoRel	true	indiler	öldü
+Relation	T8	T4	NoRel	true	indiler	çıktı

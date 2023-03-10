@@ -1,0 +1,56 @@
+Text	- Rusya Devlet Başkanı Vladimir Putin , " Rus uçağının Türkiye'ye karşı tehdit oluşturmadığını , Türk F - 16 uçakları tarafından vurulduğu sırada Suriye - Türkiye sınırından 1 kilometre uzakta olduğunu ve sınırdan yaklaşık 4 kilometre uzak bir noktaya düştüğünü " iddia etti .	" Rusya ve Türkiye ilişkileri bakımından çok ciddi sorunlara neden olacağını " söyledi .	Bir başka açıklamasında ise " Türkiye'nin bilerek Rusya ve Türkiye ilişkilerini çıkmaza sürüklediğini ve Türkiye'den hâlâ özür beklediklerini " söyledi .	- Rusya Başbakanı Dmitriy Medvedev , " Rus uçağının düşürülmesinin Rusya ve NATO arasındaki gerilimin artmasına neden olduğunu " söyledi .	- Rusya Dışişleri Bakanı Sergey Lavrov , savaş uçağının düşürülmesi sonrası 25 Kasım 2015 tarihinde Türkiye'ye yapacağı ziyareti iptal etti .
+Event	T0	tehdit	EVENT	72
+Event	T1	vurulduğu	EVENT	129
+Event	T3	söyledi	EVENT	356
+Event	T4	söyledi	EVENT	510
+Event	T5	söyledi	EVENT	649
+Event	T6	düşürülmesi	EVENT	715
+Event	T8	düştüğünü	EVENT	252
+Event	T2	iddia	EVENT	264
+Event	T9	açıklamasında	EVENT	376
+Event	T10	düşürülmesinin	EVENT	572
+Event	T11	artmasına	EVENT	622
+Event	T7	iptal	EVENT	788
+Relation	T10	T11	CauseEffect	true	düşürülmesinin	artmasına
+Relation	T11	T10	EffectCause	true	artmasına	düşürülmesinin
+Relation	T6	T7	CauseEffect	true	düşürülmesi	iptal
+Relation	T7	T6	EffectCause	true	iptal	düşürülmesi
+Relation	T0	T5	NoRel	true	tehdit	söyledi
+Relation	T0	T6	NoRel	true	tehdit	düşürülmesi
+Relation	T0	T8	NoRel	true	tehdit	düştüğünü
+Relation	T1	T6	NoRel	true	vurulduğu	düşürülmesi
+Relation	T1	T8	NoRel	true	vurulduğu	düştüğünü
+Relation	T10	T0	NoRel	true	düşürülmesinin	tehdit
+Relation	T10	T1	NoRel	true	düşürülmesinin	vurulduğu
+Relation	T10	T4	NoRel	true	düşürülmesinin	söyledi
+Relation	T10	T5	NoRel	true	düşürülmesinin	söyledi
+Relation	T10	T9	NoRel	true	düşürülmesinin	açıklamasında
+Relation	T11	T2	NoRel	true	artmasına	iddia
+Relation	T11	T5	NoRel	true	artmasına	söyledi
+Relation	T11	T6	NoRel	true	artmasına	düşürülmesi
+Relation	T2	T0	NoRel	true	iddia	tehdit
+Relation	T2	T11	NoRel	true	iddia	artmasına
+Relation	T2	T3	NoRel	true	iddia	söyledi
+Relation	T2	T7	NoRel	true	iddia	iptal
+Relation	T2	T8	NoRel	true	iddia	düştüğünü
+Relation	T3	T10	NoRel	true	söyledi	düşürülmesinin
+Relation	T3	T11	NoRel	true	söyledi	artmasına
+Relation	T3	T2	NoRel	true	söyledi	iddia
+Relation	T3	T6	NoRel	true	söyledi	düşürülmesi
+Relation	T4	T0	NoRel	true	söyledi	tehdit
+Relation	T4	T10	NoRel	true	söyledi	düşürülmesinin
+Relation	T4	T2	NoRel	true	söyledi	iddia
+Relation	T4	T6	NoRel	true	söyledi	düşürülmesi
+Relation	T4	T7	NoRel	true	söyledi	iptal
+Relation	T4	T8	NoRel	true	söyledi	düştüğünü
+Relation	T4	T9	NoRel	true	söyledi	açıklamasında
+Relation	T5	T10	NoRel	true	söyledi	düşürülmesinin
+Relation	T5	T11	NoRel	true	söyledi	artmasına
+Relation	T5	T4	NoRel	true	söyledi	söyledi
+Relation	T5	T7	NoRel	true	söyledi	iptal
+Relation	T5	T8	NoRel	true	söyledi	düştüğünü
+Relation	T5	T9	NoRel	true	söyledi	açıklamasında
+Relation	T6	T4	NoRel	true	düşürülmesi	söyledi
+Relation	T8	T5	NoRel	true	düştüğünü	söyledi
+Relation	T9	T3	NoRel	true	açıklamasında	söyledi
+Relation	T9	T5	NoRel	true	açıklamasında	söyledi

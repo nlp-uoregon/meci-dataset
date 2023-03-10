@@ -1,0 +1,71 @@
+Text	Como consecuencia , el tramo entre Clot y Torras i Bages no entra en servicio hasta las 10:43 h .	- 7 de febrero de 2010 : un hombre de entre 25 - 30 años falleció en la estación de La Sagrera cuando se cayó a la vía entre un coche y el andén y fue arrollado cuando el tren reanudó la marcha .	El accidente provocó la interrupción total de la línea 1 entre las 8:11 h y las 08.17 h y , posteriormente , la interrupción del tramo comprendido entre Clot y Fabra i Puig durante 40 minutos .	- 24 de junio de 2011 : un hombre falleció en la estación de Universitat al chocar contra un tren y caer a la vía tras tropezar y resbalar cuando intentó subirse al tren .	Como consecuencia , se produjo la interrupción total del servicio de la línea 1 desde las 07:35 h hasta las 07:42 h y , parcialmente , entre las estaciones de entre España y Marina hasta las 08:09 h .
+Event	T0	falleció	EVENT	155
+Event	T1	cayó	EVENT	203
+Event	T2	arrollado	EVENT	249
+Event	T3	reanudó	EVENT	274
+Event	T4	marcha	EVENT	285
+Event	T5	provocó	EVENT	307
+Event	T6	interrupción	EVENT	406
+Event	T7	falleció	EVENT	522
+Event	T8	tropezar	EVENT	607
+Event	T9	resbalar	EVENT	618
+Event	T10	subirse	EVENT	642
+Event	T11	produjo	EVENT	683
+Event	T12	caer	EVENT	588
+Relation	T8	T12	CauseEffect	true	tropezar	caer
+Relation	T12	T8	EffectCause	true	caer	tropezar
+Relation	T12	T7	CauseEffect	true	caer	falleció
+Relation	T7	T12	EffectCause	true	falleció	caer
+Relation	T0	T3	NoRel	true	falleció	reanudó
+Relation	T0	T5	NoRel	true	falleció	provocó
+Relation	T0	T7	NoRel	true	falleció	falleció
+Relation	T1	T0	NoRel	true	cayó	falleció
+Relation	T1	T10	NoRel	true	cayó	subirse
+Relation	T1	T12	NoRel	true	cayó	caer
+Relation	T1	T3	NoRel	true	cayó	reanudó
+Relation	T1	T4	NoRel	true	cayó	marcha
+Relation	T1	T6	NoRel	true	cayó	interrupción
+Relation	T1	T8	NoRel	true	cayó	tropezar
+Relation	T10	T0	NoRel	true	subirse	falleció
+Relation	T10	T11	NoRel	true	subirse	produjo
+Relation	T10	T5	NoRel	true	subirse	provocó
+Relation	T10	T8	NoRel	true	subirse	tropezar
+Relation	T11	T0	NoRel	true	produjo	falleció
+Relation	T11	T1	NoRel	true	produjo	cayó
+Relation	T11	T4	NoRel	true	produjo	marcha
+Relation	T11	T8	NoRel	true	produjo	tropezar
+Relation	T11	T9	NoRel	true	produjo	resbalar
+Relation	T12	T11	NoRel	true	caer	produjo
+Relation	T12	T6	NoRel	true	caer	interrupción
+Relation	T2	T3	NoRel	true	arrollado	reanudó
+Relation	T2	T4	NoRel	true	arrollado	marcha
+Relation	T2	T5	NoRel	true	arrollado	provocó
+Relation	T3	T0	NoRel	true	reanudó	falleció
+Relation	T3	T11	NoRel	true	reanudó	produjo
+Relation	T3	T2	NoRel	true	reanudó	arrollado
+Relation	T3	T5	NoRel	true	reanudó	provocó
+Relation	T3	T7	NoRel	true	reanudó	falleció
+Relation	T3	T9	NoRel	true	reanudó	resbalar
+Relation	T4	T7	NoRel	true	marcha	falleció
+Relation	T5	T1	NoRel	true	provocó	cayó
+Relation	T5	T12	NoRel	true	provocó	caer
+Relation	T6	T12	NoRel	true	interrupción	caer
+Relation	T6	T5	NoRel	true	interrupción	provocó
+Relation	T6	T9	NoRel	true	interrupción	resbalar
+Relation	T7	T10	NoRel	true	falleció	subirse
+Relation	T7	T2	NoRel	true	falleció	arrollado
+Relation	T7	T3	NoRel	true	falleció	reanudó
+Relation	T7	T4	NoRel	true	falleció	marcha
+Relation	T7	T6	NoRel	true	falleció	interrupción
+Relation	T7	T8	NoRel	true	falleció	tropezar
+Relation	T7	T9	NoRel	true	falleció	resbalar
+Relation	T8	T0	NoRel	true	tropezar	falleció
+Relation	T8	T10	NoRel	true	tropezar	subirse
+Relation	T8	T11	NoRel	true	tropezar	produjo
+Relation	T8	T5	NoRel	true	tropezar	provocó
+Relation	T8	T7	NoRel	true	tropezar	falleció
+Relation	T8	T9	NoRel	true	tropezar	resbalar
+Relation	T9	T12	NoRel	true	resbalar	caer
+Relation	T9	T3	NoRel	true	resbalar	reanudó
+Relation	T9	T4	NoRel	true	resbalar	marcha
+Relation	T9	T8	NoRel	true	resbalar	tropezar

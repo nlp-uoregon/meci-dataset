@@ -1,0 +1,59 @@
+Text	En " underfaldsmølle " eller " strømmølle " er en vandmølle , hvor vandstrømmen kun skubber hjulskovlene .	Udnyttelsesgraden af vandkraften er kun 20-30 % .	Strømhjul anvendes kun , hvis opstemning af vand er umulig , det vil sige i fladt terræn .	Underfaldshjul anvendes i Danmark altid , hvis faldet er under 1,5 m .	En " overfaldsmølle " er en vandmølle , hvor vandet ledes i en vandrende ind over hjulet til lidt forbi dets højeste punkt og her falder ned på skovlene , der fyldes med vandet .
+Event	T0	skubber	EVENT	84
+Event	T1	anvendes	EVENT	167
+Event	T2	opstemning	EVENT	187
+Event	T3	anvendes	EVENT	263
+Event	T4	faldet	EVENT	295
+Event	T5	ledes	EVENT	371
+Event	T6	fyldes	EVENT	478
+Event	T7	fladt	EVENT	233
+Event	T8	under	EVENT	305
+Event	T9	Udnyttelsesgraden	EVENT	107
+Event	T10	falder	EVENT	449
+Relation	T7	T1	CauseEffect	true	fladt	anvendes
+Relation	T1	T7	EffectCause	true	anvendes	fladt
+Relation	T10	T6	CauseEffect	true	falder	fyldes
+Relation	T6	T10	EffectCause	true	fyldes	falder
+Relation	T0	T10	NoRel	true	skubber	falder
+Relation	T0	T8	NoRel	true	skubber	under
+Relation	T1	T0	NoRel	true	anvendes	skubber
+Relation	T1	T10	NoRel	true	anvendes	falder
+Relation	T1	T3	NoRel	true	anvendes	anvendes
+Relation	T1	T4	NoRel	true	anvendes	faldet
+Relation	T1	T6	NoRel	true	anvendes	fyldes
+Relation	T1	T8	NoRel	true	anvendes	under
+Relation	T10	T0	NoRel	true	falder	skubber
+Relation	T10	T3	NoRel	true	falder	anvendes
+Relation	T10	T5	NoRel	true	falder	ledes
+Relation	T10	T7	NoRel	true	falder	fladt
+Relation	T2	T4	NoRel	true	opstemning	faldet
+Relation	T2	T6	NoRel	true	opstemning	fyldes
+Relation	T2	T7	NoRel	true	opstemning	fladt
+Relation	T2	T8	NoRel	true	opstemning	under
+Relation	T3	T10	NoRel	true	anvendes	falder
+Relation	T3	T4	NoRel	true	anvendes	faldet
+Relation	T3	T6	NoRel	true	anvendes	fyldes
+Relation	T3	T7	NoRel	true	anvendes	fladt
+Relation	T3	T8	NoRel	true	anvendes	under
+Relation	T3	T9	NoRel	true	anvendes	Udnyttelsesgraden
+Relation	T4	T7	NoRel	true	faldet	fladt
+Relation	T5	T2	NoRel	true	ledes	opstemning
+Relation	T5	T3	NoRel	true	ledes	anvendes
+Relation	T5	T6	NoRel	true	ledes	fyldes
+Relation	T6	T0	NoRel	true	fyldes	skubber
+Relation	T6	T1	NoRel	true	fyldes	anvendes
+Relation	T6	T2	NoRel	true	fyldes	opstemning
+Relation	T6	T3	NoRel	true	fyldes	anvendes
+Relation	T6	T4	NoRel	true	fyldes	faldet
+Relation	T6	T5	NoRel	true	fyldes	ledes
+Relation	T6	T7	NoRel	true	fyldes	fladt
+Relation	T7	T0	NoRel	true	fladt	skubber
+Relation	T7	T4	NoRel	true	fladt	faldet
+Relation	T8	T10	NoRel	true	under	falder
+Relation	T8	T3	NoRel	true	under	anvendes
+Relation	T8	T4	NoRel	true	under	faldet
+Relation	T8	T7	NoRel	true	under	fladt
+Relation	T9	T2	NoRel	true	Udnyttelsesgraden	opstemning
+Relation	T9	T3	NoRel	true	Udnyttelsesgraden	anvendes
+Relation	T9	T7	NoRel	true	Udnyttelsesgraden	fladt
+Relation	T9	T8	NoRel	true	Udnyttelsesgraden	under

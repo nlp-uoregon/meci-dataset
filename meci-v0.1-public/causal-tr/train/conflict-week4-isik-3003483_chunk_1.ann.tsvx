@@ -1,0 +1,57 @@
+Text	Ancak 1798'de Napolyon tarafından Mora Yarımadası'na bir Manyot istilası düzenlemek için gönderilen Fransız ajanlarla planlar yapıyordu , bu sırada Napolyon Levant'a saldırdı .	Osmanlılar bunu duyunca Zanetbey'i görevden aldı ve suçlu ilan edildi .	Ancak Zanetos , Fransızlarla iletişim kurmaya devam etti ve ona bir silah sevkiyatı gönderdiler .	Osmanlılar bunu duyunca , Zanet'in Kranai'deki ada kalesini kuşatmak için orduyu gönderdiler .	Kısa bir kuşatmadan sonra Zanetos kalelerden kaçtı ve iç bölgelere saklandı .
+Event	T0	saldırdı	EVENT	166
+Event	T1	aldı	EVENT	221
+Event	T2	edildi	EVENT	240
+Event	T4	gönderdiler	EVENT	428
+Event	T5	kuşatmadan	EVENT	451
+Event	T6	kaçtı	EVENT	487
+Event	T7	saklandı	EVENT	509
+Event	T8	gönderilen	EVENT	89
+Event	T9	yapıyordu	EVENT	126
+Event	T10	gönderdiler	EVENT	333
+Event	T11	etti	EVENT	301
+Relation	T9	T1	CauseEffect	true	yapıyordu	aldı
+Relation	T1	T9	EffectCause	true	aldı	yapıyordu
+Relation	T9	T2	CauseEffect	true	yapıyordu	edildi
+Relation	T2	T9	EffectCause	true	edildi	yapıyordu
+Relation	T9	T0	CauseEffect	true	yapıyordu	saldırdı
+Relation	T0	T9	EffectCause	true	saldırdı	yapıyordu
+Relation	T11	T10	CauseEffect	true	etti	gönderdiler
+Relation	T10	T11	EffectCause	true	gönderdiler	etti
+Relation	T10	T4	CauseEffect	true	gönderdiler	gönderdiler
+Relation	T4	T10	EffectCause	true	gönderdiler	gönderdiler
+Relation	T4	T5	CauseEffect	true	gönderdiler	kuşatmadan
+Relation	T5	T4	EffectCause	true	kuşatmadan	gönderdiler
+Relation	T5	T6	CauseEffect	true	kuşatmadan	kaçtı
+Relation	T6	T5	EffectCause	true	kaçtı	kuşatmadan
+Relation	T6	T7	CauseEffect	true	kaçtı	saklandı
+Relation	T7	T6	EffectCause	true	saklandı	kaçtı
+Relation	T0	T5	NoRel	true	saldırdı	kuşatmadan
+Relation	T0	T7	NoRel	true	saldırdı	saklandı
+Relation	T0	T8	NoRel	true	saldırdı	gönderilen
+Relation	T1	T10	NoRel	true	aldı	gönderdiler
+Relation	T1	T11	NoRel	true	aldı	etti
+Relation	T1	T2	NoRel	true	aldı	edildi
+Relation	T1	T6	NoRel	true	aldı	kaçtı
+Relation	T10	T0	NoRel	true	gönderdiler	saldırdı
+Relation	T10	T2	NoRel	true	gönderdiler	edildi
+Relation	T10	T5	NoRel	true	gönderdiler	kuşatmadan
+Relation	T10	T6	NoRel	true	gönderdiler	kaçtı
+Relation	T10	T7	NoRel	true	gönderdiler	saklandı
+Relation	T11	T0	NoRel	true	etti	saldırdı
+Relation	T11	T6	NoRel	true	etti	kaçtı
+Relation	T11	T9	NoRel	true	etti	yapıyordu
+Relation	T2	T11	NoRel	true	edildi	etti
+Relation	T2	T5	NoRel	true	edildi	kuşatmadan
+Relation	T2	T6	NoRel	true	edildi	kaçtı
+Relation	T2	T7	NoRel	true	edildi	saklandı
+Relation	T4	T11	NoRel	true	gönderdiler	etti
+Relation	T4	T6	NoRel	true	gönderdiler	kaçtı
+Relation	T4	T9	NoRel	true	gönderdiler	yapıyordu
+Relation	T6	T9	NoRel	true	kaçtı	yapıyordu
+Relation	T7	T0	NoRel	true	saklandı	saldırdı
+Relation	T7	T1	NoRel	true	saklandı	aldı
+Relation	T7	T10	NoRel	true	saklandı	gönderdiler
+Relation	T8	T11	NoRel	true	gönderilen	etti
+Relation	T8	T5	NoRel	true	gönderilen	kuşatmadan
+Relation	T8	T6	NoRel	true	gönderilen	kaçtı

@@ -1,0 +1,72 @@
+Text	En la estación de Orejo ( Cantabria ) , perteneciente al ferrocarril Santander –_Bilbao un tren mixto choca con un vagón descarrilado y posteriormente ambos colisionan con la estructura de un puente .	Se registraron 5 muertos y 2 heridos .	- 24 de junio de 1956 .	En la entrada a Madrid de la línea general de Andalucía , en las cercanías de la estación de mercancías de Santa Catalina chocan el correo Madrid_–_Sevilla y un tren de mercancías .	La colisión tuvo su origen en un fallo de la señalización eléctrica con que contaba el tramo , que se hallaba fuera de servicio a causa de un corte de suministro provocado por una fuerte tormenta caída momentos antes sobre la zona del accidente .
+Event	T0	choca	EVENT	102
+Event	T1	descarrilado	EVENT	121
+Event	T11	corte	EVENT	588
+Event	T12	provocado	EVENT	608
+Event	T14	accidente	EVENT	681
+Event	T2	colisionan	EVENT	157
+Event	T3	registraron	EVENT	204
+Event	T4	muertos	EVENT	218
+Event	T5	heridos	EVENT	230
+Event	T7	chocan	EVENT	386
+Event	T9	fallo	EVENT	479
+Event	T6	colisión	EVENT	449
+Event	T8	tormenta	EVENT	633
+Relation	T1	T2	CauseEffect	true	descarrilado	colisionan
+Relation	T2	T1	EffectCause	true	colisionan	descarrilado
+Relation	T2	T4	CauseEffect	true	colisionan	muertos
+Relation	T4	T2	EffectCause	true	muertos	colisionan
+Relation	T2	T5	CauseEffect	true	colisionan	heridos
+Relation	T5	T2	EffectCause	true	heridos	colisionan
+Relation	T9	T6	CauseEffect	true	fallo	colisión
+Relation	T6	T9	EffectCause	true	colisión	fallo
+Relation	T8	T11	CauseEffect	true	tormenta	corte
+Relation	T11	T8	EffectCause	true	corte	tormenta
+Relation	T11	T9	CauseEffect	true	corte	fallo
+Relation	T9	T11	EffectCause	true	fallo	corte
+Relation	T0	T12	NoRel	true	choca	provocado
+Relation	T1	T0	NoRel	true	descarrilado	choca
+Relation	T1	T12	NoRel	true	descarrilado	provocado
+Relation	T1	T14	NoRel	true	descarrilado	accidente
+Relation	T1	T6	NoRel	true	descarrilado	colisión
+Relation	T1	T8	NoRel	true	descarrilado	tormenta
+Relation	T1	T9	NoRel	true	descarrilado	fallo
+Relation	T11	T1	NoRel	true	corte	descarrilado
+Relation	T11	T3	NoRel	true	corte	registraron
+Relation	T11	T7	NoRel	true	corte	chocan
+Relation	T12	T1	NoRel	true	provocado	descarrilado
+Relation	T12	T2	NoRel	true	provocado	colisionan
+Relation	T12	T4	NoRel	true	provocado	muertos
+Relation	T12	T6	NoRel	true	provocado	colisión
+Relation	T12	T7	NoRel	true	provocado	chocan
+Relation	T12	T8	NoRel	true	provocado	tormenta
+Relation	T14	T1	NoRel	true	accidente	descarrilado
+Relation	T14	T2	NoRel	true	accidente	colisionan
+Relation	T14	T3	NoRel	true	accidente	registraron
+Relation	T14	T9	NoRel	true	accidente	fallo
+Relation	T2	T0	NoRel	true	colisionan	choca
+Relation	T2	T14	NoRel	true	colisionan	accidente
+Relation	T2	T6	NoRel	true	colisionan	colisión
+Relation	T2	T7	NoRel	true	colisionan	chocan
+Relation	T3	T1	NoRel	true	registraron	descarrilado
+Relation	T3	T12	NoRel	true	registraron	provocado
+Relation	T3	T14	NoRel	true	registraron	accidente
+Relation	T3	T6	NoRel	true	registraron	colisión
+Relation	T3	T7	NoRel	true	registraron	chocan
+Relation	T3	T8	NoRel	true	registraron	tormenta
+Relation	T4	T11	NoRel	true	muertos	corte
+Relation	T4	T3	NoRel	true	muertos	registraron
+Relation	T4	T5	NoRel	true	muertos	heridos
+Relation	T4	T7	NoRel	true	muertos	chocan
+Relation	T5	T14	NoRel	true	heridos	accidente
+Relation	T6	T14	NoRel	true	colisión	accidente
+Relation	T6	T3	NoRel	true	colisión	registraron
+Relation	T6	T5	NoRel	true	colisión	heridos
+Relation	T7	T3	NoRel	true	chocan	registraron
+Relation	T7	T4	NoRel	true	chocan	muertos
+Relation	T7	T5	NoRel	true	chocan	heridos
+Relation	T7	T6	NoRel	true	chocan	colisión
+Relation	T7	T8	NoRel	true	chocan	tormenta
+Relation	T8	T0	NoRel	true	tormenta	choca
+Relation	T8	T4	NoRel	true	tormenta	muertos
+Relation	T8	T9	NoRel	true	tormenta	fallo

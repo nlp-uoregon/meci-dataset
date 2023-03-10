@@ -1,0 +1,32 @@
+Text	AEROFLOT'UN 93 SEFER SAYILI UÇUŞU , 1 Temmuz 1990 Cumartesi günü bir İlyuşin Il - 62M ile gerçekleştirilen ve Yakutsk Havalimanı'na inerken 6 kişinin yaralanmasıyla sonuçlanan kazadır .	86456 kuyruk numaralı Il - 62M , 22 Haziran 1976'da Kazan Uçak Fabrikası tarafından üretildi .	30 Ağustos 1982'da , Moskova bölgesel Sivil Havacılık İdaresi Domodedovo Airlines'a transfer edildi .	Aeroflot'un 93 sefer sayılı uçuşu , yerel saatle 12: 37'de Moskova'daki Domodedovo Havalimanı'ndan Yakutsk Havalimanı'na gitmek için kalktı .	Uçakta kaptan pilot F. A. Fefelov liderliğindeki 9 mürettebat üyesi ( toplam 10 ) ve 5'i çocuk olmak üzere 99 yolcu vardı .
+Event	T0	UÇUŞU	EVENT	28
+Event	T1	gerçekleştirilen	EVENT	90
+Event	T2	kazadır	EVENT	176
+Event	T3	üretildi	EVENT	270
+Event	T5	uçuşu	EVENT	411
+Event	T6	gitmek	EVENT	504
+Event	T7	kalktı	EVENT	516
+Event	T8	yaralanmasıyla	EVENT	150
+Event	T4	transfer	EVENT	365
+Relation	T2	T8	CauseEffect	true	kazadır	yaralanmasıyla
+Relation	T8	T2	EffectCause	true	yaralanmasıyla	kazadır
+Relation	T6	T7	CauseEffect	true	gitmek	kalktı
+Relation	T7	T6	EffectCause	true	kalktı	gitmek
+Relation	T0	T4	NoRel	true	UÇUŞU	transfer
+Relation	T0	T5	NoRel	true	UÇUŞU	uçuşu
+Relation	T0	T8	NoRel	true	UÇUŞU	yaralanmasıyla
+Relation	T1	T2	NoRel	true	gerçekleştirilen	kazadır
+Relation	T1	T4	NoRel	true	gerçekleştirilen	transfer
+Relation	T1	T7	NoRel	true	gerçekleştirilen	kalktı
+Relation	T3	T0	NoRel	true	üretildi	UÇUŞU
+Relation	T4	T0	NoRel	true	transfer	UÇUŞU
+Relation	T4	T1	NoRel	true	transfer	gerçekleştirilen
+Relation	T4	T5	NoRel	true	transfer	uçuşu
+Relation	T5	T0	NoRel	true	uçuşu	UÇUŞU
+Relation	T6	T4	NoRel	true	gitmek	transfer
+Relation	T6	T5	NoRel	true	gitmek	uçuşu
+Relation	T6	T8	NoRel	true	gitmek	yaralanmasıyla
+Relation	T7	T0	NoRel	true	kalktı	UÇUŞU
+Relation	T7	T3	NoRel	true	kalktı	üretildi
+Relation	T7	T4	NoRel	true	kalktı	transfer
+Relation	T8	T4	NoRel	true	yaralanmasıyla	transfer

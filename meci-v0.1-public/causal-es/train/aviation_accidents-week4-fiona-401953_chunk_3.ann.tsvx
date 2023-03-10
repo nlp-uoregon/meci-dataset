@@ -1,0 +1,64 @@
+Text	El piloto tomó el control del avión , pero el copiloto no supervisó de inmediato los instrumentos ; Como resultado , la tripulación no notó el rápido descenso en los pocos segundos cruciales que tuvieron donde podrían haber evitado el peligro .	Según Aviation Safety Network , el accidente se encuentra entre los más mortales que tuvieron lugar en 2005 .	También fue el segundo accidente importante que involucró a un avión TANS Perú en poco más de dos años .	Según Aviation Safety Network , el accidente se encuentra entre los más mortales que tuvieron lugar en 2005 .	- Accidente de aviación - Anexo : Accidentes más graves de aviación ( 1943 - presente ) - Anexo : Accidentes e incidentes notables en la aviación civil
+Event	T0	tomó	EVENT	10
+Event	T1	control	EVENT	18
+Event	T2	supervisó	EVENT	58
+Event	T3	descenso	EVENT	150
+Event	T4	tuvieron	EVENT	195
+Event	T5	evitado	EVENT	224
+Event	T6	peligro	EVENT	235
+Event	T7	accidente	EVENT	280
+Event	T8	involucró	EVENT	403
+Event	T9	accidente	EVENT	495
+Event	T10	Accidente	EVENT	572
+Event	T11	Accidentes	EVENT	604
+Event	T12	Accidentes	EVENT	668
+Relation	T2	T7	CauseEffect	true	supervisó	accidente
+Relation	T7	T2	EffectCause	true	accidente	supervisó
+Relation	T0	T10	NoRel	true	tomó	Accidente
+Relation	T0	T12	NoRel	true	tomó	Accidentes
+Relation	T0	T3	NoRel	true	tomó	descenso
+Relation	T0	T4	NoRel	true	tomó	tuvieron
+Relation	T0	T9	NoRel	true	tomó	accidente
+Relation	T1	T2	NoRel	true	control	supervisó
+Relation	T1	T6	NoRel	true	control	peligro
+Relation	T1	T8	NoRel	true	control	involucró
+Relation	T1	T9	NoRel	true	control	accidente
+Relation	T10	T0	NoRel	true	Accidente	tomó
+Relation	T10	T3	NoRel	true	Accidente	descenso
+Relation	T10	T6	NoRel	true	Accidente	peligro
+Relation	T10	T8	NoRel	true	Accidente	involucró
+Relation	T11	T12	NoRel	true	Accidentes	Accidentes
+Relation	T12	T1	NoRel	true	Accidentes	control
+Relation	T12	T4	NoRel	true	Accidentes	tuvieron
+Relation	T12	T9	NoRel	true	Accidentes	accidente
+Relation	T2	T0	NoRel	true	supervisó	tomó
+Relation	T2	T10	NoRel	true	supervisó	Accidente
+Relation	T2	T5	NoRel	true	supervisó	evitado
+Relation	T3	T1	NoRel	true	descenso	control
+Relation	T3	T11	NoRel	true	descenso	Accidentes
+Relation	T3	T5	NoRel	true	descenso	evitado
+Relation	T4	T0	NoRel	true	tuvieron	tomó
+Relation	T4	T2	NoRel	true	tuvieron	supervisó
+Relation	T5	T0	NoRel	true	evitado	tomó
+Relation	T5	T2	NoRel	true	evitado	supervisó
+Relation	T5	T3	NoRel	true	evitado	descenso
+Relation	T5	T8	NoRel	true	evitado	involucró
+Relation	T6	T0	NoRel	true	peligro	tomó
+Relation	T6	T1	NoRel	true	peligro	control
+Relation	T6	T10	NoRel	true	peligro	Accidente
+Relation	T6	T4	NoRel	true	peligro	tuvieron
+Relation	T6	T5	NoRel	true	peligro	evitado
+Relation	T6	T8	NoRel	true	peligro	involucró
+Relation	T7	T11	NoRel	true	accidente	Accidentes
+Relation	T7	T3	NoRel	true	accidente	descenso
+Relation	T7	T4	NoRel	true	accidente	tuvieron
+Relation	T7	T8	NoRel	true	accidente	involucró
+Relation	T7	T9	NoRel	true	accidente	accidente
+Relation	T8	T1	NoRel	true	involucró	control
+Relation	T8	T2	NoRel	true	involucró	supervisó
+Relation	T9	T11	NoRel	true	accidente	Accidentes
+Relation	T9	T12	NoRel	true	accidente	Accidentes
+Relation	T9	T3	NoRel	true	accidente	descenso
+Relation	T9	T4	NoRel	true	accidente	tuvieron
+Relation	T9	T5	NoRel	true	accidente	evitado
+Relation	T9	T6	NoRel	true	accidente	peligro

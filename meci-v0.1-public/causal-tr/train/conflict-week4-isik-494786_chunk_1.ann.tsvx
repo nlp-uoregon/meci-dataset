@@ -1,0 +1,52 @@
+Text	Kongrede Engels İkili Birlik tarafından yetkilendirilir ve kendisinden birliğin amacını ve programını çizen bir yazı hazırlaması istenir ve Komünist Manifesto böylece doğmuş olur .	1848 Devrimleri sırasında Birlik etkili bir şekilde çalışamaz ve ancak 1849 sonlarına doğru toplanabilir .	Grubun liderleri arasında çıkan fikir ayrılıkları yüzünden Friedrich Engels organizasyonu 1852 yılında resmi olarak dağıtır .	1850 yılında bir Alman ajan ve hırsız Marx'ın evine gizlice girer ve Birlik üyelerinin kayıtlarını çalarak Fransa'ya ve Alman devletlerine yollar , bu yüzden daha sonra birçok üye hapse girer .	- Friedrich Engels : Başkan - Karl Marx : Başkan yard .
+Event	T0	yetkilendirilir	EVENT	40
+Event	T1	istenir	EVENT	129
+Event	T4	ayrılıkları	EVENT	326
+Event	T5	dağıtır	EVENT	404
+Event	T6	girer	EVENT	474
+Event	T7	yollar	EVENT	553
+Event	T8	girer	EVENT	600
+Event	T2	olur	EVENT	174
+Event	T9	toplanabilir	EVENT	273
+Event	T10	Devrimleri	EVENT	186
+Event	T3	çalarak	EVENT	513
+Relation	T0	T1	CauseEffect	true	yetkilendirilir	istenir
+Relation	T1	T0	EffectCause	true	istenir	yetkilendirilir
+Relation	T10	T9	CauseEffect	true	Devrimleri	toplanabilir
+Relation	T9	T10	EffectCause	true	toplanabilir	Devrimleri
+Relation	T4	T5	CauseEffect	true	ayrılıkları	dağıtır
+Relation	T5	T4	EffectCause	true	dağıtır	ayrılıkları
+Relation	T6	T3	CauseEffect	true	girer	çalarak
+Relation	T3	T6	EffectCause	true	çalarak	girer
+Relation	T3	T7	CauseEffect	true	çalarak	yollar
+Relation	T7	T3	EffectCause	true	yollar	çalarak
+Relation	T7	T8	CauseEffect	true	yollar	girer
+Relation	T8	T7	EffectCause	true	girer	yollar
+Relation	T0	T10	NoRel	true	yetkilendirilir	Devrimleri
+Relation	T0	T7	NoRel	true	yetkilendirilir	yollar
+Relation	T0	T8	NoRel	true	yetkilendirilir	girer
+Relation	T1	T10	NoRel	true	istenir	Devrimleri
+Relation	T1	T2	NoRel	true	istenir	olur
+Relation	T1	T4	NoRel	true	istenir	ayrılıkları
+Relation	T1	T7	NoRel	true	istenir	yollar
+Relation	T1	T8	NoRel	true	istenir	girer
+Relation	T10	T2	NoRel	true	Devrimleri	olur
+Relation	T10	T4	NoRel	true	Devrimleri	ayrılıkları
+Relation	T10	T5	NoRel	true	Devrimleri	dağıtır
+Relation	T2	T1	NoRel	true	olur	istenir
+Relation	T2	T10	NoRel	true	olur	Devrimleri
+Relation	T2	T6	NoRel	true	olur	girer
+Relation	T2	T7	NoRel	true	olur	yollar
+Relation	T2	T9	NoRel	true	olur	toplanabilir
+Relation	T3	T1	NoRel	true	çalarak	istenir
+Relation	T4	T3	NoRel	true	ayrılıkları	çalarak
+Relation	T4	T6	NoRel	true	ayrılıkları	girer
+Relation	T5	T1	NoRel	true	dağıtır	istenir
+Relation	T5	T9	NoRel	true	dağıtır	toplanabilir
+Relation	T6	T1	NoRel	true	girer	istenir
+Relation	T6	T5	NoRel	true	girer	dağıtır
+Relation	T6	T7	NoRel	true	girer	yollar
+Relation	T7	T9	NoRel	true	yollar	toplanabilir
+Relation	T8	T0	NoRel	true	girer	yetkilendirilir
+Relation	T8	T5	NoRel	true	girer	dağıtır
+Relation	T8	T9	NoRel	true	girer	toplanabilir

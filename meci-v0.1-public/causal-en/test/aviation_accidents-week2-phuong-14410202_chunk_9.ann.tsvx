@@ -1,0 +1,34 @@
+Text	In the United Kingdom , the event is often referred to as the " Lockerbie disaster " or the " Lockerbie bombing " .	Eleven residents of the town were killed in Sherwood Crescent , where the aircraft 's wings and fuel tanks plummeted in a fiery explosion , destroying several houses and leaving a large crater , with debris causing damage to other buildings nearby .	All 259 people on the flight also died .	The 270 total victims were citizens of 20 different nations .	The event remains the deadliest terrorist attack and aviation disaster in Britain .
+Event	T0	event	EVENT	28
+Event	T11	attack	EVENT	511
+Event	T12	disaster	EVENT	531
+Event	T13	damage	EVENT	331
+Event	T2	disaster	EVENT	74
+Event	T3	bombing	EVENT	104
+Event	T4	killed	EVENT	150
+Event	T5	explosion	EVENT	244
+Event	T6	destroying	EVENT	256
+Event	T7	leaving	EVENT	286
+Event	T8	flight	EVENT	388
+Event	T9	died	EVENT	400
+Relation	T2	T4	CauseEffect	true	disaster	killed
+Relation	T4	T2	EffectCause	true	killed	disaster
+Relation	T5	T4	CauseEffect	true	explosion	killed
+Relation	T4	T5	EffectCause	true	killed	explosion
+Relation	T5	T9	CauseEffect	true	explosion	died
+Relation	T9	T5	EffectCause	true	died	explosion
+Relation	T5	T6	CauseEffect	true	explosion	destroying
+Relation	T6	T5	EffectCause	true	destroying	explosion
+Relation	T5	T13	CauseEffect	true	explosion	damage
+Relation	T13	T5	EffectCause	true	damage	explosion
+Relation	T11	T7	NoRel	true	attack	leaving
+Relation	T12	T6	NoRel	true	disaster	destroying
+Relation	T3	T13	NoRel	true	bombing	damage
+Relation	T3	T8	NoRel	true	bombing	flight
+Relation	T4	T13	NoRel	true	killed	damage
+Relation	T4	T8	NoRel	true	killed	flight
+Relation	T6	T12	NoRel	true	destroying	disaster
+Relation	T6	T9	NoRel	true	destroying	died
+Relation	T7	T2	NoRel	true	leaving	disaster
+Relation	T8	T4	NoRel	true	flight	killed
+Relation	T9	T7	NoRel	true	died	leaving

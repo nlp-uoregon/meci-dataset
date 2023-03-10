@@ -1,0 +1,119 @@
+Text	Der var panik i Sharpsburgs gader , som var stoppet af retirerende sydstatssoldater .	Af de 5 brigader i Jones's division var kun Toombs' brigade fortsat intakt , men han havde kun 700 mænd .	A._P. Hill's division ankom kl. 15.30 og Hill delte sin kolonne så to brigader rykke mod sydøst for at beskytte hans flanke og de andre tre – ca. 2.000 mand rykkede ind til højre for Toombs's brigade og forberedte et modangreb .	Kl. 15.40 angreb brigadegeneral Maxcy Gregg's brigade af South Carolinere den 16th Connecticut på Rodman's venstre flanke i majsmarken tilhørende John Otto .	Folkene fra Connecticut havde været i tjeneste i blot 3 uger , og deres linje brød sammen med 185 døde og sårede .
+Event	T0	panik	EVENT	8
+Event	T1	stoppet	EVENT	44
+Event	T2	ankom	EVENT	214
+Event	T3	delte	EVENT	238
+Event	T4	rykke	EVENT	271
+Event	T5	beskytte	EVENT	295
+Event	T6	rykkede	EVENT	349
+Event	T7	forberedte	EVENT	395
+Event	T8	modangreb	EVENT	409
+Event	T9	angreb	EVENT	431
+Event	T10	tjeneste	EVENT	617
+Event	T11	døde	EVENT	677
+Event	T12	sårede	EVENT	685
+Event	T13	var	EVENT	122
+Event	T14	havde	EVENT	171
+Event	T15	retirerende	EVENT	55
+Event	T16	intakt	EVENT	154
+Event	T17	brød sammen	EVENT	657
+Relation	T15	T0	CauseEffect	true	retirerende	panik
+Relation	T0	T15	EffectCause	true	panik	retirerende
+Relation	T10	T17	CauseEffect	true	tjeneste	brød sammen
+Relation	T17	T10	EffectCause	true	brød sammen	tjeneste
+Relation	T17	T11	CauseEffect	true	brød sammen	døde
+Relation	T11	T17	EffectCause	true	døde	brød sammen
+Relation	T17	T12	CauseEffect	true	brød sammen	sårede
+Relation	T12	T17	EffectCause	true	sårede	brød sammen
+Relation	T0	T17	NoRel	true	panik	brød sammen
+Relation	T0	T7	NoRel	true	panik	forberedte
+Relation	T0	T8	NoRel	true	panik	modangreb
+Relation	T0	T9	NoRel	true	panik	angreb
+Relation	T1	T10	NoRel	true	stoppet	tjeneste
+Relation	T1	T12	NoRel	true	stoppet	sårede
+Relation	T1	T15	NoRel	true	stoppet	retirerende
+Relation	T1	T3	NoRel	true	stoppet	delte
+Relation	T1	T4	NoRel	true	stoppet	rykke
+Relation	T1	T7	NoRel	true	stoppet	forberedte
+Relation	T1	T8	NoRel	true	stoppet	modangreb
+Relation	T10	T1	NoRel	true	tjeneste	stoppet
+Relation	T10	T14	NoRel	true	tjeneste	havde
+Relation	T10	T4	NoRel	true	tjeneste	rykke
+Relation	T10	T5	NoRel	true	tjeneste	beskytte
+Relation	T11	T10	NoRel	true	døde	tjeneste
+Relation	T11	T6	NoRel	true	døde	rykkede
+Relation	T11	T9	NoRel	true	døde	angreb
+Relation	T12	T0	NoRel	true	sårede	panik
+Relation	T12	T2	NoRel	true	sårede	ankom
+Relation	T12	T3	NoRel	true	sårede	delte
+Relation	T12	T6	NoRel	true	sårede	rykkede
+Relation	T12	T8	NoRel	true	sårede	modangreb
+Relation	T12	T9	NoRel	true	sårede	angreb
+Relation	T13	T1	NoRel	true	var	stoppet
+Relation	T13	T2	NoRel	true	var	ankom
+Relation	T13	T3	NoRel	true	var	delte
+Relation	T13	T6	NoRel	true	var	rykkede
+Relation	T14	T11	NoRel	true	havde	døde
+Relation	T14	T13	NoRel	true	havde	var
+Relation	T14	T2	NoRel	true	havde	ankom
+Relation	T14	T5	NoRel	true	havde	beskytte
+Relation	T14	T6	NoRel	true	havde	rykkede
+Relation	T15	T1	NoRel	true	retirerende	stoppet
+Relation	T15	T11	NoRel	true	retirerende	døde
+Relation	T15	T12	NoRel	true	retirerende	sårede
+Relation	T15	T14	NoRel	true	retirerende	havde
+Relation	T15	T2	NoRel	true	retirerende	ankom
+Relation	T16	T0	NoRel	true	intakt	panik
+Relation	T16	T11	NoRel	true	intakt	døde
+Relation	T16	T14	NoRel	true	intakt	havde
+Relation	T16	T15	NoRel	true	intakt	retirerende
+Relation	T16	T5	NoRel	true	intakt	beskytte
+Relation	T16	T8	NoRel	true	intakt	modangreb
+Relation	T17	T5	NoRel	true	brød sammen	beskytte
+Relation	T17	T7	NoRel	true	brød sammen	forberedte
+Relation	T17	T9	NoRel	true	brød sammen	angreb
+Relation	T2	T12	NoRel	true	ankom	sårede
+Relation	T2	T13	NoRel	true	ankom	var
+Relation	T2	T14	NoRel	true	ankom	havde
+Relation	T2	T15	NoRel	true	ankom	retirerende
+Relation	T2	T3	NoRel	true	ankom	delte
+Relation	T2	T5	NoRel	true	ankom	beskytte
+Relation	T3	T0	NoRel	true	delte	panik
+Relation	T3	T1	NoRel	true	delte	stoppet
+Relation	T3	T12	NoRel	true	delte	sårede
+Relation	T3	T4	NoRel	true	delte	rykke
+Relation	T3	T8	NoRel	true	delte	modangreb
+Relation	T3	T9	NoRel	true	delte	angreb
+Relation	T4	T10	NoRel	true	rykke	tjeneste
+Relation	T4	T11	NoRel	true	rykke	døde
+Relation	T4	T12	NoRel	true	rykke	sårede
+Relation	T4	T15	NoRel	true	rykke	retirerende
+Relation	T4	T16	NoRel	true	rykke	intakt
+Relation	T4	T17	NoRel	true	rykke	brød sammen
+Relation	T4	T3	NoRel	true	rykke	delte
+Relation	T4	T5	NoRel	true	rykke	beskytte
+Relation	T5	T1	NoRel	true	beskytte	stoppet
+Relation	T5	T10	NoRel	true	beskytte	tjeneste
+Relation	T5	T13	NoRel	true	beskytte	var
+Relation	T5	T15	NoRel	true	beskytte	retirerende
+Relation	T5	T17	NoRel	true	beskytte	brød sammen
+Relation	T5	T4	NoRel	true	beskytte	rykke
+Relation	T5	T8	NoRel	true	beskytte	modangreb
+Relation	T5	T9	NoRel	true	beskytte	angreb
+Relation	T6	T12	NoRel	true	rykkede	sårede
+Relation	T6	T15	NoRel	true	rykkede	retirerende
+Relation	T6	T17	NoRel	true	rykkede	brød sammen
+Relation	T6	T3	NoRel	true	rykkede	delte
+Relation	T7	T11	NoRel	true	forberedte	døde
+Relation	T7	T17	NoRel	true	forberedte	brød sammen
+Relation	T7	T2	NoRel	true	forberedte	ankom
+Relation	T7	T3	NoRel	true	forberedte	delte
+Relation	T8	T13	NoRel	true	modangreb	var
+Relation	T8	T2	NoRel	true	modangreb	ankom
+Relation	T8	T5	NoRel	true	modangreb	beskytte
+Relation	T8	T6	NoRel	true	modangreb	rykkede
+Relation	T9	T0	NoRel	true	angreb	panik
+Relation	T9	T10	NoRel	true	angreb	tjeneste
+Relation	T9	T12	NoRel	true	angreb	sårede
+Relation	T9	T5	NoRel	true	angreb	beskytte
+Relation	T9	T8	NoRel	true	angreb	modangreb

@@ -1,0 +1,102 @@
+Text	The Pan Am crew indicated that they would prefer to circle in a holding pattern until landing clearance was given ( they had enough fuel to safely stay in the air for two more hours ) , but they were ordered to divert to Tenerife .	Los Rodeos was a regional airport that could not easily accommodate all of the traffic diverted from Gran Canaria , which included five large airliners .	The airport had only one runway and one major taxiway running parallel to it , with four short taxiways connecting the two .	While waiting for Gran Canaria airport to reopen , the diverted airplanes took up so much space that they were having to park on the long taxiway , making it unavailable for the purpose of taxiing .	Instead , departing aircraft needed to taxi along the runway to position themselves for takeoff , a procedure known as a backtaxi or backtrack .
+Event	T0	indicated	EVENT	16
+Event	T1	circle	EVENT	52
+Event	T2	given	EVENT	108
+Event	T3	ordered	EVENT	200
+Event	T4	divert	EVENT	211
+Event	T5	diverted	EVENT	319
+Event	T6	running	EVENT	440
+Event	T7	connecting	EVENT	490
+Event	T8	waiting	EVENT	517
+Event	T9	reopen	EVENT	553
+Event	T10	diverted	EVENT	566
+Event	T11	park	EVENT	632
+Event	T12	making	EVENT	659
+Event	T13	taxiing	EVENT	700
+Event	T14	departing	EVENT	720
+Event	T15	needed	EVENT	739
+Event	T16	taxi	EVENT	749
+Event	T17	position	EVENT	774
+Event	T18	takeoff	EVENT	798
+Event	T19	known	EVENT	820
+Event	T20	stay	EVENT	147
+Event	T21	had	EVENT	121
+Event	T22	accommodate	EVENT	288
+Event	T23	included	EVENT	354
+Event	T24	had	EVENT	398
+Event	T25	took up	EVENT	585
+Relation	T2	T1	CauseEffect	true	given	circle
+Relation	T1	T2	EffectCause	true	circle	given
+Relation	T21	T20	CauseEffect	true	had	stay
+Relation	T20	T21	EffectCause	true	stay	had
+Relation	T25	T11	CauseEffect	true	took up	park
+Relation	T11	T25	EffectCause	true	park	took up
+Relation	T11	T12	CauseEffect	true	park	making
+Relation	T12	T11	EffectCause	true	making	park
+Relation	T16	T17	CauseEffect	true	taxi	position
+Relation	T17	T16	EffectCause	true	position	taxi
+Relation	T17	T18	CauseEffect	true	position	takeoff
+Relation	T18	T17	EffectCause	true	takeoff	position
+Relation	T1	T18	NoRel	true	circle	takeoff
+Relation	T1	T21	NoRel	true	circle	had
+Relation	T1	T25	NoRel	true	circle	took up
+Relation	T10	T11	NoRel	true	diverted	park
+Relation	T10	T15	NoRel	true	diverted	needed
+Relation	T10	T17	NoRel	true	diverted	position
+Relation	T10	T8	NoRel	true	diverted	waiting
+Relation	T11	T23	NoRel	true	park	included
+Relation	T12	T19	NoRel	true	making	known
+Relation	T12	T24	NoRel	true	making	had
+Relation	T13	T14	NoRel	true	taxiing	departing
+Relation	T14	T1	NoRel	true	departing	circle
+Relation	T14	T5	NoRel	true	departing	diverted
+Relation	T15	T5	NoRel	true	needed	diverted
+Relation	T15	T6	NoRel	true	needed	running
+Relation	T15	T9	NoRel	true	needed	reopen
+Relation	T16	T0	NoRel	true	taxi	indicated
+Relation	T16	T13	NoRel	true	taxi	taxiing
+Relation	T16	T2	NoRel	true	taxi	given
+Relation	T17	T12	NoRel	true	position	making
+Relation	T17	T22	NoRel	true	position	accommodate
+Relation	T17	T4	NoRel	true	position	divert
+Relation	T18	T13	NoRel	true	takeoff	taxiing
+Relation	T18	T15	NoRel	true	takeoff	needed
+Relation	T19	T18	NoRel	true	known	takeoff
+Relation	T19	T5	NoRel	true	known	diverted
+Relation	T19	T6	NoRel	true	known	running
+Relation	T2	T10	NoRel	true	given	diverted
+Relation	T2	T11	NoRel	true	given	park
+Relation	T2	T20	NoRel	true	given	stay
+Relation	T2	T22	NoRel	true	given	accommodate
+Relation	T2	T3	NoRel	true	given	ordered
+Relation	T21	T11	NoRel	true	had	park
+Relation	T21	T16	NoRel	true	had	taxi
+Relation	T21	T7	NoRel	true	had	connecting
+Relation	T23	T8	NoRel	true	included	waiting
+Relation	T23	T9	NoRel	true	included	reopen
+Relation	T24	T2	NoRel	true	had	given
+Relation	T24	T21	NoRel	true	had	had
+Relation	T25	T1	NoRel	true	took up	circle
+Relation	T25	T17	NoRel	true	took up	position
+Relation	T25	T21	NoRel	true	took up	had
+Relation	T25	T9	NoRel	true	took up	reopen
+Relation	T3	T0	NoRel	true	ordered	indicated
+Relation	T3	T16	NoRel	true	ordered	taxi
+Relation	T4	T15	NoRel	true	divert	needed
+Relation	T4	T18	NoRel	true	divert	takeoff
+Relation	T4	T2	NoRel	true	divert	given
+Relation	T5	T2	NoRel	true	diverted	given
+Relation	T5	T4	NoRel	true	diverted	divert
+Relation	T5	T7	NoRel	true	diverted	connecting
+Relation	T6	T16	NoRel	true	running	taxi
+Relation	T6	T7	NoRel	true	running	connecting
+Relation	T7	T1	NoRel	true	connecting	circle
+Relation	T7	T21	NoRel	true	connecting	had
+Relation	T7	T8	NoRel	true	connecting	waiting
+Relation	T8	T14	NoRel	true	waiting	departing
+Relation	T8	T16	NoRel	true	waiting	taxi
+Relation	T8	T25	NoRel	true	waiting	took up
+Relation	T8	T3	NoRel	true	waiting	ordered
+Relation	T9	T15	NoRel	true	reopen	needed
+Relation	T9	T16	NoRel	true	reopen	taxi
+Relation	T9	T22	NoRel	true	reopen	accommodate

@@ -1,0 +1,68 @@
+Text	El 23 de junio la cantidad de muertos por el choque de trenes de metro subió a nueve , incluyendo uno de los conductores , una mujer , dijo la autoridad de Tránsito del Área Metropolitana de Washington ( WMATA ) .	El gerente general del Metro John Catoe dijo que la causa del accidente era desconocida " el sistema es seguro " .	Oficiales de WMATA dijeron inicialmente que a eso de las 5:00 p._m. EDT , el primer tren esperaba que pasara otro tren	Dos o tres minutos después , por razones desconocidas el segundo tren chocó , matando al operador del segundo tren en el impacto .	Según a sobrevivientes del accidente , el segundo tren trataba de detenerse para evitar la colisión .
+Event	T0	muertos	EVENT	30
+Event	T1	choque	EVENT	45
+Event	T10	accidente	EVENT	606
+Event	T11	trataba	EVENT	634
+Event	T12	detenerse	EVENT	645
+Event	T13	colisión	EVENT	670
+Event	T4	accidente	EVENT	276
+Event	T5	esperaba	EVENT	418
+Event	T6	pasara	EVENT	431
+Event	T7	chocó	EVENT	518
+Event	T8	matando	EVENT	526
+Event	T9	impacto	EVENT	569
+Relation	T1	T0	CauseEffect	true	choque	muertos
+Relation	T0	T1	EffectCause	true	muertos	choque
+Relation	T7	T8	CauseEffect	true	chocó	matando
+Relation	T8	T7	EffectCause	true	matando	chocó
+Relation	T7	T4	CauseEffect	true	chocó	accidente
+Relation	T4	T7	EffectCause	true	accidente	chocó
+Relation	T9	T8	CauseEffect	true	impacto	matando
+Relation	T8	T9	EffectCause	true	matando	impacto
+Relation	T0	T10	NoRel	true	muertos	accidente
+Relation	T0	T11	NoRel	true	muertos	trataba
+Relation	T0	T5	NoRel	true	muertos	esperaba
+Relation	T0	T6	NoRel	true	muertos	pasara
+Relation	T0	T9	NoRel	true	muertos	impacto
+Relation	T1	T6	NoRel	true	choque	pasara
+Relation	T1	T8	NoRel	true	choque	matando
+Relation	T10	T0	NoRel	true	accidente	muertos
+Relation	T10	T1	NoRel	true	accidente	choque
+Relation	T10	T12	NoRel	true	accidente	detenerse
+Relation	T10	T4	NoRel	true	accidente	accidente
+Relation	T11	T1	NoRel	true	trataba	choque
+Relation	T11	T5	NoRel	true	trataba	esperaba
+Relation	T11	T6	NoRel	true	trataba	pasara
+Relation	T11	T7	NoRel	true	trataba	chocó
+Relation	T11	T9	NoRel	true	trataba	impacto
+Relation	T12	T0	NoRel	true	detenerse	muertos
+Relation	T12	T1	NoRel	true	detenerse	choque
+Relation	T12	T6	NoRel	true	detenerse	pasara
+Relation	T12	T7	NoRel	true	detenerse	chocó
+Relation	T12	T8	NoRel	true	detenerse	matando
+Relation	T13	T0	NoRel	true	colisión	muertos
+Relation	T13	T10	NoRel	true	colisión	accidente
+Relation	T13	T12	NoRel	true	colisión	detenerse
+Relation	T13	T4	NoRel	true	colisión	accidente
+Relation	T13	T5	NoRel	true	colisión	esperaba
+Relation	T13	T6	NoRel	true	colisión	pasara
+Relation	T4	T0	NoRel	true	accidente	muertos
+Relation	T4	T8	NoRel	true	accidente	matando
+Relation	T5	T1	NoRel	true	esperaba	choque
+Relation	T5	T11	NoRel	true	esperaba	trataba
+Relation	T5	T6	NoRel	true	esperaba	pasara
+Relation	T5	T7	NoRel	true	esperaba	chocó
+Relation	T6	T11	NoRel	true	pasara	trataba
+Relation	T6	T12	NoRel	true	pasara	detenerse
+Relation	T6	T5	NoRel	true	pasara	esperaba
+Relation	T6	T8	NoRel	true	pasara	matando
+Relation	T6	T9	NoRel	true	pasara	impacto
+Relation	T7	T5	NoRel	true	chocó	esperaba
+Relation	T7	T6	NoRel	true	chocó	pasara
+Relation	T8	T10	NoRel	true	matando	accidente
+Relation	T8	T11	NoRel	true	matando	trataba
+Relation	T8	T6	NoRel	true	matando	pasara
+Relation	T9	T0	NoRel	true	impacto	muertos
+Relation	T9	T1	NoRel	true	impacto	choque
+Relation	T9	T5	NoRel	true	impacto	esperaba
+Relation	T9	T7	NoRel	true	impacto	chocó

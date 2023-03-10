@@ -1,0 +1,112 @@
+Text	La COLISIÓN DE TRENES EN LA CIUDAD DE MÉXICO DE 2015 fue un accidente ferroviario ocurrido el día lunes , 4 de mayo de ese año , alrededor de las 18:05 ( UTC_-6 ) .	El suceso ocurrió en la estación Oceanía de la Línea 5 del Sistema de Transporte Colectivo , y tuvo como consecuencia un total de 12 personas lesionadas .	El incidente se registró cerca de las 18:00 h .	El tren 05 salía de la estación Terminal Aérea de la Línea 5 del Metro , en dirección a la estación Politécnico .	Ese día se registraba una intensa granizada en la zona cercana al Aeropuerto Internacional de la Ciudad de México , y por indicaciones del Sistema de Transporte Colectivo , todos los trenes debían de cambiar el modo de pilotaje de Automático a Manual , implementando la marcha de tren en caso de lluvia .
+Event	T0	COLISIÓN	EVENT	3
+Event	T1	accidente	EVENT	60
+Event	T2	ocurrido	EVENT	82
+Event	T3	ocurrió	EVENT	175
+Event	T4	tuvo	EVENT	260
+Event	T5	lesionadas	EVENT	307
+Event	T6	incidente	EVENT	323
+Event	T7	registró	EVENT	336
+Event	T8	salía	EVENT	379
+Event	T9	registraba	EVENT	493
+Event	T10	granizada	EVENT	516
+Event	T11	indicaciones	EVENT	604
+Event	T12	cambiar	EVENT	682
+Event	T13	pilotaje	EVENT	701
+Event	T14	implementando	EVENT	735
+Event	T15	marcha	EVENT	752
+Event	T16	lluvia	EVENT	778
+Relation	T0	T1	CauseEffect	true	COLISIÓN	accidente
+Relation	T1	T0	EffectCause	true	accidente	COLISIÓN
+Relation	T1	T5	CauseEffect	true	accidente	lesionadas
+Relation	T5	T1	EffectCause	true	lesionadas	accidente
+Relation	T0	T15	NoRel	true	COLISIÓN	marcha
+Relation	T0	T6	NoRel	true	COLISIÓN	incidente
+Relation	T0	T7	NoRel	true	COLISIÓN	registró
+Relation	T1	T15	NoRel	true	accidente	marcha
+Relation	T1	T2	NoRel	true	accidente	ocurrido
+Relation	T1	T3	NoRel	true	accidente	ocurrió
+Relation	T1	T6	NoRel	true	accidente	incidente
+Relation	T10	T0	NoRel	true	granizada	COLISIÓN
+Relation	T10	T11	NoRel	true	granizada	indicaciones
+Relation	T10	T13	NoRel	true	granizada	pilotaje
+Relation	T10	T15	NoRel	true	granizada	marcha
+Relation	T10	T3	NoRel	true	granizada	ocurrió
+Relation	T10	T9	NoRel	true	granizada	registraba
+Relation	T11	T10	NoRel	true	indicaciones	granizada
+Relation	T11	T15	NoRel	true	indicaciones	marcha
+Relation	T11	T2	NoRel	true	indicaciones	ocurrido
+Relation	T11	T3	NoRel	true	indicaciones	ocurrió
+Relation	T11	T4	NoRel	true	indicaciones	tuvo
+Relation	T11	T8	NoRel	true	indicaciones	salía
+Relation	T12	T1	NoRel	true	cambiar	accidente
+Relation	T12	T13	NoRel	true	cambiar	pilotaje
+Relation	T12	T2	NoRel	true	cambiar	ocurrido
+Relation	T12	T3	NoRel	true	cambiar	ocurrió
+Relation	T12	T4	NoRel	true	cambiar	tuvo
+Relation	T12	T9	NoRel	true	cambiar	registraba
+Relation	T13	T1	NoRel	true	pilotaje	accidente
+Relation	T13	T11	NoRel	true	pilotaje	indicaciones
+Relation	T13	T12	NoRel	true	pilotaje	cambiar
+Relation	T13	T14	NoRel	true	pilotaje	implementando
+Relation	T13	T15	NoRel	true	pilotaje	marcha
+Relation	T13	T16	NoRel	true	pilotaje	lluvia
+Relation	T13	T2	NoRel	true	pilotaje	ocurrido
+Relation	T13	T8	NoRel	true	pilotaje	salía
+Relation	T14	T12	NoRel	true	implementando	cambiar
+Relation	T14	T5	NoRel	true	implementando	lesionadas
+Relation	T14	T7	NoRel	true	implementando	registró
+Relation	T14	T8	NoRel	true	implementando	salía
+Relation	T15	T1	NoRel	true	marcha	accidente
+Relation	T15	T12	NoRel	true	marcha	cambiar
+Relation	T15	T2	NoRel	true	marcha	ocurrido
+Relation	T15	T6	NoRel	true	marcha	incidente
+Relation	T15	T7	NoRel	true	marcha	registró
+Relation	T15	T9	NoRel	true	marcha	registraba
+Relation	T16	T1	NoRel	true	lluvia	accidente
+Relation	T16	T12	NoRel	true	lluvia	cambiar
+Relation	T16	T3	NoRel	true	lluvia	ocurrió
+Relation	T16	T9	NoRel	true	lluvia	registraba
+Relation	T2	T0	NoRel	true	ocurrido	COLISIÓN
+Relation	T2	T10	NoRel	true	ocurrido	granizada
+Relation	T2	T12	NoRel	true	ocurrido	cambiar
+Relation	T2	T13	NoRel	true	ocurrido	pilotaje
+Relation	T2	T14	NoRel	true	ocurrido	implementando
+Relation	T2	T6	NoRel	true	ocurrido	incidente
+Relation	T2	T9	NoRel	true	ocurrido	registraba
+Relation	T3	T15	NoRel	true	ocurrió	marcha
+Relation	T3	T5	NoRel	true	ocurrió	lesionadas
+Relation	T3	T6	NoRel	true	ocurrió	incidente
+Relation	T3	T7	NoRel	true	ocurrió	registró
+Relation	T4	T1	NoRel	true	tuvo	accidente
+Relation	T4	T11	NoRel	true	tuvo	indicaciones
+Relation	T4	T15	NoRel	true	tuvo	marcha
+Relation	T4	T16	NoRel	true	tuvo	lluvia
+Relation	T4	T3	NoRel	true	tuvo	ocurrió
+Relation	T5	T0	NoRel	true	lesionadas	COLISIÓN
+Relation	T5	T13	NoRel	true	lesionadas	pilotaje
+Relation	T5	T16	NoRel	true	lesionadas	lluvia
+Relation	T5	T3	NoRel	true	lesionadas	ocurrió
+Relation	T5	T4	NoRel	true	lesionadas	tuvo
+Relation	T5	T7	NoRel	true	lesionadas	registró
+Relation	T5	T9	NoRel	true	lesionadas	registraba
+Relation	T6	T0	NoRel	true	incidente	COLISIÓN
+Relation	T6	T13	NoRel	true	incidente	pilotaje
+Relation	T6	T15	NoRel	true	incidente	marcha
+Relation	T7	T1	NoRel	true	registró	accidente
+Relation	T7	T11	NoRel	true	registró	indicaciones
+Relation	T7	T15	NoRel	true	registró	marcha
+Relation	T7	T16	NoRel	true	registró	lluvia
+Relation	T8	T1	NoRel	true	salía	accidente
+Relation	T8	T11	NoRel	true	salía	indicaciones
+Relation	T8	T12	NoRel	true	salía	cambiar
+Relation	T8	T14	NoRel	true	salía	implementando
+Relation	T8	T16	NoRel	true	salía	lluvia
+Relation	T8	T2	NoRel	true	salía	ocurrido
+Relation	T8	T3	NoRel	true	salía	ocurrió
+Relation	T9	T1	NoRel	true	registraba	accidente
+Relation	T9	T11	NoRel	true	registraba	indicaciones
+Relation	T9	T12	NoRel	true	registraba	cambiar
+Relation	T9	T13	NoRel	true	registraba	pilotaje
+Relation	T9	T14	NoRel	true	registraba	implementando
+Relation	T9	T7	NoRel	true	registraba	registró

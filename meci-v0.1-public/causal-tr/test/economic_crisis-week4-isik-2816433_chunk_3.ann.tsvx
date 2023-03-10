@@ -1,0 +1,20 @@
+Text	Schmidt , 1945'e kadar baş tercüman olarak kaldı .	Münih Konferansı'nda Hitler ile Neville Chamberlain ve Édouard Daladier arasında çevirmenlik yaptı .	Benito Mussolini , Fransızca'yı akıcı bir şekilde konuşuyordu , ancak biraz dağınık , parçalanmış bir Almanca konuşuyordu .	Mussolini , Almanca'da göründüğü kadar iyi olmasa da , gururu nedeniyle Hitler'le yaptığı toplantılarda tercüman kullanmayı her zaman reddetti .	Savaş yıllarında , Mareşal Philippe Pétain ve General Francisco Franco ile yaptığı görüşmelerde Hitler'in tercümanı olarak görev yaptı .
+Event	T0	yaptı	EVENT	144
+Event	T1	reddetti	EVENT	410
+Event	T2	yaptı	EVENT	550
+Event	T3	kaldı	EVENT	43
+Event	T4	konuşuyordu	EVENT	202
+Event	T5	konuşuyordu	EVENT	262
+Relation	T4	T2	CauseEffect	true	konuşuyordu	yaptı
+Relation	T2	T4	EffectCause	true	yaptı	konuşuyordu
+Relation	T0	T2	NoRel	true	yaptı	yaptı
+Relation	T0	T4	NoRel	true	yaptı	konuşuyordu
+Relation	T1	T2	NoRel	true	reddetti	yaptı
+Relation	T2	T0	NoRel	true	yaptı	yaptı
+Relation	T2	T1	NoRel	true	yaptı	reddetti
+Relation	T3	T0	NoRel	true	kaldı	yaptı
+Relation	T3	T4	NoRel	true	kaldı	konuşuyordu
+Relation	T4	T0	NoRel	true	konuşuyordu	yaptı
+Relation	T4	T3	NoRel	true	konuşuyordu	kaldı
+Relation	T5	T1	NoRel	true	konuşuyordu	reddetti
+Relation	T5	T3	NoRel	true	konuşuyordu	kaldı

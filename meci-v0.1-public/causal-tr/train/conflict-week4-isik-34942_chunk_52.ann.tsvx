@@ -1,0 +1,104 @@
+Text	Bir komplo ile V. Aleksios imparator oldu ve Haçlıların meşru imparator saydıkları IV. Aleksius öldürüldü .	Bu nedenle ve Enrico Dandolo'nun teşvikiyle Haçlı Ordusu Konstantinopolis'e hücum ederek 12 Nisan 1204'te şehri işgal etti .	Dördüncü Haçlı Seferinin diğer Haçlı Seferlerinden farkı güya tek elden emir komuta altında olmasıydı ve denizden Mısır'a ve oradan Filistin'e gitmek hedefliydi .	Fakat Venedik Dükü tarafından Kudüs yerine Konstantinopolis'e yöneltildi ; karışıklıklardan dolayı Konstantinopolis işgal edildi .	Kuşatma sırasında büyük bir kismi zaten yakılan şehir tümüyle talan edilip yıkıldı ve şehrin birçok kıymetli eserleri ya Avrupa'ya götürüldü veya ortadan kayıp oldu .
+Event	T0	komplo	EVENT	4
+Event	T1	öldürüldü	EVENT	96
+Event	T2	etti	EVENT	226
+Event	T3	yöneltildi	EVENT	458
+Event	T4	edildi	EVENT	518
+Event	T5	Kuşatma	EVENT	527
+Event	T6	yakılan	EVENT	567
+Event	T7	talan	EVENT	589
+Event	T8	yıkıldı	EVENT	602
+Event	T9	götürüldü	EVENT	658
+Event	T10	oldu	EVENT	687
+Event	T11	oldu	EVENT	37
+Event	T12	ederek	EVENT	190
+Event	T13	teşvikiyle	EVENT	141
+Event	T14	Dördüncü Haçlı Seferinin	EVENT	233
+Relation	T0	T11	CauseEffect	true	komplo	oldu
+Relation	T11	T0	EffectCause	true	oldu	komplo
+Relation	T11	T1	CauseEffect	true	oldu	öldürüldü
+Relation	T1	T11	EffectCause	true	öldürüldü	oldu
+Relation	T12	T2	CauseEffect	true	ederek	etti
+Relation	T2	T12	EffectCause	true	etti	ederek
+Relation	T13	T12	CauseEffect	true	teşvikiyle	ederek
+Relation	T12	T13	EffectCause	true	ederek	teşvikiyle
+Relation	T5	T6	CauseEffect	true	Kuşatma	yakılan
+Relation	T6	T5	EffectCause	true	yakılan	Kuşatma
+Relation	T5	T7	CauseEffect	true	Kuşatma	talan
+Relation	T7	T5	EffectCause	true	talan	Kuşatma
+Relation	T5	T8	CauseEffect	true	Kuşatma	yıkıldı
+Relation	T8	T5	EffectCause	true	yıkıldı	Kuşatma
+Relation	T5	T9	CauseEffect	true	Kuşatma	götürüldü
+Relation	T9	T5	EffectCause	true	götürüldü	Kuşatma
+Relation	T5	T10	CauseEffect	true	Kuşatma	oldu
+Relation	T10	T5	EffectCause	true	oldu	Kuşatma
+Relation	T2	T14	CauseEffect	true	etti	Dördüncü Haçlı Seferinin
+Relation	T14	T2	EffectCause	true	Dördüncü Haçlı Seferinin	etti
+Relation	T14	T6	CauseEffect	true	Dördüncü Haçlı Seferinin	yakılan
+Relation	T6	T14	EffectCause	true	yakılan	Dördüncü Haçlı Seferinin
+Relation	T14	T7	CauseEffect	true	Dördüncü Haçlı Seferinin	talan
+Relation	T7	T14	EffectCause	true	talan	Dördüncü Haçlı Seferinin
+Relation	T14	T8	CauseEffect	true	Dördüncü Haçlı Seferinin	yıkıldı
+Relation	T8	T14	EffectCause	true	yıkıldı	Dördüncü Haçlı Seferinin
+Relation	T14	T9	CauseEffect	true	Dördüncü Haçlı Seferinin	götürüldü
+Relation	T9	T14	EffectCause	true	götürüldü	Dördüncü Haçlı Seferinin
+Relation	T14	T10	CauseEffect	true	Dördüncü Haçlı Seferinin	oldu
+Relation	T10	T14	EffectCause	true	oldu	Dördüncü Haçlı Seferinin
+Relation	T4	T14	CauseEffect	true	edildi	Dördüncü Haçlı Seferinin
+Relation	T14	T4	EffectCause	true	Dördüncü Haçlı Seferinin	edildi
+Relation	T3	T4	CauseEffect	true	yöneltildi	edildi
+Relation	T4	T3	EffectCause	true	edildi	yöneltildi
+Relation	T0	T12	NoRel	true	komplo	ederek
+Relation	T0	T2	NoRel	true	komplo	etti
+Relation	T0	T6	NoRel	true	komplo	yakılan
+Relation	T0	T8	NoRel	true	komplo	yıkıldı
+Relation	T0	T9	NoRel	true	komplo	götürüldü
+Relation	T1	T10	NoRel	true	öldürüldü	oldu
+Relation	T1	T12	NoRel	true	öldürüldü	ederek
+Relation	T1	T13	NoRel	true	öldürüldü	teşvikiyle
+Relation	T1	T3	NoRel	true	öldürüldü	yöneltildi
+Relation	T10	T1	NoRel	true	oldu	öldürüldü
+Relation	T10	T12	NoRel	true	oldu	ederek
+Relation	T10	T6	NoRel	true	oldu	yakılan
+Relation	T10	T9	NoRel	true	oldu	götürüldü
+Relation	T11	T10	NoRel	true	oldu	oldu
+Relation	T11	T13	NoRel	true	oldu	teşvikiyle
+Relation	T11	T14	NoRel	true	oldu	Dördüncü Haçlı Seferinin
+Relation	T11	T8	NoRel	true	oldu	yıkıldı
+Relation	T12	T0	NoRel	true	ederek	komplo
+Relation	T12	T10	NoRel	true	ederek	oldu
+Relation	T12	T6	NoRel	true	ederek	yakılan
+Relation	T12	T7	NoRel	true	ederek	talan
+Relation	T12	T9	NoRel	true	ederek	götürüldü
+Relation	T13	T0	NoRel	true	teşvikiyle	komplo
+Relation	T13	T10	NoRel	true	teşvikiyle	oldu
+Relation	T13	T5	NoRel	true	teşvikiyle	Kuşatma
+Relation	T13	T9	NoRel	true	teşvikiyle	götürüldü
+Relation	T14	T12	NoRel	true	Dördüncü Haçlı Seferinin	ederek
+Relation	T14	T13	NoRel	true	Dördüncü Haçlı Seferinin	teşvikiyle
+Relation	T14	T5	NoRel	true	Dördüncü Haçlı Seferinin	Kuşatma
+Relation	T2	T6	NoRel	true	etti	yakılan
+Relation	T2	T7	NoRel	true	etti	talan
+Relation	T3	T1	NoRel	true	yöneltildi	öldürüldü
+Relation	T3	T13	NoRel	true	yöneltildi	teşvikiyle
+Relation	T3	T14	NoRel	true	yöneltildi	Dördüncü Haçlı Seferinin
+Relation	T4	T2	NoRel	true	edildi	etti
+Relation	T4	T7	NoRel	true	edildi	talan
+Relation	T5	T0	NoRel	true	Kuşatma	komplo
+Relation	T5	T1	NoRel	true	Kuşatma	öldürüldü
+Relation	T5	T13	NoRel	true	Kuşatma	teşvikiyle
+Relation	T5	T2	NoRel	true	Kuşatma	etti
+Relation	T6	T13	NoRel	true	yakılan	teşvikiyle
+Relation	T6	T4	NoRel	true	yakılan	edildi
+Relation	T6	T7	NoRel	true	yakılan	talan
+Relation	T7	T11	NoRel	true	talan	oldu
+Relation	T7	T2	NoRel	true	talan	etti
+Relation	T7	T6	NoRel	true	talan	yakılan
+Relation	T8	T6	NoRel	true	yıkıldı	yakılan
+Relation	T9	T10	NoRel	true	götürüldü	oldu
+Relation	T9	T12	NoRel	true	götürüldü	ederek
+Relation	T9	T13	NoRel	true	götürüldü	teşvikiyle
+Relation	T9	T2	NoRel	true	götürüldü	etti
+Relation	T9	T3	NoRel	true	götürüldü	yöneltildi
+Relation	T9	T4	NoRel	true	götürüldü	edildi
+Relation	T9	T8	NoRel	true	götürüldü	yıkıldı

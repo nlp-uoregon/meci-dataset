@@ -1,0 +1,89 @@
+Text	küçükresim | 123x123px | Veganizmi sembolize eden çember içindeki V harfi VEGANLIK ya da VEGANIZM , bazı nedenlerle hayvan kökenli gıdaları ve diğer hayvansal ürünleri kullanmayı reddetme .	Bazen " sıkı ve jetaryenlik " diye de adlandırılır .	Vegan kişiler , hayvan kullanımı yoluyla elde edilen gıdaları , giyecekleri ve diğer tüm yan ürünleri kullanmayı reddetmektedir .	1944 yılında , _ The Vegan Society _'nin kurucularından Donald Watson veganlığı şu şekilde tanımlıyordu : “ Veganlık hayvanlar alemine dair sömürü ve zulmün tüm biçimlerini dışlamanın ve yaşamı gözetmenin yoludur .	Et , balık , kümes hayvanı , yumurta , bal , hayvansal süt ve türevlerini dışlayıp bitkiler aleminin ürünleriyle yaşamak ve tamamen ya da kısmen hayvanlardan üretilen tüm ticari malların alternatiflerini kullanmak şeklinde pratiğe dökülür .
+Event	T0	reddetme	EVENT	179
+Event	T1	sömürü	EVENT	513
+Event	T2	yaşamak	EVENT	701
+Event	T3	kullanmak	EVENT	792
+Event	T5	VEGANLIK	EVENT	74
+Event	T6	VEGANIZM	EVENT	89
+Event	T7	jetaryenlik	EVENT	206
+Event	T8	reddetmektedir	EVENT	356
+Event	T9	veganlığı	EVENT	443
+Event	T10	Veganlık	EVENT	481
+Event	T11	dışlamanın	EVENT	546
+Event	T12	gözetmenin	EVENT	567
+Event	T13	zulmün	EVENT	523
+Event	T14	dışlayıp	EVENT	662
+Relation	T0	T5	CauseEffect	true	reddetme	VEGANLIK
+Relation	T5	T0	EffectCause	true	VEGANLIK	reddetme
+Relation	T0	T6	CauseEffect	true	reddetme	VEGANIZM
+Relation	T6	T0	EffectCause	true	VEGANIZM	reddetme
+Relation	T5	T8	CauseEffect	true	VEGANLIK	reddetmektedir
+Relation	T8	T5	EffectCause	true	reddetmektedir	VEGANLIK
+Relation	T6	T8	CauseEffect	true	VEGANIZM	reddetmektedir
+Relation	T8	T6	EffectCause	true	reddetmektedir	VEGANIZM
+Relation	T1	T10	CauseEffect	true	sömürü	Veganlık
+Relation	T10	T1	EffectCause	true	Veganlık	sömürü
+Relation	T13	T10	CauseEffect	true	zulmün	Veganlık
+Relation	T10	T13	EffectCause	true	Veganlık	zulmün
+Relation	T11	T12	CauseEffect	true	dışlamanın	gözetmenin
+Relation	T12	T11	EffectCause	true	gözetmenin	dışlamanın
+Relation	T10	T11	CauseEffect	true	Veganlık	dışlamanın
+Relation	T11	T10	EffectCause	true	dışlamanın	Veganlık
+Relation	T10	T14	CauseEffect	true	Veganlık	dışlayıp
+Relation	T14	T10	EffectCause	true	dışlayıp	Veganlık
+Relation	T14	T2	CauseEffect	true	dışlayıp	yaşamak
+Relation	T2	T14	EffectCause	true	yaşamak	dışlayıp
+Relation	T10	T2	CauseEffect	true	Veganlık	yaşamak
+Relation	T2	T10	EffectCause	true	yaşamak	Veganlık
+Relation	T10	T3	CauseEffect	true	Veganlık	kullanmak
+Relation	T3	T10	EffectCause	true	kullanmak	Veganlık
+Relation	T0	T10	NoRel	true	reddetme	Veganlık
+Relation	T0	T11	NoRel	true	reddetme	dışlamanın
+Relation	T0	T14	NoRel	true	reddetme	dışlayıp
+Relation	T1	T0	NoRel	true	sömürü	reddetme
+Relation	T1	T12	NoRel	true	sömürü	gözetmenin
+Relation	T1	T2	NoRel	true	sömürü	yaşamak
+Relation	T1	T3	NoRel	true	sömürü	kullanmak
+Relation	T1	T5	NoRel	true	sömürü	VEGANLIK
+Relation	T1	T6	NoRel	true	sömürü	VEGANIZM
+Relation	T10	T5	NoRel	true	Veganlık	VEGANLIK
+Relation	T10	T6	NoRel	true	Veganlık	VEGANIZM
+Relation	T10	T7	NoRel	true	Veganlık	jetaryenlik
+Relation	T10	T8	NoRel	true	Veganlık	reddetmektedir
+Relation	T10	T9	NoRel	true	Veganlık	veganlığı
+Relation	T11	T0	NoRel	true	dışlamanın	reddetme
+Relation	T11	T1	NoRel	true	dışlamanın	sömürü
+Relation	T11	T13	NoRel	true	dışlamanın	zulmün
+Relation	T11	T3	NoRel	true	dışlamanın	kullanmak
+Relation	T11	T8	NoRel	true	dışlamanın	reddetmektedir
+Relation	T12	T10	NoRel	true	gözetmenin	Veganlık
+Relation	T12	T3	NoRel	true	gözetmenin	kullanmak
+Relation	T13	T12	NoRel	true	zulmün	gözetmenin
+Relation	T13	T14	NoRel	true	zulmün	dışlayıp
+Relation	T13	T3	NoRel	true	zulmün	kullanmak
+Relation	T13	T9	NoRel	true	zulmün	veganlığı
+Relation	T14	T11	NoRel	true	dışlayıp	dışlamanın
+Relation	T14	T8	NoRel	true	dışlayıp	reddetmektedir
+Relation	T2	T1	NoRel	true	yaşamak	sömürü
+Relation	T2	T12	NoRel	true	yaşamak	gözetmenin
+Relation	T2	T9	NoRel	true	yaşamak	veganlığı
+Relation	T3	T14	NoRel	true	kullanmak	dışlayıp
+Relation	T3	T5	NoRel	true	kullanmak	VEGANLIK
+Relation	T5	T11	NoRel	true	VEGANLIK	dışlamanın
+Relation	T5	T12	NoRel	true	VEGANLIK	gözetmenin
+Relation	T5	T2	NoRel	true	VEGANLIK	yaşamak
+Relation	T5	T3	NoRel	true	VEGANLIK	kullanmak
+Relation	T6	T10	NoRel	true	VEGANIZM	Veganlık
+Relation	T6	T12	NoRel	true	VEGANIZM	gözetmenin
+Relation	T6	T5	NoRel	true	VEGANIZM	VEGANLIK
+Relation	T7	T1	NoRel	true	jetaryenlik	sömürü
+Relation	T7	T11	NoRel	true	jetaryenlik	dışlamanın
+Relation	T7	T12	NoRel	true	jetaryenlik	gözetmenin
+Relation	T7	T5	NoRel	true	jetaryenlik	VEGANLIK
+Relation	T7	T9	NoRel	true	jetaryenlik	veganlığı
+Relation	T8	T12	NoRel	true	reddetmektedir	gözetmenin
+Relation	T8	T13	NoRel	true	reddetmektedir	zulmün
+Relation	T8	T2	NoRel	true	reddetmektedir	yaşamak
+Relation	T9	T12	NoRel	true	veganlığı	gözetmenin
+Relation	T9	T2	NoRel	true	veganlığı	yaşamak
+Relation	T9	T3	NoRel	true	veganlığı	kullanmak

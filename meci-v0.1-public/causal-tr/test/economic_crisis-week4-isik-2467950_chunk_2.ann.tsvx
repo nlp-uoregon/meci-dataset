@@ -1,0 +1,59 @@
+Text	7 Ağustos'ta Liege'i işgal etti ve 22 - 23 Ağustos'ta Namur Kalesi ] ]'ni ele geçirdi .	Fransa'da von Bülow 23 - 24 Ağustos'ta Charleroi'deki Fransız Beşinci Ordu'dan General Charles Lanrezac'ı ve 29 -30 Ağustos'ta St. Quentin'de yenmişti .	Karl von Bülow , Andenne'deki ( 20 Ağustos ) ve birkaç gün sonra Leffe'deki ( 23 Ağustos - 1914 ) katliamlar için savaş suçlusu olarak kabul edilir .	2. Ordu ve Genel Alexander von Kluck’un 1. Ordusu 31 Ağustos’tan 2 Eylül’e kadar Paris’e yaklaşırken , iki ordu arasındaki artan boşluktan endişe duyan von Bülow , Kluck’a 1. Orduyu ona doğru çevirmesini emretti .	Ancak bu karar , Kluck'un Schlieffen Planında belirtildiği gibi , güney ve batı yerine Paris'in güney ve doğusunda ilerlemesiyle sonuçlandı .
+Event	T0	etti	EVENT	27
+Event	T1	geçirdi	EVENT	78
+Event	T2	yenmişti	EVENT	230
+Event	T3	katliamlar	EVENT	339
+Event	T4	edilir	EVENT	382
+Event	T6	emretti	EVENT	595
+Event	T7	karar	EVENT	614
+Event	T8	sonuçlandı	EVENT	734
+Event	T9	yaklaşırken	EVENT	480
+Event	T5	endişe	EVENT	530
+Event	T10	boşluktan	EVENT	520
+Relation	T3	T4	CauseEffect	true	katliamlar	edilir
+Relation	T4	T3	EffectCause	true	edilir	katliamlar
+Relation	T6	T8	CauseEffect	true	emretti	sonuçlandı
+Relation	T8	T6	EffectCause	true	sonuçlandı	emretti
+Relation	T5	T6	CauseEffect	true	endişe	emretti
+Relation	T6	T5	EffectCause	true	emretti	endişe
+Relation	T10	T5	CauseEffect	true	boşluktan	endişe
+Relation	T5	T10	EffectCause	true	endişe	boşluktan
+Relation	T7	T8	CauseEffect	true	karar	sonuçlandı
+Relation	T8	T7	EffectCause	true	sonuçlandı	karar
+Relation	T0	T1	NoRel	true	etti	geçirdi
+Relation	T0	T10	NoRel	true	etti	boşluktan
+Relation	T0	T5	NoRel	true	etti	endişe
+Relation	T0	T7	NoRel	true	etti	karar
+Relation	T0	T9	NoRel	true	etti	yaklaşırken
+Relation	T1	T0	NoRel	true	geçirdi	etti
+Relation	T1	T4	NoRel	true	geçirdi	edilir
+Relation	T1	T8	NoRel	true	geçirdi	sonuçlandı
+Relation	T10	T2	NoRel	true	boşluktan	yenmişti
+Relation	T10	T4	NoRel	true	boşluktan	edilir
+Relation	T10	T8	NoRel	true	boşluktan	sonuçlandı
+Relation	T2	T10	NoRel	true	yenmişti	boşluktan
+Relation	T2	T5	NoRel	true	yenmişti	endişe
+Relation	T2	T6	NoRel	true	yenmişti	emretti
+Relation	T2	T8	NoRel	true	yenmişti	sonuçlandı
+Relation	T2	T9	NoRel	true	yenmişti	yaklaşırken
+Relation	T3	T5	NoRel	true	katliamlar	endişe
+Relation	T4	T10	NoRel	true	edilir	boşluktan
+Relation	T4	T2	NoRel	true	edilir	yenmişti
+Relation	T4	T7	NoRel	true	edilir	karar
+Relation	T4	T8	NoRel	true	edilir	sonuçlandı
+Relation	T5	T1	NoRel	true	endişe	geçirdi
+Relation	T5	T4	NoRel	true	endişe	edilir
+Relation	T5	T8	NoRel	true	endişe	sonuçlandı
+Relation	T6	T0	NoRel	true	emretti	etti
+Relation	T6	T10	NoRel	true	emretti	boşluktan
+Relation	T7	T1	NoRel	true	karar	geçirdi
+Relation	T7	T3	NoRel	true	karar	katliamlar
+Relation	T7	T4	NoRel	true	karar	edilir
+Relation	T7	T5	NoRel	true	karar	endişe
+Relation	T8	T10	NoRel	true	sonuçlandı	boşluktan
+Relation	T8	T2	NoRel	true	sonuçlandı	yenmişti
+Relation	T8	T4	NoRel	true	sonuçlandı	edilir
+Relation	T9	T10	NoRel	true	yaklaşırken	boşluktan
+Relation	T9	T2	NoRel	true	yaklaşırken	yenmişti
+Relation	T9	T5	NoRel	true	yaklaşırken	endişe
+Relation	T9	T7	NoRel	true	yaklaşırken	karar

@@ -1,0 +1,87 @@
+Text	The National Transportation Safety Board ( NTSB ) investigated the incident , assisted by the Marine Corps , Federal Aviation Administration ( FAA ) , Hughes Airwest , and the Airline Pilots Association .	Early statements released by the NTSB revealed that the F - 4 B fighter had attempted to swerve away from the DC - 9 immediately prior to impact , and that an additional 10 feet of clearance would have averted the entire collision .	Additionally , the NTSB confirmed that the fighter had impacted the DC - 9 in two places , with its right wing impacting the airliner 's forward passenger cabin and the vertical stabilizer " slicing through " the cockpit .	The DC - 9 carried a primitive flight data recorder that recorded basic information about the aircraft 's air speed , acceleration , heading , and altitude on metal foil tapes .	Additionally , the aircraft was equipped with a simple cockpit voice recorder that recorded all conversations that took place in the cockpit of the aircraft .
+Event	T0	investigated	EVENT	50
+Event	T1	incident	EVENT	67
+Event	T2	assisted	EVENT	78
+Event	T3	released	EVENT	222
+Event	T4	revealed	EVENT	243
+Event	T5	attempted	EVENT	281
+Event	T6	impact	EVENT	343
+Event	T7	clearance	EVENT	386
+Event	T8	averted	EVENT	407
+Event	T9	collision	EVENT	426
+Event	T10	confirmed	EVENT	462
+Event	T11	impacted	EVENT	493
+Event	T12	impacting	EVENT	549
+Event	T13	carried	EVENT	672
+Event	T14	recorded	EVENT	718
+Event	T15	acceleration	EVENT	779
+Event	T16	heading	EVENT	794
+Event	T17	equipped	EVENT	871
+Event	T18	recorded	EVENT	922
+Event	T19	conversations	EVENT	935
+Event	T20	slicing	EVENT	629
+Event	T21	took place	EVENT	954
+Relation	T7	T8	CauseEffect	true	clearance	averted
+Relation	T8	T7	EffectCause	true	averted	clearance
+Relation	T21	T18	CauseEffect	true	took place	recorded
+Relation	T18	T21	EffectCause	true	recorded	took place
+Relation	T0	T19	NoRel	true	investigated	conversations
+Relation	T1	T12	NoRel	true	incident	impacting
+Relation	T1	T15	NoRel	true	incident	acceleration
+Relation	T1	T9	NoRel	true	incident	collision
+Relation	T10	T11	NoRel	true	confirmed	impacted
+Relation	T10	T12	NoRel	true	confirmed	impacting
+Relation	T10	T2	NoRel	true	confirmed	assisted
+Relation	T10	T3	NoRel	true	confirmed	released
+Relation	T11	T0	NoRel	true	impacted	investigated
+Relation	T11	T3	NoRel	true	impacted	released
+Relation	T11	T7	NoRel	true	impacted	clearance
+Relation	T12	T10	NoRel	true	impacting	confirmed
+Relation	T12	T16	NoRel	true	impacting	heading
+Relation	T13	T11	NoRel	true	carried	impacted
+Relation	T13	T4	NoRel	true	carried	revealed
+Relation	T13	T6	NoRel	true	carried	impact
+Relation	T14	T12	NoRel	true	recorded	impacting
+Relation	T14	T19	NoRel	true	recorded	conversations
+Relation	T14	T2	NoRel	true	recorded	assisted
+Relation	T14	T3	NoRel	true	recorded	released
+Relation	T14	T5	NoRel	true	recorded	attempted
+Relation	T15	T1	NoRel	true	acceleration	incident
+Relation	T15	T18	NoRel	true	acceleration	recorded
+Relation	T15	T20	NoRel	true	acceleration	slicing
+Relation	T16	T17	NoRel	true	heading	equipped
+Relation	T16	T2	NoRel	true	heading	assisted
+Relation	T16	T3	NoRel	true	heading	released
+Relation	T16	T4	NoRel	true	heading	revealed
+Relation	T17	T14	NoRel	true	equipped	recorded
+Relation	T17	T2	NoRel	true	equipped	assisted
+Relation	T18	T2	NoRel	true	recorded	assisted
+Relation	T18	T20	NoRel	true	recorded	slicing
+Relation	T18	T8	NoRel	true	recorded	averted
+Relation	T19	T20	NoRel	true	conversations	slicing
+Relation	T19	T3	NoRel	true	conversations	released
+Relation	T2	T11	NoRel	true	assisted	impacted
+Relation	T2	T17	NoRel	true	assisted	equipped
+Relation	T2	T18	NoRel	true	assisted	recorded
+Relation	T2	T20	NoRel	true	assisted	slicing
+Relation	T20	T11	NoRel	true	slicing	impacted
+Relation	T20	T15	NoRel	true	slicing	acceleration
+Relation	T20	T18	NoRel	true	slicing	recorded
+Relation	T20	T2	NoRel	true	slicing	assisted
+Relation	T20	T4	NoRel	true	slicing	revealed
+Relation	T20	T9	NoRel	true	slicing	collision
+Relation	T21	T10	NoRel	true	took place	confirmed
+Relation	T21	T15	NoRel	true	took place	acceleration
+Relation	T21	T2	NoRel	true	took place	assisted
+Relation	T21	T7	NoRel	true	took place	clearance
+Relation	T3	T0	NoRel	true	released	investigated
+Relation	T3	T4	NoRel	true	released	revealed
+Relation	T4	T5	NoRel	true	revealed	attempted
+Relation	T5	T11	NoRel	true	attempted	impacted
+Relation	T5	T15	NoRel	true	attempted	acceleration
+Relation	T7	T11	NoRel	true	clearance	impacted
+Relation	T7	T12	NoRel	true	clearance	impacting
+Relation	T7	T6	NoRel	true	clearance	impact
+Relation	T8	T12	NoRel	true	averted	impacting
+Relation	T8	T17	NoRel	true	averted	equipped
+Relation	T8	T9	NoRel	true	averted	collision

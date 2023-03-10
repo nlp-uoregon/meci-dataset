@@ -1,0 +1,39 @@
+Text	Böylece bu üçüncü 1101 Haçlı Seferi ordusu da , askerlerinin çoğu zehirlenip , yaşayanlar da esir alınıp , yok edildi .	Ama yine bu ordu komutanı olan Bavyera Dükü Wolf da şahsen Antakya'ya kaçabilmeyi başardı .	Sonuçta 1101 yılı Haçlı Seferi'nin sadece liderleri Antakya'da toplanarak bazı adamlarıyla birlikte Kudüs'e gidebildiler .	Bu üç safhalı 1101 Haçlı Seferi Haçlılar için öyle korkunç ve öyle büyük bir fiyasko sonuçlanmıştır ki , bu fena sonuç 1101 Haçlı Seferi'nin Avrupa tarihçileri ve " Avrupa dünyası tarafından tümüyle hemen hemen unutulmasına yol açmıştır " 1101 Haçlı Seferlerinin sadece liderlerinin Antakya'da toplanamabilmesi , bundan sonra artık askeri yönden Haçlı Seferlerinin ve ordularının askeri olarak başarısız kalacağına bir gösterge olmaktadır .	Selçuklu ve Danişmendliler ordularının kazandıkları bu askeri başarı Türklerin Anadolu'daki kalıcı varlığını tekrar ispatlamış oldu .
+Event	T0	zehirlenip	EVENT	66
+Event	T1	edildi	EVENT	111
+Event	T2	başardı	EVENT	202
+Event	T3	sonuçlanmıştır	EVENT	420
+Event	T4	alınıp	EVENT	98
+Event	T5	toplanarak	EVENT	275
+Event	T6	gidebildiler	EVENT	320
+Event	T7	1101 Haçlı Seferi	EVENT	349
+Event	T8	oldu	EVENT	903
+Event	T9	başarı	EVENT	838
+Relation	T0	T1	CauseEffect	true	zehirlenip	edildi
+Relation	T1	T0	EffectCause	true	edildi	zehirlenip
+Relation	T4	T1	CauseEffect	true	alınıp	edildi
+Relation	T1	T4	EffectCause	true	edildi	alınıp
+Relation	T9	T8	CauseEffect	true	başarı	oldu
+Relation	T8	T9	EffectCause	true	oldu	başarı
+Relation	T0	T5	NoRel	true	zehirlenip	toplanarak
+Relation	T0	T8	NoRel	true	zehirlenip	oldu
+Relation	T1	T6	NoRel	true	edildi	gidebildiler
+Relation	T1	T7	NoRel	true	edildi	1101 Haçlı Seferi
+Relation	T2	T4	NoRel	true	başardı	alınıp
+Relation	T3	T2	NoRel	true	sonuçlanmıştır	başardı
+Relation	T3	T4	NoRel	true	sonuçlanmıştır	alınıp
+Relation	T4	T3	NoRel	true	alınıp	sonuçlanmıştır
+Relation	T4	T8	NoRel	true	alınıp	oldu
+Relation	T5	T3	NoRel	true	toplanarak	sonuçlanmıştır
+Relation	T5	T6	NoRel	true	toplanarak	gidebildiler
+Relation	T6	T1	NoRel	true	gidebildiler	edildi
+Relation	T6	T2	NoRel	true	gidebildiler	başardı
+Relation	T6	T8	NoRel	true	gidebildiler	oldu
+Relation	T7	T1	NoRel	true	1101 Haçlı Seferi	edildi
+Relation	T7	T8	NoRel	true	1101 Haçlı Seferi	oldu
+Relation	T8	T3	NoRel	true	oldu	sonuçlanmıştır
+Relation	T8	T5	NoRel	true	oldu	toplanarak
+Relation	T8	T7	NoRel	true	oldu	1101 Haçlı Seferi
+Relation	T9	T1	NoRel	true	başarı	edildi
+Relation	T9	T3	NoRel	true	başarı	sonuçlanmıştır
+Relation	T9	T7	NoRel	true	başarı	1101 Haçlı Seferi

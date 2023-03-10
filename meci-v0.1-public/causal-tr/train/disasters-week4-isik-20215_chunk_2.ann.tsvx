@@ -1,0 +1,39 @@
+Text	- 73 km uzunluğunda olan bu fayın 30 km'lik batı bölümü 17 Ağustos 1999 depreminde kırılmış bulunuyordu .	12 Kasım 1999 depremi ise fayın 43 km uzunluğundaki doğu bölümünün kırılması sonucunda oluşmuştur .	- Bu deprem , 17 Ağustos 1999 Gölcük Depremine neden olan Kuzey Anadolu Fayı'ın kuzey kolunu oluşturan fayların en doğusunda bulunan segmenti üzerinde gerçekleşmiştir .	- 12 Kasım 1999 depremi , 17 Ağustos 1999'daki kırılmaların Düzce fayının doğu bölümünü tetiklemesi sonucu gelişmiştir .	- Deprem kırığının doğu bölümünü sağ yönlü doğrultu atımlı , Efteni gölü bölümü ise oblik faylanma mekanizmasını yansıtır .
+Event	T0	kırılmış	EVENT	83
+Event	T1	depremi	EVENT	120
+Event	T2	kırılması	EVENT	173
+Event	T3	deprem	EVENT	211
+Event	T4	gerçekleşmiştir	EVENT	357
+Event	T5	kırılmaların	EVENT	422
+Event	T6	faylanma	EVENT	586
+Event	T7	yansıtır	EVENT	609
+Event	T8	depreminde	EVENT	72
+Event	T9	gelişmiştir	EVENT	482
+Relation	T0	T8	CauseEffect	true	kırılmış	depreminde
+Relation	T8	T0	EffectCause	true	depreminde	kırılmış
+Relation	T2	T1	CauseEffect	true	kırılması	depremi
+Relation	T1	T2	EffectCause	true	depremi	kırılması
+Relation	T5	T9	CauseEffect	true	kırılmaların	gelişmiştir
+Relation	T9	T5	EffectCause	true	gelişmiştir	kırılmaların
+Relation	T0	T2	NoRel	true	kırılmış	kırılması
+Relation	T0	T3	NoRel	true	kırılmış	deprem
+Relation	T0	T4	NoRel	true	kırılmış	gerçekleşmiştir
+Relation	T0	T5	NoRel	true	kırılmış	kırılmaların
+Relation	T1	T3	NoRel	true	depremi	deprem
+Relation	T2	T3	NoRel	true	kırılması	deprem
+Relation	T3	T0	NoRel	true	deprem	kırılmış
+Relation	T3	T6	NoRel	true	deprem	faylanma
+Relation	T3	T7	NoRel	true	deprem	yansıtır
+Relation	T4	T1	NoRel	true	gerçekleşmiştir	depremi
+Relation	T4	T7	NoRel	true	gerçekleşmiştir	yansıtır
+Relation	T5	T0	NoRel	true	kırılmaların	kırılmış
+Relation	T6	T3	NoRel	true	faylanma	deprem
+Relation	T6	T4	NoRel	true	faylanma	gerçekleşmiştir
+Relation	T6	T8	NoRel	true	faylanma	depreminde
+Relation	T7	T6	NoRel	true	yansıtır	faylanma
+Relation	T8	T3	NoRel	true	depreminde	deprem
+Relation	T8	T4	NoRel	true	depreminde	gerçekleşmiştir
+Relation	T9	T0	NoRel	true	gelişmiştir	kırılmış
+Relation	T9	T1	NoRel	true	gelişmiştir	depremi
+Relation	T9	T2	NoRel	true	gelişmiştir	kırılması
+Relation	T9	T3	NoRel	true	gelişmiştir	deprem

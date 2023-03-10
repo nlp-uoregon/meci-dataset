@@ -1,0 +1,64 @@
+Text	WORLD TRADE_CENTER ( WTC ) var et kæmpe forretningscenter og bygningskompleks i Lower Manhattan , New York , bestående af syv bygninger .	Mest kendte var de to 110-etagers høje tvillingetårne , der blev opført i perioden 1966-73 , med en højde på hhv. 415 og 417 meter .	Ved opførelsen var tårnene de højeste i verden , indtil de i 1974 blev overgået af det 442 meter høje Sears Tower i Chicago .	Komplekset blev ødelagt under de koordinerede terroraktioner på USA den 11. september 2001 , da Al-Qaeda-tilknyttede terrorister kaprede de to passagerfly : American Airlines Flight 11 og United Airlines Flight 175 , og styrede dem direkte ind i de to tvillingetårne , hvilket fik begge tårne til at kollapse på mindre end to timer .	World Trade Center blev designet af Minoru Yamasaki .
+Event	T0	kendte	EVENT	143
+Event	T1	opført	EVENT	203
+Event	T2	overgået	EVENT	342
+Event	T3	ødelagt	EVENT	413
+Event	T4	terroraktioner	EVENT	443
+Event	T5	kaprede	EVENT	526
+Event	T6	styrede	EVENT	617
+Event	T7	fik	EVENT	674
+Event	T8	kollapse	EVENT	697
+Event	T9	designet	EVENT	755
+Event	T10	opførelsen	EVENT	275
+Event	T11	højeste	EVENT	301
+Relation	T10	T11	CauseEffect	true	opførelsen	højeste
+Relation	T11	T10	EffectCause	true	højeste	opførelsen
+Relation	T4	T3	CauseEffect	true	terroraktioner	ødelagt
+Relation	T3	T4	EffectCause	true	ødelagt	terroraktioner
+Relation	T5	T6	CauseEffect	true	kaprede	styrede
+Relation	T6	T5	EffectCause	true	styrede	kaprede
+Relation	T0	T10	NoRel	true	kendte	opførelsen
+Relation	T0	T2	NoRel	true	kendte	overgået
+Relation	T0	T3	NoRel	true	kendte	ødelagt
+Relation	T0	T7	NoRel	true	kendte	fik
+Relation	T1	T10	NoRel	true	opført	opførelsen
+Relation	T1	T2	NoRel	true	opført	overgået
+Relation	T1	T4	NoRel	true	opført	terroraktioner
+Relation	T1	T6	NoRel	true	opført	styrede
+Relation	T10	T2	NoRel	true	opførelsen	overgået
+Relation	T10	T3	NoRel	true	opførelsen	ødelagt
+Relation	T10	T8	NoRel	true	opførelsen	kollapse
+Relation	T10	T9	NoRel	true	opførelsen	designet
+Relation	T11	T0	NoRel	true	højeste	kendte
+Relation	T11	T1	NoRel	true	højeste	opført
+Relation	T11	T5	NoRel	true	højeste	kaprede
+Relation	T11	T6	NoRel	true	højeste	styrede
+Relation	T11	T8	NoRel	true	højeste	kollapse
+Relation	T2	T10	NoRel	true	overgået	opførelsen
+Relation	T2	T11	NoRel	true	overgået	højeste
+Relation	T2	T3	NoRel	true	overgået	ødelagt
+Relation	T2	T4	NoRel	true	overgået	terroraktioner
+Relation	T2	T5	NoRel	true	overgået	kaprede
+Relation	T2	T6	NoRel	true	overgået	styrede
+Relation	T3	T0	NoRel	true	ødelagt	kendte
+Relation	T3	T10	NoRel	true	ødelagt	opførelsen
+Relation	T3	T6	NoRel	true	ødelagt	styrede
+Relation	T3	T7	NoRel	true	ødelagt	fik
+Relation	T4	T10	NoRel	true	terroraktioner	opførelsen
+Relation	T4	T8	NoRel	true	terroraktioner	kollapse
+Relation	T4	T9	NoRel	true	terroraktioner	designet
+Relation	T5	T3	NoRel	true	kaprede	ødelagt
+Relation	T5	T4	NoRel	true	kaprede	terroraktioner
+Relation	T6	T0	NoRel	true	styrede	kendte
+Relation	T6	T1	NoRel	true	styrede	opført
+Relation	T6	T11	NoRel	true	styrede	højeste
+Relation	T6	T4	NoRel	true	styrede	terroraktioner
+Relation	T7	T0	NoRel	true	fik	kendte
+Relation	T7	T11	NoRel	true	fik	højeste
+Relation	T7	T3	NoRel	true	fik	ødelagt
+Relation	T7	T9	NoRel	true	fik	designet
+Relation	T8	T11	NoRel	true	kollapse	højeste
+Relation	T8	T4	NoRel	true	kollapse	terroraktioner
+Relation	T8	T6	NoRel	true	kollapse	styrede
+Relation	T8	T7	NoRel	true	kollapse	fik
+Relation	T9	T7	NoRel	true	designet	fik

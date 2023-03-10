@@ -1,0 +1,67 @@
+Text	He wrote to relatives blaming Methvin , who he claimed had misunderstood Barrow ’s suggestion that they " take " the troopers , meaning to disarm and take them for a " joyride " , and instead opened fire .	In a later letter to authorities , however , Barrow named Hamilton as the killer .	Regardless of Methvin 's role , he was part of another of the gang 's murder five days later .	On April 6 , their car became stuck in mud near Commerce , Oklahoma .	While trying to get the car moving , they were surprised by two local officers out on patrol and fired at them .
+Event	T0	wrote	EVENT	3
+Event	T1	blaming	EVENT	22
+Event	T10	killer	EVENT	280
+Event	T11	murder	EVENT	359
+Event	T13	trying	EVENT	460
+Event	T14	moving	EVENT	482
+Event	T15	surprised	EVENT	501
+Event	T16	fired	EVENT	551
+Event	T18	stuck	EVENT	414
+Event	T2	claimed	EVENT	47
+Event	T3	misunderstood	EVENT	59
+Event	T4	suggestion	EVENT	83
+Event	T5	take	EVENT	106
+Event	T6	disarm	EVENT	139
+Event	T7	take	EVENT	150
+Event	T8	joyride	EVENT	168
+Event	T9	named	EVENT	258
+Relation	T1	T0	CauseEffect	true	blaming	wrote
+Relation	T0	T1	EffectCause	true	wrote	blaming
+Relation	T3	T0	CauseEffect	true	misunderstood	wrote
+Relation	T0	T3	EffectCause	true	wrote	misunderstood
+Relation	T6	T5	CauseEffect	true	disarm	take
+Relation	T5	T6	EffectCause	true	take	disarm
+Relation	T7	T5	CauseEffect	true	take	take
+Relation	T5	T7	EffectCause	true	take	take
+Relation	T16	T15	CauseEffect	true	fired	surprised
+Relation	T15	T16	EffectCause	true	surprised	fired
+Relation	T0	T10	NoRel	true	wrote	killer
+Relation	T0	T15	NoRel	true	wrote	surprised
+Relation	T0	T18	NoRel	true	wrote	stuck
+Relation	T1	T4	NoRel	true	blaming	suggestion
+Relation	T1	T5	NoRel	true	blaming	take
+Relation	T1	T8	NoRel	true	blaming	joyride
+Relation	T10	T18	NoRel	true	killer	stuck
+Relation	T10	T9	NoRel	true	killer	named
+Relation	T11	T0	NoRel	true	murder	wrote
+Relation	T11	T10	NoRel	true	murder	killer
+Relation	T11	T18	NoRel	true	murder	stuck
+Relation	T11	T6	NoRel	true	murder	disarm
+Relation	T11	T9	NoRel	true	murder	named
+Relation	T13	T2	NoRel	true	trying	claimed
+Relation	T13	T6	NoRel	true	trying	disarm
+Relation	T13	T9	NoRel	true	trying	named
+Relation	T15	T0	NoRel	true	surprised	wrote
+Relation	T15	T3	NoRel	true	surprised	misunderstood
+Relation	T16	T0	NoRel	true	fired	wrote
+Relation	T16	T1	NoRel	true	fired	blaming
+Relation	T16	T11	NoRel	true	fired	murder
+Relation	T18	T14	NoRel	true	stuck	moving
+Relation	T2	T13	NoRel	true	claimed	trying
+Relation	T2	T18	NoRel	true	claimed	stuck
+Relation	T3	T10	NoRel	true	misunderstood	killer
+Relation	T3	T16	NoRel	true	misunderstood	fired
+Relation	T4	T15	NoRel	true	suggestion	surprised
+Relation	T5	T3	NoRel	true	take	misunderstood
+Relation	T6	T15	NoRel	true	disarm	surprised
+Relation	T6	T18	NoRel	true	disarm	stuck
+Relation	T6	T7	NoRel	true	disarm	take
+Relation	T7	T10	NoRel	true	take	killer
+Relation	T7	T11	NoRel	true	take	murder
+Relation	T7	T16	NoRel	true	take	fired
+Relation	T9	T11	NoRel	true	named	murder
+Relation	T9	T14	NoRel	true	named	moving
+Relation	T9	T15	NoRel	true	named	surprised
+Relation	T9	T7	NoRel	true	named	take
+Relation	T9	T8	NoRel	true	named	joyride

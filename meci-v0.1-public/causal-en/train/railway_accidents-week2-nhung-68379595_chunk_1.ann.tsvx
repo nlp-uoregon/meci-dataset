@@ -1,0 +1,60 @@
+Text	He left the Theatre Royal in May 1859 , having leased the Olympic Theatre in conjunction with his brother R. Younge .	His farewell benefit was disrupted by the band refusing to play , Younge having advertised that the bands of the two theatres would appear together .	The ill - feeling between the two managements was still evident two months later when G. V. Brooke scotched plans to combine funds raised by the two theatres to benefit the daughter of Ellen Mortyn , who died 22 June 1859 .	At his own benefit he played a farce , _ The Windmill _ in September 1859 ,	Melbourne 's theatres were in a bind : because the play - going public was small in number , turnover of plays had to be rapid so the cost of mounting a new production could not be spread over weeks or months .
+Event	T0	left	EVENT	3
+Event	T1	leased	EVENT	47
+Event	T10	evident	EVENT	324
+Event	T11	combine	EVENT	385
+Event	T12	raised	EVENT	399
+Event	T13	benefit	EVENT	429
+Event	T14	died	EVENT	472
+Event	T15	played	EVENT	514
+Event	T19	turnover	EVENT	661
+Event	T20	cost	EVENT	702
+Event	T21	mounting	EVENT	710
+Event	T22	spread	EVENT	749
+Event	T3	disrupted	EVENT	143
+Event	T4	refusing	EVENT	165
+Event	T5	play	EVENT	177
+Event	T6	advertised	EVENT	198
+Event	T7	appear	EVENT	250
+Relation	T4	T3	CauseEffect	true	refusing	disrupted
+Relation	T3	T4	EffectCause	true	disrupted	refusing
+Relation	T6	T7	CauseEffect	true	advertised	appear
+Relation	T7	T6	EffectCause	true	appear	advertised
+Relation	T19	T20	CauseEffect	true	turnover	cost
+Relation	T20	T19	EffectCause	true	cost	turnover
+Relation	T0	T15	NoRel	true	left	played
+Relation	T1	T22	NoRel	true	leased	spread
+Relation	T1	T4	NoRel	true	leased	refusing
+Relation	T10	T1	NoRel	true	evident	leased
+Relation	T10	T15	NoRel	true	evident	played
+Relation	T10	T3	NoRel	true	evident	disrupted
+Relation	T10	T5	NoRel	true	evident	play
+Relation	T11	T0	NoRel	true	combine	left
+Relation	T11	T14	NoRel	true	combine	died
+Relation	T12	T22	NoRel	true	raised	spread
+Relation	T12	T3	NoRel	true	raised	disrupted
+Relation	T12	T5	NoRel	true	raised	play
+Relation	T12	T7	NoRel	true	raised	appear
+Relation	T13	T12	NoRel	true	benefit	raised
+Relation	T13	T15	NoRel	true	benefit	played
+Relation	T13	T6	NoRel	true	benefit	advertised
+Relation	T14	T22	NoRel	true	died	spread
+Relation	T15	T20	NoRel	true	played	cost
+Relation	T19	T1	NoRel	true	turnover	leased
+Relation	T19	T22	NoRel	true	turnover	spread
+Relation	T19	T3	NoRel	true	turnover	disrupted
+Relation	T20	T0	NoRel	true	cost	left
+Relation	T20	T21	NoRel	true	cost	mounting
+Relation	T21	T20	NoRel	true	mounting	cost
+Relation	T21	T6	NoRel	true	mounting	advertised
+Relation	T3	T6	NoRel	true	disrupted	advertised
+Relation	T4	T10	NoRel	true	refusing	evident
+Relation	T4	T13	NoRel	true	refusing	benefit
+Relation	T4	T19	NoRel	true	refusing	turnover
+Relation	T5	T14	NoRel	true	play	died
+Relation	T5	T21	NoRel	true	play	mounting
+Relation	T5	T6	NoRel	true	play	advertised
+Relation	T7	T11	NoRel	true	appear	combine
+Relation	T7	T20	NoRel	true	appear	cost
+Relation	T7	T3	NoRel	true	appear	disrupted
+Relation	T7	T5	NoRel	true	appear	play

@@ -1,0 +1,29 @@
+Text	17 Haziran’da Konya’ya , 22 Temmuz’da Haleb’e geldi .	Birecik’te sadrazam Bayram Paşa kuvvetleri ile birleşti .	Sadrazam Bayram Paşa’nın 26 Ağustos’da Urfa yakınlarında vefat etmesi üzerine Tayyar Mehmed Paşa’yı sadrazam yapan Sultan , 16 Kasım gecesi Bağdad’a geldi ve derhal tertipler yaparak kuşatmaya başladı .	Şehirde , Bektaş Han Türkmen’in kumandasında 40.000 askerlik çok kuvvetli bir Safevi garnizonu bulunuyordu .	Şah Safi ise atlı kuvvetleriyle Kasr-ı Şirin’de olup , Osmanlı kuşatmasını gün gün takip etmesine rağmen müdahaleye cesaret edemiyordu .
+Event	T0	geldi	EVENT	46
+Event	T1	birleşti	EVENT	101
+Event	T2	etmesi	EVENT	175
+Event	T3	geldi	EVENT	261
+Event	T4	başladı	EVENT	305
+Event	T5	yapan	EVENT	221
+Event	T6	kuşatmasını	EVENT	487
+Event	T7	etmesine	EVENT	513
+Relation	T2	T5	CauseEffect	true	etmesi	yapan
+Relation	T5	T2	EffectCause	true	yapan	etmesi
+Relation	T6	T7	CauseEffect	true	kuşatmasını	etmesine
+Relation	T7	T6	EffectCause	true	etmesine	kuşatmasını
+Relation	T0	T1	NoRel	true	geldi	birleşti
+Relation	T0	T2	NoRel	true	geldi	etmesi
+Relation	T0	T3	NoRel	true	geldi	geldi
+Relation	T1	T2	NoRel	true	birleşti	etmesi
+Relation	T1	T3	NoRel	true	birleşti	geldi
+Relation	T2	T3	NoRel	true	etmesi	geldi
+Relation	T3	T5	NoRel	true	geldi	yapan
+Relation	T3	T7	NoRel	true	geldi	etmesine
+Relation	T4	T5	NoRel	true	başladı	yapan
+Relation	T4	T7	NoRel	true	başladı	etmesine
+Relation	T6	T1	NoRel	true	kuşatmasını	birleşti
+Relation	T6	T3	NoRel	true	kuşatmasını	geldi
+Relation	T7	T0	NoRel	true	etmesine	geldi
+Relation	T7	T1	NoRel	true	etmesine	birleşti
+Relation	T7	T4	NoRel	true	etmesine	başladı
+Relation	T7	T5	NoRel	true	etmesine	yapan

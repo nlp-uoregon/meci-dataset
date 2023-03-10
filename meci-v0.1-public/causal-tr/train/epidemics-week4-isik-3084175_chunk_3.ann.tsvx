@@ -1,0 +1,67 @@
+Text	Salgının nerede başladığı bilinmiyor .	Ancak salgın Doğu sahilindeki kolonilerle veya savaş koşullarının harap ettiği bölgelerle sınırlı değildi .	Salgın Kuzey Amerika kıtasına yayıldı .	1775'te , İngiliz işgali altındaki Boston'da ve Kıta Ordusu'nun Kanada'yı işgali arasında çoktan yayılmıştı .	Washington'un Boston kuşatması sırasında , hastalık hem Kıta Avrupası hem de İngiliz kamplarında görüldü .
+Event	T0	Salgının	EVENT	0
+Event	T2	savaş	EVENT	86
+Event	T3	harap	EVENT	105
+Event	T4	yayıldı	EVENT	177
+Event	T5	işgali	EVENT	205
+Event	T6	işgali	EVENT	261
+Event	T7	yayılmıştı	EVENT	284
+Event	T8	kuşatması	EVENT	318
+Event	T9	hastalık	EVENT	340
+Event	T10	görüldü	EVENT	394
+Event	T1	salgın	EVENT	45
+Event	T11	Salgın	EVENT	147
+Relation	T5	T4	CauseEffect	true	işgali	yayıldı
+Relation	T4	T5	EffectCause	true	yayıldı	işgali
+Relation	T6	T4	CauseEffect	true	işgali	yayıldı
+Relation	T4	T6	EffectCause	true	yayıldı	işgali
+Relation	T0	T10	NoRel	true	Salgının	görüldü
+Relation	T0	T3	NoRel	true	Salgının	harap
+Relation	T0	T6	NoRel	true	Salgının	işgali
+Relation	T0	T7	NoRel	true	Salgının	yayılmıştı
+Relation	T0	T9	NoRel	true	Salgının	hastalık
+Relation	T1	T2	NoRel	true	salgın	savaş
+Relation	T1	T3	NoRel	true	salgın	harap
+Relation	T1	T7	NoRel	true	salgın	yayılmıştı
+Relation	T1	T9	NoRel	true	salgın	hastalık
+Relation	T10	T0	NoRel	true	görüldü	Salgının
+Relation	T10	T1	NoRel	true	görüldü	salgın
+Relation	T10	T11	NoRel	true	görüldü	Salgın
+Relation	T10	T2	NoRel	true	görüldü	savaş
+Relation	T10	T4	NoRel	true	görüldü	yayıldı
+Relation	T10	T5	NoRel	true	görüldü	işgali
+Relation	T10	T6	NoRel	true	görüldü	işgali
+Relation	T10	T7	NoRel	true	görüldü	yayılmıştı
+Relation	T10	T8	NoRel	true	görüldü	kuşatması
+Relation	T11	T10	NoRel	true	Salgın	görüldü
+Relation	T11	T2	NoRel	true	Salgın	savaş
+Relation	T11	T3	NoRel	true	Salgın	harap
+Relation	T11	T4	NoRel	true	Salgın	yayıldı
+Relation	T11	T5	NoRel	true	Salgın	işgali
+Relation	T11	T9	NoRel	true	Salgın	hastalık
+Relation	T2	T5	NoRel	true	savaş	işgali
+Relation	T2	T7	NoRel	true	savaş	yayılmıştı
+Relation	T2	T8	NoRel	true	savaş	kuşatması
+Relation	T2	T9	NoRel	true	savaş	hastalık
+Relation	T3	T1	NoRel	true	harap	salgın
+Relation	T3	T4	NoRel	true	harap	yayıldı
+Relation	T4	T2	NoRel	true	yayıldı	savaş
+Relation	T5	T10	NoRel	true	işgali	görüldü
+Relation	T5	T2	NoRel	true	işgali	savaş
+Relation	T5	T9	NoRel	true	işgali	hastalık
+Relation	T6	T0	NoRel	true	işgali	Salgının
+Relation	T6	T11	NoRel	true	işgali	Salgın
+Relation	T6	T3	NoRel	true	işgali	harap
+Relation	T7	T1	NoRel	true	yayılmıştı	salgın
+Relation	T7	T11	NoRel	true	yayılmıştı	Salgın
+Relation	T7	T2	NoRel	true	yayılmıştı	savaş
+Relation	T7	T5	NoRel	true	yayılmıştı	işgali
+Relation	T7	T6	NoRel	true	yayılmıştı	işgali
+Relation	T8	T0	NoRel	true	kuşatması	Salgının
+Relation	T8	T1	NoRel	true	kuşatması	salgın
+Relation	T8	T11	NoRel	true	kuşatması	Salgın
+Relation	T8	T6	NoRel	true	kuşatması	işgali
+Relation	T8	T7	NoRel	true	kuşatması	yayılmıştı
+Relation	T9	T5	NoRel	true	hastalık	işgali
+Relation	T9	T6	NoRel	true	hastalık	işgali
+Relation	T9	T7	NoRel	true	hastalık	yayılmıştı

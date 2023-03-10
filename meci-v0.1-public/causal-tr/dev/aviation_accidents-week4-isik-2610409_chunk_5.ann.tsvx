@@ -1,0 +1,109 @@
+Text	İnişten sonra kontrolü devralan kaptan Ender Bayraktar , uçağın hız kesici sistemini kapattı ancak sağ motor " pas geçme " ayarında kaldığı için tam hızda çalışıyordu .	Bundan dolayı uçak pistin sol tarafından çıktı ve çamurlu yamaca saplandı .	Kazadan 200 gün sonra uçağın enkazının kaldırılması için sigorta şirketince ihaleye çıkıldı .	Enkazın parçalara ayrılması için 9 Türk ve 6 yabancı uçak mühendisinden oluşan bir ekip çalıştı .	Uçağın işe yarayan parçaları sökülüp İngiltere'ye gönderildi .
+Event	T0	İnişten	EVENT	0
+Event	T2	kapattı	EVENT	85
+Event	T4	çalışıyordu	EVENT	155
+Event	T5	çıktı	EVENT	210
+Event	T6	saplandı	EVENT	234
+Event	T7	Kazadan	EVENT	245
+Event	T8	kaldırılması	EVENT	284
+Event	T9	çıkıldı	EVENT	329
+Event	T10	ayrılması	EVENT	357
+Event	T11	çalıştı	EVENT	427
+Event	T12	sökülüp	EVENT	466
+Event	T13	gönderildi	EVENT	487
+Event	T1	devralan	EVENT	23
+Event	T3	kaldığı	EVENT	132
+Event	T14	enkazının	EVENT	274
+Event	T15	Enkazın	EVENT	339
+Relation	T3	T4	CauseEffect	true	kaldığı	çalışıyordu
+Relation	T4	T3	EffectCause	true	çalışıyordu	kaldığı
+Relation	T0	T2	CauseEffect	true	İnişten	kapattı
+Relation	T2	T0	EffectCause	true	kapattı	İnişten
+Relation	T4	T5	CauseEffect	true	çalışıyordu	çıktı
+Relation	T5	T4	EffectCause	true	çıktı	çalışıyordu
+Relation	T5	T6	CauseEffect	true	çıktı	saplandı
+Relation	T6	T5	EffectCause	true	saplandı	çıktı
+Relation	T7	T14	CauseEffect	true	Kazadan	enkazının
+Relation	T14	T7	EffectCause	true	enkazının	Kazadan
+Relation	T14	T9	CauseEffect	true	enkazının	çıkıldı
+Relation	T9	T14	EffectCause	true	çıkıldı	enkazının
+Relation	T8	T9	CauseEffect	true	kaldırılması	çıkıldı
+Relation	T9	T8	EffectCause	true	çıkıldı	kaldırılması
+Relation	T14	T11	CauseEffect	true	enkazının	çalıştı
+Relation	T11	T14	EffectCause	true	çalıştı	enkazının
+Relation	T14	T12	CauseEffect	true	enkazının	sökülüp
+Relation	T12	T14	EffectCause	true	sökülüp	enkazının
+Relation	T10	T11	CauseEffect	true	ayrılması	çalıştı
+Relation	T11	T10	EffectCause	true	çalıştı	ayrılması
+Relation	T8	T10	CauseEffect	true	kaldırılması	ayrılması
+Relation	T10	T8	EffectCause	true	ayrılması	kaldırılması
+Relation	T8	T12	CauseEffect	true	kaldırılması	sökülüp
+Relation	T12	T8	EffectCause	true	sökülüp	kaldırılması
+Relation	T0	T11	NoRel	true	İnişten	çalıştı
+Relation	T0	T12	NoRel	true	İnişten	sökülüp
+Relation	T0	T15	NoRel	true	İnişten	Enkazın
+Relation	T0	T4	NoRel	true	İnişten	çalışıyordu
+Relation	T0	T8	NoRel	true	İnişten	kaldırılması
+Relation	T0	T9	NoRel	true	İnişten	çıkıldı
+Relation	T1	T4	NoRel	true	devralan	çalışıyordu
+Relation	T1	T5	NoRel	true	devralan	çıktı
+Relation	T10	T2	NoRel	true	ayrılması	kapattı
+Relation	T11	T0	NoRel	true	çalıştı	İnişten
+Relation	T11	T12	NoRel	true	çalıştı	sökülüp
+Relation	T11	T2	NoRel	true	çalıştı	kapattı
+Relation	T11	T8	NoRel	true	çalıştı	kaldırılması
+Relation	T12	T0	NoRel	true	sökülüp	İnişten
+Relation	T12	T11	NoRel	true	sökülüp	çalıştı
+Relation	T12	T15	NoRel	true	sökülüp	Enkazın
+Relation	T12	T2	NoRel	true	sökülüp	kapattı
+Relation	T12	T6	NoRel	true	sökülüp	saplandı
+Relation	T12	T7	NoRel	true	sökülüp	Kazadan
+Relation	T13	T10	NoRel	true	gönderildi	ayrılması
+Relation	T13	T12	NoRel	true	gönderildi	sökülüp
+Relation	T13	T15	NoRel	true	gönderildi	Enkazın
+Relation	T13	T8	NoRel	true	gönderildi	kaldırılması
+Relation	T13	T9	NoRel	true	gönderildi	çıkıldı
+Relation	T14	T10	NoRel	true	enkazının	ayrılması
+Relation	T14	T13	NoRel	true	enkazının	gönderildi
+Relation	T14	T5	NoRel	true	enkazının	çıktı
+Relation	T15	T10	NoRel	true	Enkazın	ayrılması
+Relation	T15	T12	NoRel	true	Enkazın	sökülüp
+Relation	T15	T14	NoRel	true	Enkazın	enkazının
+Relation	T15	T2	NoRel	true	Enkazın	kapattı
+Relation	T15	T5	NoRel	true	Enkazın	çıktı
+Relation	T15	T7	NoRel	true	Enkazın	Kazadan
+Relation	T15	T8	NoRel	true	Enkazın	kaldırılması
+Relation	T15	T9	NoRel	true	Enkazın	çıkıldı
+Relation	T2	T11	NoRel	true	kapattı	çalıştı
+Relation	T2	T14	NoRel	true	kapattı	enkazının
+Relation	T2	T3	NoRel	true	kapattı	kaldığı
+Relation	T2	T4	NoRel	true	kapattı	çalışıyordu
+Relation	T2	T6	NoRel	true	kapattı	saplandı
+Relation	T2	T7	NoRel	true	kapattı	Kazadan
+Relation	T3	T0	NoRel	true	kaldığı	İnişten
+Relation	T3	T11	NoRel	true	kaldığı	çalıştı
+Relation	T3	T14	NoRel	true	kaldığı	enkazının
+Relation	T3	T6	NoRel	true	kaldığı	saplandı
+Relation	T3	T7	NoRel	true	kaldığı	Kazadan
+Relation	T4	T11	NoRel	true	çalışıyordu	çalıştı
+Relation	T4	T13	NoRel	true	çalışıyordu	gönderildi
+Relation	T4	T14	NoRel	true	çalışıyordu	enkazının
+Relation	T4	T6	NoRel	true	çalışıyordu	saplandı
+Relation	T5	T10	NoRel	true	çıktı	ayrılması
+Relation	T5	T12	NoRel	true	çıktı	sökülüp
+Relation	T5	T14	NoRel	true	çıktı	enkazının
+Relation	T6	T0	NoRel	true	saplandı	İnişten
+Relation	T6	T11	NoRel	true	saplandı	çalıştı
+Relation	T6	T12	NoRel	true	saplandı	sökülüp
+Relation	T6	T13	NoRel	true	saplandı	gönderildi
+Relation	T7	T11	NoRel	true	Kazadan	çalıştı
+Relation	T7	T13	NoRel	true	Kazadan	gönderildi
+Relation	T7	T2	NoRel	true	Kazadan	kapattı
+Relation	T7	T5	NoRel	true	Kazadan	çıktı
+Relation	T8	T0	NoRel	true	kaldırılması	İnişten
+Relation	T8	T13	NoRel	true	kaldırılması	gönderildi
+Relation	T9	T0	NoRel	true	çıkıldı	İnişten
+Relation	T9	T12	NoRel	true	çıkıldı	sökülüp
+Relation	T9	T2	NoRel	true	çıkıldı	kapattı
+Relation	T9	T4	NoRel	true	çıkıldı	çalışıyordu
+Relation	T9	T7	NoRel	true	çıkıldı	Kazadan

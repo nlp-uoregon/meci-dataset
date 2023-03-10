@@ -1,0 +1,47 @@
+Text	La Organización Mundial de la Salud llamó el encierro de Wuhan " sin precedentes " y dijo que mostró " cuán comprometidas están las autoridades para contener un brote viral .	" Aun así , la OMS aclaró que esta acción no fue una recomendación que la OMS hubiera hecho y las autoridades tienen que esperar y ver qué tan eficaz es .	Por separado , la OMS ha declarado que la posibilidad de encerrar una ciudad entera así es algo " nuevo para la ciencia " .	El Índice CSI 300 , una medida agregada de las 300 acciones superiores en las bolsas de valores de Shanghái y Shenzhen , bajó cerca del 3% , la mayor pérdida registrada en un día en casi 9 meses , debido al Encierro de Wuhan , ya que los inversionistas se espantaron por la drástica medida y buscaron refugio para sus inversiones .	La escala sin precedentes de este encierro generó controversia , y al menos un experto criticó esta medida como un " negocio arriesgado " que " podría muy fácilmente reventar " por forzar a personas sanas en Wuhan a quedarse cerca de personas infectadas .
+Event	T1	encierro	EVENT	45
+Event	T10	Encierro	EVENT	661
+Event	T13	refugio	EVENT	755
+Event	T15	controversia	EVENT	836
+Event	T16	criticó	EVENT	873
+Event	T18	reventar	EVENT	952
+Event	T19	infectadas	EVENT	1029
+Event	T3	contener	EVENT	149
+Event	T5	declarado	EVENT	355
+Event	T6	encerrar	EVENT	387
+Event	T2	espantaron	EVENT	710
+Relation	T10	T15	CauseEffect	true	Encierro	controversia
+Relation	T15	T10	EffectCause	true	controversia	Encierro
+Relation	T10	T2	CauseEffect	true	Encierro	espantaron
+Relation	T2	T10	EffectCause	true	espantaron	Encierro
+Relation	T1	T15	NoRel	true	encierro	controversia
+Relation	T1	T19	NoRel	true	encierro	infectadas
+Relation	T1	T5	NoRel	true	encierro	declarado
+Relation	T10	T16	NoRel	true	Encierro	criticó
+Relation	T10	T18	NoRel	true	Encierro	reventar
+Relation	T10	T5	NoRel	true	Encierro	declarado
+Relation	T13	T1	NoRel	true	refugio	encierro
+Relation	T13	T5	NoRel	true	refugio	declarado
+Relation	T15	T13	NoRel	true	controversia	refugio
+Relation	T16	T10	NoRel	true	criticó	Encierro
+Relation	T16	T2	NoRel	true	criticó	espantaron
+Relation	T18	T10	NoRel	true	reventar	Encierro
+Relation	T18	T19	NoRel	true	reventar	infectadas
+Relation	T19	T15	NoRel	true	infectadas	controversia
+Relation	T2	T13	NoRel	true	espantaron	refugio
+Relation	T2	T16	NoRel	true	espantaron	criticó
+Relation	T2	T3	NoRel	true	espantaron	contener
+Relation	T2	T5	NoRel	true	espantaron	declarado
+Relation	T3	T1	NoRel	true	contener	encierro
+Relation	T3	T10	NoRel	true	contener	Encierro
+Relation	T3	T15	NoRel	true	contener	controversia
+Relation	T3	T18	NoRel	true	contener	reventar
+Relation	T3	T19	NoRel	true	contener	infectadas
+Relation	T5	T1	NoRel	true	declarado	encierro
+Relation	T5	T18	NoRel	true	declarado	reventar
+Relation	T5	T2	NoRel	true	declarado	espantaron
+Relation	T6	T1	NoRel	true	encerrar	encierro
+Relation	T6	T13	NoRel	true	encerrar	refugio
+Relation	T6	T16	NoRel	true	encerrar	criticó
+Relation	T6	T18	NoRel	true	encerrar	reventar
+Relation	T6	T5	NoRel	true	encerrar	declarado

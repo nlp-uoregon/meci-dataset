@@ -1,0 +1,49 @@
+Text	23 Aralık'ta hava , Müttefik hava kuvvetlerinin Alman kuvvetlerine ve ikmal hatlarına saldırmasına ve Almanlar için bir yakıt sıkıntısına neden olmasına yetecek kadar iyileşti .	Giderek kötüleşen koşullar altında Alman ilerleyişi yavaşlatıldı ve durduruldu .	Hitler'in başarısız harekâtı , geriye kalan yeri doldurulamaz insan gücü ve materyal rezervlerinin çoğu ile birlikte 700 tank ve batıdaki Alman kuvvetlerinin çoğuna mâl oldu .	Harekât sırasında , SS - _ Obersturmbann führer _ Joachim Peiper gerisinde bir yıkım bıraktı , bu yıkımın arasında Malmédy Katliamı'nda Amerikan savaş esirlerinin ve silahsız Belçikalı sivillerin toplu katliamı da vardı .	_ Kampfgruppe Peiper __'in bir parçası olup ele geçirilen SS askerleri , savaştan sonra Malmédy'deki ve diğer bölgelerdeki birkaç diğer katliam için Malmédy Katliamı davası'nda yargılandı .
+Event	T1	iyileşti	EVENT	167
+Event	T2	yavaşlatıldı	EVENT	230
+Event	T3	durduruldu	EVENT	246
+Event	T4	harekâtı	EVENT	279
+Event	T5	oldu	EVENT	428
+Event	T6	bıraktı	EVENT	520
+Event	T10	Katliamı	EVENT	814
+Event	T11	yargılandı	EVENT	834
+Event	T12	koşullar	EVENT	196
+Event	T7	vardı	EVENT	649
+Relation	T12	T2	CauseEffect	true	koşullar	yavaşlatıldı
+Relation	T2	T12	EffectCause	true	yavaşlatıldı	koşullar
+Relation	T2	T3	CauseEffect	true	yavaşlatıldı	durduruldu
+Relation	T3	T2	EffectCause	true	durduruldu	yavaşlatıldı
+Relation	T4	T5	CauseEffect	true	harekâtı	oldu
+Relation	T5	T4	EffectCause	true	oldu	harekâtı
+Relation	T4	T6	CauseEffect	true	harekâtı	bıraktı
+Relation	T6	T4	EffectCause	true	bıraktı	harekâtı
+Relation	T4	T7	CauseEffect	true	harekâtı	vardı
+Relation	T7	T4	EffectCause	true	vardı	harekâtı
+Relation	T7	T11	CauseEffect	true	vardı	yargılandı
+Relation	T11	T7	EffectCause	true	yargılandı	vardı
+Relation	T1	T10	NoRel	true	iyileşti	Katliamı
+Relation	T10	T5	NoRel	true	Katliamı	oldu
+Relation	T10	T6	NoRel	true	Katliamı	bıraktı
+Relation	T11	T6	NoRel	true	yargılandı	bıraktı
+Relation	T12	T10	NoRel	true	koşullar	Katliamı
+Relation	T12	T3	NoRel	true	koşullar	durduruldu
+Relation	T12	T7	NoRel	true	koşullar	vardı
+Relation	T2	T1	NoRel	true	yavaşlatıldı	iyileşti
+Relation	T2	T6	NoRel	true	yavaşlatıldı	bıraktı
+Relation	T3	T1	NoRel	true	durduruldu	iyileşti
+Relation	T3	T11	NoRel	true	durduruldu	yargılandı
+Relation	T3	T12	NoRel	true	durduruldu	koşullar
+Relation	T3	T7	NoRel	true	durduruldu	vardı
+Relation	T4	T1	NoRel	true	harekâtı	iyileşti
+Relation	T4	T10	NoRel	true	harekâtı	Katliamı
+Relation	T4	T11	NoRel	true	harekâtı	yargılandı
+Relation	T4	T12	NoRel	true	harekâtı	koşullar
+Relation	T4	T2	NoRel	true	harekâtı	yavaşlatıldı
+Relation	T5	T1	NoRel	true	oldu	iyileşti
+Relation	T5	T3	NoRel	true	oldu	durduruldu
+Relation	T5	T6	NoRel	true	oldu	bıraktı
+Relation	T6	T3	NoRel	true	bıraktı	durduruldu
+Relation	T6	T7	NoRel	true	bıraktı	vardı
+Relation	T7	T12	NoRel	true	vardı	koşullar
+Relation	T7	T2	NoRel	true	vardı	yavaşlatıldı
+Relation	T7	T3	NoRel	true	vardı	durduruldu

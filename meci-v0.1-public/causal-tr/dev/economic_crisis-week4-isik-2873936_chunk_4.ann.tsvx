@@ -1,0 +1,33 @@
+Text	Yılda birkaç kez " ayarlama " adı altında döviz kuru yeniden belirliyordu .	1979 yılının Nisan ayında yüzde 30 ve aynı yılın temmuz ayında yüzde 88'e yakın oranda Türk lirası değer kaybetti .	24 Ocak kararları kapsamında açıklanan paket yüzde 33'lük bir devalüasyon öngörmüştü .	Bir Amerikan doları 1980'de 90TL , 1981'de 133TL , 1982'de 191TL'ye ulaştı .	Döviz kurundaki belirsizlik faizlerin artmasına sebep oldu ve toplumda da bankerler krizi gibi yansılamaları oldu .
+Event	T0	belirliyordu	EVENT	61
+Event	T1	kaybetti	EVENT	181
+Event	T2	açıklanan	EVENT	221
+Event	T3	öngörmüştü	EVENT	266
+Event	T4	ulaştı	EVENT	347
+Event	T6	belirsizlik	EVENT	372
+Event	T7	oldu	EVENT	410
+Event	T8	oldu	EVENT	465
+Relation	T6	T7	CauseEffect	true	belirsizlik	oldu
+Relation	T7	T6	EffectCause	true	oldu	belirsizlik
+Relation	T7	T8	CauseEffect	true	oldu	oldu
+Relation	T8	T7	EffectCause	true	oldu	oldu
+Relation	T0	T6	CauseEffect	true	belirliyordu	belirsizlik
+Relation	T6	T0	EffectCause	true	belirsizlik	belirliyordu
+Relation	T0	T3	NoRel	true	belirliyordu	öngörmüştü
+Relation	T0	T7	NoRel	true	belirliyordu	oldu
+Relation	T0	T8	NoRel	true	belirliyordu	oldu
+Relation	T1	T0	NoRel	true	kaybetti	belirliyordu
+Relation	T1	T6	NoRel	true	kaybetti	belirsizlik
+Relation	T1	T8	NoRel	true	kaybetti	oldu
+Relation	T2	T3	NoRel	true	açıklanan	öngörmüştü
+Relation	T2	T4	NoRel	true	açıklanan	ulaştı
+Relation	T2	T6	NoRel	true	açıklanan	belirsizlik
+Relation	T3	T2	NoRel	true	öngörmüştü	açıklanan
+Relation	T3	T4	NoRel	true	öngörmüştü	ulaştı
+Relation	T3	T8	NoRel	true	öngörmüştü	oldu
+Relation	T4	T3	NoRel	true	ulaştı	öngörmüştü
+Relation	T6	T4	NoRel	true	belirsizlik	ulaştı
+Relation	T7	T0	NoRel	true	oldu	belirliyordu
+Relation	T7	T3	NoRel	true	oldu	öngörmüştü
+Relation	T8	T2	NoRel	true	oldu	açıklanan
+Relation	T8	T4	NoRel	true	oldu	ulaştı

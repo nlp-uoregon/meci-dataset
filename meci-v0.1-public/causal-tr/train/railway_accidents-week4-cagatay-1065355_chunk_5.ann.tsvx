@@ -1,0 +1,70 @@
+Text	- 12 Ocak , 2001 – Nvoungouti , Kongo : İki trenin Nvoungouti’de fren tutmaması nedeniyle çarpışması üzerine 30 üzerinde ölü .	- 7 Şubat , 2001 – Toronto , Ontario : Ontario Northland Railway'in _ Northlander _ yolcu treni , Bayview Extension ve Pottery Yol alanı yakınında Don Valley’de raydan çıktı .	23 yolcunun ikisi hafif yaralandı	- 28 Şubat , 2001 – Selby demiryolu çarpışması , Great Heck , North Yorkshire , İngiltere , Birleşik Krallık : İngiltere’nin M62 otoyolu’da bir sürücü direksiyonda uyuya kalır ve yoldan çıkarak demiryolu hattı üzerinde durur ; sürücü kaçar ve onun arabasına bir yolcu treni tarafından çarpılır .	Tren raydan çıkarak zıt yönde gelmekte olan bir kömür trenine çarpar .
+Event	T0	tutmaması	EVENT	70
+Event	T1	çarpışması	EVENT	90
+Event	T2	ölü	EVENT	121
+Event	T3	çıktı	EVENT	295
+Event	T4	çarpışması	EVENT	373
+Event	T5	kalır	EVENT	507
+Event	T6	durur	EVENT	556
+Event	T7	kaçar	EVENT	571
+Event	T8	çarpılır	EVENT	622
+Event	T9	çarpar	EVENT	695
+Event	T10	yaralandı	EVENT	327
+Event	T11	çıkarak	EVENT	645
+Relation	T0	T1	CauseEffect	true	tutmaması	çarpışması
+Relation	T1	T0	EffectCause	true	çarpışması	tutmaması
+Relation	T1	T2	CauseEffect	true	çarpışması	ölü
+Relation	T2	T1	EffectCause	true	ölü	çarpışması
+Relation	T3	T10	CauseEffect	true	çıktı	yaralandı
+Relation	T10	T3	EffectCause	true	yaralandı	çıktı
+Relation	T5	T6	CauseEffect	true	kalır	durur
+Relation	T6	T5	EffectCause	true	durur	kalır
+Relation	T6	T7	CauseEffect	true	durur	kaçar
+Relation	T7	T6	EffectCause	true	kaçar	durur
+Relation	T7	T8	CauseEffect	true	kaçar	çarpılır
+Relation	T8	T7	EffectCause	true	çarpılır	kaçar
+Relation	T7	T4	CauseEffect	true	kaçar	çarpışması
+Relation	T4	T7	EffectCause	true	çarpışması	kaçar
+Relation	T11	T9	CauseEffect	true	çıkarak	çarpar
+Relation	T9	T11	EffectCause	true	çarpar	çıkarak
+Relation	T0	T11	NoRel	true	tutmaması	çıkarak
+Relation	T0	T2	NoRel	true	tutmaması	ölü
+Relation	T0	T3	NoRel	true	tutmaması	çıktı
+Relation	T0	T4	NoRel	true	tutmaması	çarpışması
+Relation	T0	T6	NoRel	true	tutmaması	durur
+Relation	T0	T7	NoRel	true	tutmaması	kaçar
+Relation	T0	T9	NoRel	true	tutmaması	çarpar
+Relation	T1	T11	NoRel	true	çarpışması	çıkarak
+Relation	T1	T4	NoRel	true	çarpışması	çarpışması
+Relation	T1	T7	NoRel	true	çarpışması	kaçar
+Relation	T10	T0	NoRel	true	yaralandı	tutmaması
+Relation	T10	T1	NoRel	true	yaralandı	çarpışması
+Relation	T10	T8	NoRel	true	yaralandı	çarpılır
+Relation	T11	T10	NoRel	true	çıkarak	yaralandı
+Relation	T11	T2	NoRel	true	çıkarak	ölü
+Relation	T11	T5	NoRel	true	çıkarak	kalır
+Relation	T11	T8	NoRel	true	çıkarak	çarpılır
+Relation	T2	T10	NoRel	true	ölü	yaralandı
+Relation	T2	T4	NoRel	true	ölü	çarpışması
+Relation	T3	T11	NoRel	true	çıktı	çıkarak
+Relation	T3	T8	NoRel	true	çıktı	çarpılır
+Relation	T4	T10	NoRel	true	çarpışması	yaralandı
+Relation	T4	T11	NoRel	true	çarpışması	çıkarak
+Relation	T4	T5	NoRel	true	çarpışması	kalır
+Relation	T4	T6	NoRel	true	çarpışması	durur
+Relation	T5	T1	NoRel	true	kalır	çarpışması
+Relation	T5	T11	NoRel	true	kalır	çıkarak
+Relation	T5	T8	NoRel	true	kalır	çarpılır
+Relation	T5	T9	NoRel	true	kalır	çarpar
+Relation	T6	T10	NoRel	true	durur	yaralandı
+Relation	T6	T3	NoRel	true	durur	çıktı
+Relation	T6	T8	NoRel	true	durur	çarpılır
+Relation	T6	T9	NoRel	true	durur	çarpar
+Relation	T7	T11	NoRel	true	kaçar	çıkarak
+Relation	T7	T2	NoRel	true	kaçar	ölü
+Relation	T7	T9	NoRel	true	kaçar	çarpar
+Relation	T8	T3	NoRel	true	çarpılır	çıktı
+Relation	T8	T4	NoRel	true	çarpılır	çarpışması
+Relation	T8	T9	NoRel	true	çarpılır	çarpar
+Relation	T9	T1	NoRel	true	çarpar	çarpışması
+Relation	T9	T4	NoRel	true	çarpar	çarpışması

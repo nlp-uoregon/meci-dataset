@@ -1,0 +1,29 @@
+Text	- 2 Ocak , 2010.	Bu gün Uttar Pradeş_‘de üç kazadan biri Utar Pradeş eyaletinin başşehri Lucknow’un yaklaşık 170 mil ( 270 kilometre ) güneyindeki Etawah’ın yakınında Lichchavi Ekpress’in istasyona girerken orada durmakta olan Magadh Ekpress_’ine birdirmesiyle meydana geldi .	Trenlerden birinin makinisti de dahil olmak üzere on kişi yaralandı .	.	En az 10 kişinin öldüğü rapor edildi .
+Event	T0	kazadan	EVENT	44
+Event	T1	girerken	EVENT	198
+Event	T2	geldi	EVENT	269
+Event	T3	edildi	EVENT	379
+Event	T4	olan	EVENT	222
+Event	T5	birdirmesiyle	EVENT	247
+Event	T6	yaralandı	EVENT	335
+Relation	T1	T5	CauseEffect	true	girerken	birdirmesiyle
+Relation	T5	T1	EffectCause	true	birdirmesiyle	girerken
+Relation	T4	T5	CauseEffect	true	olan	birdirmesiyle
+Relation	T5	T4	EffectCause	true	birdirmesiyle	olan
+Relation	T5	T0	CauseEffect	true	birdirmesiyle	kazadan
+Relation	T0	T5	EffectCause	true	kazadan	birdirmesiyle
+Relation	T0	T6	CauseEffect	true	kazadan	yaralandı
+Relation	T6	T0	EffectCause	true	yaralandı	kazadan
+Relation	T0	T3	CauseEffect	true	kazadan	edildi
+Relation	T3	T0	EffectCause	true	edildi	kazadan
+Relation	T1	T2	NoRel	true	girerken	geldi
+Relation	T1	T4	NoRel	true	girerken	olan
+Relation	T2	T0	NoRel	true	geldi	kazadan
+Relation	T2	T3	NoRel	true	geldi	edildi
+Relation	T2	T4	NoRel	true	geldi	olan
+Relation	T2	T6	NoRel	true	geldi	yaralandı
+Relation	T3	T2	NoRel	true	edildi	geldi
+Relation	T4	T3	NoRel	true	olan	edildi
+Relation	T5	T6	NoRel	true	birdirmesiyle	yaralandı
+Relation	T6	T3	NoRel	true	yaralandı	edildi
+Relation	T6	T5	NoRel	true	yaralandı	birdirmesiyle

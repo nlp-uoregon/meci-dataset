@@ -1,0 +1,35 @@
+Text	Herhangi bir hasara yol açmasa da , meydana getirdiği 2,4 m'ye kadar ulaşan kabarmalar ile çeken akıntılar , Long Beach , New York'ta bir kişinin ölümüne yol açtı .	Irene Kasırgası , bir Yeşil Burun Adaları fırtınası olarak başladı .	1 Ağustos'ta Afrika'nın batı kıyılarından batıya , Atlas Okyanusu açıklarına doğru , bir tropikal dalga olarak hareket etti ve başlangıçta , daha soğuk deniz yüzeyi sıcaklıkları nedeniyle etkisi zayıfladı .	Yeşil Burun Adaları yakınlarından geçerken konveksiyonu artmaya başladı .	4 Ağustos günü öğleden sonra , Yeşil Burun Adaları'nın 1100 km güneybatısında tropikal bir depresyona dönüştü .
+Event	T2	kabarmalar	EVENT	76
+Event	T3	açtı	EVENT	158
+Event	T4	fırtınası	EVENT	207
+Event	T5	başladı	EVENT	224
+Event	T6	etti	EVENT	353
+Event	T7	zayıfladı	EVENT	429
+Event	T8	başladı	EVENT	505
+Event	T9	dönüştü	EVENT	617
+Event	T1	Kasırgası	EVENT	171
+Relation	T2	T3	CauseEffect	true	kabarmalar	açtı
+Relation	T3	T2	EffectCause	true	açtı	kabarmalar
+Relation	T1	T2	NoRel	true	Kasırgası	kabarmalar
+Relation	T1	T8	NoRel	true	Kasırgası	başladı
+Relation	T2	T7	NoRel	true	kabarmalar	zayıfladı
+Relation	T2	T9	NoRel	true	kabarmalar	dönüştü
+Relation	T3	T8	NoRel	true	açtı	başladı
+Relation	T4	T2	NoRel	true	fırtınası	kabarmalar
+Relation	T4	T5	NoRel	true	fırtınası	başladı
+Relation	T5	T2	NoRel	true	başladı	kabarmalar
+Relation	T5	T3	NoRel	true	başladı	açtı
+Relation	T5	T6	NoRel	true	başladı	etti
+Relation	T5	T7	NoRel	true	başladı	zayıfladı
+Relation	T6	T1	NoRel	true	etti	Kasırgası
+Relation	T6	T2	NoRel	true	etti	kabarmalar
+Relation	T7	T1	NoRel	true	zayıfladı	Kasırgası
+Relation	T7	T3	NoRel	true	zayıfladı	açtı
+Relation	T7	T6	NoRel	true	zayıfladı	etti
+Relation	T7	T8	NoRel	true	zayıfladı	başladı
+Relation	T8	T4	NoRel	true	başladı	fırtınası
+Relation	T8	T5	NoRel	true	başladı	başladı
+Relation	T8	T7	NoRel	true	başladı	zayıfladı
+Relation	T9	T2	NoRel	true	dönüştü	kabarmalar
+Relation	T9	T3	NoRel	true	dönüştü	açtı
+Relation	T9	T6	NoRel	true	dönüştü	etti

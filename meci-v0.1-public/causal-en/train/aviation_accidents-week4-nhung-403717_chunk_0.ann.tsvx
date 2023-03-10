@@ -1,0 +1,70 @@
+Text	The SPACE SHUTTLE _ CHALLENGER _ DISASTER was a fatal accident in the United States space program that occurred on January 28 , 1986 , when the ( OV - 099 ) broke apart 73 seconds into its flight , killing all seven crew members aboard ; it was the first fatal accident involving an American spacecraft in flight .	The mission carried the designation STS - 51- L and was the tenth flight for the _ Challenger _ orbiter and twenty - fifth flight of the Space Shuttle fleet .	The crew was scheduled to deploy a communications satellite and study Halley 's Comet while they were in orbit .	The spacecraft disintegrated over the Atlantic Ocean , off the coast of Cape Canaveral , Florida , at 11:39 a.m. EST ( 16:39 UTC ) .	The disaster was caused by the failure of the two redundant O - ring seals in a joint in the Space Shuttle 's right solid rocket booster ( SRB ) .
+Event	T0	SHUTTLE	EVENT	10
+Event	T1	accident	EVENT	54
+Event	T2	occurred	EVENT	103
+Event	T3	flight	EVENT	189
+Event	T4	killing	EVENT	198
+Event	T6	flight	EVENT	306
+Event	T7	carried	EVENT	327
+Event	T8	designation	EVENT	339
+Event	T9	flight	EVENT	381
+Event	T10	flight	EVENT	438
+Event	T11	scheduled	EVENT	487
+Event	T12	deploy	EVENT	500
+Event	T13	study	EVENT	538
+Event	T14	orbit	EVENT	579
+Event	T15	disintegrated	EVENT	602
+Event	T16	disaster	EVENT	724
+Event	T17	caused	EVENT	737
+Event	T18	failure	EVENT	751
+Event	T19	broke apart	EVENT	157
+Event	T5	accident	EVENT	261
+Relation	T1	T4	CauseEffect	true	accident	killing
+Relation	T4	T1	EffectCause	true	killing	accident
+Relation	T18	T16	CauseEffect	true	failure	disaster
+Relation	T16	T18	EffectCause	true	disaster	failure
+Relation	T0	T12	NoRel	true	SHUTTLE	deploy
+Relation	T0	T16	NoRel	true	SHUTTLE	disaster
+Relation	T0	T19	NoRel	true	SHUTTLE	broke apart
+Relation	T0	T6	NoRel	true	SHUTTLE	flight
+Relation	T1	T14	NoRel	true	accident	orbit
+Relation	T10	T12	NoRel	true	flight	deploy
+Relation	T10	T17	NoRel	true	flight	caused
+Relation	T11	T12	NoRel	true	scheduled	deploy
+Relation	T11	T19	NoRel	true	scheduled	broke apart
+Relation	T11	T5	NoRel	true	scheduled	accident
+Relation	T12	T10	NoRel	true	deploy	flight
+Relation	T12	T8	NoRel	true	deploy	designation
+Relation	T13	T17	NoRel	true	study	caused
+Relation	T13	T5	NoRel	true	study	accident
+Relation	T13	T9	NoRel	true	study	flight
+Relation	T14	T10	NoRel	true	orbit	flight
+Relation	T14	T12	NoRel	true	orbit	deploy
+Relation	T14	T16	NoRel	true	orbit	disaster
+Relation	T14	T18	NoRel	true	orbit	failure
+Relation	T14	T2	NoRel	true	orbit	occurred
+Relation	T14	T5	NoRel	true	orbit	accident
+Relation	T14	T7	NoRel	true	orbit	carried
+Relation	T15	T3	NoRel	true	disintegrated	flight
+Relation	T15	T4	NoRel	true	disintegrated	killing
+Relation	T16	T0	NoRel	true	disaster	SHUTTLE
+Relation	T16	T9	NoRel	true	disaster	flight
+Relation	T17	T11	NoRel	true	caused	scheduled
+Relation	T17	T14	NoRel	true	caused	orbit
+Relation	T17	T2	NoRel	true	caused	occurred
+Relation	T18	T0	NoRel	true	failure	SHUTTLE
+Relation	T18	T1	NoRel	true	failure	accident
+Relation	T19	T0	NoRel	true	broke apart	SHUTTLE
+Relation	T19	T8	NoRel	true	broke apart	designation
+Relation	T2	T12	NoRel	true	occurred	deploy
+Relation	T2	T16	NoRel	true	occurred	disaster
+Relation	T3	T11	NoRel	true	flight	scheduled
+Relation	T4	T8	NoRel	true	killing	designation
+Relation	T5	T18	NoRel	true	accident	failure
+Relation	T6	T12	NoRel	true	flight	deploy
+Relation	T6	T5	NoRel	true	flight	accident
+Relation	T7	T0	NoRel	true	carried	SHUTTLE
+Relation	T7	T14	NoRel	true	carried	orbit
+Relation	T8	T0	NoRel	true	designation	SHUTTLE
+Relation	T8	T16	NoRel	true	designation	disaster
+Relation	T8	T5	NoRel	true	designation	accident

@@ -1,0 +1,38 @@
+Text	El VUELO 181 EGYPTAIR ( MS181 / MSR181 ) fue un vuelo regular de pasajeros doméstico , que partió de Alejandría hacia El Cairo en Egipto .	El 29 de marzo de 2016 , el Airbus A320 que recorría esta ruta fue secuestrado por Seif Eldin Mustafa y desviado hacia el Aeropuerto Internacional de Larnaca , en Chipre .	Poco después del aterrizaje , la mayoría de los pasajeros y la tripulación fueron liberados por el captor , quién afirmaba llevar un cinturón de explosivos .	Mustafa se entregó siete horas más tarde , sin que nadie resultara herido en el incidente .	Se confirmó más tarde que el explosivo era falso .
+Event	T0	vuelo	EVENT	48
+Event	T1	partió	EVENT	91
+Event	T2	recorría	EVENT	183
+Event	T3	secuestrado	EVENT	206
+Event	T4	desviado	EVENT	243
+Event	T5	liberados	EVENT	393
+Event	T6	entregó	EVENT	480
+Event	T7	herido	EVENT	536
+Event	T8	incidente	EVENT	549
+Event	T9	confirmó	EVENT	564
+Event	T10	explosivo	EVENT	590
+Relation	T3	T5	CauseEffect	true	secuestrado	liberados
+Relation	T5	T3	EffectCause	true	liberados	secuestrado
+Relation	T0	T2	NoRel	true	vuelo	recorría
+Relation	T0	T4	NoRel	true	vuelo	desviado
+Relation	T0	T9	NoRel	true	vuelo	confirmó
+Relation	T10	T0	NoRel	true	explosivo	vuelo
+Relation	T10	T4	NoRel	true	explosivo	desviado
+Relation	T10	T9	NoRel	true	explosivo	confirmó
+Relation	T2	T1	NoRel	true	recorría	partió
+Relation	T3	T1	NoRel	true	secuestrado	partió
+Relation	T3	T10	NoRel	true	secuestrado	explosivo
+Relation	T3	T6	NoRel	true	secuestrado	entregó
+Relation	T4	T10	NoRel	true	desviado	explosivo
+Relation	T4	T2	NoRel	true	desviado	recorría
+Relation	T4	T7	NoRel	true	desviado	herido
+Relation	T5	T6	NoRel	true	liberados	entregó
+Relation	T5	T7	NoRel	true	liberados	herido
+Relation	T6	T2	NoRel	true	entregó	recorría
+Relation	T6	T4	NoRel	true	entregó	desviado
+Relation	T6	T7	NoRel	true	entregó	herido
+Relation	T7	T10	NoRel	true	herido	explosivo
+Relation	T8	T2	NoRel	true	incidente	recorría
+Relation	T8	T7	NoRel	true	incidente	herido
+Relation	T9	T10	NoRel	true	confirmó	explosivo
+Relation	T9	T4	NoRel	true	confirmó	desviado
+Relation	T9	T8	NoRel	true	confirmó	incidente

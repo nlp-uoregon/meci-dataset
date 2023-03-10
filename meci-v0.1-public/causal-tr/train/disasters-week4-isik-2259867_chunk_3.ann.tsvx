@@ -1,0 +1,58 @@
+Text	Bu ölçümden birkaç dakika sonra tekrar revize edilen depremin büyüklüğü 6.5 M _ ( w ) olarak güncellendi ve derinliğinin ise 5 km olduğu tespit edildi .	Deprem , körfezi kuzeyden sınırlayan K82D - 53GB eğimli normal fay üzerinde meydana geldi .	Bundan birkaç saat sonra ; yerel saatle 11:00'de basın açıklaması yapan Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü Genel Müdürü Prof. Dr. Haluk Özener , tekrar güncellenen veriler doğrultusunda depremin gerçek büyüklüğünün 6.6 M _ ( w ) olduğunu ve ölçülen şiddetin 7 ( VII - Çok şiddetli ) olduğunu açıkladı .	Deprem ; başta Kos Adası ile Bodrum'da oldukça şiddetli bir şekilde hissedildi .	Ayrıca , Muğla ve ilçeleri ile On İki Adalarda yine şiddetli bir şekilde , Aydın , Denizli , İzmir , Antalya , Manisa , Çanakkale , Atina ve Konya'ya kadar geniş bir alanda hissedildi .
+Event	T0	revize	EVENT	39
+Event	T1	güncellendi	EVENT	93
+Event	T2	edildi	EVENT	144
+Event	T3	Deprem	EVENT	153
+Event	T4	geldi	EVENT	237
+Event	T5	açıkladı	EVENT	553
+Event	T6	Deprem	EVENT	564
+Event	T7	hissedildi	EVENT	632
+Event	T8	hissedildi	EVENT	818
+Event	T9	ölçümden	EVENT	3
+Event	T10	açıklaması	EVENT	300
+Relation	T9	T0	CauseEffect	true	ölçümden	revize
+Relation	T0	T9	EffectCause	true	revize	ölçümden
+Relation	T9	T1	CauseEffect	true	ölçümden	güncellendi
+Relation	T1	T9	EffectCause	true	güncellendi	ölçümden
+Relation	T3	T10	CauseEffect	true	Deprem	açıklaması
+Relation	T10	T3	EffectCause	true	açıklaması	Deprem
+Relation	T10	T5	CauseEffect	true	açıklaması	açıkladı
+Relation	T5	T10	EffectCause	true	açıkladı	açıklaması
+Relation	T3	T7	CauseEffect	true	Deprem	hissedildi
+Relation	T7	T3	EffectCause	true	hissedildi	Deprem
+Relation	T6	T7	CauseEffect	true	Deprem	hissedildi
+Relation	T7	T6	EffectCause	true	hissedildi	Deprem
+Relation	T3	T8	CauseEffect	true	Deprem	hissedildi
+Relation	T8	T3	EffectCause	true	hissedildi	Deprem
+Relation	T0	T10	NoRel	true	revize	açıklaması
+Relation	T0	T2	NoRel	true	revize	edildi
+Relation	T1	T10	NoRel	true	güncellendi	açıklaması
+Relation	T1	T2	NoRel	true	güncellendi	edildi
+Relation	T1	T8	NoRel	true	güncellendi	hissedildi
+Relation	T10	T1	NoRel	true	açıklaması	güncellendi
+Relation	T10	T2	NoRel	true	açıklaması	edildi
+Relation	T10	T7	NoRel	true	açıklaması	hissedildi
+Relation	T2	T1	NoRel	true	edildi	güncellendi
+Relation	T2	T10	NoRel	true	edildi	açıklaması
+Relation	T2	T4	NoRel	true	edildi	geldi
+Relation	T2	T6	NoRel	true	edildi	Deprem
+Relation	T2	T9	NoRel	true	edildi	ölçümden
+Relation	T3	T2	NoRel	true	Deprem	edildi
+Relation	T3	T4	NoRel	true	Deprem	geldi
+Relation	T3	T9	NoRel	true	Deprem	ölçümden
+Relation	T4	T10	NoRel	true	geldi	açıklaması
+Relation	T4	T2	NoRel	true	geldi	edildi
+Relation	T4	T3	NoRel	true	geldi	Deprem
+Relation	T4	T5	NoRel	true	geldi	açıkladı
+Relation	T4	T7	NoRel	true	geldi	hissedildi
+Relation	T5	T1	NoRel	true	açıkladı	güncellendi
+Relation	T5	T7	NoRel	true	açıkladı	hissedildi
+Relation	T6	T0	NoRel	true	Deprem	revize
+Relation	T6	T9	NoRel	true	Deprem	ölçümden
+Relation	T7	T4	NoRel	true	hissedildi	geldi
+Relation	T8	T0	NoRel	true	hissedildi	revize
+Relation	T8	T1	NoRel	true	hissedildi	güncellendi
+Relation	T8	T6	NoRel	true	hissedildi	Deprem
+Relation	T8	T9	NoRel	true	hissedildi	ölçümden
+Relation	T9	T7	NoRel	true	ölçümden	hissedildi
+Relation	T9	T8	NoRel	true	ölçümden	hissedildi

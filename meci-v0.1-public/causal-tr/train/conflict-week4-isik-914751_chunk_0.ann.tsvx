@@ -1,0 +1,26 @@
+Text	küçükresim | Boğaz Şehitliği Komando Anıtı BOĞAZ ŞEHITLIĞI , Kıbrıs Harekâtı sonucunda ölen Türk Silahlı Kuvvetleri askerlerinin ( subay , astsubay , erbaş ve erler ) ve bazı Kıbrıslı Türk askerler anısına Türkiye tarafından yapılan Girne'deki mezarlık .	Mezarlıkta 301 TSK askeri ve ve 26 Kıbrıslı Türk askerin olmak üzere toplam 327 cenaze vardır .	Mezarı bulunan TSK askerlerinin 18'i subay , 15'i astsubay ve 264 erbaş ile erdir .	Ağustos 2002'de Güvenlik Kuvvetleri Komutanı Galip Mendi'nin girişimleri restore edilerek anıtsal bir yapı haline getirildi .	Boğaz Şehitliği için büyük bir Türk askeri , 4 aslan , 4 adet kompozisyon içeren anıtsal türden heykel ve 5 adet rölyef Marmara Üniversitesi Güzel Sanatlar Fakültesi'nde öğretim üyesi olan Tankut Öktem tarafından yapıldı .
+Event	T0	ölen	EVENT	87
+Event	T1	yapılan	EVENT	225
+Event	T2	restore	EVENT	508
+Event	T3	getirildi	EVENT	549
+Event	T4	yapıldı	EVENT	774
+Event	T5	Kıbrıs Harekâtı	EVENT	61
+Event	T6	girişimleri	EVENT	496
+Relation	T5	T0	CauseEffect	true	Kıbrıs Harekâtı	ölen
+Relation	T0	T5	EffectCause	true	ölen	Kıbrıs Harekâtı
+Relation	T0	T1	CauseEffect	true	ölen	yapılan
+Relation	T1	T0	EffectCause	true	yapılan	ölen
+Relation	T6	T2	CauseEffect	true	girişimleri	restore
+Relation	T2	T6	EffectCause	true	restore	girişimleri
+Relation	T2	T3	CauseEffect	true	restore	getirildi
+Relation	T3	T2	EffectCause	true	getirildi	restore
+Relation	T0	T4	NoRel	true	ölen	yapıldı
+Relation	T2	T0	NoRel	true	restore	ölen
+Relation	T2	T1	NoRel	true	restore	yapılan
+Relation	T2	T4	NoRel	true	restore	yapıldı
+Relation	T3	T0	NoRel	true	getirildi	ölen
+Relation	T3	T1	NoRel	true	getirildi	yapılan
+Relation	T4	T1	NoRel	true	yapıldı	yapılan
+Relation	T5	T6	NoRel	true	Kıbrıs Harekâtı	girişimleri
+Relation	T6	T0	NoRel	true	girişimleri	ölen
+Relation	T6	T3	NoRel	true	girişimleri	getirildi

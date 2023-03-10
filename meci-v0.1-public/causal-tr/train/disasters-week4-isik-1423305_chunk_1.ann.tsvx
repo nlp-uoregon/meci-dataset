@@ -1,0 +1,56 @@
+Text	Fay hattının bulunduğu kesimde milyonlarca yırtılma tespit edildi .	Illinois'daki ilk yer sarsıntısı 1795 yılında gerçekleşti .	Bu deprem küçük ölçekli bir sarsıntıya yol açtı ve fazla bir hasara neden olmadı .	1909 yılının mayıs ve temmuz aylarında orta ölçekli depremler yaşan bölge 1968 yılında da orta şiddetli bir yer sarsıntısıyla sallanmıştır .	Bu bölgede kayıtlara geçen depremlerin tarihleri sırası ile : 1838 , 1857 , 1876 , 1881 , 1882 , 1883 , 1887 , 1891 , 1903 , 1905 , 1912 , 1917 , 1922 , 1934 , 1939 , 1947 , 1953 , 1955 , ve 1958 depremleridir .
+Event	T0	edildi	EVENT	59
+Event	T1	sarsıntısı	EVENT	90
+Event	T2	gerçekleşti	EVENT	114
+Event	T3	deprem	EVENT	131
+Event	T4	açtı	EVENT	171
+Event	T5	sallanmıştır	EVENT	337
+Event	T6	depremleridir	EVENT	548
+Event	T7	Fay	EVENT	0
+Event	T8	olmadı	EVENT	202
+Event	T9	depremler	EVENT	263
+Event	T10	sarsıntısıyla	EVENT	323
+Event	T11	depremlerin	EVENT	379
+Relation	T7	T0	CauseEffect	true	Fay	edildi
+Relation	T0	T7	EffectCause	true	edildi	Fay
+Relation	T1	T2	CauseEffect	true	sarsıntısı	gerçekleşti
+Relation	T2	T1	EffectCause	true	gerçekleşti	sarsıntısı
+Relation	T3	T4	CauseEffect	true	deprem	açtı
+Relation	T4	T3	EffectCause	true	açtı	deprem
+Relation	T4	T8	CauseEffect	true	açtı	olmadı
+Relation	T8	T4	EffectCause	true	olmadı	açtı
+Relation	T10	T5	CauseEffect	true	sarsıntısıyla	sallanmıştır
+Relation	T5	T10	EffectCause	true	sallanmıştır	sarsıntısıyla
+Relation	T0	T9	NoRel	true	edildi	depremler
+Relation	T1	T3	NoRel	true	sarsıntısı	deprem
+Relation	T1	T4	NoRel	true	sarsıntısı	açtı
+Relation	T10	T1	NoRel	true	sarsıntısıyla	sarsıntısı
+Relation	T10	T7	NoRel	true	sarsıntısıyla	Fay
+Relation	T11	T6	NoRel	true	depremlerin	depremleridir
+Relation	T11	T9	NoRel	true	depremlerin	depremler
+Relation	T2	T0	NoRel	true	gerçekleşti	edildi
+Relation	T2	T10	NoRel	true	gerçekleşti	sarsıntısıyla
+Relation	T2	T3	NoRel	true	gerçekleşti	deprem
+Relation	T2	T9	NoRel	true	gerçekleşti	depremler
+Relation	T3	T0	NoRel	true	deprem	edildi
+Relation	T3	T1	NoRel	true	deprem	sarsıntısı
+Relation	T3	T5	NoRel	true	deprem	sallanmıştır
+Relation	T5	T0	NoRel	true	sallanmıştır	edildi
+Relation	T5	T3	NoRel	true	sallanmıştır	deprem
+Relation	T5	T6	NoRel	true	sallanmıştır	depremleridir
+Relation	T6	T0	NoRel	true	depremleridir	edildi
+Relation	T6	T11	NoRel	true	depremleridir	depremlerin
+Relation	T6	T2	NoRel	true	depremleridir	gerçekleşti
+Relation	T7	T10	NoRel	true	Fay	sarsıntısıyla
+Relation	T7	T6	NoRel	true	Fay	depremleridir
+Relation	T7	T8	NoRel	true	Fay	olmadı
+Relation	T7	T9	NoRel	true	Fay	depremler
+Relation	T8	T0	NoRel	true	olmadı	edildi
+Relation	T8	T10	NoRel	true	olmadı	sarsıntısıyla
+Relation	T8	T11	NoRel	true	olmadı	depremlerin
+Relation	T8	T2	NoRel	true	olmadı	gerçekleşti
+Relation	T8	T3	NoRel	true	olmadı	deprem
+Relation	T8	T6	NoRel	true	olmadı	depremleridir
+Relation	T8	T9	NoRel	true	olmadı	depremler
+Relation	T9	T10	NoRel	true	depremler	sarsıntısıyla
+Relation	T9	T5	NoRel	true	depremler	sallanmıştır

@@ -1,0 +1,69 @@
+Text	Cinco de los coches sin detonar fueron rociados con agua a alta presión para evitar más explosiones .	Treinta y seis horas después , aun había dos vagones que estaban ardiendo , con riesgos de explosión .	El tren de la tragedia se recuperó a alrededor de la hora 15:00 del 7 de julio , y el fuego fue finalmente extinguido por la tarde , después de casi dos días .	Cuarenta y dos cuerpos con quemaduras graves se encontraron hasta el momento y se transportaron a Montreal para ser identificados .	Es posible que algunas de las 5 personas desaparecidas se hayan vaporizado por las explosiones .
+Event	T0	rociados	EVENT	39
+Event	T1	explosiones	EVENT	88
+Event	T2	ardiendo	EVENT	167
+Event	T3	explosión	EVENT	193
+Event	T4	tragedia	EVENT	219
+Event	T5	recuperó	EVENT	231
+Event	T6	fuego	EVENT	291
+Event	T7	extinguido	EVENT	312
+Event	T8	encontraron	EVENT	413
+Event	T9	transportaron	EVENT	447
+Event	T10	identificados	EVENT	481
+Event	T11	desaparecidas	EVENT	538
+Event	T12	vaporizado	EVENT	561
+Event	T13	explosiones	EVENT	580
+Relation	T6	T8	CauseEffect	true	fuego	encontraron
+Relation	T8	T6	EffectCause	true	encontraron	fuego
+Relation	T13	T11	CauseEffect	true	explosiones	desaparecidas
+Relation	T11	T13	EffectCause	true	desaparecidas	explosiones
+Relation	T0	T12	NoRel	true	rociados	vaporizado
+Relation	T0	T3	NoRel	true	rociados	explosión
+Relation	T0	T5	NoRel	true	rociados	recuperó
+Relation	T0	T6	NoRel	true	rociados	fuego
+Relation	T0	T7	NoRel	true	rociados	extinguido
+Relation	T0	T8	NoRel	true	rociados	encontraron
+Relation	T0	T9	NoRel	true	rociados	transportaron
+Relation	T1	T11	NoRel	true	explosiones	desaparecidas
+Relation	T1	T4	NoRel	true	explosiones	tragedia
+Relation	T10	T0	NoRel	true	identificados	rociados
+Relation	T10	T3	NoRel	true	identificados	explosión
+Relation	T11	T10	NoRel	true	desaparecidas	identificados
+Relation	T11	T7	NoRel	true	desaparecidas	extinguido
+Relation	T11	T9	NoRel	true	desaparecidas	transportaron
+Relation	T12	T0	NoRel	true	vaporizado	rociados
+Relation	T12	T7	NoRel	true	vaporizado	extinguido
+Relation	T12	T9	NoRel	true	vaporizado	transportaron
+Relation	T13	T1	NoRel	true	explosiones	explosiones
+Relation	T13	T10	NoRel	true	explosiones	identificados
+Relation	T13	T12	NoRel	true	explosiones	vaporizado
+Relation	T13	T4	NoRel	true	explosiones	tragedia
+Relation	T13	T6	NoRel	true	explosiones	fuego
+Relation	T2	T12	NoRel	true	ardiendo	vaporizado
+Relation	T2	T13	NoRel	true	ardiendo	explosiones
+Relation	T2	T4	NoRel	true	ardiendo	tragedia
+Relation	T2	T8	NoRel	true	ardiendo	encontraron
+Relation	T3	T0	NoRel	true	explosión	rociados
+Relation	T3	T2	NoRel	true	explosión	ardiendo
+Relation	T3	T9	NoRel	true	explosión	transportaron
+Relation	T4	T0	NoRel	true	tragedia	rociados
+Relation	T4	T12	NoRel	true	tragedia	vaporizado
+Relation	T4	T13	NoRel	true	tragedia	explosiones
+Relation	T4	T2	NoRel	true	tragedia	ardiendo
+Relation	T4	T5	NoRel	true	tragedia	recuperó
+Relation	T4	T7	NoRel	true	tragedia	extinguido
+Relation	T5	T8	NoRel	true	recuperó	encontraron
+Relation	T5	T9	NoRel	true	recuperó	transportaron
+Relation	T6	T10	NoRel	true	fuego	identificados
+Relation	T6	T11	NoRel	true	fuego	desaparecidas
+Relation	T6	T2	NoRel	true	fuego	ardiendo
+Relation	T7	T11	NoRel	true	extinguido	desaparecidas
+Relation	T7	T12	NoRel	true	extinguido	vaporizado
+Relation	T8	T0	NoRel	true	encontraron	rociados
+Relation	T8	T4	NoRel	true	encontraron	tragedia
+Relation	T9	T0	NoRel	true	transportaron	rociados
+Relation	T9	T11	NoRel	true	transportaron	desaparecidas
+Relation	T9	T3	NoRel	true	transportaron	explosión
+Relation	T9	T4	NoRel	true	transportaron	tragedia
+Relation	T9	T7	NoRel	true	transportaron	extinguido
+Relation	T9	T8	NoRel	true	transportaron	encontraron

@@ -1,0 +1,55 @@
+Text	JERNBANEULYKKEN ANDRIA-CORATO indtraf 12. juli 2016 omkring kl 11:30. da to persontog kolliderede frontalt på en enkeltsporet dels trækning på jernbanen mellem Corato og Andria nær Bari i Apulien .	Banestykket var angiveligt under ombygning til dobbeltspor .	Sikring af togenes kørsel mellem stationerne angives at skulle ske telefonisk ved af- og tilbagemelding - stationsbestyrerne aftaler pr. telefon hvem der må afsende tog ; der findes så ikke teknisk sikring mod at tog afsendes mod hinanden .	Togene , to togsæt med hver fire vogne , tilhørte det private selskab Ferrotramviaria , der driver tog-_og bustrafik omkring Bari .	Ulykken skal bl.a. undersøges af den italienske jernbanehavarikommission Agenzia Nazionale per la Sicurezza delle Ferrovie_-_ANSF
+Event	T0	indtraf	EVENT	30
+Event	T1	kolliderede	EVENT	86
+Event	T10	driver	EVENT	592
+Event	T11	undersøges	EVENT	651
+Event	T3	ombygning	EVENT	231
+Event	T4	Sikring	EVENT	259
+Event	T5	kørsel	EVENT	278
+Event	T6	angives	EVENT	304
+Event	T7	aftaler	EVENT	384
+Event	T8	afsende	EVENT	416
+Event	T9	afsendes	EVENT	476
+Relation	T7	T4	CauseEffect	true	aftaler	Sikring
+Relation	T4	T7	EffectCause	true	Sikring	aftaler
+Relation	T3	T1	CauseEffect	true	ombygning	kolliderede
+Relation	T1	T3	EffectCause	true	kolliderede	ombygning
+Relation	T3	T0	CauseEffect	true	ombygning	indtraf
+Relation	T0	T3	EffectCause	true	indtraf	ombygning
+Relation	T0	T1	NoRel	true	indtraf	kolliderede
+Relation	T0	T8	NoRel	true	indtraf	afsende
+Relation	T1	T0	NoRel	true	kolliderede	indtraf
+Relation	T1	T10	NoRel	true	kolliderede	driver
+Relation	T1	T4	NoRel	true	kolliderede	Sikring
+Relation	T1	T5	NoRel	true	kolliderede	kørsel
+Relation	T1	T8	NoRel	true	kolliderede	afsende
+Relation	T10	T0	NoRel	true	driver	indtraf
+Relation	T10	T1	NoRel	true	driver	kolliderede
+Relation	T10	T4	NoRel	true	driver	Sikring
+Relation	T10	T5	NoRel	true	driver	kørsel
+Relation	T11	T1	NoRel	true	undersøges	kolliderede
+Relation	T11	T10	NoRel	true	undersøges	driver
+Relation	T11	T3	NoRel	true	undersøges	ombygning
+Relation	T11	T7	NoRel	true	undersøges	aftaler
+Relation	T11	T9	NoRel	true	undersøges	afsendes
+Relation	T3	T10	NoRel	true	ombygning	driver
+Relation	T3	T6	NoRel	true	ombygning	angives
+Relation	T3	T7	NoRel	true	ombygning	aftaler
+Relation	T3	T9	NoRel	true	ombygning	afsendes
+Relation	T4	T0	NoRel	true	Sikring	indtraf
+Relation	T4	T5	NoRel	true	Sikring	kørsel
+Relation	T4	T6	NoRel	true	Sikring	angives
+Relation	T5	T4	NoRel	true	kørsel	Sikring
+Relation	T5	T6	NoRel	true	kørsel	angives
+Relation	T5	T8	NoRel	true	kørsel	afsende
+Relation	T6	T0	NoRel	true	angives	indtraf
+Relation	T6	T10	NoRel	true	angives	driver
+Relation	T6	T8	NoRel	true	angives	afsende
+Relation	T7	T5	NoRel	true	aftaler	kørsel
+Relation	T8	T0	NoRel	true	afsende	indtraf
+Relation	T8	T1	NoRel	true	afsende	kolliderede
+Relation	T8	T5	NoRel	true	afsende	kørsel
+Relation	T8	T7	NoRel	true	afsende	aftaler
+Relation	T9	T0	NoRel	true	afsendes	indtraf
+Relation	T9	T4	NoRel	true	afsendes	Sikring
+Relation	T9	T7	NoRel	true	afsendes	aftaler

@@ -1,0 +1,41 @@
+Text	Klokken 07:03 tjekkede al-Ghamdi ind uden bagage , mens al-Nami indskrev med to tasker .	Klokken 07:24 tjekkede al-Haznawi ind med en taske , og klokken 07:39 tjekkede Ziad Jarrah ind uden bagage .	Al-Haznawi var den eneste af flykaprerne , der blev udvalgt til ekstra kontrol .	Hans indtjekkede taske undergik en ekstra scanning for sprængstoffer .	Ingen blandt sikkerhedspersonalet registrerede noget usædvanligt ved flykaprerne .
+Event	T0	tjekkede	EVENT	14
+Event	T1	indskrev	EVENT	64
+Event	T2	tjekkede	EVENT	103
+Event	T3	tjekkede	EVENT	159
+Event	T4	udvalgt	EVENT	250
+Event	T5	kontrol	EVENT	269
+Event	T6	indtjekkede	EVENT	284
+Event	T7	undergik	EVENT	302
+Event	T8	scanning	EVENT	321
+Event	T9	registrerede	EVENT	384
+Relation	T0	T2	CauseEffect	true	tjekkede	tjekkede
+Relation	T2	T0	EffectCause	true	tjekkede	tjekkede
+Relation	T2	T3	CauseEffect	true	tjekkede	tjekkede
+Relation	T3	T2	EffectCause	true	tjekkede	tjekkede
+Relation	T0	T3	NoRel	true	tjekkede	tjekkede
+Relation	T0	T9	NoRel	true	tjekkede	registrerede
+Relation	T1	T0	NoRel	true	indskrev	tjekkede
+Relation	T1	T4	NoRel	true	indskrev	udvalgt
+Relation	T1	T5	NoRel	true	indskrev	kontrol
+Relation	T1	T6	NoRel	true	indskrev	indtjekkede
+Relation	T1	T9	NoRel	true	indskrev	registrerede
+Relation	T2	T1	NoRel	true	tjekkede	indskrev
+Relation	T2	T4	NoRel	true	tjekkede	udvalgt
+Relation	T3	T5	NoRel	true	tjekkede	kontrol
+Relation	T3	T7	NoRel	true	tjekkede	undergik
+Relation	T4	T1	NoRel	true	udvalgt	indskrev
+Relation	T4	T8	NoRel	true	udvalgt	scanning
+Relation	T5	T3	NoRel	true	kontrol	tjekkede
+Relation	T5	T6	NoRel	true	kontrol	indtjekkede
+Relation	T5	T9	NoRel	true	kontrol	registrerede
+Relation	T6	T2	NoRel	true	indtjekkede	tjekkede
+Relation	T6	T3	NoRel	true	indtjekkede	tjekkede
+Relation	T7	T8	NoRel	true	undergik	scanning
+Relation	T8	T3	NoRel	true	scanning	tjekkede
+Relation	T8	T6	NoRel	true	scanning	indtjekkede
+Relation	T8	T7	NoRel	true	scanning	undergik
+Relation	T8	T9	NoRel	true	scanning	registrerede
+Relation	T9	T1	NoRel	true	registrerede	indskrev
+Relation	T9	T2	NoRel	true	registrerede	tjekkede
+Relation	T9	T8	NoRel	true	registrerede	scanning

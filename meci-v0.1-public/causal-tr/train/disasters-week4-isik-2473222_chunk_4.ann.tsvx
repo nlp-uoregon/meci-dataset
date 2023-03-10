@@ -1,0 +1,42 @@
+Text	Depremin ardından 300'den fazla artçı şok kaydedildi .	Kidapawan Şehrindeki bir otel depremden sonra çöktü ; ancak Ulusal Afet Riskini Azaltma ve Yönetim Konseyi'ne ( NDRRMC ) göre , deprem meydana geldiğinde binada kimse bulunmuyordu .	Makilala , Cotabato'da depremden etkilenenler yiyecek yardımı talebinde bulundular .	NDRRMC kayıtlarına göre depremlerden dolayı 30.000 hane ve 150.000 kişi etkilendi .	
+Event	T0	Depremin	EVENT	0
+Event	T1	kaydedildi	EVENT	42
+Event	T2	depremden	EVENT	85
+Event	T3	çöktü	EVENT	101
+Event	T5	kayıtlarına	EVENT	329
+Event	T6	depremlerden	EVENT	346
+Event	T7	etkilendi	EVENT	394
+Event	T4	bulundular	EVENT	309
+Event	T8	etkilenenler	EVENT	270
+Relation	T0	T1	CauseEffect	true	Depremin	kaydedildi
+Relation	T1	T0	EffectCause	true	kaydedildi	Depremin
+Relation	T0	T3	CauseEffect	true	Depremin	çöktü
+Relation	T3	T0	EffectCause	true	çöktü	Depremin
+Relation	T2	T3	CauseEffect	true	depremden	çöktü
+Relation	T3	T2	EffectCause	true	çöktü	depremden
+Relation	T0	T8	CauseEffect	true	Depremin	etkilenenler
+Relation	T8	T0	EffectCause	true	etkilenenler	Depremin
+Relation	T8	T4	CauseEffect	true	etkilenenler	bulundular
+Relation	T4	T8	EffectCause	true	bulundular	etkilenenler
+Relation	T0	T7	CauseEffect	true	Depremin	etkilendi
+Relation	T7	T0	EffectCause	true	etkilendi	Depremin
+Relation	T6	T7	CauseEffect	true	depremlerden	etkilendi
+Relation	T7	T6	EffectCause	true	etkilendi	depremlerden
+Relation	T0	T2	NoRel	true	Depremin	depremden
+Relation	T0	T6	NoRel	true	Depremin	depremlerden
+Relation	T1	T3	NoRel	true	kaydedildi	çöktü
+Relation	T2	T4	NoRel	true	depremden	bulundular
+Relation	T2	T5	NoRel	true	depremden	kayıtlarına
+Relation	T3	T5	NoRel	true	çöktü	kayıtlarına
+Relation	T4	T3	NoRel	true	bulundular	çöktü
+Relation	T4	T5	NoRel	true	bulundular	kayıtlarına
+Relation	T4	T7	NoRel	true	bulundular	etkilendi
+Relation	T5	T1	NoRel	true	kayıtlarına	kaydedildi
+Relation	T5	T2	NoRel	true	kayıtlarına	depremden
+Relation	T5	T4	NoRel	true	kayıtlarına	bulundular
+Relation	T5	T6	NoRel	true	kayıtlarına	depremlerden
+Relation	T5	T7	NoRel	true	kayıtlarına	etkilendi
+Relation	T6	T0	NoRel	true	depremlerden	Depremin
+Relation	T7	T1	NoRel	true	etkilendi	kaydedildi
+Relation	T7	T8	NoRel	true	etkilendi	etkilenenler
+Relation	T8	T2	NoRel	true	etkilenenler	depremden

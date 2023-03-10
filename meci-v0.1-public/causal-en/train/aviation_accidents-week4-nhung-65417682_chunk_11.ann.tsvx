@@ -1,0 +1,56 @@
+Text	In Kharkiv , citizens carried flowers and lanterns to the Ivan Kozhedub National Air Force University 's main building .	On the same day , Zelensky instructed to suspend the flights of all An - 26s and their analogues until the crash causes were clarified and to provide information on the technical condition of military equipment .	According to the Deputy Office of the President Oleh Tatarov , also on behalf of Zelensky , the Ministry of Internal Affairs must review defense contracts and strengthen control over the criminal investigation in the defense field for the purchase and maintenance of military equipment .	The Minister of Defense Andriy Taran has decided to pay one - time financial assistance in the amount of 1,576,000 UAH ( $ 56,285 ) to the families of the victims of the plane crash , which will be funded by the Ministry of Defense of Ukraine .	Condolences were expressed by the Orthodox Church of Ukraine head Metropolitan Epiphanius .
+Event	T0	carried	EVENT	22
+Event	T1	instructed	EVENT	148
+Event	T2	suspend	EVENT	162
+Event	T3	flights	EVENT	174
+Event	T5	clarified	EVENT	246
+Event	T6	review	EVENT	464
+Event	T7	investigation	EVENT	530
+Event	T8	purchase	EVENT	573
+Event	T9	maintenance	EVENT	586
+Event	T10	decided	EVENT	663
+Event	T11	pay	EVENT	674
+Event	T12	crash	EVENT	798
+Event	T13	funded	EVENT	820
+Event	T14	Condolences	EVENT	867
+Event	T15	expressed	EVENT	884
+Event	T16	crash	EVENT	228
+Event	T4	provide	EVENT	263
+Event	T17	strengthen	EVENT	493
+Relation	T16	T5	CauseEffect	true	crash	clarified
+Relation	T5	T16	EffectCause	true	clarified	crash
+Relation	T5	T4	CauseEffect	true	clarified	provide
+Relation	T4	T5	EffectCause	true	provide	clarified
+Relation	T12	T11	CauseEffect	true	crash	pay
+Relation	T11	T12	EffectCause	true	pay	crash
+Relation	T7	T8	CauseEffect	true	investigation	purchase
+Relation	T8	T7	EffectCause	true	purchase	investigation
+Relation	T10	T0	NoRel	true	decided	carried
+Relation	T10	T17	NoRel	true	decided	strengthen
+Relation	T10	T7	NoRel	true	decided	investigation
+Relation	T10	T8	NoRel	true	decided	purchase
+Relation	T11	T10	NoRel	true	pay	decided
+Relation	T11	T3	NoRel	true	pay	flights
+Relation	T12	T16	NoRel	true	crash	crash
+Relation	T13	T11	NoRel	true	funded	pay
+Relation	T15	T16	NoRel	true	expressed	crash
+Relation	T16	T6	NoRel	true	crash	review
+Relation	T16	T7	NoRel	true	crash	investigation
+Relation	T17	T1	NoRel	true	strengthen	instructed
+Relation	T17	T11	NoRel	true	strengthen	pay
+Relation	T17	T2	NoRel	true	strengthen	suspend
+Relation	T17	T8	NoRel	true	strengthen	purchase
+Relation	T2	T10	NoRel	true	suspend	decided
+Relation	T4	T10	NoRel	true	provide	decided
+Relation	T4	T13	NoRel	true	provide	funded
+Relation	T5	T11	NoRel	true	clarified	pay
+Relation	T5	T12	NoRel	true	clarified	crash
+Relation	T6	T12	NoRel	true	review	crash
+Relation	T6	T13	NoRel	true	review	funded
+Relation	T6	T8	NoRel	true	review	purchase
+Relation	T7	T0	NoRel	true	investigation	carried
+Relation	T7	T1	NoRel	true	investigation	instructed
+Relation	T7	T12	NoRel	true	investigation	crash
+Relation	T7	T5	NoRel	true	investigation	clarified
+Relation	T8	T0	NoRel	true	purchase	carried
+Relation	T9	T17	NoRel	true	maintenance	strengthen

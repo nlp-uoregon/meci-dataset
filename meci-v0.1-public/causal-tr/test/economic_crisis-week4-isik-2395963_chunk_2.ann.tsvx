@@ -1,0 +1,38 @@
+Text	1928 seçimlerinde halk desteğinin düştüğünü görüldü .	Parti başka bir seçime girmedi .	Nazilerin Almanya'da iktidara gelmesinden sonra 1933'te yasaklandı .	Başkan Lorenc - Zalěski gözaltına alındı ​​ve yazı yazma yasağına çarptırıldı .	2005 yılında aynı isimle yeni bir parti kuruldu ve 2010'da ismini Wend Halkının Partisi olarak değiştirdi .
+Event	T0	görüldü	EVENT	44
+Event	T1	girmedi	EVENT	77
+Event	T2	gelmesinden	EVENT	117
+Event	T3	yasaklandı	EVENT	143
+Event	T4	alındı	EVENT	190
+Event	T5	çarptırıldı	EVENT	222
+Event	T6	kuruldu	EVENT	276
+Event	T7	değiştirdi	EVENT	331
+Event	T8	seçimlerinde	EVENT	5
+Relation	T8	T0	CauseEffect	true	seçimlerinde	görüldü
+Relation	T0	T8	EffectCause	true	görüldü	seçimlerinde
+Relation	T0	T1	CauseEffect	true	görüldü	girmedi
+Relation	T1	T0	EffectCause	true	girmedi	görüldü
+Relation	T2	T3	CauseEffect	true	gelmesinden	yasaklandı
+Relation	T3	T2	EffectCause	true	yasaklandı	gelmesinden
+Relation	T0	T2	NoRel	true	görüldü	gelmesinden
+Relation	T0	T3	NoRel	true	görüldü	yasaklandı
+Relation	T0	T5	NoRel	true	görüldü	çarptırıldı
+Relation	T1	T3	NoRel	true	girmedi	yasaklandı
+Relation	T1	T6	NoRel	true	girmedi	kuruldu
+Relation	T2	T4	NoRel	true	gelmesinden	alındı
+Relation	T3	T1	NoRel	true	yasaklandı	girmedi
+Relation	T3	T5	NoRel	true	yasaklandı	çarptırıldı
+Relation	T3	T6	NoRel	true	yasaklandı	kuruldu
+Relation	T3	T7	NoRel	true	yasaklandı	değiştirdi
+Relation	T3	T8	NoRel	true	yasaklandı	seçimlerinde
+Relation	T4	T1	NoRel	true	alındı	girmedi
+Relation	T4	T2	NoRel	true	alındı	gelmesinden
+Relation	T4	T7	NoRel	true	alındı	değiştirdi
+Relation	T4	T8	NoRel	true	alındı	seçimlerinde
+Relation	T5	T0	NoRel	true	çarptırıldı	görüldü
+Relation	T5	T4	NoRel	true	çarptırıldı	alındı
+Relation	T5	T6	NoRel	true	çarptırıldı	kuruldu
+Relation	T5	T8	NoRel	true	çarptırıldı	seçimlerinde
+Relation	T6	T1	NoRel	true	kuruldu	girmedi
+Relation	T6	T4	NoRel	true	kuruldu	alındı
+Relation	T6	T8	NoRel	true	kuruldu	seçimlerinde

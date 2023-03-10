@@ -1,0 +1,15 @@
+Text	Antik Çağlar'dan itibaren tanınmış bir hastalıktır .	Lakabı " Kara Ölüm"dür .	Orta Çağ'da 1347- 1353 arasında , Avrupa nüfusunun üçte birinin kaybedilmesinden sorumludur .	( Ayrıca bu hastalık 1347- 1348 yılları arasında Venedik nüfusu 130.000 iken 70.000'e düşmesine neden olmuştur .	) Modern antibiyotiklerle tedavi edilebilir .
+Event	T0	tanınmış	EVENT	26
+Event	T1	hastalık	EVENT	184
+Event	T2	kaybedilmesinden	EVENT	142
+Event	T3	olmuştur	EVENT	274
+Event	T4	düşmesine	EVENT	258
+Relation	T1	T4	CauseEffect	true	hastalık	düşmesine
+Relation	T4	T1	EffectCause	true	düşmesine	hastalık
+Relation	T1	T2	NoRel	true	hastalık	kaybedilmesinden
+Relation	T1	T3	NoRel	true	hastalık	olmuştur
+Relation	T2	T0	NoRel	true	kaybedilmesinden	tanınmış
+Relation	T2	T1	NoRel	true	kaybedilmesinden	hastalık
+Relation	T2	T3	NoRel	true	kaybedilmesinden	olmuştur
+Relation	T3	T0	NoRel	true	olmuştur	tanınmış
+Relation	T4	T2	NoRel	true	düşmesine	kaybedilmesinden

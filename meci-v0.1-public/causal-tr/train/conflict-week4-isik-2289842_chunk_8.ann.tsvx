@@ -1,0 +1,68 @@
+Text	610'da Nicetas , yardımıyla seçilen İskenderiye Patrik'i İoannis Almsgiver'in yardımıyla eyaleti ele geçirerek , bir güç_üssü kurmayı başardı .	Yeni imparator olacak genç Herakleios tarafından yönetilen ana isyan kuvveti , Konstantinopolis'un denizden istilası ile görevlendirildi .	Herakleios'a karşı örgütlü direnme kısa süre çöktü ve Phocas , Patrici Probos ( Photius ) tarafından ona teslim alındı .	Phocas idam edildi , ancak bundan hemen önce kendisiyle halefi arasındaki ünlü görüşme oldu :	Yaşlı Herakleios , kaynaklardan kısa süre sonra kaybolur , ölüm tarihi belirsiz olmasına rağmen öldüğü tahmin edilmektedir .
+Event	T0	başardı	EVENT	134
+Event	T1	istilası	EVENT	252
+Event	T2	görevlendirildi	EVENT	265
+Event	T3	direnme	EVENT	310
+Event	T4	çöktü	EVENT	328
+Event	T5	alındı	EVENT	395
+Event	T6	edildi	EVENT	416
+Event	T7	kaybolur	EVENT	546
+Event	T8	ölüm	EVENT	557
+Event	T9	seçilen	EVENT	28
+Event	T10	geçirerek	EVENT	101
+Event	T11	yönetilen	EVENT	193
+Event	T12	görüşme	EVENT	483
+Relation	T10	T0	CauseEffect	true	geçirerek	başardı
+Relation	T0	T10	EffectCause	true	başardı	geçirerek
+Relation	T5	T6	CauseEffect	true	alındı	edildi
+Relation	T6	T5	EffectCause	true	edildi	alındı
+Relation	T4	T5	CauseEffect	true	çöktü	alındı
+Relation	T5	T4	EffectCause	true	alındı	çöktü
+Relation	T0	T1	NoRel	true	başardı	istilası
+Relation	T0	T11	NoRel	true	başardı	yönetilen
+Relation	T0	T12	NoRel	true	başardı	görüşme
+Relation	T0	T2	NoRel	true	başardı	görevlendirildi
+Relation	T0	T3	NoRel	true	başardı	direnme
+Relation	T0	T7	NoRel	true	başardı	kaybolur
+Relation	T0	T9	NoRel	true	başardı	seçilen
+Relation	T1	T2	NoRel	true	istilası	görevlendirildi
+Relation	T1	T4	NoRel	true	istilası	çöktü
+Relation	T1	T8	NoRel	true	istilası	ölüm
+Relation	T10	T11	NoRel	true	geçirerek	yönetilen
+Relation	T10	T4	NoRel	true	geçirerek	çöktü
+Relation	T10	T8	NoRel	true	geçirerek	ölüm
+Relation	T11	T1	NoRel	true	yönetilen	istilası
+Relation	T11	T10	NoRel	true	yönetilen	geçirerek
+Relation	T11	T12	NoRel	true	yönetilen	görüşme
+Relation	T11	T2	NoRel	true	yönetilen	görevlendirildi
+Relation	T12	T0	NoRel	true	görüşme	başardı
+Relation	T12	T2	NoRel	true	görüşme	görevlendirildi
+Relation	T12	T6	NoRel	true	görüşme	edildi
+Relation	T2	T0	NoRel	true	görevlendirildi	başardı
+Relation	T2	T11	NoRel	true	görevlendirildi	yönetilen
+Relation	T2	T4	NoRel	true	görevlendirildi	çöktü
+Relation	T2	T5	NoRel	true	görevlendirildi	alındı
+Relation	T3	T12	NoRel	true	direnme	görüşme
+Relation	T4	T10	NoRel	true	çöktü	geçirerek
+Relation	T4	T2	NoRel	true	çöktü	görevlendirildi
+Relation	T5	T0	NoRel	true	alındı	başardı
+Relation	T5	T10	NoRel	true	alındı	geçirerek
+Relation	T5	T11	NoRel	true	alındı	yönetilen
+Relation	T5	T3	NoRel	true	alındı	direnme
+Relation	T5	T8	NoRel	true	alındı	ölüm
+Relation	T5	T9	NoRel	true	alındı	seçilen
+Relation	T6	T11	NoRel	true	edildi	yönetilen
+Relation	T6	T9	NoRel	true	edildi	seçilen
+Relation	T7	T0	NoRel	true	kaybolur	başardı
+Relation	T7	T11	NoRel	true	kaybolur	yönetilen
+Relation	T7	T8	NoRel	true	kaybolur	ölüm
+Relation	T8	T1	NoRel	true	ölüm	istilası
+Relation	T8	T3	NoRel	true	ölüm	direnme
+Relation	T8	T6	NoRel	true	ölüm	edildi
+Relation	T8	T9	NoRel	true	ölüm	seçilen
+Relation	T9	T0	NoRel	true	seçilen	başardı
+Relation	T9	T10	NoRel	true	seçilen	geçirerek
+Relation	T9	T3	NoRel	true	seçilen	direnme
+Relation	T9	T5	NoRel	true	seçilen	alındı
+Relation	T9	T6	NoRel	true	seçilen	edildi
+Relation	T9	T7	NoRel	true	seçilen	kaybolur

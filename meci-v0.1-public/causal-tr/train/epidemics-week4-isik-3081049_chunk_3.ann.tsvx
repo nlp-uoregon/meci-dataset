@@ -1,0 +1,61 @@
+Text	Bölgedeki benzer hastalık semptomlarına sahip 37 köylü üzerinde yapılan ilave laboratuvar testleri sonucunda , hastalığın nihayet 15 Haziran'da kızamık olduğu doğrulandı .	Malezya Sağlık Bakanlığı , Orang Aslı topluluğu arasındaki yayılmanın nedeninin , göçebe yaşam tarzına sahip topluluklar arasında nispeten düşük aşılama oranına atfedilen MMR aşılama kapsamının düşük olmasından kaynaklandığını söyledi .	Sağlık Bakanı Dzulkefly Ahmad , köylülerin % 61 , 5'inin ilk kızamık , kabakulak ve kızamıkçık ( MMR ) aşılarını olmalarına rağmen , sadece % 30'unun devam aşılarını yaptırdığını açıkladı .	Salgının duyurulmasından bu yana , etkilenen bölgede toplam 43 onaylanmış vaka ile 113 vaka bildirildi .	Sağlık Bakanlığı'nın bulgularına göre bildirilen nispeten düşük ölüm oranlarına rağmen , Sağlık Bakanlığı , birkaç kurbanın daha iskelet kalıntılarına ilişkin otopsi sonuçlarını doğrulayamadı .
+Event	T0	testleri	EVENT	90
+Event	T1	doğrulandı	EVENT	159
+Event	T2	yayılmanın	EVENT	231
+Event	T3	söyledi	EVENT	399
+Event	T4	açıkladı	EVENT	588
+Event	T5	duyurulmasından	EVENT	608
+Event	T6	bildirildi	EVENT	691
+Event	T7	bildirilen	EVENT	742
+Event	T8	ölüm	EVENT	768
+Event	T9	otopsi	EVENT	863
+Event	T10	doğrulayamadı	EVENT	882
+Event	T11	olmasından	EVENT	372
+Relation	T0	T1	CauseEffect	true	testleri	doğrulandı
+Relation	T1	T0	EffectCause	true	doğrulandı	testleri
+Relation	T11	T2	CauseEffect	true	olmasından	yayılmanın
+Relation	T2	T11	EffectCause	true	yayılmanın	olmasından
+Relation	T0	T10	NoRel	true	testleri	doğrulayamadı
+Relation	T0	T11	NoRel	true	testleri	olmasından
+Relation	T0	T2	NoRel	true	testleri	yayılmanın
+Relation	T0	T6	NoRel	true	testleri	bildirildi
+Relation	T0	T7	NoRel	true	testleri	bildirilen
+Relation	T1	T7	NoRel	true	doğrulandı	bildirilen
+Relation	T1	T8	NoRel	true	doğrulandı	ölüm
+Relation	T10	T0	NoRel	true	doğrulayamadı	testleri
+Relation	T10	T1	NoRel	true	doğrulayamadı	doğrulandı
+Relation	T10	T3	NoRel	true	doğrulayamadı	söyledi
+Relation	T10	T4	NoRel	true	doğrulayamadı	açıkladı
+Relation	T10	T6	NoRel	true	doğrulayamadı	bildirildi
+Relation	T10	T9	NoRel	true	doğrulayamadı	otopsi
+Relation	T11	T0	NoRel	true	olmasından	testleri
+Relation	T11	T10	NoRel	true	olmasından	doğrulayamadı
+Relation	T11	T6	NoRel	true	olmasından	bildirildi
+Relation	T11	T8	NoRel	true	olmasından	ölüm
+Relation	T2	T1	NoRel	true	yayılmanın	doğrulandı
+Relation	T2	T4	NoRel	true	yayılmanın	açıkladı
+Relation	T2	T6	NoRel	true	yayılmanın	bildirildi
+Relation	T2	T7	NoRel	true	yayılmanın	bildirilen
+Relation	T3	T0	NoRel	true	söyledi	testleri
+Relation	T3	T10	NoRel	true	söyledi	doğrulayamadı
+Relation	T3	T9	NoRel	true	söyledi	otopsi
+Relation	T4	T10	NoRel	true	açıkladı	doğrulayamadı
+Relation	T4	T8	NoRel	true	açıkladı	ölüm
+Relation	T5	T10	NoRel	true	duyurulmasından	doğrulayamadı
+Relation	T5	T11	NoRel	true	duyurulmasından	olmasından
+Relation	T5	T2	NoRel	true	duyurulmasından	yayılmanın
+Relation	T5	T7	NoRel	true	duyurulmasından	bildirilen
+Relation	T5	T8	NoRel	true	duyurulmasından	ölüm
+Relation	T6	T11	NoRel	true	bildirildi	olmasından
+Relation	T7	T0	NoRel	true	bildirilen	testleri
+Relation	T7	T1	NoRel	true	bildirilen	doğrulandı
+Relation	T7	T10	NoRel	true	bildirilen	doğrulayamadı
+Relation	T7	T3	NoRel	true	bildirilen	söyledi
+Relation	T7	T6	NoRel	true	bildirilen	bildirildi
+Relation	T7	T9	NoRel	true	bildirilen	otopsi
+Relation	T8	T0	NoRel	true	ölüm	testleri
+Relation	T9	T11	NoRel	true	otopsi	olmasından
+Relation	T9	T3	NoRel	true	otopsi	söyledi
+Relation	T9	T6	NoRel	true	otopsi	bildirildi
+Relation	T9	T7	NoRel	true	otopsi	bildirilen
+Relation	T9	T8	NoRel	true	otopsi	ölüm

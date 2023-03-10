@@ -1,0 +1,69 @@
+Text	اس کارروائی میں نیٹو فوجوں نے ہوائی طاقت کا بےشمار استعمال کرتے ہوئے فرضی دہشت گردوں کو نشانہ بناتے ہوئے انگنت بم افغانستان کے علاقہ پر گرائے ۔	افغانستان میں امریکی اور نیٹو فوج انوکھے انداز سے جنگ لڑ رہی ہے ۔	اگر امریکی فوجی فائرنگ کی زد میں آ جائیں تو فوراً بمبار لڑاکا ہوائی جہازوں کی مدد مانگ لیتے ہیں ۔	لڑاکا جہاز سارے علاقے پر اندھا_دھند بمباری کر کے سینکڑوں رہائشیوں کو ہلاک کر دیتے ہیں ۔	ویڈٰیو گیم کی طرح لوگوں کو فضا سے نشانہ بنا کر قتل کیا جا رہا ہے ۔
+Event	T0	کارروائی	EVENT	3
+Event	T1	استعمال	EVENT	51
+Event	T2	بناتے	EVENT	94
+Event	T3	گرائے	EVENT	136
+Event	T5	فائرنگ	EVENT	226
+Event	T6	ہلاک	EVENT	377
+Event	T8	گیم	EVENT	403
+Event	T9	بنا	EVENT	436
+Event	T10	قتل	EVENT	443
+Event	T11	جنگ	EVENT	194
+Event	T4	مانگ	EVENT	292
+Event	T12	بمباری	EVENT	344
+Relation	T0	T3	CauseEffect	true	کارروائی	گرائے
+Relation	T3	T0	EffectCause	true	گرائے	کارروائی
+Relation	T5	T4	CauseEffect	true	فائرنگ	مانگ
+Relation	T4	T5	EffectCause	true	مانگ	فائرنگ
+Relation	T12	T6	CauseEffect	true	بمباری	ہلاک
+Relation	T6	T12	EffectCause	true	ہلاک	بمباری
+Relation	T0	T4	NoRel	true	کارروائی	مانگ
+Relation	T0	T9	NoRel	true	کارروائی	بنا
+Relation	T1	T11	NoRel	true	استعمال	جنگ
+Relation	T1	T2	NoRel	true	استعمال	بناتے
+Relation	T10	T0	NoRel	true	قتل	کارروائی
+Relation	T10	T2	NoRel	true	قتل	بناتے
+Relation	T11	T12	NoRel	true	جنگ	بمباری
+Relation	T11	T2	NoRel	true	جنگ	بناتے
+Relation	T11	T4	NoRel	true	جنگ	مانگ
+Relation	T12	T0	NoRel	true	بمباری	کارروائی
+Relation	T12	T11	NoRel	true	بمباری	جنگ
+Relation	T12	T2	NoRel	true	بمباری	بناتے
+Relation	T12	T3	NoRel	true	بمباری	گرائے
+Relation	T12	T5	NoRel	true	بمباری	فائرنگ
+Relation	T12	T8	NoRel	true	بمباری	گیم
+Relation	T2	T1	NoRel	true	بناتے	استعمال
+Relation	T2	T12	NoRel	true	بناتے	بمباری
+Relation	T2	T4	NoRel	true	بناتے	مانگ
+Relation	T2	T5	NoRel	true	بناتے	فائرنگ
+Relation	T2	T9	NoRel	true	بناتے	بنا
+Relation	T3	T10	NoRel	true	گرائے	قتل
+Relation	T3	T11	NoRel	true	گرائے	جنگ
+Relation	T3	T12	NoRel	true	گرائے	بمباری
+Relation	T3	T4	NoRel	true	گرائے	مانگ
+Relation	T3	T5	NoRel	true	گرائے	فائرنگ
+Relation	T3	T9	NoRel	true	گرائے	بنا
+Relation	T4	T0	NoRel	true	مانگ	کارروائی
+Relation	T4	T1	NoRel	true	مانگ	استعمال
+Relation	T4	T11	NoRel	true	مانگ	جنگ
+Relation	T4	T12	NoRel	true	مانگ	بمباری
+Relation	T4	T3	NoRel	true	مانگ	گرائے
+Relation	T4	T8	NoRel	true	مانگ	گیم
+Relation	T5	T0	NoRel	true	فائرنگ	کارروائی
+Relation	T5	T1	NoRel	true	فائرنگ	استعمال
+Relation	T5	T12	NoRel	true	فائرنگ	بمباری
+Relation	T5	T2	NoRel	true	فائرنگ	بناتے
+Relation	T5	T3	NoRel	true	فائرنگ	گرائے
+Relation	T5	T8	NoRel	true	فائرنگ	گیم
+Relation	T5	T9	NoRel	true	فائرنگ	بنا
+Relation	T6	T1	NoRel	true	ہلاک	استعمال
+Relation	T6	T10	NoRel	true	ہلاک	قتل
+Relation	T6	T2	NoRel	true	ہلاک	بناتے
+Relation	T6	T8	NoRel	true	ہلاک	گیم
+Relation	T8	T12	NoRel	true	گیم	بمباری
+Relation	T8	T4	NoRel	true	گیم	مانگ
+Relation	T8	T9	NoRel	true	گیم	بنا
+Relation	T9	T11	NoRel	true	بنا	جنگ
+Relation	T9	T2	NoRel	true	بنا	بناتے
+Relation	T9	T4	NoRel	true	بنا	مانگ
+Relation	T9	T5	NoRel	true	بنا	فائرنگ

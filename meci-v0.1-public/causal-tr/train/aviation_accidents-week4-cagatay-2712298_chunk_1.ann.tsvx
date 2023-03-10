@@ -1,0 +1,47 @@
+Text	Uçak saat 10.20'ye kadar Domodedovo'dan kalkmadı ve 15.52'de duraklama noktası olan Omsk Havalimanı'na geldi .	Uçağın daha sonra Almatı'ya yapılacak kısa bir uçuş için Omsk'tan kalkması gerekiyordu .	Aynı zamanda , Kazakistan Sivil Havacılık Dairesi Başkanı R. Azakov başka bir Mil Mi- 4 kazasını araştırmaktan yeni dönüyordu ve yolculuğun bir sonraki ayağında İl - 18 mürettebatını gözlemledi .	Almatı Havalimanı'ndaki görüş mesafesi 1. 000 metreden ( 3.300_ft ) az olduğu için uçuş 2 saat 28 dakika ertelendi .	Almatı Havalimanı , görüş mesafesinin düşük olmasından dolayı güvenlik nedeniyle kapanmıştı .
+Event	T1	geldi	EVENT	103
+Event	T2	uçuş	EVENT	158
+Event	T3	kalkması	EVENT	177
+Event	T4	araştırmaktan	EVENT	297
+Event	T5	dönüyordu	EVENT	316
+Event	T6	gözlemledi	EVENT	383
+Event	T7	uçuş	EVENT	479
+Event	T8	ertelendi	EVENT	501
+Event	T9	kapanmıştı	EVENT	594
+Event	T10	kazasını	EVENT	288
+Event	T11	yolculuğun	EVENT	329
+Relation	T2	T3	CauseEffect	true	uçuş	kalkması
+Relation	T3	T2	EffectCause	true	kalkması	uçuş
+Relation	T10	T4	CauseEffect	true	kazasını	araştırmaktan
+Relation	T4	T10	EffectCause	true	araştırmaktan	kazasını
+Relation	T9	T8	CauseEffect	true	kapanmıştı	ertelendi
+Relation	T8	T9	EffectCause	true	ertelendi	kapanmıştı
+Relation	T1	T10	NoRel	true	geldi	kazasını
+Relation	T1	T2	NoRel	true	geldi	uçuş
+Relation	T1	T5	NoRel	true	geldi	dönüyordu
+Relation	T1	T8	NoRel	true	geldi	ertelendi
+Relation	T1	T9	NoRel	true	geldi	kapanmıştı
+Relation	T10	T11	NoRel	true	kazasını	yolculuğun
+Relation	T10	T6	NoRel	true	kazasını	gözlemledi
+Relation	T11	T1	NoRel	true	yolculuğun	geldi
+Relation	T11	T4	NoRel	true	yolculuğun	araştırmaktan
+Relation	T11	T7	NoRel	true	yolculuğun	uçuş
+Relation	T11	T9	NoRel	true	yolculuğun	kapanmıştı
+Relation	T2	T10	NoRel	true	uçuş	kazasını
+Relation	T2	T11	NoRel	true	uçuş	yolculuğun
+Relation	T2	T4	NoRel	true	uçuş	araştırmaktan
+Relation	T2	T5	NoRel	true	uçuş	dönüyordu
+Relation	T2	T8	NoRel	true	uçuş	ertelendi
+Relation	T3	T11	NoRel	true	kalkması	yolculuğun
+Relation	T3	T4	NoRel	true	kalkması	araştırmaktan
+Relation	T3	T9	NoRel	true	kalkması	kapanmıştı
+Relation	T4	T3	NoRel	true	araştırmaktan	kalkması
+Relation	T4	T5	NoRel	true	araştırmaktan	dönüyordu
+Relation	T5	T7	NoRel	true	dönüyordu	uçuş
+Relation	T5	T9	NoRel	true	dönüyordu	kapanmıştı
+Relation	T7	T5	NoRel	true	uçuş	dönüyordu
+Relation	T8	T1	NoRel	true	ertelendi	geldi
+Relation	T8	T4	NoRel	true	ertelendi	araştırmaktan
+Relation	T9	T3	NoRel	true	kapanmıştı	kalkması
+Relation	T9	T5	NoRel	true	kapanmıştı	dönüyordu
+Relation	T9	T7	NoRel	true	kapanmıştı	uçuş

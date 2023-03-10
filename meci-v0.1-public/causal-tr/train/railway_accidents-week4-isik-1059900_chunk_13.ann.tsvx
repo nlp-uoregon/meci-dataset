@@ -1,0 +1,45 @@
+Text	indiatimes. com / news / news - by - industry / transportation / railways / Trains - collide - in - dense - fog - in - Uttar- Pradesh / articleshow / 5404290 .	cms Trains collide in dense fog in Uttar_Pradesh The Economic Times 4 Ocak 2010	http : / / www. google . com / hosted news / afp / article / ALeqM5j1xL6 - j0Zlckb6UVmFvNJlSkTpFA 10 die as trains collide in fog - bound northern India Google News 4 Ocak 2010	http : / / www.	washingtonpost. com / wp - dyn / content / article / 2010 / 01 / 02 / AR2010010200133 .html 5 dead , 50 injured in train accidents in India Washington Post 4 Ocak 2010
+Event	T0	collide	EVENT	85
+Event	T1	fog	EVENT	188
+Event	T2	die	EVENT	341
+Event	T3	dead	EVENT	527
+Event	T4	injured	EVENT	537
+Event	T5	accidents	EVENT	554
+Event	T6	fog	EVENT	108
+Event	T7	collide	EVENT	171
+Event	T8	collide	EVENT	355
+Event	T9	fog	EVENT	366
+Relation	T6	T0	CauseEffect	true	fog	collide
+Relation	T0	T6	EffectCause	true	collide	fog
+Relation	T1	T7	CauseEffect	true	fog	collide
+Relation	T7	T1	EffectCause	true	collide	fog
+Relation	T9	T8	CauseEffect	true	fog	collide
+Relation	T8	T9	EffectCause	true	collide	fog
+Relation	T8	T2	CauseEffect	true	collide	die
+Relation	T2	T8	EffectCause	true	die	collide
+Relation	T5	T4	CauseEffect	true	accidents	injured
+Relation	T4	T5	EffectCause	true	injured	accidents
+Relation	T5	T3	CauseEffect	true	accidents	dead
+Relation	T3	T5	EffectCause	true	dead	accidents
+Relation	T0	T7	NoRel	true	collide	collide
+Relation	T1	T2	NoRel	true	fog	die
+Relation	T1	T8	NoRel	true	fog	collide
+Relation	T2	T0	NoRel	true	die	collide
+Relation	T2	T6	NoRel	true	die	fog
+Relation	T2	T7	NoRel	true	die	collide
+Relation	T3	T0	NoRel	true	dead	collide
+Relation	T3	T1	NoRel	true	dead	fog
+Relation	T4	T6	NoRel	true	injured	fog
+Relation	T4	T7	NoRel	true	injured	collide
+Relation	T4	T9	NoRel	true	injured	fog
+Relation	T5	T1	NoRel	true	accidents	fog
+Relation	T5	T7	NoRel	true	accidents	collide
+Relation	T5	T9	NoRel	true	accidents	fog
+Relation	T6	T3	NoRel	true	fog	dead
+Relation	T6	T5	NoRel	true	fog	accidents
+Relation	T7	T4	NoRel	true	collide	injured
+Relation	T8	T4	NoRel	true	collide	injured
+Relation	T8	T5	NoRel	true	collide	accidents
+Relation	T8	T6	NoRel	true	collide	fog
+Relation	T9	T0	NoRel	true	fog	collide
+Relation	T9	T7	NoRel	true	fog	collide

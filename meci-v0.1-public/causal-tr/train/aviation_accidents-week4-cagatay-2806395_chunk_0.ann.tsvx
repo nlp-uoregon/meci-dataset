@@ -1,0 +1,66 @@
+Text	15 Temmuz 2020'de Emniyet Genel Müdürlüğü tarafından işletilen bir Super King Air 350i uçağı , Van Ferit Melen Havalimanı'nın güneybatısında Artos Dağı'nda düştü .	Uçak bir inceleme , araştırma uçuşu gerçekleştiriyordu .	Uçaktaki 2 mürettebat ve 5 yolcunun tamamı kaza sonucunda öldü .	İlk uçuşunu 2015'te yapan ve EM - 809 kuyruk numaralı Super King Air 350i ( üretici seri numarası FL - 896 ) , Emniyet Genel Müdürlüğü tarafından işletiliyordu .	Uçak ; bir inceleme , araştırma uçuşu için yerel saatle ( UDAS ) 18.34'te Van Ferit Melen Havalimanı'ndan kalkış yaptı .
+Event	T0	işletilen	EVENT	53
+Event	T1	düştü	EVENT	156
+Event	T2	inceleme	EVENT	173
+Event	T4	öldü	EVENT	279
+Event	T5	uçuşunu	EVENT	290
+Event	T6	yapan	EVENT	306
+Event	T7	işletiliyordu	EVENT	432
+Event	T8	inceleme	EVENT	459
+Event	T9	uçuşu	EVENT	480
+Event	T11	araştırma	EVENT	184
+Event	T12	uçuşu	EVENT	194
+Event	T3	kaza	EVENT	264
+Event	T13	araştırma	EVENT	470
+Event	T14	kalkış	EVENT	554
+Relation	T1	T3	CauseEffect	true	düştü	kaza
+Relation	T3	T1	EffectCause	true	kaza	düştü
+Relation	T3	T4	CauseEffect	true	kaza	öldü
+Relation	T4	T3	EffectCause	true	öldü	kaza
+Relation	T0	T1	NoRel	true	işletilen	düştü
+Relation	T0	T11	NoRel	true	işletilen	araştırma
+Relation	T0	T12	NoRel	true	işletilen	uçuşu
+Relation	T0	T2	NoRel	true	işletilen	inceleme
+Relation	T0	T6	NoRel	true	işletilen	yapan
+Relation	T1	T0	NoRel	true	düştü	işletilen
+Relation	T1	T2	NoRel	true	düştü	inceleme
+Relation	T1	T5	NoRel	true	düştü	uçuşunu
+Relation	T11	T1	NoRel	true	araştırma	düştü
+Relation	T11	T2	NoRel	true	araştırma	inceleme
+Relation	T11	T4	NoRel	true	araştırma	öldü
+Relation	T11	T6	NoRel	true	araştırma	yapan
+Relation	T11	T7	NoRel	true	araştırma	işletiliyordu
+Relation	T11	T9	NoRel	true	araştırma	uçuşu
+Relation	T12	T2	NoRel	true	uçuşu	inceleme
+Relation	T12	T6	NoRel	true	uçuşu	yapan
+Relation	T13	T0	NoRel	true	araştırma	işletilen
+Relation	T13	T11	NoRel	true	araştırma	araştırma
+Relation	T13	T12	NoRel	true	araştırma	uçuşu
+Relation	T14	T2	NoRel	true	kalkış	inceleme
+Relation	T2	T0	NoRel	true	inceleme	işletilen
+Relation	T2	T13	NoRel	true	inceleme	araştırma
+Relation	T2	T14	NoRel	true	inceleme	kalkış
+Relation	T2	T3	NoRel	true	inceleme	kaza
+Relation	T3	T0	NoRel	true	kaza	işletilen
+Relation	T3	T5	NoRel	true	kaza	uçuşunu
+Relation	T4	T13	NoRel	true	öldü	araştırma
+Relation	T4	T6	NoRel	true	öldü	yapan
+Relation	T4	T7	NoRel	true	öldü	işletiliyordu
+Relation	T6	T0	NoRel	true	yapan	işletilen
+Relation	T6	T1	NoRel	true	yapan	düştü
+Relation	T6	T4	NoRel	true	yapan	öldü
+Relation	T6	T8	NoRel	true	yapan	inceleme
+Relation	T7	T1	NoRel	true	işletiliyordu	düştü
+Relation	T7	T2	NoRel	true	işletiliyordu	inceleme
+Relation	T7	T4	NoRel	true	işletiliyordu	öldü
+Relation	T7	T8	NoRel	true	işletiliyordu	inceleme
+Relation	T7	T9	NoRel	true	işletiliyordu	uçuşu
+Relation	T8	T1	NoRel	true	inceleme	düştü
+Relation	T8	T13	NoRel	true	inceleme	araştırma
+Relation	T8	T3	NoRel	true	inceleme	kaza
+Relation	T8	T6	NoRel	true	inceleme	yapan
+Relation	T9	T0	NoRel	true	uçuşu	işletilen
+Relation	T9	T11	NoRel	true	uçuşu	araştırma
+Relation	T9	T12	NoRel	true	uçuşu	uçuşu
+Relation	T9	T3	NoRel	true	uçuşu	kaza
+Relation	T9	T5	NoRel	true	uçuşu	uçuşunu

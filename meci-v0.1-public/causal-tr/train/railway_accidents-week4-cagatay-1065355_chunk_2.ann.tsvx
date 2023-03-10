@@ -1,0 +1,55 @@
+Text	- 28 Haziran , 2000 – Üzerinde at biner gibi oturdukları yük trenin raydan çıkması sonrası 13 çocuk Padang’da ( Endonezya ) öldü .	Endonezya hükümeti bedava seyahat anlamına gelen tren üzerinde yolculuk edilmesini önlemek için sıkı tedbirler almakta .	( Source - BBC )	- 28 Temmuz , 2000 - 21: 15 , Jaraguá_‘dan Francisco Morato’ya gitmekte olan bir 1700 ( No 145 ) serisi yapımı enerji zayıflığı nedeniyle Perus istasyonunda durur .	Diğer bir boş 1700 ( No 127 ) serisi yapımı 8 dakikada 5, 5 km hızla giderken frenlerini kaybeder ve durmakta olan trene çarpar .
+Event	T0	çıkması	EVENT	75
+Event	T1	öldü	EVENT	124
+Event	T2	seyahat	EVENT	157
+Event	T3	önlemek	EVENT	214
+Event	T4	almakta	EVENT	242
+Event	T5	durur	EVENT	426
+Event	T6	yapımı	EVENT	471
+Event	T7	kaybeder	EVENT	523
+Event	T8	çarpar	EVENT	555
+Event	T9	yolculuk	EVENT	194
+Event	T10	giderken	EVENT	503
+Relation	T0	T1	CauseEffect	true	çıkması	öldü
+Relation	T1	T0	EffectCause	true	öldü	çıkması
+Relation	T3	T4	CauseEffect	true	önlemek	almakta
+Relation	T4	T3	EffectCause	true	almakta	önlemek
+Relation	T7	T8	CauseEffect	true	kaybeder	çarpar
+Relation	T8	T7	EffectCause	true	çarpar	kaybeder
+Relation	T0	T5	NoRel	true	çıkması	durur
+Relation	T0	T7	NoRel	true	çıkması	kaybeder
+Relation	T0	T8	NoRel	true	çıkması	çarpar
+Relation	T1	T8	NoRel	true	öldü	çarpar
+Relation	T10	T0	NoRel	true	giderken	çıkması
+Relation	T10	T1	NoRel	true	giderken	öldü
+Relation	T10	T2	NoRel	true	giderken	seyahat
+Relation	T10	T4	NoRel	true	giderken	almakta
+Relation	T10	T5	NoRel	true	giderken	durur
+Relation	T10	T8	NoRel	true	giderken	çarpar
+Relation	T10	T9	NoRel	true	giderken	yolculuk
+Relation	T2	T5	NoRel	true	seyahat	durur
+Relation	T3	T0	NoRel	true	önlemek	çıkması
+Relation	T3	T5	NoRel	true	önlemek	durur
+Relation	T4	T2	NoRel	true	almakta	seyahat
+Relation	T4	T7	NoRel	true	almakta	kaybeder
+Relation	T4	T8	NoRel	true	almakta	çarpar
+Relation	T4	T9	NoRel	true	almakta	yolculuk
+Relation	T5	T2	NoRel	true	durur	seyahat
+Relation	T5	T3	NoRel	true	durur	önlemek
+Relation	T5	T6	NoRel	true	durur	yapımı
+Relation	T5	T7	NoRel	true	durur	kaybeder
+Relation	T6	T10	NoRel	true	yapımı	giderken
+Relation	T6	T7	NoRel	true	yapımı	kaybeder
+Relation	T6	T8	NoRel	true	yapımı	çarpar
+Relation	T6	T9	NoRel	true	yapımı	yolculuk
+Relation	T7	T0	NoRel	true	kaybeder	çıkması
+Relation	T7	T2	NoRel	true	kaybeder	seyahat
+Relation	T7	T4	NoRel	true	kaybeder	almakta
+Relation	T7	T6	NoRel	true	kaybeder	yapımı
+Relation	T8	T2	NoRel	true	çarpar	seyahat
+Relation	T8	T3	NoRel	true	çarpar	önlemek
+Relation	T8	T5	NoRel	true	çarpar	durur
+Relation	T8	T6	NoRel	true	çarpar	yapımı
+Relation	T9	T6	NoRel	true	yolculuk	yapımı
+Relation	T9	T7	NoRel	true	yolculuk	kaybeder
+Relation	T9	T8	NoRel	true	yolculuk	çarpar

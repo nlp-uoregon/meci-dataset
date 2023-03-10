@@ -1,0 +1,143 @@
+Text	La NTSB anunció en una nota de prensa del 30 de abril que los representantes de la FAA y de la empresa Boeing también proporcionarían ayuda y asistencia técnica a la investigación .	El 2 de junio de 2013 , los investigadores confirmaron la hipótesis de la carga suelta : tres vehículos blindados y dos buscadores de minas ( 80 toneladas en total ) no habían sido sujetados correctamente .	Al menos un vehículo blindado se había soltado durante el despegue y rodó hacia atrás golpeando el mamparo posterior del avión , perforándolo y dañando la grabadora de voz de la cabina y la grabadora de datos del vuelo .	Esto también cortó los sistemas hidráulicos 1 y 2 , y dañó los componentes del estabilizador horizontal , sobre todo el perno del estabilizador , lo que hizo que el avión fuera incontrolable .	Por tanto , sin control del avión , con una rotación de cabeceo anormal y en pérdida , la caída era inevitable .
+Event	T0	anunció	EVENT	8
+Event	T1	nota	EVENT	23
+Event	T2	investigación	EVENT	166
+Event	T3	confirmaron	EVENT	225
+Event	T4	hipótesis	EVENT	240
+Event	T5	sujetados	EVENT	363
+Event	T6	soltado	EVENT	428
+Event	T7	despegue	EVENT	447
+Event	T8	rodó	EVENT	458
+Event	T9	golpeando	EVENT	475
+Event	T10	perforándolo	EVENT	518
+Event	T11	dañando	EVENT	533
+Event	T12	vuelo	EVENT	602
+Event	T13	cortó	EVENT	623
+Event	T14	dañó	EVENT	664
+Event	T15	hizo	EVENT	763
+Event	T16	rotación	EVENT	847
+Event	T17	pérdida	EVENT	880
+Event	T18	caída	EVENT	893
+Relation	T6	T9	CauseEffect	true	soltado	golpeando
+Relation	T9	T6	EffectCause	true	golpeando	soltado
+Relation	T9	T10	CauseEffect	true	golpeando	perforándolo
+Relation	T10	T9	EffectCause	true	perforándolo	golpeando
+Relation	T9	T11	CauseEffect	true	golpeando	dañando
+Relation	T11	T9	EffectCause	true	dañando	golpeando
+Relation	T0	T13	NoRel	true	anunció	cortó
+Relation	T0	T16	NoRel	true	anunció	rotación
+Relation	T0	T17	NoRel	true	anunció	pérdida
+Relation	T0	T3	NoRel	true	anunció	confirmaron
+Relation	T0	T6	NoRel	true	anunció	soltado
+Relation	T1	T0	NoRel	true	nota	anunció
+Relation	T1	T13	NoRel	true	nota	cortó
+Relation	T1	T14	NoRel	true	nota	dañó
+Relation	T1	T2	NoRel	true	nota	investigación
+Relation	T1	T4	NoRel	true	nota	hipótesis
+Relation	T1	T6	NoRel	true	nota	soltado
+Relation	T1	T7	NoRel	true	nota	despegue
+Relation	T10	T11	NoRel	true	perforándolo	dañando
+Relation	T10	T13	NoRel	true	perforándolo	cortó
+Relation	T10	T18	NoRel	true	perforándolo	caída
+Relation	T10	T3	NoRel	true	perforándolo	confirmaron
+Relation	T11	T10	NoRel	true	dañando	perforándolo
+Relation	T11	T14	NoRel	true	dañando	dañó
+Relation	T11	T15	NoRel	true	dañando	hizo
+Relation	T11	T18	NoRel	true	dañando	caída
+Relation	T11	T2	NoRel	true	dañando	investigación
+Relation	T11	T8	NoRel	true	dañando	rodó
+Relation	T12	T0	NoRel	true	vuelo	anunció
+Relation	T12	T1	NoRel	true	vuelo	nota
+Relation	T12	T14	NoRel	true	vuelo	dañó
+Relation	T12	T17	NoRel	true	vuelo	pérdida
+Relation	T12	T2	NoRel	true	vuelo	investigación
+Relation	T12	T3	NoRel	true	vuelo	confirmaron
+Relation	T12	T6	NoRel	true	vuelo	soltado
+Relation	T13	T0	NoRel	true	cortó	anunció
+Relation	T13	T15	NoRel	true	cortó	hizo
+Relation	T13	T16	NoRel	true	cortó	rotación
+Relation	T13	T2	NoRel	true	cortó	investigación
+Relation	T13	T4	NoRel	true	cortó	hipótesis
+Relation	T13	T6	NoRel	true	cortó	soltado
+Relation	T13	T8	NoRel	true	cortó	rodó
+Relation	T13	T9	NoRel	true	cortó	golpeando
+Relation	T14	T0	NoRel	true	dañó	anunció
+Relation	T14	T11	NoRel	true	dañó	dañando
+Relation	T14	T4	NoRel	true	dañó	hipótesis
+Relation	T14	T6	NoRel	true	dañó	soltado
+Relation	T14	T8	NoRel	true	dañó	rodó
+Relation	T15	T0	NoRel	true	hizo	anunció
+Relation	T15	T10	NoRel	true	hizo	perforándolo
+Relation	T15	T11	NoRel	true	hizo	dañando
+Relation	T15	T16	NoRel	true	hizo	rotación
+Relation	T15	T17	NoRel	true	hizo	pérdida
+Relation	T15	T2	NoRel	true	hizo	investigación
+Relation	T15	T3	NoRel	true	hizo	confirmaron
+Relation	T16	T14	NoRel	true	rotación	dañó
+Relation	T16	T15	NoRel	true	rotación	hizo
+Relation	T16	T2	NoRel	true	rotación	investigación
+Relation	T16	T3	NoRel	true	rotación	confirmaron
+Relation	T16	T4	NoRel	true	rotación	hipótesis
+Relation	T16	T6	NoRel	true	rotación	soltado
+Relation	T16	T7	NoRel	true	rotación	despegue
+Relation	T17	T10	NoRel	true	pérdida	perforándolo
+Relation	T17	T15	NoRel	true	pérdida	hizo
+Relation	T17	T16	NoRel	true	pérdida	rotación
+Relation	T17	T2	NoRel	true	pérdida	investigación
+Relation	T17	T4	NoRel	true	pérdida	hipótesis
+Relation	T17	T6	NoRel	true	pérdida	soltado
+Relation	T17	T7	NoRel	true	pérdida	despegue
+Relation	T17	T8	NoRel	true	pérdida	rodó
+Relation	T18	T11	NoRel	true	caída	dañando
+Relation	T18	T12	NoRel	true	caída	vuelo
+Relation	T18	T13	NoRel	true	caída	cortó
+Relation	T18	T14	NoRel	true	caída	dañó
+Relation	T18	T15	NoRel	true	caída	hizo
+Relation	T18	T17	NoRel	true	caída	pérdida
+Relation	T18	T2	NoRel	true	caída	investigación
+Relation	T18	T3	NoRel	true	caída	confirmaron
+Relation	T18	T5	NoRel	true	caída	sujetados
+Relation	T18	T6	NoRel	true	caída	soltado
+Relation	T18	T7	NoRel	true	caída	despegue
+Relation	T18	T8	NoRel	true	caída	rodó
+Relation	T18	T9	NoRel	true	caída	golpeando
+Relation	T2	T13	NoRel	true	investigación	cortó
+Relation	T2	T17	NoRel	true	investigación	pérdida
+Relation	T2	T3	NoRel	true	investigación	confirmaron
+Relation	T2	T9	NoRel	true	investigación	golpeando
+Relation	T3	T11	NoRel	true	confirmaron	dañando
+Relation	T3	T14	NoRel	true	confirmaron	dañó
+Relation	T3	T5	NoRel	true	confirmaron	sujetados
+Relation	T3	T7	NoRel	true	confirmaron	despegue
+Relation	T4	T13	NoRel	true	hipótesis	cortó
+Relation	T4	T15	NoRel	true	hipótesis	hizo
+Relation	T4	T16	NoRel	true	hipótesis	rotación
+Relation	T4	T18	NoRel	true	hipótesis	caída
+Relation	T4	T2	NoRel	true	hipótesis	investigación
+Relation	T4	T5	NoRel	true	hipótesis	sujetados
+Relation	T4	T7	NoRel	true	hipótesis	despegue
+Relation	T4	T9	NoRel	true	hipótesis	golpeando
+Relation	T5	T14	NoRel	true	sujetados	dañó
+Relation	T5	T17	NoRel	true	sujetados	pérdida
+Relation	T5	T9	NoRel	true	sujetados	golpeando
+Relation	T6	T0	NoRel	true	soltado	anunció
+Relation	T6	T14	NoRel	true	soltado	dañó
+Relation	T6	T17	NoRel	true	soltado	pérdida
+Relation	T6	T18	NoRel	true	soltado	caída
+Relation	T6	T4	NoRel	true	soltado	hipótesis
+Relation	T6	T7	NoRel	true	soltado	despegue
+Relation	T6	T8	NoRel	true	soltado	rodó
+Relation	T7	T0	NoRel	true	despegue	anunció
+Relation	T7	T10	NoRel	true	despegue	perforándolo
+Relation	T7	T15	NoRel	true	despegue	hizo
+Relation	T7	T2	NoRel	true	despegue	investigación
+Relation	T8	T1	NoRel	true	rodó	nota
+Relation	T8	T11	NoRel	true	rodó	dañando
+Relation	T8	T12	NoRel	true	rodó	vuelo
+Relation	T8	T15	NoRel	true	rodó	hizo
+Relation	T8	T16	NoRel	true	rodó	rotación
+Relation	T8	T2	NoRel	true	rodó	investigación
+Relation	T8	T3	NoRel	true	rodó	confirmaron
+Relation	T8	T5	NoRel	true	rodó	sujetados
+Relation	T8	T7	NoRel	true	rodó	despegue
+Relation	T9	T12	NoRel	true	golpeando	vuelo

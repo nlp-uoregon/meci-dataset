@@ -1,0 +1,71 @@
+Text	Det antages , at årsagen til ulykken var , at lokomotivføreren troede , at udkørselssignalet for et gennemkørende tog fra København var gældende for hans tog .	De to udkørselssignaler stod på linje ved hver sit spor , og sporanlægget var udformet således , at da tog 6311 fejlagtigt kørte forbi udkørselssignalet , blev det ledt ad afløbssporet til sporstopperen i stedet for at køre ud i sporet med det gennemkørende tog .			
+Event	T0	antages	EVENT	4
+Event	T1	ulykken	EVENT	29
+Event	T2	troede	EVENT	63
+Event	T3	udformet	EVENT	238
+Event	T4	kørte	EVENT	283
+Event	T5	ledt	EVENT	324
+Event	T6	udkørselssignalet	EVENT	75
+Event	T7	gennemkørende	EVENT	100
+Event	T8	gældende	EVENT	136
+Event	T9	udkørselssignaler	EVENT	166
+Event	T10	udkørselssignalet	EVENT	295
+Event	T11	køre	EVENT	379
+Event	T12	gennemkørende	EVENT	404
+Event	T13	stod	EVENT	184
+Relation	T2	T1	CauseEffect	true	troede	ulykken
+Relation	T1	T2	EffectCause	true	ulykken	troede
+Relation	T13	T2	CauseEffect	true	stod	troede
+Relation	T2	T13	EffectCause	true	troede	stod
+Relation	T3	T5	CauseEffect	true	udformet	ledt
+Relation	T5	T3	EffectCause	true	ledt	udformet
+Relation	T0	T13	NoRel	true	antages	stod
+Relation	T0	T2	NoRel	true	antages	troede
+Relation	T0	T3	NoRel	true	antages	udformet
+Relation	T0	T4	NoRel	true	antages	kørte
+Relation	T0	T5	NoRel	true	antages	ledt
+Relation	T0	T9	NoRel	true	antages	udkørselssignaler
+Relation	T1	T10	NoRel	true	ulykken	udkørselssignalet
+Relation	T1	T11	NoRel	true	ulykken	køre
+Relation	T1	T4	NoRel	true	ulykken	kørte
+Relation	T10	T11	NoRel	true	udkørselssignalet	køre
+Relation	T10	T8	NoRel	true	udkørselssignalet	gældende
+Relation	T11	T0	NoRel	true	køre	antages
+Relation	T11	T10	NoRel	true	køre	udkørselssignalet
+Relation	T11	T13	NoRel	true	køre	stod
+Relation	T11	T3	NoRel	true	køre	udformet
+Relation	T11	T4	NoRel	true	køre	kørte
+Relation	T11	T8	NoRel	true	køre	gældende
+Relation	T12	T2	NoRel	true	gennemkørende	troede
+Relation	T12	T3	NoRel	true	gennemkørende	udformet
+Relation	T12	T6	NoRel	true	gennemkørende	udkørselssignalet
+Relation	T12	T8	NoRel	true	gennemkørende	gældende
+Relation	T13	T0	NoRel	true	stod	antages
+Relation	T13	T1	NoRel	true	stod	ulykken
+Relation	T13	T10	NoRel	true	stod	udkørselssignalet
+Relation	T13	T5	NoRel	true	stod	ledt
+Relation	T3	T1	NoRel	true	udformet	ulykken
+Relation	T3	T13	NoRel	true	udformet	stod
+Relation	T3	T2	NoRel	true	udformet	troede
+Relation	T3	T4	NoRel	true	udformet	kørte
+Relation	T3	T7	NoRel	true	udformet	gennemkørende
+Relation	T4	T0	NoRel	true	kørte	antages
+Relation	T4	T2	NoRel	true	kørte	troede
+Relation	T5	T1	NoRel	true	ledt	ulykken
+Relation	T5	T10	NoRel	true	ledt	udkørselssignalet
+Relation	T5	T13	NoRel	true	ledt	stod
+Relation	T5	T2	NoRel	true	ledt	troede
+Relation	T5	T4	NoRel	true	ledt	kørte
+Relation	T5	T7	NoRel	true	ledt	gennemkørende
+Relation	T6	T11	NoRel	true	udkørselssignalet	køre
+Relation	T6	T2	NoRel	true	udkørselssignalet	troede
+Relation	T7	T10	NoRel	true	gennemkørende	udkørselssignalet
+Relation	T7	T13	NoRel	true	gennemkørende	stod
+Relation	T8	T1	NoRel	true	gældende	ulykken
+Relation	T8	T3	NoRel	true	gældende	udformet
+Relation	T8	T5	NoRel	true	gældende	ledt
+Relation	T8	T6	NoRel	true	gældende	udkørselssignalet
+Relation	T9	T10	NoRel	true	udkørselssignaler	udkørselssignalet
+Relation	T9	T11	NoRel	true	udkørselssignaler	køre
+Relation	T9	T12	NoRel	true	udkørselssignaler	gennemkørende
+Relation	T9	T3	NoRel	true	udkørselssignaler	udformet

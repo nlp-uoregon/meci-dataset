@@ -1,0 +1,92 @@
+Text	İkaz ışıkları çalışıyor .	- 25px 22 Ağustos 2007 - Somerville - Tyabb – kamyon sürücüsü öldü - parlayan ışıklar , gürleme yok - 25px 18 Kasım , 2008 – Bir Connex Melbourne ekpres treni Dandenong South , Victoria_‘da bir otomobil ile çarpıştı , bir faal hemzemin geçidinde durmayı başaramayıp hemzemin geçidi işgal eden arabanın 53 yaşındaki kadın sürücüsü öldü .	- 27 Kasım , 2008 – Cardwell Quensland’ın yaklaşık 20 km güneyinde Bruce Hihway üzerinde bir QR Tilt Train kamyonla çarpıştı , sonuç iki kişi öldü ve diğer pek çok kişi yaralandı .	- 1 Ocak , 2009 – Innisfail , Queensland yakınında ne geçit kapısı ne de ikaz işaretlerinin olmadığı hemzemin geçitte bir QR Sunlander treni bir çöp kamyonu ile çarpıştı , bir kişi öldü , diğer sekiz kişi yaralandı .	- 16 Nisan 2008 – ATN Bangla televizyonuna göre , Dinajpur - Dakka Ekoto Expres treni , Kalihati , Tangail , Bangladeş dışında hen - mzemin geçitte bir yerel otobüsle çarpıştı , 18 ölü ve 30 yaralı .
+Event	T0	çalışıyor	EVENT	14
+Event	T1	öldü	EVENT	88
+Event	T2	çarpıştı	EVENT	233
+Event	T4	öldü	EVENT	356
+Event	T5	çarpıştı	EVENT	479
+Event	T6	öldü	EVENT	505
+Event	T7	yaralandı	EVENT	532
+Event	T8	çarpıştı	EVENT	705
+Event	T9	öldü	EVENT	725
+Event	T10	yaralandı	EVENT	749
+Event	T11	çarpıştı	EVENT	928
+Event	T12	ölü	EVENT	942
+Event	T3	eden	EVENT	314
+Event	T13	yaralı	EVENT	952
+Relation	T3	T2	CauseEffect	true	eden	çarpıştı
+Relation	T2	T3	EffectCause	true	çarpıştı	eden
+Relation	T2	T4	CauseEffect	true	çarpıştı	öldü
+Relation	T4	T2	EffectCause	true	öldü	çarpıştı
+Relation	T5	T6	CauseEffect	true	çarpıştı	öldü
+Relation	T6	T5	EffectCause	true	öldü	çarpıştı
+Relation	T5	T7	CauseEffect	true	çarpıştı	yaralandı
+Relation	T7	T5	EffectCause	true	yaralandı	çarpıştı
+Relation	T8	T9	CauseEffect	true	çarpıştı	öldü
+Relation	T9	T8	EffectCause	true	öldü	çarpıştı
+Relation	T8	T10	CauseEffect	true	çarpıştı	yaralandı
+Relation	T10	T8	EffectCause	true	yaralandı	çarpıştı
+Relation	T11	T12	CauseEffect	true	çarpıştı	ölü
+Relation	T12	T11	EffectCause	true	ölü	çarpıştı
+Relation	T11	T13	CauseEffect	true	çarpıştı	yaralı
+Relation	T13	T11	EffectCause	true	yaralı	çarpıştı
+Relation	T0	T1	NoRel	true	çalışıyor	öldü
+Relation	T0	T13	NoRel	true	çalışıyor	yaralı
+Relation	T0	T4	NoRel	true	çalışıyor	öldü
+Relation	T0	T8	NoRel	true	çalışıyor	çarpıştı
+Relation	T1	T11	NoRel	true	öldü	çarpıştı
+Relation	T1	T13	NoRel	true	öldü	yaralı
+Relation	T1	T4	NoRel	true	öldü	öldü
+Relation	T1	T6	NoRel	true	öldü	öldü
+Relation	T1	T7	NoRel	true	öldü	yaralandı
+Relation	T1	T8	NoRel	true	öldü	çarpıştı
+Relation	T10	T0	NoRel	true	yaralandı	çalışıyor
+Relation	T10	T1	NoRel	true	yaralandı	öldü
+Relation	T10	T11	NoRel	true	yaralandı	çarpıştı
+Relation	T10	T12	NoRel	true	yaralandı	ölü
+Relation	T10	T5	NoRel	true	yaralandı	çarpıştı
+Relation	T10	T6	NoRel	true	yaralandı	öldü
+Relation	T10	T7	NoRel	true	yaralandı	yaralandı
+Relation	T10	T9	NoRel	true	yaralandı	öldü
+Relation	T11	T7	NoRel	true	çarpıştı	yaralandı
+Relation	T12	T0	NoRel	true	ölü	çalışıyor
+Relation	T12	T13	NoRel	true	ölü	yaralı
+Relation	T12	T5	NoRel	true	ölü	çarpıştı
+Relation	T12	T7	NoRel	true	ölü	yaralandı
+Relation	T12	T9	NoRel	true	ölü	öldü
+Relation	T13	T2	NoRel	true	yaralı	çarpıştı
+Relation	T13	T6	NoRel	true	yaralı	öldü
+Relation	T13	T8	NoRel	true	yaralı	çarpıştı
+Relation	T13	T9	NoRel	true	yaralı	öldü
+Relation	T2	T12	NoRel	true	çarpıştı	ölü
+Relation	T2	T7	NoRel	true	çarpıştı	yaralandı
+Relation	T2	T8	NoRel	true	çarpıştı	çarpıştı
+Relation	T3	T0	NoRel	true	eden	çalışıyor
+Relation	T3	T11	NoRel	true	eden	çarpıştı
+Relation	T3	T13	NoRel	true	eden	yaralı
+Relation	T3	T6	NoRel	true	eden	öldü
+Relation	T3	T7	NoRel	true	eden	yaralandı
+Relation	T3	T9	NoRel	true	eden	öldü
+Relation	T4	T13	NoRel	true	öldü	yaralı
+Relation	T4	T6	NoRel	true	öldü	öldü
+Relation	T4	T9	NoRel	true	öldü	öldü
+Relation	T5	T2	NoRel	true	çarpıştı	çarpıştı
+Relation	T5	T3	NoRel	true	çarpıştı	eden
+Relation	T5	T9	NoRel	true	çarpıştı	öldü
+Relation	T6	T10	NoRel	true	öldü	yaralandı
+Relation	T6	T12	NoRel	true	öldü	ölü
+Relation	T6	T2	NoRel	true	öldü	çarpıştı
+Relation	T6	T3	NoRel	true	öldü	eden
+Relation	T6	T8	NoRel	true	öldü	çarpıştı
+Relation	T7	T0	NoRel	true	yaralandı	çalışıyor
+Relation	T7	T11	NoRel	true	yaralandı	çarpıştı
+Relation	T7	T12	NoRel	true	yaralandı	ölü
+Relation	T7	T13	NoRel	true	yaralandı	yaralı
+Relation	T7	T8	NoRel	true	yaralandı	çarpıştı
+Relation	T8	T1	NoRel	true	çarpıştı	öldü
+Relation	T8	T12	NoRel	true	çarpıştı	ölü
+Relation	T8	T6	NoRel	true	çarpıştı	öldü
+Relation	T8	T7	NoRel	true	çarpıştı	yaralandı
+Relation	T9	T1	NoRel	true	öldü	öldü
+Relation	T9	T10	NoRel	true	öldü	yaralandı
+Relation	T9	T3	NoRel	true	öldü	eden
+Relation	T9	T4	NoRel	true	öldü	öldü

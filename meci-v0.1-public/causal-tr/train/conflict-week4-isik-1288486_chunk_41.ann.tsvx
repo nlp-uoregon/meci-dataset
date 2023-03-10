@@ -1,0 +1,20 @@
+Text	Komünist işçiler Almanya’nın çeşitli yerlerinde tekrar konseyleri kuruyordu .	22 Ocak’ta SPD ve sendikalar işbaşı çağrısı yaptı .	KPD’nin genel greve devam edilmesi yönündeki çağrıları işçi sınıfı tarafından karşılık bulmadı .	Legien’in isteği üzerine USPD , SPD ve sendikaların desteklediği bir hükûmetin kurulması durumunda KPD “ böylesi bir hükûmeti devirmeye yönelik bir çalışma içine girmeden , yasal muhalefet yapacağını ” açıkladı .	SPD burjuva partilerinin oluşturduğu bir hükûmete dışarıdan destek vererek hükûmet dışında kaldı .
+Event	T0	kuruyordu	EVENT	66
+Event	T1	yaptı	EVENT	122
+Event	T3	isteği	EVENT	237
+Event	T7	açıkladı	EVENT	429
+Event	T8	kaldı	EVENT	531
+Event	T2	çağrıları	EVENT	175
+Relation	T3	T7	CauseEffect	true	isteği	açıkladı
+Relation	T7	T3	EffectCause	true	açıkladı	isteği
+Relation	T0	T1	NoRel	true	kuruyordu	yaptı
+Relation	T0	T7	NoRel	true	kuruyordu	açıkladı
+Relation	T0	T8	NoRel	true	kuruyordu	kaldı
+Relation	T1	T2	NoRel	true	yaptı	çağrıları
+Relation	T1	T7	NoRel	true	yaptı	açıkladı
+Relation	T2	T1	NoRel	true	çağrıları	yaptı
+Relation	T2	T7	NoRel	true	çağrıları	açıkladı
+Relation	T3	T1	NoRel	true	isteği	yaptı
+Relation	T7	T0	NoRel	true	açıkladı	kuruyordu
+Relation	T7	T8	NoRel	true	açıkladı	kaldı
+Relation	T8	T2	NoRel	true	kaldı	çağrıları

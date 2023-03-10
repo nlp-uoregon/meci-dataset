@@ -1,0 +1,48 @@
+Text	12 Haziran 1941'de , Hitler ile Romanya'dan General Ion Antonescu arasındaki zirvede tercüman olarak görev yaptı .	Antonescu Fransızcayı akıcı bir şekilde konuşuyordu , ancak Hitler Almanca'dan başka bir dil bilmiyordu .	Zirvede Antonescu , Fransızca konuştu ve sözlerini Schmidt Almancaya çevrilmesini sağladı .	Hitler'in sözlerini de Fransızcaya da çevirdi ( Schmidt Rumence bilmiyordu ) .	Görüşme sırasında Hitler , Schmidt aracılığıyla Antonescu'ya Barbarossa Operasyonu'nun planlanan " imha savaşı " hakkında bilgi verdi ve Antonescu'nun da kabul ettiği bir taleple Anonescu'dan Einsatzgruppen'in Romen eşdeğerini kurmasını istedi .
+Event	T0	yaptı	EVENT	107
+Event	T1	Zirvede	EVENT	221
+Event	T2	konuştu	EVENT	251
+Event	T3	sağladı	EVENT	303
+Event	T4	çevirdi	EVENT	351
+Event	T5	Görüşme	EVENT	392
+Event	T6	savaşı	EVENT	496
+Event	T7	verdi	EVENT	520
+Event	T8	istedi	EVENT	629
+Event	T9	konuşuyordu	EVENT	155
+Relation	T9	T2	CauseEffect	true	konuşuyordu	konuştu
+Relation	T2	T9	EffectCause	true	konuştu	konuşuyordu
+Relation	T2	T3	CauseEffect	true	konuştu	sağladı
+Relation	T3	T2	EffectCause	true	sağladı	konuştu
+Relation	T0	T3	CauseEffect	true	yaptı	sağladı
+Relation	T3	T0	EffectCause	true	sağladı	yaptı
+Relation	T0	T4	CauseEffect	true	yaptı	çevirdi
+Relation	T4	T0	EffectCause	true	çevirdi	yaptı
+Relation	T0	T1	NoRel	true	yaptı	Zirvede
+Relation	T0	T5	NoRel	true	yaptı	Görüşme
+Relation	T0	T6	NoRel	true	yaptı	savaşı
+Relation	T0	T9	NoRel	true	yaptı	konuşuyordu
+Relation	T1	T0	NoRel	true	Zirvede	yaptı
+Relation	T1	T3	NoRel	true	Zirvede	sağladı
+Relation	T1	T4	NoRel	true	Zirvede	çevirdi
+Relation	T1	T6	NoRel	true	Zirvede	savaşı
+Relation	T1	T8	NoRel	true	Zirvede	istedi
+Relation	T2	T0	NoRel	true	konuştu	yaptı
+Relation	T3	T1	NoRel	true	sağladı	Zirvede
+Relation	T3	T8	NoRel	true	sağladı	istedi
+Relation	T4	T1	NoRel	true	çevirdi	Zirvede
+Relation	T4	T2	NoRel	true	çevirdi	konuştu
+Relation	T4	T5	NoRel	true	çevirdi	Görüşme
+Relation	T4	T9	NoRel	true	çevirdi	konuşuyordu
+Relation	T5	T3	NoRel	true	Görüşme	sağladı
+Relation	T6	T1	NoRel	true	savaşı	Zirvede
+Relation	T6	T5	NoRel	true	savaşı	Görüşme
+Relation	T6	T7	NoRel	true	savaşı	verdi
+Relation	T7	T0	NoRel	true	verdi	yaptı
+Relation	T7	T3	NoRel	true	verdi	sağladı
+Relation	T7	T9	NoRel	true	verdi	konuşuyordu
+Relation	T8	T4	NoRel	true	istedi	çevirdi
+Relation	T8	T6	NoRel	true	istedi	savaşı
+Relation	T8	T9	NoRel	true	istedi	konuşuyordu
+Relation	T9	T3	NoRel	true	konuşuyordu	sağladı
+Relation	T9	T5	NoRel	true	konuşuyordu	Görüşme
+Relation	T9	T7	NoRel	true	konuşuyordu	verdi

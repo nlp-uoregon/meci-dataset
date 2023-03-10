@@ -1,0 +1,85 @@
+Text	ٹرین کے آٹھ ڈبے آپس میں ٹکرا گئے اور " W " جیسی شکل بن گئی ۔	سب سے زیادہ ہلاکتیں سامنے والا ڈبے میں ہوئیں ۔	تائیوان میں 1991ء کے میاؤلی شہر کے حادثے جس میں 30 افراد ہلاک ہوئے تھے ، کے بعد یہ سب سے خوف_ناک ریل حادثہ تھا ۔	زندہ بچ جانے والے ایک شخص کے مطابق ڈرائیور نے حادثے ہونے سے پہلے کئی بار ایمرجنسی بریک لگائی اور ایک دوسرے شخص کا کہنا ہے کہ ٹرین مڑنے کے بعد اس کی رفتار تیز ہو گئی تھی ۔	ریل انتظامیہ کے مطابق حادثے کی اصل وجہ اب تک معلوم نہیں ہو سکی ۔
+Event	T2	ہلاکتیں	EVENT	73
+Event	T3	حادثے	EVENT	143
+Event	T4	ہلاک	EVENT	165
+Event	T5	حادثہ	EVENT	209
+Event	T6	جانے	EVENT	229
+Event	T7	لگائی	EVENT	308
+Event	T8	کہنا	EVENT	335
+Event	T9	مڑنے	EVENT	351
+Event	T10	حادثے	EVENT	414
+Event	T11	ٹکرا	EVENT	24
+Event	T12	بن	EVENT	52
+Event	T1	حادثے	EVENT	267
+Event	T13	تیز	EVENT	375
+Event	T14	معلوم	EVENT	437
+Relation	T11	T2	CauseEffect	true	ٹکرا	ہلاکتیں
+Relation	T2	T11	EffectCause	true	ہلاکتیں	ٹکرا
+Relation	T11	T12	CauseEffect	true	ٹکرا	بن
+Relation	T12	T11	EffectCause	true	بن	ٹکرا
+Relation	T3	T4	CauseEffect	true	حادثے	ہلاک
+Relation	T4	T3	EffectCause	true	ہلاک	حادثے
+Relation	T5	T4	CauseEffect	true	حادثہ	ہلاک
+Relation	T4	T5	EffectCause	true	ہلاک	حادثہ
+Relation	T1	T2	NoRel	true	حادثے	ہلاکتیں
+Relation	T1	T8	NoRel	true	حادثے	کہنا
+Relation	T1	T9	NoRel	true	حادثے	مڑنے
+Relation	T10	T13	NoRel	true	حادثے	تیز
+Relation	T10	T3	NoRel	true	حادثے	حادثے
+Relation	T10	T5	NoRel	true	حادثے	حادثہ
+Relation	T10	T6	NoRel	true	حادثے	جانے
+Relation	T11	T3	NoRel	true	ٹکرا	حادثے
+Relation	T11	T4	NoRel	true	ٹکرا	ہلاک
+Relation	T11	T5	NoRel	true	ٹکرا	حادثہ
+Relation	T11	T7	NoRel	true	ٹکرا	لگائی
+Relation	T11	T9	NoRel	true	ٹکرا	مڑنے
+Relation	T12	T13	NoRel	true	بن	تیز
+Relation	T12	T14	NoRel	true	بن	معلوم
+Relation	T12	T2	NoRel	true	بن	ہلاکتیں
+Relation	T12	T7	NoRel	true	بن	لگائی
+Relation	T13	T1	NoRel	true	تیز	حادثے
+Relation	T13	T14	NoRel	true	تیز	معلوم
+Relation	T13	T2	NoRel	true	تیز	ہلاکتیں
+Relation	T13	T6	NoRel	true	تیز	جانے
+Relation	T13	T8	NoRel	true	تیز	کہنا
+Relation	T13	T9	NoRel	true	تیز	مڑنے
+Relation	T14	T10	NoRel	true	معلوم	حادثے
+Relation	T14	T11	NoRel	true	معلوم	ٹکرا
+Relation	T14	T2	NoRel	true	معلوم	ہلاکتیں
+Relation	T14	T3	NoRel	true	معلوم	حادثے
+Relation	T14	T7	NoRel	true	معلوم	لگائی
+Relation	T2	T10	NoRel	true	ہلاکتیں	حادثے
+Relation	T2	T3	NoRel	true	ہلاکتیں	حادثے
+Relation	T2	T6	NoRel	true	ہلاکتیں	جانے
+Relation	T2	T8	NoRel	true	ہلاکتیں	کہنا
+Relation	T3	T1	NoRel	true	حادثے	حادثے
+Relation	T3	T13	NoRel	true	حادثے	تیز
+Relation	T3	T14	NoRel	true	حادثے	معلوم
+Relation	T3	T5	NoRel	true	حادثے	حادثہ
+Relation	T3	T6	NoRel	true	حادثے	جانے
+Relation	T4	T1	NoRel	true	ہلاک	حادثے
+Relation	T4	T12	NoRel	true	ہلاک	بن
+Relation	T5	T1	NoRel	true	حادثہ	حادثے
+Relation	T5	T11	NoRel	true	حادثہ	ٹکرا
+Relation	T5	T13	NoRel	true	حادثہ	تیز
+Relation	T5	T3	NoRel	true	حادثہ	حادثے
+Relation	T5	T9	NoRel	true	حادثہ	مڑنے
+Relation	T6	T12	NoRel	true	جانے	بن
+Relation	T6	T13	NoRel	true	جانے	تیز
+Relation	T6	T2	NoRel	true	جانے	ہلاکتیں
+Relation	T6	T5	NoRel	true	جانے	حادثہ
+Relation	T6	T7	NoRel	true	جانے	لگائی
+Relation	T6	T8	NoRel	true	جانے	کہنا
+Relation	T7	T14	NoRel	true	لگائی	معلوم
+Relation	T7	T2	NoRel	true	لگائی	ہلاکتیں
+Relation	T7	T4	NoRel	true	لگائی	ہلاک
+Relation	T7	T6	NoRel	true	لگائی	جانے
+Relation	T7	T8	NoRel	true	لگائی	کہنا
+Relation	T7	T9	NoRel	true	لگائی	مڑنے
+Relation	T8	T3	NoRel	true	کہنا	حادثے
+Relation	T8	T7	NoRel	true	کہنا	لگائی
+Relation	T9	T10	NoRel	true	مڑنے	حادثے
+Relation	T9	T12	NoRel	true	مڑنے	بن
+Relation	T9	T4	NoRel	true	مڑنے	ہلاک
+Relation	T9	T6	NoRel	true	مڑنے	جانے
+Relation	T9	T8	NoRel	true	مڑنے	کہنا

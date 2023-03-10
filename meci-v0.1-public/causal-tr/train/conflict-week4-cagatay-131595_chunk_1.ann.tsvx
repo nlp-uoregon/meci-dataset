@@ -1,0 +1,102 @@
+Text	Almanya'nın güçlendirilerek kendisine karşı kullanılacağını düşünen Stalin , Batı birliklerinin hepsini Batı Berlin'den çıkarmak için harekete geçti .	Şehrin batı bölümüne tüm demir ve kara yolları kesilerek abluka uygulanmaya başlandı .	Sovyet işgal alanı içinde bir parça olarak kalan Batı Berlin'e abluka uygulanması şehrin kara ikmal yollarının tamamen kapanmasına neden olunca erzaksız kalan şehre 26 Haziran 1948 ile 30 Eylül 1949 arasında yiyecek yardımları Batılı ülkelerin uçaklarıyla hava köprüsü kurularak yapıldı .	Bu ikmal sırasında ABD'nin savaştan kalmış birçok ikmal ve bombardıman uçağı kullanıldı .	Özellikle C- 47 ve C- 54 gibi sayısı çok olan uçaklar gün aşırı sortiler yaptı .
+Event	T0	geçti	EVENT	143
+Event	T2	işgal	EVENT	245
+Event	T5	ikmal	EVENT	530
+Event	T6	kullanıldı	EVENT	604
+Event	T7	yaptı	EVENT	690
+Event	T8	güçlendirilerek	EVENT	12
+Event	T9	kullanılacağını	EVENT	44
+Event	T10	çıkarmak	EVENT	120
+Event	T11	düşünen	EVENT	60
+Event	T12	kesilerek	EVENT	198
+Event	T13	abluka	EVENT	208
+Event	T1	abluka	EVENT	301
+Event	T3	kapanmasına	EVENT	357
+Event	T14	kalan	EVENT	281
+Event	T15	yardımları	EVENT	454
+Event	T16	kurularak	EVENT	507
+Relation	T11	T10	CauseEffect	true	düşünen	çıkarmak
+Relation	T10	T11	EffectCause	true	çıkarmak	düşünen
+Relation	T1	T3	CauseEffect	true	abluka	kapanmasına
+Relation	T3	T1	EffectCause	true	kapanmasına	abluka
+Relation	T13	T3	CauseEffect	true	abluka	kapanmasına
+Relation	T3	T13	EffectCause	true	kapanmasına	abluka
+Relation	T14	T3	CauseEffect	true	kalan	kapanmasına
+Relation	T3	T14	EffectCause	true	kapanmasına	kalan
+Relation	T1	T14	CauseEffect	true	abluka	kalan
+Relation	T14	T1	EffectCause	true	kalan	abluka
+Relation	T0	T10	NoRel	true	geçti	çıkarmak
+Relation	T0	T14	NoRel	true	geçti	kalan
+Relation	T0	T15	NoRel	true	geçti	yardımları
+Relation	T0	T2	NoRel	true	geçti	işgal
+Relation	T0	T3	NoRel	true	geçti	kapanmasına
+Relation	T0	T6	NoRel	true	geçti	kullanıldı
+Relation	T0	T8	NoRel	true	geçti	güçlendirilerek
+Relation	T1	T0	NoRel	true	abluka	geçti
+Relation	T1	T6	NoRel	true	abluka	kullanıldı
+Relation	T10	T12	NoRel	true	çıkarmak	kesilerek
+Relation	T10	T16	NoRel	true	çıkarmak	kurularak
+Relation	T10	T3	NoRel	true	çıkarmak	kapanmasına
+Relation	T10	T6	NoRel	true	çıkarmak	kullanıldı
+Relation	T11	T0	NoRel	true	düşünen	geçti
+Relation	T11	T6	NoRel	true	düşünen	kullanıldı
+Relation	T11	T7	NoRel	true	düşünen	yaptı
+Relation	T11	T8	NoRel	true	düşünen	güçlendirilerek
+Relation	T12	T0	NoRel	true	kesilerek	geçti
+Relation	T12	T1	NoRel	true	kesilerek	abluka
+Relation	T12	T10	NoRel	true	kesilerek	çıkarmak
+Relation	T12	T15	NoRel	true	kesilerek	yardımları
+Relation	T12	T8	NoRel	true	kesilerek	güçlendirilerek
+Relation	T13	T2	NoRel	true	abluka	işgal
+Relation	T13	T8	NoRel	true	abluka	güçlendirilerek
+Relation	T13	T9	NoRel	true	abluka	kullanılacağını
+Relation	T14	T0	NoRel	true	kalan	geçti
+Relation	T14	T11	NoRel	true	kalan	düşünen
+Relation	T14	T12	NoRel	true	kalan	kesilerek
+Relation	T14	T15	NoRel	true	kalan	yardımları
+Relation	T14	T16	NoRel	true	kalan	kurularak
+Relation	T14	T2	NoRel	true	kalan	işgal
+Relation	T14	T6	NoRel	true	kalan	kullanıldı
+Relation	T14	T9	NoRel	true	kalan	kullanılacağını
+Relation	T15	T5	NoRel	true	yardımları	ikmal
+Relation	T15	T6	NoRel	true	yardımları	kullanıldı
+Relation	T15	T9	NoRel	true	yardımları	kullanılacağını
+Relation	T16	T2	NoRel	true	kurularak	işgal
+Relation	T2	T12	NoRel	true	işgal	kesilerek
+Relation	T2	T13	NoRel	true	işgal	abluka
+Relation	T2	T16	NoRel	true	işgal	kurularak
+Relation	T2	T5	NoRel	true	işgal	ikmal
+Relation	T2	T6	NoRel	true	işgal	kullanıldı
+Relation	T2	T8	NoRel	true	işgal	güçlendirilerek
+Relation	T3	T0	NoRel	true	kapanmasına	geçti
+Relation	T3	T10	NoRel	true	kapanmasına	çıkarmak
+Relation	T3	T11	NoRel	true	kapanmasına	düşünen
+Relation	T3	T15	NoRel	true	kapanmasına	yardımları
+Relation	T3	T2	NoRel	true	kapanmasına	işgal
+Relation	T5	T1	NoRel	true	ikmal	abluka
+Relation	T5	T11	NoRel	true	ikmal	düşünen
+Relation	T5	T14	NoRel	true	ikmal	kalan
+Relation	T5	T16	NoRel	true	ikmal	kurularak
+Relation	T5	T7	NoRel	true	ikmal	yaptı
+Relation	T6	T0	NoRel	true	kullanıldı	geçti
+Relation	T6	T1	NoRel	true	kullanıldı	abluka
+Relation	T6	T10	NoRel	true	kullanıldı	çıkarmak
+Relation	T6	T14	NoRel	true	kullanıldı	kalan
+Relation	T6	T2	NoRel	true	kullanıldı	işgal
+Relation	T6	T5	NoRel	true	kullanıldı	ikmal
+Relation	T6	T9	NoRel	true	kullanıldı	kullanılacağını
+Relation	T7	T1	NoRel	true	yaptı	abluka
+Relation	T7	T3	NoRel	true	yaptı	kapanmasına
+Relation	T7	T5	NoRel	true	yaptı	ikmal
+Relation	T8	T10	NoRel	true	güçlendirilerek	çıkarmak
+Relation	T8	T11	NoRel	true	güçlendirilerek	düşünen
+Relation	T8	T12	NoRel	true	güçlendirilerek	kesilerek
+Relation	T8	T14	NoRel	true	güçlendirilerek	kalan
+Relation	T8	T15	NoRel	true	güçlendirilerek	yardımları
+Relation	T8	T3	NoRel	true	güçlendirilerek	kapanmasına
+Relation	T9	T0	NoRel	true	kullanılacağını	geçti
+Relation	T9	T11	NoRel	true	kullanılacağını	düşünen
+Relation	T9	T12	NoRel	true	kullanılacağını	kesilerek
+Relation	T9	T15	NoRel	true	kullanılacağını	yardımları
+Relation	T9	T2	NoRel	true	kullanılacağını	işgal
+Relation	T9	T7	NoRel	true	kullanılacağını	yaptı

@@ -1,0 +1,34 @@
+Text	Suriye Devrim Komuta Konseyi , 26 Nisan 1964'te Askeri Birlik Şartı'nı feshederek , Irak ile Suriye arasındaki ikili birleşme sürecini sona erdirdi .	Baas Partisi'ne karşı yürütülen darbenin ardından el - Bekir , partinin baskın itici gücü haline geldi ve 1964'te Bölge Komutanlığı genel sekreteri seçildi .	Saddam Hüseyin , Irak Baas Partisinin Bölge Komutanlığında tam parti üyeliği ve bir koltuk aldı çünkü Hüseyin , el - Bekir'in yakın bir akrabasıydı .	Hüseyin , el - Bekir'in rızasıyla partinin iç güvenliğini geliştirmek için bir girişim başlattı .	1964'te Hüseyin , partideki subaylara karşı bir ağırlık olarak hareket etmek ve ordunun parti üzerindeki kontrolünü zayıflatmak için partinin gizli güvenlik aygıtı olan Cihaz Hanin'i kurdu .
+Event	T0	feshederek	EVENT	71
+Event	T1	erdirdi	EVENT	140
+Event	T3	geldi	EVENT	247
+Event	T4	seçildi	EVENT	298
+Event	T6	başlattı	EVENT	545
+Event	T7	kurdu	EVENT	739
+Event	T2	darbenin	EVENT	182
+Event	T8	aldı	EVENT	399
+Relation	T0	T1	CauseEffect	true	feshederek	erdirdi
+Relation	T1	T0	EffectCause	true	erdirdi	feshederek
+Relation	T2	T3	CauseEffect	true	darbenin	geldi
+Relation	T3	T2	EffectCause	true	geldi	darbenin
+Relation	T3	T4	CauseEffect	true	geldi	seçildi
+Relation	T4	T3	EffectCause	true	seçildi	geldi
+Relation	T4	T8	CauseEffect	true	seçildi	aldı
+Relation	T8	T4	EffectCause	true	aldı	seçildi
+Relation	T8	T6	CauseEffect	true	aldı	başlattı
+Relation	T6	T8	EffectCause	true	başlattı	aldı
+Relation	T0	T7	NoRel	true	feshederek	kurdu
+Relation	T0	T8	NoRel	true	feshederek	aldı
+Relation	T1	T2	NoRel	true	erdirdi	darbenin
+Relation	T1	T7	NoRel	true	erdirdi	kurdu
+Relation	T2	T1	NoRel	true	darbenin	erdirdi
+Relation	T3	T0	NoRel	true	geldi	feshederek
+Relation	T3	T8	NoRel	true	geldi	aldı
+Relation	T4	T1	NoRel	true	seçildi	erdirdi
+Relation	T4	T2	NoRel	true	seçildi	darbenin
+Relation	T4	T6	NoRel	true	seçildi	başlattı
+Relation	T6	T7	NoRel	true	başlattı	kurdu
+Relation	T7	T1	NoRel	true	kurdu	erdirdi
+Relation	T7	T3	NoRel	true	kurdu	geldi
+Relation	T7	T4	NoRel	true	kurdu	seçildi
+Relation	T7	T6	NoRel	true	kurdu	başlattı

@@ -1,0 +1,53 @@
+Text	Patlamadan önce Tambora Dağı , Endonezya takımadalarındaki en uzun doruklardan biriydi ve yaklaşık 4300 metre yüksekliğindeydi Patlamadan sonra önceki yüksekliğinin yaklaşık üçte ikisine yani 2.851 metrelik bir yüksekliğe düştü .	1815 Tambora patlaması , kaydedilen tarihte en büyük gözlemlenen patlamadır .	Patlama 2600 kilometre uzaktan duyuldu ve külleri , en az 1300 kilometre uzağa düştü .	Adadaki tüm bitki örtüsü yok oldu .	Ponza külüne bulanmış ve kökünden sökülmüş ağaçlar , denize doğru sürüklendi ve yaklaşık beş kilometrelik bir yığın oluşturdu .
+Event	T0	düştü	EVENT	222
+Event	T1	patlaması	EVENT	243
+Event	T2	kaydedilen	EVENT	255
+Event	T3	patlamadır	EVENT	295
+Event	T4	Patlama	EVENT	308
+Event	T5	duyuldu	EVENT	339
+Event	T6	düştü	EVENT	387
+Event	T7	oldu	EVENT	424
+Event	T8	bulanmış	EVENT	444
+Event	T9	sökülmüş	EVENT	465
+Event	T10	sürüklendi	EVENT	497
+Event	T11	oluşturdu	EVENT	547
+Event	T12	Patlamadan	EVENT	127
+Relation	T3	T5	CauseEffect	true	patlamadır	duyuldu
+Relation	T5	T3	EffectCause	true	duyuldu	patlamadır
+Relation	T3	T6	CauseEffect	true	patlamadır	düştü
+Relation	T6	T3	EffectCause	true	düştü	patlamadır
+Relation	T10	T11	CauseEffect	true	sürüklendi	oluşturdu
+Relation	T11	T10	EffectCause	true	oluşturdu	sürüklendi
+Relation	T8	T9	CauseEffect	true	bulanmış	sökülmüş
+Relation	T9	T8	EffectCause	true	sökülmüş	bulanmış
+Relation	T9	T10	CauseEffect	true	sökülmüş	sürüklendi
+Relation	T10	T9	EffectCause	true	sürüklendi	sökülmüş
+Relation	T6	T7	CauseEffect	true	düştü	oldu
+Relation	T7	T6	EffectCause	true	oldu	düştü
+Relation	T0	T12	NoRel	true	düştü	Patlamadan
+Relation	T1	T4	NoRel	true	patlaması	Patlama
+Relation	T1	T8	NoRel	true	patlaması	bulanmış
+Relation	T1	T9	NoRel	true	patlaması	sökülmüş
+Relation	T10	T3	NoRel	true	sürüklendi	patlamadır
+Relation	T10	T7	NoRel	true	sürüklendi	oldu
+Relation	T11	T6	NoRel	true	oluşturdu	düştü
+Relation	T11	T9	NoRel	true	oluşturdu	sökülmüş
+Relation	T12	T1	NoRel	true	Patlamadan	patlaması
+Relation	T12	T10	NoRel	true	Patlamadan	sürüklendi
+Relation	T12	T4	NoRel	true	Patlamadan	Patlama
+Relation	T12	T5	NoRel	true	Patlamadan	duyuldu
+Relation	T12	T8	NoRel	true	Patlamadan	bulanmış
+Relation	T2	T0	NoRel	true	kaydedilen	düştü
+Relation	T2	T10	NoRel	true	kaydedilen	sürüklendi
+Relation	T2	T11	NoRel	true	kaydedilen	oluşturdu
+Relation	T2	T7	NoRel	true	kaydedilen	oldu
+Relation	T3	T0	NoRel	true	patlamadır	düştü
+Relation	T3	T2	NoRel	true	patlamadır	kaydedilen
+Relation	T4	T2	NoRel	true	Patlama	kaydedilen
+Relation	T4	T7	NoRel	true	Patlama	oldu
+Relation	T6	T11	NoRel	true	düştü	oluşturdu
+Relation	T6	T12	NoRel	true	düştü	Patlamadan
+Relation	T7	T10	NoRel	true	oldu	sürüklendi
+Relation	T8	T11	NoRel	true	bulanmış	oluşturdu
+Relation	T8	T5	NoRel	true	bulanmış	duyuldu
+Relation	T9	T3	NoRel	true	sökülmüş	patlamadır

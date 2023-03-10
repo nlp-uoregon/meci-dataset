@@ -1,0 +1,37 @@
+Text	KLM ( ROYAL DUTCH AIRLINES ) FLIGHT 844 was an international scheduled passenger flight from Biak - Mokmer Airport , Netherlands New Guinea ( now Indonesia ) to Manila International Airport , Manila , Philippines on 16 July 1957 , which crashed into Cenderawasih Bay from its departure airport .	As a result , 58 ( 9 of which were crew members ) out of 68 onboard perished .	The flight was the first leg of a service with the ultimate destination of Amsterdam , the Netherlands .	The Lockheed 1049E Super Constellation was registered PH - LKT and christened _ Neutron _ .	With a construction number of 4504 , the aircraft first flew in 1953 and accumulated 11,867 hours of flight .
+Event	T0	scheduled	EVENT	61
+Event	T1	flight	EVENT	81
+Event	T2	departure	EVENT	276
+Event	T3	perished	EVENT	364
+Event	T4	flight	EVENT	379
+Event	T5	leg	EVENT	400
+Event	T6	service	EVENT	409
+Event	T7	registered	EVENT	523
+Event	T8	christened	EVENT	547
+Event	T9	construction	EVENT	579
+Event	T10	flew	EVENT	628
+Event	T11	accumulated	EVENT	645
+Event	T12	flight	EVENT	673
+Event	T13	crashed	EVENT	237
+Relation	T13	T3	CauseEffect	true	crashed	perished
+Relation	T3	T13	EffectCause	true	perished	crashed
+Relation	T0	T3	NoRel	true	scheduled	perished
+Relation	T0	T9	NoRel	true	scheduled	construction
+Relation	T1	T11	NoRel	true	flight	accumulated
+Relation	T10	T8	NoRel	true	flew	christened
+Relation	T12	T7	NoRel	true	flight	registered
+Relation	T13	T11	NoRel	true	crashed	accumulated
+Relation	T13	T4	NoRel	true	crashed	flight
+Relation	T13	T7	NoRel	true	crashed	registered
+Relation	T13	T9	NoRel	true	crashed	construction
+Relation	T2	T0	NoRel	true	departure	scheduled
+Relation	T2	T13	NoRel	true	departure	crashed
+Relation	T2	T6	NoRel	true	departure	service
+Relation	T3	T12	NoRel	true	perished	flight
+Relation	T3	T5	NoRel	true	perished	leg
+Relation	T4	T13	NoRel	true	flight	crashed
+Relation	T6	T0	NoRel	true	service	scheduled
+Relation	T7	T4	NoRel	true	registered	flight
+Relation	T8	T2	NoRel	true	christened	departure
+Relation	T9	T4	NoRel	true	construction	flight
+Relation	T9	T5	NoRel	true	construction	leg

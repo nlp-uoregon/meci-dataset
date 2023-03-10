@@ -1,0 +1,45 @@
+Text	Hvad ingen vidste var , at han havde deaktiveret retningsautopiloten , så flyets krængeror blev styret manuelt .	Det påvirkede ikke de andre autopilotsystemer , som kontrollerede højden og farten .	Autopiloten kom ikke med nogen lydalarm – den tændte kun en lille advarselslampe om , at retningsautopiloten var slået fra .	Piloterne lagde dog ikke mærke til noget , da de var vant til fly med højlydte alarmer .	Det var faktisk Eldar , som opdagede , at flyet drejede til højre .
+Event	T0	vidste	EVENT	11
+Event	T1	deaktiveret	EVENT	37
+Event	T2	styret	EVENT	96
+Event	T3	påvirkede	EVENT	117
+Event	T4	kontrollerede	EVENT	165
+Event	T5	kom	EVENT	210
+Event	T6	tændte	EVENT	244
+Event	T7	lagde	EVENT	333
+Event	T8	opdagede	EVENT	440
+Event	T9	drejede	EVENT	460
+Relation	T7	T8	CauseEffect	true	lagde	opdagede
+Relation	T8	T7	EffectCause	true	opdagede	lagde
+Relation	T0	T1	NoRel	true	vidste	deaktiveret
+Relation	T0	T2	NoRel	true	vidste	styret
+Relation	T0	T5	NoRel	true	vidste	kom
+Relation	T0	T6	NoRel	true	vidste	tændte
+Relation	T0	T8	NoRel	true	vidste	opdagede
+Relation	T1	T3	NoRel	true	deaktiveret	påvirkede
+Relation	T1	T7	NoRel	true	deaktiveret	lagde
+Relation	T1	T9	NoRel	true	deaktiveret	drejede
+Relation	T2	T5	NoRel	true	styret	kom
+Relation	T3	T1	NoRel	true	påvirkede	deaktiveret
+Relation	T3	T4	NoRel	true	påvirkede	kontrollerede
+Relation	T3	T6	NoRel	true	påvirkede	tændte
+Relation	T3	T7	NoRel	true	påvirkede	lagde
+Relation	T3	T8	NoRel	true	påvirkede	opdagede
+Relation	T3	T9	NoRel	true	påvirkede	drejede
+Relation	T4	T0	NoRel	true	kontrollerede	vidste
+Relation	T4	T2	NoRel	true	kontrollerede	styret
+Relation	T4	T9	NoRel	true	kontrollerede	drejede
+Relation	T5	T1	NoRel	true	kom	deaktiveret
+Relation	T5	T6	NoRel	true	kom	tændte
+Relation	T6	T1	NoRel	true	tændte	deaktiveret
+Relation	T6	T2	NoRel	true	tændte	styret
+Relation	T6	T7	NoRel	true	tændte	lagde
+Relation	T7	T2	NoRel	true	lagde	styret
+Relation	T7	T3	NoRel	true	lagde	påvirkede
+Relation	T7	T9	NoRel	true	lagde	drejede
+Relation	T8	T0	NoRel	true	opdagede	vidste
+Relation	T8	T2	NoRel	true	opdagede	styret
+Relation	T8	T3	NoRel	true	opdagede	påvirkede
+Relation	T8	T6	NoRel	true	opdagede	tændte
+Relation	T8	T9	NoRel	true	opdagede	drejede
+Relation	T9	T8	NoRel	true	drejede	opdagede

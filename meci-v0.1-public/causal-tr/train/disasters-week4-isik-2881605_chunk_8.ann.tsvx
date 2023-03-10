@@ -1,0 +1,38 @@
+Text	Şehrin belediye başkanı , şehrin yarısının yıkıldığını söyledi .	Glina yakınlarındaki Majske Poljane'de evleri çöktükten sonra 20 yaşındaki bir adam ve babası öldü .	Majske Poljane , depremden tüm köy ve şehirlerden daha çok etkilenen yer oldu .	Yerel bir kilise yıkıldıktan sonra Žažina'da da bir kişi ölü bulundu .	- - Sırbistan cumhurbaşkanı Aleksandar Vučić , Sırbistan'ın Hırvatistan'a hem mali hem de teknik olarak yardım etmeye hazır olduğunu açıkladı .
+Event	T0	söyledi	EVENT	55
+Event	T1	çöktükten	EVENT	111
+Event	T2	öldü	EVENT	159
+Event	T3	depremden	EVENT	183
+Event	T4	yıkıldıktan	EVENT	263
+Event	T5	bulundu	EVENT	307
+Event	T6	açıkladı	EVENT	450
+Event	T7	oldu	EVENT	239
+Relation	T1	T2	CauseEffect	true	çöktükten	öldü
+Relation	T2	T1	EffectCause	true	öldü	çöktükten
+Relation	T3	T0	CauseEffect	true	depremden	söyledi
+Relation	T0	T3	EffectCause	true	söyledi	depremden
+Relation	T3	T1	CauseEffect	true	depremden	çöktükten
+Relation	T1	T3	EffectCause	true	çöktükten	depremden
+Relation	T3	T7	CauseEffect	true	depremden	oldu
+Relation	T7	T3	EffectCause	true	oldu	depremden
+Relation	T3	T4	CauseEffect	true	depremden	yıkıldıktan
+Relation	T4	T3	EffectCause	true	yıkıldıktan	depremden
+Relation	T4	T5	CauseEffect	true	yıkıldıktan	bulundu
+Relation	T5	T4	EffectCause	true	bulundu	yıkıldıktan
+Relation	T3	T6	CauseEffect	true	depremden	açıkladı
+Relation	T6	T3	EffectCause	true	açıkladı	depremden
+Relation	T0	T2	NoRel	true	söyledi	öldü
+Relation	T1	T0	NoRel	true	çöktükten	söyledi
+Relation	T1	T4	NoRel	true	çöktükten	yıkıldıktan
+Relation	T1	T5	NoRel	true	çöktükten	bulundu
+Relation	T1	T6	NoRel	true	çöktükten	açıkladı
+Relation	T2	T0	NoRel	true	öldü	söyledi
+Relation	T2	T7	NoRel	true	öldü	oldu
+Relation	T3	T5	NoRel	true	depremden	bulundu
+Relation	T4	T0	NoRel	true	yıkıldıktan	söyledi
+Relation	T4	T1	NoRel	true	yıkıldıktan	çöktükten
+Relation	T5	T1	NoRel	true	bulundu	çöktükten
+Relation	T5	T2	NoRel	true	bulundu	öldü
+Relation	T6	T0	NoRel	true	açıkladı	söyledi
+Relation	T6	T1	NoRel	true	açıkladı	çöktükten
+Relation	T7	T5	NoRel	true	oldu	bulundu

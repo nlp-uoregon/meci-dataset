@@ -1,0 +1,58 @@
+Text	Turning to the northwest , it quickly weakened to a tropical depression and dissipated on June 17 over Mississippi .	In advance of the system , officials issued storm warnings for coastal areas of Alabama and western Florida , and residents in low - lying areas were advised to seek higher ground .	Damage associated with the cyclone was generally minor , and only one life was lost when a boy fell into the swollen waters of a river and drowned .	On August 7 , a tropical storm formed north of the Leeward Islands , likely from a tropical wave .	It tracked to the west - northwest , slowly strengthening to a hurricane as it moved through the Bahamas on August 11 .
+Event	T0	Turning	EVENT	0
+Event	T1	depression	EVENT	61
+Event	T2	dissipated	EVENT	76
+Event	T3	advised	EVENT	267
+Event	T4	seek	EVENT	278
+Event	T5	associated	EVENT	306
+Event	T6	cyclone	EVENT	326
+Event	T7	lost	EVENT	378
+Event	T8	drowned	EVENT	438
+Event	T9	formed	EVENT	479
+Event	T11	tracked	EVENT	550
+Event	T12	hurricane	EVENT	610
+Event	T13	moved	EVENT	626
+Event	T14	storm	EVENT	161
+Event	T15	warnings	EVENT	167
+Event	T16	Damage	EVENT	299
+Event	T10	tropical wave	EVENT	531
+Event	T17	tropical storm	EVENT	464
+Relation	T14	T15	CauseEffect	true	storm	warnings
+Relation	T15	T14	EffectCause	true	warnings	storm
+Relation	T15	T4	CauseEffect	true	warnings	seek
+Relation	T4	T15	EffectCause	true	seek	warnings
+Relation	T6	T16	CauseEffect	true	cyclone	Damage
+Relation	T16	T6	EffectCause	true	Damage	cyclone
+Relation	T6	T7	CauseEffect	true	cyclone	lost
+Relation	T7	T6	EffectCause	true	lost	cyclone
+Relation	T6	T8	CauseEffect	true	cyclone	drowned
+Relation	T8	T6	EffectCause	true	drowned	cyclone
+Relation	T10	T17	CauseEffect	true	tropical wave	tropical storm
+Relation	T17	T10	EffectCause	true	tropical storm	tropical wave
+Relation	T10	T12	CauseEffect	true	tropical wave	hurricane
+Relation	T12	T10	EffectCause	true	hurricane	tropical wave
+Relation	T0	T6	NoRel	true	Turning	cyclone
+Relation	T1	T7	NoRel	true	depression	lost
+Relation	T10	T5	NoRel	true	tropical wave	associated
+Relation	T10	T9	NoRel	true	tropical wave	formed
+Relation	T11	T16	NoRel	true	tracked	Damage
+Relation	T12	T13	NoRel	true	hurricane	moved
+Relation	T12	T14	NoRel	true	hurricane	storm
+Relation	T12	T4	NoRel	true	hurricane	seek
+Relation	T14	T1	NoRel	true	storm	depression
+Relation	T14	T11	NoRel	true	storm	tracked
+Relation	T14	T9	NoRel	true	storm	formed
+Relation	T15	T2	NoRel	true	warnings	dissipated
+Relation	T16	T14	NoRel	true	Damage	storm
+Relation	T17	T13	NoRel	true	tropical storm	moved
+Relation	T17	T8	NoRel	true	tropical storm	drowned
+Relation	T3	T13	NoRel	true	advised	moved
+Relation	T3	T16	NoRel	true	advised	Damage
+Relation	T4	T1	NoRel	true	seek	depression
+Relation	T4	T10	NoRel	true	seek	tropical wave
+Relation	T6	T1	NoRel	true	cyclone	depression
+Relation	T7	T16	NoRel	true	lost	Damage
+Relation	T7	T2	NoRel	true	lost	dissipated
+Relation	T8	T0	NoRel	true	drowned	Turning
+Relation	T8	T11	NoRel	true	drowned	tracked
+Relation	T8	T5	NoRel	true	drowned	associated

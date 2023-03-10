@@ -1,0 +1,34 @@
+Text	ADAM AIR'IN 574 SEFER SAYILI UÇUŞU Endonezya'nın Surabaya ve Manado kentleri arasında düzenlenmiş tarifeli bir seferdi .	Uçuş , Makassar Boğazı'nda pilot hatası nedeniyle kazayla sonuçlanmış ve uçaktaki 102 kişinin ölümüne yol açmıştır .	Kategori : Endonezya'da ulaşım kazaları Kategori : 2007'de Endonezya Kategori : 2007'de havacılık kazaları ve olayları Kategori : 3° G Kategori : 118 ° D Kategori : Boeing 737 içeren kazalar ve olaylar		
+Event	T0	seferdi	EVENT	111
+Event	T1	Uçuş	EVENT	121
+Event	T4	kazaları	EVENT	269
+Event	T5	olayları	EVENT	348
+Event	T6	kazalar	EVENT	421
+Event	T7	olaylar	EVENT	432
+Event	T8	düzenlenmiş	EVENT	86
+Event	T3	ölümüne	EVENT	215
+Event	T2	kazayla	EVENT	171
+Relation	T2	T3	CauseEffect	true	kazayla	ölümüne
+Relation	T3	T2	EffectCause	true	ölümüne	kazayla
+Relation	T0	T1	NoRel	true	seferdi	Uçuş
+Relation	T0	T3	NoRel	true	seferdi	ölümüne
+Relation	T0	T7	NoRel	true	seferdi	olaylar
+Relation	T2	T7	NoRel	true	kazayla	olaylar
+Relation	T2	T8	NoRel	true	kazayla	düzenlenmiş
+Relation	T3	T0	NoRel	true	ölümüne	seferdi
+Relation	T3	T1	NoRel	true	ölümüne	Uçuş
+Relation	T3	T7	NoRel	true	ölümüne	olaylar
+Relation	T4	T1	NoRel	true	kazaları	Uçuş
+Relation	T4	T8	NoRel	true	kazaları	düzenlenmiş
+Relation	T5	T1	NoRel	true	olayları	Uçuş
+Relation	T5	T2	NoRel	true	olayları	kazayla
+Relation	T5	T6	NoRel	true	olayları	kazalar
+Relation	T5	T8	NoRel	true	olayları	düzenlenmiş
+Relation	T6	T0	NoRel	true	kazalar	seferdi
+Relation	T6	T2	NoRel	true	kazalar	kazayla
+Relation	T6	T5	NoRel	true	kazalar	olayları
+Relation	T6	T8	NoRel	true	kazalar	düzenlenmiş
+Relation	T7	T2	NoRel	true	olaylar	kazayla
+Relation	T7	T4	NoRel	true	olaylar	kazaları
+Relation	T8	T1	NoRel	true	düzenlenmiş	Uçuş
+Relation	T8	T7	NoRel	true	düzenlenmiş	olaylar

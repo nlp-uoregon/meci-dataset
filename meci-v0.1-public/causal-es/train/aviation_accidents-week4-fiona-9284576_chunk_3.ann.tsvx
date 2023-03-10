@@ -1,0 +1,112 @@
+Text	La tripulación de vuelo reconoció este mensaje .	Incapaz de distinguir la pista no iluminada a través de la lluvia , el capitán pidió una vuelta ( aproximación frustrada ) a una altitud de aproximadamente 200 pies ( aproximadamente 120 pies sobre el suelo ) .	Esta llamada se realizó a unos 100 pies por debajo del DA ( Altitud de decisión ) .	El DC-9 se estrelló contra la franja de césped entre la pista y la calle de rodaje .	A 60 metros del primer punto de impacto , el empenaje golpeó una alcantarilla de drenaje de hormigón , el avión se desintegró y estalló en llamas .
+Event	T0	reconoció	EVENT	24
+Event	T1	mensaje	EVENT	39
+Event	T2	distinguir	EVENT	60
+Event	T3	iluminada	EVENT	83
+Event	T4	lluvia	EVENT	108
+Event	T5	pidió	EVENT	128
+Event	T6	vuelta	EVENT	138
+Event	T7	frustrada	EVENT	160
+Event	T8	llamada	EVENT	265
+Event	T9	realizó	EVENT	276
+Event	T10	decisión	EVENT	331
+Event	T11	estrelló	EVENT	355
+Event	T12	impacto	EVENT	461
+Event	T13	golpeó	EVENT	483
+Event	T14	drenaje	EVENT	510
+Event	T15	desintegró	EVENT	544
+Event	T17	estalló	EVENT	557
+Relation	T12	T15	CauseEffect	true	impacto	desintegró
+Relation	T15	T12	EffectCause	true	desintegró	impacto
+Relation	T12	T17	CauseEffect	true	impacto	estalló
+Relation	T17	T12	EffectCause	true	estalló	impacto
+Relation	T0	T1	NoRel	true	reconoció	mensaje
+Relation	T0	T11	NoRel	true	reconoció	estrelló
+Relation	T0	T6	NoRel	true	reconoció	vuelta
+Relation	T1	T13	NoRel	true	mensaje	golpeó
+Relation	T1	T15	NoRel	true	mensaje	desintegró
+Relation	T1	T17	NoRel	true	mensaje	estalló
+Relation	T1	T3	NoRel	true	mensaje	iluminada
+Relation	T1	T7	NoRel	true	mensaje	frustrada
+Relation	T10	T1	NoRel	true	decisión	mensaje
+Relation	T10	T13	NoRel	true	decisión	golpeó
+Relation	T10	T17	NoRel	true	decisión	estalló
+Relation	T10	T2	NoRel	true	decisión	distinguir
+Relation	T10	T3	NoRel	true	decisión	iluminada
+Relation	T10	T5	NoRel	true	decisión	pidió
+Relation	T11	T10	NoRel	true	estrelló	decisión
+Relation	T11	T12	NoRel	true	estrelló	impacto
+Relation	T11	T14	NoRel	true	estrelló	drenaje
+Relation	T11	T9	NoRel	true	estrelló	realizó
+Relation	T12	T0	NoRel	true	impacto	reconoció
+Relation	T12	T10	NoRel	true	impacto	decisión
+Relation	T12	T3	NoRel	true	impacto	iluminada
+Relation	T12	T9	NoRel	true	impacto	realizó
+Relation	T13	T0	NoRel	true	golpeó	reconoció
+Relation	T13	T11	NoRel	true	golpeó	estrelló
+Relation	T13	T15	NoRel	true	golpeó	desintegró
+Relation	T13	T2	NoRel	true	golpeó	distinguir
+Relation	T13	T4	NoRel	true	golpeó	lluvia
+Relation	T13	T6	NoRel	true	golpeó	vuelta
+Relation	T13	T8	NoRel	true	golpeó	llamada
+Relation	T14	T15	NoRel	true	drenaje	desintegró
+Relation	T14	T2	NoRel	true	drenaje	distinguir
+Relation	T14	T3	NoRel	true	drenaje	iluminada
+Relation	T14	T4	NoRel	true	drenaje	lluvia
+Relation	T14	T6	NoRel	true	drenaje	vuelta
+Relation	T14	T8	NoRel	true	drenaje	llamada
+Relation	T15	T0	NoRel	true	desintegró	reconoció
+Relation	T15	T10	NoRel	true	desintegró	decisión
+Relation	T15	T11	NoRel	true	desintegró	estrelló
+Relation	T15	T14	NoRel	true	desintegró	drenaje
+Relation	T15	T5	NoRel	true	desintegró	pidió
+Relation	T17	T15	NoRel	true	estalló	desintegró
+Relation	T17	T9	NoRel	true	estalló	realizó
+Relation	T2	T10	NoRel	true	distinguir	decisión
+Relation	T2	T11	NoRel	true	distinguir	estrelló
+Relation	T2	T13	NoRel	true	distinguir	golpeó
+Relation	T2	T14	NoRel	true	distinguir	drenaje
+Relation	T2	T15	NoRel	true	distinguir	desintegró
+Relation	T2	T17	NoRel	true	distinguir	estalló
+Relation	T2	T5	NoRel	true	distinguir	pidió
+Relation	T2	T7	NoRel	true	distinguir	frustrada
+Relation	T2	T8	NoRel	true	distinguir	llamada
+Relation	T3	T1	NoRel	true	iluminada	mensaje
+Relation	T3	T11	NoRel	true	iluminada	estrelló
+Relation	T3	T12	NoRel	true	iluminada	impacto
+Relation	T3	T14	NoRel	true	iluminada	drenaje
+Relation	T3	T5	NoRel	true	iluminada	pidió
+Relation	T3	T6	NoRel	true	iluminada	vuelta
+Relation	T3	T7	NoRel	true	iluminada	frustrada
+Relation	T3	T8	NoRel	true	iluminada	llamada
+Relation	T4	T1	NoRel	true	lluvia	mensaje
+Relation	T4	T11	NoRel	true	lluvia	estrelló
+Relation	T4	T14	NoRel	true	lluvia	drenaje
+Relation	T4	T17	NoRel	true	lluvia	estalló
+Relation	T4	T3	NoRel	true	lluvia	iluminada
+Relation	T4	T7	NoRel	true	lluvia	frustrada
+Relation	T5	T12	NoRel	true	pidió	impacto
+Relation	T5	T13	NoRel	true	pidió	golpeó
+Relation	T5	T14	NoRel	true	pidió	drenaje
+Relation	T5	T6	NoRel	true	pidió	vuelta
+Relation	T6	T1	NoRel	true	vuelta	mensaje
+Relation	T6	T11	NoRel	true	vuelta	estrelló
+Relation	T6	T13	NoRel	true	vuelta	golpeó
+Relation	T6	T14	NoRel	true	vuelta	drenaje
+Relation	T6	T4	NoRel	true	vuelta	lluvia
+Relation	T7	T0	NoRel	true	frustrada	reconoció
+Relation	T7	T13	NoRel	true	frustrada	golpeó
+Relation	T7	T3	NoRel	true	frustrada	iluminada
+Relation	T7	T8	NoRel	true	frustrada	llamada
+Relation	T8	T10	NoRel	true	llamada	decisión
+Relation	T8	T12	NoRel	true	llamada	impacto
+Relation	T8	T13	NoRel	true	llamada	golpeó
+Relation	T8	T14	NoRel	true	llamada	drenaje
+Relation	T8	T17	NoRel	true	llamada	estalló
+Relation	T8	T5	NoRel	true	llamada	pidió
+Relation	T8	T6	NoRel	true	llamada	vuelta
+Relation	T9	T10	NoRel	true	realizó	decisión
+Relation	T9	T11	NoRel	true	realizó	estrelló
+Relation	T9	T13	NoRel	true	realizó	golpeó
+Relation	T9	T15	NoRel	true	realizó	desintegró
+Relation	T9	T7	NoRel	true	realizó	frustrada

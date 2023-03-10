@@ -1,0 +1,27 @@
+Text	Además , se precintó un depósito de combustible en el aeropuerto Lae Nadzab con el que se había repostado al avión accidentado antes de partir al vuelo accidentado .	- Accidente de aviación - Anexo : Accidentes más graves de aviación ( 1943 - presente ) - Anexo : Accidentes e incidentes notables en la aviación civil - Anexo : Accidentes por fabricante de la aeronave			
+Event	T0	precintó	EVENT	12
+Event	T1	repostado	EVENT	96
+Event	T3	partir	EVENT	136
+Event	T4	accidentado	EVENT	152
+Event	T5	Accidente	EVENT	168
+Event	T6	Accidentes	EVENT	200
+Event	T7	Accidentes	EVENT	264
+Event	T8	Accidentes	EVENT	328
+Relation	T1	T0	CauseEffect	true	repostado	precintó
+Relation	T0	T1	EffectCause	true	precintó	repostado
+Relation	T1	T5	NoRel	true	repostado	Accidente
+Relation	T1	T6	NoRel	true	repostado	Accidentes
+Relation	T3	T1	NoRel	true	partir	repostado
+Relation	T3	T6	NoRel	true	partir	Accidentes
+Relation	T4	T3	NoRel	true	accidentado	partir
+Relation	T4	T5	NoRel	true	accidentado	Accidente
+Relation	T4	T7	NoRel	true	accidentado	Accidentes
+Relation	T5	T1	NoRel	true	Accidente	repostado
+Relation	T6	T1	NoRel	true	Accidentes	repostado
+Relation	T7	T0	NoRel	true	Accidentes	precintó
+Relation	T7	T1	NoRel	true	Accidentes	repostado
+Relation	T7	T5	NoRel	true	Accidentes	Accidente
+Relation	T8	T0	NoRel	true	Accidentes	precintó
+Relation	T8	T1	NoRel	true	Accidentes	repostado
+Relation	T8	T3	NoRel	true	Accidentes	partir
+Relation	T8	T7	NoRel	true	Accidentes	Accidentes

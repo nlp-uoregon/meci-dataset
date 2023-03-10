@@ -1,0 +1,47 @@
+Text	Yüzlerce araba ve onlarca TIR Marmara Denizi'ne sürüklendi .	Selde kaybolan bir kişinin cesedi denizin karşı kıyısında bulundu .	Selden sonra , özellikle İkitelli'de yağmalama yaşanmıştır .	12 Eylül 2009'da Selimpaşa'yı ziyaret eden Kadir Topbaş , halktan tepki görmüştür .	1999 Gölcük depreminden bu yana İstanbul'un yaşadığı en büyük afet olarak nitelendirilen olay , 18 ve 27 Temmuz 2017 tarihli iki büyük İstanbul yağmur felaketiyle anımsanmıştır .
+Event	T0	sürüklendi	EVENT	48
+Event	T3	bulundu	EVENT	119
+Event	T4	yaşanmıştır	EVENT	176
+Event	T5	ziyaret	EVENT	220
+Event	T6	görmüştür	EVENT	262
+Event	T7	depreminden	EVENT	286
+Event	T9	afet	EVENT	336
+Event	T10	olay	EVENT	363
+Event	T11	anımsanmıştır	EVENT	437
+Event	T1	Selde	EVENT	61
+Relation	T1	T0	CauseEffect	true	Selde	sürüklendi
+Relation	T0	T1	EffectCause	true	sürüklendi	Selde
+Relation	T1	T3	CauseEffect	true	Selde	bulundu
+Relation	T3	T1	EffectCause	true	bulundu	Selde
+Relation	T1	T4	CauseEffect	true	Selde	yaşanmıştır
+Relation	T4	T1	EffectCause	true	yaşanmıştır	Selde
+Relation	T1	T5	CauseEffect	true	Selde	ziyaret
+Relation	T5	T1	EffectCause	true	ziyaret	Selde
+Relation	T5	T6	CauseEffect	true	ziyaret	görmüştür
+Relation	T6	T5	EffectCause	true	görmüştür	ziyaret
+Relation	T0	T10	NoRel	true	sürüklendi	olay
+Relation	T0	T11	NoRel	true	sürüklendi	anımsanmıştır
+Relation	T0	T3	NoRel	true	sürüklendi	bulundu
+Relation	T0	T5	NoRel	true	sürüklendi	ziyaret
+Relation	T0	T7	NoRel	true	sürüklendi	depreminden
+Relation	T1	T10	NoRel	true	Selde	olay
+Relation	T1	T7	NoRel	true	Selde	depreminden
+Relation	T10	T7	NoRel	true	olay	depreminden
+Relation	T11	T1	NoRel	true	anımsanmıştır	Selde
+Relation	T11	T5	NoRel	true	anımsanmıştır	ziyaret
+Relation	T11	T9	NoRel	true	anımsanmıştır	afet
+Relation	T3	T0	NoRel	true	bulundu	sürüklendi
+Relation	T3	T10	NoRel	true	bulundu	olay
+Relation	T3	T4	NoRel	true	bulundu	yaşanmıştır
+Relation	T3	T5	NoRel	true	bulundu	ziyaret
+Relation	T4	T10	NoRel	true	yaşanmıştır	olay
+Relation	T4	T3	NoRel	true	yaşanmıştır	bulundu
+Relation	T4	T9	NoRel	true	yaşanmıştır	afet
+Relation	T5	T3	NoRel	true	ziyaret	bulundu
+Relation	T6	T10	NoRel	true	görmüştür	olay
+Relation	T6	T9	NoRel	true	görmüştür	afet
+Relation	T9	T0	NoRel	true	afet	sürüklendi
+Relation	T9	T10	NoRel	true	afet	olay
+Relation	T9	T11	NoRel	true	afet	anımsanmıştır
+Relation	T9	T3	NoRel	true	afet	bulundu
+Relation	T9	T7	NoRel	true	afet	depreminden

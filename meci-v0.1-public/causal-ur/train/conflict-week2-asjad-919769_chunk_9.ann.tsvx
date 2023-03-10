@@ -1,0 +1,38 @@
+Text	فرانسیسیوں کے خلاف غیر فعال مزاحمتی تحریک کی وجہ سے جرمنی بھی کوئلے کی ادائیگی میں پیچھے پڑ گیا ۔	جواب میں ، فرانسیسیوں نے روہر پر حملہ کیا اور اس پر قبضہ کر لیا ۔	اس موقع پر جرمنوں کی اکثریت فرانسیسیوں پر مشتعل ہو گئی اور اپنی ذلت کا الزام جمہوریہ وایمار پر ڈال دیا ۔	نازی پارٹی کے ایک رہنما ، ایڈولف ہٹلر نے 1923 میں بیئر ہال پوٹش کے نام سے مشہور جمہوریہ کے بغاوت کی کوشش کی تھی ، جس کے ذریعے ان کا ارادہ تھا کہ وہ ایک عظیم تر جرمن ریاست قائم کریں ۔	اگرچہ یہ ناکام رہا ، ہٹلر نے جرمن آبادی میں قومی ہیرو کی حیثیت سے پہچان حاصل کرلی ۔
+Event	T1	حملہ	EVENT	131
+Event	T10	حیثیت	EVENT	509
+Event	T11	بیئر ہال پوٹش	EVENT	319
+Event	T2	قبضہ	EVENT	150
+Event	T3	مشتعل	EVENT	206
+Event	T4	ذلت	EVENT	228
+Event	T5	الزام	EVENT	235
+Event	T6	بغاوت	EVENT	360
+Event	T8	ناکام	EVENT	461
+Relation	T1	T2	CauseEffect	true	حملہ	قبضہ
+Relation	T2	T1	EffectCause	true	قبضہ	حملہ
+Relation	T2	T3	CauseEffect	true	قبضہ	مشتعل
+Relation	T3	T2	EffectCause	true	مشتعل	قبضہ
+Relation	T3	T5	CauseEffect	true	مشتعل	الزام
+Relation	T5	T3	EffectCause	true	الزام	مشتعل
+Relation	T11	T10	CauseEffect	true	بیئر ہال پوٹش	حیثیت
+Relation	T10	T11	EffectCause	true	حیثیت	بیئر ہال پوٹش
+Relation	T1	T10	NoRel	true	حملہ	حیثیت
+Relation	T1	T5	NoRel	true	حملہ	الزام
+Relation	T10	T3	NoRel	true	حیثیت	مشتعل
+Relation	T10	T5	NoRel	true	حیثیت	الزام
+Relation	T11	T3	NoRel	true	بیئر ہال پوٹش	مشتعل
+Relation	T11	T6	NoRel	true	بیئر ہال پوٹش	بغاوت
+Relation	T2	T10	NoRel	true	قبضہ	حیثیت
+Relation	T2	T11	NoRel	true	قبضہ	بیئر ہال پوٹش
+Relation	T3	T10	NoRel	true	مشتعل	حیثیت
+Relation	T4	T3	NoRel	true	ذلت	مشتعل
+Relation	T4	T6	NoRel	true	ذلت	بغاوت
+Relation	T4	T8	NoRel	true	ذلت	ناکام
+Relation	T5	T2	NoRel	true	الزام	قبضہ
+Relation	T5	T8	NoRel	true	الزام	ناکام
+Relation	T6	T1	NoRel	true	بغاوت	حملہ
+Relation	T6	T11	NoRel	true	بغاوت	بیئر ہال پوٹش
+Relation	T6	T2	NoRel	true	بغاوت	قبضہ
+Relation	T8	T11	NoRel	true	ناکام	بیئر ہال پوٹش
+Relation	T8	T4	NoRel	true	ناکام	ذلت
+Relation	T8	T6	NoRel	true	ناکام	بغاوت

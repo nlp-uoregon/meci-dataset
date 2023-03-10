@@ -1,0 +1,100 @@
+Text	Recordando los procesos soviéticos llevados a cabo durante el gobierno de Stalin , especialmente los Procesos de Moscú , los acusados se declararon culpables ; uno de ellos declaró : _ Nosotros merecemos ser ajusticiados dos veces pero , pese a todo , pedimos perdón _ .	Los 300 testigos estaban vigilados por los guardias de seguridad y nadie podía acercarse a ellos .	Durante la noche del lunes 2 al martes 3 de octubre de 2005 , la Unión Europea ( UE ) decretó un embargo de las exportaciones de armas al Uzbekistán , motivado por el rechazo de Tashkent a autorizar una investigación internacional e independiente acerca de lo ocurrido durante la represión de Andiyán los días 12 y 13 de mayo .	El 14 de noviembre , los quince acusados fueron condenados a penas de 14 a 20 años de cárcel .	Después de este veredicto , la UE prohibió que , durante un año , ninguno de los altos responsables uzbekos , incluidos los ministros de Interior y de Defensa , pisaran suelo Europeo .
+Event	T0	procesos	EVENT	15
+Event	T1	Procesos	EVENT	101
+Event	T2	declaró	EVENT	173
+Event	T3	ajusticiados	EVENT	208
+Event	T4	vigilados	EVENT	296
+Event	T5	decretó	EVENT	456
+Event	T6	embargo	EVENT	467
+Event	T7	motivado	EVENT	521
+Event	T8	rechazo	EVENT	537
+Event	T9	autorizar	EVENT	559
+Event	T10	investigación	EVENT	573
+Event	T11	ocurrido	EVENT	630
+Event	T12	represión	EVENT	650
+Event	T14	veredicto	EVENT	809
+Event	T15	acusados	EVENT	730
+Event	T13	condenados	EVENT	746
+Relation	T8	T5	CauseEffect	true	rechazo	decretó
+Relation	T5	T8	EffectCause	true	decretó	rechazo
+Relation	T15	T13	CauseEffect	true	acusados	condenados
+Relation	T13	T15	EffectCause	true	condenados	acusados
+Relation	T0	T12	NoRel	true	procesos	represión
+Relation	T0	T15	NoRel	true	procesos	acusados
+Relation	T0	T7	NoRel	true	procesos	motivado
+Relation	T0	T8	NoRel	true	procesos	rechazo
+Relation	T0	T9	NoRel	true	procesos	autorizar
+Relation	T1	T0	NoRel	true	Procesos	procesos
+Relation	T1	T11	NoRel	true	Procesos	ocurrido
+Relation	T1	T12	NoRel	true	Procesos	represión
+Relation	T1	T13	NoRel	true	Procesos	condenados
+Relation	T1	T14	NoRel	true	Procesos	veredicto
+Relation	T1	T2	NoRel	true	Procesos	declaró
+Relation	T1	T6	NoRel	true	Procesos	embargo
+Relation	T10	T0	NoRel	true	investigación	procesos
+Relation	T10	T14	NoRel	true	investigación	veredicto
+Relation	T10	T15	NoRel	true	investigación	acusados
+Relation	T10	T7	NoRel	true	investigación	motivado
+Relation	T11	T12	NoRel	true	ocurrido	represión
+Relation	T11	T13	NoRel	true	ocurrido	condenados
+Relation	T11	T3	NoRel	true	ocurrido	ajusticiados
+Relation	T11	T4	NoRel	true	ocurrido	vigilados
+Relation	T11	T6	NoRel	true	ocurrido	embargo
+Relation	T11	T8	NoRel	true	ocurrido	rechazo
+Relation	T12	T1	NoRel	true	represión	Procesos
+Relation	T12	T10	NoRel	true	represión	investigación
+Relation	T12	T5	NoRel	true	represión	decretó
+Relation	T12	T7	NoRel	true	represión	motivado
+Relation	T13	T0	NoRel	true	condenados	procesos
+Relation	T13	T12	NoRel	true	condenados	represión
+Relation	T13	T2	NoRel	true	condenados	declaró
+Relation	T13	T3	NoRel	true	condenados	ajusticiados
+Relation	T13	T6	NoRel	true	condenados	embargo
+Relation	T13	T9	NoRel	true	condenados	autorizar
+Relation	T14	T1	NoRel	true	veredicto	Procesos
+Relation	T14	T10	NoRel	true	veredicto	investigación
+Relation	T14	T12	NoRel	true	veredicto	represión
+Relation	T14	T2	NoRel	true	veredicto	declaró
+Relation	T14	T3	NoRel	true	veredicto	ajusticiados
+Relation	T14	T4	NoRel	true	veredicto	vigilados
+Relation	T14	T5	NoRel	true	veredicto	decretó
+Relation	T14	T9	NoRel	true	veredicto	autorizar
+Relation	T15	T2	NoRel	true	acusados	declaró
+Relation	T15	T3	NoRel	true	acusados	ajusticiados
+Relation	T15	T4	NoRel	true	acusados	vigilados
+Relation	T15	T8	NoRel	true	acusados	rechazo
+Relation	T2	T0	NoRel	true	declaró	procesos
+Relation	T2	T10	NoRel	true	declaró	investigación
+Relation	T2	T13	NoRel	true	declaró	condenados
+Relation	T2	T14	NoRel	true	declaró	veredicto
+Relation	T3	T0	NoRel	true	ajusticiados	procesos
+Relation	T3	T1	NoRel	true	ajusticiados	Procesos
+Relation	T3	T10	NoRel	true	ajusticiados	investigación
+Relation	T3	T11	NoRel	true	ajusticiados	ocurrido
+Relation	T3	T14	NoRel	true	ajusticiados	veredicto
+Relation	T3	T15	NoRel	true	ajusticiados	acusados
+Relation	T3	T4	NoRel	true	ajusticiados	vigilados
+Relation	T3	T5	NoRel	true	ajusticiados	decretó
+Relation	T3	T9	NoRel	true	ajusticiados	autorizar
+Relation	T4	T11	NoRel	true	vigilados	ocurrido
+Relation	T4	T14	NoRel	true	vigilados	veredicto
+Relation	T4	T15	NoRel	true	vigilados	acusados
+Relation	T4	T9	NoRel	true	vigilados	autorizar
+Relation	T5	T1	NoRel	true	decretó	Procesos
+Relation	T5	T11	NoRel	true	decretó	ocurrido
+Relation	T5	T14	NoRel	true	decretó	veredicto
+Relation	T5	T2	NoRel	true	decretó	declaró
+Relation	T5	T3	NoRel	true	decretó	ajusticiados
+Relation	T5	T6	NoRel	true	decretó	embargo
+Relation	T6	T3	NoRel	true	embargo	ajusticiados
+Relation	T6	T7	NoRel	true	embargo	motivado
+Relation	T6	T8	NoRel	true	embargo	rechazo
+Relation	T7	T0	NoRel	true	motivado	procesos
+Relation	T7	T11	NoRel	true	motivado	ocurrido
+Relation	T7	T14	NoRel	true	motivado	veredicto
+Relation	T7	T8	NoRel	true	motivado	rechazo
+Relation	T8	T0	NoRel	true	rechazo	procesos
+Relation	T9	T10	NoRel	true	autorizar	investigación
+Relation	T9	T2	NoRel	true	autorizar	declaró
+Relation	T9	T5	NoRel	true	autorizar	decretó
+Relation	T9	T7	NoRel	true	autorizar	motivado

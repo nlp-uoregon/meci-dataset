@@ -1,0 +1,41 @@
+Text	Det første falskneri ( _ Kristus og disciplene ved Emmaus _ ) solgte van Meegeren i 1937 til Rembrandtselskabet for 520.000 gylden ( omkring 22 millioner danske kroner i 2010 ) .	Selskabet donerede maleriet til Museum Boijmans Van Beuningen i Rotterdam .	Maleriet var blevet undersøgt og verificeret som ægte af Abraham Bredius , som var tidens største Vermeer-ekspert .	I de efterfølgende år forfalskede og afhændede han yderligere fem Vermeer'er .	Bl.a. _ Kvinde grebet i hor_ som han under besættelsen solgte til reichsmarschall Hermann Göring for 1,65 millioner gylden ( ca. 40 millioner kroner , 2010 ) .
+Event	T0	solgte	EVENT	62
+Event	T1	donerede	EVENT	189
+Event	T2	undersøgt	EVENT	275
+Event	T3	verificeret	EVENT	288
+Event	T4	forfalskede	EVENT	393
+Event	T5	afhændede	EVENT	408
+Event	T6	grebet	EVENT	465
+Event	T7	solgte	EVENT	505
+Event	T8	falskneri	EVENT	11
+Event	T9	Vermeer-ekspert	EVENT	353
+Relation	T9	T3	CauseEffect	true	Vermeer-ekspert	verificeret
+Relation	T3	T9	EffectCause	true	verificeret	Vermeer-ekspert
+Relation	T1	T2	NoRel	true	donerede	undersøgt
+Relation	T2	T6	NoRel	true	undersøgt	grebet
+Relation	T3	T1	NoRel	true	verificeret	donerede
+Relation	T3	T4	NoRel	true	verificeret	forfalskede
+Relation	T3	T5	NoRel	true	verificeret	afhændede
+Relation	T3	T8	NoRel	true	verificeret	falskneri
+Relation	T4	T1	NoRel	true	forfalskede	donerede
+Relation	T4	T9	NoRel	true	forfalskede	Vermeer-ekspert
+Relation	T5	T0	NoRel	true	afhændede	solgte
+Relation	T5	T1	NoRel	true	afhændede	donerede
+Relation	T5	T2	NoRel	true	afhændede	undersøgt
+Relation	T5	T4	NoRel	true	afhændede	forfalskede
+Relation	T5	T6	NoRel	true	afhændede	grebet
+Relation	T5	T7	NoRel	true	afhændede	solgte
+Relation	T6	T0	NoRel	true	grebet	solgte
+Relation	T6	T3	NoRel	true	grebet	verificeret
+Relation	T6	T5	NoRel	true	grebet	afhændede
+Relation	T6	T9	NoRel	true	grebet	Vermeer-ekspert
+Relation	T7	T3	NoRel	true	solgte	verificeret
+Relation	T8	T3	NoRel	true	falskneri	verificeret
+Relation	T8	T5	NoRel	true	falskneri	afhændede
+Relation	T8	T6	NoRel	true	falskneri	grebet
+Relation	T8	T7	NoRel	true	falskneri	solgte
+Relation	T8	T9	NoRel	true	falskneri	Vermeer-ekspert
+Relation	T9	T0	NoRel	true	Vermeer-ekspert	solgte
+Relation	T9	T4	NoRel	true	Vermeer-ekspert	forfalskede
+Relation	T9	T5	NoRel	true	Vermeer-ekspert	afhændede
+Relation	T9	T7	NoRel	true	Vermeer-ekspert	solgte

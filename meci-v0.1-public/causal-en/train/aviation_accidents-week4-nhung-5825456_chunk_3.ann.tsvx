@@ -1,0 +1,74 @@
+Text	While still negotiating with the terrorists , who now numbered seven individuals , the Israeli military prepared two Lockheed C - 130 Hercules transports for the raid .	The transports refuelled in Kenya before landing at Entebbe Airport under the cover of darkness .	The commandos led by Brigadier General Dan Shomron ( Harris Yulin ) had to contend with a large armed Ugandan military detachment and used a ruse to overcome the defenses .	A black Mercedes limousine had been carried on board and was used to fool sentries that it was the official car which President Amin used on an impromptu visit to the airport .	Nearly complete surprise was achieved but a firefight resulted , ending with all seven terrorists and 45 Ugandan soldiers killed .
+Event	T0	negotiating	EVENT	12
+Event	T1	numbered	EVENT	54
+Event	T2	prepared	EVENT	104
+Event	T3	raid	EVENT	162
+Event	T4	refuelled	EVENT	184
+Event	T5	landing	EVENT	210
+Event	T6	led	EVENT	281
+Event	T7	contend	EVENT	342
+Event	T8	used	EVENT	401
+Event	T9	overcome	EVENT	416
+Event	T10	defenses	EVENT	429
+Event	T11	used	EVENT	501
+Event	T12	sentries	EVENT	514
+Event	T13	used	EVENT	573
+Event	T14	visit	EVENT	594
+Event	T15	surprise	EVENT	633
+Event	T16	achieved	EVENT	646
+Event	T17	resulted	EVENT	671
+Event	T18	ending	EVENT	682
+Event	T19	killed	EVENT	739
+Event	T20	carried	EVENT	476
+Relation	T8	T9	CauseEffect	true	used	overcome
+Relation	T9	T8	EffectCause	true	overcome	used
+Relation	T11	T12	CauseEffect	true	used	sentries
+Relation	T12	T11	EffectCause	true	sentries	used
+Relation	T17	T19	CauseEffect	true	resulted	killed
+Relation	T19	T17	EffectCause	true	killed	resulted
+Relation	T0	T1	NoRel	true	negotiating	numbered
+Relation	T0	T13	NoRel	true	negotiating	used
+Relation	T0	T15	NoRel	true	negotiating	surprise
+Relation	T0	T16	NoRel	true	negotiating	achieved
+Relation	T1	T14	NoRel	true	numbered	visit
+Relation	T10	T12	NoRel	true	defenses	sentries
+Relation	T10	T13	NoRel	true	defenses	used
+Relation	T10	T3	NoRel	true	defenses	raid
+Relation	T10	T5	NoRel	true	defenses	landing
+Relation	T11	T15	NoRel	true	used	surprise
+Relation	T11	T18	NoRel	true	used	ending
+Relation	T12	T17	NoRel	true	sentries	resulted
+Relation	T12	T18	NoRel	true	sentries	ending
+Relation	T13	T5	NoRel	true	used	landing
+Relation	T14	T18	NoRel	true	visit	ending
+Relation	T14	T19	NoRel	true	visit	killed
+Relation	T16	T14	NoRel	true	achieved	visit
+Relation	T16	T3	NoRel	true	achieved	raid
+Relation	T16	T4	NoRel	true	achieved	refuelled
+Relation	T16	T8	NoRel	true	achieved	used
+Relation	T17	T2	NoRel	true	resulted	prepared
+Relation	T18	T12	NoRel	true	ending	sentries
+Relation	T18	T17	NoRel	true	ending	resulted
+Relation	T18	T4	NoRel	true	ending	refuelled
+Relation	T19	T12	NoRel	true	killed	sentries
+Relation	T19	T14	NoRel	true	killed	visit
+Relation	T19	T15	NoRel	true	killed	surprise
+Relation	T19	T3	NoRel	true	killed	raid
+Relation	T2	T3	NoRel	true	prepared	raid
+Relation	T2	T6	NoRel	true	prepared	led
+Relation	T2	T7	NoRel	true	prepared	contend
+Relation	T20	T5	NoRel	true	carried	landing
+Relation	T3	T19	NoRel	true	raid	killed
+Relation	T3	T2	NoRel	true	raid	prepared
+Relation	T4	T0	NoRel	true	refuelled	negotiating
+Relation	T4	T13	NoRel	true	refuelled	used
+Relation	T4	T17	NoRel	true	refuelled	resulted
+Relation	T5	T0	NoRel	true	landing	negotiating
+Relation	T5	T10	NoRel	true	landing	defenses
+Relation	T5	T4	NoRel	true	landing	refuelled
+Relation	T7	T1	NoRel	true	contend	numbered
+Relation	T7	T10	NoRel	true	contend	defenses
+Relation	T7	T11	NoRel	true	contend	used
+Relation	T7	T17	NoRel	true	contend	resulted
+Relation	T9	T18	NoRel	true	overcome	ending
+Relation	T9	T3	NoRel	true	overcome	raid

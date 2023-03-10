@@ -1,0 +1,93 @@
+Text	El fragmentado resultado condujo a un colapso del sistema democrático alemán .	Las fuerzas de extrema derecha y extrema izquierda , así como las fuerzas monarquistas contrarias a la república y a la democracia liberal , lograron una amplia representación parlamentaria , superior al 40% .	Esto generó que , por sí solos , los partidos democráticos enfrentados entre sí fuesen incapaces de formar un gobierno estable o incluso cesar al Canciller o contrarrestar el poder presidencial de Hindenburg .	Debido a esta situación , hasta marzo de 1933 , se daría una sucesión de gobiernos débiles , dependientes de Hindenburg y sin apoyo parlamentario .	La crisis económica , en conjunto con la creciente crisis política por el debilitamiento del poder legislativo , fortalecería cada vez más al Partido Nazi y a Hitler mismo , generando lo que sería su llegada al poder y el desmantelamiento de la República de Weimar .
+Event	T0	condujo	EVENT	25
+Event	T1	colapso	EVENT	38
+Event	T2	lograron	EVENT	220
+Event	T3	representación	EVENT	240
+Event	T4	generó	EVENT	294
+Event	T5	enfrentados	EVENT	348
+Event	T6	formar	EVENT	389
+Event	T7	cesar	EVENT	426
+Event	T8	sucesión	EVENT	560
+Event	T9	crisis	EVENT	650
+Event	T10	crisis	EVENT	698
+Event	T11	debilitamiento	EVENT	721
+Event	T12	generando	EVENT	821
+Event	T13	llegada	EVENT	847
+Event	T14	desmantelamiento	EVENT	869
+Event	T15	resultado	EVENT	15
+Relation	T15	T1	CauseEffect	true	resultado	colapso
+Relation	T1	T15	EffectCause	true	colapso	resultado
+Relation	T11	T13	CauseEffect	true	debilitamiento	llegada
+Relation	T13	T11	EffectCause	true	llegada	debilitamiento
+Relation	T0	T10	NoRel	true	condujo	crisis
+Relation	T0	T11	NoRel	true	condujo	debilitamiento
+Relation	T1	T12	NoRel	true	colapso	generando
+Relation	T1	T4	NoRel	true	colapso	generó
+Relation	T1	T6	NoRel	true	colapso	formar
+Relation	T10	T1	NoRel	true	crisis	colapso
+Relation	T10	T11	NoRel	true	crisis	debilitamiento
+Relation	T10	T13	NoRel	true	crisis	llegada
+Relation	T10	T15	NoRel	true	crisis	resultado
+Relation	T10	T5	NoRel	true	crisis	enfrentados
+Relation	T10	T8	NoRel	true	crisis	sucesión
+Relation	T11	T0	NoRel	true	debilitamiento	condujo
+Relation	T11	T12	NoRel	true	debilitamiento	generando
+Relation	T11	T15	NoRel	true	debilitamiento	resultado
+Relation	T11	T6	NoRel	true	debilitamiento	formar
+Relation	T11	T7	NoRel	true	debilitamiento	cesar
+Relation	T12	T0	NoRel	true	generando	condujo
+Relation	T12	T11	NoRel	true	generando	debilitamiento
+Relation	T12	T15	NoRel	true	generando	resultado
+Relation	T12	T2	NoRel	true	generando	lograron
+Relation	T12	T5	NoRel	true	generando	enfrentados
+Relation	T13	T12	NoRel	true	llegada	generando
+Relation	T13	T3	NoRel	true	llegada	representación
+Relation	T13	T6	NoRel	true	llegada	formar
+Relation	T14	T6	NoRel	true	desmantelamiento	formar
+Relation	T15	T0	NoRel	true	resultado	condujo
+Relation	T15	T11	NoRel	true	resultado	debilitamiento
+Relation	T15	T13	NoRel	true	resultado	llegada
+Relation	T15	T2	NoRel	true	resultado	lograron
+Relation	T15	T4	NoRel	true	resultado	generó
+Relation	T15	T5	NoRel	true	resultado	enfrentados
+Relation	T15	T6	NoRel	true	resultado	formar
+Relation	T15	T9	NoRel	true	resultado	crisis
+Relation	T2	T11	NoRel	true	lograron	debilitamiento
+Relation	T2	T14	NoRel	true	lograron	desmantelamiento
+Relation	T2	T3	NoRel	true	lograron	representación
+Relation	T2	T6	NoRel	true	lograron	formar
+Relation	T2	T7	NoRel	true	lograron	cesar
+Relation	T2	T9	NoRel	true	lograron	crisis
+Relation	T3	T0	NoRel	true	representación	condujo
+Relation	T3	T10	NoRel	true	representación	crisis
+Relation	T3	T12	NoRel	true	representación	generando
+Relation	T3	T15	NoRel	true	representación	resultado
+Relation	T3	T2	NoRel	true	representación	lograron
+Relation	T3	T5	NoRel	true	representación	enfrentados
+Relation	T4	T10	NoRel	true	generó	crisis
+Relation	T4	T11	NoRel	true	generó	debilitamiento
+Relation	T4	T7	NoRel	true	generó	cesar
+Relation	T4	T9	NoRel	true	generó	crisis
+Relation	T5	T1	NoRel	true	enfrentados	colapso
+Relation	T5	T13	NoRel	true	enfrentados	llegada
+Relation	T5	T14	NoRel	true	enfrentados	desmantelamiento
+Relation	T5	T8	NoRel	true	enfrentados	sucesión
+Relation	T6	T12	NoRel	true	formar	generando
+Relation	T6	T2	NoRel	true	formar	lograron
+Relation	T6	T7	NoRel	true	formar	cesar
+Relation	T7	T12	NoRel	true	cesar	generando
+Relation	T7	T14	NoRel	true	cesar	desmantelamiento
+Relation	T7	T4	NoRel	true	cesar	generó
+Relation	T7	T6	NoRel	true	cesar	formar
+Relation	T7	T9	NoRel	true	cesar	crisis
+Relation	T8	T0	NoRel	true	sucesión	condujo
+Relation	T8	T1	NoRel	true	sucesión	colapso
+Relation	T8	T11	NoRel	true	sucesión	debilitamiento
+Relation	T8	T15	NoRel	true	sucesión	resultado
+Relation	T8	T4	NoRel	true	sucesión	generó
+Relation	T8	T5	NoRel	true	sucesión	enfrentados
+Relation	T8	T9	NoRel	true	sucesión	crisis
+Relation	T9	T1	NoRel	true	crisis	colapso
+Relation	T9	T13	NoRel	true	crisis	llegada
+Relation	T9	T5	NoRel	true	crisis	enfrentados
+Relation	T9	T8	NoRel	true	crisis	sucesión

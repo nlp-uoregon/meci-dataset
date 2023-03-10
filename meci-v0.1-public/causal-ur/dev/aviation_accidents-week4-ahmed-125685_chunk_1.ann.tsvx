@@ -1,0 +1,59 @@
+Text	ایک دیگر جہاز کے پائلٹ نے MH370 کے پائلٹوں سے رابطہ قائم کرنے کی کوشش کی ، ویتنامی ایئر ٹریفک کنٹرول سے رابطہ قائم کرنے کا درخواست آگے بھیجنے کے لیے ، 1 : 30 کے تھوڑی دیر بعد ۔	پائلٹ نے کہا کہ رابطہ قائم کیا گیا ، لیکن بڑبڑاہٹ اور سٹیٹک کے علاوہ کچھ نہ سنائی دیا ۔	ریڈار سکرین سے غائب ہونے سے ہہلے نہ جہاز کے عملے نے نہ کمیونیکیشن سسٹم نے ڈسٹریس سگنل بھیجا یا خراب موسم یا تکنیکی گڑبڑ کا اشارہ ۔	وال_سٹریٹ جرنل نے بتایا ، امریکی حکومت میں ذرائع کا حوالہ دیتے ہوئے کہ جہاز کا سیٹلائٹ کمیونیکیشن لِنک پانچ گھنٹے کے لیے ہر آدھا گھنٹا سگنل بھیجتا گیا ، جو رولز روائس انجن صنعت کار نے وصول کیے ۔	اس بیان سے نتیجہ نکالا گیا کہ ٹرانسپونڈر کے بند ہونے کے چار گھنٹے بعد جہاز ہوا میں رہا ۔
+Event	T1	کہا	EVENT	186
+Event	T4	بھیجا	EVENT	351
+Event	T6	اشارہ	EVENT	388
+Event	T7	بتایا	EVENT	414
+Event	T8	بھیجتا	EVENT	536
+Event	T10	بیان	EVENT	594
+Event	T12	رابطہ	EVENT	46
+Event	T13	درخواست	EVENT	123
+Event	T14	غائب	EVENT	280
+Event	T3	رابطہ	EVENT	193
+Event	T2	وصول	EVENT	580
+Event	T5	بند	EVENT	635
+Relation	T8	T2	CauseEffect	true	بھیجتا	وصول
+Relation	T2	T8	EffectCause	true	وصول	بھیجتا
+Relation	T13	T12	CauseEffect	true	درخواست	رابطہ
+Relation	T12	T13	EffectCause	true	رابطہ	درخواست
+Relation	T13	T3	CauseEffect	true	درخواست	رابطہ
+Relation	T3	T13	EffectCause	true	رابطہ	درخواست
+Relation	T1	T7	NoRel	true	کہا	بتایا
+Relation	T10	T1	NoRel	true	بیان	کہا
+Relation	T10	T13	NoRel	true	بیان	درخواست
+Relation	T10	T8	NoRel	true	بیان	بھیجتا
+Relation	T12	T14	NoRel	true	رابطہ	غائب
+Relation	T13	T1	NoRel	true	درخواست	کہا
+Relation	T13	T14	NoRel	true	درخواست	غائب
+Relation	T13	T4	NoRel	true	درخواست	بھیجا
+Relation	T13	T8	NoRel	true	درخواست	بھیجتا
+Relation	T14	T10	NoRel	true	غائب	بیان
+Relation	T14	T13	NoRel	true	غائب	درخواست
+Relation	T14	T2	NoRel	true	غائب	وصول
+Relation	T2	T12	NoRel	true	وصول	رابطہ
+Relation	T3	T10	NoRel	true	رابطہ	بیان
+Relation	T3	T4	NoRel	true	رابطہ	بھیجا
+Relation	T3	T5	NoRel	true	رابطہ	بند
+Relation	T3	T7	NoRel	true	رابطہ	بتایا
+Relation	T4	T12	NoRel	true	بھیجا	رابطہ
+Relation	T4	T14	NoRel	true	بھیجا	غائب
+Relation	T4	T2	NoRel	true	بھیجا	وصول
+Relation	T4	T3	NoRel	true	بھیجا	رابطہ
+Relation	T4	T5	NoRel	true	بھیجا	بند
+Relation	T5	T1	NoRel	true	بند	کہا
+Relation	T5	T2	NoRel	true	بند	وصول
+Relation	T5	T3	NoRel	true	بند	رابطہ
+Relation	T6	T1	NoRel	true	اشارہ	کہا
+Relation	T6	T10	NoRel	true	اشارہ	بیان
+Relation	T6	T12	NoRel	true	اشارہ	رابطہ
+Relation	T6	T14	NoRel	true	اشارہ	غائب
+Relation	T6	T2	NoRel	true	اشارہ	وصول
+Relation	T6	T3	NoRel	true	اشارہ	رابطہ
+Relation	T6	T4	NoRel	true	اشارہ	بھیجا
+Relation	T7	T1	NoRel	true	بتایا	کہا
+Relation	T7	T2	NoRel	true	بتایا	وصول
+Relation	T7	T3	NoRel	true	بتایا	رابطہ
+Relation	T7	T4	NoRel	true	بتایا	بھیجا
+Relation	T7	T6	NoRel	true	بتایا	اشارہ
+Relation	T7	T8	NoRel	true	بتایا	بھیجتا
+Relation	T8	T4	NoRel	true	بھیجتا	بھیجا
+Relation	T8	T6	NoRel	true	بھیجتا	اشارہ

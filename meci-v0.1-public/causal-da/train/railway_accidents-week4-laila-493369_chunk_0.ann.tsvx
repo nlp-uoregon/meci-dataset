@@ -1,0 +1,64 @@
+Text	thumb | upright | Banen fotograferet nogle uger før ulykken BRANDKATASTROFEN I KAPRUN var en brand i en kabelbanevogn , som indtraf den 11. november 2000 i landsbyen Kaprun i Østrig , hvor 155 mennesker mistede livet , og kun 12 mennesker kom ud af vognen i live .	Branden startede angiveligt efter , at hydraulisk olie var lækket og kom i kontakt med en overophedet varmer , så olien blev antændt .			
+Event	T0	fotograferet	EVENT	24
+Event	T1	BRANDKATASTROFEN	EVENT	60
+Event	T2	brand	EVENT	93
+Event	T3	indtraf	EVENT	124
+Event	T4	startede	EVENT	273
+Event	T5	lækket	EVENT	324
+Event	T6	kontakt	EVENT	340
+Event	T7	antændt	EVENT	390
+Event	T8	ulykken	EVENT	52
+Event	T9	mistede livet	EVENT	203
+Event	T10	kom ud	EVENT	239
+Event	T11	Branden	EVENT	265
+Relation	T6	T7	CauseEffect	true	kontakt	antændt
+Relation	T7	T6	EffectCause	true	antændt	kontakt
+Relation	T7	T11	CauseEffect	true	antændt	Branden
+Relation	T11	T7	EffectCause	true	Branden	antændt
+Relation	T1	T9	CauseEffect	true	BRANDKATASTROFEN	mistede livet
+Relation	T9	T1	EffectCause	true	mistede livet	BRANDKATASTROFEN
+Relation	T8	T9	CauseEffect	true	ulykken	mistede livet
+Relation	T9	T8	EffectCause	true	mistede livet	ulykken
+Relation	T2	T9	CauseEffect	true	brand	mistede livet
+Relation	T9	T2	EffectCause	true	mistede livet	brand
+Relation	T0	T7	NoRel	true	fotograferet	antændt
+Relation	T0	T9	NoRel	true	fotograferet	mistede livet
+Relation	T1	T10	NoRel	true	BRANDKATASTROFEN	kom ud
+Relation	T1	T11	NoRel	true	BRANDKATASTROFEN	Branden
+Relation	T1	T6	NoRel	true	BRANDKATASTROFEN	kontakt
+Relation	T10	T1	NoRel	true	kom ud	BRANDKATASTROFEN
+Relation	T10	T5	NoRel	true	kom ud	lækket
+Relation	T10	T8	NoRel	true	kom ud	ulykken
+Relation	T10	T9	NoRel	true	kom ud	mistede livet
+Relation	T11	T0	NoRel	true	Branden	fotograferet
+Relation	T11	T1	NoRel	true	Branden	BRANDKATASTROFEN
+Relation	T11	T2	NoRel	true	Branden	brand
+Relation	T11	T5	NoRel	true	Branden	lækket
+Relation	T11	T6	NoRel	true	Branden	kontakt
+Relation	T11	T8	NoRel	true	Branden	ulykken
+Relation	T11	T9	NoRel	true	Branden	mistede livet
+Relation	T2	T1	NoRel	true	brand	BRANDKATASTROFEN
+Relation	T2	T10	NoRel	true	brand	kom ud
+Relation	T2	T11	NoRel	true	brand	Branden
+Relation	T3	T10	NoRel	true	indtraf	kom ud
+Relation	T3	T2	NoRel	true	indtraf	brand
+Relation	T3	T5	NoRel	true	indtraf	lækket
+Relation	T3	T6	NoRel	true	indtraf	kontakt
+Relation	T4	T11	NoRel	true	startede	Branden
+Relation	T4	T3	NoRel	true	startede	indtraf
+Relation	T4	T5	NoRel	true	startede	lækket
+Relation	T4	T9	NoRel	true	startede	mistede livet
+Relation	T5	T10	NoRel	true	lækket	kom ud
+Relation	T5	T11	NoRel	true	lækket	Branden
+Relation	T5	T2	NoRel	true	lækket	brand
+Relation	T5	T4	NoRel	true	lækket	startede
+Relation	T6	T4	NoRel	true	kontakt	startede
+Relation	T6	T8	NoRel	true	kontakt	ulykken
+Relation	T7	T3	NoRel	true	antændt	indtraf
+Relation	T7	T5	NoRel	true	antændt	lækket
+Relation	T8	T0	NoRel	true	ulykken	fotograferet
+Relation	T8	T1	NoRel	true	ulykken	BRANDKATASTROFEN
+Relation	T8	T4	NoRel	true	ulykken	startede
+Relation	T9	T0	NoRel	true	mistede livet	fotograferet
+Relation	T9	T10	NoRel	true	mistede livet	kom ud
+Relation	T9	T4	NoRel	true	mistede livet	startede

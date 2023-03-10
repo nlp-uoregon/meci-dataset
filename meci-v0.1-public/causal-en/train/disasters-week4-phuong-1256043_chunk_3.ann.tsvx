@@ -1,0 +1,55 @@
+Text	Seeing Drega approaching the building with his rifle , she warned fellow staffers to evacuate as she ran for an exit .	Drega shot Bunnell in the back from a range of about , killing her .	Dennis Joos , editor of the local _ Colebrook News and Sentinel _ , attempted to disarm Drega after Bunnell fell .	During the struggle Drega shot and killed Joos .	Drega returned to his property and set his house on fire .
+Event	T0	Seeing	EVENT	0
+Event	T1	approaching	EVENT	13
+Event	T2	warned	EVENT	59
+Event	T3	evacuate	EVENT	85
+Event	T4	ran	EVENT	101
+Event	T5	exit	EVENT	112
+Event	T6	shot	EVENT	125
+Event	T7	killing	EVENT	174
+Event	T8	attempted	EVENT	256
+Event	T9	disarm	EVENT	269
+Event	T10	fell	EVENT	296
+Event	T11	struggle	EVENT	314
+Event	T12	shot	EVENT	329
+Event	T13	killed	EVENT	338
+Event	T14	returned	EVENT	358
+Event	T15	set	EVENT	387
+Event	T16	fire	EVENT	404
+Relation	T1	T3	CauseEffect	true	approaching	evacuate
+Relation	T3	T1	EffectCause	true	evacuate	approaching
+Relation	T0	T2	CauseEffect	true	Seeing	warned
+Relation	T2	T0	EffectCause	true	warned	Seeing
+Relation	T1	T6	CauseEffect	true	approaching	shot
+Relation	T6	T1	EffectCause	true	shot	approaching
+Relation	T6	T7	CauseEffect	true	shot	killing
+Relation	T7	T6	EffectCause	true	killing	shot
+Relation	T10	T9	CauseEffect	true	fell	disarm
+Relation	T9	T10	EffectCause	true	disarm	fell
+Relation	T11	T12	CauseEffect	true	struggle	shot
+Relation	T12	T11	EffectCause	true	shot	struggle
+Relation	T12	T13	CauseEffect	true	shot	killed
+Relation	T13	T12	EffectCause	true	killed	shot
+Relation	T13	T14	CauseEffect	true	killed	returned
+Relation	T14	T13	EffectCause	true	returned	killed
+Relation	T13	T16	CauseEffect	true	killed	fire
+Relation	T16	T13	EffectCause	true	fire	killed
+Relation	T0	T4	NoRel	true	Seeing	ran
+Relation	T0	T9	NoRel	true	Seeing	disarm
+Relation	T1	T12	NoRel	true	approaching	shot
+Relation	T10	T5	NoRel	true	fell	exit
+Relation	T11	T6	NoRel	true	struggle	shot
+Relation	T12	T10	NoRel	true	shot	fell
+Relation	T13	T11	NoRel	true	killed	struggle
+Relation	T13	T6	NoRel	true	killed	shot
+Relation	T14	T16	NoRel	true	returned	fire
+Relation	T15	T4	NoRel	true	set	ran
+Relation	T2	T4	NoRel	true	warned	ran
+Relation	T3	T7	NoRel	true	evacuate	killing
+Relation	T4	T1	NoRel	true	ran	approaching
+Relation	T5	T4	NoRel	true	exit	ran
+Relation	T6	T3	NoRel	true	shot	evacuate
+Relation	T7	T3	NoRel	true	killing	evacuate
+Relation	T8	T14	NoRel	true	attempted	returned
+Relation	T8	T6	NoRel	true	attempted	shot
+Relation	T9	T13	NoRel	true	disarm	killed

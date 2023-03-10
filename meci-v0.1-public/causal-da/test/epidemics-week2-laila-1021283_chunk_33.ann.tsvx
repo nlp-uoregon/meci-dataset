@@ -1,0 +1,38 @@
+Text	Den 11. marts 2020 annoncerede Danmarks statsminister Mette Frederiksen , at regeringen havde valgt at " lukke Danmark ned " .	For at begrænse smitten lukkedes alle folkeskoler og daginstitutioner mandag 16. marts , og privatskoler opfordredes samtidig til at lukke ned .	Derudover sendes alle offentligt ansatte , der ikke varetager kritiske funktioner , hjem .	Dem , der ikke sendes hjem , er dem , der har en kritisk rolle for samfundet altså blandt andet dem , der arbejder i sundhedssektoren , i politiet og med ældre .	Kort efter pressemødet oplevede supermarkederne usædvanligt mange kunder og store indkøb af basisvarer som rugbrød , pasta og wc-papir , og efterladte ferskvarer måtte smides ud .
+Event	T0	annoncerede	EVENT	19
+Event	T1	valgt	EVENT	94
+Event	T2	lukke	EVENT	105
+Event	T3	lukkedes	EVENT	151
+Event	T4	opfordredes	EVENT	232
+Event	T5	sendes	EVENT	282
+Event	T6	sendes	EVENT	378
+Event	T7	oplevede	EVENT	548
+Event	T8	indkøb	EVENT	607
+Relation	T1	T0	CauseEffect	true	valgt	annoncerede
+Relation	T0	T1	EffectCause	true	annoncerede	valgt
+Relation	T2	T7	CauseEffect	true	lukke	oplevede
+Relation	T7	T2	EffectCause	true	oplevede	lukke
+Relation	T0	T3	NoRel	true	annoncerede	lukkedes
+Relation	T0	T7	NoRel	true	annoncerede	oplevede
+Relation	T1	T4	NoRel	true	valgt	opfordredes
+Relation	T1	T5	NoRel	true	valgt	sendes
+Relation	T2	T0	NoRel	true	lukke	annoncerede
+Relation	T2	T8	NoRel	true	lukke	indkøb
+Relation	T3	T5	NoRel	true	lukkedes	sendes
+Relation	T3	T7	NoRel	true	lukkedes	oplevede
+Relation	T4	T0	NoRel	true	opfordredes	annoncerede
+Relation	T4	T2	NoRel	true	opfordredes	lukke
+Relation	T5	T1	NoRel	true	sendes	valgt
+Relation	T5	T3	NoRel	true	sendes	lukkedes
+Relation	T5	T4	NoRel	true	sendes	opfordredes
+Relation	T5	T8	NoRel	true	sendes	indkøb
+Relation	T6	T0	NoRel	true	sendes	annoncerede
+Relation	T6	T2	NoRel	true	sendes	lukke
+Relation	T6	T4	NoRel	true	sendes	opfordredes
+Relation	T6	T5	NoRel	true	sendes	sendes
+Relation	T7	T0	NoRel	true	oplevede	annoncerede
+Relation	T7	T1	NoRel	true	oplevede	valgt
+Relation	T7	T3	NoRel	true	oplevede	lukkedes
+Relation	T8	T3	NoRel	true	indkøb	lukkedes
+Relation	T8	T4	NoRel	true	indkøb	opfordredes
+Relation	T8	T7	NoRel	true	indkøb	oplevede

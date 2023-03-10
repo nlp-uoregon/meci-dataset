@@ -1,0 +1,31 @@
+Text	Otras personas , viajan simplemente en el tren para moverse por todo el territorio congolés .	Los accidentes en la red son bastante frecuentes debido a la sobrecarga de los trenes y la precaria infraestructura .	En 2007 , más de 100 personas murieron cuando un tren de carga descarriló en la provincia de Kasai-Occidental .	Entre las 10:00 y las 11:00 hora local ( 8:00 – 9:00 UTC ) del 22 de abril de 2014 , un tren de mercancías descarriló cerca de Katangola , a unos 65 kilómetros al norte de Kamina , en la provincia de Katanga .	En el suceso se vieron implicados dos locomotoras y 15 de los 19 vagones .
+Event	T0	viajan	EVENT	17
+Event	T1	accidentes	EVENT	98
+Event	T2	sobrecarga	EVENT	155
+Event	T3	murieron	EVENT	242
+Event	T4	descarriló	EVENT	275
+Event	T5	descarriló	EVENT	431
+Event	T6	suceso	EVENT	540
+Event	T7	implicados	EVENT	557
+Relation	T2	T1	CauseEffect	true	sobrecarga	accidentes
+Relation	T1	T2	EffectCause	true	accidentes	sobrecarga
+Relation	T4	T3	CauseEffect	true	descarriló	murieron
+Relation	T3	T4	EffectCause	true	murieron	descarriló
+Relation	T5	T6	CauseEffect	true	descarriló	suceso
+Relation	T6	T5	EffectCause	true	suceso	descarriló
+Relation	T0	T1	NoRel	true	viajan	accidentes
+Relation	T0	T4	NoRel	true	viajan	descarriló
+Relation	T1	T3	NoRel	true	accidentes	murieron
+Relation	T2	T7	NoRel	true	sobrecarga	implicados
+Relation	T3	T0	NoRel	true	murieron	viajan
+Relation	T3	T2	NoRel	true	murieron	sobrecarga
+Relation	T4	T1	NoRel	true	descarriló	accidentes
+Relation	T4	T2	NoRel	true	descarriló	sobrecarga
+Relation	T4	T5	NoRel	true	descarriló	descarriló
+Relation	T4	T7	NoRel	true	descarriló	implicados
+Relation	T5	T0	NoRel	true	descarriló	viajan
+Relation	T5	T2	NoRel	true	descarriló	sobrecarga
+Relation	T5	T7	NoRel	true	descarriló	implicados
+Relation	T6	T1	NoRel	true	suceso	accidentes
+Relation	T6	T3	NoRel	true	suceso	murieron
+Relation	T7	T5	NoRel	true	implicados	descarriló

@@ -1,0 +1,50 @@
+Text	NASA planned to return the space shuttle to service around September 2004 ; that date was pushed back to July 2005 .	On July 26 , 2005 , at 10:39 EST , Space Shuttle _ Discovery _ cleared the tower on the " Return to Flight " mission STS - 114 , marking the shuttle 's return to space .	Overall the STS - 114 flight was highly successful , but a similar piece of foam from a different portion of the tank was shed , although the debris did not strike the Orbiter .	Due to this , NASA once again grounded the shuttles until the remaining problem was understood and a solution implemented .	After delaying their reentry by two days due to adverse weather conditions , Commander Eileen Collins and Pilot James M. Kelly returned _ Discovery _ safely to Earth on August 9 , 2005 .
+Event	T0	planned	EVENT	5
+Event	T1	return	EVENT	16
+Event	T10	grounded	EVENT	495
+Event	T13	implemented	EVENT	575
+Event	T14	delaying	EVENT	595
+Event	T15	reentry	EVENT	610
+Event	T16	returned	EVENT	716
+Event	T19	adverse weather conditions	EVENT	637
+Event	T2	service	EVENT	44
+Event	T3	cleared	EVENT	180
+Event	T4	marking	EVENT	246
+Event	T5	flight	EVENT	309
+Event	T6	successful	EVENT	327
+Event	T7	shed	EVENT	409
+Event	T9	strike	EVENT	444
+Relation	T3	T4	CauseEffect	true	cleared	marking
+Relation	T4	T3	EffectCause	true	marking	cleared
+Relation	T19	T14	CauseEffect	true	adverse weather conditions	delaying
+Relation	T14	T19	EffectCause	true	delaying	adverse weather conditions
+Relation	T6	T4	CauseEffect	true	successful	marking
+Relation	T4	T6	EffectCause	true	marking	successful
+Relation	T6	T10	CauseEffect	true	successful	grounded
+Relation	T10	T6	EffectCause	true	grounded	successful
+Relation	T0	T14	NoRel	true	planned	delaying
+Relation	T0	T15	NoRel	true	planned	reentry
+Relation	T1	T15	NoRel	true	return	reentry
+Relation	T10	T16	NoRel	true	grounded	returned
+Relation	T13	T0	NoRel	true	implemented	planned
+Relation	T13	T2	NoRel	true	implemented	service
+Relation	T13	T3	NoRel	true	implemented	cleared
+Relation	T14	T1	NoRel	true	delaying	return
+Relation	T14	T10	NoRel	true	delaying	grounded
+Relation	T15	T0	NoRel	true	reentry	planned
+Relation	T15	T16	NoRel	true	reentry	returned
+Relation	T15	T4	NoRel	true	reentry	marking
+Relation	T16	T2	NoRel	true	returned	service
+Relation	T19	T0	NoRel	true	adverse weather conditions	planned
+Relation	T19	T15	NoRel	true	adverse weather conditions	reentry
+Relation	T2	T13	NoRel	true	service	implemented
+Relation	T2	T14	NoRel	true	service	delaying
+Relation	T2	T4	NoRel	true	service	marking
+Relation	T2	T5	NoRel	true	service	flight
+Relation	T3	T1	NoRel	true	cleared	return
+Relation	T3	T6	NoRel	true	cleared	successful
+Relation	T3	T9	NoRel	true	cleared	strike
+Relation	T4	T1	NoRel	true	marking	return
+Relation	T9	T1	NoRel	true	strike	return
+Relation	T9	T16	NoRel	true	strike	returned
+Relation	T9	T7	NoRel	true	strike	shed

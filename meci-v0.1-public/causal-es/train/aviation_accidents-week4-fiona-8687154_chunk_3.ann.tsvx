@@ -1,0 +1,72 @@
+Text	Nueve personas fueron llevadas al hospital .	Se reportaron tormentas eléctricas en las proximidades del aeropuerto antes del accidente .	El avión se hundió 30 metros en la laguna .	El 18 de julio de 2019 , la Comisión de Investigación de Accidentes de Papúa Nueva Guinea emitió su informe final : la tripulación de vuelo no cumplió con los Procedimientos Operativos Estándar de Air Niugini , ni las listas de verificación de aproximación o pre-aterrizaje , y no informó adecuadamente la aproximación .	La trayectoria de vuelo se volvió inestable después de la desconexión del piloto automático .
+Event	T0	llevadas	EVENT	22
+Event	T1	accidente	EVENT	125
+Event	T2	hundió	EVENT	149
+Event	T3	Investigación	EVENT	221
+Event	T4	emitió	EVENT	271
+Event	T5	vuelo	EVENT	315
+Event	T6	cumplió	EVENT	324
+Event	T7	verificación	EVENT	409
+Event	T8	informó	EVENT	462
+Event	T9	aproximación	EVENT	487
+Event	T10	trayectoria	EVENT	505
+Event	T11	vuelo	EVENT	520
+Event	T12	desconexión	EVENT	560
+Relation	T1	T2	CauseEffect	true	accidente	hundió
+Relation	T2	T1	EffectCause	true	hundió	accidente
+Relation	T6	T1	CauseEffect	true	cumplió	accidente
+Relation	T1	T6	EffectCause	true	accidente	cumplió
+Relation	T8	T1	CauseEffect	true	informó	accidente
+Relation	T1	T8	EffectCause	true	accidente	informó
+Relation	T0	T10	NoRel	true	llevadas	trayectoria
+Relation	T0	T12	NoRel	true	llevadas	desconexión
+Relation	T0	T3	NoRel	true	llevadas	Investigación
+Relation	T0	T8	NoRel	true	llevadas	informó
+Relation	T0	T9	NoRel	true	llevadas	aproximación
+Relation	T1	T4	NoRel	true	accidente	emitió
+Relation	T1	T5	NoRel	true	accidente	vuelo
+Relation	T1	T7	NoRel	true	accidente	verificación
+Relation	T10	T3	NoRel	true	trayectoria	Investigación
+Relation	T10	T4	NoRel	true	trayectoria	emitió
+Relation	T10	T5	NoRel	true	trayectoria	vuelo
+Relation	T10	T6	NoRel	true	trayectoria	cumplió
+Relation	T10	T7	NoRel	true	trayectoria	verificación
+Relation	T10	T8	NoRel	true	trayectoria	informó
+Relation	T11	T10	NoRel	true	vuelo	trayectoria
+Relation	T11	T3	NoRel	true	vuelo	Investigación
+Relation	T11	T6	NoRel	true	vuelo	cumplió
+Relation	T11	T7	NoRel	true	vuelo	verificación
+Relation	T11	T9	NoRel	true	vuelo	aproximación
+Relation	T12	T1	NoRel	true	desconexión	accidente
+Relation	T12	T2	NoRel	true	desconexión	hundió
+Relation	T12	T3	NoRel	true	desconexión	Investigación
+Relation	T12	T5	NoRel	true	desconexión	vuelo
+Relation	T2	T11	NoRel	true	hundió	vuelo
+Relation	T2	T12	NoRel	true	hundió	desconexión
+Relation	T2	T6	NoRel	true	hundió	cumplió
+Relation	T2	T7	NoRel	true	hundió	verificación
+Relation	T2	T9	NoRel	true	hundió	aproximación
+Relation	T3	T8	NoRel	true	Investigación	informó
+Relation	T4	T1	NoRel	true	emitió	accidente
+Relation	T5	T10	NoRel	true	vuelo	trayectoria
+Relation	T5	T12	NoRel	true	vuelo	desconexión
+Relation	T5	T3	NoRel	true	vuelo	Investigación
+Relation	T5	T6	NoRel	true	vuelo	cumplió
+Relation	T5	T8	NoRel	true	vuelo	informó
+Relation	T5	T9	NoRel	true	vuelo	aproximación
+Relation	T6	T0	NoRel	true	cumplió	llevadas
+Relation	T6	T10	NoRel	true	cumplió	trayectoria
+Relation	T6	T8	NoRel	true	cumplió	informó
+Relation	T6	T9	NoRel	true	cumplió	aproximación
+Relation	T7	T1	NoRel	true	verificación	accidente
+Relation	T7	T10	NoRel	true	verificación	trayectoria
+Relation	T7	T12	NoRel	true	verificación	desconexión
+Relation	T7	T3	NoRel	true	verificación	Investigación
+Relation	T7	T9	NoRel	true	verificación	aproximación
+Relation	T8	T11	NoRel	true	informó	vuelo
+Relation	T8	T5	NoRel	true	informó	vuelo
+Relation	T8	T6	NoRel	true	informó	cumplió
+Relation	T8	T9	NoRel	true	informó	aproximación
+Relation	T9	T10	NoRel	true	aproximación	trayectoria
+Relation	T9	T2	NoRel	true	aproximación	hundió
+Relation	T9	T8	NoRel	true	aproximación	informó

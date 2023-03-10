@@ -1,0 +1,59 @@
+Text	Uçağın düşürülmesinden sonra Türkiye'nin Moskova Büyükelçiliği önünde Rusya Liberal Demokrat Partisi Moskova Bölümü Başkanı Boris Çernışov'un önderliğinde toplanan kalabalık , büyükelçilik binasına taşlarla saldırdı .	Türkiye’nin Moskova Büyükelçiliği Basın Sekreteri Orhan Gazigil ise saldırı sonucunda binanın ikinci ve üçüncü katlarında hasar oluştuğunu , ofislerin içerisine taşlar düştüğünü söyledi .	Yaralanan kişiler olma ihtimalinin bulunduğunu söyledi .	Olay sonrası Türk Silahlı Kuvvetleri tarafından kara ve hava birliklerine teyakkuz emri verildi .	Hazır durumda bulunmaları ve güvenlik seviyesinin en üst noktada tutulması istendi .
+Event	T0	düşürülmesinden	EVENT	7
+Event	T1	saldırdı	EVENT	207
+Event	T2	saldırı	EVENT	286
+Event	T3	hasar	EVENT	340
+Event	T4	söyledi	EVENT	396
+Event	T5	Yaralanan	EVENT	406
+Event	T6	söyledi	EVENT	453
+Event	T7	Olay	EVENT	463
+Event	T8	verildi	EVENT	551
+Event	T9	istendi	EVENT	636
+Event	T10	toplanan	EVENT	155
+Relation	T2	T3	CauseEffect	true	saldırı	hasar
+Relation	T3	T2	EffectCause	true	hasar	saldırı
+Relation	T1	T3	CauseEffect	true	saldırdı	hasar
+Relation	T3	T1	EffectCause	true	hasar	saldırdı
+Relation	T1	T4	CauseEffect	true	saldırdı	söyledi
+Relation	T4	T1	EffectCause	true	söyledi	saldırdı
+Relation	T2	T4	CauseEffect	true	saldırı	söyledi
+Relation	T4	T2	EffectCause	true	söyledi	saldırı
+Relation	T2	T5	CauseEffect	true	saldırı	Yaralanan
+Relation	T5	T2	EffectCause	true	Yaralanan	saldırı
+Relation	T1	T5	CauseEffect	true	saldırdı	Yaralanan
+Relation	T5	T1	EffectCause	true	Yaralanan	saldırdı
+Relation	T7	T8	CauseEffect	true	Olay	verildi
+Relation	T8	T7	EffectCause	true	verildi	Olay
+Relation	T7	T9	CauseEffect	true	Olay	istendi
+Relation	T9	T7	EffectCause	true	istendi	Olay
+Relation	T2	T6	CauseEffect	true	saldırı	söyledi
+Relation	T6	T2	EffectCause	true	söyledi	saldırı
+Relation	T0	T10	NoRel	true	düşürülmesinden	toplanan
+Relation	T0	T3	NoRel	true	düşürülmesinden	hasar
+Relation	T0	T6	NoRel	true	düşürülmesinden	söyledi
+Relation	T1	T2	NoRel	true	saldırdı	saldırı
+Relation	T10	T0	NoRel	true	toplanan	düşürülmesinden
+Relation	T10	T2	NoRel	true	toplanan	saldırı
+Relation	T10	T5	NoRel	true	toplanan	Yaralanan
+Relation	T10	T9	NoRel	true	toplanan	istendi
+Relation	T2	T7	NoRel	true	saldırı	Olay
+Relation	T3	T10	NoRel	true	hasar	toplanan
+Relation	T4	T0	NoRel	true	söyledi	düşürülmesinden
+Relation	T4	T10	NoRel	true	söyledi	toplanan
+Relation	T4	T6	NoRel	true	söyledi	söyledi
+Relation	T4	T7	NoRel	true	söyledi	Olay
+Relation	T5	T4	NoRel	true	Yaralanan	söyledi
+Relation	T5	T7	NoRel	true	Yaralanan	Olay
+Relation	T6	T5	NoRel	true	söyledi	Yaralanan
+Relation	T6	T7	NoRel	true	söyledi	Olay
+Relation	T7	T0	NoRel	true	Olay	düşürülmesinden
+Relation	T7	T2	NoRel	true	Olay	saldırı
+Relation	T7	T3	NoRel	true	Olay	hasar
+Relation	T7	T5	NoRel	true	Olay	Yaralanan
+Relation	T8	T1	NoRel	true	verildi	saldırdı
+Relation	T8	T9	NoRel	true	verildi	istendi
+Relation	T9	T0	NoRel	true	istendi	düşürülmesinden
+Relation	T9	T1	NoRel	true	istendi	saldırdı
+Relation	T9	T2	NoRel	true	istendi	saldırı
+Relation	T9	T4	NoRel	true	istendi	söyledi
+Relation	T9	T5	NoRel	true	istendi	Yaralanan

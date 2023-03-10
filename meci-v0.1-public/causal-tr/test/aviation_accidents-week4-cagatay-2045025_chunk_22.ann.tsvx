@@ -1,0 +1,187 @@
+Text	" Katil Rusya " , " Katil Çin " ve " Katil Eset " pankartları taşıyan grup , " Dünya , Bayırbucak Türkmenleri'ne yapılan zulme sessiz kalmamalı , seyirci olmamalı " diye açıklama yaptıktan sonra olaysız bir şekilde dağıldı .	27 Haziran 2016 günü Türkiye Cumhurbaşkanı Erdoğan'ın , Türkiye'nin Rus uçağını düşürmesi sonucu uçağın pilotunun hayatını kaybetmiş olması nedeniyle ' özür dilediğini ' ifade ettiği belirtildi .	Rusya'nın resmî özür beklentisinin Türkiye tarafınca karşılanmamasını takip eden süreçte Rusya Türk malı ürünlerin ithalatında kısıtlama , Türk vatandaşlarının Rus şirketlerinde işe alımında kısıtlama , Rus turistlerin Türkiye tatil paketlerinin iptali , Türklerin Rusya'ya vizesiz girişinin askıya alınması gibi bazı yaptırımlar uyguladı .	Zamanla yaptırımlarda hafifletmeye giden Rusya ile ilişkiler Türkiye'nin özür dilemesiyle normalleşme evresine girmiştir .	15 Temmuz 2016 tarihli darbe girişimi sonrasında Rus uçağını düşüren pilotların darbeye karıştıkları gerekçesiyle tutuklanmaları uçağın Türkiye hükûmetinden habersiz olarak düşürülmüş olabileceği ihtimalini ortaya çıkarmıştır .
+Event	T0	zulme	EVENT	121
+Event	T1	dağıldı	EVENT	215
+Event	T2	belirtildi	EVENT	408
+Event	T4	kısıtlama	EVENT	548
+Event	T5	kısıtlama	EVENT	612
+Event	T6	iptali	EVENT	667
+Event	T7	alınması	EVENT	720
+Event	T10	girmiştir	EVENT	873
+Event	T11	girişimi	EVENT	914
+Event	T12	düşüren	EVENT	946
+Event	T13	karıştıkları	EVENT	973
+Event	T14	tutuklanmaları	EVENT	999
+Event	T15	taşıyan	EVENT	62
+Event	T16	açıklama	EVENT	170
+Event	T17	düşürmesi	EVENT	305
+Event	T18	kaybetmiş	EVENT	348
+Event	T19	özür	EVENT	377
+Event	T3	yaptırımlar	EVENT	739
+Event	T8	yaptırımlarda	EVENT	770
+Event	T9	hafifletmeye	EVENT	784
+Event	T20	özür	EVENT	835
+Event	T21	düşürülmüş	EVENT	1058
+Event	T22	ortaya çıkarmıştır	EVENT	1092
+Relation	T18	T19	CauseEffect	true	kaybetmiş	özür
+Relation	T19	T18	EffectCause	true	özür	kaybetmiş
+Relation	T17	T18	CauseEffect	true	düşürmesi	kaybetmiş
+Relation	T18	T17	EffectCause	true	kaybetmiş	düşürmesi
+Relation	T20	T10	CauseEffect	true	özür	girmiştir
+Relation	T10	T20	EffectCause	true	girmiştir	özür
+Relation	T13	T14	CauseEffect	true	karıştıkları	tutuklanmaları
+Relation	T14	T13	EffectCause	true	tutuklanmaları	karıştıkları
+Relation	T13	T22	CauseEffect	true	karıştıkları	ortaya çıkarmıştır
+Relation	T22	T13	EffectCause	true	ortaya çıkarmıştır	karıştıkları
+Relation	T0	T10	NoRel	true	zulme	girmiştir
+Relation	T0	T16	NoRel	true	zulme	açıklama
+Relation	T0	T18	NoRel	true	zulme	kaybetmiş
+Relation	T0	T19	NoRel	true	zulme	özür
+Relation	T0	T22	NoRel	true	zulme	ortaya çıkarmıştır
+Relation	T0	T4	NoRel	true	zulme	kısıtlama
+Relation	T0	T6	NoRel	true	zulme	iptali
+Relation	T0	T8	NoRel	true	zulme	yaptırımlarda
+Relation	T1	T11	NoRel	true	dağıldı	girişimi
+Relation	T1	T14	NoRel	true	dağıldı	tutuklanmaları
+Relation	T1	T16	NoRel	true	dağıldı	açıklama
+Relation	T1	T17	NoRel	true	dağıldı	düşürmesi
+Relation	T1	T21	NoRel	true	dağıldı	düşürülmüş
+Relation	T1	T7	NoRel	true	dağıldı	alınması
+Relation	T10	T0	NoRel	true	girmiştir	zulme
+Relation	T10	T12	NoRel	true	girmiştir	düşüren
+Relation	T10	T14	NoRel	true	girmiştir	tutuklanmaları
+Relation	T10	T15	NoRel	true	girmiştir	taşıyan
+Relation	T10	T17	NoRel	true	girmiştir	düşürmesi
+Relation	T10	T6	NoRel	true	girmiştir	iptali
+Relation	T11	T0	NoRel	true	girişimi	zulme
+Relation	T11	T10	NoRel	true	girişimi	girmiştir
+Relation	T11	T12	NoRel	true	girişimi	düşüren
+Relation	T11	T14	NoRel	true	girişimi	tutuklanmaları
+Relation	T11	T17	NoRel	true	girişimi	düşürmesi
+Relation	T11	T18	NoRel	true	girişimi	kaybetmiş
+Relation	T11	T21	NoRel	true	girişimi	düşürülmüş
+Relation	T11	T3	NoRel	true	girişimi	yaptırımlar
+Relation	T11	T8	NoRel	true	girişimi	yaptırımlarda
+Relation	T12	T0	NoRel	true	düşüren	zulme
+Relation	T12	T10	NoRel	true	düşüren	girmiştir
+Relation	T12	T13	NoRel	true	düşüren	karıştıkları
+Relation	T12	T16	NoRel	true	düşüren	açıklama
+Relation	T12	T18	NoRel	true	düşüren	kaybetmiş
+Relation	T12	T20	NoRel	true	düşüren	özür
+Relation	T12	T21	NoRel	true	düşüren	düşürülmüş
+Relation	T12	T4	NoRel	true	düşüren	kısıtlama
+Relation	T12	T6	NoRel	true	düşüren	iptali
+Relation	T12	T7	NoRel	true	düşüren	alınması
+Relation	T12	T8	NoRel	true	düşüren	yaptırımlarda
+Relation	T13	T0	NoRel	true	karıştıkları	zulme
+Relation	T13	T12	NoRel	true	karıştıkları	düşüren
+Relation	T13	T2	NoRel	true	karıştıkları	belirtildi
+Relation	T13	T20	NoRel	true	karıştıkları	özür
+Relation	T13	T21	NoRel	true	karıştıkları	düşürülmüş
+Relation	T13	T6	NoRel	true	karıştıkları	iptali
+Relation	T13	T7	NoRel	true	karıştıkları	alınması
+Relation	T13	T9	NoRel	true	karıştıkları	hafifletmeye
+Relation	T14	T1	NoRel	true	tutuklanmaları	dağıldı
+Relation	T14	T11	NoRel	true	tutuklanmaları	girişimi
+Relation	T14	T16	NoRel	true	tutuklanmaları	açıklama
+Relation	T14	T2	NoRel	true	tutuklanmaları	belirtildi
+Relation	T14	T20	NoRel	true	tutuklanmaları	özür
+Relation	T14	T22	NoRel	true	tutuklanmaları	ortaya çıkarmıştır
+Relation	T14	T4	NoRel	true	tutuklanmaları	kısıtlama
+Relation	T14	T5	NoRel	true	tutuklanmaları	kısıtlama
+Relation	T14	T6	NoRel	true	tutuklanmaları	iptali
+Relation	T14	T8	NoRel	true	tutuklanmaları	yaptırımlarda
+Relation	T15	T1	NoRel	true	taşıyan	dağıldı
+Relation	T15	T16	NoRel	true	taşıyan	açıklama
+Relation	T15	T17	NoRel	true	taşıyan	düşürmesi
+Relation	T15	T19	NoRel	true	taşıyan	özür
+Relation	T15	T7	NoRel	true	taşıyan	alınması
+Relation	T15	T8	NoRel	true	taşıyan	yaptırımlarda
+Relation	T15	T9	NoRel	true	taşıyan	hafifletmeye
+Relation	T16	T10	NoRel	true	açıklama	girmiştir
+Relation	T16	T11	NoRel	true	açıklama	girişimi
+Relation	T16	T12	NoRel	true	açıklama	düşüren
+Relation	T16	T17	NoRel	true	açıklama	düşürmesi
+Relation	T16	T18	NoRel	true	açıklama	kaybetmiş
+Relation	T16	T8	NoRel	true	açıklama	yaptırımlarda
+Relation	T17	T1	NoRel	true	düşürmesi	dağıldı
+Relation	T17	T13	NoRel	true	düşürmesi	karıştıkları
+Relation	T17	T15	NoRel	true	düşürmesi	taşıyan
+Relation	T17	T20	NoRel	true	düşürmesi	özür
+Relation	T17	T8	NoRel	true	düşürmesi	yaptırımlarda
+Relation	T18	T1	NoRel	true	kaybetmiş	dağıldı
+Relation	T18	T12	NoRel	true	kaybetmiş	düşüren
+Relation	T18	T13	NoRel	true	kaybetmiş	karıştıkları
+Relation	T18	T15	NoRel	true	kaybetmiş	taşıyan
+Relation	T18	T22	NoRel	true	kaybetmiş	ortaya çıkarmıştır
+Relation	T18	T9	NoRel	true	kaybetmiş	hafifletmeye
+Relation	T19	T12	NoRel	true	özür	düşüren
+Relation	T19	T2	NoRel	true	özür	belirtildi
+Relation	T19	T21	NoRel	true	özür	düşürülmüş
+Relation	T19	T4	NoRel	true	özür	kısıtlama
+Relation	T19	T7	NoRel	true	özür	alınması
+Relation	T19	T9	NoRel	true	özür	hafifletmeye
+Relation	T2	T10	NoRel	true	belirtildi	girmiştir
+Relation	T2	T13	NoRel	true	belirtildi	karıştıkları
+Relation	T2	T4	NoRel	true	belirtildi	kısıtlama
+Relation	T2	T5	NoRel	true	belirtildi	kısıtlama
+Relation	T2	T9	NoRel	true	belirtildi	hafifletmeye
+Relation	T20	T0	NoRel	true	özür	zulme
+Relation	T20	T12	NoRel	true	özür	düşüren
+Relation	T20	T2	NoRel	true	özür	belirtildi
+Relation	T20	T22	NoRel	true	özür	ortaya çıkarmıştır
+Relation	T20	T8	NoRel	true	özür	yaptırımlarda
+Relation	T21	T2	NoRel	true	düşürülmüş	belirtildi
+Relation	T21	T22	NoRel	true	düşürülmüş	ortaya çıkarmıştır
+Relation	T21	T7	NoRel	true	düşürülmüş	alınması
+Relation	T21	T8	NoRel	true	düşürülmüş	yaptırımlarda
+Relation	T22	T15	NoRel	true	ortaya çıkarmıştır	taşıyan
+Relation	T22	T3	NoRel	true	ortaya çıkarmıştır	yaptırımlar
+Relation	T22	T4	NoRel	true	ortaya çıkarmıştır	kısıtlama
+Relation	T22	T6	NoRel	true	ortaya çıkarmıştır	iptali
+Relation	T22	T9	NoRel	true	ortaya çıkarmıştır	hafifletmeye
+Relation	T3	T0	NoRel	true	yaptırımlar	zulme
+Relation	T3	T11	NoRel	true	yaptırımlar	girişimi
+Relation	T3	T12	NoRel	true	yaptırımlar	düşüren
+Relation	T3	T14	NoRel	true	yaptırımlar	tutuklanmaları
+Relation	T3	T18	NoRel	true	yaptırımlar	kaybetmiş
+Relation	T3	T22	NoRel	true	yaptırımlar	ortaya çıkarmıştır
+Relation	T3	T7	NoRel	true	yaptırımlar	alınması
+Relation	T3	T8	NoRel	true	yaptırımlar	yaptırımlarda
+Relation	T3	T9	NoRel	true	yaptırımlar	hafifletmeye
+Relation	T4	T1	NoRel	true	kısıtlama	dağıldı
+Relation	T4	T12	NoRel	true	kısıtlama	düşüren
+Relation	T4	T16	NoRel	true	kısıtlama	açıklama
+Relation	T4	T18	NoRel	true	kısıtlama	kaybetmiş
+Relation	T4	T8	NoRel	true	kısıtlama	yaptırımlarda
+Relation	T5	T0	NoRel	true	kısıtlama	zulme
+Relation	T5	T17	NoRel	true	kısıtlama	düşürmesi
+Relation	T5	T18	NoRel	true	kısıtlama	kaybetmiş
+Relation	T5	T2	NoRel	true	kısıtlama	belirtildi
+Relation	T5	T20	NoRel	true	kısıtlama	özür
+Relation	T5	T21	NoRel	true	kısıtlama	düşürülmüş
+Relation	T5	T3	NoRel	true	kısıtlama	yaptırımlar
+Relation	T5	T8	NoRel	true	kısıtlama	yaptırımlarda
+Relation	T6	T12	NoRel	true	iptali	düşüren
+Relation	T6	T17	NoRel	true	iptali	düşürmesi
+Relation	T6	T2	NoRel	true	iptali	belirtildi
+Relation	T6	T22	NoRel	true	iptali	ortaya çıkarmıştır
+Relation	T6	T4	NoRel	true	iptali	kısıtlama
+Relation	T6	T8	NoRel	true	iptali	yaptırımlarda
+Relation	T6	T9	NoRel	true	iptali	hafifletmeye
+Relation	T7	T1	NoRel	true	alınması	dağıldı
+Relation	T7	T10	NoRel	true	alınması	girmiştir
+Relation	T7	T11	NoRel	true	alınması	girişimi
+Relation	T7	T18	NoRel	true	alınması	kaybetmiş
+Relation	T7	T2	NoRel	true	alınması	belirtildi
+Relation	T7	T3	NoRel	true	alınması	yaptırımlar
+Relation	T7	T4	NoRel	true	alınması	kısıtlama
+Relation	T7	T5	NoRel	true	alınması	kısıtlama
+Relation	T8	T11	NoRel	true	yaptırımlarda	girişimi
+Relation	T8	T20	NoRel	true	yaptırımlarda	özür
+Relation	T8	T7	NoRel	true	yaptırımlarda	alınması
+Relation	T9	T11	NoRel	true	hafifletmeye	girişimi
+Relation	T9	T12	NoRel	true	hafifletmeye	düşüren
+Relation	T9	T16	NoRel	true	hafifletmeye	açıklama
+Relation	T9	T18	NoRel	true	hafifletmeye	kaybetmiş
+Relation	T9	T2	NoRel	true	hafifletmeye	belirtildi
+Relation	T9	T8	NoRel	true	hafifletmeye	yaptırımlarda

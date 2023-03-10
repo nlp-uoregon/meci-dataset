@@ -1,0 +1,90 @@
+Text	It is suspected that she contracted the disease from the semen of an Ebola survivor who had been discharged in March 2015 .	On 27 September a new 42 - day countdown began to declare the country Ebola - free , which eventually occurred on 7 November 2015 ; thereafter , the country increased its vigilance on the Guinean border .	Sierra Leone had entered a 90 - day period of enhanced surveillance that was scheduled to end on 5 February 2016 , when , on 14 January , a new Ebola death was reported in the Tonkolili District .	Prior to this case , the WHO had advised that " we still anticipate more flare - ups and must be prepared for them .	A massive effort is underway to ensure robust prevention , surveillance and response capacity across all three countries by the end of March . "
+Event	T0	suspected	EVENT	6
+Event	T1	contracted	EVENT	25
+Event	T10	surveillance	EVENT	384
+Event	T11	scheduled	EVENT	406
+Event	T12	end	EVENT	419
+Event	T13	death	EVENT	479
+Event	T14	reported	EVENT	489
+Event	T15	advised	EVENT	559
+Event	T16	anticipate	EVENT	583
+Event	T17	prepared	EVENT	623
+Event	T18	effort	EVENT	653
+Event	T19	underway	EVENT	663
+Event	T2	disease	EVENT	40
+Event	T20	prevention	EVENT	689
+Event	T21	surveillance	EVENT	702
+Event	T22	response	EVENT	719
+Event	T23	ensure	EVENT	675
+Event	T3	discharged	EVENT	97
+Event	T4	began	EVENT	165
+Event	T5	declare	EVENT	174
+Event	T6	occurred	EVENT	226
+Event	T7	increased	EVENT	281
+Event	T8	vigilance	EVENT	295
+Event	T9	entered	EVENT	346
+Relation	T1	T2	CauseEffect	true	contracted	disease
+Relation	T2	T1	EffectCause	true	disease	contracted
+Relation	T1	T3	CauseEffect	true	contracted	discharged
+Relation	T3	T1	EffectCause	true	discharged	contracted
+Relation	T5	T7	CauseEffect	true	declare	increased
+Relation	T7	T5	EffectCause	true	increased	declare
+Relation	T13	T10	CauseEffect	true	death	surveillance
+Relation	T10	T13	EffectCause	true	surveillance	death
+Relation	T13	T14	CauseEffect	true	death	reported
+Relation	T14	T13	EffectCause	true	reported	death
+Relation	T16	T17	CauseEffect	true	anticipate	prepared
+Relation	T17	T16	EffectCause	true	prepared	anticipate
+Relation	T18	T23	CauseEffect	true	effort	ensure
+Relation	T23	T18	EffectCause	true	ensure	effort
+Relation	T0	T1	NoRel	true	suspected	contracted
+Relation	T0	T14	NoRel	true	suspected	reported
+Relation	T0	T5	NoRel	true	suspected	declare
+Relation	T1	T14	NoRel	true	contracted	reported
+Relation	T1	T9	NoRel	true	contracted	entered
+Relation	T11	T15	NoRel	true	scheduled	advised
+Relation	T11	T16	NoRel	true	scheduled	anticipate
+Relation	T11	T17	NoRel	true	scheduled	prepared
+Relation	T11	T3	NoRel	true	scheduled	discharged
+Relation	T12	T11	NoRel	true	end	scheduled
+Relation	T13	T0	NoRel	true	death	suspected
+Relation	T13	T21	NoRel	true	death	surveillance
+Relation	T14	T0	NoRel	true	reported	suspected
+Relation	T14	T12	NoRel	true	reported	end
+Relation	T14	T23	NoRel	true	reported	ensure
+Relation	T15	T19	NoRel	true	advised	underway
+Relation	T15	T4	NoRel	true	advised	began
+Relation	T16	T3	NoRel	true	anticipate	discharged
+Relation	T17	T10	NoRel	true	prepared	surveillance
+Relation	T17	T6	NoRel	true	prepared	occurred
+Relation	T17	T7	NoRel	true	prepared	increased
+Relation	T18	T8	NoRel	true	effort	vigilance
+Relation	T19	T0	NoRel	true	underway	suspected
+Relation	T19	T12	NoRel	true	underway	end
+Relation	T19	T13	NoRel	true	underway	death
+Relation	T19	T14	NoRel	true	underway	reported
+Relation	T2	T10	NoRel	true	disease	surveillance
+Relation	T2	T16	NoRel	true	disease	anticipate
+Relation	T2	T4	NoRel	true	disease	began
+Relation	T20	T13	NoRel	true	prevention	death
+Relation	T20	T19	NoRel	true	prevention	underway
+Relation	T20	T2	NoRel	true	prevention	disease
+Relation	T20	T8	NoRel	true	prevention	vigilance
+Relation	T21	T17	NoRel	true	surveillance	prepared
+Relation	T22	T11	NoRel	true	response	scheduled
+Relation	T22	T5	NoRel	true	response	declare
+Relation	T23	T17	NoRel	true	ensure	prepared
+Relation	T23	T22	NoRel	true	ensure	response
+Relation	T23	T7	NoRel	true	ensure	increased
+Relation	T3	T14	NoRel	true	discharged	reported
+Relation	T3	T17	NoRel	true	discharged	prepared
+Relation	T3	T20	NoRel	true	discharged	prevention
+Relation	T4	T15	NoRel	true	began	advised
+Relation	T4	T3	NoRel	true	began	discharged
+Relation	T6	T11	NoRel	true	occurred	scheduled
+Relation	T6	T22	NoRel	true	occurred	response
+Relation	T6	T9	NoRel	true	occurred	entered
+Relation	T7	T8	NoRel	true	increased	vigilance
+Relation	T8	T14	NoRel	true	vigilance	reported
+Relation	T9	T19	NoRel	true	entered	underway
+Relation	T9	T5	NoRel	true	entered	declare

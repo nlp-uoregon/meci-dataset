@@ -1,0 +1,167 @@
+Text	El 9 de agosto de 2007 , el VUELO 1121 DE AIR MOOREA , un de Havilland Canada DHC-6 Twin Otter , se estrelló poco después de despegar del Aeropuerto de Moorea en la isla de Moorea en la Polinesia Francesa ; el avión se dirigía al Aeropuerto Internacional de Faa'a , en Tahití .	Según el informe oficial del BEA , los 20 ocupantes , 19 pasajeros y un tripulante , murieron .	2 de los pasajeros eran funcionarios de la Unión Europea .	El informe reveló que el accidente fue causado por la falla de los cables de control tras la retracción de las aletas tras el despegue , lo que causa una mayor presión sobre los cables .	La falla fue causada por el desgaste significativo de estos debido a la falta de mantenimiento e inspecciones para los cables de acero inoxidable ( que están más sujetos al desgaste de sus homólogos de acero al carbono ) y agravada por la turbulencia de un Boeing 777 mientras el avión estaba estacionado .
+Event	T0	estrelló	EVENT	100
+Event	T1	despegar	EVENT	125
+Event	T2	dirigía	EVENT	219
+Event	T3	informe	EVENT	287
+Event	T4	murieron	EVENT	363
+Event	T5	reveló	EVENT	444
+Event	T6	causado	EVENT	472
+Event	T7	falla	EVENT	487
+Event	T8	retracción	EVENT	526
+Event	T9	despegue	EVENT	559
+Event	T10	causa	EVENT	577
+Event	T11	presión	EVENT	593
+Event	T12	causada	EVENT	633
+Event	T13	falta	EVENT	692
+Event	T14	inspecciones	EVENT	717
+Event	T15	desgaste	EVENT	793
+Event	T16	agravada	EVENT	843
+Event	T17	turbulencia	EVENT	859
+Event	T18	estacionado	EVENT	913
+Event	T19	informe	EVENT	436
+Event	T20	accidente	EVENT	458
+Relation	T7	T20	CauseEffect	true	falla	accidente
+Relation	T20	T7	EffectCause	true	accidente	falla
+Relation	T20	T19	CauseEffect	true	accidente	informe
+Relation	T19	T20	EffectCause	true	informe	accidente
+Relation	T0	T14	NoRel	true	estrelló	inspecciones
+Relation	T0	T15	NoRel	true	estrelló	desgaste
+Relation	T0	T18	NoRel	true	estrelló	estacionado
+Relation	T0	T4	NoRel	true	estrelló	murieron
+Relation	T0	T5	NoRel	true	estrelló	reveló
+Relation	T0	T9	NoRel	true	estrelló	despegue
+Relation	T1	T0	NoRel	true	despegar	estrelló
+Relation	T1	T13	NoRel	true	despegar	falta
+Relation	T1	T3	NoRel	true	despegar	informe
+Relation	T1	T5	NoRel	true	despegar	reveló
+Relation	T1	T8	NoRel	true	despegar	retracción
+Relation	T10	T0	NoRel	true	causa	estrelló
+Relation	T10	T12	NoRel	true	causa	causada
+Relation	T10	T20	NoRel	true	causa	accidente
+Relation	T10	T5	NoRel	true	causa	reveló
+Relation	T10	T9	NoRel	true	causa	despegue
+Relation	T11	T14	NoRel	true	presión	inspecciones
+Relation	T11	T17	NoRel	true	presión	turbulencia
+Relation	T11	T18	NoRel	true	presión	estacionado
+Relation	T11	T19	NoRel	true	presión	informe
+Relation	T11	T2	NoRel	true	presión	dirigía
+Relation	T11	T20	NoRel	true	presión	accidente
+Relation	T11	T4	NoRel	true	presión	murieron
+Relation	T11	T7	NoRel	true	presión	falla
+Relation	T11	T8	NoRel	true	presión	retracción
+Relation	T11	T9	NoRel	true	presión	despegue
+Relation	T12	T0	NoRel	true	causada	estrelló
+Relation	T12	T1	NoRel	true	causada	despegar
+Relation	T12	T10	NoRel	true	causada	causa
+Relation	T12	T11	NoRel	true	causada	presión
+Relation	T12	T14	NoRel	true	causada	inspecciones
+Relation	T12	T19	NoRel	true	causada	informe
+Relation	T12	T4	NoRel	true	causada	murieron
+Relation	T12	T6	NoRel	true	causada	causado
+Relation	T12	T7	NoRel	true	causada	falla
+Relation	T12	T9	NoRel	true	causada	despegue
+Relation	T13	T0	NoRel	true	falta	estrelló
+Relation	T13	T14	NoRel	true	falta	inspecciones
+Relation	T13	T20	NoRel	true	falta	accidente
+Relation	T13	T3	NoRel	true	falta	informe
+Relation	T14	T13	NoRel	true	inspecciones	falta
+Relation	T14	T16	NoRel	true	inspecciones	agravada
+Relation	T14	T17	NoRel	true	inspecciones	turbulencia
+Relation	T14	T3	NoRel	true	inspecciones	informe
+Relation	T14	T5	NoRel	true	inspecciones	reveló
+Relation	T14	T6	NoRel	true	inspecciones	causado
+Relation	T14	T9	NoRel	true	inspecciones	despegue
+Relation	T15	T1	NoRel	true	desgaste	despegar
+Relation	T15	T10	NoRel	true	desgaste	causa
+Relation	T15	T11	NoRel	true	desgaste	presión
+Relation	T15	T13	NoRel	true	desgaste	falta
+Relation	T15	T2	NoRel	true	desgaste	dirigía
+Relation	T15	T20	NoRel	true	desgaste	accidente
+Relation	T15	T6	NoRel	true	desgaste	causado
+Relation	T15	T7	NoRel	true	desgaste	falla
+Relation	T15	T8	NoRel	true	desgaste	retracción
+Relation	T15	T9	NoRel	true	desgaste	despegue
+Relation	T16	T1	NoRel	true	agravada	despegar
+Relation	T16	T18	NoRel	true	agravada	estacionado
+Relation	T16	T19	NoRel	true	agravada	informe
+Relation	T16	T3	NoRel	true	agravada	informe
+Relation	T16	T5	NoRel	true	agravada	reveló
+Relation	T16	T6	NoRel	true	agravada	causado
+Relation	T16	T7	NoRel	true	agravada	falla
+Relation	T16	T8	NoRel	true	agravada	retracción
+Relation	T17	T11	NoRel	true	turbulencia	presión
+Relation	T17	T12	NoRel	true	turbulencia	causada
+Relation	T17	T18	NoRel	true	turbulencia	estacionado
+Relation	T17	T20	NoRel	true	turbulencia	accidente
+Relation	T17	T3	NoRel	true	turbulencia	informe
+Relation	T17	T5	NoRel	true	turbulencia	reveló
+Relation	T17	T6	NoRel	true	turbulencia	causado
+Relation	T17	T9	NoRel	true	turbulencia	despegue
+Relation	T18	T0	NoRel	true	estacionado	estrelló
+Relation	T18	T1	NoRel	true	estacionado	despegar
+Relation	T18	T10	NoRel	true	estacionado	causa
+Relation	T18	T14	NoRel	true	estacionado	inspecciones
+Relation	T18	T15	NoRel	true	estacionado	desgaste
+Relation	T18	T16	NoRel	true	estacionado	agravada
+Relation	T18	T9	NoRel	true	estacionado	despegue
+Relation	T19	T1	NoRel	true	informe	despegar
+Relation	T19	T13	NoRel	true	informe	falta
+Relation	T19	T3	NoRel	true	informe	informe
+Relation	T19	T5	NoRel	true	informe	reveló
+Relation	T19	T9	NoRel	true	informe	despegue
+Relation	T2	T0	NoRel	true	dirigía	estrelló
+Relation	T2	T10	NoRel	true	dirigía	causa
+Relation	T2	T11	NoRel	true	dirigía	presión
+Relation	T2	T13	NoRel	true	dirigía	falta
+Relation	T2	T15	NoRel	true	dirigía	desgaste
+Relation	T2	T18	NoRel	true	dirigía	estacionado
+Relation	T2	T19	NoRel	true	dirigía	informe
+Relation	T2	T20	NoRel	true	dirigía	accidente
+Relation	T2	T4	NoRel	true	dirigía	murieron
+Relation	T2	T9	NoRel	true	dirigía	despegue
+Relation	T20	T1	NoRel	true	accidente	despegar
+Relation	T20	T11	NoRel	true	accidente	presión
+Relation	T20	T6	NoRel	true	accidente	causado
+Relation	T20	T8	NoRel	true	accidente	retracción
+Relation	T3	T12	NoRel	true	informe	causada
+Relation	T3	T17	NoRel	true	informe	turbulencia
+Relation	T3	T19	NoRel	true	informe	informe
+Relation	T4	T0	NoRel	true	murieron	estrelló
+Relation	T4	T12	NoRel	true	murieron	causada
+Relation	T4	T14	NoRel	true	murieron	inspecciones
+Relation	T4	T20	NoRel	true	murieron	accidente
+Relation	T4	T8	NoRel	true	murieron	retracción
+Relation	T4	T9	NoRel	true	murieron	despegue
+Relation	T5	T14	NoRel	true	reveló	inspecciones
+Relation	T5	T15	NoRel	true	reveló	desgaste
+Relation	T5	T20	NoRel	true	reveló	accidente
+Relation	T5	T4	NoRel	true	reveló	murieron
+Relation	T6	T11	NoRel	true	causado	presión
+Relation	T6	T12	NoRel	true	causado	causada
+Relation	T6	T15	NoRel	true	causado	desgaste
+Relation	T6	T17	NoRel	true	causado	turbulencia
+Relation	T6	T18	NoRel	true	causado	estacionado
+Relation	T6	T3	NoRel	true	causado	informe
+Relation	T6	T4	NoRel	true	causado	murieron
+Relation	T6	T8	NoRel	true	causado	retracción
+Relation	T7	T1	NoRel	true	falla	despegar
+Relation	T7	T15	NoRel	true	falla	desgaste
+Relation	T7	T17	NoRel	true	falla	turbulencia
+Relation	T7	T19	NoRel	true	falla	informe
+Relation	T7	T2	NoRel	true	falla	dirigía
+Relation	T7	T4	NoRel	true	falla	murieron
+Relation	T8	T1	NoRel	true	retracción	despegar
+Relation	T8	T10	NoRel	true	retracción	causa
+Relation	T8	T14	NoRel	true	retracción	inspecciones
+Relation	T8	T15	NoRel	true	retracción	desgaste
+Relation	T8	T16	NoRel	true	retracción	agravada
+Relation	T8	T18	NoRel	true	retracción	estacionado
+Relation	T8	T5	NoRel	true	retracción	reveló
+Relation	T8	T9	NoRel	true	retracción	despegue
+Relation	T9	T1	NoRel	true	despegue	despegar
+Relation	T9	T11	NoRel	true	despegue	presión
+Relation	T9	T12	NoRel	true	despegue	causada
+Relation	T9	T13	NoRel	true	despegue	falta
+Relation	T9	T19	NoRel	true	despegue	informe
+Relation	T9	T7	NoRel	true	despegue	falla
+Relation	T9	T8	NoRel	true	despegue	retracción

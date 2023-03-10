@@ -1,0 +1,90 @@
+Text	Searchers were unable to find the chock for the other elevator or the right aileron , either at the crash site or on the ground between the runway and the crash site .	On the morning after the accident an MMA apprentice found the missing elevator chock on the tarmac close to where VH - MME was positioned for an engine test run the previous afternoon .	The investigators carried out a flight test on a DC - 3 to determine what effect , if any , was caused by installing an aileron chock on the elevator .	They found there was no effect and the presence of the chock did not prevent the pilot having full control of the elevator .	Staff of the Department of Civil Aviation calculated the most likely position of the centre of gravity on the fatal flight and found it was about 3.3 % of Mean Aerodynamic Chord behind the rear limit .
+Event	T0	find	EVENT	25
+Event	T1	crash	EVENT	100
+Event	T2	crash	EVENT	155
+Event	T3	accident	EVENT	193
+Event	T4	found	EVENT	220
+Event	T5	missing	EVENT	230
+Event	T6	chock	EVENT	247
+Event	T7	positioned	EVENT	295
+Event	T8	run	EVENT	325
+Event	T9	test	EVENT	393
+Event	T11	caused	EVENT	450
+Event	T12	installing	EVENT	460
+Event	T13	chock	EVENT	482
+Event	T14	found	EVENT	511
+Event	T15	effect	EVENT	530
+Event	T16	presence	EVENT	545
+Event	T17	calculated	EVENT	673
+Event	T18	flight	EVENT	747
+Event	T19	found	EVENT	758
+Event	T20	carried out	EVENT	372
+Event	T21	determine	EVENT	413
+Event	T10	prevent	EVENT	575
+Event	T22	control	EVENT	605
+Relation	T7	T8	CauseEffect	true	positioned	run
+Relation	T8	T7	EffectCause	true	run	positioned
+Relation	T9	T21	CauseEffect	true	test	determine
+Relation	T21	T9	EffectCause	true	determine	test
+Relation	T16	T10	CauseEffect	true	presence	prevent
+Relation	T10	T16	EffectCause	true	prevent	presence
+Relation	T0	T12	NoRel	true	find	installing
+Relation	T0	T22	NoRel	true	find	control
+Relation	T0	T6	NoRel	true	find	chock
+Relation	T1	T10	NoRel	true	crash	prevent
+Relation	T1	T15	NoRel	true	crash	effect
+Relation	T1	T16	NoRel	true	crash	presence
+Relation	T1	T17	NoRel	true	crash	calculated
+Relation	T1	T2	NoRel	true	crash	crash
+Relation	T11	T14	NoRel	true	caused	found
+Relation	T11	T2	NoRel	true	caused	crash
+Relation	T12	T8	NoRel	true	installing	run
+Relation	T12	T9	NoRel	true	installing	test
+Relation	T13	T15	NoRel	true	chock	effect
+Relation	T13	T16	NoRel	true	chock	presence
+Relation	T13	T2	NoRel	true	chock	crash
+Relation	T14	T12	NoRel	true	found	installing
+Relation	T14	T6	NoRel	true	found	chock
+Relation	T15	T0	NoRel	true	effect	find
+Relation	T15	T1	NoRel	true	effect	crash
+Relation	T16	T5	NoRel	true	presence	missing
+Relation	T16	T7	NoRel	true	presence	positioned
+Relation	T17	T14	NoRel	true	calculated	found
+Relation	T17	T22	NoRel	true	calculated	control
+Relation	T18	T13	NoRel	true	flight	chock
+Relation	T19	T16	NoRel	true	found	presence
+Relation	T2	T12	NoRel	true	crash	installing
+Relation	T2	T5	NoRel	true	crash	missing
+Relation	T2	T7	NoRel	true	crash	positioned
+Relation	T20	T19	NoRel	true	carried out	found
+Relation	T20	T4	NoRel	true	carried out	found
+Relation	T21	T11	NoRel	true	determine	caused
+Relation	T21	T12	NoRel	true	determine	installing
+Relation	T22	T0	NoRel	true	control	find
+Relation	T22	T10	NoRel	true	control	prevent
+Relation	T22	T11	NoRel	true	control	caused
+Relation	T3	T12	NoRel	true	accident	installing
+Relation	T3	T22	NoRel	true	accident	control
+Relation	T4	T1	NoRel	true	found	crash
+Relation	T4	T16	NoRel	true	found	presence
+Relation	T4	T6	NoRel	true	found	chock
+Relation	T5	T0	NoRel	true	missing	find
+Relation	T5	T16	NoRel	true	missing	presence
+Relation	T5	T20	NoRel	true	missing	carried out
+Relation	T5	T7	NoRel	true	missing	positioned
+Relation	T6	T19	NoRel	true	chock	found
+Relation	T6	T21	NoRel	true	chock	determine
+Relation	T6	T4	NoRel	true	chock	found
+Relation	T6	T7	NoRel	true	chock	positioned
+Relation	T7	T22	NoRel	true	positioned	control
+Relation	T8	T14	NoRel	true	run	found
+Relation	T8	T15	NoRel	true	run	effect
+Relation	T8	T17	NoRel	true	run	calculated
+Relation	T8	T18	NoRel	true	run	flight
+Relation	T8	T21	NoRel	true	run	determine
+Relation	T8	T4	NoRel	true	run	found
+Relation	T9	T18	NoRel	true	test	flight
+Relation	T9	T2	NoRel	true	test	crash
+Relation	T9	T3	NoRel	true	test	accident
+Relation	T9	T7	NoRel	true	test	positioned
+Relation	T9	T8	NoRel	true	test	run

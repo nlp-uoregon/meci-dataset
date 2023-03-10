@@ -1,0 +1,62 @@
+Text	Depremlerin ülkenin sanayisinin can damarı olan Marmara Bölgesi'nde meydana gelmesi sonucunda Türkiye ; yetişmiş elemanın yanı sıra depremde kaybedilen konut , ticaret ve altyapı gibi yan maliyetlerle beraber 13 milyar dolarlık bir kayba uğradı .	2000 yılı Türkiye için hem bir ekonomik canlanma hem de bir çöküş yılıdır .	Türkiye 1999 yılının sonunda ekonomik açıdan son derece karamsar bir görünüm içerisindeydi .	Ekonomi % 6.1 oranında küçülmüştü .	Enflasyon % 70'e ulaşmış , bütçe açıkları büyümüş , Hazine faizlerinin yıllık ortalama bileşik oranı % 106'ya ulaşmıştı .
+Event	T0	Depremlerin	EVENT	0
+Event	T1	gelmesi	EVENT	76
+Event	T2	yetişmiş	EVENT	104
+Event	T3	kaybedilen	EVENT	141
+Event	T4	uğradı	EVENT	238
+Event	T5	canlanma	EVENT	287
+Event	T6	çöküş	EVENT	307
+Event	T7	küçülmüştü	EVENT	439
+Event	T8	büyümüş	EVENT	494
+Event	T9	ulaşmıştı	EVENT	562
+Event	T10	ulaşmış	EVENT	469
+Relation	T0	T3	CauseEffect	true	Depremlerin	kaybedilen
+Relation	T3	T0	EffectCause	true	kaybedilen	Depremlerin
+Relation	T3	T4	CauseEffect	true	kaybedilen	uğradı
+Relation	T4	T3	EffectCause	true	uğradı	kaybedilen
+Relation	T4	T7	CauseEffect	true	uğradı	küçülmüştü
+Relation	T7	T4	EffectCause	true	küçülmüştü	uğradı
+Relation	T6	T10	CauseEffect	true	çöküş	ulaşmış
+Relation	T10	T6	EffectCause	true	ulaşmış	çöküş
+Relation	T10	T9	CauseEffect	true	ulaşmış	ulaşmıştı
+Relation	T9	T10	EffectCause	true	ulaşmıştı	ulaşmış
+Relation	T9	T8	CauseEffect	true	ulaşmıştı	büyümüş
+Relation	T8	T9	EffectCause	true	büyümüş	ulaşmıştı
+Relation	T7	T10	CauseEffect	true	küçülmüştü	ulaşmış
+Relation	T10	T7	EffectCause	true	ulaşmış	küçülmüştü
+Relation	T0	T1	NoRel	true	Depremlerin	gelmesi
+Relation	T0	T10	NoRel	true	Depremlerin	ulaşmış
+Relation	T0	T2	NoRel	true	Depremlerin	yetişmiş
+Relation	T0	T5	NoRel	true	Depremlerin	canlanma
+Relation	T1	T10	NoRel	true	gelmesi	ulaşmış
+Relation	T1	T5	NoRel	true	gelmesi	canlanma
+Relation	T1	T8	NoRel	true	gelmesi	büyümüş
+Relation	T10	T2	NoRel	true	ulaşmış	yetişmiş
+Relation	T10	T4	NoRel	true	ulaşmış	uğradı
+Relation	T2	T7	NoRel	true	yetişmiş	küçülmüştü
+Relation	T2	T8	NoRel	true	yetişmiş	büyümüş
+Relation	T2	T9	NoRel	true	yetişmiş	ulaşmıştı
+Relation	T3	T10	NoRel	true	kaybedilen	ulaşmış
+Relation	T3	T2	NoRel	true	kaybedilen	yetişmiş
+Relation	T3	T7	NoRel	true	kaybedilen	küçülmüştü
+Relation	T3	T8	NoRel	true	kaybedilen	büyümüş
+Relation	T4	T8	NoRel	true	uğradı	büyümüş
+Relation	T4	T9	NoRel	true	uğradı	ulaşmıştı
+Relation	T5	T8	NoRel	true	canlanma	büyümüş
+Relation	T5	T9	NoRel	true	canlanma	ulaşmıştı
+Relation	T6	T1	NoRel	true	çöküş	gelmesi
+Relation	T6	T2	NoRel	true	çöküş	yetişmiş
+Relation	T6	T3	NoRel	true	çöküş	kaybedilen
+Relation	T6	T5	NoRel	true	çöküş	canlanma
+Relation	T6	T8	NoRel	true	çöküş	büyümüş
+Relation	T7	T1	NoRel	true	küçülmüştü	gelmesi
+Relation	T7	T2	NoRel	true	küçülmüştü	yetişmiş
+Relation	T8	T0	NoRel	true	büyümüş	Depremlerin
+Relation	T8	T1	NoRel	true	büyümüş	gelmesi
+Relation	T8	T2	NoRel	true	büyümüş	yetişmiş
+Relation	T8	T5	NoRel	true	büyümüş	canlanma
+Relation	T9	T1	NoRel	true	ulaşmıştı	gelmesi
+Relation	T9	T2	NoRel	true	ulaşmıştı	yetişmiş
+Relation	T9	T5	NoRel	true	ulaşmıştı	canlanma
+Relation	T9	T6	NoRel	true	ulaşmıştı	çöküş
+Relation	T9	T7	NoRel	true	ulaşmıştı	küçülmüştü

@@ -1,0 +1,75 @@
+Text	Ahmedov Elbrus Samrettin oğlu — majör 5. Mayilov Emil Şahit oğlu — binbaşı 6. Memmedov Murat Yaşar oğlu — binbaşı 7.	Aliyev Emil Elman oğlu — binbaşı 8. Ahmethanov Ceyhun Hanlar oğlu — tıbbi servis kaptanı 9. Bayramlı Cavit Ahliman oğlu — kaptan 10. Aliyev Hayyam Alihan oğlu — kaptan 11. Karaisayev Teymur Enver oğlu — kaptan 12. Nağıyev Ferit Tayyar oğlu — kıdemli teğmen 13. Süleymanov Abdulla Telman oğlu — teğmen 14 . Nabiyev Elçin Fikret oğlu — işçi	Olayın hemen ardından Devlet Sınır Hizmetei yönetimi ve Başsavcılık olay yerine gitti .	Ceza Kanunu'nun 352. 2 maddesi ( uçuşa veya uçuşa hazırlık kurallarının ihlali , ihmal nedeniyle iki veya daha fazla kişinin ölümüne neden olmuştur ) ve diğer maddeler kapsamında Cumhuriyet Başsavcılığı tarafından ceza davası açıldı ve soruşturma Savcılık tarafından özel denetim altına alınmıdı .	Helikopter kazasını araştıran soruşturma ekibine Başsavcılık Ofisi Soruşturma Dairesi Başkan Yardımcısı Elçin Memmedov başkanlık ediyor .
+Event	T0	Olayın	EVENT	456
+Event	T2	gitti	EVENT	536
+Event	T3	ihlali	EVENT	616
+Event	T5	soruşturma	EVENT	780
+Event	T6	alınmıdı	EVENT	831
+Event	T7	soruşturma	EVENT	872
+Event	T8	ediyor	EVENT	971
+Event	T1	uçuşa	EVENT	577
+Event	T9	uçuşa	EVENT	588
+Event	T10	ihmal	EVENT	625
+Event	T11	ölümüne	EVENT	669
+Event	T12	davası	EVENT	763
+Event	T4	kazasını	EVENT	853
+Event	T13	araştıran	EVENT	862
+Relation	T0	T2	CauseEffect	true	Olayın	gitti
+Relation	T2	T0	EffectCause	true	gitti	Olayın
+Relation	T3	T11	CauseEffect	true	ihlali	ölümüne
+Relation	T11	T3	EffectCause	true	ölümüne	ihlali
+Relation	T10	T11	CauseEffect	true	ihmal	ölümüne
+Relation	T11	T10	EffectCause	true	ölümüne	ihmal
+Relation	T12	T5	CauseEffect	true	davası	soruşturma
+Relation	T5	T12	EffectCause	true	soruşturma	davası
+Relation	T4	T7	CauseEffect	true	kazasını	soruşturma
+Relation	T7	T4	EffectCause	true	soruşturma	kazasını
+Relation	T0	T12	NoRel	true	Olayın	davası
+Relation	T0	T3	NoRel	true	Olayın	ihlali
+Relation	T0	T6	NoRel	true	Olayın	alınmıdı
+Relation	T0	T8	NoRel	true	Olayın	ediyor
+Relation	T1	T0	NoRel	true	uçuşa	Olayın
+Relation	T1	T3	NoRel	true	uçuşa	ihlali
+Relation	T1	T5	NoRel	true	uçuşa	soruşturma
+Relation	T1	T8	NoRel	true	uçuşa	ediyor
+Relation	T1	T9	NoRel	true	uçuşa	uçuşa
+Relation	T10	T0	NoRel	true	ihmal	Olayın
+Relation	T10	T1	NoRel	true	ihmal	uçuşa
+Relation	T10	T12	NoRel	true	ihmal	davası
+Relation	T10	T2	NoRel	true	ihmal	gitti
+Relation	T10	T5	NoRel	true	ihmal	soruşturma
+Relation	T10	T6	NoRel	true	ihmal	alınmıdı
+Relation	T11	T12	NoRel	true	ölümüne	davası
+Relation	T12	T10	NoRel	true	davası	ihmal
+Relation	T12	T11	NoRel	true	davası	ölümüne
+Relation	T12	T2	NoRel	true	davası	gitti
+Relation	T12	T9	NoRel	true	davası	uçuşa
+Relation	T13	T1	NoRel	true	araştıran	uçuşa
+Relation	T13	T10	NoRel	true	araştıran	ihmal
+Relation	T13	T3	NoRel	true	araştıran	ihlali
+Relation	T13	T8	NoRel	true	araştıran	ediyor
+Relation	T2	T12	NoRel	true	gitti	davası
+Relation	T2	T13	NoRel	true	gitti	araştıran
+Relation	T2	T4	NoRel	true	gitti	kazasını
+Relation	T2	T6	NoRel	true	gitti	alınmıdı
+Relation	T3	T4	NoRel	true	ihlali	kazasını
+Relation	T3	T5	NoRel	true	ihlali	soruşturma
+Relation	T3	T6	NoRel	true	ihlali	alınmıdı
+Relation	T3	T8	NoRel	true	ihlali	ediyor
+Relation	T4	T2	NoRel	true	kazasını	gitti
+Relation	T4	T5	NoRel	true	kazasını	soruşturma
+Relation	T4	T8	NoRel	true	kazasını	ediyor
+Relation	T5	T3	NoRel	true	soruşturma	ihlali
+Relation	T5	T9	NoRel	true	soruşturma	uçuşa
+Relation	T6	T2	NoRel	true	alınmıdı	gitti
+Relation	T6	T5	NoRel	true	alınmıdı	soruşturma
+Relation	T6	T9	NoRel	true	alınmıdı	uçuşa
+Relation	T7	T0	NoRel	true	soruşturma	Olayın
+Relation	T7	T1	NoRel	true	soruşturma	uçuşa
+Relation	T7	T10	NoRel	true	soruşturma	ihmal
+Relation	T7	T3	NoRel	true	soruşturma	ihlali
+Relation	T8	T11	NoRel	true	ediyor	ölümüne
+Relation	T8	T12	NoRel	true	ediyor	davası
+Relation	T8	T2	NoRel	true	ediyor	gitti
+Relation	T8	T3	NoRel	true	ediyor	ihlali
+Relation	T8	T5	NoRel	true	ediyor	soruşturma
+Relation	T8	T6	NoRel	true	ediyor	alınmıdı

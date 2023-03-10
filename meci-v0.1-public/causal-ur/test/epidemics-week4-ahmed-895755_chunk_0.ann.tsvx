@@ -1,0 +1,150 @@
+Text	کورونا وائرس مرض 2019 ( COVID-19 ) ایک متعدی بیماری ہے جو انتہائی مہلک تنفسی سینڈروم کورونا وائرس 2 ( SARS - CoV-2 ) سے ہوتی ہے ۔	یہ مرض دنیا بھر میں 2019ء سے پھیلا اور جلد ہی عالمگیر وبا کی شکل اختیار کر گیا ۔	اس کی عمومی علامات میں بخار ، کھانسی اور سانس میں گھٹن شامل ہیں ۔	پٹھوں کا درد ، تھوک کا آنا اور گلے کی سوزش ذرا نادر علامتیں ہیں ۔	اکثر کیسوں میں کم علامتیں دیکھی گئیں ، کچھ معاملات میں مریض نمونیا اور متعدد اعضاء کے ناکارہ پن کا شکار بھی ہو جاتا ہے ۔
+Event	T0	بیماری	EVENT	45
+Event	T1	مرض	EVENT	133
+Event	T4	درد	EVENT	286
+Event	T5	سوزش	EVENT	315
+Event	T7	شکار	EVENT	442
+Event	T8	ہوتی	EVENT	120
+Event	T9	وبا	EVENT	184
+Event	T10	اختیار	EVENT	195
+Event	T2	شامل	EVENT	266
+Event	T3	بخار	EVENT	234
+Event	T11	کھانسی	EVENT	241
+Event	T12	گھٹن	EVENT	261
+Event	T13	علامات	EVENT	223
+Event	T14	آنا	EVENT	300
+Event	T15	علامتیں	EVENT	329
+Event	T16	کیسوں	EVENT	348
+Event	T17	علامتیں	EVENT	361
+Event	T18	دیکھی	EVENT	369
+Event	T6	نمونیا	EVENT	403
+Event	T19	متعدد	EVENT	414
+Relation	T8	T0	CauseEffect	true	ہوتی	بیماری
+Relation	T0	T8	EffectCause	true	بیماری	ہوتی
+Relation	T1	T9	CauseEffect	true	مرض	وبا
+Relation	T9	T1	EffectCause	true	وبا	مرض
+Relation	T0	T1	NoRel	true	بیماری	مرض
+Relation	T0	T16	NoRel	true	بیماری	کیسوں
+Relation	T0	T6	NoRel	true	بیماری	نمونیا
+Relation	T0	T7	NoRel	true	بیماری	شکار
+Relation	T1	T0	NoRel	true	مرض	بیماری
+Relation	T1	T10	NoRel	true	مرض	اختیار
+Relation	T1	T11	NoRel	true	مرض	کھانسی
+Relation	T1	T14	NoRel	true	مرض	آنا
+Relation	T1	T15	NoRel	true	مرض	علامتیں
+Relation	T1	T16	NoRel	true	مرض	کیسوں
+Relation	T1	T19	NoRel	true	مرض	متعدد
+Relation	T10	T11	NoRel	true	اختیار	کھانسی
+Relation	T10	T15	NoRel	true	اختیار	علامتیں
+Relation	T10	T18	NoRel	true	اختیار	دیکھی
+Relation	T10	T5	NoRel	true	اختیار	سوزش
+Relation	T10	T7	NoRel	true	اختیار	شکار
+Relation	T11	T0	NoRel	true	کھانسی	بیماری
+Relation	T11	T1	NoRel	true	کھانسی	مرض
+Relation	T11	T14	NoRel	true	کھانسی	آنا
+Relation	T11	T16	NoRel	true	کھانسی	کیسوں
+Relation	T11	T19	NoRel	true	کھانسی	متعدد
+Relation	T12	T11	NoRel	true	گھٹن	کھانسی
+Relation	T12	T13	NoRel	true	گھٹن	علامات
+Relation	T12	T14	NoRel	true	گھٹن	آنا
+Relation	T12	T6	NoRel	true	گھٹن	نمونیا
+Relation	T12	T7	NoRel	true	گھٹن	شکار
+Relation	T12	T8	NoRel	true	گھٹن	ہوتی
+Relation	T13	T10	NoRel	true	علامات	اختیار
+Relation	T13	T11	NoRel	true	علامات	کھانسی
+Relation	T13	T16	NoRel	true	علامات	کیسوں
+Relation	T13	T6	NoRel	true	علامات	نمونیا
+Relation	T13	T7	NoRel	true	علامات	شکار
+Relation	T14	T0	NoRel	true	آنا	بیماری
+Relation	T14	T15	NoRel	true	آنا	علامتیں
+Relation	T14	T17	NoRel	true	آنا	علامتیں
+Relation	T14	T18	NoRel	true	آنا	دیکھی
+Relation	T14	T19	NoRel	true	آنا	متعدد
+Relation	T14	T2	NoRel	true	آنا	شامل
+Relation	T14	T3	NoRel	true	آنا	بخار
+Relation	T14	T4	NoRel	true	آنا	درد
+Relation	T14	T6	NoRel	true	آنا	نمونیا
+Relation	T14	T9	NoRel	true	آنا	وبا
+Relation	T15	T11	NoRel	true	علامتیں	کھانسی
+Relation	T15	T13	NoRel	true	علامتیں	علامات
+Relation	T15	T16	NoRel	true	علامتیں	کیسوں
+Relation	T15	T4	NoRel	true	علامتیں	درد
+Relation	T15	T6	NoRel	true	علامتیں	نمونیا
+Relation	T16	T12	NoRel	true	کیسوں	گھٹن
+Relation	T16	T13	NoRel	true	کیسوں	علامات
+Relation	T16	T14	NoRel	true	کیسوں	آنا
+Relation	T16	T15	NoRel	true	کیسوں	علامتیں
+Relation	T16	T2	NoRel	true	کیسوں	شامل
+Relation	T16	T7	NoRel	true	کیسوں	شکار
+Relation	T17	T0	NoRel	true	علامتیں	بیماری
+Relation	T17	T13	NoRel	true	علامتیں	علامات
+Relation	T17	T16	NoRel	true	علامتیں	کیسوں
+Relation	T17	T3	NoRel	true	علامتیں	بخار
+Relation	T17	T5	NoRel	true	علامتیں	سوزش
+Relation	T17	T8	NoRel	true	علامتیں	ہوتی
+Relation	T18	T14	NoRel	true	دیکھی	آنا
+Relation	T18	T15	NoRel	true	دیکھی	علامتیں
+Relation	T18	T19	NoRel	true	دیکھی	متعدد
+Relation	T18	T3	NoRel	true	دیکھی	بخار
+Relation	T18	T4	NoRel	true	دیکھی	درد
+Relation	T18	T7	NoRel	true	دیکھی	شکار
+Relation	T18	T9	NoRel	true	دیکھی	وبا
+Relation	T19	T10	NoRel	true	متعدد	اختیار
+Relation	T19	T12	NoRel	true	متعدد	گھٹن
+Relation	T19	T13	NoRel	true	متعدد	علامات
+Relation	T19	T15	NoRel	true	متعدد	علامتیں
+Relation	T19	T4	NoRel	true	متعدد	درد
+Relation	T19	T6	NoRel	true	متعدد	نمونیا
+Relation	T19	T8	NoRel	true	متعدد	ہوتی
+Relation	T2	T13	NoRel	true	شامل	علامات
+Relation	T2	T17	NoRel	true	شامل	علامتیں
+Relation	T2	T4	NoRel	true	شامل	درد
+Relation	T2	T5	NoRel	true	شامل	سوزش
+Relation	T3	T1	NoRel	true	بخار	مرض
+Relation	T3	T11	NoRel	true	بخار	کھانسی
+Relation	T3	T17	NoRel	true	بخار	علامتیں
+Relation	T3	T6	NoRel	true	بخار	نمونیا
+Relation	T3	T9	NoRel	true	بخار	وبا
+Relation	T4	T10	NoRel	true	درد	اختیار
+Relation	T4	T11	NoRel	true	درد	کھانسی
+Relation	T4	T14	NoRel	true	درد	آنا
+Relation	T4	T17	NoRel	true	درد	علامتیں
+Relation	T4	T19	NoRel	true	درد	متعدد
+Relation	T4	T5	NoRel	true	درد	سوزش
+Relation	T4	T6	NoRel	true	درد	نمونیا
+Relation	T4	T7	NoRel	true	درد	شکار
+Relation	T5	T10	NoRel	true	سوزش	اختیار
+Relation	T5	T12	NoRel	true	سوزش	گھٹن
+Relation	T5	T13	NoRel	true	سوزش	علامات
+Relation	T5	T19	NoRel	true	سوزش	متعدد
+Relation	T5	T2	NoRel	true	سوزش	شامل
+Relation	T5	T3	NoRel	true	سوزش	بخار
+Relation	T5	T4	NoRel	true	سوزش	درد
+Relation	T5	T7	NoRel	true	سوزش	شکار
+Relation	T6	T1	NoRel	true	نمونیا	مرض
+Relation	T6	T10	NoRel	true	نمونیا	اختیار
+Relation	T6	T14	NoRel	true	نمونیا	آنا
+Relation	T6	T16	NoRel	true	نمونیا	کیسوں
+Relation	T6	T17	NoRel	true	نمونیا	علامتیں
+Relation	T6	T19	NoRel	true	نمونیا	متعدد
+Relation	T6	T3	NoRel	true	نمونیا	بخار
+Relation	T6	T5	NoRel	true	نمونیا	سوزش
+Relation	T6	T8	NoRel	true	نمونیا	ہوتی
+Relation	T7	T12	NoRel	true	شکار	گھٹن
+Relation	T7	T16	NoRel	true	شکار	کیسوں
+Relation	T7	T17	NoRel	true	شکار	علامتیں
+Relation	T7	T18	NoRel	true	شکار	دیکھی
+Relation	T7	T4	NoRel	true	شکار	درد
+Relation	T7	T6	NoRel	true	شکار	نمونیا
+Relation	T8	T16	NoRel	true	ہوتی	کیسوں
+Relation	T8	T18	NoRel	true	ہوتی	دیکھی
+Relation	T8	T19	NoRel	true	ہوتی	متعدد
+Relation	T8	T3	NoRel	true	ہوتی	بخار
+Relation	T8	T4	NoRel	true	ہوتی	درد
+Relation	T8	T5	NoRel	true	ہوتی	سوزش
+Relation	T9	T0	NoRel	true	وبا	بیماری
+Relation	T9	T16	NoRel	true	وبا	کیسوں
+Relation	T9	T17	NoRel	true	وبا	علامتیں
+Relation	T9	T3	NoRel	true	وبا	بخار
+Relation	T9	T4	NoRel	true	وبا	درد
+Relation	T9	T8	NoRel	true	وبا	ہوتی

@@ -1,0 +1,59 @@
+Text	- 18 de junio de 1963 .	Cerca de Gor ( Granada ) un tren arrolló a un turismo en un paso a nivel , falleciendo los seis ocupantes del mismo .	- 7 de febrero de 1964 .	En la estación de San Vicente de Calders ( Tarragona ) , el “ Cataluña expreso ” Port Bou_–_Madrid chocó con un tren rápido que cubría la relación entre la capital de España y Barcelona , con el balance de tres personas muertas y cincuenta y cuatro heridas .	- El 10 de febrero de 1965 , ocurrió el Accidente ferroviario de Grisén entre las estaciones de Grisén y Pinseque , en la provincia de Zaragoza , al declararse un grave incendio que afectó a tres coches del tren correo Madrid-Barcelona .
+Event	T0	arrolló	EVENT	57
+Event	T1	falleciendo	EVENT	99
+Event	T2	chocó	EVENT	266
+Event	T3	cubría	EVENT	295
+Event	T4	balance	EVENT	362
+Event	T5	muertas	EVENT	387
+Event	T6	heridas	EVENT	416
+Event	T7	ocurrió	EVENT	455
+Event	T8	Accidente	EVENT	466
+Event	T9	declararse	EVENT	575
+Event	T10	incendio	EVENT	595
+Event	T11	afectó	EVENT	608
+Relation	T0	T1	CauseEffect	true	arrolló	falleciendo
+Relation	T1	T0	EffectCause	true	falleciendo	arrolló
+Relation	T2	T5	CauseEffect	true	chocó	muertas
+Relation	T5	T2	EffectCause	true	muertas	chocó
+Relation	T2	T6	CauseEffect	true	chocó	heridas
+Relation	T6	T2	EffectCause	true	heridas	chocó
+Relation	T10	T8	CauseEffect	true	incendio	Accidente
+Relation	T8	T10	EffectCause	true	Accidente	incendio
+Relation	T0	T3	NoRel	true	arrolló	cubría
+Relation	T0	T5	NoRel	true	arrolló	muertas
+Relation	T1	T10	NoRel	true	falleciendo	incendio
+Relation	T1	T2	NoRel	true	falleciendo	chocó
+Relation	T1	T5	NoRel	true	falleciendo	muertas
+Relation	T1	T8	NoRel	true	falleciendo	Accidente
+Relation	T1	T9	NoRel	true	falleciendo	declararse
+Relation	T10	T0	NoRel	true	incendio	arrolló
+Relation	T10	T2	NoRel	true	incendio	chocó
+Relation	T10	T3	NoRel	true	incendio	cubría
+Relation	T10	T5	NoRel	true	incendio	muertas
+Relation	T10	T9	NoRel	true	incendio	declararse
+Relation	T11	T3	NoRel	true	afectó	cubría
+Relation	T11	T8	NoRel	true	afectó	Accidente
+Relation	T2	T1	NoRel	true	chocó	falleciendo
+Relation	T2	T10	NoRel	true	chocó	incendio
+Relation	T3	T10	NoRel	true	cubría	incendio
+Relation	T3	T7	NoRel	true	cubría	ocurrió
+Relation	T3	T8	NoRel	true	cubría	Accidente
+Relation	T4	T0	NoRel	true	balance	arrolló
+Relation	T4	T11	NoRel	true	balance	afectó
+Relation	T4	T2	NoRel	true	balance	chocó
+Relation	T5	T1	NoRel	true	muertas	falleciendo
+Relation	T5	T3	NoRel	true	muertas	cubría
+Relation	T5	T4	NoRel	true	muertas	balance
+Relation	T6	T0	NoRel	true	heridas	arrolló
+Relation	T6	T1	NoRel	true	heridas	falleciendo
+Relation	T6	T3	NoRel	true	heridas	cubría
+Relation	T6	T4	NoRel	true	heridas	balance
+Relation	T6	T5	NoRel	true	heridas	muertas
+Relation	T7	T0	NoRel	true	ocurrió	arrolló
+Relation	T7	T10	NoRel	true	ocurrió	incendio
+Relation	T8	T0	NoRel	true	Accidente	arrolló
+Relation	T8	T1	NoRel	true	Accidente	falleciendo
+Relation	T8	T2	NoRel	true	Accidente	chocó
+Relation	T8	T3	NoRel	true	Accidente	cubría
+Relation	T8	T9	NoRel	true	Accidente	declararse
+Relation	T9	T2	NoRel	true	declararse	chocó

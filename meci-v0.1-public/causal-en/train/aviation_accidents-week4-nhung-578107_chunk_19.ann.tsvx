@@ -1,0 +1,76 @@
+Text	Over the following months and years , stories began circulating that employees of Eastern Air Lines , and numerous passengers , had reported sightings of the dead crew members , captain Robert Loft and second officer ( flight engineer ) Donald Repo , sitting on board other L- 1011s ( including , in particular , N318EA ) .	These stories speculated that parts of the crashed aircraft were salvaged after the investigation and refitted into other L - 1011s .	The reported hauntings were said to only be seen on the planes that used the spare parts .	Gossip regarding the sighting of the spirits of Don Repo and Bob Loft spread throughout Eastern Air Lines to the point where Eastern 's management warned employees that they could face dismissal if caught spreading ghost stories .	While Eastern Air Lines publicly denied their planes were haunted , they reportedly removed all the salvaged parts from their L - 1011 fleet .
+Event	T0	circulating	EVENT	52
+Event	T1	sightings	EVENT	141
+Event	T2	dead	EVENT	158
+Event	T3	sitting	EVENT	251
+Event	T4	speculated	EVENT	338
+Event	T5	crashed	EVENT	367
+Event	T6	salvaged	EVENT	389
+Event	T7	investigation	EVENT	408
+Event	T8	hauntings	EVENT	471
+Event	T9	said	EVENT	486
+Event	T10	seen	EVENT	502
+Event	T11	used	EVENT	526
+Event	T12	Gossip	EVENT	549
+Event	T13	sighting	EVENT	570
+Event	T14	spread	EVENT	619
+Event	T15	warned	EVENT	696
+Event	T16	dismissal	EVENT	734
+Event	T17	spreading	EVENT	754
+Event	T19	denied	EVENT	813
+Event	T20	haunted	EVENT	838
+Event	T21	removed	EVENT	864
+Event	T22	salvaged	EVENT	880
+Event	T23	refitted	EVENT	426
+Relation	T17	T16	CauseEffect	true	spreading	dismissal
+Relation	T16	T17	EffectCause	true	dismissal	spreading
+Relation	T0	T20	NoRel	true	circulating	haunted
+Relation	T1	T17	NoRel	true	sightings	spreading
+Relation	T1	T22	NoRel	true	sightings	salvaged
+Relation	T1	T6	NoRel	true	sightings	salvaged
+Relation	T10	T0	NoRel	true	seen	circulating
+Relation	T10	T2	NoRel	true	seen	dead
+Relation	T11	T17	NoRel	true	used	spreading
+Relation	T11	T2	NoRel	true	used	dead
+Relation	T11	T20	NoRel	true	used	haunted
+Relation	T12	T0	NoRel	true	Gossip	circulating
+Relation	T12	T21	NoRel	true	Gossip	removed
+Relation	T12	T9	NoRel	true	Gossip	said
+Relation	T13	T1	NoRel	true	sighting	sightings
+Relation	T13	T12	NoRel	true	sighting	Gossip
+Relation	T13	T7	NoRel	true	sighting	investigation
+Relation	T14	T1	NoRel	true	spread	sightings
+Relation	T14	T13	NoRel	true	spread	sighting
+Relation	T14	T17	NoRel	true	spread	spreading
+Relation	T14	T23	NoRel	true	spread	refitted
+Relation	T15	T0	NoRel	true	warned	circulating
+Relation	T15	T3	NoRel	true	warned	sitting
+Relation	T16	T6	NoRel	true	dismissal	salvaged
+Relation	T19	T20	NoRel	true	denied	haunted
+Relation	T20	T0	NoRel	true	haunted	circulating
+Relation	T20	T11	NoRel	true	haunted	used
+Relation	T20	T12	NoRel	true	haunted	Gossip
+Relation	T21	T12	NoRel	true	removed	Gossip
+Relation	T21	T15	NoRel	true	removed	warned
+Relation	T21	T3	NoRel	true	removed	sitting
+Relation	T21	T7	NoRel	true	removed	investigation
+Relation	T22	T1	NoRel	true	salvaged	sightings
+Relation	T22	T15	NoRel	true	salvaged	warned
+Relation	T22	T6	NoRel	true	salvaged	salvaged
+Relation	T23	T14	NoRel	true	refitted	spread
+Relation	T23	T22	NoRel	true	refitted	salvaged
+Relation	T3	T12	NoRel	true	sitting	Gossip
+Relation	T3	T17	NoRel	true	sitting	spreading
+Relation	T4	T17	NoRel	true	speculated	spreading
+Relation	T4	T20	NoRel	true	speculated	haunted
+Relation	T4	T3	NoRel	true	speculated	sitting
+Relation	T4	T9	NoRel	true	speculated	said
+Relation	T5	T1	NoRel	true	crashed	sightings
+Relation	T5	T11	NoRel	true	crashed	used
+Relation	T6	T1	NoRel	true	salvaged	sightings
+Relation	T6	T20	NoRel	true	salvaged	haunted
+Relation	T6	T9	NoRel	true	salvaged	said
+Relation	T7	T22	NoRel	true	investigation	salvaged
+Relation	T7	T4	NoRel	true	investigation	speculated
+Relation	T7	T6	NoRel	true	investigation	salvaged
+Relation	T8	T0	NoRel	true	hauntings	circulating

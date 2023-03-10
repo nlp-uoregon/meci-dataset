@@ -1,0 +1,33 @@
+Text	On 9 July , Fiji confirmed 860 new cases of COVID - 19 and announced three deaths bringing the death toll to 51 .	On 10 July , Fiji confirmed 506 new cases of COVID - 19 and announced one death bringing the death toll to 52 .	On 11 July , Fiji confirmed 485 new cases of COVID - 19 and announced three deaths , bringing the death toll to 55 .	On 12 July , Fiji confirmed 873 new cases of COVID - 19 and announced three deaths bringing the death toll to 58 .	On 13 July , Fiji confirmed 647 new cases of COVID - 19 and announced one death bringing the death toll to 59 .
+Event	T0	confirmed	EVENT	17
+Event	T1	cases	EVENT	35
+Event	T10	confirmed	EVENT	361
+Event	T11	cases	EVENT	379
+Event	T12	confirmed	EVENT	476
+Event	T13	cases	EVENT	494
+Event	T14	announced	EVENT	518
+Event	T19	announced	EVENT	403
+Event	T2	announced	EVENT	59
+Event	T3	confirmed	EVENT	132
+Event	T4	cases	EVENT	150
+Event	T5	announced	EVENT	174
+Event	T6	confirmed	EVENT	244
+Event	T7	cases	EVENT	262
+Event	T8	announced	EVENT	286
+Event	T9	deaths	EVENT	302
+Relation	T0	T1	NoRel	true	confirmed	cases
+Relation	T11	T0	NoRel	true	cases	confirmed
+Relation	T11	T14	NoRel	true	cases	announced
+Relation	T11	T5	NoRel	true	cases	announced
+Relation	T12	T1	NoRel	true	confirmed	cases
+Relation	T12	T5	NoRel	true	confirmed	announced
+Relation	T2	T4	NoRel	true	announced	cases
+Relation	T4	T0	NoRel	true	cases	confirmed
+Relation	T4	T14	NoRel	true	cases	announced
+Relation	T4	T19	NoRel	true	cases	announced
+Relation	T5	T6	NoRel	true	announced	confirmed
+Relation	T6	T5	NoRel	true	confirmed	announced
+Relation	T7	T9	NoRel	true	cases	deaths
+Relation	T8	T12	NoRel	true	announced	confirmed
+Relation	T8	T9	NoRel	true	announced	deaths
+Relation	T9	T1	NoRel	true	deaths	cases

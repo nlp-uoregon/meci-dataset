@@ -1,0 +1,73 @@
+Text	کتب خانوں کو کبھی تو جان بوجھ کر جنگ میں فتح کے بعد تباہ کیا گيا اور کبھی یہ حادثاتی طور پر تباہ ہوئے یا انہیں شدید نقصان پہنچا ۔	کتب خانے تہذیبی و ثقافتی یلغار کا نشانہ بنتے رہے ہیں ۔	انسانی اقدامات کے ذریعے حادثاتی طور پر تباہ کتب خانوں کی مثالیں موجود ہیں ۔	اس کے علاوہ قدرتی آفات جیسے زلزلہ اور سیلاب بھی کتب خانوں کے لیے نقصان کا باعث بنتے رہتے ہیں ۔	اور بعض اوقات کتب خانے ثقافتی صفائی کی بنیاد پر تباہ کیے گئے ۔
+Event	T0	جنگ	EVENT	33
+Event	T1	فتح	EVENT	41
+Event	T2	تباہ	EVENT	52
+Event	T5	یلغار	EVENT	155
+Event	T6	بنتے	EVENT	170
+Event	T7	اقدامات	EVENT	192
+Event	T8	تباہ	EVENT	224
+Event	T9	زلزلہ	EVENT	289
+Event	T10	سیلاب	EVENT	299
+Event	T11	گئے	EVENT	413
+Event	T12	تباہ	EVENT	92
+Event	T13	حادثاتی	EVENT	77
+Event	T3	نقصان	EVENT	116
+Relation	T0	T2	CauseEffect	true	جنگ	تباہ
+Relation	T2	T0	EffectCause	true	تباہ	جنگ
+Relation	T13	T12	CauseEffect	true	حادثاتی	تباہ
+Relation	T12	T13	EffectCause	true	تباہ	حادثاتی
+Relation	T13	T3	CauseEffect	true	حادثاتی	نقصان
+Relation	T3	T13	EffectCause	true	نقصان	حادثاتی
+Relation	T0	T10	NoRel	true	جنگ	سیلاب
+Relation	T0	T12	NoRel	true	جنگ	تباہ
+Relation	T0	T13	NoRel	true	جنگ	حادثاتی
+Relation	T0	T3	NoRel	true	جنگ	نقصان
+Relation	T0	T6	NoRel	true	جنگ	بنتے
+Relation	T0	T9	NoRel	true	جنگ	زلزلہ
+Relation	T1	T10	NoRel	true	فتح	سیلاب
+Relation	T1	T12	NoRel	true	فتح	تباہ
+Relation	T1	T3	NoRel	true	فتح	نقصان
+Relation	T1	T5	NoRel	true	فتح	یلغار
+Relation	T10	T5	NoRel	true	سیلاب	یلغار
+Relation	T10	T7	NoRel	true	سیلاب	اقدامات
+Relation	T11	T0	NoRel	true	گئے	جنگ
+Relation	T11	T1	NoRel	true	گئے	فتح
+Relation	T11	T10	NoRel	true	گئے	سیلاب
+Relation	T11	T12	NoRel	true	گئے	تباہ
+Relation	T11	T2	NoRel	true	گئے	تباہ
+Relation	T11	T6	NoRel	true	گئے	بنتے
+Relation	T11	T8	NoRel	true	گئے	تباہ
+Relation	T12	T3	NoRel	true	تباہ	نقصان
+Relation	T12	T5	NoRel	true	تباہ	یلغار
+Relation	T12	T8	NoRel	true	تباہ	تباہ
+Relation	T12	T9	NoRel	true	تباہ	زلزلہ
+Relation	T13	T0	NoRel	true	حادثاتی	جنگ
+Relation	T13	T1	NoRel	true	حادثاتی	فتح
+Relation	T13	T8	NoRel	true	حادثاتی	تباہ
+Relation	T2	T3	NoRel	true	تباہ	نقصان
+Relation	T3	T12	NoRel	true	نقصان	تباہ
+Relation	T3	T5	NoRel	true	نقصان	یلغار
+Relation	T3	T6	NoRel	true	نقصان	بنتے
+Relation	T3	T7	NoRel	true	نقصان	اقدامات
+Relation	T3	T9	NoRel	true	نقصان	زلزلہ
+Relation	T5	T10	NoRel	true	یلغار	سیلاب
+Relation	T5	T12	NoRel	true	یلغار	تباہ
+Relation	T5	T6	NoRel	true	یلغار	بنتے
+Relation	T5	T8	NoRel	true	یلغار	تباہ
+Relation	T5	T9	NoRel	true	یلغار	زلزلہ
+Relation	T6	T11	NoRel	true	بنتے	گئے
+Relation	T6	T13	NoRel	true	بنتے	حادثاتی
+Relation	T6	T2	NoRel	true	بنتے	تباہ
+Relation	T6	T9	NoRel	true	بنتے	زلزلہ
+Relation	T7	T1	NoRel	true	اقدامات	فتح
+Relation	T7	T10	NoRel	true	اقدامات	سیلاب
+Relation	T7	T2	NoRel	true	اقدامات	تباہ
+Relation	T7	T5	NoRel	true	اقدامات	یلغار
+Relation	T7	T6	NoRel	true	اقدامات	بنتے
+Relation	T8	T1	NoRel	true	تباہ	فتح
+Relation	T8	T12	NoRel	true	تباہ	تباہ
+Relation	T8	T6	NoRel	true	تباہ	بنتے
+Relation	T8	T7	NoRel	true	تباہ	اقدامات
+Relation	T9	T12	NoRel	true	زلزلہ	تباہ
+Relation	T9	T3	NoRel	true	زلزلہ	نقصان
+Relation	T9	T6	NoRel	true	زلزلہ	بنتے

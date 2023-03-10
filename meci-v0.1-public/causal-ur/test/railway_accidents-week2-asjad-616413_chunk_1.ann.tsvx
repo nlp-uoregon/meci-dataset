@@ -1,0 +1,37 @@
+Text	20 نومبر کو تقریبا 3: 10 بجے مقامی وقت پر ، ٹرین پکھرایاں کے علاقے کانپور شہر کے قریب پٹڑی سے اتر گئی ۔	چودہ ڈبے پٹڑی سے اتر گئے اور ابتدائی رپورٹس کے مطابق 120 جاں بحق اور 260 زخمی تھے ۔	اگرچہ ریل کی پٹڑی سے اتر جانے کی وجہ ابھی تک واضح نہیں ۔	دوسرے ذرائع نے پٹڑی میں فریکچر کو اس حادثے کی وجہ بتایا ہے ۔	حکام کے مطابق ، سب سے زیادہ ہلاکتیں s1 اور s2 کوچوں سے ہوئیں جو بہت بری طرح متاثر تھیں اور بھاری مشینری کا استعمال کیا جا رہا تھا ٹرین میں پھنسے ہوئے مسافروں کو نکالنے کے لیے ۔
+Event	T10	استعمال	EVENT	413
+Event	T11	پھنسے	EVENT	445
+Event	T12	نکالنے	EVENT	467
+Event	T3	فریکچر	EVENT	269
+Event	T4	زخمی	EVENT	177
+Event	T6	حادثے	EVENT	282
+Event	T7	بتایا	EVENT	295
+Event	T8	ہلاکتیں	EVENT	334
+Event	T9	متاثر	EVENT	382
+Relation	T3	T6	CauseEffect	true	فریکچر	حادثے
+Relation	T6	T3	EffectCause	true	حادثے	فریکچر
+Relation	T6	T4	CauseEffect	true	حادثے	زخمی
+Relation	T4	T6	EffectCause	true	زخمی	حادثے
+Relation	T6	T8	CauseEffect	true	حادثے	ہلاکتیں
+Relation	T8	T6	EffectCause	true	ہلاکتیں	حادثے
+Relation	T9	T11	CauseEffect	true	متاثر	پھنسے
+Relation	T11	T9	EffectCause	true	پھنسے	متاثر
+Relation	T11	T12	CauseEffect	true	پھنسے	نکالنے
+Relation	T12	T11	EffectCause	true	نکالنے	پھنسے
+Relation	T10	T7	NoRel	true	استعمال	بتایا
+Relation	T11	T4	NoRel	true	پھنسے	زخمی
+Relation	T11	T8	NoRel	true	پھنسے	ہلاکتیں
+Relation	T12	T10	NoRel	true	نکالنے	استعمال
+Relation	T12	T6	NoRel	true	نکالنے	حادثے
+Relation	T12	T7	NoRel	true	نکالنے	بتایا
+Relation	T12	T8	NoRel	true	نکالنے	ہلاکتیں
+Relation	T4	T12	NoRel	true	زخمی	نکالنے
+Relation	T4	T7	NoRel	true	زخمی	بتایا
+Relation	T6	T10	NoRel	true	حادثے	استعمال
+Relation	T7	T11	NoRel	true	بتایا	پھنسے
+Relation	T7	T12	NoRel	true	بتایا	نکالنے
+Relation	T7	T3	NoRel	true	بتایا	فریکچر
+Relation	T8	T11	NoRel	true	ہلاکتیں	پھنسے
+Relation	T8	T7	NoRel	true	ہلاکتیں	بتایا
+Relation	T9	T3	NoRel	true	متاثر	فریکچر
+Relation	T9	T8	NoRel	true	متاثر	ہلاکتیں

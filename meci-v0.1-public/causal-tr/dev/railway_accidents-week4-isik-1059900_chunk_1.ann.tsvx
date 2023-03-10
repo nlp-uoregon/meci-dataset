@@ -1,0 +1,20 @@
+Text	- 2 Ocak 2010 .	Gorakhdham Express ve Prayagraj Express Lucknow’un yaklaşık 60 mil ( 100 kilometre ) güneyinde Kanpur’da Panki demiryolu istasyonu yakınında çarpıştı .	Bu çarpışmada beş ölü ve yaklaşık 40 yaralı oldu .	- 2 Ocak 2010 .	Diğer kaza Allahabad’dan 61 km uzaklıktaki Pratapgarh’dan rapor edildi .
+Event	T0	çarpıştı	EVENT	157
+Event	T1	çarpışmada	EVENT	171
+Event	T2	ölü	EVENT	186
+Event	T3	oldu	EVENT	212
+Event	T4	kaza	EVENT	241
+Event	T5	edildi	EVENT	299
+Relation	T1	T2	CauseEffect	true	çarpışmada	ölü
+Relation	T2	T1	EffectCause	true	ölü	çarpışmada
+Relation	T1	T3	CauseEffect	true	çarpışmada	oldu
+Relation	T3	T1	EffectCause	true	oldu	çarpışmada
+Relation	T0	T2	NoRel	true	çarpıştı	ölü
+Relation	T0	T3	NoRel	true	çarpıştı	oldu
+Relation	T2	T0	NoRel	true	ölü	çarpıştı
+Relation	T2	T3	NoRel	true	ölü	oldu
+Relation	T2	T4	NoRel	true	ölü	kaza
+Relation	T2	T5	NoRel	true	ölü	edildi
+Relation	T3	T0	NoRel	true	oldu	çarpıştı
+Relation	T3	T2	NoRel	true	oldu	ölü
+Relation	T4	T1	NoRel	true	kaza	çarpışmada

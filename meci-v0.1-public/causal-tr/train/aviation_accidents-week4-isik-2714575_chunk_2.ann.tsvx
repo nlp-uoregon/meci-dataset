@@ -1,0 +1,36 @@
+Text	Bu karara havalimanı başkanı V. A. Kudinov tepki göstermedi ve uçuşun iptalini talep etmedi .	Uçak Almatı'dan Kazan'a yakıt için Karağandı'da duraklayarak gidiyordu .	Uçakta Kazakistan'ın üst düzey devlet yetkilileri vardı .	Uçuşun ilk etabında , Almatı'dan kalkıştan sonra uçak türbülanslı alçak bulutlara ve sise girdi .	Şiddetli buzlanma pilotun Almatı'ya dönmeye karar vermesine neden oldu ancak uçak yaklaşık 100-150 metre irtifada uçarken dik bir şekilde sola döndü ve irtifa kaybetti .
+Event	T0	gidiyordu	EVENT	155
+Event	T1	Uçuşun	EVENT	225
+Event	T2	kalkıştan	EVENT	258
+Event	T3	girdi	EVENT	315
+Event	T4	buzlanma	EVENT	332
+Event	T5	uçarken	EVENT	437
+Event	T6	döndü	EVENT	466
+Event	T7	kaybetti	EVENT	482
+Event	T8	karar	EVENT	367
+Relation	T4	T8	CauseEffect	true	buzlanma	karar
+Relation	T8	T4	EffectCause	true	karar	buzlanma
+Relation	T0	T1	NoRel	true	gidiyordu	Uçuşun
+Relation	T0	T2	NoRel	true	gidiyordu	kalkıştan
+Relation	T0	T3	NoRel	true	gidiyordu	girdi
+Relation	T0	T4	NoRel	true	gidiyordu	buzlanma
+Relation	T0	T7	NoRel	true	gidiyordu	kaybetti
+Relation	T1	T2	NoRel	true	Uçuşun	kalkıştan
+Relation	T1	T3	NoRel	true	Uçuşun	girdi
+Relation	T2	T0	NoRel	true	kalkıştan	gidiyordu
+Relation	T3	T0	NoRel	true	girdi	gidiyordu
+Relation	T3	T1	NoRel	true	girdi	Uçuşun
+Relation	T3	T5	NoRel	true	girdi	uçarken
+Relation	T3	T7	NoRel	true	girdi	kaybetti
+Relation	T4	T2	NoRel	true	buzlanma	kalkıştan
+Relation	T4	T6	NoRel	true	buzlanma	döndü
+Relation	T4	T7	NoRel	true	buzlanma	kaybetti
+Relation	T5	T0	NoRel	true	uçarken	gidiyordu
+Relation	T5	T6	NoRel	true	uçarken	döndü
+Relation	T7	T0	NoRel	true	kaybetti	gidiyordu
+Relation	T7	T2	NoRel	true	kaybetti	kalkıştan
+Relation	T7	T3	NoRel	true	kaybetti	girdi
+Relation	T7	T5	NoRel	true	kaybetti	uçarken
+Relation	T7	T8	NoRel	true	kaybetti	karar
+Relation	T8	T2	NoRel	true	karar	kalkıştan
+Relation	T8	T3	NoRel	true	karar	girdi

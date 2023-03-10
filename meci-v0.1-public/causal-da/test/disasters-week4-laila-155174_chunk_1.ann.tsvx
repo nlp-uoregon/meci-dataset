@@ -1,0 +1,105 @@
+Text	Denne metode er siden blevet videreudviklet ved at blande 1 del salpetersyre og 1 del svovlsyre ( H₂SO₄ ) , lade noget bomuldsvat opsuge syreblandingen og lade den trække i 25 minutter , og efterfølgende skylle vattet fri for syre og lade det tørre , ved temperaturer under 100 °C.	Nitrocellulose , eller skydebomuld , er et meget godt alternativ til sort krudt , da det udvikler et dobbelt så stort gastryk som en tilsvarende mængde sort krudt , og den udviklede røg er meget svag .			
+Event	T0	videreudviklet	EVENT	29
+Event	T1	blande	EVENT	51
+Event	T2	lade	EVENT	108
+Event	T3	lade	EVENT	155
+Event	T4	trække	EVENT	164
+Event	T5	lade	EVENT	234
+Event	T6	tørre	EVENT	243
+Event	T7	udvikler	EVENT	371
+Event	T8	røg	EVENT	464
+Event	T9	metode	EVENT	6
+Event	T10	syreblandingen	EVENT	137
+Event	T11	under	EVENT	268
+Event	T12	ved	EVENT	44
+Event	T13	skydebomuld	EVENT	305
+Event	T14	alternativ	EVENT	336
+Event	T15	gastryk	EVENT	400
+Relation	T15	T14	CauseEffect	true	gastryk	alternativ
+Relation	T14	T15	EffectCause	true	alternativ	gastryk
+Relation	T8	T14	CauseEffect	true	røg	alternativ
+Relation	T14	T8	EffectCause	true	alternativ	røg
+Relation	T0	T15	NoRel	true	videreudviklet	gastryk
+Relation	T0	T5	NoRel	true	videreudviklet	lade
+Relation	T0	T6	NoRel	true	videreudviklet	tørre
+Relation	T1	T12	NoRel	true	blande	ved
+Relation	T1	T13	NoRel	true	blande	skydebomuld
+Relation	T1	T14	NoRel	true	blande	alternativ
+Relation	T1	T15	NoRel	true	blande	gastryk
+Relation	T1	T3	NoRel	true	blande	lade
+Relation	T1	T4	NoRel	true	blande	trække
+Relation	T1	T6	NoRel	true	blande	tørre
+Relation	T1	T7	NoRel	true	blande	udvikler
+Relation	T1	T8	NoRel	true	blande	røg
+Relation	T10	T0	NoRel	true	syreblandingen	videreudviklet
+Relation	T10	T1	NoRel	true	syreblandingen	blande
+Relation	T10	T11	NoRel	true	syreblandingen	under
+Relation	T10	T5	NoRel	true	syreblandingen	lade
+Relation	T10	T7	NoRel	true	syreblandingen	udvikler
+Relation	T11	T0	NoRel	true	under	videreudviklet
+Relation	T11	T1	NoRel	true	under	blande
+Relation	T11	T14	NoRel	true	under	alternativ
+Relation	T11	T2	NoRel	true	under	lade
+Relation	T11	T3	NoRel	true	under	lade
+Relation	T11	T4	NoRel	true	under	trække
+Relation	T11	T5	NoRel	true	under	lade
+Relation	T12	T10	NoRel	true	ved	syreblandingen
+Relation	T12	T13	NoRel	true	ved	skydebomuld
+Relation	T12	T14	NoRel	true	ved	alternativ
+Relation	T12	T15	NoRel	true	ved	gastryk
+Relation	T12	T3	NoRel	true	ved	lade
+Relation	T13	T0	NoRel	true	skydebomuld	videreudviklet
+Relation	T13	T12	NoRel	true	skydebomuld	ved
+Relation	T13	T3	NoRel	true	skydebomuld	lade
+Relation	T13	T6	NoRel	true	skydebomuld	tørre
+Relation	T13	T7	NoRel	true	skydebomuld	udvikler
+Relation	T13	T9	NoRel	true	skydebomuld	metode
+Relation	T14	T0	NoRel	true	alternativ	videreudviklet
+Relation	T14	T1	NoRel	true	alternativ	blande
+Relation	T14	T10	NoRel	true	alternativ	syreblandingen
+Relation	T14	T11	NoRel	true	alternativ	under
+Relation	T14	T12	NoRel	true	alternativ	ved
+Relation	T14	T13	NoRel	true	alternativ	skydebomuld
+Relation	T14	T6	NoRel	true	alternativ	tørre
+Relation	T15	T10	NoRel	true	gastryk	syreblandingen
+Relation	T15	T13	NoRel	true	gastryk	skydebomuld
+Relation	T15	T5	NoRel	true	gastryk	lade
+Relation	T15	T7	NoRel	true	gastryk	udvikler
+Relation	T15	T8	NoRel	true	gastryk	røg
+Relation	T2	T0	NoRel	true	lade	videreudviklet
+Relation	T2	T10	NoRel	true	lade	syreblandingen
+Relation	T2	T11	NoRel	true	lade	under
+Relation	T2	T14	NoRel	true	lade	alternativ
+Relation	T3	T1	NoRel	true	lade	blande
+Relation	T3	T12	NoRel	true	lade	ved
+Relation	T3	T13	NoRel	true	lade	skydebomuld
+Relation	T3	T15	NoRel	true	lade	gastryk
+Relation	T3	T5	NoRel	true	lade	lade
+Relation	T4	T14	NoRel	true	trække	alternativ
+Relation	T4	T3	NoRel	true	trække	lade
+Relation	T5	T1	NoRel	true	lade	blande
+Relation	T5	T12	NoRel	true	lade	ved
+Relation	T5	T13	NoRel	true	lade	skydebomuld
+Relation	T5	T14	NoRel	true	lade	alternativ
+Relation	T5	T3	NoRel	true	lade	lade
+Relation	T5	T8	NoRel	true	lade	røg
+Relation	T6	T10	NoRel	true	tørre	syreblandingen
+Relation	T6	T4	NoRel	true	tørre	trække
+Relation	T6	T9	NoRel	true	tørre	metode
+Relation	T7	T0	NoRel	true	udvikler	videreudviklet
+Relation	T7	T12	NoRel	true	udvikler	ved
+Relation	T7	T13	NoRel	true	udvikler	skydebomuld
+Relation	T7	T14	NoRel	true	udvikler	alternativ
+Relation	T7	T4	NoRel	true	udvikler	trække
+Relation	T7	T5	NoRel	true	udvikler	lade
+Relation	T8	T1	NoRel	true	røg	blande
+Relation	T8	T15	NoRel	true	røg	gastryk
+Relation	T8	T3	NoRel	true	røg	lade
+Relation	T8	T4	NoRel	true	røg	trække
+Relation	T8	T5	NoRel	true	røg	lade
+Relation	T9	T1	NoRel	true	metode	blande
+Relation	T9	T10	NoRel	true	metode	syreblandingen
+Relation	T9	T11	NoRel	true	metode	under
+Relation	T9	T13	NoRel	true	metode	skydebomuld
+Relation	T9	T4	NoRel	true	metode	trække
+Relation	T9	T6	NoRel	true	metode	tørre

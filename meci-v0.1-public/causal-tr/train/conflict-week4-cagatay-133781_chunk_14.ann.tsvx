@@ -1,0 +1,70 @@
+Text	Tebriz’de bulunan Şah Tahmasb , Padişah’ın Hoy’a geldiğini öğrendiğinde savaşı göze alamayarak Kazvin’e çekildi .	Osmanlı ordusu 27 Temmuz’da dördüncü defa Tebriz’e girdi .	Tebriz’de beş gün kalan Sultan , Van’a gelip önceden muhasara ettirdiği kaleyi almak için harekete geçti .	On gün dayanabilen Van kalesi , 25 Ağustos’da ele geçirildi .	Kaleyi tahkim eden Sultan , buradan Diyarbakır’a , sonra da kışı geçirmek için Haleb’e geçti .
+Event	T0	savaşı	EVENT	72
+Event	T1	çekildi	EVENT	104
+Event	T2	girdi	EVENT	165
+Event	T3	almak	EVENT	252
+Event	T4	geçti	EVENT	272
+Event	T5	geçirildi	EVENT	330
+Event	T6	tahkim	EVENT	349
+Event	T7	geçirmek	EVENT	407
+Event	T8	geçti	EVENT	429
+Event	T9	öğrendiğinde	EVENT	59
+Event	T10	gelip	EVENT	212
+Event	T11	muhasara	EVENT	226
+Event	T12	dayanabilen	EVENT	287
+Relation	T3	T4	CauseEffect	true	almak	geçti
+Relation	T4	T3	EffectCause	true	geçti	almak
+Relation	T1	T2	CauseEffect	true	çekildi	girdi
+Relation	T2	T1	EffectCause	true	girdi	çekildi
+Relation	T7	T8	CauseEffect	true	geçirmek	geçti
+Relation	T8	T7	EffectCause	true	geçti	geçirmek
+Relation	T0	T1	NoRel	true	savaşı	çekildi
+Relation	T0	T10	NoRel	true	savaşı	gelip
+Relation	T0	T12	NoRel	true	savaşı	dayanabilen
+Relation	T0	T4	NoRel	true	savaşı	geçti
+Relation	T0	T5	NoRel	true	savaşı	geçirildi
+Relation	T1	T3	NoRel	true	çekildi	almak
+Relation	T1	T5	NoRel	true	çekildi	geçirildi
+Relation	T1	T7	NoRel	true	çekildi	geçirmek
+Relation	T10	T1	NoRel	true	gelip	çekildi
+Relation	T10	T2	NoRel	true	gelip	girdi
+Relation	T10	T6	NoRel	true	gelip	tahkim
+Relation	T11	T10	NoRel	true	muhasara	gelip
+Relation	T11	T3	NoRel	true	muhasara	almak
+Relation	T11	T8	NoRel	true	muhasara	geçti
+Relation	T11	T9	NoRel	true	muhasara	öğrendiğinde
+Relation	T12	T7	NoRel	true	dayanabilen	geçirmek
+Relation	T2	T0	NoRel	true	girdi	savaşı
+Relation	T2	T5	NoRel	true	girdi	geçirildi
+Relation	T2	T6	NoRel	true	girdi	tahkim
+Relation	T2	T7	NoRel	true	girdi	geçirmek
+Relation	T2	T8	NoRel	true	girdi	geçti
+Relation	T2	T9	NoRel	true	girdi	öğrendiğinde
+Relation	T3	T0	NoRel	true	almak	savaşı
+Relation	T3	T1	NoRel	true	almak	çekildi
+Relation	T3	T11	NoRel	true	almak	muhasara
+Relation	T3	T12	NoRel	true	almak	dayanabilen
+Relation	T3	T5	NoRel	true	almak	geçirildi
+Relation	T3	T9	NoRel	true	almak	öğrendiğinde
+Relation	T4	T5	NoRel	true	geçti	geçirildi
+Relation	T4	T8	NoRel	true	geçti	geçti
+Relation	T4	T9	NoRel	true	geçti	öğrendiğinde
+Relation	T5	T10	NoRel	true	geçirildi	gelip
+Relation	T5	T11	NoRel	true	geçirildi	muhasara
+Relation	T5	T3	NoRel	true	geçirildi	almak
+Relation	T5	T7	NoRel	true	geçirildi	geçirmek
+Relation	T5	T9	NoRel	true	geçirildi	öğrendiğinde
+Relation	T6	T1	NoRel	true	tahkim	çekildi
+Relation	T6	T10	NoRel	true	tahkim	gelip
+Relation	T6	T12	NoRel	true	tahkim	dayanabilen
+Relation	T6	T3	NoRel	true	tahkim	almak
+Relation	T6	T9	NoRel	true	tahkim	öğrendiğinde
+Relation	T8	T0	NoRel	true	geçti	savaşı
+Relation	T8	T1	NoRel	true	geçti	çekildi
+Relation	T8	T10	NoRel	true	geçti	gelip
+Relation	T8	T2	NoRel	true	geçti	girdi
+Relation	T8	T5	NoRel	true	geçti	geçirildi
+Relation	T8	T6	NoRel	true	geçti	tahkim
+Relation	T9	T0	NoRel	true	öğrendiğinde	savaşı
+Relation	T9	T11	NoRel	true	öğrendiğinde	muhasara
+Relation	T9	T8	NoRel	true	öğrendiğinde	geçti

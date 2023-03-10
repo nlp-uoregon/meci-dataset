@@ -1,0 +1,120 @@
+Text	El VUELO 1951 DE TURKISH AIRLINES fue un vuelo que conectaba Estambul ( Turquía ) con Ámsterdam ( Países Bajos ) , operado por Turkish Airlines .	El aparato , un Boeing 737-800 de matrícula TC-JGE , se partió en tres partes tras colisionar con el terreno en un campo agrícola a un kilómetro y medio de la pista 18R del Aeropuerto de Ámsterdam-Schiphol , a las 9:31 UTC del 25 de febrero de 2009 .	Aunque los restos del avión no se incendiaron , una rueda de prensa oficial confirmó la muerte de nueve personas y que otras cincuenta habían resultado heridas .	[ TC-JGE , la aeronave involucrada , aterrizando en el aeropuerto Kiev-Boryspil en agosto de 2008 .	] [ Distribución de los pasajeros y asientos ] El avión de Turkish Airlines , un Boeing 737-800 de matrícula TC-JGE , efectuó su primer vuelo el 24 de enero de 2002 , siendo su número de construcción el 29789 , con MSN 1065 .
+Event	T0	VUELO	EVENT	3
+Event	T1	vuelo	EVENT	41
+Event	T2	conectaba	EVENT	51
+Event	T3	operado	EVENT	115
+Event	T4	partió	EVENT	202
+Event	T5	colisionar	EVENT	229
+Event	T6	incendiaron	EVENT	431
+Event	T7	rueda	EVENT	449
+Event	T8	confirmó	EVENT	473
+Event	T9	muerte	EVENT	485
+Event	T10	heridas	EVENT	549
+Event	T11	involucrada	EVENT	582
+Event	T12	aterrizando	EVENT	596
+Event	T13	efectuó	EVENT	777
+Event	T14	vuelo	EVENT	795
+Event	T15	construcción	EVENT	846
+Relation	T5	T4	CauseEffect	true	colisionar	partió
+Relation	T4	T5	EffectCause	true	partió	colisionar
+Relation	T5	T9	CauseEffect	true	colisionar	muerte
+Relation	T9	T5	EffectCause	true	muerte	colisionar
+Relation	T5	T10	CauseEffect	true	colisionar	heridas
+Relation	T10	T5	EffectCause	true	heridas	colisionar
+Relation	T0	T11	NoRel	true	VUELO	involucrada
+Relation	T0	T14	NoRel	true	VUELO	vuelo
+Relation	T0	T15	NoRel	true	VUELO	construcción
+Relation	T0	T3	NoRel	true	VUELO	operado
+Relation	T0	T4	NoRel	true	VUELO	partió
+Relation	T0	T5	NoRel	true	VUELO	colisionar
+Relation	T0	T6	NoRel	true	VUELO	incendiaron
+Relation	T0	T7	NoRel	true	VUELO	rueda
+Relation	T0	T8	NoRel	true	VUELO	confirmó
+Relation	T1	T0	NoRel	true	vuelo	VUELO
+Relation	T1	T11	NoRel	true	vuelo	involucrada
+Relation	T1	T12	NoRel	true	vuelo	aterrizando
+Relation	T10	T1	NoRel	true	heridas	vuelo
+Relation	T10	T11	NoRel	true	heridas	involucrada
+Relation	T10	T13	NoRel	true	heridas	efectuó
+Relation	T10	T15	NoRel	true	heridas	construcción
+Relation	T10	T2	NoRel	true	heridas	conectaba
+Relation	T10	T4	NoRel	true	heridas	partió
+Relation	T10	T6	NoRel	true	heridas	incendiaron
+Relation	T10	T8	NoRel	true	heridas	confirmó
+Relation	T11	T0	NoRel	true	involucrada	VUELO
+Relation	T11	T12	NoRel	true	involucrada	aterrizando
+Relation	T11	T2	NoRel	true	involucrada	conectaba
+Relation	T11	T4	NoRel	true	involucrada	partió
+Relation	T11	T7	NoRel	true	involucrada	rueda
+Relation	T12	T11	NoRel	true	aterrizando	involucrada
+Relation	T12	T13	NoRel	true	aterrizando	efectuó
+Relation	T12	T15	NoRel	true	aterrizando	construcción
+Relation	T12	T3	NoRel	true	aterrizando	operado
+Relation	T12	T6	NoRel	true	aterrizando	incendiaron
+Relation	T12	T7	NoRel	true	aterrizando	rueda
+Relation	T12	T9	NoRel	true	aterrizando	muerte
+Relation	T13	T0	NoRel	true	efectuó	VUELO
+Relation	T13	T14	NoRel	true	efectuó	vuelo
+Relation	T13	T4	NoRel	true	efectuó	partió
+Relation	T13	T7	NoRel	true	efectuó	rueda
+Relation	T13	T9	NoRel	true	efectuó	muerte
+Relation	T14	T1	NoRel	true	vuelo	vuelo
+Relation	T14	T13	NoRel	true	vuelo	efectuó
+Relation	T14	T15	NoRel	true	vuelo	construcción
+Relation	T14	T3	NoRel	true	vuelo	operado
+Relation	T14	T4	NoRel	true	vuelo	partió
+Relation	T14	T6	NoRel	true	vuelo	incendiaron
+Relation	T14	T8	NoRel	true	vuelo	confirmó
+Relation	T14	T9	NoRel	true	vuelo	muerte
+Relation	T15	T1	NoRel	true	construcción	vuelo
+Relation	T15	T11	NoRel	true	construcción	involucrada
+Relation	T15	T14	NoRel	true	construcción	vuelo
+Relation	T15	T3	NoRel	true	construcción	operado
+Relation	T15	T6	NoRel	true	construcción	incendiaron
+Relation	T15	T7	NoRel	true	construcción	rueda
+Relation	T2	T10	NoRel	true	conectaba	heridas
+Relation	T2	T11	NoRel	true	conectaba	involucrada
+Relation	T2	T12	NoRel	true	conectaba	aterrizando
+Relation	T2	T15	NoRel	true	conectaba	construcción
+Relation	T2	T3	NoRel	true	conectaba	operado
+Relation	T2	T5	NoRel	true	conectaba	colisionar
+Relation	T2	T7	NoRel	true	conectaba	rueda
+Relation	T2	T8	NoRel	true	conectaba	confirmó
+Relation	T3	T0	NoRel	true	operado	VUELO
+Relation	T3	T10	NoRel	true	operado	heridas
+Relation	T3	T14	NoRel	true	operado	vuelo
+Relation	T3	T5	NoRel	true	operado	colisionar
+Relation	T3	T6	NoRel	true	operado	incendiaron
+Relation	T3	T7	NoRel	true	operado	rueda
+Relation	T4	T1	NoRel	true	partió	vuelo
+Relation	T4	T2	NoRel	true	partió	conectaba
+Relation	T4	T6	NoRel	true	partió	incendiaron
+Relation	T4	T8	NoRel	true	partió	confirmó
+Relation	T4	T9	NoRel	true	partió	muerte
+Relation	T5	T1	NoRel	true	colisionar	vuelo
+Relation	T5	T15	NoRel	true	colisionar	construcción
+Relation	T5	T6	NoRel	true	colisionar	incendiaron
+Relation	T5	T8	NoRel	true	colisionar	confirmó
+Relation	T6	T13	NoRel	true	incendiaron	efectuó
+Relation	T6	T14	NoRel	true	incendiaron	vuelo
+Relation	T6	T15	NoRel	true	incendiaron	construcción
+Relation	T6	T5	NoRel	true	incendiaron	colisionar
+Relation	T6	T7	NoRel	true	incendiaron	rueda
+Relation	T7	T13	NoRel	true	rueda	efectuó
+Relation	T7	T14	NoRel	true	rueda	vuelo
+Relation	T7	T3	NoRel	true	rueda	operado
+Relation	T7	T5	NoRel	true	rueda	colisionar
+Relation	T8	T10	NoRel	true	confirmó	heridas
+Relation	T8	T11	NoRel	true	confirmó	involucrada
+Relation	T8	T14	NoRel	true	confirmó	vuelo
+Relation	T8	T2	NoRel	true	confirmó	conectaba
+Relation	T8	T3	NoRel	true	confirmó	operado
+Relation	T8	T7	NoRel	true	confirmó	rueda
+Relation	T8	T9	NoRel	true	confirmó	muerte
+Relation	T9	T0	NoRel	true	muerte	VUELO
+Relation	T9	T1	NoRel	true	muerte	vuelo
+Relation	T9	T11	NoRel	true	muerte	involucrada
+Relation	T9	T13	NoRel	true	muerte	efectuó
+Relation	T9	T3	NoRel	true	muerte	operado
+Relation	T9	T6	NoRel	true	muerte	incendiaron
+Relation	T9	T8	NoRel	true	muerte	confirmó

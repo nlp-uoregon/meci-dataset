@@ -1,0 +1,99 @@
+Text	Nogle forskere mener , at soldaternes immunforsvar var svækket af underernæring og stress , som fulgte af kampe og kemiske angreb , så de var mere modtagelige for smitten .	Alene blandt soldater i USA's ekspeditionskorps i Europa omkom 43.000 - næsten lige så mange , som blev dræbt ved krigshandlinger på de nordfranske slagmarker .	Virussen kan have været med til at tippe magtbalancen i den sidste del af krigen , fordi smitten ramte Centralmagterne tidligere og med betydeligt flere sygdomstilfælde og højere dødelighed end de allierede .	Der var ingen vaccination eller lægemidler mod sygdommen , så man forsøgte at begrænse smitten ved at lukke offentlige steder som skoler , teatre og biografer .	Mange ofre var i alderen 15 til 45 år .
+Event	T0	mener	EVENT	15
+Event	T1	svækket	EVENT	55
+Event	T10	Virussen	EVENT	334
+Event	T11	tippe	EVENT	369
+Event	T12	krigen	EVENT	408
+Event	T13	ramte	EVENT	431
+Event	T14	sygdomstilfælde	EVENT	487
+Event	T15	dødelighed	EVENT	513
+Event	T16	forsøgte	EVENT	609
+Event	T18	lukke	EVENT	645
+Event	T2	stress	EVENT	83
+Event	T3	fulgte	EVENT	96
+Event	T4	kampe	EVENT	106
+Event	T6	smitten	EVENT	163
+Event	T7	omkom	EVENT	230
+Event	T9	krigshandlinger	EVENT	287
+Relation	T1	T6	CauseEffect	true	svækket	smitten
+Relation	T6	T1	EffectCause	true	smitten	svækket
+Relation	T2	T1	CauseEffect	true	stress	svækket
+Relation	T1	T2	EffectCause	true	svækket	stress
+Relation	T4	T2	CauseEffect	true	kampe	stress
+Relation	T2	T4	EffectCause	true	stress	kampe
+Relation	T6	T7	CauseEffect	true	smitten	omkom
+Relation	T7	T6	EffectCause	true	omkom	smitten
+Relation	T10	T11	CauseEffect	true	Virussen	tippe
+Relation	T11	T10	EffectCause	true	tippe	Virussen
+Relation	T13	T11	CauseEffect	true	ramte	tippe
+Relation	T11	T13	EffectCause	true	tippe	ramte
+Relation	T16	T18	CauseEffect	true	forsøgte	lukke
+Relation	T18	T16	EffectCause	true	lukke	forsøgte
+Relation	T14	T15	CauseEffect	true	sygdomstilfælde	dødelighed
+Relation	T15	T14	EffectCause	true	dødelighed	sygdomstilfælde
+Relation	T10	T14	CauseEffect	true	Virussen	sygdomstilfælde
+Relation	T14	T10	EffectCause	true	sygdomstilfælde	Virussen
+Relation	T10	T15	CauseEffect	true	Virussen	dødelighed
+Relation	T15	T10	EffectCause	true	dødelighed	Virussen
+Relation	T0	T11	NoRel	true	mener	tippe
+Relation	T0	T12	NoRel	true	mener	krigen
+Relation	T0	T16	NoRel	true	mener	forsøgte
+Relation	T1	T11	NoRel	true	svækket	tippe
+Relation	T1	T12	NoRel	true	svækket	krigen
+Relation	T1	T13	NoRel	true	svækket	ramte
+Relation	T1	T14	NoRel	true	svækket	sygdomstilfælde
+Relation	T1	T4	NoRel	true	svækket	kampe
+Relation	T10	T0	NoRel	true	Virussen	mener
+Relation	T10	T12	NoRel	true	Virussen	krigen
+Relation	T10	T4	NoRel	true	Virussen	kampe
+Relation	T10	T6	NoRel	true	Virussen	smitten
+Relation	T11	T16	NoRel	true	tippe	forsøgte
+Relation	T11	T3	NoRel	true	tippe	fulgte
+Relation	T11	T4	NoRel	true	tippe	kampe
+Relation	T12	T0	NoRel	true	krigen	mener
+Relation	T12	T11	NoRel	true	krigen	tippe
+Relation	T12	T15	NoRel	true	krigen	dødelighed
+Relation	T12	T18	NoRel	true	krigen	lukke
+Relation	T12	T3	NoRel	true	krigen	fulgte
+Relation	T12	T6	NoRel	true	krigen	smitten
+Relation	T12	T7	NoRel	true	krigen	omkom
+Relation	T13	T10	NoRel	true	ramte	Virussen
+Relation	T13	T12	NoRel	true	ramte	krigen
+Relation	T13	T2	NoRel	true	ramte	stress
+Relation	T14	T1	NoRel	true	sygdomstilfælde	svækket
+Relation	T14	T11	NoRel	true	sygdomstilfælde	tippe
+Relation	T14	T18	NoRel	true	sygdomstilfælde	lukke
+Relation	T15	T11	NoRel	true	dødelighed	tippe
+Relation	T15	T12	NoRel	true	dødelighed	krigen
+Relation	T16	T1	NoRel	true	forsøgte	svækket
+Relation	T16	T15	NoRel	true	forsøgte	dødelighed
+Relation	T16	T7	NoRel	true	forsøgte	omkom
+Relation	T16	T9	NoRel	true	forsøgte	krigshandlinger
+Relation	T18	T0	NoRel	true	lukke	mener
+Relation	T18	T1	NoRel	true	lukke	svækket
+Relation	T18	T14	NoRel	true	lukke	sygdomstilfælde
+Relation	T18	T2	NoRel	true	lukke	stress
+Relation	T18	T4	NoRel	true	lukke	kampe
+Relation	T2	T0	NoRel	true	stress	mener
+Relation	T2	T10	NoRel	true	stress	Virussen
+Relation	T2	T14	NoRel	true	stress	sygdomstilfælde
+Relation	T2	T18	NoRel	true	stress	lukke
+Relation	T2	T7	NoRel	true	stress	omkom
+Relation	T3	T10	NoRel	true	fulgte	Virussen
+Relation	T3	T15	NoRel	true	fulgte	dødelighed
+Relation	T4	T0	NoRel	true	kampe	mener
+Relation	T4	T12	NoRel	true	kampe	krigen
+Relation	T4	T15	NoRel	true	kampe	dødelighed
+Relation	T4	T18	NoRel	true	kampe	lukke
+Relation	T6	T11	NoRel	true	smitten	tippe
+Relation	T6	T13	NoRel	true	smitten	ramte
+Relation	T6	T18	NoRel	true	smitten	lukke
+Relation	T7	T0	NoRel	true	omkom	mener
+Relation	T7	T14	NoRel	true	omkom	sygdomstilfælde
+Relation	T7	T15	NoRel	true	omkom	dødelighed
+Relation	T7	T18	NoRel	true	omkom	lukke
+Relation	T9	T12	NoRel	true	krigshandlinger	krigen
+Relation	T9	T16	NoRel	true	krigshandlinger	forsøgte
+Relation	T9	T18	NoRel	true	krigshandlinger	lukke
+Relation	T9	T2	NoRel	true	krigshandlinger	stress
+Relation	T9	T7	NoRel	true	krigshandlinger	omkom

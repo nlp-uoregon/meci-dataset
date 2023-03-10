@@ -1,0 +1,180 @@
+Text	American Airlines 63 sefer sayılı uçuşu Hava saldırısı Savaş uçağı veya benzeri araçlarla , belirli hedeflere havadan bombalama ya da ateş açma şeklinde gerçekleştirilen saldırı .	11 Eylül Saldırıları İdam Kaçırılan rehinelerin ya da savaş ( veya çatışma ) esnasında esir alınanların öldürülmesi .	Gara Katliamı İşkence Saldırganın bir kişi ya da grubu kaçırıp onlara eziyet ederek öldürmesi .	Halid Esad Katliam Silahsız insanların topluca katledildiği saldırı .	Beslan Katliamı Saldırı Birden fazla noktada gerçekleşen saldırılarda ya da bu listedeki tanımların harici yöntem ya da silah ile gerçekleştirilen saldırılara sadece " saldırı " adlandırılması kullanılması önerilir .
+Event	T0	bombalama	EVENT	118
+Event	T1	saldırı	EVENT	170
+Event	T2	savaş	EVENT	234
+Event	T3	çatışma	EVENT	247
+Event	T4	esir	EVENT	267
+Event	T5	öldürülmesi	EVENT	284
+Event	T6	İşkence	EVENT	312
+Event	T7	eziyet	EVENT	368
+Event	T8	öldürmesi	EVENT	382
+Event	T9	Katliam	EVENT	405
+Event	T10	saldırı	EVENT	454
+Event	T11	Saldırı	EVENT	480
+Event	T12	saldırı	EVENT	632
+Event	T13	saldırısı	EVENT	45
+Event	T14	açma	EVENT	139
+Event	T15	Saldırıları	EVENT	189
+Event	T17	kaçırıp	EVENT	353
+Event	T16	Gara Katliamı	EVENT	298
+Event	T18	Beslan Katliamı	EVENT	464
+Event	T19	saldırılarda	EVENT	521
+Event	T20	saldırılara	EVENT	611
+Event	T21	yöntem	EVENT	571
+Relation	T2	T4	CauseEffect	true	savaş	esir
+Relation	T4	T2	EffectCause	true	esir	savaş
+Relation	T3	T4	CauseEffect	true	çatışma	esir
+Relation	T4	T3	EffectCause	true	esir	çatışma
+Relation	T4	T5	CauseEffect	true	esir	öldürülmesi
+Relation	T5	T4	EffectCause	true	öldürülmesi	esir
+Relation	T17	T7	CauseEffect	true	kaçırıp	eziyet
+Relation	T7	T17	EffectCause	true	eziyet	kaçırıp
+Relation	T7	T8	CauseEffect	true	eziyet	öldürmesi
+Relation	T8	T7	EffectCause	true	öldürmesi	eziyet
+Relation	T6	T8	CauseEffect	true	İşkence	öldürmesi
+Relation	T8	T6	EffectCause	true	öldürmesi	İşkence
+Relation	T0	T10	NoRel	true	bombalama	saldırı
+Relation	T0	T12	NoRel	true	bombalama	saldırı
+Relation	T0	T18	NoRel	true	bombalama	Beslan Katliamı
+Relation	T0	T20	NoRel	true	bombalama	saldırılara
+Relation	T0	T5	NoRel	true	bombalama	öldürülmesi
+Relation	T1	T0	NoRel	true	saldırı	bombalama
+Relation	T1	T11	NoRel	true	saldırı	Saldırı
+Relation	T1	T3	NoRel	true	saldırı	çatışma
+Relation	T1	T7	NoRel	true	saldırı	eziyet
+Relation	T1	T9	NoRel	true	saldırı	Katliam
+Relation	T10	T11	NoRel	true	saldırı	Saldırı
+Relation	T10	T19	NoRel	true	saldırı	saldırılarda
+Relation	T10	T2	NoRel	true	saldırı	savaş
+Relation	T10	T20	NoRel	true	saldırı	saldırılara
+Relation	T10	T3	NoRel	true	saldırı	çatışma
+Relation	T10	T4	NoRel	true	saldırı	esir
+Relation	T10	T5	NoRel	true	saldırı	öldürülmesi
+Relation	T10	T9	NoRel	true	saldırı	Katliam
+Relation	T11	T1	NoRel	true	Saldırı	saldırı
+Relation	T11	T12	NoRel	true	Saldırı	saldırı
+Relation	T11	T15	NoRel	true	Saldırı	Saldırıları
+Relation	T11	T20	NoRel	true	Saldırı	saldırılara
+Relation	T11	T21	NoRel	true	Saldırı	yöntem
+Relation	T11	T3	NoRel	true	Saldırı	çatışma
+Relation	T12	T10	NoRel	true	saldırı	saldırı
+Relation	T12	T14	NoRel	true	saldırı	açma
+Relation	T12	T17	NoRel	true	saldırı	kaçırıp
+Relation	T12	T8	NoRel	true	saldırı	öldürmesi
+Relation	T13	T0	NoRel	true	saldırısı	bombalama
+Relation	T13	T18	NoRel	true	saldırısı	Beslan Katliamı
+Relation	T13	T2	NoRel	true	saldırısı	savaş
+Relation	T13	T20	NoRel	true	saldırısı	saldırılara
+Relation	T14	T0	NoRel	true	açma	bombalama
+Relation	T14	T1	NoRel	true	açma	saldırı
+Relation	T14	T2	NoRel	true	açma	savaş
+Relation	T14	T20	NoRel	true	açma	saldırılara
+Relation	T14	T21	NoRel	true	açma	yöntem
+Relation	T14	T3	NoRel	true	açma	çatışma
+Relation	T14	T4	NoRel	true	açma	esir
+Relation	T15	T1	NoRel	true	Saldırıları	saldırı
+Relation	T15	T10	NoRel	true	Saldırıları	saldırı
+Relation	T15	T12	NoRel	true	Saldırıları	saldırı
+Relation	T15	T13	NoRel	true	Saldırıları	saldırısı
+Relation	T15	T2	NoRel	true	Saldırıları	savaş
+Relation	T15	T3	NoRel	true	Saldırıları	çatışma
+Relation	T15	T4	NoRel	true	Saldırıları	esir
+Relation	T15	T6	NoRel	true	Saldırıları	İşkence
+Relation	T16	T11	NoRel	true	Gara Katliamı	Saldırı
+Relation	T16	T13	NoRel	true	Gara Katliamı	saldırısı
+Relation	T16	T17	NoRel	true	Gara Katliamı	kaçırıp
+Relation	T16	T19	NoRel	true	Gara Katliamı	saldırılarda
+Relation	T16	T2	NoRel	true	Gara Katliamı	savaş
+Relation	T16	T20	NoRel	true	Gara Katliamı	saldırılara
+Relation	T16	T3	NoRel	true	Gara Katliamı	çatışma
+Relation	T16	T6	NoRel	true	Gara Katliamı	İşkence
+Relation	T17	T14	NoRel	true	kaçırıp	açma
+Relation	T17	T15	NoRel	true	kaçırıp	Saldırıları
+Relation	T17	T16	NoRel	true	kaçırıp	Gara Katliamı
+Relation	T17	T18	NoRel	true	kaçırıp	Beslan Katliamı
+Relation	T17	T20	NoRel	true	kaçırıp	saldırılara
+Relation	T18	T0	NoRel	true	Beslan Katliamı	bombalama
+Relation	T18	T1	NoRel	true	Beslan Katliamı	saldırı
+Relation	T18	T11	NoRel	true	Beslan Katliamı	Saldırı
+Relation	T18	T12	NoRel	true	Beslan Katliamı	saldırı
+Relation	T18	T16	NoRel	true	Beslan Katliamı	Gara Katliamı
+Relation	T18	T17	NoRel	true	Beslan Katliamı	kaçırıp
+Relation	T18	T19	NoRel	true	Beslan Katliamı	saldırılarda
+Relation	T18	T4	NoRel	true	Beslan Katliamı	esir
+Relation	T18	T8	NoRel	true	Beslan Katliamı	öldürmesi
+Relation	T19	T11	NoRel	true	saldırılarda	Saldırı
+Relation	T19	T13	NoRel	true	saldırılarda	saldırısı
+Relation	T19	T20	NoRel	true	saldırılarda	saldırılara
+Relation	T19	T21	NoRel	true	saldırılarda	yöntem
+Relation	T19	T3	NoRel	true	saldırılarda	çatışma
+Relation	T19	T5	NoRel	true	saldırılarda	öldürülmesi
+Relation	T19	T6	NoRel	true	saldırılarda	İşkence
+Relation	T19	T8	NoRel	true	saldırılarda	öldürmesi
+Relation	T19	T9	NoRel	true	saldırılarda	Katliam
+Relation	T2	T0	NoRel	true	savaş	bombalama
+Relation	T2	T14	NoRel	true	savaş	açma
+Relation	T2	T15	NoRel	true	savaş	Saldırıları
+Relation	T2	T16	NoRel	true	savaş	Gara Katliamı
+Relation	T2	T17	NoRel	true	savaş	kaçırıp
+Relation	T2	T18	NoRel	true	savaş	Beslan Katliamı
+Relation	T2	T5	NoRel	true	savaş	öldürülmesi
+Relation	T20	T10	NoRel	true	saldırılara	saldırı
+Relation	T20	T11	NoRel	true	saldırılara	Saldırı
+Relation	T20	T14	NoRel	true	saldırılara	açma
+Relation	T20	T16	NoRel	true	saldırılara	Gara Katliamı
+Relation	T20	T4	NoRel	true	saldırılara	esir
+Relation	T20	T7	NoRel	true	saldırılara	eziyet
+Relation	T21	T1	NoRel	true	yöntem	saldırı
+Relation	T21	T14	NoRel	true	yöntem	açma
+Relation	T21	T16	NoRel	true	yöntem	Gara Katliamı
+Relation	T21	T18	NoRel	true	yöntem	Beslan Katliamı
+Relation	T21	T19	NoRel	true	yöntem	saldırılarda
+Relation	T21	T4	NoRel	true	yöntem	esir
+Relation	T21	T6	NoRel	true	yöntem	İşkence
+Relation	T21	T8	NoRel	true	yöntem	öldürmesi
+Relation	T3	T0	NoRel	true	çatışma	bombalama
+Relation	T3	T1	NoRel	true	çatışma	saldırı
+Relation	T3	T10	NoRel	true	çatışma	saldırı
+Relation	T3	T17	NoRel	true	çatışma	kaçırıp
+Relation	T3	T20	NoRel	true	çatışma	saldırılara
+Relation	T3	T8	NoRel	true	çatışma	öldürmesi
+Relation	T4	T1	NoRel	true	esir	saldırı
+Relation	T4	T10	NoRel	true	esir	saldırı
+Relation	T4	T11	NoRel	true	esir	Saldırı
+Relation	T4	T14	NoRel	true	esir	açma
+Relation	T4	T15	NoRel	true	esir	Saldırıları
+Relation	T4	T6	NoRel	true	esir	İşkence
+Relation	T4	T7	NoRel	true	esir	eziyet
+Relation	T4	T8	NoRel	true	esir	öldürmesi
+Relation	T5	T11	NoRel	true	öldürülmesi	Saldırı
+Relation	T5	T15	NoRel	true	öldürülmesi	Saldırıları
+Relation	T5	T17	NoRel	true	öldürülmesi	kaçırıp
+Relation	T5	T18	NoRel	true	öldürülmesi	Beslan Katliamı
+Relation	T5	T7	NoRel	true	öldürülmesi	eziyet
+Relation	T6	T1	NoRel	true	İşkence	saldırı
+Relation	T6	T11	NoRel	true	İşkence	Saldırı
+Relation	T6	T16	NoRel	true	İşkence	Gara Katliamı
+Relation	T6	T19	NoRel	true	İşkence	saldırılarda
+Relation	T6	T20	NoRel	true	İşkence	saldırılara
+Relation	T6	T3	NoRel	true	İşkence	çatışma
+Relation	T6	T9	NoRel	true	İşkence	Katliam
+Relation	T7	T11	NoRel	true	eziyet	Saldırı
+Relation	T7	T12	NoRel	true	eziyet	saldırı
+Relation	T7	T16	NoRel	true	eziyet	Gara Katliamı
+Relation	T7	T2	NoRel	true	eziyet	savaş
+Relation	T7	T21	NoRel	true	eziyet	yöntem
+Relation	T7	T5	NoRel	true	eziyet	öldürülmesi
+Relation	T7	T6	NoRel	true	eziyet	İşkence
+Relation	T7	T9	NoRel	true	eziyet	Katliam
+Relation	T8	T1	NoRel	true	öldürmesi	saldırı
+Relation	T8	T17	NoRel	true	öldürmesi	kaçırıp
+Relation	T8	T18	NoRel	true	öldürmesi	Beslan Katliamı
+Relation	T8	T4	NoRel	true	öldürmesi	esir
+Relation	T9	T0	NoRel	true	Katliam	bombalama
+Relation	T9	T10	NoRel	true	Katliam	saldırı
+Relation	T9	T19	NoRel	true	Katliam	saldırılarda
+Relation	T9	T20	NoRel	true	Katliam	saldırılara
+Relation	T9	T21	NoRel	true	Katliam	yöntem
+Relation	T9	T6	NoRel	true	Katliam	İşkence
+Relation	T9	T7	NoRel	true	Katliam	eziyet
+Relation	T9	T8	NoRel	true	Katliam	öldürmesi

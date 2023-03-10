@@ -1,0 +1,113 @@
+Text	A stirring and unique air drama was played out in an impenetrable fog here tonight after 22 navy airplanes had been stranded with dwindling gasoline supplies in the sky , and at its conclusion every aviator involved was safe .	As a result of the long series of emergencies which developed as the fuel ran dangerously low in the planes , one at a time , one plane was demolished , another was badly damaged , one caught fire and several others turned over and were slightly damaged .	At 8 o'clock only two planes remained aloft , and they circled aimlessly about over the city watching for a break in the fog .	They carried no radios and could not be told that the navy 's call upon the citizens of San Diego for assistance had sent scores of motorists rushing to Camp Kearny mesa to light up with the headlights of their cars an unused airport there .	The United Airlines night mail plane , piloted by C._F. Sullivan , was en route from Los Angeles to San Diego .
+Event	T2	fog	EVENT	66
+Event	T3	stranded	EVENT	116
+Event	T4	dwindling	EVENT	130
+Event	T5	conclusion	EVENT	182
+Event	T6	series	EVENT	251
+Event	T7	emergencies	EVENT	261
+Event	T8	developed	EVENT	279
+Event	T9	demolished	EVENT	367
+Event	T10	damaged	EVENT	398
+Event	T11	damaged	EVENT	473
+Event	T12	remained	EVENT	512
+Event	T13	circled	EVENT	538
+Event	T14	watching	EVENT	576
+Event	T15	break	EVENT	591
+Event	T16	fog	EVENT	604
+Event	T17	carried	EVENT	615
+Event	T18	told	EVENT	650
+Event	T19	call	EVENT	672
+Event	T20	assistance	EVENT	712
+Event	T21	sent	EVENT	727
+Event	T22	rushing	EVENT	752
+Event	T23	piloted	EVENT	891
+Event	T1	played	EVENT	36
+Event	T24	ran	EVENT	301
+Event	T25	turned	EVENT	443
+Event	T26	fire	EVENT	419
+Event	T27	light up	EVENT	783
+Relation	T24	T9	CauseEffect	true	ran	demolished
+Relation	T9	T24	EffectCause	true	demolished	ran
+Relation	T24	T10	CauseEffect	true	ran	damaged
+Relation	T10	T24	EffectCause	true	damaged	ran
+Relation	T24	T26	CauseEffect	true	ran	fire
+Relation	T26	T24	EffectCause	true	fire	ran
+Relation	T24	T25	CauseEffect	true	ran	turned
+Relation	T25	T24	EffectCause	true	turned	ran
+Relation	T24	T11	CauseEffect	true	ran	damaged
+Relation	T11	T24	EffectCause	true	damaged	ran
+Relation	T13	T14	CauseEffect	true	circled	watching
+Relation	T14	T13	EffectCause	true	watching	circled
+Relation	T21	T22	CauseEffect	true	sent	rushing
+Relation	T22	T21	EffectCause	true	rushing	sent
+Relation	T22	T27	CauseEffect	true	rushing	light up
+Relation	T27	T22	EffectCause	true	light up	rushing
+Relation	T1	T2	NoRel	true	played	fog
+Relation	T1	T21	NoRel	true	played	sent
+Relation	T10	T16	NoRel	true	damaged	fog
+Relation	T10	T23	NoRel	true	damaged	piloted
+Relation	T10	T5	NoRel	true	damaged	conclusion
+Relation	T11	T10	NoRel	true	damaged	damaged
+Relation	T11	T12	NoRel	true	damaged	remained
+Relation	T11	T27	NoRel	true	damaged	light up
+Relation	T12	T19	NoRel	true	remained	call
+Relation	T12	T2	NoRel	true	remained	fog
+Relation	T12	T5	NoRel	true	remained	conclusion
+Relation	T12	T6	NoRel	true	remained	series
+Relation	T13	T12	NoRel	true	circled	remained
+Relation	T13	T19	NoRel	true	circled	call
+Relation	T13	T27	NoRel	true	circled	light up
+Relation	T14	T1	NoRel	true	watching	played
+Relation	T14	T20	NoRel	true	watching	assistance
+Relation	T14	T21	NoRel	true	watching	sent
+Relation	T15	T13	NoRel	true	break	circled
+Relation	T15	T21	NoRel	true	break	sent
+Relation	T15	T23	NoRel	true	break	piloted
+Relation	T16	T15	NoRel	true	fog	break
+Relation	T16	T2	NoRel	true	fog	fog
+Relation	T16	T21	NoRel	true	fog	sent
+Relation	T17	T16	NoRel	true	carried	fog
+Relation	T17	T2	NoRel	true	carried	fog
+Relation	T17	T5	NoRel	true	carried	conclusion
+Relation	T18	T5	NoRel	true	told	conclusion
+Relation	T19	T10	NoRel	true	call	damaged
+Relation	T19	T13	NoRel	true	call	circled
+Relation	T19	T14	NoRel	true	call	watching
+Relation	T19	T6	NoRel	true	call	series
+Relation	T2	T18	NoRel	true	fog	told
+Relation	T2	T21	NoRel	true	fog	sent
+Relation	T2	T24	NoRel	true	fog	ran
+Relation	T20	T2	NoRel	true	assistance	fog
+Relation	T20	T26	NoRel	true	assistance	fire
+Relation	T20	T4	NoRel	true	assistance	dwindling
+Relation	T21	T2	NoRel	true	sent	fog
+Relation	T22	T17	NoRel	true	rushing	carried
+Relation	T22	T23	NoRel	true	rushing	piloted
+Relation	T22	T6	NoRel	true	rushing	series
+Relation	T23	T11	NoRel	true	piloted	damaged
+Relation	T23	T17	NoRel	true	piloted	carried
+Relation	T23	T18	NoRel	true	piloted	told
+Relation	T23	T19	NoRel	true	piloted	call
+Relation	T23	T4	NoRel	true	piloted	dwindling
+Relation	T25	T17	NoRel	true	turned	carried
+Relation	T25	T8	NoRel	true	turned	developed
+Relation	T26	T12	NoRel	true	fire	remained
+Relation	T26	T27	NoRel	true	fire	light up
+Relation	T26	T8	NoRel	true	fire	developed
+Relation	T3	T4	NoRel	true	stranded	dwindling
+Relation	T3	T5	NoRel	true	stranded	conclusion
+Relation	T3	T8	NoRel	true	stranded	developed
+Relation	T4	T10	NoRel	true	dwindling	damaged
+Relation	T4	T21	NoRel	true	dwindling	sent
+Relation	T5	T11	NoRel	true	conclusion	damaged
+Relation	T5	T4	NoRel	true	conclusion	dwindling
+Relation	T5	T8	NoRel	true	conclusion	developed
+Relation	T6	T5	NoRel	true	series	conclusion
+Relation	T6	T7	NoRel	true	series	emergencies
+Relation	T7	T11	NoRel	true	emergencies	damaged
+Relation	T7	T15	NoRel	true	emergencies	break
+Relation	T7	T20	NoRel	true	emergencies	assistance
+Relation	T7	T21	NoRel	true	emergencies	sent
+Relation	T8	T16	NoRel	true	developed	fog
+Relation	T9	T12	NoRel	true	demolished	remained
+Relation	T9	T6	NoRel	true	demolished	series

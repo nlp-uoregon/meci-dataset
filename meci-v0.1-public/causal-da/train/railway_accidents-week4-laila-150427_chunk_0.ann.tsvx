@@ -1,0 +1,72 @@
+Text	KØLKÆR-ULYKKEN var en jernbaneulykke den 2. marts 2000 .	To regionaltog kolliderede frontalt kl. 6.35 på Kølkær station , som er togfølgestation og bruges til krydsning mellem tog på den enkeltsporede Vejle-Holstebro-bane .	Ved kollisionen omkom tre personer , en passager i tog 3712 og begge togs lokomotivførere .	10 passagerer blev alvorligt kvæstet .	Kollisionen skete i vigesporet ( spor 1 ) på stationen , hvor tog 3712 var under nedbremsning , da det ramtes af det modkørende tog 3705 med omkring 116 km/t .
+Event	T0	jernbaneulykke	EVENT	22
+Event	T2	bruges	EVENT	148
+Event	T3	krydsning	EVENT	159
+Event	T4	omkom	EVENT	240
+Event	T5	kvæstet	EVENT	345
+Event	T7	ramtes	EVENT	458
+Event	T8	KØLKÆR-ULYKKEN	EVENT	0
+Event	T1	kolliderede	EVENT	72
+Event	T9	kollisionen	EVENT	228
+Event	T10	Kollisionen	EVENT	355
+Event	T6	nedbremsning	EVENT	436
+Event	T11	modkørende	EVENT	472
+Relation	T9	T4	CauseEffect	true	kollisionen	omkom
+Relation	T4	T9	EffectCause	true	omkom	kollisionen
+Relation	T9	T5	CauseEffect	true	kollisionen	kvæstet
+Relation	T5	T9	EffectCause	true	kvæstet	kollisionen
+Relation	T1	T8	CauseEffect	true	kolliderede	KØLKÆR-ULYKKEN
+Relation	T8	T1	EffectCause	true	KØLKÆR-ULYKKEN	kolliderede
+Relation	T1	T0	CauseEffect	true	kolliderede	jernbaneulykke
+Relation	T0	T1	EffectCause	true	jernbaneulykke	kolliderede
+Relation	T10	T4	CauseEffect	true	Kollisionen	omkom
+Relation	T4	T10	EffectCause	true	omkom	Kollisionen
+Relation	T10	T5	CauseEffect	true	Kollisionen	kvæstet
+Relation	T5	T10	EffectCause	true	kvæstet	Kollisionen
+Relation	T8	T4	CauseEffect	true	KØLKÆR-ULYKKEN	omkom
+Relation	T4	T8	EffectCause	true	omkom	KØLKÆR-ULYKKEN
+Relation	T8	T5	CauseEffect	true	KØLKÆR-ULYKKEN	kvæstet
+Relation	T5	T8	EffectCause	true	kvæstet	KØLKÆR-ULYKKEN
+Relation	T0	T4	CauseEffect	true	jernbaneulykke	omkom
+Relation	T4	T0	EffectCause	true	omkom	jernbaneulykke
+Relation	T0	T5	CauseEffect	true	jernbaneulykke	kvæstet
+Relation	T5	T0	EffectCause	true	kvæstet	jernbaneulykke
+Relation	T0	T11	NoRel	true	jernbaneulykke	modkørende
+Relation	T0	T6	NoRel	true	jernbaneulykke	nedbremsning
+Relation	T1	T10	NoRel	true	kolliderede	Kollisionen
+Relation	T1	T11	NoRel	true	kolliderede	modkørende
+Relation	T1	T3	NoRel	true	kolliderede	krydsning
+Relation	T1	T6	NoRel	true	kolliderede	nedbremsning
+Relation	T1	T7	NoRel	true	kolliderede	ramtes
+Relation	T1	T9	NoRel	true	kolliderede	kollisionen
+Relation	T10	T0	NoRel	true	Kollisionen	jernbaneulykke
+Relation	T10	T11	NoRel	true	Kollisionen	modkørende
+Relation	T10	T8	NoRel	true	Kollisionen	KØLKÆR-ULYKKEN
+Relation	T11	T0	NoRel	true	modkørende	jernbaneulykke
+Relation	T11	T9	NoRel	true	modkørende	kollisionen
+Relation	T2	T11	NoRel	true	bruges	modkørende
+Relation	T2	T9	NoRel	true	bruges	kollisionen
+Relation	T3	T1	NoRel	true	krydsning	kolliderede
+Relation	T3	T7	NoRel	true	krydsning	ramtes
+Relation	T4	T1	NoRel	true	omkom	kolliderede
+Relation	T5	T2	NoRel	true	kvæstet	bruges
+Relation	T5	T4	NoRel	true	kvæstet	omkom
+Relation	T5	T6	NoRel	true	kvæstet	nedbremsning
+Relation	T6	T0	NoRel	true	nedbremsning	jernbaneulykke
+Relation	T6	T2	NoRel	true	nedbremsning	bruges
+Relation	T6	T5	NoRel	true	nedbremsning	kvæstet
+Relation	T6	T7	NoRel	true	nedbremsning	ramtes
+Relation	T7	T0	NoRel	true	ramtes	jernbaneulykke
+Relation	T7	T1	NoRel	true	ramtes	kolliderede
+Relation	T7	T11	NoRel	true	ramtes	modkørende
+Relation	T7	T5	NoRel	true	ramtes	kvæstet
+Relation	T7	T8	NoRel	true	ramtes	KØLKÆR-ULYKKEN
+Relation	T7	T9	NoRel	true	ramtes	kollisionen
+Relation	T8	T0	NoRel	true	KØLKÆR-ULYKKEN	jernbaneulykke
+Relation	T8	T10	NoRel	true	KØLKÆR-ULYKKEN	Kollisionen
+Relation	T8	T2	NoRel	true	KØLKÆR-ULYKKEN	bruges
+Relation	T8	T3	NoRel	true	KØLKÆR-ULYKKEN	krydsning
+Relation	T8	T9	NoRel	true	KØLKÆR-ULYKKEN	kollisionen
+Relation	T9	T11	NoRel	true	kollisionen	modkørende
+Relation	T9	T3	NoRel	true	kollisionen	krydsning
+Relation	T9	T6	NoRel	true	kollisionen	nedbremsning

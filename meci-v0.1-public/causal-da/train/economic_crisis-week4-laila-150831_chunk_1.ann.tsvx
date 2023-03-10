@@ -1,0 +1,37 @@
+Text	I 2011 overtog Sparekassen Lolland banken Eik Bank Danmark fra Finansiel Stabilitet .	Finanstilsynet krævede ved en inspektion så skrappe krav til nedskrivninger , at egenkapital i Spar Lolland helt ville forsvinde .	Bankens markedsværdi var inden krakket på 81 millioner kroner fordelt på 12 millioner aktier .	Spar Lolland havde 45.000 kunder , mens FinansNetbanken havde 70.000 kunder .	Balancen var på 12,9 milliarder kroner , og udlånet udgjorde 7,1 milliarder kroner og indlån 9,7 milliarder kroner .
+Event	T0	overtog	EVENT	7
+Event	T1	krævede	EVENT	101
+Event	T2	inspektion	EVENT	116
+Event	T3	nedskrivninger	EVENT	147
+Event	T4	forsvinde	EVENT	205
+Event	T5	krakket	EVENT	248
+Event	T6	udgjorde	EVENT	442
+Event	T7	krav	EVENT	138
+Relation	T7	T4	CauseEffect	true	krav	forsvinde
+Relation	T4	T7	EffectCause	true	forsvinde	krav
+Relation	T0	T2	NoRel	true	overtog	inspektion
+Relation	T0	T3	NoRel	true	overtog	nedskrivninger
+Relation	T0	T5	NoRel	true	overtog	krakket
+Relation	T0	T6	NoRel	true	overtog	udgjorde
+Relation	T1	T4	NoRel	true	krævede	forsvinde
+Relation	T1	T5	NoRel	true	krævede	krakket
+Relation	T1	T6	NoRel	true	krævede	udgjorde
+Relation	T1	T7	NoRel	true	krævede	krav
+Relation	T2	T1	NoRel	true	inspektion	krævede
+Relation	T2	T3	NoRel	true	inspektion	nedskrivninger
+Relation	T2	T7	NoRel	true	inspektion	krav
+Relation	T3	T0	NoRel	true	nedskrivninger	overtog
+Relation	T3	T2	NoRel	true	nedskrivninger	inspektion
+Relation	T3	T6	NoRel	true	nedskrivninger	udgjorde
+Relation	T4	T0	NoRel	true	forsvinde	overtog
+Relation	T4	T5	NoRel	true	forsvinde	krakket
+Relation	T4	T6	NoRel	true	forsvinde	udgjorde
+Relation	T5	T2	NoRel	true	krakket	inspektion
+Relation	T5	T4	NoRel	true	krakket	forsvinde
+Relation	T5	T7	NoRel	true	krakket	krav
+Relation	T6	T0	NoRel	true	udgjorde	overtog
+Relation	T6	T1	NoRel	true	udgjorde	krævede
+Relation	T6	T3	NoRel	true	udgjorde	nedskrivninger
+Relation	T7	T0	NoRel	true	krav	overtog
+Relation	T7	T3	NoRel	true	krav	nedskrivninger
+Relation	T7	T5	NoRel	true	krav	krakket

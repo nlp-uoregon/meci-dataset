@@ -1,0 +1,28 @@
+Text	جب خشک موسم میں میدانی علاقوں میں تلاطم خیز ہوائیں گرد و غبار کے بادلوں کے ساتھ آتی ہیں تو انہیں گرد و غبار کے طوفان یا آندھی کہا جاتا ہے ۔	یہ طوفان اپنے ساتھ سیاہ یا زرد رنگ کے گرد و غبار کے بادل لاتے ہیں جنہیں بالترتیب سیاہ یا زرد آندھی کہا جاتا ہے ۔	جب یہ طوفان آتے ہیں تو سیاہ آندھی کی صورت میں ماحول پر گھٹا ٹوپ اندھیرا چھا جاتا ہے اور زرد آندھی کی صورت میں ہر شے زرد نظر آتی ہے ۔	ہر دو صورتوں میں خوب ریت برستی ہے ۔	ہوا کی رفتار بے انتہا تیز ہوتی ہے جس کا نتیجہ زبردست تباہی ہوتا ہے ۔
+Event	T0	آتی	EVENT	80
+Event	T1	طوفان	EVENT	111
+Event	T2	کہا	EVENT	126
+Event	T3	طوفان	EVENT	143
+Event	T4	کہا	EVENT	239
+Event	T5	چھا	EVENT	325
+Event	T6	برستی	EVENT	411
+Event	T7	تباہی	EVENT	475
+Relation	T0	T2	CauseEffect	true	آتی	کہا
+Relation	T2	T0	EffectCause	true	کہا	آتی
+Relation	T0	T1	NoRel	true	آتی	طوفان
+Relation	T0	T7	NoRel	true	آتی	تباہی
+Relation	T1	T2	NoRel	true	طوفان	کہا
+Relation	T1	T5	NoRel	true	طوفان	چھا
+Relation	T1	T7	NoRel	true	طوفان	تباہی
+Relation	T2	T3	NoRel	true	کہا	طوفان
+Relation	T2	T4	NoRel	true	کہا	کہا
+Relation	T3	T7	NoRel	true	طوفان	تباہی
+Relation	T5	T2	NoRel	true	چھا	کہا
+Relation	T5	T3	NoRel	true	چھا	طوفان
+Relation	T6	T1	NoRel	true	برستی	طوفان
+Relation	T6	T3	NoRel	true	برستی	طوفان
+Relation	T6	T7	NoRel	true	برستی	تباہی
+Relation	T7	T0	NoRel	true	تباہی	آتی
+Relation	T7	T2	NoRel	true	تباہی	کہا
+Relation	T7	T3	NoRel	true	تباہی	طوفان
+Relation	T7	T5	NoRel	true	تباہی	چھا

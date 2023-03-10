@@ -1,0 +1,69 @@
+Text	El capitán realiza su primer contacto con torre de Puerto Ordaz y anuncia que tiene problemas para controlar la aeronave .	El avión se estrelló en un campo de desechos de Sidor a las 10:30 aproximadamente matando a 17 de las 51 personas a bordo , los dos pilotos fallecieron en el accidente .	El 30 de agosto de 2008 del aeropuerto de Maiquetía despegó el Boeing 737-200 , YV-102T arrendado a Conviasa por la empresa hondureña Atlantic Air .	Esa noche , minutos antes de aterrizar se estrelló en el aeropuerto de Latacunga , Ecuador .	La tripulación que murió en el siniestro , estaba integrada por el piloto Pedro Gustavo Mendiri Rangel , de 32 años de edad ; el copiloto Gerardo José Rangel , de 41 años de edad , y el mecánico hondureño José Rosales .
+Event	T0	realiza	EVENT	11
+Event	T1	contacto	EVENT	29
+Event	T2	anuncia	EVENT	66
+Event	T3	estrelló	EVENT	135
+Event	T4	matando	EVENT	205
+Event	T5	fallecieron	EVENT	263
+Event	T6	accidente	EVENT	281
+Event	T7	despegó	EVENT	345
+Event	T8	arrendado	EVENT	381
+Event	T9	aterrizar	EVENT	471
+Event	T10	estrelló	EVENT	484
+Event	T11	murió	EVENT	554
+Event	T12	siniestro	EVENT	566
+Relation	T3	T4	CauseEffect	true	estrelló	matando
+Relation	T4	T3	EffectCause	true	matando	estrelló
+Relation	T0	T10	NoRel	true	realiza	estrelló
+Relation	T0	T11	NoRel	true	realiza	murió
+Relation	T0	T2	NoRel	true	realiza	anuncia
+Relation	T0	T3	NoRel	true	realiza	estrelló
+Relation	T1	T0	NoRel	true	contacto	realiza
+Relation	T1	T10	NoRel	true	contacto	estrelló
+Relation	T1	T12	NoRel	true	contacto	siniestro
+Relation	T1	T4	NoRel	true	contacto	matando
+Relation	T1	T6	NoRel	true	contacto	accidente
+Relation	T1	T7	NoRel	true	contacto	despegó
+Relation	T1	T8	NoRel	true	contacto	arrendado
+Relation	T1	T9	NoRel	true	contacto	aterrizar
+Relation	T10	T5	NoRel	true	estrelló	fallecieron
+Relation	T10	T6	NoRel	true	estrelló	accidente
+Relation	T10	T8	NoRel	true	estrelló	arrendado
+Relation	T10	T9	NoRel	true	estrelló	aterrizar
+Relation	T11	T0	NoRel	true	murió	realiza
+Relation	T11	T1	NoRel	true	murió	contacto
+Relation	T11	T10	NoRel	true	murió	estrelló
+Relation	T11	T7	NoRel	true	murió	despegó
+Relation	T12	T2	NoRel	true	siniestro	anuncia
+Relation	T12	T5	NoRel	true	siniestro	fallecieron
+Relation	T12	T7	NoRel	true	siniestro	despegó
+Relation	T2	T1	NoRel	true	anuncia	contacto
+Relation	T2	T12	NoRel	true	anuncia	siniestro
+Relation	T2	T5	NoRel	true	anuncia	fallecieron
+Relation	T3	T1	NoRel	true	estrelló	contacto
+Relation	T3	T12	NoRel	true	estrelló	siniestro
+Relation	T4	T0	NoRel	true	matando	realiza
+Relation	T4	T1	NoRel	true	matando	contacto
+Relation	T4	T11	NoRel	true	matando	murió
+Relation	T4	T2	NoRel	true	matando	anuncia
+Relation	T4	T6	NoRel	true	matando	accidente
+Relation	T4	T8	NoRel	true	matando	arrendado
+Relation	T4	T9	NoRel	true	matando	aterrizar
+Relation	T5	T0	NoRel	true	fallecieron	realiza
+Relation	T5	T11	NoRel	true	fallecieron	murió
+Relation	T5	T12	NoRel	true	fallecieron	siniestro
+Relation	T6	T10	NoRel	true	accidente	estrelló
+Relation	T6	T11	NoRel	true	accidente	murió
+Relation	T6	T12	NoRel	true	accidente	siniestro
+Relation	T6	T2	NoRel	true	accidente	anuncia
+Relation	T6	T5	NoRel	true	accidente	fallecieron
+Relation	T7	T10	NoRel	true	despegó	estrelló
+Relation	T7	T12	NoRel	true	despegó	siniestro
+Relation	T7	T8	NoRel	true	despegó	arrendado
+Relation	T8	T3	NoRel	true	arrendado	estrelló
+Relation	T8	T7	NoRel	true	arrendado	despegó
+Relation	T8	T9	NoRel	true	arrendado	aterrizar
+Relation	T9	T2	NoRel	true	aterrizar	anuncia
+Relation	T9	T3	NoRel	true	aterrizar	estrelló
+Relation	T9	T4	NoRel	true	aterrizar	matando
+Relation	T9	T8	NoRel	true	aterrizar	arrendado

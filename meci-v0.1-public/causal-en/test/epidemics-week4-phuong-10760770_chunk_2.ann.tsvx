@@ -1,0 +1,84 @@
+Text	The plague of Amwas first struck the Muslim Arab troops encamped there before spreading across Syria – Palestine and affecting Egypt and Iraq	The plague of Amwas ( _ta'un Amwas _ in Arabic ) was likely a bubonic plague epidemic , though the sources do not elaborate on specific symptoms of the disease .	It was the second recorded plague of the Islamic era , which began in the 620s , and the first to directly afflict the Muslims .	It was likely a reemergence of the Plague of Justinian , which originated in Pelusium ( near modern Suez ) in 541 AD and spread west to Alexandria and east to Palestine before reaching the Byzantine capital Constantinople in 541 – 542 and afflicting the rest of Europe and the Sasanian Empire , as noted by the Byzantine historian Procopius ( d. ) .	The Plague of Justinian recurred in at least nine to twelve cycles throughout the mid-6th century and the 7th century .
+Event	T0	plague	EVENT	4
+Event	T1	struck	EVENT	26
+Event	T2	encamped	EVENT	56
+Event	T3	spreading	EVENT	78
+Event	T4	affecting	EVENT	117
+Event	T5	plague	EVENT	146
+Event	T6	epidemic	EVENT	219
+Event	T7	elaborate	EVENT	256
+Event	T8	disease	EVENT	294
+Event	T9	plague	EVENT	331
+Event	T10	began	EVENT	365
+Event	T11	afflict	EVENT	411
+Event	T12	reemergence	EVENT	449
+Event	T13	Plague	EVENT	468
+Event	T14	originated	EVENT	496
+Event	T15	spread	EVENT	554
+Event	T16	reaching	EVENT	609
+Event	T17	afflicting	EVENT	672
+Event	T18	noted	EVENT	731
+Event	T19	Plague	EVENT	787
+Event	T20	recurred	EVENT	807
+Relation	T1	T3	CauseEffect	true	struck	spreading
+Relation	T3	T1	EffectCause	true	spreading	struck
+Relation	T3	T4	CauseEffect	true	spreading	affecting
+Relation	T4	T3	EffectCause	true	affecting	spreading
+Relation	T9	T11	CauseEffect	true	plague	afflict
+Relation	T11	T9	EffectCause	true	afflict	plague
+Relation	T12	T9	CauseEffect	true	reemergence	plague
+Relation	T9	T12	EffectCause	true	plague	reemergence
+Relation	T15	T16	CauseEffect	true	spread	reaching
+Relation	T16	T15	EffectCause	true	reaching	spread
+Relation	T16	T17	CauseEffect	true	reaching	afflicting
+Relation	T17	T16	EffectCause	true	afflicting	reaching
+Relation	T0	T12	NoRel	true	plague	reemergence
+Relation	T0	T3	NoRel	true	plague	spreading
+Relation	T0	T5	NoRel	true	plague	plague
+Relation	T1	T0	NoRel	true	struck	plague
+Relation	T1	T17	NoRel	true	struck	afflicting
+Relation	T1	T7	NoRel	true	struck	elaborate
+Relation	T10	T13	NoRel	true	began	Plague
+Relation	T11	T12	NoRel	true	afflict	reemergence
+Relation	T11	T18	NoRel	true	afflict	noted
+Relation	T11	T20	NoRel	true	afflict	recurred
+Relation	T11	T4	NoRel	true	afflict	affecting
+Relation	T12	T0	NoRel	true	reemergence	plague
+Relation	T12	T11	NoRel	true	reemergence	afflict
+Relation	T12	T7	NoRel	true	reemergence	elaborate
+Relation	T13	T1	NoRel	true	Plague	struck
+Relation	T13	T10	NoRel	true	Plague	began
+Relation	T13	T12	NoRel	true	Plague	reemergence
+Relation	T13	T14	NoRel	true	Plague	originated
+Relation	T13	T15	NoRel	true	Plague	spread
+Relation	T13	T2	NoRel	true	Plague	encamped
+Relation	T13	T20	NoRel	true	Plague	recurred
+Relation	T14	T18	NoRel	true	originated	noted
+Relation	T14	T3	NoRel	true	originated	spreading
+Relation	T14	T6	NoRel	true	originated	epidemic
+Relation	T15	T6	NoRel	true	spread	epidemic
+Relation	T16	T11	NoRel	true	reaching	afflict
+Relation	T16	T5	NoRel	true	reaching	plague
+Relation	T17	T3	NoRel	true	afflicting	spreading
+Relation	T17	T7	NoRel	true	afflicting	elaborate
+Relation	T18	T1	NoRel	true	noted	struck
+Relation	T18	T4	NoRel	true	noted	affecting
+Relation	T19	T1	NoRel	true	Plague	struck
+Relation	T19	T3	NoRel	true	Plague	spreading
+Relation	T19	T7	NoRel	true	Plague	elaborate
+Relation	T2	T1	NoRel	true	encamped	struck
+Relation	T2	T5	NoRel	true	encamped	plague
+Relation	T3	T12	NoRel	true	spreading	reemergence
+Relation	T3	T8	NoRel	true	spreading	disease
+Relation	T4	T0	NoRel	true	affecting	plague
+Relation	T4	T15	NoRel	true	affecting	spread
+Relation	T4	T18	NoRel	true	affecting	noted
+Relation	T5	T12	NoRel	true	plague	reemergence
+Relation	T5	T13	NoRel	true	plague	Plague
+Relation	T5	T8	NoRel	true	plague	disease
+Relation	T6	T3	NoRel	true	epidemic	spreading
+Relation	T7	T10	NoRel	true	elaborate	began
+Relation	T7	T19	NoRel	true	elaborate	Plague
+Relation	T9	T10	NoRel	true	plague	began
+Relation	T9	T6	NoRel	true	plague	epidemic
+Relation	T9	T7	NoRel	true	plague	elaborate

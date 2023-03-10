@@ -1,0 +1,115 @@
+Text	El avión involucrado en el accidente era un Boeing 737-823 , con matrícula N977AN .	Su primer vuelo tuvo lugar el 30 de noviembre de 2001	El avión había realizado su primer despegue con el registro N1786B y fue entregado a American Airlines el 20 de diciembre de 2001 .	Aunque el aeropuerto fue cerrado después del accidente , retrasando unos 400 viajes , más tarde fue reabierto pero operando con un tamaño de pista reducido debido a los restos de la cola del avión estrellado .	Algunos vuelos se desviaron al Aeropuerto Internacional Sangster durante dos días .
+Event	T0	involucrado	EVENT	9
+Event	T1	accidente	EVENT	27
+Event	T2	tuvo	EVENT	100
+Event	T3	realizado	EVENT	153
+Event	T4	despegue	EVENT	173
+Event	T5	registro	EVENT	189
+Event	T6	entregado	EVENT	211
+Event	T7	cerrado	EVENT	295
+Event	T8	accidente	EVENT	315
+Event	T9	retrasando	EVENT	327
+Event	T10	viajes	EVENT	347
+Event	T11	reabierto	EVENT	370
+Event	T12	operando	EVENT	385
+Event	T13	restos	EVENT	439
+Event	T14	estrellado	EVENT	467
+Event	T15	vuelos	EVENT	488
+Event	T16	desviaron	EVENT	498
+Relation	T8	T7	CauseEffect	true	accidente	cerrado
+Relation	T7	T8	EffectCause	true	cerrado	accidente
+Relation	T7	T9	CauseEffect	true	cerrado	retrasando
+Relation	T9	T7	EffectCause	true	retrasando	cerrado
+Relation	T0	T10	NoRel	true	involucrado	viajes
+Relation	T0	T11	NoRel	true	involucrado	reabierto
+Relation	T0	T12	NoRel	true	involucrado	operando
+Relation	T0	T13	NoRel	true	involucrado	restos
+Relation	T0	T14	NoRel	true	involucrado	estrellado
+Relation	T0	T15	NoRel	true	involucrado	vuelos
+Relation	T0	T2	NoRel	true	involucrado	tuvo
+Relation	T0	T3	NoRel	true	involucrado	realizado
+Relation	T0	T5	NoRel	true	involucrado	registro
+Relation	T0	T7	NoRel	true	involucrado	cerrado
+Relation	T1	T15	NoRel	true	accidente	vuelos
+Relation	T1	T3	NoRel	true	accidente	realizado
+Relation	T1	T7	NoRel	true	accidente	cerrado
+Relation	T1	T9	NoRel	true	accidente	retrasando
+Relation	T10	T12	NoRel	true	viajes	operando
+Relation	T10	T14	NoRel	true	viajes	estrellado
+Relation	T10	T15	NoRel	true	viajes	vuelos
+Relation	T10	T16	NoRel	true	viajes	desviaron
+Relation	T10	T6	NoRel	true	viajes	entregado
+Relation	T10	T7	NoRel	true	viajes	cerrado
+Relation	T10	T8	NoRel	true	viajes	accidente
+Relation	T11	T12	NoRel	true	reabierto	operando
+Relation	T11	T13	NoRel	true	reabierto	restos
+Relation	T11	T14	NoRel	true	reabierto	estrellado
+Relation	T11	T16	NoRel	true	reabierto	desviaron
+Relation	T11	T2	NoRel	true	reabierto	tuvo
+Relation	T11	T6	NoRel	true	reabierto	entregado
+Relation	T12	T10	NoRel	true	operando	viajes
+Relation	T12	T13	NoRel	true	operando	restos
+Relation	T12	T15	NoRel	true	operando	vuelos
+Relation	T12	T16	NoRel	true	operando	desviaron
+Relation	T12	T5	NoRel	true	operando	registro
+Relation	T12	T6	NoRel	true	operando	entregado
+Relation	T12	T7	NoRel	true	operando	cerrado
+Relation	T13	T0	NoRel	true	restos	involucrado
+Relation	T13	T10	NoRel	true	restos	viajes
+Relation	T13	T9	NoRel	true	restos	retrasando
+Relation	T14	T1	NoRel	true	estrellado	accidente
+Relation	T14	T15	NoRel	true	estrellado	vuelos
+Relation	T14	T16	NoRel	true	estrellado	desviaron
+Relation	T14	T3	NoRel	true	estrellado	realizado
+Relation	T14	T4	NoRel	true	estrellado	despegue
+Relation	T14	T6	NoRel	true	estrellado	entregado
+Relation	T14	T7	NoRel	true	estrellado	cerrado
+Relation	T14	T9	NoRel	true	estrellado	retrasando
+Relation	T15	T2	NoRel	true	vuelos	tuvo
+Relation	T15	T3	NoRel	true	vuelos	realizado
+Relation	T15	T9	NoRel	true	vuelos	retrasando
+Relation	T16	T1	NoRel	true	desviaron	accidente
+Relation	T16	T12	NoRel	true	desviaron	operando
+Relation	T16	T13	NoRel	true	desviaron	restos
+Relation	T16	T14	NoRel	true	desviaron	estrellado
+Relation	T16	T15	NoRel	true	desviaron	vuelos
+Relation	T16	T2	NoRel	true	desviaron	tuvo
+Relation	T16	T8	NoRel	true	desviaron	accidente
+Relation	T2	T13	NoRel	true	tuvo	restos
+Relation	T2	T14	NoRel	true	tuvo	estrellado
+Relation	T2	T16	NoRel	true	tuvo	desviaron
+Relation	T2	T5	NoRel	true	tuvo	registro
+Relation	T3	T0	NoRel	true	realizado	involucrado
+Relation	T3	T11	NoRel	true	realizado	reabierto
+Relation	T3	T2	NoRel	true	realizado	tuvo
+Relation	T3	T7	NoRel	true	realizado	cerrado
+Relation	T4	T0	NoRel	true	despegue	involucrado
+Relation	T4	T11	NoRel	true	despegue	reabierto
+Relation	T4	T15	NoRel	true	despegue	vuelos
+Relation	T4	T6	NoRel	true	despegue	entregado
+Relation	T5	T1	NoRel	true	registro	accidente
+Relation	T5	T10	NoRel	true	registro	viajes
+Relation	T5	T12	NoRel	true	registro	operando
+Relation	T5	T14	NoRel	true	registro	estrellado
+Relation	T5	T2	NoRel	true	registro	tuvo
+Relation	T5	T3	NoRel	true	registro	realizado
+Relation	T5	T6	NoRel	true	registro	entregado
+Relation	T6	T11	NoRel	true	entregado	reabierto
+Relation	T6	T12	NoRel	true	entregado	operando
+Relation	T6	T14	NoRel	true	entregado	estrellado
+Relation	T6	T2	NoRel	true	entregado	tuvo
+Relation	T6	T5	NoRel	true	entregado	registro
+Relation	T6	T8	NoRel	true	entregado	accidente
+Relation	T7	T15	NoRel	true	cerrado	vuelos
+Relation	T7	T4	NoRel	true	cerrado	despegue
+Relation	T7	T5	NoRel	true	cerrado	registro
+Relation	T7	T6	NoRel	true	cerrado	entregado
+Relation	T8	T12	NoRel	true	accidente	operando
+Relation	T8	T13	NoRel	true	accidente	restos
+Relation	T8	T3	NoRel	true	accidente	realizado
+Relation	T8	T4	NoRel	true	accidente	despegue
+Relation	T8	T9	NoRel	true	accidente	retrasando
+Relation	T9	T13	NoRel	true	retrasando	restos
+Relation	T9	T14	NoRel	true	retrasando	estrellado
+Relation	T9	T3	NoRel	true	retrasando	realizado
+Relation	T9	T8	NoRel	true	retrasando	accidente

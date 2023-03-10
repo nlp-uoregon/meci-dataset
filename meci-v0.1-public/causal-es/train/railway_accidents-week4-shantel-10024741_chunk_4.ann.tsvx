@@ -1,0 +1,240 @@
+Text	Hasta esa fecha , los sucesos más graves habían sido el accidente de Malbone Street en el Metro de Nueva York , ocurrido el 1 de noviembre de 1918 con 93 muertos , y el incendio de Couronnes en el metro de París , sucedido el 10 de agosto de 1903 con 84 víctimas .	El gobierno de Azerbaiyán declaró tres días de luto oficial y costeó los funerales .	Uno de los pasajeros que falleció mientras participaba en el rescate , el militar Chingiz Babayev , fue nombrado Héroe Nacional de Azerbaiyán a título póstumo en 1996 .	Las autoridades de Azerbaiyán determinaron que la causa del accidente había sido un fallo eléctrico , agravado por la presencia de material sintético inflamable en los vagones .	Se consideró que el conductor había cometido un grave error al detener el tren en medio del túnel , pues si hubiese continuado hacia la estación de Narimanov podría haberse evacuado a la mayoría de los pasajeros .
+Event	T0	sucesos	EVENT	22
+Event	T1	accidente	EVENT	56
+Event	T2	ocurrido	EVENT	112
+Event	T3	muertos	EVENT	154
+Event	T4	incendio	EVENT	169
+Event	T6	víctimas	EVENT	254
+Event	T7	declaró	EVENT	291
+Event	T8	luto	EVENT	312
+Event	T9	costeó	EVENT	327
+Event	T10	funerales	EVENT	338
+Event	T11	falleció	EVENT	375
+Event	T12	participaba	EVENT	393
+Event	T13	rescate	EVENT	411
+Event	T14	nombrado	EVENT	454
+Event	T15	determinaron	EVENT	549
+Event	T16	accidente	EVENT	579
+Event	T17	agravado	EVENT	621
+Event	T18	presencia	EVENT	637
+Event	T19	consideró	EVENT	700
+Event	T20	cometido	EVENT	733
+Event	T21	error	EVENT	751
+Event	T22	detener	EVENT	760
+Event	T23	continuado	EVENT	813
+Event	T24	evacuado	EVENT	870
+Event	T5	fallo	EVENT	603
+Relation	T4	T6	CauseEffect	true	incendio	víctimas
+Relation	T6	T4	EffectCause	true	víctimas	incendio
+Relation	T1	T3	CauseEffect	true	accidente	muertos
+Relation	T3	T1	EffectCause	true	muertos	accidente
+Relation	T5	T16	CauseEffect	true	fallo	accidente
+Relation	T16	T5	EffectCause	true	accidente	fallo
+Relation	T0	T10	NoRel	true	sucesos	funerales
+Relation	T0	T12	NoRel	true	sucesos	participaba
+Relation	T0	T15	NoRel	true	sucesos	determinaron
+Relation	T0	T17	NoRel	true	sucesos	agravado
+Relation	T0	T19	NoRel	true	sucesos	consideró
+Relation	T0	T2	NoRel	true	sucesos	ocurrido
+Relation	T0	T20	NoRel	true	sucesos	cometido
+Relation	T0	T23	NoRel	true	sucesos	continuado
+Relation	T0	T4	NoRel	true	sucesos	incendio
+Relation	T0	T9	NoRel	true	sucesos	costeó
+Relation	T1	T11	NoRel	true	accidente	falleció
+Relation	T1	T12	NoRel	true	accidente	participaba
+Relation	T1	T16	NoRel	true	accidente	accidente
+Relation	T1	T17	NoRel	true	accidente	agravado
+Relation	T1	T18	NoRel	true	accidente	presencia
+Relation	T1	T2	NoRel	true	accidente	ocurrido
+Relation	T1	T20	NoRel	true	accidente	cometido
+Relation	T1	T21	NoRel	true	accidente	error
+Relation	T1	T22	NoRel	true	accidente	detener
+Relation	T1	T6	NoRel	true	accidente	víctimas
+Relation	T10	T1	NoRel	true	funerales	accidente
+Relation	T10	T11	NoRel	true	funerales	falleció
+Relation	T10	T12	NoRel	true	funerales	participaba
+Relation	T10	T13	NoRel	true	funerales	rescate
+Relation	T10	T17	NoRel	true	funerales	agravado
+Relation	T10	T19	NoRel	true	funerales	consideró
+Relation	T10	T20	NoRel	true	funerales	cometido
+Relation	T10	T21	NoRel	true	funerales	error
+Relation	T10	T23	NoRel	true	funerales	continuado
+Relation	T10	T4	NoRel	true	funerales	incendio
+Relation	T10	T5	NoRel	true	funerales	fallo
+Relation	T11	T0	NoRel	true	falleció	sucesos
+Relation	T11	T14	NoRel	true	falleció	nombrado
+Relation	T11	T15	NoRel	true	falleció	determinaron
+Relation	T11	T17	NoRel	true	falleció	agravado
+Relation	T11	T18	NoRel	true	falleció	presencia
+Relation	T11	T20	NoRel	true	falleció	cometido
+Relation	T11	T21	NoRel	true	falleció	error
+Relation	T11	T22	NoRel	true	falleció	detener
+Relation	T11	T6	NoRel	true	falleció	víctimas
+Relation	T12	T1	NoRel	true	participaba	accidente
+Relation	T12	T11	NoRel	true	participaba	falleció
+Relation	T12	T15	NoRel	true	participaba	determinaron
+Relation	T12	T16	NoRel	true	participaba	accidente
+Relation	T12	T18	NoRel	true	participaba	presencia
+Relation	T12	T23	NoRel	true	participaba	continuado
+Relation	T12	T24	NoRel	true	participaba	evacuado
+Relation	T12	T6	NoRel	true	participaba	víctimas
+Relation	T13	T12	NoRel	true	rescate	participaba
+Relation	T13	T14	NoRel	true	rescate	nombrado
+Relation	T13	T18	NoRel	true	rescate	presencia
+Relation	T13	T20	NoRel	true	rescate	cometido
+Relation	T13	T21	NoRel	true	rescate	error
+Relation	T13	T23	NoRel	true	rescate	continuado
+Relation	T13	T5	NoRel	true	rescate	fallo
+Relation	T13	T8	NoRel	true	rescate	luto
+Relation	T13	T9	NoRel	true	rescate	costeó
+Relation	T14	T10	NoRel	true	nombrado	funerales
+Relation	T14	T2	NoRel	true	nombrado	ocurrido
+Relation	T14	T22	NoRel	true	nombrado	detener
+Relation	T14	T23	NoRel	true	nombrado	continuado
+Relation	T14	T7	NoRel	true	nombrado	declaró
+Relation	T14	T8	NoRel	true	nombrado	luto
+Relation	T15	T1	NoRel	true	determinaron	accidente
+Relation	T15	T16	NoRel	true	determinaron	accidente
+Relation	T15	T17	NoRel	true	determinaron	agravado
+Relation	T15	T2	NoRel	true	determinaron	ocurrido
+Relation	T15	T23	NoRel	true	determinaron	continuado
+Relation	T15	T3	NoRel	true	determinaron	muertos
+Relation	T15	T5	NoRel	true	determinaron	fallo
+Relation	T15	T7	NoRel	true	determinaron	declaró
+Relation	T16	T0	NoRel	true	accidente	sucesos
+Relation	T16	T17	NoRel	true	accidente	agravado
+Relation	T16	T18	NoRel	true	accidente	presencia
+Relation	T16	T2	NoRel	true	accidente	ocurrido
+Relation	T16	T22	NoRel	true	accidente	detener
+Relation	T16	T23	NoRel	true	accidente	continuado
+Relation	T16	T24	NoRel	true	accidente	evacuado
+Relation	T16	T8	NoRel	true	accidente	luto
+Relation	T17	T12	NoRel	true	agravado	participaba
+Relation	T17	T14	NoRel	true	agravado	nombrado
+Relation	T17	T18	NoRel	true	agravado	presencia
+Relation	T17	T22	NoRel	true	agravado	detener
+Relation	T17	T7	NoRel	true	agravado	declaró
+Relation	T17	T8	NoRel	true	agravado	luto
+Relation	T17	T9	NoRel	true	agravado	costeó
+Relation	T18	T10	NoRel	true	presencia	funerales
+Relation	T18	T12	NoRel	true	presencia	participaba
+Relation	T18	T14	NoRel	true	presencia	nombrado
+Relation	T18	T2	NoRel	true	presencia	ocurrido
+Relation	T18	T21	NoRel	true	presencia	error
+Relation	T18	T3	NoRel	true	presencia	muertos
+Relation	T19	T0	NoRel	true	consideró	sucesos
+Relation	T19	T10	NoRel	true	consideró	funerales
+Relation	T19	T17	NoRel	true	consideró	agravado
+Relation	T19	T2	NoRel	true	consideró	ocurrido
+Relation	T19	T20	NoRel	true	consideró	cometido
+Relation	T19	T21	NoRel	true	consideró	error
+Relation	T19	T22	NoRel	true	consideró	detener
+Relation	T19	T24	NoRel	true	consideró	evacuado
+Relation	T19	T3	NoRel	true	consideró	muertos
+Relation	T19	T4	NoRel	true	consideró	incendio
+Relation	T19	T6	NoRel	true	consideró	víctimas
+Relation	T2	T11	NoRel	true	ocurrido	falleció
+Relation	T2	T15	NoRel	true	ocurrido	determinaron
+Relation	T2	T17	NoRel	true	ocurrido	agravado
+Relation	T2	T23	NoRel	true	ocurrido	continuado
+Relation	T2	T3	NoRel	true	ocurrido	muertos
+Relation	T20	T0	NoRel	true	cometido	sucesos
+Relation	T20	T1	NoRel	true	cometido	accidente
+Relation	T20	T10	NoRel	true	cometido	funerales
+Relation	T20	T12	NoRel	true	cometido	participaba
+Relation	T20	T15	NoRel	true	cometido	determinaron
+Relation	T20	T16	NoRel	true	cometido	accidente
+Relation	T20	T19	NoRel	true	cometido	consideró
+Relation	T20	T3	NoRel	true	cometido	muertos
+Relation	T20	T6	NoRel	true	cometido	víctimas
+Relation	T21	T10	NoRel	true	error	funerales
+Relation	T21	T11	NoRel	true	error	falleció
+Relation	T21	T14	NoRel	true	error	nombrado
+Relation	T21	T16	NoRel	true	error	accidente
+Relation	T21	T17	NoRel	true	error	agravado
+Relation	T21	T18	NoRel	true	error	presencia
+Relation	T21	T20	NoRel	true	error	cometido
+Relation	T21	T23	NoRel	true	error	continuado
+Relation	T21	T3	NoRel	true	error	muertos
+Relation	T21	T4	NoRel	true	error	incendio
+Relation	T21	T9	NoRel	true	error	costeó
+Relation	T22	T10	NoRel	true	detener	funerales
+Relation	T22	T2	NoRel	true	detener	ocurrido
+Relation	T22	T23	NoRel	true	detener	continuado
+Relation	T22	T4	NoRel	true	detener	incendio
+Relation	T22	T5	NoRel	true	detener	fallo
+Relation	T22	T8	NoRel	true	detener	luto
+Relation	T23	T0	NoRel	true	continuado	sucesos
+Relation	T23	T18	NoRel	true	continuado	presencia
+Relation	T23	T2	NoRel	true	continuado	ocurrido
+Relation	T23	T21	NoRel	true	continuado	error
+Relation	T23	T24	NoRel	true	continuado	evacuado
+Relation	T23	T7	NoRel	true	continuado	declaró
+Relation	T23	T8	NoRel	true	continuado	luto
+Relation	T23	T9	NoRel	true	continuado	costeó
+Relation	T24	T0	NoRel	true	evacuado	sucesos
+Relation	T24	T12	NoRel	true	evacuado	participaba
+Relation	T24	T14	NoRel	true	evacuado	nombrado
+Relation	T24	T16	NoRel	true	evacuado	accidente
+Relation	T24	T18	NoRel	true	evacuado	presencia
+Relation	T24	T19	NoRel	true	evacuado	consideró
+Relation	T24	T2	NoRel	true	evacuado	ocurrido
+Relation	T24	T21	NoRel	true	evacuado	error
+Relation	T24	T4	NoRel	true	evacuado	incendio
+Relation	T24	T8	NoRel	true	evacuado	luto
+Relation	T24	T9	NoRel	true	evacuado	costeó
+Relation	T3	T0	NoRel	true	muertos	sucesos
+Relation	T3	T10	NoRel	true	muertos	funerales
+Relation	T3	T13	NoRel	true	muertos	rescate
+Relation	T3	T15	NoRel	true	muertos	determinaron
+Relation	T3	T18	NoRel	true	muertos	presencia
+Relation	T3	T19	NoRel	true	muertos	consideró
+Relation	T3	T6	NoRel	true	muertos	víctimas
+Relation	T4	T1	NoRel	true	incendio	accidente
+Relation	T4	T11	NoRel	true	incendio	falleció
+Relation	T4	T16	NoRel	true	incendio	accidente
+Relation	T4	T18	NoRel	true	incendio	presencia
+Relation	T4	T20	NoRel	true	incendio	cometido
+Relation	T4	T23	NoRel	true	incendio	continuado
+Relation	T4	T24	NoRel	true	incendio	evacuado
+Relation	T4	T7	NoRel	true	incendio	declaró
+Relation	T5	T10	NoRel	true	fallo	funerales
+Relation	T5	T11	NoRel	true	fallo	falleció
+Relation	T5	T13	NoRel	true	fallo	rescate
+Relation	T5	T14	NoRel	true	fallo	nombrado
+Relation	T5	T15	NoRel	true	fallo	determinaron
+Relation	T5	T17	NoRel	true	fallo	agravado
+Relation	T5	T18	NoRel	true	fallo	presencia
+Relation	T5	T2	NoRel	true	fallo	ocurrido
+Relation	T5	T20	NoRel	true	fallo	cometido
+Relation	T5	T21	NoRel	true	fallo	error
+Relation	T5	T24	NoRel	true	fallo	evacuado
+Relation	T5	T6	NoRel	true	fallo	víctimas
+Relation	T5	T7	NoRel	true	fallo	declaró
+Relation	T6	T0	NoRel	true	víctimas	sucesos
+Relation	T6	T10	NoRel	true	víctimas	funerales
+Relation	T6	T17	NoRel	true	víctimas	agravado
+Relation	T6	T19	NoRel	true	víctimas	consideró
+Relation	T6	T23	NoRel	true	víctimas	continuado
+Relation	T6	T5	NoRel	true	víctimas	fallo
+Relation	T6	T8	NoRel	true	víctimas	luto
+Relation	T7	T12	NoRel	true	declaró	participaba
+Relation	T7	T16	NoRel	true	declaró	accidente
+Relation	T7	T2	NoRel	true	declaró	ocurrido
+Relation	T7	T22	NoRel	true	declaró	detener
+Relation	T7	T4	NoRel	true	declaró	incendio
+Relation	T7	T6	NoRel	true	declaró	víctimas
+Relation	T8	T12	NoRel	true	luto	participaba
+Relation	T8	T15	NoRel	true	luto	determinaron
+Relation	T8	T17	NoRel	true	luto	agravado
+Relation	T8	T19	NoRel	true	luto	consideró
+Relation	T8	T4	NoRel	true	luto	incendio
+Relation	T9	T1	NoRel	true	costeó	accidente
+Relation	T9	T10	NoRel	true	costeó	funerales
+Relation	T9	T11	NoRel	true	costeó	falleció
+Relation	T9	T12	NoRel	true	costeó	participaba
+Relation	T9	T14	NoRel	true	costeó	nombrado
+Relation	T9	T17	NoRel	true	costeó	agravado
+Relation	T9	T23	NoRel	true	costeó	continuado
+Relation	T9	T3	NoRel	true	costeó	muertos
+Relation	T9	T7	NoRel	true	costeó	declaró

@@ -1,0 +1,109 @@
+Text	En algunas zonas del norte de la Florida , grabó más de 20 pulgadas ( 510 mm ) de precipitación .	Las bandas nubosas de Debby resultaron en una oleada de tornados , con un total de 21 tornados generados por el 25 de junio .	Una persona murió por un tornado en el Condado de Highlands , Fl .	En Alabama , se había reportado un hombre desaparecido y más tarde fue confirmado muerto después de ser barridos por una ola y ahogarse posteriormente .	A partir del 30 de junio , Debby fue responsable de nueve muertos ( dos de ellos indirectos ) , aunque se desconoce el total de daños .
+Event	T0	grabó	EVENT	43
+Event	T1	precipitación	EVENT	82
+Event	T2	resultaron	EVENT	126
+Event	T3	oleada	EVENT	144
+Event	T4	tornados	EVENT	154
+Event	T5	generados	EVENT	193
+Event	T6	murió	EVENT	236
+Event	T7	tornado	EVENT	249
+Event	T8	reportado	EVENT	313
+Event	T9	desaparecido	EVENT	333
+Event	T10	muerto	EVENT	373
+Event	T11	barridos	EVENT	395
+Event	T12	ola	EVENT	412
+Event	T13	ahogarse	EVENT	418
+Event	T14	muertos	EVENT	502
+Event	T15	daños	EVENT	572
+Event	T16	Debby	EVENT	471
+Relation	T7	T6	CauseEffect	true	tornado	murió
+Relation	T6	T7	EffectCause	true	murió	tornado
+Relation	T11	T13	CauseEffect	true	barridos	ahogarse
+Relation	T13	T11	EffectCause	true	ahogarse	barridos
+Relation	T16	T14	CauseEffect	true	Debby	muertos
+Relation	T14	T16	EffectCause	true	muertos	Debby
+Relation	T0	T11	NoRel	true	grabó	barridos
+Relation	T0	T12	NoRel	true	grabó	ola
+Relation	T0	T2	NoRel	true	grabó	resultaron
+Relation	T0	T3	NoRel	true	grabó	oleada
+Relation	T0	T8	NoRel	true	grabó	reportado
+Relation	T1	T11	NoRel	true	precipitación	barridos
+Relation	T1	T12	NoRel	true	precipitación	ola
+Relation	T1	T4	NoRel	true	precipitación	tornados
+Relation	T1	T6	NoRel	true	precipitación	murió
+Relation	T1	T8	NoRel	true	precipitación	reportado
+Relation	T10	T1	NoRel	true	muerto	precipitación
+Relation	T10	T11	NoRel	true	muerto	barridos
+Relation	T10	T12	NoRel	true	muerto	ola
+Relation	T10	T13	NoRel	true	muerto	ahogarse
+Relation	T10	T14	NoRel	true	muerto	muertos
+Relation	T10	T15	NoRel	true	muerto	daños
+Relation	T10	T16	NoRel	true	muerto	Debby
+Relation	T11	T10	NoRel	true	barridos	muerto
+Relation	T11	T15	NoRel	true	barridos	daños
+Relation	T11	T2	NoRel	true	barridos	resultaron
+Relation	T11	T4	NoRel	true	barridos	tornados
+Relation	T11	T6	NoRel	true	barridos	murió
+Relation	T11	T7	NoRel	true	barridos	tornado
+Relation	T12	T11	NoRel	true	ola	barridos
+Relation	T12	T14	NoRel	true	ola	muertos
+Relation	T12	T16	NoRel	true	ola	Debby
+Relation	T12	T5	NoRel	true	ola	generados
+Relation	T12	T7	NoRel	true	ola	tornado
+Relation	T12	T9	NoRel	true	ola	desaparecido
+Relation	T13	T0	NoRel	true	ahogarse	grabó
+Relation	T13	T16	NoRel	true	ahogarse	Debby
+Relation	T13	T2	NoRel	true	ahogarse	resultaron
+Relation	T13	T8	NoRel	true	ahogarse	reportado
+Relation	T14	T11	NoRel	true	muertos	barridos
+Relation	T14	T7	NoRel	true	muertos	tornado
+Relation	T14	T8	NoRel	true	muertos	reportado
+Relation	T15	T1	NoRel	true	daños	precipitación
+Relation	T15	T14	NoRel	true	daños	muertos
+Relation	T15	T4	NoRel	true	daños	tornados
+Relation	T15	T9	NoRel	true	daños	desaparecido
+Relation	T16	T0	NoRel	true	Debby	grabó
+Relation	T16	T11	NoRel	true	Debby	barridos
+Relation	T16	T2	NoRel	true	Debby	resultaron
+Relation	T16	T5	NoRel	true	Debby	generados
+Relation	T16	T6	NoRel	true	Debby	murió
+Relation	T16	T8	NoRel	true	Debby	reportado
+Relation	T2	T1	NoRel	true	resultaron	precipitación
+Relation	T2	T15	NoRel	true	resultaron	daños
+Relation	T2	T3	NoRel	true	resultaron	oleada
+Relation	T3	T11	NoRel	true	oleada	barridos
+Relation	T3	T13	NoRel	true	oleada	ahogarse
+Relation	T3	T2	NoRel	true	oleada	resultaron
+Relation	T3	T7	NoRel	true	oleada	tornado
+Relation	T3	T8	NoRel	true	oleada	reportado
+Relation	T4	T11	NoRel	true	tornados	barridos
+Relation	T4	T13	NoRel	true	tornados	ahogarse
+Relation	T4	T16	NoRel	true	tornados	Debby
+Relation	T4	T2	NoRel	true	tornados	resultaron
+Relation	T4	T5	NoRel	true	tornados	generados
+Relation	T5	T1	NoRel	true	generados	precipitación
+Relation	T5	T11	NoRel	true	generados	barridos
+Relation	T5	T12	NoRel	true	generados	ola
+Relation	T5	T16	NoRel	true	generados	Debby
+Relation	T5	T3	NoRel	true	generados	oleada
+Relation	T5	T6	NoRel	true	generados	murió
+Relation	T5	T8	NoRel	true	generados	reportado
+Relation	T6	T10	NoRel	true	murió	muerto
+Relation	T6	T11	NoRel	true	murió	barridos
+Relation	T6	T14	NoRel	true	murió	muertos
+Relation	T6	T16	NoRel	true	murió	Debby
+Relation	T6	T3	NoRel	true	murió	oleada
+Relation	T7	T1	NoRel	true	tornado	precipitación
+Relation	T7	T10	NoRel	true	tornado	muerto
+Relation	T7	T13	NoRel	true	tornado	ahogarse
+Relation	T7	T14	NoRel	true	tornado	muertos
+Relation	T7	T15	NoRel	true	tornado	daños
+Relation	T7	T2	NoRel	true	tornado	resultaron
+Relation	T8	T10	NoRel	true	reportado	muerto
+Relation	T8	T11	NoRel	true	reportado	barridos
+Relation	T8	T14	NoRel	true	reportado	muertos
+Relation	T8	T6	NoRel	true	reportado	murió
+Relation	T9	T16	NoRel	true	desaparecido	Debby
+Relation	T9	T3	NoRel	true	desaparecido	oleada
+Relation	T9	T4	NoRel	true	desaparecido	tornados
+Relation	T9	T5	NoRel	true	desaparecido	generados

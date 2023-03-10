@@ -1,0 +1,78 @@
+Text	Como consecuencia de la colisión se producen cerca de trescientos heridos , aunque solamente cinco de gravedad .	- 12 DE SEPTIEMBRE : Seis muertos , - dos de ellos de nacionalidad española - y varias decenas de heridos es el resultado de la colisión entre tres trenes ocurrida en la estación de Caxarias ( Línea del Norte ) .	- 20 DE NOVIEMBRE : Un locomotora de maniobras que escapó sin conductor de la estación de Torre das Vargens colisionó frontalmente a tres kilómetros de dicha estación con el tren rápido Lisboa_-_Madrid .	A consecuencia del accidente resultaron heridas levemente ocho personas .	- 1982_____-___16 DE FEBRERO : Cuatro heridos es el balance del choque de dos trenes ocurrido entre las estaciones de Mealhada y Pampilhosa , línea del Norte
+Event	T0	colisión	EVENT	24
+Event	T1	producen	EVENT	36
+Event	T2	heridos	EVENT	66
+Event	T3	muertos	EVENT	139
+Event	T4	heridos	EVENT	211
+Event	T5	resultado	EVENT	225
+Event	T6	colisión	EVENT	241
+Event	T7	ocurrida	EVENT	268
+Event	T8	maniobras	EVENT	363
+Event	T9	colisionó	EVENT	434
+Event	T10	balance	EVENT	656
+Event	T11	choque	EVENT	668
+Event	T12	ocurrido	EVENT	689
+Relation	T6	T4	CauseEffect	true	colisión	heridos
+Relation	T4	T6	EffectCause	true	heridos	colisión
+Relation	T6	T3	CauseEffect	true	colisión	muertos
+Relation	T3	T6	EffectCause	true	muertos	colisión
+Relation	T0	T2	CauseEffect	true	colisión	heridos
+Relation	T2	T0	EffectCause	true	heridos	colisión
+Relation	T0	T1	NoRel	true	colisión	producen
+Relation	T0	T10	NoRel	true	colisión	balance
+Relation	T0	T11	NoRel	true	colisión	choque
+Relation	T0	T12	NoRel	true	colisión	ocurrido
+Relation	T0	T5	NoRel	true	colisión	resultado
+Relation	T0	T6	NoRel	true	colisión	colisión
+Relation	T0	T9	NoRel	true	colisión	colisionó
+Relation	T1	T11	NoRel	true	producen	choque
+Relation	T1	T4	NoRel	true	producen	heridos
+Relation	T1	T5	NoRel	true	producen	resultado
+Relation	T1	T6	NoRel	true	producen	colisión
+Relation	T1	T9	NoRel	true	producen	colisionó
+Relation	T10	T5	NoRel	true	balance	resultado
+Relation	T10	T7	NoRel	true	balance	ocurrida
+Relation	T10	T8	NoRel	true	balance	maniobras
+Relation	T11	T1	NoRel	true	choque	producen
+Relation	T11	T10	NoRel	true	choque	balance
+Relation	T11	T4	NoRel	true	choque	heridos
+Relation	T11	T5	NoRel	true	choque	resultado
+Relation	T11	T6	NoRel	true	choque	colisión
+Relation	T12	T1	NoRel	true	ocurrido	producen
+Relation	T12	T5	NoRel	true	ocurrido	resultado
+Relation	T12	T6	NoRel	true	ocurrido	colisión
+Relation	T2	T6	NoRel	true	heridos	colisión
+Relation	T3	T0	NoRel	true	muertos	colisión
+Relation	T3	T2	NoRel	true	muertos	heridos
+Relation	T3	T9	NoRel	true	muertos	colisionó
+Relation	T4	T10	NoRel	true	heridos	balance
+Relation	T4	T12	NoRel	true	heridos	ocurrido
+Relation	T4	T8	NoRel	true	heridos	maniobras
+Relation	T5	T12	NoRel	true	resultado	ocurrido
+Relation	T5	T2	NoRel	true	resultado	heridos
+Relation	T5	T6	NoRel	true	resultado	colisión
+Relation	T5	T7	NoRel	true	resultado	ocurrida
+Relation	T5	T9	NoRel	true	resultado	colisionó
+Relation	T6	T10	NoRel	true	colisión	balance
+Relation	T6	T2	NoRel	true	colisión	heridos
+Relation	T6	T5	NoRel	true	colisión	resultado
+Relation	T6	T7	NoRel	true	colisión	ocurrida
+Relation	T6	T8	NoRel	true	colisión	maniobras
+Relation	T6	T9	NoRel	true	colisión	colisionó
+Relation	T7	T0	NoRel	true	ocurrida	colisión
+Relation	T7	T1	NoRel	true	ocurrida	producen
+Relation	T7	T12	NoRel	true	ocurrida	ocurrido
+Relation	T7	T2	NoRel	true	ocurrida	heridos
+Relation	T7	T3	NoRel	true	ocurrida	muertos
+Relation	T7	T5	NoRel	true	ocurrida	resultado
+Relation	T8	T12	NoRel	true	maniobras	ocurrido
+Relation	T8	T2	NoRel	true	maniobras	heridos
+Relation	T8	T3	NoRel	true	maniobras	muertos
+Relation	T8	T5	NoRel	true	maniobras	resultado
+Relation	T8	T7	NoRel	true	maniobras	ocurrida
+Relation	T9	T0	NoRel	true	colisionó	colisión
+Relation	T9	T1	NoRel	true	colisionó	producen
+Relation	T9	T10	NoRel	true	colisionó	balance
+Relation	T9	T12	NoRel	true	colisionó	ocurrido
+Relation	T9	T7	NoRel	true	colisionó	ocurrida
+Relation	T9	T8	NoRel	true	colisionó	maniobras

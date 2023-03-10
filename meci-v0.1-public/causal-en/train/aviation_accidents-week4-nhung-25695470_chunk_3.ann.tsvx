@@ -1,0 +1,81 @@
+Text	While stopped for refueling at the Orlando Jetport at McCoy , the civilian commercial air terminal at McCoy Air Force Base , the joint civil - military airfield in Orlando , the FBI shot out two of the airplane 's four main tires , prompting the hijackers to shoot co-pilot Harold Johnson in the arm and force pilot William Haas to take off .	The hijacking finally came to an end when the plane landed once again in Havana on Saturday , the 11th , after traveling for some 30 hours and .	Multiple sources alleged the runway was covered in foam at the time of the landing , a claim the plane ’s co-pilot has denied .	The hijackers were removed from the airplane at gunpoint by Cuban authorities and captured after attempting to escape .	The hijackers served eight years in a Cuban prison before returning to the US to serve additional 20 – 25 year prison sentences .
+Event	T0	stopped	EVENT	6
+Event	T1	refueling	EVENT	18
+Event	T2	prompting	EVENT	232
+Event	T3	shoot	EVENT	259
+Event	T4	force	EVENT	304
+Event	T5	hijacking	EVENT	347
+Event	T6	landed	EVENT	395
+Event	T7	traveling	EVENT	454
+Event	T8	alleged	EVENT	505
+Event	T9	covered	EVENT	528
+Event	T10	landing	EVENT	563
+Event	T11	claim	EVENT	575
+Event	T12	denied	EVENT	607
+Event	T13	removed	EVENT	635
+Event	T14	captured	EVENT	698
+Event	T15	attempting	EVENT	713
+Event	T16	escape	EVENT	727
+Event	T17	served	EVENT	750
+Event	T18	serve	EVENT	817
+Event	T19	sentences	EVENT	854
+Event	T20	shot	EVENT	182
+Event	T21	take off	EVENT	332
+Event	T22	came to an end	EVENT	365
+Event	T23	returning	EVENT	794
+Relation	T0	T1	CauseEffect	true	stopped	refueling
+Relation	T1	T0	EffectCause	true	refueling	stopped
+Relation	T20	T3	CauseEffect	true	shot	shoot
+Relation	T3	T20	EffectCause	true	shoot	shot
+Relation	T20	T4	CauseEffect	true	shot	force
+Relation	T4	T20	EffectCause	true	force	shot
+Relation	T15	T14	CauseEffect	true	attempting	captured
+Relation	T14	T15	EffectCause	true	captured	attempting
+Relation	T0	T11	NoRel	true	stopped	claim
+Relation	T0	T14	NoRel	true	stopped	captured
+Relation	T0	T20	NoRel	true	stopped	shot
+Relation	T1	T13	NoRel	true	refueling	removed
+Relation	T1	T3	NoRel	true	refueling	shoot
+Relation	T1	T5	NoRel	true	refueling	hijacking
+Relation	T1	T9	NoRel	true	refueling	covered
+Relation	T10	T0	NoRel	true	landing	stopped
+Relation	T10	T15	NoRel	true	landing	attempting
+Relation	T10	T5	NoRel	true	landing	hijacking
+Relation	T11	T3	NoRel	true	claim	shoot
+Relation	T12	T3	NoRel	true	denied	shoot
+Relation	T13	T14	NoRel	true	removed	captured
+Relation	T13	T17	NoRel	true	removed	served
+Relation	T13	T4	NoRel	true	removed	force
+Relation	T13	T6	NoRel	true	removed	landed
+Relation	T14	T17	NoRel	true	captured	served
+Relation	T14	T9	NoRel	true	captured	covered
+Relation	T15	T22	NoRel	true	attempting	came to an end
+Relation	T15	T8	NoRel	true	attempting	alleged
+Relation	T15	T9	NoRel	true	attempting	covered
+Relation	T16	T14	NoRel	true	escape	captured
+Relation	T16	T5	NoRel	true	escape	hijacking
+Relation	T17	T11	NoRel	true	served	claim
+Relation	T17	T19	NoRel	true	served	sentences
+Relation	T18	T14	NoRel	true	serve	captured
+Relation	T18	T6	NoRel	true	serve	landed
+Relation	T19	T6	NoRel	true	sentences	landed
+Relation	T20	T14	NoRel	true	shot	captured
+Relation	T20	T15	NoRel	true	shot	attempting
+Relation	T20	T6	NoRel	true	shot	landed
+Relation	T21	T5	NoRel	true	take off	hijacking
+Relation	T22	T5	NoRel	true	came to an end	hijacking
+Relation	T23	T10	NoRel	true	returning	landing
+Relation	T23	T5	NoRel	true	returning	hijacking
+Relation	T23	T7	NoRel	true	returning	traveling
+Relation	T4	T1	NoRel	true	force	refueling
+Relation	T4	T10	NoRel	true	force	landing
+Relation	T4	T12	NoRel	true	force	denied
+Relation	T4	T23	NoRel	true	force	returning
+Relation	T5	T18	NoRel	true	hijacking	serve
+Relation	T5	T23	NoRel	true	hijacking	returning
+Relation	T7	T14	NoRel	true	traveling	captured
+Relation	T7	T15	NoRel	true	traveling	attempting
+Relation	T7	T21	NoRel	true	traveling	take off
+Relation	T8	T11	NoRel	true	alleged	claim
+Relation	T8	T23	NoRel	true	alleged	returning
+Relation	T9	T23	NoRel	true	covered	returning

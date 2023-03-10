@@ -1,0 +1,29 @@
+Text	10: 51: 13 — عملے کو اڑان کے لیے کلیئرنس مل جاتی ہے -	-	10: 52: 34 — کنٹرول ٹاور عملے کو تائی ‌پے ڈیپارچر سے رابطے کا کہتا ہے -	10: 52: 38 — دائیں انجن کے بند ہونے کا الرٹ ، وارننگ 3 سیکنڈز جاری رہی -	10: 53: 04 — عملے نے بائیں انجن پر پاور کم کردی -
+Event	T0	کہتا	EVENT	118
+Event	T2	الرٹ	EVENT	167
+Event	T4	اڑان	EVENT	21
+Event	T5	کلیئرنس	EVENT	33
+Event	T6	رابطے	EVENT	109
+Event	T7	بند	EVENT	155
+Event	T1	کم	EVENT	241
+Relation	T7	T2	CauseEffect	true	بند	الرٹ
+Relation	T2	T7	EffectCause	true	الرٹ	بند
+Relation	T2	T1	CauseEffect	true	الرٹ	کم
+Relation	T1	T2	EffectCause	true	کم	الرٹ
+Relation	T5	T4	CauseEffect	true	کلیئرنس	اڑان
+Relation	T4	T5	EffectCause	true	اڑان	کلیئرنس
+Relation	T0	T1	NoRel	true	کہتا	کم
+Relation	T0	T5	NoRel	true	کہتا	کلیئرنس
+Relation	T0	T6	NoRel	true	کہتا	رابطے
+Relation	T1	T0	NoRel	true	کم	کہتا
+Relation	T1	T6	NoRel	true	کم	رابطے
+Relation	T2	T0	NoRel	true	الرٹ	کہتا
+Relation	T2	T4	NoRel	true	الرٹ	اڑان
+Relation	T4	T0	NoRel	true	اڑان	کہتا
+Relation	T4	T1	NoRel	true	اڑان	کم
+Relation	T4	T6	NoRel	true	اڑان	رابطے
+Relation	T5	T1	NoRel	true	کلیئرنس	کم
+Relation	T6	T4	NoRel	true	رابطے	اڑان
+Relation	T6	T5	NoRel	true	رابطے	کلیئرنس
+Relation	T7	T1	NoRel	true	بند	کم
+Relation	T7	T5	NoRel	true	بند	کلیئرنس

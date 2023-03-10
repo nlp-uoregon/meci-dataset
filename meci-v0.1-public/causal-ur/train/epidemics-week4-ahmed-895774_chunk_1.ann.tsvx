@@ -1,0 +1,91 @@
+Text	اب تک دہلی ، ہریانہ ، کرناٹک ، مہاراشٹر اور اتر پردیش ، میں اس بیماری کا اثر زیادہ دیکھنے کو ملا ہے جس کی بنا پر وبائی بیماریوں کا ایکٹ ، 1897ء نافذ کر دیا گیا ہے ۔	کئی تعلیمی ادارے بند ہو چکے ہیں ۔	کھیل ، ثقافتی اور تعلیمی تقریبات موخر کی جا چکی ہیں ۔	نیز بھارت نے فی الحال تمام بیرونی زائرین کی آمد پر پابندی لگا دی ہے کیونکہ کورونا کے زیادہ تر مریض باہر سے آئے ہیں ۔	وزارت برائے خارجی امور کی اطلاع کے مطابق 18 ماترچ تک بیرون ملک 276 بھارتی کورونا سے متاثر ہوئے ہیں جن میں ایران میں 225 ہیں اور باقی متحدہ عرب امارات ، اطالیہ ، کویت ، سری لنکا ، رواندہ اور ہانگ کانگ میں ہیں ۔
+Event	T0	بیماری	EVENT	63
+Event	T1	اثر	EVENT	73
+Event	T2	دیکھنے	EVENT	83
+Event	T3	ملا	EVENT	93
+Event	T4	بند	EVENT	182
+Event	T5	آمد	EVENT	297
+Event	T6	آئے	EVENT	360
+Event	T7	اطلاع	EVENT	396
+Event	T9	ایکٹ	EVENT	131
+Event	T10	نافذ	EVENT	144
+Event	T11	بیماریوں	EVENT	119
+Event	T12	موخر	EVENT	232
+Event	T13	تقریبات	EVENT	224
+Event	T14	پابندی	EVENT	304
+Event	T15	متاثر	EVENT	454
+Relation	T1	T10	CauseEffect	true	اثر	نافذ
+Relation	T10	T1	EffectCause	true	نافذ	اثر
+Relation	T0	T4	CauseEffect	true	بیماری	بند
+Relation	T4	T0	EffectCause	true	بند	بیماری
+Relation	T0	T12	CauseEffect	true	بیماری	موخر
+Relation	T12	T0	EffectCause	true	موخر	بیماری
+Relation	T6	T14	CauseEffect	true	آئے	پابندی
+Relation	T14	T6	EffectCause	true	پابندی	آئے
+Relation	T15	T7	CauseEffect	true	متاثر	اطلاع
+Relation	T7	T15	EffectCause	true	اطلاع	متاثر
+Relation	T0	T6	NoRel	true	بیماری	آئے
+Relation	T0	T9	NoRel	true	بیماری	ایکٹ
+Relation	T1	T0	NoRel	true	اثر	بیماری
+Relation	T1	T2	NoRel	true	اثر	دیکھنے
+Relation	T1	T3	NoRel	true	اثر	ملا
+Relation	T1	T5	NoRel	true	اثر	آمد
+Relation	T10	T0	NoRel	true	نافذ	بیماری
+Relation	T10	T13	NoRel	true	نافذ	تقریبات
+Relation	T10	T7	NoRel	true	نافذ	اطلاع
+Relation	T11	T0	NoRel	true	بیماریوں	بیماری
+Relation	T11	T13	NoRel	true	بیماریوں	تقریبات
+Relation	T11	T14	NoRel	true	بیماریوں	پابندی
+Relation	T11	T5	NoRel	true	بیماریوں	آمد
+Relation	T12	T1	NoRel	true	موخر	اثر
+Relation	T12	T15	NoRel	true	موخر	متاثر
+Relation	T12	T3	NoRel	true	موخر	ملا
+Relation	T12	T5	NoRel	true	موخر	آمد
+Relation	T12	T6	NoRel	true	موخر	آئے
+Relation	T12	T7	NoRel	true	موخر	اطلاع
+Relation	T12	T9	NoRel	true	موخر	ایکٹ
+Relation	T13	T1	NoRel	true	تقریبات	اثر
+Relation	T13	T11	NoRel	true	تقریبات	بیماریوں
+Relation	T13	T14	NoRel	true	تقریبات	پابندی
+Relation	T13	T3	NoRel	true	تقریبات	ملا
+Relation	T13	T4	NoRel	true	تقریبات	بند
+Relation	T13	T7	NoRel	true	تقریبات	اطلاع
+Relation	T14	T1	NoRel	true	پابندی	اثر
+Relation	T14	T10	NoRel	true	پابندی	نافذ
+Relation	T14	T15	NoRel	true	پابندی	متاثر
+Relation	T14	T2	NoRel	true	پابندی	دیکھنے
+Relation	T14	T4	NoRel	true	پابندی	بند
+Relation	T14	T5	NoRel	true	پابندی	آمد
+Relation	T15	T0	NoRel	true	متاثر	بیماری
+Relation	T15	T1	NoRel	true	متاثر	اثر
+Relation	T15	T10	NoRel	true	متاثر	نافذ
+Relation	T15	T2	NoRel	true	متاثر	دیکھنے
+Relation	T15	T4	NoRel	true	متاثر	بند
+Relation	T2	T13	NoRel	true	دیکھنے	تقریبات
+Relation	T3	T1	NoRel	true	ملا	اثر
+Relation	T3	T10	NoRel	true	ملا	نافذ
+Relation	T3	T2	NoRel	true	ملا	دیکھنے
+Relation	T3	T9	NoRel	true	ملا	ایکٹ
+Relation	T4	T11	NoRel	true	بند	بیماریوں
+Relation	T4	T12	NoRel	true	بند	موخر
+Relation	T4	T13	NoRel	true	بند	تقریبات
+Relation	T4	T6	NoRel	true	بند	آئے
+Relation	T5	T0	NoRel	true	آمد	بیماری
+Relation	T5	T11	NoRel	true	آمد	بیماریوں
+Relation	T5	T15	NoRel	true	آمد	متاثر
+Relation	T5	T4	NoRel	true	آمد	بند
+Relation	T5	T6	NoRel	true	آمد	آئے
+Relation	T5	T7	NoRel	true	آمد	اطلاع
+Relation	T6	T0	NoRel	true	آئے	بیماری
+Relation	T6	T13	NoRel	true	آئے	تقریبات
+Relation	T6	T15	NoRel	true	آئے	متاثر
+Relation	T6	T2	NoRel	true	آئے	دیکھنے
+Relation	T6	T7	NoRel	true	آئے	اطلاع
+Relation	T7	T11	NoRel	true	اطلاع	بیماریوں
+Relation	T7	T14	NoRel	true	اطلاع	پابندی
+Relation	T7	T3	NoRel	true	اطلاع	ملا
+Relation	T7	T9	NoRel	true	اطلاع	ایکٹ
+Relation	T9	T0	NoRel	true	ایکٹ	بیماری
+Relation	T9	T1	NoRel	true	ایکٹ	اثر
+Relation	T9	T10	NoRel	true	ایکٹ	نافذ
+Relation	T9	T6	NoRel	true	ایکٹ	آئے

@@ -1,0 +1,67 @@
+Text	El DESASTRE DE LEÓPOLIS ocurrió el sábado 27 de julio de 2002 cuando un avión caza Sukhoi Su-27 que realizaba maniobras en una exhibición aérea en Leópolis , Ucrania , se fue a tierra en donde se encontraban los espectadores .	Murieron 77 personas y 543 quedaron heridas .	Es el peor accidente aéreo durante una exhibición acrobática en la historia .	La aeronave , pilotada por dos experimentados pilotos , realizaba maniobras a baja altura y en una de ellas el ala izquierda rozó el suelo .	Milésimas de segundo después , los dos pilotos se eyectaron .
+Event	T0	DESASTRE	EVENT	3
+Event	T1	ocurrió	EVENT	24
+Event	T2	caza	EVENT	78
+Event	T3	maniobras	EVENT	110
+Event	T4	exhibición	EVENT	127
+Event	T5	fue	EVENT	171
+Event	T6	Murieron	EVENT	227
+Event	T7	heridas	EVENT	263
+Event	T8	exhibición	EVENT	312
+Event	T9	pilotada	EVENT	365
+Event	T10	maniobras	EVENT	417
+Event	T11	rozó	EVENT	476
+Event	T12	eyectaron	EVENT	542
+Relation	T5	T6	CauseEffect	true	fue	Murieron
+Relation	T6	T5	EffectCause	true	Murieron	fue
+Relation	T5	T7	CauseEffect	true	fue	heridas
+Relation	T7	T5	EffectCause	true	heridas	fue
+Relation	T0	T10	NoRel	true	DESASTRE	maniobras
+Relation	T0	T2	NoRel	true	DESASTRE	caza
+Relation	T0	T8	NoRel	true	DESASTRE	exhibición
+Relation	T0	T9	NoRel	true	DESASTRE	pilotada
+Relation	T1	T0	NoRel	true	ocurrió	DESASTRE
+Relation	T1	T12	NoRel	true	ocurrió	eyectaron
+Relation	T1	T3	NoRel	true	ocurrió	maniobras
+Relation	T1	T8	NoRel	true	ocurrió	exhibición
+Relation	T10	T1	NoRel	true	maniobras	ocurrió
+Relation	T10	T11	NoRel	true	maniobras	rozó
+Relation	T10	T12	NoRel	true	maniobras	eyectaron
+Relation	T10	T2	NoRel	true	maniobras	caza
+Relation	T11	T12	NoRel	true	rozó	eyectaron
+Relation	T11	T3	NoRel	true	rozó	maniobras
+Relation	T11	T4	NoRel	true	rozó	exhibición
+Relation	T11	T5	NoRel	true	rozó	fue
+Relation	T12	T2	NoRel	true	eyectaron	caza
+Relation	T2	T10	NoRel	true	caza	maniobras
+Relation	T2	T3	NoRel	true	caza	maniobras
+Relation	T2	T7	NoRel	true	caza	heridas
+Relation	T3	T1	NoRel	true	maniobras	ocurrió
+Relation	T4	T0	NoRel	true	exhibición	DESASTRE
+Relation	T4	T12	NoRel	true	exhibición	eyectaron
+Relation	T4	T2	NoRel	true	exhibición	caza
+Relation	T4	T5	NoRel	true	exhibición	fue
+Relation	T4	T8	NoRel	true	exhibición	exhibición
+Relation	T5	T10	NoRel	true	fue	maniobras
+Relation	T5	T12	NoRel	true	fue	eyectaron
+Relation	T5	T3	NoRel	true	fue	maniobras
+Relation	T5	T4	NoRel	true	fue	exhibición
+Relation	T5	T8	NoRel	true	fue	exhibición
+Relation	T5	T9	NoRel	true	fue	pilotada
+Relation	T6	T0	NoRel	true	Murieron	DESASTRE
+Relation	T6	T1	NoRel	true	Murieron	ocurrió
+Relation	T6	T10	NoRel	true	Murieron	maniobras
+Relation	T6	T2	NoRel	true	Murieron	caza
+Relation	T6	T3	NoRel	true	Murieron	maniobras
+Relation	T6	T7	NoRel	true	Murieron	heridas
+Relation	T7	T0	NoRel	true	heridas	DESASTRE
+Relation	T7	T1	NoRel	true	heridas	ocurrió
+Relation	T7	T10	NoRel	true	heridas	maniobras
+Relation	T7	T11	NoRel	true	heridas	rozó
+Relation	T7	T12	NoRel	true	heridas	eyectaron
+Relation	T7	T2	NoRel	true	heridas	caza
+Relation	T7	T3	NoRel	true	heridas	maniobras
+Relation	T7	T4	NoRel	true	heridas	exhibición
+Relation	T7	T9	NoRel	true	heridas	pilotada
+Relation	T8	T2	NoRel	true	exhibición	caza
+Relation	T9	T5	NoRel	true	pilotada	fue

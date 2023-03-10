@@ -1,0 +1,137 @@
+Text	El _ United Daily News _ informó de que algunos familiares de pasajeros describían la existencia de este vuelo a Hong Kong como algo « innecesario » .	Afirmaban esto ya que la mayoría de pasajeros pretendían llegar a la China continental , pero debido a la falta de vuelos directos entre Taiwán y China continental , los pasajeros tenían que volar con parada en Hong Kong ; los familiares solicitaron la creación de enlaces directos entre Taiwán y China continental .	El informe final de la investigación mostró que el accidente había sido el resultado de una fatiga del metal causado por un mantenimiento inadecuado tras un incidente previo .	El informe indica que el 7 de febrero de 1980 , el avión durante un vuelo sufrió un golpe de cola mientras aterrizaba en Hong Kong .	Parte de la cola del avión resultó dañada en el incidente .
+Event	T0	informó	EVENT	25
+Event	T1	vuelo	EVENT	105
+Event	T2	volar	EVENT	342
+Event	T3	parada	EVENT	352
+Event	T4	solicitaron	EVENT	389
+Event	T5	creación	EVENT	404
+Event	T6	mostró	EVENT	505
+Event	T7	accidente	EVENT	519
+Event	T8	fatiga	EVENT	560
+Event	T9	causado	EVENT	577
+Event	T10	incidente	EVENT	625
+Event	T11	indica	EVENT	655
+Event	T12	sufrió	EVENT	718
+Event	T13	aterrizaba	EVENT	751
+Event	T14	dañada	EVENT	812
+Event	T15	incidente	EVENT	825
+Event	T16	informe	EVENT	471
+Event	T17	golpe	EVENT	728
+Event	T18	mantenimiento	EVENT	592
+Relation	T8	T7	CauseEffect	true	fatiga	accidente
+Relation	T7	T8	EffectCause	true	accidente	fatiga
+Relation	T7	T16	CauseEffect	true	accidente	informe
+Relation	T16	T7	EffectCause	true	informe	accidente
+Relation	T15	T14	CauseEffect	true	incidente	dañada
+Relation	T14	T15	EffectCause	true	dañada	incidente
+Relation	T10	T8	CauseEffect	true	incidente	fatiga
+Relation	T8	T10	EffectCause	true	fatiga	incidente
+Relation	T0	T15	NoRel	true	informó	incidente
+Relation	T0	T16	NoRel	true	informó	informe
+Relation	T0	T18	NoRel	true	informó	mantenimiento
+Relation	T0	T2	NoRel	true	informó	volar
+Relation	T0	T8	NoRel	true	informó	fatiga
+Relation	T0	T9	NoRel	true	informó	causado
+Relation	T1	T11	NoRel	true	vuelo	indica
+Relation	T1	T12	NoRel	true	vuelo	sufrió
+Relation	T1	T14	NoRel	true	vuelo	dañada
+Relation	T1	T16	NoRel	true	vuelo	informe
+Relation	T1	T2	NoRel	true	vuelo	volar
+Relation	T10	T0	NoRel	true	incidente	informó
+Relation	T10	T17	NoRel	true	incidente	golpe
+Relation	T10	T5	NoRel	true	incidente	creación
+Relation	T10	T6	NoRel	true	incidente	mostró
+Relation	T10	T9	NoRel	true	incidente	causado
+Relation	T11	T10	NoRel	true	indica	incidente
+Relation	T11	T16	NoRel	true	indica	informe
+Relation	T11	T6	NoRel	true	indica	mostró
+Relation	T11	T7	NoRel	true	indica	accidente
+Relation	T11	T9	NoRel	true	indica	causado
+Relation	T12	T0	NoRel	true	sufrió	informó
+Relation	T12	T10	NoRel	true	sufrió	incidente
+Relation	T12	T14	NoRel	true	sufrió	dañada
+Relation	T12	T2	NoRel	true	sufrió	volar
+Relation	T12	T3	NoRel	true	sufrió	parada
+Relation	T12	T5	NoRel	true	sufrió	creación
+Relation	T12	T7	NoRel	true	sufrió	accidente
+Relation	T13	T1	NoRel	true	aterrizaba	vuelo
+Relation	T13	T10	NoRel	true	aterrizaba	incidente
+Relation	T13	T11	NoRel	true	aterrizaba	indica
+Relation	T13	T14	NoRel	true	aterrizaba	dañada
+Relation	T13	T7	NoRel	true	aterrizaba	accidente
+Relation	T14	T13	NoRel	true	dañada	aterrizaba
+Relation	T14	T16	NoRel	true	dañada	informe
+Relation	T14	T17	NoRel	true	dañada	golpe
+Relation	T15	T1	NoRel	true	incidente	vuelo
+Relation	T15	T10	NoRel	true	incidente	incidente
+Relation	T15	T11	NoRel	true	incidente	indica
+Relation	T15	T13	NoRel	true	incidente	aterrizaba
+Relation	T15	T8	NoRel	true	incidente	fatiga
+Relation	T15	T9	NoRel	true	incidente	causado
+Relation	T16	T1	NoRel	true	informe	vuelo
+Relation	T16	T11	NoRel	true	informe	indica
+Relation	T16	T12	NoRel	true	informe	sufrió
+Relation	T16	T13	NoRel	true	informe	aterrizaba
+Relation	T16	T17	NoRel	true	informe	golpe
+Relation	T16	T2	NoRel	true	informe	volar
+Relation	T16	T4	NoRel	true	informe	solicitaron
+Relation	T17	T1	NoRel	true	golpe	vuelo
+Relation	T17	T12	NoRel	true	golpe	sufrió
+Relation	T17	T13	NoRel	true	golpe	aterrizaba
+Relation	T17	T14	NoRel	true	golpe	dañada
+Relation	T17	T2	NoRel	true	golpe	volar
+Relation	T17	T3	NoRel	true	golpe	parada
+Relation	T17	T4	NoRel	true	golpe	solicitaron
+Relation	T17	T6	NoRel	true	golpe	mostró
+Relation	T17	T7	NoRel	true	golpe	accidente
+Relation	T18	T11	NoRel	true	mantenimiento	indica
+Relation	T18	T13	NoRel	true	mantenimiento	aterrizaba
+Relation	T18	T14	NoRel	true	mantenimiento	dañada
+Relation	T18	T15	NoRel	true	mantenimiento	incidente
+Relation	T18	T3	NoRel	true	mantenimiento	parada
+Relation	T18	T4	NoRel	true	mantenimiento	solicitaron
+Relation	T18	T9	NoRel	true	mantenimiento	causado
+Relation	T2	T0	NoRel	true	volar	informó
+Relation	T2	T10	NoRel	true	volar	incidente
+Relation	T2	T14	NoRel	true	volar	dañada
+Relation	T2	T15	NoRel	true	volar	incidente
+Relation	T2	T4	NoRel	true	volar	solicitaron
+Relation	T2	T5	NoRel	true	volar	creación
+Relation	T2	T6	NoRel	true	volar	mostró
+Relation	T2	T7	NoRel	true	volar	accidente
+Relation	T2	T8	NoRel	true	volar	fatiga
+Relation	T3	T10	NoRel	true	parada	incidente
+Relation	T3	T16	NoRel	true	parada	informe
+Relation	T3	T2	NoRel	true	parada	volar
+Relation	T3	T6	NoRel	true	parada	mostró
+Relation	T4	T14	NoRel	true	solicitaron	dañada
+Relation	T4	T17	NoRel	true	solicitaron	golpe
+Relation	T4	T18	NoRel	true	solicitaron	mantenimiento
+Relation	T4	T2	NoRel	true	solicitaron	volar
+Relation	T4	T6	NoRel	true	solicitaron	mostró
+Relation	T4	T7	NoRel	true	solicitaron	accidente
+Relation	T4	T8	NoRel	true	solicitaron	fatiga
+Relation	T5	T0	NoRel	true	creación	informó
+Relation	T5	T10	NoRel	true	creación	incidente
+Relation	T5	T11	NoRel	true	creación	indica
+Relation	T5	T16	NoRel	true	creación	informe
+Relation	T5	T17	NoRel	true	creación	golpe
+Relation	T6	T10	NoRel	true	mostró	incidente
+Relation	T6	T11	NoRel	true	mostró	indica
+Relation	T6	T13	NoRel	true	mostró	aterrizaba
+Relation	T6	T5	NoRel	true	mostró	creación
+Relation	T6	T9	NoRel	true	mostró	causado
+Relation	T7	T3	NoRel	true	accidente	parada
+Relation	T7	T6	NoRel	true	accidente	mostró
+Relation	T7	T9	NoRel	true	accidente	causado
+Relation	T8	T11	NoRel	true	fatiga	indica
+Relation	T8	T12	NoRel	true	fatiga	sufrió
+Relation	T8	T18	NoRel	true	fatiga	mantenimiento
+Relation	T8	T2	NoRel	true	fatiga	volar
+Relation	T8	T6	NoRel	true	fatiga	mostró
+Relation	T9	T10	NoRel	true	causado	incidente
+Relation	T9	T11	NoRel	true	causado	indica
+Relation	T9	T2	NoRel	true	causado	volar
+Relation	T9	T6	NoRel	true	causado	mostró
+Relation	T9	T7	NoRel	true	causado	accidente
+Relation	T9	T8	NoRel	true	causado	fatiga

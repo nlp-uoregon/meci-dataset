@@ -1,0 +1,65 @@
+Text	The _ LUCKY - S_ INCIDENT occurred on January 7 , 1993 , when Turkish Navy vessels , carrying members of the Turkish Narcotic Police , intercepted the MV _ Lucky - S _ , a Turkish ocean freighter in international waters in the Mediterranean Sea .	The ship was suspected of being involved in smuggling illegal drugs into Turkey .	It was the second Turkish anti-drug - smuggling operation on the high seas in three weeks , following the Kısmetim - 1 incident .	cannabis and morphine base were captured on the ship , which was escorted to a Turkish port .	Nejat Daş , who was also found to have organized drug trafficking by the MV _ Kısmetim - 1 _ and was imprisoned , escaped from custody on November 8 , 1994 , as he was brought from Sinop Fortress Prison to the 1st State Security Court in Istanbul for trial over his involvement in the Lucky - S incident .
+Event	T0	occurred	EVENT	26
+Event	T1	carrying	EVENT	85
+Event	T10	found	EVENT	578
+Event	T11	organized	EVENT	592
+Event	T12	trafficking	EVENT	607
+Event	T13	imprisoned	EVENT	654
+Event	T14	escaped	EVENT	667
+Event	T15	custody	EVENT	680
+Event	T16	brought	EVENT	721
+Event	T17	trial	EVENT	804
+Event	T18	involvement	EVENT	819
+Event	T2	intercepted	EVENT	135
+Event	T21	Kısmetim - 1 incident	EVENT	435
+Event	T3	suspected	EVENT	260
+Event	T4	involved	EVENT	279
+Event	T5	smuggling	EVENT	291
+Event	T8	captured	EVENT	491
+Event	T9	escorted	EVENT	524
+Relation	T5	T3	CauseEffect	true	smuggling	suspected
+Relation	T3	T5	EffectCause	true	suspected	smuggling
+Relation	T9	T8	CauseEffect	true	escorted	captured
+Relation	T8	T9	EffectCause	true	captured	escorted
+Relation	T13	T12	CauseEffect	true	imprisoned	trafficking
+Relation	T12	T13	EffectCause	true	trafficking	imprisoned
+Relation	T16	T18	CauseEffect	true	brought	involvement
+Relation	T18	T16	EffectCause	true	involvement	brought
+Relation	T0	T18	NoRel	true	occurred	involvement
+Relation	T1	T0	NoRel	true	carrying	occurred
+Relation	T1	T3	NoRel	true	carrying	suspected
+Relation	T10	T11	NoRel	true	found	organized
+Relation	T10	T13	NoRel	true	found	imprisoned
+Relation	T10	T2	NoRel	true	found	intercepted
+Relation	T10	T5	NoRel	true	found	smuggling
+Relation	T11	T2	NoRel	true	organized	intercepted
+Relation	T12	T14	NoRel	true	trafficking	escaped
+Relation	T12	T3	NoRel	true	trafficking	suspected
+Relation	T13	T21	NoRel	true	imprisoned	Kısmetim - 1 incident
+Relation	T14	T1	NoRel	true	escaped	carrying
+Relation	T14	T10	NoRel	true	escaped	found
+Relation	T14	T9	NoRel	true	escaped	escorted
+Relation	T15	T21	NoRel	true	custody	Kısmetim - 1 incident
+Relation	T15	T5	NoRel	true	custody	smuggling
+Relation	T16	T10	NoRel	true	brought	found
+Relation	T16	T9	NoRel	true	brought	escorted
+Relation	T17	T10	NoRel	true	trial	found
+Relation	T17	T21	NoRel	true	trial	Kısmetim - 1 incident
+Relation	T18	T8	NoRel	true	involvement	captured
+Relation	T2	T18	NoRel	true	intercepted	involvement
+Relation	T21	T14	NoRel	true	Kısmetim - 1 incident	escaped
+Relation	T21	T17	NoRel	true	Kısmetim - 1 incident	trial
+Relation	T21	T3	NoRel	true	Kısmetim - 1 incident	suspected
+Relation	T21	T9	NoRel	true	Kısmetim - 1 incident	escorted
+Relation	T3	T11	NoRel	true	suspected	organized
+Relation	T3	T18	NoRel	true	suspected	involvement
+Relation	T3	T2	NoRel	true	suspected	intercepted
+Relation	T5	T1	NoRel	true	smuggling	carrying
+Relation	T5	T10	NoRel	true	smuggling	found
+Relation	T5	T13	NoRel	true	smuggling	imprisoned
+Relation	T5	T16	NoRel	true	smuggling	brought
+Relation	T5	T21	NoRel	true	smuggling	Kısmetim - 1 incident
+Relation	T8	T1	NoRel	true	captured	carrying
+Relation	T8	T3	NoRel	true	captured	suspected
+Relation	T9	T12	NoRel	true	escorted	trafficking
+Relation	T9	T2	NoRel	true	escorted	intercepted

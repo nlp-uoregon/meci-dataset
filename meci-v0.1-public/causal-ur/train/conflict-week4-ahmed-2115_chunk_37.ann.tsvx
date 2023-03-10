@@ -1,0 +1,138 @@
+Text	افغانستان مسلسل جنگ کا شکار رہا ہے اور اسے معاشی ترقی کی مہلت ہی نہیں ملی ۔	افغانستان کی خاصی آبادی ایران اور پاکستان کو ہجرت کر گئی تھی جن میں سے کچھ اب واپس آنا شروع ہوئے ہیں مگر ہجرت نے ان کی معیشت کو تباہ کر دیا ہے اور نئی پود کو پڑھنے لکھنے اور کوئی ہنر سیکھنے کے مواقع بھی کم ہی ملے ہیں ۔	افغانستان میں جن لوگوں نے ہجرت نہیں بھی کی انھیں جنگ نے مصروف رکھا ۔	مجبوراً اسلحہ کی تجارت ، جنگ بطور سلسلہ روزگار اور افیم و پوست کی تجارت ہی ان کا مقدر بنی ۔	ایک بڑی تعداد سمگلنگ سے بھی وابستہ ہوئی ۔
+Event	T0	جنگ	EVENT	16
+Event	T1	ترقی	EVENT	49
+Event	T2	ہجرت	EVENT	121
+Event	T3	ہجرت	EVENT	181
+Event	T4	تباہ	EVENT	204
+Event	T5	ہجرت	EVENT	321
+Event	T6	جنگ	EVENT	344
+Event	T8	تجارت	EVENT	381
+Event	T9	جنگ	EVENT	389
+Event	T10	تجارت	EVENT	430
+Event	T11	شکار	EVENT	23
+Event	T12	شروع	EVENT	163
+Event	T13	پڑھنے	EVENT	234
+Event	T14	لکھنے	EVENT	240
+Event	T15	سیکھنے	EVENT	259
+Event	T16	ملے	EVENT	285
+Event	T17	مصروف	EVENT	351
+Event	T7	روزگار	EVENT	404
+Event	T18	وابستہ	EVENT	484
+Relation	T3	T4	CauseEffect	true	ہجرت	تباہ
+Relation	T4	T3	EffectCause	true	تباہ	ہجرت
+Relation	T6	T17	CauseEffect	true	جنگ	مصروف
+Relation	T17	T6	EffectCause	true	مصروف	جنگ
+Relation	T6	T8	CauseEffect	true	جنگ	تجارت
+Relation	T8	T6	EffectCause	true	تجارت	جنگ
+Relation	T6	T7	CauseEffect	true	جنگ	روزگار
+Relation	T7	T6	EffectCause	true	روزگار	جنگ
+Relation	T6	T10	CauseEffect	true	جنگ	تجارت
+Relation	T10	T6	EffectCause	true	تجارت	جنگ
+Relation	T0	T13	NoRel	true	جنگ	پڑھنے
+Relation	T0	T18	NoRel	true	جنگ	وابستہ
+Relation	T0	T7	NoRel	true	جنگ	روزگار
+Relation	T1	T0	NoRel	true	ترقی	جنگ
+Relation	T1	T12	NoRel	true	ترقی	شروع
+Relation	T1	T13	NoRel	true	ترقی	پڑھنے
+Relation	T1	T14	NoRel	true	ترقی	لکھنے
+Relation	T1	T15	NoRel	true	ترقی	سیکھنے
+Relation	T1	T17	NoRel	true	ترقی	مصروف
+Relation	T1	T18	NoRel	true	ترقی	وابستہ
+Relation	T1	T2	NoRel	true	ترقی	ہجرت
+Relation	T1	T3	NoRel	true	ترقی	ہجرت
+Relation	T1	T4	NoRel	true	ترقی	تباہ
+Relation	T10	T0	NoRel	true	تجارت	جنگ
+Relation	T10	T1	NoRel	true	تجارت	ترقی
+Relation	T10	T14	NoRel	true	تجارت	لکھنے
+Relation	T10	T16	NoRel	true	تجارت	ملے
+Relation	T10	T17	NoRel	true	تجارت	مصروف
+Relation	T10	T18	NoRel	true	تجارت	وابستہ
+Relation	T10	T2	NoRel	true	تجارت	ہجرت
+Relation	T10	T7	NoRel	true	تجارت	روزگار
+Relation	T10	T9	NoRel	true	تجارت	جنگ
+Relation	T11	T16	NoRel	true	شکار	ملے
+Relation	T11	T4	NoRel	true	شکار	تباہ
+Relation	T11	T7	NoRel	true	شکار	روزگار
+Relation	T11	T9	NoRel	true	شکار	جنگ
+Relation	T12	T1	NoRel	true	شروع	ترقی
+Relation	T12	T10	NoRel	true	شروع	تجارت
+Relation	T12	T17	NoRel	true	شروع	مصروف
+Relation	T12	T6	NoRel	true	شروع	جنگ
+Relation	T13	T1	NoRel	true	پڑھنے	ترقی
+Relation	T13	T10	NoRel	true	پڑھنے	تجارت
+Relation	T13	T11	NoRel	true	پڑھنے	شکار
+Relation	T13	T17	NoRel	true	پڑھنے	مصروف
+Relation	T13	T18	NoRel	true	پڑھنے	وابستہ
+Relation	T13	T3	NoRel	true	پڑھنے	ہجرت
+Relation	T13	T4	NoRel	true	پڑھنے	تباہ
+Relation	T13	T9	NoRel	true	پڑھنے	جنگ
+Relation	T14	T1	NoRel	true	لکھنے	ترقی
+Relation	T14	T12	NoRel	true	لکھنے	شروع
+Relation	T14	T13	NoRel	true	لکھنے	پڑھنے
+Relation	T14	T15	NoRel	true	لکھنے	سیکھنے
+Relation	T14	T18	NoRel	true	لکھنے	وابستہ
+Relation	T14	T2	NoRel	true	لکھنے	ہجرت
+Relation	T14	T4	NoRel	true	لکھنے	تباہ
+Relation	T14	T5	NoRel	true	لکھنے	ہجرت
+Relation	T14	T6	NoRel	true	لکھنے	جنگ
+Relation	T14	T7	NoRel	true	لکھنے	روزگار
+Relation	T14	T9	NoRel	true	لکھنے	جنگ
+Relation	T15	T1	NoRel	true	سیکھنے	ترقی
+Relation	T15	T3	NoRel	true	سیکھنے	ہجرت
+Relation	T15	T6	NoRel	true	سیکھنے	جنگ
+Relation	T15	T8	NoRel	true	سیکھنے	تجارت
+Relation	T16	T0	NoRel	true	ملے	جنگ
+Relation	T16	T2	NoRel	true	ملے	ہجرت
+Relation	T16	T3	NoRel	true	ملے	ہجرت
+Relation	T16	T4	NoRel	true	ملے	تباہ
+Relation	T16	T6	NoRel	true	ملے	جنگ
+Relation	T16	T8	NoRel	true	ملے	تجارت
+Relation	T16	T9	NoRel	true	ملے	جنگ
+Relation	T17	T0	NoRel	true	مصروف	جنگ
+Relation	T17	T8	NoRel	true	مصروف	تجارت
+Relation	T18	T10	NoRel	true	وابستہ	تجارت
+Relation	T18	T11	NoRel	true	وابستہ	شکار
+Relation	T18	T13	NoRel	true	وابستہ	پڑھنے
+Relation	T18	T14	NoRel	true	وابستہ	لکھنے
+Relation	T18	T3	NoRel	true	وابستہ	ہجرت
+Relation	T2	T1	NoRel	true	ہجرت	ترقی
+Relation	T2	T12	NoRel	true	ہجرت	شروع
+Relation	T2	T13	NoRel	true	ہجرت	پڑھنے
+Relation	T2	T15	NoRel	true	ہجرت	سیکھنے
+Relation	T2	T9	NoRel	true	ہجرت	جنگ
+Relation	T3	T6	NoRel	true	ہجرت	جنگ
+Relation	T3	T7	NoRel	true	ہجرت	روزگار
+Relation	T4	T10	NoRel	true	تباہ	تجارت
+Relation	T4	T14	NoRel	true	تباہ	لکھنے
+Relation	T4	T18	NoRel	true	تباہ	وابستہ
+Relation	T5	T0	NoRel	true	ہجرت	جنگ
+Relation	T5	T10	NoRel	true	ہجرت	تجارت
+Relation	T5	T12	NoRel	true	ہجرت	شروع
+Relation	T5	T13	NoRel	true	ہجرت	پڑھنے
+Relation	T5	T14	NoRel	true	ہجرت	لکھنے
+Relation	T5	T16	NoRel	true	ہجرت	ملے
+Relation	T5	T18	NoRel	true	ہجرت	وابستہ
+Relation	T5	T2	NoRel	true	ہجرت	ہجرت
+Relation	T5	T7	NoRel	true	ہجرت	روزگار
+Relation	T6	T14	NoRel	true	جنگ	لکھنے
+Relation	T6	T3	NoRel	true	جنگ	ہجرت
+Relation	T6	T5	NoRel	true	جنگ	ہجرت
+Relation	T7	T14	NoRel	true	روزگار	لکھنے
+Relation	T7	T17	NoRel	true	روزگار	مصروف
+Relation	T7	T18	NoRel	true	روزگار	وابستہ
+Relation	T7	T2	NoRel	true	روزگار	ہجرت
+Relation	T7	T4	NoRel	true	روزگار	تباہ
+Relation	T7	T5	NoRel	true	روزگار	ہجرت
+Relation	T8	T11	NoRel	true	تجارت	شکار
+Relation	T8	T13	NoRel	true	تجارت	پڑھنے
+Relation	T8	T14	NoRel	true	تجارت	لکھنے
+Relation	T8	T2	NoRel	true	تجارت	ہجرت
+Relation	T8	T4	NoRel	true	تجارت	تباہ
+Relation	T9	T10	NoRel	true	جنگ	تجارت
+Relation	T9	T11	NoRel	true	جنگ	شکار
+Relation	T9	T13	NoRel	true	جنگ	پڑھنے
+Relation	T9	T16	NoRel	true	جنگ	ملے
+Relation	T9	T2	NoRel	true	جنگ	ہجرت
+Relation	T9	T4	NoRel	true	جنگ	تباہ
+Relation	T9	T7	NoRel	true	جنگ	روزگار
+Relation	T9	T8	NoRel	true	جنگ	تجارت

@@ -1,0 +1,43 @@
+Text	24 Ekim günü sabah saatlerinde Azerbaycan ve İran'dan gelen toplam 300 arama - kurtarma personeli çalışmalara katıldı .	24 Ekim 2011 gecesi , saat 00: 30'a kadar afet bölgesine toplam 1584 arama kurtarma personeli , 491 sağlık personeli , 10 arama köpeği , 256 iş makinesi ve araç , 7'si hava ambulansı olmak üzere 75 ambulans , 20 jeneratör , 95 seyyar tuvalet , 2546 çadır , 7648 battaniye , 1120 gıda paketi , 10.040 gıda kolisi ve 500 kumanya gönderildi .	24 Ekim günü Türkiye Cumhuriyeti Başbakanlığı tarafından bir yardım kampanyası oluşturuldu ve banka hesap numaraları kamuoyuna duyuruldu .	Deprem bölgesinde çadır ve yardım malzemelerinin dağıtımı sırasında meydana gelen aksaklıklar nedeniyle izdiham oluştu .	Bölgedeki askerlerin havaya ateş açmalarına rağmen vatandaşlar çadırları ve yardım malzemelerini araçtan indirip taşımaya başladılar .
+Event	T0	katıldı	EVENT	110
+Event	T1	gönderildi	EVENT	447
+Event	T2	oluşturuldu	EVENT	539
+Event	T3	duyuruldu	EVENT	587
+Event	T4	dağıtımı	EVENT	648
+Event	T5	aksaklıklar	EVENT	681
+Event	T6	oluştu	EVENT	711
+Event	T7	açmalarına	EVENT	753
+Event	T8	çalışmalara	EVENT	98
+Event	T9	başladılar	EVENT	842
+Relation	T8	T0	CauseEffect	true	çalışmalara	katıldı
+Relation	T0	T8	EffectCause	true	katıldı	çalışmalara
+Relation	T6	T7	CauseEffect	true	oluştu	açmalarına
+Relation	T7	T6	EffectCause	true	açmalarına	oluştu
+Relation	T6	T9	CauseEffect	true	oluştu	başladılar
+Relation	T9	T6	EffectCause	true	başladılar	oluştu
+Relation	T5	T6	CauseEffect	true	aksaklıklar	oluştu
+Relation	T6	T5	EffectCause	true	oluştu	aksaklıklar
+Relation	T4	T5	CauseEffect	true	dağıtımı	aksaklıklar
+Relation	T5	T4	EffectCause	true	aksaklıklar	dağıtımı
+Relation	T0	T3	NoRel	true	katıldı	duyuruldu
+Relation	T0	T9	NoRel	true	katıldı	başladılar
+Relation	T1	T2	NoRel	true	gönderildi	oluşturuldu
+Relation	T2	T3	NoRel	true	oluşturuldu	duyuruldu
+Relation	T2	T6	NoRel	true	oluşturuldu	oluştu
+Relation	T2	T8	NoRel	true	oluşturuldu	çalışmalara
+Relation	T3	T1	NoRel	true	duyuruldu	gönderildi
+Relation	T3	T6	NoRel	true	duyuruldu	oluştu
+Relation	T3	T7	NoRel	true	duyuruldu	açmalarına
+Relation	T3	T8	NoRel	true	duyuruldu	çalışmalara
+Relation	T4	T8	NoRel	true	dağıtımı	çalışmalara
+Relation	T4	T9	NoRel	true	dağıtımı	başladılar
+Relation	T5	T0	NoRel	true	aksaklıklar	katıldı
+Relation	T5	T7	NoRel	true	aksaklıklar	açmalarına
+Relation	T6	T3	NoRel	true	oluştu	duyuruldu
+Relation	T7	T5	NoRel	true	açmalarına	aksaklıklar
+Relation	T7	T8	NoRel	true	açmalarına	çalışmalara
+Relation	T7	T9	NoRel	true	açmalarına	başladılar
+Relation	T8	T4	NoRel	true	çalışmalara	dağıtımı
+Relation	T8	T6	NoRel	true	çalışmalara	oluştu
+Relation	T9	T0	NoRel	true	başladılar	katıldı
+Relation	T9	T4	NoRel	true	başladılar	dağıtımı

@@ -1,0 +1,112 @@
+Text	_ Anadolu Ajansı _ tarafından Türk askeri kaynaklarına dayandırılarak hava sahasına dair ihlâli gösteren , Rus Su- 24 uçağının iz analizi haritası ortaya çıkarıldı .	Haritada Türkmen Dağı'nda düşmeden ve Türk savaş uçakları tarafından vurulmadan önce Rus saldırı uçağının Yayladağı üzerinde Türk hava sahası ihlâlini gösteren detaylar bulundu .	Türkiye Genelkurmay Başkanlığı tarafından daha sonra ise on kez Rus uçaklarının uyarıldığını gösteren ses kaydı yayımlandı .	Ses kaydında İngilizce olarak " Hemen yönünüzü güneye doğru çevirin " denilerek , uçaklar sınır bölgesine yaklaştıkça ikaz sayısının arttırıldığı söylendi .	Rus savaş uçağına Diyarbakır'daki Birleşik Komuta ve İhbar Merkezi tarafından ikazlar yapıldı .
+Event	T0	gösteren	EVENT	96
+Event	T1	analizi	EVENT	130
+Event	T2	çıkarıldı	EVENT	154
+Event	T3	düşmeden	EVENT	192
+Event	T4	vurulmadan	EVENT	235
+Event	T6	gösteren	EVENT	317
+Event	T7	bulundu	EVENT	335
+Event	T8	yayımlandı	EVENT	457
+Event	T9	ikaz	EVENT	588
+Event	T10	söylendi	EVENT	616
+Event	T11	yapıldı	EVENT	713
+Event	T12	ihlâli	EVENT	89
+Event	T5	ihlâlini	EVENT	308
+Event	T13	uyarıldığını	EVENT	425
+Event	T14	denilerek	EVENT	540
+Event	T15	ikazlar	EVENT	705
+Relation	T12	T1	CauseEffect	true	ihlâli	analizi
+Relation	T1	T12	EffectCause	true	analizi	ihlâli
+Relation	T12	T4	CauseEffect	true	ihlâli	vurulmadan
+Relation	T4	T12	EffectCause	true	vurulmadan	ihlâli
+Relation	T5	T4	CauseEffect	true	ihlâlini	vurulmadan
+Relation	T4	T5	EffectCause	true	vurulmadan	ihlâlini
+Relation	T4	T3	CauseEffect	true	vurulmadan	düşmeden
+Relation	T3	T4	EffectCause	true	düşmeden	vurulmadan
+Relation	T12	T9	CauseEffect	true	ihlâli	ikaz
+Relation	T9	T12	EffectCause	true	ikaz	ihlâli
+Relation	T5	T9	CauseEffect	true	ihlâlini	ikaz
+Relation	T9	T5	EffectCause	true	ikaz	ihlâlini
+Relation	T12	T13	CauseEffect	true	ihlâli	uyarıldığını
+Relation	T13	T12	EffectCause	true	uyarıldığını	ihlâli
+Relation	T5	T13	CauseEffect	true	ihlâlini	uyarıldığını
+Relation	T13	T5	EffectCause	true	uyarıldığını	ihlâlini
+Relation	T12	T15	CauseEffect	true	ihlâli	ikazlar
+Relation	T15	T12	EffectCause	true	ikazlar	ihlâli
+Relation	T5	T15	CauseEffect	true	ihlâlini	ikazlar
+Relation	T15	T5	EffectCause	true	ikazlar	ihlâlini
+Relation	T0	T1	NoRel	true	gösteren	analizi
+Relation	T0	T11	NoRel	true	gösteren	yapıldı
+Relation	T0	T13	NoRel	true	gösteren	uyarıldığını
+Relation	T0	T14	NoRel	true	gösteren	denilerek
+Relation	T0	T6	NoRel	true	gösteren	gösteren
+Relation	T1	T0	NoRel	true	analizi	gösteren
+Relation	T1	T10	NoRel	true	analizi	söylendi
+Relation	T1	T7	NoRel	true	analizi	bulundu
+Relation	T10	T11	NoRel	true	söylendi	yapıldı
+Relation	T10	T15	NoRel	true	söylendi	ikazlar
+Relation	T10	T4	NoRel	true	söylendi	vurulmadan
+Relation	T10	T7	NoRel	true	söylendi	bulundu
+Relation	T10	T9	NoRel	true	söylendi	ikaz
+Relation	T11	T10	NoRel	true	yapıldı	söylendi
+Relation	T11	T13	NoRel	true	yapıldı	uyarıldığını
+Relation	T11	T14	NoRel	true	yapıldı	denilerek
+Relation	T11	T2	NoRel	true	yapıldı	çıkarıldı
+Relation	T11	T5	NoRel	true	yapıldı	ihlâlini
+Relation	T11	T6	NoRel	true	yapıldı	gösteren
+Relation	T11	T9	NoRel	true	yapıldı	ikaz
+Relation	T12	T14	NoRel	true	ihlâli	denilerek
+Relation	T12	T2	NoRel	true	ihlâli	çıkarıldı
+Relation	T12	T7	NoRel	true	ihlâli	bulundu
+Relation	T12	T8	NoRel	true	ihlâli	yayımlandı
+Relation	T13	T1	NoRel	true	uyarıldığını	analizi
+Relation	T13	T15	NoRel	true	uyarıldığını	ikazlar
+Relation	T13	T6	NoRel	true	uyarıldığını	gösteren
+Relation	T13	T8	NoRel	true	uyarıldığını	yayımlandı
+Relation	T13	T9	NoRel	true	uyarıldığını	ikaz
+Relation	T14	T11	NoRel	true	denilerek	yapıldı
+Relation	T14	T12	NoRel	true	denilerek	ihlâli
+Relation	T14	T7	NoRel	true	denilerek	bulundu
+Relation	T14	T8	NoRel	true	denilerek	yayımlandı
+Relation	T14	T9	NoRel	true	denilerek	ikaz
+Relation	T15	T14	NoRel	true	ikazlar	denilerek
+Relation	T15	T2	NoRel	true	ikazlar	çıkarıldı
+Relation	T15	T6	NoRel	true	ikazlar	gösteren
+Relation	T15	T8	NoRel	true	ikazlar	yayımlandı
+Relation	T15	T9	NoRel	true	ikazlar	ikaz
+Relation	T2	T1	NoRel	true	çıkarıldı	analizi
+Relation	T2	T3	NoRel	true	çıkarıldı	düşmeden
+Relation	T2	T6	NoRel	true	çıkarıldı	gösteren
+Relation	T2	T9	NoRel	true	çıkarıldı	ikaz
+Relation	T3	T0	NoRel	true	düşmeden	gösteren
+Relation	T3	T11	NoRel	true	düşmeden	yapıldı
+Relation	T3	T12	NoRel	true	düşmeden	ihlâli
+Relation	T3	T13	NoRel	true	düşmeden	uyarıldığını
+Relation	T3	T15	NoRel	true	düşmeden	ikazlar
+Relation	T3	T2	NoRel	true	düşmeden	çıkarıldı
+Relation	T3	T5	NoRel	true	düşmeden	ihlâlini
+Relation	T3	T6	NoRel	true	düşmeden	gösteren
+Relation	T3	T9	NoRel	true	düşmeden	ikaz
+Relation	T4	T8	NoRel	true	vurulmadan	yayımlandı
+Relation	T5	T11	NoRel	true	ihlâlini	yapıldı
+Relation	T5	T14	NoRel	true	ihlâlini	denilerek
+Relation	T5	T2	NoRel	true	ihlâlini	çıkarıldı
+Relation	T6	T0	NoRel	true	gösteren	gösteren
+Relation	T6	T1	NoRel	true	gösteren	analizi
+Relation	T6	T14	NoRel	true	gösteren	denilerek
+Relation	T6	T2	NoRel	true	gösteren	çıkarıldı
+Relation	T7	T14	NoRel	true	bulundu	denilerek
+Relation	T7	T15	NoRel	true	bulundu	ikazlar
+Relation	T7	T3	NoRel	true	bulundu	düşmeden
+Relation	T7	T4	NoRel	true	bulundu	vurulmadan
+Relation	T7	T5	NoRel	true	bulundu	ihlâlini
+Relation	T7	T9	NoRel	true	bulundu	ikaz
+Relation	T8	T1	NoRel	true	yayımlandı	analizi
+Relation	T8	T11	NoRel	true	yayımlandı	yapıldı
+Relation	T8	T12	NoRel	true	yayımlandı	ihlâli
+Relation	T8	T2	NoRel	true	yayımlandı	çıkarıldı
+Relation	T8	T5	NoRel	true	yayımlandı	ihlâlini
+Relation	T8	T6	NoRel	true	yayımlandı	gösteren
+Relation	T9	T15	NoRel	true	ikaz	ikazlar
+Relation	T9	T7	NoRel	true	ikaz	bulundu
+Relation	T9	T8	NoRel	true	ikaz	yayımlandı

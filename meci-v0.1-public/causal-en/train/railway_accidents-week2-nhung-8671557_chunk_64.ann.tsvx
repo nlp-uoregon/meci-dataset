@@ -1,0 +1,47 @@
+Text	No injuries were reported .	At about 5:00 am on 4 April 2016 , a Pacific National freight train with three NR classes leading , caught fire at Cardiff from the failure of bolts securing an oil filter tank allowed oil to escape and come in contact with hot engine components .	A passing passenger train was blocked from passing the burning locomotive with commuters having to depart from the train and find alternate transport .	The fire was extinguished at least three hours after it was first reported .	On 25 February 2021 , a Pacific National container train derailed due to a flood .
+Event	T0	injuries	EVENT	3
+Event	T1	reported	EVENT	17
+Event	T10	passing	EVENT	319
+Event	T11	burning	EVENT	331
+Event	T12	depart	EVENT	375
+Event	T13	fire	EVENT	432
+Event	T14	extinguished	EVENT	441
+Event	T15	reported	EVENT	494
+Event	T16	flood	EVENT	580
+Event	T2	find	EVENT	401
+Event	T3	failure	EVENT	160
+Event	T4	securing	EVENT	177
+Event	T5	allowed	EVENT	205
+Event	T6	escape	EVENT	220
+Event	T7	derailed	EVENT	562
+Event	T9	blocked	EVENT	306
+Relation	T9	T12	CauseEffect	true	blocked	depart
+Relation	T12	T9	EffectCause	true	depart	blocked
+Relation	T12	T2	CauseEffect	true	depart	find
+Relation	T2	T12	EffectCause	true	find	depart
+Relation	T16	T7	CauseEffect	true	flood	derailed
+Relation	T7	T16	EffectCause	true	derailed	flood
+Relation	T11	T9	CauseEffect	true	burning	blocked
+Relation	T9	T11	EffectCause	true	blocked	burning
+Relation	T15	T14	CauseEffect	true	reported	extinguished
+Relation	T14	T15	EffectCause	true	extinguished	reported
+Relation	T0	T15	NoRel	true	injuries	reported
+Relation	T10	T7	NoRel	true	passing	derailed
+Relation	T12	T16	NoRel	true	depart	flood
+Relation	T14	T6	NoRel	true	extinguished	escape
+Relation	T15	T1	NoRel	true	reported	reported
+Relation	T15	T16	NoRel	true	reported	flood
+Relation	T15	T6	NoRel	true	reported	escape
+Relation	T16	T11	NoRel	true	flood	burning
+Relation	T2	T3	NoRel	true	find	failure
+Relation	T2	T7	NoRel	true	find	derailed
+Relation	T3	T2	NoRel	true	failure	find
+Relation	T3	T7	NoRel	true	failure	derailed
+Relation	T4	T14	NoRel	true	securing	extinguished
+Relation	T5	T10	NoRel	true	allowed	passing
+Relation	T5	T12	NoRel	true	allowed	depart
+Relation	T5	T7	NoRel	true	allowed	derailed
+Relation	T6	T16	NoRel	true	escape	flood
+Relation	T6	T3	NoRel	true	escape	failure
+Relation	T7	T10	NoRel	true	derailed	passing
+Relation	T7	T3	NoRel	true	derailed	failure

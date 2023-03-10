@@ -1,0 +1,66 @@
+Text	Kaplıca su kaynaklarının da bulunduğu tektonik çöküntü özelliğine sahip bu bölgede tarih boyunca önemli depremler yaşandı .	Deprem sırasında Sakarya'da elektrik ve telefon hatları kesildi , tren ve karayollarındaki kaymalar sebebiyle ulaşımda aksamalar yaşandı .	Çok katlı binaların yıkılması ölü sayısının artmasına sebep oldu .	Ölümlerin büyük kısmı Sakarya'da olmak üzere , Bolu , İstanbul , Kocaeli ve Bursa'da meydana geldi .	Deprem , Eskişehir ve Ankara'da da hissedildi .
+Event	T0	çöküntü	EVENT	47
+Event	T2	Deprem	EVENT	124
+Event	T3	kesildi	EVENT	180
+Event	T4	kaymalar	EVENT	215
+Event	T5	yaşandı	EVENT	253
+Event	T6	ölü	EVENT	293
+Event	T8	Ölümlerin	EVENT	330
+Event	T10	Deprem	EVENT	431
+Event	T11	hissedildi	EVENT	466
+Event	T12	depremler	EVENT	104
+Event	T1	yıkılması	EVENT	283
+Relation	T0	T12	CauseEffect	true	çöküntü	depremler
+Relation	T12	T0	EffectCause	true	depremler	çöküntü
+Relation	T2	T4	CauseEffect	true	Deprem	kaymalar
+Relation	T4	T2	EffectCause	true	kaymalar	Deprem
+Relation	T4	T5	CauseEffect	true	kaymalar	yaşandı
+Relation	T5	T4	EffectCause	true	yaşandı	kaymalar
+Relation	T12	T1	CauseEffect	true	depremler	yıkılması
+Relation	T1	T12	EffectCause	true	yıkılması	depremler
+Relation	T12	T6	CauseEffect	true	depremler	ölü
+Relation	T6	T12	EffectCause	true	ölü	depremler
+Relation	T12	T4	CauseEffect	true	depremler	kaymalar
+Relation	T4	T12	EffectCause	true	kaymalar	depremler
+Relation	T12	T3	CauseEffect	true	depremler	kesildi
+Relation	T3	T12	EffectCause	true	kesildi	depremler
+Relation	T12	T8	CauseEffect	true	depremler	Ölümlerin
+Relation	T8	T12	EffectCause	true	Ölümlerin	depremler
+Relation	T0	T1	NoRel	true	çöküntü	yıkılması
+Relation	T0	T11	NoRel	true	çöküntü	hissedildi
+Relation	T0	T2	NoRel	true	çöküntü	Deprem
+Relation	T0	T4	NoRel	true	çöküntü	kaymalar
+Relation	T0	T5	NoRel	true	çöküntü	yaşandı
+Relation	T0	T6	NoRel	true	çöküntü	ölü
+Relation	T0	T8	NoRel	true	çöküntü	Ölümlerin
+Relation	T1	T10	NoRel	true	yıkılması	Deprem
+Relation	T1	T11	NoRel	true	yıkılması	hissedildi
+Relation	T1	T2	NoRel	true	yıkılması	Deprem
+Relation	T1	T3	NoRel	true	yıkılması	kesildi
+Relation	T1	T4	NoRel	true	yıkılması	kaymalar
+Relation	T1	T8	NoRel	true	yıkılması	Ölümlerin
+Relation	T10	T3	NoRel	true	Deprem	kesildi
+Relation	T10	T4	NoRel	true	Deprem	kaymalar
+Relation	T11	T6	NoRel	true	hissedildi	ölü
+Relation	T11	T8	NoRel	true	hissedildi	Ölümlerin
+Relation	T12	T11	NoRel	true	depremler	hissedildi
+Relation	T12	T5	NoRel	true	depremler	yaşandı
+Relation	T2	T12	NoRel	true	Deprem	depremler
+Relation	T2	T3	NoRel	true	Deprem	kesildi
+Relation	T3	T10	NoRel	true	kesildi	Deprem
+Relation	T3	T11	NoRel	true	kesildi	hissedildi
+Relation	T3	T2	NoRel	true	kesildi	Deprem
+Relation	T3	T4	NoRel	true	kesildi	kaymalar
+Relation	T3	T8	NoRel	true	kesildi	Ölümlerin
+Relation	T4	T1	NoRel	true	kaymalar	yıkılması
+Relation	T4	T11	NoRel	true	kaymalar	hissedildi
+Relation	T4	T3	NoRel	true	kaymalar	kesildi
+Relation	T4	T6	NoRel	true	kaymalar	ölü
+Relation	T4	T8	NoRel	true	kaymalar	Ölümlerin
+Relation	T5	T11	NoRel	true	yaşandı	hissedildi
+Relation	T5	T12	NoRel	true	yaşandı	depremler
+Relation	T6	T2	NoRel	true	ölü	Deprem
+Relation	T6	T8	NoRel	true	ölü	Ölümlerin
+Relation	T8	T11	NoRel	true	Ölümlerin	hissedildi
+Relation	T8	T4	NoRel	true	Ölümlerin	kaymalar
+Relation	T8	T6	NoRel	true	Ölümlerin	ölü

@@ -1,0 +1,97 @@
+Text	Üçüncü bir tren , kazanın olduğu an paralel bir hat boyunca o sırada seyir halindeydi .	Fakat kazaya doğrudan doğruya karışmadı .	Çünkü onun sürücüsü hiçbir yolcusunun yaralanmasına meydan vermeden treni durdurmayı başarmıştı .	Kazanın başlangıç kayıp raporları her nasılsa karıştırıldı , Halle belediye başkanı Dirk Pieters , çarpışmada en az 20 kişinin öldüğünü söylerken , diğer kaynaklar toplam ölü sayını 25 olarak verdi .	Bir daha sert rakam Flaman Brabant bölgesi hükümetinden ikindi üzeri 15 Şubat'ta sağlandı : Geçici ölü sayısı toplamı 18 ( 15 erkek ve 3 bayan ) bu rakamlar gerçekte yeniden kaza yerinden sağlanıyordu .
+Event	T0	kazanın	EVENT	18
+Event	T1	karışmadı	EVENT	118
+Event	T3	başarmıştı	EVENT	215
+Event	T4	kayıp	EVENT	246
+Event	T5	karıştırıldı	EVENT	274
+Event	T6	çarpışmada	EVENT	327
+Event	T7	söylerken	EVENT	364
+Event	T8	verdi	EVENT	420
+Event	T9	sağlandı	EVENT	509
+Event	T10	ölü	EVENT	527
+Event	T11	kaza	EVENT	602
+Event	T12	sağlanıyordu	EVENT	616
+Event	T2	Kazanın	EVENT	228
+Event	T13	ölü	EVENT	399
+Event	T14	öldüğünü	EVENT	355
+Relation	T3	T1	CauseEffect	true	başarmıştı	karışmadı
+Relation	T1	T3	EffectCause	true	karışmadı	başarmıştı
+Relation	T6	T14	CauseEffect	true	çarpışmada	öldüğünü
+Relation	T14	T6	EffectCause	true	öldüğünü	çarpışmada
+Relation	T6	T13	CauseEffect	true	çarpışmada	ölü
+Relation	T13	T6	EffectCause	true	ölü	çarpışmada
+Relation	T5	T7	CauseEffect	true	karıştırıldı	söylerken
+Relation	T7	T5	EffectCause	true	söylerken	karıştırıldı
+Relation	T5	T8	CauseEffect	true	karıştırıldı	verdi
+Relation	T8	T5	EffectCause	true	verdi	karıştırıldı
+Relation	T2	T4	CauseEffect	true	Kazanın	kayıp
+Relation	T4	T2	EffectCause	true	kayıp	Kazanın
+Relation	T2	T10	CauseEffect	true	Kazanın	ölü
+Relation	T10	T2	EffectCause	true	ölü	Kazanın
+Relation	T0	T14	NoRel	true	kazanın	öldüğünü
+Relation	T0	T3	NoRel	true	kazanın	başarmıştı
+Relation	T0	T5	NoRel	true	kazanın	karıştırıldı
+Relation	T0	T7	NoRel	true	kazanın	söylerken
+Relation	T1	T0	NoRel	true	karışmadı	kazanın
+Relation	T1	T5	NoRel	true	karışmadı	karıştırıldı
+Relation	T1	T7	NoRel	true	karışmadı	söylerken
+Relation	T10	T1	NoRel	true	ölü	karışmadı
+Relation	T10	T12	NoRel	true	ölü	sağlanıyordu
+Relation	T10	T14	NoRel	true	ölü	öldüğünü
+Relation	T10	T3	NoRel	true	ölü	başarmıştı
+Relation	T10	T4	NoRel	true	ölü	kayıp
+Relation	T10	T6	NoRel	true	ölü	çarpışmada
+Relation	T10	T8	NoRel	true	ölü	verdi
+Relation	T11	T1	NoRel	true	kaza	karışmadı
+Relation	T11	T13	NoRel	true	kaza	ölü
+Relation	T11	T14	NoRel	true	kaza	öldüğünü
+Relation	T11	T4	NoRel	true	kaza	kayıp
+Relation	T12	T2	NoRel	true	sağlanıyordu	Kazanın
+Relation	T12	T3	NoRel	true	sağlanıyordu	başarmıştı
+Relation	T12	T7	NoRel	true	sağlanıyordu	söylerken
+Relation	T13	T0	NoRel	true	ölü	kazanın
+Relation	T13	T7	NoRel	true	ölü	söylerken
+Relation	T13	T8	NoRel	true	ölü	verdi
+Relation	T14	T0	NoRel	true	öldüğünü	kazanın
+Relation	T14	T11	NoRel	true	öldüğünü	kaza
+Relation	T14	T12	NoRel	true	öldüğünü	sağlanıyordu
+Relation	T14	T13	NoRel	true	öldüğünü	ölü
+Relation	T14	T2	NoRel	true	öldüğünü	Kazanın
+Relation	T2	T14	NoRel	true	Kazanın	öldüğünü
+Relation	T2	T5	NoRel	true	Kazanın	karıştırıldı
+Relation	T2	T7	NoRel	true	Kazanın	söylerken
+Relation	T3	T11	NoRel	true	başarmıştı	kaza
+Relation	T3	T13	NoRel	true	başarmıştı	ölü
+Relation	T3	T6	NoRel	true	başarmıştı	çarpışmada
+Relation	T3	T7	NoRel	true	başarmıştı	söylerken
+Relation	T4	T11	NoRel	true	kayıp	kaza
+Relation	T4	T3	NoRel	true	kayıp	başarmıştı
+Relation	T4	T5	NoRel	true	kayıp	karıştırıldı
+Relation	T4	T6	NoRel	true	kayıp	çarpışmada
+Relation	T5	T0	NoRel	true	karıştırıldı	kazanın
+Relation	T5	T1	NoRel	true	karıştırıldı	karışmadı
+Relation	T5	T11	NoRel	true	karıştırıldı	kaza
+Relation	T5	T12	NoRel	true	karıştırıldı	sağlanıyordu
+Relation	T5	T3	NoRel	true	karıştırıldı	başarmıştı
+Relation	T5	T4	NoRel	true	karıştırıldı	kayıp
+Relation	T6	T11	NoRel	true	çarpışmada	kaza
+Relation	T6	T2	NoRel	true	çarpışmada	Kazanın
+Relation	T6	T4	NoRel	true	çarpışmada	kayıp
+Relation	T6	T8	NoRel	true	çarpışmada	verdi
+Relation	T7	T1	NoRel	true	söylerken	karışmadı
+Relation	T7	T10	NoRel	true	söylerken	ölü
+Relation	T7	T13	NoRel	true	söylerken	ölü
+Relation	T7	T6	NoRel	true	söylerken	çarpışmada
+Relation	T7	T8	NoRel	true	söylerken	verdi
+Relation	T8	T1	NoRel	true	verdi	karışmadı
+Relation	T8	T10	NoRel	true	verdi	ölü
+Relation	T8	T11	NoRel	true	verdi	kaza
+Relation	T8	T12	NoRel	true	verdi	sağlanıyordu
+Relation	T8	T14	NoRel	true	verdi	öldüğünü
+Relation	T8	T6	NoRel	true	verdi	çarpışmada
+Relation	T9	T1	NoRel	true	sağlandı	karışmadı
+Relation	T9	T10	NoRel	true	sağlandı	ölü
+Relation	T9	T14	NoRel	true	sağlandı	öldüğünü
+Relation	T9	T5	NoRel	true	sağlandı	karıştırıldı
+Relation	T9	T6	NoRel	true	sağlandı	çarpışmada
+Relation	T9	T7	NoRel	true	sağlandı	söylerken

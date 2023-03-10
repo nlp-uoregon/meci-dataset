@@ -1,0 +1,62 @@
+Text	La evidencia reciente sugiere que la crisis climática tiene un impacto significativo en el crecimiento económico y en varios elementos productivos de las economías modernas .	La investigación indica que el cambio climático está aumentando la frecuencia de las crisis bancarias .	Rescatar a los bancos insolventes causa una carga fiscal adicional de alrededor del 5 al 15% del producto interno bruto por año y aumenta la proporción de la deuda pública al producto interno bruto en un factor de dos .	Se estima que alrededor del 20% de estos efectos pueden atribuirse al deterioro de los balances bancarios , en el que el cambio climático es la causa .	Las consecuencias del cambio climático se subestiman si el sistema financiero no se analiza a través de una evaluación climática y económica integrada .
+Event	T0	evidencia	EVENT	3
+Event	T1	sugiere	EVENT	22
+Event	T10	estima	EVENT	502
+Event	T11	efectos	EVENT	540
+Event	T12	deterioro	EVENT	569
+Event	T2	impacto	EVENT	63
+Event	T3	crecimiento	EVENT	91
+Event	T4	indica	EVENT	192
+Event	T5	aumentando	EVENT	228
+Event	T6	crisis	EVENT	260
+Event	T7	cambio	EVENT	206
+Event	T8	aumenta	EVENT	409
+Relation	T2	T3	CauseEffect	true	impacto	crecimiento
+Relation	T3	T2	EffectCause	true	crecimiento	impacto
+Relation	T7	T6	CauseEffect	true	cambio	crisis
+Relation	T6	T7	EffectCause	true	crisis	cambio
+Relation	T7	T12	CauseEffect	true	cambio	deterioro
+Relation	T12	T7	EffectCause	true	deterioro	cambio
+Relation	T0	T10	NoRel	true	evidencia	estima
+Relation	T0	T4	NoRel	true	evidencia	indica
+Relation	T0	T6	NoRel	true	evidencia	crisis
+Relation	T1	T0	NoRel	true	sugiere	evidencia
+Relation	T1	T10	NoRel	true	sugiere	estima
+Relation	T1	T11	NoRel	true	sugiere	efectos
+Relation	T1	T12	NoRel	true	sugiere	deterioro
+Relation	T1	T3	NoRel	true	sugiere	crecimiento
+Relation	T1	T5	NoRel	true	sugiere	aumentando
+Relation	T1	T6	NoRel	true	sugiere	crisis
+Relation	T1	T8	NoRel	true	sugiere	aumenta
+Relation	T10	T12	NoRel	true	estima	deterioro
+Relation	T10	T7	NoRel	true	estima	cambio
+Relation	T11	T0	NoRel	true	efectos	evidencia
+Relation	T11	T3	NoRel	true	efectos	crecimiento
+Relation	T12	T0	NoRel	true	deterioro	evidencia
+Relation	T12	T1	NoRel	true	deterioro	sugiere
+Relation	T12	T11	NoRel	true	deterioro	efectos
+Relation	T12	T2	NoRel	true	deterioro	impacto
+Relation	T12	T3	NoRel	true	deterioro	crecimiento
+Relation	T12	T4	NoRel	true	deterioro	indica
+Relation	T12	T6	NoRel	true	deterioro	crisis
+Relation	T2	T1	NoRel	true	impacto	sugiere
+Relation	T2	T10	NoRel	true	impacto	estima
+Relation	T2	T4	NoRel	true	impacto	indica
+Relation	T3	T0	NoRel	true	crecimiento	evidencia
+Relation	T3	T11	NoRel	true	crecimiento	efectos
+Relation	T3	T4	NoRel	true	crecimiento	indica
+Relation	T3	T6	NoRel	true	crecimiento	crisis
+Relation	T4	T0	NoRel	true	indica	evidencia
+Relation	T4	T10	NoRel	true	indica	estima
+Relation	T4	T2	NoRel	true	indica	impacto
+Relation	T4	T5	NoRel	true	indica	aumentando
+Relation	T4	T6	NoRel	true	indica	crisis
+Relation	T4	T7	NoRel	true	indica	cambio
+Relation	T5	T11	NoRel	true	aumentando	efectos
+Relation	T6	T0	NoRel	true	crisis	evidencia
+Relation	T6	T1	NoRel	true	crisis	sugiere
+Relation	T6	T11	NoRel	true	crisis	efectos
+Relation	T6	T8	NoRel	true	crisis	aumenta
+Relation	T7	T0	NoRel	true	cambio	evidencia
+Relation	T7	T5	NoRel	true	cambio	aumentando
+Relation	T8	T3	NoRel	true	aumenta	crecimiento

@@ -1,0 +1,45 @@
+Text	Depremin bulunduğu bölgede , Arap levhası Avrasya levhası'nı yılda yaklaşık 26 mm hızla kuzeye doğru itmektedir .	İki plakanın çarpışması yıkıcı depremlere ve İran'ın kuzeybatısındaki Zagros Dağları'nın her yıl 2.6 santimetre yükselmesine neden olmaktadır .	1930 yılında Batı Azerbaycan Eyaletinin Salmas şehrinde meydana gelen 7.1 büyüklüğündeki depremde 1360 ile 3000 arasında insan öldü .	2020 depremlerinin güneyindeki Kirmanşah Eyaleti'nde 12 Kasım 2017 tarihinde meydana gelen 7.3 büyüklüğündeki depremde ise 620 kişi öldü , 8000'den fazla kişi ise yaralandı .	İlk deprem 23 Şubat 2020'de İran Standart Saati ile 08: 53'te meydana geldi .
+Event	T0	itmektedir	EVENT	101
+Event	T1	depremlere	EVENT	145
+Event	T2	depremde	EVENT	347
+Event	T3	öldü	EVENT	385
+Event	T4	depremde	EVENT	502
+Event	T5	öldü	EVENT	524
+Event	T6	yaralandı	EVENT	555
+Event	T7	deprem	EVENT	571
+Event	T8	geldi	EVENT	637
+Event	T9	çarpışması	EVENT	127
+Event	T10	olmaktadır	EVENT	245
+Relation	T9	T1	CauseEffect	true	çarpışması	depremlere
+Relation	T1	T9	EffectCause	true	depremlere	çarpışması
+Relation	T9	T10	CauseEffect	true	çarpışması	olmaktadır
+Relation	T10	T9	EffectCause	true	olmaktadır	çarpışması
+Relation	T2	T3	CauseEffect	true	depremde	öldü
+Relation	T3	T2	EffectCause	true	öldü	depremde
+Relation	T4	T5	CauseEffect	true	depremde	öldü
+Relation	T5	T4	EffectCause	true	öldü	depremde
+Relation	T4	T6	CauseEffect	true	depremde	yaralandı
+Relation	T6	T4	EffectCause	true	yaralandı	depremde
+Relation	T0	T10	NoRel	true	itmektedir	olmaktadır
+Relation	T0	T3	NoRel	true	itmektedir	öldü
+Relation	T0	T9	NoRel	true	itmektedir	çarpışması
+Relation	T1	T0	NoRel	true	depremlere	itmektedir
+Relation	T1	T7	NoRel	true	depremlere	deprem
+Relation	T10	T8	NoRel	true	olmaktadır	geldi
+Relation	T2	T0	NoRel	true	depremde	itmektedir
+Relation	T3	T10	NoRel	true	öldü	olmaktadır
+Relation	T3	T6	NoRel	true	öldü	yaralandı
+Relation	T4	T0	NoRel	true	depremde	itmektedir
+Relation	T4	T10	NoRel	true	depremde	olmaktadır
+Relation	T5	T1	NoRel	true	öldü	depremlere
+Relation	T5	T10	NoRel	true	öldü	olmaktadır
+Relation	T6	T0	NoRel	true	yaralandı	itmektedir
+Relation	T7	T1	NoRel	true	deprem	depremlere
+Relation	T7	T5	NoRel	true	deprem	öldü
+Relation	T7	T6	NoRel	true	deprem	yaralandı
+Relation	T7	T8	NoRel	true	deprem	geldi
+Relation	T7	T9	NoRel	true	deprem	çarpışması
+Relation	T8	T1	NoRel	true	geldi	depremlere
+Relation	T8	T3	NoRel	true	geldi	öldü
+Relation	T8	T5	NoRel	true	geldi	öldü
+Relation	T9	T2	NoRel	true	çarpışması	depremde

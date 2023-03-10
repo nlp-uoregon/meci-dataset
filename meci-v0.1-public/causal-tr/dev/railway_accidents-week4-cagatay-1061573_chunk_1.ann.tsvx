@@ -1,0 +1,32 @@
+Text	Olay otobüs sürücüsünün demiryolu kavşak ikaz aletlerine önem vermemesiyle meydana geldi .	- 25px 8 Mayıs 1943 – Avustralya’nın en kötü demiryolu çarpışması .	Buharlı kokomotifl A2_863 , Tallangatta yolunda askerleri taşıyan bir otobüse çarptı , sonuç yirmi beş kişi öldü .	Wodonga resulting in the death of twenty five people .	- 27 Ocak 2001 - Gerogery hemzemin geçit kazası — - 5 Ölü
+Event	T0	Olay	EVENT	0
+Event	T2	çarpışması	EVENT	146
+Event	T3	çarptı	EVENT	237
+Event	T4	öldü	EVENT	267
+Event	T5	resulting	EVENT	282
+Event	T6	death	EVENT	299
+Event	T1	kazası	EVENT	370
+Event	T7	Ölü	EVENT	383
+Relation	T3	T4	CauseEffect	true	çarptı	öldü
+Relation	T4	T3	EffectCause	true	öldü	çarptı
+Relation	T1	T7	CauseEffect	true	kazası	Ölü
+Relation	T7	T1	EffectCause	true	Ölü	kazası
+Relation	T0	T4	NoRel	true	Olay	öldü
+Relation	T0	T6	NoRel	true	Olay	death
+Relation	T1	T0	NoRel	true	kazası	Olay
+Relation	T1	T3	NoRel	true	kazası	çarptı
+Relation	T1	T6	NoRel	true	kazası	death
+Relation	T2	T0	NoRel	true	çarpışması	Olay
+Relation	T2	T1	NoRel	true	çarpışması	kazası
+Relation	T2	T5	NoRel	true	çarpışması	resulting
+Relation	T2	T7	NoRel	true	çarpışması	Ölü
+Relation	T3	T2	NoRel	true	çarptı	çarpışması
+Relation	T4	T0	NoRel	true	öldü	Olay
+Relation	T4	T5	NoRel	true	öldü	resulting
+Relation	T4	T6	NoRel	true	öldü	death
+Relation	T5	T4	NoRel	true	resulting	öldü
+Relation	T5	T7	NoRel	true	resulting	Ölü
+Relation	T6	T3	NoRel	true	death	çarptı
+Relation	T6	T7	NoRel	true	death	Ölü
+Relation	T7	T3	NoRel	true	Ölü	çarptı
+Relation	T7	T4	NoRel	true	Ölü	öldü

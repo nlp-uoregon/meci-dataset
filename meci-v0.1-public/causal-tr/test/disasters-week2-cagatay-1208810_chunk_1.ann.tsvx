@@ -1,0 +1,35 @@
+Text	9.1 ila 9.3 olan büyüklüğüyle , bir sismografla kaydedilmiş olan bugüne kadarki en büyük üçüncü depremdi .	Süresi 8.3 dakika ile 10 dakika arasında değişen deprem , bugüne kadar görülmüş en uzun süreye sahipti ve tüm gezegeni 1 cm hareket ettirdi , Alaska'ya kadar depremleri tetikledi .	İçmerkezi Simeulue ile Sumatra arasındaydı .	Etkilenen ülkeler ve halklarının durumu , dünya çapında bir insani yardım kampanyasının başlamasına sebep oldu .	Tüm dünya çapından depremzedelere yardım amacıyla 14 milyar Amerikan doları ( 2004 itibarı ile ) bağış toplandı .
+Event	T0	kaydedilmiş	EVENT	48
+Event	T1	depremdi	EVENT	96
+Event	T2	deprem	EVENT	156
+Event	T3	görülmüş	EVENT	178
+Event	T5	tetikledi	EVENT	276
+Event	T6	yardım	EVENT	480
+Event	T7	toplandı	EVENT	549
+Relation	T1	T0	CauseEffect	true	depremdi	kaydedilmiş
+Relation	T0	T1	EffectCause	true	kaydedilmiş	depremdi
+Relation	T2	T5	CauseEffect	true	deprem	tetikledi
+Relation	T5	T2	EffectCause	true	tetikledi	deprem
+Relation	T2	T3	CauseEffect	true	deprem	görülmüş
+Relation	T3	T2	EffectCause	true	görülmüş	deprem
+Relation	T6	T7	CauseEffect	true	yardım	toplandı
+Relation	T7	T6	EffectCause	true	toplandı	yardım
+Relation	T2	T6	CauseEffect	true	deprem	yardım
+Relation	T6	T2	EffectCause	true	yardım	deprem
+Relation	T1	T6	CauseEffect	true	depremdi	yardım
+Relation	T6	T1	EffectCause	true	yardım	depremdi
+Relation	T1	T5	CauseEffect	true	depremdi	tetikledi
+Relation	T5	T1	EffectCause	true	tetikledi	depremdi
+Relation	T2	T7	CauseEffect	true	deprem	toplandı
+Relation	T7	T2	EffectCause	true	toplandı	deprem
+Relation	T0	T3	CauseEffect	true	kaydedilmiş	görülmüş
+Relation	T3	T0	EffectCause	true	görülmüş	kaydedilmiş
+Relation	T0	T2	NoRel	true	kaydedilmiş	deprem
+Relation	T1	T2	NoRel	true	depremdi	deprem
+Relation	T5	T0	NoRel	true	tetikledi	kaydedilmiş
+Relation	T5	T6	NoRel	true	tetikledi	yardım
+Relation	T6	T0	NoRel	true	yardım	kaydedilmiş
+Relation	T6	T5	NoRel	true	yardım	tetikledi
+Relation	T7	T0	NoRel	true	toplandı	kaydedilmiş
+Relation	T7	T3	NoRel	true	toplandı	görülmüş
+Relation	T7	T5	NoRel	true	toplandı	tetikledi

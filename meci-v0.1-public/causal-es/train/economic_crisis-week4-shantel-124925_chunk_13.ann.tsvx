@@ -1,0 +1,115 @@
+Text	Con el inicio del embargo , las importaciones petrolíferas de EE.UU. procedentes de los países árabes se redujeron desde los 1,2 millones de barriles ( 190_000 m³ ) diarios hasta los 19_000 barriles ( 3000 m³ ) .	El consumo diario disminuyó en un 6,1_% entre septiembre y febrero , y un 7_% durante el verano de 1974 , cuando Estados Unidos sufrió el primer período de escasez de combustible desde la Segunda Guerra Mundial .	Debido a la interdependencia mundial a nivel social y económico , los países industrializados no comunistas importadores de petróleo asistieron a una repentina inflación y una recesión económica .	En los países industrializados , especialmente en Estados Unidos , la crisis provocó que las condiciones de vida se volvieran muy adversas para los desempleados , los grupos sociales marginados , algunos trabajadores de mayor edad , y cada vez más , para los trabajadores más jóvenes .	Las escuelas y oficinas en EE._UU. tuvieron que cerrar a menudo para ahorrar el combustible de la calefacción , y las fábricas tuvieron que reducir la producción y despedir trabajadores .
+Event	T0	inicio	EVENT	7
+Event	T1	embargo	EVENT	18
+Event	T2	redujeron	EVENT	105
+Event	T3	consumo	EVENT	216
+Event	T4	disminuyó	EVENT	231
+Event	T5	sufrió	EVENT	341
+Event	T6	período	EVENT	358
+Event	T7	escasez	EVENT	369
+Event	T9	asistieron	EVENT	559
+Event	T10	inflación	EVENT	586
+Event	T11	recesión	EVENT	602
+Event	T12	provocó	EVENT	700
+Event	T13	cerrar	EVENT	957
+Event	T14	reducir	EVENT	1049
+Event	T15	despedir	EVENT	1073
+Event	T8	Segunda Guerra Mundial	EVENT	401
+Event	T16	interdependencia	EVENT	438
+Relation	T1	T2	CauseEffect	true	embargo	redujeron
+Relation	T2	T1	EffectCause	true	redujeron	embargo
+Relation	T0	T11	NoRel	true	inicio	recesión
+Relation	T0	T15	NoRel	true	inicio	despedir
+Relation	T0	T2	NoRel	true	inicio	redujeron
+Relation	T0	T5	NoRel	true	inicio	sufrió
+Relation	T0	T7	NoRel	true	inicio	escasez
+Relation	T0	T8	NoRel	true	inicio	Segunda Guerra Mundial
+Relation	T1	T13	NoRel	true	embargo	cerrar
+Relation	T1	T3	NoRel	true	embargo	consumo
+Relation	T1	T6	NoRel	true	embargo	período
+Relation	T10	T16	NoRel	true	inflación	interdependencia
+Relation	T10	T5	NoRel	true	inflación	sufrió
+Relation	T10	T7	NoRel	true	inflación	escasez
+Relation	T10	T9	NoRel	true	inflación	asistieron
+Relation	T11	T0	NoRel	true	recesión	inicio
+Relation	T11	T1	NoRel	true	recesión	embargo
+Relation	T11	T13	NoRel	true	recesión	cerrar
+Relation	T11	T14	NoRel	true	recesión	reducir
+Relation	T11	T4	NoRel	true	recesión	disminuyó
+Relation	T11	T7	NoRel	true	recesión	escasez
+Relation	T11	T8	NoRel	true	recesión	Segunda Guerra Mundial
+Relation	T12	T10	NoRel	true	provocó	inflación
+Relation	T12	T13	NoRel	true	provocó	cerrar
+Relation	T12	T14	NoRel	true	provocó	reducir
+Relation	T12	T16	NoRel	true	provocó	interdependencia
+Relation	T12	T6	NoRel	true	provocó	período
+Relation	T12	T7	NoRel	true	provocó	escasez
+Relation	T13	T1	NoRel	true	cerrar	embargo
+Relation	T13	T14	NoRel	true	cerrar	reducir
+Relation	T13	T15	NoRel	true	cerrar	despedir
+Relation	T13	T3	NoRel	true	cerrar	consumo
+Relation	T13	T6	NoRel	true	cerrar	período
+Relation	T13	T7	NoRel	true	cerrar	escasez
+Relation	T13	T8	NoRel	true	cerrar	Segunda Guerra Mundial
+Relation	T14	T1	NoRel	true	reducir	embargo
+Relation	T14	T10	NoRel	true	reducir	inflación
+Relation	T14	T11	NoRel	true	reducir	recesión
+Relation	T14	T13	NoRel	true	reducir	cerrar
+Relation	T14	T3	NoRel	true	reducir	consumo
+Relation	T14	T6	NoRel	true	reducir	período
+Relation	T14	T7	NoRel	true	reducir	escasez
+Relation	T15	T13	NoRel	true	despedir	cerrar
+Relation	T15	T14	NoRel	true	despedir	reducir
+Relation	T15	T8	NoRel	true	despedir	Segunda Guerra Mundial
+Relation	T15	T9	NoRel	true	despedir	asistieron
+Relation	T16	T13	NoRel	true	interdependencia	cerrar
+Relation	T16	T14	NoRel	true	interdependencia	reducir
+Relation	T16	T3	NoRel	true	interdependencia	consumo
+Relation	T16	T5	NoRel	true	interdependencia	sufrió
+Relation	T2	T10	NoRel	true	redujeron	inflación
+Relation	T2	T13	NoRel	true	redujeron	cerrar
+Relation	T2	T14	NoRel	true	redujeron	reducir
+Relation	T3	T13	NoRel	true	consumo	cerrar
+Relation	T3	T4	NoRel	true	consumo	disminuyó
+Relation	T3	T6	NoRel	true	consumo	período
+Relation	T3	T8	NoRel	true	consumo	Segunda Guerra Mundial
+Relation	T3	T9	NoRel	true	consumo	asistieron
+Relation	T4	T1	NoRel	true	disminuyó	embargo
+Relation	T4	T10	NoRel	true	disminuyó	inflación
+Relation	T4	T11	NoRel	true	disminuyó	recesión
+Relation	T4	T13	NoRel	true	disminuyó	cerrar
+Relation	T4	T14	NoRel	true	disminuyó	reducir
+Relation	T4	T3	NoRel	true	disminuyó	consumo
+Relation	T4	T9	NoRel	true	disminuyó	asistieron
+Relation	T5	T0	NoRel	true	sufrió	inicio
+Relation	T5	T10	NoRel	true	sufrió	inflación
+Relation	T5	T13	NoRel	true	sufrió	cerrar
+Relation	T5	T15	NoRel	true	sufrió	despedir
+Relation	T5	T16	NoRel	true	sufrió	interdependencia
+Relation	T5	T3	NoRel	true	sufrió	consumo
+Relation	T5	T4	NoRel	true	sufrió	disminuyó
+Relation	T6	T1	NoRel	true	período	embargo
+Relation	T6	T14	NoRel	true	período	reducir
+Relation	T6	T4	NoRel	true	período	disminuyó
+Relation	T6	T7	NoRel	true	período	escasez
+Relation	T7	T2	NoRel	true	escasez	redujeron
+Relation	T7	T3	NoRel	true	escasez	consumo
+Relation	T7	T5	NoRel	true	escasez	sufrió
+Relation	T7	T6	NoRel	true	escasez	período
+Relation	T7	T8	NoRel	true	escasez	Segunda Guerra Mundial
+Relation	T8	T1	NoRel	true	Segunda Guerra Mundial	embargo
+Relation	T8	T12	NoRel	true	Segunda Guerra Mundial	provocó
+Relation	T8	T16	NoRel	true	Segunda Guerra Mundial	interdependencia
+Relation	T8	T2	NoRel	true	Segunda Guerra Mundial	redujeron
+Relation	T8	T3	NoRel	true	Segunda Guerra Mundial	consumo
+Relation	T8	T4	NoRel	true	Segunda Guerra Mundial	disminuyó
+Relation	T8	T5	NoRel	true	Segunda Guerra Mundial	sufrió
+Relation	T8	T6	NoRel	true	Segunda Guerra Mundial	período
+Relation	T8	T7	NoRel	true	Segunda Guerra Mundial	escasez
+Relation	T8	T9	NoRel	true	Segunda Guerra Mundial	asistieron
+Relation	T9	T10	NoRel	true	asistieron	inflación
+Relation	T9	T12	NoRel	true	asistieron	provocó
+Relation	T9	T14	NoRel	true	asistieron	reducir
+Relation	T9	T2	NoRel	true	asistieron	redujeron
+Relation	T9	T3	NoRel	true	asistieron	consumo
+Relation	T9	T6	NoRel	true	asistieron	período

@@ -1,0 +1,43 @@
+Text	AEROFLOT'UN 45 SEFER SAYILI UÇUŞU , 6 Şubat 1970'te Taşkent'ten Semerkant'a yapılan yapılan bir uçuş sırasında düşen tarifeli bir Aeroflot iç hat yolcu uçuşudur .	Kaza sonucunda uçakta bulunan 106 kişiden 92'si öldü , 14 kişi kurtuldu .	Kazaya karışan uçak , Aeroflot'un Özbekistan filosuna ait dört adet İvçenko Al - 20K motoru ile donatılmış bir İlyuşin İl - 18V idi ( seri numarası 043 - 03 , fabrika numarası 182004303 ) .	İlk uçuşunu 1962'te yapan uçak , 7 Şubat 1962'de Aeroflot'un Özbekistan filosu tarafından işletilmek üzere CCCP - 75798 kuyruk numarasını aldı .	Kaza anında uçağın 12.885 uçuş saati ve 4.968 kalkış ve iniş döngüsü vardı .
+Event	T0	UÇUŞU	EVENT	28
+Event	T1	uçuş	EVENT	96
+Event	T2	uçuşudur	EVENT	152
+Event	T3	Kaza	EVENT	163
+Event	T4	öldü	EVENT	211
+Event	T5	kurtuldu	EVENT	226
+Event	T8	aldı	EVENT	565
+Event	T9	Kaza	EVENT	572
+Event	T6	Kazaya	EVENT	237
+Event	T7	uçuşunu	EVENT	431
+Relation	T3	T4	CauseEffect	true	Kaza	öldü
+Relation	T4	T3	EffectCause	true	öldü	Kaza
+Relation	T3	T5	CauseEffect	true	Kaza	kurtuldu
+Relation	T5	T3	EffectCause	true	kurtuldu	Kaza
+Relation	T0	T1	NoRel	true	UÇUŞU	uçuş
+Relation	T0	T3	NoRel	true	UÇUŞU	Kaza
+Relation	T0	T6	NoRel	true	UÇUŞU	Kazaya
+Relation	T0	T8	NoRel	true	UÇUŞU	aldı
+Relation	T0	T9	NoRel	true	UÇUŞU	Kaza
+Relation	T1	T0	NoRel	true	uçuş	UÇUŞU
+Relation	T1	T3	NoRel	true	uçuş	Kaza
+Relation	T1	T7	NoRel	true	uçuş	uçuşunu
+Relation	T2	T0	NoRel	true	uçuşudur	UÇUŞU
+Relation	T2	T1	NoRel	true	uçuşudur	uçuş
+Relation	T2	T3	NoRel	true	uçuşudur	Kaza
+Relation	T2	T4	NoRel	true	uçuşudur	öldü
+Relation	T3	T7	NoRel	true	Kaza	uçuşunu
+Relation	T3	T9	NoRel	true	Kaza	Kaza
+Relation	T4	T0	NoRel	true	öldü	UÇUŞU
+Relation	T4	T7	NoRel	true	öldü	uçuşunu
+Relation	T5	T9	NoRel	true	kurtuldu	Kaza
+Relation	T6	T2	NoRel	true	Kazaya	uçuşudur
+Relation	T6	T7	NoRel	true	Kazaya	uçuşunu
+Relation	T6	T9	NoRel	true	Kazaya	Kaza
+Relation	T7	T1	NoRel	true	uçuşunu	uçuş
+Relation	T7	T4	NoRel	true	uçuşunu	öldü
+Relation	T8	T2	NoRel	true	aldı	uçuşudur
+Relation	T8	T3	NoRel	true	aldı	Kaza
+Relation	T8	T5	NoRel	true	aldı	kurtuldu
+Relation	T8	T9	NoRel	true	aldı	Kaza
+Relation	T9	T3	NoRel	true	Kaza	Kaza
+Relation	T9	T4	NoRel	true	Kaza	öldü

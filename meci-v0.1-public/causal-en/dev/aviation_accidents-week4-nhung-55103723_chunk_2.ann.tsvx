@@ -1,0 +1,38 @@
+Text	According to the Dublin Evening Herald , cargo and some mail were destroyed in the resulting fire but it is unclear where the mail had been loaded .	The No. 4 engine suffered a fatigue failure of its No. 1 propeller blade .	According to lab results , the blade had previously been bent which resulted " in the disruption of the compressive stresses in the shot peened area of the propeller blade " being the probable cause because the unbalanced loads on the engine mounts resulted in the separation of the entire engine .	Category : 1959 in Ireland	Category : Accidents and incidents involving the Douglas DC - 6
+Event	T0	destroyed	EVENT	66
+Event	T1	fire	EVENT	93
+Event	T2	loaded	EVENT	140
+Event	T3	suffered	EVENT	166
+Event	T4	failure	EVENT	185
+Event	T5	bent	EVENT	281
+Event	T6	resulted	EVENT	292
+Event	T7	disruption	EVENT	310
+Event	T8	stresses	EVENT	340
+Event	T9	peened	EVENT	361
+Event	T10	loads	EVENT	446
+Event	T11	resulted	EVENT	473
+Event	T12	separation	EVENT	489
+Event	T13	Accidents	EVENT	561
+Relation	T1	T0	CauseEffect	true	fire	destroyed
+Relation	T0	T1	EffectCause	true	destroyed	fire
+Relation	T5	T7	CauseEffect	true	bent	disruption
+Relation	T7	T5	EffectCause	true	disruption	bent
+Relation	T10	T12	CauseEffect	true	loads	separation
+Relation	T12	T10	EffectCause	true	separation	loads
+Relation	T1	T12	NoRel	true	fire	separation
+Relation	T10	T4	NoRel	true	loads	failure
+Relation	T13	T3	NoRel	true	Accidents	suffered
+Relation	T13	T9	NoRel	true	Accidents	peened
+Relation	T2	T11	NoRel	true	loaded	resulted
+Relation	T2	T6	NoRel	true	loaded	resulted
+Relation	T3	T8	NoRel	true	suffered	stresses
+Relation	T3	T9	NoRel	true	suffered	peened
+Relation	T6	T13	NoRel	true	resulted	Accidents
+Relation	T7	T1	NoRel	true	disruption	fire
+Relation	T7	T4	NoRel	true	disruption	failure
+Relation	T7	T8	NoRel	true	disruption	stresses
+Relation	T7	T9	NoRel	true	disruption	peened
+Relation	T8	T1	NoRel	true	stresses	fire
+Relation	T8	T12	NoRel	true	stresses	separation
+Relation	T8	T3	NoRel	true	stresses	suffered
+Relation	T8	T5	NoRel	true	stresses	bent

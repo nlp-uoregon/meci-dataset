@@ -1,0 +1,47 @@
+Text	Mid-December : Prototype Myasishchev M - 17 - 1 Chayka high - altitude interceptor , painted in Aeroflot colours and bearing civil registration _ CCCP - 17100_ , becomes accidentally airborne during initial taxi trial at Kumertau , when , in poor visibility , the starboard aileron accidentally lowered and aircraft turned abruptly .	Pilot , Kir Chernobrovkin , takes off to avoid snow heap , but wingtip subsequently hits hillside and the prototype was destroyed , pilot KWF .	23 January : Aeronautica Militare Italiana , Italian Air Force Lockheed C - 130 H Hercules _ MM62000_ , ' 46 - 14 ' , of the 46 Aerobrigata , jumped chocks during engine run - up , hit tree , written - off .	Parts used to support c / n 4491,__ MM61995_ damaged in hard landing , Pisa , January 1999 .	Hull at Milan - Malpensa , Italy , December 1979 , 1989 .
+Event	T0	painted	EVENT	85
+Event	T1	registration	EVENT	131
+Event	T2	airborne	EVENT	183
+Event	T3	trial	EVENT	212
+Event	T4	lowered	EVENT	295
+Event	T5	hits	EVENT	418
+Event	T6	destroyed	EVENT	454
+Event	T8	hit	EVENT	659
+Event	T10	used	EVENT	692
+Event	T11	damaged	EVENT	731
+Event	T12	landing	EVENT	747
+Event	T13	turned	EVENT	316
+Event	T14	takes off	EVENT	362
+Event	T15	snow	EVENT	381
+Event	T9	written - off	EVENT	670
+Event	T7	jumped	EVENT	620
+Relation	T15	T14	CauseEffect	true	snow	takes off
+Relation	T14	T15	EffectCause	true	takes off	snow
+Relation	T5	T6	CauseEffect	true	hits	destroyed
+Relation	T6	T5	EffectCause	true	destroyed	hits
+Relation	T12	T11	CauseEffect	true	landing	damaged
+Relation	T11	T12	EffectCause	true	damaged	landing
+Relation	T0	T15	NoRel	true	painted	snow
+Relation	T1	T12	NoRel	true	registration	landing
+Relation	T1	T9	NoRel	true	registration	written - off
+Relation	T10	T13	NoRel	true	used	turned
+Relation	T10	T7	NoRel	true	used	jumped
+Relation	T11	T14	NoRel	true	damaged	takes off
+Relation	T11	T7	NoRel	true	damaged	jumped
+Relation	T13	T7	NoRel	true	turned	jumped
+Relation	T14	T1	NoRel	true	takes off	registration
+Relation	T14	T10	NoRel	true	takes off	used
+Relation	T15	T1	NoRel	true	snow	registration
+Relation	T15	T3	NoRel	true	snow	trial
+Relation	T2	T4	NoRel	true	airborne	lowered
+Relation	T3	T9	NoRel	true	trial	written - off
+Relation	T4	T0	NoRel	true	lowered	painted
+Relation	T4	T15	NoRel	true	lowered	snow
+Relation	T5	T10	NoRel	true	hits	used
+Relation	T5	T7	NoRel	true	hits	jumped
+Relation	T6	T0	NoRel	true	destroyed	painted
+Relation	T6	T14	NoRel	true	destroyed	takes off
+Relation	T6	T15	NoRel	true	destroyed	snow
+Relation	T8	T13	NoRel	true	hit	turned
+Relation	T8	T4	NoRel	true	hit	lowered
+Relation	T9	T13	NoRel	true	written - off	turned

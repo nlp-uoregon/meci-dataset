@@ -1,0 +1,88 @@
+Text	They were allowed to return after 1856 .	During their period of exile , rivalry between the various factions became obvious , a conflict which became the basis for political allegiances in later years .	In the meantime , Magheru , upon the advice of Colquhoun , ordered the demobilization of his troops ( October 10 ) , and , accompanied by a few of his officers , passed the Southern Carpathians into Hermannstadt — at the time , the Transylvanian city was nominally in the Austrian Empire , but gripped by the Hungarian Revolution .	Starting in December 1848 , a number of Wallachian revolutionaries who had escaped or had been set free from arrest began mediating an understanding between Hungary 's Lajos Kossuth and those Romanian Transylvanian activists and peasants who , under the leadership of Avram Iancu , were mounting military resistance to the _ Honvédség _ troops of Józef Bem .	Nicolae Bălcescu emerged from his refuge in the Principality of Serbia , and , together with Alexandru G. Golescu and Ion Ionescu de la Brad , began talks with Iancu in Zlatna .
+Event	T0	allowed	EVENT	10
+Event	T1	return	EVENT	21
+Event	T2	exile	EVENT	64
+Event	T3	rivalry	EVENT	72
+Event	T4	obvious	EVENT	116
+Event	T5	conflict	EVENT	128
+Event	T6	became	EVENT	143
+Event	T7	allegiances	EVENT	174
+Event	T8	ordered	EVENT	262
+Event	T9	demobilization	EVENT	274
+Event	T10	passed	EVENT	365
+Event	T11	gripped	EVENT	497
+Event	T12	Revolution	EVENT	522
+Event	T13	Starting	EVENT	535
+Event	T14	escaped	EVENT	610
+Event	T15	mediating	EVENT	657
+Event	T16	understanding	EVENT	670
+Event	T17	mounting	EVENT	822
+Event	T18	resistance	EVENT	840
+Event	T19	emerged	EVENT	911
+Event	T20	refuge	EVENT	928
+Event	T21	talks	EVENT	1043
+Event	T22	advice	EVENT	240
+Event	T23	accompanied	EVENT	326
+Relation	T5	T7	CauseEffect	true	conflict	allegiances
+Relation	T7	T5	EffectCause	true	allegiances	conflict
+Relation	T22	T8	CauseEffect	true	advice	ordered
+Relation	T8	T22	EffectCause	true	ordered	advice
+Relation	T22	T10	CauseEffect	true	advice	passed
+Relation	T10	T22	EffectCause	true	passed	advice
+Relation	T0	T20	NoRel	true	allowed	refuge
+Relation	T1	T22	NoRel	true	return	advice
+Relation	T1	T9	NoRel	true	return	demobilization
+Relation	T10	T15	NoRel	true	passed	mediating
+Relation	T10	T19	NoRel	true	passed	emerged
+Relation	T10	T6	NoRel	true	passed	became
+Relation	T11	T19	NoRel	true	gripped	emerged
+Relation	T12	T2	NoRel	true	Revolution	exile
+Relation	T12	T21	NoRel	true	Revolution	talks
+Relation	T12	T8	NoRel	true	Revolution	ordered
+Relation	T13	T15	NoRel	true	Starting	mediating
+Relation	T13	T5	NoRel	true	Starting	conflict
+Relation	T14	T13	NoRel	true	escaped	Starting
+Relation	T14	T19	NoRel	true	escaped	emerged
+Relation	T14	T4	NoRel	true	escaped	obvious
+Relation	T15	T0	NoRel	true	mediating	allowed
+Relation	T15	T1	NoRel	true	mediating	return
+Relation	T15	T10	NoRel	true	mediating	passed
+Relation	T15	T18	NoRel	true	mediating	resistance
+Relation	T15	T21	NoRel	true	mediating	talks
+Relation	T15	T9	NoRel	true	mediating	demobilization
+Relation	T16	T19	NoRel	true	understanding	emerged
+Relation	T17	T13	NoRel	true	mounting	Starting
+Relation	T17	T16	NoRel	true	mounting	understanding
+Relation	T17	T5	NoRel	true	mounting	conflict
+Relation	T17	T8	NoRel	true	mounting	ordered
+Relation	T19	T11	NoRel	true	emerged	gripped
+Relation	T19	T4	NoRel	true	emerged	obvious
+Relation	T19	T9	NoRel	true	emerged	demobilization
+Relation	T2	T10	NoRel	true	exile	passed
+Relation	T2	T16	NoRel	true	exile	understanding
+Relation	T2	T17	NoRel	true	exile	mounting
+Relation	T2	T22	NoRel	true	exile	advice
+Relation	T20	T1	NoRel	true	refuge	return
+Relation	T20	T16	NoRel	true	refuge	understanding
+Relation	T20	T22	NoRel	true	refuge	advice
+Relation	T20	T5	NoRel	true	refuge	conflict
+Relation	T21	T18	NoRel	true	talks	resistance
+Relation	T21	T20	NoRel	true	talks	refuge
+Relation	T21	T5	NoRel	true	talks	conflict
+Relation	T21	T8	NoRel	true	talks	ordered
+Relation	T22	T21	NoRel	true	advice	talks
+Relation	T23	T12	NoRel	true	accompanied	Revolution
+Relation	T3	T17	NoRel	true	rivalry	mounting
+Relation	T3	T5	NoRel	true	rivalry	conflict
+Relation	T4	T10	NoRel	true	obvious	passed
+Relation	T4	T3	NoRel	true	obvious	rivalry
+Relation	T6	T12	NoRel	true	became	Revolution
+Relation	T6	T3	NoRel	true	became	rivalry
+Relation	T6	T4	NoRel	true	became	obvious
+Relation	T6	T9	NoRel	true	became	demobilization
+Relation	T7	T1	NoRel	true	allegiances	return
+Relation	T8	T10	NoRel	true	ordered	passed
+Relation	T8	T12	NoRel	true	ordered	Revolution
+Relation	T8	T23	NoRel	true	ordered	accompanied
+Relation	T9	T5	NoRel	true	demobilization	conflict
+Relation	T9	T8	NoRel	true	demobilization	ordered

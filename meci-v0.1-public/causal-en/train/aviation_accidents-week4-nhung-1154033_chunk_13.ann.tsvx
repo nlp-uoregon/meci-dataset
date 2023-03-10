@@ -1,0 +1,79 @@
+Text	Several minutes later , as recorded by Indonesian ground radar , the aircraft entered a rapid descent , disintegrated , and crashed into the Musi River .	On 14 December 2000 , after three years of investigation , the Indonesian NTSC issued its final report .	The NTSC chairman overrode the findings of his investigators — that the crash was caused deliberately by pilot input — so that the report stated that the evidence was inconclusive and that the cause of the accident could not be determined .	The US NTSB , which also participated in the investigation , concluded that the evidence was consistent with a deliberate manipulation of the flight controls , most likely by the captain .	1 ) no airplane - related mechanical malfunctions or failures caused or contributed to the accident , and
+Event	T0	recorded	EVENT	27
+Event	T1	entered	EVENT	78
+Event	T2	descent	EVENT	94
+Event	T3	disintegrated	EVENT	104
+Event	T4	investigation	EVENT	197
+Event	T5	issued	EVENT	233
+Event	T6	report	EVENT	250
+Event	T7	overrode	EVENT	277
+Event	T8	findings	EVENT	290
+Event	T9	crash	EVENT	331
+Event	T10	caused	EVENT	341
+Event	T11	input	EVENT	370
+Event	T12	stated	EVENT	397
+Event	T13	accident	EVENT	465
+Event	T14	determined	EVENT	487
+Event	T15	participated	EVENT	525
+Event	T16	investigation	EVENT	545
+Event	T17	concluded	EVENT	561
+Event	T18	manipulation	EVENT	622
+Event	T19	malfunctions	EVENT	726
+Event	T21	accident	EVENT	780
+Event	T22	crashed	EVENT	124
+Event	T20	failures	EVENT	742
+Relation	T4	T5	CauseEffect	true	investigation	issued
+Relation	T5	T4	EffectCause	true	issued	investigation
+Relation	T11	T9	CauseEffect	true	input	crash
+Relation	T9	T11	EffectCause	true	crash	input
+Relation	T0	T13	NoRel	true	recorded	accident
+Relation	T10	T1	NoRel	true	caused	entered
+Relation	T10	T2	NoRel	true	caused	descent
+Relation	T10	T21	NoRel	true	caused	accident
+Relation	T10	T8	NoRel	true	caused	findings
+Relation	T11	T1	NoRel	true	input	entered
+Relation	T11	T21	NoRel	true	input	accident
+Relation	T11	T4	NoRel	true	input	investigation
+Relation	T11	T6	NoRel	true	input	report
+Relation	T12	T13	NoRel	true	stated	accident
+Relation	T12	T6	NoRel	true	stated	report
+Relation	T14	T10	NoRel	true	determined	caused
+Relation	T14	T13	NoRel	true	determined	accident
+Relation	T14	T6	NoRel	true	determined	report
+Relation	T15	T11	NoRel	true	participated	input
+Relation	T15	T14	NoRel	true	participated	determined
+Relation	T15	T17	NoRel	true	participated	concluded
+Relation	T15	T4	NoRel	true	participated	investigation
+Relation	T15	T8	NoRel	true	participated	findings
+Relation	T16	T10	NoRel	true	investigation	caused
+Relation	T17	T14	NoRel	true	concluded	determined
+Relation	T17	T15	NoRel	true	concluded	participated
+Relation	T17	T4	NoRel	true	concluded	investigation
+Relation	T17	T8	NoRel	true	concluded	findings
+Relation	T18	T4	NoRel	true	manipulation	investigation
+Relation	T19	T13	NoRel	true	malfunctions	accident
+Relation	T19	T22	NoRel	true	malfunctions	crashed
+Relation	T2	T16	NoRel	true	descent	investigation
+Relation	T2	T18	NoRel	true	descent	manipulation
+Relation	T2	T19	NoRel	true	descent	malfunctions
+Relation	T20	T6	NoRel	true	failures	report
+Relation	T22	T18	NoRel	true	crashed	manipulation
+Relation	T3	T17	NoRel	true	disintegrated	concluded
+Relation	T3	T5	NoRel	true	disintegrated	issued
+Relation	T4	T11	NoRel	true	investigation	input
+Relation	T4	T2	NoRel	true	investigation	descent
+Relation	T5	T15	NoRel	true	issued	participated
+Relation	T5	T7	NoRel	true	issued	overrode
+Relation	T6	T0	NoRel	true	report	recorded
+Relation	T6	T15	NoRel	true	report	participated
+Relation	T6	T22	NoRel	true	report	crashed
+Relation	T6	T8	NoRel	true	report	findings
+Relation	T7	T1	NoRel	true	overrode	entered
+Relation	T7	T13	NoRel	true	overrode	accident
+Relation	T7	T15	NoRel	true	overrode	participated
+Relation	T7	T18	NoRel	true	overrode	manipulation
+Relation	T8	T0	NoRel	true	findings	recorded
+Relation	T8	T1	NoRel	true	findings	entered
+Relation	T8	T4	NoRel	true	findings	investigation
+Relation	T8	T6	NoRel	true	findings	report
+Relation	T9	T6	NoRel	true	crash	report

@@ -1,0 +1,46 @@
+Text	The impact was so powerful that the strongest part of the aircraft was obliterated .	The NTSC also stated that the engines of Flight 610 were still running when it crashed into the sea , indicated by the high RPM .	Further examination of the aircraft 's instruments revealed that one of the aircraft 's airspeed indicators had malfunctioned for its last four flights , including the flight to Denpasar .	On 7 November , the NTSC confirmed that there had been problems with Flight 610 's angle of attack ( AoA ) sensors .	Thinking that it would fix the problem , the engineers in Bali then replaced one of the aircraft 's AoA sensors , but the problem persisted on the penultimate flight , from Denpasar to Jakarta .
+Event	T0	impact	EVENT	4
+Event	T1	obliterated	EVENT	71
+Event	T2	stated	EVENT	99
+Event	T3	running	EVENT	148
+Event	T4	indicated	EVENT	187
+Event	T5	examination	EVENT	223
+Event	T6	revealed	EVENT	266
+Event	T7	malfunctioned	EVENT	327
+Event	T8	flights	EVENT	359
+Event	T9	flight	EVENT	383
+Event	T10	confirmed	EVENT	429
+Event	T11	problems	EVENT	459
+Event	T12	attack	EVENT	496
+Event	T13	Thinking	EVENT	521
+Event	T14	fix	EVENT	544
+Event	T15	problem	EVENT	552
+Event	T16	replaced	EVENT	589
+Event	T17	persisted	EVENT	651
+Event	T18	flight	EVENT	680
+Event	T19	crashed	EVENT	164
+Relation	T0	T1	CauseEffect	true	impact	obliterated
+Relation	T1	T0	EffectCause	true	obliterated	impact
+Relation	T5	T6	CauseEffect	true	examination	revealed
+Relation	T6	T5	EffectCause	true	revealed	examination
+Relation	T13	T16	CauseEffect	true	Thinking	replaced
+Relation	T16	T13	EffectCause	true	replaced	Thinking
+Relation	T10	T9	NoRel	true	confirmed	flight
+Relation	T11	T15	NoRel	true	problems	problem
+Relation	T12	T11	NoRel	true	attack	problems
+Relation	T15	T7	NoRel	true	problem	malfunctioned
+Relation	T16	T0	NoRel	true	replaced	impact
+Relation	T16	T18	NoRel	true	replaced	flight
+Relation	T16	T2	NoRel	true	replaced	stated
+Relation	T17	T2	NoRel	true	persisted	stated
+Relation	T18	T5	NoRel	true	flight	examination
+Relation	T2	T16	NoRel	true	stated	replaced
+Relation	T2	T4	NoRel	true	stated	indicated
+Relation	T2	T5	NoRel	true	stated	examination
+Relation	T3	T14	NoRel	true	running	fix
+Relation	T3	T16	NoRel	true	running	replaced
+Relation	T4	T9	NoRel	true	indicated	flight
+Relation	T5	T11	NoRel	true	examination	problems
+Relation	T6	T19	NoRel	true	revealed	crashed
+Relation	T6	T9	NoRel	true	revealed	flight
+Relation	T9	T2	NoRel	true	flight	stated

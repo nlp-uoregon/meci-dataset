@@ -1,0 +1,38 @@
+Text	Luke reddeder ve İmparator ona Güç yıldırımıyla işkence eder .	Oğlunun ölmesine izin vermek istemeyen Vader , İmparatoru ölümüne bir reaktör kanalına atar ( Bu olay üzerine Palpatine'in öldüğü sanılsa da ' ' Skywalker'ın Yükselişi'''nde ölmediği ortaya çıkar .	) .	Vader imparatoru kanala atarken Güç yıldırımlarından büyük hasar alır .	Sistemleri bozulur .
+Event	T0	reddeder	EVENT	5
+Event	T1	eder	EVENT	56
+Event	T4	atar	EVENT	150
+Event	T5	olay	EVENT	160
+Event	T6	sanılsa	EVENT	193
+Event	T7	çıkar	EVENT	253
+Event	T8	atarken	EVENT	289
+Event	T9	alır	EVENT	330
+Event	T10	bozulur	EVENT	348
+Relation	T0	T1	CauseEffect	true	reddeder	eder
+Relation	T1	T0	EffectCause	true	eder	reddeder
+Relation	T1	T4	CauseEffect	true	eder	atar
+Relation	T4	T1	EffectCause	true	atar	eder
+Relation	T4	T9	CauseEffect	true	atar	alır
+Relation	T9	T4	EffectCause	true	alır	atar
+Relation	T9	T10	CauseEffect	true	alır	bozulur
+Relation	T10	T9	EffectCause	true	bozulur	alır
+Relation	T0	T4	NoRel	true	reddeder	atar
+Relation	T0	T5	NoRel	true	reddeder	olay
+Relation	T0	T8	NoRel	true	reddeder	atarken
+Relation	T0	T9	NoRel	true	reddeder	alır
+Relation	T1	T5	NoRel	true	eder	olay
+Relation	T4	T10	NoRel	true	atar	bozulur
+Relation	T4	T5	NoRel	true	atar	olay
+Relation	T5	T10	NoRel	true	olay	bozulur
+Relation	T5	T4	NoRel	true	olay	atar
+Relation	T5	T6	NoRel	true	olay	sanılsa
+Relation	T6	T1	NoRel	true	sanılsa	eder
+Relation	T6	T10	NoRel	true	sanılsa	bozulur
+Relation	T6	T4	NoRel	true	sanılsa	atar
+Relation	T7	T1	NoRel	true	çıkar	eder
+Relation	T7	T5	NoRel	true	çıkar	olay
+Relation	T8	T0	NoRel	true	atarken	reddeder
+Relation	T8	T10	NoRel	true	atarken	bozulur
+Relation	T8	T7	NoRel	true	atarken	çıkar
+Relation	T8	T9	NoRel	true	atarken	alır
+Relation	T9	T0	NoRel	true	alır	reddeder

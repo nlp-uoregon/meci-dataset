@@ -1,0 +1,102 @@
+Text	Gracias al embargo se consiguió este objetivo .	El control del gobierno estadounidense , pensado para mantener el precio a unos niveles aceptables , acabó aumentando el impacto económico debido a los cortes de suministro .	Como consecuencia , se inició una prolongada recesión y aumentó notablemente la inflación .	Esta situación duraría hasta principios de los años 80 .	Los efectos del embargo son claros : se duplicó el precio real del crudo a la entrada de la refinería y se produjeron cortes de suministro .
+Event	T0	embargo	EVENT	11
+Event	T1	consiguió	EVENT	22
+Event	T2	control	EVENT	51
+Event	T3	pensado	EVENT	89
+Event	T4	aumentando	EVENT	155
+Event	T5	impacto	EVENT	169
+Event	T6	cortes	EVENT	200
+Event	T7	inició	EVENT	246
+Event	T8	recesión	EVENT	268
+Event	T9	aumentó	EVENT	279
+Event	T10	inflación	EVENT	303
+Event	T11	duraría	EVENT	330
+Event	T12	efectos	EVENT	376
+Event	T13	embargo	EVENT	388
+Event	T14	duplicó	EVENT	412
+Event	T16	cortes	EVENT	490
+Relation	T2	T5	CauseEffect	true	control	impacto
+Relation	T5	T2	EffectCause	true	impacto	control
+Relation	T6	T5	CauseEffect	true	cortes	impacto
+Relation	T5	T6	EffectCause	true	impacto	cortes
+Relation	T13	T14	CauseEffect	true	embargo	duplicó
+Relation	T14	T13	EffectCause	true	duplicó	embargo
+Relation	T13	T16	CauseEffect	true	embargo	cortes
+Relation	T16	T13	EffectCause	true	cortes	embargo
+Relation	T0	T11	NoRel	true	embargo	duraría
+Relation	T0	T16	NoRel	true	embargo	cortes
+Relation	T0	T3	NoRel	true	embargo	pensado
+Relation	T0	T5	NoRel	true	embargo	impacto
+Relation	T0	T8	NoRel	true	embargo	recesión
+Relation	T1	T0	NoRel	true	consiguió	embargo
+Relation	T1	T12	NoRel	true	consiguió	efectos
+Relation	T1	T13	NoRel	true	consiguió	embargo
+Relation	T1	T16	NoRel	true	consiguió	cortes
+Relation	T1	T2	NoRel	true	consiguió	control
+Relation	T1	T4	NoRel	true	consiguió	aumentando
+Relation	T1	T5	NoRel	true	consiguió	impacto
+Relation	T10	T14	NoRel	true	inflación	duplicó
+Relation	T10	T16	NoRel	true	inflación	cortes
+Relation	T10	T4	NoRel	true	inflación	aumentando
+Relation	T11	T1	NoRel	true	duraría	consiguió
+Relation	T11	T16	NoRel	true	duraría	cortes
+Relation	T12	T0	NoRel	true	efectos	embargo
+Relation	T12	T1	NoRel	true	efectos	consiguió
+Relation	T12	T11	NoRel	true	efectos	duraría
+Relation	T12	T16	NoRel	true	efectos	cortes
+Relation	T12	T2	NoRel	true	efectos	control
+Relation	T12	T6	NoRel	true	efectos	cortes
+Relation	T12	T8	NoRel	true	efectos	recesión
+Relation	T12	T9	NoRel	true	efectos	aumentó
+Relation	T13	T1	NoRel	true	embargo	consiguió
+Relation	T13	T10	NoRel	true	embargo	inflación
+Relation	T13	T11	NoRel	true	embargo	duraría
+Relation	T13	T2	NoRel	true	embargo	control
+Relation	T13	T3	NoRel	true	embargo	pensado
+Relation	T13	T5	NoRel	true	embargo	impacto
+Relation	T13	T7	NoRel	true	embargo	inició
+Relation	T14	T11	NoRel	true	duplicó	duraría
+Relation	T14	T16	NoRel	true	duplicó	cortes
+Relation	T14	T2	NoRel	true	duplicó	control
+Relation	T14	T3	NoRel	true	duplicó	pensado
+Relation	T14	T9	NoRel	true	duplicó	aumentó
+Relation	T16	T1	NoRel	true	cortes	consiguió
+Relation	T16	T14	NoRel	true	cortes	duplicó
+Relation	T16	T4	NoRel	true	cortes	aumentando
+Relation	T16	T5	NoRel	true	cortes	impacto
+Relation	T16	T7	NoRel	true	cortes	inició
+Relation	T2	T1	NoRel	true	control	consiguió
+Relation	T2	T10	NoRel	true	control	inflación
+Relation	T2	T16	NoRel	true	control	cortes
+Relation	T3	T1	NoRel	true	pensado	consiguió
+Relation	T3	T12	NoRel	true	pensado	efectos
+Relation	T3	T13	NoRel	true	pensado	embargo
+Relation	T3	T8	NoRel	true	pensado	recesión
+Relation	T4	T16	NoRel	true	aumentando	cortes
+Relation	T4	T7	NoRel	true	aumentando	inició
+Relation	T5	T12	NoRel	true	impacto	efectos
+Relation	T5	T13	NoRel	true	impacto	embargo
+Relation	T5	T16	NoRel	true	impacto	cortes
+Relation	T5	T7	NoRel	true	impacto	inició
+Relation	T5	T8	NoRel	true	impacto	recesión
+Relation	T5	T9	NoRel	true	impacto	aumentó
+Relation	T6	T10	NoRel	true	cortes	inflación
+Relation	T6	T2	NoRel	true	cortes	control
+Relation	T6	T9	NoRel	true	cortes	aumentó
+Relation	T7	T0	NoRel	true	inició	embargo
+Relation	T7	T1	NoRel	true	inició	consiguió
+Relation	T7	T10	NoRel	true	inició	inflación
+Relation	T7	T13	NoRel	true	inició	embargo
+Relation	T7	T2	NoRel	true	inició	control
+Relation	T7	T6	NoRel	true	inició	cortes
+Relation	T8	T0	NoRel	true	recesión	embargo
+Relation	T8	T14	NoRel	true	recesión	duplicó
+Relation	T8	T9	NoRel	true	recesión	aumentó
+Relation	T9	T0	NoRel	true	aumentó	embargo
+Relation	T9	T13	NoRel	true	aumentó	embargo
+Relation	T9	T14	NoRel	true	aumentó	duplicó
+Relation	T9	T16	NoRel	true	aumentó	cortes
+Relation	T9	T2	NoRel	true	aumentó	control
+Relation	T9	T4	NoRel	true	aumentó	aumentando
+Relation	T9	T5	NoRel	true	aumentó	impacto
+Relation	T9	T6	NoRel	true	aumentó	cortes

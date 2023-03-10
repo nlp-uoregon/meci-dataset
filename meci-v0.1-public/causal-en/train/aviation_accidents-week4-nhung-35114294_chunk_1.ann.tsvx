@@ -1,0 +1,45 @@
+Text	All on board perished .	The investigation into the disaster concluded that the main factor in the crash was that the crew attempted to land below the indicated minimum weather conditions for the instrument approach .	Category : Airliner accidents and incidents caused by pilot error	Category : Aviation accidents and incidents in 1988 Category : Accidents and incidents involving the McDonnell Douglas MD - 81	Category : Aviation accidents and incidents in Argentina
+Event	T0	perished	EVENT	13
+Event	T1	investigation	EVENT	28
+Event	T2	concluded	EVENT	60
+Event	T3	crash	EVENT	98
+Event	T4	attempted	EVENT	122
+Event	T5	land	EVENT	135
+Event	T6	indicated	EVENT	150
+Event	T7	approach	EVENT	206
+Event	T8	accidents	EVENT	237
+Event	T9	caused	EVENT	261
+Event	T10	accidents	EVENT	303
+Event	T11	incidents	EVENT	317
+Event	T12	Accidents	EVENT	346
+Event	T13	accidents	EVENT	430
+Event	T14	incidents	EVENT	444
+Event	T15	disaster	EVENT	51
+Event	T16	incidents	EVENT	360
+Relation	T0	T1	CauseEffect	true	perished	investigation
+Relation	T1	T0	EffectCause	true	investigation	perished
+Relation	T15	T1	CauseEffect	true	disaster	investigation
+Relation	T1	T15	EffectCause	true	investigation	disaster
+Relation	T4	T3	CauseEffect	true	attempted	crash
+Relation	T3	T4	EffectCause	true	crash	attempted
+Relation	T0	T13	NoRel	true	perished	accidents
+Relation	T0	T7	NoRel	true	perished	approach
+Relation	T1	T9	NoRel	true	investigation	caused
+Relation	T10	T16	NoRel	true	accidents	incidents
+Relation	T11	T8	NoRel	true	incidents	accidents
+Relation	T12	T5	NoRel	true	Accidents	land
+Relation	T13	T8	NoRel	true	accidents	accidents
+Relation	T15	T4	NoRel	true	disaster	attempted
+Relation	T2	T15	NoRel	true	concluded	disaster
+Relation	T2	T4	NoRel	true	concluded	attempted
+Relation	T3	T12	NoRel	true	crash	Accidents
+Relation	T4	T0	NoRel	true	attempted	perished
+Relation	T4	T15	NoRel	true	attempted	disaster
+Relation	T5	T2	NoRel	true	land	concluded
+Relation	T6	T0	NoRel	true	indicated	perished
+Relation	T7	T1	NoRel	true	approach	investigation
+Relation	T7	T12	NoRel	true	approach	Accidents
+Relation	T7	T14	NoRel	true	approach	incidents
+Relation	T7	T2	NoRel	true	approach	concluded
+Relation	T8	T4	NoRel	true	accidents	attempted
+Relation	T9	T16	NoRel	true	caused	incidents

@@ -1,0 +1,47 @@
+Text	Ama Spartakistler Birliği bu karşı devrimi engelleyebilecek kadar ne güçlüydüler ne de örgütlüydüler .	küçükresim | 250px | Anti - komünist askerler Berlin'de Silezya Tren İstasyonu'nda , 1919 Kitleler hâlâ SPD’nin yoğun bir etkisi altındaydılar .	Spartakistlerin ajitasyon ve propaganda çalışmaları işçi sınıfını kendine çekmekte yetersiz kalıyordu .	Kitleler parlamentonun kurulmasını ve bir an önce seçimlerin yapılmasını istiyordu .	Karşı devrim gittikçe güçleniyordu .
+Event	T0	etkisi	EVENT	225
+Event	T1	ajitasyon	EVENT	264
+Event	T3	devrim	EVENT	443
+Event	T4	güçleniyordu	EVENT	459
+Event	T5	devrimi	EVENT	35
+Event	T6	propaganda	EVENT	277
+Event	T2	çekmekte	EVENT	322
+Event	T7	kurulmasını	EVENT	375
+Event	T8	seçimlerin	EVENT	402
+Event	T9	kalıyordu	EVENT	340
+Event	T10	istiyordu	EVENT	425
+Relation	T9	T10	CauseEffect	true	kalıyordu	istiyordu
+Relation	T10	T9	EffectCause	true	istiyordu	kalıyordu
+Relation	T9	T4	CauseEffect	true	kalıyordu	güçleniyordu
+Relation	T4	T9	EffectCause	true	güçleniyordu	kalıyordu
+Relation	T0	T1	NoRel	true	etkisi	ajitasyon
+Relation	T0	T10	NoRel	true	etkisi	istiyordu
+Relation	T0	T7	NoRel	true	etkisi	kurulmasını
+Relation	T0	T8	NoRel	true	etkisi	seçimlerin
+Relation	T1	T0	NoRel	true	ajitasyon	etkisi
+Relation	T1	T8	NoRel	true	ajitasyon	seçimlerin
+Relation	T10	T2	NoRel	true	istiyordu	çekmekte
+Relation	T10	T5	NoRel	true	istiyordu	devrimi
+Relation	T10	T6	NoRel	true	istiyordu	propaganda
+Relation	T2	T6	NoRel	true	çekmekte	propaganda
+Relation	T2	T8	NoRel	true	çekmekte	seçimlerin
+Relation	T3	T1	NoRel	true	devrim	ajitasyon
+Relation	T3	T2	NoRel	true	devrim	çekmekte
+Relation	T3	T6	NoRel	true	devrim	propaganda
+Relation	T4	T2	NoRel	true	güçleniyordu	çekmekte
+Relation	T4	T6	NoRel	true	güçleniyordu	propaganda
+Relation	T4	T7	NoRel	true	güçleniyordu	kurulmasını
+Relation	T5	T1	NoRel	true	devrimi	ajitasyon
+Relation	T5	T4	NoRel	true	devrimi	güçleniyordu
+Relation	T5	T6	NoRel	true	devrimi	propaganda
+Relation	T5	T7	NoRel	true	devrimi	kurulmasını
+Relation	T6	T0	NoRel	true	propaganda	etkisi
+Relation	T6	T4	NoRel	true	propaganda	güçleniyordu
+Relation	T6	T5	NoRel	true	propaganda	devrimi
+Relation	T7	T0	NoRel	true	kurulmasını	etkisi
+Relation	T7	T1	NoRel	true	kurulmasını	ajitasyon
+Relation	T7	T2	NoRel	true	kurulmasını	çekmekte
+Relation	T7	T6	NoRel	true	kurulmasını	propaganda
+Relation	T8	T4	NoRel	true	seçimlerin	güçleniyordu
+Relation	T9	T0	NoRel	true	kalıyordu	etkisi
+Relation	T9	T1	NoRel	true	kalıyordu	ajitasyon

@@ -1,0 +1,119 @@
+Text	Tras el incremento del motor número uno hasta el 74% N₁ , los movimientos de las palancas de gases no tuvieron ningún efecto en la velocidad de rotación del motor .	A las 13:43 hora local ( 05:43 UTC ) y once minutos después de declarar el “ Mayday ” , la tripulación aterrizó el avión en la pista 07L de Chek Lap Kok a una velocidad de 426 kilómetros por hora .	Esta velocidad estaba 176 km/h por encima de la velocidad normal de aterrizaje de un A330 , y por encima de la velocidad máxima permitida para la extensión de flaps e incluso la velocidad era excesiva para las recomendaciones de despliegue de ruedas .	Tras el aterrizaje sólo las reversas del motor número uno se desplegaron y la tripulación se las ingenió para detener el avión usando el máximo frenado posible .	El motor número uno seguía en cifras de entre 70% y 80% N₁ hasta que la tripulación apagó ambos motores tras detener completamente el avión .
+Event	T0	incremento	EVENT	8
+Event	T1	movimientos	EVENT	62
+Event	T2	rotación	EVENT	144
+Event	T3	declarar	EVENT	228
+Event	T4	aterrizó	EVENT	268
+Event	T5	aterrizaje	EVENT	431
+Event	T6	extensión	EVENT	509
+Event	T7	flaps	EVENT	522
+Event	T8	recomendaciones	EVENT	573
+Event	T9	despliegue	EVENT	592
+Event	T10	aterrizaje	EVENT	623
+Event	T11	desplegaron	EVENT	676
+Event	T12	ingenió	EVENT	712
+Event	T13	detener	EVENT	725
+Event	T14	frenado	EVENT	759
+Event	T15	cifras	EVENT	807
+Event	T16	apagó	EVENT	861
+Event	T17	detener	EVENT	886
+Relation	T12	T13	CauseEffect	true	ingenió	detener
+Relation	T13	T12	EffectCause	true	detener	ingenió
+Relation	T17	T16	CauseEffect	true	detener	apagó
+Relation	T16	T17	EffectCause	true	apagó	detener
+Relation	T0	T10	NoRel	true	incremento	aterrizaje
+Relation	T0	T4	NoRel	true	incremento	aterrizó
+Relation	T0	T7	NoRel	true	incremento	flaps
+Relation	T0	T8	NoRel	true	incremento	recomendaciones
+Relation	T1	T0	NoRel	true	movimientos	incremento
+Relation	T1	T11	NoRel	true	movimientos	desplegaron
+Relation	T1	T16	NoRel	true	movimientos	apagó
+Relation	T1	T17	NoRel	true	movimientos	detener
+Relation	T1	T6	NoRel	true	movimientos	extensión
+Relation	T1	T7	NoRel	true	movimientos	flaps
+Relation	T1	T8	NoRel	true	movimientos	recomendaciones
+Relation	T10	T0	NoRel	true	aterrizaje	incremento
+Relation	T10	T11	NoRel	true	aterrizaje	desplegaron
+Relation	T10	T2	NoRel	true	aterrizaje	rotación
+Relation	T10	T4	NoRel	true	aterrizaje	aterrizó
+Relation	T10	T5	NoRel	true	aterrizaje	aterrizaje
+Relation	T10	T6	NoRel	true	aterrizaje	extensión
+Relation	T10	T8	NoRel	true	aterrizaje	recomendaciones
+Relation	T11	T0	NoRel	true	desplegaron	incremento
+Relation	T11	T15	NoRel	true	desplegaron	cifras
+Relation	T11	T3	NoRel	true	desplegaron	declarar
+Relation	T11	T5	NoRel	true	desplegaron	aterrizaje
+Relation	T11	T6	NoRel	true	desplegaron	extensión
+Relation	T12	T15	NoRel	true	ingenió	cifras
+Relation	T12	T4	NoRel	true	ingenió	aterrizó
+Relation	T12	T9	NoRel	true	ingenió	despliegue
+Relation	T13	T1	NoRel	true	detener	movimientos
+Relation	T13	T11	NoRel	true	detener	desplegaron
+Relation	T13	T2	NoRel	true	detener	rotación
+Relation	T13	T5	NoRel	true	detener	aterrizaje
+Relation	T13	T9	NoRel	true	detener	despliegue
+Relation	T14	T1	NoRel	true	frenado	movimientos
+Relation	T14	T11	NoRel	true	frenado	desplegaron
+Relation	T14	T13	NoRel	true	frenado	detener
+Relation	T14	T16	NoRel	true	frenado	apagó
+Relation	T14	T17	NoRel	true	frenado	detener
+Relation	T14	T4	NoRel	true	frenado	aterrizó
+Relation	T14	T5	NoRel	true	frenado	aterrizaje
+Relation	T15	T10	NoRel	true	cifras	aterrizaje
+Relation	T15	T8	NoRel	true	cifras	recomendaciones
+Relation	T15	T9	NoRel	true	cifras	despliegue
+Relation	T16	T1	NoRel	true	apagó	movimientos
+Relation	T16	T11	NoRel	true	apagó	desplegaron
+Relation	T16	T2	NoRel	true	apagó	rotación
+Relation	T16	T4	NoRel	true	apagó	aterrizó
+Relation	T16	T5	NoRel	true	apagó	aterrizaje
+Relation	T16	T7	NoRel	true	apagó	flaps
+Relation	T17	T0	NoRel	true	detener	incremento
+Relation	T17	T10	NoRel	true	detener	aterrizaje
+Relation	T17	T12	NoRel	true	detener	ingenió
+Relation	T17	T4	NoRel	true	detener	aterrizó
+Relation	T17	T7	NoRel	true	detener	flaps
+Relation	T17	T9	NoRel	true	detener	despliegue
+Relation	T2	T13	NoRel	true	rotación	detener
+Relation	T2	T15	NoRel	true	rotación	cifras
+Relation	T2	T17	NoRel	true	rotación	detener
+Relation	T2	T3	NoRel	true	rotación	declarar
+Relation	T2	T4	NoRel	true	rotación	aterrizó
+Relation	T2	T5	NoRel	true	rotación	aterrizaje
+Relation	T2	T9	NoRel	true	rotación	despliegue
+Relation	T3	T1	NoRel	true	declarar	movimientos
+Relation	T3	T10	NoRel	true	declarar	aterrizaje
+Relation	T3	T13	NoRel	true	declarar	detener
+Relation	T3	T14	NoRel	true	declarar	frenado
+Relation	T3	T7	NoRel	true	declarar	flaps
+Relation	T3	T9	NoRel	true	declarar	despliegue
+Relation	T4	T10	NoRel	true	aterrizó	aterrizaje
+Relation	T4	T13	NoRel	true	aterrizó	detener
+Relation	T4	T16	NoRel	true	aterrizó	apagó
+Relation	T4	T17	NoRel	true	aterrizó	detener
+Relation	T4	T6	NoRel	true	aterrizó	extensión
+Relation	T4	T8	NoRel	true	aterrizó	recomendaciones
+Relation	T4	T9	NoRel	true	aterrizó	despliegue
+Relation	T5	T0	NoRel	true	aterrizaje	incremento
+Relation	T5	T13	NoRel	true	aterrizaje	detener
+Relation	T5	T17	NoRel	true	aterrizaje	detener
+Relation	T5	T4	NoRel	true	aterrizaje	aterrizó
+Relation	T5	T7	NoRel	true	aterrizaje	flaps
+Relation	T6	T0	NoRel	true	extensión	incremento
+Relation	T6	T10	NoRel	true	extensión	aterrizaje
+Relation	T6	T12	NoRel	true	extensión	ingenió
+Relation	T6	T14	NoRel	true	extensión	frenado
+Relation	T6	T15	NoRel	true	extensión	cifras
+Relation	T6	T17	NoRel	true	extensión	detener
+Relation	T6	T8	NoRel	true	extensión	recomendaciones
+Relation	T7	T10	NoRel	true	flaps	aterrizaje
+Relation	T7	T14	NoRel	true	flaps	frenado
+Relation	T7	T17	NoRel	true	flaps	detener
+Relation	T7	T3	NoRel	true	flaps	declarar
+Relation	T7	T4	NoRel	true	flaps	aterrizó
+Relation	T8	T0	NoRel	true	recomendaciones	incremento
+Relation	T8	T16	NoRel	true	recomendaciones	apagó
+Relation	T8	T17	NoRel	true	recomendaciones	detener
+Relation	T9	T14	NoRel	true	despliegue	frenado
+Relation	T9	T17	NoRel	true	despliegue	detener
+Relation	T9	T3	NoRel	true	despliegue	declarar

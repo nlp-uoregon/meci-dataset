@@ -1,0 +1,46 @@
+Text	One of the surviving passengers , an eight - year - old in 1978 , was awarded US $ 900,000 in damages from the airline by a Portland jury in 1984 .	She was injured and both of her parents were killed .	Published in February 2018 , _ Crash Course _ by Julie Whipple focuses on the events of the night of the crash , the investigation , and aftermath of the crash .	- The events of Flight 173 were featured in " Focused on Failure " , a season - 12 ( 2012 ) episode of the Canadian TV series _ Mayday _ ( called _ Air Emergency _ in the US and _ Air Crash Investigation _ in the UK and elsewhere around the world ) .	- Aviation safety - List of accidents and incidents involving commercial aircraft - List of airline flights that required gliding
+Event	T0	surviving	EVENT	11
+Event	T1	awarded	EVENT	70
+Event	T10	investigation	EVENT	319
+Event	T11	crash	EVENT	356
+Event	T13	Flight	EVENT	380
+Event	T14	featured	EVENT	396
+Event	T17	accidents	EVENT	643
+Event	T18	flights	EVENT	715
+Event	T2	damages	EVENT	94
+Event	T3	injured	EVENT	156
+Event	T4	killed	EVENT	193
+Event	T5	Published	EVENT	202
+Event	T7	focuses	EVENT	265
+Event	T8	events	EVENT	280
+Event	T9	crash	EVENT	307
+Relation	T0	T1	CauseEffect	true	surviving	awarded
+Relation	T1	T0	EffectCause	true	awarded	surviving
+Relation	T2	T1	CauseEffect	true	damages	awarded
+Relation	T1	T2	EffectCause	true	awarded	damages
+Relation	T13	T14	CauseEffect	true	Flight	featured
+Relation	T14	T13	EffectCause	true	featured	Flight
+Relation	T5	T7	CauseEffect	true	Published	focuses
+Relation	T7	T5	EffectCause	true	focuses	Published
+Relation	T0	T10	NoRel	true	surviving	investigation
+Relation	T1	T7	NoRel	true	awarded	focuses
+Relation	T11	T1	NoRel	true	crash	awarded
+Relation	T11	T9	NoRel	true	crash	crash
+Relation	T13	T18	NoRel	true	Flight	flights
+Relation	T14	T11	NoRel	true	featured	crash
+Relation	T17	T0	NoRel	true	accidents	surviving
+Relation	T17	T18	NoRel	true	accidents	flights
+Relation	T18	T2	NoRel	true	flights	damages
+Relation	T3	T7	NoRel	true	injured	focuses
+Relation	T4	T0	NoRel	true	killed	surviving
+Relation	T4	T1	NoRel	true	killed	awarded
+Relation	T4	T13	NoRel	true	killed	Flight
+Relation	T4	T2	NoRel	true	killed	damages
+Relation	T5	T10	NoRel	true	Published	investigation
+Relation	T5	T17	NoRel	true	Published	accidents
+Relation	T5	T3	NoRel	true	Published	injured
+Relation	T5	T9	NoRel	true	Published	crash
+Relation	T7	T11	NoRel	true	focuses	crash
+Relation	T8	T9	NoRel	true	events	crash
+Relation	T9	T18	NoRel	true	crash	flights
+Relation	T9	T4	NoRel	true	crash	killed

@@ -1,0 +1,42 @@
+Text	Moğollara karşı koyabilecek önemli süvari kuvveti oluşturan Kumanlar Balkanlara kaçar ve geçtikleri yerleri yağmalarlar .	Macar kırsal hayatını etkileyen bu iç karışıklık sonucunda artık Macar ordusu Moğollar karşısında yapayalnız kalmıştır .	Hernád Nehri kıyılarında 11 Nisan 1241 tarihinde yapılan Mohi Muharebesinde Moğollar üstünlük sağlar .	Kral Béla muhafızlarıyla kaçar ancak ordusu Moğollar tarafından tamamen imha edilir .	Bundan sonra Moğollar Macar ovasını , Karpatları ve Transilvanya’yı işgal ederler .
+Event	T0	kaçar	EVENT	80
+Event	T1	geçtikleri	EVENT	89
+Event	T2	yağmalarlar	EVENT	108
+Event	T3	etkileyen	EVENT	144
+Event	T4	karışıklık	EVENT	160
+Event	T7	sağlar	EVENT	337
+Event	T8	kaçar	EVENT	371
+Event	T9	edilir	EVENT	423
+Event	T10	kalmıştır	EVENT	231
+Event	T6	Mohi Muharebesinde	EVENT	300
+Event	T11	işgal	EVENT	500
+Relation	T4	T10	CauseEffect	true	karışıklık	kalmıştır
+Relation	T10	T4	EffectCause	true	kalmıştır	karışıklık
+Relation	T0	T10	NoRel	true	kaçar	kalmıştır
+Relation	T0	T3	NoRel	true	kaçar	etkileyen
+Relation	T0	T9	NoRel	true	kaçar	edilir
+Relation	T1	T0	NoRel	true	geçtikleri	kaçar
+Relation	T1	T4	NoRel	true	geçtikleri	karışıklık
+Relation	T10	T3	NoRel	true	kalmıştır	etkileyen
+Relation	T11	T1	NoRel	true	işgal	geçtikleri
+Relation	T11	T10	NoRel	true	işgal	kalmıştır
+Relation	T11	T4	NoRel	true	işgal	karışıklık
+Relation	T11	T8	NoRel	true	işgal	kaçar
+Relation	T11	T9	NoRel	true	işgal	edilir
+Relation	T2	T4	NoRel	true	yağmalarlar	karışıklık
+Relation	T2	T8	NoRel	true	yağmalarlar	kaçar
+Relation	T3	T11	NoRel	true	etkileyen	işgal
+Relation	T3	T4	NoRel	true	etkileyen	karışıklık
+Relation	T3	T7	NoRel	true	etkileyen	sağlar
+Relation	T4	T7	NoRel	true	karışıklık	sağlar
+Relation	T4	T9	NoRel	true	karışıklık	edilir
+Relation	T6	T1	NoRel	true	Mohi Muharebesinde	geçtikleri
+Relation	T6	T11	NoRel	true	Mohi Muharebesinde	işgal
+Relation	T6	T3	NoRel	true	Mohi Muharebesinde	etkileyen
+Relation	T7	T3	NoRel	true	sağlar	etkileyen
+Relation	T7	T6	NoRel	true	sağlar	Mohi Muharebesinde
+Relation	T8	T9	NoRel	true	kaçar	edilir
+Relation	T9	T1	NoRel	true	edilir	geçtikleri
+Relation	T9	T11	NoRel	true	edilir	işgal
+Relation	T9	T6	NoRel	true	edilir	Mohi Muharebesinde
+Relation	T9	T7	NoRel	true	edilir	sağlar

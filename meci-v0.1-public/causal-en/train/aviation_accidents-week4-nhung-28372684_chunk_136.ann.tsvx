@@ -1,0 +1,64 @@
+Text	Immediately after bringing the mail here and sending it to Florence 25 miles away , by motor , the men went to sleep in the rear of the postoffice [ sic ] and authorities refused to rouse them for questioning .	Shilling , however , had said Allen – whose first name he did not know – was piloting the ship .	The sergeant did not know the name of the corporal .	Shilling said they left Richmond last night about 8:30 and expected to land at Florence , but their radio went bad and they cruised about until they found the landing field near here . "	30 March : While on landing approach to Davenport , Iowa , Lt. Thurmond A. Wood , flying U.S. Mail in a Curtiss A - 12 Shrike , _ 33 - 246 _ , enters a severe thunderstorm .
+Event	T0	bringing	EVENT	18
+Event	T1	went	EVENT	103
+Event	T2	sleep	EVENT	111
+Event	T3	refused	EVENT	171
+Event	T4	rouse	EVENT	182
+Event	T5	questioning	EVENT	197
+Event	T6	said	EVENT	236
+Event	T7	piloting	EVENT	288
+Event	T8	said	EVENT	370
+Event	T9	left	EVENT	380
+Event	T10	expected	EVENT	420
+Event	T11	land	EVENT	432
+Event	T12	cruised	EVENT	485
+Event	T13	found	EVENT	510
+Event	T14	landing	EVENT	520
+Event	T15	approach	EVENT	576
+Event	T16	flying	EVENT	630
+Event	T17	enters	EVENT	691
+Event	T18	thunderstorm	EVENT	707
+Event	T19	sending	EVENT	45
+Relation	T13	T14	CauseEffect	true	found	landing
+Relation	T14	T13	EffectCause	true	landing	found
+Relation	T0	T1	NoRel	true	bringing	went
+Relation	T0	T13	NoRel	true	bringing	found
+Relation	T1	T13	NoRel	true	went	found
+Relation	T1	T16	NoRel	true	went	flying
+Relation	T1	T19	NoRel	true	went	sending
+Relation	T1	T6	NoRel	true	went	said
+Relation	T10	T13	NoRel	true	expected	found
+Relation	T10	T18	NoRel	true	expected	thunderstorm
+Relation	T10	T3	NoRel	true	expected	refused
+Relation	T11	T1	NoRel	true	land	went
+Relation	T11	T6	NoRel	true	land	said
+Relation	T12	T14	NoRel	true	cruised	landing
+Relation	T12	T15	NoRel	true	cruised	approach
+Relation	T12	T2	NoRel	true	cruised	sleep
+Relation	T12	T4	NoRel	true	cruised	rouse
+Relation	T13	T16	NoRel	true	found	flying
+Relation	T13	T5	NoRel	true	found	questioning
+Relation	T14	T0	NoRel	true	landing	bringing
+Relation	T15	T1	NoRel	true	approach	went
+Relation	T15	T8	NoRel	true	approach	said
+Relation	T16	T18	NoRel	true	flying	thunderstorm
+Relation	T16	T2	NoRel	true	flying	sleep
+Relation	T16	T4	NoRel	true	flying	rouse
+Relation	T16	T9	NoRel	true	flying	left
+Relation	T17	T2	NoRel	true	enters	sleep
+Relation	T18	T17	NoRel	true	thunderstorm	enters
+Relation	T18	T9	NoRel	true	thunderstorm	left
+Relation	T19	T9	NoRel	true	sending	left
+Relation	T2	T8	NoRel	true	sleep	said
+Relation	T3	T15	NoRel	true	refused	approach
+Relation	T3	T8	NoRel	true	refused	said
+Relation	T4	T7	NoRel	true	rouse	piloting
+Relation	T5	T3	NoRel	true	questioning	refused
+Relation	T5	T4	NoRel	true	questioning	rouse
+Relation	T5	T9	NoRel	true	questioning	left
+Relation	T6	T5	NoRel	true	said	questioning
+Relation	T7	T0	NoRel	true	piloting	bringing
+Relation	T8	T11	NoRel	true	said	land
+Relation	T8	T18	NoRel	true	said	thunderstorm
+Relation	T9	T13	NoRel	true	left	found
+Relation	T9	T4	NoRel	true	left	rouse

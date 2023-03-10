@@ -1,0 +1,59 @@
+Text	El tránsito de la avenida Tláhuac permanecía cerrado en las inmediaciones del accidente .	El tren modelo FE-10 se retiró de la estructura colapsada cerca de las 11 de la mañana .	Claudia Sheinbaum , jefa de gobierno de la Ciudad de México , durante un recorrido en la zona del accidente anunció el inicio de una investigación para deslindar responsabilidades .	No descartó la colaboración de equipos internacionales en dichas labores .	Anunció igualmente el apoyo para las familias de las víctimas .
+Event	T0	tránsito	EVENT	3
+Event	T1	cerrado	EVENT	45
+Event	T2	accidente	EVENT	78
+Event	T3	retiró	EVENT	114
+Event	T4	colapsada	EVENT	138
+Event	T5	recorrido	EVENT	252
+Event	T6	anunció	EVENT	287
+Event	T7	inicio	EVENT	298
+Event	T8	investigación	EVENT	312
+Event	T9	colaboración	EVENT	376
+Event	T10	labores	EVENT	426
+Event	T11	accidente	EVENT	277
+Relation	T11	T8	CauseEffect	true	accidente	investigación
+Relation	T8	T11	EffectCause	true	investigación	accidente
+Relation	T0	T1	NoRel	true	tránsito	cerrado
+Relation	T0	T11	NoRel	true	tránsito	accidente
+Relation	T0	T2	NoRel	true	tránsito	accidente
+Relation	T0	T5	NoRel	true	tránsito	recorrido
+Relation	T0	T9	NoRel	true	tránsito	colaboración
+Relation	T1	T0	NoRel	true	cerrado	tránsito
+Relation	T1	T5	NoRel	true	cerrado	recorrido
+Relation	T1	T6	NoRel	true	cerrado	anunció
+Relation	T1	T7	NoRel	true	cerrado	inicio
+Relation	T1	T9	NoRel	true	cerrado	colaboración
+Relation	T10	T3	NoRel	true	labores	retiró
+Relation	T10	T7	NoRel	true	labores	inicio
+Relation	T11	T1	NoRel	true	accidente	cerrado
+Relation	T11	T10	NoRel	true	accidente	labores
+Relation	T2	T1	NoRel	true	accidente	cerrado
+Relation	T2	T6	NoRel	true	accidente	anunció
+Relation	T3	T1	NoRel	true	retiró	cerrado
+Relation	T3	T10	NoRel	true	retiró	labores
+Relation	T3	T2	NoRel	true	retiró	accidente
+Relation	T3	T9	NoRel	true	retiró	colaboración
+Relation	T4	T10	NoRel	true	colapsada	labores
+Relation	T4	T11	NoRel	true	colapsada	accidente
+Relation	T4	T3	NoRel	true	colapsada	retiró
+Relation	T4	T5	NoRel	true	colapsada	recorrido
+Relation	T4	T7	NoRel	true	colapsada	inicio
+Relation	T4	T9	NoRel	true	colapsada	colaboración
+Relation	T5	T11	NoRel	true	recorrido	accidente
+Relation	T5	T2	NoRel	true	recorrido	accidente
+Relation	T5	T8	NoRel	true	recorrido	investigación
+Relation	T6	T0	NoRel	true	anunció	tránsito
+Relation	T6	T1	NoRel	true	anunció	cerrado
+Relation	T6	T11	NoRel	true	anunció	accidente
+Relation	T6	T2	NoRel	true	anunció	accidente
+Relation	T6	T3	NoRel	true	anunció	retiró
+Relation	T6	T9	NoRel	true	anunció	colaboración
+Relation	T7	T0	NoRel	true	inicio	tránsito
+Relation	T7	T10	NoRel	true	inicio	labores
+Relation	T7	T2	NoRel	true	inicio	accidente
+Relation	T8	T2	NoRel	true	investigación	accidente
+Relation	T8	T6	NoRel	true	investigación	anunció
+Relation	T8	T7	NoRel	true	investigación	inicio
+Relation	T8	T9	NoRel	true	investigación	colaboración
+Relation	T9	T2	NoRel	true	colaboración	accidente
+Relation	T9	T7	NoRel	true	colaboración	inicio

@@ -1,0 +1,19 @@
+Text	sağ | küçükresim | 300x300pik | Paul von Hindenburg'un Berlin'deki bir reklam sütununda ilan ettiği gibi bir acil durum kararnamesi .	Carl Severing , Albert Grzesinski , Bernhard Weiss ve Magnus Heimannsberg de dahil olmak üzere Prusya hükümet yetkilileri , darbe sırasında askeri yetkililer tarafından tutuklandı .	sağ | küçükresim | 300x300pik | Temmuz 1931'de İngiliz politikacılar Prusya'yı ziyaret etti .	Fotoğrafta , soldan sağa : Almanya Dışişleri Bakanı Julius Curtius , İngiltere Dışişleri Bakanı Arthur Henderson , Almanya Başbakanı Heinrich Brüning , İngiltere Başbakanı James Ramsay MacDonald ve ( daha sonra görevden alınan ) Prusya Bakanı Otto Braun .	Fotoğraf , Berlin , Wannsee'de bir gemi gezisi sırasında çekildi .
+Event	T0	kararnamesi	EVENT	120
+Event	T1	tutuklandı	EVENT	303
+Event	T2	etti	EVENT	403
+Event	T3	gezisi	EVENT	706
+Event	T4	çekildi	EVENT	723
+Event	T5	darbe	EVENT	258
+Relation	T5	T1	CauseEffect	true	darbe	tutuklandı
+Relation	T1	T5	EffectCause	true	tutuklandı	darbe
+Relation	T0	T1	NoRel	true	kararnamesi	tutuklandı
+Relation	T0	T2	NoRel	true	kararnamesi	etti
+Relation	T0	T3	NoRel	true	kararnamesi	gezisi
+Relation	T0	T4	NoRel	true	kararnamesi	çekildi
+Relation	T1	T2	NoRel	true	tutuklandı	etti
+Relation	T2	T4	NoRel	true	etti	çekildi
+Relation	T3	T2	NoRel	true	gezisi	etti
+Relation	T4	T0	NoRel	true	çekildi	kararnamesi
+Relation	T4	T1	NoRel	true	çekildi	tutuklandı
+Relation	T5	T0	NoRel	true	darbe	kararnamesi

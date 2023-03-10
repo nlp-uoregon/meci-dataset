@@ -1,0 +1,55 @@
+Text	_ " The master of a vessel approaching the Bridge to navigate it through a span must ( a ) have the vessel fully under control ; and ( b ) navigate the vessel with all possible care at the minimum speed required to pass safely under the bridge " ._	Vessels above a certain size are required to be piloted , and vehicle movements on the bridge are temporarily halted when large vessels are to pass underneath the bridge .	As an added precaution , it is now mandatory for most large vessels to have a tug in attendance as they transit the bridge in the event that assistance with steerage may be required .	thumb | center | upright =2 | 2005 panorama of Hobart illustrating the extent of the city 's reliance on the Tasman Bridge	The disaster stimulated development in Kingborough , a municipality south of Hobart on the western shore , because of the reduced travel times for western shore workers compared to the eastern shore .
+Event	T0	approaching	EVENT	27
+Event	T1	navigate	EVENT	53
+Event	T10	illustrating	EVENT	659
+Event	T11	reliance	EVENT	698
+Event	T12	development	EVENT	752
+Event	T13	reduced	EVENT	850
+Event	T15	attendance	EVENT	506
+Event	T17	tug	EVENT	499
+Event	T2	navigate	EVENT	139
+Event	T3	pass	EVENT	215
+Event	T4	required	EVENT	282
+Event	T5	piloted	EVENT	297
+Event	T6	movements	EVENT	319
+Event	T7	halted	EVENT	359
+Event	T8	pass	EVENT	392
+Event	T9	transit	EVENT	525
+Relation	T1	T0	CauseEffect	true	navigate	approaching
+Relation	T0	T1	EffectCause	true	approaching	navigate
+Relation	T2	T3	CauseEffect	true	navigate	pass
+Relation	T3	T2	EffectCause	true	pass	navigate
+Relation	T4	T5	CauseEffect	true	required	piloted
+Relation	T5	T4	EffectCause	true	piloted	required
+Relation	T17	T9	CauseEffect	true	tug	transit
+Relation	T9	T17	EffectCause	true	transit	tug
+Relation	T13	T12	CauseEffect	true	reduced	development
+Relation	T12	T13	EffectCause	true	development	reduced
+Relation	T0	T17	NoRel	true	approaching	tug
+Relation	T0	T6	NoRel	true	approaching	movements
+Relation	T1	T12	NoRel	true	navigate	development
+Relation	T1	T4	NoRel	true	navigate	required
+Relation	T1	T9	NoRel	true	navigate	transit
+Relation	T10	T17	NoRel	true	illustrating	tug
+Relation	T10	T4	NoRel	true	illustrating	required
+Relation	T11	T1	NoRel	true	reliance	navigate
+Relation	T11	T3	NoRel	true	reliance	pass
+Relation	T12	T8	NoRel	true	development	pass
+Relation	T13	T0	NoRel	true	reduced	approaching
+Relation	T15	T3	NoRel	true	attendance	pass
+Relation	T15	T8	NoRel	true	attendance	pass
+Relation	T15	T9	NoRel	true	attendance	transit
+Relation	T17	T5	NoRel	true	tug	piloted
+Relation	T2	T1	NoRel	true	navigate	navigate
+Relation	T2	T10	NoRel	true	navigate	illustrating
+Relation	T2	T15	NoRel	true	navigate	attendance
+Relation	T2	T17	NoRel	true	navigate	tug
+Relation	T4	T10	NoRel	true	required	illustrating
+Relation	T4	T11	NoRel	true	required	reliance
+Relation	T5	T1	NoRel	true	piloted	navigate
+Relation	T5	T12	NoRel	true	piloted	development
+Relation	T5	T9	NoRel	true	piloted	transit
+Relation	T7	T10	NoRel	true	halted	illustrating
+Relation	T7	T8	NoRel	true	halted	pass
+Relation	T8	T17	NoRel	true	pass	tug
+Relation	T8	T4	NoRel	true	pass	required

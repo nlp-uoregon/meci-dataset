@@ -1,0 +1,24 @@
+Text	Acil telsiz kanalından uçaklara beş dakika içerisinde on defa hemen geri dönmeleri yönünde 26 Haziran 2012 tarihli yeni askeri angajman kurallarına dayanılarak uyarıda bulunuldu .	Uyarıları dinlemeyen uçaklar , 09: 24'te 19.000 feet yükseklikte 17 saniye süresince 1.36 mil ( 2.19 km ) boyunca Türk hava sahasını ihlâl etti .	İhlalin ardından bir Rus uçağı Suriye hava sahasına geri döndü .	Diğer Türk hava sahasında bulunan uçağa ise Türk F- 16 uçakları angajman kurallarını dikkate alarak ateş açtı .	Ateş edilen uçak Suriye sınırlarını içerisinde bir noktaya düştü .
+Event	T3	İhlalin	EVENT	326
+Event	T4	döndü	EVENT	383
+Event	T5	açtı	EVENT	496
+Event	T6	düştü	EVENT	562
+Event	T7	Uyarıları	EVENT	180
+Event	T8	uyarıda	EVENT	160
+Event	T1	ihlâl	EVENT	313
+Relation	T3	T5	CauseEffect	true	İhlalin	açtı
+Relation	T5	T3	EffectCause	true	açtı	İhlalin
+Relation	T5	T6	CauseEffect	true	açtı	düştü
+Relation	T6	T5	EffectCause	true	düştü	açtı
+Relation	T1	T3	NoRel	true	ihlâl	İhlalin
+Relation	T1	T7	NoRel	true	ihlâl	Uyarıları
+Relation	T3	T1	NoRel	true	İhlalin	ihlâl
+Relation	T3	T7	NoRel	true	İhlalin	Uyarıları
+Relation	T5	T1	NoRel	true	açtı	ihlâl
+Relation	T5	T7	NoRel	true	açtı	Uyarıları
+Relation	T6	T1	NoRel	true	düştü	ihlâl
+Relation	T7	T1	NoRel	true	Uyarıları	ihlâl
+Relation	T7	T8	NoRel	true	Uyarıları	uyarıda
+Relation	T8	T1	NoRel	true	uyarıda	ihlâl
+Relation	T8	T5	NoRel	true	uyarıda	açtı
+Relation	T8	T6	NoRel	true	uyarıda	düştü

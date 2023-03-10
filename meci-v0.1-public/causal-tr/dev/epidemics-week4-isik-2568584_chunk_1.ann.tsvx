@@ -1,0 +1,81 @@
+Text	Sosyal mesafe , enfeksiyonun damlacık temasıyla ( öksürme , tükürme veya hapşırma ) bulaştığı durumlarda etkilidir ; cinsel temas da dahil olmak üzere doğrudan fiziksel temas ; dolaylı fiziksel temas ( örneğin ; fomit gibi kirli bir yüzeye dokunarak ) ; veya hava yoluyla bulaşma ( eğer mikroorganizma havada uzun süre hayatta kalabilirse ) .	Sosyal mesafe , enfeksiyonun öncelikle kontamine su , yiyecek veya sivrisinek veya diğer böcekler gibi taşıyıcılar yoluyla ve daha az sıklıkla kişiden kişiye bulaştığı durumlarda daha az etkili olabilir .	Sosyal mesafenin dezavantajları arasında yalnızlık , düşük verimlilik ve toplumsal yapı ile ilişkili faydaların kaybı gösterilebilir .	Sosyal mesafenin , mesafesi ülkelere göre değişmektedir .	Türkiye'de sosyal mesafe uzaklığı 1.5 metredir .
+Event	T0	enfeksiyonun	EVENT	16
+Event	T1	temasıyla	EVENT	38
+Event	T2	tükürme	EVENT	60
+Event	T3	hapşırma	EVENT	73
+Event	T4	bulaştığı	EVENT	84
+Event	T5	temas	EVENT	124
+Event	T6	temas	EVENT	169
+Event	T7	temas	EVENT	194
+Event	T8	bulaşma	EVENT	272
+Event	T9	enfeksiyonun	EVENT	359
+Event	T10	öksürme	EVENT	50
+Event	T11	dokunarak	EVENT	240
+Relation	T0	T10	CauseEffect	true	enfeksiyonun	öksürme
+Relation	T10	T0	EffectCause	true	öksürme	enfeksiyonun
+Relation	T10	T1	CauseEffect	true	öksürme	temasıyla
+Relation	T1	T10	EffectCause	true	temasıyla	öksürme
+Relation	T1	T4	CauseEffect	true	temasıyla	bulaştığı
+Relation	T4	T1	EffectCause	true	bulaştığı	temasıyla
+Relation	T0	T2	CauseEffect	true	enfeksiyonun	tükürme
+Relation	T2	T0	EffectCause	true	tükürme	enfeksiyonun
+Relation	T0	T3	CauseEffect	true	enfeksiyonun	hapşırma
+Relation	T3	T0	EffectCause	true	hapşırma	enfeksiyonun
+Relation	T2	T1	CauseEffect	true	tükürme	temasıyla
+Relation	T1	T2	EffectCause	true	temasıyla	tükürme
+Relation	T3	T1	CauseEffect	true	hapşırma	temasıyla
+Relation	T1	T3	EffectCause	true	temasıyla	hapşırma
+Relation	T0	T5	CauseEffect	true	enfeksiyonun	temas
+Relation	T5	T0	EffectCause	true	temas	enfeksiyonun
+Relation	T0	T6	CauseEffect	true	enfeksiyonun	temas
+Relation	T6	T0	EffectCause	true	temas	enfeksiyonun
+Relation	T5	T4	CauseEffect	true	temas	bulaştığı
+Relation	T4	T5	EffectCause	true	bulaştığı	temas
+Relation	T6	T4	CauseEffect	true	temas	bulaştığı
+Relation	T4	T6	EffectCause	true	bulaştığı	temas
+Relation	T7	T4	CauseEffect	true	temas	bulaştığı
+Relation	T4	T7	EffectCause	true	bulaştığı	temas
+Relation	T0	T7	NoRel	true	enfeksiyonun	temas
+Relation	T1	T0	NoRel	true	temasıyla	enfeksiyonun
+Relation	T1	T6	NoRel	true	temasıyla	temas
+Relation	T1	T8	NoRel	true	temasıyla	bulaşma
+Relation	T10	T11	NoRel	true	öksürme	dokunarak
+Relation	T10	T3	NoRel	true	öksürme	hapşırma
+Relation	T10	T4	NoRel	true	öksürme	bulaştığı
+Relation	T10	T5	NoRel	true	öksürme	temas
+Relation	T10	T6	NoRel	true	öksürme	temas
+Relation	T11	T2	NoRel	true	dokunarak	tükürme
+Relation	T11	T4	NoRel	true	dokunarak	bulaştığı
+Relation	T11	T5	NoRel	true	dokunarak	temas
+Relation	T11	T6	NoRel	true	dokunarak	temas
+Relation	T11	T7	NoRel	true	dokunarak	temas
+Relation	T2	T4	NoRel	true	tükürme	bulaştığı
+Relation	T2	T5	NoRel	true	tükürme	temas
+Relation	T2	T9	NoRel	true	tükürme	enfeksiyonun
+Relation	T3	T10	NoRel	true	hapşırma	öksürme
+Relation	T3	T11	NoRel	true	hapşırma	dokunarak
+Relation	T3	T4	NoRel	true	hapşırma	bulaştığı
+Relation	T4	T0	NoRel	true	bulaştığı	enfeksiyonun
+Relation	T4	T10	NoRel	true	bulaştığı	öksürme
+Relation	T4	T11	NoRel	true	bulaştığı	dokunarak
+Relation	T4	T2	NoRel	true	bulaştığı	tükürme
+Relation	T4	T8	NoRel	true	bulaştığı	bulaşma
+Relation	T5	T1	NoRel	true	temas	temasıyla
+Relation	T6	T11	NoRel	true	temas	dokunarak
+Relation	T6	T2	NoRel	true	temas	tükürme
+Relation	T6	T5	NoRel	true	temas	temas
+Relation	T6	T8	NoRel	true	temas	bulaşma
+Relation	T6	T9	NoRel	true	temas	enfeksiyonun
+Relation	T7	T0	NoRel	true	temas	enfeksiyonun
+Relation	T7	T1	NoRel	true	temas	temasıyla
+Relation	T7	T10	NoRel	true	temas	öksürme
+Relation	T7	T6	NoRel	true	temas	temas
+Relation	T8	T0	NoRel	true	bulaşma	enfeksiyonun
+Relation	T8	T1	NoRel	true	bulaşma	temasıyla
+Relation	T8	T2	NoRel	true	bulaşma	tükürme
+Relation	T8	T3	NoRel	true	bulaşma	hapşırma
+Relation	T8	T7	NoRel	true	bulaşma	temas
+Relation	T9	T0	NoRel	true	enfeksiyonun	enfeksiyonun
+Relation	T9	T10	NoRel	true	enfeksiyonun	öksürme
+Relation	T9	T2	NoRel	true	enfeksiyonun	tükürme
+Relation	T9	T6	NoRel	true	enfeksiyonun	temas

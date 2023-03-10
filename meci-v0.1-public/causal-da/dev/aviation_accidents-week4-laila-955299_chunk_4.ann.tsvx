@@ -1,0 +1,23 @@
+Text	De fleste af passagerne var bosat i Orenburg oblast .	Det russiske kriseministerium offentliggjorde at de fleste passagerer var russiske statsborgere og der kun var to udlændinge - fra Aserbajdsjan og Schweiz .	Alle ombord blev dræbt ved styrtet .	Flykaptajnen var den 51-årige Valerij Gubanov , der var uddannet fra den militære flyskole i Tambov .	På tidspunktet for styrtet havde han over 5.000 flytimer bag sig , hvoraf de 2.800 var på Antonov An-148 .
+Event	T0	offentliggjorde	EVENT	84
+Event	T1	dræbt	EVENT	228
+Event	T2	styrtet	EVENT	238
+Event	T3	uddannet	EVENT	304
+Event	T4	styrtet	EVENT	369
+Event	T5	bosat	EVENT	28
+Event	T6	flytimer	EVENT	398
+Relation	T2	T1	CauseEffect	true	styrtet	dræbt
+Relation	T1	T2	EffectCause	true	dræbt	styrtet
+Relation	T4	T1	CauseEffect	true	styrtet	dræbt
+Relation	T1	T4	EffectCause	true	dræbt	styrtet
+Relation	T2	T0	NoRel	true	styrtet	offentliggjorde
+Relation	T2	T5	NoRel	true	styrtet	bosat
+Relation	T3	T5	NoRel	true	uddannet	bosat
+Relation	T3	T6	NoRel	true	uddannet	flytimer
+Relation	T4	T0	NoRel	true	styrtet	offentliggjorde
+Relation	T4	T2	NoRel	true	styrtet	styrtet
+Relation	T4	T6	NoRel	true	styrtet	flytimer
+Relation	T5	T0	NoRel	true	bosat	offentliggjorde
+Relation	T5	T3	NoRel	true	bosat	uddannet
+Relation	T6	T4	NoRel	true	flytimer	styrtet
+Relation	T6	T5	NoRel	true	flytimer	bosat

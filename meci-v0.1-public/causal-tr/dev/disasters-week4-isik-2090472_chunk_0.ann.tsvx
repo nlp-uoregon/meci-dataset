@@ -1,0 +1,35 @@
+Text	1999 ATINA DEPREMI , 7 Eylül 1999 yılında merkez_üssü Yunanistan'ın başkenti Atina'nın 17 km kuzey batısında , yerin 10 km altında richter ölçeğine göre 6.0 M _ ( l ) büyüklüğünde meydana gelen deprem .	Deprem sonucu toplam 143 kişi hayatını kaybetti , 1600 kişi yaralandı .	Bunun yanında 50.000 kişi evsiz kaldı , 40'tan fazla bina çöktü ve 53.000'den fazla bina hasar gördü .	Deprem ayrıca 655 milyon Amerikan doları maddi hasara neden oldu .	
+Event	T0	DEPREMI	EVENT	11
+Event	T1	deprem	EVENT	194
+Event	T2	kaybetti	EVENT	242
+Event	T3	yaralandı	EVENT	263
+Event	T4	kaldı	EVENT	307
+Event	T5	çöktü	EVENT	333
+Event	T6	gördü	EVENT	370
+Event	T7	Deprem	EVENT	378
+Event	T8	oldu	EVENT	438
+Relation	T7	T8	CauseEffect	true	Deprem	oldu
+Relation	T8	T7	EffectCause	true	oldu	Deprem
+Relation	T0	T7	NoRel	true	DEPREMI	Deprem
+Relation	T2	T1	NoRel	true	kaybetti	deprem
+Relation	T2	T3	NoRel	true	kaybetti	yaralandı
+Relation	T2	T4	NoRel	true	kaybetti	kaldı
+Relation	T2	T5	NoRel	true	kaybetti	çöktü
+Relation	T2	T6	NoRel	true	kaybetti	gördü
+Relation	T2	T7	NoRel	true	kaybetti	Deprem
+Relation	T3	T0	NoRel	true	yaralandı	DEPREMI
+Relation	T3	T1	NoRel	true	yaralandı	deprem
+Relation	T3	T2	NoRel	true	yaralandı	kaybetti
+Relation	T3	T4	NoRel	true	yaralandı	kaldı
+Relation	T3	T6	NoRel	true	yaralandı	gördü
+Relation	T3	T7	NoRel	true	yaralandı	Deprem
+Relation	T3	T8	NoRel	true	yaralandı	oldu
+Relation	T4	T2	NoRel	true	kaldı	kaybetti
+Relation	T4	T8	NoRel	true	kaldı	oldu
+Relation	T5	T0	NoRel	true	çöktü	DEPREMI
+Relation	T6	T0	NoRel	true	gördü	DEPREMI
+Relation	T6	T3	NoRel	true	gördü	yaralandı
+Relation	T6	T5	NoRel	true	gördü	çöktü
+Relation	T6	T8	NoRel	true	gördü	oldu
+Relation	T8	T3	NoRel	true	oldu	yaralandı
+Relation	T8	T6	NoRel	true	oldu	gördü

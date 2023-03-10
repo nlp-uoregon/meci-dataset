@@ -1,0 +1,8 @@
+Text	Pompaların durması ; yakıtın yakıt tankından motor besleme tankına aktarılmasını engelledi .	Uçağın motor besleme tankında mevcut olan 3300 kilogram yakıt vardı ve bu , uçağı sadece 30 dakika havada tutabilirdi .	07: 47'de , Izhma'daki acil durum yetkililerine uçağın bölgedeki havalimanına acil iniş yapabileceği bildirildi .	Izhma Havalimanı , artık sadece helikopterler için kullanılan eski bir havalimanıdır .	1.325 m ( 4.347_ft ) uzunluğundaki terk edilmiş ve kapalı bir pisti vardır .
+Event	T0	durması	EVENT	11
+Event	T1	engelledi	EVENT	81
+Event	T2	bildirildi	EVENT	314
+Relation	T0	T1	CauseEffect	true	durması	engelledi
+Relation	T1	T0	EffectCause	true	engelledi	durması
+Relation	T0	T2	NoRel	true	durması	bildirildi
+Relation	T2	T0	NoRel	true	bildirildi	durması

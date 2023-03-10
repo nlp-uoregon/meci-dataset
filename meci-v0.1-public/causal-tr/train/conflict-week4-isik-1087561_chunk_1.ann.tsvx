@@ -1,0 +1,30 @@
+Text	Ancak bu tür bir saldırı , siperler sayesinde karşı saldırıya karşı eş zamanlı bir korunmayı da beraberinde taşımaktadır .	Siperler , özellikle savaş esnasında insani askeri gücün devamlılığı ve lojistik anlamda da ordular için oldukça işlevseldir .	Siperler ile düşmana karşı sürekli bir tehdit algılaması yaratılarak aynı zamanda psikolojik bir harp de yürütülür .	Çanakkale Savaşı , II. Dünya Savaşı , İran - Irak Savaşı 20. yüzyıla ait siperlerin görülebileceği savaşlardır .	
+Event	T0	saldırı	EVENT	17
+Event	T1	savaş	EVENT	144
+Event	T2	algılaması	EVENT	296
+Event	T3	harp	EVENT	347
+Event	T4	yürütülür	EVENT	355
+Event	T5	savaşlardır	EVENT	466
+Event	T6	Çanakkale Savaşı	EVENT	367
+Event	T7	II. Dünya Savaşı	EVENT	386
+Event	T8	İran - Irak Savaşı	EVENT	405
+Relation	T2	T3	CauseEffect	true	algılaması	harp
+Relation	T3	T2	EffectCause	true	harp	algılaması
+Relation	T0	T4	NoRel	true	saldırı	yürütülür
+Relation	T0	T5	NoRel	true	saldırı	savaşlardır
+Relation	T1	T2	NoRel	true	savaş	algılaması
+Relation	T1	T6	NoRel	true	savaş	Çanakkale Savaşı
+Relation	T2	T4	NoRel	true	algılaması	yürütülür
+Relation	T2	T8	NoRel	true	algılaması	İran - Irak Savaşı
+Relation	T3	T1	NoRel	true	harp	savaş
+Relation	T4	T1	NoRel	true	yürütülür	savaş
+Relation	T4	T6	NoRel	true	yürütülür	Çanakkale Savaşı
+Relation	T5	T0	NoRel	true	savaşlardır	saldırı
+Relation	T5	T2	NoRel	true	savaşlardır	algılaması
+Relation	T5	T3	NoRel	true	savaşlardır	harp
+Relation	T6	T0	NoRel	true	Çanakkale Savaşı	saldırı
+Relation	T6	T8	NoRel	true	Çanakkale Savaşı	İran - Irak Savaşı
+Relation	T7	T1	NoRel	true	II. Dünya Savaşı	savaş
+Relation	T8	T1	NoRel	true	İran - Irak Savaşı	savaş
+Relation	T8	T2	NoRel	true	İran - Irak Savaşı	algılaması
+Relation	T8	T3	NoRel	true	İran - Irak Savaşı	harp

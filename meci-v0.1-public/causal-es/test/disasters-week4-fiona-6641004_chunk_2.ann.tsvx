@@ -1,0 +1,57 @@
+Text	Sobre los siguientes días , el debilitamiento del ciclón se aceleró mientras se desplazaba en dirección polar .	El 15 de marzo , el Pam pasó al noreste de Nueva Zelanda antes de convertirse en ciclón extratropical el mismo día .	En su trayecto inicial , el ciclón provocó marejadas ciclónicas en Tuvalu , forzando a la declaración de un estado de emergencia después que el 45_% de la población quedara damnificada .	Se registraron lluvias torrenciales en el sureste de las islas Salomón , particularmente en el archipiélago de la Santa Cruz .	En Vanuatu , se activaron todos los servicios de emergencia y se pusieron a disposición todo el personal de rescate tomando en cuenta que tenía el potencial en convertirse en uno de los más mortíferos de la nación .
+Event	T0	debilitamiento	EVENT	31
+Event	T1	aceleró	EVENT	60
+Event	T2	desplazaba	EVENT	80
+Event	T3	pasó	EVENT	136
+Event	T4	trayecto	EVENT	235
+Event	T5	ciclónicas	EVENT	282
+Event	T6	forzando	EVENT	305
+Event	T7	declaración	EVENT	319
+Event	T8	emergencia	EVENT	347
+Event	T9	damnificada	EVENT	402
+Event	T10	activaron	EVENT	559
+Event	T11	convertirse	EVENT	703
+Relation	T9	T7	CauseEffect	true	damnificada	declaración
+Relation	T7	T9	EffectCause	true	declaración	damnificada
+Relation	T0	T11	NoRel	true	debilitamiento	convertirse
+Relation	T0	T2	NoRel	true	debilitamiento	desplazaba
+Relation	T0	T4	NoRel	true	debilitamiento	trayecto
+Relation	T0	T6	NoRel	true	debilitamiento	forzando
+Relation	T0	T7	NoRel	true	debilitamiento	declaración
+Relation	T1	T11	NoRel	true	aceleró	convertirse
+Relation	T1	T2	NoRel	true	aceleró	desplazaba
+Relation	T1	T8	NoRel	true	aceleró	emergencia
+Relation	T10	T5	NoRel	true	activaron	ciclónicas
+Relation	T10	T6	NoRel	true	activaron	forzando
+Relation	T10	T8	NoRel	true	activaron	emergencia
+Relation	T10	T9	NoRel	true	activaron	damnificada
+Relation	T11	T1	NoRel	true	convertirse	aceleró
+Relation	T11	T3	NoRel	true	convertirse	pasó
+Relation	T11	T5	NoRel	true	convertirse	ciclónicas
+Relation	T11	T6	NoRel	true	convertirse	forzando
+Relation	T2	T0	NoRel	true	desplazaba	debilitamiento
+Relation	T2	T11	NoRel	true	desplazaba	convertirse
+Relation	T2	T7	NoRel	true	desplazaba	declaración
+Relation	T2	T9	NoRel	true	desplazaba	damnificada
+Relation	T3	T1	NoRel	true	pasó	aceleró
+Relation	T3	T11	NoRel	true	pasó	convertirse
+Relation	T3	T4	NoRel	true	pasó	trayecto
+Relation	T3	T5	NoRel	true	pasó	ciclónicas
+Relation	T4	T11	NoRel	true	trayecto	convertirse
+Relation	T4	T3	NoRel	true	trayecto	pasó
+Relation	T5	T7	NoRel	true	ciclónicas	declaración
+Relation	T6	T5	NoRel	true	forzando	ciclónicas
+Relation	T6	T9	NoRel	true	forzando	damnificada
+Relation	T7	T2	NoRel	true	declaración	desplazaba
+Relation	T7	T3	NoRel	true	declaración	pasó
+Relation	T7	T4	NoRel	true	declaración	trayecto
+Relation	T7	T6	NoRel	true	declaración	forzando
+Relation	T7	T8	NoRel	true	declaración	emergencia
+Relation	T8	T3	NoRel	true	emergencia	pasó
+Relation	T8	T5	NoRel	true	emergencia	ciclónicas
+Relation	T8	T7	NoRel	true	emergencia	declaración
+Relation	T8	T9	NoRel	true	emergencia	damnificada
+Relation	T9	T0	NoRel	true	damnificada	debilitamiento
+Relation	T9	T11	NoRel	true	damnificada	convertirse
+Relation	T9	T4	NoRel	true	damnificada	trayecto
+Relation	T9	T5	NoRel	true	damnificada	ciclónicas

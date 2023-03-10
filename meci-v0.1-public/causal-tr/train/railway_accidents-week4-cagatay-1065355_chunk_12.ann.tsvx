@@ -1,0 +1,86 @@
+Text	- 10 Mayıs , 2002 – Potters Bar demiryolu çarpışması , Kuzey Londra , İngiltere , Birleşik Krallık : Bir kuzey sınırı treni yüksek hızda raydan çıkar ; 7 ölü , 11 ciddi yaralı .	- 3 Ocak , 2003 – Ghatnandur tren çarpışması , Ghatnandur , Maharashtra , iki trenin çarpışmasında 18 kişi öldü .	- 31 Ocak , 2003 – Waterfall tren felaketi , Waterfall , New South Wales , Avustralya : Bir güney sınırı yolcu treni makinisti Kalp krizi geçirir ve ölür .	Trenin hızı kontolden çıkar ve bir virajda raydan çıkar .	Birçok vagonu devrilir ve 6 yolcu ölür .
+Event	T0	çarpışması	EVENT	42
+Event	T1	çıkar	EVENT	144
+Event	T2	ölü	EVENT	154
+Event	T3	yaralı	EVENT	169
+Event	T4	çarpışması	EVENT	212
+Event	T5	çarpışmasında	EVENT	263
+Event	T6	öldü	EVENT	285
+Event	T7	felaketi	EVENT	326
+Event	T8	geçirir	EVENT	430
+Event	T9	ölür	EVENT	441
+Event	T10	çıkar	EVENT	470
+Event	T12	çıkar	EVENT	498
+Event	T13	devrilir	EVENT	520
+Event	T14	ölür	EVENT	540
+Relation	T0	T2	CauseEffect	true	çarpışması	ölü
+Relation	T2	T0	EffectCause	true	ölü	çarpışması
+Relation	T0	T3	CauseEffect	true	çarpışması	yaralı
+Relation	T3	T0	EffectCause	true	yaralı	çarpışması
+Relation	T1	T0	CauseEffect	true	çıkar	çarpışması
+Relation	T0	T1	EffectCause	true	çarpışması	çıkar
+Relation	T5	T6	CauseEffect	true	çarpışmasında	öldü
+Relation	T6	T5	EffectCause	true	öldü	çarpışmasında
+Relation	T4	T6	CauseEffect	true	çarpışması	öldü
+Relation	T6	T4	EffectCause	true	öldü	çarpışması
+Relation	T8	T9	CauseEffect	true	geçirir	ölür
+Relation	T9	T8	EffectCause	true	ölür	geçirir
+Relation	T9	T10	CauseEffect	true	ölür	çıkar
+Relation	T10	T9	EffectCause	true	çıkar	ölür
+Relation	T10	T12	CauseEffect	true	çıkar	çıkar
+Relation	T12	T10	EffectCause	true	çıkar	çıkar
+Relation	T12	T13	CauseEffect	true	çıkar	devrilir
+Relation	T13	T12	EffectCause	true	devrilir	çıkar
+Relation	T13	T14	CauseEffect	true	devrilir	ölür
+Relation	T14	T13	EffectCause	true	ölür	devrilir
+Relation	T0	T10	NoRel	true	çarpışması	çıkar
+Relation	T0	T13	NoRel	true	çarpışması	devrilir
+Relation	T0	T4	NoRel	true	çarpışması	çarpışması
+Relation	T0	T8	NoRel	true	çarpışması	geçirir
+Relation	T1	T12	NoRel	true	çıkar	çıkar
+Relation	T1	T2	NoRel	true	çıkar	ölü
+Relation	T1	T6	NoRel	true	çıkar	öldü
+Relation	T1	T9	NoRel	true	çıkar	ölür
+Relation	T10	T1	NoRel	true	çıkar	çıkar
+Relation	T10	T4	NoRel	true	çıkar	çarpışması
+Relation	T10	T7	NoRel	true	çıkar	felaketi
+Relation	T12	T1	NoRel	true	çıkar	çıkar
+Relation	T12	T14	NoRel	true	çıkar	ölür
+Relation	T12	T3	NoRel	true	çıkar	yaralı
+Relation	T12	T9	NoRel	true	çıkar	ölür
+Relation	T13	T0	NoRel	true	devrilir	çarpışması
+Relation	T13	T3	NoRel	true	devrilir	yaralı
+Relation	T14	T0	NoRel	true	ölür	çarpışması
+Relation	T14	T10	NoRel	true	ölür	çıkar
+Relation	T14	T12	NoRel	true	ölür	çıkar
+Relation	T14	T2	NoRel	true	ölür	ölü
+Relation	T14	T3	NoRel	true	ölür	yaralı
+Relation	T14	T6	NoRel	true	ölür	öldü
+Relation	T14	T8	NoRel	true	ölür	geçirir
+Relation	T2	T10	NoRel	true	ölü	çıkar
+Relation	T2	T13	NoRel	true	ölü	devrilir
+Relation	T2	T14	NoRel	true	ölü	ölür
+Relation	T2	T3	NoRel	true	ölü	yaralı
+Relation	T2	T8	NoRel	true	ölü	geçirir
+Relation	T2	T9	NoRel	true	ölü	ölür
+Relation	T3	T2	NoRel	true	yaralı	ölü
+Relation	T3	T4	NoRel	true	yaralı	çarpışması
+Relation	T3	T6	NoRel	true	yaralı	öldü
+Relation	T4	T10	NoRel	true	çarpışması	çıkar
+Relation	T4	T13	NoRel	true	çarpışması	devrilir
+Relation	T4	T14	NoRel	true	çarpışması	ölür
+Relation	T4	T2	NoRel	true	çarpışması	ölü
+Relation	T4	T3	NoRel	true	çarpışması	yaralı
+Relation	T4	T5	NoRel	true	çarpışması	çarpışmasında
+Relation	T5	T1	NoRel	true	çarpışmasında	çıkar
+Relation	T6	T7	NoRel	true	öldü	felaketi
+Relation	T6	T9	NoRel	true	öldü	ölür
+Relation	T7	T1	NoRel	true	felaketi	çıkar
+Relation	T7	T13	NoRel	true	felaketi	devrilir
+Relation	T7	T14	NoRel	true	felaketi	ölür
+Relation	T8	T12	NoRel	true	geçirir	çıkar
+Relation	T8	T3	NoRel	true	geçirir	yaralı
+Relation	T9	T0	NoRel	true	ölür	çarpışması
+Relation	T9	T1	NoRel	true	ölür	çıkar
+Relation	T9	T13	NoRel	true	ölür	devrilir
+Relation	T9	T5	NoRel	true	ölür	çarpışmasında

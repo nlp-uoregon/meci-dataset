@@ -1,0 +1,95 @@
+Text	El 6 de marzo de 2021 , el Gobierno de Chile , liderado por su presidente , Sebastián Piñera , entregó la donación al gobierno paraguayo de 20 mil dosis de la vacuna china Sinovac , con el fin de que sean inoculadas para inmunizar al personal sanitario nacional .	El 12 de marzo , mediante la cooperación con el Gobierno de Emiratos Árabes Unidos , Paraguay recibe 3 mil dosis de la vacuna china Sinopharm .	El 19 de marzo , arriban las primeras vacunas del cuestionado mecanismo COVAX , de unas 36_000 dosis de la vacuna AstraZeneca .	El 29 de marzo , arriban las dosis de la vacuna india Covaxin , donadas por el Gobierno de la India , aunque no ha sido usado de forma inmediata , hasta esperar que una entidad regulatoria de alto nivel apruebe su uso de emergencia .	El 6 de abril , la Comisión Federal para la Protección contra Riesgos Sanitarios ( Cofepris ) de México aprueba para su uso de Emergencia la vacuna Covaxin , con lo que así el Paraguay pudo utilizar estas vacunas en su población .
+Event	T0	entregó	EVENT	95
+Event	T1	donación	EVENT	106
+Event	T2	inmunizar	EVENT	221
+Event	T3	cooperación	EVENT	293
+Event	T4	recibe	EVENT	358
+Event	T5	arriban	EVENT	425
+Event	T6	vacunas	EVENT	446
+Event	T7	arriban	EVENT	553
+Event	T8	donadas	EVENT	600
+Event	T9	usado	EVENT	656
+Event	T10	esperar	EVENT	689
+Event	T11	apruebe	EVENT	739
+Event	T12	uso	EVENT	750
+Event	T13	aprueba	EVENT	874
+Event	T14	uso	EVENT	890
+Event	T15	Emergencia	EVENT	897
+Event	T16	utilizar	EVENT	960
+Relation	T0	T2	CauseEffect	true	entregó	inmunizar
+Relation	T2	T0	EffectCause	true	inmunizar	entregó
+Relation	T0	T13	NoRel	true	entregó	aprueba
+Relation	T0	T15	NoRel	true	entregó	Emergencia
+Relation	T0	T4	NoRel	true	entregó	recibe
+Relation	T0	T6	NoRel	true	entregó	vacunas
+Relation	T1	T13	NoRel	true	donación	aprueba
+Relation	T1	T2	NoRel	true	donación	inmunizar
+Relation	T1	T3	NoRel	true	donación	cooperación
+Relation	T1	T7	NoRel	true	donación	arriban
+Relation	T10	T1	NoRel	true	esperar	donación
+Relation	T10	T11	NoRel	true	esperar	apruebe
+Relation	T10	T15	NoRel	true	esperar	Emergencia
+Relation	T10	T2	NoRel	true	esperar	inmunizar
+Relation	T10	T5	NoRel	true	esperar	arriban
+Relation	T10	T6	NoRel	true	esperar	vacunas
+Relation	T11	T0	NoRel	true	apruebe	entregó
+Relation	T11	T10	NoRel	true	apruebe	esperar
+Relation	T11	T12	NoRel	true	apruebe	uso
+Relation	T11	T13	NoRel	true	apruebe	aprueba
+Relation	T11	T15	NoRel	true	apruebe	Emergencia
+Relation	T11	T9	NoRel	true	apruebe	usado
+Relation	T12	T1	NoRel	true	uso	donación
+Relation	T12	T13	NoRel	true	uso	aprueba
+Relation	T12	T14	NoRel	true	uso	uso
+Relation	T12	T4	NoRel	true	uso	recibe
+Relation	T12	T7	NoRel	true	uso	arriban
+Relation	T13	T0	NoRel	true	aprueba	entregó
+Relation	T13	T1	NoRel	true	aprueba	donación
+Relation	T13	T14	NoRel	true	aprueba	uso
+Relation	T14	T0	NoRel	true	uso	entregó
+Relation	T14	T15	NoRel	true	uso	Emergencia
+Relation	T14	T2	NoRel	true	uso	inmunizar
+Relation	T14	T3	NoRel	true	uso	cooperación
+Relation	T14	T7	NoRel	true	uso	arriban
+Relation	T14	T8	NoRel	true	uso	donadas
+Relation	T15	T10	NoRel	true	Emergencia	esperar
+Relation	T15	T14	NoRel	true	Emergencia	uso
+Relation	T15	T16	NoRel	true	Emergencia	utilizar
+Relation	T15	T7	NoRel	true	Emergencia	arriban
+Relation	T16	T0	NoRel	true	utilizar	entregó
+Relation	T16	T2	NoRel	true	utilizar	inmunizar
+Relation	T16	T7	NoRel	true	utilizar	arriban
+Relation	T16	T8	NoRel	true	utilizar	donadas
+Relation	T16	T9	NoRel	true	utilizar	usado
+Relation	T2	T13	NoRel	true	inmunizar	aprueba
+Relation	T2	T4	NoRel	true	inmunizar	recibe
+Relation	T2	T5	NoRel	true	inmunizar	arriban
+Relation	T2	T6	NoRel	true	inmunizar	vacunas
+Relation	T2	T7	NoRel	true	inmunizar	arriban
+Relation	T2	T9	NoRel	true	inmunizar	usado
+Relation	T3	T0	NoRel	true	cooperación	entregó
+Relation	T3	T15	NoRel	true	cooperación	Emergencia
+Relation	T3	T5	NoRel	true	cooperación	arriban
+Relation	T4	T1	NoRel	true	recibe	donación
+Relation	T4	T10	NoRel	true	recibe	esperar
+Relation	T5	T0	NoRel	true	arriban	entregó
+Relation	T5	T1	NoRel	true	arriban	donación
+Relation	T5	T12	NoRel	true	arriban	uso
+Relation	T5	T4	NoRel	true	arriban	recibe
+Relation	T5	T8	NoRel	true	arriban	donadas
+Relation	T6	T10	NoRel	true	vacunas	esperar
+Relation	T6	T12	NoRel	true	vacunas	uso
+Relation	T6	T13	NoRel	true	vacunas	aprueba
+Relation	T6	T15	NoRel	true	vacunas	Emergencia
+Relation	T6	T16	NoRel	true	vacunas	utilizar
+Relation	T7	T0	NoRel	true	arriban	entregó
+Relation	T7	T15	NoRel	true	arriban	Emergencia
+Relation	T7	T4	NoRel	true	arriban	recibe
+Relation	T8	T0	NoRel	true	donadas	entregó
+Relation	T8	T11	NoRel	true	donadas	apruebe
+Relation	T8	T6	NoRel	true	donadas	vacunas
+Relation	T8	T9	NoRel	true	donadas	usado
+Relation	T9	T12	NoRel	true	usado	uso
+Relation	T9	T14	NoRel	true	usado	uso
+Relation	T9	T3	NoRel	true	usado	cooperación
+Relation	T9	T7	NoRel	true	usado	arriban

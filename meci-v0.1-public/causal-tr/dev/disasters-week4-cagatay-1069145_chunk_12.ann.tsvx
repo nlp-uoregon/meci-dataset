@@ -1,0 +1,34 @@
+Text	Çoğu alana fazla yağmur düşmedi , fakat fırtınanın merkezine yakın yerlerde metrekare başına 229 mm yağmur düştü .	Fazla yağmura maruz kalan bölgelerde sel meydana geldi .	Bu , çiftçilerinin ürünlerini hasat etmesini engelledi .	Kuzey Karolina'nın pek çok bölgesinde kuraklık vardı .	Dolayısıyla bölge halkı Gabrielle'in bol miktarda yağmura sebep olmasını diledi .
+Event	T0	düşmedi	EVENT	24
+Event	T1	düştü	EVENT	107
+Event	T2	geldi	EVENT	164
+Event	T3	hasat	EVENT	202
+Event	T4	engelledi	EVENT	217
+Event	T5	kuraklık	EVENT	267
+Event	T6	diledi	EVENT	357
+Event	T7	yağmura	EVENT	121
+Event	T8	sel	EVENT	152
+Relation	T7	T8	CauseEffect	true	yağmura	sel
+Relation	T8	T7	EffectCause	true	sel	yağmura
+Relation	T8	T4	CauseEffect	true	sel	engelledi
+Relation	T4	T8	EffectCause	true	engelledi	sel
+Relation	T5	T6	CauseEffect	true	kuraklık	diledi
+Relation	T6	T5	EffectCause	true	diledi	kuraklık
+Relation	T0	T2	NoRel	true	düşmedi	geldi
+Relation	T0	T3	NoRel	true	düşmedi	hasat
+Relation	T0	T7	NoRel	true	düşmedi	yağmura
+Relation	T1	T0	NoRel	true	düştü	düşmedi
+Relation	T1	T7	NoRel	true	düştü	yağmura
+Relation	T3	T0	NoRel	true	hasat	düşmedi
+Relation	T3	T4	NoRel	true	hasat	engelledi
+Relation	T3	T5	NoRel	true	hasat	kuraklık
+Relation	T4	T2	NoRel	true	engelledi	geldi
+Relation	T4	T5	NoRel	true	engelledi	kuraklık
+Relation	T5	T4	NoRel	true	kuraklık	engelledi
+Relation	T5	T7	NoRel	true	kuraklık	yağmura
+Relation	T6	T1	NoRel	true	diledi	düştü
+Relation	T6	T2	NoRel	true	diledi	geldi
+Relation	T6	T3	NoRel	true	diledi	hasat
+Relation	T6	T7	NoRel	true	diledi	yağmura
+Relation	T7	T0	NoRel	true	yağmura	düşmedi
+Relation	T8	T3	NoRel	true	sel	hasat

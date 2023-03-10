@@ -1,0 +1,45 @@
+Text	En el lado del paso por el que llegó al mismo el autobús , existían , no obstante , dos pequeñas edificaciones situadas junto a la vía - el refugio del apeadero de Muñoz y un pequeño almacén de material del servicio de vías y obras de Renfe - .	Ambas se hallaban del lado de la vía por el cual se aproximó a la misma el autobús , la primera de ellas a unos cuarenta metros de la carretera y la segunda a unos veinte .	Su distancia mínima al carril más próximo de la vía férrea era de unos cinco metros .	Se apuntó por ello en un principio como causa posible del accidente que dichas construcciones pudiesen haber impedido al conductor del autobús advertir la llegada de la locomotora , especialmente la segunda .	Aunque lo cierto es que dichas edificaciones sí restaban cierta visibilidad al paso , teniendo en cuenta su posición a priori resultaba posible detenerse ante el mismo sin invadir la vía férrea en un punto en que las referidas no condicionasen la correcta visión de ésta en bastantes metros por el lado por el que llegó la locomotora .
+Event	T0	llegó	EVENT	31
+Event	T1	apuntó	EVENT	507
+Event	T10	llegó	EVENT	1027
+Event	T2	accidente	EVENT	562
+Event	T3	construcciones	EVENT	583
+Event	T4	impedido	EVENT	613
+Event	T5	advertir	EVENT	647
+Event	T6	llegada	EVENT	659
+Event	T7	invadir	EVENT	885
+Event	T8	condicionasen	EVENT	943
+Event	T9	visión	EVENT	969
+Relation	T0	T10	NoRel	true	llegó	llegó
+Relation	T1	T3	NoRel	true	apuntó	construcciones
+Relation	T1	T4	NoRel	true	apuntó	impedido
+Relation	T1	T8	NoRel	true	apuntó	condicionasen
+Relation	T10	T1	NoRel	true	llegó	apuntó
+Relation	T2	T1	NoRel	true	accidente	apuntó
+Relation	T2	T10	NoRel	true	accidente	llegó
+Relation	T2	T4	NoRel	true	accidente	impedido
+Relation	T2	T7	NoRel	true	accidente	invadir
+Relation	T2	T8	NoRel	true	accidente	condicionasen
+Relation	T2	T9	NoRel	true	accidente	visión
+Relation	T3	T0	NoRel	true	construcciones	llegó
+Relation	T4	T10	NoRel	true	impedido	llegó
+Relation	T4	T3	NoRel	true	impedido	construcciones
+Relation	T4	T6	NoRel	true	impedido	llegada
+Relation	T5	T1	NoRel	true	advertir	apuntó
+Relation	T5	T2	NoRel	true	advertir	accidente
+Relation	T5	T8	NoRel	true	advertir	condicionasen
+Relation	T5	T9	NoRel	true	advertir	visión
+Relation	T6	T4	NoRel	true	llegada	impedido
+Relation	T6	T9	NoRel	true	llegada	visión
+Relation	T7	T0	NoRel	true	invadir	llegó
+Relation	T7	T1	NoRel	true	invadir	apuntó
+Relation	T7	T4	NoRel	true	invadir	impedido
+Relation	T7	T5	NoRel	true	invadir	advertir
+Relation	T7	T8	NoRel	true	invadir	condicionasen
+Relation	T7	T9	NoRel	true	invadir	visión
+Relation	T8	T2	NoRel	true	condicionasen	accidente
+Relation	T8	T3	NoRel	true	condicionasen	construcciones
+Relation	T9	T0	NoRel	true	visión	llegó
+Relation	T9	T10	NoRel	true	visión	llegó
+Relation	T9	T3	NoRel	true	visión	construcciones
+Relation	T9	T6	NoRel	true	visión	llegada

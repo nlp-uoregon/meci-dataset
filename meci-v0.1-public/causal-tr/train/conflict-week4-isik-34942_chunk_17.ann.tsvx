@@ -1,0 +1,20 @@
+Text	Ertesi gün de aynı şekilde Antakyalı Hristiyan erkekleri surlar dışına çıkarıp hendek_kazmalarını emretti , onların yanında da hiçbir Müslüman yoktu .	Ama Yağı - Sayan Antakyalı Hristiyan erkekleri şehir surları içine almadı .	Yağı - Sayan şehir içinde bulunan Hristiyan kadın ve çocukların can ve mal güvenliğinin teminatını verdi .	Bundan sonra Emir Yağı - Sayan Antakya kalesinde güçlü bir direnişle dokuz ay süren bir savunma yaptı .	Bu savunma sırasında Antakya'ya askeri destek icin önce Şam'daki melik Suriye Selçuklu Șam Meliği Dukak ve sonra da Halep'teki melik Suriye Selçuklu Halep Meliği Rıdvan'dan askeri yardım gönderdiler ama bunlar Haçlılar ordusuna yenik düştüler ve bu girişimler sonuçsuz kaldı .
+Event	T0	emretti	EVENT	98
+Event	T1	verdi	EVENT	326
+Event	T2	direnişle	EVENT	393
+Event	T3	yaptı	EVENT	430
+Event	T4	savunma	EVENT	441
+Event	T6	düştüler	EVENT	672
+Event	T7	gönderdiler	EVENT	625
+Relation	T2	T3	CauseEffect	true	direnişle	yaptı
+Relation	T3	T2	EffectCause	true	yaptı	direnişle
+Relation	T4	T7	CauseEffect	true	savunma	gönderdiler
+Relation	T7	T4	EffectCause	true	gönderdiler	savunma
+Relation	T0	T1	NoRel	true	emretti	verdi
+Relation	T0	T6	NoRel	true	emretti	düştüler
+Relation	T1	T2	NoRel	true	verdi	direnişle
+Relation	T1	T7	NoRel	true	verdi	gönderdiler
+Relation	T2	T6	NoRel	true	direnişle	düştüler
+Relation	T4	T0	NoRel	true	savunma	emretti
+Relation	T6	T0	NoRel	true	düştüler	emretti
+Relation	T7	T1	NoRel	true	gönderdiler	verdi

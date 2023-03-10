@@ -1,0 +1,54 @@
+Text	The TTC union blamed a flaw in ATC that prevented its use on the pocket track .	After the incident , the TTC disallowed manual mode on the pocket track .	- On October 29 , 2021 , the TTC became the target of a ransomware attack , which shut down Vision , the TTC 's communications systems .	After the attack , the TTC used its backup radio system to communicate with vehicle operators .	Also affected were the TTC website ( which had debuted its redesign a few days prior ) , TTC internal email , Wheel - Trans online bookings and displays of next bus information .
+Event	T0	blamed	EVENT	14
+Event	T1	flaw	EVENT	23
+Event	T10	used	EVENT	318
+Event	T11	communicate	EVENT	350
+Event	T12	affected	EVENT	392
+Event	T13	debuted	EVENT	434
+Event	T14	redesign	EVENT	446
+Event	T15	bookings	EVENT	518
+Event	T16	displays	EVENT	531
+Event	T17	shut down	EVENT	236
+Event	T2	prevented	EVENT	40
+Event	T3	use	EVENT	54
+Event	T4	incident	EVENT	90
+Event	T5	disallowed	EVENT	109
+Event	T6	became	EVENT	187
+Event	T7	target	EVENT	198
+Event	T8	attack	EVENT	221
+Event	T9	attack	EVENT	301
+Relation	T1	T2	CauseEffect	true	flaw	prevented
+Relation	T2	T1	EffectCause	true	prevented	flaw
+Relation	T4	T5	CauseEffect	true	incident	disallowed
+Relation	T5	T4	EffectCause	true	disallowed	incident
+Relation	T9	T12	CauseEffect	true	attack	affected
+Relation	T12	T9	EffectCause	true	affected	attack
+Relation	T10	T11	CauseEffect	true	used	communicate
+Relation	T11	T10	EffectCause	true	communicate	used
+Relation	T0	T13	NoRel	true	blamed	debuted
+Relation	T1	T11	NoRel	true	flaw	communicate
+Relation	T1	T5	NoRel	true	flaw	disallowed
+Relation	T1	T6	NoRel	true	flaw	became
+Relation	T1	T9	NoRel	true	flaw	attack
+Relation	T11	T2	NoRel	true	communicate	prevented
+Relation	T11	T3	NoRel	true	communicate	use
+Relation	T11	T7	NoRel	true	communicate	target
+Relation	T12	T1	NoRel	true	affected	flaw
+Relation	T12	T8	NoRel	true	affected	attack
+Relation	T15	T10	NoRel	true	bookings	used
+Relation	T15	T13	NoRel	true	bookings	debuted
+Relation	T15	T16	NoRel	true	bookings	displays
+Relation	T16	T4	NoRel	true	displays	incident
+Relation	T2	T10	NoRel	true	prevented	used
+Relation	T2	T3	NoRel	true	prevented	use
+Relation	T3	T0	NoRel	true	use	blamed
+Relation	T3	T1	NoRel	true	use	flaw
+Relation	T4	T12	NoRel	true	incident	affected
+Relation	T6	T14	NoRel	true	became	redesign
+Relation	T7	T0	NoRel	true	target	blamed
+Relation	T7	T14	NoRel	true	target	redesign
+Relation	T7	T2	NoRel	true	target	prevented
+Relation	T7	T3	NoRel	true	target	use
+Relation	T7	T8	NoRel	true	target	attack
+Relation	T8	T5	NoRel	true	attack	disallowed
+Relation	T8	T9	NoRel	true	attack	attack

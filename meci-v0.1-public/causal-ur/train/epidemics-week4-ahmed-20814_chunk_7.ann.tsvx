@@ -1,0 +1,35 @@
+Text	طاعون کی تشخیص کا اہم ترین اختبار وہ ہوتا جس میں بذات خود_یرسنیہ طاعونی جراثیم کو شناخت کر لیا جائے ۔	ایسی شناخت کے لیے مریض کا خون ، بلغم یا پھیپڑوں سے نکالا گیا مواد استعمال کیا جاتا ہے ۔	-	جراثیم کو دیکھنے کے لیے گرام منفی تلوین ( staining ) اور یا پھر جسم ضدی تالُـّـق ( fluorescent antibody ) کے اختبارات استعمال کیے جاتے ہیں ۔	( جسم ضدی تالق اختبار کی شکل اوپر خانۂ معلومات میں دیکھی جاسکتی ہے ) ۔
+Event	T0	تشخیص	EVENT	9
+Event	T1	شناخت	EVENT	82
+Event	T2	شناخت	EVENT	107
+Event	T3	نکالا	EVENT	153
+Event	T4	استعمال	EVENT	168
+Event	T5	دیکھنے	EVENT	202
+Event	T6	دیکھی	EVENT	384
+Event	T7	طاعون	EVENT	0
+Event	T8	استعمال	EVENT	310
+Relation	T0	T1	NoRel	true	تشخیص	شناخت
+Relation	T0	T5	NoRel	true	تشخیص	دیکھنے
+Relation	T1	T2	NoRel	true	شناخت	شناخت
+Relation	T1	T3	NoRel	true	شناخت	نکالا
+Relation	T1	T5	NoRel	true	شناخت	دیکھنے
+Relation	T1	T6	NoRel	true	شناخت	دیکھی
+Relation	T2	T0	NoRel	true	شناخت	تشخیص
+Relation	T2	T1	NoRel	true	شناخت	شناخت
+Relation	T2	T3	NoRel	true	شناخت	نکالا
+Relation	T2	T4	NoRel	true	شناخت	استعمال
+Relation	T3	T0	NoRel	true	نکالا	تشخیص
+Relation	T3	T1	NoRel	true	نکالا	شناخت
+Relation	T3	T2	NoRel	true	نکالا	شناخت
+Relation	T3	T8	NoRel	true	نکالا	استعمال
+Relation	T5	T0	NoRel	true	دیکھنے	تشخیص
+Relation	T5	T2	NoRel	true	دیکھنے	شناخت
+Relation	T5	T6	NoRel	true	دیکھنے	دیکھی
+Relation	T6	T4	NoRel	true	دیکھی	استعمال
+Relation	T7	T0	NoRel	true	طاعون	تشخیص
+Relation	T7	T5	NoRel	true	طاعون	دیکھنے
+Relation	T7	T8	NoRel	true	طاعون	استعمال
+Relation	T8	T0	NoRel	true	استعمال	تشخیص
+Relation	T8	T2	NoRel	true	استعمال	شناخت
+Relation	T8	T5	NoRel	true	استعمال	دیکھنے
+Relation	T8	T7	NoRel	true	استعمال	طاعون

@@ -1,0 +1,122 @@
+Text	TOGKOLLISIONEN I WENZHOU skete den 23. juli 2011 , hvor to højhastighedstog kolliderede i Shuangyu nær byen Wenzhou i provinsen Zhejiang i Kina .	39 mennesker døde og 192 blev kvæstet heraf 12 alvorligt .	Cirka klokken 20.00 mistede et tog af typen CRH1 strøm pga lynnedslag og stod stille på en viadukt 20 meter over jorden .	Kort tid efter kom et tog af typen CRH2 og kørte ind i det første tog hvorved de fire første togvogne i det kørende tog blev afsporet og faldt ned fra viadukten .	Timer efter at søgning efter overlevende blev stoppet og man havde begyndt at skære de ødelagte togvogne i stykke blev en 2-årig pige fundet i live i vragdelene .
+Event	T0	TOGKOLLISIONEN	EVENT	0
+Event	T1	skete	EVENT	25
+Event	T2	kolliderede	EVENT	76
+Event	T3	døde	EVENT	159
+Event	T4	kvæstet	EVENT	176
+Event	T5	mistede	EVENT	225
+Event	T6	lynnedslag	EVENT	264
+Event	T7	afsporet	EVENT	452
+Event	T8	søgning	EVENT	505
+Event	T9	stoppet	EVENT	536
+Event	T10	begyndt	EVENT	557
+Event	T11	skære	EVENT	568
+Event	T12	stod stille	EVENT	278
+Event	T13	overlevende	EVENT	519
+Event	T14	fundet	EVENT	624
+Event	T15	kom	EVENT	342
+Event	T16	kørte ind i	EVENT	370
+Relation	T0	T3	CauseEffect	true	TOGKOLLISIONEN	døde
+Relation	T3	T0	EffectCause	true	døde	TOGKOLLISIONEN
+Relation	T0	T4	CauseEffect	true	TOGKOLLISIONEN	kvæstet
+Relation	T4	T0	EffectCause	true	kvæstet	TOGKOLLISIONEN
+Relation	T2	T3	CauseEffect	true	kolliderede	døde
+Relation	T3	T2	EffectCause	true	døde	kolliderede
+Relation	T2	T4	CauseEffect	true	kolliderede	kvæstet
+Relation	T4	T2	EffectCause	true	kvæstet	kolliderede
+Relation	T6	T5	CauseEffect	true	lynnedslag	mistede
+Relation	T5	T6	EffectCause	true	mistede	lynnedslag
+Relation	T5	T12	CauseEffect	true	mistede	stod stille
+Relation	T12	T5	EffectCause	true	stod stille	mistede
+Relation	T12	T16	CauseEffect	true	stod stille	kørte ind i
+Relation	T16	T12	EffectCause	true	kørte ind i	stod stille
+Relation	T16	T7	CauseEffect	true	kørte ind i	afsporet
+Relation	T7	T16	EffectCause	true	afsporet	kørte ind i
+Relation	T7	T3	CauseEffect	true	afsporet	døde
+Relation	T3	T7	EffectCause	true	døde	afsporet
+Relation	T7	T4	CauseEffect	true	afsporet	kvæstet
+Relation	T4	T7	EffectCause	true	kvæstet	afsporet
+Relation	T11	T14	CauseEffect	true	skære	fundet
+Relation	T14	T11	EffectCause	true	fundet	skære
+Relation	T0	T10	NoRel	true	TOGKOLLISIONEN	begyndt
+Relation	T0	T11	NoRel	true	TOGKOLLISIONEN	skære
+Relation	T1	T12	NoRel	true	skete	stod stille
+Relation	T1	T16	NoRel	true	skete	kørte ind i
+Relation	T1	T3	NoRel	true	skete	døde
+Relation	T1	T6	NoRel	true	skete	lynnedslag
+Relation	T1	T9	NoRel	true	skete	stoppet
+Relation	T10	T11	NoRel	true	begyndt	skære
+Relation	T10	T12	NoRel	true	begyndt	stod stille
+Relation	T10	T15	NoRel	true	begyndt	kom
+Relation	T10	T16	NoRel	true	begyndt	kørte ind i
+Relation	T10	T2	NoRel	true	begyndt	kolliderede
+Relation	T11	T1	NoRel	true	skære	skete
+Relation	T11	T3	NoRel	true	skære	døde
+Relation	T11	T4	NoRel	true	skære	kvæstet
+Relation	T11	T6	NoRel	true	skære	lynnedslag
+Relation	T12	T0	NoRel	true	stod stille	TOGKOLLISIONEN
+Relation	T12	T1	NoRel	true	stod stille	skete
+Relation	T12	T14	NoRel	true	stod stille	fundet
+Relation	T12	T15	NoRel	true	stod stille	kom
+Relation	T12	T2	NoRel	true	stod stille	kolliderede
+Relation	T12	T6	NoRel	true	stod stille	lynnedslag
+Relation	T13	T2	NoRel	true	overlevende	kolliderede
+Relation	T13	T5	NoRel	true	overlevende	mistede
+Relation	T13	T6	NoRel	true	overlevende	lynnedslag
+Relation	T14	T16	NoRel	true	fundet	kørte ind i
+Relation	T14	T2	NoRel	true	fundet	kolliderede
+Relation	T14	T5	NoRel	true	fundet	mistede
+Relation	T14	T7	NoRel	true	fundet	afsporet
+Relation	T14	T8	NoRel	true	fundet	søgning
+Relation	T15	T1	NoRel	true	kom	skete
+Relation	T15	T13	NoRel	true	kom	overlevende
+Relation	T15	T14	NoRel	true	kom	fundet
+Relation	T15	T5	NoRel	true	kom	mistede
+Relation	T16	T1	NoRel	true	kørte ind i	skete
+Relation	T16	T10	NoRel	true	kørte ind i	begyndt
+Relation	T16	T11	NoRel	true	kørte ind i	skære
+Relation	T16	T14	NoRel	true	kørte ind i	fundet
+Relation	T16	T15	NoRel	true	kørte ind i	kom
+Relation	T16	T6	NoRel	true	kørte ind i	lynnedslag
+Relation	T16	T9	NoRel	true	kørte ind i	stoppet
+Relation	T2	T1	NoRel	true	kolliderede	skete
+Relation	T2	T14	NoRel	true	kolliderede	fundet
+Relation	T2	T9	NoRel	true	kolliderede	stoppet
+Relation	T3	T15	NoRel	true	døde	kom
+Relation	T3	T16	NoRel	true	døde	kørte ind i
+Relation	T3	T8	NoRel	true	døde	søgning
+Relation	T3	T9	NoRel	true	døde	stoppet
+Relation	T4	T1	NoRel	true	kvæstet	skete
+Relation	T4	T10	NoRel	true	kvæstet	begyndt
+Relation	T4	T11	NoRel	true	kvæstet	skære
+Relation	T4	T13	NoRel	true	kvæstet	overlevende
+Relation	T4	T5	NoRel	true	kvæstet	mistede
+Relation	T5	T1	NoRel	true	mistede	skete
+Relation	T5	T14	NoRel	true	mistede	fundet
+Relation	T5	T2	NoRel	true	mistede	kolliderede
+Relation	T5	T3	NoRel	true	mistede	døde
+Relation	T5	T7	NoRel	true	mistede	afsporet
+Relation	T6	T11	NoRel	true	lynnedslag	skære
+Relation	T6	T12	NoRel	true	lynnedslag	stod stille
+Relation	T6	T16	NoRel	true	lynnedslag	kørte ind i
+Relation	T6	T2	NoRel	true	lynnedslag	kolliderede
+Relation	T6	T4	NoRel	true	lynnedslag	kvæstet
+Relation	T6	T9	NoRel	true	lynnedslag	stoppet
+Relation	T7	T0	NoRel	true	afsporet	TOGKOLLISIONEN
+Relation	T7	T1	NoRel	true	afsporet	skete
+Relation	T7	T12	NoRel	true	afsporet	stod stille
+Relation	T7	T2	NoRel	true	afsporet	kolliderede
+Relation	T7	T5	NoRel	true	afsporet	mistede
+Relation	T7	T9	NoRel	true	afsporet	stoppet
+Relation	T8	T0	NoRel	true	søgning	TOGKOLLISIONEN
+Relation	T8	T16	NoRel	true	søgning	kørte ind i
+Relation	T8	T2	NoRel	true	søgning	kolliderede
+Relation	T8	T3	NoRel	true	søgning	døde
+Relation	T8	T4	NoRel	true	søgning	kvæstet
+Relation	T9	T0	NoRel	true	stoppet	TOGKOLLISIONEN
+Relation	T9	T1	NoRel	true	stoppet	skete
+Relation	T9	T11	NoRel	true	stoppet	skære
+Relation	T9	T13	NoRel	true	stoppet	overlevende
+Relation	T9	T16	NoRel	true	stoppet	kørte ind i
+Relation	T9	T6	NoRel	true	stoppet	lynnedslag
+Relation	T9	T8	NoRel	true	stoppet	søgning

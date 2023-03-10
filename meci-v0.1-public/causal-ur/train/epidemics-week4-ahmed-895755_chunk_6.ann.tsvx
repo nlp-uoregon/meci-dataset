@@ -1,0 +1,200 @@
+Text	پھیپھڑوں کے اعضا پر زیادہ تر اثر COVID-19 کرتا ہے کیونکہ وائرس میزبان خلیوں تک بذریعہ ACE2 انزایم رسائی حاصل کرتا ہے ، یہ انزایم پھیپڑوں کے type II alveolar cells میں وافر ہوتا ہے ۔	وائرس ایک خصوصی تہہ گلائیکو پروٹین استعمال کرتا ہے ، جو " اِسپکائیک " کہلاتا ہے ، تاکہ ACE2 سے منسلک ہو سکے اور میزبان خلیہ میں گھس پائے ۔	ہر بافت میں ACE2 کی کثافت ، اُس بافت میں مرض کی شدت سے تعلق رکھتی ہے اور کچھ نے سُجھاؤ دیا ہے کہ ACE2 کی سرگرمی گھٹانا حفاظتی ہوسکتا ہے ، جبکہ ایک اور نظریہ ہے کہ Angiotensin II receptor blocker والی ادویات کو استعمال کرتے ہوئے ACE2 کو بڑھانا بھی حفاظتی ہوسکتا ہے اور ایسے قیاسوں کو آزمانے کی ضرورت ہے ۔	جیسے ہی چھتے دار ( alveolar ) مرض بڑھتا ہے تنفس کا نظام ناکارہ ہو کر موت واقع ہوسکتی ہے ۔	وائرس کے لیے ACE2 دِل پر حملہ کرنے کے لیے راہ بھی ہموار کرسکتا ہے ، جس کے نتیجے میں acute cardiac injury ہوسکتی ۔
+Event	T0	استعمال	EVENT	217
+Event	T2	مرض	EVENT	362
+Event	T3	استعمال	EVENT	531
+Event	T4	بڑھانا	EVENT	557
+Event	T5	آزمانے	EVENT	604
+Event	T6	بڑھتا	EVENT	659
+Event	T8	کرتا	EVENT	42
+Event	T9	حاصل	EVENT	104
+Event	T10	وافر	EVENT	167
+Event	T11	کہلاتا	EVENT	252
+Event	T12	منسلک	EVENT	277
+Event	T13	گھس	EVENT	310
+Event	T1	تعلق	EVENT	376
+Event	T14	سُجھاؤ	EVENT	401
+Event	T15	ہوسکتا	EVENT	447
+Event	T16	ہوسکتا	EVENT	575
+Event	T17	گھٹانا	EVENT	433
+Event	T18	مرض	EVENT	655
+Event	T19	موت	EVENT	694
+Event	T20	ہو	EVENT	688
+Event	T7	حملہ	EVENT	740
+Event	T21	ہموار	EVENT	765
+Event	T22	injury	EVENT	813
+Relation	T9	T8	CauseEffect	true	حاصل	کرتا
+Relation	T8	T9	EffectCause	true	کرتا	حاصل
+Relation	T3	T4	CauseEffect	true	استعمال	بڑھانا
+Relation	T4	T3	EffectCause	true	بڑھانا	استعمال
+Relation	T6	T19	CauseEffect	true	بڑھتا	موت
+Relation	T19	T6	EffectCause	true	موت	بڑھتا
+Relation	T7	T22	CauseEffect	true	حملہ	injury
+Relation	T22	T7	EffectCause	true	injury	حملہ
+Relation	T0	T1	NoRel	true	استعمال	تعلق
+Relation	T0	T10	NoRel	true	استعمال	وافر
+Relation	T0	T16	NoRel	true	استعمال	ہوسکتا
+Relation	T0	T18	NoRel	true	استعمال	مرض
+Relation	T0	T19	NoRel	true	استعمال	موت
+Relation	T0	T20	NoRel	true	استعمال	ہو
+Relation	T0	T22	NoRel	true	استعمال	injury
+Relation	T0	T3	NoRel	true	استعمال	استعمال
+Relation	T0	T4	NoRel	true	استعمال	بڑھانا
+Relation	T0	T8	NoRel	true	استعمال	کرتا
+Relation	T1	T11	NoRel	true	تعلق	کہلاتا
+Relation	T1	T12	NoRel	true	تعلق	منسلک
+Relation	T1	T17	NoRel	true	تعلق	گھٹانا
+Relation	T1	T2	NoRel	true	تعلق	مرض
+Relation	T1	T21	NoRel	true	تعلق	ہموار
+Relation	T1	T3	NoRel	true	تعلق	استعمال
+Relation	T1	T4	NoRel	true	تعلق	بڑھانا
+Relation	T1	T5	NoRel	true	تعلق	آزمانے
+Relation	T1	T8	NoRel	true	تعلق	کرتا
+Relation	T10	T12	NoRel	true	وافر	منسلک
+Relation	T10	T13	NoRel	true	وافر	گھس
+Relation	T10	T14	NoRel	true	وافر	سُجھاؤ
+Relation	T10	T19	NoRel	true	وافر	موت
+Relation	T10	T21	NoRel	true	وافر	ہموار
+Relation	T10	T22	NoRel	true	وافر	injury
+Relation	T10	T3	NoRel	true	وافر	استعمال
+Relation	T10	T7	NoRel	true	وافر	حملہ
+Relation	T10	T8	NoRel	true	وافر	کرتا
+Relation	T11	T18	NoRel	true	کہلاتا	مرض
+Relation	T11	T19	NoRel	true	کہلاتا	موت
+Relation	T11	T21	NoRel	true	کہلاتا	ہموار
+Relation	T11	T4	NoRel	true	کہلاتا	بڑھانا
+Relation	T12	T0	NoRel	true	منسلک	استعمال
+Relation	T12	T15	NoRel	true	منسلک	ہوسکتا
+Relation	T12	T19	NoRel	true	منسلک	موت
+Relation	T12	T21	NoRel	true	منسلک	ہموار
+Relation	T12	T3	NoRel	true	منسلک	استعمال
+Relation	T12	T6	NoRel	true	منسلک	بڑھتا
+Relation	T12	T9	NoRel	true	منسلک	حاصل
+Relation	T13	T11	NoRel	true	گھس	کہلاتا
+Relation	T13	T16	NoRel	true	گھس	ہوسکتا
+Relation	T13	T17	NoRel	true	گھس	گھٹانا
+Relation	T13	T20	NoRel	true	گھس	ہو
+Relation	T13	T3	NoRel	true	گھس	استعمال
+Relation	T13	T5	NoRel	true	گھس	آزمانے
+Relation	T13	T7	NoRel	true	گھس	حملہ
+Relation	T14	T0	NoRel	true	سُجھاؤ	استعمال
+Relation	T14	T10	NoRel	true	سُجھاؤ	وافر
+Relation	T14	T16	NoRel	true	سُجھاؤ	ہوسکتا
+Relation	T14	T20	NoRel	true	سُجھاؤ	ہو
+Relation	T14	T21	NoRel	true	سُجھاؤ	ہموار
+Relation	T14	T4	NoRel	true	سُجھاؤ	بڑھانا
+Relation	T15	T13	NoRel	true	ہوسکتا	گھس
+Relation	T15	T22	NoRel	true	ہوسکتا	injury
+Relation	T15	T3	NoRel	true	ہوسکتا	استعمال
+Relation	T15	T4	NoRel	true	ہوسکتا	بڑھانا
+Relation	T15	T5	NoRel	true	ہوسکتا	آزمانے
+Relation	T15	T6	NoRel	true	ہوسکتا	بڑھتا
+Relation	T16	T10	NoRel	true	ہوسکتا	وافر
+Relation	T16	T12	NoRel	true	ہوسکتا	منسلک
+Relation	T16	T13	NoRel	true	ہوسکتا	گھس
+Relation	T16	T14	NoRel	true	ہوسکتا	سُجھاؤ
+Relation	T16	T20	NoRel	true	ہوسکتا	ہو
+Relation	T16	T22	NoRel	true	ہوسکتا	injury
+Relation	T16	T6	NoRel	true	ہوسکتا	بڑھتا
+Relation	T16	T8	NoRel	true	ہوسکتا	کرتا
+Relation	T16	T9	NoRel	true	ہوسکتا	حاصل
+Relation	T17	T11	NoRel	true	گھٹانا	کہلاتا
+Relation	T17	T12	NoRel	true	گھٹانا	منسلک
+Relation	T17	T13	NoRel	true	گھٹانا	گھس
+Relation	T17	T16	NoRel	true	گھٹانا	ہوسکتا
+Relation	T17	T19	NoRel	true	گھٹانا	موت
+Relation	T17	T21	NoRel	true	گھٹانا	ہموار
+Relation	T17	T22	NoRel	true	گھٹانا	injury
+Relation	T17	T3	NoRel	true	گھٹانا	استعمال
+Relation	T17	T5	NoRel	true	گھٹانا	آزمانے
+Relation	T18	T15	NoRel	true	مرض	ہوسکتا
+Relation	T18	T16	NoRel	true	مرض	ہوسکتا
+Relation	T18	T2	NoRel	true	مرض	مرض
+Relation	T18	T22	NoRel	true	مرض	injury
+Relation	T18	T3	NoRel	true	مرض	استعمال
+Relation	T18	T7	NoRel	true	مرض	حملہ
+Relation	T18	T9	NoRel	true	مرض	حاصل
+Relation	T19	T0	NoRel	true	موت	استعمال
+Relation	T19	T1	NoRel	true	موت	تعلق
+Relation	T19	T11	NoRel	true	موت	کہلاتا
+Relation	T19	T13	NoRel	true	موت	گھس
+Relation	T19	T15	NoRel	true	موت	ہوسکتا
+Relation	T19	T17	NoRel	true	موت	گھٹانا
+Relation	T19	T2	NoRel	true	موت	مرض
+Relation	T19	T20	NoRel	true	موت	ہو
+Relation	T19	T22	NoRel	true	موت	injury
+Relation	T19	T5	NoRel	true	موت	آزمانے
+Relation	T19	T9	NoRel	true	موت	حاصل
+Relation	T2	T1	NoRel	true	مرض	تعلق
+Relation	T2	T11	NoRel	true	مرض	کہلاتا
+Relation	T2	T21	NoRel	true	مرض	ہموار
+Relation	T2	T3	NoRel	true	مرض	استعمال
+Relation	T20	T0	NoRel	true	ہو	استعمال
+Relation	T20	T1	NoRel	true	ہو	تعلق
+Relation	T20	T10	NoRel	true	ہو	وافر
+Relation	T20	T12	NoRel	true	ہو	منسلک
+Relation	T20	T15	NoRel	true	ہو	ہوسکتا
+Relation	T20	T21	NoRel	true	ہو	ہموار
+Relation	T20	T8	NoRel	true	ہو	کرتا
+Relation	T21	T1	NoRel	true	ہموار	تعلق
+Relation	T21	T16	NoRel	true	ہموار	ہوسکتا
+Relation	T21	T2	NoRel	true	ہموار	مرض
+Relation	T21	T20	NoRel	true	ہموار	ہو
+Relation	T21	T22	NoRel	true	ہموار	injury
+Relation	T21	T5	NoRel	true	ہموار	آزمانے
+Relation	T22	T0	NoRel	true	injury	استعمال
+Relation	T22	T1	NoRel	true	injury	تعلق
+Relation	T22	T13	NoRel	true	injury	گھس
+Relation	T22	T17	NoRel	true	injury	گھٹانا
+Relation	T22	T3	NoRel	true	injury	استعمال
+Relation	T22	T4	NoRel	true	injury	بڑھانا
+Relation	T22	T6	NoRel	true	injury	بڑھتا
+Relation	T3	T1	NoRel	true	استعمال	تعلق
+Relation	T3	T13	NoRel	true	استعمال	گھس
+Relation	T3	T15	NoRel	true	استعمال	ہوسکتا
+Relation	T3	T16	NoRel	true	استعمال	ہوسکتا
+Relation	T3	T20	NoRel	true	استعمال	ہو
+Relation	T3	T21	NoRel	true	استعمال	ہموار
+Relation	T3	T5	NoRel	true	استعمال	آزمانے
+Relation	T3	T6	NoRel	true	استعمال	بڑھتا
+Relation	T4	T0	NoRel	true	بڑھانا	استعمال
+Relation	T4	T11	NoRel	true	بڑھانا	کہلاتا
+Relation	T4	T12	NoRel	true	بڑھانا	منسلک
+Relation	T4	T14	NoRel	true	بڑھانا	سُجھاؤ
+Relation	T4	T15	NoRel	true	بڑھانا	ہوسکتا
+Relation	T4	T18	NoRel	true	بڑھانا	مرض
+Relation	T4	T2	NoRel	true	بڑھانا	مرض
+Relation	T4	T21	NoRel	true	بڑھانا	ہموار
+Relation	T4	T6	NoRel	true	بڑھانا	بڑھتا
+Relation	T4	T7	NoRel	true	بڑھانا	حملہ
+Relation	T4	T8	NoRel	true	بڑھانا	کرتا
+Relation	T5	T10	NoRel	true	آزمانے	وافر
+Relation	T5	T12	NoRel	true	آزمانے	منسلک
+Relation	T5	T13	NoRel	true	آزمانے	گھس
+Relation	T5	T18	NoRel	true	آزمانے	مرض
+Relation	T5	T3	NoRel	true	آزمانے	استعمال
+Relation	T5	T4	NoRel	true	آزمانے	بڑھانا
+Relation	T6	T16	NoRel	true	بڑھتا	ہوسکتا
+Relation	T6	T17	NoRel	true	بڑھتا	گھٹانا
+Relation	T6	T4	NoRel	true	بڑھتا	بڑھانا
+Relation	T6	T5	NoRel	true	بڑھتا	آزمانے
+Relation	T6	T7	NoRel	true	بڑھتا	حملہ
+Relation	T6	T9	NoRel	true	بڑھتا	حاصل
+Relation	T7	T1	NoRel	true	حملہ	تعلق
+Relation	T7	T10	NoRel	true	حملہ	وافر
+Relation	T7	T16	NoRel	true	حملہ	ہوسکتا
+Relation	T7	T18	NoRel	true	حملہ	مرض
+Relation	T7	T6	NoRel	true	حملہ	بڑھتا
+Relation	T8	T0	NoRel	true	کرتا	استعمال
+Relation	T8	T11	NoRel	true	کرتا	کہلاتا
+Relation	T8	T12	NoRel	true	کرتا	منسلک
+Relation	T8	T14	NoRel	true	کرتا	سُجھاؤ
+Relation	T8	T16	NoRel	true	کرتا	ہوسکتا
+Relation	T8	T19	NoRel	true	کرتا	موت
+Relation	T8	T21	NoRel	true	کرتا	ہموار
+Relation	T8	T4	NoRel	true	کرتا	بڑھانا
+Relation	T8	T6	NoRel	true	کرتا	بڑھتا
+Relation	T9	T11	NoRel	true	حاصل	کہلاتا
+Relation	T9	T13	NoRel	true	حاصل	گھس
+Relation	T9	T15	NoRel	true	حاصل	ہوسکتا
+Relation	T9	T19	NoRel	true	حاصل	موت
+Relation	T9	T21	NoRel	true	حاصل	ہموار

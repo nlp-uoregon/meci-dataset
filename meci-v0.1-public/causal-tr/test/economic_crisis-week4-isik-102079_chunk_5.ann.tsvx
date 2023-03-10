@@ -1,0 +1,39 @@
+Text	Toplumdaki yoksul ve orta sınıfın ihtiyaçları devlet tarafından karşılanır ; örneğin Almanya'da çıkan toprak yasasıyla köylülerin topraklarının ipotek yoluyla ellerinden alınmasının önüne geçilmiş ve fırsatçı sermayenin köylüyü sömürmesi engellenmiştir .	Faşizmin amacı bir toplumu birlik - beraberlik , ulusal değerler , tarih bilinci , vatan - bayrak - devlet üçlemesi , halkçılık ve devletçilik gibi anlayışların altında bütünleştirmektir .	Saldırgan milliyetçi olmakla birlikte - özellikle de nasyonal sosyalizmde - ırkçı boyutlara varabilmektedir .	Milliyetçi veya ırkçı fikirlerin benimsenmesi ülkelere göre değişmektedir ; örneğin İtalyan faşizminde " İtalyan vatandaşlığı " kavramı ön plandayken , Alman nasyonal sosyalizminde ise " Alman kanı taşıma " düşüncesi ön plandadır .	Mussolini'nin doktrininde vatandaşlık kavramı vurgulanırken , Hitler'in doktrininde ise kan bağı vurgulanmaktadır .
+Event	T0	engellenmiştir	EVENT	238
+Event	T2	benimsenmesi	EVENT	587
+Event	T3	karşılanır	EVENT	64
+Event	T4	yasasıyla	EVENT	109
+Event	T5	geçilmiş	EVENT	188
+Event	T6	bütünleştirmektir	EVENT	424
+Event	T1	vurgulanırken	EVENT	832
+Event	T7	vurgulanmaktadır	EVENT	883
+Event	T8	değişmektedir	EVENT	614
+Relation	T3	T4	CauseEffect	true	karşılanır	yasasıyla
+Relation	T4	T3	EffectCause	true	yasasıyla	karşılanır
+Relation	T4	T5	CauseEffect	true	yasasıyla	geçilmiş
+Relation	T5	T4	EffectCause	true	geçilmiş	yasasıyla
+Relation	T5	T0	CauseEffect	true	geçilmiş	engellenmiştir
+Relation	T0	T5	EffectCause	true	engellenmiştir	geçilmiş
+Relation	T0	T1	NoRel	true	engellenmiştir	vurgulanırken
+Relation	T0	T3	NoRel	true	engellenmiştir	karşılanır
+Relation	T0	T8	NoRel	true	engellenmiştir	değişmektedir
+Relation	T1	T2	NoRel	true	vurgulanırken	benimsenmesi
+Relation	T1	T7	NoRel	true	vurgulanırken	vurgulanmaktadır
+Relation	T1	T8	NoRel	true	vurgulanırken	değişmektedir
+Relation	T2	T5	NoRel	true	benimsenmesi	geçilmiş
+Relation	T2	T7	NoRel	true	benimsenmesi	vurgulanmaktadır
+Relation	T4	T1	NoRel	true	yasasıyla	vurgulanırken
+Relation	T4	T8	NoRel	true	yasasıyla	değişmektedir
+Relation	T5	T6	NoRel	true	geçilmiş	bütünleştirmektir
+Relation	T5	T7	NoRel	true	geçilmiş	vurgulanmaktadır
+Relation	T5	T8	NoRel	true	geçilmiş	değişmektedir
+Relation	T6	T0	NoRel	true	bütünleştirmektir	engellenmiştir
+Relation	T6	T1	NoRel	true	bütünleştirmektir	vurgulanırken
+Relation	T6	T5	NoRel	true	bütünleştirmektir	geçilmiş
+Relation	T7	T5	NoRel	true	vurgulanmaktadır	geçilmiş
+Relation	T8	T1	NoRel	true	değişmektedir	vurgulanırken
+Relation	T8	T2	NoRel	true	değişmektedir	benimsenmesi
+Relation	T8	T3	NoRel	true	değişmektedir	karşılanır
+Relation	T8	T4	NoRel	true	değişmektedir	yasasıyla
+Relation	T8	T6	NoRel	true	değişmektedir	bütünleştirmektir
+Relation	T8	T7	NoRel	true	değişmektedir	vurgulanmaktadır

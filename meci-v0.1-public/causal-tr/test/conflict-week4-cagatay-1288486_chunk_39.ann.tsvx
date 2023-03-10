@@ -1,0 +1,22 @@
+Text	Kapp Darbesi de politikanın bir parçasıydı .	İsmini eski Doğu Prusya Valisi Kapp’dan alan darbe , Mart 1920’de gerçekleşti .	Darbeyle beraber Berlin’in bütün kilit noktaları ele geçirildi .	SPD liderleri başkenti darbecilere bırakarak kaçtılar .	Ruhr bölgesinde işçilerce örgütlenen 50.000 kişilik Ruhr Kızılordusu ( _ Rote Ruhrarmee _ ) darbecilerle kıyasıya çatıştı .
+Event	T0	darbe	EVENT	90
+Event	T2	geçirildi	EVENT	178
+Event	T3	kaçtılar	EVENT	235
+Event	T4	örgütlenen	EVENT	272
+Event	T5	çatıştı	EVENT	360
+Event	T6	Kapp Darbesi	EVENT	0
+Event	T1	Darbeyle	EVENT	125
+Relation	T6	T3	CauseEffect	true	Kapp Darbesi	kaçtılar
+Relation	T3	T6	EffectCause	true	kaçtılar	Kapp Darbesi
+Relation	T0	T3	CauseEffect	true	darbe	kaçtılar
+Relation	T3	T0	EffectCause	true	kaçtılar	darbe
+Relation	T1	T3	CauseEffect	true	Darbeyle	kaçtılar
+Relation	T3	T1	EffectCause	true	kaçtılar	Darbeyle
+Relation	T0	T1	NoRel	true	darbe	Darbeyle
+Relation	T2	T3	NoRel	true	geçirildi	kaçtılar
+Relation	T2	T4	NoRel	true	geçirildi	örgütlenen
+Relation	T2	T5	NoRel	true	geçirildi	çatıştı
+Relation	T2	T6	NoRel	true	geçirildi	Kapp Darbesi
+Relation	T3	T4	NoRel	true	kaçtılar	örgütlenen
+Relation	T5	T2	NoRel	true	çatıştı	geçirildi
+Relation	T5	T4	NoRel	true	çatıştı	örgütlenen

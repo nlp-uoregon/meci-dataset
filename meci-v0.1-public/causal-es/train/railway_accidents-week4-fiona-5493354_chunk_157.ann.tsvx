@@ -1,0 +1,19 @@
+Text	« Six killed in rail crash » , artículo en el diario _ Schenectady Gazzete _ , 27 de junio de 1963 , página 13 .	Servidor de prensa histórica Fultonhistory.com ( En inglés ) .	« Descarrila un automotor en Portugal y mueren ochenta y nueve personas » , artículo en _ ABC _ , edición Madrid , 28 de julio de 1964 , página 23 .	O acidente ferroviário desta madrugada , artículo en _ Diário de Lisboa _ , 3 de agosto de 1964 , páginas 8 , 9 y 16 .	Archivo digital de la Fundación Mario Soares ( en portugués )
+Event	T0	killed	EVENT	6
+Event	T1	crash	EVENT	21
+Event	T2	Descarrila	EVENT	178
+Event	T3	mueren	EVENT	216
+Event	T4	acidente	EVENT	327
+Event	T5	artículo	EVENT	366
+Relation	T2	T3	CauseEffect	true	Descarrila	mueren
+Relation	T3	T2	EffectCause	true	mueren	Descarrila
+Relation	T0	T1	NoRel	true	killed	crash
+Relation	T0	T3	NoRel	true	killed	mueren
+Relation	T1	T3	NoRel	true	crash	mueren
+Relation	T3	T1	NoRel	true	mueren	crash
+Relation	T4	T0	NoRel	true	acidente	killed
+Relation	T4	T2	NoRel	true	acidente	Descarrila
+Relation	T4	T3	NoRel	true	acidente	mueren
+Relation	T5	T1	NoRel	true	artículo	crash
+Relation	T5	T2	NoRel	true	artículo	Descarrila
+Relation	T5	T3	NoRel	true	artículo	mueren

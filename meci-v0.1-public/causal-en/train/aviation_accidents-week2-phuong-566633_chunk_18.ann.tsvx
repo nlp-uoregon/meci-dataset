@@ -1,0 +1,37 @@
+Text	- December 16 – Citing Iraq { {'} } s failure to comply with United Nations Security Council Resolutions , U.S. President Bill Clinton orders Operation Desert Fox , a four - day air campaign against targets all over Iraq .	The operation begins an increased level of combat in the Operation Southern Watch no - fly zone which will last until the invasion of Iraq in March 2003 .	- December 20 – Atlantic Rowing Race co-winner Phil Stubbs is killed when the Piper PA - 18 Super Cub he is piloting nosedives into Karekare Beach in New Zealand just after take off from Auckland .	His passenger survives .	- December 30 – Iraqi 2 K 12 Kub ( NATO reporting name " SA - 6 Gainful " ) surface - to - air missile sites fire at American aircraft .
+Event	T1	failure	EVENT	38
+Event	T10	nosedives	EVENT	495
+Event	T11	survives	EVENT	590
+Event	T12	reporting	EVENT	641
+Event	T13	fire	EVENT	710
+Event	T2	take off	EVENT	551
+Event	T3	campaign	EVENT	182
+Event	T4	begins	EVENT	237
+Event	T5	increased	EVENT	247
+Event	T6	combat	EVENT	266
+Event	T7	invasion	EVENT	345
+Event	T8	Race	EVENT	410
+Event	T9	killed	EVENT	440
+Relation	T10	T9	CauseEffect	true	nosedives	killed
+Relation	T9	T10	EffectCause	true	killed	nosedives
+Relation	T10	T11	CauseEffect	true	nosedives	survives
+Relation	T11	T10	EffectCause	true	survives	nosedives
+Relation	T2	T10	CauseEffect	true	take off	nosedives
+Relation	T10	T2	EffectCause	true	nosedives	take off
+Relation	T1	T3	CauseEffect	true	failure	campaign
+Relation	T3	T1	EffectCause	true	campaign	failure
+Relation	T10	T1	NoRel	true	nosedives	failure
+Relation	T10	T5	NoRel	true	nosedives	increased
+Relation	T10	T8	NoRel	true	nosedives	Race
+Relation	T11	T2	NoRel	true	survives	take off
+Relation	T11	T3	NoRel	true	survives	campaign
+Relation	T11	T5	NoRel	true	survives	increased
+Relation	T2	T1	NoRel	true	take off	failure
+Relation	T3	T10	NoRel	true	campaign	nosedives
+Relation	T3	T6	NoRel	true	campaign	combat
+Relation	T4	T13	NoRel	true	begins	fire
+Relation	T4	T5	NoRel	true	begins	increased
+Relation	T4	T8	NoRel	true	begins	Race
+Relation	T6	T11	NoRel	true	combat	survives
+Relation	T6	T9	NoRel	true	combat	killed
+Relation	T7	T9	NoRel	true	invasion	killed

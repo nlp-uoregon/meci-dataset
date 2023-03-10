@@ -1,0 +1,14 @@
+Text	- 12 de diciembre de 1941 .	Cerca de Sevilla un automóvil en el que viajaban siete personas fue arrollado por un tren en un paso a nivel .	Murieron cinco de los ocupantes del vehículo y los otros dos resultaron heridos .	- 21 de diciembre de 1942 .	En el interior de un túnel de la línea Zaragoza_–_Roda de Bará cercano a Riudecañas ( Tarragona ) una doble composición de vagonetas en las que viajaba una cuadrilla de trabajadores de una brigada de vías y obras de RENFE chocó con un tren de mercancías .
+Event	T0	arrollado	EVENT	96
+Event	T1	Murieron	EVENT	139
+Event	T2	heridos	EVENT	211
+Event	T3	composición	EVENT	357
+Event	T4	chocó	EVENT	471
+Relation	T0	T1	CauseEffect	true	arrollado	Murieron
+Relation	T1	T0	EffectCause	true	Murieron	arrollado
+Relation	T0	T2	CauseEffect	true	arrollado	heridos
+Relation	T2	T0	EffectCause	true	heridos	arrollado
+Relation	T1	T2	NoRel	true	Murieron	heridos
+Relation	T1	T3	NoRel	true	Murieron	composición
+Relation	T3	T2	NoRel	true	composición	heridos
+Relation	T4	T1	NoRel	true	chocó	Murieron

@@ -1,0 +1,72 @@
+Text	Annesinin ölümünden sonra , Hitler'in tek isteği Güzel Sanatlar Akademisi’ne girebilmekti .	1908’de bir kez daha başvurduğu akademinin , onu yeniden reddetmesinin ardından umutlarını da yitirmiş bir şekilde tamamen parasız kaldı .	Yetim maaşının kendi payına düşen kısmını da kardeşi Paula’ya veren Hitler , 21 yaşındayken halasından kalan az miktardaki miras parasının da bitmesiyle 1909’da evsizler yurduna yerleşti .	Posta kartlarından kopyaladığı manzara resimlerini , dükkanlara ve turistlere satarak geçinmeye çalışan Hitler , 1910 yılında , çalışan fakir adamların kaldığı bir eve yerleşti .	Hitler Viyana’dayken , ilk kez içinde Doğu Avrupa’daki birçok Ortodoks Yahudi ( Hitler’e göre ırkçı teorilerle karışık , geleneksel dinci ve önyargılı , geniş bir Yahudi kitlesi ) için antisemitist düşünceler barındırmaya başladı .
+Event	T0	ölümünden	EVENT	10
+Event	T1	reddetmesinin	EVENT	149
+Event	T2	yitirmiş	EVENT	186
+Event	T3	kaldı	EVENT	223
+Event	T4	bitmesiyle	EVENT	373
+Event	T5	yerleşti	EVENT	409
+Event	T6	yerleşti	EVENT	588
+Event	T7	başvurduğu	EVENT	113
+Event	T8	veren	EVENT	293
+Event	T9	maaşının	EVENT	237
+Event	T10	kopyaladığı	EVENT	439
+Event	T11	çalışan	EVENT	516
+Event	T12	başladı	EVENT	821
+Relation	T7	T1	CauseEffect	true	başvurduğu	reddetmesinin
+Relation	T1	T7	EffectCause	true	reddetmesinin	başvurduğu
+Relation	T1	T3	CauseEffect	true	reddetmesinin	kaldı
+Relation	T3	T1	EffectCause	true	kaldı	reddetmesinin
+Relation	T0	T9	CauseEffect	true	ölümünden	maaşının
+Relation	T9	T0	EffectCause	true	maaşının	ölümünden
+Relation	T9	T8	CauseEffect	true	maaşının	veren
+Relation	T8	T9	EffectCause	true	veren	maaşının
+Relation	T4	T5	CauseEffect	true	bitmesiyle	yerleşti
+Relation	T5	T4	EffectCause	true	yerleşti	bitmesiyle
+Relation	T10	T11	CauseEffect	true	kopyaladığı	çalışan
+Relation	T11	T10	EffectCause	true	çalışan	kopyaladığı
+Relation	T0	T1	NoRel	true	ölümünden	reddetmesinin
+Relation	T1	T10	NoRel	true	reddetmesinin	kopyaladığı
+Relation	T1	T11	NoRel	true	reddetmesinin	çalışan
+Relation	T1	T12	NoRel	true	reddetmesinin	başladı
+Relation	T1	T9	NoRel	true	reddetmesinin	maaşının
+Relation	T10	T12	NoRel	true	kopyaladığı	başladı
+Relation	T10	T3	NoRel	true	kopyaladığı	kaldı
+Relation	T10	T4	NoRel	true	kopyaladığı	bitmesiyle
+Relation	T11	T1	NoRel	true	çalışan	reddetmesinin
+Relation	T11	T3	NoRel	true	çalışan	kaldı
+Relation	T11	T4	NoRel	true	çalışan	bitmesiyle
+Relation	T11	T5	NoRel	true	çalışan	yerleşti
+Relation	T11	T7	NoRel	true	çalışan	başvurduğu
+Relation	T11	T8	NoRel	true	çalışan	veren
+Relation	T12	T4	NoRel	true	başladı	bitmesiyle
+Relation	T12	T5	NoRel	true	başladı	yerleşti
+Relation	T12	T6	NoRel	true	başladı	yerleşti
+Relation	T12	T7	NoRel	true	başladı	başvurduğu
+Relation	T2	T1	NoRel	true	yitirmiş	reddetmesinin
+Relation	T2	T4	NoRel	true	yitirmiş	bitmesiyle
+Relation	T2	T5	NoRel	true	yitirmiş	yerleşti
+Relation	T2	T7	NoRel	true	yitirmiş	başvurduğu
+Relation	T2	T8	NoRel	true	yitirmiş	veren
+Relation	T3	T0	NoRel	true	kaldı	ölümünden
+Relation	T3	T4	NoRel	true	kaldı	bitmesiyle
+Relation	T3	T5	NoRel	true	kaldı	yerleşti
+Relation	T3	T6	NoRel	true	kaldı	yerleşti
+Relation	T3	T7	NoRel	true	kaldı	başvurduğu
+Relation	T3	T8	NoRel	true	kaldı	veren
+Relation	T3	T9	NoRel	true	kaldı	maaşının
+Relation	T4	T2	NoRel	true	bitmesiyle	yitirmiş
+Relation	T4	T3	NoRel	true	bitmesiyle	kaldı
+Relation	T4	T9	NoRel	true	bitmesiyle	maaşının
+Relation	T5	T0	NoRel	true	yerleşti	ölümünden
+Relation	T5	T1	NoRel	true	yerleşti	reddetmesinin
+Relation	T5	T2	NoRel	true	yerleşti	yitirmiş
+Relation	T5	T8	NoRel	true	yerleşti	veren
+Relation	T6	T1	NoRel	true	yerleşti	reddetmesinin
+Relation	T6	T7	NoRel	true	yerleşti	başvurduğu
+Relation	T7	T10	NoRel	true	başvurduğu	kopyaladığı
+Relation	T7	T5	NoRel	true	başvurduğu	yerleşti
+Relation	T7	T8	NoRel	true	başvurduğu	veren
+Relation	T8	T6	NoRel	true	veren	yerleşti
+Relation	T9	T1	NoRel	true	maaşının	reddetmesinin
+Relation	T9	T2	NoRel	true	maaşının	yitirmiş
+Relation	T9	T7	NoRel	true	maaşının	başvurduğu

@@ -1,0 +1,163 @@
+Text	Denne teknik er ikke altid korrekt .	Ved udtalte symptomer er sensitiviteten på 90–95 % ( dvs testen overser sygdommen i 5–10 % af tilfældene ) , mens specificiteten er over 99 % .	I Sydkorea diagnosticerede man folk i stor skala , og her organiserede man drive-in-diagnosticering .	Personerne behøvede ikke at forlade deres bil , da prøvetagningen foregik gennem den nedrullede bilrude .	Test for antistoffer var under udvikling tidligt under pandemien , og en ELISA-baseret metode blev beskrevet den 18. marts 2020 .
+Event	T0	overser	EVENT	101
+Event	T1	diagnosticerede	EVENT	192
+Event	T2	organiserede	EVENT	239
+Event	T3	behøvede	EVENT	294
+Event	T4	foregik	EVENT	349
+Event	T5	Test	EVENT	389
+Event	T6	udvikling	EVENT	420
+Event	T7	pandemien	EVENT	444
+Event	T8	beskrevet	EVENT	488
+Event	T9	teknik	EVENT	6
+Event	T10	korrekt	EVENT	27
+Event	T11	symptomer	EVENT	49
+Event	T12	drive-in-diagnosticering	EVENT	256
+Event	T13	sensitiviteten	EVENT	62
+Event	T14	specificiteten	EVENT	151
+Event	T15	forlade	EVENT	311
+Event	T16	prøvetagningen	EVENT	334
+Event	T17	nedrullede	EVENT	368
+Event	T18	metode	EVENT	476
+Event	T19	stor skala	EVENT	219
+Relation	T11	T13	CauseEffect	true	symptomer	sensitiviteten
+Relation	T13	T11	EffectCause	true	sensitiviteten	symptomer
+Relation	T19	T12	CauseEffect	true	stor skala	drive-in-diagnosticering
+Relation	T12	T19	EffectCause	true	drive-in-diagnosticering	stor skala
+Relation	T17	T15	CauseEffect	true	nedrullede	forlade
+Relation	T15	T17	EffectCause	true	forlade	nedrullede
+Relation	T0	T10	NoRel	true	overser	korrekt
+Relation	T0	T11	NoRel	true	overser	symptomer
+Relation	T0	T12	NoRel	true	overser	drive-in-diagnosticering
+Relation	T0	T17	NoRel	true	overser	nedrullede
+Relation	T0	T18	NoRel	true	overser	metode
+Relation	T0	T3	NoRel	true	overser	behøvede
+Relation	T0	T4	NoRel	true	overser	foregik
+Relation	T0	T7	NoRel	true	overser	pandemien
+Relation	T0	T9	NoRel	true	overser	teknik
+Relation	T1	T10	NoRel	true	diagnosticerede	korrekt
+Relation	T1	T13	NoRel	true	diagnosticerede	sensitiviteten
+Relation	T1	T17	NoRel	true	diagnosticerede	nedrullede
+Relation	T1	T18	NoRel	true	diagnosticerede	metode
+Relation	T1	T5	NoRel	true	diagnosticerede	Test
+Relation	T1	T8	NoRel	true	diagnosticerede	beskrevet
+Relation	T10	T11	NoRel	true	korrekt	symptomer
+Relation	T10	T12	NoRel	true	korrekt	drive-in-diagnosticering
+Relation	T10	T15	NoRel	true	korrekt	forlade
+Relation	T10	T19	NoRel	true	korrekt	stor skala
+Relation	T10	T2	NoRel	true	korrekt	organiserede
+Relation	T10	T3	NoRel	true	korrekt	behøvede
+Relation	T10	T4	NoRel	true	korrekt	foregik
+Relation	T10	T8	NoRel	true	korrekt	beskrevet
+Relation	T11	T1	NoRel	true	symptomer	diagnosticerede
+Relation	T11	T10	NoRel	true	symptomer	korrekt
+Relation	T11	T14	NoRel	true	symptomer	specificiteten
+Relation	T11	T17	NoRel	true	symptomer	nedrullede
+Relation	T11	T18	NoRel	true	symptomer	metode
+Relation	T11	T4	NoRel	true	symptomer	foregik
+Relation	T11	T9	NoRel	true	symptomer	teknik
+Relation	T12	T11	NoRel	true	drive-in-diagnosticering	symptomer
+Relation	T12	T13	NoRel	true	drive-in-diagnosticering	sensitiviteten
+Relation	T12	T15	NoRel	true	drive-in-diagnosticering	forlade
+Relation	T12	T4	NoRel	true	drive-in-diagnosticering	foregik
+Relation	T12	T7	NoRel	true	drive-in-diagnosticering	pandemien
+Relation	T12	T8	NoRel	true	drive-in-diagnosticering	beskrevet
+Relation	T13	T12	NoRel	true	sensitiviteten	drive-in-diagnosticering
+Relation	T13	T14	NoRel	true	sensitiviteten	specificiteten
+Relation	T13	T15	NoRel	true	sensitiviteten	forlade
+Relation	T13	T17	NoRel	true	sensitiviteten	nedrullede
+Relation	T13	T18	NoRel	true	sensitiviteten	metode
+Relation	T13	T4	NoRel	true	sensitiviteten	foregik
+Relation	T13	T6	NoRel	true	sensitiviteten	udvikling
+Relation	T13	T9	NoRel	true	sensitiviteten	teknik
+Relation	T14	T16	NoRel	true	specificiteten	prøvetagningen
+Relation	T14	T17	NoRel	true	specificiteten	nedrullede
+Relation	T14	T3	NoRel	true	specificiteten	behøvede
+Relation	T14	T5	NoRel	true	specificiteten	Test
+Relation	T14	T6	NoRel	true	specificiteten	udvikling
+Relation	T14	T8	NoRel	true	specificiteten	beskrevet
+Relation	T14	T9	NoRel	true	specificiteten	teknik
+Relation	T15	T1	NoRel	true	forlade	diagnosticerede
+Relation	T15	T19	NoRel	true	forlade	stor skala
+Relation	T15	T2	NoRel	true	forlade	organiserede
+Relation	T15	T3	NoRel	true	forlade	behøvede
+Relation	T15	T5	NoRel	true	forlade	Test
+Relation	T15	T6	NoRel	true	forlade	udvikling
+Relation	T16	T11	NoRel	true	prøvetagningen	symptomer
+Relation	T16	T12	NoRel	true	prøvetagningen	drive-in-diagnosticering
+Relation	T16	T15	NoRel	true	prøvetagningen	forlade
+Relation	T16	T19	NoRel	true	prøvetagningen	stor skala
+Relation	T16	T2	NoRel	true	prøvetagningen	organiserede
+Relation	T16	T3	NoRel	true	prøvetagningen	behøvede
+Relation	T17	T0	NoRel	true	nedrullede	overser
+Relation	T17	T12	NoRel	true	nedrullede	drive-in-diagnosticering
+Relation	T17	T14	NoRel	true	nedrullede	specificiteten
+Relation	T17	T16	NoRel	true	nedrullede	prøvetagningen
+Relation	T17	T4	NoRel	true	nedrullede	foregik
+Relation	T17	T5	NoRel	true	nedrullede	Test
+Relation	T17	T6	NoRel	true	nedrullede	udvikling
+Relation	T17	T7	NoRel	true	nedrullede	pandemien
+Relation	T18	T0	NoRel	true	metode	overser
+Relation	T18	T15	NoRel	true	metode	forlade
+Relation	T18	T2	NoRel	true	metode	organiserede
+Relation	T18	T3	NoRel	true	metode	behøvede
+Relation	T18	T5	NoRel	true	metode	Test
+Relation	T18	T6	NoRel	true	metode	udvikling
+Relation	T18	T7	NoRel	true	metode	pandemien
+Relation	T18	T9	NoRel	true	metode	teknik
+Relation	T19	T0	NoRel	true	stor skala	overser
+Relation	T19	T1	NoRel	true	stor skala	diagnosticerede
+Relation	T19	T11	NoRel	true	stor skala	symptomer
+Relation	T19	T13	NoRel	true	stor skala	sensitiviteten
+Relation	T19	T14	NoRel	true	stor skala	specificiteten
+Relation	T19	T18	NoRel	true	stor skala	metode
+Relation	T19	T2	NoRel	true	stor skala	organiserede
+Relation	T19	T3	NoRel	true	stor skala	behøvede
+Relation	T19	T4	NoRel	true	stor skala	foregik
+Relation	T2	T13	NoRel	true	organiserede	sensitiviteten
+Relation	T2	T14	NoRel	true	organiserede	specificiteten
+Relation	T2	T16	NoRel	true	organiserede	prøvetagningen
+Relation	T2	T7	NoRel	true	organiserede	pandemien
+Relation	T2	T8	NoRel	true	organiserede	beskrevet
+Relation	T2	T9	NoRel	true	organiserede	teknik
+Relation	T3	T0	NoRel	true	behøvede	overser
+Relation	T3	T14	NoRel	true	behøvede	specificiteten
+Relation	T3	T15	NoRel	true	behøvede	forlade
+Relation	T3	T2	NoRel	true	behøvede	organiserede
+Relation	T3	T4	NoRel	true	behøvede	foregik
+Relation	T4	T0	NoRel	true	foregik	overser
+Relation	T4	T11	NoRel	true	foregik	symptomer
+Relation	T4	T16	NoRel	true	foregik	prøvetagningen
+Relation	T4	T19	NoRel	true	foregik	stor skala
+Relation	T4	T3	NoRel	true	foregik	behøvede
+Relation	T4	T5	NoRel	true	foregik	Test
+Relation	T5	T12	NoRel	true	Test	drive-in-diagnosticering
+Relation	T5	T13	NoRel	true	Test	sensitiviteten
+Relation	T5	T14	NoRel	true	Test	specificiteten
+Relation	T5	T15	NoRel	true	Test	forlade
+Relation	T5	T16	NoRel	true	Test	prøvetagningen
+Relation	T5	T17	NoRel	true	Test	nedrullede
+Relation	T5	T19	NoRel	true	Test	stor skala
+Relation	T5	T3	NoRel	true	Test	behøvede
+Relation	T5	T4	NoRel	true	Test	foregik
+Relation	T6	T10	NoRel	true	udvikling	korrekt
+Relation	T6	T11	NoRel	true	udvikling	symptomer
+Relation	T6	T15	NoRel	true	udvikling	forlade
+Relation	T6	T16	NoRel	true	udvikling	prøvetagningen
+Relation	T6	T17	NoRel	true	udvikling	nedrullede
+Relation	T6	T8	NoRel	true	udvikling	beskrevet
+Relation	T7	T1	NoRel	true	pandemien	diagnosticerede
+Relation	T7	T17	NoRel	true	pandemien	nedrullede
+Relation	T7	T19	NoRel	true	pandemien	stor skala
+Relation	T7	T2	NoRel	true	pandemien	organiserede
+Relation	T7	T5	NoRel	true	pandemien	Test
+Relation	T7	T8	NoRel	true	pandemien	beskrevet
+Relation	T7	T9	NoRel	true	pandemien	teknik
+Relation	T8	T15	NoRel	true	beskrevet	forlade
+Relation	T8	T3	NoRel	true	beskrevet	behøvede
+Relation	T8	T5	NoRel	true	beskrevet	Test
+Relation	T8	T7	NoRel	true	beskrevet	pandemien
+Relation	T9	T1	NoRel	true	teknik	diagnosticerede
+Relation	T9	T15	NoRel	true	teknik	forlade
+Relation	T9	T18	NoRel	true	teknik	metode
+Relation	T9	T3	NoRel	true	teknik	behøvede
+Relation	T9	T8	NoRel	true	teknik	beskrevet

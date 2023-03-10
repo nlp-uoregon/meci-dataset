@@ -1,0 +1,61 @@
+Text	Finalmente , el número de lesiones se fijó en 74 , ninguno de los cuales resultó gravemente herido .	A todos los pasajeros se les ofrecieron ₽ 100.000 ( U$S 1.714 ) como compensación por accidente .	Se ha abierto una investigación sobre el accidente .	El Comité Interestatal de Aviación es responsable de investigar los accidentes de aviación civil en Rusia .	Hay una proliferación de aves cerca del aeropuerto Moscú-Zhukovsky debido a los vertederos ilegales .
+Event	T0	lesiones	EVENT	26
+Event	T1	fijó	EVENT	38
+Event	T2	herido	EVENT	92
+Event	T3	ofrecieron	EVENT	130
+Event	T4	compensación	EVENT	170
+Event	T5	accidente	EVENT	187
+Event	T6	abierto	EVENT	205
+Event	T7	investigación	EVENT	217
+Event	T8	accidente	EVENT	240
+Event	T9	investigar	EVENT	305
+Event	T10	accidentes	EVENT	320
+Event	T11	proliferación	EVENT	368
+Event	T12	vertederos	EVENT	440
+Relation	T0	T12	NoRel	true	lesiones	vertederos
+Relation	T0	T3	NoRel	true	lesiones	ofrecieron
+Relation	T0	T6	NoRel	true	lesiones	abierto
+Relation	T1	T0	NoRel	true	fijó	lesiones
+Relation	T1	T10	NoRel	true	fijó	accidentes
+Relation	T1	T7	NoRel	true	fijó	investigación
+Relation	T10	T0	NoRel	true	accidentes	lesiones
+Relation	T10	T1	NoRel	true	accidentes	fijó
+Relation	T10	T5	NoRel	true	accidentes	accidente
+Relation	T10	T8	NoRel	true	accidentes	accidente
+Relation	T10	T9	NoRel	true	accidentes	investigar
+Relation	T11	T6	NoRel	true	proliferación	abierto
+Relation	T11	T7	NoRel	true	proliferación	investigación
+Relation	T11	T9	NoRel	true	proliferación	investigar
+Relation	T12	T4	NoRel	true	vertederos	compensación
+Relation	T12	T7	NoRel	true	vertederos	investigación
+Relation	T12	T9	NoRel	true	vertederos	investigar
+Relation	T2	T10	NoRel	true	herido	accidentes
+Relation	T2	T12	NoRel	true	herido	vertederos
+Relation	T2	T3	NoRel	true	herido	ofrecieron
+Relation	T2	T8	NoRel	true	herido	accidente
+Relation	T2	T9	NoRel	true	herido	investigar
+Relation	T3	T1	NoRel	true	ofrecieron	fijó
+Relation	T3	T11	NoRel	true	ofrecieron	proliferación
+Relation	T3	T2	NoRel	true	ofrecieron	herido
+Relation	T3	T4	NoRel	true	ofrecieron	compensación
+Relation	T3	T5	NoRel	true	ofrecieron	accidente
+Relation	T4	T12	NoRel	true	compensación	vertederos
+Relation	T4	T8	NoRel	true	compensación	accidente
+Relation	T4	T9	NoRel	true	compensación	investigar
+Relation	T5	T0	NoRel	true	accidente	lesiones
+Relation	T5	T2	NoRel	true	accidente	herido
+Relation	T5	T7	NoRel	true	accidente	investigación
+Relation	T6	T1	NoRel	true	abierto	fijó
+Relation	T6	T11	NoRel	true	abierto	proliferación
+Relation	T6	T12	NoRel	true	abierto	vertederos
+Relation	T6	T2	NoRel	true	abierto	herido
+Relation	T6	T4	NoRel	true	abierto	compensación
+Relation	T7	T1	NoRel	true	investigación	fijó
+Relation	T7	T3	NoRel	true	investigación	ofrecieron
+Relation	T7	T5	NoRel	true	investigación	accidente
+Relation	T8	T10	NoRel	true	accidente	accidentes
+Relation	T8	T3	NoRel	true	accidente	ofrecieron
+Relation	T8	T6	NoRel	true	accidente	abierto
+Relation	T9	T1	NoRel	true	investigar	fijó
+Relation	T9	T2	NoRel	true	investigar	herido
+Relation	T9	T5	NoRel	true	investigar	accidente

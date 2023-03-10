@@ -1,0 +1,52 @@
+Text	On May 24 , 1978 , Trapnell 's friend , 43 - year - old Barbara Ann Oswald , a US Army staff sergeant on leave , hijacked a Saint Louis based charter helicopter and forced the pilot to land in the yard at United States Penitentiary , Marion .	While landing the aircraft , the pilot , Vietnam War veteran Allen Barklage , struggled with Oswald and managed to wrestle the gun away from her .	Barklage then shot and killed Oswald , thwarting the escape .	On December 21 , 1978 Robin Oswald , the 17 - year - old daughter of Barbara Annette Oswald , hijacked TWA Flight 541 and demanded Trapnell be freed or she would detonate dynamite strapped to her body .	She was remembered by the hostages aboard the flight as a " beautiful " but serious girl , never showing alarm at her actions .
+Event	T0	hijacked	EVENT	113
+Event	T1	forced	EVENT	165
+Event	T2	land	EVENT	185
+Event	T3	landing	EVENT	249
+Event	T4	struggled	EVENT	321
+Event	T5	managed	EVENT	347
+Event	T6	wrestle	EVENT	358
+Event	T7	shot	EVENT	404
+Event	T8	killed	EVENT	413
+Event	T9	thwarting	EVENT	429
+Event	T10	escape	EVENT	443
+Event	T11	hijacked	EVENT	546
+Event	T12	demanded	EVENT	574
+Event	T13	freed	EVENT	595
+Event	T14	detonate	EVENT	614
+Event	T15	remembered	EVENT	663
+Event	T16	flight	EVENT	701
+Event	T17	actions	EVENT	773
+Relation	T7	T8	CauseEffect	true	shot	killed
+Relation	T8	T7	EffectCause	true	killed	shot
+Relation	T12	T11	CauseEffect	true	demanded	hijacked
+Relation	T11	T12	EffectCause	true	hijacked	demanded
+Relation	T0	T1	NoRel	true	hijacked	forced
+Relation	T1	T2	NoRel	true	forced	land
+Relation	T10	T0	NoRel	true	escape	hijacked
+Relation	T10	T13	NoRel	true	escape	freed
+Relation	T11	T5	NoRel	true	hijacked	managed
+Relation	T12	T0	NoRel	true	demanded	hijacked
+Relation	T13	T11	NoRel	true	freed	hijacked
+Relation	T14	T2	NoRel	true	detonate	land
+Relation	T14	T7	NoRel	true	detonate	shot
+Relation	T15	T11	NoRel	true	remembered	hijacked
+Relation	T16	T17	NoRel	true	flight	actions
+Relation	T17	T14	NoRel	true	actions	detonate
+Relation	T17	T3	NoRel	true	actions	landing
+Relation	T2	T1	NoRel	true	land	forced
+Relation	T2	T13	NoRel	true	land	freed
+Relation	T2	T6	NoRel	true	land	wrestle
+Relation	T3	T11	NoRel	true	landing	hijacked
+Relation	T3	T4	NoRel	true	landing	struggled
+Relation	T3	T9	NoRel	true	landing	thwarting
+Relation	T4	T15	NoRel	true	struggled	remembered
+Relation	T5	T10	NoRel	true	managed	escape
+Relation	T5	T9	NoRel	true	managed	thwarting
+Relation	T6	T0	NoRel	true	wrestle	hijacked
+Relation	T6	T4	NoRel	true	wrestle	struggled
+Relation	T7	T12	NoRel	true	shot	demanded
+Relation	T8	T16	NoRel	true	killed	flight
+Relation	T8	T3	NoRel	true	killed	landing
+Relation	T9	T12	NoRel	true	thwarting	demanded
+Relation	T9	T15	NoRel	true	thwarting	remembered

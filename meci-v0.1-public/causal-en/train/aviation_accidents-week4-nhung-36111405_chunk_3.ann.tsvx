@@ -1,0 +1,54 @@
+Text	Moore was making his first flight in the new fighter design but the jet pitched up and crashed in the center of the airfield just after becoming airborne , appearing to explode on impact .	Although the crash site was only 200 yards from the fire station , and the blaze extinguished within three minutes , the pilot had no chance to escape and was killed .	He was survived by his widow , the former Billie Geneva Hall , ( also reported as Billie Geneeva Hall ) of Dallas , Texas , and five children , Robert Barnes , 15 ; Barbara W. , 13 ; Lonnie R. Jr. , 7 ; Tina Gail , 3 1/ 2 and Steven Scott , 20 months old .	Moore had been a resident of Fort Walton Beach , Florida for five years .	At the time of his death , Moore had more than 1,500 hours in single - engine jet aircraft and 3,570 total flight hours , 328 of them in combat .
+Event	T0	making	EVENT	10
+Event	T1	flight	EVENT	27
+Event	T2	design	EVENT	53
+Event	T3	crashed	EVENT	87
+Event	T4	airborne	EVENT	145
+Event	T6	impact	EVENT	180
+Event	T7	crash	EVENT	202
+Event	T8	extinguished	EVENT	270
+Event	T9	escape	EVENT	333
+Event	T10	killed	EVENT	348
+Event	T11	survived	EVENT	364
+Event	T12	reported	EVENT	427
+Event	T13	death	EVENT	707
+Event	T14	flight	EVENT	795
+Event	T15	combat	EVENT	825
+Event	T16	pitched up	EVENT	72
+Event	T5	explode	EVENT	169
+Relation	T4	T3	CauseEffect	true	airborne	crashed
+Relation	T3	T4	EffectCause	true	crashed	airborne
+Relation	T6	T5	CauseEffect	true	impact	explode
+Relation	T5	T6	EffectCause	true	explode	impact
+Relation	T4	T16	CauseEffect	true	airborne	pitched up
+Relation	T16	T4	EffectCause	true	pitched up	airborne
+Relation	T7	T10	CauseEffect	true	crash	killed
+Relation	T10	T7	EffectCause	true	killed	crash
+Relation	T7	T11	CauseEffect	true	crash	survived
+Relation	T11	T7	EffectCause	true	survived	crash
+Relation	T1	T4	NoRel	true	flight	airborne
+Relation	T1	T9	NoRel	true	flight	escape
+Relation	T10	T0	NoRel	true	killed	making
+Relation	T10	T9	NoRel	true	killed	escape
+Relation	T11	T12	NoRel	true	survived	reported
+Relation	T11	T2	NoRel	true	survived	design
+Relation	T11	T4	NoRel	true	survived	airborne
+Relation	T11	T6	NoRel	true	survived	impact
+Relation	T13	T2	NoRel	true	death	design
+Relation	T13	T3	NoRel	true	death	crashed
+Relation	T13	T4	NoRel	true	death	airborne
+Relation	T14	T5	NoRel	true	flight	explode
+Relation	T15	T12	NoRel	true	combat	reported
+Relation	T16	T14	NoRel	true	pitched up	flight
+Relation	T3	T1	NoRel	true	crashed	flight
+Relation	T3	T14	NoRel	true	crashed	flight
+Relation	T5	T11	NoRel	true	explode	survived
+Relation	T5	T16	NoRel	true	explode	pitched up
+Relation	T5	T7	NoRel	true	explode	crash
+Relation	T6	T0	NoRel	true	impact	making
+Relation	T7	T3	NoRel	true	crash	crashed
+Relation	T7	T9	NoRel	true	crash	escape
+Relation	T8	T11	NoRel	true	extinguished	survived
+Relation	T8	T12	NoRel	true	extinguished	reported
+Relation	T8	T15	NoRel	true	extinguished	combat
+Relation	T8	T3	NoRel	true	extinguished	crashed

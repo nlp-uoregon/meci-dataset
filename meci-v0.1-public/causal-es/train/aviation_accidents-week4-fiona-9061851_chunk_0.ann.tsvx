@@ -1,0 +1,49 @@
+Text	El VUELO 178 DE URAL AIRLINES fue un vuelo regular de pasajeros desde Aeropuerto Internacional de Moscú-Sheremétievo en Moscú ( Rusia ) al Aeropuerto Internacional de Simferópol en Simferópol , Crimea , Rusia .	El 15 de agosto de 2019 , el Airbus A321 que operaba el vuelo sufrió un choque contra una bandada de pájaros que paralizaron los motores , provocando que el piloto tuviera que aterrizar de emergencia en un campo de maíz .	Sin víctimas mortales de los 233 ocupantes , 74 necesitaron asistencia médica y solo una persona fue hospitalizada .	[ La aeronave accidentada en junio de 2018 .	] El avión era un Airbus A321-211 , registrado en Bermudas como VQ-BOZ , msn 2117 .
+Event	T0	VUELO	EVENT	3
+Event	T1	operaba	EVENT	256
+Event	T2	sufrió	EVENT	273
+Event	T3	choque	EVENT	283
+Event	T4	paralizaron	EVENT	324
+Event	T5	provocando	EVENT	350
+Event	T6	aterrizar	EVENT	387
+Event	T7	emergencia	EVENT	400
+Event	T8	hospitalizada	EVENT	534
+Event	T9	accidentada	EVENT	564
+Event	T10	registrado	EVENT	631
+Relation	T3	T4	CauseEffect	true	choque	paralizaron
+Relation	T4	T3	EffectCause	true	paralizaron	choque
+Relation	T4	T6	CauseEffect	true	paralizaron	aterrizar
+Relation	T6	T4	EffectCause	true	aterrizar	paralizaron
+Relation	T0	T10	NoRel	true	VUELO	registrado
+Relation	T0	T7	NoRel	true	VUELO	emergencia
+Relation	T1	T10	NoRel	true	operaba	registrado
+Relation	T1	T5	NoRel	true	operaba	provocando
+Relation	T1	T6	NoRel	true	operaba	aterrizar
+Relation	T1	T9	NoRel	true	operaba	accidentada
+Relation	T10	T3	NoRel	true	registrado	choque
+Relation	T10	T8	NoRel	true	registrado	hospitalizada
+Relation	T2	T1	NoRel	true	sufrió	operaba
+Relation	T2	T6	NoRel	true	sufrió	aterrizar
+Relation	T2	T8	NoRel	true	sufrió	hospitalizada
+Relation	T3	T2	NoRel	true	choque	sufrió
+Relation	T3	T6	NoRel	true	choque	aterrizar
+Relation	T3	T7	NoRel	true	choque	emergencia
+Relation	T4	T1	NoRel	true	paralizaron	operaba
+Relation	T4	T10	NoRel	true	paralizaron	registrado
+Relation	T4	T2	NoRel	true	paralizaron	sufrió
+Relation	T4	T7	NoRel	true	paralizaron	emergencia
+Relation	T4	T9	NoRel	true	paralizaron	accidentada
+Relation	T5	T0	NoRel	true	provocando	VUELO
+Relation	T5	T3	NoRel	true	provocando	choque
+Relation	T5	T8	NoRel	true	provocando	hospitalizada
+Relation	T6	T0	NoRel	true	aterrizar	VUELO
+Relation	T6	T3	NoRel	true	aterrizar	choque
+Relation	T6	T7	NoRel	true	aterrizar	emergencia
+Relation	T7	T1	NoRel	true	emergencia	operaba
+Relation	T7	T3	NoRel	true	emergencia	choque
+Relation	T7	T5	NoRel	true	emergencia	provocando
+Relation	T7	T8	NoRel	true	emergencia	hospitalizada
+Relation	T7	T9	NoRel	true	emergencia	accidentada
+Relation	T8	T10	NoRel	true	hospitalizada	registrado
+Relation	T8	T2	NoRel	true	hospitalizada	sufrió
+Relation	T9	T3	NoRel	true	accidentada	choque

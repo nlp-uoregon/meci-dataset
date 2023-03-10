@@ -1,0 +1,59 @@
+Text	El VUELO 9955 DE WEST CARIBBEAN fue un vuelo programado el 26 de marzo de 2005 entre la Isla de Providencia y la Isla de San Andrés .	El avión , un Let L-410 Turbolet , recién había despegado a las 9:50 del Aeropuerto El Embrujo , cuando su motor izquierdo se apagó .	La tripulación siguió con el despegue , pero la velocidad de la aeronave disminuyó dramáticamente .	Repentinamente , el avión comenzó a inclinarse hacia la derecha y finalmente se fue en picada contra el suelo , estrellándose contra un manglar , ubicado a tan solo 113 metros de la pista del aeropuerto .	Los dos pilotos y 6 pasajeros murieron en el choque .
+Event	T0	programado	EVENT	45
+Event	T1	despegado	EVENT	182
+Event	T2	apagó	EVENT	260
+Event	T3	siguió	EVENT	283
+Event	T4	despegue	EVENT	297
+Event	T5	disminuyó	EVENT	341
+Event	T6	comenzó	EVENT	394
+Event	T7	inclinarse	EVENT	404
+Event	T8	picada	EVENT	455
+Event	T9	estrellándose	EVENT	480
+Event	T10	choque	EVENT	618
+Event	T11	murieron	EVENT	603
+Relation	T2	T5	CauseEffect	true	apagó	disminuyó
+Relation	T5	T2	EffectCause	true	disminuyó	apagó
+Relation	T2	T7	CauseEffect	true	apagó	inclinarse
+Relation	T7	T2	EffectCause	true	inclinarse	apagó
+Relation	T7	T8	CauseEffect	true	inclinarse	picada
+Relation	T8	T7	EffectCause	true	picada	inclinarse
+Relation	T8	T9	CauseEffect	true	picada	estrellándose
+Relation	T9	T8	EffectCause	true	estrellándose	picada
+Relation	T10	T11	CauseEffect	true	choque	murieron
+Relation	T11	T10	EffectCause	true	murieron	choque
+Relation	T0	T10	NoRel	true	programado	choque
+Relation	T0	T7	NoRel	true	programado	inclinarse
+Relation	T0	T9	NoRel	true	programado	estrellándose
+Relation	T1	T10	NoRel	true	despegado	choque
+Relation	T1	T2	NoRel	true	despegado	apagó
+Relation	T1	T9	NoRel	true	despegado	estrellándose
+Relation	T10	T5	NoRel	true	choque	disminuyó
+Relation	T10	T8	NoRel	true	choque	picada
+Relation	T11	T1	NoRel	true	murieron	despegado
+Relation	T11	T2	NoRel	true	murieron	apagó
+Relation	T11	T4	NoRel	true	murieron	despegue
+Relation	T11	T5	NoRel	true	murieron	disminuyó
+Relation	T11	T8	NoRel	true	murieron	picada
+Relation	T2	T0	NoRel	true	apagó	programado
+Relation	T2	T11	NoRel	true	apagó	murieron
+Relation	T2	T4	NoRel	true	apagó	despegue
+Relation	T3	T1	NoRel	true	siguió	despegado
+Relation	T3	T10	NoRel	true	siguió	choque
+Relation	T3	T2	NoRel	true	siguió	apagó
+Relation	T3	T8	NoRel	true	siguió	picada
+Relation	T5	T0	NoRel	true	disminuyó	programado
+Relation	T5	T1	NoRel	true	disminuyó	despegado
+Relation	T5	T9	NoRel	true	disminuyó	estrellándose
+Relation	T6	T0	NoRel	true	comenzó	programado
+Relation	T6	T1	NoRel	true	comenzó	despegado
+Relation	T6	T3	NoRel	true	comenzó	siguió
+Relation	T7	T0	NoRel	true	inclinarse	programado
+Relation	T7	T10	NoRel	true	inclinarse	choque
+Relation	T7	T11	NoRel	true	inclinarse	murieron
+Relation	T7	T3	NoRel	true	inclinarse	siguió
+Relation	T7	T5	NoRel	true	inclinarse	disminuyó
+Relation	T8	T1	NoRel	true	picada	despegado
+Relation	T8	T4	NoRel	true	picada	despegue
+Relation	T9	T10	NoRel	true	estrellándose	choque
+Relation	T9	T11	NoRel	true	estrellándose	murieron
+Relation	T9	T2	NoRel	true	estrellándose	apagó

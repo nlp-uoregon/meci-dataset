@@ -1,0 +1,77 @@
+Text	Milli Güvenlik Kurulu toplantısı sırasında Cumhurbaşkanı Ahmet Necdet Sezer'in , Bankacılık Düzenleme ve Denetleme Kurulu'nda başlattığı denetime Başbakan Bülent Ecevit'in tepki göstermesi üzerine tartışma yaşandı .	Bunun üzerine Sezer , Ecevit'e anayasa kitapçığı fırlattı .	Ecevit de bu duruma tepki göstererek toplantıyı terk etti .	Ecevit'in toplantı çıkışında bekleyen gazetecilere , " Bu bir devlet krizidir " yönündeki açıklamalarının ardından piyasalarda sert satışlar yaşandı .	Türkiye , 1990'lı yıllarda çok yüksek enflasyonla boğuşmuş bir ülkeydi .
+Event	T0	denetime	EVENT	137
+Event	T4	açıklamalarının	EVENT	426
+Event	T6	toplantısı	EVENT	22
+Event	T7	tartışma	EVENT	197
+Event	T2	tepki	EVENT	172
+Event	T1	fırlattı	EVENT	265
+Event	T3	terk etti	EVENT	324
+Event	T8	tepki	EVENT	296
+Event	T9	toplantı	EVENT	346
+Event	T10	çıkışında	EVENT	355
+Event	T11	bekleyen	EVENT	365
+Event	T12	satışlar	EVENT	468
+Event	T5	enflasyonla	EVENT	525
+Relation	T0	T2	CauseEffect	true	denetime	tepki
+Relation	T2	T0	EffectCause	true	tepki	denetime
+Relation	T2	T7	CauseEffect	true	tepki	tartışma
+Relation	T7	T2	EffectCause	true	tartışma	tepki
+Relation	T1	T8	CauseEffect	true	fırlattı	tepki
+Relation	T8	T1	EffectCause	true	tepki	fırlattı
+Relation	T8	T3	CauseEffect	true	tepki	terk etti
+Relation	T3	T8	EffectCause	true	terk etti	tepki
+Relation	T3	T4	CauseEffect	true	terk etti	açıklamalarının
+Relation	T4	T3	EffectCause	true	açıklamalarının	terk etti
+Relation	T4	T12	CauseEffect	true	açıklamalarının	satışlar
+Relation	T12	T4	EffectCause	true	satışlar	açıklamalarının
+Relation	T0	T4	NoRel	true	denetime	açıklamalarının
+Relation	T0	T8	NoRel	true	denetime	tepki
+Relation	T1	T0	NoRel	true	fırlattı	denetime
+Relation	T1	T10	NoRel	true	fırlattı	çıkışında
+Relation	T1	T4	NoRel	true	fırlattı	açıklamalarının
+Relation	T10	T1	NoRel	true	çıkışında	fırlattı
+Relation	T10	T3	NoRel	true	çıkışında	terk etti
+Relation	T10	T5	NoRel	true	çıkışında	enflasyonla
+Relation	T10	T6	NoRel	true	çıkışında	toplantısı
+Relation	T10	T7	NoRel	true	çıkışında	tartışma
+Relation	T10	T8	NoRel	true	çıkışında	tepki
+Relation	T10	T9	NoRel	true	çıkışında	toplantı
+Relation	T11	T0	NoRel	true	bekleyen	denetime
+Relation	T11	T10	NoRel	true	bekleyen	çıkışında
+Relation	T11	T12	NoRel	true	bekleyen	satışlar
+Relation	T12	T0	NoRel	true	satışlar	denetime
+Relation	T12	T10	NoRel	true	satışlar	çıkışında
+Relation	T12	T3	NoRel	true	satışlar	terk etti
+Relation	T12	T5	NoRel	true	satışlar	enflasyonla
+Relation	T12	T6	NoRel	true	satışlar	toplantısı
+Relation	T12	T7	NoRel	true	satışlar	tartışma
+Relation	T2	T4	NoRel	true	tepki	açıklamalarının
+Relation	T2	T8	NoRel	true	tepki	tepki
+Relation	T3	T0	NoRel	true	terk etti	denetime
+Relation	T3	T11	NoRel	true	terk etti	bekleyen
+Relation	T3	T2	NoRel	true	terk etti	tepki
+Relation	T3	T6	NoRel	true	terk etti	toplantısı
+Relation	T4	T0	NoRel	true	açıklamalarının	denetime
+Relation	T4	T1	NoRel	true	açıklamalarının	fırlattı
+Relation	T4	T10	NoRel	true	açıklamalarının	çıkışında
+Relation	T4	T2	NoRel	true	açıklamalarının	tepki
+Relation	T4	T7	NoRel	true	açıklamalarının	tartışma
+Relation	T5	T0	NoRel	true	enflasyonla	denetime
+Relation	T5	T1	NoRel	true	enflasyonla	fırlattı
+Relation	T5	T3	NoRel	true	enflasyonla	terk etti
+Relation	T5	T6	NoRel	true	enflasyonla	toplantısı
+Relation	T5	T8	NoRel	true	enflasyonla	tepki
+Relation	T6	T1	NoRel	true	toplantısı	fırlattı
+Relation	T6	T5	NoRel	true	toplantısı	enflasyonla
+Relation	T6	T9	NoRel	true	toplantısı	toplantı
+Relation	T7	T0	NoRel	true	tartışma	denetime
+Relation	T7	T6	NoRel	true	tartışma	toplantısı
+Relation	T8	T0	NoRel	true	tepki	denetime
+Relation	T8	T12	NoRel	true	tepki	satışlar
+Relation	T8	T2	NoRel	true	tepki	tepki
+Relation	T8	T4	NoRel	true	tepki	açıklamalarının
+Relation	T8	T5	NoRel	true	tepki	enflasyonla
+Relation	T8	T7	NoRel	true	tepki	tartışma
+Relation	T9	T1	NoRel	true	toplantı	fırlattı
+Relation	T9	T11	NoRel	true	toplantı	bekleyen
+Relation	T9	T12	NoRel	true	toplantı	satışlar

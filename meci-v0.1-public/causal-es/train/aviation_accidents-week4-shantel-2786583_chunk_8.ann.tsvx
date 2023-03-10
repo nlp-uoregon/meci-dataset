@@ -1,0 +1,88 @@
+Text	La Cruz Roja y la Policía del Puerto de Nueva York también apoyaron los esfuerzos .	A de las 3:00 p._m. , Michael Bloomberg , alcalde de Nueva York , respondió a las interrogantes en una conferencia de prensa .	Al llamar a la colisión , « un accidente en el que no creemos que haya sobrevivientes » , Bloomberg anunció que la misión ya no era de rescate , sino más bien de recuperación .	La noche del 8 de agosto de 2009 , la Guardia Costera de los Estados Unidos mantenía una zona de seguridad de tres kilómetros desde el túnel Holland hasta el túnel Lincoln , solicitando a las embarcaciones moverse lentamente y mantenerse a menos de 400 yardas del lado de Manhattan al pasar por la zona .	La zona de seguridad fue mantenida por el bote guardacostas _ Penobscot Bay _ .
+Event	T0	esfuerzos	EVENT	72
+Event	T1	respondió	EVENT	150
+Event	T2	interrogantes	EVENT	166
+Event	T3	conferencia	EVENT	187
+Event	T4	llamar	EVENT	214
+Event	T5	colisión	EVENT	226
+Event	T6	accidente	EVENT	242
+Event	T7	anunció	EVENT	311
+Event	T8	rescate	EVENT	346
+Event	T9	recuperación	EVENT	373
+Event	T10	mantenía	EVENT	464
+Event	T11	solicitando	EVENT	562
+Event	T12	pasar	EVENT	673
+Event	T13	mantenida	EVENT	718
+Relation	T5	T10	CauseEffect	true	colisión	mantenía
+Relation	T10	T5	EffectCause	true	mantenía	colisión
+Relation	T5	T11	CauseEffect	true	colisión	solicitando
+Relation	T11	T5	EffectCause	true	solicitando	colisión
+Relation	T5	T13	CauseEffect	true	colisión	mantenida
+Relation	T13	T5	EffectCause	true	mantenida	colisión
+Relation	T5	T3	CauseEffect	true	colisión	conferencia
+Relation	T3	T5	EffectCause	true	conferencia	colisión
+Relation	T0	T12	NoRel	true	esfuerzos	pasar
+Relation	T0	T13	NoRel	true	esfuerzos	mantenida
+Relation	T0	T2	NoRel	true	esfuerzos	interrogantes
+Relation	T0	T3	NoRel	true	esfuerzos	conferencia
+Relation	T0	T4	NoRel	true	esfuerzos	llamar
+Relation	T0	T7	NoRel	true	esfuerzos	anunció
+Relation	T0	T9	NoRel	true	esfuerzos	recuperación
+Relation	T1	T0	NoRel	true	respondió	esfuerzos
+Relation	T1	T13	NoRel	true	respondió	mantenida
+Relation	T1	T2	NoRel	true	respondió	interrogantes
+Relation	T1	T7	NoRel	true	respondió	anunció
+Relation	T1	T8	NoRel	true	respondió	rescate
+Relation	T1	T9	NoRel	true	respondió	recuperación
+Relation	T10	T0	NoRel	true	mantenía	esfuerzos
+Relation	T10	T1	NoRel	true	mantenía	respondió
+Relation	T10	T3	NoRel	true	mantenía	conferencia
+Relation	T10	T4	NoRel	true	mantenía	llamar
+Relation	T10	T6	NoRel	true	mantenía	accidente
+Relation	T11	T0	NoRel	true	solicitando	esfuerzos
+Relation	T11	T13	NoRel	true	solicitando	mantenida
+Relation	T11	T3	NoRel	true	solicitando	conferencia
+Relation	T11	T9	NoRel	true	solicitando	recuperación
+Relation	T13	T1	NoRel	true	mantenida	respondió
+Relation	T13	T11	NoRel	true	mantenida	solicitando
+Relation	T13	T12	NoRel	true	mantenida	pasar
+Relation	T13	T3	NoRel	true	mantenida	conferencia
+Relation	T13	T4	NoRel	true	mantenida	llamar
+Relation	T13	T6	NoRel	true	mantenida	accidente
+Relation	T13	T7	NoRel	true	mantenida	anunció
+Relation	T2	T0	NoRel	true	interrogantes	esfuerzos
+Relation	T2	T1	NoRel	true	interrogantes	respondió
+Relation	T2	T13	NoRel	true	interrogantes	mantenida
+Relation	T2	T6	NoRel	true	interrogantes	accidente
+Relation	T2	T7	NoRel	true	interrogantes	anunció
+Relation	T3	T1	NoRel	true	conferencia	respondió
+Relation	T3	T4	NoRel	true	conferencia	llamar
+Relation	T4	T1	NoRel	true	llamar	respondió
+Relation	T4	T10	NoRel	true	llamar	mantenía
+Relation	T4	T12	NoRel	true	llamar	pasar
+Relation	T4	T2	NoRel	true	llamar	interrogantes
+Relation	T4	T5	NoRel	true	llamar	colisión
+Relation	T4	T6	NoRel	true	llamar	accidente
+Relation	T4	T7	NoRel	true	llamar	anunció
+Relation	T4	T8	NoRel	true	llamar	rescate
+Relation	T5	T6	NoRel	true	colisión	accidente
+Relation	T5	T8	NoRel	true	colisión	rescate
+Relation	T6	T0	NoRel	true	accidente	esfuerzos
+Relation	T6	T1	NoRel	true	accidente	respondió
+Relation	T6	T4	NoRel	true	accidente	llamar
+Relation	T6	T5	NoRel	true	accidente	colisión
+Relation	T6	T7	NoRel	true	accidente	anunció
+Relation	T6	T8	NoRel	true	accidente	rescate
+Relation	T6	T9	NoRel	true	accidente	recuperación
+Relation	T7	T2	NoRel	true	anunció	interrogantes
+Relation	T7	T5	NoRel	true	anunció	colisión
+Relation	T7	T8	NoRel	true	anunció	rescate
+Relation	T7	T9	NoRel	true	anunció	recuperación
+Relation	T8	T10	NoRel	true	rescate	mantenía
+Relation	T8	T13	NoRel	true	rescate	mantenida
+Relation	T8	T5	NoRel	true	rescate	colisión
+Relation	T8	T6	NoRel	true	rescate	accidente
+Relation	T9	T13	NoRel	true	recuperación	mantenida
+Relation	T9	T2	NoRel	true	recuperación	interrogantes
+Relation	T9	T3	NoRel	true	recuperación	conferencia
+Relation	T9	T7	NoRel	true	recuperación	anunció

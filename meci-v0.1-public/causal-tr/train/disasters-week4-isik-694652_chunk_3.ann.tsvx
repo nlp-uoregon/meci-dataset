@@ -1,0 +1,38 @@
+Text	küçükresim | Deprem sonrası kent merkezinde yıkılan bir bina 39 80 kuzey enlemi ve 39 51 doğu boylamı , odak derinliği 20 km olan depremin etkilediği alan doğuda Erzincan Ovası'ndan batıda Kelkit Vadisi'ne kadar uzanır .	Hasara uğramış bölgelerin uzunluğu 400 km ( Erzincan’ın doğusundan Amasya’ya kadar ) , genişliği ise ( güneyde Sivas’tan kuzeyde Karadeniz'e kadar ) 200 km'dir .	Bu depremde Erzincan’dan Kelkit Vadisi'ni izleyerek Niksar’a kadar uzanan yaklaşık 350 km’lik bir kırık sistemi oluşmuştur .	Kırıklar boyunca 1 m’lik düşey ( atım ) ve 4 m’lik yatay hareketler görülmüştür .	Bu geniş alanı sarmış olan 35 deprem merkezi yaklaşık doğu - batı doğrultusunda dizilmiş başlıca dört sarsıntı çizgisi üzerinde etkinlik göstermiştir .
+Event	T0	Deprem	EVENT	13
+Event	T1	yıkılan	EVENT	44
+Event	T2	etkilediği	EVENT	139
+Event	T3	uğramış	EVENT	228
+Event	T4	depremde	EVENT	386
+Event	T5	oluşmuştur	EVENT	495
+Event	T7	görülmüştür	EVENT	576
+Event	T8	sarmış	EVENT	605
+Event	T12	göstermiştir	EVENT	727
+Relation	T0	T1	CauseEffect	true	Deprem	yıkılan
+Relation	T1	T0	EffectCause	true	yıkılan	Deprem
+Relation	T4	T5	CauseEffect	true	depremde	oluşmuştur
+Relation	T5	T4	EffectCause	true	oluşmuştur	depremde
+Relation	T4	T7	CauseEffect	true	depremde	görülmüştür
+Relation	T7	T4	EffectCause	true	görülmüştür	depremde
+Relation	T8	T12	CauseEffect	true	sarmış	göstermiştir
+Relation	T12	T8	EffectCause	true	göstermiştir	sarmış
+Relation	T0	T12	NoRel	true	Deprem	göstermiştir
+Relation	T0	T8	NoRel	true	Deprem	sarmış
+Relation	T1	T12	NoRel	true	yıkılan	göstermiştir
+Relation	T12	T2	NoRel	true	göstermiştir	etkilediği
+Relation	T12	T4	NoRel	true	göstermiştir	depremde
+Relation	T2	T1	NoRel	true	etkilediği	yıkılan
+Relation	T2	T12	NoRel	true	etkilediği	göstermiştir
+Relation	T2	T4	NoRel	true	etkilediği	depremde
+Relation	T2	T5	NoRel	true	etkilediği	oluşmuştur
+Relation	T2	T7	NoRel	true	etkilediği	görülmüştür
+Relation	T3	T0	NoRel	true	uğramış	Deprem
+Relation	T3	T2	NoRel	true	uğramış	etkilediği
+Relation	T4	T0	NoRel	true	depremde	Deprem
+Relation	T4	T1	NoRel	true	depremde	yıkılan
+Relation	T4	T12	NoRel	true	depremde	göstermiştir
+Relation	T5	T1	NoRel	true	oluşmuştur	yıkılan
+Relation	T5	T12	NoRel	true	oluşmuştur	göstermiştir
+Relation	T5	T2	NoRel	true	oluşmuştur	etkilediği
+Relation	T7	T0	NoRel	true	görülmüştür	Deprem
+Relation	T7	T2	NoRel	true	görülmüştür	etkilediği

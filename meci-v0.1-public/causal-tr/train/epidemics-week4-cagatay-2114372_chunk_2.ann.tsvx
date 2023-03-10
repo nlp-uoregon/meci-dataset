@@ -1,0 +1,205 @@
+Text	Kendisine atfedilen suçlamalar nedeniyle _ Afrika'nın Pinochet'si _ unvanın alan Habré'nin yokluğunda N' Djamena mahkemesi kendisini ölüm cezasına çarptırmıştır .	2012 yılında Habré'nin iadesinin mevcut şartlar doğrultusunda mümkün olmadığını açıklayan Dakar mahkemesi , 30 Haziran 2013'te Habré için tutuklama kararı çıkartmış ve tutuklamıştır .	Habré'nin ülkeye girişinden 25 yıl sonra 2015 yılına mahkemenin başlayacağını açıklayan mahkeme , Mayıs 2016'da tecavüz , cinsel kölelik ve 40.000 insanın öldürülmesi emrini vermesi de dahil olmak üzere insan hakları ihlallerinden Habré'yi suçlu bularak ve ömür boyu hapse mahkûm etmiştir .	7 Nisan 2020 tarihinde Senegal yönetimi , Habre’nin tutulduğu hapishanenin Covid - 19 salgınında karantina binası olarak kullanılacağını ve bu gerekçeyle savaş ve cinsel istismar suçlusu Habre’nin serbest bırakıldığını açıkladı .	24 Ağustos 2021'de Coronavirüs nedeniyle tedavi gördüğü hastanede hayatını kaybetti .
+Event	T0	suçlamalar	EVENT	20
+Event	T1	çarptırmıştır	EVENT	147
+Event	T2	iadesinin	EVENT	186
+Event	T3	çıkartmış	EVENT	318
+Event	T4	tutuklamıştır	EVENT	331
+Event	T5	girişinden	EVENT	364
+Event	T6	açıklayan	EVENT	425
+Event	T7	tecavüz	EVENT	459
+Event	T8	vermesi	EVENT	521
+Event	T9	ihlallerinden	EVENT	564
+Event	T10	bularak	EVENT	593
+Event	T11	etmiştir	EVENT	627
+Event	T12	tutulduğu	EVENT	690
+Event	T13	savaş	EVENT	792
+Event	T14	açıkladı	EVENT	857
+Event	T15	kaybetti	EVENT	943
+Event	T16	atfedilen	EVENT	10
+Event	T17	açıklayan	EVENT	243
+Event	T18	başlayacağını	EVENT	411
+Event	T19	öldürülmesi	EVENT	502
+Event	T20	kullanılacağını	EVENT	759
+Event	T21	istismar	EVENT	808
+Event	T22	gördüğü	EVENT	916
+Relation	T0	T1	CauseEffect	true	suçlamalar	çarptırmıştır
+Relation	T1	T0	EffectCause	true	çarptırmıştır	suçlamalar
+Relation	T1	T4	CauseEffect	true	çarptırmıştır	tutuklamıştır
+Relation	T4	T1	EffectCause	true	tutuklamıştır	çarptırmıştır
+Relation	T1	T3	CauseEffect	true	çarptırmıştır	çıkartmış
+Relation	T3	T1	EffectCause	true	çıkartmış	çarptırmıştır
+Relation	T9	T1	CauseEffect	true	ihlallerinden	çarptırmıştır
+Relation	T1	T9	EffectCause	true	çarptırmıştır	ihlallerinden
+Relation	T9	T10	CauseEffect	true	ihlallerinden	bularak
+Relation	T10	T9	EffectCause	true	bularak	ihlallerinden
+Relation	T10	T11	CauseEffect	true	bularak	etmiştir
+Relation	T11	T10	EffectCause	true	etmiştir	bularak
+Relation	T0	T10	NoRel	true	suçlamalar	bularak
+Relation	T0	T16	NoRel	true	suçlamalar	atfedilen
+Relation	T0	T17	NoRel	true	suçlamalar	açıklayan
+Relation	T0	T2	NoRel	true	suçlamalar	iadesinin
+Relation	T0	T20	NoRel	true	suçlamalar	kullanılacağını
+Relation	T0	T22	NoRel	true	suçlamalar	gördüğü
+Relation	T0	T3	NoRel	true	suçlamalar	çıkartmış
+Relation	T0	T5	NoRel	true	suçlamalar	girişinden
+Relation	T0	T6	NoRel	true	suçlamalar	açıklayan
+Relation	T0	T7	NoRel	true	suçlamalar	tecavüz
+Relation	T1	T14	NoRel	true	çarptırmıştır	açıkladı
+Relation	T1	T18	NoRel	true	çarptırmıştır	başlayacağını
+Relation	T1	T6	NoRel	true	çarptırmıştır	açıklayan
+Relation	T1	T8	NoRel	true	çarptırmıştır	vermesi
+Relation	T10	T0	NoRel	true	bularak	suçlamalar
+Relation	T10	T18	NoRel	true	bularak	başlayacağını
+Relation	T10	T20	NoRel	true	bularak	kullanılacağını
+Relation	T10	T5	NoRel	true	bularak	girişinden
+Relation	T10	T6	NoRel	true	bularak	açıklayan
+Relation	T10	T7	NoRel	true	bularak	tecavüz
+Relation	T11	T13	NoRel	true	etmiştir	savaş
+Relation	T11	T16	NoRel	true	etmiştir	atfedilen
+Relation	T11	T18	NoRel	true	etmiştir	başlayacağını
+Relation	T11	T19	NoRel	true	etmiştir	öldürülmesi
+Relation	T11	T22	NoRel	true	etmiştir	gördüğü
+Relation	T11	T3	NoRel	true	etmiştir	çıkartmış
+Relation	T12	T10	NoRel	true	tutulduğu	bularak
+Relation	T12	T13	NoRel	true	tutulduğu	savaş
+Relation	T12	T14	NoRel	true	tutulduğu	açıkladı
+Relation	T12	T18	NoRel	true	tutulduğu	başlayacağını
+Relation	T12	T2	NoRel	true	tutulduğu	iadesinin
+Relation	T12	T20	NoRel	true	tutulduğu	kullanılacağını
+Relation	T12	T22	NoRel	true	tutulduğu	gördüğü
+Relation	T12	T4	NoRel	true	tutulduğu	tutuklamıştır
+Relation	T12	T5	NoRel	true	tutulduğu	girişinden
+Relation	T12	T9	NoRel	true	tutulduğu	ihlallerinden
+Relation	T13	T0	NoRel	true	savaş	suçlamalar
+Relation	T13	T12	NoRel	true	savaş	tutulduğu
+Relation	T13	T16	NoRel	true	savaş	atfedilen
+Relation	T13	T19	NoRel	true	savaş	öldürülmesi
+Relation	T13	T20	NoRel	true	savaş	kullanılacağını
+Relation	T13	T21	NoRel	true	savaş	istismar
+Relation	T13	T8	NoRel	true	savaş	vermesi
+Relation	T14	T1	NoRel	true	açıkladı	çarptırmıştır
+Relation	T14	T10	NoRel	true	açıkladı	bularak
+Relation	T14	T13	NoRel	true	açıkladı	savaş
+Relation	T14	T19	NoRel	true	açıkladı	öldürülmesi
+Relation	T14	T8	NoRel	true	açıkladı	vermesi
+Relation	T14	T9	NoRel	true	açıkladı	ihlallerinden
+Relation	T15	T0	NoRel	true	kaybetti	suçlamalar
+Relation	T15	T10	NoRel	true	kaybetti	bularak
+Relation	T15	T13	NoRel	true	kaybetti	savaş
+Relation	T15	T14	NoRel	true	kaybetti	açıkladı
+Relation	T15	T16	NoRel	true	kaybetti	atfedilen
+Relation	T15	T17	NoRel	true	kaybetti	açıklayan
+Relation	T16	T10	NoRel	true	atfedilen	bularak
+Relation	T16	T14	NoRel	true	atfedilen	açıkladı
+Relation	T16	T19	NoRel	true	atfedilen	öldürülmesi
+Relation	T16	T2	NoRel	true	atfedilen	iadesinin
+Relation	T16	T3	NoRel	true	atfedilen	çıkartmış
+Relation	T16	T7	NoRel	true	atfedilen	tecavüz
+Relation	T17	T10	NoRel	true	açıklayan	bularak
+Relation	T17	T11	NoRel	true	açıklayan	etmiştir
+Relation	T17	T13	NoRel	true	açıklayan	savaş
+Relation	T17	T16	NoRel	true	açıklayan	atfedilen
+Relation	T17	T19	NoRel	true	açıklayan	öldürülmesi
+Relation	T17	T21	NoRel	true	açıklayan	istismar
+Relation	T17	T5	NoRel	true	açıklayan	girişinden
+Relation	T17	T8	NoRel	true	açıklayan	vermesi
+Relation	T18	T12	NoRel	true	başlayacağını	tutulduğu
+Relation	T18	T16	NoRel	true	başlayacağını	atfedilen
+Relation	T18	T17	NoRel	true	başlayacağını	açıklayan
+Relation	T18	T2	NoRel	true	başlayacağını	iadesinin
+Relation	T18	T20	NoRel	true	başlayacağını	kullanılacağını
+Relation	T18	T21	NoRel	true	başlayacağını	istismar
+Relation	T18	T4	NoRel	true	başlayacağını	tutuklamıştır
+Relation	T18	T5	NoRel	true	başlayacağını	girişinden
+Relation	T18	T6	NoRel	true	başlayacağını	açıklayan
+Relation	T18	T7	NoRel	true	başlayacağını	tecavüz
+Relation	T19	T1	NoRel	true	öldürülmesi	çarptırmıştır
+Relation	T19	T15	NoRel	true	öldürülmesi	kaybetti
+Relation	T19	T2	NoRel	true	öldürülmesi	iadesinin
+Relation	T19	T5	NoRel	true	öldürülmesi	girişinden
+Relation	T19	T9	NoRel	true	öldürülmesi	ihlallerinden
+Relation	T2	T10	NoRel	true	iadesinin	bularak
+Relation	T2	T11	NoRel	true	iadesinin	etmiştir
+Relation	T2	T18	NoRel	true	iadesinin	başlayacağını
+Relation	T2	T19	NoRel	true	iadesinin	öldürülmesi
+Relation	T2	T21	NoRel	true	iadesinin	istismar
+Relation	T2	T22	NoRel	true	iadesinin	gördüğü
+Relation	T2	T3	NoRel	true	iadesinin	çıkartmış
+Relation	T2	T7	NoRel	true	iadesinin	tecavüz
+Relation	T20	T15	NoRel	true	kullanılacağını	kaybetti
+Relation	T20	T17	NoRel	true	kullanılacağını	açıklayan
+Relation	T20	T18	NoRel	true	kullanılacağını	başlayacağını
+Relation	T20	T22	NoRel	true	kullanılacağını	gördüğü
+Relation	T20	T3	NoRel	true	kullanılacağını	çıkartmış
+Relation	T20	T6	NoRel	true	kullanılacağını	açıklayan
+Relation	T20	T8	NoRel	true	kullanılacağını	vermesi
+Relation	T21	T12	NoRel	true	istismar	tutulduğu
+Relation	T21	T15	NoRel	true	istismar	kaybetti
+Relation	T21	T16	NoRel	true	istismar	atfedilen
+Relation	T21	T18	NoRel	true	istismar	başlayacağını
+Relation	T21	T22	NoRel	true	istismar	gördüğü
+Relation	T21	T3	NoRel	true	istismar	çıkartmış
+Relation	T21	T5	NoRel	true	istismar	girişinden
+Relation	T21	T6	NoRel	true	istismar	açıklayan
+Relation	T22	T1	NoRel	true	gördüğü	çarptırmıştır
+Relation	T22	T14	NoRel	true	gördüğü	açıkladı
+Relation	T22	T15	NoRel	true	gördüğü	kaybetti
+Relation	T22	T2	NoRel	true	gördüğü	iadesinin
+Relation	T22	T20	NoRel	true	gördüğü	kullanılacağını
+Relation	T22	T6	NoRel	true	gördüğü	açıklayan
+Relation	T22	T8	NoRel	true	gördüğü	vermesi
+Relation	T22	T9	NoRel	true	gördüğü	ihlallerinden
+Relation	T3	T13	NoRel	true	çıkartmış	savaş
+Relation	T3	T15	NoRel	true	çıkartmış	kaybetti
+Relation	T3	T21	NoRel	true	çıkartmış	istismar
+Relation	T3	T22	NoRel	true	çıkartmış	gördüğü
+Relation	T3	T4	NoRel	true	çıkartmış	tutuklamıştır
+Relation	T3	T5	NoRel	true	çıkartmış	girişinden
+Relation	T3	T9	NoRel	true	çıkartmış	ihlallerinden
+Relation	T4	T0	NoRel	true	tutuklamıştır	suçlamalar
+Relation	T4	T11	NoRel	true	tutuklamıştır	etmiştir
+Relation	T4	T12	NoRel	true	tutuklamıştır	tutulduğu
+Relation	T4	T13	NoRel	true	tutuklamıştır	savaş
+Relation	T4	T15	NoRel	true	tutuklamıştır	kaybetti
+Relation	T4	T18	NoRel	true	tutuklamıştır	başlayacağını
+Relation	T4	T2	NoRel	true	tutuklamıştır	iadesinin
+Relation	T4	T3	NoRel	true	tutuklamıştır	çıkartmış
+Relation	T4	T5	NoRel	true	tutuklamıştır	girişinden
+Relation	T4	T6	NoRel	true	tutuklamıştır	açıklayan
+Relation	T4	T8	NoRel	true	tutuklamıştır	vermesi
+Relation	T5	T10	NoRel	true	girişinden	bularak
+Relation	T5	T11	NoRel	true	girişinden	etmiştir
+Relation	T5	T12	NoRel	true	girişinden	tutulduğu
+Relation	T5	T19	NoRel	true	girişinden	öldürülmesi
+Relation	T5	T21	NoRel	true	girişinden	istismar
+Relation	T5	T3	NoRel	true	girişinden	çıkartmış
+Relation	T5	T8	NoRel	true	girişinden	vermesi
+Relation	T6	T16	NoRel	true	açıklayan	atfedilen
+Relation	T6	T19	NoRel	true	açıklayan	öldürülmesi
+Relation	T6	T20	NoRel	true	açıklayan	kullanılacağını
+Relation	T6	T8	NoRel	true	açıklayan	vermesi
+Relation	T7	T10	NoRel	true	tecavüz	bularak
+Relation	T7	T15	NoRel	true	tecavüz	kaybetti
+Relation	T7	T16	NoRel	true	tecavüz	atfedilen
+Relation	T7	T20	NoRel	true	tecavüz	kullanılacağını
+Relation	T7	T22	NoRel	true	tecavüz	gördüğü
+Relation	T7	T4	NoRel	true	tecavüz	tutuklamıştır
+Relation	T7	T8	NoRel	true	tecavüz	vermesi
+Relation	T7	T9	NoRel	true	tecavüz	ihlallerinden
+Relation	T8	T0	NoRel	true	vermesi	suçlamalar
+Relation	T8	T11	NoRel	true	vermesi	etmiştir
+Relation	T8	T13	NoRel	true	vermesi	savaş
+Relation	T8	T15	NoRel	true	vermesi	kaybetti
+Relation	T8	T17	NoRel	true	vermesi	açıklayan
+Relation	T8	T18	NoRel	true	vermesi	başlayacağını
+Relation	T8	T19	NoRel	true	vermesi	öldürülmesi
+Relation	T8	T7	NoRel	true	vermesi	tecavüz
+Relation	T8	T9	NoRel	true	vermesi	ihlallerinden
+Relation	T9	T12	NoRel	true	ihlallerinden	tutulduğu
+Relation	T9	T14	NoRel	true	ihlallerinden	açıkladı
+Relation	T9	T15	NoRel	true	ihlallerinden	kaybetti
+Relation	T9	T18	NoRel	true	ihlallerinden	başlayacağını
+Relation	T9	T19	NoRel	true	ihlallerinden	öldürülmesi
+Relation	T9	T22	NoRel	true	ihlallerinden	gördüğü
+Relation	T9	T3	NoRel	true	ihlallerinden	çıkartmış
+Relation	T9	T4	NoRel	true	ihlallerinden	tutuklamıştır

@@ -1,0 +1,36 @@
+Text	Der er ifølge CNN ikke kommet tilsvarende advarsler siden Orkanen Katrina 12 år tidligere .	Ved landgangen havde orkanen en vindstyrke på op til 215 km/t ( ca. 59 m/s ) , hvilket svarer til kategori fire på Saffir-Simpson-skalaen , som går til fem .	Efterfølgende er orkanen blevet nedgraderet til en kategori 1-orkan .	I den efterfølgende uge frygtes der at falde op til en meter regn visse steder i Texas .	Der havde ikke været en orkan i Texas med højere vindhastigheder siden 1961 og den overgik Orkanen Katrina fra 2005 i vindstyrke , men denne var overordnet større og forårsagede større oversvømmelser pga. det område den ramte ( New Orleans ) .
+Event	T0	kommet	EVENT	23
+Event	T1	advarsler	EVENT	42
+Event	T2	går	EVENT	236
+Event	T3	nedgraderet	EVENT	282
+Event	T4	frygtes	EVENT	344
+Event	T5	regn	EVENT	381
+Event	T6	overgik	EVENT	492
+Event	T7	forårsagede	EVENT	575
+Event	T9	ramte	EVENT	629
+Relation	T9	T7	CauseEffect	true	ramte	forårsagede
+Relation	T7	T9	EffectCause	true	forårsagede	ramte
+Relation	T6	T1	CauseEffect	true	overgik	advarsler
+Relation	T1	T6	EffectCause	true	advarsler	overgik
+Relation	T0	T3	NoRel	true	kommet	nedgraderet
+Relation	T0	T4	NoRel	true	kommet	frygtes
+Relation	T0	T5	NoRel	true	kommet	regn
+Relation	T0	T7	NoRel	true	kommet	forårsagede
+Relation	T0	T9	NoRel	true	kommet	ramte
+Relation	T1	T0	NoRel	true	advarsler	kommet
+Relation	T1	T3	NoRel	true	advarsler	nedgraderet
+Relation	T1	T5	NoRel	true	advarsler	regn
+Relation	T1	T7	NoRel	true	advarsler	forårsagede
+Relation	T2	T1	NoRel	true	går	advarsler
+Relation	T2	T3	NoRel	true	går	nedgraderet
+Relation	T2	T5	NoRel	true	går	regn
+Relation	T3	T7	NoRel	true	nedgraderet	forårsagede
+Relation	T5	T3	NoRel	true	regn	nedgraderet
+Relation	T5	T6	NoRel	true	regn	overgik
+Relation	T5	T9	NoRel	true	regn	ramte
+Relation	T6	T4	NoRel	true	overgik	frygtes
+Relation	T6	T5	NoRel	true	overgik	regn
+Relation	T6	T7	NoRel	true	overgik	forårsagede
+Relation	T6	T9	NoRel	true	overgik	ramte
+Relation	T7	T0	NoRel	true	forårsagede	kommet
+Relation	T7	T3	NoRel	true	forårsagede	nedgraderet

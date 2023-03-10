@@ -1,0 +1,19 @@
+Text	Det fremgik af lokal instruktion , at sporisolationen ved indgangssporskiftet ikke gav garanti for sporfrihed mellem spor 1 og spor 2 , og at stationsbestyreren derfor i forbindelse med signalgivning skulle foretage direkte togvejseftersyn , hvilket åbenbart ikke skete .				
+Event	T0	fremgik	EVENT	4
+Event	T1	instruktion	EVENT	21
+Event	T2	gav	EVENT	83
+Event	T3	signalgivning	EVENT	186
+Event	T4	foretage	EVENT	207
+Event	T5	skete	EVENT	264
+Relation	T2	T4	CauseEffect	true	gav	foretage
+Relation	T4	T2	EffectCause	true	foretage	gav
+Relation	T0	T4	NoRel	true	fremgik	foretage
+Relation	T1	T0	NoRel	true	instruktion	fremgik
+Relation	T1	T2	NoRel	true	instruktion	gav
+Relation	T1	T4	NoRel	true	instruktion	foretage
+Relation	T2	T3	NoRel	true	gav	signalgivning
+Relation	T3	T4	NoRel	true	signalgivning	foretage
+Relation	T4	T5	NoRel	true	foretage	skete
+Relation	T5	T0	NoRel	true	skete	fremgik
+Relation	T5	T2	NoRel	true	skete	gav
+Relation	T5	T3	NoRel	true	skete	signalgivning

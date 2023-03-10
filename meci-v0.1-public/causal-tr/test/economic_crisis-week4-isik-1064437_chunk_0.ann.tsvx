@@ -1,0 +1,43 @@
+Text	küçükresim | 300px | Edward Matthew Ward'ın Hogart tarzıyla yapılmış " Güney Denizi Balonu " başlıklı resmi , Tate Galeri .	GÜNEY DENIZI_ŞIRKETI ( İngilizce : The South Sea Company ) 18. Yüzyıl'da Güney Amerika'da faaliyet gösteren Britanya kökenli anonim şirkettir .	1711'de kurulan şirket İspanya Veraset Savaşı esnasında imzalanan bir anlaşmayla İspanya'nın Güney Amerika kolonilerinde tekel konumuna gelmiştir .	Karşılığında savaş esnasında İngiltere'nin yüklendiği borcu üstlenmiştir .	Şirketin hisseleri üzerindeki spekülasyon 1720 yılında finansal yıkıma neden olan " Güney Denizi Balonu " olarak bilinen ekonomik balona sebep olmuştur .
+Event	T0	kurulan	EVENT	276
+Event	T3	gelmiştir	EVENT	404
+Event	T4	savaş	EVENT	429
+Event	T5	üstlenmiştir	EVENT	476
+Event	T6	spekülasyon	EVENT	521
+Event	T8	yapılmış	EVENT	60
+Event	T9	gösteren	EVENT	223
+Event	T10	anlaşmayla	EVENT	338
+Event	T1	İspanya Veraset Savaşı	EVENT	291
+Event	T2	olmuştur	EVENT	634
+Event	T7	olan	EVENT	568
+Relation	T10	T3	CauseEffect	true	anlaşmayla	gelmiştir
+Relation	T3	T10	EffectCause	true	gelmiştir	anlaşmayla
+Relation	T1	T10	CauseEffect	true	İspanya Veraset Savaşı	anlaşmayla
+Relation	T10	T1	EffectCause	true	anlaşmayla	İspanya Veraset Savaşı
+Relation	T10	T5	CauseEffect	true	anlaşmayla	üstlenmiştir
+Relation	T5	T10	EffectCause	true	üstlenmiştir	anlaşmayla
+Relation	T6	T2	CauseEffect	true	spekülasyon	olmuştur
+Relation	T2	T6	EffectCause	true	olmuştur	spekülasyon
+Relation	T2	T7	CauseEffect	true	olmuştur	olan
+Relation	T7	T2	EffectCause	true	olan	olmuştur
+Relation	T0	T1	NoRel	true	kurulan	İspanya Veraset Savaşı
+Relation	T0	T2	NoRel	true	kurulan	olmuştur
+Relation	T1	T9	NoRel	true	İspanya Veraset Savaşı	gösteren
+Relation	T10	T2	NoRel	true	anlaşmayla	olmuştur
+Relation	T10	T4	NoRel	true	anlaşmayla	savaş
+Relation	T10	T8	NoRel	true	anlaşmayla	yapılmış
+Relation	T10	T9	NoRel	true	anlaşmayla	gösteren
+Relation	T2	T0	NoRel	true	olmuştur	kurulan
+Relation	T2	T1	NoRel	true	olmuştur	İspanya Veraset Savaşı
+Relation	T2	T10	NoRel	true	olmuştur	anlaşmayla
+Relation	T2	T8	NoRel	true	olmuştur	yapılmış
+Relation	T3	T6	NoRel	true	gelmiştir	spekülasyon
+Relation	T4	T0	NoRel	true	savaş	kurulan
+Relation	T4	T7	NoRel	true	savaş	olan
+Relation	T5	T6	NoRel	true	üstlenmiştir	spekülasyon
+Relation	T6	T10	NoRel	true	spekülasyon	anlaşmayla
+Relation	T6	T9	NoRel	true	spekülasyon	gösteren
+Relation	T7	T1	NoRel	true	olan	İspanya Veraset Savaşı
+Relation	T8	T0	NoRel	true	yapılmış	kurulan
+Relation	T9	T6	NoRel	true	gösteren	spekülasyon
+Relation	T9	T8	NoRel	true	gösteren	yapılmış

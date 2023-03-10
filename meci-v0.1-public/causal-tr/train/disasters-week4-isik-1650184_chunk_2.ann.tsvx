@@ -1,0 +1,49 @@
+Text	Yanardağdan çıkan volkanik külün doğu yönünde 300 km uzaklığa eriştiği gözümlendi .	20. yüzyılda ABD'de bulunan akrif ve sönmüş görünümlü yanardağlardan sadece ikisi ; Lassen Zirvesi ve St. Helena Dağı büyük volkanik patlama ve diğer faaliyet göstermişlerdir .	Lassen Zirvesi aktif yanardağı olarak volkanik faaliyet göstermeye başladıktan hemen sonra 9 Ağustos 1914'te çıkartılan bir ABD Kongresi kanunu ile Kaliforniya eayaletini Shasta ilçesinde bulunan Lassen Zirvesi ve etrafında 430 km²'lik bir alanda Lassen Volkanik Ulusal Parkı kurulmuştur .	Lassen Zirvesi Kaliforniya eyaleti içinde zirveye ve yamamaçlara yağan kar hacmi bakımından en çok kara yağışı gören arazidir .	Dağın bazında 2515 m rakımlı Helen Golü meteroloji istasyonnu gözlemlerine göre ortalama yıllık kar yağışı 1.676 cm olmaktadır ve bazı yıllar 2.550 cm yıllık kar yağışı gözümlenmiştir .
+Event	T0	külün	EVENT	27
+Event	T1	gözümlendi	EVENT	71
+Event	T2	patlama	EVENT	217
+Event	T3	kurulmuştur	EVENT	537
+Event	T6	gözlemlerine	EVENT	741
+Event	T7	yağışı	EVENT	779
+Event	T8	gözümlenmiştir	EVENT	848
+Event	T9	göstermişlerdir	EVENT	243
+Event	T10	başladıktan	EVENT	328
+Event	T11	kanunu	EVENT	398
+Relation	T10	T11	CauseEffect	true	başladıktan	kanunu
+Relation	T11	T10	EffectCause	true	kanunu	başladıktan
+Relation	T11	T3	CauseEffect	true	kanunu	kurulmuştur
+Relation	T3	T11	EffectCause	true	kurulmuştur	kanunu
+Relation	T0	T1	NoRel	true	külün	gözümlendi
+Relation	T0	T11	NoRel	true	külün	kanunu
+Relation	T0	T2	NoRel	true	külün	patlama
+Relation	T0	T6	NoRel	true	külün	gözlemlerine
+Relation	T0	T7	NoRel	true	külün	yağışı
+Relation	T0	T9	NoRel	true	külün	göstermişlerdir
+Relation	T1	T6	NoRel	true	gözümlendi	gözlemlerine
+Relation	T10	T0	NoRel	true	başladıktan	külün
+Relation	T10	T1	NoRel	true	başladıktan	gözümlendi
+Relation	T10	T8	NoRel	true	başladıktan	gözümlenmiştir
+Relation	T10	T9	NoRel	true	başladıktan	göstermişlerdir
+Relation	T11	T0	NoRel	true	kanunu	külün
+Relation	T11	T2	NoRel	true	kanunu	patlama
+Relation	T11	T7	NoRel	true	kanunu	yağışı
+Relation	T11	T8	NoRel	true	kanunu	gözümlenmiştir
+Relation	T2	T1	NoRel	true	patlama	gözümlendi
+Relation	T2	T10	NoRel	true	patlama	başladıktan
+Relation	T2	T8	NoRel	true	patlama	gözümlenmiştir
+Relation	T3	T0	NoRel	true	kurulmuştur	külün
+Relation	T3	T2	NoRel	true	kurulmuştur	patlama
+Relation	T3	T6	NoRel	true	kurulmuştur	gözlemlerine
+Relation	T3	T8	NoRel	true	kurulmuştur	gözümlenmiştir
+Relation	T6	T0	NoRel	true	gözlemlerine	külün
+Relation	T6	T10	NoRel	true	gözlemlerine	başladıktan
+Relation	T6	T3	NoRel	true	gözlemlerine	kurulmuştur
+Relation	T6	T8	NoRel	true	gözlemlerine	gözümlenmiştir
+Relation	T7	T1	NoRel	true	yağışı	gözümlendi
+Relation	T7	T2	NoRel	true	yağışı	patlama
+Relation	T8	T2	NoRel	true	gözümlenmiştir	patlama
+Relation	T8	T3	NoRel	true	gözümlenmiştir	kurulmuştur
+Relation	T8	T7	NoRel	true	gözümlenmiştir	yağışı
+Relation	T9	T10	NoRel	true	göstermişlerdir	başladıktan
+Relation	T9	T2	NoRel	true	göstermişlerdir	patlama
+Relation	T9	T8	NoRel	true	göstermişlerdir	gözümlenmiştir

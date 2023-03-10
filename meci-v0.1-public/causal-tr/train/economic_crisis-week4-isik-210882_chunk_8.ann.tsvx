@@ -1,0 +1,61 @@
+Text	Bu başarı IMF ve Dünya Bankası gibi çeşitli uluslararası kurumlar tarafından sahiplenildi ve Asya mucizesinin bir parçası olarak görüldü .	1990'ların belli bir döneminden sonra ticaretin dışa dönük kısmında ve cari açıklarda büyüme yaşandı .	Cari açıklar finanse edilmeye başlandığında kontrol altına alındığı düşünülmüş olsa da açıklar büyüdükçe kontrolü zorlaşmaktaydı .	Ülkeye giren yabancı fonlar nedeniyle kısa vadeli borçlar krizi çıkmaza sürüklemişti .	Kriz sürecinde yeterince güçlü finans sektörü gözetimi olmaması , sektörün yeterince şeffaf olmaması ve kuralların uygulanmamasından dolayı durum daha da kötüleşmiştir .
+Event	T0	sahiplenildi	EVENT	77
+Event	T1	görüldü	EVENT	129
+Event	T2	yaşandı	EVENT	232
+Event	T4	düşünülmüş	EVENT	310
+Event	T6	sürüklemişti	EVENT	445
+Event	T7	Kriz	EVENT	460
+Event	T8	kötüleşmiştir	EVENT	614
+Event	T9	başarı	EVENT	3
+Event	T3	zorlaşmaktaydı	EVENT	356
+Event	T10	büyüdükçe	EVENT	337
+Event	T11	başlandığında	EVENT	272
+Event	T5	fonlar	EVENT	394
+Relation	T9	T0	CauseEffect	true	başarı	sahiplenildi
+Relation	T0	T9	EffectCause	true	sahiplenildi	başarı
+Relation	T2	T3	CauseEffect	true	yaşandı	zorlaşmaktaydı
+Relation	T3	T2	EffectCause	true	zorlaşmaktaydı	yaşandı
+Relation	T5	T6	CauseEffect	true	fonlar	sürüklemişti
+Relation	T6	T5	EffectCause	true	sürüklemişti	fonlar
+Relation	T0	T2	NoRel	true	sahiplenildi	yaşandı
+Relation	T0	T4	NoRel	true	sahiplenildi	düşünülmüş
+Relation	T0	T5	NoRel	true	sahiplenildi	fonlar
+Relation	T1	T10	NoRel	true	görüldü	büyüdükçe
+Relation	T1	T11	NoRel	true	görüldü	başlandığında
+Relation	T1	T2	NoRel	true	görüldü	yaşandı
+Relation	T1	T5	NoRel	true	görüldü	fonlar
+Relation	T1	T7	NoRel	true	görüldü	Kriz
+Relation	T1	T8	NoRel	true	görüldü	kötüleşmiştir
+Relation	T10	T0	NoRel	true	büyüdükçe	sahiplenildi
+Relation	T10	T3	NoRel	true	büyüdükçe	zorlaşmaktaydı
+Relation	T10	T7	NoRel	true	büyüdükçe	Kriz
+Relation	T10	T8	NoRel	true	büyüdükçe	kötüleşmiştir
+Relation	T11	T0	NoRel	true	başlandığında	sahiplenildi
+Relation	T11	T1	NoRel	true	başlandığında	görüldü
+Relation	T11	T6	NoRel	true	başlandığında	sürüklemişti
+Relation	T11	T7	NoRel	true	başlandığında	Kriz
+Relation	T11	T8	NoRel	true	başlandığında	kötüleşmiştir
+Relation	T3	T10	NoRel	true	zorlaşmaktaydı	büyüdükçe
+Relation	T3	T9	NoRel	true	zorlaşmaktaydı	başarı
+Relation	T5	T0	NoRel	true	fonlar	sahiplenildi
+Relation	T5	T2	NoRel	true	fonlar	yaşandı
+Relation	T5	T3	NoRel	true	fonlar	zorlaşmaktaydı
+Relation	T5	T4	NoRel	true	fonlar	düşünülmüş
+Relation	T6	T0	NoRel	true	sürüklemişti	sahiplenildi
+Relation	T6	T1	NoRel	true	sürüklemişti	görüldü
+Relation	T6	T8	NoRel	true	sürüklemişti	kötüleşmiştir
+Relation	T6	T9	NoRel	true	sürüklemişti	başarı
+Relation	T7	T1	NoRel	true	Kriz	görüldü
+Relation	T7	T3	NoRel	true	Kriz	zorlaşmaktaydı
+Relation	T7	T8	NoRel	true	Kriz	kötüleşmiştir
+Relation	T7	T9	NoRel	true	Kriz	başarı
+Relation	T8	T1	NoRel	true	kötüleşmiştir	görüldü
+Relation	T8	T2	NoRel	true	kötüleşmiştir	yaşandı
+Relation	T8	T3	NoRel	true	kötüleşmiştir	zorlaşmaktaydı
+Relation	T8	T4	NoRel	true	kötüleşmiştir	düşünülmüş
+Relation	T9	T10	NoRel	true	başarı	büyüdükçe
+Relation	T9	T11	NoRel	true	başarı	başlandığında
+Relation	T9	T2	NoRel	true	başarı	yaşandı
+Relation	T9	T5	NoRel	true	başarı	fonlar
+Relation	T9	T6	NoRel	true	başarı	sürüklemişti
+Relation	T9	T8	NoRel	true	başarı	kötüleşmiştir

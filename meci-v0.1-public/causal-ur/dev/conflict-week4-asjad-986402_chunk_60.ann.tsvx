@@ -1,0 +1,47 @@
+Text	" پھر بھی ، اتحادیوں کو یونانی عسکری صلاحیت کے بارے میں شکوک و شبہات تھے کہ اناطولیہ میں آگے بڑھے ، وسیع علاقوں کا سامنا ، مواصلات کی لمبی لائنیں ، یونانی خزانے کی مالی کوتاہیوں اور سب سے بڑھ کر ترک کسان / سپاہی کی سختی ۔	یونانیوں کی ناکامی کے بعد نئی قائم شدہ ترک فوج کو انا کی پہلی اور دوسری جنگ میں شکست دینے کے بعد اطالویوں نے جولائی 1921 میں جنوب مغربی اناطولیہ میں اپنے قبضے کا علاقہ خالی کرنا شروع کیا ۔	مزید برآں ، اطالویوں نے یہ بھی دعویٰ کیا کہ یونان نے کونسل آف فور کی طرف سے رکھی گئی یونانی قبضے کی حدود کی خلاف ورزی کی ہے ۔	دوسری طرف فرانس کا ترکی کے قوم پرستوں کے ساتھ سیلیسیا میں اپنا محاذ تھا ۔	فرانسیسی ، دیگر اتحادی طاقتوں کی طرح ، بولشویکوں کے خلاف ایک مضبوط بفر اسٹیٹ بنانے کے لیے ترکوں کے لیے اپنی حمایت تبدیل کر چکے تھے اور وہ وہاں سے نکلنے کے لیے کوشاں تھے ۔
+Event	T0	شکوک	EVENT	56
+Event	T1	بڑھے	EVENT	93
+Event	T2	سامنا	EVENT	115
+Event	T3	سختی	EVENT	215
+Event	T4	ناکامی	EVENT	234
+Event	T5	قائم	EVENT	252
+Event	T6	جنگ	EVENT	294
+Event	T7	دینے	EVENT	307
+Event	T8	قبضے	EVENT	376
+Event	T9	تبدیل	EVENT	725
+Event	T10	نکلنے	EVENT	757
+Relation	T6	T8	CauseEffect	true	جنگ	قبضے
+Relation	T8	T6	EffectCause	true	قبضے	جنگ
+Relation	T0	T5	NoRel	true	شکوک	قائم
+Relation	T0	T6	NoRel	true	شکوک	جنگ
+Relation	T1	T2	NoRel	true	بڑھے	سامنا
+Relation	T1	T7	NoRel	true	بڑھے	دینے
+Relation	T10	T0	NoRel	true	نکلنے	شکوک
+Relation	T10	T2	NoRel	true	نکلنے	سامنا
+Relation	T10	T3	NoRel	true	نکلنے	سختی
+Relation	T10	T4	NoRel	true	نکلنے	ناکامی
+Relation	T10	T7	NoRel	true	نکلنے	دینے
+Relation	T10	T8	NoRel	true	نکلنے	قبضے
+Relation	T2	T10	NoRel	true	سامنا	نکلنے
+Relation	T2	T7	NoRel	true	سامنا	دینے
+Relation	T2	T8	NoRel	true	سامنا	قبضے
+Relation	T2	T9	NoRel	true	سامنا	تبدیل
+Relation	T3	T0	NoRel	true	سختی	شکوک
+Relation	T3	T10	NoRel	true	سختی	نکلنے
+Relation	T3	T4	NoRel	true	سختی	ناکامی
+Relation	T3	T5	NoRel	true	سختی	قائم
+Relation	T3	T7	NoRel	true	سختی	دینے
+Relation	T3	T8	NoRel	true	سختی	قبضے
+Relation	T3	T9	NoRel	true	سختی	تبدیل
+Relation	T4	T1	NoRel	true	ناکامی	بڑھے
+Relation	T4	T10	NoRel	true	ناکامی	نکلنے
+Relation	T4	T3	NoRel	true	ناکامی	سختی
+Relation	T5	T0	NoRel	true	قائم	شکوک
+Relation	T5	T10	NoRel	true	قائم	نکلنے
+Relation	T5	T7	NoRel	true	قائم	دینے
+Relation	T6	T10	NoRel	true	جنگ	نکلنے
+Relation	T6	T7	NoRel	true	جنگ	دینے
+Relation	T6	T9	NoRel	true	جنگ	تبدیل
+Relation	T7	T6	NoRel	true	دینے	جنگ
+Relation	T8	T4	NoRel	true	قبضے	ناکامی
+Relation	T9	T1	NoRel	true	تبدیل	بڑھے

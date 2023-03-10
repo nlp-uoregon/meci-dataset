@@ -1,0 +1,130 @@
+Text	SARS-CoV-2 , der er en beslægtet coronavirus til SARS-CoV , gav i 2019-2021 anledning til pandemien COVID-19 .	Den første der slog alarm i WHO var den italienske læge Carlo Urbani , der arbejdede i Hanoi .	Han undersøgte en amerikansk forretningsmand med sygdommen og blev desværre derved selv smittet og døde .	Sygdommen har siden spredt sig til en lang række lande .	Høj feber , hoste , problemer med at trække vejret eller stakåndethed er alle symptomer på sygdommen .
+Event	T0	gav	EVENT	60
+Event	T1	pandemien	EVENT	90
+Event	T2	arbejdede	EVENT	186
+Event	T3	undersøgte	EVENT	210
+Event	T4	smittet	EVENT	294
+Event	T5	døde	EVENT	305
+Event	T6	Sygdommen	EVENT	312
+Event	T7	spredt	EVENT	332
+Event	T8	hoste	EVENT	381
+Event	T9	problemer	EVENT	389
+Event	T10	SARS-CoV-2	EVENT	0
+Event	T11	coronavirus	EVENT	33
+Event	T12	SARS-CoV	EVENT	49
+Event	T13	COVID-19	EVENT	100
+Event	T14	slog alarm	EVENT	126
+Event	T15	sygdommen	EVENT	255
+Event	T16	feber	EVENT	373
+Event	T17	stakåndethed	EVENT	426
+Relation	T3	T4	CauseEffect	true	undersøgte	smittet
+Relation	T4	T3	EffectCause	true	smittet	undersøgte
+Relation	T4	T5	CauseEffect	true	smittet	døde
+Relation	T5	T4	EffectCause	true	døde	smittet
+Relation	T0	T1	NoRel	true	gav	pandemien
+Relation	T0	T13	NoRel	true	gav	COVID-19
+Relation	T0	T16	NoRel	true	gav	feber
+Relation	T0	T2	NoRel	true	gav	arbejdede
+Relation	T0	T7	NoRel	true	gav	spredt
+Relation	T1	T0	NoRel	true	pandemien	gav
+Relation	T1	T11	NoRel	true	pandemien	coronavirus
+Relation	T1	T14	NoRel	true	pandemien	slog alarm
+Relation	T1	T15	NoRel	true	pandemien	sygdommen
+Relation	T1	T17	NoRel	true	pandemien	stakåndethed
+Relation	T1	T5	NoRel	true	pandemien	døde
+Relation	T1	T6	NoRel	true	pandemien	Sygdommen
+Relation	T1	T7	NoRel	true	pandemien	spredt
+Relation	T1	T8	NoRel	true	pandemien	hoste
+Relation	T10	T1	NoRel	true	SARS-CoV-2	pandemien
+Relation	T10	T12	NoRel	true	SARS-CoV-2	SARS-CoV
+Relation	T10	T15	NoRel	true	SARS-CoV-2	sygdommen
+Relation	T10	T2	NoRel	true	SARS-CoV-2	arbejdede
+Relation	T10	T4	NoRel	true	SARS-CoV-2	smittet
+Relation	T10	T5	NoRel	true	SARS-CoV-2	døde
+Relation	T10	T6	NoRel	true	SARS-CoV-2	Sygdommen
+Relation	T10	T9	NoRel	true	SARS-CoV-2	problemer
+Relation	T11	T0	NoRel	true	coronavirus	gav
+Relation	T11	T1	NoRel	true	coronavirus	pandemien
+Relation	T11	T13	NoRel	true	coronavirus	COVID-19
+Relation	T11	T14	NoRel	true	coronavirus	slog alarm
+Relation	T11	T2	NoRel	true	coronavirus	arbejdede
+Relation	T11	T6	NoRel	true	coronavirus	Sygdommen
+Relation	T11	T7	NoRel	true	coronavirus	spredt
+Relation	T11	T8	NoRel	true	coronavirus	hoste
+Relation	T12	T0	NoRel	true	SARS-CoV	gav
+Relation	T12	T11	NoRel	true	SARS-CoV	coronavirus
+Relation	T12	T13	NoRel	true	SARS-CoV	COVID-19
+Relation	T12	T16	NoRel	true	SARS-CoV	feber
+Relation	T13	T10	NoRel	true	COVID-19	SARS-CoV-2
+Relation	T13	T11	NoRel	true	COVID-19	coronavirus
+Relation	T13	T12	NoRel	true	COVID-19	SARS-CoV
+Relation	T13	T15	NoRel	true	COVID-19	sygdommen
+Relation	T13	T3	NoRel	true	COVID-19	undersøgte
+Relation	T13	T5	NoRel	true	COVID-19	døde
+Relation	T13	T6	NoRel	true	COVID-19	Sygdommen
+Relation	T13	T7	NoRel	true	COVID-19	spredt
+Relation	T14	T0	NoRel	true	slog alarm	gav
+Relation	T14	T10	NoRel	true	slog alarm	SARS-CoV-2
+Relation	T14	T15	NoRel	true	slog alarm	sygdommen
+Relation	T14	T2	NoRel	true	slog alarm	arbejdede
+Relation	T14	T4	NoRel	true	slog alarm	smittet
+Relation	T14	T5	NoRel	true	slog alarm	døde
+Relation	T14	T7	NoRel	true	slog alarm	spredt
+Relation	T14	T9	NoRel	true	slog alarm	problemer
+Relation	T15	T0	NoRel	true	sygdommen	gav
+Relation	T15	T11	NoRel	true	sygdommen	coronavirus
+Relation	T15	T13	NoRel	true	sygdommen	COVID-19
+Relation	T15	T16	NoRel	true	sygdommen	feber
+Relation	T15	T2	NoRel	true	sygdommen	arbejdede
+Relation	T15	T3	NoRel	true	sygdommen	undersøgte
+Relation	T15	T4	NoRel	true	sygdommen	smittet
+Relation	T15	T5	NoRel	true	sygdommen	døde
+Relation	T16	T0	NoRel	true	feber	gav
+Relation	T16	T13	NoRel	true	feber	COVID-19
+Relation	T16	T14	NoRel	true	feber	slog alarm
+Relation	T16	T2	NoRel	true	feber	arbejdede
+Relation	T16	T4	NoRel	true	feber	smittet
+Relation	T17	T0	NoRel	true	stakåndethed	gav
+Relation	T17	T7	NoRel	true	stakåndethed	spredt
+Relation	T17	T9	NoRel	true	stakåndethed	problemer
+Relation	T2	T1	NoRel	true	arbejdede	pandemien
+Relation	T2	T11	NoRel	true	arbejdede	coronavirus
+Relation	T2	T7	NoRel	true	arbejdede	spredt
+Relation	T3	T10	NoRel	true	undersøgte	SARS-CoV-2
+Relation	T3	T12	NoRel	true	undersøgte	SARS-CoV
+Relation	T3	T2	NoRel	true	undersøgte	arbejdede
+Relation	T3	T5	NoRel	true	undersøgte	døde
+Relation	T3	T6	NoRel	true	undersøgte	Sygdommen
+Relation	T4	T10	NoRel	true	smittet	SARS-CoV-2
+Relation	T4	T11	NoRel	true	smittet	coronavirus
+Relation	T4	T12	NoRel	true	smittet	SARS-CoV
+Relation	T4	T13	NoRel	true	smittet	COVID-19
+Relation	T4	T6	NoRel	true	smittet	Sygdommen
+Relation	T5	T11	NoRel	true	døde	coronavirus
+Relation	T5	T12	NoRel	true	døde	SARS-CoV
+Relation	T5	T17	NoRel	true	døde	stakåndethed
+Relation	T5	T3	NoRel	true	døde	undersøgte
+Relation	T6	T1	NoRel	true	Sygdommen	pandemien
+Relation	T6	T10	NoRel	true	Sygdommen	SARS-CoV-2
+Relation	T6	T11	NoRel	true	Sygdommen	coronavirus
+Relation	T6	T15	NoRel	true	Sygdommen	sygdommen
+Relation	T6	T2	NoRel	true	Sygdommen	arbejdede
+Relation	T6	T5	NoRel	true	Sygdommen	døde
+Relation	T6	T9	NoRel	true	Sygdommen	problemer
+Relation	T7	T10	NoRel	true	spredt	SARS-CoV-2
+Relation	T7	T12	NoRel	true	spredt	SARS-CoV
+Relation	T7	T2	NoRel	true	spredt	arbejdede
+Relation	T7	T5	NoRel	true	spredt	døde
+Relation	T8	T1	NoRel	true	hoste	pandemien
+Relation	T8	T10	NoRel	true	hoste	SARS-CoV-2
+Relation	T8	T11	NoRel	true	hoste	coronavirus
+Relation	T8	T15	NoRel	true	hoste	sygdommen
+Relation	T8	T17	NoRel	true	hoste	stakåndethed
+Relation	T8	T4	NoRel	true	hoste	smittet
+Relation	T8	T5	NoRel	true	hoste	døde
+Relation	T8	T7	NoRel	true	hoste	spredt
+Relation	T9	T1	NoRel	true	problemer	pandemien
+Relation	T9	T11	NoRel	true	problemer	coronavirus
+Relation	T9	T14	NoRel	true	problemer	slog alarm
+Relation	T9	T3	NoRel	true	problemer	undersøgte
+Relation	T9	T4	NoRel	true	problemer	smittet

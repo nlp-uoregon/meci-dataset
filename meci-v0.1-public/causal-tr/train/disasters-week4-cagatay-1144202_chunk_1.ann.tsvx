@@ -1,0 +1,19 @@
+Text	Deprem , Türkiye'deki iki önemli fay hattından biri olan Kuzey Anadolu Fayı'nın doğu ucunda meydana geldi .	Bu fayın 360 kilometrelik bir kısmı 1939 Erzincan Depremi'nde kırıldı .	1987 yılında yapılan bilimsel çalışmalara göre bu fay hattının kırılmayan kısmı için yıkıcı bir deprem bekleniyordu .	1983 yılında da bu bölgede 4, 8 büyüklüğünde bir deprem meydana gelmişti .	13 Mart 1992 tarihinde depremin büyüklüğü 6, 8 olmasına karşın şiddeti VIII olarak ölçüldü .
+Event	T0	Deprem	EVENT	0
+Event	T2	kırıldı	EVENT	170
+Event	T3	bekleniyordu	EVENT	283
+Event	T5	ölçüldü	EVENT	456
+Event	T1	1939 Erzincan Depremi	EVENT	144
+Event	T6	deprem	EVENT	347
+Event	T4	depremin	EVENT	396
+Relation	T1	T2	CauseEffect	true	1939 Erzincan Depremi	kırıldı
+Relation	T2	T1	EffectCause	true	kırıldı	1939 Erzincan Depremi
+Relation	T0	T3	NoRel	true	Deprem	bekleniyordu
+Relation	T2	T6	NoRel	true	kırıldı	deprem
+Relation	T3	T4	NoRel	true	bekleniyordu	depremin
+Relation	T4	T2	NoRel	true	depremin	kırıldı
+Relation	T4	T6	NoRel	true	depremin	deprem
+Relation	T5	T3	NoRel	true	ölçüldü	bekleniyordu
+Relation	T5	T4	NoRel	true	ölçüldü	depremin
+Relation	T5	T6	NoRel	true	ölçüldü	deprem
+Relation	T6	T4	NoRel	true	deprem	depremin

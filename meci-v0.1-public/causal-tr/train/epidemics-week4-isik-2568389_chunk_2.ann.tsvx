@@ -1,0 +1,59 @@
+Text	- Çek Cumhuriyeti ülkedeki ilk üç vakanın Kuzey İtalya'dan seyahat eden bireyler olduğunu doğruladı .	- Dominik Cumhuriyeti , 62 yaşındaki İtalyan bir turist olan ilk vakasını doğruladı .	- Ekvador beş vakayı daha teyit ederek toplamı vaka sayısını altıya çıkardı .	- Mısır bir vaka daha doğruladı ve toplam vaka sayısını 2'ye getirdi .	- Finlandiya , 27 Şubat'ta teşhis edilen kadınla ilgili iki vakayı daha doğrulayarak toplam sayıyı 6'ya getirdi .
+Event	T0	seyahat	EVENT	59
+Event	T1	doğruladı	EVENT	90
+Event	T2	doğruladı	EVENT	176
+Event	T3	çıkardı	EVENT	256
+Event	T4	doğruladı	EVENT	288
+Event	T5	getirdi	EVENT	327
+Event	T6	teşhis	EVENT	364
+Event	T7	getirdi	EVENT	441
+Event	T8	vakanın	EVENT	34
+Event	T9	vakasını	EVENT	167
+Event	T10	ederek	EVENT	220
+Event	T11	doğrulayarak	EVENT	409
+Relation	T0	T8	CauseEffect	true	seyahat	vakanın
+Relation	T8	T0	EffectCause	true	vakanın	seyahat
+Relation	T8	T1	CauseEffect	true	vakanın	doğruladı
+Relation	T1	T8	EffectCause	true	doğruladı	vakanın
+Relation	T9	T2	CauseEffect	true	vakasını	doğruladı
+Relation	T2	T9	EffectCause	true	doğruladı	vakasını
+Relation	T10	T3	CauseEffect	true	ederek	çıkardı
+Relation	T3	T10	EffectCause	true	çıkardı	ederek
+Relation	T4	T5	CauseEffect	true	doğruladı	getirdi
+Relation	T5	T4	EffectCause	true	getirdi	doğruladı
+Relation	T6	T11	CauseEffect	true	teşhis	doğrulayarak
+Relation	T11	T6	EffectCause	true	doğrulayarak	teşhis
+Relation	T11	T7	CauseEffect	true	doğrulayarak	getirdi
+Relation	T7	T11	EffectCause	true	getirdi	doğrulayarak
+Relation	T0	T10	NoRel	true	seyahat	ederek
+Relation	T0	T2	NoRel	true	seyahat	doğruladı
+Relation	T0	T5	NoRel	true	seyahat	getirdi
+Relation	T0	T6	NoRel	true	seyahat	teşhis
+Relation	T1	T3	NoRel	true	doğruladı	çıkardı
+Relation	T1	T7	NoRel	true	doğruladı	getirdi
+Relation	T10	T1	NoRel	true	ederek	doğruladı
+Relation	T11	T10	NoRel	true	doğrulayarak	ederek
+Relation	T11	T2	NoRel	true	doğrulayarak	doğruladı
+Relation	T3	T0	NoRel	true	çıkardı	seyahat
+Relation	T3	T4	NoRel	true	çıkardı	doğruladı
+Relation	T3	T7	NoRel	true	çıkardı	getirdi
+Relation	T3	T9	NoRel	true	çıkardı	vakasını
+Relation	T4	T0	NoRel	true	doğruladı	seyahat
+Relation	T4	T10	NoRel	true	doğruladı	ederek
+Relation	T4	T11	NoRel	true	doğruladı	doğrulayarak
+Relation	T4	T3	NoRel	true	doğruladı	çıkardı
+Relation	T5	T11	NoRel	true	getirdi	doğrulayarak
+Relation	T5	T8	NoRel	true	getirdi	vakanın
+Relation	T6	T4	NoRel	true	teşhis	doğruladı
+Relation	T6	T7	NoRel	true	teşhis	getirdi
+Relation	T7	T1	NoRel	true	getirdi	doğruladı
+Relation	T7	T3	NoRel	true	getirdi	çıkardı
+Relation	T7	T6	NoRel	true	getirdi	teşhis
+Relation	T7	T9	NoRel	true	getirdi	vakasını
+Relation	T8	T11	NoRel	true	vakanın	doğrulayarak
+Relation	T8	T3	NoRel	true	vakanın	çıkardı
+Relation	T8	T5	NoRel	true	vakanın	getirdi
+Relation	T8	T6	NoRel	true	vakanın	teşhis
+Relation	T9	T1	NoRel	true	vakasını	doğruladı
+Relation	T9	T11	NoRel	true	vakasını	doğrulayarak
+Relation	T9	T5	NoRel	true	vakasını	getirdi

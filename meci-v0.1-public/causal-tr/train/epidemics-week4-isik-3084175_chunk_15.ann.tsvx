@@ -1,0 +1,52 @@
+Text	Böylece , Washington bu kişilerin geliştirdikleri avantajlarını erkenden fark etti .	Boston'daki bir salgın sırasında Washington , yalnızca daha önce çiçek hastalığına yakalanmış erkeklerden oluşan birlikler oluşturdu .	Bununla , hem askerlerini koruyabildi hem de Mart 1776'daki çiçek hastalığı salgını sırasında Boston ve İngilizlerin hastalık karşısındaki savunmasızlığından faydalanabildi .	Başlangıçta , George Washington birliklerini aşılamak konusunda isteksizdi .	Ancak adamlarının çoğunun çiçek hastalığına kurban gitmesini izlerken Washington , birliklerini sıhhi ve karantina yöntemleriyle sağlıklı tutabileceğine inanıyordu .
+Event	T0	etti	EVENT	78
+Event	T1	salgın	EVENT	101
+Event	T2	yakalanmış	EVENT	168
+Event	T3	oluşturdu	EVENT	208
+Event	T4	salgını	EVENT	296
+Event	T5	hastalık	EVENT	337
+Event	T6	faydalanabildi	EVENT	378
+Event	T7	inanıyordu	EVENT	625
+Event	T8	koruyabildi	EVENT	246
+Event	T9	aşılamak	EVENT	440
+Event	T10	izlerken	EVENT	533
+Relation	T3	T8	CauseEffect	true	oluşturdu	koruyabildi
+Relation	T8	T3	EffectCause	true	koruyabildi	oluşturdu
+Relation	T3	T6	CauseEffect	true	oluşturdu	faydalanabildi
+Relation	T6	T3	EffectCause	true	faydalanabildi	oluşturdu
+Relation	T0	T1	NoRel	true	etti	salgın
+Relation	T1	T0	NoRel	true	salgın	etti
+Relation	T1	T10	NoRel	true	salgın	izlerken
+Relation	T1	T3	NoRel	true	salgın	oluşturdu
+Relation	T1	T7	NoRel	true	salgın	inanıyordu
+Relation	T10	T2	NoRel	true	izlerken	yakalanmış
+Relation	T10	T3	NoRel	true	izlerken	oluşturdu
+Relation	T2	T1	NoRel	true	yakalanmış	salgın
+Relation	T2	T10	NoRel	true	yakalanmış	izlerken
+Relation	T2	T4	NoRel	true	yakalanmış	salgını
+Relation	T2	T6	NoRel	true	yakalanmış	faydalanabildi
+Relation	T3	T4	NoRel	true	oluşturdu	salgını
+Relation	T4	T3	NoRel	true	salgını	oluşturdu
+Relation	T4	T6	NoRel	true	salgını	faydalanabildi
+Relation	T4	T7	NoRel	true	salgını	inanıyordu
+Relation	T4	T8	NoRel	true	salgını	koruyabildi
+Relation	T5	T0	NoRel	true	hastalık	etti
+Relation	T5	T1	NoRel	true	hastalık	salgın
+Relation	T5	T4	NoRel	true	hastalık	salgını
+Relation	T5	T8	NoRel	true	hastalık	koruyabildi
+Relation	T6	T10	NoRel	true	faydalanabildi	izlerken
+Relation	T6	T2	NoRel	true	faydalanabildi	yakalanmış
+Relation	T6	T4	NoRel	true	faydalanabildi	salgını
+Relation	T6	T5	NoRel	true	faydalanabildi	hastalık
+Relation	T6	T8	NoRel	true	faydalanabildi	koruyabildi
+Relation	T6	T9	NoRel	true	faydalanabildi	aşılamak
+Relation	T7	T2	NoRel	true	inanıyordu	yakalanmış
+Relation	T7	T6	NoRel	true	inanıyordu	faydalanabildi
+Relation	T7	T9	NoRel	true	inanıyordu	aşılamak
+Relation	T8	T1	NoRel	true	koruyabildi	salgın
+Relation	T8	T2	NoRel	true	koruyabildi	yakalanmış
+Relation	T8	T5	NoRel	true	koruyabildi	hastalık
+Relation	T8	T7	NoRel	true	koruyabildi	inanıyordu
+Relation	T9	T0	NoRel	true	aşılamak	etti
+Relation	T9	T4	NoRel	true	aşılamak	salgını
+Relation	T9	T5	NoRel	true	aşılamak	hastalık

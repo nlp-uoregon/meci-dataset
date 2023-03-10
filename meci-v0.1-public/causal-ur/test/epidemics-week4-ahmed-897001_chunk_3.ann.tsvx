@@ -1,0 +1,48 @@
+Text	اس وائرس سے متاثر پہلی موت 9 جنوری 2020ء میں ہوئی ۔	-	20 جنوری 2020ء کو ، چینی وزیر اعظم لی کی چیانگ نے زور دیا کہ نئے کورونا وائرس کی وجہ سے ہونے والی وبا کو روکنے اور اس سے نمٹنے کے لیے فیصلہ کن اور موثر کوشش کی جائے ۔	-	22 جنوری 2020ء کو عالمی ادارہ صحت کے زیر اہتمام ایک ایمرجنسی کمیٹی منتخب ہوئی ، جس میں صحت کے عالمی قوانین کے مطابق صحت عامہ کی فوری توجہ کی ضرورت پر گفتگو ہوئی ۔
+Event	T0	موت	EVENT	23
+Event	T2	روکنے	EVENT	159
+Event	T3	کوشش	EVENT	206
+Event	T6	متاثر	EVENT	12
+Event	T1	وبا	EVENT	152
+Event	T7	نمٹنے	EVENT	175
+Event	T8	فیصلہ	EVENT	188
+Event	T9	توجہ	EVENT	356
+Event	T10	گفتگو	EVENT	373
+Event	T5	منتخب	EVENT	290
+Relation	T6	T0	CauseEffect	true	متاثر	موت
+Relation	T0	T6	EffectCause	true	موت	متاثر
+Relation	T1	T7	CauseEffect	true	وبا	نمٹنے
+Relation	T7	T1	EffectCause	true	نمٹنے	وبا
+Relation	T1	T5	CauseEffect	true	وبا	منتخب
+Relation	T5	T1	EffectCause	true	منتخب	وبا
+Relation	T5	T10	CauseEffect	true	منتخب	گفتگو
+Relation	T10	T5	EffectCause	true	گفتگو	منتخب
+Relation	T0	T10	NoRel	true	موت	گفتگو
+Relation	T0	T2	NoRel	true	موت	روکنے
+Relation	T0	T3	NoRel	true	موت	کوشش
+Relation	T0	T8	NoRel	true	موت	فیصلہ
+Relation	T1	T0	NoRel	true	وبا	موت
+Relation	T1	T2	NoRel	true	وبا	روکنے
+Relation	T1	T6	NoRel	true	وبا	متاثر
+Relation	T10	T0	NoRel	true	گفتگو	موت
+Relation	T10	T9	NoRel	true	گفتگو	توجہ
+Relation	T2	T7	NoRel	true	روکنے	نمٹنے
+Relation	T3	T1	NoRel	true	کوشش	وبا
+Relation	T3	T8	NoRel	true	کوشش	فیصلہ
+Relation	T5	T0	NoRel	true	منتخب	موت
+Relation	T5	T2	NoRel	true	منتخب	روکنے
+Relation	T5	T3	NoRel	true	منتخب	کوشش
+Relation	T5	T6	NoRel	true	منتخب	متاثر
+Relation	T5	T7	NoRel	true	منتخب	نمٹنے
+Relation	T5	T8	NoRel	true	منتخب	فیصلہ
+Relation	T5	T9	NoRel	true	منتخب	توجہ
+Relation	T6	T1	NoRel	true	متاثر	وبا
+Relation	T6	T2	NoRel	true	متاثر	روکنے
+Relation	T6	T9	NoRel	true	متاثر	توجہ
+Relation	T7	T9	NoRel	true	نمٹنے	توجہ
+Relation	T8	T5	NoRel	true	فیصلہ	منتخب
+Relation	T8	T6	NoRel	true	فیصلہ	متاثر
+Relation	T8	T7	NoRel	true	فیصلہ	نمٹنے
+Relation	T9	T2	NoRel	true	توجہ	روکنے
+Relation	T9	T5	NoRel	true	توجہ	منتخب
+Relation	T9	T6	NoRel	true	توجہ	متاثر

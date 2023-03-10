@@ -1,0 +1,96 @@
+Text	Fakat Kıbrıs Cumhuriyeti cumhurbaşkanı III . Makarios 30 Kasım 1963’te 13 maddeden oluşan anayasa değişikliği önerilerini sundu .	Bunlar arasında anayasanın değişmez maddeleri , Kıbrıs Türk'ü olan Başkan Yardımcısının veto hakkının ortadan kaldırılması , Temsilciler Meclisinde ayrı çoğunluklar ilkesinin ortadan kaldırılarak kararların basit çoğunlukla alınması , ayrı belediyelerin ortadan kaldırılması gibi maddeler de bulunmaktaydı .	ABD Başkanı Kennedy , Makarios’a bundan vazgeçmesini önerdi ve Türkiye değişiklikleri kabul etmeyeceğini bildirdi .	Kıbrıs Türkleri'nin de reddi üzerine Kıbrıs Rumlarıyla Kıbrıs Türkleri arasında 21 Aralık 1963’te Kanlı Noel adı verilen toplumlararası çatışmalar patlak verdi .	Bu çatışmalarla birlikte Kıbrıs Türklerinin hükûmetteki temsiliyeti sona ererken , yer yer Türklere karşı katliamlar yaşandı , 25.000 civarında Kıbrıslı Türk göçmen oldu ve enklavlarda yaşamaya başladı .
+Event	T0	sundu	EVENT	122
+Event	T1	alınması	EVENT	354
+Event	T2	önerdi	EVENT	491
+Event	T4	bildirdi	EVENT	543
+Event	T5	reddi	EVENT	577
+Event	T6	verdi	EVENT	708
+Event	T7	yaşandı	EVENT	833
+Event	T8	başladı	EVENT	910
+Event	T9	kaldırılması	EVENT	240
+Event	T10	kaldırılarak	EVENT	313
+Event	T11	kaldırılması	EVENT	392
+Event	T12	bulunmaktaydı	EVENT	422
+Event	T3	çatışmalar	EVENT	690
+Event	T13	çatışmalarla	EVENT	719
+Event	T14	ererken	EVENT	789
+Relation	T0	T2	CauseEffect	true	sundu	önerdi
+Relation	T2	T0	EffectCause	true	önerdi	sundu
+Relation	T0	T4	CauseEffect	true	sundu	bildirdi
+Relation	T4	T0	EffectCause	true	bildirdi	sundu
+Relation	T0	T5	CauseEffect	true	sundu	reddi
+Relation	T5	T0	EffectCause	true	reddi	sundu
+Relation	T5	T3	CauseEffect	true	reddi	çatışmalar
+Relation	T3	T5	EffectCause	true	çatışmalar	reddi
+Relation	T5	T6	CauseEffect	true	reddi	verdi
+Relation	T6	T5	EffectCause	true	verdi	reddi
+Relation	T13	T7	CauseEffect	true	çatışmalarla	yaşandı
+Relation	T7	T13	EffectCause	true	yaşandı	çatışmalarla
+Relation	T13	T14	CauseEffect	true	çatışmalarla	ererken
+Relation	T14	T13	EffectCause	true	ererken	çatışmalarla
+Relation	T13	T8	CauseEffect	true	çatışmalarla	başladı
+Relation	T8	T13	EffectCause	true	başladı	çatışmalarla
+Relation	T0	T1	NoRel	true	sundu	alınması
+Relation	T0	T11	NoRel	true	sundu	kaldırılması
+Relation	T0	T3	NoRel	true	sundu	çatışmalar
+Relation	T0	T8	NoRel	true	sundu	başladı
+Relation	T1	T10	NoRel	true	alınması	kaldırılarak
+Relation	T1	T4	NoRel	true	alınması	bildirdi
+Relation	T10	T1	NoRel	true	kaldırılarak	alınması
+Relation	T10	T14	NoRel	true	kaldırılarak	ererken
+Relation	T10	T3	NoRel	true	kaldırılarak	çatışmalar
+Relation	T10	T5	NoRel	true	kaldırılarak	reddi
+Relation	T10	T6	NoRel	true	kaldırılarak	verdi
+Relation	T10	T7	NoRel	true	kaldırılarak	yaşandı
+Relation	T10	T9	NoRel	true	kaldırılarak	kaldırılması
+Relation	T11	T12	NoRel	true	kaldırılması	bulunmaktaydı
+Relation	T11	T2	NoRel	true	kaldırılması	önerdi
+Relation	T11	T3	NoRel	true	kaldırılması	çatışmalar
+Relation	T11	T5	NoRel	true	kaldırılması	reddi
+Relation	T11	T6	NoRel	true	kaldırılması	verdi
+Relation	T12	T0	NoRel	true	bulunmaktaydı	sundu
+Relation	T12	T10	NoRel	true	bulunmaktaydı	kaldırılarak
+Relation	T12	T14	NoRel	true	bulunmaktaydı	ererken
+Relation	T12	T2	NoRel	true	bulunmaktaydı	önerdi
+Relation	T12	T3	NoRel	true	bulunmaktaydı	çatışmalar
+Relation	T12	T6	NoRel	true	bulunmaktaydı	verdi
+Relation	T12	T8	NoRel	true	bulunmaktaydı	başladı
+Relation	T13	T10	NoRel	true	çatışmalarla	kaldırılarak
+Relation	T13	T12	NoRel	true	çatışmalarla	bulunmaktaydı
+Relation	T13	T3	NoRel	true	çatışmalarla	çatışmalar
+Relation	T13	T4	NoRel	true	çatışmalarla	bildirdi
+Relation	T13	T6	NoRel	true	çatışmalarla	verdi
+Relation	T2	T1	NoRel	true	önerdi	alınması
+Relation	T2	T12	NoRel	true	önerdi	bulunmaktaydı
+Relation	T2	T14	NoRel	true	önerdi	ererken
+Relation	T2	T3	NoRel	true	önerdi	çatışmalar
+Relation	T2	T4	NoRel	true	önerdi	bildirdi
+Relation	T2	T5	NoRel	true	önerdi	reddi
+Relation	T3	T1	NoRel	true	çatışmalar	alınması
+Relation	T3	T2	NoRel	true	çatışmalar	önerdi
+Relation	T3	T4	NoRel	true	çatışmalar	bildirdi
+Relation	T4	T11	NoRel	true	bildirdi	kaldırılması
+Relation	T4	T14	NoRel	true	bildirdi	ererken
+Relation	T4	T6	NoRel	true	bildirdi	verdi
+Relation	T4	T8	NoRel	true	bildirdi	başladı
+Relation	T5	T12	NoRel	true	reddi	bulunmaktaydı
+Relation	T5	T2	NoRel	true	reddi	önerdi
+Relation	T5	T9	NoRel	true	reddi	kaldırılması
+Relation	T6	T14	NoRel	true	verdi	ererken
+Relation	T6	T3	NoRel	true	verdi	çatışmalar
+Relation	T6	T4	NoRel	true	verdi	bildirdi
+Relation	T6	T7	NoRel	true	verdi	yaşandı
+Relation	T6	T9	NoRel	true	verdi	kaldırılması
+Relation	T7	T1	NoRel	true	yaşandı	alınması
+Relation	T7	T5	NoRel	true	yaşandı	reddi
+Relation	T7	T6	NoRel	true	yaşandı	verdi
+Relation	T7	T9	NoRel	true	yaşandı	kaldırılması
+Relation	T8	T11	NoRel	true	başladı	kaldırılması
+Relation	T8	T12	NoRel	true	başladı	bulunmaktaydı
+Relation	T8	T2	NoRel	true	başladı	önerdi
+Relation	T8	T3	NoRel	true	başladı	çatışmalar
+Relation	T8	T4	NoRel	true	başladı	bildirdi
+Relation	T8	T7	NoRel	true	başladı	yaşandı
+Relation	T9	T12	NoRel	true	kaldırılması	bulunmaktaydı
+Relation	T9	T13	NoRel	true	kaldırılması	çatışmalarla
+Relation	T9	T8	NoRel	true	kaldırılması	başladı

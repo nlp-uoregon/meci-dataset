@@ -1,0 +1,20 @@
+Text	- 2 de junio de 1980 .	Los cuatro ocupantes de un turismo resultan muertos al ser arrollado el mismo por un convoy en un paso a nivel sin barreras situado en San Juan de Mozarrifar ( Zaragoza ) .	- 20 de junio de 1980 .	Los expresos Sevilla_–_Barcelona y Barcelona_–_____Almería chocan entre las estaciones de Vallada y Montesa ( Valencia ) .	Cuatro personas mueren y 16 resultan heridas .
+Event	T0	muertos	EVENT	67
+Event	T1	arrollado	EVENT	82
+Event	T2	paso	EVENT	121
+Event	T3	chocan	EVENT	279
+Event	T4	mueren	EVENT	359
+Event	T5	heridas	EVENT	380
+Relation	T1	T0	CauseEffect	true	arrollado	muertos
+Relation	T0	T1	EffectCause	true	muertos	arrollado
+Relation	T3	T4	CauseEffect	true	chocan	mueren
+Relation	T4	T3	EffectCause	true	mueren	chocan
+Relation	T3	T5	CauseEffect	true	chocan	heridas
+Relation	T5	T3	EffectCause	true	heridas	chocan
+Relation	T0	T2	NoRel	true	muertos	paso
+Relation	T0	T5	NoRel	true	muertos	heridas
+Relation	T1	T2	NoRel	true	arrollado	paso
+Relation	T2	T3	NoRel	true	paso	chocan
+Relation	T4	T0	NoRel	true	mueren	muertos
+Relation	T4	T5	NoRel	true	mueren	heridas
+Relation	T5	T0	NoRel	true	heridas	muertos

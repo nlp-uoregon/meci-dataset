@@ -1,0 +1,34 @@
+Text	- : AB Delegasyonu Twitter hesabından yaptığı açıklamada " AB Türkiye Delegasyonu olarak bugün gerçekleşen depremden etkilenen herkese geçmiş olsun dileklerimizi iletiyoruz .	Depremde yaşamını yitirenlerin ailelerine başsağlığı , yaralananlara acil şifalar diliyoruz .	AB , Türkiye'nin yanındadır .	" ifadelerini kullandı .	- : Azerbaycan devlet başkanı İlham Aliyev taziye mesajında " Sayın Cumhurbaşkanı , Sevgili kardeşim .
+Event	T0	etkilenen	EVENT	117
+Event	T2	diliyoruz	EVENT	257
+Event	T3	açıklamada	EVENT	46
+Event	T4	iletiyoruz	EVENT	162
+Event	T5	depremden	EVENT	107
+Event	T6	Depremde	EVENT	175
+Event	T1	yitirenlerin	EVENT	193
+Event	T7	yaralananlara	EVENT	230
+Relation	T5	T3	CauseEffect	true	depremden	açıklamada
+Relation	T3	T5	EffectCause	true	açıklamada	depremden
+Relation	T5	T0	CauseEffect	true	depremden	etkilenen
+Relation	T0	T5	EffectCause	true	etkilenen	depremden
+Relation	T0	T4	CauseEffect	true	etkilenen	iletiyoruz
+Relation	T4	T0	EffectCause	true	iletiyoruz	etkilenen
+Relation	T6	T3	CauseEffect	true	Depremde	açıklamada
+Relation	T3	T6	EffectCause	true	açıklamada	Depremde
+Relation	T6	T2	CauseEffect	true	Depremde	diliyoruz
+Relation	T2	T6	EffectCause	true	diliyoruz	Depremde
+Relation	T3	T1	CauseEffect	true	açıklamada	yitirenlerin
+Relation	T1	T3	EffectCause	true	yitirenlerin	açıklamada
+Relation	T3	T7	CauseEffect	true	açıklamada	yaralananlara
+Relation	T7	T3	EffectCause	true	yaralananlara	açıklamada
+Relation	T1	T7	NoRel	true	yitirenlerin	yaralananlara
+Relation	T2	T4	NoRel	true	diliyoruz	iletiyoruz
+Relation	T2	T5	NoRel	true	diliyoruz	depremden
+Relation	T2	T7	NoRel	true	diliyoruz	yaralananlara
+Relation	T4	T1	NoRel	true	iletiyoruz	yitirenlerin
+Relation	T5	T1	NoRel	true	depremden	yitirenlerin
+Relation	T5	T7	NoRel	true	depremden	yaralananlara
+Relation	T6	T5	NoRel	true	Depremde	depremden
+Relation	T7	T2	NoRel	true	yaralananlara	diliyoruz
+Relation	T7	T5	NoRel	true	yaralananlara	depremden
+Relation	T7	T6	NoRel	true	yaralananlara	Depremde

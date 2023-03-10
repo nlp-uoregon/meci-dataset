@@ -1,0 +1,44 @@
+Text	Saat 09: 45 civarında depremde ölenlerin kimlikleri belirlendi .	Gün içinde bölgeye ulaşımın kolay olması için Yığınçal köyünü Doğubayazıt'a bağlayan yola zift karışımlı toprak döktü .	Ergezen , " yeni bina ve ahır yapımı için para ve projenin hazır olduğu , çalışmalara en yakın zamanda başlayacakları "nı söyledi .	İlin TEDAŞ ve Telekom Müdürlüğü de elektrik ve telefonla ilgili sorunları çözmek amacıyla çalışmalarını hızlandırıdlar .	Doğubayazıt belediye başkanı Mukaddes Kubilay , salgınlara önlem olarak acil su ihtiyacı olduğunu açıkladı .
+Event	T0	belirlendi	EVENT	52
+Event	T1	döktü	EVENT	177
+Event	T2	söyledi	EVENT	307
+Event	T3	ihtiyacı	EVENT	518
+Event	T4	açıkladı	EVENT	536
+Event	T5	ölenlerin	EVENT	31
+Event	T6	depremde	EVENT	22
+Event	T7	sorunları	EVENT	381
+Event	T8	hızlandırıdlar	EVENT	421
+Relation	T6	T5	CauseEffect	true	depremde	ölenlerin
+Relation	T5	T6	EffectCause	true	ölenlerin	depremde
+Relation	T5	T0	CauseEffect	true	ölenlerin	belirlendi
+Relation	T0	T5	EffectCause	true	belirlendi	ölenlerin
+Relation	T6	T2	CauseEffect	true	depremde	söyledi
+Relation	T2	T6	EffectCause	true	söyledi	depremde
+Relation	T6	T7	CauseEffect	true	depremde	sorunları
+Relation	T7	T6	EffectCause	true	sorunları	depremde
+Relation	T7	T8	CauseEffect	true	sorunları	hızlandırıdlar
+Relation	T8	T7	EffectCause	true	hızlandırıdlar	sorunları
+Relation	T6	T3	CauseEffect	true	depremde	ihtiyacı
+Relation	T3	T6	EffectCause	true	ihtiyacı	depremde
+Relation	T6	T4	CauseEffect	true	depremde	açıkladı
+Relation	T4	T6	EffectCause	true	açıkladı	depremde
+Relation	T6	T1	CauseEffect	true	depremde	döktü
+Relation	T1	T6	EffectCause	true	döktü	depremde
+Relation	T0	T2	NoRel	true	belirlendi	söyledi
+Relation	T0	T7	NoRel	true	belirlendi	sorunları
+Relation	T1	T2	NoRel	true	döktü	söyledi
+Relation	T1	T5	NoRel	true	döktü	ölenlerin
+Relation	T1	T7	NoRel	true	döktü	sorunları
+Relation	T2	T7	NoRel	true	söyledi	sorunları
+Relation	T3	T4	NoRel	true	ihtiyacı	açıkladı
+Relation	T4	T0	NoRel	true	açıkladı	belirlendi
+Relation	T4	T2	NoRel	true	açıkladı	söyledi
+Relation	T4	T3	NoRel	true	açıkladı	ihtiyacı
+Relation	T4	T5	NoRel	true	açıkladı	ölenlerin
+Relation	T4	T7	NoRel	true	açıkladı	sorunları
+Relation	T5	T3	NoRel	true	ölenlerin	ihtiyacı
+Relation	T6	T8	NoRel	true	depremde	hızlandırıdlar
+Relation	T7	T3	NoRel	true	sorunları	ihtiyacı
+Relation	T8	T0	NoRel	true	hızlandırıdlar	belirlendi
+Relation	T8	T1	NoRel	true	hızlandırıdlar	döktü
+Relation	T8	T6	NoRel	true	hızlandırıdlar	depremde

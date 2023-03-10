@@ -1,0 +1,48 @@
+Text	_ Los puntajes de los jueces en las tablas ( entre paréntesis ) se encuentran en el siguiente orden : Morella Petrozzi , Santi Lesmes , Tilsa Lozano , Adolfo Aguilar , jueces invitados .	_	En la primera ronda , las parejas ( exceptos las sentenciadas ) bailaron ritmo urbano sincronizado con un bailarín invitado , eliminando a una de las sentenciadas ; en la segunda ronda , las parejas restantes hicieron baile con velocidades lenta , normal y rápida .	Además , se realizó un bailetón al inicio del programa y un versus entre Brenda Carvalho y Gabriela Herrera .	En el duelo , Vania & Jeremy fueron salvados con el voto del público , mientras que Yolanda y Diego fueron eliminados .
+Event	T0	puntajes	EVENT	6
+Event	T1	bailaron	EVENT	253
+Event	T2	sincronizado	EVENT	275
+Event	T3	eliminando	EVENT	315
+Event	T4	baile	EVENT	407
+Event	T5	realizó	EVENT	467
+Event	T6	bailetón	EVENT	478
+Event	T7	versus	EVENT	515
+Event	T8	duelo	EVENT	571
+Event	T9	salvados	EVENT	601
+Event	T10	voto	EVENT	617
+Event	T11	eliminados	EVENT	672
+Relation	T10	T9	CauseEffect	true	voto	salvados
+Relation	T9	T10	EffectCause	true	salvados	voto
+Relation	T0	T1	NoRel	true	puntajes	bailaron
+Relation	T0	T11	NoRel	true	puntajes	eliminados
+Relation	T0	T4	NoRel	true	puntajes	baile
+Relation	T0	T6	NoRel	true	puntajes	bailetón
+Relation	T0	T8	NoRel	true	puntajes	duelo
+Relation	T1	T2	NoRel	true	bailaron	sincronizado
+Relation	T1	T6	NoRel	true	bailaron	bailetón
+Relation	T10	T5	NoRel	true	voto	realizó
+Relation	T11	T1	NoRel	true	eliminados	bailaron
+Relation	T11	T10	NoRel	true	eliminados	voto
+Relation	T11	T2	NoRel	true	eliminados	sincronizado
+Relation	T11	T5	NoRel	true	eliminados	realizó
+Relation	T11	T8	NoRel	true	eliminados	duelo
+Relation	T11	T9	NoRel	true	eliminados	salvados
+Relation	T2	T3	NoRel	true	sincronizado	eliminando
+Relation	T2	T7	NoRel	true	sincronizado	versus
+Relation	T3	T0	NoRel	true	eliminando	puntajes
+Relation	T3	T10	NoRel	true	eliminando	voto
+Relation	T3	T11	NoRel	true	eliminando	eliminados
+Relation	T3	T4	NoRel	true	eliminando	baile
+Relation	T3	T5	NoRel	true	eliminando	realizó
+Relation	T4	T2	NoRel	true	baile	sincronizado
+Relation	T4	T7	NoRel	true	baile	versus
+Relation	T4	T8	NoRel	true	baile	duelo
+Relation	T5	T2	NoRel	true	realizó	sincronizado
+Relation	T5	T9	NoRel	true	realizó	salvados
+Relation	T6	T0	NoRel	true	bailetón	puntajes
+Relation	T6	T1	NoRel	true	bailetón	bailaron
+Relation	T8	T1	NoRel	true	duelo	bailaron
+Relation	T8	T10	NoRel	true	duelo	voto
+Relation	T8	T2	NoRel	true	duelo	sincronizado
+Relation	T9	T5	NoRel	true	salvados	realizó
+Relation	T9	T6	NoRel	true	salvados	bailetón

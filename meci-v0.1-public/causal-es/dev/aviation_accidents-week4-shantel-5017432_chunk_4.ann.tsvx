@@ -1,0 +1,69 @@
+Text	A las 09:47 , el extremo del ala derecha del avión impactó con la pista durante su intento de aterrizaje final , el avión se dio la vuelta , y acabó a doscientos metros de pista invertido , saliéndose de esta e incendiándose .	Seis personas murieron , incluyendo al piloto y al copiloto .	Un testigo dentro de la terminal del aeropuerto sostuvo que la niebla era tan espesa que no fue posible ver el accidente .	Los heridos fueron llevados al Hospital Univesitario de Cork para su tratamiento .	Cuatro fueron heridos graves , mientras que otros dos presentaban una situación crítica .
+Event	T0	impactó	EVENT	51
+Event	T1	intento	EVENT	83
+Event	T2	acabó	EVENT	143
+Event	T3	invertido	EVENT	178
+Event	T4	saliéndose	EVENT	190
+Event	T5	incendiándose	EVENT	211
+Event	T6	murieron	EVENT	241
+Event	T7	sostuvo	EVENT	337
+Event	T8	accidente	EVENT	400
+Event	T9	heridos	EVENT	416
+Event	T10	llevados	EVENT	431
+Event	T11	tratamiento	EVENT	481
+Event	T12	presentaban	EVENT	549
+Relation	T0	T3	CauseEffect	true	impactó	invertido
+Relation	T3	T0	EffectCause	true	invertido	impactó
+Relation	T0	T5	CauseEffect	true	impactó	incendiándose
+Relation	T5	T0	EffectCause	true	incendiándose	impactó
+Relation	T0	T6	CauseEffect	true	impactó	murieron
+Relation	T6	T0	EffectCause	true	murieron	impactó
+Relation	T8	T9	CauseEffect	true	accidente	heridos
+Relation	T9	T8	EffectCause	true	heridos	accidente
+Relation	T0	T10	NoRel	true	impactó	llevados
+Relation	T0	T2	NoRel	true	impactó	acabó
+Relation	T0	T7	NoRel	true	impactó	sostuvo
+Relation	T1	T10	NoRel	true	intento	llevados
+Relation	T1	T11	NoRel	true	intento	tratamiento
+Relation	T1	T4	NoRel	true	intento	saliéndose
+Relation	T1	T5	NoRel	true	intento	incendiándose
+Relation	T1	T7	NoRel	true	intento	sostuvo
+Relation	T10	T1	NoRel	true	llevados	intento
+Relation	T10	T12	NoRel	true	llevados	presentaban
+Relation	T10	T3	NoRel	true	llevados	invertido
+Relation	T10	T5	NoRel	true	llevados	incendiándose
+Relation	T11	T0	NoRel	true	tratamiento	impactó
+Relation	T11	T3	NoRel	true	tratamiento	invertido
+Relation	T11	T4	NoRel	true	tratamiento	saliéndose
+Relation	T11	T5	NoRel	true	tratamiento	incendiándose
+Relation	T12	T0	NoRel	true	presentaban	impactó
+Relation	T12	T1	NoRel	true	presentaban	intento
+Relation	T12	T7	NoRel	true	presentaban	sostuvo
+Relation	T12	T8	NoRel	true	presentaban	accidente
+Relation	T2	T0	NoRel	true	acabó	impactó
+Relation	T2	T10	NoRel	true	acabó	llevados
+Relation	T2	T12	NoRel	true	acabó	presentaban
+Relation	T3	T5	NoRel	true	invertido	incendiándose
+Relation	T3	T6	NoRel	true	invertido	murieron
+Relation	T3	T9	NoRel	true	invertido	heridos
+Relation	T4	T1	NoRel	true	saliéndose	intento
+Relation	T4	T2	NoRel	true	saliéndose	acabó
+Relation	T4	T7	NoRel	true	saliéndose	sostuvo
+Relation	T5	T3	NoRel	true	incendiándose	invertido
+Relation	T6	T12	NoRel	true	murieron	presentaban
+Relation	T6	T2	NoRel	true	murieron	acabó
+Relation	T6	T7	NoRel	true	murieron	sostuvo
+Relation	T6	T8	NoRel	true	murieron	accidente
+Relation	T7	T0	NoRel	true	sostuvo	impactó
+Relation	T7	T10	NoRel	true	sostuvo	llevados
+Relation	T7	T5	NoRel	true	sostuvo	incendiándose
+Relation	T7	T9	NoRel	true	sostuvo	heridos
+Relation	T8	T0	NoRel	true	accidente	impactó
+Relation	T8	T4	NoRel	true	accidente	saliéndose
+Relation	T9	T1	NoRel	true	heridos	intento
+Relation	T9	T11	NoRel	true	heridos	tratamiento
+Relation	T9	T12	NoRel	true	heridos	presentaban
+Relation	T9	T2	NoRel	true	heridos	acabó
+Relation	T9	T4	NoRel	true	heridos	saliéndose
+Relation	T9	T5	NoRel	true	heridos	incendiándose
+Relation	T9	T7	NoRel	true	heridos	sostuvo

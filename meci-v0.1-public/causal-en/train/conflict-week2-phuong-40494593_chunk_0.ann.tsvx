@@ -1,0 +1,61 @@
+Text	The SPARTACIST UPRISING ( ) , also known as the JANUARY UPRISING (_ Januar aufstand _ ) , was a general strike ( and the armed battles accompanying it ) in Berlin from 5 to 12 January 1919 .	Germany was in the middle of a post-war revolution , and two of the perceived paths forward were social democracy and a council republic similar to the one which had been established by the Bolsheviks in Russia .	The uprising was primarily a power struggle between the Social Democratic Party of Germany ( SPD ) led by Friedrich Ebert and the Communist Party of Germany ( KPD ) , led by Karl Liebknecht and Rosa Luxemburg , who had previously founded and led the Spartacist League (_ Spartakusbund _ ) .	The revolt was improvised and small - scale and was quickly crushed by the superior firepower of government troops , but Berlin was largely undisturbed .	Long - distance trains continued to run on time and newspapers remained on sale , as the rebels passively confined themselves to only a few select locations .
+Event	T0	UPRISING	EVENT	15
+Event	T1	UPRISING	EVENT	56
+Event	T10	led	EVENT	503
+Event	T11	led	EVENT	571
+Event	T12	founded	EVENT	634
+Event	T13	led	EVENT	646
+Event	T14	revolt	EVENT	699
+Event	T15	improvised	EVENT	710
+Event	T16	crushed	EVENT	755
+Event	T17	undisturbed	EVENT	835
+Event	T18	continued	EVENT	872
+Event	T19	confined	EVENT	955
+Event	T2	aufstand	EVENT	75
+Event	T3	strike	EVENT	104
+Event	T6	remained	EVENT	912
+Event	T7	established	EVENT	362
+Event	T8	uprising	EVENT	408
+Event	T9	struggle	EVENT	439
+Relation	T8	T9	CauseEffect	true	uprising	struggle
+Relation	T9	T8	EffectCause	true	struggle	uprising
+Relation	T17	T16	CauseEffect	true	undisturbed	crushed
+Relation	T16	T17	EffectCause	true	crushed	undisturbed
+Relation	T17	T15	CauseEffect	true	undisturbed	improvised
+Relation	T15	T17	EffectCause	true	improvised	undisturbed
+Relation	T17	T14	CauseEffect	true	undisturbed	revolt
+Relation	T14	T17	EffectCause	true	revolt	undisturbed
+Relation	T18	T19	CauseEffect	true	continued	confined
+Relation	T19	T18	EffectCause	true	confined	continued
+Relation	T6	T19	CauseEffect	true	remained	confined
+Relation	T19	T6	EffectCause	true	confined	remained
+Relation	T0	T8	NoRel	true	UPRISING	uprising
+Relation	T1	T15	NoRel	true	UPRISING	improvised
+Relation	T1	T7	NoRel	true	UPRISING	established
+Relation	T11	T1	NoRel	true	led	UPRISING
+Relation	T11	T6	NoRel	true	led	remained
+Relation	T13	T11	NoRel	true	led	led
+Relation	T13	T14	NoRel	true	led	revolt
+Relation	T13	T6	NoRel	true	led	remained
+Relation	T13	T8	NoRel	true	led	uprising
+Relation	T14	T11	NoRel	true	revolt	led
+Relation	T14	T7	NoRel	true	revolt	established
+Relation	T14	T9	NoRel	true	revolt	struggle
+Relation	T16	T18	NoRel	true	crushed	continued
+Relation	T16	T9	NoRel	true	crushed	struggle
+Relation	T18	T13	NoRel	true	continued	led
+Relation	T18	T17	NoRel	true	continued	undisturbed
+Relation	T18	T3	NoRel	true	continued	strike
+Relation	T19	T0	NoRel	true	confined	UPRISING
+Relation	T2	T12	NoRel	true	aufstand	founded
+Relation	T2	T7	NoRel	true	aufstand	established
+Relation	T3	T1	NoRel	true	strike	UPRISING
+Relation	T3	T18	NoRel	true	strike	continued
+Relation	T7	T12	NoRel	true	established	founded
+Relation	T7	T14	NoRel	true	established	revolt
+Relation	T8	T7	NoRel	true	uprising	established
+Relation	T9	T0	NoRel	true	struggle	UPRISING
+Relation	T9	T1	NoRel	true	struggle	UPRISING
+Relation	T9	T10	NoRel	true	struggle	led
+Relation	T9	T18	NoRel	true	struggle	continued
+Relation	T9	T7	NoRel	true	struggle	established

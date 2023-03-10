@@ -1,0 +1,88 @@
+Text	El VUELO 470 DE LAM AEROLÍNEAS DE MOZAMBIQUE era un vuelo de pasajeros programado del Aeropuerto Internacional de Maputo , Mozambique , que se estrelló en el parque nacional de Bwabwata en Namibia en el camino al Aeropuerto Internacional Quatro de Fevereiro , Angola .	La aeronave despegó a tiempo , pero no pudo llegar a su destino .	Los restos de la aeronave fueron encontrados al día siguiente , el 30 de noviembre de 2013 en el parque nacional de Bwabwata en al norte de Namibia , a medio camino entre su salida y el aeropuerto de su llegada prevista .	Todas las 33 personas , entre ellas 6 tripulantes , que estaban a bordo del avión murieron .	Se informó que el clima era malo en el momento del accidente con fuertes lluvias en las proximidades de la trayectoria de vuelo .
+Event	T0	VUELO	EVENT	3
+Event	T1	vuelo	EVENT	52
+Event	T2	programado	EVENT	71
+Event	T3	estrelló	EVENT	143
+Event	T4	despegó	EVENT	281
+Event	T5	llegar	EVENT	313
+Event	T6	restos	EVENT	339
+Event	T7	encontrados	EVENT	368
+Event	T8	salida	EVENT	509
+Event	T9	prevista	EVENT	546
+Event	T10	murieron	EVENT	639
+Event	T11	informó	EVENT	653
+Event	T12	accidente	EVENT	701
+Event	T13	lluvias	EVENT	723
+Event	T14	trayectoria	EVENT	757
+Event	T15	vuelo	EVENT	772
+Relation	T3	T10	CauseEffect	true	estrelló	murieron
+Relation	T10	T3	EffectCause	true	murieron	estrelló
+Relation	T0	T10	NoRel	true	VUELO	murieron
+Relation	T0	T7	NoRel	true	VUELO	encontrados
+Relation	T1	T10	NoRel	true	vuelo	murieron
+Relation	T1	T11	NoRel	true	vuelo	informó
+Relation	T1	T13	NoRel	true	vuelo	lluvias
+Relation	T1	T15	NoRel	true	vuelo	vuelo
+Relation	T1	T2	NoRel	true	vuelo	programado
+Relation	T1	T3	NoRel	true	vuelo	estrelló
+Relation	T1	T5	NoRel	true	vuelo	llegar
+Relation	T1	T9	NoRel	true	vuelo	prevista
+Relation	T10	T2	NoRel	true	murieron	programado
+Relation	T10	T5	NoRel	true	murieron	llegar
+Relation	T10	T7	NoRel	true	murieron	encontrados
+Relation	T10	T9	NoRel	true	murieron	prevista
+Relation	T11	T0	NoRel	true	informó	VUELO
+Relation	T11	T2	NoRel	true	informó	programado
+Relation	T12	T11	NoRel	true	accidente	informó
+Relation	T12	T15	NoRel	true	accidente	vuelo
+Relation	T12	T3	NoRel	true	accidente	estrelló
+Relation	T12	T5	NoRel	true	accidente	llegar
+Relation	T12	T8	NoRel	true	accidente	salida
+Relation	T13	T0	NoRel	true	lluvias	VUELO
+Relation	T13	T1	NoRel	true	lluvias	vuelo
+Relation	T13	T10	NoRel	true	lluvias	murieron
+Relation	T13	T12	NoRel	true	lluvias	accidente
+Relation	T13	T14	NoRel	true	lluvias	trayectoria
+Relation	T13	T15	NoRel	true	lluvias	vuelo
+Relation	T13	T4	NoRel	true	lluvias	despegó
+Relation	T13	T8	NoRel	true	lluvias	salida
+Relation	T14	T1	NoRel	true	trayectoria	vuelo
+Relation	T14	T11	NoRel	true	trayectoria	informó
+Relation	T14	T13	NoRel	true	trayectoria	lluvias
+Relation	T14	T7	NoRel	true	trayectoria	encontrados
+Relation	T15	T3	NoRel	true	vuelo	estrelló
+Relation	T15	T5	NoRel	true	vuelo	llegar
+Relation	T15	T9	NoRel	true	vuelo	prevista
+Relation	T2	T12	NoRel	true	programado	accidente
+Relation	T2	T14	NoRel	true	programado	trayectoria
+Relation	T2	T3	NoRel	true	programado	estrelló
+Relation	T2	T9	NoRel	true	programado	prevista
+Relation	T3	T0	NoRel	true	estrelló	VUELO
+Relation	T3	T15	NoRel	true	estrelló	vuelo
+Relation	T4	T11	NoRel	true	despegó	informó
+Relation	T4	T12	NoRel	true	despegó	accidente
+Relation	T4	T8	NoRel	true	despegó	salida
+Relation	T5	T1	NoRel	true	llegar	vuelo
+Relation	T5	T10	NoRel	true	llegar	murieron
+Relation	T5	T11	NoRel	true	llegar	informó
+Relation	T5	T13	NoRel	true	llegar	lluvias
+Relation	T5	T14	NoRel	true	llegar	trayectoria
+Relation	T5	T8	NoRel	true	llegar	salida
+Relation	T5	T9	NoRel	true	llegar	prevista
+Relation	T6	T12	NoRel	true	restos	accidente
+Relation	T6	T4	NoRel	true	restos	despegó
+Relation	T6	T5	NoRel	true	restos	llegar
+Relation	T7	T13	NoRel	true	encontrados	lluvias
+Relation	T7	T14	NoRel	true	encontrados	trayectoria
+Relation	T7	T4	NoRel	true	encontrados	despegó
+Relation	T7	T9	NoRel	true	encontrados	prevista
+Relation	T8	T0	NoRel	true	salida	VUELO
+Relation	T8	T1	NoRel	true	salida	vuelo
+Relation	T8	T10	NoRel	true	salida	murieron
+Relation	T8	T15	NoRel	true	salida	vuelo
+Relation	T8	T9	NoRel	true	salida	prevista
+Relation	T9	T0	NoRel	true	prevista	VUELO
+Relation	T9	T1	NoRel	true	prevista	vuelo
+Relation	T9	T12	NoRel	true	prevista	accidente
+Relation	T9	T5	NoRel	true	prevista	llegar
+Relation	T9	T8	NoRel	true	prevista	salida

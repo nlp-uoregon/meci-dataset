@@ -1,0 +1,66 @@
+Text	Çoğunluğu tsunamiden dolayı meydana gelen zarar çok büyük boyutlardaydı .	En kötü biçimde etkilenen kasabaların görüntülerinde neredeyse sadece enkaz yığınları görülebilmekteydi .	İlk günlerdeki tahminler sadece depremden kaynaklanan zararın 14 ,5 ila 34 ,6 milyar Amerikan doları olduğunu ortaya koydu .	İlerleyen günlerde zararın 300 milyar doları bulabileceği ve bunun felaketi dünya tarihindeki en fazla mali zarara yol açan felaket yapacağı tahmin edildi .	- Birleşmiş Milletler - İnsani Yardım Koordinasyon Bürosu sözcüsü Elisabeth Byrs , " 30 uluslararası arama ve kurtarma ekibi gerektiğinde yardımı sağlamak için Japonya'ya gitmek için hazırlar .
+Event	T0	tsunamiden	EVENT	10
+Event	T1	zarar	EVENT	42
+Event	T2	etkilenen	EVENT	90
+Event	T3	tahminler	EVENT	195
+Event	T5	felaketi	EVENT	372
+Event	T6	edildi	EVENT	453
+Event	T7	gitmek	EVENT	633
+Event	T8	hazırlar	EVENT	645
+Event	T9	depremden	EVENT	212
+Event	T10	zararın	EVENT	234
+Event	T4	bulabileceği	EVENT	350
+Event	T11	zarara	EVENT	413
+Event	T12	felaket	EVENT	429
+Relation	T0	T1	CauseEffect	true	tsunamiden	zarar
+Relation	T1	T0	EffectCause	true	zarar	tsunamiden
+Relation	T0	T2	CauseEffect	true	tsunamiden	etkilenen
+Relation	T2	T0	EffectCause	true	etkilenen	tsunamiden
+Relation	T9	T0	CauseEffect	true	depremden	tsunamiden
+Relation	T0	T9	EffectCause	true	tsunamiden	depremden
+Relation	T9	T10	CauseEffect	true	depremden	zararın
+Relation	T10	T9	EffectCause	true	zararın	depremden
+Relation	T5	T11	CauseEffect	true	felaketi	zarara
+Relation	T11	T5	EffectCause	true	zarara	felaketi
+Relation	T1	T12	NoRel	true	zarar	felaket
+Relation	T1	T7	NoRel	true	zarar	gitmek
+Relation	T1	T8	NoRel	true	zarar	hazırlar
+Relation	T1	T9	NoRel	true	zarar	depremden
+Relation	T10	T3	NoRel	true	zararın	tahminler
+Relation	T11	T6	NoRel	true	zarara	edildi
+Relation	T11	T7	NoRel	true	zarara	gitmek
+Relation	T11	T9	NoRel	true	zarara	depremden
+Relation	T12	T0	NoRel	true	felaket	tsunamiden
+Relation	T12	T11	NoRel	true	felaket	zarara
+Relation	T12	T2	NoRel	true	felaket	etkilenen
+Relation	T12	T3	NoRel	true	felaket	tahminler
+Relation	T12	T4	NoRel	true	felaket	bulabileceği
+Relation	T12	T5	NoRel	true	felaket	felaketi
+Relation	T12	T7	NoRel	true	felaket	gitmek
+Relation	T2	T1	NoRel	true	etkilenen	zarar
+Relation	T2	T3	NoRel	true	etkilenen	tahminler
+Relation	T2	T4	NoRel	true	etkilenen	bulabileceği
+Relation	T2	T5	NoRel	true	etkilenen	felaketi
+Relation	T2	T6	NoRel	true	etkilenen	edildi
+Relation	T2	T7	NoRel	true	etkilenen	gitmek
+Relation	T3	T11	NoRel	true	tahminler	zarara
+Relation	T3	T7	NoRel	true	tahminler	gitmek
+Relation	T3	T9	NoRel	true	tahminler	depremden
+Relation	T4	T3	NoRel	true	bulabileceği	tahminler
+Relation	T4	T5	NoRel	true	bulabileceği	felaketi
+Relation	T5	T1	NoRel	true	felaketi	zarar
+Relation	T5	T10	NoRel	true	felaketi	zararın
+Relation	T6	T12	NoRel	true	edildi	felaket
+Relation	T6	T2	NoRel	true	edildi	etkilenen
+Relation	T6	T7	NoRel	true	edildi	gitmek
+Relation	T7	T3	NoRel	true	gitmek	tahminler
+Relation	T7	T4	NoRel	true	gitmek	bulabileceği
+Relation	T8	T10	NoRel	true	hazırlar	zararın
+Relation	T9	T1	NoRel	true	depremden	zarar
+Relation	T9	T11	NoRel	true	depremden	zarara
+Relation	T9	T12	NoRel	true	depremden	felaket
+Relation	T9	T2	NoRel	true	depremden	etkilenen
+Relation	T9	T3	NoRel	true	depremden	tahminler
+Relation	T9	T4	NoRel	true	depremden	bulabileceği
+Relation	T9	T7	NoRel	true	depremden	gitmek
+Relation	T9	T8	NoRel	true	depremden	hazırlar

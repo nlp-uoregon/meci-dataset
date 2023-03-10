@@ -1,0 +1,68 @@
+Text	ٹریڈ یونینز اور مزدور تنظیمیں اور دیگر سوشلسٹک ادارے ، کارخانوں میں ہر دن آٹھ گھنٹے کام کا مطالبہ کیا ۔	اس دن امریکا کے محنت کشوں نے مکمل ہڑتال کی ۔	تین مئی کو اس سلسلے میں شکاگو میں منعقد مزدوروں کے احتجاجی جلسے پر حملہ ہوا جس میں چار مزدور هلاک ہوئے ۔	اس بر بریت کے خلاف محنت کش احتجاجی مظاہرے کے لیے ( Hey market_square ) میں جمع ہوئے ۔	پولیس نے مظاہرہ روکنے کے لیے محنت کشوں پر تشدد کیا اسی دوران میں بم دھماکے میں ایک پولیس افسر ہلاک ہوا تو پولیس نے مظاہرین پر گولیوں کی بوچھاڑ کر دی جس کے نتیجے میں بے شمار مزدور هلاک ہوئے اور درجنوں کی تعداد میں زخمی ، اس موقعے پر سرمایہ داروں نے مزدور رہنماؤں کو گرفتار کر کے پھانسیاں دی ۔
+Event	T0	کام	EVENT	84
+Event	T1	ہوئے	EVENT	247
+Event	T2	ہوئے	EVENT	333
+Event	T3	روکنے	EVENT	356
+Event	T4	دھماکے	EVENT	408
+Event	T5	ہوا	EVENT	439
+Event	T6	بوچھاڑ	EVENT	476
+Event	T7	جس	EVENT	489
+Event	T8	ہوئے	EVENT	524
+Event	T9	زخمی	EVENT	553
+Event	T10	گرفتار	EVENT	605
+Event	T11	دی	EVENT	627
+Relation	T4	T5	CauseEffect	true	دھماکے	ہوا
+Relation	T5	T4	EffectCause	true	ہوا	دھماکے
+Relation	T6	T8	CauseEffect	true	بوچھاڑ	ہوئے
+Relation	T8	T6	EffectCause	true	ہوئے	بوچھاڑ
+Relation	T6	T9	CauseEffect	true	بوچھاڑ	زخمی
+Relation	T9	T6	EffectCause	true	زخمی	بوچھاڑ
+Relation	T0	T3	NoRel	true	کام	روکنے
+Relation	T0	T7	NoRel	true	کام	جس
+Relation	T0	T9	NoRel	true	کام	زخمی
+Relation	T1	T0	NoRel	true	ہوئے	کام
+Relation	T1	T2	NoRel	true	ہوئے	ہوئے
+Relation	T1	T3	NoRel	true	ہوئے	روکنے
+Relation	T1	T7	NoRel	true	ہوئے	جس
+Relation	T1	T9	NoRel	true	ہوئے	زخمی
+Relation	T10	T11	NoRel	true	گرفتار	دی
+Relation	T10	T2	NoRel	true	گرفتار	ہوئے
+Relation	T10	T7	NoRel	true	گرفتار	جس
+Relation	T10	T8	NoRel	true	گرفتار	ہوئے
+Relation	T10	T9	NoRel	true	گرفتار	زخمی
+Relation	T11	T1	NoRel	true	دی	ہوئے
+Relation	T11	T2	NoRel	true	دی	ہوئے
+Relation	T11	T8	NoRel	true	دی	ہوئے
+Relation	T11	T9	NoRel	true	دی	زخمی
+Relation	T2	T10	NoRel	true	ہوئے	گرفتار
+Relation	T2	T7	NoRel	true	ہوئے	جس
+Relation	T3	T2	NoRel	true	روکنے	ہوئے
+Relation	T3	T5	NoRel	true	روکنے	ہوا
+Relation	T3	T9	NoRel	true	روکنے	زخمی
+Relation	T4	T1	NoRel	true	دھماکے	ہوئے
+Relation	T4	T10	NoRel	true	دھماکے	گرفتار
+Relation	T4	T11	NoRel	true	دھماکے	دی
+Relation	T4	T2	NoRel	true	دھماکے	ہوئے
+Relation	T4	T8	NoRel	true	دھماکے	ہوئے
+Relation	T5	T1	NoRel	true	ہوا	ہوئے
+Relation	T5	T10	NoRel	true	ہوا	گرفتار
+Relation	T5	T2	NoRel	true	ہوا	ہوئے
+Relation	T5	T6	NoRel	true	ہوا	بوچھاڑ
+Relation	T6	T0	NoRel	true	بوچھاڑ	کام
+Relation	T6	T1	NoRel	true	بوچھاڑ	ہوئے
+Relation	T6	T11	NoRel	true	بوچھاڑ	دی
+Relation	T6	T3	NoRel	true	بوچھاڑ	روکنے
+Relation	T7	T1	NoRel	true	جس	ہوئے
+Relation	T7	T6	NoRel	true	جس	بوچھاڑ
+Relation	T7	T9	NoRel	true	جس	زخمی
+Relation	T8	T0	NoRel	true	ہوئے	کام
+Relation	T8	T1	NoRel	true	ہوئے	ہوئے
+Relation	T8	T11	NoRel	true	ہوئے	دی
+Relation	T8	T2	NoRel	true	ہوئے	ہوئے
+Relation	T8	T3	NoRel	true	ہوئے	روکنے
+Relation	T8	T4	NoRel	true	ہوئے	دھماکے
+Relation	T8	T7	NoRel	true	ہوئے	جس
+Relation	T9	T1	NoRel	true	زخمی	ہوئے
+Relation	T9	T10	NoRel	true	زخمی	گرفتار
+Relation	T9	T7	NoRel	true	زخمی	جس
+Relation	T9	T8	NoRel	true	زخمی	ہوئے

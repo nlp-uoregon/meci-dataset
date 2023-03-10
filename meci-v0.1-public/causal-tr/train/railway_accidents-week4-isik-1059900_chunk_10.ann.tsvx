@@ -1,0 +1,44 @@
+Text	- 12 Nisan 2010.	Kuzey sınırında yer alan Merano'nun yakınlarında gerçekleşen kazada toprak kayması nedeniyle raylardan çıkan bir banliyo treninin kayaya çarpması sonucu 9 kişi öldü , yaklaşık 30 kişi de yaralandı .	- 21 Nisan 2010 .	Turistleri taşıyan lüks bir trenin Pretoria'da raylardan çıkması sonucu iki kişi hayatını kaybederken en az 25 kişi de yaralandı .	- 6 Mayıs 2010.
+Event	T0	kazada	EVENT	78
+Event	T1	kayması	EVENT	92
+Event	T2	öldü	EVENT	177
+Event	T3	yaralandı	EVENT	204
+Event	T4	taşıyan	EVENT	245
+Event	T5	kaybederken	EVENT	324
+Event	T6	yaralandı	EVENT	353
+Event	T7	çıkan	EVENT	120
+Event	T8	çarpması	EVENT	154
+Event	T9	çıkması	EVENT	291
+Relation	T1	T7	CauseEffect	true	kayması	çıkan
+Relation	T7	T1	EffectCause	true	çıkan	kayması
+Relation	T7	T8	CauseEffect	true	çıkan	çarpması
+Relation	T8	T7	EffectCause	true	çarpması	çıkan
+Relation	T8	T0	CauseEffect	true	çarpması	kazada
+Relation	T0	T8	EffectCause	true	kazada	çarpması
+Relation	T0	T2	CauseEffect	true	kazada	öldü
+Relation	T2	T0	EffectCause	true	öldü	kazada
+Relation	T0	T3	CauseEffect	true	kazada	yaralandı
+Relation	T3	T0	EffectCause	true	yaralandı	kazada
+Relation	T9	T5	CauseEffect	true	çıkması	kaybederken
+Relation	T5	T9	EffectCause	true	kaybederken	çıkması
+Relation	T9	T6	CauseEffect	true	çıkması	yaralandı
+Relation	T6	T9	EffectCause	true	yaralandı	çıkması
+Relation	T0	T1	NoRel	true	kazada	kayması
+Relation	T0	T4	NoRel	true	kazada	taşıyan
+Relation	T0	T5	NoRel	true	kazada	kaybederken
+Relation	T0	T7	NoRel	true	kazada	çıkan
+Relation	T1	T8	NoRel	true	kayması	çarpması
+Relation	T2	T1	NoRel	true	öldü	kayması
+Relation	T2	T7	NoRel	true	öldü	çıkan
+Relation	T3	T9	NoRel	true	yaralandı	çıkması
+Relation	T4	T2	NoRel	true	taşıyan	öldü
+Relation	T4	T9	NoRel	true	taşıyan	çıkması
+Relation	T5	T3	NoRel	true	kaybederken	yaralandı
+Relation	T5	T7	NoRel	true	kaybederken	çıkan
+Relation	T6	T0	NoRel	true	yaralandı	kazada
+Relation	T6	T2	NoRel	true	yaralandı	öldü
+Relation	T7	T4	NoRel	true	çıkan	taşıyan
+Relation	T7	T5	NoRel	true	çıkan	kaybederken
+Relation	T8	T4	NoRel	true	çarpması	taşıyan
+Relation	T8	T9	NoRel	true	çarpması	çıkması
+Relation	T9	T2	NoRel	true	çıkması	öldü

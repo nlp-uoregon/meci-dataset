@@ -1,0 +1,131 @@
+Text	Yerli halk ile göçmen yerleşimciler arasındaki çatışma genellikle birbirine bağlı iki ekonomik sorun etrafında döner : doğal kaynaklara erişim ve toprak kontrolü .	Yerleşimcilerin ekonomik rekabeti yerli ekonomisini tehdit etmeye başlayınca yerliler de geleneksel üretim modlarını korumak için mücadeleye başlar .	Britanyalılar geldikten kısa zaman sonra yerleşimcilerle yerliler arasındaki ekonomik çatışma başlamıştır .	İlk yıl boyunca Britanya'dan ve Hindistan'dan ithal edilen yiyecekler seyrek olarak adaya getirilir , gelenler de büyük ölçüde deniz suyundan bozulmuş , kurtlanmış tamamen yenilemez durumdaki tahıl ve tuzlama ettir .	Böylece , 1803 - 1804 kışında Derwent Nehri'ndeki yerleşimde iskorbüt , ishal ve nezle ( _ catarrh _ ) görülmüştür .
+Event	T0	çatışma	EVENT	47
+Event	T1	döner	EVENT	111
+Event	T2	erişim	EVENT	136
+Event	T3	rekabeti	EVENT	189
+Event	T4	tehdit	EVENT	216
+Event	T5	üretim	EVENT	264
+Event	T6	başlar	EVENT	305
+Event	T7	başlamıştır	EVENT	408
+Event	T8	bozulmuş	EVENT	564
+Event	T9	kurtlanmış	EVENT	575
+Event	T11	iskorbüt	EVENT	700
+Event	T12	ishal	EVENT	711
+Event	T13	görülmüştür	EVENT	742
+Event	T14	kontrolü	EVENT	153
+Event	T15	geldikten	EVENT	328
+Event	T16	edilen	EVENT	474
+Event	T17	getirilir	EVENT	512
+Event	T10	nezle	EVENT	720
+Relation	T2	T0	CauseEffect	true	erişim	çatışma
+Relation	T0	T2	EffectCause	true	çatışma	erişim
+Relation	T14	T0	CauseEffect	true	kontrolü	çatışma
+Relation	T0	T14	EffectCause	true	çatışma	kontrolü
+Relation	T3	T4	CauseEffect	true	rekabeti	tehdit
+Relation	T4	T3	EffectCause	true	tehdit	rekabeti
+Relation	T4	T6	CauseEffect	true	tehdit	başlar
+Relation	T6	T4	EffectCause	true	başlar	tehdit
+Relation	T8	T11	CauseEffect	true	bozulmuş	iskorbüt
+Relation	T11	T8	EffectCause	true	iskorbüt	bozulmuş
+Relation	T8	T12	CauseEffect	true	bozulmuş	ishal
+Relation	T12	T8	EffectCause	true	ishal	bozulmuş
+Relation	T8	T10	CauseEffect	true	bozulmuş	nezle
+Relation	T10	T8	EffectCause	true	nezle	bozulmuş
+Relation	T9	T11	CauseEffect	true	kurtlanmış	iskorbüt
+Relation	T11	T9	EffectCause	true	iskorbüt	kurtlanmış
+Relation	T9	T12	CauseEffect	true	kurtlanmış	ishal
+Relation	T12	T9	EffectCause	true	ishal	kurtlanmış
+Relation	T9	T10	CauseEffect	true	kurtlanmış	nezle
+Relation	T10	T9	EffectCause	true	nezle	kurtlanmış
+Relation	T8	T13	CauseEffect	true	bozulmuş	görülmüştür
+Relation	T13	T8	EffectCause	true	görülmüştür	bozulmuş
+Relation	T9	T13	CauseEffect	true	kurtlanmış	görülmüştür
+Relation	T13	T9	EffectCause	true	görülmüştür	kurtlanmış
+Relation	T0	T1	NoRel	true	çatışma	döner
+Relation	T0	T10	NoRel	true	çatışma	nezle
+Relation	T0	T12	NoRel	true	çatışma	ishal
+Relation	T0	T15	NoRel	true	çatışma	geldikten
+Relation	T0	T8	NoRel	true	çatışma	bozulmuş
+Relation	T1	T11	NoRel	true	döner	iskorbüt
+Relation	T1	T16	NoRel	true	döner	edilen
+Relation	T1	T2	NoRel	true	döner	erişim
+Relation	T1	T5	NoRel	true	döner	üretim
+Relation	T10	T11	NoRel	true	nezle	iskorbüt
+Relation	T10	T12	NoRel	true	nezle	ishal
+Relation	T10	T16	NoRel	true	nezle	edilen
+Relation	T10	T17	NoRel	true	nezle	getirilir
+Relation	T10	T2	NoRel	true	nezle	erişim
+Relation	T10	T3	NoRel	true	nezle	rekabeti
+Relation	T10	T7	NoRel	true	nezle	başlamıştır
+Relation	T11	T14	NoRel	true	iskorbüt	kontrolü
+Relation	T11	T7	NoRel	true	iskorbüt	başlamıştır
+Relation	T12	T2	NoRel	true	ishal	erişim
+Relation	T12	T3	NoRel	true	ishal	rekabeti
+Relation	T13	T17	NoRel	true	görülmüştür	getirilir
+Relation	T13	T2	NoRel	true	görülmüştür	erişim
+Relation	T13	T4	NoRel	true	görülmüştür	tehdit
+Relation	T13	T6	NoRel	true	görülmüştür	başlar
+Relation	T14	T12	NoRel	true	kontrolü	ishal
+Relation	T14	T5	NoRel	true	kontrolü	üretim
+Relation	T15	T0	NoRel	true	geldikten	çatışma
+Relation	T15	T12	NoRel	true	geldikten	ishal
+Relation	T15	T17	NoRel	true	geldikten	getirilir
+Relation	T15	T2	NoRel	true	geldikten	erişim
+Relation	T15	T3	NoRel	true	geldikten	rekabeti
+Relation	T15	T4	NoRel	true	geldikten	tehdit
+Relation	T15	T5	NoRel	true	geldikten	üretim
+Relation	T15	T7	NoRel	true	geldikten	başlamıştır
+Relation	T15	T9	NoRel	true	geldikten	kurtlanmış
+Relation	T16	T10	NoRel	true	edilen	nezle
+Relation	T16	T17	NoRel	true	edilen	getirilir
+Relation	T16	T3	NoRel	true	edilen	rekabeti
+Relation	T16	T6	NoRel	true	edilen	başlar
+Relation	T16	T7	NoRel	true	edilen	başlamıştır
+Relation	T17	T0	NoRel	true	getirilir	çatışma
+Relation	T17	T1	NoRel	true	getirilir	döner
+Relation	T17	T16	NoRel	true	getirilir	edilen
+Relation	T17	T4	NoRel	true	getirilir	tehdit
+Relation	T17	T5	NoRel	true	getirilir	üretim
+Relation	T17	T9	NoRel	true	getirilir	kurtlanmış
+Relation	T2	T11	NoRel	true	erişim	iskorbüt
+Relation	T2	T4	NoRel	true	erişim	tehdit
+Relation	T2	T6	NoRel	true	erişim	başlar
+Relation	T2	T9	NoRel	true	erişim	kurtlanmış
+Relation	T3	T1	NoRel	true	rekabeti	döner
+Relation	T3	T12	NoRel	true	rekabeti	ishal
+Relation	T3	T14	NoRel	true	rekabeti	kontrolü
+Relation	T3	T8	NoRel	true	rekabeti	bozulmuş
+Relation	T4	T0	NoRel	true	tehdit	çatışma
+Relation	T4	T11	NoRel	true	tehdit	iskorbüt
+Relation	T4	T15	NoRel	true	tehdit	geldikten
+Relation	T4	T2	NoRel	true	tehdit	erişim
+Relation	T4	T8	NoRel	true	tehdit	bozulmuş
+Relation	T4	T9	NoRel	true	tehdit	kurtlanmış
+Relation	T5	T10	NoRel	true	üretim	nezle
+Relation	T5	T13	NoRel	true	üretim	görülmüştür
+Relation	T5	T14	NoRel	true	üretim	kontrolü
+Relation	T5	T16	NoRel	true	üretim	edilen
+Relation	T5	T9	NoRel	true	üretim	kurtlanmış
+Relation	T6	T0	NoRel	true	başlar	çatışma
+Relation	T6	T1	NoRel	true	başlar	döner
+Relation	T6	T15	NoRel	true	başlar	geldikten
+Relation	T6	T17	NoRel	true	başlar	getirilir
+Relation	T6	T3	NoRel	true	başlar	rekabeti
+Relation	T6	T8	NoRel	true	başlar	bozulmuş
+Relation	T7	T10	NoRel	true	başlamıştır	nezle
+Relation	T7	T12	NoRel	true	başlamıştır	ishal
+Relation	T7	T15	NoRel	true	başlamıştır	geldikten
+Relation	T7	T17	NoRel	true	başlamıştır	getirilir
+Relation	T7	T2	NoRel	true	başlamıştır	erişim
+Relation	T7	T4	NoRel	true	başlamıştır	tehdit
+Relation	T7	T6	NoRel	true	başlamıştır	başlar
+Relation	T8	T1	NoRel	true	bozulmuş	döner
+Relation	T8	T3	NoRel	true	bozulmuş	rekabeti
+Relation	T8	T5	NoRel	true	bozulmuş	üretim
+Relation	T8	T9	NoRel	true	bozulmuş	kurtlanmış
+Relation	T9	T0	NoRel	true	kurtlanmış	çatışma
+Relation	T9	T1	NoRel	true	kurtlanmış	döner
+Relation	T9	T15	NoRel	true	kurtlanmış	geldikten
+Relation	T9	T3	NoRel	true	kurtlanmış	rekabeti
+Relation	T9	T4	NoRel	true	kurtlanmış	tehdit
+Relation	T9	T5	NoRel	true	kurtlanmış	üretim

@@ -1,0 +1,39 @@
+Text	Yerel yetkililer ise askerlerin aşılanmasının çiçek hastalığının siviller arasında kazara yayılmasına yol açacağından endişe duyuyorlardı .	Ancak Washington kararında ısrar etti ve askerlerinin çoğuna aşı yaptırmayı başardı .	Uygulamanın popülaritesinin artmasıyla birlikte Washington bu salgının askerleri üzerindeki derin etkisini fark edebildi .	Bağışıklık başlangıçta İngiliz erkekler arasında Amerikalılardan daha yaygındı .	Bunun nedeni , Avrupa'da daha fazla kabul gören aşı uygulaması ve bağışıklıkla sonuçlanan çocuklukda geçirilmiş vakalarının yüksek oranıydı .
+Event	T0	aşılanmasının	EVENT	32
+Event	T1	etti	EVENT	173
+Event	T2	başardı	EVENT	216
+Event	T3	artmasıyla	EVENT	254
+Event	T4	uygulaması	EVENT	482
+Event	T5	geçirilmiş	EVENT	531
+Event	T6	duyuyorlardı	EVENT	125
+Event	T7	yaygındı	EVENT	419
+Event	T8	bağışıklıkla	EVENT	496
+Relation	T0	T6	CauseEffect	true	aşılanmasının	duyuyorlardı
+Relation	T6	T0	EffectCause	true	duyuyorlardı	aşılanmasının
+Relation	T1	T2	CauseEffect	true	etti	başardı
+Relation	T2	T1	EffectCause	true	başardı	etti
+Relation	T4	T7	CauseEffect	true	uygulaması	yaygındı
+Relation	T7	T4	EffectCause	true	yaygındı	uygulaması
+Relation	T5	T8	CauseEffect	true	geçirilmiş	bağışıklıkla
+Relation	T8	T5	EffectCause	true	bağışıklıkla	geçirilmiş
+Relation	T8	T7	CauseEffect	true	bağışıklıkla	yaygındı
+Relation	T7	T8	EffectCause	true	yaygındı	bağışıklıkla
+Relation	T0	T1	NoRel	true	aşılanmasının	etti
+Relation	T0	T7	NoRel	true	aşılanmasının	yaygındı
+Relation	T0	T8	NoRel	true	aşılanmasının	bağışıklıkla
+Relation	T1	T6	NoRel	true	etti	duyuyorlardı
+Relation	T2	T4	NoRel	true	başardı	uygulaması
+Relation	T2	T5	NoRel	true	başardı	geçirilmiş
+Relation	T2	T8	NoRel	true	başardı	bağışıklıkla
+Relation	T3	T1	NoRel	true	artmasıyla	etti
+Relation	T3	T6	NoRel	true	artmasıyla	duyuyorlardı
+Relation	T3	T7	NoRel	true	artmasıyla	yaygındı
+Relation	T3	T8	NoRel	true	artmasıyla	bağışıklıkla
+Relation	T4	T0	NoRel	true	uygulaması	aşılanmasının
+Relation	T4	T1	NoRel	true	uygulaması	etti
+Relation	T5	T0	NoRel	true	geçirilmiş	aşılanmasının
+Relation	T6	T1	NoRel	true	duyuyorlardı	etti
+Relation	T6	T2	NoRel	true	duyuyorlardı	başardı
+Relation	T6	T5	NoRel	true	duyuyorlardı	geçirilmiş
+Relation	T7	T0	NoRel	true	yaygındı	aşılanmasının
+Relation	T8	T6	NoRel	true	bağışıklıkla	duyuyorlardı

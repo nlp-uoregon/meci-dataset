@@ -1,0 +1,31 @@
+Text	Çatışma teorisyenleri , terörizmi , muhtemelen yanlış yönlendirme , cehalet veya mantıklı olmayan amaçlar nedeniyle teröristlerin kafasında yaratılan ve terör örgütleri tarafından ifade edilen şiddet davranışlarının bireysel hayal kırıklığı , agresiflik veya hazır olma durumunun sonucu olduğu adaletsizliğe bir tepki olarak görürler .	Terör eylemlerinin çoğunluğu dindar insanlar tarafından yapılmaktadır .	1980 ve 2003 yılları arasında dünya çapındaki intihar saldırganlarının % 83'ünde , % 43'ü dindardı .	Hartmann , Douglas ; Uggen , Christopher ( 2012 ) .	Teröristler şiddete başvururlar çünkü eğer şiddet kullanmazlar ise güç çekişmesini kaybederler ki bu bir çok çatışma teorisyeninin zayıfın silahı olarak görmesine yol açacaktır .
+Event	T1	yönlendirme	EVENT	54
+Event	T3	davranışlarının	EVENT	200
+Event	T4	tepki	EVENT	312
+Event	T5	eylemlerinin	EVENT	342
+Event	T6	intihar	EVENT	454
+Event	T7	kaybederler	EVENT	644
+Event	T2	terörizmi	EVENT	24
+Event	T9	dindar	EVENT	365
+Relation	T4	T2	CauseEffect	true	tepki	terörizmi
+Relation	T2	T4	EffectCause	true	terörizmi	tepki
+Relation	T9	T5	CauseEffect	true	dindar	eylemlerinin
+Relation	T5	T9	EffectCause	true	eylemlerinin	dindar
+Relation	T1	T5	NoRel	true	yönlendirme	eylemlerinin
+Relation	T2	T1	NoRel	true	terörizmi	yönlendirme
+Relation	T2	T3	NoRel	true	terörizmi	davranışlarının
+Relation	T2	T7	NoRel	true	terörizmi	kaybederler
+Relation	T3	T6	NoRel	true	davranışlarının	intihar
+Relation	T3	T7	NoRel	true	davranışlarının	kaybederler
+Relation	T3	T9	NoRel	true	davranışlarının	dindar
+Relation	T5	T1	NoRel	true	eylemlerinin	yönlendirme
+Relation	T5	T6	NoRel	true	eylemlerinin	intihar
+Relation	T5	T7	NoRel	true	eylemlerinin	kaybederler
+Relation	T6	T1	NoRel	true	intihar	yönlendirme
+Relation	T6	T5	NoRel	true	intihar	eylemlerinin
+Relation	T7	T1	NoRel	true	kaybederler	yönlendirme
+Relation	T7	T4	NoRel	true	kaybederler	tepki
+Relation	T7	T5	NoRel	true	kaybederler	eylemlerinin
+Relation	T9	T2	NoRel	true	dindar	terörizmi
+Relation	T9	T3	NoRel	true	dindar	davranışlarının
+Relation	T9	T7	NoRel	true	dindar	kaybederler

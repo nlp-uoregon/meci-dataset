@@ -1,0 +1,58 @@
+Text	FluMist was initially priced higher than the injectable vaccines , but sold only 500,000 of the four million doses it produced its first year on the market , despite a comparative shortage of flu vaccine in fall 2004 .	The price was sharply lowered the next year , and the company reported distributing 1.6 million doses in 2005 .	Because of the price drop , despite selling almost three times as many doses in 2005 , the company reported $ 21 million in FluMist sales , compared to $ 48 million the previous year .	Further cuts in pricing had to await FDA approval of a refrigerator - cooled FluMist formulation , as the initial formulation required freezer storage and thawing on demand before administration .	Although it is positioned as a premium product , the remaining price premium for FluMist over the cost of needle - injected vaccine is small .
+Event	T0	priced	EVENT	22
+Event	T1	sold	EVENT	71
+Event	T2	produced	EVENT	118
+Event	T3	shortage	EVENT	180
+Event	T4	lowered	EVENT	241
+Event	T5	distributing	EVENT	290
+Event	T7	selling	EVENT	367
+Event	T8	reported	EVENT	430
+Event	T10	compared	EVENT	471
+Event	T11	cuts	EVENT	524
+Event	T12	await	EVENT	547
+Event	T13	approval	EVENT	557
+Event	T14	cooled	EVENT	586
+Event	T15	required	EVENT	642
+Event	T16	administration	EVENT	696
+Event	T17	positioned	EVENT	728
+Event	T18	injected	EVENT	828
+Event	T6	price drop	EVENT	346
+Event	T9	$ 21 million in FluMist sales	EVENT	439
+Relation	T6	T9	CauseEffect	true	price drop	$ 21 million in FluMist sales
+Relation	T9	T6	EffectCause	true	$ 21 million in FluMist sales	price drop
+Relation	T15	T12	CauseEffect	true	required	await
+Relation	T12	T15	EffectCause	true	await	required
+Relation	T0	T13	NoRel	true	priced	approval
+Relation	T0	T14	NoRel	true	priced	cooled
+Relation	T1	T2	NoRel	true	sold	produced
+Relation	T10	T13	NoRel	true	compared	approval
+Relation	T10	T14	NoRel	true	compared	cooled
+Relation	T10	T4	NoRel	true	compared	lowered
+Relation	T11	T8	NoRel	true	cuts	reported
+Relation	T12	T17	NoRel	true	await	positioned
+Relation	T12	T7	NoRel	true	await	selling
+Relation	T13	T12	NoRel	true	approval	await
+Relation	T13	T2	NoRel	true	approval	produced
+Relation	T13	T6	NoRel	true	approval	price drop
+Relation	T15	T14	NoRel	true	required	cooled
+Relation	T15	T3	NoRel	true	required	shortage
+Relation	T16	T0	NoRel	true	administration	priced
+Relation	T16	T6	NoRel	true	administration	price drop
+Relation	T17	T0	NoRel	true	positioned	priced
+Relation	T17	T15	NoRel	true	positioned	required
+Relation	T18	T17	NoRel	true	injected	positioned
+Relation	T2	T11	NoRel	true	produced	cuts
+Relation	T2	T18	NoRel	true	produced	injected
+Relation	T3	T12	NoRel	true	shortage	await
+Relation	T3	T9	NoRel	true	shortage	$ 21 million in FluMist sales
+Relation	T4	T13	NoRel	true	lowered	approval
+Relation	T4	T3	NoRel	true	lowered	shortage
+Relation	T4	T5	NoRel	true	lowered	distributing
+Relation	T5	T3	NoRel	true	distributing	shortage
+Relation	T6	T13	NoRel	true	price drop	approval
+Relation	T6	T18	NoRel	true	price drop	injected
+Relation	T7	T13	NoRel	true	selling	approval
+Relation	T7	T16	NoRel	true	selling	administration
+Relation	T9	T2	NoRel	true	$ 21 million in FluMist sales	produced
+Relation	T9	T3	NoRel	true	$ 21 million in FluMist sales	shortage
+Relation	T9	T4	NoRel	true	$ 21 million in FluMist sales	lowered

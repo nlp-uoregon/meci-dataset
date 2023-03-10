@@ -1,0 +1,38 @@
+Text	Hoffmann hükûmeti konseyleri tamamen reddetti hükûmetin denetimdeki askeri birliklerle 13 Nisan’da saldırıya geçti .	Konsey yanlıları bu saldırıyı durdu .	Hükûmet bu yenilgi karşısında Bavyera’ya asker yollanması talebinde bulundu .	Bavyera’da da Freikorps birlikleri oluşturulmaya başlandı .	Bu güçler kısa sürede birleşip Münih’i kuşatma altına aldı .
+Event	T0	konseyleri	EVENT	18
+Event	T1	reddetti	EVENT	37
+Event	T3	durdu	EVENT	147
+Event	T4	yenilgi	EVENT	166
+Event	T7	birleşip	EVENT	315
+Event	T2	saldırıya	EVENT	99
+Event	T9	oluşturulmaya	EVENT	268
+Event	T5	talebinde	EVENT	213
+Event	T6	kuşatma	EVENT	332
+Relation	T2	T5	CauseEffect	true	saldırıya	talebinde
+Relation	T5	T2	EffectCause	true	talebinde	saldırıya
+Relation	T4	T5	CauseEffect	true	yenilgi	talebinde
+Relation	T5	T4	EffectCause	true	talebinde	yenilgi
+Relation	T5	T9	CauseEffect	true	talebinde	oluşturulmaya
+Relation	T9	T5	EffectCause	true	oluşturulmaya	talebinde
+Relation	T0	T3	NoRel	true	konseyleri	durdu
+Relation	T1	T9	NoRel	true	reddetti	oluşturulmaya
+Relation	T2	T4	NoRel	true	saldırıya	yenilgi
+Relation	T2	T6	NoRel	true	saldırıya	kuşatma
+Relation	T2	T7	NoRel	true	saldırıya	birleşip
+Relation	T2	T9	NoRel	true	saldırıya	oluşturulmaya
+Relation	T3	T1	NoRel	true	durdu	reddetti
+Relation	T3	T5	NoRel	true	durdu	talebinde
+Relation	T4	T7	NoRel	true	yenilgi	birleşip
+Relation	T5	T3	NoRel	true	talebinde	durdu
+Relation	T6	T0	NoRel	true	kuşatma	konseyleri
+Relation	T6	T3	NoRel	true	kuşatma	durdu
+Relation	T6	T5	NoRel	true	kuşatma	talebinde
+Relation	T6	T9	NoRel	true	kuşatma	oluşturulmaya
+Relation	T7	T0	NoRel	true	birleşip	konseyleri
+Relation	T7	T1	NoRel	true	birleşip	reddetti
+Relation	T7	T2	NoRel	true	birleşip	saldırıya
+Relation	T7	T3	NoRel	true	birleşip	durdu
+Relation	T7	T4	NoRel	true	birleşip	yenilgi
+Relation	T7	T6	NoRel	true	birleşip	kuşatma
+Relation	T9	T3	NoRel	true	oluşturulmaya	durdu
+Relation	T9	T4	NoRel	true	oluşturulmaya	yenilgi

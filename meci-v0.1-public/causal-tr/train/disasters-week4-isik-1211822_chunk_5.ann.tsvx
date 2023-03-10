@@ -1,0 +1,128 @@
+Text	Deprem Pasifik levhasının Honşu'nun altındaki tartışma konusu olan bir levhanın altına battığı yerde meydana geldi .	Yılda 8 -9 santimetrelik bir hızla hareket eden Pasifik levhası , Honşu'nun altındaki levhanın altına inmekte ve büyük miktarda enerji üretmektedir .	Bu hareket bir sismik olaya yol açacak kadar bir gerginlik birikene kadar üstteki levhayı da aşağıya doğru iter .	Deprem deniz tabanının birkaç metre yükselmesine neden oldu .	Bu büyüklükteki bir deprem genelde 480 km'den büyük bir kırık uzunluğuna sahiptir , bu da uzun ve nispeten düz bir fay yüzeyi gerektirir .
+Event	T0	Deprem	EVENT	0
+Event	T1	battığı	EVENT	87
+Event	T2	geldi	EVENT	109
+Event	T3	hareket	EVENT	152
+Event	T5	üretmektedir	EVENT	252
+Event	T6	hareket	EVENT	270
+Event	T7	açacak	EVENT	299
+Event	T8	iter	EVENT	374
+Event	T9	deprem	EVENT	463
+Event	T10	gerektirir	EVENT	569
+Event	T11	levhasının	EVENT	15
+Event	T4	levhası	EVENT	173
+Event	T12	inmekte	EVENT	219
+Event	T13	birikene	EVENT	326
+Event	T14	oldu	EVENT	436
+Event	T15	Deprem	EVENT	381
+Event	T16	kırık	EVENT	499
+Relation	T3	T12	CauseEffect	true	hareket	inmekte
+Relation	T12	T3	EffectCause	true	inmekte	hareket
+Relation	T12	T5	CauseEffect	true	inmekte	üretmektedir
+Relation	T5	T12	EffectCause	true	üretmektedir	inmekte
+Relation	T3	T8	CauseEffect	true	hareket	iter
+Relation	T8	T3	EffectCause	true	iter	hareket
+Relation	T8	T13	CauseEffect	true	iter	birikene
+Relation	T13	T8	EffectCause	true	birikene	iter
+Relation	T13	T7	CauseEffect	true	birikene	açacak
+Relation	T7	T13	EffectCause	true	açacak	birikene
+Relation	T6	T8	CauseEffect	true	hareket	iter
+Relation	T8	T6	EffectCause	true	iter	hareket
+Relation	T13	T0	CauseEffect	true	birikene	Deprem
+Relation	T0	T13	EffectCause	true	Deprem	birikene
+Relation	T11	T2	CauseEffect	true	levhasının	geldi
+Relation	T2	T11	EffectCause	true	geldi	levhasının
+Relation	T0	T14	CauseEffect	true	Deprem	oldu
+Relation	T14	T0	EffectCause	true	oldu	Deprem
+Relation	T15	T14	CauseEffect	true	Deprem	oldu
+Relation	T14	T15	EffectCause	true	oldu	Deprem
+Relation	T9	T16	CauseEffect	true	deprem	kırık
+Relation	T16	T9	EffectCause	true	kırık	deprem
+Relation	T0	T16	CauseEffect	true	Deprem	kırık
+Relation	T16	T0	EffectCause	true	kırık	Deprem
+Relation	T0	T1	NoRel	true	Deprem	battığı
+Relation	T0	T12	NoRel	true	Deprem	inmekte
+Relation	T0	T2	NoRel	true	Deprem	geldi
+Relation	T0	T5	NoRel	true	Deprem	üretmektedir
+Relation	T0	T7	NoRel	true	Deprem	açacak
+Relation	T1	T10	NoRel	true	battığı	gerektirir
+Relation	T1	T13	NoRel	true	battığı	birikene
+Relation	T1	T2	NoRel	true	battığı	geldi
+Relation	T1	T5	NoRel	true	battığı	üretmektedir
+Relation	T1	T6	NoRel	true	battığı	hareket
+Relation	T1	T7	NoRel	true	battığı	açacak
+Relation	T1	T9	NoRel	true	battığı	deprem
+Relation	T10	T0	NoRel	true	gerektirir	Deprem
+Relation	T10	T16	NoRel	true	gerektirir	kırık
+Relation	T10	T2	NoRel	true	gerektirir	geldi
+Relation	T10	T5	NoRel	true	gerektirir	üretmektedir
+Relation	T10	T9	NoRel	true	gerektirir	deprem
+Relation	T11	T10	NoRel	true	levhasının	gerektirir
+Relation	T11	T13	NoRel	true	levhasının	birikene
+Relation	T11	T14	NoRel	true	levhasının	oldu
+Relation	T11	T4	NoRel	true	levhasının	levhası
+Relation	T11	T6	NoRel	true	levhasının	hareket
+Relation	T11	T7	NoRel	true	levhasının	açacak
+Relation	T11	T9	NoRel	true	levhasının	deprem
+Relation	T12	T1	NoRel	true	inmekte	battığı
+Relation	T12	T15	NoRel	true	inmekte	Deprem
+Relation	T12	T16	NoRel	true	inmekte	kırık
+Relation	T13	T10	NoRel	true	birikene	gerektirir
+Relation	T13	T12	NoRel	true	birikene	inmekte
+Relation	T13	T5	NoRel	true	birikene	üretmektedir
+Relation	T14	T11	NoRel	true	oldu	levhasının
+Relation	T14	T2	NoRel	true	oldu	geldi
+Relation	T14	T4	NoRel	true	oldu	levhası
+Relation	T14	T5	NoRel	true	oldu	üretmektedir
+Relation	T14	T7	NoRel	true	oldu	açacak
+Relation	T14	T8	NoRel	true	oldu	iter
+Relation	T15	T12	NoRel	true	Deprem	inmekte
+Relation	T15	T13	NoRel	true	Deprem	birikene
+Relation	T15	T2	NoRel	true	Deprem	geldi
+Relation	T15	T3	NoRel	true	Deprem	hareket
+Relation	T15	T8	NoRel	true	Deprem	iter
+Relation	T15	T9	NoRel	true	Deprem	deprem
+Relation	T16	T11	NoRel	true	kırık	levhasının
+Relation	T16	T13	NoRel	true	kırık	birikene
+Relation	T16	T15	NoRel	true	kırık	Deprem
+Relation	T16	T3	NoRel	true	kırık	hareket
+Relation	T16	T7	NoRel	true	kırık	açacak
+Relation	T16	T8	NoRel	true	kırık	iter
+Relation	T2	T0	NoRel	true	geldi	Deprem
+Relation	T2	T12	NoRel	true	geldi	inmekte
+Relation	T2	T13	NoRel	true	geldi	birikene
+Relation	T2	T15	NoRel	true	geldi	Deprem
+Relation	T3	T13	NoRel	true	hareket	birikene
+Relation	T3	T6	NoRel	true	hareket	hareket
+Relation	T4	T0	NoRel	true	levhası	Deprem
+Relation	T4	T1	NoRel	true	levhası	battığı
+Relation	T4	T12	NoRel	true	levhası	inmekte
+Relation	T4	T2	NoRel	true	levhası	geldi
+Relation	T5	T1	NoRel	true	üretmektedir	battığı
+Relation	T5	T10	NoRel	true	üretmektedir	gerektirir
+Relation	T5	T14	NoRel	true	üretmektedir	oldu
+Relation	T5	T16	NoRel	true	üretmektedir	kırık
+Relation	T5	T4	NoRel	true	üretmektedir	levhası
+Relation	T5	T8	NoRel	true	üretmektedir	iter
+Relation	T6	T11	NoRel	true	hareket	levhasının
+Relation	T6	T15	NoRel	true	hareket	Deprem
+Relation	T6	T4	NoRel	true	hareket	levhası
+Relation	T6	T5	NoRel	true	hareket	üretmektedir
+Relation	T7	T0	NoRel	true	açacak	Deprem
+Relation	T7	T1	NoRel	true	açacak	battığı
+Relation	T7	T10	NoRel	true	açacak	gerektirir
+Relation	T7	T14	NoRel	true	açacak	oldu
+Relation	T7	T2	NoRel	true	açacak	geldi
+Relation	T7	T3	NoRel	true	açacak	hareket
+Relation	T7	T5	NoRel	true	açacak	üretmektedir
+Relation	T7	T8	NoRel	true	açacak	iter
+Relation	T8	T11	NoRel	true	iter	levhasının
+Relation	T8	T2	NoRel	true	iter	geldi
+Relation	T8	T4	NoRel	true	iter	levhası
+Relation	T9	T0	NoRel	true	deprem	Deprem
+Relation	T9	T11	NoRel	true	deprem	levhasının
+Relation	T9	T14	NoRel	true	deprem	oldu
+Relation	T9	T3	NoRel	true	deprem	hareket
+Relation	T9	T4	NoRel	true	deprem	levhası
+Relation	T9	T5	NoRel	true	deprem	üretmektedir
+Relation	T9	T7	NoRel	true	deprem	açacak

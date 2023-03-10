@@ -1,0 +1,38 @@
+Text	Korean Air also no longer flies to Paris Orly Airport .	The flight number for separate flight is 504 .	As of September 2020 , the destination is served using Boeing 777 - 200ER and Boeing 777 - 300ER .	- Aviation safety - List of accidents and incidents involving commercial aircraft - List of airliner shootdown incidents - Korean Air Lines Flight 007 another Korean Air Flight shot down by the Soviet Union after violating Soviet Airspace killing all 269 onboard	- Report on Aviation Safety Network - Black - and - white photographs of the KAL Boeing 707 wreckage - KAL 902 fails to appear on time , in Russian ( English translation )
+Event	T0	flies	EVENT	26
+Event	T1	flight	EVENT	87
+Event	T2	accidents	EVENT	230
+Event	T3	incidents	EVENT	313
+Event	T4	Flight	EVENT	342
+Event	T5	violating	EVENT	415
+Event	T6	killing	EVENT	441
+Event	T7	Report	EVENT	467
+Event	T8	wreckage	EVENT	557
+Event	T9	fails	EVENT	576
+Event	T11	served	EVENT	145
+Event	T12	shot down	EVENT	379
+Event	T10	translation	EVENT	623
+Relation	T5	T12	CauseEffect	true	violating	shot down
+Relation	T12	T5	EffectCause	true	shot down	violating
+Relation	T12	T6	CauseEffect	true	shot down	killing
+Relation	T6	T12	EffectCause	true	killing	shot down
+Relation	T0	T12	NoRel	true	flies	shot down
+Relation	T1	T5	NoRel	true	flight	violating
+Relation	T1	T6	NoRel	true	flight	killing
+Relation	T11	T10	NoRel	true	served	translation
+Relation	T11	T12	NoRel	true	served	shot down
+Relation	T11	T2	NoRel	true	served	accidents
+Relation	T12	T9	NoRel	true	shot down	fails
+Relation	T2	T11	NoRel	true	accidents	served
+Relation	T2	T6	NoRel	true	accidents	killing
+Relation	T3	T2	NoRel	true	incidents	accidents
+Relation	T5	T0	NoRel	true	violating	flies
+Relation	T5	T3	NoRel	true	violating	incidents
+Relation	T6	T0	NoRel	true	killing	flies
+Relation	T6	T10	NoRel	true	killing	translation
+Relation	T6	T2	NoRel	true	killing	accidents
+Relation	T6	T4	NoRel	true	killing	Flight
+Relation	T6	T9	NoRel	true	killing	fails
+Relation	T8	T1	NoRel	true	wreckage	flight
+Relation	T9	T6	NoRel	true	fails	killing
+Relation	T9	T8	NoRel	true	fails	wreckage

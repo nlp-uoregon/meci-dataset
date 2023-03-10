@@ -1,0 +1,91 @@
+Text	Polis telsizlerinden geçen anonslara göre kırmızı bir motosiklet ve Doğan model bir otomobil patlamadan hemen sonra olay yerinden hızla uzaklaşmıştır .	Ankara Valisi Kemal Önal'ın yaptığı açıklamada saldırıyı gerçekleştiren kişinin Sivas'ın Zara ilçesine bağlı Çaypınar nüfusuna kayıtlı , 1979 doğumlu Güven Akkuş olduğunu belirtmiştir .	Vali Önal , canlı bombanın kimliğinin kopan iki parmaktan saptandığını açıklamıştır .	Canlı bomba Güven Akkuş , geçmişte " yasa dışı afiş asmak , 1 Mayıs gösterileri sırasında polise mukavemet ve yasa dışı örgüt üyesi olmak "tan 1996 yılında tutuklanmış , iki yıl cezaevinde kalmış ve 1998 yılında tahliye edilmiştir .	Cezaevine girmeden önce Türkiye İhtilalci Komünistler Birliği üyesi olan Akkuş , tahliye olduktan sonra PKK'ya katılmış ve Kuzey Irak'ta canlı bomba olmaya karar vermiştir .
+Event	T0	patlamadan	EVENT	93
+Event	T1	uzaklaşmıştır	EVENT	136
+Event	T2	gerçekleştiren	EVENT	209
+Event	T3	belirtmiştir	EVENT	323
+Event	T4	açıklamıştır	EVENT	409
+Event	T5	asmak	EVENT	476
+Event	T6	tutuklanmış	EVENT	580
+Event	T7	kalmış	EVENT	613
+Event	T8	edilmiştir	EVENT	644
+Event	T9	tahliye	EVENT	738
+Event	T10	katılmış	EVENT	768
+Event	T11	açıklamada	EVENT	188
+Event	T12	mukavemet	EVENT	521
+Event	T13	olmak	EVENT	556
+Event	T14	vermiştir	EVENT	819
+Relation	T6	T7	CauseEffect	true	tutuklanmış	kalmış
+Relation	T7	T6	EffectCause	true	kalmış	tutuklanmış
+Relation	T5	T6	CauseEffect	true	asmak	tutuklanmış
+Relation	T6	T5	EffectCause	true	tutuklanmış	asmak
+Relation	T12	T6	CauseEffect	true	mukavemet	tutuklanmış
+Relation	T6	T12	EffectCause	true	tutuklanmış	mukavemet
+Relation	T13	T6	CauseEffect	true	olmak	tutuklanmış
+Relation	T6	T13	EffectCause	true	tutuklanmış	olmak
+Relation	T10	T14	CauseEffect	true	katılmış	vermiştir
+Relation	T14	T10	EffectCause	true	vermiştir	katılmış
+Relation	T14	T2	CauseEffect	true	vermiştir	gerçekleştiren
+Relation	T2	T14	EffectCause	true	gerçekleştiren	vermiştir
+Relation	T0	T12	NoRel	true	patlamadan	mukavemet
+Relation	T0	T3	NoRel	true	patlamadan	belirtmiştir
+Relation	T0	T5	NoRel	true	patlamadan	asmak
+Relation	T1	T4	NoRel	true	uzaklaşmıştır	açıklamıştır
+Relation	T1	T7	NoRel	true	uzaklaşmıştır	kalmış
+Relation	T1	T8	NoRel	true	uzaklaşmıştır	edilmiştir
+Relation	T10	T7	NoRel	true	katılmış	kalmış
+Relation	T11	T10	NoRel	true	açıklamada	katılmış
+Relation	T11	T12	NoRel	true	açıklamada	mukavemet
+Relation	T11	T13	NoRel	true	açıklamada	olmak
+Relation	T11	T3	NoRel	true	açıklamada	belirtmiştir
+Relation	T11	T4	NoRel	true	açıklamada	açıklamıştır
+Relation	T11	T5	NoRel	true	açıklamada	asmak
+Relation	T11	T8	NoRel	true	açıklamada	edilmiştir
+Relation	T11	T9	NoRel	true	açıklamada	tahliye
+Relation	T12	T1	NoRel	true	mukavemet	uzaklaşmıştır
+Relation	T12	T2	NoRel	true	mukavemet	gerçekleştiren
+Relation	T12	T4	NoRel	true	mukavemet	açıklamıştır
+Relation	T13	T10	NoRel	true	olmak	katılmış
+Relation	T13	T3	NoRel	true	olmak	belirtmiştir
+Relation	T13	T7	NoRel	true	olmak	kalmış
+Relation	T13	T9	NoRel	true	olmak	tahliye
+Relation	T14	T0	NoRel	true	vermiştir	patlamadan
+Relation	T14	T1	NoRel	true	vermiştir	uzaklaşmıştır
+Relation	T14	T5	NoRel	true	vermiştir	asmak
+Relation	T14	T8	NoRel	true	vermiştir	edilmiştir
+Relation	T14	T9	NoRel	true	vermiştir	tahliye
+Relation	T2	T1	NoRel	true	gerçekleştiren	uzaklaşmıştır
+Relation	T2	T12	NoRel	true	gerçekleştiren	mukavemet
+Relation	T2	T7	NoRel	true	gerçekleştiren	kalmış
+Relation	T2	T9	NoRel	true	gerçekleştiren	tahliye
+Relation	T3	T11	NoRel	true	belirtmiştir	açıklamada
+Relation	T3	T13	NoRel	true	belirtmiştir	olmak
+Relation	T3	T2	NoRel	true	belirtmiştir	gerçekleştiren
+Relation	T3	T7	NoRel	true	belirtmiştir	kalmış
+Relation	T4	T12	NoRel	true	açıklamıştır	mukavemet
+Relation	T4	T2	NoRel	true	açıklamıştır	gerçekleştiren
+Relation	T4	T3	NoRel	true	açıklamıştır	belirtmiştir
+Relation	T4	T5	NoRel	true	açıklamıştır	asmak
+Relation	T5	T3	NoRel	true	asmak	belirtmiştir
+Relation	T5	T9	NoRel	true	asmak	tahliye
+Relation	T6	T0	NoRel	true	tutuklanmış	patlamadan
+Relation	T6	T1	NoRel	true	tutuklanmış	uzaklaşmıştır
+Relation	T6	T10	NoRel	true	tutuklanmış	katılmış
+Relation	T6	T14	NoRel	true	tutuklanmış	vermiştir
+Relation	T6	T2	NoRel	true	tutuklanmış	gerçekleştiren
+Relation	T6	T9	NoRel	true	tutuklanmış	tahliye
+Relation	T7	T14	NoRel	true	kalmış	vermiştir
+Relation	T7	T2	NoRel	true	kalmış	gerçekleştiren
+Relation	T7	T3	NoRel	true	kalmış	belirtmiştir
+Relation	T7	T9	NoRel	true	kalmış	tahliye
+Relation	T8	T11	NoRel	true	edilmiştir	açıklamada
+Relation	T8	T13	NoRel	true	edilmiştir	olmak
+Relation	T8	T2	NoRel	true	edilmiştir	gerçekleştiren
+Relation	T8	T4	NoRel	true	edilmiştir	açıklamıştır
+Relation	T8	T6	NoRel	true	edilmiştir	tutuklanmış
+Relation	T9	T1	NoRel	true	tahliye	uzaklaşmıştır
+Relation	T9	T11	NoRel	true	tahliye	açıklamada
+Relation	T9	T13	NoRel	true	tahliye	olmak
+Relation	T9	T14	NoRel	true	tahliye	vermiştir
+Relation	T9	T2	NoRel	true	tahliye	gerçekleştiren
+Relation	T9	T5	NoRel	true	tahliye	asmak
+Relation	T9	T8	NoRel	true	tahliye	edilmiştir

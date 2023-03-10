@@ -1,0 +1,61 @@
+Text	Passageren Tom Burnett foretog flere opkald til sin kone fra klokken 09:30:32 fra række 24 og 25 , skønt han havde plads på række fire .	Han fortalte hende , at flyet var blevet kapret af mænd , der hævdede , at de havde en bombe om bord .	Han nævnte også , at en passager var blevet stukket med en kniv , og at han mente , at bombetruslen var en taktik fra kaprerne , så de kunne holde styr på passagererne .	I et af opkaldene fortalte Tom Burnetts kone ham om angrebene på World Trade Center i New York , hvorefter han svarede at flykaprerne " taler om , at få flyet til at styrte ned ...	Åh min Gud .
+Event	T0	foretog	EVENT	23
+Event	T1	opkald	EVENT	37
+Event	T2	fortalte	EVENT	141
+Event	T3	kapret	EVENT	178
+Event	T4	hævdede	EVENT	199
+Event	T5	nævnte	EVENT	244
+Event	T6	stukket	EVENT	284
+Event	T7	fortalte	EVENT	428
+Event	T8	angrebene	EVENT	462
+Event	T9	svarede	EVENT	521
+Event	T10	taler	EVENT	546
+Event	T11	bombetruslen	EVENT	327
+Relation	T1	T2	CauseEffect	true	opkald	fortalte
+Relation	T2	T1	EffectCause	true	fortalte	opkald
+Relation	T3	T1	CauseEffect	true	kapret	opkald
+Relation	T1	T3	EffectCause	true	opkald	kapret
+Relation	T2	T5	CauseEffect	true	fortalte	nævnte
+Relation	T5	T2	EffectCause	true	nævnte	fortalte
+Relation	T0	T1	NoRel	true	foretog	opkald
+Relation	T0	T4	NoRel	true	foretog	hævdede
+Relation	T1	T10	NoRel	true	opkald	taler
+Relation	T1	T11	NoRel	true	opkald	bombetruslen
+Relation	T1	T4	NoRel	true	opkald	hævdede
+Relation	T1	T7	NoRel	true	opkald	fortalte
+Relation	T1	T9	NoRel	true	opkald	svarede
+Relation	T10	T0	NoRel	true	taler	foretog
+Relation	T10	T2	NoRel	true	taler	fortalte
+Relation	T10	T4	NoRel	true	taler	hævdede
+Relation	T10	T7	NoRel	true	taler	fortalte
+Relation	T11	T0	NoRel	true	bombetruslen	foretog
+Relation	T11	T1	NoRel	true	bombetruslen	opkald
+Relation	T11	T5	NoRel	true	bombetruslen	nævnte
+Relation	T2	T11	NoRel	true	fortalte	bombetruslen
+Relation	T2	T3	NoRel	true	fortalte	kapret
+Relation	T2	T6	NoRel	true	fortalte	stukket
+Relation	T2	T7	NoRel	true	fortalte	fortalte
+Relation	T2	T9	NoRel	true	fortalte	svarede
+Relation	T3	T10	NoRel	true	kapret	taler
+Relation	T4	T1	NoRel	true	hævdede	opkald
+Relation	T4	T6	NoRel	true	hævdede	stukket
+Relation	T5	T0	NoRel	true	nævnte	foretog
+Relation	T5	T10	NoRel	true	nævnte	taler
+Relation	T5	T11	NoRel	true	nævnte	bombetruslen
+Relation	T5	T3	NoRel	true	nævnte	kapret
+Relation	T5	T4	NoRel	true	nævnte	hævdede
+Relation	T6	T1	NoRel	true	stukket	opkald
+Relation	T6	T2	NoRel	true	stukket	fortalte
+Relation	T6	T5	NoRel	true	stukket	nævnte
+Relation	T6	T7	NoRel	true	stukket	fortalte
+Relation	T6	T9	NoRel	true	stukket	svarede
+Relation	T7	T2	NoRel	true	fortalte	fortalte
+Relation	T7	T8	NoRel	true	fortalte	angrebene
+Relation	T8	T11	NoRel	true	angrebene	bombetruslen
+Relation	T8	T3	NoRel	true	angrebene	kapret
+Relation	T8	T4	NoRel	true	angrebene	hævdede
+Relation	T8	T7	NoRel	true	angrebene	fortalte
+Relation	T9	T1	NoRel	true	svarede	opkald
+Relation	T9	T2	NoRel	true	svarede	fortalte
+Relation	T9	T6	NoRel	true	svarede	stukket
+Relation	T9	T8	NoRel	true	svarede	angrebene

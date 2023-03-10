@@ -1,0 +1,30 @@
+Text	Fregatterne af Iver Huitfeldt-klassen bliver ligeledes udstyret med dette CIWS .	AK-230 har en rækkevidde på 2.500 meter og en maksimal_skudkadence på 2.000 skud i minuttet .	Phalanx CIWS har en rækkevidde på 3.500 meter og en skudkadence på 4.500 skud i minuttet .	Opgraderingen BLOCK 1B gør ifølge producenten Raytheon Phalanx CIWS i stand til at nedskyde missiler , der flyver med mach 2,4 eller mere .	Goalkeeper-systemet har en rækkevidde fra 350 til 1.500 meter med en skudkadence på 4.200 skud i minuttet .
+Event	T0	udstyret	EVENT	55
+Event	T1	skudkadence	EVENT	227
+Event	T2	skud	EVENT	248
+Event	T3	Opgraderingen	EVENT	266
+Event	T4	nedskyde	EVENT	349
+Event	T5	flyver	EVENT	373
+Event	T6	skudkadence	EVENT	475
+Event	T7	skud	EVENT	496
+Relation	T3	T4	CauseEffect	true	Opgraderingen	nedskyde
+Relation	T4	T3	EffectCause	true	nedskyde	Opgraderingen
+Relation	T0	T2	NoRel	true	udstyret	skud
+Relation	T0	T5	NoRel	true	udstyret	flyver
+Relation	T0	T6	NoRel	true	udstyret	skudkadence
+Relation	T1	T0	NoRel	true	skudkadence	udstyret
+Relation	T1	T4	NoRel	true	skudkadence	nedskyde
+Relation	T1	T7	NoRel	true	skudkadence	skud
+Relation	T2	T1	NoRel	true	skud	skudkadence
+Relation	T2	T3	NoRel	true	skud	Opgraderingen
+Relation	T2	T4	NoRel	true	skud	nedskyde
+Relation	T3	T0	NoRel	true	Opgraderingen	udstyret
+Relation	T3	T1	NoRel	true	Opgraderingen	skudkadence
+Relation	T3	T2	NoRel	true	Opgraderingen	skud
+Relation	T4	T0	NoRel	true	nedskyde	udstyret
+Relation	T4	T2	NoRel	true	nedskyde	skud
+Relation	T5	T0	NoRel	true	flyver	udstyret
+Relation	T5	T7	NoRel	true	flyver	skud
+Relation	T6	T1	NoRel	true	skudkadence	skudkadence
+Relation	T6	T7	NoRel	true	skudkadence	skud
+Relation	T7	T3	NoRel	true	skud	Opgraderingen

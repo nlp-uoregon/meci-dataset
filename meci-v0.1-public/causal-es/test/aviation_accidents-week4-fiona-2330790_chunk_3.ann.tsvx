@@ -1,0 +1,48 @@
+Text	Cuando estaban descendiendo , a aproximadamente 1950 pies ( casi 600 metros ) , el valor del radioaltímetro descendió a -8 pies .	El sistema del acelerador automático cambió al modo retardar , y las palancas de empuje se trasladaron a la posición de ralentí y se mantuvo en el modo de retraso .	Normalmente este modo se activa automáticamente durante el aterrizaje , justo antes de tocar tierra .	Los tres pilotos notaron esto al estar a 400 pies de altura ( 120 m )	Ahí el piloto automático fue desconectado y se intentó poner al avión en posición correcta , pero ya era demasiado tarde .
+Event	T0	descendiendo	EVENT	15
+Event	T1	descendió	EVENT	108
+Event	T2	cambió	EVENT	167
+Event	T3	ralentí	EVENT	250
+Event	T4	mantuvo	EVENT	263
+Event	T5	activa	EVENT	320
+Event	T6	aterrizaje	EVENT	354
+Event	T7	tocar	EVENT	382
+Event	T8	notaron	EVENT	414
+Event	T9	desconectado	EVENT	496
+Event	T10	poner	EVENT	522
+Relation	T8	T9	CauseEffect	true	notaron	desconectado
+Relation	T9	T8	EffectCause	true	desconectado	notaron
+Relation	T0	T2	NoRel	true	descendiendo	cambió
+Relation	T0	T4	NoRel	true	descendiendo	mantuvo
+Relation	T1	T10	NoRel	true	descendió	poner
+Relation	T1	T8	NoRel	true	descendió	notaron
+Relation	T1	T9	NoRel	true	descendió	desconectado
+Relation	T10	T2	NoRel	true	poner	cambió
+Relation	T10	T5	NoRel	true	poner	activa
+Relation	T10	T6	NoRel	true	poner	aterrizaje
+Relation	T10	T9	NoRel	true	poner	desconectado
+Relation	T2	T4	NoRel	true	cambió	mantuvo
+Relation	T2	T6	NoRel	true	cambió	aterrizaje
+Relation	T3	T0	NoRel	true	ralentí	descendiendo
+Relation	T3	T2	NoRel	true	ralentí	cambió
+Relation	T3	T8	NoRel	true	ralentí	notaron
+Relation	T3	T9	NoRel	true	ralentí	desconectado
+Relation	T4	T0	NoRel	true	mantuvo	descendiendo
+Relation	T4	T1	NoRel	true	mantuvo	descendió
+Relation	T4	T5	NoRel	true	mantuvo	activa
+Relation	T4	T8	NoRel	true	mantuvo	notaron
+Relation	T5	T4	NoRel	true	activa	mantuvo
+Relation	T5	T8	NoRel	true	activa	notaron
+Relation	T5	T9	NoRel	true	activa	desconectado
+Relation	T6	T1	NoRel	true	aterrizaje	descendió
+Relation	T6	T5	NoRel	true	aterrizaje	activa
+Relation	T6	T7	NoRel	true	aterrizaje	tocar
+Relation	T6	T8	NoRel	true	aterrizaje	notaron
+Relation	T7	T4	NoRel	true	tocar	mantuvo
+Relation	T8	T0	NoRel	true	notaron	descendiendo
+Relation	T8	T10	NoRel	true	notaron	poner
+Relation	T8	T5	NoRel	true	notaron	activa
+Relation	T8	T6	NoRel	true	notaron	aterrizaje
+Relation	T9	T10	NoRel	true	desconectado	poner
+Relation	T9	T3	NoRel	true	desconectado	ralentí
+Relation	T9	T6	NoRel	true	desconectado	aterrizaje

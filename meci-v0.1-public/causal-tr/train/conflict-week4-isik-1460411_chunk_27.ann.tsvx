@@ -1,0 +1,36 @@
+Text	Meclis binası Temmuz 1862'de Kutais Valisi tarafından bir çıkartma birliği tarafından yakıldı .	Bundan sonra Meclis toplantıları , Meclis Başkanı Karandıko Berzeg Hace'nin köyü olan _ Mutıhua _'da ( Мутыхуа'da , şimdiki ‘ Plastunki ’ köyünde ) yapılmaya başlandı .	Kbaade’de 1864 Mayıs ayında 20.000 yaralı ve yorgun Çerkes atlısından oluşan Çerkes ordusu ile Kozak atlıları , piyadeler ve topçulardan oluşan tam donanımlı 100.000 kişilik Rus ordusu arasında son bir savaş yaşandı .	Çerkes savaşçılar , teslim olmayı akıllarından bile geçirmeyeceklerini söyleyerek Rus ordusuna hücum etti ve hattı yarmaya çalıştı ancak çoğu Rus topçuları ve piyadeleri tarafından vuruldu .	Kalan savaşçılar militan olarak savaşmaya devam etti ve kısa süre içinde yenik düştü .
+Event	T0	yakıldı	EVENT	86
+Event	T1	yaşandı	EVENT	473
+Event	T3	etti	EVENT	584
+Event	T4	çalıştı	EVENT	606
+Event	T5	vuruldu	EVENT	664
+Event	T6	etti	EVENT	722
+Event	T7	düştü	EVENT	753
+Event	T8	başlandı	EVENT	254
+Event	T2	söyleyerek	EVENT	554
+Relation	T0	T8	CauseEffect	true	yakıldı	başlandı
+Relation	T8	T0	EffectCause	true	başlandı	yakıldı
+Relation	T2	T3	CauseEffect	true	söyleyerek	etti
+Relation	T3	T2	EffectCause	true	etti	söyleyerek
+Relation	T3	T4	CauseEffect	true	etti	çalıştı
+Relation	T4	T3	EffectCause	true	çalıştı	etti
+Relation	T4	T5	CauseEffect	true	çalıştı	vuruldu
+Relation	T5	T4	EffectCause	true	vuruldu	çalıştı
+Relation	T5	T7	CauseEffect	true	vuruldu	düştü
+Relation	T7	T5	EffectCause	true	düştü	vuruldu
+Relation	T0	T1	NoRel	true	yakıldı	yaşandı
+Relation	T1	T0	NoRel	true	yaşandı	yakıldı
+Relation	T1	T2	NoRel	true	yaşandı	söyleyerek
+Relation	T1	T5	NoRel	true	yaşandı	vuruldu
+Relation	T1	T6	NoRel	true	yaşandı	etti
+Relation	T1	T8	NoRel	true	yaşandı	başlandı
+Relation	T2	T4	NoRel	true	söyleyerek	çalıştı
+Relation	T3	T0	NoRel	true	etti	yakıldı
+Relation	T5	T1	NoRel	true	vuruldu	yaşandı
+Relation	T5	T8	NoRel	true	vuruldu	başlandı
+Relation	T6	T0	NoRel	true	etti	yakıldı
+Relation	T6	T2	NoRel	true	etti	söyleyerek
+Relation	T6	T3	NoRel	true	etti	etti
+Relation	T6	T5	NoRel	true	etti	vuruldu
+Relation	T7	T0	NoRel	true	düştü	yakıldı
+Relation	T7	T4	NoRel	true	düştü	çalıştı

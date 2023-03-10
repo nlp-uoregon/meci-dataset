@@ -1,0 +1,41 @@
+Text	The loss of Flight 44 - 2 also led to new airline safety rules .	The CAB issued a draft regulation on March 10 , 1952 , requiring that night visual flights on passenger planes in large aircraft be conducted only on designated routes and between airports equipped with radio communications .	- Aviation accidents and incidents - List of accidents and incidents involving airliners in the United States - List of accidents and incidents involving commercial aircraft	Category : Aviation accidents and incidents in the United States in 1951	Category : Airliner accidents and incidents in New York ( state )
+Event	T0	loss	EVENT	4
+Event	T1	Flight	EVENT	12
+Event	T2	issued	EVENT	73
+Event	T3	regulation	EVENT	88
+Event	T4	requiring	EVENT	120
+Event	T5	flights	EVENT	148
+Event	T6	conducted	EVENT	197
+Event	T7	accidents	EVENT	302
+Event	T8	incidents	EVENT	316
+Event	T9	accidents	EVENT	336
+Event	T10	accidents	EVENT	411
+Event	T11	accidents	EVENT	485
+Event	T12	incidents	EVENT	499
+Event	T13	accidents	EVENT	558
+Event	T14	incidents	EVENT	572
+Event	T15	led	EVENT	31
+Relation	T0	T15	CauseEffect	true	loss	led
+Relation	T15	T0	EffectCause	true	led	loss
+Relation	T0	T6	NoRel	true	loss	conducted
+Relation	T0	T8	NoRel	true	loss	incidents
+Relation	T0	T9	NoRel	true	loss	accidents
+Relation	T1	T2	NoRel	true	Flight	issued
+Relation	T1	T9	NoRel	true	Flight	accidents
+Relation	T10	T13	NoRel	true	accidents	accidents
+Relation	T10	T9	NoRel	true	accidents	accidents
+Relation	T11	T13	NoRel	true	accidents	accidents
+Relation	T11	T4	NoRel	true	accidents	requiring
+Relation	T11	T8	NoRel	true	accidents	incidents
+Relation	T13	T12	NoRel	true	accidents	incidents
+Relation	T14	T0	NoRel	true	incidents	loss
+Relation	T15	T3	NoRel	true	led	regulation
+Relation	T3	T0	NoRel	true	regulation	loss
+Relation	T5	T2	NoRel	true	flights	issued
+Relation	T6	T0	NoRel	true	conducted	loss
+Relation	T6	T11	NoRel	true	conducted	accidents
+Relation	T7	T5	NoRel	true	accidents	flights
+Relation	T7	T8	NoRel	true	accidents	incidents
+Relation	T7	T9	NoRel	true	accidents	accidents
+Relation	T8	T9	NoRel	true	incidents	accidents
+Relation	T9	T13	NoRel	true	accidents	accidents

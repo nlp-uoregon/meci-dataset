@@ -1,0 +1,206 @@
+Text	I 2009 fandt et udbrud af svineinfluenza sted i Mexico , og der er beviser for at Mexico allerede havde været i en epidemi i flere måneder før udbruddet blev erkendt .	Straks efter lukkede regeringen de fleste af Mexico Citys offentlige og private kontorer i et forsøg på at begrænse smitten .	Tidligt i juni mens virussen spredtes over hele verden udnævnte WHO den til en _ pandemi_ , men sagde samtidig , at de fleste sygdomstilfælde var af " moderat alvorlighed " .	På samme tidspunkt ændrede WHO sin definition fra 2003 af en _ pandemi_ , sådan at det ikke længere er en forudsætning at en virus forårsager et stort antal døde eller alvorligt syge , for at det skal kaldes en _ pandemi_ .	Det er nu tilstrækkeligt at der dukker et nyt virus op , som befolkningen ikke er immune overfor .
+Event	T0	fandt	EVENT	7
+Event	T1	udbrud	EVENT	16
+Event	T2	epidemi	EVENT	115
+Event	T3	udbruddet	EVENT	143
+Event	T4	erkendt	EVENT	158
+Event	T5	lukkede	EVENT	181
+Event	T6	forsøg	EVENT	262
+Event	T7	smitten	EVENT	284
+Event	T8	spredtes	EVENT	323
+Event	T9	udnævnte	EVENT	349
+Event	T10	sagde	EVENT	390
+Event	T11	sygdomstilfælde	EVENT	420
+Event	T12	ændrede	EVENT	488
+Event	T13	forårsager	EVENT	600
+Event	T14	døde	EVENT	626
+Event	T15	syge	EVENT	647
+Event	T16	dukker	EVENT	725
+Event	T17	svineinfluenza	EVENT	26
+Event	T18	pandemi_	EVENT	375
+Event	T19	pandemi_	EVENT	532
+Event	T20	virus	EVENT	594
+Event	T21	pandemi_	EVENT	682
+Event	T22	nyt virus	EVENT	735
+Event	T23	immune	EVENT	775
+Relation	T5	T7	CauseEffect	true	lukkede	smitten
+Relation	T7	T5	EffectCause	true	smitten	lukkede
+Relation	T6	T5	CauseEffect	true	forsøg	lukkede
+Relation	T5	T6	EffectCause	true	lukkede	forsøg
+Relation	T0	T1	NoRel	true	fandt	udbrud
+Relation	T0	T10	NoRel	true	fandt	sagde
+Relation	T0	T11	NoRel	true	fandt	sygdomstilfælde
+Relation	T0	T12	NoRel	true	fandt	ændrede
+Relation	T0	T13	NoRel	true	fandt	forårsager
+Relation	T0	T15	NoRel	true	fandt	syge
+Relation	T0	T17	NoRel	true	fandt	svineinfluenza
+Relation	T0	T2	NoRel	true	fandt	epidemi
+Relation	T0	T21	NoRel	true	fandt	pandemi_
+Relation	T0	T23	NoRel	true	fandt	immune
+Relation	T0	T6	NoRel	true	fandt	forsøg
+Relation	T0	T7	NoRel	true	fandt	smitten
+Relation	T0	T8	NoRel	true	fandt	spredtes
+Relation	T0	T9	NoRel	true	fandt	udnævnte
+Relation	T1	T11	NoRel	true	udbrud	sygdomstilfælde
+Relation	T1	T21	NoRel	true	udbrud	pandemi_
+Relation	T1	T22	NoRel	true	udbrud	nyt virus
+Relation	T1	T4	NoRel	true	udbrud	erkendt
+Relation	T1	T6	NoRel	true	udbrud	forsøg
+Relation	T1	T9	NoRel	true	udbrud	udnævnte
+Relation	T10	T12	NoRel	true	sagde	ændrede
+Relation	T10	T16	NoRel	true	sagde	dukker
+Relation	T10	T19	NoRel	true	sagde	pandemi_
+Relation	T10	T21	NoRel	true	sagde	pandemi_
+Relation	T10	T4	NoRel	true	sagde	erkendt
+Relation	T11	T10	NoRel	true	sygdomstilfælde	sagde
+Relation	T11	T17	NoRel	true	sygdomstilfælde	svineinfluenza
+Relation	T11	T18	NoRel	true	sygdomstilfælde	pandemi_
+Relation	T11	T20	NoRel	true	sygdomstilfælde	virus
+Relation	T11	T3	NoRel	true	sygdomstilfælde	udbruddet
+Relation	T12	T11	NoRel	true	ændrede	sygdomstilfælde
+Relation	T12	T15	NoRel	true	ændrede	syge
+Relation	T12	T17	NoRel	true	ændrede	svineinfluenza
+Relation	T12	T18	NoRel	true	ændrede	pandemi_
+Relation	T12	T23	NoRel	true	ændrede	immune
+Relation	T12	T3	NoRel	true	ændrede	udbruddet
+Relation	T12	T6	NoRel	true	ændrede	forsøg
+Relation	T12	T9	NoRel	true	ændrede	udnævnte
+Relation	T13	T1	NoRel	true	forårsager	udbrud
+Relation	T13	T10	NoRel	true	forårsager	sagde
+Relation	T13	T15	NoRel	true	forårsager	syge
+Relation	T13	T16	NoRel	true	forårsager	dukker
+Relation	T13	T5	NoRel	true	forårsager	lukkede
+Relation	T13	T8	NoRel	true	forårsager	spredtes
+Relation	T14	T15	NoRel	true	døde	syge
+Relation	T14	T16	NoRel	true	døde	dukker
+Relation	T14	T18	NoRel	true	døde	pandemi_
+Relation	T14	T19	NoRel	true	døde	pandemi_
+Relation	T14	T20	NoRel	true	døde	virus
+Relation	T14	T3	NoRel	true	døde	udbruddet
+Relation	T14	T4	NoRel	true	døde	erkendt
+Relation	T14	T7	NoRel	true	døde	smitten
+Relation	T14	T9	NoRel	true	døde	udnævnte
+Relation	T15	T1	NoRel	true	syge	udbrud
+Relation	T15	T14	NoRel	true	syge	døde
+Relation	T15	T16	NoRel	true	syge	dukker
+Relation	T15	T2	NoRel	true	syge	epidemi
+Relation	T15	T6	NoRel	true	syge	forsøg
+Relation	T15	T7	NoRel	true	syge	smitten
+Relation	T16	T0	NoRel	true	dukker	fandt
+Relation	T16	T11	NoRel	true	dukker	sygdomstilfælde
+Relation	T16	T15	NoRel	true	dukker	syge
+Relation	T16	T19	NoRel	true	dukker	pandemi_
+Relation	T16	T22	NoRel	true	dukker	nyt virus
+Relation	T16	T6	NoRel	true	dukker	forsøg
+Relation	T16	T7	NoRel	true	dukker	smitten
+Relation	T17	T0	NoRel	true	svineinfluenza	fandt
+Relation	T17	T10	NoRel	true	svineinfluenza	sagde
+Relation	T17	T12	NoRel	true	svineinfluenza	ændrede
+Relation	T17	T13	NoRel	true	svineinfluenza	forårsager
+Relation	T17	T2	NoRel	true	svineinfluenza	epidemi
+Relation	T17	T6	NoRel	true	svineinfluenza	forsøg
+Relation	T17	T8	NoRel	true	svineinfluenza	spredtes
+Relation	T18	T1	NoRel	true	pandemi_	udbrud
+Relation	T18	T14	NoRel	true	pandemi_	døde
+Relation	T18	T2	NoRel	true	pandemi_	epidemi
+Relation	T18	T20	NoRel	true	pandemi_	virus
+Relation	T18	T21	NoRel	true	pandemi_	pandemi_
+Relation	T18	T22	NoRel	true	pandemi_	nyt virus
+Relation	T18	T3	NoRel	true	pandemi_	udbruddet
+Relation	T18	T9	NoRel	true	pandemi_	udnævnte
+Relation	T19	T12	NoRel	true	pandemi_	ændrede
+Relation	T19	T13	NoRel	true	pandemi_	forårsager
+Relation	T19	T16	NoRel	true	pandemi_	dukker
+Relation	T19	T18	NoRel	true	pandemi_	pandemi_
+Relation	T19	T20	NoRel	true	pandemi_	virus
+Relation	T19	T6	NoRel	true	pandemi_	forsøg
+Relation	T19	T9	NoRel	true	pandemi_	udnævnte
+Relation	T2	T0	NoRel	true	epidemi	fandt
+Relation	T2	T15	NoRel	true	epidemi	syge
+Relation	T2	T20	NoRel	true	epidemi	virus
+Relation	T2	T7	NoRel	true	epidemi	smitten
+Relation	T2	T8	NoRel	true	epidemi	spredtes
+Relation	T2	T9	NoRel	true	epidemi	udnævnte
+Relation	T20	T0	NoRel	true	virus	fandt
+Relation	T20	T13	NoRel	true	virus	forårsager
+Relation	T20	T16	NoRel	true	virus	dukker
+Relation	T20	T2	NoRel	true	virus	epidemi
+Relation	T20	T21	NoRel	true	virus	pandemi_
+Relation	T20	T22	NoRel	true	virus	nyt virus
+Relation	T20	T7	NoRel	true	virus	smitten
+Relation	T20	T8	NoRel	true	virus	spredtes
+Relation	T21	T14	NoRel	true	pandemi_	døde
+Relation	T21	T15	NoRel	true	pandemi_	syge
+Relation	T21	T17	NoRel	true	pandemi_	svineinfluenza
+Relation	T21	T18	NoRel	true	pandemi_	pandemi_
+Relation	T21	T19	NoRel	true	pandemi_	pandemi_
+Relation	T21	T22	NoRel	true	pandemi_	nyt virus
+Relation	T22	T0	NoRel	true	nyt virus	fandt
+Relation	T22	T1	NoRel	true	nyt virus	udbrud
+Relation	T22	T12	NoRel	true	nyt virus	ændrede
+Relation	T22	T14	NoRel	true	nyt virus	døde
+Relation	T22	T15	NoRel	true	nyt virus	syge
+Relation	T22	T2	NoRel	true	nyt virus	epidemi
+Relation	T22	T21	NoRel	true	nyt virus	pandemi_
+Relation	T22	T4	NoRel	true	nyt virus	erkendt
+Relation	T22	T5	NoRel	true	nyt virus	lukkede
+Relation	T22	T8	NoRel	true	nyt virus	spredtes
+Relation	T23	T10	NoRel	true	immune	sagde
+Relation	T23	T11	NoRel	true	immune	sygdomstilfælde
+Relation	T23	T12	NoRel	true	immune	ændrede
+Relation	T23	T2	NoRel	true	immune	epidemi
+Relation	T23	T20	NoRel	true	immune	virus
+Relation	T23	T4	NoRel	true	immune	erkendt
+Relation	T23	T5	NoRel	true	immune	lukkede
+Relation	T23	T7	NoRel	true	immune	smitten
+Relation	T23	T9	NoRel	true	immune	udnævnte
+Relation	T3	T0	NoRel	true	udbruddet	fandt
+Relation	T3	T11	NoRel	true	udbruddet	sygdomstilfælde
+Relation	T3	T12	NoRel	true	udbruddet	ændrede
+Relation	T3	T21	NoRel	true	udbruddet	pandemi_
+Relation	T3	T5	NoRel	true	udbruddet	lukkede
+Relation	T3	T9	NoRel	true	udbruddet	udnævnte
+Relation	T4	T10	NoRel	true	erkendt	sagde
+Relation	T4	T13	NoRel	true	erkendt	forårsager
+Relation	T4	T14	NoRel	true	erkendt	døde
+Relation	T4	T19	NoRel	true	erkendt	pandemi_
+Relation	T4	T21	NoRel	true	erkendt	pandemi_
+Relation	T4	T23	NoRel	true	erkendt	immune
+Relation	T4	T6	NoRel	true	erkendt	forsøg
+Relation	T5	T15	NoRel	true	lukkede	syge
+Relation	T5	T4	NoRel	true	lukkede	erkendt
+Relation	T5	T8	NoRel	true	lukkede	spredtes
+Relation	T6	T11	NoRel	true	forsøg	sygdomstilfælde
+Relation	T6	T22	NoRel	true	forsøg	nyt virus
+Relation	T6	T23	NoRel	true	forsøg	immune
+Relation	T6	T3	NoRel	true	forsøg	udbruddet
+Relation	T6	T8	NoRel	true	forsøg	spredtes
+Relation	T7	T0	NoRel	true	smitten	fandt
+Relation	T7	T10	NoRel	true	smitten	sagde
+Relation	T7	T11	NoRel	true	smitten	sygdomstilfælde
+Relation	T7	T19	NoRel	true	smitten	pandemi_
+Relation	T7	T22	NoRel	true	smitten	nyt virus
+Relation	T7	T3	NoRel	true	smitten	udbruddet
+Relation	T7	T4	NoRel	true	smitten	erkendt
+Relation	T8	T10	NoRel	true	spredtes	sagde
+Relation	T8	T11	NoRel	true	spredtes	sygdomstilfælde
+Relation	T8	T14	NoRel	true	spredtes	døde
+Relation	T8	T16	NoRel	true	spredtes	dukker
+Relation	T8	T18	NoRel	true	spredtes	pandemi_
+Relation	T8	T19	NoRel	true	spredtes	pandemi_
+Relation	T8	T23	NoRel	true	spredtes	immune
+Relation	T8	T3	NoRel	true	spredtes	udbruddet
+Relation	T8	T6	NoRel	true	spredtes	forsøg
+Relation	T9	T0	NoRel	true	udnævnte	fandt
+Relation	T9	T1	NoRel	true	udnævnte	udbrud
+Relation	T9	T10	NoRel	true	udnævnte	sagde
+Relation	T9	T12	NoRel	true	udnævnte	ændrede
+Relation	T9	T15	NoRel	true	udnævnte	syge
+Relation	T9	T16	NoRel	true	udnævnte	dukker
+Relation	T9	T19	NoRel	true	udnævnte	pandemi_
+Relation	T9	T2	NoRel	true	udnævnte	epidemi
+Relation	T9	T20	NoRel	true	udnævnte	virus
+Relation	T9	T21	NoRel	true	udnævnte	pandemi_
+Relation	T9	T5	NoRel	true	udnævnte	lukkede
+Relation	T9	T7	NoRel	true	udnævnte	smitten
+Relation	T9	T8	NoRel	true	udnævnte	spredtes

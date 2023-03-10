@@ -1,0 +1,67 @@
+Text	- 9 de agosto de 1970 .	Entre las estaciones de Urdúliz y Plencia , en la línea suburbana que une Bilbao con la última localidad citada , se produce el accidente ferroviario más grave ocurrido en la vía estrecha española , al chocar frontalmente un tren atestado de viajeros con otro que circulaba vacío .	Murieron 33 personas y 165 resultaron heridas .	- El 11 de septiembre de 1971 , un balance de 6 muertos y 22 heridos es el resultado del choque entre un talgo que cubría el trayecto Madrid-Málaga y un tren mercancías entre Marmolejo y Arjonilla , en la provincia de Jaén .	- 8 de enero de 1972 .
+Event	T0	produce	EVENT	141
+Event	T1	ocurrido	EVENT	184
+Event	T2	chocar	EVENT	226
+Event	T3	atestado	EVENT	254
+Event	T4	Murieron	EVENT	306
+Event	T5	heridas	EVENT	344
+Event	T6	balance	EVENT	389
+Event	T7	muertos	EVENT	402
+Event	T8	resultado	EVENT	429
+Event	T9	choque	EVENT	443
+Event	T10	cubría	EVENT	469
+Event	T11	accidente	EVENT	152
+Relation	T2	T11	CauseEffect	true	chocar	accidente
+Relation	T11	T2	EffectCause	true	accidente	chocar
+Relation	T11	T4	CauseEffect	true	accidente	Murieron
+Relation	T4	T11	EffectCause	true	Murieron	accidente
+Relation	T11	T5	CauseEffect	true	accidente	heridas
+Relation	T5	T11	EffectCause	true	heridas	accidente
+Relation	T0	T4	NoRel	true	produce	Murieron
+Relation	T0	T7	NoRel	true	produce	muertos
+Relation	T1	T10	NoRel	true	ocurrido	cubría
+Relation	T1	T2	NoRel	true	ocurrido	chocar
+Relation	T1	T3	NoRel	true	ocurrido	atestado
+Relation	T1	T4	NoRel	true	ocurrido	Murieron
+Relation	T1	T5	NoRel	true	ocurrido	heridas
+Relation	T1	T6	NoRel	true	ocurrido	balance
+Relation	T10	T0	NoRel	true	cubría	produce
+Relation	T10	T1	NoRel	true	cubría	ocurrido
+Relation	T10	T2	NoRel	true	cubría	chocar
+Relation	T10	T3	NoRel	true	cubría	atestado
+Relation	T10	T8	NoRel	true	cubría	resultado
+Relation	T11	T1	NoRel	true	accidente	ocurrido
+Relation	T11	T10	NoRel	true	accidente	cubría
+Relation	T11	T3	NoRel	true	accidente	atestado
+Relation	T11	T7	NoRel	true	accidente	muertos
+Relation	T11	T8	NoRel	true	accidente	resultado
+Relation	T11	T9	NoRel	true	accidente	choque
+Relation	T2	T0	NoRel	true	chocar	produce
+Relation	T2	T10	NoRel	true	chocar	cubría
+Relation	T3	T0	NoRel	true	atestado	produce
+Relation	T3	T10	NoRel	true	atestado	cubría
+Relation	T3	T11	NoRel	true	atestado	accidente
+Relation	T3	T7	NoRel	true	atestado	muertos
+Relation	T4	T0	NoRel	true	Murieron	produce
+Relation	T4	T1	NoRel	true	Murieron	ocurrido
+Relation	T4	T2	NoRel	true	Murieron	chocar
+Relation	T4	T5	NoRel	true	Murieron	heridas
+Relation	T4	T6	NoRel	true	Murieron	balance
+Relation	T4	T8	NoRel	true	Murieron	resultado
+Relation	T4	T9	NoRel	true	Murieron	choque
+Relation	T5	T3	NoRel	true	heridas	atestado
+Relation	T5	T8	NoRel	true	heridas	resultado
+Relation	T6	T10	NoRel	true	balance	cubría
+Relation	T6	T3	NoRel	true	balance	atestado
+Relation	T7	T1	NoRel	true	muertos	ocurrido
+Relation	T7	T10	NoRel	true	muertos	cubría
+Relation	T7	T11	NoRel	true	muertos	accidente
+Relation	T7	T8	NoRel	true	muertos	resultado
+Relation	T8	T1	NoRel	true	resultado	ocurrido
+Relation	T8	T2	NoRel	true	resultado	chocar
+Relation	T8	T7	NoRel	true	resultado	muertos
+Relation	T8	T9	NoRel	true	resultado	choque
+Relation	T9	T10	NoRel	true	choque	cubría
+Relation	T9	T2	NoRel	true	choque	chocar
+Relation	T9	T3	NoRel	true	choque	atestado
+Relation	T9	T5	NoRel	true	choque	heridas

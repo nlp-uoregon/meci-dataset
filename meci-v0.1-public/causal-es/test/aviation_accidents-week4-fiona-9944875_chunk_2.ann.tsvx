@@ -1,0 +1,143 @@
+Text	La Autoridad General de Aviación Civil abrió una investigación sobre el accidente .	El informe final encontró que la causa del accidente fue que el avión aterrizó con demasiada fuerza , lo que provocó que rebotara en la pista .	La tripulación no reconoció el rebote y reaccionó de una manera que hizo que el avión rebotara aún más fuerte .	El tercer y último aterrizaje fue tan duro que el fuselaje se rompió y el avión se estrelló .	Antes de este accidente , hubo otros 29 aterrizajes bruscos con rebotes o severos con aviones MD-11 que causaron daños sustanciales .
+Event	T0	abrió	EVENT	39
+Event	T1	investigación	EVENT	49
+Event	T2	accidente	EVENT	72
+Event	T3	informe	EVENT	87
+Event	T4	encontró	EVENT	101
+Event	T5	accidente	EVENT	127
+Event	T6	aterrizó	EVENT	154
+Event	T7	provocó	EVENT	193
+Event	T8	rebotara	EVENT	205
+Event	T9	reconoció	EVENT	246
+Event	T10	rebote	EVENT	259
+Event	T11	reaccionó	EVENT	268
+Event	T12	hizo	EVENT	296
+Event	T13	rebotara	EVENT	314
+Event	T14	fue	EVENT	370
+Event	T15	rompió	EVENT	402
+Event	T16	estrelló	EVENT	423
+Event	T17	accidente	EVENT	448
+Event	T18	bruscos	EVENT	486
+Event	T19	rebotes	EVENT	498
+Relation	T8	T15	CauseEffect	true	rebotara	rompió
+Relation	T15	T8	EffectCause	true	rompió	rebotara
+Relation	T15	T16	CauseEffect	true	rompió	estrelló
+Relation	T16	T15	EffectCause	true	estrelló	rompió
+Relation	T16	T17	CauseEffect	true	estrelló	accidente
+Relation	T17	T16	EffectCause	true	accidente	estrelló
+Relation	T0	T14	NoRel	true	abrió	fue
+Relation	T0	T15	NoRel	true	abrió	rompió
+Relation	T0	T6	NoRel	true	abrió	aterrizó
+Relation	T1	T0	NoRel	true	investigación	abrió
+Relation	T1	T10	NoRel	true	investigación	rebote
+Relation	T1	T11	NoRel	true	investigación	reaccionó
+Relation	T1	T12	NoRel	true	investigación	hizo
+Relation	T1	T15	NoRel	true	investigación	rompió
+Relation	T1	T19	NoRel	true	investigación	rebotes
+Relation	T1	T6	NoRel	true	investigación	aterrizó
+Relation	T1	T7	NoRel	true	investigación	provocó
+Relation	T10	T13	NoRel	true	rebote	rebotara
+Relation	T10	T2	NoRel	true	rebote	accidente
+Relation	T10	T9	NoRel	true	rebote	reconoció
+Relation	T11	T14	NoRel	true	reaccionó	fue
+Relation	T11	T5	NoRel	true	reaccionó	accidente
+Relation	T12	T1	NoRel	true	hizo	investigación
+Relation	T12	T11	NoRel	true	hizo	reaccionó
+Relation	T12	T19	NoRel	true	hizo	rebotes
+Relation	T12	T4	NoRel	true	hizo	encontró
+Relation	T13	T1	NoRel	true	rebotara	investigación
+Relation	T13	T10	NoRel	true	rebotara	rebote
+Relation	T13	T18	NoRel	true	rebotara	bruscos
+Relation	T13	T19	NoRel	true	rebotara	rebotes
+Relation	T13	T4	NoRel	true	rebotara	encontró
+Relation	T13	T8	NoRel	true	rebotara	rebotara
+Relation	T14	T10	NoRel	true	fue	rebote
+Relation	T14	T13	NoRel	true	fue	rebotara
+Relation	T14	T15	NoRel	true	fue	rompió
+Relation	T14	T17	NoRel	true	fue	accidente
+Relation	T14	T2	NoRel	true	fue	accidente
+Relation	T14	T4	NoRel	true	fue	encontró
+Relation	T14	T8	NoRel	true	fue	rebotara
+Relation	T15	T0	NoRel	true	rompió	abrió
+Relation	T15	T1	NoRel	true	rompió	investigación
+Relation	T15	T13	NoRel	true	rompió	rebotara
+Relation	T15	T19	NoRel	true	rompió	rebotes
+Relation	T15	T6	NoRel	true	rompió	aterrizó
+Relation	T16	T0	NoRel	true	estrelló	abrió
+Relation	T16	T1	NoRel	true	estrelló	investigación
+Relation	T16	T12	NoRel	true	estrelló	hizo
+Relation	T16	T13	NoRel	true	estrelló	rebotara
+Relation	T16	T14	NoRel	true	estrelló	fue
+Relation	T16	T19	NoRel	true	estrelló	rebotes
+Relation	T16	T2	NoRel	true	estrelló	accidente
+Relation	T16	T4	NoRel	true	estrelló	encontró
+Relation	T16	T5	NoRel	true	estrelló	accidente
+Relation	T16	T6	NoRel	true	estrelló	aterrizó
+Relation	T16	T8	NoRel	true	estrelló	rebotara
+Relation	T16	T9	NoRel	true	estrelló	reconoció
+Relation	T17	T1	NoRel	true	accidente	investigación
+Relation	T17	T12	NoRel	true	accidente	hizo
+Relation	T17	T13	NoRel	true	accidente	rebotara
+Relation	T17	T14	NoRel	true	accidente	fue
+Relation	T17	T15	NoRel	true	accidente	rompió
+Relation	T17	T19	NoRel	true	accidente	rebotes
+Relation	T17	T3	NoRel	true	accidente	informe
+Relation	T17	T6	NoRel	true	accidente	aterrizó
+Relation	T17	T7	NoRel	true	accidente	provocó
+Relation	T18	T13	NoRel	true	bruscos	rebotara
+Relation	T18	T15	NoRel	true	bruscos	rompió
+Relation	T18	T16	NoRel	true	bruscos	estrelló
+Relation	T18	T7	NoRel	true	bruscos	provocó
+Relation	T18	T9	NoRel	true	bruscos	reconoció
+Relation	T19	T11	NoRel	true	rebotes	reaccionó
+Relation	T19	T12	NoRel	true	rebotes	hizo
+Relation	T19	T18	NoRel	true	rebotes	bruscos
+Relation	T19	T4	NoRel	true	rebotes	encontró
+Relation	T19	T9	NoRel	true	rebotes	reconoció
+Relation	T2	T10	NoRel	true	accidente	rebote
+Relation	T2	T11	NoRel	true	accidente	reaccionó
+Relation	T2	T18	NoRel	true	accidente	bruscos
+Relation	T2	T3	NoRel	true	accidente	informe
+Relation	T2	T9	NoRel	true	accidente	reconoció
+Relation	T3	T11	NoRel	true	informe	reaccionó
+Relation	T3	T15	NoRel	true	informe	rompió
+Relation	T3	T17	NoRel	true	informe	accidente
+Relation	T3	T19	NoRel	true	informe	rebotes
+Relation	T3	T4	NoRel	true	informe	encontró
+Relation	T3	T6	NoRel	true	informe	aterrizó
+Relation	T3	T8	NoRel	true	informe	rebotara
+Relation	T4	T10	NoRel	true	encontró	rebote
+Relation	T4	T17	NoRel	true	encontró	accidente
+Relation	T4	T18	NoRel	true	encontró	bruscos
+Relation	T4	T19	NoRel	true	encontró	rebotes
+Relation	T4	T5	NoRel	true	encontró	accidente
+Relation	T5	T1	NoRel	true	accidente	investigación
+Relation	T5	T10	NoRel	true	accidente	rebote
+Relation	T5	T14	NoRel	true	accidente	fue
+Relation	T5	T2	NoRel	true	accidente	accidente
+Relation	T5	T8	NoRel	true	accidente	rebotara
+Relation	T6	T11	NoRel	true	aterrizó	reaccionó
+Relation	T6	T15	NoRel	true	aterrizó	rompió
+Relation	T6	T17	NoRel	true	aterrizó	accidente
+Relation	T6	T18	NoRel	true	aterrizó	bruscos
+Relation	T6	T2	NoRel	true	aterrizó	accidente
+Relation	T6	T8	NoRel	true	aterrizó	rebotara
+Relation	T7	T12	NoRel	true	provocó	hizo
+Relation	T7	T14	NoRel	true	provocó	fue
+Relation	T7	T15	NoRel	true	provocó	rompió
+Relation	T7	T19	NoRel	true	provocó	rebotes
+Relation	T7	T3	NoRel	true	provocó	informe
+Relation	T7	T5	NoRel	true	provocó	accidente
+Relation	T7	T9	NoRel	true	provocó	reconoció
+Relation	T8	T0	NoRel	true	rebotara	abrió
+Relation	T8	T12	NoRel	true	rebotara	hizo
+Relation	T8	T13	NoRel	true	rebotara	rebotara
+Relation	T8	T14	NoRel	true	rebotara	fue
+Relation	T8	T2	NoRel	true	rebotara	accidente
+Relation	T8	T5	NoRel	true	rebotara	accidente
+Relation	T8	T6	NoRel	true	rebotara	aterrizó
+Relation	T8	T9	NoRel	true	rebotara	reconoció
+Relation	T9	T1	NoRel	true	reconoció	investigación
+Relation	T9	T11	NoRel	true	reconoció	reaccionó
+Relation	T9	T17	NoRel	true	reconoció	accidente
+Relation	T9	T4	NoRel	true	reconoció	encontró

@@ -1,0 +1,124 @@
+Text	The trial was scheduled to begin in September 2017 , but it was delayed because Bertoldi was serving a sentence in a French prison for kidnapping and could not be extradited .	Bertoldi admitted to having received diamonds stolen in the robbery , but denied any involvement .	In May 2018 , 18 of those tried in connection to the heist were acquitted .	The case against Bertoldi , the suspected mastermind , was yet to be heard , pending the outcome of his appeal over his kidnapping conviction .	In June 2019 , the correctional tribunal of Brussels sentenced Bertoldi to five years of imprisonment and a fine for being a co-conspirator in the heist , for being part of a criminal organisation and for money laundering .
+Event	T0	trial	EVENT	4
+Event	T1	scheduled	EVENT	14
+Event	T2	begin	EVENT	27
+Event	T3	delayed	EVENT	64
+Event	T4	serving	EVENT	93
+Event	T5	sentence	EVENT	103
+Event	T6	kidnapping	EVENT	135
+Event	T7	extradited	EVENT	163
+Event	T8	admitted	EVENT	185
+Event	T9	received	EVENT	204
+Event	T10	stolen	EVENT	222
+Event	T11	robbery	EVENT	236
+Event	T12	denied	EVENT	250
+Event	T13	involvement	EVENT	261
+Event	T14	tried	EVENT	301
+Event	T15	heist	EVENT	328
+Event	T16	acquitted	EVENT	339
+Event	T17	case	EVENT	355
+Event	T18	heard	EVENT	420
+Event	T19	outcome	EVENT	440
+Event	T20	appeal	EVENT	455
+Event	T21	conviction	EVENT	482
+Event	T22	sentenced	EVENT	548
+Event	T23	imprisonment	EVENT	584
+Event	T24	fine	EVENT	603
+Event	T25	heist	EVENT	642
+Event	T26	laundering	EVENT	706
+Event	T27	criminal	EVENT	670
+Relation	T4	T3	CauseEffect	true	serving	delayed
+Relation	T3	T4	EffectCause	true	delayed	serving
+Relation	T6	T4	CauseEffect	true	kidnapping	serving
+Relation	T4	T6	EffectCause	true	serving	kidnapping
+Relation	T9	T8	CauseEffect	true	received	admitted
+Relation	T8	T9	EffectCause	true	admitted	received
+Relation	T25	T23	CauseEffect	true	heist	imprisonment
+Relation	T23	T25	EffectCause	true	imprisonment	heist
+Relation	T25	T24	CauseEffect	true	heist	fine
+Relation	T24	T25	EffectCause	true	fine	heist
+Relation	T27	T23	CauseEffect	true	criminal	imprisonment
+Relation	T23	T27	EffectCause	true	imprisonment	criminal
+Relation	T26	T23	CauseEffect	true	laundering	imprisonment
+Relation	T23	T26	EffectCause	true	imprisonment	laundering
+Relation	T27	T24	CauseEffect	true	criminal	fine
+Relation	T24	T27	EffectCause	true	fine	criminal
+Relation	T26	T24	CauseEffect	true	laundering	fine
+Relation	T24	T26	EffectCause	true	fine	laundering
+Relation	T0	T2	NoRel	true	trial	begin
+Relation	T1	T10	NoRel	true	scheduled	stolen
+Relation	T1	T14	NoRel	true	scheduled	tried
+Relation	T1	T2	NoRel	true	scheduled	begin
+Relation	T1	T23	NoRel	true	scheduled	imprisonment
+Relation	T1	T26	NoRel	true	scheduled	laundering
+Relation	T10	T0	NoRel	true	stolen	trial
+Relation	T10	T11	NoRel	true	stolen	robbery
+Relation	T10	T24	NoRel	true	stolen	fine
+Relation	T11	T24	NoRel	true	robbery	fine
+Relation	T12	T10	NoRel	true	denied	stolen
+Relation	T12	T11	NoRel	true	denied	robbery
+Relation	T12	T13	NoRel	true	denied	involvement
+Relation	T12	T18	NoRel	true	denied	heard
+Relation	T12	T19	NoRel	true	denied	outcome
+Relation	T12	T26	NoRel	true	denied	laundering
+Relation	T13	T10	NoRel	true	involvement	stolen
+Relation	T13	T23	NoRel	true	involvement	imprisonment
+Relation	T13	T24	NoRel	true	involvement	fine
+Relation	T13	T27	NoRel	true	involvement	criminal
+Relation	T14	T12	NoRel	true	tried	denied
+Relation	T14	T4	NoRel	true	tried	serving
+Relation	T14	T8	NoRel	true	tried	admitted
+Relation	T14	T9	NoRel	true	tried	received
+Relation	T15	T0	NoRel	true	heist	trial
+Relation	T15	T2	NoRel	true	heist	begin
+Relation	T15	T23	NoRel	true	heist	imprisonment
+Relation	T15	T6	NoRel	true	heist	kidnapping
+Relation	T16	T18	NoRel	true	acquitted	heard
+Relation	T16	T23	NoRel	true	acquitted	imprisonment
+Relation	T16	T8	NoRel	true	acquitted	admitted
+Relation	T17	T26	NoRel	true	case	laundering
+Relation	T18	T21	NoRel	true	heard	conviction
+Relation	T18	T24	NoRel	true	heard	fine
+Relation	T18	T27	NoRel	true	heard	criminal
+Relation	T19	T12	NoRel	true	outcome	denied
+Relation	T19	T2	NoRel	true	outcome	begin
+Relation	T19	T20	NoRel	true	outcome	appeal
+Relation	T19	T7	NoRel	true	outcome	extradited
+Relation	T19	T8	NoRel	true	outcome	admitted
+Relation	T2	T16	NoRel	true	begin	acquitted
+Relation	T20	T14	NoRel	true	appeal	tried
+Relation	T20	T17	NoRel	true	appeal	case
+Relation	T20	T5	NoRel	true	appeal	sentence
+Relation	T21	T17	NoRel	true	conviction	case
+Relation	T22	T16	NoRel	true	sentenced	acquitted
+Relation	T22	T17	NoRel	true	sentenced	case
+Relation	T22	T27	NoRel	true	sentenced	criminal
+Relation	T23	T13	NoRel	true	imprisonment	involvement
+Relation	T24	T10	NoRel	true	fine	stolen
+Relation	T25	T0	NoRel	true	heist	trial
+Relation	T25	T1	NoRel	true	heist	scheduled
+Relation	T25	T15	NoRel	true	heist	heist
+Relation	T25	T19	NoRel	true	heist	outcome
+Relation	T26	T1	NoRel	true	laundering	scheduled
+Relation	T26	T18	NoRel	true	laundering	heard
+Relation	T26	T5	NoRel	true	laundering	sentence
+Relation	T27	T0	NoRel	true	criminal	trial
+Relation	T27	T22	NoRel	true	criminal	sentenced
+Relation	T27	T5	NoRel	true	criminal	sentence
+Relation	T3	T17	NoRel	true	delayed	case
+Relation	T3	T18	NoRel	true	delayed	heard
+Relation	T3	T22	NoRel	true	delayed	sentenced
+Relation	T4	T24	NoRel	true	serving	fine
+Relation	T5	T1	NoRel	true	sentence	scheduled
+Relation	T5	T18	NoRel	true	sentence	heard
+Relation	T5	T4	NoRel	true	sentence	serving
+Relation	T6	T12	NoRel	true	kidnapping	denied
+Relation	T7	T11	NoRel	true	extradited	robbery
+Relation	T7	T12	NoRel	true	extradited	denied
+Relation	T7	T2	NoRel	true	extradited	begin
+Relation	T7	T25	NoRel	true	extradited	heist
+Relation	T8	T16	NoRel	true	admitted	acquitted
+Relation	T8	T25	NoRel	true	admitted	heist
+Relation	T9	T0	NoRel	true	received	trial
+Relation	T9	T16	NoRel	true	received	acquitted
+Relation	T9	T18	NoRel	true	received	heard

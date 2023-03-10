@@ -1,0 +1,39 @@
+Text	GERMANWINGS FLIGHT 9525 ( 4U9525 ) var en planlagt flyvning fra Barcelona til Düsseldorf fløjet af Germanwings , et lavprisselskab ejet af Lufthansa .	Den 24. marts 2015 forulykkede flyet , en Airbus A320-211 med registreringsnummer D-AIPX , nær byen Prads-Haute-Bléone cirka 30 km ( 19 mil ) nordøst fra Digne-Les-Bains i de Franske alper og omkring 100 kilometer ( 62 mil ) nord for Nice med 144 passagerer og seks besætningsmedlemmer ombord .	Alle ombordværende er bekræftet omkommet .	Baseret på information modtaget fra radarovervågning steg flyet efter start til sin planlagte flyvehøjde .	Kort tid efter at flyet nåede den planlagte flyvehøjde , påbegyndte det imidlertid en nedstigning med konstant fart .
+Event	T0	flyvning	EVENT	51
+Event	T1	fløjet	EVENT	89
+Event	T2	forulykkede	EVENT	170
+Event	T3	omkommet	EVENT	478
+Event	T4	modtaget	EVENT	512
+Event	T5	nåede	EVENT	620
+Event	T6	påbegyndte	EVENT	653
+Event	T7	steg	EVENT	542
+Event	T8	nedstigning	EVENT	682
+Relation	T2	T3	CauseEffect	true	forulykkede	omkommet
+Relation	T3	T2	EffectCause	true	omkommet	forulykkede
+Relation	T0	T2	NoRel	true	flyvning	forulykkede
+Relation	T0	T6	NoRel	true	flyvning	påbegyndte
+Relation	T0	T7	NoRel	true	flyvning	steg
+Relation	T0	T8	NoRel	true	flyvning	nedstigning
+Relation	T1	T2	NoRel	true	fløjet	forulykkede
+Relation	T1	T3	NoRel	true	fløjet	omkommet
+Relation	T1	T5	NoRel	true	fløjet	nåede
+Relation	T1	T6	NoRel	true	fløjet	påbegyndte
+Relation	T1	T8	NoRel	true	fløjet	nedstigning
+Relation	T2	T0	NoRel	true	forulykkede	flyvning
+Relation	T2	T8	NoRel	true	forulykkede	nedstigning
+Relation	T3	T5	NoRel	true	omkommet	nåede
+Relation	T3	T8	NoRel	true	omkommet	nedstigning
+Relation	T4	T3	NoRel	true	modtaget	omkommet
+Relation	T4	T5	NoRel	true	modtaget	nåede
+Relation	T5	T3	NoRel	true	nåede	omkommet
+Relation	T5	T7	NoRel	true	nåede	steg
+Relation	T5	T8	NoRel	true	nåede	nedstigning
+Relation	T6	T3	NoRel	true	påbegyndte	omkommet
+Relation	T6	T7	NoRel	true	påbegyndte	steg
+Relation	T7	T0	NoRel	true	steg	flyvning
+Relation	T7	T2	NoRel	true	steg	forulykkede
+Relation	T7	T4	NoRel	true	steg	modtaget
+Relation	T7	T6	NoRel	true	steg	påbegyndte
+Relation	T8	T3	NoRel	true	nedstigning	omkommet
+Relation	T8	T4	NoRel	true	nedstigning	modtaget
+Relation	T8	T7	NoRel	true	nedstigning	steg

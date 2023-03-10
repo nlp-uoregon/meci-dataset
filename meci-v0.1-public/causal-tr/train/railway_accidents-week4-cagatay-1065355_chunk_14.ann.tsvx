@@ -1,0 +1,150 @@
+Text	- 1 Mart , 2003 – Chiayi , Tayvan : Alishan Forest Railway’deki bir trenin fren sistemi bozulunca makinist kontrolü kaybeder , 17 ölü ve 173 yaralı .	- 11 Mart , 2004_– 2004 Madrid tren bombolamaları : Madrid’de dört banliyö treninde bombalar patlatıldığında 191 kişi öldü .	- 6 Ocak , 2005 – Graniteville tren felaketi , Graniteville , Güney Karolanya , Birleşik Devletler : Bir 42 - vagon Norfolk Southern yük treni Grantileville’de Avondale Mills atölyesi yakınında duran trenle kafa kafaya çarpıştığında ; 9 kişi öldü ( makinist de dahil ) ve 250’nin üzerinde kişi yaralandı .	Bu kazada 16 vagon raydan çıktı , bunlar içinde 90 ton klor gazı taşıyan tank kırılır ve havaya yayılır ki bu kaza esnasında ölümlere ve yaralanmalara sebep olu .	NTSB , kazanın ana hat çalışma tarzının yeni bir hatta geçirmede başarısızlığı olduğuna karar verir .
+Event	T0	bozulunca	EVENT	88
+Event	T1	kaybeder	EVENT	116
+Event	T2	ölü	EVENT	130
+Event	T3	bombolamaları	EVENT	186
+Event	T4	patlatıldığında	EVENT	243
+Event	T5	öldü	EVENT	268
+Event	T6	felaketi	EVENT	311
+Event	T7	çarpıştığında	EVENT	494
+Event	T8	öldü	EVENT	517
+Event	T9	yaralandı	EVENT	569
+Event	T10	çıktı	EVENT	607
+Event	T11	kırılır	EVENT	659
+Event	T12	yayılır	EVENT	677
+Event	T13	kaza	EVENT	691
+Event	T14	ölümlere	EVENT	706
+Event	T15	kazanın	EVENT	751
+Event	T16	verir	EVENT	838
+Event	T17	yaralı	EVENT	141
+Event	T18	kazada	EVENT	584
+Event	T19	yaralanmalara	EVENT	718
+Relation	T0	T1	CauseEffect	true	bozulunca	kaybeder
+Relation	T1	T0	EffectCause	true	kaybeder	bozulunca
+Relation	T1	T2	CauseEffect	true	kaybeder	ölü
+Relation	T2	T1	EffectCause	true	ölü	kaybeder
+Relation	T1	T17	CauseEffect	true	kaybeder	yaralı
+Relation	T17	T1	EffectCause	true	yaralı	kaybeder
+Relation	T4	T5	CauseEffect	true	patlatıldığında	öldü
+Relation	T5	T4	EffectCause	true	öldü	patlatıldığında
+Relation	T7	T8	CauseEffect	true	çarpıştığında	öldü
+Relation	T8	T7	EffectCause	true	öldü	çarpıştığında
+Relation	T7	T9	CauseEffect	true	çarpıştığında	yaralandı
+Relation	T9	T7	EffectCause	true	yaralandı	çarpıştığında
+Relation	T12	T14	CauseEffect	true	yayılır	ölümlere
+Relation	T14	T12	EffectCause	true	ölümlere	yayılır
+Relation	T12	T19	CauseEffect	true	yayılır	yaralanmalara
+Relation	T19	T12	EffectCause	true	yaralanmalara	yayılır
+Relation	T0	T14	NoRel	true	bozulunca	ölümlere
+Relation	T0	T17	NoRel	true	bozulunca	yaralı
+Relation	T0	T2	NoRel	true	bozulunca	ölü
+Relation	T0	T3	NoRel	true	bozulunca	bombolamaları
+Relation	T0	T6	NoRel	true	bozulunca	felaketi
+Relation	T0	T8	NoRel	true	bozulunca	öldü
+Relation	T1	T10	NoRel	true	kaybeder	çıktı
+Relation	T1	T16	NoRel	true	kaybeder	verir
+Relation	T1	T18	NoRel	true	kaybeder	kazada
+Relation	T1	T3	NoRel	true	kaybeder	bombolamaları
+Relation	T1	T6	NoRel	true	kaybeder	felaketi
+Relation	T1	T7	NoRel	true	kaybeder	çarpıştığında
+Relation	T10	T12	NoRel	true	çıktı	yayılır
+Relation	T10	T16	NoRel	true	çıktı	verir
+Relation	T10	T19	NoRel	true	çıktı	yaralanmalara
+Relation	T10	T4	NoRel	true	çıktı	patlatıldığında
+Relation	T10	T8	NoRel	true	çıktı	öldü
+Relation	T11	T4	NoRel	true	kırılır	patlatıldığında
+Relation	T11	T6	NoRel	true	kırılır	felaketi
+Relation	T11	T8	NoRel	true	kırılır	öldü
+Relation	T11	T9	NoRel	true	kırılır	yaralandı
+Relation	T12	T16	NoRel	true	yayılır	verir
+Relation	T12	T2	NoRel	true	yayılır	ölü
+Relation	T12	T4	NoRel	true	yayılır	patlatıldığında
+Relation	T12	T8	NoRel	true	yayılır	öldü
+Relation	T12	T9	NoRel	true	yayılır	yaralandı
+Relation	T13	T15	NoRel	true	kaza	kazanın
+Relation	T13	T3	NoRel	true	kaza	bombolamaları
+Relation	T13	T4	NoRel	true	kaza	patlatıldığında
+Relation	T13	T7	NoRel	true	kaza	çarpıştığında
+Relation	T13	T9	NoRel	true	kaza	yaralandı
+Relation	T14	T0	NoRel	true	ölümlere	bozulunca
+Relation	T14	T1	NoRel	true	ölümlere	kaybeder
+Relation	T14	T10	NoRel	true	ölümlere	çıktı
+Relation	T14	T15	NoRel	true	ölümlere	kazanın
+Relation	T14	T6	NoRel	true	ölümlere	felaketi
+Relation	T14	T7	NoRel	true	ölümlere	çarpıştığında
+Relation	T15	T10	NoRel	true	kazanın	çıktı
+Relation	T15	T11	NoRel	true	kazanın	kırılır
+Relation	T15	T17	NoRel	true	kazanın	yaralı
+Relation	T15	T19	NoRel	true	kazanın	yaralanmalara
+Relation	T15	T2	NoRel	true	kazanın	ölü
+Relation	T15	T3	NoRel	true	kazanın	bombolamaları
+Relation	T15	T4	NoRel	true	kazanın	patlatıldığında
+Relation	T15	T8	NoRel	true	kazanın	öldü
+Relation	T15	T9	NoRel	true	kazanın	yaralandı
+Relation	T16	T11	NoRel	true	verir	kırılır
+Relation	T16	T12	NoRel	true	verir	yayılır
+Relation	T16	T18	NoRel	true	verir	kazada
+Relation	T16	T3	NoRel	true	verir	bombolamaları
+Relation	T16	T8	NoRel	true	verir	öldü
+Relation	T17	T0	NoRel	true	yaralı	bozulunca
+Relation	T17	T12	NoRel	true	yaralı	yayılır
+Relation	T17	T13	NoRel	true	yaralı	kaza
+Relation	T17	T14	NoRel	true	yaralı	ölümlere
+Relation	T17	T15	NoRel	true	yaralı	kazanın
+Relation	T17	T16	NoRel	true	yaralı	verir
+Relation	T17	T19	NoRel	true	yaralı	yaralanmalara
+Relation	T17	T6	NoRel	true	yaralı	felaketi
+Relation	T17	T8	NoRel	true	yaralı	öldü
+Relation	T18	T0	NoRel	true	kazada	bozulunca
+Relation	T18	T10	NoRel	true	kazada	çıktı
+Relation	T18	T8	NoRel	true	kazada	öldü
+Relation	T19	T0	NoRel	true	yaralanmalara	bozulunca
+Relation	T19	T10	NoRel	true	yaralanmalara	çıktı
+Relation	T19	T13	NoRel	true	yaralanmalara	kaza
+Relation	T19	T15	NoRel	true	yaralanmalara	kazanın
+Relation	T19	T4	NoRel	true	yaralanmalara	patlatıldığında
+Relation	T19	T7	NoRel	true	yaralanmalara	çarpıştığında
+Relation	T19	T9	NoRel	true	yaralanmalara	yaralandı
+Relation	T2	T14	NoRel	true	ölü	ölümlere
+Relation	T2	T16	NoRel	true	ölü	verir
+Relation	T2	T17	NoRel	true	ölü	yaralı
+Relation	T2	T18	NoRel	true	ölü	kazada
+Relation	T2	T5	NoRel	true	ölü	öldü
+Relation	T2	T9	NoRel	true	ölü	yaralandı
+Relation	T3	T10	NoRel	true	bombolamaları	çıktı
+Relation	T3	T11	NoRel	true	bombolamaları	kırılır
+Relation	T3	T16	NoRel	true	bombolamaları	verir
+Relation	T3	T18	NoRel	true	bombolamaları	kazada
+Relation	T3	T2	NoRel	true	bombolamaları	ölü
+Relation	T3	T5	NoRel	true	bombolamaları	öldü
+Relation	T3	T6	NoRel	true	bombolamaları	felaketi
+Relation	T3	T9	NoRel	true	bombolamaları	yaralandı
+Relation	T4	T0	NoRel	true	patlatıldığında	bozulunca
+Relation	T4	T1	NoRel	true	patlatıldığında	kaybeder
+Relation	T4	T12	NoRel	true	patlatıldığında	yayılır
+Relation	T4	T13	NoRel	true	patlatıldığında	kaza
+Relation	T4	T14	NoRel	true	patlatıldığında	ölümlere
+Relation	T4	T6	NoRel	true	patlatıldığında	felaketi
+Relation	T5	T0	NoRel	true	öldü	bozulunca
+Relation	T5	T13	NoRel	true	öldü	kaza
+Relation	T5	T19	NoRel	true	öldü	yaralanmalara
+Relation	T5	T6	NoRel	true	öldü	felaketi
+Relation	T5	T8	NoRel	true	öldü	öldü
+Relation	T5	T9	NoRel	true	öldü	yaralandı
+Relation	T6	T11	NoRel	true	felaketi	kırılır
+Relation	T6	T14	NoRel	true	felaketi	ölümlere
+Relation	T6	T16	NoRel	true	felaketi	verir
+Relation	T6	T2	NoRel	true	felaketi	ölü
+Relation	T6	T4	NoRel	true	felaketi	patlatıldığında
+Relation	T7	T5	NoRel	true	çarpıştığında	öldü
+Relation	T8	T0	NoRel	true	öldü	bozulunca
+Relation	T8	T12	NoRel	true	öldü	yayılır
+Relation	T8	T19	NoRel	true	öldü	yaralanmalara
+Relation	T8	T3	NoRel	true	öldü	bombolamaları
+Relation	T8	T6	NoRel	true	öldü	felaketi
+Relation	T9	T1	NoRel	true	yaralandı	kaybeder
+Relation	T9	T10	NoRel	true	yaralandı	çıktı
+Relation	T9	T11	NoRel	true	yaralandı	kırılır
+Relation	T9	T12	NoRel	true	yaralandı	yayılır
+Relation	T9	T3	NoRel	true	yaralandı	bombolamaları
+Relation	T9	T6	NoRel	true	yaralandı	felaketi

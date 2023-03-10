@@ -1,0 +1,92 @@
+Text	Bunların içinde en şiddetli olanları 1744 , 1768 ve 1877'deki patlamalardır .	1877'deki büyük patlama zirvedeki buzulu eritmiş , böylelikle oluşan çamurlu çığ 100 km mesafede taşkına sebebiyet vermiş , Latacunga şehri komple harap olmuştur .	Son büyük patlamayı 1904'te yaşayan Cotopaxi 1975 - 76 aralığında son büyük faaliyetlerini göstermiştir .	Bu zaman aralığında ısı yükselmesi , duman oluşumu ve küçük çapta depremler meydana gelmiştir .	Dağa tırmanmayı deneyen ilk avrupalı , 1902 yılında yaklaşık 4.500 m_ye kadar ulaşan Alexander von Humboldt'du .
+Event	T0	patlamalardır	EVENT	62
+Event	T1	patlama	EVENT	94
+Event	T2	eritmiş	EVENT	119
+Event	T3	vermiş	EVENT	193
+Event	T4	patlamayı	EVENT	252
+Event	T5	yaşayan	EVENT	270
+Event	T6	göstermiştir	EVENT	333
+Event	T7	yükselmesi	EVENT	372
+Event	T8	gelmiştir	EVENT	432
+Event	T9	deneyen	EVENT	460
+Event	T10	çığ	EVENT	155
+Event	T11	olmuştur	EVENT	231
+Event	T12	oluşumu	EVENT	391
+Event	T13	depremler	EVENT	414
+Event	T14	ulaşan	EVENT	522
+Relation	T1	T2	CauseEffect	true	patlama	eritmiş
+Relation	T2	T1	EffectCause	true	eritmiş	patlama
+Relation	T2	T10	CauseEffect	true	eritmiş	çığ
+Relation	T10	T2	EffectCause	true	çığ	eritmiş
+Relation	T10	T3	CauseEffect	true	çığ	vermiş
+Relation	T3	T10	EffectCause	true	vermiş	çığ
+Relation	T3	T11	CauseEffect	true	vermiş	olmuştur
+Relation	T11	T3	EffectCause	true	olmuştur	vermiş
+Relation	T6	T7	CauseEffect	true	göstermiştir	yükselmesi
+Relation	T7	T6	EffectCause	true	yükselmesi	göstermiştir
+Relation	T6	T12	CauseEffect	true	göstermiştir	oluşumu
+Relation	T12	T6	EffectCause	true	oluşumu	göstermiştir
+Relation	T6	T13	CauseEffect	true	göstermiştir	depremler
+Relation	T13	T6	EffectCause	true	depremler	göstermiştir
+Relation	T9	T14	CauseEffect	true	deneyen	ulaşan
+Relation	T14	T9	EffectCause	true	ulaşan	deneyen
+Relation	T0	T2	NoRel	true	patlamalardır	eritmiş
+Relation	T0	T8	NoRel	true	patlamalardır	gelmiştir
+Relation	T0	T9	NoRel	true	patlamalardır	deneyen
+Relation	T1	T13	NoRel	true	patlama	depremler
+Relation	T1	T14	NoRel	true	patlama	ulaşan
+Relation	T1	T3	NoRel	true	patlama	vermiş
+Relation	T1	T5	NoRel	true	patlama	yaşayan
+Relation	T1	T7	NoRel	true	patlama	yükselmesi
+Relation	T10	T0	NoRel	true	çığ	patlamalardır
+Relation	T10	T12	NoRel	true	çığ	oluşumu
+Relation	T10	T4	NoRel	true	çığ	patlamayı
+Relation	T10	T7	NoRel	true	çığ	yükselmesi
+Relation	T10	T8	NoRel	true	çığ	gelmiştir
+Relation	T11	T12	NoRel	true	olmuştur	oluşumu
+Relation	T11	T4	NoRel	true	olmuştur	patlamayı
+Relation	T11	T6	NoRel	true	olmuştur	göstermiştir
+Relation	T11	T8	NoRel	true	olmuştur	gelmiştir
+Relation	T11	T9	NoRel	true	olmuştur	deneyen
+Relation	T12	T10	NoRel	true	oluşumu	çığ
+Relation	T12	T4	NoRel	true	oluşumu	patlamayı
+Relation	T12	T7	NoRel	true	oluşumu	yükselmesi
+Relation	T12	T9	NoRel	true	oluşumu	deneyen
+Relation	T13	T11	NoRel	true	depremler	olmuştur
+Relation	T13	T12	NoRel	true	depremler	oluşumu
+Relation	T13	T4	NoRel	true	depremler	patlamayı
+Relation	T13	T7	NoRel	true	depremler	yükselmesi
+Relation	T13	T8	NoRel	true	depremler	gelmiştir
+Relation	T13	T9	NoRel	true	depremler	deneyen
+Relation	T14	T4	NoRel	true	ulaşan	patlamayı
+Relation	T14	T5	NoRel	true	ulaşan	yaşayan
+Relation	T14	T7	NoRel	true	ulaşan	yükselmesi
+Relation	T14	T8	NoRel	true	ulaşan	gelmiştir
+Relation	T2	T13	NoRel	true	eritmiş	depremler
+Relation	T2	T4	NoRel	true	eritmiş	patlamayı
+Relation	T2	T5	NoRel	true	eritmiş	yaşayan
+Relation	T2	T7	NoRel	true	eritmiş	yükselmesi
+Relation	T3	T0	NoRel	true	vermiş	patlamalardır
+Relation	T3	T12	NoRel	true	vermiş	oluşumu
+Relation	T3	T13	NoRel	true	vermiş	depremler
+Relation	T3	T6	NoRel	true	vermiş	göstermiştir
+Relation	T3	T7	NoRel	true	vermiş	yükselmesi
+Relation	T4	T10	NoRel	true	patlamayı	çığ
+Relation	T4	T5	NoRel	true	patlamayı	yaşayan
+Relation	T4	T6	NoRel	true	patlamayı	göstermiştir
+Relation	T5	T10	NoRel	true	yaşayan	çığ
+Relation	T5	T4	NoRel	true	yaşayan	patlamayı
+Relation	T5	T6	NoRel	true	yaşayan	göstermiştir
+Relation	T5	T8	NoRel	true	yaşayan	gelmiştir
+Relation	T7	T11	NoRel	true	yükselmesi	olmuştur
+Relation	T7	T14	NoRel	true	yükselmesi	ulaşan
+Relation	T7	T8	NoRel	true	yükselmesi	gelmiştir
+Relation	T8	T0	NoRel	true	gelmiştir	patlamalardır
+Relation	T8	T3	NoRel	true	gelmiştir	vermiş
+Relation	T8	T4	NoRel	true	gelmiştir	patlamayı
+Relation	T8	T7	NoRel	true	gelmiştir	yükselmesi
+Relation	T9	T1	NoRel	true	deneyen	patlama
+Relation	T9	T12	NoRel	true	deneyen	oluşumu
+Relation	T9	T3	NoRel	true	deneyen	vermiş
+Relation	T9	T4	NoRel	true	deneyen	patlamayı
+Relation	T9	T6	NoRel	true	deneyen	göstermiştir

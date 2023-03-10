@@ -1,0 +1,49 @@
+Text	The aircraft landed at 23:26 local time ( 20:26 UTC ) .	After landing , the aircraft veered left , skidded off the runway , and slid down a cliff .	The aircraft came to rest in a precarious position along the side of the cliff but did not slip into the sea due to the wet ground that caused the landing gear to be stuck in mud .	An emergency evacuation was ordered by the cabin crew .	The aircraft sustained considerable damage , with the right engine detaching and falling into the Black Sea .
+Event	T0	landed	EVENT	13
+Event	T1	landing	EVENT	62
+Event	T3	came	EVENT	161
+Event	T4	rest	EVENT	169
+Event	T5	caused	EVENT	284
+Event	T6	landing	EVENT	295
+Event	T7	stuck	EVENT	314
+Event	T8	evacuation	EVENT	342
+Event	T9	ordered	EVENT	357
+Event	T10	sustained	EVENT	398
+Event	T11	damage	EVENT	421
+Event	T12	detaching	EVENT	452
+Event	T13	skidded off	EVENT	99
+Event	T14	slid down	EVENT	128
+Event	T2	veered	EVENT	85
+Event	T15	falling	EVENT	466
+Relation	T0	T8	NoRel	true	landed	evacuation
+Relation	T1	T12	NoRel	true	landing	detaching
+Relation	T1	T15	NoRel	true	landing	falling
+Relation	T1	T3	NoRel	true	landing	came
+Relation	T1	T5	NoRel	true	landing	caused
+Relation	T1	T6	NoRel	true	landing	landing
+Relation	T10	T5	NoRel	true	sustained	caused
+Relation	T11	T10	NoRel	true	damage	sustained
+Relation	T11	T15	NoRel	true	damage	falling
+Relation	T11	T7	NoRel	true	damage	stuck
+Relation	T12	T1	NoRel	true	detaching	landing
+Relation	T12	T9	NoRel	true	detaching	ordered
+Relation	T13	T1	NoRel	true	skidded off	landing
+Relation	T13	T14	NoRel	true	skidded off	slid down
+Relation	T14	T12	NoRel	true	slid down	detaching
+Relation	T15	T12	NoRel	true	falling	detaching
+Relation	T2	T11	NoRel	true	veered	damage
+Relation	T2	T7	NoRel	true	veered	stuck
+Relation	T3	T13	NoRel	true	came	skidded off
+Relation	T3	T15	NoRel	true	came	falling
+Relation	T3	T6	NoRel	true	came	landing
+Relation	T4	T0	NoRel	true	rest	landed
+Relation	T4	T12	NoRel	true	rest	detaching
+Relation	T5	T15	NoRel	true	caused	falling
+Relation	T5	T9	NoRel	true	caused	ordered
+Relation	T6	T11	NoRel	true	landing	damage
+Relation	T6	T2	NoRel	true	landing	veered
+Relation	T6	T4	NoRel	true	landing	rest
+Relation	T7	T4	NoRel	true	stuck	rest
+Relation	T8	T4	NoRel	true	evacuation	rest
+Relation	T9	T10	NoRel	true	ordered	sustained
+Relation	T9	T3	NoRel	true	ordered	came

@@ -1,0 +1,47 @@
+Text	Orta Doğu'yu Amerikan etkisinden kurtarmayı " Amerikan Bağımsızlık Savaşı kahramanı " George Washington'ın yaptıklarına benzeten Halid Şeyh Muhammed , Britanyalıların Amerikalılara yaptığı baskının bir benzerini Amerika Birleşik Devletleri'nin Müslümanlara karşı yaptığını söyledi .	11 Eylül saldırılarında ölenler içim mutlu olmadığını , hatta üzgün olduğunu ve çocukları öldürmek istemediğini belirtirken ; İslam'ın öldürmeyi yasaklasa da burada farklı bir durum olduğunu belirterek " Irak'ta insanları öldürüyorsunuz ...	Sizinle aynı dili konuşuyorum ...	Savaşta konuşulan dil kurbanlardır .	" sözlerini kullanmıştı .
+Event	T0	kurtarmayı	EVENT	33
+Event	T1	söyledi	EVENT	273
+Event	T2	öldürüyorsunuz	EVENT	505
+Event	T3	konuşuyorum	EVENT	542
+Event	T5	benzeten	EVENT	120
+Event	T6	baskının	EVENT	189
+Event	T4	saldırılarında	EVENT	292
+Event	T7	ölenler	EVENT	307
+Event	T8	öldürmek	EVENT	373
+Event	T9	belirterek	EVENT	474
+Relation	T2	T4	CauseEffect	true	öldürüyorsunuz	saldırılarında
+Relation	T4	T2	EffectCause	true	saldırılarında	öldürüyorsunuz
+Relation	T0	T4	CauseEffect	true	kurtarmayı	saldırılarında
+Relation	T4	T0	EffectCause	true	saldırılarında	kurtarmayı
+Relation	T4	T7	CauseEffect	true	saldırılarında	ölenler
+Relation	T7	T4	EffectCause	true	ölenler	saldırılarında
+Relation	T4	T8	CauseEffect	true	saldırılarında	öldürmek
+Relation	T8	T4	EffectCause	true	öldürmek	saldırılarında
+Relation	T0	T1	NoRel	true	kurtarmayı	söyledi
+Relation	T1	T2	NoRel	true	söyledi	öldürüyorsunuz
+Relation	T1	T3	NoRel	true	söyledi	konuşuyorum
+Relation	T1	T4	NoRel	true	söyledi	saldırılarında
+Relation	T1	T5	NoRel	true	söyledi	benzeten
+Relation	T1	T8	NoRel	true	söyledi	öldürmek
+Relation	T3	T0	NoRel	true	konuşuyorum	kurtarmayı
+Relation	T3	T2	NoRel	true	konuşuyorum	öldürüyorsunuz
+Relation	T3	T4	NoRel	true	konuşuyorum	saldırılarında
+Relation	T3	T6	NoRel	true	konuşuyorum	baskının
+Relation	T3	T7	NoRel	true	konuşuyorum	ölenler
+Relation	T4	T1	NoRel	true	saldırılarında	söyledi
+Relation	T4	T9	NoRel	true	saldırılarında	belirterek
+Relation	T5	T0	NoRel	true	benzeten	kurtarmayı
+Relation	T5	T2	NoRel	true	benzeten	öldürüyorsunuz
+Relation	T5	T3	NoRel	true	benzeten	konuşuyorum
+Relation	T5	T6	NoRel	true	benzeten	baskının
+Relation	T5	T8	NoRel	true	benzeten	öldürmek
+Relation	T6	T0	NoRel	true	baskının	kurtarmayı
+Relation	T6	T2	NoRel	true	baskının	öldürüyorsunuz
+Relation	T6	T5	NoRel	true	baskının	benzeten
+Relation	T7	T2	NoRel	true	ölenler	öldürüyorsunuz
+Relation	T7	T6	NoRel	true	ölenler	baskının
+Relation	T7	T9	NoRel	true	ölenler	belirterek
+Relation	T8	T2	NoRel	true	öldürmek	öldürüyorsunuz
+Relation	T9	T2	NoRel	true	belirterek	öldürüyorsunuz
+Relation	T9	T3	NoRel	true	belirterek	konuşuyorum
+Relation	T9	T6	NoRel	true	belirterek	baskının

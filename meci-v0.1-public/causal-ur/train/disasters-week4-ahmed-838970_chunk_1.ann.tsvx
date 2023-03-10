@@ -1,0 +1,96 @@
+Text	دیہی چینی زندگیوں میں تبدیلی لانے کے لیے لازمی اجتماعی زراعت کو متعارف کروایا گیا ۔	نجی زراعت ممنوع تھی اور اس سے وابستہ افراد پر تشدد اور ردانقلابی کا لیبل لگایا گیا ۔	عوامی جدوجہد کے سیشن اور سماجی دباؤ کے ذریعے دیہی لوگوں پر پابندیاں نافذ کی گئیں اگرچہ لوگوں پر جبری مشقت بھی لاگو کی گئی ۔	دیہی صنعتی سازی ، سرکاری طور پر مہم کی ترجیح ہے ، " اس کی ترقی ... عظیم لیپ آگے بڑھنے کے غلطیوں کی طرف سے بدترین " دیکھا .	بڑے پیمانے پر مورخین کی جانب سے یہ سمجھا جاتا ہے کہ عظیم پھلانگ کے نتیجے میں لاکھوں اموات ہوئیں جس کا تخمینہ 18 ملین لگایا گیا ہے جبکہ چینی مورخ یو_زی جیاج نے تحقیق سے ثابت کیا کہ اموت کی تعداد 56 ملین کے قریب ہے ۔
+Event	T0	لانے	EVENT	29
+Event	T1	تشدد	EVENT	130
+Event	T2	سیشن	EVENT	185
+Event	T3	دباؤ	EVENT	200
+Event	T4	مشقت	EVENT	270
+Event	T5	سازی	EVENT	304
+Event	T6	مہم	EVENT	325
+Event	T7	ترقی	EVENT	351
+Event	T8	دیکھا	EVENT	408
+Event	T9	سمجھا	EVENT	451
+Event	T10	پھلانگ	EVENT	473
+Event	T11	نتیجے	EVENT	483
+Event	T12	ہوئیں	EVENT	506
+Event	T13	لگایا	EVENT	533
+Event	T14	تحقیق	EVENT	575
+Event	T15	اموت	EVENT	596
+Relation	T10	T12	CauseEffect	true	پھلانگ	ہوئیں
+Relation	T12	T10	EffectCause	true	ہوئیں	پھلانگ
+Relation	T0	T1	NoRel	true	لانے	تشدد
+Relation	T0	T10	NoRel	true	لانے	پھلانگ
+Relation	T0	T11	NoRel	true	لانے	نتیجے
+Relation	T0	T14	NoRel	true	لانے	تحقیق
+Relation	T0	T2	NoRel	true	لانے	سیشن
+Relation	T1	T11	NoRel	true	تشدد	نتیجے
+Relation	T1	T14	NoRel	true	تشدد	تحقیق
+Relation	T1	T3	NoRel	true	تشدد	دباؤ
+Relation	T1	T6	NoRel	true	تشدد	مہم
+Relation	T1	T7	NoRel	true	تشدد	ترقی
+Relation	T10	T11	NoRel	true	پھلانگ	نتیجے
+Relation	T10	T13	NoRel	true	پھلانگ	لگایا
+Relation	T10	T14	NoRel	true	پھلانگ	تحقیق
+Relation	T10	T6	NoRel	true	پھلانگ	مہم
+Relation	T10	T7	NoRel	true	پھلانگ	ترقی
+Relation	T11	T10	NoRel	true	نتیجے	پھلانگ
+Relation	T11	T12	NoRel	true	نتیجے	ہوئیں
+Relation	T11	T13	NoRel	true	نتیجے	لگایا
+Relation	T11	T14	NoRel	true	نتیجے	تحقیق
+Relation	T11	T4	NoRel	true	نتیجے	مشقت
+Relation	T11	T8	NoRel	true	نتیجے	دیکھا
+Relation	T12	T11	NoRel	true	ہوئیں	نتیجے
+Relation	T12	T13	NoRel	true	ہوئیں	لگایا
+Relation	T12	T3	NoRel	true	ہوئیں	دباؤ
+Relation	T12	T4	NoRel	true	ہوئیں	مشقت
+Relation	T12	T6	NoRel	true	ہوئیں	مہم
+Relation	T12	T8	NoRel	true	ہوئیں	دیکھا
+Relation	T13	T1	NoRel	true	لگایا	تشدد
+Relation	T13	T10	NoRel	true	لگایا	پھلانگ
+Relation	T13	T14	NoRel	true	لگایا	تحقیق
+Relation	T13	T2	NoRel	true	لگایا	سیشن
+Relation	T13	T6	NoRel	true	لگایا	مہم
+Relation	T14	T0	NoRel	true	تحقیق	لانے
+Relation	T14	T1	NoRel	true	تحقیق	تشدد
+Relation	T14	T12	NoRel	true	تحقیق	ہوئیں
+Relation	T14	T13	NoRel	true	تحقیق	لگایا
+Relation	T14	T7	NoRel	true	تحقیق	ترقی
+Relation	T15	T3	NoRel	true	اموت	دباؤ
+Relation	T2	T14	NoRel	true	سیشن	تحقیق
+Relation	T2	T7	NoRel	true	سیشن	ترقی
+Relation	T3	T1	NoRel	true	دباؤ	تشدد
+Relation	T3	T11	NoRel	true	دباؤ	نتیجے
+Relation	T3	T12	NoRel	true	دباؤ	ہوئیں
+Relation	T3	T14	NoRel	true	دباؤ	تحقیق
+Relation	T3	T6	NoRel	true	دباؤ	مہم
+Relation	T4	T0	NoRel	true	مشقت	لانے
+Relation	T4	T10	NoRel	true	مشقت	پھلانگ
+Relation	T4	T13	NoRel	true	مشقت	لگایا
+Relation	T4	T2	NoRel	true	مشقت	سیشن
+Relation	T4	T9	NoRel	true	مشقت	سمجھا
+Relation	T5	T14	NoRel	true	سازی	تحقیق
+Relation	T5	T15	NoRel	true	سازی	اموت
+Relation	T5	T7	NoRel	true	سازی	ترقی
+Relation	T6	T10	NoRel	true	مہم	پھلانگ
+Relation	T6	T11	NoRel	true	مہم	نتیجے
+Relation	T6	T4	NoRel	true	مہم	مشقت
+Relation	T6	T5	NoRel	true	مہم	سازی
+Relation	T7	T0	NoRel	true	ترقی	لانے
+Relation	T7	T1	NoRel	true	ترقی	تشدد
+Relation	T7	T10	NoRel	true	ترقی	پھلانگ
+Relation	T7	T12	NoRel	true	ترقی	ہوئیں
+Relation	T7	T15	NoRel	true	ترقی	اموت
+Relation	T7	T4	NoRel	true	ترقی	مشقت
+Relation	T7	T9	NoRel	true	ترقی	سمجھا
+Relation	T8	T10	NoRel	true	دیکھا	پھلانگ
+Relation	T8	T11	NoRel	true	دیکھا	نتیجے
+Relation	T8	T2	NoRel	true	دیکھا	سیشن
+Relation	T8	T7	NoRel	true	دیکھا	ترقی
+Relation	T8	T9	NoRel	true	دیکھا	سمجھا
+Relation	T9	T0	NoRel	true	سمجھا	لانے
+Relation	T9	T1	NoRel	true	سمجھا	تشدد
+Relation	T9	T11	NoRel	true	سمجھا	نتیجے
+Relation	T9	T13	NoRel	true	سمجھا	لگایا
+Relation	T9	T14	NoRel	true	سمجھا	تحقیق
+Relation	T9	T2	NoRel	true	سمجھا	سیشن
+Relation	T9	T6	NoRel	true	سمجھا	مہم
+Relation	T9	T8	NoRel	true	سمجھا	دیکھا

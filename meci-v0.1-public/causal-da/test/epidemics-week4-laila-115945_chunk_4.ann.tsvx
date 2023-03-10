@@ -1,0 +1,86 @@
+Text	Myndighederne beordrede , at der skulle brænde bål nat og dag , i det håb at luften blev renset .	Stoffer , der afgav stærke lugte , som peber , humle og røgelse blev også afbrændt for at forhindre infektioner .	Indbyggerne i London , også små børn , blev kraftigt opfordret til at ryge tobak .	Pesten var koncentreret i London , men også andre dele af landet var berørt .	Det måske berømteste eksempel var landsbyen Eyam i Derbyshire .
+Event	T0	brænde	EVENT	40
+Event	T1	renset	EVENT	89
+Event	T2	afgav	EVENT	112
+Event	T3	lugte	EVENT	125
+Event	T4	afbrændt	EVENT	172
+Event	T5	infektioner	EVENT	198
+Event	T6	Pesten	EVENT	295
+Event	T7	koncentreret	EVENT	306
+Event	T8	berørt	EVENT	364
+Event	T9	beordrede	EVENT	14
+Event	T10	opfordret	EVENT	265
+Event	T11	berømteste	EVENT	383
+Event	T12	forhindre	EVENT	188
+Event	T13	ryge	EVENT	282
+Relation	T0	T1	CauseEffect	true	brænde	renset
+Relation	T1	T0	EffectCause	true	renset	brænde
+Relation	T4	T12	CauseEffect	true	afbrændt	forhindre
+Relation	T12	T4	EffectCause	true	forhindre	afbrændt
+Relation	T1	T10	CauseEffect	true	renset	opfordret
+Relation	T10	T1	EffectCause	true	opfordret	renset
+Relation	T0	T11	NoRel	true	brænde	berømteste
+Relation	T0	T12	NoRel	true	brænde	forhindre
+Relation	T0	T13	NoRel	true	brænde	ryge
+Relation	T0	T3	NoRel	true	brænde	lugte
+Relation	T0	T4	NoRel	true	brænde	afbrændt
+Relation	T0	T7	NoRel	true	brænde	koncentreret
+Relation	T1	T11	NoRel	true	renset	berømteste
+Relation	T1	T3	NoRel	true	renset	lugte
+Relation	T1	T5	NoRel	true	renset	infektioner
+Relation	T1	T7	NoRel	true	renset	koncentreret
+Relation	T10	T0	NoRel	true	opfordret	brænde
+Relation	T10	T12	NoRel	true	opfordret	forhindre
+Relation	T10	T5	NoRel	true	opfordret	infektioner
+Relation	T10	T7	NoRel	true	opfordret	koncentreret
+Relation	T10	T9	NoRel	true	opfordret	beordrede
+Relation	T11	T5	NoRel	true	berømteste	infektioner
+Relation	T11	T6	NoRel	true	berømteste	Pesten
+Relation	T11	T8	NoRel	true	berømteste	berørt
+Relation	T12	T13	NoRel	true	forhindre	ryge
+Relation	T12	T2	NoRel	true	forhindre	afgav
+Relation	T12	T5	NoRel	true	forhindre	infektioner
+Relation	T12	T6	NoRel	true	forhindre	Pesten
+Relation	T12	T9	NoRel	true	forhindre	beordrede
+Relation	T13	T11	NoRel	true	ryge	berømteste
+Relation	T13	T6	NoRel	true	ryge	Pesten
+Relation	T2	T1	NoRel	true	afgav	renset
+Relation	T2	T5	NoRel	true	afgav	infektioner
+Relation	T2	T7	NoRel	true	afgav	koncentreret
+Relation	T2	T9	NoRel	true	afgav	beordrede
+Relation	T3	T12	NoRel	true	lugte	forhindre
+Relation	T3	T13	NoRel	true	lugte	ryge
+Relation	T3	T5	NoRel	true	lugte	infektioner
+Relation	T3	T6	NoRel	true	lugte	Pesten
+Relation	T3	T7	NoRel	true	lugte	koncentreret
+Relation	T3	T9	NoRel	true	lugte	beordrede
+Relation	T4	T10	NoRel	true	afbrændt	opfordret
+Relation	T4	T13	NoRel	true	afbrændt	ryge
+Relation	T4	T6	NoRel	true	afbrændt	Pesten
+Relation	T4	T9	NoRel	true	afbrændt	beordrede
+Relation	T5	T7	NoRel	true	infektioner	koncentreret
+Relation	T6	T1	NoRel	true	Pesten	renset
+Relation	T6	T12	NoRel	true	Pesten	forhindre
+Relation	T6	T2	NoRel	true	Pesten	afgav
+Relation	T6	T3	NoRel	true	Pesten	lugte
+Relation	T6	T5	NoRel	true	Pesten	infektioner
+Relation	T6	T9	NoRel	true	Pesten	beordrede
+Relation	T7	T10	NoRel	true	koncentreret	opfordret
+Relation	T7	T11	NoRel	true	koncentreret	berømteste
+Relation	T7	T3	NoRel	true	koncentreret	lugte
+Relation	T7	T4	NoRel	true	koncentreret	afbrændt
+Relation	T7	T5	NoRel	true	koncentreret	infektioner
+Relation	T8	T10	NoRel	true	berørt	opfordret
+Relation	T8	T12	NoRel	true	berørt	forhindre
+Relation	T8	T13	NoRel	true	berørt	ryge
+Relation	T8	T6	NoRel	true	berørt	Pesten
+Relation	T8	T9	NoRel	true	berørt	beordrede
+Relation	T9	T0	NoRel	true	beordrede	brænde
+Relation	T9	T10	NoRel	true	beordrede	opfordret
+Relation	T9	T11	NoRel	true	beordrede	berømteste
+Relation	T9	T12	NoRel	true	beordrede	forhindre
+Relation	T9	T13	NoRel	true	beordrede	ryge
+Relation	T9	T3	NoRel	true	beordrede	lugte
+Relation	T9	T4	NoRel	true	beordrede	afbrændt
+Relation	T9	T6	NoRel	true	beordrede	Pesten
+Relation	T9	T7	NoRel	true	beordrede	koncentreret

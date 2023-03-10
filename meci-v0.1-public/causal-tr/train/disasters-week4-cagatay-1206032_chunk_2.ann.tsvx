@@ -1,0 +1,65 @@
+Text	Fırtına sırasında acil olmayan tüm devlet hizmetleri de durduruldu .	Diğer kar yağışları ile birlikte , bu fırtına 2011 yılının ocak ayını şehrin tarihindeki en karlı ocak yaptı .	Fırtına sırasında şehirde bir de ölüm gerçekleşti .	64 yaşındaki bir kadın 25 Ocak günü bir kar küreyicisinin çarpması sonucu öldü .	New York Valisi Michael Bloomberg 25 Ocak günü erken saatlerde şehir çapında bir acil durum ilan etti ve okullar ile havalimanlarının kapatılması ile devlet hizmetlerinin geçici bir süre durdurulmasına bu sebep oldu .
+Event	T0	durduruldu	EVENT	56
+Event	T1	fırtına	EVENT	107
+Event	T2	yaptı	EVENT	172
+Event	T4	öldü	EVENT	306
+Event	T6	kapatılması	EVENT	447
+Event	T7	durdurulmasına	EVENT	500
+Event	T9	Fırtına	EVENT	0
+Event	T10	kar yağışları	EVENT	75
+Event	T11	ölüm	EVENT	213
+Event	T3	çarpması	EVENT	290
+Event	T5	ilan etti	EVENT	405
+Relation	T9	T0	CauseEffect	true	Fırtına	durduruldu
+Relation	T0	T9	EffectCause	true	durduruldu	Fırtına
+Relation	T10	T0	CauseEffect	true	kar yağışları	durduruldu
+Relation	T0	T10	EffectCause	true	durduruldu	kar yağışları
+Relation	T9	T2	CauseEffect	true	Fırtına	yaptı
+Relation	T2	T9	EffectCause	true	yaptı	Fırtına
+Relation	T10	T2	CauseEffect	true	kar yağışları	yaptı
+Relation	T2	T10	EffectCause	true	yaptı	kar yağışları
+Relation	T3	T4	CauseEffect	true	çarpması	öldü
+Relation	T4	T3	EffectCause	true	öldü	çarpması
+Relation	T3	T11	CauseEffect	true	çarpması	ölüm
+Relation	T11	T3	EffectCause	true	ölüm	çarpması
+Relation	T9	T3	CauseEffect	true	Fırtına	çarpması
+Relation	T3	T9	EffectCause	true	çarpması	Fırtına
+Relation	T5	T6	CauseEffect	true	ilan etti	kapatılması
+Relation	T6	T5	EffectCause	true	kapatılması	ilan etti
+Relation	T9	T5	CauseEffect	true	Fırtına	ilan etti
+Relation	T5	T9	EffectCause	true	ilan etti	Fırtına
+Relation	T5	T7	CauseEffect	true	ilan etti	durdurulmasına
+Relation	T7	T5	EffectCause	true	durdurulmasına	ilan etti
+Relation	T0	T1	NoRel	true	durduruldu	fırtına
+Relation	T0	T2	NoRel	true	durduruldu	yaptı
+Relation	T0	T4	NoRel	true	durduruldu	öldü
+Relation	T0	T7	NoRel	true	durduruldu	durdurulmasına
+Relation	T1	T4	NoRel	true	fırtına	öldü
+Relation	T1	T6	NoRel	true	fırtına	kapatılması
+Relation	T1	T7	NoRel	true	fırtına	durdurulmasına
+Relation	T1	T9	NoRel	true	fırtına	Fırtına
+Relation	T10	T1	NoRel	true	kar yağışları	fırtına
+Relation	T10	T3	NoRel	true	kar yağışları	çarpması
+Relation	T10	T4	NoRel	true	kar yağışları	öldü
+Relation	T10	T5	NoRel	true	kar yağışları	ilan etti
+Relation	T2	T0	NoRel	true	yaptı	durduruldu
+Relation	T2	T3	NoRel	true	yaptı	çarpması
+Relation	T2	T4	NoRel	true	yaptı	öldü
+Relation	T2	T7	NoRel	true	yaptı	durdurulmasına
+Relation	T3	T0	NoRel	true	çarpması	durduruldu
+Relation	T3	T5	NoRel	true	çarpması	ilan etti
+Relation	T4	T0	NoRel	true	öldü	durduruldu
+Relation	T4	T11	NoRel	true	öldü	ölüm
+Relation	T4	T6	NoRel	true	öldü	kapatılması
+Relation	T4	T7	NoRel	true	öldü	durdurulmasına
+Relation	T5	T11	NoRel	true	ilan etti	ölüm
+Relation	T5	T4	NoRel	true	ilan etti	öldü
+Relation	T6	T1	NoRel	true	kapatılması	fırtına
+Relation	T6	T2	NoRel	true	kapatılması	yaptı
+Relation	T6	T3	NoRel	true	kapatılması	çarpması
+Relation	T6	T7	NoRel	true	kapatılması	durdurulmasına
+Relation	T7	T1	NoRel	true	durdurulmasına	fırtına
+Relation	T7	T11	NoRel	true	durdurulmasına	ölüm
+Relation	T7	T4	NoRel	true	durdurulmasına	öldü
+Relation	T9	T10	NoRel	true	Fırtına	kar yağışları
+Relation	T9	T6	NoRel	true	Fırtına	kapatılması

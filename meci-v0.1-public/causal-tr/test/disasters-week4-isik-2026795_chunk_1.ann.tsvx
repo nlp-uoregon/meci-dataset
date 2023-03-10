@@ -1,0 +1,30 @@
+Text	Paka , 16 Aralık'ta 230 km/ saat hızla Guam ve Rota'yı vurdu .	19 Aralık'ta açık denizde maksimum hızlara ulaştı .	Ardından zayıflama eğilimine giren tayfun 23 Aralık'ta yok oldu .	Kategori : Hava olayları Kategori : Guam tarihi Kategori : 20. yüzyıldaki kasırgalar Kategori : 1997'deki afetler	
+Event	T0	vurdu	EVENT	55
+Event	T1	ulaştı	EVENT	106
+Event	T3	oldu	EVENT	174
+Event	T4	afetler	EVENT	287
+Event	T2	tayfun	EVENT	150
+Event	T5	giren	EVENT	144
+Event	T6	olayları	EVENT	197
+Event	T7	kasırgalar	EVENT	255
+Relation	T2	T0	CauseEffect	true	tayfun	vurdu
+Relation	T0	T2	EffectCause	true	vurdu	tayfun
+Relation	T2	T1	CauseEffect	true	tayfun	ulaştı
+Relation	T1	T2	EffectCause	true	ulaştı	tayfun
+Relation	T1	T5	CauseEffect	true	ulaştı	giren
+Relation	T5	T1	EffectCause	true	giren	ulaştı
+Relation	T5	T3	CauseEffect	true	giren	oldu
+Relation	T3	T5	EffectCause	true	oldu	giren
+Relation	T0	T4	NoRel	true	vurdu	afetler
+Relation	T0	T5	NoRel	true	vurdu	giren
+Relation	T1	T0	NoRel	true	ulaştı	vurdu
+Relation	T1	T3	NoRel	true	ulaştı	oldu
+Relation	T1	T4	NoRel	true	ulaştı	afetler
+Relation	T1	T6	NoRel	true	ulaştı	olayları
+Relation	T1	T7	NoRel	true	ulaştı	kasırgalar
+Relation	T3	T7	NoRel	true	oldu	kasırgalar
+Relation	T5	T0	NoRel	true	giren	vurdu
+Relation	T5	T2	NoRel	true	giren	tayfun
+Relation	T6	T0	NoRel	true	olayları	vurdu
+Relation	T6	T4	NoRel	true	olayları	afetler
+Relation	T7	T0	NoRel	true	kasırgalar	vurdu

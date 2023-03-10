@@ -1,0 +1,84 @@
+Text	The direct transfer of the virus probably occurs either by pigs touching noses , or through dried mucus .	Airborne transmission through the aerosols produced by pigs coughing or sneezing are also an important means of infection .	The virus usually spreads quickly through a herd , infecting all the pigs within just a few days .	Transmission may also occur through wild animals , such as wild boar , which can spread the disease between farms .	People who work with poultry and swine , especially those with intense exposures , are at increased risk of zoonotic infection with influenza virus endemic in these animals , and constitute a population of human hosts in which zoonosis and reassortment can co-occur .
+Event	T0	transfer	EVENT	11
+Event	T1	occurs	EVENT	42
+Event	T2	touching	EVENT	64
+Event	T5	produced	EVENT	149
+Event	T6	coughing	EVENT	166
+Event	T7	sneezing	EVENT	178
+Event	T8	infection	EVENT	218
+Event	T9	spreads	EVENT	248
+Event	T10	infecting	EVENT	281
+Event	T11	Transmission	EVENT	329
+Event	T12	occur	EVENT	351
+Event	T13	spread	EVENT	410
+Event	T14	disease	EVENT	421
+Event	T15	work	EVENT	456
+Event	T16	exposures	EVENT	516
+Event	T17	infection	EVENT	562
+Event	T18	zoonosis	EVENT	672
+Event	T19	reassortment	EVENT	685
+Event	T3	dried mucus	EVENT	92
+Event	T4	Airborne transmission	EVENT	106
+Event	T20	herd	EVENT	274
+Event	T21	wild animals	EVENT	365
+Event	T22	constitute	EVENT	624
+Relation	T2	T0	CauseEffect	true	touching	transfer
+Relation	T0	T2	EffectCause	true	transfer	touching
+Relation	T3	T0	CauseEffect	true	dried mucus	transfer
+Relation	T0	T3	EffectCause	true	transfer	dried mucus
+Relation	T6	T4	CauseEffect	true	coughing	Airborne transmission
+Relation	T4	T6	EffectCause	true	Airborne transmission	coughing
+Relation	T7	T4	CauseEffect	true	sneezing	Airborne transmission
+Relation	T4	T7	EffectCause	true	Airborne transmission	sneezing
+Relation	T20	T9	CauseEffect	true	herd	spreads
+Relation	T9	T20	EffectCause	true	spreads	herd
+Relation	T21	T11	CauseEffect	true	wild animals	Transmission
+Relation	T11	T21	EffectCause	true	Transmission	wild animals
+Relation	T21	T13	CauseEffect	true	wild animals	spread
+Relation	T13	T21	EffectCause	true	spread	wild animals
+Relation	T16	T17	CauseEffect	true	exposures	infection
+Relation	T17	T16	EffectCause	true	infection	exposures
+Relation	T17	T22	CauseEffect	true	infection	constitute
+Relation	T22	T17	EffectCause	true	constitute	infection
+Relation	T1	T17	NoRel	true	occurs	infection
+Relation	T1	T8	NoRel	true	occurs	infection
+Relation	T10	T0	NoRel	true	infecting	transfer
+Relation	T10	T7	NoRel	true	infecting	sneezing
+Relation	T11	T1	NoRel	true	Transmission	occurs
+Relation	T11	T12	NoRel	true	Transmission	occur
+Relation	T11	T8	NoRel	true	Transmission	infection
+Relation	T12	T11	NoRel	true	occur	Transmission
+Relation	T12	T13	NoRel	true	occur	spread
+Relation	T12	T6	NoRel	true	occur	coughing
+Relation	T12	T9	NoRel	true	occur	spreads
+Relation	T14	T9	NoRel	true	disease	spreads
+Relation	T15	T12	NoRel	true	work	occur
+Relation	T15	T16	NoRel	true	work	exposures
+Relation	T15	T4	NoRel	true	work	Airborne transmission
+Relation	T15	T5	NoRel	true	work	produced
+Relation	T16	T14	NoRel	true	exposures	disease
+Relation	T16	T15	NoRel	true	exposures	work
+Relation	T16	T21	NoRel	true	exposures	wild animals
+Relation	T17	T1	NoRel	true	infection	occurs
+Relation	T17	T8	NoRel	true	infection	infection
+Relation	T18	T15	NoRel	true	zoonosis	work
+Relation	T19	T11	NoRel	true	reassortment	Transmission
+Relation	T19	T16	NoRel	true	reassortment	exposures
+Relation	T2	T19	NoRel	true	touching	reassortment
+Relation	T20	T0	NoRel	true	herd	transfer
+Relation	T20	T12	NoRel	true	herd	occur
+Relation	T20	T14	NoRel	true	herd	disease
+Relation	T20	T7	NoRel	true	herd	sneezing
+Relation	T21	T16	NoRel	true	wild animals	exposures
+Relation	T21	T8	NoRel	true	wild animals	infection
+Relation	T22	T2	NoRel	true	constitute	touching
+Relation	T3	T4	NoRel	true	dried mucus	Airborne transmission
+Relation	T3	T7	NoRel	true	dried mucus	sneezing
+Relation	T4	T10	NoRel	true	Airborne transmission	infecting
+Relation	T4	T16	NoRel	true	Airborne transmission	exposures
+Relation	T4	T3	NoRel	true	Airborne transmission	dried mucus
+Relation	T5	T16	NoRel	true	produced	exposures
+Relation	T5	T8	NoRel	true	produced	infection
+Relation	T6	T3	NoRel	true	coughing	dried mucus
+Relation	T8	T17	NoRel	true	infection	infection
+Relation	T8	T9	NoRel	true	infection	spreads

@@ -1,0 +1,44 @@
+Text	Etkisi geniş bir alana yayılarak kışın ötesine geçti .	Batı İsviçre'de , 1816 ve 1817 yazları o kadar soğuktu ki Val de Bagnes'deki Giétro Glacier'in dibinin altında bir buz barajının oluştuğu söylendi .	Mühendis Ignaz Venetz'in büyüyen göleti boşaltma çabalarına rağmen buz barajı Haziran 1818'de korkunç bir şekilde çöktü .	Çin'de soğuk hava , özellikle kuzeyde ağaçları , pirinç mahsullerini ve hatta Asya mandalarının ölümüne sebep oldu .	Taşkınlar kalan bitkileri yok etti .
+Event	T0	geçti	EVENT	47
+Event	T1	söylendi	EVENT	193
+Event	T2	çabalarına	EVENT	253
+Event	T3	çöktü	EVENT	318
+Event	T4	oldu	EVENT	436
+Event	T5	etti	EVENT	473
+Event	T6	yayılarak	EVENT	23
+Event	T7	soğuk	EVENT	333
+Event	T8	Taşkınlar	EVENT	443
+Relation	T7	T1	CauseEffect	true	soğuk	söylendi
+Relation	T1	T7	EffectCause	true	söylendi	soğuk
+Relation	T1	T3	CauseEffect	true	söylendi	çöktü
+Relation	T3	T1	EffectCause	true	çöktü	söylendi
+Relation	T7	T4	CauseEffect	true	soğuk	oldu
+Relation	T4	T7	EffectCause	true	oldu	soğuk
+Relation	T8	T5	CauseEffect	true	Taşkınlar	etti
+Relation	T5	T8	EffectCause	true	etti	Taşkınlar
+Relation	T0	T1	NoRel	true	geçti	söylendi
+Relation	T0	T6	NoRel	true	geçti	yayılarak
+Relation	T0	T7	NoRel	true	geçti	soğuk
+Relation	T0	T8	NoRel	true	geçti	Taşkınlar
+Relation	T1	T2	NoRel	true	söylendi	çabalarına
+Relation	T1	T4	NoRel	true	söylendi	oldu
+Relation	T2	T4	NoRel	true	çabalarına	oldu
+Relation	T2	T6	NoRel	true	çabalarına	yayılarak
+Relation	T2	T7	NoRel	true	çabalarına	soğuk
+Relation	T2	T8	NoRel	true	çabalarına	Taşkınlar
+Relation	T3	T4	NoRel	true	çöktü	oldu
+Relation	T3	T6	NoRel	true	çöktü	yayılarak
+Relation	T4	T3	NoRel	true	oldu	çöktü
+Relation	T4	T5	NoRel	true	oldu	etti
+Relation	T4	T8	NoRel	true	oldu	Taşkınlar
+Relation	T6	T1	NoRel	true	yayılarak	söylendi
+Relation	T6	T2	NoRel	true	yayılarak	çabalarına
+Relation	T6	T3	NoRel	true	yayılarak	çöktü
+Relation	T6	T4	NoRel	true	yayılarak	oldu
+Relation	T6	T5	NoRel	true	yayılarak	etti
+Relation	T7	T0	NoRel	true	soğuk	geçti
+Relation	T7	T2	NoRel	true	soğuk	çabalarına
+Relation	T7	T6	NoRel	true	soğuk	yayılarak
+Relation	T7	T8	NoRel	true	soğuk	Taşkınlar
+Relation	T8	T0	NoRel	true	Taşkınlar	geçti
+Relation	T8	T6	NoRel	true	Taşkınlar	yayılarak

@@ -1,0 +1,114 @@
+Text	El avión sobrepasó el final de la pista , atravesó la cerca perimetral , sufrió graves daños al cruzar una carretera y se detuvo en un campo de arroz cercano .	Se produjo un incendio alimentado por combustible , que no pudo ser alcanzado por los vehículos de extinción de incendios del aeropuerto .	Si bien la mayoría de los pasajeros pudieron escapar , varios pasajeros perecieron dentro del fuselaje en llamas .	El piloto , el capitán Muhammad Marwoto Komar , inicialmente afirmó que hubo una bajada repentina inmediatamente antes del aterrizaje del vuelo , y que las aletas del avión pueden haber funcionado mal .	El accidente fue investigado por el Comité Nacional de Seguridad del Transporte de Indonesia ( NTSC ) .
+Event	T0	sobrepasó	EVENT	9
+Event	T1	atravesó	EVENT	42
+Event	T2	daños	EVENT	87
+Event	T3	cruzar	EVENT	96
+Event	T4	detuvo	EVENT	122
+Event	T5	produjo	EVENT	163
+Event	T7	alcanzado	EVENT	228
+Event	T8	extinción	EVENT	259
+Event	T9	incendios	EVENT	272
+Event	T10	escapar	EVENT	344
+Event	T11	perecieron	EVENT	371
+Event	T12	afirmó	EVENT	475
+Event	T13	aterrizaje	EVENT	537
+Event	T15	funcionado	EVENT	600
+Event	T16	accidente	EVENT	620
+Event	T17	investigado	EVENT	634
+Event	T18	incendio	EVENT	174
+Event	T14	combustible	EVENT	198
+Relation	T14	T18	CauseEffect	true	combustible	incendio
+Relation	T18	T14	EffectCause	true	incendio	combustible
+Relation	T0	T1	NoRel	true	sobrepasó	atravesó
+Relation	T0	T2	NoRel	true	sobrepasó	daños
+Relation	T0	T3	NoRel	true	sobrepasó	cruzar
+Relation	T0	T5	NoRel	true	sobrepasó	produjo
+Relation	T0	T7	NoRel	true	sobrepasó	alcanzado
+Relation	T1	T13	NoRel	true	atravesó	aterrizaje
+Relation	T1	T2	NoRel	true	atravesó	daños
+Relation	T1	T4	NoRel	true	atravesó	detuvo
+Relation	T1	T9	NoRel	true	atravesó	incendios
+Relation	T10	T18	NoRel	true	escapar	incendio
+Relation	T10	T3	NoRel	true	escapar	cruzar
+Relation	T10	T8	NoRel	true	escapar	extinción
+Relation	T11	T0	NoRel	true	perecieron	sobrepasó
+Relation	T11	T1	NoRel	true	perecieron	atravesó
+Relation	T11	T17	NoRel	true	perecieron	investigado
+Relation	T11	T7	NoRel	true	perecieron	alcanzado
+Relation	T11	T9	NoRel	true	perecieron	incendios
+Relation	T12	T0	NoRel	true	afirmó	sobrepasó
+Relation	T12	T13	NoRel	true	afirmó	aterrizaje
+Relation	T12	T14	NoRel	true	afirmó	combustible
+Relation	T12	T15	NoRel	true	afirmó	funcionado
+Relation	T12	T5	NoRel	true	afirmó	produjo
+Relation	T12	T9	NoRel	true	afirmó	incendios
+Relation	T13	T1	NoRel	true	aterrizaje	atravesó
+Relation	T13	T11	NoRel	true	aterrizaje	perecieron
+Relation	T13	T16	NoRel	true	aterrizaje	accidente
+Relation	T13	T17	NoRel	true	aterrizaje	investigado
+Relation	T13	T2	NoRel	true	aterrizaje	daños
+Relation	T13	T5	NoRel	true	aterrizaje	produjo
+Relation	T13	T8	NoRel	true	aterrizaje	extinción
+Relation	T14	T0	NoRel	true	combustible	sobrepasó
+Relation	T14	T12	NoRel	true	combustible	afirmó
+Relation	T14	T15	NoRel	true	combustible	funcionado
+Relation	T14	T17	NoRel	true	combustible	investigado
+Relation	T14	T9	NoRel	true	combustible	incendios
+Relation	T15	T0	NoRel	true	funcionado	sobrepasó
+Relation	T15	T11	NoRel	true	funcionado	perecieron
+Relation	T15	T12	NoRel	true	funcionado	afirmó
+Relation	T15	T13	NoRel	true	funcionado	aterrizaje
+Relation	T15	T3	NoRel	true	funcionado	cruzar
+Relation	T15	T4	NoRel	true	funcionado	detuvo
+Relation	T16	T0	NoRel	true	accidente	sobrepasó
+Relation	T16	T12	NoRel	true	accidente	afirmó
+Relation	T16	T3	NoRel	true	accidente	cruzar
+Relation	T16	T5	NoRel	true	accidente	produjo
+Relation	T16	T7	NoRel	true	accidente	alcanzado
+Relation	T17	T0	NoRel	true	investigado	sobrepasó
+Relation	T17	T12	NoRel	true	investigado	afirmó
+Relation	T17	T7	NoRel	true	investigado	alcanzado
+Relation	T17	T8	NoRel	true	investigado	extinción
+Relation	T17	T9	NoRel	true	investigado	incendios
+Relation	T18	T10	NoRel	true	incendio	escapar
+Relation	T18	T12	NoRel	true	incendio	afirmó
+Relation	T18	T15	NoRel	true	incendio	funcionado
+Relation	T18	T17	NoRel	true	incendio	investigado
+Relation	T18	T4	NoRel	true	incendio	detuvo
+Relation	T2	T10	NoRel	true	daños	escapar
+Relation	T2	T17	NoRel	true	daños	investigado
+Relation	T2	T5	NoRel	true	daños	produjo
+Relation	T3	T10	NoRel	true	cruzar	escapar
+Relation	T3	T12	NoRel	true	cruzar	afirmó
+Relation	T3	T13	NoRel	true	cruzar	aterrizaje
+Relation	T3	T14	NoRel	true	cruzar	combustible
+Relation	T3	T15	NoRel	true	cruzar	funcionado
+Relation	T3	T16	NoRel	true	cruzar	accidente
+Relation	T3	T17	NoRel	true	cruzar	investigado
+Relation	T3	T18	NoRel	true	cruzar	incendio
+Relation	T3	T2	NoRel	true	cruzar	daños
+Relation	T3	T5	NoRel	true	cruzar	produjo
+Relation	T4	T1	NoRel	true	detuvo	atravesó
+Relation	T4	T17	NoRel	true	detuvo	investigado
+Relation	T4	T8	NoRel	true	detuvo	extinción
+Relation	T4	T9	NoRel	true	detuvo	incendios
+Relation	T5	T0	NoRel	true	produjo	sobrepasó
+Relation	T5	T13	NoRel	true	produjo	aterrizaje
+Relation	T5	T15	NoRel	true	produjo	funcionado
+Relation	T5	T16	NoRel	true	produjo	accidente
+Relation	T7	T12	NoRel	true	alcanzado	afirmó
+Relation	T7	T14	NoRel	true	alcanzado	combustible
+Relation	T7	T15	NoRel	true	alcanzado	funcionado
+Relation	T7	T3	NoRel	true	alcanzado	cruzar
+Relation	T8	T1	NoRel	true	extinción	atravesó
+Relation	T8	T10	NoRel	true	extinción	escapar
+Relation	T8	T12	NoRel	true	extinción	afirmó
+Relation	T8	T14	NoRel	true	extinción	combustible
+Relation	T8	T16	NoRel	true	extinción	accidente
+Relation	T8	T9	NoRel	true	extinción	incendios
+Relation	T9	T0	NoRel	true	incendios	sobrepasó
+Relation	T9	T12	NoRel	true	incendios	afirmó
+Relation	T9	T15	NoRel	true	incendios	funcionado
+Relation	T9	T17	NoRel	true	incendios	investigado
+Relation	T9	T5	NoRel	true	incendios	produjo
+Relation	T9	T7	NoRel	true	incendios	alcanzado

@@ -1,0 +1,152 @@
+Text	La jornada del accidente , el martes 11 de julio de 1922 , El _ Correo de Asturias _ acumulaba dos horas de retraso a su llegada a la estación de Paredes de Nava , en donde tenía programada y debía además dar paso al _ Rápido de Galicia _ .	El maquinista del correo no atendió a las señales de parada , por lo que acabó empotrándose con el otro tren a las 2:30 horas de la madrugada .	El choque se produjo en la salida de la estación , en el cambio de aguja en dirección a León , exactamente en el punto kilométrico 527 .	El número de víctimas fue creciendo conforme evolucionaban las labores de rescate .	La cifra final de fallecidos fue de 32 y 10 heridos de extrema gravedad , aunque prensa de la época llegó a publicar que el número de muertos era de 40 .
+Event	T0	accidente	EVENT	15
+Event	T1	retraso	EVENT	108
+Event	T2	llegada	EVENT	121
+Event	T3	programada	EVENT	179
+Event	T4	atendió	EVENT	269
+Event	T5	señales	EVENT	283
+Event	T6	parada	EVENT	294
+Event	T7	empotrándose	EVENT	320
+Event	T9	salida	EVENT	412
+Event	T10	cambio	EVENT	442
+Event	T11	creciendo	EVENT	548
+Event	T12	evolucionaban	EVENT	567
+Event	T13	labores	EVENT	585
+Event	T14	rescate	EVENT	596
+Event	T15	fallecidos	EVENT	624
+Event	T16	heridos	EVENT	650
+Event	T17	llegó	EVENT	706
+Event	T18	publicar	EVENT	714
+Event	T19	muertos	EVENT	740
+Event	T20	choque	EVENT	388
+Relation	T4	T7	CauseEffect	true	atendió	empotrándose
+Relation	T7	T4	EffectCause	true	empotrándose	atendió
+Relation	T7	T0	CauseEffect	true	empotrándose	accidente
+Relation	T0	T7	EffectCause	true	accidente	empotrándose
+Relation	T20	T15	CauseEffect	true	choque	fallecidos
+Relation	T15	T20	EffectCause	true	fallecidos	choque
+Relation	T20	T16	CauseEffect	true	choque	heridos
+Relation	T16	T20	EffectCause	true	heridos	choque
+Relation	T0	T11	NoRel	true	accidente	creciendo
+Relation	T0	T17	NoRel	true	accidente	llegó
+Relation	T0	T3	NoRel	true	accidente	programada
+Relation	T0	T6	NoRel	true	accidente	parada
+Relation	T0	T9	NoRel	true	accidente	salida
+Relation	T1	T11	NoRel	true	retraso	creciendo
+Relation	T1	T15	NoRel	true	retraso	fallecidos
+Relation	T1	T17	NoRel	true	retraso	llegó
+Relation	T1	T19	NoRel	true	retraso	muertos
+Relation	T1	T20	NoRel	true	retraso	choque
+Relation	T1	T4	NoRel	true	retraso	atendió
+Relation	T1	T6	NoRel	true	retraso	parada
+Relation	T1	T7	NoRel	true	retraso	empotrándose
+Relation	T10	T11	NoRel	true	cambio	creciendo
+Relation	T10	T13	NoRel	true	cambio	labores
+Relation	T10	T2	NoRel	true	cambio	llegada
+Relation	T10	T4	NoRel	true	cambio	atendió
+Relation	T10	T7	NoRel	true	cambio	empotrándose
+Relation	T10	T9	NoRel	true	cambio	salida
+Relation	T11	T10	NoRel	true	creciendo	cambio
+Relation	T11	T12	NoRel	true	creciendo	evolucionaban
+Relation	T11	T13	NoRel	true	creciendo	labores
+Relation	T11	T17	NoRel	true	creciendo	llegó
+Relation	T11	T2	NoRel	true	creciendo	llegada
+Relation	T11	T20	NoRel	true	creciendo	choque
+Relation	T11	T4	NoRel	true	creciendo	atendió
+Relation	T11	T9	NoRel	true	creciendo	salida
+Relation	T12	T0	NoRel	true	evolucionaban	accidente
+Relation	T12	T16	NoRel	true	evolucionaban	heridos
+Relation	T12	T18	NoRel	true	evolucionaban	publicar
+Relation	T12	T4	NoRel	true	evolucionaban	atendió
+Relation	T12	T5	NoRel	true	evolucionaban	señales
+Relation	T13	T11	NoRel	true	labores	creciendo
+Relation	T13	T14	NoRel	true	labores	rescate
+Relation	T13	T15	NoRel	true	labores	fallecidos
+Relation	T13	T17	NoRel	true	labores	llegó
+Relation	T13	T18	NoRel	true	labores	publicar
+Relation	T13	T6	NoRel	true	labores	parada
+Relation	T14	T18	NoRel	true	rescate	publicar
+Relation	T14	T19	NoRel	true	rescate	muertos
+Relation	T14	T4	NoRel	true	rescate	atendió
+Relation	T14	T6	NoRel	true	rescate	parada
+Relation	T14	T9	NoRel	true	rescate	salida
+Relation	T15	T10	NoRel	true	fallecidos	cambio
+Relation	T15	T11	NoRel	true	fallecidos	creciendo
+Relation	T15	T4	NoRel	true	fallecidos	atendió
+Relation	T16	T0	NoRel	true	heridos	accidente
+Relation	T16	T12	NoRel	true	heridos	evolucionaban
+Relation	T16	T13	NoRel	true	heridos	labores
+Relation	T16	T14	NoRel	true	heridos	rescate
+Relation	T16	T3	NoRel	true	heridos	programada
+Relation	T16	T6	NoRel	true	heridos	parada
+Relation	T17	T13	NoRel	true	llegó	labores
+Relation	T17	T14	NoRel	true	llegó	rescate
+Relation	T17	T19	NoRel	true	llegó	muertos
+Relation	T17	T2	NoRel	true	llegó	llegada
+Relation	T17	T3	NoRel	true	llegó	programada
+Relation	T18	T0	NoRel	true	publicar	accidente
+Relation	T18	T1	NoRel	true	publicar	retraso
+Relation	T18	T10	NoRel	true	publicar	cambio
+Relation	T18	T3	NoRel	true	publicar	programada
+Relation	T18	T6	NoRel	true	publicar	parada
+Relation	T19	T17	NoRel	true	muertos	llegó
+Relation	T19	T2	NoRel	true	muertos	llegada
+Relation	T19	T3	NoRel	true	muertos	programada
+Relation	T19	T4	NoRel	true	muertos	atendió
+Relation	T19	T5	NoRel	true	muertos	señales
+Relation	T2	T0	NoRel	true	llegada	accidente
+Relation	T2	T10	NoRel	true	llegada	cambio
+Relation	T2	T12	NoRel	true	llegada	evolucionaban
+Relation	T2	T14	NoRel	true	llegada	rescate
+Relation	T2	T17	NoRel	true	llegada	llegó
+Relation	T2	T20	NoRel	true	llegada	choque
+Relation	T20	T1	NoRel	true	choque	retraso
+Relation	T20	T10	NoRel	true	choque	cambio
+Relation	T20	T2	NoRel	true	choque	llegada
+Relation	T20	T3	NoRel	true	choque	programada
+Relation	T20	T6	NoRel	true	choque	parada
+Relation	T20	T7	NoRel	true	choque	empotrándose
+Relation	T20	T9	NoRel	true	choque	salida
+Relation	T3	T14	NoRel	true	programada	rescate
+Relation	T3	T15	NoRel	true	programada	fallecidos
+Relation	T3	T19	NoRel	true	programada	muertos
+Relation	T3	T4	NoRel	true	programada	atendió
+Relation	T3	T5	NoRel	true	programada	señales
+Relation	T3	T7	NoRel	true	programada	empotrándose
+Relation	T4	T10	NoRel	true	atendió	cambio
+Relation	T4	T11	NoRel	true	atendió	creciendo
+Relation	T4	T14	NoRel	true	atendió	rescate
+Relation	T4	T15	NoRel	true	atendió	fallecidos
+Relation	T4	T18	NoRel	true	atendió	publicar
+Relation	T4	T3	NoRel	true	atendió	programada
+Relation	T4	T5	NoRel	true	atendió	señales
+Relation	T5	T1	NoRel	true	señales	retraso
+Relation	T5	T12	NoRel	true	señales	evolucionaban
+Relation	T5	T14	NoRel	true	señales	rescate
+Relation	T5	T17	NoRel	true	señales	llegó
+Relation	T5	T19	NoRel	true	señales	muertos
+Relation	T5	T20	NoRel	true	señales	choque
+Relation	T5	T4	NoRel	true	señales	atendió
+Relation	T5	T6	NoRel	true	señales	parada
+Relation	T5	T7	NoRel	true	señales	empotrándose
+Relation	T5	T9	NoRel	true	señales	salida
+Relation	T6	T13	NoRel	true	parada	labores
+Relation	T6	T14	NoRel	true	parada	rescate
+Relation	T6	T16	NoRel	true	parada	heridos
+Relation	T6	T19	NoRel	true	parada	muertos
+Relation	T6	T2	NoRel	true	parada	llegada
+Relation	T6	T20	NoRel	true	parada	choque
+Relation	T6	T3	NoRel	true	parada	programada
+Relation	T6	T4	NoRel	true	parada	atendió
+Relation	T6	T9	NoRel	true	parada	salida
+Relation	T7	T16	NoRel	true	empotrándose	heridos
+Relation	T7	T18	NoRel	true	empotrándose	publicar
+Relation	T7	T19	NoRel	true	empotrándose	muertos
+Relation	T7	T20	NoRel	true	empotrándose	choque
+Relation	T9	T10	NoRel	true	salida	cambio
+Relation	T9	T13	NoRel	true	salida	labores
+Relation	T9	T14	NoRel	true	salida	rescate
+Relation	T9	T15	NoRel	true	salida	fallecidos
+Relation	T9	T4	NoRel	true	salida	atendió
+Relation	T9	T5	NoRel	true	salida	señales
+Relation	T9	T6	NoRel	true	salida	parada

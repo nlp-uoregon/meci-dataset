@@ -1,0 +1,59 @@
+Text	Antes de amerizar , el mecánico de vuelo apagó el motor derecho y empujó la hélice .	En el momento del amaraje , a una velocidad de 240 km_/_h , se separó la hélice izquierda y la caja de cambios .	Luego , la aeronave encontró un obstáculo bajo el agua y la parte inferior del fuselaje colapsó .	La sección de cola se separó y la cabina de pasajeros se inundó parcialmente con agua .	La evacuación de los pasajeros se realizó a través de la trampilla de emergencia de la cabina , así como a través de la resultante rotura en el fuselaje de popa .
+Event	T0	amerizar	EVENT	9
+Event	T1	apagó	EVENT	41
+Event	T2	empujó	EVENT	66
+Event	T3	amaraje	EVENT	103
+Event	T4	separó	EVENT	148
+Event	T5	encontró	EVENT	218
+Event	T6	colapsó	EVENT	286
+Event	T7	separó	EVENT	318
+Event	T8	inundó	EVENT	353
+Event	T9	evacuación	EVENT	387
+Event	T10	realizó	EVENT	418
+Event	T11	rotura	EVENT	515
+Relation	T7	T8	CauseEffect	true	separó	inundó
+Relation	T8	T7	EffectCause	true	inundó	separó
+Relation	T8	T9	CauseEffect	true	inundó	evacuación
+Relation	T9	T8	EffectCause	true	evacuación	inundó
+Relation	T0	T11	NoRel	true	amerizar	rotura
+Relation	T0	T2	NoRel	true	amerizar	empujó
+Relation	T0	T3	NoRel	true	amerizar	amaraje
+Relation	T0	T4	NoRel	true	amerizar	separó
+Relation	T1	T0	NoRel	true	apagó	amerizar
+Relation	T1	T11	NoRel	true	apagó	rotura
+Relation	T1	T3	NoRel	true	apagó	amaraje
+Relation	T1	T6	NoRel	true	apagó	colapsó
+Relation	T10	T0	NoRel	true	realizó	amerizar
+Relation	T10	T2	NoRel	true	realizó	empujó
+Relation	T11	T0	NoRel	true	rotura	amerizar
+Relation	T11	T3	NoRel	true	rotura	amaraje
+Relation	T11	T4	NoRel	true	rotura	separó
+Relation	T11	T5	NoRel	true	rotura	encontró
+Relation	T2	T11	NoRel	true	empujó	rotura
+Relation	T2	T3	NoRel	true	empujó	amaraje
+Relation	T2	T9	NoRel	true	empujó	evacuación
+Relation	T3	T1	NoRel	true	amaraje	apagó
+Relation	T3	T10	NoRel	true	amaraje	realizó
+Relation	T4	T1	NoRel	true	separó	apagó
+Relation	T4	T11	NoRel	true	separó	rotura
+Relation	T4	T7	NoRel	true	separó	separó
+Relation	T5	T10	NoRel	true	encontró	realizó
+Relation	T5	T9	NoRel	true	encontró	evacuación
+Relation	T6	T2	NoRel	true	colapsó	empujó
+Relation	T6	T4	NoRel	true	colapsó	separó
+Relation	T6	T7	NoRel	true	colapsó	separó
+Relation	T6	T9	NoRel	true	colapsó	evacuación
+Relation	T7	T0	NoRel	true	separó	amerizar
+Relation	T7	T10	NoRel	true	separó	realizó
+Relation	T7	T3	NoRel	true	separó	amaraje
+Relation	T7	T4	NoRel	true	separó	separó
+Relation	T7	T5	NoRel	true	separó	encontró
+Relation	T7	T6	NoRel	true	separó	colapsó
+Relation	T8	T1	NoRel	true	inundó	apagó
+Relation	T8	T5	NoRel	true	inundó	encontró
+Relation	T8	T6	NoRel	true	inundó	colapsó
+Relation	T9	T1	NoRel	true	evacuación	apagó
+Relation	T9	T10	NoRel	true	evacuación	realizó
+Relation	T9	T4	NoRel	true	evacuación	separó
+Relation	T9	T5	NoRel	true	evacuación	encontró
+Relation	T9	T7	NoRel	true	evacuación	separó

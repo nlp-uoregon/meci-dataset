@@ -1,0 +1,31 @@
+Text	- 8 DE JULIO : descarrilamiento de un vagón de un tren de la línea del Norte debido al atropello de una res bovina .	Ocurrió en las proximidades de Azambuja .	- 13 DE SEPTIEMBRE : descarrilamiento de un convoy de la línea del Sureste en las proximidades de Poceirão .	- 15 DE SEPTIEMBRE : entre las estaciones de Mato de Miranda y Vale de Figueira descarrila el tren correo de Lisboa a Oporto .	El accidente dejó un muerto y al menos una treintena de heridos .
+Event	T0	descarrilamiento	EVENT	15
+Event	T1	atropello	EVENT	87
+Event	T2	Ocurrió	EVENT	117
+Event	T3	descarrilamiento	EVENT	180
+Event	T4	descarrila	EVENT	348
+Event	T6	muerto	EVENT	416
+Event	T7	heridos	EVENT	451
+Event	T8	accidente	EVENT	398
+Relation	T1	T0	CauseEffect	true	atropello	descarrilamiento
+Relation	T0	T1	EffectCause	true	descarrilamiento	atropello
+Relation	T8	T6	CauseEffect	true	accidente	muerto
+Relation	T6	T8	EffectCause	true	muerto	accidente
+Relation	T8	T7	CauseEffect	true	accidente	heridos
+Relation	T7	T8	EffectCause	true	heridos	accidente
+Relation	T0	T2	NoRel	true	descarrilamiento	Ocurrió
+Relation	T0	T4	NoRel	true	descarrilamiento	descarrila
+Relation	T1	T8	NoRel	true	atropello	accidente
+Relation	T2	T0	NoRel	true	Ocurrió	descarrilamiento
+Relation	T2	T1	NoRel	true	Ocurrió	atropello
+Relation	T2	T8	NoRel	true	Ocurrió	accidente
+Relation	T3	T0	NoRel	true	descarrilamiento	descarrilamiento
+Relation	T3	T2	NoRel	true	descarrilamiento	Ocurrió
+Relation	T3	T8	NoRel	true	descarrilamiento	accidente
+Relation	T4	T8	NoRel	true	descarrila	accidente
+Relation	T6	T7	NoRel	true	muerto	heridos
+Relation	T7	T0	NoRel	true	heridos	descarrilamiento
+Relation	T7	T1	NoRel	true	heridos	atropello
+Relation	T7	T2	NoRel	true	heridos	Ocurrió
+Relation	T7	T6	NoRel	true	heridos	muerto
+Relation	T8	T3	NoRel	true	accidente	descarrilamiento

@@ -1,0 +1,106 @@
+Text	Soltó las correas y su paracaídas luego se desplegó automáticamente .	Siebold no llevaba traje de presión .	Durante la prueba , la aeronave sufrió una anomalía grave derivada de un error del copiloto , al accionar los frenos prematuramente .	Testigos dijeron que la nave explotó durante el vuelo luego de que uno de sus cohetes propulsores se incendiara , más tarde fue descartado .	Finalmente en 2015 , se informó que el accidente fue causado por una falla estructural después de que el copiloto desbloqueara el sistema de frenos demasiado pronto .
+Event	T0	Soltó	EVENT	0
+Event	T1	paracaídas	EVENT	23
+Event	T2	desplegó	EVENT	43
+Event	T3	prueba	EVENT	119
+Event	T4	sufrió	EVENT	140
+Event	T5	derivada	EVENT	166
+Event	T6	error	EVENT	181
+Event	T7	accionar	EVENT	205
+Event	T8	dijeron	EVENT	251
+Event	T9	explotó	EVENT	271
+Event	T10	vuelo	EVENT	290
+Event	T11	incendiara	EVENT	343
+Event	T12	descartado	EVENT	370
+Event	T13	informó	EVENT	407
+Event	T15	desbloqueara	EVENT	497
+Event	T16	falla estructural	EVENT	452
+Event	T17	accidente	EVENT	422
+Relation	T7	T4	CauseEffect	true	accionar	sufrió
+Relation	T4	T7	EffectCause	true	sufrió	accionar
+Relation	T16	T17	CauseEffect	true	falla estructural	accidente
+Relation	T17	T16	EffectCause	true	accidente	falla estructural
+Relation	T0	T16	NoRel	true	Soltó	falla estructural
+Relation	T0	T17	NoRel	true	Soltó	accidente
+Relation	T0	T3	NoRel	true	Soltó	prueba
+Relation	T0	T4	NoRel	true	Soltó	sufrió
+Relation	T0	T5	NoRel	true	Soltó	derivada
+Relation	T0	T9	NoRel	true	Soltó	explotó
+Relation	T1	T11	NoRel	true	paracaídas	incendiara
+Relation	T1	T12	NoRel	true	paracaídas	descartado
+Relation	T1	T3	NoRel	true	paracaídas	prueba
+Relation	T10	T11	NoRel	true	vuelo	incendiara
+Relation	T10	T12	NoRel	true	vuelo	descartado
+Relation	T10	T16	NoRel	true	vuelo	falla estructural
+Relation	T10	T3	NoRel	true	vuelo	prueba
+Relation	T10	T5	NoRel	true	vuelo	derivada
+Relation	T10	T7	NoRel	true	vuelo	accionar
+Relation	T11	T0	NoRel	true	incendiara	Soltó
+Relation	T11	T10	NoRel	true	incendiara	vuelo
+Relation	T11	T12	NoRel	true	incendiara	descartado
+Relation	T11	T13	NoRel	true	incendiara	informó
+Relation	T11	T17	NoRel	true	incendiara	accidente
+Relation	T11	T3	NoRel	true	incendiara	prueba
+Relation	T11	T8	NoRel	true	incendiara	dijeron
+Relation	T11	T9	NoRel	true	incendiara	explotó
+Relation	T12	T1	NoRel	true	descartado	paracaídas
+Relation	T12	T10	NoRel	true	descartado	vuelo
+Relation	T12	T17	NoRel	true	descartado	accidente
+Relation	T12	T4	NoRel	true	descartado	sufrió
+Relation	T12	T6	NoRel	true	descartado	error
+Relation	T13	T15	NoRel	true	informó	desbloqueara
+Relation	T13	T16	NoRel	true	informó	falla estructural
+Relation	T13	T17	NoRel	true	informó	accidente
+Relation	T13	T3	NoRel	true	informó	prueba
+Relation	T13	T6	NoRel	true	informó	error
+Relation	T13	T8	NoRel	true	informó	dijeron
+Relation	T15	T0	NoRel	true	desbloqueara	Soltó
+Relation	T15	T16	NoRel	true	desbloqueara	falla estructural
+Relation	T15	T5	NoRel	true	desbloqueara	derivada
+Relation	T15	T6	NoRel	true	desbloqueara	error
+Relation	T15	T8	NoRel	true	desbloqueara	dijeron
+Relation	T16	T10	NoRel	true	falla estructural	vuelo
+Relation	T16	T11	NoRel	true	falla estructural	incendiara
+Relation	T16	T12	NoRel	true	falla estructural	descartado
+Relation	T16	T7	NoRel	true	falla estructural	accionar
+Relation	T16	T9	NoRel	true	falla estructural	explotó
+Relation	T17	T0	NoRel	true	accidente	Soltó
+Relation	T17	T11	NoRel	true	accidente	incendiara
+Relation	T17	T12	NoRel	true	accidente	descartado
+Relation	T17	T13	NoRel	true	accidente	informó
+Relation	T17	T6	NoRel	true	accidente	error
+Relation	T2	T13	NoRel	true	desplegó	informó
+Relation	T2	T17	NoRel	true	desplegó	accidente
+Relation	T2	T5	NoRel	true	desplegó	derivada
+Relation	T3	T1	NoRel	true	prueba	paracaídas
+Relation	T3	T12	NoRel	true	prueba	descartado
+Relation	T3	T16	NoRel	true	prueba	falla estructural
+Relation	T3	T6	NoRel	true	prueba	error
+Relation	T4	T9	NoRel	true	sufrió	explotó
+Relation	T5	T1	NoRel	true	derivada	paracaídas
+Relation	T5	T10	NoRel	true	derivada	vuelo
+Relation	T5	T11	NoRel	true	derivada	incendiara
+Relation	T5	T16	NoRel	true	derivada	falla estructural
+Relation	T5	T3	NoRel	true	derivada	prueba
+Relation	T5	T9	NoRel	true	derivada	explotó
+Relation	T6	T13	NoRel	true	error	informó
+Relation	T6	T17	NoRel	true	error	accidente
+Relation	T6	T2	NoRel	true	error	desplegó
+Relation	T6	T3	NoRel	true	error	prueba
+Relation	T6	T5	NoRel	true	error	derivada
+Relation	T7	T11	NoRel	true	accionar	incendiara
+Relation	T7	T15	NoRel	true	accionar	desbloqueara
+Relation	T7	T16	NoRel	true	accionar	falla estructural
+Relation	T7	T2	NoRel	true	accionar	desplegó
+Relation	T7	T3	NoRel	true	accionar	prueba
+Relation	T7	T5	NoRel	true	accionar	derivada
+Relation	T7	T6	NoRel	true	accionar	error
+Relation	T7	T8	NoRel	true	accionar	dijeron
+Relation	T7	T9	NoRel	true	accionar	explotó
+Relation	T8	T0	NoRel	true	dijeron	Soltó
+Relation	T9	T10	NoRel	true	explotó	vuelo
+Relation	T9	T11	NoRel	true	explotó	incendiara
+Relation	T9	T13	NoRel	true	explotó	informó
+Relation	T9	T15	NoRel	true	explotó	desbloqueara
+Relation	T9	T3	NoRel	true	explotó	prueba
+Relation	T9	T6	NoRel	true	explotó	error

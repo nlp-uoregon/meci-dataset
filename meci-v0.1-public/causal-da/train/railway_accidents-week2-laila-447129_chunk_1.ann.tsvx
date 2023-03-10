@@ -1,0 +1,40 @@
+Text	Lokomotivet og den forreste vogn nåede over på den anden side , men da de efterfølgende vogne faldt ned , trak de også de forreste med , og lokomotivet , tenderen og de første seks vogne styrtede i floden , mens de sidste tre passagervogne samt yderligere to vogne blev på breden .	Af de 285 personer i toget omkom 151 .	Af de seks passagervogne , der styrtede i floden , var samtlige togets fem 2. klassesvogne , og af de 176 passagerer på 2. klasse reddede blot 28 livet .	Redningsaktionen blev gennemført af blandt andet soldater , jernbanepersonale , politi , vejarbejdere , lokale landmænd og bedemænd .	Landets premierminister hastede til ulykkesstedet for at deltage i koordineringen af aktionen .
+Event	T0	trak	EVENT	106
+Event	T1	styrtede	EVENT	187
+Event	T2	omkom	EVENT	309
+Event	T3	styrtede	EVENT	352
+Event	T4	reddede	EVENT	451
+Event	T5	livet	EVENT	467
+Event	T6	gennemført	EVENT	497
+Event	T7	hastede	EVENT	633
+Event	T8	aktionen	EVENT	694
+Event	T9	nåede	EVENT	33
+Relation	T0	T1	CauseEffect	true	trak	styrtede
+Relation	T1	T0	EffectCause	true	styrtede	trak
+Relation	T1	T2	CauseEffect	true	styrtede	omkom
+Relation	T2	T1	EffectCause	true	omkom	styrtede
+Relation	T3	T2	CauseEffect	true	styrtede	omkom
+Relation	T2	T3	EffectCause	true	omkom	styrtede
+Relation	T1	T8	NoRel	true	styrtede	aktionen
+Relation	T2	T7	NoRel	true	omkom	hastede
+Relation	T2	T9	NoRel	true	omkom	nåede
+Relation	T3	T0	NoRel	true	styrtede	trak
+Relation	T3	T7	NoRel	true	styrtede	hastede
+Relation	T3	T9	NoRel	true	styrtede	nåede
+Relation	T4	T3	NoRel	true	reddede	styrtede
+Relation	T4	T5	NoRel	true	reddede	livet
+Relation	T4	T7	NoRel	true	reddede	hastede
+Relation	T5	T0	NoRel	true	livet	trak
+Relation	T5	T1	NoRel	true	livet	styrtede
+Relation	T5	T6	NoRel	true	livet	gennemført
+Relation	T5	T9	NoRel	true	livet	nåede
+Relation	T6	T4	NoRel	true	gennemført	reddede
+Relation	T6	T7	NoRel	true	gennemført	hastede
+Relation	T7	T0	NoRel	true	hastede	trak
+Relation	T7	T3	NoRel	true	hastede	styrtede
+Relation	T7	T4	NoRel	true	hastede	reddede
+Relation	T7	T8	NoRel	true	hastede	aktionen
+Relation	T8	T7	NoRel	true	aktionen	hastede
+Relation	T9	T0	NoRel	true	nåede	trak
+Relation	T9	T1	NoRel	true	nåede	styrtede
+Relation	T9	T3	NoRel	true	nåede	styrtede

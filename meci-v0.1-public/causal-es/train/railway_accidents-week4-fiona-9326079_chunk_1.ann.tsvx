@@ -1,0 +1,90 @@
+Text	El tren 05 , tras su salida de la estación Terminal Aérea , se deslizó por la pendiente entre la estación anterior mencionada y la estación Oceanía , donde se encontraba estacionado el tren 04 .	A las 18:07 , el tren 05 llega a la estación Oceanía , impactando contra el tren 04 , causando que ambos trenes tuvieran un descarrilamiento .	Momentos después , los cuerpos de emergencia llegaron a la estación .	A pesar de que no hubo víctimas fatales a causa del accidente , días después un trabajador del Sistema de Transporte Colectivo falleció , tras realizar las labores de maniobra de los trenes afectados .	- El servicio fue suspendido provisionalmente en gran parte de la Línea 5 para las labores de rescate , brindando servicio provisional en el tramo Eduardo Molina a Pantitlán con unidades de autobús Movilidad 1 ( M1 ) , hoy RTP .
+Event	T0	salida	EVENT	21
+Event	T1	deslizó	EVENT	63
+Event	T2	llega	EVENT	220
+Event	T3	impactando	EVENT	250
+Event	T4	causando	EVENT	281
+Event	T5	tuvieran	EVENT	307
+Event	T6	descarrilamiento	EVENT	319
+Event	T7	llegaron	EVENT	383
+Event	T8	accidente	EVENT	460
+Event	T9	falleció	EVENT	535
+Event	T10	realizar	EVENT	551
+Event	T11	labores	EVENT	564
+Event	T12	maniobra	EVENT	575
+Event	T13	afectados	EVENT	598
+Event	T14	labores	EVENT	693
+Event	T15	rescate	EVENT	704
+Relation	T3	T6	CauseEffect	true	impactando	descarrilamiento
+Relation	T6	T3	EffectCause	true	descarrilamiento	impactando
+Relation	T11	T9	CauseEffect	true	labores	falleció
+Relation	T9	T11	EffectCause	true	falleció	labores
+Relation	T0	T10	NoRel	true	salida	realizar
+Relation	T0	T13	NoRel	true	salida	afectados
+Relation	T1	T10	NoRel	true	deslizó	realizar
+Relation	T1	T11	NoRel	true	deslizó	labores
+Relation	T1	T13	NoRel	true	deslizó	afectados
+Relation	T1	T8	NoRel	true	deslizó	accidente
+Relation	T10	T12	NoRel	true	realizar	maniobra
+Relation	T10	T2	NoRel	true	realizar	llega
+Relation	T10	T3	NoRel	true	realizar	impactando
+Relation	T10	T5	NoRel	true	realizar	tuvieran
+Relation	T11	T1	NoRel	true	labores	deslizó
+Relation	T11	T14	NoRel	true	labores	labores
+Relation	T11	T3	NoRel	true	labores	impactando
+Relation	T11	T6	NoRel	true	labores	descarrilamiento
+Relation	T12	T1	NoRel	true	maniobra	deslizó
+Relation	T12	T10	NoRel	true	maniobra	realizar
+Relation	T12	T14	NoRel	true	maniobra	labores
+Relation	T12	T2	NoRel	true	maniobra	llega
+Relation	T12	T5	NoRel	true	maniobra	tuvieran
+Relation	T12	T7	NoRel	true	maniobra	llegaron
+Relation	T13	T12	NoRel	true	afectados	maniobra
+Relation	T13	T6	NoRel	true	afectados	descarrilamiento
+Relation	T13	T7	NoRel	true	afectados	llegaron
+Relation	T14	T0	NoRel	true	labores	salida
+Relation	T14	T5	NoRel	true	labores	tuvieran
+Relation	T14	T7	NoRel	true	labores	llegaron
+Relation	T15	T14	NoRel	true	rescate	labores
+Relation	T15	T2	NoRel	true	rescate	llega
+Relation	T15	T3	NoRel	true	rescate	impactando
+Relation	T15	T5	NoRel	true	rescate	tuvieran
+Relation	T15	T6	NoRel	true	rescate	descarrilamiento
+Relation	T2	T0	NoRel	true	llega	salida
+Relation	T2	T12	NoRel	true	llega	maniobra
+Relation	T2	T13	NoRel	true	llega	afectados
+Relation	T2	T4	NoRel	true	llega	causando
+Relation	T2	T7	NoRel	true	llega	llegaron
+Relation	T2	T8	NoRel	true	llega	accidente
+Relation	T3	T11	NoRel	true	impactando	labores
+Relation	T3	T15	NoRel	true	impactando	rescate
+Relation	T3	T2	NoRel	true	impactando	llega
+Relation	T3	T5	NoRel	true	impactando	tuvieran
+Relation	T3	T7	NoRel	true	impactando	llegaron
+Relation	T3	T9	NoRel	true	impactando	falleció
+Relation	T4	T10	NoRel	true	causando	realizar
+Relation	T4	T11	NoRel	true	causando	labores
+Relation	T4	T5	NoRel	true	causando	tuvieran
+Relation	T4	T7	NoRel	true	causando	llegaron
+Relation	T4	T9	NoRel	true	causando	falleció
+Relation	T5	T0	NoRel	true	tuvieran	salida
+Relation	T5	T11	NoRel	true	tuvieran	labores
+Relation	T5	T2	NoRel	true	tuvieran	llega
+Relation	T5	T7	NoRel	true	tuvieran	llegaron
+Relation	T5	T9	NoRel	true	tuvieran	falleció
+Relation	T6	T0	NoRel	true	descarrilamiento	salida
+Relation	T6	T10	NoRel	true	descarrilamiento	realizar
+Relation	T6	T8	NoRel	true	descarrilamiento	accidente
+Relation	T6	T9	NoRel	true	descarrilamiento	falleció
+Relation	T7	T11	NoRel	true	llegaron	labores
+Relation	T7	T4	NoRel	true	llegaron	causando
+Relation	T7	T5	NoRel	true	llegaron	tuvieran
+Relation	T7	T8	NoRel	true	llegaron	accidente
+Relation	T8	T0	NoRel	true	accidente	salida
+Relation	T8	T1	NoRel	true	accidente	deslizó
+Relation	T8	T10	NoRel	true	accidente	realizar
+Relation	T8	T2	NoRel	true	accidente	llega
+Relation	T8	T4	NoRel	true	accidente	causando
+Relation	T8	T6	NoRel	true	accidente	descarrilamiento
+Relation	T9	T13	NoRel	true	falleció	afectados
+Relation	T9	T3	NoRel	true	falleció	impactando

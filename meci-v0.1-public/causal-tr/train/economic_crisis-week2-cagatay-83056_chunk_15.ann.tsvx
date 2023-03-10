@@ -1,0 +1,17 @@
+Text	Bu süreçte 4.000 kadar banka batmış , binlerce insanın mal varlığı yok olmuştur .	Buhranın etkilediği insanlar açlığa sürüklendi ve sebze ve meyve yetiştirip satarak yaşamaya çalıştılar .	Piyasadaki para bir anda yok olduğu için insanlar ihtiyaçlarını karşılamada takas yoluna gitmek zorunda kaldı ve bir nevi değiş - tokuş ekonomisine geri döndüler .	İnsanlar maddi varlıklarıyla beraber sosyal konumlarını ve ruh sağlıklarını da kaybettiler .	Bunalımın etkileri II. Dünya Savaşı’na kadar yaklaşık on yıllık bir süreçte devam etti .
+Event	T0	batmış	EVENT	29
+Event	T2	sürüklendi	EVENT	118
+Event	T5	kaybettiler	EVENT	431
+Event	T6	etkileri	EVENT	455
+Relation	T2	T5	CauseEffect	true	sürüklendi	kaybettiler
+Relation	T5	T2	EffectCause	true	kaybettiler	sürüklendi
+Relation	T0	T2	CauseEffect	true	batmış	sürüklendi
+Relation	T2	T0	EffectCause	true	sürüklendi	batmış
+Relation	T6	T5	CauseEffect	true	etkileri	kaybettiler
+Relation	T5	T6	EffectCause	true	kaybettiler	etkileri
+Relation	T6	T2	CauseEffect	true	etkileri	sürüklendi
+Relation	T2	T6	EffectCause	true	sürüklendi	etkileri
+Relation	T6	T0	CauseEffect	true	etkileri	batmış
+Relation	T0	T6	EffectCause	true	batmış	etkileri
+Relation	T0	T5	CauseEffect	true	batmış	kaybettiler
+Relation	T5	T0	EffectCause	true	kaybettiler	batmış

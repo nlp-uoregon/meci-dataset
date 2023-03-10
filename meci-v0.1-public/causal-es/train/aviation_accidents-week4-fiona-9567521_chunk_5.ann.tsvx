@@ -1,0 +1,64 @@
+Text	Aproximadamente 260 rescatistas arribaron al lugar , que fue bloqueado por las autoridades .	El campo de escombros y cuerpos tenía unos 400 metros ( 1.300 pies ) de largo .	El miércoles , el personal de los servicios de emergencia de Ucrania concluyó su búsqueda de cadáveres y confirmó que las 170 personas a bordo habían fallecido .	Debido a la gran cantidad de fuerzas del choque y los incendios posteriores al accidente , los rescatistas creyeron que sería muy difícil identificar a la mayoría de las víctimas en el sitio .	El avión se desplomó en un área pantanosa y se desintegró con el impacto .
+Event	T0	arribaron	EVENT	32
+Event	T1	bloqueado	EVENT	61
+Event	T2	concluyó	EVENT	242
+Event	T3	búsqueda	EVENT	254
+Event	T4	confirmó	EVENT	278
+Event	T5	fallecido	EVENT	323
+Event	T6	choque	EVENT	376
+Event	T7	accidente	EVENT	414
+Event	T8	creyeron	EVENT	442
+Event	T9	identificar	EVENT	473
+Event	T10	desplomó	EVENT	540
+Event	T11	desintegró	EVENT	575
+Event	T12	impacto	EVENT	593
+Relation	T12	T11	CauseEffect	true	impacto	desintegró
+Relation	T11	T12	EffectCause	true	desintegró	impacto
+Relation	T6	T5	CauseEffect	true	choque	fallecido
+Relation	T5	T6	EffectCause	true	fallecido	choque
+Relation	T0	T12	NoRel	true	arribaron	impacto
+Relation	T1	T0	NoRel	true	bloqueado	arribaron
+Relation	T1	T10	NoRel	true	bloqueado	desplomó
+Relation	T1	T3	NoRel	true	bloqueado	búsqueda
+Relation	T1	T4	NoRel	true	bloqueado	confirmó
+Relation	T1	T6	NoRel	true	bloqueado	choque
+Relation	T10	T1	NoRel	true	desplomó	bloqueado
+Relation	T10	T3	NoRel	true	desplomó	búsqueda
+Relation	T10	T4	NoRel	true	desplomó	confirmó
+Relation	T10	T5	NoRel	true	desplomó	fallecido
+Relation	T10	T8	NoRel	true	desplomó	creyeron
+Relation	T11	T2	NoRel	true	desintegró	concluyó
+Relation	T11	T7	NoRel	true	desintegró	accidente
+Relation	T11	T9	NoRel	true	desintegró	identificar
+Relation	T12	T0	NoRel	true	impacto	arribaron
+Relation	T12	T1	NoRel	true	impacto	bloqueado
+Relation	T12	T4	NoRel	true	impacto	confirmó
+Relation	T2	T0	NoRel	true	concluyó	arribaron
+Relation	T2	T10	NoRel	true	concluyó	desplomó
+Relation	T2	T5	NoRel	true	concluyó	fallecido
+Relation	T3	T0	NoRel	true	búsqueda	arribaron
+Relation	T3	T8	NoRel	true	búsqueda	creyeron
+Relation	T3	T9	NoRel	true	búsqueda	identificar
+Relation	T4	T10	NoRel	true	confirmó	desplomó
+Relation	T4	T12	NoRel	true	confirmó	impacto
+Relation	T4	T2	NoRel	true	confirmó	concluyó
+Relation	T4	T3	NoRel	true	confirmó	búsqueda
+Relation	T5	T1	NoRel	true	fallecido	bloqueado
+Relation	T5	T4	NoRel	true	fallecido	confirmó
+Relation	T5	T7	NoRel	true	fallecido	accidente
+Relation	T6	T0	NoRel	true	choque	arribaron
+Relation	T6	T10	NoRel	true	choque	desplomó
+Relation	T6	T12	NoRel	true	choque	impacto
+Relation	T6	T2	NoRel	true	choque	concluyó
+Relation	T6	T7	NoRel	true	choque	accidente
+Relation	T7	T10	NoRel	true	accidente	desplomó
+Relation	T7	T8	NoRel	true	accidente	creyeron
+Relation	T8	T0	NoRel	true	creyeron	arribaron
+Relation	T8	T11	NoRel	true	creyeron	desintegró
+Relation	T8	T4	NoRel	true	creyeron	confirmó
+Relation	T8	T5	NoRel	true	creyeron	fallecido
+Relation	T8	T6	NoRel	true	creyeron	choque
+Relation	T8	T9	NoRel	true	creyeron	identificar
+Relation	T9	T2	NoRel	true	identificar	concluyó
+Relation	T9	T5	NoRel	true	identificar	fallecido
+Relation	T9	T7	NoRel	true	identificar	accidente

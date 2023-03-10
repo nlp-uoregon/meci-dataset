@@ -1,0 +1,99 @@
+Text	- 15 de septiembre , Lehman Brothers , cuarto banco de inversiones norteamericano , se declara en quiebra , y Merrill Lynch debe ser adquirida por Bank of America .	- 17 de septiembre , la fuerte depreciación del banco británico HBOS ( Halifax-Bank of Scotland ) por las hipotecas basura , facilita su compra por su rival Lloyds TSB .	- 17 de septiembre , la Reserva Federal norteamericana nacionaliza la compañía de seguros AIG ( American International Group ) inyectando dinero mediante un préstamo de dos años para evitar su quiebra .	- 20 de septiembre , Barclays anuncia la compra de una parte de Lehman Brothers , la banca de inversión , la de mercado de capitales , la sede de Nueva York y la marca .	Falta por cerrar la venta de la división europea , por la que se interesa también Barclays entre otros .
+Event	T0	quiebra	EVENT	98
+Event	T1	adquirida	EVENT	133
+Event	T2	depreciación	EVENT	196
+Event	T3	hipotecas	EVENT	271
+Event	T4	facilita	EVENT	290
+Event	T5	compra	EVENT	302
+Event	T6	nacionaliza	EVENT	390
+Event	T7	inyectando	EVENT	462
+Event	T8	préstamo	EVENT	492
+Event	T9	quiebra	EVENT	528
+Event	T10	anuncia	EVENT	568
+Event	T11	compra	EVENT	579
+Event	T12	Falta	EVENT	708
+Event	T13	cerrar	EVENT	718
+Event	T14	venta	EVENT	728
+Event	T15	interesa	EVENT	773
+Relation	T0	T1	NoRel	true	quiebra	adquirida
+Relation	T0	T10	NoRel	true	quiebra	anuncia
+Relation	T0	T12	NoRel	true	quiebra	Falta
+Relation	T0	T14	NoRel	true	quiebra	venta
+Relation	T0	T6	NoRel	true	quiebra	nacionaliza
+Relation	T1	T0	NoRel	true	adquirida	quiebra
+Relation	T1	T10	NoRel	true	adquirida	anuncia
+Relation	T1	T12	NoRel	true	adquirida	Falta
+Relation	T10	T1	NoRel	true	anuncia	adquirida
+Relation	T10	T11	NoRel	true	anuncia	compra
+Relation	T10	T7	NoRel	true	anuncia	inyectando
+Relation	T10	T8	NoRel	true	anuncia	préstamo
+Relation	T10	T9	NoRel	true	anuncia	quiebra
+Relation	T11	T10	NoRel	true	compra	anuncia
+Relation	T11	T4	NoRel	true	compra	facilita
+Relation	T11	T6	NoRel	true	compra	nacionaliza
+Relation	T11	T8	NoRel	true	compra	préstamo
+Relation	T12	T0	NoRel	true	Falta	quiebra
+Relation	T12	T1	NoRel	true	Falta	adquirida
+Relation	T12	T10	NoRel	true	Falta	anuncia
+Relation	T12	T11	NoRel	true	Falta	compra
+Relation	T12	T13	NoRel	true	Falta	cerrar
+Relation	T12	T2	NoRel	true	Falta	depreciación
+Relation	T12	T3	NoRel	true	Falta	hipotecas
+Relation	T12	T9	NoRel	true	Falta	quiebra
+Relation	T13	T0	NoRel	true	cerrar	quiebra
+Relation	T13	T11	NoRel	true	cerrar	compra
+Relation	T13	T4	NoRel	true	cerrar	facilita
+Relation	T13	T7	NoRel	true	cerrar	inyectando
+Relation	T13	T8	NoRel	true	cerrar	préstamo
+Relation	T14	T1	NoRel	true	venta	adquirida
+Relation	T14	T11	NoRel	true	venta	compra
+Relation	T14	T12	NoRel	true	venta	Falta
+Relation	T14	T15	NoRel	true	venta	interesa
+Relation	T14	T3	NoRel	true	venta	hipotecas
+Relation	T14	T4	NoRel	true	venta	facilita
+Relation	T14	T7	NoRel	true	venta	inyectando
+Relation	T15	T1	NoRel	true	interesa	adquirida
+Relation	T15	T14	NoRel	true	interesa	venta
+Relation	T15	T2	NoRel	true	interesa	depreciación
+Relation	T15	T7	NoRel	true	interesa	inyectando
+Relation	T15	T9	NoRel	true	interesa	quiebra
+Relation	T2	T0	NoRel	true	depreciación	quiebra
+Relation	T2	T10	NoRel	true	depreciación	anuncia
+Relation	T2	T13	NoRel	true	depreciación	cerrar
+Relation	T2	T9	NoRel	true	depreciación	quiebra
+Relation	T3	T0	NoRel	true	hipotecas	quiebra
+Relation	T3	T10	NoRel	true	hipotecas	anuncia
+Relation	T3	T6	NoRel	true	hipotecas	nacionaliza
+Relation	T3	T9	NoRel	true	hipotecas	quiebra
+Relation	T4	T11	NoRel	true	facilita	compra
+Relation	T4	T2	NoRel	true	facilita	depreciación
+Relation	T4	T5	NoRel	true	facilita	compra
+Relation	T4	T6	NoRel	true	facilita	nacionaliza
+Relation	T4	T7	NoRel	true	facilita	inyectando
+Relation	T5	T13	NoRel	true	compra	cerrar
+Relation	T5	T14	NoRel	true	compra	venta
+Relation	T5	T2	NoRel	true	compra	depreciación
+Relation	T5	T9	NoRel	true	compra	quiebra
+Relation	T6	T11	NoRel	true	nacionaliza	compra
+Relation	T6	T14	NoRel	true	nacionaliza	venta
+Relation	T6	T8	NoRel	true	nacionaliza	préstamo
+Relation	T7	T0	NoRel	true	inyectando	quiebra
+Relation	T7	T10	NoRel	true	inyectando	anuncia
+Relation	T7	T11	NoRel	true	inyectando	compra
+Relation	T7	T13	NoRel	true	inyectando	cerrar
+Relation	T7	T14	NoRel	true	inyectando	venta
+Relation	T7	T2	NoRel	true	inyectando	depreciación
+Relation	T7	T3	NoRel	true	inyectando	hipotecas
+Relation	T7	T9	NoRel	true	inyectando	quiebra
+Relation	T8	T1	NoRel	true	préstamo	adquirida
+Relation	T8	T10	NoRel	true	préstamo	anuncia
+Relation	T8	T11	NoRel	true	préstamo	compra
+Relation	T8	T12	NoRel	true	préstamo	Falta
+Relation	T8	T14	NoRel	true	préstamo	venta
+Relation	T8	T2	NoRel	true	préstamo	depreciación
+Relation	T8	T9	NoRel	true	préstamo	quiebra
+Relation	T9	T0	NoRel	true	quiebra	quiebra
+Relation	T9	T11	NoRel	true	quiebra	compra
+Relation	T9	T12	NoRel	true	quiebra	Falta
+Relation	T9	T13	NoRel	true	quiebra	cerrar
+Relation	T9	T4	NoRel	true	quiebra	facilita

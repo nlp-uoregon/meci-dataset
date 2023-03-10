@@ -1,0 +1,55 @@
+Text	Tebriz merkez olmak üzere Azerbaycan valiliğine Ulama Han tayin edildi .	Sonra Bağdad üzerine yürüyen ordu , burayı da mukavemetsiz ele geçirdi .	Kışı Bağdad’da geçiren Kanuni Sultan Süleyman , Tebriz’i işgal edip Van’ı kuşatan Şah Tahmasb üzerine yürüdü .	Şah Tahmasb tekrar geri çekilip İran içlerine gidince , Tebriz’e tekrar girildi .	Uzun süre aranmasına rağmen İran ordusunun ortaya çıkmaması üzerine , ordu , Ağustos 1535'te İstanbul’a döndü .
+Event	T3	geçiren	EVENT	161
+Event	T4	kuşatan	EVENT	220
+Event	T5	yürüdü	EVENT	248
+Event	T6	çekilip	EVENT	281
+Event	T7	gidince	EVENT	303
+Event	T8	girildi	EVENT	329
+Event	T9	aranmasına	EVENT	349
+Event	T10	döndü	EVENT	443
+Event	T11	tayin edildi	EVENT	58
+Event	T12	yürüyen	EVENT	94
+Event	T1	ele geçirdi	EVENT	132
+Event	T2	işgal	EVENT	203
+Relation	T5	T6	CauseEffect	true	yürüdü	çekilip
+Relation	T6	T5	EffectCause	true	çekilip	yürüdü
+Relation	T5	T7	CauseEffect	true	yürüdü	gidince
+Relation	T7	T5	EffectCause	true	gidince	yürüdü
+Relation	T7	T8	CauseEffect	true	gidince	girildi
+Relation	T8	T7	EffectCause	true	girildi	gidince
+Relation	T1	T10	NoRel	true	ele geçirdi	döndü
+Relation	T1	T4	NoRel	true	ele geçirdi	kuşatan
+Relation	T1	T5	NoRel	true	ele geçirdi	yürüdü
+Relation	T1	T7	NoRel	true	ele geçirdi	gidince
+Relation	T10	T12	NoRel	true	döndü	yürüyen
+Relation	T10	T4	NoRel	true	döndü	kuşatan
+Relation	T11	T4	NoRel	true	tayin edildi	kuşatan
+Relation	T11	T6	NoRel	true	tayin edildi	çekilip
+Relation	T12	T5	NoRel	true	yürüyen	yürüdü
+Relation	T12	T9	NoRel	true	yürüyen	aranmasına
+Relation	T2	T11	NoRel	true	işgal	tayin edildi
+Relation	T2	T3	NoRel	true	işgal	geçiren
+Relation	T3	T1	NoRel	true	geçiren	ele geçirdi
+Relation	T3	T11	NoRel	true	geçiren	tayin edildi
+Relation	T3	T12	NoRel	true	geçiren	yürüyen
+Relation	T3	T5	NoRel	true	geçiren	yürüdü
+Relation	T3	T7	NoRel	true	geçiren	gidince
+Relation	T3	T9	NoRel	true	geçiren	aranmasına
+Relation	T4	T1	NoRel	true	kuşatan	ele geçirdi
+Relation	T5	T1	NoRel	true	yürüdü	ele geçirdi
+Relation	T5	T2	NoRel	true	yürüdü	işgal
+Relation	T6	T1	NoRel	true	çekilip	ele geçirdi
+Relation	T6	T11	NoRel	true	çekilip	tayin edildi
+Relation	T6	T9	NoRel	true	çekilip	aranmasına
+Relation	T7	T12	NoRel	true	gidince	yürüyen
+Relation	T7	T2	NoRel	true	gidince	işgal
+Relation	T7	T9	NoRel	true	gidince	aranmasına
+Relation	T8	T1	NoRel	true	girildi	ele geçirdi
+Relation	T8	T12	NoRel	true	girildi	yürüyen
+Relation	T8	T2	NoRel	true	girildi	işgal
+Relation	T8	T5	NoRel	true	girildi	yürüdü
+Relation	T8	T6	NoRel	true	girildi	çekilip
+Relation	T9	T11	NoRel	true	aranmasına	tayin edildi
+Relation	T9	T12	NoRel	true	aranmasına	yürüyen
+Relation	T9	T2	NoRel	true	aranmasına	işgal
+Relation	T9	T6	NoRel	true	aranmasına	çekilip

@@ -1,0 +1,55 @@
+Text	Réal Levasseur , el principal investigador del TSB en el accidente , dijo que el avión aterrizó muy lejos de la zona de toma como para ser capaz de frenar el avión adecuadamente con pista mojada .	Los investigadores no hallaron evidencias de problemas en los motores , fallos de los frenos , o problemas con los aerofrenos o reversas .	El por qué los dos toboganes fallaron en su inflado todavía permanece bajo estudio .	Algunos pasajeros fueron forzados a saltar unos dos metros hasta tierra .	El informe final de la INVESTIGACIÓN DE LA TSB se puede encontrar en la página de este organismo gubernamental .
+Event	T0	accidente	EVENT	57
+Event	T1	dijo	EVENT	69
+Event	T2	aterrizó	EVENT	87
+Event	T3	toma	EVENT	120
+Event	T4	frenar	EVENT	148
+Event	T5	mojada	EVENT	188
+Event	T6	fallos	EVENT	269
+Event	T7	fallaron	EVENT	365
+Event	T8	inflado	EVENT	380
+Event	T9	estudio	EVENT	411
+Event	T10	forzados	EVENT	446
+Event	T11	saltar	EVENT	457
+Event	T12	INVESTIGACIÓN	EVENT	518
+Relation	T2	T0	CauseEffect	true	aterrizó	accidente
+Relation	T0	T2	EffectCause	true	accidente	aterrizó
+Relation	T0	T10	NoRel	true	accidente	forzados
+Relation	T0	T5	NoRel	true	accidente	mojada
+Relation	T0	T7	NoRel	true	accidente	fallaron
+Relation	T1	T0	NoRel	true	dijo	accidente
+Relation	T1	T11	NoRel	true	dijo	saltar
+Relation	T1	T3	NoRel	true	dijo	toma
+Relation	T1	T4	NoRel	true	dijo	frenar
+Relation	T10	T0	NoRel	true	forzados	accidente
+Relation	T10	T12	NoRel	true	forzados	INVESTIGACIÓN
+Relation	T10	T7	NoRel	true	forzados	fallaron
+Relation	T11	T12	NoRel	true	saltar	INVESTIGACIÓN
+Relation	T11	T4	NoRel	true	saltar	frenar
+Relation	T11	T7	NoRel	true	saltar	fallaron
+Relation	T12	T2	NoRel	true	INVESTIGACIÓN	aterrizó
+Relation	T12	T3	NoRel	true	INVESTIGACIÓN	toma
+Relation	T12	T8	NoRel	true	INVESTIGACIÓN	inflado
+Relation	T2	T1	NoRel	true	aterrizó	dijo
+Relation	T2	T10	NoRel	true	aterrizó	forzados
+Relation	T2	T9	NoRel	true	aterrizó	estudio
+Relation	T3	T1	NoRel	true	toma	dijo
+Relation	T3	T2	NoRel	true	toma	aterrizó
+Relation	T3	T4	NoRel	true	toma	frenar
+Relation	T4	T10	NoRel	true	frenar	forzados
+Relation	T4	T2	NoRel	true	frenar	aterrizó
+Relation	T4	T5	NoRel	true	frenar	mojada
+Relation	T4	T8	NoRel	true	frenar	inflado
+Relation	T5	T0	NoRel	true	mojada	accidente
+Relation	T5	T1	NoRel	true	mojada	dijo
+Relation	T5	T10	NoRel	true	mojada	forzados
+Relation	T5	T4	NoRel	true	mojada	frenar
+Relation	T5	T8	NoRel	true	mojada	inflado
+Relation	T6	T10	NoRel	true	fallos	forzados
+Relation	T6	T4	NoRel	true	fallos	frenar
+Relation	T6	T8	NoRel	true	fallos	inflado
+Relation	T7	T5	NoRel	true	fallaron	mojada
+Relation	T7	T9	NoRel	true	fallaron	estudio
+Relation	T8	T6	NoRel	true	inflado	fallos
+Relation	T9	T10	NoRel	true	estudio	forzados
+Relation	T9	T12	NoRel	true	estudio	INVESTIGACIÓN

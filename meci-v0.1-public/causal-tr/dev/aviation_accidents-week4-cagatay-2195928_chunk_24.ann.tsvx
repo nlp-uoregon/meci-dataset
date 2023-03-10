@@ -1,0 +1,101 @@
+Text	Komisyonun başkanı olarak başbakan yardımcısı Abılgaziyev atandı .	IAC'nin kazadan iki ay sonra yayımladığı ön raporunda uçakta herhangi bir arıza bulunamadığına yer verildi .	Ancak raporda uçağın yanlış bir süzülüş hattını yakaladığı açıklandı .	Ayrıca ACT Airlines temsilcileri mürettebatın bu rota boyunca ilk defa uçuş yapmadığını ve mürettebatın bu rotada uçuş deneyimi olduğunu bildirdi .	4 Mart 2020'de IAC'nin yayımladığı nihai final raporunda kazanın ana nedeni , gece vakti ILS ile inişe geçilmesi sırasında mürettebatın uçağın süzülüş yoluna göre uçak pozisyonu üzerindeki kontrolünün eksik olması ve belirlenen iniş şemasından önemli sapmalar varken zamanında pas geçmek için önlemler almamasıdır .
+Event	T0	atandı	EVENT	58
+Event	T1	kazadan	EVENT	75
+Event	T2	yayımladığı	EVENT	96
+Event	T3	arıza	EVENT	141
+Event	T4	verildi	EVENT	166
+Event	T5	açıklandı	EVENT	235
+Event	T6	uçuş	EVENT	318
+Event	T7	bildirdi	EVENT	384
+Event	T8	kazanın	EVENT	452
+Event	T10	iniş	EVENT	623
+Event	T11	sapmalar	EVENT	646
+Event	T12	geçmek	EVENT	676
+Event	T13	yakaladığı	EVENT	224
+Event	T14	uçuş	EVENT	361
+Event	T9	inişe	EVENT	492
+Event	T15	kontrolünün	EVENT	584
+Relation	T15	T8	CauseEffect	true	kontrolünün	kazanın
+Relation	T8	T15	EffectCause	true	kazanın	kontrolünün
+Relation	T11	T8	CauseEffect	true	sapmalar	kazanın
+Relation	T8	T11	EffectCause	true	kazanın	sapmalar
+Relation	T0	T11	NoRel	true	atandı	sapmalar
+Relation	T0	T6	NoRel	true	atandı	uçuş
+Relation	T0	T7	NoRel	true	atandı	bildirdi
+Relation	T0	T8	NoRel	true	atandı	kazanın
+Relation	T1	T10	NoRel	true	kazadan	iniş
+Relation	T1	T14	NoRel	true	kazadan	uçuş
+Relation	T10	T0	NoRel	true	iniş	atandı
+Relation	T10	T12	NoRel	true	iniş	geçmek
+Relation	T10	T13	NoRel	true	iniş	yakaladığı
+Relation	T10	T14	NoRel	true	iniş	uçuş
+Relation	T10	T15	NoRel	true	iniş	kontrolünün
+Relation	T10	T5	NoRel	true	iniş	açıklandı
+Relation	T10	T9	NoRel	true	iniş	inişe
+Relation	T11	T0	NoRel	true	sapmalar	atandı
+Relation	T11	T10	NoRel	true	sapmalar	iniş
+Relation	T11	T14	NoRel	true	sapmalar	uçuş
+Relation	T11	T2	NoRel	true	sapmalar	yayımladığı
+Relation	T11	T3	NoRel	true	sapmalar	arıza
+Relation	T11	T9	NoRel	true	sapmalar	inişe
+Relation	T12	T11	NoRel	true	geçmek	sapmalar
+Relation	T12	T15	NoRel	true	geçmek	kontrolünün
+Relation	T13	T2	NoRel	true	yakaladığı	yayımladığı
+Relation	T13	T5	NoRel	true	yakaladığı	açıklandı
+Relation	T13	T6	NoRel	true	yakaladığı	uçuş
+Relation	T13	T8	NoRel	true	yakaladığı	kazanın
+Relation	T13	T9	NoRel	true	yakaladığı	inişe
+Relation	T14	T1	NoRel	true	uçuş	kazadan
+Relation	T14	T12	NoRel	true	uçuş	geçmek
+Relation	T14	T2	NoRel	true	uçuş	yayımladığı
+Relation	T14	T5	NoRel	true	uçuş	açıklandı
+Relation	T14	T6	NoRel	true	uçuş	uçuş
+Relation	T14	T7	NoRel	true	uçuş	bildirdi
+Relation	T15	T1	NoRel	true	kontrolünün	kazadan
+Relation	T15	T2	NoRel	true	kontrolünün	yayımladığı
+Relation	T15	T5	NoRel	true	kontrolünün	açıklandı
+Relation	T2	T11	NoRel	true	yayımladığı	sapmalar
+Relation	T2	T12	NoRel	true	yayımladığı	geçmek
+Relation	T2	T15	NoRel	true	yayımladığı	kontrolünün
+Relation	T2	T4	NoRel	true	yayımladığı	verildi
+Relation	T2	T6	NoRel	true	yayımladığı	uçuş
+Relation	T2	T8	NoRel	true	yayımladığı	kazanın
+Relation	T2	T9	NoRel	true	yayımladığı	inişe
+Relation	T3	T0	NoRel	true	arıza	atandı
+Relation	T3	T2	NoRel	true	arıza	yayımladığı
+Relation	T3	T6	NoRel	true	arıza	uçuş
+Relation	T3	T8	NoRel	true	arıza	kazanın
+Relation	T4	T0	NoRel	true	verildi	atandı
+Relation	T4	T10	NoRel	true	verildi	iniş
+Relation	T4	T11	NoRel	true	verildi	sapmalar
+Relation	T4	T7	NoRel	true	verildi	bildirdi
+Relation	T4	T8	NoRel	true	verildi	kazanın
+Relation	T5	T0	NoRel	true	açıklandı	atandı
+Relation	T5	T1	NoRel	true	açıklandı	kazadan
+Relation	T5	T14	NoRel	true	açıklandı	uçuş
+Relation	T5	T4	NoRel	true	açıklandı	verildi
+Relation	T5	T6	NoRel	true	açıklandı	uçuş
+Relation	T5	T8	NoRel	true	açıklandı	kazanın
+Relation	T6	T1	NoRel	true	uçuş	kazadan
+Relation	T6	T12	NoRel	true	uçuş	geçmek
+Relation	T6	T4	NoRel	true	uçuş	verildi
+Relation	T6	T5	NoRel	true	uçuş	açıklandı
+Relation	T6	T7	NoRel	true	uçuş	bildirdi
+Relation	T6	T8	NoRel	true	uçuş	kazanın
+Relation	T7	T6	NoRel	true	bildirdi	uçuş
+Relation	T7	T8	NoRel	true	bildirdi	kazanın
+Relation	T8	T0	NoRel	true	kazanın	atandı
+Relation	T8	T1	NoRel	true	kazanın	kazadan
+Relation	T8	T12	NoRel	true	kazanın	geçmek
+Relation	T8	T2	NoRel	true	kazanın	yayımladığı
+Relation	T8	T3	NoRel	true	kazanın	arıza
+Relation	T8	T4	NoRel	true	kazanın	verildi
+Relation	T8	T5	NoRel	true	kazanın	açıklandı
+Relation	T8	T6	NoRel	true	kazanın	uçuş
+Relation	T8	T7	NoRel	true	kazanın	bildirdi
+Relation	T9	T0	NoRel	true	inişe	atandı
+Relation	T9	T10	NoRel	true	inişe	iniş
+Relation	T9	T12	NoRel	true	inişe	geçmek
+Relation	T9	T3	NoRel	true	inişe	arıza
+Relation	T9	T6	NoRel	true	inişe	uçuş
+Relation	T9	T8	NoRel	true	inişe	kazanın

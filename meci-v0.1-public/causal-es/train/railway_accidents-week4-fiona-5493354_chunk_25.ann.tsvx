@@ -1,0 +1,39 @@
+Text	El accidente se salda con dos heridos .	- ¿ ? DE ¿ SEPTIEMBRE ? : un tren expreso que se dirigía a Lisboa chocó con un tren correo detenido en la estación de Chão de Maçãs , produciéndose varios heridos leves .	- 17 DE SEPTIEMBRE : dos vagones de un tren de mercancías descarrilan en las cercanías del puente de Asseca , en la línea del Norte	- 6 DE OCTUBRE : un tren de pasajeros de la línea de Sintra descarrila en las proximidades de Cacém debido a la rotura de un rail defectuoso .	Como consecuencia del accidente setenta personas resulta con heridas leves .
+Event	T0	accidente	EVENT	3
+Event	T1	salda	EVENT	16
+Event	T2	heridos	EVENT	30
+Event	T3	dirigía	EVENT	89
+Event	T4	chocó	EVENT	106
+Event	T5	detenido	EVENT	131
+Event	T6	produciéndose	EVENT	174
+Event	T7	descarrilan	EVENT	269
+Event	T8	descarrila	EVENT	403
+Event	T9	rotura	EVENT	455
+Relation	T0	T2	CauseEffect	true	accidente	heridos
+Relation	T2	T0	EffectCause	true	heridos	accidente
+Relation	T0	T7	NoRel	true	accidente	descarrilan
+Relation	T0	T8	NoRel	true	accidente	descarrila
+Relation	T0	T9	NoRel	true	accidente	rotura
+Relation	T1	T9	NoRel	true	salda	rotura
+Relation	T2	T1	NoRel	true	heridos	salda
+Relation	T3	T1	NoRel	true	dirigía	salda
+Relation	T3	T2	NoRel	true	dirigía	heridos
+Relation	T3	T9	NoRel	true	dirigía	rotura
+Relation	T4	T5	NoRel	true	chocó	detenido
+Relation	T4	T8	NoRel	true	chocó	descarrila
+Relation	T5	T0	NoRel	true	detenido	accidente
+Relation	T5	T3	NoRel	true	detenido	dirigía
+Relation	T6	T1	NoRel	true	produciéndose	salda
+Relation	T6	T2	NoRel	true	produciéndose	heridos
+Relation	T6	T3	NoRel	true	produciéndose	dirigía
+Relation	T6	T4	NoRel	true	produciéndose	chocó
+Relation	T6	T5	NoRel	true	produciéndose	detenido
+Relation	T6	T9	NoRel	true	produciéndose	rotura
+Relation	T7	T3	NoRel	true	descarrilan	dirigía
+Relation	T7	T5	NoRel	true	descarrilan	detenido
+Relation	T8	T1	NoRel	true	descarrila	salda
+Relation	T8	T2	NoRel	true	descarrila	heridos
+Relation	T8	T3	NoRel	true	descarrila	dirigía
+Relation	T8	T6	NoRel	true	descarrila	produciéndose
+Relation	T9	T7	NoRel	true	rotura	descarrilan
+Relation	T9	T8	NoRel	true	rotura	descarrila

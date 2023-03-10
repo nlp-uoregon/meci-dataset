@@ -1,0 +1,71 @@
+Text	El ACCIDENTE AÉREO DE MANAUS AEROTÁXI DE 2009 ocurrió en el estado de Amazonas en Brasil el 7 de febrero de 2009 cerca de las 13:50 hora local .	El vuelo había despegado del municipio de Coari , ubicada a 360 kilómetros de Manaus , hacia donde se dirigía , pero cayó a tierra a unos 100 kilómetros al sureste de su destino en el río Manacapuru , matando a 24 de sus 28 pasajeros .	En el avión , un Embraer de dos turbohélices Bandeirante que volaba para la línea Manaus Aerotáxi , viajaban 26 pasajeros ( entre ellos varios niños ) y dos tripulantes .	Durante las primeras horas del 8 de febrero los cuerpos de las 24 personas fallecidas fueron rescatados .	Aunque inicialmente se había dicho que en el avión viajaban 24 personas , posteriormente se conoció que cuatro pasajeros lograron escapar del avión antes de que éste se hundiera .
+Event	T0	ocurrió	EVENT	46
+Event	T1	vuelo	EVENT	148
+Event	T2	despegado	EVENT	160
+Event	T3	dirigía	EVENT	247
+Event	T4	cayó	EVENT	262
+Event	T5	matando	EVENT	346
+Event	T6	volaba	EVENT	442
+Event	T7	rescatados	EVENT	645
+Event	T8	dicho	EVENT	687
+Event	T9	conoció	EVENT	750
+Event	T10	escapar	EVENT	788
+Event	T11	hundiera	EVENT	827
+Event	T12	ACCIDENTE	EVENT	3
+Relation	T4	T5	CauseEffect	true	cayó	matando
+Relation	T5	T4	EffectCause	true	matando	cayó
+Relation	T4	T11	CauseEffect	true	cayó	hundiera
+Relation	T11	T4	EffectCause	true	hundiera	cayó
+Relation	T0	T2	NoRel	true	ocurrió	despegado
+Relation	T0	T7	NoRel	true	ocurrió	rescatados
+Relation	T0	T9	NoRel	true	ocurrió	conoció
+Relation	T1	T12	NoRel	true	vuelo	ACCIDENTE
+Relation	T1	T4	NoRel	true	vuelo	cayó
+Relation	T1	T6	NoRel	true	vuelo	volaba
+Relation	T1	T8	NoRel	true	vuelo	dicho
+Relation	T1	T9	NoRel	true	vuelo	conoció
+Relation	T10	T1	NoRel	true	escapar	vuelo
+Relation	T10	T11	NoRel	true	escapar	hundiera
+Relation	T10	T4	NoRel	true	escapar	cayó
+Relation	T10	T6	NoRel	true	escapar	volaba
+Relation	T11	T0	NoRel	true	hundiera	ocurrió
+Relation	T11	T2	NoRel	true	hundiera	despegado
+Relation	T11	T5	NoRel	true	hundiera	matando
+Relation	T11	T8	NoRel	true	hundiera	dicho
+Relation	T12	T0	NoRel	true	ACCIDENTE	ocurrió
+Relation	T12	T1	NoRel	true	ACCIDENTE	vuelo
+Relation	T12	T6	NoRel	true	ACCIDENTE	volaba
+Relation	T12	T7	NoRel	true	ACCIDENTE	rescatados
+Relation	T12	T9	NoRel	true	ACCIDENTE	conoció
+Relation	T2	T12	NoRel	true	despegado	ACCIDENTE
+Relation	T2	T8	NoRel	true	despegado	dicho
+Relation	T2	T9	NoRel	true	despegado	conoció
+Relation	T3	T10	NoRel	true	dirigía	escapar
+Relation	T3	T12	NoRel	true	dirigía	ACCIDENTE
+Relation	T3	T2	NoRel	true	dirigía	despegado
+Relation	T3	T5	NoRel	true	dirigía	matando
+Relation	T3	T6	NoRel	true	dirigía	volaba
+Relation	T3	T9	NoRel	true	dirigía	conoció
+Relation	T4	T1	NoRel	true	cayó	vuelo
+Relation	T4	T6	NoRel	true	cayó	volaba
+Relation	T4	T7	NoRel	true	cayó	rescatados
+Relation	T5	T0	NoRel	true	matando	ocurrió
+Relation	T5	T1	NoRel	true	matando	vuelo
+Relation	T5	T10	NoRel	true	matando	escapar
+Relation	T5	T11	NoRel	true	matando	hundiera
+Relation	T5	T12	NoRel	true	matando	ACCIDENTE
+Relation	T6	T1	NoRel	true	volaba	vuelo
+Relation	T6	T12	NoRel	true	volaba	ACCIDENTE
+Relation	T7	T0	NoRel	true	rescatados	ocurrió
+Relation	T7	T11	NoRel	true	rescatados	hundiera
+Relation	T7	T2	NoRel	true	rescatados	despegado
+Relation	T7	T6	NoRel	true	rescatados	volaba
+Relation	T7	T8	NoRel	true	rescatados	dicho
+Relation	T7	T9	NoRel	true	rescatados	conoció
+Relation	T8	T0	NoRel	true	dicho	ocurrió
+Relation	T8	T11	NoRel	true	dicho	hundiera
+Relation	T8	T4	NoRel	true	dicho	cayó
+Relation	T8	T9	NoRel	true	dicho	conoció
+Relation	T9	T11	NoRel	true	conoció	hundiera
+Relation	T9	T2	NoRel	true	conoció	despegado
+Relation	T9	T4	NoRel	true	conoció	cayó

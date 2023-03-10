@@ -1,0 +1,60 @@
+Text	Daça - Su köyündeki kaza yerinde toplam 19 ev yıkıldı ve 7 ev hasar gördü .	Köyde toplam 427 hane bulunuyordu ve 1.434 kişi yaşıyordu .	alt = | küçükresim | upright =1.25 | Kazadan altı ay sonra enkaz alanı Kazadan sonra araştırmacıların pistte yaptığı muayene sırasında , pist yüzeyinde uçakla alakalı bir iz ya da parça bulunamadı .	Uçağın inişi , pistin sonundan yaklaşık 900 m uzaklıkta gerçekleşmişti .	Uçağın civardaki nesnelere verdiği hasardan uçağın iniş sırasında yavaşça alçaldığı anlaşılıyordu .
+Event	T0	kaza	EVENT	20
+Event	T1	yıkıldı	EVENT	46
+Event	T2	gördü	EVENT	68
+Event	T3	muayene	EVENT	253
+Event	T4	inişi	EVENT	342
+Event	T5	gerçekleşmişti	EVENT	391
+Event	T6	iniş	EVENT	459
+Event	T7	anlaşılıyordu	EVENT	492
+Event	T8	Kazadan	EVENT	173
+Event	T9	Kazadan	EVENT	207
+Event	T10	hasardan	EVENT	443
+Relation	T0	T1	CauseEffect	true	kaza	yıkıldı
+Relation	T1	T0	EffectCause	true	yıkıldı	kaza
+Relation	T0	T2	CauseEffect	true	kaza	gördü
+Relation	T2	T0	EffectCause	true	gördü	kaza
+Relation	T8	T1	CauseEffect	true	Kazadan	yıkıldı
+Relation	T1	T8	EffectCause	true	yıkıldı	Kazadan
+Relation	T8	T2	CauseEffect	true	Kazadan	gördü
+Relation	T2	T8	EffectCause	true	gördü	Kazadan
+Relation	T9	T1	CauseEffect	true	Kazadan	yıkıldı
+Relation	T1	T9	EffectCause	true	yıkıldı	Kazadan
+Relation	T9	T2	CauseEffect	true	Kazadan	gördü
+Relation	T2	T9	EffectCause	true	gördü	Kazadan
+Relation	T5	T0	CauseEffect	true	gerçekleşmişti	kaza
+Relation	T0	T5	EffectCause	true	kaza	gerçekleşmişti
+Relation	T5	T8	CauseEffect	true	gerçekleşmişti	Kazadan
+Relation	T8	T5	EffectCause	true	Kazadan	gerçekleşmişti
+Relation	T5	T9	CauseEffect	true	gerçekleşmişti	Kazadan
+Relation	T9	T5	EffectCause	true	Kazadan	gerçekleşmişti
+Relation	T0	T7	NoRel	true	kaza	anlaşılıyordu
+Relation	T0	T8	NoRel	true	kaza	Kazadan
+Relation	T0	T9	NoRel	true	kaza	Kazadan
+Relation	T1	T2	NoRel	true	yıkıldı	gördü
+Relation	T1	T3	NoRel	true	yıkıldı	muayene
+Relation	T10	T3	NoRel	true	hasardan	muayene
+Relation	T10	T5	NoRel	true	hasardan	gerçekleşmişti
+Relation	T10	T7	NoRel	true	hasardan	anlaşılıyordu
+Relation	T2	T4	NoRel	true	gördü	inişi
+Relation	T2	T6	NoRel	true	gördü	iniş
+Relation	T3	T2	NoRel	true	muayene	gördü
+Relation	T3	T4	NoRel	true	muayene	inişi
+Relation	T3	T6	NoRel	true	muayene	iniş
+Relation	T4	T10	NoRel	true	inişi	hasardan
+Relation	T4	T5	NoRel	true	inişi	gerçekleşmişti
+Relation	T5	T6	NoRel	true	gerçekleşmişti	iniş
+Relation	T6	T0	NoRel	true	iniş	kaza
+Relation	T6	T10	NoRel	true	iniş	hasardan
+Relation	T6	T3	NoRel	true	iniş	muayene
+Relation	T6	T7	NoRel	true	iniş	anlaşılıyordu
+Relation	T6	T8	NoRel	true	iniş	Kazadan
+Relation	T7	T10	NoRel	true	anlaşılıyordu	hasardan
+Relation	T7	T5	NoRel	true	anlaşılıyordu	gerçekleşmişti
+Relation	T7	T6	NoRel	true	anlaşılıyordu	iniş
+Relation	T7	T9	NoRel	true	anlaşılıyordu	Kazadan
+Relation	T8	T3	NoRel	true	Kazadan	muayene
+Relation	T8	T6	NoRel	true	Kazadan	iniş
+Relation	T8	T7	NoRel	true	Kazadan	anlaşılıyordu
+Relation	T9	T10	NoRel	true	Kazadan	hasardan
+Relation	T9	T8	NoRel	true	Kazadan	Kazadan

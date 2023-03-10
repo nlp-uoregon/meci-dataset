@@ -1,0 +1,82 @@
+Text	- 7 Şubat , 2009 – Küba , Havana’nın 570 km doğusunda Camaguey’de iki yolcu treninin aralarında çarpışması sonucu üç kişi öldü ve 90_dan fazla kişi de yaralandı .	- 13 Şubat , 2009 – On iki vagonlu Howrah - Madras Ekspresi’nin Orissa eyaletinin Bhubaneswar şehrinden ayrılmasından kısa bir süre sonra raydan çıkmasıyla meydana gelen olayda 9 ölü ve 250 yaralı oluştu .	- 21 Şubat , 2009 – Brenzo yakınındaki bir hemzemin geçitte Slovak gezinti arabasıyla bir trenin çarpımaşı sonucu 11 kişi öldü .	- 29 Mart , 2009 – Gulwe - Igandu ( Mpwapwa bölgesi ) bölümü çarpışma sonrası yolcuların düzinelercesi öldü ve diğer pek çok kişi yaralandı .	- 5 Haziran , 2009 – Oshawa , ON , saat yaklaşık 2: 15 öğlen sonrası , 111 - vagon Canadian Pacific Railway trani raydan çıktı .
+Event	T0	öldü	EVENT	122
+Event	T1	yaralandı	EVENT	151
+Event	T2	ayrılmasından	EVENT	267
+Event	T3	olayda	EVENT	333
+Event	T4	ölü	EVENT	342
+Event	T6	öldü	EVENT	491
+Event	T7	çarpışma	EVENT	559
+Event	T8	öldü	EVENT	601
+Event	T9	yaralandı	EVENT	628
+Event	T10	çıktı	EVENT	761
+Event	T11	çarpışması	EVENT	96
+Event	T12	çıkmasıyla	EVENT	308
+Event	T13	yaralı	EVENT	353
+Event	T5	çarpımaşı	EVENT	466
+Relation	T11	T0	CauseEffect	true	çarpışması	öldü
+Relation	T0	T11	EffectCause	true	öldü	çarpışması
+Relation	T11	T1	CauseEffect	true	çarpışması	yaralandı
+Relation	T1	T11	EffectCause	true	yaralandı	çarpışması
+Relation	T12	T4	CauseEffect	true	çıkmasıyla	ölü
+Relation	T4	T12	EffectCause	true	ölü	çıkmasıyla
+Relation	T12	T13	CauseEffect	true	çıkmasıyla	yaralı
+Relation	T13	T12	EffectCause	true	yaralı	çıkmasıyla
+Relation	T5	T6	CauseEffect	true	çarpımaşı	öldü
+Relation	T6	T5	EffectCause	true	öldü	çarpımaşı
+Relation	T7	T8	CauseEffect	true	çarpışma	öldü
+Relation	T8	T7	EffectCause	true	öldü	çarpışma
+Relation	T7	T9	CauseEffect	true	çarpışma	yaralandı
+Relation	T9	T7	EffectCause	true	yaralandı	çarpışma
+Relation	T0	T1	NoRel	true	öldü	yaralandı
+Relation	T0	T13	NoRel	true	öldü	yaralı
+Relation	T0	T2	NoRel	true	öldü	ayrılmasından
+Relation	T0	T3	NoRel	true	öldü	olayda
+Relation	T0	T4	NoRel	true	öldü	ölü
+Relation	T0	T8	NoRel	true	öldü	öldü
+Relation	T1	T0	NoRel	true	yaralandı	öldü
+Relation	T1	T12	NoRel	true	yaralandı	çıkmasıyla
+Relation	T1	T4	NoRel	true	yaralandı	ölü
+Relation	T1	T6	NoRel	true	yaralandı	öldü
+Relation	T10	T11	NoRel	true	çıktı	çarpışması
+Relation	T10	T8	NoRel	true	çıktı	öldü
+Relation	T11	T10	NoRel	true	çarpışması	çıktı
+Relation	T11	T3	NoRel	true	çarpışması	olayda
+Relation	T11	T5	NoRel	true	çarpışması	çarpımaşı
+Relation	T12	T11	NoRel	true	çıkmasıyla	çarpışması
+Relation	T12	T3	NoRel	true	çıkmasıyla	olayda
+Relation	T12	T7	NoRel	true	çıkmasıyla	çarpışma
+Relation	T12	T9	NoRel	true	çıkmasıyla	yaralandı
+Relation	T13	T0	NoRel	true	yaralı	öldü
+Relation	T13	T6	NoRel	true	yaralı	öldü
+Relation	T13	T8	NoRel	true	yaralı	öldü
+Relation	T2	T3	NoRel	true	ayrılmasından	olayda
+Relation	T2	T5	NoRel	true	ayrılmasından	çarpımaşı
+Relation	T2	T9	NoRel	true	ayrılmasından	yaralandı
+Relation	T3	T0	NoRel	true	olayda	öldü
+Relation	T3	T10	NoRel	true	olayda	çıktı
+Relation	T3	T5	NoRel	true	olayda	çarpımaşı
+Relation	T3	T7	NoRel	true	olayda	çarpışma
+Relation	T4	T0	NoRel	true	ölü	öldü
+Relation	T4	T1	NoRel	true	ölü	yaralandı
+Relation	T4	T2	NoRel	true	ölü	ayrılmasından
+Relation	T4	T6	NoRel	true	ölü	öldü
+Relation	T4	T9	NoRel	true	ölü	yaralandı
+Relation	T5	T1	NoRel	true	çarpımaşı	yaralandı
+Relation	T5	T10	NoRel	true	çarpımaşı	çıktı
+Relation	T5	T12	NoRel	true	çarpımaşı	çıkmasıyla
+Relation	T5	T4	NoRel	true	çarpımaşı	ölü
+Relation	T5	T8	NoRel	true	çarpımaşı	öldü
+Relation	T6	T10	NoRel	true	öldü	çıktı
+Relation	T6	T12	NoRel	true	öldü	çıkmasıyla
+Relation	T6	T2	NoRel	true	öldü	ayrılmasından
+Relation	T6	T4	NoRel	true	öldü	ölü
+Relation	T7	T12	NoRel	true	çarpışma	çıkmasıyla
+Relation	T7	T2	NoRel	true	çarpışma	ayrılmasından
+Relation	T7	T4	NoRel	true	çarpışma	ölü
+Relation	T7	T5	NoRel	true	çarpışma	çarpımaşı
+Relation	T7	T6	NoRel	true	çarpışma	öldü
+Relation	T8	T4	NoRel	true	öldü	ölü
+Relation	T8	T5	NoRel	true	öldü	çarpımaşı
+Relation	T8	T9	NoRel	true	öldü	yaralandı
+Relation	T9	T12	NoRel	true	yaralandı	çıkmasıyla
+Relation	T9	T2	NoRel	true	yaralandı	ayrılmasından

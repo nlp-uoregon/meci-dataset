@@ -1,0 +1,73 @@
+Text	" ifadesini kullandı .	- Dışişleri Bakanlığının Twitter hesabında Meksika hükümeti , depremde hayatını kaybedenler için Türk halkı ve hükümetine başsağlığı diliyor , Afetzedelerle dayanışma içinde olduğunu vurguluyor " mesajına yer verdi .	- : Cumhurbaşkanı Arif Alvi , Türkiye'deki depremden kaynaklanan can kaybı ve maddi kayıplar nedeniyle derin üzüntülerini dile getirdi .	- : Ankara Büyükelçiliği depremle alakalı Twitter'dan yayımladığı mesajda , " Elazığ merkezli depremden etkilenen herkese geçmiş olsun .	Hayatını kaybedenlere Allah'tan rahmet , yaralılara acil şifalar diliyoruz .
+Event	T0	kullandı	EVENT	12
+Event	T1	hayatını	EVENT	94
+Event	T2	verdi	EVENT	232
+Event	T3	kaybı	EVENT	309
+Event	T4	getirdi	EVENT	367
+Event	T5	yayımladığı	EVENT	431
+Event	T6	etkilenen	EVENT	481
+Event	T7	geçmiş	EVENT	499
+Event	T8	diliyoruz	EVENT	579
+Event	T9	depremde	EVENT	85
+Event	T10	depremden	EVENT	283
+Event	T11	kayıplar	EVENT	324
+Event	T12	depremden	EVENT	471
+Relation	T9	T2	CauseEffect	true	depremde	verdi
+Relation	T2	T9	EffectCause	true	verdi	depremde
+Relation	T10	T4	CauseEffect	true	depremden	getirdi
+Relation	T4	T10	EffectCause	true	getirdi	depremden
+Relation	T12	T6	CauseEffect	true	depremden	etkilenen
+Relation	T6	T12	EffectCause	true	etkilenen	depremden
+Relation	T12	T5	CauseEffect	true	depremden	yayımladığı
+Relation	T5	T12	EffectCause	true	yayımladığı	depremden
+Relation	T0	T11	NoRel	true	kullandı	kayıplar
+Relation	T0	T12	NoRel	true	kullandı	depremden
+Relation	T0	T3	NoRel	true	kullandı	kaybı
+Relation	T0	T4	NoRel	true	kullandı	getirdi
+Relation	T0	T9	NoRel	true	kullandı	depremde
+Relation	T1	T11	NoRel	true	hayatını	kayıplar
+Relation	T1	T2	NoRel	true	hayatını	verdi
+Relation	T1	T5	NoRel	true	hayatını	yayımladığı
+Relation	T1	T6	NoRel	true	hayatını	etkilenen
+Relation	T10	T11	NoRel	true	depremden	kayıplar
+Relation	T10	T12	NoRel	true	depremden	depremden
+Relation	T10	T3	NoRel	true	depremden	kaybı
+Relation	T10	T5	NoRel	true	depremden	yayımladığı
+Relation	T10	T6	NoRel	true	depremden	etkilenen
+Relation	T10	T9	NoRel	true	depremden	depremde
+Relation	T11	T0	NoRel	true	kayıplar	kullandı
+Relation	T12	T1	NoRel	true	depremden	hayatını
+Relation	T12	T2	NoRel	true	depremden	verdi
+Relation	T12	T8	NoRel	true	depremden	diliyoruz
+Relation	T12	T9	NoRel	true	depremden	depremde
+Relation	T2	T5	NoRel	true	verdi	yayımladığı
+Relation	T2	T6	NoRel	true	verdi	etkilenen
+Relation	T2	T7	NoRel	true	verdi	geçmiş
+Relation	T2	T8	NoRel	true	verdi	diliyoruz
+Relation	T3	T0	NoRel	true	kaybı	kullandı
+Relation	T3	T10	NoRel	true	kaybı	depremden
+Relation	T3	T12	NoRel	true	kaybı	depremden
+Relation	T3	T2	NoRel	true	kaybı	verdi
+Relation	T3	T6	NoRel	true	kaybı	etkilenen
+Relation	T4	T0	NoRel	true	getirdi	kullandı
+Relation	T4	T12	NoRel	true	getirdi	depremden
+Relation	T4	T3	NoRel	true	getirdi	kaybı
+Relation	T4	T8	NoRel	true	getirdi	diliyoruz
+Relation	T5	T0	NoRel	true	yayımladığı	kullandı
+Relation	T5	T4	NoRel	true	yayımladığı	getirdi
+Relation	T5	T6	NoRel	true	yayımladığı	etkilenen
+Relation	T6	T0	NoRel	true	etkilenen	kullandı
+Relation	T6	T4	NoRel	true	etkilenen	getirdi
+Relation	T7	T12	NoRel	true	geçmiş	depremden
+Relation	T7	T2	NoRel	true	geçmiş	verdi
+Relation	T7	T5	NoRel	true	geçmiş	yayımladığı
+Relation	T7	T8	NoRel	true	geçmiş	diliyoruz
+Relation	T7	T9	NoRel	true	geçmiş	depremde
+Relation	T8	T0	NoRel	true	diliyoruz	kullandı
+Relation	T8	T4	NoRel	true	diliyoruz	getirdi
+Relation	T8	T5	NoRel	true	diliyoruz	yayımladığı
+Relation	T8	T7	NoRel	true	diliyoruz	geçmiş
+Relation	T9	T0	NoRel	true	depremde	kullandı
+Relation	T9	T1	NoRel	true	depremde	hayatını
+Relation	T9	T3	NoRel	true	depremde	kaybı
+Relation	T9	T6	NoRel	true	depremde	etkilenen

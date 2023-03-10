@@ -1,0 +1,23 @@
+Text	1942'nin başlarında Himmler'in emriyle Auschwitz , kurbanların Zyklon B kullanılarak öldürüldüğü gaz odalarının eklenmesini içerecek şekilde büyük ölçüde genişletildi .	İdari nedenlerle tüm toplama kampı muhafızları ve idari personeli 1942'de Waffen - SS'nin tam üyeleri oldu .	Toplama kampları , Oswald Pohl yönetimindeki _ SS - Wirtschafts - Verwaltungshauptamt _'ın ( WVHA ) komutası altına getirildi .	Richard Glücks 1942'de WVHA altında " D ofisi " olacak olan Toplama Kampları Müfettişi olarak hizmet verdi .	Askerî durum kötüleştikçe sömürü ve imha , dengeleyici bir eylem haline geldi .
+Event	T0	öldürüldüğü	EVENT	85
+Event	T1	genişletildi	EVENT	154
+Event	T2	getirildi	EVENT	394
+Event	T3	verdi	EVENT	507
+Event	T7	geldi	EVENT	587
+Event	T8	emriyle	EVENT	31
+Event	T9	kötüleştikçe	EVENT	528
+Relation	T8	T0	CauseEffect	true	emriyle	öldürüldüğü
+Relation	T0	T8	EffectCause	true	öldürüldüğü	emriyle
+Relation	T9	T7	CauseEffect	true	kötüleştikçe	geldi
+Relation	T7	T9	EffectCause	true	geldi	kötüleştikçe
+Relation	T0	T1	NoRel	true	öldürüldüğü	genişletildi
+Relation	T0	T7	NoRel	true	öldürüldüğü	geldi
+Relation	T1	T7	NoRel	true	genişletildi	geldi
+Relation	T1	T9	NoRel	true	genişletildi	kötüleştikçe
+Relation	T2	T1	NoRel	true	getirildi	genişletildi
+Relation	T2	T7	NoRel	true	getirildi	geldi
+Relation	T2	T9	NoRel	true	getirildi	kötüleştikçe
+Relation	T3	T2	NoRel	true	verdi	getirildi
+Relation	T8	T3	NoRel	true	emriyle	verdi
+Relation	T8	T9	NoRel	true	emriyle	kötüleştikçe
+Relation	T9	T0	NoRel	true	kötüleştikçe	öldürüldüğü

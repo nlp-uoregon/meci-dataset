@@ -1,0 +1,78 @@
+Text	1983ء میں کراچی میں شیعہ آبادیوں پر حملے ہوئے جن میں ساٹھ افراد شہید کر دیے گئے ۔	5 جولائی 1985ء کو کوئٹہ میں تکفیری دہشت گردوں نے اپنے دو پولیس والے سہولت کاروں کے ہمراہ پولیس کی وردیاں پہن کر شیعوں کے احتجاجی جلوس پر حملہ کیا جس کے نتیجے میں 25 شیعہ قتل ہو_ئے ۔	البتہ چونکہ یہ دو بدو مقابلے کی کوشش تھی ، لہذا 11 دہشت گرد جوابی کارروائی میں ہلاک ہو گئے ۔	پولیس کے ریکارڈ کے مطابق ہلاک شدگان میں سے دو کی شناخت پولیس اہلکاروں کے طور پر ہوئی ، باقی 9 جعلی وردیاں پہن کر آ_ئے تھے ۔	24 جولائی 1987ء کو پاراچنار میں شیعہ آبادیوں پر افغان مجاہدین کا حملہ شیعوں کی بھرپور تیاری کی وجہ سے ناکام ہو گیا ۔
+Event	T0	شہید	EVENT	64
+Event	T1	جلوس	EVENT	211
+Event	T2	جس	EVENT	228
+Event	T3	نتیجے	EVENT	234
+Event	T4	قتل	EVENT	252
+Event	T5	مقابلے	EVENT	286
+Event	T6	کوشش	EVENT	296
+Event	T7	کارروائی	EVENT	330
+Event	T8	ہلاک	EVENT	343
+Event	T9	شناخت	EVENT	406
+Event	T10	حملہ	EVENT	546
+Event	T11	تیاری	EVENT	567
+Event	T12	ناکام	EVENT	583
+Relation	T2	T4	CauseEffect	true	جس	قتل
+Relation	T4	T2	EffectCause	true	قتل	جس
+Relation	T11	T12	CauseEffect	true	تیاری	ناکام
+Relation	T12	T11	EffectCause	true	ناکام	تیاری
+Relation	T0	T4	NoRel	true	شہید	قتل
+Relation	T0	T9	NoRel	true	شہید	شناخت
+Relation	T1	T0	NoRel	true	جلوس	شہید
+Relation	T1	T2	NoRel	true	جلوس	جس
+Relation	T1	T8	NoRel	true	جلوس	ہلاک
+Relation	T1	T9	NoRel	true	جلوس	شناخت
+Relation	T10	T0	NoRel	true	حملہ	شہید
+Relation	T10	T12	NoRel	true	حملہ	ناکام
+Relation	T10	T2	NoRel	true	حملہ	جس
+Relation	T10	T3	NoRel	true	حملہ	نتیجے
+Relation	T10	T4	NoRel	true	حملہ	قتل
+Relation	T10	T5	NoRel	true	حملہ	مقابلے
+Relation	T10	T6	NoRel	true	حملہ	کوشش
+Relation	T11	T0	NoRel	true	تیاری	شہید
+Relation	T11	T2	NoRel	true	تیاری	جس
+Relation	T11	T3	NoRel	true	تیاری	نتیجے
+Relation	T11	T6	NoRel	true	تیاری	کوشش
+Relation	T12	T10	NoRel	true	ناکام	حملہ
+Relation	T12	T3	NoRel	true	ناکام	نتیجے
+Relation	T12	T4	NoRel	true	ناکام	قتل
+Relation	T12	T7	NoRel	true	ناکام	کارروائی
+Relation	T2	T0	NoRel	true	جس	شہید
+Relation	T2	T1	NoRel	true	جس	جلوس
+Relation	T2	T11	NoRel	true	جس	تیاری
+Relation	T2	T12	NoRel	true	جس	ناکام
+Relation	T2	T3	NoRel	true	جس	نتیجے
+Relation	T2	T5	NoRel	true	جس	مقابلے
+Relation	T3	T10	NoRel	true	نتیجے	حملہ
+Relation	T3	T2	NoRel	true	نتیجے	جس
+Relation	T3	T6	NoRel	true	نتیجے	کوشش
+Relation	T3	T7	NoRel	true	نتیجے	کارروائی
+Relation	T3	T9	NoRel	true	نتیجے	شناخت
+Relation	T4	T0	NoRel	true	قتل	شہید
+Relation	T4	T1	NoRel	true	قتل	جلوس
+Relation	T4	T12	NoRel	true	قتل	ناکام
+Relation	T4	T7	NoRel	true	قتل	کارروائی
+Relation	T5	T2	NoRel	true	مقابلے	جس
+Relation	T5	T3	NoRel	true	مقابلے	نتیجے
+Relation	T5	T6	NoRel	true	مقابلے	کوشش
+Relation	T5	T9	NoRel	true	مقابلے	شناخت
+Relation	T6	T1	NoRel	true	کوشش	جلوس
+Relation	T6	T10	NoRel	true	کوشش	حملہ
+Relation	T6	T11	NoRel	true	کوشش	تیاری
+Relation	T6	T4	NoRel	true	کوشش	قتل
+Relation	T6	T5	NoRel	true	کوشش	مقابلے
+Relation	T6	T8	NoRel	true	کوشش	ہلاک
+Relation	T7	T1	NoRel	true	کارروائی	جلوس
+Relation	T7	T10	NoRel	true	کارروائی	حملہ
+Relation	T7	T3	NoRel	true	کارروائی	نتیجے
+Relation	T7	T8	NoRel	true	کارروائی	ہلاک
+Relation	T7	T9	NoRel	true	کارروائی	شناخت
+Relation	T8	T10	NoRel	true	ہلاک	حملہ
+Relation	T8	T2	NoRel	true	ہلاک	جس
+Relation	T8	T3	NoRel	true	ہلاک	نتیجے
+Relation	T8	T4	NoRel	true	ہلاک	قتل
+Relation	T8	T5	NoRel	true	ہلاک	مقابلے
+Relation	T8	T6	NoRel	true	ہلاک	کوشش
+Relation	T8	T9	NoRel	true	ہلاک	شناخت
+Relation	T9	T3	NoRel	true	شناخت	نتیجے
+Relation	T9	T5	NoRel	true	شناخت	مقابلے

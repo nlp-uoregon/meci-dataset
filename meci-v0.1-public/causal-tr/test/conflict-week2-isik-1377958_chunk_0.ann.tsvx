@@ -1,0 +1,47 @@
+Text	MILLI_AŞIRETI AYAKLANMASI ( 1 Haziran - 8 Eylül 1920 ) , Urfa’da yaşayan Milli aşiretinin Fransızlarla iş birliği yaparak çıkardığı ayaklanmadır .	Millî kuvvetlerce bastırılmıştır .	Güneydoğu Anadolu Bölgesi'nde Fransız , İngiliz ve Ermeni faaliyetlerinin artması , bölgede yaşayan Kürt aşiretlerini de kışkırtmaları sonucunda Milli aşireti de ayaklanmıştır .	Aşiret liderlerinden Mahmut , İsmail , Halil ve diğer şahıslar Fransız ve İngilizlerle temasa geçerek Siirt'ten Dersim’e kadar olan bölgeyi idareleri altına almak için harekete geçtiler .	Milli aşiretinin ayaklanmasının bastırılması için 13. Kolordu görevlendirildi .
+Event	T0	ayaklanmadır	EVENT	132
+Event	T1	bastırılmıştır	EVENT	165
+Event	T2	artması	EVENT	256
+Event	T3	kışkırtmaları	EVENT	303
+Event	T4	ayaklanmıştır	EVENT	344
+Event	T5	bastırılması	EVENT	580
+Event	T6	görevlendirildi	EVENT	610
+Event	T7	MILLI_AŞIRETI AYAKLANMASI	EVENT	0
+Event	T9	iş birliği	EVENT	103
+Relation	T9	T0	CauseEffect	true	iş birliği	ayaklanmadır
+Relation	T0	T9	EffectCause	true	ayaklanmadır	iş birliği
+Relation	T0	T1	CauseEffect	true	ayaklanmadır	bastırılmıştır
+Relation	T1	T0	EffectCause	true	bastırılmıştır	ayaklanmadır
+Relation	T3	T4	CauseEffect	true	kışkırtmaları	ayaklanmıştır
+Relation	T4	T3	EffectCause	true	ayaklanmıştır	kışkırtmaları
+Relation	T5	T6	CauseEffect	true	bastırılması	görevlendirildi
+Relation	T6	T5	EffectCause	true	görevlendirildi	bastırılması
+Relation	T2	T4	CauseEffect	true	artması	ayaklanmıştır
+Relation	T4	T2	EffectCause	true	ayaklanmıştır	artması
+Relation	T7	T5	CauseEffect	true	MILLI_AŞIRETI AYAKLANMASI	bastırılması
+Relation	T5	T7	EffectCause	true	bastırılması	MILLI_AŞIRETI AYAKLANMASI
+Relation	T4	T5	CauseEffect	true	ayaklanmıştır	bastırılması
+Relation	T5	T4	EffectCause	true	bastırılması	ayaklanmıştır
+Relation	T2	T7	CauseEffect	true	artması	MILLI_AŞIRETI AYAKLANMASI
+Relation	T7	T2	EffectCause	true	MILLI_AŞIRETI AYAKLANMASI	artması
+Relation	T3	T7	CauseEffect	true	kışkırtmaları	MILLI_AŞIRETI AYAKLANMASI
+Relation	T7	T3	EffectCause	true	MILLI_AŞIRETI AYAKLANMASI	kışkırtmaları
+Relation	T4	T1	CauseEffect	true	ayaklanmıştır	bastırılmıştır
+Relation	T1	T4	EffectCause	true	bastırılmıştır	ayaklanmıştır
+Relation	T4	T6	CauseEffect	true	ayaklanmıştır	görevlendirildi
+Relation	T6	T4	EffectCause	true	görevlendirildi	ayaklanmıştır
+Relation	T0	T7	NoRel	true	ayaklanmadır	MILLI_AŞIRETI AYAKLANMASI
+Relation	T1	T3	NoRel	true	bastırılmıştır	kışkırtmaları
+Relation	T2	T1	NoRel	true	artması	bastırılmıştır
+Relation	T2	T9	NoRel	true	artması	iş birliği
+Relation	T3	T0	NoRel	true	kışkırtmaları	ayaklanmadır
+Relation	T4	T0	NoRel	true	ayaklanmıştır	ayaklanmadır
+Relation	T4	T9	NoRel	true	ayaklanmıştır	iş birliği
+Relation	T5	T1	NoRel	true	bastırılması	bastırılmıştır
+Relation	T6	T1	NoRel	true	görevlendirildi	bastırılmıştır
+Relation	T6	T2	NoRel	true	görevlendirildi	artması
+Relation	T7	T0	NoRel	true	MILLI_AŞIRETI AYAKLANMASI	ayaklanmadır
+Relation	T7	T1	NoRel	true	MILLI_AŞIRETI AYAKLANMASI	bastırılmıştır
+Relation	T7	T4	NoRel	true	MILLI_AŞIRETI AYAKLANMASI	ayaklanmıştır
+Relation	T9	T1	NoRel	true	iş birliği	bastırılmıştır
+Relation	T9	T3	NoRel	true	iş birliği	kışkırtmaları

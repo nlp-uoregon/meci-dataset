@@ -1,0 +1,63 @@
+Text	This disallowed the flying of Buddhist flags on Phật Đản , the birthday of Gautama Buddha .	The invoking official was the deputy province chief in charge of security , Major Đặng Sỹ , a Catholic who was charged with maintaining public security and was commander of the Huế garrison .	The application of the law caused indignation among Buddhists on the eve of the most important religious festival of the year , since a week earlier Catholics had been allowed to display Vatican flags to celebrate the 25th anniversary of the appointment of Diệm 's brother Thục as Archbishop of Huế .	The celebrations had been bankrolled by Diệm 's regime through a national committee which asked the population to donate money to Thục 's jubilee .	Buddhists complained that they had been forced to give a month 's wages to pay for the celebration .
+Event	T0	disallowed	EVENT	5
+Event	T1	flying	EVENT	20
+Event	T2	charged	EVENT	203
+Event	T3	maintaining	EVENT	216
+Event	T4	application	EVENT	288
+Event	T5	indignation	EVENT	318
+Event	T6	allowed	EVENT	452
+Event	T7	display	EVENT	463
+Event	T8	celebrate	EVENT	488
+Event	T9	appointment	EVENT	526
+Event	T10	celebrations	EVENT	589
+Event	T11	bankrolled	EVENT	611
+Event	T12	asked	EVENT	675
+Event	T13	jubilee	EVENT	723
+Event	T14	complained	EVENT	743
+Event	T15	forced	EVENT	773
+Event	T16	give	EVENT	783
+Event	T17	pay	EVENT	808
+Event	T18	celebration	EVENT	820
+Event	T19	donate	EVENT	699
+Relation	T4	T5	CauseEffect	true	application	indignation
+Relation	T5	T4	EffectCause	true	indignation	application
+Relation	T6	T5	CauseEffect	true	allowed	indignation
+Relation	T5	T6	EffectCause	true	indignation	allowed
+Relation	T17	T14	CauseEffect	true	pay	complained
+Relation	T14	T17	EffectCause	true	complained	pay
+Relation	T0	T12	NoRel	true	disallowed	asked
+Relation	T0	T19	NoRel	true	disallowed	donate
+Relation	T0	T2	NoRel	true	disallowed	charged
+Relation	T0	T8	NoRel	true	disallowed	celebrate
+Relation	T1	T11	NoRel	true	flying	bankrolled
+Relation	T1	T13	NoRel	true	flying	jubilee
+Relation	T11	T17	NoRel	true	bankrolled	pay
+Relation	T12	T13	NoRel	true	asked	jubilee
+Relation	T13	T0	NoRel	true	jubilee	disallowed
+Relation	T14	T16	NoRel	true	complained	give
+Relation	T14	T4	NoRel	true	complained	application
+Relation	T15	T1	NoRel	true	forced	flying
+Relation	T15	T11	NoRel	true	forced	bankrolled
+Relation	T15	T13	NoRel	true	forced	jubilee
+Relation	T15	T4	NoRel	true	forced	application
+Relation	T16	T1	NoRel	true	give	flying
+Relation	T17	T4	NoRel	true	pay	application
+Relation	T18	T7	NoRel	true	celebration	display
+Relation	T18	T8	NoRel	true	celebration	celebrate
+Relation	T19	T0	NoRel	true	donate	disallowed
+Relation	T2	T12	NoRel	true	charged	asked
+Relation	T2	T15	NoRel	true	charged	forced
+Relation	T2	T3	NoRel	true	charged	maintaining
+Relation	T2	T4	NoRel	true	charged	application
+Relation	T3	T1	NoRel	true	maintaining	flying
+Relation	T3	T2	NoRel	true	maintaining	charged
+Relation	T4	T15	NoRel	true	application	forced
+Relation	T5	T10	NoRel	true	indignation	celebrations
+Relation	T6	T0	NoRel	true	allowed	disallowed
+Relation	T6	T17	NoRel	true	allowed	pay
+Relation	T6	T7	NoRel	true	allowed	display
+Relation	T7	T10	NoRel	true	display	celebrations
+Relation	T7	T9	NoRel	true	display	appointment
+Relation	T8	T10	NoRel	true	celebrate	celebrations
+Relation	T8	T17	NoRel	true	celebrate	pay
+Relation	T9	T4	NoRel	true	appointment	application

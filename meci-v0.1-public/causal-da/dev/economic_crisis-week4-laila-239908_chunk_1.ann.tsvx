@@ -1,0 +1,37 @@
+Text	Banken havde i 2006 et resultat før skat på 94 mio. og beskæftigede 250 medarbejdere .	Ved børsnoteringen i 2007 havde banken 17 filialer , primært på det sydlige Sjælland samt i København , Århus og Odense .	Kort tid efter børsnoteringen i juni 2007 opsagde den daværende adm. direktør Carlo Chow sin stilling for at starte som adm. direktør for Føroya Banki Danmark .	Daværende vicedirektør i bankTrelleborg , Tonny Rasmussen , blev udnævnt til ny direktør .	I januar 2008 meddelte banken , at den på grund af betydelige finansielle problemer havde indgået aftale med Sydbank om fusion .
+Event	T0	beskæftigede	EVENT	55
+Event	T1	børsnoteringen	EVENT	91
+Event	T2	opsagde	EVENT	251
+Event	T3	starte	EVENT	318
+Event	T4	udnævnt	EVENT	435
+Event	T5	meddelte	EVENT	475
+Event	T6	aftale	EVENT	559
+Event	T7	fusion	EVENT	581
+Event	T8	problemer	EVENT	535
+Relation	T3	T2	CauseEffect	true	starte	opsagde
+Relation	T2	T3	EffectCause	true	opsagde	starte
+Relation	T0	T6	NoRel	true	beskæftigede	aftale
+Relation	T1	T2	NoRel	true	børsnoteringen	opsagde
+Relation	T1	T4	NoRel	true	børsnoteringen	udnævnt
+Relation	T1	T6	NoRel	true	børsnoteringen	aftale
+Relation	T2	T0	NoRel	true	opsagde	beskæftigede
+Relation	T2	T1	NoRel	true	opsagde	børsnoteringen
+Relation	T2	T5	NoRel	true	opsagde	meddelte
+Relation	T2	T6	NoRel	true	opsagde	aftale
+Relation	T3	T1	NoRel	true	starte	børsnoteringen
+Relation	T3	T4	NoRel	true	starte	udnævnt
+Relation	T3	T6	NoRel	true	starte	aftale
+Relation	T4	T1	NoRel	true	udnævnt	børsnoteringen
+Relation	T4	T2	NoRel	true	udnævnt	opsagde
+Relation	T5	T3	NoRel	true	meddelte	starte
+Relation	T5	T4	NoRel	true	meddelte	udnævnt
+Relation	T5	T6	NoRel	true	meddelte	aftale
+Relation	T6	T2	NoRel	true	aftale	opsagde
+Relation	T6	T4	NoRel	true	aftale	udnævnt
+Relation	T7	T1	NoRel	true	fusion	børsnoteringen
+Relation	T7	T3	NoRel	true	fusion	starte
+Relation	T8	T0	NoRel	true	problemer	beskæftigede
+Relation	T8	T3	NoRel	true	problemer	starte
+Relation	T8	T4	NoRel	true	problemer	udnævnt
+Relation	T8	T5	NoRel	true	problemer	meddelte
+Relation	T8	T7	NoRel	true	problemer	fusion
